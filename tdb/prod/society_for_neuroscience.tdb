@@ -31,6 +31,7 @@
       au < sfn.SFNDrupalPlugin ; released ; 2018 ; eNeuro Volume 5 ; 5 >
       au < sfn.SFNDrupalPlugin ; released ; 2019 ; eNeuro Volume 6 ; 6 >
       au < sfn.SFNDrupalPlugin ; manifest ; 2020 ; eNeuro Volume 7 ; 7 >
+      au < sfn.SFNDrupalPlugin ; expected ; 2021 ; eNeuro Volume 8 ; 8 >
     }
   }
   
@@ -43,8 +44,8 @@
     >
 
     {
-
       #param[base_url] = http://www.jneurosci.org/
+
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
       au < HighWirePressH20Plugin ; released ; 1981 ; Journal of Neuroscience Volume 1 ; 1 ; http://www.jneurosci.org/ >
@@ -87,6 +88,7 @@
       au < sfn.SFNDrupalPlugin ; released ; 2018 ; Journal of Neuroscience Volume 38 ; 38 ; http://www.jneurosci.org/ >
       au < sfn.SFNDrupalPlugin ; manifest ; 2019 ; Journal of Neuroscience Volume 39 ; 39 ; https://www.jneurosci.org/ > #error. 403 forbidden
       au < sfn.SFNDrupalPlugin ; manifest ; 2020 ; Journal of Neuroscience Volume 40 ; 40 ; https://www.jneurosci.org/ >
+      au < sfn.SFNDrupalPlugin ; expected ; 2021 ; Journal of Neuroscience Volume 41 ; 41 ; https://www.jneurosci.org/ >
 
     }
 

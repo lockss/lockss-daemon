@@ -3,8 +3,8 @@
   publisher <
     name = Literacy in Composition Studies
   >
-
     #published by California State University, San Bernardino
+
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; name ; volume ; param[year] >
 
@@ -27,6 +27,7 @@
       au < released ; 2018 ; Literacy in Composition Studies Volume 6 ; 6 ; 2018 >
       au < released ; 2019 ; Literacy in Composition Studies Volume 7 ; 7 ; 2019 >
       au < manifest ; 2020 ; Literacy in Composition Studies Volume 8 ; 8 ; 2020 >
+      au < expected ; 2021 ; Literacy in Composition Studies Volume 9 ; 9 ; 2021 >
 
     }
     

@@ -19,8 +19,8 @@
         issn = 0002-7685 ;
         eissn = 1938-4211 
     >
-
       #param[base_url] = http://abt.ucpress.edu/
+
       param[journal_id] = abt
 
       au < exists ; 1938 ; 1938 ; The American Biology Teacher Volume 1 [1938] ; 1 >
@@ -115,6 +115,7 @@
       au < doNotProcess ; 2019 ; 2019 ; The American Biology Teacher Volume 81 ; 81 >
       au < exists ; 2020 ; 2020 ; The American Biology Teacher Volume 82 ; 82 >
       au < exists ; 2021 ; 2021 ; The American Biology Teacher Volume 83 ; 83 >
+      au < expected ; 2021 ; 2021 ; The American Biology Teacher Volume 83 ; 83 >
 
   }
 
@@ -125,9 +126,9 @@
         issn = 0004-4687 ;
         eissn = 1533-838X 
     >
-
       #param[base_url] = http://as.ucpress.edu/
       #continues = 2324-6502
+
       param[journal_id] = as
 
       au < exists ; 1961 ; 1961 ; Asian Survey Volume 1 [1961] ; 1 >
@@ -192,6 +193,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Asian Survey Volume 59 ; 59 >
       au < exists ; 2020 ; 2020 ; Asian Survey Volume 60 ; 60 >
       au < exists ; 2021 ; 2021 ; Asian Survey Volume 61 ; 61 >
+      au < expected ; 2021 ; 2021 ; Asian Survey Volume 61 ; 61 >
 
   }
 
@@ -202,9 +204,9 @@
         issn = 2153-8018 ;
         eissn = 2153-764X 
     >
-
       #param[base_url] = http://boom.ucpress.edu/
       #nothing published after 2016.
+
       param[journal_id] = boom
 
       au < doNotProcess ; 2011 ; 2011 ; Boom: A Journal of California Volume 1 ; 1 >
@@ -232,6 +234,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Collabra: Psychology Volume 5 ; 5 >
       au < exists ; 2020 ; 2020 ; Collabra: Psychology Volume 6 ; 6 >
       au < exists ; 2021 ; 2021 ; Collabra: Psychology Volume 7 ; 7 >
+      au < expected ; 2021 ; 2021 ; Collabra: Psychology Volume 7 ; 7 >
 
   }
 
@@ -242,8 +245,8 @@
         issn = 0278-6656 ;
         eissn = 1067-8344 
     >
-
       #param[base_url] = http://ca.ucpress.edu/
+
       param[journal_id] = ca
 
       au < exists ; 1982 ; 1982 ; Classical Antiquity Volume 1 ; 1 >
@@ -286,6 +289,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Classical Antiquity Volume 38 ; 38 >
       au < exists ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
       au < exists ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
+      au < expected ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
 
   }
 
@@ -296,8 +300,8 @@
         issn = 0162-2897 ;
         eissn = 2327-1485 
     >
-
       #param[base_url] = http://ch.ucpress.edu/
+
       param[journal_id] = ch
 
       au < exists ; 1922 ; 1922 ; California History Volume 1 [1922] ; 1 >
@@ -409,6 +413,7 @@
       au < doNotProcess ; 2019 ; 2019 ; California History Volume 96 ; 96 >
       au < exists ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
       au < exists ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
+      au < expected ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
 
   }
 
@@ -418,8 +423,8 @@
         name = Departures in Critical Qualitative Research ;
         eissn = 2333-9497 
     >
-
       #param[base_url] = http://dcqr.ucpress.edu/
+
       param[journal_id] = dcqr
 
       au < doNotProcess ; 2012 ; 2012 ; Departures in Critical Qualitative Research Volume 1 ; 1 >
@@ -432,9 +437,9 @@
       au < doNotProcess ; 2019 ; 2019 ; Departures in Critical Qualitative Research Volume 8 ; 8 >
       au < exists ; 2020 ; 2020 ; Departures in Critical Qualitative Research Volume 9 ; 9 >
       au < exists ; 2021 ; 2021 ; Departures in Critical Qualitative Research Volume 10 ; 10 >
+      au < expected ; 2021 ; 2021 ; Departures in Critical Qualitative Research Volume 10 ; 10 >
 
   }
-
 #  {
 #
 #    title <
@@ -448,7 +453,6 @@
 #      #continued_by = 0004-4687
 #      #under a different structure than 1961 to present
 #      param[journal_id] = as
-
 #      au < exists ; 1935 ; 1935 ; Far Eastern Survey Volume 4 ; 4 >
 #      au < exists ; 1936 ; 1936 ; Far Eastern Survey Volume 5 ; 5 >
 #      au < exists ; 1937 ; 1937 ; Far Eastern Survey Volume 6 ; 6 >
@@ -479,6 +483,8 @@
 #
 #  }
 
+
+
   {
 
       title <
@@ -486,8 +492,8 @@
         issn = 1053-9867 ;
         eissn = 1533-8363 
     >
-
       #param[base_url] = http://fsr.ucpress.edu/
+
       param[journal_id] = fsr
 
       au < exists ; 1988 ; 1988 ; Federal Sentencing Reporter Volume 1 [1988] ; 1 >
@@ -565,8 +571,8 @@
         name = Feminist Media Histories ;
         eissn = 2373-7492 
     >
-
       #param[base_url] = http://fmh.ucpress.edu/
+
       param[journal_id] = fmh
 
       au < doNotProcess ; 2015 ; 2015 ; Feminist Media Histories Volume 1 ; 1 >
@@ -576,6 +582,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Feminist Media Histories Volume 5 ; 5 >
       au < exists ; 2020 ; 2020 ; Feminist Media Histories Volume 6 ; 6 >
       au < exists ; 2021 ; 2021 ; Feminist Media Histories Volume 7 ; 7 >
+      au < expected ; 2021 ; 2021 ; Feminist Media Histories Volume 7 ; 7 >
 
   }
 
@@ -586,10 +593,9 @@
         issn = 0015-1386 ;
         eissn = 1533-8630 
     >
-
       #param[base_url] = http://fq.ucpress.edu/
-      param[journal_id] = fq
 
+      param[journal_id] = fq
 #      au < exists ; 1945-1946 ; Film Quarterly Volume 1 ; 1 >
 #      au < exists ; 1946-1947 ; Film Quarterly Volume 2 ; 2 >
 #      au < exists ; 1947-1948 ; Film Quarterly Volume 3 ; 3 >
@@ -648,6 +654,7 @@
 #      au < exists ; 2002-2003 ; Film Quarterly Volume 56 ; 56 >
 #      au < exists ; 2003-2004 ; Film Quarterly Volume 57 ; 57 >
 #      au < exists ; 2004-2005 ; Film Quarterly Volume 58 ; 58 >
+
       au < exists ; 2005 ; 2005 ; Film Quarterly Volume 59 [2005] ; 59 >
       au < exists ; 2006 ; 2006 ; Film Quarterly Volume 59 [2006] ; 59 >
       au < exists ; 2006 ; 2006 ; Film Quarterly Volume 60 [2006] ; 60 >
@@ -679,8 +686,8 @@
         issn = 1529-3262 ;
         eissn = 1533-8622 
     >
-
       #param[base_url] = http://gcfs.ucpress.edu/
+
       param[journal_id] = gcfs
 
       au < exists ; 2001 ; 2001 ; Gastronomica: The Journal of Critical Food Studies Volume 1 ; 1 >
@@ -704,6 +711,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Gastronomica: The Journal of Critical Food Studies Volume 19 ; 19 >
       au < exists ; 2020 ; 2020 ; Gastronomica: The Journal of Critical Food Studies Volume 20 ; 20 >
       au < exists ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
+      au < expected ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
 
   }
 
@@ -714,8 +722,8 @@
         issn = 1939-1811 ;
         eissn = 1939-182X 
     >
-
       #param[base_url] = http://hsns.ucpress.edu/
+
       param[journal_id] = hsns
 
       au < exists ; 1969 ; 1969 ; Historical Studies in the Natural Sciences Volume 1 ; 1 >
@@ -769,6 +777,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Historical Studies in the Natural Sciences Volume 49 ; 49 >
       au < exists ; 2020 ; 2020 ; Historical Studies in the Natural Sciences Volume 50 ; 50 >
       au < exists ; 2021 ; 2021 ; Historical Studies in the Natural Sciences Volume 51 ; 51 >
+      au < expected ; 2021 ; 2021 ; Historical Studies in the Natural Sciences Volume 51 ; 51 >
 
   }
 
@@ -779,8 +788,8 @@
         issn = 1940-8447 ;
         eissn = 1940-8455 
     >
-
       #param[base_url] = http://irqr.ucpress.edu/
+
       param[journal_id] = irqr
 
       au < doNotProcess ; 2008 ; 2008 ; International Review of Qualitative Research Volume 1 ; 1 >
@@ -797,6 +806,7 @@
       au < doNotProcess ; 2019 ; 2019 ; International Review of Qualitative Research Volume 12 ; 12 >
       au < exists ; 2020 ; 2020 ; International Review of Qualitative Research Volume 13 ; 13 >
       au < exists ; 2021 ; 2021 ; International Review of Qualitative Research Volume 14 ; 14 >
+      au < expected ; 2021 ; 2021 ; International Review of Qualitative Research Volume 14 ; 14 >
 
   }
 
@@ -807,7 +817,6 @@
         issn = 0003-0139 ;
         eissn = 1547-3848 
     >
-
 #    {
 #      #param[base_url] = http://jams.ucpress.edu/content/ucpbams/
 #      #base_url has extra journal_id embedded http://jams.ucpress.edu/content/ucpbams/
@@ -826,6 +835,7 @@
 #      
 #    }
 #
+
     {
       #param[base_url] = http://jams.ucpress.edu/
       param[journal_id] = jams
@@ -904,6 +914,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Journal of the American Musicological Society Volume 72 ; 72 >
       au < exists ; 2020 ; 2020 ; Journal of the American Musicological Society Volume 73 ; 73 >
       au < exists ; 2021 ; 2021 ; Journal of the American Musicological Society Volume 74 ; 74 >
+      au < expected ; 2021 ; 2021 ; Journal of the American Musicological Society Volume 74 ; 74 >
 
     }
 
@@ -916,8 +927,8 @@
         issn = 0277-9269 ;
         eissn = 1533-8347 
     >
-
       #param[base_url] = http://jm.ucpress.edu/
+
       param[journal_id] = jm
 
       au < exists ; 1982 ; 1982 ; The Journal of Musicology Volume 1 ; 1 >
@@ -959,6 +970,7 @@
       au < doNotProcess ; 2019 ; 2019 ; The Journal of Musicology Volume 36 ; 36 >
       au < exists ; 2020 ; 2020 ; The Journal of Musicology Volume 37 ; 37 >
       au < exists ; 2021 ; 2021 ; The Journal of Musicology Volume 38 ; 38 >
+      au < expected ; 2021 ; 2021 ; The Journal of Musicology Volume 38 ; 38 >
 
   }
 
@@ -969,10 +981,9 @@
         issn = 0377-919X ;
         eissn = 1533-8614 
     >
-
       #param[base_url] = http://jps.ucpress.edu/
-      param[journal_id] = jps
 
+      param[journal_id] = jps
 #      au < exists ; 1971-1972 ; Journal of Palestine Studies Volume 1 ; 1 >
 #      au < exists ; 1972-1973 ; Journal of Palestine Studies Volume 2 ; 2 >
 #      au < exists ; 1973-1974 ; Journal of Palestine Studies Volume 3 ; 3 >
@@ -1022,8 +1033,10 @@
 #      au < doNotProcess ; 2017-2018 ; Journal of Palestine Studies Volume 47 ; 47 >
 #      au < doNotProcess ; 2018-2019 ; Journal of Palestine Studies Volume 48 ; 48 >
 #      au < doNotProcess ; 2019-2020 ; Journal of Palestine Studies Volume 49 ; 49 >
+
       au < exists ; 2020 ; 2020 ; Journal of Palestine Studies Volume 50 [2020] ; 50 >
       au < exists ; 2021 ; 2021 ; Journal of Palestine Studies Volume 50 [2021] ; 50 >
+      au < expected ; 2021 ; 2021 ; Journal of Palestine Studies Volume 51 [2021] ; 51 >
 
   }
 
@@ -1034,8 +1047,8 @@
         issn = 0037-9808 ;
         eissn = 2150-5926 
     >
-
       #param[base_url] = http://jsah.ucpress.edu/
+
       param[journal_id] = jsah
 
       au < exists ; 1941 ; 1941 ; Journal of the Society of Architectural Historians Volume 1 ; 1 >
@@ -1118,9 +1131,9 @@
       au < doNotProcess ; 2019 ; 2019 ; Journal of the Society of Architectural Historians Volume 78 ; 78 >
       au < exists ; 2020 ; 2020 ; Journal of the Society of Architectural Historians Volume 79 ; 79 >
       au < exists ; 2021 ; 2021 ; Journal of the Society of Architectural Historians Volume 80 ; 80 >
+      au < expected ; 2021 ; 2021 ; Journal of the Society of Architectural Historians Volume 80 ; 80 >
 
   }
-
 #  {
 #
 #    title <
@@ -1139,6 +1152,7 @@
 #
 #  }
 
+
   {
 
       title <
@@ -1146,8 +1160,8 @@
         issn = 0742-9797 ;
         eissn = 1533-8320 
     >
-
       #param[base_url] = http://msem.ucpress.edu/
+
       param[journal_id] = msem
 
       au < exists ; 1985 ; 1985 ; Mexican Studies/Estudios Mexicanos Volume 1 ; 1 >
@@ -1186,6 +1200,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Mexican Studies/Estudios Mexicanos Volume 34 ; 34 >
       au < doNotProcess ; 2019 ; 2019 ; Mexican Studies/Estudios Mexicanos Volume 35 ; 35 >
       au < exists ; 2020 ; 2020 ; Mexican Studies/Estudios Mexicanos Volume 36 ; 36 >
+      au < expected ; 2021 ; 2021 ; Mexican Studies/Estudios Mexicanos Volume 37 ; 37 >
 
   }
 
@@ -1196,8 +1211,8 @@
         issn = 0730-7829 ;
         eissn = 1533-8312 
     >
-
       #param[base_url] = http://mp.ucpress.edu/
+
       param[journal_id] = mp
 
       au < exists ; 1983 ; 1983 ; Music Perception: An Interdisciplinary Journal Volume 1 ; 1 >
@@ -1238,6 +1253,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Music Perception: An Interdisciplinary Journal Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Music Perception: An Interdisciplinary Journal Volume 37 ; 37 >
       au < exists ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 38 ; 38 >
+      au < expected ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 39 ; 39 >
 
   }
 
@@ -1248,10 +1264,9 @@
         issn = 0891-9356 ;
         eissn = 1067-8352 
     >
-
       #param[base_url] = http://ncl.ucpress.edu/
-      param[journal_id] = ncl
 
+      param[journal_id] = ncl
 #      au < exists ; 1945-1947 ; Nineteenth-Century Literature Volume 1 ; 1 >
 #      au < exists ; 1947-1948 ; Nineteenth-Century Literature Volume 2 ; 2 >
 #      au < exists ; 1948-1949 ; Nineteenth-Century Literature Volume 3 ; 3 >
@@ -1326,8 +1341,10 @@
 #      au < doNotProcess ; 2017-2018 ; Nineteenth-Century Literature Volume 72 ; 72 >
 #      au < doNotProcess ; 2018-2019 ; Nineteenth-Century Literature Volume 73 ; 73 >
 #      au < doNotProcess ; 2019-2020 ; Nineteenth-Century Literature Volume 74 ; 74 >
+
       au < exists ; 2020 ; 2020 ; Nineteenth-Century Literature Volume 75 [2020] ; 75 >
       au < exists ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 75 [2021] ; 75 >
+      au < expected ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 76 [2021] ; 76 >
 
   }
 
@@ -1338,10 +1355,9 @@
         issn = 1933-4192 ;
         eissn = 1933-4206 
     >
-
       #param[base_url] = http://nclr.ucpress.edu/
-      param[journal_id] = nclr
 
+      param[journal_id] = nclr
 #      au < exists ; 1997-1998 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 1 ; 1 >
 #      au < exists ; 1998-1999 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 2 ; 2 >
 #      au < exists ; 1999-2000 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 3 ; 3 >
@@ -1349,6 +1365,7 @@
 #      au < exists ; 2001-2002 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 5 ; 5 >
 #      au < exists ; 2002-2003 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 6 ; 6 >
 #      au < exists ; 2003-2004 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 7 ; 7 >
+
       au < exists ; 2004 ; 2004 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 8 [2004] ; 8 >
       au < exists ; 2005 ; 2005 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 8 [2005] ; 8 >
       au < exists ; 2005 ; 2005 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 9 [2005] ; 9 >
@@ -1367,6 +1384,7 @@
       au < doNotProcess ; 2018 ; 2018 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 21 ; 21 >
       au < doNotProcess ; 2019 ; 2019 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 22 ; 22 >
       au < exists ; 2020 ; 2020 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 23 ; 23 >
+      au < expected ; 2021 ; 2021 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 24 ; 24 >
 
   }
 
@@ -1377,10 +1395,9 @@
         issn = 0148-2076 ;
         eissn = 1533-8606 
     >
-
       #param[base_url] = http://ncm.ucpress.edu/
-      param[journal_id] = ncm
 
+      param[journal_id] = ncm
 #      au < exists ; 1977-1978 ; 19th-Century Music Volume 1 ; 1 >
 #      au < exists ; 1978-1979 ; 19th-Century Music Volume 2 ; 2 >
 #      au < exists ; 1979-1980 ; 19th-Century Music Volume 3 ; 3 >
@@ -1424,8 +1441,10 @@
 #      au < doNotProcess ; 2017-2018 ; 19th-Century Music Volume 41 ; 41 >
 #      au < doNotProcess ; 2018-2019 ; 19th-Century Music Volume 42 ; 42 >
 #      au < doNotProcess ; 2019-2020 ; 19th-Century Music Volume 43 ; 43 >
+
       au < exists ; 2020 ; 2020 ; 19th-Century Music Volume 44 [2020] ; 44 >
       au < exists ; 2021 ; 2021 ; 19th-Century Music Volume 44 [2021] ; 44 >
+      au < expected ; 2021 ; 2021 ; 19th-Century Music Volume 45 [2021] ; 45 >
 
   }
 
@@ -1436,10 +1455,9 @@
         issn = 1092-6690 ;
         eissn = 1541-8480 
     >
-
       #param[base_url] = http://nr.ucpress.edu/
-      param[journal_id] = nr
 
+      param[journal_id] = nr
 #      au < exists ; 1997-1998 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 1 ; 1 >
 #      au < exists ; 1998-1999 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 2 ; 2 >
 #      au < exists ; 1999-2000 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 3 ; 3 >
@@ -1463,8 +1481,10 @@
 #      au < doNotProcess ; 2017-2018 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 21 ; 21 >
 #      au < doNotProcess ; 2018-2019 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 22 ; 22 >
 #      au < doNotProcess ; 2019-2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 23 ; 23 >
+
       au < exists ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2020] ; 24 >
       au < exists ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2021] ; 24 >
+      au < expected ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 25 [2021] ; 25 >
 
   }
 
@@ -1475,8 +1495,8 @@
         issn = 0030-8684 ;
         eissn = 1533-8584 
     >
-
       #param[base_url] = http://phr.ucpress.edu/
+
       param[journal_id] = phr
 
       au < exists ; 1932 ; 1932 ; Pacific Historical Review Volume 1 ; 1 >
@@ -1568,6 +1588,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Pacific Historical Review Volume 87 ; 87 >
       au < doNotProcess ; 2019 ; 2019 ; Pacific Historical Review Volume 88 ; 88 >
       au < exists ; 2020 ; 2020 ; Pacific Historical Review Volume 89 ; 89 >
+      au < expected ; 2021 ; 2021 ; Pacific Historical Review Volume 90 ; 90 >
 
   }
 
@@ -1578,9 +1599,9 @@
         issn = 1052-1151 ;
         eissn = 1533-8568 
     >
-
       #param[base_url] = http://rac.ucpress.edu/
       #move to Cambridge University Press
+
       param[journal_id] = rac
 
       au < exists ; 1991 ; 1991 ; Religion and American Culture: A Journal of Interpretation Volume 1 ; 1 >
@@ -1620,8 +1641,8 @@
         issn = 0734-6018 ;
         eissn = 1533-855X 
     >
-
       #param[base_url] = http://rep.ucpress.edu/
+
       param[journal_id] = rep
 
       au < exists ; 1983 ; 1983 ; Representations Volume 1 ; 1 >
@@ -1773,6 +1794,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 147 ; 147 >
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 148 ; 148 >
       au < exists ; 2020 ; 2020 ; Representations Volume 149 ; 149 >
+      au < expected ; 2021 ; 2021 ; Representations Volume 150 ; 150 >
 
   }
 
@@ -1783,8 +1805,8 @@
         issn = 0734-8584 ;
         eissn = 1533-8541 
     >
-
       #param[base_url] = http://rh.ucpress.edu/
+
       param[journal_id] = rh
 
       au < exists ; 1983 ; 1983 ; Rhetorica: A Journal of the History of Rhetoric Volume 1 ; 1 >
@@ -1825,6 +1847,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Rhetorica: A Journal of the History of Rhetoric Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Rhetorica: A Journal of the History of Rhetoric Volume 37 ; 37 >
       au < exists ; 2020 ; 2020 ; Rhetorica: A Journal of the History of Rhetoric Volume 38 ; 38 >
+      au < expected ; 2021 ; 2021 ; Rhetorica: A Journal of the History of Rhetoric Volume 39 ; 39 >
 
   }
 
@@ -1835,11 +1858,11 @@
         issn = 0038-3929 ;
         eissn = 2162-8637 
     >
-
       #param[base_url] = http://scq.ucpress.edu/
-      param[journal_id] = scq
 
+      param[journal_id] = scq
 #      au < exists ; 1884-1891 ; Southern California Quarterly Volume 1 ; 1 >
+
       au < exists ; 1891 ; 1891 ; Southern California Quarterly Volume 2 ; 2 >
 #      au < exists ; 1893-1896 ; Southern California Quarterly Volume 3 ; 3 >
 #      au < exists ; 1897-1899 ; Southern California Quarterly Volume 4 ; 4 >
@@ -1943,6 +1966,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Southern California Quarterly Volume 100 ; 100 >
       au < doNotProcess ; 2019 ; 2019 ; Southern California Quarterly Volume 101 ; 101 >
       au < exists ; 2020 ; 2020 ; Southern California Quarterly Volume 102 ; 102 >
+      au < expected ; 2021 ; 2021 ; Southern California Quarterly Volume 103 ; 103 >
 
   }
 
@@ -1953,14 +1977,15 @@
         issn = 2470-6469 ;
         eissn = 2470-2048 
     >
-
       #param[base_url] = http://sla.ucpress.edu/
+
       param[journal_id] = sla
 
       au < doNotProcess ; 2017 ; 2017 ; Studies in Late Antiquity Volume 1 ; 1 >
       au < doNotProcess ; 2018 ; 2018 ; Studies in Late Antiquity Volume 2 ; 2 >
       au < doNotProcess ; 2019 ; 2019 ; Studies in Late Antiquity Volume 3 ; 3 >
       au < exists ; 2020 ; 2020 ; Studies in Late Antiquity Volume 4 ; 4 >
+      au < expected ; 2021 ; 2021 ; Studies in Late Antiquity Volume 5 ; 5 >
 
   }
 
@@ -1970,8 +1995,8 @@
         name = Sociology of Development ;
         eissn = 2374-538X 
     >
-
       #param[base_url] = http://socdev.ucpress.edu/
+
       param[journal_id] = socdev
 
       au < doNotProcess ; 2015 ; 2015 ; Sociology of Development Volume 1 ; 1 >
@@ -1980,6 +2005,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Sociology of Development Volume 4 ; 4 >
       au < doNotProcess ; 2019 ; 2019 ; Sociology of Development Volume 5 ; 5 >
       au < exists ; 2020 ; 2020 ; Sociology of Development Volume 6 ; 6 >
+      au < expected ; 2021 ; 2021 ; Sociology of Development Volume 7 ; 7 >
 
   }
 
@@ -1990,8 +2016,8 @@
         issn = 0272-3433 ;
         eissn = 1533-8576 
     >
-
       #param[base_url] = http://tph.ucpress.edu/
+
       param[journal_id] = tph
 
       au < exists ; 1978 ; 1978 ; The Public Historian Volume 1 [1978] ; 1 >
@@ -2038,6 +2064,7 @@
       au < doNotProcess ; 2018 ; 2018 ; The Public Historian Volume 40 ; 40 >
       au < doNotProcess ; 2019 ; 2019 ; The Public Historian Volume 41 ; 41 >
       au < exists ; 2020 ; 2020 ; The Public Historian Volume 42 ; 42 >
+      au < expected ; 2021 ; 2021 ; The Public Historian Volume 43 ; 43 >
 
   }
 
@@ -2048,8 +2075,8 @@
         issn = 1559-372X ;
         eissn = 1559-3738 
     >
-
       #param[base_url] = http://vs.ucpress.edu/
+
       param[journal_id] = vs
 
       au < exists ; 2006 ; 2006 ; Journal of Vietnamese Studies Volume 1 ; 1 >
@@ -2067,6 +2094,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Journal of Vietnamese Studies Volume 13 ; 13 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Vietnamese Studies Volume 14 ; 14 >
       au < exists ; 2020 ; 2020 ; Journal of Vietnamese Studies Volume 15 ; 15 >
+      au < expected ; 2021 ; 2021 ; Journal of Vietnamese Studies Volume 16 ; 16 >
 
   }
 

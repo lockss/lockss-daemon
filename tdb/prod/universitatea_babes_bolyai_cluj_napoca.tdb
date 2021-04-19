@@ -20,8 +20,8 @@
     plugin = org.lockss.plugin.bepress.BePressPlugin 
     param[journal_abbr] = geologia
     implicit < status ; year ; name ; param[volume] >
-
     #This journal is leaving Digital Commons. Do not process any further content.
+
 
     {
     param[base_url] = http://scholarcommons.usf.edu/
@@ -43,6 +43,7 @@
     au < released ; 2017 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 61 ; 61 >
     au < released ; 2018 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 62 ; 62 >
     au < manifest ; 2020 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 63 ; 63 >
+    au < expected ; 2021 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 64 ; 64 >
 
     }
 

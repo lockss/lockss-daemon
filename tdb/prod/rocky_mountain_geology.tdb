@@ -8,7 +8,6 @@
     plugin = org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldSilverchairPlugin
     implicit < status ; year ; param[year] ; name ; param[volume_name] >
     param[base_url] = https://pubs.geoscienceworld.org/
-
 #    {
 #    
 #      title < 
@@ -55,6 +54,7 @@
 #  
 #    }
 #  
+
     {
     
       title < 
@@ -92,6 +92,7 @@
       au < manifest ; 2020 ; 2020 ; Rocky Mountain Geology Volume 55 ; 55 >
       au < expected ; 2021 ; 2021 ; Rocky Mountain Geology Volume 56 ; 56 >
       
+      au < expected ; 2021 ; 2021 ; Rocky Mountain Geology Volume 56 ; 56 >
     }
   
 }

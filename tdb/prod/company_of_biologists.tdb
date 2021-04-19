@@ -15,8 +15,8 @@
       eissn = 2046-6390 ;
       issnl = 2046-6390
     >
-
     #param[base_url] = http://bio.biologists.org/
+
 
     au < HighWirePressH20Plugin ; superseded ; 2012 ; Biology Open Volume 1 [superseded] ; 1 ; http://bio.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; released ; 2012 ; Biology Open Volume 1 ; 1 ; https://bio.biologists.org/ >
@@ -40,8 +40,8 @@
       eissn = 1477-9129 ;
       issnl = 0950-1991
     >
-
     #param[base_url] = http://dev.biologists.org/
+
 
     au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; https://dev.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 ; https://dev.biologists.org/ >
@@ -211,8 +211,8 @@
       eissn = 1754-8411 ;
       issnl = 1754-8403
     >
-
     #param[base_url] = http://dmm.biologists.org/
+
 
     au < HighWirePressH20Plugin ; down ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 ; http://dmm.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 ; http://dmm.biologists.org/ >
@@ -241,8 +241,8 @@
     >
 
     comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
-
     #param[base_url] = http://jcs.biologists.org/
+
 
     au < biologists.BiologistsDrupalPlugin ; manifest ; 1940 ; The Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; https://jcs.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; manifest ; 1941 ; The Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 ; https://jcs.biologists.org/ >
@@ -433,8 +433,8 @@
       eissn = 1477-9145 ;
       issnl = 0022-0949
     >
-
     #param[base_url] = http://jeb.biologists.org/
+
 
     au < HighWirePressPlugin ; down ; 1923-1924 ; The British Journal of Experimental Biology Volume 1 ; 1 ; http://jeb.biologists.org/ >
     au < HighWirePressPlugin ; down ; 1924-1925 ; The British Journal of Experimental Biology Volume 2 ; 2 ; http://jeb.biologists.org/ >

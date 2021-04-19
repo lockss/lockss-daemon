@@ -40,6 +40,7 @@
       au < exists ; 2018 ; sui generis Volume 2018 ; 2018 ; 2018 ; https://sui-generis.ch/ >
       au < expected ; 2019 ; sui generis Volume 2019 ; 2019 ; 2019 ; https://sui-generis.ch/ >
       au < expected ; 2020 ; sui generis Volume 2020 ; 2020 ; 2020 ; https://sui-generis.ch/ >
+      au < expected ; 2021 ; sui generis Volume 2021 ; 2021 ; 2021 ; https://sui-generis.ch/ >
 
     }
 
@@ -62,6 +63,7 @@
       au < released ; 2018 ; altrelettere Volume 2018 ; 2018 ; 2018 ; https://www.altrelettere.uzh.ch/ >
       au < expected ; 2019 ; altrelettere Volume 2019 ; 2019 ; 2019 ; https://www.altrelettere.uzh.ch/ >
       au < expected ; 2020 ; altrelettere Volume 2020 ; 2020 ; 2020 ; https://www.altrelettere.uzh.ch/ >
+      au < expected ; 2021 ; altrelettere Volume 2021 ; 2021 ; 2021 ; https://www.altrelettere.uzh.ch/ >
 
     }
 
@@ -104,6 +106,7 @@
       au < released ; 2018 ; SComS: Studies in Communications Sciences Volume 2018 ; 2018 ; 2018 ; https://www.hope.uzh.ch/ >
       au < expected ; 2019 ; SComS: Studies in Communications Sciences Volume 2019 ; 2019 ; 2019 ; https://www.hope.uzh.ch/ >
       au < expected ; 2020 ; SComS: Studies in Communications Sciences Volume 2020 ; 2020 ; 2020 ; https://www.hope.uzh.ch/ >
+      au < expected ; 2021 ; SComS: Studies in Communications Sciences Volume 2021 ; 2021 ; 2021 ; https://www.hope.uzh.ch/ >
 
     }
 
@@ -245,8 +248,8 @@
       }
 
       {
-
         #param[base_url] = http://www.Zwingliana.ch/
+
         comment[Z] = unnecessary upper case Z. Keeps metadata extraction from working. Please reprocess.
 
         au < superseded ; 1974 ; Zwingliana Volume 14 (1974) [superseded] ; 14 ; 1974 ; http://www.Zwingliana.ch/ >

@@ -31,6 +31,7 @@
     au < manifest ; 2018 ; Bone & Joint 360 Volume 7 ; 7 >
     au < testing ; 2019 ; Bone & Joint 360 Volume 8 ; 8 >
     au < manifest ; 2020 ; Bone & Joint 360 Volume 9 ; 9 >
+    au < expected ; 2021 ; Bone & Joint 360 Volume 10 ; 10 >
 
     }
 
@@ -70,6 +71,7 @@
     au < testing ; 2018 ; Bone & Joint Research Volume 7 ; 7 >
     au < manifest ; 2019 ; Bone & Joint Research Volume 8 ; 8 >
     au < manifest ; 2020 ; Bone & Joint Research Volume 9 ; 9 >
+    au < expected ; 2021 ; Bone & Joint Research Volume 10 ; 10 >
 
     }
 
@@ -217,6 +219,7 @@
     au < manifest ; 2018 ; Journal of Bone & Joint Surgery, British Volume Volume 100 ; 100-B >
     au < manifest ; 2019 ; Journal of Bone & Joint Surgery, British Volume Volume 101 ; 101-B >
     au < manifest ; 2020 ; Journal of Bone & Joint Surgery, British Volume Volume 102 ; 102-B >
+    au < expected ; 2021 ; Journal of Bone & Joint Surgery, British Volume Volume 103 ; 103-B >
 
     }
 
@@ -269,8 +272,8 @@
     au < manifest ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
     au < manifest ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
     au < testing ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
+    au < expected ; 2021 ; EFORT Open Reviews Volume 6 ; 6 >
 
   }
   
 }
-

@@ -3,8 +3,8 @@
   publisher <
     name = Endocrine Society
   >
-
   #######**** When Endocrine Society moves to OUP, do not change publisher.
+
   provider = Oxford University Press
 
   plugin = org.lockss.plugin.silverchair.oup.OupSilverchairPlugin
@@ -24,6 +24,7 @@
       au < released ; 2018 ; 2 ; Journal of the Endocrine Society Volume 2 ; 2018 >
       au < released ; 2019 ; 3 ; Journal of the Endocrine Society Volume 3 ; 2019 >
       au < released ; 2020 ; 4 ; Journal of the Endocrine Society Volume 4 ; 2020 >
+      au < expected ; 2021 ; 5 ; Journal of the Endocrine Society Volume 5 ; 2021 >
 
   }
 
@@ -82,6 +83,7 @@
       au < released ; 2018 ; 39 ; Endocrine Reviews Volume 39 ; 2018 >
       au < released ; 2019 ; 40 ; Endocrine Reviews Volume 40 ; 2019 >
       au < manifest ; 2020 ; 41 ; Endocrine Reviews Volume 41 ; 2020 >
+      au < expected ; 2021 ; 42 ; Endocrine Reviews Volume 42 ; 2021 >
 
     }
 
@@ -205,6 +207,7 @@
       au < released ; 2018 ; 159 ; Endocrinology Volume 159 ; 2018 >
       au < released ; 2019 ; 160 ; Endocrinology Volume 160 ; 2019 >
       au < manifest ; 2020 ; 161 ; Endocrinology Volume 161 ; 2020 >
+      au < expected ; 2021 ; 162 ; Endocrinology Volume 162 ; 2021 >
 
     }
 
@@ -304,6 +307,7 @@
       au < released ; 2018 ; 103 ; Journal of Clinical Endocrinology & Metabolism Volume 103 ; 2018 >
       au < manifest ; 2019 ; 104 ; Journal of Clinical Endocrinology & Metabolism Volume 104 ; 2019 >
       au < manifest ; 2020 ; 105 ; Journal of Clinical Endocrinology & Metabolism Volume 105 ; 2020 >
+      au < expected ; 2021 ; 106 ; Journal of Clinical Endocrinology & Metabolism Volume 106 ; 2021 >
 
     }
 

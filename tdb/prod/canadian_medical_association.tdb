@@ -16,7 +16,6 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     {
     param[base_url] = http://www.cmaj.ca/
-
 #    au < HWDrupalPlugin ; exists ; 1966 ; Canadian Medical Association Journal Volume 94 [tables of contents only] ; 94 >
 #    au < HWDrupalPlugin ; exists ; 1966 ; Canadian Medical Association Journal Volume 95 [tables of contents only] ; 95 >
 #    au < HWDrupalPlugin ; exists ; 1967 ; Canadian Medical Association Journal Volume 96 [tables of contents only] ; 96 >
@@ -84,6 +83,7 @@
 #      au < HWDrupalPlugin ; exists ; 1996 ; Canadian Medical Association Journal Volume 154 [abstracts only] ; 154 >
 #      au < HWDrupalPlugin ; exists ; 1996 ; Canadian Medical Association Journal Volume 155 [abstracts only] ; 155 >
 #    }
+
     au < HighWirePressH20Plugin ; down ; 1997 ; Canadian Medical Association Journal Volume 156 ; 156 >
     au < HighWirePressH20Plugin ; down ; 1997 ; Canadian Medical Association Journal Volume 157 ; 157 >
     au < HighWirePressH20Plugin ; down ; 1998 ; Canadian Medical Association Journal Volume 158 ; 158 >
@@ -130,6 +130,7 @@
     au < HWDrupalPlugin ; exists ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
     au < HWDrupalPlugin ; manifest ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
     au < HWDrupalPlugin ; manifest ; 2021 ; Canadian Medical Association Journal Volume 193 ; 193 >
+    au < HWDrupalPlugin ; expected ; 2021 ; Canadian Medical Association Journal Volume 193 ; 193 >
     }
   }
 

@@ -7,8 +7,8 @@
   plugin = org.lockss.plugin.smallaxe.SmallAxePlugin
   implicit < status ; year ; name ; param[issue] >
   param[base_url] = http://smallaxe.net/
-
   #move to http://archipelagosjournal.org/
+
 
   {
     title <
@@ -27,4 +27,3 @@
   }
 
 }
-
