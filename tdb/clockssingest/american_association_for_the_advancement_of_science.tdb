@@ -434,8 +434,8 @@
       au < crawling ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Volume 370 ; 370 ; https://science.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Volume 371 ; 371 ; https://science.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Volume 372 ; 372 ; https://science.sciencemag.org/ ; >
+      au < manifest ; exists ; 2021 ; Science Volume 371 ; 371 ; https://science.sciencemag.org/ ; >
+      au < manifest ; exists ; 2021 ; Science Volume 372 ; 372 ; https://science.sciencemag.org/ ; >
       au < expected ; exists ; 2021 ; Science Volume 373 ; 373 ; https://science.sciencemag.org/ ; >
       au < expected ; exists ; 2021 ; Science Volume 374 ; 374 ; https://science.sciencemag.org/ ; >
 
@@ -490,7 +490,7 @@
       au < deepCrawl ; exists ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; http://stm.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; https://stm.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; https://stm.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; https://stm.sciencemag.org/ ; >
+      au < manifest ; exists ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; https://stm.sciencemag.org/ ; >
 
   }
 
@@ -545,7 +545,7 @@
       au < deepCrawl ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; http://immunology.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Immunology Volume 4 ; 4 ; https://immunology.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; https://immunology.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Immunology Volume 6 ; 6 ; https://immunology.sciencemag.org/ ; >
+      au < manifest ; exists ; 2021 ; Science Immunology Volume 6 ; 6 ; https://immunology.sciencemag.org/ ; >
 
   }
 

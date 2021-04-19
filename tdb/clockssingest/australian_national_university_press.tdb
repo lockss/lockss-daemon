@@ -123,7 +123,7 @@
       au < finished ; finished ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
       au < manifest ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
-      au < expected ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
 
     }
   }
@@ -140,7 +140,7 @@
 
     au < deepCrawl ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
-    au < expected ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
+    au < manifest ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
 
   }
   
@@ -433,7 +433,7 @@
     au < manifest ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
     au < manifest ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
     au < manifest ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
-    au < expected ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
 
   }
 
