@@ -25,7 +25,6 @@
       au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 6 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2020 ; 2020 ; > #500 error https://bop.unibe.ch/iw/article/view/4368
       au < ojs3.Ojs3Plugin ; expected ; 2021 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2021 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2021 ; 2021 ; > #500 error https://bop.unibe.ch/iw/article/view/4378
 
   }
 
@@ -213,7 +212,8 @@
       au < ojs2.OJS2Plugin ; down ; 2017 ; 80-87 ; Linguistik Online Volume 80-87 ; 2017 ; >
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 88-93 ; Linguistik Online Volume 88-93 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 94-100 ; Linguistik Online Volume 94-100 ; 2019 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 101-107 ; Linguistik Online Volume 101-107 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 101-105 ; Linguistik Online Volume 101-105 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; expected ; 2021 ; 106-110 ; Linguistik Online Volume 106-110 ; 2021 ; >
 
 
   }
