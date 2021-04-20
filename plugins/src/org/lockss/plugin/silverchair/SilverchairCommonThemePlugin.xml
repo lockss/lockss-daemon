@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -193,26 +193,6 @@
             </entry>
         </map>
     </entry>
-    <!--
-    <entry>
-        <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeV2ArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeV2ArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*</string>
-                <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    -->
-    <!--  for http to https conversion support -->
     <entry>
         <string>plugin_url_fetcher_factory</string>
         <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>

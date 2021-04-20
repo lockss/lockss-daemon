@@ -70,6 +70,8 @@ public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFact
     cookMap.put("citation_keyword", MetadataField.FIELD_KEYWORDS);
     // addition for proceedings
     cookMap.put("citation_pdf_url", MetadataField.DC_FIELD_IDENTIFIER);
+    // Portland, Rockefeller, Geoscience world those use CommonTheme need the next line
+    cookMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
   }
   
   @Override

@@ -1,51 +1,81 @@
 package org.lockss.plugin.silverchair;
 
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.ArticleIteratorFactory;
+import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.util.Logger;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.regex.Pattern;
 
+import static java.util.regex.Pattern.compile;
 
-public class SilverchairCommonThemeArticleIteratorFactory extends BaseScArticleIteratorFactory {
 
-    //https://pubs.geoscienceworld.org/gsa/gsabulletin/article/132/1-2/113/570559/Vegetation-and-habitat-change-in-southern
-    //https://academic.oup.com/psychsocgerontology/article/66B/1/109/580460
+public class SilverchairCommonThemeArticleIteratorFactory implements ArticleIteratorFactory,
+        ArticleMetadataExtractorFactory {
+
+    // Article and PDF patterns look like the following
+    //https://pubs.geoscienceworld.org/gsa/geosphere/article/14/1/286/524169/Alteration-mass-analysis-and-magmatic-compositions
+    //https://pubs.geoscienceworld.org/gsa/geosphere/article-pdf/14/1/286/4120162/286.pdf
+    //https://pubs.geoscienceworld.org/gsa/geosphere/article-standard/14/6/2533/565887/pages/remote-access-information
+
+    //https://portlandpress.com/biochemsoctrans/article/48/1/1/222098/Biomarkers-of-inflammation-and-the-etiology-of
+    //https://portlandpress.com/biochemsoctrans/article-pdf/48/1/1/868576/bst-2019-0029c.pdf
+
+    //https://rupress.org/jem/article/216/12/2689/132506/Modulation-of-the-fungal-mycobiome-is-regulated-by
+    //https://rupress.org/jem/article-pdf/216/12/2689/1170997/jem_20182244.pdf
+
 
     private static String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static String PATTERN_TEMPLATE =  "\"%s([^/]+/)?%s/article(-abstract)?\", base_url, journal_id";
+    private static String PATTERN_TEMPLATE =  "\"%s([^/]+/)?%s/article/\", base_url, journal_id";
 
-    private static final Pattern HTML_PATTERN = Pattern.compile("/article/([0-9i]+)/(.*)$", Pattern.CASE_INSENSITIVE);
-    private static final String HTML_REPLACEMENT = "/article/$1/$2";
-    private static final String ABSTRACT_REPLACEMENT = "/article-abstract/$1/$2";
-    // <meta name="citation_pdf_url"
-    protected static final Pattern PDF_PATTERN = Pattern.compile(
-            "<meta[\\s]*name=\"citation_pdf_url\"[\\s]*content=\"(.+/article-pdf/[^.]+\\.pdf)\"", Pattern.CASE_INSENSITIVE);
+    private static Pattern HTML_PATTERN = Pattern.compile("/article/([^/]+)/(.*)$", Pattern.CASE_INSENSITIVE);
+
+    private static String HTML_REPLACEMENT = "/article/$1/$2";
+    private static String ABSTRACT_REPLACEMENT = "/article-abstract/$1/$2";
+    private static String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";
 
     protected static Logger getLog() {
         return Logger.getLogger(SilverchairCommonThemeArticleIteratorFactory.class);
     }
+    
+    @Override
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
+            throws PluginException {
+
+        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+
+        builder.setSpec(target,
+                        ROOT_TEMPLATE,
+                        PATTERN_TEMPLATE,
+                        Pattern.CASE_INSENSITIVE);
+
+        builder.addAspect(  HTML_PATTERN,
+                            HTML_REPLACEMENT,
+                            ArticleFiles.ROLE_FULL_TEXT_HTML,
+                            ArticleFiles.ROLE_ARTICLE_METADATA);
+
+        builder.addAspect(  ABSTRACT_REPLACEMENT,
+                            ArticleFiles.ROLE_ABSTRACT,
+                            ArticleFiles.ROLE_ARTICLE_METADATA);
+
+
+        builder.addAspect(  CITATION_REPLACEMENT,
+                            ArticleFiles.ROLE_CITATION);
+
+        return builder.getSubTreeArticleIterator();
+    }
 
     @Override
-    protected String getRootTemplate() {
-        return ROOT_TEMPLATE;
-    }
-
-    @Override
-    protected String getPatternTemplate() {
-        return PATTERN_TEMPLATE;
-    }
-
-    protected static Pattern getHtmlPattern() {
-        return HTML_PATTERN;
-    }
-
-    protected static String getHtmlReplacement() {
-        return HTML_REPLACEMENT;
-    }
-
-    protected static String getAbstractReplacement() {
-        return ABSTRACT_REPLACEMENT;
-    }
-
-    protected static Pattern getPdfPattern() {
-        return PDF_PATTERN;
+    public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target) throws PluginException {
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
     }
 }
