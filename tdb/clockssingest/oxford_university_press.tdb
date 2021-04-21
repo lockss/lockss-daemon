@@ -9815,6 +9815,26 @@
   {
 
     title <
+      name = Journal of Computational Design and Engineering ;
+      eissn = 2288-5048 
+    >
+
+    param[journal_id] = jcde
+
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Computational Design and Engineering Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Computational Design and Engineering Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Computational Design and Engineering Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Journal of Computational Design and Engineering Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Computational Design and Engineering Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Computational Design and Engineering Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Computational Design and Engineering Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Journal of Computational Design and Engineering Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Computer-Mediated Communication ;
       eissn = 1083-6101 ;
       issnl = 1083-6101
