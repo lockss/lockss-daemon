@@ -128,16 +128,19 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           }
         }
 
-
         String MARC_isbn = getMARCData(record, "020", 'a');
         // This is only used in 2016 mrc record
         String MARC_isbn_alt = getMARCData(record, "773", 'z');
+        String MARC_issn = getMARCData(record, "022", 'a');
+        // MARC_Title will be different for journal vs books
         String MARC_title = getMARCData(record, "245", 'a');
+        String MARC_journal_title = getMARCData(record, "733", 't');
         String MARC_pub_date = getMARCData(record, "260", 'c');
         String MARC_pub_date_alt = getMARCData(record, "264", 'c');
         String MARC_publisher = getMARCData(record, "260", 'b');
         String MARC_author = getMARCData(record, "100", 'a');
         String MARC_author_alt = getMARCData(record, "700", 'a');
+        String MARC_doi =  getMARCData(record, "856", 'u');
         String MARC_pdf = getMARCControlFieldData(record, "001");
         // Add it to raw metadata
         am.putRaw("mrc_controlfield_001", MARC_pdf);
@@ -154,11 +157,6 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           am.put(MetadataField.FIELD_ISBN, MARC_isbn);
         } else if (MARC_isbn_alt != null) {
           am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
-        }
-
-        // Set publication title
-        if (MARC_title != null) {
-          am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
         }
 
         // Set publiation date
@@ -270,11 +268,21 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           if (publication_type == 'm' || publication_type == 'a') {
             am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
             am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+
+            // Set publication title
+            if (MARC_title != null) {
+              am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
+            }
           }
 
           if (publication_type == 's' || publication_type == 'b') {
             am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
             am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+
+            // Set publication title
+            if (MARC_title != null) {
+              am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
+            }
           }
         }
 
