@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Company of Biologists ;
+    info[platform] = Silverchair.Company of Biologists
+  >
+
+    plugin = org.lockss.plugin.silverchair.companybiologists.CompanyBiologistsSilverchairPlugin
+    implicit < status ; year ; param[year] ; name ; param[volume_name] >
+    param[base_url] = https://pubs.geoscienceworld.org/
+
+  {
+
+    title <
+      name = Journal of Cell Science ;
+      issn = 0016-7606 ;
+      eissn = 1943-2674 ;
+      issnl = 0016-7606
+    >
+      #param[base_url] = https://journals.biologists.com
+
+      param[journal_id] = jcs
+
+      au <  exists ; 2019 ; 2019 ; Journal of Cell Science Volume 132 ; 132 >
+  }
+}
