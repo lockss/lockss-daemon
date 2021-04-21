@@ -121,7 +121,7 @@
       param[journal_id] = op
 
       #title changed as of 2020
-      au < ready ; exists ; 2020 ; JCO Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ ; >
+      au < crawling ; exists ; 2020 ; JCO Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ ; >
       au < manifest ; exists ; 2021 ; JCO Oncology Practice Volume 17 ; 17 ; https://ascopubs.org/ ; >
   }
 
