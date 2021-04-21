@@ -152,6 +152,11 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         String publisherCleanName = null;
         String canonicalPublisherName = null;
 
+        //Set DOI
+        if (MARC_doi != null) {
+          am.put(MetadataField.FIELD_DOI, MARC_doi);
+        }
+
         // Set ISBN
         if (MARC_isbn != null) {
           am.put(MetadataField.FIELD_ISBN, MARC_isbn);
@@ -281,7 +286,13 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
             // Set publication title
             if (MARC_title != null) {
-              am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
+              am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_journal_title);
+            }
+
+
+            // Set ISSN
+            if (MARC_issn != null) {
+              am.put(MetadataField.FIELD_ISSN, MARC_issn);
             }
           }
         }
