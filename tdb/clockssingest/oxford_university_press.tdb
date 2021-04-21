@@ -5547,6 +5547,32 @@
   {
 
     title <
+      name = European Journal of Preventive Cardiology ;
+      issn = 2047-4873 ;
+      eissn = 2047-4881 ;
+      issnl = 2047-4873
+    >
+
+    param[journal_id] = eurjpc
+    comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
+    #Moved from Sage
+
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; European Journal of Preventive Cardiology Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; European Journal of Preventive Cardiology Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; European Journal of Preventive Cardiology Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; European Journal of Preventive Cardiology Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; European Journal of Preventive Cardiology Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; European Journal of Preventive Cardiology Volume 28 ; 28 ; >
+
+  }
+
+  {
+
+    title <
       name = European Review of Agricultural Economics ;
       issn = 0165-1587 ;
       eissn = 1464-3618 ;
