@@ -87,10 +87,10 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
       if (cuBase.contains("released/2016")) {
-        log.debug3("Casalini-Metadata: Year 2016: cuBase = " + cuBase);
+        log.debug("Casalini-Metadata: Year 2016: cuBase = " + cuBase);
         is_year_2016 = true;
       } else {
-        log.debug3("Casalini-Metadata: Year not 2016, cuBase = " + cuBase);
+        log.debug("Casalini-Metadata: Year not 2016, cuBase = " + cuBase);
       }
 
 
@@ -99,11 +99,11 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
       MarcReader reader = null;
 
       if (cu.getUrl().contains(".xml")) {
-        reader = new MarcXmlReader(input);
+        reader = new MarcXmlReader(input, "UTF-8");
       }
 
       if (cu.getUrl().contains(".mrc")) {
-        reader = new MarcStreamReader(input);
+        reader = new MarcStreamReader(input, "UTF-8");
       }
 
       int recordCount = 0;
@@ -180,7 +180,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         } else if (MARC_pub_date_alt != null) {
           am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date_alt));
         } else {
-          log.debug3("Casalini-Metadata: MARC_pub_date is null and MARC_pub_date_alt is null");
+          log.debug("Casalini-Metadata: MARC_pub_date is null and MARC_pub_date_alt is null");
         }
 
         // Set author
@@ -199,13 +199,13 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           canonicalPublisherName = getCanonicalPublisherName(publisherCleanName);
           am.put(MetadataField.FIELD_PUBLISHER, canonicalPublisherName);
 
-          log.debug3(String.format("Casalini-Metadata: MARC_publisher is null, set it to: %s", canonicalPublisherName));
+          log.debug(String.format("Casalini-Metadata: MARC_publisher is null, set it to: %s", canonicalPublisherName));
         } else {
           // Step 1: get the cleaned publisher name
           publisherCleanName = cleanupPublisherName(MARC_publisher);
 
 
-          log.debug3(String.format("Casalini-Metadata:  getMARC_publisher %s | publisherCleanName: %s", MARC_publisher, publisherCleanName));
+          log.debug(String.format("Casalini-Metadata:  getMARC_publisher %s | publisherCleanName: %s", MARC_publisher, publisherCleanName));
 
 
           canonicalPublisherName = getCanonicalPublisherName(publisherCleanName);
@@ -217,7 +217,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
           }
 
-          log.debug3(String.format("Casalini-Metadata:  MARC_publisher %s | publisherCleanName: %s | " +
+          log.debug(String.format("Casalini-Metadata:  MARC_publisher %s | publisherCleanName: %s | " +
                           "canonicalPublisherName %s ", MARC_publisher, publisherCleanName, canonicalPublisherName));
 
           if (!canonicalPublisherName.toLowerCase().contains(PUBLISHER_NAME.toLowerCase())) {
@@ -236,7 +236,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           MARC_chapterid = getMARCData(record, "097", 'c');
 
 
-          log.debug3(String.format("Casalini-Metadata: MARC_bookid %s | MARC_097a %s | MARC_chapterid: %s ",
+          log.debug(String.format("Casalini-Metadata: MARC_bookid %s | MARC_097a %s | MARC_chapterid: %s ",
                     MARC_bookid, MARC_097a, MARC_chapterid));
 
 
@@ -244,11 +244,11 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           String publisherShortCut = getPublisherNameShortcut2016(canonicalPublisherName);
           
           if (publisherShortCut == null) {
-            log.debug3(String.format("Casalini-Metadata: publisherShortCut NOT found in 2016: publisherCleanName: %s | " +
+            log.debug(String.format("Casalini-Metadata: publisherShortCut NOT found in 2016: publisherCleanName: %s | " +
                             "canonicalPublisherName %s ",
                     publisherCleanName, canonicalPublisherName));
           } else {
-            log.debug3(String.format("Casalini-Metadata: publisherShortCut found in 2016: publisherCleanName: %s | " +
+            log.debug(String.format("Casalini-Metadata: publisherShortCut found in 2016: publisherCleanName: %s | " +
                             "canonicalPublisherName %s | publisherShortCut : %s ",
                     publisherCleanName, canonicalPublisherName, publisherShortCut));
           }
@@ -256,20 +256,20 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           // Handle 2016 PDF goes here
           String MARC_pdf_2016 = String.format("%s/%s/%s/%s", COLLECTION_NAME, publisherShortCut, MARC_bookid, MARC_bookid);
 
-          log.debug3("Casalini-Metadata: 2016 MARC_pdf control field id: " + MARC_pdf);
+          log.debug("Casalini-Metadata: 2016 MARC_pdf control field id: " + MARC_pdf);
 
           if (MARC_pdf_2016 != null) {
             String fullPathFile_2016 = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf_2016 + ".pdf");
-            log.debug3("Casalini-Metadata: 2016 MARC_pdf: " + MARC_pdf_2016 + ", fullPathFile = " + fullPathFile_2016);
+            log.debug("Casalini-Metadata: 2016 MARC_pdf: " + MARC_pdf_2016 + ", fullPathFile = " + fullPathFile_2016);
             am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile_2016);
 
           } else {
-            log.debug3("Casalini-Metadata: MARC_pdf field is not used");
+            log.debug("Casalini-Metadata: MARC_pdf field is not used");
           }
           // End handle 2016 PDF
         } else {
           String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
-          log.debug3("Casalini-Metadata: 2020 MARC_pdf " + fullPathFile);
+          log.debug("Casalini-Metadata: 2020 MARC_pdf " + fullPathFile);
           am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
         }
 
@@ -325,7 +325,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           emitter.emitMetadata(cu, am);
         }
       }
-      log.debug3(String.format("Casalini-Metadata: Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
+      log.debug(String.format("Casalini-Metadata: Metadata file source: %s, recordCount: %d", cu.getUrl(), recordCount));
     } catch (NullPointerException exception) {
       log.error("CasaliniLibriMarcMetadataHelper throw NullPointerExceptiop: ", exception);
       exception.printStackTrace();
@@ -377,7 +377,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         }
       }
     } catch (NullPointerException e) {
-      log.debug3("Casalini-Metadata: Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
+      log.debug("Casalini-Metadata: Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
     }
     return null;
   }
@@ -394,10 +394,10 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
     if (field != null) {
       String data = field.getData();
-      log.debug3("Casalini-Metadata: Mrc Record getMARCControlFieldData: " + data);
+      log.debug("Casalini-Metadata: Mrc Record getMARCControlFieldData: " + data);
       return data;
     } else {
-        log.debug3("Casalini-Metadata: Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
+        log.debug("Casalini-Metadata: Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
         return null;
     }
   }
