@@ -1,9 +1,13 @@
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>deprecated</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>uk.org.lockss.plugin.drogoresearch.DrogoResearchPlugin</string>
   </entry>
-    <entry>
+  <entry>
     <string>plugin_version</string>
     <string>2</string>
   </entry>
