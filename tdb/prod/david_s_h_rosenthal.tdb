@@ -1,16 +1,12 @@
 {
-
   publisher <
     name = David S.H. Rosenthal
   >
   
   {
- 
     title <
-
       name = DSHR's Blog ;
       type = blog
-
     >
   
     rights = openaccess  
@@ -18,19 +14,16 @@
     implicit < status ; name >
     
     {
-
       param[base_url] = http://blog.dshr.org/
     
       au < released ; DSHR's Blog >
-    
     }
 
     {
-
-      param[base_url] = http://blog.dhsr.org/
+      param[base_url] = http://blog.dhsr.org/  
+      #url is misspelled. Should be dshr.
     
       au < superseded ; DSHR's Blog [superseded] >
-    
     }
     
   }
