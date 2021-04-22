@@ -15,7 +15,7 @@
     >
     {
       #plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-      plugin = org.lockss.plugin.pubfactory.ajtmh.AJTMHPlugin
+      plugin = org.lockss.plugin.pubfactory.ajtmh.AjtmhPlugin
 
       #not found on ingenta normal website, check http://www.ajtmh.org/content/journals/14761645/browse?page=previous-issues
 
