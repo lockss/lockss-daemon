@@ -106,7 +106,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <!-- end changes for https conversion -->      
   <entry>
     <string>au_login_page_checker</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponLoginPageChecker</string>
+    <string>org.lockss.plugin.taylorandfrancis.TafLoginPageChecker</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
