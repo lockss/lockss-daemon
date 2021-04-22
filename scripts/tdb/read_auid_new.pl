@@ -3422,6 +3422,7 @@ while (my $line = <>) {
     sleep(4);
     
   } elsif (($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
+           ($plugin eq "UCPressSilverchairPlugin") || 
            ($plugin eq "PortlandPressSilverchairPlugin")) {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
