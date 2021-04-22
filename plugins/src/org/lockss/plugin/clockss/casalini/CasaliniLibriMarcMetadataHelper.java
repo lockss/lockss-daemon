@@ -42,6 +42,8 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import java.io.InputStream;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.plugin.clockss.MetadataStringHelperUtilities;
 
@@ -70,6 +72,8 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
   private static final String COLLECTION_NAME = "Monographs";
   private static final String PUBLISHER_NAME = "Casalini";
   private static final String PUBLISHER_NAME_APPENDIX = " - " + PUBLISHER_NAME ;
+
+  private static Pattern DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
 
 
   @Override
@@ -140,8 +144,8 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         String MARC_publisher = getMARCData(record, "260", 'b');
         String MARC_author = getMARCData(record, "100", 'a');
         String MARC_author_alt = getMARCData(record, "700", 'a');
-        //Do not use 856_u, since it contains http part
         String MARC_doi =  getMARCData(record, "024", 'a');
+        String MARC_doi_alt =  getMARCData(record, "856", 'u');
         String MARC_pdf = getMARCControlFieldData(record, "001");
         // Add it to raw metadata
         am.putRaw("mrc_controlfield_001", MARC_pdf);
@@ -154,8 +158,13 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         String canonicalPublisherName = null;
 
         //Set DOI
-        if (MARC_doi != null) {
+        if (MARC_doi != null && isDoi(MARC_doi)) {
           am.put(MetadataField.FIELD_DOI, MARC_doi);
+        } else if (MARC_doi_alt != null )  {
+          String clean_doi_alt = MARC_doi_alt.replace("http://digital.casalini.it/", "");
+          if (isDoi(clean_doi_alt)) {
+            am.put(MetadataField.FIELD_DOI, clean_doi_alt);
+          }
         }
 
         // Set ISBN
@@ -392,5 +401,18 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         return null;
     }
   }
-  
+
+  private boolean isDoi(String doi) {
+
+    if (doi == null) {
+      return false;
+    }
+    Matcher m = DOI_PAT.matcher(doi);
+
+    if(!m.matches()){
+      return false;
+    }
+    return true;
+  }
+
 }
