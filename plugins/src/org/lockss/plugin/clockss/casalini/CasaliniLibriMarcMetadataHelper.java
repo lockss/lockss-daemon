@@ -140,7 +140,8 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         String MARC_publisher = getMARCData(record, "260", 'b');
         String MARC_author = getMARCData(record, "100", 'a');
         String MARC_author_alt = getMARCData(record, "700", 'a');
-        String MARC_doi =  getMARCData(record, "856", 'u');
+        //Do not use 856_u, since it contains http part
+        String MARC_doi =  getMARCData(record, "024", 'a');
         String MARC_pdf = getMARCControlFieldData(record, "001");
         // Add it to raw metadata
         am.putRaw("mrc_controlfield_001", MARC_pdf);
@@ -199,6 +200,13 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
 
           canonicalPublisherName = getCanonicalPublisherName(publisherCleanName);
+
+          if (canonicalPublisherName == null) {
+            log.warning(String.format("Casalini-Metadata: missing canonicalPublisherName,  MARC_publisher %s | publisherCleanName: %s | " +
+                    "NULL canonicalPublisherName %s ", MARC_publisher, publisherCleanName, canonicalPublisherName));
+            canonicalPublisherName = "default";
+
+          }
 
           log.debug3(String.format("Casalini-Metadata:  MARC_publisher %s | publisherCleanName: %s | " +
                           "canonicalPublisherName %s ", MARC_publisher, publisherCleanName, canonicalPublisherName));

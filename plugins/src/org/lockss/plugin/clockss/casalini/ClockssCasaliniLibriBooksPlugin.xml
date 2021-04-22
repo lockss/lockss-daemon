@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>15</string>
+        <string>16</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -71,5 +71,13 @@
         <string>org.lockss.plugin.clockss.casalini.CasaliniLibriMarcXmlBinaryMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1, "https://clockss-test.lockss.org/sourcefiles/casalinibooks-released/2021/15320/?$"</string>
+      <string>1, "https://clockss-test.lockss.org/sourcefiles/casalinibooks-released/2021/15320/.*\.mrc"</string>
+      <string>1, "https://clockss-test.lockss.org/sourcefiles/casalinibooks-released/2021/15320/463799.*"</string>
+    </list>
   </entry>
 </map>
