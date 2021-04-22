@@ -7,7 +7,7 @@
 
     plugin = org.lockss.plugin.silverchair.companybiologists.ClockssCompanyBiologistsSilverchairPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] >
-    param[base_url] = https://pubs.geoscienceworld.org/
+    param[base_url] = https://journals.biologists.com/
 
   {
 
