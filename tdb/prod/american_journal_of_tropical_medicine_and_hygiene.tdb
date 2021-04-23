@@ -14,18 +14,10 @@
     >
       plugin = org.lockss.plugin.pubfactory.ajtmh.AjtmhPlugin
 
-      #not found on ingenta normal website, check http://www.ajtmh.org/content/journals/14761645/browse?page=previous-issues
-
-      param[base_url] = http://www.ingentaconnect.com/
-      #param[base_url] = http://www.ingentaconnect.com/
-      #param[api_url] = http://api.ingentaconnect.com/
-      #param[graphics_url] = http://graphics.ingentaconnect.com/
-      param[publisher_id] = astmh
-      implicit < status ; year ; name ; param[volume_name] >
-    
-      #param[journal_id] = ajtmh
+      param[base_url] = https://www.ajtmh.org/
+      param[base_url2] = https://www.ingentaconnect.com/
       param[journal_id] = tpmd
-      param[journal_issn] = 0002-9637
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 84 ; 84 >
       au < exists ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 85 ; 85 >
