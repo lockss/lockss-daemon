@@ -302,7 +302,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
             am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
 
             // Set publication title
-            if (MARC_title != null) {
+            if (MARC_journal_title != null) {
               am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_journal_title);
             }
 
