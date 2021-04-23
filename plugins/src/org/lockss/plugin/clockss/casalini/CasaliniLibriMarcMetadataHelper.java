@@ -138,7 +138,6 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         String MARC_issn = getMARCData(record, "022", 'a');
         // MARC_Title will be different for journal vs books
         String MARC_title = getMARCData(record, "245", 'a');
-        String MARC_journal_title = getMARCData(record, "733", 't');
         String MARC_pub_date = getMARCData(record, "260", 'c');
         String MARC_pub_date_alt = getMARCData(record, "264", 'c');
         String MARC_publisher = getMARCData(record, "260", 'b');
@@ -302,8 +301,8 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
             am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
 
             // Set publication title
-            if (MARC_journal_title != null) {
-              am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_journal_title);
+            if (MARC_title != null) {
+              am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
             }
 
 
