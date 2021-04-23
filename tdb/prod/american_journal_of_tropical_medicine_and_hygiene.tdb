@@ -1,0 +1,54 @@
+{
+  publisher <
+    name = American Journal of Tropical Medicine and Hygiene ;
+    info[platform] = pubfactory. 1 title
+  >
+
+  {
+  
+    title <
+      name = The American Journal of Tropical Medicine and Hygiene ;
+      issn = 0002-9637 ;
+      eissn = 1476-1645 ;
+      issnl = 0002-9637
+    >
+      plugin = org.lockss.plugin.pubfactory.ajtmh.AjtmhPlugin
+
+      #not found on ingenta normal website, check http://www.ajtmh.org/content/journals/14761645/browse?page=previous-issues
+
+      param[base_url] = http://www.ingentaconnect.com/
+      #param[base_url] = http://www.ingentaconnect.com/
+      #param[api_url] = http://api.ingentaconnect.com/
+      #param[graphics_url] = http://graphics.ingentaconnect.com/
+      param[publisher_id] = astmh
+      implicit < status ; year ; name ; param[volume_name] >
+    
+      #param[journal_id] = ajtmh
+      param[journal_id] = tpmd
+      param[journal_issn] = 0002-9637
+
+      au < exists ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 84 ; 84 >
+      au < exists ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 85 ; 85 >
+      au < exists ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 86 ; 86 >
+      au < exists ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 87 ; 87 >
+      au < exists ; 2013 ; The American Journal of Tropical Medicine and Hygiene Volume 88 ; 88 >
+      au < exists ; 2013 ; The American Journal of Tropical Medicine and Hygiene Volume 89 ; 89 >
+      au < exists ; 2014 ; The American Journal of Tropical Medicine and Hygiene Volume 90 ; 90 >
+      au < exists ; 2014 ; The American Journal of Tropical Medicine and Hygiene Volume 91 ; 91 >
+      au < exists ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 92 ; 92 >
+      au < exists ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 93 ; 93 >
+      au < exists ; 2016 ; The American Journal of Tropical Medicine and Hygiene Volume 94 ; 94 >
+      au < exists ; 2016 ; The American Journal of Tropical Medicine and Hygiene Volume 95 ; 95 >
+      au < exists ; 2017 ; The American Journal of Tropical Medicine and Hygiene Volume 96 ; 96 >
+      au < exists ; 2017 ; The American Journal of Tropical Medicine and Hygiene Volume 97 ; 97 >
+      au < exists ; 2018 ; The American Journal of Tropical Medicine and Hygiene Volume 98 ; 98 >
+      au < exists ; 2018 ; The American Journal of Tropical Medicine and Hygiene Volume 99 ; 99 >
+      au < exists ; 2019 ; The American Journal of Tropical Medicine and Hygiene Volume 100 ; 100 >
+      au < exists ; 2019 ; The American Journal of Tropical Medicine and Hygiene Volume 101 ; 101 >
+      au < exists ; 2020 ; The American Journal of Tropical Medicine and Hygiene Volume 102 ; 102 >
+      au < exists ; 2020 ; The American Journal of Tropical Medicine and Hygiene Volume 103 ; 103 >
+      au < expected ; 2021 ; The American Journal of Tropical Medicine and Hygiene Volume 104 ; 104 >
+      au < expected ; 2021 ; The American Journal of Tropical Medicine and Hygiene Volume 105 ; 105 >
+
+  }
+}
