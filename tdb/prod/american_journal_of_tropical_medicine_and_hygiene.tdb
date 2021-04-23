@@ -13,9 +13,7 @@
       issnl = 0002-9637
     >
       plugin = org.lockss.plugin.pubfactory.ajtmh.AjtmhPlugin
-
       param[base_url] = https://www.ajtmh.org/
-      param[base_url2] = https://www.ingentaconnect.com/
       param[journal_id] = tpmd
       implicit < status ; year ; name ; param[volume_name] >
 
