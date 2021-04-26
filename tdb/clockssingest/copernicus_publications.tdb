@@ -495,7 +495,7 @@
       param[base_url] = https://essd.copernicus.org/
       param[home_url] = https://www.earth-system-science-data.net/
 
-      au < crawling ; exists ; 2009 ; 2009 ; Earth System Science Data Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; Earth System Science Data Volume 1 ; 1 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Earth System Science Data Volume 2 ; 2 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 ; >
@@ -877,7 +877,7 @@
       au < doNotProcess ; exists ; 1997 ; 1997 ; Hydrology and Earth System Sciences Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 1998 ; 1998 ; Hydrology and Earth System Sciences Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 1999 ; 1999 ; Hydrology and Earth System Sciences Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; Hydrology and Earth System Sciences Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; Hydrology and Earth System Sciences Volume 4 ; 4 ; >
       au < crawling ; exists ; 2001 ; 2001 ; Hydrology and Earth System Sciences Volume 5 ; 5 ; >
       au < crawling ; exists ; 2002 ; 2002 ; Hydrology and Earth System Sciences Volume 6 ; 6 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Hydrology and Earth System Sciences Volume 7 ; 7 ; >
