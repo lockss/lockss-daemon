@@ -139,7 +139,7 @@
     au < released ; 2017 ; Somatechnics Volume 7 ; 7 ; https://www.euppublishing.com/ >
     au < released ; 2018 ; Somatechnics Volume 8 ; 8 ; https://www.euppublishing.com/ >
     au < released ; 2019 ; Somatechnics Volume 9 ; 9 ; https://www.euppublishing.com/ >
-    au < manifest ; 2020 ; Somatechnics Volume 10 ; 10 ; https://www.euppublishing.com/ >
+    au < ready ; 2020 ; Somatechnics Volume 10 ; 10 ; https://www.euppublishing.com/ >
     au < expected ; 2021 ; Somatechnics Volume 11 ; 11 ; https://www.euppublishing.com/ >
 
   }
@@ -211,7 +211,7 @@
     au < released ; 2017 ; CounterText Volume 3 ; 3 ; https://www.euppublishing.com/ >
     au < released ; 2018 ; CounterText Volume 4 ; 4 ; https://www.euppublishing.com/ >
     au < released ; 2019 ; CounterText Volume 5 ; 5 ; https://www.euppublishing.com/ >
-    au < manifest ; 2020 ; CounterText Volume 6 ; 6 ; https://www.euppublishing.com/ >
+    au < ready ; 2020 ; CounterText Volume 6 ; 6 ; https://www.euppublishing.com/ >
     au < expected ; 2021 ; CounterText Volume 7 ; 7 ; https://www.euppublishing.com/ >
 
   }
@@ -370,7 +370,7 @@
       au < released ; 2017 ; Britain and the World Volume 10 ; 10 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Britain and the World Volume 11 ; 11 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Britain and the World Volume 12 ; 12 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Britain and the World Volume 13 ; 13 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Britain and the World Volume 13 ; 13 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Britain and the World Volume 14 ; 14 ; https://www.euppublishing.com/ >
 
     }
@@ -478,7 +478,7 @@
       au < released ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ >
     
       au < released ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Corpora Volume 16 ; 16 ; https://www.euppublishing.com/ >
     }
   }
@@ -507,7 +507,7 @@
     au < released ; 2018 ; Cultural History Volume 7 ; 7 ; https://www.euppublishing.com/ >
     
     au < released ; 2019 ; Cultural History Volume 8 ; 8 ; https://www.euppublishing.com/ >
-    au < manifest ; 2020 ; Cultural History Volume 9 ; 9 ; https://www.euppublishing.com/ >
+    au < ready ; 2020 ; Cultural History Volume 9 ; 9 ; https://www.euppublishing.com/ >
     au < expected ; 2021 ; Cultural History Volume 10 ; 10 ; https://www.euppublishing.com/ >
 
   }  
@@ -633,7 +633,7 @@
       au < released ; 2017 ; Derrida Today Volume 10 ; 10 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Derrida Today Volume 11 ; 11 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Derrida Today Volume 12 ; 12 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Derrida Today Volume 13 ; 13 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Derrida Today Volume 13 ; 13 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Derrida Today Volume 14 ; 14 ; https://www.euppublishing.com/ >
 
     }
@@ -676,7 +676,7 @@
       au < released ; 2017 ; Edinburgh Law Review Volume 21 ; 21 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Edinburgh Law Review Volume 22 ; 22 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Edinburgh Law Review Volume 23 ; 23 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Edinburgh Law Review Volume 24 ; 24 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Edinburgh Law Review Volume 24 ; 24 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Edinburgh Law Review Volume 25 ; 25 ; https://www.euppublishing.com/ >
 
     }
@@ -835,7 +835,7 @@
       param[journal_id] = hls
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < manifest ; 2002 ; Holy Land Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
+      au < ready ; 2002 ; Holy Land Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
       au < released ; 2003 ; Holy Land Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
       au < released ; 2004 ; Holy Land Studies Volume 3 ; 3 ; http://www.euppublishing.com/ >
       au < released ; 2005 ; Holy Land Studies Volume 4 ; 4 ; http://www.euppublishing.com/ >
@@ -1131,7 +1131,7 @@
       au < released ; 2018 ; Journal of Beckett Studies Volume 27 ; 27 ; https://www.euppublishing.com/ >
     
       au < released ; 2019 ; Journal of Beckett Studies Volume 28 ; 28 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Journal of Beckett Studies Volume 29 ; 29 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Journal of Beckett Studies Volume 29 ; 29 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Journal of Beckett Studies Volume 30 ; 30 ; https://www.euppublishing.com/ >
     }
     
@@ -1170,7 +1170,7 @@
       au < released ; 2018 ; Journal of British Cinema and Television Volume 15 ; 15 ; https://www.euppublishing.com/ >
     
       au < released ; 2019 ; Journal of British Cinema and Television Volume 16 ; 16 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Journal of British Cinema and Television Volume 17 ; 17 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Journal of British Cinema and Television Volume 17 ; 17 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Journal of British Cinema and Television Volume 18 ; 18 ; https://www.euppublishing.com/ >
     }
     
@@ -1258,7 +1258,7 @@
 
       au < manifest ; 1999 ; Journal of Qur'anic Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
       au < released ; 2000 ; Journal of Qur'anic Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
-      au < manifest ; 2001 ; Journal of Qur'anic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
+      au < ready ; 2001 ; Journal of Qur'anic Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
       au < released ; 2002 ; Journal of Qur'anic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ >
       au < released ; 2003 ; Journal of Qur'anic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ >
       au < released ; 2004 ; Journal of Qur'anic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ >
@@ -1399,7 +1399,7 @@
       au < released ; 2017 ; Journal of Scottish Philosophy Volume 15 ; 15 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Journal of Scottish Philosophy Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Journal of Scottish Philosophy Volume 17 ; 17 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Journal of Scottish Philosophy Volume 18 ; 18 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Journal of Scottish Philosophy Volume 18 ; 18 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Journal of Scottish Philosophy Volume 19 ; 19 ; https://www.euppublishing.com/ >
 
     }
@@ -1885,7 +1885,7 @@
       au < released ; 2017 ; Psychoanalysis and History Volume 19 ; 19 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Psychoanalysis and History Volume 20 ; 20 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Psychoanalysis and History Volume 21 ; 21 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Psychoanalysis and History Volume 22 ; 22 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Psychoanalysis and History Volume 22 ; 22 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Psychoanalysis and History Volume 23 ; 23 ; https://www.euppublishing.com/ >
 
     }
@@ -2140,8 +2140,8 @@
       au < released ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 ; http://www.euppublishing.com/ >
       au < released ; 2010 ; Scottish Archaeological Journal Volume 32 ; 32 ; http://www.euppublishing.com/ >
       au < released ; 2011 ; Scottish Archaeological Journal Volume 33 ; 33 ; https://www.euppublishing.com/ >
-      au < manifest ; 2012 ; Scottish Archaeological Journal Volume 34-35 ; 34-35 ; https://www.euppublishing.com/ >
-      au < manifest ; 2014 ; Scottish Archaeological Journal Volume 36-37 ; 36-37 ; https://www.euppublishing.com/ >
+      au < ready ; 2012 ; Scottish Archaeological Journal Volume 34-35 ; 34-35 ; https://www.euppublishing.com/ >
+      au < ready ; 2014 ; Scottish Archaeological Journal Volume 36-37 ; 36-37 ; https://www.euppublishing.com/ >
       au < released ; 2016 ; Scottish Archaeological Journal Volume 38 ; 38 ; https://www.euppublishing.com/ >
       au < released ; 2017 ; Scottish Archaeological Journal Volume 39 ; 39 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Scottish Archaeological Journal Volume 40 ; 40 ; https://www.euppublishing.com/ >
@@ -2254,7 +2254,7 @@
       au < released ; 2017 ; Studies in World Christianity Volume 23 ; 23 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Studies in World Christianity Volume 24 ; 24 ; https://www.euppublishing.com/ >
       au < released ; 2019 ; Studies in World Christianity Volume 25 ; 25 ; https://www.euppublishing.com/ >
-      au < manifest ; 2020 ; Studies in World Christianity Volume 26 ; 26 ; https://www.euppublishing.com/ >
+      au < ready ; 2020 ; Studies in World Christianity Volume 26 ; 26 ; https://www.euppublishing.com/ >
       au < expected ; 2021 ; Studies in World Christianity Volume 27 ; 27 ; https://www.euppublishing.com/ >
 
     }
