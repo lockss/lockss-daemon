@@ -135,4 +135,8 @@ POSSIBILITY OF SUCH DAMAGE.
             </org.lockss.daemon.ConfigParamDescr>
         </list>
     </entry>
+    <entry>
+        <string>au_login_page_checker</string>
+        <string>org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressLoginPageChecker</string>
+    </entry>
 </map>
