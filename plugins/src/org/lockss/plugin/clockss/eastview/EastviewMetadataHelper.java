@@ -100,6 +100,7 @@ implements SourceXmlSchemaHelper {
   private static String pub_volume = "VOLUME";
   private static String pub_issue = "NUMBER";
   private static String art_title = "ATITLE";
+  private static String art_title_raw = "RAW TITLE";
   private static String art_contrib = "AUTHOR";
   private static String art_sp = "PAGE";
   
@@ -112,7 +113,8 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
   static {
-    articleMap.put(pub_title, CLEAN_TEXT); 
+    articleMap.put(pub_title, CLEAN_TEXT);
+    articleMap.put(art_title_raw, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(pub_volume, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 

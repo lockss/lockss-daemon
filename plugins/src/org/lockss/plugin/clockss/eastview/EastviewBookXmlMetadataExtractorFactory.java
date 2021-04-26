@@ -90,7 +90,7 @@ public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataEx
         String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
         String pdfFilePath = cuBase + zippedFolderName + ".zip!/" + fileNum + ".pdf";
-        log.debug3("Fei - pdfFilePath" + pdfFilePath );
+        log.debug3("pdfFilePath" + pdfFilePath );
         thisAM.put(MetadataField.FIELD_ACCESS_URL, pdfFilePath);
       }
 
@@ -121,6 +121,9 @@ public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       }
 
       thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+
+      thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+      thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
     }
 
   }
