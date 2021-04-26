@@ -18,7 +18,7 @@
 
       param[journal_id] = cpe
 
-      au < ojs3.Ojs3Plugin ; ready ; 2019 ; Clinical Psychology in Europe Volume 2019 ; 2019 ; 2019 ; https://cpe.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; releasing ; 2019 ; Clinical Psychology in Europe Volume 2019 ; 2019 ; 2019 ; https://cpe.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; Clinical Psychology in Europe Volume 2020 ; 2020 ; 2020 ; https://cpe.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2021 ; Clinical Psychology in Europe Volume 2021 ; 2021 ; 2021 ; https://cpe.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; expected ; 2021 ; Clinical Psychology in Europe Volume 2021 ; 2021 ; 2021 ; https://cpe.psychopen.eu/ >
@@ -48,7 +48,7 @@
       au < ojs2.OJS2Plugin ; down ; 2016 ; Europe's Journal of Psychology Volume 12 ; 12 ; 2016 ; http://ejop.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; released ; 2017 ; Europe's Journal of Psychology Volume 13 ; 13 ; 2017 ; https://ejop.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; released ; 2018 ; Europe's Journal of Psychology Volume 14 ; 14 ; 2018 ; https://ejop.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; ready ; 2019 ; Europe's Journal of Psychology Volume 15 ; 15 ; 2019 ; https://ejop.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; releasing ; 2019 ; Europe's Journal of Psychology Volume 15 ; 15 ; 2019 ; https://ejop.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; Europe's Journal of Psychology Volume 16 ; 16 ; 2020 ; https://ejop.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2021 ; Europe's Journal of Psychology Volume 17 ; 17 ; 2021 ; https://ejop.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; expected ; 2021 ; Europe's Journal of Psychology Volume 17 ; 17 ; 2021 ; https://ejop.psychopen.eu/ >
@@ -99,7 +99,7 @@
       au < ojs2.OJS2Plugin ; released ; 2017 ; Journal of Social and Political Psychology Volume 5 ; 5 ; 2017 ; https://jspp.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; released ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; released ; 2019 ; Journal of Social and Political Psychology Volume 7 ; 7 ; 2019 ; https://jspp.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; ready ; 2020 ; Journal of Social and Political Psychology Volume 8 ; 8 ; 2020 ; https://jspp.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; releasing ; 2020 ; Journal of Social and Political Psychology Volume 8 ; 8 ; 2020 ; https://jspp.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; manifest ; 2021 ; Journal of Social and Political Psychology Volume 9 ; 9 ; 2021 ; https://jspp.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; expected ; 2021 ; Journal of Social and Political Psychology Volume 9 ; 9 ; 2021 ; https://jspp.psychopen.eu/ >
 
@@ -158,7 +158,7 @@
 
       param[journal_id] = sotrap
 
-      au < ojs3.Ojs3Plugin ; ready ; 2020 ; Sexual Offending: Theory, Research, and Prevention Volume 15 ; 15 ; 2020 ; https://sotrap.psychopen.eu/ > #no substance urls
+      au < ojs3.Ojs3Plugin ; releasing ; 2020 ; Sexual Offending: Theory, Research, and Prevention Volume 15 ; 15 ; 2020 ; https://sotrap.psychopen.eu/ > #no substance urls
       au < ojs3.Ojs3Plugin ; expected ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; expected ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ > #no substance urls
 
@@ -176,7 +176,7 @@
 
       au < ojs3.Ojs3Plugin ; manifest ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; 2018 ; https://spb.psychopen.eu/ >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; 2019 ; https://spb.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; ready ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; 2020 ; https://spb.psychopen.eu/ > #no substance urls
+      au < ojs3.Ojs3Plugin ; releasing ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; 2020 ; https://spb.psychopen.eu/ > #no substance urls
       au < ojs3.Ojs3Plugin ; expected ; 2021 ; Social Psychological Bulletin Volume 2021 ; 2021 ; 2021 ; https://spb.psychopen.eu/ > #no substance urls
 
   }
@@ -235,7 +235,7 @@
       au < ojs2.OJS2Plugin ; down ; 2016 ; Psychology, Community & Health Volume 5 ; 5 ; 2016 ; http://pch.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; released ; 2017 ; Psychology, Community & Health Volume 6 ; 6 ; 2017 ; https://pch.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; released ; 2018 ; Psychology, Community & Health Volume 7 ; 7 ; 2018 ; https://pch.psychopen.eu/ >
-      au < ojs2.OJS2Plugin ; ready ; 2019 ; Psychology, Community & Health Volume 8 ; 8 ; 2019 ; https://pch.psychopen.eu/ >
+      au < ojs2.OJS2Plugin ; releasing ; 2019 ; Psychology, Community & Health Volume 8 ; 8 ; 2019 ; https://pch.psychopen.eu/ >
       #MOVED - reported by publisher
   }
 
