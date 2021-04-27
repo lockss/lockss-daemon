@@ -99,6 +99,12 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         // there are a number of input forms, comment boxes, etc to filter out
         HtmlNodeFilters.tagWithAttributeRegex("form", "class", "annotationsForm"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "searchModule"),
+        // the access seems to change? maybe we caught them in a migration, but just to be safe, exclude the access icon
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessIcon"),
+        // cover image alt text changes? weird
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-cover-image"),
+        // if an article is added to some 'collection' after being published, it gets ammended with this tag
+        HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "tax-collections "),
     };
     
     return getFilteredInputStream(au, in, encoding,
