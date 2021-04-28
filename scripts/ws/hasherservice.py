@@ -437,8 +437,7 @@ def _do_hashes(options):
 
 # Last modified 2015-08-31
 def _file_lines(fstr):
-    with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0,
-                                                           [x.partition('#')[0].strip() for x in f])
+    with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
     if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
     return ret
 
