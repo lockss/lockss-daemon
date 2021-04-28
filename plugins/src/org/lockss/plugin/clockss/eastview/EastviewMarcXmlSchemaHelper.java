@@ -472,6 +472,7 @@ implements SourceXmlSchemaHelper {
     // A few other cookMap need post process, so they will be in the post process function
     cookMap.put(MARC_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(MARC_isbn_alt, MetadataField.FIELD_ISBN);
+    cookMap.put(MARC_title, MetadataField.FIELD_ARTICLE_TITLE);
   }
 
 
