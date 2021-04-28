@@ -2278,7 +2278,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Critical Care Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Critical Care Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Critical Care Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Case Reports in Critical Care Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Case Reports in Critical Care Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Case Reports in Critical Care Volume 2021 ; 2021 ; 2021 ; >
 
   }
@@ -5656,7 +5656,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Rheumatology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Rheumatology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Rheumatology Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Rheumatology Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; International Journal of Rheumatology Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; International Journal of Rheumatology Volume 2021 ; 2021 ; 2021 ; >
 
   }
@@ -7394,7 +7394,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Healthcare Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Healthcare Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Healthcare Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Journal of Healthcare Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Journal of Healthcare Engineering Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Journal of Healthcare Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
@@ -9717,7 +9717,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Prostate Cancer Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Prostate Cancer Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Prostate Cancer Volume 2018 ; 2018 ; 2018 ; >
-    au < crawling ; exists ; 2019 ; Prostate Cancer Volume 2019 ; 2019 ; 2019 ; >
+    au < frozen ; exists ; 2019 ; Prostate Cancer Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Prostate Cancer Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Prostate Cancer Volume 2021 ; 2021 ; 2021 ; >
 
