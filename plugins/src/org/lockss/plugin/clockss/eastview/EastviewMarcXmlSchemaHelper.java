@@ -472,7 +472,13 @@ implements SourceXmlSchemaHelper {
     // A few other cookMap need post process, so they will be in the post process function
     cookMap.put(MARC_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(MARC_isbn_alt, MetadataField.FIELD_ISBN);
-    cookMap.put(MARC_title, MetadataField.FIELD_ARTICLE_TITLE);
+    String cleanedTitle = MARC_title.replace(":", "").
+            replace("/", "").
+            replace("=", "").
+            replace("\"", "").
+            replace("...", "");
+    log.debug(String.format("original artitle title = %s, cleaned title = %s",MARC_title, cleanedTitle);
+    cookMap.put(cleanedTitle, MetadataField.FIELD_ARTICLE_TITLE);
   }
 
 
