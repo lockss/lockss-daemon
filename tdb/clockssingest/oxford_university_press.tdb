@@ -5411,6 +5411,40 @@
   {
 
     title <
+      name = European Journal of Cardiovascular Nursing ;
+      issn = 1474-5151 ;
+      eissn = 1873-1953 ;
+      issnl = 1474-5151
+    >
+
+    param[journal_id] = eurjcn
+
+    au < exists ; exists ; 2002 ; 2002 ; European Journal of Cardiovascular Nursing Volume 1 ; 1 ; >
+    au < exists ; exists ; 2003 ; 2003 ; European Journal of Cardiovascular Nursing Volume 2 ; 2 ; >
+    au < exists ; exists ; 2004 ; 2004 ; European Journal of Cardiovascular Nursing Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; European Journal of Cardiovascular Nursing Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; European Journal of Cardiovascular Nursing Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; European Journal of Cardiovascular Nursing Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; European Journal of Cardiovascular Nursing Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of Cardiovascular Nursing Volume 12 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Cardiovascular Nursing Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Cardiovascular Nursing Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; European Journal of Cardiovascular Nursing Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; European Journal of Cardiovascular Nursing Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; European Journal of Cardiovascular Nursing Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; European Journal of Cardiovascular Nursing Volume 18 ; 18 ; >
+    au < exists ; exists ; 2020 ; 2020 ; European Journal of Cardiovascular Nursing Volume 19 ; 19 ; >
+    au < exists ; exists ; 2021 ; 2021 ; European Journal of Cardiovascular Nursing Volume 20 ; 20 ; >
+
+  }
+
+  {
+
+    title <
       name = European Journal of International Law ;
       issn = 0938-5428 ;
       eissn = 1464-3596 ;
