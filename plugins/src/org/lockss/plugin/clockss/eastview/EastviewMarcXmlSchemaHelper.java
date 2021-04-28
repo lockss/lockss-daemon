@@ -477,7 +477,7 @@ implements SourceXmlSchemaHelper {
             replace("=", "").
             replace("\"", "").
             replace("...", "");
-    log.debug(String.format("original artitle title = %s, cleaned title = %s",MARC_title, cleanedTitle);
+    log.debug(String.format("original artitle title = %s, cleaned title = %s",MARC_title, cleanedTitle));
     cookMap.put(cleanedTitle, MetadataField.FIELD_ARTICLE_TITLE);
   }
 
