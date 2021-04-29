@@ -6534,10 +6534,10 @@
       eissn = 2160-1836
     >
 
-    param[journal_id] = gastro
+    param[journal_id] = g3journal
     #2011 volume 1 to 2020 volume 10 had been processed in Genetics Society of America
 
-    au < manifest ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 >
+    au < exists ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 >
 
   }
 
@@ -19586,7 +19586,7 @@
     au < manifest ; 2019 ; 2019 ; Journal of Mechanics Volume 35 ; 35 >
     au < manifest ; 2020 ; 2020 ; Journal of Mechanics Volume 36 ; 36 >
     au < expected ; 2021 ; 2021 ; Journal of Mechanics Volume 37 ; 37 >
-    au < expected ; 2021 ; 2021 ; Journal of Mechanics Volume 37 ; 37 >
+    au < expected ; 2021 ; 2021 ; Journal of Mechanics Volume 38 ; 38 >
 
   }
 
