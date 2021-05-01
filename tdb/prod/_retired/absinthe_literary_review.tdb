@@ -14,28 +14,20 @@
 
     rights = openaccess
     plugin = org.lockss.plugin.absinthe.AbsinthePlugin
-    implicit < status ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
 
     {
     
-      param[base_url] = http://absinthe-literary-review.com/
+      param[base_url] = http://absinthe-literary-review.com/ 
+      #base_url confirmed 2021-04-27
 
-      au < down ; Absinthe Literary Review 2003 [superseded] ; 2003 >
-      au < down ; Absinthe Literary Review 2004 [superseded] ; 2004 >
-      au < down ; Absinthe Literary Review 2005 [superseded] ; 2005 >
+      au < down ; 2003 ; Absinthe Literary Review 2003 [superseded] ; 2003 >
+      au < down ; 2004 ; Absinthe Literary Review 2004 [superseded] ; 2004 >
+      au < down ; 2005 ; Absinthe Literary Review 2005 [superseded] ; 2005 >
+      au < doNotProcess ; 2006 ; Absinthe Literary Review 2006 ; 2006 >
+      au < doNotProcess ; 2007 ; Absinthe Literary Review 2007 ; 2007 >
       
     }
-     
-    {
-    
-      param[base_url] = http://www.absintheliteraryreview.com/
-      comment[doNotProcess] = waiting for plugin fix
-
-      au < doNotProcess ; Absinthe Literary Review 2003 ; 2003 >
-      au < doNotProcess ; Absinthe Literary Review 2004 ; 2004 >
-      au < doNotProcess ; Absinthe Literary Review 2005 ; 2005 >
-      
-    }    
     
   }
 

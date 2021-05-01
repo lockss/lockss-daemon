@@ -1112,7 +1112,7 @@
     au < exists ; exists ; 2006 ; 2006 ; Journal of Animal Science Volume 83 ; 83 ; >
     au < exists ; exists ; 2007 ; 2007 ; Journal of Animal Science Volume 84 ; 84 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Animal Science Volume 88 ; 88 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of Animal Science Volume 89 ; 89 ; >
@@ -2330,7 +2330,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Biology of Reproduction Volume 74-75 ; 74-75 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biology of Reproduction Volume 76-77 ; 76-77 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Biology of Reproduction Volume 78-79 ; 78-79 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Biology of Reproduction Volume 80-81 ; 80-81 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Biology of Reproduction Volume 80-81 ; 80-81 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Biology of Reproduction Volume 86-87 ; 86-87 ; >
@@ -5411,6 +5411,40 @@
   {
 
     title <
+      name = European Journal of Cardiovascular Nursing ;
+      issn = 1474-5151 ;
+      eissn = 1873-1953 ;
+      issnl = 1474-5151
+    >
+
+    param[journal_id] = eurjcn
+
+    au < exists ; exists ; 2002 ; 2002 ; European Journal of Cardiovascular Nursing Volume 1 ; 1 ; >
+    au < exists ; exists ; 2003 ; 2003 ; European Journal of Cardiovascular Nursing Volume 2 ; 2 ; >
+    au < exists ; exists ; 2004 ; 2004 ; European Journal of Cardiovascular Nursing Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; European Journal of Cardiovascular Nursing Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; European Journal of Cardiovascular Nursing Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; European Journal of Cardiovascular Nursing Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; European Journal of Cardiovascular Nursing Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of Cardiovascular Nursing Volume 12 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; European Journal of Cardiovascular Nursing Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; European Journal of Cardiovascular Nursing Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; European Journal of Cardiovascular Nursing Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; European Journal of Cardiovascular Nursing Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; European Journal of Cardiovascular Nursing Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; European Journal of Cardiovascular Nursing Volume 18 ; 18 ; >
+    au < exists ; exists ; 2020 ; 2020 ; European Journal of Cardiovascular Nursing Volume 19 ; 19 ; >
+    au < exists ; exists ; 2021 ; 2021 ; European Journal of Cardiovascular Nursing Volume 20 ; 20 ; >
+
+  }
+
+  {
+
+    title <
       name = European Journal of International Law ;
       issn = 0938-5428 ;
       eissn = 1464-3596 ;
@@ -6567,10 +6601,10 @@
       eissn = 2160-1836
     >
 
-    param[journal_id] = gastro
+    param[journal_id] = g3journal
     #2011 volume 1 to 2020 volume 10 had been processed in Genetics Society of America
 
-    au < manifest ; exists ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; >
+    au < exists ; exists ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; >
 
   }
 
@@ -10155,7 +10189,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Economic Entomology Volume 110 ; 110 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Economic Entomology Volume 111 ; 111 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Economic Entomology Volume 112 ; 112 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Journal of Economic Entomology Volume 113 ; 113 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Economic Entomology Volume 113 ; 113 ; >
     au < expected ; exists ; 2021 ; 2021 ; Journal of Economic Entomology Volume 114 ; 114 ; >
 
   }
@@ -12246,7 +12280,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Urban Ecology Volume 3 ; 3 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Urban Ecology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Urban Ecology Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Journal of Urban Ecology Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Journal of Urban Ecology Volume 6 ; 6 ; >
     au < expected ; exists ; 2021 ; 2021 ; Journal of Urban Ecology Volume 7 ; 7 ; >
 
   }
@@ -14577,7 +14611,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Nucleic Acids Research Volume 45 ; 45 ; >
     au < finished ; finished ; 2018 ; 2018 ; Nucleic Acids Research Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; 2019 ; Nucleic Acids Research Volume 47 ; 47 ; >
-    au < notReady ; exists ; 2020 ; 2020 ; Nucleic Acids Research Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Nucleic Acids Research Volume 48 ; 48 ; >
     au < expected ; exists ; 2021 ; 2021 ; Nucleic Acids Research Volume 49 ; 49 ; >
 
   }
@@ -19625,7 +19659,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Mechanics Volume 35 ; 35 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Mechanics Volume 36 ; 36 ; >
     au < expected ; exists ; 2021 ; 2021 ; Journal of Mechanics Volume 37 ; 37 ; >
-    au < expected ; exists ; 2021 ; 2021 ; Journal of Mechanics Volume 37 ; 37 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Journal of Mechanics Volume 38 ; 38 ; >
 
   }
 
@@ -20905,7 +20939,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; The Review of Corporate Finance Studies Volume 6 ; 6 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The Review of Corporate Finance Studies Volume 7 ; 7 ; >
     au < crawling ; exists ; 2019 ; 2019 ; The Review of Corporate Finance Studies Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; The Review of Corporate Finance Studies Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; The Review of Corporate Finance Studies Volume 9 ; 9 ; >
     au < expected ; exists ; 2021 ; 2021 ; The Review of Corporate Finance Studies Volume 10 ; 10 ; >
 
   }

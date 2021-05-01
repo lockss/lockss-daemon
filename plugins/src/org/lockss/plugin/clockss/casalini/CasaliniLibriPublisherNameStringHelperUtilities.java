@@ -49,11 +49,15 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
     protected static final Map<String, String> canonical;
     static {
       canonical = new HashMap<>();
+      canonical.put("21 editore", "21 Editore");
       canonical.put("accademia di romania", "Accademia di Romania");
       canonical.put("accademia university press", "Accademia University Press");
       canonical.put("agora & co", "Agorà & Co.");
       canonical.put("agorà & co", "Agorà & Co.");
+      canonical.put("agorà & co.", "Agorà & Co.");
+      canonical.put("agorà", "Agorà & Co.");
       canonical.put("aib", "AIB - Associazione Italiana Biblioteche");
+      canonical.put("aib - associazione italiana biblioteche", "AIB - Associazione Italiana Biblioteche");
       canonical.put("alpes", "Alpes Italia");
       canonical.put("alpes italia", "Alpes Italia");
       canonical.put("altralinea", "Altralinea edizioni");
@@ -61,6 +65,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("aluvion editorial", "Aluvión Editorial");
       canonical.put("aluvión editorial", "Aluvión Editorial");
       canonical.put("amalthea", "Cadmo");
+      canonical.put("amsterdam university press", "Amsterdam University Press");
       canonical.put("antenore", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("antenore la facolta giardini", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("antenore la facoltà giardini", "Istituti Editoriali e Poligrafici Internazionali");
@@ -72,11 +77,15 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("anthropos fundación cultural eduardo cohen", "Anthropos Editorial");
       canonical.put("anthropos universidad autonoma metropolitana", "Anthropos Editorial");
       canonical.put("anthropos universidad autónoma metropolitana", "Anthropos Editorial");
+      canonical.put("archaeopress", "Archaeopress");
+      canonical.put("artemide", "Artemide");
       canonical.put("associazione di studi storici elio conti", "Associazione di studi storici Elio Conti");
       canonical.put("associazione italiana biblioteche", "AIB - Associazione Italiana Biblioteche");
+      canonical.put("ateneo pontificio regina apostolorum","Ateneo Pontificio Regina Apostolorum");
       canonical.put("bibliografica", "Editrice Bibliografica");
       canonical.put("biblioteca dei leoni", "Biblioteca dei Leoni");
       canonical.put("bononia university press", "Bononia University Press");
+      canonical.put("bookstones", "Bookstones");
       canonical.put("cadmo", "Cadmo");
       canonical.put("cadmo centro mario rossi per gli studi filosofici", "Cadmo");
       canonical.put("casalini", "Casalini Libri");
@@ -100,6 +109,9 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("dipartimento di filosofia università di bologna", "CLUEB");
       canonical.put("ecole francaise d'athenes", "Ecole française d'Athènes");
       canonical.put("école française d'athènes", "Ecole française d'Athènes");
+      canonical.put("edisud", "Edisud");
+      canonical.put("edisud salerno", "Edisud Salerno");
+      canonical.put("editions l'harmattan", "Editions L'Harmattan");
       canonical.put("editore ulrico hoepli", "Hoepli");
       canonical.put("editore xy.it", "Editore XY.IT");
       canonical.put("editorial comares", "Editorial Comares");
@@ -162,8 +174,11 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("istituti editoriali e poligrafici internazionali università degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("jaca book", "CLUEB");
       canonical.put("jaca book clueb", "CLUEB");
+      canonical.put("jouvence", "Jouvence");
       canonical.put("la ergastula", "La Ergástula");
       canonical.put("la ergástula", "La Ergástula");
+      canonical.put("la otra h", "Herder Editorial");
+      canonical.put("l'harmattan", "L'Harmattan");
       canonical.put("l'asino d'oro", "L'asino d'oro edizioni");
       canonical.put("l'asino d'oro edizioni", "L'asino d'oro edizioni");
       canonical.put("latium", "Edizioni Quasar");
@@ -186,6 +201,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("l.s. olschki department of italian the university of w. australia", "Leo S. Olschki");
       canonical.put("l.s. olschki istituto per il lessico intellettuale europeo e storia delle idee", "Leo S. Olschki");
       canonical.put("l.s. olschki regione toscana", "Leo S. Olschki");
+      canonical.put("mardaga", "Mardaga");
       canonical.put("mandragora", "Mandragora");
       canonical.put("marco saya edizioni", "Marco Saya Edizioni");
       canonical.put("matauro", "Metauro"); //sic
@@ -195,6 +211,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("ministero per i beni e le attività culturali direzione generale per gli archivi", "CLUEB");
       canonical.put("morcelliana", "Morcelliana");
       canonical.put("morlacchi", "Morlacchi Editore");
+      canonical.put("morlacchi editore u.p.", "Morlacchi Editore");
       canonical.put("nardini", "Nardini editore");
       canonical.put("new digital frontiers", "New Digital Frontiers");
       canonical.put("new digital press", "New Digital Frontiers"); //sic
@@ -205,6 +222,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("paolo loffredo iniziative editoriali", "Loffredo");
       canonical.put("partagees", "Giannini Editore");
       canonical.put("partagées", "Giannini Editore");
+      canonical.put("paris expérimental", "Paris Expérimental");
       canonical.put("passigli", "Passigli");
       canonical.put("patron", "Pàtron Editore");
       canonical.put("pàtron", "Pàtron Editore");
@@ -231,6 +249,9 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("rosenberg & seller", "Rosenberg & Sellier"); //sic
       canonical.put("rosenberg & sellier", "Rosenberg & Sellier");
       canonical.put("rosenberg sellier", "Rosenberg & Sellier");
+      // the original file did double encoded, which cause trouble, and need to this
+      // the original string is "Scholé"
+      canonical.put("schol\u00e9", "Scholé");
       canonical.put("sel", "Storia e Letteratura");
       canonical.put("settegiorni", "Settegiorni Editore");
       canonical.put("settenove", "Settenove edizioni");
@@ -256,6 +277,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("ulrico hoepli", "Hoepli");
       canonical.put("universita degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("università degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("università degli studi di milano dipartimento di studi letterari filologici e linguistici","Ledizioni");
       canonical.put("universita la sapienza", "CLUEB");
       canonical.put("università la sapienza", "CLUEB");
       canonical.put("uranoscopo", "CLUEB");

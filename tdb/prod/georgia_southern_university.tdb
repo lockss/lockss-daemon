@@ -271,7 +271,6 @@
       au < manifest ; 2011 ; Southern Business Review Volume 36 ; 36 >
       au < manifest ; 2012 ; Southern Business Review Volume 37 ; 37 >
       au < manifest ; 2013 ; Southern Business Review Volume 38 ; 38 >
-      au < expected ; 2021 ; Southern Business Review Volume 33 ; 33 >
 
   }
 
@@ -299,8 +298,7 @@
       au < released ; 2018-2019 ; The Coastal Review Volume 10 ; 10 >
       au < released ; 2019-2020 ; The Coastal Review Volume 11 ; 11 >
       au < manifest ; 2020-2021 ; The Coastal Review Volume 12 ; 12 >
-      au < expected ; 2021 ; The Coastal Review Volume 13 ; 13 >
-      au < expected ; 2021 ; The Coastal Review Volume 13 ; 13 >
+      au < expected ; 2021-2022 ; The Coastal Review Volume 13 ; 13 >
 
   }
 
@@ -317,8 +315,7 @@
       param[journal_abbr] = jssw
 
       au < released ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 >
-      au < expected ; 2018-2020 ; The Journal of Student Success in Writing Volume 2 ; 2 >
-      au < expected ; 2021 ; The Journal of Student Success in Writing Volume 3 ; 3 >
+      au < expected ; 2021 ; The Journal of Student Success in Writing Volume 2 ; 2 >
 
   }
 

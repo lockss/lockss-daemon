@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Echo Research and Practice ;
+    #info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 3 ;
+    info[platform] = PubFactory
+  >
+
+  plugin = org.lockss.plugin.pubfactory.bioscientifica.BioScientificaPlugin
+  implicit < status ; year ; name ; param[volume_name] ; hidden[proxy] >
+  param[base_url] = https://erp.bioscientifica.com/
+
+  {
+
+    title <
+      name = Echo Research and Practice ;
+      #issn = 0003-0007 ;
+      eissn = 2055-0464 
+    >
+
+    param[journal_id] = echo
+
+    au < manifest ; 2014 ; Echo Research and Practice  Volume 1 ; 1 ; >
+  }
+}

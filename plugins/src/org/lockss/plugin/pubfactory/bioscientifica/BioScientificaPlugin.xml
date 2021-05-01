@@ -76,4 +76,9 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_name</string>
     <string>"Bio Scientifica Plugin (PubFactory), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!-- https://erp.bioscientifica.com/lockss-manifest/journal/echo/1-->
+    <string>"%slockss-manifest/journal/%s/%s", base_url, journal_id, volume_name</string>
+  </entry>
 </map>
