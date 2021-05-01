@@ -132,7 +132,7 @@ public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataEx
               replace("\"", "").
               replace("...", "");
       log.debug(String.format("original artitle title = %s, cleaned title = %s",articleTitle, cleanedArticleTitle));
-      thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, cleanedArticleTitle);
+      thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, cleanedArticleTitle);
     }
 
   }
