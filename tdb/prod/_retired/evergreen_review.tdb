@@ -13,12 +13,14 @@
 
     rights = openaccess
 
-comment[pjg1] = new plugin needed RU3628 RT3875
+comment[pjg1] = new plugin needed RU3628 RT3875 RU 3780
  
    {
     plugin = org.lockss.plugin.evergreenreview.EvergreenReviewPlugin
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.evergreenreview.com/ 
+
+    #still online 2021-04-29
 
     au < down ; 1998 ; Evergreen Review 100 ; 100 >
     au < down ; 1998-1999 ; Evergreen Review 101 ; 101 >
