@@ -7,6 +7,7 @@ import org.lockss.filter.pdf.PdfTransform;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
+import org.lockss.util.Logger;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -17,12 +18,18 @@ import java.util.regex.Pattern;
 
 public class ManchesterUniversityPressPdfFilterFactory extends ExtractingPdfFilterFactory {
 
+  private static final Logger log = Logger.getLogger(ManchesterUniversityPressPdfFilterFactory.class);
   /*
    *
    */
 
-  protected static final Pattern TARGET_STRING =
+  protected static final Pattern WATERMARK_LINE_1 =
       Pattern.compile("^Downloaded from manchester");
+  protected static final Pattern WATERMARK_LINE_2_VARIANTS =
+      Pattern.compile("via (c?lockss archive|communal account|c?lockks archive)", Pattern.CASE_INSENSITIVE);
+
+  protected static boolean SEEN_WATERMARK_LINE_1 = false;
+  Integer count = 0;
 
   @Override
   public void transform(ArchivalUnit au,
@@ -51,7 +58,17 @@ public class ManchesterUniversityPressPdfFilterFactory extends ExtractingPdfFilt
               String str = tok.getString();
               if (str.startsWith("\ufeff")) {
                 String rewritten = new String(str.substring(1).getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_16BE);
-                if (TARGET_STRING.matcher(rewritten).find()) {
+                if (WATERMARK_LINE_1.matcher(rewritten).find()) {
+                  accumulator.clear();
+                  // now that we've seen watermark line 1, we set to true
+                  SEEN_WATERMARK_LINE_1 = true;
+                  return;
+                }
+              } else if (SEEN_WATERMARK_LINE_1) {
+                // the next line must be WATERMARK_LINE_2, if it exists
+                SEEN_WATERMARK_LINE_1 = false;
+                // still check the pattern, just in case the line 2 was actually part of line 1
+                if (WATERMARK_LINE_2_VARIANTS.matcher(str).find()) {
                   accumulator.clear();
                   return;
                 }
