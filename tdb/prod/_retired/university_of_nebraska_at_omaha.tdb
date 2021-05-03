@@ -13,33 +13,12 @@
     >
     
     rights = openaccess
-    
-    {
-    
-      plugin = edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin
-      param[base_url] = http://www.unomaha.edu/jrf/
-      implicit < status ; year ; name ; param[volume] >
-    
-      au < down ; 1997 ; The Journal of Religion and Film Volume 1 ; 1 >
-      au < down ; 1998 ; The Journal of Religion and Film Volume 2 ; 2 >
-      au < down ; 1999 ; The Journal of Religion and Film Volume 3 ; 3 >
-      au < down ; 2000 ; The Journal of Religion and Film Volume 4 ; 4 >
-      au < down ; 2001 ; The Journal of Religion and Film Volume 5 ; 5 >
-      au < down ; 2002 ; The Journal of Religion and Film Volume 6 ; 6 >
-      au < down ; 2003 ; The Journal of Religion and Film Volume 7 ; 7 >
-      au < down ; 2004 ; The Journal of Religion and Film Volume 8 ; 8 >
-      au < down ; 2005 ; The Journal of Religion and Film Volume 9 ; 9 >
-      au < down ; 2006 ; The Journal of Religion and Film Volume 10 ; 10 >
-      au < down ; 2007 ; The Journal of Religion and Film Volume 11 ; 11 >
-      au < down ; 2008 ; The Journal of Religion and Film Volume 12 ; 12 >
-      au < down ; 2009 ; The Journal of Religion and Film Volume 13 ; 13 >
-      
-    }
-    
+    #Moved to bepress
+
     {
     
       plugin = org.lockss.plugin.bepress.BePressPlugin
-      param[base_url] = http://digitalcommons.unomaha.edu/
+      param[base_url] = https://digitalcommons.unomaha.edu/
       param[journal_abbr] = jrf
       implicit < status ; year ; name ; param[volume] >
     
@@ -66,9 +45,33 @@
 #      au < exists ; 2017 ; The Journal of Religion and Film Volume 21 ; 21 >
 #      au < exists ; 2018 ; The Journal of Religion and Film Volume 22 ; 22 >
 #      au < exists ; 2019 ; The Journal of Religion and Film Volume 23 ; 23 >
+#      au < exists ; 2020 ; The Journal of Religion and Film Volume 24 ; 24 >
+#      au < exists ; 2021 ; The Journal of Religion and Film Volume 25 ; 25 >
 
     }
-
+    
+    {
+    
+      plugin = edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin
+      param[base_url] = http://www.unomaha.edu/jrf/
+      implicit < status ; year ; name ; param[volume] >
+    
+      au < down ; 1997 ; The Journal of Religion and Film Volume 1 ; 1 >
+      au < down ; 1998 ; The Journal of Religion and Film Volume 2 ; 2 >
+      au < down ; 1999 ; The Journal of Religion and Film Volume 3 ; 3 >
+      au < down ; 2000 ; The Journal of Religion and Film Volume 4 ; 4 >
+      au < down ; 2001 ; The Journal of Religion and Film Volume 5 ; 5 >
+      au < down ; 2002 ; The Journal of Religion and Film Volume 6 ; 6 >
+      au < down ; 2003 ; The Journal of Religion and Film Volume 7 ; 7 >
+      au < down ; 2004 ; The Journal of Religion and Film Volume 8 ; 8 >
+      au < down ; 2005 ; The Journal of Religion and Film Volume 9 ; 9 >
+      au < down ; 2006 ; The Journal of Religion and Film Volume 10 ; 10 >
+      au < down ; 2007 ; The Journal of Religion and Film Volume 11 ; 11 >
+      au < down ; 2008 ; The Journal of Religion and Film Volume 12 ; 12 >
+      au < down ; 2009 ; The Journal of Religion and Film Volume 13 ; 13 >
+      
+    }
+    
   }
   
 }
