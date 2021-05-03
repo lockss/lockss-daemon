@@ -34,9 +34,6 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.taylorandfrancis;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.input.CountingInputStream;
@@ -45,14 +42,11 @@ import org.htmlparser.filters.OrFilter;
 import org.htmlparser.tags.*;
 import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.MetadataField;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-
-import javax.swing.text.html.HTML;
 
 /**
  * This filter will eventually replace
@@ -100,7 +94,10 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       // Figures page (may or may not have contents
       HtmlNodeFilters.tagWithAttribute("div","class","figuresContent"),
       // showCitFormats form page
-      HtmlNodeFilters.tagWithAttribute("div","class","downloadCitation"),
+      // This tag doesnt include the article info, only Download options and formats -- markom April 28, 2021
+      //HtmlNodeFilters.tagWithAttribute("div","class","downloadCitation"),
+      // This tag is for ONLY the citation itself for New template of website. -- markom April 28, 2021
+      HtmlNodeFilters.tagWithAttribute("article","class","searchResultItem"),
       // an article with suppl and in-line video plus zip
       //doi/suppl/10.1080/11263504.2013.877535
       //and one with multiple downloadable files
@@ -140,7 +137,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       },
       */
       // the abstract is sometimes inside of a p tag with class = 'first last'
-      HtmlNodeFilters.tagWithAttribute("p", "class","first last"),
+      //HtmlNodeFilters.tagWithAttribute("p", "class","first last"),
       // HtmlNodeFilters.tagWithAttributeRegex("div", "class","abstract module"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class","hlFld-KeywordText"),
       // keep Ack[nowledgments] section
@@ -216,7 +213,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       new NodeFilter() {
         @Override
         public boolean accept(Node node) {
-          return tagWithAttrNotDescendentWithAttr(
+          return tagWithAttrNotDescendantWithAttr(
               node,"class", "NLM_sec-type_appendix",
                "class",  "back" );
         }
@@ -225,7 +222,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       new NodeFilter() {
         @Override
         public boolean accept(Node node) {
-          return tagWithAttrNotDescendentWithAttr(
+          return tagWithAttrNotDescendantWithAttr(
               node, "class", "summation-section",
               "class",  "hlFld-FullText" );
         }
@@ -236,7 +233,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       new NodeFilter() {
         @Override
         public boolean accept(Node node) {
-          return tagWithAttrNotDescendentWithAttr(
+          return tagWithAttrNotDescendantWithAttr(
               node, "class", "NLM_sec_level_1",
               "class",  "ack" );
         }
@@ -286,7 +283,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       new NodeFilter() {
         // html body.script div#doc.pageArticle div#bd div.section div#tandf_content div.clear div#journal_content div#pubContentMath.hideMathJax div#unit2.unit
         //   ...CHILDREN...
-        //   path to one type of abstract / div.abstract.module.borderedmodule-last -> div.bd -> div.gutter -> div.paragraph
+        //   path to one type of abstract / div.abstract.module.borderedmodule-last -> div.bd -> div.gutter -> (div.paragraph || (p.first & p.last))
         //   span tag, unimportant        / span#tabs-option.off-screen
         //   path to most of article      / div#tabModule.summations.module -> div.gutter -> div.tabs.clear.tabGutter
         //     ...CHILDREN...
@@ -297,47 +294,65 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         @Override
         public boolean accept(Node node) {
           boolean returnAble = false;
+          boolean isPotentialAbstractText = false;
+          String nodeClass = null;
           if (node instanceof Div) {
-            String divClass = ((Div) node).getAttribute("class");
-            if (divClass != null && !divClass.isEmpty() && divClass.equals("paragraph")) {
-              Node parent = node.getParent();
-              if (parent instanceof Div) {
-                Node grandParent = parent.getParent();
-                if (grandParent instanceof Div) {
-                  Node greatGrandParent = grandParent.getParent();
-                  if (greatGrandParent instanceof Div) {
-                    String greatGrandParentClass = ((Div) greatGrandParent).getAttribute("class");
-                    if (greatGrandParentClass != null && !greatGrandParentClass.isEmpty() && greatGrandParentClass.contains("abstract module")) {
-                      returnAble = true; // we found an abstract, set return to true, unless further checks are true
-                      // find the sibling that id div#tabModule, note the structure shown at top of this filter
-                      Node tabModule = findSiblingDivByAttr(greatGrandParent, "id", "tabModule");
-                      if (tabModule != null) { // there is '\n' any number of times, then div.gutter
-                        Node tabModuleChild = findSiblingDivByAttr(tabModule.getFirstChild(), "class", "gutter");
-                        if (tabModuleChild != null) {// ibid... then div.tabs.clear.tabGutter
-                          Node tabModuleGrandChild = findSiblingDivByAttr(tabModuleChild.getFirstChild(), "class", "tabGutter");
-                          if (tabModuleGrandChild != null) {// '\n' then ul.tabsNav then '\n' then div#informationPanel '\n' then div#fullTextPanel
-                            Node fullTextPanel = findSiblingDivByAttr(tabModuleGrandChild.getFirstChild(), "id", "fulltextPanel");
-                            if (fullTextPanel != null) { // will not be present if not /full/ url, typically
-                              Node fullTextPanelChild = findSiblingDivByAttr(fullTextPanel.getFirstChild(), "class", "gutter");
-                              if (fullTextPanelChild != null) {
-                                Node abstractDiv = findSiblingDivByAttr(fullTextPanelChild.getFirstChild(), "id", "abstract");
-                                if (abstractDiv != null) {
-                                  // we found another abstract, do not return this one
-                                  returnAble = false;
-                                }
-                              }
-                            }
-                            // another check is to make sure that the figuresTablesPanel div is empty or not
-                            // if it is not empty, we should discard the abstract
-                            Node figuresTablesPanel = findSiblingDivByAttr(tabModuleGrandChild.getFirstChild(), "id", "figuresTablesPanel");
-                            if (figuresTablesPanel != null) {
-                              Node figuresTablesPanelChild = findAnyChildDiv(figuresTablesPanel.getFirstChild());
-                              if (figuresTablesPanelChild != null) {
-                                // if a child of the figureTablesPanel exists, then that tab is active
-                                // discard the abstract
+            nodeClass = ((Div) node).getAttribute("class");
+            isPotentialAbstractText = nodeClass != null && !nodeClass.isEmpty() && nodeClass.equals("paragraph");
+          } else if (node instanceof ParagraphTag) {
+            nodeClass = ((ParagraphTag) node).getAttribute("class");
+            // used to check class value, but sometimes there is no class! so just check all p tags :P -- markom 4/30/2021
+            isPotentialAbstractText = true;
+            //isPotentialAbstractText = nodeClass != null && !nodeClass.isEmpty() && (
+            //    nodeClass.equals("first") || nodeClass.equals("last") || nodeClass.equals("first last")
+            //);
+          }
+          if (isPotentialAbstractText) {
+            Node parent = node.getParent();
+            if (parent instanceof Div) {
+              Node grandParent = parent.getParent();
+              if (grandParent instanceof Div) {
+                Node greatGrandParent = grandParent.getParent();
+                if (greatGrandParent instanceof Div) {
+                  String greatGrandParentClass = ((Div) greatGrandParent).getAttribute("class");
+                  if (greatGrandParentClass != null && !greatGrandParentClass.isEmpty() && greatGrandParentClass.contains("abstract module")) {
+                    returnAble = true; // we found an abstract, set return to true, unless further checks are true
+                    // If we find a <div id="preview" ... we can assume this is an '/abs/' containing url and can return
+                    // without further checks.
+                    Node previewDiv = findSiblingDivByAttr(greatGrandParent, "id", "preview");
+                    if (previewDiv != null) {
+                      return returnAble;
+                    }
+                    // find the sibling that id div#tabModule, note the structure shown at top of this filter
+                    Node tabModule = findSiblingDivByAttr(greatGrandParent, "id", "tabModule");
+                    if (tabModule != null) { // there is '\n' any number of times, then div.gutter
+                      Node tabModuleChild = findSiblingDivByAttr(tabModule.getFirstChild(), "class", "gutter");
+                      if (tabModuleChild != null) {// ibid... then div.tabs.clear.tabGutter
+                        Node tabModuleGrandChild = findSiblingDivByAttr(tabModuleChild.getFirstChild(), "class", "tab"); // tabs | tabGutter
+                        if (tabModuleGrandChild != null) {// '\n' then ul.tabsNav then '\n' then div#informationPanel '\n' then div#fullTextPanel
+                          Node fullTextPanel = findSiblingDivByAttr(tabModuleGrandChild.getFirstChild(), "id", "fulltextPanel");
+                          if (fullTextPanel != null) { // will not be present if not /full/ url, typically
+                            Node fullTextPanelChild = findSiblingDivByAttr(fullTextPanel.getFirstChild(), "class", "gutter");
+                            if (fullTextPanelChild != null) {
+                              Node abstractDiv = findSiblingDivByAttr(fullTextPanelChild.getFirstChild(), "id", "abstract");
+                              if (abstractDiv != null) {
+                                // we found another abstract, do not return this one
                                 returnAble = false;
                               }
                             }
+                          }
+                          // another check is to make sure that the figuresTablesPanel div is empty or not
+                          // if it is not empty, we should discard the abstract
+                          if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "figuresTablesPanel")) {
+                            returnAble = false;
+                          }
+                          // ibid, but for referencesPanel
+                          if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "referencesPanel")) {
+                            returnAble = false;
+                          }
+                          // ibid for supplementaryPanel
+                          if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "supplementaryPanel")) {
+                            returnAble = false;
                           }
                         }
                       }
@@ -350,14 +365,44 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           return returnAble;
         }
       },
+      // if we find a <div id="preview" ..  then we set assumption of abstract page.
+      // this boolean gets checked in the excludes and removes 'fullTextPanel' if so.
+      // this is a necessary thing because infrequently there is content in 'fullTextPanel'
+      new NodeFilter() {
+        @Override
+        public boolean accept(Node node) {
+          if (node instanceof Div) {
+            String divId = ((Div) node).getAttribute("id");
+            if (divId != null && !divId.isEmpty() && divId.contains("preview")) {
+              // set likely abstract to true.
+              isLikelyAbs = true;
+            }
+          }
+          return false;
+        }
+      },
   };
 
   private boolean hlFld_TitleSPAN = false;
   private boolean hlFld_TitleDIV = false;
 
+  private boolean isLikelyAbs = false;
+
+  public boolean isSiblingDivWAttrEmpty(Node node, String attribute, String attrValue ) {
+    Node siblingDiv = findSiblingDivByAttr(node, attribute, attrValue);
+    if (siblingDiv != null) {
+      Node siblingDivChild = findAnyChildDiv(siblingDiv.getFirstChild());
+      if (siblingDivChild != null) {
+        // if a child of the figureTablesPanel exists, then that tab is active
+        // discard the abstract
+        return true;
+      }
+    }
+    return false;
+  }
+
   public Node findAnyChildDiv(Node sibling) {
     Node targetSibling = null;
-    String thisID;
     while (sibling != null) {
       if (sibling instanceof Div) {
         targetSibling = sibling;
@@ -368,6 +413,9 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     return targetSibling;
   }
 
+  public static NodeFilter anyTagAttributeRegexFilter(String attr, String attrValue) {
+    return new HtmlNodeFilters.HasAttributeRegexFilter(attr, attrValue, true);
+  };
   public Node findSiblingDivByAttr(Node sibling, String attribute, String attrValue) {
     Node targetSibling = null;
     String thisID;
@@ -384,11 +432,11 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     return targetSibling;
   }
 
-  public boolean tagWithAttrNotDescendentWithAttr(Node node,
-                                 String nodeAttr,
-                                 String nodeVal,
-                                 String ancestorAttr,
-                                 String ancestorVal) {
+  public boolean tagWithAttrNotDescendantWithAttr(Node node,
+                                                  String nodeAttr,
+                                                  String nodeVal,
+                                                  String ancestorAttr,
+                                                  String ancestorVal) {
     boolean returnAble = false;
     if (node instanceof Tag) {
       String attr = ((Tag) node).getAttribute(nodeAttr);
@@ -553,7 +601,43 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("span", "class","ref-lnk"), //in-line rollover ref info
       //Figures
       //showCit
-
+      // showCit can only include the title now, see this old format of the citation compared to new version
+      /* / Note the absence of the word 'and' before the final author in the old version but not in the new.
+         / also note the lack of a space between the comma and '2015' in the new version but not the old.
+      <li>
+        <div class="art_title"><a href="/doi/abs/10.2989/00306525.2015.1030793">A novel methodology for the rapid assessment of waterbird vulnerability to disturbance</a></div>
+          Kate JH England
+          , Colin Jackson
+          , Philip AR Hockey
+        <a href="http://www.tandfonline.com/toc/tost20/86/1-2">
+          <span class="journalName">Ostrich</span>
+        </a>
+          Vol. <span class="volume">86</span>,
+          Iss. <span class="issue">1-2</span>,
+               <span class="year">2015</span>
+      </li>
+      // New version
+      <article class="searchResultItem">
+        <div class="art_title"><a href="/doi/abs/10.2989/00306525.2015.1030793" class="ref nowrap">A novel methodology for the rapid assessment of waterbird vulnerability to disturbance</a></div>
+        <div class="author"><div class="art_authors"><span class="entryAuthor">Kate JH England, Colin Jackson, and Philip AR Hockey</span></div> </div>
+        <div class="publication-meta">
+            <a class="issue-link" href="/toc/tost20/86/1-2">
+                <span class="journalName">Ostrich</span>
+            </a>
+            <span class="volume">Vol. 86 , Iss. 1-2,2015 </span>
+        </div>
+      </article>
+       */
+      HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citationContainer"),
+        // can be a div, or a span, so just check class value.
+        new HtmlNodeFilters.HasAttributeRegexFilter("class", "art_title", true)
+      ),
+      HtmlNodeFilters.allExceptSubtree(
+          HtmlNodeFilters.tagWithAttribute("article","class","searchResultItem"),
+          // can be a div, or a span, so just check class value.
+          new HtmlNodeFilters.HasAttributeRegexFilter("class", "art_title", true)
+      ),
       /*
        * Noticed changes in 10/2/2018 - views counts on TOC
        */
@@ -562,6 +646,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
 
       // FOR ARTICLE PAGES
       // older content that we do not need on the ingest machines
+      // many title tags we need
+
       HtmlNodeFilters.allExceptSubtree(
           HtmlNodeFilters.tag("h3"),
           // in new content there is a table caption embedded in an h3 tag. wild
@@ -575,6 +661,9 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttributeRegex("div","class","hlFld-Title", true),
           HtmlNodeFilters.tag("h1") // ...WithAttribute("div", "class", "publicationContentTitle")
       ),
+      // a note that appears on new article pages that tells us the paper was presented at a conference
+      HtmlNodeFilters.tagWithAttribute("span","class","ref-overlay scrollable-ref"),
+      // ancillary author info
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-ContribAuthor"),
       // Some ancillary author info is sometimes outside the 'hlFld-ContribAuthor' tag, it is in 'NLM-author-notes'
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "NLM_author-notes"),
@@ -583,6 +672,9 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstractKeywords"),
       HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "keywords"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-KeywordText"),
+      // and another way of presenting keywords!
+      HtmlNodeFilters.tagWithAttribute("table","class","NLM_def-list"),
+
       // all the ways of having headings
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationHeading"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sectionHeading"),
@@ -620,6 +712,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("span", "class", "title"),
       HtmlNodeFilters.tagWithAttribute("p", "class", "kwd-title"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ViewerArticleInfo" ),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alertDiv"),
 
       // ISSUE TOC PAGES
       // OLD CONTENT
@@ -709,6 +802,39 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tag("a"), HtmlNodeFilters.tag("span"),
         }
       ),
+      // remove nasty notes section that appears in summationSection
+      new NodeFilter() {
+        @Override
+        public boolean accept(Node node) {
+          if (node instanceof Div) {
+            Div div = ((Div) node);
+            String divClass = div.getAttribute("class");
+            if(divClass != null && !divClass.isEmpty() && divClass.contains("summationSection")) {
+              String summationText = node.toString();
+                if (summationText.contains("Notes:") && summationText.contains("Note:")) {
+                  return true;
+                }
+              }
+            }
+          return false;
+        }
+      },
+      // if we are abstract remove full text
+      new NodeFilter() {
+        @Override
+        public boolean accept(Node node) {
+          if (isLikelyAbs) {
+            if (node instanceof Div) {
+              Div div = ((Div) node);
+              String divID = div.getAttribute("id");
+              if(divID != null && !divID.isEmpty() && divID.contains("fulltextPanel")) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+      },
   };
 
   @Override
