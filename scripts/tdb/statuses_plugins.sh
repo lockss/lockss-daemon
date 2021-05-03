@@ -110,6 +110,7 @@ diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.
 
 cat $tpath/foo00.txt | sort -t, -k 1,1 > $tpath/blatz00.txt #numbers of AUs
 cat $tpath/foo01.txt | sort -t, -k 1,1 > $tpath/blatz01.txt #plugin status
+cat $tpath/foo16.txt | sort -t, -k 1,1 > $tpath/blatz16.txt #plugin status, not ready, deprecated
 cat $tpath/foo02.txt | sort -t, -k 1,1 > $tpath/blatz02.txt #substance checkers
 #cat $tpath/foo13.txt | sort -t, -k 1,1 > $tpath/blatz13.txt #https A
 #cat $tpath/foo14.txt | sort -t, -k 1,1 > $tpath/blatz14.txt #https B
