@@ -16,9 +16,10 @@
     param[base_url] = http://www.usenix.org/
     implicit < status ; year ; name ; volume ; param[year] ; nondefparam[optional_standards] >
 
-    comment[plugin] = plugin needs renovation.
-    comment[access] = content becomes open access after a year
     comment[manifest] = missing manifest see RU3571/RT4212
+    #see See RU4163/RU3571
+    #Content before 1997 available at Internet Archive. https://archive.org/details/usenix-login
+    #New interactive platform as of 2021
     
     au < down ; 1997 ; \;login: 1997 ; ; 1997 ; stndrdswrthit,1,2,3,4,5,6,7,9,10,11 >
     au < down ; 1998 ; \;login: 1998 ; ; 1998 ; 12,13,14,15,16.posix,17,16.editorial,18,19,20,21,22 >
@@ -32,12 +33,12 @@
     au < down ; 2006 ; \;login: 2006 ; 31 ; 2006 ; >
     au < down ; 2007 ; \;login: 2007 ; 32 ; 2007 ; >
     au < down ; 2008 ; \;login: 2008 ; 33 ; 2008 ; >
-    au < doNotProcess ; 2009 ; \;login: 2009 ; 34 ; 2009 ; >
-    au < doNotProcess ; 2010 ; \;login: 2010 ; 35 ; 2010 ; >
-    au < doNotProcess ; 2011 ; \;login: 2011 ; 36 ; 2011 ; >
-    au < doNotProcess ; 2012 ; \;login: 2012 ; 37 ; 2012 ; >
-    au < doNotProcess ; 2013 ; \;login: 2013 ; 38 ; 2013 ; >
-    au < doNotProcess ; 2014 ; \;login: 2014 ; 39 ; 2014 ; >
+#    au < doNotProcess ; 2009 ; \;login: 2009 ; 34 ; 2009 ; >
+#    au < doNotProcess ; 2010 ; \;login: 2010 ; 35 ; 2010 ; >
+#    au < doNotProcess ; 2011 ; \;login: 2011 ; 36 ; 2011 ; >
+#    au < doNotProcess ; 2012 ; \;login: 2012 ; 37 ; 2012 ; >
+#    au < doNotProcess ; 2013 ; \;login: 2013 ; 38 ; 2013 ; >
+#    au < doNotProcess ; 2014 ; \;login: 2014 ; 39 ; 2014 ; >
 
   }
 
