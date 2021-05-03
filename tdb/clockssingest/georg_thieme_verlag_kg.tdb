@@ -98,9 +98,9 @@
 
     au < crawling ; exists ; 2001 ; 2001 ; Aktuelle Dermatologie Volume 27 ; 27 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Dermatologie Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Dermatologie Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Aktuelle Dermatologie Volume 29 ; 29 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Dermatologie Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Dermatologie Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Aktuelle Dermatologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Dermatologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Dermatologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Dermatologie Volume 34 ; 34 ; >
@@ -135,7 +135,7 @@
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Ernährungsmedizin Volume 27 ; 27 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Ernährungsmedizin Volume 28 ; 28 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Ernährungsmedizin Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Ernährungsmedizin Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Aktuelle Ernährungsmedizin Volume 30 ; 30 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Ernährungsmedizin Volume 31 ; 31 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Ernährungsmedizin Volume 32 ; 32 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Ernährungsmedizin Volume 33 ; 33 ; >
@@ -497,7 +497,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; American Journal of Perinatology Volume 22 ; 22 ; >
     au < crawling ; exists ; 2006 ; 2006 ; American Journal of Perinatology Volume 23 ; 23 ; >
     au < crawling ; exists ; 2007 ; 2007 ; American Journal of Perinatology Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; American Journal of Perinatology Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; American Journal of Perinatology Volume 25 ; 25 ; >
     au < finished ; manifest ; 2009 ; 2009 ; American Journal of Perinatology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; American Journal of Perinatology Volume 27 ; 27 ; >
     au < finished ; finished ; 2011 ; 2011 ; American Journal of Perinatology Volume 28 ; 28 ; >
@@ -633,7 +633,7 @@
     au < crawling ; exists ; 2001 ; 2001 ; Arzneimittelforschung Volume 51 ; 51 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Arzneimittelforschung Volume 52 ; 52 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Arzneimittelforschung Volume 54 ; 54 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Arzneimittelforschung Volume 54 ; 54 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Arzneimittelforschung Volume 55 ; 55 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Arzneimittelforschung Volume 56 ; 56 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Arzneimittelforschung Volume 57 ; 57 ; >
@@ -706,7 +706,7 @@
     comment[years] =  2004-current
 
       au < crawling ; exists ; 2004 ; 2004 ; B&G Bewegungstherapie und Gesundheitssport Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; B&G Bewegungstherapie und Gesundheitssport Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; B&G Bewegungstherapie und Gesundheitssport Volume 21 ; 21 ; >
       au < frozen ; exists ; 2006 ; 2006 ; B&G Bewegungstherapie und Gesundheitssport Volume 22 ; 22 ; >
       au < crawling ; exists ; 2007 ; 2007 ; B&G Bewegungstherapie und Gesundheitssport Volume 23 ; 23 ; >
       au < crawling ; exists ; 2008 ; 2008 ; B&G Bewegungstherapie und Gesundheitssport Volume 24 ; 24 ; >
@@ -900,7 +900,7 @@
 
    au < crawling ; exists ; 2006 ; 2006 ; Deutsche Heilpraktiker-Zeitschrift Volume 1 ; 1 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Deutsche Heilpraktiker-Zeitschrift Volume 2 ; 2 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Deutsche Heilpraktiker-Zeitschrift Volume 3 ; 3 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Deutsche Heilpraktiker-Zeitschrift Volume 3 ; 3 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Deutsche Heilpraktiker-Zeitschrift Volume 4 ; 4 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Deutsche Heilpraktiker-Zeitschrift Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Deutsche Heilpraktiker-Zeitschrift Volume 6 ; 6 ; >
@@ -4552,7 +4552,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; physiopraxis Volume 3 ; 3 ; >
     au < manifest ; exists ; 2006 ; 2006 ; physiopraxis Volume 4 ; 4 ; >
     au < manifest ; exists ; 2007 ; 2007 ; physiopraxis Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; physiopraxis Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; physiopraxis Volume 6 ; 6 ; >
     au < finished ; manifest ; 2009 ; 2009 ; physiopraxis Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; physiopraxis Volume 8 ; 8 ; >
     au < frozen ; exists ; 2011 ; 2011 ; physiopraxis Volume 9 ; 9 ; >

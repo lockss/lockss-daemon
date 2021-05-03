@@ -94,7 +94,7 @@
       au < crawling ; exists ; 2008 ; 2008 ; Advances in Radio Science 2007 Volume 6 ; 6 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Advances in Radio Science 2008 Volume 7 ; 7 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Advances in Radio Science 2009 Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Advances in Radio Science 2010 Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Advances in Radio Science 2010 Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 ; >
@@ -1135,7 +1135,7 @@
       param[base_url] = https://jbji.copernicus.org/
       param[home_url] = https://www.journal-of-bone-and-joint-infection.net/
 
-      au < crawling ; exists ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; >
       au < crawling ; exists ; 2017 ; 2017 ; Journal of Bone and Joint Infection Volume 2 ; 2 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; >
@@ -1175,7 +1175,7 @@
       au < doNotProcess ; exists ; 1997 ; 1997 ; Journal of Micropalaeontology Volume 16 ; 16 ; >
       au < doNotProcess ; exists ; 1998 ; 1998 ; Journal of Micropalaeontology Volume 17 ; 17 ; >
       au < doNotProcess ; exists ; 1999 ; 1999 ; Journal of Micropalaeontology Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; Journal of Micropalaeontology Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; Journal of Micropalaeontology Volume 19 ; 19 ; >
       au < crawling ; exists ; 2001 ; 2001 ; Journal of Micropalaeontology Volume 20 ; 20 ; >
       au < crawling ; exists ; 2002 ; 2002 ; Journal of Micropalaeontology Volume 21 ; 21 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Journal of Micropalaeontology Volume 22 ; 22 ; >
@@ -1573,7 +1573,7 @@
       param[base_url] = https://tc.copernicus.org/
       param[home_url] = https://www.the-cryosphere.net/
 
-      au < crawling ; exists ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 ; >
       au < crawling ; exists ; 2008 ; 2008 ; The Cryosphere Volume 2 ; 2 ; >
       au < crawling ; exists ; 2009 ; 2009 ; The Cryosphere Volume 3 ; 3 ; >
       au < crawling ; exists ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 ; >

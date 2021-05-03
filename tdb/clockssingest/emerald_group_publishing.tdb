@@ -4274,7 +4274,7 @@
     param[journal_issn] = 1759-5908
     comment[journal_id] = ijdrbe
 
-    au < crawling ; exists ; 2010 ; International Journal of Disaster Resilience in the Built Environment Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Disaster Resilience in the Built Environment Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; International Journal of Disaster Resilience in the Built Environment Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; International Journal of Disaster Resilience in the Built Environment Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Disaster Resilience in the Built Environment Volume 4 ; 4 ; >
@@ -4469,7 +4469,7 @@
     param[journal_issn] = 1758-2954
     comment[journal_id] = ijefm
 
-    au < crawling ; exists ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; International Journal of Event and Festival Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Event and Festival Management Volume 4 ; 4 ; >
@@ -9412,7 +9412,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Library Management Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Library Management Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Library Management Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2019 ; Library Management Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2019 ; Library Management Volume 40 ; 40 ; >
     au < notReady ; exists ; 2020 ; Library Management Volume 41 ; 41 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
     au < manifest ; exists ; 2021 ; Library Management Volume 42 ; 42 ; >
 
