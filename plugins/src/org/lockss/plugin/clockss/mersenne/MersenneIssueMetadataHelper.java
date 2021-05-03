@@ -34,7 +34,10 @@
 
 package org.lockss.plugin.clockss.mersenne;
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.collections.map.MultiValueMap;
@@ -50,9 +53,9 @@ import org.lockss.util.*;
  *  
  *  @author alexohlson
  */
-public class MersenneIssueSchemaHelper
+public class MersenneIssueMetadataHelper
 extends JatsPublishingSchemaHelper {
-  private static final Logger log = Logger.getLogger(MersenneIssueSchemaHelper.class);
+  private static final Logger log = Logger.getLogger(MersenneIssueMetadataHelper.class);
 
 
   /*
@@ -127,5 +130,35 @@ extends JatsPublishingSchemaHelper {
   @Override
   public Map<String, XPathValue> getGlobalMetaMap() {
     return Mersenne_globalMap;
+  }
+
+
+  /*
+   * "kee_pdf_list.dat" is the list of PDF files that publisher would like to kept.
+   * All the rest of the PDF files in the delivery should be ignored
+   */
+  public List<String> getKeptPDFFileList() throws IOException {
+
+    int count = 0;
+    String fname = "kept_pdf_list.dat";
+    InputStream is = null;
+    List<String> pdfList = new ArrayList<>();
+
+    is = getClass().getResourceAsStream(fname);
+
+    if (is == null) {
+      throw new ExceptionInInitializerError("ClockssMersenneSourcePlugin external data file not found");
+    }
+
+    BufferedReader bufr = new BufferedReader(new InputStreamReader(is));
+    
+    String next_url = null;
+    while ((next_url = bufr.readLine()) != null) {
+      next_url = next_url.trim();
+      pdfList.add(next_url.trim());
+    }
+    bufr.close();
+
+    return pdfList;
   }
 }

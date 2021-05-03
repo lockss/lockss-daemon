@@ -32,14 +32,15 @@
 
 package org.lockss.plugin.clockss.mersenne;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import org.lockss.util.*;
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
@@ -57,7 +58,10 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(MersenneXmlMetadataExtractorFactory.class);
 
-  private static SourceXmlSchemaHelper MersenneIssueHelper = null;
+  private static MersenneIssueMetadataHelper metadataHelper = null;
+
+  private List<String> keptPDFList = new ArrayList<>();
+
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
@@ -70,10 +74,20 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 	    @Override
 	    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
 	      // Once you have it, just keep returning the same one. It won't change.
-	      if (MersenneIssueHelper == null) {
-	        MersenneIssueHelper = new MersenneIssueSchemaHelper();
+	      if (metadataHelper == null) {
+	        metadataHelper = new MersenneIssueMetadataHelper();
+
+			  try {
+				  keptPDFList = metadataHelper.getKeptPDFFileList();
+			  } catch (IOException e) {
+				  log.error("MersenneIssueSchemaHelper keptPDFList data are not populated");
+			  }
+
+			  if (keptPDFList != null ) {
+				  log.debug("---total records = " + keptPDFList.size());
+			  }
 	      }
-	      return MersenneIssueHelper;
+	      return metadataHelper;
 	    }
 
 
@@ -94,19 +108,31 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 	    	// the PDF href:
 	    	// AIF/AIF_2015__65_1/AIF_2015__65_1_397_0/AIF_2015__65_1_397_0.pdf
 	    	// Take just the subdir and filename...
-	    	String pdf_href = oneAM.getRaw(MersenneIssueSchemaHelper.Mersenne_pdf_uri);
+	    	String pdf_href = oneAM.getRaw(MersenneIssueMetadataHelper.Mersenne_pdf_uri);
+
+			log.debug("getFilenamesAssociatedWithRecord pdf_file = " + pdf_href);
+
 	    	String pdfName = "";
+	    	boolean shouldIncludeThisMetadata = false;
 	    	if (pdf_href != null) {
 	    		String pdf_file = FilenameUtils.getName(pdf_href);
 	    		String pdf_dir = FilenameUtils.getName(FilenameUtils.getPathNoEndSeparator(pdf_href));
+
+				if (keptPDFList != null && listContainsString(pdf_href)) {
+					log.debug("shouldIncludeThisMetadata pdf_file = " + pdf_file);
+					shouldIncludeThisMetadata = true;
+				}
+
 	    		pdfName = xmlPath + pdf_dir + "/" + pdf_file;
-	    		log.debug3("pdfName is " + pdfName);
+	    		log.debug("pdfName is " + pdfName);
 	    	} else {
 	    		// try this - not likely 
 	    		pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
 	    	}
 	    	List<String> returnList = new ArrayList<String>();
-	    	returnList.add(pdfName);
+	    	if (shouldIncludeThisMetadata) {
+				returnList.add(pdfName);
+			}
 	    	return returnList;
 
 	    }
@@ -116,11 +142,28 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 	        CachedUrl cu, ArticleMetadata thisAM) {
 
 	      //If we didn't get a valid article date value, use the issue year
-		if (thisAM.getRaw(MersenneIssueSchemaHelper.Special_JATS_date) != null) {
-		  thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueSchemaHelper.Special_JATS_date));
+		if (thisAM.getRaw(MersenneIssueMetadataHelper.Special_JATS_date) != null) {
+		  thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueMetadataHelper.Special_JATS_date));
 		} else {// last chance
-		  thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueSchemaHelper.Issue_year));
+		  thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueMetadataHelper.Issue_year));
 		}
 	    }
+
+	  private boolean listContainsString( String checkStr) {
+		  Iterator<String> iter = keptPDFList.iterator();
+		  while(iter.hasNext())
+		  {
+			  String targetPDF = iter.next();
+
+			  log.debug("targetPDF = " + targetPDF + ", checkStr = " + checkStr);
+			  if (targetPDF.contains(checkStr))
+			  {
+			  	log.debug("targetPDF = " + targetPDF + ", contained checkStr = " + checkStr);
+				  return true;
+			  } 
+		  }
+		  log.debug("targetPDF =  exclude checkStr = " + checkStr);
+		  return false;
 	  }
-	}
+  }
+}
