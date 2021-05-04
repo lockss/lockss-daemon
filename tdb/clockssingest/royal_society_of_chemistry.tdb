@@ -368,9 +368,9 @@
       param[journal_code] = dt
 
       #complete. Missing 1996-2009. **** These volumes listed in another title block. Search for "= dt"
-      au < frozen ; exists ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 ; http://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2011 ; Dalton Transactions Volume 40 ; 40 ; 2011 ; http://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2012 ; Dalton Transactions Volume 41 ; 41 ; 2012 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2010 ; Dalton Transactions Volume 39 ; 39 ; 2010 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest; 2011 ; Dalton Transactions Volume 40 ; 40 ; 2011 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest; 2012 ; Dalton Transactions Volume 41 ; 41 ; 2012 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < zapped ; finished ; 2014 ; Dalton Transactions Volume 43 ; 43 ; 2014 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 ; http://pubs.rsc.org/ ; >
@@ -661,14 +661,14 @@
       au < finished ; manifest ; 1996 ; Journal of Analytical Atomic Spectrometry Volume 11 ; 11 ; 1996 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 1997 ; Journal of Analytical Atomic Spectrometry Volume 12 ; 12 ; 1997 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 1998 ; Journal of Analytical Atomic Spectrometry Volume 13 ; 13 ; 1998 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 1999 ; Journal of Analytical Atomic Spectrometry Volume 14 ; 14 ; 1999 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 1999 ; Journal of Analytical Atomic Spectrometry Volume 14 ; 14 ; 1999 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2000 ; Journal of Analytical Atomic Spectrometry Volume 15 ; 15 ; 2000 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2001 ; Journal of Analytical Atomic Spectrometry Volume 16 ; 16 ; 2001 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2002 ; Journal of Analytical Atomic Spectrometry Volume 17 ; 17 ; 2002 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2003 ; Journal of Analytical Atomic Spectrometry Volume 18 ; 18 ; 2003 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2004 ; Journal of Analytical Atomic Spectrometry Volume 19 ; 19 ; 2004 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2005 ; Journal of Analytical Atomic Spectrometry Volume 20 ; 20 ; 2005 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2006 ; Journal of Analytical Atomic Spectrometry Volume 21 ; 21 ; 2006 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2006 ; Journal of Analytical Atomic Spectrometry Volume 21 ; 21 ; 2006 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2007 ; Journal of Analytical Atomic Spectrometry Volume 22 ; 22 ; 2007 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
