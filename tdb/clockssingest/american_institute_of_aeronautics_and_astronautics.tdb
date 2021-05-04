@@ -11,7 +11,7 @@
   plugin = org.lockss.plugin.atypon.aiaa.ClockssAIAAPlugin
 #  param[base_url] = http://arc.aiaa.org/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-  
+
   comment[manifest] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/lockss/ja/49
   comment[doNotProcess1] = ARS Journal, 1959-1962, param[journal_id] = arsj
   comment[doNotProcess2] = Astronautics, 1932-1944, param[journal_id] = jastn
@@ -91,14 +91,14 @@
     au < crawling ; exists ; 2020 ; AIAA Journal Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2021 ; AIAA Journal Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
 
-  } 
-  
+  }
+
   {
 
     title <
       name = Air Traffic Control Quarterly ;
       issn = 1064-3818 ;
-      eissn = 2472-5757 ; 
+      eissn = 2472-5757 ;
       issnl = 2472-5757
     >
     param[journal_id] = atcq
@@ -129,7 +129,7 @@
     au < finished ; finished ; 2015 ; Air Traffic Control Quarterly Volume 23 ; 23 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
 
   }
-  
+
 
   {
 
@@ -174,7 +174,7 @@
     au < manifest ; exists ; 2021 ; Journal of Aerospace Computing, Information, and Communication Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
 
   }
-  
+
   {
 
     title <
@@ -184,7 +184,7 @@
     >
     param[journal_id] = jat
     comment[continued_from] = 2472-5757 #Air Traffic Control Quarterly
-    
+
 
 
     au < finished ; finished ; 2016 ; Journal of Air Transportation Volume 24 ; 24 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
@@ -300,7 +300,7 @@
     au < crawling ; exists ; 1978 ; Journal of Guidance and Control Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1979 ; Journal of Guidance and Control Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
+    au < down ; exists ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
 
   }
 
@@ -556,7 +556,6 @@
     au < testing ; exists ; 2020 ; Journal of Thermophysics and Heat Transfer Volume 34 ; 34 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2021 ; Journal of Thermophysics and Heat Transfer Volume 35 ; 35 ; https://arc.aiaa.org/ ; >
 
-  } 
-  
+  }
+
 }
-  
