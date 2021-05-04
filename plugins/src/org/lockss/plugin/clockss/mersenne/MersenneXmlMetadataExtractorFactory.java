@@ -84,7 +84,7 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 			  }
 
 			  if (keptPDFList != null ) {
-				  log.debug("---total records = " + keptPDFList.size());
+				  log.debug3("---total records = " + keptPDFList.size());
 			  }
 	      }
 	      return metadataHelper;
@@ -110,7 +110,7 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 	    	// Take just the subdir and filename...
 	    	String pdf_href = oneAM.getRaw(MersenneIssueMetadataHelper.Mersenne_pdf_uri);
 
-			log.debug("getFilenamesAssociatedWithRecord pdf_file = " + pdf_href);
+			log.debug3("getFilenamesAssociatedWithRecord pdf_file = " + pdf_href);
 
 	    	String pdfName = "";
 	    	boolean shouldIncludeThisMetadata = false;
@@ -119,12 +119,12 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 	    		String pdf_dir = FilenameUtils.getName(FilenameUtils.getPathNoEndSeparator(pdf_href));
 
 				if (keptPDFList != null && listContainsString(pdf_href)) {
-					log.debug("shouldIncludeThisMetadata pdf_file = " + pdf_file);
+					log.debug3("shouldIncludeThisMetadata pdf_file = " + pdf_file);
 					shouldIncludeThisMetadata = true;
 				}
 
 	    		pdfName = xmlPath + pdf_dir + "/" + pdf_file;
-	    		log.debug("pdfName is " + pdfName);
+	    		log.debug3("pdfName is " + pdfName);
 	    	} else {
 	    		// try this - not likely 
 	    		pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
@@ -155,10 +155,10 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 		  {
 			  String targetPDF = iter.next();
 
-			  log.debug("targetPDF = " + targetPDF + ", checkStr = " + checkStr);
+			  log.debug3("targetPDF = " + targetPDF + ", checkStr = " + checkStr);
 			  if (targetPDF.contains(checkStr))
 			  {
-			  	log.debug("targetPDF = " + targetPDF + ", contained checkStr = " + checkStr);
+			  	log.debug3("targetPDF = " + targetPDF + ", contained checkStr = " + checkStr);
 				  return true;
 			  } 
 		  }
