@@ -142,11 +142,17 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 	        CachedUrl cu, ArticleMetadata thisAM) {
 
 	      //If we didn't get a valid article date value, use the issue year
-		if (thisAM.getRaw(MersenneIssueMetadataHelper.Special_JATS_date) != null) {
-		  thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueMetadataHelper.Special_JATS_date));
-		} else {// last chance
-		  thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueMetadataHelper.Issue_year));
-		}
+			if (thisAM.getRaw(MersenneIssueMetadataHelper.Special_JATS_date) != null) {
+			  thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueMetadataHelper.Special_JATS_date));
+			} else {// last chance
+			  thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueMetadataHelper.Issue_year));
+			}
+
+			thisAM.put(MetadataField.FIELD_ISSUE, thisAM.getRaw(MersenneIssueMetadataHelper.Issue_issue));
+			thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(MersenneIssueMetadataHelper.Issue_year) );
+
+			thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+			thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
 	    }
 
 	  private boolean listContainsString( String checkStr) {
