@@ -99,10 +99,6 @@ public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataEx
         thisAM.put(MetadataField.FIELD_AUTHOR, author.replace(".", ""));
       }
 
-      if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher) != null) {
-        thisAM.put(MetadataField.FIELD_PUBLISHER, thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_publisher));
-      }
-
       if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date) != null) {
         String MARC_pub_date = thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pub_date);
         thisAM.put(MetadataField.FIELD_DATE, MARC_pub_date.replace(".", ""));
@@ -113,7 +109,7 @@ public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataEx
         }
       }
 
-      String publisherName = "EastView";
+      String publisherName = "East View Information Services";
 
       TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
       if (tdbau != null) {
