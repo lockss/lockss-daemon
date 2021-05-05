@@ -87,8 +87,8 @@
     au < finished ; manifest ; 2016 ; AIAA Journal Volume 54 ; 54 ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; AIAA Journal Volume 55 ; 55 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; AIAA Journal Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; AIAA Journal Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 2020 ; AIAA Journal Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
+    au < down ; exists ; 2019 ; AIAA Journal Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
+    au < down ; exists ; 2020 ; AIAA Journal Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2021 ; AIAA Journal Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
 
   }
@@ -261,7 +261,7 @@
     au < finished ; manifest ; 2016 ; Journal of Aircraft Volume 53 ; 53 ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Aircraft Volume 54 ; 54 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Aircraft Volume 55 ; 55 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; Journal of Aircraft Volume 56 ; 56 ; https://arc.aiaa.org/ ; >
+    au < down ; exists ; 2019 ; Journal of Aircraft Volume 56 ; 56 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 2020 ; Journal of Aircraft Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2021 ; Journal of Aircraft Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
 
@@ -299,7 +299,7 @@
 
     au < crawling ; exists ; 1978 ; Journal of Guidance and Control Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1979 ; Journal of Guidance and Control Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
+    au < down ; exists ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
     au < down ; exists ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
 
   }
