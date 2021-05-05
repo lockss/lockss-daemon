@@ -251,8 +251,10 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           if (node instanceof Div) {
             String divClass = ((Div) node).getAttribute("class");
             if (divClass != null && !divClass.isEmpty() && divClass.equals("hlFld-Title")) {
+              log.debug3("found div.hlfld-title");
               // check if the other version of the title has been saved already
               if (!hlFld_TitleSPAN) {
+                log.debug3("  and keeping it");
                 hlFld_TitleDIV = true;
                 return true;
               }
@@ -267,9 +269,11 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         public boolean accept(Node node) {
           if (node instanceof Span) {
             String spanClass = ((Span) node).getAttribute("class");
-            if (spanClass != null && !spanClass.isEmpty() && spanClass.matches("(?i)hlFld-Title")) {
+            if (spanClass != null && !spanClass.isEmpty() ) {
+              log.debug3("found span class=" + spanClass);
               // check if the other version of the title has been saved already
-              if (!hlFld_TitleDIV) {
+              if (!hlFld_TitleDIV && spanClass.matches("(?i)hlFld-Title")) {
+                log.debug3("  and keeping it");
                 hlFld_TitleSPAN = true;
                 return true;
               }
@@ -843,6 +847,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
 
+    log.debug3("filtering encoding: " + encoding);
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(
       in,
       encoding,
