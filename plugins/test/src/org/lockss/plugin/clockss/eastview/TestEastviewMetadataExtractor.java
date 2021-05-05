@@ -50,7 +50,7 @@ public class TestEastviewMetadataExtractor extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.aimsciences.ClockssEastviewSourcePlugin";
+  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.eastview.ClockssEastviewSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   private static String YEAR = "2017";
   private static String GZ_URL = BASE_URL + YEAR + "/EASTVIEW.tar.gz!/";
@@ -90,7 +90,12 @@ public class TestEastviewMetadataExtractor extends LockssTestCase {
     return conf;
   }
 
- 
+  /*
+  public void testFromRealFileWithPDF() throws Exception {
+    
+  }
+  */
+
   public void testFromRealFileWithPDF() throws Exception {
     InputStream file_input = null;
     try {
@@ -171,13 +176,14 @@ public class TestEastviewMetadataExtractor extends LockssTestCase {
     }
 
   }
-                   
+
+  
   String[] authorlist = new String[] {"Hamilton, Alexander", "Burr, Aaron"};
   // quick and dirty, there are only two records
   private void compareMetadata(ArticleMetadata AM) {
     assertEquals("Current Digest of the Chinese Press, The", AM.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals("2015-01-01", AM.get(MetadataField.FIELD_DATE));
-    assertEquals("East View Information Services", AM.get(MetadataField.FIELD_PUBLISHER));
+    //assertEquals("East View Information Services", AM.get(MetadataField.FIELD_PUBLISHER));  read from tdb file in after process
     assertEquals("4", AM.get(MetadataField.FIELD_VOLUME));
     assertEquals("001", AM.get(MetadataField.FIELD_ISSUE));
 
