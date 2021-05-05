@@ -77,9 +77,7 @@ public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetad
             }
             return JatsPublishingHelper;
         }
-
-
-
+        
         @Override
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
@@ -92,6 +90,12 @@ public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetad
                     thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
                 }
             }
+
+            thisAM.put(MetadataField.FIELD_ISSN, thisAM.getRaw(ScienceOpenSchemaHelper.JATS_issn));
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, thisAM.getRaw(ScienceOpenSchemaHelper.JATS_jtitle));
+
+            thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
         }
 
     }

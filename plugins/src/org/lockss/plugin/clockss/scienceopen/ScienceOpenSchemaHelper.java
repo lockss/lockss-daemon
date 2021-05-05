@@ -11,8 +11,8 @@ public class ScienceOpenSchemaHelper extends JatsPublishingSchemaHelper {
 
     private static final Logger log = Logger.getLogger(ScienceOpenSchemaHelper.class);
 
-    static private final String JATS_issn = "front/article-meta/product/issn";
-    static private final String JATS_jtitle = "front/article-meta/product/publisher-name";
+    static protected final String JATS_issn = "front/article-meta/product/issn";
+    static protected final String JATS_jtitle = "front/article-meta/product/publisher-name";
 
     @Override
     public Map<String, XmlDomMetadataExtractor.XPathValue> getArticleMetaMap() {
@@ -26,8 +26,6 @@ public class ScienceOpenSchemaHelper extends JatsPublishingSchemaHelper {
     @Override
     public MultiValueMap getCookMap() {
         MultiValueMap theCookMap = super.getCookMap();
-        theCookMap.put(JATS_issn, MetadataField.FIELD_ISSN);
-        theCookMap.put(JATS_jtitle, MetadataField.FIELD_PUBLICATION_TITLE);
         return theCookMap;
     }
 }
