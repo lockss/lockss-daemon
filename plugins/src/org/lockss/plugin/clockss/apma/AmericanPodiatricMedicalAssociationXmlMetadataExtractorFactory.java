@@ -8,6 +8,7 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.*;
+import org.lockss.plugin.clockss.scienceopen.ScienceOpenSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
 
@@ -42,6 +43,16 @@ public class AmericanPodiatricMedicalAssociationXmlMetadataExtractorFactory exte
                 JatsPublishingHelper = new AmericanPodiatricMedicalAssociationSchemaHelper();
             }
             return JatsPublishingHelper;
+        }
+
+        @Override
+        protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                       CachedUrl cu, ArticleMetadata thisAM) {
+
+            thisAM.put(MetadataField.FIELD_PUBLISHER, thisAM.getRaw(AmericanPodiatricMedicalAssociationSchemaHelper.JATS_pubname));
+
+            thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
         }
     }
 }
