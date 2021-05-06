@@ -235,7 +235,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         public boolean accept(Node node) {
           return tagWithAttrNotDescendantWithAttr(
               node, "class", "NLM_sec_level_1",
-              "class",  "ack" );
+              "class",  "ack",
+              "class",  "author-infos" );
         }
       },
       // Next two NodeFilters() replace this pair that would often result in duplicates
@@ -251,10 +252,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           if (node instanceof Div) {
             String divClass = ((Div) node).getAttribute("class");
             if (divClass != null && !divClass.isEmpty() && divClass.equals("hlFld-Title")) {
-              log.debug3("found div.hlfld-title");
               // check if the other version of the title has been saved already
               if (!hlFld_TitleSPAN) {
-                log.debug3("  and keeping it");
                 hlFld_TitleDIV = true;
                 return true;
               }
@@ -270,10 +269,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           if (node instanceof Span) {
             String spanClass = ((Span) node).getAttribute("class");
             if (spanClass != null && !spanClass.isEmpty() ) {
-              log.debug3("found span class=" + spanClass);
               // check if the other version of the title has been saved already
               if (!hlFld_TitleDIV && spanClass.matches("(?i)hlFld-Title")) {
-                log.debug3("  and keeping it");
                 hlFld_TitleSPAN = true;
                 return true;
               }
@@ -304,7 +301,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             nodeClass = ((Div) node).getAttribute("class");
             isPotentialAbstractText = nodeClass != null && !nodeClass.isEmpty() && nodeClass.equals("paragraph");
           } else if (node instanceof ParagraphTag) {
-            nodeClass = ((ParagraphTag) node).getAttribute("class");
+            // nodeClass = ((ParagraphTag) node).getAttribute("class");
             // used to check class value, but sometimes there is no class! so just check all p tags :P -- markom 4/30/2021
             isPotentialAbstractText = true;
             //isPotentialAbstractText = nodeClass != null && !nodeClass.isEmpty() && (
@@ -325,6 +322,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                     // without further checks.
                     Node previewDiv = findSiblingDivByAttr(greatGrandParent, "id", "preview");
                     if (previewDiv != null) {
+                      isLikelyAbs = returnAble;
                       return returnAble;
                     }
                     // find the sibling that id div#tabModule, note the structure shown at top of this filter
@@ -358,6 +356,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                           if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "supplementaryPanel")) {
                             returnAble = false;
                           }
+                          isLikelyAbs = returnAble;
                         }
                       }
                     }
@@ -377,9 +376,11 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         public boolean accept(Node node) {
           if (node instanceof Div) {
             String divId = ((Div) node).getAttribute("id");
-            if (divId != null && !divId.isEmpty() && divId.contains("preview")) {
+            if (divId != null && !divId.isEmpty() &&
+                (divId.contains("preview") || divId.contains("firstPage"))
+            ) {
               // set likely abstract to true.
-              isLikelyAbs = true;
+              hasPreview = true;
             }
           }
           return false;
@@ -391,6 +392,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
   private boolean hlFld_TitleDIV = false;
 
   private boolean isLikelyAbs = false;
+  private boolean hasPreview = false;
 
   public boolean isSiblingDivWAttrEmpty(Node node, String attribute, String attrValue ) {
     Node siblingDiv = findSiblingDivByAttr(node, attribute, attrValue);
@@ -451,6 +453,36 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           if (ancestor instanceof Tag) {
             String ancAttr = ((Tag) ancestor).getAttribute(ancestorAttr);
             if (ancAttr != null && !ancAttr.isEmpty() && ancAttr.equals(ancestorVal)) {
+              returnAble = false;
+              break;
+            }
+            ancestor = ancestor.getParent();
+          }
+        }
+      }
+    }
+    return returnAble;
+  }
+
+  public boolean tagWithAttrNotDescendantWithAttr(Node node,
+                                                  String nodeAttr,
+                                                  String nodeVal,
+                                                  String ancestorAttr,
+                                                  String ancestorVal,
+                                                  String ancestorAttr2,
+                                                  String ancestorVal2) {
+    boolean returnAble = false;
+    if (node instanceof Tag) {
+      String attr = ((Tag) node).getAttribute(nodeAttr);
+      if(attr != null && !attr.isEmpty() && attr.contains(nodeVal)) {
+        returnAble = true;
+        Node ancestor = node.getParent();
+        while (ancestor != null) {
+          if (ancestor instanceof Tag) {
+            String ancAttr = ((Tag) ancestor).getAttribute(ancestorAttr);
+            String ancAttr2 = ((Tag) ancestor).getAttribute(ancestorAttr2);
+            if ( (ancAttr != null && !ancAttr.isEmpty() && ancAttr.equals(ancestorVal)) ||
+                 (ancAttr2 != null && !ancAttr2.isEmpty() && ancAttr2.equals(ancestorVal2)) ){
               returnAble = false;
               break;
             }
@@ -684,6 +716,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sectionHeading"),
       HtmlNodeFilters.tagWithAttributeRegex("p", "class", "summary-title"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "sectionHeadingDiv"),
+      // some lists have numbers in the old theme, new theme replaces with 'bullet' style list
+      HtmlNodeFilters.tagWithAttribute("td", "class", "list-td"),
       // embedded reference popups.
       HtmlNodeFilters.tagWithAttribute("span", "class", "referenceDiv"),
       HtmlNodeFilters.tagWithAttributeRegex("span", "class", "ref-lnk"),// lazy-ref"),
@@ -823,6 +857,29 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           return false;
         }
       },
+      // Removes rarely seen copyright disclaimer below abstract, in  <div style="..." > tag.
+      new NodeFilter() {
+        @Override
+        public boolean accept(Node node) {
+          if (node instanceof Div) {
+            Div div = ((Div) node);
+            Node divParent = div.getParent();
+            if(divParent != null && divParent instanceof Div) {
+              Node divGrandParent = divParent.getParent();
+              if(divGrandParent != null && divGrandParent instanceof Div) {
+                String gpId = ((Div) divGrandParent).getAttribute("id");
+                if (gpId != null && !gpId.isEmpty() && gpId.equals("overview")) {
+                  String divText = div.toString();
+                  if (divText != null && divText.contains("Additional license information")) {
+                    return true;
+                  }
+                }
+              }
+            }
+          }
+          return false;
+        }
+      },
       // if we are abstract remove full text
       new NodeFilter() {
         @Override
@@ -847,7 +904,6 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
 
-    log.debug3("filtering encoding: " + encoding);
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(
       in,
       encoding,
