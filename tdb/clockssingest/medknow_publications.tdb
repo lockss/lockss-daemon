@@ -630,7 +630,7 @@
     au < finished ; manifest ; 2017 ; Dental Research Journal Volume 14 ; 2017 ; 14 ; http://www.drjjournal.net/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Dental Research Journal Volume 15 ; 2018 ; 15 ; http://www.drjjournal.net/ ; ; >
     au < crawling ; exists ; 2019 ; Dental Research Journal Volume 16 ; 2019 ; 16 ; https://www.drjjournal.net/ ; ; >
-    au < crawling ; exists ; 2020 ; Dental Research Journal Volume 17 ; 2020 ; 17 ; https://www.drjjournal.net/ ; ; >
+    au < frozen ; exists ; 2020 ; Dental Research Journal Volume 17 ; 2020 ; 17 ; https://www.drjjournal.net/ ; ; >
     au < manifest ; exists ; 2021 ; Dental Research Journal Volume 18 ; 2021 ; 18 ; https://www.drjjournal.net/ ; ; >
 
   }
@@ -1596,7 +1596,7 @@
     au < finished ; frozen ; 2017 ; Indian Journal of Pathology and Microbiology Volume 60 ; 2017 ; 60 ; http://www.ijpmonline.org/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Pathology and Microbiology Volume 61 ; 2018 ; 61 ; http://www.ijpmonline.org/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Pathology and Microbiology Volume 62 ; 2019 ; 62 ; https://www.ijpmonline.org/ ; ; >
-    au < crawling ; exists ; 2020 ; Indian Journal of Pathology and Microbiology Volume 63 ; 2020 ; 63 ; https://www.ijpmonline.org/ ; ; >
+    au < frozen ; exists ; 2020 ; Indian Journal of Pathology and Microbiology Volume 63 ; 2020 ; 63 ; https://www.ijpmonline.org/ ; ; >
     au < expected ; exists ; 2021 ; Indian Journal of Pathology and Microbiology Volume 64 ; 2021 ; 64 ; https://www.ijpmonline.org/ ; ; >
 
   }
@@ -1896,7 +1896,7 @@
     au < deepCrawl ; exists ; 2016 ; Indian Journal of Public Health Volume 60 ; 2016 ; 60 ; http://www.ijph.in/ ; ; >
     au < finished ; manifest ; 2017 ; Indian Journal of Public Health Volume 61 ; 2017 ; 61 ; http://www.ijph.in/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Public Health Volume 62 ; 2018 ; 62 ; http://www.ijph.in/ ; ; >
-    au < crawling ; exists ; 2019 ; Indian Journal of Public Health Volume 63 ; 2019 ; 63 ; https://www.ijph.in/ ; ; >
+    au < frozen ; exists ; 2019 ; Indian Journal of Public Health Volume 63 ; 2019 ; 63 ; https://www.ijph.in/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Public Health Volume 64 ; 2020 ; 64 ; https://www.ijph.in/ ; ; >
     au < expected ; exists ; 2021 ; Indian Journal of Public Health Volume 65 ; 2021 ; 65 ; https://www.ijph.in/ ; ; >
 
