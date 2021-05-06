@@ -40,6 +40,7 @@ import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -77,7 +78,7 @@ public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetad
             }
             return JatsPublishingHelper;
         }
-        
+
         @Override
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
@@ -91,7 +92,13 @@ public class ScienceOpenSourceXmlMetadataExtractorFactory extends SourceXmlMetad
                 }
             }
 
-            thisAM.put(MetadataField.FIELD_ISSN, thisAM.getRaw(ScienceOpenSchemaHelper.JATS_issn));
+            String issn = thisAM.getRaw(ScienceOpenSchemaHelper.JATS_issn);
+            if (MetadataUtil.isIssn(issn)) {
+                thisAM.put(MetadataField.FIELD_ISSN, issn);
+            } else {
+                log.debug("ScienceOpenSourceXmlMetadataExtractorFactory get illegal issn:" + issn);
+            }
+
             thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, thisAM.getRaw(ScienceOpenSchemaHelper.JATS_jtitle));
 
             thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
