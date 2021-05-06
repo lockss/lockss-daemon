@@ -29,20 +29,11 @@
 
 package org.lockss.plugin.taylorandfrancis;
 
-import java.io.File;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.util.Properties;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.StringUtils;
-import org.lockss.plugin.atypon.BaseAtyponLoginPageChecker;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
-import org.lockss.util.HeaderUtil;
 import org.lockss.util.StringUtil;
 
 public class TestTafHtmlHashFilterFactory extends LockssTestCase {
