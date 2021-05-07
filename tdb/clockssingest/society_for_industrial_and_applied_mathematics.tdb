@@ -798,13 +798,13 @@
     au < finished ; frozen ; 1990 ; SIAM Review Volume 32 ; 32 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1991 ; SIAM Review Volume 33 ; 33 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1992 ; SIAM Review Volume 34 ; 34 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1993 ; SIAM Review Volume 35 ; 35 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1994 ; SIAM Review Volume 36 ; 36 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1995 ; SIAM Review Volume 37 ; 37 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; SIAM Review Volume 38 ; 38 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; SIAM Review Volume 39 ; 39 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; SIAM Review Volume 40 ; 40 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1999 ; SIAM Review Volume 41 ; 41 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1993 ; SIAM Review Volume 35 ; 35 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1994 ; SIAM Review Volume 36 ; 36 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1995 ; SIAM Review Volume 37 ; 37 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; SIAM Review Volume 38 ; 38 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; SIAM Review Volume 39 ; 39 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; SIAM Review Volume 40 ; 40 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1999 ; SIAM Review Volume 41 ; 41 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; SIAM Review Volume 42 ; 42 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2001 ; SIAM Review Volume 43 ; 43 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; SIAM Review Volume 44 ; 44 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
@@ -824,7 +824,7 @@
     au < finished ; manifest ; 2016 ; SIAM Review Volume 58 ; 58 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; SIAM Review Volume 59 ; 59 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; SIAM Review Volume 60 ; 60 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2019 ; SIAM Review Volume 61 ; 61 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; SIAM Review Volume 61 ; 61 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; SIAM Review Volume 62 ; 62 ; https://epubs.siam.org/ ; >
     au < manifest ; exists ; 2021 ; SIAM Review Volume 63 ; 63 ; https://epubs.siam.org/ ; >
 
@@ -841,8 +841,8 @@
     param[journal_id] = tprbau
     #no volume in 1972
 
-    au < finished ; crawling ; 1956 ; Theory of Probability and its Applications Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1957 ; Theory of Probability and its Applications Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1956 ; Theory of Probability and its Applications Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1957 ; Theory of Probability and its Applications Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1958 ; Theory of Probability and its Applications Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1959 ; Theory of Probability and its Applications Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1960 ; Theory of Probability and its Applications Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
