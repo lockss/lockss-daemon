@@ -44,6 +44,8 @@ grep -r -A 1 --include "*.xml" "<string>plugin_status</string>" plugins/src | gr
 grep -rL --include "*.xml" "<string>plugin_status</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo01.txt
 #To get statues except those that start with "deprecated" or "ready"
 cat $tpath/foo01.txt | grep -v ",deprecated" | grep -v ",ready" > $tpath/foo16.txt
+#To get the plugins that are for "CLOCKSS" or not-clockss.
+cat $tpath/foo01.txt | cut -f 1 -d, | sed 's/\(.*\/Clockss.*Plugin\)/\1,CLOCKSS/' #add ! for all those without clockss
 
 #Create a base list of plugins
 cat $tpath/foo01.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/AllPlugins.txt
