@@ -23,10 +23,10 @@
     param[journal_id] = jamacardiology
     
     au < released ; 2016 ; JAMA Cardiology Volume 1 ; 2016 >
-    au < manifest ; 2017 ; JAMA Cardiology Volume 2 ; 2017 >
-    au < manifest ; 2018 ; JAMA Cardiology Volume 3 ; 2018 >
+    au < ready ; 2017 ; JAMA Cardiology Volume 2 ; 2017 >
+    au < ready ; 2018 ; JAMA Cardiology Volume 3 ; 2018 >
     au < released ; 2019 ; JAMA Cardiology Volume 4 ; 2019 >
-    au < manifest ; 2020 ; JAMA Cardiology Volume 5 ; 2020 >
+    au < ready ; 2020 ; JAMA Cardiology Volume 5 ; 2020 >
     au < manifest ; 2021 ; JAMA Cardiology Volume 6 ; 2021 >
 
   }
@@ -44,10 +44,10 @@
     param[journal_id] = jamadermatology
     
     au < exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
-    au < manifest ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
-    au < manifest ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
-    au < manifest ; 2015 ; JAMA Dermatology Volume 151 ; 2015 >
-    au < manifest ; 2016 ; JAMA Dermatology Volume 152 ; 2016 >
+    au < ready ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
+    au < ready ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
+    au < ready ; 2015 ; JAMA Dermatology Volume 151 ; 2015 >
+    au < ready ; 2016 ; JAMA Dermatology Volume 152 ; 2016 >
     au < manifest ; 2017 ; JAMA Dermatology Volume 153 ; 2017 >
     au < released ; 2018 ; JAMA Dermatology Volume 154 ; 2018 >
     au < manifest ; 2019 ; JAMA Dermatology Volume 155 ; 2019 >
