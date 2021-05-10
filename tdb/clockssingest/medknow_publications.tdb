@@ -271,7 +271,7 @@
     au < deepCrawl ; exists ; 2016 ; Annals of Pediatric Cardiology Volume 9 ; 2016 ; 9 ; http://www.annalspc.com/ ; ; >
     au < finished ; finished ; 2017 ; Annals of Pediatric Cardiology Volume 10 ; 2017 ; 10 ; http://www.annalspc.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Annals of Pediatric Cardiology Volume 11 ; 2018 ; 11 ; http://www.annalspc.com/ ; ; >
-    au < crawling ; exists ; 2019 ; Annals of Pediatric Cardiology Volume 12 ; 2019 ; 12 ; https://www.annalspc.com/ ; ; >
+    au < frozen ; exists ; 2019 ; Annals of Pediatric Cardiology Volume 12 ; 2019 ; 12 ; https://www.annalspc.com/ ; ; >
     au < crawling ; exists ; 2020 ; Annals of Pediatric Cardiology Volume 13 ; 2020 ; 13 ; https://www.annalspc.com/ ; ; >
     au < manifest ; exists ; 2021 ; Annals of Pediatric Cardiology Volume 14 ; 2021 ; 14 ; https://www.annalspc.com/ ; ; >
 
@@ -2153,7 +2153,7 @@
     au < finished ; finished ; 2017 ; International Journal of Critical Illness and Injury Science Volume 7 ; 2017 ; 7 ; http://www.ijciis.org/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Critical Illness and Injury Science Volume 8 ; 2018 ; 8 ; http://www.ijciis.org/ ; ; >
     au < manifest ; exists ; 2019 ; International Journal of Critical Illness and Injury Science Volume 9 ; 2019 ; 9 ; https://www.ijciis.org/ ; ; >
-    au < crawling ; exists ; 2020 ; International Journal of Critical Illness and Injury Science Volume 10 ; 2020 ; 10 ; https://www.ijciis.org/ ; ; >
+    au < frozen ; exists ; 2020 ; International Journal of Critical Illness and Injury Science Volume 10 ; 2020 ; 10 ; https://www.ijciis.org/ ; ; >
     au < expected ; exists ; 2021 ; International Journal of Critical Illness and Injury Science Volume 11 ; 2021 ; 11 ; https://www.ijciis.org/ ; ; >
 
   }
@@ -3307,7 +3307,7 @@
     au < finished ; finished ; 2017 ; Journal of Minimal Access Surgery Volume 13 ; 2017 ; 13 ; http://www.journalofmas.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Minimal Access Surgery Volume 14 ; 2018 ; 14 ; http://www.journalofmas.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Minimal Access Surgery Volume 15 ; 2019 ; 15 ; https://www.journalofmas.com/ ; ; >
-    au < crawling ; exists ; 2020 ; Journal of Minimal Access Surgery Volume 16 ; 2020 ; 16 ; https://www.journalofmas.com/ ; ; >
+    au < frozen ; exists ; 2020 ; Journal of Minimal Access Surgery Volume 16 ; 2020 ; 16 ; https://www.journalofmas.com/ ; ; >
     au < expected ; exists ; 2021 ; Journal of Minimal Access Surgery Volume 17 ; 2021 ; 17 ; https://www.journalofmas.com/ ; ; >
 
   }
@@ -5669,7 +5669,7 @@
       au < finished ; frozen ; 2017 ; Endoscopic Ultrasound Volume 6 ; 2017 ; 6 ; http://www.eusjournal.com/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Endoscopic Ultrasound Volume 7 ; 2018 ; 7 ; http://www.eusjournal.com/ ; ; >
       au < manifest ; exists ; 2019 ; Endoscopic Ultrasound Volume 8 ; 2019 ; 8 ; https://www.eusjournal.com/ ; ; >
-      au < crawling ; exists ; 2020 ; Endoscopic Ultrasound Volume 9 ; 2020 ; 9 ; https://www.eusjournal.com/ ; ; >
+      au < frozen ; exists ; 2020 ; Endoscopic Ultrasound Volume 9 ; 2020 ; 9 ; https://www.eusjournal.com/ ; ; >
       au < manifest ; exists ; 2021 ; Endoscopic Ultrasound Volume 10 ; 2021 ; 10 ; https://www.eusjournal.com/ ; ; >
 
   }
@@ -9680,7 +9680,7 @@
 
       au < manifest ; exists ; 2018 ; Indian Spine Journal Volume 1 ; 2018 ; 1 ; https://www.isjonline.com/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Spine Journal Volume 2 ; 2019 ; 2 ; https://www.isjonline.com/ ; ; >
-      au < crawling ; exists ; 2020 ; Indian Spine Journal Volume 3 ; 2020 ; 3 ; https://www.isjonline.com/ ; ; >
+      au < frozen ; exists ; 2020 ; Indian Spine Journal Volume 3 ; 2020 ; 3 ; https://www.isjonline.com/ ; ; >
       au < expected ; exists ; 2021 ; Indian Spine Journal Volume 4 ; 2021 ; 4 ; https://www.isjonline.com/ ; ; >
 
   }
@@ -10259,7 +10259,7 @@
       au < manifest ; exists ; 2017 ; Journal of Musculoskeletal Surgery and Research Volume 1 ; 2017 ; 1 ; https://www.journalmsr.com/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Musculoskeletal Surgery and Research Volume 2 ; 2018 ; 2 ; https://www.journalmsr.com/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Musculoskeletal Surgery and Research Volume 3 ; 2019 ; 3 ; https://www.journalmsr.com/ ; ; >
-      au < crawling ; exists ; 2020 ; Journal of Musculoskeletal Surgery and Research Volume 4 ; 2020 ; 4 ; https://www.journalmsr.com/ ; ; >
+      au < frozen ; exists ; 2020 ; Journal of Musculoskeletal Surgery and Research Volume 4 ; 2020 ; 4 ; https://www.journalmsr.com/ ; ; >
       au < manifest ; exists ; 2021 ; Journal of Musculoskeletal Surgery and Research Volume 5 ; 2021 ; 5 ; https://www.journalmsr.com/ ; ; >
 
   }
@@ -10665,7 +10665,7 @@
       au < manifest ; exists ; 2017 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 11 ; 2017 ; 11 ; https://www.pjiap.org/ ; ; >
       au < manifest ; exists ; 2018 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 12 ; 2018 ; 12 ; https://www.pjiap.org/ ; ; >
       au < manifest ; exists ; 2019 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 13 ; 2019 ; 13 ; https://www.pjiap.org/ ; ; >
-      au < crawling ; exists ; 2020 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 14 ; 2020 ; 14 ; https://www.pjiap.org/ ; ; >
+      au < frozen ; exists ; 2020 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 14 ; 2020 ; 14 ; https://www.pjiap.org/ ; ; >
       au < expected ; exists ; 2021 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 15 ; 2021 ; 15 ; https://www.pjiap.org/ ; ; >
 
   }

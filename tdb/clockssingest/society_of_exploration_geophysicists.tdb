@@ -137,12 +137,12 @@
     au < notReady ; exists ; 1993 ; The Leading Edge Volume 12 ; 12 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 1994 ; The Leading Edge Volume 13 ; 13 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1995 ; The Leading Edge Volume 14 ; 14 ; https://library.seg.org/ ; >
-    au < crawling ; exists ; 1996 ; The Leading Edge Volume 15 ; 15 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 1996 ; The Leading Edge Volume 15 ; 15 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1997 ; The Leading Edge Volume 16 ; 16 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1998 ; The Leading Edge Volume 17 ; 17 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1999 ; The Leading Edge Volume 18 ; 18 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2000 ; The Leading Edge Volume 19 ; 19 ; https://library.seg.org/ ; >
-    au < crawling ; exists ; 2001 ; The Leading Edge Volume 20 ; 20 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2001 ; The Leading Edge Volume 20 ; 20 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2002 ; The Leading Edge Volume 21 ; 21 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2003 ; The Leading Edge Volume 22 ; 22 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2004 ; The Leading Edge Volume 23 ; 23 ; https://library.seg.org/ ; >
@@ -153,7 +153,7 @@
     au < frozen ; exists ; 2009 ; The Leading Edge Volume 28 ; 28 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2010 ; The Leading Edge Volume 29 ; 29 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2011 ; The Leading Edge Volume 30 ; 30 ; https://library.seg.org/ ; >
-    au < crawling ; exists ; 2012 ; The Leading Edge Volume 31 ; 31 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2012 ; The Leading Edge Volume 31 ; 31 ; https://library.seg.org/ ; >
     au < finished ; manifest ; 2013 ; The Leading Edge Volume 32 ; 32 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; The Leading Edge Volume 33 ; 33 ; http://library.seg.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; The Leading Edge Volume 34 ; 34 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >

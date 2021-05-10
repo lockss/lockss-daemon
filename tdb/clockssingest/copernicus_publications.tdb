@@ -53,7 +53,7 @@
       au < crawling ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 26 ; 26 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 27 ; 27 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 29 ; 29 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 29 ; 29 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Advances in Geosciences Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Advances in Geosciences Volume 32 ; 32 ; >
@@ -200,12 +200,12 @@
       au < crawling ; exists ; 2003 ; 2003 ; Annales Geophysicae Volume 21 ; 21 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Annales Geophysicae Volume 22 ; 22 ; >
       au < crawling ; exists ; 2005 ; 2005 ; Annales Geophysicae Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Annales Geophysicae Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Annales Geophysicae Volume 24 ; 24 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 ; >
@@ -273,7 +273,7 @@
       au < frozen ; exists ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Volume 1 ; 1 ; >
       au < crawling ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Volume 2 ; 2 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Atmospheric Chemistry and Physics Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Volume 4 ; 4 ; >
       au < frozen ; exists ; 2005 ; 2005 ; Atmospheric Chemistry and Physics Volume 5 ; 5 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Atmospheric Chemistry and Physics Volume 6 ; 6 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Atmospheric Chemistry and Physics Volume 7 ; 7 ; >
@@ -373,7 +373,7 @@
       au < crawling ; exists ; 2007 ; 2007 ; Climate of the Past Volume 3 ; 3 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Climate of the Past Volume 4 ; 4 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Climate of the Past Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Climate of the Past Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Climate of the Past Volume 6 ; 6 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 ; >
@@ -416,7 +416,7 @@
       param[home_url] = https://www.drinking-water-engineering-and-science.net/
 
       au < crawling ; exists ; 2008 ; 2008 ; Drinking Water Engineering and Science Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Drinking Water Engineering and Science Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; Drinking Water Engineering and Science Volume 2 ; 2 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Drinking Water Engineering and Science Volume 3 ; 3 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 ; >
@@ -579,7 +579,7 @@
       au < crawling ; exists ; 2008 ; 2008 ; E&G Quaternary Science Journal Volume 57 ; 57 ; >
       au < crawling ; exists ; 2009 ; 2009 ; E&G Quaternary Science Journal Volume 58 ; 58 ; >
       au < crawling ; exists ; 2011 ; 2011 ; E&G Quaternary Science Journal Volume 59 ; 59 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; E&G Quaternary Science Journal Volume 60 ; 60 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; E&G Quaternary Science Journal Volume 60 ; 60 ; >
       au < crawling ; exists ; 2011 ; 2011 ; E&G Quaternary Science Journal Volume 61 ; 61 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; E&G Quaternary Science Journal Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; E&G Quaternary Science Journal Volume 63 ; 63 ; >
@@ -882,10 +882,10 @@
       au < crawling ; exists ; 2002 ; 2002 ; Hydrology and Earth System Sciences Volume 6 ; 6 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Hydrology and Earth System Sciences Volume 7 ; 7 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Hydrology and Earth System Sciences Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Hydrology and Earth System Sciences Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Hydrology and Earth System Sciences Volume 9 ; 9 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Hydrology and Earth System Sciences Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Hydrology and Earth System Sciences Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Hydrology and Earth System Sciences Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Hydrology and Earth System Sciences Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; Hydrology and Earth System Sciences Volume 12 ; 12 ; >
       au < frozen ; exists ; 2009 ; 2009 ; Hydrology and Earth System Sciences Volume 13 ; 13 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Volume 14 ; 14 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 ; >
@@ -1288,7 +1288,7 @@
       au < crawling ; exists ; 2007 ; 2007 ; Natural Hazards and Earth System Sciences Volume 7 ; 7 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Natural Hazards and Earth System Sciences Volume 8 ; 8 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 ; >
@@ -1468,7 +1468,7 @@
       au < crawling ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue ; >
       au < crawling ; exists ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 ; >
@@ -1528,7 +1528,7 @@
       param[base_url] = https://se.copernicus.org/
       param[home_url] = https://www.solid-earth.net/
 
-      au < crawling ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 ; >
@@ -1617,9 +1617,9 @@
 
       au < crawling ; exists ; 2000 ; 2000 ; Web Ecology Volume 1 ; 1 ; >
       au < crawling ; exists ; 2001 ; 2001 ; Web Ecology Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Web Ecology Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; Web Ecology Volume 3 ; 3 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Web Ecology Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Web Ecology Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Web Ecology Volume 5 ; 5 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Web Ecology Volume 6 ; 6 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Web Ecology Volume 7 ; 7 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Web Ecology Volume 8 ; 8 ; >

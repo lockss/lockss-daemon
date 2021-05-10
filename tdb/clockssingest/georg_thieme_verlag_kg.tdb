@@ -216,7 +216,7 @@
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Neurologie Volume 30 ; 30 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Aktuelle Neurologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Neurologie Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Neurologie Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Aktuelle Neurologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Neurologie Volume 34 ; 34 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Neurologie Volume 35 ; 35 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Aktuelle Neurologie Volume 36 ; 36 ; >
@@ -305,7 +305,7 @@
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Traumatologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Traumatologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Traumatologie Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Traumatologie Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Aktuelle Traumatologie Volume 35 ; 35 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Traumatologie Volume 36 ; 36 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Traumatologie Volume 37 ; 37 ; >
 
@@ -407,15 +407,15 @@
     au < doNotProcess ; exists ; 1997 ; 1997 ; Allgemeine Homöopathische Zeitung Volume 242 ; 242 ; >
     au < doNotProcess ; exists ; 1998 ; 1998 ; Allgemeine Homöopathische Zeitung Volume 243 ; 243 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Allgemeine Homöopathische Zeitung Volume 244 ; 244 ; >
-    au < crawling ; exists ; 2000 ; 2000 ; Allgemeine Homöopathische Zeitung Volume 245 ; 245 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; Allgemeine Homöopathische Zeitung Volume 245 ; 245 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Allgemeine Homöopathische Zeitung Volume 246 ; 246 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Allgemeine Homöopathische Zeitung Volume 247 ; 247 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Allgemeine Homöopathische Zeitung Volume 248 ; 248 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Allgemeine Homöopathische Zeitung Volume 249 ; 249 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Allgemeine Homöopathische Zeitung Volume 249 ; 249 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Allgemeine Homöopathische Zeitung Volume 250 ; 250 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Allgemeine Homöopathische Zeitung Volume 251 ; 251 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; Allgemeine Homöopathische Zeitung Volume 252 ; 252 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; Allgemeine Homöopathische Zeitung Volume 253 ; 253 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; Allgemeine Homöopathische Zeitung Volume 252 ; 252 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Allgemeine Homöopathische Zeitung Volume 253 ; 253 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Allgemeine Homöopathische Zeitung Volume 254 ; 254 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Allgemeine Homöopathische Zeitung Volume 255 ; 255 ; >
     au < finished ; finished ; 2011 ; 2011 ; Allgemeine Homöopathische Zeitung Volume 256 ; 256 ; >
@@ -928,7 +928,7 @@
     param[journal_id] = 10.1055/s-00000010
     comment[years] = 2000-2002
 
-   au < crawling ; exists ; 2000 ; 2000 ; Deutsche Zeitschrift für Akupunktur Volume 43 ; 43 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Deutsche Zeitschrift für Akupunktur Volume 43 ; 43 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Deutsche Zeitschrift für Akupunktur Volume 44 ; 44 ; >
    au < finished ; finished ; 2002 ; 2002 ; Deutsche Zeitschrift für Akupunktur Volume 45 ; 45 ; reingest2.clockss.org:8085 >
 
@@ -2430,7 +2430,7 @@
    au < manifest ; exists ; 2005 ; 2005 ; Informationen aus Orthodontie & Kieferorthopädie Volume 37 ; 37 ; >
    au < manifest ; exists ; 2006 ; 2006 ; Informationen aus Orthodontie & Kieferorthopädie Volume 38 ; 38 ; >
    au < manifest ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 39 ; 39 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 40 ; 40 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 40 ; 40 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 41 ; 41 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 43 ; 43 ; reingest2.clockss.org:8085 >
@@ -2899,7 +2899,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 18 ; 18 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Journal of Knee Surgery Volume 19 ; 19 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; Journal of Knee Surgery Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Journal of Knee Surgery Volume 21 ; 21 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Knee Surgery Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Knee Surgery Volume 23 ; 23 ; >
     au < finished ; finished ; 2011 ; 2011 ; Journal of Knee Surgery Volume 24 ; 24 ; reingest1.clockss.org:8082 >
