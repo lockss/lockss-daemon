@@ -20462,8 +20462,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; The Oral History Review Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; The Oral History Review Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; The Oral History Review Volume 46 ; 46 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2020 ; 2020 ; The Oral History Review Volume 47 ; 47 ; >
-    au < expected ; exists ; 2021 ; 2021 ; The Oral History Review Volume 48 ; 48 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; The Oral History Review Volume 47 ; 47 ; >
 
   }
 
