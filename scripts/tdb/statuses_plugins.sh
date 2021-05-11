@@ -45,7 +45,7 @@ grep -rL --include "*.xml" "<string>plugin_status</string>" plugins/src | sed 's
 #To get statues except those that start with "deprecated" or "ready"
 cat $tpath/foo01.txt | grep -v ",deprecated" | grep -v ",ready" > $tpath/foo16.txt
 #To get the plugins that are for "CLOCKSS" or not-clockss.
-cat $tpath/foo01.txt | cut -f 1 -d, | sed 's/\(.*\/Clockss.*Plugin\)/\1,CLOCKSS/' #add ! for all those without clockss
+cat $tpath/foo01.txt | cut -f 1 -d, | sed 's/$/,!/' | sed 's/\(.*\/Clockss.*Plugin\),!/\1,CLOCKSS/' > $tpath/foo17.txt #add ! for all those without clockss
 
 #Create a base list of plugins
 cat $tpath/foo01.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/AllPlugins.txt
@@ -113,6 +113,7 @@ diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.
 cat $tpath/foo00.txt | sort -t, -k 1,1 > $tpath/blatz00.txt #numbers of AUs
 cat $tpath/foo01.txt | sort -t, -k 1,1 > $tpath/blatz01.txt #plugin status
 cat $tpath/foo16.txt | sort -t, -k 1,1 > $tpath/blatz16.txt #plugin status, not ready, deprecated
+cat $tpath/foo17.txt | sort -t, -k 1,1 > $tpath/blatz17.txt #plugin clockss or not
 #cat $tpath/foo02.txt | sort -t, -k 1,1 > $tpath/blatz02.txt #substance checkers
 #cat $tpath/foo13.txt | sort -t, -k 1,1 > $tpath/blatz13.txt #https A
 #cat $tpath/foo14.txt | sort -t, -k 1,1 > $tpath/blatz14.txt #https B
@@ -129,7 +130,7 @@ cat $tpath/foo11.txt | sort -t, -k 1,1 > $tpath/blatz11.txt #Plugins on delta ma
 cat $tpath/foo12.txt | sort -t, -k 1,1 > $tpath/blatz12.txt #Plugins on content machines 1-4
 
 #echo "Plugin,GIT,C9-16,D1-13,C1-4,I1-4,Parent,PV,AUs,Substance,ArtIt,MetadataEx,OpenURL,Status"
-echo "Plugin,GIT,C5-8,D1-13,C1-4,I1-4,Parent,PV,AUs,Status"
+echo "Plugin,CLOCKSS,GIT,C5-8,D1-13,C1-4,I1-4,Parent,PV,AUs,Status"
 #join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz02.txt | join -t, -e EMPTY - $tpath/blatz03.txt | join -t, -e EMPTY - $tpath/blatz04.txt | join -t, -e EMPTY - $tpath/blatz05.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
 #join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz02.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
 #join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz02.txt | join -t, -e EMPTY - $tpath/blatz13.txt | join -t, -e EMPTY - $tpath/blatz14.txt | join -t, -e EMPTY - $tpath/blatz15.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
@@ -138,10 +139,10 @@ echo "Plugin,GIT,C5-8,D1-13,C1-4,I1-4,Parent,PV,AUs,Status"
 
 if [[ $d_flag = 'false' ]] ; then
 #include all plugins
-join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
+join -t, -e EMPTY $tpath/blatz17.txt $tpath/blatz08.txt | join -t, -e EMPTY - $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
 else
 #include only plugins that don't have a status that starts with "deprecated" or "ready"
-join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz16.txt | sort -t, -k 9 -nr 
+join -t, -e EMPTY $tpath/blatz17.txt $tpath/blatz08.txt | join -t, -e EMPTY - $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz16.txt | sort -t, -k 9 -nr 
 fi
 date
 
