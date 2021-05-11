@@ -24,10 +24,10 @@
     #manifest page: http://illiesia.speciesfile.org/html/2019.html
     #No 2020 content as of 2020/2/01
 
-    au < crawling ; exists ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 ; > #no substance. crawl rules?
-    au < crawling ; exists ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 ; > #no substance. crawl rules?
-    au < crawling ; exists ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 ; > #no substance. crawl rules?
-    au < crawling ; exists ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 ; > #no substance. crawl rules?
+    au < frozen ; exists ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 ; > 
+    au < frozen ; exists ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 ; > 
+    au < frozen ; exists ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 ; > 
+    au < frozen ; exists ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 ; > 
     au < doNotProcess ; exists ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 ; >
@@ -38,7 +38,7 @@
     au < finished ; manifest ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 ; >
-    au < crawling ; exists ; 2019 ; Illiesia International Journal of Stonefly Research Volume 15 ; 15 ; 2019 ; >
+    au < frozen ; exists ; 2019 ; Illiesia International Journal of Stonefly Research Volume 15 ; 15 ; 2019 ; >
 
     }
 
