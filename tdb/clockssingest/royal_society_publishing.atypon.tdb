@@ -28,10 +28,10 @@
     
     au < manifest ; exists ; 1932-1935 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1932-1935] ; 1 ; >
     au < manifest ; exists ; 1936-1939 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1936-1939] ; 2 ; >
-    au < ready ; exists ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 ; >
-    au < ready ; exists ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 ; >
-    au < ready ; exists ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 ; >
-    au < ready ; exists ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 ; >
+    au < crawling ; exists ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 ; >
+    au < crawling ; exists ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 ; >
+    au < crawling ; exists ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 ; >
+    au < crawling ; exists ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 ; >
     au < crawling ; exists ; 1950-1951 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 [1950-1951] ; 7 ; >
     au < crawling ; exists ; 1952-1953 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 [1952-1953] ; 8 ; >
     au < crawling ; exists ; 1954 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1954] ; 9 ; >
@@ -414,10 +414,10 @@
     au < manifest ; exists ; 1935-1936 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 235 ; 235 ; >
     au < manifest ; exists ; 1936-1938 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 236 ; 236 ; >
     au < manifest ; exists ; 1938-1939 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 237 ; 237 ; >
-    au < ready ; exists ; 1939-1940 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 238 ; 238 ; >
-    au < ready ; exists ; 1940-1946 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 239 ; 239 ; >
-    au < ready ; exists ; 1946-1948 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 240 ; 240 ; >
-    au < ready ; exists ; 1948-1949 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 241 ; 241 ; >
+    au < crawling ; exists ; 1939-1940 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 238 ; 238 ; >
+    au < crawling ; exists ; 1940-1946 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 239 ; 239 ; >
+    au < crawling ; exists ; 1946-1948 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 240 ; 240 ; >
+    au < crawling ; exists ; 1948-1949 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 241 ; 241 ; >
     au < crawling ; exists ; 1949-1950 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 242 ; 242 ; >
     au < crawling ; exists ; 1950-1951 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 243 ; 243 ; >
     au < crawling ; exists ; 1951-1952 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 244 ; 244 ; >
@@ -648,10 +648,10 @@
     au < manifest ; exists ; 1937 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 227 ; 227 ; >
     au < manifest ; exists ; 1937-1938 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 228 ; 228 ; >
     au < manifest ; exists ; 1938-1939 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 229 ; 229 ; >
-    au < ready ; exists ; 1939-1941 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 230 ; 230 ; >
-    au < ready ; exists ; 1941-1946 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 231 ; 231 ; >
-    au < ready ; exists ; 1946-1947 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 232 ; 232 ; >
-    au < ready ; exists ; 1947-1949 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 233 ; 233 ; >
+    au < crawling ; exists ; 1939-1941 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 230 ; 230 ; >
+    au < crawling ; exists ; 1941-1946 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 231 ; 231 ; >
+    au < crawling ; exists ; 1946-1947 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 232 ; 232 ; >
+    au < crawling ; exists ; 1947-1949 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 233 ; 233 ; >
     au < crawling ; exists ; 1949-1950 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 234 ; 234 ; >
     au < crawling ; exists ; 1950-1951 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 235 ; 235 ; >
     au < crawling ; exists ; 1952 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 236 ; 236 ; >
@@ -683,7 +683,7 @@
     au < crawling ; exists ; 1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 258 ; 258 ; >
     au < crawling ; exists ; 1970-1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 259 ; 259 ; >
     au < crawling ; exists ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 260 ; 260 ; >
-    au < ready ; exists ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 261 ; 261 ; >
+    au < crawling ; exists ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 261 ; 261 ; >
     au < crawling ; exists ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 262 ; 262 ; >
     au < frozen ; exists ; 1971-1972 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 263 ; 263 ; >
     au < crawling ; exists ; 1972-1973 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 264 ; 264 ; >
@@ -1119,32 +1119,32 @@
     au < manifest ; exists ; 1939 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 171 ; 171 ; >
     au < manifest ; exists ; 1939 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 172 ; 172 ; >
     au < manifest ; exists ; 1939 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 173 ; 173 ; >
-    au < ready ; exists ; 1940 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 174 ; 174 ; >
-    au < ready ; exists ; 1940 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 175 ; 175 ; >
-    au < ready ; exists ; 1940 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 176 ; 176 ; >
-    au < ready ; exists ; 1940-1941 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 177 ; 177 ; >
-    au < ready ; exists ; 1941 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 ; >
-    au < ready ; exists ; 1941-1942 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 ; >
-    au < ready ; exists ; 1942 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 180 ; 180 ; >
-    au < ready ; exists ; 1942-1943 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 181 ; 181 ; >
-    au < ready ; exists ; 1943-1944 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 182 ; 182 ; >
-    au < ready ; exists ; 1944-1945 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 183 ; 183 ; >
-    au < ready ; exists ; 1945 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 184 ; 184 ; >
-    au < ready ; exists ; 1946 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 185 ; 185 ; >
-    au < ready ; exists ; 1946 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 186 ; 186 ; >
-    au < ready ; exists ; 1946 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 187 ; 187 ; >
-    au < ready ; exists ; 1946-1947 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 188 ; 188 ; >
-    au < ready ; exists ; 1947 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 189 ; 189 ; >
-    au < ready ; exists ; 1947 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 190 ; 190 ; >
-    au < ready ; exists ; 1947 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 191 ; 191 ; >
-    au < ready ; exists ; 1947-1948 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 192 ; 192 ; >
-    au < ready ; exists ; 1948 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 193 ; 193 ; >
-    au < ready ; exists ; 1948 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 194 ; 194 ; >
-    au < ready ; exists ; 1948-1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 195 ; 195 ; >
-    au < ready ; exists ; 1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 196 ; 196 ; >
-    au < ready ; exists ; 1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 197 ; 197 ; >
-    au < ready ; exists ; 1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 198 ; 198 ; >
-    au < ready ; exists ; 1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 199 ; 199 ; >
+    au < crawling ; exists ; 1940 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 174 ; 174 ; >
+    au < crawling ; exists ; 1940 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 175 ; 175 ; >
+    au < crawling ; exists ; 1940 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 176 ; 176 ; >
+    au < crawling ; exists ; 1940-1941 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 177 ; 177 ; >
+    au < crawling ; exists ; 1941 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 ; >
+    au < crawling ; exists ; 1941-1942 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 ; >
+    au < crawling ; exists ; 1942 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 180 ; 180 ; >
+    au < crawling ; exists ; 1942-1943 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 181 ; 181 ; >
+    au < crawling ; exists ; 1943-1944 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 182 ; 182 ; >
+    au < crawling ; exists ; 1944-1945 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 183 ; 183 ; >
+    au < crawling ; exists ; 1945 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 184 ; 184 ; >
+    au < crawling ; exists ; 1946 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 185 ; 185 ; >
+    au < crawling ; exists ; 1946 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 186 ; 186 ; >
+    au < crawling ; exists ; 1946 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 187 ; 187 ; >
+    au < crawling ; exists ; 1946-1947 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 188 ; 188 ; >
+    au < crawling ; exists ; 1947 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 189 ; 189 ; >
+    au < crawling ; exists ; 1947 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 190 ; 190 ; >
+    au < crawling ; exists ; 1947 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 191 ; 191 ; >
+    au < crawling ; exists ; 1947-1948 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 192 ; 192 ; >
+    au < crawling ; exists ; 1948 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 193 ; 193 ; >
+    au < crawling ; exists ; 1948 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 194 ; 194 ; >
+    au < crawling ; exists ; 1948-1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 195 ; 195 ; >
+    au < crawling ; exists ; 1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 196 ; 196 ; >
+    au < crawling ; exists ; 1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 197 ; 197 ; >
+    au < crawling ; exists ; 1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 198 ; 198 ; >
+    au < crawling ; exists ; 1949 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 199 ; 199 ; >
     au < crawling ; exists ; 1949-1950 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 200 ; 200 ; >
     au < crawling ; exists ; 1950 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 201 ; 201 ; >
     au < crawling ; exists ; 1950 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 202 ; 202 ; >
@@ -1162,7 +1162,7 @@
     au < crawling ; exists ; 1952 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 214 ; 214 ; >
     au < crawling ; exists ; 1952 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 215 ; 215 ; >
     au < crawling ; exists ; 1953 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 216 ; 216 ; >
-    au < ready ; exists ; 1953 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 217 ; 217 ; >
+    au < crawling ; exists ; 1953 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 217 ; 217 ; >
     au < frozen ; exists ; 1953 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 218 ; 218 ; >
     au < frozen ; exists ; 1953 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 219 ; 219 ; >
     au < crawling ; exists ; 1953 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 220 ; 220 ; >
@@ -1511,14 +1511,14 @@
     au < manifest ; exists ; 1938 ; Proceedings of the Royal Society B: Biological Sciences Volume 125 ; 125 ; >
     au < manifest ; exists ; 1938-1939 ; Proceedings of the Royal Society B: Biological Sciences Volume 126 ; 126 ; >
     au < manifest ; exists ; 1939 ; Proceedings of the Royal Society B: Biological Sciences Volume 127 ; 127 ; >
-    au < ready ; exists ; 1939-1940 ; Proceedings of the Royal Society B: Biological Sciences Volume 128 ; 128 ; >
-    au < ready ; exists ; 1940 ; Proceedings of the Royal Society B: Biological Sciences Volume 129 ; 129 ; >
-    au < ready ; exists ; 1941-1942 ; Proceedings of the Royal Society B: Biological Sciences Volume 130 ; 130 ; >
-    au < ready ; exists ; 1942-1943 ; Proceedings of the Royal Society B: Biological Sciences Volume 131 ; 131 ; >
-    au < ready ; exists ; 1944-1945 ; Proceedings of the Royal Society B: Biological Sciences Volume 132 ; 132 ; >
-    au < ready ; exists ; 1946 ; Proceedings of the Royal Society B: Biological Sciences Volume 133 ; 133 ; >
-    au < ready ; exists ; 1947 ; Proceedings of the Royal Society B: Biological Sciences Volume 134 ; 134 ; >
-    au < ready ; exists ; 1947-1948 ; Proceedings of the Royal Society B: Biological Sciences Volume 135 ; 135 ; >
+    au < crawling ; exists ; 1939-1940 ; Proceedings of the Royal Society B: Biological Sciences Volume 128 ; 128 ; >
+    au < crawling ; exists ; 1940 ; Proceedings of the Royal Society B: Biological Sciences Volume 129 ; 129 ; >
+    au < crawling ; exists ; 1941-1942 ; Proceedings of the Royal Society B: Biological Sciences Volume 130 ; 130 ; >
+    au < crawling ; exists ; 1942-1943 ; Proceedings of the Royal Society B: Biological Sciences Volume 131 ; 131 ; >
+    au < crawling ; exists ; 1944-1945 ; Proceedings of the Royal Society B: Biological Sciences Volume 132 ; 132 ; >
+    au < crawling ; exists ; 1946 ; Proceedings of the Royal Society B: Biological Sciences Volume 133 ; 133 ; >
+    au < crawling ; exists ; 1947 ; Proceedings of the Royal Society B: Biological Sciences Volume 134 ; 134 ; >
+    au < crawling ; exists ; 1947-1948 ; Proceedings of the Royal Society B: Biological Sciences Volume 135 ; 135 ; >
     au < frozen ; exists ; 1949-1950 ; Proceedings of the Royal Society B: Biological Sciences Volume 136 ; 136 ; >
     au < crawling ; exists ; 1950 ; Proceedings of the Royal Society B: Biological Sciences Volume 137 ; 137 ; >
     au < crawling ; exists ; 1951 ; Proceedings of the Royal Society B: Biological Sciences Volume 138 ; 138 ; >
