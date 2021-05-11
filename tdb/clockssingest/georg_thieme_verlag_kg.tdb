@@ -267,7 +267,7 @@
     au < frozen ; exists ; 2000 ; 2000 ; Aktuelle Rheumatologie Volume 27 ; 27 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Aktuelle Rheumatologie Volume 28 ; 28 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Rheumatologie Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Rheumatologie Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Aktuelle Rheumatologie Volume 30 ; 30 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Rheumatologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Rheumatologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Rheumatologie Volume 33 ; 33 ; >
@@ -744,7 +744,7 @@
       au < crawling ; exists ; 2005 ; 2005 ; Balint Journal Volume 6 ; 6 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Balint Journal Volume 7 ; 7 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Balint Journal Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Balint Journal Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; Balint Journal Volume 9 ; 9 ; >
       au < finished ; manifest ; 2009 ; 2009 ; Balint Journal Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; 2010 ; Balint Journal Volume 11 ; 11 ; >
       au < finished ; finished ; 2011 ; 2011 ; Balint Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -3975,7 +3975,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; Neuropediatrics Volume 36 ; 36 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Neuropediatrics Volume 37 ; 37 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Neuropediatrics Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; Neuropediatrics Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Neuropediatrics Volume 39 ; 39 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Neuropediatrics Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Neuropediatrics Volume 41 ; 41 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Neuropediatrics Volume 42 ; 42 ; reingest2.clockss.org:8085 >
@@ -5049,7 +5049,7 @@
     param[journal_id] = 10.1055/s-00000159
     comment[years] = 2008-current
 
-   au < crawling ; exists ; 2008 ; 2008 ; Radiopraxis Volume 1 ; 1 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Radiopraxis Volume 1 ; 1 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Radiopraxis Volume 2 ; 2 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Radiopraxis Volume 3 ; 3 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Radiopraxis Volume 4 ; 4 ; reingest2.clockss.org:8085 >

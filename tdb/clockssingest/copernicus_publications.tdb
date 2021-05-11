@@ -237,7 +237,7 @@
       au < crawling ; exists ; 2001 ; 2001 ; Archives Animal Breeding Volume 44 ; 44 ; >
       au < crawling ; exists ; 2002 ; 2002 ; Archives Animal Breeding Volume 45 ; 45 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Archives Animal Breeding Volume 46 ; 46 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; Archives Animal Breeding Volume 47 ; 47 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; Archives Animal Breeding Volume 47 ; 47 ; >
       au < crawling ; exists ; 2005 ; 2005 ; Archives Animal Breeding Volume 48 ; 48 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Archives Animal Breeding Volume 49 ; 49 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Archives Animal Breeding Volume 50 ; 50 ; >
@@ -338,7 +338,7 @@
       au < crawling ; exists ; 2004 ; 2004 ; Biogeosciences Volume 1 ; 1 ; >
       au < crawling ; exists ; 2005 ; 2005 ; Biogeosciences Volume 2 ; 2 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Biogeosciences Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Biogeosciences Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Biogeosciences Volume 4 ; 4 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Biogeosciences Volume 5 ; 5 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Biogeosciences Volume 6 ; 6 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Biogeosciences Volume 7 ; 7 ; >
@@ -468,7 +468,7 @@
       param[base_url] = https://esd.copernicus.org/
       param[home_url] = https://www.earth-system-dynamics.net/
 
-      au < crawling ; exists ; 2010 ; 2010 ; Earth System Dynamics Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Earth System Dynamics Volume 1 ; 1 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 ; >
@@ -1179,12 +1179,12 @@
       au < crawling ; exists ; 2001 ; 2001 ; Journal of Micropalaeontology Volume 20 ; 20 ; >
       au < crawling ; exists ; 2002 ; 2002 ; Journal of Micropalaeontology Volume 21 ; 21 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Journal of Micropalaeontology Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; Journal of Micropalaeontology Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; Journal of Micropalaeontology Volume 23 ; 23 ; >
       au < crawling ; exists ; 2005 ; 2005 ; Journal of Micropalaeontology Volume 24 ; 24 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Journal of Micropalaeontology Volume 25 ; 25 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Journal of Micropalaeontology Volume 26 ; 26 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Journal of Micropalaeontology Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; >
@@ -1331,7 +1331,7 @@
       au < crawling ; exists ; 2007 ; 2007 ; Nonlinear Processes in Geophysics Volume 14 ; 14 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Nonlinear Processes in Geophysics Volume 15 ; 15 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Nonlinear Processes in Geophysics Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Nonlinear Processes in Geophysics Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Nonlinear Processes in Geophysics Volume 17 ; 17 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Nonlinear Processes in Geophysics Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Nonlinear Processes in Geophysics Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 ; >
@@ -1476,8 +1476,8 @@
       au < crawling ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 ; >

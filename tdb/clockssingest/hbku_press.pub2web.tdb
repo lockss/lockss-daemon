@@ -100,7 +100,7 @@
     #\/Does not exist, but will pass manifest page check
     au < doNotProcess ; exists ; 2018 ; Qatar Medical Journal Volume 2018 ; 2018 ; > #no substance
     au < crawling ; exists ; 2019 ; Qatar Medical Journal Volume 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Qatar Medical Journal Volume 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Qatar Medical Journal Volume 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Qatar Medical Journal Volume 2021 ; 2021 ; >
 
   }

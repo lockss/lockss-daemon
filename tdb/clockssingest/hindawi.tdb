@@ -3560,7 +3560,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Education Research International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Education Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Education Research International Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Education Research International Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Education Research International Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Education Research International Volume 2021 ; 2021 ; 2021 ; >
 
     }
@@ -3587,7 +3587,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Emergency Medicine International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Emergency Medicine International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Emergency Medicine International Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Emergency Medicine International Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Emergency Medicine International Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Emergency Medicine International Volume 2021 ; 2021 ; 2021 ; >
 
 
@@ -4263,7 +4263,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Biomedical Imaging Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Biomedical Imaging Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Biomedical Imaging Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Biomedical Imaging Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; International Journal of Biomedical Imaging Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; International Journal of Biomedical Imaging Volume 2021 ; 2021 ; 2021 ; >
 
   }
@@ -6877,7 +6877,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Control Science and Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Control Science and Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Control Science and Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Journal of Control Science and Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Journal of Control Science and Engineering Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Journal of Control Science and Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
@@ -9166,7 +9166,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Minimally Invasive Surgery Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Minimally Invasive Surgery Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Minimally Invasive Surgery Volume 2018 ; 2018 ; 2018 ; >
-    au < crawling ; exists ; 2019 ; Minimally Invasive Surgery Volume 2019 ; 2019 ; 2019 ; >
+    au < frozen ; exists ; 2019 ; Minimally Invasive Surgery Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Minimally Invasive Surgery Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Minimally Invasive Surgery Volume 2021 ; 2021 ; 2021 ; >
 
@@ -9437,7 +9437,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Occupational Therapy International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Occupational Therapy International Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Occupational Therapy International Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Occupational Therapy International Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Occupational Therapy International Volume 2020 ; 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Occupational Therapy International Volume 2021 ; 2021 ; 2021 ; >
 
   }
