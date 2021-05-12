@@ -30,15 +30,17 @@
 
  */
 
-package org.lockss.plugin.clockss;
+package org.lockss.plugin.clockss.eastview;
 
 import org.apache.commons.io.FilenameUtils;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.MetadataStringHelperUtilities;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 import org.marc4j.MarcReader;
@@ -53,10 +55,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static org.lockss.plugin.clockss.MetadataStringHelperUtilities.cleanupPublisherName;
-import static org.lockss.plugin.clockss.casalini.CasaliniLibriPublisherNameStringHelperUtilities.getCanonicalPublisherName;
-import static org.lockss.plugin.clockss.casalini.CasaliniLibriPublisherNameStringHelperUtilities.getPublisherNameShortcut2016;
 
 /**
  *  Marc4J library https://github.com/marc4j/marc4j
@@ -153,23 +151,32 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
         // Set author
         if (MARC_author == null) {
-          am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt);
+          am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt.replace(".", ""));
         } else {
           if (MARC_author != null) {
-            am.put(MetadataField.FIELD_AUTHOR, MARC_author);
+            am.put(MetadataField.FIELD_AUTHOR, MARC_author.replace(".", ""));
           }
         }
 
         // Set publisher name
-        if (MARC_publisher == null) {
-          am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
+        String publisherName = "East View Information Services";
+
+        TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+        if (tdbau != null) {
+          publisherName = tdbau.getPublisherName();
         }
 
+        am.put(MetadataField.FIELD_PUBLISHER, publisherName);
+
+        // Setup PDF 
+        String zippedFolderName = EastviewMarcXmlSchemaHelper.getZippedFolderName();
+
+        String fileNum = MARC_pdf;
         String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
-        String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
-        log.debug3("Metadata: MARC_pdf " + fullPathFile);
-        am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+        String pdfFilePath = cuBase + zippedFolderName + ".zip!/" + fileNum + ".pdf";
+        log.debug3("pdfFilePath" + pdfFilePath );
+        am.put(MetadataField.FIELD_ACCESS_URL, pdfFilePath);
 
         /*
         Leader byte 07 “a” = Book (monographic component part)
@@ -177,6 +184,7 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
         Leader byte 07 “s” = Journal
         Leader byte 07 “b” = Journal (serial component part)
         */
+
         Leader leader = record.getLeader();
 
         char publication_type = '0';
@@ -191,6 +199,12 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
             // Set publication title
             if (MARC_title != null) {
+              String cleanedArticleTitle = MARC_title.replace(":", "").
+                      replace("/", "").
+                      replace("=", "").
+                      replace("\"", "").
+                      replace("...", "");
+              log.debug3(String.format("original artitle title = %s, cleaned title = %s",MARC_title, cleanedArticleTitle));
               am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
             }
           }
