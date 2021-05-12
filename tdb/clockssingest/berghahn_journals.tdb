@@ -296,31 +296,6 @@
     param[journal_id] = critical-survey
     
     {
-      #param[journal_issn] = 0011-1570
-            
-      au < doNotProcess ; doNotProcess ; 1997 ; Critical Survey Volume 9 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 1998 ; Critical Survey Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 1999 ; Critical Survey Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; Critical Survey Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; Critical Survey Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; Critical Survey Volume 14 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; Critical Survey Volume 15 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; Critical Survey Volume 16 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; Critical Survey Volume 17 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; Critical Survey Volume 18 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; Critical Survey Volume 19 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Critical Survey Volume 20 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Critical Survey Volume 21 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; Critical Survey Volume 22 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Critical Survey Volume 23 [superseded] ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Critical Survey Volume 24 [superseded] ; 24 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Critical Survey Volume 25 [superseded] ; 25 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Critical Survey Volume 26 [superseded] ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Critical Survey Volume 27 [superseded] ; 27 ; >
-    
-    }
-    
-    {
     
       #they moved to eissn just before going offline
       #param[journal_issn] = 1752-2293
@@ -343,7 +318,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Critical Survey Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Critical Survey Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Critical Survey Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2015 ; Critical Survey Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Critical Survey Volume 27 ; 27 ; >
       
     }
     

@@ -291,29 +291,6 @@
          
     param[journal_id] = critical-survey
     {
-      #param[journal_issn] = 0011-1570
-          
-      au < doNotProcess ; 1997 ; Critical Survey Volume 9 ; 9 >
-      au < doNotProcess ; 1998 ; Critical Survey Volume 10 ; 10 >
-      au < doNotProcess ; 1999 ; Critical Survey Volume 11 ; 11 >
-      au < doNotProcess ; 2000 ; Critical Survey Volume 12 ; 12 >
-      au < doNotProcess ; 2001 ; Critical Survey Volume 13 ; 13 >
-      au < doNotProcess ; 2002 ; Critical Survey Volume 14 ; 14 >
-      au < doNotProcess ; 2003 ; Critical Survey Volume 15 ; 15 >
-      au < doNotProcess ; 2004 ; Critical Survey Volume 16 ; 16 >
-      au < doNotProcess ; 2005 ; Critical Survey Volume 17 ; 17 >
-      au < doNotProcess ; 2006 ; Critical Survey Volume 18 ; 18 >
-      au < doNotProcess ; 2007 ; Critical Survey Volume 19 ; 19 >
-      au < doNotProcess ; 2008 ; Critical Survey Volume 20 ; 20 >
-      au < doNotProcess ; 2009 ; Critical Survey Volume 21 ; 21 >
-      au < doNotProcess ; 2010 ; Critical Survey Volume 22 ; 22 >
-      au < doNotProcess ; 2011 ; Critical Survey Volume 23 ; 23 >
-      au < doNotProcess ; 2012 ; Critical Survey Volume 24 ; 24 >
-      au < doNotProcess ; 2013 ; Critical Survey Volume 25 ; 25 >
-      au < doNotProcess ; 2014 ; Critical Survey Volume 26 ; 26 >
-      au < doNotProcess ; 2015 ; Critical Survey Volume 27 ; 27 >
-    }
-    {
       #they moved to eissn just before going offline
       #param[journal_issn] = 1752-2293
           
