@@ -139,10 +139,10 @@ echo "Plugin,CLOCKSS,GIT,C5-8,D1-13,C1-4,I1-4,Parent,PV,AUs,Status"
 
 if [[ $d_flag = 'false' ]] ; then
 #include all plugins
-join -t, -e EMPTY $tpath/blatz17.txt $tpath/blatz08.txt | join -t, -e EMPTY - $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 9 -nr 
+join -t, -e EMPTY $tpath/blatz17.txt $tpath/blatz08.txt | join -t, -e EMPTY - $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 10 -nr 
 else
 #include only plugins that don't have a status that starts with "deprecated" or "ready"
-join -t, -e EMPTY $tpath/blatz17.txt $tpath/blatz08.txt | join -t, -e EMPTY - $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz16.txt | sort -t, -k 9 -nr 
+join -t, -e EMPTY $tpath/blatz17.txt $tpath/blatz08.txt | join -t, -e EMPTY - $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz16.txt | sort -t, -k 10 -nr 
 fi
 date
 
