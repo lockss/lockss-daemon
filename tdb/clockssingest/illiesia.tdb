@@ -45,10 +45,10 @@
     {
     param[base_url] = http://www2.pms-lj.si/illiesia/
 
-    au < doNotProcess ; exists ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 ; > #no substance. crawl rules?
-    au < doNotProcess ; exists ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 ; > #no substance. crawl rules?
-    au < doNotProcess ; exists ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 ; > #no substance. crawl rules?
-    au < doNotProcess ; exists ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 ; > #no substance. crawl rules?
+    au < doNotProcess ; exists ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 ; >
     au < finished ; manifest ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 ; >
     au < finished ; finished ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 ; >
