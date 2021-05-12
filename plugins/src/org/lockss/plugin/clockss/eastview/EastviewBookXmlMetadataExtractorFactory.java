@@ -40,18 +40,14 @@ import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.MarcRecordMetadataHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 
 public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(EastviewBookXmlMetadataExtractorFactory.class);
-  private static SourceXmlSchemaHelper EastviewBookXmlHelper = null;
+  private static FileMetadataExtractor EastviewBookXmlHelper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -66,21 +62,27 @@ public class EastviewBookXmlMetadataExtractorFactory extends SourceXmlMetadataEx
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
     // Once you have it, just keep returning the same one. It won't change.
       if (EastviewBookXmlHelper == null) {
-        EastviewBookXmlHelper = new EastviewMarcXmlSchemaHelper();
+        EastviewBookXmlHelper = new MarcRecordMetadataHelper();
       }
-      return EastviewBookXmlHelper;
+      return (SourceXmlSchemaHelper) EastviewBookXmlHelper;
     }
     
     @Override
     protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
-      return true;
+
+      if (!cu.getUrl().contains(".txt")) {
+        log.debug3("Url = " + cu.getUrl());
+        return true;
+      } else {
+        log.debug3("Url txt = " + cu.getUrl());
+      }
+      return false;
     }
 
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
-
 
       if (thisAM.getRaw(EastviewMarcXmlSchemaHelper.MARC_pdf) != null) {
 
