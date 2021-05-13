@@ -3454,6 +3454,7 @@ while (my $line = <>) {
     
   } elsif (($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
            ($plugin eq "UCPressSilverchairPlugin") || 
+           ($plugin eq "CompanyBiologistsSilverchairPlugin") || 
            ($plugin eq "PortlandPressSilverchairPlugin")) {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
@@ -3483,6 +3484,7 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif (($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
+           ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
            ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
