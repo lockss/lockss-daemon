@@ -3,7 +3,7 @@
   publisher <
     name = Company of Biologists
   >
-  #Moving to SC early 2021
+  #Moved to SC early 2021
 
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
   pluginPrefix = org.lockss.plugin.highwire.
@@ -19,15 +19,15 @@
 
 
     au < HighWirePressH20Plugin ; superseded ; 2012 ; Biology Open Volume 1 [superseded] ; 1 ; http://bio.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2012 ; Biology Open Volume 1 ; 1 ; https://bio.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2013 ; Biology Open Volume 2 ; 2 ; https://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2012 ; Biology Open Volume 1 ; 1 ; https://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2013 ; Biology Open Volume 2 ; 2 ; https://bio.biologists.org/ >
     au < HighWirePressH20Plugin ; superseded ; 2014 ; Biology Open Volume 3 [superseded] ; 3 ; http://bio.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2014 ; Biology Open Volume 3 ; 3 ; https://bio.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2015 ; Biology Open Volume 4 ; 4 ; http://bio.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2016 ; Biology Open Volume 5 ; 5 ; http://bio.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2017 ; Biology Open Volume 6 ; 6 ; http://bio.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2018 ; Biology Open Volume 7 ; 7 ; https://bio.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2019 ; Biology Open Volume 8 ; 8 ; https://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2014 ; Biology Open Volume 3 ; 3 ; https://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2015 ; Biology Open Volume 4 ; 4 ; http://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2016 ; Biology Open Volume 5 ; 5 ; http://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2017 ; Biology Open Volume 6 ; 6 ; http://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2018 ; Biology Open Volume 7 ; 7 ; https://bio.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2019 ; Biology Open Volume 8 ; 8 ; https://bio.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2020 ; Biology Open Volume 9 ; 9 ; https://bio.biologists.org/ >
 
   }
@@ -167,25 +167,25 @@
     au < HighWirePressH20Plugin ; down ; 1996 ; Development Volume 122 ; 122 ; http://dev.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 1996 ; Development Volume 123 ; 123 ; http://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 1997 ; Development Volume 124 [superseded] ; 124 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1997 ; Development Volume 124 ; 124 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1997 ; Development Volume 124 ; 124 ; https://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 1998 ; Development Volume 125 [superseded] ; 125 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1998 ; Development Volume 125 ; 125 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1998 ; Development Volume 125 ; 125 ; https://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 1999 ; Development Volume 126 [superseded] ; 126 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1999 ; Development Volume 126 ; 126 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1999 ; Development Volume 126 ; 126 ; https://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 2000 ; Development Volume 127 [superseded] ; 127 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2000 ; Development Volume 127 ; 127 ; http://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2000 ; Development Volume 127 ; 127 ; http://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 2001 ; Development Volume 128 [superseded] ; 128 ; http://dev.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2001 ; Development Volume 128 ; 128 ; http://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 2002 ; Development Volume 129 [superseded] ; 129 ; http://dev.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2002 ; Development Volume 129 ; 129 ; http://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 2003 ; Development Volume 130 [superseded] ; 130 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2003 ; Development Volume 130 ; 130 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2003 ; Development Volume 130 ; 130 ; https://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 2004 ; Development Volume 131 [superseded] ; 131 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2004 ; Development Volume 131 ; 131 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2004 ; Development Volume 131 ; 131 ; https://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 2005 ; Development Volume 132 [superseded] ; 132 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2005 ; Development Volume 132 ; 132 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2005 ; Development Volume 132 ; 132 ; https://dev.biologists.org/ >
     au < HighWireStrVolPlugin ; superseded ; 2006 ; Development Volume 133 [superseded] ; 133 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2006 ; Development Volume 133 ; 133 ; http://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2006 ; Development Volume 133 ; 133 ; http://dev.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2007 ; Development Volume 134 ; 134 ; http://dev.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2008 ; Development Volume 135 ; 135 ; http://dev.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2009 ; Development Volume 136 ; 136 ; http://dev.biologists.org/ >
@@ -193,12 +193,12 @@
     au < HighWirePressH20Plugin ; down ; 2011 ; Development Volume 138 ; 138 ; http://dev.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; Development Volume 139 ; 139 ; http://dev.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2013 ; Development Volume 140 ; 140 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2014 ; Development Volume 141 ; 141 ; https://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2015 ; Development Volume 142 ; 142 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2016 ; Development Volume 143 ; 143 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2017 ; Development Volume 144 ; 144 ; http://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2018 ; Development Volume 145 ; 145 ; https://dev.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2019 ; Development Volume 146 ; 146 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2014 ; Development Volume 141 ; 141 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2015 ; Development Volume 142 ; 142 ; http://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2016 ; Development Volume 143 ; 143 ; http://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2017 ; Development Volume 144 ; 144 ; http://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2018 ; Development Volume 145 ; 145 ; https://dev.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2019 ; Development Volume 146 ; 146 ; https://dev.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2020 ; Development Volume 147 ; 147 ; https://dev.biologists.org/ >
 
   }
@@ -219,14 +219,14 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 ; http://dmm.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 ; http://dmm.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 ; http://dmm.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 ; https://dmm.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 ; https://dmm.biologists.org/ >
     au < HighWirePressH20Plugin ; superseded ; 2014 ; Disease Models & Mechanisms Volume 7 [superseded] ; 7 ; http://dmm.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; https://dmm.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 ; http://dmm.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; http://dmm.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 ; http://dmm.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2018 ; Disease Models & Mechanisms Volume 11 ; 11 ; https://dmm.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 ; https://dmm.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; https://dmm.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 ; http://dmm.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2016 ; Disease Models & Mechanisms Volume 9 ; 9 ; http://dmm.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 ; http://dmm.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2018 ; Disease Models & Mechanisms Volume 11 ; 11 ; https://dmm.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 ; https://dmm.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 ; https://dmm.biologists.org/ >
 
   }
@@ -244,32 +244,32 @@
     #param[base_url] = http://jcs.biologists.org/
 
 
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1940 ; The Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1941 ; The Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1942 ; The Quarterly Journal of Microscopical Science Volume s2-83 ; s2-83 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1943 ; The Quarterly Journal of Microscopical Science Volume s2-84 ; s2-84 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1944 ; The Quarterly Journal of Microscopical Science Volume s2-85 ; s2-85 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1945 ; The Quarterly Journal of Microscopical Science Volume s2-86 ; s2-86 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1946 ; The Quarterly Journal of Microscopical Science Volume s2-87 ; s2-87 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1947 ; The Quarterly Journal of Microscopical Science Volume s3-88 ; s3-88 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1948 ; The Quarterly Journal of Microscopical Science Volume s3-89 ; s3-89 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1949 ; The Quarterly Journal of Microscopical Science Volume s3-90 ; s3-90 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1950 ; The Quarterly Journal of Microscopical Science Volume s3-91 ; s3-91 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1951 ; The Quarterly Journal of Microscopical Science Volume s3-92 ; s3-92 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1952 ; The Quarterly Journal of Microscopical Science Volume s3-93 ; s3-93 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1953 ; The Quarterly Journal of Microscopical Science Volume s3-94 ; s3-94 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1954 ; The Quarterly Journal of Microscopical Science Volume s3-95 ; s3-95 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1955 ; The Quarterly Journal of Microscopical Science Volume s3-96 ; s3-96 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1956 ; The Quarterly Journal of Microscopical Science Volume s3-97 ; s3-97 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1957 ; The Quarterly Journal of Microscopical Science Volume s3-98 ; s3-98 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1958 ; The Quarterly Journal of Microscopical Science Volume s3-99 ; s3-99 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1959 ; The Quarterly Journal of Microscopical Science Volume s3-100 ; s3-100 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1960 ; The Quarterly Journal of Microscopical Science Volume s3-101 ; s3-101 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1961 ; The Quarterly Journal of Microscopical Science Volume s3-102 ; s3-102 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1962 ; The Quarterly Journal of Microscopical Science Volume s3-103 ; s3-103 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1963 ; The Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1964 ; The Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1965 ; The Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1940 ; The Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1941 ; The Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1942 ; The Quarterly Journal of Microscopical Science Volume s2-83 ; s2-83 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1943 ; The Quarterly Journal of Microscopical Science Volume s2-84 ; s2-84 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1944 ; The Quarterly Journal of Microscopical Science Volume s2-85 ; s2-85 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1945 ; The Quarterly Journal of Microscopical Science Volume s2-86 ; s2-86 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1946 ; The Quarterly Journal of Microscopical Science Volume s2-87 ; s2-87 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1947 ; The Quarterly Journal of Microscopical Science Volume s3-88 ; s3-88 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1948 ; The Quarterly Journal of Microscopical Science Volume s3-89 ; s3-89 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1949 ; The Quarterly Journal of Microscopical Science Volume s3-90 ; s3-90 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1950 ; The Quarterly Journal of Microscopical Science Volume s3-91 ; s3-91 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1951 ; The Quarterly Journal of Microscopical Science Volume s3-92 ; s3-92 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1952 ; The Quarterly Journal of Microscopical Science Volume s3-93 ; s3-93 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1953 ; The Quarterly Journal of Microscopical Science Volume s3-94 ; s3-94 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1954 ; The Quarterly Journal of Microscopical Science Volume s3-95 ; s3-95 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1955 ; The Quarterly Journal of Microscopical Science Volume s3-96 ; s3-96 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1956 ; The Quarterly Journal of Microscopical Science Volume s3-97 ; s3-97 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1957 ; The Quarterly Journal of Microscopical Science Volume s3-98 ; s3-98 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1958 ; The Quarterly Journal of Microscopical Science Volume s3-99 ; s3-99 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1959 ; The Quarterly Journal of Microscopical Science Volume s3-100 ; s3-100 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1960 ; The Quarterly Journal of Microscopical Science Volume s3-101 ; s3-101 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1961 ; The Quarterly Journal of Microscopical Science Volume s3-102 ; s3-102 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1962 ; The Quarterly Journal of Microscopical Science Volume s3-103 ; s3-103 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1963 ; The Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1964 ; The Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1965 ; The Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 ; https://jcs.biologists.org/ >
     
     au < HighWirePressPlugin ; down ; 1966 ; Journal of Cell Science Volume 1 ; 1 ; http://jcs.biologists.org/ >
     au < HighWirePressPlugin ; down ; 1967 ; Journal of Cell Science Volume 2 ; 2 ; http://jcs.biologists.org/ >
@@ -395,32 +395,32 @@
     au < HighWirePressPlugin ; superseded ; 2008 ; Journal of Cell Science Volume 121 [superseded] ; 121 ; http://jcs.biologists.org/ >
     au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Cell Science Volume 122 [superseded] ; 122 ; http://jcs.biologists.org/ >
     
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1995 ; Journal of Cell Science Volume 108 ; 108 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1996 ; Journal of Cell Science Volume 109 ; 109 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1997 ; Journal of Cell Science Volume 110 ; 110 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1998 ; Journal of Cell Science Volume 111 ; 111 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1999 ; Journal of Cell Science Volume 112 ; 112 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2000 ; Journal of Cell Science Volume 113 ; 113 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2001 ; Journal of Cell Science Volume 114 ; 114 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2002 ; Journal of Cell Science Volume 115 ; 115 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2003 ; Journal of Cell Science Volume 116 ; 116 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2004 ; Journal of Cell Science Volume 117 ; 117 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2005 ; Journal of Cell Science Volume 118 ; 118 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2006 ; Journal of Cell Science Volume 119 ; 119 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2007 ; Journal of Cell Science Volume 120 ; 120 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2008 ; Journal of Cell Science Volume 121 ; 121 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2009 ; Journal of Cell Science Volume 122 ; 122 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1995 ; Journal of Cell Science Volume 108 ; 108 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1996 ; Journal of Cell Science Volume 109 ; 109 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1997 ; Journal of Cell Science Volume 110 ; 110 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1998 ; Journal of Cell Science Volume 111 ; 111 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1999 ; Journal of Cell Science Volume 112 ; 112 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2000 ; Journal of Cell Science Volume 113 ; 113 ; http://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2001 ; Journal of Cell Science Volume 114 ; 114 ; http://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2002 ; Journal of Cell Science Volume 115 ; 115 ; http://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2003 ; Journal of Cell Science Volume 116 ; 116 ; http://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2004 ; Journal of Cell Science Volume 117 ; 117 ; http://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2005 ; Journal of Cell Science Volume 118 ; 118 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2006 ; Journal of Cell Science Volume 119 ; 119 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2007 ; Journal of Cell Science Volume 120 ; 120 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2008 ; Journal of Cell Science Volume 121 ; 121 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2009 ; Journal of Cell Science Volume 122 ; 122 ; https://jcs.biologists.org/ >
     
     au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Cell Science Volume 123 ; 123 ; http://jcs.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Cell Science Volume 124 ; 124 ; http://jcs.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Cell Science Volume 125 ; 125 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2013 ; Journal of Cell Science Volume 126 ; 126 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2014 ; Journal of cell Science Volume 127 ; 127 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2015 ; Journal of cell Science Volume 128 ; 128 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2016 ; Journal of cell Science Volume 129 ; 129 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2017 ; Journal of cell Science Volume 130 ; 130 ; http://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2018 ; Journal of cell Science Volume 131 ; 131 ; https://jcs.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2019 ; Journal of cell Science Volume 132 ; 132 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2013 ; Journal of Cell Science Volume 126 ; 126 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2014 ; Journal of cell Science Volume 127 ; 127 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2015 ; Journal of cell Science Volume 128 ; 128 ; http://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2016 ; Journal of cell Science Volume 129 ; 129 ; http://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2017 ; Journal of cell Science Volume 130 ; 130 ; http://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2018 ; Journal of cell Science Volume 131 ; 131 ; https://jcs.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2019 ; Journal of cell Science Volume 132 ; 132 ; https://jcs.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2020 ; Journal of cell Science Volume 133 ; 133 ; https://jcs.biologists.org/ >
 
   }
@@ -650,32 +650,32 @@
     au < HighWirePressPlugin ; superseded ; 2008 ; Journal of Experimental Biology Volume 211 [superseded] ; 211 ; http://jeb.biologists.org/ >
     au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Experimental Biology Volume 212 [superseded] ; 212 ; http://jeb.biologists.org/ >
     
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 ; https://jeb.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 ; https://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 ; https://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 ; https://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 ; http://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 ; http://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 ; http://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 ; http://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 ; https://jeb.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 ; https://jeb.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; manifest ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 ; https://jeb.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 ; http://jeb.biologists.org/ >
     
     au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 ; http://jeb.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 ; http://jeb.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 ; https://jeb.biologists.org/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Journal of Experimental Biology Volume 217 ; 217 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2015 ; Journal of Experimental Biology Volume 218 ; 218 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2016 ; Journal of Experimental Biology Volume 219 ; 219 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2017 ; Journal of Experimental Biology Volume 220 ; 220 ; http://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2018 ; Journal of Experimental Biology Volume 221 ; 221 ; https://jeb.biologists.org/ >
-    au < biologists.BiologistsDrupalPlugin ; released ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2015 ; Journal of Experimental Biology Volume 218 ; 218 ; http://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2016 ; Journal of Experimental Biology Volume 219 ; 219 ; http://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2017 ; Journal of Experimental Biology Volume 220 ; 220 ; http://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2018 ; Journal of Experimental Biology Volume 221 ; 221 ; https://jeb.biologists.org/ >
+    au < biologists.BiologistsDrupalPlugin ; down ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 ; https://jeb.biologists.org/ >
     au < biologists.BiologistsDrupalPlugin ; doNotProcess ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 ; https://jeb.biologists.org/ >
 
   }
