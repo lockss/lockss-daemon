@@ -102,10 +102,8 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
             if (subfields != null) {
               for (Subfield subfield : subfields) {
                 char subtag = subfield.getCode();
-                log.debug(String.format("Raw data: %s_%c", tag, subtag),
-                        subfield.getData() );
-                am.putRaw(String.format("%s_%c", tag, subtag),
-                        subfield.getData());
+                log.debug(String.format("Raw data: %s_%c: %s", tag, subtag,subfield.getData()));
+                am.putRaw(String.format("%s_%c", tag, subtag), subfield.getData());
               }
             } else {
               log.debug("raw subfield is null");
