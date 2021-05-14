@@ -102,11 +102,17 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
             if (subfields != null) {
               for (Subfield subfield : subfields) {
                 char subtag = subfield.getCode();
+                log.debug(String.format("Raw data: %s_%c", tag, subtag),
+                        subfield.getData() );
                 am.putRaw(String.format("%s_%c", tag, subtag),
                         subfield.getData());
               }
+            } else {
+              log.debug("raw subfield is null");
             }
           }
+        } else {
+          log.debug("raw field is null");
         }
 
         String MARC_isbn = getMARCData(record, "020", 'a');
@@ -128,32 +134,40 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
         //Set DOI
         if (MARC_doi != null && isDoi(MARC_doi)) {
+          log.debug("MARC_doi:" + MARC_doi );
           am.put(MetadataField.FIELD_DOI, MARC_doi);
         } else if (MARC_doi_alt != null )  {
           if (isDoi(MARC_doi_alt)) {
+            log.debug("MARC_doi_alt:" + MARC_doi_alt);
             am.put(MetadataField.FIELD_DOI, MARC_doi_alt);
           }
         }
 
         // Set ISBN
         if (MARC_isbn != null) {
+          log.debug("MARC_isbn:" + MARC_isbn);
           am.put(MetadataField.FIELD_ISBN, MARC_isbn);
         } else if (MARC_isbn_alt != null) {
+          log.debug("MARC_isbn_alt:" + MARC_isbn_alt);
           am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
         }
 
         // Set publiation date
         if (MARC_pub_date != null) {
+          log.debug("MARC_pub_date:" + MARC_pub_date);
           am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date));
         } else if (MARC_pub_date_alt != null) {
+          log.debug("MARC_pub_date_alt:" + MARC_pub_date_alt);
           am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date_alt));
         }
 
         // Set author
         if (MARC_author == null) {
+          log.debug("MARC_author_alt:" + MARC_author_alt);
           am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt.replace(".", ""));
         } else {
           if (MARC_author != null) {
+            log.debug("MARC_author:" + MARC_author);
             am.put(MetadataField.FIELD_AUTHOR, MARC_author.replace(".", ""));
           }
         }
@@ -215,11 +229,13 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
             // Set publication title
             if (MARC_title != null) {
+              log.debug("MARC_title:" + MARC_title);
               am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
             }
             
             // Set ISSN
             if (MARC_issn != null) {
+              log.debug("MARC_issn:" + MARC_issn);
               am.put(MetadataField.FIELD_ISSN, MARC_issn);
             }
           }
