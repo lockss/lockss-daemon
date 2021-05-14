@@ -175,7 +175,7 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
         String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
         String pdfFilePath = cuBase + zippedFolderName + ".zip!/" + fileNum + ".pdf";
-        log.debug3("pdfFilePath" + pdfFilePath );
+        log.debug("pdfFilePath" + pdfFilePath );
         am.put(MetadataField.FIELD_ACCESS_URL, pdfFilePath);
 
         /*
@@ -204,7 +204,7 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
                       replace("=", "").
                       replace("\"", "").
                       replace("...", "");
-              log.debug3(String.format("original artitle title = %s, cleaned title = %s",MARC_title, cleanedArticleTitle));
+              log.debug(String.format("original artitle title = %s, cleaned title = %s",MARC_title, cleanedArticleTitle));
               am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
             }
           }
@@ -277,7 +277,7 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
         }
       }
     } catch (NullPointerException e) {
-      log.debug3("Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
+      log.debug("Mrc Record DataFieldCode: " + dataFieldCode + " SubFieldCode: " + subFieldCode + " has error");
     }
     return null;
   }
@@ -294,10 +294,10 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
     if (field != null) {
       String data = field.getData();
-      log.debug3("Mrc Record getMARCControlFieldData: " + data);
+      log.debug("Mrc Record getMARCControlFieldData: " + data);
       return data;
     } else {
-        log.debug3("Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
+        log.debug("Mrc Record getMARCControlFieldData: " + dataFieldCode + " return null");
         return null;
     }
   }
