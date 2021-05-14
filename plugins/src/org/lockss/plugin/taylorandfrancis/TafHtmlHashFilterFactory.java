@@ -78,11 +78,9 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     Node siblingDiv = findSiblingDivByAttr(node, attribute, attrValue);
     if (siblingDiv != null) {
       Node siblingDivChild = findAnyChildDiv(siblingDiv.getFirstChild());
-      if (siblingDivChild != null) {
-        // if a child of the figureTablesPanel exists, then that tab is active
-        // discard the abstract
-        return true;
-      }
+      // if a child of the figureTablesPanel exists, then that tab is active
+      // discard the abstract
+      return siblingDivChild != null;
     }
     return false;
   }
@@ -101,7 +99,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
 
   public static NodeFilter anyTagAttributeRegexFilter(String attr, String attrValue) {
     return new HtmlNodeFilters.HasAttributeRegexFilter(attr, attrValue, true);
-  };
+  }
+
   public Node findSiblingDivByAttr(Node sibling, String attribute, String attrValue) {
     Node targetSibling = null;
     String thisID;
@@ -466,7 +465,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                 // check if the other version of the title has been saved already
                 if (!bD.hlFld_TitleSPAN) {
                   bD.hlFld_TitleDIV = true;
-                return true;
+                  return true;
                 }
               }
             }
