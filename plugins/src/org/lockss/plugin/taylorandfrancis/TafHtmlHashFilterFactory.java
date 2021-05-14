@@ -55,6 +55,25 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
 
   private static final Logger log = Logger.getLogger(TafHtmlHashFilterFactory.class);
 
+  public Node findGreatGrandParentIfAttr(Node node,
+                                         String ancestorAttr,
+                                         String ancestorVal) {
+    Node greatGrandParent = null;
+    Node ancestor = node.getParent();
+    int count = 0;
+    while (ancestor != null && count<2) {
+      ancestor = ancestor.getParent();
+      count+=1;
+    }
+    if (ancestor != null) {
+      String attr = ((Tag) ancestor).getAttribute(ancestorAttr);
+      if (attr != null && !attr.isEmpty() && attr.contains(ancestorVal)) {
+        greatGrandParent = ancestor;
+      }
+    }
+    return greatGrandParent;
+  }
+
   public boolean isSiblingDivWAttrEmpty(Node node, String attribute, String attrValue ) {
     Node siblingDiv = findSiblingDivByAttr(node, attribute, attrValue);
     if (siblingDiv != null) {
@@ -526,57 +545,49 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
               //);
             }
             if (isPotentialAbstractText) {
-              Node parent = node.getParent();
-              if (parent instanceof Div) {
-                Node grandParent = parent.getParent();
-                if (grandParent instanceof Div) {
-                  Node greatGrandParent = grandParent.getParent();
-                  if (greatGrandParent instanceof Div) {
-                    String greatGrandParentClass = ((Div) greatGrandParent).getAttribute("class");
-                    if (greatGrandParentClass != null && !greatGrandParentClass.isEmpty() && greatGrandParentClass.contains("abstract module")) {
-                      returnAble = true; // we found an abstract, set return to true, unless further checks are true
-                      // If we find a <div id="preview" ... we can assume this is an '/abs/' containing url and can return
-                      // without further checks.
-                      Node previewDiv = findSiblingDivByAttr(greatGrandParent, "id", "preview");
-                      if (previewDiv != null) {
-                        bD.isLikelyAbs = returnAble;
-                        return returnAble;
-                      }
-                      // find the sibling that id div#tabModule, note the structure shown at top of this filter
-                      Node tabModule = findSiblingDivByAttr(greatGrandParent, "id", "tabModule");
-                      if (tabModule != null) { // there is '\n' any number of times, then div.gutter
-                        Node tabModuleChild = findSiblingDivByAttr(tabModule.getFirstChild(), "class", "gutter");
-                        if (tabModuleChild != null) {// ibid... then div.tabs.clear.tabGutter
-                          Node tabModuleGrandChild = findSiblingDivByAttr(tabModuleChild.getFirstChild(), "class", "tab"); // tabs | tabGutter
-                          if (tabModuleGrandChild != null) {// '\n' then ul.tabsNav then '\n' then div#informationPanel '\n' then div#fullTextPanel
-                            Node fullTextPanel = findSiblingDivByAttr(tabModuleGrandChild.getFirstChild(), "id", "fulltextPanel");
-                            if (fullTextPanel != null) { // will not be present if not /full/ url, typically
-                              Node fullTextPanelChild = findSiblingDivByAttr(fullTextPanel.getFirstChild(), "class", "gutter");
-                              if (fullTextPanelChild != null) {
-                                Node abstractDiv = findSiblingDivByAttr(fullTextPanelChild.getFirstChild(), "id", "abstract");
-                                if (abstractDiv != null) {
-                                  // we found another abstract, do not return this one
-                                  returnAble = false;
-                                }
-                              }
-                            }
-                            // another check is to make sure that the figuresTablesPanel div is empty or not
-                            // if it is not empty, we should discard the abstract
-                            if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "figuresTablesPanel")) {
-                              returnAble = false;
-                            }
-                            // ibid, but for referencesPanel
-                            if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "referencesPanel")) {
-                              returnAble = false;
-                            }
-                            // ibid for supplementaryPanel
-                            if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "supplementaryPanel")) {
-                              returnAble = false;
-                            }
-                            bD.isLikelyAbs = returnAble;
+              Node ancestor = findGreatGrandParentIfAttr(node, "class", "abstract module");
+              if (ancestor != null) {
+                Node greatGrandParent = ancestor;
+                returnAble = true; // we found an abstract, set return to true, unless further checks are true
+                // If we find a <div id="preview" ... we can assume this is an '/abs/' containing url and can return
+                // without further checks.
+                Node previewDiv = findSiblingDivByAttr(greatGrandParent, "id", "preview");
+                if (previewDiv != null) {
+                  bD.isLikelyAbs = returnAble;
+                  return returnAble;
+                }
+                // find the sibling that id div#tabModule, note the structure shown at top of this filter
+                  Node tabModule = findSiblingDivByAttr(greatGrandParent, "id", "tabModule");
+                if (tabModule != null) { // there is '\n' any number of times, then div.gutter
+                  Node tabModuleChild = findSiblingDivByAttr(tabModule.getFirstChild(), "class", "gutter");
+                  if (tabModuleChild != null) {// ibid... then div.tabs.clear.tabGutter
+                    Node tabModuleGrandChild = findSiblingDivByAttr(tabModuleChild.getFirstChild(), "class", "tab"); // tabs | tabGutter
+                    if (tabModuleGrandChild != null) {// '\n' then ul.tabsNav then '\n' then div#informationPanel '\n' then div#fullTextPanel
+                      Node fullTextPanel = findSiblingDivByAttr(tabModuleGrandChild.getFirstChild(), "id", "fulltextPanel");
+                      if (fullTextPanel != null) { // will not be present if not /full/ url, typically
+                        Node fullTextPanelChild = findSiblingDivByAttr(fullTextPanel.getFirstChild(), "class", "gutter");
+                        if (fullTextPanelChild != null) {
+                          Node abstractDiv = findSiblingDivByAttr(fullTextPanelChild.getFirstChild(), "id", "abstract");
+                          if (abstractDiv != null) {
+                            // we found another abstract, do not return this one
+                            returnAble = false;
                           }
                         }
                       }
+                      // another check is to make sure that the figuresTablesPanel div is empty or not
+                      // if it is not empty, we should discard the abstract
+                      if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "figuresTablesPanel")) {
+                        returnAble = false;
+                      }
+                      // ibid, but for referencesPanel
+                      if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "referencesPanel")) {
+                        returnAble = false;
+                      }
+                      // ibid for supplementaryPanel
+                      if (isSiblingDivWAttrEmpty(tabModuleGrandChild.getFirstChild(),  "id",  "supplementaryPanel")) {
+                        returnAble = false;
+                      }
+                      bD.isLikelyAbs = returnAble;
                     }
                   }
                 }
