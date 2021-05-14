@@ -934,6 +934,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                 Div div = ((Div) node);
                 String divID = div.getAttribute("id");
                 if(divID != null && !divID.isEmpty() && divID.contains("fulltextPanel")) {
+                  log.debug3("removed fullTextPanel because isLikelyAbs is true");
                   return true;
                 }
               }
