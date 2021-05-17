@@ -160,14 +160,12 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
         }
 
         // Set author
-        if (MARC_author == null) {
+        if (MARC_author_alt != null) {
           log.debug("MARC_author_alt:" + MARC_author_alt);
           am.put(MetadataField.FIELD_AUTHOR, MARC_author_alt.replace(".", ""));
-        } else {
-          if (MARC_author != null) {
+        } else if (MARC_author != null) {
             log.debug("MARC_author:" + MARC_author);
             am.put(MetadataField.FIELD_AUTHOR, MARC_author.replace(".", ""));
-          }
         }
 
         // Set publisher name
