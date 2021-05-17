@@ -497,7 +497,7 @@
     au < doNotProcess ; 2017 ; 2017 ; Biochemical Journal Volume 474 ; 474 >
     au < doNotProcess ; 2018 ; 2018 ; Biochemical Journal Volume 475 ; 475 >
     au < manifest ; 2019 ; 2019 ; Biochemical Journal Volume 476 ; 476 >
-    au < manifest ; 2020 ; 2020 ; Biochemical Journal Volume 477 ; 477 >
+    au < ready ; 2020 ; 2020 ; Biochemical Journal Volume 477 ; 477 >
     au < manifest ; 2021 ; 2021 ; Biochemical Journal Volume 478 ; 478 >
 
   }
@@ -561,7 +561,7 @@
     au < doNotProcess ; 2017 ; 2017 ; Biochemical Society Transactions Volume 45 ; 45 >
     au < released ; 2018 ; 2018 ; Biochemical Society Transactions Volume 46 ; 46 >
     au < manifest ; 2019 ; 2019 ; Biochemical Society Transactions Volume 47 ; 47 >
-    au < manifest ; 2020 ; 2020 ; Biochemical Society Transactions Volume 48 ; 48 >
+    au < ready ; 2020 ; 2020 ; Biochemical Society Transactions Volume 48 ; 48 >
     au < manifest ; 2021 ; 2021 ; Biochemical Society Transactions Volume 49 ; 49 >
 
   }
@@ -619,7 +619,7 @@
     au < doNotProcess ; 2016 ; 2016 ; Bioscience Reports Volume 36 ; 36 >
     au < doNotProcess ; 2017 ; 2017 ; Bioscience Reports Volume 37 ; 37 >
     au < released ; 2018 ; 2018 ; Bioscience Reports Volume 38 ; 38 >
-    au < manifest ; 2019 ; 2019 ; Bioscience Reports Volume 39 ; 39 >
+    au < ready ; 2019 ; 2019 ; Bioscience Reports Volume 39 ; 39 >
     au < released ; 2020 ; 2020 ; Bioscience Reports Volume 40 ; 40 >
     au < manifest ; 2021 ; 2021 ; Bioscience Reports Volume 41 ; 41 >
 
@@ -764,7 +764,7 @@
     #param[base_url] = http://www.emergtoplifesci.org/
 
     au < doNotProcess ; 2017 ; 2017 ; Emerging Topics in Life Sciences Volume 1 ; 1 >
-    au < manifest ; 2018 ; 2018 ; Emerging Topics in Life Sciences Volume 2 ; 2 >
+    au < ready ; 2018 ; 2018 ; Emerging Topics in Life Sciences Volume 2 ; 2 >
     au < released ; 2019 ; 2019 ; Emerging Topics in Life Sciences Volume 3 ; 3 >
     au < manifest ; 2020 ; 2020 ; Emerging Topics in Life Sciences Volume 4 ; 4 >
     au < exists ; 2021 ; 2021 ; Emerging Topics in Life Sciences Volume 5 ; 5 >

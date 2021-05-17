@@ -23,7 +23,7 @@
       au < released ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 >
       au < released ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 >
       au < released ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 >
-      au < manifest ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 >
+      au < ready ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 >
       au < expected ; 2021 ; 2021 ; American Literary Scholarship 2021 ; 2019 >
 
   }
@@ -154,7 +154,7 @@
       param[journal_id] = camera-obscura
 
       au < released ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 >
-      au < manifest ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 >
+      au < ready ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 >
       au < released ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 >
       au < released ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 >
       au < expected ; 2021 ; 2021 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 36 ; 36 >
@@ -224,7 +224,7 @@
       au < released ; 2017 ; 2017 ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 >
       au < released ; 2018 ; 2018 ; Comparative Studies of South Asia, Africa and the Middle East Volume 38 ; 38 >
       au < released ; 2019 ; 2019 ; Comparative Studies of South Asia, Africa and the Middle East Volume 39 ; 39 >
-      au < manifest ; 2020 ; 2020 ; Comparative Studies of South Asia, Africa and the Middle East Volume 40 ; 40 >
+      au < ready ; 2020 ; 2020 ; Comparative Studies of South Asia, Africa and the Middle East Volume 40 ; 40 >
       au < manifest ; 2021 ; 2021 ; Comparative Studies of South Asia, Africa and the Middle East Volume 41 ; 41 >
 
   }
@@ -260,7 +260,7 @@
       au < released ; 2017 ; 2017 ; Cultural Politics Volume 13 ; 13 >
       au < released ; 2018 ; 2018 ; Cultural Politics Volume 14 ; 14 >
       au < released ; 2019 ; 2019 ; Cultural Politics Volume 15 ; 15 >
-      au < manifest ; 2020 ; 2020 ; Cultural Politics Volume 16 ; 16 >
+      au < ready ; 2020 ; 2020 ; Cultural Politics Volume 16 ; 16 >
       au < manifest ; 2021 ; 2021 ; Cultural Politics Volume 17 ; 17 >
 
   }
@@ -278,7 +278,7 @@
 
       au < released ; 2017 ; 2017 ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 >
       au < released ; 2018 ; 2018 ; differences: A Journal of Feminist Cultural Studies Volume 29 ; 29 >
-      au < manifest ; 2019 ; 2019 ; differences: A Journal of Feminist Cultural Studies Volume 30 ; 30 >
+      au < ready ; 2019 ; 2019 ; differences: A Journal of Feminist Cultural Studies Volume 30 ; 30 >
       au < released ; 2020 ; 2020 ; differences: A Journal of Feminist Cultural Studies Volume 31 ; 31 >
       au < expected ; 2021 ; 2021 ; differences: A Journal of Feminist Cultural Studies Volume 32 ; 32 >
 
@@ -341,7 +341,7 @@
       au < released ; 2004 ; 2004 ; English Language Notes Volume 41-42 ; 41-42 >
       au < manifest ; 2005 ; 2005 ; English Language Notes Volume 42-43 ; 42-43 >
       au < released ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 >
-      au < manifest ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 >
+      au < ready ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 >
       au < released ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 >
       au < released ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 >
       au < released ; 2010 ; 2010 ; English Language Notes Volume 48 ; 48 >
@@ -370,7 +370,7 @@
       param[journal_id] = environmental-humanities
 
       au < released ; 2017 ; 2017 ; Environmental Humanities Volume 9 ; 9 >
-      au < manifest ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 >
+      au < ready ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 >
       au < released ; 2019 ; 2019 ; Environmental Humanities Volume 11 ; 11 >
       au < released ; 2020 ; 2020 ; Environmental Humanities Volume 12 ; 12 >
       au < expected ; 2021 ; 2021 ; Environmental Humanities Volume 13 ; 13 >
@@ -425,7 +425,7 @@
       param[journal_id] = genre
 
       au < released ; 2017 ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 >
-      au < manifest ; 2018 ; 2018 ; Genre: Forms of Discourse and Culture Volume 51 ; 51 >
+      au < ready ; 2018 ; 2018 ; Genre: Forms of Discourse and Culture Volume 51 ; 51 >
       au < released ; 2019 ; 2019 ; Genre: Forms of Discourse and Culture Volume 52 ; 52 >
       au < released ; 2020 ; 2020 ; Genre: Forms of Discourse and Culture Volume 53 ; 53 >
       au < expected ; 2021 ; 2021 ; Genre: Forms of Discourse and Culture Volume 54 ; 54 >
@@ -445,7 +445,7 @@
       au < released ; 2017 ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 >
       au < released ; 2018 ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 >
       au < manifest ; 2019 ; 2019 ; GLQ: A Journal of Lesbian and Gay Studies Volume 25 ; 25 >
-      au < manifest ; 2020 ; 2020 ; GLQ: A Journal of Lesbian and Gay Studies Volume 26 ; 26 >
+      au < ready ; 2020 ; 2020 ; GLQ: A Journal of Lesbian and Gay Studies Volume 26 ; 26 >
       au < manifest ; 2021 ; 2021 ; GLQ: A Journal of Lesbian and Gay Studies Volume 27 ; 27 >
 
     }
@@ -461,7 +461,7 @@
       param[journal_id] = hahr
 
       au < released ; 2017 ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 >
-      au < manifest ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 >
+      au < ready ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 >
       au < released ; 2019 ; 2019 ; Hispanic American Historical Review Volume 99 ; 99 >
       au < released ; 2020 ; 2020 ; Hispanic American Historical Review Volume 100 ; 100 >
       au < manifest ; 2021 ; 2021 ; Hispanic American Historical Review Volume 101 ; 101 >
@@ -481,7 +481,7 @@
       au < released ; 2017 ; 2017 ; History of Political Economy Volume 49 ; 49 >
       au < released ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 >
       au < manifest ; 2019 ; 2019 ; History of Political Economy Volume 51 ; 51 >
-      au < manifest ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 >
+      au < ready ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 >
       au < manifest ; 2021 ; 2021 ; History of Political Economy Volume 53 ; 53 >
 
     }
@@ -539,7 +539,7 @@
       au < released ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 >
       au < released ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 >
       au < released ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 >
-      au < manifest ; 2020 ; 2020 ; Journal of Health Politics, Policy and Law Volume 45 ; 45 >
+      au < ready ; 2020 ; 2020 ; Journal of Health Politics, Policy and Law Volume 45 ; 45 >
       au < manifest ; 2021 ; 2021 ; Journal of Health Politics, Policy and Law Volume 46 ; 46 >
 
     }
@@ -559,7 +559,7 @@
 
       au < released ; 2018 ; 2018 ; Journal of Korean Studies Volume 23 ; 23 >
       au < released ; 2019 ; 2019 ; Journal of Korean Studies Volume 24 ; 24 >
-      au < manifest ; 2020 ; 2020 ; Journal of Korean Studies Volume 25 ; 25 >
+      au < ready ; 2020 ; 2020 ; Journal of Korean Studies Volume 25 ; 25 >
       au < manifest ; 2021 ; 2021 ; Journal of Korean Studies Volume 26 ; 26 >
 
     }
@@ -577,7 +577,7 @@
       au < released ; 2017 ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 >
       au < released ; 2018 ; 2018 ; Journal of Medieval and Early Modern Studies Volume 48 ; 48 >
       au < released ; 2019 ; 2019 ; Journal of Medieval and Early Modern Studies Volume 49 ; 49 >
-      au < manifest ; 2020 ; 2020 ; Journal of Medieval and Early Modern Studies Volume 50 ; 50 >
+      au < ready ; 2020 ; 2020 ; Journal of Medieval and Early Modern Studies Volume 50 ; 50 >
       au < manifest ; 2021 ; 2021 ; Journal of Medieval and Early Modern Studies Volume 51 ; 51 >
 
    }
@@ -604,10 +604,10 @@
       au < manifest ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 >
       au < released ; 2015 ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 >
       au < released ; 2016 ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 >
-      au < manifest ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 >
+      au < ready ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 >
       au < released ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 >
       au < released ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 >
-      au < manifest ; 2020 ; 2020 ; Journal of Middle East Women's Studies Volume 16 ; 16 >
+      au < ready ; 2020 ; 2020 ; Journal of Middle East Women's Studies Volume 16 ; 16 >
       au < manifest ; 2021 ; 2021 ; Journal of Middle East Women's Studies Volume 17 ; 17 >
 
    }
@@ -718,9 +718,9 @@
 
       param[journal_id] = the-minnesota-review
 
-      au < manifest ; 2017 ; 2017 ; The Minnesota Review Volume 2017 ; 2017 >
+      au < ready ; 2017 ; 2017 ; The Minnesota Review Volume 2017 ; 2017 >
       au < released ; 2018 ; 2018 ; The Minnesota Review Volume 2018 ; 2018 >
-      au < manifest ; 2019 ; 2019 ; The Minnesota Review Volume 2019 ; 2019 >
+      au < ready ; 2019 ; 2019 ; The Minnesota Review Volume 2019 ; 2019 >
       au < released ; 2020 ; 2020 ; The Minnesota Review Volume 2020 ; 2020 >
       au < expected ; 2021 ; 2021 ; The Minnesota Review Volume 2021 ; 2021 >
 
@@ -790,7 +790,7 @@
 
       param[journal_id] = novel
 
-      au < manifest ; 2017 ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 >
+      au < ready ; 2017 ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 >
       au < released ; 2018 ; 2018 ; Novel: A Forum on Fiction Volume 51 ; 51 >
       au < released ; 2019 ; 2019 ; Novel: A Forum on Fiction Volume 52 ; 52 >
       au < released ; 2020 ; 2020 ; Novel: A Forum on Fiction Volume 53 ; 53 >
@@ -863,7 +863,7 @@
       au < released ; 2017 ; 2017 ; positions: asia critique Volume 25 ; 25 >
       au < released ; 2018 ; 2018 ; positions: asia critique Volume 26 ; 26 >
       au < released ; 2019 ; 2019 ; positions: asia critique Volume 27 ; 27 >
-      au < manifest ; 2020 ; 2020 ; positions: asia critique Volume 28 ; 28 >
+      au < ready ; 2020 ; 2020 ; positions: asia critique Volume 28 ; 28 >
       au < manifest ; 2021 ; 2021 ; positions: asia critique Volume 29 ; 29 >
 
   }
@@ -909,7 +909,7 @@
 
       param[journal_id] = public-culture
 
-      au < manifest ; 2017 ; 2017 ; Public Culture Volume 29 ; 29 >
+      au < ready ; 2017 ; 2017 ; Public Culture Volume 29 ; 29 >
       au < released ; 2018 ; 2018 ; Public Culture Volume 30 ; 30 >
       au < released ; 2019 ; 2019 ; Public Culture Volume 31 ; 31 >
       au < released ; 2020 ; 2020 ; Public Culture Volume 32 ; 32 >
@@ -1036,7 +1036,7 @@
       au < released ; 2017 ; 2017 ; Social Text Volume 35 ; 35 >
       au < released ; 2018 ; 2018 ; Social Text Volume 36 ; 36 >
       au < released ; 2019 ; 2019 ; Social Text Volume 37 ; 37 >
-      au < manifest ; 2020 ; 2020 ; Social Text Volume 38 ; 38 >
+      au < ready ; 2020 ; 2020 ; Social Text Volume 38 ; 38 >
       au < manifest ; 2021 ; 2021 ; Social Text Volume 39 ; 39 >
 
      }
@@ -1139,7 +1139,7 @@
       au < released ; 2014 ; 2014 ; Twentieth-Century Literature Volume 60 ; 60 >
       au < released ; 2015 ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 >
       au < released ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 >
-      au < manifest ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 >
+      au < ready ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 >
       au < released ; 2018 ; 2018 ; Twentieth-Century Literature Volume 64 ; 64 >
       au < released ; 2019 ; 2019 ; Twentieth-Century Literature Volume 65 ; 65 >
       au < released ; 2020 ; 2020 ; Twentieth-Century Literature Volume 66 ; 66 >
