@@ -1796,7 +1796,7 @@
       au < finished ; manifest ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; https://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; https://www.openquaternary.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ ; >
-      au < expected ; exists ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; https://www.openquaternary.com/ ; >
+      au < manifest ; exists ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; https://www.openquaternary.com/ ; >
 
   }
 
@@ -3279,7 +3279,7 @@
 
       au < deepCrawl ; exists ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; https://jmphil.org/ ; >
       au < crawling ; exists ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; https://jmphil.org/ ; >
-      au < expected ; exists ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; https://jmphil.org/ ; >
+      au < manifest ; exists ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; https://jmphil.org/ ; >
 
   }
 

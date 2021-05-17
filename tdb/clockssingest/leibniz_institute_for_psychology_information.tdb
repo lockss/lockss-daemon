@@ -166,7 +166,7 @@
       #param[base_url] = https://qcmb.psychopen.eu/
       param[journal_id] = qcmb
 
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2021 ; Quantitative and Computational Methods in Behavioral Sciences Volume 1 ; 1 ; 2021 ; https://qcmb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Quantitative and Computational Methods in Behavioral Sciences Volume 1 ; 1 ; 2021 ; https://qcmb.psychopen.eu/ ; >
 
   }
 
