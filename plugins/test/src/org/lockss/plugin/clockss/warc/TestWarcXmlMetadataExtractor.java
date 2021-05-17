@@ -274,7 +274,7 @@ public class TestWarcXmlMetadataExtractor extends LockssTestCase {
         file.createNewFile();
       } catch (IOException e) {
         // TODO Auto-generated catch block
-        e.printStackTrace();
+        log.error(e.getMessage(), e);
       }
     }
     FileOutputStream fos;
@@ -291,10 +291,10 @@ public class TestWarcXmlMetadataExtractor extends LockssTestCase {
       fos.close();      
     } catch (FileNotFoundException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     } catch (IOException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     }
   }
   

@@ -35,7 +35,7 @@ public class TestInnovativeMedicalResearchPressMetadataExtractor extends SourceX
                     "/plugins/test/src/org/lockss/plugin/clockss/innovativemedicalresearchpress/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch(IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }

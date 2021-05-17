@@ -117,7 +117,7 @@ public class TestXmlFilteringInputStream extends LockssTestCase {
       }
     } catch (IOException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     } finally {
       IOUtil.safeClose(filtIn);
     }
@@ -155,7 +155,7 @@ public class TestXmlFilteringInputStream extends LockssTestCase {
       assertEquals(exchars, allchars);
     } catch  (IOException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     } finally {
       IOUtil.safeClose(filtIn);
       IOUtil.safeClose(filtIn2);
@@ -173,7 +173,7 @@ public class TestXmlFilteringInputStream extends LockssTestCase {
       }
     } catch (UnsupportedEncodingException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
       return null;
     }
   }

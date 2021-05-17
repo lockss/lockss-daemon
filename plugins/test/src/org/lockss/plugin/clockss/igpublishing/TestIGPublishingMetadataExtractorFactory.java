@@ -29,7 +29,7 @@ public class TestIGPublishingMetadataExtractorFactory extends SourceXmlMetadataE
                     "/plugins/test/src/org/lockss/plugin/clockss/igpublishing/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }

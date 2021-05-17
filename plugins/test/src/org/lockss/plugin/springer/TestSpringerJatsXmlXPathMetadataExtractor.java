@@ -33,7 +33,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
                     "/plugins/test/src/org/lockss/plugin/springer/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch(IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }

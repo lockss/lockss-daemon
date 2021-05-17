@@ -38,7 +38,7 @@ public class TestSourceXmlParserHelperUtilities extends LockssTestCase {
             assertEquals(nodeValue, "11-15-2019");
             assertNotEquals(nodeValue, "01-01-2019");
         } catch (XPathExpressionException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
 
     }
@@ -64,7 +64,7 @@ public class TestSourceXmlParserHelperUtilities extends LockssTestCase {
             String nodeValue = SourceXmlParserHelperUtilities.getPubDateFromPubDateXpathNodeValue(nodes.item(0));
             assertNotEquals(nodeValue, "11-15-2019");
         } catch (XPathExpressionException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
 
     }
@@ -96,7 +96,7 @@ public class TestSourceXmlParserHelperUtilities extends LockssTestCase {
             assertEquals(nodeValue, "Ofir Artzi");
             assertNotEquals(nodeValue, "Artzi Ofir");
         } catch (XPathExpressionException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
 
     }
@@ -128,7 +128,7 @@ public class TestSourceXmlParserHelperUtilities extends LockssTestCase {
             assertEquals(nodeValue, "Ofir Artzi");
             assertNotEquals(nodeValue, "Artzi Ofir");
         } catch (XPathExpressionException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
 
     }
@@ -145,7 +145,7 @@ public class TestSourceXmlParserHelperUtilities extends LockssTestCase {
         }
         catch (Exception e)
         {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return null;
     }

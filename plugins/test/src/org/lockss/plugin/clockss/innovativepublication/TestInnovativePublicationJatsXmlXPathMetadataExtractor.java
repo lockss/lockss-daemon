@@ -37,7 +37,7 @@ public class TestInnovativePublicationJatsXmlXPathMetadataExtractor extends Sour
 
 
         } catch(IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }

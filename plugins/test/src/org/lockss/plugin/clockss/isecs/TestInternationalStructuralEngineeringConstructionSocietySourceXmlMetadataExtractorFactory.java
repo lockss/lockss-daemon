@@ -60,7 +60,7 @@ public class TestInternationalStructuralEngineeringConstructionSocietySourceXmlM
               "/plugins/test/src/org/lockss/plugin/clockss/isecs/" + fname;
       xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
     } catch (IOException e) {
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     }
     return xmlContent;
   }
