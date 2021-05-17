@@ -241,9 +241,9 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
       }
 
     } catch (NullPointerException exception) {
-      exception.printStackTrace();
+      log.error("msg", exception);
     } catch (Exception exception) {
-      exception.printStackTrace();
+      log.error("msg", exception);
     }
   }
 
