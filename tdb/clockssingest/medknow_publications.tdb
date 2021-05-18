@@ -5207,14 +5207,15 @@
 
       param[journal_issn] = 0366-6999
 #      param[base_url] = http://www.cmj.org/
+#     Moved to Wolters Kewer
 
       au < finished ; frozen ; 2015 ; Chinese Medical Journal Volume 128 ; 2015 ; 128 ; http://www.cmj.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Chinese Medical Journal Volume 129 ; 2016 ; 129 ; http://www.cmj.org/ ; ; >
+      au < frozen ; exists ; 2016 ; Chinese Medical Journal Volume 129 ; 2016 ; 129 ; http://www.cmj.org/ ; ; >
       au < finished ; frozen ; 2017 ; Chinese Medical Journal Volume 130 ; 2017 ; 130 ; http://www.cmj.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Chinese Medical Journal Volume 131 ; 2018 ; 131 ; http://www.cmj.org/ ; ; >
-      au < expected ; exists ; 2019 ; Chinese Medical Journal Volume 132 ; 2019 ; 132 ; https://www.cmj.org/ ; ; >
-      au < expected ; exists ; 2020 ; Chinese Medical Journal Volume 133 ; 2020 ; 133 ; https://www.cmj.org/ ; ; >
-      au < expected ; exists ; 2021 ; Chinese Medical Journal Volume 134 ; 2021 ; 134 ; https://www.cmj.org/ ; ; >
+      au < frozen ; exists ; 2018 ; Chinese Medical Journal Volume 131 ; 2018 ; 131 ; http://www.cmj.org/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Chinese Medical Journal Volume 132 ; 2019 ; 132 ; https://www.cmj.org/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Chinese Medical Journal Volume 133 ; 2020 ; 133 ; https://www.cmj.org/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Chinese Medical Journal Volume 134 ; 2021 ; 134 ; https://www.cmj.org/ ; ; >
 
   }
 
@@ -9538,13 +9539,14 @@
 
       param[journal_issn] = 2468-7332
 #      param[base_url] = http://www.ijsshortreports.com/
+#     Moved to Wolters Klewer
 
-      au < exists ; exists ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 ; https://www.ijsshortreports.com/ ; ; >
-      au < notReady ; exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; http://www.ijsshortreports.com/ ; ; > #Unable to fetch permission page
-      au < exists ; exists ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 ; https://www.ijsshortreports.com/ ; ; >
-      au < expected ; exists ; 2019 ; IJS Short Reports Volume 4 ; 2019 ; 4 ; https://www.ijsshortreports.com/ ; ; >
-      au < expected ; exists ; 2020 ; IJS Short Reports Volume 5 ; 2020 ; 5 ; https://www.ijsshortreports.com/ ; ; >
-      au < expected ; exists ; 2021 ; IJS Short Reports Volume 6 ; 2021 ; 6 ; https://www.ijsshortreports.com/ ; ; >
+      au < doNotProcess ; exists ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 ; https://www.ijsshortreports.com/ ; ; >
+      au < doNotProcess ; exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; http://www.ijsshortreports.com/ ; ; > #Unable to fetch permission page
+      au < doNotProcess ; exists ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 ; https://www.ijsshortreports.com/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; IJS Short Reports Volume 4 ; 2019 ; 4 ; https://www.ijsshortreports.com/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; IJS Short Reports Volume 5 ; 2020 ; 5 ; https://www.ijsshortreports.com/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; IJS Short Reports Volume 6 ; 2021 ; 6 ; https://www.ijsshortreports.com/ ; ; >
 
   }
 
