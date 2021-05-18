@@ -71,6 +71,12 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
     try {
 
+      //Ignore the ".txt" file from metadata
+      if (cu.getUrl().contains(".txt")) {
+        log.debug(String.format("Url: %s will be avoid ", cu.getUrl()));
+        return; 
+      }
+
       InputStream input = cu.getUnfilteredInputStream();
 
       MarcReader reader = null;
@@ -102,15 +108,10 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
             if (subfields != null) {
               for (Subfield subfield : subfields) {
                 char subtag = subfield.getCode();
-                log.debug(String.format("Raw data: %s_%c: %s", tag, subtag,subfield.getData()));
                 am.putRaw(String.format("%s_%c", tag, subtag), subfield.getData());
               }
-            } else {
-              log.debug("raw subfield is null");
             }
           }
-        } else {
-          log.debug("raw field is null");
         }
 
         String MARC_isbn = getMARCData(record, "020", 'a');
@@ -193,48 +194,23 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
         Leader byte 07 “m” = Book
         Leader byte 07 “s” = Journal
         Leader byte 07 “b” = Journal (serial component part)
-        */
-
         Leader leader = record.getLeader();
 
-        char publication_type = '0';
+        Since the raw data sent wrong publication type, use the pre defined one
+        */
 
-        publication_type = leader.getImplDefined1()[0];
+        am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+        am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
 
-        if (publication_type != '0') {
-          // Setup FIELD_PUBLICATION_TYPE & FIELD_ARTICLE_TYPE
-          if (publication_type == 'm' || publication_type == 'a') {
-            am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
-            am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
-
-            // Set publication title
-            if (MARC_title != null) {
-              String cleanedArticleTitle = MARC_title.replace(":", "").
-                      replace("/", "").
-                      replace("=", "").
-                      replace("\"", "").
-                      replace("...", "");
-              log.debug(String.format("original artitle title = %s, cleaned title = %s",MARC_title, cleanedArticleTitle));
-              am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
-            }
-          }
-
-          if (publication_type == 's' || publication_type == 'b') {
-            am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
-            am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
-
-            // Set publication title
-            if (MARC_title != null) {
-              log.debug("MARC_title:" + MARC_title);
-              am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
-            }
-            
-            // Set ISSN
-            if (MARC_issn != null) {
-              log.debug("MARC_issn:" + MARC_issn);
-              am.put(MetadataField.FIELD_ISSN, MARC_issn);
-            }
-          }
+        // Set publication title
+        if (MARC_title != null) {
+          String cleanedArticleTitle = MARC_title.replace(":", "").
+                  replace("/", "").
+                  replace("=", "").
+                  replace("\"", "").
+                  replace("...", "");
+          log.debug(String.format("original artitle title = %s, cleaned title = %s",MARC_title, cleanedArticleTitle));
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
         }
 
         emitter.emitMetadata(cu, am);
