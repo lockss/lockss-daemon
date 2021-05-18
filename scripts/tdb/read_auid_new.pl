@@ -3796,7 +3796,8 @@ while (my $line = <>) {
   } elsif ($plugin eq "ClockssSpandidosPlugin" || $plugin eq "SpandidosPlugin") {
       # manifest page is the entire journal archive
       # we will confirm an appropriate volume issue 
-      my $url_sprintf = sprintf("%s%s/archive",$param{base_url}, $param{journal_id});
+      #my $url_sprintf = sprintf("%s%s/archive",$param{base_url}, $param{journal_id});
+      my $url_sprintf = sprintf("%s%s/%s/1",$param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url_sprintf);
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
