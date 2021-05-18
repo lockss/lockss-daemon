@@ -17,7 +17,7 @@
   {
   
     title < 
-      name = The Comics Grid: Journal of Comics Scholarship ;
+      name = The Comics Grid ;
       eissn = 2048-0792
     >
     
@@ -25,8 +25,8 @@
     param[base_url] = http://www.comicsgrid.com/
     param[journal_id] = cg
     
-    au < superseded ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 [superseded] ; 3 ; 2013 ; >
-    au < superseded ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 [superseded] ; 4 ; 2014 ; >
+    au < superseded ; exists ; 2013 ; The Comics Grid Volume 3 [superseded] ; 3 ; 2013 ; >
+    au < superseded ; exists ; 2014 ; The Comics Grid [superseded] ; 4 ; 2014 ; >
     
   }
   
