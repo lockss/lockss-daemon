@@ -71,6 +71,20 @@
   {
 
     title <
+      name = Burns Chronicle ;
+      issn = 1365-7518 ;
+      eissn = 2634-7059 ;
+      issnl = 1365-7518 
+     >
+
+    param[journal_id] = burns
+
+    au < manifest ; exists ; 2021 ; Burns Chronicle Volume 130 ; 130 ; https://www.euppublishing.com/ ; >
+  }
+
+  {
+
+    title <
       name = Africa: The Journal of the International African Institute ;
       issn = 0001-9720 ;
       eissn = 1750-0184 ;
