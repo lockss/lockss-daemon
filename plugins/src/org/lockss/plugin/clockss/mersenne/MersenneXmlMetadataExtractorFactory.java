@@ -62,6 +62,10 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 
   private List<String> keptPDFList = new ArrayList<>();
 
+  	//Only check agaist "kept_pdf_list" for 2018, 2019, 2020 and 2021 folder.
+	// Starting from "2021_01" no longer need to do the check unless further noticed by the publisher.
+  private boolean checkAgainstKeptPDFList = false;
+
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
@@ -77,15 +81,32 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 	      if (metadataHelper == null) {
 	        metadataHelper = new MersenneIssueMetadataHelper();
 
-			  try {
-				  keptPDFList = metadataHelper.getKeptPDFFileList();
-			  } catch (IOException e) {
-				  log.error("MersenneIssueSchemaHelper keptPDFList data are not populated");
-			  }
+	        log.debug3("current url ====" + cu.getUrl());
 
-			  if (keptPDFList != null ) {
-				  log.debug3("---total records = " + keptPDFList.size());
-			  }
+	        if (cu.getUrl().contains("mersenne-released/2018/") ||
+					cu.getUrl().contains("mersenne-released/2019/") ||
+					cu.getUrl().contains("mersenne-released/2020/") ||
+			  		cu.getUrl().contains("mersenne-released/2021/")) {
+
+				log.debug3("current url included ====" + cu.getUrl());
+				checkAgainstKeptPDFList = true;
+
+			}  else {
+				log.debug3("current url not included ====" + cu.getUrl());
+			}
+
+	        if (checkAgainstKeptPDFList) {
+
+				try {
+					keptPDFList = metadataHelper.getKeptPDFFileList();
+				} catch (IOException e) {
+					log.error("MersenneIssueSchemaHelper keptPDFList data are not populated");
+				}
+
+				if (keptPDFList != null) {
+					log.debug3("---total records = " + keptPDFList.size());
+				}
+			}
 	      }
 	      return metadataHelper;
 	    }
@@ -129,6 +150,12 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 	    		// try this - not likely 
 	    		pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
 	    	}
+
+	    	if (!checkAgainstKeptPDFList) {
+				log.debug3("current url not included, alway include meta");
+				shouldIncludeThisMetadata = true;
+			}
+
 	    	List<String> returnList = new ArrayList<String>();
 	    	if (shouldIncludeThisMetadata) {
 				returnList.add(pdfName);
