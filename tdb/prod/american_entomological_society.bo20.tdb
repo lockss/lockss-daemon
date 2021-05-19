@@ -7,6 +7,8 @@
     plugin = org.lockss.plugin.bioone.BioOne2020Plugin
     implicit < status ; year ; param[year] ; name ; volume >
     param[base_url] = https://bioone.org/
+    
+    #In CLOCKSS collected as source.
 
   {
     title <
