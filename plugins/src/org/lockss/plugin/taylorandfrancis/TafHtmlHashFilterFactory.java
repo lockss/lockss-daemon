@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.taylorandfrancis;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.input.CountingInputStream;
@@ -55,23 +56,27 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
 
   private static final Logger log = Logger.getLogger(TafHtmlHashFilterFactory.class);
 
-  public Node findGreatGrandParentIfAttr(Node node,
+  // Method to find an ancestor Tag on the basis of attribute and value
+  //   the method finds a specific ancestor, given by generations "ago" variable.
+  //   Then checks if that Tag has the desired attribute and value and returns the Tag if it matches and null otherwise.
+  public Node findAncestorIfAttr(Node node,
                                          String ancestorAttr,
-                                         String ancestorVal) {
-    Node greatGrandParent = null;
+                                         String ancestorVal,
+                                         int generations) {
+    Node targetAncestor = null;
     Node ancestor = node.getParent();
     int count = 0;
-    while (ancestor != null && count<2) {
+    while (ancestor != null && count<generations) {
       ancestor = ancestor.getParent();
       count+=1;
     }
     if (ancestor != null) {
       String attr = ((Tag) ancestor).getAttribute(ancestorAttr);
       if (attr != null && !attr.isEmpty() && attr.contains(ancestorVal)) {
-        greatGrandParent = ancestor;
+        targetAncestor = ancestor;
       }
     }
-    return greatGrandParent;
+    return targetAncestor;
   }
 
   public boolean isSiblingDivWAttrEmpty(Node node, String attribute, String attrValue ) {
@@ -101,7 +106,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     return new HtmlNodeFilters.HasAttributeRegexFilter(attr, attrValue, true);
   }
 
-  public Node findSiblingDivByAttr(Node sibling, String attribute, String attrValue) {
+  // A method to find a sibling Div tag on the basis of its attribute and value
+  public Node findSiblingDivByAttr(Node sibling, String attribute, String attrValue, Boolean searchNext) {
     Node targetSibling = null;
     String thisID;
     while (sibling != null) {
@@ -112,9 +118,17 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           break;
         }
       }
-      sibling = sibling.getNextSibling();
+      if (searchNext) {
+        sibling = sibling.getNextSibling();
+      } else {
+        sibling = sibling.getPreviousSibling();
+      }
     }
     return targetSibling;
+  }
+  // defaults to searching 'down' the tree, i.e getNextSibling().
+  public Node findSiblingDivByAttr(Node sibling, String attribute, String attrValue) {
+    return findSiblingDivByAttr(sibling, attribute, attrValue, true);
   }
 
   public boolean tagWithAttrNotDescendantWithAttr(Node node,
@@ -256,6 +270,22 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     private boolean hlFld_TitleDIV = false;
     private boolean isLikelyAbs = false;
     private boolean hasPreview = false;
+  }
+
+  /**
+   * A "custom" SIGNATURE tag .
+   */
+  public static class Signature extends CompositeTag {
+    private static final String[] mIds = new String[] {"sig"};
+    public String[] getIds() { return mIds; }
+  }
+
+  /**
+   * A "custom" SIGNATURE BLOCK tag .
+   */
+  public static class SignatureBlock extends CompositeTag {
+    private static final String[] mIds = new String[] {"sig-block"};
+    public String[] getIds() { return mIds; }
   }
 
   @Override
@@ -428,13 +458,24 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                 "class",  "back" );
           }
         },
-        // check if div.summation-section is the ancestor of hlFld-FullText
+        // check if div.summation-section is the ancestor of hlFld-FullText and keep it if it is, UNLESS
+        // the previous sibling is a heading tag of 'Notes' in which case, we encounter a 'Notes' section that we need
+        // to remove
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
-            return tagWithAttrNotDescendantWithAttr(
+            if (tagWithAttrNotDescendantWithAttr(
                 node, "class", "summation-section",
-                "class",  "hlFld-FullText" );
+                "class",  "hlFld-FullText" )) {
+              Node sib = node.getPreviousSibling();
+              if (sib instanceof HeadingTag) {
+                if (sib.toPlainTextString().equals("Notes")) {
+                  return false;
+                }
+              }
+              return true;
+            }
+            return false;
           }
         },
 
@@ -544,7 +585,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
               //);
             }
             if (isPotentialAbstractText) {
-              Node ancestor = findGreatGrandParentIfAttr(node, "class", "abstract module");
+              Node ancestor = findAncestorIfAttr(node, "class", "abstract module", 2);
               if (ancestor != null) {
                 Node greatGrandParent = ancestor;
                 returnAble = true; // we found an abstract, set return to true, unless further checks are true
@@ -745,6 +786,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span","class","ref-overlay scrollable-ref"),
         // ancillary author info
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-ContribAuthor"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-ContribAuthor"),
         // Some ancillary author info is sometimes outside the 'hlFld-ContribAuthor' tag, it is in 'NLM-author-notes'
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "NLM_author-notes"),
         // Keywords are inconsistent too, we need to explicitly exclude them as sometimes they are embedded in a
@@ -754,12 +796,15 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-KeywordText"),
         // and another way of presenting keywords!
         HtmlNodeFilters.tagWithAttribute("table","class","NLM_def-list"),
+        HtmlNodeFilters.tagWithAttribute("td","class","NLM_def"),
+        HtmlNodeFilters.tagWithAttribute("td","class","NLM_term"),
 
         // all the ways of having headings
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationHeading"),
+        //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "summationHeading"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sectionHeading"),
         HtmlNodeFilters.tagWithAttributeRegex("p", "class", "summary-title"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "sectionHeadingDiv"),
+        HtmlNodeFilters.tagWithAttributeRegex("span","class","title\\d"),
         // some lists have numbers in the old theme, new theme replaces with 'bullet' style list
         HtmlNodeFilters.tagWithAttribute("td", "class", "list-td"),
         // embedded reference popups.
@@ -790,7 +835,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         // newer content that we need to exclude to agree with older content
         // We would like to keep the references, but the new theme does not embed the list numbers while the old theme does
         HtmlNodeFilters.tagWithAttributeRegex("h2", "id", "."),
-        HtmlNodeFilters.tagWithAttributeRegex("h2", "class", "."),
+        HtmlNodeFilters.tagWithAttributeRegex("h2", "class", "."), //[^section-heading-2]"),
         // the Acknowledgments title is in a span class=title not h[/d]
         HtmlNodeFilters.tagWithAttribute("span", "class", "title"),
         HtmlNodeFilters.tagWithAttribute("p", "class", "kwd-title"),
@@ -803,10 +848,11 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class","doimetalist"),
         // h4 filtering takes place at bottom
         HtmlNodeFilters.tag("h5"),
+        HtmlNodeFilters.tag("h6"),
+        HtmlNodeFilters.tag("h7"),
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttribute("span", "class", "articleEntryAuthorsLinks"),
-            // in new content there is a table caption embedded in an h3 tag. wild
-            HtmlNodeFilters.tag("a")
+            HtmlNodeFilters.tag("span")
         ),
         HtmlNodeFilters.tagWithAttribute("div", "class","ft"),
         HtmlNodeFilters.tagWithAttribute("div", "class","article-type"),
@@ -820,10 +866,19 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         // appendix section that is not regular
         // NOTE: added 'complicated' NodeFilter to commonIncludes, should now be including these
         //HtmlNodeFilters.tagWithAttribute("div", "class", "back"),
-        //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "NLM_sec-type_appendix"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "NLM_sec-type_appendix"),
 
         // suppplemental section that is embedded on some pages but not most
         HtmlNodeFilters.tagWithAttribute("div", "id", "supplemental-material-section"),
+        // appendix ?
+        HtmlNodeFilters.tagWithAttribute("div", "class", "NLM_app-group"),
+
+        // remove this rare, but unnecessary ajax error message <div class="hideElement" id="mathJaxToggle">
+        HtmlNodeFilters.tagWithAttribute("div", "id", "mathJaxToggle"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "hideElement"),
+
+        // a signature tag that appears on some pages, basically the author contact info.
+        HtmlNodeFilters.tag("sig-block"),
 
         //// Node removal that was (and may again) be useful, but was taken care of with more discretionary Includes
         /* A informational section that is usually discarded, but sometimes has ambiguous tag names/classes
@@ -885,6 +940,34 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                 HtmlNodeFilters.tag("a"), HtmlNodeFilters.tag("span"),
             }
         ),
+        // this node filter removes all div.class="...summationHeading..."
+        // also checks one circumstance in which a 'Notes' heading will have it's notes inside the nextSibling tag
+        // the summationSection tag typically has the notes header inside it, but sometimes it is in the preceding
+        // summationHeading tag.
+        new NodeFilter() {
+          @Override
+          public boolean accept(Node node) {
+            if (node instanceof Div) {
+              Div div = ((Div) node);
+              String divClass = div.getAttribute("class");
+              if(divClass != null && !divClass.isEmpty() && divClass.contains("summationHeading")) {
+                String summationText = node.toPlainTextString();
+                if (summationText.equals("Notes")) {
+                  Node sib = div.getNextSibling();
+                  if (sib instanceof Div) {
+                    Div divSib = ((Div) sib);
+                    String divSibClass = divSib.getAttribute("class");
+                    if(divSibClass != null && !divSibClass.isEmpty() && divSibClass.contains("summationSection")) {
+                      divSib.setAttribute("class", "summationHeading");
+                    }
+                  }
+                }
+                return true;
+              }
+            }
+            return false;
+          }
+        },
         // remove nasty notes section that appears in summationSection
         new NodeFilter() {
           @Override
@@ -929,12 +1012,12 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
-            if (bD.isLikelyAbs) {
+            if (bD.isLikelyAbs ) { //|| bD.hasPreview) {
               if (node instanceof Div) {
                 Div div = ((Div) node);
                 String divID = div.getAttribute("id");
                 if(divID != null && !divID.isEmpty() && divID.contains("fulltextPanel")) {
-                  log.debug3("removed fullTextPanel because isLikelyAbs is true");
+                  log.info("removed fullTextPanel because isLikelyAbs is true");
                   return true;
                 }
               }
@@ -945,7 +1028,6 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     };
 
     /* combine the filters */
-
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(
       in,
       encoding,
@@ -954,7 +1036,16 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.include(new OrFilter(commonIncludes)),
         // DROP: filter remaining content areas
         HtmlNodeFilterTransform.exclude(new OrFilter(commonExcludes))
-    ));
+    )) {
+      // add custom Tag classes to HtmlNodeFactory
+      @Override
+      protected PrototypicalNodeFactory makeNodeFactory() {
+        PrototypicalNodeFactory factory = super.makeNodeFactory();
+        factory.registerTag(new Signature());
+        factory.registerTag(new SignatureBlock());
+        return factory;
+      }
+    };
 
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
@@ -962,16 +1053,26 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       @Override
       public String rewriteLine(String line) {
         // Markup changes over time [anywhere]
+        // this ZWNBSP is strange, it is represented here as a y-umlaut, but works...
+        // should be safe as it will only replace the character with an empty string and should only make things agree
+        // and never disagree by just this method.
+        line = PAT_ZWNBSP.matcher(line).replaceAll(REP_ZWNBSP);
         line = PAT_NBSP.matcher(line).replaceAll(REP_NBSP);
         line = PAT_AMP.matcher(line).replaceAll(REP_AMP);
         line = PAT_PUNCTUATION.matcher(line).replaceAll(REP_PUNCTUATION); // e.g. \(, \-, during encoding glitch (or similar)
         // Alternate forms of citation links [article block]
-        line = PAT_CITING_ARTICLES.matcher(line).replaceAll(REP_CITING_ARTICLES);
+        // this is unecessary, we get rid of this in NodeFilters
+        //line = PAT_CITING_ARTICLES.matcher(line).replaceAll(REP_CITING_ARTICLES);
         // Wording change over time, and publication dates get fixed much later [article block, abs/full/ref/suppl overview]
         // For older versions with plain text instead of <div class="articleDates">
         line = PAT_PUBLISHED_ONLINE.matcher(line).replaceAll(REP_PUBLISHED_ONLINE);
         // Leftover commas after outgoing/SFX links removed [full/ref referencesPanel]
-        line = PAT_PUB_ID.matcher(line).replaceAll(REP_PUB_ID);
+        // remove ampersands, they arent always included in new and old content
+        line = PAT_AMPERSAND.matcher(line).replaceAll(REP_AMPERSAND);
+        // replace "<" which appear in articles (almost always as < INT or < DECIMAL, and sometimes w/out a space.
+        // This filter is necessary because in the noTagFilter below "<" signs that are not part of html tags cause
+        // fatal errors.
+        line = PAT_NONTAG_LESS_THAN.matcher(line).replaceAll(REP_NONTAG_LESS_THAN);
         return line;
       }
     };
@@ -984,8 +1085,12 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     
     // Remove white space
     Reader noWhiteSpace = new WhiteSpaceFilter(noTagFilter);
-    
-    InputStream ret = new ReaderInputStream(noWhiteSpace);
+
+    // remove spaces before periods. sometimes periods are in different tags across pages and in the noTagFilter a
+    // space gets added. we remove it here.
+    Reader spacePeriod = new StringFilter(noWhiteSpace," .", ".");
+
+    InputStream ret = new ReaderInputStream(spacePeriod);
 
     // Instrumentation
     return new CountingInputStream(ret) {
@@ -1004,23 +1109,34 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
   }
 
   public static final String EMPTY_STRING = "";
+  // this pattern is confusing, it is unclear if this working pattern is because of an encoding error, or because
+  // it is the correct pattern. Also tried these with some success: "�" "\\uFEFF" "ý" "ï»¿"
+  //  \\uFFFD works for ENCODING_UTF-8 and ÿ works with DEFAULT_ENCODING (i.e. ISO 8859-1
+  public static final Pattern PAT_ZWNBSP = Pattern.compile("(\\uFFFD|ÿ)", Pattern.CASE_INSENSITIVE);
+  public static final String REP_ZWNBSP = "";
 
   public static final Pattern PAT_NBSP = Pattern.compile("&nbsp;", Pattern.CASE_INSENSITIVE);
   public static final String REP_NBSP = " ";
   
   public static final Pattern PAT_AMP = Pattern.compile("&amp;", Pattern.CASE_INSENSITIVE);
-  public static final String REP_AMP = "&";
-  
+  public static final String REP_AMP = EMPTY_STRING;
+
+  public static final Pattern PAT_AMPERSAND = Pattern.compile("&", Pattern.CASE_INSENSITIVE);
+  public static final String REP_AMPERSAND = EMPTY_STRING;
+
   public static final Pattern PAT_PUNCTUATION = Pattern.compile("[,\\\\]", Pattern.CASE_INSENSITIVE);
   public static final String REP_PUNCTUATION = EMPTY_STRING;
   
   public static final Pattern PAT_CITING_ARTICLES = Pattern.compile("<li>(<div>)?(<strong>)?(Citing Articles:|Citations:|Citation information:|<a href=\"/doi/citedby/).*?</li>", Pattern.CASE_INSENSITIVE); 
   public static final String REP_CITING_ARTICLES = EMPTY_STRING;
   
-  public static final Pattern PAT_PUBLISHED_ONLINE = Pattern.compile("(<(b|h[23456])>)?(Published online:|Available online:|Version of record first published:)(</\\2>)?.*?>", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PAT_PUBLISHED_ONLINE = Pattern.compile("(<(b|h[23456])>)?(Published online:|Available online:|Version of record first published:)(</\\2>)?.*?", Pattern.CASE_INSENSITIVE);
   public static final String REP_PUBLISHED_ONLINE = EMPTY_STRING;
   
   public static final Pattern PAT_PUB_ID = Pattern.compile("</pub-id>.*?</li>", Pattern.CASE_INSENSITIVE); 
   public static final String REP_PUB_ID = EMPTY_STRING;
+
+  public static final Pattern PAT_NONTAG_LESS_THAN = Pattern.compile("<(\\s*\\.?\\d)", Pattern.CASE_INSENSITIVE);
+  public static final String REP_NONTAG_LESS_THAN = " &lt;$1";
 
 }
