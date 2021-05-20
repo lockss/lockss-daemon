@@ -192,6 +192,27 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		 mp.getRegexp());
   }
 
+  public void testConvertVariableUrlRegexStringWithMetaChars() {
+    Vector vec = new Vector(2);
+    String rkey = ConfigParamDescr.NUM_ISSUE_RANGE.getKey();
+    String vkey = ConfigParamDescr.VOLUME_NAME.getKey();
+    vec.add(0, new Long(10));
+    vec.add(1, new Long(20));
+    additionalAuConfig.setMapElement(rkey, vec);
+    additionalAuConfig.setMapElement(vkey, "a(parenthesized)volume");
+    configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    configProps.add(ConfigParamDescr.VOLUME_NAME);
+    setupAu(additionalAuConfig);
+    PrintfConverter.MatchPattern mp =
+      cau.convertVariableRegexpString("\"http://host.foo/%s/iss/%s\", "
+				      + rkey + ", " + vkey,
+				      RegexpContext.Url);
+    assertEquals("http://host.foo/(\\d+)/iss/a\\(parenthesized\\)volume",
+		 mp.getRegexp());
+    assertMatchesRE(mp.getRegexp(),
+                    "http://host.foo/1234/iss/a(parenthesized)volume");
+  }
+
   public void testConvertUrlListWithNumRange() {
     configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
     Vector vec = new Vector(2);
@@ -381,6 +402,50 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                  rule.match("http://www.example.com/vol+ume"));
     assertEquals(CrawlRule.INCLUDE,
                  rule.match("http://www.example.com/vol%20ume"));
+
+    // shouldn't match if dot properly quoted
+    assertEquals(CrawlRule.IGNORE,
+                 rule.match("http://www1example.com/"));
+  }
+
+  public void testConvertRuleWithMetaCharsInParamValue()
+      throws LockssRegexpException {
+    additionalAuConfig.putString("URL", "http://www.example.com/");
+    additionalAuConfig.putString("VOL", "vol(ume) name");
+    configProps.add(URL_PARAM);
+    configProps.add(VOL_PARAM);
+    setupAu(additionalAuConfig);
+    String rule1 = "1,\".*\\.gif\"";
+    String rule2 = "1,\"%s\",URL";
+    String rule3 = "1,\"%s%s\",URL,VOL";
+
+    CrawlRule rule = cau.convertRule(rule1, false);
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/mygif.gif"));
+    assertEquals(CrawlRule.IGNORE,
+                 rule.match("http://www.example.com/mygif.GIF"));
+
+    rule = cau.convertRule(rule1, true);
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/mygif.gif"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/mygif.GIF"));
+
+    rule = cau.convertRule(rule2, false);
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/"));
+
+    // shouldn't match if dot properly quoted
+    assertEquals(CrawlRule.IGNORE,
+                 rule.match("http://www1example.com/"));
+
+    rule = cau.convertRule(rule3, false);
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/vol(ume) name"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/vol(ume) name"));
+    assertEquals(CrawlRule.INCLUDE,
+                 rule.match("http://www.example.com/vol(ume) name"));
 
     // shouldn't match if dot properly quoted
     assertEquals(CrawlRule.IGNORE,

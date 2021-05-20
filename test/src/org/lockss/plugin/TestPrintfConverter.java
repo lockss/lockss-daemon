@@ -52,6 +52,13 @@ public class TestPrintfConverter extends LockssTestCase {
   MockArchivalUnit mau;
   Configuration auconf;
 
+  private static final ConfigParamDescr PAREN_PARAM =
+    new ConfigParamDescr()
+    .setKey("paren_param")
+    .setDisplayName("Paren param")
+    .setType(TYPE_STRING)
+    .setSize(20);
+
   protected void setUp() throws Exception {
     super.setUp();
 
@@ -63,7 +70,8 @@ public class TestPrintfConverter extends LockssTestCase {
 				NUM_ISSUE_RANGE, // int range
 				ISSUE_SET,	 // set
 				YEAR,		 // year
-				PUB_DOWN	 // boolean
+				PUB_DOWN,	 // boolean
+				PAREN_PARAM	 // string
 				);
     mplug = new MockPlugin();
     mau = new MockArchivalUnit(mplug);
@@ -124,6 +132,7 @@ public class TestPrintfConverter extends LockssTestCase {
     conf.put("issue_set", "Jan,Feb,Mar,Apr");
     conf.put("year", "2018");
     conf.put("pub_down", "true");
+    conf.put("paren_param", "aa(bb)cc");
     return conf;
   }
 
@@ -238,6 +247,11 @@ public class TestPrintfConverter extends LockssTestCase {
 
     mp = convertVariableRegexpString("\"%svol_%s\\?bool=%s\", base_url, volume_name, pub_down");
     assertEquals(s1+"vol_vol\\.name\\?bool=true", mp.getRegexp());
+    assertEmpty(mp.getMatchArgs());
+    assertEmpty(mp.getMatchArgTypes());
+
+    mp = convertVariableRegexpString("\"%svol_%s\", base_url, paren_param");
+    assertEquals(s1+"vol_aa\\(bb\\)cc", mp.getRegexp());
     assertEmpty(mp.getMatchArgs());
     assertEmpty(mp.getMatchArgTypes());
 
