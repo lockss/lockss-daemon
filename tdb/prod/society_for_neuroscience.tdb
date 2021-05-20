@@ -48,41 +48,41 @@
 
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
-      au < HighWirePressH20Plugin ; released ; 1981 ; Journal of Neuroscience Volume 1 ; 1 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1982 ; Journal of Neuroscience Volume 2 ; 2 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1983 ; Journal of Neuroscience Volume 3 ; 3 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1984 ; Journal of Neuroscience Volume 4 ; 4 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1985 ; Journal of Neuroscience Volume 5 ; 5 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1986 ; Journal of Neuroscience Volume 6 ; 6 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1987 ; Journal of Neuroscience Volume 7 ; 7 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1988 ; Journal of Neuroscience Volume 8 ; 8 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1989 ; Journal of Neuroscience Volume 9 ; 9 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1990 ; Journal of Neuroscience Volume 10 ; 10 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Neuroscience Volume 11 ; 11 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1992 ; Journal of Neuroscience Volume 12 ; 12 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1993 ; Journal of Neuroscience Volume 13 ; 13 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1994 ; Journal of Neuroscience Volume 14 ; 14 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1995 ; Journal of Neuroscience Volume 15 ; 15 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1996 ; Journal of Neuroscience Volume 16 ; 16 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1997 ; Journal of Neuroscience Volume 17 ; 17 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1998 ; Journal of Neuroscience Volume 18 ; 18 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 1999 ; Journal of Neuroscience Volume 19 ; 19 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2000 ; Journal of Neuroscience Volume 20 ; 20 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2001 ; Journal of Neuroscience Volume 21 ; 21 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2002 ; Journal of Neuroscience Volume 22 ; 22 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2003 ; Journal of Neuroscience Volume 23 ; 23 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2004 ; Journal of Neuroscience Volume 24 ; 24 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Neuroscience Volume 25 ; 25 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Neuroscience Volume 26 ; 26 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Neuroscience Volume 27 ; 27 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Neuroscience Volume 28 ; 28 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Neuroscience Volume 29 ; 29 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Neuroscience Volume 30 ; 30 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Neuroscience Volume 31 ; 31 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Neuroscience Volume 32 ; 32 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Neuroscience Volume 33 ; 33 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Neuroscience Volume 34 ; 34 ; http://www.jneurosci.org/ >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Journal of Neuroscience Volume 35 ; 35 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of Neuroscience Volume 1 ; 1 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of Neuroscience Volume 2 ; 2 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1983 ; Journal of Neuroscience Volume 3 ; 3 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of Neuroscience Volume 4 ; 4 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of Neuroscience Volume 5 ; 5 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of Neuroscience Volume 6 ; 6 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of Neuroscience Volume 7 ; 7 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of Neuroscience Volume 8 ; 8 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of Neuroscience Volume 9 ; 9 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of Neuroscience Volume 10 ; 10 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of Neuroscience Volume 11 ; 11 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of Neuroscience Volume 12 ; 12 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of Neuroscience Volume 13 ; 13 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1994 ; Journal of Neuroscience Volume 14 ; 14 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1995 ; Journal of Neuroscience Volume 15 ; 15 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Neuroscience Volume 16 ; 16 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1997 ; Journal of Neuroscience Volume 17 ; 17 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Journal of Neuroscience Volume 18 ; 18 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Journal of Neuroscience Volume 19 ; 19 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Journal of Neuroscience Volume 20 ; 20 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Journal of Neuroscience Volume 21 ; 21 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Journal of Neuroscience Volume 22 ; 22 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Journal of Neuroscience Volume 23 ; 23 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Journal of Neuroscience Volume 24 ; 24 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Journal of Neuroscience Volume 25 ; 25 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Journal of Neuroscience Volume 26 ; 26 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Journal of Neuroscience Volume 27 ; 27 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Journal of Neuroscience Volume 28 ; 28 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Journal of Neuroscience Volume 29 ; 29 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Neuroscience Volume 30 ; 30 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Neuroscience Volume 31 ; 31 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Neuroscience Volume 32 ; 32 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Journal of Neuroscience Volume 33 ; 33 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Journal of Neuroscience Volume 34 ; 34 ; http://www.jneurosci.org/ >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Neuroscience Volume 35 ; 35 ; http://www.jneurosci.org/ >
       au < sfn.SFNDrupalPlugin ; released ; 2016 ; Journal of Neuroscience Volume 36 ; 36 ; http://www.jneurosci.org/ >
       au < sfn.SFNDrupalPlugin ; released ; 2017 ; Journal of Neuroscience Volume 37 ; 37 ; http://www.jneurosci.org/ >
       au < sfn.SFNDrupalPlugin ; released ; 2018 ; Journal of Neuroscience Volume 38 ; 38 ; http://www.jneurosci.org/ >

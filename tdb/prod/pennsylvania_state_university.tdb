@@ -18,8 +18,13 @@
     implicit < status ; year ; name ; volume ; param[year] >
     
     param[journal_id] = jgb
-    #Requested manifest pages. 2021-04-27
     
+    au < manifest ; 2000 ; Journal of Global Buddhism Volume 1 ; 1 ; 2000 >
+    au < manifest ; 2001 ; Journal of Global Buddhism Volume 2 ; 2 ; 2001 >
+    au < manifest ; 2002 ; Journal of Global Buddhism Volume 3 ; 3 ; 2002 >
+    au < manifest ; 2003 ; Journal of Global Buddhism Volume 4 ; 4 ; 2003 >
+    au < manifest ; 2004 ; Journal of Global Buddhism Volume 5 ; 5 ; 2004 >
+    au < manifest ; 2005 ; Journal of Global Buddhism Volume 6 ; 6 ; 2005 >
     au < manifest ; 2006 ; Journal of Global Buddhism Volume 7 ; 7 ; 2006 >
     au < manifest ; 2007 ; Journal of Global Buddhism Volume 8 ; 8 ; 2007 >
     au < manifest ; 2008 ; Journal of Global Buddhism Volume 9 ; 9 ; 2008 >
@@ -29,12 +34,12 @@
     au < manifest ; 2012 ; Journal of Global Buddhism Volume 13 ; 13 ; 2012 >
     au < manifest ; 2013 ; Journal of Global Buddhism Volume 14 ; 14 ; 2013 >
     au < manifest ; 2014 ; Journal of Global Buddhism Volume 15 ; 15 ; 2014 >
-    au < manifest ; 2015 ; Journal of Global Buddhism Volume 16 ; 16 ; 2015 >
-    au < manifest ; 2016 ; Journal of Global Buddhism Volume 17 ; 17 ; 2016 >
-    au < manifest ; 2017 ; Journal of Global Buddhism Volume 18 ; 18 ; 2017 >
-    au < manifest ; 2018 ; Journal of Global Buddhism Volume 19 ; 19 ; 2018 >
-    au < manifest ; 2019 ; Journal of Global Buddhism Volume 20 ; 20 ; 2019 >
-    au < manifest ; 2020 ; Journal of Global Buddhism Volume 21 ; 21 ; 2020 >
+    au < ready ; 2015 ; Journal of Global Buddhism Volume 16 ; 16 ; 2015 >
+    au < ready ; 2016 ; Journal of Global Buddhism Volume 17 ; 17 ; 2016 >
+    au < ready ; 2017 ; Journal of Global Buddhism Volume 18 ; 18 ; 2017 >
+    au < ready ; 2018 ; Journal of Global Buddhism Volume 19 ; 19 ; 2018 >
+    au < ready ; 2019 ; Journal of Global Buddhism Volume 20 ; 20 ; 2019 >
+    au < ready ; 2020 ; Journal of Global Buddhism Volume 21 ; 21 ; 2020 >
     au < expected ; 2021 ; Journal of Global Buddhism Volume 22 ; 22 ; 2021 >
    }
    {
