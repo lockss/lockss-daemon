@@ -131,5 +131,6 @@ public class TestRegexpUtil extends LockssTestCase {
     assertEquals("", RegexpUtil.quotemeta(""));
     assertEquals("foo", RegexpUtil.quotemeta("foo"));
     assertEquals("foo\\.b\\[a\\]\\ r", RegexpUtil.quotemeta("foo.b[a] r"));
+    assertEquals("foo\\.b\\(a\\)\\ r", RegexpUtil.quotemeta("foo.b(a) r"));
   }
 }
