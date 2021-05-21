@@ -24,9 +24,13 @@ public class BioscienceResearchArticleIteratorFactory implements ArticleIterator
     // https://clockss-test.lockss.org/sourcefiles/bioscienceresearch-released/2021/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf
     // https://clockss-test.lockss.org/sourcefiles/bioscienceresearch-released/2021/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/548.xml
 
+    // <base_url><year>/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/548.xml
+    // <base_url><year>/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf
+    // this is a lot of group capturing, but since we need the bit between the "-" and second "/"
+    // this string occurs before the \d+.pdf url
     protected static final Pattern XML_PATTERN = Pattern.compile("/([^-/]*)-([^/]*)/([^/]*/[^/]*)/(\\D*)(\\d+)\\.xml$");
     protected static final String XML_REPLACEMENT = "/$1-$2/$3/$5.xml";
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/([^-/]*)-([^/]*)/([^/]*/[^/]*)/(\\D*)(\\d+)\\.xml$");
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/([^-/]*)-([^/]*)/([^/]*/[^/]*)/(\\D*)(\\d+)\\.pdf$");
     protected static final String PDF_REPLACEMENT = "/$1-$2/$3/$2$5.pdf";
 
 

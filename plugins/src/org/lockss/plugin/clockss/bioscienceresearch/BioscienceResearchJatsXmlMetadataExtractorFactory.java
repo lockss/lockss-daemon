@@ -131,7 +131,7 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
   }
 
   public class BioscienceResearchJatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
-
+    // using a modifed JatsPublisheringSchemaHelper as defined above
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
