@@ -148,13 +148,13 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
                                                             ArticleMetadata oneAM) {
       List<String> returnList = new ArrayList<String>();
-      String pdfName = oneAM.getRaw(JatsPublishingSchemaHelper.JATS_article_related_pdf);
+      String pdfName = oneAM.getRaw(BioscienceResearchJatsPublishingSchemaHelper.JATS_article_related_pdf);
       if (oneAM != null && pdfName != null) {
         String url_string = cu.getUrl();
         String pdfUrl = url_string.substring(
             0,
             url_string.lastIndexOf("/") + 1
-        ) + oneAM.getRaw(JatsPublishingSchemaHelper.JATS_article_related_pdf);
+        ) + pdfName;
         returnList.add(pdfUrl);
       }
       return returnList;
@@ -166,13 +166,18 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
 
       log.debug3("in BioscienceResearch postCookProcess");
       //If we didn't get a valid author names, take a deeper look
-      if (thisAM.get(MetadataField.FIELD_AUTHOR) == null) {
-        log.info("FIELD AUTHOR WAS NULL");
-        } else {
-          log.debug3("NOT ADDING JATS ");
-          log.info(" map: "+thisAM.rawKeySet());
-          log.info("cookMap: "+thisAM.keySet());
+      if (thisAM.get(MetadataField.FIELD_PUBLISHER) == null) {
+        log.info("FIELD_PUBLISHER WAS NULL");
+        String JATS_publisher = thisAM.getRaw(BioscienceResearchJatsPublishingSchemaHelper.JATS_pubname);
+        if (JATS_publisher != null) {
+          thisAM.put(MetadataField.FIELD_PUBLISHER, JATS_publisher);
+          log.debug3("ADDED JATS PUBLISHER: '"+JATS_publisher+"' to Metadata");
         }
+      } else {
+        log.debug3("NOT ADDING JATS FIELD_PUBLISHER");
+        log.info(" map: "+thisAM.rawKeySet());
+        log.info("cookMap: "+thisAM.keySet());
       }
     }
   }
+}
