@@ -51,11 +51,10 @@ import java.util.Map;
 public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(BioscienceResearchJatsXmlMetadataExtractorFactory.class);
 
-  //private static SourceXmlSchemaHelper BioscienceResearchJatsPublishingHelper = null;
+  private static SourceXmlSchemaHelper BioscienceResearchJatsPublishingHelper = null;
   static final String JATS_author = "front/article-meta/contrib-group/contrib/name | front/article-meta/contrib-group/contrib/name-alternatives/name[@name-style = \"western\"]";
 
-  public class BioscienceResearchJatsPublishingHelper extends JatsPublishingSchemaHelper {
-    //
+  public class BioscienceResearchJatsPublishingSchemaHelper extends JatsPublishingSchemaHelper {
 
     @Override
     public Map<String, XmlDomMetadataExtractor.XPathValue> getArticleMetaMap() {
@@ -65,6 +64,7 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
       JATS_articleMap.put(JATS_author, JATS_AUTHOR_VALUE_GIVEN_SUR);
       return JATS_articleMap;
     }
+
     // this is almost the same as JATS_AUTHOR_VALUE
     XmlDomMetadataExtractor.NodeValue JATS_AUTHOR_VALUE_GIVEN_SUR = new XmlDomMetadataExtractor.NodeValue() {
       @Override
@@ -135,11 +135,10 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-//      if (BioscienceResearchJatsPublishingHelper == null) {
-//        BioscienceResearchJatsPublishingHelper = new BioscienceResearchJatsPublishingHelper();// new JatsPublishingSchemaHelper() {
-          //
-//      }
-      return new BioscienceResearchJatsPublishingHelper();
+      if (BioscienceResearchJatsPublishingHelper == null) {
+        BioscienceResearchJatsPublishingHelper = new BioscienceResearchJatsPublishingSchemaHelper();
+      }
+      return BioscienceResearchJatsPublishingHelper;
     }
 
     /* pdf file has the journal prefixed to it. e.g. 548.xml Scholar548.pdf
@@ -165,35 +164,10 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
         CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("in BioscienceResearch postCookProcess: USING SCHEMAHELPER cookmap: "+schemaHelper.getCookMap());
+      log.debug3("in BioscienceResearch postCookProcess");
       //If we didn't get a valid author names, take a deeper look
       if (thisAM.get(MetadataField.FIELD_AUTHOR) == null) {
         log.info("FIELD AUTHOR WAS NULL");
-        String goodKey = "front/article-meta/contrib-group/contrib/name | front/article-meta/contrib-group/contrib/name-alternatives/name[@name-style = \"western\"]";
-        if (thisAM.getRawList(goodKey) != null) {
-          log.debug3("ADDING JATS TO AM: " + thisAM.getRawList(goodKey).get(0));
-          String allAuthors = "";
-          for (String name : thisAM.getRawList(goodKey)) {
-            if (allAuthors != "") {
-              allAuthors += ", ";
-            }
-            String[] fullName = name.split(",");
-            if (fullName.length == 2) {
-              log.debug3(" full RAW name: '" + name +
-                  "' Presumed surname: '" + fullName[0].trim().replaceAll("\\s+"," ") +
-                  "' And given name(s): '" + fullName[1].trim().replaceAll("\\s+"," ") + "'");
-              // strange tabs and spaces occur between middle and first name
-              allAuthors += fullName[1].trim().replaceAll("\\s+"," ") +
-                  " " +
-                  fullName[0].trim().replaceAll("\\s+"," ");
-            }
-          }
-          thisAM.put(MetadataField.FIELD_AUTHOR, allAuthors);
-          if (thisAM.get(MetadataField.FIELD_AUTHOR) != null) {// (thisAM.put(MetadataField.FIELD_AUTHOR, thisAM.getRawList(goodKey).toString())) {
-            log.debug3("ADDING RETURNED TRUE!");
-          } else {
-            log.debug3("ADDING RETURNED false!");
-          }
         } else {
           log.debug3("NOT ADDING JATS ");
           log.info(" map: "+thisAM.rawKeySet());
@@ -202,4 +176,3 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
       }
     }
   }
-}
