@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -61,10 +61,18 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <!-- https://www.berghahnjournals.com/lockss-manifest/journal/democratic-theory/volume/4 -->
-    <!-- https://journals.ametsoc.org/lockss-manifest/journal/hydr/volume/16 -->
-    <!-- https://erp.bioscientifica.com/lockss-manifest/journal/echo/1-->
-    <string>"%slockss-manifest/journal/%s/volume/%s", base_url, journal_id, volume_name</string>
+    <!-- /volume/ is phasing out as of spring 2021, some journals still serve a toc-less page, so 404s wont occur,
+         https://www.berghahnjournals.com/lockss-manifest/journal/democratic-theory/volume/4
+         https://journals.ametsoc.org/lockss-manifest/journal/hydr/volume/16 -->
+    <!-- Ajtmh still uses the old pattern, when it comes around edit that plugin config to inherit this
+         https://www.ajtmh.org/lockss-manifest/journal/tpmd/volume/104 -->
+    <!-- All others use new pattern e.g.
+         https://journals.ametsoc.org/lockss-manifest/journal/hydr/16
+         https://erp.bioscientifica.com/lockss-manifest/journal/echo/1
+         https://www.berghahnjournals.com/lockss-manifest/journal/democratic-theory/4
+         https://www.manchesterhive.com/lockss-manifest/journal/hrv/1/
+          -->
+    <string>"%slockss-manifest/journal/%s/%s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>

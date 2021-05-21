@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -66,7 +66,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>7</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -75,10 +75,5 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_name</string>
     <string>"Bio Scientifica Plugin (PubFactory), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <!-- https://erp.bioscientifica.com/lockss-manifest/journal/echo/1-->
-    <string>"%slockss-manifest/journal/%s/%s", base_url, journal_id, volume_name</string>
   </entry>
 </map>

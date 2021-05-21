@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -58,5 +58,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_name</string>
         <string>"American Journal of Tropical Medicine and Hygiene (PubFactory), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!-- Ajtmh still uses the old start_url pattern, when it comes around remove this entry and inherit from parent
+             https://www.ajtmh.org/lockss-manifest/journal/tpmd/volume/104
+             COMING SOON!
+             https://www.ajtmh.org/lockss-manifest/journal/tpmd/104
+             -->
+        <string>"%slockss-manifest/journal/%s/volume/%s", base_url, journal_id, volume_name</string>
     </entry>
 </map>
