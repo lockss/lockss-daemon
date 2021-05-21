@@ -68,12 +68,19 @@ public class SpandidosHtmlMetadataExtractorFactory
       tagMap.put("citation_abstract_html_url", MetadataField.FIELD_ACCESS_URL);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("keywords", MetadataField.FIELD_KEYWORDS);
+
+      tagMap.put(MetadataField.ARTICLE_TYPE_JOURNALARTICLE, MetadataField.FIELD_ARTICLE_TYPE);
+      tagMap.put(MetadataField.PUBLICATION_TYPE_JOURNAL, MetadataField.FIELD_PUBLICATION_TYPE);
     }
 
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
     throws IOException {
       ArticleMetadata am = super.extract(target, cu);
+
+      am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+      am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+      
       am.cook(tagMap);
       return am;
     }
