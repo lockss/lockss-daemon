@@ -138,7 +138,7 @@ public class TestPubFactoryArchivalUnit extends LockssTestCase {
     	shouldCacheTest("https://www.berghahnjournals.com/downloadpdf/journals/boyhood-studies/10/1/bhs100101.pdf",true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/downloadpdf/journals/boyhood-studies/10/1/bhs100101.xml",true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/fileasset/BB%20left%20side%20logo.png",true, bgAu, cus); 
-    	shouldCacheTest("https://www.berghahnjournals.com/lockss-manifest/journal/boyhood-studies/volume/10",true, bgAu, cus); 
+    	shouldCacheTest("https://www.berghahnjournals.com/lockss-manifest/journal/boyhood-studies/10",true, bgAu, cus);
     	shouldCacheTest("https://www.berghahnjournals.com/skin/20180516/css/style.css",true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/skin/20180516/fonts/fontawesome-webfont.woff?v=4.4.0",true, bgAu, cus); 
     	shouldCacheTest("https://www.berghahnjournals.com/skin/20180516/img/ajax-loader.gif",true, bgAu, cus); 
@@ -186,7 +186,7 @@ shouldCacheTest("https://www.berghahnjournals.com/view/journals/boyhood-studies/
     URL url = new URL(ROOT_URL);
 
     // 4 digit
-    String expected1 = ROOT_URL+"lockss-manifest/journal/boyhood-studies/volume/10";
+    String expected1 = ROOT_URL+"lockss-manifest/journal/boyhood-studies/10";
     DefinableArchivalUnit ABAu = makeAu(url, "10", "boyhood-studies");
     assertEquals(ListUtil.list(expected1), ABAu.getStartUrls());
   }
