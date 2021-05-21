@@ -69,9 +69,9 @@
     
     param[journal_id] = bem
 
-    au < manifest ; exists ; 2018 ; Bioelectronics in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < manifest ; exists ; 2019 ; Bioelectronics in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < manifest ; exists ; 2020 ; Bioelectronics in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
+    au < ready ; exists ; 2018 ; Bioelectronics in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
+    au < ready ; exists ; 2019 ; Bioelectronics in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
+    au < ready ; exists ; 2020 ; Bioelectronics in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     #Ceased
     au < expected ; exists ; 2021 ; Bioelectronics in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
   }
@@ -384,7 +384,7 @@
     
     param[journal_id] = frd
 
-    au < manifest ; exists ; 2020 ; Future Rare Diseases Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
+    au < ready ; exists ; 2020 ; Future Rare Diseases Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2021 ; Future Rare Diseases Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
 
   }

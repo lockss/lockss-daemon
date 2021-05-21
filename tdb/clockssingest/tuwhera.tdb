@@ -38,7 +38,7 @@
       au < crawling ; exists ; 2017 ; Applied Finance Letters Volume 6 ; 6 ; 2017 ; >
       au < crawling ; exists ; 2018 ; Applied Finance Letters Volume 7 ; 7 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Applied Finance Letters Volume 8 ; 8 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; >
+      au < ready ; exists ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Applied Finance Letters Volume 10 ; 10 ; 2021 ; >
 
     }
@@ -63,7 +63,7 @@
       au < frozen ; exists ; 2017 ; Pacific Journalism Review Volume 23 ; 23 ; 2017 ; >
       au < finished ; manifest ; 2018 ; Pacific Journalism Review Volume 24 ; 24 ; 2018 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; Pacific Journalism Review Volume 25 ; 25 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Pacific Journalism Review Volume 26 ; 26 ; 2020 ; >
+      au < ready ; exists ; 2020 ; Pacific Journalism Review Volume 26 ; 26 ; 2020 ; >
       au < expected ; exists ; 2021 ; Pacific Journalism Review Volume 27 ; 27 ; 2021 ; >
 
     }
@@ -88,7 +88,7 @@
       au < crawling ; exists ; 2012 ; Te Kaharoa Volume 5 ; 5 ; 2012 ; > 
       au < crawling ; exists ; 2013 ; Te Kaharoa Volume 6 ; 6 ; 2013 ; > 
       au < crawling ; exists ; 2014 ; Te Kaharoa Volume 7 ; 7 ; 2014 ; > 
-      au < manifest ; exists ; 2015 ; Te Kaharoa Volume 8 ; 8 ; 2015 ; > 
+      au < ready ; exists ; 2015 ; Te Kaharoa Volume 8 ; 8 ; 2015 ; > 
       au < crawling ; exists ; 2016 ; Te Kaharoa Volume 9 ; 9 ; 2016 ; > 
       au < frozen ; exists ; 2017 ; Te Kaharoa Volume 10 ; 10 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Te Kaharoa Volume 11 ; 11 ; 2018 ; >
@@ -132,7 +132,7 @@
       au < crawling ; exists ; 2016 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 20 ; 20 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 21 ; 21 ; 2017 ; >
       au < crawling ; exists ; 2018 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 22 ; 22 ; 2018 ; >
-      au < manifest ; exists ; 2020 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 23 ; 23 ; 2020 ; >
+      au < ready ; exists ; 2020 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 23 ; 23 ; 2020 ; >
       au < expected ; exists ; 2021 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 25 ; 25 ; 2021 ; >
 
   }
@@ -168,7 +168,7 @@
       attr[start_stem] = 
 
       au < crawling ; exists ; 2019 ; Decolonization of Criminology and Justice  Volume 1 ; 1 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Decolonization of Criminology and Justice  Volume 2 ; 2 ; 2020 ; >
+      au < ready ; exists ; 2020 ; Decolonization of Criminology and Justice  Volume 2 ; 2 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Decolonization of Criminology and Justice  Volume 3 ; 3 ; 2021 ; >
 
   }
@@ -187,7 +187,7 @@
       au < crawling ; exists ; 2017 ; Hospitality Insights Volume 1 ; 1 ; 2017 ; >
       au < crawling ; exists ; 2018 ; Hospitality Insights Volume 2 ; 2 ; 2018 ; >
       au < crawling ; exists ; 2019 ; Hospitality Insights Volume 3 ; 3 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Hospitality Insights Volume 4 ; 4 ; 2020 ; >
+      au < ready ; exists ; 2020 ; Hospitality Insights Volume 4 ; 4 ; 2020 ; >
       au < expected ; exists ; 2021 ; Hospitality Insights Volume 5 ; 5 ; 2021 ; >
 
   }
@@ -260,7 +260,7 @@
       param[journal_id] = nzjer
       attr[start_stem] = 
 
-      au < manifest ; exists ; 2020 ; NZJER: New Zealand Journal of Employment Relations  Volume 45 ; 45 ; 2020 ; >
+      au < ready ; exists ; 2020 ; NZJER: New Zealand Journal of Employment Relations  Volume 45 ; 45 ; 2020 ; >
       au < expected ; exists ; 2021 ; NZJER: New Zealand Journal of Employment Relations  Volume 46 ; 46 ; 2021 ; >
 
   }
@@ -277,8 +277,8 @@
       attr[start_stem] = 
 
       au < crawling ; exists ; 2018 ; Pacific Health Volume 1 ; 1 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; Pacific Health Volume 2 ; 2 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Pacific Health Volume 3 ; 3 ; 2020 ; >
+      au < ready ; exists ; 2019 ; Pacific Health Volume 2 ; 2 ; 2019 ; >
+      au < ready ; exists ; 2020 ; Pacific Health Volume 3 ; 3 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Pacific Health Volume 4 ; 4 ; 2021 ; >
 
   }
@@ -295,7 +295,7 @@
       attr[start_stem] = 
 
       au < crawling ; exists ; 2019 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 1 ; 1 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 2 ; 2 ; 2020 ; >
+      au < ready ; exists ; 2020 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 2 ; 2 ; 2020 ; >
       au < manifest ; exists ; 2021 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 3 ; 3 ; 2021 ; >
 
   }
@@ -336,7 +336,7 @@
       au < crawling ; exists ; 2017 ; Teachers Work Volume 14 ; 14 ; 2017 ; >
       au < crawling ; exists ; 2018 ; Teachers Work Volume 15 ; 15 ; 2018 ; >
       au < crawling ; exists ; 2019 ; Teachers Work Volume 16 ; 16 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Teachers Work Volume 17 ; 17 ; 2020 ; >
+      au < ready ; exists ; 2020 ; Teachers Work Volume 17 ; 17 ; 2020 ; >
       au < exists ; exists ; 2021 ; Teachers Work Volume 18 ; 18 ; 2021 ; >
 
   }
@@ -356,7 +356,7 @@
       au < manifest ; exists ; 2001 ; Working Papers in Communication Volume 1 ; 1 ; 2001 ; >
       au < manifest ; exists ; 2005 ; Working Papers in Communication Volume 2 ; 2 ; 2005 ; >
       au < manifest ; exists ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; >
-      au < manifest ; exists ; 2010 ; Working Papers in Communication Volume 4 ; 4 ; 2010 ; >
+      au < ready ; exists ; 2010 ; Working Papers in Communication Volume 4 ; 4 ; 2010 ; >
       #no further volumes published
   }
 
