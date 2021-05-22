@@ -109,7 +109,7 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      #param[base_url] = http://jasn.asnjournals.org/
+      param[base_url] = http://jasn.asnjournals.org/
 
       au < superseded ; 1990 ; Journal of the American Society of Nephrology Volume 1 [superseded] ; 1 >
       au < superseded ; 1991 ; Journal of the American Society of Nephrology Volume 2 [superseded] ; 2 >
