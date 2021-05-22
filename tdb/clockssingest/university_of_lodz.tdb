@@ -39,6 +39,33 @@
   {
 
       title <
+        name = Acta Universitatis Lodziensis, Folia Biologica et Oecologica ;
+        issn = 2083-8484 ;
+        eissn = 2083-8484
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = foliabiologica
+
+      au < manifest ; exists ; 2009 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2010 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2011 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2012 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2013 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2014 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2015 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2016 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2017 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2018 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2019 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 15 ; 15 ; >
+      au < exists ; exists ; 2020 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 16 ; 16 ; >
+      au < exists ; exists ; 2021 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+      title <
         name = Acta Universitatis Lodziensis Folia Litteraria Polonica ;
         eissn = 2353-1908
       >
