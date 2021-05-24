@@ -18,12 +18,17 @@ public class PubFactoryHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
 
-    NodeFilter[] filters = new NodeFilter[] {
+    NodeFilter[] excludeFilters = new NodeFilter[] {
       // dropdown for issues and volumes. just unnecessary to crawl.
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-volume-issue-selector"),
       // references box has unnecessary urls, and also improperly formatted href attributes that result in 403s
       // e.g. Ajtmh - https://www.ajtmh.org/view/journals/tpmd/92/2/article-p454.xml
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-references-list"),
+        // sidebar references
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-references-list"),
+        // article content references
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "refSection"),
+        // ibid
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "refList"),
       // related content is similarly unnecessary
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-related-content"),
     };
@@ -31,7 +36,7 @@ public class PubFactoryHtmlCrawlFilterFactory implements FilterFactory {
     return new HtmlFilterInputStream(in,
       encoding,
       HtmlNodeFilterTransform.exclude(new OrFilter(
-        filters
+        excludeFilters
       )));
   }
 }
