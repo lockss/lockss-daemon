@@ -105,6 +105,12 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-cover-image"),
         // if an article is added to some 'collection' after being published, it gets ammended with this tag
         HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "tax-collections "),
+        // there is a p tag that contains some copyright text.
+        // this tag occurs sometimes below the abstract.
+        // only way to filter it out is a regex on the content, as there are no attributes associated with the p tag.
+        // trying to be as conservative as possible to not remove possibly the whole abstract if the
+        // nodes get embedded or moved around from some reason.
+        HtmlNodeFilters.tagWithTextRegex("p", "^.{0,20}American Meteorological Society.{0,250}AMS Copyright Policy.{0,250}$"),
     };
     
     return getFilteredInputStream(au, in, encoding,
@@ -112,7 +118,7 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
   }
 
   HtmlTransform xform = new HtmlTransform() {
-    @Override
+    @Override // this tranform removes dynamically generated attribute values from a number of tags and attributes.
     public NodeList transform(NodeList nodeList) throws IOException {
       try {
         nodeList.visitAllNodesWith(new NodeVisitor() {

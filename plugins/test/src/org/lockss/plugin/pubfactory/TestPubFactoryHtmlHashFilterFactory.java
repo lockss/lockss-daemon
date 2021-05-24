@@ -60,6 +60,7 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
     String filtered = StringUtil.fromInputStream(actIn);
+    log.info(filtered);
     assertEquals(expectedStr, filtered);
 
   }
@@ -256,6 +257,50 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   private static final String filteredADataTabId =
     "<a title=\"\" tabIndex=\"0\" role=\"button\" type=\"button\" class=\" c-Button c-Button--medium \">Link Text</a>";
 
+  private static final String amsCopyRightP =
+    "<contributor-notes encoding-type=\"nlm\">" +
+      "<div id=\"n101\">" +
+        "<p>" +
+          "<sup>" +
+            "<label xmlns:ifp=\"http://www.ifactory.com/press\">" +
+              "<inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"wafD190218-op.gif\"></inline-graphic>" +
+            "</label>" +
+          "</sup>" +
+          " Denotes content that is immediately available upon publication as open access." +
+        "</p>" +
+      "</div>" +
+      "<p>" +
+        "� 2020 American Meteorological Society. For information regarding reuse of this content and general copyright information, consult the " +
+        "<a href=\"http://www.ametsoc.org/PUBSReuseLicenses\" target=\"_blank\">AMS Copyright Policy</a>" +
+        " (" +
+        "<a href=\"http://www.ametsoc.org/PUBSReuseLicenses\" target=\"_blank\">www.ametsoc.org/PUBSReuseLicenses</a>" +
+        ")." +
+      "</p>" +
+      "<corresp xmlns:ifp=\"http://www.ifactory.com/press\" id=\"cor1\">" +
+        "<em>Corresponding author</em>: Byung-Ju Sohn, " +
+        "<a href=\"mailto:sohn@snu.ac.kr\">sohn@snu.ac.kr</a>" +
+      "</corresp>" +
+    "</contributor-notes>";
+
+  private static final String filteredAmsCopyRightP =
+      "<contributor-notes encoding-type=\"nlm\">" +
+        "<div id=\"n101\">" +
+          "<p>" +
+            "<sup>" +
+              "<label xmlns:ifp=\"http://www.ifactory.com/press\">" +
+                "<inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"wafD190218-op.gif\"></inline-graphic>" +
+              "</label>" +
+            "</sup>" +
+            " Denotes content that is immediately available upon publication as open access." +
+          "</p>" +
+        "</div>" +
+        "<corresp xmlns:ifp=\"http://www.ifactory.com/press\" id=\"cor1\">" +
+          "<em>Corresponding author</em>" +
+          ": Byung-Ju Sohn, " +
+          "<a href=\"mailto:sohn@snu.ac.kr\">sohn@snu.ac.kr</a>" +
+        "</corresp>" +
+      "</contributor-notes>";
+
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);
   }
@@ -303,4 +348,8 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   public void testADataTabIdFiltering() throws Exception {
     doFilterTest(bau, fact, aDataTabId, filteredADataTabId);
   }
+  public void testCopyRightFiltering() throws Exception {
+    doFilterTest(bau, fact, amsCopyRightP, filteredAmsCopyRightP);
+  }
+
 }
