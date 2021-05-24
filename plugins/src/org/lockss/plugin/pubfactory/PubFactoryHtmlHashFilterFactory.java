@@ -114,9 +114,9 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
-            // ifp:body is not a HtmlTag class, we can use this to our advantage and delete the whole node by matching a
+            // ifp:body is not a tag class, we can use this to our advantage and delete the whole node by matching a
             // regex on the node and removing the whole thing without fear of deleting "child" nodes.
-            if (node.getText().matches("^/?ifp:body.{0,150}$")) {
+            if (node instanceof Tag &&  node.getText().matches("^/?ifp:body.{0,150}$")) {
               return true;
             }
             return false;
