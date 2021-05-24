@@ -301,6 +301,22 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
         "</corresp>" +
       "</contributor-notes>";
 
+  private static final String ifpBody =
+    "<div id=\"s1\" class=\"section border-bottom border-bottom-solid border-bottom-medium\">" +
+      "<ifp:body xmlns:ifp=\"http://www.ifactory.com/press\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" encoding-type=\"nlm-3.0\">" +
+      "<body>" +
+        "<h2>"+
+      "</body>" +
+      "</ifp:body>" +
+    "</div>";
+
+  private static final String filterifpBody =
+    "<div id=\"s1\" class=\"section border-bottom border-bottom-solid border-bottom-medium\">" +
+      "<body>" +
+        "<h2>"+
+      "</body>" +
+    "</div>";
+
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);
   }
@@ -350,6 +366,9 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   }
   public void testCopyRightFiltering() throws Exception {
     doFilterTest(bau, fact, amsCopyRightP, filteredAmsCopyRightP);
+  }
+  public void testIFPFiltering() throws Exception {
+    doFilterTest(bau, fact, ifpBody, filterifpBody);
   }
 
 }

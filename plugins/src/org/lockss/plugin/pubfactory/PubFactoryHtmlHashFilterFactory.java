@@ -111,6 +111,17 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         // trying to be as conservative as possible to not remove possibly the whole abstract if the
         // nodes get embedded or moved around from some reason.
         HtmlNodeFilters.tagWithTextRegex("p", "^.{0,20}American Meteorological Society.{0,250}AMS Copyright Policy.{0,250}$"),
+        new NodeFilter() {
+          @Override
+          public boolean accept(Node node) {
+            // ifp:body is not a HtmlTag class, we can use this to our advantage and delete the whole node by matching a
+            // regex on the node and removing the whole thing without fear of deleting "child" nodes.
+            if (node.getText().matches("^/?ifp:body.{0,150}$")) {
+              return true;
+            }
+            return false;
+          }
+        }
     };
     
     return getFilteredInputStream(au, in, encoding,
