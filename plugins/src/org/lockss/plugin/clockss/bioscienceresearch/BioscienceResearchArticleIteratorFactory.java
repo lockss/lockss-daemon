@@ -18,14 +18,14 @@ public class BioscienceResearchArticleIteratorFactory implements ArticleIterator
 
     protected static Logger log = Logger.getLogger(BioscienceResearchArticleIteratorFactory.class);
 
-    protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
-    private static final String PATTERN_TEMPLATE = "\"%s%d.*/[^/]+\",base_url,year";
+    protected static final String ROOT_TEMPLATE = "\"%s%s\",base_url,directory";
+    private static final String PATTERN_TEMPLATE = "\"%s%s.*/[^/]+\",base_url,directory";
 
-    // https://clockss-test.lockss.org/sourcefiles/bioscienceresearch-released/2021/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf
-    // https://clockss-test.lockss.org/sourcefiles/bioscienceresearch-released/2021/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/548.xml
+    // https://clockss-test.lockss.org/sourcefiles/bioscienceresearch-released/2021_01/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf
+    // https://clockss-test.lockss.org/sourcefiles/bioscienceresearch-released/2021_01/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/548.xml
 
-    // <base_url><year>/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/548.xml
-    // <base_url><year>/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf
+    // <base_url><directory>/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/548.xml
+    // <base_url><directory>/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf
     // this is a lot of group capturing, but since we need the bit between the "-" and second "/"
     // this string occurs before the \d+.pdf url
     protected static final Pattern XML_PATTERN = Pattern.compile("/([^-/]*)-([^/]*)/([^/]*/[^/]*)/(\\D*)(\\d+)\\.xml$");

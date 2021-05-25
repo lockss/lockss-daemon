@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.bioscienceresearch.ClockssBioscienceResearchSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.bioscienceresearch.ClockssBioscienceResearchDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
@@ -38,18 +38,18 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Bioscience Research Institute Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"Bioscience Research Institute Dir Source Plugin (CLOCKSS), Base URL %s, Year %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Bioscience Research Institute Source Plugin (CLOCKSS)</string>
+    <string>Bioscience Research Institute Dir Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <!-- https://clockss-test.lockss.org/sourcefiles/bioscienceresearch-released/2021/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf -->
-      <!-- <base_url><year>/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf -->
-      <string>"^%s%d/.+\.pdf$", base_url, year</string>
+      <!-- <base_url><directory>/Frontiers%20in%20Bioscience-Scholar/FBS%20Volume%2013%20(2021)/FBS%20Volume%2013%20issue%201/Scholar548.pdf -->
+      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
     </list>
   </entry>
   <entry>
