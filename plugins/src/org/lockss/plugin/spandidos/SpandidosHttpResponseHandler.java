@@ -37,7 +37,6 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ContentValidationException;
-import org.lockss.plugin.highwire.HighWirePressHttpResponseHandler;
 import org.lockss.util.Logger;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.CacheResultHandler;
