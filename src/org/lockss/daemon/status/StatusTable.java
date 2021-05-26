@@ -502,6 +502,7 @@ public class StatusTable {
     private boolean bold = false;
     private Layout layout = Layout.None;
     private String displayStr;  // if present, human-friendly display string
+    private String hoverText;  // if present, hover text
 
     /** Create a DisplayedValue with the specified value.  Any
      * non-EmbeddedValue value is legal.
@@ -606,6 +607,22 @@ public class StatusTable {
     /** Get the layout */
     public Layout getLayout() {
       return layout;
+    }
+
+    /** Set hover text.
+     * @param hoverText the hover text
+     */
+    public DisplayedValue setHoverText(String hoverText) {
+      if (hoverText == null) {
+	throw new IllegalArgumentException("null hoverText");
+      }
+      this.hoverText = hoverText;
+      return this;
+    }
+
+    /** Get the hover text */
+    public String getHoverText() {
+      return hoverText;
     }
 
     public String toString() {

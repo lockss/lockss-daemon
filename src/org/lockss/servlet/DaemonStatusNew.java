@@ -834,6 +834,10 @@ public class DaemonStatusNew extends LockssServlet {
 	str = str + addFootnote(foot, notFirst);
         notFirst = true;
       }
+      String hoverText = aval.getHoverText();
+      if (!StringUtil.isNullString(hoverText)) {
+        str = "<div title=\"" + hoverText + "\">" + str + "</div>";
+      }
       return str;
     } else {
       String str = convertDisplayString(val, type);
