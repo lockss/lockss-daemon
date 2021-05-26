@@ -158,6 +158,7 @@ public class MersenneXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
 
 	    	List<String> returnList = new ArrayList<String>();
 	    	if (shouldIncludeThisMetadata) {
+				log.debug3("shouldIncludeThisMetadata, pdfName is " + pdfName);
 				returnList.add(pdfName);
 			}
 	    	return returnList;
