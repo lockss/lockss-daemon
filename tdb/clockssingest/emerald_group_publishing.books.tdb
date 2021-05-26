@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Emerald Group Publishing Testing ;
+    #info[back] = 1899 ;
+    info[back] = 2000 ;
+    info[contract] = 2015 ;
+    info[tester] = 8 ;
+    info[poller] = 3
+  >
+
+  plugin = org.lockss.plugin.emerald.ClockssEmerald2020BooksPlugin
+  param[base_url] = https://www.emerald.com/
+  implicit < status ; status2 ; year ; name ; param[book_uri] ; hidden[proxy] >
+
+  {
+  
+   title <
+     name = Testing ;
+     type = bookSeries
+    >
+
+    au < manifest ; exists ; 2021 ; Tesint book title 10.1108/S1876-0562(1991)91A ; 10.1108/S1876-0562(1991)91A ; >
+    au < manifest ; exists ; 2021 ; Tesint book title 10.1016/S0743-4154(2000)18_Part_1 ; 10.1016/S0743-4154(2000)18_Part_1 ; > #(testing comment here)
+    au < manifest ; exists ; 2021 ; Tesint book title 10.1108/S1530-353520148B ; 10.1108/S1530-353520148B; >
+
+  }
+}
