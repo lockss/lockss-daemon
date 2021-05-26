@@ -750,7 +750,7 @@ public class DisplayContentStatus extends LockssServlet {
 	str = str + addFootnote(foot, notFirst);
         notFirst = true;
       }
-      java.util.List<String> footnotes = aval.getFootnotes();
+      String hoverText = aval.getHoverText();
       if (!StringUtil.isNullString(hoverText)) {
         str = "<div title=\"" + hoverText + "\">" + str + "</div>";
       }
