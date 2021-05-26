@@ -346,12 +346,13 @@ class HTTPResultMapping extends PluginStatus implements StatusAccessor {
   private final List colDescs =
     ListUtil.list(
 		  new ColumnDescriptor("trigger", "Fetch Result",
-				       ColumnDescriptor.TYPE_STRING),
+				       ColumnDescriptor.TYPE_STRING,
+                                       "The HTTP response status that triggers this action. Bold items are Plugin customizations."),
 		  new ColumnDescriptor("retries", "Retries",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("action", "Action",
-				       ColumnDescriptor.TYPE_STRING)
-		  );
+				       ColumnDescriptor.TYPE_STRING,
+                                       "The action the crawler takes when this error is signalled. Abort: the crawl fails immediately. Fail: the crawl continues, but will be marked unsuccessful when it finishes. (blank): no error is signaled and the crawl continues."));
 
   HTTPResultMapping(LockssDaemon daemon, PluginManager mgr) {
     super(daemon, mgr);
