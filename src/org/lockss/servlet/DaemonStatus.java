@@ -855,6 +855,7 @@ public class DaemonStatus extends LockssServlet {
 	: getDisplayString1(innerVal, type);
       String color = dval.getColor();
       String footnote = dval.getFootnote();
+      String hoverText = dval.getHoverText();
       if (color != null) {
 	str = "<font color=" + color + ">" + str + "</font>";
       }
@@ -863,6 +864,9 @@ public class DaemonStatus extends LockssServlet {
       }
       if (footnote != null) {
 	str = str + addFootnote(footnote);
+      }
+      if (!StringUtil.isNullString(hoverText)) {
+        str = "<div title=\"" + hoverText + "\">" + str + "</div>";
       }
       return str;
     } else {

@@ -822,6 +822,7 @@ public class DaemonStatusNew extends LockssServlet {
 	: getDisplayString1(aval.getValue(), type);
       String color = aval.getColor();
       String footnote = aval.getFootnote();
+      String hoverText = aval.getHoverText();
       if (color != null) {
 	str = "<font color=" + color + ">" + str + "</font>";
       }
@@ -830,6 +831,9 @@ public class DaemonStatusNew extends LockssServlet {
       }
       if (footnote != null) {
 	str = str + addFootnote(footnote);
+      }
+      if (!StringUtil.isNullString(hoverText)) {
+        str = "<div title=\"" + hoverText + "\">" + str + "</div>";
       }
       return str;
     } else {
