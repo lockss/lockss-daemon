@@ -230,7 +230,7 @@ Args:
   <property name="postgresql-jdbc.jar"
                                   value="${lib}/postgresql-42.2.5.jre7.jar" />
   <property name="mysql-connector-java.jar"
-				  value="${lib}/mysql-connector-java-5.1.29-bin.jar" />
+				  value="${lib}/mysql-connector-java-8.0.24.jar" />
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
