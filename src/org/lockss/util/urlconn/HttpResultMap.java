@@ -48,7 +48,7 @@ public class HttpResultMap implements CacheResultMap {
   static Logger log = Logger.getLogger("HttpResultMap");
 
   int[] SuccessCodes = {200, 203, 304};
-  int[] SameUrlCodes = { 408, 409, 413, 500, 502, 503, 504};
+  int[] RetrySameUrlCodes = { 408, 409, 413, 500, 502, 503, 504};
   int[] MovePermCodes = {301};
   int[] MoveTempCodes = { 307, 303, 302};
   int[] UnimplementedCodes = {};
@@ -161,8 +161,10 @@ public class HttpResultMap implements CacheResultMap {
 
   /** Value in exceptionTable map, specified by plugin: either the class of
    * an exception to throw or a CacheResultHandler instance. */
-  abstract static class ExceptionInfo {
+  public abstract static class ExceptionInfo {
     String fmt;
+
+    public enum Type {Class, Handler};
 
     ExceptionInfo(String fmt) {
       this.fmt = fmt;
@@ -170,6 +172,10 @@ public class HttpResultMap implements CacheResultMap {
 
     ExceptionInfo() {
     }
+
+    public abstract Type getType();
+    public abstract Class getExceptionClass();
+    public abstract CacheResultHandler getHandler();
 
     /** Return the CacheException appropriate for the event, either from
      * the specified class or CacheResultHandler */
@@ -219,7 +225,7 @@ public class HttpResultMap implements CacheResultMap {
     }
 
     /** Wraps a plugin-supplied CacheResultHandler */
-    static class Handler extends ExceptionInfo {
+    public static class Handler extends ExceptionInfo {
       CacheResultHandler handler;
       
       Handler(CacheResultHandler handler) {
@@ -229,6 +235,19 @@ public class HttpResultMap implements CacheResultMap {
       Handler(CacheResultHandler handler, String fmt) {
 	super(fmt);
 	this.handler = handler;
+      }
+
+      @Override
+      public Type getType() {
+        return Type.Handler;
+      }
+      @Override
+      public Class getExceptionClass() {
+        throw new UnsupportedOperationException();
+      }
+      @Override
+      public CacheResultHandler getHandler() {
+        return handler;
       }
 
       @Deprecated
@@ -246,13 +265,21 @@ public class HttpResultMap implements CacheResultMap {
 	return evt.invokeHandler(handler, au, url);
       }
 
+      public boolean equals(Object o) {
+        if (o instanceof Handler) {
+          Handler oh = (Handler)o;
+          return handler.equals(oh.handler);
+        }
+        return false;
+      }
+
       public String toString() {
 	return "[EIH: " + handler + "]";
       }
     }
 
     /** Wraps a CacheException class */
-    static class Cls extends ExceptionInfo {
+    public static class Cls extends ExceptionInfo {
       Class ex;
       
       Cls(Class ex) {
@@ -262,6 +289,19 @@ public class HttpResultMap implements CacheResultMap {
       Cls(Class ex, String fmt) {
 	super(fmt);
 	this.ex = ex;
+      }
+
+      @Override
+      public Type getType() {
+        return Type.Class;
+      }
+      @Override
+      public Class getExceptionClass() {
+        return ex;
+      }
+      @Override
+      public CacheResultHandler getHandler() {
+        throw new UnsupportedOperationException();
       }
 
       @Deprecated
@@ -283,6 +323,14 @@ public class HttpResultMap implements CacheResultMap {
 	return exception;
       }
 
+      public boolean equals(Object o) {
+        if (o instanceof Cls) {
+          Cls oh = (Cls)o;
+          return ex.equals(oh.ex);
+        }
+        return false;
+      }
+
       public String toString() {
 	return "[EIC: " + ex + "]";
       }
@@ -298,7 +346,7 @@ public class HttpResultMap implements CacheResultMap {
   protected void initExceptionTable() {
     // HTTP result codes
     storeArrayEntries(SuccessCodes, CacheSuccess.class);
-    storeArrayEntries(SameUrlCodes,
+    storeArrayEntries(RetrySameUrlCodes,
                       CacheException.RetrySameUrlException.class);
     storeArrayEntries(MovePermCodes,
                       CacheException.NoRetryPermUrlException.class);
@@ -554,6 +602,10 @@ public class HttpResultMap implements CacheResultMap {
 	     && ((exClass = exClass.getSuperclass()) != null
 		 && exClass != Exception.class));
     return resultEi;
+  }
+
+  public Map<Object,ExceptionInfo> getExceptionMap() {
+    return Collections.unmodifiableMap(exceptionTable);
   }
 
   public String toString() {
