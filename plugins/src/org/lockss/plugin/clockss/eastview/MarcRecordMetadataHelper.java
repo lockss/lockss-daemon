@@ -65,12 +65,14 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
   private static Pattern DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
 
+  public static String zippedFolderName;
+
 
   @Override
   public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter) throws IOException, PluginException {
 
     try {
-
+      
       //Ignore the ".txt" file from metadata
       if (!cu.getUrl().contains(".txt")) {
         log.debug(String.format("Url: %s will be avoid ", cu.getUrl()));
@@ -179,7 +181,7 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
           am.put(MetadataField.FIELD_PUBLISHER, publisherName);
 
           // Setup PDF
-          String zippedFolderName = EastviewMarcXmlSchemaHelper.getZippedFolderName();
+          String zippedFolderName = getZippedFolderName();
 
           String fileNum = MARC_pdf;
           String cuBase = FilenameUtils.getFullPath(cu.getUrl());
@@ -301,6 +303,14 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
       return false;
     }
     return true;
+  }
+
+  public static String getZippedFolderName() {
+    return zippedFolderName;
+  }
+
+  public static void setZippedFolderName(String fname) {
+    zippedFolderName = fname;
   }
 
 }
