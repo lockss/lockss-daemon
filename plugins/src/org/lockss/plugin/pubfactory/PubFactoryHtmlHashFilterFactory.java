@@ -114,7 +114,8 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
-            // ifp:body is not a tag class, we can use this to our advantage and delete the whole node by matching a
+            // ifp:body is not a tag class, meaning it will never have children
+            // we can use this to our advantage and delete the whole node (as well as the End version) by matching a
             // regex on the node and removing the whole thing without fear of deleting "child" nodes.
             if (node instanceof Tag &&  node.getText().matches("^/?ifp:body.{0,150}$")) {
               return true;
@@ -196,6 +197,27 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
               // <a data-tab-id="previewPdf-43621" title=""  tabIndex="0" role="button" type="button" class=" c-Button c-Button--medium ">
               if (tag.getAttribute("data-tab-id") != null) {
                 tag.removeAttribute("data-tab-id");
+              }
+            /*
+            path to some svgs has a hashed folder name
+            <figure>
+              <figcaption>
+                <span style="font-variant: small-caps;">
+                 Fig</span>
+                 . 2.
+              </figcaption>
+              -<img data-image-src="/view/journals/phoc/50/9/full-jpoD190077-f2.jpg" height="625" width="1023" src="/skin/8f11d65e036447dfc696ad934586604015e8c19b/img/Blank.svg" class="lazy-load" alt="Fig. 2."/>
+              +<img data-image-src="/view/journals/phoc/50/9/full-jpoD190077-f2.jpg" height="625" width="1023" src="/skin/cb453204ff7ce459e12f81e25b6f22a656d02164/img/Blank.svg" class="lazy-load" alt="Fig. 2."/>
+              ...
+            </figure>
+            also
+            <div ...class="tableWrap..." >
+              <img data-image-src="/view/journals/phoc/50/8/full-jpoD200034-t1.jpg" src="/skin/8f11d65e036447dfc696ad934586604015e8c19b/img/Blank.svg" class="lazy-load" alt="Table 1." width="" height="">
+            */
+            } else if ("img".equals(tagName)) {
+              if (tag.getAttribute("src") != null && tag.getAttribute("src").contains("/skin/")) {
+                log.info("removing: " + tag);
+                tag.removeAttribute("src");
               }
             }
           }
