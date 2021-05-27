@@ -410,7 +410,9 @@ def _do_hash(options, host):
     else:
         wsResult = hash_asynchronously_au_url(host, options._u, options._p, options.auid, options.url)
     if wsResult is None: return host, False
+    if wsResult.errorMessage: print("\terror: " + wsResult.errorMessage); return host, False
     reqid = wsResult.requestId
+    if reqid is None: return host, False
     while True:
         time.sleep(options.wait)
         res = get_asynchronous_hash_result(host, options._u, options._p, reqid)
