@@ -60,6 +60,8 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
   Found the following content on right side of the pdf landing page:
   https://www.emerald.com/insight/publication/doi/10.1016/S1529-2134(1995)2_Part_2
 
+  <meta name="description" content="Advances in Austrian Economics">
+
   <div class="row bg-pale-blue mt-3">
     <div class="col-12 mt-3">
        <dl>
@@ -114,6 +116,8 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
    </div>
   */
 
+  private static Pattern PUBLICATION_TITLE_PAT = Pattern.compile("\\s*<meta name=\"description\" content=\"(.*)\">\\s*");
+
   private static Pattern DOI_PAT = Pattern.compile("\\s*<dd[^>]*>(10[.][0-9a-z]{4,6}/.*)<\\/dd>\\s*");
   private static Pattern PUBLICATION_DATE_PAT = Pattern.compile("\\s*<dd class=\"intent_book_publication_date.*\">(.*)</dd>\\s*");
 
@@ -136,6 +140,7 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
   public static class Emerald2020BooksMetadataExtractor
           implements FileMetadataExtractor {
 
+    private String publicationTitle = null;
     private String doi = null;
     private String publicationDate = null;
     private String isbn = null;
@@ -143,12 +148,14 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
     private List<String> authors = new ArrayList<String>();
 
     //Keep records of raw html source
+    private String publicationTitleRaw = null;
     private String doiRaw = null;
     private String publicationDateRaw = null;
     private String isbnRaw = null;
     private String issnRaw = null;
     private List<String> authorsRaw = new ArrayList<String>();;
 
+    private boolean isPublicationTitleFound = false;
     private boolean isDoiFound = false;
     private boolean isPublicationDateFound = false;
     private boolean isISBNFound = false;
@@ -172,7 +179,12 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
 
         ArticleMetadata am = extractMetadataFromHtmlSource(cu);
 
-        if (doi != null) {
+        if (publicationTitle != null) {
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, publicationTitle);
+          am.putRaw("meta_description_raw_html_source", publicationTitleRaw);
+        }
+
+        if (doi != null && !MetadataUtil.isIssn(doi)) {
           am.put(MetadataField.FIELD_DOI, doi);
           am.putRaw("doi_raw_html_source", doiRaw);
         }
@@ -182,12 +194,12 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
           am.putRaw("publication_date_html_source", publicationDateRaw);
         }
 
-        if (isbn != null) {
+        if (isbn != null && MetadataUtil.isIsbn(isbn)) {
           am.put(MetadataField.FIELD_ISBN, isbn);
           am.putRaw("isbn_raw_html_source", isbnRaw);
         }
 
-        if (issn != null) {
+        if (issn != null && MetadataUtil.isIssn(issn)) {
           am.put(MetadataField.FIELD_ISSN, issn);
           am.putRaw("issn_raw_html_source", issnRaw);
         }
@@ -198,6 +210,8 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
             am.putRaw("author_raw_html_source", authorsRaw.get(i));
           }
         }
+
+        // Set up publication title
 
         // Set publication type
         am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
@@ -248,6 +262,18 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
 
     private void findingMetadata(String line, int lineCount) {
 
+      Matcher m0 = PUBLICATION_TITLE_PAT.matcher(line);
+
+      // Get doi
+      if(!isPublicationTitleFound && m0.matches()){
+        isPublicationTitleFound = true;
+        publicationTitle = m0.group(1);
+        publicationTitleRaw = line.trim();
+        log.debug3("Emerald2020BooksMetadataExtractorFactory publication title: " + publicationTitle);
+
+        return;
+      }
+
       Matcher m1 = DOI_PAT.matcher(line);
 
       // Get doi
@@ -284,17 +310,15 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
       }
 
       // We expect ISBN found at the next line after  <dt class="h3">ISBN</dt>
-      if (lineCount - isbnFoundAtLineNumber >= 1) {
         Matcher isbn_m = ISBN_PAT.matcher(line);
 
         if (isISBNFound && isbn_m.matches()) {
           isbn = isbn_m.group(1);
           isbnRaw = line.trim();
           log.debug3("Emerald2020BooksMetadataExtractorFactory : ISBNFound: " + isbn);
-
+          isISBNFound = false; //reset it once found
           return;
         }
-      }
 
       // Get ISSN
       Matcher m4 = ISSN_FOUND_PAT.matcher(line);
@@ -308,24 +332,17 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
       }
 
       // We expect ISSN found at the next line after  <dt class="h3">Book series ISSN</dt>
-      if (lineCount - issnFoundAtLineNumber >= 1) {
 
-        log.debug3("Emerald2020BooksMetadataExtractorFactory ISSN line: " + line + ", at line#:" + lineCount);
+      Matcher issn_m = ISSN_PAT.matcher(line);
 
-        Matcher issn_m = ISSN_PAT.matcher(line);
+      if (isISSNFound && issn_m.matches()) {
+        issn = issn_m.group(1);
+        issnRaw = line.trim();
+        log.debug3("Emerald2020BooksMetadataExtractorFactory ISSN line====: " + line + ", at line#:" + lineCount);
 
-        if (isISSNFound && issn_m.matches()) {
-          issn = issn_m.group(1);
-          issnRaw = line.trim();
-          log.debug3("Emerald2020BooksMetadataExtractorFactory ISSN line====: " + line + ", at line#:" + lineCount);
-
-          log.debug3("Emerald2020BooksMetadataExtractorFactory : ISSNFound: " + issn);
-
-          return;
-        }  else {
-          log.debug3("Emerald2020BooksMetadataExtractorFactory ISSN line---: " + line + ", at line#:" + lineCount);
-
-        }
+        log.debug3("Emerald2020BooksMetadataExtractorFactory : ISSNFound: " + issn);
+        isISSNFound = false;
+        return;
       }
 
       // Get Author
