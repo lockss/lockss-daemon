@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.pubfactory;
 
+import org.apache.cxf.common.util.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
@@ -60,7 +61,7 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
     String filtered = StringUtil.fromInputStream(actIn);
-    log.info(filtered);
+    //log.info(filtered);
     assertEquals(expectedStr, filtered);
 
   }
@@ -317,6 +318,26 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
       "</body>" +
     "</div>";
 
+  private static final String figureImgSrc =
+    "<figure>" +
+      "<figcaption>" +
+        "<span style=\"font-variant: small-caps;\">" +
+        "Fig</span>" +
+        ". 2." +
+      "</figcaption>" +
+      "<img data-image-src=\"/view/journals/phoc/50/9/full-jpoD190077-f2.jpg\" height=\"625\" width=\"1023\" src=\"/skin/8f11d65e036447dfc696ad934586604015e8c19b/img/Blank.svg\" class=\"lazy-load\" alt=\"Fig. 2.\"/>" +
+    "</figure>";
+
+  private static final String filteredFigureImgSrc =
+    "<figure>" +
+      "<figcaption>" +
+        "<span style=\"font-variant: small-caps;\">" +
+        "Fig</span>" +
+        ". 2." +
+      "</figcaption>" +
+      "<img data-image-src=\"/view/journals/phoc/50/9/full-jpoD190077-f2.jpg\" height=\"625\" width=\"1023\" class=\"lazy-load\" alt=\"Fig. 2.\"/>" +
+    "</figure>";
+
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);
   }
@@ -370,5 +391,7 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   public void testIFPFiltering() throws Exception {
     doFilterTest(bau, fact, ifpBody, filterifpBody);
   }
-
+  public void testFISFiltering() throws Exception {
+    doFilterTest(bau, fact, figureImgSrc, filteredFigureImgSrc);
+  }
 }
