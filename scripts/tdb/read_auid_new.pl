@@ -1,5 +1,18 @@
 #!/usr/bin/perl -w
 
+# PERL script to check manifest pages for existence and formatting.
+#
+# usage: $. scripts/tdb/tdbout --testing --auid tdb/prod/bioscientifica.tdb | scripts/tdb/read_auid_new.pl
+#
+# Inputs: a list of auids (often piped from tdbout)
+# Outputs: a line for each auid
+#   <RESULT>, <AU Name>, <auid>, <manifest url>
+#   and totals statistics
+#   <Time>
+#   <Total proper manifest pages found>
+#   <Total missing manifest pages>
+#   <Total auids that were not found>  (likely need to add the 'if' block in this file)
+
 use URI::Escape;
 use Getopt::Long;
 use LWP::UserAgent;
@@ -1103,9 +1116,13 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif (($plugin eq "BerghahnJournalsPlugin") ||
-           ($plugin eq "AMetSoc2021Plugin")) {
-      $url = sprintf("%slockss-manifest/journal/%s/volume/%s",
+  } elsif (($plugin eq "BerghahnJournalsPlugin")   ||
+           ($plugin eq "PubFactoryJournalsPlugin") ||
+           ($plugin eq "AjtmhPlugin")      ||
+           ($plugin eq "AMetSoc2021Plugin")      ||
+           ($plugin eq "BioscientificaPlugin")      ||
+           ($plugin eq "ManchesterUniversityPressPlugin")) {
+      $url = sprintf("%slockss-manifest/journal/%s/%s",
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
@@ -1136,8 +1153,10 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif (($plugin eq "ClockssBerghahnJournalsPlugin") ||
-           ($plugin eq "ClockssAMetSoc2021Plugin")) {
-      $url = sprintf("%slockss-manifest/journal/%s/volume/%s",
+           ($plugin eq "ClockssAjtmhPlugin")            ||
+           ($plugin eq "ClockssAMetSoc2021Plugin")      ||
+           ($plugin eq "ClockssManchesterUniversityPressPlugin")) {
+      $url = sprintf("%slockss-manifest/journal/%s/%s",
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
