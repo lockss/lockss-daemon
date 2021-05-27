@@ -1,11 +1,11 @@
 {
   publisher <
-    name = BioScientifica ;
+    name = Bioscientifica ;
     info[platform] = ingenta/pubfactory. 5 titles.
   >
   #####Moved from highwire to pubfactory
 
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pubfactory.bioscientifica.BioscientificaPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
 {
