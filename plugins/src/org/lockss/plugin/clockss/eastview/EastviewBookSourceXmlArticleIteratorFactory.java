@@ -141,6 +141,7 @@ public class EastviewBookSourceXmlArticleIteratorFactory
 
           if (txtIndex > -1) {
             zipFolderPath = textFileName.replace(STATIC_TEXT_FILE_PATH, "");
+            MarcRecordMetadataHelper.setZippedFolderName(zipFolderPath);
 
           }
 
@@ -167,7 +168,6 @@ public class EastviewBookSourceXmlArticleIteratorFactory
           ArticleMetadata am = new ArticleMetadata();
           myEmitter.emitMetadata(cu, am);
           // Set the zipped folder name in the schema helper, so it can be used to construct access url
-          MarcRecordMetadataHelper.setZippedFolderName(zipFolderPath);
           AuUtil.safeRelease(cu);
         }
       }
