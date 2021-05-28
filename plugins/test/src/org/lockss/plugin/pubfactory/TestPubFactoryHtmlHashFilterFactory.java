@@ -338,6 +338,28 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
       "<img data-image-src=\"/view/journals/phoc/50/9/full-jpoD190077-f2.jpg\" height=\"625\" width=\"1023\" class=\"lazy-load\" alt=\"Fig. 2.\"/>" +
     "</figure>";
 
+  private static final String offSiteText =
+    "<ul>" +
+      "<li>" +
+        "<span class=\" text-body1 off-site-access-message-text \">" +
+          "When you leave your institution you will be able to access content until August 26th on this device. Coming back to your campus will extend your access." +
+        "</span>" +
+      "</li>" +
+      "<li>" +
+        "<span class=\" off-site-access-message-spacers \">" +
+        "</span>" +
+      "</li>" +
+    "</ul>";
+
+  private static final String filteredOffSiteText =
+    "<ul>" +
+      "<li>" +
+      "</li>" +
+      "<li>" +
+      "</li>" +
+    "</ul>";
+
+
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);
   }
@@ -393,5 +415,8 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   }
   public void testFISFiltering() throws Exception {
     doFilterTest(bau, fact, figureImgSrc, filteredFigureImgSrc);
+  }
+  public void testOffsiteTextFiltering() throws Exception {
+    doFilterTest(bau, fact, offSiteText, filteredOffSiteText);
   }
 }

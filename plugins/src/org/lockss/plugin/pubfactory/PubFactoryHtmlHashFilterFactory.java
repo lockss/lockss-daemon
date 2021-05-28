@@ -105,6 +105,8 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-cover-image"),
         // if an article is added to some 'collection' after being published, it gets ammended with this tag
         HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "tax-collections "),
+        // offsite-access-message (for bioscientifica only?)
+        HtmlNodeFilters.tagWithAttributeRegex("span", "class", "off-site-access-message"),
         // there is a p tag that contains some copyright text.
         // this tag occurs sometimes below the abstract.
         // only way to filter it out is a regex on the content, as there are no attributes associated with the p tag.
@@ -216,7 +218,7 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
             */
             } else if ("img".equals(tagName)) {
               if (tag.getAttribute("src") != null && tag.getAttribute("src").contains("/skin/")) {
-                log.info("removing: " + tag);
+                log.debug3("removing: " + tag);
                 tag.removeAttribute("src");
               }
             }
