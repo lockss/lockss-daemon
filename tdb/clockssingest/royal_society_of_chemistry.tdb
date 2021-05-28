@@ -554,8 +554,8 @@
       au < finished ; manifest ; 2018 ; Faraday Discussions Volume 207 ; 207 ; 2018 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Faraday Discussions Volume 208 ; 208 ; 2018 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Faraday Discussions Volume 209 ; 209 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 210 ; 210 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2018 ; Faraday Discussions Volume 210 ; 210 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Faraday Discussions Volume 211 ; 211 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Faraday Discussions Volume 212 ; 212 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
 
       au < finished ; manifest ; 2019 ; Faraday Discussions Volume 213 ; 213 ; 2019 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
@@ -611,11 +611,11 @@
       au < finished ; finished ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Green Chemistry Volume 18 ; 18 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; Green Chemistry Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2017 ; Green Chemistry Volume 19 ; 19 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Green Chemistry Volume 20 ; 20 ; 2018 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Green Chemistry Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2019 ; Green Chemistry Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Green Chemistry Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2021 ; Green Chemistry Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
 
@@ -677,9 +677,9 @@
       au < finished ; finished ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 ; http://pubs.rsc.org/ ; >
       au < finished ; finished ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2016 ; Journal of Analytical Atomic Spectrometry Volume 31 ; 31 ; 2016 ; http://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; Journal of Analytical Atomic Spectrometry Volume 32 ; 32 ; 2017 ; http://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Journal of Analytical Atomic Spectrometry Volume 31 ; 31 ; 2016 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Journal of Analytical Atomic Spectrometry Volume 32 ; 32 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; Journal of Analytical Atomic Spectrometry Volume 33 ; 33 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Journal of Analytical Atomic Spectrometry Volume 34 ; 34 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Journal of Analytical Atomic Spectrometry Volume 35 ; 35 ; 2020 ; https://pubs.rsc.org/ ; >
