@@ -48,7 +48,7 @@ Args:
   -Dforkc=true             Run compiler in a separate jvm.
   -Dhalt=false             Run all tests in group, even if some fail.
   -Dinclude=path           Include matching tests.
-  -Djavaversion=1.7        The version of Java accepted/targeted.
+  -Djavaversion=1.8        The version of Java accepted/targeted.
   -Dkeeptempfiles=true     Don't delete temp files after tests run.
   -Dlistfiles=true         List the source files that will be compiled.  Use if
                               a compile step runs when nothing should need to
@@ -69,7 +69,7 @@ Args:
   post-commit-test args:
   -Dbranch=tag             Branch to checkout (defaults to current branch)
   -Dcopylib=true           If true, lib jars are copied to temp build dir,
-                           not checked out from svn.
+                           not checked out from git.
   -Dtarget=target          Target that post-commit-test will build.
 
 
@@ -104,7 +104,7 @@ Args:
   <property file="${user.home}/.lockssprops"/>
 
   <!-- Defaults -->
-  <property name="javaversion" value="1.7" />
+  <property name="javaversion" value="1.8" />
   <property name="loglevel" value="" />
   <property name="showoutput" value="no" />
   <property name="filtertrace" value="yes" />
@@ -136,10 +136,9 @@ Args:
   <!--  Ignore system classpath, to ensure consistent builds -->
   <property name="build.sysclasspath" value="ignore" />
 
-  <!--  svn-related -->
-  <property name="svn.module.default" value="lockss-daemon" />
-  <property name="svn.dir"       value="lockss-daemon" />
-  <property name="svn.anon.root"
+  <!--  git-related -->
+  <property name="git.dir"       value="lockss-daemon" />
+  <property name="git.anon.root"
 		  value="git@github.com:lockss/lockss-daemon.git" />
   <!-- XXX should get this from -->
 
@@ -920,6 +919,12 @@ Test results in ${test.results}
      </or>
     </condition>
 
+    <condition property="is-java-eq-1.8">
+     <or>
+      <equals arg1="1.8" arg2="${my.ant.java.version}"/>
+     </or>
+    </condition>
+
     <condition property="is-java-ge-1.7">
      <or>
       <equals arg1="1.7" arg2="${my.ant.java.version}"/>
@@ -933,23 +938,23 @@ Test results in ${test.results}
      </or>
     </condition>
 
-    <!-- Require at least Java 1.7, but allow builds if force is set -->
+    <!-- Require at least Java 1.8, but allow builds if force is set -->
     <condition property="is-satisfy-java-min-version">
      <or>
-      <istrue value="${is-java-ge-1.7}" />
+      <istrue value="${is-java-ge-1.8}" />
       <istrue value="${force}" />
      </or>
     </condition>
 
     <fail unless="is-satisfy-java-min-version">
-Java ${my.ant.java.version} found, 1.7 required
+Java ${my.ant.java.version} found, 1.8 required
     </fail>
 
     <!-- Determine whether java version is compatible with release
 	 requirements -->
     <condition property="is-satisfy-java-max-version">
      <or>
-      <istrue value="${is-java-eq-1.7}" />
+      <istrue value="${is-java-eq-1.8}" />
      </or>
     </condition>
 
@@ -963,7 +968,7 @@ Java ${my.ant.java.version} found, 1.7 required
 
   <target name="require.release.java.version" depends="prepare">
     <fail unless="is-satisfy-java-max-version"
-          message="This target must be run with Java 1.7; you are using Java ${my.ant.java.version}"/>
+          message="This target must be run with Java 1.8; you are using Java ${my.ant.java.version}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -990,12 +995,6 @@ Java ${my.ant.java.version} found, 1.7 required
       <property name="logtarget" value="" />
      </else>
     </if>
-  </target>
-
-  <target name="-check-if-1.7" depends="prepare" >
-    <fail unless="is-java-ge-1.7">
-The target you have selected requires compiling under JDK 1.7.
-    </fail>
   </target>
 
   <target name="prepare.run.test"
@@ -2974,12 +2973,12 @@ Test results in ${test.results}
   <!-- ==================================================================== -->
   <target name="checkout-and-build"
           depends="require.release.java.version,check.contrib,set.branchname"
-          description="Checkout current svn into temp dir, build and test all." >
+          description="Checkout current git into temp dir, build and test all." >
     <property name="target" value="test-all" />
     <mkdir dir="${temp.build}" />
     <tempfile property="temp.build.dir" destdir="${temp.build}" prefix="build"/>
     <mkdir dir="${temp.build.dir}" />
-    <property name="temp.proj.dir" value="${temp.build.dir}/${svn.dir}" />
+    <property name="temp.proj.dir" value="${temp.build.dir}/${git.dir}" />
 
     <if> <istrue value="${copylib}" />
       <then>
@@ -3000,7 +2999,7 @@ Test results in ${test.results}
           </else>
         </if>
         <if>
-          <isfalse value="${nosvn}" />
+          <isfalse value="${nogit}" />
           <then>
             <property name="copylib" value="false"/>
             <if> <isfalse value="${copylib}" />
@@ -3011,7 +3010,7 @@ Test results in ${test.results}
                   <arg value="--get"/>
                   <arg value="remote.origin.url"/>
                 </exec>
-                <echo message="git url|${git.url}|" />
+                <echo message="git url: ${git.url}" />
                 <exec executable="git" dir="${temp.build.dir}" failonerror="true">
                   <arg value="clone" />
                   <arg value="-q" />
@@ -3021,10 +3020,11 @@ Test results in ${test.results}
                   <arg value="${branch.name}"/>
                   <arg value="--single-branch"/>
                   <arg value="${git.url}" />
-                  <arg value="${svn.dir}" />
+                  <arg value="${git.dir}" />
                 </exec>
               </then>
               <else>
+                <!-- Old, unsupported - not converted to git yet -->
                 <!-- First check out just 1st-level files & dirs -->
                 <exec executable="svn" dir="${temp.build.dir}"
                       failonerror="true">
@@ -3064,7 +3064,7 @@ Test results in ${test.results}
             </if>
           </then>
           <else>
-            <echo>No svn, copying from ${basedir}</echo>
+            <echo>No git, copying from ${basedir}</echo>
             <mkdir dir="${temp.proj.dir}" />
             <copy todir="${temp.proj.dir}" >
               <fileset dir="${basedir}" >
@@ -3082,6 +3082,12 @@ Test results in ${test.results}
                 <exclude name="**/classes/**"/>
               </fileset>
             </copy>
+            <!-- copy doesn't preserve permissions - make scripts executable -->
+            <echo>chmod -R +x ${temp.proj.dir}/scripts</echo>
+            <chmod perm="ugo+rx">
+              <fileset dir="${temp.proj.dir}/scripts">
+              </fileset>
+            </chmod>
           </else>
         </if>
         <echo>Building and testing (${target}) in ${temp.build.dir}</echo>
@@ -3138,7 +3144,7 @@ Test results in ${test.results}
    description="Clean, build and test all." />
 
   <target name="post-commit-test" depends="checkout-and-build"
-   description="Checkout current svn into temp dir, build and test all." />
+   description="Checkout current git into temp dir, build and test all." />
 
   <!-- ==================================================================== -->
   <target name="check.class.arg" unless="class.arg.specified" >
