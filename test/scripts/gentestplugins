@@ -18,6 +18,18 @@ cp test/src/org/lockss/test/MockConfigurablePluginV2.xml ${tmproot}/classes/org/
 
 test/scripts/genplugin --jar=good-plugin2.jar --plugin=${tmproot}/classes/org/lockss/test/MockConfigurablePlugin.xml --plugin-root=${tmproot}/classes --alias=goodguy --keystore test/src/org/lockss/test/goodguy.keystore --password f00bar "--titledb="
 
+# good-plugin3.jar contains MockConfigurablePlugin v3, which must be (still
+# a different version of) the same plugin above.  Its source is in
+# MockConfigurablePluginV3 so it's copied to a temp file with the correct
+# path and name before packaging.
+TEMP_PREFIX=/tmp/plug
+tmproot=`mktemp -t -d plug.XXXXXX`
+mkdir -p ${tmproot}/classes/org/lockss/test
+cp test/src/org/lockss/test/MockConfigurablePluginV3.xml ${tmproot}/classes/org/lockss/test/MockConfigurablePlugin.xml
+
+test/scripts/genplugin --jar=good-plugin3.jar --plugin=${tmproot}/classes/org/lockss/test/MockConfigurablePlugin.xml --plugin-root=${tmproot}/classes --alias=goodguy --keystore test/src/org/lockss/test/goodguy.keystore --password f00bar "--titledb="
+
 cp plugins/jars/good-plugin.jar test/src/org/lockss/test
 cp plugins/jars/good-plugin2.jar test/src/org/lockss/test
+cp plugins/jars/good-plugin3.jar test/src/org/lockss/test
 rm -rf ${tmproot}

@@ -1656,8 +1656,8 @@ public class PluginManager
       PluginInfo info = loadPlugin(pluginKey, loader);
       Plugin newPlug = info.getPlugin();
 
-      log.info("Loaded plugin: version " + newPlug.getVersion() +
-	       " of " + newPlug.getPluginName());
+      log.debug2("Found plugin: version " + newPlug.getVersion() +
+                 " of " + newPlug.getPluginName());
       return info;
     } catch (PluginException.PluginNotFound e) {
       logAndAlert(pluginName, "Plugin not found", e);
@@ -1892,6 +1892,8 @@ public class PluginManager
       oldPlug.stopPlugin();
     }
     pluginMap.put(pluginKey, plugin);
+    log.info("Loaded plugin: version " + plugin.getVersion() +
+             " of " + plugin.getPluginName());
     resetTitles();
   }
 
@@ -3288,7 +3290,24 @@ public class PluginManager
         return;
       }
 
-      if (pluginMap.containsKey(key)) {
+      if (tmpMap.containsKey(key)) {
+        // Plugin already exists in the temporary map, replace with
+        // this one if a greater version
+        PluginVersion otherVer = ((PluginInfo)tmpMap.get(key)).getVersion();
+
+        if (version.toLong() > otherVer.toLong()) {
+          if (log.isDebug2()) {
+            log.debug2("Plugin " + plugin.getPluginId() + ": version " +
+                       version + " is newer than version " + otherVer +
+                       " already in temp map, replacing.");
+          }
+          // Overwrite old key in temp map
+          tmpMap.put(key, info);
+        } else {
+          // must stop plugin to enable it to be collected
+          plugin.stopPlugin();
+        }
+      } else if (pluginMap.containsKey(key)) {
         // Plugin already exists in the global plugin map.
         // Replace it with a new version if one is available.
         log.debug2("Plugin " + key + " is already in global pluginMap.");
@@ -3297,42 +3316,27 @@ public class PluginManager
           new PluginVersion(otherPlugin.getVersion());
         if (version.toLong() > otherVer.toLong()) {
           if (log.isDebug2()) {
-            log.debug2("Existing plugin " + plugin.getPluginId() +
-                       ": Newer version " + version + " found.");
+            log.debug2("Plugin " + plugin.getPluginId() +
+                       ": Newer version " + version +
+                       " loaded, will be installed.");
           }
           tmpMap.put(key, info);
         } else {
           if (log.isDebug2()) {
-            log.debug2("Existing plugin " + plugin.getPluginId() +
-                       ": No newer version found.");
+            log.debug2("Plugin " + plugin.getPluginId() +
+                       ": Older version " + version +
+                       " loaded, will not be installed.");
           }
           // must stop plugin to enable it to be collected
           plugin.stopPlugin();
         }
-      } else if (!tmpMap.containsKey(key)) {
-        // Plugin doesn't yet exist in the temporary map, add it.
+      } else {
+        // Plugin doesn't exist and isn't in the temporary map, add it.
         tmpMap.put(key, info);
 
         if (log.isDebug2()) {
           log.debug2("Plugin " + plugin.getPluginId() +
                      ": No previous version in temp map.");
-        }
-      } else {
-        // Plugin already exists in the temporary map, use whichever
-        // version is higher.
-        PluginVersion otherVer = ((PluginInfo)tmpMap.get(key)).getVersion();
-
-        if (version.toLong() > otherVer.toLong()) {
-          if (log.isDebug2()) {
-            log.debug2("Plugin " + plugin.getPluginId() + ": version " +
-                       version + " is newer than version " + otherVer +
-                       " already in temp map, overwriting.");
-          }
-          // Overwrite old key in temp map
-          tmpMap.put(key, info);
-        } else {
-          // must stop plugin to enable it to be collected
-          plugin.stopPlugin();
         }
       }
     }
