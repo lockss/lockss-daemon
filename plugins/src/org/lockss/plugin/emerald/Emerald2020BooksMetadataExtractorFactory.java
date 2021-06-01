@@ -184,7 +184,7 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
           am.putRaw("meta_description_raw_html_source", publicationTitleRaw);
         }
 
-        if (doi != null && !MetadataUtil.isIssn(doi)) {
+        if (doi != null && !MetadataUtil.isDoi(doi)) {
           am.put(MetadataField.FIELD_DOI, doi);
           am.putRaw("doi_raw_html_source", doiRaw);
         }
