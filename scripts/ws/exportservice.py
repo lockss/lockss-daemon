@@ -82,13 +82,13 @@ def create_export_files(host, username, password, auid, options):
   '''
   req = {
     'auid': auid,
-    'compress': True,
-    'excludeDirNodes': True,
+    'compress': options.compress,
+    'excludeDirNodes': options.exclude_dir,
     'filePrefix': options.output_prefix,
-    'fileType': "ZIP",
-    'maxSize': 1000,
-    'maxVersions': -1,
-    'xlateFilenames': None
+    'fileType': options.file_type,
+    'maxSize': options.max_size,
+    'maxVersions': options.max_vers,
+    'xlateFilenames': options.translate
   }
   client = _make_client(host, username, password)
   try:
@@ -126,12 +126,19 @@ class _ExportServiceOptions(object):
     group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
     # AUID operations
     group = parser.add_argument_group('AU operations')
-    group.add_argument('--create-export-files', action='store_true', help='output export files of target AUIDs')
+    # this seems to be redundant. leaving in in case some future functionality does make this an optional flag
+    group.add_argument('--create-export-files', action='store_true', required=True, help='output export files of target AUIDs')
     # Output
     group = parser.add_argument_group('Output')
     group.add_argument('--output-directory', metavar='OUTDIR', default='.', help='output directory (default: current directory)')
     group.add_argument('--output-prefix', metavar='PREFIX', default='exportservice', help='prefix for output file names (default: %(default)s)')
-  # Other options
+    group.add_argument('--compress', action='store_false', help='compress the export files (default: True).')
+    group.add_argument('--exclude-dir', action='store_false', help='exclude directory nodes from the export files (default: True).')
+    group.add_argument('--file-type', default="ZIP", choices=['ZIP'], help='file type of the exported AU. (default: %(default)s)')
+    group.add_argument('--max-size', default=1000, type=int, help=' (default: %(default)d)')
+    group.add_argument('--max-vers', default=-1, type=int, help=' (default: %(default)d)')
+    group.add_argument('--translate', default=None, choices=[None], help='translate export file filenames. (default: %(default)s)')
+    # Other options
     group = parser.add_argument_group('Other options')
     group.add_argument('--group-by-field', action='store_true', default=False, help='group results by field instead of host')
     group.add_argument('--threads', type=int, help='max parallel jobs allowed (default: no limit)')
@@ -143,13 +150,10 @@ class _ExportServiceOptions(object):
 
     Parameters:
     - parser (OptionParser instance): the option parser
-    - opts (Options instance): the Options instance returned by the parser
     - args (list of strings): the remaining command line arguments returned by
     the parser
     '''
     super(_ExportServiceOptions, self).__init__()
-    if len(list(filter(None, [args.create_export_files]))) != 1:
-      parser.error('exactly one of --create-export-files is required')
     if len(args.auid) + len(args.auids) > 0 and not any([args.create_export_files]):
       parser.error('--auid, --auids can only be applied to --create-export-files')
     # hosts
@@ -176,6 +180,13 @@ class _ExportServiceOptions(object):
     self.output_prefix = args.output_prefix
     # sorting options
     self.group_by_field = args.group_by_field
+    # operation options
+    self.compress = args.compress
+    self.exclude_dir = args.exclude_dir
+    self.file_type = args.file_type
+    self.max_size = args.max_size
+    self.max_vers = args.max_vers
+    self.translate = args.translate
     # verbosity (adds logging for zeep)
     if args.debug_zeep:
       _enable_zeep_debugging()
