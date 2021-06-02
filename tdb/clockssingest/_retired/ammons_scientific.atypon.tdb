@@ -25,10 +25,10 @@
     
     param[journal_id] = cp
  
-    au < finished ; manifest ; 2012 ; Comprehensive Psychology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Comprehensive Psychology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Comprehensive Psychology Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; Comprehensive Psychology Volume 3 ; 3 ; >
-    au < finished ; manifest ; 2015 ; Comprehensive Psychology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Comprehensive Psychology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -41,10 +41,10 @@
     
     param[journal_id] = it
  
-    au < finished ; manifest ; 2012 ; Innovative Teaching Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Innovative Teaching Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Innovative Teaching Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Innovative Teaching Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Innovative Teaching Volume 3 ; 3 ; >
-    au < finished ; manifest ; 2015 ; Innovative Teaching Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Innovative Teaching Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -143,38 +143,38 @@
     au < finished ; down ; 1998 ; Psychological Reports Volume 83 ; 83 ; reingest2.clockss.org:8085 >
     au < finished ; down ; 1999 ; Psychological Reports Volume 84 ; 84 ; reingest5.clockss.org:8082 >
     au < finished ; down ; 1999 ; Psychological Reports Volume 85 ; 85 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2000 ; Psychological Reports Volume 86 ; 86 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2000 ; Psychological Reports Volume 87 ; 87 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2001 ; Psychological Reports Volume 88 ; 88 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2001 ; Psychological Reports Volume 89 ; 89 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; Psychological Reports Volume 90 ; 90 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; Psychological Reports Volume 91 ; 91 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; Psychological Reports Volume 92 ; 92 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; Psychological Reports Volume 93 ; 93 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2004 ; Psychological Reports Volume 94 ; 94 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; Psychological Reports Volume 95 ; 95 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2005 ; Psychological Reports Volume 96 ; 96 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; Psychological Reports Volume 97 ; 97 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2006 ; Psychological Reports Volume 98 ; 98 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2000 ; Psychological Reports Volume 86 ; 86 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2000 ; Psychological Reports Volume 87 ; 87 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2001 ; Psychological Reports Volume 88 ; 88 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2001 ; Psychological Reports Volume 89 ; 89 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2002 ; Psychological Reports Volume 90 ; 90 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2002 ; Psychological Reports Volume 91 ; 91 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2003 ; Psychological Reports Volume 92 ; 92 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2003 ; Psychological Reports Volume 93 ; 93 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2004 ; Psychological Reports Volume 94 ; 94 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2004 ; Psychological Reports Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2005 ; Psychological Reports Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2005 ; Psychological Reports Volume 97 ; 97 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2006 ; Psychological Reports Volume 98 ; 98 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2006 ; Psychological Reports Volume 99 ; 99 ; >
-    au < finished ; manifest ; 2007 ; Psychological Reports Volume 100 ; 100 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Psychological Reports Volume 101 ; 101 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2008 ; Psychological Reports Volume 102 ; 102 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; Psychological Reports Volume 103 ; 103 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; Psychological Reports Volume 104 ; 104 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2009 ; Psychological Reports Volume 105 ; 105 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2010 ; Psychological Reports Volume 106 ; 106 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2010 ; Psychological Reports Volume 107 ; 107 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2011 ; Psychological Reports Volume 108 ; 108 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2007 ; Psychological Reports Volume 100 ; 100 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Psychological Reports Volume 101 ; 101 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2008 ; Psychological Reports Volume 102 ; 102 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; Psychological Reports Volume 103 ; 103 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; Psychological Reports Volume 104 ; 104 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; Psychological Reports Volume 105 ; 105 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2010 ; Psychological Reports Volume 106 ; 106 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2010 ; Psychological Reports Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2011 ; Psychological Reports Volume 108 ; 108 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2011 ; Psychological Reports Volume 109 [superseded] ; 109 ; > #reprocess when it moves to highwire
-    au < finished ; manifest ; 2012 ; Psychological Reports Volume 110 ; 110 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2012 ; Psychological Reports Volume 111 ; 111 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Psychological Reports Volume 112 ; 112 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Psychological Reports Volume 113 ; 113 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Psychological Reports Volume 114 ; 114 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; Psychological Reports Volume 115 ; 115 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Psychological Reports Volume 110 ; 110 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Psychological Reports Volume 111 ; 111 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Psychological Reports Volume 112 ; 112 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Psychological Reports Volume 113 ; 113 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Psychological Reports Volume 114 ; 114 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Psychological Reports Volume 115 ; 115 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Psychological Reports Volume 116 ; 116 ; > #PD-1411 500 Internal Server Error. process after move.
-    au < finished ; manifest ; 2015 ; Psychological Reports Volume 117 ; 117 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Psychological Reports Volume 117 ; 117 ; reingest1.clockss.org:8082 >
     
   }
 
@@ -277,38 +277,38 @@
     au < finished ; down ; 1998 ; Perceptual and Motor Skills Volume 87 ; 87 ; reingest2.clockss.org:8085 >
     au < finished ; down ; 1999 ; Perceptual and Motor Skills Volume 88 ; 88 ; reingest3.clockss.org:8083 >
     au < finished ; down ; 1999 ; Perceptual and Motor Skills Volume 89 ; 89 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2000 ; Perceptual and Motor Skills Volume 90 ; 90 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2000 ; Perceptual and Motor Skills Volume 91 ; 91 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2001 ; Perceptual and Motor Skills Volume 92 ; 92 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2001 ; Perceptual and Motor Skills Volume 93 ; 93 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; Perceptual and Motor Skills Volume 94 ; 94 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2002 ; Perceptual and Motor Skills Volume 95 ; 95 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; Perceptual and Motor Skills Volume 96 ; 96 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; Perceptual and Motor Skills Volume 97 ; 97 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2004 ; Perceptual and Motor Skills Volume 98 ; 98 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; Perceptual and Motor Skills Volume 99 ; 99 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2005 ; Perceptual and Motor Skills Volume 100 ; 100 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2005 ; Perceptual and Motor Skills Volume 101 ; 101 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2006 ; Perceptual and Motor Skills Volume 102 ; 102 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2006 ; Perceptual and Motor Skills Volume 103 ; 103 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2007 ; Perceptual and Motor Skills Volume 104 ; 104 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; Perceptual and Motor Skills Volume 105 ; 105 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2008 ; Perceptual and Motor Skills Volume 106 ; 106 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2008 ; Perceptual and Motor Skills Volume 107 ; 107 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2009 ; Perceptual and Motor Skills Volume 108 ; 108 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2009 ; Perceptual and Motor Skills Volume 109 ; 109 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2010 ; Perceptual and Motor Skills Volume 110 ; 110 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2010 ; Perceptual and Motor Skills Volume 111 ; 111 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2011 ; Perceptual and Motor Skills Volume 112 ; 112 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2011 ; Perceptual and Motor Skills Volume 113 ; 113 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2012 ; Perceptual and Motor Skills Volume 114 ; 114 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2012 ; Perceptual and Motor Skills Volume 115 ; 115 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Perceptual and Motor Skills Volume 116 ; 116 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2000 ; Perceptual and Motor Skills Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2000 ; Perceptual and Motor Skills Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2001 ; Perceptual and Motor Skills Volume 92 ; 92 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2001 ; Perceptual and Motor Skills Volume 93 ; 93 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2002 ; Perceptual and Motor Skills Volume 94 ; 94 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2002 ; Perceptual and Motor Skills Volume 95 ; 95 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2003 ; Perceptual and Motor Skills Volume 96 ; 96 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2003 ; Perceptual and Motor Skills Volume 97 ; 97 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2004 ; Perceptual and Motor Skills Volume 98 ; 98 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2004 ; Perceptual and Motor Skills Volume 99 ; 99 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2005 ; Perceptual and Motor Skills Volume 100 ; 100 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2005 ; Perceptual and Motor Skills Volume 101 ; 101 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2006 ; Perceptual and Motor Skills Volume 102 ; 102 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2006 ; Perceptual and Motor Skills Volume 103 ; 103 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2007 ; Perceptual and Motor Skills Volume 104 ; 104 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Perceptual and Motor Skills Volume 105 ; 105 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; Perceptual and Motor Skills Volume 106 ; 106 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2008 ; Perceptual and Motor Skills Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2009 ; Perceptual and Motor Skills Volume 108 ; 108 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; Perceptual and Motor Skills Volume 109 ; 109 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2010 ; Perceptual and Motor Skills Volume 110 ; 110 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Perceptual and Motor Skills Volume 111 ; 111 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2011 ; Perceptual and Motor Skills Volume 112 ; 112 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; Perceptual and Motor Skills Volume 113 ; 113 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Perceptual and Motor Skills Volume 114 ; 114 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Perceptual and Motor Skills Volume 115 ; 115 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Perceptual and Motor Skills Volume 116 ; 116 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > #PD-1411 500 Internal Server Error. process after move.
-    au < finished ; manifest ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; reingest4.clockss.org:8082 >
 
   }
 }
