@@ -20,9 +20,22 @@
      type = bookSeries
     >
 
-    au < manifest ; exists ; 2021 ; Tesint book title 10.1108/S1876-0562(1991)91A ; 10.1108/S1876-0562(1991)91A ; >
-    au < manifest ; exists ; 2021 ; Tesint book title 10.1016/S0743-4154(2000)18_Part_1 ; 10.1016/S0743-4154(2000)18_Part_1 ; > #(testing comment here)
-    au < manifest ; exists ; 2021 ; Tesint book title 10.1108/S1530-353520148B ; 10.1108/S1530-353520148B; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/S1876-0562(1991)91A ; 10.1108/S1876-0562(1991)91A ; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1016/S0743-4154(2000)18_Part_1 ; 10.1016/S0743-4154(2000)18_Part_1 ; > #(testing comment here)
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/S1530-353520148B ; 10.1108/S1530-353520148B; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/9781800717091 ; 10.1108/9781800717091; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/S0743-4154202139A ; /10.1108/S0743-4154202139A; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/978-1-78769-493-420201011 ; 10.1108/978-1-78769-493-420201011; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1016/S1574-8715(2006)1 ; 10.1016/S1574-8715(2006)1; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1016/S0743-4154(2005)23_Part_1 ; 10.1016/S0743-4154(2005)23_Part_1; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1016/S0743-4154(2005)23_Part_2 ; 10.1016/S0743-4154(2005)23_Part_2; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/S0573-8555(2001)256 ; 10.1108/S0573-8555(2001)256; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/S1876-0562(1997)97A ; 10.1108/S1876-0562(1997)97A; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/S0733-558X(2010)30_Part_A ; 10.1108/S0733-558X(2010)30_Part_A; >
+    au < testing ; exists ; 2021 ; Testing book title 10.1108/S0733-558X(2010)30_Part_B ; 10.1108/S0733-558X(2010)30_Part_B; >
+    
+
+
 
   }
 }
