@@ -3813,23 +3813,31 @@ while (my $line = <>) {
     sleep(4);
     
   } elsif ($plugin eq "ClockssSpandidos2020Plugin" || $plugin eq "Spandidos2020Plugin") {
-      # manifest page is the entire journal archive
-      # we will confirm an appropriate volume issue 
-      #my $url_sprintf = sprintf("%s%s/archive",$param{base_url}, $param{journal_id});
-      my $url_sprintf = sprintf("%s%s/%s/1",$param{base_url}, $param{journal_id}, $param{volume_name});
+      # manifest page has a link to the current volume only.
+      # need to look at an issue page to confirm content.
+
+      my $url_sprintf = sprintf("%s%s/archive",$param{base_url}, $param{journal_id});
       $man_url = uri_unescape($url_sprintf);
-      my $req = HTTP::Request->new(GET, $man_url);
-      my $resp = $ua->request($req);
-      if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if ($req->url ne $resp->request->uri) {
-          $vol_title = $resp->request->uri;
+      my $man_req = HTTP::Request->new(GET, $man_url);
+      my $man_resp = $ua->request($man_req);
+
+      my $url_issue = sprintf("%s%s/%s/1",$param{base_url}, $param{journal_id}, $param{volume_name});
+      $issue_url = uri_unescape($url_issue);
+      my $issue_req = HTTP::Request->new(GET, $issue_url);
+      my $issue_resp = $ua->request($issue_req);
+
+      if ($man_resp->is_success && $issue_resp->is_success) {
+      my $man_contents = $man_resp->content;
+      my $issue_contents = $issue_resp->content;
+      if ($man_req->url ne $man_resp->request->uri) {
+          $vol_title = $man_resp->request->uri;
           $result = "Redirected";
-      } elsif (defined($man_contents)) {
-          my $perm_contents = $resp->content; #same as manifest page
+      } elsif (defined($man_contents) && defined($issue_contents)) {
+          #for gln, permission page is on start_url
+          my $perm_contents = $man_resp->content; 
           my $lcl_tag = $lockss_tag;
-          #for CLOCKSS permission is on lockss.txt
-          if ($plugin eq "ClockssSpandidosPlugin") {
+          #for CLOCKSS permission is on https://www.spandidos-publications.com/lockss.txt
+          if ($plugin eq "ClockssSpandidos2020Plugin") {
           $lcl_tag = $clockss_tag;
           my $perm_url_sprintf = sprintf("%slockss.txt",$param{base_url});
           my $perm_url = uri_unescape($perm_url_sprintf );
@@ -3842,16 +3850,16 @@ while (my $line = <>) {
           }
           $lcl_tag =~ s/ /./g;
           if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
-          #we have a permission statement, do we have a link to <a href="/ijo/39/...." at least one issue of this volume
-          my $vol_link = sprintf("href=.+/%s/%s/",$param{journal_id},$param{volume_name});
-          if ($man_contents =~ m/$vol_link/gi) {
+          #we have a permission statement, does the issue url contain a pointer to the journal?
+          my $jour_link = sprintf("href=.+/%s",$param{journal_id});
+          if ($man_contents =~ m/$jour_link/gi) {
               $vol_title = $param{journal_id}; #default_value
               if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
               $vol_title = $1; #better value
               }
               $result = "Manifest";
           } else {
-              #had a manifest page but it had no volume links
+              #had a manifest page but it had no pointer to the journal
               $result = "--NO_URL--";
           }
           } else {
