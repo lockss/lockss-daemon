@@ -3812,7 +3812,7 @@ while (my $line = <>) {
     }
     sleep(4);
     
-  } elsif ($plugin eq "ClockssSpandidosPlugin" || $plugin eq "SpandidosPlugin") {
+  } elsif ($plugin eq "ClockssSpandidos2020Plugin" || $plugin eq "Spandidos2020Plugin") {
       # manifest page is the entire journal archive
       # we will confirm an appropriate volume issue 
       #my $url_sprintf = sprintf("%s%s/archive",$param{base_url}, $param{journal_id});
