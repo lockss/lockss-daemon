@@ -121,12 +121,12 @@
 
       au < finished ; manifest ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; https://journal-njmr.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; https://journal-njmr.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ ; >
+      au < finished ; manifest ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; https://journal-njmr.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; https://journal-njmr.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; https://journal-njmr.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; https://journal-njmr.org/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; https://journal-njmr.org/ ; >
+      au < finished ; manifest ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; https://journal-njmr.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; https://journal-njmr.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; https://journal-njmr.org/ ; >
       au < manifest ; exists ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 ; https://journal-njmr.org/ ; >
@@ -859,7 +859,7 @@
 #      param[base_url] = https://jhlr.org/
 
       au < finished ; manifest ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; https://jhlr.org/ ; >
+      au < finished ; manifest ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ ; reingest4.clockss.org:8082 >
 
   }
@@ -2048,12 +2048,12 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://tremorjournal.org/
 
-      au < frozen ; exists ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; >
+      au < finished ; manifest ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; >
-      au < frozen ; exists ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; >
+      au < finished ; manifest ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; reingest2.clockss.org:8085 >
@@ -2159,7 +2159,7 @@
 #      param[base_url] = https://www.journalofcognition.org/
 
       au < finished ; manifest ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ ; >
+      au < finished ; manifest ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ ; >
       au < manifest ; exists ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; https://www.journalofcognition.org/ ; >
 
@@ -2328,8 +2328,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://transactions.ismir.net/
 
-      au < frozen ; exists ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ ; >
-      au < frozen ; exists ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ ; >
+      au < finished ; manifest ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ ; >
       au < manifest ; exists ; 2021 ; 4 ; Transactions of the International Society for Music Information Retrieval Volume 2021 ; 2021 ; https://transactions.ismir.net/ ; >
 
@@ -2471,7 +2471,7 @@
       au < finished ; manifest ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; http://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; https://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ ; >
+      au < finished ; manifest ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; https://www.entsportslawjournal.com/ ; >
 
   }
@@ -2489,19 +2489,19 @@
       au < finished ; manifest ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 [superseded] ; 2015 ; https://delibdemjournal.org/ ; >
       au < finished ; manifest ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; https://delibdemjournal.org/ ; >
 
   }
@@ -2517,7 +2517,7 @@
 #      param[base_url] = https://silkroadjournal.online/
 
       au < finished ; crawling ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; https://silkroadjournal.online/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; https://silkroadjournal.online/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; https://silkroadjournal.online/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2021 ; 3 ; Silk Road Volume 2021 ; 2021 ; https://silkroadjournal.online/ ; >
 
   }
@@ -2541,7 +2541,7 @@
       au < finished ; finished ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; http://www.westminsterpapers.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ ; >
+      au < finished ; manifest ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2020 ; 15 ; Westminster Papers in Communication and Culture Volume 2020 ; 2020 ; https://www.westminsterpapers.org/ ; >
       au < doNotProcess ; exists ; 2021 ; 16 ; Westminster Papers in Communication and Culture Volume 2021 ; 2021 ; https://www.westminsterpapers.org/ ; >
 
