@@ -27,11 +27,11 @@
     
     au < ready ; exists ; 2001 ; International Journal of Geomechanics Volume 1 ; 1 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2002 ; International Journal of Geomechanics Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2003 ; International Journal of Geomechanics Volume 3 ; 3 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2004 ; International Journal of Geomechanics Volume 4 ; 4 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2005 ; International Journal of Geomechanics Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2003 ; International Journal of Geomechanics Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2004 ; International Journal of Geomechanics Volume 4 ; 4 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2005 ; International Journal of Geomechanics Volume 5 ; 5 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2006 ; International Journal of Geomechanics Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2007 ; International Journal of Geomechanics Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2007 ; International Journal of Geomechanics Volume 7 ; 7 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2008 ; International Journal of Geomechanics Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2009 ; International Journal of Geomechanics Volume 9 ; 9 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2010 ; International Journal of Geomechanics Volume 10 ; 10 ; https://ascelibrary.org/ ; >
@@ -60,20 +60,20 @@
     param[journal_id] = jaeied
     
     au < ready ; exists ; 1995 ; Journal of Architectural Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1996 ; Journal of Architectural Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1996 ; Journal of Architectural Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1997 ; Journal of Architectural Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1998 ; Journal of Architectural Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1999 ; Journal of Architectural Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2000 ; Journal of Architectural Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2001 ; Journal of Architectural Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2002 ; Journal of Architectural Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2003 ; Journal of Architectural Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2004 ; Journal of Architectural Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2005 ; Journal of Architectural Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1999 ; Journal of Architectural Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2000 ; Journal of Architectural Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2001 ; Journal of Architectural Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2002 ; Journal of Architectural Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2003 ; Journal of Architectural Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2004 ; Journal of Architectural Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2005 ; Journal of Architectural Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2006 ; Journal of Architectural Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2007 ; Journal of Architectural Engineering Volume 13 ; 13 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2008 ; Journal of Architectural Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2009 ; Journal of Architectural Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2008 ; Journal of Architectural Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2009 ; Journal of Architectural Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Architectural Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Architectural Engineering Volume 17 ; 17 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Architectural Engineering Volume 18 ; 18 ; http://ascelibrary.org/ ; >
@@ -99,28 +99,28 @@
 
     param[journal_id] = jaeeez
 
-    au < ready ; exists ; 1988 ; Journal of Aerospace Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1989 ; Journal of Aerospace Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1990 ; Journal of Aerospace Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1988 ; Journal of Aerospace Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1989 ; Journal of Aerospace Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1990 ; Journal of Aerospace Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1991 ; Journal of Aerospace Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1992 ; Journal of Aerospace Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1993 ; Journal of Aerospace Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1994 ; Journal of Aerospace Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1995 ; Journal of Aerospace Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1996 ; Journal of Aerospace Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1997 ; Journal of Aerospace Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1998 ; Journal of Aerospace Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1999 ; Journal of Aerospace Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2000 ; Journal of Aerospace Engineering Volume 13 ; 13 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1992 ; Journal of Aerospace Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1993 ; Journal of Aerospace Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1994 ; Journal of Aerospace Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1995 ; Journal of Aerospace Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1996 ; Journal of Aerospace Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1997 ; Journal of Aerospace Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1998 ; Journal of Aerospace Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1999 ; Journal of Aerospace Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2000 ; Journal of Aerospace Engineering Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2001 ; Journal of Aerospace Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2002 ; Journal of Aerospace Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2003 ; Journal of Aerospace Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2004 ; Journal of Aerospace Engineering Volume 17 ; 17 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2005 ; Journal of Aerospace Engineering Volume 18 ; 18 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2002 ; Journal of Aerospace Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2003 ; Journal of Aerospace Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2004 ; Journal of Aerospace Engineering Volume 17 ; 17 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2005 ; Journal of Aerospace Engineering Volume 18 ; 18 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2006 ; Journal of Aerospace Engineering Volume 19 ; 19 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2007 ; Journal of Aerospace Engineering Volume 20 ; 20 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2008 ; Journal of Aerospace Engineering Volume 21 ; 21 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2009 ; Journal of Aerospace Engineering Volume 22 ; 22 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2007 ; Journal of Aerospace Engineering Volume 20 ; 20 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2008 ; Journal of Aerospace Engineering Volume 21 ; 21 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2009 ; Journal of Aerospace Engineering Volume 22 ; 22 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Aerospace Engineering Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Aerospace Engineering Volume 24 ; 24 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Aerospace Engineering Volume 25 ; 25 ; http://ascelibrary.org/ ; >
@@ -152,19 +152,19 @@
     param[journal_id] = jbenf2
 
       au < ready ; exists ; 1996 ; Journal of Bridge Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 1997 ; Journal of Bridge Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 1998 ; Journal of Bridge Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 1999 ; Journal of Bridge Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 1997 ; Journal of Bridge Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 1998 ; Journal of Bridge Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 1999 ; Journal of Bridge Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
       au < ready ; exists ; 2000 ; Journal of Bridge Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 2001 ; Journal of Bridge Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 2002 ; Journal of Bridge Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 2003 ; Journal of Bridge Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 2001 ; Journal of Bridge Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 2002 ; Journal of Bridge Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 2003 ; Journal of Bridge Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
       au < ready ; exists ; 2004 ; Journal of Bridge Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
       au < ready ; exists ; 2005 ; Journal of Bridge Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 2006 ; Journal of Bridge Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 2006 ; Journal of Bridge Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
       au < ready ; exists ; 2007 ; Journal of Bridge Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
       au < ready ; exists ; 2008 ; Journal of Bridge Engineering Volume 13 ; 13 ; https://ascelibrary.org/ ; >
-      au < ready ; exists ; 2009 ; Journal of Bridge Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
+      au < crawling ; exists ; 2009 ; Journal of Bridge Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
       au < doNotProcess ; exists ; 2010 ; Journal of Bridge Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
       au < doNotProcess ; exists ; 2011 ; Journal of Bridge Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
       au < frozen ; exists ; 2012 ; Journal of Bridge Engineering Volume 17 ; 17 ; http://ascelibrary.org/ ; >
@@ -190,19 +190,19 @@
 
     param[journal_id] = jccof2
 
-    au < ready ; exists ; 1997 ; Journal of Composites for Construction Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1998 ; Journal of Composites for Construction Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1997 ; Journal of Composites for Construction Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1998 ; Journal of Composites for Construction Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1999 ; Journal of Composites for Construction Volume 3 ; 3 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2000 ; Journal of Composites for Construction Volume 4 ; 4 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2001 ; Journal of Composites for Construction Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2002 ; Journal of Composites for Construction Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2003 ; Journal of Composites for Construction Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2004 ; Journal of Composites for Construction Volume 8 ; 8 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2000 ; Journal of Composites for Construction Volume 4 ; 4 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2001 ; Journal of Composites for Construction Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2002 ; Journal of Composites for Construction Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2003 ; Journal of Composites for Construction Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2004 ; Journal of Composites for Construction Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2005 ; Journal of Composites for Construction Volume 9 ; 9 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2006 ; Journal of Composites for Construction Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2007 ; Journal of Composites for Construction Volume 11 ; 11 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2008 ; Journal of Composites for Construction Volume 12 ; 12 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2009 ; Journal of Composites for Construction Volume 13 ; 13 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2006 ; Journal of Composites for Construction Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2007 ; Journal of Composites for Construction Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2008 ; Journal of Composites for Construction Volume 12 ; 12 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2009 ; Journal of Composites for Construction Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Composites for Construction Volume 14 ; 14 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Composites for Construction Volume 15 ; 15 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Composites for Construction Volume 16 ; 16 ; http://ascelibrary.org/ ; >
@@ -228,29 +228,29 @@
 
     param[journal_id] = jpcfev
 
-    au < ready ; exists ; 1987 ; Journal of Performance of Constructed Facilities Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1988 ; Journal of Performance of Constructed Facilities Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1989 ; Journal of Performance of Constructed Facilities Volume 3 ; 3 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1990 ; Journal of Performance of Constructed Facilities Volume 4 ; 4 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1991 ; Journal of Performance of Constructed Facilities Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1992 ; Journal of Performance of Constructed Facilities Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1987 ; Journal of Performance of Constructed Facilities Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1988 ; Journal of Performance of Constructed Facilities Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1989 ; Journal of Performance of Constructed Facilities Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1990 ; Journal of Performance of Constructed Facilities Volume 4 ; 4 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1991 ; Journal of Performance of Constructed Facilities Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1992 ; Journal of Performance of Constructed Facilities Volume 6 ; 6 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1993 ; Journal of Performance of Constructed Facilities Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1994 ; Journal of Performance of Constructed Facilities Volume 8 ; 8 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1995 ; Journal of Performance of Constructed Facilities Volume 9 ; 9 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1996 ; Journal of Performance of Constructed Facilities Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1997 ; Journal of Performance of Constructed Facilities Volume 11 ; 11 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1998 ; Journal of Performance of Constructed Facilities Volume 12 ; 12 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1994 ; Journal of Performance of Constructed Facilities Volume 8 ; 8 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1995 ; Journal of Performance of Constructed Facilities Volume 9 ; 9 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1996 ; Journal of Performance of Constructed Facilities Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1997 ; Journal of Performance of Constructed Facilities Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1998 ; Journal of Performance of Constructed Facilities Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1999 ; Journal of Performance of Constructed Facilities Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2000 ; Journal of Performance of Constructed Facilities Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2001 ; Journal of Performance of Constructed Facilities Volume 15 ; 15 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2002 ; Journal of Performance of Constructed Facilities Volume 16 ; 16 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2001 ; Journal of Performance of Constructed Facilities Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2002 ; Journal of Performance of Constructed Facilities Volume 16 ; 16 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2003 ; Journal of Performance of Constructed Facilities Volume 17 ; 17 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2004 ; Journal of Performance of Constructed Facilities Volume 18 ; 18 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2004 ; Journal of Performance of Constructed Facilities Volume 18 ; 18 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2005 ; Journal of Performance of Constructed Facilities Volume 19 ; 19 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2006 ; Journal of Performance of Constructed Facilities Volume 20 ; 20 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2007 ; Journal of Performance of Constructed Facilities Volume 21 ; 21 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2008 ; Journal of Performance of Constructed Facilities Volume 22 ; 22 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2009 ; Journal of Performance of Constructed Facilities Volume 23 ; 23 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2007 ; Journal of Performance of Constructed Facilities Volume 21 ; 21 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2008 ; Journal of Performance of Constructed Facilities Volume 22 ; 22 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2009 ; Journal of Performance of Constructed Facilities Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Performance of Constructed Facilities Volume 24 ; 24 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Performance of Constructed Facilities Volume 25 ; 25 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Performance of Constructed Facilities Volume 26 ; 26 ; http://ascelibrary.org/ ; >
@@ -276,10 +276,10 @@
 
     param[journal_id] = jcemd4
 
-    au < ready ; exists ; 1983 ; Journal of Construction Engineering and Management Volume 109 ; 109 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1984 ; Journal of Construction Engineering and Management Volume 110 ; 110 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1985 ; Journal of Construction Engineering and Management Volume 111 ; 111 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1986 ; Journal of Construction Engineering and Management Volume 112 ; 112 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1983 ; Journal of Construction Engineering and Management Volume 109 ; 109 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1984 ; Journal of Construction Engineering and Management Volume 110 ; 110 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1985 ; Journal of Construction Engineering and Management Volume 111 ; 111 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1986 ; Journal of Construction Engineering and Management Volume 112 ; 112 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 1987 ; Journal of Construction Engineering and Management Volume 113 ; 113 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 1988 ; Journal of Construction Engineering and Management Volume 114 ; 114 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 1989 ; Journal of Construction Engineering and Management Volume 115 ; 115 ; https://ascelibrary.org/ ; >
