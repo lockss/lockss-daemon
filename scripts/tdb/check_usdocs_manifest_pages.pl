@@ -29,8 +29,8 @@ my $ua = LWP::UserAgent->new;
 #comm -23 tmp/list1b tmp/list1c
 #*************************************
 
-# Fetch https://www.govinfo.gov/sitemaps
-#$url = sprintf("https://www.govinfo.gov/sitemaps");
+#List of site map urls, except COURTS
+# Fetch list of site maps. Not https://www.govinfo.gov/sitemaps
 $url = sprintf("https://www.govinfo.gov/robots.txt");
 my @collection_list=();
 #$man_url=uri_unescape($url);
@@ -60,13 +60,13 @@ if ($resp->is_success) {
 }
 #exit(0);
 
+#Find all Collection-Year pairs except COURTS
 foreach my $collection (@collection_list) {
   #fetch the associated sitemap which has all the years.
   #collect the list of all the urls, and collect all the years.
   #output collection_id,year
   $url2 = sprintf("https://www.govinfo.gov/sitemap/%s_sitemap_index.xml", $collection);
   #printf("$url2\n");
-  my @year_list=();
   #printf("%s\n",$url2);
   my $req2 = HTTP::Request->new(GET, $url2);
   my $resp2 = $ua->request($req2);
@@ -85,9 +85,31 @@ foreach my $collection (@collection_list) {
       }
     }
   } else {
-  	printf("--REQ_FAIL--" . $url2 . " " . $resp2->code() . " " . $resp2->message() . "\n");
-  	}     		
+      printf("--REQ_FAIL--" . $url2 . " " . $resp2->code() . " " . $resp2->message() . "\n");
+  }
 } 
+
+#COURTS
+$url3 = "https://www.govinfo.gov/sitemap/USCOURTS_sitemap_index.xml";
+#printf("$url3\n"); #debug
+#printf("%s\n",$url3);
+my $req3 = HTTP::Request->new(GET, $url3);
+my $resp3 = $ua->request($req3);
+if ($resp3->is_success) {
+  #printf("Success3\n"); #debug
+  my $man_contents3 = $resp3->content;
+  if ($req3->url ne $resp3->request->uri) {
+    printf("Redirected from %s\n", $url3);
+  } elsif (defined($man_contents3) && ($man_contents3 =~ m/a/)){
+    #printf("Not redirected and has a match.\n"); #debug
+    #https://www.govinfo.gov/sitemap/USCOURTS/USCOURTS_pamd_2019_sitemap.xml
+    foreach my $line3 (split(/\n/m, $man_contents3)) {
+      if ($line3 =~ m#sitemap/USCOURTS/(USCOURTS_\S*)_(\d+)_sitemap.xml#) {
+        printf("$1,$2\n");
+      }
+    }
+  }
+}
 #
 #Then output the collection name (e.g. BILLS) and year (e.g. 2001), comma seperated
 #sort, output list2
