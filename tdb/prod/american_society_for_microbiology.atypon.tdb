@@ -5,7 +5,7 @@
     info[platform] = Atypon on GLN only. Source for clockss
   >
 
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.asm.AsmPlugin
     param[base_url] = https://journals.asm.org/
     implicit < status ; year ; name ; param[volume_name] >
     #EcoSal Plus, Journal of Microbiology & Biology Education, Microbiology Spectrum using www.asmscience.org (pub2web)

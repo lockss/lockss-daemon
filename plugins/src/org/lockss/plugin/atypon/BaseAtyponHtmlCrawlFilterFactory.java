@@ -161,6 +161,10 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // http://press.endocrine.org/toc/endo/154/10       
     HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
 
+    // ASM related section
+    HtmlNodeFilters.tagWithAttribute("section", "class", "related-articles"),
+
+
     // Links to "Prev" & "Next" at Atypon Seg on March/2021 at: https://library.seg.org/toc/leedff/21/9
     // Also the issues and other top navigation will go to other volumes
     HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation"),

@@ -105,11 +105,21 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "pageHeader"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "pageFooter"),
+
+    // login etc popups
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "username-popup"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "registration-popup"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "change-password-drawer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "login-popup"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "request-reset-password-drawer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "verify-phone-drawer"),
     
     HtmlNodeFilters.tag("nav"),
     // more common tags
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(altmetric|trendmd)", true),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(altmetric|trendmd)", true),
+    // search bar
+    HtmlNodeFilters.tagWithAttribute("div", "id", "search-overlay"),
     
     // sections that may show up with this skin - from CRAWL filter
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
@@ -162,6 +172,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // abs (some Sage Atypon) - table of references on abs page
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    // related for Asm pages
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-tabs"),
 
     //  showPopup&citid=citart1 for when the email address is not available?
     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
@@ -172,6 +184,12 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("span", "class", "video-source"),
 
     HtmlNodeFilters.tagWithAttribute("table", "class", "loginForm"),
+
+    // bottom of page has a whole "pill" section for metrics, shares, etc.
+    // remove parent div.id=pill, rather than remove each sub div.id
+    //  pill-info-authors pill-metrics-citations pill-share pill-purchase-access pill-view-options
+    //  pill-tables pill-media-other pill-references
+    HtmlNodeFilters.tagWithAttribute("div", "id", "pill"),
 
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
