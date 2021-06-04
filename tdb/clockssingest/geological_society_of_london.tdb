@@ -26,19 +26,19 @@
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1986 ; Engineering Geology Special Publications Volume 3 ; 3 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1987 ; Engineering Geology Special Publications Volume 4 ; 4 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 1988 ; Engineering Geology Special Publications Volume 5 ; 5 ; https://egsp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1990 ; Engineering Geology Special Publications Volume 6 ; 6 ; https://egsp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1990 ; Engineering Geology Special Publications Volume 6 ; 6 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1991 ; Engineering Geology Special Publications Volume 7 ; 7 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; doesNotExist ; doesNotExist ; 0 ; Engineering Geology Special Publications Volume 8 ; 8 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; doesNotExist ; doesNotExist ; 0 ; Engineering Geology Special Publications Volume 9 ; 9 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1995 ; Engineering Geology Special Publications Volume 10 ; 10 ; https://egsp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Engineering Geology Special Publications Volume 11 ; 11 ; https://egsp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Engineering Geology Special Publications Volume 11 ; 11 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1997 ; Engineering Geology Special Publications Volume 12 ; 12 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Engineering Geology Special Publications Volume 13 ; 13 ; https://egsp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Engineering Geology Special Publications Volume 14 ; 14 ; https://egsp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Engineering Geology Special Publications Volume 14 ; 14 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Engineering Geology Special Publications Volume 15 ; 15 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1999 ; Engineering Geology Special Publications Volume 16 ; 16 ; https://egsp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2001 ; Engineering Geology Special Publications Volume 17 ; 17 ; https://egsp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2001 ; Engineering Geology Special Publications Volume 18 ; 18 ; https://egsp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2001 ; Engineering Geology Special Publications Volume 17 ; 17 ; https://egsp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2001 ; Engineering Geology Special Publications Volume 18 ; 18 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2002 ; Engineering Geology Special Publications Volume 19 ; 19 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2004 ; Engineering Geology Special Publications Volume 20 ; 20 ; https://egsp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2006 ; Engineering Geology Special Publications Volume 21 ; 21 ; https://egsp.lyellcollection.org/ ;  >
@@ -66,7 +66,7 @@
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 ; https://geea.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2002 ; Geochemistry: Exploration, Environment, Analysis Volume 2 ; 2 ; https://geea.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2003 ; Geochemistry: Exploration, Environment, Analysis Volume 3 ; 3 ; https://geea.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 ; https://geea.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2004 ; Geochemistry: Exploration, Environment, Analysis Volume 4 ; 4 ; https://geea.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2005 ; Geochemistry: Exploration, Environment, Analysis Volume 5 ; 5 ; https://geea.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2006 ; Geochemistry: Exploration, Environment, Analysis Volume 6 ; 6 ; https://geea.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2007 ; Geochemistry: Exploration, Environment, Analysis Volume 7 ; 7 ; https://geea.lyellcollection.org/ ;  >
@@ -119,16 +119,16 @@
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1999 ; Geological Society of London Memoirs Volume 19 ; 19 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2003 ; Geological Society of London Memoirs Volume 20 ; 20 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2002 ; Geological Society of London Memoirs Volume 21 ; 21 ; https://mem.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2002 ; Geological Society of London Memoirs Volume 22 ; 22 ; https://mem.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2002 ; Geological Society of London Memoirs Volume 22 ; 22 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2002 ; Geological Society of London Memoirs Volume 23 ; 23 ; https://mem.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2002 ; Geological Society of London Memoirs Volume 24 ; 24 ; https://mem.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2002 ; Geological Society of London Memoirs Volume 25 ; 25 ; https://mem.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2002 ; Geological Society of London Memoirs Volume 24 ; 24 ; https://mem.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2002 ; Geological Society of London Memoirs Volume 25 ; 25 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2002 ; Geological Society of London Memoirs Volume 26 ; 26 ; https://mem.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2003 ; Geological Society of London Memoirs Volume 27 ; 27 ; https://mem.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2003 ; Geological Society of London Memoirs Volume 27 ; 27 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2003 ; Geological Society of London Memoirs Volume 28 ; 28 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2004 ; Geological Society of London Memoirs Volume 29 ; 29 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2004 ; Geological Society of London Memoirs Volume 30 ; 30 ; https://mem.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 2005 ; Geological Society of London Memoirs Volume 31 ; 31 ; https://mem.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2005 ; Geological Society of London Memoirs Volume 31 ; 31 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2006 ; Geological Society of London Memoirs Volume 32 ; 32 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2008 ; Geological Society of London Memoirs Volume 33 ; 33 ; https://mem.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2011 ; Geological Society of London Memoirs Volume 34 ; 34 ; http://mem.lyellcollection.org/ ; reingest1.clockss.org:8082 >
@@ -270,11 +270,11 @@
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Geological Society of London Special Publications Volume 99 ; 99 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 100 ; 100 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Geological Society of London Special Publications Volume 101 ; 101 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 102 ; 102 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Geological Society of London Special Publications Volume 102 ; 102 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 103 ; 103 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 104 ; 104 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Geological Society of London Special Publications Volume 105 ; 105 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 106 ; 106 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Geological Society of London Special Publications Volume 106 ; 106 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Geological Society of London Special Publications Volume 107 ; 107 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Geological Society of London Special Publications Volume 108 ; 108 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 109 ; 109 ; https://sp.lyellcollection.org/ ;  >
@@ -286,9 +286,9 @@
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 115 ; 115 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 116 ; 116 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 117 ; 117 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1996 ; Geological Society of London Special Publications Volume 118 ; 118 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1997 ; Geological Society of London Special Publications Volume 119 ; 119 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1997 ; Geological Society of London Special Publications Volume 120 ; 120 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1996 ; Geological Society of London Special Publications Volume 118 ; 118 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1997 ; Geological Society of London Special Publications Volume 119 ; 119 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1997 ; Geological Society of London Special Publications Volume 120 ; 120 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1997 ; Geological Society of London Special Publications Volume 121 ; 121 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1997 ; Geological Society of London Special Publications Volume 122 ; 122 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1997 ; Geological Society of London Special Publications Volume 123 ; 123 ; https://sp.lyellcollection.org/ ;  >
@@ -301,23 +301,23 @@
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 130 ; 130 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 131 ; 131 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 132 ; 132 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 133 ; 133 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 133 ; 133 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 134 ; 134 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 135 ; 135 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 136 ; 136 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 137 ; 137 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 138 ; 138 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 139 ; 139 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 140 ; 140 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 141 ; 141 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 137 ; 137 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 138 ; 138 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 139 ; 139 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 140 ; 140 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 141 ; 141 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 142 ; 142 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 143 ; 143 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 144 ; 144 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 145 ; 145 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 145 ; 145 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 146 ; 146 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 147 ; 147 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 148 ; 148 ; https://sp.lyellcollection.org/ ;  >
-    au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1998 ; Geological Society of London Special Publications Volume 149 ; 149 ; https://sp.lyellcollection.org/ ;  >
+    au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1998 ; Geological Society of London Special Publications Volume 149 ; 149 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1999 ; Geological Society of London Special Publications Volume 150 ; 150 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; ready ; exists ; 1999 ; Geological Society of London Special Publications Volume 151 ; 151 ; https://sp.lyellcollection.org/ ;  >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 1999 ; Geological Society of London Special Publications Volume 152 ; 152 ; https://sp.lyellcollection.org/ ;  >
