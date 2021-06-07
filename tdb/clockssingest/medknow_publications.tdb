@@ -5788,7 +5788,7 @@
       au < notReady ; exists ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; http://www.genome-integrity.org/ ; ; > #500 Internal Server error.
       au < manifest ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; >
       au < manifest ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; >
-      au < expected ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; >
+      au < manifest ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; >
 
   }
 
@@ -6868,7 +6868,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Head & Neck Physicians And Surgeons Volume 6 ; 2018 ; 6 ; http://www.jhnps.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Head & Neck Physicians And Surgeons Volume 7 ; 2019 ; 7 ; https://www.jhnps.org/ ; ; >
       au < crawling ; exists ; 2020 ; Journal of Head & Neck Physicians And Surgeons Volume 8 ; 2020 ; 8 ; https://www.jhnps.org/ ; ; >
-      au < expected ; exists ; 2021 ; Journal of Head & Neck Physicians And Surgeons Volume 9 ; 2021 ; 9 ; https://www.jhnps.org/ ; ; >
+      au < manifest ; exists ; 2021 ; Journal of Head & Neck Physicians And Surgeons Volume 9 ; 2021 ; 9 ; https://www.jhnps.org/ ; ; >
 
   }
 
@@ -10347,7 +10347,7 @@
       au < manifest ; exists ; 2018 ; Journal of Reports in Pharmaceutical Sciences Volume 7 ; 2018 ; 7 ; https://www.jrpsjournal.com/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Reports in Pharmaceutical Sciences Volume 8 ; 2019 ; 8 ; https://www.jrpsjournal.com/ ; ; >
       au < crawling ; exists ; 2020 ; Journal of Reports in Pharmaceutical Sciences Volume 9 ; 2020 ; 9 ; https://www.jrpsjournal.com/ ; ; >
-      au < expected ; exists ; 2021 ; Journal of Reports in Pharmaceutical Sciences Volume 10 ; 2021 ; 10 ; https://www.jrpsjournal.com/ ; ; >
+      au < manifest ; exists ; 2021 ; Journal of Reports in Pharmaceutical Sciences Volume 10 ; 2021 ; 10 ; https://www.jrpsjournal.com/ ; ; >
 
   }
 
