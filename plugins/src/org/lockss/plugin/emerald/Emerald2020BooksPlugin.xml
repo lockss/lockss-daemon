@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -49,7 +49,16 @@
         <displayName>Path</displayName>
         <description>Path for book (used as part of file name)</description>
         <type>1</type>
-        <size>200</size>
+        <size>100</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description></description>
+        <type>2</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -66,6 +75,10 @@
     https://www.emerald.com/insight/publication/doi/10.1016/S1529-2134(1995)2_Part_2
     https://www.emerald.com/insight/publication/doi/10.1108/9780080464015
     Standalone book: https://www.emerald.com/insight/publication/doi/10.1108/9781786359506
+
+    https://www.emerald.com/insight/publication/doi/10.1108/S0573-8555(2001)256, no publication date
+
+
      -->
     <string>"%sinsight/publication/doi/%s", base_url, book_uri</string>
   </entry>
@@ -90,6 +103,10 @@
     <list>
       <string>"^%sinsight/content/doi/[^/]+/[^/]+/full/pdf\?title=", base_url</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.emerald.Emerald2020HtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
