@@ -194,8 +194,6 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
           am.put(MetadataField.FIELD_DATE, publicationDate);
           am.putRaw("publication_date_html_source", publicationDateRaw);
         } else {
-
-          log.debug3("publication_date is null");
           if (tdbau != null) {
             String pubyear = tdbau.getYear();
             log.debug3("publication_date is null, pubyear" + pubyear);
@@ -203,14 +201,28 @@ public class Emerald2020BooksMetadataExtractorFactory implements FileMetadataExt
               am.put(MetadataField.FIELD_DATE, pubyear);
               am.putRaw("publication_date_tdb_source", pubyear);
             }
-          } else {
-            log.debug3("publication_date isssssss null");
           }
         }
 
         if (isbn != null && MetadataUtil.isIsbn(isbn)) {
           am.put(MetadataField.FIELD_ISBN, isbn);
           am.putRaw("isbn_raw_html_source", isbnRaw);
+        } else {
+          if (tdbau != null) {
+            String tdbisbn = tdbau.getIsbn();
+            if (tdbisbn != null) {
+              am.put(MetadataField.FIELD_ISBN, tdbisbn);
+              am.putRaw("publication_isbn_tdb_source", tdbisbn);
+            }
+          }
+        }
+
+        if (tdbau != null) {
+          String tdbeisbn = tdbau.getEisbn();
+          if (tdbeisbn != null) {
+            am.put(MetadataField.FIELD_EISBN, tdbeisbn);
+            am.putRaw("publication_eisbn_tdb_source", tdbeisbn);
+          }
         }
 
         if (issn != null && MetadataUtil.isIssn(issn)) {

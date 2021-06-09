@@ -53,15 +53,6 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description></description>
-        <type>2</type>
-        <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
