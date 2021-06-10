@@ -285,25 +285,25 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                                 BooleanData bD) {
     // simple method that searches for specific path in an href and sets boolean values in a BooleanData class
     if (loginHref.contains("doi%2Ffull")) {
-      log.info("  isFull");
+      log.debug3("  isFull");
       bD.isFull = true;
     } else if (loginHref.contains("doi%2Fabs")) {
-      log.info("  isAbs");
+      log.debug3("  isAbs");
       bD.isAbs = true;
     } else if (loginHref.contains("doi%2Fref")) {
-      log.info("  isRef");
+      log.debug3("  isRef");
       bD.isRef = true;
     } else if (loginHref.contains("doi%2Fcit")) {
-      log.info("  isCit");
+      log.debug3("  isCit");
       bD.isCit = true;
     } else if (loginHref.contains("doi%2Fsupp")) {
-      log.info("   isSupp");
+      log.debug3("   isSupp");
       bD.isSupp = true;
     } else if (loginHref.contains("doi%2Ffigure")) {
-      log.info("   isFig");
+      log.debug3("   isFig");
       bD.isFig = true;
     } else if (loginHref.contains("%2Ftoc")) {
-      log.info("   isToc");
+      log.debug3("   isToc");
     }
   }
 
@@ -1029,8 +1029,10 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                 Finally, the strange transformation made it difficult if not impossible to replace via regex.
                 Removal of any link that contains http as the text is just easier than trying to capture all these use cases.
                */
-              if (text.contains("http") || text.equals("[Taylor & Francis Online]") || text.equals("[Taylor &amp; Francis Online]") ) {
-                //log.info("found a link to get rid of: " + text);
+              if (text.contains("http") ||
+                  text.equals("[Taylor & Francis Online]") ||
+                  text.equals("[Taylor &amp; Francis Online]") ) {
+                //log.debug3("found a link to get rid of: " + text);
                 gen = 1;
               }
             }
@@ -1178,7 +1180,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                 Div div = ((Div) node);
                 String divID = div.getAttribute("id");
                 if(divID != null && !divID.isEmpty() && divID.contains("fulltextPanel")) {
-                  log.info("removed fullTextPanel because isAbs is true");
+                  log.debug3("removed fullTextPanel because isAbs is true");
                   return true;
                 }
               }
@@ -1186,7 +1188,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
               if (node instanceof Tag) {
                 String id = ((Tag) node).getAttribute("id");
                 if(id != null && !id.isEmpty() && id.equals("topBarAbstract")) {
-                  log.info("removed stand alone abstract because isAbs is false");
+                  log.debug3("removed stand alone abstract because isAbs is false");
                   return true;
                 }
               }
@@ -1201,7 +1203,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             if (node instanceof BulletList && !bD.isRef) {
               String ulClass = ((BulletList) node).getAttribute("class");
               if (ulClass != null && ulClass.contains("references")){
-                log.info("removed references isRef is false");
+                log.debug3("removed references isRef is false");
                 return true;
               }
             }
