@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>European Respiratory Society Plugin (CLOCKSS)</string>
+    <string>European Respiratory Society Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"European Respiratory Society Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"European Respiratory Society Journals Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <!--  override start url from parent to support http to https conversion -->
