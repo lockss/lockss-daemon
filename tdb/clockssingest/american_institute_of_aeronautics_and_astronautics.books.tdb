@@ -619,15 +619,15 @@
     au < finished ; finished ; 2018 ; ; 9781624105579 ; 9781624105579 ; 2018 Atmospheric Flight Mechanics Conference ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; ; 9781624105524 ; 9781624105524 ; 2018 Joint Thermophysics and Heat Transfer Conference ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; ; 9781624105784 ; 9781624105784 ; AIAA Scitech 2019 Forum ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 2019 ; ; 9781624105883 ; 9781624105883 ; 25th AIAA/CEAS Aeroacoustics Conference ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2019 ; ; 9781624105883 ; 9781624105883 ; 25th AIAA/CEAS Aeroacoustics Conference ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2019 ; ; 9781624105890 ; 9781624105890 ; AIAA Aviation 2019 Forum ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2019 ; ; 9781624105906 ; 9781624105906 ; AIAA Propulsion and Energy 2019 Forum ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2020 ; ; 9781624105951 ; 9781624105951 ; AIAA Scitech 2020 Forum ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 2020 ; ; 9781624106002 ; 9781624106002 ; 23rd AIAA International Space Planes and Hypersonic Systems and Technologies Conference ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2020 ; ; 9781624106002 ; 9781624106002 ; 23rd AIAA International Space Planes and Hypersonic Systems and Technologies Conference ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2020 ; ; 9781624105982 ; 9781624105982 ; AIAA Aviation 2020 Forum ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2020 ; ; 9781624106026 ; 9781624106026 ; AIAA Propulsion and Energy 2020 Forum ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2020 ; ; 9781624106088 ; 9781624106088 ; ASCEND 2020 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 2021 ; ; 9781624106095 ; 9781624106095 ; AIAA Scitech 2021 Forum ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2021 ; ; 9781624106095 ; 9781624106095 ; AIAA Scitech 2021 Forum ; https://arc.aiaa.org/ ; >
 
  }
 
@@ -652,7 +652,7 @@
     au < finished ; finished ; 1980 ; 9781563473081 ; 9781600868122 ; 9781600868122 ; A Case Study by Aerospatiale and British Aerospace on the Concorde (9781600868122) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1981 ; 9781563473104 ; 9781600867989 ; 9781600867989 ; A Case Study on the De Havilland Family of STOL Commuter Aircraft (9781600867989) ; http://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 1981 ; 9780915928590 ; ; 9780915928590 ; Aeronautics in China ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1982 ; 9780915928682 ; ; 9780915928682 ; Global Implications of Space Activities ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1982 ; 9780915928682 ; ; 9780915928682 ; Global Implications of Space Activities ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1982 ; 9780915928699 ; ; 9780915928699 ; Aerospace Technology and Commercial Nuclear Power ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1984 ; 9780915928880 ; ; 9780915928880 ; Radar Cross Section Lectures ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 1988 ; 9780962062902 ; ; 9780962062902 ; Missile Aerodynamics ; https://arc.aiaa.org/ ; >
@@ -1003,7 +1003,7 @@
     au < manifest ; exists ; 2019 ; 9781624105661 ; 9781624105678 ; 9781624105678 ; PAA257 The F-35 Lightning II: From Concept to Cockpit ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105371 ; ; 9781624105371 ; Tactical and Strategic Missile Guidance: An Introduction, Seventh Edition, Volume 1 ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105388 ; ; 9781624105388 ; Advanced Tactical and Strategic Missile Guidance, Seventh Edition, Volume 2 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 2020 ; 9781624105807 ; 9781624105814 ; 9781624105814 ; High-Pressure Flows for Propulsion Applications ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 2020 ; 9781624105807 ; 9781624105814 ; 9781624105814 ; High-Pressure Flows for Propulsion Applications ; https://arc.aiaa.org/ ; >
 
  }
 
