@@ -3,27 +3,29 @@
   publisher <
     name = Iowa State University Digital Press ;
     #info[contract] = 2019 ;
-    #info[tester] = 5 ;
-    #info[poller] = 2 ;
-    info[platform] = Custom/OAI
+    #info[tester] = 8 ;
+    #info[poller] = 8 ;
+    info[platform] = Janeway. Clockss & GLN
   >
   
-  {
-  
-    title <
-      name = Iowa State University Digital Press 
-    >
-
     plugin = org.lockss.plugin.janeway.iowastatedp.ClockssIowaStateDPPlugin
     param[base_url] = https://www.iastatedigitalpress.com/
     param[oai_granularity] = YYYY-MM-DD
-    nondefparam[journal_id] = aglawdigest
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
+  {
+  
+    title <
+      name = Agricultural Law Digest ;
+      issn = 1051-2780
+    >
+
+    nondefparam[journal_id] = aglawdigest
+
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2018-01-01&until=2018-12-31
-    au < crawling ; exists ; 2018 ; 8 ; Iowa State University Digital Press Volume 29 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; 8 ; Agricultural Law Digest Volume 29 ; 2018 ; >
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    au < crawling ; exists ; 2019 ; 9 ; Iowa State University Digital Press Volume 30 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; 9 ; Agricultural Law Digest Volume 30 ; 2019 ; >
 
   }
 }
