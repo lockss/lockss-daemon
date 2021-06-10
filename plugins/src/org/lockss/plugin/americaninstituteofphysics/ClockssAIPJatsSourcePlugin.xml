@@ -34,11 +34,11 @@
   </entry>  
   <entry>
     <string>plugin_name</string>
-    <string>American Institute of Physics JATS Source Plugin (CLOCKSS)</string>
+    <string>American Institute of Physics Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Institute of Physics JATS Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"American Institute of Physics Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

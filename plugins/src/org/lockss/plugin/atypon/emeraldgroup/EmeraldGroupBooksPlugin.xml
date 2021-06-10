@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Emerald Group Publishing Books Plugin</string>
+    <string>Emerald Publishing Books Plugin (Legacy 2015)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Emerald Group Publishing Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
+    <string>"Emerald Publishing Books Plugin (Legacy 2015), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
   <!-- override start_url to handle http to https conversion -->
   <entry>

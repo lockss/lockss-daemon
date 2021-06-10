@@ -53,11 +53,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Journal of Tropical Medicine and Hygiene (PubFactory)</string>
+        <string>American Journal of Tropical Medicine and Hygiene Plugin</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Journal of Tropical Medicine and Hygiene (PubFactory), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+        <string>"American Journal of Tropical Medicine and Hygiene Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
     </entry>
     <entry>
         <string>au_start_url</string>

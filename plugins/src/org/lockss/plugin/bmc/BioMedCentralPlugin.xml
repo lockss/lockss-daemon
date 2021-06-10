@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"BioMed Central Plugin (BMC Journals, Chemistry Central), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+    <string>"BioMed Central Plugin (BMC Journals and Chemistry Central), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioMed Central Plugin (BMC Journals, Chemistry Central)</string>
+    <string>BioMed Central Plugin (BMC Journals and Chemistry Central)</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>

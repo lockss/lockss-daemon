@@ -30,7 +30,7 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Journal of Occupational Therapy Silverchair Plugin</string>
+        <string>American Journal of Occupational Therapy Plugin</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -75,7 +75,7 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Journal of Occupational Therapy, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+        <string>"American Journal of Occupational Therapy Plugin, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
     </entry>
     <entry>
         <string>au_start_url</string>

@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS)</string>
+    <string>BioMed Central Plugin (BMC Journals and Chemistry Central, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+    <string>"BioMed Central Plugin (BMC Journals and Chemistry Central, CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>clockss_override</string>
