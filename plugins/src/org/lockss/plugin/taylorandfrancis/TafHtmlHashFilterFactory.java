@@ -111,8 +111,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     Node targetSibling = null;
     String thisID;
     while (sibling != null) {
-      if (sibling instanceof Div) {
-        thisID = ((Div) sibling).getAttribute(attribute);
+      if (sibling instanceof Tag) {
+        thisID = ((Tag) sibling).getAttribute(attribute);
         if (thisID != null && !thisID.isEmpty() && thisID.contains(attrValue)) {
           targetSibling = sibling;
           break;
@@ -265,11 +265,44 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
     }
   }
 
+  public void determinePageType(String loginHref,
+                                BooleanData bD) {
+    // simple method that searches for specific path in an href and sets boolean values in a BooleanData class
+    if (loginHref.contains("doi%2Ffull")) {
+      log.info("          isFull");
+      bD.isFull = true;
+    } else if (loginHref.contains("doi%2Fabs")) {
+      log.info("          isAbs");
+      bD.isLikelyAbs = true;
+      bD.isAbs = true;
+    } else if (loginHref.contains("doi%2Fref")) {
+      log.info("          isRef");
+      bD.isRef = true;
+    } else if (loginHref.contains("doi%2Fcit")) {
+      log.info("          isCit");
+      bD.isCit = true;
+    } else if (loginHref.contains("doi%2Fsupp")) {
+      log.info("          isSupp");
+      bD.isSupp = true;
+    } else if (loginHref.contains("doi%2Ffigure")) {
+      log.info("          isFig");
+      bD.isFig = true;
+    } else if (loginHref.contains("%2Ftoc")) {
+      log.info("          isToc");
+    }
+  }
+
   private static class BooleanData {
     private boolean hlFld_TitleSPAN = false;
     private boolean hlFld_TitleDIV = false;
     private boolean isLikelyAbs = false;
     private boolean hasPreview = false;
+    private boolean isFull = false;
+    private boolean isAbs = false;
+    private boolean isRef = false;
+    private boolean isCit = false;
+    private boolean isSupp = false;
+    private boolean isFig = false;
   }
 
   /**
@@ -555,6 +588,56 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             return false;
           }
         },
+        // new content way to determine page type (i.e. get the url of the current page from the 'Sign in'/'Log in'
+        // link at the top of the page
+        new NodeFilter() {
+          @Override
+          public boolean accept(Node node) {
+            if (node instanceof LinkTag) {
+              String href = ((LinkTag) node).getLink();
+              if (href != null && href.contains("showLogin?uri=")) {
+                log.info("New Content page check:");
+                determinePageType(href, bD);
+              }
+            }
+            return false;
+          }
+        },
+        // old content way to determine page type
+        new NodeFilter() {
+          @Override
+          public boolean accept(Node node) {
+            if (node instanceof Div) {
+              String divId = ((Div) node).getAttribute("id");
+              if ( divId != null && divId.equals("login")) {
+                Node child = node.getFirstChild();
+                while (child != null) {
+                  if (child instanceof BulletList) {
+                    Node grandChild = child.getFirstChild();
+                    while (grandChild != null) {
+                      if (grandChild instanceof Bullet) {
+                        Node greatGrandChild = grandChild.getFirstChild();
+                        while (greatGrandChild != null) {
+                          if (greatGrandChild instanceof LinkTag) {
+                            String href = ((LinkTag) greatGrandChild).getLink();
+                            if (href != null && href.contains("showLogin?uri=")) {
+                              log.info("Old Content page check:");
+                              determinePageType(href, bD);
+                            }
+                          }
+                          greatGrandChild = greatGrandChild.getNextSibling();
+                        }
+                      }
+                      grandChild = grandChild.getNextSibling();
+                    }
+                  }
+                  child = child.getNextSibling();
+                }
+              }
+            }
+            return false;
+          }
+        },
 
         // complicated abstract deduplicator
         new NodeFilter() {
@@ -588,14 +671,18 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
               Node ancestor = findAncestorIfAttr(node, "class", "abstract module", 2);
               if (ancestor != null) {
                 Node greatGrandParent = ancestor;
+                ((CompositeTag) node).setAttribute("id", "topBarAbstract");
                 returnAble = true; // we found an abstract, set return to true, unless further checks are true
+/*
                 // If we find a <div id="preview" ... we can assume this is an '/abs/' containing url and can return
                 // without further checks.
                 Node previewDiv = findSiblingDivByAttr(greatGrandParent, "id", "preview");
                 if (previewDiv != null) {
-                  bD.isLikelyAbs = returnAble;
-                  return returnAble;
+                    bD.hasPreview = true;
+//                  bD.isLikelyAbs = returnAble;
+//                  return returnAble;
                 }
+
                 // find the sibling that id div#tabModule, note the structure shown at top of this filter
                   Node tabModule = findSiblingDivByAttr(greatGrandParent, "id", "tabModule");
                 if (tabModule != null) { // there is '\n' any number of times, then div.gutter
@@ -603,6 +690,40 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                   if (tabModuleChild != null) {// ibid... then div.tabs.clear.tabGutter
                     Node tabModuleGrandChild = findSiblingDivByAttr(tabModuleChild.getFirstChild(), "class", "tab"); // tabs | tabGutter
                     if (tabModuleGrandChild != null) {// '\n' then ul.tabsNav then '\n' then div#informationPanel '\n' then div#fullTextPanel
+
+                      if (bD.hasPreview) {
+                        Node tabsNav = findSiblingDivByAttr(tabModuleGrandChild.getFirstChild(), "class", "tabsNav");
+                        if (tabsNav != null) {
+                          Node activeTab = findSiblingDivByAttr(tabsNav.getFirstChild(), "class", "active");
+                          if (activeTab != null) {
+                            String activeId = ((Tag) activeTab).getAttribute("id");
+                            // informationTab, fulltextTab, referencesTab, citationsTab, supplementaryTab, permissionsTab
+                            log.info("found active tab");
+                            if (activeId.equalsIgnoreCase("informationtab")) {
+                              returnAble = true;
+                            } else if (activeId.equalsIgnoreCase("fulltexttab")) {
+                              // gotta check if it is a abstract or not
+                              Node jsLink = findSiblingDivByAttr(activeTab.getFirstChild(), "class", "jslink");
+                              if (jsLink instanceof LinkTag) {
+                                String href = ((LinkTag) jsLink).getLink();
+                                if (href != null && href.contains("#abstract")) {
+                                  returnAble = true;
+                                } else {
+                                  returnAble = false;
+                                }
+                              }
+                            } else {
+                              log.info(" removing cause references active tab");
+                              returnAble = false;
+                              //} else if (!activeId.equalsIgnoreCase("fulltexttab")) {
+                              //  returnAble = false;
+                            }
+                          }
+                        }
+                        bD.isLikelyAbs = returnAble;
+                        return returnAble;
+                      }
+
                       Node fullTextPanel = findSiblingDivByAttr(tabModuleGrandChild.getFirstChild(), "id", "fulltextPanel");
                       if (fullTextPanel != null) { // will not be present if not /full/ url, typically
                         Node fullTextPanelChild = findSiblingDivByAttr(fullTextPanel.getFirstChild(), "class", "gutter");
@@ -631,6 +752,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                     }
                   }
                 }
+ */
               }
             }
             return returnAble;
@@ -647,7 +769,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
               if (divId != null && !divId.isEmpty() &&
                   (divId.contains("preview") || divId.contains("firstPage"))
               ) {
-                // set likely abstract to true.
+                // set hasPreview to true.
                 bD.hasPreview = true;
               }
             }
@@ -1009,15 +1131,24 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
           }
         },
         // if we are abstract remove full text
+        // otherwise, remove abstract
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
-            if (bD.isLikelyAbs ) { //|| bD.hasPreview) {
+            if (bD.isLikelyAbs ) {
               if (node instanceof Div) {
                 Div div = ((Div) node);
                 String divID = div.getAttribute("id");
                 if(divID != null && !divID.isEmpty() && divID.contains("fulltextPanel")) {
                   log.info("removed fullTextPanel because isLikelyAbs is true");
+                  return true;
+                }
+              }
+            } else {
+              if (node instanceof Tag) {
+                String id = ((Tag) node).getAttribute("id");
+                if(id != null && !id.isEmpty() && id.equals("topBarAbstract")) {
+                  log.info("removed stand alone abstract because isLikelyAbs is false");
                   return true;
                 }
               }
