@@ -138,12 +138,14 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("eurilink university press", "Eurilink University Press");
       canonical.put("fabrizio serra", "Fabrizio Serra Editore");
       canonical.put("fabrizio serra editore", "Fabrizio Serra Editore");
+      canonical.put("firenze university press", "Firenze University Press");
       canonical.put("faenza editrice", "CLUEB");
       canonical.put("f. angeli", "Franco Angeli");
       canonical.put("f.angeli", "Franco Angeli");
       canonical.put("fondazione ignazio mormino del banco di sicilia", "L'Erma di Bretschneider");
       canonical.put("fondazione ignazio mormino del banco di sicilia l'erma di bretschneider", "L'Erma di Bretschneider");
       canonical.put("franco angeli", "Franco Angeli");
+      canonical.put("franco cesati editore", "Cadmo");
       canonical.put("francoangeli", "Franco Angeli");
       canonical.put("f. serra", "Fabrizio Serra Editore");
       canonical.put("genova university press", "Genova University Press");
@@ -172,6 +174,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("istituti editoriali e poligrafici internazionali", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("istituti editoriali e poligrafici internazionali universita degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("istituti editoriali e poligrafici internazionali università degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("italian cultural institute", "Cadmo");
       canonical.put("jaca book", "CLUEB");
       canonical.put("jaca book clueb", "CLUEB");
       canonical.put("jouvence", "Jouvence");
@@ -275,6 +278,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("trama editorial", "Trama Editorial");
       canonical.put("u. hoepli", "Hoepli");
       canonical.put("ulrico hoepli", "Hoepli");
+      canonical.put("unione fitopatologica mediterranea", "Firenze University Press");
       canonical.put("universita degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("università degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
       canonical.put("università degli studi di milano dipartimento di studi letterari filologici e linguistici","Ledizioni");
