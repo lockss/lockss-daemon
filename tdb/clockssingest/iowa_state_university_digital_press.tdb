@@ -5,27 +5,183 @@
     #info[contract] = 2019 ;
     #info[tester] = 8 ;
     #info[poller] = 8 ;
-    info[platform] = Janeway. Clockss & GLN
+    info[platform] = Janeway. Clockss
   >
   
     plugin = org.lockss.plugin.janeway.iowastatedp.ClockssIowaStateDPPlugin
     param[base_url] = https://www.iastatedigitalpress.com/
     param[oai_granularity] = YYYY-MM-DD
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    implicit < status ; status2 ; param[year] ; volume ; name ; hidden[proxy] >
 
   {
   
     title <
       name = Agricultural Law Digest ;
-      issn = 1051-2780
+      eissn = 1051-2780
     >
 
     nondefparam[journal_id] = aglawdigest
 
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2018-01-01&until=2018-12-31
-    au < crawling ; exists ; 2018 ; 8 ; Agricultural Law Digest Volume 29 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; 29 ; Agricultural Law Digest Volume 29 ; >
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    au < crawling ; exists ; 2019 ; 9 ; Agricultural Law Digest Volume 30 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; 30 ; Agricultural Law Digest Volume 30 ; >
 
   }
+
+  {
+      title <
+        name = The Critical Social Educator ;
+        eissn = 2687-6892
+      >
+
+      nondefparam[journal_id] = tcse
+
+      au < exists ; exists ; 2021 ; 1 ; The Critical Social Educator Volume 1 ; >
+
+  }
+
+  {
+      title <
+        name = Iowa State University Animal Industry Report ;
+        eissn = 2693-0293
+      >
+
+      nondefparam[journal_id] = air
+
+      au < exists ; exists ; 2004 ; 2004 ; Iowa State University Animal Industry Report Volume 2004 ; >
+      au < exists ; exists ; 2005 ; 2005 ; Iowa State University Animal Industry Report Volume 2005 ; >
+      au < exists ; exists ; 2006 ; 2006 ; Iowa State University Animal Industry Report Volume 2006 ; >
+      au < exists ; exists ; 2007 ; 2007 ; Iowa State University Animal Industry Report Volume 2007 ; >
+      au < exists ; exists ; 2008 ; 2008 ; Iowa State University Animal Industry Report Volume 2008 ; >
+      au < exists ; exists ; 2009 ; 2009 ; Iowa State University Animal Industry Report Volume 2009 ; >
+      au < exists ; exists ; 2010 ; 2010 ; Iowa State University Animal Industry Report Volume 2010 ; >
+      au < exists ; exists ; 2011 ; 2011 ; Iowa State University Animal Industry Report Volume 2011 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Iowa State University Animal Industry Report Volume 2012 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Iowa State University Animal Industry Report Volume 2013 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Iowa State University Animal Industry Report Volume 2014 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Iowa State University Animal Industry Report Volume 2015 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Iowa State University Animal Industry Report Volume 2016 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Iowa State University Animal Industry Report Volume 2017 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Iowa State University Animal Industry Report Volume 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Iowa State University Animal Industry Report Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Iowa State University Animal Industry Report Volume 2020 ; >
+      au < expected ; exists ; 2021 ; 2021 ; Iowa State University Animal Industry Report Volume 2021 ; >
+
+  }
+
+  {
+      title <
+        name = Iowa State University Research and Demonstration Farms Progress Reports
+      >
+
+      nondefparam[journal_id] = farmreports
+
+      au < exists ; exists ; 2000 ; 2000 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2000 ; >
+      au < exists ; exists ; 2001 ; 2001 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2001 ; >
+      au < exists ; exists ; 2002 ; 2002 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2002 ; >
+      au < exists ; exists ; 2003 ; 2003 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2003 ; >
+      au < exists ; exists ; 2004 ; 2004 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2004 ; >
+      au < exists ; exists ; 2005 ; 2005 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2005 ; >
+      au < exists ; exists ; 2006 ; 2006 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2006 ; >
+      au < exists ; exists ; 2007 ; 2007 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2007 ; >
+      au < exists ; exists ; 2008 ; 2008 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2008 ; >
+      au < exists ; exists ; 2009 ; 2009 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2009 ; >
+      au < exists ; exists ; 2010 ; 2010 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2010 ; >
+      au < exists ; exists ; 2011 ; 2011 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2011 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2012 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2013 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2014 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2015 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2016 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2017 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2020 ; >
+      au < expected ; exists ; 2021 ; 2021 ; Iowa State University Research and Demonstration Farms Progress Reports Volume 2021 ; >
+
+  }
+
+  {
+      title <
+        name = Journal of Critical Thought and Praxis ;
+        eissn = 2325-1204
+      >
+
+      nondefparam[journal_id] = jctp
+
+      au < exists ; exists ; 2012 ; 1 ; Journal of Critical Thought and Praxis Volume 1 ; >
+      au < exists ; exists ; 2013 ; 2 ; Journal of Critical Thought and Praxis Volume 2 ; >
+      au < exists ; exists ; 2014 ; 3 ; Journal of Critical Thought and Praxis Volume 3 ; >
+      au < exists ; exists ; 2015 ; 4 ; Journal of Critical Thought and Praxis Volume 4 ; >
+      au < exists ; exists ; 2016 ; 5 ; Journal of Critical Thought and Praxis Volume 5 ; >
+      au < exists ; exists ; 2017 ; 6 ; Journal of Critical Thought and Praxis Volume 6 ; >
+      au < exists ; exists ; 2018 ; 7 ; Journal of Critical Thought and Praxis Volume 7 ; >
+      au < exists ; exists ; 2019 ; 8 ; Journal of Critical Thought and Praxis Volume 8 ; >
+      au < exists ; exists ; 2020 ; 9 ; Journal of Critical Thought and Praxis Volume 9 ; >
+      au < exists ; exists ; 2021 ; 10 ; Journal of Critical Thought and Praxis Volume 10 ; >
+
+  }
+
+  {
+      title <
+        name = MAC Newsletter ;
+        eissn = 0741-0379
+      >
+
+      nondefparam[journal_id] = macnewsletter
+
+      au < exists ; exists ; 2018 ; 45 ; MAC Newsletter Volume 45 ; >
+      au < exists ; exists ; 2019 ; 46 ; MAC Newsletter Volume 46 ; >
+      au < exists ; exists ; 2020 ; 47 ; MAC Newsletter Volume 47 ; >
+      au < exists ; exists ; 2021 ; 48 ; MAC Newsletter Volume 48 ; >
+
+  }
+
+  {
+      title <
+        name = Meat and Muscle Biology ;
+        eissn = 2575-985X
+      >
+
+      nondefparam[journal_id] = mmb
+
+      au < exists ; exists ; 2017 ; 1 ; Meat and Muscle Biology Volume 1 ; >
+      au < exists ; exists ; 2018 ; 2 ; Meat and Muscle Biology Volume 2 ; >
+      au < exists ; exists ; 2019 ; 3 ; Meat and Muscle Biology Volume 3 ; >
+      au < exists ; exists ; 2020 ; 4 ; Meat and Muscle Biology Volume 4 ; >
+      au < exists ; exists ; 2021 ; 5 ; Meat and Muscle Biology Volume 5 ; >
+
+  }
+
+  {
+      title <
+        name = Sterkiana ;
+        eissn = 0585-2560
+      >
+
+      nondefparam[journal_id] = sterkiana
+      #content from 1965 volume 19 to 1989 volume 72 has page setup without content
+
+      au < exists ; exists ; 1959 ; 1 ; Sterkiana Volume 1 ; >
+      au < exists ; exists ; 1960 ; 2 ; Sterkiana Volume 2 ; >
+      au < exists ; exists ; 1961 ; 3 ; Sterkiana Volume 3 ; >
+      au < exists ; exists ; 1961 ; 4 ; Sterkiana Volume 4 ; >
+      au < exists ; exists ; 1961 ; 5 ; Sterkiana Volume 5 ; >
+      au < exists ; exists ; 1962 ; 6 ; Sterkiana Volume 6 ; >
+      au < exists ; exists ; 1962 ; 7 ; Sterkiana Volume 7 ; >
+      au < exists ; exists ; 1962 ; 8 ; Sterkiana Volume 8 ; >
+      au < exists ; exists ; 1963 ; 9 ; Sterkiana Volume 9 ; >
+      au < exists ; exists ; 1963 ; 10 ; Sterkiana Volume 10 ; >
+      au < exists ; exists ; 1963 ; 11 ; Sterkiana Volume 11 ; >
+      au < exists ; exists ; 1963 ; 12 ; Sterkiana Volume 12 ; >
+      au < exists ; exists ; 1964 ; 13 ; Sterkiana Volume 13 ; >
+      au < exists ; exists ; 1964 ; 14 ; Sterkiana Volume 14 ; >
+      au < exists ; exists ; 1964 ; 15 ; Sterkiana Volume 15 ; >
+      au < exists ; exists ; 1964 ; 16 ; Sterkiana Volume 16 ; >
+      au < exists ; exists ; 1965 ; 17 ; Sterkiana Volume 17 ; >
+      au < exists ; exists ; 1965 ; 18 ; Sterkiana Volume 18 ; >
+
+  }
+
 }
