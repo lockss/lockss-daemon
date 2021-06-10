@@ -36,11 +36,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"BioMed Central Plugin (BMC Series, PhysMath Central), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+    <string>"BioMed Central Plugin (BMC Series and PhysMath Central), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioMed Central Plugin (BMC Series, PhysMath Central)</string>
+    <string>BioMed Central Plugin (BMC Series and PhysMath Central)</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
