@@ -151,6 +151,48 @@ public class TestAsmHtmlHashFilterFactory extends LockssTestCase {
       "<div>Published online: 24 February 2020</div>" +
     "</section>";
 
+  private static final String footnote =
+    "<div class=\"notes\">" +
+      "<div class=\"labeled\" role=\"doc-footnote\">" +
+        "<div class=\"label\">" +
+          "a" +
+        "</div>" +
+        "<div id=\"T1F1\" role=\"paragraph\">" +
+          "The hydrodynamic radii and limiting molar conductivities were reported previously (" +
+          "<a href=\"#B51\" role=\"doc-biblioref\" data-xml-rid=\"B51\">51</a>" +
+          ", " +
+          "<a href=\"#B52\" role=\"doc-biblioref\" data-xml-rid=\"B52\">52</a>" +
+          ")." +
+        "</div>" +
+      "</div>" +
+      "<div class=\"labeled\" role=\"doc-footnote\">" +
+        "<div class=\"label\">" +
+          "<sup>b</sup>" +
+        "</div>" +
+        "<div id=\"T1F2\" role=\"paragraph\">" +
+          "Measured under 80\tmV in a solution of 1 M electrolyte and 10\tmM HEPES at pH 6." +
+        "</div>" +
+      "</div>" +
+    "</div>";
+
+
+  private static final String filteredFootnote =
+    "<div class=\"notes\">" +
+      "<div class=\"labeled\" role=\"doc-footnote\">" +
+        "<div  role=\"paragraph\">" +
+          "The hydrodynamic radii and limiting molar conductivities were reported previously (" +
+          "<a href=\"#B51\" role=\"doc-biblioref\" data-xml-rid=\"B51\">51</a>" +
+          ", " +
+          "<a href=\"#B52\" role=\"doc-biblioref\" data-xml-rid=\"B52\">52</a>" +
+          ")." +
+        "</div>" +
+      "</div>" +
+      "<div class=\"labeled\" role=\"doc-footnote\">" +
+        "<div  role=\"paragraph\">" +
+          "Measured under 80\tmV in a solution of 1 M electrolyte and 10\tmM HEPES at pH 6." +
+        "</div>" +
+      "</div>" +
+    "</div>";
 
   public void testCitationFilter() throws Exception {
     InputStream in;
@@ -185,6 +227,13 @@ public class TestAsmHtmlHashFilterFactory extends LockssTestCase {
     in = fact.createFilteredInputStream(mau, new StringInputStream(pubHistory),
         ENC);
     assertEquals(filteredPubHistory,StringUtil.fromInputStream(in));
+  }
+
+  public void testFootnoteFilter() throws Exception {
+    InputStream in;
+    in = fact.createFilteredInputStream(mau, new StringInputStream(footnote),
+        ENC);
+    assertEquals(filteredFootnote,StringUtil.fromInputStream(in));
   }
 
 }

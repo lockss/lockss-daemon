@@ -96,6 +96,13 @@ public class AsmHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
           HtmlNodeFilters.tag("br")
         }
       ),
+      // sometimes missing tags within div role=doc-footnote, remove only them
+      new onlyTheseSubtrees(
+          HtmlNodeFilters.tagWithAttribute("div", "role", "doc-footnote"),
+          new NodeFilter[]{
+              HtmlNodeFilters.tagWithAttribute("div", "class", "label"),
+          }
+      ),
       // Check if the img src is a dynamically generated path. remove the src link if so.
       // <img src="/cms/asset/4c00858f-aabd-495c-a0b1-59c46ac3afe0/jb.2021.203.issue-10.cover.gif" alt="Journal of Bacteriology cover image"/>
       HtmlNodeFilters.tagWithAttributeRegex("img", "src", "/cms/asset/"),
