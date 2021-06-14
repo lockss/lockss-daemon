@@ -35,6 +35,7 @@ package org.lockss.plugin.atypon.asm;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.tags.Div;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.filter.html.HtmlTags;
@@ -80,6 +81,17 @@ public class AsmHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     }
   }
 
+  public static Node GetFirstChildTag(Node parent) {
+    Node child = parent.getFirstChild();
+    while (child != null) {
+      if (child instanceof Tag) {
+        return child;
+      }
+      child = child.getNextSibling();
+    }
+    return null;
+  }
+
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -114,11 +126,11 @@ public class AsmHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
           if (node instanceof Div) {
             String className = ((Div) node).getAttribute("class");
             if (className != null && !className.isEmpty() && className.equals("container")) {
-              Node child = node.getFirstChild();
+              Node child = GetFirstChildTag(node);
               if (child != null) {
-                Node grandChild = child.getFirstChild();
+                Node grandChild = GetFirstChildTag(child);
                 if (grandChild != null) {
-                  Node greatGrandChild = grandChild.getFirstChild();
+                  Node greatGrandChild = GetFirstChildTag(grandChild);
                   if (greatGrandChild instanceof HtmlTags.Section) {
                     String sectionClass = ((HtmlTags.Section) greatGrandChild).getAttribute("class");
                     if (sectionClass != null && sectionClass.equals("we-recommend")) {

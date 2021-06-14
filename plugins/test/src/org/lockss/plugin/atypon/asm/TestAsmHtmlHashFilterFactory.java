@@ -111,8 +111,12 @@ public class TestAsmHtmlHashFilterFactory extends LockssTestCase {
         "..." +
       "</article>" +
       "<div class=\"container\">" +
+        "" +
+        "\n" +
+        "" +
         "<div class=\"row\">" +
           "<div class=\"col-12\">" +
+            "\n" +
             "<section aria-label=\"we recommend\" class=\"we-recommend\">" +
               "<h3 class=\"we-recommend__title\">" +
                 "We Recommend" +
