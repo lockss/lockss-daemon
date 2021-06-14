@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -97,7 +97,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.emerald.Emerald2020HtmlFilterFactory</string>
+    <string>org.lockss.plugin.emerald.Emerald2020BooksHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -115,6 +115,17 @@
         <string>org.lockss.plugin.emerald.Emerald2020BooksMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!--
+      Handle the following error:
+      https://www.emerald.com/insight/content/doi/10.1108/cw.2004.21730cab.003/full/html
+      File size (56238) differs from Content-Length header (56239): https://www.emerald.com/insight/content/doi/10.1108/cw.2004.21730cab.003/full/html
+      -->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
+    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
