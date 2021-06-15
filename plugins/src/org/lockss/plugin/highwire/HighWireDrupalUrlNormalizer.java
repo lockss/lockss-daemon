@@ -108,8 +108,15 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
     // while PDFs with download param are not collected, the links should work in audit proxy
     // http://ajpheart.physiology.org/content/304/2/H253.full.pdf?download=true
     // to http://ajpheart.physiology.org/content/304/2/H253.full.pdf
-    // 
-    // map 
+    //
+    // Pdfs get served from a subdirectory that is hard to reckon with.
+    // https://www.jabfm.org/content/jabfp/33/1/1.full.pdf
+    // https://www.jabfm.org/content/33/1/1.full.pdf
+    //   and this
+    // https://cjasn.asnjournals.org/content/clinjasn/16/1/1.full.pdf
+    // https://cjasn.asnjournals.org/content/16/1/1.full.pdf
+    //
+    // map
     // http://ajpcell.physiology.org/highwire/citation/1814/bookends
     // http://ajpcell.physiology.org/highwire/citation/1814/easybib
     // http://ajpcell.physiology.org/highwire/citation/1814/mendeley
@@ -153,6 +160,8 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
       if (url.contains(FT_PDF)) {
         url = StringUtil.replaceLast(url, FT_PDF, FULL_PDF_SUFFIX);
       }
+      Matcher  mat = URL_PAT.matcher(url);
+      url = mat.replaceFirst("/content/");
     }
     
     if (url.contains(RSS_PARAM) ||

@@ -103,8 +103,12 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
         normalizer.normalizeUrl("http://www.example.com/content/ajpcell/303/1/C1/F1.large.jpg?download=true", m_mau));
     assertEquals("http://www.example.com/sites/default/files/color/jcore_1-15d49f53/colors.css",
         normalizer.normalizeUrl("http://www.example.com/sites/default/files/color/jcore_1-15d49f53/colors.css?n3sdk7", m_mau));
-    assertEquals("http://www.example.com/content/ajpheart/304/2/H253.full.pdf",
+    assertEquals("http://www.example.com/content/304/2/H253.full.pdf",
         normalizer.normalizeUrl("https://www.example.com/content/ajpheart/304/2/H253.full-text.pdf", m_mau));
+    assertEquals("https://www.jabfm.org/content/33/1/1.full.pdf",
+        normalizer.normalizeUrl("https://www.jabfm.org/content/jabfp/33/1/1.full.pdf", m_mau));
+    assertEquals("https://cjasn.asnjournals.org/content/16/1/1.full.pdf",
+        normalizer.normalizeUrl("https://cjasn.asnjournals.org/content/clinjasn/16/1/1.full.pdf", m_mau));
     assertEquals("http://www.example.com/content/304/2/H253.full.pdf",
         normalizer.normalizeUrl("http://www.example.com/content/304/2/H253.full-text.pdf", m_mau));
     assertEquals("https://www.example.com/content/304/2/H253.full.pdf+html",
@@ -117,7 +121,6 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
         normalizer.normalizeUrl("http://www.example.com/content/304/2/H253.full.pdf?download=yes", m_mau));
     assertEquals("http://www.example.com/content/304/2/H253.full.pdf?sso-checked=yestrue",
         normalizer.normalizeUrl("http://www.example.com/content/304/2/H253.full.pdf?sso-checked=yestrue", m_mau));
-    
     assertEquals("https://www.example.com/content/303/1/C1",
         normalizer.normalizeUrl("https://www.example.com/content/303/1/C1?rss=foo", m_mau2));
     assertEquals("http://www.example.com/content/303/1/C1",
