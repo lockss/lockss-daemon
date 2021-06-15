@@ -38,7 +38,7 @@
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < expected ; expected ; 2021 ; Casalini Content 2021 ; 2021_01 >
+      au < manifest ; exists ; 2021 ; Casalini Content 2021 ; 2021_01 >
   #no more content expected for this plugin
 
     }
