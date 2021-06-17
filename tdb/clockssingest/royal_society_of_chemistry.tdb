@@ -786,9 +786,9 @@
       au < finished ; manifest ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest  ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest  ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest  ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Lab on a Chip Volume 16 ; 16 ; 2016 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
@@ -896,7 +896,7 @@
       au < finished ; manifest ; 2016 ; Nanoscale Volume 8 ; 8 ; 2016 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; Nanoscale Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Nanoscale Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; Nanoscale Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2019 ; Nanoscale Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Nanoscale Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2021 ; Nanoscale Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; >
 
