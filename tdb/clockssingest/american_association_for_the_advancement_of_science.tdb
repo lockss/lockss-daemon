@@ -10,7 +10,8 @@
 
   plugin = org.lockss.plugin.highwire.aaas.ClockssAAASDrupalPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-  # all moving to Drupal by July 15 2015
+  # Moved to Drupal July 15 2015
+  # Moving to Atypon Summer 2021
     
   {
 
