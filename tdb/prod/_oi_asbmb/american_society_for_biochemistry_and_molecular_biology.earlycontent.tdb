@@ -3,6 +3,8 @@
   publisher <
     name = American Society for Biochemistry and Molecular Biology
   >
+  #Moving from directory tdb/prod/_oi_asbmb to _retired. 
+  #Publisher has moved to Elsevier from HW, and is no longer in the GLN.
   {
   
     title <
@@ -17,7 +19,6 @@
     param[base_url] = http://www.jbc.org/
     implicit < status ; year ; name ; param[volume_name] >
     
-    comment[doNotProcess] = this journal is huge. Do not process until further notice.
 
     au < down ; 1905-1906 ; Journal of Biological Chemistry Volume 1 ; 1 >
     au < down ; 1906-1907 ; Journal of Biological Chemistry Volume 2 ; 2 >
