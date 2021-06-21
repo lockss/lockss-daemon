@@ -180,7 +180,7 @@
       param[journal_id] = sotrap
 
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Sexual Offending: Theory, Research, and Prevention Volume 15 ; 15 ; 2020 ; https://sotrap.psychopen.eu/ ; > #no substance urls
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ ; >
 
   }
 
