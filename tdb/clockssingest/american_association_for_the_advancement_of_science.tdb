@@ -435,10 +435,10 @@
       au < crawling ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Volume 370 ; 370 ; https://science.sciencemag.org/ ; >
-      au < manifest ; exists ; 2021 ; Science Volume 371 ; 371 ; https://science.sciencemag.org/ ; >
-      au < manifest ; exists ; 2021 ; Science Volume 372 ; 372 ; https://science.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Volume 373 ; 373 ; https://science.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Volume 374 ; 374 ; https://science.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Volume 371 ; 371 ; https://science.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Volume 372 ; 372 ; https://science.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Volume 373 ; 373 ; https://science.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Volume 374 ; 374 ; https://science.sciencemag.org/ ; >
 
   }
 
@@ -465,7 +465,7 @@
       au < deepCrawl ; exists ; 2018 ; Science Signaling Volume 11 ; 11 ; http://stke.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Signaling Volume 12 ; 12 ; https://stke.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Signaling Volume 13 ; 13 ; https://stke.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Signaling Volume 14 ; 14 ; https://stke.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Signaling Volume 14 ; 14 ; https://stke.sciencemag.org/ ; >
 
   }
 
@@ -491,7 +491,7 @@
       au < deepCrawl ; exists ; 2018 ; Science Translational Medicine Volume 10 ; 10 ; http://stm.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; https://stm.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; https://stm.sciencemag.org/ ; >
-      au < manifest ; exists ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; https://stm.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; https://stm.sciencemag.org/ ; >
 
   }
 
@@ -510,7 +510,7 @@
       au < finished ; manifest ; 2018 ; Science Advances Volume 4 ; 4 ; http://advances.sciencemag.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2019 ; Science Advances Volume 5 ; 5 ; https://advances.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Advances Volume 6 ; 6 ; https://advances.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Advances Volume 7 ; 7 ; https://advances.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Advances Volume 7 ; 7 ; https://advances.sciencemag.org/ ; >
 
   }
 
@@ -528,7 +528,7 @@
       au < deepCrawl ; exists ; 2018 ; Science Robotics Volume 3 ; 3 ; http://robotics.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Robotics Volume 4 ; 4 ; https://robotics.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Robotics Volume 5 ; 5 ; https://robotics.sciencemag.org/ ; >
-      au < expected ; exists ; 2021 ; Science Robotics Volume 6 ; 6 ; https://robotics.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Robotics Volume 6 ; 6 ; https://robotics.sciencemag.org/ ; >
 
   }
 
@@ -546,7 +546,7 @@
       au < deepCrawl ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; http://immunology.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Immunology Volume 4 ; 4 ; https://immunology.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; https://immunology.sciencemag.org/ ; >
-      au < manifest ; exists ; 2021 ; Science Immunology Volume 6 ; 6 ; https://immunology.sciencemag.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Science Immunology Volume 6 ; 6 ; https://immunology.sciencemag.org/ ; >
 
   }
 
