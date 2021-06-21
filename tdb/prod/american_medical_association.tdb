@@ -51,7 +51,7 @@
     au < released ; 2017 ; JAMA Dermatology Volume 153 ; 2017 >
     au < released ; 2018 ; JAMA Dermatology Volume 154 ; 2018 >
     au < released ; 2019 ; JAMA Dermatology Volume 155 ; 2019 >
-    au < ready ; 2020 ; JAMA Dermatology Volume 156 ; 2020 >
+    au < releasing ; 2020 ; JAMA Dermatology Volume 156 ; 2020 >
     au < manifest ; 2021 ; JAMA Dermatology Volume 157 ; 2021 >
 
   }
@@ -73,7 +73,7 @@
     au < manifest ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
     au < manifest ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
     au < released ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 >
-    au < ready ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 >
+    au < releasing ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 >
     au < released ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 2018 >
     au < released ; 2019 ; JAMA Facial Plastic Surgery Volume 21 ; 2019 >
     au < exists ; 2020 ; JAMA Facial Plastic Surgery Volume 22 ; 2020 >
@@ -142,7 +142,7 @@
     au < manifest ; 2015 ; JAMA Neurology Volume 72 ; 2015 >
     au < released ; 2016 ; JAMA Neurology Volume 73 ; 2016 >
     au < released ; 2017 ; JAMA Neurology Volume 74 ; 2017 >
-    au < ready ; 2018 ; JAMA Neurology Volume 75 ; 2018 >
+    au < releasing ; 2018 ; JAMA Neurology Volume 75 ; 2018 >
     au < released ; 2019 ; JAMA Neurology Volume 76 ; 2019 >
     au < released ; 2020 ; JAMA Neurology Volume 77 ; 2020 >
     au < manifest ; 2021 ; JAMA Neurology Volume 78 ; 2021 >
@@ -188,9 +188,9 @@
     au < manifest ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
     au < manifest ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 >
     au < released ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 >
-    au < ready ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 >
+    au < releasing ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 >
     au < released ; 2018 ; JAMA Ophthalmology Volume 136 ; 2018 >
-    au < ready ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 >
+    au < releasing ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 >
     au < released ; 2020 ; JAMA Ophthalmology Volume 138 ; 2020 >
     au < manifest ; 2021 ; JAMA Ophthalmology Volume 139 ; 2021 >
 
@@ -213,7 +213,7 @@
     au < manifest ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
     au < manifest ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 >
     au < released ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 >
-    au < ready ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 >
+    au < releasing ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 >
     au < released ; 2018 ; JAMA Otolaryngology - Head & Neck Surgery Volume 144 ; 2018 >
     au < released ; 2019 ; JAMA Otolaryngology - Head & Neck Surgery Volume 145 ; 2019 >
     au < released ; 2020 ; JAMA Otolaryngology - Head & Neck Surgery Volume 146 ; 2020 >
@@ -241,7 +241,7 @@
     au < released ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 >
     au < released ; 2018 ; JAMA Pediatrics Volume 172 ; 2018 >
     au < released ; 2019 ; JAMA Pediatrics Volume 173 ; 2019 >
-    au < ready ; 2020 ; JAMA Pediatrics Volume 174 ; 2020 >
+    au < releasing ; 2020 ; JAMA Pediatrics Volume 174 ; 2020 >
     au < manifest ; 2021 ; JAMA Pediatrics Volume 175 ; 2021 >
 
   }
@@ -283,13 +283,13 @@
     param[resource_id] = 76
     param[journal_id] = jamasurgery
     
-    au < ready ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
+    au < releasing ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
     au < manifest ; 2014 ; JAMA Surgery Volume 149 ; 2014 >
     au < manifest ; 2015 ; JAMA Surgery Volume 150 ; 2015 >
     au < released ; 2016 ; JAMA Surgery Volume 151 ; 2016 >
     au < released ; 2017 ; JAMA Surgery Volume 152 ; 2017 >
-    au < ready ; 2018 ; JAMA Surgery Volume 153 ; 2018 >
-    au < ready ; 2019 ; JAMA Surgery Volume 154 ; 2019 >
+    au < releasing ; 2018 ; JAMA Surgery Volume 153 ; 2018 >
+    au < releasing ; 2019 ; JAMA Surgery Volume 154 ; 2019 >
     au < released ; 2020 ; JAMA Surgery Volume 155 ; 2020 >
     au < manifest ; 2021 ; JAMA Surgery Volume 156 ; 2021 >
 
