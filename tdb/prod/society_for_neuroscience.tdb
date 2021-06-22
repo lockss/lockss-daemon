@@ -19,12 +19,12 @@
 
       au < released ; 2014 ; eNeuro Volume 1 ; 1 >
       au < released ; 2015 ; eNeuro Volume 2 ; 2 >
-      au < released ; 2016 ; eNeuro Volume 3 ; 3 > #probe link is to an editorial, not in crawl rules. LXPLUG-2085
+      au < down ; 2016 ; eNeuro Volume 3 ; 3 > #probe link is to an editorial, not in crawl rules. LXPLUG-2085
       au < released ; 2017 ; eNeuro Volume 4 ; 4 >
       au < released ; 2018 ; eNeuro Volume 5 ; 5 >
       au < released ; 2019 ; eNeuro Volume 6 ; 6 >
       au < released ; 2020 ; eNeuro Volume 7 ; 7 >
-      au < manifest ; 2021 ; eNeuro Volume 8 ; 8 > #unknown host css file  https://sn-eneuro-movie.glencoesoftware.com/static/video-js.min.css
+      au < notReady ; 2021 ; eNeuro Volume 8 ; 8 > #unknown host css file  https://sn-eneuro-movie.glencoesoftware.com/static/video-js.min.css
     }
 
     {
