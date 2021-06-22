@@ -892,7 +892,7 @@
     au < doNotProcess ; doNotProcess ; 2003 ; Assembly Automation Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Assembly Automation Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Assembly Automation Volume 25 ; 25 ; >
-    au < ready ; exists ; 2006 ; Assembly Automation Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2006 ; Assembly Automation Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Assembly Automation Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Assembly Automation Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Assembly Automation Volume 29 ; 29 ; >
@@ -1052,9 +1052,9 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Bottom Line: Managing Library Finances Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Bottom Line: Managing Library Finances Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; The Bottom Line: Managing Library Finances Volume 23 ; 23 ; >
-    au < ready ; exists ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; The Bottom Line: Managing Library Finances Volume 25 ; 25 ; >
-    au < ready ; exists ; 2013 ; The Bottom Line: Managing Library Finances Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2013 ; The Bottom Line: Managing Library Finances Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The Bottom Line: Managing Library Finances Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Bottom Line: Managing Library Finances Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; The Bottom Line: Managing Library Finances Volume 29 ; 29 ; >
@@ -1178,20 +1178,20 @@
     au < manifest ; exists ; 1997 ; British Food Journal Volume 99 ; 99 ; >
     au < manifest ; exists ; 1998 ; British Food Journal Volume 100 ; 100 ; >
     au < manifest ; exists ; 1999 ; British Food Journal Volume 101 ; 101 ; >
-    au < ready ; exists ; 2000 ; British Food Journal Volume 102 ; 102 ; >
-    au < ready ; exists ; 2001 ; British Food Journal Volume 103 ; 103 ; >
+    au < crawling ; exists ; 2000 ; British Food Journal Volume 102 ; 102 ; >
+    au < crawling ; exists ; 2001 ; British Food Journal Volume 103 ; 103 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; British Food Journal Volume 104 ; 104 ; >
-    au < ready ; exists ; 2003 ; British Food Journal Volume 105 ; 105 ; >
-    au < ready ; exists ; 2004 ; British Food Journal Volume 106 ; 106 ; >
-    au < ready ; exists ; 2005 ; British Food Journal Volume 107 ; 107 ; >
-    au < ready ; exists ; 2006 ; British Food Journal Volume 108 ; 108 ; >
-    au < ready ; exists ; 2007 ; British Food Journal Volume 109 ; 109 ; >
-    au < ready ; exists ; 2008 ; British Food Journal Volume 110 ; 110 ; >
-    au < ready ; exists ; 2009 ; British Food Journal Volume 111 ; 111 ; >
+    au < crawling ; exists ; 2003 ; British Food Journal Volume 105 ; 105 ; >
+    au < crawling ; exists ; 2004 ; British Food Journal Volume 106 ; 106 ; >
+    au < crawling ; exists ; 2005 ; British Food Journal Volume 107 ; 107 ; >
+    au < crawling ; exists ; 2006 ; British Food Journal Volume 108 ; 108 ; >
+    au < crawling ; exists ; 2007 ; British Food Journal Volume 109 ; 109 ; >
+    au < crawling ; exists ; 2008 ; British Food Journal Volume 110 ; 110 ; >
+    au < crawling ; exists ; 2009 ; British Food Journal Volume 111 ; 111 ; >
     au < crawling ; exists ; 2010 ; British Food Journal Volume 112 ; 112 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; British Food Journal Volume 113 ; 113 ; >
     au < crawling ; exists ; 2012 ; British Food Journal Volume 114 ; 114 ; >
-    au < ready ; exists ; 2013 ; British Food Journal Volume 115 ; 115 ; >
+    au < crawling ; exists ; 2013 ; British Food Journal Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; British Food Journal Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; British Food Journal Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; British Food Journal Volume 118 ; 118 ; >
@@ -1234,9 +1234,9 @@
     comment[continued_by] = 1477-7274
 
     au < manifest ; exists ; 1999 ; British Journal of Clinical Governance Volume 4 ; 4 ; >
-    au < ready ; exists ; 2000 ; British Journal of Clinical Governance Volume 5 ; 5 ; >
-    au < ready ; exists ; 2001 ; British Journal of Clinical Governance Volume 6 ; 6 ; >
-    au < ready ; exists ; 2002 ; British Journal of Clinical Governance Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2000 ; British Journal of Clinical Governance Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2001 ; British Journal of Clinical Governance Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2002 ; British Journal of Clinical Governance Volume 7 ; 7 ; >
 
   }
 
@@ -1252,17 +1252,17 @@
     comment[journal_id] = bjfp
 
     au < manifest ; exists ; 1999 ; The British Journal of Forensic Practice Volume 1 ; 1 ; >
-    au < ready ; exists ; 2000 ; The British Journal of Forensic Practice Volume 2 ; 2 ; >
-    au < ready ; exists ; 2001 ; The British Journal of Forensic Practice Volume 3 ; 3 ; >
-    au < ready ; exists ; 2002 ; The British Journal of Forensic Practice Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2000 ; The British Journal of Forensic Practice Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2001 ; The British Journal of Forensic Practice Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2002 ; The British Journal of Forensic Practice Volume 4 ; 4 ; >
     au < manifest ; exists ; 2003 ; The British Journal of Forensic Practice Volume 5 ; 5 ; >
     au < manifest ; exists ; 2004 ; The British Journal of Forensic Practice Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; The British Journal of Forensic Practice Volume 7 ; 7 ; >
-    au < ready ; exists ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 ; >
-    au < ready ; exists ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 ; >
-    au < ready ; exists ; 2008 ; The British Journal of Forensic Practice Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2008 ; The British Journal of Forensic Practice Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; The British Journal of Forensic Practice Volume 11 ; 11 ; >
-    au < ready ; exists ; 2010 ; The British Journal of Forensic Practice Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2010 ; The British Journal of Forensic Practice Volume 12 ; 12 ; >
     au < crawling ; exists ; 2011 ; The British Journal of Forensic Practice Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; The British Journal of Forensic Practice Volume 14 ; 14 ; >
 
@@ -1324,19 +1324,19 @@
     au < manifest ; exists ; 1997 ; Business Process Management Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 1998 ; Business Process Management Journal Volume 4 ; 4 ; >
     au < manifest ; exists ; 1999 ; Business Process Management Journal Volume 5 ; 5 ; >
-    au < ready ; exists ; 2000 ; Business Process Management Journal Volume 6 ; 6 ; >
-    au < ready ; exists ; 2001 ; Business Process Management Journal Volume 7 ; 7 ; >
-    au < ready ; exists ; 2002 ; Business Process Management Journal Volume 8 ; 8 ; >
-    au < ready ; exists ; 2003 ; Business Process Management Journal Volume 9 ; 9 ; >
-    au < ready ; exists ; 2004 ; Business Process Management Journal Volume 10 ; 10 ; >
-    au < ready ; exists ; 2005 ; Business Process Management Journal Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2000 ; Business Process Management Journal Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2001 ; Business Process Management Journal Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2002 ; Business Process Management Journal Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2003 ; Business Process Management Journal Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2004 ; Business Process Management Journal Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2005 ; Business Process Management Journal Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Business Process Management Journal Volume 12 ; 12 ; >
-    au < ready ; exists ; 2007 ; Business Process Management Journal Volume 13 ; 13 ; >
-    au < ready ; exists ; 2008 ; Business Process Management Journal Volume 14 ; 14 ; >
-    au < ready ; exists ; 2009 ; Business Process Management Journal Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2007 ; Business Process Management Journal Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2008 ; Business Process Management Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2009 ; Business Process Management Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2010 ; Business Process Management Journal Volume 16 ; 16 ; >
-    au < ready ; exists ; 2011 ; Business Process Management Journal Volume 17 ; 17 ; >
-    au < ready ; exists ; 2012 ; Business Process Management Journal Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2011 ; Business Process Management Journal Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2012 ; Business Process Management Journal Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Business Process Management Journal Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Business Process Management Journal Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Business Process Management Journal Volume 21 ; 21 ; >
@@ -1361,13 +1361,13 @@
     comment[journal_id] = bss
     # online from 2007
 
-    au < ready ; exists ; 2007 ; Business Strategy Series Volume 8 ; 8 ; >
-    au < ready ; exists ; 2008 ; Business Strategy Series Volume 9 ; 9 ; >
-    au < ready ; exists ; 2009 ; Business Strategy Series Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2007 ; Business Strategy Series Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2008 ; Business Strategy Series Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2009 ; Business Strategy Series Volume 10 ; 10 ; >
     au < crawling ; exists ; 2010 ; Business Strategy Series Volume 11 ; 11 ; >
     au < crawling ; exists ; 2011 ; Business Strategy Series Volume 12 ; 12 ; >
     au < crawling ; exists ; 2012 ; Business Strategy Series Volume 13 ; 13 ; >
-    au < ready ; exists ; 2013 ; Business Strategy Series Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2013 ; Business Strategy Series Volume 14 ; 14 ; >
 
   }
 
@@ -1398,15 +1398,15 @@
     au < manifest ; exists ; 1998 ; Campus-Wide Information Systems Volume 15 ; 15 ; >
     au < manifest ; exists ; 1999 ; Campus-Wide Information Systems Volume 16 ; 16 ; >
     au < manifest ; exists ; 2000 ; Campus-Wide Information Systems Volume 17 ; 17 ; >
-    au < ready ; exists ; 2001 ; Campus-Wide Information Systems Volume 18 ; 18 ; >
-    au < ready ; exists ; 2002 ; Campus-Wide Information Systems Volume 19 ; 19 ; >
-    au < ready ; exists ; 2003 ; Campus-Wide Information Systems Volume 20 ; 20 ; >
-    au < ready ; exists ; 2004 ; Campus-Wide Information Systems Volume 21 ; 21 ; >
-    au < ready ; exists ; 2005 ; Campus-Wide Information Systems Volume 22 ; 22 ; >
-    au < ready ; exists ; 2006 ; Campus-Wide Information Systems Volume 23 ; 23 ; >
-    au < ready ; exists ; 2007 ; Campus-Wide Information Systems Volume 24 ; 24 ; >
-    au < ready ; exists ; 2008 ; Campus-Wide Information Systems Volume 25 ; 25 ; >
-    au < ready ; exists ; 2009 ; Campus-Wide Information Systems Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2001 ; Campus-Wide Information Systems Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2002 ; Campus-Wide Information Systems Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2003 ; Campus-Wide Information Systems Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2004 ; Campus-Wide Information Systems Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2005 ; Campus-Wide Information Systems Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2006 ; Campus-Wide Information Systems Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2007 ; Campus-Wide Information Systems Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2008 ; Campus-Wide Information Systems Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2009 ; Campus-Wide Information Systems Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Campus-Wide Information Systems Volume 27 ; 27 ; >
     au < crawling ; exists ; 2011 ; Campus-Wide Information Systems Volume 28 ; 28 ; >
     au < crawling ; exists ; 2012 ; Campus-Wide Information Systems Volume 29 ; 29 ; >
@@ -1430,16 +1430,16 @@
     au < manifest ; exists ; 1997 ; Career Development International Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; Career Development International Volume 3 ; 3 ; >
     au < manifest ; exists ; 1999 ; Career Development International Volume 4 ; 4 ; >
-    au < ready ; exists ; 2000 ; Career Development International Volume 5 ; 5 ; >
-    au < ready ; exists ; 2001 ; Career Development International Volume 6 ; 6 ; >
-    au < ready ; exists ; 2002 ; Career Development International Volume 7 ; 7 ; >
-    au < ready ; exists ; 2003 ; Career Development International Volume 8 ; 8 ; >
-    au < ready ; exists ; 2004 ; Career Development International Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2000 ; Career Development International Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2001 ; Career Development International Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2002 ; Career Development International Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2003 ; Career Development International Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2004 ; Career Development International Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Career Development International Volume 10 ; 10 ; >
-    au < ready ; exists ; 2006 ; Career Development International Volume 11 ; 11 ; >
-    au < ready ; exists ; 2007 ; Career Development International Volume 12 ; 12 ; >
-    au < ready ; exists ; 2008 ; Career Development International Volume 13 ; 13 ; >
-    au < ready ; exists ; 2009 ; Career Development International Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2006 ; Career Development International Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2007 ; Career Development International Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2008 ; Career Development International Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2009 ; Career Development International Volume 14 ; 14 ; >
     au < crawling ; exists ; 2010 ; Career Development International Volume 15 ; 15 ; >
     au < crawling ; exists ; 2011 ; Career Development International Volume 16 ; 16 ; >
     au < crawling ; exists ; 2012 ; Career Development International Volume 17 ; 17 ; >
@@ -1466,7 +1466,7 @@
     param[journal_issn] = 1756-137X
     comment[journal_id] = caer
 
-    au < ready ; exists ; 2009 ; China Agricultural Economic Review Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2009 ; China Agricultural Economic Review Volume 1 ; 1 ; >
     au < crawling ; exists ; 2010 ; China Agricultural Economic Review Volume 2 ; 2 ; >
     au < frozen ; exists ; 2011 ; China Agricultural Economic Review Volume 3 ; 3 ; >
     au < frozen ; exists ; 2012 ; China Agricultural Economic Review Volume 4 ; 4 ; >
@@ -1517,8 +1517,8 @@
     param[journal_issn] = 1750-614X
     comment[journal_id] = cms
 
-    au < ready ; exists ; 2007 ; Chinese Management Studies Volume 1 ; 1 ; >
-    au < ready ; exists ; 2008 ; Chinese Management Studies Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; Chinese Management Studies Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2008 ; Chinese Management Studies Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Chinese Management Studies Volume 3 ; 3 ; >
     au < crawling ; exists ; 2010 ; Chinese Management Studies Volume 4 ; 4 ; >
     au < crawling ; exists ; 2011 ; Chinese Management Studies Volume 5 ; 5 ; >
@@ -1572,15 +1572,15 @@
     au < manifest ; exists ; 1998 ; Circuit World Volume 24 ; 24 ; >
     au < manifest ; exists ; 1999 ; Circuit World Volume 25 ; 25 ; >
     au < frozen ; exists ; 2000 ; Circuit World Volume 26 ; 26 ; >
-    au < ready ; exists ; 2001 ; Circuit World Volume 27 ; 27 ; >
-    au < ready ; exists ; 2002 ; Circuit World Volume 28 ; 28 ; >
-    au < ready ; exists ; 2003 ; Circuit World Volume 29 ; 29 ; >
-    au < ready ; exists ; 2004 ; Circuit World Volume 30 ; 30 ; >
-    au < ready ; exists ; 2005 ; Circuit World Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2001 ; Circuit World Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2002 ; Circuit World Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2003 ; Circuit World Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2004 ; Circuit World Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2005 ; Circuit World Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Circuit World Volume 32 ; 32 ; >
-    au < ready ; exists ; 2007 ; Circuit World Volume 33 ; 33 ; >
-    au < ready ; exists ; 2008 ; Circuit World Volume 34 ; 34 ; >
-    au < ready ; exists ; 2009 ; Circuit World Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2007 ; Circuit World Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2008 ; Circuit World Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2009 ; Circuit World Volume 35 ; 35 ; >
     au < crawling ; exists ; 2010 ; Circuit World Volume 36 ; 36 ; >
     au < crawling ; exists ; 2011 ; Circuit World Volume 37 ; 37 ; >
     au < crawling ; exists ; 2012 ; Circuit World Volume 38 ; 38 ; >
@@ -1609,13 +1609,13 @@
     # online from 2003
     #continued_by = 2059-4631
 
-    au < ready ; exists ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 ; >
-    au < ready ; exists ; 2004 ; Clinical Governance: An International Journal Volume 9 ; 9 ; >
-    au < ready ; exists ; 2005 ; Clinical Governance: An International Journal Volume 10 ; 10 ; >
-    au < ready ; exists ; 2006 ; Clinical Governance: An International Journal Volume 11 ; 11 ; >
-    au < ready ; exists ; 2007 ; Clinical Governance: An International Journal Volume 12 ; 12 ; >
-    au < ready ; exists ; 2008 ; Clinical Governance: An International Journal Volume 13 ; 13 ; >
-    au < ready ; exists ; 2009 ; Clinical Governance: An International Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2004 ; Clinical Governance: An International Journal Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2005 ; Clinical Governance: An International Journal Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2006 ; Clinical Governance: An International Journal Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2007 ; Clinical Governance: An International Journal Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2008 ; Clinical Governance: An International Journal Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2009 ; Clinical Governance: An International Journal Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Clinical Governance: An International Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2011 ; Clinical Governance: An International Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2012 ; Clinical Governance: An International Journal Volume 17 ; 17 ; >
@@ -1691,16 +1691,16 @@
     au < manifest ; exists ; 1997 ; Collection Building Volume 16 ; 16 ; >
     au < manifest ; exists ; 1998 ; Collection Building Volume 17 ; 17 ; >
     au < manifest ; exists ; 1999 ; Collection Building Volume 18 ; 18 ; >
-    au < ready ; exists ; 2000 ; Collection Building Volume 19 ; 19 ; >
-    au < ready ; exists ; 2001 ; Collection Building Volume 20 ; 20 ; >
-    au < ready ; exists ; 2002 ; Collection Building Volume 21 ; 21 ; >
-    au < ready ; exists ; 2003 ; Collection Building Volume 22 ; 22 ; >
-    au < ready ; exists ; 2004 ; Collection Building Volume 23 ; 23 ; >
-    au < ready ; exists ; 2005 ; Collection Building Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2000 ; Collection Building Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2001 ; Collection Building Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2002 ; Collection Building Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2003 ; Collection Building Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2004 ; Collection Building Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2005 ; Collection Building Volume 24 ; 24 ; >
     au < manifest ; exists ; 2006 ; Collection Building Volume 25 ; 25 ; >
-    au < ready ; exists ; 2007 ; Collection Building Volume 26 ; 26 ; >
-    au < ready ; exists ; 2008 ; Collection Building Volume 27 ; 27 ; >
-    au < ready ; exists ; 2009 ; Collection Building Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2007 ; Collection Building Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2008 ; Collection Building Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2009 ; Collection Building Volume 28 ; 28 ; >
     au < crawling ; exists ; 2010 ; Collection Building Volume 29 ; 29 ; >
     au < crawling ; exists ; 2011 ; Collection Building Volume 30 ; 30 ; >
     au < crawling ; exists ; 2012 ; Collection Building Volume 31 ; 31 ; >
@@ -1759,15 +1759,15 @@
     au < manifest ; exists ; 1998 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 17 ; 17 ; >
     au < manifest ; exists ; 1999 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 19 ; 19 ; >
-    au < ready ; exists ; 2001 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 20 ; 20 ; >
-    au < ready ; exists ; 2002 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 21 ; 21 ; >
-    au < ready ; exists ; 2003 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 22 ; 22 ; >
-    au < ready ; exists ; 2004 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 23 ; 23 ; >
-    au < ready ; exists ; 2005 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 24 ; 24 ; >
-    au < ready ; exists ; 2006 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 25 ; 25 ; >
-    au < ready ; exists ; 2007 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 26 ; 26 ; >
-    au < ready ; exists ; 2008 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 27 ; 27 ; >
-    au < ready ; exists ; 2009 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2001 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2002 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2003 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2004 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2005 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2006 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2007 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2008 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2009 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 28 ; 28 ; >
     au < frozen ; exists ; 2010 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 29 ; 29 ; >
     au < crawling ; exists ; 2011 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 30 ; 30 ; >
     au < crawling ; exists ; 2012 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 31 ; 31 ; >
@@ -1838,17 +1838,17 @@
     param[journal_issn] = 1471-4175
     comment[journal_id] = ci
 
-    au < ready ; exists ; 2001 ; Construction Innovation: Information, Process, Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 2002 ; Construction Innovation: Information, Process, Management Volume 2 ; 2 ; >
-    au < ready ; exists ; 2003 ; Construction Innovation: Information, Process, Management Volume 3 ; 3 ; >
-    au < ready ; exists ; 2004 ; Construction Innovation: Information, Process, Management Volume 4 ; 4 ; >
-    au < ready ; exists ; 2005 ; Construction Innovation: Information, Process, Management Volume 5 ; 5 ; >
-    au < ready ; exists ; 2006 ; Construction Innovation: Information, Process, Management Volume 6 ; 6 ; >
-    au < ready ; exists ; 2007 ; Construction Innovation: Information, Process, Management Volume 7 ; 7 ; >
-    au < ready ; exists ; 2008 ; Construction Innovation: Information, Process, Management Volume 8 ; 8 ; >
-    au < ready ; exists ; 2009 ; Construction Innovation: Information, Process, Management Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2001 ; Construction Innovation: Information, Process, Management Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2002 ; Construction Innovation: Information, Process, Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2003 ; Construction Innovation: Information, Process, Management Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2004 ; Construction Innovation: Information, Process, Management Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2005 ; Construction Innovation: Information, Process, Management Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2006 ; Construction Innovation: Information, Process, Management Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2007 ; Construction Innovation: Information, Process, Management Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2008 ; Construction Innovation: Information, Process, Management Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2009 ; Construction Innovation: Information, Process, Management Volume 9 ; 9 ; >
     au < crawling ; exists ; 2010 ; Construction Innovation: Information, Process, Management Volume 10 ; 10 ; >
-    au < ready ; exists ; 2011 ; Construction Innovation: Information, Process, Management Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2011 ; Construction Innovation: Information, Process, Management Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; Construction Innovation: Information, Process, Management Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Construction Innovation: Information, Process, Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Construction Innovation: Information, Process, Management Volume 14 ; 14 ; >
@@ -1877,17 +1877,17 @@
     au < manifest ; exists ; 1997 ; Corporate Communications: An International Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; Corporate Communications: An International Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 1999 ; Corporate Communications: An International Journal Volume 4 ; 4 ; >
-    au < ready ; exists ; 2000 ; Corporate Communications: An International Journal Volume 5 ; 5 ; >
-    au < ready ; exists ; 2001 ; Corporate Communications: An International Journal Volume 6 ; 6 ; >
-    au < ready ; exists ; 2002 ; Corporate Communications: An International Journal Volume 7 ; 7 ; >
-    au < ready ; exists ; 2003 ; Corporate Communications: An International Journal Volume 8 ; 8 ; >
-    au < ready ; exists ; 2004 ; Corporate Communications: An International Journal Volume 9 ; 9 ; >
-    au < ready ; exists ; 2005 ; Corporate Communications: An International Journal Volume 10 ; 10 ; >
-    au < ready ; exists ; 2006 ; Corporate Communications: An International Journal Volume 11 ; 11 ; >
-    au < ready ; exists ; 2007 ; Corporate Communications: An International Journal Volume 12 ; 12 ; >
-    au < ready ; exists ; 2008 ; Corporate Communications: An International Journal Volume 13 ; 13 ; >
-    au < ready ; exists ; 2009 ; Corporate Communications: An International Journal Volume 14 ; 14 ; >
-    au < ready ; exists ; 2010 ; Corporate Communications: An International Journal Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2000 ; Corporate Communications: An International Journal Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2001 ; Corporate Communications: An International Journal Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2002 ; Corporate Communications: An International Journal Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2003 ; Corporate Communications: An International Journal Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2004 ; Corporate Communications: An International Journal Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2005 ; Corporate Communications: An International Journal Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2006 ; Corporate Communications: An International Journal Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2007 ; Corporate Communications: An International Journal Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2008 ; Corporate Communications: An International Journal Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2009 ; Corporate Communications: An International Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2010 ; Corporate Communications: An International Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2011 ; Corporate Communications: An International Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2012 ; Corporate Communications: An International Journal Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Corporate Communications: An International Journal Volume 18 ; 18 ; >
@@ -1913,10 +1913,10 @@
     param[journal_issn] = 1472-0701
     comment[journal_id] = cg
 
-    au < ready ; exists ; 2001 ; Corporate Governance Volume 1 ; 1 ; >
-    au < ready ; exists ; 2002 ; Corporate Governance Volume 2 ; 2 ; >
-    au < ready ; exists ; 2003 ; Corporate Governance Volume 3 ; 3 ; >
-    au < ready ; exists ; 2004 ; Corporate Governance Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2001 ; Corporate Governance Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2002 ; Corporate Governance Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2003 ; Corporate Governance Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2004 ; Corporate Governance Volume 4 ; 4 ; >
     au < manifest ; exists ; 2005 ; Corporate Governance Volume 5 ; 5 ; >
     au < manifest ; exists ; 2006 ; Corporate Governance Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Corporate Governance Volume 7 ; 7 ; >
