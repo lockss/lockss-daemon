@@ -26,8 +26,8 @@
     au < doNotProcess ; 2017 ; 2017 ; Biology Open Volume 6 ; 6 >
     au < doNotProcess ; 2018 ; 2018 ; Biology Open Volume 7 ; 7 >
     au < doNotProcess ; 2019 ; 2019 ; Biology Open Volume 8 ; 8 >
-    au < exists ; 2020 ; 2020 ; Biology Open Volume 9 ; 9 >
-    au < expected ; 2021 ; 2021 ; Biology Open Volume 10 ; 10 >
+    au < manifest ; 2020 ; 2020 ; Biology Open Volume 9 ; 9 >
+    au < manifest ; 2021 ; 2021 ; Biology Open Volume 10 ; 10 >
 
   }
 
@@ -42,138 +42,138 @@
     #param[base_url] = http://dev.biologists.org/
     param[journal_id] = dev
 
-    au < exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 >
-    au < exists ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 >
-    au < exists ; 1955 ; 1955 ; Journal of Embryology and Experimental Morphology Volume 3 ; 3 >
-    au < exists ; 1956 ; 1956 ; Journal of Embryology and Experimental Morphology Volume 4 ; 4 >
-    au < exists ; 1957 ; 1957 ; Journal of Embryology and Experimental Morphology Volume 5 ; 5 >
-    au < exists ; 1958 ; 1958 ; Journal of Embryology and Experimental Morphology Volume 6 ; 6 >
-    au < exists ; 1959 ; 1959 ; Journal of Embryology and Experimental Morphology Volume 7 ; 7 >
-    au < exists ; 1960 ; 1960 ; Journal of Embryology and Experimental Morphology Volume 8 ; 8 >
-    au < exists ; 1961 ; 1961 ; Journal of Embryology and Experimental Morphology Volume 9 ; 9 >
-    au < exists ; 1962 ; 1962 ; Journal of Embryology and Experimental Morphology Volume 10 ; 10 >
-    au < exists ; 1963 ; 1963 ; Journal of Embryology and Experimental Morphology Volume 11 ; 11 >
-    au < exists ; 1964 ; 1964 ; Journal of Embryology and Experimental Morphology Volume 12 ; 12 >
-    au < exists ; 1965 ; 1965 ; Journal of Embryology and Experimental Morphology Volume 13 ; 13 >
-    au < exists ; 1965 ; 1965 ; Journal of Embryology and Experimental Morphology Volume 14 ; 14 >
-    au < exists ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 15 ; 15 >
-    au < exists ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 16 ; 16 >
-    au < exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 17 ; 17 >
-    au < exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 18 ; 18 >
-    au < exists ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 19 ; 19 >
-    au < exists ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 20 ; 20 >
-    au < exists ; 1969 ; 1969 ; Journal of Embryology and Experimental Morphology Volume 21 ; 21 >
-    au < exists ; 1969 ; 1969 ; Journal of Embryology and Experimental Morphology Volume 22 ; 22 >
-    au < exists ; 1970 ; 1970 ; Journal of Embryology and Experimental Morphology Volume 23 ; 23 >
-    au < exists ; 1970 ; 1970 ; Journal of Embryology and Experimental Morphology Volume 24 ; 24 >
-    au < exists ; 1971 ; 1971 ; Journal of Embryology and Experimental Morphology Volume 25 ; 25 >
-    au < exists ; 1971 ; 1971 ; Journal of Embryology and Experimental Morphology Volume 26 ; 26 >
-    au < exists ; 1972 ; 1972 ; Journal of Embryology and Experimental Morphology Volume 27 ; 27 >
-    au < exists ; 1972 ; 1972 ; Journal of Embryology and Experimental Morphology Volume 28 ; 28 >
-    au < exists ; 1973 ; 1973 ; Journal of Embryology and Experimental Morphology Volume 29 ; 29 >
-    au < exists ; 1973 ; 1973 ; Journal of Embryology and Experimental Morphology Volume 30 ; 30 >
-    au < exists ; 1974 ; 1974 ; Journal of Embryology and Experimental Morphology Volume 31 ; 31 >
-    au < exists ; 1974 ; 1974 ; Journal of Embryology and Experimental Morphology Volume 32 ; 32 >
-    au < exists ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 33 ; 33 >
-    au < exists ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 34 ; 34 >
-    au < exists ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 35 ; 35 >
-    au < exists ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 36 ; 36 >
-    au < exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 37 ; 37 >
-    au < exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 38 ; 38 >
-    au < exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 39 ; 39 >
-    au < exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 40 ; 40 >
-    au < exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 41 ; 41 >
-    au < exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 42 ; 42 >
-    au < exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 43 ; 43 >
-    au < exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 44 ; 44 >
-    au < exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 45 ; 45 >
-    au < exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 46 ; 46 >
-    au < exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 47 ; 47 >
-    au < exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 48 ; 48 >
-    au < exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 49 ; 49 >
-    au < exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 50 ; 50 >
-    au < exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 51 ; 51 >
-    au < exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 52 ; 52 >
-    au < exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 53 ; 53 >
-    au < exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 54 ; 54 >
-    au < exists ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 55 ; 55 >
-    au < exists ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 56 ; 56 >
-    au < exists ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 57 ; 57 >
-    au < exists ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 58 ; 58 >
-    au < exists ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 59 ; 59 >
-    au < exists ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 60 ; 60 >
-    au < exists ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 61 ; 61 >
-    au < exists ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 62 ; 62 >
-    au < exists ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 63 ; 63 >
-    au < exists ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 64 ; 64 >
-    au < exists ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 65 ; 65 >
-    au < exists ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 66 ; 66 >
-    au < exists ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 67 ; 67 >
-    au < exists ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 68 ; 68 >
-    au < exists ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 69 ; 69 >
-    au < exists ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 70 ; 70 >
-    au < exists ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 71 ; 71 >
-    au < exists ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 72 ; 72 >
-    au < exists ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 73 ; 73 >
-    au < exists ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 74 ; 74 >
-    au < exists ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 75 ; 75 >
-    au < exists ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 76 ; 76 >
-    au < exists ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 77 ; 77 >
-    au < exists ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 78 ; 78 >
-    au < exists ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 79 ; 79 >
-    au < exists ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 80 ; 80 >
-    au < exists ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 81 ; 81 >
-    au < exists ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 82 ; 82 >
-    au < exists ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 83 ; 83 >
-    au < exists ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 84 ; 84 >
-    au < exists ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 85 ; 85 >
-    au < exists ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 86 ; 86 >
-    au < exists ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 87 ; 87 >
-    au < exists ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 88 ; 88 >
-    au < exists ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 89 ; 89 >
-    au < exists ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 90 ; 90 >
-    au < exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 91 ; 91 >
-    au < exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 92 ; 92 >
-    au < exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 93 ; 93 >
-    au < exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 94 ; 94 >
-    au < exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 95 ; 95 >
-    au < exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 96 ; 96 >
-    au < exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 97 ; 97 >
-    au < exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 98 ; 98 >
-    au < exists ; 1987 ; 1987 ; Development Volume 99 ; 99 >
-    au < exists ; 1987 ; 1987 ; Development Volume 100 ; 100 >
-    au < exists ; 1987 ; 1987 ; Development Volume 101 ; 101 >
-    au < exists ; 1988 ; 1988 ; Development Volume 102 ; 102 >
-    au < exists ; 1988 ; 1988 ; Development Volume 103 ; 103 >
-    au < exists ; 1988 ; 1988 ; Development Volume 104 ; 104 >
-    au < exists ; 1989 ; 1989 ; Development Volume 105 ; 105 >
-    au < exists ; 1989 ; 1989 ; Development Volume 106 ; 106 >
-    au < exists ; 1989 ; 1989 ; Development Volume 107 ; 107 >
-    au < exists ; 1990 ; 1990 ; Development Volume 108 ; 108 >
-    au < exists ; 1990 ; 1990 ; Development Volume 109 ; 109 >
-    au < exists ; 1990 ; 1990 ; Development Volume 110 ; 110 >
-    au < exists ; 1991 ; 1991 ; Development Volume 111 ; 111 >
-    au < exists ; 1991 ; 1991 ; Development Volume 112 ; 112 >
-    au < exists ; 1991 ; 1991 ; Development Volume 113 ; 113 >
-    au < exists ; 1992 ; 1992 ; Development Volume 114 ; 114 >
-    au < exists ; 1992 ; 1992 ; Development Volume 115 ; 115 >
-    au < exists ; 1992 ; 1992 ; Development Volume 116 ; 116 >
-    au < exists ; 1993 ; 1993 ; Development Volume 117 ; 117 >
-    au < exists ; 1993 ; 1993 ; Development Volume 118 ; 118 >
-    au < exists ; 1993 ; 1993 ; Development Volume 119 ; 119 >
-    au < exists ; 1994 ; 1994 ; Development Volume 120 ; 120 >
-    au < exists ; 1995 ; 1995 ; Development Volume 121 ; 121 >
-    au < exists ; 1996 ; 1996 ; Development Volume 122 ; 122 >
-    au < exists ; 1996 ; 1996 ; Development Volume 123 ; 123 >
-    au < exists ; 1997 ; 1997 ; Development Volume 124 ; 124 >
-    au < exists ; 1998 ; 1998 ; Development Volume 125 ; 125 >
-    au < exists ; 1999 ; 1999 ; Development Volume 126 ; 126 >
+    au < manifest ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 >
+    au < manifest ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 >
+    au < manifest ; 1955 ; 1955 ; Journal of Embryology and Experimental Morphology Volume 3 ; 3 >
+    au < manifest ; 1956 ; 1956 ; Journal of Embryology and Experimental Morphology Volume 4 ; 4 >
+    au < manifest ; 1957 ; 1957 ; Journal of Embryology and Experimental Morphology Volume 5 ; 5 >
+    au < manifest ; 1958 ; 1958 ; Journal of Embryology and Experimental Morphology Volume 6 ; 6 >
+    au < manifest ; 1959 ; 1959 ; Journal of Embryology and Experimental Morphology Volume 7 ; 7 >
+    au < manifest ; 1960 ; 1960 ; Journal of Embryology and Experimental Morphology Volume 8 ; 8 >
+    au < manifest ; 1961 ; 1961 ; Journal of Embryology and Experimental Morphology Volume 9 ; 9 >
+    au < manifest ; 1962 ; 1962 ; Journal of Embryology and Experimental Morphology Volume 10 ; 10 >
+    au < manifest ; 1963 ; 1963 ; Journal of Embryology and Experimental Morphology Volume 11 ; 11 >
+    au < manifest ; 1964 ; 1964 ; Journal of Embryology and Experimental Morphology Volume 12 ; 12 >
+    au < manifest ; 1965 ; 1965 ; Journal of Embryology and Experimental Morphology Volume 13 ; 13 >
+    au < manifest ; 1965 ; 1965 ; Journal of Embryology and Experimental Morphology Volume 14 ; 14 >
+    au < manifest ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 15 ; 15 >
+    au < manifest ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 16 ; 16 >
+    au < manifest ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 17 ; 17 >
+    au < manifest ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 18 ; 18 >
+    au < manifest ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 19 ; 19 >
+    au < manifest ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 20 ; 20 >
+    au < manifest ; 1969 ; 1969 ; Journal of Embryology and Experimental Morphology Volume 21 ; 21 >
+    au < manifest ; 1969 ; 1969 ; Journal of Embryology and Experimental Morphology Volume 22 ; 22 >
+    au < manifest ; 1970 ; 1970 ; Journal of Embryology and Experimental Morphology Volume 23 ; 23 >
+    au < manifest ; 1970 ; 1970 ; Journal of Embryology and Experimental Morphology Volume 24 ; 24 >
+    au < manifest ; 1971 ; 1971 ; Journal of Embryology and Experimental Morphology Volume 25 ; 25 >
+    au < manifest ; 1971 ; 1971 ; Journal of Embryology and Experimental Morphology Volume 26 ; 26 >
+    au < manifest ; 1972 ; 1972 ; Journal of Embryology and Experimental Morphology Volume 27 ; 27 >
+    au < manifest ; 1972 ; 1972 ; Journal of Embryology and Experimental Morphology Volume 28 ; 28 >
+    au < manifest ; 1973 ; 1973 ; Journal of Embryology and Experimental Morphology Volume 29 ; 29 >
+    au < manifest ; 1973 ; 1973 ; Journal of Embryology and Experimental Morphology Volume 30 ; 30 >
+    au < manifest ; 1974 ; 1974 ; Journal of Embryology and Experimental Morphology Volume 31 ; 31 >
+    au < manifest ; 1974 ; 1974 ; Journal of Embryology and Experimental Morphology Volume 32 ; 32 >
+    au < manifest ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 33 ; 33 >
+    au < manifest ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 34 ; 34 >
+    au < manifest ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 35 ; 35 >
+    au < manifest ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 36 ; 36 >
+    au < manifest ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 37 ; 37 >
+    au < manifest ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 38 ; 38 >
+    au < manifest ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 39 ; 39 >
+    au < manifest ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 40 ; 40 >
+    au < manifest ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 41 ; 41 >
+    au < manifest ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 42 ; 42 >
+    au < manifest ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 43 ; 43 >
+    au < manifest ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 44 ; 44 >
+    au < manifest ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 45 ; 45 >
+    au < manifest ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 46 ; 46 >
+    au < manifest ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 47 ; 47 >
+    au < manifest ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 48 ; 48 >
+    au < manifest ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 49 ; 49 >
+    au < manifest ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 50 ; 50 >
+    au < manifest ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 51 ; 51 >
+    au < manifest ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 52 ; 52 >
+    au < manifest ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 53 ; 53 >
+    au < manifest ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 54 ; 54 >
+    au < manifest ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 55 ; 55 >
+    au < manifest ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 56 ; 56 >
+    au < manifest ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 57 ; 57 >
+    au < manifest ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 58 ; 58 >
+    au < manifest ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 59 ; 59 >
+    au < manifest ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 60 ; 60 >
+    au < manifest ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 61 ; 61 >
+    au < manifest ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 62 ; 62 >
+    au < manifest ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 63 ; 63 >
+    au < manifest ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 64 ; 64 >
+    au < manifest ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 65 ; 65 >
+    au < manifest ; 1981 ; 1981 ; Journal of Embryology and Experimental Morphology Volume 66 ; 66 >
+    au < manifest ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 67 ; 67 >
+    au < manifest ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 68 ; 68 >
+    au < manifest ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 69 ; 69 >
+    au < manifest ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 70 ; 70 >
+    au < manifest ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 71 ; 71 >
+    au < manifest ; 1982 ; 1982 ; Journal of Embryology and Experimental Morphology Volume 72 ; 72 >
+    au < manifest ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 73 ; 73 >
+    au < manifest ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 74 ; 74 >
+    au < manifest ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 75 ; 75 >
+    au < manifest ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 76 ; 76 >
+    au < manifest ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 77 ; 77 >
+    au < manifest ; 1983 ; 1983 ; Journal of Embryology and Experimental Morphology Volume 78 ; 78 >
+    au < manifest ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 79 ; 79 >
+    au < manifest ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 80 ; 80 >
+    au < manifest ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 81 ; 81 >
+    au < manifest ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 82 ; 82 >
+    au < manifest ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 83 ; 83 >
+    au < manifest ; 1984 ; 1984 ; Journal of Embryology and Experimental Morphology Volume 84 ; 84 >
+    au < manifest ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 85 ; 85 >
+    au < manifest ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 86 ; 86 >
+    au < manifest ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 87 ; 87 >
+    au < manifest ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 88 ; 88 >
+    au < manifest ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 89 ; 89 >
+    au < manifest ; 1985 ; 1985 ; Journal of Embryology and Experimental Morphology Volume 90 ; 90 >
+    au < manifest ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 91 ; 91 >
+    au < manifest ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 92 ; 92 >
+    au < manifest ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 93 ; 93 >
+    au < manifest ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 94 ; 94 >
+    au < manifest ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 95 ; 95 >
+    au < manifest ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 96 ; 96 >
+    au < manifest ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 97 ; 97 >
+    au < manifest ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 98 ; 98 >
+    au < manifest ; 1987 ; 1987 ; Development Volume 99 ; 99 >
+    au < manifest ; 1987 ; 1987 ; Development Volume 100 ; 100 >
+    au < manifest ; 1987 ; 1987 ; Development Volume 101 ; 101 >
+    au < manifest ; 1988 ; 1988 ; Development Volume 102 ; 102 >
+    au < manifest ; 1988 ; 1988 ; Development Volume 103 ; 103 >
+    au < manifest ; 1988 ; 1988 ; Development Volume 104 ; 104 >
+    au < manifest ; 1989 ; 1989 ; Development Volume 105 ; 105 >
+    au < manifest ; 1989 ; 1989 ; Development Volume 106 ; 106 >
+    au < manifest ; 1989 ; 1989 ; Development Volume 107 ; 107 >
+    au < manifest ; 1990 ; 1990 ; Development Volume 108 ; 108 >
+    au < manifest ; 1990 ; 1990 ; Development Volume 109 ; 109 >
+    au < manifest ; 1990 ; 1990 ; Development Volume 110 ; 110 >
+    au < manifest ; 1991 ; 1991 ; Development Volume 111 ; 111 >
+    au < manifest ; 1991 ; 1991 ; Development Volume 112 ; 112 >
+    au < manifest ; 1991 ; 1991 ; Development Volume 113 ; 113 >
+    au < manifest ; 1992 ; 1992 ; Development Volume 114 ; 114 >
+    au < manifest ; 1992 ; 1992 ; Development Volume 115 ; 115 >
+    au < manifest ; 1992 ; 1992 ; Development Volume 116 ; 116 >
+    au < manifest ; 1993 ; 1993 ; Development Volume 117 ; 117 >
+    au < manifest ; 1993 ; 1993 ; Development Volume 118 ; 118 >
+    au < manifest ; 1993 ; 1993 ; Development Volume 119 ; 119 >
+    au < manifest ; 1994 ; 1994 ; Development Volume 120 ; 120 >
+    au < manifest ; 1995 ; 1995 ; Development Volume 121 ; 121 >
+    au < manifest ; 1996 ; 1996 ; Development Volume 122 ; 122 >
+    au < manifest ; 1996 ; 1996 ; Development Volume 123 ; 123 >
+    au < manifest ; 1997 ; 1997 ; Development Volume 124 ; 124 >
+    au < manifest ; 1998 ; 1998 ; Development Volume 125 ; 125 >
+    au < manifest ; 1999 ; 1999 ; Development Volume 126 ; 126 >
     au < doNotProcess ; 2000 ; 2000 ; Development Volume 127 ; 127 >
     au < doNotProcess ; 2001 ; 2001 ; Development Volume 128 ; 128 >
     au < doNotProcess ; 2002 ; 2002 ; Development Volume 129 ; 129 >
-    au < exists ; 2003 ; 2003 ; Development Volume 130 ; 130 >
-    au < exists ; 2004 ; 2004 ; Development Volume 131 ; 131 >
-    au < exists ; 2005 ; 2005 ; Development Volume 132 ; 132 >
+    au < manifest ; 2003 ; 2003 ; Development Volume 130 ; 130 >
+    au < manifest ; 2004 ; 2004 ; Development Volume 131 ; 131 >
+    au < manifest ; 2005 ; 2005 ; Development Volume 132 ; 132 >
     au < doNotProcess ; 2006 ; 2006 ; Development Volume 133 ; 133 >
     au < doNotProcess ; 2007 ; 2007 ; Development Volume 134 ; 134 >
     au < doNotProcess ; 2008 ; 2008 ; Development Volume 135 ; 135 >
@@ -188,8 +188,8 @@
     au < doNotProcess ; 2017 ; 2017 ; Development Volume 144 ; 144 >
     au < doNotProcess ; 2018 ; 2018 ; Development Volume 145 ; 145 >
     au < doNotProcess ; 2019 ; 2019 ; Development Volume 146 ; 146 >
-    au < exists ; 2020 ; 2020 ; Development Volume 147 ; 147 >
-    au < expected ; 2021 ; 2021 ; Development Volume 148 ; 148 >
+    au < manifest ; 2020 ; 2020 ; Development Volume 147 ; 147 >
+    au < manifest ; 2021 ; 2021 ; Development Volume 148 ; 148 >
 
   }
 
@@ -216,8 +216,8 @@
     au < doNotProcess ; 2017 ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 >
     au < doNotProcess ; 2018 ; 2018 ; Disease Models & Mechanisms Volume 11 ; 11 >
     au < doNotProcess ; 2019 ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 >
-    au < exists ; 2020 ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 >
-    au < expected ; 2021 ; 2021 ; Disease Models & Mechanisms Volume 14 ; 14 >
+    au < manifest ; 2020 ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 >
+    au < manifest ; 2021 ; 2021 ; Disease Models & Mechanisms Volume 14 ; 14 >
 
   }
 
@@ -234,32 +234,32 @@
     #param[base_url] = http://jcs.biologists.org/
     param[journal_id] = jcs
 
-    au < exists ; 1940 ; 1940 ; The Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 >
-    au < exists ; 1941 ; 1941 ; The Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 >
-    au < exists ; 1942 ; 1942 ; The Quarterly Journal of Microscopical Science Volume s2-83 ; s2-83 >
-    au < exists ; 1943 ; 1943 ; The Quarterly Journal of Microscopical Science Volume s2-84 ; s2-84 >
-    au < exists ; 1944 ; 1944 ; The Quarterly Journal of Microscopical Science Volume s2-85 ; s2-85 >
-    au < exists ; 1945 ; 1945 ; The Quarterly Journal of Microscopical Science Volume s2-86 ; s2-86 >
-    au < exists ; 1946 ; 1946 ; The Quarterly Journal of Microscopical Science Volume s2-87 ; s2-87 >
-    au < exists ; 1947 ; 1947 ; The Quarterly Journal of Microscopical Science Volume s3-88 ; s3-88 >
-    au < exists ; 1948 ; 1948 ; The Quarterly Journal of Microscopical Science Volume s3-89 ; s3-89 >
-    au < exists ; 1949 ; 1949 ; The Quarterly Journal of Microscopical Science Volume s3-90 ; s3-90 >
-    au < exists ; 1950 ; 1950 ; The Quarterly Journal of Microscopical Science Volume s3-91 ; s3-91 >
-    au < exists ; 1951 ; 1951 ; The Quarterly Journal of Microscopical Science Volume s3-92 ; s3-92 >
-    au < exists ; 1952 ; 1952 ; The Quarterly Journal of Microscopical Science Volume s3-93 ; s3-93 >
-    au < exists ; 1953 ; 1953 ; The Quarterly Journal of Microscopical Science Volume s3-94 ; s3-94 >
-    au < exists ; 1954 ; 1954 ; The Quarterly Journal of Microscopical Science Volume s3-95 ; s3-95 >
-    au < exists ; 1955 ; 1955 ; The Quarterly Journal of Microscopical Science Volume s3-96 ; s3-96 >
-    au < exists ; 1956 ; 1956 ; The Quarterly Journal of Microscopical Science Volume s3-97 ; s3-97 >
-    au < exists ; 1957 ; 1957 ; The Quarterly Journal of Microscopical Science Volume s3-98 ; s3-98 >
-    au < exists ; 1958 ; 1958 ; The Quarterly Journal of Microscopical Science Volume s3-99 ; s3-99 >
-    au < exists ; 1959 ; 1959 ; The Quarterly Journal of Microscopical Science Volume s3-100 ; s3-100 >
-    au < exists ; 1960 ; 1960 ; The Quarterly Journal of Microscopical Science Volume s3-101 ; s3-101 >
-    au < exists ; 1961 ; 1961 ; The Quarterly Journal of Microscopical Science Volume s3-102 ; s3-102 >
-    au < exists ; 1962 ; 1962 ; The Quarterly Journal of Microscopical Science Volume s3-103 ; s3-103 >
-    au < exists ; 1963 ; 1963 ; The Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 >
-    au < exists ; 1964 ; 1964 ; The Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 >
-    au < exists ; 1965 ; 1965 ; The Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 >
+    au < manifest ; 1940 ; 1940 ; The Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 >
+    au < manifest ; 1941 ; 1941 ; The Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 >
+    au < manifest ; 1942 ; 1942 ; The Quarterly Journal of Microscopical Science Volume s2-83 ; s2-83 >
+    au < manifest ; 1943 ; 1943 ; The Quarterly Journal of Microscopical Science Volume s2-84 ; s2-84 >
+    au < manifest ; 1944 ; 1944 ; The Quarterly Journal of Microscopical Science Volume s2-85 ; s2-85 >
+    au < manifest ; 1945 ; 1945 ; The Quarterly Journal of Microscopical Science Volume s2-86 ; s2-86 >
+    au < manifest ; 1946 ; 1946 ; The Quarterly Journal of Microscopical Science Volume s2-87 ; s2-87 >
+    au < manifest ; 1947 ; 1947 ; The Quarterly Journal of Microscopical Science Volume s3-88 ; s3-88 >
+    au < manifest ; 1948 ; 1948 ; The Quarterly Journal of Microscopical Science Volume s3-89 ; s3-89 >
+    au < manifest ; 1949 ; 1949 ; The Quarterly Journal of Microscopical Science Volume s3-90 ; s3-90 >
+    au < manifest ; 1950 ; 1950 ; The Quarterly Journal of Microscopical Science Volume s3-91 ; s3-91 >
+    au < manifest ; 1951 ; 1951 ; The Quarterly Journal of Microscopical Science Volume s3-92 ; s3-92 >
+    au < manifest ; 1952 ; 1952 ; The Quarterly Journal of Microscopical Science Volume s3-93 ; s3-93 >
+    au < manifest ; 1953 ; 1953 ; The Quarterly Journal of Microscopical Science Volume s3-94 ; s3-94 >
+    au < manifest ; 1954 ; 1954 ; The Quarterly Journal of Microscopical Science Volume s3-95 ; s3-95 >
+    au < manifest ; 1955 ; 1955 ; The Quarterly Journal of Microscopical Science Volume s3-96 ; s3-96 >
+    au < manifest ; 1956 ; 1956 ; The Quarterly Journal of Microscopical Science Volume s3-97 ; s3-97 >
+    au < manifest ; 1957 ; 1957 ; The Quarterly Journal of Microscopical Science Volume s3-98 ; s3-98 >
+    au < manifest ; 1958 ; 1958 ; The Quarterly Journal of Microscopical Science Volume s3-99 ; s3-99 >
+    au < manifest ; 1959 ; 1959 ; The Quarterly Journal of Microscopical Science Volume s3-100 ; s3-100 >
+    au < manifest ; 1960 ; 1960 ; The Quarterly Journal of Microscopical Science Volume s3-101 ; s3-101 >
+    au < manifest ; 1961 ; 1961 ; The Quarterly Journal of Microscopical Science Volume s3-102 ; s3-102 >
+    au < manifest ; 1962 ; 1962 ; The Quarterly Journal of Microscopical Science Volume s3-103 ; s3-103 >
+    au < manifest ; 1963 ; 1963 ; The Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 >
+    au < manifest ; 1964 ; 1964 ; The Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 >
+    au < manifest ; 1965 ; 1965 ; The Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 >
     
     au < doNotProcess ; 1966 ; 1966 ; Journal of Cell Science Volume 1 ; 1 >
     au < doNotProcess ; 1967 ; 1967 ; Journal of Cell Science Volume 2 ; 2 >
@@ -369,21 +369,21 @@
     au < doNotProcess ; 1993 ; 1993 ; Journal of Cell Science Volume 106 ; 106 >
     au < doNotProcess ; 1994 ; 1994 ; Journal of Cell Science Volume 107 ; 107 >
     
-    au < exists ; 1995 ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
-    au < exists ; 1996 ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
-    au < exists ; 1997 ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
-    au < exists ; 1998 ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
-    au < exists ; 1999 ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
+    au < manifest ; 1995 ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
+    au < manifest ; 1996 ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
+    au < manifest ; 1997 ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
+    au < manifest ; 1998 ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
+    au < manifest ; 1999 ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
     au < doNotProcess ; 2000 ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
     au < doNotProcess ; 2001 ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
     au < doNotProcess ; 2002 ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
     au < doNotProcess ; 2003 ; 2003 ; Journal of Cell Science Volume 116 ; 116 >
     au < doNotProcess ; 2004 ; 2004 ; Journal of Cell Science Volume 117 ; 117 >
-    au < exists ; 2005 ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
-    au < exists ; 2006 ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
-    au < exists ; 2007 ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
-    au < exists ; 2008 ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
-    au < exists ; 2009 ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
+    au < manifest ; 2005 ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
+    au < manifest ; 2006 ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
+    au < manifest ; 2007 ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
+    au < manifest ; 2008 ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
+    au < manifest ; 2009 ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
     
     au < doNotProcess ; 2010 ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
     au < doNotProcess ; 2011 ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
@@ -395,8 +395,8 @@
     au < doNotProcess ; 2017 ; 2017 ; Journal of cell Science Volume 130 ; 130 >
     au < doNotProcess ; 2018 ; 2018 ; Journal of cell Science Volume 131 ; 131 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of cell Science Volume 132 ; 132 >
-    au < exists ; 2020 ; 2020 ; Journal of cell Science Volume 133 ; 133 >
-    au < expected ; 2021 ; 2021 ; Journal of cell Science Volume 134 ; 134 >
+    au < manifest ; 2020 ; 2020 ; Journal of cell Science Volume 133 ; 133 >
+    au < manifest ; 2021 ; 2021 ; Journal of cell Science Volume 134 ; 134 >
 
   }
 
@@ -609,20 +609,20 @@
     au < doNotProcess ; 1994 ; 1994 ; Journal of Experimental Biology Volume 196 ; 196 >
     au < doNotProcess ; 1994 ; 1994 ; Journal of Experimental Biology Volume 197 ; 197 >
     
-    au < exists ; 1995 ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
+    au < manifest ; 1995 ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
     au < doNotProcess ; 1996 ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
-    au < exists ; 1997 ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
-    au < exists ; 1998 ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
-    au < exists ; 1999 ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
+    au < manifest ; 1997 ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
+    au < manifest ; 1998 ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
+    au < manifest ; 1999 ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
     au < doNotProcess ; 2000 ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
     au < doNotProcess ; 2001 ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
     au < doNotProcess ; 2002 ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
     au < doNotProcess ; 2003 ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 >
-    au < exists ; 2004 ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 >
+    au < manifest ; 2004 ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 >
     au < doNotProcess ; 2005 ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 >
-    au < exists ; 2006 ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 >
+    au < manifest ; 2006 ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 >
     au < doNotProcess ; 2007 ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 >
-    au < exists ; 2008 ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
+    au < manifest ; 2008 ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
     au < doNotProcess ; 2009 ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 >
     
     au < doNotProcess ; 2010 ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
@@ -635,8 +635,8 @@
     au < doNotProcess ; 2017 ; 2017 ; Journal of Experimental Biology Volume 220 ; 220 >
     au < doNotProcess ; 2018 ; 2018 ; Journal of Experimental Biology Volume 221 ; 221 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 >
-    au < exists ; 2020 ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 >
-    au < expected ; 2021 ; 2021 ; Journal of Experimental Biology Volume 224 ; 224 >
+    au < manifest ; 2020 ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 >
+    au < manifest ; 2021 ; 2021 ; Journal of Experimental Biology Volume 224 ; 224 >
 
   }
 

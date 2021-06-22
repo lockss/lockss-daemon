@@ -126,7 +126,7 @@
       param[journal_id] = ps
 
       au < ojs3.Ojs3Plugin ; released ; 2020 ; Personality Science Volume 1 ; 1 ; 2020 ; https://ps.psychopen.eu/ > #no substance urls
-      au < ojs3.Ojs3Plugin ; expected ; 2021 ; Personality Science Volume 2 ; 2 ; 2021 ; https://ps.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; Personality Science Volume 2 ; 2 ; 2021 ; https://ps.psychopen.eu/ >
 
   }
 
@@ -153,7 +153,7 @@
       param[journal_id] = sotrap
 
       au < ojs3.Ojs3Plugin ; released ; 2020 ; Sexual Offending: Theory, Research, and Prevention Volume 15 ; 15 ; 2020 ; https://sotrap.psychopen.eu/ > #no substance urls
-      au < ojs3.Ojs3Plugin ; expected ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ >
 
   }
 
