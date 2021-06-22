@@ -85,7 +85,7 @@
 
     param[journal_abbr] = envirolabasia
 
-    au < manifest ; 2017 ; EnviroLab Asia Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < testing ; 2017 ; EnviroLab Asia Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
     au < manifest ; 2019 ; EnviroLab Asia Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
     au < manifest ; 2019 ; EnviroLab Asia Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
     au < manifest ; 2020 ; EnviroLab Asia Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
@@ -102,8 +102,8 @@
 
     param[journal_abbr] = essay
 
-    au < manifest ; 2017 ; essay: critical writing at pomona college Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
-    au < manifest ; 2018 ; essay: critical writing at pomona college Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
+    au < testing ; 2017 ; essay: critical writing at pomona college Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < testing ; 2018 ; essay: critical writing at pomona college Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
 
   }
 
