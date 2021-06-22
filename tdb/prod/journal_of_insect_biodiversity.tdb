@@ -15,7 +15,7 @@
       issnl = 2147-7612
     >
       {
-      param[base_url] = https://mapress.com/j/
+      param[base_url] = https://mapress.com/
       param[journal_id] = jib
 
       au < doNotProcess ; 2013 ; Journal of Insect Biodiversity Volume 1 ; 2013 >
@@ -23,10 +23,11 @@
       au < doNotProcess ; 2015 ; Journal of Insect Biodiversity Volume 3 ; 2015 >
       au < doNotProcess ; 2016 ; Journal of Insect Biodiversity Volume 4 ; 2016 >
       au < doNotProcess ; 2017 ; Journal of Insect Biodiversity Volume 5 ; 2017 >
-      au < manifest ; 2018 ; Journal of Insect Biodiversity Volume 6 ; 2018 >
-      au < manifest ; 2019 ; Journal of Insect Biodiversity Volume 7 ; 2019 >
-      au < manifest ; 2020 ; Journal of Insect Biodiversity Volume 8 ; 2020 >
-      au < manifest ; 2021 ; Journal of Insect Biodiversity Volume 9 ; 2021 >
+      au < exists ; 2018 ; Journal of Insect Biodiversity Volume 6-8 ; 2018 >
+      au < exists ; 2019 ; Journal of Insect Biodiversity Volume 9-13 ; 2019 >
+      au < exists ; 2020 ; Journal of Insect Biodiversity Volume 14-20 ; 2020 >
+      au < exists ; 2021 ; Journal of Insect Biodiversity Volume 21-27 ; 2021 >
+
       }
 
       {
