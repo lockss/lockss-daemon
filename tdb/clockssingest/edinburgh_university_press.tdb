@@ -487,7 +487,7 @@
 
     param[journal_id] = cfs
 
-    au < manifest ; exists ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2021 ; Crime Fiction Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2021 ; Crime Fiction Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
 
@@ -504,8 +504,8 @@
 
     param[journal_id] = gels
 
-    au < manifest ; exists ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2020 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2020 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2021 ; Global Energy Law and Sustainability Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2021 ; Global Energy Law and Sustainability Volume 4 ; 4 ; https://www.euppublishing.com/ ; >
 
@@ -522,8 +522,8 @@
 
     param[journal_id] = lih
 
-    au < manifest ; exists ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
-    au < manifest ; exists ; 2020 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
+    au < testing ; exists ; 2020 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2021 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2021 ; Library and Information History Volume 39 ; 39 ; https://www.euppublishing.com/ ; >
 

@@ -52,8 +52,8 @@
       au < finished ; finished ; 2015 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 10 ; 10 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 11 ; 11 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 12 ; 12 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2019 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 13 ; 13 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2020 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 14 ; 14 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2019 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 13 ; 13 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2020 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 14 ; 14 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 15 ; 15 ; https://newprairiepress.org/ ; >
 
     }
@@ -301,10 +301,10 @@
       au < finished ; finished ; 2014 ; Transactions of the Burgon Society Volume 13 ; 13 ; http://newprairiepress.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Transactions of the Burgon Society Volume 14 ; 14 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Transactions of the Burgon Society Volume 15 ; 15 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2016 ; Transactions of the Burgon Society Volume 16 ; 16 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2018 ; Transactions of the Burgon Society Volume 17 ; 17 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2019 ; Transactions of the Burgon Society Volume 18 ; 18 ; https://newprairiepress.org/ ; >
-      au < manifest ; exists ; 2020 ; Transactions of the Burgon Society Volume 19 ; 19 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2016 ; Transactions of the Burgon Society Volume 16 ; 16 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2018 ; Transactions of the Burgon Society Volume 17 ; 17 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2019 ; Transactions of the Burgon Society Volume 18 ; 18 ; https://newprairiepress.org/ ; >
+      au < testing ; exists ; 2020 ; Transactions of the Burgon Society Volume 19 ; 19 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; Transactions of the Burgon Society Volume 20 ; 20 ; https://newprairiepress.org/ ; >
 
   }
@@ -327,9 +327,9 @@
       au < finished ; finished ; 2013-2014 ; The Advocate Volume 21 ; 21 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014-2015 ; The Advocate Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015-2018 ; The Advocate Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2019 ; The Advocate Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2019-2020 ; The Advocate Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2020 ; The Advocate Volume 26 ; 26 ; >
+      au < testing ; exists ; 2019 ; The Advocate Volume 24 ; 24 ; >
+      au < testing ; exists ; 2019-2020 ; The Advocate Volume 25 ; 25 ; >
+      au < testing ; exists ; 2020 ; The Advocate Volume 26 ; 26 ; >
       au < expected ; exists ; 2021 ; The Advocate Volume 27 ; 27 ; >
       au < expected ; exists ; 2021 ; The Advocate Volume 28 ; 28 ; >
 
@@ -415,7 +415,7 @@
       au < finished ; finished ; 2015-2016 ; Educational Considerations Volume 43 ; 43 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018-2019 ; Educational Considerations Volume 44 ; 44 ; >
       au < crawling ; exists ; 2019-2020 ; Educational Considerations Volume 45 ; 45 ; >
-      au < manifest ; exists ; 2020 ; Educational Considerations Volume 46 ; 46 ; >
+      au < testing ; exists ; 2020 ; Educational Considerations Volume 46 ; 46 ; >
       au < manifest ; exists ; 2021 ; Educational Considerations Volume 47 ; 47 ; >
       au < expected ; exists ; 2021 ; Educational Considerations Volume 48 ; 48 ; >
 
@@ -569,8 +569,8 @@
       au < finished ; finished ; 2013 ; Fungal Genetics Reports Volume 60 ; 60 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Fungal Genetics Reports Volume 61 ; 61 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2018-2019 ; Fungal Genetics Reports Volume 63 ; 63 ; >
-      au < manifest ; exists ; 2020 ; Fungal Genetics Reports Volume 64 ; 64 ; >
+      au < testing ; exists ; 2018-2019 ; Fungal Genetics Reports Volume 63 ; 63 ; >
+      au < testing ; exists ; 2020 ; Fungal Genetics Reports Volume 64 ; 64 ; >
       au < manifest ; exists ; 2021 ; Fungal Genetics Reports Volume 65 ; 65 ; >
 
   }
@@ -683,7 +683,7 @@
       au < finished ; finished ; 2017 ; Journal of Applied Communications Volume 101 ; 101 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Journal of Applied Communications Volume 102 ; 102 ; >
       au < crawling ; exists ; 2019 ; Journal of Applied Communications Volume 103 ; 103 ; >
-      au < manifest ; exists ; 2020 ; Journal of Applied Communications Volume 104 ; 104 ; >
+      au < testing ; exists ; 2020 ; Journal of Applied Communications Volume 104 ; 104 ; >
       au < manifest ; exists ; 2021 ; Journal of Applied Communications Volume 105 ; 105 ; >
 
   }
