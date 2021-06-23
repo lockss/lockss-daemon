@@ -347,11 +347,11 @@
     {
     param[journal_id] = rsta1887
     
-    au < ready ; exists ; 1887 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 ; >
+    au < crawling ; exists ; 1887 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 ; >
     au < ready ; exists ; 1888 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 ; >
     au < ready ; exists ; 1889 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 180 ; 180 ; >
     au < ready ; exists ; 1890 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 181 ; 181 ; >
-    au < ready ; exists ; 1891 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 182 ; 182 ; >
+    au < crawling ; exists ; 1891 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 182 ; 182 ; >
     au < ready ; exists ; 1892 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 183 ; 183 ; >
     au < ready ; exists ; 1893 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 184 ; 184 ; >
     au < ready ; exists ; 1894 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 185 ; 185 ; >
@@ -589,10 +589,10 @@
     {
     param[journal_id] = rstb1887
 
-    au < ready ; exists ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 ; >
+    au < crawling ; exists ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 ; >
     au < ready ; exists ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 ; >
     au < crawling ; exists ; 1889 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 180 ; 180 ; >
-    au < ready ; exists ; 1890 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 181 ; 181 ; >
+    au < crawling ; exists ; 1890 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 181 ; 181 ; >
     au < ready ; exists ; 1891 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 182 ; 182 ; >
     au < ready ; exists ; 1892 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 183 ; 183 ; >
     au < ready ; exists ; 1893 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 184 ; 184 ; >
@@ -829,15 +829,15 @@
     au < ready ; exists ; 1670 ; Philosophical Transactions of the Royal Society of London Volume 5 ; 5 ; >
     au < crawling ; exists ; 1671 ; Philosophical Transactions of the Royal Society of London Volume 6 ; 6 ; >
     au < crawling ; exists ; 1672 ; Philosophical Transactions of the Royal Society of London Volume 7 ; 7 ; >
-    au < ready ; exists ; 1673 ; Philosophical Transactions of the Royal Society of London Volume 8 ; 8 ; >
-    au < ready ; exists ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1673 ; Philosophical Transactions of the Royal Society of London Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 ; >
     au < ready ; exists ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 ; >
     au < ready ; exists ; 1676 ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 ; >
     au < ready ; exists ; 1677-1678 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 ; >
     au < ready ; exists ; 1683 ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 ; >
     au < ready ; exists ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 ; >
     au < ready ; exists ; 1685 ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 ; >
-    au < ready ; exists ; 1686-1692 ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1686-1692 ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 ; >
     au < ready ; exists ; 1693 ; Philosophical Transactions of the Royal Society of London Volume 17 ; 17 ; >
     au < ready ; exists ; 1694 ; Philosophical Transactions of the Royal Society of London Volume 18 ; 18 ; >
     au < ready ; exists ; 1695-1697 ; Philosophical Transactions of the Royal Society of London Volume 19 ; 19 ; >
@@ -849,15 +849,15 @@
     au < ready ; exists ; 1706-1707 ; Philosophical Transactions of the Royal Society of London Volume 25 ; 25 ; >
     au < ready ; exists ; 1708-1709 ; Philosophical Transactions of the Royal Society of London Volume 26 ; 26 ; >
     au < ready ; exists ; 1710-1711 ; Philosophical Transactions of the Royal Society of London Volume 27 ; 27 ; >
-    au < ready ; exists ; 1712-1713 ; Philosophical Transactions of the Royal Society of London Volume 28 ; 28 ; >
+    au < crawling ; exists ; 1712-1713 ; Philosophical Transactions of the Royal Society of London Volume 28 ; 28 ; >
     au < ready ; exists ; 1714-1716 ; Philosophical Transactions of the Royal Society of London Volume 29 ; 29 ; >
-    au < ready ; exists ; 1717-1719 ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 ; >
-    au < ready ; exists ; 1720-1721 ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 ; >
+    au < crawling ; exists ; 1717-1719 ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 ; >
+    au < crawling ; exists ; 1720-1721 ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 ; >
     au < ready ; exists ; 1722-1723 ; Philosophical Transactions of the Royal Society of London Volume 32 ; 32 ; >
     au < ready ; exists ; 1724-1725 ; Philosophical Transactions of the Royal Society of London Volume 33 ; 33 ; >
     au < crawling ; exists ; 1726-1727 ; Philosophical Transactions of the Royal Society of London Volume 34 ; 34 ; >
-    au < ready ; exists ; 1727-1728 ; Philosophical Transactions of the Royal Society of London Volume 35 ; 35 ; >
-    au < ready ; exists ; 1729-1730 ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 ; >
+    au < crawling ; exists ; 1727-1728 ; Philosophical Transactions of the Royal Society of London Volume 35 ; 35 ; >
+    au < crawling ; exists ; 1729-1730 ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 ; >
     au < ready ; exists ; 1731-1732 ; Philosophical Transactions of the Royal Society of London Volume 37 ; 37 ; >
     au < crawling ; exists ; 1733-1734 ; Philosophical Transactions of the Royal Society of London Volume 38 ; 38 ; >
     au < ready ; exists ; 1735-1736 ; Philosophical Transactions of the Royal Society of London Volume 39 ; 39 ; >
@@ -867,18 +867,18 @@
     au < ready ; exists ; 1744-1745 ; Philosophical Transactions of the Royal Society of London Volume 43 ; 43 ; >
     au < ready ; exists ; 1746-1747 ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 ; >
     au < crawling ; exists ; 1748 ; Philosophical Transactions of the Royal Society of London Volume 45 ; 45 ; >
-    au < ready ; exists ; 1749-1750 ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 ; >
-    au < ready ; exists ; 1751-1752 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 ; >
+    au < crawling ; exists ; 1749-1750 ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 ; >
+    au < crawling ; exists ; 1751-1752 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 ; >
     au < ready ; exists ; 1753-1754 ; Philosophical Transactions of the Royal Society of London Volume 48 ; 48 ; >
     au < crawling ; exists ; 1755-1756 ; Philosophical Transactions of the Royal Society of London Volume 49 ; 49 ; >
     au < ready ; exists ; 1757-1758 ; Philosophical Transactions of the Royal Society of London Volume 50 ; 50 ; >
     au < crawling ; exists ; 1759-1760 ; Philosophical Transactions of the Royal Society of London Volume 51 ; 51 ; >
     au < ready ; exists ; 1761-1762 ; Philosophical Transactions of the Royal Society of London Volume 52 ; 52 ; >
-    au < ready ; exists ; 1763 ; Philosophical Transactions of the Royal Society of London Volume 53 ; 53 ; >
+    au < crawling ; exists ; 1763 ; Philosophical Transactions of the Royal Society of London Volume 53 ; 53 ; >
     au < crawling ; exists ; 1764 ; Philosophical Transactions of the Royal Society of London Volume 54 ; 54 ; >
     au < crawling ; exists ; 1765 ; Philosophical Transactions of the Royal Society of London Volume 55 ; 55 ; >
     au < ready ; exists ; 1766 ; Philosophical Transactions of the Royal Society of London Volume 56 ; 56 ; >
-    au < ready ; exists ; 1767 ; Philosophical Transactions of the Royal Society of London Volume 57 ; 57 ; >
+    au < crawling ; exists ; 1767 ; Philosophical Transactions of the Royal Society of London Volume 57 ; 57 ; >
     au < ready ; exists ; 1768 ; Philosophical Transactions of the Royal Society of London Volume 58 ; 58 ; >
     au < crawling ; exists ; 1769 ; Philosophical Transactions of the Royal Society of London Volume 59 ; 59 ; >
     au < ready ; exists ; 1770 ; Philosophical Transactions of the Royal Society of London Volume 60 ; 60 ; >
@@ -888,22 +888,22 @@
     au < crawling ; exists ; 1774 ; Philosophical Transactions of the Royal Society of London Volume 64 ; 64 ; >
     au < ready ; exists ; 1775 ; Philosophical Transactions of the Royal Society of London Volume 65 ; 65 ; >
     au < ready ; exists ; 1776 ; Philosophical Transactions of the Royal Society of London Volume 66 ; 66 ; >
-    au < ready ; exists ; 1777 ; Philosophical Transactions of the Royal Society of London Volume 67 ; 67 ; >
-    au < ready ; exists ; 1778 ; Philosophical Transactions of the Royal Society of London Volume 68 ; 68 ; >
+    au < crawling ; exists ; 1777 ; Philosophical Transactions of the Royal Society of London Volume 67 ; 67 ; >
+    au < crawling ; exists ; 1778 ; Philosophical Transactions of the Royal Society of London Volume 68 ; 68 ; >
     au < ready ; exists ; 1779 ; Philosophical Transactions of the Royal Society of London Volume 69 ; 69 ; >
     au < ready ; exists ; 1780 ; Philosophical Transactions of the Royal Society of London Volume 70 ; 70 ; >
     au < ready ; exists ; 1781 ; Philosophical Transactions of the Royal Society of London Volume 71 ; 71 ; >
     au < ready ; exists ; 1782 ; Philosophical Transactions of the Royal Society of London Volume 72 ; 72 ; >
     au < crawling ; exists ; 1783 ; Philosophical Transactions of the Royal Society of London Volume 73 ; 73 ; >
-    au < ready ; exists ; 1784 ; Philosophical Transactions of the Royal Society of London Volume 74 ; 74 ; >
+    au < crawling ; exists ; 1784 ; Philosophical Transactions of the Royal Society of London Volume 74 ; 74 ; >
     au < ready ; exists ; 1785 ; Philosophical Transactions of the Royal Society of London Volume 75 ; 75 ; >
-    au < ready ; exists ; 1786 ; Philosophical Transactions of the Royal Society of London Volume 76 ; 76 ; >
+    au < crawling ; exists ; 1786 ; Philosophical Transactions of the Royal Society of London Volume 76 ; 76 ; >
     au < ready ; exists ; 1787 ; Philosophical Transactions of the Royal Society of London Volume 77 ; 77 ; >
     au < ready ; exists ; 1788 ; Philosophical Transactions of the Royal Society of London Volume 78 ; 78 ; >
     au < ready ; exists ; 1789 ; Philosophical Transactions of the Royal Society of London Volume 79 ; 79 ; >
     au < ready ; exists ; 1790 ; Philosophical Transactions of the Royal Society of London Volume 80 ; 80 ; >
     au < crawling ; exists ; 1791 ; Philosophical Transactions of the Royal Society of London Volume 81 ; 81 ; >
-    au < ready ; exists ; 1792 ; Philosophical Transactions of the Royal Society of London Volume 82 ; 82 ; >
+    au < crawling ; exists ; 1792 ; Philosophical Transactions of the Royal Society of London Volume 82 ; 82 ; >
     au < crawling ; exists ; 1793 ; Philosophical Transactions of the Royal Society of London Volume 83 ; 83 ; >
     au < crawling ; exists ; 1794 ; Philosophical Transactions of the Royal Society of London Volume 84 ; 84 ; >
     au < ready ; exists ; 1795 ; Philosophical Transactions of the Royal Society of London Volume 85 ; 85 ; >
