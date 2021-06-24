@@ -29,12 +29,12 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Student Science and Technology Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Student Science and Technology Volume 4 ; 4 ; 2011 ; >
     au < doNotProcess ; exists ; 2012 ; Journal of Student Science and Technology Volume 5 ; 5 ; 2012 ; >
-    au < finished ; manifest ; 2013 ; Journal of Student Science and Technology Volume 6 ; 6 ; 2013 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; Journal of Student Science and Technology Volume 7 ; 7 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Journal of Student Science and Technology Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Journal of Student Science and Technology Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Journal of Student Science and Technology Volume 10 ; 10 ; 2017 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal of Student Science and Technology Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Journal of Student Science and Technology Volume 6 ; 6 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Journal of Student Science and Technology Volume 7 ; 7 ; 2014 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Journal of Student Science and Technology Volume 8 ; 8 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Journal of Student Science and Technology Volume 9 ; 9 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Journal of Student Science and Technology Volume 10 ; 10 ; 2017 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal of Student Science and Technology Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2020 ; Journal of Student Science and Technology Volume 12 ; 12 ; 2020 ; >
     #do not collect after 2020. Nothing published in 2020
 
@@ -55,7 +55,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     param[journal_id] = cysj
 
-    au < finished ; manifest ; 2013 ; Canadian Young Scientist Journal Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Canadian Young Scientist Journal Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
 
   }
 
