@@ -53,6 +53,8 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
 
   private static SourceXmlSchemaHelper BioscienceResearchJatsPublishingHelper = null;
   static final String JATS_author = "front/article-meta/contrib-group/contrib/name | front/article-meta/contrib-group/contrib/name-alternatives/name[@name-style = \"western\"]";
+  static final String JATS_doi = "front/article-meta/article-id[@pub-id-type = \"doi\"]";
+  static final String JATS_contrib_article_related_pdf = "front/article-meta/contrib-group/related-article[@related-article-type = \"pdf\"]";
 
   public class BioscienceResearchJatsPublishingSchemaHelper extends JatsPublishingSchemaHelper {
 
@@ -62,6 +64,8 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
       Map<String, XmlDomMetadataExtractor.XPathValue> JATS_articleMap = super.getArticleMetaMap();
       // override the JATS_contrib key value
       JATS_articleMap.put(JATS_author, JATS_AUTHOR_VALUE_GIVEN_SUR);
+      // add backup JATS related article
+      JATS_articleMap.put(JATS_contrib_article_related_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
       return JATS_articleMap;
     }
 
@@ -134,6 +138,7 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
     // using a modifed JatsPublisheringSchemaHelper as defined above
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+      log.debug3("in setUpSchema: cu " + cu.getContentType());
       // Once you have it, just keep returning the same one. It won't change.
       if (BioscienceResearchJatsPublishingHelper == null) {
         BioscienceResearchJatsPublishingHelper = new BioscienceResearchJatsPublishingSchemaHelper();
@@ -147,16 +152,38 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
                                                             ArticleMetadata oneAM) {
-      List<String> returnList = new ArrayList<String>();
-      String pdfName = oneAM.getRaw(BioscienceResearchJatsPublishingSchemaHelper.JATS_article_related_pdf);
-      if (oneAM != null && pdfName != null) {
-        String url_string = cu.getUrl();
-        String pdfUrl = url_string.substring(
-            0,
-            url_string.lastIndexOf("/") + 1
-        ) + pdfName;
-        returnList.add(pdfUrl);
+      List<String> returnList = new ArrayList<>();
+      String url_string = cu.getUrl();
+      if (url_string.contains(".xml")) {
+        returnList.add(url_string.replace(".xml", ".pdf"));
+        // rarely found, but doesnt hurt to check.
+        returnList.add(url_string.replace(".xml", "%20.pdf"));
       }
+      if (oneAM != null) {
+        String root_url = url_string.substring(
+          0,
+          url_string.lastIndexOf("/") + 1
+        );
+        String pdfName = oneAM.getRaw(BioscienceResearchJatsPublishingSchemaHelper.JATS_article_related_pdf);
+        // backup xml path to the pdf file
+        String pdfName2 = oneAM.getRaw(JATS_contrib_article_related_pdf);
+        String doi = oneAM.getRaw(JATS_doi);
+        if (pdfName != null) {
+          returnList.add(root_url + pdfName);
+        }
+        if (pdfName2 != null) {
+          returnList.add(root_url + pdfName2);
+        }
+        if (doi != null) {
+          // 10.52586/4931
+          returnList.add(root_url +
+            doi.substring(
+              doi.lastIndexOf("/") + 1
+            ) + ".pdf"
+          );
+        }
+      }
+      log.debug3(" returnList equals: " + returnList);
       return returnList;
     }
 
@@ -167,7 +194,7 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
       log.debug3("in BioscienceResearch postCookProcess");
       //If we didn't get a valid author names, take a deeper look
       if (thisAM.get(MetadataField.FIELD_PUBLISHER) == null) {
-        log.info("FIELD_PUBLISHER WAS NULL");
+        log.debug3("FIELD_PUBLISHER WAS NULL");
         String JATS_publisher = thisAM.getRaw(BioscienceResearchJatsPublishingSchemaHelper.JATS_pubname);
         if (JATS_publisher != null) {
           thisAM.put(MetadataField.FIELD_PUBLISHER, JATS_publisher);
@@ -175,8 +202,8 @@ public class BioscienceResearchJatsXmlMetadataExtractorFactory extends SourceXml
         }
       } else {
         log.debug3("NOT ADDING JATS FIELD_PUBLISHER");
-        log.info(" map: "+thisAM.rawKeySet());
-        log.info("cookMap: "+thisAM.keySet());
+        log.debug3(" map: "+thisAM.rawKeySet());
+        log.debug3("cookMap: "+thisAM.keySet());
       }
     }
   }
