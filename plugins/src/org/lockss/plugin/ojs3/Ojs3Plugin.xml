@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -28,7 +28,7 @@
         <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
         <!-- Some publisher using "ojs" instead of journal_id in start_url -->
         <!-- https://www.combinatorics.org/ojs/index.php/eljc/gateway/lockss?year=2018-->
-      <string>1,"^(%s|%s)(%s/)?(journals/)?(index\.php/)?(%s/)?gateway/c?lockss\?year=%d$", to_http(base_url),to_https(base_url),journal_id,journal_id, year</string>
+      <string>1,"^(%s|%s)(%s/)?(ojs/)?(journals/)?(index\.php/)?(%s/)?gateway/c?lockss\?year=%d$", to_http(base_url),to_https(base_url),journal_id,journal_id, year</string>
       <string>2,"\?acceptCookies="</string>
       <!--  intentionally https only -->
         <!--
@@ -37,8 +37,8 @@
             http://trumpeter.athabascau.ca/index.php/trumpet/issue/view/123
             https://scholarworks.iu.edu/journals/index.php/psource/issue/view/1257
         -->
-      <string>1,"^(%s|%s)(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
-      <string>1,"^(%s|%s)(journals/)?(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", to_http(base_url),to_https(base_url), journal_id</string>
+      <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", to_http(base_url),to_https(base_url), journal_id, journal_id</string>
+      <string>1,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?rt/(bio|metadata|printerFriendly|suppFileMetadata|suppFiles)/", to_http(base_url),to_https(base_url), journal_id</string>
       <string>2,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", to_http(base_url),to_https(base_url)</string>
       <string>1,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", to_http(base_url),to_https(base_url)</string>
     </list>
