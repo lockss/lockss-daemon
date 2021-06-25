@@ -16,7 +16,7 @@
 
     {
       {
-      plugin = org.lockss.plugin.highwire.snmmi.SnmmiPlugin
+      plugin = org.lockss.plugin.highwire.snmmi.SnmmiDrupalPlugin
       param[base_url] = https://jnm.snmjournals.org/
 
       au < doNotProcess ; 1964 ; Journal of Nuclear Medicine Volume 5 ; 5 >
@@ -151,7 +151,7 @@
     >
 
     {
-      plugin = org.lockss.plugin.highwire.snmmi.SnmmiPlugin
+      plugin = org.lockss.plugin.highwire.snmmi.SnmmiDrupalPlugin
       param[base_url] = https://tech.snmjournals.org/
 
       au < doNotProcess ; 1997 ; Journal of Nuclear Medicine Technology Volume 25 ; 25 >
