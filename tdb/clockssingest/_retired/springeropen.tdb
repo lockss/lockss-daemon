@@ -26,7 +26,7 @@
         param[journal_issn] = 2213-7467 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; Advanced Modeling and Simulation in Engineering Sciences Volume 2 ; 2 ; >
   
     }
@@ -46,7 +46,7 @@
         au < doNotProcess ; exists ; 2010 ; Advances in Difference Equations Volume 2010 ; 2010 ; >
         au < doNotProcess ; exists ; 2011 ; Advances in Difference Equations Volume 2011 ; 2011 ; >
         au < doNotProcess ; exists ; 2012 ; Advances in Difference Equations Volume 2012 ; 2012 ; >
-        au < finished ; manifest ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2014 ; Advances in Difference Equations Volume 2014 ; 2014 ; >
         au < doNotProcess ; exists ; 2015 ; Advances in Difference Equations Volume 2015 ; 2015 ; >
   
@@ -63,8 +63,8 @@
         param[journal_issn] = 2193-7532 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Agricultural and Food Economics Volume 3 [superseded] ; 3 ; >
   
     }
@@ -82,8 +82,8 @@
   
         au < doNotProcess ; exists ; 2011 ; AMB Express Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; AMB Express Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2013 ; AMB Express Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; AMB Express Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; AMB Express Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; AMB Express Volume 4 ; 4 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; AMB Express Volume 5 [superseded] ; 5 ; >
   
     }
@@ -101,7 +101,7 @@
   
         au < doNotProcess ; exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2013 ; Annals of Intensive Care Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Annals of Intensive Care Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2014 ; Annals of Intensive Care Volume 4 ; 4 ; >
         au < superseded ; exists ; 2015 ; Annals of Intensive Care Volume 5 [superseded] ; 5 ; >
   
@@ -118,7 +118,7 @@
         param[journal_issn] = 2196-4351 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2013 ; Applied Adhesion Science Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Applied Adhesion Science Volume 1 ; 1 ; reingest4.clockss.org:8082 >
         au < finished ; finished ; 2014 ; Applied Adhesion Science Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; Applied Adhesion Science Volume 3 [superseded] ; 3 ; >
 
@@ -151,7 +151,7 @@
         param[journal_issn] = 2196-1166
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 [superseded] ; 2 ; >
   
     }
@@ -167,8 +167,8 @@
         param[journal_issn] = 2195-3007 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 [superseded] ; 5 ; >
   
     }
@@ -200,8 +200,8 @@
         param[journal_issn] = 1999-3110 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Botanical Studies Volume 54 ; 54 ; reingest3.clockss.org:8083 >
-        au < finished ; manifest ; 2014 ; Botanical Studies Volume 55 ; 55 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Botanical Studies Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Botanical Studies Volume 55 ; 55 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Botanical Studies Volume 56 [superseded] ; 56 ; >
   
     }
@@ -228,7 +228,7 @@
         au < doNotProcess ; exists ; 2011 ; Boundary Value Problems Volume 2011 ; 2011 ; >
         au < doNotProcess ; exists ; 2012 ; Boundary Value Problems Volume 2012 ; 2012 ; >
         au < superseded ; exists ; 2013 ; Boundary Value Problems Volume 2013 [superseded] ; 2013 ; >
-        au < finished ; manifest ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Boundary Value Problems Volume 2015 ; 2015 ; >
   
     }
@@ -244,7 +244,7 @@
         param[journal_issn] = 2196-288X 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Brazilian Journal of Science and Technology Volume 2 [superseded] ; 2 ; >
 
     }
@@ -276,7 +276,7 @@
         param[journal_issn] = 2195-2701 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; City, Territory and Architecture Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; City, Territory and Architecture Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; City, Territory and Architecture Volume 2 [superseded] ; 2 ; >
   
     }
@@ -295,7 +295,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 ; >
         au < finished ; finished ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2015 ; Clinical and Translational Medicine Volume 4 ; 4 ; >
   
     }
@@ -312,7 +312,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; mUX: The Journal of Mobile User Experience Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 ; reingest4.clockss.org:8082 >
         au < doesNotExist ; doesNotExist ; 0 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 ; >
         au < superseded ; exists ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 [superseded] ; 4 ; >
   
@@ -329,8 +329,8 @@
         param[journal_issn] = 2194-3206 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Complex Adaptive Systems Modeling Volume 3 [superseded] ; 3 ; >
   
     }
@@ -363,7 +363,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Crime Science Volume 1 ; 1 ; >
         au < finished ; finished ; 2013 ; Crime Science Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2014 ; Crime Science Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Crime Science Volume 3 ; 3 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2015 ; Crime Science Volume 4 ; 4 ; reingest5.clockss.org:8082 >
   
     }
@@ -381,8 +381,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 ; >
-        au < finished ; manifest ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-        au < finished ; manifest ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Critical Ultrasound Journal Volume 7 [superseded] ; 7 ; >
   
     }
@@ -398,7 +398,7 @@
         param[journal_issn] = 2193-8636 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Decision Analytics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Decision Analytics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Decision Analytics Volume 2 [superseded] ; 2 ; >
   
     }
@@ -414,7 +414,7 @@
         param[journal_issn] = 2194-6434 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Earth Perspectives Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Earth Perspectives Volume 1 ; 1 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Earth Perspectives Volume 2 [superseded] ; 2 ; >
   
     }
@@ -430,7 +430,7 @@
         param[journal_issn] = 1880-5981 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2014 ; Earth, Planets and Space Volume 66 ; 66 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Earth, Planets and Space Volume 66 ; 66 ; reingest1.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 ; >
 
     }
@@ -447,8 +447,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Ecological Processes Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; Ecological Processes Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2014 ; Ecological Processes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Ecological Processes Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Ecological Processes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Ecological Processes Volume 4 [superseded] ; 4 ; >
   
     }
@@ -464,7 +464,7 @@
         param[journal_issn] = 2197-7364
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; EJNMMI Physics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; EJNMMI Physics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EJNMMI Physics Volume 2 [superseded] ; 2 ; >
   
     }
@@ -482,8 +482,8 @@
   
         au < doNotProcess ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2013 ; EJNMMI Research Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; EJNMMI Research Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; EJNMMI Research Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; EJNMMI Research Volume 4 ; 4 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EJNMMI Research Volume 5 [superseded] ; 5 ; >
   
     }
@@ -499,8 +499,8 @@
         param[journal_issn] = 1877-6345 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Empirical Research in Vocational Education and Training Volume 7 [superseded] ; 7 ; >
   
     }
@@ -519,7 +519,7 @@
         au < doNotProcess ; exists ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 ; >
         au < finished ; finished ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 [superseded] ; 5 ; >
   
     }
@@ -537,8 +537,8 @@
   
         au < doNotProcess ; exists ; 2011 ; Environmental Sciences Europe Volume 23 ; 23 ; >
         au < doNotProcess ; exists ; 2012 ; Environmental Sciences Europe Volume 24 ; 24 ; >
-        au < finished ; manifest ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Environmental Sciences Europe Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Environmental Sciences Europe Volume 26 ; 26 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Environmental Sciences Europe Volume 27 [superseded] ; 27 ; >
   
     }
@@ -555,8 +555,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Environmental Systems Research Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; Environmental Systems Research Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2014 ; Environmental Systems Research Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Environmental Systems Research Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Environmental Systems Research Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Environmental Systems Research Volume 4 [superseded] ; 4 ; >
   
     }
@@ -573,8 +573,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; EPJ Data Science Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; EPJ Data Science Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; EPJ Data Science Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; EPJ Data Science Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; EPJ Data Science Volume 3 ; 3 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EPJ Data Science Volume 4 [superseded] ; 4 ; >
   
     }
@@ -590,8 +590,8 @@
         param[journal_issn] = 2195-0008 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; EPJ Nonlinear Biomedical Physics Volume 3 [superseded] ; 3 ; >
   
     }
@@ -607,7 +607,7 @@
         param[journal_issn] = 2196-0763 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; EPJ Quantum Technology Volume 2 [superseded] ; 2 ; >
   
     }
@@ -623,7 +623,7 @@
         param[journal_issn] = 2195-7045 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EPJ Techniques and Instrumentation Volume 2 [superseded] ; 2 ; >
   
     }
@@ -641,8 +641,8 @@
         param[journal_issn] = 1687-6172
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Advances in Signal Processing Volume 2015 [superseded] ; 2015 ; >
         }
 
@@ -661,7 +661,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < superseded ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 [superseded] ; 2013 ; > #no completed crawl. Fetch error. 
-        au < finished ; manifest ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 [superseded] ; 2015 ; >
 
     }
@@ -679,8 +679,8 @@
         param[journal_issn] = 1687-4145
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 [superseded] ; 2015 ; >
         }
 
@@ -700,7 +700,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < finished ; finished ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 ; >
-        au < finished ; manifest ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 [superseded] ; 2015 ; >
         }
   
@@ -719,8 +719,8 @@
         param[journal_issn] = 1687-5176
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 [superseded] ; 2015 ; >
         }
     }
@@ -765,7 +765,7 @@
         param[journal_issn] = 1687-1472
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2014 ; EURASIP Journal on Wireless Communications and Networking Volume 2014 [superseded] ; 2014 ; >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Wireless Communications and Networking Volume 2015 [superseded] ; 2015 ; >
         }
@@ -784,7 +784,7 @@
         param[journal_issn] = 1936-6434 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Evolution: Education and Outreach Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Evolution: Education and Outreach Volume 6 ; 6 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2014 ; Evolution: Education and Outreach Volume 7 [superseded] ; 7 ; >
         au < superseded ; exists ; 2015 ; Evolution: Education and Outreach Volume 8 [superseded] ; 8 ; >
   
@@ -802,8 +802,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Fire Science Reviews Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; Fire Science Reviews Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-        au < finished ; manifest ; 2014 ; Fire Science Reviews Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Fire Science Reviews Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Fire Science Reviews Volume 3 ; 3 ; reingest4.clockss.org:8082 >
         au < finished ; finished ; 2015 ; Fire Science Reviews Volume 4 ; 4 ; reingest5.clockss.org:8082 >
   
     }
@@ -831,7 +831,7 @@
         au < doNotProcess ; exists ; 2011 ; Fixed Point Theory and Applications Volume 2011 ; 2011 ; >
         au < doNotProcess ; exists ; 2012 ; Fixed Point Theory and Applications Volume 2012 ; 2012 ; >
         au < doNotProcess ; exists ; 2013 ; Fixed Point Theory and Applications Volume 2013 ; 2013 ; >
-        au < finished ; manifest ; 2014 ; Fixed Point Theory and Applications Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Fixed Point Theory and Applications Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Fixed Point Theory and Applications Volume 2015 [superseded] ; 2015 ; >
   
     }
@@ -847,7 +847,7 @@
         param[journal_issn] = 2197-5620 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2014 ; Forest Ecosystems Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Forest Ecosystems Volume 1 ; 1 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Forest Ecosystems Volume 2 [superseded] ; 2 ; >
 
     }
@@ -879,7 +879,7 @@
         param[journal_issn] = 2196-4092 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2014 ; Geoscience Letters Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Geoscience Letters Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; Geoscience Letters Volume 2 [superseded] ; 2 ; >
 
     }
@@ -895,7 +895,7 @@
         param[journal_issn] = 2195-9706 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Geothermal Energy Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Geothermal Energy Volume 1 ; 1 ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2014 ; Geothermal Energy Volume 2 ; 2 ; >
         au < superseded ; exists ; 2015 ; Geothermal Energy Volume 3 [superseded] ; 3 ; >
   
@@ -912,8 +912,8 @@
         param[journal_issn] = 2194-7899 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Health & Justice Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Health & Justice Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Health & Justice Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Health & Justice Volume 2 ; 2 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Health & Justice Volume 3 [superseded] ; 3 ; >
   
     }
@@ -931,8 +931,8 @@
   
         au < doNotProcess ; exists ; 2011 ; Health Economics Review Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Health Economics Review Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2013 ; Health Economics Review Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Health Economics Review Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; Health Economics Review Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Health Economics Review Volume 4 ; 4 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; Health Economics Review Volume 5 [superseded] ; 5 ; >
   
     }
@@ -950,7 +950,7 @@
         param[journal_issn] = 1877-6566
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; HUGO Journal Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; HUGO Journal Volume 7 ; 7 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2014 ; HUGO Journal Volume 8 [superseded] ; 8 ; >
         au < superseded ; exists ; 2015 ; HUGO Journal Volume 9 [superseded] ; 9 ; >
   
@@ -969,8 +969,8 @@
   
         au < doNotProcess ; exists ; 2011 ; Human-centric Computing and Information Sciences Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Human-centric Computing and Information Sciences Volume 5 [superseded] ; 5 ; >
   
     }
@@ -986,8 +986,8 @@
         param[journal_issn] = 2193-9616 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; In Silico Pharmacology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; In Silico Pharmacology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; In Silico Pharmacology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; In Silico Pharmacology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; In Silico Pharmacology Volume 3 [superseded] ; 3 ; >
   
     }
@@ -1003,7 +1003,7 @@
         param[journal_issn] = 2197-1714 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2014 ; Injury Epidemiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Injury Epidemiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Injury Epidemiology Volume 2 [superseded] ; 2 ; >
 
     }
@@ -1022,7 +1022,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 ; >
         au < finished ; finished ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1038,8 +1038,8 @@
         param[journal_issn] = 2197-425X 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Intensive Care Medicine Experimental Volume 3 [superseded] ; 3 ; >
   
     }
@@ -1057,8 +1057,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Aquatic Research Volume 4 ; 4 ; >
-        au < finished ; manifest ; 2013 ; International Aquatic Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2014 ; International Aquatic Research Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; International Aquatic Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; International Aquatic Research Volume 6 ; 6 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; International Aquatic Research Volume 7 [superseded] ; 7 ; >
   
     }
@@ -1076,8 +1076,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4 ; >
-        au < finished ; manifest ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 ; >
   
     }
@@ -1094,7 +1094,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 [superseded] ; 3 ; >
   
     }
@@ -1113,8 +1113,8 @@
   
         au < doNotProcess ; exists ; 2011 ; International Journal of Emergency Medicine Volume 4 ; 4 ; >
         au < doNotProcess ; exists ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 ; >
-        au < finished ; manifest ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 [superseded] ; 8 ; >
   
     }
@@ -1133,7 +1133,7 @@
   
         au < doNotProcess ; exists ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 ; >
         au < finished ; finished ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 ; >
-        au < finished ; manifest ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 ; reingest4.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 ; >
   
     }
@@ -1149,7 +1149,7 @@
         param[journal_issn] = 2196-2804 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; International Journal of Food Contamination Volume 2 [superseded] ; 2 ; >
   
     }
@@ -1167,8 +1167,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 [superseded] ; 6 ; >
   
     }
@@ -1186,7 +1186,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Journal of Recycling of Organic Waste in Agriculture Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; International Journal of Recycling of Organic Waste in Agriculture Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; International Journal of Recycling of Organic Waste in Agriculture Volume 2 ; 2 ; reingest3.clockss.org:8083 >
   
     }
   
@@ -1201,7 +1201,7 @@
         param[journal_issn] = 2196-7822 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; International Journal of STEM Education Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; International Journal of STEM Education Volume 1 ; 1 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; International Journal of STEM Education Volume 2 [superseded] ; 2 ; >
 
     }
@@ -1219,7 +1219,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; International Nano Letters Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2013 ; International Nano Letters Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; International Nano Letters Volume 3 ; 3 ; reingest5.clockss.org:8082 >
         au < finished ; finished ; 2014 ; International Nano Letters Volume 4 ; 4 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; International Nano Letters Volume 5 ; 5 ; >
   
@@ -1237,8 +1237,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of European Labor Studies Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1255,8 +1255,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor & Development Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-        au < finished ; manifest ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1273,8 +1273,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1291,8 +1291,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1309,8 +1309,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; IZA Journal of Migration Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; IZA Journal of Migration Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-        au < finished ; manifest ; 2014 ; IZA Journal of Migration Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; IZA Journal of Migration Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; IZA Journal of Migration Volume 3 ; 3 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; IZA Journal of Migration Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1326,7 +1326,7 @@
         param[journal_issn] = 2093-3371 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
         au < finished ; finished ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 [superseded] ; 6 ; >
   
@@ -1344,8 +1344,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1361,7 +1361,7 @@
         param[journal_issn] = 2196-1115 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Journal of Big Data Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Journal of Big Data Volume 1 ; 1 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Journal of Big Data Volume 2 [superseded] ; 2 ; >
   
     }
@@ -1378,8 +1378,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1395,7 +1395,7 @@
         param[journal_issn] = 2194-3990 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Journal of Computational Surgery Volume 2 [superseded] ; 2 ; >
   
     }
@@ -1412,8 +1412,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Economic Structures Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2013 ; Journal of Economic Structures Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2014 ; Journal of Economic Structures Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2013 ; Journal of Economic Structures Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Journal of Economic Structures Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Journal of Economic Structures Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1429,7 +1429,7 @@
         param[journal_issn] = 2197-1153 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 [superseded] ; 2 ; >
   
     }
@@ -1446,8 +1446,8 @@
         param[journal_issn] = 1129-2369
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2013 ; The Journal of Headache and Pain Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; The Journal of Headache and Pain Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; The Journal of Headache and Pain Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; The Journal of Headache and Pain Volume 15 ; 15 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; The Journal of Headache and Pain Volume 16 ; 16 ; >
   
     }
@@ -1464,8 +1464,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Industrial Engineering International Volume 8 ; 8 ; >
-        au < finished ; manifest ; 2013 ; Journal of Industrial Engineering International Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2014 ; Journal of Industrial Engineering International Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2013 ; Journal of Industrial Engineering International Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Industrial Engineering International Volume 10 ; 10 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; Journal of Industrial Engineering International Volume 11 ; 11 ; >
   
     }
@@ -1492,7 +1492,7 @@
         au < doNotProcess ; exists ; 2011 ; Journal of Inequalities and Applications Volume 2011 ; 2011 ; >
         au < doNotProcess ; exists ; 2012 ; Journal of Inequalities and Applications Volume 2012 ; 2012 ; >
         au < doNotProcess ; exists ; 2013 ; Journal of Inequalities and Applications Volume 2013 ; 2013 ; >
-        au < finished ; manifest ; 2014 ; Journal of Inequalities and Applications Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Journal of Inequalities and Applications Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2015 ; Journal of Inequalities and Applications Volume 2015 ; 2015 ; >
   
     }
@@ -1510,7 +1510,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Journal of Innovation and Entrepreneurship Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2013 ; Journal of Innovation and Entrepreneurship Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Journal of Innovation and Entrepreneurship Volume 4 ; 4 ; >
   
     }
@@ -1527,7 +1527,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Journal of Interaction Science Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2014 ; Journal of Interaction Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Interaction Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Journal of Interaction Science Volume 3 ; 3 ; >
   
     }
@@ -1546,7 +1546,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Journal of Internet Services and Applications Volume 4 ; 4 ; >
-        au < finished ; manifest ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Journal of Internet Services and Applications Volume 6 [superseded] ; 6 ; >
   
     }
@@ -1565,7 +1565,7 @@
         au < doNotProcess ; exists ; 2011 ; Journal of Mathematical Neuroscience Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Journal of Mathematical Neuroscience Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Journal of Mathematical Neuroscience Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; Journal of Mathematical Neuroscience Volume 5 ; 5 ; >
   
     }
@@ -1584,7 +1584,7 @@
         au < doNotProcess ; exists ; 2011 ; Journal of Mathematics in Industry Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 [superseded] ; 5 ; >
   
     }
@@ -1616,7 +1616,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Journal of Ophthalmic Inflammation and Infection Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 ; reingest4.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Journal of Ophthalmic Inflammation and Infection Volume 5 ; 5 ; >
   
     }
@@ -1635,7 +1635,7 @@
         au < doNotProcess ; exists ; 2011 ; Journal of Remanufacturing Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Journal of Remanufacturing Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Journal of Remanufacturing Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Journal of Remanufacturing Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Remanufacturing Volume 4 ; 4 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Journal of Remanufacturing Volume 5 ; 5 ; >
   
     }
@@ -1652,7 +1652,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Journal of Software Engineering Research and Development Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2014 ; Journal of Software Engineering Research and Development Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Software Engineering Research and Development Volume 2 ; 2 ; reingest1.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Journal of Software Engineering Research and Development Volume 3 ; 3 ; >
   
     }
@@ -1668,7 +1668,7 @@
         param[journal_issn] = 2196-1107
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; Journal of Solid State Lighting Volume 2 ; 2 ; >
   
     }
@@ -1684,7 +1684,7 @@
         param[journal_issn] = 2195-5832 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2015 ; Journal of Statistical Distributions and Applications Volume 2 ; 2 ; >
   
     }
@@ -1702,7 +1702,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 ; >
         au < doNotProcess ; exists ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 ; >
-        au < finished ; manifest ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 ; reingest4.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Journal of Theoretical and Applied Physics Volume 9 ; 9 ; >
   
     }
@@ -1718,7 +1718,7 @@
         param[journal_issn] = 2196-064X 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Journal of Trust Management Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Trust Management Volume 1 ; 1 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Journal of Trust Management Volume 2 [superseded] ; 2 ; >
   
     }
@@ -1735,7 +1735,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Journal of Uncertainty Analysis and Applications Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 [superseded] ; 3 ; >
   
     }
@@ -1754,7 +1754,7 @@
         au < doNotProcess ; exists ; 2011 ; Language Testing in Asia Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Language Testing in Asia Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Language Testing in Asia Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Language Testing in Asia Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Language Testing in Asia Volume 4 ; 4 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; Language Testing in Asia Volume 5 ; 5 ; >
   
     }
@@ -1789,7 +1789,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Maritime Studies Volume 11 ; 11 ; >
         au < doNotProcess ; exists ; 2013 ; Maritime Studies Volume 12 ; 12 ; >
-        au < finished ; manifest ; 2014 ; Maritime Studies Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Maritime Studies Volume 13 ; 13 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2015 ; Maritime Studies Volume 14 ; 14 ; >
   
     }
@@ -1822,7 +1822,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 ; reingest4.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Micro and Nano Systems Letters Volume 3 ; 3 ; >
   
     }
@@ -1841,7 +1841,7 @@
         au < doNotProcess ; exists ; 2011 ; Multilingual Education Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Multilingual Education Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Multilingual Education Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Multilingual Education Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Multilingual Education Volume 4 ; 4 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Multilingual Education Volume 5 ; 5 ; >
   
     }
@@ -1884,7 +1884,7 @@
         au < doNotProcess ; exists ; 2011 ; Nanoscale Research Letters Volume 6 ; 6 ; >
         au < doNotProcess ; exists ; 2012 ; Nanoscale Research Letters Volume 7 ; 7 ; >
         au < doNotProcess ; exists ; 2013 ; Nanoscale Research Letters Volume 8 ; 8 ; >
-        au < finished ; manifest ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 ; reingest1.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Nanoscale Research Letters Volume 10 ; 10 ; >
   
     }
@@ -1902,7 +1902,7 @@
         #move to Scion in 2019
   
         au < doNotProcess ; exists ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 ; >
-        au < finished ; manifest ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 [superseded] ; 45 ; >
   
     }
@@ -1920,7 +1920,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Optical Nanoscopy Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2013 ; Optical Nanoscopy Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2014 ; Optical Nanoscopy Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Optical Nanoscopy Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 ; >
   
     }
@@ -1939,7 +1939,7 @@
         au < doNotProcess ; exists ; 2011 ; Organic and Medicinal Chemistry Letters Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 [superseded] ; 5 ; >
   
     }
@@ -1958,7 +1958,7 @@
         au < doNotProcess ; exists ; 2011 ; Pastoralism Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Pastoralism Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Pastoralism Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Pastoralism Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Pastoralism Volume 4 ; 4 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Pastoralism Volume 5 [superseded] ; 5 ; >
   
     }
@@ -1976,7 +1976,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Planetary Science Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2013 ; Planetary Science Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2014 ; Planetary Science Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Planetary Science Volume 3 ; 3 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Planetary Science Volume 4 [superseded] ; 4 ; >
   
     }
@@ -2008,7 +2008,7 @@
         param[journal_issn] = 2197-4284
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 [superseded] ; 2 ; >
   
     }
@@ -2027,7 +2027,7 @@
         au < doNotProcess ; exists ; 2011 ; Psychology of Well-Being: Theory, Research and Practice Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 ; >
         au < doNotProcess ; exists ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 ; >
-        au < finished ; manifest ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 [superseded] ; 5 ; >
   
     }
@@ -2043,7 +2043,7 @@
         param[journal_issn] = 2197-9847
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 ; reingest4.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 [superseded] ; 2 ; >
 
     }
@@ -2060,7 +2060,7 @@
         param[journal_issn] = 0717-6317
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; manifest ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 [superseded] ; 88 ; >
 
     }
@@ -2080,7 +2080,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Rice Volume 5 ; 5 ; >
         au < doNotProcess ; exists ; 2013 ; Rice Volume 6 ; 6 ; >
-        au < finished ; manifest ; 2014 ; Rice Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Rice Volume 7 ; 7 ; reingest1.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Rice Volume 8 ; 8 ; >
   
     }
@@ -2096,7 +2096,7 @@
         param[journal_issn] = 2197-4225
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; ROBOMECH Journal Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; ROBOMECH Journal Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; ROBOMECH Journal Volume 2 ; 2 ; >
   
     }
@@ -2112,7 +2112,7 @@
         param[journal_issn] = 2197-3768 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; manifest ; 2014 ; Robotics and Biomimetics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Robotics and Biomimetics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2015 ; Robotics and Biomimetics Volume 2 ; 2 ; >
   
     }
@@ -2130,7 +2130,7 @@
   
         au < doNotProcess ; exists ; 2012 ; Security Informatics Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2013 ; Security Informatics Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2014 ; Security Informatics Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Security Informatics Volume 3 ; 3 ; reingest4.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Security Informatics Volume 4 ; 4 ; >
   
     }
@@ -2148,7 +2148,7 @@
   
         au < doNotProcess ; exists ; 2012 ; SpringerPlus Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2013 ; SpringerPlus Volume 2 ; 2 ; >
-        au < finished ; manifest ; 2014 ; SpringerPlus Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; SpringerPlus Volume 3 ; 3 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; SpringerPlus Volume 4 ; 4 ; >
   
     }
@@ -2165,7 +2165,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Translational Respiratory Medicine Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2014 ; Translational Respiratory Medicine Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2014 ; Translational Respiratory Medicine Volume 2 ; 2 ; reingest1.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Translational Respiratory Medicine Volume 3 ; 3 ; >
   
     }
@@ -2182,7 +2182,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Visualization in Engineering Volume 1 ; 1 ; >
-        au < finished ; manifest ; 2014 ; Visualization in Engineering Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; Visualization in Engineering Volume 2 ; 2 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; Visualization in Engineering Volume 3 ; 3 ; >
   
     }
@@ -2199,7 +2199,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < doNotProcess ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 ; >
-        au < finished ; manifest ; 2014 ; Zoological Studies Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2014 ; Zoological Studies Volume 53 ; 53 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Zoological Studies Volume 54 [superseded] ; 54 ; >
 
     }
@@ -2216,7 +2216,7 @@
       comment[platform] = BioMedCentralPlugin
 
       au < doNotProcess ; exists ; 2013 ; China Finance and Economic Review Volume 1 ; 1 ; >
-      au < finished ; manifest ; 2014 ; China Finance and Economic Review Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; China Finance and Economic Review Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; China Finance and Economic Review Volume 3 ; 3 ; >
 
     }
@@ -2232,7 +2232,7 @@
       param[journal_issn] = 2197-4314
       comment[platform] = BioMedCentralPlugin
 
-      au < finished ; manifest ; 2014 ; Computational Social Networks Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Computational Social Networks Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Computational Social Networks Volume 2 ; 2 ; >
 
     }
@@ -2264,7 +2264,7 @@
       param[journal_issn] = 2196-050X
       comment[platform] = BioMedCentralPlugin
 
-      au < finished ; manifest ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; In Silico Cell and Tissue Science Volume 2 ; 2 ; >
 
     }
@@ -2280,7 +2280,7 @@
       param[journal_issn] = 2195-9897
       comment[platform] = BioMedCentralPlugin
 
-      au < finished ; manifest ; 2014 ; Journal of Chinese Management Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Journal of Chinese Management Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Journal of Chinese Management Volume 2 ; 2 ; >
 
     }
@@ -2312,8 +2312,8 @@
       param[journal_issn] = 2251-7316
       comment[platform] = BioMedCentralPlugin
 
-      au < finished ; manifest ; 2014 ; Journal of Global Entrepreneurship Research Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2014 ; Journal of Global Entrepreneurship Research Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Global Entrepreneurship Research Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; Journal of Global Entrepreneurship Research Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Journal of Global Entrepreneurship Research Volume 5 ; 5 ; >
 
     }
@@ -2330,7 +2330,7 @@
       comment[platform] = BioMedCentralPlugin
 
       au < doNotProcess ; exists ; 2013 ; Large-scale Assessments in Education Volume 1 ; 1 ; >
-      au < finished ; manifest ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 [superseded] ; 3 ; >
 
     }
@@ -2346,7 +2346,7 @@
       param[journal_issn] = 2194-7791
       comment[platform] = BioMedCentralPlugin
 
-      au < finished ; manifest ; 2014 ; Molecular and Cellular Pediatrics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Molecular and Cellular Pediatrics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2015 ; Molecular and Cellular Pediatrics Volume 2 ; 2 ; >
 
     }
@@ -2380,7 +2380,7 @@
       comment[platform] = BioMedCentralPlugin
 
       au < doNotProcess ; exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 ; >
-      au < finished ; manifest ; 2014 ; Progress in Orthodontics Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Progress in Orthodontics Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 ; >
 
     }
@@ -2396,7 +2396,7 @@
       param[journal_issn] = 2196-7091
       comment[platform] = BioMedCentralPlugin
 
-      au < finished ; manifest ; 2014 ; Smart Learning Environments Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; Smart Learning Environments Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2015 ; Smart Learning Environments Volume 2 ; 2 ; >
 
     }
