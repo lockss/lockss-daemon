@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>38</string>
+    <string>39</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -117,9 +117,11 @@
   </entry>
   <entry>
   <!--  appears to use the same "ejournals" for both books and journals; but make it more generic
-   "https://profile.thieme.de/HTML/sso/ejournals/login.htm?type=default...." -->
+   "https://profile.thieme.de/HTML/sso/ejournals/login.htm?type=default...."
+   "https://profile.thieme.de/HTML/sso/ejournals/login.htm&hook_url=..."
+   -->
     <string>au_redirect_to_login_url_pattern</string>
-    <string>"/sso/(ejournals|ebooks)/login\.htm\?"</string>
+    <string>"^https://profile.thieme.de/HTML/sso/"</string>
   </entry>
   <entry>
     <string>au_url_mime_type</string>
@@ -189,6 +191,17 @@
     <!-- manifest to issue -->
     <string>au_refetch_depth</string>
     <int>2</int>
+  </entry>
+  <entry>
+    <!--
+     https://s20.video-stream-hosting.de/tvg/ejournal/10.1055-s-00000001/10-1055-a-0967-1563ainsv01_360p.mp4
+     https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js
+     -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>s20\.video-stream-hosting\.de</string>
+      <string>cdn\.jsdelivr\.net</string>
+    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
