@@ -577,23 +577,27 @@
       issn = 1090-0241 ;
       eissn = 1943-5606
     >
+    {
+    param[journal_id] = jgendz
 
+    au < manifest ; exists ; 1983 ; Journal of Geotechnical Engineering Volume 109 ; 109 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1984 ; Journal of Geotechnical Engineering Volume 110 ; 110 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1985 ; Journal of Geotechnical Engineering Volume 111 ; 111 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1986 ; Journal of Geotechnical Engineering Volume 112 ; 112 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1987 ; Journal of Geotechnical Engineering Volume 113 ; 113 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1988 ; Journal of Geotechnical Engineering Volume 114 ; 114 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1989 ; Journal of Geotechnical Engineering Volume 115 ; 115 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1990 ; Journal of Geotechnical Engineering Volume 116 ; 116 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1991 ; Journal of Geotechnical Engineering Volume 117 ; 117 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1992 ; Journal of Geotechnical Engineering Volume 118 ; 118 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1993 ; Journal of Geotechnical Engineering Volume 119 ; 119 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1994 ; Journal of Geotechnical Engineering Volume 120 ; 120 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1995 ; Journal of Geotechnical Engineering Volume 121 ; 121 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1996 ; Journal of Geotechnical Engineering Volume 122 ; 122 ; https://ascelibrary.org/ ; >
+    }
+    {
     param[journal_id] = jggefk
 
-    au < manifest ; exists ; 1983 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 109 ; 109 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1984 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 110 ; 110 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1985 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 111 ; 111 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1986 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 112 ; 112 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1987 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 113 ; 113 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1988 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 114 ; 114 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1989 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 115 ; 115 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1990 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 116 ; 116 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1991 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 117 ; 117 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1992 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 118 ; 118 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1993 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 119 ; 119 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1994 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 120 ; 120 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1995 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 121 ; 121 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1996 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 122 ; 122 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1997 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 123 ; 123 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1998 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 124 ; 124 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 1999 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 125 ; 125 ; https://ascelibrary.org/ ; >
@@ -619,7 +623,7 @@
     au < deepCrawl ; exists ; 2019 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 145 ; 145 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2020 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 146 ; 146 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2021 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 147 ; 147 ; https://ascelibrary.org/ ; >
-
+    }
   }
 
   {
@@ -629,22 +633,26 @@
       issn = 2153-5493 ;
       eissn = 2153-5515
     >
+    {
+    param[journal_id] = pphmf8
 
+    au < manifest ; exists ; 1997 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1998 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1999 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2000 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 4 ; 4 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2001 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2002 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2003 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2004 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 8 ; 8 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2005 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 9 ; 9 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2006 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2007 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2008 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 12 ; 12 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2009 ; Practice Periodical of Hazardous, Toxic, and Radioactive Waste Management Volume 13 ; 13 ; https://ascelibrary.org/ ; >
+    }
+    {
     param[journal_id] = jhtrbp
 
-    au < manifest ; exists ; 1997 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1998 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1999 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 3 ; 3 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2000 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 4 ; 4 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2001 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2002 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2003 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2004 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 8 ; 8 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2005 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 9 ; 9 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2006 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2007 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 11 ; 11 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2008 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 12 ; 12 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2009 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 14 ; 14 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 15 ; 15 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 16 ; 16 ; http://ascelibrary.org/ ; >
@@ -657,7 +665,7 @@
     au < deepCrawl ; exists ; 2019 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2020 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 24 ; 24 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2021 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 25 ; 25 ; https://ascelibrary.org/ ; >
-
+    }
   }
 
   {
