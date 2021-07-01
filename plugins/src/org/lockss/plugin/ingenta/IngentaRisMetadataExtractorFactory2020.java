@@ -63,8 +63,6 @@ public class IngentaRisMetadataExtractorFactory2020 implements FileMetadataExtra
             ArticleMetadata am = extract(target, cu);
             String url = cu.getUrl();
 
-            log.debug3("url========" + url);
-
             String html_appendix = "?crawler=true&mimetype=text/html";
             String html_appendix2 = "?crawler=true";
             String new_access_url = url;
