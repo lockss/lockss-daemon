@@ -36,7 +36,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.atypon.BaseAtyponMetadataUtil;
 import org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlMetadataExtractorFactory.GeorgThiemeVerlagHtmlMetadataExtractor;
 import org.lockss.plugin.simulated.*;
 
