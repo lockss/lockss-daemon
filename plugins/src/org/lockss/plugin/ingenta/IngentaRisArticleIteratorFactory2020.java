@@ -83,8 +83,7 @@ public class IngentaRisArticleIteratorFactory2020 implements ArticleIteratorFact
     builder.addAspect(RIS_PATTERN,
             RIS_REPLACEMENT,
             ArticleFiles.ROLE_ARTICLE_METADATA);
-
-    /*
+    
     builder.addAspect(HTML_PATTERN,
             HTML_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_HTML);
@@ -92,8 +91,7 @@ public class IngentaRisArticleIteratorFactory2020 implements ArticleIteratorFact
     builder.addAspect(HTML_PATTERN_ALTERNATIVE,
             HTML_REPLACEMENT_ALTERNATIVE,
             ArticleFiles.ROLE_FULL_TEXT_PDF);
-            
-     */
+
 
     builder.addAspect(PDF_PATTERN,
             PDF_REPLACEMENT,
