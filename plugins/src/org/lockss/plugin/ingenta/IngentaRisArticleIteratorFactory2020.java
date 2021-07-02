@@ -57,7 +57,7 @@ public class IngentaRisArticleIteratorFactory2020 implements ArticleIteratorFact
    */
 
   protected static final String ROOT_TEMPLATE = "\"%scontent/%s/%s\", base_url, publisher_id, journal_id";
-  private static final String PATTERN_TEMPLATE = "\"%scontent/%s/%s/([0-9]{4}/[^/]+/[^/]+/art[0-9]{5})\\?format=ris\", " +
+  private static final String PATTERN_TEMPLATE = "\"%scontent/%s/%s/([0-9]{4}/[^/]+/[^/]+/art[0-9]{5})((\\?format=ris)|(\\?crawler=true))\", " +
           "base_url, publisher_id, journal_id";
 
   public static final Pattern HTML_PATTERN = Pattern.compile("(.*)content/([^/]+)/([^/]+)/([0-9]{4}/[^/]+/[^/]+/art[0-9]{5})\\?crawler=true&mimetype=text/html", Pattern.CASE_INSENSITIVE);
