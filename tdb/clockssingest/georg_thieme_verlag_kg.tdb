@@ -271,7 +271,7 @@
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Rheumatologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Rheumatologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Rheumatologie Volume 33 ; 33 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Aktuelle Rheumatologie Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Rheumatologie Volume 34 ; 34 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Rheumatologie Volume 35 ; 35 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Aktuelle Rheumatologie Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Rheumatologie Volume 37 ; 37 ; >
@@ -1093,7 +1093,7 @@
     param[journal_id] = 10.1055/s-00000145
     comment[years] = 2007-current
 
-   au < ready ; exists ; 2007 ; 2007 ; Dialyse aktuell Volume 2 ; 2 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Dialyse aktuell Volume 2 ; 2 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Dialyse aktuell Volume 3 ; 3 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Dialyse aktuell Volume 4 ; 4 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Dialyse aktuell Volume 5 ; 5 ; reingest5.clockss.org:8082 >
@@ -1254,7 +1254,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; DMW - Deutsche Medizinische Wochenschrift Volume 130 ; 130 ; >
    au < manifest ; exists ; 2005 ; 2005 ; DMW - Deutsche Medizinische Wochenschrift Volume 131 ; 131 ; >
    au < testing ; exists ; 2006 ; 2006 ; DMW - Deutsche Medizinische Wochenschrift Volume 132 ; 132 ; >
-   au < ready ; exists ; 2007 ; 2007 ; DMW - Deutsche Medizinische Wochenschrift Volume 133 ; 133 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; DMW - Deutsche Medizinische Wochenschrift Volume 133 ; 133 ; >
    au < crawling ; exists ; 2008 ; 2008 ; DMW - Deutsche Medizinische Wochenschrift Volume 134 ; 134 ; >
    au < finished ; manifest ; 2009 ; 2009 ; DMW - Deutsche Medizinische Wochenschrift Volume 135 ; 135 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 136 ; 136 ; reingest2.clockss.org:8085 >
@@ -1288,7 +1288,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Deutsche Zeitschrift für Osteopathie Volume 2 ; 2 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Deutsche Zeitschrift für Osteopathie Volume 3 ; 3 ; >
    au < testing ; exists ; 2006 ; 2006 ; Deutsche Zeitschrift für Osteopathie Volume 4 ; 4 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Osteopathie Volume 5 ; 5 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Osteopathie Volume 5 ; 5 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Osteopathie Volume 6 ; 6 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Deutsche Zeitschrift für Osteopathie Volume 8 ; 8 ; reingest2.clockss.org:8085 >
@@ -1318,7 +1318,7 @@
     comment[years] = 2006-current
 
    au < testing ; exists ; 2006 ; 2006 ; Endo-Praxis Volume 22 ; 22 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Endo-Praxis Volume 23 ; 23 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Endo-Praxis Volume 23 ; 23 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Endo-Praxis Volume 24 ; 24 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Endo-Praxis Volume 25 ; 25 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Endo-Praxis Volume 26 ; 26 ; reingest2.clockss.org:8085 >
@@ -1387,7 +1387,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Endoscopy Volume 36 ; 36 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Endoscopy Volume 37 ; 37 ; >
    au < testing ; exists ; 2006 ; 2006 ; Endoscopy Volume 38 ; 38 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Endoscopy Volume 39 ; 39 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Endoscopy Volume 39 ; 39 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Endoscopy Volume 40 ; 40 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Endoscopy Volume 41 ; 41 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Endoscopy Volume 42 ; 42 ; reingest2.clockss.org:8085 >
@@ -1444,7 +1444,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Endoscopy heute Volume 17 ; 17 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Endoscopy heute Volume 18 ; 18 ; >
    au < testing ; exists ; 2006 ; 2006 ; Endoscopy heute Volume 19 ; 19 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Endoscopy heute Volume 20 ; 20 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Endoscopy heute Volume 20 ; 20 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Endoscopy heute Volume 21 ; 21 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Endoscopy heute Volume 22 ; 22 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Endoscopy heute Volume 23 ; 23 ; reingest1.clockss.org:8082 >
@@ -1474,7 +1474,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Erfahrungsheilkunde Volume 53 ; 53 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Erfahrungsheilkunde Volume 54 ; 54 ; >
    au < testing ; exists ; 2006 ; 2006 ; Erfahrungsheilkunde Volume 55 ; 55 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Erfahrungsheilkunde Volume 56 ; 56 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Erfahrungsheilkunde Volume 56 ; 56 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Erfahrungsheilkunde Volume 57 ; 57 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Erfahrungsheilkunde Volume 58 ; 58 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Erfahrungsheilkunde Volume 59 ; 59 ; reingest2.clockss.org:8085 >
@@ -1532,7 +1532,7 @@
     comment[years] = 2006-2010
 
     au < testing ; exists ; 2006 ; 2006 ; Ergoscience Volume 1 ; 1 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 ; >
@@ -1557,7 +1557,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Ernährung & Medizin Volume 19 ; 19 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Ernährung & Medizin Volume 20 ; 20 ; >
    au < testing ; exists ; 2006 ; 2006 ; Ernährung & Medizin Volume 21 ; 21 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Ernährung & Medizin Volume 22 ; 22 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Ernährung & Medizin Volume 22 ; 22 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Ernährung & Medizin Volume 23 ; 23 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Ernährung & Medizin Volume 24 ; 24 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Ernährung & Medizin Volume 25 ; 25 ; reingest2.clockss.org:8085 >
@@ -1604,7 +1604,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; European Journal of Pediatric Surgery Volume 14 ; 14 ; >
    au < manifest ; exists ; 2005 ; 2005 ; European Journal of Pediatric Surgery Volume 15 ; 15 ; >
    au < testing ; exists ; 2006 ; 2006 ; European Journal of Pediatric Surgery Volume 16 ; 16 ; >
-   au < ready ; exists ; 2007 ; 2007 ; European Journal of Pediatric Surgery Volume 17 ; 17 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; European Journal of Pediatric Surgery Volume 17 ; 17 ; >
    au < crawling ; exists ; 2008 ; 2008 ; European Journal of Pediatric Surgery Volume 18 ; 18 ; >
    au < finished ; manifest ; 2009 ; 2009 ; European Journal of Pediatric Surgery Volume 19 ; 19 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 20 ; 20 ; reingest2.clockss.org:8085 >
@@ -1719,7 +1719,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Experimental and Clinical Endocrinology & Diabetes Volume 112 ; 112 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Experimental and Clinical Endocrinology & Diabetes Volume 113 ; 113 ; >
    au < testing ; exists ; 2006 ; 2006 ; Experimental and Clinical Endocrinology & Diabetes Volume 114 ; 114 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Experimental and Clinical Endocrinology & Diabetes Volume 115 ; 115 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Experimental and Clinical Endocrinology & Diabetes Volume 115 ; 115 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 116 ; 116 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Experimental and Clinical Endocrinology & Diabetes Volume 117 ; 117 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 118 ; 118 ; reingest1.clockss.org:8082 >
@@ -1789,7 +1789,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Facial Plastic Surgery Volume 20 ; 20 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Facial Plastic Surgery Volume 21 ; 21 ; >
    au < testing ; exists ; 2006 ; 2006 ; Facial Plastic Surgery Volume 22 ; 22 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Facial Plastic Surgery Volume 23 ; 23 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Facial Plastic Surgery Volume 23 ; 23 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Facial Plastic Surgery Volume 24 ; 24 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Facial Plastic Surgery Volume 25 ; 25 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Facial Plastic Surgery Volume 26 ; 26 ; reingest1.clockss.org:8082 >
@@ -1818,7 +1818,7 @@
     param[journal_id] = 10.1055/s-00000148
     comment[years] = 2007-current
 
-   au < ready ; exists ; 2007 ; 2007 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 14 ; 14 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 14 ; 14 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 15 ; 15 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 16 ; 16 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 17 ; 17 ; reingest2.clockss.org:8085 >
@@ -1874,7 +1874,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Fortschritte der Neurologie - Psychiatrie Volume 72 ; 72 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Fortschritte der Neurologie - Psychiatrie Volume 73 ; 73 ; >
    au < testing ; exists ; 2006 ; 2006 ; Fortschritte der Neurologie - Psychiatrie Volume 74 ; 74 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Fortschritte der Neurologie - Psychiatrie Volume 75 ; 75 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Fortschritte der Neurologie - Psychiatrie Volume 75 ; 75 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Fortschritte der Neurologie - Psychiatrie Volume 76 ; 76 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 77 ; 77 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 78 ; 78 ; >
@@ -1903,7 +1903,7 @@
     param[journal_id] = 10.1055/s-00000142
     comment[years] = 2007-current
 
-   au < ready ; exists ; 2007 ; 2007 ; Frauenheilkunde up2date Volume 1 ; 1 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Frauenheilkunde up2date Volume 1 ; 1 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Frauenheilkunde up2date Volume 2 ; 2 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Frauenheilkunde up2date Volume 3 ; 3 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Frauenheilkunde up2date Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -1934,7 +1934,7 @@
 
    au < manifest ; exists ; 2005 ; 2005 ; Gastroenterologie up2dat Volume 1 ; 1 ; >
    au < testing ; exists ; 2006 ; 2006 ; Gastroenterologie up2dat Volume 2 ; 2 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Gastroenterologie up2dat Volume 3 ; 3 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Gastroenterologie up2dat Volume 3 ; 3 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Gastroenterologie up2dat Volume 4 ; 4 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Gastroenterologie up2dat Volume 6 ; 6 ; reingest1.clockss.org:8082 >
@@ -1991,7 +1991,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Geburtshilfe und Frauenheilkunde Volume 64 ; 64 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Geburtshilfe und Frauenheilkunde Volume 65 ; 65 ; >
    au < testing ; exists ; 2006 ; 2006 ; Geburtshilfe und Frauenheilkunde Volume 66 ; 66 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Geburtshilfe und Frauenheilkunde Volume 67 ; 67 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Geburtshilfe und Frauenheilkunde Volume 67 ; 67 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Geburtshilfe und Frauenheilkunde Volume 68 ; 68 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Geburtshilfe und Frauenheilkunde Volume 69 ; 69 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Geburtshilfe und Frauenheilkunde Volume 70 ; 70 ; reingest2.clockss.org:8085 >
@@ -2047,7 +2047,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Gesundheitsökonomie & Qualitätsmanagement Volume 9 ; 9 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Gesundheitsökonomie & Qualitätsmanagement Volume 10 ; 10 ; >
    au < testing ; exists ; 2006 ; 2006 ; Gesundheitsökonomie & Qualitätsmanagement Volume 11 ; 11 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Gesundheitsökonomie & Qualitätsmanagement Volume 12 ; 12 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Gesundheitsökonomie & Qualitätsmanagement Volume 12 ; 12 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Gesundheitsökonomie & Qualitätsmanagement Volume 13 ; 13 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Gesundheitsökonomie & Qualitätsmanagement Volume 14 ; 14 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Gesundheitsökonomie & Qualitätsmanagement Volume 15 ; 15 ; >
@@ -2083,7 +2083,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Gesundheitswesen Das Volume 68 ; 68 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Gesundheitswesen Das Volume 69 ; 69 ; >
    au < testing ; exists ; 2006 ; 2006 ; Gesundheitswesen Das Volume 70 ; 70 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Gesundheitswesen Das Volume 71 ; 71 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Gesundheitswesen Das Volume 71 ; 71 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Gesundheitswesen Das Volume 72 ; 72 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Gesundheitswesen Das Volume 73 ; 73 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Gesundheitswesen Das Volume 74 ; 74 ; reingest1.clockss.org:8082 >
@@ -2142,7 +2142,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 36 ; 36 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 37 ; 37 ; >
    au < testing ; exists ; 2006 ; 2006 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 38 ; 38 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 39 ; 39 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 39 ; 39 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 40 ; 40 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 41 ; 41 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
@@ -2198,7 +2198,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Hebamme Die Volume 17 ; 17 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Hebamme Die Volume 18 ; 18 ; >
    au < testing ; exists ; 2006 ; 2006 ; Hebamme Die Volume 19 ; 19 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Hebamme Die Volume 20 ; 20 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Hebamme Die Volume 20 ; 20 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Hebamme Die Volume 21 ; 21 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Hebamme Die Volume 22 ; 22 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Hebamme Die Volume 23 ; 23 ; reingest2.clockss.org:8085 >
@@ -2244,7 +2244,7 @@
 
    au < manifest ; exists ; 2005 ; 2005 ; Homoeopathic Links Volume 18 ; 18 ; >
    au < testing ; exists ; 2006 ; 2006 ; Homoeopathic Links Volume 19 ; 19 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Homoeopathic Links Volume 20 ; 20 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Homoeopathic Links Volume 20 ; 20 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Homoeopathic Links Volume 21 ; 21 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Homoeopathic Links Volume 22 ; 22 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Homoeopathic Links Volume 23 ; 23 ; >
@@ -2312,7 +2312,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Hormone and Metabolic Research Volume 36 ; 36 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Hormone and Metabolic Research Volume 37 ; 37 ; >
    au < testing ; exists ; 2006 ; 2006 ; Hormone and Metabolic Research Volume 38 ; 38 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Hormone and Metabolic Research Volume 39 ; 39 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Hormone and Metabolic Research Volume 39 ; 39 ; >
    au < frozen ; exists ; 2008 ; 2008 ; Hormone and Metabolic Research Volume 40 ; 40 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Hormone and Metabolic Research Volume 41 ; 41 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Hormone and Metabolic Research Volume 42 ; 42 ; reingest1.clockss.org:8082 >
@@ -2393,7 +2393,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Indian Journal of Neurotrauma Volume 1 ; 1 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Indian Journal of Neurotrauma Volume 2 ; 2 ; >
    au < testing ; exists ; 2006 ; 2006 ; Indian Journal of Neurotrauma Volume 3 ; 3 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Indian Journal of Neurotrauma Volume 4 ; 4 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Indian Journal of Neurotrauma Volume 4 ; 4 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Indian Journal of Neurotrauma Volume 5 ; 5 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Indian Journal of Neurotrauma Volume 6 ; 6 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Indian Journal of Neurotrauma Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -2429,7 +2429,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Informationen aus Orthodontie & Kieferorthopädie Volume 36 ; 36 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Informationen aus Orthodontie & Kieferorthopädie Volume 37 ; 37 ; >
    au < testing ; exists ; 2006 ; 2006 ; Informationen aus Orthodontie & Kieferorthopädie Volume 38 ; 38 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 39 ; 39 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 39 ; 39 ; >
    au < frozen ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 40 ; 40 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 41 ; 41 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
@@ -2481,7 +2481,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; intensiv Volume 12 ; 12 ; >
     au < manifest ; exists ; 2005 ; 2005 ; intensiv Volume 13 ; 13 ; >
     au < testing ; exists ; 2006 ; 2006 ; intensiv Volume 14 ; 14 ; >
-    au < ready ; exists ; 2007 ; 2007 ; intensiv Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; intensiv Volume 15 ; 15 ; >
     au < crawling ; exists ; 2008 ; 2008 ; intensiv Volume 16 ; 16 ; >
     au < finished ; manifest ; 2009 ; 2009 ; intensiv Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; intensiv Volume 18 ; 18 ; >
@@ -2512,7 +2512,7 @@
 
     au < manifest ; exists ; 2005 ; 2005 ; Intensivmedizin up2date Volume 1 ; 1 ; >
     au < testing ; exists ; 2006 ; 2006 ; Intensivmedizin up2date Volume 2 ; 2 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Intensivmedizin up2date Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Intensivmedizin up2date Volume 3 ; 3 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Intensivmedizin up2date Volume 4 ; 4 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Intensivmedizin up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Intensivmedizin up2date Volume 6 ; 6 ; reingest2.clockss.org:8085 >
@@ -2582,7 +2582,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; International Journal of Angiology Volume 13 ; 13 ; >
     au < manifest ; exists ; 2005 ; 2005 ; International Journal of Angiology Volume 14 ; 14 ; >
     au < testing ; exists ; 2006 ; 2006 ; International Journal of Angiology Volume 15 ; 15 ; >
-    au < ready ; exists ; 2007 ; 2007 ; International Journal of Angiology Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; International Journal of Angiology Volume 16 ; 16 ; >
     au < crawling ; exists ; 2008 ; 2008 ; International Journal of Angiology Volume 17 ; 17 ; >
     au < finished ; manifest ; 2009 ; 2009 ; International Journal of Angiology Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; International Journal of Angiology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
@@ -2639,7 +2639,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; International Journal of Sports Medicine Volume 25 ; 25 ; >
     au < manifest ; exists ; 2005 ; 2005 ; International Journal of Sports Medicine Volume 26 ; 26 ; >
     au < testing ; exists ; 2006 ; 2006 ; International Journal of Sports Medicine Volume 27 ; 27 ; >
-    au < ready ; exists ; 2007 ; 2007 ; International Journal of Sports Medicine Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; International Journal of Sports Medicine Volume 28 ; 28 ; >
     au < crawling ; exists ; 2008 ; 2008 ; International Journal of Sports Medicine Volume 29 ; 29 ; >
     au < finished ; manifest ; 2009 ; 2009 ; International Journal of Sports Medicine Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 31 ; 31 ; reingest2.clockss.org:8085 >
@@ -2898,7 +2898,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Journal of Knee Surgery Volume 17 ; 17 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 18 ; 18 ; >
     au < testing ; exists ; 2006 ; 2006 ; Journal of Knee Surgery Volume 19 ; 19 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 20 ; 20 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Knee Surgery Volume 21 ; 21 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Knee Surgery Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Knee Surgery Volume 23 ; 23 ; >
@@ -3087,7 +3087,7 @@
     comment[years] = 2006-current
 
     au < testing ; exists ; 2006 ; 2006 ; Journal of Pediatric Infectious Diseases Volume 1 ; 1 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Journal of Pediatric Infectious Diseases Volume 3 ; 3 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Pediatric Infectious Diseases Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Pediatric Infectious Diseases Volume 5 ; 5 ; reingest1.clockss.org:8082 >
@@ -3146,7 +3146,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Journal of Pediatric Neurology Volume 2 ; 2 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Journal of Pediatric Neurology Volume 3 ; 3 ; >
     au < testing ; exists ; 2006 ; 2006 ; Journal of Pediatric Neurology Volume 4 ; 4 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Journal of Pediatric Neurology Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Journal of Pediatric Neurology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Journal of Pediatric Neurology Volume 6 ; 6 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Pediatric Neurology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Pediatric Neurology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
@@ -3219,7 +3219,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Journal of Reconstructive Microsurgery Volume 20 ; 20 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Journal of Reconstructive Microsurgery Volume 21 ; 21 ; >
     au < testing ; exists ; 2006 ; 2006 ; Journal of Reconstructive Microsurgery Volume 22 ; 22 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Journal of Reconstructive Microsurgery Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Journal of Reconstructive Microsurgery Volume 23 ; 23 ; >
     au < notReady ; exists ; 2008 ; 2008 ; Journal of Reconstructive Microsurgery Volume 24 ; 24 ; > #no metadata
     au < frozen ; exists ; 2009 ; 2009 ; Journal of Reconstructive Microsurgery Volume 25 ; 25 ; >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Reconstructive Microsurgery Volume 26 ; 26 ; reingest2.clockss.org:8085 >
@@ -3346,7 +3346,7 @@
 
     au < manifest ; exists ; 2005 ; 2005 ; Kardiologie up2date Volume 1 ; 1 ; >
     au < testing ; exists ; 2006 ; 2006 ; Kardiologie up2date Volume 2 ; 2 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Kardiologie up2date Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Kardiologie up2date Volume 3 ; 3 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Kardiologie up2date Volume 4 ; 4 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Kardiologie up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Kardiologie up2date Volume 6 ; 6 ; reingest2.clockss.org:8085 >
@@ -3375,7 +3375,7 @@
     param[journal_id] = 10.1055/s-00000143
     comment[years] = 2007-current
 
-    au < ready ; exists ; 2007 ; 2007 ; kleintier konkret Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; kleintier konkret Volume 10 ; 10 ; >
     au < crawling ; exists ; 2008 ; 2008 ; kleintier konkret Volume 11 ; 11 ; >
     au < finished ; manifest ; 2009 ; 2009 ; kleintier konkret Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; kleintier konkret Volume 13 ; 13 ; reingest2.clockss.org:8085 >
@@ -3408,7 +3408,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Klinikarzt Der Volume 33 ; 33 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Klinikarzt Der Volume 34 ; 34 ; >
     au < testing ; exists ; 2006 ; 2006 ; Klinikarzt Der Volume 35 ; 35 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Klinikarzt Der Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Klinikarzt Der Volume 36 ; 36 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Klinikarzt Der Volume 37 ; 37 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Klinikarzt Der Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Klinikarzt Der Volume 39 ; 39 ; >
@@ -3464,7 +3464,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Klinische Monatsblätter für Augenheilkunde Volume 221 ; 221 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Klinische Monatsblätter für Augenheilkunde Volume 222 ; 222 ; >
     au < testing ; exists ; 2006 ; 2006 ; Klinische Monatsblätter für Augenheilkunde Volume 223 ; 223 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Klinische Monatsblätter für Augenheilkunde Volume 224 ; 224 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Klinische Monatsblätter für Augenheilkunde Volume 224 ; 224 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Klinische Monatsblätter für Augenheilkunde Volume 225 ; 225 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Klinische Monatsblätter für Augenheilkunde Volume 226 ; 226 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Klinische Monatsblätter für Augenheilkunde Volume 227 ; 227 ; reingest2.clockss.org:8085 >
@@ -3522,7 +3522,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Klinische Neurophysiologie Volume 35 ; 35 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Klinische Neurophysiologie Volume 36 ; 36 ; >
     au < testing ; exists ; 2006 ; 2006 ; Klinische Neurophysiologie Volume 37 ; 37 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Klinische Neurophysiologie Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Klinische Neurophysiologie Volume 38 ; 38 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Klinische Neurophysiologie Volume 39 ; 39 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Klinische Neurophysiologie Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Klinische Neurophysiologie Volume 41 ; 41 ; reingest1.clockss.org:8082 >
@@ -3578,7 +3578,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Klinische Pädiatrie Volume 216 ; 216 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Klinische Pädiatrie Volume 217 ; 217 ; >
     au < testing ; exists ; 2006 ; 2006 ; Klinische Pädiatrie Volume 218 ; 218 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Klinische Pädiatrie Volume 219 ; 219 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Klinische Pädiatrie Volume 219 ; 219 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Klinische Pädiatrie Volume 220 ; 220 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Klinische Pädiatrie Volume 221 ; 221 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Klinische Pädiatrie Volume 222 ; 222 ; reingest2.clockss.org:8085 >
@@ -3610,7 +3610,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; kma - Das Gesundheitswirtschaftsmagazin Volume 9 ; 9 ; >
     au < manifest ; exists ; 2005 ; 2005 ; kma - Das Gesundheitswirtschaftsmagazin Volume 10 ; 10 ; >
     au < testing ; exists ; 2006 ; 2006 ; kma - Das Gesundheitswirtschaftsmagazin Volume 11 ; 11 ; >
-    au < ready ; exists ; 2007 ; 2007 ; kma - Das Gesundheitswirtschaftsmagazin Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; kma - Das Gesundheitswirtschaftsmagazin Volume 12 ; 12 ; >
     au < crawling ; exists ; 2008 ; 2008 ; kma - Das Gesundheitswirtschaftsmagazin Volume 13 ; 13 ; >
     au < finished ; manifest ; 2009 ; 2009 ; kma - Das Gesundheitswirtschaftsmagazin Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; kma - Das Gesundheitswirtschaftsmagazin Volume 15 ; 15 ; reingest1.clockss.org:8082 >
@@ -3640,7 +3640,7 @@
     comment[years] = 2006-current
 
     au < testing ; exists ; 2006 ; 2006 ; Krankenhaushygiene up2date Volume 1 ; 1 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Krankenhaushygiene up2date Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Krankenhaushygiene up2date Volume 2 ; 2 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Krankenhaushygiene up2date Volume 3 ; 3 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Krankenhaushygiene up2date Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Krankenhaushygiene up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -3718,7 +3718,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Laryngo-Rhino-Otologie Volume 83 ; 83 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Laryngo-Rhino-Otologie Volume 84 ; 84 ; >
     au < testing ; exists ; 2006 ; 2006 ; Laryngo-Rhino-Otologie Volume 85 ; 85 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Laryngo-Rhino-Otologie Volume 86 ; 86 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Laryngo-Rhino-Otologie Volume 86 ; 86 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Laryngo-Rhino-Otologie Volume 87 ; 87 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Laryngo-Rhino-Otologie Volume 88 ; 88 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Laryngo-Rhino-Otologie Volume 89 ; 89 ; reingest1.clockss.org:8082 >
@@ -3770,7 +3770,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; manuelletherapie Volume 8 ; 8 ; >
     au < manifest ; exists ; 2005 ; 2005 ; manuelletherapie Volume 9 ; 9 ; >
     au < testing ; exists ; 2006 ; 2006 ; manuelletherapie Volume 10 ; 10 ; >
-    au < ready ; exists ; 2007 ; 2007 ; manuelletherapie Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; manuelletherapie Volume 11 ; 11 ; >
     au < crawling ; exists ; 2008 ; 2008 ; manuelletherapie Volume 12 ; 12 ; >
     au < finished ; manifest ; 2009 ; 2009 ; manuelletherapie Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; manuelletherapie Volume 14 ; 14 ; reingest2.clockss.org:8085 >
@@ -3865,7 +3865,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; min - Minimally Invasive Neurosurgery Volume 47 ; 47 ; >
     au < manifest ; exists ; 2005 ; 2005 ; min - Minimally Invasive Neurosurgery Volume 48 ; 48 ; >
     au < testing ; exists ; 2006 ; 2006 ; min - Minimally Invasive Neurosurgery Volume 49 ; 49 ; >
-    au < ready ; exists ; 2007 ; 2007 ; min - Minimally Invasive Neurosurgery Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; min - Minimally Invasive Neurosurgery Volume 50 ; 50 ; >
     au < crawling ; exists ; 2008 ; 2008 ; min - Minimally Invasive Neurosurgery Volume 51 ; 51 ; >
     au < finished ; manifest ; 2009 ; 2009 ; min - Minimally Invasive Neurosurgery Volume 52 ; 52 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; min - Minimally Invasive Neurosurgery Volume 53 ; 53 ; reingest1.clockss.org:8082 >
@@ -3974,7 +3974,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Neuropediatrics Volume 35 ; 35 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Neuropediatrics Volume 36 ; 36 ; >
     au < testing ; exists ; 2006 ; 2006 ; Neuropediatrics Volume 37 ; 37 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Neuropediatrics Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Neuropediatrics Volume 38 ; 38 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Neuropediatrics Volume 39 ; 39 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Neuropediatrics Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Neuropediatrics Volume 41 ; 41 ; reingest2.clockss.org:8085 >
@@ -4064,7 +4064,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Notarzt Der Volume 20 ; 20 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Notarzt Der Volume 21 ; 21 ; >
     au < testing ; exists ; 2006 ; 2006 ; Notarzt Der Volume 22 ; 22 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Notarzt Der Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Notarzt Der Volume 23 ; 23 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Notarzt Der Volume 24 ; 24 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Notarzt Der Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Notarzt Der Volume 26 ; 26 ; reingest2.clockss.org:8085 >
@@ -4096,7 +4096,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Notfall & Hausarztmedizin Volume 30 ; 30 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin Volume 31 ; 31 ; >
     au < testing ; exists ; 2006 ; 2006 ; Notfall & Hausarztmedizin Volume 32 ; 32 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Notfall & Hausarztmedizin Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Notfall & Hausarztmedizin Volume 33 ; 33 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Notfall & Hausarztmedizin Volume 34 ; 34 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Notfall & Hausarztmedizin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
 
@@ -4145,7 +4145,7 @@
     comment[years] = 2006-current
 
     au < testing ; exists ; 2006 ; 2006 ; Notfallmedizin up2date Volume 1 ; 1 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Notfallmedizin up2date Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Notfallmedizin up2date Volume 2 ; 2 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Notfallmedizin up2date Volume 3 ; 3 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Notfallmedizin up2date Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Notfallmedizin up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -4179,7 +4179,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Der Nuklearmediziner Volume 27 ; 27 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Der Nuklearmediziner Volume 28 ; 28 ; >
     au < testing ; exists ; 2006 ; 2006 ; Der Nuklearmediziner Volume 29 ; 29 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Der Nuklearmediziner Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Der Nuklearmediziner Volume 30 ; 30 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Der Nuklearmediziner Volume 31 ; 31 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Der Nuklearmediziner Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Der Nuklearmediziner Volume 33 ; 33 ; reingest1.clockss.org:8082 >
@@ -4215,7 +4215,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; OP-Journal Volume 20 ; 20 ; >
     au < manifest ; exists ; 2005 ; 2005 ; OP-Journal Volume 21 ; 21 ; >
     au < testing ; exists ; 2006 ; 2006 ; OP-Journal Volume 22 ; 22 ; >
-    au < ready ; exists ; 2007 ; 2007 ; OP-Journal Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; OP-Journal Volume 23 ; 23 ; >
     au < crawling ; exists ; 2008 ; 2008 ; OP-Journal Volume 24 ; 24 ; >
     au < finished ; manifest ; 2009 ; 2009 ; OP-Journal Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; OP-Journal Volume 26 ; 26 ; reingest2.clockss.org:8085 >
@@ -4264,7 +4264,7 @@
     comment[years] = 2006-current
 
     au < testing ; exists ; 2006 ; 2006 ; Orthopädie und Unfallchirurgie up2date Volume 1 ; 1 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Orthopädie und Unfallchirurgie up2date Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Orthopädie und Unfallchirurgie up2date Volume 2 ; 2 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Orthopädie und Unfallchirurgie up2date Volume 3 ; 3 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Orthopädie und Unfallchirurgie up2date Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Orthopädie und Unfallchirurgie up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -4298,7 +4298,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Orthopedic Trauma Directions Volume 2 ; 2 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Orthopedic Trauma Directions Volume 3 ; 3 ; >
     au < testing ; exists ; 2006 ; 2006 ; Orthopedic Trauma Directions Volume 4 ; 4 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Orthopedic Trauma Directions Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Orthopedic Trauma Directions Volume 5 ; 5 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Orthopedic Trauma Directions Volume 6 ; 6 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Orthopedic Trauma Directions Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 8 ; 8 ; >
@@ -4323,7 +4323,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Osteosynthesis & Trauma Care Volume 12 ; 12 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Osteosynthesis & Trauma Care Volume 13 ; 13 ; >
     au < testing ; exists ; 2006 ; 2006 ; Osteosynthesis & Trauma Care Volume 14 ; 14 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Osteosynthesis & Trauma Care Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Osteosynthesis & Trauma Care Volume 15 ; 15 ; >
 
   }
 
@@ -4355,7 +4355,7 @@
     comment[years] = 2006-current
 
     au < testing ; exists ; 2006 ; 2006 ; Pädiatrie up2date Volume 1 ; 1 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Pädiatrie up2date Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Pädiatrie up2date Volume 2 ; 2 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Pädiatrie up2date Volume 3 ; 3 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Pädiatrie up2date Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Pädiatrie up2date Volume 5 ; 5 ; >
@@ -4404,7 +4404,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; pferde spiegel Volume 7 ; 7 ; >
     au < manifest ; exists ; 2005 ; 2005 ; pferde spiegel Volume 8 ; 8 ; >
     au < testing ; exists ; 2006 ; 2006 ; pferde spiegel Volume 9 ; 9 ; >
-    au < ready ; exists ; 2007 ; 2007 ; pferde spiegel Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; pferde spiegel Volume 10 ; 10 ; >
     au < crawling ; exists ; 2008 ; 2008 ; pferde spiegel Volume 11 ; 11 ; >
     au < finished ; manifest ; 2009 ; 2009 ; pferde spiegel Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; pferde spiegel Volume 13 ; 13 ; reingest2.clockss.org:8085 >
@@ -4473,7 +4473,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Pharmacopsychiatry Volume 37 ; 37 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Pharmacopsychiatry Volume 38 ; 38 ; >
     au < testing ; exists ; 2006 ; 2006 ; Pharmacopsychiatry Volume 39 ; 39 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Pharmacopsychiatry Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Pharmacopsychiatry Volume 40 ; 40 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Pharmacopsychiatry Volume 41 ; 41 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Pharmacopsychiatry Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Pharmacopsychiatry Volume 43 ; 43 ; >
@@ -4518,7 +4518,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 14 ; 14 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 15 ; 15 ; >
     au < testing ; exists ; 2006 ; 2006 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 16 ; 16 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 17 ; 17 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 18 ; 18 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 20 ; 20 ; >
@@ -4551,7 +4551,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; physiopraxis Volume 2 ; 2 ; >
     au < manifest ; exists ; 2005 ; 2005 ; physiopraxis Volume 3 ; 3 ; >
     au < testing ; exists ; 2006 ; 2006 ; physiopraxis Volume 4 ; 4 ; >
-    au < ready ; exists ; 2007 ; 2007 ; physiopraxis Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; physiopraxis Volume 5 ; 5 ; >
     au < frozen ; exists ; 2008 ; 2008 ; physiopraxis Volume 6 ; 6 ; >
     au < finished ; manifest ; 2009 ; 2009 ; physiopraxis Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; physiopraxis Volume 8 ; 8 ; >
@@ -4582,7 +4582,7 @@
 
     au < manifest ; exists ; 2005 ; 2005 ; physioscience Volume 1 ; 1 ; >
     au < testing ; exists ; 2006 ; 2006 ; physioscience Volume 2 ; 2 ; >
-    au < ready ; exists ; 2007 ; 2007 ; physioscience Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; physioscience Volume 3 ; 3 ; >
     au < crawling ; exists ; 2008 ; 2008 ; physioscience Volume 4 ; 4 ; >
     au < finished ; manifest ; 2009 ; 2009 ; physioscience Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; physioscience Volume 6 ; 6 ; >
@@ -4618,7 +4618,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; PiD - Psychotherapie im Dialog Volume 5 ; 5 ; >
     au < manifest ; exists ; 2005 ; 2005 ; PiD - Psychotherapie im Dialog Volume 6 ; 6 ; >
     au < testing ; exists ; 2006 ; 2006 ; PiD - Psychotherapie im Dialog Volume 7 ; 7 ; >
-    au < ready ; exists ; 2007 ; 2007 ; PiD - Psychotherapie im Dialog Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; PiD - Psychotherapie im Dialog Volume 8 ; 8 ; >
     au < crawling ; exists ; 2008 ; 2008 ; PiD - Psychotherapie im Dialog Volume 9 ; 9 ; >
     au < finished ; manifest ; 2009 ; 2009 ; PiD - Psychotherapie im Dialog Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; PiD - Psychotherapie im Dialog Volume 11 ; 11 ; reingest4.clockss.org:8082 >
@@ -4656,7 +4656,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Plant Biology Volume 6 ; 6 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Plant Biology Volume 7 ; 7 ; >
    au < testing ; exists ; 2006 ; 2006 ; Plant Biology Volume 8 ; 8 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Plant Biology Volume 9 ; 9 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Plant Biology Volume 9 ; 9 ; >
 
   }
 
@@ -4726,7 +4726,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Planta Medica Volume 70 ; 70 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Planta Medica Volume 71 ; 71 ; >
    au < testing ; exists ; 2006 ; 2006 ; Planta Medica Volume 72 ; 72 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Planta Medica Volume 73 ; 73 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Planta Medica Volume 73 ; 73 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Planta Medica Volume 74 ; 74 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Planta Medica Volume 75 ; 75 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Planta Medica Volume 76 ; 76 ; >
@@ -4798,7 +4798,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Pneumologie Volume 58 ; 58 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Pneumologie Volume 59 ; 59 ; >
    au < testing ; exists ; 2006 ; 2006 ; Pneumologie Volume 60 ; 60 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Pneumologie Volume 61 ; 61 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Pneumologie Volume 61 ; 61 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Pneumologie Volume 62 ; 62 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Pneumologie Volume 63 ; 63 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Pneumologie Volume 64 ; 64 ; reingest1.clockss.org:8082 >
@@ -4834,7 +4834,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 54 ; 54 ; >
    au < manifest ; exists ; 2005 ; 2005 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 55 ; 55 ; >
    au < testing ; exists ; 2006 ; 2006 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 56 ; 56 ; >
-   au < ready ; exists ; 2007 ; 2007 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 57 ; 57 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 57 ; 57 ; >
    au < crawling ; exists ; 2008 ; 2008 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 58 ; 58 ; >
    au < finished ; manifest ; 2009 ; 2009 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 59 ; 59 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 60 ; 60 ; reingest1.clockss.org:8082 >
@@ -4893,7 +4893,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Psych Pflege Heute Volume 10 ; 10 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Psych Pflege Heute Volume 11 ; 11 ; >
    au < testing ; exists ; 2006 ; 2006 ; Psych Pflege Heute Volume 12 ; 12 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Psych Pflege Heute Volume 13 ; 13 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Psych Pflege Heute Volume 13 ; 13 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Psych Pflege Heute Volume 14 ; 14 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Psych Pflege Heute Volume 15 ; 15 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Psych Pflege Heute Volume 16 ; 16 ; >
@@ -4923,7 +4923,7 @@
     param[journal_id] = 10.1055/s-00000141
     comment[years] = 2007-2012
 
-   au < ready ; exists ; 2007 ; 2007 ; Psychiatrie und Psychotherapie up2date Volume 1 ; 1 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Psychiatrie und Psychotherapie up2date Volume 1 ; 1 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Psychiatrie und Psychotherapie up2date Volume 2 ; 2 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Psychiatrie und Psychotherapie up2date Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Psychiatrie und Psychotherapie up2date Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -4949,7 +4949,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Psychiatrische Praxis Volume 31 ; 31 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
    au < testing ; exists ; 2006 ; 2006 ; Psychiatrische Praxis Volume 33 ; 33 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Psychiatrische Praxis Volume 34 ; 34 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Psychiatrische Praxis Volume 34 ; 34 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Psychiatrische Praxis Volume 35 ; 35 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Psychiatrische Praxis Volume 36 ; 36 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Psychiatrische Praxis Volume 37 ; 37 ; reingest2.clockss.org:8085 >
@@ -4982,7 +4982,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 ; >
    au < testing ; exists ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 34 ; 34 ; >
 
   }
@@ -5020,7 +5020,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Radiologie up2date Volume 4 ; 4 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Radiologie up2date Volume 5 ; 5 ; >
    au < testing ; exists ; 2006 ; 2006 ; Radiologie up2date Volume 6 ; 6 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Radiologie up2date Volume 7 ; 7 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Radiologie up2date Volume 7 ; 7 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Radiologie up2date Volume 8 ; 8 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Radiologie up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Radiologie up2date Volume 10 ; 10 ; reingest2.clockss.org:8085 >
@@ -5084,7 +5084,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Rehabilitation Die Volume 43 ; 43 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Rehabilitation Die Volume 44 ; 44 ; >
    au < testing ; exists ; 2006 ; 2006 ; Rehabilitation Die Volume 45 ; 45 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Rehabilitation Die Volume 46 ; 46 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Rehabilitation Die Volume 46 ; 46 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Rehabilitation Die Volume 47 ; 47 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Rehabilitation Die Volume 48 ; 48 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Rehabilitation Die Volume 49 ; 49 ; reingest1.clockss.org:8082 >
@@ -5236,7 +5236,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 176 ; 176 ; >
     au < manifest ; exists ; 2005 ; 2005 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 177 ; 177 ; >
     au < testing ; exists ; 2006 ; 2006 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 178 ; 178 ; >
-    au < ready ; exists ; 2007 ; 2007 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 179 ; 179 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 179 ; 179 ; >
     au < crawling ; exists ; 2008 ; 2008 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 180 ; 180 ; >
     au < finished ; manifest ; 2009 ; 2009 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 181 ; 181 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 182 ; 182 ; reingest2.clockss.org:8085 >
@@ -5290,7 +5290,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Hearing Volume 25 ; 25 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Hearing Volume 26 ; 26 ; >
    au < testing ; exists ; 2006 ; 2006 ; Seminars in Hearing Volume 27 ; 27 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Seminars in Hearing Volume 28 ; 28 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Hearing Volume 28 ; 28 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Hearing Volume 29 ; 29 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Hearing Volume 30 ; 30 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Hearing Volume 31 ; 31 ; >
@@ -5343,7 +5343,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
    au < testing ; exists ; 2006 ; 2006 ; Seminars in Interventional Radiology Volume 23 ; 23 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 24 ; 24 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 24 ; 24 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 25 ; 25 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Interventional Radiology Volume 26 ; 26 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 27 ; 27 ; >
@@ -5399,7 +5399,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Liver Disease Volume 24 ; 24 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Liver Disease Volume 25 ; 25 ; >
    au < testing ; exists ; 2006 ; 2006 ; Seminars in Liver Disease Volume 26 ; 26 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Seminars in Liver Disease Volume 27 ; 27 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Liver Disease Volume 27 ; 27 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Liver Disease Volume 28 ; 28 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Liver Disease Volume 29 ; 29 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Liver Disease Volume 30 ; 30 ; >
@@ -5439,7 +5439,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Musculoskeletal Radiology Volume 8 ; 8 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Musculoskeletal Radiology Volume 9 ; 9 ; >
    au < testing ; exists ; 2006 ; 2006 ; Seminars in Musculoskeletal Radiology Volume 10 ; 10 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Seminars in Musculoskeletal Radiology Volume 11 ; 11 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Musculoskeletal Radiology Volume 11 ; 11 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Musculoskeletal Radiology Volume 12 ; 12 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Musculoskeletal Radiology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Musculoskeletal Radiology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
@@ -5495,7 +5495,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Neurology Volume 24 ; 24 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Neurology Volume 25 ; 25 ; >
    au < testing ; exists ; 2006 ; 2006 ; Seminars in Neurology Volume 26 ; 26 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Seminars in Neurology Volume 27 ; 27 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Neurology Volume 27 ; 27 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Neurology Volume 28 ; 28 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Neurology Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Neurology Volume 30 ; 30 ; reingest2.clockss.org:8085 >
@@ -5550,8 +5550,8 @@
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Plastic Surgery Volume 18 ; 18 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Plastic Surgery Volume 19 ; 19 ; >
    au < testing ; exists ; 2006 ; 2006 ; Seminars in Plastic Surgery Volume 20 ; 20 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Seminars in Plastic Surgery Volume 21 ; 21 ; >
-   au < ready ; exists ; 2008 ; 2008 ; Seminars in Plastic Surgery Volume 22 ; 22 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Plastic Surgery Volume 21 ; 21 ; >
+   au < crawling ; exists ; 2008 ; 2008 ; Seminars in Plastic Surgery Volume 22 ; 22 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Plastic Surgery Volume 23 ; 23 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Plastic Surgery Volume 24 ; 24 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Seminars in Plastic Surgery Volume 25 ; 25 ; >
@@ -5618,7 +5618,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Reproductive Medicine Volume 22 ; 22 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Reproductive Medicine Volume 23 ; 23 ; >
    au < testing ; exists ; 2006 ; 2006 ; Seminars in Reproductive Medicine Volume 24 ; 24 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Seminars in Reproductive Medicine Volume 25 ; 25 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Reproductive Medicine Volume 25 ; 25 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Reproductive Medicine Volume 26 ; 26 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Reproductive Medicine Volume 27 ; 27 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Reproductive Medicine Volume 28 ; 28 ; >
@@ -5661,7 +5661,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Respiratory and Critical Care Medicine Volume 25 ; 25 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Seminars in Respiratory and Critical Care Medicine Volume 26 ; 26 ; >
    au < testing ; exists ; 2006 ; 2006 ; Seminars in Respiratory and Critical Care Medicine Volume 27 ; 27 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Seminars in Respiratory and Critical Care Medicine Volume 28 ; 28 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Respiratory and Critical Care Medicine Volume 28 ; 28 ; >
    au < ready ; exists ; 2008 ; 2008 ; Seminars in Respiratory and Critical Care Medicine Volume 29 ; 29 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Respiratory and Critical Care Medicine Volume 30 ; 30 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Respiratory and Critical Care Medicine Volume 31 ; 31 ; reingest2.clockss.org:8085 >
@@ -5714,7 +5714,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Seminars in Speech and Language Volume 25 ; 25 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Seminars in Speech and Language Volume 26 ; 26 ; >
     au < testing ; exists ; 2006 ; 2006 ; Seminars in Speech and Language Volume 27 ; 27 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Seminars in Speech and Language Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Speech and Language Volume 28 ; 28 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Seminars in Speech and Language Volume 29 ; 29 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Seminars in Speech and Language Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Seminars in Speech and Language Volume 31 ; 31 ; reingest1.clockss.org:8082 >
@@ -5777,7 +5777,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Seminars in Thrombosis and Hemostasis Volume 30 ; 30 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Seminars in Thrombosis and Hemostasis Volume 31 ; 31 ; >
     au < testing ; exists ; 2006 ; 2006 ; Seminars in Thrombosis and Hemostasis Volume 32 ; 32 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Seminars in Thrombosis and Hemostasis Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Thrombosis and Hemostasis Volume 33 ; 33 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Seminars in Thrombosis and Hemostasis Volume 34 ; 34 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Seminars in Thrombosis and Hemostasis Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Seminars in Thrombosis and Hemostasis Volume 36 ; 36 ; reingest2.clockss.org:8085 >
@@ -5830,7 +5830,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 1 ; 1 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2 ; 2 ; >
     au < testing ; exists ; 2006 ; 2006 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 3 ; 3 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 4 ; 4 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 5 ; 5 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -5866,7 +5866,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Skull Base Volume 14 ; 14 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Skull Base Volume 15 ; 15 ; >
     au < testing ; exists ; 2006 ; 2006 ; Skull Base Volume 16 ; 16 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Skull Base Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Skull Base Volume 17 ; 17 ; >
     au < testing ; exists ; 2008 ; 2008 ; Skull Base Volume 18 ; 18 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Skull Base Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Skull Base Volume 20 ; 20 ; >
@@ -5987,7 +5987,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Sportverletzung - Sportschaden Volume 18 ; 18 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Sportverletzung - Sportschaden Volume 19 ; 19 ; >
    au < testing ; exists ; 2006 ; 2006 ; Sportverletzung - Sportschaden Volume 20 ; 20 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Sportverletzung - Sportschaden Volume 21 ; 21 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Sportverletzung - Sportschaden Volume 21 ; 21 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Sportverletzung - Sportschaden Volume 22 ; 22 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Sportverletzung - Sportschaden Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Sportverletzung - Sportschaden Volume 24 ; 24 ; >
@@ -6024,7 +6024,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Sprache Stimme Gehör Volume 28 ; 28 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Sprache Stimme Gehör Volume 29 ; 29 ; >
    au < testing ; exists ; 2006 ; 2006 ; Sprache Stimme Gehör Volume 30 ; 30 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Sprache Stimme Gehör Volume 31 ; 31 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Sprache Stimme Gehör Volume 31 ; 31 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Sprache Stimme Gehör Volume 32 ; 32 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Sprache Stimme Gehör Volume 33 ; 33 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Sprache Stimme Gehör Volume 34 ; 34 ; reingest2.clockss.org:8085 >
@@ -6061,7 +6061,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; Suchttherapie Volume 5 ; 5 ; >
    au < manifest ; exists ; 2005 ; 2005 ; Suchttherapie Volume 6 ; 6 ; >
    au < testing ; exists ; 2006 ; 2006 ; Suchttherapie Volume 7 ; 7 ; >
-   au < ready ; exists ; 2007 ; 2007 ; Suchttherapie Volume 8 ; 8 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; Suchttherapie Volume 8 ; 8 ; >
    au < testing ; exists ; 2008 ; 2008 ; Suchttherapie Volume 9 ; 9 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Suchttherapie Volume 10 ; 10 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Suchttherapie Volume 11 ; 11 ; >
@@ -6115,7 +6115,7 @@
 
    au < manifest ; exists ; 2005 ; 2005 ; SYNFACTS Volume 1 ; 1 ; >
    au < testing ; exists ; 2006 ; 2006 ; SYNFACTS Volume 2 ; 2 ; >
-   au < ready ; exists ; 2007 ; 2007 ; SYNFACTS Volume 3 ; 3 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; SYNFACTS Volume 3 ; 3 ; >
    au < crawling ; exists ; 2008 ; 2008 ; SYNFACTS Volume 4 ; 4 ; >
    au < finished ; manifest ; 2009 ; 2009 ; SYNFACTS Volume 5 ; 5 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; SYNFACTS Volume 6 ; 6 ; reingest2.clockss.org:8085 >
@@ -6163,7 +6163,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; SYNLETT Volume 15 ; 15 ; >
    au < manifest ; exists ; 2005 ; 2005 ; SYNLETT Volume 16 ; 16 ; >
    au < testing ; exists ; 2006 ; 2006 ; SYNLETT Volume 17 ; 17 ; >
-   au < ready ; exists ; 2007 ; 2007 ; SYNLETT Volume 18 ; 18 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; SYNLETT Volume 18 ; 18 ; >
    au < ready ; exists ; 2008 ; 2008 ; SYNLETT Volume 19 ; 19 ; >
    au < finished ; manifest ; 2009 ; 2009 ; SYNLETT Volume 20 ; 20 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; SYNLETT Volume 21 ; 21 ; reingest1.clockss.org:8082 >
@@ -6230,7 +6230,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; SYNTHESIS Volume 36 ; 36 ; >
    au < manifest ; exists ; 2005 ; 2005 ; SYNTHESIS Volume 37 ; 37 ; >
    au < testing ; exists ; 2006 ; 2006 ; SYNTHESIS Volume 38 ; 38 ; >
-   au < ready ; exists ; 2007 ; 2007 ; SYNTHESIS Volume 39 ; 39 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; SYNTHESIS Volume 39 ; 39 ; >
    au < crawling ; exists ; 2008 ; 2008 ; SYNTHESIS Volume 40 ; 40 ; >
    au < finished ; manifest ; 2009 ; 2009 ; SYNTHESIS Volume 41 ; 41 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; SYNTHESIS Volume 42 ; 42 ; reingest2.clockss.org:8085 >
@@ -6264,7 +6264,7 @@
    au < manifest ; exists ; 2004 ; 2004 ; team spiegel Volume 11 ; 11 ; >
    au < manifest ; exists ; 2005 ; 2005 ; team spiegel Volume 12 ; 12 ; >
    au < testing ; exists ; 2006 ; 2006 ; team spiegel Volume 13 ; 13 ; >
-   au < ready ; exists ; 2007 ; 2007 ; team spiegel Volume 14 ; 14 ; >
+   au < crawling ; exists ; 2007 ; 2007 ; team spiegel Volume 14 ; 14 ; >
    au < testing ; exists ; 2008 ; 2008 ; team spiegel Volume 15 ; 15 ; >
    au < finished ; manifest ; 2009 ; 2009 ; team spiegel Volume 16 ; 16 ; reingest1.clockss.org:8082 >
 
@@ -6337,7 +6337,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; The Thoracic and Cardiovascular Surgeon Volume 52 ; 52 ; >
     au < manifest ; exists ; 2005 ; 2005 ; The Thoracic and Cardiovascular Surgeon Volume 53 ; 53 ; >
     au < testing ; exists ; 2006 ; 2006 ; The Thoracic and Cardiovascular Surgeon Volume 54 ; 54 ; >
-    au < ready ; exists ; 2007 ; 2007 ; The Thoracic and Cardiovascular Surgeon Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; The Thoracic and Cardiovascular Surgeon Volume 55 ; 55 ; >
     au < crawling ; exists ; 2008 ; 2008 ; The Thoracic and Cardiovascular Surgeon Volume 56 ; 56 ; >
     au < finished ; manifest ; 2009 ; 2009 ; The Thoracic and Cardiovascular Surgeon Volume 57 ; 57 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; The Thoracic and Cardiovascular Surgeon Volume 58 ; 58 ; >
@@ -6444,7 +6444,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; TumorDiagnostik & Therapie Volume 27 ; 27 ; >
     au < manifest ; exists ; 2005 ; 2005 ; TumorDiagnostik & Therapie Volume 28 ; 28 ; >
     au < testing ; exists ; 2006 ; 2006 ; TumorDiagnostik & Therapie Volume 29 ; 29 ; >
-    au < ready ; exists ; 2007 ; 2007 ; TumorDiagnostik & Therapie Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; TumorDiagnostik & Therapie Volume 30 ; 30 ; >
     au < testing ; exists ; 2008 ; 2008 ; TumorDiagnostik & Therapie Volume 31 ; 31 ; >
     au < finished ; manifest ; 2009 ; 2009 ; TumorDiagnostik & Therapie Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; TumorDiagnostik & Therapie Volume 33 ; 33 ; >
@@ -6501,7 +6501,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 25 ; 25 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 26 ; 26 ; >
     au < testing ; exists ; 2006 ; 2006 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 27 ; 27 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 28 ; 28 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 29 ; 29 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 31 ; 31 ; reingest2.clockss.org:8085 >
@@ -6574,7 +6574,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; veterinär spiegel Volume 14 ; 14 ; >
     au < manifest ; exists ; 2005 ; 2005 ; veterinär spiegel Volume 15 ; 15 ; >
     au < testing ; exists ; 2006 ; 2006 ; veterinär spiegel Volume 16 ; 16 ; >
-    au < ready ; exists ; 2007 ; 2007 ; veterinär spiegel Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; veterinär spiegel Volume 17 ; 17 ; >
     au < testing ; exists ; 2008 ; 2008 ; veterinär spiegel Volume 18 ; 18 ; >
     au < finished ; manifest ; 2009 ; 2009 ; veterinär spiegel Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; veterinär spiegel Volume 20 ; 20 ; reingest2.clockss.org:8085 >
@@ -6604,7 +6604,7 @@
     param[journal_id] = 10.1055/s-00000158
     comment[years] = 2007-2014
 
-    au < ready ; exists ; 2007 ; 2007 ; Via medici Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Via medici Volume 12 ; 12 ; >
     au < ready ; exists ; 2008 ; 2008 ; Via medici Volume 13 ; 13 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Via medici Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Via medici Volume 15 ; 15 ; reingest2.clockss.org:8085 >
@@ -6634,7 +6634,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Viszeralchirurgie Volume 39 ; 39 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Viszeralchirurgie Volume 40 ; 40 ; >
     au < testing ; exists ; 2006 ; 2006 ; Viszeralchirurgie Volume 41 ; 41 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Viszeralchirurgie Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Viszeralchirurgie Volume 42 ; 42 ; >
 
   }
 
@@ -6690,7 +6690,7 @@
     param[journal_id] = 10.1055/s-00000150
     comment[years] = 2007-current
 
-    au < ready ; exists ; 2007 ; 2007 ; Zahnmedizin up2date Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zahnmedizin up2date Volume 1 ; 1 ; >
     au < ready ; exists ; 2008 ; 2008 ; Zahnmedizin up2date Volume 2 ; 2 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zahnmedizin up2date Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Zahnmedizin up2date Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -6720,8 +6720,8 @@
     param[journal_id] = 10.1055/s-00000149
     comment[years] = 2007-current
 
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 21 ; 21 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 22 ; 22 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; Zeitschrift für Ganzheitliche Tiermedizin Volume 25 ; 25 ; reingest2.clockss.org:8085 >
@@ -6757,7 +6757,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Gastroenterologie Volume 42 ; 42 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Gastroenterologie Volume 43 ; 43 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Gastroenterologie Volume 44 ; 44 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Gastroenterologie Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Gastroenterologie Volume 45 ; 45 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Gastroenterologie Volume 46 ; 46 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Gastroenterologie Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Gastroenterologie Volume 48 ; 48 ; >
@@ -6794,7 +6794,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 208 ; 208 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 209 ; 209 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 210 ; 210 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 211 ; 211 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 211 ; 211 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 212 ; 212 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 213 ; 213 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 214 ; 214 ; reingest2.clockss.org:8085 >
@@ -6875,8 +6875,8 @@
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Klassische Homöopathie Volume 48 ; 48 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Klassische Homöopathie Volume 49 ; 49 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Klassische Homöopathie Volume 50 ; 50 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Klassische Homöopathie Volume 51 ; 51 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Zeitschrift für Klassische Homöopathie Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Klassische Homöopathie Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Klassische Homöopathie Volume 52 ; 52 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Klassische Homöopathie Volume 53 ; 53 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Klassische Homöopathie Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Zeitschrift für Klassische Homöopathie Volume 55 ; 55 ; reingest1.clockss.org:8082 >
@@ -6933,8 +6933,8 @@
     param[journal_id] = 10.1055/s-00000144
     comment[years] = 2007-current
 
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Orthomolekulare Medizin Volume 5 ; 5 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Zeitschrift für Orthomolekulare Medizin Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Orthomolekulare Medizin Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Orthomolekulare Medizin Volume 6 ; 6 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Orthomolekulare Medizin Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Orthomolekulare Medizin Volume 8 ; 8 ; >
     au < finished ; finished ; 2011 ; 2011 ; Zeitschrift für Orthomolekulare Medizin Volume 9 ; 9 ; reingest2.clockss.org:8085 >
@@ -6963,7 +6963,7 @@
     param[journal_id] = 10.1055/s-00000099
     comment[years] = 2007-current
 
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 145 ; 145 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 145 ; 145 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 146 ; 146 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 147 ; 147 ; >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 148 ; 148 ; reingest2.clockss.org:8085 >
@@ -7021,7 +7021,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 0 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 0 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2006 ; 0 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 ; >
 
   }
 
@@ -7044,7 +7044,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Palliativmedizin Volume 5 ; 5 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Palliativmedizin Volume 6 ; 6 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Palliativmedizin Volume 7 ; 7 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Palliativmedizin Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Palliativmedizin Volume 8 ; 8 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Palliativmedizin Volume 9 ; 9 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Palliativmedizin Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Palliativmedizin Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -7076,7 +7076,7 @@
 
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Phytotherapie Volume 26 ; 26 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Phytotherapie Volume 27 ; 27 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Phytotherapie Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Phytotherapie Volume 28 ; 28 ; >
     au < ready ; exists ; 2008 ; 2008 ; Zeitschrift für Phytotherapie Volume 29 ; 29 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Phytotherapie Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Phytotherapie Volume 31 ; 31 ; reingest2.clockss.org:8085 >
@@ -7112,7 +7112,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Sexualforschung Volume 17 ; 17 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Sexualforschung Volume 18 ; 18 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Sexualforschung Volume 19 ; 19 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Sexualforschung Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Sexualforschung Volume 20 ; 20 ; >
     au < testing ; exists ; 2008 ; 2008 ; Zeitschrift für Sexualforschung Volume 21 ; 21 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Sexualforschung Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Sexualforschung Volume 23 ; 23 ; reingest1.clockss.org:8082 >
@@ -7149,7 +7149,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Chirurgie Volume 129 ; 129 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Chirurgie Volume 130 ; 130 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Chirurgie Volume 131 ; 131 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Chirurgie Volume 132 ; 132 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Chirurgie Volume 132 ; 132 ; >
     au < testing ; exists ; 2008 ; 2008 ; Zeitschrift für Chirurgie Volume 133 ; 133 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Chirurgie Volume 134 ; 134 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Chirurgie Volume 135 ; 135 ; >
@@ -7223,7 +7223,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Allgemeinmedizin Volume 80 ; 80 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Zeitschrift für Allgemeinmedizin Volume 81 ; 81 ; >
     au < testing ; exists ; 2006 ; 2006 ; Zeitschrift für Allgemeinmedizin Volume 82 ; 82 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Zeitschrift für Allgemeinmedizin Volume 83 ; 83 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Allgemeinmedizin Volume 83 ; 83 ; >
     au < ready ; exists ; 2008 ; 2008 ; Zeitschrift für Allgemeinmedizin Volume 84 ; 84 ; >
 
   }
@@ -7271,7 +7271,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; ZWR - Das Deutsche Zahnärzteblatt Volume 113 ; 113 ; >
     au < manifest ; exists ; 2005 ; 2005 ; ZWR - Das Deutsche Zahnärzteblatt Volume 114 ; 114 ; >
     au < testing ; exists ; 2006 ; 2006 ; ZWR - Das Deutsche Zahnärzteblatt Volume 115 ; 115 ; >
-    au < ready ; exists ; 2007 ; 2007 ; ZWR - Das Deutsche Zahnärzteblatt Volume 116 ; 116 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; ZWR - Das Deutsche Zahnärzteblatt Volume 116 ; 116 ; >
     au < crawling ; exists ; 2008 ; 2008 ; ZWR - Das Deutsche Zahnärzteblatt Volume 117 ; 117 ; >
     au < finished ; manifest ; 2009 ; 2009 ; ZWR - Das Deutsche Zahnärzteblatt Volume 118 ; 118 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; ZWR - Das Deutsche Zahnärzteblatt Volume 119 ; 119 ; reingest2.clockss.org:8085 >
@@ -7320,7 +7320,7 @@
     param[journal_id] = 10.1055/s-00034923
     comment[years] = 2007-current
 
-    au < ready ; exists ; 2007 ; 2007 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 1 ; 1 ; >
     au < testing ; exists ; 2008 ; 2008 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 2 ; 2 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 4 ; 4 ; reingest5.clockss.org:8082 >
@@ -7380,7 +7380,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Arthritis und Rheuma Volume 24 ; 24 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Arthritis und Rheuma Volume 25 ; 25 ; >
     au < testing ; exists ; 2006 ; 2006 ; Arthritis und Rheuma Volume 26 ; 26 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Arthritis und Rheuma Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Arthritis und Rheuma Volume 27 ; 27 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Arthritis und Rheuma Volume 28 ; 28 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Arthritis und Rheuma Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Arthritis und Rheuma Volume 30 ; 30 ; reingest5.clockss.org:8082 >
@@ -7437,7 +7437,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Hämostaseologie Volume 24 ; 24 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Hämostaseologie Volume 25 ; 25 ; >
     au < testing ; exists ; 2006 ; 2006 ; Hämostaseologie Volume 26 ; 26 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Hämostaseologie Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Hämostaseologie Volume 27 ; 27 ; >
     au < testing ; exists ; 2008 ; 2008 ; Hämostaseologie Volume 28 ; 28 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Hämostaseologie Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Hämostaseologie Volume 30 ; 30 ; reingest3.clockss.org:8083 >
@@ -7528,7 +7528,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Kinder- und Jugendmedizin Volume 4 ; 4 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Kinder- und Jugendmedizin Volume 5 ; 5 ; >
     au < testing ; exists ; 2006 ; 2006 ; Kinder- und Jugendmedizin Volume 6 ; 6 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Kinder- und Jugendmedizin Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Kinder- und Jugendmedizin Volume 7 ; 7 ; >
     au < testing ; exists ; 2008 ; 2008 ; Kinder- und Jugendmedizin Volume 8 ; 8 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Kinder- und Jugendmedizin Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Kinder- und Jugendmedizin Volume 10 ; 10 ; reingest1.clockss.org:8082 >
@@ -7558,7 +7558,7 @@
     param[journal_id] = 10.1055/s-00035037
     comment[years] = 1962-current
 
-    au < ready ; exists ; 2007 ; 2007 ; Methods of Information in Medicine Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Methods of Information in Medicine Volume 46 ; 46 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Methods of Information in Medicine Volume 47 ; 47 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Methods of Information in Medicine Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 2010 ; Methods of Information in Medicine Volume 49 ; 49 ; reingest4.clockss.org:8082 >
@@ -7592,7 +7592,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Nervenheilkunde Volume 23 ; 23 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Nervenheilkunde Volume 24 ; 24 ; >
     au < testing ; exists ; 2006 ; 2006 ; Nervenheilkunde Volume 25 ; 25 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Nervenheilkunde Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Nervenheilkunde Volume 26 ; 26 ; >
     au < testing ; exists ; 2008 ; 2008 ; Nervenheilkunde Volume 27 ; 27 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Nervenheilkunde Volume 28 ; 28 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Nervenheilkunde Volume 29 ; 29 ; reingest1.clockss.org:8082 >
@@ -7629,7 +7629,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 ; >
     au < testing ; exists ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 ; >
     au < testing ; exists ; 2008 ; 2008 ; Nuklearmedizin Volume 47 ; 47 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Nuklearmedizin Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Nuklearmedizin Volume 49 ; 49 ; reingest3.clockss.org:8083 >
@@ -7763,7 +7763,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Revista Iberoamericana de Cirugía de la Mano Volume 32 ; 32 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Revista Iberoamericana de Cirugía de la Mano Volume 33 ; 33 ; >
     au < testing ; exists ; 2006 ; 2006 ; Revista Iberoamericana de Cirugía de la Mano Volume 34 ; 34 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Revista Iberoamericana de Cirugía de la Mano Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Revista Iberoamericana de Cirugía de la Mano Volume 35 ; 35 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Revista Iberoamericana de Cirugía de la Mano Volume 36 ; 36 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Revista Iberoamericana de Cirugía de la Mano Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Revista Iberoamericana de Cirugía de la Mano Volume 38 ; 38 ; reingest3.clockss.org:8083 >
@@ -7836,7 +7836,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 32 ; 32 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 33 ; 33 ; >
     au < testing ; exists ; 2006 ; 2006 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 34 ; 34 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 35 ; 35 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 36 ; 36 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 2010 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 38 ; 38 ; reingest4.clockss.org:8082 >
@@ -7870,7 +7870,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 2 ; 2 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 3 ; 3 ; >
     au < testing ; exists ; 2006 ; 2006 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 4 ; 4 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 5 ; 5 ; >
     au < testing ; exists ; 2008 ; 2008 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 6 ; 6 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 8 ; 8 ; reingest2.clockss.org:8085 >
