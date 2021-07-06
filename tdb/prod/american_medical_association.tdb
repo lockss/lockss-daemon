@@ -68,10 +68,10 @@
     param[resource_id] = 69
     param[journal_id] = jamafacialplasticsurgery
     
-    au < exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
-    au < exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
-    au < exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
-    au < exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
+    au < manifest ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
+    au < manifest ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
+    au < manifest ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
+    au < manifest ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
     au < released ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 >
     au < released ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 >
     au < released ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 2018 >
