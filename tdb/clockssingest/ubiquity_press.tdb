@@ -1549,7 +1549,7 @@
       au < finished ; manifest ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 8 ; Journal of Open Psychology Data Volume 2020 ; 2020 ; https://openpsychologydata.metajnl.com/ ; >
-      au < expected ; exists ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; https://openpsychologydata.metajnl.com/ ; >
+      au < manifest ; exists ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; https://openpsychologydata.metajnl.com/ ; >
 
   }
 
@@ -1691,7 +1691,7 @@
       au < finished ; manifest ; 2018 ; 5 ; Open Journal of Bioresources Volume 2018 ; 2018 ; https://openbioresources.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 6 ; Open Journal of Bioresources Volume 2019 ; 2019 ; https://openbioresources.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 7 ; Open Journal of Bioresources Volume 2020 ; 2020 ; https://openbioresources.metajnl.com/ ; >
-      au < expected ; exists ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 ; https://openbioresources.metajnl.com/ ; >
+      au < manifest ; exists ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 ; https://openbioresources.metajnl.com/ ; >
 
   }
 
