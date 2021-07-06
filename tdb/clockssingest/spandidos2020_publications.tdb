@@ -37,10 +37,10 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Letters Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Letters Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Letters Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2020 ; Oncology Letters Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2020 ; Oncology Letters Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2021 ; Oncology Letters Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2021 ; Oncology Letters Volume 22 ; 22 ; >
+      au < ready ; exists ; 2020 ; Oncology Letters Volume 19 ; 19 ; >
+      au < ready ; exists ; 2020 ; Oncology Letters Volume 20 ; 20 ; >
+      au < ready ; exists ; 2021 ; Oncology Letters Volume 21 ; 21 ; >
+      au < ready ; exists ; 2021 ; Oncology Letters Volume 22 ; 22 ; >
 
     }
   
@@ -109,10 +109,10 @@
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Oncology Volume 53 ; 53 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Oncology Volume 54 ; 54 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Oncology Volume 55 ; 55 ; >
-      au < manifest ; exists ; 2020 ; International Journal of Oncology Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2020 ; International Journal of Oncology Volume 57 ; 57 ; >
-      au < manifest ; exists ; 2021 ; International Journal of Oncology Volume 58 ; 58 ; >
-      au < manifest ; exists ; 2021 ; International Journal of Oncology Volume 59 ; 59 ; >
+      au < ready ; exists ; 2020 ; International Journal of Oncology Volume 56 ; 56 ; >
+      au < ready ; exists ; 2020 ; International Journal of Oncology Volume 57 ; 57 ; >
+      au < ready ; exists ; 2021 ; International Journal of Oncology Volume 58 ; 58 ; >
+      au < ready ; exists ; 2021 ; International Journal of Oncology Volume 59 ; 59 ; >
 
     }
   
@@ -136,10 +136,10 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular and Clinical Oncology Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular and Clinical Oncology Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular and Clinical Oncology Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2020 ; Molecular and Clinical Oncology Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2020 ; Molecular and Clinical Oncology Volume 13 ; 13 ; >
+      au < ready ; exists ; 2020 ; Molecular and Clinical Oncology Volume 12 ; 12 ; >
+      au < ready ; exists ; 2020 ; Molecular and Clinical Oncology Volume 13 ; 13 ; >
       au < crawling ; exists ; 2021 ; Molecular and Clinical Oncology Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2021 ; Molecular and Clinical Oncology Volume 15 ; 15 ; >
+      au < ready ; exists ; 2021 ; Molecular and Clinical Oncology Volume 15 ; 15 ; >
 
     }
   
@@ -173,7 +173,7 @@
       au < manifest ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 ; >
       au < manifest ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 ; >
       au < manifest ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 ; >
+      au < ready ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 ; >
 
     }
   
@@ -228,12 +228,12 @@
       au < manifest ; exists ; 2017 ; International Journal of Molecular Medicine Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Molecular Medicine Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Molecular Medicine Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2019 ; International Journal of Molecular Medicine Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2020 ; International Journal of Molecular Medicine Volume 45 ; 45 ; >
-      au < manifest ; exists ; 2020 ; International Journal of Molecular Medicine Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 ; >
-      au < manifest ; exists ; 2021 ; International Journal of Molecular Medicine Volume 48 ; 48 ; >
+      au < ready ; exists ; 2019 ; International Journal of Molecular Medicine Volume 43 ; 43 ; >
+      au < ready ; exists ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; >
+      au < ready ; exists ; 2020 ; International Journal of Molecular Medicine Volume 45 ; 45 ; >
+      au < ready ; exists ; 2020 ; International Journal of Molecular Medicine Volume 46 ; 46 ; >
+      au < ready ; exists ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 ; >
+      au < ready ; exists ; 2021 ; International Journal of Molecular Medicine Volume 48 ; 48 ; >
 
     }
   
@@ -257,10 +257,10 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Biomedical Reports Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Biomedical Reports Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Biomedical Reports Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2020 ; Biomedical Reports Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2021 ; Biomedical Reports Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2021 ; Biomedical Reports Volume 15 ; 15 ; >
+      au < ready ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
+      au < ready ; exists ; 2020 ; Biomedical Reports Volume 13 ; 13 ; >
+      au < ready ; exists ; 2021 ; Biomedical Reports Volume 14 ; 14 ; >
+      au < ready ; exists ; 2021 ; Biomedical Reports Volume 15 ; 15 ; >
 
     }
   
@@ -315,10 +315,10 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Reports Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Reports Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Reports Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2020 ; Oncology Reports Volume 43 ; 43 ; >
+      au < ready ; exists ; 2020 ; Oncology Reports Volume 43 ; 43 ; >
       au < testing ; exists ; 2020 ; Oncology Reports Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2021 ; Oncology Reports Volume 45 ; 45 ; >
-      au < manifest ; exists ; 2021 ; Oncology Reports Volume 46 ; 46 ; >
+      au < ready ; exists ; 2021 ; Oncology Reports Volume 45 ; 45 ; >
+      au < ready ; exists ; 2021 ; Oncology Reports Volume 46 ; 46 ; >
 
     }
   
@@ -352,9 +352,9 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular Medicine Reports Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular Medicine Reports Volume 20 ; 20 ; >
       au < testing ; exists ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2020 ; Molecular Medicine Reports Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 ; >
+      au < ready ; exists ; 2020 ; Molecular Medicine Reports Volume 22 ; 22 ; >
+      au < ready ; exists ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 ; >
+      au < ready ; exists ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 ; >
 
     }
     
