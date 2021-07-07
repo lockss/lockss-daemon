@@ -96,12 +96,3 @@ def requests_basic_auth(username, password):
     '''
     return requests.auth.HTTPBasicAuth(username, password)
 
-def zsiauth(u, p):
-  '''Makes a ZSI authentication object suitable for ZSI-based Web Services
-  modules.
-  Parameters:
-  - u (string): a UI username
-  - p (string): a UI password
-  '''
-  return (AUTH.httpbasic, u, p)
-

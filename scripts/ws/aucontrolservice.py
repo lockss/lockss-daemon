@@ -81,6 +81,23 @@ def _do_request_deep_crawl_by_id_list(options):
     return request_deep_crawl_by_id_list(options.host, options.username, options.password, options.auids,
                                          options.refetch_depth, options.priority, options.force)
 
+def request_crawl_by_id(host, username, password, auid, priority, force):
+    client = _make_client(host, requests_basic_auth(username, password))
+    return zeep.helpers.serialize_object(
+        client.service.requestDeepCrawlById(auId=auid, priority=priority, force=force))
+
+def request_crawl_by_id_list(host, username, password, auids, priority, force):
+    client = _make_client(host, requests_basic_auth(username, password))
+    return client.service.requestDeepCrawlByIdList(auIds=auids, priority=priority,
+                                                   force=force)
+
+def _do_request_crawl_by_id(options):
+    return request_deep_crawl_by_id(options.host, options.username, options.password, options.auid,
+                                    options.priority, options.force)
+
+def _do_request_crawl_by_id_list(options):
+    return request_deep_crawl_by_id_list(options.host, options.username, options.password, options.auids,
+                                         options.priority, options.force)
 
 #
 # Command line tool
