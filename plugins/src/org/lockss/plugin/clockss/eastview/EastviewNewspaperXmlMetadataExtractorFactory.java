@@ -32,6 +32,7 @@
 
 package org.lockss.plugin.clockss.eastview;
 
+import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -41,6 +42,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,7 +77,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
     /* 
      * a PDF file may or may not exist, but assume the XML is full text
      * when it does not
-     */
+
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
@@ -90,6 +92,8 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       returnList.add(url_string); // xml file
       return returnList;
     }
+
+     */
     
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
@@ -133,6 +137,12 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
                 volume,
                 title));
       }
+
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      String rawPDFPath = thisAM.getRaw("pdf_path");
+      String fullPathFile = cuBase + rawPDFPath;
+      log.debug3("Eastview Newspaper: rawPDFPath = " + rawPDFPath + ", fullPathFile = " + fullPathFile);
+      thisAM.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
 
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);

@@ -104,6 +104,7 @@ implements SourceXmlSchemaHelper {
   protected static String ART_RAW_TITLE = "TITLE";
   private static String art_contrib = "AUTHOR";
   private static String art_sp = "PAGE";
+  private static String pdf_path = "TEXT/pagemark/@pagepdf";
   
 
   /*
@@ -123,6 +124,7 @@ implements SourceXmlSchemaHelper {
     articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_contrib, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(pdf_path, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
   /* 2.  Top level per-article node */
