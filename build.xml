@@ -258,10 +258,10 @@ Args:
   <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
   <!-- commons-digester -->
   <!-- commons-fileupload -->
-  <property name="commons.io.jar" value="${lib}/commons-io-2.8.0.jar" />
+  <property name="commons.io.jar" value="${lib}/commons-io-2.10.0.jar" />
   <property name="commons.jxpath.jar" value="${lib}/commons-jxpath-1.3.jar" />
   <property name="commons.lang.jar" value="${lib}/commons-lang-2.6.jar" />
-  <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.11.jar" />
+  <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.12.0.jar" />
   <property name="commons.logging.jar" value="${lib}/commons-logging-1.2.jar" />
   <property name="commons.primitives.jar" value="${lib}/commons-primitives-1.0.jar" />
   <property name="commons.text.jar" value="${lib}/commons-text-1.9.jar" />
