@@ -155,7 +155,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 5 ; 5 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 6 ; 6 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 7 ; 7 ; >
 
   }
 
@@ -1196,7 +1196,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Micropalaeontology Volume 38 ; 38 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Micropalaeontology Volume 39 ; 39 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Journal of Micropalaeontology Volume 40 ; 40 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Journal of Micropalaeontology Volume 40 ; 40 ; >
 
   }
 
@@ -1221,7 +1221,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Sensors and Sensor Systems Volume 8 ; 8 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Sensors and Sensor Systems Volume 9 ; 9 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Journal of Sensors and Sensor Systems Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Journal of Sensors and Sensor Systems Volume 10 ; 10 ; >
 
   }
 
@@ -1601,7 +1601,7 @@
       param[home_url] = https://www.weather-climate-dynamics.net/
 
       au < crawling ; exists ; 2020 ; 2020 ; Weather and Climate Dynamics Volume 1 ; 1 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Weather and Climate Dynamics Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Weather and Climate Dynamics Volume 2 ; 2 ; >
 
   }
 
