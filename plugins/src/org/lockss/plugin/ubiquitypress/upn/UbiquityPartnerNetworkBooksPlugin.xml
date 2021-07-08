@@ -37,11 +37,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkBookPlugin</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Ubiquity Partner Network Book Plugin</string>
+    <string>Ubiquity Partner Network Books Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Ubiquity Partner Network Book Plugin, Base URL %s, Book Doi %s", base_url, book_doi</string>
+    <string>"Ubiquity Partner Network Books Plugin, Base URL %s, Book Doi %s", base_url, book_doi</string>
   </entry>
   <entry>
     <string>au_start_url</string>
