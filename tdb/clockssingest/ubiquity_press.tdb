@@ -723,20 +723,6 @@
 
   }
 
-  {
-
-      title <
-        name = Nordic Journal of Transitions, Careers and Guidance  ;
-        eissn = 2003-8046
-      >
-
-      comment[publisher] = Stockholm University Press
-#      param[base_url] = https://njtcg.org/
-
-      au < expected ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
-
-  }
-
  {
 
       title <
@@ -1147,23 +1133,6 @@
   {
 
       title <
-        name = Computational Psychiatry ;
-        eissn = 2379-6227
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://cpsyjournal.org/
-
-      au < exists ; exists ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; https://cpsyjournal.org/ ; >
-      au < exists ; exists ; 2018 ; 2 ; Computational Psychiatry Volume 2018 ; 2018 ; https://cpsyjournal.org/ ; >
-      au < exists ; exists ; 2019 ; 3 ; Computational Psychiatry Volume 2019 ; 2019 ; https://cpsyjournal.org/ ; >
-      au < manifest ; exists ; 2020 ; 4 ; Computational Psychiatry Volume 2020 ; 2020 ; https://cpsyjournal.org/ ; >
-
-  }
-
-  {
-
-      title <
         name = Data Science Journal ;
         eissn = 1683-1470
       >
@@ -1312,20 +1281,6 @@
 
       au < manifest ; exists ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; https://journalhistoryknowledge.org/ ; >
       au < manifest ; exists ; 2021 ; 2 ; Journal for the History of Knowledge Volume 2021 ; 2021 ; https://journalhistoryknowledge.org/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal for the History of Knowledge ;
-        eissn = 2632-282X
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://journalhistoryknowledge.org/
-
-      au < manifest ; exists ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; https://journalhistoryknowledge.org/ ; >
 
   }
 

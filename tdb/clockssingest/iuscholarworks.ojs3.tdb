@@ -434,19 +434,6 @@
 
   {
     title <
-      name = Journal of Public and Environmental Affairs ;
-      issn = 2578-1294
-    >
-
-      param[journal_id] = jpea
-
-      au < crawling ; exists ; 2020 ; 2020 ; Journal of Public and Environmental Affairs Volume 1 ; 1 ; >
-      au < expected ; exists ; 2021 ; 2021 ; Journal of Public and Environmental Affairs Volume 2 ; 2 ; >
-
-  }
-
-  {
-    title <
       name = Journal of Teaching and Learning with Technology ;
       eissn = 2165-2554
     >
@@ -1242,20 +1229,6 @@
       #no issn/eissn
 
       au < crawling ; exists ; 2020 ; 2020 ; Indiana Working Papers in Speech Sound Articulation Volume 2020 ; 1 ; >
-      au < expected ; exists ; 2021 ; 2021 ; Indiana Working Papers in Speech Sound Articulation Volume 2021 ; 2 ; >
-
-  }
-
-  {
-
-      title <
-        name = Indiana Working Papers in Speech Sound Articulation 
-      >
-
-      param[journal_id] = iwpssa
-      #no issn/eissn
-
-      au < manifest ; exists ; 2020 ; 2020 ; Indiana Working Papers in Speech Sound Articulation Volume 2020 ; 1 ; >
       au < expected ; exists ; 2021 ; 2021 ; Indiana Working Papers in Speech Sound Articulation Volume 2021 ; 2 ; >
 
   }

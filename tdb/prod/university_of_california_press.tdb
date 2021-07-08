@@ -205,7 +205,6 @@
     >
       #param[base_url] = http://boom.ucpress.edu/
       #nothing published after 2016.
-      param[journal_id] = boom
 
       param[journal_id] = boom
 
@@ -568,7 +567,6 @@
         eissn = 2373-7492 
     >
       #param[base_url] = http://fmh.ucpress.edu/
-      param[journal_id] = fmh
 
       param[journal_id] = fmh
 
@@ -1975,7 +1973,6 @@
         eissn = 2470-2048 
     >
       #param[base_url] = http://sla.ucpress.edu/
-      param[journal_id] = sla
 
       param[journal_id] = sla
 
@@ -1994,7 +1991,6 @@
         eissn = 2374-538X 
     >
       #param[base_url] = http://socdev.ucpress.edu/
-      param[journal_id] = socdev
 
       param[journal_id] = socdev
 
