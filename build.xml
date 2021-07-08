@@ -343,7 +343,7 @@ Args:
   <property name="bouncycastle-pkix.jar" value="${lib}/bcpkix-${bouncycastle.version}.jar" />
 
   <!-- Contains a drop-in replacement for ICU4J's CharsetDetector, now that PDFBox doesn't depend on ICU4J anymore -->
-  <property name="tika-parser-text-module.jar" value="${lib}/tika-parser-text-module-2.0.0-ALPHA.jar" />
+  <property name="tika-parser-text-module.jar" value="${lib}/tika-parser-text-module-2.0.0-BETA.jar" />
 
   <!-- PDFBox 0.7.3 -->
   <property name="pdfbox-old.jar" value="${lib}/PDFBox-0.7.3.jar" />
