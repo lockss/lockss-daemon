@@ -330,12 +330,11 @@ Args:
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
 
   <!-- PDFBox 2.0 -->
-  <property name="pdfbox2.version" value="2.0.23" />
+  <property name="pdfbox2.version" value="2.0.24" />
   <property name="pdfbox2.jar" value="${lib}/pdfbox-${pdfbox2.version}.jar" />
   <!-- PDFBox 2.0 dependencies (https://pdfbox.apache.org/2.0/dependencies.html): -->
   <!-- Commons Logging, which we already have -->
   <property name="fontbox2.jar" value="${lib}/fontbox-${pdfbox2.version}.jar" />
-  <property name="jempbox2.jar" value="${lib}/jempbox-${pdfbox2.version}.jar" />
   <property name="xmpbox2.jar" value="${lib}/xmpbox-${pdfbox2.version}.jar" />
   <property name="bouncycastle.version" value="jdk15to18-168" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
@@ -533,7 +532,6 @@ Args:
     <pathelement path="${pdfbox2.jar}" />
     <!-- Next 7 needed by PDFBox: -->
     <pathelement path="${fontbox2.jar}" />
-    <pathelement path="${jempbox2.jar}" />
     <pathelement path="${xmpbox2.jar}" />
     <pathelement path="${bouncycastle-provider.jar}" />
     <pathelement path="${bouncycastle-mail.jar}" />
