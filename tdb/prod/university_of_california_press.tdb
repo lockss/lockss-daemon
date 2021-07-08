@@ -6,7 +6,8 @@
   >
     #Moved from Drupal to SC
 
-    plugin = needs.plugin
+    #plugin = needs.plugin
+    plugin = org.lockss.plugin.silverchair.ucpress.UCPressSilverchairPlugin
     #plugin = org.lockss.plugin.silverchair.rockefelleruniversitypress.RockefellerUniversityPressSilverchairPlugin
     #implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     implicit < status ; year ; param[year] ; name ; param[volume_name] >
@@ -19,90 +20,90 @@
         issn = 0002-7685 ;
         eissn = 1938-4211 
     >
-
       #param[base_url] = http://abt.ucpress.edu/
+
       param[journal_id] = abt
 
-      au < exists ; 1938 ; 1938 ; The American Biology Teacher Volume 1 [1938] ; 1 >
-      au < exists ; 1939 ; 1939 ; The American Biology Teacher Volume 1 [1939] ; 1 >
-      au < exists ; 1939 ; 1939 ; The American Biology Teacher Volume 2 [1939] ; 2 >
-      au < exists ; 1940 ; 1940 ; The American Biology Teacher Volume 2 [1940] ; 2 >
-      au < exists ; 1940 ; 1940 ; The American Biology Teacher Volume 3 [1940] ; 3 >
-      au < exists ; 1941 ; 1941 ; The American Biology Teacher Volume 3 [1941] ; 3 >
-      au < exists ; 1941 ; 1941 ; The American Biology Teacher Volume 4 [1941] ; 4 >
-      au < exists ; 1942 ; 1942 ; The American Biology Teacher Volume 4 [1942] ; 4 >
-      au < exists ; 1942 ; 1942 ; The American Biology Teacher Volume 5 [1942] ; 5 >
-      au < exists ; 1943 ; 1943 ; The American Biology Teacher Volume 5 [1943] ; 5 >
-      au < exists ; 1943 ; 1943 ; The American Biology Teacher Volume 6 [1943] ; 6 >
-      au < exists ; 1944 ; 1944 ; The American Biology Teacher Volume 6 [1944] ; 6 >
-      au < exists ; 1944 ; 1944 ; The American Biology Teacher Volume 7 [1944] ; 7 >
-      au < exists ; 1945 ; 1945 ; The American Biology Teacher Volume 7 [1945] ; 7 >
-      au < exists ; 1945 ; 1945 ; The American Biology Teacher Volume 8 [1945] ; 8 >
-      au < exists ; 1946 ; 1946 ; The American Biology Teacher Volume 8 [1946] ; 8 >
-      au < exists ; 1946 ; 1946 ; The American Biology Teacher Volume 9 [1946] ; 9 >
-      au < exists ; 1947 ; 1947 ; The American Biology Teacher Volume 9 [1947] ; 9 >
-      au < exists ; 1948 ; 1948 ; The American Biology Teacher Volume 10 ; 10 >
-      au < exists ; 1949 ; 1949 ; The American Biology Teacher Volume 11 ; 11 >
-      au < exists ; 1950 ; 1950 ; The American Biology Teacher Volume 12 ; 12 >
-      au < exists ; 1951 ; 1951 ; The American Biology Teacher Volume 13 ; 13 >
-      au < exists ; 1952 ; 1952 ; The American Biology Teacher Volume 14 ; 14 >
-      au < exists ; 1953 ; 1953 ; The American Biology Teacher Volume 15 ; 15 >
-      au < exists ; 1954 ; 1954 ; The American Biology Teacher Volume 16 ; 16 >
-      au < exists ; 1955 ; 1955 ; The American Biology Teacher Volume 17 ; 17 >
-      au < exists ; 1956 ; 1956 ; The American Biology Teacher Volume 18 ; 18 >
-      au < exists ; 1957 ; 1957 ; The American Biology Teacher Volume 19 ; 19 >
-      au < exists ; 1958 ; 1958 ; The American Biology Teacher Volume 20 ; 20 >
-      au < exists ; 1959 ; 1959 ; The American Biology Teacher Volume 21 ; 21 >
-      au < exists ; 1960 ; 1960 ; The American Biology Teacher Volume 22 ; 22 >
-      au < exists ; 1961 ; 1961 ; The American Biology Teacher Volume 23 ; 23 >
-      au < exists ; 1962 ; 1962 ; The American Biology Teacher Volume 24 ; 24 >
-      au < exists ; 1963 ; 1963 ; The American Biology Teacher Volume 25 ; 25 >
-      au < exists ; 1964 ; 1964 ; The American Biology Teacher Volume 26 ; 26 >
-      au < exists ; 1965 ; 1965 ; The American Biology Teacher Volume 27 ; 27 >
-      au < exists ; 1966 ; 1966 ; The American Biology Teacher Volume 28 ; 28 >
-      au < exists ; 1967 ; 1967 ; The American Biology Teacher Volume 29 ; 29 >
-      au < exists ; 1968 ; 1968 ; The American Biology Teacher Volume 30 ; 30 >
-      au < exists ; 1969 ; 1969 ; The American Biology Teacher Volume 31 ; 31 >
-      au < exists ; 1970 ; 1970 ; The American Biology Teacher Volume 32 ; 32 >
-      au < exists ; 1971 ; 1971 ; The American Biology Teacher Volume 33 ; 33 >
-      au < exists ; 1972 ; 1972 ; The American Biology Teacher Volume 34 ; 34 >
-      au < exists ; 1973 ; 1973 ; The American Biology Teacher Volume 35 ; 35 >
-      au < exists ; 1974 ; 1974 ; The American Biology Teacher Volume 36 ; 36 >
-      au < exists ; 1975 ; 1975 ; The American Biology Teacher Volume 37 ; 37 >
-      au < exists ; 1976 ; 1976 ; The American Biology Teacher Volume 38 ; 38 >
-      au < exists ; 1977 ; 1977 ; The American Biology Teacher Volume 39 ; 39 >
-      au < exists ; 1978 ; 1978 ; The American Biology Teacher Volume 40 ; 40 >
-      au < exists ; 1979 ; 1979 ; The American Biology Teacher Volume 41 ; 41 >
-      au < exists ; 1980 ; 1980 ; The American Biology Teacher Volume 42 ; 42 >
-      au < exists ; 1981 ; 1981 ; The American Biology Teacher Volume 43 ; 43 >
-      au < exists ; 1982 ; 1982 ; The American Biology Teacher Volume 44 ; 44 >
-      au < exists ; 1983 ; 1983 ; The American Biology Teacher Volume 45 ; 45 >
-      au < exists ; 1984 ; 1984 ; The American Biology Teacher Volume 46 ; 46 >
-      au < exists ; 1985 ; 1985 ; The American Biology Teacher Volume 47 ; 47 >
-      au < exists ; 1986 ; 1986 ; The American Biology Teacher Volume 48 ; 48 >
-      au < exists ; 1987 ; 1987 ; The American Biology Teacher Volume 49 ; 49 >
-      au < exists ; 1988 ; 1988 ; The American Biology Teacher Volume 50 ; 50 >
-      au < exists ; 1989 ; 1989 ; The American Biology Teacher Volume 51 ; 51 >
-      au < exists ; 1990 ; 1990 ; The American Biology Teacher Volume 52 ; 52 >
-      au < exists ; 1991 ; 1991 ; The American Biology Teacher Volume 53 ; 53 >
-      au < exists ; 1992 ; 1992 ; The American Biology Teacher Volume 54 ; 54 >
-      au < exists ; 1993 ; 1993 ; The American Biology Teacher Volume 55 ; 55 >
-      au < exists ; 1994 ; 1994 ; The American Biology Teacher Volume 56 ; 56 >
-      au < exists ; 1995 ; 1995 ; The American Biology Teacher Volume 57 ; 57 >
-      au < exists ; 1996 ; 1996 ; The American Biology Teacher Volume 58 ; 58 >
-      au < exists ; 1997 ; 1997 ; The American Biology Teacher Volume 59 ; 59 >
-      au < exists ; 1998 ; 1998 ; The American Biology Teacher Volume 60 ; 60 >
-      au < exists ; 1999 ; 1999 ; The American Biology Teacher Volume 61 ; 61 >
-      au < exists ; 2000 ; 2000 ; The American Biology Teacher Volume 62 ; 62 >
-      au < exists ; 2001 ; 2001 ; The American Biology Teacher Volume 63 ; 63 >
-      au < exists ; 2002 ; 2002 ; The American Biology Teacher Volume 64 ; 64 >
-      au < exists ; 2003 ; 2003 ; The American Biology Teacher Volume 65 ; 65 >
-      au < exists ; 2004 ; 2004 ; The American Biology Teacher Volume 66 ; 66 >
-      au < exists ; 2005 ; 2005 ; The American Biology Teacher Volume 67 ; 67 >
-      au < exists ; 2006 ; 2006 ; The American Biology Teacher Volume 68 ; 68 >
-      au < exists ; 2007 ; 2007 ; The American Biology Teacher Volume 69 ; 69 >
+      au < manifest ; 1938 ; 1938 ; The American Biology Teacher Volume 1 [1938] ; 1 >
+      au < manifest ; 1939 ; 1939 ; The American Biology Teacher Volume 1 [1939] ; 1 >
+      au < manifest ; 1939 ; 1939 ; The American Biology Teacher Volume 2 [1939] ; 2 >
+      au < manifest ; 1940 ; 1940 ; The American Biology Teacher Volume 2 [1940] ; 2 >
+      au < manifest ; 1940 ; 1940 ; The American Biology Teacher Volume 3 [1940] ; 3 >
+      au < manifest ; 1941 ; 1941 ; The American Biology Teacher Volume 3 [1941] ; 3 >
+      au < manifest ; 1941 ; 1941 ; The American Biology Teacher Volume 4 [1941] ; 4 >
+      au < manifest ; 1942 ; 1942 ; The American Biology Teacher Volume 4 [1942] ; 4 >
+      au < manifest ; 1942 ; 1942 ; The American Biology Teacher Volume 5 [1942] ; 5 >
+      au < manifest ; 1943 ; 1943 ; The American Biology Teacher Volume 5 [1943] ; 5 >
+      au < manifest ; 1943 ; 1943 ; The American Biology Teacher Volume 6 [1943] ; 6 >
+      au < manifest ; 1944 ; 1944 ; The American Biology Teacher Volume 6 [1944] ; 6 >
+      au < manifest ; 1944 ; 1944 ; The American Biology Teacher Volume 7 [1944] ; 7 >
+      au < manifest ; 1945 ; 1945 ; The American Biology Teacher Volume 7 [1945] ; 7 >
+      au < manifest ; 1945 ; 1945 ; The American Biology Teacher Volume 8 [1945] ; 8 >
+      au < manifest ; 1946 ; 1946 ; The American Biology Teacher Volume 8 [1946] ; 8 >
+      au < manifest ; 1946 ; 1946 ; The American Biology Teacher Volume 9 [1946] ; 9 >
+      au < manifest ; 1947 ; 1947 ; The American Biology Teacher Volume 9 [1947] ; 9 >
+      au < manifest ; 1948 ; 1948 ; The American Biology Teacher Volume 10 ; 10 >
+      au < manifest ; 1949 ; 1949 ; The American Biology Teacher Volume 11 ; 11 >
+      au < manifest ; 1950 ; 1950 ; The American Biology Teacher Volume 12 ; 12 >
+      au < manifest ; 1951 ; 1951 ; The American Biology Teacher Volume 13 ; 13 >
+      au < manifest ; 1952 ; 1952 ; The American Biology Teacher Volume 14 ; 14 >
+      au < manifest ; 1953 ; 1953 ; The American Biology Teacher Volume 15 ; 15 >
+      au < manifest ; 1954 ; 1954 ; The American Biology Teacher Volume 16 ; 16 >
+      au < manifest ; 1955 ; 1955 ; The American Biology Teacher Volume 17 ; 17 >
+      au < manifest ; 1956 ; 1956 ; The American Biology Teacher Volume 18 ; 18 >
+      au < manifest ; 1957 ; 1957 ; The American Biology Teacher Volume 19 ; 19 >
+      au < manifest ; 1958 ; 1958 ; The American Biology Teacher Volume 20 ; 20 >
+      au < manifest ; 1959 ; 1959 ; The American Biology Teacher Volume 21 ; 21 >
+      au < manifest ; 1960 ; 1960 ; The American Biology Teacher Volume 22 ; 22 >
+      au < manifest ; 1961 ; 1961 ; The American Biology Teacher Volume 23 ; 23 >
+      au < manifest ; 1962 ; 1962 ; The American Biology Teacher Volume 24 ; 24 >
+      au < manifest ; 1963 ; 1963 ; The American Biology Teacher Volume 25 ; 25 >
+      au < manifest ; 1964 ; 1964 ; The American Biology Teacher Volume 26 ; 26 >
+      au < manifest ; 1965 ; 1965 ; The American Biology Teacher Volume 27 ; 27 >
+      au < manifest ; 1966 ; 1966 ; The American Biology Teacher Volume 28 ; 28 >
+      au < manifest ; 1967 ; 1967 ; The American Biology Teacher Volume 29 ; 29 >
+      au < manifest ; 1968 ; 1968 ; The American Biology Teacher Volume 30 ; 30 >
+      au < manifest ; 1969 ; 1969 ; The American Biology Teacher Volume 31 ; 31 >
+      au < manifest ; 1970 ; 1970 ; The American Biology Teacher Volume 32 ; 32 >
+      au < manifest ; 1971 ; 1971 ; The American Biology Teacher Volume 33 ; 33 >
+      au < manifest ; 1972 ; 1972 ; The American Biology Teacher Volume 34 ; 34 >
+      au < manifest ; 1973 ; 1973 ; The American Biology Teacher Volume 35 ; 35 >
+      au < manifest ; 1974 ; 1974 ; The American Biology Teacher Volume 36 ; 36 >
+      au < manifest ; 1975 ; 1975 ; The American Biology Teacher Volume 37 ; 37 >
+      au < manifest ; 1976 ; 1976 ; The American Biology Teacher Volume 38 ; 38 >
+      au < manifest ; 1977 ; 1977 ; The American Biology Teacher Volume 39 ; 39 >
+      au < manifest ; 1978 ; 1978 ; The American Biology Teacher Volume 40 ; 40 >
+      au < manifest ; 1979 ; 1979 ; The American Biology Teacher Volume 41 ; 41 >
+      au < manifest ; 1980 ; 1980 ; The American Biology Teacher Volume 42 ; 42 >
+      au < manifest ; 1981 ; 1981 ; The American Biology Teacher Volume 43 ; 43 >
+      au < manifest ; 1982 ; 1982 ; The American Biology Teacher Volume 44 ; 44 >
+      au < manifest ; 1983 ; 1983 ; The American Biology Teacher Volume 45 ; 45 >
+      au < manifest ; 1984 ; 1984 ; The American Biology Teacher Volume 46 ; 46 >
+      au < manifest ; 1985 ; 1985 ; The American Biology Teacher Volume 47 ; 47 >
+      au < manifest ; 1986 ; 1986 ; The American Biology Teacher Volume 48 ; 48 >
+      au < manifest ; 1987 ; 1987 ; The American Biology Teacher Volume 49 ; 49 >
+      au < manifest ; 1988 ; 1988 ; The American Biology Teacher Volume 50 ; 50 >
+      au < manifest ; 1989 ; 1989 ; The American Biology Teacher Volume 51 ; 51 >
+      au < manifest ; 1990 ; 1990 ; The American Biology Teacher Volume 52 ; 52 >
+      au < manifest ; 1991 ; 1991 ; The American Biology Teacher Volume 53 ; 53 >
+      au < manifest ; 1992 ; 1992 ; The American Biology Teacher Volume 54 ; 54 >
+      au < manifest ; 1993 ; 1993 ; The American Biology Teacher Volume 55 ; 55 >
+      au < manifest ; 1994 ; 1994 ; The American Biology Teacher Volume 56 ; 56 >
+      au < manifest ; 1995 ; 1995 ; The American Biology Teacher Volume 57 ; 57 >
+      au < manifest ; 1996 ; 1996 ; The American Biology Teacher Volume 58 ; 58 >
+      au < manifest ; 1997 ; 1997 ; The American Biology Teacher Volume 59 ; 59 >
+      au < manifest ; 1998 ; 1998 ; The American Biology Teacher Volume 60 ; 60 >
+      au < manifest ; 1999 ; 1999 ; The American Biology Teacher Volume 61 ; 61 >
+      au < manifest ; 2000 ; 2000 ; The American Biology Teacher Volume 62 ; 62 >
+      au < manifest ; 2001 ; 2001 ; The American Biology Teacher Volume 63 ; 63 >
+      au < manifest ; 2002 ; 2002 ; The American Biology Teacher Volume 64 ; 64 >
+      au < manifest ; 2003 ; 2003 ; The American Biology Teacher Volume 65 ; 65 >
+      au < manifest ; 2004 ; 2004 ; The American Biology Teacher Volume 66 ; 66 >
+      au < manifest ; 2005 ; 2005 ; The American Biology Teacher Volume 67 ; 67 >
+      au < manifest ; 2006 ; 2006 ; The American Biology Teacher Volume 68 ; 68 >
+      au < manifest ; 2007 ; 2007 ; The American Biology Teacher Volume 69 ; 69 >
       au < doNotProcess ; 2008 ; 2008 ; The American Biology Teacher Volume 70 ; 70 >
-      au < exists ; 2009 ; 2009 ; The American Biology Teacher Volume 71 ; 71 >
+      au < manifest ; 2009 ; 2009 ; The American Biology Teacher Volume 71 ; 71 >
       au < doNotProcess ; 2010 ; 2010 ; The American Biology Teacher Volume 72 ; 72 >
       au < doNotProcess ; 2011 ; 2011 ; The American Biology Teacher Volume 73 ; 73 >
       au < doNotProcess ; 2012 ; 2012 ; The American Biology Teacher Volume 74 ; 74 >
@@ -113,7 +114,8 @@
       au < doNotProcess ; 2017 ; 2017 ; The American Biology Teacher Volume 79 ; 79 >
       au < doNotProcess ; 2018 ; 2018 ; The American Biology Teacher Volume 80 ; 80 >
       au < doNotProcess ; 2019 ; 2019 ; The American Biology Teacher Volume 81 ; 81 >
-      au < exists ; 2020 ; 2020 ; The American Biology Teacher Volume 82 ; 82 >
+      au < manifest ; 2020 ; 2020 ; The American Biology Teacher Volume 82 ; 82 >
+      au < manifest ; 2021 ; 2021 ; The American Biology Teacher Volume 83 ; 83 >
 
   }
 
@@ -124,59 +126,59 @@
         issn = 0004-4687 ;
         eissn = 1533-838X 
     >
-
       #param[base_url] = http://as.ucpress.edu/
       #continues = 2324-6502
+
       param[journal_id] = as
 
       au < exists ; 1961 ; 1961 ; Asian Survey Volume 1 [1961] ; 1 >
       au < exists ; 1962 ; 1962 ; Asian Survey Volume 1 [1962] ; 1 >
       au < exists ; 1962 ; 1962 ; Asian Survey Volume 2 ; 2 >
-      au < exists ; 1963 ; 1963 ; Asian Survey Volume 3 ; 3 >
-      au < exists ; 1964 ; 1964 ; Asian Survey Volume 4 ; 4 >
-      au < exists ; 1965 ; 1965 ; Asian Survey Volume 5 ; 5 >
-      au < exists ; 1966 ; 1966 ; Asian Survey Volume 6 ; 6 >
-      au < exists ; 1967 ; 1967 ; Asian Survey Volume 7 ; 7 >
+      au < manifest ; 1963 ; 1963 ; Asian Survey Volume 3 ; 3 >
+      au < manifest ; 1964 ; 1964 ; Asian Survey Volume 4 ; 4 >
+      au < manifest ; 1965 ; 1965 ; Asian Survey Volume 5 ; 5 >
+      au < manifest ; 1966 ; 1966 ; Asian Survey Volume 6 ; 6 >
+      au < manifest ; 1967 ; 1967 ; Asian Survey Volume 7 ; 7 >
       au < exists ; 1968 ; 1968 ; Asian Survey Volume 8 ; 8 >
       au < exists ; 1969 ; 1969 ; Asian Survey Volume 9 ; 9 >
       au < exists ; 1970 ; 1970 ; Asian Survey Volume 10 ; 10 >
       au < exists ; 1971 ; 1971 ; Asian Survey Volume 11 ; 11 >
-      au < exists ; 1972 ; 1972 ; Asian Survey Volume 12 ; 12 >
+      au < manifest ; 1972 ; 1972 ; Asian Survey Volume 12 ; 12 >
       au < exists ; 1973 ; 1973 ; Asian Survey Volume 13 ; 13 >
-      au < exists ; 1974 ; 1974 ; Asian Survey Volume 14 ; 14 >
-      au < exists ; 1975 ; 1975 ; Asian Survey Volume 15 ; 15 >
+      au < manifest ; 1974 ; 1974 ; Asian Survey Volume 14 ; 14 >
+      au < manifest ; 1975 ; 1975 ; Asian Survey Volume 15 ; 15 >
       au < exists ; 1976 ; 1976 ; Asian Survey Volume 16 ; 16 >
       au < exists ; 1977 ; 1977 ; Asian Survey Volume 17 ; 17 >
-      au < exists ; 1978 ; 1978 ; Asian Survey Volume 18 ; 18 >
+      au < manifest ; 1978 ; 1978 ; Asian Survey Volume 18 ; 18 >
       au < exists ; 1979 ; 1979 ; Asian Survey Volume 19 ; 19 >
       au < exists ; 1980 ; 1980 ; Asian Survey Volume 20 ; 20 >
       au < exists ; 1981 ; 1981 ; Asian Survey Volume 21 ; 21 >
-      au < exists ; 1982 ; 1982 ; Asian Survey Volume 22 ; 22 >
-      au < exists ; 1983 ; 1983 ; Asian Survey Volume 23 ; 23 >
+      au < manifest ; 1982 ; 1982 ; Asian Survey Volume 22 ; 22 >
+      au < manifest ; 1983 ; 1983 ; Asian Survey Volume 23 ; 23 >
       au < exists ; 1984 ; 1984 ; Asian Survey Volume 24 ; 24 >
       au < exists ; 1985 ; 1985 ; Asian Survey Volume 25 ; 25 >
       au < exists ; 1986 ; 1986 ; Asian Survey Volume 26 ; 26 >
       au < exists ; 1987 ; 1987 ; Asian Survey Volume 27 ; 27 >
       au < exists ; 1988 ; 1988 ; Asian Survey Volume 28 ; 28 >
       au < exists ; 1989 ; 1989 ; Asian Survey Volume 29 ; 29 >
-      au < exists ; 1990 ; 1990 ; Asian Survey Volume 30 ; 30 >
-      au < exists ; 1991 ; 1991 ; Asian Survey Volume 31 ; 31 >
-      au < exists ; 1992 ; 1992 ; Asian Survey Volume 32 ; 32 >
-      au < exists ; 1993 ; 1993 ; Asian Survey Volume 33 ; 33 >
-      au < exists ; 1994 ; 1994 ; Asian Survey Volume 34 ; 34 >
-      au < exists ; 1995 ; 1995 ; Asian Survey Volume 35 ; 35 >
-      au < exists ; 1996 ; 1996 ; Asian Survey Volume 36 ; 36 >
-      au < exists ; 1997 ; 1997 ; Asian Survey Volume 37 ; 37 >
-      au < exists ; 1998 ; 1998 ; Asian Survey Volume 38 ; 38 >
-      au < exists ; 1999 ; 1999 ; Asian Survey Volume 39 ; 39 >
-      au < exists ; 2000 ; 2000 ; Asian Survey Volume 40 ; 40 >
-      au < exists ; 2001 ; 2001 ; Asian Survey Volume 41 ; 41 >
-      au < exists ; 2002 ; 2002 ; Asian Survey Volume 42 ; 42 >
-      au < exists ; 2003 ; 2003 ; Asian Survey Volume 43 ; 43 >
-      au < exists ; 2004 ; 2004 ; Asian Survey Volume 44 ; 44 >
-      au < exists ; 2005 ; 2005 ; Asian Survey Volume 45 ; 45 >
-      au < exists ; 2006 ; 2006 ; Asian Survey Volume 46 ; 46 >
-      au < exists ; 2007 ; 2007 ; Asian Survey Volume 47 ; 47 >
+      au < manifest ; 1990 ; 1990 ; Asian Survey Volume 30 ; 30 >
+      au < manifest ; 1991 ; 1991 ; Asian Survey Volume 31 ; 31 >
+      au < manifest ; 1992 ; 1992 ; Asian Survey Volume 32 ; 32 >
+      au < manifest ; 1993 ; 1993 ; Asian Survey Volume 33 ; 33 >
+      au < manifest ; 1994 ; 1994 ; Asian Survey Volume 34 ; 34 >
+      au < manifest ; 1995 ; 1995 ; Asian Survey Volume 35 ; 35 >
+      au < manifest ; 1996 ; 1996 ; Asian Survey Volume 36 ; 36 >
+      au < manifest ; 1997 ; 1997 ; Asian Survey Volume 37 ; 37 >
+      au < manifest ; 1998 ; 1998 ; Asian Survey Volume 38 ; 38 >
+      au < manifest ; 1999 ; 1999 ; Asian Survey Volume 39 ; 39 >
+      au < manifest ; 2000 ; 2000 ; Asian Survey Volume 40 ; 40 >
+      au < manifest ; 2001 ; 2001 ; Asian Survey Volume 41 ; 41 >
+      au < manifest ; 2002 ; 2002 ; Asian Survey Volume 42 ; 42 >
+      au < manifest ; 2003 ; 2003 ; Asian Survey Volume 43 ; 43 >
+      au < manifest ; 2004 ; 2004 ; Asian Survey Volume 44 ; 44 >
+      au < manifest ; 2005 ; 2005 ; Asian Survey Volume 45 ; 45 >
+      au < manifest ; 2006 ; 2006 ; Asian Survey Volume 46 ; 46 >
+      au < manifest ; 2007 ; 2007 ; Asian Survey Volume 47 ; 47 >
       au < doNotProcess ; 2008 ; 2008 ; Asian Survey Volume 48 ; 48 >
       au < doNotProcess ; 2009 ; 2009 ; Asian Survey Volume 49 ; 49 >
       au < doNotProcess ; 2010 ; 2010 ; Asian Survey Volume 50 ; 50 >
@@ -189,7 +191,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Asian Survey Volume 57 ; 57 >
       au < doNotProcess ; 2018 ; 2018 ; Asian Survey Volume 58 ; 58 >
       au < doNotProcess ; 2019 ; 2019 ; Asian Survey Volume 59 ; 59 >
-      au < exists ; 2020 ; 2020 ; Asian Survey Volume 60 ; 60 >
+      au < manifest ; 2020 ; 2020 ; Asian Survey Volume 60 ; 60 >
+      au < manifest ; 2021 ; 2021 ; Asian Survey Volume 61 ; 61 >
 
   }
 
@@ -200,9 +203,10 @@
         issn = 2153-8018 ;
         eissn = 2153-764X 
     >
-
       #param[base_url] = http://boom.ucpress.edu/
       #nothing published after 2016.
+      param[journal_id] = boom
+
       param[journal_id] = boom
 
       au < doNotProcess ; 2011 ; 2011 ; Boom: A Journal of California Volume 1 ; 1 >
@@ -217,40 +221,59 @@
   {
 
       title <
+        name = Collabra: Psychology ;
+        eissn = 2474-7394 
+    >
+
+      param[journal_id] = collabra
+
+      au < doNotProcess ; 2015 ; 2015 ; Collabra: Psychology Volume 1 ; 1 >
+      au < doNotProcess ; 2016 ; 2016 ; Collabra: Psychology Volume 2 ; 2 >
+      au < doNotProcess ; 2017 ; 2017 ; Collabra: Psychology Volume 3 ; 3 >
+      au < doNotProcess ; 2018 ; 2018 ; Collabra: Psychology Volume 4 ; 4 >
+      au < doNotProcess ; 2019 ; 2019 ; Collabra: Psychology Volume 5 ; 5 >
+      au < manifest ; 2020 ; 2020 ; Collabra: Psychology Volume 6 ; 6 >
+      au < manifest ; 2021 ; 2021 ; Collabra: Psychology Volume 7 ; 7 >
+
+  }
+
+  {
+
+      title <
         name = Classical Antiquity ;
         issn = 0278-6656 ;
         eissn = 1067-8344 
     >
-
       #param[base_url] = http://ca.ucpress.edu/
+
       param[journal_id] = ca
 
-      au < exists ; 1982 ; 1982 ; Classical Antiquity Volume 1 ; 1 >
-      au < exists ; 1983 ; 1983 ; Classical Antiquity Volume 2 ; 2 >
-      au < exists ; 1984 ; 1984 ; Classical Antiquity Volume 3 ; 3 >
-      au < exists ; 1985 ; 1985 ; Classical Antiquity Volume 4 ; 4 >
-      au < exists ; 1986 ; 1986 ; Classical Antiquity Volume 5 ; 5 >
-      au < exists ; 1987 ; 1987 ; Classical Antiquity Volume 6 ; 6 >
-      au < exists ; 1988 ; 1988 ; Classical Antiquity Volume 7 ; 7 >
-      au < exists ; 1989 ; 1989 ; Classical Antiquity Volume 8 ; 8 >
-      au < exists ; 1990 ; 1990 ; Classical Antiquity Volume 9 ; 9 >
-      au < exists ; 1991 ; 1991 ; Classical Antiquity Volume 10 ; 10 >
-      au < exists ; 1992 ; 1992 ; Classical Antiquity Volume 11 ; 11 >
-      au < exists ; 1993 ; 1993 ; Classical Antiquity Volume 12 ; 12 >
-      au < exists ; 1994 ; 1994 ; Classical Antiquity Volume 13 ; 13 >
-      au < exists ; 1995 ; 1995 ; Classical Antiquity Volume 14 ; 14 >
-      au < exists ; 1996 ; 1996 ; Classical Antiquity Volume 15 ; 15 >
-      au < exists ; 1997 ; 1997 ; Classical Antiquity Volume 16 ; 16 >
-      au < exists ; 1998 ; 1998 ; Classical Antiquity Volume 17 ; 17 >
-      au < exists ; 1999 ; 1999 ; Classical Antiquity Volume 18 ; 18 >
-      au < exists ; 2000 ; 2000 ; Classical Antiquity Volume 19 ; 19 >
-      au < exists ; 2001 ; 2001 ; Classical Antiquity Volume 20 ; 20 >
-      au < exists ; 2002 ; 2002 ; Classical Antiquity Volume 21 ; 21 >
-      au < exists ; 2003 ; 2003 ; Classical Antiquity Volume 22 ; 22 >
-      au < exists ; 2004 ; 2004 ; Classical Antiquity Volume 23 ; 23 >
-      au < exists ; 2005 ; 2005 ; Classical Antiquity Volume 24 ; 24 >
-      au < exists ; 2006 ; 2006 ; Classical Antiquity Volume 25 ; 25 >
-      au < exists ; 2007 ; 2007 ; Classical Antiquity Volume 26 ; 26 >
+      au < manifest ; 1982 ; 1982 ; Classical Antiquity Volume 1 ; 1 >
+      au < manifest ; 1983 ; 1983 ; Classical Antiquity Volume 2 ; 2 >
+      au < manifest ; 1984 ; 1984 ; Classical Antiquity Volume 3 ; 3 >
+      au < manifest ; 1985 ; 1985 ; Classical Antiquity Volume 4 ; 4 >
+      au < manifest ; 1986 ; 1986 ; Classical Antiquity Volume 5 ; 5 >
+      au < manifest ; 1987 ; 1987 ; Classical Antiquity Volume 6 ; 6 >
+      au < manifest ; 1988 ; 1988 ; Classical Antiquity Volume 7 ; 7 >
+      au < manifest ; 1989 ; 1989 ; Classical Antiquity Volume 8 ; 8 >
+      au < manifest ; 1990 ; 1990 ; Classical Antiquity Volume 9 ; 9 >
+      au < manifest ; 1991 ; 1991 ; Classical Antiquity Volume 10 ; 10 >
+      au < manifest ; 1992 ; 1992 ; Classical Antiquity Volume 11 ; 11 >
+      au < manifest ; 1993 ; 1993 ; Classical Antiquity Volume 12 ; 12 >
+      au < manifest ; 1994 ; 1994 ; Classical Antiquity Volume 13 ; 13 >
+      au < manifest ; 1995 ; 1995 ; Classical Antiquity Volume 14 ; 14 >
+      au < manifest ; 1996 ; 1996 ; Classical Antiquity Volume 15 ; 15 >
+      au < manifest ; 1997 ; 1997 ; Classical Antiquity Volume 16 ; 16 >
+      au < manifest ; 1998 ; 1998 ; Classical Antiquity Volume 17 ; 17 >
+      au < manifest ; 1999 ; 1999 ; Classical Antiquity Volume 18 ; 18 >
+      au < manifest ; 2000 ; 2000 ; Classical Antiquity Volume 19 ; 19 >
+      au < manifest ; 2001 ; 2001 ; Classical Antiquity Volume 20 ; 20 >
+      au < manifest ; 2002 ; 2002 ; Classical Antiquity Volume 21 ; 21 >
+      au < manifest ; 2003 ; 2003 ; Classical Antiquity Volume 22 ; 22 >
+      au < manifest ; 2004 ; 2004 ; Classical Antiquity Volume 23 ; 23 >
+      au < manifest ; 2005 ; 2005 ; Classical Antiquity Volume 24 ; 24 >
+      au < manifest ; 2006 ; 2006 ; Classical Antiquity Volume 25 ; 25 >
+      au < manifest ; 2007 ; 2007 ; Classical Antiquity Volume 26 ; 26 >
       au < doNotProcess ; 2008 ; 2008 ; Classical Antiquity Volume 27 ; 27 >
       au < doNotProcess ; 2009 ; 2009 ; Classical Antiquity Volume 28 ; 28 >
       au < doNotProcess ; 2010 ; 2010 ; Classical Antiquity Volume 29 ; 29 >
@@ -263,7 +286,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Classical Antiquity Volume 36 ; 36 >
       au < doNotProcess ; 2018 ; 2018 ; Classical Antiquity Volume 37 ; 37 >
       au < doNotProcess ; 2019 ; 2019 ; Classical Antiquity Volume 38 ; 38 >
-      au < exists ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
+      au < manifest ; 2020 ; 2020 ; Classical Antiquity Volume 39 ; 39 >
+      au < manifest ; 2021 ; 2021 ; Classical Antiquity Volume 40 ; 40 >
 
   }
 
@@ -274,100 +298,100 @@
         issn = 0162-2897 ;
         eissn = 2327-1485 
     >
-
       #param[base_url] = http://ch.ucpress.edu/
+
       param[journal_id] = ch
 
-      au < exists ; 1922 ; 1922 ; California History Volume 1 [1922] ; 1 >
-      au < exists ; 1923 ; 1923 ; California History Volume 1 [1923] ; 1 >
-      au < exists ; 1923 ; 1923 ; California History Volume 2 [1923] ; 2 >
-      au < exists ; 1924 ; 1924 ; California History Volume 2 [1924] ; 2 >
-      au < exists ; 1924 ; 1924 ; California History Volume 3 ; 3 >
-      au < exists ; 1925 ; 1925 ; California History Volume 4 ; 4 >
-      au < exists ; 1926 ; 1926 ; California History Volume 5 ; 5 >
-      au < exists ; 1927 ; 1927 ; California History Volume 6 ; 6 >
-      au < exists ; 1928 ; 1928 ; California History Volume 7 ; 7 >
-      au < exists ; 1929 ; 1929 ; California History Volume 8 ; 8 >
-      au < exists ; 1930 ; 1930 ; California History Volume 9 ; 9 >
-      au < exists ; 1931 ; 1931 ; California History Volume 10 ; 10 >
-      au < exists ; 1932 ; 1932 ; California History Volume 11 ; 11 >
-      au < exists ; 1933 ; 1933 ; California History Volume 12 ; 12 >
-      au < exists ; 1934 ; 1934 ; California History Volume 13 ; 13 >
-      au < exists ; 1935 ; 1935 ; California History Volume 14 ; 14 >
-      au < exists ; 1936 ; 1936 ; California History Volume 15 ; 15 >
-      au < exists ; 1937 ; 1937 ; California History Volume 16 ; 16 >
-      au < exists ; 1938 ; 1938 ; California History Volume 17 ; 17 >
-      au < exists ; 1939 ; 1939 ; California History Volume 18 ; 18 >
-      au < exists ; 1940 ; 1940 ; California History Volume 19 ; 19 >
-      au < exists ; 1941 ; 1941 ; California History Volume 20 ; 20 >
-      au < exists ; 1942 ; 1942 ; California History Volume 21 ; 21 >
-      au < exists ; 1943 ; 1943 ; California History Volume 22 ; 22 >
-      au < exists ; 1944 ; 1944 ; California History Volume 23 ; 23 >
-      au < exists ; 1945 ; 1945 ; California History Volume 24 ; 24 >
-      au < exists ; 1946 ; 1946 ; California History Volume 25 ; 25 >
-      au < exists ; 1947 ; 1947 ; California History Volume 26 ; 26 >
-      au < exists ; 1948 ; 1948 ; California History Volume 27 ; 27 >
-      au < exists ; 1949 ; 1949 ; California History Volume 28 ; 28 >
-      au < exists ; 1950 ; 1950 ; California History Volume 29 ; 29 >
-      au < exists ; 1951 ; 1951 ; California History Volume 30 ; 30 >
-      au < exists ; 1952 ; 1952 ; California History Volume 31 ; 31 >
-      au < exists ; 1953 ; 1953 ; California History Volume 32 ; 32 >
-      au < exists ; 1954 ; 1954 ; California History Volume 33 ; 33 >
-      au < exists ; 1955 ; 1955 ; California History Volume 34 ; 34 >
-      au < exists ; 1956 ; 1956 ; California History Volume 35 ; 35 >
-      au < exists ; 1957 ; 1957 ; California History Volume 36 ; 36 >
-      au < exists ; 1958 ; 1958 ; California History Volume 37 ; 37 >
-      au < exists ; 1959 ; 1959 ; California History Volume 38 ; 38 >
-      au < exists ; 1960 ; 1960 ; California History Volume 39 ; 39 >
-      au < exists ; 1961 ; 1961 ; California History Volume 40 ; 40 >
-      au < exists ; 1962 ; 1962 ; California History Volume 41 ; 41 >
-      au < exists ; 1963 ; 1963 ; California History Volume 42 ; 42 >
-      au < exists ; 1964 ; 1964 ; California History Volume 43 ; 43 >
-      au < exists ; 1965 ; 1965 ; California History Volume 44 ; 44 >
-      au < exists ; 1966 ; 1966 ; California History Volume 45 ; 45 >
-      au < exists ; 1967 ; 1967 ; California History Volume 46 ; 46 >
-      au < exists ; 1968 ; 1968 ; California History Volume 47 ; 47 >
-      au < exists ; 1969 ; 1969 ; California History Volume 48 ; 48 >
-      au < exists ; 1970 ; 1970 ; California History Volume 49 ; 49 >
-      au < exists ; 1971 ; 1971 ; California History Volume 50 ; 50 >
-      au < exists ; 1972 ; 1972 ; California History Volume 51 ; 51 >
-      au < exists ; 1973 ; 1973 ; California History Volume 52 ; 52 >
-      au < exists ; 1974 ; 1974 ; California History Volume 53 ; 53 >
-      au < exists ; 1975 ; 1975 ; California History Volume 54 ; 54 >
-      au < exists ; 1976 ; 1976 ; California History Volume 55 ; 55 >
-      au < exists ; 1977 ; 1977 ; California History Volume 56 ; 56 >
-      au < exists ; 1978 ; 1978 ; California History Volume 57 ; 57 >
-      au < exists ; 1979 ; 1979 ; California History Volume 58 ; 58 >
-      au < exists ; 1980 ; 1980 ; California History Volume 59 ; 59 >
-      au < exists ; 1981 ; 1981 ; California History Volume 60 ; 60 >
-      au < exists ; 1982 ; 1982 ; California History Volume 61 ; 61 >
-      au < exists ; 1983 ; 1983 ; California History Volume 62 ; 62 >
-      au < exists ; 1984 ; 1984 ; California History Volume 63 ; 63 >
-      au < exists ; 1985 ; 1985 ; California History Volume 64 ; 64 >
-      au < exists ; 1986 ; 1986 ; California History Volume 65 ; 65 >
-      au < exists ; 1987 ; 1987 ; California History Volume 66 ; 66 >
-      au < exists ; 1988 ; 1988 ; California History Volume 67 ; 67 >
-      au < exists ; 1989 ; 1989 ; California History Volume 68 ; 68 >
-      au < exists ; 1990 ; 1990 ; California History Volume 69 ; 69 >
-      au < exists ; 1991 ; 1991 ; California History Volume 70 ; 70 >
-      au < exists ; 1992 ; 1992 ; California History Volume 71 ; 71 >
-      au < exists ; 1993 ; 1993 ; California History Volume 72 ; 72 >
-      au < exists ; 1994 ; 1994 ; California History Volume 73 ; 73 >
-      au < exists ; 1995 ; 1995 ; California History Volume 74 ; 74 >
-      au < exists ; 1996 ; 1996 ; California History Volume 75 ; 75 >
-      au < exists ; 1997 ; 1997 ; California History Volume 76 ; 76 >
-      au < exists ; 1998 ; 1998 ; California History Volume 77 ; 77 >
-      au < exists ; 1999 ; 1999 ; California History Volume 78 ; 78 >
-      au < exists ; 2000 ; 2000 ; California History Volume 79 ; 79 >
-      au < exists ; 2001 ; 2001 ; California History Volume 80 ; 80 >
-      au < exists ; 2002 ; 2002 ; California History Volume 81 [2002] ; 81 >
-      au < exists ; 2003 ; 2003 ; California History Volume 81 [2003] ; 81 >
-      au < exists ; 2004 ; 2004 ; California History Volume 82 [2004] ; 82 >
-      au < exists ; 2005 ; 2005 ; California History Volume 82 [2005] ; 82 >
-      au < exists ; 2005 ; 2005 ; California History Volume 83 [2005] ; 83 >
-      au < exists ; 2006 ; 2006 ; California History Volume 83 [2006] ; 83 >
-      au < exists ; 2006 ; 2006 ; California History Volume 84 [2006] ; 84 >
-      au < exists ; 2007 ; 2007 ; California History Volume 84 [2007] ; 84 >
+      au < manifest ; 1922 ; 1922 ; California History Volume 1 [1922] ; 1 >
+      au < manifest ; 1923 ; 1923 ; California History Volume 1 [1923] ; 1 >
+      au < manifest ; 1923 ; 1923 ; California History Volume 2 [1923] ; 2 >
+      au < manifest ; 1924 ; 1924 ; California History Volume 2 [1924] ; 2 >
+      au < manifest ; 1924 ; 1924 ; California History Volume 3 ; 3 >
+      au < manifest ; 1925 ; 1925 ; California History Volume 4 ; 4 >
+      au < manifest ; 1926 ; 1926 ; California History Volume 5 ; 5 >
+      au < manifest ; 1927 ; 1927 ; California History Volume 6 ; 6 >
+      au < manifest ; 1928 ; 1928 ; California History Volume 7 ; 7 >
+      au < manifest ; 1929 ; 1929 ; California History Volume 8 ; 8 >
+      au < manifest ; 1930 ; 1930 ; California History Volume 9 ; 9 >
+      au < manifest ; 1931 ; 1931 ; California History Volume 10 ; 10 >
+      au < manifest ; 1932 ; 1932 ; California History Volume 11 ; 11 >
+      au < manifest ; 1933 ; 1933 ; California History Volume 12 ; 12 >
+      au < manifest ; 1934 ; 1934 ; California History Volume 13 ; 13 >
+      au < manifest ; 1935 ; 1935 ; California History Volume 14 ; 14 >
+      au < manifest ; 1936 ; 1936 ; California History Volume 15 ; 15 >
+      au < manifest ; 1937 ; 1937 ; California History Volume 16 ; 16 >
+      au < manifest ; 1938 ; 1938 ; California History Volume 17 ; 17 >
+      au < manifest ; 1939 ; 1939 ; California History Volume 18 ; 18 >
+      au < manifest ; 1940 ; 1940 ; California History Volume 19 ; 19 >
+      au < manifest ; 1941 ; 1941 ; California History Volume 20 ; 20 >
+      au < manifest ; 1942 ; 1942 ; California History Volume 21 ; 21 >
+      au < manifest ; 1943 ; 1943 ; California History Volume 22 ; 22 >
+      au < manifest ; 1944 ; 1944 ; California History Volume 23 ; 23 >
+      au < manifest ; 1945 ; 1945 ; California History Volume 24 ; 24 >
+      au < manifest ; 1946 ; 1946 ; California History Volume 25 ; 25 >
+      au < manifest ; 1947 ; 1947 ; California History Volume 26 ; 26 >
+      au < manifest ; 1948 ; 1948 ; California History Volume 27 ; 27 >
+      au < manifest ; 1949 ; 1949 ; California History Volume 28 ; 28 >
+      au < manifest ; 1950 ; 1950 ; California History Volume 29 ; 29 >
+      au < manifest ; 1951 ; 1951 ; California History Volume 30 ; 30 >
+      au < manifest ; 1952 ; 1952 ; California History Volume 31 ; 31 >
+      au < manifest ; 1953 ; 1953 ; California History Volume 32 ; 32 >
+      au < manifest ; 1954 ; 1954 ; California History Volume 33 ; 33 >
+      au < manifest ; 1955 ; 1955 ; California History Volume 34 ; 34 >
+      au < manifest ; 1956 ; 1956 ; California History Volume 35 ; 35 >
+      au < manifest ; 1957 ; 1957 ; California History Volume 36 ; 36 >
+      au < manifest ; 1958 ; 1958 ; California History Volume 37 ; 37 >
+      au < manifest ; 1959 ; 1959 ; California History Volume 38 ; 38 >
+      au < manifest ; 1960 ; 1960 ; California History Volume 39 ; 39 >
+      au < manifest ; 1961 ; 1961 ; California History Volume 40 ; 40 >
+      au < manifest ; 1962 ; 1962 ; California History Volume 41 ; 41 >
+      au < manifest ; 1963 ; 1963 ; California History Volume 42 ; 42 >
+      au < manifest ; 1964 ; 1964 ; California History Volume 43 ; 43 >
+      au < manifest ; 1965 ; 1965 ; California History Volume 44 ; 44 >
+      au < manifest ; 1966 ; 1966 ; California History Volume 45 ; 45 >
+      au < manifest ; 1967 ; 1967 ; California History Volume 46 ; 46 >
+      au < manifest ; 1968 ; 1968 ; California History Volume 47 ; 47 >
+      au < manifest ; 1969 ; 1969 ; California History Volume 48 ; 48 >
+      au < manifest ; 1970 ; 1970 ; California History Volume 49 ; 49 >
+      au < manifest ; 1971 ; 1971 ; California History Volume 50 ; 50 >
+      au < manifest ; 1972 ; 1972 ; California History Volume 51 ; 51 >
+      au < manifest ; 1973 ; 1973 ; California History Volume 52 ; 52 >
+      au < manifest ; 1974 ; 1974 ; California History Volume 53 ; 53 >
+      au < manifest ; 1975 ; 1975 ; California History Volume 54 ; 54 >
+      au < manifest ; 1976 ; 1976 ; California History Volume 55 ; 55 >
+      au < manifest ; 1977 ; 1977 ; California History Volume 56 ; 56 >
+      au < manifest ; 1978 ; 1978 ; California History Volume 57 ; 57 >
+      au < manifest ; 1979 ; 1979 ; California History Volume 58 ; 58 >
+      au < manifest ; 1980 ; 1980 ; California History Volume 59 ; 59 >
+      au < manifest ; 1981 ; 1981 ; California History Volume 60 ; 60 >
+      au < manifest ; 1982 ; 1982 ; California History Volume 61 ; 61 >
+      au < manifest ; 1983 ; 1983 ; California History Volume 62 ; 62 >
+      au < manifest ; 1984 ; 1984 ; California History Volume 63 ; 63 >
+      au < manifest ; 1985 ; 1985 ; California History Volume 64 ; 64 >
+      au < manifest ; 1986 ; 1986 ; California History Volume 65 ; 65 >
+      au < manifest ; 1987 ; 1987 ; California History Volume 66 ; 66 >
+      au < manifest ; 1988 ; 1988 ; California History Volume 67 ; 67 >
+      au < manifest ; 1989 ; 1989 ; California History Volume 68 ; 68 >
+      au < manifest ; 1990 ; 1990 ; California History Volume 69 ; 69 >
+      au < manifest ; 1991 ; 1991 ; California History Volume 70 ; 70 >
+      au < manifest ; 1992 ; 1992 ; California History Volume 71 ; 71 >
+      au < manifest ; 1993 ; 1993 ; California History Volume 72 ; 72 >
+      au < manifest ; 1994 ; 1994 ; California History Volume 73 ; 73 >
+      au < manifest ; 1995 ; 1995 ; California History Volume 74 ; 74 >
+      au < manifest ; 1996 ; 1996 ; California History Volume 75 ; 75 >
+      au < manifest ; 1997 ; 1997 ; California History Volume 76 ; 76 >
+      au < manifest ; 1998 ; 1998 ; California History Volume 77 ; 77 >
+      au < manifest ; 1999 ; 1999 ; California History Volume 78 ; 78 >
+      au < manifest ; 2000 ; 2000 ; California History Volume 79 ; 79 >
+      au < manifest ; 2001 ; 2001 ; California History Volume 80 ; 80 >
+      au < manifest ; 2002 ; 2002 ; California History Volume 81 [2002] ; 81 >
+      au < manifest ; 2003 ; 2003 ; California History Volume 81 [2003] ; 81 >
+      au < manifest ; 2004 ; 2004 ; California History Volume 82 [2004] ; 82 >
+      au < manifest ; 2005 ; 2005 ; California History Volume 82 [2005] ; 82 >
+      au < manifest ; 2005 ; 2005 ; California History Volume 83 [2005] ; 83 >
+      au < manifest ; 2006 ; 2006 ; California History Volume 83 [2006] ; 83 >
+      au < manifest ; 2006 ; 2006 ; California History Volume 84 [2006] ; 84 >
+      au < manifest ; 2007 ; 2007 ; California History Volume 84 [2007] ; 84 >
       au < doNotProcess ; 2008 ; 2008 ; California History Volume 85 [2008] ; 85 >
       au < doNotProcess ; 2008 ; 2008 ; California History Volume 86 [2008] ; 86 >
       au < doNotProcess ; 2009 ; 2009 ; California History Volume 86 [2009] ; 86 >
@@ -385,7 +409,8 @@
       au < doNotProcess ; 2017 ; 2017 ; California History Volume 94 ; 94 >
       au < doNotProcess ; 2018 ; 2018 ; California History Volume 95 ; 95 >
       au < doNotProcess ; 2019 ; 2019 ; California History Volume 96 ; 96 >
-      au < exists ; 2020 ; 2020 ; California History Volume 97 ; 97 >
+      au < manifest ; 2020 ; 2020 ; California History Volume 97 ; 97 >
+      au < manifest ; 2021 ; 2021 ; California History Volume 98 ; 98 >
 
   }
 
@@ -395,8 +420,8 @@
         name = Departures in Critical Qualitative Research ;
         eissn = 2333-9497 
     >
-
       #param[base_url] = http://dcqr.ucpress.edu/
+
       param[journal_id] = dcqr
 
       au < doNotProcess ; 2012 ; 2012 ; Departures in Critical Qualitative Research Volume 1 ; 1 >
@@ -407,10 +432,10 @@
       au < doNotProcess ; 2017 ; 2017 ; Departures in Critical Qualitative Research Volume 6 ; 6 >
       au < doNotProcess ; 2018 ; 2018 ; Departures in Critical Qualitative Research Volume 7 ; 7 >
       au < doNotProcess ; 2019 ; 2019 ; Departures in Critical Qualitative Research Volume 8 ; 8 >
-      au < exists ; 2020 ; 2020 ; Departures in Critical Qualitative Research Volume 9 ; 9 >
+      au < manifest ; 2020 ; 2020 ; Departures in Critical Qualitative Research Volume 9 ; 9 >
+      au < manifest ; 2021 ; 2021 ; Departures in Critical Qualitative Research Volume 10 ; 10 >
 
   }
-
 #  {
 #
 #    title <
@@ -424,7 +449,6 @@
 #      #continued_by = 0004-4687
 #      #under a different structure than 1961 to present
 #      param[journal_id] = as
-
 #      au < exists ; 1935 ; 1935 ; Far Eastern Survey Volume 4 ; 4 >
 #      au < exists ; 1936 ; 1936 ; Far Eastern Survey Volume 5 ; 5 >
 #      au < exists ; 1937 ; 1937 ; Far Eastern Survey Volume 6 ; 6 >
@@ -455,6 +479,8 @@
 #
 #  }
 
+
+
   {
 
       title <
@@ -462,50 +488,50 @@
         issn = 1053-9867 ;
         eissn = 1533-8363 
     >
-
       #param[base_url] = http://fsr.ucpress.edu/
+
       param[journal_id] = fsr
 
-      au < exists ; 1988 ; 1988 ; Federal Sentencing Reporter Volume 1 [1988] ; 1 >
-      au < exists ; 1989 ; 1989 ; Federal Sentencing Reporter Volume 1 [1989] ; 1 >
-      au < exists ; 1989 ; 1989 ; Federal Sentencing Reporter Volume 2 [1989] ; 2 >
-      au < exists ; 1990 ; 1990 ; Federal Sentencing Reporter Volume 2 [1990] ; 2 >
-      au < exists ; 1990 ; 1990 ; Federal Sentencing Reporter Volume 3 [1990] ; 3 >
-      au < exists ; 1991 ; 1991 ; Federal Sentencing Reporter Volume 3 [1991] ; 3 >
-      au < exists ; 1991 ; 1991 ; Federal Sentencing Reporter Volume 4 [1991] ; 4 >
-      au < exists ; 1992 ; 1992 ; Federal Sentencing Reporter Volume 4 [1992] ; 4 >
-      au < exists ; 1992 ; 1992 ; Federal Sentencing Reporter Volume 5 [1992] ; 5 >
-      au < exists ; 1993 ; 1993 ; Federal Sentencing Reporter Volume 5 [1993] ; 5 >
-      au < exists ; 1993 ; 1993 ; Federal Sentencing Reporter Volume 6 [1993] ; 6 >
-      au < exists ; 1994 ; 1994 ; Federal Sentencing Reporter Volume 6 [1994] ; 6 >
-      au < exists ; 1994 ; 1994 ; Federal Sentencing Reporter Volume 7 [1994] ; 7 >
-      au < exists ; 1995 ; 1995 ; Federal Sentencing Reporter Volume 7 [1995] ; 7 >
-      au < exists ; 1995 ; 1995 ; Federal Sentencing Reporter Volume 8 [1995] ; 8 >
-      au < exists ; 1996 ; 1996 ; Federal Sentencing Reporter Volume 8 [1996] ; 8 >
-      au < exists ; 1996 ; 1996 ; Federal Sentencing Reporter Volume 9 [1996] ; 9 >
-      au < exists ; 1997 ; 1997 ; Federal Sentencing Reporter Volume 9 [1997] ; 9 >
-      au < exists ; 1997 ; 1997 ; Federal Sentencing Reporter Volume 10 [1997] ; 10 >
-      au < exists ; 1998 ; 1998 ; Federal Sentencing Reporter Volume 10 [1998] ; 10 >
-      au < exists ; 1998 ; 1998 ; Federal Sentencing Reporter Volume 11 [1998] ; 11 >
-      au < exists ; 1999 ; 1999 ; Federal Sentencing Reporter Volume 11 [1999] ; 11 >
-      au < exists ; 1999 ; 1999 ; Federal Sentencing Reporter Volume 12 [1999] ; 12 >
-      au < exists ; 2000 ; 2000 ; Federal Sentencing Reporter Volume 12 [2000] ; 12 >
-      au < exists ; 2000 ; 2000 ; Federal Sentencing Reporter Volume 13 [2000] ; 13 >
-      au < exists ; 2001 ; 2001 ; Federal Sentencing Reporter Volume 13 [2001] ; 13 >
-      au < exists ; 2001 ; 2001 ; Federal Sentencing Reporter Volume 14 [2001] ; 14 >
-      au < exists ; 2002 ; 2002 ; Federal Sentencing Reporter Volume 14 [2002] ; 14 >
-      au < exists ; 2002 ; 2002 ; Federal Sentencing Reporter Volume 15 [2002] ; 15 >
-      au < exists ; 2003 ; 2003 ; Federal Sentencing Reporter Volume 15 [2003] ; 15 >
-      au < exists ; 2003 ; 2003 ; Federal Sentencing Reporter Volume 16 [2003] ; 16 >
-      au < exists ; 2004 ; 2004 ; Federal Sentencing Reporter Volume 16 [2004] ; 16 >
-      au < exists ; 2004 ; 2004 ; Federal Sentencing Reporter Volume 17 [2004] ; 17 >
-      au < exists ; 2005 ; 2005 ; Federal Sentencing Reporter Volume 17 [2005] ; 17 >
-      au < exists ; 2005 ; 2005 ; Federal Sentencing Reporter Volume 18 [2005] ; 18 >
-      au < exists ; 2006 ; 2006 ; Federal Sentencing Reporter Volume 18 [2006] ; 18 >
-      au < exists ; 2006 ; 2006 ; Federal Sentencing Reporter Volume 19 [2006] ; 19 >
-      au < exists ; 2007 ; 2007 ; Federal Sentencing Reporter Volume 19 [2007] ; 19 >
-      au < exists ; 2007 ; 2007 ; Federal Sentencing Reporter Volume 20 [2007] ; 20 >
-      au < exists ; 2008 ; 2008 ; Federal Sentencing Reporter Volume 20 [2008] ; 20 >
+      au < manifest ; 1988 ; 1988 ; Federal Sentencing Reporter Volume 1 [1988] ; 1 >
+      au < manifest ; 1989 ; 1989 ; Federal Sentencing Reporter Volume 1 [1989] ; 1 >
+      au < manifest ; 1989 ; 1989 ; Federal Sentencing Reporter Volume 2 [1989] ; 2 >
+      au < manifest ; 1990 ; 1990 ; Federal Sentencing Reporter Volume 2 [1990] ; 2 >
+      au < manifest ; 1990 ; 1990 ; Federal Sentencing Reporter Volume 3 [1990] ; 3 >
+      au < manifest ; 1991 ; 1991 ; Federal Sentencing Reporter Volume 3 [1991] ; 3 >
+      au < manifest ; 1991 ; 1991 ; Federal Sentencing Reporter Volume 4 [1991] ; 4 >
+      au < manifest ; 1992 ; 1992 ; Federal Sentencing Reporter Volume 4 [1992] ; 4 >
+      au < manifest ; 1992 ; 1992 ; Federal Sentencing Reporter Volume 5 [1992] ; 5 >
+      au < manifest ; 1993 ; 1993 ; Federal Sentencing Reporter Volume 5 [1993] ; 5 >
+      au < manifest ; 1993 ; 1993 ; Federal Sentencing Reporter Volume 6 [1993] ; 6 >
+      au < manifest ; 1994 ; 1994 ; Federal Sentencing Reporter Volume 6 [1994] ; 6 >
+      au < manifest ; 1994 ; 1994 ; Federal Sentencing Reporter Volume 7 [1994] ; 7 >
+      au < manifest ; 1995 ; 1995 ; Federal Sentencing Reporter Volume 7 [1995] ; 7 >
+      au < manifest ; 1995 ; 1995 ; Federal Sentencing Reporter Volume 8 [1995] ; 8 >
+      au < manifest ; 1996 ; 1996 ; Federal Sentencing Reporter Volume 8 [1996] ; 8 >
+      au < manifest ; 1996 ; 1996 ; Federal Sentencing Reporter Volume 9 [1996] ; 9 >
+      au < manifest ; 1997 ; 1997 ; Federal Sentencing Reporter Volume 9 [1997] ; 9 >
+      au < manifest ; 1997 ; 1997 ; Federal Sentencing Reporter Volume 10 [1997] ; 10 >
+      au < manifest ; 1998 ; 1998 ; Federal Sentencing Reporter Volume 10 [1998] ; 10 >
+      au < manifest ; 1998 ; 1998 ; Federal Sentencing Reporter Volume 11 [1998] ; 11 >
+      au < manifest ; 1999 ; 1999 ; Federal Sentencing Reporter Volume 11 [1999] ; 11 >
+      au < manifest ; 1999 ; 1999 ; Federal Sentencing Reporter Volume 12 [1999] ; 12 >
+      au < manifest ; 2000 ; 2000 ; Federal Sentencing Reporter Volume 12 [2000] ; 12 >
+      au < manifest ; 2000 ; 2000 ; Federal Sentencing Reporter Volume 13 [2000] ; 13 >
+      au < manifest ; 2001 ; 2001 ; Federal Sentencing Reporter Volume 13 [2001] ; 13 >
+      au < manifest ; 2001 ; 2001 ; Federal Sentencing Reporter Volume 14 [2001] ; 14 >
+      au < manifest ; 2002 ; 2002 ; Federal Sentencing Reporter Volume 14 [2002] ; 14 >
+      au < manifest ; 2002 ; 2002 ; Federal Sentencing Reporter Volume 15 [2002] ; 15 >
+      au < manifest ; 2003 ; 2003 ; Federal Sentencing Reporter Volume 15 [2003] ; 15 >
+      au < manifest ; 2003 ; 2003 ; Federal Sentencing Reporter Volume 16 [2003] ; 16 >
+      au < manifest ; 2004 ; 2004 ; Federal Sentencing Reporter Volume 16 [2004] ; 16 >
+      au < manifest ; 2004 ; 2004 ; Federal Sentencing Reporter Volume 17 [2004] ; 17 >
+      au < manifest ; 2005 ; 2005 ; Federal Sentencing Reporter Volume 17 [2005] ; 17 >
+      au < manifest ; 2005 ; 2005 ; Federal Sentencing Reporter Volume 18 [2005] ; 18 >
+      au < manifest ; 2006 ; 2006 ; Federal Sentencing Reporter Volume 18 [2006] ; 18 >
+      au < manifest ; 2006 ; 2006 ; Federal Sentencing Reporter Volume 19 [2006] ; 19 >
+      au < manifest ; 2007 ; 2007 ; Federal Sentencing Reporter Volume 19 [2007] ; 19 >
+      au < manifest ; 2007 ; 2007 ; Federal Sentencing Reporter Volume 20 [2007] ; 20 >
+      au < manifest ; 2008 ; 2008 ; Federal Sentencing Reporter Volume 20 [2008] ; 20 >
       au < doNotProcess ; 2008 ; 2008 ; Federal Sentencing Reporter Volume 21 [2008] ; 21 >
       au < doNotProcess ; 2009 ; 2009 ; Federal Sentencing Reporter Volume 21 [2009] ; 21 >
       au < doNotProcess ; 2009 ; 2009 ; Federal Sentencing Reporter Volume 22 [2009] ; 22 >
@@ -530,8 +556,8 @@
       au < doNotProcess ; 2019 ; 2019 ; Federal Sentencing Reporter Volume 31 [2019] ; 31 >
       au < doNotProcess ; 2019 ; 2019 ; Federal Sentencing Reporter Volume 32 [2019] ; 32 >
       au < doNotProcess ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 32 [2020] ; 32 >
-      au < exists ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 33 [2020] ; 33 >
-      au < exists ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 33 [2021] ; 33 >
+      au < manifest ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 33 [2020] ; 33 >
+      au < manifest ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 33 [2021] ; 33 >
 
   }
 
@@ -541,8 +567,9 @@
         name = Feminist Media Histories ;
         eissn = 2373-7492 
     >
-
       #param[base_url] = http://fmh.ucpress.edu/
+      param[journal_id] = fmh
+
       param[journal_id] = fmh
 
       au < doNotProcess ; 2015 ; 2015 ; Feminist Media Histories Volume 1 ; 1 >
@@ -550,7 +577,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Feminist Media Histories Volume 3 ; 3 >
       au < doNotProcess ; 2018 ; 2018 ; Feminist Media Histories Volume 4 ; 4 >
       au < doNotProcess ; 2019 ; 2019 ; Feminist Media Histories Volume 5 ; 5 >
-      au < exists ; 2020 ; 2020 ; Feminist Media Histories Volume 6 ; 6 >
+      au < manifest ; 2020 ; 2020 ; Feminist Media Histories Volume 6 ; 6 >
+      au < manifest ; 2021 ; 2021 ; Feminist Media Histories Volume 7 ; 7 >
 
   }
 
@@ -561,10 +589,9 @@
         issn = 0015-1386 ;
         eissn = 1533-8630 
     >
-
       #param[base_url] = http://fq.ucpress.edu/
-      param[journal_id] = fq
 
+      param[journal_id] = fq
 #      au < exists ; 1945-1946 ; Film Quarterly Volume 1 ; 1 >
 #      au < exists ; 1946-1947 ; Film Quarterly Volume 2 ; 2 >
 #      au < exists ; 1947-1948 ; Film Quarterly Volume 3 ; 3 >
@@ -623,10 +650,11 @@
 #      au < exists ; 2002-2003 ; Film Quarterly Volume 56 ; 56 >
 #      au < exists ; 2003-2004 ; Film Quarterly Volume 57 ; 57 >
 #      au < exists ; 2004-2005 ; Film Quarterly Volume 58 ; 58 >
-      au < exists ; 2005 ; 2005 ; Film Quarterly Volume 59 [2005] ; 59 >
-      au < exists ; 2006 ; 2006 ; Film Quarterly Volume 59 [2006] ; 59 >
-      au < exists ; 2006 ; 2006 ; Film Quarterly Volume 60 [2006] ; 60 >
-      au < exists ; 2007 ; 2007 ; Film Quarterly Volume 60 [2007] ; 60 >
+
+      au < manifest ; 2005 ; 2005 ; Film Quarterly Volume 59 [2005] ; 59 >
+      au < manifest ; 2006 ; 2006 ; Film Quarterly Volume 59 [2006] ; 59 >
+      au < manifest ; 2006 ; 2006 ; Film Quarterly Volume 60 [2006] ; 60 >
+      au < manifest ; 2007 ; 2007 ; Film Quarterly Volume 60 [2007] ; 60 >
 #      au < doNotProcess ; 2007-2008 ; Film Quarterly Volume 61 ; 61 >
 #      au < doNotProcess ; 2008-2009 ; Film Quarterly Volume 62 ; 62 >
 #      au < doNotProcess ; 2009-2010 ; Film Quarterly Volume 63 ; 63 >
@@ -637,13 +665,15 @@
 #      au < doNotProcess ; 2014-2015 ; Film Quarterly Volume 68 ; 68 >
 #      au < doNotProcess ; 2015-2016 ; Film Quarterly Volume 69 ; 69 >
 #      au < doNotProcess ; 2016-2017 ; Film Quarterly Volume 70 ; 70 >
-#      au < doNotProcess ; 2017-2018 ; Film Quarterly Volume 71 ; 71 >
+      au < doNotProcess ; 2017 ; 2017 ; Film Quarterly Volume 71 [2017] ; 71 >
+      au < doNotProcess ; 2018 ; 2018 ; Film Quarterly Volume 71 [2018] ; 71 >
       au < doNotProcess ; 2018 ; 2018 ; Film Quarterly Volume 72 [2018] ; 72 >
       au < doNotProcess ; 2019 ; 2019 ; Film Quarterly Volume 72 [2019] ; 72 >
       au < doNotProcess ; 2019 ; 2019 ; Film Quarterly Volume 73 [2019] ; 73 >
       au < doNotProcess ; 2020 ; 2020 ; Film Quarterly Volume 73 [2020] ; 73 >
-      au < exists ; 2020 ; 2020 ; Film Quarterly Volume 74 [2020] ; 74 >
-      au < exists ; 2021 ; 2021 ; Film Quarterly Volume 74 [2021] ; 74 >
+      au < manifest ; 2020 ; 2020 ; Film Quarterly Volume 74 [2020] ; 74 >
+      au < manifest ; 2021 ; 2021 ; Film Quarterly Volume 74 [2021] ; 74 >
+      au < expected ; 2021 ; 2021 ; Film Quarterly Volume 75 [2021] ; 75 >
 
   }
 
@@ -654,8 +684,8 @@
         issn = 1529-3262 ;
         eissn = 1533-8622 
     >
-
       #param[base_url] = http://gcfs.ucpress.edu/
+
       param[journal_id] = gcfs
 
       au < exists ; 2001 ; 2001 ; Gastronomica: The Journal of Critical Food Studies Volume 1 ; 1 >
@@ -678,6 +708,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Gastronomica: The Journal of Critical Food Studies Volume 18 ; 18 >
       au < doNotProcess ; 2019 ; 2019 ; Gastronomica: The Journal of Critical Food Studies Volume 19 ; 19 >
       au < exists ; 2020 ; 2020 ; Gastronomica: The Journal of Critical Food Studies Volume 20 ; 20 >
+      au < expected ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
 
   }
 
@@ -688,8 +719,8 @@
         issn = 1939-1811 ;
         eissn = 1939-182X 
     >
-
       #param[base_url] = http://hsns.ucpress.edu/
+
       param[journal_id] = hsns
 
       au < exists ; 1969 ; 1969 ; Historical Studies in the Natural Sciences Volume 1 ; 1 >
@@ -702,33 +733,33 @@
       au < exists ; 1978 ; 1978 ; Historical Studies in the Natural Sciences Volume 8 ; 8 >
       au < exists ; 1979 ; 1979 ; Historical Studies in the Natural Sciences Volume 9 ; 9 >
       au < exists ; 1980 ; 1980 ; Historical Studies in the Natural Sciences Volume 10 ; 10 >
-      au < exists ; 1981 ; 1981 ; Historical Studies in the Natural Sciences Volume 11 ; 11 >
-      au < exists ; 1982 ; 1982 ; Historical Studies in the Natural Sciences Volume 12 ; 12 >
-      au < exists ; 1983 ; 1983 ; Historical Studies in the Natural Sciences Volume 13 ; 13 >
-      au < exists ; 1984 ; 1984 ; Historical Studies in the Natural Sciences Volume 14 ; 14 >
-      au < exists ; 1985 ; 1985 ; Historical Studies in the Natural Sciences Volume 15 ; 15 >
-      au < exists ; 1986 ; 1986 ; Historical Studies in the Natural Sciences Volume 16 ; 16 >
-      au < exists ; 1987 ; 1987 ; Historical Studies in the Natural Sciences Volume 17 ; 17 >
-      au < exists ; 1988 ; 1988 ; Historical Studies in the Natural Sciences Volume 18 ; 18 >
-      au < exists ; 1989 ; 1989 ; Historical Studies in the Natural Sciences Volume 19 ; 19 >
-      au < exists ; 1990 ; 1990 ; Historical Studies in the Natural Sciences Volume 20 ; 20 >
-      au < exists ; 1991 ; 1991 ; Historical Studies in the Natural Sciences Volume 21 ; 21 >
-      au < exists ; 1992 ; 1992 ; Historical Studies in the Natural Sciences Volume 22 ; 22 >
-      au < exists ; 1993 ; 1993 ; Historical Studies in the Natural Sciences Volume 23 ; 23 >
-      au < exists ; 1994 ; 1994 ; Historical Studies in the Natural Sciences Volume 24 ; 24 >
-      au < exists ; 1995 ; 1995 ; Historical Studies in the Natural Sciences Volume 25 ; 25 >
-      au < exists ; 1996 ; 1996 ; Historical Studies in the Natural Sciences Volume 26 ; 26 >
-      au < exists ; 1997 ; 1997 ; Historical Studies in the Natural Sciences Volume 27 ; 27 >
-      au < exists ; 1998 ; 1998 ; Historical Studies in the Natural Sciences Volume 28 ; 28 >
-      au < exists ; 1999 ; 1999 ; Historical Studies in the Natural Sciences Volume 29 ; 29 >
-      au < exists ; 2000 ; 2000 ; Historical Studies in the Natural Sciences Volume 30 ; 30 >
-      au < exists ; 2001 ; 2001 ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
-      au < exists ; 2002 ; 2002 ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
-      au < exists ; 2003 ; 2003 ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
-      au < exists ; 2004 ; 2004 ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
-      au < exists ; 2005 ; 2005 ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
-      au < exists ; 2006 ; 2006 ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
-      au < exists ; 2007 ; 2007 ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
+      au < manifest ; 1981 ; 1981 ; Historical Studies in the Natural Sciences Volume 11 ; 11 >
+      au < manifest ; 1982 ; 1982 ; Historical Studies in the Natural Sciences Volume 12 ; 12 >
+      au < manifest ; 1983 ; 1983 ; Historical Studies in the Natural Sciences Volume 13 ; 13 >
+      au < manifest ; 1984 ; 1984 ; Historical Studies in the Natural Sciences Volume 14 ; 14 >
+      au < manifest ; 1985 ; 1985 ; Historical Studies in the Natural Sciences Volume 15 ; 15 >
+      au < manifest ; 1986 ; 1986 ; Historical Studies in the Natural Sciences Volume 16 ; 16 >
+      au < manifest ; 1987 ; 1987 ; Historical Studies in the Natural Sciences Volume 17 ; 17 >
+      au < manifest ; 1988 ; 1988 ; Historical Studies in the Natural Sciences Volume 18 ; 18 >
+      au < manifest ; 1989 ; 1989 ; Historical Studies in the Natural Sciences Volume 19 ; 19 >
+      au < manifest ; 1990 ; 1990 ; Historical Studies in the Natural Sciences Volume 20 ; 20 >
+      au < manifest ; 1991 ; 1991 ; Historical Studies in the Natural Sciences Volume 21 ; 21 >
+      au < manifest ; 1992 ; 1992 ; Historical Studies in the Natural Sciences Volume 22 ; 22 >
+      au < manifest ; 1993 ; 1993 ; Historical Studies in the Natural Sciences Volume 23 ; 23 >
+      au < manifest ; 1994 ; 1994 ; Historical Studies in the Natural Sciences Volume 24 ; 24 >
+      au < manifest ; 1995 ; 1995 ; Historical Studies in the Natural Sciences Volume 25 ; 25 >
+      au < manifest ; 1996 ; 1996 ; Historical Studies in the Natural Sciences Volume 26 ; 26 >
+      au < manifest ; 1997 ; 1997 ; Historical Studies in the Natural Sciences Volume 27 ; 27 >
+      au < manifest ; 1998 ; 1998 ; Historical Studies in the Natural Sciences Volume 28 ; 28 >
+      au < manifest ; 1999 ; 1999 ; Historical Studies in the Natural Sciences Volume 29 ; 29 >
+      au < manifest ; 2000 ; 2000 ; Historical Studies in the Natural Sciences Volume 30 ; 30 >
+      au < manifest ; 2001 ; 2001 ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
+      au < manifest ; 2002 ; 2002 ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
+      au < manifest ; 2003 ; 2003 ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
+      au < manifest ; 2004 ; 2004 ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
+      au < manifest ; 2005 ; 2005 ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
+      au < manifest ; 2006 ; 2006 ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
+      au < manifest ; 2007 ; 2007 ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
       au < doNotProcess ; 2008 ; 2008 ; Historical Studies in the Natural Sciences Volume 38 ; 38 >
       au < doNotProcess ; 2009 ; 2009 ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
       au < doNotProcess ; 2010 ; 2010 ; Historical Studies in the Natural Sciences Volume 40 ; 40 >
@@ -741,7 +772,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Historical Studies in the Natural Sciences Volume 47 ; 47 >
       au < doNotProcess ; 2018 ; 2018 ; Historical Studies in the Natural Sciences Volume 48 ; 48 >
       au < doNotProcess ; 2019 ; 2019 ; Historical Studies in the Natural Sciences Volume 49 ; 49 >
-      au < exists ; 2020 ; 2020 ; Historical Studies in the Natural Sciences Volume 50 ; 50 >
+      au < manifest ; 2020 ; 2020 ; Historical Studies in the Natural Sciences Volume 50 ; 50 >
+      au < manifest ; 2021 ; 2021 ; Historical Studies in the Natural Sciences Volume 51 ; 51 >
 
   }
 
@@ -752,8 +784,8 @@
         issn = 1940-8447 ;
         eissn = 1940-8455 
     >
-
       #param[base_url] = http://irqr.ucpress.edu/
+
       param[journal_id] = irqr
 
       au < doNotProcess ; 2008 ; 2008 ; International Review of Qualitative Research Volume 1 ; 1 >
@@ -769,6 +801,7 @@
       au < doNotProcess ; 2018 ; 2018 ; International Review of Qualitative Research Volume 11 ; 11 >
       au < doNotProcess ; 2019 ; 2019 ; International Review of Qualitative Research Volume 12 ; 12 >
       au < exists ; 2020 ; 2020 ; International Review of Qualitative Research Volume 13 ; 13 >
+      au < expected ; 2021 ; 2021 ; International Review of Qualitative Research Volume 14 ; 14 >
 
   }
 
@@ -779,7 +812,6 @@
         issn = 0003-0139 ;
         eissn = 1547-3848 
     >
-
 #    {
 #      #param[base_url] = http://jams.ucpress.edu/content/ucpbams/
 #      #base_url has extra journal_id embedded http://jams.ucpress.edu/content/ucpbams/
@@ -798,70 +830,71 @@
 #      
 #    }
 #
+
     {
       #param[base_url] = http://jams.ucpress.edu/
       param[journal_id] = jams
 
-      au < exists ; 1948 ; 1948 ; Journal of the American Musicological Society Volume 1 ; 1 >
-      au < exists ; 1949 ; 1949 ; Journal of the American Musicological Society Volume 2 ; 2 >
-      au < exists ; 1950 ; 1950 ; Journal of the American Musicological Society Volume 3 ; 3 >
-      au < exists ; 1951 ; 1951 ; Journal of the American Musicological Society Volume 4 ; 4 >
-      au < exists ; 1952 ; 1952 ; Journal of the American Musicological Society Volume 5 ; 5 >
-      au < exists ; 1953 ; 1953 ; Journal of the American Musicological Society Volume 6 ; 6 >
-      au < exists ; 1954 ; 1954 ; Journal of the American Musicological Society Volume 7 ; 7 >
-      au < exists ; 1955 ; 1955 ; Journal of the American Musicological Society Volume 8 ; 8 >
-      au < exists ; 1956 ; 1956 ; Journal of the American Musicological Society Volume 9 ; 9 >
-      au < exists ; 1957 ; 1957 ; Journal of the American Musicological Society Volume 10 ; 10 >
-      au < exists ; 1958 ; 1958 ; Journal of the American Musicological Society Volume 11 ; 11 >
-      au < exists ; 1959 ; 1959 ; Journal of the American Musicological Society Volume 12 ; 12 >
-      au < exists ; 1960 ; 1960 ; Journal of the American Musicological Society Volume 13 ; 13 >
-      au < exists ; 1961 ; 1961 ; Journal of the American Musicological Society Volume 14 ; 14 >
-      au < exists ; 1962 ; 1962 ; Journal of the American Musicological Society Volume 15 ; 15 >
-      au < exists ; 1963 ; 1963 ; Journal of the American Musicological Society Volume 16 ; 16 >
-      au < exists ; 1964 ; 1964 ; Journal of the American Musicological Society Volume 17 ; 17 >
-      au < exists ; 1965 ; 1965 ; Journal of the American Musicological Society Volume 18 ; 18 >
-      au < exists ; 1966 ; 1966 ; Journal of the American Musicological Society Volume 19 ; 19 >
-      au < exists ; 1967 ; 1967 ; Journal of the American Musicological Society Volume 20 ; 20 >
-      au < exists ; 1968 ; 1968 ; Journal of the American Musicological Society Volume 21 ; 21 >
-      au < exists ; 1969 ; 1969 ; Journal of the American Musicological Society Volume 22 ; 22 >
-      au < exists ; 1970 ; 1970 ; Journal of the American Musicological Society Volume 23 ; 23 >
-      au < exists ; 1971 ; 1971 ; Journal of the American Musicological Society Volume 24 ; 24 >
-      au < exists ; 1972 ; 1972 ; Journal of the American Musicological Society Volume 25 ; 25 >
-      au < exists ; 1973 ; 1973 ; Journal of the American Musicological Society Volume 26 ; 26 >
-      au < exists ; 1974 ; 1974 ; Journal of the American Musicological Society Volume 27 ; 27 >
-      au < exists ; 1975 ; 1975 ; Journal of the American Musicological Society Volume 28 ; 28 >
-      au < exists ; 1976 ; 1976 ; Journal of the American Musicological Society Volume 29 ; 29 >
-      au < exists ; 1977 ; 1977 ; Journal of the American Musicological Society Volume 30 ; 30 >
-      au < exists ; 1978 ; 1978 ; Journal of the American Musicological Society Volume 31 ; 31 >
-      au < exists ; 1979 ; 1979 ; Journal of the American Musicological Society Volume 32 ; 32 >
-      au < exists ; 1980 ; 1980 ; Journal of the American Musicological Society Volume 33 ; 33 >
-      au < exists ; 1981 ; 1981 ; Journal of the American Musicological Society Volume 34 ; 34 >
-      au < exists ; 1982 ; 1982 ; Journal of the American Musicological Society Volume 35 ; 35 >
-      au < exists ; 1983 ; 1983 ; Journal of the American Musicological Society Volume 36 ; 36 >
-      au < exists ; 1984 ; 1984 ; Journal of the American Musicological Society Volume 37 ; 37 >
-      au < exists ; 1985 ; 1985 ; Journal of the American Musicological Society Volume 38 ; 38 >
-      au < exists ; 1986 ; 1986 ; Journal of the American Musicological Society Volume 39 ; 39 >
-      au < exists ; 1987 ; 1987 ; Journal of the American Musicological Society Volume 40 ; 40 >
-      au < exists ; 1988 ; 1988 ; Journal of the American Musicological Society Volume 41 ; 41 >
-      au < exists ; 1989 ; 1989 ; Journal of the American Musicological Society Volume 42 ; 42 >
+      au < manifest ; 1948 ; 1948 ; Journal of the American Musicological Society Volume 1 ; 1 >
+      au < manifest ; 1949 ; 1949 ; Journal of the American Musicological Society Volume 2 ; 2 >
+      au < manifest ; 1950 ; 1950 ; Journal of the American Musicological Society Volume 3 ; 3 >
+      au < manifest ; 1951 ; 1951 ; Journal of the American Musicological Society Volume 4 ; 4 >
+      au < manifest ; 1952 ; 1952 ; Journal of the American Musicological Society Volume 5 ; 5 >
+      au < manifest ; 1953 ; 1953 ; Journal of the American Musicological Society Volume 6 ; 6 >
+      au < manifest ; 1954 ; 1954 ; Journal of the American Musicological Society Volume 7 ; 7 >
+      au < manifest ; 1955 ; 1955 ; Journal of the American Musicological Society Volume 8 ; 8 >
+      au < manifest ; 1956 ; 1956 ; Journal of the American Musicological Society Volume 9 ; 9 >
+      au < manifest ; 1957 ; 1957 ; Journal of the American Musicological Society Volume 10 ; 10 >
+      au < manifest ; 1958 ; 1958 ; Journal of the American Musicological Society Volume 11 ; 11 >
+      au < manifest ; 1959 ; 1959 ; Journal of the American Musicological Society Volume 12 ; 12 >
+      au < manifest ; 1960 ; 1960 ; Journal of the American Musicological Society Volume 13 ; 13 >
+      au < manifest ; 1961 ; 1961 ; Journal of the American Musicological Society Volume 14 ; 14 >
+      au < manifest ; 1962 ; 1962 ; Journal of the American Musicological Society Volume 15 ; 15 >
+      au < manifest ; 1963 ; 1963 ; Journal of the American Musicological Society Volume 16 ; 16 >
+      au < manifest ; 1964 ; 1964 ; Journal of the American Musicological Society Volume 17 ; 17 >
+      au < manifest ; 1965 ; 1965 ; Journal of the American Musicological Society Volume 18 ; 18 >
+      au < manifest ; 1966 ; 1966 ; Journal of the American Musicological Society Volume 19 ; 19 >
+      au < manifest ; 1967 ; 1967 ; Journal of the American Musicological Society Volume 20 ; 20 >
+      au < manifest ; 1968 ; 1968 ; Journal of the American Musicological Society Volume 21 ; 21 >
+      au < manifest ; 1969 ; 1969 ; Journal of the American Musicological Society Volume 22 ; 22 >
+      au < manifest ; 1970 ; 1970 ; Journal of the American Musicological Society Volume 23 ; 23 >
+      au < manifest ; 1971 ; 1971 ; Journal of the American Musicological Society Volume 24 ; 24 >
+      au < manifest ; 1972 ; 1972 ; Journal of the American Musicological Society Volume 25 ; 25 >
+      au < manifest ; 1973 ; 1973 ; Journal of the American Musicological Society Volume 26 ; 26 >
+      au < manifest ; 1974 ; 1974 ; Journal of the American Musicological Society Volume 27 ; 27 >
+      au < manifest ; 1975 ; 1975 ; Journal of the American Musicological Society Volume 28 ; 28 >
+      au < manifest ; 1976 ; 1976 ; Journal of the American Musicological Society Volume 29 ; 29 >
+      au < manifest ; 1977 ; 1977 ; Journal of the American Musicological Society Volume 30 ; 30 >
+      au < manifest ; 1978 ; 1978 ; Journal of the American Musicological Society Volume 31 ; 31 >
+      au < manifest ; 1979 ; 1979 ; Journal of the American Musicological Society Volume 32 ; 32 >
+      au < manifest ; 1980 ; 1980 ; Journal of the American Musicological Society Volume 33 ; 33 >
+      au < manifest ; 1981 ; 1981 ; Journal of the American Musicological Society Volume 34 ; 34 >
+      au < manifest ; 1982 ; 1982 ; Journal of the American Musicological Society Volume 35 ; 35 >
+      au < manifest ; 1983 ; 1983 ; Journal of the American Musicological Society Volume 36 ; 36 >
+      au < manifest ; 1984 ; 1984 ; Journal of the American Musicological Society Volume 37 ; 37 >
+      au < manifest ; 1985 ; 1985 ; Journal of the American Musicological Society Volume 38 ; 38 >
+      au < manifest ; 1986 ; 1986 ; Journal of the American Musicological Society Volume 39 ; 39 >
+      au < manifest ; 1987 ; 1987 ; Journal of the American Musicological Society Volume 40 ; 40 >
+      au < manifest ; 1988 ; 1988 ; Journal of the American Musicological Society Volume 41 ; 41 >
+      au < manifest ; 1989 ; 1989 ; Journal of the American Musicological Society Volume 42 ; 42 >
       au < doNotProcess ; 1990 ; 1990 ; Journal of the American Musicological Society Volume 43 ; 43 >
-      au < exists ; 1991 ; 1991 ; Journal of the American Musicological Society Volume 44 ; 44 >
-      au < exists ; 1992 ; 1992 ; Journal of the American Musicological Society Volume 45 ; 45 >
-      au < exists ; 1993 ; 1993 ; Journal of the American Musicological Society Volume 46 ; 46 >
-      au < exists ; 1994 ; 1994 ; Journal of the American Musicological Society Volume 47 ; 47 >
-      au < exists ; 1995 ; 1995 ; Journal of the American Musicological Society Volume 48 ; 48 >
-      au < exists ; 1996 ; 1996 ; Journal of the American Musicological Society Volume 49 ; 49 >
-      au < exists ; 1997 ; 1997 ; Journal of the American Musicological Society Volume 50 ; 50 >
-      au < exists ; 1998 ; 1998 ; Journal of the American Musicological Society Volume 51 ; 51 >
-      au < exists ; 1999 ; 1999 ; Journal of the American Musicological Society Volume 52 ; 52 >
-      au < exists ; 2000 ; 2000 ; Journal of the American Musicological Society Volume 53 ; 53 >
-      au < exists ; 2001 ; 2001 ; Journal of the American Musicological Society Volume 54 ; 54 >
-      au < exists ; 2002 ; 2002 ; Journal of the American Musicological Society Volume 55 ; 55 >
-      au < exists ; 2003 ; 2003 ; Journal of the American Musicological Society Volume 56 ; 56 >
-      au < exists ; 2004 ; 2004 ; Journal of the American Musicological Society Volume 57 ; 57 >
-      au < exists ; 2005 ; 2005 ; Journal of the American Musicological Society Volume 58 ; 58 >
-      au < exists ; 2006 ; 2006 ; Journal of the American Musicological Society Volume 59 ; 59 >
-      au < exists ; 2007 ; 2007 ; Journal of the American Musicological Society Volume 60 ; 60 >
+      au < manifest ; 1991 ; 1991 ; Journal of the American Musicological Society Volume 44 ; 44 >
+      au < manifest ; 1992 ; 1992 ; Journal of the American Musicological Society Volume 45 ; 45 >
+      au < manifest ; 1993 ; 1993 ; Journal of the American Musicological Society Volume 46 ; 46 >
+      au < manifest ; 1994 ; 1994 ; Journal of the American Musicological Society Volume 47 ; 47 >
+      au < manifest ; 1995 ; 1995 ; Journal of the American Musicological Society Volume 48 ; 48 >
+      au < manifest ; 1996 ; 1996 ; Journal of the American Musicological Society Volume 49 ; 49 >
+      au < manifest ; 1997 ; 1997 ; Journal of the American Musicological Society Volume 50 ; 50 >
+      au < manifest ; 1998 ; 1998 ; Journal of the American Musicological Society Volume 51 ; 51 >
+      au < manifest ; 1999 ; 1999 ; Journal of the American Musicological Society Volume 52 ; 52 >
+      au < manifest ; 2000 ; 2000 ; Journal of the American Musicological Society Volume 53 ; 53 >
+      au < manifest ; 2001 ; 2001 ; Journal of the American Musicological Society Volume 54 ; 54 >
+      au < manifest ; 2002 ; 2002 ; Journal of the American Musicological Society Volume 55 ; 55 >
+      au < manifest ; 2003 ; 2003 ; Journal of the American Musicological Society Volume 56 ; 56 >
+      au < manifest ; 2004 ; 2004 ; Journal of the American Musicological Society Volume 57 ; 57 >
+      au < manifest ; 2005 ; 2005 ; Journal of the American Musicological Society Volume 58 ; 58 >
+      au < manifest ; 2006 ; 2006 ; Journal of the American Musicological Society Volume 59 ; 59 >
+      au < manifest ; 2007 ; 2007 ; Journal of the American Musicological Society Volume 60 ; 60 >
       au < doNotProcess ; 2008 ; 2008 ; Journal of the American Musicological Society Volume 61 ; 61 >
       au < doNotProcess ; 2009 ; 2009 ; Journal of the American Musicological Society Volume 62 ; 62 >
       au < doNotProcess ; 2010 ; 2010 ; Journal of the American Musicological Society Volume 63 ; 63 >
@@ -874,7 +907,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Journal of the American Musicological Society Volume 70 ; 70 >
       au < doNotProcess ; 2018 ; 2018 ; Journal of the American Musicological Society Volume 71 ; 71 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of the American Musicological Society Volume 72 ; 72 >
-      au < exists ; 2020 ; 2020 ; Journal of the American Musicological Society Volume 73 ; 73 >
+      au < manifest ; 2020 ; 2020 ; Journal of the American Musicological Society Volume 73 ; 73 >
+      au < manifest ; 2021 ; 2021 ; Journal of the American Musicological Society Volume 74 ; 74 >
 
     }
 
@@ -887,35 +921,35 @@
         issn = 0277-9269 ;
         eissn = 1533-8347 
     >
-
       #param[base_url] = http://jm.ucpress.edu/
+
       param[journal_id] = jm
 
-      au < exists ; 1982 ; 1982 ; The Journal of Musicology Volume 1 ; 1 >
-      au < exists ; 1983 ; 1983 ; The Journal of Musicology Volume 2 ; 2 >
-      au < exists ; 1984 ; 1984 ; The Journal of Musicology Volume 3 ; 3 >
+      au < manifest ; 1982 ; 1982 ; The Journal of Musicology Volume 1 ; 1 >
+      au < manifest ; 1983 ; 1983 ; The Journal of Musicology Volume 2 ; 2 >
+      au < manifest ; 1984 ; 1984 ; The Journal of Musicology Volume 3 ; 3 >
       au < doNotProcess ; 1985 ; 1985 ; The Journal of Musicology Volume 4 [1985] ; 4 >
       au < doNotProcess ; 1986 ; 1986 ; The Journal of Musicology Volume 4 [1986] ; 4 >
-      au < exists ; 1987 ; 1987 ; The Journal of Musicology Volume 5 ; 5 >
-      au < exists ; 1988 ; 1988 ; The Journal of Musicology Volume 6 ; 6 >
-      au < exists ; 1989 ; 1989 ; The Journal of Musicology Volume 7 ; 7 >
-      au < exists ; 1990 ; 1990 ; The Journal of Musicology Volume 8 ; 8 >
-      au < exists ; 1991 ; 1991 ; The Journal of Musicology Volume 9 ; 9 >
-      au < exists ; 1992 ; 1992 ; The Journal of Musicology Volume 10 ; 10 >
-      au < exists ; 1993 ; 1993 ; The Journal of Musicology Volume 11 ; 11 >
-      au < exists ; 1994 ; 1994 ; The Journal of Musicology Volume 12 ; 12 >
-      au < exists ; 1995 ; 1995 ; The Journal of Musicology Volume 13 ; 13 >
-      au < exists ; 1996 ; 1996 ; The Journal of Musicology Volume 14 ; 14 >
-      au < exists ; 1997 ; 1997 ; The Journal of Musicology Volume 15 ; 15 >
-      au < exists ; 1998 ; 1998 ; The Journal of Musicology Volume 16 ; 16 >
-      au < exists ; 1999 ; 1999 ; The Journal of Musicology Volume 17 ; 17 >
-      au < exists ; 2001 ; 2001 ; The Journal of Musicology Volume 18 ; 18 >
-      au < exists ; 2002 ; 2002 ; The Journal of Musicology Volume 19 ; 19 >
-      au < exists ; 2003 ; 2003 ; The Journal of Musicology Volume 20 ; 20 >
-      au < exists ; 2004 ; 2004 ; The Journal of Musicology Volume 21 ; 21 >
-      au < exists ; 2005 ; 2005 ; The Journal of Musicology Volume 22 ; 22 >
-      au < exists ; 2006 ; 2006 ; The Journal of Musicology Volume 23 ; 23 >
-      au < exists ; 2007 ; 2007 ; The Journal of Musicology Volume 24 ; 24 >
+      au < manifest ; 1987 ; 1987 ; The Journal of Musicology Volume 5 ; 5 >
+      au < manifest ; 1988 ; 1988 ; The Journal of Musicology Volume 6 ; 6 >
+      au < manifest ; 1989 ; 1989 ; The Journal of Musicology Volume 7 ; 7 >
+      au < manifest ; 1990 ; 1990 ; The Journal of Musicology Volume 8 ; 8 >
+      au < manifest ; 1991 ; 1991 ; The Journal of Musicology Volume 9 ; 9 >
+      au < manifest ; 1992 ; 1992 ; The Journal of Musicology Volume 10 ; 10 >
+      au < manifest ; 1993 ; 1993 ; The Journal of Musicology Volume 11 ; 11 >
+      au < manifest ; 1994 ; 1994 ; The Journal of Musicology Volume 12 ; 12 >
+      au < manifest ; 1995 ; 1995 ; The Journal of Musicology Volume 13 ; 13 >
+      au < manifest ; 1996 ; 1996 ; The Journal of Musicology Volume 14 ; 14 >
+      au < manifest ; 1997 ; 1997 ; The Journal of Musicology Volume 15 ; 15 >
+      au < manifest ; 1998 ; 1998 ; The Journal of Musicology Volume 16 ; 16 >
+      au < manifest ; 1999 ; 1999 ; The Journal of Musicology Volume 17 ; 17 >
+      au < manifest ; 2001 ; 2001 ; The Journal of Musicology Volume 18 ; 18 >
+      au < manifest ; 2002 ; 2002 ; The Journal of Musicology Volume 19 ; 19 >
+      au < manifest ; 2003 ; 2003 ; The Journal of Musicology Volume 20 ; 20 >
+      au < manifest ; 2004 ; 2004 ; The Journal of Musicology Volume 21 ; 21 >
+      au < manifest ; 2005 ; 2005 ; The Journal of Musicology Volume 22 ; 22 >
+      au < manifest ; 2006 ; 2006 ; The Journal of Musicology Volume 23 ; 23 >
+      au < manifest ; 2007 ; 2007 ; The Journal of Musicology Volume 24 ; 24 >
       au < doNotProcess ; 2008 ; 2008 ; The Journal of Musicology Volume 25 ; 25 >
       au < doNotProcess ; 2009 ; 2009 ; The Journal of Musicology Volume 26 ; 26 >
       au < doNotProcess ; 2010 ; 2010 ; The Journal of Musicology Volume 27 ; 27 >
@@ -928,7 +962,8 @@
       au < doNotProcess ; 2017 ; 2017 ; The Journal of Musicology Volume 34 ; 34 >
       au < doNotProcess ; 2018 ; 2018 ; The Journal of Musicology Volume 35 ; 35 >
       au < doNotProcess ; 2019 ; 2019 ; The Journal of Musicology Volume 36 ; 36 >
-      au < exists ; 2020 ; 2020 ; The Journal of Musicology Volume 37 ; 37 >
+      au < manifest ; 2020 ; 2020 ; The Journal of Musicology Volume 37 ; 37 >
+      au < manifest ; 2021 ; 2021 ; The Journal of Musicology Volume 38 ; 38 >
 
   }
 
@@ -939,10 +974,9 @@
         issn = 0377-919X ;
         eissn = 1533-8614 
     >
-
       #param[base_url] = http://jps.ucpress.edu/
-      param[journal_id] = jps
 
+      param[journal_id] = jps
 #      au < exists ; 1971-1972 ; Journal of Palestine Studies Volume 1 ; 1 >
 #      au < exists ; 1972-1973 ; Journal of Palestine Studies Volume 2 ; 2 >
 #      au < exists ; 1973-1974 ; Journal of Palestine Studies Volume 3 ; 3 >
@@ -991,9 +1025,10 @@
 #      au < doNotProcess ; 2016-2017 ; Journal of Palestine Studies Volume 46 ; 46 >
 #      au < doNotProcess ; 2017-2018 ; Journal of Palestine Studies Volume 47 ; 47 >
 #      au < doNotProcess ; 2018-2019 ; Journal of Palestine Studies Volume 48 ; 48 >
-#      au < doNotProcess ; 2019-2020 ; Journal of Palestine Studies Volume 49 ; 49 >
-      au < exists ; 2020 ; 2020 ; Journal of Palestine Studies Volume 50 [2020] ; 50 >
-      au < exists ; 2021 ; 2021 ; Journal of Palestine Studies Volume 50 [2021] ; 50 >
+      au < doNotProcess ; 2019 ; 2019 ; Journal of Palestine Studies Volume 49 [2019] ; 49 >
+      au < doNotProcess ; 2020 ; 2020 ; Journal of Palestine Studies Volume 49 [2020] ; 49 >
+      au < expected ; 2020 ; 2020 ; Journal of Palestine Studies Volume 50 [2020] ; 50 >
+      au < expected ; 2021 ; 2021 ; Journal of Palestine Studies Volume 50 [2021] ; 50 >
 
   }
 
@@ -1004,76 +1039,76 @@
         issn = 0037-9808 ;
         eissn = 2150-5926 
     >
-
       #param[base_url] = http://jsah.ucpress.edu/
+
       param[journal_id] = jsah
 
-      au < exists ; 1941 ; 1941 ; Journal of the Society of Architectural Historians Volume 1 ; 1 >
-      au < exists ; 1942 ; 1942 ; Journal of the Society of Architectural Historians Volume 2 ; 2 >
-      au < exists ; 1943 ; 1943 ; Journal of the Society of Architectural Historians Volume 3 ; 3 >
-      au < exists ; 1944 ; 1944 ; Journal of the Society of Architectural Historians Volume 4 ; 4 >
+      au < manifest ; 1941 ; 1941 ; Journal of the Society of Architectural Historians Volume 1 ; 1 >
+      au < manifest ; 1942 ; 1942 ; Journal of the Society of Architectural Historians Volume 2 ; 2 >
+      au < manifest ; 1943 ; 1943 ; Journal of the Society of Architectural Historians Volume 3 ; 3 >
+      au < manifest ; 1944 ; 1944 ; Journal of the Society of Architectural Historians Volume 4 ; 4 >
       au < exists ; 1945 ; 1945 ; Journal of the Society of Architectural Historians Volume 5 ; 5 >
-      au < exists ; 1947 ; 1947 ; Journal of the Society of Architectural Historians Volume 6 ; 6 >
-      au < exists ; 1948 ; 1948 ; Journal of the Society of Architectural Historians Volume 7 ; 7 >
-      au < exists ; 1949 ; 1949 ; Journal of the Society of Architectural Historians Volume 8 ; 8 >
-      au < exists ; 1950 ; 1950 ; Journal of the Society of Architectural Historians Volume 9 ; 9 >
-      au < exists ; 1951 ; 1951 ; Journal of the Society of Architectural Historians Volume 10 ; 10 >
-      au < exists ; 1952 ; 1952 ; Journal of the Society of Architectural Historians Volume 11 ; 11 >
-      au < exists ; 1953 ; 1953 ; Journal of the Society of Architectural Historians Volume 12 ; 12 >
-      au < exists ; 1954 ; 1954 ; Journal of the Society of Architectural Historians Volume 13 ; 13 >
-      au < exists ; 1955 ; 1955 ; Journal of the Society of Architectural Historians Volume 14 ; 14 >
-      au < exists ; 1956 ; 1956 ; Journal of the Society of Architectural Historians Volume 15 ; 15 >
-      au < exists ; 1957 ; 1957 ; Journal of the Society of Architectural Historians Volume 16 ; 16 >
-      au < exists ; 1958 ; 1958 ; Journal of the Society of Architectural Historians Volume 17 ; 17 >
-      au < exists ; 1959 ; 1959 ; Journal of the Society of Architectural Historians Volume 18 ; 18 >
-      au < exists ; 1960 ; 1960 ; Journal of the Society of Architectural Historians Volume 19 ; 19 >
-      au < exists ; 1961 ; 1961 ; Journal of the Society of Architectural Historians Volume 20 ; 20 >
-      au < exists ; 1962 ; 1962 ; Journal of the Society of Architectural Historians Volume 21 ; 21 >
-      au < exists ; 1963 ; 1963 ; Journal of the Society of Architectural Historians Volume 22 ; 22 >
-      au < exists ; 1964 ; 1964 ; Journal of the Society of Architectural Historians Volume 23 ; 23 >
-      au < exists ; 1965 ; 1965 ; Journal of the Society of Architectural Historians Volume 24 ; 24 >
-      au < exists ; 1966 ; 1966 ; Journal of the Society of Architectural Historians Volume 25 ; 25 >
-      au < exists ; 1967 ; 1967 ; Journal of the Society of Architectural Historians Volume 26 ; 26 >
-      au < exists ; 1968 ; 1968 ; Journal of the Society of Architectural Historians Volume 27 ; 27 >
-      au < exists ; 1969 ; 1969 ; Journal of the Society of Architectural Historians Volume 28 ; 28 >
-      au < exists ; 1970 ; 1970 ; Journal of the Society of Architectural Historians Volume 29 ; 29 >
-      au < exists ; 1971 ; 1971 ; Journal of the Society of Architectural Historians Volume 30 ; 30 >
-      au < exists ; 1972 ; 1972 ; Journal of the Society of Architectural Historians Volume 31 ; 31 >
-      au < exists ; 1973 ; 1973 ; Journal of the Society of Architectural Historians Volume 32 ; 32 >
-      au < exists ; 1974 ; 1974 ; Journal of the Society of Architectural Historians Volume 33 ; 33 >
-      au < exists ; 1975 ; 1975 ; Journal of the Society of Architectural Historians Volume 34 ; 34 >
-      au < exists ; 1976 ; 1976 ; Journal of the Society of Architectural Historians Volume 35 ; 35 >
-      au < exists ; 1977 ; 1977 ; Journal of the Society of Architectural Historians Volume 36 ; 36 >
-      au < exists ; 1978 ; 1978 ; Journal of the Society of Architectural Historians Volume 37 ; 37 >
-      au < exists ; 1979 ; 1979 ; Journal of the Society of Architectural Historians Volume 38 ; 38 >
-      au < exists ; 1980 ; 1980 ; Journal of the Society of Architectural Historians Volume 39 ; 39 >
-      au < exists ; 1981 ; 1981 ; Journal of the Society of Architectural Historians Volume 40 ; 40 >
-      au < exists ; 1982 ; 1982 ; Journal of the Society of Architectural Historians Volume 41 ; 41 >
-      au < exists ; 1983 ; 1983 ; Journal of the Society of Architectural Historians Volume 42 ; 42 >
-      au < exists ; 1984 ; 1984 ; Journal of the Society of Architectural Historians Volume 43 ; 43 >
-      au < exists ; 1985 ; 1985 ; Journal of the Society of Architectural Historians Volume 44 ; 44 >
-      au < exists ; 1986 ; 1986 ; Journal of the Society of Architectural Historians Volume 45 ; 45 >
-      au < exists ; 1987 ; 1987 ; Journal of the Society of Architectural Historians Volume 46 ; 46 >
-      au < exists ; 1988 ; 1988 ; Journal of the Society of Architectural Historians Volume 47 ; 47 >
-      au < exists ; 1989 ; 1989 ; Journal of the Society of Architectural Historians Volume 48 ; 48 >
-      au < exists ; 1990 ; 1990 ; Journal of the Society of Architectural Historians Volume 49 ; 49 >
-      au < exists ; 1991 ; 1991 ; Journal of the Society of Architectural Historians Volume 50 ; 50 >
-      au < exists ; 1992 ; 1992 ; Journal of the Society of Architectural Historians Volume 51 ; 51 >
-      au < exists ; 1993 ; 1993 ; Journal of the Society of Architectural Historians Volume 52 ; 52 >
-      au < exists ; 1994 ; 1994 ; Journal of the Society of Architectural Historians Volume 53 ; 53 >
-      au < exists ; 1995 ; 1995 ; Journal of the Society of Architectural Historians Volume 54 ; 54 >
-      au < exists ; 1996 ; 1996 ; Journal of the Society of Architectural Historians Volume 55 ; 55 >
-      au < exists ; 1997 ; 1997 ; Journal of the Society of Architectural Historians Volume 56 ; 56 >
-      au < exists ; 1998 ; 1998 ; Journal of the Society of Architectural Historians Volume 57 ; 57 >
-      au < exists ; 1999 ; 1999 ; Journal of the Society of Architectural Historians Volume 58 ; 58 >
-      au < exists ; 2000 ; 2000 ; Journal of the Society of Architectural Historians Volume 59 ; 59 >
-      au < exists ; 2001 ; 2001 ; Journal of the Society of Architectural Historians Volume 60 ; 60 >
-      au < exists ; 2002 ; 2002 ; Journal of the Society of Architectural Historians Volume 61 ; 61 >
-      au < exists ; 2003 ; 2003 ; Journal of the Society of Architectural Historians Volume 62 ; 62 >
-      au < exists ; 2004 ; 2004 ; Journal of the Society of Architectural Historians Volume 63 ; 63 >
-      au < exists ; 2005 ; 2005 ; Journal of the Society of Architectural Historians Volume 64 ; 64 >
-      au < exists ; 2006 ; 2006 ; Journal of the Society of Architectural Historians Volume 65 ; 65 >
-      au < exists ; 2007 ; 2007 ; Journal of the Society of Architectural Historians Volume 66 ; 66 >
+      au < manifest ; 1947 ; 1947 ; Journal of the Society of Architectural Historians Volume 6 ; 6 >
+      au < manifest ; 1948 ; 1948 ; Journal of the Society of Architectural Historians Volume 7 ; 7 >
+      au < manifest ; 1949 ; 1949 ; Journal of the Society of Architectural Historians Volume 8 ; 8 >
+      au < manifest ; 1950 ; 1950 ; Journal of the Society of Architectural Historians Volume 9 ; 9 >
+      au < manifest ; 1951 ; 1951 ; Journal of the Society of Architectural Historians Volume 10 ; 10 >
+      au < manifest ; 1952 ; 1952 ; Journal of the Society of Architectural Historians Volume 11 ; 11 >
+      au < manifest ; 1953 ; 1953 ; Journal of the Society of Architectural Historians Volume 12 ; 12 >
+      au < manifest ; 1954 ; 1954 ; Journal of the Society of Architectural Historians Volume 13 ; 13 >
+      au < manifest ; 1955 ; 1955 ; Journal of the Society of Architectural Historians Volume 14 ; 14 >
+      au < manifest ; 1956 ; 1956 ; Journal of the Society of Architectural Historians Volume 15 ; 15 >
+      au < manifest ; 1957 ; 1957 ; Journal of the Society of Architectural Historians Volume 16 ; 16 >
+      au < manifest ; 1958 ; 1958 ; Journal of the Society of Architectural Historians Volume 17 ; 17 >
+      au < manifest ; 1959 ; 1959 ; Journal of the Society of Architectural Historians Volume 18 ; 18 >
+      au < manifest ; 1960 ; 1960 ; Journal of the Society of Architectural Historians Volume 19 ; 19 >
+      au < manifest ; 1961 ; 1961 ; Journal of the Society of Architectural Historians Volume 20 ; 20 >
+      au < manifest ; 1962 ; 1962 ; Journal of the Society of Architectural Historians Volume 21 ; 21 >
+      au < manifest ; 1963 ; 1963 ; Journal of the Society of Architectural Historians Volume 22 ; 22 >
+      au < manifest ; 1964 ; 1964 ; Journal of the Society of Architectural Historians Volume 23 ; 23 >
+      au < manifest ; 1965 ; 1965 ; Journal of the Society of Architectural Historians Volume 24 ; 24 >
+      au < manifest ; 1966 ; 1966 ; Journal of the Society of Architectural Historians Volume 25 ; 25 >
+      au < manifest ; 1967 ; 1967 ; Journal of the Society of Architectural Historians Volume 26 ; 26 >
+      au < manifest ; 1968 ; 1968 ; Journal of the Society of Architectural Historians Volume 27 ; 27 >
+      au < manifest ; 1969 ; 1969 ; Journal of the Society of Architectural Historians Volume 28 ; 28 >
+      au < manifest ; 1970 ; 1970 ; Journal of the Society of Architectural Historians Volume 29 ; 29 >
+      au < manifest ; 1971 ; 1971 ; Journal of the Society of Architectural Historians Volume 30 ; 30 >
+      au < manifest ; 1972 ; 1972 ; Journal of the Society of Architectural Historians Volume 31 ; 31 >
+      au < manifest ; 1973 ; 1973 ; Journal of the Society of Architectural Historians Volume 32 ; 32 >
+      au < manifest ; 1974 ; 1974 ; Journal of the Society of Architectural Historians Volume 33 ; 33 >
+      au < manifest ; 1975 ; 1975 ; Journal of the Society of Architectural Historians Volume 34 ; 34 >
+      au < manifest ; 1976 ; 1976 ; Journal of the Society of Architectural Historians Volume 35 ; 35 >
+      au < manifest ; 1977 ; 1977 ; Journal of the Society of Architectural Historians Volume 36 ; 36 >
+      au < manifest ; 1978 ; 1978 ; Journal of the Society of Architectural Historians Volume 37 ; 37 >
+      au < manifest ; 1979 ; 1979 ; Journal of the Society of Architectural Historians Volume 38 ; 38 >
+      au < manifest ; 1980 ; 1980 ; Journal of the Society of Architectural Historians Volume 39 ; 39 >
+      au < manifest ; 1981 ; 1981 ; Journal of the Society of Architectural Historians Volume 40 ; 40 >
+      au < manifest ; 1982 ; 1982 ; Journal of the Society of Architectural Historians Volume 41 ; 41 >
+      au < manifest ; 1983 ; 1983 ; Journal of the Society of Architectural Historians Volume 42 ; 42 >
+      au < manifest ; 1984 ; 1984 ; Journal of the Society of Architectural Historians Volume 43 ; 43 >
+      au < manifest ; 1985 ; 1985 ; Journal of the Society of Architectural Historians Volume 44 ; 44 >
+      au < manifest ; 1986 ; 1986 ; Journal of the Society of Architectural Historians Volume 45 ; 45 >
+      au < manifest ; 1987 ; 1987 ; Journal of the Society of Architectural Historians Volume 46 ; 46 >
+      au < manifest ; 1988 ; 1988 ; Journal of the Society of Architectural Historians Volume 47 ; 47 >
+      au < manifest ; 1989 ; 1989 ; Journal of the Society of Architectural Historians Volume 48 ; 48 >
+      au < manifest ; 1990 ; 1990 ; Journal of the Society of Architectural Historians Volume 49 ; 49 >
+      au < manifest ; 1991 ; 1991 ; Journal of the Society of Architectural Historians Volume 50 ; 50 >
+      au < manifest ; 1992 ; 1992 ; Journal of the Society of Architectural Historians Volume 51 ; 51 >
+      au < manifest ; 1993 ; 1993 ; Journal of the Society of Architectural Historians Volume 52 ; 52 >
+      au < manifest ; 1994 ; 1994 ; Journal of the Society of Architectural Historians Volume 53 ; 53 >
+      au < manifest ; 1995 ; 1995 ; Journal of the Society of Architectural Historians Volume 54 ; 54 >
+      au < manifest ; 1996 ; 1996 ; Journal of the Society of Architectural Historians Volume 55 ; 55 >
+      au < manifest ; 1997 ; 1997 ; Journal of the Society of Architectural Historians Volume 56 ; 56 >
+      au < manifest ; 1998 ; 1998 ; Journal of the Society of Architectural Historians Volume 57 ; 57 >
+      au < manifest ; 1999 ; 1999 ; Journal of the Society of Architectural Historians Volume 58 ; 58 >
+      au < manifest ; 2000 ; 2000 ; Journal of the Society of Architectural Historians Volume 59 ; 59 >
+      au < manifest ; 2001 ; 2001 ; Journal of the Society of Architectural Historians Volume 60 ; 60 >
+      au < manifest ; 2002 ; 2002 ; Journal of the Society of Architectural Historians Volume 61 ; 61 >
+      au < manifest ; 2003 ; 2003 ; Journal of the Society of Architectural Historians Volume 62 ; 62 >
+      au < manifest ; 2004 ; 2004 ; Journal of the Society of Architectural Historians Volume 63 ; 63 >
+      au < manifest ; 2005 ; 2005 ; Journal of the Society of Architectural Historians Volume 64 ; 64 >
+      au < manifest ; 2006 ; 2006 ; Journal of the Society of Architectural Historians Volume 65 ; 65 >
+      au < manifest ; 2007 ; 2007 ; Journal of the Society of Architectural Historians Volume 66 ; 66 >
       au < doNotProcess ; 2008 ; 2008 ; Journal of the Society of Architectural Historians Volume 67 ; 67 >
       au < doNotProcess ; 2009 ; 2009 ; Journal of the Society of Architectural Historians Volume 68 ; 68 >
       au < doNotProcess ; 2010 ; 2010 ; Journal of the Society of Architectural Historians Volume 69 ; 69 >
@@ -1086,10 +1121,10 @@
       au < doNotProcess ; 2017 ; 2017 ; Journal of the Society of Architectural Historians Volume 76 ; 76 >
       au < doNotProcess ; 2018 ; 2018 ; Journal of the Society of Architectural Historians Volume 77 ; 77 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of the Society of Architectural Historians Volume 78 ; 78 >
-      au < exists ; 2020 ; 2020 ; Journal of the Society of Architectural Historians Volume 79 ; 79 >
+      au < manifest ; 2020 ; 2020 ; Journal of the Society of Architectural Historians Volume 79 ; 79 >
+      au < manifest ; 2021 ; 2021 ; Journal of the Society of Architectural Historians Volume 80 ; 80 >
 
   }
-
 #  {
 #
 #    title <
@@ -1108,6 +1143,7 @@
 #
 #  }
 
+
   {
 
       title <
@@ -1115,33 +1151,33 @@
         issn = 0742-9797 ;
         eissn = 1533-8320 
     >
-
       #param[base_url] = http://msem.ucpress.edu/
+
       param[journal_id] = msem
 
-      au < exists ; 1985 ; 1985 ; Mexican Studies/Estudios Mexicanos Volume 1 ; 1 >
-      au < exists ; 1986 ; 1986 ; Mexican Studies/Estudios Mexicanos Volume 2 ; 2 >
-      au < exists ; 1987 ; 1987 ; Mexican Studies/Estudios Mexicanos Volume 3 ; 3 >
-      au < exists ; 1988 ; 1988 ; Mexican Studies/Estudios Mexicanos Volume 4 ; 4 >
-      au < exists ; 1989 ; 1989 ; Mexican Studies/Estudios Mexicanos Volume 5 ; 5 >
-      au < exists ; 1990 ; 1990 ; Mexican Studies/Estudios Mexicanos Volume 6 ; 6 >
-      au < exists ; 1991 ; 1991 ; Mexican Studies/Estudios Mexicanos Volume 7 ; 7 >
-      au < exists ; 1992 ; 1992 ; Mexican Studies/Estudios Mexicanos Volume 8 ; 8 >
-      au < exists ; 1993 ; 1993 ; Mexican Studies/Estudios Mexicanos Volume 9 ; 9 >
-      au < exists ; 1994 ; 1994 ; Mexican Studies/Estudios Mexicanos Volume 10 ; 10 >
-      au < exists ; 1995 ; 1995 ; Mexican Studies/Estudios Mexicanos Volume 11 ; 11 >
-      au < exists ; 1996 ; 1996 ; Mexican Studies/Estudios Mexicanos Volume 12 ; 12 >
-      au < exists ; 1997 ; 1997 ; Mexican Studies/Estudios Mexicanos Volume 13 ; 13 >
-      au < exists ; 1998 ; 1998 ; Mexican Studies/Estudios Mexicanos Volume 14 ; 14 >
-      au < exists ; 1999 ; 1999 ; Mexican Studies/Estudios Mexicanos Volume 15 ; 15 >
-      au < exists ; 2000 ; 2000 ; Mexican Studies/Estudios Mexicanos Volume 16 ; 16 >
-      au < exists ; 2001 ; 2001 ; Mexican Studies/Estudios Mexicanos Volume 17 ; 17 >
-      au < exists ; 2002 ; 2002 ; Mexican Studies/Estudios Mexicanos Volume 18 ; 18 >
-      au < exists ; 2003 ; 2003 ; Mexican Studies/Estudios Mexicanos Volume 19 ; 19 >
-      au < exists ; 2004 ; 2004 ; Mexican Studies/Estudios Mexicanos Volume 20 ; 20 >
-      au < exists ; 2005 ; 2005 ; Mexican Studies/Estudios Mexicanos Volume 21 ; 21 >
-      au < exists ; 2006 ; 2006 ; Mexican Studies/Estudios Mexicanos Volume 22 ; 22 >
-      au < exists ; 2007 ; 2007 ; Mexican Studies/Estudios Mexicanos Volume 23 ; 23 >
+      au < manifest ; 1985 ; 1985 ; Mexican Studies/Estudios Mexicanos Volume 1 ; 1 >
+      au < manifest ; 1986 ; 1986 ; Mexican Studies/Estudios Mexicanos Volume 2 ; 2 >
+      au < manifest ; 1987 ; 1987 ; Mexican Studies/Estudios Mexicanos Volume 3 ; 3 >
+      au < manifest ; 1988 ; 1988 ; Mexican Studies/Estudios Mexicanos Volume 4 ; 4 >
+      au < manifest ; 1989 ; 1989 ; Mexican Studies/Estudios Mexicanos Volume 5 ; 5 >
+      au < manifest ; 1990 ; 1990 ; Mexican Studies/Estudios Mexicanos Volume 6 ; 6 >
+      au < manifest ; 1991 ; 1991 ; Mexican Studies/Estudios Mexicanos Volume 7 ; 7 >
+      au < manifest ; 1992 ; 1992 ; Mexican Studies/Estudios Mexicanos Volume 8 ; 8 >
+      au < manifest ; 1993 ; 1993 ; Mexican Studies/Estudios Mexicanos Volume 9 ; 9 >
+      au < manifest ; 1994 ; 1994 ; Mexican Studies/Estudios Mexicanos Volume 10 ; 10 >
+      au < manifest ; 1995 ; 1995 ; Mexican Studies/Estudios Mexicanos Volume 11 ; 11 >
+      au < manifest ; 1996 ; 1996 ; Mexican Studies/Estudios Mexicanos Volume 12 ; 12 >
+      au < manifest ; 1997 ; 1997 ; Mexican Studies/Estudios Mexicanos Volume 13 ; 13 >
+      au < manifest ; 1998 ; 1998 ; Mexican Studies/Estudios Mexicanos Volume 14 ; 14 >
+      au < manifest ; 1999 ; 1999 ; Mexican Studies/Estudios Mexicanos Volume 15 ; 15 >
+      au < manifest ; 2000 ; 2000 ; Mexican Studies/Estudios Mexicanos Volume 16 ; 16 >
+      au < manifest ; 2001 ; 2001 ; Mexican Studies/Estudios Mexicanos Volume 17 ; 17 >
+      au < manifest ; 2002 ; 2002 ; Mexican Studies/Estudios Mexicanos Volume 18 ; 18 >
+      au < manifest ; 2003 ; 2003 ; Mexican Studies/Estudios Mexicanos Volume 19 ; 19 >
+      au < manifest ; 2004 ; 2004 ; Mexican Studies/Estudios Mexicanos Volume 20 ; 20 >
+      au < manifest ; 2005 ; 2005 ; Mexican Studies/Estudios Mexicanos Volume 21 ; 21 >
+      au < manifest ; 2006 ; 2006 ; Mexican Studies/Estudios Mexicanos Volume 22 ; 22 >
+      au < manifest ; 2007 ; 2007 ; Mexican Studies/Estudios Mexicanos Volume 23 ; 23 >
       au < doNotProcess ; 2008 ; 2008 ; Mexican Studies/Estudios Mexicanos Volume 24 ; 24 >
       au < doNotProcess ; 2009 ; 2009 ; Mexican Studies/Estudios Mexicanos Volume 25 ; 25 >
       au < doNotProcess ; 2010 ; 2010 ; Mexican Studies/Estudios Mexicanos Volume 26 ; 26 >
@@ -1154,7 +1190,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Mexican Studies/Estudios Mexicanos Volume 33 ; 33 >
       au < doNotProcess ; 2018 ; 2018 ; Mexican Studies/Estudios Mexicanos Volume 34 ; 34 >
       au < doNotProcess ; 2019 ; 2019 ; Mexican Studies/Estudios Mexicanos Volume 35 ; 35 >
-      au < exists ; 2020 ; 2020 ; Mexican Studies/Estudios Mexicanos Volume 36 ; 36 >
+      au < manifest ; 2020 ; 2020 ; Mexican Studies/Estudios Mexicanos Volume 36 ; 36 >
+      au < manifest ; 2021 ; 2021 ; Mexican Studies/Estudios Mexicanos Volume 37 ; 37 >
 
   }
 
@@ -1165,35 +1202,35 @@
         issn = 0730-7829 ;
         eissn = 1533-8312 
     >
-
       #param[base_url] = http://mp.ucpress.edu/
+
       param[journal_id] = mp
 
-      au < exists ; 1983 ; 1983 ; Music Perception: An Interdisciplinary Journal Volume 1 ; 1 >
-      au < exists ; 1984 ; 1984 ; Music Perception: An Interdisciplinary Journal Volume 2 ; 2 >
-      au < exists ; 1985 ; 1985 ; Music Perception: An Interdisciplinary Journal Volume 3 ; 3 >
-      au < exists ; 1986 ; 1986 ; Music Perception: An Interdisciplinary Journal Volume 4 ; 4 >
-      au < exists ; 1987 ; 1987 ; Music Perception: An Interdisciplinary Journal Volume 5 ; 5 >
-      au < exists ; 1988 ; 1988 ; Music Perception: An Interdisciplinary Journal Volume 6 ; 6 >
-      au < exists ; 1989 ; 1989 ; Music Perception: An Interdisciplinary Journal Volume 7 ; 7 >
-      au < exists ; 1990 ; 1990 ; Music Perception: An Interdisciplinary Journal Volume 8 ; 8 >
-      au < exists ; 1991 ; 1991 ; Music Perception: An Interdisciplinary Journal Volume 9 ; 9 >
-      au < exists ; 1992 ; 1992 ; Music Perception: An Interdisciplinary Journal Volume 10 ; 10 >
-      au < exists ; 1993 ; 1993 ; Music Perception: An Interdisciplinary Journal Volume 11 ; 11 >
-      au < exists ; 1994 ; 1994 ; Music Perception: An Interdisciplinary Journal Volume 12 ; 12 >
-      au < exists ; 1995 ; 1995 ; Music Perception: An Interdisciplinary Journal Volume 13 ; 13 >
-      au < exists ; 1996 ; 1996 ; Music Perception: An Interdisciplinary Journal Volume 14 ; 14 >
-      au < exists ; 1997 ; 1997 ; Music Perception: An Interdisciplinary Journal Volume 15 ; 15 >
-      au < exists ; 1998 ; 1998 ; Music Perception: An Interdisciplinary Journal Volume 16 ; 16 >
-      au < exists ; 1999 ; 1999 ; Music Perception: An Interdisciplinary Journal Volume 17 ; 17 >
-      au < exists ; 2000 ; 2000 ; Music Perception: An Interdisciplinary Journal Volume 18 ; 18 >
-      au < exists ; 2001 ; 2001 ; Music Perception: An Interdisciplinary Journal Volume 19 ; 19 >
-      au < exists ; 2002 ; 2002 ; Music Perception: An Interdisciplinary Journal Volume 20 ; 20 >
-      au < exists ; 2003 ; 2003 ; Music Perception: An Interdisciplinary Journal Volume 21 ; 21 >
-      au < exists ; 2004 ; 2004 ; Music Perception: An Interdisciplinary Journal Volume 22 ; 22 >
-      au < exists ; 2005 ; 2005 ; Music Perception: An Interdisciplinary Journal Volume 23 ; 23 >
-      au < exists ; 2006 ; 2006 ; Music Perception: An Interdisciplinary Journal Volume 24 ; 24 >
-      au < exists ; 2007 ; 2007 ; Music Perception: An Interdisciplinary Journal Volume 25 ; 25 >
+      au < manifest ; 1983 ; 1983 ; Music Perception: An Interdisciplinary Journal Volume 1 ; 1 >
+      au < manifest ; 1984 ; 1984 ; Music Perception: An Interdisciplinary Journal Volume 2 ; 2 >
+      au < manifest ; 1985 ; 1985 ; Music Perception: An Interdisciplinary Journal Volume 3 ; 3 >
+      au < manifest ; 1986 ; 1986 ; Music Perception: An Interdisciplinary Journal Volume 4 ; 4 >
+      au < manifest ; 1987 ; 1987 ; Music Perception: An Interdisciplinary Journal Volume 5 ; 5 >
+      au < manifest ; 1988 ; 1988 ; Music Perception: An Interdisciplinary Journal Volume 6 ; 6 >
+      au < manifest ; 1989 ; 1989 ; Music Perception: An Interdisciplinary Journal Volume 7 ; 7 >
+      au < manifest ; 1990 ; 1990 ; Music Perception: An Interdisciplinary Journal Volume 8 ; 8 >
+      au < manifest ; 1991 ; 1991 ; Music Perception: An Interdisciplinary Journal Volume 9 ; 9 >
+      au < manifest ; 1992 ; 1992 ; Music Perception: An Interdisciplinary Journal Volume 10 ; 10 >
+      au < manifest ; 1993 ; 1993 ; Music Perception: An Interdisciplinary Journal Volume 11 ; 11 >
+      au < manifest ; 1994 ; 1994 ; Music Perception: An Interdisciplinary Journal Volume 12 ; 12 >
+      au < manifest ; 1995 ; 1995 ; Music Perception: An Interdisciplinary Journal Volume 13 ; 13 >
+      au < manifest ; 1996 ; 1996 ; Music Perception: An Interdisciplinary Journal Volume 14 ; 14 >
+      au < manifest ; 1997 ; 1997 ; Music Perception: An Interdisciplinary Journal Volume 15 ; 15 >
+      au < manifest ; 1998 ; 1998 ; Music Perception: An Interdisciplinary Journal Volume 16 ; 16 >
+      au < manifest ; 1999 ; 1999 ; Music Perception: An Interdisciplinary Journal Volume 17 ; 17 >
+      au < manifest ; 2000 ; 2000 ; Music Perception: An Interdisciplinary Journal Volume 18 ; 18 >
+      au < manifest ; 2001 ; 2001 ; Music Perception: An Interdisciplinary Journal Volume 19 ; 19 >
+      au < manifest ; 2002 ; 2002 ; Music Perception: An Interdisciplinary Journal Volume 20 ; 20 >
+      au < manifest ; 2003 ; 2003 ; Music Perception: An Interdisciplinary Journal Volume 21 ; 21 >
+      au < manifest ; 2004 ; 2004 ; Music Perception: An Interdisciplinary Journal Volume 22 ; 22 >
+      au < manifest ; 2005 ; 2005 ; Music Perception: An Interdisciplinary Journal Volume 23 ; 23 >
+      au < manifest ; 2006 ; 2006 ; Music Perception: An Interdisciplinary Journal Volume 24 ; 24 >
+      au < manifest ; 2007 ; 2007 ; Music Perception: An Interdisciplinary Journal Volume 25 ; 25 >
       au < doNotProcess ; 2008 ; 2008 ; Music Perception: An Interdisciplinary Journal Volume 26 ; 26 >
       au < doNotProcess ; 2009 ; 2009 ; Music Perception: An Interdisciplinary Journal Volume 27 ; 27 >
       au < doNotProcess ; 2010 ; 2010 ; Music Perception: An Interdisciplinary Journal Volume 28 ; 28 >
@@ -1206,7 +1243,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Music Perception: An Interdisciplinary Journal Volume 35 ; 35 >
       au < doNotProcess ; 2018 ; 2018 ; Music Perception: An Interdisciplinary Journal Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Music Perception: An Interdisciplinary Journal Volume 37 ; 37 >
-      au < exists ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 38 ; 38 >
+      au < manifest ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 38 ; 38 >
+      au < expected ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 39 ; 39 >
 
   }
 
@@ -1217,10 +1255,9 @@
         issn = 0891-9356 ;
         eissn = 1067-8352 
     >
-
       #param[base_url] = http://ncl.ucpress.edu/
-      param[journal_id] = ncl
 
+      param[journal_id] = ncl
 #      au < exists ; 1945-1947 ; Nineteenth-Century Literature Volume 1 ; 1 >
 #      au < exists ; 1947-1948 ; Nineteenth-Century Literature Volume 2 ; 2 >
 #      au < exists ; 1948-1949 ; Nineteenth-Century Literature Volume 3 ; 3 >
@@ -1294,9 +1331,15 @@
 #      au < doNotProcess ; 2016-2017 ; Nineteenth-Century Literature Volume 71 ; 71 >
 #      au < doNotProcess ; 2017-2018 ; Nineteenth-Century Literature Volume 72 ; 72 >
 #      au < doNotProcess ; 2018-2019 ; Nineteenth-Century Literature Volume 73 ; 73 >
-#      au < doNotProcess ; 2019-2020 ; Nineteenth-Century Literature Volume 74 ; 74 >
-      au < exists ; 2020 ; 2020 ; Nineteenth-Century Literature Volume 75 [2020] ; 75 >
-      au < exists ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 75 [2021] ; 75 >
+
+      au < doNotProcess ; 2019 ; 2019 ; Nineteenth-Century Literature Volume 74 [2019] ; 74 >
+      au < doNotProcess ; 2020 ; 2020 ; Nineteenth-Century Literature Volume 74 [2020] ; 74 >
+
+      au < manifest ; 2020 ; 2020 ; Nineteenth-Century Literature Volume 75 [2020] ; 75 >
+      au < manifest ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 75 [2021] ; 75 >
+
+      au < manifest ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 76 [2021] ; 76 >
+      au < expected ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 76 [2022] ; 76 >
 
   }
 
@@ -1307,10 +1350,9 @@
         issn = 1933-4192 ;
         eissn = 1933-4206 
     >
-
       #param[base_url] = http://nclr.ucpress.edu/
-      param[journal_id] = nclr
 
+      param[journal_id] = nclr
 #      au < exists ; 1997-1998 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 1 ; 1 >
 #      au < exists ; 1998-1999 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 2 ; 2 >
 #      au < exists ; 1999-2000 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 3 ; 3 >
@@ -1318,11 +1360,12 @@
 #      au < exists ; 2001-2002 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 5 ; 5 >
 #      au < exists ; 2002-2003 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 6 ; 6 >
 #      au < exists ; 2003-2004 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 7 ; 7 >
-      au < exists ; 2004 ; 2004 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 8 [2004] ; 8 >
-      au < exists ; 2005 ; 2005 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 8 [2005] ; 8 >
-      au < exists ; 2005 ; 2005 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 9 [2005] ; 9 >
-      au < exists ; 2006 ; 2006 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 9 [2006] ; 9 >
-      au < exists ; 2007 ; 2007 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 10 ; 10 >
+
+      au < manifest ; 2004 ; 2004 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 8 [2004] ; 8 >
+      au < manifest ; 2005 ; 2005 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 8 [2005] ; 8 >
+      au < manifest ; 2005 ; 2005 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 9 [2005] ; 9 >
+      au < manifest ; 2006 ; 2006 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 9 [2006] ; 9 >
+      au < manifest ; 2007 ; 2007 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 10 ; 10 >
       au < doNotProcess ; 2008 ; 2008 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 11 ; 11 >
       au < doNotProcess ; 2009 ; 2009 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 12 ; 12 >
       au < doNotProcess ; 2010 ; 2010 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 13 ; 13 >
@@ -1335,7 +1378,8 @@
       au < doNotProcess ; 2017 ; 2017 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 20 ; 20 >
       au < doNotProcess ; 2018 ; 2018 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 21 ; 21 >
       au < doNotProcess ; 2019 ; 2019 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 22 ; 22 >
-      au < exists ; 2020 ; 2020 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 23 ; 23 >
+      au < manifest ; 2020 ; 2020 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 23 ; 23 >
+      au < manifest ; 2021 ; 2021 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 24 ; 24 >
 
   }
 
@@ -1346,10 +1390,9 @@
         issn = 0148-2076 ;
         eissn = 1533-8606 
     >
-
       #param[base_url] = http://ncm.ucpress.edu/
-      param[journal_id] = ncm
 
+      param[journal_id] = ncm
 #      au < exists ; 1977-1978 ; 19th-Century Music Volume 1 ; 1 >
 #      au < exists ; 1978-1979 ; 19th-Century Music Volume 2 ; 2 >
 #      au < exists ; 1979-1980 ; 19th-Century Music Volume 3 ; 3 >
@@ -1392,9 +1435,14 @@
 #      au < doNotProcess ; 2016-2017 ; 19th-Century Music Volume 40 ; 40 >
 #      au < doNotProcess ; 2017-2018 ; 19th-Century Music Volume 41 ; 41 >
 #      au < doNotProcess ; 2018-2019 ; 19th-Century Music Volume 42 ; 42 >
-#      au < doNotProcess ; 2019-2020 ; 19th-Century Music Volume 43 ; 43 >
-      au < exists ; 2020 ; 2020 ; 19th-Century Music Volume 44 [2020] ; 44 >
-      au < exists ; 2021 ; 2021 ; 19th-Century Music Volume 44 [2021] ; 44 >
+
+      au < doNotProcess ; 2019 ; 2019 ; 19th-Century Music Volume 43 [2019] ; 43 >
+      au < doNotProcess ; 2020 ; 2020 ; 19th-Century Music Volume 43 [2020] ; 43 >
+
+      au < manifest ; 2020 ; 2020 ; 19th-Century Music Volume 44 [2020] ; 44 >
+      au < manifest ; 2021 ; 2021 ; 19th-Century Music Volume 44 [2021] ; 44 >
+
+      au < expected ; 2021 ; 2021 ; 19th-Century Music Volume 45 [2021] ; 45 >
 
   }
 
@@ -1405,10 +1453,9 @@
         issn = 1092-6690 ;
         eissn = 1541-8480 
     >
-
       #param[base_url] = http://nr.ucpress.edu/
-      param[journal_id] = nr
 
+      param[journal_id] = nr
 #      au < exists ; 1997-1998 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 1 ; 1 >
 #      au < exists ; 1998-1999 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 2 ; 2 >
 #      au < exists ; 1999-2000 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 3 ; 3 >
@@ -1432,8 +1479,9 @@
 #      au < doNotProcess ; 2017-2018 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 21 ; 21 >
 #      au < doNotProcess ; 2018-2019 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 22 ; 22 >
 #      au < doNotProcess ; 2019-2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 23 ; 23 >
-      au < exists ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2020] ; 24 >
-      au < exists ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2021] ; 24 >
+
+      au < manifest ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2020] ; 24 >
+      au < expected ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 25 [2021] ; 25 >
 
   }
 
@@ -1444,86 +1492,86 @@
         issn = 0030-8684 ;
         eissn = 1533-8584 
     >
-
       #param[base_url] = http://phr.ucpress.edu/
+
       param[journal_id] = phr
 
-      au < exists ; 1932 ; 1932 ; Pacific Historical Review Volume 1 ; 1 >
-      au < exists ; 1933 ; 1933 ; Pacific Historical Review Volume 2 ; 2 >
-      au < exists ; 1934 ; 1934 ; Pacific Historical Review Volume 3 ; 3 >
-      au < exists ; 1935 ; 1935 ; Pacific Historical Review Volume 4 ; 4 >
-      au < exists ; 1936 ; 1936 ; Pacific Historical Review Volume 5 ; 5 >
-      au < exists ; 1937 ; 1937 ; Pacific Historical Review Volume 6 ; 6 >
-      au < exists ; 1938 ; 1938 ; Pacific Historical Review Volume 7 ; 7 >
-      au < exists ; 1939 ; 1939 ; Pacific Historical Review Volume 8 ; 8 >
-      au < exists ; 1940 ; 1940 ; Pacific Historical Review Volume 9 ; 9 >
-      au < exists ; 1941 ; 1941 ; Pacific Historical Review Volume 10 ; 10 >
-      au < exists ; 1942 ; 1942 ; Pacific Historical Review Volume 11 ; 11 >
-      au < exists ; 1943 ; 1943 ; Pacific Historical Review Volume 12 ; 12 >
-      au < exists ; 1944 ; 1944 ; Pacific Historical Review Volume 13 ; 13 >
-      au < exists ; 1945 ; 1945 ; Pacific Historical Review Volume 14 ; 14 >
-      au < exists ; 1946 ; 1946 ; Pacific Historical Review Volume 15 ; 15 >
-      au < exists ; 1947 ; 1947 ; Pacific Historical Review Volume 16 ; 16 >
-      au < exists ; 1948 ; 1948 ; Pacific Historical Review Volume 17 ; 17 >
-      au < exists ; 1949 ; 1949 ; Pacific Historical Review Volume 18 ; 18 >
-      au < exists ; 1950 ; 1950 ; Pacific Historical Review Volume 19 ; 19 >
-      au < exists ; 1951 ; 1951 ; Pacific Historical Review Volume 20 ; 20 >
-      au < exists ; 1952 ; 1952 ; Pacific Historical Review Volume 21 ; 21 >
-      au < exists ; 1953 ; 1953 ; Pacific Historical Review Volume 22 ; 22 >
-      au < exists ; 1954 ; 1954 ; Pacific Historical Review Volume 23 ; 23 >
-      au < exists ; 1955 ; 1955 ; Pacific Historical Review Volume 24 ; 24 >
-      au < exists ; 1956 ; 1956 ; Pacific Historical Review Volume 25 ; 25 >
-      au < exists ; 1957 ; 1957 ; Pacific Historical Review Volume 26 ; 26 >
-      au < exists ; 1958 ; 1958 ; Pacific Historical Review Volume 27 ; 27 >
-      au < exists ; 1959 ; 1959 ; Pacific Historical Review Volume 28 ; 28 >
-      au < exists ; 1960 ; 1960 ; Pacific Historical Review Volume 29 ; 29 >
-      au < exists ; 1961 ; 1961 ; Pacific Historical Review Volume 30 ; 30 >
-      au < exists ; 1962 ; 1962 ; Pacific Historical Review Volume 31 ; 31 >
-      au < exists ; 1963 ; 1963 ; Pacific Historical Review Volume 32 ; 32 >
-      au < exists ; 1964 ; 1964 ; Pacific Historical Review Volume 33 ; 33 >
-      au < exists ; 1965 ; 1965 ; Pacific Historical Review Volume 34 ; 34 >
-      au < exists ; 1966 ; 1966 ; Pacific Historical Review Volume 35 ; 35 >
-      au < exists ; 1967 ; 1967 ; Pacific Historical Review Volume 36 ; 36 >
-      au < exists ; 1968 ; 1968 ; Pacific Historical Review Volume 37 ; 37 >
-      au < exists ; 1969 ; 1969 ; Pacific Historical Review Volume 38 ; 38 >
-      au < exists ; 1970 ; 1970 ; Pacific Historical Review Volume 39 ; 39 >
-      au < exists ; 1971 ; 1971 ; Pacific Historical Review Volume 40 ; 40 >
-      au < exists ; 1972 ; 1972 ; Pacific Historical Review Volume 41 ; 41 >
-      au < exists ; 1973 ; 1973 ; Pacific Historical Review Volume 42 ; 42 >
-      au < exists ; 1974 ; 1974 ; Pacific Historical Review Volume 43 ; 43 >
-      au < exists ; 1975 ; 1975 ; Pacific Historical Review Volume 44 ; 44 >
-      au < exists ; 1976 ; 1976 ; Pacific Historical Review Volume 45 ; 45 >
-      au < exists ; 1977 ; 1977 ; Pacific Historical Review Volume 46 ; 46 >
-      au < exists ; 1978 ; 1978 ; Pacific Historical Review Volume 47 ; 47 >
-      au < exists ; 1979 ; 1979 ; Pacific Historical Review Volume 48 ; 48 >
-      au < exists ; 1980 ; 1980 ; Pacific Historical Review Volume 49 ; 49 >
-      au < exists ; 1981 ; 1981 ; Pacific Historical Review Volume 50 ; 50 >
-      au < exists ; 1982 ; 1982 ; Pacific Historical Review Volume 51 ; 51 >
-      au < exists ; 1983 ; 1983 ; Pacific Historical Review Volume 52 ; 52 >
-      au < exists ; 1984 ; 1984 ; Pacific Historical Review Volume 53 ; 53 >
-      au < exists ; 1985 ; 1985 ; Pacific Historical Review Volume 54 ; 54 >
-      au < exists ; 1986 ; 1986 ; Pacific Historical Review Volume 55 ; 55 >
-      au < exists ; 1987 ; 1987 ; Pacific Historical Review Volume 56 ; 56 >
-      au < exists ; 1988 ; 1988 ; Pacific Historical Review Volume 57 ; 57 >
-      au < exists ; 1989 ; 1989 ; Pacific Historical Review Volume 58 ; 58 >
-      au < exists ; 1990 ; 1990 ; Pacific Historical Review Volume 59 ; 59 >
-      au < exists ; 1991 ; 1991 ; Pacific Historical Review Volume 60 ; 60 >
-      au < exists ; 1992 ; 1992 ; Pacific Historical Review Volume 61 ; 61 >
-      au < exists ; 1993 ; 1993 ; Pacific Historical Review Volume 62 ; 62 >
-      au < exists ; 1994 ; 1994 ; Pacific Historical Review Volume 63 ; 63 >
-      au < exists ; 1995 ; 1995 ; Pacific Historical Review Volume 64 ; 64 >
-      au < exists ; 1996 ; 1996 ; Pacific Historical Review Volume 65 ; 65 >
-      au < exists ; 1997 ; 1997 ; Pacific Historical Review Volume 66 ; 66 >
-      au < exists ; 1998 ; 1998 ; Pacific Historical Review Volume 67 ; 67 >
-      au < exists ; 1999 ; 1999 ; Pacific Historical Review Volume 68 ; 68 >
-      au < exists ; 2000 ; 2000 ; Pacific Historical Review Volume 69 ; 69 >
-      au < exists ; 2001 ; 2001 ; Pacific Historical Review Volume 70 ; 70 >
-      au < exists ; 2002 ; 2002 ; Pacific Historical Review Volume 71 ; 71 >
-      au < exists ; 2003 ; 2003 ; Pacific Historical Review Volume 72 ; 72 >
-      au < exists ; 2004 ; 2004 ; Pacific Historical Review Volume 73 ; 73 >
-      au < exists ; 2005 ; 2005 ; Pacific Historical Review Volume 74 ; 74 >
-      au < exists ; 2006 ; 2006 ; Pacific Historical Review Volume 75 ; 75 >
-      au < exists ; 2007 ; 2007 ; Pacific Historical Review Volume 76 ; 76 >
+      au < manifest ; 1932 ; 1932 ; Pacific Historical Review Volume 1 ; 1 >
+      au < manifest ; 1933 ; 1933 ; Pacific Historical Review Volume 2 ; 2 >
+      au < manifest ; 1934 ; 1934 ; Pacific Historical Review Volume 3 ; 3 >
+      au < manifest ; 1935 ; 1935 ; Pacific Historical Review Volume 4 ; 4 >
+      au < manifest ; 1936 ; 1936 ; Pacific Historical Review Volume 5 ; 5 >
+      au < manifest ; 1937 ; 1937 ; Pacific Historical Review Volume 6 ; 6 >
+      au < manifest ; 1938 ; 1938 ; Pacific Historical Review Volume 7 ; 7 >
+      au < manifest ; 1939 ; 1939 ; Pacific Historical Review Volume 8 ; 8 >
+      au < manifest ; 1940 ; 1940 ; Pacific Historical Review Volume 9 ; 9 >
+      au < manifest ; 1941 ; 1941 ; Pacific Historical Review Volume 10 ; 10 >
+      au < manifest ; 1942 ; 1942 ; Pacific Historical Review Volume 11 ; 11 >
+      au < manifest ; 1943 ; 1943 ; Pacific Historical Review Volume 12 ; 12 >
+      au < manifest ; 1944 ; 1944 ; Pacific Historical Review Volume 13 ; 13 >
+      au < manifest ; 1945 ; 1945 ; Pacific Historical Review Volume 14 ; 14 >
+      au < manifest ; 1946 ; 1946 ; Pacific Historical Review Volume 15 ; 15 >
+      au < manifest ; 1947 ; 1947 ; Pacific Historical Review Volume 16 ; 16 >
+      au < manifest ; 1948 ; 1948 ; Pacific Historical Review Volume 17 ; 17 >
+      au < manifest ; 1949 ; 1949 ; Pacific Historical Review Volume 18 ; 18 >
+      au < manifest ; 1950 ; 1950 ; Pacific Historical Review Volume 19 ; 19 >
+      au < manifest ; 1951 ; 1951 ; Pacific Historical Review Volume 20 ; 20 >
+      au < manifest ; 1952 ; 1952 ; Pacific Historical Review Volume 21 ; 21 >
+      au < manifest ; 1953 ; 1953 ; Pacific Historical Review Volume 22 ; 22 >
+      au < manifest ; 1954 ; 1954 ; Pacific Historical Review Volume 23 ; 23 >
+      au < manifest ; 1955 ; 1955 ; Pacific Historical Review Volume 24 ; 24 >
+      au < manifest ; 1956 ; 1956 ; Pacific Historical Review Volume 25 ; 25 >
+      au < manifest ; 1957 ; 1957 ; Pacific Historical Review Volume 26 ; 26 >
+      au < manifest ; 1958 ; 1958 ; Pacific Historical Review Volume 27 ; 27 >
+      au < manifest ; 1959 ; 1959 ; Pacific Historical Review Volume 28 ; 28 >
+      au < manifest ; 1960 ; 1960 ; Pacific Historical Review Volume 29 ; 29 >
+      au < manifest ; 1961 ; 1961 ; Pacific Historical Review Volume 30 ; 30 >
+      au < manifest ; 1962 ; 1962 ; Pacific Historical Review Volume 31 ; 31 >
+      au < manifest ; 1963 ; 1963 ; Pacific Historical Review Volume 32 ; 32 >
+      au < manifest ; 1964 ; 1964 ; Pacific Historical Review Volume 33 ; 33 >
+      au < manifest ; 1965 ; 1965 ; Pacific Historical Review Volume 34 ; 34 >
+      au < manifest ; 1966 ; 1966 ; Pacific Historical Review Volume 35 ; 35 >
+      au < manifest ; 1967 ; 1967 ; Pacific Historical Review Volume 36 ; 36 >
+      au < manifest ; 1968 ; 1968 ; Pacific Historical Review Volume 37 ; 37 >
+      au < manifest ; 1969 ; 1969 ; Pacific Historical Review Volume 38 ; 38 >
+      au < manifest ; 1970 ; 1970 ; Pacific Historical Review Volume 39 ; 39 >
+      au < manifest ; 1971 ; 1971 ; Pacific Historical Review Volume 40 ; 40 >
+      au < manifest ; 1972 ; 1972 ; Pacific Historical Review Volume 41 ; 41 >
+      au < manifest ; 1973 ; 1973 ; Pacific Historical Review Volume 42 ; 42 >
+      au < manifest ; 1974 ; 1974 ; Pacific Historical Review Volume 43 ; 43 >
+      au < manifest ; 1975 ; 1975 ; Pacific Historical Review Volume 44 ; 44 >
+      au < manifest ; 1976 ; 1976 ; Pacific Historical Review Volume 45 ; 45 >
+      au < manifest ; 1977 ; 1977 ; Pacific Historical Review Volume 46 ; 46 >
+      au < manifest ; 1978 ; 1978 ; Pacific Historical Review Volume 47 ; 47 >
+      au < manifest ; 1979 ; 1979 ; Pacific Historical Review Volume 48 ; 48 >
+      au < manifest ; 1980 ; 1980 ; Pacific Historical Review Volume 49 ; 49 >
+      au < manifest ; 1981 ; 1981 ; Pacific Historical Review Volume 50 ; 50 >
+      au < manifest ; 1982 ; 1982 ; Pacific Historical Review Volume 51 ; 51 >
+      au < manifest ; 1983 ; 1983 ; Pacific Historical Review Volume 52 ; 52 >
+      au < manifest ; 1984 ; 1984 ; Pacific Historical Review Volume 53 ; 53 >
+      au < manifest ; 1985 ; 1985 ; Pacific Historical Review Volume 54 ; 54 >
+      au < manifest ; 1986 ; 1986 ; Pacific Historical Review Volume 55 ; 55 >
+      au < manifest ; 1987 ; 1987 ; Pacific Historical Review Volume 56 ; 56 >
+      au < manifest ; 1988 ; 1988 ; Pacific Historical Review Volume 57 ; 57 >
+      au < manifest ; 1989 ; 1989 ; Pacific Historical Review Volume 58 ; 58 >
+      au < manifest ; 1990 ; 1990 ; Pacific Historical Review Volume 59 ; 59 >
+      au < manifest ; 1991 ; 1991 ; Pacific Historical Review Volume 60 ; 60 >
+      au < manifest ; 1992 ; 1992 ; Pacific Historical Review Volume 61 ; 61 >
+      au < manifest ; 1993 ; 1993 ; Pacific Historical Review Volume 62 ; 62 >
+      au < manifest ; 1994 ; 1994 ; Pacific Historical Review Volume 63 ; 63 >
+      au < manifest ; 1995 ; 1995 ; Pacific Historical Review Volume 64 ; 64 >
+      au < manifest ; 1996 ; 1996 ; Pacific Historical Review Volume 65 ; 65 >
+      au < manifest ; 1997 ; 1997 ; Pacific Historical Review Volume 66 ; 66 >
+      au < manifest ; 1998 ; 1998 ; Pacific Historical Review Volume 67 ; 67 >
+      au < manifest ; 1999 ; 1999 ; Pacific Historical Review Volume 68 ; 68 >
+      au < manifest ; 2000 ; 2000 ; Pacific Historical Review Volume 69 ; 69 >
+      au < manifest ; 2001 ; 2001 ; Pacific Historical Review Volume 70 ; 70 >
+      au < manifest ; 2002 ; 2002 ; Pacific Historical Review Volume 71 ; 71 >
+      au < manifest ; 2003 ; 2003 ; Pacific Historical Review Volume 72 ; 72 >
+      au < manifest ; 2004 ; 2004 ; Pacific Historical Review Volume 73 ; 73 >
+      au < manifest ; 2005 ; 2005 ; Pacific Historical Review Volume 74 ; 74 >
+      au < manifest ; 2006 ; 2006 ; Pacific Historical Review Volume 75 ; 75 >
+      au < manifest ; 2007 ; 2007 ; Pacific Historical Review Volume 76 ; 76 >
       au < doNotProcess ; 2008 ; 2008 ; Pacific Historical Review Volume 77 ; 77 >
       au < doNotProcess ; 2009 ; 2009 ; Pacific Historical Review Volume 78 ; 78 >
       au < doNotProcess ; 2010 ; 2010 ; Pacific Historical Review Volume 79 ; 79 >
@@ -1536,7 +1584,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Pacific Historical Review Volume 86 ; 86 >
       au < doNotProcess ; 2018 ; 2018 ; Pacific Historical Review Volume 87 ; 87 >
       au < doNotProcess ; 2019 ; 2019 ; Pacific Historical Review Volume 88 ; 88 >
-      au < exists ; 2020 ; 2020 ; Pacific Historical Review Volume 89 ; 89 >
+      au < manifest ; 2020 ; 2020 ; Pacific Historical Review Volume 89 ; 89 >
+      au < manifest ; 2021 ; 2021 ; Pacific Historical Review Volume 90 ; 90 >
 
   }
 
@@ -1547,9 +1596,9 @@
         issn = 1052-1151 ;
         eissn = 1533-8568 
     >
-
       #param[base_url] = http://rac.ucpress.edu/
       #move to Cambridge University Press
+
       param[journal_id] = rac
 
       au < exists ; 1991 ; 1991 ; Religion and American Culture: A Journal of Interpretation Volume 1 ; 1 >
@@ -1572,12 +1621,12 @@
       au < exists ; 2008 ; 2008 ; Religion and American Culture: A Journal of Interpretation Volume 18 ; 18 >
       au < exists ; 2009 ; 2009 ; Religion and American Culture: A Journal of Interpretation Volume 19 ; 19 >
       au < exists ; 2010 ; 2010 ; Religion and American Culture: A Journal of Interpretation Volume 20 ; 20 >
-      au < down ; 2011 ; 2011 ; Religion and American Culture: A Journal of Interpretation Volume 21 ; 21 >
-      au < down ; 2012 ; 2012 ; Religion and American Culture: A Journal of Interpretation Volume 22 ; 22 >
-      au < down ; 2013 ; 2013 ; Religion and American Culture: A Journal of Interpretation Volume 23 ; 23 >
-      au < down ; 2014 ; 2014 ; Religion and American Culture: A Journal of Interpretation Volume 24 ; 24 >
-      au < down ; 2015 ; 2015 ; Religion and American Culture: A Journal of Interpretation Volume 25 ; 25 >
-      au < down ; 2016 ; 2016 ; Religion and American Culture: A Journal of Interpretation Volume 26 ; 26 >
+      au < doNotProcess ; 2011 ; 2011 ; Religion and American Culture: A Journal of Interpretation Volume 21 ; 21 >
+      au < doNotProcess ; 2012 ; 2012 ; Religion and American Culture: A Journal of Interpretation Volume 22 ; 22 >
+      au < doNotProcess ; 2013 ; 2013 ; Religion and American Culture: A Journal of Interpretation Volume 23 ; 23 >
+      au < doNotProcess ; 2014 ; 2014 ; Religion and American Culture: A Journal of Interpretation Volume 24 ; 24 >
+      au < doNotProcess ; 2015 ; 2015 ; Religion and American Culture: A Journal of Interpretation Volume 25 ; 25 >
+      au < doNotProcess ; 2016 ; 2016 ; Religion and American Culture: A Journal of Interpretation Volume 26 ; 26 >
       au < exists ; 2017 ; 2017 ; Religion and American Culture: A Journal of Interpretation Volume 27 ; 27 >
 
   }
@@ -1589,8 +1638,8 @@
         issn = 0734-6018 ;
         eissn = 1533-855X 
     >
-
       #param[base_url] = http://rep.ucpress.edu/
+
       param[journal_id] = rep
 
       au < exists ; 1983 ; 1983 ; Representations Volume 1 ; 1 >
@@ -1742,6 +1791,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 147 ; 147 >
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 148 ; 148 >
       au < exists ; 2020 ; 2020 ; Representations Volume 149 ; 149 >
+      au < expected ; 2021 ; 2021 ; Representations Volume 150 ; 150 >
 
   }
 
@@ -1752,8 +1802,8 @@
         issn = 0734-8584 ;
         eissn = 1533-8541 
     >
-
       #param[base_url] = http://rh.ucpress.edu/
+
       param[journal_id] = rh
 
       au < exists ; 1983 ; 1983 ; Rhetorica: A Journal of the History of Rhetoric Volume 1 ; 1 >
@@ -1794,6 +1844,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Rhetorica: A Journal of the History of Rhetoric Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Rhetorica: A Journal of the History of Rhetoric Volume 37 ; 37 >
       au < exists ; 2020 ; 2020 ; Rhetorica: A Journal of the History of Rhetoric Volume 38 ; 38 >
+      au < expected ; 2021 ; 2021 ; Rhetorica: A Journal of the History of Rhetoric Volume 39 ; 39 >
 
   }
 
@@ -1804,12 +1855,12 @@
         issn = 0038-3929 ;
         eissn = 2162-8637 
     >
-
       #param[base_url] = http://scq.ucpress.edu/
-      param[journal_id] = scq
 
+      param[journal_id] = scq
 #      au < exists ; 1884-1891 ; Southern California Quarterly Volume 1 ; 1 >
-      au < exists ; 1891 ; 1891 ; Southern California Quarterly Volume 2 ; 2 >
+
+      au < manifest ; 1891 ; 1891 ; Southern California Quarterly Volume 2 ; 2 >
 #      au < exists ; 1893-1896 ; Southern California Quarterly Volume 3 ; 3 >
 #      au < exists ; 1897-1899 ; Southern California Quarterly Volume 4 ; 4 >
 #      au < exists ; 1900-1902 ; Southern California Quarterly Volume 5 ; 5 >
@@ -1821,84 +1872,84 @@
 #      au < exists ; 1918-1920 ; Southern California Quarterly Volume 11 ; 11 >
 #      au < exists ; 1921-1923 ; Southern California Quarterly Volume 12 ; 12 >
 #      au < exists ; 1924-1927 ; Southern California Quarterly Volume 13 ; 13 >
-      au < exists ; 1928 ; 1928 ; Southern California Quarterly Volume 14 [1928] ; 14 >
-      au < exists ; 1929 ; 1929 ; Southern California Quarterly Volume 14 [1929] ; 14 >
-      au < exists ; 1930 ; 1930 ; Southern California Quarterly Volume 14 [1930] ; 14 >
-      au < exists ; 1931 ; 1931 ; Southern California Quarterly Volume 15 ; 15 >
+      au < manifest ; 1928 ; 1928 ; Southern California Quarterly Volume 14 [1928] ; 14 >
+      au < manifest ; 1929 ; 1929 ; Southern California Quarterly Volume 14 [1929] ; 14 >
+      au < manifest ; 1930 ; 1930 ; Southern California Quarterly Volume 14 [1930] ; 14 >
+      au < manifest ; 1931 ; 1931 ; Southern California Quarterly Volume 15 ; 15 >
       au < exists ; 1934 ; 1934 ; Southern California Quarterly Volume 16 ; 16 >
-      au < exists ; 1935 ; 1935 ; Southern California Quarterly Volume 17 ; 17 >
-      au < exists ; 1936 ; 1936 ; Southern California Quarterly Volume 18 ; 18 >
-      au < exists ; 1937 ; 1937 ; Southern California Quarterly Volume 19 ; 19 >
-      au < exists ; 1938 ; 1938 ; Southern California Quarterly Volume 20 ; 20 >
-      au < exists ; 1939 ; 1939 ; Southern California Quarterly Volume 21 ; 21 >
-      au < exists ; 1940 ; 1940 ; Southern California Quarterly Volume 22 ; 22 >
-      au < exists ; 1941 ; 1941 ; Southern California Quarterly Volume 23 ; 23 >
-      au < exists ; 1942 ; 1942 ; Southern California Quarterly Volume 24 ; 24 >
-      au < exists ; 1943 ; 1943 ; Southern California Quarterly Volume 25 ; 25 >
-      au < exists ; 1944 ; 1944 ; Southern California Quarterly Volume 26 ; 26 >
-      au < exists ; 1945 ; 1945 ; Southern California Quarterly Volume 27 ; 27 >
-      au < exists ; 1946 ; 1946 ; Southern California Quarterly Volume 28 ; 28 >
-      au < exists ; 1947 ; 1947 ; Southern California Quarterly Volume 29 ; 29 >
-      au < exists ; 1948 ; 1948 ; Southern California Quarterly Volume 30 ; 30 >
-      au < exists ; 1949 ; 1949 ; Southern California Quarterly Volume 31 ; 31 >
-      au < exists ; 1950 ; 1950 ; Southern California Quarterly Volume 32 ; 32 >
-      au < exists ; 1951 ; 1951 ; Southern California Quarterly Volume 33 ; 33 >
-      au < exists ; 1952 ; 1952 ; Southern California Quarterly Volume 34 ; 34 >
-      au < exists ; 1953 ; 1953 ; Southern California Quarterly Volume 35 ; 35 >
-      au < exists ; 1954 ; 1954 ; Southern California Quarterly Volume 36 ; 36 >
-      au < exists ; 1955 ; 1955 ; Southern California Quarterly Volume 37 ; 37 >
-      au < exists ; 1956 ; 1956 ; Southern California Quarterly Volume 38 ; 38 >
-      au < exists ; 1957 ; 1957 ; Southern California Quarterly Volume 39 ; 39 >
-      au < exists ; 1958 ; 1958 ; Southern California Quarterly Volume 40 ; 40 >
-      au < exists ; 1959 ; 1959 ; Southern California Quarterly Volume 41 ; 41 >
-      au < exists ; 1960 ; 1960 ; Southern California Quarterly Volume 42 ; 42 >
-      au < exists ; 1961 ; 1961 ; Southern California Quarterly Volume 43 ; 43 >
-      au < exists ; 1962 ; 1962 ; Southern California Quarterly Volume 44 ; 44 >
-      au < exists ; 1963 ; 1963 ; Southern California Quarterly Volume 45 ; 45 >
-      au < exists ; 1964 ; 1964 ; Southern California Quarterly Volume 46 ; 46 >
-      au < exists ; 1965 ; 1965 ; Southern California Quarterly Volume 47 ; 47 >
-      au < exists ; 1966 ; 1966 ; Southern California Quarterly Volume 48 ; 48 >
-      au < exists ; 1967 ; 1967 ; Southern California Quarterly Volume 49 ; 49 >
-      au < exists ; 1968 ; 1968 ; Southern California Quarterly Volume 50 ; 50 >
-      au < exists ; 1969 ; 1969 ; Southern California Quarterly Volume 51 ; 51 >
-      au < exists ; 1970 ; 1970 ; Southern California Quarterly Volume 52 ; 52 >
-      au < exists ; 1971 ; 1971 ; Southern California Quarterly Volume 53 ; 53 >
-      au < exists ; 1972 ; 1972 ; Southern California Quarterly Volume 54 ; 54 >
-      au < exists ; 1973 ; 1973 ; Southern California Quarterly Volume 55 ; 55 >
-      au < exists ; 1974 ; 1974 ; Southern California Quarterly Volume 56 ; 56 >
-      au < exists ; 1975 ; 1975 ; Southern California Quarterly Volume 57 ; 57 >
-      au < exists ; 1976 ; 1976 ; Southern California Quarterly Volume 58 ; 58 >
-      au < exists ; 1977 ; 1977 ; Southern California Quarterly Volume 59 ; 59 >
-      au < exists ; 1978 ; 1978 ; Southern California Quarterly Volume 60 ; 60 >
-      au < exists ; 1979 ; 1979 ; Southern California Quarterly Volume 61 ; 61 >
-      au < exists ; 1980 ; 1980 ; Southern California Quarterly Volume 62 ; 62 >
-      au < exists ; 1981 ; 1981 ; Southern California Quarterly Volume 63 ; 63 >
-      au < exists ; 1982 ; 1982 ; Southern California Quarterly Volume 64 ; 64 >
-      au < exists ; 1983 ; 1983 ; Southern California Quarterly Volume 65 ; 65 >
-      au < exists ; 1984 ; 1984 ; Southern California Quarterly Volume 66 ; 66 >
-      au < exists ; 1985 ; 1985 ; Southern California Quarterly Volume 67 ; 67 >
-      au < exists ; 1986 ; 1986 ; Southern California Quarterly Volume 68 ; 68 >
-      au < exists ; 1987 ; 1987 ; Southern California Quarterly Volume 69 ; 69 >
-      au < exists ; 1988 ; 1988 ; Southern California Quarterly Volume 70 ; 70 >
-      au < exists ; 1989 ; 1989 ; Southern California Quarterly Volume 71 ; 71 >
-      au < exists ; 1990 ; 1990 ; Southern California Quarterly Volume 72 ; 72 >
-      au < exists ; 1991 ; 1991 ; Southern California Quarterly Volume 73 ; 73 >
-      au < exists ; 1992 ; 1992 ; Southern California Quarterly Volume 74 ; 74 >
-      au < exists ; 1993 ; 1993 ; Southern California Quarterly Volume 75 ; 75 >
-      au < exists ; 1994 ; 1994 ; Southern California Quarterly Volume 76 ; 76 >
-      au < exists ; 1995 ; 1995 ; Southern California Quarterly Volume 77 ; 77 >
-      au < exists ; 1996 ; 1996 ; Southern California Quarterly Volume 78 ; 78 >
-      au < exists ; 1997 ; 1997 ; Southern California Quarterly Volume 79 ; 79 >
-      au < exists ; 1998 ; 1998 ; Southern California Quarterly Volume 80 ; 80 >
-      au < exists ; 1999 ; 1999 ; Southern California Quarterly Volume 81 ; 81 >
-      au < exists ; 2000 ; 2000 ; Southern California Quarterly Volume 82 ; 82 >
-      au < exists ; 2001 ; 2001 ; Southern California Quarterly Volume 83 ; 83 >
-      au < exists ; 2002 ; 2002 ; Southern California Quarterly Volume 84 ; 84 >
-      au < exists ; 2003 ; 2003 ; Southern California Quarterly Volume 85 ; 85 >
-      au < exists ; 2004 ; 2004 ; Southern California Quarterly Volume 86 ; 86 >
-      au < exists ; 2005 ; 2005 ; Southern California Quarterly Volume 87 ; 87 >
-      au < exists ; 2006 ; 2006 ; Southern California Quarterly Volume 88 ; 88 >
-      au < exists ; 2007 ; 2007 ; Southern California Quarterly Volume 89 ; 89 >
+      au < manifest ; 1935 ; 1935 ; Southern California Quarterly Volume 17 ; 17 >
+      au < manifest ; 1936 ; 1936 ; Southern California Quarterly Volume 18 ; 18 >
+      au < manifest ; 1937 ; 1937 ; Southern California Quarterly Volume 19 ; 19 >
+      au < manifest ; 1938 ; 1938 ; Southern California Quarterly Volume 20 ; 20 >
+      au < manifest ; 1939 ; 1939 ; Southern California Quarterly Volume 21 ; 21 >
+      au < manifest ; 1940 ; 1940 ; Southern California Quarterly Volume 22 ; 22 >
+      au < manifest ; 1941 ; 1941 ; Southern California Quarterly Volume 23 ; 23 >
+      au < manifest ; 1942 ; 1942 ; Southern California Quarterly Volume 24 ; 24 >
+      au < manifest ; 1943 ; 1943 ; Southern California Quarterly Volume 25 ; 25 >
+      au < manifest ; 1944 ; 1944 ; Southern California Quarterly Volume 26 ; 26 >
+      au < manifest ; 1945 ; 1945 ; Southern California Quarterly Volume 27 ; 27 >
+      au < manifest ; 1946 ; 1946 ; Southern California Quarterly Volume 28 ; 28 >
+      au < manifest ; 1947 ; 1947 ; Southern California Quarterly Volume 29 ; 29 >
+      au < manifest ; 1948 ; 1948 ; Southern California Quarterly Volume 30 ; 30 >
+      au < manifest ; 1949 ; 1949 ; Southern California Quarterly Volume 31 ; 31 >
+      au < manifest ; 1950 ; 1950 ; Southern California Quarterly Volume 32 ; 32 >
+      au < manifest ; 1951 ; 1951 ; Southern California Quarterly Volume 33 ; 33 >
+      au < manifest ; 1952 ; 1952 ; Southern California Quarterly Volume 34 ; 34 >
+      au < manifest ; 1953 ; 1953 ; Southern California Quarterly Volume 35 ; 35 >
+      au < manifest ; 1954 ; 1954 ; Southern California Quarterly Volume 36 ; 36 >
+      au < manifest ; 1955 ; 1955 ; Southern California Quarterly Volume 37 ; 37 >
+      au < manifest ; 1956 ; 1956 ; Southern California Quarterly Volume 38 ; 38 >
+      au < manifest ; 1957 ; 1957 ; Southern California Quarterly Volume 39 ; 39 >
+      au < manifest ; 1958 ; 1958 ; Southern California Quarterly Volume 40 ; 40 >
+      au < manifest ; 1959 ; 1959 ; Southern California Quarterly Volume 41 ; 41 >
+      au < manifest ; 1960 ; 1960 ; Southern California Quarterly Volume 42 ; 42 >
+      au < manifest ; 1961 ; 1961 ; Southern California Quarterly Volume 43 ; 43 >
+      au < manifest ; 1962 ; 1962 ; Southern California Quarterly Volume 44 ; 44 >
+      au < manifest ; 1963 ; 1963 ; Southern California Quarterly Volume 45 ; 45 >
+      au < manifest ; 1964 ; 1964 ; Southern California Quarterly Volume 46 ; 46 >
+      au < manifest ; 1965 ; 1965 ; Southern California Quarterly Volume 47 ; 47 >
+      au < manifest ; 1966 ; 1966 ; Southern California Quarterly Volume 48 ; 48 >
+      au < manifest ; 1967 ; 1967 ; Southern California Quarterly Volume 49 ; 49 >
+      au < manifest ; 1968 ; 1968 ; Southern California Quarterly Volume 50 ; 50 >
+      au < manifest ; 1969 ; 1969 ; Southern California Quarterly Volume 51 ; 51 >
+      au < manifest ; 1970 ; 1970 ; Southern California Quarterly Volume 52 ; 52 >
+      au < manifest ; 1971 ; 1971 ; Southern California Quarterly Volume 53 ; 53 >
+      au < manifest ; 1972 ; 1972 ; Southern California Quarterly Volume 54 ; 54 >
+      au < manifest ; 1973 ; 1973 ; Southern California Quarterly Volume 55 ; 55 >
+      au < manifest ; 1974 ; 1974 ; Southern California Quarterly Volume 56 ; 56 >
+      au < manifest ; 1975 ; 1975 ; Southern California Quarterly Volume 57 ; 57 >
+      au < manifest ; 1976 ; 1976 ; Southern California Quarterly Volume 58 ; 58 >
+      au < manifest ; 1977 ; 1977 ; Southern California Quarterly Volume 59 ; 59 >
+      au < manifest ; 1978 ; 1978 ; Southern California Quarterly Volume 60 ; 60 >
+      au < manifest ; 1979 ; 1979 ; Southern California Quarterly Volume 61 ; 61 >
+      au < manifest ; 1980 ; 1980 ; Southern California Quarterly Volume 62 ; 62 >
+      au < manifest ; 1981 ; 1981 ; Southern California Quarterly Volume 63 ; 63 >
+      au < manifest ; 1982 ; 1982 ; Southern California Quarterly Volume 64 ; 64 >
+      au < manifest ; 1983 ; 1983 ; Southern California Quarterly Volume 65 ; 65 >
+      au < manifest ; 1984 ; 1984 ; Southern California Quarterly Volume 66 ; 66 >
+      au < manifest ; 1985 ; 1985 ; Southern California Quarterly Volume 67 ; 67 >
+      au < manifest ; 1986 ; 1986 ; Southern California Quarterly Volume 68 ; 68 >
+      au < manifest ; 1987 ; 1987 ; Southern California Quarterly Volume 69 ; 69 >
+      au < manifest ; 1988 ; 1988 ; Southern California Quarterly Volume 70 ; 70 >
+      au < manifest ; 1989 ; 1989 ; Southern California Quarterly Volume 71 ; 71 >
+      au < manifest ; 1990 ; 1990 ; Southern California Quarterly Volume 72 ; 72 >
+      au < manifest ; 1991 ; 1991 ; Southern California Quarterly Volume 73 ; 73 >
+      au < manifest ; 1992 ; 1992 ; Southern California Quarterly Volume 74 ; 74 >
+      au < manifest ; 1993 ; 1993 ; Southern California Quarterly Volume 75 ; 75 >
+      au < manifest ; 1994 ; 1994 ; Southern California Quarterly Volume 76 ; 76 >
+      au < manifest ; 1995 ; 1995 ; Southern California Quarterly Volume 77 ; 77 >
+      au < manifest ; 1996 ; 1996 ; Southern California Quarterly Volume 78 ; 78 >
+      au < manifest ; 1997 ; 1997 ; Southern California Quarterly Volume 79 ; 79 >
+      au < manifest ; 1998 ; 1998 ; Southern California Quarterly Volume 80 ; 80 >
+      au < manifest ; 1999 ; 1999 ; Southern California Quarterly Volume 81 ; 81 >
+      au < manifest ; 2000 ; 2000 ; Southern California Quarterly Volume 82 ; 82 >
+      au < manifest ; 2001 ; 2001 ; Southern California Quarterly Volume 83 ; 83 >
+      au < manifest ; 2002 ; 2002 ; Southern California Quarterly Volume 84 ; 84 >
+      au < manifest ; 2003 ; 2003 ; Southern California Quarterly Volume 85 ; 85 >
+      au < manifest ; 2004 ; 2004 ; Southern California Quarterly Volume 86 ; 86 >
+      au < manifest ; 2005 ; 2005 ; Southern California Quarterly Volume 87 ; 87 >
+      au < manifest ; 2006 ; 2006 ; Southern California Quarterly Volume 88 ; 88 >
+      au < manifest ; 2007 ; 2007 ; Southern California Quarterly Volume 89 ; 89 >
       au < doNotProcess ; 2008 ; 2008 ; Southern California Quarterly Volume 90 ; 90 >
       au < doNotProcess ; 2009 ; 2009 ; Southern California Quarterly Volume 91 ; 91 >
       au < doNotProcess ; 2010 ; 2010 ; Southern California Quarterly Volume 92 ; 92 >
@@ -1911,7 +1962,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Southern California Quarterly Volume 99 ; 99 >
       au < doNotProcess ; 2018 ; 2018 ; Southern California Quarterly Volume 100 ; 100 >
       au < doNotProcess ; 2019 ; 2019 ; Southern California Quarterly Volume 101 ; 101 >
-      au < exists ; 2020 ; 2020 ; Southern California Quarterly Volume 102 ; 102 >
+      au < manifest ; 2020 ; 2020 ; Southern California Quarterly Volume 102 ; 102 >
+      au < manifest ; 2021 ; 2021 ; Southern California Quarterly Volume 103 ; 103 >
 
   }
 
@@ -1922,14 +1974,16 @@
         issn = 2470-6469 ;
         eissn = 2470-2048 
     >
-
       #param[base_url] = http://sla.ucpress.edu/
+      param[journal_id] = sla
+
       param[journal_id] = sla
 
       au < doNotProcess ; 2017 ; 2017 ; Studies in Late Antiquity Volume 1 ; 1 >
       au < doNotProcess ; 2018 ; 2018 ; Studies in Late Antiquity Volume 2 ; 2 >
       au < doNotProcess ; 2019 ; 2019 ; Studies in Late Antiquity Volume 3 ; 3 >
       au < exists ; 2020 ; 2020 ; Studies in Late Antiquity Volume 4 ; 4 >
+      au < expected ; 2021 ; 2021 ; Studies in Late Antiquity Volume 5 ; 5 >
 
   }
 
@@ -1939,8 +1993,9 @@
         name = Sociology of Development ;
         eissn = 2374-538X 
     >
-
       #param[base_url] = http://socdev.ucpress.edu/
+      param[journal_id] = socdev
+
       param[journal_id] = socdev
 
       au < doNotProcess ; 2015 ; 2015 ; Sociology of Development Volume 1 ; 1 >
@@ -1948,7 +2003,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Sociology of Development Volume 3 ; 3 >
       au < doNotProcess ; 2018 ; 2018 ; Sociology of Development Volume 4 ; 4 >
       au < doNotProcess ; 2019 ; 2019 ; Sociology of Development Volume 5 ; 5 >
-      au < exists ; 2020 ; 2020 ; Sociology of Development Volume 6 ; 6 >
+      au < manifest ; 2020 ; 2020 ; Sociology of Development Volume 6 ; 6 >
+      au < manifest ; 2021 ; 2021 ; Sociology of Development Volume 7 ; 7 >
 
   }
 
@@ -1959,42 +2015,42 @@
         issn = 0272-3433 ;
         eissn = 1533-8576 
     >
-
       #param[base_url] = http://tph.ucpress.edu/
+
       param[journal_id] = tph
 
-      au < exists ; 1978 ; 1978 ; The Public Historian Volume 1 [1978] ; 1 >
-      au < exists ; 1979 ; 1979 ; The Public Historian Volume 1 [1979] ; 1 >
-      au < exists ; 1979 ; 1979 ; The Public Historian Volume 2 [1979] ; 2 >
-      au < exists ; 1980 ; 1980 ; The Public Historian Volume 2 [1980] ; 2 >
-      au < exists ; 1981 ; 1981 ; The Public Historian Volume 3 ; 3 >
-      au < exists ; 1982 ; 1982 ; The Public Historian Volume 4 ; 4 >
-      au < exists ; 1983 ; 1983 ; The Public Historian Volume 5 ; 5 >
-      au < exists ; 1984 ; 1984 ; The Public Historian Volume 6 ; 6 >
-      au < exists ; 1985 ; 1985 ; The Public Historian Volume 7 ; 7 >
-      au < exists ; 1986 ; 1986 ; The Public Historian Volume 8 ; 8 >
-      au < exists ; 1987 ; 1987 ; The Public Historian Volume 9 ; 9 >
-      au < exists ; 1988 ; 1988 ; The Public Historian Volume 10 ; 10 >
-      au < exists ; 1989 ; 1989 ; The Public Historian Volume 11 ; 11 >
-      au < exists ; 1990 ; 1990 ; The Public Historian Volume 12 ; 12 >
-      au < exists ; 1991 ; 1991 ; The Public Historian Volume 13 ; 13 >
-      au < exists ; 1992 ; 1992 ; The Public Historian Volume 14 ; 14 >
-      au < exists ; 1993 ; 1993 ; The Public Historian Volume 15 ; 15 >
-      au < exists ; 1994 ; 1994 ; The Public Historian Volume 16 ; 16 >
-      au < exists ; 1995 ; 1995 ; The Public Historian Volume 17 ; 17 >
-      au < exists ; 1996 ; 1996 ; The Public Historian Volume 18 ; 18 >
-      au < exists ; 1997 ; 1997 ; The Public Historian Volume 19 ; 19 >
-      au < exists ; 1998 ; 1998 ; The Public Historian Volume 20 ; 20 >
-      au < exists ; 1999 ; 1999 ; The Public Historian Volume 21 ; 21 >
-      au < exists ; 2000 ; 2000 ; The Public Historian Volume 22 ; 22 >
-      au < exists ; 2001 ; 2001 ; The Public Historian Volume 23 ; 23 >
-      au < exists ; 2002 ; 2002 ; The Public Historian Volume 24 ; 24 >
-      au < exists ; 2003 ; 2003 ; The Public Historian Volume 25 ; 25 >
-      au < exists ; 2004 ; 2004 ; The Public Historian Volume 26 ; 26 >
-      au < exists ; 2005 ; 2005 ; The Public Historian Volume 27 ; 27 >
-      au < exists ; 2006 ; 2006 ; The Public Historian Volume 28 ; 28 >
-      au < exists ; 2007 ; 2007 ; The Public Historian Volume 29 ; 29 >
-      au < exists ; 2008 ; 2008 ; The Public Historian Volume 30 ; 30 >
+      au < manifest ; 1978 ; 1978 ; The Public Historian Volume 1 [1978] ; 1 >
+      au < manifest ; 1979 ; 1979 ; The Public Historian Volume 1 [1979] ; 1 >
+      au < manifest ; 1979 ; 1979 ; The Public Historian Volume 2 [1979] ; 2 >
+      au < manifest ; 1980 ; 1980 ; The Public Historian Volume 2 [1980] ; 2 >
+      au < manifest ; 1981 ; 1981 ; The Public Historian Volume 3 ; 3 >
+      au < manifest ; 1982 ; 1982 ; The Public Historian Volume 4 ; 4 >
+      au < manifest ; 1983 ; 1983 ; The Public Historian Volume 5 ; 5 >
+      au < manifest ; 1984 ; 1984 ; The Public Historian Volume 6 ; 6 >
+      au < manifest ; 1985 ; 1985 ; The Public Historian Volume 7 ; 7 >
+      au < manifest ; 1986 ; 1986 ; The Public Historian Volume 8 ; 8 >
+      au < manifest ; 1987 ; 1987 ; The Public Historian Volume 9 ; 9 >
+      au < manifest ; 1988 ; 1988 ; The Public Historian Volume 10 ; 10 >
+      au < manifest ; 1989 ; 1989 ; The Public Historian Volume 11 ; 11 >
+      au < manifest ; 1990 ; 1990 ; The Public Historian Volume 12 ; 12 >
+      au < manifest ; 1991 ; 1991 ; The Public Historian Volume 13 ; 13 >
+      au < manifest ; 1992 ; 1992 ; The Public Historian Volume 14 ; 14 >
+      au < manifest ; 1993 ; 1993 ; The Public Historian Volume 15 ; 15 >
+      au < manifest ; 1994 ; 1994 ; The Public Historian Volume 16 ; 16 >
+      au < manifest ; 1995 ; 1995 ; The Public Historian Volume 17 ; 17 >
+      au < manifest ; 1996 ; 1996 ; The Public Historian Volume 18 ; 18 >
+      au < manifest ; 1997 ; 1997 ; The Public Historian Volume 19 ; 19 >
+      au < manifest ; 1998 ; 1998 ; The Public Historian Volume 20 ; 20 >
+      au < manifest ; 1999 ; 1999 ; The Public Historian Volume 21 ; 21 >
+      au < manifest ; 2000 ; 2000 ; The Public Historian Volume 22 ; 22 >
+      au < manifest ; 2001 ; 2001 ; The Public Historian Volume 23 ; 23 >
+      au < manifest ; 2002 ; 2002 ; The Public Historian Volume 24 ; 24 >
+      au < manifest ; 2003 ; 2003 ; The Public Historian Volume 25 ; 25 >
+      au < manifest ; 2004 ; 2004 ; The Public Historian Volume 26 ; 26 >
+      au < manifest ; 2005 ; 2005 ; The Public Historian Volume 27 ; 27 >
+      au < manifest ; 2006 ; 2006 ; The Public Historian Volume 28 ; 28 >
+      au < manifest ; 2007 ; 2007 ; The Public Historian Volume 29 ; 29 >
+      au < manifest ; 2008 ; 2008 ; The Public Historian Volume 30 ; 30 >
       au < doNotProcess ; 2009 ; 2009 ; The Public Historian Volume 31 ; 31 >
       au < doNotProcess ; 2010 ; 2010 ; The Public Historian Volume 32 ; 32 >
       au < doNotProcess ; 2011 ; 2011 ; The Public Historian Volume 33 ; 33 >
@@ -2006,7 +2062,8 @@
       au < doNotProcess ; 2017 ; 2017 ; The Public Historian Volume 39 ; 39 >
       au < doNotProcess ; 2018 ; 2018 ; The Public Historian Volume 40 ; 40 >
       au < doNotProcess ; 2019 ; 2019 ; The Public Historian Volume 41 ; 41 >
-      au < exists ; 2020 ; 2020 ; The Public Historian Volume 42 ; 42 >
+      au < manifest ; 2020 ; 2020 ; The Public Historian Volume 42 ; 42 >
+      au < manifest ; 2021 ; 2021 ; The Public Historian Volume 43 ; 43 >
 
   }
 
@@ -2017,8 +2074,8 @@
         issn = 1559-372X ;
         eissn = 1559-3738 
     >
-
       #param[base_url] = http://vs.ucpress.edu/
+
       param[journal_id] = vs
 
       au < exists ; 2006 ; 2006 ; Journal of Vietnamese Studies Volume 1 ; 1 >
@@ -2036,6 +2093,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Journal of Vietnamese Studies Volume 13 ; 13 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Vietnamese Studies Volume 14 ; 14 >
       au < exists ; 2020 ; 2020 ; Journal of Vietnamese Studies Volume 15 ; 15 >
+      au < expected ; 2021 ; 2021 ; Journal of Vietnamese Studies Volume 16 ; 16 >
 
   }
 

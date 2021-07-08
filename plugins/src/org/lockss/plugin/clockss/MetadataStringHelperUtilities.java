@@ -1,9 +1,13 @@
 package org.lockss.plugin.clockss;
 
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.LineIterator;
+import org.apache.cxf.helpers.IOUtils;
 import org.lockss.util.Logger;
 import org.lockss.util.NumberUtil;
 
@@ -86,33 +90,14 @@ public class MetadataStringHelperUtilities {
 
         return cleanedUpPubDate;
     }
-
-    // This function should just cleanup the string, like ";", ":", extra space, but it should still be human readable
-    // However, "[]" or "()", "&" "?" have meanings, will not try to be too aggressive on this
+    
     public static String cleanupPublisherName(String originalString) {
-
-        String cleanupPublisherName =  originalString.trim();
-
-        if (cleanupPublisherName.endsWith(",")) {
-            cleanupPublisherName = cleanupPublisherName.substring(0, cleanupPublisherName.length() - 1);
-        }
-
-        if (cleanupPublisherName.endsWith(":")) {
-            cleanupPublisherName = cleanupPublisherName.substring(0, cleanupPublisherName.length() - 1);
-        }
-
-        if (cleanupPublisherName.endsWith(";")) {
-            cleanupPublisherName = cleanupPublisherName.substring(0, cleanupPublisherName.length() - 1);
-        }
-
-        if (cleanupPublisherName.endsWith("?")) {
-            cleanupPublisherName = cleanupPublisherName.substring(0, cleanupPublisherName.length() - 1);
-        }
-
-        cleanupPublisherName = cleanupPublisherName.trim();
-
-        log.info(String.format("#######Cleanup PublisherName: originalString %s | cleanupPublisherName: %s ", originalString, cleanupPublisherName));
-
-        return cleanupPublisherName;
+      Pattern badCharactersPat = Pattern.compile("[^-\\p{Alnum} .&']+", Pattern.UNICODE_CHARACTER_CLASS);
+      String cleanupPublisherName = originalString.replaceAll("\\[\\d{4}\\]", "");
+      cleanupPublisherName = badCharactersPat.matcher(cleanupPublisherName).replaceAll("");
+      cleanupPublisherName = cleanupPublisherName.trim();
+      cleanupPublisherName = cleanupPublisherName.replaceAll(" +", " ");
+      log.debug2(String.format("Casalini-Metadata: Cleanup Publisher Name: originalString: %s, cleanupPublisherName: %s ", originalString, cleanupPublisherName));
+      return cleanupPublisherName;
     }
 }

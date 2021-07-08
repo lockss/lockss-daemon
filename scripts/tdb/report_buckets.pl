@@ -1,27 +1,30 @@
 #!/usr/bin/perl
-#
-# Read in two reports of AUids and status. Generate a count
-# of category crossings.  
-#
-# To create report, comparing two points in time.
-# git:
-# git checkout master
-# git checkout `git rev-list -n 1 --before="2011-01-01 00:00" master`
-# ant jar-lockss
-# ./scripts/tdb/tdbout -t auid,status tdb/prod/*.tdb | sort -u > file1.txt
-# git checkout master
-# git checkout `git rev-list -n 1 --before="2011-12-31 23:59" master`
-# ant jar-lockss
-# ./scripts/tdb/tdbout -t auid,status tdb/prod/*.tdb | sort -u > file2.txt
-# ./report_buckets.pl file1.txt file2.txt
-# git checkout master
-# git pull origin master
-# ant jar-lockss
 
-# To create a report, comparing clockss status1 and status2
-# ./scripts/tdb/tdbout -t auid,status tdb/clockssingest/*.tdb | sort -u > ../SageEdits/file1.txt
-# ./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/*.tdb | sort -u > ../SageEdits/file2.txt
-# ./scripts/tdb/report_buckets.pl ../SageEdits/file1.txt ../SageEdits/file2.txt > ../SageEdits/buckets_today.tsv
+#GLN: To create report, comparing two points in time.
+#git checkout master
+#git checkout `git rev-list -n 1 --before="2020-04-01 00:00" master`
+#ant jar-lockss
+#/scripts/tdb/tdbout -t auid,status tdb/prod/{,*/}*.tdb | sort -u > ../tmp/file1.txt
+#git checkout master
+#git checkout `git rev-list -n 1 --before="2021-04-01 00:00" master`
+#ant jar-lockss
+#./scripts/tdb/tdbout -t auid,status tdb/prod/{,*/}*.tdb | sort -u > ../tmp/file2.txt
+#./scripts/tdb/report_buckets.pl ../tmp/file1.txt ../tmp/file2.txt
+#git checkout master
+#git pull origin master
+#ant jar-lockss
+
+#CLOCKSS: To create a report, comparing clockss status1 and status2.
+#git checkout master
+#git checkout `git rev-list -n 1 --before="2021-05-01 00:00" master`
+#ant jar-lockss
+#./scripts/tdb/tdbout -t auid,status tdb/clockssingest/{,*/}*.tdb | sort -u > ../SageEdits/file1.txt
+#./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/{,*/}*.tdb | sort -u > ../SageEdits/file2.txt
+#./scripts/tdb/report_buckets.pl ../SageEdits/file1.txt ../SageEdits/file2.txt > ../SageEdits/buckets_today.tsv
+#git checkout master
+#git pull
+#ant jar-lockss
+
 
 my %code = ("notPresent" => 0,
     "expected" => 1,

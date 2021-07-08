@@ -1335,10 +1335,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       this.retryDelay = retryDelay;
     }
     public int getRetryCount() {
-      return retryCount;
+      return retryCount != -1 ? retryCount : super.getRetryCount();
     }
     public long getRetryDelay() {
-      return retryDelay;
+      return retryDelay != -1 ? retryDelay : super.getRetryDelay();
     }
   }
 

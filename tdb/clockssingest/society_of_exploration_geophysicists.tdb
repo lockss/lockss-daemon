@@ -87,10 +87,10 @@
     au < notReady ; exists ; 1996 ; Geophysics Volume 61 ; 61 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1997 ; Geophysics Volume 62 ; 62 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1998 ; Geophysics Volume 63 ; 63 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1999 ; Geophysics Volume 64 ; 64 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1999 ; Geophysics Volume 64 ; 64 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2000 ; Geophysics Volume 65 ; 65 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 2001 ; Geophysics Volume 66 ; 66 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 2002 ; Geophysics Volume 67 ; 67 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 2001 ; Geophysics Volume 66 ; 66 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 2002 ; Geophysics Volume 67 ; 67 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2003 ; Geophysics Volume 68 ; 68 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 2004 ; Geophysics Volume 69 ; 69 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2005 ; Geophysics Volume 70 ; 70 ; https://library.seg.org/ ; >
@@ -109,6 +109,7 @@
     au < deepCrawl ; exists ; 2018 ; Geophysics Volume 83 ; 83 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2019 ; Geophysics Volume 84 ; 84 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2020 ; Geophysics Volume 85 ; 85 ; https://library.seg.org/ ; >
+    au < manifest ; exists ; 2021 ; Geophysics Volume 86 ; 86 ; https://library.seg.org/ ; >
 
   }
 
@@ -122,26 +123,26 @@
     
     param[journal_id] = leedff
 
-    au < ready ; exists ; 1982 ; The Leading Edge Volume 1 ; 1 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1983 ; The Leading Edge Volume 2 ; 2 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1984 ; The Leading Edge Volume 3 ; 3 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1985 ; The Leading Edge Volume 4 ; 4 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1986 ; The Leading Edge Volume 5 ; 5 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1987 ; The Leading Edge Volume 6 ; 6 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 1982 ; The Leading Edge Volume 1 ; 1 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1983 ; The Leading Edge Volume 2 ; 2 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1984 ; The Leading Edge Volume 3 ; 3 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1985 ; The Leading Edge Volume 4 ; 4 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1986 ; The Leading Edge Volume 5 ; 5 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 1987 ; The Leading Edge Volume 6 ; 6 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1988 ; The Leading Edge Volume 7 ; 7 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1989 ; The Leading Edge Volume 8 ; 8 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1990 ; The Leading Edge Volume 9 ; 9 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1991 ; The Leading Edge Volume 10 ; 10 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1992 ; The Leading Edge Volume 11 ; 11 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1989 ; The Leading Edge Volume 8 ; 8 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1990 ; The Leading Edge Volume 9 ; 9 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1991 ; The Leading Edge Volume 10 ; 10 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 1992 ; The Leading Edge Volume 11 ; 11 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1993 ; The Leading Edge Volume 12 ; 12 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1994 ; The Leading Edge Volume 13 ; 13 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 1994 ; The Leading Edge Volume 13 ; 13 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1995 ; The Leading Edge Volume 14 ; 14 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1996 ; The Leading Edge Volume 15 ; 15 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 1996 ; The Leading Edge Volume 15 ; 15 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1997 ; The Leading Edge Volume 16 ; 16 ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1998 ; The Leading Edge Volume 17 ; 17 ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 1998 ; The Leading Edge Volume 17 ; 17 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1999 ; The Leading Edge Volume 18 ; 18 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2000 ; The Leading Edge Volume 19 ; 19 ; https://library.seg.org/ ; >
-    au < crawling ; exists ; 2001 ; The Leading Edge Volume 20 ; 20 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2001 ; The Leading Edge Volume 20 ; 20 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2002 ; The Leading Edge Volume 21 ; 21 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2003 ; The Leading Edge Volume 22 ; 22 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2004 ; The Leading Edge Volume 23 ; 23 ; https://library.seg.org/ ; >
@@ -152,7 +153,7 @@
     au < frozen ; exists ; 2009 ; The Leading Edge Volume 28 ; 28 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2010 ; The Leading Edge Volume 29 ; 29 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2011 ; The Leading Edge Volume 30 ; 30 ; https://library.seg.org/ ; >
-    au < crawling ; exists ; 2012 ; The Leading Edge Volume 31 ; 31 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2012 ; The Leading Edge Volume 31 ; 31 ; https://library.seg.org/ ; >
     au < finished ; manifest ; 2013 ; The Leading Edge Volume 32 ; 32 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; The Leading Edge Volume 33 ; 33 ; http://library.seg.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; The Leading Edge Volume 34 ; 34 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
@@ -161,6 +162,7 @@
     au < deepCrawl ; exists ; 2018 ; The Leading Edge Volume 37 ; 37 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2019 ; The Leading Edge Volume 38 ; 38 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2020 ; The Leading Edge Volume 39 ; 39 ; https://library.seg.org/ ; >
+    au < manifest ; exists ; 2021 ; The Leading Edge Volume 40 ; 40 ; https://library.seg.org/ ; >
 
   }
 
@@ -182,6 +184,7 @@
     au < deepCrawl ; exists ; 2018 ; Interpretation Volume 6 ; 6 ; https://library.seg.org/ ; >
     au < finished ; crawling ; 2019 ; Interpretation Volume 7 ; 7 ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Interpretation Volume 8 ; 8 ; https://library.seg.org/ ; >
+    au < manifest ; exists ; 2021 ; Interpretation Volume 9 ; 9 ; https://library.seg.org/ ; >
 
   }
   
@@ -197,10 +200,10 @@
 
     au < notReady ; exists ; 1995-1996 ; Journal of Environmental and Engineering Geophysics Volume 1 ; 1 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1997 ; Journal of Environmental and Engineering Geophysics Volume 2 ; 2  ; https://library.seg.org/ ; >
-    au < ready ; exists ; 1998 ; Journal of Environmental and Engineering Geophysics Volume 3 ; 3  ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 1998 ; Journal of Environmental and Engineering Geophysics Volume 3 ; 3  ; https://library.seg.org/ ; >
     au < notReady ; exists ; 1999 ; Journal of Environmental and Engineering Geophysics Volume 4 ; 4  ; https://library.seg.org/ ; >
-    au < ready ; exists ; 2000 ; Journal of Environmental and Engineering Geophysics Volume 5 ; 5  ; https://library.seg.org/ ; >
-    au < ready ; exists ; 2001 ; Journal of Environmental and Engineering Geophysics Volume 6 ; 6  ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 2000 ; Journal of Environmental and Engineering Geophysics Volume 5 ; 5  ; https://library.seg.org/ ; >
+    au < crawling ; exists ; 2001 ; Journal of Environmental and Engineering Geophysics Volume 6 ; 6  ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2002 ; Journal of Environmental and Engineering Geophysics Volume 7 ; 7  ; https://library.seg.org/ ; >
     au < notReady ; exists ; 2003 ; Journal of Environmental and Engineering Geophysics Volume 8 ; 8  ; https://library.seg.org/ ; >
     au < notReady ; exists ; 2004 ; Journal of Environmental and Engineering Geophysics Volume 9 ; 9  ; https://library.seg.org/ ; >
@@ -220,6 +223,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Environmental and Engineering Geophysics Volume 23 ; 23 ; https://library.seg.org/ ; >
     au < finished ; crawling ; 2019 ; Journal of Environmental and Engineering Geophysics Volume 24 ; 24 ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Journal of Environmental and Engineering Geophysics Volume 25 ; 25 ; https://library.seg.org/ ; >
+    au < manifest ; exists ; 2021 ; Journal of Environmental and Engineering Geophysics Volume 26 ; 26 ; https://library.seg.org/ ; >
 
   }
 

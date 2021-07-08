@@ -53,7 +53,7 @@ public class MdpiZipXmlArticleIteratorFactory extends SourceZipXmlArticleIterato
   // article xml: water-07-05731.xml
   // the xml may not start with a double "__"
   protected static final String NOT_TOC_XML_TEMPLATE =
-      "\"%s%d/.*\\.zip!/[^_][^_].*\\.xml$\", base_url, year";
+      "\"%s\\d{4}(_\\d{2})?/.*\\.zip!/[^_][^_].*\\.xml$\", base_url";
 
   @Override
   protected String getIncludePatternTemplate() {

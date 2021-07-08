@@ -10,6 +10,7 @@
   
   plugin = org.lockss.plugin.atypon.liverpool.ClockssLiverpoolBooksPlugin
 #  param[base_url] = http://online.liverpooluniversitypress.co.uk/
+# move to source
 
   comment[isbn] = in the case of this publisher, it appears to be the hardback isbn that gives access to the volume.
   
@@ -91,8 +92,8 @@
    au < finished ; finished ; 2016 ; 66 ; 9781781381755 ;  ; 9781781381755 ; Khalifa ibn Khayyat's History on the Umayyad Dynasty (660–750) (9781781381755) ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
    au < frozen ; exists ; 2016 ; 70 ; 9781786941268 ;  ; 9781786941268 ; The Donatist Schism: Controversy and Contexts (9781786941268) ; https://online.liverpooluniversitypress.co.uk/ ; >
    au < frozen ; exists ; 2016 ; 69 ; 9781781383285 ;  ; 9781781383285 ; Imperial Invectives against Constantius II (9781781383285) ; https://online.liverpooluniversitypress.co.uk/ ; >
-   au < manifest ; exists ; 2017 ; 71 ; 9781789628937 ;  ; 9781789628937 ; The Laws of the Isaurian Era: The Ecloga and its Appendices (9781789628937) ; https://online.liverpooluniversitypress.co.uk/ ; >
-   au < manifest ; exists ; 2017 ; 72 ; 9781789628807 ;  ; 9781789628807 ; Jonas of Bobbio: Life of Columbanus, Life of John of Réomé, and Life of Vedast (9781789628807) ; https://online.liverpooluniversitypress.co.uk/ ; >
+   au < doNotProcess ; exists ; 2017 ; 71 ; 9781789628937 ;  ; 9781789628937 ; The Laws of the Isaurian Era: The Ecloga and its Appendices (9781789628937) ; https://online.liverpooluniversitypress.co.uk/ ; >
+   au < doNotProcess ; exists ; 2017 ; 72 ; 9781789628807 ;  ; 9781789628807 ; Jonas of Bobbio: Life of Columbanus, Life of John of Réomé, and Life of Vedast (9781789628807) ; https://online.liverpooluniversitypress.co.uk/ ; >
 
    }
 

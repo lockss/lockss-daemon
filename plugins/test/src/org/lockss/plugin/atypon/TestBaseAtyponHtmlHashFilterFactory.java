@@ -330,8 +330,124 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
         "</div>World" ;
   private static final String withoutRelatedContent = 
         "HelloWorld" ;
-    
-  
+
+
+  protected static final String protectedEmailSpan =
+        "<a href=\"dgern@thoracic.org\">" +
+        "<span class=\"__cf_email__\" data-cfemail=\"34505351465a74405c5b4655575d571a5b4653\">[email&nbsp;protected] </span>" +
+        "</a>";
+
+  protected static final String filteredProtectedEmailSpan =
+        "<a href=\"dgern@thoracic.org\">" +
+        "</a>";
+
+  protected static final String protectedEmailASpan =
+      "<div class=\"NLM_corresp\">" +
+      "Correspondence and requests for reprints should be addressed to Peter Classi, M.Sc., M.B.A., " +
+      "United Therapeutics Corporation, 55 TW Alexander Drive, Research Triangle Park, NC 27709. E-mail: " +
+      "<a class=\"email\" href=\"/cdn-cgi/l/email-protection#1060737c7163637950657e79647875623e737f7d\">" +
+      "<span class=\"__cf_email__\" data-cfemail=\"3c4c5f505d4f4f557c4952554854594e125f5351\">[email&nbsp;protected]</span>" +
+      "</a>." +
+      "</div>";
+
+  protected static final String filteredProtectedEmailASpan =
+      "<div class=\"NLM_corresp\">" +
+      "Correspondence and requests for reprints should be addressed to Peter Classi, M.Sc., M.B.A., " +
+      "United Therapeutics Corporation, 55 TW Alexander Drive, Research Triangle Park, NC 27709. E-mail: " +
+      "." +
+      "</div>";
+
+  protected static final String pVidSource =
+      "<p>" +
+      "<span class=\"video-source\" style=\"display:none\">https://thoracic-prod-streaming.literatumonline.com/journals/content/annalsats/2019/annalsats.2019.16.issue-12/annalsats.201905-414cc/20191115/media/annalsats.201905-414cc_vid1.,964,750,300,180,.mp4.m3u8?b92b4ad1b4f274c70877528314abb28bd3f723a7d6082e6507476c036d1b3402e209f95f47cb691aca526557783e82bc64ff0999d3d535157ece591a7960e52d0ad6ff2e906196e220cb93f961768e02064b91a1ad9c7348821c98f7acc9bd5e389723630f66ab576db0f419f0c939f58d827bfa2eac7787d4b56d13de187b3827fc74a9d5fbda90a8b17c06c05d2720b3f7c0d3e1346cc83905b6bb1906c3b9d888e9193497328183834474e8c05f9b2eee691ed114090d8fb9bb9bea87d9b35ba05edca8b3b902 </span>" +
+      "</p>";
+
+  protected static final String filteredPVidSource =
+      "<p>" +
+      "</p>";
+
+  protected static final String loginForm =
+      "<table class=\"loginForm\" summary=\"\">" +
+        "<tbody>" +
+          "<tr>" +
+            "<td>" +
+              "<form action=\"/action/doLogin\" name=\"frmLogin\" method=\"post\">" +
+                "<input type=\"hidden\" name=\"redirectUri\" value=\"/doi/full/10.1513/AnnalsATS.201810-723CC\">" +
+                "<input type=\"hidden\" name=\"loginUri\" value=\"/doi/full/10.1513/AnnalsATS.201810-723CC\">" +
+                "<p> </p>" +
+                "<table class=\"loginForm marginTobVandr\" summary=\"\">" +
+                  "<tbody>" +
+                    "<tr>" +
+                      "<th>" +
+                        "<label for=\"login\">Username: </label>" +
+                      "</th>" +
+                      "<td>" +
+                        "<input class=\"textInput\" style=\"width:150px\" type=\"text\" name=\"login\" value=\"\" size=\"15\">" +
+                      "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                      "<th>" +
+                        "<label for=\"password\">Password: </label>" +
+                      "</th>" +
+                      "<td>" +
+                        "<input class=\"textInput\" style=\"width:150px\" type=\"password\" name=\"password\" value=\"\" autocomplete=\"off\">" +
+                      "</td>" +
+                    "</tr>" +
+                    "<tr>" +
+                      "<td colspan=\"2\">" +
+                        "<input type=\"checkbox\" name=\"savePassword\" value=\"1\">" +
+                        "<label for=\"savePassword\">Remember me </label>" +
+                      "</td>" +
+                    "</tr>" +
+                  "</tbody>" +
+                "</table>" +
+                "<input type=\"submit\" name=\"submit\" value=\"Sign In\" class=\"formbutton\">" +
+                "<input type=\"reset\" name=\"clear\" value=\"Clear\" class=\"formbutton\">" +
+                "<br>" +
+                "<br>" +
+                "<div>" +
+                  "<a href=\"/action/requestResetPassword\">Forgotten your password? </a>" +
+                "</div>" +
+              "</form>" +
+            "</td>" +
+          "</tr>" +
+          "<tr>" +
+            "<td>" +
+              "<h1>New User Registration </h1>" +
+              "<b>Not Yet Registered? </b>" +
+              "<br>" +
+              "<i>Benefits of Registration Include: </i>" +
+              "<br>" +
+              "<table summary=\"\">" +
+                "<tbody>" +
+                  "<tr valign=\"top\">" +
+                    "<td> • </td>" +
+                    "<td>A Unique User Profile that will allow you to manage your current subscriptions (including online access) </td>" +
+                  "</tr>" +
+                  "<tr valign=\"top\">" +
+                    "<td> • </td>" +
+                    "<td>The ability to create favorites lists down to the article level </td>" +
+                  "</tr> " +
+                  "<tr valign=\"top\">" +
+                    "<td> • </td>" +
+                    "<td>The ability to customize email alerts to receive specific notifications about the topics you care most about and special offers </td>" +
+                  "</tr>" +
+                "</tbody>" +
+              "</table>" +
+              "<div align=\"right\">" +
+                "<form action=\"https://thoracic.secure.force.com/MyAccount?fp=cn&amp;tr=atsjournals&amp;ar=https%3A%2F%2Fwww.atsjournals.org%2Faction%2Fssostart%3Fidp%3Dhttps%253A%252F%252Flogin.thoracic.org%252Fidp%252Fshibboleth%26redirectUri%3Dnull\" method=\"post\">" +
+                  "<input class=\"formbutton\" type=\"submit\" value=\"Register\">" +
+                  "<input type=\"hidden\" name=\"redirectUri\" value=\"/doi/full/10.1513/AnnalsATS.201810-723CC\">" +
+                "</form>" +
+              "</div>" +
+            "</td>" +
+          "</tr>" +
+        "</tbody>" +
+      "</table>";
+
+  private static final String filteredLoginForm =
+      "";
+
   /*
    *  Compare Html and HtmlHashFiltered
    */
@@ -401,7 +517,31 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(withAccessIcon), Constants.DEFAULT_ENCODING);
     assertEquals(withoutAccessIcon, StringUtil.fromInputStream(actIn));
   }
-  
+
+  public void testProtectedEmail() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(protectedEmailSpan), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredProtectedEmailSpan, StringUtil.fromInputStream(actIn));
+  }
+
+  public void testProtectedEmail2() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(protectedEmailASpan), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredProtectedEmailASpan, StringUtil.fromInputStream(actIn));
+  }
+
+  public void testPVidSource() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(pVidSource), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredPVidSource, StringUtil.fromInputStream(actIn));
+  }
+
+  public void testLoginForm() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(loginForm), Constants.DEFAULT_ENCODING);
+    assertEquals(filteredLoginForm, StringUtil.fromInputStream(actIn));
+  }
+
   public void test_pdfPlusSize() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(pdfPlusSize),

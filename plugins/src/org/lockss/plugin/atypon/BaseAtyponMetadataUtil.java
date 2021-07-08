@@ -314,7 +314,18 @@ public class BaseAtyponMetadataUtil {
         }
       }
 
-      isInAu = (!StringUtils.isEmpty(foundYear) && (AU_Year != null) && AU_Year.equals(foundYear));
+      if ((!StringUtils.isEmpty(foundYear) && (AU_Year != null))) {
+        isInAu = false;
+        for (String auYear : AU_Year.split("/|-|,")) {
+          if (auYear.length() == 4) {
+            if (foundYear.equals(auYear)) {
+              isInAu = true;
+              break;
+            }
+          }
+        }
+      }
+
       log.debug3("foundDate: " + foundDate);
     }
     return isInAu;

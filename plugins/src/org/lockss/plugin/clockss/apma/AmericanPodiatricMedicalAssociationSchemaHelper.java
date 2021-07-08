@@ -23,7 +23,6 @@ public class AmericanPodiatricMedicalAssociationSchemaHelper extends JatsPublish
     @Override
     public MultiValueMap getCookMap() {
         MultiValueMap theCookMap = super.getCookMap();
-        theCookMap.put(JATS_pubname, MetadataField.FIELD_PUBLISHER);
         return theCookMap;
     }
 }

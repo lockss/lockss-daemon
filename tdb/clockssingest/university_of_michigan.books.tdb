@@ -1,7 +1,7 @@
 { 
 
   publisher <
-    name = University of Michigan Press;
+    name = University of Michigan Press ;
     info[contract] = 2018 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
@@ -19,7 +19,7 @@
       type = bookSeries
     >
 
-    #book list current as of 7/1/2019
+    #book list current as of 5/8/2020
     
     au < finished ; crawling ; 1981 ; 9780472027217 ; 9780472022342 ; concern/monographs/kp78gh20s ; Historical Metaphors and Mythical Realities: Structure in the Early History of the Sandwich Islands Kingdom (9780472022342) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1981 ; 9780472063307 ; 9780472021536 ; concern/monographs/r494vk86x ; Women of the Andes: Patriarchy and Social Change in Two Peruvian Towns (9780472021536) ; reingest3.clockss.org:8083 >
@@ -41,8 +41,9 @@
     au < finished ; manifest ; 1995 ; 9780472084739 ; 9780472023776 ; concern/monographs/x920fx79r ; Identities, Politics, and Rights (9780472023776) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; 9780472120871 ; 9780472084425 ; concern/monographs/t435gf05k ; Unsportsmanlike Conduct: Exploiting College Athletes (9780472084425) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; 9780472065912 ; 9780472022397 ; concern/monographs/cf95jc351 ; Value Change in Global Perspective (9780472022397) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 1996 ; 9780472084722 ; 9780472022526 ; concern/monographs/d504rm03n ; Chaos Theory in the Social Sciences: Foundations and Applications (9780472022526) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 1996 ; 9780472105380 ; 9780472024131 ; concern/monographs/ng451j33r ; Containing Health Care Costs in Japan (9780472024131) ; >
+    au < finished ; manifest ; 1996 ; 9780472105380 ; 9780472024131 ; concern/monographs/ng451j33r ; Containing Health Care Costs in Japan (9780472024131) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; 9780472085781 ; 9780472023653 ; concern/monographs/9306t007d ; From Revolution to War: State Relations in a World of Change (9780472023653) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 9780472085538 ; 9780472023554 ; concern/monographs/q524jp53r ; Growth Triumphant: The Twentyfirst Century in Historical Perspective (9780472023554) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 9780472086702 ; 9780472023837 ; concern/monographs/rj430538n ; Idealism and Liberal Education (9780472023837) ; reingest3.clockss.org:8083 >
@@ -50,13 +51,14 @@
     au < finished ; manifest ; 1996 ; 9780472066254 ; 9780472023684 ; concern/monographs/z029p570k ; Justice and Injustice in Law and Legal Theory (9780472023684) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 9780472084715 ; 9780472023615 ; concern/monographs/w95051313 ; Legal Rights: Historical and Philosophical Perspectives (9780472023615) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; 9780472066209 ; 9780472022038 ; concern/monographs/3n203z882 ; Narratives of Justice: Legislators' Beliefs about Distributive Fairness (9780472022038) ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 1996 ; 9780472089307 ; 9780472024971 ; concern/monographs/sb397923d ; Our Sisters' Promised Land: Women, Politics, and IsraeliPalestinian Coexistence (9780472024971) ; >
+    au < finished ; manifest ; 1996 ; 9780472089307 ; 9780472024971 ; concern/monographs/sb397923d ; Our Sisters' Promised Land: Women, Politics, and IsraeliPalestinian Coexistence (9780472024971) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 9780472066032 ; 9780472022380 ; concern/monographs/2b88qd00s ; Set in Motion: Essays, Interviews, and Dialogues (9780472022380) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 9780472085200 ; 9780472022045 ; concern/monographs/3t945r61c ; Standing Your Ground: Territorial Disputes and International Conflict (9780472022045) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 9780472107322 ; 9780472023110 ; concern/monographs/6969z1737 ; The Powers that Punish: Prison and Politics in the Era of the "Big House", 19201955 (9780472023110) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 9780472106653 ; 9780472022052 ; concern/monographs/p2676w44w ; The Causes of Human Behavior: Implications for Theory and Method in the Social Sciences (9780472022052) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; 9780472085668 ; 9780472022359 ; concern/monographs/zw12z610f ; The Secret Marriage of Sherlock Holmes and Other Eccentric Readings (9780472022359) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 9780472106851 ; 9780472022816 ; concern/monographs/7s75dd37f ; Unleashing Rights: Law, Meaning, and the Animal Rights Movement (9780472022816) ; reingest4.clockss.org:8082 >
+
     au < finished ; manifest ; 1997 ; 9780472108138 ; 9780472023264 ; concern/monographs/qn59q4848 ; Acceptable Risks: Politics, Policy, and Risky Technologies (9780472023264) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; 9780472066537 ; 9780472022779 ; concern/monographs/6m311p95r ; Beyond Groupthink: Political Group Dynamics and Foreign Policymaking (9780472022779) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1997 ; 9780472086283 ; 9780472021871 ; concern/monographs/9g54xj433 ; Czecho/Slovakia: Ethnic Conflict, Constitutional Fissure, Negotiated Breakup (9780472021871) ; reingest3.clockss.org:8083 >
@@ -76,6 +78,7 @@
     au < finished ; manifest ; 1997 ; 9780472087020 ; 9780472022731 ; concern/monographs/wh246s98v ; The Color of Representation: Congressional Behavior and Black Interests (9780472022731) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; 9780472107698 ; 9780472027361 ; concern/monographs/zg64tm82f ; The Social Benefits of Education (9780472027361) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; 9780472088263 ; 9780472022694 ; concern/monographs/7m01bm67f ; Turning the Legislative Thumbscrew: Minority Rights and Procedural Change in Legislative Politics (9780472022694) ; reingest2.clockss.org:8085 >
+
     au < finished ; manifest ; 1998 ; 9780472108503 ; 9780472022717 ; concern/monographs/z890rv05s ; Affirmative Action and Minority Enrollments in Medical and Law Schools (9780472022717) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1998 ; 9780472109029 ; 9780472023424 ; concern/monographs/gt54kn98f ; Art and the Market: Roger Fry on Commerce in Art, Selected Writings, Edited with an Interpretation (9780472023424) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1998 ; 9780472108879 ; 9780472023370 ; concern/monographs/vx021f97z ; Building the Cold War Consensus: The Political Economy of U.S. National Security Policy, 194951 (9780472023370) ; reingest2.clockss.org:8085 >
@@ -97,6 +100,7 @@
     au < finished ; manifest ; 1998 ; 9780472066674 ; 9780472023325 ; concern/monographs/2z10wq89b ; The Great Depression: An International Disaster of Perverse Economic Policies (9780472023325) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1998 ; 9780472109333 ; 9780472026937 ; concern/monographs/8g84mn10w ; The Impact of Trade and Domestic Policy Reforms in India: A CGE Modeling Approach (9780472026937) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1998 ; 9780472096732 ; 9780472022168 ; concern/monographs/p5547s20j ; The Subject and Other Subjects: On Ethical, Aesthetic, and Political Identity (9780472022168) ; reingest4.clockss.org:8082 >
+
     au < finished ; manifest ; 1999 ; 9780472089871 ; 9780472022847 ; concern/monographs/b2773w47z ; Butterfly, the Bride: Essays on Law, Narrative, and the Family (9780472022847) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 9780472087303 ; 9780472026784 ; concern/monographs/6w924c74z ; Creative Politics: Taxes and Public Goods in a Federal System (9780472026784) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 9780472088270 ; 9780472023967 ; concern/monographs/9k41zf422 ; Democracy without Associations: Transformation of the Party System and Social Cleavages in India (9780472023967) ; reingest4.clockss.org:8082 >
@@ -108,7 +112,7 @@
     au < finished ; manifest ; 1999 ; 9780472087891 ; 9780472022410 ; concern/monographs/r207tq08j ; Much Ado about Culture: North American Trade Disputes (9780472022410) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1999 ; 9780472110155 ; 9780472023363 ; concern/monographs/0r967460r ; Origins of Liberal Dominance: State, Church, and Party in NineteenthCentury Europe (9780472023363) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 9780472088300 ; 9780472027316 ; concern/monographs/tq57nr911 ; Rebellious Civil Society: Popular Protest and Democratic Consolidation in Poland, 19891993 (9780472027316) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 1999 ; 9780472109784 ; 9780472023127 ; concern/monographs/4m90dw143 ; Separate Destinations: Migration, Immigration, and the Politics of Places (9780472023127) ; >
+    au < finished ; manifest ; 1999 ; 9780472109784 ; 9780472023127 ; concern/monographs/4m90dw143 ; Separate Destinations: Migration, Immigration, and the Politics of Places (9780472023127) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 9780472110018 ; 9780472027224 ; concern/monographs/c534fp86j ; Small and MediumSized Enterprises in the Global Economy (9780472027224) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1999 ; 9780472088737 ; 9780472022922 ; concern/monographs/zk51vh70w ; State Institutions, Private Incentives, Global Capital (9780472022922) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 9780472110490 ; 9780472023455 ; concern/monographs/nz806058v ; Systemic Choices: Nonlinear Dynamics and Practical Management (9780472023455) ; reingest3.clockss.org:8083 >
@@ -121,6 +125,7 @@
     au < finished ; manifest ; 1999 ; 9780472110063 ; 9780472024285 ; concern/monographs/9880vr839 ; Titles, Conflict, and Land Use: The Development of Property Rights and Land Reform on the Brazilian Amazon Frontier (9780472024285) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 9780472109302 ; 9780472027200 ; concern/monographs/gb19f6752 ; To Agree or Not to Agree: Leadership, Bargaining, and Arms Control (9780472027200) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; 9780472085361 ; 9780472022670 ; concern/monographs/xg94hq42t ; Triumph of the Fatherland: German Unification and the Marginalization of Women (9780472022670) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 2000 ; 9780472110919 ; 9780472021901 ; concern/monographs/3f462624d ; A University for the 21st Century (9780472021901) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; 9780472067060 ; 9780472023714 ; concern/monographs/bz60cx10m ; A Civil Economy: Transforming the Marketplace in the TwentyFirst Century (9780472023714) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; 9780472111404 ; 9780472023196 ; concern/monographs/1j92g8240 ; An Utterly Dark Spot: Gaze and Body in Early Modern Philosophy (9780472023196) ; reingest4.clockss.org:8082 >
@@ -141,12 +146,12 @@
     au < finished ; manifest ; 2000 ; 9780472089437 ; 9780472021918 ; concern/monographs/gm80hv964 ; Intercollegiate Athletics and the American University: A University President's Perspective (9780472021918) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; 9780472088140 ; 9780472022489 ; concern/monographs/c534fp751 ; Legislative Entrepreneurship in the U.S. House of Representatives (9780472022489) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; 9780472110162 ; 9780472023912 ; concern/monographs/js956g66s ; Liberal Democracy and the Limits of Tolerance: Essays in Honor and Memory of Yitzhak Rabin (9780472023912) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2000 ; 9780472122233 ; 9780472111220 ; concern/monographs/5712m7580 ; Making Security Social: Disability, Insurance, and the Birth of the Social Entitlement State in Germany (9780472111220) ; >
+    au < finished ; manifest ; 2000 ; 9780472122233 ; 9780472111220 ; concern/monographs/5712m7580 ; Making Security Social: Disability, Insurance, and the Birth of the Social Entitlement State in Germany (9780472111220) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; 9780472087648 ; 9780472027248 ; concern/monographs/08612p62s ; Nation Work: Asian Elites and National Identities (9780472027248) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; 9780472109647 ; 9780472026999 ; concern/monographs/8049g579j ; Political Complexity: Nonlinear Models of Politics (9780472026999) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2000 ; 9780472109197 ; 9780472027132 ; concern/monographs/vh53ww61d ; Recycling Land: Understanding the Legal Landscape of Brownfield Development (9780472027132) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; 9780472111008 ; 9780472026449 ; concern/monographs/n296wz99g ; Regulatory Barriers and the Principle of Nondiscrimination in World Trade Law: Past, Present, and Future (9780472026449) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2000 ; 9780472089246 ; 9780472023738 ; concern/monographs/ns064670p ; Rethinking Sustainability: Power, Knowledge, and Institutions (9780472023738) ; >
+    au < finished ; manifest ; 2000 ; 9780472089246 ; 9780472023738 ; concern/monographs/ns064670p ; Rethinking Sustainability: Power, Knowledge, and Institutions (9780472023738) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2000 ; 9780472089994 ; 9780472024476 ; concern/monographs/bz60cx079 ; Revels in Madness: Insanity in Medicine and Literature (9780472024476) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; 9780472030019 ; 9780472024407 ; concern/monographs/w9505130t ; Sails of the Herring Fleet: Essays on Beckett (9780472024407) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; 9780472110995 ; 9780472023400 ; concern/monographs/5712m753m ; Social Dimensions of U.S. Trade Policies (9780472023400) ; reingest5.clockss.org:8082 >
@@ -157,7 +162,8 @@
     au < finished ; manifest ; 2000 ; 9780472110872 ; 9780472023226 ; concern/monographs/qz20st25n ; The Pedagogical Contract: The Economies of Teaching and Learning in the Ancient World (9780472023226) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; 9780472088485 ; 9780472026913 ; concern/monographs/1831ck91w ; War and Peace in International Rivalry (9780472026913) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; 9780472106516 ; 9780472022823 ; concern/monographs/44558f095 ; Whispered Consolations: Law and Narrative in African American Life (9780472022823) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2001 ; 9780472031313 ; 9780472025930 ; concern/monographs/bk128b719 ; A Beckett Canon (9780472025930) ; >
+
+    au < finished ; manifest ; 2001 ; 9780472031313 ; 9780472025930 ; concern/monographs/bk128b719 ; A Beckett Canon (9780472025930) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; 9780472111848 ; 9780472024056 ; concern/monographs/n009w311h ; Altering Party Systems: Strategic Behavior and the Emergence of New Political Parties in Western Democracies (9780472024056) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780472107018 ; 9780472023950 ; concern/monographs/hd76s097z ; Choosing an Identity: A General Model of Preference and Belief Formation (9780472023950) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780472111985 ; 9780472022861 ; concern/monographs/dn39x227r ; Constituting Workers, Protecting Women: Gender, Law and Labor in the Progressive Era and New Deal Years (9780472022861) ; reingest3.clockss.org:8083 >
@@ -171,7 +177,7 @@
     au < finished ; manifest ; 2001 ; 9780472087679 ; 9780472027187 ; concern/monographs/n296x002r ; Party Competition and Responsible Party Government: A Theory of Spatial Competition Based Upon Insights from Behavioral Voting Research (9780472027187) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780472089499 ; 9780472023493 ; concern/monographs/pv63g1223 ; Preference Pollution: How Markets Create the Desires We Dislike (9780472023493) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; 9780472067855 ; 9780472026319 ; concern/monographs/cc08hg584 ; Remembering to Live: Illness at the Intersection of Anxiety and Knowledge in Rural Indonesia (9780472026319) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2001 ; 9780472112333 ; 9780472035892 ; concern/monographs/79407x99q ; Robert Hayden: Essays on the Poetry (9780472035892) ; >
+    au < finished ; manifest ; 2001 ; 9780472112333 ; 9780472035892 ; concern/monographs/79407x99q ; Robert Hayden: Essays on the Poetry (9780472035892) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780472067695 ; 9780472023318 ; concern/monographs/6m311p961 ; Social Science and PolicyMaking: A Search for Relevance in the Twentieth Century (9780472023318) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780472111718 ; 9780472022663 ; concern/monographs/hm50ts49m ; Staging Philanthropy: Patriotic Women and the National Imagination in Dynastic Germany, 18131916 (9780472022663) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780472030101 ; 9780472025541 ; concern/monographs/6395w8048 ; Susan Glaspell in Context: American Theater, Culture, and Politics, 191548 (9780472025541) ; reingest3.clockss.org:8083 >
@@ -180,6 +186,7 @@
     au < finished ; manifest ; 2001 ; 9780472089048 ; 9780472021437 ; concern/monographs/jq085k72q ; The Deadlock of Democracy in Brazil (9780472021437) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; 9780472067428 ; 9780472023219 ; concern/monographs/qb98mg195 ; The Culture of the Body: Genealogies of Modernity (9780472023219) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; 9780472097784 ; 9780472023721 ; concern/monographs/rj430540p ; The Challenge of Regulating Managed Care (9780472023721) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 2002 ; 9780472030545 ; 9780472024636 ; concern/monographs/73666542g ; Adoption in America: Historical Perspectives (9780472024636) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; 9780472112678 ; 9780472023356 ; concern/monographs/4m90dw17x ; All International Politics Is Local: The Diffusion of Conflict, Integration, and Democratization (9780472023356) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; 9780472089475 ; 9780472027262 ; concern/monographs/4f16c387b ; Altruistically Inclined?: The Behavioral Sciences, Evolutionary Theory, and the Origins of Reciprocity (9780472027262) ; reingest5.clockss.org:8082 >
@@ -206,12 +213,13 @@
     au < finished ; manifest ; 2002 ; 9780472030491 ; 9780472022748 ; concern/monographs/r207tq09t ; The Limits to Union: SameSex Marriage and the Politics of Civil Rights (9780472022748) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; 9780472112876 ; 9780472026821 ; concern/monographs/9s161701q ; When the Stakes Are High: Deterrence and Conflict among Major Powers (9780472026821) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2002 ; 9780472089840 ; 9780472023066 ; concern/monographs/n296wz943 ; Why Americans Split Their Tickets: Campaigns, Competition, and Divided Government (9780472023066) ; reingest5.clockss.org:8082 >
+
     au < finished ; manifest ; 2003 ; 9780472112982 ; 9780472025022 ; concern/monographs/3f462634n ; Affirmative Action in Medicine: Improving Health Care for Everyone (9780472025022) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2003 ;  ; 9780472024278 ; concern/monographs/1j92g8258 ; An Intellectual in Public (9780472024278) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472068258 ; 9780472025497 ; concern/monographs/h415pb399 ; Backlash Against the ADA: Reinterpreting Disability Rights (9780472025497) ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2003 ; 9780472031160 ; 9780472024919 ; concern/monographs/3r074v97j ; Capitalism, Not Globalism: Capital Mobility, Central Bank Independence, and the Political Control of the Economy (9780472024919) ; >
+    au < finished ; manifest ; 2003 ; 9780472031160 ; 9780472024919 ; concern/monographs/3r074v97j ; Capitalism, Not Globalism: Capital Mobility, Central Bank Independence, and the Political Control of the Economy (9780472024919) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472030972 ; 9780472024810 ; concern/monographs/gf06g342r ; Changing Paths: International Development and the New Politics of Inclusion (9780472024810) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2003 ; 9780472113644 ; 9780472021666 ; concern/monographs/37720d47z ; Cities in the Sea (9780472021666) ; >
+    au < finished ; manifest ; 2003 ; 9780472113644 ; 9780472021666 ; concern/monographs/37720d47z ; Cities in the Sea (9780472021666) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2003 ; 9780472030798 ; 9780472024001 ; concern/monographs/xs55md034 ; Communities and Law: Politics and Cultures of Legal Identities (9780472024001) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2003 ; 9780472068326 ; 9780472023875 ; concern/monographs/h128nf56q ; Cops, Teachers, Counselors: Stories from the Front Lines of Public Service (9780472023875) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472068272 ; 9780472022939 ; concern/monographs/st74cr294 ; Economic Interdependence and International Conflict: New Perspectives on an Enduring Debate (9780472022939) ; reingest3.clockss.org:8083 >
@@ -236,15 +244,16 @@
     au < finished ; manifest ; 2003 ; 9780472035731 ; 9780472026265 ; concern/monographs/37720d60h ; The Staff of Oedipus: Transforming Disability in Ancient Greece (9780472026265) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2003 ; 9780472089789 ; 9780472026364 ; concern/monographs/9593tv832 ; The Troubles in Ballybogoin: Memory and Identity in Northern Ireland (9780472026364) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472030804 ; 9780472024759 ; concern/monographs/br86b437q ; The Challenge of Hegemony: Grand Strategy, Trade, and Domestic Politics (9780472024759) ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2003 ; 9780472068180 ; 9780472022724 ; concern/monographs/h128nf53w ; The Morality of Laughter (9780472022724) ; >
+    au < finished ; manifest ; 2003 ; 9780472068180 ; 9780472022724 ; concern/monographs/h128nf53w ; The Morality of Laughter (9780472022724) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472036400 ; 9780472025336 ; concern/monographs/h128nf609 ; The Invention of Coinage and the Monetization of Ancient Greece (9780472025336) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472068388 ; 9780472022755 ; concern/monographs/nc580n43r ; The Psychological Assessment of Political Leaders: With Profiles of Saddam Hussein and Bill Clinton (9780472022755) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2003 ; 9780472068449 ; 9780472022014 ; concern/monographs/nz806050n ; The Behavioral Origins of War (9780472022014) ; >
+    au < finished ; manifest ; 2003 ; 9780472068449 ; 9780472022014 ; concern/monographs/nz806050n ; The Behavioral Origins of War (9780472022014) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472098217 ; 9780472024803 ; concern/monographs/pv63g123c ; The Experience of Modernity: Chinese Autobiography of the Early Twentieth Century (9780472024803) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2003 ; 9780472068395 ; 9780472026333 ; concern/monographs/tm70mw01j ; The Stage Life of Props (9780472026333) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472031580 ; 9780472022083 ; concern/monographs/vq27zp17m ; The Place of Law (9780472022083) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472113033 ; 9780472024070 ; concern/monographs/fb494931b ; Volatile States: Institutions, Policy, and the Performance of American State Economies (9780472024070) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; 9780472113187 ; 9780472025244 ; concern/monographs/m039k577r ; Worldly Provincialism: German Anthropology in the Age of Empire (9780472025244) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 2004 ; 9780472031320 ; 9780472025558 ; concern/monographs/9z9030779 ; A Mouth Sweeter Than Salt: An African Memoir (9780472025558) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2004 ; 9780472112630 ; 9780472024629 ; concern/monographs/2b88qd04w ; Acts of Authority/Acts of Resistance: Theater and Politics in Colonial and Postcolonial India (9780472024629) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; 9780472068746 ; 9780472026043 ; concern/monographs/zw12z618n ; Asian American X: An Intersection of TwentyFirst Century Asian American Voices (9780472026043) ; reingest4.clockss.org:8082 >
@@ -269,7 +278,7 @@
     au < finished ; manifest ; 2004 ; 9780472068432 ; 9780472022311 ; concern/monographs/9g54xj44c ; Liberating Economics: Feminist Perspectives on Families, Work, and Globalization (9780472022311) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; 9780472030231 ; 9780472025237 ; concern/monographs/n296x0006 ; Louie Louie: The History and Mythology of the World's Most Famous Rock 'n Roll Song\; Including the Full Details of Its Torture and Persecution at the Hands of the Kingsmen, J. Edgar Hoover's FBI, and a Cast of Millions\; and Introducing for the First Time Anywhere, the Actual Dirty Lyrics (9780472025237) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; 9780472113903 ; 9780472026036 ; concern/monographs/xp68kh05f ; Margaret Webster: A Life in the Theater (9780472026036) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2004 ; 9780472113026 ; 9780472025596 ; concern/monographs/vq27zp26k ; Melancholy, Love, and Time: Boundaries of the Self in Ancient Literature (9780472025596) ; >
+    au < finished ; manifest ; 2004 ; 9780472113026 ; 9780472025596 ; concern/monographs/vq27zp26k ; Melancholy, Love, and Time: Boundaries of the Self in Ancient Literature (9780472025596) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; 9780472031733 ; 9780472026050 ; concern/monographs/vt150k277 ; More Secure, Less Free?: Antiterrorism Policy and Civil Liberties after September 11 (9780472026050) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; 9780472114092 ; 9780472025466 ; concern/monographs/m326m258s ; Natural Coincidence: The Trip from Kalamazoo (9780472025466) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; 9780472031719 ; 9780472021574 ; concern/monographs/x633f188n ; Out of the Closets and into the Courts: Legal Opportunity Structure and Gay Rights Litigation (9780472021574) ; reingest4.clockss.org:8082 >
@@ -295,16 +304,17 @@
     au < finished ; manifest ; 2004 ; 9780472030378 ; 9780472024926 ; concern/monographs/rr171x95n ; Transformative Justice: Israeli Identity on Trial (9780472024926) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2004 ; 9780472068715 ; 9780472024391 ; concern/monographs/05741s38g ; Untimely Interventions: AIDS Writing, Testimonial, and the Rhetoric of Haunting (9780472024391) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2004 ; 9780472114252 ; 9780472024377 ; concern/monographs/zc77sq92f ; With All Deliberate Speed: The Life of Philip Elman (9780472024377) ; reingest4.clockss.org:8082 >
+
     au < finished ; manifest ; 2005 ; 9780472069040 ; 9780472021413 ; concern/monographs/dj52w556p ; A Crooked Line: From Cultural History to the History of Society (9780472021413) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; 9780472069156 ; 9780472024179 ; concern/monographs/qz20st26x ; After the End of History: The Curious Fate of American Materialism (9780472024179) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; 9780472115242 ; 9780472026135 ; concern/monographs/6m311q02z ; American Prophet: The Life and Work of Carey McWilliams (9780472026135) ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2005 ; 9780472031559 ; 9780472024384 ; concern/monographs/1v53jx92r ; Arthur Miller's America: Theater and Culture in a Time of Change (9780472024384) ; >
+    au < finished ; manifest ; 2005 ; 9780472031559 ; 9780472024384 ; concern/monographs/1v53jx92r ; Arthur Miller's America: Theater and Culture in a Time of Change (9780472024384) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2005 ; 9780472069002 ; 9780472025794 ; concern/monographs/6682x4758 ; Between a River and a Mountain: The AFLCIO and the Vietnam War (9780472025794) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2005 ; 9780472031290 ; 9780472021499 ; concern/monographs/p2676w43m ; Beyond Busing: Reflections on Urban Segregation, the Courts, and Equal Opportunity (9780472021499) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2005 ; 9780472068401 ; 9780472025459 ; concern/monographs/t722h972g ; Black Cultural Traffic: Crossroads in Global Performance and Popular Culture (9780472025459) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; 9780472068913 ; 9780472021727 ; concern/monographs/s4655h345 ; Bodies in Commotion: Disability and Performance (9780472021727) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; 9780472036660 ; 9780472025923 ; concern/monographs/0k225b911 ; Ceremony and Power: Performing Politics in Rome between Republic and Empire (9780472025923) ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2005 ; 9780472068593 ; 9780472026241 ; concern/monographs/d791sh06p ; Coming After: Essays on Poetry (9780472026241) ; >
+    au < finished ; manifest ; 2005 ; 9780472068593 ; 9780472026241 ; concern/monographs/d791sh06p ; Coming After: Essays on Poetry (9780472026241) ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2005 ; 9780472031702 ; 9780472024315 ; concern/monographs/02870w66d ; Courting Failure: How Competition for Big Cases Is Corrupting the Bankruptcy Courts (9780472024315) ; >
     au < finished ; manifest ; 2005 ; 9780472068975 ; 9780472027439 ; concern/monographs/tt44pn829 ; Curious Attractions: Essays on Fiction Writing (9780472027439) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2005 ; 9780472068791 ; 9780472023080 ; concern/monographs/9c67wn78z ; Defensive Internationalism: Providing Public Goods in an Uncertain World (9780472023080) ; reingest3.clockss.org:8083 >
@@ -342,6 +352,7 @@
     au < finished ; manifest ; 2005 ; 9780472030996 ; 9780472026159 ; concern/monographs/tm70mw04c ; Three's a Crowd: The Dynamic of Third Parties, Ross Perot, and Republican Resurgence (9780472026159) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2005 ; 9780472069064 ; 9780472022892 ; concern/monographs/k643b211g ; Trading Blocs: States, Firms, and Regions in the World Economy (9780472022892) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2005 ; 9780472069071 ; 9780472025572 ; concern/monographs/jh343t34r ; Utopia in Performance: Finding Hope at the Theater (9780472025572) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 2006 ; 9780472068982 ; 9780472025084 ; concern/monographs/9306t008p ; After Independence: Making and Protecting the Nation in Postcolonial and Postcommunist States (9780472025084) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472031238 ; 9780472026982 ; concern/monographs/6w924c77s ; Among the Lowest of the Dead: The Culture of Capital Punishment (9780472026982) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2006 ; 9780472032709 ; 9780472026722 ; concern/monographs/6q182k869 ; Archives, Documentation, and Institutions of Social Memory: Essays from the Sawyer Seminar (9780472026722) ; reingest2.clockss.org:8085 >
@@ -354,7 +365,7 @@
     au < finished ; manifest ; 2006 ; 9780472115709 ; 9780472025763 ; concern/monographs/3r074v89v ; Heartless Immensity: Literature, Culture, and Geography in Antebellum America (9780472025763) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2006 ; 9780472115716 ; 9780472025862 ; concern/monographs/3t945r671 ; Henry James at Work (9780472025862) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472115792 ; 9780472021826 ; concern/monographs/zp38wd363 ; Inside/Outside: A Physician's Journey with Breast Cancer (9780472021826) ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2006 ; 9780472115167 ; 9780472025473 ; concern/monographs/6q182k81x ; Latin Inscriptions in the Kelsey Museum: The Dennison and De Criscio Collections (9780472025473) ; >
+    au < finished ; manifest ; 2006 ; 9780472115167 ; 9780472025473 ; concern/monographs/6q182k81x ; Latin Inscriptions in the Kelsey Museum: The Dennison and De Criscio Collections (9780472025473) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472031177 ; 9780472025756 ; concern/monographs/p2676w59h ; Moving Beyond Prozac, DSM, and the New Psychiatry: The Birth of Postpsychiatry (9780472025756) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472099306 ; 9780472021505 ; concern/monographs/td96k328n ; Mr. Democrat: Jim Farley, the New Deal and the Making of Modern American Politics (9780472021505) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472069316 ; 9780472025091 ; concern/monographs/nk322f10p ; Not the Other AvantGarde: The Transnational Foundations of AvantGarde Performance (9780472025091) ; reingest4.clockss.org:8082 >
@@ -364,7 +375,7 @@
     au < finished ; manifest ; 2006 ; 9780472115297 ; 9780472025626 ; concern/monographs/wh246t027 ; Q. Aurelius Symmachus: A Political Biography (9780472025626) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472033591 ; 9780472026302 ; concern/monographs/pz50gw903 ; Rhythm Is Our Business: Jimmie Lunceford and the Harlem Express (9780472026302) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472069033 ; 9780472022557 ; concern/monographs/kh04dq43c ; SelfFinanced Candidates in Congressional Elections (9780472022557) ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2006 ; 9780472069231 ; 9780472026234 ; concern/monographs/736665395 ; Slayers and Their Vampires: A Cultural History of Killing the Dead (9780472026234) ; >
+    au < finished ; manifest ; 2006 ; 9780472069231 ; 9780472026234 ; concern/monographs/736665395 ; Slayers and Their Vampires: A Cultural History of Killing the Dead (9780472026234) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472069514 ; 9780472024308 ; concern/monographs/mk61rh71d ; Socialism after Hayek (9780472024308) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2006 ; 9780472033607 ; 9780472025985 ; concern/monographs/kw52j888q ; Someone to Watch Over Me: The Life and Music of Ben Webster (9780472025985) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; 9780472033928 ; 9780472026555 ; concern/monographs/s7526d43c ; Speaking in Tongues: Languages at Play in the Theatre (9780472026555) ; reingest1.clockss.org:8082 >
@@ -379,6 +390,7 @@
     au < finished ; manifest ; 2006 ; 9780472114146 ; 9780472025602 ; concern/monographs/3f462633c ; When Ethnicity Did Not Matter in the Balkans: A Study of Identity in PreNationalist Croatia, Dalmatia, and Slavonia in the Medieval and EarlyModern Periods (9780472025602) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2006 ; 9780472069224 ; 9780472024568 ; concern/monographs/x059c826c ; When Courts and Congress Collide: The Struggle for Control of America's Judicial System (9780472024568) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2006 ; 9780472069347 ; 9780472025657 ; concern/monographs/37720d56x ; Where Women Run: Gender and Party in the American States (9780472025657) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 2007 ; 9780472033201 ; 9780472021758 ; concern/monographs/9g54xj42t ; America Beyond Black and White: How Immigrants and Fusions Are Helping Us Overcome the Racial Divide (9780472021758) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2007 ; 9780472115938 ; 9780472025060 ; concern/monographs/vh53ww604 ; Arthur Miller's Global Theater (9780472025060) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2007 ; 9780472116218 ; 9780472024322 ; concern/monographs/5q47rp59m ; Chic Ironic Bitterness (9780472024322) ; reingest1.clockss.org:8082 >
@@ -388,7 +400,7 @@
     au < finished ; manifest ; 2007 ; 9780472033799 ; 9780472025220 ; concern/monographs/ws859g54r ; Fairy Tales from Before Fairy Tales: The Medieval Latin Past of Wonderful Lies (9780472025220) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472032075 ; 9780472024162 ; concern/monographs/3x816n29v ; Faith in the City: Preaching Radical Social Change in Detroit (9780472024162) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472069651 ; 9780472024865 ; concern/monographs/3x816n31w ; Governing Fortune: Casino Gambling in America (9780472024865) ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2007 ; 9780472069804 ; 9780472024742 ; concern/monographs/nz8060551 ; Growing Apart: Oil, Politics, and Economic Change in Indonesia and Nigeria (9780472024742) ; >
+    au < finished ; manifest ; 2007 ; 9780472069804 ; 9780472024742 ; concern/monographs/nz8060551 ; Growing Apart: Oil, Politics, and Economic Change in Indonesia and Nigeria (9780472024742) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2007 ; 9780472116027 ; 9780472025480 ; concern/monographs/1g05fc669 ; History, Medicine, and the Traditions of Renaissance Learning (9780472025480) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2007 ; 9780472069941 ; 9780472024780 ; concern/monographs/f1881m701 ; Institutional Change in American Politics: The Case of Term Limits (9780472024780) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472069361 ; 9780472026340 ; concern/monographs/3197xm747 ; It (9780472026340) ; reingest5.clockss.org:8082 >
@@ -397,14 +409,14 @@
     au < finished ; manifest ; 2007 ; 9780472069637 ; 9780472025176 ; concern/monographs/5999n4444 ; Lives of Lawyers Revisited: Transformation and Resilience in the Organizations of Practice (9780472025176) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472032167 ; 9780472026524 ; concern/monographs/wp988k73q ; Making Israel (9780472026524) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2007 ; 9780472069880 ; 9780472026142 ; concern/monographs/k930bx897 ; Market Dreams: Gender, Class, and Capitalism in the Czech Republic (9780472026142) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2007 ; 9780472069699 ; 9780472022991 ; concern/monographs/g732d976t ; Modeling and Interpreting Interactive Hypotheses in Regression Analysis (9780472022991) ; >
+    au < finished ; manifest ; 2007 ; 9780472069699 ; 9780472022991 ; concern/monographs/g732d976t ; Modeling and Interpreting Interactive Hypotheses in Regression Analysis (9780472022991) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472069613 ; 9780472023097 ; concern/monographs/ww72bc29n ; Monetary Divergence: Domestic Policy Autonomy in the PostBretton Woods Era (9780472023097) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472069910 ; 9780472025053 ; concern/monographs/5q47rp661 ; Mongrel Nation: Diasporic Culture and the Making of Postcolonial Britain (9780472025053) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472069798 ; 9780472021512 ; concern/monographs/zg64tm68m ; No Child Left Behind and the Public Schools (9780472021512) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2007 ; 9780472069750 ; 9780472023028 ; concern/monographs/0z708x467 ; Opposition and Intimidation: The Abortion Wars and Strategies of Political Harassment (9780472023028) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472116164 ; 9780472025619 ; concern/monographs/5h73px05r ; Present Shock in Late FifthCentury Greece (9780472025619) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472069828 ; 9780472023172 ; concern/monographs/8g84mn04r ; Punishment and Political Order (9780472023172) ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2007 ; 9780472069675 ; 9780472025008 ; concern/monographs/zc77sq97t ; Race, Republicans, and the Return of the Party of Lincoln (9780472025008) ; >
+    au < finished ; manifest ; 2007 ; 9780472069675 ; 9780472025008 ; concern/monographs/zc77sq97t ; Race, Republicans, and the Return of the Party of Lincoln (9780472025008) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2007 ; 9780472115907 ; 9780472021888 ; concern/monographs/9s161689n ; The View from the Helm: Leading the American University during an Era of Change (9780472021888) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472033195 ; 9780472025855 ; concern/monographs/kd17ct698 ; The Strategy of Campaigning: Lessons from Ronald Reagan and Boris Yeltsin (9780472025855) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2007 ; 9780472069712 ; 9780472025381 ; concern/monographs/qv33rx511 ; The Many Faces of Political Islam: Religion and Politics in the Muslim World (9780472025381) ; reingest2.clockss.org:8085 >
@@ -416,6 +428,7 @@
     au < finished ; manifest ; 2007 ; 9780472032174 ; 9780472115877 ; concern/monographs/5425kc112 ; Lee Konitz: Conversations on the Improviser's Art (9780472032174) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472126293 ; 9780472116102 ; concern/monographs/5d86p144c ; Discovering Addiction: The Science and Politics of Substance Abuse Research (9780472126293) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; 9780472115730 ; 9780472125807 ; concern/monographs/7s75dd83j ; The Politics of Sociability: Freemasonry and German Civil Society, 18401918 (9780472115730) ; reingest2.clockss.org:8085 >
+
     au < finished ; manifest ; 2008 ; 9780472032884 ; 9780472024643 ; concern/monographs/td96k334s ; American Jewish Identity Politics (9780472024643) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2008 ; 9780472036318 ; 9780472025886 ; concern/monographs/9g54xj49r ; Beyond Berlin: Twelve German Cities Confront the Nazi Past (9780472025886) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; 9780472033065 ; 9780472027453 ; concern/monographs/bk128b63m ; Beyond Sputnik: U.S. Science Policy in the TwentyFirst Century (9780472027453) ; reingest4.clockss.org:8082 >
@@ -429,7 +442,7 @@
     au < finished ; manifest ; 2008 ; 9780472114290 ; 9780472021949 ; concern/monographs/5t34sk579 ; Dying Inside: The HIV/AIDS Ward at Limestone Prison (9780472021949) ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2008 ; 9780472050444 ; 9780472024469 ; concern/monographs/ww72bc28c ; Framed: The New Woman Criminal in British Culture at the Fin de Siècle (9780472024469) ; >
     au < finished ; manifest ; 2008 ; 9780472122837 ; 9780472034475 ; concern/monographs/rn301220f ; Hazel Scott: The Pioneering Journey of a Jazz Pianist, from Café Society to Hollywood to HUAC (9780472034475) ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2008 ; 9780472116430 ; 9780472024223 ; concern/monographs/ff3656067 ; Integrity and Agreement: Economics When Principles Also Matter (9780472024223) ; >
+    au < finished ; manifest ; 2008 ; 9780472116430 ; 9780472024223 ; concern/monographs/ff3656067 ; Integrity and Agreement: Economics When Principles Also Matter (9780472024223) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2008 ; 9780472050017 ; 9780472024018 ; concern/monographs/37720d51j ; International Political Earthquakes (9780472024018) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; 9780472116461 ; 9780472025299 ; concern/monographs/7w62f9133 ; Neither German nor Pole: Catholicism and National Indifference in a Central European Borderland (9780472025299) ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2008 ; 9780472050345 ; 9780472024445 ; concern/monographs/6q182k762 ; Originality, Imitation, and Plagiarism: Teaching Writing in the Digital Age (9780472024445) ; >
@@ -449,9 +462,10 @@
     au < finished ; manifest ; 2008 ; 9780472050529 ; 9780472025275 ; concern/monographs/zp38wd46b ; The German Patient: Crisis and Recovery in Postwar Culture (9780472025275) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; 9780472033973 ; 9780472023141 ; concern/monographs/4x51hj96c ; This Gaming Life: Travels in Three Cities (9780472023141) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; 9780472050369 ; 9780472022298 ; concern/monographs/kw52j876x ; To See Ourselves as Others See Us: How Publics Abroad View the United States after 9/11 (9780472022298) ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2008 ; 9780472050383 ; 9780472025190 ; concern/monographs/xs55md04d ; Topographies of Class: Modern Architecture and Mass Society in Weimar Berlin (9780472025190) ; >
+    au < finished ; manifest ; 2008 ; 9780472050383 ; 9780472025190 ; concern/monographs/xs55md04d ; Topographies of Class: Modern Architecture and Mass Society in Weimar Berlin (9780472025190) ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2008 ; 9780472116713 ; 9780472024513 ; concern/monographs/cj82k818m ; Wiki Writing: Collaborative Learning in the College Classroom (9780472024513) ; >
     au < finished ; manifest ; 2008 ; 9780472126286 ; 9780472901142 ; concern/monographs/cf95jc95g ; In Defense of Monopoly: How Market Power Fosters Creative Production (9780472126286) ; reingest2.clockss.org:8085 >
+
     au < finished ; manifest ; 2009 ; 9780472033263 ; 9780472022007 ; concern/monographs/np1939959 ; A Good Quarrel: America's Top Legal Reporters Share Stories from Inside the Supreme Court (9780472022007) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; 9780472033447 ; 9780472025787 ; concern/monographs/sf2685934 ; After the Nazi Racial State: Difference and Democracy in Germany and Europe (9780472025787) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 9780472033911 ; 9780472021796 ; concern/monographs/cc08hg48w ; Barack Obama's America: How New Conceptions of Race, Family, and Religion Ended the Reagan Era (9780472021796) ; reingest1.clockss.org:8082 >
@@ -471,7 +485,7 @@
     au < finished ; manifest ; 2009 ; 9780472034673 ; 9780472022120 ; concern/monographs/cz30pt354 ; No Middle Ground: How Informal Party Organizations Control Nominations and Polarize Legislatures (9780472022120) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; 9780472050604 ; 9780472024490 ; concern/monographs/j38607677 ; Parodies of Ownership: HipHop Aesthetics and Intellectual Property Law (9780472024490) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 9780472050260 ; 9780472026531 ; concern/monographs/fq977v60m ; Research Confidential: Solutions to Problems Most Social Scientists Pretend They Never Have (9780472026531) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2009 ; 9780472050697 ; 9780472026593 ; concern/monographs/v692t697z ; Signifying Bodies: Disability in Contemporary Life Writing (9780472026593) ; >
+    au < finished ; manifest ; 2009 ; 9780472050697 ; 9780472026593 ; concern/monographs/v692t697z ; Signifying Bodies: Disability in Contemporary Life Writing (9780472026593) ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2009 ; 9780472050802 ; 9780472026609 ; concern/monographs/3484zh72x ; Skate Life: ReImagining White Masculinity (9780472026609) ; >
     au < finished ; manifest ; 2009 ; 9780472033904 ; 9780472022502 ; concern/monographs/1n79h506k ; The U.S. Army Stability Operations Field Manual: U.S. Army Field Manual No. 307 (9780472022502) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 9780472034642 ; 9780472025268 ; concern/monographs/2514nm33m ; The Information Master: JeanBaptiste Colbert's Secret State Intelligence System (9780472025268) ; reingest1.clockss.org:8082 >
@@ -484,6 +498,7 @@
     au < finished ; manifest ; 2009 ; 9780472050550 ; 9780472026647 ; concern/monographs/zg64tm78v ; Transcribing Class and Gender: Masculinity and Femininity in NineteenthCentury Courts and Offices (9780472026647) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 9780472034628 ; 9780472022113 ; concern/monographs/1g05fc55s ; Treaty Politics and the Rise of Executive Agreements: International Commitments in a System of Shared Powers (9780472022113) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 9780472116782 ; 9780472025992 ; concern/monographs/j3860783m ; Work, Race, and the Emergence of Radical Right Corporatism in Imperial Germany (9780472025992) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 2010 ; 9780472034093 ; 9780472022137 ; concern/monographs/dr26xz258 ; Americans, Congress, and Democratic Responsiveness: Public Evaluations of Congress and Electoral Consequences (9780472022137) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 9780472117178 ; 9780472027057 ; concern/monographs/qz20st29r ; Another Part of a Long Story: Literary Traces of Eugene O'Neill and Agnes Boulton (9780472027057) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 9780472035151 ; 9780472027941 ; concern/monographs/5999n442k ; Artaud and His Doubles (9780472027941) ; reingest4.clockss.org:8082 >
@@ -517,12 +532,13 @@
     au < finished ; manifest ; 2010 ; 9780472117451 ; 9780472024551 ; concern/monographs/jq085k773 ; The Justice of Mercy (9780472024551) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 9780472050772 ; 9780472021789 ; concern/monographs/6t053g662 ; Understanding Torture: Law, Violence, and Political Identity (9780472021789) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 9780472123711 ; 9780472117345 ; concern/monographs/n009w3107 ; Weimar through the Lens of Gender: Prostitution Reform, Woman's Emancipation, and German Democracy, 191933 (9780472117345) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 2011 ; 9780472051458 ; 9780472026760 ; concern/monographs/wp988k715 ; A Legal Theory for Autonomous Artificial Agents (9780472026760) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 9780472035526 ; 9780472029631 ; concern/monographs/08612p632 ; American Poetry in Performance: From Walt Whitman to Hip Hop (9780472029631) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 9780472034802 ; 9780472027828 ; concern/monographs/j6731461t ; American Public Opinion on the Iraq War (9780472027828) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 9780472035663 ; 9780472028085 ; concern/monographs/s1784m67g ; American Socialist Triptych: The LiteraryPolitical Work of Charlotte Perkins Gilman, Upton Sinclair, and W. E. B. Du Bois (9780472028085) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 9780472034703 ; 9780472027590 ; concern/monographs/f4752h62k ; Are We Not New Wave?: Modern Pop at the Turn of the 1980s (9780472027590) ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2011 ; 9780472035144 ; 9780472027552 ; concern/monographs/bz60cx08k ; As If: An Autobiography (9780472027552) ; >
+    au < finished ; manifest ; 2011 ; 9780472035144 ; 9780472027552 ; concern/monographs/bz60cx08k ; As If: An Autobiography (9780472027552) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 9780472034918 ; 9780472026685 ; concern/monographs/c821gk73q ; Baroque Horrors: Roots of the Fantastic in the Age of Curiosities (9780472026685) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 9780472036394 ; 9780472027675 ; concern/monographs/2514nm32b ; Between National Socialism and Soviet Communism: Displaced Persons in Postwar Germany (9780472027675) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 9780472035533 ; 9780472027736 ; concern/monographs/fn106z736 ; Bytes and Backbeats: Repurposing Music in the Digital Age (9780472027736) ; reingest5.clockss.org:8082 >
@@ -536,7 +552,7 @@
     au < finished ; manifest ; 2011 ; 9780472035496 ; 9780472027767 ; concern/monographs/w3763762m ; Great Lengths: Seven Works of Marathon Theater (9780472027767) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 9780472117680 ; 9780472027101 ; concern/monographs/ff365610t ; Greening China: The Benefits of Trade and Foreign Direct Investment (9780472027101) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 9780472051649 ; 9780472028078 ; concern/monographs/6d56zx43k ; Imagining the Forest: Narratives of Michigan and the Upper Midwest (9780472028078) ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2011 ; 9780472051441 ; 9780472026753 ; concern/monographs/df65v885w ; Interest Groups and Campaign Finance Reform in the United States and Canada (9780472026753) ; >
+    au < finished ; manifest ; 2011 ; 9780472051441 ; 9780472026753 ; concern/monographs/df65v885w ; Interest Groups and Campaign Finance Reform in the United States and Canada (9780472026753) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 9780472051526 ; 9780472027613 ; concern/monographs/z316q245g ; James Baldwin: America and Beyond (9780472027613) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 9780472051380 ; 9780472027989 ; concern/monographs/1c18dg61p ; Mad at School: Rhetorics of Mental Disability and Academic Life (9780472027989) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 9780472035595 ; 9780472026739 ; concern/monographs/g732d9773 ; Money, Mandates, and Local Control in American Public Education (9780472026739) ; reingest4.clockss.org:8082 >
@@ -551,7 +567,7 @@
     au < finished ; manifest ; 2011 ; 9780472117550 ; 9780472026395 ; concern/monographs/kk91fm454 ; Secular Morality and International Security: American and British Decisions about War (9780472026395) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 9780472035311 ; 9780472027682 ; concern/monographs/mg74qm979 ; Security Integration in Europe: How Knowledgebased Networks Are Transforming the European Union (9780472027682) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 9780472035281 ; 9780472027781 ; concern/monographs/2r36tz17t ; Seven Stories of Threatening Speech: Women's Suffrage Meets Machine Code (9780472027781) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2011 ; 9780472117765 ; 9780472027514 ; concern/monographs/6t053g70n ; Tax Politics in Eastern Europe: Globalization, Regional Integration, and the Democratic Compromise (9780472027514) ; >
+    au < finished ; manifest ; 2011 ; 9780472117765 ; 9780472027514 ; concern/monographs/6t053g70n ; Tax Politics in Eastern Europe: Globalization, Regional Integration, and the Democratic Compromise (9780472027514) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 9780472035267 ; 9780472026746 ; concern/monographs/q237hs89w ; Teaching about Religions: A Democratic Approach for Public Schools (9780472026746) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 9780472035229 ; 9780472028191 ; concern/monographs/d791sh044 ; Textual Conspiracies: Walter Benjamin, Idolatry, and Political Theory (9780472028191) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 9780472051489 ; 9780472027026 ; concern/monographs/0g354g066 ; The Lying Brain: Lie Detection in Science and Science Fiction (9780472027026) ; reingest2.clockss.org:8085 >
@@ -566,6 +582,7 @@
     au < finished ; manifest ; 2011 ; 9780472117932 ; 9780472027750 ; concern/monographs/5h73pw85g ; Veto Power: Institutional Design in the European Union (9780472027750) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 9780472035113 ; 9780472026371 ; concern/monographs/3f462631t ; When Protest Makes Policy: How Social Movements Represent Disadvantaged Groups (9780472026371) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 9780472035588 ; 9780472026388 ; concern/monographs/dv13zt98t ; Why They Die: Civilian Devastation in Violent Conflict (9780472026388) ; reingest4.clockss.org:8082 >
+
     au < finished ; manifest ; 2012 ; 9780472051816 ; 9780472028528 ; concern/monographs/jd472x47k ; A New England Prison Diary: Slander, Religion, and Markets in Early America (9780472028528) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 9780472035038 ; 9780472028566 ; concern/monographs/g732d978c ; Acting in Real Time (9780472028566) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 9780472035670 ; 9780472028757 ; concern/monographs/f1881m719 ; Acts of Gaiety: LGBT Performance and the Politics of Pleasure (9780472028757) ; reingest1.clockss.org:8082 >
@@ -602,7 +619,7 @@
     au < finished ; manifest ; 2012 ; 9780472051397 ; 9780472028641 ; concern/monographs/b5644s26f ; Performing Queer Latinidad: Dance, Sexuality, Politics (9780472028641) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; 9780472118281 ; 9780472028368 ; concern/monographs/4x51hk097 ; Physician Communication with Patients: Research Findings and Challenges (9780472028368) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 9780472051762 ; 9780472028375 ; concern/monographs/ht24wk28m ; Politics and Foreign Direct Investment (9780472028375) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2012 ; 9780472036646 ; 9780472028337 ; concern/monographs/p8418p15x ; Powerful Voices: The Musical and Social World of Collegiate A Cappella (9780472028337) ; >
+    au < finished ; manifest ; 2012 ; 9780472036646 ; 9780472028337 ; concern/monographs/p8418p15x ; Powerful Voices: The Musical and Social World of Collegiate A Cappella (9780472028337) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 9780472035755 ; 9780472028696 ; concern/monographs/08612p586 ; Rebel Dance, Renegade Stance: Timba Music and Black Identity in Cuba (9780472028696) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 9780472035847 ; 9780472028443 ; concern/monographs/d504rm081 ; Regional Economic Institutions and Conflict Mitigation: Design, Implementation, and the Promise of Peace (9780472028443) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 9780472034772 ; 9780472026180 ; concern/monographs/vx021g02m ; Researching Black Communities: A Methodological Guide (9780472026180) ; reingest5.clockss.org:8082 >
@@ -611,7 +628,7 @@
     au < finished ; manifest ; 2012 ; 9780472051793 ; 9780472028917 ; concern/monographs/q524jp56k ; Sounding Like a NoNo: Queer Sounds and Eccentric Acts in the PostSoul Era (9780472028917) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; 9780472035977 ; 9780472028894 ; concern/monographs/4t64gn95v ; Spectacles of Reform: Theater and Activism in NineteenthCentury America (9780472028894) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; 9780472035458 ; 9780472028092 ; concern/monographs/9306t004k ; The Supreme Court and the NCAA: The Case for Less Commercialism and More Due Process in College Sports (9780472028092) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; 9780472118267 ; 9780472028351 ; concern/monographs/9k41zf48q ; The Neuroscientific Turn: Transdisciplinarity in the Age of the Brain (9780472028351) ; >
+    au < finished ; manifest ; 2012 ; 9780472118267 ; 9780472028351 ; concern/monographs/9k41zf48q ; The Neuroscientific Turn: Transdisciplinarity in the Age of the Brain (9780472028351) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 9780472035472 ; 9780472028184 ; concern/monographs/9p290b06v ; The Floor in Congressional Life (9780472028184) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 9780472051731 ; 9780472028511 ; concern/monographs/b8515p287 ; The Myopia and Other Plays by David Greenspan (9780472028511) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; 9780472036851 ; 9780472028665 ; concern/monographs/br86b4380 ; The Magellan Fallacy: Globalization and the Emergence of Asian and African Literature in Spanish (9780472028665) ; reingest1.clockss.org:8082 >
@@ -628,6 +645,7 @@
     au < finished ; manifest ; 2012 ; 9780472051823 ; 9780472028597 ; concern/monographs/z890rv062 ; The International Relations of Middleearth: Learning from The Lord of the Rings (9780472028597) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; 9780472071180 ; 9780472028139 ; concern/monographs/k0698816c ; Visualizing Secularism and Religion: Egypt, Lebanon, Turkey, India (9780472028139) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; 9780472118120 ; 9780472028221 ; concern/monographs/ff3656113 ; Wine, Wealth, and the State in Late Antique Egypt: The House of Apion at Oxyrhynchus (9780472028221) ; reingest2.clockss.org:8085 >
+
     au < finished ; manifest ; 2013 ; 9780472036554 ; 9780472029273 ; concern/monographs/4f16c385s ; Acts of Conspicuous Compassion: Performance Culture and American Charity Practices (9780472029273) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2013 ; 9780472035236 ; 9780472029051 ; concern/monographs/n583xv77p ; Algorithmic Composition: A Guide to Composing Music with Nyquist (9780472029051) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; 9780472035861 ; 9780472028955 ; concern/monographs/9w0323951 ; Ambition, Competition, and Electoral Reform: The Politics of Congressional Elections Across Time (9780472028955) ; reingest4.clockss.org:8082 >
@@ -661,7 +679,7 @@
     au < finished ; manifest ; 2013 ; 9780472035878 ; 9780472028832 ; concern/monographs/z603qz30x ; Mrs. Shipley's Ghost: The Right to Travel and Terrorist Watchlists (9780472028832) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2013 ; 9780472118557 ; 9780472029037 ; concern/monographs/0k225c35w ; Nothing Happened: Charlotte Salomon and an Archive of Suicide (9780472029037) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; 9780472118434 ; 9780472028573 ; concern/monographs/8w32r6451 ; Obligations in Roman Law: Past, Present, and Future (9780472028573) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2013 ; 9780472051878 ; 9780472028795 ; concern/monographs/5999n4508 ; Page to Stage: The Craft of Adaptation (9780472028795) ; >
+    au < finished ; manifest ; 2013 ; 9780472051878 ; 9780472028795 ; concern/monographs/5999n4508 ; Page to Stage: The Craft of Adaptation (9780472028795) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; 9780472036578 ; 9780472029525 ; concern/monographs/7d278t687 ; Partisan Gerrymandering and the Construction of American Democracy (9780472029525) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; 9780472036332 ; 9780472029594 ; concern/monographs/m039k5667 ; Passionate Amateurs: Theatre, Communism, and Love (9780472029594) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; 9780472036523 ; 9780472029877 ; concern/monographs/c821gk715 ; Preaching to Convert: Evangelical Outreach and Performance Activism in a Secular Age (9780472029877) ; reingest4.clockss.org:8082 >
@@ -688,7 +706,8 @@
     au < finished ; manifest ; 2013 ; 9780472118779 ; 9780472029143 ; concern/monographs/z316q252w ; The Immaterial Book: Reading and Romance in Early Modern England (9780472029143) ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; 9780472052066 ; 9780472029914 ; concern/monographs/nz806057k ; Writing History in the Digital Age (9780472029914) ; >
     au < finished ; manifest ; 2013 ; 9780472035519 ; 9780472029440 ; concern/monographs/41687j462 ; ¡Muy Pop!: Conversations on Latino Popular Culture (9780472029440) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2013 ; 9780472036608 ; 9780472117796 ; concern/monographs/2n49t300s ; Materia Magica: The Archaeology of Magic in Roman Egypt, Cyprus, and Spain (9780472036608) ; >
+    au < finished ; manifest ; 2013 ; 9780472036608 ; 9780472117796 ; concern/monographs/2n49t300s ; Materia Magica: The Archaeology of Magic in Roman Egypt, Cyprus, and Spain (9780472036608) ; reingest5.clockss.org:8082 >
+
     au < finished ; manifest ; 2014 ; 9780472120970 ; 9780472036165 ; concern/monographs/8w32r6515 ; A Heart Beating Hard (9780472036165) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; 9780472072132 ; 9780472052134 ; concern/monographs/f7623d28h ; Acts: Theater, Philosophy, and the Performing Self (9780472052134) ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 9780472072583 ; 9780472052585 ; concern/monographs/cf95jc458 ; American Homes (9780472052585) ; >
@@ -729,8 +748,8 @@
     au < finished ; manifest ; 2014 ; 9780472072323 ; 9780472052325 ; concern/monographs/w95051381 ; Murder Most Queer: The Homicidal Homosexual in the American Theater (9780472052325) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2014 ; 9780472052080 ; 9780472029990 ; concern/monographs/g445cd85j ; Old and New New Englanders: Immigration and Regional Identity in the Gilded Age (9780472029990) ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 9780472119370 ; 9780472035953 ; concern/monographs/2227mq544 ; Pastplay: Teaching and Learning History with Technology (9780472035953) ; >
-    au < frozen ; exists ; 2014 ; 9780472072392 ; 9780472052394 ; concern/monographs/wh246t07m ; Paula Vogel (9780472052394) ; >
-    au < frozen ; exists ; 2014 ; 9780472072248 ; 9780472052240 ; concern/monographs/v692t696p ; Poetry Los Angeles: Reading the Essential Poems of the City (9780472052240) ; >
+    au < finished ; manifest ; 2014 ; 9780472072392 ; 9780472052394 ; concern/monographs/wh246t07m ; Paula Vogel (9780472052394) ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; 9780472072248 ; 9780472052240 ; concern/monographs/v692t696p ; Poetry Los Angeles: Reading the Essential Poems of the City (9780472052240) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; 9780472052059 ; 9780472029884 ; concern/monographs/9k41zf41s ; Politics, Faith, and the Making of American Judaism (9780472029884) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; 9780472072453 ; 9780472052455 ; concern/monographs/g732d982z ; Religion and Spanish Film: Luis Buñuel, the Franco Era, and Contemporary Directors (9780472052455) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; 9780472119226 ; 9780472036752 ; concern/monographs/w0892c01v ; Securing the Sacred: Religion, National Security, and the Western State (9780472036752) ; reingest3.clockss.org:8083 >
@@ -762,9 +781,10 @@
     au < finished ; manifest ; 2014 ; 9780472072224 ; 9780472052226 ; concern/monographs/zp38wd43h ; Ushering in a New Republic: Theologies of Arrival at Rome in the First Century BCE (9780472052226) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; 9780472072194 ; 9780472052196 ; concern/monographs/5d86p105p ; Waiting for Cancer to Come: Women's Experiences with Genetic Testing and Medical Decision Making for Breast and Ovarian Cancer (9780472052196) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2014 ; 9780472120567 ; 9780472036028 ; concern/monographs/6m311q00d ; Yes, There Will Be Singing (9780472036028) ; reingest1.clockss.org:8082 >
+
     au < finished ; manifest ; 2015 ; 9780472072552 ; 9780472052554 ; concern/monographs/0v838139r ; A Tale of Two Capitalisms: Sacred Economics in NineteenthCentury Britain (9780472052554) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 9780472120925 ; 9780472119530 ; concern/monographs/3197xm80c ; A Setting For Excellence: The Story of the Planning and Development of the Ann Arbor Campus of the University of Michigan (9780472119530) ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; 9780472072866 ; 9780472052868 ; concern/monographs/2j62s583t ; After Live: Possibility, Potentiality, and the Future of Performance (9780472052868) ; >
+    au < finished ; manifest ; 2015 ; 9780472072866 ; 9780472052868 ; concern/monographs/2j62s583t ; After Live: Possibility, Potentiality, and the Future of Performance (9780472052868) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 9780472072422 ; 9780472052424 ; concern/monographs/cz30pt43t ; After Django: Making Jazz in Postwar France (9780472052424) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 9780472119684 ; 9780472036813 ; concern/monographs/rn301219p ; An Emotional State: The Politics of Emotion in Postwar West German Culture (9780472036813) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 9780472072538 ; 9780472052530 ; concern/monographs/dn39x231b ; Anne Carson: Ecstatic Lyre (9780472052530) ; reingest1.clockss.org:8082 >
@@ -815,7 +835,7 @@
     au < crawling ; exists ; 2015 ; 9780472072385 ; 9780472052387 ; concern/monographs/b5644s27q ; Tactics of the Human: Experimental Technics in American Fiction (9780472052387) ; >
     au < crawling ; exists ; 2015 ; 9780472072699 ; 9780472052691 ; concern/monographs/8k71nj00w ; Tempest: Geometries of Play (9780472052691) ; >
     au < finished ; manifest ; 2015 ; 9780472072880 ; 9780472052882 ; concern/monographs/5425kb64w ; The Tribe of Pyn: Literary Generations in the Postmodern Period (9780472052882) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; 9780472072590 ; 9780472052592 ; concern/monographs/6682x477t ; The European Union and the Rise of Regionalist Parties (9780472052592) ; >
+    au < finished ; manifest ; 2015 ; 9780472072590 ; 9780472052592 ; concern/monographs/6682x477t ; The European Union and the Rise of Regionalist Parties (9780472052592) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 9780472119639 ; 9780472036912 ; concern/monographs/707958427 ; The Politics of Expertise: Competing for Authority in Global Governance (9780472036912) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 9780472072484 ; 9780472052486 ; concern/monographs/8049g582v ; The Measure of Manliness: Disability and Masculinity in the MidVictorian Novel (9780472052486) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 9780472120734 ; 9780472119493 ; concern/monographs/8p58pd73q ; The Merchant of Prato's Wife: Margherita Datini and Her World, 13601423 (9780472119493) ; reingest4.clockss.org:8082 >
@@ -832,6 +852,7 @@
     au < finished ; manifest ; 2015 ; 9780472121090 ; 9780472119578 ; concern/monographs/m900nv44r ; Virtuous Necessity: Conduct Literature and the Making of the Virtuous Woman in Early Modern England (9780472119578) ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 9780472072828 ; 9780472052820 ; concern/monographs/n583xv754 ; Web Writing: Why and How for Liberal Arts Teaching and Learning (9780472052820) ; >
     au < finished ; manifest ; 2015 ; 9780472072767 ; 9780472052769 ; concern/monographs/j67314666 ; World Politics Simulations in a Global Information Age (9780472052769) ; reingest3.clockss.org:8083 >
+
 	#nope - super complicated - what will we actually collect?
     au < crawling ; exists ; 2016 ;  ; 9780472999002 ; concern/monographs/n009w229r ; A MidRepublican House From Gabii (9780472999002) ; >
     au < finished ; manifest ; 2016 ; 9780472130054 ; 9780472122189 ; concern/monographs/x920fx83b ; A Family of Gods: The Worship of the Imperial Family in the Latin West (9780472122189) ; reingest5.clockss.org:8082 >
@@ -839,7 +860,7 @@
     au < finished ; manifest ; 2016 ; 9780472073177 ; 9780472053179 ; concern/monographs/ft848r525 ; African Print Cultures: Newspapers and Their Publics in the Twentieth Century (9780472053179) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 9780472073146 ; 9780472053148 ; concern/monographs/nc580n28n ; Alienation Effects: Performance and SelfManagement in Yugoslavia, 194591 (9780472053148) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 9780472130009 ; 9780472122127 ; concern/monographs/7d278t88q ; Alignment, Alliance, and American Grand Strategy (9780472122127) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; 9780472121533 ; 9780472119721 ; concern/monographs/mc87pr073 ; Anonymous Connections: The Body and Narratives of the Social in Victorian Britain (9780472119721) ; >
+    au < finished ; manifest ; 2016 ; 9780472121533 ; 9780472119721 ; concern/monographs/mc87pr073 ; Anonymous Connections: The Body and Narratives of the Social in Victorian Britain (9780472119721) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 9780472121946 ; 9780472119905 ; concern/monographs/x633f184j ; Beyond the Bauhaus: Cultural Modernity in Breslau, 191833 (9780472119905) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 9780472073061 ; 9780472053063 ; concern/monographs/k930bx88z ; Big Digital Humanities: Imagining a Meeting Place for the Humanities and the Digital (9780472053063) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; 9780472073313 ; 9780472053315 ; concern/monographs/5425kb566 ; Bodies of Modernism: Physical Disability in Transatlantic Modernist Literature (9780472053315) ; reingest3.clockss.org:8083 >
@@ -879,11 +900,11 @@
     au < finished ; manifest ; 2016 ; 9780472072972 ; 9780472052974 ; concern/monographs/7h149q65n ; Reckoning with Spirit in the Paradigm of Performance (9780472052974) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 9780472121663 ; 9780472119769 ; concern/monographs/6h440t162 ; Refining Child Pornography Law: Crime, Language, and Social Consequences (9780472119769) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 9780472119943 ; 9780472037056 ; concern/monographs/vd66w0645 ; Remaking the Democratic Party: Lyndon B. Johnson as a NativeSon Presidential Candidate (9780472037056) ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; 9780472073023 ; 9780472053025 ; concern/monographs/2801pg99r ; Risk Criticism: Precautionary Reading in an Age of Environmental Uncertainty (9780472053025) ; >
+    au < finished ; manifest ; 2016 ; 9780472073023 ; 9780472053025 ; concern/monographs/2801pg99r ; Risk Criticism: Precautionary Reading in an Age of Environmental Uncertainty (9780472053025) ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2016 ; 9780472073108 ; 9780472053100 ; concern/monographs/2514nm355 ; Science Fiction in Argentina: Technologies of the Text in a Material Multiverse (9780472053100) ; >
     au < finished ; manifest ; 2016 ; 9780472121649 ; 9780472119752 ; concern/monographs/v118rf602 ; Sounds of the Underground: A Cultural, Political and Aesthetic Mapping of Underground and Fringe Music (9780472119752) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; 9780472121809 ; 9780472119806 ; concern/monographs/qr46r149x ; Spectacular Disappearances: Celebrity and Privacy, 16961801 (9780472119806) ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; 9780472073283 ; 9780472053285 ; concern/monographs/5x21tg33z ; Star Worlds: Freedom Versus Control in Online Gameworlds (9780472053285) ; >
+    au < finished ; manifest ; 2016 ; 9780472073283 ; 9780472053285 ; concern/monographs/5x21tg33z ; Star Worlds: Freedom Versus Control in Online Gameworlds (9780472053285) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 9780472130177 ; 9780472122455 ; concern/monographs/1544bp88b ; Strange Science: Investigating the Limits of Knowledge in the Victorian Age (9780472122455) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 9780472130092 ; 9780472122288 ; concern/monographs/nz806063q ; Strangers in Berlin: Modern Jewish Literature between East and West, 1919–1933 (9780472122288) ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2016 ; 9780472121687 ; 9780472036530 ; concern/monographs/6108vc18d ; The Forests of Michigan, Revised Ed. (9780472036530) ; >
@@ -909,11 +930,12 @@
     au < finished ; manifest ; 2016 ; 9780472121915 ; 9780472119875 ; concern/monographs/v692t699h ; Transnational Capitalism in East Central Europe's Heavy Industry: From Flagship Enterprises to Subsidiaries (9780472119875) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 9780472073115 ; 9780472053117 ; concern/monographs/r494vk95w ; Undertaking Discourse Analysis for Social Research (9780472053117) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; 9780472073122 ; 9780472053124 ; concern/monographs/zg64tm769 ; War on Autism: On the Cultural Logic of Normative Violence (9780472053124) ; reingest3.clockss.org:8083 >
+
     au < finished ; manifest ; 2017 ; 9780472130375 ; 9780472122905 ; concern/monographs/tx31qj68q ; A Setting For Excellence, Part II: The Story of the Planning and Development of the Ann Arbor Campus of the  University of Michigan (9780472122905) ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2017 ; 9780472073719 ; 9780472053711 ; concern/monographs/1c18dg49d ; Academic Ableism: Disability and Higher Education (9780472053711) ; >
     au < finished ; manifest ; 2017 ; 9780472130436 ; 9780472123025 ; concern/monographs/m326m253d ; Ancient Law, Ancient Society (9780472123025) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472130429 ; 9780472122998 ; concern/monographs/44558f08w ; Between Military Rule and Democracy: Regime Consolidation in Greece, Turkey, and Beyond (9780472122998) ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 9780472130580 ; 9780472123322 ; concern/monographs/zw12z6120 ; Beyond Notation: The Music of Earle Brown (9780472123322) ; >
+    au < finished ; manifest ; 2017 ; 9780472130580 ; 9780472123322 ; concern/monographs/zw12z6120 ; Beyond Notation: The Music of Earle Brown (9780472123322) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472130139 ; 9780472122387 ; concern/monographs/nz806054r ; Bodies and Ruins: Imagining the Bombing of Germany, 1945 to the Present (9780472122387) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472130467 ; 9780472123087 ; concern/monographs/qn59q479d ; Borrowing Credibility: Global Banks and Monetary Regimes (9780472123087) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472130597 ; 9780472123339 ; concern/monographs/3197xm71d ; Broadway Rhythm: Imaging the City in Song (9780472123339) ; reingest5.clockss.org:8082 >
@@ -950,7 +972,7 @@
     au < finished ; manifest ; 2017 ; 9780472073634 ; 9780472053636 ; concern/monographs/ft848r461 ; Microdramas: Crucibles for Theater and Time (9780472053636) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472130337 ; 9780472122790 ; concern/monographs/sx61dn01p ; Middle Class Union: Organizing the 'Consuming Public' in PostWorld War I America (9780472122790) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472073337 ; 9780472053339 ; concern/monographs/ht24wk24h ; My Life as a Filmmaker (9780472053339) ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 9780472073702 ; 9780472053704 ; concern/monographs/v405sb29t ; Negotiating Disability: Disclosure and Higher Education (9780472053704) ; >
+    au < finished ; manifest ; 2017 ; 9780472073702 ; 9780472053704 ; concern/monographs/v405sb29t ; Negotiating Disability: Disclosure and Higher Education (9780472053704) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472130351 ; 9780472122851 ; concern/monographs/f7623d42b ; Not Straight from Germany: Sexual Publics and Sexual Citizenship since Magnus Hirschfeld (9780472122851) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472130542 ; 9780472123247 ; concern/monographs/h989r400t ; On Parliamentary War: Partisan Conflict and Procedural Change in the U.S. Senate (9780472123247) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472073573 ; 9780472053575 ; concern/monographs/mg74qm95r ; Passing Illusions: Jewish Visibility in Weimar Germany (9780472053575) ; reingest1.clockss.org:8082 >
@@ -985,19 +1007,20 @@
     au < finished ; manifest ; 2017 ; 9780472130344 ; 9780472122813 ; concern/monographs/wd375x29d ; The Critics and the Prioress: Antisemitism, Criticism, and Chaucer's Prioress's Tale (9780472122813) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472123179 ; 9780472036950 ; concern/monographs/wh246s994 ; The Roman Community at Table during the Principate, New and Expanded Edition (9780472036950) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472073610 ; 9780472053612 ; concern/monographs/ws859g48m ; The Holocaust, Corporations, and the Law: Unfinished Business (9780472053612) ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 9780472073412 ; 9780472053414 ; concern/monographs/x346d490f ; The Distinction of Peace: A Social Analysis of Peacebuilding (9780472053414) ; >
+    au < finished ; manifest ; 2017 ; 9780472073412 ; 9780472053414 ; concern/monographs/x346d490f ; The Distinction of Peace: A Social Analysis of Peacebuilding (9780472053414) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472073351 ; 9780472053353 ; concern/monographs/zg64tm74r ; The Gourmet Club: A Sextet (9780472053353) ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472130269 ; 9780472122622 ; concern/monographs/zw12z6138 ; The Celebration of Death in Contemporary Culture (9780472122622) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2017 ; 9780472130238 ; 9780472122530 ; concern/monographs/k930bx854 ; Theoretical Approaches to the Archaeology of Ancient Greece: Manipulating Material Culture (9780472122530) ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 9780472073344 ; 9780472053346 ; concern/monographs/05741s39r ; Unsettled History: Making South African Public Pasts (9780472053346) ; >
+    au < finished ; manifest ; 2017 ; 9780472073344 ; 9780472053346 ; concern/monographs/05741s39r ; Unsettled History: Making South African Public Pasts (9780472053346) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472130320 ; 9780472122721 ; concern/monographs/fq977v579 ; Water and Politics: Clientelism and Reform in Urban Mexico (9780472122721) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472073627 ; 9780472053629 ; concern/monographs/5x21tg32p ; Wendy Wasserstein (9780472053629) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472130474 ; 9780472123100 ; concern/monographs/8s45q949w ; When Informal Institutions Change: Institutional Reforms and Informal Practices in the Former Soviet Union (9780472123100) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 9780472122974 ; 9780472053568 ; concern/monographs/3t945s20b ; The Woman Who Knew Too Much, Revised Ed.: Alice Stewart and the Secrets of Radiation (9780472122974) ; reingest3.clockss.org:8083 >
+
     au < finished ; manifest ; 2018 ; 9780472130726 ; 9780472123612 ; concern/monographs/1831ck97j ; A Poetry Precise and Free: Selected Madrigals of Guarini (9780472123612) ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; 9780472130856 ; 9780472123926 ; concern/monographs/5q47rp73f ; A World of Fiction: Digital Collections and the Future of Literary History (9780472123926) ; >
     au < finished ; manifest ; 2018 ; 9780472130917 ; 9780472124060 ; concern/monographs/fn106z83f ; A Player and a Gentleman: The Diary of Harry Watkins, NineteenthCentury U.S. American Actor (9780472124060) ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; 9780472073825 ; 9780472053827 ; concern/monographs/mw22v636t ; Affect, Animals, and Autists: Feeling Around the Edges of the Human in Performance (9780472053827) ; >
+    au < finished ; manifest ; 2018 ; 9780472073825 ; 9780472053827 ; concern/monographs/mw22v636t ; Affect, Animals, and Autists: Feeling Around the Edges of the Human in Performance (9780472053827) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 9780472131006 ; 9780472124282 ; concern/monographs/5t34sk68t ; Anatomy of a Civil War: Sociopolitical Impacts of the Kurdish Conflict in Turkey (9780472124282) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 9780472130955 ; 9780472124145 ; concern/monographs/fx719n47j ; Angry Public Rhetorics: Global Relations and Emotion in the Wake of 9/11 (9780472124145) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 9780472074044 ; 9780472054046 ; concern/monographs/qj72p799c ; Appified: Culture in the Age of Apps (9780472054046) ; reingest2.clockss.org:8085 >
@@ -1034,7 +1057,7 @@
     au < finished ; manifest ; 2018 ; 9780472073931 ; 9780472053933 ; concern/monographs/0k225b954 ; Robert Hayden in Verse: New Histories of African American Poetry and the Black Arts Era (9780472053933) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 9780472131068 ; 9780472124398 ; concern/monographs/1j92g842x ; Ruins: Classical Theater and Broken Memory (9780472124398) ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; 9780472073740 ; 9780472053742 ; concern/monographs/fj2362114 ; Selma and the Liuzzo Murder Trials: The First Modern Civil Rights Convictions (9780472053742) ; >
-    au < frozen ; exists ; 2018 ; 9780472130931 ; 9780472124121 ; concern/monographs/w66344570 ; Shakespeare and the Legacy of Loss (9780472124121) ; >
+    au < finished ; manifest ; 2018 ; 9780472130931 ; 9780472124121 ; concern/monographs/w66344570 ; Shakespeare and the Legacy of Loss (9780472124121) ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; 9780472074037 ; 9780472054039 ; concern/monographs/0z708x360 ; Sites of Translation: What Multilinguals Can Teach Us about Digital Writing and Rhetoric (9780472054039) ; >
     au < finished ; manifest ; 2018 ; 9780472123841 ; 9780472037209 ; concern/monographs/d217qq38h ; Someone Shot My Book (9780472037209) ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; 9780472130863 ; 9780472123940 ; concern/monographs/dj52w5765 ; Stamping American Memory: Collectors, Citizens, and the Post (9780472123940) ; >
@@ -1066,6 +1089,8 @@
 	#has media tab with extra items, including video
     au < finished ; manifest ; 2018 ; 9780472123681 ; 9780472037254 ; concern/monographs/8623hz604 ; Yiddish Empire: The Vilna Troupe, Jewish Theater, and the Art of Itinerancy (9780472037254) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 9780472123667 ; 9780472130764 ; concern/monographs/bv73c167p ; The Best of the Grammarians: Aristarchus of Samothrace on the Iliad (9780472123667) ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; 9780472123971 ; 9780472130870 ; concern/monographs/ks65hd58z ; Papyri from Karanis: The Granary C123 (9780472123971) ; reingest3.clockss.org:8083 >
+
     au < finished ; manifest ; 2019 ; 9780472131143 ; 9780472124602 ; concern/monographs/9593tw243 ; Beyond the Gender Gap in Japan (9780472124602) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 9780472131433 ; 9780472125616 ; concern/monographs/qf85nc71n ; Cosa: The Roman and Greek Amphoras (9780472125616) ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 9780472124817 ; 9780472037384 ; concern/monographs/ww72bc25j ; Developing Writers in Higher Education: A Longitudinal Study (9780472037384) ; >
@@ -1087,12 +1112,11 @@
     au < finished ; manifest ; 2019 ; 9780472131051 ; 9780472124374 ; concern/monographs/j3860834w ; Provocative Eloquence: Theater, Violence, and Antislavery Speech in the Antebellum United States (9780472131051) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 9780472124626 ; 9780472131167 ; concern/monographs/js956h13z ; The Quality of Divided Democracies: Minority Inclusion, Exclusion, and Representation in the New Europe (9780472124626) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 9780472074129 ; 9780472125159 ; concern/monographs/k0698853h ; Revisiting Minjung: New Perspectives on the Cultural History of 1980s South Korea (9780472074129) ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; 9780472123971 ; 9780472130870 ; concern/monographs/ks65hd58z ; Papyri from Karanis: The Granary C123 (9780472123971) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 9780472125074 ; 9780472131297 ; concern/monographs/mp48sf08c ; Dirty Work: Domestic Service in ProgressiveEra Women's Fiction (9780472125074) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 9780472074105 ; 9780472125036 ; concern/monographs/pg15bg15p ; The Burden of the Past: Problems of Historical Perception in JapanKorea Relations (9780472074105) ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2019 ; 9780472124657 ; 9780472131198 ; concern/monographs/qb98mg66j ; Initiatives without Engagement: A Realistic Appraisal of Direct Democracy's Secondary Effects (9780472124657) ; >
     au < finished ; manifest ; 2019 ; 9780472125005 ; 9780472901043 ; concern/monographs/qr46r210x ; Rhetorical Code Studies: Discovering Arguments in and around Code (9780472125005) ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; 9780472037414 ; 9780472125296 ; concern/monographs/rj430597t ; Jane Cooper: A Radiance of Attention (9780472037414) ; >
+    au < finished ; manifest ; 2019 ; 9780472037414 ; 9780472125296 ; concern/monographs/rj430597t ; Jane Cooper: A Radiance of Attention (9780472037414) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 9780472131259 ; 9780472124831 ; concern/monographs/rv042v155 ; Development in Multiple Dimensions: Social Power and Regional Policy in India (9780472131259) ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 9780472999019 ; ; concern/monographs/rx913r17x ; ESC: Sonic Adventure in the Anthropocene (9780472999019) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 9780472054169 ; 9780472125586 ; concern/monographs/s7526d93k ; Entrepreneurial Seoulite: Culture and Subjectivity in Hongdae, Seoul (9780472054169) ; reingest5.clockss.org:8082 >
@@ -1120,6 +1144,14 @@
     au < finished ; manifest ; 2019 ; 9780472131549 ; 9780472125951 ; concern/monographs/7p88cj34k ; Cosa and the Colonial Landscape of Republican Italy (Third and Second Centuries BCE) (9780472131549) ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 9780472131570 ; 9780472126040 ; concern/monographs/dv13zv81v ; Friendship in Islamic Ethics and World Politics (9780472131570) ; >
     au < crawling ; exists ; 2019 ; 9780472074310 ; 9780472126132 ; concern/monographs/js956h40v ; Transgenerational Media Industries: Adults, Children, and the Reproduction of Culture (9780472074310) ; >
+    au < exists ; exists ; 2019 ; 9780472131419 ; 9780472125326 ; concern/monographs/3484zj43p ; Acts of Poetry: American Poets' Theater and the Politics of Performance (9780472131419) ; >
+    au < exists ; exists ; 2019 ; 9780472131440 ; 9780472125722 ; concern/monographs/j9602248q ; Always at War: British Public Narratives of War (9780472131440) ; >
+    au < exists ; exists ; 2019 ; 9780472074259 ; 9780472125890 ; concern/monographs/2f75r9575 ; Beyond Text: Theater and Performance in Print After 1900 (9780472074259) ; >
+    au < exists ; exists ; 2019 ; 9780472074280 ; 9780472126088 ; concern/monographs/mw22v701x ; Blindness through the Looking Glass: The Performance of Blindness, Gender, and The Sensory Body (9780472074280) ; >
+    au < exists ; exists ; 2019 ; 9780472131327 ; 9780472125180 ; concern/monographs/m326m335p ; Capital Choices: Sectoral Politics and the Variation of Sovereign Wealth (9780472131327) ; >
+    au < exists ; exists ; 2019 ; 9780472074174 ; 9780472125593 ; concern/monographs/73666621x ; Coeds Ruining the Nation: Women, Education, and Social Change in Postwar Japanese Media (9780472074174) ; >
+    au < exists ; exists ; 2019 ; 9780915703913 ; 9780915703944 ; concern/monographs/x920fz31s ; Cueva Blanca: Social Change in the Archaic of the Valley of Oaxaca (9780915703913) ; >
+    au < exists ; exists ; 2019 ; 9780915703920 ; 9780915703951 ; concern/monographs/vm40xt23f ; Remembering Archaeological Fieldwork in Mexico and Peru, 1961-2003 (9780915703920) ; >
 
     au < crawling ; exists ; 2020 ; 9780472131815 ; 9780472126545 ; concern/monographs/cf95jd70t ; Divined Intervention: Religious Institutions and Collective Action (9780472131815) ; >
     au < crawling ; exists ; 2020 ; 9780472074433 ; 9780472126606 ; concern/monographs/12579v168 ; Going to the Countryside: The Rural in the Modern Chinese Cultural Imagination, 1915-1965 (9780472074433) ; >
@@ -1154,8 +1186,64 @@
     au < crawling ; exists ; 2020 ; 9780472131594 ; 9780472126118 ; concern/monographs/b8515q34k ; Cosa: The Sculpture and Furnishings in Stone and Marble (9780472131594) ; >
     au < crawling ; exists ; 2020 ; 9780472131877 ; 9780472126620 ; concern/monographs/tq57ns942 ; Following Chaucer: Offices of the Active Life (9780472131877) ; >
     au < crawling ; exists ; 2020 ; 9780472131853 ; 9780472126590 ; concern/monographs/st74cs303 ; Lyric Poetry and Social Identity in Archaic Greece (9780472131853) ; >
-
-    
+    au < exists ; exists ; 2020 ; 9780472132195 ; 9780472127283 ; concern/monographs/t722hb861 ; A Question of Voice: Philosophy and the Search for Legitimacy (9780472132195) ; >
+    au < exists ; exists ; 2020 ; 9780472074563 ; 9780472901296 ; concern/monographs/x346d608w ; a tumblr book: platform and cultures (9780472074563) ; >
+    au < exists ; exists ; 2020 ; 9780472074518 ; 9780472126811 ; concern/monographs/ns064785h ; Adoption and Multiculturalism: Europe, the Americas, and the Pacific (9780472074518) ; >
+    au < exists ; exists ; 2020 ; 9780472132171 ; 9780472127238 ; concern/monographs/3484zj70k ; American Dove: US Foreign Policy and the Failure of Force (9780472132171) ; >
+    au < exists ; exists ; 2020 ; 9780472132010 ; 9780472126910 ; concern/monographs/t435gg05s ; Anti-Heimat Cinema: The Jewish Invention of the German Landscape (9780472132010) ; >
+    au < exists ; exists ; 2020 ; 9780472037827 ; 9780472126965 ; concern/monographs/jq085m96h ; Bad Boys: Public Schools in the Making of Black Masculinity (9780472037827) ; >
+    au < exists ; exists ; 2020 ; 9780472131990 ; 9780472126842 ; concern/monographs/2r36v0418 ; Battle for Allegiance: Governments, Terrorist Groups, and Constituencies in Conflict (9780472131990) ; >
+    au < exists ; exists ; 2020 ; 9780472131983 ; 9780472126804 ; concern/monographs/0g354h21h ; Climate Change Solutions: Beyond the Capital-Climate Contradiction (9780472131983) ; >
+    au < exists ; exists ; 2020 ; 9780472131969 ; 9780472126798 ; concern/monographs/x633f311f ; Clothed in Meaning: Literature, Labor, and Cotton in Nineteenth-Century America (9780472131969) ; >
+    au < exists ; exists ; 2020 ; 9780472074655 ; 9780472127191 ; concern/monographs/sb397b36p ; Coexistence in the Aftermath of Mass Violence: Imagination, Empathy, and Resilience (9780472074655) ; >
+    au < exists ; exists ; 2020 ; 9780472132065 ; 9780472126996 ; concern/monographs/h128ng67f ; Committees and the Decline of Lawmaking in Congress (9780472132065) ; >
+    au < exists ; exists ; 2020 ; 9780472038343 ; 9780472128099 ; concern/monographs/x920g001f ; Concordance: Black Lawmaking in the U.S. Congress from Carter to Obama (9780472038343) ; >
+    au < exists ; exists ; 2020 ; 9780472074556 ; 9780472126941 ; concern/monographs/n870zs642 ; Corporeal Politics: Dancing East Asia (9780472074556) ; >
+    au < exists ; exists ; 2020 ; 9780472132034 ; 9780472126934 ; concern/monographs/g732db90v ; Dispossession: Plundering German Jewry, 1933-1953 (9780472132034) ; >
+    au < exists ; exists ; 2020 ; 9780472132225 ; 9780472127320 ; concern/monographs/gb19f786s ; Founding Factions: How Majorities Shifted and Aligned to Shape the U.S. Constitution (9780472132225) ; >
+    au < exists ; exists ; 2020 ; 9780472132164 ; 9780472127207 ; concern/monographs/cr56n293x ; From Multiculturalism to Democratic Discrimination: The Challenge of Islam and the Re-emergence of Europe's Nationalism (9780472132164) ; >
+    au < exists ; exists ; 2020 ; ; 9780472999033 ; concern/monographs/m900nw52n ; i used to love to dream (9780472999033) ; >
+    au < exists ; exists ; 2020 ; 9780472074341 ; 9780472126231 ; concern/monographs/7w62fb210 ; Indian Sound Cultures, Indian Sound Citizenship (9780472074341) ; >
+    au < exists ; exists ; 2020 ; 9780472132126 ; 9780472902392 ; concern/monographs/tq57ns985 ; Iron Will: Global Extractivism and Mining Resistance in Brazil and India (9780472132126) ; >
+    au < exists ; exists ; 2020 ; 9780472074211 ; 9780472125814 ; concern/monographs/w9505245n ; Ishtyle: Accenting Gay Indian Nightlife (9780472074211) ; >
+    au < exists ; exists ; 2020 ; 9780472074600 ; 9780472127078 ; concern/monographs/r207tr23v ; Losing to Win: Why Congressional Majorities Play Politics Instead of Make Laws (9780472074600) ; >
+    au < exists ; exists ; 2020 ; 9780472074617 ; 9780472127085 ; concern/monographs/3n204090g ; Marking Modern Movement: Dance and Gender in the Visual Imagery of the Weimar Republic (9780472074617) ; >
+    au < exists ; exists ; 2020 ; 9780472074624 ; 9780472127122 ; concern/monographs/bn999864k ; More or Less Afraid of Nearly Everything: Homeland Security, Borders, and Disasters in the Twenty-First Century (9780472074624) ; >
+    au < exists ; exists ; 2020 ; 9780472074501 ; 9780472901289 ; concern/monographs/m613n040s ; Music on the Move (9780472074501) ; >
+    au < exists ; exists ; 2020 ; 9780472132140 ; 9780472127146 ; concern/monographs/qv33rz720 ; Normalizing Corruption: Failures of Accountability in Ukraine (9780472132140) ; >
+    au < exists ; exists ; 2020 ; 9780472074488 ; 9780472126767 ; concern/monographs/xg94hr617 ; Nuyorican Feminist Performance: From the Café to Hip Hop Theater (9780472074488) ; >
+    au < exists ; exists ; 2020 ; 9780979975875 ; 9780979975882 ; concern/monographs/kk91fn56v ; Ostraka and Other Inscribed Material from Bir Shawish, Small Oasis: Excavation Seasons 2005 and 2007 (9780979975875) ; >
+    au < exists ; exists ; 2020 ; 9780472074587 ; 9780472127016 ; concern/monographs/j3860908g ; Performance and the Afterlives of Injustice (9780472074587) ; >
+    au < exists ; exists ; 2020 ; 9780472132096 ; 9780472127061 ; concern/monographs/p8418q31h ; Performance in the Zócalo: Constructing History, Race, and Identity in Mexico's Central Square from the Colonial Era to the Present (9780472132096) ; >
+    au < exists ; exists ; 2020 ; 9780472074662 ; 9780472127214 ; concern/monographs/41687k50v ; Performing Commemoration: Musical Reenactment and the Politics of Trauma (9780472074662) ; >
+    au < exists ; exists ; 2020 ; 9780472074532 ; 9780472126859 ; concern/monographs/8s45qb48t ; Performing Flight: From the Barnstormers to Space Tourism (9780472074532) ; >
+    au < exists ; exists ; 2020 ; 9780472132133 ; 9780472127139 ; concern/monographs/w3763877f ; Poetics of the First Punic War (9780472132133) ; >
+    au < exists ; exists ; 2020 ; 9780472132119 ; 9780472127108 ; concern/monographs/sj139383b ; Power over Property: The Political Economy of Communist Land Reform in China (9780472132119) ; >
+    au < exists ; exists ; 2020 ; 9780472132058 ; 9780472126989 ; concern/monographs/fq977w84d ; Prismatic Performances: Queer South Africa and the Fragmentation of the Rainbow Nation (9780472132058) ; >
+    au < exists ; exists ; 2020 ; 9780472132157 ; 9780472127153 ; concern/monographs/5x21th378 ; Resisting Europe: Practices of Contestation in the Mediterranean Middle East (9780472132157) ; >
+    au < exists ; exists ; 2020 ; 9780472073894 ; 9780472124046 ; concern/monographs/4m90dx15k ; Rhymes in the Flow: How Rappers Flip the Beat (9780472073894) ; >
+    au < exists ; exists ; 2020 ; 9780472132003 ; 9780472126880 ; concern/monographs/j6731554m ; Scenes from Bourgeois Life (9780472132003) ; >
+    au < exists ; exists ; 2020 ; 9780472074549 ; 9780472126897 ; concern/monographs/wp988m95z ; Shaping the Future of Power: Knowledge Production and Network-Building in China-Africa Relations (9780472074549) ; >
+    au < exists ; exists ; 2020 ; 9780472132188 ; 9780472127245 ; concern/monographs/vh53wx881 ; Singing Out: GALA Choruses and Social Change (9780472132188) ; >
+    au < exists ; exists ; 2020 ; 9780472037841 ; 9780472127160 ; concern/monographs/n583xw89p ; Sit-Down: The General Motors Strike of 1936-1937 (9780472037841) ; >
+    au < exists ; exists ; 2020 ; 9780472074495 ; 9780472126774 ; concern/monographs/0z708z59h ; Sound Streams: A Cultural History of Radio-Internet Convergence (9780472074495) ; >
+    au < exists ; exists ; 2020 ; 9780472131945 ; 9780472126736 ; concern/monographs/9w0325104 ; Sounding Dissent: Rebel Songs, Resistance, and Irish Republicanism (9780472131945) ; >
+    au < exists ; exists ; 2020 ; 9780472074723 ; 9780472128402 ; concern/monographs/zp38wf64g ; Strike for the Common Good: Fighting for the Future of Public Education (9780472074723) ; >
+    au < exists ; exists ; 2020 ; 9780472074440 ; 9780472126637 ; concern/monographs/pn89d826x ; Textile Ascendancies: Aesthetics, Production, and Trade in Northern Nigeria (9780472074440) ; >
+    au < exists ; exists ; 2020 ; 9780472074631 ; 9780472127177 ; concern/monographs/3f462736d ; The Black and White Rainbow: Reconciliation, Opposition, and Nation-Building in Democratic South Africa (9780472074631) ; >
+    au < exists ; exists ; 2020 ; 9780472132249 ; 9780472128082 ; concern/monographs/7s75df42h ; The Dangerous Class: The Concept of the Lumpenproletariat (9780472132249) ; >
+    au < exists ; exists ; 2020 ; 9780472131884 ; 9780472126644 ; concern/monographs/hq37vq571 ; The Discovery of the Fact (9780472131884) ; >
+    au < exists ; exists ; 2020 ; 9780472074686 ; 9780472127276 ; concern/monographs/9306t1230 ; The Enduring Legacy: Structured Inequality in America's Public Schools (9780472074686) ; >
+    au < exists ; exists ; 2020 ; 9780472074679 ; 9780472127252 ; concern/monographs/6395w926h ; The Era of Great Disasters: Japan and Its Three Major Earthquakes (9780472074679) ; >
+    au < exists ; exists ; 2020 ; 9780472132256 ; 9780472128105 ; concern/monographs/mw22v743f ; The Life of Comedy after the Death of Plautus and Terence (9780472132256) ; >
+    au < exists ; exists ; 2020 ; 9780472037834 ; 9780472127009 ; concern/monographs/m613n0412 ; The Paradox of Gender Equality: How American Women's Groups Gained and Lost Their Public Voice (9780472037834) ; >
+    au < exists ; exists ; 2020 ; 9780472132218 ; 9780472127313 ; concern/monographs/ns064786s ; The Politics of Military Force: Antimilitarism, Ideational Change, and Post-Cold War German Security Discourse (9780472132218) ; >
+    au < exists ; exists ; 2020 ; 9780472131921 ; 9780472126712 ; concern/monographs/br86b550g ; The Silent Guns of Two Octobers: Kennedy and Khrushchev Play the Double Game (9780472131921) ; >
+    au < exists ; exists ; 2020 ; 9780472132232 ; 9780472902408 ; concern/monographs/c247dt86h ; The Three Ages of Government: From the Person, to the Group, to the World (9780472132232) ; >
+    au < exists ; exists ; 2020 ; 9780472131907 ; 9780472126668 ; concern/monographs/8w32r738t ; While Rome Burned: Fire, Leadership, and Urban Disaster in the Roman Cultural Imagination (9780472131907) ; >
+    au < exists ; exists ; 2020 ; 9780472132102 ; 9780472127092 ; concern/monographs/h128ng665 ; Who Runs? The Masculine Advantage in Candidate Emergence (9780472132102) ; >
+    au < exists ; exists ; 2020 ; 9780472074693 ; 9780472127337 ; concern/monographs/7h149r76c ; Women and Networks in Nineteenth-Century Japan (9780472074693) ; >
+    au < exists ; exists ; 2020 ; ; 9780472127269 ; concern/monographs/73666655r ; Writing Workflows: Beyond Word Processing (9780472127269) ; >
     
     
   }

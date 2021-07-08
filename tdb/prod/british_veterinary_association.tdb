@@ -14,9 +14,9 @@
       issn = 0263-841X ;
       eissn = 2042-7689 
     >
-
     #param[base_url] = http://inpractice.bmj.com/
     #move to Wiley, 2021
+
 
     au < HighWirePressH20Plugin ; down ; 1979 ; In Practice Volume 1 ; 1 ; http://inpractice.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1980 ; In Practice Volume 2 ; 2 ; http://inpractice.bmj.com/ >
@@ -68,9 +68,9 @@
       issn = 0042-4900 ;
       eissn = 2042-7670 
     >
-
     #param[base_url] = http://veterinaryrecord.bmj.com/
     #move to Wiley, 2021
+
 
     au < bmj.BMJDrupalPlugin ; doNotProcess ; 1950 ; Veterinary Record Volume 62 [tables of contents only] ; 62 ; https://veterinaryrecord.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; doNotProcess ; 1951 ; Veterinary Record Volume 63 [tables of contents only] ; 63 ; https://veterinaryrecord.bmj.com/ >
@@ -213,9 +213,9 @@
     >
     
     rights = openaccess
-
     #param[base_url] = http://vetrecordopen.bmj.com/
     #move to Wiley, 2021
+
 
     au < HighWirePressH20Plugin ; down ; 2014 ; Veterinary Record Open Volume 1 ; 1 ; http://vetrecordopen.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Veterinary Record Open Volume 2 ; 2 ; http://vetrecordopen.bmj.com/ >
@@ -233,8 +233,8 @@
       eissn = 2052-6121
       
     >
-
     #param[base_url] = http://vetrecordcasereports.bmj.com/
+
 
     au < HighWirePressH20Plugin ; down ; 2013 ; Veterinary Record Case Reports Volume 1 ; 1 ; http://vetrecordcasereports.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Veterinary Record Case Reports Volume 2 ; 2 ; http://vetrecordcasereports.bmj.com/ >

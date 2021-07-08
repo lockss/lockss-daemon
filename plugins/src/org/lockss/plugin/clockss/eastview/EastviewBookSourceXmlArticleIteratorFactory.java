@@ -64,6 +64,12 @@ public class EastviewBookSourceXmlArticleIteratorFactory
   public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final Pattern TXT_PATTERN = Pattern.compile("/([^/]+)_archive_file_list\\.txt$", Pattern.CASE_INSENSITIVE);
 
+  /*
+  $1 is "CLOCKSS%20-%201.1.20%20-%206.30.20" in ".xml" file
+  $1 is "1335books_archive_file_list" for ".txt" file
+   */
+
+  //$1 will be 
   public static final String XML_REPLACEMENT = "/$1.xml";
   //$1 will be "1335books" which will be used to get "1335books.zip!" directory
   private static final String TXT_REPLACEMENT = "/$1_archive_file_list.txt";
@@ -128,7 +134,6 @@ public class EastviewBookSourceXmlArticleIteratorFactory
 
         // This part handle the txt file 
         if (cu == null) {
-          cu = af.getFullTextCu();
 
           String textFileURL = af.getFullTextUrl();
           int txtIndex = textFileURL.indexOf(STATIC_TEXT_FILE_PATH);
@@ -136,8 +141,12 @@ public class EastviewBookSourceXmlArticleIteratorFactory
 
           if (txtIndex > -1) {
             zipFolderPath = textFileName.replace(STATIC_TEXT_FILE_PATH, "");
+            MarcRecordMetadataHelper.setZippedFolderName(zipFolderPath);
 
           }
+
+          //return from here to avoid generating metadata for the ".txt" file
+          return;
         }
 
         // This part to handle xml file
@@ -159,7 +168,6 @@ public class EastviewBookSourceXmlArticleIteratorFactory
           ArticleMetadata am = new ArticleMetadata();
           myEmitter.emitMetadata(cu, am);
           // Set the zipped folder name in the schema helper, so it can be used to construct access url
-          EastviewMarcXmlSchemaHelper.setZippedFolderName(zipFolderPath);
           AuUtil.safeRelease(cu);
         }
       }

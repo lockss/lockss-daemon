@@ -5,8 +5,8 @@
     info[platform] = OJS3
     
   >
-
     #param[base_url] = http://journals.whitingbirch.net/
+
     comment[moving] = from metapress to OJS on February 25, 2015. To https in 2016.
     implicit < pluginSuffix ; status ; year ; param[year] ; name ; volume ; param[base_url] >
     pluginPrefix = org.lockss.plugin.
@@ -21,7 +21,6 @@
      >
      
      param[journal_id] = GPWK
-     
      
      au < ojs3.Ojs3Plugin ; manifest ; 2004 ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 ; https://journals.whitingbirch.net/ >
      au < ojs3.Ojs3Plugin ; manifest ; 2005 ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 ; https://journals.whitingbirch.net/ >
@@ -42,7 +41,7 @@
      au < ojs2.OJS2Plugin ; down ; 2018 ; 2018 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 28 ; 28 ; https://journals.whitingbirch.net/ >
      
      #nothing published in 2019
-     au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 2020 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 29 ; 29 ; https://journals.whitingbirch.net/ >
+     au < ojs3.Ojs3Plugin ; released ; 2020 ; 2020 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 29 ; 29 ; https://journals.whitingbirch.net/ >
      au < ojs3.Ojs3Plugin ; expected ; 2021 ; 2021 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 30 ; 30 ; https://journals.whitingbirch.net/ >
 
   }
@@ -99,8 +98,8 @@
     au < ojs2.OJS2Plugin ; down ; 2015 ; 2015 ; Social Work and Social Sciences Review Volume 2015 ; 2015 ; http://journals.whitingbirch.net/ >
     au < ojs2.OJS2Plugin ; down ; 2017 ; 2017 ; Social Work and Social Sciences Review Volume 2017 ; 2017 ; https://journals.whitingbirch.net/ >
 
-    au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 2018 ; Social Work and Social Sciences Review Volume 2018 ; 2018 ; https://journals.whitingbirch.net/ >
-    au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 2019 ; Social Work and Social Sciences Review Volume 2019 ; 2019 ; https://journals.whitingbirch.net/ >
+    au < ojs3.Ojs3Plugin ; released ; 2018 ; 2018 ; Social Work and Social Sciences Review Volume 2018 ; 2018 ; https://journals.whitingbirch.net/ >
+    au < ojs3.Ojs3Plugin ; released ; 2019 ; 2019 ; Social Work and Social Sciences Review Volume 2019 ; 2019 ; https://journals.whitingbirch.net/ >
     #nothing published in 2020
     au < ojs3.Ojs3Plugin ; expected ; 2021 ; 2021 ; Social Work and Social Sciences Review Volume 2021 ; 2021 ; https://journals.whitingbirch.net/ >
 

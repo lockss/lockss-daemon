@@ -1,0 +1,375 @@
+{
+
+  publisher <
+    name = American Society for Biochemistry and Molecular Biology
+  >
+  #Moving from directory tdb/prod/_oi_asbmb to _retired. 
+  #Publisher has moved to Elsevier from HW, and is no longer in the GLN.
+  {
+  
+    title <
+      name = Journal of Biological Chemistry ;
+      issn = 0021-9258 ;
+      eissn = 1083-351X ;
+      issnl = 0021-9258
+    >
+
+    #This TDB file includes early volumes for optional use by the GLN - 2008+ in prod version of file
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.jbc.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+
+    au < down ; 1905-1906 ; Journal of Biological Chemistry Volume 1 ; 1 >
+    au < down ; 1906-1907 ; Journal of Biological Chemistry Volume 2 ; 2 >
+    au < down ; 1907 ; Journal of Biological Chemistry Volume 3 ; 3 >
+    au < down ; 1908 ; Journal of Biological Chemistry Volume 4 ; 4 >
+    au < down ; 1908-1909 ; Journal of Biological Chemistry Volume 5 ; 5 >
+    au < down ; 1909 ; Journal of Biological Chemistry Volume 6 ; 6 >
+    au < down ; 1909-1910 ; Journal of Biological Chemistry Volume 7 ; 7 >
+    au < down ; 1910 ; Journal of Biological Chemistry Volume 8 ; 8 >
+    au < down ; 1911 ; Journal of Biological Chemistry Volume 9 ; 9 >
+    au < down ; 1911-1912 ; Journal of Biological Chemistry Volume 10 ; 10 >
+    au < down ; 1912 ; Journal of Biological Chemistry Volume 11 ; 11 >
+    au < down ; 1912 ; Journal of Biological Chemistry Volume 12 ; 12 >
+    au < down ; 1912-1913 ; Journal of Biological Chemistry Volume 13 ; 13 >
+    au < down ; 1913 ; Journal of Biological Chemistry Volume 14 ; 14 >
+    au < down ; 1913 ; Journal of Biological Chemistry Volume 15 ; 15 >
+    au < down ; 1913-1914 ; Journal of Biological Chemistry Volume 16 ; 16 >
+    au < down ; 1914 ; Journal of Biological Chemistry Volume 17 ; 17 >
+    au < down ; 1914 ; Journal of Biological Chemistry Volume 18 ; 18 >
+    au < down ; 1914 ; Journal of Biological Chemistry Volume 19 ; 19 >
+    au < down ; 1915 ; Journal of Biological Chemistry Volume 20 ; 20 >
+    au < down ; 1915 ; Journal of Biological Chemistry Volume 21 ; 21 >
+    au < down ; 1915 ; Journal of Biological Chemistry Volume 22 ; 22 >
+    au < down ; 1915 ; Journal of Biological Chemistry Volume 23 ; 23 >
+    au < down ; 1916 ; Journal of Biological Chemistry Volume 24 ; 24 >
+    au < down ; 1916 ; Journal of Biological Chemistry Volume 25 ; 25 >
+    au < down ; 1916 ; Journal of Biological Chemistry Volume 26 ; 26 >
+    au < down ; 1916 ; Journal of Biological Chemistry Volume 27 ; 27 >
+    au < down ; 1916-1917 ; Journal of Biological Chemistry Volume 28 ; 28 >
+    au < down ; 1917 ; Journal of Biological Chemistry Volume 29 ; 29 >
+    au < down ; 1917 ; Journal of Biological Chemistry Volume 30 ; 30 >
+    au < down ; 1917 ; Journal of Biological Chemistry Volume 31 ; 31 >
+    au < down ; 1917 ; Journal of Biological Chemistry Volume 32 ; 32 >
+    au < down ; 1918 ; Journal of Biological Chemistry Volume 33 ; 33 >
+    au < down ; 1918 ; Journal of Biological Chemistry Volume 34 ; 34 >
+    au < down ; 1918 ; Journal of Biological Chemistry Volume 35 ; 35 >
+    au < down ; 1918 ; Journal of Biological Chemistry Volume 36 ; 36 >
+    au < down ; 1919 ; Journal of Biological Chemistry Volume 37 ; 37 >
+    au < down ; 1919 ; Journal of Biological Chemistry Volume 38 ; 38 >
+    au < down ; 1919 ; Journal of Biological Chemistry Volume 39 ; 39 >
+    au < down ; 1919 ; Journal of Biological Chemistry Volume 40 ; 40 >
+    au < down ; 1920 ; Journal of Biological Chemistry Volume 41 ; 41 >
+    au < down ; 1920 ; Journal of Biological Chemistry Volume 42 ; 42 >
+    au < down ; 1920 ; Journal of Biological Chemistry Volume 43 ; 43 >
+    au < down ; 1920 ; Journal of Biological Chemistry Volume 44 ; 44 >
+    au < down ; 1920-1921 ; Journal of Biological Chemistry Volume 45 ; 45 >
+    au < down ; 1921 ; Journal of Biological Chemistry Volume 46 ; 46 >
+    au < down ; 1921 ; Journal of Biological Chemistry Volume 47 ; 47 >
+    au < down ; 1921 ; Journal of Biological Chemistry Volume 48 ; 48 >
+    au < down ; 1921 ; Journal of Biological Chemistry Volume 49 ; 49 >
+
+    au < down ; 1922 ; Journal of Biological Chemistry Volume 50 ; 50 >
+    au < down ; 1922 ; Journal of Biological Chemistry Volume 51 ; 51 >
+    au < down ; 1922 ; Journal of Biological Chemistry Volume 52 ; 52 >
+    au < down ; 1922 ; Journal of Biological Chemistry Volume 53 ; 53 >
+    au < down ; 1922 ; Journal of Biological Chemistry Volume 54 ; 54 >
+    au < down ; 1923 ; Journal of Biological Chemistry Volume 55 ; 55 >
+    au < down ; 1923 ; Journal of Biological Chemistry Volume 56 ; 56 >
+    au < down ; 1923 ; Journal of Biological Chemistry Volume 57 ; 57 >
+    au < down ; 1923 ; Journal of Biological Chemistry Volume 58 ; 58 >
+    au < down ; 1924 ; Journal of Biological Chemistry Volume 59 ; 59 >
+
+    au < down ; 1924 ; Journal of Biological Chemistry Volume 60 ; 60 >
+    au < down ; 1924 ; Journal of Biological Chemistry Volume 61 ; 61 >
+    au < down ; 1924 ; Journal of Biological Chemistry Volume 62 ; 62 >
+    au < down ; 1925 ; Journal of Biological Chemistry Volume 63 ; 63 >
+    au < down ; 1925 ; Journal of Biological Chemistry Volume 64 ; 64 >
+    au < down ; 1925 ; Journal of Biological Chemistry Volume 65 ; 65 >
+    au < down ; 1925 ; Journal of Biological Chemistry Volume 66 ; 66 >
+    au < down ; 1926 ; Journal of Biological Chemistry Volume 67 ; 67 >
+    au < down ; 1926 ; Journal of Biological Chemistry Volume 68 ; 68 >
+    au < down ; 1926 ; Journal of Biological Chemistry Volume 69 ; 69 >
+
+    au < down ; 1926 ; Journal of Biological Chemistry Volume 70 ; 70 >
+    au < down ; 1926-1927 ; Journal of Biological Chemistry Volume 71 ; 71 >
+    au < down ; 1927 ; Journal of Biological Chemistry Volume 72 ; 72 >
+    au < down ; 1927 ; Journal of Biological Chemistry Volume 73 ; 73 >
+    au < down ; 1927 ; Journal of Biological Chemistry Volume 74 ; 74 >
+    au < down ; 1927 ; Journal of Biological Chemistry Volume 75 ; 75 >
+    au < down ; 1928 ; Journal of Biological Chemistry Volume 76 ; 76 >
+    au < down ; 1928 ; Journal of Biological Chemistry Volume 77 ; 77 >
+    au < down ; 1928 ; Journal of Biological Chemistry Volume 78 ; 78 >
+    au < down ; 1928 ; Journal of Biological Chemistry Volume 79 ; 79 >
+
+    au < down ; 1928 ; Journal of Biological Chemistry Volume 80 ; 80 >
+    au < down ; 1929 ; Journal of Biological Chemistry Volume 81 ; 81 >
+    au < down ; 1929 ; Journal of Biological Chemistry Volume 82 ; 82 >
+    au < down ; 1929 ; Journal of Biological Chemistry Volume 83 ; 83 >
+    au < down ; 1929 ; Journal of Biological Chemistry Volume 84 ; 84 >
+    au < down ; 1929-1930 ; Journal of Biological Chemistry Volume 85 ; 85 >
+    au < down ; 1930 ; Journal of Biological Chemistry Volume 86 ; 86 >
+    au < down ; 1930 ; Journal of Biological Chemistry Volume 87 ; 87 >
+    au < down ; 1930 ; Journal of Biological Chemistry Volume 88 ; 88 >
+    au < down ; 1930 ; Journal of Biological Chemistry Volume 89 ; 89 >
+
+    au < down ; 1931 ; Journal of Biological Chemistry Volume 90 ; 90 >
+    au < down ; 1931 ; Journal of Biological Chemistry Volume 91 ; 91 >
+    au < down ; 1931 ; Journal of Biological Chemistry Volume 92 ; 92 >
+    au < down ; 1931 ; Journal of Biological Chemistry Volume 93 ; 93 >
+    au < down ; 1931-1932 ; Journal of Biological Chemistry Volume 94 ; 94 >
+    au < down ; 1932 ; Journal of Biological Chemistry Volume 95 ; 95 >
+    au < down ; 1932 ; Journal of Biological Chemistry Volume 96 ; 96 >
+    au < down ; 1932 ; Journal of Biological Chemistry Volume 97 ; 97 >
+    au < down ; 1932 ; Journal of Biological Chemistry Volume 98 ; 98 >
+    au < down ; 1932-1933 ; Journal of Biological Chemistry Volume 99 ; 99 >
+
+    au < down ; 1933 ; Journal of Biological Chemistry Volume 100 ; 100 >
+    au < down ; 1933 ; Journal of Biological Chemistry Volume 101 ; 101 >
+    au < down ; 1933 ; Journal of Biological Chemistry Volume 102 ; 102 >
+    au < down ; 1933 ; Journal of Biological Chemistry Volume 103 ; 103 >
+    au < down ; 1934 ; Journal of Biological Chemistry Volume 104 ; 104 >
+    au < down ; 1934 ; Journal of Biological Chemistry Volume 105 ; 105 >
+    au < down ; 1934 ; Journal of Biological Chemistry Volume 106 ; 106 >
+    au < down ; 1934 ; Journal of Biological Chemistry Volume 107 ; 107 >
+    au < down ; 1935 ; Journal of Biological Chemistry Volume 108 ; 108 >
+    au < down ; 1935 ; Journal of Biological Chemistry Volume 109 ; 109 >
+
+    au < down ; 1935 ; Journal of Biological Chemistry Volume 110 ; 110 >
+    au < down ; 1935 ; Journal of Biological Chemistry Volume 111 ; 111 >
+    au < down ; 1935-1936 ; Journal of Biological Chemistry Volume 112 ; 112 >
+    au < down ; 1936 ; Journal of Biological Chemistry Volume 113 ; 113 >
+    au < down ; 1936 ; Journal of Biological Chemistry Volume 114 ; 114 >
+    au < down ; 1936 ; Journal of Biological Chemistry Volume 115 ; 115 >
+    au < down ; 1936 ; Journal of Biological Chemistry Volume 116 ; 116 >
+    au < down ; 1937 ; Journal of Biological Chemistry Volume 117 ; 117 >
+    au < down ; 1937 ; Journal of Biological Chemistry Volume 118 ; 118 >
+    au < down ; 1937 ; Journal of Biological Chemistry Volume 119 ; 119 >
+
+    au < down ; 1937 ; Journal of Biological Chemistry Volume 120 ; 120 >
+    au < down ; 1937 ; Journal of Biological Chemistry Volume 121 ; 121 >
+    au < down ; 1937-1938 ; Journal of Biological Chemistry Volume 122 ; 122 >
+    au < down ; 1938 ; Journal of Biological Chemistry Volume 123 ; 123 >
+    au < down ; 1938 ; Journal of Biological Chemistry Volume 124 ; 124 >
+    au < down ; 1938 ; Journal of Biological Chemistry Volume 125 ; 125 >
+    au < down ; 1938 ; Journal of Biological Chemistry Volume 126 ; 126 >
+    au < down ; 1939 ; Journal of Biological Chemistry Volume 127 ; 127 >
+    au < down ; 1939 ; Journal of Biological Chemistry Volume 128 ; 128 >
+    au < down ; 1939 ; Journal of Biological Chemistry Volume 129 ; 129 >
+
+    au < down ; 1939 ; Journal of Biological Chemistry Volume 130 ; 130 >
+    au < down ; 1939 ; Journal of Biological Chemistry Volume 131 ; 131 >
+    au < down ; 1940 ; Journal of Biological Chemistry Volume 132 ; 132 >
+    au < down ; 1940 ; Journal of Biological Chemistry Volume 133 ; 133 >
+    au < down ; 1940 ; Journal of Biological Chemistry Volume 134 ; 134 >
+    au < down ; 1940 ; Journal of Biological Chemistry Volume 135 ; 135 >
+    au < down ; 1940 ; Journal of Biological Chemistry Volume 136 ; 136 >
+    au < down ; 1941 ; Journal of Biological Chemistry Volume 137 ; 137 >
+    au < down ; 1941 ; Journal of Biological Chemistry Volume 138 ; 138 >
+    au < down ; 1941 ; Journal of Biological Chemistry Volume 139 ; 139 >
+
+    au < down ; 1941 ; Journal of Biological Chemistry Volume 140 ; 140 >
+    au < down ; 1941 ; Journal of Biological Chemistry Volume 141 ; 141 >
+    au < down ; 1942 ; Journal of Biological Chemistry Volume 142 ; 142 >
+    au < down ; 1942 ; Journal of Biological Chemistry Volume 143 ; 143 >
+    au < down ; 1942 ; Journal of Biological Chemistry Volume 144 ; 144 >
+    au < down ; 1942 ; Journal of Biological Chemistry Volume 145 ; 145 >
+    au < down ; 1942 ; Journal of Biological Chemistry Volume 146 ; 146 >
+    au < down ; 1943 ; Journal of Biological Chemistry Volume 147 ; 147 >
+    au < down ; 1943 ; Journal of Biological Chemistry Volume 148 ; 148 >
+    au < down ; 1943 ; Journal of Biological Chemistry Volume 149 ; 149 >
+
+    au < down ; 1943 ; Journal of Biological Chemistry Volume 150 ; 150 >
+    au < down ; 1943 ; Journal of Biological Chemistry Volume 151 ; 151 >
+    au < down ; 1944 ; Journal of Biological Chemistry Volume 152 ; 152 >
+    au < down ; 1944 ; Journal of Biological Chemistry Volume 153 ; 153 >
+    au < down ; 1944 ; Journal of Biological Chemistry Volume 154 ; 154 >
+    au < down ; 1944 ; Journal of Biological Chemistry Volume 155 ; 155 >
+    au < down ; 1944 ; Journal of Biological Chemistry Volume 156 ; 156 >
+    au < down ; 1945 ; Journal of Biological Chemistry Volume 157 ; 157 >
+    au < down ; 1945 ; Journal of Biological Chemistry Volume 158 ; 158 >
+    au < down ; 1945 ; Journal of Biological Chemistry Volume 159 ; 159 >
+
+    au < down ; 1945 ; Journal of Biological Chemistry Volume 160 ; 160 >
+    au < down ; 1945 ; Journal of Biological Chemistry Volume 161 ; 161 >
+    au < down ; 1946 ; Journal of Biological Chemistry Volume 162 ; 162 >
+    au < down ; 1946 ; Journal of Biological Chemistry Volume 163 ; 163 >
+    au < down ; 1946 ; Journal of Biological Chemistry Volume 164 ; 164 >
+    au < down ; 1946 ; Journal of Biological Chemistry Volume 165 ; 165 >
+    au < down ; 1946 ; Journal of Biological Chemistry Volume 166 ; 166 >
+    au < down ; 1947 ; Journal of Biological Chemistry Volume 167 ; 167 >
+    au < down ; 1947 ; Journal of Biological Chemistry Volume 168 ; 168 >
+    au < down ; 1947 ; Journal of Biological Chemistry Volume 169 ; 169 >
+
+    au < down ; 1947 ; Journal of Biological Chemistry Volume 170 ; 170 >
+    au < down ; 1947 ; Journal of Biological Chemistry Volume 171 ; 171 >
+    au < down ; 1948 ; Journal of Biological Chemistry Volume 172 ; 172 >
+    au < down ; 1948 ; Journal of Biological Chemistry Volume 173 ; 173 >
+    au < down ; 1948 ; Journal of Biological Chemistry Volume 174 ; 174 >
+    au < down ; 1948 ; Journal of Biological Chemistry Volume 175 ; 175 >
+    au < down ; 1948 ; Journal of Biological Chemistry Volume 176 ; 176 >
+    au < down ; 1949 ; Journal of Biological Chemistry Volume 177 ; 177 >
+    au < down ; 1949 ; Journal of Biological Chemistry Volume 178 ; 178 >
+    au < down ; 1949 ; Journal of Biological Chemistry Volume 179 ; 179 >
+
+    au < down ; 1949 ; Journal of Biological Chemistry Volume 180 ; 180 >
+    au < down ; 1949 ; Journal of Biological Chemistry Volume 181 ; 181 >
+    au < down ; 1950 ; Journal of Biological Chemistry Volume 182 ; 182 >
+    au < down ; 1950 ; Journal of Biological Chemistry Volume 183 ; 183 >
+    au < down ; 1950 ; Journal of Biological Chemistry Volume 184 ; 184 >
+    au < down ; 1950 ; Journal of Biological Chemistry Volume 185 ; 185 >
+    au < down ; 1950 ; Journal of Biological Chemistry Volume 186 ; 186 >
+    au < down ; 1950 ; Journal of Biological Chemistry Volume 187 ; 187 >
+    au < down ; 1951 ; Journal of Biological Chemistry Volume 188 ; 188 >
+    au < down ; 1951 ; Journal of Biological Chemistry Volume 189 ; 189 >
+
+    au < down ; 1951 ; Journal of Biological Chemistry Volume 190 ; 190 >
+    au < down ; 1951 ; Journal of Biological Chemistry Volume 191 ; 191 >
+    au < down ; 1951 ; Journal of Biological Chemistry Volume 192 ; 192 >
+    au < down ; 1951 ; Journal of Biological Chemistry Volume 193 ; 193 >
+    au < down ; 1952 ; Journal of Biological Chemistry Volume 194 ; 194 >
+    au < down ; 1952 ; Journal of Biological Chemistry Volume 195 ; 195 >
+    au < down ; 1952 ; Journal of Biological Chemistry Volume 196 ; 196 >
+    au < down ; 1952 ; Journal of Biological Chemistry Volume 197 ; 197 >
+    au < down ; 1952 ; Journal of Biological Chemistry Volume 198 ; 198 >
+    au < down ; 1952 ; Journal of Biological Chemistry Volume 199 ; 199 >
+
+    au < down ; 1953 ; Journal of Biological Chemistry Volume 200 ; 200 >
+    au < down ; 1953 ; Journal of Biological Chemistry Volume 201 ; 201 >
+    au < down ; 1953 ; Journal of Biological Chemistry Volume 202 ; 202 >
+    au < down ; 1953 ; Journal of Biological Chemistry Volume 203 ; 203 >
+    au < down ; 1953 ; Journal of Biological Chemistry Volume 204 ; 204 >
+    au < down ; 1953 ; Journal of Biological Chemistry Volume 205 ; 205 >
+    au < down ; 1954 ; Journal of Biological Chemistry Volume 206 ; 206 >
+    au < down ; 1954 ; Journal of Biological Chemistry Volume 207 ; 207 >
+    au < down ; 1954 ; Journal of Biological Chemistry Volume 208 ; 208 >
+    au < down ; 1954 ; Journal of Biological Chemistry Volume 209 ; 209 >
+
+    au < down ; 1954 ; Journal of Biological Chemistry Volume 210 ; 210 >
+    au < down ; 1954 ; Journal of Biological Chemistry Volume 211 ; 211 >
+    au < down ; 1955 ; Journal of Biological Chemistry Volume 212 ; 212 >
+    au < down ; 1955 ; Journal of Biological Chemistry Volume 213 ; 213 >
+    au < down ; 1955 ; Journal of Biological Chemistry Volume 214 ; 214 >
+    au < down ; 1955 ; Journal of Biological Chemistry Volume 215 ; 215 >
+    au < down ; 1955 ; Journal of Biological Chemistry Volume 216 ; 216 >
+    au < down ; 1955 ; Journal of Biological Chemistry Volume 217 ; 217 >
+    au < down ; 1956 ; Journal of Biological Chemistry Volume 218 ; 218 >
+    au < down ; 1956 ; Journal of Biological Chemistry Volume 219 ; 219 >
+
+    au < down ; 1956 ; Journal of Biological Chemistry Volume 220 ; 220 >
+    au < down ; 1956 ; Journal of Biological Chemistry Volume 221 ; 221 >
+    au < down ; 1956 ; Journal of Biological Chemistry Volume 222 ; 222 >
+    au < down ; 1956 ; Journal of Biological Chemistry Volume 223 ; 223 >
+    au < down ; 1957 ; Journal of Biological Chemistry Volume 224 ; 224 >
+    au < down ; 1957 ; Journal of Biological Chemistry Volume 225 ; 225 >
+    au < down ; 1957 ; Journal of Biological Chemistry Volume 226 ; 226 >
+    au < down ; 1957 ; Journal of Biological Chemistry Volume 227 ; 227 >
+    au < down ; 1957 ; Journal of Biological Chemistry Volume 228 ; 228 >
+    au < down ; 1957 ; Journal of Biological Chemistry Volume 229 ; 229 >
+
+    au < down ; 1958 ; Journal of Biological Chemistry Volume 230 ; 230 >
+    au < down ; 1958 ; Journal of Biological Chemistry Volume 231 ; 231 >
+    au < down ; 1958 ; Journal of Biological Chemistry Volume 232 ; 232 >
+    au < down ; 1958 ; Journal of Biological Chemistry Volume 233 ; 233 >
+    au < down ; 1959 ; Journal of Biological Chemistry Volume 234 ; 234 >
+    au < down ; 1960 ; Journal of Biological Chemistry Volume 235 ; 235 >
+    au < down ; 1961 ; Journal of Biological Chemistry Volume 236 ; 236 >
+    au < down ; 1962 ; Journal of Biological Chemistry Volume 237 ; 237 >
+    au < down ; 1963 ; Journal of Biological Chemistry Volume 238 ; 238 >
+    au < down ; 1964 ; Journal of Biological Chemistry Volume 239 ; 239 >
+
+    au < down ; 1965 ; Journal of Biological Chemistry Volume 240 ; 240 >
+    au < down ; 1966 ; Journal of Biological Chemistry Volume 241 ; 241 >
+    au < down ; 1967 ; Journal of Biological Chemistry Volume 242 ; 242 >
+    au < down ; 1968 ; Journal of Biological Chemistry Volume 243 ; 243 >
+    au < down ; 1969 ; Journal of Biological Chemistry Volume 244 ; 244 >
+    au < down ; 1970 ; Journal of Biological Chemistry Volume 245 ; 245 >
+    au < down ; 1971 ; Journal of Biological Chemistry Volume 246 ; 246 >
+    au < down ; 1972 ; Journal of Biological Chemistry Volume 247 ; 247 >
+    au < down ; 1973 ; Journal of Biological Chemistry Volume 248 ; 248 >
+    au < down ; 1974 ; Journal of Biological Chemistry Volume 249 ; 249 >
+    au < down ; 1975 ; Journal of Biological Chemistry Volume 250 ; 250 >
+    au < down ; 1976 ; Journal of Biological Chemistry Volume 251 ; 251 >
+    au < down ; 1977 ; Journal of Biological Chemistry Volume 252 ; 252 >
+    au < down ; 1978 ; Journal of Biological Chemistry Volume 253 ; 253 >
+    au < down ; 1979 ; Journal of Biological Chemistry Volume 254 ; 254 >
+    au < down ; 1980 ; Journal of Biological Chemistry Volume 255 ; 255 >
+    au < down ; 1981 ; Journal of Biological Chemistry Volume 256 ; 256 >
+    au < down ; 1982 ; Journal of Biological Chemistry Volume 257 ; 257 >
+    au < down ; 1983 ; Journal of Biological Chemistry Volume 258 ; 258 >
+    au < down ; 1984 ; Journal of Biological Chemistry Volume 259 ; 259 >
+    au < down ; 1985 ; Journal of Biological Chemistry Volume 260 ; 260 >
+    au < down ; 1986 ; Journal of Biological Chemistry Volume 261 ; 261 >
+    au < down ; 1987 ; Journal of Biological Chemistry Volume 262 ; 262 >
+    au < down ; 1988 ; Journal of Biological Chemistry Volume 263 ; 263 >
+    au < down ; 1989 ; Journal of Biological Chemistry Volume 264 ; 264 >
+    au < down ; 1990 ; Journal of Biological Chemistry Volume 265 ; 265 >
+    au < down ; 1991 ; Journal of Biological Chemistry Volume 266 ; 266 >
+    au < down ; 1992 ; Journal of Biological Chemistry Volume 267 ; 267 >
+    au < down ; 1993 ; Journal of Biological Chemistry Volume 268 ; 268 >
+    au < down ; 1994 ; Journal of Biological Chemistry Volume 269 ; 269 >
+    au < down ; 1995 ; Journal of Biological Chemistry Volume 270 ; 270 >
+    au < down ; 1996 ; Journal of Biological Chemistry Volume 271 ; 271 >
+    au < down ; 1997 ; Journal of Biological Chemistry Volume 272 ; 272 >
+    au < down ; 1998 ; Journal of Biological Chemistry Volume 273 ; 273 >
+    au < down ; 1999 ; Journal of Biological Chemistry Volume 274 ; 274 >
+    au < down ; 2000 ; Journal of Biological Chemistry Volume 275 ; 275 >
+    au < down ; 2001 ; Journal of Biological Chemistry Volume 276 ; 276 >
+    au < down ; 2002 ; Journal of Biological Chemistry Volume 277 ; 277 >
+    au < down ; 2003 ; Journal of Biological Chemistry Volume 278 ; 278 >
+    au < down ; 2004 ; Journal of Biological Chemistry Volume 279 ; 279 >
+    au < down ; 2005 ; Journal of Biological Chemistry Volume 280 ; 280 >
+    au < down ; 2006 ; Journal of Biological Chemistry Volume 281 ; 281 >
+    au < down ; 2007 ; Journal of Biological Chemistry Volume 282 ; 282 >
+
+  }
+
+  {
+  
+    title <
+      name = The Journal of Lipid Research ;
+      issn = 0022-2275 ;
+      eissn = 1539-7262 ;
+      issnl = 0022-2275
+    >
+
+    #This TDB file includes early volumes for optional use by the GLN - 1990+ in prod version of file
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.jlr.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < down ; 1959-1960 ; The Journal of Lipid Research Volume 1 ; 1 >
+    au < down ; 1961 ; The Journal of Lipid Research Volume 2 ; 2 >
+    au < down ; 1962 ; The Journal of Lipid Research Volume 3 ; 3 >
+    au < down ; 1963 ; The Journal of Lipid Research Volume 4 ; 4 >
+    au < down ; 1964 ; The Journal of Lipid Research Volume 5 ; 5 >
+    au < down ; 1965 ; The Journal of Lipid Research Volume 6 ; 6 >
+    au < down ; 1966 ; The Journal of Lipid Research Volume 7 ; 7 >
+    au < down ; 1967 ; The Journal of Lipid Research Volume 8 ; 8 >
+    au < down ; 1968 ; The Journal of Lipid Research Volume 9 ; 9 >
+    au < down ; 1969 ; The Journal of Lipid Research Volume 10 ; 10 >
+    au < down ; 1970 ; The Journal of Lipid Research Volume 11 ; 11 >
+    au < down ; 1971 ; The Journal of Lipid Research Volume 12 ; 12 >
+    au < down ; 1972 ; The Journal of Lipid Research Volume 13 ; 13 >
+    au < down ; 1973 ; The Journal of Lipid Research Volume 14 ; 14 >
+    au < down ; 1974 ; The Journal of Lipid Research Volume 15 ; 15 >
+    au < down ; 1975 ; The Journal of Lipid Research Volume 16 ; 16 >
+    au < down ; 1976 ; The Journal of Lipid Research Volume 17 ; 17 >
+    au < down ; 1977 ; The Journal of Lipid Research Volume 18 ; 18 >
+    au < down ; 1978 ; The Journal of Lipid Research Volume 19 ; 19 >
+    au < down ; 1979 ; The Journal of Lipid Research Volume 20 ; 20 >
+    au < down ; 1980 ; The Journal of Lipid Research Volume 21 ; 21 >
+    au < down ; 1981 ; The Journal of Lipid Research Volume 22 ; 22 >
+    au < down ; 1982 ; The Journal of Lipid Research Volume 23 ; 23 >
+    au < down ; 1983 ; The Journal of Lipid Research Volume 24 ; 24 >
+    au < down ; 1984 ; The Journal of Lipid Research Volume 25 ; 25 >
+    au < down ; 1985 ; The Journal of Lipid Research Volume 26 ; 26 >
+    au < down ; 1986 ; The Journal of Lipid Research Volume 27 ; 27 >
+    au < down ; 1987 ; The Journal of Lipid Research Volume 28 ; 28 >
+    au < down ; 1988 ; The Journal of Lipid Research Volume 29 ; 29 >
+    au < down ; 1989 ; The Journal of Lipid Research Volume 30 ; 30 >
+ 
+  }
+
+}

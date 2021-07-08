@@ -6,6 +6,7 @@
     info[tester] = 5 ;
     info[poller] = 6
   >
+  provider = bepress
 
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
@@ -52,6 +53,7 @@
       au < finished ; crawling ; 2017 ; Fordham Environmental Law Review Volume 29 ; 29 ; reingest1.clockss.org:8082 >
       au < crawling ; down ; 2018-2019 ; Fordham Environmental Law Review Volume 30 ; 30 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2020 ; Fordham Environmental Law Review Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2021 ; Fordham Environmental Law Review Volume 32 ; 32 ; >
 
   }
 
@@ -97,6 +99,7 @@
       au < finished ; finished ; 2018 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 29 ; 29 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 30 ; 30 ; >
       au < crawling ; exists ; 2020 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 31 ; 31 ; >
+      au < expected ; exists ; 2021 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 32 ; 32 ; >
 
   }
 
@@ -155,6 +158,7 @@
       au < finished ; finished ; 2018 ; Fordham International Law Journal Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; Fordham International Law Journal Volume 43 ; 43 ; >
       au < crawling ; exists ; 2020 ; Fordham International Law Journal Volume 44 ; 44 ; >
+      au < expected ; exists ; 2021 ; Fordham International Law Journal Volume 45 ; 45 ; >
 
   }
 
@@ -194,6 +198,7 @@
       au < finished ; finished ; 2018 ; Fordham Journal of Corporate & Finance Law Volume 23 ; 23 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Fordham Journal of Corporate & Finance Law Volume 24 ; 24 ; >
       au < crawling ; exists ; 2020 ; Fordham Journal of Corporate & Finance Law Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2021 ; Fordham Journal of Corporate & Finance Law Volume 26 ; 26 ; >
 
   }
 
@@ -296,6 +301,7 @@
       au < finished ; finished ; 2017-2018 ; Fordham Law Review Volume 86 ; 86 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018-2019 ; Fordham Law Review Volume 87 ; 87 ; >
       au < crawling ; exists ; 2019-2020 ; Fordham Law Review Volume 88 ; 88 ; >
+      au < manifest ; exists ; 2020-2021 ; Fordham Law Review Volume 89 ; 89 ; >
 
   }
 
@@ -357,6 +363,7 @@
       au < deepCrawl ; exists ; 2017-2019 ; Fordham Urban Law Journal Volume 45 ; 45 ; >
       au < deepCrawl ; exists ; 2019 ; Fordham Urban Law Journal Volume 46 ; 46 ; >
       au < crawling ; exists ; 2019-2020 ; Fordham Urban Law Journal Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2020-2021 ; Fordham Urban Law Journal Volume 48 ; 48 ; >
 
   }
 

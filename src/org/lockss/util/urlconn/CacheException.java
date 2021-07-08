@@ -113,11 +113,13 @@ public class CacheException
   }
 
   public long getRetryDelay() {
-    return -1;
+    return CurrentConfig.getLongParam(BaseCrawler.PARAM_DEFAULT_RETRY_DELAY,
+                                      BaseCrawler.DEFAULT_DEFAULT_RETRY_DELAY);
   }
 
   public int getRetryCount() {
-    return -1;
+    return CurrentConfig.getIntParam(BaseCrawler.PARAM_DEFAULT_RETRY_COUNT,
+                                     BaseCrawler.DEFAULT_DEFAULT_RETRY_COUNT);
   }
 
   /** If stack trace is suppressed, substitute the stack trace of the

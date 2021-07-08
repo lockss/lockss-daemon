@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -72,5 +72,5 @@
         <string>org.lockss.plugin.clockss.mersenne.MersenneXmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>    
+  </entry>
 </map>    

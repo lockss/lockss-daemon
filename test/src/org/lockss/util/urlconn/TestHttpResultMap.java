@@ -225,7 +225,7 @@ public class TestHttpResultMap extends LockssTestCase {
     String   checkClassName;
 
     // test the RetrySameUrlException
-    checkArray = resultMap.SameUrlCodes;
+    checkArray = resultMap.RetrySameUrlCodes;
     checkExceptionClass(checkArray,
 			CacheException.RetrySameUrlException.class);
 

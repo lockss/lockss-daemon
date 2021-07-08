@@ -16,14 +16,14 @@
     
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
     # since 1.68, this title has its own crawl pool
+
     attr[highwire_crawl_pool] = PNAS
 
     {
     param[base_url] = http://www.pnas.org/
-
     # doNotProcess: most of this title is preserved in its own PLN (prod-nas)
+
   
     au < HighWirePressH20Plugin ; doNotProcess ; 1915 ; Proceedings of the National Academy of Sciences Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; doNotProcess ; 1916 ; Proceedings of the National Academy of Sciences Volume 2 ; 2 >
@@ -148,6 +148,7 @@
     au < HWDrupalPlugin ; manifest ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 >
     au < HWDrupalPlugin ; manifest ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 >
     au < HWDrupalPlugin ; manifest ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 >
+    au < HWDrupalPlugin ; manifest ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 >
 
     }
 

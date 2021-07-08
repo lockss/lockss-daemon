@@ -50,6 +50,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Abstract and Applied Analysis Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Abstract and Applied Analysis Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Abstract and Applied Analysis Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Abstract and Applied Analysis Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -110,6 +111,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Active and Passive Electronic Components Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Active and Passive Electronic Components Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Active and Passive Electronic Components Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Active and Passive Electronic Components Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -136,6 +138,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Acoustics and Vibration Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Acoustics and Vibration Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Acoustics and Vibration Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Acoustics and Vibration Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -172,6 +175,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Agriculture Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Agriculture Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Agriculture Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Agriculture Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -263,7 +267,7 @@
     au < manifest ; exists ; 2010 ; Advances in Artificial Neural Systems Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Artificial Neural Systems Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Artificial Neural Systems Volume 2016 ; 2016 ; 2016 ; >
@@ -294,6 +298,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Astronomy Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Astronomy Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Astronomy Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Astronomy Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -320,6 +325,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Bioinformatics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Bioinformatics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Bioinformatics Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Advances in Bioinformatics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -389,6 +395,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Chemistry Volume 2018 ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; Advances in Chemistry Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Advances in Chemistry Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Advances in Chemistry Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -415,6 +422,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Civil Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Civil Engineering Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Civil Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Civil Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -458,6 +466,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Condensed Matter Physics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Condensed Matter Physics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Condensed Matter Physics Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Condensed Matter Physics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -505,7 +514,7 @@
     au < manifest ; exists ; 2010 ; Advances in Decision Sciences Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Decision Sciences Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Decision Sciences Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Decision Sciences Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Decision Sciences Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Decision Sciences Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Decision Sciences Volume 2016 ; 2016 ; 2016 ; >
@@ -663,7 +672,7 @@
     au < manifest ; exists ; 2010 ; Advances in Fuzzy Systems Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Fuzzy Systems Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Fuzzy Systems Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Fuzzy Systems Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Fuzzy Systems Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Fuzzy Systems Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Fuzzy Systems Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Fuzzy Systems Volume 2016 ; 2016 ; 2016 ; >
@@ -671,6 +680,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Fuzzy Systems Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Fuzzy Systems Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Fuzzy Systems Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Fuzzy Systems Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -720,7 +730,7 @@
     au < manifest ; exists ; 2010 ; Advances in Hematology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Hematology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Hematology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Hematology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Hematology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Hematology Volume 2016 ; 2016 ; 2016 ; >
@@ -728,6 +738,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Hematology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Hematology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Hematology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Hematology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -763,14 +774,15 @@
     au < manifest ; exists ; 2010 ; Advances in High Energy Physics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in High Energy Physics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in High Energy Physics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in High Energy Physics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in High Energy Physics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in High Energy Physics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in High Energy Physics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in High Energy Physics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in High Energy Physics Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Advances in High Energy Physics Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Advances in High Energy Physics Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in High Energy Physics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -789,7 +801,7 @@
     au < manifest ; exists ; 2010 ; Advances in Human-Computer Interaction Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Human-Computer Interaction Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Human-Computer Interaction Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Human-Computer Interaction Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Human-Computer Interaction Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Human-Computer Interaction Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Human-Computer Interaction Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Human-Computer Interaction Volume 2016 ; 2016 ; 2016 ; >
@@ -797,6 +809,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Human-Computer Interaction Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Human-Computer Interaction Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Human-Computer Interaction Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Human-Computer Interaction Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -816,7 +829,7 @@
     au < manifest ; exists ; 2010 ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Materials Science and Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Materials Science and Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Advances in Materials Science and Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Materials Science and Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Materials Science and Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Materials Science and Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -824,6 +837,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Materials Science and Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Materials Science and Engineering Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Materials Science and Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Materials Science and Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -841,7 +855,7 @@
     au < manifest ; exists ; 2010 ; Advances in Mathematical Physics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Mathematical Physics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Mathematical Physics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Mathematical Physics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Mathematical Physics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Mathematical Physics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Mathematical Physics Volume 2016 ; 2016 ; 2016 ; >
@@ -849,6 +863,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Mathematical Physics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Mathematical Physics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Mathematical Physics Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Mathematical Physics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -887,7 +902,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Advances in Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Advances in Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -905,7 +921,7 @@
     au < manifest ; exists ; 2010 ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Meteorology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Meteorology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Meteorology Volume 2016 ; 2016 ; 2016 ; >
@@ -913,6 +929,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Meteorology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Meteorology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Meteorology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Meteorology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -948,14 +965,15 @@
     au < manifest ; exists ; 2010 ; Advances in Multimedia Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Multimedia Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Multimedia Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Multimedia Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Multimedia Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Multimedia Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Multimedia Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Multimedia Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Multimedia Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Multimedia Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Multimedia Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Advances in Multimedia Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Advances in Multimedia Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Multimedia Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1006,7 +1024,7 @@
     au < manifest ; exists ; 2010 ; Advances in Numerical Analysis Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Numerical Analysis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Numerical Analysis Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Numerical Analysis Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Numerical Analysis Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Numerical Analysis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Numerical Analysis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Numerical Analysis Volume 2016 ; 2016 ; 2016 ; >
@@ -1060,7 +1078,7 @@
     au < manifest ; exists ; 2010 ; Advances in Operations Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Operations Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Operations Research Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Operations Research Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Operations Research Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Operations Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Operations Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Operations Research Volume 2016 ; 2016 ; 2016 ; >
@@ -1068,6 +1086,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Operations Research Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Operations Research Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Operations Research Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Operations Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1087,7 +1106,7 @@
     au < manifest ; exists ; 2010 ; Advances in Optical Technologies Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Optical Technologies Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Optical Technologies Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Optical Technologies Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Optical Technologies Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Optical Technologies Volume 2016 ; 2016 ; 2016 ; >
@@ -1127,7 +1146,7 @@
     au < manifest ; exists ; 2010 ; Advances in OptoElectronics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in OptoElectronics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in OptoElectronics Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in OptoElectronics Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Advances in OptoElectronics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in OptoElectronics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in OptoElectronics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in OptoElectronics Volume 2016 ; 2016 ; 2016 ; >
@@ -1135,6 +1154,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in OptoElectronics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Advances in OptoElectronics Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Advances in OptoElectronics Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Advances in OptoElectronics Volume 2021 ; 2021 ; 2021 ; >
 
   }
  
@@ -1176,6 +1196,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Orthopedics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Orthopedics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Orthopedics Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Orthopedics Volume 2021 ; 2021 ; 2021 ; >
 
   }
  
@@ -1227,7 +1248,7 @@
     au < manifest ; exists ; 2010 ; Advances in Pharmacological Sciences Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Pharmacological Sciences Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Pharmacological Sciences Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Pharmacological Sciences Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Pharmacological Sciences Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Pharmacological Sciences Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Pharmacological Sciences Volume 2016 ; 2016 ; 2016 ; >
@@ -1235,6 +1256,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Pharmacological Sciences Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Pharmacological Sciences Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Pharmacological Sciences Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Pharmacological Sciences Volume 2021 ; 2021 ; 2021 ; >
 
   }
  
@@ -1254,7 +1276,7 @@
     au < manifest ; exists ; 2010 ; Advances in Physical Chemistry Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Physical Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Physical Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Physical Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Physical Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Physical Chemistry Volume 2016 ; 2016 ; 2016 ; >
@@ -1262,6 +1284,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Physical Chemistry Volume 2018 ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; Advances in Physical Chemistry Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Advances in Physical Chemistry Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Advances in Physical Chemistry Volume 2021 ; 2021 ; 2021 ; >
 
   }
  
@@ -1286,9 +1309,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Power Electronics Volume 2015 (2015) ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Power Electronics Volume 2016 (2016) ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in Power Electronics Volume 2017 (2017) ; 2017 ; 2017 ; >
-    au < manifest ; exists ; 2018 ; Advances in Power Electronics Volume 2018 (2018) ; 2018 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Advances in Power Electronics Volume 2018 (2018) ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; Advances in Power Electronics Volume 2019 (2019) ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Advances in Power Electronics Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Advances in Power Electronics Volume 2021 ; 2021 ; 2021 ; >
 
   }
  
@@ -1304,7 +1328,7 @@
 
     au < manifest ; exists ; 2011 ; Advances in Preventive Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Preventive Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Preventive Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Preventive Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Preventive Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Preventive Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Preventive Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -1312,6 +1336,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Preventive Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Preventive Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Preventive Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Preventive Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
  
@@ -1348,6 +1373,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Public Health Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Public Health Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Public Health Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Public Health Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1452,7 +1478,7 @@
     au < manifest ; exists ; 2010 ; Advances in Tribology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Tribology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Tribology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Tribology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Tribology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Tribology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Tribology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Tribology Volume 2016 ; 2016 ; 2016 ; >
@@ -1460,6 +1486,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Tribology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Tribology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Tribology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Tribology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1477,7 +1504,7 @@
     au < manifest ; exists ; 2010 ; Advances in Urology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Urology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Urology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Urology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Urology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Urology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Urology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Urology Volume 2016 ; 2016 ; 2016 ; >
@@ -1485,6 +1512,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Urology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Urology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Urology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Urology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1518,7 +1546,7 @@
     au < manifest ; exists ; 2010 ; Advances in Virology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Virology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Virology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Advances in Virology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Virology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Virology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Virology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Virology Volume 2016 ; 2016 ; 2016 ; >
@@ -1526,6 +1554,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in Virology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Virology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Advances in Virology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Advances in Virology Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -1558,7 +1587,7 @@
     au < manifest ; exists ; 2010 ; AIDS Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; AIDS Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; AIDS Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; AIDS Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; AIDS Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; AIDS Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; AIDS Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; AIDS Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
@@ -1566,6 +1595,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; AIDS Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; AIDS Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; AIDS Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; AIDS Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -1581,7 +1611,7 @@
     param[journal_id] = algebra
     #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Algebra Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Algebra Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Algebra Volume 2016 ; 2016 ; 2016 ; >
@@ -1605,6 +1635,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Analytical Cellular Pathology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Analytical Cellular Pathology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Analytical Cellular Pathology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Analytical Cellular Pathology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1620,7 +1651,7 @@
 
     au < manifest ; exists ; 2011 ; Anatomy Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Anatomy Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Anatomy Research International Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Anatomy Research International Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Anatomy Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Anatomy Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Anatomy Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -1643,7 +1674,7 @@
     au < manifest ; exists ; 2010 ; Anemia Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Anemia Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Anemia Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Anemia Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Anemia Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Anemia Volume 2016 ; 2016 ; 2016 ; >
@@ -1651,6 +1682,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Anemia Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Anemia Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Anemia Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Anemia Volume 2021 ; 2021 ; 2021 ; >
 
 
   } 
@@ -1670,7 +1702,7 @@
     au < manifest ; exists ; 2010 ; Anesthesiology Research and Practice Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Anesthesiology Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Anesthesiology Research and Practice Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Anesthesiology Research and Practice Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Anesthesiology Research and Practice Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Anesthesiology Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Anesthesiology Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Anesthesiology Research and Practice Volume 2016 ; 2016 ; 2016 ; >
@@ -1678,6 +1710,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Anesthesiology Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Anesthesiology Research and Practice Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Anesthesiology Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Anesthesiology Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1695,7 +1728,7 @@
     au < manifest ; exists ; 2010 ; Applied and Environmental Soil Science Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Applied and Environmental Soil Science Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Applied and Environmental Soil Science Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Applied and Environmental Soil Science Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Applied and Environmental Soil Science Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Applied and Environmental Soil Science Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Applied and Environmental Soil Science Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Applied and Environmental Soil Science Volume 2016 ; 2016 ; 2016 ; >
@@ -1703,6 +1736,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Applied and Environmental Soil Science Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Applied and Environmental Soil Science Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Applied and Environmental Soil Science Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Applied and Environmental Soil Science Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1724,6 +1758,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Applied Bionics and Biomechanics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Applied Bionics and Biomechanics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Applied Bionics and Biomechanics Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Applied Bionics and Biomechanics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1741,7 +1776,7 @@
     au < manifest ; exists ; 2010 ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Applied Computational Intelligence and Soft Computing Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Applied Computational Intelligence and Soft Computing Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Applied Computational Intelligence and Soft Computing Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Applied Computational Intelligence and Soft Computing Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Applied Computational Intelligence and Soft Computing Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Applied Computational Intelligence and Soft Computing Volume 2016 ; 2016 ; 2016 ; >
@@ -1749,6 +1784,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Applied Computational Intelligence and Soft Computing Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Applied Computational Intelligence and Soft Computing Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Applied Computational Intelligence and Soft Computing Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Applied Computational Intelligence and Soft Computing Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1773,7 +1809,7 @@
     au < manifest ; exists ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Archaea Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Archaea Volume 2016 ; 2016 ; 2016 ; >
@@ -1781,6 +1817,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Archaea Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Archaea Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Archaea Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Archaea Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1797,7 +1834,7 @@
     au < manifest ; exists ; 2010 ; Arthritis Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Arthritis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Arthritis Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Arthritis Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Arthritis Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Arthritis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Arthritis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Arthritis Volume 2016 ; 2016 ; 2016 ; >
@@ -1843,6 +1880,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Autism Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Autism Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Autism Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Autism Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1859,7 +1897,7 @@
     au < manifest ; exists ; 2010 ; Autoimmune Diseases Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Autoimmune Diseases Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Autoimmune Diseases Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Autoimmune Diseases Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Autoimmune Diseases Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Autoimmune Diseases Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Autoimmune Diseases Volume 2016 ; 2016 ; 2016 ; >
@@ -1867,6 +1905,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Autoimmune Diseases Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Autoimmune Diseases Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Autoimmune Diseases Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Autoimmune Diseases Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1912,6 +1951,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Behavioural Neurology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Behavioural Neurology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Behavioural Neurology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Behavioural Neurology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1938,6 +1978,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Biochemistry Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Biochemistry Research International Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Biochemistry Research International Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Biochemistry Research International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -1961,7 +2002,7 @@
     au < manifest ; exists ; 2010 ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Bioinorganic Chemistry and Applications Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Bioinorganic Chemistry and Applications Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Bioinorganic Chemistry and Applications Volume 2016 ; 2016 ; 2016 ; >
@@ -1969,6 +2010,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Bioinorganic Chemistry and Applications Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Bioinorganic Chemistry and Applications Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Bioinorganic Chemistry and Applications Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Bioinorganic Chemistry and Applications Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -2002,6 +2044,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; BioMed Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; BioMed Research International Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; BioMed Research International Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; BioMed Research International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2018,12 +2061,12 @@
 
     au < manifest ; exists ; 2011 ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Biotechnology Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Biotechnology Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Biotechnology Research International Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biotechnology Research International Volume 2017 ; 2017 ; 2017 ; >
-    au < manifest ; exists ; 2018 ; Biotechnology Research International Volume 2018 ; 2018 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Biotechnology Research International Volume 2018 ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; Biotechnology Research International Volume 2019 ; 2019 ; 2019 ; >
 
   }
@@ -2040,7 +2083,7 @@
 
     au < manifest ; exists ; 2011 ; Bone Marrow Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Bone Marrow Research Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Bone Marrow Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Bone Marrow Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Bone Marrow Research Volume 2016 ; 2016 ; 2016 ; >
@@ -2085,7 +2128,7 @@
 
     au < manifest ; exists ; 2011 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 22 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 23 (2012) ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 24 (2013) ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 24 (2013) ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 25 (2014) ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 26 (2015) ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 2016 (2016) ; 2016 ; 2016 ; >
@@ -2133,7 +2176,7 @@
     au < manifest ; exists ; 2010 ; Cardiology Research and Practice Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Cardiology Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cardiology Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Cardiology Research and Practice Volume 2016 ; 2016 ; 2016 ; >
@@ -2141,6 +2184,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Cardiology Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Cardiology Research and Practice Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Cardiology Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Cardiology Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2159,7 +2203,7 @@
     au < manifest ; exists ; 2010 ; Cardiovascular Psychiatry and Neurology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Cardiovascular Psychiatry and Neurology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cardiovascular Psychiatry and Neurology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Cardiovascular Psychiatry and Neurology Volume 2016 ; 2016 ; 2016 ; >
@@ -2187,6 +2231,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Anesthesiology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Anesthesiology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Anesthesiology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Anesthesiology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2202,14 +2247,15 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Cardiology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Cardiology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Cardiology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Cardiology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Cardiology Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Case Reports in Cardiology Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Case Reports in Cardiology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Cardiology Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -2225,14 +2271,15 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Critical Care Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Critical Care Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Critical Care Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Critical Care Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Critical Care Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Case Reports in Critical Care Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Case Reports in Critical Care Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Critical Care Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2256,6 +2303,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Dentistry Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Dentistry Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Dentistry Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Dentistry Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -2271,7 +2319,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Dermatological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Dermatological Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -2279,6 +2327,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Dermatological Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Dermatological Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Dermatological Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Dermatological Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2294,14 +2343,15 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Emergency Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Emergency Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Emergency Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Emergency Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Emergency Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Case Reports in Emergency Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Case Reports in Emergency Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Emergency Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2317,7 +2367,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Endocrinology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Endocrinology Volume 2016 ; 2016 ; 2016 ; >
@@ -2325,6 +2375,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Endocrinology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Endocrinology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Endocrinology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Endocrinology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2340,7 +2391,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Gastrointestinal Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Gastrointestinal Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -2348,6 +2399,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Gastrointestinal Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Gastrointestinal Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Gastrointestinal Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Gastrointestinal Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2363,7 +2415,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Genetics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Genetics Volume 2016 ; 2016 ; 2016 ; >
@@ -2371,6 +2423,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Genetics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Genetics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Genetics Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Genetics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2386,7 +2439,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Hematology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Hematology Volume 2016 ; 2016 ; 2016 ; >
@@ -2394,6 +2447,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Hematology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Hematology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Hematology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Hematology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2409,7 +2463,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Hepatology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Hepatology Volume 2016 ; 2016 ; 2016 ; >
@@ -2417,6 +2471,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Hepatology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Hepatology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Hepatology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Hepatology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2432,7 +2487,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Immunology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Immunology Volume 2016 ; 2016 ; 2016 ; >
@@ -2440,6 +2495,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Immunology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Immunology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Immunology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Immunology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2462,7 +2518,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Infectious Diseases Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Infectious Diseases Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Infectious Diseases Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Case Reports in Infectious Diseases Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Case Reports in Infectious Diseases Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Infectious Diseases Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2488,6 +2545,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Medicine Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -2504,14 +2562,15 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Nephrology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Nephrology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Case Reports in Nephrology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Nephrology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Nephrology Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Case Reports in Nephrology Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Case Reports in Nephrology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Nephrology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2527,7 +2586,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Neurological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Neurological Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -2549,7 +2608,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Obstetrics and Gynecology Volume 2016 ; 2016 ; 2016 ; >
@@ -2557,6 +2616,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Obstetrics and Gynecology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Obstetrics and Gynecology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Obstetrics and Gynecology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Obstetrics and Gynecology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2572,7 +2632,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Oncological Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Oncological Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -2580,6 +2640,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Oncological Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Oncological Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Oncological Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Oncological Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2603,6 +2664,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Ophthalmological Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Ophthalmological Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Ophthalmological Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Ophthalmological Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
  
@@ -2618,7 +2680,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Orthopedics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Orthopedics Volume 2016 ; 2016 ; 2016 ; >
@@ -2626,6 +2688,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Orthopedics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Orthopedics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Orthopedics Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Orthopedics Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -2641,7 +2704,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Otolaryngology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Otolaryngology Volume 2016 ; 2016 ; 2016 ; >
@@ -2649,6 +2712,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Otolaryngology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Otolaryngology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Otolaryngology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Otolaryngology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2664,7 +2728,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Pathology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Pathology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Pathology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Pathology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Pathology Volume 2016 ; 2016 ; 2016 ; >
@@ -2672,6 +2736,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Pathology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Pathology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Pathology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Pathology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2687,7 +2752,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Pediatrics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Pediatrics Volume 2016 ; 2016 ; 2016 ; >
@@ -2695,6 +2760,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Pediatrics Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Pediatrics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Pediatrics Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Pediatrics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2718,6 +2784,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Psychiatry Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Psychiatry Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Psychiatry Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Psychiatry Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2733,7 +2800,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Pulmonology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Pulmonology Volume 2016 ; 2016 ; 2016 ; >
@@ -2741,6 +2808,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Pulmonology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Pulmonology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Pulmonology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Pulmonology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2756,7 +2824,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Radiology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Radiology Volume 2016 ; 2016 ; 2016 ; >
@@ -2764,6 +2832,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Radiology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Radiology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Radiology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Radiology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2779,7 +2848,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Rheumatology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Rheumatology Volume 2016 ; 2016 ; 2016 ; >
@@ -2787,6 +2856,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Rheumatology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Rheumatology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Rheumatology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Rheumatology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2802,7 +2872,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Surgery Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Surgery Volume 2016 ; 2016 ; 2016 ; >
@@ -2810,6 +2880,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Surgery Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Surgery Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Surgery Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Surgery Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2833,6 +2904,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Transplantation Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Transplantation Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Transplantation Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Transplantation Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2848,7 +2920,7 @@
 
     au < manifest ; exists ; 2011 ; Case Reports in Urology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Urology Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Case Reports in Urology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Case Reports in Urology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Case Reports in Urology Volume 2016 ; 2016 ; 2016 ; >
@@ -2856,6 +2928,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Urology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Urology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Urology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Urology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2879,6 +2952,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Vascular Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Vascular Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Vascular Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Vascular Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2902,6 +2976,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Case Reports in Veterinary Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Case Reports in Veterinary Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Case Reports in Veterinary Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Case Reports in Veterinary Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -2919,7 +2994,7 @@
     au < manifest ; exists ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Chemotherapy Research and Practice Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Chemotherapy Research and Practice Volume 2016 ; 2016 ; 2016 ; >
@@ -2939,7 +3014,7 @@
 
     au < manifest ; exists ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Child Development Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Child Development Research Volume 2016 ; 2016 ; 2016 ; >
@@ -2947,6 +3022,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Child Development Research Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Child Development Research Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Child Development Research Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Child Development Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -2976,7 +3052,7 @@
     param[journal_id] = cje
     #stopped publishing.
 
-    au < manifest ; exists ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Chinese Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
 
@@ -2992,12 +3068,12 @@
     param[journal_id] = cjm
     #moved to archive
 
-    au < manifest ; exists ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Chinese Journal of Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Chinese Journal of Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Chinese Journal of Mathematics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Chinese Journal of Mathematics Volume 2017 ; 2017 ; 2017 ; >
-    au < manifest ; exists ; 2018 ; Chinese Journal of Mathematics Volume 2018 ; 2018 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Chinese Journal of Mathematics Volume 2018 ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; Chinese Journal of Mathematics Volume 2019 ; 2019 ; 2019 ; >
 
   }
@@ -3015,7 +3091,7 @@
     au < manifest ; exists ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cholesterol Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Cholesterol Volume 2016 ; 2016 ; 2016 ; >
@@ -3038,7 +3114,7 @@
 
     au < manifest ; exists ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Chromatography Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Chromatography Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -3061,6 +3137,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Complexity Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Complexity Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Complexity Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Complexity Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3091,7 +3168,7 @@
     au < manifest ; exists ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 ; >
     au < manifest ; exists ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Computational and Mathematical Methods in Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Computational and Mathematical Methods in Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -3099,6 +3176,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Computational and Mathematical Methods in Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Computational and Mathematical Methods in Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Computational and Mathematical Methods in Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Computational and Mathematical Methods in Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -3136,7 +3214,7 @@
     au < manifest ; exists ; 2010 ; Computational Intelligence and Neuroscience Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Computational Intelligence and Neuroscience Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Computational Intelligence and Neuroscience Volume 2016 ; 2016 ; 2016 ; >
@@ -3144,6 +3222,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Computational Intelligence and Neuroscience Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Computational Intelligence and Neuroscience Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Computational Intelligence and Neuroscience Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Computational Intelligence and Neuroscience Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3158,7 +3237,7 @@
     param[journal_id] = cpis
     #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 ; >
 
@@ -3179,6 +3258,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Contrast Media & Molecular Imaging Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Contrast Media & Molecular Imaging Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Contrast Media & Molecular Imaging Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Contrast Media & Molecular Imaging Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3203,6 +3283,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Critical Care Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Critical Care Research and Practice Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Critical Care Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Critical Care Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -3222,7 +3303,7 @@
     au < manifest ; exists ; 2010 ; Current Gerontology and Geriatrics Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Current Gerontology and Geriatrics Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Current Gerontology and Geriatrics Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Current Gerontology and Geriatrics Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Current Gerontology and Geriatrics Research Volume 2016 ; 2016 ; 2016 ; >
@@ -3230,6 +3311,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Current Gerontology and Geriatrics Research Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Current Gerontology and Geriatrics Research Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Current Gerontology and Geriatrics Research Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Current Gerontology and Geriatrics Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3243,11 +3325,11 @@
     param[journal_id] = dpis
     #Moved to archive
 
-    au < manifest ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Dataset Papers in Science Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Dataset Papers in Science Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Dataset Papers in Science Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Dataset Papers in Science Volume 2016 ; 2016 ; 2016 ; >
-    au < manifest ; exists ; 2017 ; Dataset Papers in Science Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; Dataset Papers in Science Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -3264,7 +3346,7 @@
     au < manifest ; exists ; 2010 ; Depression Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Depression Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Depression Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Depression Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Depression Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
@@ -3272,6 +3354,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Depression Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Depression Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Depression Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Depression Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3297,6 +3380,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Dermatology Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Dermatology Research and Practice Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Dermatology Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Dermatology Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -3342,7 +3426,7 @@
     au < manifest ; exists ; 2010 ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Diagnostic and Therapeutic Endoscopy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Diagnostic and Therapeutic Endoscopy Volume 2016 ; 2016 ; 2016 ; >
@@ -3378,7 +3462,7 @@
     au < manifest ; exists ; 2010 ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Discrete Dynamics in Nature and Society Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Discrete Dynamics in Nature and Society Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Discrete Dynamics in Nature and Society Volume 2016 ; 2016 ; 2016 ; >
@@ -3386,6 +3470,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Discrete Dynamics in Nature and Society Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Discrete Dynamics in Nature and Society Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Discrete Dynamics in Nature and Society Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Discrete Dynamics in Nature and Society Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3418,7 +3503,7 @@
     au < manifest ; exists ; 2010 ; Disease Markers Volume 28-29 (2010) ; 2010 ; 28-29 ; >
     au < manifest ; exists ; 2011 ; Disease Markers Volume 30-31 (2011) ; 2011 ; 30-31 ; >
     au < manifest ; exists ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 ; >
-    au < manifest ; exists ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 ; >
+    au < crawling ; exists ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Disease Markers Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Disease Markers Volume 2016 ; 2016 ; 2016 ; >
@@ -3426,6 +3511,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Disease Markers Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Disease Markers Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Disease Markers Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Disease Markers Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3474,7 +3560,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Education Research International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Education Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Education Research International Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Education Research International Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Education Research International Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Education Research International Volume 2021 ; 2021 ; 2021 ; >
 
     }
 
@@ -3500,7 +3587,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Emergency Medicine International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Emergency Medicine International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Emergency Medicine International Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Emergency Medicine International Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Emergency Medicine International Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Emergency Medicine International Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -3526,6 +3614,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Enzyme Research Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Enzyme Research Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Enzyme Research Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Enzyme Research Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -3599,6 +3688,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Evidence-based Complementary and Alternative Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Evidence-based Complementary and Alternative Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Evidence-based Complementary and Alternative Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Evidence-based Complementary and Alternative Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3642,6 +3732,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Gastroenterology Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Gastroenterology Research and Practice Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Gastroenterology Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Gastroenterology Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3665,6 +3756,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Genetics Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Genetics Research International Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Genetics Research International Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Genetics Research International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3683,6 +3775,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Geofluids Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Geofluids Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Geofluids Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Geofluids Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3839,6 +3932,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Infectious Diseases in Obstetrics and Gynecology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Infectious Diseases in Obstetrics and Gynecology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Infectious Diseases in Obstetrics and Gynecology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Infectious Diseases in Obstetrics and Gynecology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3885,6 +3979,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3911,6 +4006,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Aerospace Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Aerospace Engineering Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Aerospace Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Aerospace Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -3936,6 +4032,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Agronomy Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Agronomy Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Agronomy Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Agronomy Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -3960,6 +4057,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Alzheimer's Disease Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Alzheimer's Disease Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Alzheimer's Disease Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Alzheimer's Disease Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -4006,6 +4104,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Analytical Chemistry Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Analytical Chemistry Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Analytical Chemistry Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Analytical Chemistry Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4033,6 +4132,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Antennas and Propagation Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Antennas and Propagation Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Antennas and Propagation Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Antennas and Propagation Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4135,6 +4235,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Biomaterials Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Biomaterials Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Biomaterials Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Biomaterials Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4162,7 +4263,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Biomedical Imaging Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Biomedical Imaging Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Biomedical Imaging Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Biomedical Imaging Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; International Journal of Biomedical Imaging Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Biomedical Imaging Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4202,6 +4304,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Breast Cancer Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Breast Cancer Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Breast Cancer Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Breast Cancer Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4249,6 +4352,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Cell Biology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Cell Biology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Cell Biology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Cell Biology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4275,6 +4379,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Chemical Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Chemical Engineering Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Chemical Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Chemical Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4312,6 +4417,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Chronic Diseases Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Chronic Diseases Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Chronic Diseases Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Chronic Diseases Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4377,6 +4483,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Computer Games Technology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Computer Games Technology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Computer Games Technology Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Computer Games Technology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4401,6 +4508,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Corrosion Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Corrosion Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Corrosion Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Corrosion Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4426,6 +4534,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Dentistry Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Dentistry Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Dentistry Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Dentistry Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4454,6 +4563,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Differential Equations Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Differential Equations Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Differential Equations Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Differential Equations Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4480,6 +4590,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Digital Multimedia Broadcasting Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Digital Multimedia Broadcasting Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Digital Multimedia Broadcasting Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Digital Multimedia Broadcasting Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4534,6 +4645,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Ecology Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Ecology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Ecology Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Ecology Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -4558,6 +4670,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Electrochemistry Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Electrochemistry Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Electrochemistry Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Electrochemistry Volume 2021 ; 2021 ; 2021 ; >
 
 
   }
@@ -4599,6 +4712,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Endocrinology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Endocrinology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Endocrinology Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Endocrinology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4620,6 +4734,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Engineering Mathematics Volume 2018 ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; International Journal of Engineering Mathematics Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; International Journal of Engineering Mathematics Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; International Journal of Engineering Mathematics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4686,6 +4801,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Food Science Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Food Science Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Food Science Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Food Science Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4711,6 +4827,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Forestry Research Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Forestry Research Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Forestry Research Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Forestry Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4745,6 +4862,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Genomics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Genomics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Genomics Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Genomics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4770,6 +4888,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Geophysics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Geophysics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Geophysics Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Geophysics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4793,6 +4912,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Hepatology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Hepatology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Hepatology Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Hepatology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4817,6 +4937,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Hypertension Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Hypertension Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Hypertension Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Hypertension Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4841,6 +4962,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Inflammation Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Inflammation Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Inflammation Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Inflammation Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4940,6 +5062,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Mathematics and Mathematical Sciences Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Mathematics and Mathematical Sciences Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Mathematics and Mathematical Sciences Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Mathematics and Mathematical Sciences Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -4979,6 +5102,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Medicinal Chemistry Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Medicinal Chemistry Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; International Journal of Medicinal Chemistry Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; International Journal of Medicinal Chemistry Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5022,6 +5146,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Microbiology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Microbiology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Microbiology Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Microbiology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5111,6 +5236,7 @@
     au < manifest ; exists ; 2018 ; International Journal of Navigation and Observation Volume 2018 ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; International Journal of Navigation and Observation Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; International Journal of Navigation and Observation Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; International Journal of Navigation and Observation Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5135,6 +5261,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Nephrology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Nephrology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Nephrology Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Nephrology Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -5201,6 +5328,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Optics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Optics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Optics Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Optics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5226,6 +5354,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Otolaryngology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Otolaryngology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Otolaryngology Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Otolaryngology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5284,6 +5413,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Pediatrics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Pediatrics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Pediatrics Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Pediatrics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5358,6 +5488,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Photoenergy Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Photoenergy Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Photoenergy Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Photoenergy Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5408,6 +5539,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Polymer Science Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Polymer Science Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Polymer Science Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Polymer Science Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5477,6 +5609,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Reconfigurable Computing Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Reconfigurable Computing Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Reconfigurable Computing Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Reconfigurable Computing Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5498,6 +5631,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Reproductive Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Reproductive Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Reproductive Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Reproductive Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5522,7 +5656,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Rheumatology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Rheumatology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Rheumatology Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Rheumatology Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; International Journal of Rheumatology Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Rheumatology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5562,6 +5697,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Rotating Machinery Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Rotating Machinery Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Rotating Machinery Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Rotating Machinery Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5691,6 +5827,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Surgical Oncology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Surgical Oncology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Surgical Oncology Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Surgical Oncology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5717,6 +5854,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Telemedicine and Applications Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Telemedicine and Applications Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Telemedicine and Applications Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Journal of Telemedicine and Applications Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5758,6 +5896,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Vascular Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Vascular Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Vascular Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Vascular Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -5807,6 +5946,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Zoology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Journal of Zoology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Journal of Zoology Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Zoology Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -5832,6 +5972,7 @@
     au < manifest ; exists ; 2018 ; International Scholarly Research Notices Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; International Scholarly Research Notices Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; International Scholarly Research Notices Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; International Scholarly Research Notices Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5853,6 +5994,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Addiction Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Addiction Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Addiction Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Addiction Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5871,6 +6013,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Advanced Transportation Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Advanced Transportation Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Advanced Transportation Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Advanced Transportation Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -5910,6 +6053,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Aging Research Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Aging Research Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Aging Research Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Aging Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6009,6 +6153,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Analytical Methods in Chemistry Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Analytical Methods in Chemistry Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Analytical Methods in Chemistry Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Analytical Methods in Chemistry Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6133,6 +6278,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Mathematics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Applied Mathematics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Applied Mathematics Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Applied Mathematics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6313,6 +6459,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Botany Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Botany Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Journal of Botany Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Journal of Botany Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -6354,6 +6501,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Cancer Epidemiology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Cancer Epidemiology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Cancer Epidemiology Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Cancer Epidemiology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6467,6 +6615,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Chemistry Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Chemistry Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Chemistry Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Chemistry Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6527,6 +6676,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Combustion Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Combustion Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Combustion Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Combustion Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -6549,6 +6699,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Complex Analysis Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Complex Analysis Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Journal of Complex Analysis Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Journal of Complex Analysis Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6680,6 +6831,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Computer Networks and Communications Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Computer Networks and Communications Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Computer Networks and Communications Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Computer Networks and Communications Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6725,7 +6877,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Control Science and Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Control Science and Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Control Science and Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Journal of Control Science and Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Journal of Control Science and Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Journal of Control Science and Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6826,6 +6979,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Diabetes Research Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Diabetes Research Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Diabetes Research Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Diabetes Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6884,6 +7038,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Drug Delivery Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Drug Delivery Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Drug Delivery Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Journal of Drug Delivery Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6948,6 +7103,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Electrical and Computer Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Electrical and Computer Engineering Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Electrical and Computer Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Electrical and Computer Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6969,6 +7125,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Energy Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Energy Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Energy Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Energy Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -6990,6 +7147,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Engineering Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7014,6 +7172,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Environmental and Public Health Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Environmental and Public Health Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Environmental and Public Health Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Environmental and Public Health Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7083,6 +7242,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Food Quality Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Food Quality Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Food Quality Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Food Quality Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7130,6 +7290,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Function Spaces Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Function Spaces Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Function Spaces Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Function Spaces Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7233,7 +7394,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Healthcare Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Healthcare Engineering Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Healthcare Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Journal of Healthcare Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Journal of Healthcare Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Healthcare Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7314,6 +7476,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Immunology Research Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Immunology Research Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Immunology Research Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Immunology Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7408,6 +7571,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Lipids Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Lipids Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Lipids Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Lipids Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -7432,7 +7596,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Marine Biology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Marine Biology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Marine Biology Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Journal of Marine Biology Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Journal of Marine Biology Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Journal of Marine Biology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7474,6 +7639,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Mathematics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Mathematics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Mathematics Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Mathematics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7579,6 +7745,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Nanomaterials Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Nanomaterials Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Nanomaterials Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Nanomaterials Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7644,6 +7811,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Nanotechnology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Nanotechnology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Nanotechnology Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Nanotechnology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7721,6 +7889,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Nucleic Acids Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Nucleic Acids Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Nucleic Acids Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Journal of Nucleic Acids Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -7761,6 +7930,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Nutrition and Metabolism Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Nutrition and Metabolism Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Nutrition and Metabolism Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Nutrition and Metabolism Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -7785,6 +7955,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Obesity Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Obesity Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Obesity Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Obesity Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7811,6 +7982,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Oncology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Oncology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Oncology Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Oncology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7854,6 +8026,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Ophthalmology Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Ophthalmology Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Ophthalmology Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Ophthalmology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7875,6 +8048,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Optimization Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Optimization Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Journal of Optimization Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Journal of Optimization Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7950,6 +8124,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Osteoporosis Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Osteoporosis Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Osteoporosis Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Osteoporosis Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7975,6 +8150,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Parasitology Research Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Parasitology Research Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Parasitology Research Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Parasitology Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -7998,6 +8174,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Pathogens Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Pathogens Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Pathogens Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Pathogens Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8038,6 +8215,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Pharmaceutics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Pharmaceutics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Pharmaceutics Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Journal of Pharmaceutics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8117,6 +8295,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Pregnancy Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Pregnancy Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Pregnancy Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Pregnancy Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8157,6 +8336,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Probability and Statistics Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Probability and Statistics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Probability and Statistics Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Probability and Statistics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8231,7 +8411,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Renewable Energy Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Renewable Energy Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Renewable Energy Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Journal of Renewable Energy Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2020 ; Journal of Renewable Energy Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Renewable Energy Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8271,8 +8452,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Robotics Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Robotics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Robotics Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Journal of Robotics Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Journal of Robotics Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Robotics Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Robotics Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8298,7 +8480,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Sensors Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Sensors Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Sensors Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Journal of Sensors Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2020 ; Journal of Sensors Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Sensors Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8359,8 +8542,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Skin Cancer Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Skin Cancer Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Skin Cancer Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Journal of Skin Cancer Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Journal of Skin Cancer Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Journal of Skin Cancer Volume 2019 ; 2019 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; Journal of Skin Cancer Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Skin Cancer Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8449,8 +8633,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Spectroscopy Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Spectroscopy Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Spectroscopy Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Journal of Spectroscopy Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Journal of Spectroscopy Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Journal of Spectroscopy Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Journal of Spectroscopy Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Spectroscopy Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8472,6 +8657,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Sports Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Sports Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Sports Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Sports Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8603,6 +8789,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Thyroid Research Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Thyroid Research Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Thyroid Research Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Journal of Thyroid Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -8626,8 +8813,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Toxicology Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Toxicology Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Toxicology Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Journal of Toxicology Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Journal of Toxicology Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Journal of Toxicology Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Journal of Toxicology Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Toxicology Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8670,6 +8858,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Transplantation Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Transplantation Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Transplantation Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Transplantation Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8695,6 +8884,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Tropical Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Tropical Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Journal of Tropical Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Journal of Tropical Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8733,6 +8923,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Veterinary Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Journal of Veterinary Medicine Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Journal of Veterinary Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Journal of Veterinary Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8868,8 +9059,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Malaria Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Malaria Research and Treatment Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Malaria Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Malaria Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Malaria Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Malaria Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Malaria Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8907,8 +9099,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Mathematical Problems in Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Mathematical Problems in Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Mathematical Problems in Engineering Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Mathematical Problems in Engineering Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Mathematical Problems in Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Mathematical Problems in Engineering Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Mathematical Problems in Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Mathematical Problems in Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8949,8 +9142,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Mediators of Inflammation Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Mediators of Inflammation Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Mediators of Inflammation Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Mediators of Inflammation Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Mediators of Inflammation Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Mediators of Inflammation Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Mediators of Inflammation Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Mediators of Inflammation Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8972,8 +9166,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Minimally Invasive Surgery Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Minimally Invasive Surgery Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Minimally Invasive Surgery Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Minimally Invasive Surgery Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Minimally Invasive Surgery Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2019 ; Minimally Invasive Surgery Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Minimally Invasive Surgery Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Minimally Invasive Surgery Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -8992,8 +9187,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Mobile Information Systems Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Mobile Information Systems Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Mobile Information Systems Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Mobile Information Systems Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Mobile Information Systems Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Mobile Information Systems Volume 2019 ; 2019 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; Mobile Information Systems Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Mobile Information Systems Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9019,8 +9215,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Modelling and Simulation in Engineering Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Modelling and Simulation in Engineering Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Modelling and Simulation in Engineering Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Modelling and Simulation in Engineering Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Modelling and Simulation in Engineering Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Modelling and Simulation in Engineering Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Modelling and Simulation in Engineering Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9062,8 +9259,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Multiple Sclerosis International Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Multiple Sclerosis International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Multiple Sclerosis International Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Multiple Sclerosis International Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Multiple Sclerosis International Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Multiple Sclerosis International Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Multiple Sclerosis International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9106,6 +9304,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Neural Plasticity Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Neural Plasticity Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Neural Plasticity Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Neural Plasticity Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -9128,8 +9327,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Neurology Research International Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Neurology Research International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Neurology Research International Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Neurology Research International Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Neurology Research International Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Neurology Research International Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Neurology Research International Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Neurology Research International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9151,6 +9351,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Neuroscience Journal Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Neuroscience Journal Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Neuroscience Journal Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Neuroscience Journal Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9191,7 +9392,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Nursing Research and Practice Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Nursing Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Nursing Research and Practice Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Nursing Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2020 ; Nursing Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Nursing Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9217,6 +9419,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Obstetrics and Gynecology International Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Obstetrics and Gynecology International Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Obstetrics and Gynecology International Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Obstetrics and Gynecology International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9233,8 +9436,9 @@
 
     au < doNotProcess ; doNotProcess ; 2017 ; Occupational Therapy International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Occupational Therapy International Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Occupational Therapy International Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Occupational Therapy International Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Occupational Therapy International Volume 2019 ; 2019 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; Occupational Therapy International Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Occupational Therapy International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9281,8 +9485,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Oxidative Medicine and Cellular Longevity Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Oxidative Medicine and Cellular Longevity Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Oxidative Medicine and Cellular Longevity Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Oxidative Medicine and Cellular Longevity Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Oxidative Medicine and Cellular Longevity Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Oxidative Medicine and Cellular Longevity Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Oxidative Medicine and Cellular Longevity Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9308,6 +9513,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Pain Research and Management Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Pain Research and Management Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Pain Research and Management Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Pain Research and Management Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9332,6 +9538,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Pain Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Pain Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Pain Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; Pain Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9370,7 +9577,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Parkinson's Disease Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Parkinson's Disease Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Parkinson's Disease Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Parkinson's Disease Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2020 ; Parkinson's Disease Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Parkinson's Disease Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9485,8 +9693,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; PPAR Research Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; PPAR Research Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; PPAR Research Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; PPAR Research Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; PPAR Research Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2019 ; PPAR Research Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; PPAR Research Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; PPAR Research Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9508,8 +9717,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Prostate Cancer Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Prostate Cancer Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Prostate Cancer Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Prostate Cancer Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Prostate Cancer Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2019 ; Prostate Cancer Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Prostate Cancer Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Prostate Cancer Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9663,7 +9873,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Psyche Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Psyche Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Psyche Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Psyche Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2020 ; Psyche Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Psyche Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9685,6 +9896,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Psychiatry Journal Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Psychiatry Journal Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Psychiatry Journal Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Psychiatry Journal Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9707,8 +9919,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Pulmonary Medicine Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Pulmonary Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Pulmonary Medicine Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Pulmonary Medicine Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Pulmonary Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Pulmonary Medicine Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Pulmonary Medicine Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Pulmonary Medicine Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9730,8 +9943,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Radiology Research and Practice Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Radiology Research and Practice Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Radiology Research and Practice Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Radiology Research and Practice Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Radiology Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Radiology Research and Practice Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Radiology Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Radiology Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9755,7 +9969,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Rehabilitation Research and Practice Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Rehabilitation Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Rehabilitation Research and Practice Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Rehabilitation Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Rehabilitation Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Rehabilitation Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9793,6 +10008,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Sarcoma Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Sarcoma Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Sarcoma Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Sarcoma Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9809,8 +10025,9 @@
 
     au < doNotProcess ; doNotProcess ; 2017 ; Scanning Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Scanning Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Scanning Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Scanning Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Scanning Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Scanning Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9832,8 +10049,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Schizophrenia Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Schizophrenia Research and Treatment Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Schizophrenia Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Schizophrenia Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Schizophrenia Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Schizophrenia Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Schizophrenia Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Schizophrenia Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -9859,8 +10077,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Science and Technology of Nuclear Installations Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Science and Technology of Nuclear Installations Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Science and Technology of Nuclear Installations Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Science and Technology of Nuclear Installations Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Science and Technology of Nuclear Installations Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Science and Technology of Nuclear Installations Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Science and Technology of Nuclear Installations Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Science and Technology of Nuclear Installations Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9879,8 +10098,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Scientific Programming Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Scientific Programming Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Scientific Programming Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Scientific Programming Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Scientific Programming Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Scientific Programming Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Scientific Programming Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9901,7 +10121,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Scientifica Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Scientifica Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Scientifica Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Scientifica Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2020 ; Scientifica Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Scientifica Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -9918,8 +10139,9 @@
 
     au < doNotProcess ; doNotProcess ; 2017 ; Security and Communication Networks Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Security and Communication Networks Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Security and Communication Networks Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Security and Communication Networks Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Security and Communication Networks Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Security and Communication Networks Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -9959,8 +10181,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Shock and Vibration Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Shock and Vibration Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Shock and Vibration Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Shock and Vibration Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Shock and Vibration Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Shock and Vibration Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Shock and Vibration Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Shock and Vibration Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -9982,8 +10205,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Sleep Disorders Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Sleep Disorders Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Sleep Disorders Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Sleep Disorders Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Sleep Disorders Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Sleep Disorders Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Sleep Disorders Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -10029,6 +10253,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Stem Cells International Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Stem Cells International Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Stem Cells International Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Stem Cells International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -10053,6 +10278,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Stroke Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Stroke Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Stroke Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Stroke Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
 
   }
   
@@ -10087,7 +10313,8 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Surgery Research and Practice Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Surgery Research and Practice Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Surgery Research and Practice Volume 2019 ; 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Surgery Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < frozen ; exists ; 2020 ; Surgery Research and Practice Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Surgery Research and Practice Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -10120,8 +10347,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; The Scientific World Journal Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; The Scientific World Journal Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The Scientific World Journal Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; The Scientific World Journal Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; The Scientific World Journal Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; The Scientific World Journal Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; The Scientific World Journal Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -10166,8 +10394,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Tuberculosis Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Tuberculosis Research and Treatment Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Tuberculosis Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Tuberculosis Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Tuberculosis Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Tuberculosis Research and Treatment Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Tuberculosis Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Tuberculosis Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -10230,8 +10459,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Veterinary Medicine International Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Veterinary Medicine International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Veterinary Medicine International Volume 2018 ; 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Veterinary Medicine International Volume 2019 ; 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Veterinary Medicine International Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2019 ; Veterinary Medicine International Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2020 ; Veterinary Medicine International Volume 2020 ; 2020 ; 2020 ; >
+    au < crawling ; exists ; 2021 ; Veterinary Medicine International Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -10274,6 +10504,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; VLSI Design Volume 2018 ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; VLSI Design Volume 2019 ; 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; VLSI Design Volume 2020 ; 2020 ; 2020 ; >
+    au < expected ; exists ; 2021 ; VLSI Design Volume 2021 ; 2021 ; 2021 ; >
 
   }
 
@@ -10292,6 +10523,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Wireless Communications and Mobile Computing Volume 2018 ; 2018 ; 2018 ; >
     au < crawling ; exists ; 2019 ; Wireless Communications and Mobile Computing Volume 2019 ; 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Wireless Communications and Mobile Computing Volume 2020 ; 2020 ; 2020 ; >
+    au < ready ; exists ; 2021 ; Wireless Communications and Mobile Computing Volume 2021 ; 2021 ; 2021 ; >
 
   }
 

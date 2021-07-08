@@ -1,0 +1,147 @@
+{
+  publisher <
+    name = American Journal of Tropical Medicine and Hygiene ;
+    info[platform] = HW. 1 title
+  >
+
+  {
+  
+    title <
+      name = The American Journal of Tropical Medicine and Hygiene ;
+      issn = 0002-9637 ;
+      eissn = 1476-1645 ;
+      issnl = 0002-9637
+    >
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://www.ajtmh.org/
+      implicit < status ; year ; name ; param[volume_name] >
+    
+      comment[doNotProcess] = Login pages for content available only to association members stops crawling. See RT 4356, RT 3375.
+
+      au < doNotProcess ; 1921 ; The American Journal of Tropical Medicine and Hygiene Volume s1-1 ; s1-1 >
+      au < doNotProcess ; 1922 ; The American Journal of Tropical Medicine and Hygiene Volume s1-2 ; s1-2 >
+      au < doNotProcess ; 1923 ; The American Journal of Tropical Medicine and Hygiene Volume s1-3 ; s1-3 >
+      au < doNotProcess ; 1924 ; The American Journal of Tropical Medicine and Hygiene Volume s1-4 ; s1-4 >
+      au < doNotProcess ; 1925 ; The American Journal of Tropical Medicine and Hygiene Volume s1-5 ; s1-5 >
+      au < doNotProcess ; 1926 ; The American Journal of Tropical Medicine and Hygiene Volume s1-6 ; s1-6 >
+      au < doNotProcess ; 1927 ; The American Journal of Tropical Medicine and Hygiene Volume s1-7 ; s1-7 >
+      au < doNotProcess ; 1928 ; The American Journal of Tropical Medicine and Hygiene Volume s1-8 ; s1-8 >
+      au < doNotProcess ; 1929 ; The American Journal of Tropical Medicine and Hygiene Volume s1-9 ; s1-9 >
+      au < doNotProcess ; 1930 ; The American Journal of Tropical Medicine and Hygiene Volume s1-10 ; s1-10 >
+      au < doNotProcess ; 1931 ; The American Journal of Tropical Medicine and Hygiene Volume s1-11 ; s1-11 >
+      au < doNotProcess ; 1932 ; The American Journal of Tropical Medicine and Hygiene Volume s1-12 ; s1-12 >
+      au < doNotProcess ; 1933 ; The American Journal of Tropical Medicine and Hygiene Volume s1-13 ; s1-13 >
+      au < doNotProcess ; 1934 ; The American Journal of Tropical Medicine and Hygiene Volume s1-14 ; s1-14 >
+      au < doNotProcess ; 1935 ; The American Journal of Tropical Medicine and Hygiene Volume s1-15 ; s1-15 >
+      au < doNotProcess ; 1936 ; The American Journal of Tropical Medicine and Hygiene Volume s1-16 ; s1-16 >
+      au < doNotProcess ; 1937 ; The American Journal of Tropical Medicine and Hygiene Volume s1-17 ; s1-17 >
+      au < doNotProcess ; 1938 ; The American Journal of Tropical Medicine and Hygiene Volume s1-18 ; s1-18 >
+      au < doNotProcess ; 1939 ; The American Journal of Tropical Medicine and Hygiene Volume s1-19 ; s1-19 >
+      au < doNotProcess ; 1940 ; The American Journal of Tropical Medicine and Hygiene Volume s1-20 ; s1-20 >
+      au < doNotProcess ; 1941 ; The American Journal of Tropical Medicine and Hygiene Volume s1-21 ; s1-21 >
+      au < doNotProcess ; 1942 ; The American Journal of Tropical Medicine and Hygiene Volume s1-22 ; s1-22 >
+      au < doNotProcess ; 1943 ; The American Journal of Tropical Medicine and Hygiene Volume s1-23 ; s1-23 >
+      au < doNotProcess ; 1944 ; The American Journal of Tropical Medicine and Hygiene Volume s1-24 ; s1-24 >
+      au < doNotProcess ; 1945 ; The American Journal of Tropical Medicine and Hygiene Volume s1-25 ; s1-25 >
+      au < doNotProcess ; 1946 ; The American Journal of Tropical Medicine and Hygiene Volume s1-26 ; s1-26 >
+      au < doNotProcess ; 1947 ; The American Journal of Tropical Medicine and Hygiene Volume s1-27 ; s1-27 >
+      au < doNotProcess ; 1948 ; The American Journal of Tropical Medicine and Hygiene Volume s1-28 ; s1-28 >
+      au < doNotProcess ; 1949 ; The American Journal of Tropical Medicine and Hygiene Volume s1-29 ; s1-29 >
+      au < down ; 1950 ; The American Journal of Tropical Medicine and Hygiene Volume s1-30 ; s1-30 >
+      au < down ; 1951 ; The American Journal of Tropical Medicine and Hygiene Volume s1-31 ; s1-31 >
+      au < down ; 1952 ; The American Journal of Tropical Medicine and Hygiene Volume 1 ; 1 >
+      au < down ; 1953 ; The American Journal of Tropical Medicine and Hygiene Volume 2 ; 2 >
+      au < down ; 1954 ; The American Journal of Tropical Medicine and Hygiene Volume 3 ; 3 >
+      au < down ; 1955 ; The American Journal of Tropical Medicine and Hygiene Volume 4 ; 4 >
+      au < down ; 1956 ; The American Journal of Tropical Medicine and Hygiene Volume 5 ; 5 >
+      au < down ; 1957 ; The American Journal of Tropical Medicine and Hygiene Volume 6 ; 6 >
+      au < down ; 1958 ; The American Journal of Tropical Medicine and Hygiene Volume 7 ; 7 >
+      au < down ; 1959 ; The American Journal of Tropical Medicine and Hygiene Volume 8 ; 8 >
+      au < down ; 1960 ; The American Journal of Tropical Medicine and Hygiene Volume 9 ; 9 >
+      au < down ; 1961 ; The American Journal of Tropical Medicine and Hygiene Volume 10 ; 10 >
+      au < down ; 1962 ; The American Journal of Tropical Medicine and Hygiene Volume 11 ; 11 >
+      au < down ; 1963 ; The American Journal of Tropical Medicine and Hygiene Volume 12 ; 12 >
+      au < down ; 1964 ; The American Journal of Tropical Medicine and Hygiene Volume 13 ; 13 >
+      au < down ; 1965 ; The American Journal of Tropical Medicine and Hygiene Volume 14 ; 14 >
+      au < down ; 1966 ; The American Journal of Tropical Medicine and Hygiene Volume 15 ; 15 >
+      au < down ; 1967 ; The American Journal of Tropical Medicine and Hygiene Volume 16 ; 16 >
+      au < down ; 1968 ; The American Journal of Tropical Medicine and Hygiene Volume 17 ; 17 >
+      au < down ; 1969 ; The American Journal of Tropical Medicine and Hygiene Volume 18 ; 18 >
+      au < down ; 1970 ; The American Journal of Tropical Medicine and Hygiene Volume 19 ; 19 >
+      au < down ; 1971 ; The American Journal of Tropical Medicine and Hygiene Volume 20 ; 20 >
+      au < down ; 1972 ; The American Journal of Tropical Medicine and Hygiene Volume 21 ; 21 >
+      au < down ; 1973 ; The American Journal of Tropical Medicine and Hygiene Volume 22 ; 22 >
+      au < down ; 1974 ; The American Journal of Tropical Medicine and Hygiene Volume 23 ; 23 >
+      au < down ; 1975 ; The American Journal of Tropical Medicine and Hygiene Volume 24 ; 24 >
+      au < down ; 1976 ; The American Journal of Tropical Medicine and Hygiene Volume 25 ; 25 >
+      au < down ; 1977 ; The American Journal of Tropical Medicine and Hygiene Volume 26 ; 26 >
+      au < down ; 1978 ; The American Journal of Tropical Medicine and Hygiene Volume 27 ; 27 >
+      au < down ; 1979 ; The American Journal of Tropical Medicine and Hygiene Volume 28 ; 28 >
+      au < down ; 1980 ; The American Journal of Tropical Medicine and Hygiene Volume 29 ; 29 >
+      au < down ; 1981 ; The American Journal of Tropical Medicine and Hygiene Volume 30 ; 30 >
+      au < down ; 1982 ; The American Journal of Tropical Medicine and Hygiene Volume 31 ; 31 >
+      au < down ; 1983 ; The American Journal of Tropical Medicine and Hygiene Volume 32 ; 32 >
+      au < down ; 1984 ; The American Journal of Tropical Medicine and Hygiene Volume 33 ; 33 >
+      au < down ; 1985 ; The American Journal of Tropical Medicine and Hygiene Volume 34 ; 34 >
+      au < down ; 1986 ; The American Journal of Tropical Medicine and Hygiene Volume 35 ; 35 >
+      au < down ; 1987 ; The American Journal of Tropical Medicine and Hygiene Volume 36 ; 36 >
+      au < down ; 1987 ; The American Journal of Tropical Medicine and Hygiene Volume 37 ; 37 >
+      au < down ; 1988 ; The American Journal of Tropical Medicine and Hygiene Volume 38 ; 38 >
+      au < down ; 1988 ; The American Journal of Tropical Medicine and Hygiene Volume 39 ; 39 >
+      au < down ; 1989 ; The American Journal of Tropical Medicine and Hygiene Volume 40 ; 40 >
+      au < down ; 1989 ; The American Journal of Tropical Medicine and Hygiene Volume 41 ; 41 >
+      au < down ; 1990 ; The American Journal of Tropical Medicine and Hygiene Volume 42 ; 42 >
+      au < down ; 1990 ; The American Journal of Tropical Medicine and Hygiene Volume 43 ; 43 >
+      au < down ; 1991 ; The American Journal of Tropical Medicine and Hygiene Volume 44 ; 44 >
+      au < down ; 1991 ; The American Journal of Tropical Medicine and Hygiene Volume 45 ; 45 >
+      au < down ; 1992 ; The American Journal of Tropical Medicine and Hygiene Volume 46 ; 46 >
+      au < down ; 1992 ; The American Journal of Tropical Medicine and Hygiene Volume 47 ; 47 >
+      au < down ; 1993 ; The American Journal of Tropical Medicine and Hygiene Volume 48 ; 48 >
+      au < down ; 1993 ; The American Journal of Tropical Medicine and Hygiene Volume 49 ; 49 >
+      au < down ; 1994 ; The American Journal of Tropical Medicine and Hygiene Volume 50 ; 50 >
+      au < down ; 1994 ; The American Journal of Tropical Medicine and Hygiene Volume 51 ; 51 >
+      au < down ; 1995 ; The American Journal of Tropical Medicine and Hygiene Volume 52 ; 52 >
+      au < down ; 1995 ; The American Journal of Tropical Medicine and Hygiene Volume 53 ; 53 >
+      au < down ; 1996 ; The American Journal of Tropical Medicine and Hygiene Volume 54 ; 54 >
+      au < down ; 1996 ; The American Journal of Tropical Medicine and Hygiene Volume 55 ; 55 >
+      au < down ; 1997 ; The American Journal of Tropical Medicine and Hygiene Volume 56 ; 56 >
+      au < down ; 1997 ; The American Journal of Tropical Medicine and Hygiene Volume 57 ; 57 >
+      au < down ; 1998 ; The American Journal of Tropical Medicine and Hygiene Volume 58 ; 58 >
+      au < down ; 1998 ; The American Journal of Tropical Medicine and Hygiene Volume 59 ; 59 >
+      au < down ; 1999 ; The American Journal of Tropical Medicine and Hygiene Volume 60 ; 60 >
+      au < down ; 1999 ; The American Journal of Tropical Medicine and Hygiene Volume 61 ; 61 >
+      au < down ; 2000 ; The American Journal of Tropical Medicine and Hygiene Volume 62 ; 62 >
+      au < down ; 2000 ; The American Journal of Tropical Medicine and Hygiene Volume 63 ; 63 >
+      au < down ; 2001 ; The American Journal of Tropical Medicine and Hygiene Volume 64 ; 64 >
+      au < down ; 2001 ; The American Journal of Tropical Medicine and Hygiene Volume 65 ; 65 >
+      au < down ; 2002 ; The American Journal of Tropical Medicine and Hygiene Volume 66 ; 66 >
+      au < down ; 2002 ; The American Journal of Tropical Medicine and Hygiene Volume 67 ; 67 >
+      au < down ; 2003 ; The American Journal of Tropical Medicine and Hygiene Volume 68 ; 68 >
+      au < doNotProcess ; 2003 ; The American Journal of Tropical Medicine and Hygiene Volume 69 ; 69 >
+      au < doNotProcess ; 2004 ; The American Journal of Tropical Medicine and Hygiene Volume 70 ; 70 >
+      au < doNotProcess ; 2004 ; The American Journal of Tropical Medicine and Hygiene Volume 71 ; 71 >
+      au < down ; 2005 ; The American Journal of Tropical Medicine and Hygiene Volume 72 ; 72 >
+      au < doNotProcess ; 2005 ; The American Journal of Tropical Medicine and Hygiene Volume 73 ; 73 >
+      au < down ; 2006 ; The American Journal of Tropical Medicine and Hygiene Volume 74 ; 74 >
+      au < doNotProcess ; 2006 ; The American Journal of Tropical Medicine and Hygiene Volume 75 ; 75 >
+      au < down ; 2007 ; The American Journal of Tropical Medicine and Hygiene Volume 76 ; 76 >
+      au < doNotProcess ; 2007 ; The American Journal of Tropical Medicine and Hygiene Volume 77 ; 77 >
+      au < down ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 78 ; 78 >
+      au < doNotProcess ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 79 ; 79 >
+      au < down ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 80 ; 80 >
+      au < doNotProcess ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 81 ; 81 >
+      au < down ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 82 ; 82 >
+      au < doNotProcess ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 83 ; 83 >
+      au < superseded ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 84 [superseded] ; 84 >
+      au < superseded ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 85 [superseded] ; 85 >
+      au < superseded ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 86 [superseded] ; 86 >
+      au < superseded ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 87 [superseded] ; 87 >
+      au < superseded ; 2013 ; The American Journal of Tropical Medicine and Hygiene Volume 88 [superseded] ; 88 >
+      au < superseded ; 2013 ; The American Journal of Tropical Medicine and Hygiene Volume 89 [superseded] ; 89 >
+      au < superseded ; 2014 ; The American Journal of Tropical Medicine and Hygiene Volume 90 [superseded] ; 90 >
+      au < superseded ; 2014 ; The American Journal of Tropical Medicine and Hygiene Volume 91 [superseded] ; 91 >
+      au < superseded ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 92 [superseded] ; 92 >
+      au < superseded ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 93 [superseded] ; 93 >
+
+  }
+}

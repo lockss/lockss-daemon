@@ -19,7 +19,7 @@
       plugin = edu.cornell.library.jbe.JBEPlugin
       implicit < status ; year ; name ; param[volume] ; param[year] >
       param[base_url] = http://jbe.gold.ac.uk/  
-      #Moved to wordpress
+      #Moved to wordpress https://blogs.dickinson.edu/buddhistethics/
         
       au < down ; 1994 ; Journal of Buddhist Ethics Volume 1 ; 1 ; 1994 >
       au < down ; 1995 ; Journal of Buddhist Ethics Volume 2 ; 2 ; 1995 >

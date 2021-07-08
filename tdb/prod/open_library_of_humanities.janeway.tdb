@@ -1,0 +1,288 @@
+{
+
+  publisher <
+    name = Open Library Of Humanities ;
+    info[platform] = Janeway/OAI
+  >
+  
+    plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
+    param[oai_granularity] = YYYY-MM-DD
+    implicit < status ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+  
+    title <
+      name = Comics Grid ;
+        eissn = 2048-0792
+    >
+
+    param[base_url] = https://www.comicsgrid.com/
+    # Volume: https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
+
+    au < doNotProcess ; 2013 ; 1 ; Comics Grid Volume 2013 ; 2013 ; >
+    au < doNotProcess ; 2014 ; 2 ; Comics Grid Volume 2014 ; 2014 ; >
+    au < doNotProcess ; 2015 ; 3 ; Comics Grid Volume 2015 ; 2015 ; >
+    au < doNotProcess ; 2016 ; 4 ; Comics Grid Volume 2016 ; 2016 ; >
+    au < doNotProcess ; 2017 ; 5 ; Comics Grid Volume 2017 ; 2017 ; >
+    au < doNotProcess ; 2018 ; 6 ; Comics Grid Volume 2018 ; 2018 ; >
+    au < doNotProcess ; 2019 ; 7 ; Comics Grid Volume 2019 ; 2019 ; >
+    au < manifest ; 2020 ; 8 ; Comics Grid Volume 2020 ; 2020 ; >
+    au < manifest ; 2021 ; 9 ; Comics Grid Volume 2021 ; 2021 ; >
+
+  }
+
+
+  {
+
+      title <
+        name = Orbit: A Journal of American Literature ;
+        eissn = 2398-6786
+      >
+
+      param[base_url] = https://orbit.openlibhums.org/
+
+      au < manifest ; 2012 ; 1 ; Orbit: A Journal of American Literature Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 2 ; Orbit: A Journal of American Literature Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 3 ; Orbit: A Journal of American Literature Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 4 ; Orbit: A Journal of American Literature Volume 2015 ; 2015 ; >
+      au < manifest ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
+      au < manifest ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
+      au < manifest ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
+      au < manifest ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; >
+      au < manifest ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; >
+      au < manifest ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = C21 Literature: journal of 21st-century writings ;
+        eissn = 2045-5224
+      >
+
+       param[base_url] = https://c21.openlibhums.org/
+
+       au < manifest ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 ; >
+       au < manifest ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; >
+       au < manifest ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; >
+       au < manifest ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = 19: Interdisciplinary Studies in the Long Nineteenth Century ;
+        eissn = 1755-1560
+      >
+
+      param[base_url] = https://19.bbk.ac.uk/
+
+      au < doNotProcess ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; >
+      au < doNotProcess ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 ; 2017 ; >
+      au < doNotProcess ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 ; 2018 ; >
+      au < manifest ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 ; >
+      au < manifest ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 ; >
+      au < manifest ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Ethnologia Europaea ;
+        eissn = 1604-3030
+      >
+
+      param[base_url] = https://ee.openlibhums.org/
+
+      au < manifest ; 2000 ; 30 ; Ethnologia Europaea Volume 2000 ; 2000 ; >
+      au < manifest ; 2001 ; 31 ; Ethnologia Europaea Volume 2001 ; 2001 ; >
+      au < manifest ; 2002 ; 32 ; Ethnologia Europaea Volume 2002 ; 2002 ; >
+      au < manifest ; 2003 ; 33 ; Ethnologia Europaea Volume 2003 ; 2003 ; >
+      au < manifest ; 2004 ; 34 ; Ethnologia Europaea Volume 2004 ; 2004 ; >
+      au < manifest ; 2005 ; 35 ; Ethnologia Europaea Volume 2005 ; 2005 ; >
+      au < manifest ; 2006 ; 36 ; Ethnologia Europaea Volume 2006 ; 2006 ; >
+      au < manifest ; 2007 ; 37 ; Ethnologia Europaea Volume 2007 ; 2007 ; >
+      au < manifest ; 2008 ; 38 ; Ethnologia Europaea Volume 2008 ; 2008 ; >
+      au < manifest ; 2009 ; 39 ; Ethnologia Europaea Volume 2009 ; 2009 ; >
+      au < manifest ; 2010 ; 40 ; Ethnologia Europaea Volume 2010 ; 2010 ; >
+      au < manifest ; 2011 ; 41 ; Ethnologia Europaea Volume 2011 ; 2011 ; >
+      au < manifest ; 2012 ; 42 ; Ethnologia Europaea Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 43 ; Ethnologia Europaea Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 44 ; Ethnologia Europaea Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 45 ; Ethnologia Europaea Volume 2015 ; 2015 ; >
+      au < manifest ; 2016 ; 46 ; Ethnologia Europaea Volume 2016 ; 2016 ; >
+      au < manifest ; 2017 ; 47 ; Ethnologia Europaea Volume 2017 ; 2017 ; >
+      au < manifest ; 2019 ; 49 ; Ethnologia Europaea Volume 2019 ; 2019 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of British and Irish Innovative Poetry ;
+        eissn = 1758-972X
+      >
+
+      param[base_url] = https://poetry.openlibhums.org/
+
+      au < doNotProcess ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; >
+      au < doNotProcess ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
+      au < manifest ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 ; 2017 ; >
+      au < manifest ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 ; 2018 ; >
+      au < manifest ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; >
+      au < manifest ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 ; >
+      au < manifest ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 ; >
+  }
+
+  {
+    title <
+       name = Dandelion: Postgraduate Arts Journal and Research Network ;
+       eissn = 2048-1322
+     >
+
+        param[base_url] = https://dandelionjournal.org/
+
+        au < doNotProcess ; 2010 ; 1 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2010 ; 2010 ; >
+        au < doNotProcess ; 2011 ; 2 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2011 ; 2011 ; >
+        au < doNotProcess ; 2012 ; 3 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2012 ; 2012 ; >
+        au < doNotProcess ; 2013 ; 4 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2013 ; 2013 ; >
+        au < doNotProcess ; 2014 ; 5 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2014 ; 2014 ; >
+        au < doNotProcess ; 2015 ; 6 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2015 ; 2015 ; >
+        au < doNotProcess ; 2016 ; 7 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2016 ; 2016 ; >
+        au < manifest ; 2017 ; 8 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2017 ; 2017 ; >
+        au < manifest ; 2018 ; 9 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2018 ; 2018 ; >
+
+  }
+
+  {
+    title <
+       name = International Journal of Welsh Writing in English ;
+       eissn = 2053-1915
+     >
+     # This content was collected using wget and provided for preservation as a
+     # set of WARC files on 2018-06-25
+     # WARC content collected from https://ijwwe.uwp.co.uk/
+     comment[publisher] = Open Library of Humanities
+
+        param[base_url] = https://ijwwe.uwp.co.uk/
+
+        au < manifest ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 ; >
+        au < manifest ; 2018 ; 5 ; International Journal of Welsh Writing in English Volume 2018 ; 2018 ; >
+        au < manifest ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 ; >
+        au < manifest ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; >
+        au < manifest ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Marvell Studies ;
+        eissn = 2399-7435
+      >
+
+      param[base_url] = https://marvell.openlibhums.org/
+
+      au < doNotProcess ; 2016 ; 1 ; Marvell Studies Volume 2016 ; 2016 ; >
+      au < doNotProcess ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; >
+      au < doNotProcess ; 2018 ; 3 ; Marvell Studies Volume 2018 ; 2018 ; >
+      au < doNotProcess ; 2019 ; 4 ; Marvell Studies Volume 2019 ; 2019 ; >
+      au < manifest ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; >
+      au < manifest ; 2021 ; 6 ; Marvell Studies Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Open Library of Humanities ;
+        eissn = 2056-6700
+      >
+
+      comment[publisher] = Open Library of Humanities
+      param[base_url] = https://olh.openlibhums.org/
+
+      au < doNotProcess ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; >
+      au < doNotProcess ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
+      au < doNotProcess ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; >
+      au < doNotProcess ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; >
+      au < doNotProcess ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; >
+      au < manifest ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; >
+      au < manifest ; 2021 ; 7 ; Open Library of Humanities Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Studies in the Maternal ;
+        eissn = 1759-0434
+      >
+
+      param[base_url] = http://www.mamsie.bbk.ac.uk/
+
+      au < doNotProcess ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; >
+      au < doNotProcess ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; >
+      au < doNotProcess ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; >
+      au < doNotProcess ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; >
+      au < doNotProcess ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; >
+      au < doNotProcess ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; >
+      au < doNotProcess ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; >
+      au < doNotProcess ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; >
+      au < doNotProcess ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; >
+      au < doNotProcess ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 ; >
+      au < doNotProcess ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; >
+      au < manifest ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 ; >
+      au < manifest ; 2021 ; 13 ; Studies in the Maternal Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Theoretical Roman Archaeology Journal ;
+        eissn = 2515-2289
+      >
+
+      param[base_url] = https://traj.openlibhums.org/
+#     changed name from "Conference" to "Journal"
+#     for the conference, articles are from the previous year.
+#     nothing published in 1995.
+
+      au < doesNotExist ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; >
+      au < doesNotExist ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; >
+      au < manifest ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
+      au < doesNotExist ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; >
+      au < manifest ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
+      au < doesNotExist ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; >
+      au < manifest ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
+      au < manifest ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
+      au < manifest ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
+      au < doNotProcess ; 2000 ; 10 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; >
+      au < doNotProcess ; 2001 ; 11 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; >
+      au < doNotProcess ; 2002 ; 12 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; >
+      au < doNotProcess ; 2003 ; 13 ; Theoretical Roman Archaeology Conference Volume 2003 ; 2003 ; >
+      au < doNotProcess ; 2004 ; 14 ; Theoretical Roman Archaeology Conference Volume 2004 ; 2004 ; >
+      au < doNotProcess ; 2005 ; 15 ; Theoretical Roman Archaeology Conference Volume 2005 ; 2005 ; >
+      au < doNotProcess ; 2006 ; 16 ; Theoretical Roman Archaeology Conference Volume 2006 ; 2006 ; >
+      au < doNotProcess ; 2007 ; 17 ; Theoretical Roman Archaeology Conference Volume 2007 ; 2007 ; >
+      au < doNotProcess ; 2008 ; 18 ; Theoretical Roman Archaeology Conference Volume 2008 ; 2008 ; >
+      au < doNotProcess ; 2009 ; 19 ; Theoretical Roman Archaeology Conference Volume 2009 ; 2009 ; >
+      au < doNotProcess ; 2010 ; 20 ; Theoretical Roman Archaeology Conference Volume 2010 ; 2010 ; >
+      au < doNotProcess ; 2011 ; 21 ; Theoretical Roman Archaeology Conference Volume 2011 ; 2011 ; >
+      au < doNotProcess ; 2012 ; 22 ; Theoretical Roman Archaeology Conference Volume 2012 ; 2012 ; >
+      au < doNotProcess ; 2013 ; 23 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 ; >
+      au < doNotProcess ; 2014 ; 24 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; >
+      au < doNotProcess ; 2015 ; 25 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; >
+      au < doesNotExist ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
+      au < manifest ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
+      au < doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; >
+      au < doNotProcess ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; >
+      au < manifest ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; >
+      au < manifest ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
+
+  }
+}

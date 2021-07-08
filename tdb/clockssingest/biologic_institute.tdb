@@ -42,9 +42,9 @@
       au < finished ; finished ; 2013 ; BIO-Complexity Volume 2013 ; 2013 ; 2013 ; >
       au < finished ; finished ; 2014 ; BIO-Complexity Volume 2014 ; 2014 ; 2014 ; >
       au < finished ; finished ; 2015 ; BIO-Complexity Volume 2015 ; 2015 ; 2015 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; BIO-Complexity Volume 2016 ; 2016 ; 2016 ; >
-      au < deepCrawl ; exists ; 2017 ; BIO-Complexity Volume 2017 ; 2017 ; 2017 ; >
-      au < deepCrawl ; exists ; 2018 ; BIO-Complexity Volume 2018 ; 2018 ; 2018 ; >
+      au < finished ; manifest ; 2016 ; BIO-Complexity Volume 2016 ; 2016 ; 2016 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; BIO-Complexity Volume 2017 ; 2017 ; 2017 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; BIO-Complexity Volume 2018 ; 2018 ; 2018 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -54,8 +54,9 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[journal_id] = main
 
-      au < deepCrawl ; exists ; 2019 ; BIO-Complexity Volume 2019 ; 2019 ; 2019 ; >
+      au < finished ; manifest ; 2019 ; BIO-Complexity Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; BIO-Complexity Volume 2020 ; 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; BIO-Complexity Volume 2021 ; 2021 ; 2021 ; >
 
     }
     

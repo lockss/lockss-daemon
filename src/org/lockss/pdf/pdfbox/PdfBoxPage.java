@@ -126,6 +126,10 @@ public class PdfBoxPage implements PdfPage {
     for (int i = 0 ; i < annots.size() ; ++i) {
       ret.add(PdfBoxToken.convertOne(annots.getObject(i)));
     }
+    List<PdfToken> ret = new ArrayList<>(annots.size());
+    for (int i = 0 ; i < annots.size() ; ++i) {
+      ret.add(PdfBoxTokens.convertOne(annots.getObject(i)));
+    }
     return ret;
   }
 
@@ -188,6 +192,12 @@ public class PdfBoxPage implements PdfPage {
     }
   }
   
+  @Override
+  public void setAnnotations(List<PdfToken> annotations) {
+    // FIXME Possibly incorrect, based on the 1.76.0-era bug fix in getAnnotations()
+    pdPage.getCOSDictionary().setItem(COSName.ANNOTS, (COSArray)Arr.of(annotations).toPdfBoxObject());
+  }
+
   /**
    * @since 1.76
    */

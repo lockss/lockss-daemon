@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -41,18 +41,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
-        <string>Metadata</string>
-        <string>1</string>
+        <string>Poll</string>
+        <string>9</string>
       </entry>
       <entry>
-        <string>Poll</string>
-        <string>5</string>
+        <string>Metadata</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -66,15 +66,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Meteorological Society Plugin (PubFactory)</string>
+    <string>American Meteorological Society Plugin</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Meteorological Society Plugin (PubFactory), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Meteorological Society Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

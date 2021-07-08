@@ -23,12 +23,12 @@
     param[journal_abbr] = animsent
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2016 ; Animal Sentience Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2017 ; Animal Sentience Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2018 ; Animal Sentience Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2019 ; Animal Sentience Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2020 ; Animal Sentience Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2020 ; Animal Sentience Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2016 ; Animal Sentience Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2017 ; Animal Sentience Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; Animal Sentience Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2019 ; Animal Sentience Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2020 ; Animal Sentience Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2021 ; Animal Sentience Volume 6 ; 6 ; >
 
   }
 

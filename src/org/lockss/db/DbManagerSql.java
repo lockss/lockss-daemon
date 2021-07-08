@@ -2625,7 +2625,7 @@ public class DbManagerSql {
   boolean isTypeMysql() {
     final String DEBUG_HEADER = "isTypeMysql(): ";
 
-    boolean result = "com.mysql.jdbc.jdbc2.optional.MysqlDataSource"
+    boolean result = "com.mysql.cj.jdbc.MysqlDataSource"
 	.equals(dataSourceClassName);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;

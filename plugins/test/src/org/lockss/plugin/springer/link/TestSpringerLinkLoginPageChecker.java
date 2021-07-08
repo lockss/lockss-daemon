@@ -102,6 +102,33 @@ public class TestSpringerLinkLoginPageChecker extends LockssTestCase {
         "</div>"+
         "</html>";
 
+  public static final String newFormatJournalsBuyArticleOption =
+      "<article class=\"c-box\" data-test-id=\"buy-article\">\n" +
+          "  <h3 class=\"c-box__heading\">Buy single article</h3>\n" +
+          "  <div class=\"c-box__body\">\n" +
+          "   <div class=\"buybox__info\">\n" +
+          "    <p>Instant access to the full article PDF.</p>\n" +
+          "   </div>\n" +
+          "   <div class=\"buybox__buy\">\n" +
+          "    <p class=\"buybox__price\">US$ 49.95</p>\n" +
+          "    <p class=\"buybox__price-info\">Tax calculation will be finalised during checkout.</p>\n" +
+          "    <form action=\"https://order.springer.com/public/checkout?abtest=v2\" method=\"post\">\n" +
+          "     <input type=\"hidden\" name=\"type\" value=\"article\">\n" +
+          "     <input type=\"hidden\" name=\"doi\" value=\"10.1007/s40274-019-5989-0\">\n" +
+          "     <input type=\"hidden\" name=\"isxn\" value=\"1179-2043\">\n" +
+          "     <input type=\"hidden\" name=\"contenttitle\" value=\"Global health procurement\">\n" +
+          "     <input type=\"hidden\" name=\"copyrightyear\" value=\"2019\">\n" +
+          "     <input type=\"hidden\" name=\"year\" value=\"2019\">\n" +
+          "     <input type=\"hidden\" name=\"authors\" value=\"\">\n" +
+          "     <input type=\"hidden\" name=\"title\" value=\"PharmacoEconomics &amp; Outcomes News\">\n" +
+          "     <input type=\"hidden\" name=\"mac\" value=\"5EAFA4A6BAED691CBF1B9D14BD6BF317\">\n" +
+          "     <input type=\"submit\" class=\"c-box__button\" onclick=\"dataLayer.push({&quot;event&quot;:&quot;addToCart&quot;,&quot;ecommerce&quot;:{&quot;currencyCode&quot;:&quot;USD&quot;,&quot;add&quot;:{&quot;products&quot;:[{&quot;name&quot;:&quot;Global health procurement&quot;,&quot;id&quot;:&quot;1179-2043&quot;,&quot;price&quot;:49.95,&quot;brand&quot;:&quot;Springer International Publishing&quot;,&quot;category&quot;:&quot;Medicine &amp; Public Health&quot;,&quot;variant&quot;:&quot;ppv-article&quot;,&quot;quantity&quot;:1}]}}});\" value=\"Buy article PDF\">\n" +
+          "    </form>\n" +
+          "   </div>\n" +
+          "  </div>\n" +
+          "  <script>dataLayer.push({\"ecommerce\":{\"currency\":\"USD\",\"impressions\":[{\"name\":\"Global health procurement\",\"id\":\"1179-2043\",\"price\":49.95,\"brand\":\"Springer International Publishing\",\"category\":\"Medicine & Public Health\",\"variant\":\"ppv-article\",\"quantity\":1}]}});</script>\n" +
+          " </article>";
+
   public void testNotLoginPage() throws IOException {
     SpringerLinkLoginPageChecker checker = new SpringerLinkLoginPageChecker();
     try {
@@ -131,6 +158,19 @@ public class TestSpringerLinkLoginPageChecker extends LockssTestCase {
     
     StringReader reader = new StringReader(articleLoginPageText);
     
+    try {
+      assertTrue(checker.isLoginPage(props, reader));
+    } catch (PluginException e) {
+    }
+  }
+
+  public void testNewFormatIsArticleLoginPage() throws IOException {
+    SpringerLinkLoginPageChecker checker = new SpringerLinkLoginPageChecker();
+    CIProperties props = new CIProperties();
+    props.put("Content-Type", "text/html; charset=windows-1252");
+
+    StringReader reader = new StringReader(newFormatJournalsBuyArticleOption);
+
     try {
       assertTrue(checker.isLoginPage(props, reader));
     } catch (PluginException e) {

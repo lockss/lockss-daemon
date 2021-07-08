@@ -22,6 +22,7 @@
 #      param[base_url] = https://steiner-studies.org/
 
       au < manifest ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ >
+      au < manifest ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ >
 
   }
 }
@@ -50,9 +51,9 @@
 #      param[base_url] = https://jhs.press.gonzaga.edu/
 
       au < released ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; https://jhs.press.gonzaga.edu/ >
-      au < manifest ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; https://jhs.press.gonzaga.edu/ >
+      au < released ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; https://jhs.press.gonzaga.edu/ >
       au < released ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; https://jhs.press.gonzaga.edu/ >
-      au < manifest ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; https://jhs.press.gonzaga.edu/ >
+      au < released ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; https://jhs.press.gonzaga.edu/ >
       au < released ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; https://jhs.press.gonzaga.edu/ >
       au < released ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; https://jhs.press.gonzaga.edu/ >
       au < released ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; https://jhs.press.gonzaga.edu/ >
@@ -62,8 +63,9 @@
       au < released ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; https://jhs.press.gonzaga.edu/ >
       au < released ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; https://jhs.press.gonzaga.edu/ >
       au < released ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; https://jhs.press.gonzaga.edu/ >
-      au < manifest ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ >
-      au < manifest ; 2020 ; 16-17 ; Journal of Hate Studies Volume 2020 ; 2020 ; https://jhs.press.gonzaga.edu/ >
+      au < released ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ >
+      au < manifest ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; https://jhs.press.gonzaga.edu/ >
+      au < expected ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; https://jhs.press.gonzaga.edu/ >
 
   }
 }
@@ -93,14 +95,15 @@
 
       au < released ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; https://journal-njmr.org/ >
       au < released ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; https://journal-njmr.org/ >
-      au < manifest ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ >
+      au < released ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ >
       au < released ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; https://journal-njmr.org/ >
-      au < manifest ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; https://journal-njmr.org/ >
+      au < released ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; https://journal-njmr.org/ >
       au < released ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; https://journal-njmr.org/ >
       au < released ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; https://journal-njmr.org/ >
       au < released ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; https://journal-njmr.org/ >
       au < released ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; https://journal-njmr.org/ >
-      au < manifest ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; https://journal-njmr.org/ >
+      au < released ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; https://journal-njmr.org/ >
+      au < manifest ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 ; https://journal-njmr.org/ >
   }
 
   {
@@ -117,7 +120,7 @@
       au < manifest ; 1998 ; 2 ; Redescriptions Volume 1998 ; 1998 ; https://journal-redescriptions.org/ >
       au < manifest ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; https://journal-redescriptions.org/ >
       au < released ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; https://journal-redescriptions.org/ >
-      au < manifest ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ >
+      au < released ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ >
       au < released ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; https://journal-redescriptions.org/ >
       au < released ; 2003 ; 7 ; Redescriptions Volume 2003 ; 2003 ; https://journal-redescriptions.org/ >
       au < released ; 2004 ; 8 ; Redescriptions Volume 2004 ; 2004 ; https://journal-redescriptions.org/ >
@@ -126,7 +129,7 @@
       au < released ; 2007 ; 11 ; Redescriptions Volume 2007 ; 2007 ; https://journal-redescriptions.org/ >
       au < released ; 2008 ; 12 ; Redescriptions Volume 2008 ; 2008 ; https://journal-redescriptions.org/ >
       au < released ; 2009 ; 13 ; Redescriptions Volume 2009 ; 2009 ; https://journal-redescriptions.org/ >
-      au < manifest ; 2010 ; 14 ; Redescriptions Volume 2010 ; 2010 ; https://journal-redescriptions.org/ >
+      au < released ; 2010 ; 14 ; Redescriptions Volume 2010 ; 2010 ; https://journal-redescriptions.org/ >
       au < released ; 2011 ; 15 ; Redescriptions Volume 2011 ; 2011 ; https://journal-redescriptions.org/ >
       au < doesNotExist ; 2012 ; 16 ; Redescriptions Volume 2012 ; 2012 ; https://journal-redescriptions.org/ >
       au < released ; 2013 ; 17 ; Redescriptions Volume 2013 ; 2013 ; https://journal-redescriptions.org/ >
@@ -135,7 +138,8 @@
       au < released ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; https://journal-redescriptions.org/ >
       au < released ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; https://journal-redescriptions.org/ >
       au < released ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ >
-      au < manifest ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ >
+      au < released ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ >
+      au < expected ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; https://journal-redescriptions.org/ >
 
   }
 }
@@ -162,6 +166,7 @@
       au < released ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ >
       au < expected ; 2019 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2019 ; 2019 ; https://www.amscasereports.com/ >
       au < expected ; 2020 ; 3 ; Annals of Medicine and Surgery Case Reports Volume 2020 ; 2020 ; https://www.amscasereports.com/ >
+      au < manifest ; 2021 ; 4 ; Annals of Medicine and Surgery Case Reports Volume 2021 ; 2021 ; https://www.amscasereports.com/ >
 
   }
 
@@ -178,6 +183,7 @@
       au < released ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ >
       au < expected ; 2019 ; 2 ; Annals of Medicine and Surgery Protocols Volume 2019 ; 2019 ; https://www.amsprotocols.com/ >
       au < expected ; 2020 ; 3 ; Annals of Medicine and Surgery Protocols Volume 2020 ; 2020 ; https://www.amsprotocols.com/ >
+      au < expected ; 2021 ; 4 ; Annals of Medicine and Surgery Protocols Volume 2021 ; 2021 ; https://www.amsprotocols.com/ >
 
   }
 
@@ -194,6 +200,7 @@
       au < released ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ >
       au < released ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; https://ijops.com/ >
       au < expected ; 2020 ; 3 ; International Journal of Orthoplastic Surgery Volume 2020 ; 2020 ; https://ijops.com/ >
+      au < expected ; 2021 ; 4 ; International Journal of Orthoplastic Surgery Volume 2021 ; 2021 ; https://ijops.com/ >
 
   }
 
@@ -221,7 +228,8 @@
       au < released ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; https://larrlasa.org/ >
       au < released ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; https://larrlasa.org/ >
       au < released ; 2019 ; 3 ; Latin American Research Review Volume 2019 ; 2019 ; https://larrlasa.org/ >
-      au < manifest ; 2020 ; 4 ; Latin American Research Review Volume 2020 ; 2020 ; https://larrlasa.org/ >
+      au < released ; 2020 ; 4 ; Latin American Research Review Volume 2020 ; 2020 ; https://larrlasa.org/ >
+      au < manifest ; 2021 ; 5 ; Latin American Research Review Volume 2021 ; 2021 ; https://larrlasa.org/ >
 
   }
 
@@ -251,7 +259,8 @@
       au < released ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ >
       au < released ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ >
       au < released ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; https://www.annalsofglobalhealth.org/ >
-      au < manifest ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; https://www.annalsofglobalhealth.org/ >
+      au < manifest ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; https://www.annalsofglobalhealth.org/ >
 
   }
 
@@ -268,6 +277,7 @@
       au < released ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; https://www.journalofaltmetrics.org/ >
       au < released ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ >
       au < manifest ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; https://www.journalofaltmetrics.org/ >
+      au < manifest ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 ; https://www.journalofaltmetrics.org/ >
 
   }
 
@@ -283,7 +293,8 @@
 
       au < released ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; https://journalofscientificinnovationinmedicine.org/ >
       au < released ; 2019 ; 2 ; Journal of Scientific Innovation in Medicine Volume 2019 ; 2019 ; https://journalofscientificinnovationinmedicine.org/ >
-      au < manifest ; 2020 ; 3 ; Journal of Scientific Innovation in Medicine Volume 2020 ; 2020 ; https://journalofscientificinnovationinmedicine.org/ >
+      au < released ; 2020 ; 3 ; Journal of Scientific Innovation in Medicine Volume 2020 ; 2020 ; https://journalofscientificinnovationinmedicine.org/ >
+      au < manifest ; 2021 ; 4 ; Journal of Scientific Innovation in Medicine Volume 2021 ; 2021 ; https://journalofscientificinnovationinmedicine.org/ >
 
   }
 
@@ -298,7 +309,8 @@
 #      param[base_url] = https://www.scholarlyassessmentreports.org/
 
       au < released ; 2019 ; 1 ; Scholarly Assessment Reports Volume 2019 ; 2019 ; https://www.scholarlyassessmentreports.org/ >
-      au < manifest ; 2020 ; 2 ; Scholarly Assessment Reports Volume 2020 ; 2020 ; https://www.scholarlyassessmentreports.org/ >
+      au < released ; 2020 ; 2 ; Scholarly Assessment Reports Volume 2020 ; 2020 ; https://www.scholarlyassessmentreports.org/ >
+      au < manifest ; 2021 ; 3 ; Scholarly Assessment Reports Volume 2021 ; 2021 ; https://www.scholarlyassessmentreports.org/ >
 
   }
 
@@ -329,6 +341,7 @@
       au < released ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ >
       au < released ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; https://www.modernlanguagesopen.org/ >
       au < manifest ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; https://www.modernlanguagesopen.org/ >
+      au < manifest ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; https://www.modernlanguagesopen.org/ >
 
   }
 
@@ -364,7 +377,8 @@
       au < released ; 2017 ; 24 ; ASIANetwork Exchange Volume 2017 ; 2017 ; https://www.asianetworkexchange.org/ >
       au < released ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 ; https://www.asianetworkexchange.org/ >
       au < released ; 2019 ; 26 ; ASIANetwork Exchange Volume 2019 ; 2019 ; https://www.asianetworkexchange.org/ >
-      au < manifest ; 2020 ; 27 ; ASIANetwork Exchange Volume 2020 ; 2020 ; https://www.asianetworkexchange.org/ >
+      au < released ; 2020 ; 27 ; ASIANetwork Exchange Volume 2020 ; 2020 ; https://www.asianetworkexchange.org/ >
+      au < manifest ; 2021 ; 28 ; ASIANetwork Exchange Volume 2021 ; 2021 ; https://www.asianetworkexchange.org/ >
 
   }
 
@@ -400,7 +414,8 @@
       au < released ; 2017 ; 2017 ; Body, Space & Technology Volume 2017 ; 2017 ; https://www.bstjournal.com/ >
       au < released ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ >
       au < released ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ >
-      au < manifest ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ >
+      au < released ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ >
+      au < manifest ; 2021 ; 2021 ; Body, Space & Technology Volume 2021 ; 2021 ; https://www.bstjournal.com/ >
 
   }
 
@@ -432,6 +447,7 @@
       au < released ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ >
       au < manifest ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; https://journal.digitalmedievalist.org/ >
+      au < expected ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; https://journal.digitalmedievalist.org/ >
 
   }
 
@@ -455,7 +471,8 @@
       au < released ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ >
       au < released ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ >
       au < released ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ >
+      au < released ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ >
+      au < manifest ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 ; 2021 ; https://www.digitalstudies.org/ >
 
   }
 
@@ -473,7 +490,8 @@
       au < released ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; https://www.glossa-journal.org/ >
       au < released ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 ; https://www.glossa-journal.org/ >
       au < released ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 ; https://www.glossa-journal.org/ >
-      au < manifest ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 ; https://www.glossa-journal.org/ >
+      au < released ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 ; https://www.glossa-journal.org/ >
+      au < manifest ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 ; https://www.glossa-journal.org/ >
 
   }
 
@@ -491,7 +509,8 @@
 
       au < released ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ >
       au < released ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ >
-      au < manifest ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ >
+      au < released ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ >
+      au < manifest ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 ; https://jer.openlibhums.org/ >
 
   }
 
@@ -512,45 +531,8 @@
       au < released ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ >
       au < released ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ >
       au < released ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ >
-      au < manifest ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ >
-
-  }
-
-  {
-
-      title <
-        name = Marvell Studies ;
-        eissn = 2399-7435
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = https://marvell.openlibhums.org/
-      #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
-      au < released ; 2016 ; 1 ; Marvell Studies Volume 2016 ; 2016 ; https://marvell.openlibhums.org/ >
-      au < released ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; https://marvell.openlibhums.org/ >
-      au < released ; 2018 ; 3 ; Marvell Studies Volume 2018 ; 2018 ; https://marvell.openlibhums.org/ >
-      au < released ; 2019 ; 4 ; Marvell Studies Volume 2019 ; 2019 ; https://marvell.openlibhums.org/ >
-      au < manifest ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; https://marvell.openlibhums.org/ >
-
-  }
-
-  {
-
-      title <
-        name = Open Library of Humanities ;
-        eissn = 2056-6700
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = https://olh.openlibhums.org/
-
-      au < released ; 2015 ; 1 ; Open Library of Humanities Volume 2015 ; 2015 ; https://olh.openlibhums.org/ >
-      au < released ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; https://olh.openlibhums.org/ >
-      au < released ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; https://olh.openlibhums.org/ >
-      au < released ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; https://olh.openlibhums.org/ >
-      au < released ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; https://olh.openlibhums.org/ >
-      au < manifest ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; https://olh.openlibhums.org/ >
+      au < released ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ >
+      au < manifest ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 ; https://foucaldien.net/ >
 
   }
 
@@ -600,52 +582,6 @@
   {
 
       title <
-        name = Studies in the Maternal ;
-        eissn = 1759-0434
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = http://www.mamsie.bbk.ac.uk/
-
-      au < released ; 2009 ; 1 ; Studies in the Maternal Volume 2009 ; 2009 ; http://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2010 ; 2 ; Studies in the Maternal Volume 2010 ; 2010 ; http://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2011 ; 3 ; Studies in the Maternal Volume 2011 ; 2011 ; http://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2012 ; 4 ; Studies in the Maternal Volume 2012 ; 2012 ; http://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2013 ; 5 ; Studies in the Maternal Volume 2013 ; 2013 ; http://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2014 ; 6 ; Studies in the Maternal Volume 2014 ; 2014 ; http://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2015 ; 7 ; Studies in the Maternal Volume 2015 ; 2015 ; http://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; http://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; https://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 ; https://www.mamsie.bbk.ac.uk/ >
-      au < released ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; https://www.mamsie.bbk.ac.uk/ >
-      au < manifest ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 ; https://www.mamsie.bbk.ac.uk/ >
-
-  }
-
-  {
-
-      title <
-        name = The Comics Grid: Journal of Comics Scholarship ;
-        eissn = 2048-0792
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = http://www.comicsgrid.com/
-
-      au < released ; 2013 ; 1 ; The Comics Grid: Journal of Comics Scholarship Volume 2013 ; 2013 ; http://www.comicsgrid.com/ >
-      au < released ; 2014 ; 2 ; The Comics Grid: Journal of Comics Scholarship Volume 2014 ; 2014 ; http://www.comicsgrid.com/ >
-      au < released ; 2015 ; 3 ; The Comics Grid: Journal of Comics Scholarship Volume 2015 ; 2015 ; http://www.comicsgrid.com/ >
-      au < released ; 2016 ; 4 ; The Comics Grid: Journal of Comics Scholarship Volume 2016 ; 2016 ; http://www.comicsgrid.com/ >
-      au < released ; 2017 ; 5 ; The Comics Grid: Journal of Comics Scholarship Volume 2017 ; 2017 ; https://www.comicsgrid.com/ >
-      au < released ; 2018 ; 6 ; The Comics Grid: Journal of Comics Scholarship Volume 2018 ; 2018 ; https://www.comicsgrid.com/ >
-      au < released ; 2019 ; 7 ; The Comics Grid: Journal of Comics Scholarship Volume 2019 ; 2019 ; https://www.comicsgrid.com/ >
-      au < manifest ; 2020 ; 8 ; The Comics Grid: Journal of Comics Scholarship Volume 2020 ; 2020 ; https://www.comicsgrid.com/ >
-
-  }
-
-  {
-
-      title <
         name = Open Screens ;
         eissn = 2516-2888
       >
@@ -655,55 +591,11 @@
 
       au < released ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ >
       au < released ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ >
-      au < manifest ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 ; https://openscreensjournal.com/ >
+      au < released ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 ; https://openscreensjournal.com/ >
+      au < manifest ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 ; https://openscreensjournal.com/ >
 
   }
 
-  {
-
-      title <
-        name = Theoretical Roman Archaeology Journal ;
-        eissn = 2515-2289
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = https://traj.openlibhums.org/
-#     changed name from "Conference" to "Journal"
-#     for the conference, articles are from the previous year.
-#     nothing published in 1995.
-
-      au < doesNotExist ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; https://traj.openlibhums.org/ >
-      au < doesNotExist ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; https://traj.openlibhums.org/ >
-      au < manifest ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; https://traj.openlibhums.org/ ># 1991 articles
-      au < doesNotExist ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; https://traj.openlibhums.org/ >
-      au < manifest ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; https://traj.openlibhums.org/ ># 1992 and 1994 articles
-      au < doesNotExist ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; https://traj.openlibhums.org/ >
-      au < manifest ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; https://traj.openlibhums.org/ ># 1996 articles
-      au < manifest ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; https://traj.openlibhums.org/ >
-      au < manifest ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; https://traj.openlibhums.org/ >
-      au < released ; 2000 ; 10 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; https://traj.openlibhums.org/ >
-      au < released ; 2001 ; 11 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; https://traj.openlibhums.org/ >
-      au < released ; 2002 ; 12 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; https://traj.openlibhums.org/ >
-      au < released ; 2003 ; 13 ; Theoretical Roman Archaeology Conference Volume 2003 ; 2003 ; https://traj.openlibhums.org/ >
-      au < released ; 2004 ; 14 ; Theoretical Roman Archaeology Conference Volume 2004 ; 2004 ; https://traj.openlibhums.org/ >
-      au < released ; 2005 ; 15 ; Theoretical Roman Archaeology Conference Volume 2005 ; 2005 ; https://traj.openlibhums.org/ >
-      au < released ; 2006 ; 16 ; Theoretical Roman Archaeology Conference Volume 2006 ; 2006 ; https://traj.openlibhums.org/ >
-      au < released ; 2007 ; 17 ; Theoretical Roman Archaeology Conference Volume 2007 ; 2007 ; https://traj.openlibhums.org/ >
-      au < released ; 2008 ; 18 ; Theoretical Roman Archaeology Conference Volume 2008 ; 2008 ; https://traj.openlibhums.org/ >
-      au < released ; 2009 ; 19 ; Theoretical Roman Archaeology Conference Volume 2009 ; 2009 ; https://traj.openlibhums.org/ >
-      au < released ; 2010 ; 20 ; Theoretical Roman Archaeology Conference Volume 2010 ; 2010 ; https://traj.openlibhums.org/ >
-      au < released ; 2011 ; 21 ; Theoretical Roman Archaeology Conference Volume 2011 ; 2011 ; https://traj.openlibhums.org/ >
-      au < released ; 2012 ; 22 ; Theoretical Roman Archaeology Conference Volume 2012 ; 2012 ; https://traj.openlibhums.org/ >
-      au < released ; 2013 ; 23 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 ; https://traj.openlibhums.org/ >
-      au < released ; 2014 ; 24 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; https://traj.openlibhums.org/ >
-      au < released ; 2015 ; 25 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; https://traj.openlibhums.org/ >
-      au < doesNotExist ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ >
-      au < released ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ >
-      au < released ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; https://traj.openlibhums.org/ >
-      au < manifest ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; https://traj.openlibhums.org/ >
-
-  }
 
 }
 {
@@ -736,7 +628,8 @@
       au < released ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; https://www.designsforlearning.nu/ >
       au < released ; 2018 ; 10 ; Designs for Learning Volume 2018 ; 2018 ; https://www.designsforlearning.nu/ >
       au < released ; 2019 ; 11 ; Designs for Learning Volume 2019 ; 2019 ; https://www.designsforlearning.nu/ >
-      au < manifest ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 ; https://www.designsforlearning.nu/ >
+      au < released ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 ; https://www.designsforlearning.nu/ >
+      au < manifest ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 ; https://www.designsforlearning.nu/ >
 
   }
 
@@ -756,6 +649,7 @@
       au < released ; 2018 ; 4 ; Karib: Nordic Journal for Caribbean Studies Volume 2018 ; 2018 ; https://www.karib.no/ >
       au < released ; 2019 ; 5 ; Karib: Nordic Journal for Caribbean Studies Volume 2019 ; 2019 ; https://www.karib.no/ >
       au < expected ; 2020 ; 6 ; Karib: Nordic Journal for Caribbean Studies Volume 2020 ; 2020 ; https://www.karib.no/ >
+      au < manifest ; 2021 ; 7 ; Karib: Nordic Journal for Caribbean Studies Volume 2021 ; 2021 ; https://www.karib.no/ >
 
   }
 
@@ -775,7 +669,8 @@
       au < released ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; https://www.rurallandscapesjournal.com/ >
       au < released ; 2018 ; 5 ; Rural Landscapes: Society, Environment, History Volume 2018 ; 2018 ; https://www.rurallandscapesjournal.com/ >
       au < released ; 2019 ; 6 ; Rural Landscapes: Society, Environment, History Volume 2019 ; 2019 ; https://www.rurallandscapesjournal.com/ >
-      au < manifest ; 2020 ; 7 ; Rural Landscapes: Society, Environment, History Volume 2020 ; 2020 ; https://www.rurallandscapesjournal.com/ >
+      au < released ; 2020 ; 7 ; Rural Landscapes: Society, Environment, History Volume 2020 ; 2020 ; https://www.rurallandscapesjournal.com/ >
+      au < manifest ; 2021 ; 8 ; Rural Landscapes: Society, Environment, History Volume 2021 ; 2021 ; https://www.rurallandscapesjournal.com/ >
 
   }
 
@@ -787,8 +682,8 @@
       eissn = 1745-3011 ;
       issnl = 1501-7419
     >
-
       #publisher = Stockholm University Press
+
 
     au < manifest ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; https://www.sjdr.se/ >
     au < released ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; https://www.sjdr.se/ >
@@ -811,7 +706,8 @@
     au < released ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; https://www.sjdr.se/ >
     au < released ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; https://www.sjdr.se/ >
     au < released ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; https://www.sjdr.se/ >
-    au < manifest ; 2020 ; 22 ; Scandinavian Journal of Disability Research Volume 22 ; 2020 ; https://www.sjdr.se/ >
+    au < released ; 2020 ; 22 ; Scandinavian Journal of Disability Research Volume 22 ; 2020 ; https://www.sjdr.se/ >
+    au < manifest ; 2021 ; 23 ; Scandinavian Journal of Disability Research Volume 23 ; 2021 ; https://www.sjdr.se/ >
 
   }
 
@@ -829,7 +725,8 @@
       au < released ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; https://www.sjwop.com/ >
       au < released ; 2018 ; 3 ; Scandinavian Journal of Work and Organizational Psychology Volume 2018 ; 2018 ; https://www.sjwop.com/ >
       au < released ; 2019 ; 4 ; Scandinavian Journal of Work and Organizational Psychology Volume 2019 ; 2019 ; https://www.sjwop.com/ >
-      au < manifest ; 2020 ; 5 ; Scandinavian Journal of Work and Organizational Psychology Volume 2020 ; 2020 ; https://www.sjwop.com/ >
+      au < released ; 2020 ; 5 ; Scandinavian Journal of Work and Organizational Psychology Volume 2020 ; 2020 ; https://www.sjwop.com/ >
+      au < manifest ; 2021 ; 6 ; Scandinavian Journal of Work and Organizational Psychology Volume 2021 ; 2021 ; https://www.sjwop.com/ >
 
   }
 
@@ -862,7 +759,8 @@
       au < released ; 2017 ; 17 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; https://www.iberoamericana.se/ >
       au < released ; 2018 ; 18 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2018 ; 2018 ; https://www.iberoamericana.se/ >
       au < released ; 2019 ; 19 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2019 ; 2019 ; https://www.iberoamericana.se/ >
-      au < manifest ; 2020 ; 20 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2020 ; 2020 ; https://www.iberoamericana.se/ >
+      au < released ; 2020 ; 20 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2020 ; 2020 ; https://www.iberoamericana.se/ >
+      au < manifest ; 2021 ; 21 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; https://www.iberoamericana.se/ >
 
   }
   {
@@ -877,7 +775,8 @@
 
       au < released ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; https://franorfon.org/ >
       au < released ; 2019 ; 2 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2019 ; 2019 ; https://franorfon.org/ >
-      au < manifest ; 2020 ; 3 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2020 ; 2020 ; https://franorfon.org/ >
+      au < released ; 2020 ; 3 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2020 ; 2020 ; https://franorfon.org/ >
+      au < manifest ; 2021 ; 4 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2021 ; 2021 ; https://franorfon.org/ >
 
   }
 
@@ -926,7 +825,8 @@
       au < released ; 2017 ; 8 ; Ancient Asia Volume 2017 ; 2017 ; https://www.ancient-asia-journal.com/ >
       au < released ; 2018 ; 9 ; Ancient Asia Volume 2018 ; 2018 ; https://www.ancient-asia-journal.com/ >
       au < released ; 2019 ; 10 ; Ancient Asia Volume 2019 ; 2019 ; https://www.ancient-asia-journal.com/ >
-      au < manifest ; 2020 ; 11 ; Ancient Asia Volume 2020 ; 2020 ; https://www.ancient-asia-journal.com/ >
+      au < released ; 2020 ; 11 ; Ancient Asia Volume 2020 ; 2020 ; https://www.ancient-asia-journal.com/ >
+      au < manifest ; 2021 ; 12 ; Ancient Asia Volume 2021 ; 2021 ; https://www.ancient-asia-journal.com/ >
 
   }
 
@@ -941,6 +841,7 @@
 #      param[base_url] = https://journal-buildingscities.org/
 
       au < manifest ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; https://journal-buildingscities.org/ >
+      au < manifest ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; https://journal-buildingscities.org/ >
 
   }
 
@@ -971,7 +872,8 @@
       au < manifest ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; https://www.current-journal.com/ >
       au < manifest ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ >
       au < manifest ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ >
-      au < manifest ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ >
+      au < released ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ >
+      au < expected ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; https://www.current-journal.com/ >
 
   }
 
@@ -1010,6 +912,7 @@
       au < released ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ >
       au < expected ; 2019 ; 22 ; Archaeology International Volume 2019 ; 2019 ; https://ai-journal.com/ >
       au < manifest ; 2020 ; 23 ; Archaeology International Volume 2020 ; 2020 ; https://ai-journal.com/ >
+      au < expected ; 2021 ; 24 ; Archaeology International Volume 2021 ; 2021 ; https://ai-journal.com/ >
 
   }
 
@@ -1030,7 +933,8 @@
       au < released ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; https://journal.eahn.org/ >
       au < released ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; https://journal.eahn.org/ >
       au < released ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 ; https://journal.eahn.org/ >
-      au < manifest ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; https://journal.eahn.org/ >
+      au < released ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; https://journal.eahn.org/ >
+      au < manifest ; 2021 ; 9 ; Architectural Histories Volume 2021 ; 2021 ; https://journal.eahn.org/ >
 
   }
 
@@ -1043,10 +947,11 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.revista-anglo-saxonica.org/
-
       #2019 AUs are published on the 2020 manifest page. See https://www.revista-anglo-saxonica.org/lockss/year/2020/
+
       au < doNotProcess ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; https://www.revista-anglo-saxonica.org/ >
-      au < manifest ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ >
+      au < released ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; https://www.revista-anglo-saxonica.org/ >
+      au < manifest ; 2021 ; 19 ; Anglo Saxonica Volume 2021 ; 2021 ; https://www.revista-anglo-saxonica.org/ >
 
   }
 
@@ -1064,7 +969,8 @@
       au < released ; 2017 ; 2 ; ARENA Journal of Architectural Research Volume 2017 ; 2017 ; https://ajar.arena-architecture.eu/ >
       au < released ; 2018 ; 3 ; ARENA Journal of Architectural Research Volume 2018 ; 2018 ; https://ajar.arena-architecture.eu/ >
       au < released ; 2019 ; 4 ; ARENA Journal of Architectural Research Volume 2019 ; 2019 ; https://ajar.arena-architecture.eu/ >
-      au < manifest ; 2020 ; 5 ; ARENA Journal of Architectural Research Volume 2020 ; 2020 ; https://ajar.arena-architecture.eu/ >
+      au < released ; 2020 ; 5 ; ARENA Journal of Architectural Research Volume 2020 ; 2020 ; https://ajar.arena-architecture.eu/ >
+      au < manifest ; 2021 ; 6 ; ARENA Journal of Architectural Research Volume 2021 ; 2021 ; https://ajar.arena-architecture.eu/ >
 
   }
 
@@ -1108,7 +1014,8 @@
       au < released ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; https://www.archaeologybulletin.org/ >
       au < released ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; https://www.archaeologybulletin.org/ >
       au < released ; 2019 ; 29 ; Bulletin of the History of Archaeology Volume 2019 ; 2019 ; https://www.archaeologybulletin.org/ >
-      au < manifest ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; https://www.archaeologybulletin.org/ >
+      au < released ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; https://www.archaeologybulletin.org/ >
+      au < manifest ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; https://www.archaeologybulletin.org/ >
 
   }
 
@@ -1127,6 +1034,7 @@
       au < released ; 2018 ; 3 ; Citizen Science: Theory and Practice Volume 2018 ; 2018 ; https://theoryandpractice.citizenscienceassociation.org/ >
       au < released ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 ; https://theoryandpractice.citizenscienceassociation.org/ >
       au < manifest ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; https://theoryandpractice.citizenscienceassociation.org/ >
+      au < manifest ; 2021 ; 6 ; Citizen Science: Theory and Practice Volume 2021 ; 2021 ; https://theoryandpractice.citizenscienceassociation.org/ >
 
   }
 
@@ -1158,7 +1066,8 @@
       au < released ; 2017 ; 16 ; Data Science Journal Volume 2017 ; 2017 ; https://datascience.codata.org/ >
       au < released ; 2018 ; 17 ; Data Science Journal Volume 2018 ; 2018 ; https://datascience.codata.org/ >
       au < released ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 ; https://datascience.codata.org/ >
-      au < manifest ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 ; https://datascience.codata.org/ >
+      au < released ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 ; https://datascience.codata.org/ >
+      au < manifest ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 ; https://datascience.codata.org/ >
 
   }
 
@@ -1168,13 +1077,14 @@
         name = Future Cities and Environment ;
         eissn = 2363-9075
       >
-
       #publisher = Ubiquity Press
-
       #au < doNotProcess ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ >
+
+
       au < released ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; https://futurecitiesandenvironment.com/ >
       au < released ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; https://futurecitiesandenvironment.com/ >
-      au < manifest ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; https://futurecitiesandenvironment.com/ >
+      au < released ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; https://futurecitiesandenvironment.com/ >
+      au < manifest ; 2021 ; 4 ; Future Cities and Environment Volume 2021 ; 2021 ; https://futurecitiesandenvironment.com/ >
 
   }
 
@@ -1192,7 +1102,8 @@
       au < released ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; http://www.glocality.eu/ >
       au < released ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; https://www.glocality.eu/ >
       au < expected ; 2019 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; https://www.glocality.eu/ >
-      au < manifest ; 2020 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; https://www.glocality.eu/ >
+      au < released ; 2020 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; https://www.glocality.eu/ >
+      au < manifest ; 2021 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; https://www.glocality.eu/ >
 
   }
 
@@ -1244,6 +1155,7 @@
       au < released ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; https://www.ijic.org/ >
       au < manifest ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; https://www.ijic.org/ >
       au < manifest ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; https://www.ijic.org/ >
+      au < manifest ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; https://www.ijic.org/ >
 
   }
 
@@ -1261,7 +1173,8 @@
       au < released ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; https://www.rips-irsp.com/ >
       au < manifest ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ >
       au < released ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ >
-      au < manifest ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ >
+      au < released ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ >
+      au < manifest ; 2021 ; 6 ; International Review of Social Psychology Volume 2021 ; 2021 ; https://www.rips-irsp.com/ >
 
   }
 
@@ -1292,7 +1205,8 @@
       au < released ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; https://www.jcircadianrhythms.com/ >
       au < released ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; https://www.jcircadianrhythms.com/ >
       au < released ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; https://www.jcircadianrhythms.com/ >
-      au < manifest ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; https://www.jcircadianrhythms.com/ >
+      au < manifest ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; https://www.jcircadianrhythms.com/ >
 
   }
 
@@ -1321,7 +1235,8 @@
       au < released ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; https://www.jcms-journal.com/ >
       au < released ; 2018 ; 16 ; Journal of Conservation and Museum Studies Volume 2018 ; 2018 ; https://www.jcms-journal.com/ >
       au < released ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; https://www.jcms-journal.com/ >
-      au < manifest ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; https://www.jcms-journal.com/ >
+      au < released ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; https://www.jcms-journal.com/ >
+      au < manifest ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; https://www.jcms-journal.com/ >
 
   }
 
@@ -1345,7 +1260,8 @@
       au < released ; 2017 ; 8 ; Journal of European Psychology Students Volume 2017 ; 2017 ; https://jeps.efpsa.org/ >
       au < released ; 2018 ; 9 ; Journal of European Psychology Students Volume 2018 ; 2018 ; https://jeps.efpsa.org/ >
       au < released ; 2019 ; 10 ; Journal of European Psychology Students Volume 2019 ; 2019 ; https://jeps.efpsa.org/ >
-      au < manifest ; 2020 ; 11 ; Journal of European Psychology Students Volume 2020 ; 2020 ; https://jeps.efpsa.org/ >
+      au < released ; 2020 ; 11 ; Journal of European Psychology Students Volume 2020 ; 2020 ; https://jeps.efpsa.org/ >
+      au < expected ; 2021 ; 12 ; Journal of European Psychology Students Volume 2021 ; 2021 ; https://jeps.efpsa.org/ >
 
   }
 
@@ -1398,6 +1314,7 @@
       au < manifest ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ >
       au < manifest ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ >
       au < manifest ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ >
+      au < manifest ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ >
     }
   }
 
@@ -1425,7 +1342,8 @@
       au < released ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; https://www.jmolecularsignaling.com/ >
       au < released ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; https://www.jmolecularsignaling.com/ >
       au < expected ; 2019 ; 14 ; Journal of Molecular Signaling Volume 2019 ; 2019 ; https://www.jmolecularsignaling.com/ >
-      au < manifest ; 2020 ; 15 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2020 ; 15 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; https://www.jmolecularsignaling.com/ >
+      au < expected ; 2021 ; 16 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; https://www.jmolecularsignaling.com/ >
 
   }
 
@@ -1446,7 +1364,8 @@
       au < released ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; http://openarchaeologydata.metajnl.com/ >
       au < released ; 2018 ; 6 ; Journal of Open Archaeology Data Volume 2018 ; 2018 ; https://openarchaeologydata.metajnl.com/ >
       au < released ; 2019 ; 7 ; Journal of Open Archaeology Data Volume 2019 ; 2019 ; https://openarchaeologydata.metajnl.com/ >
-      au < manifest ; 2020 ; 8 ; Journal of Open Archaeology Data Volume 2020 ; 2020 ; https://openarchaeologydata.metajnl.com/ >
+      au < released ; 2020 ; 8 ; Journal of Open Archaeology Data Volume 2020 ; 2020 ; https://openarchaeologydata.metajnl.com/ >
+      au < manifest ; 2021 ; 9 ; Journal of Open Archaeology Data Volume 2021 ; 2021 ; https://openarchaeologydata.metajnl.com/ >
 
   }
 
@@ -1481,7 +1400,8 @@
       au < released ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ >
       au < released ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ >
       au < released ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 ; https://openhealthdata.metajnl.com/ >
-      au < manifest ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 ; https://openhealthdata.metajnl.com/ >
+      au < released ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 ; https://openhealthdata.metajnl.com/ >
+      au < expected ; 2021 ; 8 ; Open Health Data Volume 2021 ; 2021 ; https://openhealthdata.metajnl.com/ >
 
   }
 
@@ -1500,7 +1420,8 @@
       au < released ; 2017 ; 3 ; Journal of Open Humanities Data Volume 2017 ; 2017 ; https://openhumanitiesdata.metajnl.com/ >
       au < released ; 2018 ; 4 ; Journal of Open Humanities Data Volume 2018 ; 2018 ; https://openhumanitiesdata.metajnl.com/ >
       au < released ; 2019 ; 5 ; Journal of Open Humanities Data Volume 2019 ; 2019 ; https://openhumanitiesdata.metajnl.com/ >
-      au < manifest ; 2020 ; 6 ; Journal of Open Humanities Data Volume 2020 ; 2020 ; https://openhumanitiesdata.metajnl.com/ >
+      au < released ; 2020 ; 6 ; Journal of Open Humanities Data Volume 2020 ; 2020 ; https://openhumanitiesdata.metajnl.com/ >
+      au < manifest ; 2021 ; 7 ; Journal of Open Humanities Data Volume 2021 ; 2021 ; https://openhumanitiesdata.metajnl.com/ >
 
   }
 
@@ -1521,7 +1442,8 @@
       au < released ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; https://openpsychologydata.metajnl.com/ >
       au < released ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ >
       au < released ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ >
-      au < manifest ; 2020 ; 8 ; Journal of Open Psychology Data Volume 2020 ; 2020 ; https://openpsychologydata.metajnl.com/ >
+      au < released ; 2020 ; 8 ; Journal of Open Psychology Data Volume 2020 ; 2020 ; https://openpsychologydata.metajnl.com/ >
+      au < manifest ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; https://openpsychologydata.metajnl.com/ >
 
   }
 
@@ -1542,7 +1464,8 @@
       au < released ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; https://openresearchsoftware.metajnl.com/ >
       au < released ; 2018 ; 6 ; Journal of Open Research Software Volume 2018 ; 2018 ; https://openresearchsoftware.metajnl.com/ >
       au < released ; 2019 ; 7 ; Journal of Open Research Software Volume 2019 ; 2019 ; https://openresearchsoftware.metajnl.com/ >
-      au < manifest ; 2020 ; 8 ; Journal of Open Research Software Volume 2020 ; 2020 ; https://openresearchsoftware.metajnl.com/ >
+      au < released ; 2020 ; 8 ; Journal of Open Research Software Volume 2020 ; 2020 ; https://openresearchsoftware.metajnl.com/ >
+      au < manifest ; 2021 ; 9 ; Journal of Open Research Software Volume 2021 ; 2021 ; https://openresearchsoftware.metajnl.com/ >
 
   }
 
@@ -1562,7 +1485,8 @@
       au < released ; 2017 ; 3 ; Journal of Portuguese Linguistics Volume 2017 ; 2017 ; https://jpl.letras.ulisboa.pt/ >
       au < released ; 2018 ; 4 ; Journal of Portuguese Linguistics Volume 2018 ; 2018 ; https://jpl.letras.ulisboa.pt/ >
       au < released ; 2019 ; 5 ; Journal of Portuguese Linguistics Volume 2019 ; 2019 ; https://jpl.letras.ulisboa.pt/ >
-      au < manifest ; 2020 ; 6 ; Journal of Portuguese Linguistics Volume 2020 ; 2020 ; https://jpl.letras.ulisboa.pt/ >
+      au < released ; 2020 ; 6 ; Journal of Portuguese Linguistics Volume 2020 ; 2020 ; https://jpl.letras.ulisboa.pt/ >
+      au < manifest ; 2021 ; 7 ; Journal of Portuguese Linguistics Volume 2021 ; 2021 ; https://jpl.letras.ulisboa.pt/ >
 
   }
 
@@ -1601,7 +1525,8 @@
       au < released ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; https://www.jbsr.be/ >
       au < released ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; https://www.jbsr.be/ >
       au < released ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; https://www.jbsr.be/ >
-      au < manifest ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; https://www.jbsr.be/ >
+      au < released ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; https://www.jbsr.be/ >
+      au < manifest ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; https://www.jbsr.be/ >
 
   }
 
@@ -1619,7 +1544,8 @@
       au < released ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; https://www.journal-labphon.org/ >
       au < released ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 ; https://www.journal-labphon.org/ >
       au < released ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 ; https://www.journal-labphon.org/ >
-      au < manifest ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 ; https://www.journal-labphon.org/ >
+      au < released ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 ; https://www.journal-labphon.org/ >
+      au < manifest ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 ; https://www.journal-labphon.org/ >
 
   }
 
@@ -1637,7 +1563,8 @@
       au < released ; 2017 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2017 ; 2017 ; https://www.mahkuscript.com/ >
       au < released ; 2018 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 2018 ; 2018 ; https://www.mahkuscript.com/ >
       au < released ; 2019 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 2019 ; 2019 ; https://www.mahkuscript.com/ >
-      au < manifest ; 2020 ; 5 ; MaHKUscript: Journal of Fine Art Research Volume 2020 ; 2020 ; https://www.mahkuscript.com/ >
+      au < released ; 2020 ; 5 ; MaHKUscript: Journal of Fine Art Research Volume 2020 ; 2020 ; https://www.mahkuscript.com/ >
+      au < expected ; 2021 ; 6 ; MaHKUscript: Journal of Fine Art Research Volume 2021 ; 2021 ; https://www.mahkuscript.com/ >
 
   }
 
@@ -1657,7 +1584,8 @@
       au < released ; 2017 ; 4 ; Open Journal of Bioresources Volume 2017 ; 2017 ; https://openbioresources.metajnl.com/ >
       au < released ; 2018 ; 5 ; Open Journal of Bioresources Volume 2018 ; 2018 ; https://openbioresources.metajnl.com/ >
       au < released ; 2019 ; 6 ; Open Journal of Bioresources Volume 2019 ; 2019 ; https://openbioresources.metajnl.com/ >
-      au < manifest ; 2020 ; 7 ; Open Journal of Bioresources Volume 2020 ; 2020 ; https://openbioresources.metajnl.com/ >
+      au < released ; 2020 ; 7 ; Open Journal of Bioresources Volume 2020 ; 2020 ; https://openbioresources.metajnl.com/ >
+      au < manifest ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 ; https://openbioresources.metajnl.com/ >
 
   }
 
@@ -1685,7 +1613,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://continuityineducation.org/
 
-      au < manifest ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; https://continuityineducation.org/ >
+      au < released ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; https://continuityineducation.org/ >
+      au < manifest ; 2021 ; 2 ; Continuity in Education Volume 2021 ; 2021 ; https://continuityineducation.org/ >
 
   }
 
@@ -1712,7 +1641,8 @@
       au < released ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ >
       au < released ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ >
       au < released ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ >
-      au < manifest ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ >
+      au < released ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ >
+      au < manifest ; 2021 ; 15 ; International Journal of the Commons Volume 2021 ; 2021 ; https://www.thecommonsjournal.org/ >
 
   }
 
@@ -1740,7 +1670,8 @@
       au < released ; 2017 ; 12 ; Global Heart Volume 2017 ; 2017 ;  https://globalheartjournal.com/ >
       au < released ; 2018 ; 13 ; Global Heart Volume 2018 ; 2018 ;  https://globalheartjournal.com/ >
       au < released ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 ;  https://globalheartjournal.com/ >
-      au < manifest ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ >
+      au < released ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ >
+      au < manifest ; 2021 ; 16 ; Global Heart Volume 2021 ; 2021 ;  https://globalheartjournal.com/ >
 
   }
 
@@ -1759,7 +1690,8 @@
       au < released ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; https://www.openquaternary.com/ >
       au < manifest ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; https://www.openquaternary.com/ >
       au < released ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; https://www.openquaternary.com/ >
-      au < manifest ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ >
+      au < released ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ >
+      au < manifest ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; https://www.openquaternary.com/ >
 
   }
 
@@ -1848,7 +1780,8 @@
       au < released ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ >
       au < released ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ >
       au < released ; 2019 ; 10 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ >
-      au < manifest ; 2020 ; 11 ; Present Pasts Volume 2020 ; 2020 ; https://presentpasts.info/ >
+      au < released ; 2020 ; 11 ; Present Pasts Volume 2020 ; 2020 ; https://presentpasts.info/ >
+      au < expected ; 2021 ; 12 ; Present Pasts Volume 2021 ; 2021 ; https://presentpasts.info/ >
     }
   }
 
@@ -1877,7 +1810,8 @@
       au < released ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ >
       au < released ; 2018 ; 14 ; Psychologica Belgica Volume 2018 ; 2018 ; https://www.psychologicabelgica.com/ >
       au < released ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; https://www.psychologicabelgica.com/ >
-      au < manifest ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; https://www.psychologicabelgica.com/ >
+      au < released ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; https://www.psychologicabelgica.com/ >
+      au < manifest ; 2021 ; 17 ; Psychologica Belgica Volume 2021 ; 2021 ; https://www.psychologicabelgica.com/ >
 
   }
 
@@ -1912,7 +1846,8 @@
       au < released ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ >
       au < released ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ >
       au < released ; 2019 ; 8 ; Secularism and Nonreligion Volume 2019 ; 2019 ; https://secularismandnonreligion.org/ >
-      au < manifest ; 2020 ; 9 ; Secularism and Nonreligion Volume 2020 ; 2020 ; https://secularismandnonreligion.org/ >
+      au < released ; 2020 ; 9 ; Secularism and Nonreligion Volume 2020 ; 2020 ; https://secularismandnonreligion.org/ >
+      au < manifest ; 2021 ; 10 ; Secularism and Nonreligion Volume 2021 ; 2021 ; https://secularismandnonreligion.org/ >
     }
   }
 
@@ -1951,7 +1886,8 @@
       au < released ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ >
       au < released ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://utrechtjournal.org/ >
       au < expected ; 2019 ; 10 ; Utrecht Journal of International and European Law Volume 2019 ; 2019 ; https://utrechtjournal.org/ >
-      au < manifest ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; https://utrechtjournal.org/ >
+      au < released ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; https://utrechtjournal.org/ >
+      au < manifest ; 2021 ; 12 ; Utrecht Journal of International and European Law Volume 2021 ; 2021 ; https://utrechtjournal.org/ >
     }
   }
 
@@ -1968,7 +1904,8 @@
       au < released ; 2017 ; 1 ; Health Psychology Bulletin Volume 2017 ; 2017 ; https://www.healthpsychologybulletin.com/ >
       au < released ; 2018 ; 2 ; Health Psychology Bulletin Volume 2018 ; 2018 ; https://www.healthpsychologybulletin.com/ >
       au < released ; 2019 ; 3 ; Health Psychology Bulletin Volume 2019 ; 2019 ; https://www.healthpsychologybulletin.com/ >
-      au < manifest ; 2020 ; 4 ; Health Psychology Bulletin Volume 2020 ; 2020 ; https://www.healthpsychologybulletin.com/ >
+      au < released ; 2020 ; 4 ; Health Psychology Bulletin Volume 2020 ; 2020 ; https://www.healthpsychologybulletin.com/ >
+      au < manifest ; 2021 ; 5 ; Health Psychology Bulletin Volume 2021 ; 2021 ; https://www.healthpsychologybulletin.com/ >
 
   }
 
@@ -1984,14 +1921,15 @@
 
       au < released ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ >
       au < released ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ >
-      au < manifest ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ >
+      au < released ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ >
       au < released ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ >
       au < released ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ >
-      au < manifest ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ >
+      au < released ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ >
       au < released ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ >
-      au < manifest ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ >
+      au < released ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ >
       au < released ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ >
-      au < manifest ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ >
+      au < released ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ >
+      au < manifest ; 2021 ; 11 ; Tremor and Other Hyperkinetic Movements Volume 2021 ; 2021 ; https://tremorjournal.org/ >
 
   }
   {
@@ -2007,7 +1945,8 @@
       au < released ; 2017 ; 1 ; Journal of Open Hardware Volume 2017 ; 2017 ; https://openhardware.metajnl.com/ >
       au < released ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; https://openhardware.metajnl.com/ >
       au < released ; 2019 ; 3 ; Journal of Open Hardware Volume 2019 ; 2019 ; https://openhardware.metajnl.com/ >
-      au < manifest ; 2020 ; 4 ; Journal of Open Hardware Volume 2020 ; 2020 ; https://openhardware.metajnl.com/ >
+      au < released ; 2020 ; 4 ; Journal of Open Hardware Volume 2020 ; 2020 ; https://openhardware.metajnl.com/ >
+      au < manifest ; 2021 ; 5 ; Journal of Open Hardware Volume 2021 ; 2021 ; https://openhardware.metajnl.com/ >
 
   }
   {
@@ -2032,7 +1971,8 @@
       au < released ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ >
       au < released ; 2018 ; 11 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ >
       au < released ; 2019 ; 12 ; Cultural Science Journal Volume 2019 ; 2019 ; https://culturalscience.org/ >
-      au < manifest ; 2020 ; 13 ; Cultural Science Journal Volume 2020 ; 2020 ; https://culturalscience.org/ >
+      au < released ; 2020 ; 13 ; Cultural Science Journal Volume 2020 ; 2020 ; https://culturalscience.org/ >
+      au < expected ; 2021 ; 14 ; Cultural Science Journal Volume 2021 ; 2021 ; https://culturalscience.org/ >
 
   }
 
@@ -2055,6 +1995,7 @@
       au < released ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ >
       au < released ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ >
       au < expected ; 2020 ; 8 ; eGEMs Volume 2020 ; 2020 ; https://egems.academyhealth.org/ >
+      au < expected ; 2021 ; 9 ; eGEMs Volume 2021 ; 2021 ; https://egems.academyhealth.org/ >
 
   }
 
@@ -2075,6 +2016,7 @@
       au < released ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ >
       au < manifest ; 2019 ; 6 ; European Journal of Molecular and Clinical Medicine Volume 2019 ; 2019 ; https://www.ejmcm.com/ >
       au < expected ; 2020 ; 7 ; European Journal of Molecular and Clinical Medicine Volume 2020 ; 2020 ; https://www.ejmcm.com/ >
+      au < expected ; 2021 ; 8 ; European Journal of Molecular and Clinical Medicine Volume 2021 ; 2021 ; https://www.ejmcm.com/ >
 
   }
 
@@ -2090,7 +2032,8 @@
 
       au < manifest ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ >
       au < released ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ >
-      au < manifest ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ >
+      au < released ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ >
+      au < manifest ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; https://www.journalofcognition.org/ >
 
   }
 
@@ -2106,7 +2049,8 @@
 
       au < released ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ >
       au < released ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; https://journal.caa-international.org/ >
-      au < manifest ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ >
+      au < released ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ >
+      au < manifest ; 2021 ; 4 ; Journal of Computer Applications in Archaeology Volume 2021 ; 2021 ; https://journal.caa-international.org/ >
 
   }
 
@@ -2124,6 +2068,7 @@
       au < released ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ >
       au < released ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; https://kula.uvic.ca/ >
       au < manifest ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 ; 2020 ; https://kula.uvic.ca/ >
+      au < expected ; 2021 ; 5 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2021 ; 2021 ; https://kula.uvic.ca/ >
 
   }
 
@@ -2139,7 +2084,8 @@
 
       au < released ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ >
       au < released ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 ; https://metaphysicsjournal.com/ >
-      au < manifest ; 2020 ; 3 ; Metaphysics Volume 2020 ; 2020 ; https://metaphysicsjournal.com/ >
+      au < released ; 2020 ; 3 ; Metaphysics Volume 2020 ; 2020 ; https://metaphysicsjournal.com/ >
+      au < expected ; 2021 ; 4 ; Metaphysics Volume 2021 ; 2021 ; https://metaphysicsjournal.com/ >
 
   }
 
@@ -2156,7 +2102,8 @@
       au < released ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ >
       au < released ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ >
       au < released ; 2019 ; 3 ; Physical Activity and Health Volume 2019 ; 2019 ; https://paahjournal.com/ >
-      au < manifest ; 2020 ; 4 ; Physical Activity and Health Volume 2020 ; 2020 ; https://paahjournal.com/ >
+      au < released ; 2020 ; 4 ; Physical Activity and Health Volume 2020 ; 2020 ; https://paahjournal.com/ >
+      au < manifest ; 2021 ; 5 ; Physical Activity and Health Volume 2021 ; 2021 ; https://paahjournal.com/ >
 
   }
 
@@ -2179,7 +2126,8 @@
       au < released ; 2017 ; 6 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ >
       au < released ; 2018 ; 7 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ >
       au < released ; 2019 ; 8 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ >
-      au < manifest ; 2020 ; 9 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ >
+      au < released ; 2020 ; 9 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ >
+      au < expected ; 2021 ; 10 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 ; https://tilburglawreview.com/ >
 
   }
 
@@ -2204,6 +2152,7 @@
       au < released ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ >
       au < manifest ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ >
       au < manifest ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ >
+      au < manifest ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ >
 
   }
 
@@ -2220,6 +2169,7 @@
       au < released ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ >
       au < doesNotExist ; 2019 ; 2 ; International Journal of Driving Science Volume 2019 ; 2019 ; https://www.ijds.eu/ >
       au < expected ; 2020 ; 3 ; International Journal of Driving Science Volume 2020 ; 2020 ; https://www.ijds.eu/ >
+      au < expected ; 2021 ; 4 ; International Journal of Driving Science Volume 2021 ; 2021 ; https://www.ijds.eu/ >
 
   }
 
@@ -2235,7 +2185,8 @@
 
       au < released ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ >
       au < released ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; https://www.worldwidewastejournal.com/ >
-      au < manifest ; 2020 ; 3 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 2020 ; https://www.worldwidewastejournal.com/ >
+      au < released ; 2020 ; 3 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 2020 ; https://www.worldwidewastejournal.com/ >
+      au < manifest ; 2021 ; 4 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 2021 ; https://www.worldwidewastejournal.com/ >
 
   }
 
@@ -2249,9 +2200,10 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://transactions.ismir.net/
 
-      au < manifest ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ >
-      au < manifest ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ >
-      au < manifest ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ >
+      au < released ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ >
+      au < released ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ >
+      au < released ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ >
+      au < manifest ; 2021 ; 4 ; Transactions of the International Society for Music Information Retrieval Volume 2021 ; 2021 ; https://transactions.ismir.net/ >
 
   }
 
@@ -2283,7 +2235,8 @@
       au < released ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; https://insights.uksg.org/ >
       au < released ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; https://insights.uksg.org/ >
       au < released ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ >
-      au < manifest ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; https://insights.uksg.org/ >
+      au < released ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; https://insights.uksg.org/ >
+      au < manifest ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 ; https://insights.uksg.org/ >
 
   }
 
@@ -2312,7 +2265,7 @@
       au < manifest ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ >
       au < released ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ >
       au < released ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ >
-      au < manifest ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ >
+      au < released ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ >
       au < released ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ >
       au < released ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ >
       au < released ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ >
@@ -2363,6 +2316,7 @@
       au < released ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; https://www.entsportslawjournal.com/ >
       au < released ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ >
       au < manifest ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ >
+      au < expected ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; https://www.entsportslawjournal.com/ >
 
   }
 
@@ -2392,6 +2346,7 @@
       au < manifest ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ >
       au < released ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ >
       au < manifest ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ >
+      au < expected ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; https://delibdemjournal.org/ >
 
   }
 
@@ -2407,6 +2362,7 @@
 
       au < released ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; https://silkroadjournal.online/ >
       au < manifest ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; https://silkroadjournal.online/ >
+      au < expected ; 2021 ; 3 ; Silk Road Volume 2021 ; 2021 ; https://silkroadjournal.online/ >
 
   }
 
@@ -2431,6 +2387,7 @@
       au < released ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ >
       au < released ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ >
       au < manifest ; 2020 ; 15 ; Westminster Papers in Communication and Culture Volume 2020 ; 2020 ; https://www.westminsterpapers.org/ >
+      au < expected ; 2021 ; 16 ; Westminster Papers in Communication and Culture Volume 2021 ; 2021 ; https://www.westminsterpapers.org/ >
 
   }
 
@@ -2504,7 +2461,8 @@
       au < released ; 2017 ; 48 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; https://www.bmgn-lchr.nl/ >
       au < released ; 2018 ; 49 ; BMGN - Low Countries Historical Review Volume 2018 ; 2018 ; https://www.bmgn-lchr.nl/ >
       au < released ; 2019 ; 50 ; BMGN - Low Countries Historical Review Volume 2019 ; 2019 ; https://www.bmgn-lchr.nl/ >
-      au < manifest ; 2020 ; 51 ; BMGN - Low Countries Historical Review Volume 2020 ; 2020 ; https://www.bmgn-lchr.nl/ >
+      au < released ; 2020 ; 51 ; BMGN - Low Countries Historical Review Volume 2020 ; 2020 ; https://www.bmgn-lchr.nl/ >
+      au < expected ; 2021 ; 52 ; BMGN - Low Countries Historical Review Volume 2021 ; 2021 ; https://www.bmgn-lchr.nl/ >
 
   }
 
@@ -2543,6 +2501,7 @@
       au < manifest ; 2018 ; 2 ; Early Modern Low Countries Volume 2018 ; 2018 ; https://www.emlc-journal.org/ >
       au < manifest ; 2019 ; 3 ; Early Modern Low Countries Volume 2019 ; 2019 ; https://www.emlc-journal.org/ >
       au < manifest ; 2020 ; 4 ; Early Modern Low Countries Volume 2020 ; 2020 ; https://www.emlc-journal.org/ >
+      au < expected ; 2021 ; 5 ; Early Modern Low Countries Volume 2021 ; 2021 ; https://www.emlc-journal.org/ >
 
   }
 
@@ -2573,7 +2532,8 @@
       au < released ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; https://www.erlacs.org/ >
       au < released ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; https://www.erlacs.org/ >
       au < manifest ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; https://www.erlacs.org/ >
-      au < manifest ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 ; https://www.erlacs.org/ >
+      au < released ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 ; https://www.erlacs.org/ >
+      au < manifest ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; https://www.erlacs.org/ >
 
   }
 
@@ -2596,7 +2556,8 @@
       au < released ; 2017 ; 7 ; Incontri. Rivista europea di studi italiani Volume 2017 ; 2017 ; https://www.rivista-incontri.nl/ >
       au < released ; 2018 ; 8 ; Incontri. Rivista europea di studi italiani Volume 2018 ; 2018 ; https://www.rivista-incontri.nl/ >
       au < released ; 2019 ; 9 ; Incontri. Rivista europea di studi italiani Volume 2019 ; 2019 ; https://www.rivista-incontri.nl/ >
-      au < manifest ; 2020 ; 10 ; Incontri. Rivista europea di studi italiani Volume 2020 ; 2020 ; https://www.rivista-incontri.nl/ >
+      au < released ; 2020 ; 10 ; Incontri. Rivista europea di studi italiani Volume 2020 ; 2020 ; https://www.rivista-incontri.nl/ >
+      au < expected ; 2021 ; 11 ; Incontri. Rivista europea di studi italiani Volume 2021 ; 2021 ; https://www.rivista-incontri.nl/ >
 
   }
 
@@ -2622,7 +2583,8 @@
       au < released ; 2017 ; 10 ; International Journal for Court Administration Volume 2017 ; 2017 ; https://www.iacajournal.org/ >
       au < released ; 2018 ; 11 ; International Journal for Court Administration Volume 2018 ; 2018 ; https://www.iacajournal.org/ >
       au < released ; 2019 ; 12 ; International Journal for Court Administration Volume 2019 ; 2019 ; https://www.iacajournal.org/ >
-      au < manifest ; 2020 ; 13 ; International Journal for Court Administration Volume 2020 ; 2020 ; https://www.iacajournal.org/ >
+      au < released ; 2020 ; 13 ; International Journal for Court Administration Volume 2020 ; 2020 ; https://www.iacajournal.org/ >
+      au < manifest ; 2021 ; 14 ; International Journal for Court Administration Volume 2021 ; 2021 ; https://www.iacajournal.org/ >
 
   }
 
@@ -2645,6 +2607,7 @@
       au < released ; 2018 ; 6 ; International Journal for History, Culture and Modernity Volume 2018 ; 2018 ; https://www.history-culture-modernity.org/ >
       au < released ; 2019 ; 7 ; International Journal for History, Culture and Modernity Volume 2019 ; 2019 ; https://www.history-culture-modernity.org/ >
       au < expected ; 2020 ; 8 ; International Journal for History, Culture and Modernity Volume 2020 ; 2020 ; https://www.history-culture-modernity.org/ >
+      au < expected ; 2021 ; 9 ; International Journal for History, Culture and Modernity Volume 2021 ; 2021 ; https://www.history-culture-modernity.org/ >
 
   }
 
@@ -2673,7 +2636,8 @@
       au < released ; 2017 ; 13 ; Journal of Social Intervention Volume 2017 ; 2017 ; https://www.journalsi.org/ >
       au < released ; 2018 ; 14 ; Journal of Social Intervention Volume 2018 ; 2018 ; https://www.journalsi.org/ >
       au < released ; 2019 ; 15 ; Journal of Social Intervention Volume 2019 ; 2019 ; https://www.journalsi.org/ >
-      au < manifest ; 2020 ; 16 ; Journal of Social Intervention Volume 2020 ; 2020 ; https://www.journalsi.org/ >
+      au < released ; 2020 ; 16 ; Journal of Social Intervention Volume 2020 ; 2020 ; https://www.journalsi.org/ >
+      au < manifest ; 2021 ; 17 ; Journal of Social Intervention Volume 2021 ; 2021 ; https://www.journalsi.org/ >
 
   }
 
@@ -2708,7 +2672,8 @@
       au < released ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; https://www.liberquarterly.eu/ >
       au < released ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ >
       au < manifest ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ >
-      au < manifest ; 2020 ; 22 ; LIBER Quarterly Volume 2020 ; 2020 ; https://www.liberquarterly.eu/ >
+      au < released ; 2020 ; 22 ; LIBER Quarterly Volume 2020 ; 2020 ; https://www.liberquarterly.eu/ >
+      au < manifest ; 2021 ; 23 ; LIBER Quarterly Volume 2021 ; 2021 ; https://www.liberquarterly.eu/ >
 
   }
 
@@ -2736,6 +2701,7 @@
       au < released ; 2018 ; 12 ; RELIEF Volume 2018 ; 2018 ; https://www.revue-relief.org/ >
       au < released ; 2019 ; 13 ; RELIEF Volume 2019 ; 2019 ; https://www.revue-relief.org/ >
       au < manifest ; 2020 ; 14 ; RELIEF Volume 2020 ; 2020 ; https://www.revue-relief.org/ >
+      au < expected ; 2021 ; 15 ; RELIEF Volume 2021 ; 2021 ; https://www.revue-relief.org/ >
 
   }
 
@@ -2849,7 +2815,8 @@
       au < released ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ >
       au < released ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ >
       au < released ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; https://www.utrechtlawreview.org/ >
-      au < manifest ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; https://www.utrechtlawreview.org/ >
+      au < released ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; https://www.utrechtlawreview.org/ >
+      au < manifest ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 ; https://www.utrechtlawreview.org/ >
 
   }
 
@@ -2878,8 +2845,7 @@
       au < released ; 2017 ; 3 ; Collabra: Psychology Volume 2017 ; 2017 ; https://www.collabra.org/ >
       au < released ; 2018 ; 4 ; Collabra: Psychology Volume 2018 ; 2018 ; https://www.collabra.org/ >
       au < released ; 2019 ; 5 ; Collabra: Psychology Volume 2019 ; 2019 ; https://www.collabra.org/ >
-      au < manifest ; 2020 ; 6 ; Collabra: Psychology Volume 2020 ; 2020 ; https://www.collabra.org/ >
-
+      #Moved to UC Press on SC
   }
 
   {
@@ -2900,6 +2866,7 @@
       au < released ; 2018 ; 6 ; Elementa: Science of the Anthropocene Volume 2018 ; 2018 ; https://www.elementascience.org/ >
       au < released ; 2019 ; 7 ; Elementa: Science of the Anthropocene Volume 2019 ; 2019 ; https://www.elementascience.org/ >
       au < manifest ; 2020 ; 8 ; Elementa: Science of the Anthropocene Volume 2020 ; 2020 ; https://www.elementascience.org/ >
+      au < expected ; 2021 ; 9 ; Elementa: Science of the Anthropocene Volume 2021 ; 2021 ; https://www.elementascience.org/ >
 
   }
 
@@ -2933,7 +2900,8 @@
       au < released ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ >
       au < released ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ >
       au < released ; 2019 ; 16 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ >
-      au < manifest ; 2020 ; 17 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ >
+      au < released ; 2020 ; 17 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ >
+      au < manifest ; 2021 ; 18 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; https://www.bioj-online.com/ >
 
   }
 
@@ -2950,7 +2918,8 @@
       au < released ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ >
       au < released ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ >
       au < released ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ >
-      au < manifest ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; https://www.euroslajournal.org/ >
+      au < released ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; https://www.euroslajournal.org/ >
+      au < manifest ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; https://www.euroslajournal.org/ >
 
   }
 
@@ -2967,6 +2936,7 @@
       au < released ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ >
       au < released ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ >
       au < expected ; 2020 ; 3 ; Undergraduate Journal of Politics and International Relations Volume 2020 ; 2020 ; https://www.ujpir-journal.com/ >
+      au < expected ; 2021 ; 4 ; Undergraduate Journal of Politics and International Relations Volume 2021 ; 2021 ; https://www.ujpir-journal.com/ >
 
   }
 }
@@ -2997,7 +2967,8 @@
       au < released ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; https://www.stabilityjournal.org/ >
       au < released ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ >
       au < released ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ >
-      au < manifest ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; https://www.stabilityjournal.org/ >
+      au < released ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; https://www.stabilityjournal.org/ >
+      au < expected ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; https://www.stabilityjournal.org/ >
 
   }
 
@@ -3027,7 +2998,8 @@
 
       au < released ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ >
       au < released ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ >
-      au < manifest ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; https://sjms.nu/ >
+      au < released ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; https://sjms.nu/ >
+      au < manifest ; 2021 ; 4 ; Scandinavian Military Studies Volume 2021 ; 2021 ; https://sjms.nu/ >
 
   }
 }
@@ -3054,7 +3026,8 @@
 #      param[base_url] = https://jmphil.org/
 
       au < released ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; https://jmphil.org/ >
-      au < manifest ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; https://jmphil.org/ >
+      au < released ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; https://jmphil.org/ >
+      au < manifest ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; https://jmphil.org/ >
 
   }
 

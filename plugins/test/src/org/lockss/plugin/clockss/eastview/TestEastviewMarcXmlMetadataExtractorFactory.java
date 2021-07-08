@@ -37,7 +37,7 @@ public class TestEastviewMarcXmlMetadataExtractorFactory extends SourceXmlMetada
                     "/plugins/test/src/org/lockss/plugin/clockss/eastview/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }

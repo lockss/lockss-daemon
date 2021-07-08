@@ -108,8 +108,8 @@ public class HighWireDrupalUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
     // while PDFs with download param are not collected, the links should work in audit proxy
     // http://ajpheart.physiology.org/content/304/2/H253.full.pdf?download=true
     // to http://ajpheart.physiology.org/content/304/2/H253.full.pdf
-    // 
-    // map 
+    //
+    // map
     // http://ajpcell.physiology.org/highwire/citation/1814/bookends
     // http://ajpcell.physiology.org/highwire/citation/1814/easybib
     // http://ajpcell.physiology.org/highwire/citation/1814/mendeley

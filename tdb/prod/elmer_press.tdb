@@ -15,8 +15,8 @@
         eissn = 1923-2837 ;
         issnl = 1923-2829 
       >
-
       #param[base_url] =  http://www.cardiologyres.org/
+
       param[journal_id] = Cardiologyres
 
       au < down ; 2010 ; Cardiology Research Volume 1 ; 1 ; 2010 ; http://www.cardiologyres.org/ >
@@ -30,6 +30,7 @@
       au < released ; 2018 ; Cardiology Research Volume 9 ; 9 ; 2018 ; https://cardiologyres.org/ >
       au < manifest ; 2019 ; Cardiology Research Volume 10 ; 10 ; 2019 ; https://cardiologyres.org/ >
       au < manifest ; 2020 ; Cardiology Research Volume 11 ; 11 ; 2020 ; https://cardiologyres.org/ >
+      au < manifest ; 2021 ; Cardiology Research Volume 12 ; 12 ; 2021 ; https://cardiologyres.org/ >
 
     }
 
@@ -41,8 +42,8 @@
         eissn = 1918-2813 ;
         issnl = 1918-2805 
       >
-
       #param[base_url] = http://www.gastrores.org/
+
       param[journal_id] = Gastrores
       
       au < down ; 2008 ; Gastroenterology Research Volume 1 ; 1 ; 2008 ; http://www.gastrores.org/ >
@@ -58,6 +59,7 @@
       au < released ; 2018 ; Gastroenterology Research Volume 11 ; 11 ; 2018 ; https://www.gastrores.org/ >
       au < manifest ; 2019 ; Gastroenterology Research Volume 12 ; 12 ; 2019 ; https://www.gastrores.org/ >
       au < manifest ; 2020 ; Gastroenterology Research Volume 13 ; 13 ; 2020 ; https://www.gastrores.org/ >
+      au < manifest ; 2021 ; Gastroenterology Research Volume 14 ; 14 ; 2021 ; https://www.gastrores.org/ >
 
     }
 
@@ -100,6 +102,7 @@
       au < released ; 2018 ; Journal of Clinical Medicine Research Volume 10 ; 10 ; 2018 ; https://www.jocmr.org/ >
       au < manifest ; 2019 ; Journal of Clinical Medicine Research Volume 11 ; 11 ; 2019 ; https://www.jocmr.org/ >
       au < manifest ; 2020 ; Journal of Clinical Medicine Research Volume 12 ; 12 ; 2020 ; https://www.jocmr.org/ >
+      au < manifest ; 2021 ; Journal of Clinical Medicine Research Volume 13 ; 13 ; 2021 ; https://www.jocmr.org/ >
 
     }
 
@@ -120,34 +123,34 @@
     }
 
     {
-
       # Journal of Hematology, 1927-1212, 1927-1220
       # http://jh.elmerpress.com/
       # Do not process.
 
+
     }
 
     {
-
       # Journal of Medical Cases, 1923-4155, 1923-4163
       # http://www.journalmc.org/
       # Do not process.
 
+
     }
 
     {
-
       # Journal of Neurology Research, 1923-2845, 1923-2853
       # http://www.neurores.org/
       # Do not process.
 
+
     }
 
     {
-
       # World Journal of Nephrology and Urology, 1927-1239, 1927-1247
       # http://wjnu.elmerpress.com/
       # Do not process.
+
 
     }
 
@@ -173,6 +176,7 @@
       au < released ; 2018 ; World Journal of Oncology Volume 9 ; 9 ; 2018 ; https://www.wjon.org/ >
       au < manifest ; 2019 ; World Journal of Oncology Volume 10 ; 10 ; 2019 ; https://www.wjon.org/ >
       au < manifest ; 2020 ; World Journal of Oncology Volume 11 ; 11 ; 2020 ; https://www.wjon.org/ >
+      au < manifest ; 2021 ; World Journal of Oncology Volume 12 ; 12 ; 2021 ; https://www.wjon.org/ >
 
     }
     

@@ -20,18 +20,18 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     
 
-    au < released ; 2008 ; Journal of Biological Chemistry Volume 283 ; 283 ; http://www.jbc.org/ >
-    au < released ; 2009 ; Journal of Biological Chemistry Volume 284 ; 284 ; http://www.jbc.org/ >
-    au < released ; 2010 ; Journal of Biological Chemistry Volume 285 ; 285 ; http://www.jbc.org/ >
-    au < released ; 2011 ; Journal of Biological Chemistry Volume 286 ; 286 ; http://www.jbc.org/ >
-    au < released ; 2012 ; Journal of Biological Chemistry Volume 287 ; 287 ; http://www.jbc.org/ >
-    au < released ; 2013 ; Journal of Biological Chemistry Volume 288 ; 288 ; http://www.jbc.org/ >
-    au < released ; 2014 ; Journal of Biological Chemistry Volume 289 ; 289 ; http://www.jbc.org/ >
-    au < released ; 2015 ; Journal of Biological Chemistry Volume 290 ; 290 ; http://www.jbc.org/ >
-    au < released ; 2016 ; Journal of Biological Chemistry Volume 291 ; 291 ; http://www.jbc.org/ >
-    au < released ; 2017 ; Journal of Biological Chemistry Volume 292 ; 292 ; http://www.jbc.org/ >
-    au < released ; 2018 ; Journal of Biological Chemistry Volume 293 ; 293 ; http://www.jbc.org/ >
-    au < released ; 2019 ; Journal of Biological Chemistry Volume 294 ; 294 ; https://www.jbc.org/ >
+    au < down ; 2008 ; Journal of Biological Chemistry Volume 283 ; 283 ; http://www.jbc.org/ >
+    au < down ; 2009 ; Journal of Biological Chemistry Volume 284 ; 284 ; http://www.jbc.org/ >
+    au < down ; 2010 ; Journal of Biological Chemistry Volume 285 ; 285 ; http://www.jbc.org/ >
+    au < down ; 2011 ; Journal of Biological Chemistry Volume 286 ; 286 ; http://www.jbc.org/ >
+    au < down ; 2012 ; Journal of Biological Chemistry Volume 287 ; 287 ; http://www.jbc.org/ >
+    au < down ; 2013 ; Journal of Biological Chemistry Volume 288 ; 288 ; http://www.jbc.org/ >
+    au < down ; 2014 ; Journal of Biological Chemistry Volume 289 ; 289 ; http://www.jbc.org/ >
+    au < down ; 2015 ; Journal of Biological Chemistry Volume 290 ; 290 ; http://www.jbc.org/ >
+    au < down ; 2016 ; Journal of Biological Chemistry Volume 291 ; 291 ; http://www.jbc.org/ >
+    au < down ; 2017 ; Journal of Biological Chemistry Volume 292 ; 292 ; http://www.jbc.org/ >
+    au < down ; 2018 ; Journal of Biological Chemistry Volume 293 ; 293 ; http://www.jbc.org/ >
+    au < down ; 2019 ; Journal of Biological Chemistry Volume 294 ; 294 ; https://www.jbc.org/ >
     au < doNotProcess ; 2020 ; Journal of Biological Chemistry Volume 295 ; 295 ; https://www.jbc.org/ >
 
   }
@@ -51,36 +51,36 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
 
-    au < released ; 1990 ; The Journal of Lipid Research Volume 31 ; 31 ; http://www.jlr.org/ >
-    au < released ; 1991 ; The Journal of Lipid Research Volume 32 ; 32 ; http://www.jlr.org/ >
-    au < released ; 1992 ; The Journal of Lipid Research Volume 33 ; 33 ; http://www.jlr.org/ >
-    au < released ; 1993 ; The Journal of Lipid Research Volume 34 ; 34 ; http://www.jlr.org/ >
-    au < released ; 1994 ; The Journal of Lipid Research Volume 35 ; 35 ; http://www.jlr.org/ >
-    au < released ; 1995 ; The Journal of Lipid Research Volume 36 ; 36 ; http://www.jlr.org/ >
-    au < released ; 1996 ; The Journal of Lipid Research Volume 37 ; 37 ; http://www.jlr.org/ >
-    au < released ; 1997 ; The Journal of Lipid Research Volume 38 ; 38 ; http://www.jlr.org/ >
-    au < released ; 1998 ; The Journal of Lipid Research Volume 39 ; 39 ; http://www.jlr.org/ >
-    au < released ; 1999 ; The Journal of Lipid Research Volume 40 ; 40 ; http://www.jlr.org/ >
-    au < released ; 2000 ; The Journal of Lipid Research Volume 41 ; 41 ; http://www.jlr.org/ >
-    au < released ; 2001 ; The Journal of Lipid Research Volume 42 ; 42 ; http://www.jlr.org/ >
-    au < released ; 2002 ; The Journal of Lipid Research Volume 43 ; 43 ; http://www.jlr.org/ >
-    au < released ; 2003 ; The Journal of Lipid Research Volume 44 ; 44 ; http://www.jlr.org/ >
-    au < released ; 2004 ; The Journal of Lipid Research Volume 45 ; 45 ; http://www.jlr.org/ >
-    au < released ; 2005 ; The Journal of Lipid Research Volume 46 ; 46 ; http://www.jlr.org/ >
-    au < released ; 2006 ; The Journal of Lipid Research Volume 47 ; 47 ; http://www.jlr.org/ >
-    au < released ; 2007 ; The Journal of Lipid Research Volume 48 ; 48 ; http://www.jlr.org/ >
-    au < released ; 2008 ; The Journal of Lipid Research Volume 49 ; 49 ; http://www.jlr.org/ >
-    au < released ; 2009 ; The Journal of Lipid Research Volume 50 ; 50 ; http://www.jlr.org/ >
-    au < released ; 2010 ; The Journal of Lipid Research Volume 51 ; 51 ; http://www.jlr.org/ >
-    au < released ; 2011 ; The Journal of Lipid Research Volume 52 ; 52 ; http://www.jlr.org/ >
-    au < released ; 2012 ; The Journal of Lipid Research Volume 53 ; 53 ; http://www.jlr.org/ >
-    au < released ; 2013 ; The Journal of Lipid Research Volume 54 ; 54 ; http://www.jlr.org/ >
-    au < released ; 2014 ; The Journal of Lipid Research Volume 55 ; 55 ; http://www.jlr.org/ >
-    au < released ; 2015 ; The Journal of Lipid Research Volume 56 ; 56 ; http://www.jlr.org/ >
-    au < released ; 2016 ; The Journal of Lipid Research Volume 57 ; 57 ; http://www.jlr.org/ >
-    au < released ; 2017 ; The Journal of Lipid Research Volume 58 ; 58 ; http://www.jlr.org/ >
-    au < released ; 2018 ; The Journal of Lipid Research Volume 59 ; 59 ; http://www.jlr.org/ >
-    au < released ; 2019 ; The Journal of Lipid Research Volume 60 ; 60 ; https://www.jlr.org/ >
+    au < down ; 1990 ; The Journal of Lipid Research Volume 31 ; 31 ; http://www.jlr.org/ >
+    au < down ; 1991 ; The Journal of Lipid Research Volume 32 ; 32 ; http://www.jlr.org/ >
+    au < down ; 1992 ; The Journal of Lipid Research Volume 33 ; 33 ; http://www.jlr.org/ >
+    au < down ; 1993 ; The Journal of Lipid Research Volume 34 ; 34 ; http://www.jlr.org/ >
+    au < down ; 1994 ; The Journal of Lipid Research Volume 35 ; 35 ; http://www.jlr.org/ >
+    au < down ; 1995 ; The Journal of Lipid Research Volume 36 ; 36 ; http://www.jlr.org/ >
+    au < down ; 1996 ; The Journal of Lipid Research Volume 37 ; 37 ; http://www.jlr.org/ >
+    au < down ; 1997 ; The Journal of Lipid Research Volume 38 ; 38 ; http://www.jlr.org/ >
+    au < down ; 1998 ; The Journal of Lipid Research Volume 39 ; 39 ; http://www.jlr.org/ >
+    au < down ; 1999 ; The Journal of Lipid Research Volume 40 ; 40 ; http://www.jlr.org/ >
+    au < down ; 2000 ; The Journal of Lipid Research Volume 41 ; 41 ; http://www.jlr.org/ >
+    au < down ; 2001 ; The Journal of Lipid Research Volume 42 ; 42 ; http://www.jlr.org/ >
+    au < down ; 2002 ; The Journal of Lipid Research Volume 43 ; 43 ; http://www.jlr.org/ >
+    au < down ; 2003 ; The Journal of Lipid Research Volume 44 ; 44 ; http://www.jlr.org/ >
+    au < down ; 2004 ; The Journal of Lipid Research Volume 45 ; 45 ; http://www.jlr.org/ >
+    au < down ; 2005 ; The Journal of Lipid Research Volume 46 ; 46 ; http://www.jlr.org/ >
+    au < down ; 2006 ; The Journal of Lipid Research Volume 47 ; 47 ; http://www.jlr.org/ >
+    au < down ; 2007 ; The Journal of Lipid Research Volume 48 ; 48 ; http://www.jlr.org/ >
+    au < down ; 2008 ; The Journal of Lipid Research Volume 49 ; 49 ; http://www.jlr.org/ >
+    au < down ; 2009 ; The Journal of Lipid Research Volume 50 ; 50 ; http://www.jlr.org/ >
+    au < down ; 2010 ; The Journal of Lipid Research Volume 51 ; 51 ; http://www.jlr.org/ >
+    au < down ; 2011 ; The Journal of Lipid Research Volume 52 ; 52 ; http://www.jlr.org/ >
+    au < down ; 2012 ; The Journal of Lipid Research Volume 53 ; 53 ; http://www.jlr.org/ >
+    au < down ; 2013 ; The Journal of Lipid Research Volume 54 ; 54 ; http://www.jlr.org/ >
+    au < down ; 2014 ; The Journal of Lipid Research Volume 55 ; 55 ; http://www.jlr.org/ >
+    au < down ; 2015 ; The Journal of Lipid Research Volume 56 ; 56 ; http://www.jlr.org/ >
+    au < down ; 2016 ; The Journal of Lipid Research Volume 57 ; 57 ; http://www.jlr.org/ >
+    au < down ; 2017 ; The Journal of Lipid Research Volume 58 ; 58 ; http://www.jlr.org/ >
+    au < down ; 2018 ; The Journal of Lipid Research Volume 59 ; 59 ; http://www.jlr.org/ >
+    au < down ; 2019 ; The Journal of Lipid Research Volume 60 ; 60 ; https://www.jlr.org/ >
     au < doNotProcess ; 2020 ; The Journal of Lipid Research Volume 61 ; 61 ; https://www.jlr.org/ >
 
   }
@@ -117,9 +117,9 @@
       au < HighWirePressH20Plugin ; down ; 2015 ; Molecular & Cellular Proteomics Volume 14 ; 14 ; http://www.mcponline.org/ >
       au < HighWirePressH20Plugin ; down ; 2016 ; Molecular & Cellular Proteomics Volume 15 ; 15 ; http://www.mcponline.org/ >
       au < HighWirePressH20Plugin ; down ; 2017 ; Molecular & Cellular Proteomics Volume 16 ; 16 ; http://www.mcponline.org/ >
-      au < HWDrupalPlugin ; doNotProcess ; 2018 ; Molecular & Cellular Proteomics Volume 17 ; 17 ; https://www.mcponline.org/ >
-      au < HWDrupalPlugin ; doNotProcess ; 2019 ; Molecular & Cellular Proteomics Volume 18 ; 18 ; https://www.mcponline.org/ >
-      au < HWDrupalPlugin ; doNotProcess ; 2020 ; Molecular & Cellular Proteomics Volume 19 ; 19 ; https://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2018 ; Molecular & Cellular Proteomics Volume 17 ; 17 ; https://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2019 ; Molecular & Cellular Proteomics Volume 18 ; 18 ; https://www.mcponline.org/ >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2020 ; Molecular & Cellular Proteomics Volume 19 ; 19 ; https://www.mcponline.org/ >
 
     }
 

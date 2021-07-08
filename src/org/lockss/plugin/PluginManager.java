@@ -1656,8 +1656,8 @@ public class PluginManager
       PluginInfo info = loadPlugin(pluginKey, loader);
       Plugin newPlug = info.getPlugin();
 
-      log.info("Loaded plugin: version " + newPlug.getVersion() +
-	       " of " + newPlug.getPluginName());
+      log.debug2("Found plugin: version " + newPlug.getVersion() +
+                 " of " + newPlug.getPluginName());
       return info;
     } catch (PluginException.PluginNotFound e) {
       logAndAlert(pluginName, "Plugin not found", e);
@@ -1892,6 +1892,8 @@ public class PluginManager
       oldPlug.stopPlugin();
     }
     pluginMap.put(pluginKey, plugin);
+    log.info("Loaded plugin: version " + plugin.getVersion() +
+             " of " + plugin.getPluginName());
     resetTitles();
   }
 
@@ -3250,93 +3252,95 @@ public class PluginManager
 	info = retrievePlugin(pluginName, pluginLoader);
 	if (info == null) {
 	  log.warning("Probable plugin packaging error: plugin " +
-			pluginName + " could not be loaded from " +
-			cu.getUrl());
-	    continue;
-	  } else {
-	    info.setCuUrl(url);
-	    info.setRegistryAu(au);
-	    List urls = info.getResourceUrls();
-	    if (urls != null && !urls.isEmpty()) {
-	      String jar = urls.get(0).toString();
-	      if (jar != null) {
-		// If the blessed jar path is a substring of the jar:
-		// url from which the actual plugin resource or class
-		// was loaded, then it is a loadable plugin.
-		boolean isLoadable =
-		  jar.indexOf(blessedUrl.getFile()) > 0;
-		info.setIsOnLoadablePath(isLoadable);
-	      }
-	    }
-	    plugin = info.getPlugin();
-	  }
-	} catch (Exception ex) {
-	  log.error(String.format("Unable to load plugin %s", pluginName), ex);
-	  continue;
-	}
+                      pluginName + " could not be loaded from " +
+                      cu.getUrl());
+          continue;
+        } else {
+          info.setCuUrl(url);
+          info.setRegistryAu(au);
+          List urls = info.getResourceUrls();
+          if (urls != null && !urls.isEmpty()) {
+            String jar = urls.get(0).toString();
+            if (jar != null) {
+              // If the blessed jar path is a substring of the jar:
+              // url from which the actual plugin resource or class
+              // was loaded, then it is a loadable plugin.
+              boolean isLoadable =
+                jar.indexOf(blessedUrl.getFile()) > 0;
+              info.setIsOnLoadablePath(isLoadable);
+            }
+          }
+          plugin = info.getPlugin();
+        }
+      } catch (Exception ex) {
+        log.error(String.format("Unable to load plugin %s", pluginName), ex);
+        continue;
+      }
 
-	PluginVersion version = null;
+      PluginVersion version = null;
 
-	try {
-	  version = new PluginVersion(plugin.getVersion());
-	  info.setVersion(version);
-	} catch (IllegalArgumentException ex) {
-	  // Don't let this runtime exception stop the daemon.  Skip the plugin.
-	  log.error(String.format("Skipping plugin %s: %s", pluginName, ex.getMessage()));
-	  // must stop plugin to enable it to be collected
-	  plugin.stopPlugin();
-	  return;
-	}
+      try {
+        version = new PluginVersion(plugin.getVersion());
+        info.setVersion(version);
+      } catch (IllegalArgumentException ex) {
+        // Don't let this runtime exception stop the daemon.  Skip the plugin.
+        log.error(String.format("Skipping plugin %s: %s", pluginName, ex.getMessage()));
+        // must stop plugin to enable it to be collected
+        plugin.stopPlugin();
+        return;
+      }
 
-	if (pluginMap.containsKey(key)) {
-	  // Plugin already exists in the global plugin map.
-	  // Replace it with a new version if one is available.
-	  log.debug2("Plugin " + key + " is already in global pluginMap.");
-	  Plugin otherPlugin = getPlugin(key);
-	  PluginVersion otherVer =
-	    new PluginVersion(otherPlugin.getVersion());
-	  if (version.toLong() > otherVer.toLong()) {
-	    if (log.isDebug2()) {
-	      log.debug2("Existing plugin " + plugin.getPluginId() +
-			 ": Newer version " + version + " found.");
-	    }
-	    tmpMap.put(key, info);
-	  } else {
-	    if (log.isDebug2()) {
-	      log.debug2("Existing plugin " + plugin.getPluginId() +
-			 ": No newer version found.");
-	    }
-	    // must stop plugin to enable it to be collected
-	    plugin.stopPlugin();
-	  }
-	} else if (!tmpMap.containsKey(key)) {
-	  // Plugin doesn't yet exist in the temporary map, add it.
-	  tmpMap.put(key, info);
+      if (tmpMap.containsKey(key)) {
+        // Plugin already exists in the temporary map, replace with
+        // this one if a greater version
+        PluginVersion otherVer = ((PluginInfo)tmpMap.get(key)).getVersion();
 
-	  if (log.isDebug2()) {
-	    log.debug2("Plugin " + plugin.getPluginId() +
-		       ": No previous version in temp map.");
-	  }
-	} else {
-	  // Plugin already exists in the temporary map, use whichever
-	  // version is higher.
-	  PluginVersion otherVer = ((PluginInfo)tmpMap.get(key)).getVersion();
+        if (version.toLong() > otherVer.toLong()) {
+          if (log.isDebug2()) {
+            log.debug2("Plugin " + plugin.getPluginId() + ": version " +
+                       version + " is newer than version " + otherVer +
+                       " already in temp map, replacing.");
+          }
+          // Overwrite old key in temp map
+          tmpMap.put(key, info);
+        } else {
+          // must stop plugin to enable it to be collected
+          plugin.stopPlugin();
+        }
+      } else if (pluginMap.containsKey(key)) {
+        // Plugin already exists in the global plugin map.
+        // Replace it with a new version if one is available.
+        log.debug2("Plugin " + key + " is already in global pluginMap.");
+        Plugin otherPlugin = getPlugin(key);
+        PluginVersion otherVer =
+          new PluginVersion(otherPlugin.getVersion());
+        if (version.toLong() > otherVer.toLong()) {
+          if (log.isDebug2()) {
+            log.debug2("Plugin " + plugin.getPluginId() +
+                       ": Newer version " + version +
+                       " loaded, will be installed.");
+          }
+          tmpMap.put(key, info);
+        } else {
+          if (log.isDebug2()) {
+            log.debug2("Plugin " + plugin.getPluginId() +
+                       ": Older version " + version +
+                       " loaded, will not be installed.");
+          }
+          // must stop plugin to enable it to be collected
+          plugin.stopPlugin();
+        }
+      } else {
+        // Plugin doesn't exist and isn't in the temporary map, add it.
+        tmpMap.put(key, info);
 
-	  if (version.toLong() > otherVer.toLong()) {
-	    if (log.isDebug2()) {
-	      log.debug2("Plugin " + plugin.getPluginId() + ": version " +
-			 version + " is newer than version " + otherVer +
-			 " already in temp map, overwriting.");
-	    }
-	    // Overwrite old key in temp map
-	    tmpMap.put(key, info);
-	  } else {
-	    // must stop plugin to enable it to be collected
-	    plugin.stopPlugin();
-	  }
-	}
+        if (log.isDebug2()) {
+          log.debug2("Plugin " + plugin.getPluginId() +
+                     ": No previous version in temp map.");
+        }
       }
     }
+  }
 
   /**
    * Convenience method to provide an indication of whether an Archival Unit is

@@ -1,0 +1,45 @@
+{
+
+  publisher <
+    name = Baghdad Science Journal 
+  >
+
+    implicit < status ; year ; name ; volume ; param[year] >
+    attr[start_stem] = index.php/
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    
+
+  {
+  
+    title < 
+      name = Baghdad Science Journal ;
+      issn = 2078-8665 ;
+      eissn = 2411-7986 
+    >
+
+    {
+      param[base_url] = https://bsj.uobaghdad.edu.iq/
+      param[journal_id] = BSJ
+
+      au < manifest ; 2004 ; Baghdad Science Journal Volume 1 ; 1 ; 2004 >
+      au < manifest ; 2005 ; Baghdad Science Journal Volume 2 ; 2 ; 2005 >
+      au < manifest ; 2006 ; Baghdad Science Journal Volume 3 ; 3 ; 2006 >
+      au < manifest ; 2007 ; Baghdad Science Journal Volume 4 ; 4 ; 2007 >
+      au < manifest ; 2008 ; Baghdad Science Journal Volume 5 ; 5 ; 2008 >
+      au < manifest ; 2009 ; Baghdad Science Journal Volume 6 ; 6 ; 2009 >
+      au < manifest ; 2010 ; Baghdad Science Journal Volume 7 ; 7 ; 2010 >
+      au < manifest ; 2011 ; Baghdad Science Journal Volume 8 ; 8 ; 2011 >
+      au < manifest ; 2012 ; Baghdad Science Journal Volume 9 ; 9 ; 2012 >
+      au < manifest ; 2013 ; Baghdad Science Journal Volume 10 ; 10 ; 2013 >
+      au < manifest ; 2014 ; Baghdad Science Journal Volume 11 ; 11 ; 2014 >
+      au < manifest ; 2015 ; Baghdad Science Journal Volume 12 ; 12 ; 2015 >
+      au < manifest ; 2016 ; Baghdad Science Journal Volume 13 ; 13 ; 2016 >
+      au < manifest ; 2017 ; Baghdad Science Journal Volume 14 ; 14 ; 2017 >
+      au < manifest ; 2018 ; Baghdad Science Journal Volume 15 ; 15 ; 2018 >
+      au < manifest ; 2019 ; Baghdad Science Journal Volume 16 ; 16 ; 2019 >
+      au < manifest ; 2020 ; Baghdad Science Journal Volume 17 ; 17 ; 2020 >
+      au < manifest ; 2021 ; Baghdad Science Journal Volume 18 ; 18 ; 2021 >
+    }
+  }
+
+}

@@ -29,6 +29,18 @@
 
     }
 
+    {
+
+      #publisher was converted to directory based
+      plugin = org.lockss.plugin.clockss.mdpi.ClockssMdpiDirSourcePlugin
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mdpi-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < readySource ; crawling ; 2021 ; Multidisciplinary Digital Publishing Institute Source Content 2021_01 ; 2021_01 >
+
+    }
+
   }
 
 }

@@ -17,8 +17,8 @@
       eissn = 1943-2674 ;
       issnl = 0016-7606
     >
-
       #param[base_url] = http://gsabulletin.gsapubs.org/
+
       param[journal_id] = gsabulletin
 
       au < doNotProcess ; 1918 ; 1918 ; Geological Society of America Bulletin Volume 29 ; 29 >
@@ -119,12 +119,12 @@
       au < doNotProcess ; 2012 ; 2012 ; Geological Society of America Bulletin Volume 124 ; 124 >
       au < doNotProcess ; 2013 ; 2013 ; Geological Society of America Bulletin Volume 125 ; 125 >
       au < doNotProcess ; 2014 ; 2014 ; Geological Society of America Bulletin Volume 126 ; 126 >
-      au < manifest ; 2015 ; 2015 ; Geological Society of America Bulletin Volume 127 ; 127 >
-      au < manifest ; 2016 ; 2016 ; Geological Society of America Bulletin Volume 128 ; 128 >
+      au < released ; 2015 ; 2015 ; Geological Society of America Bulletin Volume 127 ; 127 >
+      au < released ; 2016 ; 2016 ; Geological Society of America Bulletin Volume 128 ; 128 >
       au < released ; 2017 ; 2017 ; Geological Society of America Bulletin Volume 129 ; 129 >
-      au < manifest ; 2018 ; 2018 ; Geological Society of America Bulletin Volume 130 ; 130 >
+      au < released ; 2018 ; 2018 ; Geological Society of America Bulletin Volume 130 ; 130 >
       au < released ; 2019 ; 2019 ; Geological Society of America Bulletin Volume 131 ; 131 >
-      au < manifest ; 2020 ; 2020 ; Geological Society of America Bulletin Volume 132 ; 132 >
+      au < released ; 2020 ; 2020 ; Geological Society of America Bulletin Volume 132 ; 132 >
       au < released ; 2021 ; 2021 ; Geological Society of America Bulletin Volume 133 ; 133 >
 
   }
@@ -137,8 +137,8 @@
       eissn = 1943-2682 ;
       issnl = 0091-7613
     >
-
     #param[base_url] = http://geology.gsapubs.org/
+
     param[journal_id] = geology
 
     au < doNotProcess ; 1973 ; 1973 ; Geology Volume 1 ; 1 >
@@ -183,12 +183,12 @@
     au < doNotProcess ; 2012 ; 2012 ; Geology Volume 40 ; 40 >
     au < doNotProcess ; 2013 ; 2013 ; Geology Volume 41 ; 41 >
     au < doNotProcess ; 2014 ; 2014 ; Geology Volume 42 ; 42 >
-    au < manifest ; 2015 ; 2015 ; Geology Volume 43 ; 43 >
-    au < manifest ; 2016 ; 2016 ; Geology Volume 44 ; 44 >
-    au < manifest ; 2017 ; 2017 ; Geology Volume 45 ; 45 >
+    au < released ; 2015 ; 2015 ; Geology Volume 43 ; 43 >
+    au < released ; 2016 ; 2016 ; Geology Volume 44 ; 44 >
+    au < released ; 2017 ; 2017 ; Geology Volume 45 ; 45 >
     au < released ; 2018 ; 2018 ; Geology Volume 46 ; 46 >
     au < released ; 2019 ; 2019 ; Geology Volume 47 ; 47 >
-    au < manifest ; 2020 ; 2020 ; Geology Volume 48 ; 48 >
+    au < released ; 2020 ; 2020 ; Geology Volume 48 ; 48 >
     au < manifest ; 2021 ; 2021 ; Geology Volume 49 ; 49 >
 
   }
@@ -199,8 +199,8 @@
       name = Geosphere ;
       eissn = 1553-040X
     >
-
     #param[base_url] = http://geosphere.gsapubs.org/
+
     param[journal_id] = geosphere
 
     au < doNotProcess ; 2005 ; 2005 ; Geosphere Volume 1 ; 1 >
@@ -213,12 +213,12 @@
     au < doNotProcess ; 2012 ; 2012 ; Geosphere Volume 8 ; 8 >
     au < doNotProcess ; 2013 ; 2013 ; Geosphere Volume 9 ; 9 >
     au < doNotProcess ; 2014 ; 2014 ; Geosphere Volume 10 ; 10 >
-    au < manifest ; 2015 ; 2015 ; Geosphere Volume 11 ; 11 >
-    au < manifest ; 2016 ; 2016 ; Geosphere Volume 12 ; 12 >
-    au < manifest ; 2017 ; 2017 ; Geosphere Volume 13 ; 13 >
+    au < released ; 2015 ; 2015 ; Geosphere Volume 11 ; 11 >
+    au < released ; 2016 ; 2016 ; Geosphere Volume 12 ; 12 >
+    au < released ; 2017 ; 2017 ; Geosphere Volume 13 ; 13 >
     au < released ; 2018 ; 2018 ; Geosphere Volume 14 ; 14 >
     au < released ; 2019 ; 2019 ; Geosphere Volume 15 ; 15 >
-    au < manifest ; 2020 ; 2020 ; Geosphere Volume 16 ; 16 >
+    au < released ; 2020 ; 2020 ; Geosphere Volume 16 ; 16 >
     au < manifest ; 2021 ; 2021 ; Geosphere Volume 17 ; 17 >
 
   }
@@ -231,8 +231,8 @@
       eissn = 1947-4253 ;
       issnl = 1947-4253
     >
-
     #param[base_url] = http://lithosphere.gsapubs.org/
+
     param[journal_id] = lithosphere
 
     au < doNotProcess ; 2009 ; 2009 ; Lithosphere Volume 1 ; 1 >

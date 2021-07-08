@@ -23,11 +23,11 @@
     param[base_url] = https://zoosprint.zooreach.org/
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
-    au < manifest ; exists ; 2016 ; 2016 ; Zoo's Print Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Zoo's Print Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Zoo's Print Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Zoo's Print Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Zoo's Print Volume 12 ; 12 ; > #No permission statement.
+    au < crawling ; exists ; 2016 ; 2016 ; Zoo's Print Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Zoo's Print Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Zoo's Print Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Zoo's Print Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Zoo's Print Volume 12 ; 12 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Zoo's Print Volume 13 ; 13 ; >
 
     }

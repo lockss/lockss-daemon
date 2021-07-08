@@ -35,7 +35,7 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
                     "/plugins/test/src/org/lockss/plugin/clockss/scienceopen/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch(IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }
@@ -89,9 +89,10 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
         assertEquals("2018", md.get(MetadataField.FIELD_DATE));
         assertEquals("8", md.get(MetadataField.FIELD_END_PAGE));
         assertEquals("1", md.get(MetadataField.FIELD_START_PAGE));
-        assertEquals("1477-9358", md.get(MetadataField.FIELD_ISSN));
+        //assertEquals("1477-9358", md.get(MetadataField.FIELD_ISSN));   handled in post cook process
         assertEquals(null, md.get(MetadataField.FIELD_EISSN));
-        assertEquals("BCS Learning & Development", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        //assertEquals("BCS Learning & Development", md.get(MetadataField.FIELD_PUBLICATION_TITLE));     handled in post cook process
+
 
     }
 

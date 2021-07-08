@@ -37,9 +37,11 @@ import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
 import org.lockss.state.*;
 import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.plugin.wrapper.CacheResultHandlerWrapper;
 
 /** Base class for plugin status accessors, and static register/unregister
  */
@@ -48,6 +50,7 @@ public class PluginStatus {
   final static String PLUGIN_TABLE = "Plugins";
   final static String PLUGIN_DETAIL = "PluginDetail";
   final static String ALL_AUIDS = "AllAuids";
+  final static String HTTP_RESULT_MAP = "HttpResultMap";
 
   /** If true the definition of definable plugins will be displayed along
    * with its details. */
@@ -66,6 +69,8 @@ public class PluginStatus {
 				      new PluginDetail(daemon, mgr));
     statusServ.registerStatusAccessor(ALL_AUIDS,
 				      new AllAuids(daemon, mgr));
+    statusServ.registerStatusAccessor(HTTP_RESULT_MAP,
+				      new HTTPResultMapping(daemon, mgr));
   }
 
   static void unregister(LockssDaemon daemon) {
@@ -73,6 +78,7 @@ public class PluginStatus {
     statusServ.unregisterStatusAccessor(PLUGIN_TABLE);
     statusServ.unregisterStatusAccessor(PLUGIN_DETAIL);
     statusServ.unregisterStatusAccessor(ALL_AUIDS);
+    statusServ.unregisterStatusAccessor(HTTP_RESULT_MAP);
   }
 
   PluginStatus(LockssDaemon daemon, PluginManager mgr) {
@@ -85,6 +91,12 @@ public class PluginStatus {
 						  Plugin plug) {
     String key = PluginManager.pluginKeyFromId(plug.getPluginId());
     return new StatusTable.Reference(value, PLUGIN_DETAIL, key);
+  }
+
+  public static StatusTable.Reference makeResultMapRef(Object value,
+                                                       Plugin plug) {
+    String key = PluginManager.pluginKeyFromId(plug.getPluginId());
+    return new StatusTable.Reference(value, HTTP_RESULT_MAP, key);
   }
 }
 
@@ -305,14 +317,147 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
 	}
       }
     }
-    if (showDefLink && plugDef != null) {
-      StatusTable.Reference deflink = makePlugRef("Definition", plug);
-      deflink.setProperty("showdef", "1");
+    if (plugDef != null) {
+      if (showDefLink) {
+        StatusTable.Reference deflink = makePlugRef("Definition", plug);
+        deflink.setProperty("showdef", "1");
+        res.add(new StatusTable.SummaryInfo(null,
+                                            ColumnDescriptor.TYPE_STRING,
+                                            deflink));
+      }
+      StatusTable.Reference resMapLink = makeResultMapRef("Result Map", plug);
       res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  deflink));
+                                          ColumnDescriptor.TYPE_STRING,
+                                          resMapLink));
     }
     return res;
+  }
+
+}
+
+/**
+ * Plugin's HTTP result mapping
+ */
+class HTTPResultMapping extends PluginStatus implements StatusAccessor {
+
+  private final List sortRules =
+    ListUtil.list(new StatusTable.SortRule("trigger", true));
+
+  private final List colDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("trigger", "Fetch Result",
+				       ColumnDescriptor.TYPE_STRING,
+                                       "The HTTP response status that triggers this action. Bold items are Plugin customizations."),
+		  new ColumnDescriptor("retries", "Retries",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("action", "Action",
+				       ColumnDescriptor.TYPE_STRING,
+                                       "The action the crawler takes when this error is signalled. Abort: the crawl fails immediately. Fail: the crawl continues, but will be marked unsuccessful when it finishes. (blank): no error is signaled and the crawl continues."));
+
+  HTTPResultMapping(LockssDaemon daemon, PluginManager mgr) {
+    super(daemon, mgr);
+  }
+
+  public String getDisplayName() {
+    return "Fetch Result Handling";
+  }
+
+  private String getTitle(Plugin plug) {
+    return "Fetch Result Handling of plugin " + plug.getPluginName();
+  }
+
+  public boolean requiresKey() {
+    return true;
+  }
+
+  public void populateTable(StatusTable table)
+      throws StatusService.NoSuchTableException {
+    String key = table.getKey();
+    Plugin plug = mgr.getPlugin(key);
+    if (plug == null) {
+      throw new StatusService.NoSuchTableException("Unknown plugin: " + key);
+    }
+    populateTable(table, plug);
+  }
+
+  public void populateTable(StatusTable table, Plugin plug)
+      throws StatusService.NoSuchTableException {
+    table.setTitle(getTitle(plug));
+    table.setDefaultSortRules(sortRules);
+    CacheResultMap resultMap = plug.getCacheResultMap();
+    if (! (resultMap instanceof HttpResultMap)) {
+      throw new StatusService.NoSuchTableException("CacheResultMap in "
+                                                   + plug.getPluginName()
+                                                   + " is not inspectable");
+    }
+    HttpResultMap hrMap = (HttpResultMap)resultMap;
+    HttpResultMap defaultMap = new HttpResultMap();
+    table.setColumnDescriptors(colDescs);
+    try {
+      table.setRows(getRows(hrMap, defaultMap));
+    } catch (Exception e) {
+      throw new StatusService.NoSuchTableException(e.getMessage());
+    }
+  }
+
+  public List getRows(HttpResultMap hrMap, HttpResultMap defaultResMap)
+      throws Exception {
+    List rows = new ArrayList();
+    Map<Object,HttpResultMap.ExceptionInfo> defMap =
+      defaultResMap.getExceptionMap();
+    for (Map.Entry<Object,HttpResultMap.ExceptionInfo> ent
+           : hrMap.getExceptionMap().entrySet()) {
+      Object lhs = ent.getKey();
+      HttpResultMap.ExceptionInfo ei = ent.getValue();
+      Map row = new HashMap();
+      StatusTable.DisplayedValue trigger =
+        new StatusTable.DisplayedValue(shortName(lhs));
+      if (ei == null) {
+      row.put("trigger", trigger);
+        row.put("action", "Missing");
+        continue;
+      }
+      if (!ei.equals(defMap.get(lhs))) {
+        trigger.setBold(true);
+      }
+      if (!shortName(lhs).equals(lhs.toString())) {
+        trigger.setHoverText(lhs.toString());
+      }
+      row.put("trigger", trigger);
+      switch (ei.getType()) {
+      case Class:
+        Class ex = ei.getExceptionClass();
+	CacheException cex = (CacheException)ex.newInstance();
+        if (cex.isAttributeSet(CacheException.ATTRIBUTE_RETRY)) {
+          row.put("retries", cex.getRetryCount() + " @ " +
+                  StringUtil.timeIntervalToString(cex.getRetryDelay()));
+        }
+        if (cex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
+          row.put("action", "Abort");
+        } else if (cex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
+          row.put("action", "Fail");
+        }
+        break;
+      case Handler:
+        CacheResultHandler crh = ei.getHandler();
+        if (crh instanceof CacheResultHandlerWrapper) {
+          crh = (CacheResultHandler)((CacheResultHandlerWrapper)crh).getWrappedObj();
+        }
+        StatusTable.DisplayedValue action =
+          new StatusTable.DisplayedValue(shortName(crh.getClass()));
+        action.setHoverText(crh.getClass().toString());
+
+        row.put("action", action);
+        break;
+      }
+      row.put(StatusTable.ROW_SEPARATOR, "");
+      rows.add(row);
+    }
+    return rows;
+  }
+
+  Object shortName(Object o) {
+    return StringUtil.shortName(o);
   }
 
 }

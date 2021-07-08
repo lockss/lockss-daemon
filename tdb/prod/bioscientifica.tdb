@@ -1,11 +1,11 @@
 {
   publisher <
-    name = BioScientifica ;
+    name = Bioscientifica ;
     info[platform] = ingenta/pubfactory. 5 titles.
   >
   #####Moved from highwire to pubfactory
 
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pubfactory.bioscientifica.BioscientificaPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
 {
@@ -16,13 +16,16 @@
       
     >
 
-      param[base_url] = http://www.echorespract.com/
+    param[journal_id] = echo
+
+      param[base_url] = https://erp.bioscientifica.com/
+      ## http://www.echorespract.com/
 
       au < doNotProcess ; 2014 ; Echo Research and Practice Volume 1 ; 1 >
       au < doNotProcess ; 2015 ; Echo Research and Practice Volume 2 ; 2 >
       au < doNotProcess ; 2016 ; Echo Research and Practice Volume 3 ; 3 >
       au < doNotProcess ; 2017 ; Echo Research and Practice Volume 4 ; 4 >
-      au < exists ; 2018 ; Echo Research and Practice Volume 5 ; 5 >
+      au < released ; 2018 ; Echo Research and Practice Volume 5 ; 5 >
 
   }
   
@@ -33,9 +36,12 @@
       
     >
 
+    param[journal_id] = ec
+
     {
 
-      param[base_url] = http://www.endocrineconnections.com/
+      param[base_url] = https://ec.bioscientifica.com/
+      ## http://www.endocrineconnections.com/
 
       au < doNotProcess ; 2012 ; Endocrine Connections Volume 1 ; 1 >
       au < doNotProcess ; 2013 ; Endocrine Connections Volume 2 ; 2 >
@@ -43,7 +49,7 @@
       au < doNotProcess ; 2015 ; Endocrine Connections Volume 4 ; 4 >
       au < doNotProcess ; 2016 ; Endocrine Connections Volume 5 ; 5 >
       au < doNotProcess ; 2017 ; Endocrine Connections Volume 6 ; 6 >
-      au < exists ; 2018 ; Endocrine Connections Volume 7 ; 7 >
+      au < released ; 2018 ; Endocrine Connections Volume 7 ; 7 >
 
     }
 
@@ -57,12 +63,15 @@
       issnl = 0804-4643
     >
 
+    param[journal_id] = eje
+
     {
 
-      param[base_url] = http://www.eje-online.org/
+      param[base_url] = https://eje.bioscientifica.com/
+      ## http://www.eje-online.org/
 
-      au < exists ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
-      au < exists ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
+      au < ready ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
+      au < ready ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
       au < doNotProcess ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
       au < doNotProcess ; 1994 ; European Journal of Endocrinology Volume 131 ; 131 >
       au < doNotProcess ; 1995 ; European Journal of Endocrinology Volume 132 ; 132 >
@@ -111,8 +120,8 @@
       au < doNotProcess ; 2016 ; European Journal of Endocrinology Volume 175 ; 175 >
       au < doNotProcess ; 2017 ; European Journal of Endocrinology Volume 176 ; 176 >
       au < doNotProcess ; 2017 ; European Journal of Endocrinology Volume 177 ; 177 >
-      au < exists ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
-      au < exists ; 2018 ; European Journal of Endocrinology Volume 179 ; 179 >
+      au < ready ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
+      au < released ; 2018 ; European Journal of Endocrinology Volume 179 ; 179 >
 
     }
 
@@ -126,19 +135,22 @@
       issnl = 1470-1626
     >
 
+    param[journal_id] = rep
+
     {
 
-      param[base_url] = http://www.reproduction-online.org/
+      param[base_url] = https://rep.bioscientifica.com/
+      ## http://www.reproduction-online.org/
 
-      au < exists ; 1960 ; Journal of Reproduction and Fertility Volume 1 ; 1 >
-      au < exists ; 1961 ; Journal of Reproduction and Fertility Volume 2 ; 2 >
-      au < exists ; 1962 ; Journal of Reproduction and Fertility Volume 3 ; 3 >
-      au < exists ; 1962 ; Journal of Reproduction and Fertility Volume 4 ; 4 >
-      au < exists ; 1963 ; Journal of Reproduction and Fertility Volume 5 ; 5 >
-      au < exists ; 1963 ; Journal of Reproduction and Fertility Volume 6 ; 6 >
-      au < exists ; 1964 ; Journal of Reproduction and Fertility Volume 7 ; 7 >
-      au < exists ; 1964 ; Journal of Reproduction and Fertility Volume 8 ; 8 >
-      au < exists ; 1965 ; Journal of Reproduction and Fertility Volume 9 ; 9 >
+      au < ready ; 1960 ; Journal of Reproduction and Fertility Volume 1 ; 1 >
+      au < ready ; 1961 ; Journal of Reproduction and Fertility Volume 2 ; 2 >
+      au < released ; 1962 ; Journal of Reproduction and Fertility Volume 3 ; 3 >
+      au < ready ; 1962 ; Journal of Reproduction and Fertility Volume 4 ; 4 >
+      au < ready ; 1963 ; Journal of Reproduction and Fertility Volume 5 ; 5 >
+      au < ready ; 1963 ; Journal of Reproduction and Fertility Volume 6 ; 6 >
+      au < ready ; 1964 ; Journal of Reproduction and Fertility Volume 7 ; 7 >
+      au < ready ; 1964 ; Journal of Reproduction and Fertility Volume 8 ; 8 >
+      au < ready ; 1965 ; Journal of Reproduction and Fertility Volume 9 ; 9 >
       au < doNotProcess ; 1965 ; Journal of Reproduction and Fertility Volume 10 ; 10 >
       au < doNotProcess ; 1966 ; Journal of Reproduction and Fertility Volume 11 ; 11 >
       au < doNotProcess ; 1966 ; Journal of Reproduction and Fertility Volume 12 ; 12 >
@@ -284,8 +296,8 @@
       au < doNotProcess ; 2016 ; Reproduction Volume 152 ; 152 >
       au < doNotProcess ; 2017 ; Reproduction Volume 153 ; 153 >
       au < doNotProcess ; 2017 ; Reproduction Volume 154 ; 154 >
-      au < exists ; 2018 ; Reproduction Volume 155 ; 155 >
-      au < exists ; 2018 ; Reproduction Volume 156 ; 156 >
+      au < ready ; 2018 ; Reproduction Volume 155 ; 155 >
+      au < released ; 2018 ; Reproduction Volume 156 ; 156 >
 
     }
 
@@ -298,9 +310,12 @@
       issnl = 1359-6004
     >
 
+    param[journal_id] = revreprod
+
     {
 
-      param[base_url] = http://ror.reproduction-online.org/
+      param[base_url] = https://rep.bioscientifica.com/
+      ## http://ror.reproduction-online.org/
 
       au < doNotProcess ; 1996 ; Reviews of Reproduction Volume 1 ; 1 >
       au < doNotProcess ; 1997 ; Reviews of Reproduction Volume 2 ; 2 >

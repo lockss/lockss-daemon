@@ -31,10 +31,10 @@
       param[base_url] = http://www.insectbiodiversity.org/
       param[journal_id] = jib
 
-      au < finished ; manifest ; 2013 ; Journal of Insect Biodiversity Volume 1 ; 1 ; 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Journal of Insect Biodiversity Volume 1 ; 1 ; 2013 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Insect Biodiversity Volume 2 ; 2 ; 2014 ; >
       au < finished ; finished ; 2015 ; Journal of Insect Biodiversity Volume 3 ; 3 ; 2015 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Insect Biodiversity Volume 4 ; 4 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Insect Biodiversity Volume 4 ; 4 ; 2016 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Journal of Insect Biodiversity Volume 5 ; 5 ; 2017 ; >
     }
     

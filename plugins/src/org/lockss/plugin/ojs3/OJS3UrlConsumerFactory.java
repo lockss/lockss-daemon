@@ -98,8 +98,12 @@ public class OJS3UrlConsumerFactory implements UrlConsumerFactory {
         should = (fud.redirectUrls != null
             && fud.redirectUrls.size() >= 1
             && (fud.redirectUrls.get(0).contains("/cgi/viewcontent.cgi?article=")));
-
-        log.debug3(String.format("fud.fetchUrl: %s fud.redirectUrls: %s", fud.fetchUrl, fud.redirectUrls.get(0)));
+        if (should
+            && fud.fetchUrl != null) {
+          log.debug3(String.format("fud.fetchUrl: %s fud.redirectUrls: %s", fud.fetchUrl, fud.redirectUrls.get(0)));
+        } else if (fud.fetchUrl != null) {
+          log.debug3(String.format("fud.fetchUrl: %s", fud.fetchUrl));
+        }
       }
       return should;
     }

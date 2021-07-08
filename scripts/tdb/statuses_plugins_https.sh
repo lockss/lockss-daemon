@@ -9,8 +9,8 @@ quick=false
 clockss=false
 gln=true
 
-USAGE="Usage: `basename $0` [-hvkcg]. If no network is chosen, clockss is default"
-while getopts hvkcg: OPT; do
+USAGE="Usage: `basename $0` [-hvkcg]. If no network is chosen, gln is default"
+while getopts :hvkcg OPT; do
     case "$OPT" in
         h)
             echo $USAGE

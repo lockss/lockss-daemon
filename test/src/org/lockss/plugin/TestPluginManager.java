@@ -1759,6 +1759,72 @@ public class TestPluginManager extends LockssTestCase {
                     alert2.getAttribute(Alert.ATTR_TEXT));
   }
 
+  public void testUpdatePluginWithDup() throws Exception {
+    mgr.startService();
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_PREFER_LOADABLE_PLUGIN, "true");
+    p.setProperty(PluginManager.PARAM_RESTART_AUS_WITH_NEW_PLUGIN, "true");
+    p.setProperty(PluginManager.PARAM_AU_RESTART_MAX_SLEEP, "10");
+    prepareLoadablePluginTests(p);
+    String pluginKey = "org|lockss|test|MockConfigurablePlugin";
+    // Set up a MyMockRegistryArchivalUnit with the right data.
+    MyMockRegistryArchivalUnit mmau1 =
+      new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
+    assertNull(mgr.getPlugin(pluginKey));
+    mgr.processRegistryAus(ListUtil.list(mmau1));
+    Plugin plugin1 = mgr.getPlugin(pluginKey);
+    assertNotNull(plugin1);
+    assertTrue(mgr.isLoadablePlugin(plugin1));
+    assertFalse(mgr.isInternalPlugin(plugin1));
+    assertEquals("1", plugin1.getVersion());
+    PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plugin1);
+    assertEquals(mmau1.getNthUrl(1), info.getCuUrl());
+    assertSame(plugin1, info.getPlugin());
+
+    Configuration config = ConfigurationUtil.fromArgs("base_url",
+						      "http://example.com/a/"
+						      ,"year", "1942");
+//     theDaemon.setStartAuManagers(true);
+    ArchivalUnit au1 = mgr.createAu(plugin1, config,
+                                    new AuEvent(AuEvent.Type.Create, false));
+    String auid = au1.getAuId();
+    assertNotNull(au1);
+    assertSame(plugin1, au1.getPlugin());
+    assertEquals("http://example.com/a/, 1942", au1.getName());
+
+    // Create a second registry AU (because it also doesn't matter which AU
+    // a plugin jar comes from).
+
+    // Ensure that the jars have names different from those in the previous
+    // AU load, or they will not be processed (because CU version is faked)
+    MyMockRegistryArchivalUnit mmau2 =
+      new MyMockRegistryArchivalUnit(ListUtil.list(
+						   "org/lockss/test/good-plugin3.jar",
+						   "org/lockss/test/good-plugin2.jar"),
+                                     2);
+    assertSame(au1, mgr.getAuFromId(auid));
+    mgr.processRegistryAus(ListUtil.list(mmau2));
+
+    // Ensure the new plugin was installed, the AU is now running as part
+    // of that plugin, and the AU's definition has changed appropriately
+    Plugin plugin2 = mgr.getPlugin(pluginKey);
+    assertNotSame(plugin1, plugin2);
+    assertEquals("3", plugin2.getVersion());
+    ArchivalUnit au2 = mgr.getAuFromId(auid);
+    assertNotSame(au1, au2);
+    assertSame(plugin2, au2.getPlugin());
+    assertEquals("V3: http://example.com/a/, 1942", au2.getName());
+    assertEquals(0, mgr.getNumFailedAuRestarts());
+
+    assertEquals(2, alertMgr.getAlerts().size());
+    Alert alert1 = alertMgr.getAlerts().get(0);
+    assertEquals("AuCreated", alert1.getAttribute(Alert.ATTR_NAME));
+    Alert alert2 = alertMgr.getAlerts().get(1);
+    assertEquals("PluginReloaded", alert2.getAttribute(Alert.ATTR_NAME));
+    assertEquals("Plugin reloaded: Absinthe Literary Review\nVersion: 3",
+                    alert2.getAttribute(Alert.ATTR_TEXT));
+  }
+
   public void testStartAuLoadsCdnStems() throws Exception {
     String cdnStem = "http://cdn.host/";
     String baseStem = "http://example.com/";
@@ -1819,7 +1885,6 @@ public class TestPluginManager extends LockssTestCase {
     String auDir = LockssRepositoryImpl.getAuDir(au.getAuId(), tempDirPath,
                                                  false);
     File auDirFile = new File(auDir);
-    log.critical("auDir: " + auDir);
     assertTrue(auDirFile.exists());
 
     mgr.deleteAu(au);
@@ -1931,9 +1996,13 @@ public class TestPluginManager extends LockssTestCase {
     private MyMockRegistryCachedUrlSet cus;
 
     public MyMockRegistryArchivalUnit(List jarFiles) {
+      this(jarFiles, 0);
+    }
+
+    public MyMockRegistryArchivalUnit(List jarFiles, int start) {
       super((Plugin)null);
       cus = new MyMockRegistryCachedUrlSet();
-      int n = 0;
+      int n = start;
       for (Iterator iter = jarFiles.iterator(); iter.hasNext(); ) {
 	n++;
 	cus.addCu(new MockCachedUrl(getNthUrl(n),

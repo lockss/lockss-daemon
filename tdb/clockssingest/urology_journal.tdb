@@ -43,6 +43,7 @@
     au < frozen ; exists ; 2018 ; Urology Journal Volume 15 ; 15 ; 2018 ; >
     au < superseded ; exists ; 2019 ; Urology Journal Volume 16 [superseded] ; 16 ; 2019 ; >
     }
+
     {
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     param[base_url] = https://journals.sbmu.ac.ir/urolj/
@@ -51,6 +52,7 @@
     au < crawling ; exists ; 2019 ; Urology Journal Volume 16 ; 16 ; 2019 ; >
     au < crawling ; exists ; 2020 ; Urology Journal Volume 17 ; 17 ; 2020 ; >
     au < manifest ; exists ; 2021 ; Urology Journal Volume 18 ; 18 ; 2021 ; >
+
     }
   }
 

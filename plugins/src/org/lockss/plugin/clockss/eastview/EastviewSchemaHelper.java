@@ -42,7 +42,6 @@ import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import java.util.*;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 /**
  *  A helper class that defines a schema for XML metadata extraction for
@@ -100,6 +99,7 @@ implements SourceXmlSchemaHelper {
   private static String pub_volume = "VOLUME";
   private static String pub_issue = "NUMBER";
   private static String art_title = "ATITLE";
+  protected static String ART_RAW_TITLE = "TITLE";
   private static String art_contrib = "AUTHOR";
   private static String art_sp = "PAGE";
   
@@ -112,7 +112,10 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
   static {
-    articleMap.put(pub_title, CLEAN_TEXT); 
+    articleMap.put(pub_title, CLEAN_TEXT);
+    //This is raw title, it contains publisher acroname, like this:
+    //title: 31-05-1961(DASZD-No.005) НОВЫЕ КНИГИ
+    articleMap.put(ART_RAW_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(pub_volume, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 

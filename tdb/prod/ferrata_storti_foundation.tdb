@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Ferrata Storti Foundation
+    name = Ferrata Storti Foundation ;
+    info[platform] = OJS3
   >
 
   {
@@ -11,7 +12,18 @@
       issn = 0390-6078 ;
       eissn = 1592-8721
     >
+    {
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    implicit < status ; year ; name ; volume ; param[year] >
+    param[base_url] = https://haematologica.org/
+    attr[start_stem] = index.php/
+    param[journal_id] = haematologica
     
+    au < manifest ; 2019 ; Haematologica: The Hematology Journal Volume 104 ; 104 ; 2019 >
+    au < manifest ; 2020 ; Haematologica: The Hematology Journal Volume 105 ; 105 ; 2020 >
+    au < manifest ; 2021 ; Haematologica: The Hematology Journal Volume 106 ; 106 ; 2021 >
+    }
+    {
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.haematologica.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -41,9 +53,9 @@
     au < fsf.FSFDrupalPlugin ; released ; 2016 ; Haematologica: The Hematology Journal Volume 101 ; 101 >
     au < fsf.FSFDrupalPlugin ; released ; 2017 ; Haematologica: The Hematology Journal Volume 102 ; 102 >
     au < fsf.FSFDrupalPlugin ; released ; 2018 ; Haematologica: The Hematology Journal Volume 103 ; 103 >
-    au < fsf.FSFDrupalPlugin ; released ; 2019 ; Haematologica: The Hematology Journal Volume 104 ; 104 >
-    au < fsf.FSFDrupalPlugin ; manifest ; 2020 ; Haematologica: The Hematology Journal Volume 105 ; 105 >
-
+    au < fsf.FSFDrupalPlugin ; superseded ; 2019 ; Haematologica: The Hematology Journal Volume 104 ; 104 >
+    au < fsf.FSFDrupalPlugin ; doNotProcess ; 2020 ; Haematologica: The Hematology Journal Volume 105 ; 105 >
+    }
   }
   
 }

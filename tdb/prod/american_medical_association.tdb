@@ -2,7 +2,7 @@
 
   publisher <
     name = American Medical Association ;
-    info[platform] = SC
+    info[platform] = SC. Clockss version exists!
   >
 
   plugin = org.lockss.plugin.silverchair.ama.AmaSilverchairPlugin
@@ -22,11 +22,12 @@
     param[resource_id] = 184
     param[journal_id] = jamacardiology
     
-    au < manifest ; 2016 ; JAMA Cardiology Volume 1 ; 2016 >
-    au < manifest ; 2017 ; JAMA Cardiology Volume 2 ; 2017 >
-    au < manifest ; 2018 ; JAMA Cardiology Volume 3 ; 2018 >
-    au < manifest ; 2019 ; JAMA Cardiology Volume 4 ; 2019 >
-    au < manifest ; 2020 ; JAMA Cardiology Volume 5 ; 2020 >
+    au < released ; 2016 ; JAMA Cardiology Volume 1 ; 2016 >
+    au < released ; 2017 ; JAMA Cardiology Volume 2 ; 2017 >
+    au < released ; 2018 ; JAMA Cardiology Volume 3 ; 2018 >
+    au < released ; 2019 ; JAMA Cardiology Volume 4 ; 2019 >
+    au < released ; 2020 ; JAMA Cardiology Volume 5 ; 2020 >
+    au < manifest ; 2021 ; JAMA Cardiology Volume 6 ; 2021 >
 
   }
 
@@ -43,14 +44,15 @@
     param[journal_id] = jamadermatology
     
     au < exists ; 2012 ; JAMA Dermatology Volume 148 ; 2012 >
-    au < exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
-    au < exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
-    au < exists ; 2015 ; JAMA Dermatology Volume 151 ; 2015 >
-    au < exists ; 2016 ; JAMA Dermatology Volume 152 ; 2016 >
-    au < exists ; 2017 ; JAMA Dermatology Volume 153 ; 2017 >
-    au < exists ; 2018 ; JAMA Dermatology Volume 154 ; 2018 >
-    au < exists ; 2019 ; JAMA Dermatology Volume 155 ; 2019 >
-    au < exists ; 2020 ; JAMA Dermatology Volume 156 ; 2020 >
+    au < released ; 2013 ; JAMA Dermatology Volume 149 ; 2013 >
+    au < released ; 2014 ; JAMA Dermatology Volume 150 ; 2014 >
+    au < released ; 2015 ; JAMA Dermatology Volume 151 ; 2015 >
+    au < released ; 2016 ; JAMA Dermatology Volume 152 ; 2016 >
+    au < released ; 2017 ; JAMA Dermatology Volume 153 ; 2017 >
+    au < released ; 2018 ; JAMA Dermatology Volume 154 ; 2018 >
+    au < released ; 2019 ; JAMA Dermatology Volume 155 ; 2019 >
+    au < released ; 2020 ; JAMA Dermatology Volume 156 ; 2020 >
+    au < manifest ; 2021 ; JAMA Dermatology Volume 157 ; 2021 >
 
   }
 
@@ -66,15 +68,16 @@
     param[resource_id] = 69
     param[journal_id] = jamafacialplasticsurgery
     
-    au < exists ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
-    au < exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
-    au < exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
-    au < exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
-    au < exists ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 >
-    au < exists ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 >
-    au < exists ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 2018 >
-    au < exists ; 2019 ; JAMA Facial Plastic Surgery Volume 21 ; 2019 >
+    au < manifest ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
+    au < manifest ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
+    au < manifest ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
+    au < manifest ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
+    au < released ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 >
+    au < released ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 >
+    au < released ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 2018 >
+    au < released ; 2019 ; JAMA Facial Plastic Surgery Volume 21 ; 2019 >
     au < exists ; 2020 ; JAMA Facial Plastic Surgery Volume 22 ; 2020 >
+    au < exists ; 2021 ; JAMA Facial Plastic Surgery Volume 23 ; 2021 >
 
   }
 
@@ -92,13 +95,14 @@
     
     au < exists ; 2012 ; JAMA Internal Medicine Volume 172 ; 2012 >
     au < exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 >
-    au < exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
-    au < exists ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 >
-    au < exists ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 >
-    au < exists ; 2017 ; JAMA Internal Medicine Volume 177 ; 2017 >
-    au < exists ; 2018 ; JAMA Internal Medicine Volume 178 ; 2018 >
-    au < exists ; 2019 ; JAMA Internal Medicine Volume 179 ; 2019 >
-    au < exists ; 2020 ; JAMA Internal Medicine Volume 180 ; 2020 >
+    au < ready ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 >
+    au < ready ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 >
+    au < released ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 >
+    au < ready ; 2017 ; JAMA Internal Medicine Volume 177 ; 2017 >
+    au < released ; 2018 ; JAMA Internal Medicine Volume 178 ; 2018 >
+    au < released ; 2019 ; JAMA Internal Medicine Volume 179 ; 2019 >
+    au < released ; 2020 ; JAMA Internal Medicine Volume 180 ; 2020 >
+    au < manifest ; 2021 ; JAMA Internal Medicine Volume 181 ; 2021 >
 
   }
 
@@ -113,9 +117,10 @@
     param[resource_id] = 187
     param[journal_id] = jamanetworkopen
     
-    au < exists ; 2018 ; JAMA Network Open Volume 1 ; 2018 >
-    au < exists ; 2019 ; JAMA Network Open Volume 2 ; 2019 >
-    au < exists ; 2020 ; JAMA Network Open Volume 3 ; 2020 >
+    au < released ; 2018 ; JAMA Network Open Volume 1 ; 2018 >
+    au < released ; 2019 ; JAMA Network Open Volume 2 ; 2019 >
+    au < released ; 2020 ; JAMA Network Open Volume 3 ; 2020 >
+    au < manifest ; 2021 ; JAMA Network Open Volume 4 ; 2021 >
 
   }
 
@@ -131,15 +136,16 @@
     param[resource_id] = 72
     param[journal_id] = jamaneurology
     
-    au < exists ; 2012 ; JAMA Neurology Volume 69 ; 2012 >
-    au < exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
-    au < exists ; 2014 ; JAMA Neurology Volume 71 ; 2014 >
-    au < exists ; 2015 ; JAMA Neurology Volume 72 ; 2015 >
-    au < exists ; 2016 ; JAMA Neurology Volume 73 ; 2016 >
-    au < exists ; 2017 ; JAMA Neurology Volume 74 ; 2017 >
-    au < exists ; 2018 ; JAMA Neurology Volume 75 ; 2018 >
-    au < exists ; 2019 ; JAMA Neurology Volume 76 ; 2019 >
-    au < exists ; 2020 ; JAMA Neurology Volume 77 ; 2020 >
+    au < ready ; 2012 ; JAMA Neurology Volume 69 ; 2012 >
+    au < ready ; 2013 ; JAMA Neurology Volume 70 ; 2013 >
+    au < ready ; 2014 ; JAMA Neurology Volume 71 ; 2014 >
+    au < ready ; 2015 ; JAMA Neurology Volume 72 ; 2015 >
+    au < released ; 2016 ; JAMA Neurology Volume 73 ; 2016 >
+    au < released ; 2017 ; JAMA Neurology Volume 74 ; 2017 >
+    au < released ; 2018 ; JAMA Neurology Volume 75 ; 2018 >
+    au < released ; 2019 ; JAMA Neurology Volume 76 ; 2019 >
+    au < released ; 2020 ; JAMA Neurology Volume 77 ; 2020 >
+    au < manifest ; 2021 ; JAMA Neurology Volume 78 ; 2021 >
 
   }
 
@@ -155,12 +161,13 @@
     param[resource_id] = 174
     param[journal_id] = jamaoncology
     
-    au < exists ; 2015 ; JAMA Oncology Volume 1 ; 2015 >
-    au < exists ; 2016 ; JAMA Oncology Volume 2 ; 2016 >
-    au < exists ; 2017 ; JAMA Oncology Volume 3 ; 2017 >
-    au < exists ; 2018 ; JAMA Oncology Volume 4 ; 2018 >
-    au < exists ; 2019 ; JAMA Oncology Volume 5 ; 2019 >
-    au < exists ; 2020 ; JAMA Oncology Volume 6 ; 2020 >
+    au < released ; 2015 ; JAMA Oncology Volume 1 ; 2015 >
+    au < released ; 2016 ; JAMA Oncology Volume 2 ; 2016 >
+    au < released ; 2017 ; JAMA Oncology Volume 3 ; 2017 >
+    au < released ; 2018 ; JAMA Oncology Volume 4 ; 2018 >
+    au < released ; 2019 ; JAMA Oncology Volume 5 ; 2019 >
+    au < released ; 2020 ; JAMA Oncology Volume 6 ; 2020 >
+    au < manifest ; 2021 ; JAMA Oncology Volume 7 ; 2021 >
 
   }
 
@@ -177,14 +184,15 @@
     param[journal_id] = jamaophthalmology
     
     au < exists ; 2012 ; JAMA Ophthalmology Volume 130 ; 2012 >
-    au < exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
-    au < exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
-    au < exists ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 >
-    au < exists ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 >
-    au < exists ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 >
-    au < exists ; 2018 ; JAMA Ophthalmology Volume 136 ; 2018 >
-    au < exists ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 >
-    au < exists ; 2020 ; JAMA Ophthalmology Volume 138 ; 2020 >
+    au < ready ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 >
+    au < ready ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 >
+    au < ready ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 >
+    au < released ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 >
+    au < released ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 >
+    au < released ; 2018 ; JAMA Ophthalmology Volume 136 ; 2018 >
+    au < released ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 >
+    au < released ; 2020 ; JAMA Ophthalmology Volume 138 ; 2020 >
+    au < manifest ; 2021 ; JAMA Ophthalmology Volume 139 ; 2021 >
 
   }
 
@@ -201,14 +209,15 @@
     param[journal_id] = jamaotolaryngology
     
     au < exists ; 2012 ; JAMA Otolaryngology - Head & Neck Surgery Volume 138 ; 2012 >
-    au < exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 >
-    au < exists ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
-    au < exists ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 >
-    au < exists ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 >
-    au < exists ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 >
-    au < exists ; 2018 ; JAMA Otolaryngology - Head & Neck Surgery Volume 144 ; 2018 >
-    au < exists ; 2019 ; JAMA Otolaryngology - Head & Neck Surgery Volume 145 ; 2019 >
-    au < exists ; 2020 ; JAMA Otolaryngology - Head & Neck Surgery Volume 146 ; 2020 >
+    au < ready ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 >
+    au < ready ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 >
+    au < ready ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 >
+    au < released ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 >
+    au < released ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 >
+    au < released ; 2018 ; JAMA Otolaryngology - Head & Neck Surgery Volume 144 ; 2018 >
+    au < released ; 2019 ; JAMA Otolaryngology - Head & Neck Surgery Volume 145 ; 2019 >
+    au < released ; 2020 ; JAMA Otolaryngology - Head & Neck Surgery Volume 146 ; 2020 >
+    au < manifest ; 2021 ; JAMA Otolaryngology - Head & Neck Surgery Volume 147 ; 2021 >
 
   }
 
@@ -225,14 +234,15 @@
     param[journal_id] = jamapediatrics
     
     au < exists ; 2012 ; JAMA Pediatrics Volume 166 ; 2012 >
-    au < exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
-    au < exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
-    au < exists ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 >
-    au < exists ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 >
-    au < exists ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 >
-    au < exists ; 2018 ; JAMA Pediatrics Volume 172 ; 2018 >
-    au < exists ; 2019 ; JAMA Pediatrics Volume 173 ; 2019 >
-    au < exists ; 2020 ; JAMA Pediatrics Volume 174 ; 2020 >
+    au < ready ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 >
+    au < ready ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 >
+    au < ready ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 >
+    au < released ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 >
+    au < released ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 >
+    au < released ; 2018 ; JAMA Pediatrics Volume 172 ; 2018 >
+    au < released ; 2019 ; JAMA Pediatrics Volume 173 ; 2019 >
+    au < released ; 2020 ; JAMA Pediatrics Volume 174 ; 2020 >
+    au < manifest ; 2021 ; JAMA Pediatrics Volume 175 ; 2021 >
 
   }
 
@@ -249,14 +259,15 @@
     param[journal_id] = jamapsychiatry
     
     au < exists ; 2012 ; JAMA Psychiatry Volume 69 ; 2012 >
-    au < exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 >
-    au < exists ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 >
-    au < exists ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 >
-    au < exists ; 2016 ; JAMA Psychiatry Volume 73 ; 2016 >
-    au < exists ; 2017 ; JAMA Psychiatry Volume 74 ; 2017 >
-    au < exists ; 2018 ; JAMA Psychiatry Volume 75 ; 2018 >
-    au < exists ; 2019 ; JAMA Psychiatry Volume 76 ; 2019 >
-    au < exists ; 2020 ; JAMA Psychiatry Volume 77 ; 2020 >
+    au < ready ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 >
+    au < ready ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 >
+    au < ready ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 >
+    au < released ; 2016 ; JAMA Psychiatry Volume 73 ; 2016 >
+    au < ready ; 2017 ; JAMA Psychiatry Volume 74 ; 2017 >
+    au < released ; 2018 ; JAMA Psychiatry Volume 75 ; 2018 >
+    au < released ; 2019 ; JAMA Psychiatry Volume 76 ; 2019 >
+    au < released ; 2020 ; JAMA Psychiatry Volume 77 ; 2020 >
+    au < manifest ; 2021 ; JAMA Psychiatry Volume 78 ; 2021 >
 
   }
 
@@ -272,14 +283,15 @@
     param[resource_id] = 76
     param[journal_id] = jamasurgery
     
-    au < exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
-    au < exists ; 2014 ; JAMA Surgery Volume 149 ; 2014 >
-    au < exists ; 2015 ; JAMA Surgery Volume 150 ; 2015 >
-    au < exists ; 2016 ; JAMA Surgery Volume 151 ; 2016 >
-    au < exists ; 2017 ; JAMA Surgery Volume 152 ; 2017 >
-    au < exists ; 2018 ; JAMA Surgery Volume 153 ; 2018 >
-    au < exists ; 2019 ; JAMA Surgery Volume 154 ; 2019 >
-    au < exists ; 2020 ; JAMA Surgery Volume 155 ; 2020 >
+    au < released ; 2013 ; JAMA Surgery Volume 148 ; 2013 >
+    au < ready ; 2014 ; JAMA Surgery Volume 149 ; 2014 >
+    au < ready ; 2015 ; JAMA Surgery Volume 150 ; 2015 >
+    au < released ; 2016 ; JAMA Surgery Volume 151 ; 2016 >
+    au < released ; 2017 ; JAMA Surgery Volume 152 ; 2017 >
+    au < released ; 2018 ; JAMA Surgery Volume 153 ; 2018 >
+    au < released ; 2019 ; JAMA Surgery Volume 154 ; 2019 >
+    au < released ; 2020 ; JAMA Surgery Volume 155 ; 2020 >
+    au < manifest ; 2021 ; JAMA Surgery Volume 156 ; 2021 >
 
   }
 
@@ -316,13 +328,14 @@
     au < exists ; 2011 ; JAMA: The Journal of the American Medical Association Volume 305-306 ; 2011 >
     au < exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 >
     au < exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 >
-    au < exists ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 >
-    au < exists ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 >
-    au < exists ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 >
-    au < exists ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 >
-    au < exists ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 >
-    au < exists ; 2019 ; JAMA: The Journal of the American Medical Association Volume 321-322 ; 2019 >
-    au < exists ; 2020 ; JAMA: The Journal of the American Medical Association Volume 323-324 ; 2020 >
+    au < ready ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 >
+    au < ready ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 >
+    au < released ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 >
+    au < released ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 >
+    au < released ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 >
+    au < released ; 2019 ; JAMA: The Journal of the American Medical Association Volume 321-322 ; 2019 >
+    au < released ; 2020 ; JAMA: The Journal of the American Medical Association Volume 323-324 ; 2020 >
+    au < manifest ; 2021 ; JAMA: The Journal of the American Medical Association Volume 325-326 ; 2021 >
 
   }
 

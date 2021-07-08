@@ -331,7 +331,7 @@ public class CharsetUtil {
     }
     detector.setText(in);
     CharsetMatch match = detector.detect();
-    if(match != null && match.getConfidence() > 35) {// we want at least a 50% match
+    if(match != null && match.getConfidence() > 35) {// we want at least a 35% match
       return match.getName();
     }
     else {

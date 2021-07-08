@@ -36,7 +36,7 @@ public class TestJournalofEvolutionMedicalDentalSciencesJatsXmlXpathMetadataExtr
 
 
         } catch(IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }

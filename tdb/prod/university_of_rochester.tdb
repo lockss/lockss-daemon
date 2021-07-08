@@ -17,7 +17,7 @@
     plugin = org.lockss.plugin.invisibleculture.InvisibleCulturePlugin
     param[base_url] = http://www.rochester.edu/
     implicit < status ; year ; name ; param[year] ; param[num_issue_range] >
-    # num_issue_range must be a range and not a number, else add failure
+    # num_issue_range must be a range and not a number
 
     au < down ; 1998 ; Invisible Culture 1998 ; 1998 ; 1-1 >
     au < down ; 1999 ; Invisible Culture 1999 ; 1999 ; 2-2 >
@@ -34,12 +34,11 @@
     au < down ; 2011 ; Invisible Culture 2011 ; 2011 ; 16-16 >
 
     }
-
 #    {
 #    plugin = needs.plugin
 #    #param[base_url] = http://ivc.lib.rochester.edu/
 #    implicit < status ; year ; name ; param[year] ; param[num_issue_range] ; param[base_url] >
-     #last issue 2018. 20200917
+     #last issue 2020. 20210503
      #This journal collected on IA.
 #
 #    au < doNotProcess ; 1998 ; Invisible Culture 1998 ; 1998 ; 1-1 ; https://ivc.lib.rochester.edu/ >
@@ -64,6 +63,7 @@
 #    au < exists ; 2018 ; Invisible Culture 2018 ; 2018 ; 28-29 ; https://ivc.lib.rochester.edu/ >
 #    }
 
+
   }
 
   {
@@ -85,8 +85,9 @@
       au < doNotProcess ; 2016 ; Blake An Illustrated Quarterly Volume 49-50 ; 49-50 ; 2016 ; https://blakequarterly.org/ >
       au < released ; 2017 ; Blake An Illustrated Quarterly Volume 50-51 ; 50-51 ; 2017 ; http://blakequarterly.org/ >
       au < released ; 2018 ; Blake An Illustrated Quarterly Volume 51-52 ; 51-52 ; 2018 ; https://blakequarterly.org/ >
-      au < manifest ; 2019 ; Blake An Illustrated Quarterly Volume 53-54 ; 53-54 ; 2019 ; https://blakequarterly.org/ >
-      au < manifest ; 2020 ; Blake An Illustrated Quarterly Volume 55-56 ; 55-56 ; 2020 ; https://blakequarterly.org/ >
+      au < manifest ; 2019 ; Blake An Illustrated Quarterly Volume 52-53 ; 52-53 ; 2019 ; https://blakequarterly.org/ >
+      au < manifest ; 2020 ; Blake An Illustrated Quarterly Volume 53-54 ; 53-54 ; 2020 ; https://blakequarterly.org/ >
+      au < manifest ; 2021 ; Blake An Illustrated Quarterly Volume 54-55 ; 54-55 ; 2021 ; https://blakequarterly.org/ >
 
       }
 

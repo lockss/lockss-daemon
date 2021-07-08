@@ -35,7 +35,7 @@
       au < released ; 2017 ; Cultural Logic Volume 2017 ; 22 ; 2017 >
       au < manifest ; 2019 ; Cultural Logic Volume 2019 ; 23 ; 2019 >
       au < manifest ; 2020 ; Cultural Logic Volume 2020 ; 24 ; 2020 >
-    
+      au < expected ; 2021 ; Cultural Logic Volume 2021 ; 25 ; 2021 >
     }
   
     {
@@ -44,7 +44,8 @@
       implicit < status ; year ; name ; attr[volume] ; param[year] >
       param[base_url] = http://clogic.eserver.org/
       
-      comment[manifest] = no manifests past 2006 as of 11/2012. No volumes past 2013 as of 11/2014. Plugin needs review.
+      comment[manifest] = no manifests past 2006 as of 11/2012. 
+      #no longer online
 
       au < down ; 1997-1998 ; Cultural Logic Volume 1 ; 1 ; 0001 >
       au < down ; 1998-1999 ; Cultural Logic Volume 2 ; 2 ; 0002 >
@@ -90,13 +91,15 @@
       au < exists ; 2017 ; Early Modern Culture Issue 12 ; 12 >
       au < exists ; 2018 ; Early Modern Culture Issue 13 ; 13 >
       au < exists ; 2019 ; Early Modern Culture Issue 14 ; 14 >
+      #no longer publishing. V10-14 still online 2021-04-26
    }
    {
     plugin = org.lockss.plugin.emc.EarlyModernCulturePlugin
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://emc.eserver.org/
     
-    comment[manifests] = no manifests past 2004 as of 11/2012. No issues past V9 as of 11/2014. Plugin needs review.
+    comment[manifests] = no manifests past 2004 as of 11/2012. 
+    #no longer online
     
     au < down ; 2000 ; Early Modern Culture Issue 1 ; 1 >
     au < down ; 2002 ; Early Modern Culture Issue 2 ; 2 >
@@ -104,5 +107,4 @@
     au < down ; 2004 ; Early Modern Culture Issue 4 ; 4 >
    }
   }
-  
 }

@@ -1,0 +1,404 @@
+{
+
+  publisher <
+    name = American Physiological Society ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[poller] = 2
+  >
+
+  plugin = org.lockss.plugin.atypon.aps.ClockssAmPhysSocAtyponPlugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
+  #param[base_url] = http://www.physiology.org/
+  # moved to https://journals.physiology.org/
+  
+  comment[titles0] = Moved to Atypon 2017
+
+  {
+
+    title <
+      name = Advances in Physiology Education ;
+      issn = 1043-4046 ;
+      eissn = 1522-1229 
+    >
+
+    param[journal_id] = advances
+    #content available from 1989 volume 257 to 2016 volume 30, preserved with HW
+
+    {
+
+      au < finished ; finished ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Advances in Physiology Education Volume 42 ; 42 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; Advances in Physiology Education Volume 43 [superseded] ; 43 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2020 ; Advances in Physiology Education Volume 44 ; 44 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; Advances in Physiology Education Volume 45 ; 45 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Cell Physiology ;
+      issn = 0363-6143 ;
+      eissn = 1522-1563 
+    >
+
+    param[journal_id] = ajpcell
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Cell Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Cell Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Cell Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Cell Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Cell Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Endocrinology and Metabolism ;
+      issn = 0193-1849 ;
+      eissn = 1522-1555 
+    >
+
+    param[journal_id] = ajpendo
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 312 ; 312 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Endocrinology and Metabolism Volume 313 ; 313 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 314 ; 314 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Endocrinology and Metabolism Volume 315 ; 315 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Gastrointestinal and Liver Physiology ;
+      issn = 0193-1857 ;
+      eissn = 1522-1547 
+    >
+
+    param[journal_id] = ajpgi
+    #content available from 1980 volume 238 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < testing ; exists ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Heart and Circulatory Physiology ;
+      issn = 0363-6135 ;
+      eissn = 1522-1539 
+    >
+
+    param[journal_id] = ajpheart
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < testing ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Lung Cellular and Molecular Physiology ;
+      issn = 1040-0605 ;
+      eissn = 1522-1504 
+    >
+
+    param[journal_id] = ajplung
+    #content available from 1989 volume 257 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Regulatory, Integrative and Comparative Physiology ;
+      issn = 0363-6119 ;
+      eissn = 1522-1490 
+    >
+
+    param[journal_id] = ajpregu
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < finished ; finished ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Renal Physiology ;
+      issn = 1931-857X ;
+      eissn = 1522-1466 
+    >
+
+    param[journal_id] = ajprenal
+    # other possible issn 0363-6127
+    #content available from 1977 volume 233 to 2016 volume 311, preserved with HW
+
+    {
+
+      au < finished ; manifest ; 2017 ; American Journal of Physiology - Renal Physiology Volume 312 ; 312 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; American Journal of Physiology - Renal Physiology Volume 313 ; 313 ; http://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Renal Physiology Volume 314 ; 314 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; American Journal of Physiology - Renal Physiology Volume 315 ; 315 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 [superseded] ; 316 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 [superseded] ; 317 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Renal Physiology Volume 316 ; 316 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Applied Physiology ;
+      issn = 8750-7587 ;
+      eissn = 1522-1601 
+    >
+
+    param[journal_id] = jappl
+    #content available from 1948 volume 1 to 2007 volume 103
+    #content available from 2008 volume 104 to 2016 volume 121, preserved in HW, doNotProcess content
+
+    {
+
+      au < finished ; manifest ; 2017 ; Journal of Applied Physiology Volume 122 ; 122 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Journal of Applied Physiology Volume 123 ; 123 ; http://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Applied Physiology Volume 124 ; 124 ; https://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Applied Physiology Volume 125 ; 125 ; https://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2019 ; Journal of Applied Physiology Volume 126 [superseded] ; 126 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Journal of Applied Physiology Volume 127 [superseded] ; 127 ; https://www.physiology.org/ ; >
+      au < finished ; crawling ; 2019 ; Journal of Applied Physiology Volume 126 ; 126 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; Journal of Applied Physiology Volume 127 ; 127 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2020 ; Journal of Applied Physiology Volume 128 ; 128 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; Journal of Applied Physiology Volume 129 ; 129 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2020 ; Journal of Applied Physiology Volume 130 ; 130 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; Journal of Applied Physiology Volume 131 ; 131 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; Journal of Applied Physiology Volume 132 ; 132 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; Journal of Applied Physiology Volume 133 ; 133 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Neurophysiology ;
+      issn = 0022-3077 ;
+      eissn = 1522-1598 
+    >
+
+    param[journal_id] = jn
+    #content available from 1938 volume 1 to 2007 volume 98
+    #content available from 2008 volume 99 to 2016 volume 116, preserved in HW, doNotProcess content
+
+    {
+
+      au < finished ; manifest ; 2017 ; Journal of Neurophysiology Volume 117 ; 117 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Journal of Neurophysiology Volume 118 ; 118 ; http://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Neurophysiology Volume 119 ; 119 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Neurophysiology Volume 120 ; 120 ; https://www.physiology.org/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 121 [superseded] ; 121 ; https://www.physiology.org/ ; >
+      au < superseded ; exists ; 2019 ; Journal of Neurophysiology Volume 122 [superseded] ; 122 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Journal of Neurophysiology Volume 121 ; 121 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; Journal of Neurophysiology Volume 123 ; 123 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; Journal of Neurophysiology Volume 124 ; 124 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2020 ; Journal of Neurophysiology Volume 125 ; 125 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; Journal of Neurophysiology Volume 126 ; 126 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; Journal of Neurophysiology Volume 127 ; 127 ; https://journals.physiology.org/ ; >
+      au < expected ; exists ; 2021 ; Journal of Neurophysiology Volume 128 ; 128 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiological Genomics ;
+      issn = 1094-8341 ;
+      eissn = 1531-2267 
+    >
+
+    param[journal_id] = physiolgenomics
+    #content available from 1999 volume 1 to 2016 volume 48, preserved with HW
+
+    {
+
+      au < finished ; manifest ; 2017 ; Physiological Genomics Volume 49 ; 49 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; Physiological Genomics Volume 50 ; 50 ; https://www.physiology.org/ ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; Physiological Genomics Volume 51 [superseded] ; 51 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Physiological Genomics Volume 51 ; 51 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; Physiological Genomics Volume 52 ; 52 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; Physiological Genomics Volume 53 ; 53 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiological Reviews ;
+      issn = 0031-9333 ;
+      eissn = 1522-1210 
+    >
+
+    param[journal_id] = physrev
+    #content available from 1921 volume 1 to 2016 volume 96, preserved with HW
+
+    {
+
+      au < finished ; manifest ; 2017 ; Physiological Reviews Volume 97 ; 97 ; http://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Physiological Reviews Volume 98 ; 98 ; https://www.physiology.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2019 ; Physiological Reviews Volume 99 [superseded] ; 99 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Physiological Reviews Volume 99 ; 99 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; Physiological Reviews Volume 100 ; 100 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; Physiological Reviews Volume 101 ; 101 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Physiology ;
+      issn = 1548-9213 ;
+      eissn = 1548-9221 
+    >
+
+    param[journal_id] = physiologyonline
+    #content available from 1986 volume 1 to 2016 volume 31, preserved with HW
+
+    {
+
+      au < finished ; manifest ; 2017 ; Physiology Volume 32 ; 32 ; http://www.physiology.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; Physiology Volume 33 ; 33 ; https://www.physiology.org/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2019 ; Physiology Volume 34 [superseded] ; 34 ; https://www.physiology.org/ ; >
+      au < frozen ; exists ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2020 ; Physiology Volume 35 ; 35 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; Physiology Volume 36 ; 36 ; https://journals.physiology.org/ ; >
+
+    }
+
+  }
+
+}

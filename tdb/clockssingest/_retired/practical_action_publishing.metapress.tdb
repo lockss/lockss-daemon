@@ -29,7 +29,7 @@
     au < doNotProcess ; exists ; 2010 ; Enterprise Development & Microfinance Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 2011 ; Enterprise Development & Microfinance Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 2012 ; Enterprise Development & Microfinance Volume 23 ; 23 ; >
-    au < finished ; manifest ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2014 ; Enterprise Development & Microfinance Volume 25 ; 25 ; >
     
   }
@@ -45,7 +45,7 @@
     
     au < doNotProcess ; exists ; 2011 ; Foodchain Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2012 ; Foodchain Volume 2 ; 2 ; >
-    au < finished ; manifest ; 2013 ; Foodchain Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Foodchain Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2014 ; Foodchain Volume 4 ; 4 ; >
   }
   
@@ -118,7 +118,7 @@
     au < doNotProcess ; exists ; 2010 ; Waterlines Volume 29 ; 29 ; >
     au < doNotProcess ; exists ; 2011 ; Waterlines Volume 30 ; 30 ; >
     au < doNotProcess ; exists ; 2012 ; Waterlines Volume 31 ; 31 ; >
-    au < finished ; manifest ; 2013 ; Waterlines Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Waterlines Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2014 ; Waterlines Volume 33 ; 33 ; >
   }
   

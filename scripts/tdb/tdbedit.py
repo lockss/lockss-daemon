@@ -4,7 +4,7 @@
 in TDB files from one or more old values to a new value.'''
 
 __copyright__ = '''\
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.'''
 
 __license__ = '''\
@@ -144,7 +144,7 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.5.0'
+__version__ = '0.5.1'
 
 import io
 import optparse
@@ -458,7 +458,7 @@ def _build_au_index(options, aus):
   errors = 0
   for fstr in options.files:
     continue_outer = False
-    with open(fstr, 'r') as f:
+    with open(fstr, 'r', encoding='utf-8') as f:
       for lineindex, line in enumerate(f):
         mat = _IMPLICIT.search(line)
         if mat is not None:
@@ -581,17 +581,17 @@ def _file_lines(fstr):
   whitespace trimmed. Exits with sys.exit() if the result has zero elements.
   Trims cruft after auid, there is an assumption that fstr is a file of auids
   '''
-# Last modified 2015-08-31
+# Last modified 2020-10-01
   # partition() line into parts, x.partition('#')[0] is the part before '#' or the entire line if not present
   # strip removes whitespace
-  with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
+  with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
   if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
   # in case there is cruft after the auid, such as a list of machines that passed the ready_to_finish script
   # lambda is cool, see above usage,
   # split will handle tabs or spaces
   # the first field must be the auid
   # map returns an array
-  ret = map(lambda x : x.split()[0], ret)
+  ret = list(map(lambda x : x.split()[0], ret))
   return ret
 
 def _main():

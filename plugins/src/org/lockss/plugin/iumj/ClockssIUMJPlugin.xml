@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Indiana University Mathematics Journal Plugin (CLOCKSS)</string>
+    <string>Indiana University Mathematics Journal Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -49,7 +49,7 @@
 -->
   <entry>
     <string>au_name</string>
-    <string>"Indiana University Mathematics Journal Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Indiana University Mathematics Journal Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
 
 </map>

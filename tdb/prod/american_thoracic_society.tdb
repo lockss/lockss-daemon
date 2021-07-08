@@ -108,6 +108,9 @@
       au < manifest ; 2019 ; American Journal of Respiratory and Critical Care Medicine Volume 200 ; 200 >
       au < manifest ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 201 ; 201 >
       au < manifest ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 202 ; 202 >
+      au < manifest ; 2021 ; American Journal of Respiratory and Critical Care Medicine Volume 203 ; 203 >
+      au < expected ; 2021 ; American Journal of Respiratory and Critical Care Medicine Volume 204 ; 204 >
+
       }
 
       {
@@ -196,7 +199,6 @@
       au < superseded ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 [superseded] ; 45 >
       au < superseded ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 [superseded] ; 46 >
       au < superseded ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 [superseded] ; 47 >
-
       
     }
     
@@ -232,6 +234,9 @@
       au < manifest ; 2019 ; American Journal of Respiratory Cell and Molecular Biology Volume 61 ; 61 >
       au < manifest ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 62 ; 62 >
       au < manifest ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 63 ; 63 >
+      au < manifest ; 2021 ; American Journal of Respiratory Cell and Molecular Biology Volume 64 ; 64 >
+      au < expected ; 2021 ; American Journal of Respiratory Cell and Molecular Biology Volume 65 ; 65 >
+
       }
       {
       param[base_url] = http://www.atsjournals.org/
@@ -342,6 +347,8 @@
       au < released ; 2018 ; Annals of the American Thoracic Society Volume 15 ; 15 >
       au < testing ; 2019 ; Annals of the American Thoracic Society Volume 16 ; 16 >
       au < manifest ; 2020 ; Annals of the American Thoracic Society Volume 17 ; 17 >
+      au < manifest ; 2021 ; Annals of the American Thoracic Society Volume 18 ; 18 >
+
     }
     {
       param[base_url] = http://www.atsjournals.org/
@@ -368,6 +375,8 @@
       param[base_url] = https://www.atsjournals.org/
 
       au < manifest ; 2020 ; ATS Scholar Volume 1 ; 1 >
+      au < manifest ; 2021 ; ATS Scholar Volume 2 ; 2 >
+
     }
   }
 

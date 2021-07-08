@@ -7,6 +7,8 @@
     plugin = org.lockss.plugin.bioone.BioOne2020Plugin
     implicit < status ; year ; param[year] ; name ; volume >
     param[base_url] = https://bioone.org/
+    
+    #In CLOCKSS collected as source.
 
   {
     title <
@@ -28,12 +30,11 @@
     au < doNotProcess ; 2014 ; 2014 ; Entomological News Volume 2014 ; 123-124 >
     au < doNotProcess ; 2015 ; 2015 ; Entomological News Volume 2015 ; 124-125 >
     au < doNotProcess ; 2016 ; 2016 ; Entomological News Volume 2016 ; 125-126 >
-    au < manifest ; 2017 ; 2017 ; Entomological News Volume 2017 ; 126-127 >
-    au < manifest ; 2018 ; 2018 ; Entomological News Volume 2018 ; 127-128 >
-    au < manifest ; 2019 ; 2019 ; Entomological News Volume 2019 ; 128-129 >
-    au < manifest ; 2020 ; 2020 ; Entomological News Volume 2020 ; 129-130 >
-    au < expected ; 2021 ; 2021 ; Entomological News Volume 2021 ; 130-131 >
-    au < expected ; 2022 ; 2022 ; Entomological News Volume 2022 ; 131-132 >
+    au < released ; 2017 ; 2017 ; Entomological News Volume 2017 ; 126-127 >
+    au < released ; 2018 ; 2018 ; Entomological News Volume 2018 ; 127-128 >
+    au < released ; 2019 ; 2019 ; Entomological News Volume 2019 ; 128-129 >
+    au < released ; 2020 ; 2020 ; Entomological News Volume 2020 ; 129-130 >
+    au < manifest ; 2021 ; 2021 ; Entomological News Volume 2021 ; 130-131 >
 
   }
 
@@ -59,11 +60,10 @@
     au < doNotProcess ; 2015 ; 2015 ; Transactions of the American Entomological Society Volume 141 ; 141 >
     au < doNotProcess ; 2016 ; 2016 ; Transactions of the American Entomological Society Volume 142 ; 142 >
     au < doNotProcess ; 2017 ; 2017 ; Transactions of the American Entomological Society Volume 143 ; 143 >
-    au < manifest ; 2018 ; 2018 ; Transactions of the American Entomological Society Volume 144 ; 144 >
-    au < manifest ; 2019 ; 2019 ; Transactions of the American Entomological Society Volume 145 ; 145 >
-    au < manifest ; 2020 ; 2020 ; Transactions of the American Entomological Society Volume 146 ; 146 >
-    au < expected ; 2021 ; 2021 ; Transactions of the American Entomological Society Volume 147 ; 147 >
-    au < expected ; 2022 ; 2022 ; Transactions of the American Entomological Society Volume 148 ; 148 >
+    au < released ; 2018 ; 2018 ; Transactions of the American Entomological Society Volume 144 ; 144 >
+    au < released ; 2019 ; 2019 ; Transactions of the American Entomological Society Volume 145 ; 145 >
+    au < released ; 2020 ; 2020 ; Transactions of the American Entomological Society Volume 146 ; 146 >
+    au < manifest ; 2021 ; 2021 ; Transactions of the American Entomological Society Volume 147 ; 147 >
 
   }
   

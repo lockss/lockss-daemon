@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Emerald Group Publishing Books Plugin (CLOCKSS)</string>
+    <string>Emerald Publishing Books Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Emerald Group Publishing Books Plugin (CLOCKSS), Base URL %s, Path %s", base_url, book_uri</string>
+    <string>"Emerald Publishing Books Plugin (CLOCKSS), Base URL %s, Path %s", base_url, book_uri</string>
   </entry>
   <entry>
     <string>clockss_override</string>

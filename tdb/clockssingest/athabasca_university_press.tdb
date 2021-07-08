@@ -78,6 +78,7 @@
       au < frozen ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
       au < frozen ; exists ; 2019 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
       au < crawling ; exists ; 2020 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 21 ; 21 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 22 ; 22 ; 2021 ; >
       }
     
   }
@@ -192,6 +193,7 @@
       au < frozen ; exists ; 2018 ; Journal of Research Practice Volume 14 ; 14 ; 2018 ; >
       au < expected ; exists ; 2019 ; Journal of Research Practice Volume 15 ; 15 ; 2019 ; >
       au < expected ; exists ; 2020 ; Journal of Research Practice Volume 16 ; 16 ; 2020 ; >
+      au < expected ; exists ; 2021 ; Journal of Research Practice Volume 17 ; 17 ; 2021 ; >
       }
     
   }
@@ -316,13 +318,14 @@
       au < manifest ; exists ; 2006 ; Oral History Forum d'histoire orale Volume 26 ; 26 ; 2006 ; >
       au < manifest ; exists ; 2007-2008 ; Oral History Forum d'histoire orale Volume 27-28 ; 27-28 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Oral History Forum d'histoire orale Volume 29 ; 29 ; 2009 ; >
-      au < crawling ; exists ; 2010 ; Oral History Forum d'histoire orale Volume 30 ; 30 ; 2010 ; >
+      au < frozen ; exists ; 2010 ; Oral History Forum d'histoire orale Volume 30 ; 30 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Oral History Forum d'histoire orale Volume 31 ; 31 ; 2011 ; >
 
       au < frozen ; exists ; 2017 ; Oral History Forum d'histoire orale Volume 37 ; 37 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Oral History Forum d'histoire orale Volume 38 ; 38 ; 2018 ; >#one year embargo?
       au < expected ; exists ; 2019 ; Oral History Forum d'histoire orale Volume 39 ; 39 ; 2019 ; >
       au < expected ; exists ; 2020 ; Oral History Forum d'histoire orale Volume 40 ; 40 ; 2020 ; >
+      au < expected ; exists ; 2021 ; Oral History Forum d'histoire orale Volume 41 ; 41 ; 2021 ; >
       }
     
   }
@@ -382,7 +385,8 @@
       au < crawling ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
       au < frozen ; exists ; 2018 ; The Trumpeter Volume 34 ; 34 ; 2018 ; >
       au < finished ; manifest ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2020 ; The Trumpeter Volume 36 ; 36 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; The Trumpeter Volume 36 ; 36 ; 2020 ; >
+      au < expected ; exists ; 2021 ; The Trumpeter Volume 37 ; 37 ; 2021 ; >
     }
     
   }

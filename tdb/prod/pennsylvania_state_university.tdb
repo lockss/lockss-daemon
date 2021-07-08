@@ -18,23 +18,29 @@
     implicit < status ; year ; name ; volume ; param[year] >
     
     param[journal_id] = jgb
-    #Need to request manifest pages. 20200609
     
-    au < exists ; 2006 ; Journal of Global Buddhism Volume 7 ; 7 ; 2006 >
-    au < exists ; 2007 ; Journal of Global Buddhism Volume 8 ; 8 ; 2007 >
-    au < exists ; 2008 ; Journal of Global Buddhism Volume 9 ; 9 ; 2008 >
-    au < exists ; 2009 ; Journal of Global Buddhism Volume 10 ; 10 ; 2009 >
-    au < exists ; 2010 ; Journal of Global Buddhism Volume 11 ; 11 ; 2010 >
-    au < exists ; 2011 ; Journal of Global Buddhism Volume 12 ; 12 ; 2011 >
-    au < exists ; 2012 ; Journal of Global Buddhism Volume 13 ; 13 ; 2012 >
-    au < exists ; 2013 ; Journal of Global Buddhism Volume 14 ; 14 ; 2013 >
-    au < exists ; 2014 ; Journal of Global Buddhism Volume 15 ; 15 ; 2014 >
-    au < exists ; 2015 ; Journal of Global Buddhism Volume 16 ; 16 ; 2015 >
-    au < exists ; 2016 ; Journal of Global Buddhism Volume 17 ; 17 ; 2016 >
-    au < exists ; 2017 ; Journal of Global Buddhism Volume 18 ; 18 ; 2017 >
-    au < exists ; 2018 ; Journal of Global Buddhism Volume 19 ; 19 ; 2018 >
-    au < exists ; 2019 ; Journal of Global Buddhism Volume 20 ; 20 ; 2019 >
-    au < expected ; 2020 ; Journal of Global Buddhism Volume 21 ; 21 ; 2020 >
+    au < manifest ; 2000 ; Journal of Global Buddhism Volume 1 ; 1 ; 2000 >
+    au < manifest ; 2001 ; Journal of Global Buddhism Volume 2 ; 2 ; 2001 >
+    au < manifest ; 2002 ; Journal of Global Buddhism Volume 3 ; 3 ; 2002 >
+    au < manifest ; 2003 ; Journal of Global Buddhism Volume 4 ; 4 ; 2003 >
+    au < manifest ; 2004 ; Journal of Global Buddhism Volume 5 ; 5 ; 2004 >
+    au < manifest ; 2005 ; Journal of Global Buddhism Volume 6 ; 6 ; 2005 >
+    au < manifest ; 2006 ; Journal of Global Buddhism Volume 7 ; 7 ; 2006 >
+    au < manifest ; 2007 ; Journal of Global Buddhism Volume 8 ; 8 ; 2007 >
+    au < manifest ; 2008 ; Journal of Global Buddhism Volume 9 ; 9 ; 2008 >
+    au < manifest ; 2009 ; Journal of Global Buddhism Volume 10 ; 10 ; 2009 >
+    au < manifest ; 2010 ; Journal of Global Buddhism Volume 11 ; 11 ; 2010 >
+    au < manifest ; 2011 ; Journal of Global Buddhism Volume 12 ; 12 ; 2011 >
+    au < manifest ; 2012 ; Journal of Global Buddhism Volume 13 ; 13 ; 2012 >
+    au < manifest ; 2013 ; Journal of Global Buddhism Volume 14 ; 14 ; 2013 >
+    au < manifest ; 2014 ; Journal of Global Buddhism Volume 15 ; 15 ; 2014 >
+    au < released ; 2015 ; Journal of Global Buddhism Volume 16 ; 16 ; 2015 >
+    au < released ; 2016 ; Journal of Global Buddhism Volume 17 ; 17 ; 2016 >
+    au < released ; 2017 ; Journal of Global Buddhism Volume 18 ; 18 ; 2017 >
+    au < released ; 2018 ; Journal of Global Buddhism Volume 19 ; 19 ; 2018 >
+    au < released ; 2019 ; Journal of Global Buddhism Volume 20 ; 20 ; 2019 >
+    au < released ; 2020 ; Journal of Global Buddhism Volume 21 ; 21 ; 2020 >
+    au < manifest ; 2021 ; Journal of Global Buddhism Volume 22 ; 22 ; 2021 >
    }
    {
     plugin = edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin

@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -132,5 +132,9 @@
         <string>org.lockss.plugin.illiesia.IlliesiaMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.illiesia.IlliesiaHtmlLinkExtractor$Factory</string>
   </entry>
 </map>

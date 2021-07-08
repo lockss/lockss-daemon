@@ -501,7 +501,7 @@
     au < crawling ; exists ; 2018 ; 2018 ; Biochemical Journal Volume 475 ; 475 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Biochemical Journal Volume 476 ; 476 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Biochemical Journal Volume 477 ; 477 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Biochemical Journal Volume 478 ; 478 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Biochemical Journal Volume 478 ; 478 ; >
 
   }
   
@@ -562,8 +562,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Biochemical Society Transactions Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Biochemical Society Transactions Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Biochemical Society Transactions Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Biochemical Society Transactions Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Biochemical Society Transactions Volume 47 ; 47 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Biochemical Society Transactions Volume 48 ; 48 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Biochemical Society Transactions Volume 49 ; 49 ; >
 
@@ -619,7 +619,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Bioscience Reports Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Bioscience Reports Volume 37 ; 37 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Bioscience Reports Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Bioscience Reports Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Bioscience Reports Volume 39 ; 39 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Bioscience Reports Volume 40 ; 40 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Bioscience Reports Volume 41 ; 41 ; >
 
@@ -675,7 +675,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Clinical Science Volume 130 ; 130 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Clinical Science Volume 131 ; 131 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Clinical Science Volume 132 ; 132 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Clinical Science Volume 133 ; 133 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Clinical Science Volume 133 ; 133 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Clinical Science Volume 134 ; 134 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Clinical Science Volume 135 ; 135 ; >
 
@@ -725,7 +725,7 @@
     au < crawling ; exists ; 2018 ; 2018 ; Essays in Biochemistry Volume 62 ; 62 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Essays in Biochemistry Volume 63 ; 63 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Essays in Biochemistry Volume 64 ; 64 ; >
-    au < expected ; exists ; 2021 ; 2021 ; Essays in Biochemistry Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Essays in Biochemistry Volume 65 ; 65 ; >
 
   }
   
@@ -770,7 +770,7 @@
     au < crawling ; exists ; 2018 ; 2018 ; Emerging Topics in Life Sciences Volume 2 ; 2 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Emerging Topics in Life Sciences Volume 3 ; 3 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Emerging Topics in Life Sciences Volume 4 ; 4 ; >
-    au < expected ; exists ; 2021 ; 2021 ; Emerging Topics in Life Sciences Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Emerging Topics in Life Sciences Volume 5 ; 5 ; >
 
   }
   

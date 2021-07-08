@@ -17,6 +17,7 @@
     plugin = org.lockss.plugin.GendersPlugin
     param[base_url] = http://www.genders.org/
     implicit < status ; year ; name ; param[year] ; param[num_issue_range] >
+    #archive 1998-2013 located at https://www.colorado.edu/genders/issues
     
     comment[doNotProcess_currentyear] = This plugin precludes processing the AU from the year in progress -- wait until the end of the year
 

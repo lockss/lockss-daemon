@@ -47,7 +47,8 @@
       au < released ; 2017 ; The American Journal of Psychiatry Volume 174 ; 174 >
       au < released ; 2018 ; The American Journal of Psychiatry Volume 175 ; 175 >
       au < released ; 2019 ; The American Journal of Psychiatry Volume 176 ; 176 >
-      au < manifest ; 2020 ; The American Journal of Psychiatry Volume 177 ; 177 >
+      au < released ; 2020 ; The American Journal of Psychiatry Volume 177 ; 177 >
+      au < manifest ; 2021 ; The American Journal of Psychiatry Volume 178 ; 178 >
 
     }
 
@@ -87,7 +88,8 @@
       au < released ; 2017 ; The American Journal of Psychiatry Volume 21 ; 21 >
       au < released ; 2018 ; The American Journal of Psychiatry Volume 22 ; 22 >
       au < released ; 2019 ; The American Journal of Psychiatry Volume 23 ; 23 >
-      au < manifest ; 2020 ; The American Journal of Psychiatry Volume 24 ; 24 >
+      au < released ; 2020 ; The American Journal of Psychiatry Volume 24 ; 24 >
+      au < manifest ; 2021 ; The American Journal of Psychiatry Volume 25 ; 25 >
 
     }
 
@@ -120,6 +122,7 @@
       au < released ; 2018 ; FOCUS Volume 16 ; 16 >
       au < released ; 2019 ; FOCUS Volume 17 ; 17 >
       au < manifest ; 2020 ; FOCUS Volume 18 ; 18 >
+      au < manifest ; 2021 ; FOCUS Volume 19 ; 19 >
 
     }
 
@@ -158,6 +161,7 @@
       au < released ; 2018 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 30 ; 30 >
       au < released ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 >
       au < manifest ; 2020 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 32 ; 32 >
+      au < manifest ; 2021 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 33 ; 33 >
 
     }
 
@@ -196,6 +200,7 @@
       au < released ; 2018 ; Psychiatric Services Volume 69 ; 69 >
       au < released ; 2019 ; Psychiatric Services Volume 70 ; 70 >
       au < manifest ; 2020 ; Psychiatric Services Volume 71 ; 71 >
+      au < manifest ; 2021 ; Psychiatric Services Volume 72 ; 72 >
 
     }
 
@@ -208,9 +213,11 @@
       param[base_url] = https://prcp.psychiatryonline.org/
       param[journal_id] = prcp
       # content starts from year 2019
+      #move to Wiley 2021
 
       au < released ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 >
-      au < manifest ; 2020 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 >
+      au < released ; 2020 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 >
+      au < manifest ; 2021 ; Psychiatric Research and Clinical Practice Volume 3 ; 3 >
 
     }
 

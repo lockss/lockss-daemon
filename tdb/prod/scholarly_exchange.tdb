@@ -3,8 +3,10 @@
   publisher <
     name = Pyramid Pharmaceutical Group, Inc
   >
-
   #For list of lockss enabled journals: http://scholarlyexchange.org/ojs/gateway/lockss
+   attr[start_stem] = index.php/
+   #Version of OJS3 is 3.1.1.4. We need 3.1.2
+
    attr[start_stem] = index.php/
    #Version of OJS3 is 3.1.1.4. We need 3.1.2
 
@@ -322,9 +324,9 @@
     param[base_url] = http://www.kcajournals.com/
     param[journal_id] = KCAJBM
     #moved to ojs3
-
 #NOT READY - requires registration to access full-text content; we have sent an email 
 # to see if this can be turned off, otherwise not preservable in the GLN
+
 
     au < notReady ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
     au < notReady ; 2009 ; KCA Journal of Business Management Volume 2 ; 2 ; 2009 >
@@ -336,6 +338,7 @@
     au < expected ; 2018 ; KCA Journal of Business Management Volume 9 ; 9 ; 2018 >
     au < expected ; 2019 ; KCA Journal of Business Management Volume 10 ; 10 ; 2019 >
     au < expected ; 2020 ; KCA Journal of Business Management Volume 11 ; 11 ; 2020 >
+    au < expected ; 2021 ; KCA Journal of Business Management Volume 12 ; 12 ; 2021 >
 
   }
 }
@@ -398,8 +401,8 @@
     param[base_url] = http://www.mjhid.org/
     param[journal_id] = mjhid
     #moved to ojs3
-
     #manifest pages don't have links, for example http://www.mjhid.org/index.php/mjhid/gateway/lockss?year=2018
+
 
     au < ojs2.OJS2Plugin ; down ; 2009 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 1 ; 1 ; 2009 >
     au < ojs2.OJS2Plugin ; down ; 2010 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 2 ; 2 ; 2010 >
@@ -445,6 +448,7 @@
     au < released ; 2018 ; Syllabus Volume 7 ; 7 ; 2018 >
     au < manifest ; 2019 ; Syllabus Volume 8 ; 8 ; 2019 >
     au < manifest ; 2020 ; Syllabus Volume 9 ; 9 ; 2020 >
+    au < expected ; 2021 ; Syllabus Volume 10 ; 10 ; 2021 >
 
   }
 }  

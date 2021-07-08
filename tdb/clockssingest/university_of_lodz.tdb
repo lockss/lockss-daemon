@@ -6,8 +6,12 @@
     info[tester] = 5 ;
     info[poller] = 8
   >
+  provider = bepress
   
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    param[base_url] = https://digijournals.uni.lodz.pl/
 
   {
   
@@ -16,21 +20,215 @@
       eissn = 2080-6922
     >
     
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = https://digijournals.uni.lodz.pl/
+    comment[publisher] = University of Lodz
     param[journal_abbr] = turyzm
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
     au < manifest ; exists ; 2012 ; Tourism / Turyzm Volume 22 ; 22 ; >
     au < frozen ; exists ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; >
     au < frozen ; exists ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; >
     au < crawling ; exists ; 2016 ; Tourism / Turyzm Volume 26 ; 26 ; >
     au < crawling ; exists ; 2017 ; Tourism / Turyzm Volume 27 ; 27 ; >
     au < crawling ; exists ; 2018 ; Tourism / Turyzm Volume 28 ; 28 ; >
     au < frozen ; exists ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; >
     au < crawling ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
-    au < expected ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
+
+  }
+
+  {
+
+      title <
+        name = Acta Universitatis Lodziensis, Folia Biologica et Oecologica ;
+        issn = 2083-8484 ;
+        eissn = 2083-8484
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = foliabiologica
+
+      au < manifest ; exists ; 2009 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2010 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2011 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2012 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2013 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 9 ; 9 ; >
+      au < testing ; exists ; 2014 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 10 ; 10 ; >
+      au < testing ; exists ; 2015 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 11 ; 11 ; >
+      au < testing ; exists ; 2016 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 12 ; 12 ; >
+      au < testing ; exists ; 2017 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 13 ; 13 ; >
+      au < testing ; exists ; 2018 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 14 ; 14 ; >
+      au < testing ; exists ; 2019 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 15 ; 15 ; >
+      au < exists ; exists ; 2020 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 16 ; 16 ; >
+      au < exists ; exists ; 2021 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+      title <
+        name = Acta Universitatis Lodziensis Folia Litteraria Polonica ;
+        eissn = 2353-1908
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = polonica
+
+      au < testing ; exists ; 2016 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 32 ; 32 ; >
+      au < testing ; exists ; 2017 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 33 ; 33 ; >
+      au < testing ; exists ; 2018 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2019 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 35 ; 35 ; >
+      au < testing ; exists ; 2020 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
+
+  }
+
+  {
+
+      title <
+        name = Convivium: Germanistisches Jahrbuch Polen ;
+        eissn = 2196-8403
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = convivium
+
+      au < manifest ; exists ; 2007 ; Convivium: Germanistisches Jahrbuch Polen Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Convivium: Germanistisches Jahrbuch Polen Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Convivium: Germanistisches Jahrbuch Polen Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Convivium: Germanistisches Jahrbuch Polen Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Convivium: Germanistisches Jahrbuch Polen Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Convivium: Germanistisches Jahrbuch Polen Volume 2012 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; Convivium: Germanistisches Jahrbuch Polen Volume 2013 ; 2013 ; >
+      au < crawling ; exists ; 2014 ; Convivium: Germanistisches Jahrbuch Polen Volume 2014 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Convivium: Germanistisches Jahrbuch Polen Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Convivium: Germanistisches Jahrbuch Polen Volume 2016 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Convivium: Germanistisches Jahrbuch Polen Volume 2017 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Convivium: Germanistisches Jahrbuch Polen Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Convivium: Germanistisches Jahrbuch Polen Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Convivium: Germanistisches Jahrbuch Polen Volume 2020 ; 2020 ; >
+      au < expected ; exists ; 2021 ; Convivium: Germanistisches Jahrbuch Polen Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = European Spatial Research and Policy ;
+        eissn = 1896-1525
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = esrap
+
+      au < crawling ; exists ; 2020 ; European Spatial Research and Policy Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2021 ; European Spatial Research and Policy Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Studies: Interdisciplinary Cultural and Political Journal ;
+        eissn = 2300-8695
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = is
+
+      au < manifest ; exists ; 2011 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2012 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2013 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 15 ; 15 ; >
+      au < testing ; exists ; 2014 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2015 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2016 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2017 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2018 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2019 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2020 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2021 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 23 ; 23 ; >
+
+  }
+
+  {
+
+      title <
+        name = Logopaedica Lodziensia ;
+        eissn = 2657-4381
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = logopaedica
+
+      au < crawling ; exists ; 2017 ; Logopaedica Lodziensia Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2018 ; Logopaedica Lodziensia Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2019 ; Logopaedica Lodziensia Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2020 ; Logopaedica Lodziensia Volume 4 ; 4 ; >
+      au < expected ; exists ; 2021 ; Logopaedica Lodziensia Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+      title <
+        name = Multicultural Shakespeare: Translation, Appropriation and Performance ;
+        eissn = 2300-7605
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = multishake
+
+      au < manifest ; exists ; 2011 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2012 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 9 ; 9 ; >
+      au < testing ; exists ; 2013 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2014 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 11 ; 11 ; >
+      au < testing ; exists ; 2015 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 12 ; 12 ; >
+      au < testing ; exists ; 2016 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 13 ; 13 ; >
+      au < testing ; exists ; 2017 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 14 ; 14 ; >
+      au < testing ; exists ; 2018 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 15 ; 15 ; >
+      au < testing ; exists ; 2019 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 16 ; 16 ; >
+      au < testing ; exists ; 2020 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2021 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 18 ; 18 ; >
+
+  }
+
+  {
+
+      title <
+        name = Research in Language ;
+        eissn = 2083-4616
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = rela
+
+      au < testing ; exists ; 2018 ; Research in Language Volume 16 ; 16 ; >
+      au < testing ; exists ; 2019 ; Research in Language Volume 17 ; 17 ; >
+      au < testing ; exists ; 2020 ; Research in Language Volume 18 ; 18 ; >
+      au < expected ; exists ; 2021 ; Research in Language Volume 19 ; 19 ; >
+
+  }
+
+  {
+
+      title <
+        name = Text Matters: A Journal of Literature, Theory and Culture ;
+        eissn = 2084-574X
+      >
+
+      comment[publisher] = University of Lodz
+      param[journal_abbr] = textmatters
+
+      au < manifest ; exists ; 2011 ; Text Matters: A Journal of Literature, Theory and Culture Volume 1 ; 1 ; >
+      au < exists ; exists ; 2012 ; Text Matters: A Journal of Literature, Theory and Culture Volume 2 ; 2 ; >
+      au < exists ; exists ; 2013 ; Text Matters: A Journal of Literature, Theory and Culture Volume 3 ; 3 ; >
+      au < exists ; exists ; 2014 ; Text Matters: A Journal of Literature, Theory and Culture Volume 4 ; 4 ; >
+      au < exists ; exists ; 2015 ; Text Matters: A Journal of Literature, Theory and Culture Volume 5 ; 5 ; >
+      au < exists ; exists ; 2016 ; Text Matters: A Journal of Literature, Theory and Culture Volume 6 ; 6 ; >
+      au < exists ; exists ; 2017 ; Text Matters: A Journal of Literature, Theory and Culture Volume 7 ; 7 ; >
+      au < exists ; exists ; 2018 ; Text Matters: A Journal of Literature, Theory and Culture Volume 8 ; 8 ; >
+      au < exists ; exists ; 2019 ; Text Matters: A Journal of Literature, Theory and Culture Volume 9 ; 9 ; >
+      au < exists ; exists ; 2020 ; Text Matters: A Journal of Literature, Theory and Culture Volume 10 ; 10 ; >
+      au < expected ; exists ; 2021 ; Text Matters: A Journal of Literature, Theory and Culture Volume 11 ; 11 ; >
 
   }
 

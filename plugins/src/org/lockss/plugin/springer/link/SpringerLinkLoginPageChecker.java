@@ -45,9 +45,12 @@ public class SpringerLinkLoginPageChecker implements LoginPageChecker {
    * <p>A recognizable string found on login pages.</p>
    */
   protected static final String LOGIN_STRINGS[] = new String[] {
-      "Log in to check access", // found in html for both books, journals
-      "Buy eBook",              // found only on book html
-      "Buy article (PDF)"       // found only on journal html
+      "Log in to check access",      // found in html for both books, journals
+      "Buy eBook",                   // found only on book html
+      "Buy article (PDF)",           // found only on journal html
+      "Buy article PDF",             // new format, journals. Technically not a login page, but it sends you there.
+      "Welcome back. Please log in." // new format, journals. This is on the login page. Only here as a backup if the
+                                     // previous format changes.
   };
   
   @Override

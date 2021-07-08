@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -113,6 +113,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- excludes the following urls -->
+      <string>2, "^https?://%s/my-account/", url_host(base_url)</string>
+      <string>2, "^https?://%s/sign-in\?returnUrl=", url_host(base_url)</string>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
       <!-- https://dup.silverchair-cdn.com/dup/Content_public/Journal/jmems/Issue/49/1/1/m_jme_49_1_cover.png?Expires=2147483647&Signature=3w__&Key-Pair-Id=A -->

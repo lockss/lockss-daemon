@@ -30,9 +30,9 @@
     au < released ; 2015 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 33 ; 33 ; http://scholarship.claremont.edu/ >
     au < released ; 2016 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 34 ; 34 ; http://scholarship.claremont.edu/ >
     au < released ; 2017 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 35 ; 35 ; https://scholarship.claremont.edu/ >
-    au < released ; 2018 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 36 ; 36 ; https://scholarship.claremont.edu/ >
-    au < notReady ; 2019 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 37 ; 37 ; https://scholarship.claremont.edu/ > #embargoed for one year. through Oct 2020.
-    au < expected ; 2020 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 38 ; 38 ; https://scholarship.claremont.edu/ > #embargoed for one year. through Oct 2021.
+    au < released ; 2018-2019 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 36 ; 36 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2020 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 37 ; 37 ; https://scholarship.claremont.edu/ > #embargoed for one year. through Oct 2021.
+    au < expected ; 2021 ; Aliso: A Journal of Systematic and Evolutionary Botany Volume 38 ; 38 ; https://scholarship.claremont.edu/ > #embargoed for one year. through Oct 2022.
 
   }
 
@@ -59,7 +59,51 @@
     au < released ; 2017 ; Claremont-UC Undergraduate Research Conference Journal Volume 2017 ; 2017 ; http://scholarship.claremont.edu/ >
     au < released ; 2018 ; Claremont-UC Undergraduate Research Conference Journal Volume 2018 ; 2018 ; https://scholarship.claremont.edu/ >
     au < released ; 2019 ; Claremont-UC Undergraduate Research Conference Journal Volume 2019 ; 2019 ; https://scholarship.claremont.edu/ >
-    au < expected ; 2020 ; Claremont-UC Undergraduate Research Conference Journal Volume 2020 ; 2020 ; https://scholarship.claremont.edu/ >
+
+  }
+
+  {
+
+    title <
+      name = Eastern Sierra History Journal
+      #eissn =
+    >
+
+    param[journal_abbr] = eshj
+
+    au < manifest ; 2020 ; Eastern Sierra History Journal Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2021 ; Eastern Sierra History Journal Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
+
+  }
+
+  {
+
+    title <
+      name = EnviroLab Asia ;
+      eissn = 2575-1131
+    >
+
+    param[journal_abbr] = envirolabasia
+
+    au < ready ; 2017 ; EnviroLab Asia Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < ready ; 2019 ; EnviroLab Asia Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
+    au < ready ; 2019 ; EnviroLab Asia Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2020 ; EnviroLab Asia Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
+    au < expected ; 2021 ; EnviroLab Asia Volume 5 ; 5 ; https://scholarship.claremont.edu/ >
+
+  }
+
+  {
+
+    title <
+      name = essay: critical writing at pomona college
+      #eissn =
+    >
+
+    param[journal_abbr] = essay
+
+    au < ready ; 2017 ; essay: critical writing at pomona college Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < ready ; 2018 ; essay: critical writing at pomona college Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -96,6 +140,7 @@
     au < released ; 2018 ; Journal of Humanistic Mathematics Volume 8 ; 8 ; https://scholarship.claremont.edu/ >
     au < released ; 2019 ; Journal of Humanistic Mathematics Volume 9 ; 9 ; https://scholarship.claremont.edu/ >
     au < manifest ; 2020 ; Journal of Humanistic Mathematics Volume 10 ; 10 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2021 ; Journal of Humanistic Mathematics Volume 11 ; 11 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -127,6 +172,7 @@
     au < released ; 2013 ; Mime Journal Volume 24 ; 24 ; http://scholarship.claremont.edu/ >
     au < released ; 2014 ; Mime Journal Volume 25 ; 25 ; http://scholarship.claremont.edu/ >
     au < released ; 2017 ; Mime Journal Volume 26 ; 26 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2021 ; Mime Journal Volume 27 ; 27 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -194,6 +240,7 @@
     au < released ; 2015-2016 ; The STEAM Journal Volume 2 ; 2 ; http://scholarship.claremont.edu/ >
     au < released ; 2017-2018 ; The STEAM Journal Volume 3 ; 3 ; http://scholarship.claremont.edu/ >
     au < released ; 2019-2020 ; The STEAM Journal Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
+    au < expected ; 2021 ; The STEAM Journal Volume 5 ; 5 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -210,7 +257,10 @@
     au < released ; 2013 ; CODEE Journal Volume 8 ; 8 ; http://scholarship.claremont.edu/ >
     au < released ; 2014 ; CODEE Journal Volume 9 ; 9 ; http://scholarship.claremont.edu/ >
     au < released ; 2015 ; CODEE Journal Volume 10 ; 10 ; http://scholarship.claremont.edu/ >
-    au < released ; 2016 ; CODEE Journal Volume 11 ; 11 ; http://scholarship.claremont.edu/ >
+    au < released ; 2016-2018 ; CODEE Journal Volume 11 ; 11 ; http://scholarship.claremont.edu/ >
+    au < ready ; 2019 ; CODEE Journal Volume 12 ; 12 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2020 ; CODEE Journal Volume 13 ; 13 ; https://scholarship.claremont.edu/ >
+    au < manifest ; 2021 ; CODEE Journal Volume 14 ; 14 ; https://scholarship.claremont.edu/ >
 
   }
 

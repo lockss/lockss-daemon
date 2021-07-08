@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -97,7 +97,7 @@
   <!--  appears to use the same "ejournals" for both books and journals; but make it more generic
    "https://profile.thieme.de/HTML/sso/ejournals/login.htm?type=default...." -->
     <string>au_redirect_to_login_url_pattern</string>
-    <string>"/sso/(ejournals|ebooks)/login\.htm\?"</string>
+    <string>"^https://profile.thieme.de/HTML/sso/"</string>
   </entry>
   <!--  improve content validation through use of mime-type expectation map -->
   <entry>
@@ -147,6 +147,17 @@
         <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPdfMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!--
+     https://s20.video-stream-hosting.de/tvg/ejournal/10.1055-s-00000001/10-1055-a-0967-1563ainsv01_360p.mp4
+     https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js
+     -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>s20\.video-stream-hosting\.de</string>
+      <string>cdn\.jsdelivr\.net</string>
+    </list>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>

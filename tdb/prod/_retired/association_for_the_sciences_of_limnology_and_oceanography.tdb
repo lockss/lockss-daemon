@@ -2,9 +2,7 @@
   publisher <
     name = Association for the Sciences of Limnology and Oceanography
   >
-#5/31/19 - lost access; content may have moved
-comment[aslo] = we're not preserving the last ~4 volumes of the run due to a moving paywall
-comment[fe] = H20, "Limnology and Oceanography: Fluids and Environments" published by Duke University Press
+  #More info about publications: https://www.aslo.org/aslo-publications/
 
   param[base_url] = http://www.aslo.org/
 
@@ -17,8 +15,8 @@ comment[fe] = H20, "Limnology and Oceanography: Fluids and Environments" publish
     plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyPlugin
     param[journal_id] = lo
     implicit < status ; year ; name ; param[volume_name] >
-
-comment[lo] = we're not preserving the last ~4 volumes of the run due to a moving paywall
+    
+    #Moved to Wiley 20210503
 
     au < down ; 1956 ; Limnology and Oceanography Volume 1 ; 1 >
     au < down ; 1957 ; Limnology and Oceanography Volume 2 ; 2 >
@@ -75,10 +73,6 @@ comment[lo] = we're not preserving the last ~4 volumes of the run due to a movin
     au < down ; 2008 ; Limnology and Oceanography Volume 53 ; 53 >
     au < down ; 2009 ; Limnology and Oceanography Volume 54 ; 54 >
     au < down ; 2010 ; Limnology and Oceanography Volume 55 ; 55 >
-    au < doNotProcess ; 2011 ; Limnology and Oceanography Volume 56 ; 56 >
-    au < doNotProcess ; 2012 ; Limnology and Oceanography Volume 57 ; 57 >
-    au < doNotProcess ; 2013 ; Limnology and Oceanography Volume 58 ; 58 >
-    au < doNotProcess ; 2014 ; Limnology and Oceanography Volume 59 ; 59 >
 
   }
   
@@ -92,7 +86,7 @@ comment[lo] = we're not preserving the last ~4 volumes of the run due to a movin
     param[journal_id] = lomethods
     implicit < status ; name ; attr[volume] ; param[year] >
     
-comment[methods] = we're not preserving the last ~4 volumes of the run due to a moving paywall
+    #Moved to Wiley 20210503
     
     au < down ; Limnology and Oceanography: Methods Volume 1 ; 1 ; 2003 >
     au < down ; Limnology and Oceanography: Methods Volume 2 ; 2 ; 2004 >
@@ -102,10 +96,6 @@ comment[methods] = we're not preserving the last ~4 volumes of the run due to a 
     au < down ; Limnology and Oceanography: Methods Volume 6 ; 6 ; 2008 >
     au < down ; Limnology and Oceanography: Methods Volume 7 ; 7 ; 2009 >
     au < down ; Limnology and Oceanography: Methods Volume 8 ; 8 ; 2010 >
-    au < doNotProcess ; Limnology and Oceanography: Methods Volume 9 ; 9 ; 2011 >
-    au < doNotProcess ; Limnology and Oceanography: Methods Volume 10 ; 10 ; 2012 >
-    au < doNotProcess ; Limnology and Oceanography: Methods Volume 11 ; 11 ; 2013 >
-    au < doNotProcess ; Limnology and Oceanography: Methods Volume 12 ; 12 ; 2014 >
 
   }
 

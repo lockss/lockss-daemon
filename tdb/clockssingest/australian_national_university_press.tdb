@@ -123,6 +123,7 @@
       au < finished ; finished ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
       au < manifest ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
 
     }
   }
@@ -139,6 +140,7 @@
 
     au < deepCrawl ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
+    au < manifest ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
 
   }
   
@@ -156,6 +158,7 @@
     au < finished ; finished ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
     au < exists ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
+    au < expected ; exists ; 2021 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
 
   }  
 
@@ -292,6 +295,7 @@
     au < finished ; finished ; 2018 ; East Asia Forum Quarterly Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
     au < expected ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
+    au < expected ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
 
   }
 
@@ -360,6 +364,7 @@
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
     au < deepCrawl ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
     au < expected ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
+    au < expected ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
 
   }
 
@@ -408,8 +413,27 @@
     
     param[journal_id] = human-voyage-undergraduate-research-biological-anthropology
 
-    au < finished ; finished ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology: Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     #after 2017 published at http://studentjournals.anu.edu.au/index.php/hv (OJS3)
+
+  }
+
+  {
+  
+    title <
+      name = Made in China ;
+      issn = 2652-6352 ;
+      eissn = 2206-9119
+    >
+    
+    param[journal_id] = made-china-journal
+
+    au < manifest ; exists ; 2016 ; Made in China Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2017 ; Made in China Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
 
   }
 

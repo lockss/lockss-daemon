@@ -1,8 +1,11 @@
 {
   publisher <
     name = Canadian Medical Association ;
-    info[platform] = HWDrupal. Manifests requested. One journal
+    info[platform] = HWDrupal. Manifests present. 1 J. Additional J on H20
   >
+
+  pluginPrefix = org.lockss.plugin.highwire.
+  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
   {
     title <
@@ -12,11 +15,8 @@
       issnl = 0820-3946
     >
 
-    pluginPrefix = org.lockss.plugin.highwire.
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     {
     param[base_url] = http://www.cmaj.ca/
-
 #    au < HWDrupalPlugin ; exists ; 1966 ; Canadian Medical Association Journal Volume 94 [tables of contents only] ; 94 >
 #    au < HWDrupalPlugin ; exists ; 1966 ; Canadian Medical Association Journal Volume 95 [tables of contents only] ; 95 >
 #    au < HWDrupalPlugin ; exists ; 1967 ; Canadian Medical Association Journal Volume 96 [tables of contents only] ; 96 >
@@ -84,6 +84,7 @@
 #      au < HWDrupalPlugin ; exists ; 1996 ; Canadian Medical Association Journal Volume 154 [abstracts only] ; 154 >
 #      au < HWDrupalPlugin ; exists ; 1996 ; Canadian Medical Association Journal Volume 155 [abstracts only] ; 155 >
 #    }
+
     au < HighWirePressH20Plugin ; down ; 1997 ; Canadian Medical Association Journal Volume 156 ; 156 >
     au < HighWirePressH20Plugin ; down ; 1997 ; Canadian Medical Association Journal Volume 157 ; 157 >
     au < HighWirePressH20Plugin ; down ; 1998 ; Canadian Medical Association Journal Volume 158 ; 158 >
@@ -127,8 +128,10 @@
 
     au < HWDrupalPlugin ; manifest ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
     au < HWDrupalPlugin ; manifest ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
-    au < HWDrupalPlugin ; manifest ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
+    au < HWDrupalPlugin ; exists ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
     au < HWDrupalPlugin ; manifest ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
+    au < HWDrupalPlugin ; manifest ; 2021 ; Canadian Medical Association Journal Volume 193 ; 193 >
+
     }
   }
 
@@ -139,27 +142,33 @@
       issnl = 2291-0026
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
-    # base_url moved to cmajopen.ca -- no www.
+    #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    {
+      param[base_url] = https://www.cmajopen.ca/
+
+      au < HWDrupalPlugin ; exists ; 2013 ; CMAJ Open Volume 1 ; 1 >
+      au < HWDrupalPlugin ; exists ; 2014 ; CMAJ Open Volume 2 ; 2 >
+      au < HWDrupalPlugin ; exists ; 2015 ; CMAJ Open Volume 3 ; 3 >
+      au < HWDrupalPlugin ; exists ; 2016 ; CMAJ Open Volume 4 ; 4 >
+      au < HWDrupalPlugin ; exists ; 2017 ; CMAJ Open Volume 5 ; 5 >
+      au < HWDrupalPlugin ; exists ; 2018 ; CMAJ Open Volume 6 ; 6 >
+      au < HWDrupalPlugin ; exists ; 2019 ; CMAJ Open Volume 7 ; 7 >
+      au < HWDrupalPlugin ; exists ; 2020 ; CMAJ Open Volume 8 ; 8 >
+      au < HWDrupalPlugin ; exists ; 2021 ; CMAJ Open Volume 9 ; 9 >
+    }
     {
       param[base_url] = http://cmajopen.ca/
 
-      au < doNotProcess ; 2013 ; CMAJ Open Volume 1 ; 1 >
-      au < doNotProcess ; 2014 ; CMAJ Open Volume 2 ; 2 >
-      au < released ; 2015 ; CMAJ Open Volume 3 ; 3 >
-      au < released ; 2016 ; CMAJ Open Volume 4 ; 4 >
-      au < released ; 2017 ; CMAJ Open Volume 5 ; 5 >
-      au < released ; 2018 ; CMAJ Open Volume 6 ; 6 >
-      au < manifest ; 2019 ; CMAJ Open Volume 7 ; 7 >
-      au < manifest ; 2020 ; CMAJ Open Volume 8 ; 8 >
-      au < expected ; 2021 ; CMAJ Open Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; superseded ; 2015 ; CMAJ Open Volume 3 [superseded] ; 3 >
+      au < HighWirePressH20Plugin ; superseded ; 2016 ; CMAJ Open Volume 4 [superseded] ; 4 >
+      au < HighWirePressH20Plugin ; superseded ; 2017 ; CMAJ Open Volume 5 [superseded] ; 5 >
+      au < HighWirePressH20Plugin ; superseded ; 2018 ; CMAJ Open Volume 6 [superseded] ; 6 >
     }
     {
       param[base_url] = http://www.cmajopen.ca/
 
-      au < down ; 2013 ; CMAJ Open Volume 1 ; 1 >
-      au < down ; 2014 ; CMAJ Open Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; superseded ; 2013 ; CMAJ Open Volume 1 [superseded] ; 1 >
+      au < HighWirePressH20Plugin ; superseded ; 2014 ; CMAJ Open Volume 2 [superseded] ; 2 >
     }
   }
 }

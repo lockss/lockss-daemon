@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,6 +31,10 @@
   <entry>
     <string>au_start_url</string>
     <list>
+        <!--
+        https://cdnsciencepub.com/doi/book/10.1139/9780660170831
+        https://cdnsciencepub.com/action/downloadCitation?doi=10.1139/9780660170831&format=ris&include=cit.
+        -->
       <string>"%sclockss/eisbn/%s", to_http(base_url), book_eisbn</string>
       <string>"%sclockss/eisbn/%s", to_https(base_url), book_eisbn</string>
     </list>    

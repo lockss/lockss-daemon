@@ -27,13 +27,13 @@
     comment[continued_by] = 1758-1559
     comment[apbr] = not on publisher's journals webpage but still on Ingenta/mirror site
 
-    au < released ; 2001 ; Avian and Poultry Biology Reviews Volume 12 ; 12 >
-    au < released ; 2002 ; Avian and Poultry Biology Reviews Volume 13 ; 13 >
-    au < released ; 2003 ; Avian and Poultry Biology Reviews Volume 14 ; 14 >
-    au < released ; 2004 ; Avian and Poultry Biology Reviews Volume 15 ; 15 >
-    au < released ; 2005 ; Avian and Poultry Biology Reviews Volume 16 ; 16 >
-    au < released ; 2006 ; Avian and Poultry Biology Reviews Volume 17 ; 17 >
-    au < released ; 2007 ; Avian and Poultry Biology Reviews Volume 18 ; 18 >
+    au < down ; 2001 ; Avian and Poultry Biology Reviews Volume 12 ; 12 >
+    au < down ; 2002 ; Avian and Poultry Biology Reviews Volume 13 ; 13 >
+    au < down ; 2003 ; Avian and Poultry Biology Reviews Volume 14 ; 14 >
+    au < down ; 2004 ; Avian and Poultry Biology Reviews Volume 15 ; 15 >
+    au < down ; 2005 ; Avian and Poultry Biology Reviews Volume 16 ; 16 >
+    au < down ; 2006 ; Avian and Poultry Biology Reviews Volume 17 ; 17 >
+    au < down ; 2007 ; Avian and Poultry Biology Reviews Volume 18 ; 18 >
 
   }
 
@@ -51,15 +51,15 @@
     comment[continues] = 1470-2061
     #move to Sage in 2019
 
-    au < released ; 2008-2009 ; Avian Biology Research Volume 1 ; 1 >
-    au < released ; 2009 ; Avian Biology Research Volume 2 ; 2 >
-    au < released ; 2010 ; Avian Biology Research Volume 3 ; 3 >
-    au < released ; 2011 ; Avian Biology Research Volume 4 ; 4 >
-    au < released ; 2012 ; Avian Biology Research Volume 5 ; 5 >
-    au < released ; 2013 ; Avian Biology Research Volume 6 ; 6 >
-    au < released ; 2014 ; Avian Biology Research Volume 7 ; 7 >
-    au < released ; 2015 ; Avian Biology Research Volume 8 ; 8 >
-    au < released ; 2016 ; Avian Biology Research Volume 9 ; 9 >
+    au < down ; 2008-2009 ; Avian Biology Research Volume 1 ; 1 >
+    au < down ; 2009 ; Avian Biology Research Volume 2 ; 2 >
+    au < down ; 2010 ; Avian Biology Research Volume 3 ; 3 >
+    au < down ; 2011 ; Avian Biology Research Volume 4 ; 4 >
+    au < down ; 2012 ; Avian Biology Research Volume 5 ; 5 >
+    au < down ; 2013 ; Avian Biology Research Volume 6 ; 6 >
+    au < down ; 2014 ; Avian Biology Research Volume 7 ; 7 >
+    au < down ; 2015 ; Avian Biology Research Volume 8 ; 8 >
+    au < down ; 2016 ; Avian Biology Research Volume 9 ; 9 >
     au < doNotProcess ; 2017 ; Avian Biology Research Volume 10 ; 10 >
     au < doNotProcess ; 2018 ; Avian Biology Research Volume 11 ; 11 >
     au < doNotProcess ; 2019 ; Avian Biology Research Volume 12 ; 12 >
@@ -112,23 +112,23 @@
     param[journal_issn] = 1747-5198
     #move to Sage in 2019
 
-    au < released ; 2000 ; Journal of Chemical Research Volume 2000 ; 2000 >
-    au < released ; 2001 ; Journal of Chemical Research Volume 2001 ; 2001 >
-    au < released ; 2002 ; Journal of Chemical Research Volume 2002 ; 2002 >
-    au < released ; 2003 ; Journal of Chemical Research Volume 2003 ; 2003 >
-    au < released ; 2004 ; Journal of Chemical Research Volume 2004 ; 2004 >
-    au < released ; 2005 ; Journal of Chemical Research Volume 2005 ; 2005 >
-    au < released ; 2006 ; Journal of Chemical Research Volume 2006 ; 2006 >
-    au < released ; 2007 ; Journal of Chemical Research Volume 2007 ; 2007 >
-    au < released ; 2008 ; Journal of Chemical Research Volume 2008 ; 2008 >
-    au < released ; 2009 ; Journal of Chemical Research Volume 2009 ; 2009 >
-    au < released ; 2010 ; Journal of Chemical Research Volume 34 ; 34 >
-    au < released ; 2011 ; Journal of Chemical Research Volume 35 ; 35 >
-    au < released ; 2012 ; Journal of Chemical Research Volume 36 ; 36 >
-    au < released ; 2013 ; Journal of Chemical Research Volume 37 ; 37 >
-    au < released ; 2014 ; Journal of Chemical Research Volume 38 ; 38 >
-    au < released ; 2015 ; Journal of Chemical Research Volume 39 ; 39 >
-    au < released ; 2016 ; Journal of Chemical Research Volume 40 ; 40 >
+    au < down ; 2000 ; Journal of Chemical Research Volume 2000 ; 2000 >
+    au < down ; 2001 ; Journal of Chemical Research Volume 2001 ; 2001 >
+    au < down ; 2002 ; Journal of Chemical Research Volume 2002 ; 2002 >
+    au < down ; 2003 ; Journal of Chemical Research Volume 2003 ; 2003 >
+    au < down ; 2004 ; Journal of Chemical Research Volume 2004 ; 2004 >
+    au < down ; 2005 ; Journal of Chemical Research Volume 2005 ; 2005 >
+    au < down ; 2006 ; Journal of Chemical Research Volume 2006 ; 2006 >
+    au < down ; 2007 ; Journal of Chemical Research Volume 2007 ; 2007 >
+    au < down ; 2008 ; Journal of Chemical Research Volume 2008 ; 2008 >
+    au < down ; 2009 ; Journal of Chemical Research Volume 2009 ; 2009 >
+    au < down ; 2010 ; Journal of Chemical Research Volume 34 ; 34 >
+    au < down ; 2011 ; Journal of Chemical Research Volume 35 ; 35 >
+    au < down ; 2012 ; Journal of Chemical Research Volume 36 ; 36 >
+    au < down ; 2013 ; Journal of Chemical Research Volume 37 ; 37 >
+    au < down ; 2014 ; Journal of Chemical Research Volume 38 ; 38 >
+    au < down ; 2015 ; Journal of Chemical Research Volume 39 ; 39 >
+    au < down ; 2016 ; Journal of Chemical Research Volume 40 ; 40 >
     au < doNotProcess ; 2017 ; Journal of Chemical Research Volume 41 ; 41 >
     au < doNotProcess ; 2018 ; Journal of Chemical Research Volume 42 ; 42 >
     au < doNotProcess ; 2019 ; Journal of Chemical Research Volume 43 ; 43 >
@@ -148,7 +148,7 @@
     param[journal_issn] = 0308-2350
     comment[jcrm] = not on publisher site but still on Ingenta
 
-    au < released ; 2003 ; Journal of Chemical Research (Miniprint) Volume 2003 ; 2003 >
+    au < down ; 2003 ; Journal of Chemical Research (Miniprint) Volume 2003 ; 2003 >
 
   }
 
@@ -161,10 +161,10 @@
       issnl = 0960-3409
     >
     
-    comment[moving] = journal moved to Maney start of 2014.
 
     param[journal_id] = maht
     param[journal_issn] = 0960-3409
+    comment[moving] = journal moved to Maney start of 2014.
 
     au < down ; 1999 ; Materials at High Temperatures Volume 16 ; 16 >
     au < down ; 2000 ; Materials at High Temperatures Volume 17 ; 17 >
@@ -197,26 +197,26 @@
     param[journal_issn] = 1468-6783
     #move to Sage in 2019
 
-    au < released ; 1997 ; Progress in Reaction Kinetics & Mechanism Volume 22 ; 22 >
-    au < released ; 1998 ; Progress in Reaction Kinetics & Mechanism Volume 23 ; 23 >
-    au < released ; 1999 ; Progress in Reaction Kinetics & Mechanism Volume 24 ; 24 >
-    au < released ; 2000 ; Progress in Reaction Kinetics & Mechanism Volume 25 ; 25 >
-    au < released ; 2001 ; Progress in Reaction Kinetics & Mechanism Volume 26 ; 26 >
-    au < released ; 2002 ; Progress in Reaction Kinetics & Mechanism Volume 27 ; 27 >
-    au < released ; 2003 ; Progress in Reaction Kinetics & Mechanism Volume 28 ; 28 >
-    au < released ; 2004 ; Progress in Reaction Kinetics & Mechanism Volume 29 ; 29 >
-    au < released ; 2005 ; Progress in Reaction Kinetics & Mechanism Volume 30 ; 30 >
-    au < released ; 2006 ; Progress in Reaction Kinetics & Mechanism Volume 31 ; 31 >
-    au < released ; 2007 ; Progress in Reaction Kinetics & Mechanism Volume 32 ; 32 >
-    au < released ; 2008 ; Progress in Reaction Kinetics & Mechanism Volume 33 ; 33 >
-    au < released ; 2009 ; Progress in Reaction Kinetics & Mechanism Volume 34 ; 34 >
-    au < released ; 2010 ; Progress in Reaction Kinetics & Mechanism Volume 35 ; 35 >
-    au < released ; 2011 ; Progress in Reaction Kinetics & Mechanism Volume 36 ; 36 >
-    au < released ; 2012 ; Progress in Reaction Kenetics & Mechanism Volume 37 ; 37 >
-    au < released ; 2013 ; Progress in Reaction Kenetics & Mechanism Volume 38 ; 38 >
-    au < released ; 2014 ; Progress in Reaction Kenetics & Mechanism Volume 39 ; 39 >
-    au < released ; 2015 ; Progress in Reaction Kenetics & Mechanism Volume 40 ; 40 >
-    au < released ; 2016 ; Progress in Reaction Kenetics & Mechanism Volume 41 ; 41 >
+    au < down ; 1997 ; Progress in Reaction Kinetics & Mechanism Volume 22 ; 22 >
+    au < down ; 1998 ; Progress in Reaction Kinetics & Mechanism Volume 23 ; 23 >
+    au < down ; 1999 ; Progress in Reaction Kinetics & Mechanism Volume 24 ; 24 >
+    au < down ; 2000 ; Progress in Reaction Kinetics & Mechanism Volume 25 ; 25 >
+    au < down ; 2001 ; Progress in Reaction Kinetics & Mechanism Volume 26 ; 26 >
+    au < down ; 2002 ; Progress in Reaction Kinetics & Mechanism Volume 27 ; 27 >
+    au < down ; 2003 ; Progress in Reaction Kinetics & Mechanism Volume 28 ; 28 >
+    au < down ; 2004 ; Progress in Reaction Kinetics & Mechanism Volume 29 ; 29 >
+    au < down ; 2005 ; Progress in Reaction Kinetics & Mechanism Volume 30 ; 30 >
+    au < down ; 2006 ; Progress in Reaction Kinetics & Mechanism Volume 31 ; 31 >
+    au < down ; 2007 ; Progress in Reaction Kinetics & Mechanism Volume 32 ; 32 >
+    au < down ; 2008 ; Progress in Reaction Kinetics & Mechanism Volume 33 ; 33 >
+    au < down ; 2009 ; Progress in Reaction Kinetics & Mechanism Volume 34 ; 34 >
+    au < down ; 2010 ; Progress in Reaction Kinetics & Mechanism Volume 35 ; 35 >
+    au < down ; 2011 ; Progress in Reaction Kinetics & Mechanism Volume 36 ; 36 >
+    au < down ; 2012 ; Progress in Reaction Kenetics & Mechanism Volume 37 ; 37 >
+    au < down ; 2013 ; Progress in Reaction Kenetics & Mechanism Volume 38 ; 38 >
+    au < down ; 2014 ; Progress in Reaction Kenetics & Mechanism Volume 39 ; 39 >
+    au < down ; 2015 ; Progress in Reaction Kenetics & Mechanism Volume 40 ; 40 >
+    au < down ; 2016 ; Progress in Reaction Kenetics & Mechanism Volume 41 ; 41 >
     au < doNotProcess ; 2017 ; Progress in Reaction Kenetics & Mechanism Volume 42 ; 42 >
     au < doNotProcess ; 2018 ; Progress in Reaction Kenetics & Mechanism Volume 43 ; 43 >
     au < doNotProcess ; 2019 ; Progress in Reaction Kenetics & Mechanism Volume 44 ; 44 >
@@ -235,22 +235,22 @@
     param[journal_issn] = 0036-8504
     #move to Sage in 2019
 
-    au < released ; 2001 ; Science Progress Volume 84 ; 84 >
-    au < released ; 2002 ; Science Progress Volume 85 ; 85 >
-    au < released ; 2003 ; Science Progress Volume 86 ; 86 >
-    au < released ; 2004 ; Science Progress Volume 87 ; 87 >
-    au < released ; 2005 ; Science Progress Volume 88 ; 88 >
-    au < released ; 2006 ; Science Progress Volume 89 ; 89 >
-    au < released ; 2007 ; Science Progress Volume 90 ; 90 >
-    au < released ; 2008 ; Science Progress Volume 91 ; 91 >
-    au < released ; 2009 ; Science Progress Volume 92 ; 92 >
-    au < released ; 2010 ; Science Progress Volume 93 ; 93 >
-    au < released ; 2011 ; Science Progress Volume 94 ; 94 >
-    au < released ; 2012 ; Science Progress Volume 95 ; 95 >
-    au < released ; 2013 ; Science Progress Volume 96 ; 96 >
-    au < released ; 2014 ; Science Progress Volume 97 ; 97 >
-    au < released ; 2015 ; Science Progress Volume 98 ; 98 >
-    au < released ; 2016 ; Science Progress Volume 99 ; 99 >
+    au < down ; 2001 ; Science Progress Volume 84 ; 84 >
+    au < down ; 2002 ; Science Progress Volume 85 ; 85 >
+    au < down ; 2003 ; Science Progress Volume 86 ; 86 >
+    au < down ; 2004 ; Science Progress Volume 87 ; 87 >
+    au < down ; 2005 ; Science Progress Volume 88 ; 88 >
+    au < down ; 2006 ; Science Progress Volume 89 ; 89 >
+    au < down ; 2007 ; Science Progress Volume 90 ; 90 >
+    au < down ; 2008 ; Science Progress Volume 91 ; 91 >
+    au < down ; 2009 ; Science Progress Volume 92 ; 92 >
+    au < down ; 2010 ; Science Progress Volume 93 ; 93 >
+    au < down ; 2011 ; Science Progress Volume 94 ; 94 >
+    au < down ; 2012 ; Science Progress Volume 95 ; 95 >
+    au < down ; 2013 ; Science Progress Volume 96 ; 96 >
+    au < down ; 2014 ; Science Progress Volume 97 ; 97 >
+    au < down ; 2015 ; Science Progress Volume 98 ; 98 >
+    au < down ; 2016 ; Science Progress Volume 99 ; 99 >
     au < doNotProcess ; 2017 ; Science Progress Volume 100 ; 100 >
     au < doNotProcess ; 2018 ; Science Progress Volume 101 ; 101 >
     au < doNotProcess ; 2019 ; Science Progress Volume 102 ; 102 >

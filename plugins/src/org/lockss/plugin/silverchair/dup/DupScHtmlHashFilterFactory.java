@@ -63,7 +63,9 @@ public class DupScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "class", "article-body"),
             //https://read.dukeupress.edu/jhppl/issue/43/1, need to get content from this page
             HtmlNodeFilters.tagWithAttribute("div", "class", "al-article-items"),
-
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "fig-section"),
+            // https://read.dukeupress.edu/american-literature/list-of-issues/2018
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ContentBrowseByYearManifest "),
     };
 
     NodeFilter[] moreExcludeFilters = new NodeFilter[] {

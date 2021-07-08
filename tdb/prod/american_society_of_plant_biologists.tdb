@@ -29,7 +29,8 @@
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://www.plantcell.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      
+      #move to OUP 2021
+
       au < aspb.ASPBDrupalPlugin ; manifest ; 1989 ; The Plant Cell Volume 1 ; 1 >
       au < aspb.ASPBDrupalPlugin ; manifest ; 1990 ; The Plant Cell Volume 2 ; 2 >
       au < aspb.ASPBDrupalPlugin ; manifest ; 1991 ; The Plant Cell Volume 3 ; 3 >
@@ -64,6 +65,7 @@
       au < aspb.ASPBDrupalPlugin ; released ; 2018 ; The Plant Cell Volume 30 ; 30 >
       au < aspb.ASPBDrupalPlugin ; released ; 2019 ; The Plant Cell Volume 31 ; 31 >
       au < aspb.ASPBDrupalPlugin ; manifest ; 2020 ; The Plant Cell Volume 32 ; 32 >
+      au < aspb.ASPBDrupalPlugin ; expected ; 2021 ; The Plant Cell Volume 33 ; 33 >
 
     }
 
@@ -269,9 +271,12 @@
     au < aspb.ASPBDrupalPlugin ; released ; 2019 ; Plant Physiology Volume 179 ; 179 >
     au < aspb.ASPBDrupalPlugin ; released ; 2019 ; Plant Physiology Volume 180 ; 180 >
     au < aspb.ASPBDrupalPlugin ; released ; 2019 ; Plant Physiology Volume 181 ; 181 >
-    au < aspb.ASPBDrupalPlugin ; manifest ; 2020 ; Plant Physiology Volume 182 ; 182 >
+    au < aspb.ASPBDrupalPlugin ; released ; 2020 ; Plant Physiology Volume 182 ; 182 >
     au < aspb.ASPBDrupalPlugin ; manifest ; 2020 ; Plant Physiology Volume 183 ; 183 >
     au < aspb.ASPBDrupalPlugin ; manifest ; 2020 ; Plant Physiology Volume 184 ; 184 >
+    au < aspb.ASPBDrupalPlugin ; expected ; 2021 ; Plant Physiology Volume 185 ; 185 >
+    au < aspb.ASPBDrupalPlugin ; expected ; 2021 ; Plant Physiology Volume 186 ; 186 >
+    au < aspb.ASPBDrupalPlugin ; expected ; 2021 ; Plant Physiology Volume 187 ; 187 >
 
   }
 

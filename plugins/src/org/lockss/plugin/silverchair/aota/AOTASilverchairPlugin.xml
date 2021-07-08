@@ -30,7 +30,7 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Journal of Occupational Therapy Silverchair Plugin</string>
+        <string>American Journal of Occupational Therapy Plugin</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -75,7 +75,7 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Journal of Occupational Therapy, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+        <string>"American Journal of Occupational Therapy Plugin, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
     </entry>
     <entry>
         <string>au_start_url</string>
@@ -125,6 +125,9 @@
                https://pubs.geoscienceworld.org/downloadimage.aspx?image=&PPTtype=SlideSet&ar=570731&siteId=69
                <string>1,"%sdownloadimage.aspx?image=", base_url</string>
             -->
+            <string>1,"^%s[^/]+/content_public/journal/[^/]+/[^/]+/.*\.pdf", base_url</string>
+            <string>1,"^https?://(aota\.silverchair-cdn\.com)/"</string>
+            <string>1, "^https?://%s/pdfaccess\.ashx", base_url</string>
         </list>
     </entry>
     <entry>
@@ -145,6 +148,21 @@
         <string>key:Silverchair</string>
     </entry>
     -->
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!--
+            https://ajot.aota.org/aota/content_public/journal/ajot/937760/7301090010p1.pdf
+            Redirected to:
+            https://aota.silverchair-cdn.com/aota/content_public/journal/ajot/937760/7301090010p1.pdf?Expires=2147483647&Signature=qT3cYYr8bZ850y66~o0xYTViGrQy8mIfeO2eRgPACXe8Ez0BOvQ2ySnNI3fzQ2WpNenVpw~zL~t5RE6qkIcMZ9gKvyGQZ9OCF80drT9dmO8LwAr6kr1XpnwXSPGRvhgul5OcRdR~3Pb02fZyCBUFpV99PUCHG-eXu588QHdPnrH2FgVq5ThYO6Aq7LiImugT1My~EyWPo2jZkeaVA6Fy-lJQhezMb1puLgxPYHWFQIvDUdArN8FukiQM2igL9kstU8Hnd7OGdWKCvb-0BaHzFnUnDU0VjESG5bimE0Fxer-ab0a2pUdfufxtpNveeq84rvbeHNVP6ikxLojRRcpPJQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+            -->
+            <string>"^%s[^/]+/content_public/journal/[^/]+/[^/]+/.*\.pdf", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.silverchair.aota.AOTAUrlConsumerFactory</string>
+    </entry>
     <entry>
         <string>text/html_link_extractor_factory</string>
         <string>org.lockss.plugin.silverchair.aota.AOTAHtmlLinkExtractorFactory</string>

@@ -18,7 +18,7 @@
       issnl = 2048-0105
     >
     {
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.besbjs.BESBJSPlugin
     param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = bj360
 
@@ -28,9 +28,10 @@
     au < doNotProcess ; 2015 ; Bone & Joint 360 Volume 4 ; 4 >
     au < doNotProcess ; 2016 ; Bone & Joint 360 Volume 5 ; 5 >
     au < doNotProcess ; 2017 ; Bone & Joint 360 Volume 6 ; 6 >
-    au < manifest ; 2018 ; Bone & Joint 360 Volume 7 ; 7 >
-    au < manifest ; 2019 ; Bone & Joint 360 Volume 8 ; 8 >
+    au < ready ; 2018 ; Bone & Joint 360 Volume 7 ; 7 >
+    au < released ; 2019 ; Bone & Joint 360 Volume 8 ; 8 >
     au < manifest ; 2020 ; Bone & Joint 360 Volume 9 ; 9 >
+    au < expected ; 2021 ; Bone & Joint 360 Volume 10 ; 10 >
 
     }
 
@@ -57,7 +58,7 @@
     rights = openaccess
     
     {
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.besbjs.BESBJSPlugin
     param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = bjr
 
@@ -66,10 +67,11 @@
     au < doNotProcess ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
     au < doNotProcess ; 2015 ; Bone & Joint Research Volume 4 ; 4 >
     au < doNotProcess ; 2016 ; Bone & Joint Research Volume 5 ; 5 >
-    au < manifest ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
-    au < manifest ; 2018 ; Bone & Joint Research Volume 7 ; 7 >
-    au < manifest ; 2019 ; Bone & Joint Research Volume 8 ; 8 >
+    au < ready ; 2017 ; Bone & Joint Research Volume 6 ; 6 >
+    au < released ; 2018 ; Bone & Joint Research Volume 7 ; 7 >
+    au < ready ; 2019 ; Bone & Joint Research Volume 8 ; 8 >
     au < manifest ; 2020 ; Bone & Joint Research Volume 9 ; 9 >
+    au < expected ; 2021 ; Bone & Joint Research Volume 10 ; 10 >
 
     }
 
@@ -203,7 +205,7 @@
     
     comment[continues] = Journal of Bone & Joint Surgery, British Volume, issn 0301-620X, eissn 2044-5377 as of Jan 1 2013
     {
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.besbjs.BESBJSPlugin
     param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = bjj
     
@@ -213,10 +215,11 @@
     au < doNotProcess ; 2014 ; Journal of Bone & Joint Surgery, British Volume Volume 96 ; 96-B >
     au < doNotProcess ; 2015 ; Journal of Bone & Joint Surgery, British Volume Volume 97 ; 97-B >
     au < doNotProcess ; 2016 ; Journal of Bone & Joint Surgery, British Volume Volume 98 ; 98-B >
-    au < manifest ; 2017 ; Journal of Bone & Joint Surgery, British Volume Volume 99 ; 99-B >
-    au < manifest ; 2018 ; Journal of Bone & Joint Surgery, British Volume Volume 100 ; 100-B >
-    au < manifest ; 2019 ; Journal of Bone & Joint Surgery, British Volume Volume 101 ; 101-B >
+    au < released ; 2017 ; Journal of Bone & Joint Surgery, British Volume Volume 99 ; 99-B >
+    au < ready ; 2018 ; Journal of Bone & Joint Surgery, British Volume Volume 100 ; 100-B >
+    au < ready ; 2019 ; Journal of Bone & Joint Surgery, British Volume Volume 101 ; 101-B >
     au < manifest ; 2020 ; Journal of Bone & Joint Surgery, British Volume Volume 102 ; 102-B >
+    au < expected ; 2021 ; Journal of Bone & Joint Surgery, British Volume Volume 103 ; 103-B >
 
     }
 
@@ -260,17 +263,17 @@
       issnl = 2396-7544
     >
 
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.besbjs.BESBJSPlugin
     param[base_url] = https://online.boneandjoint.org.uk/
     param[journal_id] = eor
 
-    au < manifest ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
-    au < manifest ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
-    au < manifest ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
-    au < manifest ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
-    au < manifest ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
+    au < ready ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+    au < ready ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
+    au < ready ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
+    au < ready ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
+    au < released ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
+    au < expected ; 2021 ; EFORT Open Reviews Volume 6 ; 6 >
 
   }
   
 }
-

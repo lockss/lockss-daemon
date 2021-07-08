@@ -1,0 +1,54 @@
+{
+
+  publisher <
+    name = Indian Institute of Science
+  >
+    rights = openaccess
+  
+  {
+  
+    title <
+      name = Journal of the Indian Institute of Science ;
+      issn = 0970-4140 ;
+      issnl = 0970-4140
+    >
+  {
+    #moved to OJS2. Reprints articles since 2007. See history at base_url. Copublished by Springer.
+    param[base_url] = http://journal.library.iisc.ernet.in/
+    param[journal_id] = iisc
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; param[year] ; name ; volume >
+
+    au < exists ; 2008 ; 2008 ; Journal of the Indian Institute of Science Volume 88 ; 88 >
+    au < exists ; 2009 ; 2009 ; Journal of the Indian Institute of Science Volume 89 ; 89 >
+    au < exists ; 2010 ; 2010 ; Journal of the Indian Institute of Science Volume 90 ; 90 >
+    au < exists ; 2011 ; 2011 ; Journal of the Indian Institute of Science Volume 91 ; 91 >
+    au < exists ; 2012 ; 2012 ; Journal of the Indian Institute of Science Volume 92 ; 92 >
+    au < exists ; 2013 ; 2013 ; Journal of the Indian Institute of Science Volume 93 ; 93 >
+    au < exists ; 2014 ; 2014 ; Journal of the Indian Institute of Science Volume 94 ; 94 >
+    au < exists ; 2015 ; 2015 ; Journal of the Indian Institute of Science Volume 95 ; 95 >
+    au < exists ; 2016 ; 2016 ; Journal of the Indian Institute of Science Volume 96 ; 96 >
+    au < exists ; 2017 ; 2017 ; Journal of the Indian Institute of Science Volume 97 ; 97 >
+    au < exists ; 2018 ; 2018 ; Journal of the Indian Institute of Science Volume 98 ; 98 >
+    au < exists ; 2019 ; 2019 ; Journal of the Indian Institute of Science Volume 99 ; 99 >
+    au < exists ; 2020 ; 2020 ; Journal of the Indian Institute of Science Volume 100 ; 100 >
+    au < expected ; 2021 ; 2021 ; Journal of the Indian Institute of Science Volume 101 ; 101 >
+
+  }
+  {
+    plugin = in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin
+    param[base_url] = http://journal.library.iisc.ernet.in/
+    implicit < status ; year ; name ; volume ; param[year] >
+
+    au < down ; 2001 ; Journal of the Indian Institute of Science Volume 81 ; 81 ; 2001 >
+    au < down ; 2002 ; Journal of the Indian Institute of Science Volume 82 ; 82 ; 2002 >
+    au < down ; 2003 ; Journal of the Indian Institute of Science Volume 83 ; 83 ; 2003 >
+    au < down ; 2004 ; Journal of the Indian Institute of Science Volume 84 ; 84 ; 2004 >
+    au < down ; 2005 ; Journal of the Indian Institute of Science Volume 85 ; 85 ; 2005 >
+    au < down ; 2006 ; Journal of the Indian Institute of Science Volume 86 ; 86 ; 2006 >
+    au < down ; 2007 ; Journal of the Indian Institute of Science Volume 87 ; 87 ; 2007 >
+  }
+
+  }
+
+}

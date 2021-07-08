@@ -69,7 +69,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Mineralogist Volume 100 ; 100 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; American Mineralogist Volume 101 ; 101 ; >
       au < crawling ; exists ; 2017 ; 2017 ; American Mineralogist Volume 102 ; 102 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; American Mineralogist Volume 103 ; 103 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; American Mineralogist Volume 103 ; 103 ; >
       au < crawling ; exists ; 2019 ; 2019 ; American Mineralogist Volume 104 ; 104 ; >
       au < crawling ; exists ; 2020 ; 2020 ; American Mineralogist Volume 105 ; 105 ; >
       au < manifest ; exists ; 2021 ; 2021 ; American Mineralogist Volume 106 ; 106 ; >
@@ -102,10 +102,11 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Elements Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Elements Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Elements Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Elements Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Elements Volume 13 ; 13 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Elements Volume 14 ; 14 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Elements Volume 15 ; 15 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Elements Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Elements Volume 17 ; 17 ; >
 
   }
   

@@ -138,9 +138,7 @@ public abstract class BaseCrawler implements Crawler {
   public static final String ABORTED_BEFORE_START_MSG = "Crawl aborted before start";
   
   protected int streamResetMax = DEFAULT_PERMISSION_BUF_MAX;
-  protected int defaultRetries = DEFAULT_DEFAULT_RETRY_COUNT;
   protected int maxRetries = DEFAULT_MAX_RETRY_COUNT;
-  protected long defaultRetryDelay = DEFAULT_DEFAULT_RETRY_DELAY;
   protected long minRetryDelay = DEFAULT_MIN_RETRY_DELAY;
   protected boolean sendReferrer = DEFAULT_SEND_REFERRER;
   protected Set<String> origStems;
@@ -247,12 +245,8 @@ public abstract class BaseCrawler implements Crawler {
   }
   
   protected void setCrawlConfig(Configuration config) {
-    defaultRetries = config.getInt(PARAM_DEFAULT_RETRY_COUNT,
-        DEFAULT_DEFAULT_RETRY_COUNT);
     maxRetries = config.getInt(PARAM_MAX_RETRY_COUNT,
         DEFAULT_MAX_RETRY_COUNT);
-    defaultRetryDelay = config.getLong(PARAM_DEFAULT_RETRY_DELAY,
-        DEFAULT_DEFAULT_RETRY_DELAY);
     minRetryDelay = config.getLong(PARAM_MIN_RETRY_DELAY,
         DEFAULT_MIN_RETRY_DELAY);
     sendReferrer = config.getBoolean(PARAM_SEND_REFERRER,
@@ -843,17 +837,11 @@ public abstract class BaseCrawler implements Crawler {
 
     public long getRetryDelay(CacheException ce) {
       long delay = ce.getRetryDelay();
-      if (delay < 0) {
-        delay = crawler.defaultRetryDelay;
-      }
       return Math.max(delay, crawler.minRetryDelay);
     }
 
     public int getRetryCount(CacheException ce) {
       int res = ce.getRetryCount();
-      if (res < 0) {
-        res = crawler.defaultRetries;
-      }
       return Math.min(res, crawler.maxRetries);
     }
 

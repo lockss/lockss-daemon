@@ -228,10 +228,10 @@ extends LockssTestCase {
       return mfle.extract(MetadataTarget.Any(), cu);
     } catch (IOException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     } catch (PluginException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     }
     return null;
   }

@@ -1,0 +1,230 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.spandidos.Spandidos2020Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Spandidos Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Spandidos</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Spandidos Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/%s/", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%slockss.txt", base_url</string>
+  </entry>
+  <entry>
+  <!-- manifest to issue to articles -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!--  CRAWL COMMENT BLOCK
+      Sample archive page:
+      http://www.spandidos-publications.com/etm/archive
+      Sample issue page:
+      https://www.spandidos-publications.com/etm/6/6/
+      Sample download:
+      https://www.spandidos-publications.com/etm/6/6/download
+      Sample Abstract page:
+      http://www.spandidos-publications.com/etm/6/6/1365?text=abstract
+      http://www.spandidos-publications.com/etm/6/6/1365/abstract
+      Sample Full Text
+      https://www.spandidos-publications.com/etm/6/6/1365
+      https://www.spandidos-publications.com/etm/6/6/1365?text=fulltext
+      Sample issue related images:
+      https://www.spandidos-publications.com/ISSUE_IMAGES/ol_15_6.jpg
+      Sample citation - should not be included, it is other article referenced this one
+      https://www.spandidos-publications.com/citation/10.3892/ol.2018.8378/html
+
+      Not every article has fulltext, see the following examples:
+      https://www.spandidos-publications.com/10.3892/ol.2020.11880
+      https://www.spandidos-publications.com/10.3892/ol.2020.11880/abstract
+      https://www.spandidos-publications.com/10.3892/ol.2020.11880/download
+      https://www.spandidos-publications.com/10.3892/ol.2020.11880?text=fulltext
+      https://www.spandidos-publications.com/10.3892/ol.2020.11984
+      https://www.spandidos-publications.com/10.3892/ol.2020.11984/abstract
+      https://www.spandidos-publications.com/10.3892/ol.2020.11984/download
+
+      Although the publisher move the PDF linek to doi based, it still support
+      old volume based article url. This is the way we rely on to prevent overcrawl. 
+     -->
+    <list>
+      <!--https://www.spandidos-publications.com/images/table-icon.jpg-->
+      <string>2,"^%s(downloadForm|pages|morelikethis|var)", base_url</string>
+      <string>2,"^%sISSUE_IMAGES", base_url</string>
+      <string>2,"^%s\d+/downloadSupplementary",base_url</string>
+      <string>1,"^%slockss.txt", base_url</string>
+      <string>1,"^%simages/", base_url</string>
+      <string>1,"^%sresources/(css|js|images|fontface)/", base_url</string>
+      <!--rules further restricted based on journal_id, volume_name-->
+      <string>1,"^%s%s/%s/", base_url, journal_id, volume_name</string>
+      <string>1,"^%sarticle_images/%s/%s/", base_url, journal_id, volume_name</string>
+      <!--https://www.spandidos-publications.com/ISSUE_IMAGES/ol_15_6.jpg-->
+      <string>1,"^%sISSUE_IMAGES/%s_%s_[^/]+.jpe?g", base_url, journal_id, volume_name</string>
+      <string>1,"^%s[^/]+/[^/]+(/download|/abstract)?$", base_url</string>
+    </list>
+  </entry>
+ <entry>
+   <!-- https://www.spandidos-publications.com/br/9/4/305?text=fulltext-->
+   <!-- https://www.spandidos-publications.com/br/9/4/305/download -->
+   <!--https://www.spandidos-publications.com/10.3892/br.2018.1136/download-->
+     <string>au_substance_url_pattern</string>
+       <string>"^%s[^/]+/[^/]+/download$", base_url</string>
+  </entry>  
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <!--  versioning or variants for style support -->
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)</string>
+      <string>://[^/]+/resources/(css|js|images|fontface)/[^/]*/.*\.(png|jpe?g|eot|woff|ttf|svg)$</string>
+      <string>://[^/]+/ISSUE_IMAGES/</string>
+      <string>://[^/]+/images/</string>
+    </list>
+  </entry>
+  <!-- Weight Rule-->
+  <!-- Archived page should be weighted to 0 since it will change from time to time-->
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+), 0</string>
+      <string>://[^/]+/archive/, 0</string>
+      <string>://[^/]+/resources/(css|js|images|fontface)/, 0</string>
+      <string>://[^/]+/ISSUE_IMAGES/, 0</string>
+      <string>://[^/]+/images/, 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>404=org.lockss.plugin.spandidos.SpandidosHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.spandidos.SpandidosCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.spandidos.SpandidosArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.spandidos.SpandidosArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.spandidos.SpandidosHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>

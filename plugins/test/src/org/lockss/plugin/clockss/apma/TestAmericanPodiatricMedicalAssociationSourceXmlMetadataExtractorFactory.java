@@ -64,7 +64,7 @@ public class TestAmericanPodiatricMedicalAssociationSourceXmlMetadataExtractorFa
               "/plugins/test/src/org/lockss/plugin/clockss/apma/" + fname;
       xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
     } catch (IOException e) {
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     }
     return xmlContent;
   }

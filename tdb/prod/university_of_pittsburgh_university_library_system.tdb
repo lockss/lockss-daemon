@@ -11,8 +11,8 @@
       name = BIBLIOS: Librarianship and Information Science Journal ;
       eissn = 1562-4730
     >
-
 #    param[base_url] = http://biblios.pitt.edu/ojs/
+
     param[journal_id] = biblios
 
     au < released ; 2011 ; 2011 ; BIBLIOS: Librarianship and Information Science Journal Volume 2011 ; 2011 ; http://biblios.pitt.edu/ojs/ >
@@ -25,6 +25,7 @@
     au < released ; 2018 ; 2018 ; BIBLIOS: Librarianship and Information Science Journal Volume 2018 ; 2018 ; http://biblios.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; BIBLIOS: Librarianship and Information Science Journal Volume 2019 ; 2019 ; https://biblios.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; BIBLIOS: Librarianship and Information Science Journal Volume 2020 ; 2020 ; https://biblios.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; BIBLIOS: Librarianship and Information Science Journal Volume 2021 ; 2021 ; https://biblios.pitt.edu/ojs/ >
 
   }
 
@@ -34,8 +35,8 @@
       issn = 1074-2247 ;
       eissn = 2156-5163
     >
-
 #    param[base_url] = http://bsj.pitt.edu/ojs/
+
     param[journal_id] = bsj
 
     au < released ; 2008-2010 ; 2010 ; Bolivian Studies Journal Volume 15-17 ; 15-17 ; http://bsj.pitt.edu/ojs/ >
@@ -47,6 +48,7 @@
     au < released ; 2017-2018 ; 2018 ; Bolivian Studies Journal Volume 23-24 ; 23-24 ; http://bsj.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Bolivian Studies Journal Volume 25 ; 25 ; https://bsj.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; Bolivian Studies Journal Volume 26 ; 26 ; https://bsj.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; Bolivian Studies Journal Volume 27 ; 27 ; https://bsj.pitt.edu/ojs/ >
 
   }
 
@@ -55,8 +57,8 @@
       name = The Carl Beck Papers In Russian And East European Studies ;
       eissn = 2163-839X
     >
-
 #    param[base_url] = http://carlbeckpapers.pitt.edu/ojs/
+
     param[journal_id] = cbp
 
     au < released ; 1981 ; 1981 ; The Carl Beck Papers In Russian And East European Studies Volume 1981 ; 1981 ; http://carlbeckpapers.pitt.edu/ojs/ >
@@ -105,8 +107,8 @@
         name = Catedral Tomada: Revista de crítica literaria latinoamericana ;
         eissn = 2169-0847
       >
-
 #      param[base_url] = http://catedraltomada.pitt.edu/ojs/
+
       param[journal_id] = catedraltomada
 
       au < released ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 ; http://catedraltomada.pitt.edu/ojs/ >
@@ -117,6 +119,7 @@
       au < released ; 2018 ; 2018 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 6 ; 6 ; http://catedraltomada.pitt.edu/ojs/ >
       au < manifest ; 2019 ; 2019 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 7 ; 7 ; https://catedraltomada.pitt.edu/ojs/ >
       au < expected ; 2020 ; 2020 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 8 ; 8 ; https://catedraltomada.pitt.edu/ojs/ >
+      au < expected ; 2021 ; 2021 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 9 ; 9 ; https://catedraltomada.pitt.edu/ojs/ >
 
   }
 
@@ -126,8 +129,8 @@
         name = Central Asian Journal of Global Health ;
         eissn = 2166-7403
       >
-
 #      param[base_url] = http://cajgh.pitt.edu/ojs/
+
       param[journal_id] = cajgh
       # subscription journal.
 
@@ -140,6 +143,7 @@
       au < released ; 2018 ; 2018 ; Central Asian Journal of Global Health Volume 7 ; 7 ; http://cajgh.pitt.edu/ojs/ >
       au < manifest ; 2019 ; 2019 ; Central Asian Journal of Global Health Volume 8 ; 8 ; https://cajgh.pitt.edu/ojs/ >
       au < expected ; 2020 ; 2020 ; Central Asian Journal of Global Health Volume 9 ; 9 ; https://cajgh.pitt.edu/ojs/ >
+      au < expected ; 2021 ; 2021 ; Central Asian Journal of Global Health Volume 10 ; 10 ; https://cajgh.pitt.edu/ojs/ >
 
   }
 
@@ -149,20 +153,21 @@
       issn = 2159-2411 ;
       eissn = 2158-8724
     >
-
 #    param[base_url] = http://cinej.pitt.edu/ojs/
+
     param[journal_id] = cinej
 
     au < released ; 2011 ; 2011 ; CINEJ Cinema e-Journal Volume 1 ; 1 ; http://cinej.pitt.edu/ojs/ >
     au < released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 1-2 ; 1-2 ; http://cinej.pitt.edu/ojs/ >
     au < released ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 2-3 ; 2-3 ; http://cinej.pitt.edu/ojs/ >
     au < released ; 2014 ; 2014 ; CINEJ Cinema e-Journal Volume 3-4 ; 3-4 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 4-5 ; 4-5 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2016 ; 2016 ; CINEJ Cinema e-Journal Volume 5-6 ; 5-6 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2017 ; 2017 ; CINEJ Cinema e-Journal Volume 6-7 ; 6-7 ; http://cinej.pitt.edu/ojs/ >
-    au < released ; 2018 ; 2018 ; CINEJ Cinema e-Journal Volume 7-8 ; 7-8 ; http://cinej.pitt.edu/ojs/ >
-    au < manifest ; 2019 ; 2019 ; CINEJ Cinema e-Journal Volume 9-10 ; 9-10 ; https://cinej.pitt.edu/ojs/ >
-    au < expected ; 2020 ; 2020 ; CINEJ Cinema e-Journal Volume 11-12 ; 11-12 ; https://cinej.pitt.edu/ojs/ >
+    au < released ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 5 (2015) ; 5 (2015) ; http://cinej.pitt.edu/ojs/ >
+    au < released ; 2016 ; 2016 ; CINEJ Cinema e-Journal Volume 5 (2016) ; 5 (2016) ; http://cinej.pitt.edu/ojs/ >
+    au < released ; 2017 ; 2017 ; CINEJ Cinema e-Journal Volume 6 ; 6 ; http://cinej.pitt.edu/ojs/ >
+    au < released ; 2018 ; 2018 ; CINEJ Cinema e-Journal Volume 7 (2018) ; 7 (2018) ; http://cinej.pitt.edu/ojs/ >
+    au < manifest ; 2019 ; 2019 ; CINEJ Cinema e-Journal Volume 7 (2019) ; 7 (2019) ; https://cinej.pitt.edu/ojs/ >
+    au < exists ; 2020 ; 2020 ; CINEJ Cinema e-Journal Volume 8 ; 8 ; https://cinej.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; CINEJ Cinema e-Journal Volume 9 ; 9 ; https://cinej.pitt.edu/ojs/ >
 
   }
 
@@ -171,8 +176,8 @@
       name = Contemporaneity: Historical Presence in Visual Culture ;
       eissn = 2153-5914
     >
-
 #    param[base_url] = http://contemporaneity.pitt.edu/ojs/
+
     param[journal_id] = contemporaneity
 
     au < released ; 2011 ; 2011 ; Contemporaneity: Historical Presence in Visual Culture Volume 1 ; 1 ; http://contemporaneity.pitt.edu/ojs/ >
@@ -184,6 +189,7 @@
     au < released ; 2018 ; 2018 ; Contemporaneity: Historical Presence in Visual Culture Volume 7 ; 7 ; http://contemporaneity.pitt.edu/ojs/ >
     au < exists ; 2019 ; 2019 ; Contemporaneity: Historical Presence in Visual Culture Volume 8 ; 8 ; https://contemporaneity.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; Contemporaneity: Historical Presence in Visual Culture Volume 9 ; 9 ; https://contemporaneity.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; Contemporaneity: Historical Presence in Visual Culture Volume 10 ; 10 ; https://contemporaneity.pitt.edu/ojs/ >
 
   }
 
@@ -193,8 +199,8 @@
       name = Dentistry 3000 ;
       eissn = 2167-8677
     >
-
 #    param[base_url] = http://dentistry3000.pitt.edu/ojs/
+
     param[journal_id] = dentistry3000
 
     au < released ; 2013 ; 2013 ; Dentistry 3000 Volume 1 (2013) ; 1 ; http://dentistry3000.pitt.edu/ojs/ >
@@ -205,6 +211,7 @@
     au < released ; 2018 ; 2018 ; Dentistry 3000 Volume 6 (2018) ; 6 ; http://dentistry3000.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Dentistry 3000 Volume 7 (2019) ; 7 ; https://dentistry3000.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; Dentistry 3000 Volume 8 (2020) ; 8 ; https://dentistry3000.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; Dentistry 3000 Volume 9 (2021) ; 9 ; https://dentistry3000.pitt.edu/ojs/ >
 
   }
 
@@ -214,8 +221,8 @@
         name = Dialogic Pedagogy: An International Online Journal ;
         eissn = 2325-3290
       >
-
 #      param[base_url] = http://dpj.pitt.edu/ojs/
+
       param[journal_id] = dpj1
 
       au < released ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 ; http://dpj.pitt.edu/ojs/ >
@@ -226,6 +233,7 @@
       au < released ; 2018 ; 2018 ; Dialogic Pedagogy: An International Online Journal Volume 6 ; 6 ; http://dpj.pitt.edu/ojs/ >
       au < manifest ; 2019 ; 2019 ; Dialogic Pedagogy: An International Online Journal Volume 7 ; 7 ; https://dpj.pitt.edu/ojs/ >
       au < expected ; 2020 ; 2020 ; Dialogic Pedagogy: An International Online Journal Volume 8 ; 8 ; https://dpj.pitt.edu/ojs/ >
+      au < expected ; 2021 ; 2021 ; Dialogic Pedagogy: An International Online Journal Volume 9 ; 9 ; https://dpj.pitt.edu/ojs/ >
 
   }
 
@@ -235,8 +243,8 @@
       issn = 2159-242X ;
       eissn = 2158-8708
     >
-
 #    param[base_url] = http://emaj.pitt.edu/ojs/
+
     param[journal_id] = emaj
 
     au < released ; 2011 ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 ; http://emaj.pitt.edu/ojs/ >
@@ -249,6 +257,7 @@
     au < released ; 2018 ; 2018 ; EMAJ: Emerging Markets e-Journal of Management Volume 8 (2018) ; 8 ; http://emaj.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; EMAJ: Emerging Markets e-Journal of Management Volume 9 (2019) ; 9 ; https://emaj.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; EMAJ: Emerging Markets e-Journal of Management Volume 10 (2020) ; 10 ; https://emaj.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; EMAJ: Emerging Markets e-Journal of Management Volume 11 (2021) ; 11 ; https://emaj.pitt.edu/ojs/ >
 
   }
 
@@ -257,8 +266,8 @@
       name = Ethnology ;
       issn = 0014-1828
     >
-
 #    param[base_url] = http://ethnology.pitt.edu/ojs/
+
     param[journal_id] = Ethnology
     #Ethnology publication discontinued
 
@@ -276,8 +285,8 @@
       issn = 2153-9669 ;
       eissn = 2153-9677
     >
-
 #    param[base_url] = http://ehe.pitt.edu/ojs/
+
     param[journal_id] = ehe
 
     au < released ; 2010 ; 2010 ; Excellence in Higher Education Volume 1 ; 1 ; http://ehe.pitt.edu/ojs/ >
@@ -296,8 +305,8 @@
       name = Forbes and Fifth ;
       eissn = 2332-7863
     >
-
 #    param[base_url] = http://forbes5.pitt.edu/ojs/
+
     param[journal_id] = forbes5
     #move to http://archive.forbes5.pitt.edu/ojs/index.php/forbes5
 
@@ -312,8 +321,8 @@
       name = Health, Culture, and Society ;
       eissn = 2161-6590
     >
-
 #    param[base_url] = http://hcs.pitt.edu/ojs/
+
     param[journal_id] = hcs
 
     au < released ; 2011 ; 2011 ; Health, Culture, and Society Volume 1 ; 1 ; http://hcs.pitt.edu/ojs/ >
@@ -330,8 +339,8 @@
       name = IIOAB Letters ;
       eissn = 2161-3702
     >
-
 #    param[base_url] = http://iioablett.pitt.edu/ojs/
+
     param[journal_id] = iioablett
 
     au < released ; 2011 ; 2011 ; IIOAB Letters Volume 1 ; 1 ; http://iioablett.pitt.edu/ojs/ >
@@ -345,8 +354,8 @@
       name = International Journal of Telerehabilitation ;
       eissn = 1945-2020
     >
-
 #    param[base_url] = http://telerehab.pitt.edu/ojs/
+
     param[journal_id] = telerehab
 
     au < released ; 2008 ; 2008 ; International Journal of Telerehabilitation Special Prepublication Issue ; 0 ; http://telerehab.pitt.edu/ojs/ >
@@ -362,6 +371,7 @@
     au < released ; 2018 ; 2018 ; International Journal of Telerehabilitation Volume 10 ; 10 ; http://telerehab.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; International Journal of Telerehabilitation Volume 11 ; 11 ; https://telerehab.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; International Journal of Telerehabilitation Volume 12 ; 12 ; https://telerehab.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; International Journal of Telerehabilitation Volume 13 ; 13 ; https://telerehab.pitt.edu/ojs/ >
 
   }
 
@@ -371,8 +381,8 @@
       issn = 1936-6280 ;
       eissn = 2155-1162
     >
-
 #    param[base_url] = http://jffp.pitt.edu/ojs/
+
     param[journal_id] = jffp
 
     au < released ; 1989 ; 1989 ; Journal of French and Francophone Philosophy Volume 1 ; 1 ; http://jffp.pitt.edu/ojs/ >
@@ -403,6 +413,7 @@
     au < released ; 2018 ; 2018 ; Journal of French and Francophone Philosophy Volume 26 ; 26 ; http://jffp.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Journal of French and Francophone Philosophy Volume 27 ; 27 ; https://jffp.pitt.edu/ojs/ >
     au < manifest ; 2020 ; 2020 ; Journal of French and Francophone Philosophy Volume 28 ; 28 ; https://jffp.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; Journal of French and Francophone Philosophy Volume 29 ; 29 ; https://jffp.pitt.edu/ojs/ >
 
   }
 
@@ -413,8 +424,8 @@
         issn = 0733-2491 ;
         eissn = 2164-7984
       >
-
 #      param[base_url] = http://jlc.law.pitt.edu/ojs/
+
       param[journal_id] = jlc
 
       au < released ; 2008 ; 2008 ; Journal of Law and Commerce Volume 26-27 ; 26-27 ; http://jlc.law.pitt.edu/ojs/ >
@@ -430,6 +441,7 @@
       au < released ; 2018 ; 2018 ; Journal of Law and Commerce Volume 36 ; 36 ; http://jlc.law.pitt.edu/ojs/ >
       au < manifest ; 2019 ; 2019 ; Journal of Law and Commerce Volume 37 ; 37 ; https://jlc.law.pitt.edu/ojs/ >
       au < expected ; 2020 ; 2020 ; Journal of Law and Commerce Volume 38 ; 38 ; https://jlc.law.pitt.edu/ojs/ >
+      au < expected ; 2021 ; 2021 ; Journal of Law and Commerce Volume 39 ; 39 ; https://jlc.law.pitt.edu/ojs/ >
 
   }
 
@@ -439,8 +451,8 @@
         name = Journal of World-Historical Information ;
         eissn = 2169-0812
       >
-
 #      param[base_url] = http://jwhi.pitt.edu/ojs/
+
       param[journal_id] = jwhi
 
       au < released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 ; http://jwhi.pitt.edu/ojs/ >
@@ -478,8 +490,8 @@
         name = Motivational Interviewing: Training, Research, Implementation, Practice ;
         eissn = 2160-584X
       >
-
 #      param[base_url] = http://www.mitrip.org/ojs/
+
       param[journal_id] = mitrip
 
       au < released ; 2012 ; 2012 ; Motivational Interviewing: Training, Research, Implementation, Practice Volume 1 (2012) ; 1 ; http://www.mitrip.org/ojs/ >
@@ -493,8 +505,8 @@
       name = Pennsylvania Libraries: Research and Practice ;
       eissn = 2324-7878
     >
-
 #    param[base_url] = http://palrap.pitt.edu/ojs/
+
     param[journal_id] = palrap
 
     au < released ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 ; http://palrap.pitt.edu/ojs/ >
@@ -505,6 +517,7 @@
     au < released ; 2018 ; 2018 ; Pennsylvania Libraries: Research and Practice Volume 6 ; 6 ; http://palrap.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Pennsylvania Libraries: Research and Practice Volume 7 ; 7 ; https://palrap.pitt.edu/ojs/ >
     au < manifest ; 2020 ; 2020 ; Pennsylvania Libraries: Research and Practice Volume 8 ; 8 ; https://palrap.pitt.edu/ojs/ >
+    au < manifest ; 2021 ; 2021 ; Pennsylvania Libraries: Research and Practice Volume 9 ; 9 ; https://palrap.pitt.edu/ojs/ >
 
   }
 
@@ -513,8 +526,8 @@
       name = Pitt Political Review ;
       eissn = 2160-5807
     >
-
 #    param[base_url] = http://ppr.pitt.edu/ojs/
+
     param[journal_id] = ppr
 
     au < released ; 2011 ; 2011 ; Pitt Political Review Volume 8 (2011) ; 8 ; http://ppr.pitt.edu/ojs/ >
@@ -531,8 +544,8 @@
         name = Pittsburgh Journal of Environmental and Public Health Law ;
         eissn = 2164-7976
       >
-
 #      param[base_url] = http://pjephl.law.pitt.edu/ojs/
+
       param[journal_id] = pjephl
 
       au < released ; 2007 ; 2007 ; Pittsburgh Journal of Environmental and Public Health Law Volume 1 ; 1 ; http://pjephl.law.pitt.edu/ojs/ >
@@ -553,8 +566,8 @@
         issn = 1087-6995 ;
         eissn = 2164-800X
       >
-
 #      param[base_url] = http://tlp.law-dev.library.pitt.edu/ojs/
+
       param[journal_id] = tlp
       #base_url changed
 
@@ -578,6 +591,7 @@
       au < released ; 2018 ; 2018 ; Pittsburgh Journal of Technology Law and Policy Volume 18 ; 18 ; https://tlp.law.pitt.edu/ojs/ >
       au < manifest ; 2019 ; 2019 ; Pittsburgh Journal of Technology Law and Policy Volume 19 ; 19 ; https://tlp.law.pitt.edu/ojs/ >
       au < manifest ; 2020 ; 2020 ; Pittsburgh Journal of Technology Law and Policy Volume 20 ; 20 ; https://tlp.law.pitt.edu/ojs/ >
+      au < manifest ; 2021 ; 2021 ; Pittsburgh Journal of Technology Law and Policy Volume 21 ; 21 ; https://tlp.law.pitt.edu/ojs/ >
 
   }
 
@@ -587,8 +601,8 @@
         name = Pittsburgh Papers on the European Union ;
         eissn = 2164-6732
       >
-
 #      param[base_url] = http://pgheupapers.pitt.edu/ojs/
+
       param[journal_id] = pgheupapers
 
       au < released ; 2012 ; 2012 ; Pittsburgh Papers on the European Union Volume 1 ; 1 ; http://pgheupapers.pitt.edu/ojs/ >
@@ -604,8 +618,8 @@
       issn = 1932-1821 ;
       eissn = 1932-1996
     >
-
 #    param[base_url] = http://taxreview.law.pitt.edu/ojs/
+
     param[journal_id] = taxreview
 
     au < released ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 ; http://taxreview.law.pitt.edu/ojs/ >
@@ -617,6 +631,7 @@
     au < released ; 2018 ; 2018 ; Pittsburgh Tax Review Volume 7 ; 7 ; http://taxreview.law.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Pittsburgh Tax Review Volume 8 ; 8 ; https://taxreview.law.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; Pittsburgh Tax Review Volume 9 ; 9 ; https://taxreview.law.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; Pittsburgh Tax Review Volume 10 ; 10 ; https://taxreview.law.pitt.edu/ojs/ >
 
   }
 
@@ -626,8 +641,8 @@
       issn = 0191-4847 ;
       eissn = 1941-0832
     >
-
 #    param[base_url] = http://radicalteacher.library.pitt.edu/ojs/
+
     param[journal_id] = radicalteacher
 
     au < released ; 2013 ; 2013 ; Radical Teacher Volume 1 ; 1 ; http://radicalteacher.library.pitt.edu/ojs/ >
@@ -638,6 +653,7 @@
     au < released ; 2018 ; 2018 ; Radical Teacher Volume 6 ; 6 ; http://radicalteacher.library.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Radical Teacher Volume 7 ; 7 ; https://radicalteacher.library.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; Radical Teacher Volume 8 ; 8 ; https://radicalteacher.library.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; Radical Teacher Volume 9 ; 9 ; https://radicalteacher.library.pitt.edu/ojs/ >
 
   }
 
@@ -647,8 +663,8 @@
       issn = 0034-9631 ;
       eissn = 2154-4794
     >
-
 #    param[base_url] = http://revista-iberoamericana.pitt.edu/ojs/
+
     param[journal_id] = Iberoamericana
 
     au < released ; 1939 ; 1939 ; Revista Iberoamericana Volume I ; I ; http://revista-iberoamericana.pitt.edu/ojs/ >
@@ -733,6 +749,7 @@
     au < released ; 2018 ; 2018 ; Revista Iberoamericana Volume LXXXIV ; LXXXIV ; http://revista-iberoamericana.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Revista Iberoamericana Volume LXXXV ; LXXXV ; http://revista-iberoamericana.pitt.edu/ojs/ >
     au < manifest ; 2020 ; 2020 ; Revista Iberoamericana Volume LXXXVI ; LXXXVI ; http://revista-iberoamericana.pitt.edu/ojs/ >
+    au < manifest ; 2021 ; 2021 ; Revista Iberoamericana Volume LXXXVII ; LXXXVII ; http://revista-iberoamericana.pitt.edu/ojs/ >
 
   }
 
@@ -741,8 +758,8 @@
       name = Ricoeur Studies ;
       eissn = 2156-7808
     >
-
 #    param[base_url] = http://ricoeur.pitt.edu/ojs/
+
     param[journal_id] = ricoeur
 
     au < released ; 2010 ; 2010 ; Ricoeur Studies Volume 1 ; 1 ; http://ricoeur.pitt.edu/ojs/ >
@@ -756,6 +773,7 @@
     au < released ; 2018 ; 2018 ; Ricoeur Studies Volume 9 ; 9 ; http://ricoeur.pitt.edu/ojs/ >
     au < manifest ; 2019 ; 2019 ; Ricoeur Studies Volume 10 ; 10 ; https://ricoeur.pitt.edu/ojs/ >
     au < expected ; 2020 ; 2020 ; Ricoeur Studies Volume 11 ; 11 ; https://ricoeur.pitt.edu/ojs/ >
+    au < expected ; 2021 ; 2021 ; Ricoeur Studies Volume 12 ; 12 ; https://ricoeur.pitt.edu/ojs/ >
 
   }
 
@@ -765,8 +783,8 @@
         name = SHASHI: The Journal of Japanese Business and Company History ;
         eissn = 2169-0820
       >
-
 #      param[base_url] = http://shashi.pitt.edu/ojs/
+
       param[journal_id] = shashi
 
       au < released ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 ; http://shashi.pitt.edu/ojs/ >
@@ -782,8 +800,8 @@
         name = Timely Interventions ;
         eissn = 2160-5777
       >
-
 #      param[base_url] = http://timelyinterventions.pitt.edu/ojs/
+
       param[journal_id] = timely
 
       au < released ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 ; http://timelyinterventions.pitt.edu/ojs/ >
@@ -797,8 +815,8 @@
         issn = 0041-9915 ;
         eissn = 1942-8405
       >
-
 #      param[base_url] = http://lawreview.law-dev.library.pitt.edu/ojs/
+
       param[journal_id] = lawreview
       #base_url changed.
 
@@ -819,7 +837,8 @@
       au < released ; 2017 ; 2017 ; University of Pittsburgh Law Review Volume 78-79 ; 78-79 ; http://lawreview.law.pitt.edu/ojs/ >
       au < released ; 2018 ; 2018 ; University of Pittsburgh Law Review Volume 79-80 ; 79-80 ; http://lawreview.law.pitt.edu/ojs/ >
       au < manifest ; 2019 ; 2019 ; University of Pittsburgh Law Review Volume 80-81 ; 80-81 ; https://lawreview.law.pitt.edu/ojs/ >
-      au < expected ; 2020 ; 2020 ; University of Pittsburgh Law Review Volume 82-83 ; 82-83 ; https://lawreview.law.pitt.edu/ojs/ >
+      au < expected ; 2020 ; 2020 ; University of Pittsburgh Law Review Volume 81-82 ; 81-82 ; https://lawreview.law.pitt.edu/ojs/ >
+      au < expected ; 2021 ; 2021 ; University of Pittsburgh Law Review Volume 82-83 ; 82-83 ; https://lawreview.law.pitt.edu/ojs/ >
 
   }
 

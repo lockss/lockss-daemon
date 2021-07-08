@@ -24,58 +24,59 @@
     au < aapl.AAPLDrupalPlugin ; released ; 2017 ; Journal of the American Academy of Psychiatry and the Law Online Volume 45 ; 45 >
     au < aapl.AAPLDrupalPlugin ; released ; 2018 ; Journal of the American Academy of Psychiatry and the Law Online Volume 46 ; 46 >
     au < aapl.AAPLDrupalPlugin ; released ; 2019 ; Journal of the American Academy of Psychiatry and the Law Online Volume 47 ; 47 >
-    au < aapl.AAPLDrupalPlugin ; manifest ; 2020 ; Journal of the American Academy of Psychiatry and the Law Online Volume 48 ; 48 >
+    au < aapl.AAPLDrupalPlugin ; released ; 2020 ; Journal of the American Academy of Psychiatry and the Law Online Volume 48 ; 48 >
+    au < aapl.AAPLDrupalPlugin ; manifest ; 2021 ; Journal of the American Academy of Psychiatry and the Law Online Volume 49 ; 49 >
 
     }
 
     {
       param[base_url] = http://www.jaapl.org/
 
-    au < HighWirePressH20Plugin ; released ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; released ; 1974 ; Journal of the American Academy of Psychiatry and the Law Online Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; released ; 1975 ; Journal of the American Academy of Psychiatry and the Law Online Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; released ; 1977 ; Journal of the American Academy of Psychiatry and the Law Online Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; released ; 1978 ; Journal of the American Academy of Psychiatry and the Law Online Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; 1979 ; Journal of the American Academy of Psychiatry and the Law Online Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 1980 ; Journal of the American Academy of Psychiatry and the Law Online Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; 1981 ; Journal of the American Academy of Psychiatry and the Law Online Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 1982 ; Journal of the American Academy of Psychiatry and the Law Online Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 1983 ; Journal of the American Academy of Psychiatry and the Law Online Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 1984 ; Journal of the American Academy of Psychiatry and the Law Online Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 1985 ; Journal of the American Academy of Psychiatry and the Law Online Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 1986 ; Journal of the American Academy of Psychiatry and the Law Online Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; released ; 1987 ; Journal of the American Academy of Psychiatry and the Law Online Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 1988 ; Journal of the American Academy of Psychiatry and the Law Online Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; released ; 1989 ; Journal of the American Academy of Psychiatry and the Law Online Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; released ; 1990 ; Journal of the American Academy of Psychiatry and the Law Online Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; released ; 1991 ; Journal of the American Academy of Psychiatry and the Law Online Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; released ; 1992 ; Journal of the American Academy of Psychiatry and the Law Online Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; released ; 1993 ; Journal of the American Academy of Psychiatry and the Law Online Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; released ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; released ; 1995 ; Journal of the American Academy of Psychiatry and the Law Online Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; released ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; down ; 1973 ; Journal of the American Academy of Psychiatry and the Law Online Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; down ; 1974 ; Journal of the American Academy of Psychiatry and the Law Online Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; down ; 1975 ; Journal of the American Academy of Psychiatry and the Law Online Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; down ; 1976 ; Journal of the American Academy of Psychiatry and the Law Online Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; down ; 1977 ; Journal of the American Academy of Psychiatry and the Law Online Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; down ; 1978 ; Journal of the American Academy of Psychiatry and the Law Online Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; down ; 1979 ; Journal of the American Academy of Psychiatry and the Law Online Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; down ; 1980 ; Journal of the American Academy of Psychiatry and the Law Online Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; down ; 1981 ; Journal of the American Academy of Psychiatry and the Law Online Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; down ; 1982 ; Journal of the American Academy of Psychiatry and the Law Online Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; down ; 1983 ; Journal of the American Academy of Psychiatry and the Law Online Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; down ; 1984 ; Journal of the American Academy of Psychiatry and the Law Online Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; down ; 1985 ; Journal of the American Academy of Psychiatry and the Law Online Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; down ; 1986 ; Journal of the American Academy of Psychiatry and the Law Online Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; down ; 1987 ; Journal of the American Academy of Psychiatry and the Law Online Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; down ; 1988 ; Journal of the American Academy of Psychiatry and the Law Online Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; down ; 1989 ; Journal of the American Academy of Psychiatry and the Law Online Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; down ; 1990 ; Journal of the American Academy of Psychiatry and the Law Online Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; down ; 1991 ; Journal of the American Academy of Psychiatry and the Law Online Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; down ; 1992 ; Journal of the American Academy of Psychiatry and the Law Online Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; down ; 1993 ; Journal of the American Academy of Psychiatry and the Law Online Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; down ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; down ; 1995 ; Journal of the American Academy of Psychiatry and the Law Online Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; down ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 >
 
-    au < HighWirePressH20Plugin ; released ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [limited pdfs] ; 25 >
-    au < HighWirePressH20Plugin ; released ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [limited pdfs] ; 26 >
-    au < HighWirePressH20Plugin ; released ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [limited pdfs] ; 27 >
-    au < HighWirePressH20Plugin ; released ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [limited pdfs] ; 28 >
-    au < HighWirePressH20Plugin ; released ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [limited pdfs] ; 29 >
+    au < HighWirePressH20Plugin ; down ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [limited pdfs] ; 25 >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [limited pdfs] ; 26 >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [limited pdfs] ; 27 >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [limited pdfs] ; 28 >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [limited pdfs] ; 29 >
 
-    au < HighWirePressH20Plugin ; released ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; released ; 2003 ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; released ; 2004 ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; released ; 2005 ; Journal of the American Academy of Psychiatry and the Law Online Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; released ; 2006 ; Journal of the American Academy of Psychiatry and the Law Online Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; released ; 2007 ; Journal of the American Academy of Psychiatry and the Law Online Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; released ; 2008 ; Journal of the American Academy of Psychiatry and the Law Online Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Journal of the American Academy of Psychiatry and the Law Online Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the American Academy of Psychiatry and the Law Online Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the American Academy of Psychiatry and the Law Online Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the American Academy of Psychiatry and the Law Online Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the American Academy of Psychiatry and the Law Online Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; released ; 2014 ; Journal of the American Academy of Psychiatry and the Law Online Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; released ; 2015 ; Journal of the American Academy of Psychiatry and the Law Online Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Journal of the American Academy of Psychiatry and the Law Online Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Journal of the American Academy of Psychiatry and the Law Online Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Journal of the American Academy of Psychiatry and the Law Online Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Journal of the American Academy of Psychiatry and the Law Online Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Journal of the American Academy of Psychiatry and the Law Online Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Journal of the American Academy of Psychiatry and the Law Online Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Journal of the American Academy of Psychiatry and the Law Online Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Journal of the American Academy of Psychiatry and the Law Online Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Journal of the American Academy of Psychiatry and the Law Online Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Journal of the American Academy of Psychiatry and the Law Online Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Journal of the American Academy of Psychiatry and the Law Online Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 >
 
     }

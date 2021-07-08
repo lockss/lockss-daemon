@@ -10,7 +10,8 @@
   >
 
     param[base_url] = https://www.manchesterhive.com/
-    plugin = needs.plugin
+    param[base_url2] = https://www.manchesteropenhive.com/
+    plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversityPressPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     {
@@ -25,18 +26,19 @@
      param[journal_id] = bjrl
      #param[journal_issn] = 2054-9326
 
-     au < exists ; exists ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 ; >
-     au < exists ; exists ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 ; >
-     au < exists ; exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 ; >
-     au < exists ; exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 ; >
-     au < exists ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 ; >
-     au < exists ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 ; >
-     au < exists ; exists ; 2015 ; Bulletin of the John Rylands Library Volume 91 ; 91 ; >
-     au < exists ; exists ; 2016 ; Bulletin of the John Rylands Library Volume 92 ; 92 ; >
-     au < exists ; exists ; 2017 ; Bulletin of the John Rylands Library Volume 93 ; 93 ; >
+     au < manifest ; exists ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 ; >
+     au < manifest ; exists ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 ; >
+     au < manifest ; exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 ; >
+     au < manifest ; exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 ; >
+     au < crawling ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 ; >
+     au < manifest ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 ; >
+     au < manifest ; exists ; 2015 ; Bulletin of the John Rylands Library Volume 91 ; 91 ; >
+     au < manifest ; exists ; 2016 ; Bulletin of the John Rylands Library Volume 92 ; 92 ; >
+     au < manifest ; exists ; 2017 ; Bulletin of the John Rylands Library Volume 93 ; 93 ; >
      au < doNotProcess ; doNotProcess ; 2018 ; Bulletin of the John Rylands Library Volume 94 ; 94 ; >
-     au < exists ; exists ; 2019 ; Bulletin of the John Rylands Library Volume 95 ; 95 ; >
-     au < exists ; exists ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 ; >
+     au < manifest ; exists ; 2019 ; Bulletin of the John Rylands Library Volume 95 ; 95 ; >
+     au < manifest ; exists ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 ; >
+     au < manifest ; exists ; 2021 ; Bulletin of the John Rylands Library Volume 97 ; 97 ; >
 
     }
 
@@ -68,11 +70,11 @@
         au < doNotProcess ; doNotProcess ; 2016 ; Film Studies Volume 14 ; 14 ; >
         au < doNotProcess ; doNotProcess ; 2016 ; Film Studies Volume 15 ; 15 ; >
         au < doNotProcess ; doNotProcess ; 2017 ; Film Studies Volume 16 ; 16 ; >
-        au < exists ; exists ; 2017 ; Film Studies Volume 17 ; 17 ; >
-        au < exists ; exists ; 2018 ; Film Studies Volume 18 ; 18 ; >
-        au < exists ; exists ; 2018 ; Film Studies Volume 19 ; 19 ; >
-        au < exists ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
-        au < exists ; exists ; 2019 ; Film Studies Volume 21 ; 21 ; >
+        au < manifest ; exists ; 2017 ; Film Studies Volume 17 ; 17 ; >
+        au < crawling ; exists ; 2018 ; Film Studies Volume 18 ; 18 ; >
+        au < manifest ; exists ; 2018 ; Film Studies Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
+        au < crawling ; exists ; 2019 ; Film Studies Volume 21 ; 21 ; >
 
       }
 
@@ -94,10 +96,11 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 ; >
-      au < exists ; exists ; 2018 ; Human Remains and Violence Volume 4 ; 4 ; >
-      au < exists ; exists ; 2019 ; Human Remains and Violence Volume 5 ; 5 ; >
-      au < exists ; exists ; 2020 ; Human Remains and Violence Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2018 ; Human Remains and Violence Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2019 ; Human Remains and Violence Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2020 ; Human Remains and Violence Volume 6 ; 6 ; >
     
+      au < manifest ; exists ; 2021 ; Human Remains and Violence Volume 7 ; 7 ; >
      }
     
     }
@@ -118,9 +121,10 @@
       au < doNotProcess ; doNotProcess ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
-      au < exists ; exists ; 2018 ; James Baldwin Journal Volume 4 ; 4 ; >
-      au < exists ; exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 ; >
-      au < exists ; exists ; 2020 ; James Baldwin Journal Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2018 ; James Baldwin Journal Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2020 ; James Baldwin Journal Volume 6 ; 6 ; >
+      au < expected ; exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 ; >
 
       }
 

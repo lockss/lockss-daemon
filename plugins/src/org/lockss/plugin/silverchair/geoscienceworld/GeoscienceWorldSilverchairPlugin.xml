@@ -9,11 +9,11 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Geoscience World Plugin</string>
+        <string>GeoScienceWorld Plugin</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -21,11 +21,11 @@
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Geoscience World Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"GeoScienceWorld Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
     <!--
     https://pubs.geoscienceworld.org/gsabulletin/list-of-issues/2019

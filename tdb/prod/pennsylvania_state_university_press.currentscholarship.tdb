@@ -27,7 +27,7 @@
       au < manifest ; 2007 ; The Chaucer Review Volume 2007 ; 2007 ; https://www.jstor.org/ >
       au < manifest ; 2008 ; The Chaucer Review Volume 2008 ; 2008 ; https://www.jstor.org/ >
       au < released ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; https://www.jstor.org/ >
-      au < manifest ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ >
+      au < released ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ >
       au < released ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; The Chaucer Review Volume 2012 ; 2012 ; http://www.jstor.org/ >
       au < released ; 2013 ; The Chaucer Review Volume 2013 ; 2013 ; http://www.jstor.org/ >
@@ -37,7 +37,8 @@
       au < released ; 2017 ; The Chaucer Review Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Chaucer Review Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Chaucer Review Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Chaucer Review Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Chaucer Review Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Chaucer Review Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
   
@@ -62,7 +63,8 @@
       au < released ; 2017 ; Comparative Literature Studies Volume 54 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Comparative Literature Studies Volume 55 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Comparative Literature Studies Volume 56 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Comparative Literature Studies Volume 57 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Comparative Literature Studies Volume 57 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Comparative Literature Studies Volume 58 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -84,7 +86,8 @@
       au < released ; 2017 ; Critical Philosophy of Race Volume 5 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Critical Philosophy of Race Volume 6 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Critical Philosophy of Race Volume 7 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Critical Philosophy of Race Volume 8 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Critical Philosophy of Race Volume 8 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Critical Philosophy of Race Volume 9 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -99,7 +102,7 @@
       param[journal_id] = edgallpoerev
 
       au < released ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 2010 ; http://www.jstor.org/ >
-      au < manifest ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ >
+      au < released ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ >
       au < manifest ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 2012 ; https://www.jstor.org/ >
       au < released ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; http://www.jstor.org/ >
       au < released ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; http://www.jstor.org/ >
@@ -108,7 +111,8 @@
       au < released ; 2017 ; The Edgar Allan Poe Review Volume 18 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Edgar Allan Poe Review Volume 19 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Edgar Allan Poe Review Volume 22 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -131,7 +135,8 @@
       au < released ; 2017 ; The Eugene O'Neill Review Volume 38 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Eugene O'Neill Review Volume 39 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Eugene O'Neill Review Volume 40 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Eugene O'Neill Review Volume 41 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Eugene O'Neill Review Volume 41 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Eugene O'Neill Review Volume 42 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -156,8 +161,9 @@
       au < released ; 2016 ; The F. Scott Fitzgerald Review Volume 14 ; 2016 ; http://www.jstor.org/ >
       au < released ; 2017 ; The F. Scott Fitzgerald Review Volume 15 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The F. Scott Fitzgerald Review Volume 16 ; 2018 ; https://www.jstor.org/ >
-      au < manifest ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 2019 ; https://www.jstor.org/ >
-      au < expected ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 2019 ; https://www.jstor.org/ >
+      au < manifest ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -183,7 +189,8 @@
       au < released ; 2017 ; The Good Society Volume 26 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Good Society Volume 27 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Good Society Volume 28 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Good Society Volume 29 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Good Society Volume 29 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Good Society Volume 30 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -208,7 +215,7 @@
       au < exists ; 2006 ; Interdisciplinary Literary Studies Volume 7-8 ; 2006 ; https://www.jstor.org/ >
       au < manifest ; 2007 ; Interdisciplinary Literary Studies Volume 8-9 ; 2007 ; https://www.jstor.org/ >
       au < manifest ; 2008 ; Interdisciplinary Literary Studies Volume 9-10 ; 2008 ; https://www.jstor.org/ >
-      au < manifest ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 2009 ; https://www.jstor.org/ >
+      au < released ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 2009 ; https://www.jstor.org/ >
       au < released ; 2010 ; Interdisciplinary Literary Studies Volume 11-12 ; 2010 ; https://www.jstor.org/ >
       au < released ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 2011 ; https://www.jstor.org/ >
       au < manifest ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 2012 ; https://www.jstor.org/ >
@@ -219,7 +226,8 @@
       au < released ; 2017 ; Interdisciplinary Literary Studies Volume 19 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Interdisciplinary Literary Studies Volume 20 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Interdisciplinary Literary Studies Volume 21 (2019) ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Interdisciplinary Literary Studies Volume 21 (2020) ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Interdisciplinary Literary Studies Volume 21 (2020) ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Interdisciplinary Literary Studies Volume 22 (2021) ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -241,7 +249,8 @@
       au < released ; 2017 ; Journal of Africana Religions Volume 6 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Africana Religions Volume 7 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Africana Religions Volume 8 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Africana Religions Volume 9 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Africana Religions Volume 9 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of Africana Religions Volume 10 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -265,6 +274,7 @@
       au < released ; 2018 ; Journal of Assessment and Institutional Effectiveness Volume 7 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Assessment and Institutional Effectiveness Volume 8 ; 2019 ; https://www.jstor.org/ >
       au < manifest ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 9 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -288,7 +298,8 @@
       au < released ; 2017 ; The Journal of Ayn Rand Studies Volume 17 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Journal of Ayn Rand Studies Volume 18 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Journal of Ayn Rand Studies Volume 20 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Journal of Ayn Rand Studies Volume 20 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Journal of Ayn Rand Studies Volume 21 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -310,7 +321,8 @@
       au < released ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 6 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 9 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -336,6 +348,7 @@
       au < released ; 2018 ; The Journal of General Education Volume 67 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Journal of General Education Volume 68 ; 2019 ; https://www.jstor.org/ >
       au < manifest ; 2020 ; The Journal of General Education Volume 69 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Journal of General Education Volume 70 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -351,7 +364,7 @@
       param[journal_id] = jmedirelicult
       comment[continues] = Mystics Quarterly 0742-5503
 
-      au < manifest ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 2010 ; https://www.jstor.org/ >
+      au < released ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 2010 ; https://www.jstor.org/ >
       au < released ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 2011 ; https://www.jstor.org/ >
       au < manifest ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 2012 ; https://www.jstor.org/ >
       au < released ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 2013 ; http://www.jstor.org/ >
@@ -361,7 +374,8 @@
       au < released ; 2017 ; Journal of Medieval Religious Cultures Volume 43 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Medieval Religious Cultures Volume 44 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Medieval Religious Cultures Volume 46 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Medieval Religious Cultures Volume 46 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of Medieval Religious Cultures Volume 47 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -386,7 +400,8 @@
       au < released ; 2017 ; Journal of Modern Periodical Studies Volume 7 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Modern Periodical Studies Volume 8 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Modern Periodical Studies Volume 9 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Modern Periodical Studies Volume 10 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Modern Periodical Studies Volume 10 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of Modern Periodical Studies Volume 11 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -415,7 +430,8 @@
       au < released ; 2017 ; Journal of Moravian History Volume 17 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Moravian History Volume 18 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Moravian History Volume 19 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Moravian History Volume 20 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Moravian History Volume 20 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of Moravian History Volume 21 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -430,7 +446,7 @@
 
       param[journal_id] = jnietstud
 
-      au < manifest ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; https://www.jstor.org/ >
+      au < released ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; http://www.jstor.org/ >
       au < manifest ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 2013 ; https://www.jstor.org/ >
       au < manifest ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 2014 ; https://www.jstor.org/ >
@@ -439,7 +455,8 @@
       au < released ; 2017 ; The Journal of Nietzsche Studies Volume 48 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Journal of Nietzsche Studies Volume 49 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Journal of Nietzsche Studies Volume 50 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Journal of Nietzsche Studies Volume 51 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Journal of Nietzsche Studies Volume 51 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Journal of Nietzsche Studies Volume 52 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -464,7 +481,8 @@
       au < released ; 2017 ; The Journal of Speculative Philosophy Volume 31 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Journal of Speculative Philosophy Volume 32 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Journal of Speculative Philosophy Volume 33 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Journal of Speculative Philosophy Volume 34 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Journal of Speculative Philosophy Volume 34 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Journal of Speculative Philosophy Volume 35 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -490,7 +508,8 @@
       au < released ; 2017 ; The Mark Twain Annual Volume 15 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Mark Twain Annual Volume 16 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Mark Twain Annual Volume 17 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Mark Twain Annual Volume 18 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Mark Twain Annual Volume 18 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; The Mark Twain Annual Volume 19 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -502,9 +521,9 @@
       eissn = 2161-4741 ;
       issnl = 1074-164X
     >
-
     # This title moved from Manchester University Press to Pennsylvania State University Press
     # See pennsylvania_state_university_press.ingenta.tdb for 2005-2010
+
 
       param[journal_id] = mediterraneanstu
 
@@ -517,7 +536,8 @@
       au < released ; 2017 ; Mediterranean Studies Volume 25 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Mediterranean Studies Volume 26 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Mediterranean Studies Volume 27 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Mediterranean Studies Volume 28 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Mediterranean Studies Volume 28 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Mediterranean Studies Volume 29 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -534,7 +554,7 @@
       param[journal_id] = pacicoasphil
 
       au < notReady ; 2010 ; Pacific Coast Philology Volume 45 ; 2010 ; https://www.jstor.org/ >
-      au < manifest ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; https://www.jstor.org/ >
+      au < released ; 2011 ; Pacific Coast Philology Volume 46 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; Pacific Coast Philology Volume 47 ; 2012 ; http://www.jstor.org/ >
       au < manifest ; 2013 ; Pacific Coast Philology Volume 48 ; 2013 ; https://www.jstor.org/ >
       au < manifest ; 2014 ; Pacific Coast Philology Volume 49 ; 2014 ; https://www.jstor.org/ >
@@ -543,7 +563,8 @@
       au < released ; 2017 ; Pacific Coast Philology Volume 52 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Pacific Coast Philology Volume 53 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Pacific Coast Philology Volume 54 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Pacific Coast Philology Volume 55 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Pacific Coast Philology Volume 55 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Pacific Coast Philology Volume 56 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -567,7 +588,8 @@
       au < released ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 85 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 86 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 87 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 87 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 88 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -591,8 +613,9 @@
       au < released ; 2016 ; Philosophy and Rhetoric Volume 49 ; 2016 ; http://www.jstor.org/ >
       au < released ; 2017 ; Philosophy and Rhetoric Volume 50 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Philosophy and Rhetoric Volume 51 ; 2018 ; https://www.jstor.org/ >
-      au < manifest ; 2019 ; Philosophy and Rhetoric Volume 52 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Philosophy and Rhetoric Volume 53 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2019 ; Philosophy and Rhetoric Volume 52 ; 2019 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Philosophy and Rhetoric Volume 53 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Philosophy and Rhetoric Volume 54 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -615,7 +638,8 @@
       au < released ; 2017 ; Preternature: Critical and Historical Studies on the Preternatural Volume 6 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Preternature: Critical and Historical Studies on the Preternatural Volume 7 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Preternature: Critical and Historical Studies on the Preternatural Volume 8 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Preternature: Critical and Historical Studies on the Preternatural Volume 9 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Preternature: Critical and Historical Studies on the Preternatural Volume 9 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Preternature: Critical and Historical Studies on the Preternatural Volume 10 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -643,7 +667,8 @@
       au < released ; 2017 ; Reception: Texts, Readers, Audiences, History Volume 9 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Reception: Texts, Readers, Audiences, History Volume 10 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Reception: Texts, Readers, Audiences, History Volume 11 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Reception: Texts, Readers, Audiences, History Volume 12 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Reception: Texts, Readers, Audiences, History Volume 12 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -669,7 +694,8 @@
       au < released ; 2017 ; SHAW: The Journal of Bernard Shaw Studies Volume 37 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; SHAW: The Journal of Bernard Shaw Studies Volume 38 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; SHAW: The Journal of Bernard Shaw Studies Volume 39 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; SHAW: The Journal of Bernard Shaw Studies Volume 40 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; SHAW: The Journal of Bernard Shaw Studies Volume 40 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; SHAW: The Journal of Bernard Shaw Studies Volume 41 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -694,7 +720,8 @@
       au < released ; 2017 ; Soundings: An Interdisciplinary Journal Volume 100 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Soundings: An Interdisciplinary Journal Volume 101 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Soundings: An Interdisciplinary Journal Volume 102 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Soundings: An Interdisciplinary Journal Volume 103 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Soundings: An Interdisciplinary Journal Volume 103 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Soundings: An Interdisciplinary Journal Volume 104 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -719,7 +746,8 @@
       au < released ; 2017 ; Steinbeck Review Volume 14 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Steinbeck Review Volume 15 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Steinbeck Review Volume 16 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Steinbeck Review Volume 17 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Steinbeck Review Volume 17 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Steinbeck Review Volume 18 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -734,7 +762,7 @@
 
       param[journal_id] = studamerjewilite
 
-      au < manifest ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ >
+      au < released ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ >
       au < released ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; http://www.jstor.org/ >
       au < released ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; http://www.jstor.org/ >
@@ -744,7 +772,8 @@
       au < released ; 2017 ; Studies in American Jewish Literature Volume 36 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Studies in American Jewish Literature Volume 37 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Studies in American Jewish Literature Volume 38 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Studies in American Jewish Literature Volume 39 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Studies in American Jewish Literature Volume 39 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Studies in American Jewish Literature Volume 40 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -760,7 +789,7 @@
       param[journal_id] = transportationj
 
       au < released ; 2010 ; Transportation Journal Volume 49 ; 2010 ; https://www.jstor.org/ >
-      au < manifest ; 2011 ; Transportation Journal Volume 50 ; 2011 ; https://www.jstor.org/ >
+      au < released ; 2011 ; Transportation Journal Volume 50 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; Transportation Journal Volume 51 ; 2012 ; http://www.jstor.org/ >
       au < released ; 2013 ; Transportation Journal Volume 52 ; 2013 ; http://www.jstor.org/ >
       au < released ; 2014 ; Transportation Journal Volume 53 ; 2014 ; http://www.jstor.org/ >
@@ -769,7 +798,8 @@
       au < released ; 2017 ; Transportation Journal Volume 56 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Transportation Journal Volume 57 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Transportation Journal Volume 58 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Transportation Journal Volume 59 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Transportation Journal Volume 59 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Transportation Journal Volume 60 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -784,7 +814,7 @@
 
       param[journal_id] = utopianstudies
 
-      au < manifest ; 2010 ; Utopian Studies Volume 21 ; 2010 ; https://www.jstor.org/ >
+      au < released ; 2010 ; Utopian Studies Volume 21 ; 2010 ; https://www.jstor.org/ >
       au < released ; 2011 ; Utopian Studies Volume 22 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; Utopian Studies Volume 23 ; 2012 ; http://www.jstor.org/ >
       au < released ; 2013 ; Utopian Studies Volume 24 ; 2013 ; http://www.jstor.org/ >
@@ -794,7 +824,8 @@
       au < released ; 2017 ; Utopian Studies Volume 28 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Utopian Studies Volume 29 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Utopian Studies Volume 30 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Utopian Studies Volume 31 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Utopian Studies Volume 31 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Utopian Studies Volume 32 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -812,7 +843,8 @@
       au < released ; 2017 ; ab-Original Volume 1 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; ab-Original Volume 1-2 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; ab-Original Volume 3 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; ab-Original Volume 4 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; ab-Original Volume 4 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; ab-Original Volume 5 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -856,7 +888,8 @@
       au < released ; 2017 ; Bulletin for Biblical Research Volume 27 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Bulletin for Biblical Research Volume 28 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Bulletin for Biblical Research Volume 29 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Bulletin for Biblical Research Volume 30 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Bulletin for Biblical Research Volume 30 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Bulletin for Biblical Research Volume 31 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -881,7 +914,8 @@
       au < released ; 2017 ; Bustan - The Middle East Book Review Volume 8 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Bustan - The Middle East Book Review Volume 9 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Bustan - The Middle East Book Review Volume 10 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Bustan - The Middle East Book Review Volume 11 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Bustan - The Middle East Book Review Volume 11 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Bustan - The Middle East Book Review Volume 12 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -910,7 +944,8 @@
       au < released ; 2017 ; The Arthur Miller Journal Volume 12 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Arthur Miller Journal Volume 13 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Arthur Miller Journal Volume 14 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Arthur Miller Journal Volume 15 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Arthur Miller Journal Volume 15 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Arthur Miller Journal Volume 16 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -947,10 +982,11 @@
       au < exists ; 2014 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 19 ; 2014 ; https://www.jstor.org/ >
       au < released ; 2015 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 20 ; 2015 ; https://www.jstor.org/ >
       au < released ; 2016 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 21 ; 2016 ; https://www.jstor.org/ >
-      au < manifest ; 2017 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 22 ; 2017 ; https://www.jstor.org/ >
-      au < manifest ; 2018 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 23 ; 2018 ; https://www.jstor.org/ >
+      au < released ; 2017 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 22 ; 2017 ; https://www.jstor.org/ >
+      au < released ; 2018 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 23 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 24 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 25 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 25 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 26 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -981,7 +1017,8 @@
       au < released ; 2017 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 14 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 15 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 16 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 17 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 17 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 18 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1046,7 +1083,8 @@
       au < released ; 2017 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 48 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 49 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 50 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 51 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 51 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 52 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1073,7 +1111,8 @@
       au < released ; 2017 ; Ecumenica: Performance and Religion Volume 10 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Ecumenica: Performance and Religion Volume 11 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Ecumenica: Performance and Religion Volume 12 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Ecumenica: Performance and Religion Volume 14 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1117,7 +1156,8 @@
       au < released ; 2017 ; Edith Wharton Review Volume 33 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Edith Wharton Review Volume 34 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Edith Wharton Review Volume 35 (2019) ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Edith Wharton Review Volume 35 (2020) ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Edith Wharton Review Volume 35 (2020) ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Edith Wharton Review Volume 36 (2021) ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1151,7 +1191,7 @@
       au < exists ; 2008 ; George Eliot-George Henry Lewes Studies Volume 2008 ; 2008 ; https://www.jstor.org/ >
       au < manifest ; 2009 ; George Eliot-George Henry Lewes Studies Volume 2009 ; 2009 ; https://www.jstor.org/ >
       au < released ; 2010 ; George Eliot-George Henry Lewes Studies Volume 2010 ; 2010 ; https://www.jstor.org/ >
-      au < manifest ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; https://www.jstor.org/ >
+      au < released ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; George Eliot-George Henry Lewes Studies Volume 2012 ; 2012 ; https://www.jstor.org/ >
       au < released ; 2013 ; George Eliot-George Henry Lewes Studies Volume 2013 ; 2013 ; https://www.jstor.org/ >
       au < released ; 2014 ; George Eliot-George Henry Lewes Studies Volume 66 ; 2014 ; https://www.jstor.org/ >
@@ -1160,7 +1200,8 @@
       au < released ; 2017 ; George Eliot-George Henry Lewes Studies Volume 69 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; George Eliot-George Henry Lewes Studies Volume 70 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; George Eliot-George Henry Lewes Studies Volume 71 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; George Eliot-George Henry Lewes Studies Volume 72 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; George Eliot-George Henry Lewes Studies Volume 72 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; George Eliot-George Henry Lewes Studies Volume 73 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1198,7 +1239,8 @@
       au < released ; 2017 ; Gestalt Review Volume 21 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Gestalt Review Volume 22 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Gestalt Review Volume 23 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Gestalt Review Volume 24 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Gestalt Review Volume 24 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Gestalt Review Volume 25 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1217,7 +1259,8 @@
       au < released ; 2017 ; International Journal of Persian Literature Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; International Journal of Persian Literature Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; International Journal of Persian Literature Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; International Journal of Persian Literature Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; International Journal of Persian Literature Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; International Journal of Persian Literature Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1242,6 +1285,7 @@
       au < released ; 2018 ; Journal for the Study of Paul and His Letters Volume 8 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal for the Study of Paul and His Letters Volume 9 ; 2019 ; https://www.jstor.org/ >
       au < manifest ; 2020 ; Journal for the Study of Paul and His Letters Volume 10 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Journal for the Study of Paul and His Letters Volume 11 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1260,7 +1304,8 @@
       au < released ; 2017 ; Journal of Asia-Pacific Pop Culture Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Asia-Pacific Pop Culture Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Asia-Pacific Pop Culture Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Asia-Pacific Pop Culture Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Asia-Pacific Pop Culture Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Journal of Asia-Pacific Pop Culture Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1284,7 +1329,8 @@
       au < released ; 2017 ; Journal of Information Policy Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Information Policy Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Information Policy Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Information Policy Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Information Policy Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of Information Policy Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1305,6 +1351,7 @@
       au < released ; 2018 ; Journal of Jewish Ethics Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Jewish Ethics Volume 2019 ; 2019 ; https://www.jstor.org/ >
       au < manifest ; 2020 ; Journal of Jewish Ethics Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of Jewish Ethics Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1329,6 +1376,7 @@
       au < released ; 2018 ; Journal of Natural Resources Policy Research Volume 8 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Natural Resources Policy Research Volume 9 ; 2019 ; https://www.jstor.org/ >
       au < expected ; 2020 ; Journal of Natural Resources Policy Research Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Journal of Natural Resources Policy Research Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1346,7 +1394,8 @@
       au < released ; 2017 ; Journal of Posthuman Studies Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Posthuman Studies Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Posthuman Studies Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Posthuman Studies Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Journal of Posthuman Studies Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1394,6 +1443,7 @@
       au < released ; 2018 ; Journal of the Pennsylvania Academy of Science Volume 92 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 93 ; 2019 ; https://www.jstor.org/ >
       au < expected ; 2020 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 95 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1421,7 +1471,8 @@
       au < released ; 2017 ; Journal of Theological Interpretation Volume 11 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Journal of Theological Interpretation Volume 12 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Journal of Theological Interpretation Volume 13 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Journal of Theological Interpretation Volume 14 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Journal of Theological Interpretation Volume 14 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Journal of Theological Interpretation Volume 15 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1439,7 +1490,8 @@
       au < released ; 2017 ; Libraries: Culture, History, and Society Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Libraries: Culture, History, and Society Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Libraries: Culture, History, and Society Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Libraries: Culture, History, and Society Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Libraries: Culture, History, and Society Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Libraries: Culture, History, and Society Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1488,7 +1540,8 @@
       au < released ; 2017 ; Nathaniel Hawthorne Review Volume 43 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Nathaniel Hawthorne Review Volume 44 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Nathaniel Hawthorne Review Volume 45 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Nathaniel Hawthorne Review Volume 46 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Nathaniel Hawthorne Review Volume 46 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Nathaniel Hawthorne Review Volume 47 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1545,6 +1598,7 @@
       au < released ; 2017 ; Resources for American Literary Study Volume 39 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2019 ; Resources for American Literary Study Volume 40-41 ; 2019 ; https://www.jstor.org/ >
       au < expected ; 2020 ; Resources for American Literary Study Volume 42 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Resources for American Literary Study Volume 43 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1596,7 +1650,7 @@
       au < exists ; 2008 ; Studies in American Humor Volume 2008 ; 2008 ; https://www.jstor.org/ >
       au < manifest ; 2009 ; Studies in American Humor Volume 2009 ; 2009 ; https://www.jstor.org/ >
       au < released ; 2010 ; Studies in American Humor Volume 2010 ; 2010 ; https://www.jstor.org/ >
-      au < manifest ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; https://www.jstor.org/ >
+      au < released ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; Studies in American Humor Volume 2012 ; 2012 ; https://www.jstor.org/ >
       au < released ; 2013 ; Studies in American Humor Volume 2013 ; 2013 ; https://www.jstor.org/ >
       au < released ; 2014 ; Studies in American Humor Volume 2014 ; 2014 ; https://www.jstor.org/ >
@@ -1605,7 +1659,8 @@
       au < released ; 2017 ; Studies in American Humor Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Studies in American Humor Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Studies in American Humor Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Studies in American Humor Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Studies in American Humor Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Studies in American Humor Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1673,7 +1728,8 @@
       au < released ; 2017 ; Style Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Style Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Style Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Style Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Style Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Style Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1704,7 +1760,8 @@
       au < released ; 2017 ; The Cormac McCarthy Journal Volume 15 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Cormac McCarthy Journal Volume 16 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Cormac McCarthy Journal Volume 17 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Cormac McCarthy Journal Volume 18 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Cormac McCarthy Journal Volume 18 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Cormac McCarthy Journal Volume 19 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1722,7 +1779,8 @@
       au < released ; 2017 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2017 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2018 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2019 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2021 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1738,9 +1796,10 @@
       param[journal_id] = jdevepers
 
       au < released ; 2017 ; The Journal of Development Perspectives Volume 1 ; 2017 ; https://www.jstor.org/ >
-      au < manifest ; 2018 ; The Journal of Development Perspectives Volume 2 ; 2018 ; https://www.jstor.org/ >
+      au < released ; 2018 ; The Journal of Development Perspectives Volume 2 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Journal of Development Perspectives Volume 3 ; 2019 ; https://www.jstor.org/ >
       au < expected ; 2020 ; The Journal of Development Perspectives Volume 4 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; The Journal of Development Perspectives Volume 5 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1764,7 +1823,8 @@
       au < released ; 2017 ; The Journal of World Christianity Volume 7 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Journal of World Christianity Volume 8 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Journal of World Christianity Volume 9 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Journal of World Christianity Volume 10 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Journal of World Christianity Volume 10 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Journal of World Christianity Volume 11 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1793,7 +1853,7 @@
       au < exists ; 2008 ; The Korean Language in America Volume 13 ; 2008 ; https://www.jstor.org/ >
       au < manifest ; 2009 ; The Korean Language in America Volume 14 ; 2009 ; https://www.jstor.org/ >
       au < released ; 2010 ; The Korean Language in America Volume 15 ; 2010 ; https://www.jstor.org/ >
-      au < manifest ; 2011 ; The Korean Language in America Volume 16 ; 2011 ; https://www.jstor.org/ >
+      au < released ; 2011 ; The Korean Language in America Volume 16 ; 2011 ; https://www.jstor.org/ >
       au < released ; 2012 ; The Korean Language in America Volume 17 ; 2012 ; https://www.jstor.org/ >
       au < released ; 2013 ; The Korean Language in America Volume 18 ; 2013 ; https://www.jstor.org/ >
       au < released ; 2015 ; The Korean Language in America Volume 19 ; 2015 ; https://www.jstor.org/ >
@@ -1801,7 +1861,8 @@
       au < released ; 2017 ; The Korean Language in America Volume 20-21 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; The Korean Language in America Volume 21-22 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Korean Language in America Volume 22-23 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Korean Language in America Volume 23-24 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Korean Language in America Volume 23-24 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Korean Language in America Volume 24-25 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1841,7 +1902,8 @@
       au < exists ; 2009 ; The Langston Hughes Review Volume 23 ; 2009 ; https://www.jstor.org/ >
       au < exists ; 2010 ; The Langston Hughes Review Volume 24 ; 2010 ; https://www.jstor.org/ >
       au < released ; 2019 ; The Langston Hughes Review Volume 25 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; The Langston Hughes Review Volume 26 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; The Langston Hughes Review Volume 26 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; The Langston Hughes Review Volume 27 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1885,7 +1947,8 @@
       au < released ; 2017 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 27 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 28 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 29 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 30 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 30 ; 2020 ; https://www.jstor.org/ >
+      au < expected ; 2021 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 31 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1911,7 +1974,8 @@
       au < released ; 2017 ; Wesley and Methodist Studies Volume 9 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; Wesley and Methodist Studies Volume 10 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; Wesley and Methodist Studies Volume 11 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; Wesley and Methodist Studies Volume 12 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; Wesley and Methodist Studies Volume 12 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; Wesley and Methodist Studies Volume 13 ; 2021 ; https://www.jstor.org/ >
 
   }
 
@@ -1958,7 +2022,8 @@
       au < released ; 2017 ; William Carlos Williams Review Volume 34 ; 2017 ; https://www.jstor.org/ >
       au < released ; 2018 ; William Carlos Williams Review Volume 35 ; 2018 ; https://www.jstor.org/ >
       au < released ; 2019 ; William Carlos Williams Review Volume 36 ; 2019 ; https://www.jstor.org/ >
-      au < manifest ; 2020 ; William Carlos Williams Review Volume 37 ; 2020 ; https://www.jstor.org/ >
+      au < released ; 2020 ; William Carlos Williams Review Volume 37 ; 2020 ; https://www.jstor.org/ >
+      au < manifest ; 2021 ; William Carlos Williams Review Volume 38 ; 2021 ; https://www.jstor.org/ >
 
   }
 

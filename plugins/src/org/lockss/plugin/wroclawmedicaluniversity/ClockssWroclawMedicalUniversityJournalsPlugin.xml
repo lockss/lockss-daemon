@@ -2,6 +2,7 @@
     <entry>
         <string>plugin_status</string>
         <string>ready</string>
+        <!-- https transition enabled -->
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -9,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -33,7 +34,7 @@
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
         </map>
     </entry>
@@ -76,28 +77,43 @@
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"https://fonts\.gstatic\.com/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)?"</string>
-            <string>1,"https://fonts\.googleapis\.com/css"</string>
-            <string>1,"https://cdnjs\.cloudflare\.com/ajax/"</string>
-            <string>1,"^http://%s/(common|images)/", url_host(base_url)</string>
+            <string>1,"https?://fonts\.gstatic\.com/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)?"</string>
+            <string>1,"https?://fonts\.googleapis\.com/css"</string>
+            <string>1,"https?://cdnjs\.cloudflare\.com/ajax/"</string>
+            <string>1,"^https?://%s/(common|images)/", url_host(base_url)</string>
             <!--This bibtex and ris link are broken website wide, need to fix it when the link is fixed-->
             <!--<string>1,"https?://www.advances.pl/cytowania/\?type=(bibtex|ris)?"</string>-->
-            <string>1,"^http://%s/pdf/%d/%s/", url_host(base_url), year, volume_name</string>
-            <string>1,"^http://%s/en/issue/%d/%s/", url_host(base_url), year, volume_name</string>
-            <string>1,"^http://%s/en/article/%d/%s/", url_host(base_url), year, volume_name</string>
+            <string>1,"^https?://%s/pdf/%d/%s/", url_host(base_url), year, volume_name</string>
+            <string>1,"^https?://%s/en/issue/%d/%s/", url_host(base_url), year, volume_name</string>
+            <string>1,"^https?://%s/en/article/%d/%s/", url_host(base_url), year, volume_name</string>
         </list>
     </entry>
     <entry>
         <!--This one does not have a separate permission statement because the permission statement can be found on start_url-->
         <!--http://www.dmp.umed.wroc.pl/en/archive/-->
         <string>au_start_url</string>
-        <string>"http://%s/en/archive/", url_host(base_url)</string>
+        <list>
+            <string>"http://%s/en/archive/", url_host(base_url)</string>
+            <string>"https://%s/en/archive/", url_host(base_url)</string>
+        </list>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"http://%s/pdf/%d/%s/[^/]+/[^/]+.pdf$", url_host(base_url), year, volume_name</string>
+            <string>"https?://%s/pdf/%d/%s/[^/]+/[^/]+.pdf$", url_host(base_url), year, volume_name</string>
         </list>
+    </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_url_fetcher_factory</string>
+        <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+    </entry>
+    <entry>
+        <string>au_url_normalizer</string>
+        <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
     </entry>
     <entry>
         <string>au_permitted_host_pattern</string>

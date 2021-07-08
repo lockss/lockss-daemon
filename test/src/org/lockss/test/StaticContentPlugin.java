@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,7 +56,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
   }
 
   public String getVersion() {
-    throw new UnsupportedOperationException("Not implemented");
+    return "1";
   }
 
   public String getPluginName() {

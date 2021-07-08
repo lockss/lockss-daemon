@@ -1,0 +1,52 @@
+{
+  publisher <
+    name = Cyberjournal for Pentecostal-Charismatic Research
+  >
+  
+  implicit < status ; year ; name ; param[volume] >
+  plugin = gov.loc.plugin.CJPentecostalCharismaticResearchPlugin
+  param[base_url] = http://www.pctii.org/cyberj/
+  
+  {
+  
+    title <
+      name = Cyberjournal for Pentecostal-Charismatic Research ;
+      eissn = 1523-1216 ;
+      issnl = 1523-1216
+    >  
+
+    rights = openaccess
+    
+    # no manifest pages for V14-21 as of Nov 2012. Plugin down. Needs review.
+    
+    au < down ; 1997 ; Cyberjournal for Pentecostal-Charismatic Research Volume 1 ; 1 >
+    au < down ; 1997 ; Cyberjournal for Pentecostal-Charismatic Research Volume 2 ; 2 >
+    au < down ; 1998 ; Cyberjournal for Pentecostal-Charismatic Research Volume 3 ; 3 >
+    au < down ; 1998 ; Cyberjournal for Pentecostal-Charismatic Research Volume 4 ; 4 >
+    au < down ; 1999 ; Cyberjournal for Pentecostal-Charismatic Research Volume 5 ; 5 >
+    au < down ; 1999 ; Cyberjournal for Pentecostal-Charismatic Research Volume 6 ; 6 >
+    au < down ; 2000 ; Cyberjournal for Pentecostal-Charismatic Research Volume 7 ; 7 >
+    au < down ; 2000 ; Cyberjournal for Pentecostal-Charismatic Research Volume 8 ; 8 >
+    au < down ; 2001 ; Cyberjournal for Pentecostal-Charismatic Research Volume 9 ; 9 >
+    au < down ; 2001 ; Cyberjournal for Pentecostal-Charismatic Research Volume 10 ; 10 >
+    au < down ; 2002 ; Cyberjournal for Pentecostal-Charismatic Research Volume 11 ; 11 >
+    au < down ; 2003 ; Cyberjournal for Pentecostal-Charismatic Research Volume 12 ; 12 >
+    au < down ; 2004 ; Cyberjournal for Pentecostal-Charismatic Research Volume 13 ; 13 >
+#    au < doNotProcess ; 2005 ; Cyberjournal for Pentecostal-Charismatic Research Volume 14 ; 14 >
+#    au < doNotProcess ; 2006 ; Cyberjournal for Pentecostal-Charismatic Research Volume 15 ; 15 >
+#    au < doNotProcess ; 2007 ; Cyberjournal for Pentecostal-Charismatic Research Volume 16 ; 16 >
+#    au < doNotProcess ; 2008 ; Cyberjournal for Pentecostal-Charismatic Research Volume 17 ; 17 >
+#    au < doNotProcess ; 2009 ; Cyberjournal for Pentecostal-Charismatic Research Volume 18 ; 18 >
+#    au < doNotProcess ; 2010 ; Cyberjournal for Pentecostal-Charismatic Research Volume 19 ; 19 >
+#    au < doNotProcess ; 2011 ; Cyberjournal for Pentecostal-Charismatic Research Volume 20 ; 20 >
+#    au < doNotProcess ; 2012 ; Cyberjournal for Pentecostal-Charismatic Research Volume 21 ; 21 >
+#    au < doNotProcess ; 2013 ; Cyberjournal for Pentecostal-Charismatic Research Volume 22 ; 22 >
+#    au < doNotProcess ; 2016 ; Cyberjournal for Pentecostal-Charismatic Research Volume 23 ; 23 >
+#    au < doNotProcess ; 2017 ; Cyberjournal for Pentecostal-Charismatic Research Volume 24 ; 24 >
+#    au < doNotProcess ; 2018 ; Cyberjournal for Pentecostal-Charismatic Research Volume 25 ; 25 >
+#    au < doNotProcess ; 2019 ; Cyberjournal for Pentecostal-Charismatic Research Volume 26 ; 26 >
+#    au < doNotProcess ; 2020 ; Cyberjournal for Pentecostal-Charismatic Research Volume 27 ; 27 >
+  
+  }
+  
+}

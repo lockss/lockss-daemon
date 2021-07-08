@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns="http://www.crossref.org/schema/4.3.7"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:mml="http://www.w3.org/1998/Math/MathML"
+           xmlns:ai="http://www.crossref.org/AccessIndicators.xsd"
+           xmlns:rel="http://www.crossref.org/relations.xsd"
+           xmlns:fr="http://www.crossref.org/fundref.xsd"
+           xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1"
+           version="4.3.7"
+           xsi:schemaLocation="http://www.crossref.org/schema/4.3.7 http://www.crossref.org/schema/deposit/crossref4.3.7.xsd">
+   <head>
+      <doi_batch_id>20210301T141553344-0530</doi_batch_id>
+      <timestamp>202103011415</timestamp>
+      <depositor>
+         <depositor_name>RVHost</depositor_name>
+         <email_address>crossref@rivervalleytechnologies.in</email_address>
+      </depositor>
+      <registrant>GigaScience Press</registrant>
+   </head>
+   <body>
+      <journal>
+         <journal_metadata>
+            <full_title>Gigabyte</full_title>
+            <abbrev_title>Gigabyte</abbrev_title>
+            <issn media_type="electronic">2709-4715</issn>
+            <archive_locations>
+               <archive name="CLOCKSS"/>
+            </archive_locations>
+            <doi_data>
+               <doi>10.46471/gigabyte</doi>
+               <resource>https://gigabytejournal.com</resource>
+            </doi_data>
+         </journal_metadata>
+         <journal_issue>
+            <publication_date media_type="online">
+               <month>2</month>
+               <day>24</day>
+               <year>2021</year>
+            </publication_date>
+            <journal_volume>
+               <volume>2021</volume>
+            </journal_volume>
+         </journal_issue>
+         <journal_article publication_type="full_text">
+            <titles>
+               <title>epitopepredict: a tool for integrated MHC binding prediction</title>
+            </titles>
+            <contributors>
+               <person_name sequence="first" contributor_role="author">
+                  <given_name>Damien</given_name>
+                  <surname>Farrell</surname>
+                  <affiliation>UCD School of Veterinary Medicine, University College Dublin, Ireland</affiliation>
+                  <ORCID>https://orcid.org/0000-0003-3020-7945</ORCID>
+               </person_name>
+            </contributors>
+            <jats:abstract>
+               <jats:p>A key step in the cellular adaptive immune response is the presentation of antigens to T cells. Computational prediction of T cell epitopes has many applications in vaccine design and immuno-diagnostics. This is the basis of immunoinformatics, which allows <jats:italic>in silico</jats:italic> screening of peptides before experiments are performed. With the availability of whole genomes for many microbial species it is now feasible to computationally screen whole proteomes for candidate peptides. epitopepredict is a programmatic framework and command line tool designed to aid this process. It provides access to multiple binding prediction algorithms under a single interface and scales for whole genomes using multiple target MHC alleles. A web interface is provided to assist visualization and filtering of the results. The software is freely available under an open-source license from <jats:ext-link>https://github.com/dmnfarrell/epitopepredict</jats:ext-link>
+               </jats:p>
+            </jats:abstract>
+            <publication_date media_type="online">
+               <month>2</month>
+               <day>24</day>
+               <year>2021</year>
+            </publication_date>
+            <pages>
+               <first_page>1</first_page>
+               <last_page>14</last_page>
+            </pages>
+            <fr:program name="fundref">
+               <fr:assertion name="fundgroup">
+                  <fr:assertion name="funder_name">Irish Department of Agriculture Food and the Marine</fr:assertion>
+                  <fr:assertion name="award_number">15/S/651</fr:assertion>
+               </fr:assertion>
+               <fr:assertion name="fundgroup">
+                  <fr:assertion name="funder_name">Irish Research Council Postdoctoral Fellowship</fr:assertion>
+                  <fr:assertion name="award_number">GOIPD/2015/475</fr:assertion>
+               </fr:assertion>
+            </fr:program>
+            <ai:program>
+               <ai:license_ref applies_to="vor" start_date="2020-10-07">https://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+               <ai:license_ref applies_to="am" start_date="2020-10-07">https://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+               <ai:license_ref applies_to="tdm" start_date="2020-10-07">https://creativecommons.org/licenses/by/4.0/</ai:license_ref>
+            </ai:program>
+            <doi_data>
+               <doi>10.46471/gigabyte.13</doi>
+               <resource>https://gigabytejournal.com/articles/13</resource>
+               <collection property="crawler-based">
+                  <item crawler="iParadigms">
+                     <resource>https://gigabytejournal.com/articles/13</resource>
+                  </item>
+               </collection>
+            </doi_data>
+            <citation_list>
+               <citation key="ref001">
+                  <journal_title>Immunome Res.</journal_title>
+                  <author>Lundegaard</author>
+                  <volume>6</volume>
+                  <cYear>2010</cYear>
+                  <doi>10.1186/1745-7580-6-S2-S3</doi>
+                  <first_page>S3</first_page>
+                  <article_title>State of the art and challenges in sequence-based T-cell epitope prediction</article_title>
+               </citation>
+               <citation key="ref002">
+                  <journal_title>Genome Med.</journal_title>
+                  <author>Backert</author>
+                  <volume>7</volume>
+                  <cYear>2015</cYear>
+                  <doi>10.1186/s13073-015-0245-0</doi>
+                  <first_page>119</first_page>
+                  <article_title>Immunoinformatics and epitope prediction in the age of genomic medicine</article_title>
+               </citation>
+               <citation key="ref003">
+                  <journal_title>Commun. ACM</journal_title>
+                  <author>Domingos</author>
+                  <volume>55</volume>
+                  <first_page>78</first_page>
+                  <cYear>2012</cYear>
+                  <doi>10.1145/2347736.2347755</doi>
+                  <article_title>A few useful things to know about machine learning</article_title>
+               </citation>
+               <citation key="ref004">
+                  <journal_title>J. Immunol.</journal_title>
+                  <author>Chaves</author>
+                  <volume>188</volume>
+                  <first_page>4235</first_page>
+                  <cYear>2012</cYear>
+                  <doi>10.4049/jimmunol.1103640</doi>
+                  <article_title>The utility and limitations of current Web-available algorithms to predict peptides recognized by CD4 T cells in response to pathogen infection</article_title>
+               </citation>
+               <citation key="ref005">
+                  <journal_title>Immunome Res.</journal_title>
+                  <author>Bremel</author>
+                  <volume>6</volume>
+                  <cYear>2010</cYear>
+                  <doi>10.1186/1745-7580-6-8</doi>
+                  <first_page>8</first_page>
+                  <article_title>An integrated approach to epitope analysis II: A system for proteomic-scale prediction of immunological characteristics</article_title>
+               </citation>
+               <citation key="ref006">
+                  <journal_title>J. Immunol.</journal_title>
+                  <author>Paul</author>
+                  <volume>191</volume>
+                  <first_page>5831</first_page>
+                  <cYear>2013</cYear>
+                  <doi>10.4049/jimmunol.1302101</doi>
+                  <article_title>HLA class I alleles are associated with peptide-binding repertoires of different size, affinity, and immunogenicity</article_title>
+               </citation>
+               <citation key="ref007">
+                  <journal_title>Tissue Antigens</journal_title>
+                  <author>Schubert</author>
+                  <volume>82</volume>
+                  <first_page>243</first_page>
+                  <cYear>2013</cYear>
+                  <doi>10.1111/tan.12199</doi>
+                  <article_title>Evaluation of peptide selection approaches for epitope-based vaccine design</article_title>
+               </citation>
+               <citation key="ref008">
+                  <journal_title>J. Biomed. Inform.</journal_title>
+                  <author>Soria-Guerra</author>
+                  <volume>53</volume>
+                  <first_page>405</first_page>
+                  <cYear>2015</cYear>
+                  <doi>10.1016/j.jbi.2014.11.003</doi>
+                  <article_title>An overview of bioinformatics tools for epitope prediction: Implications on vaccine development</article_title>
+               </citation>
+               <citation key="ref009">
+                  <journal_title>Clin. Immunol.</journal_title>
+                  <author>De Groot</author>
+                  <volume>131</volume>
+                  <first_page>189</first_page>
+                  <cYear>2009</cYear>
+                  <doi>10.1016/j.clim.2009.01.009</doi>
+                  <article_title>Reducing risk, improving outcomes: bioengineering less immunogenic protein therapeutics</article_title>
+               </citation>
+               <citation key="ref010">
+                  <unstructured_citation>Farrell D, epitopepredict (Version 0.5.0), 2020; https://github.com/dmnfarrell/epitopepredict/releases/tag/v0.5.0.</unstructured_citation>
+               </citation>
+               <citation key="ref011">
+                  <unstructured_citation>Mckinney W, Pandas, Python Data Analysis Library, 2015; http://pandas.pydata.org/.</unstructured_citation>
+               </citation>
+               <citation key="ref012">
+                  <unstructured_citation>Tornado Developers. Tornado: Python web framework and asynchronous networking library (Version 6.1), 2020; https://www.tornadoweb.org/en/stable/.</unstructured_citation>
+               </citation>
+               <citation key="ref013">
+                  <unstructured_citation>Bokeh Developers. Bokeh(Version 2.2.3), 2020; https://bokeh.org/.</unstructured_citation>
+               </citation>
+               <citation key="ref014">
+                  <journal_title>PLoS One</journal_title>
+                  <author>Zhang</author>
+                  <volume>7</volume>
+                  <cYear>2012</cYear>
+                  <doi>10.1371/journal.pone.0030483</doi>
+                  <first_page>e30483</first_page>
+                  <article_title>TEPITOPEpan: extending TEPITOPE for peptide binding prediction covering over 700 HLA-DR molecules</article_title>
+               </citation>
+               <citation key="ref015">
+                  <journal_title>Nat. Biotechnol.</journal_title>
+                  <author>Sturniolo</author>
+                  <volume>17</volume>
+                  <first_page>555</first_page>
+                  <cYear>1999</cYear>
+                  <doi>10.1038/9858</doi>
+                  <article_title>Generation of tissue-specific and promiscuous HLA ligand databases using DNA microarrays and virtual HLA class II matrices</article_title>
+               </citation>
+               <citation key="ref016">
+                  <journal_title>J. Mach. Learn Res.</journal_title>
+                  <author>Pedregosa</author>
+                  <volume>12</volume>
+                  <first_page>2825</first_page>
+                  <cYear>2011</cYear>
+                  <article_title>Scikit-learn: Machine Learning in Python</article_title>
+               </citation>
+               <citation key="ref017">
+                  <journal_title>Cell Syst.</journal_title>
+                  <author>O’Donnell</author>
+                  <volume>7</volume>
+                  <first_page>129</first_page>
+                  <cYear>2018</cYear>
+                  <doi>10.1016/j.cels.2018.05.014</doi>
+                  <article_title>MHCflurry: Open-Source Class I MHC Binding Affinity Prediction</article_title>
+               </citation>
+               <citation key="ref018">
+                  <journal_title>J. Immunol.</journal_title>
+                  <author>Jurtz</author>
+                  <volume>199</volume>
+                  <first_page>3360</first_page>
+                  <cYear>2017</cYear>
+                  <doi>10.4049/jimmunol.1700893</doi>
+                  <article_title>NetMHCpan-4.0: Improved Peptide–MHC Class I Interaction Predictions Integrating Eluted Ligand and Peptide Binding Affinity Data</article_title>
+               </citation>
+               <citation key="ref019">
+                  <journal_title>Immunome Res.</journal_title>
+                  <author>Nielsen</author>
+                  <volume>6</volume>
+                  <first_page>9</first_page>
+                  <cYear>2010</cYear>
+                  <doi>10.1186/1745-7580-6-9</doi>
+                  <article_title>NetMHCIIpan-2.0 - Improved pan-specific HLA-DR predictions using a novel concurrent alignment and weight optimization training procedure</article_title>
+               </citation>
+               <citation key="ref020">
+                  <journal_title>Immunogenetics</journal_title>
+                  <author>Karosiene</author>
+                  <volume>65</volume>
+                  <first_page>711</first_page>
+                  <cYear>2013</cYear>
+                  <doi>10.1007/s00251-013-0720-y</doi>
+                  <article_title>NetMHCIIpan-3.0, a common pan-specific MHC class II prediction method including all three human MHC class II isotypes, HLA-DR, HLA-DP and HLA-DQ</article_title>
+               </citation>
+               <citation key="ref021">
+                  <journal_title>Expert Syst. Appl.</journal_title>
+                  <author>Nanni</author>
+                  <volume>38</volume>
+                  <first_page>3185</first_page>
+                  <cYear>2011</cYear>
+                  <doi>10.1016/j.eswa.2010.09.005</doi>
+                  <article_title>A new encoding technique for peptide classification</article_title>
+               </citation>
+               <citation key="ref022">
+                  <journal_title>Mol. Cell Biochem.</journal_title>
+                  <author>Gök</author>
+                  <volume>359</volume>
+                  <first_page>67</first_page>
+                  <cYear>2012</cYear>
+                  <doi>10.1007/s11010-011-1000-5</doi>
+                  <article_title>OETMAP: A new feature encoding scheme for MHC class I binding prediction</article_title>
+               </citation>
+               <citation key="ref023">
+                  <journal_title>BMC Bioinform.</journal_title>
+                  <author>Kim</author>
+                  <volume>15</volume>
+                  <cYear>2014</cYear>
+                  <doi>10.1186/1471-2105-15-241</doi>
+                  <first_page>241</first_page>
+                  <article_title>Dataset size and composition impact the reliability of performance benchmarks for peptide-MHC binding predictions</article_title>
+               </citation>
+               <citation key="ref024">
+                  <unstructured_citation>Farrell D, dmnfarrell/epitopepredict: v0.5.0 (Version v0.5.0). Zenodo, September 28 2020; http://doi.org/10.5281/zenodo.4056421.</unstructured_citation>
+               </citation>
+               <citation key="ref025">
+                  <unstructured_citation>Farrell D, epitopepredict: A tool for integrated MHC binding prediction [Source Code]. CodeOcean. 2021; https://dx.doi.org/10.24433/CO.5815986.v1.</unstructured_citation>
+               </citation>
+               <citation key="ref026">
+                  <journal_title>PLOS Pathog.</journal_title>
+                  <author>Lindestam Arlehamn</author>
+                  <volume>12</volume>
+                  <cYear>2016</cYear>
+                  <doi>10.1371/journal.ppat.1005760</doi>
+                  <first_page>e1005760</first_page>
+                  <article_title>A Quantitative Analysis of Complexity of Human Pathogen-Specific CD4 T Cell Responses in Healthy M. tuberculosis Infected South Africans</article_title>
+               </citation>
+               <citation key="ref027">
+                  <journal_title>Microb. Genom.</journal_title>
+                  <author>Farrell</author>
+                  <volume>2</volume>
+                  <cYear>2016</cYear>
+                  <doi>10.1099/mgen.0.000071</doi>
+                  <first_page>e000071</first_page>
+                  <article_title>Integrated computational prediction and experimental validation identifies promiscuous T cell epitopes in the proteome of Mycobacterium bovis</article_title>
+               </citation>
+               <citation key="ref028">
+                  <journal_title>BMC Genom.</journal_title>
+                  <author>Santos</author>
+                  <volume>14</volume>
+                  <cYear>2013</cYear>
+                  <doi>10.1186/1471-2164-14-S6-S4</doi>
+                  <first_page>S4</first_page>
+                  <article_title>Mature Epitope Density - A strategy for target selection based on immunoinformatics and exported prokaryotic proteins</article_title>
+               </citation>
+               <citation key="ref029">
+                  <journal_title>BMJ</journal_title>
+                  <author>Doshi</author>
+                  <volume>370</volume>
+                  <cYear>2020</cYear>
+                  <doi>10.1136/bmj.m3563</doi>
+                  <first_page>m3563</first_page>
+                  <article_title>Covid-19: Do many people have pre-existing immunity?</article_title>
+               </citation>
+               <citation key="ref030">
+                  <journal_title>Cell</journal_title>
+                  <author>Grifoni</author>
+                  <volume>181</volume>
+                  <first_page>1489</first_page>
+                  <cYear>2020</cYear>
+                  <doi>10.1016/j.cell.2020.05.015</doi>
+                  <article_title>Targets of T cell responses to SARS-CoV-2 coronavirus in humans with COVID-19 disease and unexposed individuals</article_title>
+               </citation>
+               <citation key="ref031">
+                  <journal_title>Science</journal_title>
+                  <author>Mateus</author>
+                  <volume>370</volume>
+                  <first_page>89</first_page>
+                  <cYear>2020</cYear>
+                  <doi>10.1126/science.abd3871</doi>
+                  <article_title>Selective and cross-reactive SARS-CoV-2 T cell epitopes in unexposed humans</article_title>
+               </citation>
+               <citation key="ref032">
+                  <unstructured_citation>HoloViz Community. Panel (Version 0.10.0), 2020; https://github.com/holoviz/panelAccessed Jan 21 2020.</unstructured_citation>
+               </citation>
+               <citation key="ref033">
+                  <journal_title>BMC Bioinform.</journal_title>
+                  <author>Farrell</author>
+                  <volume>16</volume>
+                  <cYear>2015</cYear>
+                  <doi>10.1186/s12859-015-0659-0</doi>
+                  <first_page>221</first_page>
+                  <article_title>Epitopemap: A web application for integrated whole proteome epitope prediction</article_title>
+               </citation>
+               <citation key="ref034">
+                  <unstructured_citation>Project Jupyter. Jupyter Notebook, 2020; http://jupyter.org/. Accessed Jan 21 2020.</unstructured_citation>
+               </citation>
+               <citation key="ref035">
+                  <unstructured_citation>Farrell D, Supporting data for “epitopepredict: A tool for integrated MHC binding prediction”. 2021, GigaScience Database; http://doi.org/10.5524/100869.</unstructured_citation>
+               </citation>
+               <citation key="ref036">
+                  <unstructured_citation>Tsang E, Maciocci G, Welcome to a new ERA of reproducible publishing. 2020, eLife Labs; https://elifesciences.org/labs/dc5acbde/welcome-to-a-new-era-of-reproducible-publishing.</unstructured_citation>
+               </citation>
+            </citation_list>
+         </journal_article>
+      </journal>
+   </body>
+</doi_batch>

@@ -35,7 +35,7 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
                     "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }
@@ -80,7 +80,7 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
             }
 
         } catch (XPathExpressionException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
 
         assertEquals(values.size(), dois_count);

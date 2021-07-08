@@ -22,6 +22,9 @@
     au < zapped ; finished ; 2019 ; Centre Mersenne Source Content 2019 ; 2019 >
     au < readySource ; crawling ; 2020 ; Centre Mersenne Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; Centre Mersenne Source Content 2021 ; 2021 >
+    #Moved to directory based structured
+    au < expected ; exists ; 2021 ; Centre Mersenne Source Content 2021_01 ; 2021_01 >
+
 
   }
 

@@ -22,7 +22,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
     au < crawling ; exists ; 2020 ; Journal of the Saudi Heart Association Volume 1 ; 1 ; >
-    au < expected ; exists ; 2021 ; Journal of the Saudi Heart Association Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2021 ; Journal of the Saudi Heart Association Volume 2 ; 2 ; >
 
   }
 

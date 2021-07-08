@@ -32,6 +32,10 @@ POSSIBILITY OF SUCH DAMAGE.
 -->
 <map>
   <entry>
+    <string>plugin_status</string>
+    <string>deprecated</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.histcoop.HistoryCooperativePlugin</string>
   </entry>

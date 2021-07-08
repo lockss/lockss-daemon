@@ -6,8 +6,8 @@
     info[tester] = 5 ;
     info[poller] = 8
   >
-  provider = bepress
-  #provider = Scholarworks@University of Massachusetts, Amherst
+  #provider = bepress
+  provider = Scholarworks@UMass Amherst
   
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
 
@@ -204,7 +204,7 @@
     au < crawling ; exists ; 2018 ; The Journal of Hospitality Financial Management Volume 26 ; 26 ; https://scholarworks.umass.edu/ ; >
     au < crawling ; exists ; 2019 ; The Journal of Hospitality Financial Management Volume 27 ; 27 ; https://scholarworks.umass.edu/ ; >
     au < crawling ; exists ; 2020 ; The Journal of Hospitality Financial Management Volume 28 ; 28 ; https://scholarworks.umass.edu/ ; >
-    au < expected ; exists ; 2021 ; The Journal of Hospitality Financial Management Volume 29 ; 29 ; https://scholarworks.umass.edu/ ; >
+    au < manifest ; exists ; 2021 ; The Journal of Hospitality Financial Management Volume 29 ; 29 ; https://scholarworks.umass.edu/ ; >
     
   }
   

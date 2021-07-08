@@ -2,9 +2,11 @@ package org.lockss.plugin.wroclawmedicaluniversity;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.HttpHttpsUrlHelper;
 
 import java.io.IOException;
 
@@ -39,6 +41,16 @@ public class WroclawMedicalUniversityMetadataExtractorFactory implements FileMet
                 throws IOException {
             ArticleMetadata am = super.extract(target, cu);
             am.cook(tagMap);
+            // Http to Https conversion stuff
+            HttpHttpsUrlHelper helper = new HttpHttpsUrlHelper(cu.getArchivalUnit(),
+                ConfigParamDescr.BASE_URL.getKey(),
+                "base_url");
+            String url = am.get(MetadataField.FIELD_ACCESS_URL);
+            if (url != null) {
+                url = helper.normalize(url);
+                am.replace(MetadataField.FIELD_ACCESS_URL, url);
+            }
+            //
             return am;
         }
     }

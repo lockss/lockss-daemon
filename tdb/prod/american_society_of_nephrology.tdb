@@ -1,11 +1,10 @@
 {
   publisher <
     name = American Society of Nephrology ;
-    info[platform] = HW Drupal. 2 titles. Found manifests
+    info[platform] = HW Drupal. 2018-present. 2 titles. Found manifests
   >
 
-      pluginPrefix = org.lockss.plugin.highwire.
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+      implicit < status ; year ; name ; param[volume_name] >
 
   {
     title <
@@ -17,23 +16,44 @@
 
     {
 
-      #param[base_url] = http://cjasn.asnjournals.org/
+      plugin = org.lockss.plugin.highwire.asn.AsnJournalsPlugin
+      param[base_url] = https://cjasn.asnjournals.org/
 
-      au < HighWirePressH20Plugin ; released ; 2006 ; Clinical Journal of the American Society of Nephrology Volume 1 ; 1 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2007 ; Clinical Journal of the American Society of Nephrology Volume 2 ; 2 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Clinical Journal of the American Society of Nephrology Volume 3 ; 3 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Clinical Journal of the American Society of Nephrology Volume 4 ; 4 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2010 ; Clinical Journal of the American Society of Nephrology Volume 5 ; 5 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Clinical Journal of the American Society of Nephrology Volume 6 ; 6 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Clinical Journal of the American Society of Nephrology Volume 7 ; 7 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Clinical Journal of the American Society of Nephrology Volume 8 ; 8 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Clinical Journal of the American Society of Nephrology Volume 9 ; 9 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Clinical Journal of the American Society of Nephrology Volume 10 ; 10 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2016 ; Clinical Journal of the American Society of Nephrology Volume 11 ; 11 ; http://cjasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2017 ; Clinical Journal of the American Society of Nephrology Volume 12 ; 12 ; http://cjasn.asnjournals.org/ >
-      au < HWDrupalPlugin ; manifest ; 2018 ; Clinical Journal of the American Society of Nephrology Volume 13 ; 13 ; https://cjasn.asnjournals.org/ >
-      au < HWDrupalPlugin ; manifest ; 2019 ; Clinical Journal of the American Society of Nephrology Volume 14 ; 14 ; https://cjasn.asnjournals.org/ >
-      au < HWDrupalPlugin ; manifest ; 2020 ; Clinical Journal of the American Society of Nephrology Volume 15 ; 15 ; https://cjasn.asnjournals.org/ >
+      au < manifest ; 2006 ; Clinical Journal of the American Society of Nephrology Volume 1 ; 1 >
+      au < released ; 2007 ; Clinical Journal of the American Society of Nephrology Volume 2 ; 2 >
+      au < manifest ; 2008 ; Clinical Journal of the American Society of Nephrology Volume 3 ; 3 >
+      au < manifest ; 2009 ; Clinical Journal of the American Society of Nephrology Volume 4 ; 4 >
+      au < ready ; 2010 ; Clinical Journal of the American Society of Nephrology Volume 5 ; 5 >
+      au < ready ; 2011 ; Clinical Journal of the American Society of Nephrology Volume 6 ; 6 >
+      au < ready ; 2012 ; Clinical Journal of the American Society of Nephrology Volume 7 ; 7 >
+      au < ready ; 2013 ; Clinical Journal of the American Society of Nephrology Volume 8 ; 8 >
+      au < released ; 2014 ; Clinical Journal of the American Society of Nephrology Volume 9 ; 9 >
+      au < ready ; 2015 ; Clinical Journal of the American Society of Nephrology Volume 10 ; 10 >
+      au < ready ; 2016 ; Clinical Journal of the American Society of Nephrology Volume 11 ; 11 >
+      au < ready ; 2017 ; Clinical Journal of the American Society of Nephrology Volume 12 ; 12 >
+      au < ready ; 2018 ; Clinical Journal of the American Society of Nephrology Volume 13 ; 13 >
+      au < manifest ; 2019 ; Clinical Journal of the American Society of Nephrology Volume 14 ; 14 >
+      au < released ; 2020 ; Clinical Journal of the American Society of Nephrology Volume 15 ; 15 >
+      au < released ; 2021 ; Clinical Journal of the American Society of Nephrology Volume 16 ; 16 >
+
+    }
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://cjasn.asnjournals.org/
+
+      au < superseded ; 2006 ; Clinical Journal of the American Society of Nephrology Volume 1 [superseded] ; 1 >
+      au < superseded ; 2007 ; Clinical Journal of the American Society of Nephrology Volume 2 [superseded] ; 2 >
+      au < superseded ; 2008 ; Clinical Journal of the American Society of Nephrology Volume 3 [superseded] ; 3 >
+      au < superseded ; 2009 ; Clinical Journal of the American Society of Nephrology Volume 4 [superseded] ; 4 >
+      au < superseded ; 2010 ; Clinical Journal of the American Society of Nephrology Volume 5 [superseded] ; 5 >
+      au < superseded ; 2011 ; Clinical Journal of the American Society of Nephrology Volume 6 [superseded] ; 6 >
+      au < superseded ; 2012 ; Clinical Journal of the American Society of Nephrology Volume 7 [superseded] ; 7 >
+      au < superseded ; 2013 ; Clinical Journal of the American Society of Nephrology Volume 8 [superseded] ; 8 >
+      au < superseded ; 2014 ; Clinical Journal of the American Society of Nephrology Volume 9 [superseded] ; 9 >
+      au < superseded ; 2015 ; Clinical Journal of the American Society of Nephrology Volume 10 [superseded] ; 10 >
+      au < superseded ; 2016 ; Clinical Journal of the American Society of Nephrology Volume 11 [superseded] ; 11 >
+      au < superseded ; 2017 ; Clinical Journal of the American Society of Nephrology Volume 12 [superseded] ; 12 >
 
     }
 
@@ -49,39 +69,76 @@
 
     {
 
-      #param[base_url] = http://jasn.asnjournals.org/
+      plugin = org.lockss.plugin.highwire.asn.AsnJournalsPlugin
+      param[base_url] = https://jasn.asnjournals.org/
 
-      au < HighWirePressH20Plugin ; released ; 1990 ; Journal of the American Society of Nephrology Volume 1 ; 1 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1991 ; Journal of the American Society of Nephrology Volume 2 ; 2 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1992 ; Journal of the American Society of Nephrology Volume 3 ; 3 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1993 ; Journal of the American Society of Nephrology Volume 4 ; 4 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1994 ; Journal of the American Society of Nephrology Volume 5 ; 5 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1995 ; Journal of the American Society of Nephrology Volume 6 ; 6 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1996 ; Journal of the American Society of Nephrology Volume 7 ; 7 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1997 ; Journal of the American Society of Nephrology Volume 8 ; 8 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1998 ; Journal of the American Society of Nephrology Volume 9 ; 9 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 1999 ; Journal of the American Society of Nephrology Volume 10 ; 10 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2000 ; Journal of the American Society of Nephrology Volume 11 ; 11 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2001 ; Journal of the American Society of Nephrology Volume 12 ; 12 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2002 ; Journal of the American Society of Nephrology Volume 13 ; 13 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2003 ; Journal of the American Society of Nephrology Volume 14 ; 14 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2004 ; Journal of the American Society of Nephrology Volume 15 ; 15 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2005 ; Journal of the American Society of Nephrology Volume 16 ; 16 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2006 ; Journal of the American Society of Nephrology Volume 17 ; 17 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2007 ; Journal of the American Society of Nephrology Volume 18 ; 18 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2008 ; Journal of the American Society of Nephrology Volume 19 ; 19 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2009 ; Journal of the American Society of Nephrology Volume 20 ; 20 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the American Society of Nephrology Volume 21 ; 21 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the American Society of Nephrology Volume 22 ; 22 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the American Society of Nephrology Volume 23 ; 23 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the American Society of Nephrology Volume 24 ; 24 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2014 ; Journal of the American Society of Nephrology Volume 25 ; 25 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2015 ; Journal of the American Society of Nephrology Volume 26 ; 26 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2016 ; Journal of the American Society of Nephrology Volume 27 ; 27 ; http://jasn.asnjournals.org/ >
-      au < HighWirePressH20Plugin ; released ; 2017 ; Journal of the American Society of Nephrology Volume 28 ; 28 ; http://jasn.asnjournals.org/ >
-      au < HWDrupalPlugin ; manifest ; 2018 ; Journal of the American Society of Nephrology Volume 29 ; 29 ; https://jasn.asnjournals.org/ >
-      au < HWDrupalPlugin ; manifest ; 2019 ; Journal of the American Society of Nephrology Volume 30 ; 30 ; https://jasn.asnjournals.org/ >
-      au < HWDrupalPlugin ; manifest ; 2020 ; Journal of the American Society of Nephrology Volume 31 ; 31 ; https://jasn.asnjournals.org/ >
+      au < released ; 1990 ; Journal of the American Society of Nephrology Volume 1 ; 1 >
+      au < manifest ; 1991 ; Journal of the American Society of Nephrology Volume 2 ; 2 >
+      au < manifest ; 1992 ; Journal of the American Society of Nephrology Volume 3 ; 3 >
+      au < manifest ; 1993 ; Journal of the American Society of Nephrology Volume 4 ; 4 >
+      au < manifest ; 1994 ; Journal of the American Society of Nephrology Volume 5 ; 5 >
+      au < manifest ; 1995 ; Journal of the American Society of Nephrology Volume 6 ; 6 >
+      au < released ; 1996 ; Journal of the American Society of Nephrology Volume 7 ; 7 >
+      au < manifest ; 1997 ; Journal of the American Society of Nephrology Volume 8 ; 8 >
+      au < manifest ; 1998 ; Journal of the American Society of Nephrology Volume 9 ; 9 >
+      au < manifest ; 1999 ; Journal of the American Society of Nephrology Volume 10 ; 10 >
+      au < manifest ; 2000 ; Journal of the American Society of Nephrology Volume 11 ; 11 >
+      au < released ; 2001 ; Journal of the American Society of Nephrology Volume 12 ; 12 >
+      au < manifest ; 2002 ; Journal of the American Society of Nephrology Volume 13 ; 13 >
+      au < manifest ; 2003 ; Journal of the American Society of Nephrology Volume 14 ; 14 >
+      au < manifest ; 2004 ; Journal of the American Society of Nephrology Volume 15 ; 15 >
+      au < manifest ; 2005 ; Journal of the American Society of Nephrology Volume 16 ; 16 >
+      au < manifest ; 2006 ; Journal of the American Society of Nephrology Volume 17 ; 17 >
+      au < manifest ; 2007 ; Journal of the American Society of Nephrology Volume 18 ; 18 >
+      au < released ; 2008 ; Journal of the American Society of Nephrology Volume 19 ; 19 >
+      au < manifest ; 2009 ; Journal of the American Society of Nephrology Volume 20 ; 20 >
+      au < ready ; 2010 ; Journal of the American Society of Nephrology Volume 21 ; 21 >
+      au < ready ; 2011 ; Journal of the American Society of Nephrology Volume 22 ; 22 >
+      au < ready ; 2012 ; Journal of the American Society of Nephrology Volume 23 ; 23 >
+      au < testing ; 2013 ; Journal of the American Society of Nephrology Volume 24 ; 24 >
+      au < ready ; 2014 ; Journal of the American Society of Nephrology Volume 25 ; 25 >
+      au < ready ; 2015 ; Journal of the American Society of Nephrology Volume 26 ; 26 >
+      au < released ; 2016 ; Journal of the American Society of Nephrology Volume 27 ; 27 >
+      au < testing ; 2017 ; Journal of the American Society of Nephrology Volume 28 ; 28 >
+      au < ready ; 2018 ; Journal of the American Society of Nephrology Volume 29 ; 29 >
+      au < manifest ; 2019 ; Journal of the American Society of Nephrology Volume 30 ; 30 >
+      au < released ; 2020 ; Journal of the American Society of Nephrology Volume 31 ; 31 >
+      au < released ; 2021 ; Journal of the American Society of Nephrology Volume 32 ; 32 >
+
+    }
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://jasn.asnjournals.org/
+
+      au < superseded ; 1990 ; Journal of the American Society of Nephrology Volume 1 [superseded] ; 1 >
+      au < superseded ; 1991 ; Journal of the American Society of Nephrology Volume 2 [superseded] ; 2 >
+      au < superseded ; 1992 ; Journal of the American Society of Nephrology Volume 3 [superseded] ; 3 >
+      au < superseded ; 1993 ; Journal of the American Society of Nephrology Volume 4 [superseded] ; 4 >
+      au < superseded ; 1994 ; Journal of the American Society of Nephrology Volume 5 [superseded] ; 5 >
+      au < superseded ; 1995 ; Journal of the American Society of Nephrology Volume 6 [superseded] ; 6 >
+      au < superseded ; 1996 ; Journal of the American Society of Nephrology Volume 7 [superseded] ; 7 >
+      au < superseded ; 1997 ; Journal of the American Society of Nephrology Volume 8 [superseded] ; 8 >
+      au < superseded ; 1998 ; Journal of the American Society of Nephrology Volume 9 [superseded] ; 9 >
+      au < superseded ; 1999 ; Journal of the American Society of Nephrology Volume 10 [superseded] ; 10 >
+      au < superseded ; 2000 ; Journal of the American Society of Nephrology Volume 11 [superseded] ; 11 >
+      au < superseded ; 2001 ; Journal of the American Society of Nephrology Volume 12 [superseded] ; 12 >
+      au < superseded ; 2002 ; Journal of the American Society of Nephrology Volume 13 [superseded] ; 13 >
+      au < superseded ; 2003 ; Journal of the American Society of Nephrology Volume 14 [superseded] ; 14 >
+      au < superseded ; 2004 ; Journal of the American Society of Nephrology Volume 15 [superseded] ; 15 >
+      au < superseded ; 2005 ; Journal of the American Society of Nephrology Volume 16 [superseded] ; 16 >
+      au < superseded ; 2006 ; Journal of the American Society of Nephrology Volume 17 [superseded] ; 17 >
+      au < superseded ; 2007 ; Journal of the American Society of Nephrology Volume 18 [superseded] ; 18 >
+      au < superseded ; 2008 ; Journal of the American Society of Nephrology Volume 19 [superseded] ; 19 >
+      au < superseded ; 2009 ; Journal of the American Society of Nephrology Volume 20 [superseded] ; 20 >
+      au < superseded ; 2010 ; Journal of the American Society of Nephrology Volume 21 [superseded] ; 21 >
+      au < superseded ; 2011 ; Journal of the American Society of Nephrology Volume 22 [superseded] ; 22 >
+      au < superseded ; 2012 ; Journal of the American Society of Nephrology Volume 23 [superseded] ; 23 >
+      au < superseded ; 2013 ; Journal of the American Society of Nephrology Volume 24 [superseded] ; 24 >
+      au < superseded ; 2014 ; Journal of the American Society of Nephrology Volume 25 [superseded] ; 25 >
+      au < superseded ; 2015 ; Journal of the American Society of Nephrology Volume 26 [superseded] ; 26 >
+      au < superseded ; 2016 ; Journal of the American Society of Nephrology Volume 27 [superseded] ; 27 >
+      au < superseded ; 2017 ; Journal of the American Society of Nephrology Volume 28 [superseded] ; 28 >
 
     }
 

@@ -1,0 +1,57 @@
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.silverchair.ucpress.UCPressSilverchairPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>7</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>University of California Press Plugin</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"University of California Press Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+    </entry>
+    <!--https://online.ucpress.edu/ncm/issue/browse-by-year/2019-->
+    <entry>
+        <string>au_start_url</string>
+        <list>
+            <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <!--
+        Article:
+        https://online.ucpress.edu/abt/article/82/5/289/110285/When-ANOVA-Isn-t-Ideal-Analyzing-Ordinal-Data-from
+
+        Article PDF:
+        https://online.ucpress.edu/abt/article-pdf/82/5/289/401453/abt_82_5_289.pdf
+        Redirected to:
+        https://watermark.silverchair.com/abt_82_5_289.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAqUwggKhBgkqhkiG9w0BBwagggKSMIICjgIBADCCAocGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM41mUojEa1EJR658SAgEQgIICWHNeMKAupE9OQCFe_wqia2yBnqEKGyuSmxF3HYxAsfa_0lf-FABkv6rFUZJjn2FCsSMkT1mwrwydR8_KPlZ2ueemJRKl_5VLsfo5R0rOxUN6WGCJ6CUdeqL39nfgrYEgsvpUTBCkrOrd_AAi4653-zBDFTnKns2QXrraf0EyCPKWPMN9JEEWmUf5kVbzoxESW4YquOH_J-7dzUW5lKbpN0kKhhl5oxD5IOmtN5S2goieywgDU8zmz-S7kQGrnrEyOMVsBuAX802JDukdn8nZQZirM4Dl5EbsKqZsCz_gQxMSlj4LqLOlSjXpRZfqVaFEN4dTGtdXJHYU-LeM7n9fiphxqgiIEdO_df2nGMdHrajD_FtootlV5pp9T4NFIKJL2g4_2bNg5Th6g3nsanlvXGhCb0Fp7Sy9l8bqY_nvREBDToxaUGMziv6NLCUbXCrc0vXpHPnylPG9UOEL6WW33S3zQ4r24Lexj1eXKNMd8uDrAW9SrxEPwFEVHqSVVyUpZyw5SdSRI0B9yLoBa4_s9896K5BktWts-Yl6W9mIGTyG2Z9g2c_D60UQi-814jZQl7p5iTLzoNwbDoYF1fb30d03_v4xbYDJgeBjYO0fntHHUk5iQPlKbwzTNtvLIL3O04MFsyQPAQQG0xNt7Kz3WU7PThkecZ6ZOqLfRDdNXMJDle3FHywIjnUSV7nDRDjsq1T0wGXhbUc3NYoG7L-E8NZ_rHQxd3CVGmz9jyBahdqo48VtSj2OBZU-24roS3-f9AgWwcfdZFnZyZPeEjLMaZPw0SfvslFASQ
+
+        Supplemental PDF:
+        https://ucp.silverchair-cdn.com/ucp/content_public/journal/abt/82/5/10.1525_abt.2020.82.5.289/3/abt_82_5_289_ds001.pdf?Expires=1623089690&Signature=HEHZcZ4g682NrlFG8le~oVPV9ROQSXrM0wG57IVoHGHsOHYDBpF4SrlXNQyEcoXepAWWQtDcE9UExtVhW2ml1hb7qq18iUB5kFdEvXrTst5VU85S7Wu5z-j5c87z1z6xsPmMDwRj38dIDPsGD6eCj-Frhvr196HQRPBry~DSq8KYL7uDhu~oRIn25~OVdxfE58XPuV00TA8-uREYeKIH4iK4ASkxQTkLHKo1bDiScpPrFiYnHhoFwCw8usRMyYQYSn5F~XTY~MMsdCKx4r5EazfNuM6K3mavCbC2bO~ngTB6aAQVOoFiiVRrA52FCweSBGElhmQTeIUt8szuV5Xvuw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+        -->
+        <!-- long PDF patterns are article PDF, shorter PDF patterns are for supplement PDF -->
+        <list>
+            <string>"%s([^/]+/)?%s/article-pdf/.*\.pdf$", base_url, journal_id</string>
+            <string>"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+pdf\?Expires=2147483647"</string>
+        </list>
+    </entry>
+</map>

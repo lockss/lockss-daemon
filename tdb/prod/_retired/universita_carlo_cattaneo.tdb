@@ -1,0 +1,48 @@
+{
+  publisher <
+    name = Università Carlo Cattaneo - LIUC
+  >
+  
+  {
+  
+    title <
+      name = European Journal of Comparative Economics ;
+      issn = 1824-2979 ;
+      issnl = 1824-2979 
+    >
+
+    rights = openaccess
+    
+    {
+    
+      plugin = edu.nyu.plugin.ejce.EJCEPlugin
+      param[base_url] = http://eaces.liuc.it/
+      implicit < status ; year ; name ; volume ; param[year] >
+      
+      comment[doNotProcess] = journal moved to new platform.
+      # See http://ejce.liuc.it/Default.asp
+
+      au < released ; 2004 ; European Journal of Comparative Economics 2004 ; 1 ; 2004 >
+      au < released ; 2005 ; European Journal of Comparative Economics 2005 ; 2 ; 2005 >
+      au < doNotProcess ; 2006 ; European Journal of Comparative Economics 2006 ; 3 ; 2006 >
+      au < doNotProcess ; 2007 ; European Journal of Comparative Economics 2007 ; 4 ; 2007 >
+#      au < doNotProcess ; 2008 ; European Journal of Comparative Economics 2008 ; 5 ; 2008 >
+#      au < exists ; 2009 ; European Journal of Comparative Economics 2009 ; 6 ; 2009 >
+#      au < exists ; 2010 ; European Journal of Comparative Economics 2010 ; 7 ; 2010 >
+#      au < exists ; 2011 ; European Journal of Comparative Economics 2011 ; 8 ; 2011 >
+#      au < exists ; 2012 ; European Journal of Comparative Economics 2012 ; 9 ; 2012 >
+#      au < exists ; 2013 ; European Journal of Comparative Economics 2013 ; 10 ; 2013 >
+#      au < exists ; 2014 ; European Journal of Comparative Economics 2014 ; 11 ; 2014 >
+#      au < exists ; 2015 ; European Journal of Comparative Economics 2015 ; 12 ; 2015 >
+#      au < exists ; 2016 ; European Journal of Comparative Economics 2016 ; 13 ; 2016 >
+#      au < exists ; 2017 ; European Journal of Comparative Economics 2017 ; 14 ; 2017 >
+#      au < exists ; 2018 ; European Journal of Comparative Economics 2018 ; 15 ; 2018 >
+#      au < exists ; 2019 ; European Journal of Comparative Economics 2019 ; 16 ; 2019 >
+#      au < exists ; 2020 ; European Journal of Comparative Economics 2020 ; 17 ; 2020 >
+#      au < expected ; 2021 ; European Journal of Comparative Economics 2021 ; 18 ; 2021 >
+
+    }
+    
+  }
+
+}

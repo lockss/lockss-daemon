@@ -87,8 +87,10 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // we avoid the whole right column, but this seems like a good general catch
     HtmlNodeFilters.tagWithAttributeRegex("div","class", "relatedArticlesWidget"),
     HtmlNodeFilters.tagWithAttributeRegex("div","id", "relatedArticlesColumn"),
+    // this used to be a simpler Regex, but was omitting all article from Taylor & Francis, so checking for
+    // tocArticleEntry is necessary.
     // new for 2020? at least appears on https://ascopubs.org/doi/full/10.1200/JCO.2009.46.2473
-    HtmlNodeFilters.tagWithAttributeRegex("div","class", "article-tools"),
+    HtmlNodeFilters.tagWithAttributeRegex("div","class", "^(?!.*tocArticleEntry).*article-tools"),
     HtmlNodeFilters.tagWithAttribute("div","id", "TrendMD Widget"),
     // other trendmd id/classnames
     HtmlNodeFilters.tagWithAttribute("div","id", "trendmd-suggestions"),
@@ -140,7 +142,7 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // more common tags
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(altmetric|trendmd)", true),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(altmetric|trendmd)", true),
-    
+
     // This used to be Regex but that was too broad and was a problem for Sage
     // Did an analysis and made it specific to the class
     // Publishers that need more will have to ask for it themselves
@@ -159,6 +161,10 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // http://press.endocrine.org/toc/endo/154/10       
     HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
 
+    // ASM related section
+    HtmlNodeFilters.tagWithAttribute("section", "class", "related-articles"),
+
+
     // Links to "Prev" & "Next" at Atypon Seg on March/2021 at: https://library.seg.org/toc/leedff/21/9
     // Also the issues and other top navigation will go to other volumes
     HtmlNodeFilters.tagWithAttribute("div", "class", "content-navigation"),
@@ -172,7 +178,11 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-figures"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-references"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-related"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "pane-pcw-details"),
+    // Can not filter our all div#id="pane-pcw-details", since PDF links are in inside
+    HtmlNodeFilters.tagWithAttribute("div", "class", "cover-details"),
+    HtmlNodeFilters.tagWithAttribute("section", "class", "copywrites"),
+    HtmlNodeFilters.tagWithAttribute("section", "class", "publisher"),
+    HtmlNodeFilters.tagWithAttribute("section", "class", "article__history"),
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling

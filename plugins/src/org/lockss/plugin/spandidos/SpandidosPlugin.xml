@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Spandidos Plugin</string>
+    <string>Spandidos Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Spandidos Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Spandidos Plugin (Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

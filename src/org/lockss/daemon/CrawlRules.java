@@ -546,7 +546,7 @@ public class CrawlRules {
     }
 
     public String toString() {
-      return "[CrawlRule.Contains: " + urls + "]";
+      return "[CrawlRules.Contains: " + urls + "]";
     }
   }
 }

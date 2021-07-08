@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.test.MockConfigurablePlugin</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>

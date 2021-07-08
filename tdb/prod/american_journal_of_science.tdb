@@ -94,8 +94,10 @@
 
     au < manifest ; 2019 ; American Journal of Science Volume 319 ; 319 >
     au < manifest ; 2020 ; American Journal of Science Volume 320 ; 320 >
-    au < expected ; 2021 ; American Journal of Science Volume 321 ; 321 >
+    au < manifest ; 2021 ; American Journal of Science Volume 321 ; 321 >
+
     }
+
     {
     param[base_url] = http://www.ajsonline.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -269,6 +271,7 @@
     au < down ; 2016 ; American Journal of Science Volume 316 ; 316 >
     au < down ; 2017 ; American Journal of Science Volume 317 ; 317 >
     au < down ; 2018 ; American Journal of Science Volume 318 ; 318 >
+
     }
   }
 

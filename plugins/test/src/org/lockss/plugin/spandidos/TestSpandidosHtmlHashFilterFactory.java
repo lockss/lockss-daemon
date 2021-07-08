@@ -324,10 +324,10 @@ public class TestSpandidosHtmlHashFilterFactory extends LockssTestCase {
         filteredStr = StringUtil.fromInputStream(actIn);
 
       } catch (IOException e) {
-        e.printStackTrace();
+        log.error(e.getMessage(), e);
       }
     } catch (PluginException e) {
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     }
 
     return filteredStr;

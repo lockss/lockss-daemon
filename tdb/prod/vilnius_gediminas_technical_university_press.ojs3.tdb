@@ -8,13 +8,13 @@
     implicit < status ; year ; name ; volume ; param[year] >
     #OJS3
     attr[start_stem] = index.php/
-
     # The following titles are preserves in TnF, content from 2017 and prior
     # Aviation, Creativity Studies, Engineering Structures and Technologies, Geodesy and Cartography,
     # International Journal of Strategic Property Management, Journal of Architecture and Urbanism,
     # Journal of Business Economics and Management, Journal of Civil Engineering and Management,
     # Journal of Environmental Engineering and Landscape Management, Mathematical Modelling and Analysis,
     # Technological and Economic Development of Economy, Transport
+
 
   {
 
@@ -42,7 +42,8 @@
       au < released ; 2017 ; Aviation Volume 2017 ; 14 ; 2017 >
       au < released ; 2018 ; Aviation Volume 2018 ; 15 ; 2018 >
       au < released ; 2019 ; Aviation Volume 2019 ; 16 ; 2019 >
-      au < manifest ; 2020 ; Aviation Volume 2020 ; 17 ; 2020 >
+      au < released ; 2020 ; Aviation Volume 2020 ; 17 ; 2020 >
+      au < manifest ; 2021 ; Aviation Volume 2021 ; 18 ; 2021 >
 
   }
 
@@ -66,7 +67,8 @@
       au < manifest ; 2017 ; Business, Management and Education Volume 2017 ; 8 ; 2017 >
       au < released ; 2018 ; Business, Management and Education Volume 2018 ; 9 ; 2018 >
       au < released ; 2019 ; Business, Management and Education Volume 2019 ; 10 ; 2019 >
-      au < manifest ; 2020 ; Business, Management and Education Volume 2020 ; 11 ; 2020 >
+      au < released ; 2020 ; Business, Management and Education Volume 2020 ; 11 ; 2020 >
+      au < manifest ; 2021 ; Business, Management and Education Volume 2021 ; 12 ; 2021 >
 
   }
 
@@ -94,7 +96,8 @@
       au < released ; 2017 ; Business: Theory and Practice Volume 2017 ; 12 ; 2017 >
       au < released ; 2018 ; Business: Theory and Practice Volume 2018 ; 13 ; 2018 >
       au < released ; 2019 ; Business: Theory and Practice Volume 2019 ; 14 ; 2019 >
-      au < manifest ; 2020 ; Business: Theory and Practice Volume 2020 ; 15 ; 2020 >
+      au < released ; 2020 ; Business: Theory and Practice Volume 2020 ; 15 ; 2020 >
+      au < manifest ; 2021 ; Business: Theory and Practice Volume 2021 ; 16 ; 2021 >
 
   }
 
@@ -120,7 +123,8 @@
       au < released ; 2017 ; Creativity Studies Volume 2017 ; 10 ; 2017 >
       au < released ; 2018 ; Creativity Studies Volume 2018 ; 11 ; 2018 >
       au < released ; 2019 ; Creativity Studies Volume 2019 ; 12 ; 2019 >
-      au < manifest ; 2020 ; Creativity Studies Volume 2020 ; 13 ; 2020 >
+      au < released ; 2020 ; Creativity Studies Volume 2020 ; 13 ; 2020 >
+      au < manifest ; 2021 ; Creativity Studies Volume 2021 ; 14 ; 2021 >
 
   }
 
@@ -145,7 +149,8 @@
       au < released ; 2017 ; Engineering Structures and Technologies Volume 2017 ; 9 ; 2017 >
       au < released ; 2018 ; Engineering Structures and Technologies Volume 2018 ; 10 ; 2018 >
       au < released ; 2019 ; Engineering Structures and Technologies Volume 2019 ; 11 ; 2019 >
-      au < manifest ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 >
+      au < released ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 >
+      au < expected ; 2021 ; Engineering Structures and Technologies Volume 2021 ; 13 ; 2021 >
 
   }
 
@@ -163,8 +168,8 @@
       au < manifest ; 2005 ; Geodesy and Cartography Volume 2005 ; 2 ; 2005 >
       au < released ; 2006 ; Geodesy and Cartography Volume 2006 ; 3 ; 2006 >
       au < released ; 2007 ; Geodesy and Cartography Volume 2007 ; 4 ; 2007 >
-      au < manifest ; 2008 ; Geodesy and Cartography Volume 2008 ; 5 ; 2008 >
-      au < manifest ; 2009 ; Geodesy and Cartography Volume 2009 ; 6 ; 2009 >
+      au < released ; 2008 ; Geodesy and Cartography Volume 2008 ; 5 ; 2008 >
+      au < released ; 2009 ; Geodesy and Cartography Volume 2009 ; 6 ; 2009 >
       au < released ; 2010 ; Geodesy and Cartography Volume 2010 ; 7 ; 2010 >
       au < released ; 2011 ; Geodesy and Cartography Volume 2011 ; 8 ; 2011 >
       au < released ; 2012 ; Geodesy and Cartography Volume 2012 ; 9 ; 2012 >
@@ -175,7 +180,8 @@
       au < released ; 2017 ; Geodesy and Cartography Volume 2017 ; 14 ; 2017 >
       au < released ; 2018 ; Geodesy and Cartography Volume 2018 ; 15 ; 2018 >
       au < released ; 2019 ; Geodesy and Cartography Volume 2019 ; 16 ; 2019 >
-      au < manifest ; 2020 ; Geodesy and Cartography Volume 2020 ; 17 ; 2020 >
+      au < released ; 2020 ; Geodesy and Cartography Volume 2020 ; 17 ; 2020 >
+      au < manifest ; 2021 ; Geodesy and Cartography Volume 2021 ; 18 ; 2021 >
 
   }
 
@@ -193,7 +199,7 @@
       au < manifest ; 2005 ; International Journal of Strategic Property Management Volume 2005 ; 2 ; 2005 >
       au < released ; 2006 ; International Journal of Strategic Property Management Volume 2006 ; 3 ; 2006 >
       au < released ; 2007 ; International Journal of Strategic Property Management Volume 2007 ; 4 ; 2007 >
-      au < manifest ; 2008 ; International Journal of Strategic Property Management Volume 2008 ; 5 ; 2008 >
+      au < released ; 2008 ; International Journal of Strategic Property Management Volume 2008 ; 5 ; 2008 >
       au < released ; 2009 ; International Journal of Strategic Property Management Volume 2009 ; 6 ; 2009 >
       au < released ; 2010 ; International Journal of Strategic Property Management Volume 2010 ; 7 ; 2010 >
       au < released ; 2011 ; International Journal of Strategic Property Management Volume 2011 ; 8 ; 2011 >
@@ -205,7 +211,8 @@
       au < released ; 2017 ; International Journal of Strategic Property Management Volume 2017 ; 14 ; 2017 >
       au < released ; 2018 ; International Journal of Strategic Property Management Volume 2018 ; 15 ; 2018 >
       au < released ; 2019 ; International Journal of Strategic Property Management Volume 2019 ; 16 ; 2019 >
-      au < manifest ; 2020 ; International Journal of Strategic Property Management Volume 2020 ; 17 ; 2020 >
+      au < released ; 2020 ; International Journal of Strategic Property Management Volume 2020 ; 17 ; 2020 >
+      au < manifest ; 2021 ; International Journal of Strategic Property Management Volume 2021 ; 18 ; 2021 >
 
   }
 
@@ -233,7 +240,8 @@
       au < released ; 2017 ; Journal of Architecture and Urbanism Volume 2017 ; 12 ; 2017 >
       au < released ; 2018 ; Journal of Architecture and Urbanism Volume 2018 ; 13 ; 2018 >
       au < released ; 2019 ; Journal of Architecture and Urbanism Volume 2019 ; 14 ; 2019 >
-      au < manifest ; 2020 ; Journal of Architecture and Urbanism Volume 2020 ; 15 ; 2020 >
+      au < released ; 2020 ; Journal of Architecture and Urbanism Volume 2020 ; 15 ; 2020 >
+      au < manifest ; 2021 ; Journal of Architecture and Urbanism Volume 2021 ; 16 ; 2021 >
 
   }
 
@@ -250,9 +258,9 @@
       au < manifest ; 2003 ; Journal of Business Economics and Management Volume 2003 ; 1 ; 2003 >
       au < manifest ; 2004 ; Journal of Business Economics and Management Volume 2004 ; 2 ; 2004 >
       au < manifest ; 2005 ; Journal of Business Economics and Management Volume 2005 ; 3 ; 2005 >
-      au < manifest ; 2006 ; Journal of Business Economics and Management Volume 2006 ; 4 ; 2006 >
+      au < released ; 2006 ; Journal of Business Economics and Management Volume 2006 ; 4 ; 2006 >
       au < released ; 2007 ; Journal of Business Economics and Management Volume 2007 ; 5 ; 2007 >
-      au < manifest ; 2008 ; Journal of Business Economics and Management Volume 2008 ; 6 ; 2008 >
+      au < released ; 2008 ; Journal of Business Economics and Management Volume 2008 ; 6 ; 2008 >
       au < released ; 2009 ; Journal of Business Economics and Management Volume 2009 ; 7 ; 2009 >
       au < released ; 2010 ; Journal of Business Economics and Management Volume 2010 ; 8 ; 2010 >
       au < released ; 2011 ; Journal of Business Economics and Management Volume 2011 ; 9 ; 2011 >
@@ -264,7 +272,8 @@
       au < released ; 2017 ; Journal of Business Economics and Management Volume 2017 ; 15 ; 2017 >
       au < released ; 2018 ; Journal of Business Economics and Management Volume 2018 ; 16 ; 2018 >
       au < released ; 2019 ; Journal of Business Economics and Management Volume 2019 ; 17 ; 2019 >
-      au < manifest ; 2020 ; Journal of Business Economics and Management Volume 2020 ; 18 ; 2020 >
+      au < released ; 2020 ; Journal of Business Economics and Management Volume 2020 ; 18 ; 2020 >
+      au < manifest ; 2021 ; Journal of Business Economics and Management Volume 2021 ; 19 ; 2021 >
 
   }
 
@@ -303,7 +312,8 @@
       au < released ; 2017 ; Journal of Civil Engineering and Management Volume 2017 ; 23 ; 2017 >
       au < released ; 2018 ; Journal of Civil Engineering and Management Volume 2018 ; 24 ; 2018 >
       au < released ; 2019 ; Journal of Civil Engineering and Management Volume 2019 ; 25 ; 2019 >
-      au < manifest ; 2020 ; Journal of Civil Engineering and Management Volume 2020 ; 26 ; 2020 >
+      au < released ; 2020 ; Journal of Civil Engineering and Management Volume 2020 ; 26 ; 2020 >
+      au < manifest ; 2021 ; Journal of Civil Engineering and Management Volume 2021 ; 27 ; 2021 >
 
   }
 
@@ -333,7 +343,8 @@
       au < released ; 2017 ; Journal of Environmental Engineering and Landscape Management Volume 2017 ; 14 ; 2017 >
       au < released ; 2018 ; Journal of Environmental Engineering and Landscape Management Volume 2018 ; 15 ; 2018 >
       au < released ; 2019 ; Journal of Environmental Engineering and Landscape Management Volume 2019 ; 16 ; 2019 >
-      au < manifest ; 2020 ; Journal of Environmental Engineering and Landscape Management Volume 2020 ; 17 ; 2020 >
+      au < released ; 2020 ; Journal of Environmental Engineering and Landscape Management Volume 2020 ; 17 ; 2020 >
+      au < manifest ; 2021 ; Journal of Environmental Engineering and Landscape Management Volume 2021 ; 18 ; 2021 >
 
   }
 
@@ -371,7 +382,8 @@
       au < released ; 2017 ; Mathematical Modelling and Analysis Volume 2017 ; 22 ; 2017 >
       au < released ; 2018 ; Mathematical Modelling and Analysis Volume 2018 ; 23 ; 2018 >
       au < released ; 2019 ; Mathematical Modelling and Analysis Volume 2019 ; 24 ; 2019 >
-      au < manifest ; 2020 ; Mathematical Modelling and Analysis Volume 2020 ; 25 ; 2020 >
+      au < released ; 2020 ; Mathematical Modelling and Analysis Volume 2020 ; 25 ; 2020 >
+      au < manifest ; 2021 ; Mathematical Modelling and Analysis Volume 2021 ; 26 ; 2021 >
 
   }
 
@@ -396,7 +408,8 @@
       au < manifest ; 2017 ; Science - Future of Lithuania Volume 2017 ; 9 ; 2017 >
       au < released ; 2018 ; Science - Future of Lithuania Volume 2018 ; 10 ; 2018 >
       au < released ; 2019 ; Science - Future of Lithuania Volume 2019 ; 11 ; 2019 >
-      au < manifest ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 >
+      au < released ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 >
+      au < manifest ; 2021 ; Science - Future of Lithuania Volume 2021 ; 13 ; 2021 >
 
   }
 
@@ -426,7 +439,8 @@
       au < released ; 2017 ; Technological and Economic Development of Economy Volume 2017 ; 14 ; 2017 >
       au < released ; 2018 ; Technological and Economic Development of Economy Volume 2018 ; 15 ; 2018 >
       au < released ; 2019 ; Technological and Economic Development of Economy Volume 2019 ; 16 ; 2019 >
-      au < manifest ; 2020 ; Technological and Economic Development of Economy Volume 2020 ; 17 ; 2020 >
+      au < released ; 2020 ; Technological and Economic Development of Economy Volume 2020 ; 17 ; 2020 >
+      au < manifest ; 2021 ; Technological and Economic Development of Economy Volume 2021 ; 18 ; 2021 >
 
   }
 
@@ -458,7 +472,8 @@
       au < released ; 2017 ; Transport Volume 2017 ; 16 ; 2017 >
       au < released ; 2018 ; Transport Volume 2018 ; 17 ; 2018 >
       au < released ; 2019 ; Transport Volume 2019 ; 18 ; 2019 >
-      au < manifest ; 2020 ; Transport Volume 2020 ; 19 ; 2020 >
+      au < released ; 2020 ; Transport Volume 2020 ; 19 ; 2020 >
+      au < manifest ; 2021 ; Transport Volume 2021 ; 20 ; 2021 >
 
   }
 

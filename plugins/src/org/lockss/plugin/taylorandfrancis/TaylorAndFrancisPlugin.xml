@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>112</string>
+    <string>124</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->
   <entry>
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>108</string>
+    <string>120</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Poll</string>
-        <string>50</string>
+        <string>58</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -106,7 +106,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <!-- end changes for https conversion -->      
   <entry>
     <string>au_login_page_checker</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponLoginPageChecker</string>
+    <string>org.lockss.plugin.taylorandfrancis.TafLoginPageChecker</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
@@ -200,10 +200,12 @@ POSSIBILITY OF SUCH DAMAGE.
    -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
-    <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
-    <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
-    <string>([^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=)</string>
+    <list>
+      <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|pb-assets|resources|sda|wro)/</string>
+      <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$</string>
+      <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$</string>
+      <string>([^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=)</string>
+    </list>
   </entry>
   <!-- for now, au_url_poll_result_weight is just inherited from parent -->
 </map>

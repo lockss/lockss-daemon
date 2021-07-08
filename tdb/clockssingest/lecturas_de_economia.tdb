@@ -27,9 +27,9 @@
     
     #published 1980-present
 
-    au < manifest ; exists ; 2010 ; 2010 ; Lecturas de Economía Volume 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Lecturas de Economía Volume 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Lecturas de Economía Volume 2012 ; 2012 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; Lecturas de Economía Volume 2010 ; 2010 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Lecturas de Economía Volume 2011 ; 2011 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Lecturas de Economía Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Lecturas de Economía Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Lecturas de Economía Volume 2014 ; 2014 ; >
     au < superseded ; exists ; 2015 ; 2015 ; Lecturas de Economía Volume 2015 [superseded] ; 2015 ; >
@@ -38,6 +38,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Lecturas de Economía Volume 2018 ; 2018 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Lecturas de Economía Volume 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Lecturas de Economía Volume 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Lecturas de Economía Volume 2021 ; 2021 ; >
 
     }
 

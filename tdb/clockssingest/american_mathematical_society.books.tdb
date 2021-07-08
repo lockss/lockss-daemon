@@ -66,6 +66,7 @@
     au < finished ; finished ; 2018 ; Contemporary Mathematics 2018 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; Contemporary Mathematics 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Contemporary Mathematics 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Contemporary Mathematics 2021 ; 2021 ; >
 #assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
 
     }
@@ -125,9 +126,10 @@
     au < finished ; finished ; 2015 ; Mathematical Surveys and Monographs 2015 ; 2015 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Mathematical Surveys and Monographs 2016 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Mathematical Surveys and Monographs 2017 ; 2017 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; Mathematical Surveys and Monographs 2018 ; 2018 ; >
+    au < finished ; manifest ; 2018 ; Mathematical Surveys and Monographs 2018 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; Mathematical Surveys and Monographs 2019 ; 2019 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2020 ; Mathematical Surveys and Monographs 2020 ; 2020 ; >
+    au < crawling ; exists ; 2020 ; Mathematical Surveys and Monographs 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Mathematical Surveys and Monographs 2021 ; 2021 ; >
 #assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
     }
 
@@ -210,8 +212,9 @@
     au < finished ; finished ; 2016 ; Memoirs of the American Mathematical Society 2016 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Memoirs of the American Mathematical Society 2017 ; 2017 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Memoirs of the American Mathematical Society 2018 ; 2018 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Memoirs of the American Mathematical Society 2019 ; 2019 ; >
+    au < finished ; manifest ; 2019 ; Memoirs of the American Mathematical Society 2019 ; 2019 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2020 ; Memoirs of the American Mathematical Society 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; Memoirs of the American Mathematical Society 2021 ; 2021 ; >
 #assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
 
     }
@@ -231,7 +234,7 @@
     au < finished ; finished ; 1980-1989 ; Proceedings of Symposia in Pure Mathematics 1980-1989 ; 1980-1989 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 1990-1999 ; Proceedings of Symposia in Pure Mathematics 1990-1999 ; 1990-1999 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2000-2009 ; Proceedings of Symposia in Pure Mathematics 2000-2009 ; 2000-2009 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2010-2019 ; Proceedings of Symposia in Pure Mathematics 2010-2019 ; 2010-2019 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010-2019 ; Proceedings of Symposia in Pure Mathematics 2010-2019 ; 2010-2019 ; reingest1.clockss.org:8082 >
 
     }
    
@@ -251,7 +254,7 @@
     au < finished ; frozen ; 1980-1989 ; Proceedings of Symposia in Applied Mathematics 1980-1989 ; 1980-1989 ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
     au < finished ; frozen ; 1990-1999 ; Proceedings of Symposia in Applied Mathematics 1990-1999 ; 1990-1999 ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
     au < finished ; frozen ; 2000-2009 ; Proceedings of Symposia in Applied Mathematics 2000-2009 ; 2000-2009 ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
-    au < deepCrawl ; exists ; 2010-2019 ; Proceedings of Symposia in Applied Mathematics 2010-2019 ; 2010-2019 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010-2019 ; Proceedings of Symposia in Applied Mathematics 2010-2019 ; 2010-2019 ; reingest2.clockss.org:8085 >
 
     }
 }

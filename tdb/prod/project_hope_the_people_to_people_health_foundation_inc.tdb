@@ -12,8 +12,8 @@
       eissn = 1544-5208 ;
       issnl = 0278-2715
     >
-
     #Moving to Atypon on October 11, 2017
+
 
     {
     plugin = org.lockss.plugin.atypon.hlthaff.HealthAffairsPlugin
@@ -28,6 +28,7 @@
     au < released ; 2018 ; Health Affairs Volume 37 ; 37 >
     au < expected ; 2019 ; Health Affairs Volume 38 ; 38 >
     au < expected ; 2020 ; Health Affairs Volume 39 ; 39 >
+    au < expected ; 2021 ; Health Affairs Volume 40 ; 40 >
 
     }
 

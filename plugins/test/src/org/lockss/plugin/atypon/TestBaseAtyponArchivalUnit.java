@@ -511,7 +511,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
           .0001);
     }
     // This pattern is still weighted even though it is replicated
-    assertEquals(1.0, urlPollResults.getMatch(na101String, (float) 1), .0001);
+    assertEquals(1.0, urlPollResults.getMatch(na101String, (float) 1), .0001);    // comment out for now
   }
   
   public void testPollSpecialBooks() throws Exception {

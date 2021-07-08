@@ -320,12 +320,20 @@ implements SourceXmlSchemaHelper {
        /3 - Bibliographic level
   $8 - Field link and sequence number (R)
 
+<marc:datafield tag="020" ind1=" " ind2=" ">
+<marc:subfield code="a">9785433001459</marc:subfield>
+</marc:datafield>
+
  <marc:datafield tag="776" ind1="1" ind2=" ">
       <marc:subfield code="z">9789850822628</marc:subfield>
   </marc:datafield>
    */
-  private static final String ISBN_TAG = "776";
-  private static final String isbn_code = "z";
+
+  private static final String ISBN_TAG_ALT = "776";
+  private static final String isbn_code_alt = "z";
+
+  private static final String ISBN_TAG = "020";
+  private static final String isbn_code = "a";
 
   /*
   856 - Electronic Location and Access (R)
@@ -418,6 +426,9 @@ implements SourceXmlSchemaHelper {
   public static String MARC_isbn =
           "datafield[@tag = \"" + ISBN_TAG + "\"]" +
                   "/subfield[@code = \"" + isbn_code + "\"]";
+  public static String MARC_isbn_alt =
+          "datafield[@tag = \"" + ISBN_TAG_ALT + "\"]" +
+                  "/subfield[@code = \"" + isbn_code_alt + "\"]";
   public static String MARC_author =
           "datafield[@tag = \"" + AUTHOR_TAG + "\" and @ind1=\"1\" and @ind2=\" \" ]" +
                   "/subfield[@code = \"" + author_name_code + "\"]";
@@ -442,6 +453,7 @@ implements SourceXmlSchemaHelper {
     eastview_articleMap.put(MARC_title, XmlDomMetadataExtractor.TEXT_VALUE);
     eastview_articleMap.put(MARC_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
     eastview_articleMap.put(MARC_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
+    eastview_articleMap.put(MARC_isbn_alt, XmlDomMetadataExtractor.TEXT_VALUE);
     eastview_articleMap.put(MARC_author, XmlDomMetadataExtractor.TEXT_VALUE);
 
   }
@@ -459,6 +471,7 @@ implements SourceXmlSchemaHelper {
   static {
     // A few other cookMap need post process, so they will be in the post process function
     cookMap.put(MARC_isbn, MetadataField.FIELD_ISBN);
+    cookMap.put(MARC_isbn_alt, MetadataField.FIELD_ISBN);
   }
 
 

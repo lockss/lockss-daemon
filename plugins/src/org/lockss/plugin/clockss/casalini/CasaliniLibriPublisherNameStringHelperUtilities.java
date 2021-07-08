@@ -1,252 +1,353 @@
+/*
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
 package org.lockss.plugin.clockss.casalini;
 
+import org.lockss.plugin.clockss.MetadataStringHelperUtilities;
 import org.lockss.util.Logger;
-import org.lockss.util.NumberUtil;
+import org.marc4j.*;
+import org.xml.sax.InputSource;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 public class CasaliniLibriPublisherNameStringHelperUtilities {
 
     private static final Logger log = Logger.getLogger(CasaliniLibriPublisherNameStringHelperUtilities.class);
-    
-    public static String matchiPublishNamer(String originalDateString) {
 
-        Map<String,String> PublisherNameShortcutMap = new HashMap<String,String>();
+    protected static final Map<String, String> canonical;
+    static {
+      canonical = new HashMap<>();
+      canonical.put("21 editore", "21 Editore");
+      canonical.put("accademia di romania", "Accademia di Romania");
+      canonical.put("accademia university press", "Accademia University Press");
+      canonical.put("agora & co", "Agorà & Co.");
+      canonical.put("agorà & co", "Agorà & Co.");
+      canonical.put("agorà & co.", "Agorà & Co.");
+      canonical.put("agorà", "Agorà & Co.");
+      canonical.put("aib", "AIB - Associazione Italiana Biblioteche");
+      canonical.put("aib - associazione italiana biblioteche", "AIB - Associazione Italiana Biblioteche");
+      canonical.put("alpes", "Alpes Italia");
+      canonical.put("alpes italia", "Alpes Italia");
+      canonical.put("altralinea", "Altralinea edizioni");
+      canonical.put("altralinea edizioni", "Altralinea edizioni");
+      canonical.put("aluvion editorial", "Aluvión Editorial");
+      canonical.put("aluvión editorial", "Aluvión Editorial");
+      canonical.put("amalthea", "Cadmo");
+      canonical.put("amsterdam university press", "Amsterdam University Press");
+      canonical.put("antenore", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("antenore la facolta giardini", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("antenore la facoltà giardini", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("anthropos", "Anthropos Editorial");
+      canonical.put("anthropos editorial", "Anthropos Editorial");
+      canonical.put("anthropos fundacion caja de madrid", "Anthropos Editorial");
+      canonical.put("anthropos fundación caja de madrid", "Anthropos Editorial");
+      canonical.put("anthropos fundacion cultural eduardo cohen", "Anthropos Editorial");
+      canonical.put("anthropos fundación cultural eduardo cohen", "Anthropos Editorial");
+      canonical.put("anthropos universidad autonoma metropolitana", "Anthropos Editorial");
+      canonical.put("anthropos universidad autónoma metropolitana", "Anthropos Editorial");
+      canonical.put("archaeopress", "Archaeopress");
+      canonical.put("artemide", "Artemide");
+      canonical.put("associazione di studi storici elio conti", "Associazione di studi storici Elio Conti");
+      canonical.put("associazione italiana biblioteche", "AIB - Associazione Italiana Biblioteche");
+      canonical.put("ateneo pontificio regina apostolorum","Ateneo Pontificio Regina Apostolorum");
+      canonical.put("bibliografica", "Editrice Bibliografica");
+      canonical.put("biblioteca dei leoni", "Biblioteca dei Leoni");
+      canonical.put("bononia university press", "Bononia University Press");
+      canonical.put("bookstones", "Bookstones");
+      canonical.put("cadmo", "Cadmo");
+      canonical.put("cadmo centro mario rossi per gli studi filosofici", "Cadmo");
+      canonical.put("casalini", "Casalini Libri");
+      canonical.put("casalini libri", "Casalini Libri");
+      canonical.put("celid", "Celid");
+      canonical.put("centro per la filosofia italiana", "Cadmo");
+      canonical.put("centro per la filosofia italiana cadmo", "Cadmo");
+      canonical.put("clichy", "Edizioni Clichy");
+      canonical.put("clueb", "CLUEB");
+      canonical.put("clueb cisui", "CLUEB");
+      canonical.put("clueb ediciones universidad de salamanca", "CLUEB");
+      canonical.put("clueb ediciones universidad salamanca", "CLUEB");
+      canonical.put("clueb icm istituto per gli incontriculturali mitteleuropei", "CLUEB");
+      canonical.put("clueb regione emilia-romagna", "CLUEB");
+      canonical.put("comares", "Editorial Comares");
+      canonical.put("comune di falconara marittima", "Metauro");
+      canonical.put("cpl editions", "CPL - Centro Primo Levi");
+      canonical.put("di che cibo 6", "Di che cibo 6?");
+      canonical.put("diderotiana editrice", "Diderotiana Editrice");
+      canonical.put("dipartimento di filosofia universita di bologna", "CLUEB");
+      canonical.put("dipartimento di filosofia università di bologna", "CLUEB");
+      canonical.put("ecole francaise d'athenes", "Ecole française d'Athènes");
+      canonical.put("école française d'athènes", "Ecole française d'Athènes");
+      canonical.put("edisud", "Edisud");
+      canonical.put("edisud salerno", "Edisud Salerno");
+      canonical.put("editions l'harmattan", "Editions L'Harmattan");
+      canonical.put("editore ulrico hoepli", "Hoepli");
+      canonical.put("editore xy.it", "Editore XY.IT");
+      canonical.put("editorial comares", "Editorial Comares");
+      canonical.put("editrice bibliografia", "Editrice Bibliografica"); //sic
+      canonical.put("editrice bibliografica", "Editrice Bibliografica");
+      canonical.put("edizione di storia e letteratura", "Storia e Letteratura");
+      canonical.put("edizioni clichy", "Edizioni Clichy");
+      canonical.put("edizioni del galluzzo per la fondazione ezio franceschini", "SISMEL - Edizioni del Galluzzo");
+      canonical.put("edizioni dell'ateneo", "Edizioni dell'Ateneo");
+      canonical.put("edizioni di storia e letteratura", "Storia e Letteratura");
+      canonical.put("edizioni di storia e letteratura centro tedesco di studi veneziani", "Storia e Letteratura");
+      canonical.put("edizioni epoke", "Edizioni Epoké");
+      canonical.put("edizioni epoké", "Edizioni Epoké");
+      canonical.put("edizioni ets", "ETS");
+      canonical.put("edizioni quasar", "Edizioni Quasar");
+      canonical.put("edizioni storia e letteratura", "Storia e Letteratura");
+      canonical.put("edizioni studium", "Edizioni Studium");
+      canonical.put("egea", "EGEA");
+      canonical.put("egea universita bocconi", "EGEA");
+      canonical.put("ets", "ETS");
+      canonical.put("eum", "CLUEB");
+      canonical.put("eunsa", "EUNSA - Ediciones Universidad de Navarra");
+      canonical.put("eurilink", "Eurilink University Press");
+      canonical.put("eurilink university press", "Eurilink University Press");
+      canonical.put("fabrizio serra", "Fabrizio Serra Editore");
+      canonical.put("fabrizio serra editore", "Fabrizio Serra Editore");
+      canonical.put("firenze university press", "Firenze University Press");
+      canonical.put("faenza editrice", "CLUEB");
+      canonical.put("f. angeli", "Franco Angeli");
+      canonical.put("f.angeli", "Franco Angeli");
+      canonical.put("fondazione ignazio mormino del banco di sicilia", "L'Erma di Bretschneider");
+      canonical.put("fondazione ignazio mormino del banco di sicilia l'erma di bretschneider", "L'Erma di Bretschneider");
+      canonical.put("franco angeli", "Franco Angeli");
+      canonical.put("franco cesati editore", "Cadmo");
+      canonical.put("francoangeli", "Franco Angeli");
+      canonical.put("f. serra", "Fabrizio Serra Editore");
+      canonical.put("genova university press", "Genova University Press");
+      canonical.put("g. giappichelli", "Giappichelli Editore");
+      canonical.put("g. giappichelli editore", "Giappichelli Editore");
+      canonical.put("giannini", "Giannini Editore");
+      canonical.put("giannini editore", "Giannini Editore");
+      canonical.put("giappichelli", "Giappichelli Editore");
+      canonical.put("giappichelli editore", "Giappichelli Editore");
+      canonical.put("giardini", "Giardini Editori e Stampatori in Pisa");
+      canonical.put("giardini editori e stampatori", "Giardini Editori e Stampatori in Pisa");
+      canonical.put("gruppo editoriale internazionale", "Gruppo Editoriale Internazionale");
+      canonical.put("guida", "Guida Editori");
+      canonical.put("guida editori", "Guida Editori");
+      canonical.put("herder", "Herder Editorial");
+      canonical.put("hoepli", "Hoepli");
+      canonical.put("ifac - istituto di fisica applicata nello carrara", "IFAC - Istituto di Fisica Applicata Nello Carrara");
+      canonical.put("if press", "If Press");
+      canonical.put("il calamo", "Il Calamo");
+      canonical.put("il calamo dipartimento di studi glottoantropologici universita di roma la sapienza", "Il Calamo");
+      canonical.put("il lavoro editoriale", "Il Lavoro Editoriale");
+      canonical.put("il poligrafo", "Il Poligrafo casa editrice");
+      canonical.put("infinito", "Infinito edizioni");
+      canonical.put("infinito edizioni", "Infinito edizioni");
+      canonical.put("inschibboleth", "Inschibboleth edizioni");
+      canonical.put("istituti editoriali e poligrafici internazionali", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("istituti editoriali e poligrafici internazionali universita degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("istituti editoriali e poligrafici internazionali università degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("italian cultural institute", "Cadmo");
+      canonical.put("jaca book", "CLUEB");
+      canonical.put("jaca book clueb", "CLUEB");
+      canonical.put("jouvence", "Jouvence");
+      canonical.put("la ergastula", "La Ergástula");
+      canonical.put("la ergástula", "La Ergástula");
+      canonical.put("la otra h", "Herder Editorial");
+      canonical.put("l'harmattan", "L'Harmattan");
+      canonical.put("l'asino d'oro", "L'asino d'oro edizioni");
+      canonical.put("l'asino d'oro edizioni", "L'asino d'oro edizioni");
+      canonical.put("latium", "Edizioni Quasar");
+      canonical.put("la vita felice", "La Vita Felice");
+      canonical.put("ledizioni", "Ledizioni");
+      canonical.put("ledizioni ledipublishing", "Ledizioni");
+      canonical.put("leone", "Leone Editore");
+      canonical.put("leone editore", "Leone Editore");
+      canonical.put("leo s. olschki", "Leo S. Olschki");
+      canonical.put("leo s. olschki editore", "Leo S. Olschki");
+      canonical.put("leo s. olschki s. a. editeur", "Leo S. Olschki");
+      canonical.put("l'erma di bretschneider", "L'Erma di Bretschneider");
+      canonical.put("l'erma di bretschneider comune di velletri", "L'Erma di Bretschneider");
+      canonical.put("libreria musicale italiana", "LIM - Libreria Musicale Italiana");
+      canonical.put("licosia", "Licosia Edizioni");
+      canonical.put("licosia edizioni", "Licosia Edizioni");
+      canonical.put("loffredo editore", "Loffredo");
+      canonical.put("l. s. olschki", "Leo S. Olschki");
+      canonical.put("l.s. olschki", "Leo S. Olschki");
+      canonical.put("l.s. olschki department of italian the university of w. australia", "Leo S. Olschki");
+      canonical.put("l.s. olschki istituto per il lessico intellettuale europeo e storia delle idee", "Leo S. Olschki");
+      canonical.put("l.s. olschki regione toscana", "Leo S. Olschki");
+      canonical.put("mardaga", "Mardaga");
+      canonical.put("mandragora", "Mandragora");
+      canonical.put("marco saya edizioni", "Marco Saya Edizioni");
+      canonical.put("matauro", "Metauro"); //sic
+      canonical.put("metauro", "Metauro");
+      canonical.put("mimesis", "Mimesis Edizioni");
+      canonical.put("ministero per i beni e le attivita culturali direzione generale per gli archivi", "CLUEB");
+      canonical.put("ministero per i beni e le attività culturali direzione generale per gli archivi", "CLUEB");
+      canonical.put("morcelliana", "Morcelliana");
+      canonical.put("morlacchi", "Morlacchi Editore");
+      canonical.put("morlacchi editore u.p.", "Morlacchi Editore");
+      canonical.put("nardini", "Nardini editore");
+      canonical.put("new digital frontiers", "New Digital Frontiers");
+      canonical.put("new digital press", "New Digital Frontiers"); //sic
+      canonical.put("nicomp", "Nicomp");
+      canonical.put("officina libraria", "Officina Libraria");
+      canonical.put("orthotes", "Orthotes Editrice");
+      canonical.put("paolo loffredo", "Loffredo");
+      canonical.put("paolo loffredo iniziative editoriali", "Loffredo");
+      canonical.put("partagees", "Giannini Editore");
+      canonical.put("partagées", "Giannini Editore");
+      canonical.put("paris expérimental", "Paris Expérimental");
+      canonical.put("passigli", "Passigli");
+      canonical.put("patron", "Pàtron Editore");
+      canonical.put("pàtron", "Pàtron Editore");
+      canonical.put("pendragon", "Edizioni Pendragon");
+      canonical.put("pesaro", "Metauro");
+      canonical.put("petite plaisance", "CLUEB");
+      canonical.put("petite plaisance clueb", "CLUEB");
+      canonical.put("plaza y valdes", "Plaza y Valdés Editores");
+      canonical.put("plaza y valdés", "Plaza y Valdés Editores");
+      canonical.put("plaza y valdes editores", "Plaza y Valdés Editores");
+      canonical.put("plaza y valdés editores", "Plaza y Valdés Editores");
+      canonical.put("pm", "PM edizioni");
+      canonical.put("pm edizioni", "PM edizioni");
+      canonical.put("prospettiva", "Prospettiva edizioni");
+      canonical.put("prospettiva edizioni", "Prospettiva edizioni");
+      canonical.put("qiqajon", "Edizioni Qiqajon");
+      canonical.put("qiqajon - comunita di bose", "Edizioni Qiqajon");
+      canonical.put("quasar", "Edizioni Quasar");
+      canonical.put("quasar associazione giovanni secco suardo", "Edizioni Quasar");
+      canonical.put("quasar longo scripta manent di tipogr. mancini", "Edizioni Quasar");
+      canonical.put("regione emilia-romagna", "CLUEB");
+      canonical.put("regione emilia-romagna clueb", "CLUEB");
+      canonical.put("reus", "Editorial Reus");
+      canonical.put("rosenberg & seller", "Rosenberg & Sellier"); //sic
+      canonical.put("rosenberg & sellier", "Rosenberg & Sellier");
+      canonical.put("rosenberg sellier", "Rosenberg & Sellier");
+      // the original file did double encoded, which cause trouble, and need to this
+      // the original string is "Scholé"
+      canonical.put("schol\u00e9", "Scholé");
+      canonical.put("sel", "Storia e Letteratura");
+      canonical.put("settegiorni", "Settegiorni Editore");
+      canonical.put("settenove", "Settenove edizioni");
+      canonical.put("sillabe", "Sillabe");
+      canonical.put("sismel", "SISMEL - Edizioni del Galluzzo");
+      canonical.put("sismel edizioni del galluzzo", "SISMEL - Edizioni del Galluzzo");
+      canonical.put("s.n.", "CLUEB"); // Not universal, but all s.n. in 2016 and 2020 happen to be CLUEB
+      canonical.put("sovera edizioni", "Sovera Edizioni");
+      canonical.put("stilo", "Stilo Editrice");
+      canonical.put("stilo editrice", "Stilo Editrice");
+      canonical.put("storia e letteratura", "Storia e Letteratura");
+      canonical.put("studium", "Edizioni Studium");
+      canonical.put("tab", "TAB edizioni");
+      canonical.put("tab edizioni", "TAB edizioni");
+      canonical.put("tangram", "Tangram Edizioni Scientifiche");
+      canonical.put("tangram edizioni scientifiche", "Tangram Edizioni Scientifiche");
+      canonical.put("the wolfsonian foundation", "Cadmo");
+      canonical.put("the wolfsonian foundation amalthea", "Cadmo");
+      canonical.put("tra le righe", "Tra le righe libri");
+      canonical.put("tra le righe libri", "Tra le righe libri");
+      canonical.put("trama editorial", "Trama Editorial");
+      canonical.put("u. hoepli", "Hoepli");
+      canonical.put("ulrico hoepli", "Hoepli");
+      canonical.put("unione fitopatologica mediterranea", "Firenze University Press");
+      canonical.put("universita degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("università degli studi di macerata", "Istituti Editoriali e Poligrafici Internazionali");
+      canonical.put("università degli studi di milano dipartimento di studi letterari filologici e linguistici","Ledizioni");
+      canonical.put("universita la sapienza", "CLUEB");
+      canonical.put("università la sapienza", "CLUEB");
+      canonical.put("uranoscopo", "CLUEB");
+      canonical.put("urbaniana university press", "Urbaniana University Press");
+      canonical.put("visor libros", "Visor Libros");
+      canonical.put("vita e pensiero", "Vita e Pensiero");
+      canonical.put("vita e pensiero universita", "Vita e Pensiero");
+      canonical.put("v&p strumenti", "Vita e Pensiero");
+      canonical.put("v&p universita", "Vita e Pensiero");
+      canonical.put("xy.it", "Editore XY.IT");
+      canonical.put("zanichelli", "Zanichelli Editore");
+    }
 
-        // From the excel sheet publisher sent
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("21 Editore"),"21EDIT");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Accademia di Romania"),"ROMANIA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Accademia University Press"),"AUP");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Agorà & Co."),"AGORA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("AIB - Associazione Italiana Biblioteche"),"AIB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Alpes Italia"),"ALPES");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Altralinea edizioni"),"ALTRALIN");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Aluvión Editorial"),"ALUVION");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Anthropos Editorial"),"ANTHROP");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Archaeopress Publishing"),"ARCHAEO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Artemide"),"ARTEMIDE");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Associazione di studi storici Elio Conti"),"ASSTOR");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Biblioteca dei Leoni"),"BIBLEONI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Bononia University Press"),"BUP");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Bookstones"),"BOOKSTON");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Cadmo"),"CADMO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Casalini Libri"),"CASA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("CPL - Centro Primo Levi"),"CPL");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Di che cibo 6?"),"CIBO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Diderotiana Editrice"),"DIDEROT");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("École française d'Athènes"),"EFA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("EdiSud Salerno"),"EDISUD");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Editore XY.IT"),"XYIT");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Editorial Comares"),"COMARES");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Editorial Reus"),"REUS");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Editrice Bibliografica"),"GRAFICA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni Clichy"),"CLICHY");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni dell'Ateneo"),"ATENEO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni Epoké"),"EPOKE");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni Pendragon"),"PENDRA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni Qiqajon"),"QIQAJON");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni Quasar"),"QUASAR");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni Studium"),"STUDIUM");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("EGEA"),"EGEA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("ETS"),"ETS");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("EUNSA - Ediciones Universidad de Navarra"),"EUNSA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Eurilink University Press"),"EURI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Fabrizio Serra Editore"),"SERRA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Franco Angeli"),"FRANCOA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Genova University Press"),"GUP");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Giannini Editore"),"GIAN");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Giappichelli Editore"),"GIAPPI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Giardini Editori e Stampatori in Pisa"),"GIARDI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Gruppo Editoriale Internazionale"),"GEI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Guida Editori"),"GUIDA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Herder Editorial"),"HERDER");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Hoepli"),"HOEPLI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("If Press"),"IFPRESS");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("IFAC - Istituto di Fisica Applicata Nello Carrara"),"IFAC");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Il Calamo"),"CALAMO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Il Lavoro Editoriale"),"LAVORO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Il Poligrafo casa editrice"),"POLIGR");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Infinito edizioni"),"INFINITO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Inschibboleth edizioni"),"INSCHIB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Istituti Editoriali e Poligrafici Internazionali"),"IEPI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Krill Books"),"KRILL");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("La Ergástula"),"ERGAS");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("La Vita Felice"),"VITAF");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("L'asino d'oro edizioni"),"ASINO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Ledizioni"),"LEDIZ");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Leo S. Olschki"),"OLSC");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Leone Editore"),"LEONE");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("L'Erma di Bretschneider"),"ERMA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("L'Harmattan"),"HARMA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Licosia Edizioni"),"LICO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("LIM - Libreria Musicale Italiana"),"LIM");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Loffredo"),"LOFFR");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Mandragora"),"MANDRA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Marco Saya Edizioni"),"SAYA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Mardaga"),"MARDAGA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Metauro"),"METAU");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Mimesis Edizioni"),"MIMESIS");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Morcelliana"),"MORCEL");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Morlacchi Editore"),"MORLA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Nardini editore"),"NARDINI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("New Digital Frontiers"),"NDF");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Nicomp"),"NICOMP");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Officina Libraria"),"OFFICINA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Orthotes Editrice"),"ORTHO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Paolo Loffredo Editore"),"INIZIAT");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Paris Expérimental"),"PARISEX");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Passigli"),"PASSIGLI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Pàtron Editore"),"PATRON");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Plaza y Valdés Editores"),"PLAZA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("PM edizioni"),"PMEDIZ");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Prospettiva edizioni"),"PROSP");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Rosenberg & Sellier"),"ROSENB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Settegiorni Editore"),"SETTEGI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Settenove edizioni"),"SETTENO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Sillabe"),"SILLABE");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("SISMEL - Edizioni del Galluzzo"),"SISMEL");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Sovera Edizioni"),"SOVERA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Stilo Editrice"),"STILO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Storia e Letteratura"),"SEL");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("TAB edizioni"),"TAB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Tangram Edizioni Scientifiche"),"TANGRAM");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Tra le righe libri"),"TRALERIG");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Trama Editorial"),"TRAMA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Urbaniana University Press"),"URBAN");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Visor Libros"),"VISOR");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Vita e Pensiero"),"VITAE");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Zanichelli Editore"),"ZANI");
+    protected static final Map<String, String> shortcut2016;
+    static {
+      shortcut2016 = new HashMap<>();
+      shortcut2016.put("Edizioni dell'Ateneo", "ATENEO");
+      shortcut2016.put("Cadmo", "CADMO");
+      shortcut2016.put("Casalini Libri", "CASA");
+      shortcut2016.put("CLUEB", "CLUEB");
+      shortcut2016.put("Gruppo Editoriale Internazionale", "GEI");
+      shortcut2016.put("Giardini Editori e Stampatori in Pisa", "GIARDI");
+      shortcut2016.put("Istituti Editoriali e Poligrafici Internazionali", "IEPI");
+    }
 
 
-        // From 2016
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Centro per la filosofia italiana"),"CADMO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("The Wolfsonian Foundation"),"CADMO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Amalthea"),"CADMO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Jaca book"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Dipartimento di filosofia Università di Bologna"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Petite plaisance"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Eum"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("[s.n.]"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Regione Emilia-Romagna"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Ministero per i beni e le attività culturali Direzione generale per gli archivi"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Faenza editrice"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Università La Sapienza"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Uranoscopo"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Giardini"),"GIARDI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Università degli studi di Macerata"),"IEPI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Antenore"),"IEPI");
 
-        // From 2020
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("AIB"),"AIB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Alpes"),"ALPES");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Altralinea"),"ALTRALIN");
-        ///////PublisherNameShortcutMap.put("Antenore :"),"2020");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Anthropos"),"ANTHROP");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Associazione italiana biblioteche"),"AIB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("BIBLIOGRAFICA"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("CPL editions"),"???");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Casalini"),"CASA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Clichy"),"CLICHY");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Clueb"),"CLUEB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Comares"),"COMARES");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Comune di Falconara Marittima"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("EDITRICE BIBLIOGRAFIA"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("EUNSA"),"EUNSA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Editore Ulrico Hoepli"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizione di Storia e Letteratura"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni ETS"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni Storia e Letteratura"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni del Galluzzo per la Fondazione Ezio Franceschini"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Edizioni di storia e letteratura"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Eurilink"),"EURI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("F. Angeli"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("F. Serra"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Fabrizio Serra"),"SERRA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Fondazione Ignazio Mormino del Banco di Sicilia  ;"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("FrancoAngeli"),"FRANCOA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("G. Giappichelli"),"GIAPPI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("G. Giappichelli Editore"),"GIAPPI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Giannini"),"GIAN");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Giappichelli"),"GIAPPI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Giardini editori e stampatori"),"GIARDI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Guida"),"GUIDA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Herder"),"HERDER");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Hoepli"),"HOEPLI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Il poligrafo"),"POLIGR");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("InSchibboleth"),"INSCHIB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Infinito"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("L'asino d'oro edizioni"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("L.S. Olschki"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Latium"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Ledizioni LediPublishing"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Leo S. Olschki S. A. éditeur"),"OLSC");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Leo S. Olschki editore"),"OLSC");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Leone"),"LEONE");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Leone editore"),"LEONE");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Libreria musicale italiana"),"LIM");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Licosia"),"LICO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Loffredo Editore"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Matauro"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Mimesis"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Morlacchi"),"MORLA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Nardini"),"NARDINI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("New Digital Press"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Orthotes"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("PM"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Paolo Loffredo"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Paolo Loffredo iniziative editoriali"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Partagées"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Patron"),"PATRON");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Pàtron"),"PATRON");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Pendragon"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Pesaro"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Plaza y Valdés"),"PLAZA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Prospettiva"),"PROSP");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Qiqajon"),"QIQAJON");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Qiqajon - Comunità di Bose"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Quasar"),"QUASAR");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("ROSENBERG & SELLER"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Reus"),"REUS");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Rosenberg Sellier"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("SISMEL"),"SISMEL");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("SISMEL edizioni del Galluzzo"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("SeL"),"SEL");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Settegiorni"),"SETTEGI");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Settenove"),"SETTENO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Sillabe"),"SILLABE");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Sovera edizioni"),"SOVERA");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Stilo"),"STILO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Stilo Editrice"),"STILO");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Storia e letteratura"),"SEL");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Studium"),"STUDIUM");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("TAB"),"TAB");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Tangram"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Tra le righe"),"TRALERIG");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("U. Hoepli"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Ulrico Hoepli"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("V&P strumenti"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("V&P università"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Vita e Pensiero Università"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("XY.IT"),"XYIT");
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Zanichelli"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Zanichelli"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("Zanichelli[2009]"),null);
-       PublisherNameShortcutMap.put(CasaliniLibriPublisherNameStringHelperUtilities.cleanupKey("L'Erma\" di Bretschneider"),null);
+  public static String getCanonicalPublisherName(String originalString) {
+      return canonical.get(originalString.toLowerCase());
+    }
 
-        return  PublisherNameShortcutMap.get(originalDateString);
-
+    public static String getPublisherNameShortcut2016(String originalString) {
+      return shortcut2016.get(originalString);
     }
 
     public static String cleanupKey(String originalDateString) {
         String publisherCleanName = originalDateString.replaceAll(
                 "[^a-zA-Z0-9&]", "").toLowerCase();
-
-        log.debug("-------originalDateString = " + originalDateString + ", publisherCleanName = " + publisherCleanName);
-
+        //log.debug3("-------originalDateString = " + originalDateString + ", publisherCleanName = " + publisherCleanName);
         return  publisherCleanName;
     }
 
+//  public static void main(String[] args) throws Exception {
+//    String[] files = {
+//      "/tmp/m1/2005.mrc",  
+//      "/tmp/m1/2014.mrc",  
+//      "/tmp/m1/2018.mrc",  
+//    };
+//    for (String fileStr : files) {
+//      MarcReader marcReader = new MarcStreamReader(new FileInputStream(fileStr));
+//  //  PrintStream out = System.out;
+//      PrintStream out = new PrintStream(new FileOutputStream(fileStr + ".out"));
+//      while (marcReader.hasNext()) {
+//        String x260b = CasaliniLibriMarcMetadataHelper.getMARCData(marcReader.next(), "260", 'b');
+//        if (x260b == null) {
+//          x260b = "Casalini Libri";
+//        }
+//        String key = MetadataStringHelperUtilities.cleanupPublisherName(x260b).toLowerCase();
+////        out.println(key);
+//        if (!canonical.containsKey(key)) {
+//          System.out.println(key);
+//        }
+//      }
+//      out.close();
+//    }
+//  }
+    
 }
+ 

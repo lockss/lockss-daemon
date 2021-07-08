@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Emerald Group Publishing Books Plugin</string>
+    <string>Emerald Publishing Books Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -49,7 +49,7 @@
         <displayName>Path</displayName>
         <description>Path for book (used as part of file name)</description>
         <type>1</type>
-        <size>200</size>
+        <size>100</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -57,11 +57,20 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Emerald Group Publishing Books Plugin, Base URL %s, Path %s", base_url, book_uri</string>
+    <string>"Emerald Publishing Books Plugin, Base URL %s, Path %s", base_url, book_uri</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <!-- https://www.emerald.com/insight/publication/doi/10.1108/9781787436299 -->
+    <!--
+    https://www.emerald.com/insight/publication/doi/10.1108/S1876-0562(1991)91B
+    https://www.emerald.com/insight/publication/doi/10.1016/S1529-2134(1995)2_Part_2
+    https://www.emerald.com/insight/publication/doi/10.1108/9780080464015
+    Standalone book: https://www.emerald.com/insight/publication/doi/10.1108/9781786359506
+
+    https://www.emerald.com/insight/publication/doi/10.1108/S0573-8555(2001)256, no publication date
+
+
+     -->
     <string>"%sinsight/publication/doi/%s", base_url, book_uri</string>
   </entry>
   <entry>
@@ -74,36 +83,49 @@
       <string>1,"^%sstatic/", base_url</string>
       <string>1,"^%sinsight/static", base_url</string>
       <string>1,"^%sinsight/proxy/img\?link=", base_url</string>
-      <string>1,"^%sinsight/content/doi/%s", base_url, book_uri</string>
+      <!-- the book_uri can have "(",")", space or other special character-->
+      <string>1,"^%sinsight/content/doi/", base_url</string>
     </list>
   </entry>
+  <!-- Each book chapter has its own pdf, and its own book_uri-->
   <!--https://www.emerald.com/insight/content/doi/10.1108/SR-01-2020-0013/full/pdf?title=two-step-calibration-method-for-three-axis-magnetic-sensor-error-based-on-particle-swarm-optimization-->
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sinsight/content/doi/%s/full/pdf\?title=", base_url, book_uri</string>
+      <string>"^%sinsight/content/doi/[^/]+/[^/]+/full/pdf\?title=", base_url</string>
     </list>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.emerald.Emerald2020HtmlFilterFactory</string>
+    <string>org.lockss.plugin.emerald.Emerald2020BooksHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.emerald.Emerald2020ArticleIteratorFactory</string>
+    <string>org.lockss.plugin.emerald.Emerald2020BooksArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.emerald.Emerald2020ArticleIteratorFactory</string>
+    <string>org.lockss.plugin.emerald.Emerald2020BooksArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.emerald.Emerald2020MetadataExtractorFactory</string>
+        <string>org.lockss.plugin.emerald.Emerald2020BooksMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!--
+      Handle the following error:
+      https://www.emerald.com/insight/content/doi/10.1108/cw.2004.21730cab.003/full/html
+      File size (56238) differs from Content-Length header (56239): https://www.emerald.com/insight/content/doi/10.1108/cw.2004.21730cab.003/full/html
+      -->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
+    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>

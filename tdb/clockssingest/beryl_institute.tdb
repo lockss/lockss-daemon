@@ -6,6 +6,7 @@
     info[tester] = 5 ;
     info[poller] = 8
   >
+  provider = bepress
   
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
 
@@ -28,7 +29,7 @@
     au < frozen ; exists ; 2018 ; Patient Experience Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2019 ; Patient Experience Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 2020 ; Patient Experience Journal Volume 7 ; 7 ; >
-    au < expected ; exists ; 2021 ; Patient Experience Journal Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2021 ; Patient Experience Journal Volume 8 ; 8 ; >
 
   }
 

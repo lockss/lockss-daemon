@@ -1,0 +1,76 @@
+{
+
+  publisher <
+    name = Royal Society of Chemistry
+  >
+
+  plugin = org.lockss.plugin.royalsocietyofchemistry.RSCBooksPlugin
+  implicit < status ; year ; name ; param[year] >
+
+  {
+
+    title <
+      name = Royal Society of Chemistry Books ;
+      type = bookSeries
+    >
+
+      param[base_url] = https://pubs.rsc.org/
+      param[graphics_url] = http://sod-a.rsc-cdn.org/
+
+      au < manifest ; 1968 ; Royal Society of Chemistry Books 1968 ; 1968 >
+      au < manifest ; 1969 ; Royal Society of Chemistry Books 1969 ; 1969 >
+      au < manifest ; 1970 ; Royal Society of Chemistry Books 1970 ; 1970 >
+      au < manifest ; 1971 ; Royal Society of Chemistry Books 1971 ; 1971 >
+      au < manifest ; 1972 ; Royal Society of Chemistry Books 1972 ; 1972 >
+      au < manifest ; 1973 ; Royal Society of Chemistry Books 1973 ; 1973 >
+      au < manifest ; 1974 ; Royal Society of Chemistry Books 1974 ; 1974 >
+      au < manifest ; 1975 ; Royal Society of Chemistry Books 1975 ; 1975 >
+      au < manifest ; 1976 ; Royal Society of Chemistry Books 1976 ; 1976 >
+      au < manifest ; 1977 ; Royal Society of Chemistry Books 1977 ; 1977 >
+      au < manifest ; 1978 ; Royal Society of Chemistry Books 1978 ; 1978 >
+      au < manifest ; 1979 ; Royal Society of Chemistry Books 1979 ; 1979 >
+      au < manifest ; 1980 ; Royal Society of Chemistry Books 1980 ; 1980 >
+      au < manifest ; 1981 ; Royal Society of Chemistry Books 1981 ; 1981 >
+      au < manifest ; 1982 ; Royal Society of Chemistry Books 1982 ; 1982 >
+      au < manifest ; 1983 ; Royal Society of Chemistry Books 1983 ; 1983 >
+      au < manifest ; 1984 ; Royal Society of Chemistry Books 1984 ; 1984 >
+      au < manifest ; 1985 ; Royal Society of Chemistry Books 1985 ; 1985 >
+      au < manifest ; 1986 ; Royal Society of Chemistry Books 1986 ; 1986 >
+      au < manifest ; 1987 ; Royal Society of Chemistry Books 1987 ; 1987 >
+      au < manifest ; 1988 ; Royal Society of Chemistry Books 1988 ; 1988 >
+      au < manifest ; 1989 ; Royal Society of Chemistry Books 1989 ; 1989 >
+      au < manifest ; 1990 ; Royal Society of Chemistry Books 1990 ; 1990 >
+      au < manifest ; 1991 ; Royal Society of Chemistry Books 1991 ; 1991 >
+      au < manifest ; 1992 ; Royal Society of Chemistry Books 1992 ; 1992 >
+      au < manifest ; 1993 ; Royal Society of Chemistry Books 1993 ; 1993 >
+      au < manifest ; 1994 ; Royal Society of Chemistry Books 1994 ; 1994 >
+      au < manifest ; 1995 ; Royal Society of Chemistry Books 1995 ; 1995 >
+      au < manifest ; 1996 ; Royal Society of Chemistry Books 1996 ; 1996 >
+      au < manifest ; 1997 ; Royal Society of Chemistry Books 1997 ; 1997 >
+      au < manifest ; 1998 ; Royal Society of Chemistry Books 1998 ; 1998 >
+      au < manifest ; 1999 ; Royal Society of Chemistry Books 1999 ; 1999 >
+      au < released ; 2000 ; Royal Society of Chemistry Books 2000 ; 2000 >
+      au < released ; 2001 ; Royal Society of Chemistry Books 2001 ; 2001 >
+      au < released ; 2002 ; Royal Society of Chemistry Books 2002 ; 2002 >
+      au < released ; 2003 ; Royal Society of Chemistry Books 2003 ; 2003 >
+      au < released ; 2004 ; Royal Society of Chemistry Books 2004 ; 2004 >
+      au < released ; 2005 ; Royal Society of Chemistry Books 2005 ; 2005 >
+      au < released ; 2006 ; Royal Society of Chemistry Books 2006 ; 2006 >
+      au < released ; 2007 ; Royal Society of Chemistry Books 2007 ; 2007 >
+      au < released ; 2008 ; Royal Society of Chemistry Books 2008 ; 2008 >
+      au < released ; 2009 ; Royal Society of Chemistry Books 2009 ; 2009 >
+      au < released ; 2010 ; Royal Society of Chemistry Books 2010 ; 2010 >
+      au < released ; 2011 ; Royal Society of Chemistry Books 2011 ; 2011 >
+      au < released ; 2012 ; Royal Society of Chemistry Books 2012 ; 2012 >
+      au < released ; 2013 ; Royal Society of Chemistry Books 2013 ; 2013 >
+      au < released ; 2014 ; Royal Society of Chemistry Books 2014 ; 2014 >
+      au < released ; 2015 ; Royal Society of Chemistry Books 2015 ; 2015 >
+      au < released ; 2016 ; Royal Society of Chemistry Books 2016 ; 2016 >
+      au < released ; 2017 ; Royal Society of Chemistry Books 2017 ; 2017 >
+      au < released ; 2018 ; Royal Society of Chemistry Books 2018 ; 2018 >
+      au < released ; 2019 ; Royal Society of Chemistry Books 2019 ; 2019 >
+      au < released ; 2020 ; Royal Society of Chemistry Books 2020 ; 2020 >
+
+  }
+}
+      

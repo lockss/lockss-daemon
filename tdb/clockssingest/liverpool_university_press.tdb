@@ -43,6 +43,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Archives Volume 53 ; 53 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Archives Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Archives Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Archives Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -74,6 +75,23 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Bulletin of Contemporary Hispanic Studies ;
+      issn = 2516-8029 ;
+      eissn = 2516-8037
+    >
+
+    param[journal_id] = bchs
+
+    au < exists ; exists ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 2019 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2020 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 2021 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -148,6 +166,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; British Journal of Canadian Studies Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2019 ; British Journal of Canadian Studies Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; British Journal of Canadian Studies Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; British Journal of Canadian Studies Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -198,6 +217,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Bulletin of Hispanic Studies Volume 95 ; 95 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -229,6 +249,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; The Byron Journal Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; The Byron Journal Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; The Byron Journal Volume 48 ; 48 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -283,6 +304,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Catalan Review Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Catalan Review Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Catalan Review Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -314,6 +336,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Contemporary French Civilization Volume 43 ; 43 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Contemporary French Civilization Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -355,6 +378,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Essays in Romanticism Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Essays in Romanticism Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -381,6 +405,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -408,6 +433,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Extrapolation Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Extrapolation Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; >
       au < exists ; exists ; 2020 ; Extrapolation Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
+      au < expected ; exists ; 2021 ; Extrapolation Volume 62 ; 62 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -431,6 +457,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Francosphères Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Francosphères Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Francosphères Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Francosphères Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -481,6 +508,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -509,6 +537,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; The Indexer: the international journal of indexing Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; The Indexer: the international journal of indexing Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; The Indexer: the international journal of indexing Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; The Indexer: the international journal of indexing Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
   {
@@ -542,6 +571,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Development Planning Review Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Development Planning Review Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; International Development Planning Review Volume 42 ; 42 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; International Development Planning Review Volume 43 ; 43 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -562,6 +592,7 @@
     au < doNotProcess ; doNotProcess ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2020-2021 ; Hunter Gatherer Research Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -590,6 +621,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -618,14 +650,15 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Romance Studies Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Romance Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < exists ; exists ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Romance Studies Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Romance Studies Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Journal of Romance Studies Volume 21 ; 21 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
   }
 
   {
@@ -755,6 +788,8 @@
     au < exists ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -785,6 +820,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Labour History Review Volume 83 [Atypon] ; 83 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Labour History Review Volume 84 [Atypon] ; 84 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Labour History Review Volume 85 [Atypon] ; 85 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Labour History Review Volume 86 [Atypon] ; 86 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -812,6 +848,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Modern Believing Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Modern Believing Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Modern Believing Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Modern Believing Volume 62 ; 62 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -889,6 +926,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -935,6 +973,7 @@
     au < doNotProcess ; doNotProcess ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -970,6 +1009,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Romani Studies Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -1012,6 +1052,8 @@
     au < exists ; exists ; 2019 ; Quebec Studies Volume 68 ; 68 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Quebec Studies Volume 69 ; 69 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Quebec Studies Volume 70 ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Quebec Studies Volume 71 ; 71 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Quebec Studies Volume 72 ; 72 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -1039,6 +1081,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -1070,6 +1113,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Sculpture Journal Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Sculpture Journal Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Sculpture Journal Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Sculpture Journal Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 
@@ -1094,6 +1138,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Studia Hibernica Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Studia Hibernica Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
   
@@ -1131,6 +1176,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Theory & Struggle Volume 119 ; 119 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2019 ; Theory & Struggle Volume 120 ; 120 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
 
   }
@@ -1261,6 +1307,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Town Planning Review Volume 89 ; 89 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Town Planning Review Volume 90 ; 90 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < exists ; exists ; 2020 ; Town Planning Review Volume 91 ; 91 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Town Planning Review Volume 92 ; 92 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
 
   }
@@ -1290,6 +1337,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < expected ; exists ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
 

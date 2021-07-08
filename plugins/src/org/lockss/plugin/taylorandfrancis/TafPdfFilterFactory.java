@@ -35,6 +35,8 @@ package org.lockss.plugin.taylorandfrancis;
 
 import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
 
+import java.util.regex.Pattern;
+
 public class TafPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
 
   @Override
@@ -45,5 +47,12 @@ public class TafPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
   public boolean doRemoveFrontPage() {
     return true;
   }
-  
+  // Override the original pattern to allow for some leniency.
+  // 1. there is (sometimes) some whitespace or character between 'b' and 'y'
+  // 2. the ':' sometimes is not found?
+  @Override
+  public Pattern getFrontPagePattern() {
+    return  Pattern.compile("^ *Download b.?.?y", Pattern.CASE_INSENSITIVE);
+  }
+
 }

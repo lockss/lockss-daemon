@@ -10,7 +10,7 @@
       name = Intermarium ;
       eissn = 1537-7822 ;
       issnl = 1537-7822
-    >  
+    >
 
     rights = openaccess
     
@@ -20,7 +20,7 @@
       implicit < status ; name ; param[volume] ; param[year] >
       param[base_url] =  http://www.columbia.edu/cu/sipa/REGIONAL/ECE/
     
-      au < superseded ; Intermarium Volume 7 [superseded] ; 7 ; 2004 >     
+      au < superseded ; Intermarium Volume 7 [superseded] ; 7 ; 2004 >
       
     }
       
@@ -31,23 +31,23 @@
       param[base_url] = http://ece.columbia.edu/ 
       
       comment[plugin] = plugin is in progress. See RT1514, PD-456
+      # See archive https://ece.columbia.edu/intermarium
        
-      au < doNotProcess ; 1997 ; Intermarium Volume 1 ; 1 >
-      au < doNotProcess ; 1998 ; Intermarium Volume 2 ; 2-0 >
-      au < doNotProcess ; 1999 ; Intermarium Volume 3 ; 3 >
-      au < doNotProcess ; 2000-2001 ; Intermarium Volume 4 ; 4 >
-      au < doNotProcess ; 2002 ; Intermarium Volume 5 ; 5 >
-      au < doNotProcess ; 2003 ; Intermarium Volume 6 ; 6 >
-      au < doNotProcess ; 2004 ; Intermarium Volume 7 ; 7 >
-      au < doNotProcess ; 2005 ; Intermarium Volume 8 ; 8 >
-      au < doNotProcess ; 2006 ; Intermarium Volume 9 ; 9 >
-      au < doNotProcess ; 2007 ; Intermarium Volume 10 ; 10 >
-      au < doNotProcess ; 2008 ; Intermarium Volume 11 ; 11 >
-      au < doNotProcess ; 2009 ; Intermarium Volume 12 ; 12 >
-      au < doNotProcess ; 2010 ; Intermarium Volume 13 ; 13 >
+#      au < doNotProcess ; 1997 ; Intermarium Volume 1 ; 1 >
+#      au < doNotProcess ; 1998 ; Intermarium Volume 2 ; 2-0 >
+#      au < doNotProcess ; 1999 ; Intermarium Volume 3 ; 3 >
+#      au < doNotProcess ; 2000-2001 ; Intermarium Volume 4 ; 4 >
+#      au < doNotProcess ; 2002 ; Intermarium Volume 5 ; 5 >
+#      au < doNotProcess ; 2003 ; Intermarium Volume 6 ; 6 >
+#      au < doNotProcess ; 2004 ; Intermarium Volume 7 ; 7 >
+#      au < doNotProcess ; 2005 ; Intermarium Volume 8 ; 8 >
+#      au < doNotProcess ; 2006 ; Intermarium Volume 9 ; 9 >
+#      au < doNotProcess ; 2007 ; Intermarium Volume 10 ; 10 >
+#      au < doNotProcess ; 2008 ; Intermarium Volume 11 ; 11 >
+#      au < doNotProcess ; 2009 ; Intermarium Volume 12 ; 12 >
+#      au < doNotProcess ; 2010 ; Intermarium Volume 13 ; 13 >
       au < doNotProcess ; 2011 ; Intermarium Volume 14 ; 14 >
-      au < doNotProcess ; 2012 ; Intermarium Volume 15 ; 15 >
-      au < doNotProcess ; 2013 ; Intermarium Volume 16 ; 16 >
+      #Last volume
       
     }
     

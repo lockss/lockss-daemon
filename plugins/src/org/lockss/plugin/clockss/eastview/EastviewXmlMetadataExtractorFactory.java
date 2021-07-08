@@ -34,6 +34,8 @@ package org.lockss.plugin.clockss.eastview;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -92,8 +94,44 @@ public class EastviewXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("in Eastview postCookProcess");
-      thisAM.put(MetadataField.FIELD_PUBLISHER, "East View Information Services");
+      String raw_title = thisAM.getRaw(EastviewSchemaHelper.ART_RAW_TITLE);
+      log.debug3(String.format("Eastview metadata raw title parsed: %s", raw_title));
+
+      Pattern pattern =  Pattern.compile("\\d\\d-\\d\\d-\\d\\d\\d\\d\\(([^)]+)-([^(]+)\\)\\s+(.*)");
+
+      Matcher m = pattern.matcher(raw_title);
+
+      String publisher_shortcut = null;
+      String publisher_mapped = null;
+      String volume = null;
+      String title = null;
+
+      if(m.matches()){
+        publisher_shortcut = m.group(1).trim();
+        publisher_mapped = EastViewPublisherNameMappingHelper.canonical.get(publisher_shortcut);
+        volume = m.group(2);
+        title = m.group(2);
+      }
+
+      log.debug3(String.format("Eastview metadata raw title parsed = %s | " +
+                      "publisher_shortcut = %s | publisher_mapped = %s | volume = %s | title = %s",
+              raw_title,
+              publisher_shortcut,
+              publisher_mapped,
+              volume,
+              title));
+
+      if (publisher_mapped != null) {
+        thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped);
+      }  else {
+        log.debug3(String.format("Eastview metadata raw title parsed = %s | " +
+                        "publisher_shortcut = %s | Null publisher_mapped = %s | volume = %s | title = %s",
+                raw_title,
+                publisher_shortcut,
+                publisher_mapped,
+                volume,
+                title));
+      }
  
     }
 

@@ -30,7 +30,7 @@ public class TestIntechOpenOnix3XmlMetadataExtractorFactory extends SourceXmlMet
                     "/plugins/test/src/org/lockss/plugin/clockss/intechopen/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }

@@ -1,0 +1,255 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+    <!-- https transition enabled -->
+  </entry>
+  <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaSilverchairPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>13</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+     <!-- no store content validation -->
+    <string>1.72.0</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>American Medical Association Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>resource_id</key>
+        <displayName>Resource ID</displayName>
+        <description>Internal resource ID</description>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"American Medical Association Plugin, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+  </entry>
+  <entry>  
+    <string>au_start_url</string>
+    <list>
+      <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_http(base_url), resource_id, year</string>
+      <string>"%sLOCKSS/ListOfIssues.aspx?resourceId=%d&amp;year=%d", to_https(base_url), resource_id, year</string>
+    </list>    
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sjournals/%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sjournals/%s/issue/%s/%s", base_url, journal_id, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>pdf</string>
+            <string>"%sjournals/%s/data/journals/%s/%s/%s.pdf", base_url, journal_id, journal_abbrev, group_id, article</string>
+          </entry>
+          <entry>
+            <string>html</string>
+            <string>"%sjournals/%s/fullarticle/%s", base_url, journal_id, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
+      <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/journals/%s/issue/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/journals/%s/(fullarticle|article-abstract)/", url_host(base_url), journal_id</string>
+      <!--  was at: /journals/jamacardiology/data/journals/cardiology/935228/hoi150012.pdf -->
+      <!--   now at:/journals/jamacardiology/articlepdf/2498961/hoi150011.pdf -->
+	  <!--  allow arbitrary journalid level for pdf only; otherwise fulltext can go to other jama journals -->
+	  <!--  supplemental pdf can use different journal identifier:eg CARDIOLOGY vs jamacardiology -->
+	  <!--  supplementary data/Journals/CARDIOLOGY/935934/HOI160066supp1_prod.pdf redirect to final of -->
+	  <!--  journals/CARDIOLOGY/articlepdf/2557840/hoi160066supp1_prod.pdf --> 
+      <string>1,"^https?://%s/journals/[^/]+/articlepdf/[^./]+/[^/]+\.pdf$", url_host(base_url)</string>
+      <string>1,"^https?://%s/(journals/%s/)?data/(J|j)ournals/[^/]+/[^/]+/[^./]+\.pdf$", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/pdfaccess\.ashx[?]url=/data/journals/(.+routename=%s|[^/]+/[^/]+(/[^/]+)?$)", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/journals/%s/downloadcitation/[^?/]+\?format=ris$", url_host(base_url), journal_id</string>
+      <string>2,"^https?://%s/downloadimage\.aspx\?", url_host(base_url)</string>
+      
+      <!--  Not collecting audio/video/interactive content
+      <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string> -->
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:Silverchair</string>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <!-- long PDF patterns are article PDF, shorter PDF patterns are for supplement PDF -->
+    <list>
+      <string>"^%sjournals/%s/fullarticle/\d+$", base_url, journal_id</string>
+      <string>"^%sjournals/%s/data/journals/[^/]+/[^.]+\.pdf$", base_url, journal_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+<!--  for http to https conversion support -->  
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>  
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.silverchair.ama.AmaScUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>(fonts|ajax)\.gstatic\.com</string>
+      <string>.*cdn\.jsdelivr\.net</string>
+      <string>.*silverchair-?cdn\.com</string>
+      <string>.*\.brightcove\.net</string>
+      <string>.*\.cloudfront\.net</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>[.](css|js)(\?.+)?$</string>
+      <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"[.](css|js)(\?.+)?$", 0</string>
+      <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url, 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>

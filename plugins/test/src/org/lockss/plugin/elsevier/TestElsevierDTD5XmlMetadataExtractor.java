@@ -107,7 +107,7 @@ public class TestElsevierDTD5XmlMetadataExtractor extends SourceXmlMetadataExtra
       ConfigurationUtil.addFromUrl(getResource("test_elsevierdtd5.xml"));
     } catch (IOException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     }
     Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
     TdbAu tdbau1 = tdb.getTdbAusLikeName("Elsevier Source Content 2014").get(0);
@@ -165,7 +165,7 @@ public class TestElsevierDTD5XmlMetadataExtractor extends SourceXmlMetadataExtra
 
     } catch (IOException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     }finally {
       IOUtil.safeClose(file_input);
     }
@@ -219,7 +219,7 @@ public class TestElsevierDTD5XmlMetadataExtractor extends SourceXmlMetadataExtra
 
     } catch (IOException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
     }finally {
       IOUtil.safeClose(file_input);
     }

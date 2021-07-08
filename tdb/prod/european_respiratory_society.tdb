@@ -15,8 +15,8 @@
       eissn = 2073-4735 ;
       issnl = 1810-6838
     >
-
     #param[base_url] = http://breathe.ersjournals.com/
+
 
     au < ers.ERSDrupalPlugin ; manifest ; 2004-2005 ; Breathe Volume 1 ; 1 ; https://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2005-2006 ; Breathe Volume 2 ; 2 ; https://breathe.ersjournals.com/ >
@@ -34,7 +34,7 @@
     au < ers.ERSDrupalPlugin ; released ; 2018 ; Breathe Volume 14 ; 14 ; https://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2019 ; Breathe Volume 15 ; 15 ; https://breathe.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2020 ; Breathe Volume 16 ; 16 ; https://breathe.ersjournals.com/ >
-    
+    au < ers.ERSDrupalPlugin ; manifest ; 2021 ; Breathe Volume 17 ; 17 ; https://breathe.ersjournals.com/ >
   }
 
   {
@@ -44,8 +44,8 @@
       eissn = 2312-0541 ;
       issnl = 2312-0541
     >
-
     #param[base_url] = http://openres.ersjournals.com/
+
 
     au < ers.ERSDrupalPlugin ; released ; 2015 ; ERJ Open Research Volume 1 ; 1 ; http://openres.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2016 ; ERJ Open Research Volume 2 ; 2 ; http://openres.ersjournals.com/ >
@@ -53,7 +53,7 @@
     au < ers.ERSDrupalPlugin ; released ; 2018 ; ERJ Open Research Volume 4 ; 4 ; https://openres.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2019 ; ERJ Open Research Volume 5 ; 5 ; https://openres.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2020 ; ERJ Open Research Volume 6 ; 6 ; https://openres.ersjournals.com/ >
-    
+    au < ers.ERSDrupalPlugin ; manifest ; 2021 ; ERJ Open Research Volume 7 ; 7 ; https://openres.ersjournals.com/ >
   }
 
   {
@@ -64,8 +64,8 @@
       eissn = 1399-3003 ;
       issnl = 0903-1936
     >
-
     #param[base_url] = http://erj.ersjournals.com/
+
     
     {
     
@@ -128,6 +128,7 @@
     au < ers.ERSDrupalPlugin ; released ; 2019 ; European Respiratory Journal Volume 54 ; 54 ; https://erj.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2020 ; European Respiratory Journal Volume 55 ; 55 ; https://erj.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2020 ; European Respiratory Journal Volume 56 ; 56 ; https://erj.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; manifest ; 2021 ; European Respiratory Journal Volume 57 ; 57 ; https://erj.ersjournals.com/ >
 
   }
 
@@ -139,8 +140,8 @@
       eissn = 1600-0617 ;
       issnl = 0905-9180
     >
-
     #param[base_url] = http://err.ersjournals.com/
+
       
     au < HighWirePressH20Plugin ; down ; 2005 ; European Respiratory Review Volume 14 ; 14 ; http://err.ersjournals.com/ >
     au < HighWirePressH20Plugin ; down ; 2006 ; European Respiratory Review Volume 15 ; 15 ; http://err.ersjournals.com/ >
@@ -158,6 +159,7 @@
     au < ers.ERSDrupalPlugin ; released ; 2018 ; European Respiratory Review Volume 27 ; 27 ; https://err.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; released ; 2019 ; European Respiratory Review Volume 28 ; 28 ; https://err.ersjournals.com/ >
     au < ers.ERSDrupalPlugin ; manifest ; 2020 ; European Respiratory Review Volume 29 ; 29 ; https://err.ersjournals.com/ >
+    au < ers.ERSDrupalPlugin ; manifest ; 2021 ; European Respiratory Review Volume 30 ; 30 ; https://err.ersjournals.com/ >
 
   }
 

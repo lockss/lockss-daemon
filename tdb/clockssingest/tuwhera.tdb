@@ -29,17 +29,17 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = applied-finance-letters
       attr[start_stem] = 
-      #manifest page checker doesn't work without standard stem
 
-      au < manifest ; exists ; 2012 ; Applied Finance Letters Volume 1 ; 1 ; 2012 ; > 
-      au < manifest ; exists ; 2013 ; Applied Finance Letters Volume 2 ; 2 ; 2013 ; > 
-      au < manifest ; exists ; 2014 ; Applied Finance Letters Volume 3 ; 3 ; 2014 ; > 
-      au < manifest ; exists ; 2015 ; Applied Finance Letters Volume 4 ; 4 ; 2015 ; > 
-      au < manifest ; exists ; 2016 ; Applied Finance Letters Volume 5 ; 5 ; 2016 ; > 
+      au < crawling ; exists ; 2012 ; Applied Finance Letters Volume 1 ; 1 ; 2012 ; > 
+      au < crawling ; exists ; 2013 ; Applied Finance Letters Volume 2 ; 2 ; 2013 ; > 
+      au < crawling ; exists ; 2014 ; Applied Finance Letters Volume 3 ; 3 ; 2014 ; > 
+      au < crawling ; exists ; 2015 ; Applied Finance Letters Volume 4 ; 4 ; 2015 ; > 
+      au < crawling ; exists ; 2016 ; Applied Finance Letters Volume 5 ; 5 ; 2016 ; > 
       au < crawling ; exists ; 2017 ; Applied Finance Letters Volume 6 ; 6 ; 2017 ; >
       au < crawling ; exists ; 2018 ; Applied Finance Letters Volume 7 ; 7 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Applied Finance Letters Volume 8 ; 8 ; 2019 ; >
-      au < expected ; exists ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Applied Finance Letters Volume 10 ; 10 ; 2021 ; >
 
     }
 
@@ -54,17 +54,17 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = pacific-journalism-review
       attr[start_stem] = 
-      #manifest page checker doesn't work without standard stem
 
-      au < manifest ; exists ; 2012 ; Pacific Journalism Review Volume 18 ; 18 ; 2012 ; > 
-      au < manifest ; exists ; 2013 ; Pacific Journalism Review Volume 19 ; 19 ; 2013 ; > 
-      au < manifest ; exists ; 2014 ; Pacific Journalism Review Volume 20 ; 20 ; 2014 ; > 
-      au < manifest ; exists ; 2015 ; Pacific Journalism Review Volume 21 ; 21 ; 2015 ; > 
-      au < manifest ; exists ; 2016 ; Pacific Journalism Review Volume 22 ; 22 ; 2016 ; > 
+      au < crawling ; exists ; 2012 ; Pacific Journalism Review Volume 18 ; 18 ; 2012 ; > 
+      au < crawling ; exists ; 2013 ; Pacific Journalism Review Volume 19 ; 19 ; 2013 ; > 
+      au < crawling ; exists ; 2014 ; Pacific Journalism Review Volume 20 ; 20 ; 2014 ; > 
+      au < crawling ; exists ; 2015 ; Pacific Journalism Review Volume 21 ; 21 ; 2015 ; > 
+      au < crawling ; exists ; 2016 ; Pacific Journalism Review Volume 22 ; 22 ; 2016 ; > 
       au < frozen ; exists ; 2017 ; Pacific Journalism Review Volume 23 ; 23 ; 2017 ; >
       au < finished ; manifest ; 2018 ; Pacific Journalism Review Volume 24 ; 24 ; 2018 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; Pacific Journalism Review Volume 25 ; 25 ; 2019 ; >
-      au < expected ; exists ; 2020 ; Pacific Journalism Review Volume 26 ; 26 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; Pacific Journalism Review Volume 26 ; 26 ; 2020 ; >
+      au < expected ; exists ; 2021 ; Pacific Journalism Review Volume 27 ; 27 ; 2021 ; >
 
     }
 
@@ -82,18 +82,282 @@
       ### Note from plugin developer:
       ### https://ojs.aut.ac.nz/te-kaharoa/index.php/tekaharoa/gateway/lockss?year=2016
       ### it seemed it need an "index.php" start_stem from the Jira ticket.
+      ### Manifest page checker does not work with this title.
 
-      au < manifest ; exists ; 2011 ; Te Kaharoa Volume 4 ; 4 ; 2011 ; > 
-      au < manifest ; exists ; 2012 ; Te Kaharoa Volume 5 ; 5 ; 2012 ; > 
-      au < manifest ; exists ; 2013 ; Te Kaharoa Volume 6 ; 6 ; 2013 ; > 
-      au < manifest ; exists ; 2014 ; Te Kaharoa Volume 7 ; 7 ; 2014 ; > 
-      au < manifest ; exists ; 2015 ; Te Kaharoa Volume 8 ; 8 ; 2015 ; > 
-      au < manifest ; exists ; 2016 ; Te Kaharoa Volume 9 ; 9 ; 2016 ; > 
+      au < crawling ; exists ; 2011 ; Te Kaharoa Volume 4 ; 4 ; 2011 ; > 
+      au < crawling ; exists ; 2012 ; Te Kaharoa Volume 5 ; 5 ; 2012 ; > 
+      au < crawling ; exists ; 2013 ; Te Kaharoa Volume 6 ; 6 ; 2013 ; > 
+      au < crawling ; exists ; 2014 ; Te Kaharoa Volume 7 ; 7 ; 2014 ; > 
+      au < crawling ; exists ; 2015 ; Te Kaharoa Volume 8 ; 8 ; 2015 ; > 
+      au < crawling ; exists ; 2016 ; Te Kaharoa Volume 9 ; 9 ; 2016 ; > 
       au < frozen ; exists ; 2017 ; Te Kaharoa Volume 10 ; 10 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Te Kaharoa Volume 11 ; 11 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Te Kaharoa Volume 12 ; 12 ; 2019 ; >
       au < crawling ; exists ; 2020 ; Te Kaharoa Volume 13 ; 13 ; 2020 ; >
+      au < expected ; exists ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; >
 
     }
+
+  {
+
+      title <
+        name = Aotearoa New Zealand Journal of Social Issues ;
+        eissn = 2744-4554
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = anzjsi
+      attr[start_stem] = 
+
+      au < manifest ; exists ; 2021 ; Aotearoa New Zealand Journal of Social Issues Volume 1 ; 1 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Ata: Journal of Psychotherapy Aotearoa New Zealand  ;
+        issn = 2253-5845 ;
+        eissn = 2253-5853
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = ata
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2012 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 16 ; 16 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 17 ; 17 ; 2013 ; >
+      au < crawling ; exists ; 2014 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 18 ; 18 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 19 ; 19 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 20 ; 20 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 21 ; 21 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 22 ; 22 ; 2018 ; >
+      au < crawling ; exists ; 2020 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 23 ; 23 ; 2020 ; >
+      au < expected ; exists ; 2021 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 25 ; 25 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Back Story  ;
+        issn = 2537-6659 ;
+        eissn = 2703-1713
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = back-story
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2016 ; Back Story  Volume 1 ; 1 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Back Story  Volume 2 ; 2 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Back Story  Volume 3 ; 3 ; 2018 ; >
+      au < expected ; exists ; 2021 ; Back Story  Volume 4 ; 4 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Decolonization of Criminology and Justice  ;
+        eissn = 2703-1861
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = dcj
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2019 ; Decolonization of Criminology and Justice  Volume 1 ; 1 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Decolonization of Criminology and Justice  Volume 2 ; 2 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Decolonization of Criminology and Justice  Volume 3 ; 3 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Hospitality Insights ;
+        eissn = 2537-9267
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = hospitality-insights
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2017 ; Hospitality Insights Volume 1 ; 1 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Hospitality Insights Volume 2 ; 2 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Hospitality Insights Volume 3 ; 3 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Hospitality Insights Volume 4 ; 4 ; 2020 ; >
+      au < expected ; exists ; 2021 ; Hospitality Insights Volume 5 ; 5 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Interstices ;
+        issn = 1170-585X ;
+        eissn = 2537-9194
+      >
+
+      param[base_url] = https://interstices.ac.nz/
+      param[journal_id] = Interstices
+      attr[start_stem] = index.php/
+
+      au < exists ; exists ; 1990 ; Interstices Volume 1 ; 1 ; 1990 ; >
+      au < manifest ; exists ; 1992 ; Interstices Volume 2 ; 2 ; 1992 ; >
+      au < exists ; exists ; 1995 ; Interstices Volume 3 ; 3 ; 1995 ; >
+      au < exists ; exists ; 1996 ; Interstices Volume 4 ; 4 ; 1996 ; >
+      au < exists ; exists ; 2000 ; Interstices Volume 5 ; 5 ; 2000 ; >
+      au < exists ; exists ; 2005 ; Interstices Volume 6 ; 6 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Interstices Volume 7 ; 7 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Interstices Volume 8 ; 8 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Interstices Volume 9 ; 9 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Interstices Volume 10 ; 10 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Interstices Volume 11 ; 11 ; 2010 ; >
+      au < exists ; exists ; 2012 ; Interstices Volume 12-13 ; 12-13 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Interstices Volume 14 ; 14 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Interstices Volume 15 ; 15 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Interstices Volume 16 ; 16 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Interstices Volume 17 ; 17 ; 2016 ; >#
+      au < exists ; exists ; 2017 ; Interstices Volume 18 ; 18 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Interstices Volume 2018 ; 2018 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Interstices Volume 19 ; 19 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Interstices Volume 20 ; 20 ; 2020 ; >
+      au < expected ; exists ; 2021 ; Interstices Volume 21 ; 21 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Creative Technologies ;
+        eissn = 2230-2115
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = journal-of-creative-technologies
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2011 ; Journal of Creative Technologies Volume 2 ; 2 ; 2011 ; >
+      au < crawling ; exists ; 2012 ; Journal of Creative Technologies Volume 3 ; 3 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; Journal of Creative Technologies Volume 4 ; 4 ; 2013 ; >
+      au < crawling ; exists ; 2014 ; Journal of Creative Technologies Volume 5 ; 5 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Journal of Creative Technologies Volume 6 ; 6 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Journal of Creative Technologies Volume 7 ; 7 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Journal of Creative Technologies Volume 8 ; 8 ; 2017 ; >
+      #no longer publishing
+  }
+
+  {
+
+      title <
+        name = NZJER: New Zealand Journal of Employment Relations  ;
+        eissn = 1179-2965
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = nzjer
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2020 ; NZJER: New Zealand Journal of Employment Relations  Volume 45 ; 45 ; 2020 ; >
+      au < expected ; exists ; 2021 ; NZJER: New Zealand Journal of Employment Relations  Volume 46 ; 46 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Pacific Health ;
+        eissn = 2537-8864
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = pacific-health
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2018 ; Pacific Health Volume 1 ; 1 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Pacific Health Volume 2 ; 2 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Pacific Health Volume 3 ; 3 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Pacific Health Volume 4 ; 4 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = PJTEL: Pacific Journal of Technology Enhanced Learning  ;
+        eissn = 2624-4705
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = pjtel
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2019 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 1 ; 1 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 2 ; 2 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 3 ; 3 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Te Wharenga ;
+        eissn = 2463-5804
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = new-zealand-criminal-law-review
+      attr[start_stem] = 
+
+      au < exists ; exists ; 2016 ; Te Wharenga Volume 1 ; 1 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Te Wharenga Volume 2 ; 2 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Te Wharenga Volume 3 ; 3 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Te Wharenga Volume 4 ; 4 ; 2019 ; >
+      au < expected ; exists ; 2021 ; Te Wharenga Volume 6 ; 6 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Teachers Work ;
+        eissn = 1176-6662
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = teachers-work
+      attr[start_stem] = 
+
+      au < crawling ; exists ; 2014 ; Teachers Work Volume 11 ; 11 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Teachers Work Volume 12 ; 12 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Teachers Work Volume 13 ; 13 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Teachers Work Volume 14 ; 14 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Teachers Work Volume 15 ; 15 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Teachers Work Volume 16 ; 16 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Teachers Work Volume 17 ; 17 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Teachers Work Volume 18 ; 18 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Working Papers in Communication ;
+        eissn = 1179-2132
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = wcdc
+      attr[start_stem] = 
+
+      #Manifest pages not enabled
+      au < manifest ; exists ; 2001 ; Working Papers in Communication Volume 1 ; 1 ; 2001 ; >
+      au < manifest ; exists ; 2005 ; Working Papers in Communication Volume 2 ; 2 ; 2005 ; >
+      au < manifest ; exists ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; >
+      au < crawling ; exists ; 2010 ; Working Papers in Communication Volume 4 ; 4 ; 2010 ; >
+      #no further volumes published
+  }
 
 }

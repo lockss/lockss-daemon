@@ -1,7 +1,7 @@
 {
   publisher <
     name = American Society of Neuroradiology ;
-    info[platform] = 1 title HW Drupal. 1 title Ingenta.
+    info[platform] = 1 title HWDrupal w manifests. 1 title Ingenta no manifests.
   >
 
   {
@@ -65,6 +65,7 @@
       au < HWDrupalPlugin ; manifest ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
       au < HWDrupalPlugin ; manifest ; 2019 ; American Journal of Neuroradiology Volume 40 ; 40 >
       au < HWDrupalPlugin ; manifest ; 2020 ; American Journal of Neuroradiology Volume 41 ; 41 >
+      au < HWDrupalPlugin ; manifest ; 2021 ; American Journal of Neuroradiology Volume 42 ; 42 >
 
     }
 
@@ -91,12 +92,12 @@
      param[api_url] = http://api.ingentaconnect.com/
      param[journal_issn] = 1541-6593
 
-      au < released ; 2011 ; Neurographics Volume 1 ; 1 >
-      au < released ; 2012 ; Neurographics Volume 2 ; 2 >
-      au < released ; 2013 ; Neurographics Volume 3 ; 3 >
-      au < released ; 2014 ; Neurographics Volume 4 ; 4 >
-      au < released ; 2015 ; Neurographics Volume 5 ; 5 >
-      au < released ; 2016 ; Neurographics Volume 6 ; 6 >
+      au < down ; 2011 ; Neurographics Volume 1 ; 1 >
+      au < down ; 2012 ; Neurographics Volume 2 ; 2 >
+      au < down ; 2013 ; Neurographics Volume 3 ; 3 >
+      au < down ; 2014 ; Neurographics Volume 4 ; 4 >
+      au < down ; 2015 ; Neurographics Volume 5 ; 5 >
+      au < down ; 2016 ; Neurographics Volume 6 ; 6 >
 
     }
 
@@ -109,6 +110,7 @@
       au < exists ; 2018 ; Neurographics Volume 8 ; 8 >
       au < exists ; 2019 ; Neurographics Volume 9 ; 9 >
       au < expected ; 2020 ; Neurographics Volume 10 ; 10 >
+      au < expected ; 2021 ; Neurographics Volume 11 ; 11 >
 
     }
 

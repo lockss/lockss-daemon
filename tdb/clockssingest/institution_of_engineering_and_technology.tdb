@@ -25,7 +25,6 @@
       param[journal_id] = el
       #from Vol 1 in 1965
 
-
       au < finished ; finished ; 1965 ; Electronics Letters Volume 1 ; 1 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1966 ; Electronics Letters Volume 2 ; 2 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 1967 ; Electronics Letters Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
@@ -79,9 +78,10 @@
       au < finished ; finished ; 2015 ; Electronics Letters Volume 51 ; 51 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Electronics Letters Volume 52 ; 52 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Electronics Letters Volume 53 ; 53 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Electronics Letters Volume 54 ; 54 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; Electronics Letters Volume 55 ; 55 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; Electronics Letters Volume 54 ; 54 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Electronics Letters Volume 55 ; 55 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Electronics Letters Volume 56 ; 56 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; Electronics Letters Volume 57 ; 57 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -108,8 +108,9 @@
       au < finished ; finished ; 2016 ; Engineering & Technology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Engineering & Technology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Engineering & Technology Volume 13 ; 13 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Engineering & Technology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2019 ; Engineering & Technology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Engineering & Technology Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; Engineering & Technology Volume 16 ; 16 ; https://digital-library.theiet.org/ ; >
 
 
     }
@@ -130,9 +131,10 @@
       au < finished ; finished ; 2015 ; IET Biometrics Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; IET Biometrics Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; IET Biometrics Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2018 ; IET Biometrics Volume 7 ; 7 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Biometrics Volume 8 ; 8 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; IET Biometrics Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Biometrics Volume 8 ; 8 ; https://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Biometrics Volume 9 ; 9 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Biometrics Volume 10 ; 10 ; https://digital-library.theiet.org/ ; >
 
 
     }
@@ -158,9 +160,10 @@
       au < finished ; finished ; 2015 ; IET Circuits, Devices and Systems Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Circuits, Devices and Systems Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; IET Circuits, Devices and Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Circuits, Devices and Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; IET Circuits, Devices and Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Circuits, Devices and Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Circuits, Devices and Systems Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Circuits, Devices and Systems Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -185,9 +188,10 @@
       au < finished ; finished ; 2015 ; IET Communications Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; IET Communications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; IET Communications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; IET Communications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Communications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; IET Communications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Communications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Communications Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Communications Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -213,8 +217,9 @@
       au < finished ; finished ; 2016 ; IET Computers & Digital Techniques Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; IET Computers & Digital Techniques Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; IET Computers & Digital Techniques Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; IET Computers & Digital Techniques Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2019 ; IET Computers & Digital Techniques Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Computers & Digital Techniques Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Computers & Digital Techniques Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -239,9 +244,10 @@
       au < finished ; finished ; 2015 ; IET Computer Vision Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; IET Computer Vision Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; IET Computer Vision Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2018 ; IET Computer Vision Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Computer Vision Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; IET Computer Vision Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Computer Vision Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Computer Vision Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Computer Vision Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -265,10 +271,11 @@
       au < finished ; finished ; 2014 ; IET Control Theory & Applications Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Control Theory & Applications Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Control Theory & Applications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Control Theory & Applications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Control Theory & Applications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Control Theory & Applications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Control Theory & Applications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Control Theory & Applications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Control Theory & Applications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Control Theory & Applications Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Control Theory & Applications Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -293,9 +300,10 @@
       au < finished ; finished ; 2015 ; IET Electric Power Applications Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Electric Power Applications Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; IET Electric Power Applications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2018 ; IET Electric Power Applications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Electric Power Applications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; IET Electric Power Applications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Electric Power Applications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Electric Power Applications Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Electric Power Applications Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -315,10 +323,11 @@
       au < finished ; finished ; 2014 ; IET Electrical Systems in Transportation Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Electrical Systems in Transportation Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Electrical Systems in Transportation Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Electrical Systems in Transportation Volume 7 ; 7 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Electrical Systems in Transportation Volume 8 ; 8 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Electrical Systems in Transportation Volume 9 ; 9 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Electrical Systems in Transportation Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; IET Electrical Systems in Transportation Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Electrical Systems in Transportation Volume 9 ; 9 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Electrical Systems in Transportation Volume 10 ; 10 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Electrical Systems in Transportation Volume 11 ; 11 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -343,9 +352,10 @@
       au < finished ; finished ; 2015 ; IET Generation, Transmission & Distribution Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; IET Generation, Transmission & Distribution Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; IET Generation, Transmission & Distribution Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; IET Generation, Transmission & Distribution Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Generation, Transmission & Distribution Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; IET Generation, Transmission & Distribution Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Generation, Transmission & Distribution Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Generation, Transmission & Distribution Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Generation, Transmission & Distribution Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -369,10 +379,11 @@
       au < finished ; finished ; 2014 ; IET Image Processing Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Image Processing Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Image Processing Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; IET Image Processing Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Image Processing Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Image Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Image Processing Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Image Processing Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Image Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Image Processing Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Image Processing Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -397,9 +408,10 @@
       au < finished ; finished ; 2015 ; IET Information Security Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Information Security Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; IET Information Security Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; IET Information Security Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Information Security Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; IET Information Security Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; IET Information Security Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Information Security Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Information Security Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -423,10 +435,11 @@
       au < finished ; finished ; 2014 ; IET Intelligent Transport Systems Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Intelligent Transport Systems Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; IET Intelligent Transport Systems Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Intelligent Transport Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Intelligent Transport Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Intelligent Transport Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Intelligent Transport Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; IET Intelligent Transport Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Intelligent Transport Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Intelligent Transport Systems Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Intelligent Transport Systems Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
 
     }
@@ -451,10 +464,11 @@
       au < finished ; finished ; 2014 ; IET Microwaves, Antennas & Propagation Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Microwaves, Antennas & Propagation Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Microwaves, Antennas & Propagation Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2017 ; IET Microwaves, Antennas & Propagation Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Microwaves, Antennas & Propagation Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Microwaves, Antennas & Propagation Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Microwaves, Antennas & Propagation Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Microwaves, Antennas & Propagation Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Microwaves, Antennas & Propagation Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2020 ; IET Microwaves, Antennas & Propagation Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Microwaves, Antennas & Propagation Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -478,10 +492,11 @@
       au < finished ; finished ; 2014 ; IET Nanotechnology Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; IET Nanotechnology Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Nanotechnology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Nanotechnology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Nanotechnology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Nanotechnology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Nanotechnology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Nanotechnology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Nanotechnology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Nanotechnology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Nanotechnology Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -500,10 +515,11 @@
       au < finished ; finished ; 2014 ; IET Networks Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; IET Networks Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Networks Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Networks Volume 6 ; 6 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Networks Volume 7 ; 7 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Networks Volume 8 ; 8 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Networks Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Networks Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Networks Volume 8 ; 8 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Networks Volume 9 ; 9 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Networks Volume 10 ; 10 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -527,10 +543,11 @@
       au < finished ; finished ; 2014 ; IET Optoelectronics Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; IET Optoelectronics Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Optoelectronics Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Optoelectronics Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Optoelectronics Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Optoelectronics Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Optoelectronics Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Optoelectronics Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Optoelectronics Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Optoelectronics Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Optoelectronics Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -553,10 +570,11 @@
       au < finished ; finished ; 2014 ; IET Power Electronics Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; IET Power Electronics Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Power Electronics Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Power Electronics Volume 10 ; 10 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Power Electronics Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Power Electronics Volume 12 ; 12 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Power Electronics Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Power Electronics Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Power Electronics Volume 12 ; 12 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Power Electronics Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Power Electronics Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -580,10 +598,11 @@
       au < finished ; finished ; 2014 ; IET Radar, Sonar & Navigation Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; IET Radar, Sonar & Navigation Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Radar, Sonar & Navigation Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; IET Radar, Sonar & Navigation Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Radar, Sonar & Navigation Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Radar, Sonar & Navigation Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Radar, Sonar & Navigation Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Radar, Sonar & Navigation Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Radar, Sonar & Navigation Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Radar, Sonar & Navigation Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Radar, Sonar & Navigation Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -607,10 +626,11 @@
       au < finished ; finished ; 2014 ; IET Renewable Power Generation Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Renewable Power Generation Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; IET Renewable Power Generation Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; IET Renewable Power Generation Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Renewable Power Generation Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Renewable Power Generation Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Renewable Power Generation Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Renewable Power Generation Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Renewable Power Generation Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Renewable Power Generation Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Renewable Power Generation Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -634,10 +654,11 @@
       au < finished ; finished ; 2014 ; IET Science, Measurement & Technology Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Science, Measurement & Technology Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; IET Science, Measurement & Technology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Science, Measurement & Technology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Science, Measurement & Technology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Science, Measurement & Technology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Science, Measurement & Technology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; IET Science, Measurement & Technology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; IET Science, Measurement & Technology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Science, Measurement & Technology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Science, Measurement & Technology Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -662,9 +683,10 @@
       au < finished ; finished ; 2015 ; IET Signal Processing Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Signal Processing Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; IET Signal Processing Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2018 ; IET Signal Processing Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Signal Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2018 ; IET Signal Processing Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; IET Signal Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Signal Processing Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Signal Processing Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -688,10 +710,11 @@
       au < finished ; finished ; 2014 ; IET Software Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Software Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Software Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Software Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Software Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Software Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Software Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; IET Software Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; IET Software Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Software Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Software Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -710,15 +733,16 @@
       au < finished ; finished ; 2009 ; IET Systems Biology Volume 3 ; 3 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; IET Systems Biology Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; IET Systems Biology Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; IET Systems Biology Volume 6 ; 6 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2013 ; IET Systems Biology Volume 7 ; 7 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2014 ; IET Systems Biology Volume 8 ; 8 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2015 ; IET Systems Biology Volume 9 ; 9 ; http://digital-library.theiet.org/ ; >
-      au < frozen ; exists ; 2016 ; IET Systems Biology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2017 ; IET Systems Biology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Systems Biology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Systems Biology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2012 ; IET Systems Biology Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; IET Systems Biology Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; IET Systems Biology Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; IET Systems Biology Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; IET Systems Biology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; IET Systems Biology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Systems Biology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; IET Systems Biology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; IET Systems Biology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Systems Biology Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -738,10 +762,11 @@
       au < finished ; finished ; 2014 ; IET Wireless Sensor Systems Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Wireless Sensor Systems Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Wireless Sensor Systems Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; IET Wireless Sensor Systems Volume 7 ; 7 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; IET Wireless Sensor Systems Volume 8 ; 8 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; IET Wireless Sensor Systems Volume 9 ; 9 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; IET Wireless Sensor Systems Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; IET Wireless Sensor Systems Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; IET Wireless Sensor Systems Volume 9 ; 9 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; IET Wireless Sensor Systems Volume 10 ; 10 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; IET Wireless Sensor Systems Volume 11 ; 11 ; https://digital-library.theiet.org/ ; >
 
     }
 
@@ -765,10 +790,11 @@
       au < finished ; finished ; 2014 ; Micro & Nano Letters Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Micro & Nano Letters Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Micro & Nano Letters Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; Micro & Nano Letters Volume 12 ; 12 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Micro & Nano Letters Volume 13 ; 13 ; http://digital-library.theiet.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; Micro & Nano Letters Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < finished ; manifest ; 2017 ; Micro & Nano Letters Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Micro & Nano Letters Volume 13 ; 13 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; Micro & Nano Letters Volume 14 ; 14 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Micro & Nano Letters Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2021 ; Micro & Nano Letters Volume 16 ; 16 ; https://digital-library.theiet.org/ ; >
 
     }
 

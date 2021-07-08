@@ -24,11 +24,12 @@
 
       param[journal_id] = am-lit-scholarship
 
-      au < frozen ; exists ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; >
       au < crawling ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; > #unable to add to AUTest
+      au < frozen ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; >
       au < crawling ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
+      au < expected ; exists ; 2021 ; 2021 ; American Literary Scholarship 2021 ; 2019 ; >
 
   }
 
@@ -43,10 +44,11 @@
 
       param[journal_id] = american-literature
 
-      au < frozen ; exists ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; >
       au < frozen ; exists ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; >
       au < crawling ; exists ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; >
+      au < testing ; exists ; 2021 ; 2021 ; American Literature Volume 93 ; 93 ; >
 
   }
 
@@ -65,6 +67,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; >
       au < crawling ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
       au < crawling ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
+      au < testing ; exists ; 2021 ; 2021 ; American Speech Volume 96 ; 96 ; >
 
   }
 
@@ -83,6 +86,7 @@
       au < crawling ; exists ; 2018 ; 2018 ; boundary 2 Volume 45 ; 45 ; >
       au < crawling ; exists ; 2019 ; 2019 ; boundary 2 Volume 46 ; 46 ; >
       au < crawling ; exists ; 2020 ; 2020 ; boundary 2 Volume 47 ; 47 ; >
+      au < testing ; exists ; 2021 ; 2021 ; boundary 2 Volume 48 ; 48 ; >
 
   }
 
@@ -100,7 +104,7 @@
       au < frozen ; exists ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; >
       au < frozen ; exists ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; >
       au < frozen ; exists ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; >
@@ -116,6 +120,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
+      au < testing ; exists ; 2021 ; 2021 ; Archives of Asian Art Volume 71 ; 71 ; >
 
   }
 
@@ -153,10 +158,11 @@
 
       param[journal_id] = camera-obscura
 
-      au < crawling ; exists ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 ; >
+      au < testing ; exists ; 2021 ; 2021 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 36 ; 36 ; >
 
   }
 
@@ -186,6 +192,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Common Knowledge Volume 24 ; 24 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Common Knowledge Volume 25 ; 25 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Common Knowledge Volume 26 ; 26 ; >
+      au < testing ; exists ; 2021 ; 2021 ; Common Knowledge Volume 27 ; 27 ; >
 
   }
 
@@ -204,6 +211,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Comparative Literature Volume 69 ; 69 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Comparative Literature Volume 70 ; 70 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Comparative Literature Volume 71 ; 71 ; >
+      au < testing ; exists ; 2021 ; 2021 ; Comparative Literature Volume 72 ; 72 ; >
 
   }
 
@@ -219,9 +227,10 @@
       param[journal_id] = cssaame
 
       au < crawling ; exists ; 2017 ; 2017 ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Comparative Studies of South Asia, Africa and the Middle East Volume 38 ; 38 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Comparative Studies of South Asia, Africa and the Middle East Volume 38 ; 38 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Comparative Studies of South Asia, Africa and the Middle East Volume 39 ; 39 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Comparative Studies of South Asia, Africa and the Middle East Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Comparative Studies of South Asia, Africa and the Middle East Volume 41 ; 41 ; >
 
   }
 
@@ -238,6 +247,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Critical Times: Interventions in Global Critical Theory Volume 1 ; 1 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Critical Times: Interventions in Global Critical Theory Volume 2 ; 2 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Critical Times: Interventions in Global Critical Theory Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Critical Times: Interventions in Global Critical Theory Volume 4 ; 4 ; >
 
   }
 
@@ -256,6 +266,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Cultural Politics Volume 14 ; 14 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Cultural Politics Volume 15 ; 15 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Cultural Politics Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Cultural Politics Volume 17 ; 17 ; >
 
   }
 
@@ -274,6 +285,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; differences: A Journal of Feminist Cultural Studies Volume 29 ; 29 ; >
       au < frozen ; exists ; 2019 ; 2019 ; differences: A Journal of Feminist Cultural Studies Volume 30 ; 30 ; >
       au < crawling ; exists ; 2020 ; 2020 ; differences: A Journal of Feminist Cultural Studies Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; differences: A Journal of Feminist Cultural Studies Volume 32 ; 32 ; >
 
   }
 
@@ -291,8 +303,9 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; >
       au < frozen ; exists ; 2018 ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; East Asian Science, Technology and Society: An International Journal Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; East Asian Science, Technology and Society: An International Journal Volume 13 ; 13 ; >
       au < crawling ; exists ; 2020 ; 2020 ; East Asian Science, Technology and Society: An International Journal Volume 14 ; 14 ; >
+      au < expected ; exists ; 2021 ; 2021 ; East Asian Science, Technology and Society: An International Journal Volume 15 ; 15 ; >
 
   }
 
@@ -311,6 +324,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Eighteenth-Century Life Volume 43 ; 43 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Eighteenth-Century Life Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Eighteenth-Century Life Volume 45 ; 45 ; >
 
   }
 
@@ -346,6 +360,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; English Language Notes Volume 56 ; 56 ; >
       au < crawling ; exists ; 2019 ; 2019 ; English Language Notes Volume 57 ; 57 ; >
       au < crawling ; exists ; 2020 ; 2020 ; English Language Notes Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; English Language Notes Volume 59 ; 59 ; >
 
   }
 
@@ -360,9 +375,10 @@
       param[journal_id] = environmental-humanities
 
       au < crawling ; exists ; 2017 ; 2017 ; Environmental Humanities Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Environmental Humanities Volume 10 ; 10 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Environmental Humanities Volume 11 ; 11 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Environmental Humanities Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Environmental Humanities Volume 13 ; 13 ; >
 
   }
 
@@ -381,6 +397,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Ethnohistory Volume 66 ; 66 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Ethnohistory Volume 67 ; 67 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Ethnohistory Volume 68 ; 68 ; >
   }
 
   {
@@ -398,6 +415,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; French Historical Studies Volume 41 ; 41 ; >
       au < frozen ; exists ; 2019 ; 2019 ; French Historical Studies Volume 42 ; 42 ; >
       au < crawling ; exists ; 2020 ; 2020 ; French Historical Studies Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; French Historical Studies Volume 44 ; 44 ; >
   }
 
   {
@@ -415,6 +433,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Genre: Forms of Discourse and Culture Volume 51 ; 51 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Genre: Forms of Discourse and Culture Volume 52 ; 52 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Genre: Forms of Discourse and Culture Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Genre: Forms of Discourse and Culture Volume 54 ; 54 ; >
 
   }
 
@@ -432,6 +451,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 ; >
       au < frozen ; exists ; 2019 ; 2019 ; GLQ: A Journal of Lesbian and Gay Studies Volume 25 ; 25 ; >
       au < crawling ; exists ; 2020 ; 2020 ; GLQ: A Journal of Lesbian and Gay Studies Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; GLQ: A Journal of Lesbian and Gay Studies Volume 27 ; 27 ; >
 
     }
 
@@ -449,6 +469,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Hispanic American Historical Review Volume 99 ; 99 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Hispanic American Historical Review Volume 100 ; 100 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Hispanic American Historical Review Volume 101 ; 101 ; >
 
     }
 
@@ -466,6 +487,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; >
       au < crawling ; exists ; 2019 ; 2019 ; History of Political Economy Volume 51 ; 51 ; >
       au < crawling ; exists ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; History of Political Economy Volume 53 ; 53 ; >
 
     }
 
@@ -488,6 +510,7 @@
       au < crawling ; exists ; 2018 ; 2018 ; History of the Present Volume 8 ; 8 ; >
       au < frozen ; exists ; 2019 ; 2019 ; History of the Present Volume 9 ; 9 ; >
       au < crawling ; exists ; 2020 ; 2020 ; History of the Present Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; History of the Present Volume 11 ; 11 ; >
 
     }
 
@@ -504,6 +527,7 @@
      au < frozen ; exists ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; >
      au < crawling ; exists ; 2019 ; 2019 ; Journal of Chinese Literature and Culture Volume 6 ; 6 ; >
      au < crawling ; exists ; 2020 ; 2020 ; Journal of Chinese Literature and Culture Volume 7 ; 7 ; >
+     au < manifest ; exists ; 2021 ; 2021 ; Journal of Chinese Literature and Culture Volume 8 ; 8 ; >
 
     }
 
@@ -521,6 +545,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Health Politics, Policy and Law Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Health Politics, Policy and Law Volume 46 ; 46 ; >
 
     }
 
@@ -540,6 +565,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Korean Studies Volume 23 ; 23 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Korean Studies Volume 24 ; 24 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Korean Studies Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Korean Studies Volume 26 ; 26 ; >
 
     }
 
@@ -557,6 +583,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Medieval and Early Modern Studies Volume 48 ; 48 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Medieval and Early Modern Studies Volume 49 ; 49 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Medieval and Early Modern Studies Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Medieval and Early Modern Studies Volume 51 ; 51 ; >
 
    }
 
@@ -574,7 +601,7 @@
       au < frozen ; exists ; 2006 ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 ; >
       au < frozen ; exists ; 2010 ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 ; >
       au < frozen ; exists ; 2011 ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Journal of Middle East Women's Studies Volume 8 ; 8 ; >
@@ -586,6 +613,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Middle East Women's Studies Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Middle East Women's Studies Volume 17 ; 17 ; >
 
    }
 
@@ -603,6 +631,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Music Theory Volume 62 ; 62 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Journal of Music Theory Volume 63 ; 63 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Music Theory Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Music Theory Volume 65 ; 65 ; >
 
     }
 
@@ -620,9 +649,9 @@
       au < frozen ; exists ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Labor: Studies in Working-Class History of the Americas Volume 16 ; 16 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Labor: Studies in Working-Class History of the Americas Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Labor: Studies in Working-Class History of the Americas Volume 18 ; 18 ; >
 
     }
-
 #    {
 #
 #    title <
@@ -632,6 +661,7 @@
 #    >
 #
 #    }
+
 
     {
 
@@ -643,8 +673,9 @@
 
       param[journal_id] = mediterranean-quarterly
 
-      au < exists ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; >
 
     }
 
@@ -666,7 +697,7 @@
       au < frozen ; exists ; 2005 ; 2005 ; Meridians Volume 5-6 (2005) ; 5-6 (2005) ; >
       au < frozen ; exists ; 2006 ; 2006 ; Meridians Volume 6-7 (2006) ; 6-7 (2006) ; >
       au < frozen ; exists ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
+      au < frozen ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
       au < crawling ; exists ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; >
       au < frozen ; exists ; 2010 ; 2010 ; Meridians Volume 10 (2010) ; 10 (2010) ; >
       au < frozen ; exists ; 2011 ; 2011 ; Meridians Volume 11 (2011) ; 11 (2011) ; >
@@ -678,6 +709,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Meridians Volume 16-17 (2018) ; 16-17 (2018) ; >
       au < frozen ; exists ; 2019 ; 2019 ; Meridians Volume 18 (2019) ; 18 (2019) ; >
       au < crawling ; exists ; 2020 ; 2020 ; Meridians Volume 19 (2020) ; 19 (2020) ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Meridians Volume 20 (2021) ; 20 (2021) ; >
 
     }
 
@@ -695,6 +727,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; The Minnesota Review Volume 2018 ; 2018 ; >
       au < crawling ; exists ; 2019 ; 2019 ; The Minnesota Review Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; 2020 ; The Minnesota Review Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; The Minnesota Review Volume 2021 ; 2021 ; >
 
     }
 
@@ -712,6 +745,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; MLQ: Modern Language Quarterly Volume 79 ; 79 ; >
       au < frozen ; exists ; 2019 ; 2019 ; MLQ: Modern Language Quarterly Volume 80 ; 80 ; >
       au < crawling ; exists ; 2020 ; 2020 ; MLQ: Modern Language Quarterly Volume 81 ; 81 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; MLQ: Modern Language Quarterly Volume 82 ; 82 ; >
 
     }
 
@@ -729,6 +763,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; New German Critique Volume 45 ; 45 ; >
       au < frozen ; exists ; 2019 ; 2019 ; New German Critique Volume 46 ; 46 ; >
       au < crawling ; exists ; 2020 ; 2020 ; New German Critique Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; New German Critique Volume 48 ; 48 ; >
 
      }
 
@@ -746,6 +781,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Nka: Journal of Contemporary African Art Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Nka: Journal of Contemporary African Art Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Nka: Journal of Contemporary African Art Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Nka: Journal of Contemporary African Art Volume 2021 ; 2021 ; >
 
     }
 
@@ -759,10 +795,11 @@
 
       param[journal_id] = novel
 
-      au < crawling ; exists ; 2017 ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Novel: A Forum on Fiction Volume 51 ; 51 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Novel: A Forum on Fiction Volume 52 ; 52 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Novel: A Forum on Fiction Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Novel: A Forum on Fiction Volume 54 ; 54 ; >
 
     }
 
@@ -793,9 +830,10 @@
       param[journal_id] = the-philosophical-review
 
       au < frozen ; exists ; 2017 ; 2017 ; Philosophical Review Volume 126 ; 126 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Philosophical Review Volume 127 ; 127 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Philosophical Review Volume 127 ; 127 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Philosophical Review Volume 128 ; 128 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Philosophical Review Volume 129 ; 129 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Philosophical Review Volume 130 ; 130 ; >
 
   }
 
@@ -813,6 +851,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Poetics Today Volume 39 ; 39 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Poetics Today Volume 40 ; 40 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Poetics Today Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Poetics Today Volume 42 ; 42 ; >
 
   }
 
@@ -830,6 +869,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; positions: asia critique Volume 26 ; 26 ; >
       au < frozen ; exists ; 2019 ; 2019 ; positions: asia critique Volume 27 ; 27 ; >
       au < crawling ; exists ; 2020 ; 2020 ; positions: asia critique Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; positions: asia critique Volume 29 ; 29 ; >
 
   }
 
@@ -844,6 +884,7 @@
 
       au < frozen ; exists ; 2019 ; 2019 ; Prism: Theory and Modern Chinese Literature Volume 16 ; 16 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Prism: Theory and Modern Chinese Literature Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Prism: Theory and Modern Chinese Literature Volume 18 ; 18 ; >
   }
 
   {
@@ -859,6 +900,7 @@
       au < crawling ; exists ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Publication of the American Dialect Society Volume 104 ; 104 ; >
+      au < expected ; exists ; 2021 ; 2021 ; Publication of the American Dialect Society Volume 105 ; 105 ; >
 
     }
 
@@ -874,8 +916,9 @@
 
       au < crawling ; exists ; 2017 ; 2017 ; Public Culture Volume 29 ; 29 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Public Culture Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Public Culture Volume 31 ; 31 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Public Culture Volume 31 ; 31 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Public Culture Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Public Culture Volume 33 ; 33 ; >
 
     }
 
@@ -894,7 +937,7 @@
       au < frozen ; exists ; 2003 ; 2003 ; Qui Parle Volume 13-14 (2003) ; 13-14 (2003) ; >
       au < crawling ; exists ; 2004 ; 2004 ; Qui Parle Volume 14-15 (2004) ; 14-15 (2004) ; >
       au < frozen ; exists ; 2005 ; 2005 ; Qui Parle Volume 15 (2005) ; 15 (2005) ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Qui Parle Volume 16 (2006) ; 16 (2006) ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Qui Parle Volume 16 (2006) ; 16 (2006) ; >
       au < frozen ; exists ; 2007 ; 2007 ; Qui Parle Volume 16 (2007) ; 16 (2007) ; >
       au < frozen ; exists ; 2008 ; 2008 ; Qui Parle Volume 17 (2008) ; 17 (2008) ; >
       au < frozen ; exists ; 2009 ; 2009 ; Qui Parle Volume 17-18 (2009) ; 17-18 (2009) ; >
@@ -902,13 +945,14 @@
       au < frozen ; exists ; 2011 ; 2011 ; Qui Parle Volume 19-20 (2011) ; 19-20 (2011) ; >
       au < frozen ; exists ; 2012 ; 2012 ; Qui Parle Volume 20-21 (2012) ; 20-21 (2012) ; >
       au < frozen ; exists ; 2013 ; 2013 ; Qui Parle Volume 21-22 (2013) ; 21-22 (2013) ; >
-      au < crawling ; exists ; 2014 ; 2014 ; Qui Parle Volume 22-23 (2014) ; 22-23 (2014) ; >
+      au < frozen ; exists ; 2014 ; 2014 ; Qui Parle Volume 22-23 (2014) ; 22-23 (2014) ; >
       au < frozen ; exists ; 2015 ; 2015 ; Qui Parle Volume 23-24 (2015) ; 23-24 (2015) ; >
       au < frozen ; exists ; 2016 ; 2016 ; Qui Parle Volume 24-25 (2016) ; 24-25 (2016) ; >
       au < frozen ; exists ; 2017 ; 2017 ; Qui Parle Volume 26 (2017) ; 26 (2017) ; >
       au < frozen ; exists ; 2018 ; 2018 ; Qui Parle Volume 27 (2018) ; 27 (2018) ; >
       au < frozen ; exists ; 2019 ; 2019 ; Qui Parle Volume 28 (2019) ; 28 (2019) ; >
       au < crawling ; exists ; 2020 ; 2020 ; Qui Parle Volume 29 (2020) ; 29 (2020) ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Qui Parle Volume 30 (2021) ; 30 (2021) ; >
 
     }
 
@@ -926,6 +970,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Radical History Review Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Radical History Review Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Radical History Review Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Radical History Review Volume 2021 ; 2021 ; >
 
      }
 
@@ -945,7 +990,7 @@
       au < frozen ; exists ; 2002 ; 2002 ; Romanic Review Volume 93 ; 93 ; >
       au < frozen ; exists ; 2003 ; 2003 ; Romanic Review Volume 94 ; 94 ; >
       au < frozen ; exists ; 2004 ; 2004 ; Romanic Review Volume 95 ; 95 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Romanic Review Volume 96 ; 96 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Romanic Review Volume 96 ; 96 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Romanic Review Volume 97 ; 97 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Romanic Review Volume 98 ; 98 ; >
       au < frozen ; exists ; 2008 ; 2008 ; Romanic Review Volume 99 ; 99 ; >
@@ -956,11 +1001,12 @@
       au < crawling ; exists ; 2013 ; 2013 ; Romanic Review Volume 104 ; 104 ; >
       au < frozen ; exists ; 2014 ; 2014 ; Romanic Review Volume 105 ; 105 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Romanic Review Volume 106 ; 106 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Romanic Review Volume 107 ; 107 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Romanic Review Volume 107 ; 107 ; >
       au < crawling ; exists ; 2017 ; 2017 ; Romanic Review Volume 108 ; 108 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Romanic Review Volume 109 ; 109 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Romanic Review Volume 110 ; 110 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Romanic Review Volume 111 ; 111 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Romanic Review Volume 112 ; 112 ; >
 
      }
 
@@ -978,6 +1024,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Small Axe Volume 22 ; 22 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Small Axe Volume 23 ; 23 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Small Axe Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Small Axe Volume 25 ; 25 ; >
 
     }
 
@@ -995,6 +1042,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Social Text Volume 36 ; 36 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Social Text Volume 37 ; 37 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Social Text Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Social Text Volume 39 ; 39 ; >
 
      }
 
@@ -1012,6 +1060,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; South Atlantic Quarterly Volume 117 ; 117 ; >
       au < frozen ; exists ; 2019 ; 2019 ; South Atlantic Quarterly Volume 118 ; 118 ; >
       au < crawling ; exists ; 2020 ; 2020 ; South Atlantic Quarterly Volume 119 ; 119 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; South Atlantic Quarterly Volume 120 ; 120 ; >
 
      }
 
@@ -1029,6 +1078,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Theater Volume 48 ; 48 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Theater Volume 49 ; 49 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Theater Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Theater Volume 51 ; 51 ; >
 
     }
 
@@ -1058,11 +1108,12 @@
       param[journal_id] = tsq
       #alternate title = TSQ
 
-      au < crawling ; exists ; 2016 ; 2016 ; Transgender Studies Quarterly Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Transgender Studies Quarterly Volume 3 ; 3 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Transgender Studies Quarterly Volume 4 ; 4 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Transgender Studies Quarterly Volume 5 ; 5 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Transgender Studies Quarterly Volume 6 ; 6 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Transgender Studies Quarterly Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Transgender Studies Quarterly Volume 8 ; 8 ; >
 
     }
 
@@ -1085,7 +1136,7 @@
       au < frozen ; exists ; 2006 ; 2006 ; Twentieth-Century Literature Volume 52 ; 52 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Twentieth-Century Literature Volume 53 ; 53 ; >
       au < frozen ; exists ; 2008 ; 2008 ; Twentieth-Century Literature Volume 54 ; 54 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Twentieth-Century Literature Volume 55 ; 55 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; Twentieth-Century Literature Volume 55 ; 55 ; >
       au < frozen ; exists ; 2010 ; 2010 ; Twentieth-Century Literature Volume 56 ; 56 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Twentieth-Century Literature Volume 57 ; 57 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Twentieth-Century Literature Volume 58 ; 58 ; >
@@ -1095,8 +1146,9 @@
       au < frozen ; exists ; 2016 ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Twentieth-Century Literature Volume 63 ; 63 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Twentieth-Century Literature Volume 64 ; 64 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Twentieth-Century Literature Volume 65 ; 65 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Twentieth-Century Literature Volume 65 ; 65 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Twentieth-Century Literature Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Twentieth-Century Literature Volume 67 ; 67 ; >
 
   }
 
@@ -1116,6 +1168,7 @@
       au < exists ; exists ; 2018 ; 2018 ; World Policy Journal Volume 35 ; 35 ; >
       au < expected ; exists ; 2019 ; 2019 ; World Policy Journal Volume 36 ; 36 ; >
       au < expected ; exists ; 2020 ; 2020 ; World Policy Journal Volume 37 ; 37 ; >
+      au < expected ; exists ; 2021 ; 2021 ; World Policy Journal Volume 38 ; 38 ; >
 
   }
 }

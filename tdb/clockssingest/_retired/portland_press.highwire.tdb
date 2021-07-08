@@ -495,7 +495,7 @@
     au < finished ; finished ; 2015 ; Biochemical Journal Volume 471 ; 471 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Biochemical Journal Volume 472 ; 472 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Biochemical Journal Volume 473 ; 473 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Biochemical Journal Volume 474 ; 474 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Biochemical Journal Volume 474 ; 474 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2018 ; Biochemical Journal Volume 475 [superseded] ; 475 ; >
     au < doNotProcess ; exists ; 2019 ; Biochemical Journal Volume 476 ; 476 ; >
 
@@ -555,8 +555,8 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Biochemical Society Transactions Volume 41 ; 41 ; >
     au < finished ; finished ; 2014 ; Biochemical Society Transactions Volume 42 ; 42 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Biochemical Society Transactions Volume 43 ; 43 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2017 ; Biochemical Society Transactions Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Biochemical Society Transactions Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Biochemical Society Transactions Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2018 ; Biochemical Society Transactions Volume 46 superseded] ; 46 ; >
     au < doNotProcess ; exists ; 2019 ; Biochemical Society Transactions Volume 47 ; 47 ; >
 
@@ -609,10 +609,10 @@
     au < doNotProcess ; exists ; 2011 ; Bioscience Reports Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Bioscience Reports Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Bioscience Reports Volume 33 ; 33 ; >
-    au < finished ; manifest ; 2014 ; Bioscience Reports Volume 34 ; 34 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Bioscience Reports Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; Bioscience Reports Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Bioscience Reports Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Bioscience Reports Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Bioscience Reports Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Bioscience Reports Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Bioscience Reports Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2018 ; Bioscience Reports Volume 38 [superseded] ; 38 ; >
     au < doNotProcess ; exists ; 2019 ; Bioscience Reports Volume 39 ; 39 ; >
 
@@ -656,16 +656,16 @@
     au < doNotProcess ; exists ; 2010 ; Clinical Science Volume 119 ; 119 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical Science Volume 120 ; 120 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical Science Volume 121 ; 121 ; >
-    au < finished ; manifest ; 2012 ; Clinical Science Volume 122 ; 122 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2012 ; Clinical Science Volume 123 ; 123 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Clinical Science Volume 124 ; 124 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Clinical Science Volume 125 ; 125 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; Clinical Science Volume 126 ; 126 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Clinical Science Volume 127 ; 127 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; Clinical Science Volume 128 ; 128 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2015 ; Clinical Science Volume 129 ; 129 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Clinical Science Volume 130 ; 130 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Clinical Science Volume 131 ; 131 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Clinical Science Volume 122 ; 122 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Clinical Science Volume 123 ; 123 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Clinical Science Volume 124 ; 124 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Clinical Science Volume 125 ; 125 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; Clinical Science Volume 126 ; 126 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Clinical Science Volume 127 ; 127 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Clinical Science Volume 128 ; 128 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Clinical Science Volume 129 ; 129 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Clinical Science Volume 130 ; 130 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Clinical Science Volume 131 ; 131 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2018 ; Clinical Science Volume 132 [superseded] ; 132 ; >
     au < doNotProcess ; exists ; 2019 ; Clinical Science Volume 133 ; 133 ; >
 
@@ -709,8 +709,8 @@
     au < finished ; finished ; 2014 ; Essays in Biochemistry Volume 57 ; 57 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Essays in Biochemistry Volume 58 ; 58 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Essays in Biochemistry Volume 59 ; 59 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; Essays in Biochemistry Volume 60 ; 60 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Essays in Biochemistry Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Essays in Biochemistry Volume 60 ; 60 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Essays in Biochemistry Volume 61 ; 61 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2018 ; Essays in Biochemistry Volume 62 [superseded] ; 62 ; >
     au < doNotProcess ; exists ; 2019 ; Essays in Biochemistry Volume 63 ; 63 ; >
 
@@ -751,7 +751,7 @@
 
     param[base_url] = http://www.emergtoplifesci.org/
 
-    au < finished ; manifest ; 2017 ; Emerging Topics in Life Sciences Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Emerging Topics in Life Sciences Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2018 ; Emerging Topics in Life Sciences Volume 2 [superseded] ; 2 ; >
     au < doNotProcess ; exists ; 2019 ; Emerging Topics in Life Sciences Volume 3 ; 3 ; >
 
@@ -767,7 +767,7 @@
 
     param[base_url] = http://www.neuronalsignaling.org/
 
-    au < finished ; manifest ; 2017 ; Neuronal Signaling Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Neuronal Signaling Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2018 ; Neuronal Signaling Volume 2 [superseded] ; 2 ; >
     au < doNotProcess ; exists ; 2019 ; Neuronal Signaling Volume 3 ; 3 ; >
 

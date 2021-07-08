@@ -111,6 +111,8 @@ public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 			
 			thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
 			 */
+
+			thisAM.put(MetadataField.FIELD_PROVIDER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
 		}
 
 	}

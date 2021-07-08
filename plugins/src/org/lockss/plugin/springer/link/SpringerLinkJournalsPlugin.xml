@@ -46,7 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>53</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -167,6 +167,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/(content|article)/",  url_host(base_url)</string>
       <string>1,"^https?://%s/(springerlink-)?static/", url_host(base_url)</string>
       <string>1,"^https?://(%s|static-content\.springer\.com/).*\.pdf$", url_host(base_url)</string>
+      <string>1,"^https?://%s/signup-login", base_url_host</string>
     </list>
   </entry>
   <entry>
@@ -216,6 +217,13 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.springer.link.SpringerLinkLoginPageChecker</string>
+  </entry>
+  <entry>
+    <!-- currenlty, this is not a redirect, but in case they do it in the future, lets get ahead of the problem.
+      https://link.springer.com/signup-login?previousUrl=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs40274-019-5989-0
+      -->
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"^https?://%s/signup-login.*", base_url_host</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>

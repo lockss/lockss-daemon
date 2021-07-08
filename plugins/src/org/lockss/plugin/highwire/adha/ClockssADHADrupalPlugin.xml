@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -41,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -82,8 +83,12 @@ POSSIBILITY OF SUCH DAMAGE.
     </map>
   </entry>
   <entry>
+    <!--  override start url from parent to support http to https conversion -->
     <string>au_start_url</string>
-    <string>"%sclockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+    <list>
+      <string>"%sclockss-manifest/vol_%s_manifest.html", to_http(base_url), volume_name</string>
+      <string>"%sclockss-manifest/vol_%s_manifest.html", to_https(base_url), volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>au_name</string>

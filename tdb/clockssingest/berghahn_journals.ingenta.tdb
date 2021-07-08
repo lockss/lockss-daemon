@@ -18,6 +18,7 @@
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   #ingNotReady = content collected in full text, but no pdf file, which lead to no article count and no metadata
+  #superseded = no longer fixed under ingenta, will process content under ClockssBerghahnJournalsPlugin
 
   {
   
@@ -36,9 +37,9 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; >
     au < finished ; manifest ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; >
-    au < ingNotReady ; exists ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 ; >
-    au < ingNotReady ; exists ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 ; >
+    au < superseded ; exists ; 2013 ; Anthropological Journal of European Cultures Volume 22 [superseded] ; 22 ; >
+    au < superseded ; exists ; 2014 ; Anthropological Journal of European Cultures Volume 23 [superseded] ; 23 ; >
+    au < superseded ; exists ; 2015 ; Anthropological Journal of European Cultures Volume 24 [superseded] ; 24 ; >
     
   }
 
@@ -62,9 +63,9 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Anthropology in Action Volume 17 ; 17 ; >
     au < finished ; manifest ; 2011 ; Anthropology in Action Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Anthropology in Action Volume 19 ; 19 ; >
-    au < ingNotReady ; exists ; 2013 ; Anthropology in Action Volume 20 ; 20 ; >
+    au < superseded ; exists ; 2013 ; Anthropology in Action Volume 20 [superseded] ; 20 ; >
     au < finished ; finished ; 2014 ; Anthropology in Action Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Anthropology in Action Volume 22 ; 22 ; >
+    au < superseded ; exists ; 2015 ; Anthropology in Action Volume 22 [superseded] ; 22 ; >
     
   }
 
@@ -88,8 +89,8 @@
     au < finished ; manifest ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 ; >
-    au < ingNotReady ; exists ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 ; >
+    au < superseded ; exists ; 2014 ; Anthropology of the Middle East Volume 9 [superseded] ; 9 ; >
+    au < superseded ; exists ; 2015 ; Anthropology of the Middle East Volume 10 [superseded] ; 10 ; >
     
   }
 
@@ -109,8 +110,8 @@
     au < doNotProcess ; exists ; 2010 ; Asia Pacific World Volume 1 ; 1 ; >
     au < finished ; manifest ; 2011 ; Asia Pacific World Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Asia Pacific World Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2013 ; Asia Pacific World Volume 4 ; 4 ; >
-    au < ingNotReady ; exists ; 2014 ; Asia Pacific World Volume 5 ; 5 ; >
+    au < superseded ; exists ; 2013 ; Asia Pacific World Volume 4 [superseded] ; 4 ; >
+    au < superseded ; exists ; 2014 ; Asia Pacific World Volume 5 [superseded] ; 5 ; >
     
   }
 
@@ -133,7 +134,7 @@
     au < finished ; manifest ; 2012 ; Aspasia Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Aspasia Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Aspasia Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; Aspasia Volume 9 ; 9 ; >
+    au < superseded ; exists ; 2015 ; Aspasia Volume 9 [superseded] ; 9 ; >
     
   }
 
@@ -151,8 +152,8 @@
 
     au < finished ; finished ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 ; >
-    au < ingNotReady ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 ; >
+    au < superseded ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 [superseded] ; 32 ; >
+    au < superseded ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 [superseded] ; 33 ; >
 
   }
 
@@ -177,7 +178,7 @@
     au < finished ; finished ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 ; >
+    au < superseded ; exists ; 2015 ; Contributions to the History of Concepts Volume 10 [superseded] ; 10 ; >
 
   }
 
@@ -212,8 +213,8 @@
       au < finished ; manifest ; 2011 ; Critical Survey Volume 23 [superseded] ; 23 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Critical Survey Volume 24 [superseded] ; 24 ; >
       au < finished ; manifest ; 2013 ; Critical Survey Volume 25 [superseded] ; 25 ; reingest5.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2014 ; Critical Survey Volume 26 [superseded] ; 26 ; >
-      au < ingNotReady ; exists ; 2015 ; Critical Survey Volume 27 [superseded] ; 27 ; >
+      au < superseded ; exists ; 2014 ; Critical Survey Volume 26 [superseded] ; 26 ; >
+      au < superseded ; exists ; 2015 ; Critical Survey Volume 27 [superseded] ; 27 ; >
     
     }
     
@@ -240,7 +241,7 @@
       au < finished ; finished ; 2012 ; Critical Survey Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Critical Survey Volume 25 ; 25 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Critical Survey Volume 26 ; 26 ; reingest5.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2015 ; Critical Survey Volume 27 ; 27 ; >    
+      au < frozen ; exists ; 2015 ; Critical Survey Volume 27 ; 27 ; > #completed crawl 3/19/2016.
       
     }
     
@@ -259,7 +260,7 @@
     param[journal_issn] = 2332-8894
 
     au < finished ; finished ; 2014 ; Democratic Theory Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
+    au < superseded ; exists ; 2015 ; Democratic Theory Volume 2 [superseded] ; 2 ; >
     
   }
 
@@ -304,9 +305,9 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Environment and Society Volume 1 ; 1 ; >
     au < finished ; manifest ; 2011 ; Environment and Society Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Environment and Society Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2013 ; Environment and Society Volume 4 ; 4 ; >
+    au < superseded ; exists ; 2013 ; Environment and Society Volume 4 [superseded] ; 4 ; >
     au < finished ; finished ; 2014 ; Environment and Society Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Environment and Society Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2015 ; Environment and Society Volume 6 [superseded] ; 6 ; >
     
   }
 
@@ -362,7 +363,7 @@
     au < finished ; finished ; 2012 ; European Judaism Volume 45 ; 45 ; >
     au < finished ; finished ; 2013 ; European Judaism Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; European Judaism Volume 47 ; 47 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; European Judaism Volume 48 ; 48 ; >
+    au < superseded ; exists ; 2015 ; European Judaism Volume 48 [superseded] ; 48 ; >
   
   }
 
@@ -389,7 +390,7 @@
     au < finished ; manifest ; 2012 ; Focaal Volume 2012 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Focaal Volume 2013 ; 2013 ; >
     au < finished ; finished ; 2014 ; Focaal Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; Focaal Volume 2015 ; 2015 ; >
+    au < superseded ; exists ; 2015 ; Focaal Volume 2015 [superseded] ; 2015 ; >
     
   }
 
@@ -421,7 +422,7 @@
     au < finished ; manifest ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 ; >
+    au < superseded ; exists ; 2015 ; French Politics, Culture & Society Volume 33 [superseded] ; 33 ; >
     
   }
 
@@ -454,7 +455,7 @@
     au < finished ; manifest ; 2012 ; German Politics and Society Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; German Politics and Society Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; German Politics and Society Volume 32 ; 32 ; reingest1.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; German Politics and Society Volume 33 ; 33 ; >
+    au < superseded ; exists ; 2015 ; German Politics and Society Volume 33 [superseded] ; 33 ; >
     
   }
 
@@ -474,10 +475,10 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Girlhood Studies Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Girlhood Studies Volume 3 ; 3 ; >
     au < finished ; manifest ; 2011 ; Girlhood Studies Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2012 ; Girlhood Studies Volume 5 ; 5 ; >
-    au < ingNotReady ; exists ; 2013 ; Girlhood Studies Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2012 ; Girlhood Studies Volume 5 [superseded] ; 5 ; >
+    au < superseded ; exists ; 2013 ; Girlhood Studies Volume 6 [superseded] ; 6 ; >
     au < finished ; finished ; 2014 ; Girlhood Studies Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Girlhood Studies Volume 8 ; 8 ; >
+    au < superseded ; exists ; 2015 ; Girlhood Studies Volume 8 [superseded] ; 8 ; >
     
   }
 
@@ -500,7 +501,7 @@
     au < finished ; manifest ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Historical Reflections/Reflexions Historiques Volume 40 ; 40 ; reingest3.clockss.org:8083 >
-    au < ingNotReady ; exists ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 ; >
+    au < superseded ; exists ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 [superseded] ; 41 ; >
     
   }
 
@@ -520,7 +521,7 @@
     au < finished ; finished ; 2012 ; International Journal of Social Quality Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; International Journal of Social Quality Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; International Journal of Social Quality Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; International Journal of Social Quality Volume 5 ; 5 ; >
+    au < superseded ; exists ; 2015 ; International Journal of Social Quality Volume 5 [superseded] ; 5 ; >
     
   }
 
@@ -538,9 +539,9 @@
     
     au < finished ; manifest ; 2011 ; Israel Studies Review Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Israel Studies Review Volume 27 ; 27 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2013 ; Israel Studies Review Volume 28 ; 28 ; >
+    au < superseded ; exists ; 2013 ; Israel Studies Review Volume 28 [superseded] ; 28 ; >
     au < finished ; finished ; 2014 ; Israel Studies Review Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; Israel Studies Review Volume 30 ; 30 ; >
+    au < superseded ; exists ; 2015 ; Israel Studies Review Volume 30 [superseded] ; 30 ; >
     
   }
 
@@ -580,7 +581,7 @@
     au < finished ; finished ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; >
+    au < superseded ; exists ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 [superseded] ; 7 ; >
     
   }
 
@@ -596,6 +597,7 @@
     
     param[journal_id] = romance
     param[journal_issn] = 1473-3536
+    #move to Liverpool
        
     au < doNotProcess ; doNotProcess ; 2001 ; Journal of Romance Studies Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; >
@@ -610,8 +612,8 @@
     au < finished ; manifest ; 2011 ; Journal of Romance Studies Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; Journal of Romance Studies Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; >
-    au < ingNotReady ; exists ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; >
+    au < superseded ; exists ; 2014 ; Journal of Romance Studies Volume 14 [superseded] ; 14 ; >
+    au < superseded ; exists ; 2015 ; Journal of Romance Studies Volume 15 [superseded] ; 15 ; >
     
   }
 
@@ -642,7 +644,7 @@
     au < finished ; manifest ; 2012 ; Journeys Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journeys Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journeys Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Journeys Volume 16 ; 16 ; >
+    au < superseded ; exists ; 2015 ; Journeys Volume 16 [superseded] ; 16 ; >
     
   }
 
@@ -662,9 +664,9 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < finished ; manifest ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2013 ; Learning and Teaching (LATISS) Volume 6 [superseded] ; 6 ; >
     au < finished ; finished ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 ; >
+    au < superseded ; exists ; 2015 ; Learning and Teaching (LATISS) Volume 8 [superseded] ; 8 ; >
     
   }
 
@@ -697,7 +699,7 @@
 
     au < finished ; finished ; 2013 ; Mobility in History Volume 4 ; 4 ; >
     au < finished ; finished ; 2014 ; Mobility in History Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; Mobility in History Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2015 ; Mobility in History Volume 6 [superseded] ; 6 ; >
     au < superseded ; exists ; 2016 ; Mobility in History Volume 7 [superseded] ; 7 ; >
     
   }
@@ -718,11 +720,11 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Nature and Culture Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Nature and Culture Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Nature and Culture Volume 5 ; 5 ; >
-    au < ingNotReady ; exists ; 2011 ; Nature and Culture Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2011 ; Nature and Culture Volume 6 [superseded] ; 6 ; >
     au < finished ; finished ; 2012 ; Nature and Culture Volume 7 ; 7 ; >
     au < finished ; finished ; 2013 ; Nature and Culture Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2014 ; Nature and Culture Volume 9 ; 9 ; >
-    au < ingNotReady ; exists ; 2015 ; Nature and Culture Volume 10 ; 10 ; >
+    au < superseded ; exists ; 2014 ; Nature and Culture Volume 9 [superseded] ; 9 ; >
+    au < superseded ; exists ; 2015 ; Nature and Culture Volume 10 [superseded] ; 10 ; >
     
   }
 
@@ -780,7 +782,7 @@
     au < finished ; manifest ; 2012 ; Projections Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Projections Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Projections Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2015 ; Projections Volume 9 ; 9 ; >
+    au < superseded ; exists ; 2015 ; Projections Volume 9 [superseded] ; 9 ; >
     
   }
 
@@ -799,8 +801,8 @@
     au < finished ; manifest ; 2011 ; Regions & Cohesion Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Regions & Cohesion Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Regions & Cohesion Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
-    au < ingNotReady ; exists ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
+    au < superseded ; exists ; 2014 ; Regions & Cohesion Volume 4 [superseded] ; 4 ; >
+    au < superseded ; exists ; 2015 ; Regions & Cohesion Volume 5 [superseded] ; 5 ; >
     
   }
 
@@ -819,9 +821,9 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
     au < finished ; manifest ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; >
+    au < superseded ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 [superseded] ; 4 ; >
     au < finished ; finished ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; >
+    au < superseded ; exists ; 2015 ; Religion and Society: Advances in Research Volume 6 [superseded] ; 6 ; >
    
   }
 
@@ -854,7 +856,7 @@
     au < finished ; manifest ; 2012 ; Sartre Studies International Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Sartre Studies International Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Sartre Studies International Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Sartre Studies International Volume 21 ; 21 ; >
+    au < superseded ; exists ; 2015 ; Sartre Studies International Volume 21 [superseded] ; 21 ; >
     
   }
 
@@ -881,7 +883,7 @@
     au < finished ; manifest ; 2012 ; Sibirica Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Sibirica Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Sibirica Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < ingNotReady ; exists ; 2015 ; Sibirica Volume 14 ; 14 ; >
+    au < superseded ; exists ; 2015 ; Sibirica Volume 14 [superseded] ; 14 ; >
     
   }
 
@@ -908,8 +910,8 @@
     au < finished ; manifest ; 2011 ; Social Analysis Volume 55 ; 55 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; Social Analysis Volume 56 ; 56 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Social Analysis Volume 57 ; 57 ; reingest5.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2014 ; Social Analysis Volume 58 ; 58 ; >
-    au < ingNotReady ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
+    au < superseded ; exists ; 2014 ; Social Analysis Volume 58 [superseded] ; 58 ; >
+    au < superseded ; exists ; 2015 ; Social Analysis Volume 59 [superseded] ; 59 ; >
     
   }
 
@@ -943,7 +945,7 @@
     au < finished ; manifest ; 2012 ; Theoria Volume 59 ; 59 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Theoria Volume 60 ; 60 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Theoria Volume 61 ; 61 ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2015 ; Theoria Volume 62 ; 62 ; >
+    au < superseded ; exists ; 2015 ; Theoria Volume 62 [superseded] ; 62 ; >
     
   }
 
@@ -963,7 +965,7 @@
     au < finished ; finished ; 2012 ; Transfers Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Transfers Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Transfers Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < ingNotReady ; exists ; 2015 ; Transfers Volume 5 ; 5 ; >
+    au < superseded ; exists ; 2015 ; Transfers Volume 5 [superseded] ; 5 ; >
     
   }
 }

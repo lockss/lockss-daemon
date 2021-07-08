@@ -80,7 +80,7 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
             }
 
         } catch (XPathExpressionException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
     }
 
@@ -135,7 +135,7 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
             }
 
         } catch (XPathExpressionException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
     }
 

@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -154,6 +154,8 @@
               https://rup.silverchair-cdn.com/rup/content_public/journal/jem/216/1/10.1084_jem.20181639/10/jem_20181639_tables1.xlsx"</string>
               https://rup.silverchair-cdn.com/rup/content_public/journal/jem/216/1/10.1084_jem.20181639/10/jem_20181639_tables1.xlsx?Expires=2147483647&Signature=LhLOOKXoX9yAtA-snLr2GIuM3F-aNxj5WSegWD-zuiopouf97fVGu1j221Un~53eyszpjelOcnV8y39Wpn4h~RLGdGgFI0Ys67z6xonDgmyPo~k50NUppoTYDwmh08gHJzQPBXNxQT44pQNwDaR-RZ2~EsUPYx3SQp3aFijJ13BT2OpgN87HuEEnyjmeN6ft3nuOmiinTL1FVW24kRauYD9e9sF2Ma8zKYUNnEMC-1VhZ86kur3d6hB8tenr6V1aPTwrQZH68FgPVWpIHV1pZ3ztZTDV9Xm6kcfL6ZYDQ7zXwJ3p-zHGv~04ZpdVm4DIDRjdy4cwOHpugz~Xm1SdAQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
             -->
+            <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
+            <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
         </list>
     </entry>
     <entry>
@@ -193,26 +195,6 @@
             </entry>
         </map>
     </entry>
-    <!--
-    <entry>
-        <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeV2ArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeV2ArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*</string>
-                <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    -->
-    <!--  for http to https conversion support -->
     <entry>
         <string>plugin_url_fetcher_factory</string>
         <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
@@ -239,6 +221,9 @@
             <string>cdnjs\.cloudflare\.com</string>
             <string>s7\.addthis\.com</string>
             <string>gsw\.silverchair-cdn\.com</string>
+            <!--this is for california unviersity press-->
+            <string>ucp\.silverchair-cdn\.com</string>
+            <string>watermark\.silverchair\.com</string>
         </list>
     </entry>
     <entry>

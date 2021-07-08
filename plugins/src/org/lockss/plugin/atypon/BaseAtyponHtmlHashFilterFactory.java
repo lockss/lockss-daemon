@@ -105,11 +105,21 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "pageFooter"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "pageHeader"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "pageFooter"),
+
+    // login etc popups
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "username-popup"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "registration-popup"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "change-password-drawer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "login-popup"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "request-reset-password-drawer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "verify-phone-drawer"),
     
     HtmlNodeFilters.tag("nav"),
     // more common tags
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(altmetric|trendmd)", true),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(altmetric|trendmd)", true),
+    // search bar
+    HtmlNodeFilters.tagWithAttribute("div", "id", "search-overlay"),
     
     // sections that may show up with this skin - from CRAWL filter
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
@@ -162,11 +172,24 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // abs (some Sage Atypon) - table of references on abs page
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
     HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    // related for Asm pages
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-tabs"),
 
     //  showPopup&citid=citart1 for when the email address is not available?
     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
     // sometimes the a tag has the appropriate email address, yet the inner span has the protected hash
-    HtmlNodeFilters.tagWithAttributeRegex("span", "class=", "cf_email"),
+    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "cf_email"),
+
+    // <span class="video-source" style="display:none">https://thoracic-prod-streaming.literatumonline.com/journals/content/annalsats/2019/annalsats.2019.16.issue-12/annalsats.201905-414cc/20191115/media/annalsats.201905-414cc_vid1.,964,750,300,180,.mp4.m3u8?b92b4ad1b4f274c70877528314abb28bd3f723a7d6082e6507476c036d1b3402e209f95f47cb691aca526557783e82bc64ff0999d3d535157ece591a7960e52d0ad6ff2e906196e220cb93f961768e02064b91a1ad9c7348821c98f7acc9bd5e389723630f66ab576db0f419f0c939f58d827bfa2eac7787d4b56d13de187b3827fc74a9d5fbda90a8b17c06c05d2720b3f7c0d3e1346cc83905b6bb1906c3b9d888e9193497328183834474e8c05f9b2eee691ed114090d8fb9bb9bea87d9b35ba05edca8b3b902 </span>
+    HtmlNodeFilters.tagWithAttribute("span", "class", "video-source"),
+
+    HtmlNodeFilters.tagWithAttribute("table", "class", "loginForm"),
+
+    // bottom of page has a whole "pill" section for metrics, shares, etc.
+    // remove parent div.id=pill, rather than remove each sub div.id
+    //  pill-info-authors pill-metrics-citations pill-share pill-purchase-access pill-view-options
+    //  pill-tables pill-media-other pill-references
+    HtmlNodeFilters.tagWithAttribute("div", "id", "pill"),
 
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern

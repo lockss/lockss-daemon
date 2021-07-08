@@ -6,6 +6,7 @@
     info[tester] = 5 ;
     info[poller] = 8
   >
+  provider = bepress
   
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
 
@@ -25,6 +26,7 @@
 
     au < finished ; crawling ; 2019 ; Karbala International Journal of Modern Science Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Karbala International Journal of Modern Science Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2021 ; Karbala International Journal of Modern Science Volume 7 ; 7 ; >
 
   }
 

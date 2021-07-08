@@ -9,6 +9,11 @@ the plugin represented as xml file which contain key values.
 <map>
 
     <entry>
+        <string>plugin_status</string>
+        <string>deprecated</string>
+    </entry>
+
+    <entry>
         <string>plugin_identifier</string>
         <string>edu.uab.adpn.directory.UabDirectoryPlugin</string>
     </entry>

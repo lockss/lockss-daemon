@@ -8,7 +8,6 @@
 
   plugin = org.lockss.plugin.spandidos.ClockssSpandidosPlugin
   param[base_url] = https://www.spandidos-publications.com/
-
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   
   {
@@ -20,26 +19,28 @@
   
       param[journal_id] = ol
   
-      au < manifest ; exists ; 2010 ; Oncology Letters Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2011 ; Oncology Letters Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2012 ; Oncology Letters Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2012 ; Oncology Letters Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2013 ; Oncology Letters Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2013 ; Oncology Letters Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2014 ; Oncology Letters Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2014 ; Oncology Letters Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2015 ; Oncology Letters Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2015 ; Oncology Letters Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2016 ; Oncology Letters Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2016 ; Oncology Letters Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2017 ; Oncology Letters Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2017 ; Oncology Letters Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Oncology Letters Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Oncology Letters Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Oncology Letters Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Oncology Letters Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Oncology Letters Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Oncology Letters Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Oncology Letters Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Oncology Letters Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Oncology Letters Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Oncology Letters Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Oncology Letters Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Oncology Letters Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Oncology Letters Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Oncology Letters Volume 14 ; 14 ; >
       au < finished ; finished ; 2018 ; Oncology Letters Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Oncology Letters Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Oncology Letters Volume 17 ; 17 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Oncology Letters Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Oncology Letters Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2020 ; Oncology Letters Volume 20 ; 20 ; >
+      au < superseded ; exists ; 2020 ; Oncology Letters Volume 19 [superseded] ; 19 ; >
+      au < superseded ; exists ; 2020 ; Oncology Letters Volume 20 [superseded] ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Oncology Letters Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Oncology Letters Volume 22 ; 22 ; >
 
     }
   
@@ -53,63 +54,65 @@
       # there are 43 volumes as of 2013
       param[journal_id] = ijo
   
-      au < manifest ; exists ; 1992 ; International Journal of Oncology Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1993 ; International Journal of Oncology Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1993 ; International Journal of Oncology Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1994 ; International Journal of Oncology Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1994 ; International Journal of Oncology Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1995 ; International Journal of Oncology Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1995 ; International Journal of Oncology Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1996 ; International Journal of Oncology Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1996 ; International Journal of Oncology Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1997 ; International Journal of Oncology Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1997 ; International Journal of Oncology Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1998 ; International Journal of Oncology Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1998 ; International Journal of Oncology Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1999 ; International Journal of Oncology Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1999 ; International Journal of Oncology Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2000 ; International Journal of Oncology Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2000 ; International Journal of Oncology Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2001 ; International Journal of Oncology Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2001 ; International Journal of Oncology Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2002 ; International Journal of Oncology Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2002 ; International Journal of Oncology Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2003 ; International Journal of Oncology Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2003 ; International Journal of Oncology Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2004 ; International Journal of Oncology Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2004 ; International Journal of Oncology Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2005 ; International Journal of Oncology Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2005 ; International Journal of Oncology Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2006 ; International Journal of Oncology Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2006 ; International Journal of Oncology Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2007 ; International Journal of Oncology Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2007 ; International Journal of Oncology Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2008 ; International Journal of Oncology Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2008 ; International Journal of Oncology Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2009 ; International Journal of Oncology Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2009 ; International Journal of Oncology Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2010 ; International Journal of Oncology Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2010 ; International Journal of Oncology Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2011 ; International Journal of Oncology Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2011 ; International Journal of Oncology Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Oncology Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Oncology Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2013 ; International Journal of Oncology Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2013 ; International Journal of Oncology Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2014 ; International Journal of Oncology Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2014 ; International Journal of Oncology Volume 45 ; 45 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Oncology Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Oncology Volume 47 ; 47 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Oncology Volume 48 ; 48 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Oncology Volume 49 ; 49 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Oncology Volume 50 ; 50 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Oncology Volume 51 ; 51 ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; International Journal of Oncology Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; International Journal of Oncology Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; International Journal of Oncology Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; International Journal of Oncology Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; International Journal of Oncology Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; International Journal of Oncology Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; International Journal of Oncology Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; International Journal of Oncology Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; International Journal of Oncology Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; International Journal of Oncology Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; International Journal of Oncology Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; International Journal of Oncology Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; International Journal of Oncology Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Oncology Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Oncology Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Oncology Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Oncology Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Oncology Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Oncology Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Oncology Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Oncology Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Oncology Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Oncology Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Oncology Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Oncology Volume 25 ; 25 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Oncology Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Oncology Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Oncology Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Oncology Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Oncology Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Oncology Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Oncology Volume 32 ; 32 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Oncology Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Oncology Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Oncology Volume 35 ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Oncology Volume 36 ; 36 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Oncology Volume 37 ; 37 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Oncology Volume 38 ; 38 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Oncology Volume 39 ; 39 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Oncology Volume 40 ; 40 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Oncology Volume 41 ; 41 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Oncology Volume 42 ; 42 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Oncology Volume 43 ; 43 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Oncology Volume 44 ; 44 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Oncology Volume 45 ; 45 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Oncology Volume 46 ; 46 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Oncology Volume 47 ; 47 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Oncology Volume 48 ; 48 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Oncology Volume 49 ; 49 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Oncology Volume 50 ; 50 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Oncology Volume 51 ; 51 ; >
       au < finished ; frozen ; 2018 ; International Journal of Oncology Volume 52 ; 52 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of Oncology Volume 53 ; 53 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; International Journal of Oncology Volume 54 ; 54 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; International Journal of Oncology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; International Journal of Oncology Volume 56 ; 56 ; >
-      au < crawling ; exists ; 2020 ; International Journal of Oncology Volume 57 ; 57 ; >
+      au < superseded ; exists ; 2020 ; International Journal of Oncology Volume 56 [superseded] ; 56 ; >
+      au < superseded ; exists ; 2020 ; International Journal of Oncology Volume 57 [superseded] ; 57 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; International Journal of Oncology Volume 58 ; 58 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; International Journal of Oncology Volume 59 ; 59 ; >
 
     }
   
@@ -122,19 +125,21 @@
       
       param[journal_id] = mco
   
-      au < manifest ; exists ; 2013 ; Molecular and Clinical Oncology Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2015 ; Molecular and Clinical Oncology Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2016 ; Molecular and Clinical Oncology Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2017 ; Molecular and Clinical Oncology Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2017 ; Molecular and Clinical Oncology Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Molecular and Clinical Oncology Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Molecular and Clinical Oncology Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Molecular and Clinical Oncology Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Molecular and Clinical Oncology Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Molecular and Clinical Oncology Volume 7 ; 7 ; >
       au < finished ; finished ; 2018 ; Molecular and Clinical Oncology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2018 ; Molecular and Clinical Oncology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Molecular and Clinical Oncology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Molecular and Clinical Oncology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Molecular and Clinical Oncology Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2020 ; Molecular and Clinical Oncology Volume 13 ; 13 ; >
+      au < superseded ; exists ; 2020 ; Molecular and Clinical Oncology Volume 12 [superseded] ; 12 ; >
+      au < superseded ; exists ; 2020 ; Molecular and Clinical Oncology Volume 13 [superseded] ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Molecular and Clinical Oncology Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Molecular and Clinical Oncology Volume 15 ; 15 ; >
 
     }
   
@@ -147,26 +152,28 @@
       
       param[journal_id] = etm
   
-      au < manifest ; exists ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2011 ; Experimental and Therapeutic Medicine Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2013 ; Experimental and Therapeutic Medicine Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2013 ; Experimental and Therapeutic Medicine Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2016 ; Experimental and Therapeutic Medicine Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2016 ; Experimental and Therapeutic Medicine Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2017 ; Experimental and Therapeutic Medicine Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2017 ; Experimental and Therapeutic Medicine Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Experimental and Therapeutic Medicine Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Experimental and Therapeutic Medicine Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Experimental and Therapeutic Medicine Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Experimental and Therapeutic Medicine Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Experimental and Therapeutic Medicine Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Experimental and Therapeutic Medicine Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Experimental and Therapeutic Medicine Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Experimental and Therapeutic Medicine Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Experimental and Therapeutic Medicine Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Experimental and Therapeutic Medicine Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Experimental and Therapeutic Medicine Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Experimental and Therapeutic Medicine Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Experimental and Therapeutic Medicine Volume 14 ; 14 ; >
       au < finished ; finished ; 2018 ; Experimental and Therapeutic Medicine Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Experimental and Therapeutic Medicine Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Experimental and Therapeutic Medicine Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Experimental and Therapeutic Medicine Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 ; >
+      au < superseded ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 19 [superseded] ; 19 ; >
+      au < superseded ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 20 [superseded] ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Experimental and Therapeutic Medicine Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 ; >
 
     }
   
@@ -179,52 +186,54 @@
       
       param[journal_id] = ijmm
   
-      au < manifest ; exists ; 1998 ; International Journal of Molecular Medicine Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1998 ; International Journal of Molecular Medicine Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1999 ; International Journal of Molecular Medicine Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1999 ; International Journal of Molecular Medicine Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2000 ; International Journal of Molecular Medicine Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2000 ; International Journal of Molecular Medicine Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2001 ; International Journal of Molecular Medicine Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2001 ; International Journal of Molecular Medicine Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2002 ; International Journal of Molecular Medicine Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2002 ; International Journal of Molecular Medicine Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2003 ; International Journal of Molecular Medicine Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2003 ; International Journal of Molecular Medicine Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2004 ; International Journal of Molecular Medicine Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2004 ; International Journal of Molecular Medicine Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2005 ; International Journal of Molecular Medicine Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2005 ; International Journal of Molecular Medicine Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2006 ; International Journal of Molecular Medicine Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2006 ; International Journal of Molecular Medicine Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2007 ; International Journal of Molecular Medicine Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2007 ; International Journal of Molecular Medicine Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2008 ; International Journal of Molecular Medicine Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2008 ; International Journal of Molecular Medicine Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2009 ; International Journal of Molecular Medicine Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2009 ; International Journal of Molecular Medicine Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2010 ; International Journal of Molecular Medicine Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2010 ; International Journal of Molecular Medicine Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2011 ; International Journal of Molecular Medicine Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2011 ; International Journal of Molecular Medicine Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Molecular Medicine Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2012 ; International Journal of Molecular Medicine Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2013 ; International Journal of Molecular Medicine Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2013 ; International Journal of Molecular Medicine Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2014 ; International Journal of Molecular Medicine Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2014 ; International Journal of Molecular Medicine Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Molecular Medicine Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Molecular Medicine Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Molecular Medicine Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Molecular Medicine Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Molecular Medicine Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2017 ; International Journal of Molecular Medicine Volume 40 ; 40 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; International Journal of Molecular Medicine Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; International Journal of Molecular Medicine Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Molecular Medicine Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Molecular Medicine Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Molecular Medicine Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Molecular Medicine Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Molecular Medicine Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Molecular Medicine Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Molecular Medicine Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Molecular Medicine Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Molecular Medicine Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Molecular Medicine Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Molecular Medicine Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Molecular Medicine Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Molecular Medicine Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Molecular Medicine Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Molecular Medicine Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Molecular Medicine Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Molecular Medicine Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Molecular Medicine Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Molecular Medicine Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Molecular Medicine Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Molecular Medicine Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Molecular Medicine Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Molecular Medicine Volume 25 ; 25 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Molecular Medicine Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Molecular Medicine Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Molecular Medicine Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Molecular Medicine Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Molecular Medicine Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Molecular Medicine Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Molecular Medicine Volume 32 ; 32 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Molecular Medicine Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Molecular Medicine Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Molecular Medicine Volume 35 ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Molecular Medicine Volume 36 ; 36 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Molecular Medicine Volume 37 ; 37 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Molecular Medicine Volume 38 ; 38 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Molecular Medicine Volume 39 ; 39 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Molecular Medicine Volume 40 ; 40 ; >
       au < finished ; finished ; 2018 ; International Journal of Molecular Medicine Volume 41 ; 41 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; International Journal of Molecular Medicine Volume 42 ; 42 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2019 ; International Journal of Molecular Medicine Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; >
-      au < crawling ; exists ; 2020 ; International Journal of Molecular Medicine Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2020 ; International Journal of Molecular Medicine Volume 46 ; 46 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Molecular Medicine Volume 43 ; 43 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; >
+      au < superseded ; exists ; 2020 ; International Journal of Molecular Medicine Volume 45 [superseded] ; 45 ; >
+      au < superseded ; exists ; 2020 ; International Journal of Molecular Medicine Volume 46 [superseded] ; 46 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; International Journal of Molecular Medicine Volume 48 ; 48 ; >
 
     }
   
@@ -237,19 +246,21 @@
       
       param[journal_id] = br
   
-      au < manifest ; exists ; 2013 ; Biomedical Reports Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2014 ; Biomedical Reports Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2015 ; Biomedical Reports Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2016 ; Biomedical Reports Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2016 ; Biomedical Reports Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2017 ; Biomedical Reports Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2017 ; Biomedical Reports Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Biomedical Reports Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Biomedical Reports Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Biomedical Reports Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Biomedical Reports Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Biomedical Reports Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Biomedical Reports Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Biomedical Reports Volume 7 ; 7 ; >
       au < finished ; finished ; 2018 ; Biomedical Reports Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Biomedical Reports Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Biomedical Reports Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Biomedical Reports Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2020 ; Biomedical Reports Volume 13 ; 13 ; >
+      au < superseded ; exists ; 2020 ; Biomedical Reports Volume 12 [superseded] ; 12 ; >
+      au < superseded ; exists ; 2020 ; Biomedical Reports Volume 13 [superseded] ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Biomedical Reports Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Biomedical Reports Volume 15 ; 15 ; >
 
     }
   
@@ -262,50 +273,52 @@
       
       param[journal_id] = or
   
-      au < manifest ; exists ; 1994 ; Oncology Reports Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1995 ; Oncology Reports Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1996 ; Oncology Reports Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1997 ; Oncology Reports Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1998 ; Oncology Reports Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1999 ; Oncology Reports Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2000 ; Oncology Reports Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2001 ; Oncology Reports Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2002 ; Oncology Reports Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2003 ; Oncology Reports Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2004 ; Oncology Reports Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2004 ; Oncology Reports Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2005 ; Oncology Reports Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2005 ; Oncology Reports Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2006 ; Oncology Reports Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2006 ; Oncology Reports Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2007 ; Oncology Reports Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2007 ; Oncology Reports Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2008 ; Oncology Reports Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2008 ; Oncology Reports Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2009 ; Oncology Reports Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2009 ; Oncology Reports Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2010 ; Oncology Reports Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2010 ; Oncology Reports Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2011 ; Oncology Reports Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2011 ; Oncology Reports Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2012 ; Oncology Reports Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2012 ; Oncology Reports Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2013 ; Oncology Reports Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2013 ; Oncology Reports Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2014 ; Oncology Reports Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2014 ; Oncology Reports Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2015 ; Oncology Reports Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2015 ; Oncology Reports Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2016 ; Oncology Reports Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2016 ; Oncology Reports Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2017 ; Oncology Reports Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2017 ; Oncology Reports Volume 38 ; 38 ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Oncology Reports Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Oncology Reports Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Oncology Reports Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Oncology Reports Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Oncology Reports Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Oncology Reports Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Oncology Reports Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Oncology Reports Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Oncology Reports Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Oncology Reports Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Oncology Reports Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Oncology Reports Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Oncology Reports Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Oncology Reports Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Oncology Reports Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Oncology Reports Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Oncology Reports Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Oncology Reports Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Oncology Reports Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Oncology Reports Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Oncology Reports Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Oncology Reports Volume 22 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Oncology Reports Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Oncology Reports Volume 24 ; 24 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Oncology Reports Volume 25 ; 25 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Oncology Reports Volume 26 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Oncology Reports Volume 27 ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Oncology Reports Volume 28 ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Oncology Reports Volume 29 ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Oncology Reports Volume 30 ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Oncology Reports Volume 31 ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Oncology Reports Volume 32 ; 32 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Oncology Reports Volume 33 ; 33 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Oncology Reports Volume 34 ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Oncology Reports Volume 35 ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Oncology Reports Volume 36 ; 36 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Oncology Reports Volume 37 ; 37 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Oncology Reports Volume 38 ; 38 ; >
       au < finished ; finished ; 2018 ; Oncology Reports Volume 39 ; 39 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Oncology Reports Volume 40 ; 40 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Oncology Reports Volume 41 ; 41 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Oncology Reports Volume 42 ; 42 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Oncology Reports Volume 43 ; 43 ; >
-      au < crawling ; exists ; 2020 ; Oncology Reports Volume 44 ; 44 ; >
+      au < superseded ; exists ; 2020 ; Oncology Reports Volume 43 [superseded] ; 43 ; >
+      au < superseded ; exists ; 2020 ; Oncology Reports Volume 44 [superseded] ; 44 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Oncology Reports Volume 45 ; 45 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Oncology Reports Volume 46 ; 46 ; >
 
     }
   
@@ -318,28 +331,30 @@
       
       param[journal_id] = mmr
   
-      au < manifest ; exists ; 2008 ; Molecular Medicine Reports Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2009 ; Molecular Medicine Reports Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2010 ; Molecular Medicine Reports Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2011 ; Molecular Medicine Reports Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2012 ; Molecular Medicine Reports Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2012 ; Molecular Medicine Reports Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2013 ; Molecular Medicine Reports Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2013 ; Molecular Medicine Reports Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2014 ; Molecular Medicine Reports Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2015 ; Molecular Medicine Reports Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2016 ; Molecular Medicine Reports Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2017 ; Molecular Medicine Reports Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2017 ; Molecular Medicine Reports Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Molecular Medicine Reports Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Molecular Medicine Reports Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Molecular Medicine Reports Volume 3 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Molecular Medicine Reports Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Molecular Medicine Reports Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Molecular Medicine Reports Volume 6 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Molecular Medicine Reports Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Molecular Medicine Reports Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Molecular Medicine Reports Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Molecular Medicine Reports Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Molecular Medicine Reports Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Molecular Medicine Reports Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Molecular Medicine Reports Volume 16 ; 16 ; >
       au < finished ; finished ; 2018 ; Molecular Medicine Reports Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Molecular Medicine Reports Volume 18 ; 18 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Molecular Medicine Reports Volume 19 ; 19 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Molecular Medicine Reports Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Molecular Medicine Reports Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2020 ; Molecular Medicine Reports Volume 22 ; 22 ; >
+      au < superseded ; exists ; 2020 ; Molecular Medicine Reports Volume 21 [superseded] ; 21 ; >
+      au < superseded ; exists ; 2020 ; Molecular Medicine Reports Volume 22 [superseded] ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Molecular Medicine Reports Volume 23 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 ; >
 
     }
     
@@ -353,7 +368,8 @@
       param[journal_id] = wasj
   
       au < finished ; manifest ; 2019 ; World Academy of Sciences Journal Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; World Academy of Sciences Journal Volume 2 ; 2 ; >
+      au < superseded ; exists ; 2020 ; World Academy of Sciences Journal Volume 2 [superseded] ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; World Academy of Sciences Journal Volume 3 ; 3 ; >
 
     }
 

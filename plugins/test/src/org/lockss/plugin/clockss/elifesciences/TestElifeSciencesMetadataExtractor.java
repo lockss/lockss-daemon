@@ -35,7 +35,7 @@ public class TestElifeSciencesMetadataExtractor extends SourceXmlMetadataExtract
                     "/plugins/test/src/org/lockss/plugin/clockss/elifesciences/" + fname;
             xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
         } catch(IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage(), e);
         }
         return xmlContent;
     }

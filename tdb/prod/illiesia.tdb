@@ -17,10 +17,10 @@
     {
     param[base_url] = http://illiesia.speciesfile.org/
 
-    au < notReady ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 > #no substance. crawl rules?
-    au < notReady ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 > #no substance. crawl rules?
-    au < notReady ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 > #no substance. crawl rules?
-    au < notReady ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 > #no substance. crawl rules?
+    au < released ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 > 
+    au < released ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 > 
+    au < released ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 > 
+    au < released ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 > 
     au < doNotProcess ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 >
     au < doNotProcess ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 >
     au < doNotProcess ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 >
@@ -32,7 +32,6 @@
     au < released ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 >
     au < exists ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 >
     au < expected ; 2019 ; Illiesia International Journal of Stonefly Research Volume 15 ; 15 ; 2019 >
-    au < expected ; 2020 ; Illiesia International Journal of Stonefly Research Volume 16 ; 16 ; 2020 >
 
     }
 

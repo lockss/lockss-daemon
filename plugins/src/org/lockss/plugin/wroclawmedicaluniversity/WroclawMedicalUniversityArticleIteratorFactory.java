@@ -21,17 +21,17 @@ public class WroclawMedicalUniversityArticleIteratorFactory implements ArticleIt
             "\"%s(en/article|pdf)/%d/%s/\", base_url, year, volume_name";
 
     private static final Pattern HTML_PATTERN = Pattern.compile(
-            "/(en/article)/([^/]+/[^/]+/[^/]+/\\d+)",
+            "/en/article/([^/]+/[^/]+/[^/]+/\\d+)",
             Pattern.CASE_INSENSITIVE);
-    private static final String HTML_REPLACEMENT = "/en/article/$2";
+    private static final String HTML_REPLACEMENT = "/en/article/$1";
 
     private static final Pattern PDF_PATTERN = Pattern.compile(
-            "/(pdf)/([^/]+/[^/]+/[^/]+/\\d+)\\.pdf",
+            "/pdf/([^/]+/[^/]+/[^/]+/\\d+)\\.pdf",
             Pattern.CASE_INSENSITIVE);
-    private static final String PDF_REPLACEMENT = "/pdf/$2.pdf";
+    private static final String PDF_REPLACEMENT = "/pdf/$1.pdf";
 
 
-    //It has only html and PDF, no separate pages other aspects, like  abstract/full_tex
+    //It has only html and PDF, no separate pages other aspects, like  abstract/full_text
     //http://www.dmp.umed.wroc.pl/en/article/2019/56/3/317
     //http://www.dmp.umed.wroc.pl/pdf/2019/56/3/317.pdf
     @Override
@@ -44,18 +44,20 @@ public class WroclawMedicalUniversityArticleIteratorFactory implements ArticleIt
                 PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
         builder.addAspect(
-                PDF_PATTERN,
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-        builder.addAspect(
                 HTML_PATTERN,
                 HTML_REPLACEMENT,
                 ArticleFiles.ROLE_ABSTRACT,
                 ArticleFiles.ROLE_FULL_TEXT_HTML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
+        builder.addAspect(
+            PDF_PATTERN,
+            PDF_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+        builder.setFullTextFromRoles(
+            ArticleFiles.ROLE_FULL_TEXT_HTML,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         return builder.getSubTreeArticleIterator();
     }

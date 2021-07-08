@@ -63,7 +63,7 @@
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2013 ; American Mineralogist Volume 98 ; 98 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2014 ; American Mineralogist Volume 99 ; 99 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2015 ; American Mineralogist Volume 100 ; 100 ; reingest5.clockss.org:8082 >
-      au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2016 ; American Mineralogist Volume 101 ; 101 ; reingest5.clockss.org:8082 >
+      au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2016 ; American Mineralogist Volume 101 ; 101 ; reingest5.clockss.org:8082 >
       au < gsw.ClockssGSWDrupalPlugin ; superseded ; exists ; 2017 ; American Mineralogist Volume 102 [superseded] ; 102 ; >
 
     }
@@ -81,20 +81,20 @@
 
     param[base_url] = http://elements.geoscienceworld.org/
       
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2005 ; Elements Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2006 ; Elements Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2007 ; Elements Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2008 ; Elements Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2009 ; Elements Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2010 ; Elements Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2011 ; Elements Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2012 ; Elements Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2005 ; Elements Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2006 ; Elements Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2007 ; Elements Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2008 ; Elements Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2009 ; Elements Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2010 ; Elements Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2011 ; Elements Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2012 ; Elements Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2013 ; Elements Volume 9 [superseded] ; 9 ; >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2013 ; Elements Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2013 ; Elements Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Elements Volume 10 ; 10 ; >
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Elements Volume 11 [superseded] ; 11 ; >
     au < gsw.ClockssGSWDrupalPlugin ; finished ; finished ; 2015 ; Elements Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < gsw.ClockssGSWDrupalPlugin ; finished ; manifest ; 2016 ; Elements Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < gsw.ClockssGSWDrupalPlugin ; finished ; crawling ; 2016 ; Elements Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < gsw.ClockssGSWDrupalPlugin ; superseded ; exists ; 2017 ; Elements Volume 13 [superseded] ; 13 ; >
 
   }

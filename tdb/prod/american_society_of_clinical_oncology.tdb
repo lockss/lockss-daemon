@@ -9,6 +9,8 @@
     #moved to Atypon October 2016
     #param[base_url] = http://ascopubs.org/
 
+    #move to Wolters Kluwer 01/2021
+
   {
     title <
       name = Journal of Clinical Oncology ;
@@ -61,7 +63,7 @@
       au < released ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 ; http://ascopubs.org/ >
       au < manifest ; 2018 ; Journal of Clinical Oncology Volume 36 ; 36 ; https://ascopubs.org/ >
       au < released ; 2019 ; Journal of Clinical Oncology Volume 37 ; 37 ; https://ascopubs.org/ >
-      au < manifest ; 2020 ; Journal of Clinical Oncology Volume 38 ; 38 ; https://ascopubs.org/ >
+      au < released ; 2020 ; Journal of Clinical Oncology Volume 38 ; 38 ; https://ascopubs.org/ >
 
   }
 
@@ -75,7 +77,7 @@
       param[journal_id] = go
       #formerly Journal of Global Oncology 2378-9506
 
-      au < manifest ; 2020 ; JCO Global Oncology Volume 6 ; 6 ; https://ascopubs.org/ >
+      au < released ; 2020 ; JCO Global Oncology Volume 6 ; 6 ; https://ascopubs.org/ >
 
   }
 
@@ -109,7 +111,7 @@
       param[journal_id] = op
 
       #title changed as of 2020
-      au < manifest ; 2020 ; JCO Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
+      au < released ; 2020 ; JCO Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
 
   }
 
@@ -154,7 +156,7 @@
       au < released ; 2017 ; JCO Clinical Cancer Informatics Volume 1 ; 1 ; http://ascopubs.org/ >
       au < manifest ; 2018 ; JCO Clinical Cancer Informatics Volume 2 ; 2 ; https://ascopubs.org/ >
       au < released ; 2019 ; JCO Clinical Cancer Informatics Volume 3 ; 3 ; https://ascopubs.org/ >
-      au < manifest ; 2020 ; JCO Clinical Cancer Informatics Volume 4 ; 4 ; https://ascopubs.org/ >
+      au < released ; 2020 ; JCO Clinical Cancer Informatics Volume 4 ; 4 ; https://ascopubs.org/ >
 
   }
 
@@ -170,7 +172,7 @@
       au < released ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; http://ascopubs.org/ >
       au < manifest ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; https://ascopubs.org/ >
       au < released ; 2019 ; JCO Precision Oncology Volume 3 ; 3 ; https://ascopubs.org/ >
-      au < manifest ; 2020 ; JCO Precision Oncology Volume 4 ; 4 ; https://ascopubs.org/ >
+      au < released ; 2020 ; JCO Precision Oncology Volume 4 ; 4 ; https://ascopubs.org/ >
 
   }
 

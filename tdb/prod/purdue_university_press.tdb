@@ -105,6 +105,7 @@
       au < released ; 2018 ; CLCWeb: Comparative Literature and Culture Volume 20 ; 20 ; https://docs.lib.purdue.edu/ >
       au < released ; 2019 ; CLCWeb: Comparative Literature and Culture Volume 21 ; 21 ; https://docs.lib.purdue.edu/ >
       au < manifest ; 2020 ; CLCWeb: Comparative Literature and Culture Volume 22 ; 22 ; https://docs.lib.purdue.edu/ >
+      au < manifest ; 2021 ; CLCWeb: Comparative Literature and Culture Volume 23 ; 23 ; https://docs.lib.purdue.edu/ >
 
     }
 
@@ -156,6 +157,7 @@
     au < manifest ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 12 ; 12 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
     au < exists ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 14 ; 14 ; https://docs.lib.purdue.edu/ >
+    au < expected ; 2021 ; Interdisciplinary Journal of Problem-Based Learning Volume 15 ; 15 ; https://docs.lib.purdue.edu/ >
 
   }
 
@@ -180,7 +182,8 @@
     au < manifest ; 2017-2018 ; Journal of Aviation Technology and Engineering Volume 7 ; 7 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2018 ; Journal of Aviation Technology and Engineering Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2019 ; Journal of Aviation Technology and Engineering Volume 9 ; 9 ; https://docs.lib.purdue.edu/ >
-    au < exists ; 2020 ; Journal of Aviation Technology and Engineering Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2020 ; Journal of Aviation Technology and Engineering Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
+    au < expected ; 2021 ; Journal of Aviation Technology and Engineering Volume 11 ; 11 ; https://docs.lib.purdue.edu/ >
 
   }
   
@@ -208,6 +211,7 @@
     au < manifest ; 2018 ; Journal of Human Performance in Extreme Environments Volume 14 ; 14 ; https://docs.lib.purdue.edu/ > # Probe url error on previous test
     au < manifest ; 2019 ; Journal of Human Performance in Extreme Environments Volume 15 ; 15 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2020 ; Journal of Human Performance in Extreme Environments Volume 16 ; 16 ; https://docs.lib.purdue.edu/ >
+    au < expected ; 2021 ; Journal of Human Performance in Extreme Environments Volume 17 ; 17 ; https://docs.lib.purdue.edu/ >
 
   }
 
@@ -233,6 +237,7 @@
     au < manifest ; 2018 ; Journal of Pre-College Engineering Education Research Volume 8 ; 8 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2019 ; Journal of Pre-College Engineering Education Research Volume 9 ; 9 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2020 ; Journal of Pre-College Engineering Education Research Volume 10 ; 10 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2021 ; Journal of Pre-College Engineering Education Research Volume 11 ; 11 ; https://docs.lib.purdue.edu/ >
 
   }
 
@@ -291,10 +296,11 @@
     au < manifest ; 2018 ; Journal of Southeast Asian American Education and Advancement Volume 13 ; 13 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2019 ; Journal of Southeast Asian American Education and Advancement Volume 14 ; 14 ; https://docs.lib.purdue.edu/ >
     au < manifest ; 2020 ; Journal of Southeast Asian American Education and Advancement Volume 15 ; 15 ; https://docs.lib.purdue.edu/ >
+    au < manifest ; 2021 ; Journal of Southeast Asian American Education and Advancement Volume 16 ; 16 ; https://docs.lib.purdue.edu/ >
 
   }
-
   #JTRP Technical Reports handled in purdue_university_press.source.tdb as WARC  
+
   
   
   # Interdisciplinary Journal of Problem-Based Learning (1541-5015)

@@ -4,8 +4,8 @@
     name = Royal Society Publishing ;
     info[tester] = 8
   >
-
     #moved to Atypon in 2019
+
 
     plugin = org.lockss.plugin.atypon.rsp.RoyalSocietyPublishingAtyponPlugin
     param[base_url] = https://royalsocietypublishing.org/
@@ -92,8 +92,10 @@
     au < released ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 >
     au < released ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 >
     au < doNotProcess ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66-67 ; 2019 >
-    au < manifest ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 >
-    au < manifest ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 >
+    au < released ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 >
+    au < released ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 >
+    au < manifest ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 70 ; 70 >
+    au < expected ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 71 ; 71 >
 
   }
 
@@ -124,7 +126,8 @@
     au < released ; 2018 ; Biology Letters Volume 14 ; 14 >
     au < released ; 2019 ; Biology Letters Volume 15 ; 15 >
     au < doNotProcess ; 2019 ; Biology Letters Volume 15 ; 2019 >
-    au < manifest ; 2020 ; Biology Letters Volume 16 ; 16 >
+    au < released ; 2020 ; Biology Letters Volume 16 ; 16 >
+    au < manifest ; 2021 ; Biology Letters Volume 17 ; 17 >
 
   }
 
@@ -151,7 +154,8 @@
     au < released ; 2018 ; Interface Focus Volume 8 ; 8 >
     au < doNotProcess ; 2019 ; Interface Focus Volume 9 ; 2019 >
     au < released ; 2019 ; Interface Focus Volume 9 ; 9 >
-    au < manifest ; 2020 ; Interface Focus Volume 10 ; 10 >
+    au < released ; 2020 ; Interface Focus Volume 10 ; 10 >
+    au < manifest ; 2021 ; Interface Focus Volume 11 ; 11 >
 
   }
 
@@ -183,7 +187,8 @@
     au < released ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 >
     au < doNotProcess ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 2019 >
     au < released ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 >
-    au < manifest ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 >
+    au < released ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 >
+    au < manifest ; 2021 ; Journal of the Royal Society Interface Volume 18 ; 18 >
 
   }
 
@@ -273,7 +278,8 @@
     au < released ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 >
     au < doNotProcess ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 2019 >
     au < released ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 >
-    au < manifest ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 >
+    au < released ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 >
+    au < manifest ; 2021 ; Notes and Records the Royal Society Journal of the History of Science Volume 75 ; 75 >
 
   }
 
@@ -298,7 +304,8 @@
     au < released ; 2018 ; Open Biology Volume 8 ; 8 >
     au < doNotProcess ; 2019 ; Open Biology Volume 9 ; 2019 >
     au < released ; 2019 ; Open Biology Volume 9 ; 9 >
-    au < manifest ; 2020 ; Open Biology Volume 10 ; 10 >
+    au < released ; 2020 ; Open Biology Volume 10 ; 10 >
+    au < manifest ; 2021 ; Open Biology Volume 11 ; 11 >
 
   }
   
@@ -525,7 +532,8 @@
     au < doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 >
     au < released ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 >
     au < released ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 >
-    au < manifest ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 >
+    au < released ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 >
+    au < manifest ; 2021 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 379 ; 379 >
     }
   }
 
@@ -750,7 +758,8 @@
     au < doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 >
     au < released ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 >
     au < released ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 >
-    au < manifest ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 375 >
+    au < released ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 375 >
+    au < manifest ; 2021 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 376 ; 376 >
     }
   }
 
@@ -1355,7 +1364,8 @@
     au < doNotProcess ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 >
     au < released ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 >
     au < released ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 >
-    au < manifest ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 >
+    au < released ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 >
+    au < manifest ; 2021 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 477 ; 477 >
 
   }
 
@@ -1581,7 +1591,8 @@
     au < doNotProcess ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 >
     au < released ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 >
     au < released ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 >
-    au < manifest ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 >
+    au < released ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 >
+    au < manifest ; 2021 ; Proceedings of the Royal Society B: Biological Sciences Volume 288 ; 288 >
 
   }
 
@@ -1690,7 +1701,8 @@
     au < released ; 2018 ; Royal Society Open Science Volume 5 ; 5 >
     au < doNotProcess ; 2019 ; Royal Society Open Science Volume 6 ; 2019 >
     au < released ; 2019 ; Royal Society Open Science Volume 6 ; 6 >
-    au < manifest ; 2020 ; Royal Society Open Science Volume 7 ; 7 >
+    au < released ; 2020 ; Royal Society Open Science Volume 7 ; 7 >
+    au < manifest ; 2021 ; Royal Society Open Science Volume 8 ; 8 >
 
   }
 

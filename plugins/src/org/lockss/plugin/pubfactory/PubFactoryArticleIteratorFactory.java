@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.pubfactory;
 
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
@@ -60,8 +61,13 @@ public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory,
 
   // don't set the ROOT_TEMPLATE - it is just base_url
 
-  private static final String PATTERN_TEMPLATE = 
+  private static String PATTERN_TEMPLATE;
+
+  private static final String PATTERN_TEMPLATE_W_1_BASE_URL =
       "\"^%s(downloadpdf|view)/journals/%s/%s/\", base_url, journal_id, volume_name";
+  // to accomodate plugins that have base_url2 param, which is where many articles can be found
+  private static final String PATTERN_TEMPLATE_W_2_BASE_URL =
+      "\"^(%s|%s)(downloadpdf|view)/journals/%s/%s/\", base_url, base_url2, journal_id, volume_name";
 
   // (?![^/]+issue[^/]+) is a negative lookahead to exclude issue TOC pages but to allow articles through
   // it must come before the bit that picks up the filename when it's not an issue
@@ -78,6 +84,16 @@ public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory,
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+
+    // see if base_url2 is a parameter for the AU. if it is, get the pattern that allows for it
+    String base_url2 = au.getConfiguration().get(ConfigParamDescr.BASE_URL2.getKey());
+    if (base_url2 != null) {
+      log.info("baseurl2 is : " + base_url2);
+      PATTERN_TEMPLATE = PATTERN_TEMPLATE_W_2_BASE_URL;
+    } else {
+      PATTERN_TEMPLATE = PATTERN_TEMPLATE_W_1_BASE_URL;
+    }
+
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
     builder.setSpec(new SubTreeArticleIterator.Spec()
@@ -87,6 +103,7 @@ public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory,
     builder.addAspect(ART_LANDING_PATTERN,
         LANDING_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
     // make this one primary by defining it first
@@ -107,7 +124,9 @@ public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory,
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
     // Leave the CITATION_RIS in because if just doing iterator, it's the only one set
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_ABSTRACT);
 
     

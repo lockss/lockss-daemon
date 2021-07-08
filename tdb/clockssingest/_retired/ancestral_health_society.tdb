@@ -4,7 +4,8 @@
     name = Ancestral Health Society ;
     info[contract] = 2014 ;
     info[tester] = 5 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = bepress cancelled
   >
   provider = bepress
   
@@ -26,7 +27,7 @@
 
     au < finished ; finished ; 2013 ; Journal of Evolution and Health Volume 1 ; 1 ; http://jevohealth.com/ ; >
     au < finished ; finished ; 2017 ; Journal of Evolution and Health Volume 2 ; 2 ; http://jevohealth.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; Journal of Evolution and Health Volume 3 ; 3 ; https://jevohealth.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Journal of Evolution and Health Volume 3 ; 3 ; https://jevohealth.com/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2019 ; Journal of Evolution and Health Volume 4 ; 4 ; https://jevohealth.com/ ; >
     }
 #    {

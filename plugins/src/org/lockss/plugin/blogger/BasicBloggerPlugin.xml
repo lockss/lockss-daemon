@@ -1,11 +1,15 @@
 <map>
   <entry>
-    <string>plugin_version</string>
-    <string>2</string>
+    <string>plugin_status</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.BasicBloggerPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>

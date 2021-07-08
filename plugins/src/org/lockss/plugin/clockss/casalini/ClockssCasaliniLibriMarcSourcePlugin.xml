@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>31</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>17</string>
+        <string>27</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Casalini Libri Source Plugin (CLOCKSS, Legacy), Base URL %s, Year %d", base_url, year</string>
+    <string>"Casalini Libri Source Plugin (CLOCKSS, Legacy 2016/2020), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Casalini Libri Source Plugin (CLOCKSS, Legacy)</string>
+    <string>Casalini Libri Source Plugin (CLOCKSS, Legacy 2016/2020)</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

@@ -85,6 +85,8 @@
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2019 ; AAP Grand Rounds Volume 42 ; 42 ; https://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2020 ; AAP Grand Rounds Volume 43 ; 43 ; https://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2020 ; AAP Grand Rounds Volume 44 ; 44 ; https://aapgrandrounds.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2021 ; AAP Grand Rounds Volume 45 ; 45 ; https://aapgrandrounds.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2021 ; AAP Grand Rounds Volume 46 ; 46 ; https://aapgrandrounds.aappublications.org/ ; >
 
     }
   
@@ -185,6 +187,7 @@
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2018 ; Hospital Pediatrics Volume 8 ; 8 ; http://hosppeds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2019 ; Hospital Pediatrics Volume 9 ; 9 ; https://hosppeds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2020 ; Hospital Pediatrics Volume 10 ; 10 ; https://hosppeds.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2021 ; Hospital Pediatrics Volume 11 ; 11 ; https://hosppeds.aappublications.org/ ; >
 
   }
   
@@ -225,7 +228,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; NeoReviews Volume 9 ; 9 ; http://neoreviews.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; NeoReviews Volume 10 ; 10 ; https://neoreviews.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 ; https://neoreviews.aappublications.org/ ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 ; http://neoreviews.aappublications.org/ ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; NeoReviews Volume 12 ; 12 ; http://neoreviews.aappublications.org/ ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; NeoReviews Volume 13 ; 13 ; http://neoreviews.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2013 ; NeoReviews Volume 14 ; 14 ; http://neoreviews.aappublications.org/ ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; NeoReviews Volume 15 ; 15 ; http://neoreviews.aappublications.org/ ; reingest5.clockss.org:8082 >
@@ -236,6 +239,7 @@
       au < aap.ClockssAAPDrupalPlugin ; finished ; manifest ; 2018 ; NeoReviews Volume 19 ; 19 ; http://neoreviews.aappublications.org/ ; reingest2.clockss.org:8085 >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2019 ; NeoReviews Volume 20 ; 20 ; https://neoreviews.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2020 ; NeoReviews Volume 21 ; 21 ; https://neoreviews.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2021 ; NeoReviews Volume 22 ; 22 ; https://neoreviews.aappublications.org/ ; >
 
     }
   
@@ -418,6 +422,8 @@
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2019 ; Pediatrics Volume 144 ; 144 ; https://pediatrics.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2020 ; Pediatrics Volume 145 ; 145 ; https://pediatrics.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2020 ; Pediatrics Volume 146 ; 146 ; https://pediatrics.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2021 ; Pediatrics Volume 147 ; 147 ; https://pediatrics.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2021 ; Pediatrics Volume 148 ; 148 ; https://pediatrics.aappublications.org/ ; >
 
     }
   
@@ -491,6 +497,7 @@
       au < aap.ClockssAAPDrupalPlugin ; frozen ; exists ; 2018 ; Pediatrics in Review Volume 39 ; 39 ; https://pedsinreview.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2019 ; Pediatrics in Review Volume 40 ; 40 ; https://pedsinreview.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2020 ; Pediatrics in Review Volume 41 ; 41 ; https://pedsinreview.aappublications.org/ ; >
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2021 ; Pediatrics in Review Volume 42 ; 42 ; https://pedsinreview.aappublications.org/ ; >
 
     }
   

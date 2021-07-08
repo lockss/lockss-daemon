@@ -41,9 +41,6 @@ import org.pdfbox.cos.*;
 import org.pdfbox.pdmodel.*;
 import org.pdfbox.pdmodel.common.*;
 
-/**
- * @deprecated
- */
 @Deprecated
 public class MockPdfPage extends PdfPage {
 

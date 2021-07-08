@@ -3,9 +3,9 @@
   publisher <
     name = Taylor & Francis
   >
-
   #plugin = org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin
   #implicit < status ; year ; name ; volume ;  param[year] >
+
 
   plugin = org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin
   implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
@@ -40,11 +40,11 @@
       eissn = 2000-7493 ;
       issnl = 2000-7493
     >
-
     #param[base_url] = http://www.childlitaesthetics.net/
-    param[journal_id] = zblf20
 
+    param[journal_id] = zblf20
     #Published by Universitetsforlaget AS from 2019
+
 
     au < doNotProcess ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -81,6 +81,7 @@
       au < released ; 2018 ; Diabetic Foot & Ankle [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
       au < manifest ; 2019 ; Diabetic Foot & Ankle [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
       au < expected ; 2020 ; Diabetic Foot & Ankle [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
+      au < expected ; 2021 ; Diabetic Foot & Ankle [including Supplements] Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
     }
   }
@@ -92,8 +93,8 @@
       eissn = 2000-4508 ;
       issnl = 2000-4508
     >
-
     #param[base_url] = http://www.education-inquiry.net/
+
     param[journal_id] = zedu20
 
     au < released ; 2010 ; Education Inquiry Volume 1 ; 1 ; http://www.tandfonline.com/ >
@@ -107,6 +108,7 @@
     au < released ; 2018 ; Education Inquiry Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Education Inquiry Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Education Inquiry Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Education Inquiry Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
 
@@ -118,8 +120,8 @@
       eissn = 1654-6369 ;
       issnl = 1654-6369
     >
-
     #param[base_url] = http://www.ethicsandglobalpolitics.net/
+
     param[journal_id] = zegp20
 
     au < doNotProcess ; 2008 ; Ethics & Global Politics Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -136,6 +138,7 @@
     au < manifest ; 2018 ; Ethics & Global Politics Volume 11 ; 11 ; https://www.tandfonline.com/  >
     au < manifest ; 2019 ; Ethics & Global Politics Volume 12 ; 12 ; https://www.tandfonline.com/  >
     au < manifest ; 2020 ; Ethics & Global Politics Volume 13 ; 13 ; https://www.tandfonline.com/  >
+    au < manifest ; 2021 ; Ethics & Global Politics Volume 14 ; 14 ; https://www.tandfonline.com/  >
 
   }
     
@@ -146,8 +149,8 @@
       eissn = 2001-8525 ;
       issnl = 2001-8525
     >
-
     #param[base_url] = http://www.ecrj.net/
+
     param[journal_id] = zecr20
 
     au < released ; 2014 ; European Clinical Respiratory Journal Volume 1 ; 1 ; http://www.tandfonline.com/ >
@@ -157,6 +160,7 @@
     au < released ; 2018 ; European Clinical Respiratory Journal Volume 5 ; 5 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; European Clinical Respiratory Journal Volume 6 ; 6 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; European Clinical Respiratory Journal Volume 7 ; 7 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; European Clinical Respiratory Journal Volume 8 ; 8 ; https://www.tandfonline.com/ >
 
   }
 
@@ -187,6 +191,7 @@
     au < released ; 2018 ; European Journal of Psychotraumatology [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; European Journal of Psychotraumatology [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; European Journal of Psychotraumatology [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; European Journal of Psychotraumatology [including Supplements] Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
   
@@ -227,8 +232,8 @@
       eissn = 1654-9880 ;
       issnl = 1654-9880
     >
-
     #param[base_url] = http://www.globalhealthaction.net/
+
     param[journal_id] = zgha20
 
     au < doNotProcess ; 2008 ; Global Health Action Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -244,6 +249,7 @@
     au < released ; 2018 ; Global Health Action [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Global Health Action [including Supplements] Volume 12 ; 12 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Global Health Action [including Supplements] Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Global Health Action [including Supplements] Volume 14 ; 14 ; https://www.tandfonline.com/ >
 
   }
 
@@ -253,8 +259,8 @@
       eissn = 2000-8686 ;
       issnl = 2000-8686
     >
-
     #param[base_url] = http://www.infectionecologyandepidemiology.net/
+
     param[journal_id] = ziee20
 
     au < doNotProcess ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -267,6 +273,7 @@
     au < released ; 2018 ; Infection Ecology & Epidemiology [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Infection Ecology & Epidemiology [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Infection Ecology & Epidemiology [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Infection Ecology & Epidemiology [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
 
@@ -278,8 +285,8 @@
       issnl = 1797-2361
 
     >
-
     #param[base_url] = http://www.circumpolarhealthjournal.net/
+
     param[journal_id] = zich20
     comment[issn] = volume 71, 2012
         
@@ -303,6 +310,7 @@
     au < released ; 2018 ; International Journal of Circumpolar Health Volume 77 ; 77 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; International Journal of Circumpolar Health Volume 78 ; 78 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; International Journal of Circumpolar Health Volume 79 ; 79 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; International Journal of Circumpolar Health Volume 80 ; 80 ; https://www.tandfonline.com/ >
 
   }
 
@@ -314,8 +322,8 @@
       eissn = 1748-2631 ;
       issnl = 1748-2623
     >
-
     #param[base_url] = http://www.ijqhw.net/
+
     param[journal_id] = zqhw20
 
     au < doNotProcess ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -333,6 +341,7 @@
     au < released ; 2018 ; International Journal of Qualitative Studies on Health and Well-being Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; International Journal of Qualitative Studies on Health and Well-being Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; International Journal of Qualitative Studies on Health and Well-being Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; International Journal of Qualitative Studies on Health and Well-being Volume 16 ; 16 ; https://www.tandfonline.com/ >
 
   }
 
@@ -343,8 +352,8 @@
       eissn = 2000-4214 ;
       issnl = 2000-4214
     >
-
     #param[base_url] = http://www.aestheticsandculture.net/
+
     param[journal_id] = zjac20
 
     au < doNotProcess ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -359,6 +368,7 @@
     au < released ; 2018 ; Journal of Aesthetics & Culture Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of Aesthetics & Culture Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Journal of Aesthetics & Culture Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Journal of Aesthetics & Culture Volume 13 ; 13 ; https://www.tandfonline.com/ >
   }
 
   {
@@ -368,8 +378,8 @@
       eissn = 2000-9666 ;
       issnl = 2000-9666
     >
-
     #param[base_url] = http://www.jchimp.net/
+
     param[journal_id] = zjch20
 
     au < doNotProcess ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -382,6 +392,7 @@
     au < released ; 2018 ; Journal of Community Hospital Internal Medicine Perspectives Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of Community Hospital Internal Medicine Perspectives Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Journal of Community Hospital Internal Medicine Perspectives Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Journal of Community Hospital Internal Medicine Perspectives Volume 11 ; 11 ; https://www.tandfonline.com/ >
   }
 
   {
@@ -391,8 +402,8 @@
       eissn = 2161-4083 ;
       issnl = 2161-4083
     >
-
     #param[base_url] = http://www.jecme.eu/
+
     param[journal_id] = zjec20
 
     au < released ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; http://www.tandfonline.com/ >
@@ -404,6 +415,7 @@
     au < released ; 2018 ; Journal of European Continuing Medical Education Volume 7 ; 7 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of European Continuing Medical Education Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Journal of European Continuing Medical Education Volume 9 ; 9 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Journal of European Continuing Medical Education Volume 10 ; 10 ; https://www.tandfonline.com/ >
 
   }
 
@@ -414,8 +426,8 @@
       eissn = 2001-6689 ;
       issnl = 2001-6689
     >
-
     #param[base_url] = http://www.jmahp.net/
+
     param[journal_id] = zjma20
 
     au < released ; 2013 ; Journal of Market Access & Health Policy Volume 1 ; 1 ; http://www.tandfonline.com/ >
@@ -426,6 +438,7 @@
     au < released ; 2018 ; Journal of Market Access & Health Policy Volume 6 ; 6 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of Market Access & Health Policy Volume 7 ; 7 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Journal of Market Access & Health Policy Volume 8 ; 8 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Journal of Market Access & Health Policy Volume 9 ; 9 ; https://www.tandfonline.com/ >
 
   }
 
@@ -436,8 +449,8 @@
       eissn = 2000-2297 ;
       issnl = 2000-2297
     >
-
     #param[base_url] = http://www.journaloforalmicrobiology.net/
+
     param[journal_id] = zjom20
 
     au < doNotProcess ; 2009 ; Journal of Oral Microbiology Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -452,6 +465,7 @@
     au < released ; 2018 ; Journal of Oral Microbiology Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Journal of Oral Microbiology Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Journal of Oral Microbiology Volume 12 ; 12 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Journal of Oral Microbiology Volume 13 ; 13 ; https://www.tandfonline.com/ >
 
   }
 
@@ -463,8 +477,8 @@
       eissn = 1819-6357 ;
       issnl = 1819-6357
     >
-
     #param[base_url] = http://www.libyanjournalofmedicine.net/
+
     param[journal_id] = zljm20
 
     au < doNotProcess ; 2006 ; Libyan Journal of Medicine Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -482,6 +496,7 @@
     au < released ; 2018 ; Libyan Journal of Medicine [including Supplements] Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Libyan Journal of Medicine [including Supplements] Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Libyan Journal of Medicine [including Supplements] Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Libyan Journal of Medicine [including Supplements] Volume 16 ; 16 ; https://www.tandfonline.com/ >
 
   }
 
@@ -492,8 +507,8 @@
       eissn = 2000-6993 ;
       issnl = 2000-6993
     >
-
     #param[base_url] = http://www.mechanicalcirculatorysupport.net/
+
     param[journal_id] = zmcs20
     # discontinued in 2014
 
@@ -512,8 +527,8 @@
     >
 
     {
-
     #param[base_url] = http://med-ed-online.net/
+
     param[journal_id] = zmeo20
 
     au < doNotProcess ; 1996 ; Medical Education Online Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -541,6 +556,7 @@
     au < released ; 2018 ; Medical Education Online Volume 23 ; 23 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Medical Education Online Volume 24 ; 24 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Medical Education Online Volume 25 ; 25 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Medical Education Online Volume 26 ; 26 ; https://www.tandfonline.com/ >
     }
 
   }
@@ -553,8 +569,8 @@
       eissn = 1651-2235 ;
       issnl = 1651-2235 
     >
-
     #param[base_url] = http://www.microbecolhealthdis.net/
+
     param[journal_id] = zmeh20
 
     au < doNotProcess ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -588,6 +604,7 @@
     au < released ; 2018 ; Microbial Ecology in Health and Disease Volume 29 ; 29 ; https://www.tandfonline.com/ >
     au < expected ; 2019 ; Microbial Ecology in Health and Disease Volume 30 ; 30 ; https://www.tandfonline.com/ >
     au < expected ; 2020 ; Microbial Ecology in Health and Disease Volume 31 ; 31 ; https://www.tandfonline.com/ >
+    au < expected ; 2021 ; Microbial Ecology in Health and Disease Volume 32 ; 32 ; https://www.tandfonline.com/ >
 
   }
 
@@ -629,6 +646,7 @@
     au < released ; 2018 ; Nano Reviews & Experiments [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < expected ; 2019 ; Nano Reviews & Experiments [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < expected ; 2020 ; Nano Reviews & Experiments [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < expected ; 2021 ; Nano Reviews & Experiments [including Supplements] Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
 
@@ -639,8 +657,8 @@
       eissn = 2001-0001 ;
       issnl = 2001-0001
     >
-
     #param[base_url] = http://www.pathobiologyofaging.net/
+
     param[journal_id] = zpba20
 
     au < doNotProcess ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; httpd://www.tandfonline.com/ >
@@ -653,6 +671,7 @@
     au < released ; 2018 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < expected ; 2020 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < expected ; 2021 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
 
@@ -708,6 +727,7 @@
     au < released ; 2018 ; Polar Research [including Supplements] Volume 37 ; 37 ; https://www.tandfonline.com/ >
     au < expected ; 2019 ; Polar Research [including Supplements] Volume 38 ; 38 ; https://www.tandfonline.com/ >
     au < expected ; 2020 ; Polar Research [including Supplements] Volume 39 ; 39 ; https://www.tandfonline.com/ >
+    au < expected ; 2021 ; Polar Research [including Supplements] Volume 40 ; 40 ; https://www.tandfonline.com/ >
 
   }
 
@@ -719,8 +739,8 @@
       eissn = 2156-7077 ;
       issnl = 2156-7069
     >
-
     #param[base_url] = http://www.researchinlearningtechnology.net/
+
     param[journal_id] = zrlt20
     #continues = 0968-7769
     #no AUs after 2011 https://www.tandfonline.com/loi/zrlt20
@@ -814,8 +834,8 @@
       eissn = 2000-9011 ;
       issnl = 2000-9011
     >
-
       #param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
+
       param[journal_id] = zsnp20
 
       au < doNotProcess ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -828,6 +848,7 @@
       au < released ; 2018 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
       au < expected ; 2019 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
       au < expected ; 2020 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
+      au < expected ; 2021 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
   
@@ -887,8 +908,8 @@
       eissn = 1600-0870 ;
       issnl = 0280-6495
     >
-
     #param[base_url] = http://www.tellusa.net/
+
     param[journal_id] = zela20
     #continues = 0040-2826
     
@@ -930,6 +951,7 @@
     au < released ; 2018 ; Tellus A: Dynamic Meteorology and Oceanography Volume 70 ; 70 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Tellus A: Dynamic Meteorology and Oceanography Volume 71 ; 71 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Tellus A: Dynamic Meteorology and Oceanography Volume 72 ; 72 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Tellus A: Dynamic Meteorology and Oceanography Volume 73 ; 73 ; https://www.tandfonline.com/ >
 
   }
 
@@ -942,8 +964,8 @@
       issnl = 0280-6509
     >
     
-
     #param[base_url] = http://www.tellusb.net/
+
     param[journal_id] = zelb20
     #continues = 0040-2826
 
@@ -985,6 +1007,7 @@
     au < released ; 2018 ; Tellus B: Chemical and Physical Meteorology Volume 70 ; 70 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Tellus B: Chemical and Physical Meteorology Volume 71 ; 71 ; https://www.tandfonline.com/ >
     au < manifest ; 2020 ; Tellus B: Chemical and Physical Meteorology Volume 72 ; 72 ; https://www.tandfonline.com/ >
+    au < manifest ; 2021 ; Tellus B: Chemical and Physical Meteorology Volume 73 ; 73 ; https://www.tandfonline.com/ >
 
   }
 
@@ -995,8 +1018,8 @@
       eissn = 2002-1518 ;
       issnl = 2002-1518
     >
-
     #param[base_url] = http://www.societyhealthvulnerability.net/
+
     param[journal_id] = zvgi20
     #continues = 2000-8023
 
@@ -1006,6 +1029,7 @@
     au < released ; 2018 ; Society, Health & Vulnerability Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < manifest ; 2019 ; Society, Health & Vulnerability Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < expected ; 2020 ; Society, Health & Vulnerability Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < expected ; 2021 ; Society, Health & Vulnerability Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
 

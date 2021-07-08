@@ -119,7 +119,7 @@ public class TestIngentaArticleIteratorFactory extends ArticleIteratorTestCase {
     SubTreeArticleIterator artIter = createSubTreeIter();
 
     assertEquals(
-        ListUtil.list("http://api.ingentaconnect.com/content/maney/amb"),
+        ListUtil.list("http://www.ingentaconnect.com/content/maney/amb"),
         getRootUrls(artIter));
   }
 
@@ -133,7 +133,7 @@ public class TestIngentaArticleIteratorFactory extends ArticleIteratorTestCase {
         "http://api.ingentaconnect.com/contentt/maney/amb/1938/00000001/00000003/art00001");
     assertMatchesRE(
         pat,
-        "http://api.ingentaconnect.com/content/maney/amb/1938/00000001/00000003/art00001?crawler=true");
+        "http://www.ingentaconnect.com/content/maney/amb/1938/00000001/00000003/art00001?format=ris");
     assertNotMatchesRE(pat, "http://www.example.com/content/");
     assertNotMatchesRE(pat, "http://www.example.com/content/j");
     assertNotMatchesRE(pat,
