@@ -55,6 +55,8 @@ implements SourceXmlSchemaHelper {
   
   private static final Logger log = Logger.getLogger(EastviewNewspaperMetadataHelper.class);
 
+  static protected final String PAGE_PDF_PATH = "/ARTICLEDATAS/ARTICLEDATA/TEXT/pagemark/@pagepdf";
+  static protected final String PUBLICATION_TITLE_PATH = "/ARTICLEDATAS/ARTICLEDATA/SOURCE";
 
   /*
    * <PAGE>3</PAGE>
@@ -91,8 +93,6 @@ implements SourceXmlSchemaHelper {
 
   // this is global for all articles in the file - not always correct, don't cook
   private static final String top = "/ARTICLEDATAS/ARTICLEDATA";
-  
-  
 
   // The following are all relative to the article node
   // from the immediately preceeding sibling -
@@ -104,7 +104,6 @@ implements SourceXmlSchemaHelper {
   protected static String ART_RAW_TITLE = "TITLE";
   private static String art_contrib = "AUTHOR";
   private static String art_sp = "PAGE";
-  private static String pdf_path = "TEXT/pagemark/@pagepdf";
   
 
   /*
@@ -115,7 +114,7 @@ implements SourceXmlSchemaHelper {
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
   static {
-    articleMap.put(pub_title, CLEAN_TEXT);
+    articleMap.put(PUBLICATION_TITLE_PATH, CLEAN_TEXT);
     //This is raw title, it contains publisher acroname, like this:
     //title: 31-05-1961(DASZD-No.005) НОВЫЕ КНИГИ
     articleMap.put(ART_RAW_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -124,7 +123,7 @@ implements SourceXmlSchemaHelper {
     articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_contrib, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(pdf_path, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(PAGE_PDF_PATH, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
   /* 2.  Top level per-article node */

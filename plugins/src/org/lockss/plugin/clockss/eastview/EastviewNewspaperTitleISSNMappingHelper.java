@@ -1,38 +1,36 @@
 package org.lockss.plugin.clockss.eastview;
 
-import org.lockss.plugin.clockss.mpidr.MPIDRRisMetadataExtractorFactory;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class EastviewISSNMetadataHelper {
+public class EastviewNewspaperTitleISSNMappingHelper {
 
-    private static final Logger log = Logger.getLogger(EastviewISSNMetadataHelper.class);
+    private static final Logger log = Logger.getLogger(EastviewNewspaperTitleISSNMappingHelper.class);
 
     private static Pattern LINE_PAT = Pattern.compile("(.*),(.*),(.*)?");
     private static Pattern DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
-
+    public static Map<String, String> issnMap = new HashMap<>();
+    public static Map<String, String> titleMap = new HashMap<>();
 
     public Map<String, String> getISSNList() throws IOException {
 
         int count = 0;
-        String fname = "eastview_issn.dat";
+        String fname = "eastview_newspaper_issn.dat";
         InputStream is = null;
-        Map<String, String> issnMap = new HashMap<>();
 
         is = getClass().getResourceAsStream(fname);
 
         if (is == null) {
-            throw new ExceptionInInitializerError("EastviewISSNMetadataHelper external data file not found");
+            throw new ExceptionInInitializerError("Eastview Newspaper: EastviewISSNMetadataHelper external data file not found");
         }
 
         BufferedReader bufr = new BufferedReader(new InputStreamReader(is));
@@ -57,39 +55,29 @@ public class EastviewISSNMetadataHelper {
 
                 publicationTitle = m.group(1);
                 acronym = m.group(2).replace(" ", "").replace("\"", "");
-                if (isDoi(m.group(3))) {
+
+                MetadataUtil.validateIssn(m.group(3));
+                if (issn != null) {
                     issn = m.group(3);
 
-                    issnMap.put(acronym, issn);
+                    issnMap.put(publicationTitle, issn);
+                    titleMap.put(acronym, publicationTitle);
 
-                    log.debug3("VALID ISSN: publicationTitle ="
+                    log.debug3("Eastview Newspaper: VALID ISSN: publicationTitle ="
                             + publicationTitle + ", acronym = " + acronym + ", issn = " + issn);
                 } else {
 
-                    log.debug3("----------INVALID ISSN: publicationTitle ="
+                    log.debug3("----------Eastview Newspaper: INVALID ISSN: publicationTitle ="
                             + publicationTitle + ", acronym = " + acronym + ", issn = " + issn);
                 }
 
             } else {
-                log.debug3("NO MATCH, nextline = " + nextline);
+                log.debug3("Eastview Newspaper: NO MATCH, nextline = " + nextline);
             }
 
         }
         bufr.close();
 
         return issnMap;
-    }
-
-    private boolean isDoi(String doi) {
-
-        if (doi == null) {
-            return false;
-        }
-        Matcher m = DOI_PAT.matcher(doi);
-
-        if(!m.matches()){
-            return false;
-        }
-        return true;
     }
 }
