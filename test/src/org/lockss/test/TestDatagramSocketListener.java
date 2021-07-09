@@ -69,6 +69,7 @@ public class TestDatagramSocketListener extends LockssTestCase {
 			 dsl.getPort());
     DatagramSocket socket = new DatagramSocket();
     socket.send(sentPacket);
+    TimerUtil.guaranteedSleep(10);
     socket.close();
 
     DatagramPacket receivePacket = dsl.getPacket();
@@ -100,6 +101,7 @@ public class TestDatagramSocketListener extends LockssTestCase {
 			   dsl.getPort());
       DatagramSocket socket = new DatagramSocket();
       socket.send(sendPacket);
+      TimerUtil.guaranteedSleep(10);
       socket.close();
       sentPackets.add(sendPacket);
     }
