@@ -71,7 +71,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Advances in Geosciences Volume 44 ; 44 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Geosciences Volume 45 ; 45 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Advances in Geosciences Volume 46 ; 46 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Advances in Geosciences Volume 47 ; 47 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Advances in Geosciences Volume 47 ; 47 ; >
 
   }
 
@@ -170,7 +170,7 @@
       param[home_url] = https://www.agile-giscience-series.net/
 
       au < crawling ; exists ; 2020 ; 2020 ; AGILE: GIScience Series Volume 1 ; 1 ; >
-      au < testing ; exists ; 2021 ; 2021 ; AGILE: GIScience Series Volume 2 ; 2 ; >
+      au < ready ; exists ; 2021 ; 2021 ; AGILE: GIScience Series Volume 2 ; 2 ; >
 
   }
 
@@ -215,7 +215,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Annales Geophysicae Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Annales Geophysicae Volume 37 ; 37 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Annales Geophysicae Volume 38 ; 38 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Annales Geophysicae Volume 39 ; 39 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Annales Geophysicae Volume 39 ; 39 ; >
 
   }
 
@@ -254,7 +254,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Archives Animal Breeding Volume 61 ; 61 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Archives Animal Breeding Volume 62 ; 62 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Archives Animal Breeding Volume 63 ; 63 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Archives Animal Breeding Volume 64 ; 64 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Archives Animal Breeding Volume 64 ; 64 ; >
 
       }
 
@@ -384,7 +384,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Climate of the Past Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Climate of the Past Volume 15 ; 15 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Climate of the Past Volume 16 ; 16 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Climate of the Past Volume 17 ; 17 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Climate of the Past Volume 17 ; 17 ; >
 
   }
 
@@ -428,7 +428,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Drinking Water Engineering and Science Volume 14 ; 14 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Drinking Water Engineering and Science Volume 14 ; 14 ; >
 
   }
 
@@ -479,7 +479,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Earth System Dynamics Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth System Dynamics Volume 10 ; 10 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Earth System Dynamics Volume 11 ; 11 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Earth System Dynamics Volume 12 ; 12 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Earth System Dynamics Volume 12 ; 12 ; >
 
   }
 
@@ -589,7 +589,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; E&G Quaternary Science Journal Volume 67 ; 67 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; E&G Quaternary Science Journal Volume 68 ; 68 ; >
       au < crawling ; exists ; 2020 ; 2020 ; E&G Quaternary Science Journal Volume 69 ; 69 ; >
-      au < testing ; exists ; 2021 ; 2021 ; E&G Quaternary Science Journal Volume 70 ; 70 ; >
+      au < ready ; exists ; 2021 ; 2021 ; E&G Quaternary Science Journal Volume 70 ; 70 ; >
 
   }
 
@@ -739,7 +739,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geographica Helvetica Volume 74 ; 74 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Geographica Helvetica Volume 75 ; 75 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Geographica Helvetica Volume 76 ; 76 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Geographica Helvetica Volume 76 ; 76 ; >
 
   }
 
@@ -1263,7 +1263,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Mechanical Sciences Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Mechanical Sciences Volume 10 ; 10 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Mechanical Sciences Volume 11 ; 11 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Mechanical Sciences Volume 12 ; 12 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Mechanical Sciences Volume 12 ; 12 ; >
 
   }
 
@@ -1342,7 +1342,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Nonlinear Processes in Geophysics Volume 26 ; 26 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Nonlinear Processes in Geophysics Volume 27 ; 27 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Nonlinear Processes in Geophysics Volume 28 ; 28 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Nonlinear Processes in Geophysics Volume 28 ; 28 ; >
 
   }
 
@@ -1374,7 +1374,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Ocean Science Volume 15 ; 15 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Ocean Science Volume 16 ; 16 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Ocean Science Volume 17 ; 17 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Ocean Science Volume 17 ; 17 ; >
 
   }
 
@@ -1408,7 +1408,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Primate Biology Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Primate Biology Volume 6 ; 6 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Primate Biology Volume 7 ; 7 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Primate Biology Volume 8 ; 8 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Primate Biology Volume 8 ; 8 ; >
 
   }
 
@@ -1512,7 +1512,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; SOIL Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; SOIL Volume 5 ; 5 ; >
       au < crawling ; exists ; 2020 ; 2020 ; SOIL Volume 6 ; 6 ; >
-      au < testing ; exists ; 2021 ; 2021 ; SOIL Volume 7 ; 7 ; >
+      au < ready ; exists ; 2021 ; 2021 ; SOIL Volume 7 ; 7 ; >
 
   }
 
@@ -1635,7 +1635,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Web Ecology Volume 19 ; 19 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Web Ecology Volume 20 ; 20 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Web Ecology Volume 21 ; 21 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Web Ecology Volume 21 ; 21 ; >
 
   }
 
@@ -1670,7 +1670,7 @@
 
       au < frozen ; exists ; 2019 ; 2019 ; Geochronology: Advances in Gechronological Science Volume 1 ; 1 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Geochronology: Advances in Gechronological Science Volume 3 ; 3 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Geochronology: Advances in Gechronological Science Volume 3 ; 3 ; >
 
   }
 
