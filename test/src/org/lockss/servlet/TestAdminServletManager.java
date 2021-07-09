@@ -92,6 +92,7 @@ public class TestAdminServletManager extends LockssTestCase {
   ServletDescr contentAccessDescrs[] = {
     SERVLET_SERVE_CONTENT,
     SERVLET_EXPORT_CONTENT,
+    SERVLET_MIGRATE_CONTENT,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_ADD_CONTENT,
     SERVLET_ADD_CONTENT_TAB,

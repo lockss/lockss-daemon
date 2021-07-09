@@ -91,14 +91,14 @@ public class DatagramSocketListener implements Runnable{
       socket = new DatagramSocket(port, InetAddress.getByName(host));
       int length = socket.getReceiveBufferSize();
       while(numPacketsGot < numPacketsToGet){
-	packet = new DatagramPacket(new byte[length], length);
-	readyToReceive.give();
-	socket.receive(packet);
-	numPacketsGot++;
-	synchronized(packets){
-	  packets.add(packet);
-	  gotPacket.give();
-	}
+        packet = new DatagramPacket(new byte[length], length);
+        readyToReceive.give();
+        socket.receive(packet);
+        numPacketsGot++;
+        synchronized(packets){
+          packets.add(packet);
+          gotPacket.give();
+        }
       }
       socket.close();
     }

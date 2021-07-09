@@ -1,13 +1,11 @@
 package org.lockss.safenet;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
+import java.util.Objects;
 import java.util.Properties;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -92,7 +90,9 @@ public class TestEntitlementRegistryClient extends LockssTestCase {
       fail("Expected exception not thrown");
     }
     catch(IOException e) {
-      assertTrue(e.getMessage().startsWith("Unrecognized token 'isn': was expecting ('true', 'false' or 'null')"));
+      assertNotNull(e.getMessage());
+      assertTrue(Objects.requireNonNull(e.getMessage())
+          .startsWith("Unrecognized token 'isn'"));
     }
     Mockito.verify(client).openConnection(url);
   }
