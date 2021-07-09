@@ -1,8 +1,7 @@
 {
 
   provider = Ubiquity Press
-  #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkBooksPlugin
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkBooksPlugin
   implicit < status ; status2 ; year ; isbn ; name ; param[book_doi] ; hidden[proxy] >
   
   {
@@ -24,7 +23,7 @@
 
       param[base_url] = https://aperio.press/
 
-      au < manifest ; exists ; 2018 ; 978-0-8139-4161-5 ; Idle Talk, Deadly Talk (978-0-8139-4161-5) ; 10.32881/book1 ;  >
+      au < testing ; exists ; 2018 ; 978-0-8139-4161-5 ; Idle Talk, Deadly Talk (978-0-8139-4161-5) ; m/10.32881/book1 ;  >
       au < manifest ; exists ; 2020 ; 978-0-8139-4218-6 ; Black Cosmopolitans (978-0-8139-4218-6) ; 10.32881/book4 ;  >
       au < manifest ; exists ; 2020 ; 978-0-8139-4216-2 ; A World of Disorderly Notions (978-0-8139-4216-2) ; 10.32881/book3 ;  >
 
@@ -84,7 +83,7 @@
       au < manifest ; exists ; 2011 ; 978-952-222-307-4 ; Hidden rituals and public performances (978-952-222-307-4) ; 10.21435/sff.19 ;  >
       au < manifest ; exists ; 2011 ; 978-952-222-292-3 ; Sinisten maisemien mies (978-952-222-292-3) ; 10.21435/ht.256 ;  >
       au < manifest ; exists ; 2011 ; 978-952-222-326-5 ; Representations of Finnishness in Sweden (978-952-222-326-5) ; 10.21435/sflin.16 ;  >
-      au < manifest ; exists ; 2011 ; 978-952-222-327-2 ; The Limits of Patriarchy (978-952-222-327-2) ; 10.21435/sfe.13 ;  >
+      au < testing ; exists ; 2011 ; 978-952-222-327-2 ; The Limits of Patriarchy (978-952-222-327-2) ; m/10.21435/sfe.13 ;  >
       au < manifest ; exists ; 2012 ; 978-952-222-339-5 ; Koko illan ilo? (978-952-222-339-5) ; 10.21435/ht.258 ;  >
       au < manifest ; exists ; 2012 ; 978-952-222-359-3 ; Nodes of Contemporary Finnish Literature (978-952-222-359-3) ; 10.21435/sflit.6 ;  >
       au < manifest ; exists ; 2012 ; 978-952-222-388-3 ; Where is the Field? (978-952-222-388-3) ; 10.21435/sfe.14 ;  >
@@ -172,7 +171,7 @@
       au < manifest ; exists ; 2020 ; 978-91-7963-006-5 ; Romanistiken i Sverige (978-91-7963-006-5) ; 10.21524/kriterium.18 ;  >
       au < manifest ; exists ; 2020 ; 978-91-88661-87-6 ; Forbidden Literature (978-91-88661-87-6) ; 10.21525/kriterium.22 ;  >
       au < manifest ; exists ; 2020 ; 978-91-88909-34-3 ; Movement of knowledge (978-91-88909-34-3) ; 10.21525/kriterium.24 ;  >
-      au < manifest ; exists ; 2020 ; 978-91-88909-44-2 ; Det villrådiga samhället (978-91-88909-44-2) ; 10.21525/kriterium.27 ;  >
+      au < testing ; exists ; 2020 ; 978-91-88909-44-2 ; Det villrådiga samhället (978-91-88909-44-2) ; m/10.21525/kriterium.27 ;  >
 
     }
 
@@ -230,7 +229,7 @@
       au < manifest ; exists ; 2016 ; 978-3-946198-16-1 ; Hunger and Modern Writing (978-3-946198-16-1) ; 10.16994/baf ;  >
       au < manifest ; exists ; 2017 ; 978-3-946198-24-6 ; Rodin-Lektüren (978-3-946198-24-6) ; 10.16994/bah ;  >
       au < manifest ; exists ; 2017 ; 978-3-946198-20-8 ; Buddha in Beton (978-3-946198-20-8) ; 10.16994/bag ;  >
-      au < manifest ; exists ; 2018 ; 978-3-946198-32-1 ; The Truth about the Desert (978-3-946198-32-1) ; 10.16994/bai ;  >
+      au < testing ; exists ; 2018 ; 978-3-946198-32-1 ; The Truth about the Desert (978-3-946198-32-1) ; m/10.16994/bai ;  >
       au < manifest ; exists ; 2018 ; 978-3-946198-28-4 ; Colonised by Wankers (978-3-946198-28-4) ; 10.16994/baj ;  >
       au < manifest ; exists ; 2018 ; 978-3-946198-36-9 ; An Archaeology of Art and Writing (978-3-946198-36-9) ; 10.16994/bak ;  >
       au < manifest ; exists ; 2019 ; 978-3-946198-40-6 ; Muster und Bedeutung (978-3-946198-40-6) ; 10.16994/bam ;  >
@@ -273,7 +272,7 @@
       au < manifest ; exists ; 2010 ; 978-0-271-03672-4 ; Multilingualism and Mother Tongue in Medieval French, Occitan, and Catalan Narratives (978-0-271-03672-4) ; 10.5325/book11 ;  >
       au < manifest ; exists ; 2011 ; 978-0-271-03775-2 ; Transcending Textuality (978-0-271-03775-2) ; 10.5325/book12 ;  >
       au < manifest ; exists ; 2014 ; 978-0-9885170-6-6 ; Viscous Expectations (978-0-9885170-6-6) ; 10.5325/book13 ;  >
-      au < manifest ; exists ; 2019 ; 978-0-2710811-8-2 ; Passing to América (978-0-2710811-8-2) ; 10.5325/book14 ;  >
+      au < testing ; exists ; 2019 ; 978-0-2710811-8-2 ; Passing to América (978-0-2710811-8-2) ; m/10.5325/book14 ;  >
 
     }
 
@@ -396,7 +395,7 @@
       au < manifest ; exists ; 2020 ; 978-1-911529-68-2 ; Decentralised Energy (978-1-911529-68-2) ; 10.5334/bcf ;  >
       au < manifest ; exists ; 2020 ; 978-1-911529-88-0 ; Dangerous Science (978-1-911529-88-0) ; 10.5334/bci ;  >
       au < manifest ; exists ; 2020 ; 978-1-911-52984-2 ; Communicating the Past in the Digital Age (978-1-911-52984-2) ; 10.5334/bch ;  >
-      au < manifest ; exists ; 2020 ; 978-1-911529-60-6 ; Cultural heritage in the realm of the commons (978-1-911529-60-6) ; 10.5334/bcj ;  >
+      au < testing ; exists ; 2020 ; 978-1-911529-60-6 ; Cultural heritage in the realm of the commons (978-1-911529-60-6) ; e/10.5334/bcj ;  >
 
     }
 
@@ -442,7 +441,7 @@
       au < manifest ; exists ; 2016 ; 978-0-520-29251-2 ; Luxury and Rubble (978-0-520-29251-2) ; 10.1525/luminos.20 ;  >
       au < manifest ; exists ; 2016 ; 978-0-520-29124-9 ; Keys to Play (978-0-520-29124-9) ; 10.1525/luminos.16 ;  >
       au < manifest ; exists ; 2016 ; 978-0-520-29242-0 ; Water and Los Angeles (978-0-520-29242-0) ; 10.1525/luminos.21 ;  >
-      au < manifest ; exists ; 2016 ; 978-0-520-29343-4 ; A Vietnamese Moses (978-0-520-29343-4) ; 10.1525/luminos.22 ;  >
+      au < testing ; exists ; 2016 ; 978-0-520-29343-4 ; A Vietnamese Moses (978-0-520-29343-4) ; m/10.1525/luminos.22 ;  >
       au < manifest ; exists ; 2016 ; 978-0-520-29413-4 ; Afghanistan's Islam (978-0-520-29413-4) ; 10.1525/luminos.23 ;  >
       au < manifest ; exists ; 2017 ; 978-0-520-29381-6 ; Almost Hollywood, Nearly New Orleans (978-0-520-29381-6) ; 10.1525/luminos.25 ;  >
       au < manifest ; exists ; 2017 ; 978-0-520-29301-4 ; Hindu Pluralism (978-0-520-29301-4) ; 10.1525/luminos.24 ;  >
@@ -613,8 +612,32 @@
       au < manifest ; exists ; 2018 ; 978-1-912482-08-5 ; Oysters, nightingales and cooking pots (978-1-912482-08-5) ; 10.22599/Corbiere ;  >
       au < manifest ; exists ; 2019 ; 978-1-912482-16-0 ; Voices and Practices in Applied Linguistics (978-1-912482-16-0) ; 10.22599/BAAL1 ;  >
       au < manifest ; exists ; 2020 ; 978-1-912482-20-7 ; Dickens After Dickens (978-1-912482-20-7) ; 10.22599/DickensAfterDickens ;  >
-      au < manifest ; exists ; 2020 ; 978-1-912482-28-3 ; Sheffield Castle (978-1-912482-28-3) ; 10.22599/SheffieldCastle ;  >
+      au < testing ; exists ; 2020 ; 978-1-912482-28-3 ; Sheffield Castle (978-1-912482-28-3) ; m/10.22599/SheffieldCastle ;  >
       au < manifest ; exists ; 2020 ; 978-1-912482-24-5 ; Capability Brown, Royal Gardener (978-1-912482-24-5) ; 10.22599/CapabilityBrown ;  >
+
+    }
+
+    {
+
+          title <
+            name = University of Westminster Press
+          >
+
+          param[base_url] = https://www.uwestminsterpress.co.uk/
+
+          au < testing ; exists ; 2021 ; 978-1-912656-92-9 ; Fashion Media and Sustainability  (978-1-912656-92-9) ; m/10.16997/book50 ;  >
+
+    }
+
+    {
+
+          title <
+            name = Stockholm University Press
+          >
+
+          param[base_url] = https://www.stockholmuniversitypress.se/
+
+          au < testing ; exists ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II  ( 	978-91-7635-125-3) ; m/10.16997/book50 ;  >
 
     }
 
