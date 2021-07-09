@@ -1989,7 +1989,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; Geburtshilfe und Frauenheilkunde Volume 62 ; 62 ; >
    au < manifest ; exists ; 2003 ; 2003 ; Geburtshilfe und Frauenheilkunde Volume 63 ; 63 ; >
    au < manifest ; exists ; 2004 ; 2004 ; Geburtshilfe und Frauenheilkunde Volume 64 ; 64 ; >
-   au < testing ; exists ; 2005 ; 2005 ; Geburtshilfe und Frauenheilkunde Volume 65 ; 65 ; >
+   au < ready ; exists ; 2005 ; 2005 ; Geburtshilfe und Frauenheilkunde Volume 65 ; 65 ; >
    au < ready ; exists ; 2006 ; 2006 ; Geburtshilfe und Frauenheilkunde Volume 66 ; 66 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Geburtshilfe und Frauenheilkunde Volume 67 ; 67 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Geburtshilfe und Frauenheilkunde Volume 68 ; 68 ; >
@@ -2197,7 +2197,7 @@
 
    au < manifest ; exists ; 2004 ; 2004 ; Hebamme Die Volume 17 ; 17 ; >
    au < testing ; exists ; 2005 ; 2005 ; Hebamme Die Volume 18 ; 18 ; >
-   au < testing ; exists ; 2006 ; 2006 ; Hebamme Die Volume 19 ; 19 ; >
+   au < ready ; exists ; 2006 ; 2006 ; Hebamme Die Volume 19 ; 19 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Hebamme Die Volume 20 ; 20 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Hebamme Die Volume 21 ; 21 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Hebamme Die Volume 22 ; 22 ; reingest2.clockss.org:8085 >
@@ -2227,7 +2227,7 @@
     param[journal_id] = 10.1055/s-00000130
     comment[years] = 2005 inclusive
 
-   au < testing ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 84 ; 84 ; >
+   au < notReady ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 84 ; 84 ; > # 500 error on https://www.thieme-connect.de/products/ejournals/issues/10.1055/s-00000130/2005
 
   }
 
@@ -2479,7 +2479,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; intensiv Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; 2003 ; intensiv Volume 11 ; 11 ; >
     au < manifest ; exists ; 2004 ; 2004 ; intensiv Volume 12 ; 12 ; >
-    au < testing ; exists ; 2005 ; 2005 ; intensiv Volume 13 ; 13 ; >
+    au < ready ; exists ; 2005 ; 2005 ; intensiv Volume 13 ; 13 ; >
     au < ready ; exists ; 2006 ; 2006 ; intensiv Volume 14 ; 14 ; >
     au < crawling ; exists ; 2007 ; 2007 ; intensiv Volume 15 ; 15 ; >
     au < crawling ; exists ; 2008 ; 2008 ; intensiv Volume 16 ; 16 ; >
@@ -2896,7 +2896,7 @@
     comment[years] = 2004-current
 
     au < manifest ; exists ; 2004 ; 2004 ; Journal of Knee Surgery Volume 17 ; 17 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 18 ; 18 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 18 ; 18 ; >
     au < ready ; exists ; 2006 ; 2006 ; Journal of Knee Surgery Volume 19 ; 19 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 20 ; 20 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Knee Surgery Volume 21 ; 21 ; >
@@ -3217,7 +3217,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Journal of Reconstructive Microsurgery Volume 18 ; 18 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Journal of Reconstructive Microsurgery Volume 19 ; 19 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Journal of Reconstructive Microsurgery Volume 20 ; 20 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Journal of Reconstructive Microsurgery Volume 21 ; 21 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Journal of Reconstructive Microsurgery Volume 21 ; 21 ; >
     au < ready ; exists ; 2006 ; 2006 ; Journal of Reconstructive Microsurgery Volume 22 ; 22 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Journal of Reconstructive Microsurgery Volume 23 ; 23 ; >
     au < notReady ; exists ; 2008 ; 2008 ; Journal of Reconstructive Microsurgery Volume 24 ; 24 ; > #no metadata
@@ -3344,7 +3344,7 @@
     param[journal_id] = 10.1055/s-00000129
     comment[years] = 2005-current
 
-    au < testing ; exists ; 2005 ; 2005 ; Kardiologie up2date Volume 1 ; 1 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Kardiologie up2date Volume 1 ; 1 ; >
     au < ready ; exists ; 2006 ; 2006 ; Kardiologie up2date Volume 2 ; 2 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Kardiologie up2date Volume 3 ; 3 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Kardiologie up2date Volume 4 ; 4 ; >
@@ -3462,7 +3462,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Klinische Monatsblätter für Augenheilkunde Volume 219 ; 219 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Klinische Monatsblätter für Augenheilkunde Volume 220 ; 220 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Klinische Monatsblätter für Augenheilkunde Volume 221 ; 221 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Klinische Monatsblätter für Augenheilkunde Volume 222 ; 222 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Klinische Monatsblätter für Augenheilkunde Volume 222 ; 222 ; >
     au < ready ; exists ; 2006 ; 2006 ; Klinische Monatsblätter für Augenheilkunde Volume 223 ; 223 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Klinische Monatsblätter für Augenheilkunde Volume 224 ; 224 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Klinische Monatsblätter für Augenheilkunde Volume 225 ; 225 ; >
@@ -3576,7 +3576,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Klinische Pädiatrie Volume 214 ; 214 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Klinische Pädiatrie Volume 215 ; 215 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Klinische Pädiatrie Volume 216 ; 216 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Klinische Pädiatrie Volume 217 ; 217 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Klinische Pädiatrie Volume 217 ; 217 ; >
     au < ready ; exists ; 2006 ; 2006 ; Klinische Pädiatrie Volume 218 ; 218 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Klinische Pädiatrie Volume 219 ; 219 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Klinische Pädiatrie Volume 220 ; 220 ; >
@@ -3608,7 +3608,7 @@
     #years = 2004-current
 
     au < manifest ; exists ; 2004 ; 2004 ; kma - Das Gesundheitswirtschaftsmagazin Volume 9 ; 9 ; >
-    au < testing ; exists ; 2005 ; 2005 ; kma - Das Gesundheitswirtschaftsmagazin Volume 10 ; 10 ; >
+    au < ready ; exists ; 2005 ; 2005 ; kma - Das Gesundheitswirtschaftsmagazin Volume 10 ; 10 ; >
     au < ready ; exists ; 2006 ; 2006 ; kma - Das Gesundheitswirtschaftsmagazin Volume 11 ; 11 ; >
     au < crawling ; exists ; 2007 ; 2007 ; kma - Das Gesundheitswirtschaftsmagazin Volume 12 ; 12 ; >
     au < crawling ; exists ; 2008 ; 2008 ; kma - Das Gesundheitswirtschaftsmagazin Volume 13 ; 13 ; >
@@ -3674,7 +3674,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Krankenhauspsychiatrie Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Krankenhauspsychiatrie Volume 14 ; 14 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Krankenhauspsychiatrie Volume 15 ; 15 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Krankenhauspsychiatrie Volume 16 ; 16 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Krankenhauspsychiatrie Volume 16 ; 16 ; >
     au < ready ; exists ; 2006 ; 2006 ; Krankenhauspsychiatrie Volume 17 ; 17 ; >
 
   }
@@ -4062,7 +4062,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Notarzt Der Volume 18 ; 18 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Notarzt Der Volume 19 ; 19 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Notarzt Der Volume 20 ; 20 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Notarzt Der Volume 21 ; 21 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Notarzt Der Volume 21 ; 21 ; >
     au < ready ; exists ; 2006 ; 2006 ; Notarzt Der Volume 22 ; 22 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Notarzt Der Volume 23 ; 23 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Notarzt Der Volume 24 ; 24 ; >
@@ -4321,7 +4321,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Osteosynthesis & Trauma Care Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Osteosynthesis & Trauma Care Volume 11 ; 11 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Osteosynthesis & Trauma Care Volume 12 ; 12 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Osteosynthesis & Trauma Care Volume 13 ; 13 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Osteosynthesis & Trauma Care Volume 13 ; 13 ; >
     au < ready ; exists ; 2006 ; 2006 ; Osteosynthesis & Trauma Care Volume 14 ; 14 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Osteosynthesis & Trauma Care Volume 15 ; 15 ; >
 
@@ -4402,7 +4402,7 @@
 
     au < manifest ; exists ; 2003 ; 2003 ; pferde spiegel Volume 6 ; 6 ; >
     au < manifest ; exists ; 2004 ; 2004 ; pferde spiegel Volume 7 ; 7 ; >
-    au < testing ; exists ; 2005 ; 2005 ; pferde spiegel Volume 8 ; 8 ; >
+    au < ready ; exists ; 2005 ; 2005 ; pferde spiegel Volume 8 ; 8 ; >
     au < ready ; exists ; 2006 ; 2006 ; pferde spiegel Volume 9 ; 9 ; >
     au < crawling ; exists ; 2007 ; 2007 ; pferde spiegel Volume 10 ; 10 ; >
     au < crawling ; exists ; 2008 ; 2008 ; pferde spiegel Volume 11 ; 11 ; >
@@ -4516,7 +4516,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 12 ; 12 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 13 ; 13 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 14 ; 14 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 15 ; 15 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 15 ; 15 ; >
     au < ready ; exists ; 2006 ; 2006 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 16 ; 16 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 17 ; 17 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 18 ; 18 ; >
@@ -4616,7 +4616,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; PiD - Psychotherapie im Dialog Volume 3 ; 3 ; >
     au < manifest ; exists ; 2003 ; 2003 ; PiD - Psychotherapie im Dialog Volume 4 ; 4 ; >
     au < manifest ; exists ; 2004 ; 2004 ; PiD - Psychotherapie im Dialog Volume 5 ; 5 ; >
-    au < testing ; exists ; 2005 ; 2005 ; PiD - Psychotherapie im Dialog Volume 6 ; 6 ; >
+    au < ready ; exists ; 2005 ; 2005 ; PiD - Psychotherapie im Dialog Volume 6 ; 6 ; >
     au < ready ; exists ; 2006 ; 2006 ; PiD - Psychotherapie im Dialog Volume 7 ; 7 ; >
     au < crawling ; exists ; 2007 ; 2007 ; PiD - Psychotherapie im Dialog Volume 8 ; 8 ; >
     au < crawling ; exists ; 2008 ; 2008 ; PiD - Psychotherapie im Dialog Volume 9 ; 9 ; >
@@ -4947,7 +4947,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; Psychiatrische Praxis Volume 29 ; 29 ; >
    au < manifest ; exists ; 2003 ; 2003 ; Psychiatrische Praxis Volume 30 ; 30 ; >
    au < manifest ; exists ; 2004 ; 2004 ; Psychiatrische Praxis Volume 31 ; 31 ; >
-   au < testing ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
+   au < ready ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
    au < ready ; exists ; 2006 ; 2006 ; Psychiatrische Praxis Volume 33 ; 33 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Psychiatrische Praxis Volume 34 ; 34 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Psychiatrische Praxis Volume 35 ; 35 ; >
@@ -5082,7 +5082,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; Rehabilitation Die Volume 41 ; 41 ; >
    au < manifest ; exists ; 2003 ; 2003 ; Rehabilitation Die Volume 42 ; 42 ; >
    au < manifest ; exists ; 2004 ; 2004 ; Rehabilitation Die Volume 43 ; 43 ; >
-   au < testing ; exists ; 2005 ; 2005 ; Rehabilitation Die Volume 44 ; 44 ; >
+   au < ready ; exists ; 2005 ; 2005 ; Rehabilitation Die Volume 44 ; 44 ; >
    au < ready ; exists ; 2006 ; 2006 ; Rehabilitation Die Volume 45 ; 45 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Rehabilitation Die Volume 46 ; 46 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Rehabilitation Die Volume 47 ; 47 ; >
@@ -5341,7 +5341,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; >
    au < manifest ; exists ; 2003 ; 2003 ; Seminars in Interventional Radiology Volume 20 ; 20 ; >
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
-   au < testing ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
+   au < ready ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
    au < ready ; exists ; 2006 ; 2006 ; Seminars in Interventional Radiology Volume 23 ; 23 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 24 ; 24 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 25 ; 25 ; >
@@ -5548,7 +5548,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; Seminars in Plastic Surgery Volume 16 ; 16 ; >
    au < manifest ; exists ; 2003 ; 2003 ; Seminars in Plastic Surgery Volume 17 ; 17 ; >
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Plastic Surgery Volume 18 ; 18 ; >
-   au < testing ; exists ; 2005 ; 2005 ; Seminars in Plastic Surgery Volume 19 ; 19 ; >
+   au < ready ; exists ; 2005 ; 2005 ; Seminars in Plastic Surgery Volume 19 ; 19 ; >
    au < ready ; exists ; 2006 ; 2006 ; Seminars in Plastic Surgery Volume 20 ; 20 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Plastic Surgery Volume 21 ; 21 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Plastic Surgery Volume 22 ; 22 ; >
@@ -5616,7 +5616,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; Seminars in Reproductive Medicine Volume 20 ; 20 ; >
    au < manifest ; exists ; 2003 ; 2003 ; Seminars in Reproductive Medicine Volume 21 ; 21 ; >
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Reproductive Medicine Volume 22 ; 22 ; >
-   au < testing ; exists ; 2005 ; 2005 ; Seminars in Reproductive Medicine Volume 23 ; 23 ; >
+   au < ready ; exists ; 2005 ; 2005 ; Seminars in Reproductive Medicine Volume 23 ; 23 ; >
    au < ready ; exists ; 2006 ; 2006 ; Seminars in Reproductive Medicine Volume 24 ; 24 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Reproductive Medicine Volume 25 ; 25 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Seminars in Reproductive Medicine Volume 26 ; 26 ; >
@@ -5659,7 +5659,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; >
    au < manifest ; exists ; 2003 ; 2003 ; Seminars in Respiratory and Critical Care Medicine Volume 24 ; 24 ; >
    au < manifest ; exists ; 2004 ; 2004 ; Seminars in Respiratory and Critical Care Medicine Volume 25 ; 25 ; >
-   au < testing ; exists ; 2005 ; 2005 ; Seminars in Respiratory and Critical Care Medicine Volume 26 ; 26 ; >
+   au < ready ; exists ; 2005 ; 2005 ; Seminars in Respiratory and Critical Care Medicine Volume 26 ; 26 ; >
    au < ready ; exists ; 2006 ; 2006 ; Seminars in Respiratory and Critical Care Medicine Volume 27 ; 27 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Respiratory and Critical Care Medicine Volume 28 ; 28 ; >
    au < ready ; exists ; 2008 ; 2008 ; Seminars in Respiratory and Critical Care Medicine Volume 29 ; 29 ; >
@@ -5712,7 +5712,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Seminars in Speech and Language Volume 23 ; 23 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Seminars in Speech and Language Volume 24 ; 24 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Seminars in Speech and Language Volume 25 ; 25 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Seminars in Speech and Language Volume 26 ; 26 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Seminars in Speech and Language Volume 26 ; 26 ; >
     au < ready ; exists ; 2006 ; 2006 ; Seminars in Speech and Language Volume 27 ; 27 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Seminars in Speech and Language Volume 28 ; 28 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Seminars in Speech and Language Volume 29 ; 29 ; >
@@ -5811,7 +5811,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
 
   }
 
@@ -5828,7 +5828,7 @@
     comment[years] = 2004-current
 
     au < manifest ; exists ; 2004 ; 2004 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 1 ; 1 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2 ; 2 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2 ; 2 ; >
     au < ready ; exists ; 2006 ; 2006 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 3 ; 3 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 4 ; 4 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 5 ; 5 ; >
@@ -5985,7 +5985,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; Sportverletzung - Sportschaden Volume 16 ; 16 ; >
    au < manifest ; exists ; 2003 ; 2003 ; Sportverletzung - Sportschaden Volume 17 ; 17 ; >
    au < manifest ; exists ; 2004 ; 2004 ; Sportverletzung - Sportschaden Volume 18 ; 18 ; >
-   au < testing ; exists ; 2005 ; 2005 ; Sportverletzung - Sportschaden Volume 19 ; 19 ; >
+   au < ready ; exists ; 2005 ; 2005 ; Sportverletzung - Sportschaden Volume 19 ; 19 ; >
    au < ready ; exists ; 2006 ; 2006 ; Sportverletzung - Sportschaden Volume 20 ; 20 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Sportverletzung - Sportschaden Volume 21 ; 21 ; >
    au < crawling ; exists ; 2008 ; 2008 ; Sportverletzung - Sportschaden Volume 22 ; 22 ; >
@@ -6228,7 +6228,7 @@
    au < manifest ; exists ; 2002 ; 2002 ; SYNTHESIS Volume 34 ; 34 ; >
    au < manifest ; exists ; 2003 ; 2003 ; SYNTHESIS Volume 35 ; 35 ; >
    au < manifest ; exists ; 2004 ; 2004 ; SYNTHESIS Volume 36 ; 36 ; >
-   au < testing ; exists ; 2005 ; 2005 ; SYNTHESIS Volume 37 ; 37 ; >
+   au < ready ; exists ; 2005 ; 2005 ; SYNTHESIS Volume 37 ; 37 ; >
    au < ready ; exists ; 2006 ; 2006 ; SYNTHESIS Volume 38 ; 38 ; >
    au < crawling ; exists ; 2007 ; 2007 ; SYNTHESIS Volume 39 ; 39 ; >
    au < crawling ; exists ; 2008 ; 2008 ; SYNTHESIS Volume 40 ; 40 ; >
@@ -6755,7 +6755,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Zeitschrift für Gastroenterologie Volume 40 ; 40 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Zeitschrift für Gastroenterologie Volume 41 ; 41 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Gastroenterologie Volume 42 ; 42 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Gastroenterologie Volume 43 ; 43 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Gastroenterologie Volume 43 ; 43 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Gastroenterologie Volume 44 ; 44 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Gastroenterologie Volume 45 ; 45 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Gastroenterologie Volume 46 ; 46 ; >
@@ -6792,7 +6792,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 206 ; 206 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 207 ; 207 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 208 ; 208 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 209 ; 209 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 209 ; 209 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 210 ; 210 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 211 ; 211 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 212 ; 212 ; >
@@ -6873,7 +6873,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Zeitschrift für Klassische Homöopathie Volume 46 ; 46 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Zeitschrift für Klassische Homöopathie Volume 47 ; 47 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Klassische Homöopathie Volume 48 ; 48 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Klassische Homöopathie Volume 49 ; 49 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Klassische Homöopathie Volume 49 ; 49 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Klassische Homöopathie Volume 50 ; 50 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Klassische Homöopathie Volume 51 ; 51 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Klassische Homöopathie Volume 52 ; 52 ; >
@@ -7019,7 +7019,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2002 ; 0 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2003 ; 0 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 0 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 0 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 0 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2006 ; 0 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 ; >
 
@@ -7074,7 +7074,7 @@
     param[journal_id] = 10.1055/s-00000101
     comment[years] = 2005-current
 
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Phytotherapie Volume 26 ; 26 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Phytotherapie Volume 26 ; 26 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Phytotherapie Volume 27 ; 27 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Phytotherapie Volume 28 ; 28 ; >
     au < ready ; exists ; 2008 ; 2008 ; Zeitschrift für Phytotherapie Volume 29 ; 29 ; >
@@ -7110,7 +7110,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Zeitschrift für Sexualforschung Volume 15 ; 15 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Zeitschrift für Sexualforschung Volume 16 ; 16 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Sexualforschung Volume 17 ; 17 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Sexualforschung Volume 18 ; 18 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Sexualforschung Volume 18 ; 18 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Sexualforschung Volume 19 ; 19 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Sexualforschung Volume 20 ; 20 ; >
     au < testing ; exists ; 2008 ; 2008 ; Zeitschrift für Sexualforschung Volume 21 ; 21 ; >
@@ -7147,7 +7147,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Zeitschrift für Chirurgie Volume 127 ; 127 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Zeitschrift für Chirurgie Volume 128 ; 128 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Chirurgie Volume 129 ; 129 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Chirurgie Volume 130 ; 130 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Chirurgie Volume 130 ; 130 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Chirurgie Volume 131 ; 131 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Chirurgie Volume 132 ; 132 ; >
     au < testing ; exists ; 2008 ; 2008 ; Zeitschrift für Chirurgie Volume 133 ; 133 ; >
@@ -7184,7 +7184,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Zeitschrift für Gynäkologie Volume 124 ; 124 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Zeitschrift für Gynäkologie Volume 125 ; 125 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Gynäkologie Volume 126 ; 126 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Gynäkologie Volume 127 ; 127 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Gynäkologie Volume 127 ; 127 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Gynäkologie Volume 128 ; 128 ; >
 
   }
@@ -7221,7 +7221,7 @@
 
     au < manifest ; exists ; 2003 ; 2003 ; Zeitschrift für Allgemeinmedizin Volume 79 ; 79 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Zeitschrift für Allgemeinmedizin Volume 80 ; 80 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Zeitschrift für Allgemeinmedizin Volume 81 ; 81 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Allgemeinmedizin Volume 81 ; 81 ; >
     au < ready ; exists ; 2006 ; 2006 ; Zeitschrift für Allgemeinmedizin Volume 82 ; 82 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Allgemeinmedizin Volume 83 ; 83 ; >
     au < ready ; exists ; 2008 ; 2008 ; Zeitschrift für Allgemeinmedizin Volume 84 ; 84 ; >
@@ -7527,7 +7527,7 @@
     au < manifest ; exists ; 2003 ; 2003 ; Kinder- und Jugendmedizin Volume 3 ; 3 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Kinder- und Jugendmedizin Volume 4 ; 4 ; >
     au < testing ; exists ; 2005 ; 2005 ; Kinder- und Jugendmedizin Volume 5 ; 5 ; >
-    au < testing ; exists ; 2006 ; 2006 ; Kinder- und Jugendmedizin Volume 6 ; 6 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Kinder- und Jugendmedizin Volume 6 ; 6 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Kinder- und Jugendmedizin Volume 7 ; 7 ; >
     au < testing ; exists ; 2008 ; 2008 ; Kinder- und Jugendmedizin Volume 8 ; 8 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Kinder- und Jugendmedizin Volume 9 ; 9 ; reingest5.clockss.org:8082 >
@@ -7590,8 +7590,8 @@
 
     au < manifest ; exists ; 2003 ; 2003 ; Nervenheilkunde Volume 22 ; 22 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Nervenheilkunde Volume 23 ; 23 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Nervenheilkunde Volume 24 ; 24 ; >
-    au < testing ; exists ; 2006 ; 2006 ; Nervenheilkunde Volume 25 ; 25 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Nervenheilkunde Volume 24 ; 24 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Nervenheilkunde Volume 25 ; 25 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Nervenheilkunde Volume 26 ; 26 ; >
     au < testing ; exists ; 2008 ; 2008 ; Nervenheilkunde Volume 27 ; 27 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Nervenheilkunde Volume 28 ; 28 ; reingest5.clockss.org:8082 >
@@ -7627,7 +7627,7 @@
     au < manifest ; exists ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 ; >
     au < ready ; exists ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 ; >
     au < testing ; exists ; 2008 ; 2008 ; Nuklearmedizin Volume 47 ; 47 ; >
