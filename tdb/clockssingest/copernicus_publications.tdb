@@ -41,7 +41,7 @@
       au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 14 ; 14 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 15 ; 15 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 16 ; 16 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 17 ; 17 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Advances in Geosciences Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 18 ; 18 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 19 ; 19 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 20 ; 20 ; >
@@ -273,7 +273,7 @@
       au < finished ; manifest ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Volume 2 ; 2 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Atmospheric Chemistry and Physics Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2005 ; 2005 ; Atmospheric Chemistry and Physics Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2006 ; 2006 ; Atmospheric Chemistry and Physics Volume 6 ; 6 ; >
       au < finished ; manifest ; 2007 ; 2007 ; Atmospheric Chemistry and Physics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
@@ -337,7 +337,7 @@
 
       au < crawling ; exists ; 2004 ; 2004 ; Biogeosciences Volume 1 ; 1 ; >
       au < crawling ; exists ; 2005 ; 2005 ; Biogeosciences Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Biogeosciences Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2006 ; 2006 ; Biogeosciences Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2007 ; 2007 ; Biogeosciences Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2008 ; 2008 ; Biogeosciences Volume 5 ; 5 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Biogeosciences Volume 6 ; 6 ; >
@@ -799,7 +799,7 @@
 
       au < crawling ; exists ; 2008 ; 2008 ; Geoscientific Model Development Volume 1 ; 1 ; >
       au < finished ; manifest ; 2009 ; 2009 ; Geoscientific Model Development Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 2010 ; Geoscientific Model Development Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Geoscientific Model Development Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 ; >
@@ -882,11 +882,11 @@
       au < crawling ; exists ; 2002 ; 2002 ; Hydrology and Earth System Sciences Volume 6 ; 6 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Hydrology and Earth System Sciences Volume 7 ; 7 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Hydrology and Earth System Sciences Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; Hydrology and Earth System Sciences Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; Hydrology and Earth System Sciences Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2006 ; 2006 ; Hydrology and Earth System Sciences Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; Hydrology and Earth System Sciences Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; Hydrology and Earth System Sciences Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; Hydrology and Earth System Sciences Volume 13 ; 13 ; >
+      au < finished ; manifest ; 2007 ; 2007 ; Hydrology and Earth System Sciences Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Hydrology and Earth System Sciences Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; Hydrology and Earth System Sciences Volume 13 ; 13 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Volume 14 ; 14 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 ; >
@@ -1135,7 +1135,7 @@
       param[base_url] = https://jbji.copernicus.org/
       param[home_url] = https://www.journal-of-bone-and-joint-infection.net/
 
-      au < frozen ; exists ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2017 ; 2017 ; Journal of Bone and Joint Infection Volume 2 ; 2 ; >
       au < crawling ; exists ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; >
       au < finished ; manifest ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -1668,7 +1668,7 @@
       param[base_url] = https://gchron.copernicus.org/
       param[home_url] = https://www.geochronology.net/
 
-      au < frozen ; exists ; 2019 ; 2019 ; Geochronology: Advances in Gechronological Science Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Geochronology: Advances in Gechronological Science Volume 1 ; 1 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; >
       au < ready ; exists ; 2021 ; 2021 ; Geochronology: Advances in Gechronological Science Volume 3 ; 3 ; >
 
