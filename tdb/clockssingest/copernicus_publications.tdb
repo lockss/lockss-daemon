@@ -352,7 +352,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Biogeosciences Volume 16 ; 16 ; >
       au < finished ; manifest ; 2020 ; 2020 ; Biogeosciences Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2021 ; 2021 ; Biogeosciences Volume 18 ; 18 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Biogeosciences Volume 18 ; 18 ; >
 
   }
 
@@ -452,7 +452,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Earth Surface Dynamics Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth Surface Dynamics Volume 7 ; 7 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Earth Surface Dynamics Volume 8 ; 8 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Earth Surface Dynamics Volume 9 ; 9 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Earth Surface Dynamics Volume 9 ; 9 ; >
 
   }
 
@@ -605,7 +605,7 @@
       param[home_url] = https://www.european-journal-of-mineralogy.net/
 
       au < crawling ; exists ; 2020 ; 2020 ; European Journal of Mineralogy Volume 32 ; 32 ; >
-      au < testing ; exists ; 2021 ; 2021 ; European Journal of Mineralogy Volume 33 ; 33 ; >
+      au < ready ; exists ; 2021 ; 2021 ; European Journal of Mineralogy Volume 33 ; 33 ; >
 
   }
 
@@ -756,7 +756,7 @@
       au < finished ; manifest ; 2018 ; 2018 ; Geoscience Communication Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 2019 ; Geoscience Communication Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; 2020 ; Geoscience Communication Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2021 ; 2021 ; Geoscience Communication Volume 4 ; 4 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Geoscience Communication Volume 4 ; 4 ; >
 
   }
 
