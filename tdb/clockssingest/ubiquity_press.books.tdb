@@ -147,7 +147,7 @@
         name = Kriterium Books
       >
 
-      param[base_url] = http://www.kriterium.se/
+      param[base_url] = https://www.kriterium.se/
 
       au < manifest ; exists ; 2016 ; 978-91-7346-861-9 ; Medeltidens genus (978-91-7346-861-9) ; 10.21524/kriterium.1 ;  >
       au < manifest ; exists ; 2016 ; 978-91-87675-58-4 ; Methods in World History (978-91-87675-58-4) ; 10.21525/kriterium.2 ;  >
@@ -219,7 +219,7 @@
         name = Modern Academic Publishing Books
       >
 
-      param[base_url] = http://www.humanities-map.net/
+      param[base_url] = https://www.humanities-map.net/
 
       au < manifest ; exists ; 2015 ; 978-3-95896-000-8 ; An den Wurzeln der Tugend (978-3-95896-000-8) ; 10.16994/baa ;  >
       au < manifest ; exists ; 2015 ; 978-3-946198-04-8 ; Architekturzeichnungen der deutschen Renaissance (978-3-946198-04-8) ; 10.16994/bac ;  >
@@ -418,7 +418,7 @@
         name = University of California Press Books
       >
 
-      param[base_url] = http://www.luminosoa.org/
+      param[base_url] = https://www.luminosoa.org/
 
       au < manifest ; exists ; 2015 ; 978-0-520-28763-1 ; Art of Fugue (978-0-520-28763-1) ; 10.1525/luminos.1 ;  >
       au < manifest ; exists ; 2015 ; 978-0-520-28771-6 ; The Place of Devotion (978-0-520-28771-6) ; 10.1525/luminos.2 ;  >
@@ -637,7 +637,7 @@
 
           param[base_url] = https://www.stockholmuniversitypress.se/
 
-          au < testing ; exists ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II  ( 	978-91-7635-125-3) ; m/10.16997/book50 ;  >
+          au < testing ; exists ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II  ( 	978-91-7635-125-3) ; e/10.16993/bbf/ ;  >
 
     }
 
