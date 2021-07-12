@@ -39,7 +39,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Oncology Letters Volume 18 ; 18 ; >
       au < ready ; exists ; 2020 ; Oncology Letters Volume 19 ; 19 ; >
       au < ready ; exists ; 2020 ; Oncology Letters Volume 20 ; 20 ; >
-      au < ready ; exists ; 2021 ; Oncology Letters Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2021 ; Oncology Letters Volume 21 ; 21 ; >
       au < crawling ; exists ; 2021 ; Oncology Letters Volume 22 ; 22 ; >
 
     }
@@ -137,9 +137,9 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular and Clinical Oncology Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular and Clinical Oncology Volume 11 ; 11 ; >
       au < ready ; exists ; 2020 ; Molecular and Clinical Oncology Volume 12 ; 12 ; >
-      au < ready ; exists ; 2020 ; Molecular and Clinical Oncology Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2020 ; Molecular and Clinical Oncology Volume 13 ; 13 ; >
       au < crawling ; exists ; 2021 ; Molecular and Clinical Oncology Volume 14 ; 14 ; >
-      au < ready ; exists ; 2021 ; Molecular and Clinical Oncology Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2021 ; Molecular and Clinical Oncology Volume 15 ; 15 ; >
 
     }
   
@@ -229,7 +229,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Molecular Medicine Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Molecular Medicine Volume 42 ; 42 ; >
       au < ready ; exists ; 2019 ; International Journal of Molecular Medicine Volume 43 ; 43 ; >
-      au < ready ; exists ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; >
+      au < crawling ; exists ; 2019 ; International Journal of Molecular Medicine Volume 44 ; 44 ; >
       au < ready ; exists ; 2020 ; International Journal of Molecular Medicine Volume 45 ; 45 ; >
       au < ready ; exists ; 2020 ; International Journal of Molecular Medicine Volume 46 ; 46 ; >
       au < crawling ; exists ; 2021 ; International Journal of Molecular Medicine Volume 47 ; 47 ; >
@@ -257,9 +257,9 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Biomedical Reports Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Biomedical Reports Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Biomedical Reports Volume 11 ; 11 ; >
-      au < ready ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
       au < ready ; exists ; 2020 ; Biomedical Reports Volume 13 ; 13 ; >
-      au < ready ; exists ; 2021 ; Biomedical Reports Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2021 ; Biomedical Reports Volume 14 ; 14 ; >
       au < crawling ; exists ; 2021 ; Biomedical Reports Volume 15 ; 15 ; >
 
     }
