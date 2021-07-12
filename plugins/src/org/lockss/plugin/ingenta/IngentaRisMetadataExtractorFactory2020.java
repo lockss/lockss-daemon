@@ -63,26 +63,79 @@ public class IngentaRisMetadataExtractorFactory2020 implements FileMetadataExtra
             ArticleMetadata am = extract(target, cu);
             String url = cu.getUrl();
 
+            log.debug3("Ingenta url =======" + url + "===========");
+
             String html_appendix = "?crawler=true&mimetype=text/html";
             String html_appendix2 = "?crawler=true";
             String new_access_url = url;
             ArchivalUnit au = cu.getArchivalUnit();
 
-            CachedUrl potential_cu = cu.getArchivalUnit().makeCachedUrl(new_access_url);
+            CachedUrl potential_cu = null;
+            CachedUrl pdf_potential_cu = null;
 
-            if (url != null && !url.contains(html_appendix)) {
-                new_access_url = url + "?crawler=true&mimetype=text/html";
-            }  else if (url != null && !url.contains(html_appendix2)) {
-                new_access_url = url + "?crawler=true";
-            }
+            /*
+            Over the years, Ingenta has been sending inconsistent data across two different domains,
+            In order to make sense of the data backwards compitable, need to test multiple cases as beneath
+             */
 
-            if ( (potential_cu != null) && (potential_cu.hasContent()) ){
-                if (am.get(MetadataField.FIELD_ACCESS_URL) == null) {
-                    am.put(MetadataField.FIELD_ACCESS_URL, new_access_url);
+            if (url.contains("?format=ris")) {
+                // First step, test if www version PDF file exist: http://www.ingentaconnect.com/content/iuatld/ijtld/2016/00000020/00000011/art00001?crawler=true&mimetype=application/pdf
+                new_access_url = url.replace("?format=ris", "") + "?crawler=true&mimetype=application/pdf";
+                potential_cu = cu.getArchivalUnit().makeCachedUrl(new_access_url);
+
+                log.debug3("url = " + url + ", Pre Case: new_access_url = " + new_access_url);
+
+                if ( (potential_cu != null) && (potential_cu.hasContent()) ){
+                    log.debug3("url = " + url + ", CASE-1: new_access_url = " + new_access_url);
+                    if (am.get(MetadataField.FIELD_ACCESS_URL) == null) {
+                        am.put(MetadataField.FIELD_ACCESS_URL, new_access_url);
+                    } else {
+                        am.replace(MetadataField.FIELD_ACCESS_URL, new_access_url);
+                    }
                 } else {
-                    am.replace(MetadataField.FIELD_ACCESS_URL, new_access_url);
+                    // Otherwise,   // First step, test if api version PDF file exist: http://api.ingentaconnect.com/content/iuatld/ijtld/2016/00000020/00000011/art00001?crawler=true&mimetype=application/pdf
+                    String pdf_new_access_url = url.replace("?format=ris", "").replace("www", "api") + "?crawler=true&mimetype=application/pdf";
+                    pdf_potential_cu = cu.getArchivalUnit().makeCachedUrl(pdf_new_access_url);
+
+                    log.debug3("url = " + url + ", Case-2 WWW PDF: new_access_url = " + pdf_new_access_url);
+
+                    if ( (pdf_potential_cu != null) && (pdf_potential_cu.hasContent()) ){
+                        log.debug3("url = " + url + ", CASE-2: new_access_url = " + pdf_new_access_url);
+                        if (am.get(MetadataField.FIELD_ACCESS_URL) == null) {
+                            am.put(MetadataField.FIELD_ACCESS_URL, pdf_new_access_url);
+                        } else {
+                            am.replace(MetadataField.FIELD_ACCESS_URL, pdf_new_access_url);
+                        }
+                    } else {
+                        // If no PDF exist, test text/html: http://www.ingentaconnect.com/content/iuatld/ijtld/2016/00000020/00000011/art00001?crawler=true&mimetype=text/html
+                        new_access_url = url.replace("?format=ris", "") + "?crawler=true&mimetype=text/html";
+                        potential_cu = cu.getArchivalUnit().makeCachedUrl(new_access_url);
+
+                        if ((potential_cu != null) && (potential_cu.hasContent())) {
+                            log.debug3("url = " + url + ", CASE-3: new_access_url = " + new_access_url);
+                            if (am.get(MetadataField.FIELD_ACCESS_URL) == null) {
+                                am.put(MetadataField.FIELD_ACCESS_URL, new_access_url);
+                            } else {
+                                am.replace(MetadataField.FIELD_ACCESS_URL, new_access_url);
+                            }
+                        } else {
+                            // If no PDF exist, test crawler=true only: http://www.ingentaconnect.com/content/iuatld/ijtld/2016/00000020/00000011/art00001?crawler=true
+                            new_access_url = url.replace("?format=ris", "") + "?crawler=true";
+                            potential_cu = cu.getArchivalUnit().makeCachedUrl(new_access_url);
+
+                            if ((potential_cu != null) && (potential_cu.hasContent())) {
+                                log.debug3("url = " + url + ", CASE-4: new_access_url = " + new_access_url);
+                                if (am.get(MetadataField.FIELD_ACCESS_URL) == null) {
+                                    am.put(MetadataField.FIELD_ACCESS_URL, new_access_url);
+                                } else {
+                                    am.replace(MetadataField.FIELD_ACCESS_URL, new_access_url);
+                                }
+                            }
+                        }
+                    }
                 }
             }
+
 
             String publisherName = "Ingenta Connect";
 
