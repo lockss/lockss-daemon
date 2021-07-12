@@ -1005,14 +1005,14 @@
     {
     param[journal_id] = jpiedn
 
-    au < exists ; exists ; 1983 ; Journal of Professional Issues in Engineering Education and Practice Volume 109 ; 109 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1984 ; Journal of Professional Issues in Engineering Education and Practice Volume 110 ; 110 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1985 ; Journal of Professional Issues in Engineering Education and Practice Volume 111 ; 111 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1986 ; Journal of Professional Issues in Engineering Education and Practice Volume 112 ; 112 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1987 ; Journal of Professional Issues in Engineering Education and Practice Volume 113 ; 113 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1988 ; Journal of Professional Issues in Engineering Education and Practice Volume 114 ; 114 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1989 ; Journal of Professional Issues in Engineering Education and Practice Volume 115 ; 115 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1990 ; Journal of Professional Issues in Engineering Education and Practice Volume 116 ; 116 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1983 ; Journal of Professional Issues in Engineering Education and Practice Volume 109 ; 109 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1984 ; Journal of Professional Issues in Engineering Education and Practice Volume 110 ; 110 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1985 ; Journal of Professional Issues in Engineering Education and Practice Volume 111 ; 111 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1986 ; Journal of Professional Issues in Engineering Education and Practice Volume 112 ; 112 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1987 ; Journal of Professional Issues in Engineering Education and Practice Volume 113 ; 113 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1988 ; Journal of Professional Issues in Engineering Education and Practice Volume 114 ; 114 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1989 ; Journal of Professional Issues in Engineering Education and Practice Volume 115 ; 115 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1990 ; Journal of Professional Issues in Engineering Education and Practice Volume 116 ; 116 ; https://ascelibrary.org/ ; >
     }
     {
     param[journal_id] = jpepe3
