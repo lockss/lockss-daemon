@@ -66,16 +66,13 @@ def request_deep_crawl_by_id(host, username, password, auid, refetch_depth, prio
     return zeep.helpers.serialize_object(
         client.service.requestDeepCrawlById(auId=auid, refetchDepth=refetch_depth, priority=priority, force=force))
 
-
 def request_deep_crawl_by_id_list(host, username, password, auids, refetch_depth, priority, force):
     client = _make_client(host, requests_basic_auth(username, password))
-    return client.service.requestDeepCrawlByIdList(auIds=auids, refetchDepth=refetch_depth, priority=priority,
-                                                   force=force)
+    return client.service.requestDeepCrawlByIdList(auIds=auids, refetchDepth=refetch_depth, priority=priority, force=force)
 
 def _do_request_deep_crawl_by_id(options):
     return request_deep_crawl_by_id(options.host, options.username, options.password, options.auid,
                                     options.refetch_depth, options.priority, options.force)
-
 
 def _do_request_deep_crawl_by_id_list(options):
     return request_deep_crawl_by_id_list(options.host, options.username, options.password, options.auids,
@@ -84,19 +81,18 @@ def _do_request_deep_crawl_by_id_list(options):
 def request_crawl_by_id(host, username, password, auid, priority, force):
     client = _make_client(host, requests_basic_auth(username, password))
     return zeep.helpers.serialize_object(
-        client.service.requestDeepCrawlById(auId=auid, priority=priority, force=force))
+        client.service.requestCrawlById(auId=auid, priority=priority, force=force))
 
 def request_crawl_by_id_list(host, username, password, auids, priority, force):
     client = _make_client(host, requests_basic_auth(username, password))
-    return client.service.requestDeepCrawlByIdList(auIds=auids, priority=priority,
-                                                   force=force)
+    return client.service.requestCrawlByIdList(auIds=auids, priority=priority, force=force)
 
 def _do_request_crawl_by_id(options):
-    return request_deep_crawl_by_id(options.host, options.username, options.password, options.auid,
+    return request_crawl_by_id(options.host, options.username, options.password, options.auid,
                                     options.priority, options.force)
 
 def _do_request_crawl_by_id_list(options):
-    return request_deep_crawl_by_id_list(options.host, options.username, options.password, options.auids,
+    return request_crawl_by_id_list(options.host, options.username, options.password, options.auids,
                                          options.priority, options.force)
 
 #
