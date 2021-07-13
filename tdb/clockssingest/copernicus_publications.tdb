@@ -1253,7 +1253,7 @@
       param[home_url] = https://www.mechanical-sciences.net/
 
       au < finished ; manifest ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 ; >
@@ -1280,15 +1280,15 @@
       param[home_url] = https://www.natural-hazards-and-earth-system-sciences.net/
 
       au < finished ; manifest ; 2001 ; 2001 ; Natural Hazards and Earth System Sciences Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2002 ; 2002 ; Natural Hazards and Earth System Sciences Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2003 ; 2003 ; Natural Hazards and Earth System Sciences Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Natural Hazards and Earth System Sciences Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2006 ; 2006 ; Natural Hazards and Earth System Sciences Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Natural Hazards and Earth System Sciences Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2008 ; 2008 ; Natural Hazards and Earth System Sciences Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2002 ; 2002 ; Natural Hazards and Earth System Sciences Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2003 ; 2003 ; Natural Hazards and Earth System Sciences Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; 2005 ; Natural Hazards and Earth System Sciences Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; 2006 ; Natural Hazards and Earth System Sciences Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Natural Hazards and Earth System Sciences Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Natural Hazards and Earth System Sciences Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 ; >
@@ -1465,7 +1465,7 @@
       param[base_url] = https://sd.copernicus.org/
       param[home_url] = https://www.scientific-drilling.net/
 
-      au < crawling ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; reingest4.clockss.org:8082 >
@@ -1529,7 +1529,7 @@
       param[home_url] = https://www.solid-earth.net/
 
       au < finished ; manifest ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; >
@@ -1557,7 +1557,7 @@
       # no publication after 2009
 
       au < finished ; manifest ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; Stephan Mueller Special Publication Series Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
@@ -1620,10 +1620,10 @@
       au < finished ; manifest ; 2002 ; 2002 ; Web Ecology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; 2003 ; Web Ecology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; 2005 ; Web Ecology Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2006 ; 2006 ; Web Ecology Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2006 ; 2006 ; Web Ecology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2007 ; 2007 ; Web Ecology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2008 ; 2008 ; Web Ecology Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Web Ecology Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Web Ecology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; Web Ecology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 2011 ; Web Ecology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 ; >
