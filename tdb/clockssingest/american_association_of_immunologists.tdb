@@ -228,8 +228,8 @@
         au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2019 ; The Journal of Immunology Volume 203 ; 203 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2020 ; The Journal of Immunology Volume 204 ; 204 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2020 ; The Journal of Immunology Volume 205 ; 205 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; ready ; exists ; 2021 ; The Journal of Immunology Volume 206 ; 206 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; ready ; exists ; 2021 ; The Journal of Immunology Volume 207 ; 207 ; https://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; The Journal of Immunology Volume 206 ; 206 ; https://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; The Journal of Immunology Volume 207 ; 207 ; https://www.jimmunol.org/ ; >
 
   }
 
@@ -249,7 +249,7 @@
         au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2018 ; ImmunoHorizons Volume 2 ; 2 ; http://www.immunohorizons.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2019 ; ImmunoHorizons Volume 3 ; 3 ; https://www.immunohorizons.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2020 ; ImmunoHorizons Volume 4 ; 4 ; https://www.immunohorizons.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; ready ; exists ; 2021 ; ImmunoHorizons Volume 5 ; 5 ; https://www.immunohorizons.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; ImmunoHorizons Volume 5 ; 5 ; https://www.immunohorizons.org/ ; >
 
   }
 }
