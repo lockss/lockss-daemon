@@ -66,7 +66,7 @@
     au < manifest ; exists ; 2018 ; African Journal of Paediatric Surgery Volume 15 ; 2018 ; 15 ; https://www.afrjpaedsurg.org/ ; ; >
     au < frozen ; exists ; 2019 ; African Journal of Paediatric Surgery Volume 16 ; 2019 ; 16 ; https://www.afrjpaedsurg.org/ ; ; >
     au < crawling ; exists ; 2020 ; African Journal of Paediatric Surgery Volume 17 ; 2020 ; 17 ; https://www.afrjpaedsurg.org/ ; ; >
-    au < manifest ; exists ; 2021 ; African Journal of Paediatric Surgery Volume 18 ; 2021 ; 18 ; https://www.afrjpaedsurg.org/ ; ; >
+    au < ready ; exists ; 2021 ; African Journal of Paediatric Surgery Volume 18 ; 2021 ; 18 ; https://www.afrjpaedsurg.org/ ; ; >
 
   }
 
@@ -122,7 +122,7 @@
     au < deepCrawl ; exists ; 2018 ; Annals of African Medicine Volume 17 ; 2018 ; 17 ; http://www.annalsafrmed.org/ ; ; >
     au < manifest ; exists ; 2019 ; Annals of African Medicine Volume 18 ; 2019 ; 18 ; https://www.annalsafrmed.org/ ; ; >
     au < crawling ; exists ; 2020 ; Annals of African Medicine Volume 19 ; 2020 ; 19 ; https://www.annalsafrmed.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Annals of African Medicine Volume 20 ; 2021 ; 20 ; https://www.annalsafrmed.org/ ; ; >
+    au < ready ; exists ; 2021 ; Annals of African Medicine Volume 20 ; 2021 ; 20 ; https://www.annalsafrmed.org/ ; ; >
 
   }
 
@@ -156,7 +156,7 @@
     au < manifest ; exists ; 2018 ; Annals of Cardiac Anaesthesia Volume 21 ; 2018 ; 21 ; https://www.annals.in/ ; 500 Error ; >
     au < manifest ; exists ; 2019 ; Annals of Cardiac Anaesthesia Volume 22 ; 2019 ; 22 ; https://www.annals.in/ ; ; >
     au < crawling ; exists ; 2020 ; Annals of Cardiac Anaesthesia Volume 23 ; 2020 ; 23 ; https://www.annals.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Annals of Cardiac Anaesthesia Volume 24 ; 2021 ; 24 ; https://www.annals.in/ ; ; >
+    au < ready ; exists ; 2021 ; Annals of Cardiac Anaesthesia Volume 24 ; 2021 ; 24 ; https://www.annals.in/ ; ; >
 
   }
 
@@ -194,7 +194,7 @@
     au < deepCrawl ; exists ; 2018 ; Annals of Indian Academy of Neurology Volume 21 ; 2018 ; 21 ; http://www.annalsofian.org/ ; ; >
     au < crawling ; exists ; 2019 ; Annals of Indian Academy of Neurology Volume 22 ; 2019 ; 22 ; https://www.annalsofian.org/ ; ; >
     au < crawling ; exists ; 2020 ; Annals of Indian Academy of Neurology Volume 23 ; 2020 ; 23 ; https://www.annalsofian.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Annals of Indian Academy of Neurology Volume 24 ; 2021 ; 24 ; https://www.annalsofian.org/ ; ; >
+    au < ready ; exists ; 2021 ; Annals of Indian Academy of Neurology Volume 24 ; 2021 ; 24 ; https://www.annalsofian.org/ ; ; >
 
   }
 
@@ -273,7 +273,7 @@
     au < deepCrawl ; exists ; 2018 ; Annals of Pediatric Cardiology Volume 11 ; 2018 ; 11 ; http://www.annalspc.com/ ; ; >
     au < frozen ; exists ; 2019 ; Annals of Pediatric Cardiology Volume 12 ; 2019 ; 12 ; https://www.annalspc.com/ ; ; >
     au < crawling ; exists ; 2020 ; Annals of Pediatric Cardiology Volume 13 ; 2020 ; 13 ; https://www.annalspc.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Annals of Pediatric Cardiology Volume 14 ; 2021 ; 14 ; https://www.annalspc.com/ ; ; >
+    au < ready ; exists ; 2021 ; Annals of Pediatric Cardiology Volume 14 ; 2021 ; 14 ; https://www.annalspc.com/ ; ; >
 
   }
 #  {
@@ -371,7 +371,7 @@
     au < deepCrawl ; exists ; 2018 ; Asian Journal of Andrology Volume 20 ; 2018 ; 20 ; http://www.ajandrology.com/ ; ; >
     au < crawling ; exists ; 2019 ; Asian Journal of Andrology Volume 21 ; 2019 ; 21 ; https://www.ajandrology.com/ ; ; >
     au < crawling ; exists ; 2020 ; Asian Journal of Andrology Volume 22 ; 2020 ; 22 ; https://www.ajandrology.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Asian Journal of Andrology Volume 23 ; 2021 ; 23 ; https://www.ajandrology.com/ ; ; >
+    au < ready ; exists ; 2021 ; Asian Journal of Andrology Volume 23 ; 2021 ; 23 ; https://www.ajandrology.com/ ; ; >
 
   }
 
@@ -397,7 +397,7 @@
     au < deepCrawl ; exists ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 2018 ; 13 ; http://www.asianjns.org/ ; ; >
     au < crawling ; exists ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 2019 ; 14 ; https://www.asianjns.org/ ; ; >
     au < crawling ; exists ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 2020 ; 15 ; https://www.asianjns.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 2021 ; 16 ; https://www.asianjns.org/ ; ; >
+    au < ready ; exists ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 2021 ; 16 ; https://www.asianjns.org/ ; ; >
 
   }
 #  {
@@ -450,7 +450,7 @@
     au < deepCrawl ; exists ; 2018 ; Asian Journal of Transfusion Science Volume 12 ; 2018 ; 12 ; http://www.ajts.org/ ; ; >
     au < manifest ; exists ; 2019 ; Asian Journal of Transfusion Science Volume 13 ; 2019 ; 13 ; https://www.ajts.org/ ; ; >
     au < crawling ; exists ; 2020 ; Asian Journal of Transfusion Science Volume 14 ; 2020 ; 14 ; https://www.ajts.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Asian Journal of Transfusion Science Volume 15 ; 2021 ; 15 ; https://www.ajts.org/ ; ; >
+    au < ready ; exists ; 2021 ; Asian Journal of Transfusion Science Volume 15 ; 2021 ; 15 ; https://www.ajts.org/ ; ; >
 
   }
 
@@ -575,7 +575,7 @@
     au < deepCrawl ; exists ; 2018 ; Contemporary Clinical Dentistry Volume 9 ; 2018 ; 9 ; http://www.contempclindent.org/ ; ; >
     au < crawling ; exists ; 2019 ; Contemporary Clinical Dentistry Volume 10 ; 2019 ; 10 ; https://www.contempclindent.org/ ; ; >
     au < crawling ; exists ; 2020 ; Contemporary Clinical Dentistry Volume 11 ; 2020 ; 11 ; https://www.contempclindent.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Contemporary Clinical Dentistry Volume 12 ; 2021 ; 12 ; https://www.contempclindent.org/ ; ; >
+    au < ready ; exists ; 2021 ; Contemporary Clinical Dentistry Volume 12 ; 2021 ; 12 ; https://www.contempclindent.org/ ; ; >
 
   }
 
@@ -631,7 +631,7 @@
     au < deepCrawl ; exists ; 2018 ; Dental Research Journal Volume 15 ; 2018 ; 15 ; http://www.drjjournal.net/ ; ; >
     au < crawling ; exists ; 2019 ; Dental Research Journal Volume 16 ; 2019 ; 16 ; https://www.drjjournal.net/ ; ; >
     au < frozen ; exists ; 2020 ; Dental Research Journal Volume 17 ; 2020 ; 17 ; https://www.drjjournal.net/ ; ; >
-    au < manifest ; exists ; 2021 ; Dental Research Journal Volume 18 ; 2021 ; 18 ; https://www.drjjournal.net/ ; ; >
+    au < ready ; exists ; 2021 ; Dental Research Journal Volume 18 ; 2021 ; 18 ; https://www.drjjournal.net/ ; ; >
 
   }
 
@@ -714,7 +714,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Dermatology Online Journal Volume 9 ; 2018 ; 9 ; http://www.idoj.in/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Dermatology Online Journal Volume 10 ; 2019 ; 10 ; https://www.idoj.in/ ; ; >
     au < manifest ; exists ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Dermatology Online Journal Volume 12 ; 2021 ; 12 ; https://www.idoj.in/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Dermatology Online Journal Volume 12 ; 2021 ; 12 ; https://www.idoj.in/ ; ; >
 
   }
 
@@ -748,7 +748,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Anaesthesia Volume 62 ; 2018 ; 62 ; http://www.ijaweb.org/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Anaesthesia Volume 63 ; 2019 ; 63 ; https://www.ijaweb.org/ ; ; >
     au < manifest ; exists ; 2020 ; Indian Journal of Anaesthesia Volume 64 ; 2020 ; 64 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Anaesthesia Volume 65 ; 2021 ; 65 ; https://www.ijaweb.org/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Anaesthesia Volume 65 ; 2021 ; 65 ; https://www.ijaweb.org/ ; ; >
 
   }
 
@@ -781,7 +781,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Cancer Volume 55 ; 2018 ; 55 ; http://www.indianjcancer.com/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Cancer Volume 56 ; 2019 ; 56 ; https://www.indianjcancer.com/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Cancer Volume 57 ; 2020 ; 57 ; https://www.indianjcancer.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Cancer Volume 58 ; 2021 ; 58 ; https://www.indianjcancer.com/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Cancer Volume 58 ; 2021 ; 58 ; https://www.indianjcancer.com/ ; ; >
 
   }
 
@@ -832,7 +832,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Community Medicine Volume 43 ; 2018 ; 43 ; http://www.ijcm.org.in/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Community Medicine Volume 44 ; 2019 ; 44 ; https://www.ijcm.org.in/ ; ; >
     au < manifest ; exists ; 2020 ; Indian Journal of Community Medicine Volume 45 ; 2020 ; 45 ; https://www.ijcm.org.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Community Medicine Volume 46 ; 2021 ; 46 ; https://www.ijcm.org.in/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Community Medicine Volume 46 ; 2021 ; 46 ; https://www.ijcm.org.in/ ; ; >
 
   }
 
@@ -1241,7 +1241,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Nephrology Volume 28 ; 2018 ; 28 ; http://www.indianjnephrol.org/ ; ; >
     au < frozen ; exists ; 2019 ; Indian Journal of Nephrology Volume 29 ; 2019 ; 29 ; https://www.indianjnephrol.org/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Nephrology Volume 30 ; 2020 ; 30 ; https://www.indianjnephrol.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Nephrology Volume 31 ; 2021 ; 31 ; https://www.indianjnephrol.org/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Nephrology Volume 31 ; 2021 ; 31 ; https://www.indianjnephrol.org/ ; ; >
 
   }
 
@@ -1271,7 +1271,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Nuclear Medicine Volume 33 ; 2018 ; 33 ; http://www.ijnm.in/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Nuclear Medicine Volume 34 ; 2019 ; 34 ; https://www.ijnm.in/ ; ; >
     au < manifest ; exists ; 2020 ; Indian Journal of Nuclear Medicine Volume 35 ; 2020 ; 35 ; https://www.ijnm.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Nuclear Medicine Volume 36 ; 2021 ; 36 ; https://www.ijnm.in/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Nuclear Medicine Volume 36 ; 2021 ; 36 ; https://www.ijnm.in/ ; ; >
 
   }
 
@@ -1320,7 +1320,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Occupational and Environmental Medicine Volume 22 ; 2018 ; 22 ; http://www.ijoem.com/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Occupational and Environmental Medicine Volume 23 ; 2019 ; 23 ; https://www.ijoem.com/ ; ; >
     au < manifest ; exists ; 2020 ; Indian Journal of Occupational and Environmental Medicine Volume 24 ; 2020 ; 24 ; https://www.ijoem.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Occupational and Environmental Medicine Volume 25 ; 2021 ; 25 ; https://www.ijoem.com/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Occupational and Environmental Medicine Volume 25 ; 2021 ; 25 ; https://www.ijoem.com/ ; ; >
 
     }
 
@@ -1523,7 +1523,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Paediatric Dermatology Volume 19 ; 2018 ; 19 ; http://www.ijpd.in/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Paediatric Dermatology Volume 20 ; 2019 ; 20 ; https://www.ijpd.in/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Paediatric Dermatology Volume 21 ; 2020 ; 21 ; https://www.ijpd.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Paediatric Dermatology Volume 22 ; 2021 ; 22 ; https://www.ijpd.in/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Paediatric Dermatology Volume 22 ; 2021 ; 22 ; https://www.ijpd.in/ ; ; >
 
   }
 
@@ -1556,7 +1556,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Palliative Care Volume 24 ; 2018 ; 24 ; http://www.jpalliativecare.com/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Palliative Care Volume 25 ; 2019 ; 25 ; https://www.jpalliativecare.com/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Palliative Care Volume 26 ; 2020 ; 26 ; https://www.jpalliativecare.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Palliative Care Volume 27 ; 2021 ; 27 ; https://www.jpalliativecare.com/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Palliative Care Volume 27 ; 2021 ; 27 ; https://www.jpalliativecare.com/ ; ; >
 
   }
 
@@ -1597,7 +1597,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Pathology and Microbiology Volume 61 ; 2018 ; 61 ; http://www.ijpmonline.org/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Pathology and Microbiology Volume 62 ; 2019 ; 62 ; https://www.ijpmonline.org/ ; ; >
     au < frozen ; exists ; 2020 ; Indian Journal of Pathology and Microbiology Volume 63 ; 2020 ; 63 ; https://www.ijpmonline.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Pathology and Microbiology Volume 64 ; 2021 ; 64 ; https://www.ijpmonline.org/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Pathology and Microbiology Volume 64 ; 2021 ; 64 ; https://www.ijpmonline.org/ ; ; >
 
   }
 
@@ -1684,7 +1684,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Pharmacology Volume 50 ; 2018 ; 50 ; http://www.ijp-online.com/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Pharmacology Volume 51 ; 2019 ; 51 ; https://www.ijp-online.com/ ; ; >
     au < manifest ; exists ; 2020 ; Indian Journal of Pharmacology Volume 52 ; 2020 ; 52 ; https://www.ijp-online.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Pharmacology Volume 53 ; 2021 ; 53 ; https://www.ijp-online.com/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Pharmacology Volume 53 ; 2021 ; 53 ; https://www.ijp-online.com/ ; ; >
 
   }
 
@@ -1814,7 +1814,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Psychiatry Volume 60 ; 2018 ; 60 ; http://www.indianjpsychiatry.org/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Psychiatry Volume 61 ; 2019 ; 61 ; https://www.indianjpsychiatry.org/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Psychiatry Volume 62 ; 2020 ; 62 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Psychiatry Volume 63 ; 2021 ; 63 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Psychiatry Volume 63 ; 2021 ; 63 ; https://www.indianjpsychiatry.org/ ; ; >
 
   }
 
@@ -1898,7 +1898,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Public Health Volume 62 ; 2018 ; 62 ; http://www.ijph.in/ ; ; >
     au < frozen ; exists ; 2019 ; Indian Journal of Public Health Volume 63 ; 2019 ; 63 ; https://www.ijph.in/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Public Health Volume 64 ; 2020 ; 64 ; https://www.ijph.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Public Health Volume 65 ; 2021 ; 65 ; https://www.ijph.in/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Public Health Volume 65 ; 2021 ; 65 ; https://www.ijph.in/ ; ; >
 
   }
 
@@ -1966,7 +1966,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Rheumatology Volume 13 ; 2018 ; 13 ; http://www.indianjrheumatol.com/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Rheumatology Volume 14 ; 2019 ; 14 ; https://www.indianjrheumatol.com/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Rheumatology Volume 15 ; 2020 ; 15 ; https://www.indianjrheumatol.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Rheumatology Volume 16 ; 2021 ; 16 ; https://www.indianjrheumatol.com/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Rheumatology Volume 16 ; 2021 ; 16 ; https://www.indianjrheumatol.com/ ; ; >
 
   }
 
@@ -2059,7 +2059,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Urology Volume 34 ; 2018 ; 34 ; http://www.indianjurol.com/ ; ; >
     au < manifest ; exists ; 2019 ; Indian Journal of Urology Volume 35 ; 2019 ; 35 ; https://www.indianjurol.com/ ; ; >
     au < crawling ; exists ; 2020 ; Indian Journal of Urology Volume 36 ; 2020 ; 36 ; https://www.indianjurol.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Indian Journal of Urology Volume 37 ; 2021 ; 37 ; https://www.indianjurol.com/ ; ; >
+    au < ready ; exists ; 2021 ; Indian Journal of Urology Volume 37 ; 2021 ; 37 ; https://www.indianjurol.com/ ; ; >
 
   }
 
@@ -2087,7 +2087,7 @@
     au < deepCrawl ; exists ; 2018 ; Industrial Psychiatry Journal Volume 27 ; 2018 ; 27 ; http://www.industrialpsychiatry.org/ ; ; >
     au < crawling ; exists ; 2019 ; Industrial Psychiatry Journal Volume 28 ; 2019 ; 28 ; https://www.industrialpsychiatry.org/ ; ; >
     au < crawling ; exists ; 2020 ; Industrial Psychiatry Journal Volume 29 ; 2020 ; 29 ; https://www.industrialpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Industrial Psychiatry Journal Volume 30 ; 2021 ; 30 ; https://www.industrialpsychiatry.org/ ; ; >
+    au < ready ; exists ; 2021 ; Industrial Psychiatry Journal Volume 30 ; 2021 ; 30 ; https://www.industrialpsychiatry.org/ ; ; >
 
   }
 
@@ -2112,7 +2112,7 @@
     au < manifest ; exists ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ ; 500 Error ; >
     au < crawling ; exists ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ ; 500 Error ; >
     au < crawling ; exists ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ ; 500 Error ; >
-    au < manifest ; exists ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; 500 Error ; >
+    au < ready ; exists ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; 500 Error ; >
 
   }
 #  {
@@ -2154,7 +2154,7 @@
     au < deepCrawl ; exists ; 2018 ; International Journal of Critical Illness and Injury Science Volume 8 ; 2018 ; 8 ; http://www.ijciis.org/ ; ; >
     au < manifest ; exists ; 2019 ; International Journal of Critical Illness and Injury Science Volume 9 ; 2019 ; 9 ; https://www.ijciis.org/ ; ; >
     au < frozen ; exists ; 2020 ; International Journal of Critical Illness and Injury Science Volume 10 ; 2020 ; 10 ; https://www.ijciis.org/ ; ; >
-    au < manifest ; exists ; 2021 ; International Journal of Critical Illness and Injury Science Volume 11 ; 2021 ; 11 ; https://www.ijciis.org/ ; ; >
+    au < ready ; exists ; 2021 ; International Journal of Critical Illness and Injury Science Volume 11 ; 2021 ; 11 ; https://www.ijciis.org/ ; ; >
 
   }
 #  {
@@ -2202,7 +2202,7 @@
     au < manifest ; exists ; 2018 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 8 ; 2018 ; 8 ; https://www.ijnpnd.com/ ; 500 Error ; > 
     au < crawling ; exists ; 2019 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 9 ; 2019 ; 9 ; https://www.ijnpnd.com/ ; 500 Error ; > 
     au < manifest ; exists ; 2020 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 10 ; 2020 ; 10 ; https://www.ijnpnd.com/ ; 500 Error ; > 
-    au < manifest ; exists ; 2021 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 11 ; 2021 ; 11 ; https://www.ijnpnd.com/ ; 500 Error ; > 
+    au < ready ; exists ; 2021 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 11 ; 2021 ; 11 ; https://www.ijnpnd.com/ ; 500 Error ; > 
 
   }
 
@@ -2301,7 +2301,7 @@
     au < deepCrawl ; exists ; 2018 ; International Journal of Yoga Volume 11 ; 2018 ; 11 ; http://www.ijoy.org.in/ ; ; >
     au < crawling ; exists ; 2019 ; International Journal of Yoga Volume 12 ; 2019 ; 12 ; https://www.ijoy.org.in/ ; ; >
     au < manifest ; exists ; 2020 ; International Journal of Yoga Volume 13 ; 2020 ; 13 ; https://www.ijoy.org.in/ ; ; >
-    au < manifest ; exists ; 2021 ; International Journal of Yoga Volume 14 ; 2021 ; 14 ; https://www.ijoy.org.in/ ; ; >
+    au < ready ; exists ; 2021 ; International Journal of Yoga Volume 14 ; 2021 ; 14 ; https://www.ijoy.org.in/ ; ; >
 
   }
 
@@ -2324,7 +2324,7 @@
     au < deepCrawl ; exists ; 2018 ; Iranian Journal of Nursing and Midwifery Research Volume 23 ; 2018 ; 23 ; http://www.ijnmrjournal.net/ ; ; >
     au < manifest ; exists ; 2019 ; Iranian Journal of Nursing and Midwifery Research Volume 24 ; 2019 ; 24 ; https://www.ijnmrjournal.net/ ; ; >
     au < manifest ; exists ; 2020 ; Iranian Journal of Nursing and Midwifery Research Volume 25 ; 2020 ; 25 ; https://www.ijnmrjournal.net/ ; ; >
-    au < manifest ; exists ; 2021 ; Iranian Journal of Nursing and Midwifery Research Volume 26 ; 2021 ; 26 ; https://www.ijnmrjournal.net/ ; ; >
+    au < ready ; exists ; 2021 ; Iranian Journal of Nursing and Midwifery Research Volume 26 ; 2021 ; 26 ; https://www.ijnmrjournal.net/ ; ; >
 
   }
 
@@ -2365,7 +2365,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Advanced Pharmaceutical Technology & Research Volume 9 ; 2018 ; 9 ; http://www.japtr.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Advanced Pharmaceutical Technology & Research Volume 10 ; 2019 ; 10 ; https://www.japtr.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Advanced Pharmaceutical Technology & Research Volume 11 ; 2020 ; 11 ; https://www.japtr.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Advanced Pharmaceutical Technology & Research Volume 12 ; 2021 ; 12 ; https://www.japtr.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Advanced Pharmaceutical Technology & Research Volume 12 ; 2021 ; 12 ; https://www.japtr.org/ ; ; >
 
   }
 
@@ -2396,7 +2396,7 @@
     au < notReady ; exists ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; http://www.joacp.org/ ; ; > #500 Error
     au < frozen ; exists ; 2019 ; Journal of Anaesthesiology Clinical Pharmacology Volume 35 ; 2019 ; 35 ; https://www.joacp.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Anaesthesiology Clinical Pharmacology Volume 36 ; 2020 ; 36 ; https://www.joacp.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Anaesthesiology Clinical Pharmacology Volume 37 ; 2021 ; 37 ; https://www.joacp.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Anaesthesiology Clinical Pharmacology Volume 37 ; 2021 ; 37 ; https://www.joacp.org/ ; ; >
 
   }
 #  {
@@ -2463,7 +2463,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Cancer Research and Therapeutics Volume 14 ; 2018 ; 14 ; http://www.cancerjournal.net/ ; ; >
     au < manifest ; exists ; 2019 ; Journal of Cancer Research and Therapeutics Volume 15 ; 2019 ; 15 ; https://www.cancerjournal.net/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Cancer Research and Therapeutics Volume 16 ; 2020 ; 16 ; https://www.cancerjournal.net/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Cancer Research and Therapeutics Volume 17 ; 2021 ; 17 ; https://www.cancerjournal.net/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Cancer Research and Therapeutics Volume 17 ; 2021 ; 17 ; https://www.cancerjournal.net/ ; ; >
 
   }
 
@@ -2572,7 +2572,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Clinical Neonatology Volume 7 ; 2018 ; 7 ; http://www.jcnonweb.com/ ; ; >
     au < frozen ; exists ; 2019 ; Journal of Clinical Neonatology Volume 8 ; 2019 ; 8 ; https://www.jcnonweb.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Clinical Neonatology Volume 9 ; 2020 ; 9 ; https://www.jcnonweb.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Clinical Neonatology Volume 10 ; 2021 ; 10 ; https://www.jcnonweb.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Clinical Neonatology Volume 10 ; 2021 ; 10 ; https://www.jcnonweb.com/ ; ; >
 
   }
 #  {
@@ -2654,7 +2654,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Craniovertebral Junction and Spine Volume 9 ; 2018 ; 9 ; http://www.jcvjs.com/ ; ; >
     au < frozen ; exists ; 2019 ; Journal of Craniovertebral Junction and Spine Volume 10 ; 2019 ; 10 ; https://www.jcvjs.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Craniovertebral Junction and Spine Volume 11 ; 2020 ; 11 ; https://www.jcvjs.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Craniovertebral Junction and Spine Volume 12 ; 2021 ; 12 ; https://www.jcvjs.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Craniovertebral Junction and Spine Volume 12 ; 2021 ; 12 ; https://www.jcvjs.com/ ; ; >
 
   }
 
@@ -2682,7 +2682,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Cutaneous and Aesthetic Surgery Volume 11 ; 2018 ; 11 ; http://www.jcasonline.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Cutaneous and Aesthetic Surgery Volume 12 ; 2019 ; 12 ; https://www.jcasonline.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Cutaneous and Aesthetic Surgery Volume 13 ; 2020 ; 13 ; https://www.jcasonline.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Cutaneous and Aesthetic Surgery Volume 14 ; 2021 ; 14 ; https://www.jcasonline.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Cutaneous and Aesthetic Surgery Volume 14 ; 2021 ; 14 ; https://www.jcasonline.com/ ; ; >
 
   }
 
@@ -2711,7 +2711,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Cytology Volume 35 ; 2018 ; 35 ; http://www.jcytol.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Cytology Volume 36 ; 2019 ; 36 ; https://www.jcytol.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Cytology Volume 37 ; 2020 ; 37 ; https://www.jcytol.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Cytology Volume 38 ; 2021 ; 38 ; https://www.jcytol.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Cytology Volume 38 ; 2021 ; 38 ; https://www.jcytol.org/ ; ; >
 
   }
 
@@ -2736,7 +2736,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Dental Implants Volume 8 ; 2018 ; 8 ; http://www.jdionline.org/ ; ; >
     au < manifest ; exists ; 2019 ; Journal of Dental Implants Volume 9 ; 2019 ; 9 ; https://www.jdionline.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Dental Implants Volume 10 ; 2020 ; 10 ; https://www.jdionline.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Dental Implants Volume 11 ; 2021 ; 11 ; https://www.jdionline.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Dental Implants Volume 11 ; 2021 ; 11 ; https://www.jdionline.org/ ; ; >
 
   }
 
@@ -2783,7 +2783,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Emergencies, Trauma, and Shock Volume 11 ; 2018 ; 11 ; http://www.onlinejets.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Emergencies, Trauma, and Shock Volume 12 ; 2019 ; 12 ; https://www.onlinejets.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Emergencies, Trauma, and Shock Volume 13 ; 2020 ; 13 ; https://www.onlinejets.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Emergencies, Trauma, and Shock Volume 14 ; 2021 ; 14 ; https://www.onlinejets.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Emergencies, Trauma, and Shock Volume 14 ; 2021 ; 14 ; https://www.onlinejets.org/ ; ; >
 
   }
 
@@ -2844,7 +2844,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Family and Community Medicine Volume 25 ; 2018 ; 25 ; http://www.jfcmonline.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Family and Community Medicine Volume 26 ; 2019 ; 26 ; https://www.jfcmonline.com/ ; ; >
     au < manifest ; exists ; 2020 ; Journal of Family and Community Medicine Volume 27 ; 2020 ; 27 ; https://www.jfcmonline.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Family and Community Medicine Volume 28 ; 2021 ; 28 ; https://www.jfcmonline.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Family and Community Medicine Volume 28 ; 2021 ; 28 ; https://www.jfcmonline.com/ ; ; >
 
   }
 
@@ -2868,7 +2868,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Family Medicine and Primary Care Volume 7 ; 2018 ; 7 ; http://www.jfmpc.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Family Medicine and Primary Care Volume 8 ; 2019 ; 8 ; https://www.jfmpc.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Family Medicine and Primary Care Volume 9 ; 2020 ; 9 ; https://www.jfmpc.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Family Medicine and Primary Care Volume 10 ; 2021 ; 10 ; https://www.jfmpc.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Family Medicine and Primary Care Volume 10 ; 2021 ; 10 ; https://www.jfmpc.com/ ; ; >
 
   }
 
@@ -2922,7 +2922,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Global Infectious Diseases Volume 10 ; 2018 ; 10 ; http://www.jgid.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Global Infectious Diseases Volume 11 ; 2019 ; 11 ; https://www.jgid.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Global Infectious Diseases Volume 12 ; 2020 ; 12 ; https://www.jgid.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Global Infectious Diseases Volume 13 ; 2021 ; 13 ; https://www.jgid.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Global Infectious Diseases Volume 13 ; 2021 ; 13 ; https://www.jgid.org/ ; ; >
 
   }
 
@@ -2966,7 +2966,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Human Reproductive Sciences Volume 11 ; 2018 ; 11 ; http://www.jhrsonline.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Human Reproductive Sciences Volume 12 ; 2019 ; 12 ; https://www.jhrsonline.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Human Reproductive Sciences Volume 13 ; 2020 ; 13 ; https://www.jhrsonline.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Human Reproductive Sciences Volume 14 ; 2021 ; 14 ; https://www.jhrsonline.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Human Reproductive Sciences Volume 14 ; 2021 ; 14 ; https://www.jhrsonline.org/ ; ; >
 
   }
 
@@ -3006,7 +3006,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Indian Association of Pediatric Surgeons Volume 23 ; 2018 ; 23 ; http://www.jiaps.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Indian Association of Pediatric Surgeons Volume 24 ; 2019 ; 24 ; https://www.jiaps.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Indian Association of Pediatric Surgeons Volume 25 ; 2020 ; 25 ; https://www.jiaps.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Indian Association of Pediatric Surgeons Volume 26 ; 2021 ; 26 ; https://www.jiaps.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Indian Association of Pediatric Surgeons Volume 26 ; 2021 ; 26 ; https://www.jiaps.com/ ; ; >
 
   }
 
@@ -3046,7 +3046,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 36 ; 2018 ; 36 ; http://www.jisppd.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 37 ; 2019 ; 37 ; https://www.jisppd.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 38 ; 2020 ; 38 ; https://www.jisppd.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 39 ; 2021 ; 39 ; https://www.jisppd.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 39 ; 2021 ; 39 ; https://www.jisppd.com/ ; ; >
 
   }
 
@@ -3074,7 +3074,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Indian Society of Periodontology Volume 22 ; 2018 ; 22 ; http://www.jisponline.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Indian Society of Periodontology Volume 23 ; 2019 ; 23 ; https://www.jisponline.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Indian Society of Periodontology Volume 24 ; 2020 ; 24 ; https://www.jisponline.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Indian Society of Periodontology Volume 25 ; 2021 ; 25 ; https://www.jisponline.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Indian Society of Periodontology Volume 25 ; 2021 ; 25 ; https://www.jisponline.com/ ; ; >
 
   }
 
@@ -3099,7 +3099,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Interdisciplinary Dentistry Volume 8 ; 2018 ; 8 ; http://www.jidonline.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Interdisciplinary Dentistry Volume 9 ; 2019 ; 9 ; https://www.jidonline.com/ ; ; >
     au < manifest ; exists ; 2020 ; Journal of Interdisciplinary Dentistry Volume 10 ; 2020 ; 10 ; https://www.jidonline.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Interdisciplinary Dentistry Volume 11 ; 2021 ; 11 ; https://www.jidonline.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Interdisciplinary Dentistry Volume 11 ; 2021 ; 11 ; https://www.jidonline.com/ ; ; >
 
   }
 
@@ -3124,7 +3124,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of International Society of Preventive and Community Dentistry Volume 8 ; 2018 ; 8 ; http://www.jispcd.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of International Society of Preventive and Community Dentistry Volume 9 ; 2019 ; 9 ; https://www.jispcd.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of International Society of Preventive and Community Dentistry Volume 10 ; 2020 ; 10 ; https://www.jispcd.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of International Society of Preventive and Community Dentistry Volume 11 ; 2021 ; 11 ; https://www.jispcd.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of International Society of Preventive and Community Dentistry Volume 11 ; 2021 ; 11 ; https://www.jispcd.org/ ; ; >
 
   }
 
@@ -3234,7 +3234,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Medical Physics Volume 43 ; 2018 ; 43 ; http://www.jmp.org.in/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Medical Physics Volume 44 ; 2019 ; 44 ; https://www.jmp.org.in/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Medical Physics Volume 45 ; 2020 ; 45 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Medical Physics Volume 46 ; 2021 ; 46 ; https://www.jmp.org.in/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Medical Physics Volume 46 ; 2021 ; 46 ; https://www.jmp.org.in/ ; ; >
 
   }
 #  {
@@ -3277,7 +3277,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Mid-life Health Volume 9 ; 2018 ; 9 ; http://www.jmidlifehealth.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Mid-life Health Volume 10 ; 2019 ; 10 ; https://www.jmidlifehealth.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Mid-life Health Volume 11 ; 2020 ; 11 ; https://www.jmidlifehealth.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Mid-life Health Volume 12 ; 2021 ; 12 ; https://www.jmidlifehealth.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Mid-life Health Volume 12 ; 2021 ; 12 ; https://www.jmidlifehealth.org/ ; ; >
 
   }
 
@@ -3308,7 +3308,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Minimal Access Surgery Volume 14 ; 2018 ; 14 ; http://www.journalofmas.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Minimal Access Surgery Volume 15 ; 2019 ; 15 ; https://www.journalofmas.com/ ; ; >
     au < frozen ; exists ; 2020 ; Journal of Minimal Access Surgery Volume 16 ; 2020 ; 16 ; https://www.journalofmas.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Minimal Access Surgery Volume 17 ; 2021 ; 17 ; https://www.journalofmas.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Minimal Access Surgery Volume 17 ; 2021 ; 17 ; https://www.journalofmas.com/ ; ; >
 
   }
 #  {
@@ -3354,7 +3354,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Natural Science, Biology and Medicine Volume 9 ; 2018 ; 9 ; http://www.jnsbm.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Natural Science, Biology and Medicine Volume 10 ; 2019 ; 10 ; https://www.jnsbm.org/ ; ; >
     au < manifest ; exists ; 2020 ; Journal of Natural Science, Biology and Medicine Volume 11 ; 2020 ; 11 ; https://www.jnsbm.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Natural Science, Biology and Medicine Volume 12 ; 2021 ; 12 ; https://www.jnsbm.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Natural Science, Biology and Medicine Volume 12 ; 2021 ; 12 ; https://www.jnsbm.org/ ; ; >
 
   }
 
@@ -3405,7 +3405,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Obstetric Anaesthesia and Critical Care Volume 8 ; 2018 ; 8 ; http://www.joacc.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Obstetric Anaesthesia and Critical Care Volume 9 ; 2019 ; 9 ; https://www.joacc.com/ ; ; >
     au < manifest ; exists ; 2020 ; Journal of Obstetric Anaesthesia and Critical Care Volume 10 ; 2020 ; 10 ; https://www.joacc.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Obstetric Anaesthesia and Critical Care Volume 11 ; 2021 ; 11 ; https://www.joacc.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Obstetric Anaesthesia and Critical Care Volume 11 ; 2021 ; 11 ; https://www.joacc.com/ ; ; >
 
   }
 
@@ -3438,7 +3438,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Oral and Maxillofacial Pathology Volume 22 ; 2018 ; 22 ; http://www.jomfp.in/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Oral and Maxillofacial Pathology Volume 23 ; 2019 ; 23 ; https://www.jomfp.in/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Oral and Maxillofacial Pathology Volume 24 ; 2020 ; 24 ; https://www.jomfp.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Oral and Maxillofacial Pathology Volume 25 ; 2021 ; 25 ; https://www.jomfp.in/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Oral and Maxillofacial Pathology Volume 25 ; 2021 ; 25 ; https://www.jomfp.in/ ; ; >
 
   }
 
@@ -3466,7 +3466,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Pathology Informatics Volume 9 ; 2018 ; 9 ; http://www.jpathinformatics.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Pathology Informatics Volume 10 ; 2019 ; 10 ; https://www.jpathinformatics.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Pathology Informatics Volume 11 ; 2020 ; 11 ; https://www.jpathinformatics.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Pathology Informatics Volume 12 ; 2021 ; 12 ; https://www.jpathinformatics.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Pathology Informatics Volume 12 ; 2021 ; 12 ; https://www.jpathinformatics.org/ ; ; >
 
   }
 
@@ -3496,7 +3496,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Pediatric Neurosciences Volume 13 ; 2018 ; 13 ; http://www.pediatricneurosciences.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Pediatric Neurosciences Volume 14 ; 2019 ; 14 ; https://www.pediatricneurosciences.com/ ; ; >
     au < frozen ; exists ; 2020 ; Journal of Pediatric Neurosciences Volume 15 ; 2020 ; 15 ; https://www.pediatricneurosciences.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Pediatric Neurosciences Volume 16 ; 2021 ; 16 ; https://www.pediatricneurosciences.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Pediatric Neurosciences Volume 16 ; 2021 ; 16 ; https://www.pediatricneurosciences.com/ ; ; >
 
   }
 
@@ -3575,7 +3575,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Pharmacy and Bioallied Sciences Volume 10 ; 2018 ; 10 ; http://www.jpbsonline.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Pharmacy and Bioallied Sciences Volume 11 ; 2019 ; 11 ; https://www.jpbsonline.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Pharmacy and Bioallied Sciences Volume 12 ; 2020 ; 12 ; https://www.jpbsonline.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Pharmacy and Bioallied Sciences Volume 13 ; 2021 ; 13 ; https://www.jpbsonline.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Pharmacy and Bioallied Sciences Volume 13 ; 2021 ; 13 ; https://www.jpbsonline.org/ ; ; >
 
   }
 
@@ -3635,7 +3635,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Postgraduate Medicine Volume 64 ; 2018 ; 64 ; http://www.jpgmonline.com/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of Postgraduate Medicine Volume 65 ; 2019 ; 65 ; https://www.jpgmonline.com/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of Postgraduate Medicine Volume 66 ; 2020 ; 66 ; https://www.jpgmonline.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of Postgraduate Medicine Volume 67 ; 2021 ; 67 ; https://www.jpgmonline.com/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of Postgraduate Medicine Volume 67 ; 2021 ; 67 ; https://www.jpgmonline.com/ ; ; >
 
   }
 #  {
@@ -3712,7 +3712,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of the International Clinical Dental Research Organization Volume 10 ; 2018 ; 10 ; http://www.jicdro.org/ ; ; >
     au < crawling ; exists ; 2019 ; Journal of the International Clinical Dental Research Organization Volume 11 ; 2019 ; 11 ; https://www.jicdro.org/ ; ; >
     au < crawling ; exists ; 2020 ; Journal of the International Clinical Dental Research Organization Volume 12 ; 2020 ; 12 ; https://www.jicdro.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Journal of the International Clinical Dental Research Organization Volume 13 ; 2021 ; 13 ; https://www.jicdro.org/ ; ; >
+    au < ready ; exists ; 2021 ; Journal of the International Clinical Dental Research Organization Volume 13 ; 2021 ; 13 ; https://www.jicdro.org/ ; ; >
 
   }
 #  {
@@ -3786,7 +3786,7 @@
     au < deepCrawl ; exists ; 2018 ; Lung India Volume 35 ; 2018 ; 35 ; http://www.lungindia.com/ ; ; >
     au < crawling ; exists ; 2019 ; Lung India Volume 36 ; 2019 ; 36 ; https://www.lungindia.com/ ; ; >
     au < manifest ; exists ; 2020 ; Lung India Volume 37 ; 2020 ; 37 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Lung India Volume 38 ; 2021 ; 38 ; https://www.lungindia.com/ ; ; >
+    au < ready ; exists ; 2021 ; Lung India Volume 38 ; 2021 ; 38 ; https://www.lungindia.com/ ; ; >
 
   }
 #  {
@@ -3911,7 +3911,7 @@
     au < deepCrawl ; exists ; 2018 ; National Journal of Maxillofacial Surgery Volume 9 ; 2018 ; 9 ; http://www.njms.in/ ; ; >
     au < crawling ; exists ; 2019 ; National Journal of Maxillofacial Surgery Volume 10 ; 2019 ; 10 ; https://www.njms.in/ ; ; >
     au < crawling ; exists ; 2020 ; National Journal of Maxillofacial Surgery Volume 11 ; 2020 ; 11 ; https://www.njms.in/ ; ; >
-    au < manifest ; exists ; 2021 ; National Journal of Maxillofacial Surgery Volume 12 ; 2021 ; 12 ; https://www.njms.in/ ; ; >
+    au < ready ; exists ; 2021 ; National Journal of Maxillofacial Surgery Volume 12 ; 2021 ; 12 ; https://www.njms.in/ ; ; >
 
   }
 
@@ -3954,7 +3954,7 @@
     au < deepCrawl ; exists ; 2018 ; Neurology India Volume 66 ; 2018 ; 66 ; http://www.neurologyindia.com/ ; ; >
     au < crawling ; exists ; 2019 ; Neurology India Volume 67 ; 2019 ; 67 ; https://www.neurologyindia.com/ ; ; >
     au < crawling ; exists ; 2020 ; Neurology India Volume 68 ; 2020 ; 68 ; https://www.neurologyindia.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Neurology India Volume 69 ; 2021 ; 69 ; https://www.neurologyindia.com/ ; ; >
+    au < ready ; exists ; 2021 ; Neurology India Volume 69 ; 2021 ; 69 ; https://www.neurologyindia.com/ ; ; >
 
   }
 
@@ -3985,7 +3985,7 @@
     au < deepCrawl ; exists ; 2018 ; Nigerian Journal of Clinical Practice Volume 21 ; 2018 ; 21 ; http://www.njcponline.com/ ; ; >
     au < crawling ; exists ; 2019 ; Nigerian Journal of Clinical Practice Volume 22 ; 2019 ; 22 ; https://www.njcponline.com/ ; ; >
     au < crawling ; exists ; 2020 ; Nigerian Journal of Clinical Practice Volume 23 ; 2020 ; 23 ; https://www.njcponline.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Nigerian Journal of Clinical Practice Volume 24 ; 2021 ; 24 ; https://www.njcponline.com/ ; ; >
+    au < ready ; exists ; 2021 ; Nigerian Journal of Clinical Practice Volume 24 ; 2021 ; 24 ; https://www.njcponline.com/ ; ; >
 
   }
 
@@ -4012,7 +4012,7 @@
     au < deepCrawl ; exists ; 2018 ; Nigerian Journal of Surgery Volume 24 ; 2018 ; 24 ; http://www.nigerianjsurg.com/ ; ; >
     au < crawling ; exists ; 2019 ; Nigerian Journal of Surgery Volume 25 ; 2019 ; 25 ; https://www.nigerianjsurg.com/ ; ; >
     au < crawling ; exists ; 2020 ; Nigerian Journal of Surgery Volume 26 ; 2020 ; 26 ; https://www.nigerianjsurg.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Nigerian Journal of Surgery Volume 27 ; 2021 ; 27 ; https://www.nigerianjsurg.com/ ; ; >
+    au < ready ; exists ; 2021 ; Nigerian Journal of Surgery Volume 27 ; 2021 ; 27 ; https://www.nigerianjsurg.com/ ; ; >
 
   }
 
@@ -4076,7 +4076,7 @@
     au < deepCrawl ; exists ; 2018 ; Noise and Health Volume 20 ; 2018 ; 20 ; http://www.noiseandhealth.org/ ; ; >
     au < crawling ; exists ; 2019 ; Noise and Health Volume 21 ; 2019 ; 21 ; https://www.noiseandhealth.org/ ; ; >
     au < crawling ; exists ; 2020 ; Noise and Health Volume 22 ; 2020 ; 22 ; https://www.noiseandhealth.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Noise and Health Volume 23 ; 2021 ; 23 ; https://www.noiseandhealth.org/ ; ; >
+    au < ready ; exists ; 2021 ; Noise and Health Volume 23 ; 2021 ; 23 ; https://www.noiseandhealth.org/ ; ; >
 
   }
 
@@ -4118,7 +4118,7 @@
     au < deepCrawl ; exists ; 2018 ; Oman Journal of Ophthalmology Volume 11 ; 2018 ; 11 ; http://www.ojoonline.org/ ; ; >
     au < manifest ; exists ; 2019 ; Oman Journal of Ophthalmology Volume 12 ; 2019 ; 12 ; https://www.ojoonline.org/ ; ; >
     au < manifest ; exists ; 2020 ; Oman Journal of Ophthalmology Volume 13 ; 2020 ; 13 ; https://www.ojoonline.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Oman Journal of Ophthalmology Volume 14 ; 2021 ; 14 ; https://www.ojoonline.org/ ; ; >
+    au < ready ; exists ; 2021 ; Oman Journal of Ophthalmology Volume 14 ; 2021 ; 14 ; https://www.ojoonline.org/ ; ; >
 
     }
 
@@ -4146,7 +4146,7 @@
     au < deepCrawl ; exists ; 2018 ; Perspectives in Clinical Research Volume 9 ; 2018 ; 9 ; http://www.picronline.org/ ; ; >
     au < crawling ; exists ; 2019 ; Perspectives in Clinical Research Volume 10 ; 2019 ; 10 ; https://www.picronline.org/ ; ; >
     au < manifest ; exists ; 2020 ; Perspectives in Clinical Research Volume 11 ; 2020 ; 11 ; https://www.picronline.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Perspectives in Clinical Research Volume 12 ; 2021 ; 12 ; https://www.picronline.org/ ; ; >
+    au < ready ; exists ; 2021 ; Perspectives in Clinical Research Volume 12 ; 2021 ; 12 ; https://www.picronline.org/ ; ; >
 
   }
 #  {
@@ -4198,7 +4198,7 @@
     au < finished ; manifest ; 2018 ; Pharmacognosy Magazine Volume 14 ; 2018 ; 14 ; http://www.phcog.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2019 ; Pharmacognosy Magazine Volume 15 ; 2019 ; 15 ; https://www.phcog.com/ ; ; >
     au < crawling ; exists ; 2020 ; Pharmacognosy Magazine Volume 16 ; 2020 ; 16 ; https://www.phcog.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Pharmacognosy Magazine Volume 17 ; 2021 ; 17 ; https://www.phcog.com/ ; ; >
+    au < ready ; exists ; 2021 ; Pharmacognosy Magazine Volume 17 ; 2021 ; 17 ; https://www.phcog.com/ ; ; >
 
   }
 
@@ -4321,7 +4321,7 @@
     au < deepCrawl ; exists ; 2018 ; Radiation Protection and Environment Volume 41 ; 2018 ; 41 ; http://www.rpe.org.in/ ; ; >
     au < crawling ; exists ; 2019 ; Radiation Protection and Environment Volume 42 ; 2019 ; 42 ; https://www.rpe.org.in/ ; ; >
     au < crawling ; exists ; 2020 ; Radiation Protection and Environment Volume 43 ; 2020 ; 43 ; https://www.rpe.org.in/ ; ; >
-    au < manifest ; exists ; 2021 ; Radiation Protection and Environment Volume 44 ; 2021 ; 44 ; https://www.rpe.org.in/ ; ; >
+    au < ready ; exists ; 2021 ; Radiation Protection and Environment Volume 44 ; 2021 ; 44 ; https://www.rpe.org.in/ ; ; >
 
   }
 #  {
@@ -4360,7 +4360,7 @@
     au < manifest ; exists ; 2018 ; Research in Pharmaceutical Sciences Volume 13 ; 2018 ; 13 ; https://www.rpsjournal.net/ ; ; >
     au < crawling ; exists ; 2019 ; Research in Pharmaceutical Sciences Volume 14 ; 2019 ; 14 ; https://www.rpsjournal.net/ ; ; >
     au < crawling ; exists ; 2020 ; Research in Pharmaceutical Sciences Volume 15 ; 2020 ; 15 ; https://www.rpsjournal.net/ ; ; >
-    au < manifest ; exists ; 2021 ; Research in Pharmaceutical Sciences Volume 16 ; 2021 ; 16 ; https://www.rpsjournal.net/ ; ; >
+    au < ready ; exists ; 2021 ; Research in Pharmaceutical Sciences Volume 16 ; 2021 ; 16 ; https://www.rpsjournal.net/ ; ; >
 
   }
 
@@ -4389,7 +4389,7 @@
     au < deepCrawl ; exists ; 2018 ; Saudi Journal of Anaesthesia Volume 12 ; 2018 ; 12 ; http://www.saudija.org/ ; ; >
     au < crawling ; exists ; 2019 ; Saudi Journal of Anaesthesia Volume 13 ; 2019 ; 13 ; https://www.saudija.org/ ; ; >
     au < crawling ; exists ; 2020 ; Saudi Journal of Anaesthesia Volume 14 ; 2020 ; 14 ; https://www.saudija.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Saudi Journal of Anaesthesia Volume 15 ; 2021 ; 15 ; https://www.saudija.org/ ; ; >
+    au < ready ; exists ; 2021 ; Saudi Journal of Anaesthesia Volume 15 ; 2021 ; 15 ; https://www.saudija.org/ ; ; >
 
   }
 
@@ -4414,7 +4414,7 @@
     au < deepCrawl ; exists ; 2018 ; Saudi Journal of Kidney Diseases and Transplantation Volume 29 ; 2018 ; 29 ; http://www.sjkdt.org/ ; ; >
     au < crawling ; exists ; 2019 ; Saudi Journal of Kidney Diseases and Transplantation Volume 30 ; 2019 ; 30 ; https://www.sjkdt.org/ ; ; >
     au < crawling ; exists ; 2020 ; Saudi Journal of Kidney Diseases and Transplantation Volume 31 ; 2020 ; 31 ; https://www.sjkdt.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Saudi Journal of Kidney Diseases and Transplantation Volume 32 ; 2021 ; 32 ; https://www.sjkdt.org/ ; ; >
+    au < ready ; exists ; 2021 ; Saudi Journal of Kidney Diseases and Transplantation Volume 32 ; 2021 ; 32 ; https://www.sjkdt.org/ ; ; >
 
   }
 
@@ -4455,7 +4455,7 @@
     au < deepCrawl ; exists ; 2018 ; Saudi Journal of Gastroenterology Volume 24 ; 2018 ; 24 ; http://www.saudijgastro.com/ ; ; >
     au < crawling ; exists ; 2019 ; Saudi Journal of Gastroenterology Volume 25 ; 2019 ; 25 ; https://www.saudijgastro.com/ ; ; >
     au < crawling ; exists ; 2020 ; Saudi Journal of Gastroenterology Volume 26 ; 2020 ; 26 ; https://www.saudijgastro.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Saudi Journal of Gastroenterology Volume 27 ; 2021 ; 27 ; https://www.saudijgastro.com/ ; ; >
+    au < ready ; exists ; 2021 ; Saudi Journal of Gastroenterology Volume 27 ; 2021 ; 27 ; https://www.saudijgastro.com/ ; ; >
 
   }
 #  {
@@ -4576,7 +4576,7 @@
     au < deepCrawl ; exists ; 2018 ; Tropical Parasitology Volume 8 ; 2018 ; 8 ; http://www.tropicalparasitology.org/ ; ; >
     au < crawling ; exists ; 2019 ; Tropical Parasitology Volume 9 ; 2019 ; 9 ; https://www.tropicalparasitology.org/ ; ; >
     au < crawling ; exists ; 2020 ; Tropical Parasitology Volume 10 ; 2020 ; 10 ; https://www.tropicalparasitology.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Tropical Parasitology Volume 11 ; 2021 ; 11 ; https://www.tropicalparasitology.org/ ; ; >
+    au < ready ; exists ; 2021 ; Tropical Parasitology Volume 11 ; 2021 ; 11 ; https://www.tropicalparasitology.org/ ; ; >
 
   }
 
@@ -4603,7 +4603,7 @@
     au < deepCrawl ; exists ; 2018 ; Urology Annals Volume 10 ; 2018 ; 10 ; http://www.urologyannals.com/ ; ; >
     au < crawling ; exists ; 2019 ; Urology Annals Volume 11 ; 2019 ; 11 ; https://www.urologyannals.com/ ; ; >
     au < crawling ; exists ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ ; ; >
+    au < ready ; exists ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ ; ; >
 
   }
 
@@ -4635,7 +4635,7 @@
     au < deepCrawl ; exists ; 2018 ; World Journal of Nuclear Medicine Volume 17 ; 2018 ; 17 ; http://www.wjnm.org/ ; ; >
     au < manifest ; exists ; 2019 ; World Journal of Nuclear Medicine Volume 18 ; 2019 ; 18 ; https://www.wjnm.org/ ; ; >
     au < crawling ; exists ; 2020 ; World Journal of Nuclear Medicine Volume 19 ; 2020 ; 19 ; https://www.wjnm.org/ ; ; >
-    au < manifest ; exists ; 2021 ; World Journal of Nuclear Medicine Volume 20 ; 2021 ; 20 ; https://www.wjnm.org/ ; ; >
+    au < ready ; exists ; 2021 ; World Journal of Nuclear Medicine Volume 20 ; 2021 ; 20 ; https://www.wjnm.org/ ; ; >
 
   }
 #  {
@@ -4731,7 +4731,7 @@
       au < manifest ; exists ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; https://www.advbiores.net/ ; ; >
       au < manifest ; exists ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ ; ; >
       au < crawling ; exists ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ ; ; >
-      au < manifest ; exists ; 2021 ; Advanced Biomedical Research Volume 10 ; 2021 ; 10 ; https://www.advbiores.net/ ; ; >
+      au < ready ; exists ; 2021 ; Advanced Biomedical Research Volume 10 ; 2021 ; 10 ; https://www.advbiores.net/ ; ; >
 
   }
 
@@ -4794,7 +4794,7 @@
       au < deepCrawl ; exists ; 2018 ; Al-Azhar Assiut Medical Journal Volume 16 ; 2018 ; 16 ; http://www.azmj.eg.net/ ; ; >
       au < manifest ; exists ; 2019 ; Al-Azhar Assiut Medical Journal Volume 17 ; 2019 ; 17 ; https://www.azmj.eg.net/ ; ; >
       au < manifest ; exists ; 2020 ; Al-Azhar Assiut Medical Journal Volume 18 ; 2020 ; 18 ; https://www.azmj.eg.net/ ; ; >
-      au < manifest ; exists ; 2021 ; Al-Azhar Assiut Medical Journal Volume 19 ; 2021 ; 19 ; https://www.azmj.eg.net/ ; ; >
+      au < ready ; exists ; 2021 ; Al-Azhar Assiut Medical Journal Volume 19 ; 2021 ; 19 ; https://www.azmj.eg.net/ ; ; >
 
   }
 
@@ -4961,7 +4961,7 @@
       au < deepCrawl ; exists ; 2018 ; Archives of Medicine and Health Sciences Volume 6 ; 2018 ; 6 ; http://www.amhsjournal.org/ ; ; >
       au < manifest ; exists ; 2019 ; Archives of Medicine and Health Sciences Volume 7 ; 2019 ; 7 ; https://www.amhsjournal.org/ ; ; >
       au < manifest ; exists ; 2020 ; Archives of Medicine and Health Sciences Volume 8 ; 2020 ; 8 ; https://www.amhsjournal.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Archives of Medicine and Health Sciences Volume 9 ; 2021 ; 9 ; https://www.amhsjournal.org/ ; ; >
+      au < ready ; exists ; 2021 ; Archives of Medicine and Health Sciences Volume 9 ; 2021 ; 9 ; https://www.amhsjournal.org/ ; ; >
 
   }
 
@@ -5053,7 +5053,7 @@
       au < deepCrawl ; exists ; 2018 ; Asia-Pacific Journal of Oncology Nursing Volume 5 ; 2018 ; 5 ; http://www.apjon.org/ ; ; >
       au < manifest ; exists ; 2019 ; Asia-Pacific Journal of Oncology Nursing Volume 6 ; 2019 ; 6 ; https://www.apjon.org/ ; ; >
       au < crawling ; exists ; 2020 ; Asia-Pacific Journal of Oncology Nursing Volume 7 ; 2020 ; 7 ; https://www.apjon.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Asia-Pacific Journal of Oncology Nursing Volume 8 ; 2021 ; 8 ; https://www.apjon.org/ ; ; >
+      au < ready ; exists ; 2021 ; Asia-Pacific Journal of Oncology Nursing Volume 8 ; 2021 ; 8 ; https://www.apjon.org/ ; ; >
 
   }
 
@@ -5115,7 +5115,7 @@
       au < deepCrawl ; exists ; 2018 ; BLDE University Journal of Health Sciences Volume 3 ; 2018 ; 3 ; http://www.bldeujournalhs.in/ ; ; >
       au < manifest ; exists ; 2019 ; BLDE University Journal of Health Sciences Volume 4 ; 2019 ; 4 ; https://www.bldeujournalhs.in/ ; ; >
       au < crawling ; exists ; 2020 ; BLDE University Journal of Health Sciences Volume 5 ; 2020 ; 5 ; https://www.bldeujournalhs.in/ ; ; >
-      au < manifest ; exists ; 2021 ; BLDE University Journal of Health Sciences Volume 6 ; 2021 ; 6 ; https://www.bldeujournalhs.in/ ; ; >
+      au < ready ; exists ; 2021 ; BLDE University Journal of Health Sciences Volume 6 ; 2021 ; 6 ; https://www.bldeujournalhs.in/ ; ; >
 
   }
 
@@ -5136,7 +5136,7 @@
       au < deepCrawl ; exists ; 2018 ; Brain Circulation Volume 4 ; 2018 ; 4 ; http://www.braincirculation.org/ ; ; >
       au < manifest ; exists ; 2019 ; Brain Circulation Volume 5 ; 2019 ; 5 ; https://www.braincirculation.org/ ; ; >
       au < crawling ; exists ; 2020 ; Brain Circulation Volume 6 ; 2020 ; 6 ; https://www.braincirculation.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Brain Circulation Volume 7 ; 2021 ; 7 ; https://www.braincirculation.org/ ; ; >
+      au < ready ; exists ; 2021 ; Brain Circulation Volume 7 ; 2021 ; 7 ; https://www.braincirculation.org/ ; ; >
 
   }
 
@@ -5237,7 +5237,7 @@
       au < deepCrawl ; exists ; 2018 ; CHRISMED Journal of Health and Research Volume 5 ; 2018 ; 5 ; http://www.cjhr.org/ ; ; >
       au < manifest ; exists ; 2019 ; CHRISMED Journal of Health and Research Volume 6 ; 2019 ; 6 ; https://www.cjhr.org/ ; ; >
       au < crawling ; exists ; 2020 ; CHRISMED Journal of Health and Research Volume 7 ; 2020 ; 7 ; https://www.cjhr.org/ ; ; >
-      au < manifest ; exists ; 2021 ; CHRISMED Journal of Health and Research Volume 8 ; 2021 ; 8 ; https://www.cjhr.org/ ; ; >
+      au < ready ; exists ; 2021 ; CHRISMED Journal of Health and Research Volume 8 ; 2021 ; 8 ; https://www.cjhr.org/ ; ; >
 
   }
 
@@ -5305,7 +5305,7 @@
       au < deepCrawl ; exists ; 2018 ; Clinical Cancer Investigation Journal Volume 7 ; 2018 ; 7 ; http://www.ccij-online.org/ ; ; >
       au < manifest ; exists ; 2019 ; Clinical Cancer Investigation Journal Volume 8 ; 2019 ; 8 ; https://www.ccij-online.org/ ; ; >
       au < manifest ; exists ; 2020 ; Clinical Cancer Investigation Journal Volume 9 ; 2020 ; 9 ; https://www.ccij-online.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ ; ; >
+      au < ready ; exists ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ ; ; >
 
   }
 
@@ -5372,7 +5372,7 @@
       au < deepCrawl ; exists ; 2018 ; Dental Hypotheses Volume 9 ; 2018 ; 9 ; http://www.dentalhypotheses.com/ ; ; >
       au < manifest ; exists ; 2019 ; Dental Hypotheses Volume 10 ; 2019 ; 10 ; https://www.dentalhypotheses.com/ ; ; >
       au < crawling ; exists ; 2020 ; Dental Hypotheses Volume 11 ; 2020 ; 11 ; https://www.dentalhypotheses.com/ ; ; >
-      au < manifest ; exists ; 2021 ; Dental Hypotheses Volume 12 ; 2021 ; 12 ; https://www.dentalhypotheses.com/ ; ; >
+      au < ready ; exists ; 2021 ; Dental Hypotheses Volume 12 ; 2021 ; 12 ; https://www.dentalhypotheses.com/ ; ; >
 
   }
 
@@ -5394,7 +5394,7 @@
       au < deepCrawl ; exists ; 2018 ; Dentistry and Medical Research Volume 6 ; 2018 ; 6 ; http://www.dmrjournal.org/ ; ; >
       au < manifest ; exists ; 2019 ; Dentistry and Medical Research Volume 7 ; 2019 ; 7 ; https://www.dmrjournal.org/ ; ; >
       au < manifest ; exists ; 2020 ; Dentistry and Medical Research Volume 8 ; 2020 ; 8 ; https://www.dmrjournal.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Dentistry and Medical Research Volume 9 ; 2021 ; 9 ; https://www.dmrjournal.org/ ; ; >
+      au < ready ; exists ; 2021 ; Dentistry and Medical Research Volume 9 ; 2021 ; 9 ; https://www.dmrjournal.org/ ; ; >
 
   }
 
@@ -5450,7 +5450,7 @@
       au < deepCrawl ; exists ; 2018 ; Education for Health Volume 31 ; 2018 ; 31 ; http://www.educationforhealth.net/ ; ; >
       au < manifest ; exists ; 2019 ; Education for Health Volume 32 ; 2019 ; 32 ; https://www.educationforhealth.net/ ; ; >
       au < manifest ; exists ; 2020 ; Education for Health Volume 33 ; 2020 ; 33 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2021 ; Education for Health Volume 34 ; 2021 ; 34 ; https://www.educationforhealth.net/ ; ; >
+      au < ready ; exists ; 2021 ; Education for Health Volume 34 ; 2021 ; 34 ; https://www.educationforhealth.net/ ; ; >
 
   }
 
@@ -5496,7 +5496,7 @@
       au < deepCrawl ; exists ; 2018 ; Egyptian Journal of Dermatology and Venerology Volume 38 ; 2018 ; 38 ; http://www.ejdv.eg.net/ ; ; >
       au < manifest ; exists ; 2019 ; Egyptian Journal of Dermatology and Venerology Volume 39 ; 2019 ; 39 ; https://www.ejdv.eg.net/ ; ; >
       au < manifest ; exists ; 2020 ; Egyptian Journal of Dermatology and Venerology Volume 40 ; 2020 ; 40 ; https://www.ejdv.eg.net/ ; ; >
-      au < manifest ; exists ; 2021 ; Egyptian Journal of Dermatology and Venerology Volume 41 ; 2021 ; 41 ; https://www.ejdv.eg.net/ ; ; >
+      au < ready ; exists ; 2021 ; Egyptian Journal of Dermatology and Venerology Volume 41 ; 2021 ; 41 ; https://www.ejdv.eg.net/ ; ; >
 
   }
 
@@ -5564,7 +5564,7 @@
       au < deepCrawl ; exists ; 2018 ; Egyptian Pharmaceutical Journal Volume 17 ; 2018 ; 17 ; http://www.epj.eg.net/ ; ; >
       au < manifest ; exists ; 2019 ; Egyptian Pharmaceutical Journal Volume 18 ; 2019 ; 18 ; https://www.epj.eg.net/ ; ; >
       au < manifest ; exists ; 2020 ; Egyptian Pharmaceutical Journal Volume 19 ; 2020 ; 19 ; https://www.epj.eg.net/ ; ; >
-      au < manifest ; exists ; 2021 ; Egyptian Pharmaceutical Journal Volume 20 ; 2021 ; 20 ; https://www.epj.eg.net/ ; ; >
+      au < ready ; exists ; 2021 ; Egyptian Pharmaceutical Journal Volume 20 ; 2021 ; 20 ; https://www.epj.eg.net/ ; ; >
 
   }
 
@@ -5671,7 +5671,7 @@
       au < deepCrawl ; exists ; 2018 ; Endoscopic Ultrasound Volume 7 ; 2018 ; 7 ; http://www.eusjournal.com/ ; ; >
       au < manifest ; exists ; 2019 ; Endoscopic Ultrasound Volume 8 ; 2019 ; 8 ; https://www.eusjournal.com/ ; ; >
       au < frozen ; exists ; 2020 ; Endoscopic Ultrasound Volume 9 ; 2020 ; 9 ; https://www.eusjournal.com/ ; ; >
-      au < manifest ; exists ; 2021 ; Endoscopic Ultrasound Volume 10 ; 2021 ; 10 ; https://www.eusjournal.com/ ; ; >
+      au < ready ; exists ; 2021 ; Endoscopic Ultrasound Volume 10 ; 2021 ; 10 ; https://www.eusjournal.com/ ; ; >
 
   }
 
@@ -5691,7 +5691,7 @@
       au < deepCrawl ; exists ; 2018 ; Environmental Disease Volume 3 ; 2018 ; 3 ; http://www.environmentmed.org/ ; ; >
       au < manifest ; exists ; 2019 ; Environmental Disease Volume 4 ; 2019 ; 4 ; https://www.environmentmed.org/ ; ; >
       au < crawling ; exists ; 2020 ; Environmental Disease Volume 5 ; 2020 ; 5 ; https://www.environmentmed.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Environmental Disease Volume 6 ; 2021 ; 6 ; https://www.environmentmed.org/ ; ; >
+      au < ready ; exists ; 2021 ; Environmental Disease Volume 6 ; 2021 ; 6 ; https://www.environmentmed.org/ ; ; >
 
   }
 
@@ -5832,7 +5832,7 @@
       au < deepCrawl ; exists ; 2018 ; Heart India Volume 6 ; 2018 ; 6 ; http://www.heartindia.net/ ; ; >
       au < manifest ; exists ; 2019 ; Heart India Volume 7 ; 2019 ; 7 ; https://www.heartindia.net/ ; ; >
       au < manifest ; exists ; 2020 ; Heart India Volume 8 ; 2020 ; 8 ; https://www.heartindia.net/ ; ; >
-      au < manifest ; exists ; 2021 ; Heart India Volume 9 ; 2021 ; 9 ; https://www.heartindia.net/ ; ; >
+      au < ready ; exists ; 2021 ; Heart India Volume 9 ; 2021 ; 9 ; https://www.heartindia.net/ ; ; >
 
   }
 
@@ -5958,7 +5958,7 @@
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Drugs in Dermatology Volume 4 ; 2018 ; 4 ; http://www.ijdd.in/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Drugs in Dermatology Volume 5 ; 2019 ; 5 ; https://www.ijdd.in/ ; ; >
       au < manifest ; exists ; 2020 ; Indian Journal of Drugs in Dermatology Volume 6 ; 2020 ; 6 ; https://www.ijdd.in/ ; ; >
-      au < manifest ; exists ; 2021 ; Indian Journal of Drugs in Dermatology Volume 7 ; 2021 ; 7 ; https://www.ijdd.in/ ; ; >
+      au < ready ; exists ; 2021 ; Indian Journal of Drugs in Dermatology Volume 7 ; 2021 ; 7 ; https://www.ijdd.in/ ; ; >
 
   }
 
@@ -6015,7 +6015,7 @@
       au < manifest ; exists ; 2019 ; Indian Journal of Medical Research Volume 150 ; 2019 ; 150 ; https://www.ijmr.org.in/ ; ; >
       au < manifest ; exists ; 2020 ; Indian Journal of Medical Research Volume 151 ; 2020 ; 151 ; https://www.ijmr.org.in/ ; ; >
       au < manifest ; exists ; 2020 ; Indian Journal of Medical Research Volume 152 ; 2020 ; 152 ; https://www.ijmr.org.in/ ; ; >
-      au < manifest ; exists ; 2021 ; Indian Journal of Medical Research Volume 153 ; 2021 ; 153 ; https://www.ijmr.org.in/ ; ; >
+      au < ready ; exists ; 2021 ; Indian Journal of Medical Research Volume 153 ; 2021 ; 153 ; https://www.ijmr.org.in/ ; ; >
       au < expected ; exists ; 2021 ; Indian Journal of Medical Research Volume 154 ; 2021 ; 154 ; https://www.ijmr.org.in/ ; ; >
 
   }
@@ -6104,7 +6104,7 @@
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Pain Volume 32 ; 2018 ; 32 ; http://www.indianjpain.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Pain Volume 33 ; 2019 ; 33 ; https://www.indianjpain.org/ ; ; >
       au < crawling ; exists ; 2020 ; Indian Journal of Pain Volume 34 ; 2020 ; 34 ; https://www.indianjpain.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Indian Journal of Pain Volume 35 ; 2021 ; 35 ; https://www.indianjpain.org/ ; ; >
+      au < ready ; exists ; 2021 ; Indian Journal of Pain Volume 35 ; 2021 ; 35 ; https://www.indianjpain.org/ ; ; >
 
   }
 
@@ -6133,7 +6133,7 @@
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Research in Homoeopathy Volume 12 ; 2018 ; 12 ; http://www.ijrh.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Research in Homoeopathy Volume 13 ; 2019 ; 13 ; https://www.ijrh.org/ ; ; >
       au < crawling ; exists ; 2020 ; Indian Journal of Research in Homoeopathy Volume 14 ; 2020 ; 14 ; https://www.ijrh.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Indian Journal of Research in Homoeopathy Volume 15 ; 2021 ; 15 ; https://www.ijrh.org/ ; ; >
+      au < ready ; exists ; 2021 ; Indian Journal of Research in Homoeopathy Volume 15 ; 2021 ; 15 ; https://www.ijrh.org/ ; ; >
 
   }
 
@@ -6154,7 +6154,7 @@
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Social Psychiatry Volume 34 ; 2018 ; 34 ; http://www.indjsp.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Social Psychiatry Volume 35 ; 2019 ; 35 ; https://www.indjsp.org/ ; ; >
       au < crawling ; exists ; 2020 ; Indian Journal of Social Psychiatry Volume 36 ; 2020 ; 36 ; https://www.indjsp.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Indian Journal of Social Psychiatry Volume 37 ; 2021 ; 37 ; https://www.indjsp.org/ ; ; >
+      au < ready ; exists ; 2021 ; Indian Journal of Social Psychiatry Volume 37 ; 2021 ; 37 ; https://www.indjsp.org/ ; ; >
 
   }
 
@@ -6176,7 +6176,7 @@
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Vascular and Endovascular Surgery Volume 5 ; 2018 ; 5 ; http://www.indjvascsurg.org/ ; ; >
       au < manifest ; exists ; 2019 ; Indian Journal of Vascular and Endovascular Surgery Volume 6 ; 2019 ; 6 ; https://www.indjvascsurg.org/ ; ; >
       au < crawling ; exists ; 2020 ; Indian Journal of Vascular and Endovascular Surgery Volume 7 ; 2020 ; 7 ; https://www.indjvascsurg.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Indian Journal of Vascular and Endovascular Surgery Volume 8 ; 2021 ; 8 ; https://www.indjvascsurg.org/ ; ; >
+      au < ready ; exists ; 2021 ; Indian Journal of Vascular and Endovascular Surgery Volume 8 ; 2021 ; 8 ; https://www.indjvascsurg.org/ ; ; >
 
   }
 
@@ -6196,7 +6196,7 @@
       au < deepCrawl ; exists ; 2018 ; International Journal of Academic Medicine Volume 4 ; 2018 ; 4 ; http://www.ijam-web.org/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Academic Medicine Volume 5 ; 2019 ; 5 ; https://www.ijam-web.org/ ; ; >
       au < crawling ; exists ; 2020 ; International Journal of Academic Medicine Volume 6 ; 2020 ; 6 ; https://www.ijam-web.org/ ; ; >
-      au < manifest ; exists ; 2021 ; International Journal of Academic Medicine Volume 7 ; 2021 ; 7 ; https://www.ijam-web.org/ ; ; >
+      au < ready ; exists ; 2021 ; International Journal of Academic Medicine Volume 7 ; 2021 ; 7 ; https://www.ijam-web.org/ ; ; >
 
   }
 
@@ -6218,7 +6218,7 @@
       au < deepCrawl ; exists ; 2018 ; International Journal of Advanced Medical and Health Research Volume 5 ; 2018 ; 5 ; http://www.ijamhrjournal.org/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Advanced Medical and Health Research Volume 6 ; 2019 ; 6 ; https://www.ijamhrjournal.org/ ; ; >
       au < frozen ; exists ; 2020 ; International Journal of Advanced Medical and Health Research Volume 7 ; 2020 ; 7 ; https://www.ijamhrjournal.org/ ; ; >
-      au < manifest ; exists ; 2021 ; International Journal of Advanced Medical and Health Research Volume 8 ; 2021 ; 8 ; https://www.ijamhrjournal.org/ ; ; >
+      au < ready ; exists ; 2021 ; International Journal of Advanced Medical and Health Research Volume 8 ; 2021 ; 8 ; https://www.ijamhrjournal.org/ ; ; >
 
   }
 
@@ -6304,7 +6304,7 @@
       au < deepCrawl ; exists ; 2018 ; International Journal of Health & Allied Sciences Volume 7 ; 2018 ; 7 ; http://www.ijhas.in/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Health & Allied Sciences Volume 8 ; 2019 ; 8 ; https://www.ijhas.in/ ; ; >
       au < manifest ; exists ; 2020 ; International Journal of Health & Allied Sciences Volume 9 ; 2020 ; 9 ; https://www.ijhas.in/ ; ; >
-      au < manifest ; exists ; 2021 ; International Journal of Health & Allied Sciences Volume 10 ; 2021 ; 10 ; https://www.ijhas.in/ ; ; >
+      au < ready ; exists ; 2021 ; International Journal of Health & Allied Sciences Volume 10 ; 2021 ; 10 ; https://www.ijhas.in/ ; ; >
 
   }
 
@@ -6346,7 +6346,7 @@
       au < deepCrawl ; exists ; 2018 ; International Journal of Heart Rhythm Volume 3 ; 2018 ; 3 ; http://www.ijhronline.org/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Heart Rhythm Volume 4 ; 2019 ; 4 ; https://www.ijhronline.org/ ; ; >
       au < manifest ; exists ; 2020 ; International Journal of Heart Rhythm Volume 5 ; 2020 ; 5 ; https://www.ijhronline.org/ ; ; >
-      au < manifest ; exists ; 2021 ; International Journal of Heart Rhythm Volume 6 ; 2021 ; 6 ; https://www.ijhronline.org/ ; ; >
+      au < ready ; exists ; 2021 ; International Journal of Heart Rhythm Volume 6 ; 2021 ; 6 ; https://www.ijhronline.org/ ; ; >
 
   }
 
@@ -6366,7 +6366,7 @@
       au < deepCrawl ; exists ; 2018 ; International Journal of Noncommunicable Diseases Volume 3 ; 2018 ; 3 ; http://www.ijncd.org/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Noncommunicable Diseases Volume 4 ; 2019 ; 4 ; https://www.ijncd.org/ ; ; >
       au < manifest ; exists ; 2020 ; International Journal of Noncommunicable Diseases Volume 5 ; 2020 ; 5 ; https://www.ijncd.org/ ; ; >
-      au < manifest ; exists ; 2021 ; International Journal of Noncommunicable Diseases Volume 6 ; 2021 ; 6 ; https://www.ijncd.org/ ; ; >
+      au < ready ; exists ; 2021 ; International Journal of Noncommunicable Diseases Volume 6 ; 2021 ; 6 ; https://www.ijncd.org/ ; ; >
 
   }
 
@@ -6449,7 +6449,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Applied Hematology Volume 9 ; 2018 ; 9 ; http://www.jahjournal.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Applied Hematology Volume 10 ; 2019 ; 10 ; https://www.jahjournal.org/ ; ; >
       au < crawling ; exists ; 2020 ; Journal of Applied Hematology Volume 11 ; 2020 ; 11 ; https://www.jahjournal.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Journal of Applied Hematology Volume 12 ; 2021 ; 12 ; https://www.jahjournal.org/ ; ; >
+      au < ready ; exists ; 2021 ; Journal of Applied Hematology Volume 12 ; 2021 ; 12 ; https://www.jahjournal.org/ ; ; >
 
   }
 
@@ -6645,7 +6645,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Current Research in Scientific Medicine Volume 4 ; 2018 ; 4 ; http://www.jcrsmed.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Current Research in Scientific Medicine Volume 5 ; 2019 ; 5 ; https://www.jcrsmed.org/ ; ; >
       au < crawling ; exists ; 2020 ; Journal of Current Research in Scientific Medicine Volume 6 ; 2020 ; 6 ; https://www.jcrsmed.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Journal of Current Research in Scientific Medicine Volume 7 ; 2021 ; 7 ; https://www.jcrsmed.org/ ; ; >
+      au < ready ; exists ; 2021 ; Journal of Current Research in Scientific Medicine Volume 7 ; 2021 ; 7 ; https://www.jcrsmed.org/ ; ; >
 
   }
 
@@ -7027,7 +7027,7 @@
       au < manifest ; exists ; 2018 ; Journal of Indian Speech Language & Hearing Association Volume 32 ; 2018 ; 32 ; https://www.jisha.org/ ; ; > 
       au < manifest ; exists ; 2019 ; Journal of Indian Speech Language & Hearing Association Volume 33 ; 2019 ; 33 ; https://www.jisha.org/ ; ; > 
       au < crawling ; exists ; 2020 ; Journal of Indian Speech Language & Hearing Association Volume 34 ; 2020 ; 34 ; https://www.jisha.org/ ; ; > 
-      au < manifest ; exists ; 2021 ; Journal of Indian Speech Language & Hearing Association Volume 35 ; 2021 ; 35 ; https://www.jisha.org/ ; ; > 
+      au < ready ; exists ; 2021 ; Journal of Indian Speech Language & Hearing Association Volume 35 ; 2021 ; 35 ; https://www.jisha.org/ ; ; > 
 
   }
 
@@ -7069,7 +7069,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Limb Lengthening & Reconstruction Volume 4 ; 2018 ; 4 ; http://www.jlimblengthrecon.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Limb Lengthening & Reconstruction Volume 5 ; 2019 ; 5 ; https://www.jlimblengthrecon.org/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of Limb Lengthening & Reconstruction Volume 6 ; 2020 ; 6 ; https://www.jlimblengthrecon.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Journal of Limb Lengthening & Reconstruction Volume 7 ; 2021 ; 7 ; https://www.jlimblengthrecon.org/ ; ; >
+      au < ready ; exists ; 2021 ; Journal of Limb Lengthening & Reconstruction Volume 7 ; 2021 ; 7 ; https://www.jlimblengthrecon.org/ ; ; >
 
   }
 
@@ -7092,7 +7092,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 23 ; 2018 ; 23 ; http://www.jmgims.co.in/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 24 ; 2019 ; 24 ; https://www.jmgims.co.in/ ; ; >
       au < crawling ; exists ; 2020 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 25 ; 2020 ; 25 ; https://www.jmgims.co.in/ ; ; >
-      au < manifest ; exists ; 2021 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 26 ; 2021 ; 26 ; https://www.jmgims.co.in/ ; ; >
+      au < ready ; exists ; 2021 ; Journal of Mahatma Gandhi Institute of Medical Sciences Volume 26 ; 2021 ; 26 ; https://www.jmgims.co.in/ ; ; >
 
   }
 
@@ -8412,7 +8412,7 @@
       au < deepCrawl ; exists ; 2018 ; Tanta Dental Journal Volume 15 ; 2018 ; 15 ; http://www.tmj.eg.net/ ; ; >
       au < manifest ; exists ; 2019 ; Tanta Dental Journal Volume 16 ; 2019 ; 16 ; https://www.tmj.eg.net/ ; ; >
       au < manifest ; exists ; 2020 ; Tanta Dental Journal Volume 17 ; 2020 ; 17 ; https://www.tmj.eg.net/ ; ; >
-      au < manifest ; exists ; 2021 ; Tanta Dental Journal Volume 18 ; 2021 ; 18 ; https://www.tmj.eg.net/ ; ; >
+      au < ready ; exists ; 2021 ; Tanta Dental Journal Volume 18 ; 2021 ; 18 ; https://www.tmj.eg.net/ ; ; >
 
   }
 
@@ -8436,7 +8436,7 @@
       au < deepCrawl ; exists ; 2018 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 12 ; 2018 ; 12 ; http://www.ejca.eg.net/ ; ; >
       au < manifest ; exists ; 2019 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 13 ; 2019 ; 13 ; https://www.ejca.eg.net/ ; ; >
       au < manifest ; exists ; 2020 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 14 ; 2020 ; 14 ; https://www.ejca.eg.net/ ; ; >
-      au < manifest ; exists ; 2021 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 15 ; 2021 ; 15 ; https://www.ejca.eg.net/ ; ; >
+      au < ready ; exists ; 2021 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 15 ; 2021 ; 15 ; https://www.ejca.eg.net/ ; ; >
 
   }
 
@@ -8660,7 +8660,7 @@
       au < deepCrawl ; exists ; 2018 ; The Nigerian Journal of General Practice Volume 16 ; 2018 ; 16 ; http://www.njgp.org/ ; ; >
       au < manifest ; exists ; 2019 ; The Nigerian Journal of General Practice Volume 17 ; 2019 ; 17 ; https://www.njgp.org/ ; ; >
       au < manifest ; exists ; 2020 ; The Nigerian Journal of General Practice Volume 18 ; 2020 ; 18 ; https://www.njgp.org/ ; ; >
-      au < manifest ; exists ; 2021 ; The Nigerian Journal of General Practice Volume 19 ; 2021 ; 19 ; https://www.njgp.org/ ; ; >
+      au < ready ; exists ; 2021 ; The Nigerian Journal of General Practice Volume 19 ; 2021 ; 19 ; https://www.njgp.org/ ; ; >
 
   }
 
@@ -8871,7 +8871,7 @@
       au < manifest ; exists ; 2018 ; Acta Medica International Volume 5 ; 2018 ; 5 ; https://www.actamedicainternational.com/ ; login for pdf ; >
       au < manifest ; exists ; 2019 ; Acta Medica International Volume 6 ; 2019 ; 6 ; https://www.actamedicainternational.com/ ; ; >
       au < crawling ; exists ; 2020 ; Acta Medica International Volume 7 ; 2020 ; 7 ; https://www.actamedicainternational.com/ ; ; >
-      au < manifest ; exists ; 2021 ; Acta Medica International Volume 8 ; 2021 ; 8 ; https://www.actamedicainternational.com/ ; ; >
+      au < ready ; exists ; 2021 ; Acta Medica International Volume 8 ; 2021 ; 8 ; https://www.actamedicainternational.com/ ; ; >
 
   }
 
@@ -9000,7 +9000,7 @@
       au < manifest ; exists ; 2018 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2018 ; 2 ; https://www.aiaohns.in/ ; ; >
       au < manifest ; exists ; 2019 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 3 ; 2019 ; 3 ; https://www.aiaohns.in/ ; ; >
       au < crawling ; exists ; 2020 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 4 ; 2020 ; 4 ; https://www.aiaohns.in/ ; ; >
-      au < manifest ; exists ; 2021 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 5 ; 2021 ; 5 ; https://www.aiaohns.in/ ; ; >
+      au < ready ; exists ; 2021 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 5 ; 2021 ; 5 ; https://www.aiaohns.in/ ; ; >
 
   }
 
@@ -9742,7 +9742,7 @@
       au < manifest ; exists ; 2018 ; International Journal of Forensic Odontology Volume 3 ; 2018 ; 3 ; https://www.ijofo.org/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Forensic Odontology Volume 4 ; 2019 ; 4 ; https://www.ijofo.org/ ; ; >
       au < manifest ; exists ; 2020 ; International Journal of Forensic Odontology Volume 5 ; 2020 ; 5 ; https://www.ijofo.org/ ; ; >
-      au < manifest ; exists ; 2021 ; International Journal of Forensic Odontology Volume 6 ; 2021 ; 6 ; https://www.ijofo.org/ ; ; >
+      au < ready ; exists ; 2021 ; International Journal of Forensic Odontology Volume 6 ; 2021 ; 6 ; https://www.ijofo.org/ ; ; >
 
   }
 
@@ -10473,7 +10473,7 @@
       au < manifest ; exists ; 2018 ; Libyan International Medical University Journal Volume 3 ; 2018 ; 3 ; https://journal.limu.edu.ly/ ; ; >
       au < manifest ; exists ; 2019 ; Libyan International Medical University Journal Volume 4 ; 2019 ; 4 ; https://journal.limu.edu.ly/ ; ; >
       au < crawling ; exists ; 2020 ; Libyan International Medical University Journal Volume 5 ; 2020 ; 5 ; https://journal.limu.edu.ly/ ; ; >
-      au < manifest ; exists ; 2021 ; Libyan International Medical University Journal Volume 6 ; 2021 ; 6 ; https://journal.limu.edu.ly/ ; ; >
+      au < ready ; exists ; 2021 ; Libyan International Medical University Journal Volume 6 ; 2021 ; 6 ; https://journal.limu.edu.ly/ ; ; >
 
   }
 
@@ -10713,7 +10713,7 @@
       au < manifest ; exists ; 2018 ; Research in Cardiovascular Medicine Volume 7 ; 2018 ; 7 ; https://www.rcvmonline.com/ ; ; >
       au < manifest ; exists ; 2019 ; Research in Cardiovascular Medicine Volume 8 ; 2019 ; 8 ; https://www.rcvmonline.com/ ; ; >
       au < frozen ; exists ; 2020 ; Research in Cardiovascular Medicine Volume 9 ; 2020 ; 9 ; https://www.rcvmonline.com/ ; ; >
-      au < manifest ; exists ; 2021 ; Research in Cardiovascular Medicine Volume 10 ; 2021 ; 10 ; https://www.rcvmonline.com/ ; ; >
+      au < ready ; exists ; 2021 ; Research in Cardiovascular Medicine Volume 10 ; 2021 ; 10 ; https://www.rcvmonline.com/ ; ; >
 
   }
 
