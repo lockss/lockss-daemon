@@ -86,9 +86,9 @@
       param[home_url] = https://www.advances-in-radio-science.net/
       #nothing published in 2020
 
-      au < crawling ; exists ; 2003 ; 2003 ; Advances in Radio Science 2002 Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2003 ; 2003 ; Advances in Radio Science 2002 Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2004 ; 2004 ; Advances in Radio Science 2003 Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2005 ; 2005 ; Advances in Radio Science 2004 Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; Advances in Radio Science 2004 Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; 2006 ; Advances in Radio Science 2005 Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2007 ; 2007 ; Advances in Radio Science 2006 Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2008 ; 2008 ; Advances in Radio Science 2007 Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -415,10 +415,10 @@
       param[base_url] = https://dwes.copernicus.org/
       param[home_url] = https://www.drinking-water-engineering-and-science.net/
 
-      au < crawling ; exists ; 2008 ; 2008 ; Drinking Water Engineering and Science Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Drinking Water Engineering and Science Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 2009 ; Drinking Water Engineering and Science Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2010 ; 2010 ; Drinking Water Engineering and Science Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Drinking Water Engineering and Science Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 ; >
@@ -797,10 +797,10 @@
       param[base_url] = https://gmd.copernicus.org/
       param[home_url] = https://www.geoscientific-model-development.net/
 
-      au < crawling ; exists ; 2008 ; 2008 ; Geoscientific Model Development Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Geoscientific Model Development Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; Geoscientific Model Development Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Geoscientific Model Development Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; >
@@ -1136,7 +1136,7 @@
       param[home_url] = https://www.journal-of-bone-and-joint-infection.net/
 
       au < finished ; manifest ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2017 ; 2017 ; Journal of Bone and Joint Infection Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Journal of Bone and Joint Infection Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 5 ; 5 ; >
@@ -1252,7 +1252,7 @@
       param[base_url] = https://ms.copernicus.org/
       param[home_url] = https://www.mechanical-sciences.net/
 
-      au < crawling ; exists ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 ; >
@@ -1467,15 +1467,15 @@
 
       au < crawling ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; >
       au < finished ; manifest ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 ; >
@@ -1556,10 +1556,10 @@
       param[home_url] = https://www.stephan-mueller-special-publication-series.net/
       # no publication after 2009
 
-      au < crawling ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 ; >
       au < finished ; manifest ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2009 ; 2009 ; Stephan Mueller Special Publication Series Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2009 ; 2009 ; Stephan Mueller Special Publication Series Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1624,7 +1624,7 @@
       au < finished ; manifest ; 2007 ; 2007 ; Web Ecology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2008 ; 2008 ; Web Ecology Volume 8 ; 8 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Web Ecology Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2011 ; 2011 ; Web Ecology Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 ; >
@@ -1669,7 +1669,7 @@
       param[home_url] = https://www.geochronology.net/
 
       au < finished ; manifest ; 2019 ; 2019 ; Geochronology: Advances in Gechronological Science Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; 2021 ; Geochronology: Advances in Gechronological Science Volume 3 ; 3 ; >
 
   }
