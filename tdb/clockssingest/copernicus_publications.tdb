@@ -25,36 +25,36 @@
       param[home_url] = https://www.advances-in-geosciences.net/
       comment[v37] = publication year is 2013 to 2014, publisher puts it under 2013, we collect it under 2014
 
-      au < crawling ; exists ; 2003 ; 2003 ; Advances in Geosciences Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2003 ; 2003 ; Advances in Geosciences Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; Advances in Geosciences Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; 2005 ; Advances in Geosciences Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; 2005 ; Advances in Geosciences Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2005 ; 2005 ; Advances in Geosciences Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2006 ; 2006 ; Advances in Geosciences Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; Advances in Geosciences Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; 2006 ; Advances in Geosciences Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; 2006 ; Advances in Geosciences Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 16 ; 16 ; >
+      au < finished ; manifest ; 2007 ; 2007 ; Advances in Geosciences Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Advances in Geosciences Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Advances in Geosciences Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Advances in Geosciences Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; 2008 ; Advances in Geosciences Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Advances in Geosciences Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Advances in Geosciences Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; 2008 ; Advances in Geosciences Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 23 ; 23 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Advances in Geosciences Volume 18 ; 18 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Advances in Geosciences Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; Advances in Geosciences Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Advances in Geosciences Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; Advances in Geosciences Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Advances in Geosciences Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Advances in Geosciences Volume 24 ; 24 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; 2010 ; Advances in Geosciences Volume 25 ; 25 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Advances in Geosciences Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Advances in Geosciences Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; 2010 ; Advances in Geosciences Volume 28 ; 28 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 2011 ; Advances in Geosciences Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 30 ; 30 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Advances in Geosciences Volume 30 ; 30 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Advances in Geosciences Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Advances in Geosciences Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Advances in Geosciences Volume 33 ; 33 ; >
@@ -194,16 +194,16 @@
       au < doNotProcess ; exists ; 1997 ; 1997 ; Annales Geophysicae Volume 15 ; 15 ; >
       au < doNotProcess ; exists ; 1998 ; 1998 ; Annales Geophysicae Volume 16 ; 16 ; >
       au < doNotProcess ; exists ; 1999 ; 1999 ; Annales Geophysicae Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; Annales Geophysicae Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; Annales Geophysicae Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Annales Geophysicae Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; Annales Geophysicae Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; Annales Geophysicae Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Annales Geophysicae Volume 23 ; 23 ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Annales Geophysicae Volume 18 ; 18 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; Annales Geophysicae Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; 2002 ; Annales Geophysicae Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Annales Geophysicae Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2004 ; 2004 ; Annales Geophysicae Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; Annales Geophysicae Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; 2006 ; Annales Geophysicae Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 ; >
@@ -233,18 +233,18 @@
       comment[pdf] = https://doi.fbn-dummerstorf.de/ for 2013 & 2014
 
       au < doNotProcess ; exists ; 1999 ; 1999 ; Archives Animal Breeding Volume 42 ; 42 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; Archives Animal Breeding Volume 43 ; 43 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; Archives Animal Breeding Volume 44 ; 44 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Archives Animal Breeding Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; Archives Animal Breeding Volume 46 ; 46 ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Archives Animal Breeding Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; Archives Animal Breeding Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2002 ; 2002 ; Archives Animal Breeding Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; 2003 ; Archives Animal Breeding Volume 46 ; 46 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2004 ; 2004 ; Archives Animal Breeding Volume 47 ; 47 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2005 ; 2005 ; Archives Animal Breeding Volume 48 ; 48 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; Archives Animal Breeding Volume 48 ; 48 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; 2006 ; Archives Animal Breeding Volume 49 ; 49 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2007 ; 2007 ; Archives Animal Breeding Volume 50 ; 50 ; >
+      au < finished ; manifest ; 2007 ; 2007 ; Archives Animal Breeding Volume 50 ; 50 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; 2008 ; Archives Animal Breeding Volume 51 ; 51 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 2009 ; Archives Animal Breeding Volume 52 ; 52 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Archives Animal Breeding Volume 53 ; 53 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2011 ; 2011 ; Archives Animal Breeding Volume 54 ; 54 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Archives Animal Breeding Volume 54 ; 54 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Archives Animal Breeding Volume 55 ; 55 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Archives Animal Breeding Volume 56 ; 56 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Archives Animal Breeding Volume 57 ; 57 ; >
@@ -271,15 +271,15 @@
       param[home_url] = https://www.atmospheric-chemistry-and-physics.net/
 
       au < finished ; manifest ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; Atmospheric Chemistry and Physics Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Atmospheric Chemistry and Physics Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2005 ; 2005 ; Atmospheric Chemistry and Physics Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2006 ; 2006 ; Atmospheric Chemistry and Physics Volume 6 ; 6 ; >
       au < finished ; manifest ; 2007 ; 2007 ; Atmospheric Chemistry and Physics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2008 ; 2008 ; Atmospheric Chemistry and Physics Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Atmospheric Chemistry and Physics Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Atmospheric Chemistry and Physics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2009 ; 2009 ; Atmospheric Chemistry and Physics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 ; >
@@ -306,10 +306,10 @@
       param[base_url] = https://amt.copernicus.org/
       param[home_url] = https://www.atmospheric-measurement-techniques.net/
 
-      au < crawling ; exists ; 2008 ; 2008 ; Atmospheric Measurement Techniques Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Atmospheric Measurement Techniques Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 2009 ; Atmospheric Measurement Techniques Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2010 ; 2010 ; Atmospheric Measurement Techniques Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Atmospheric Measurement Techniques Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 ; >
@@ -335,14 +335,14 @@
       param[base_url] = https://bg.copernicus.org/
       param[home_url] = https://www.biogeosciences.net/
 
-      au < crawling ; exists ; 2004 ; 2004 ; Biogeosciences Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Biogeosciences Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2004 ; 2004 ; Biogeosciences Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; Biogeosciences Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2006 ; 2006 ; Biogeosciences Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2007 ; 2007 ; Biogeosciences Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2008 ; 2008 ; Biogeosciences Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Biogeosciences Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Biogeosciences Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Biogeosciences Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Biogeosciences Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Biogeosciences Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Biogeosciences Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Biogeosciences Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; >
@@ -368,11 +368,11 @@
       param[base_url] = https://cp.copernicus.org/
       param[home_url] = https://www.climate-of-the-past.net/
 
-      au < crawling ; exists ; 2005 ; 2005 ; Climate of the Past Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; Climate of the Past Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2006 ; 2006 ; Climate of the Past Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2007 ; 2007 ; Climate of the Past Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Climate of the Past Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Climate of the Past Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2007 ; 2007 ; Climate of the Past Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Climate of the Past Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Climate of the Past Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; 2010 ; Climate of the Past Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 ; >
@@ -469,7 +469,7 @@
       param[home_url] = https://www.earth-system-dynamics.net/
 
       au < finished ; manifest ; 2010 ; 2010 ; Earth System Dynamics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 ; >
@@ -496,8 +496,8 @@
       param[home_url] = https://www.earth-system-science-data.net/
 
       au < finished ; manifest ; 2009 ; 2009 ; Earth System Science Data Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2010 ; 2010 ; Earth System Science Data Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Earth System Science Data Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 ; >
@@ -624,17 +624,17 @@
 
       au < manifest ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 ; 1 ; >
       au < manifest ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Fossil Record Reports Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; Fossil Record Reports Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; Fossil Record Reports Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; 2003 ; Fossil Record Reports Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2004 ; 2004 ; Fossil Record Reports Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; Fossil Record Reports Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; 2006 ; Fossil Record Reports Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 ; 13 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Fossil Record Reports Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Fossil Record Reports Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Fossil Record Reports Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 ; >
@@ -878,17 +878,17 @@
       au < doNotProcess ; exists ; 1998 ; 1998 ; Hydrology and Earth System Sciences Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 1999 ; 1999 ; Hydrology and Earth System Sciences Volume 3 ; 3 ; >
       au < finished ; manifest ; 2000 ; 2000 ; Hydrology and Earth System Sciences Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2001 ; 2001 ; Hydrology and Earth System Sciences Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Hydrology and Earth System Sciences Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; Hydrology and Earth System Sciences Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; Hydrology and Earth System Sciences Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2001 ; 2001 ; Hydrology and Earth System Sciences Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; Hydrology and Earth System Sciences Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Hydrology and Earth System Sciences Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; Hydrology and Earth System Sciences Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2005 ; 2005 ; Hydrology and Earth System Sciences Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2006 ; 2006 ; Hydrology and Earth System Sciences Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2006 ; 2006 ; Hydrology and Earth System Sciences Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2007 ; 2007 ; Hydrology and Earth System Sciences Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; 2008 ; Hydrology and Earth System Sciences Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; Hydrology and Earth System Sciences Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Hydrology and Earth System Sciences Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; >
@@ -1137,7 +1137,7 @@
 
       au < finished ; manifest ; 2016 ; 2016 ; Journal of Bone and Joint Infection Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2017 ; 2017 ; Journal of Bone and Joint Infection Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 5 ; 5 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 6 ; 6 ; >
@@ -1176,17 +1176,17 @@
       au < doNotProcess ; exists ; 1998 ; 1998 ; Journal of Micropalaeontology Volume 17 ; 17 ; >
       au < doNotProcess ; exists ; 1999 ; 1999 ; Journal of Micropalaeontology Volume 18 ; 18 ; >
       au < finished ; manifest ; 2000 ; 2000 ; Journal of Micropalaeontology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2001 ; 2001 ; Journal of Micropalaeontology Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Journal of Micropalaeontology Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; Journal of Micropalaeontology Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2001 ; 2001 ; Journal of Micropalaeontology Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; Journal of Micropalaeontology Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Journal of Micropalaeontology Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; 2004 ; Journal of Micropalaeontology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2005 ; 2005 ; Journal of Micropalaeontology Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Journal of Micropalaeontology Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Journal of Micropalaeontology Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Journal of Micropalaeontology Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; Journal of Micropalaeontology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; Journal of Micropalaeontology Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Journal of Micropalaeontology Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Journal of Micropalaeontology Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2010 ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; >
@@ -1279,7 +1279,7 @@
       param[base_url] = https://nhess.copernicus.org/
       param[home_url] = https://www.natural-hazards-and-earth-system-sciences.net/
 
-      au < crawling ; exists ; 2001 ; 2001 ; Natural Hazards and Earth System Sciences Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2001 ; 2001 ; Natural Hazards and Earth System Sciences Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2002 ; 2002 ; Natural Hazards and Earth System Sciences Volume 2 ; 2 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Natural Hazards and Earth System Sciences Volume 3 ; 3 ; >
       au < frozen ; exists ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences Volume 4 ; 4 ; >
@@ -1289,7 +1289,7 @@
       au < crawling ; exists ; 2008 ; 2008 ; Natural Hazards and Earth System Sciences Volume 8 ; 8 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences Volume 9 ; 9 ; >
       au < frozen ; exists ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 ; >
@@ -1321,18 +1321,18 @@
       au < doNotProcess ; exists ; 1997 ; 1997 ; Nonlinear Processes in Geophysics Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 1998 ; 1998 ; Nonlinear Processes in Geophysics Volume 5 ; 5 ; >
       au < doNotProcess ; exists ; 1999 ; 1999 ; Nonlinear Processes in Geophysics Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; Nonlinear Processes in Geophysics Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; Nonlinear Processes in Geophysics Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Nonlinear Processes in Geophysics Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; Nonlinear Processes in Geophysics Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; Nonlinear Processes in Geophysics Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Nonlinear Processes in Geophysics Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Nonlinear Processes in Geophysics Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Nonlinear Processes in Geophysics Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Nonlinear Processes in Geophysics Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; Nonlinear Processes in Geophysics Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; Nonlinear Processes in Geophysics Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Nonlinear Processes in Geophysics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; Nonlinear Processes in Geophysics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; Nonlinear Processes in Geophysics Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; Nonlinear Processes in Geophysics Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Nonlinear Processes in Geophysics Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2008 ; 2008 ; Nonlinear Processes in Geophysics Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Nonlinear Processes in Geophysics Volume 16 ; 16 ; >
+      au < finished ; manifest ; 2009 ; 2009 ; Nonlinear Processes in Geophysics Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Nonlinear Processes in Geophysics Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2011 ; 2011 ; Nonlinear Processes in Geophysics Volume 18 ; 18 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Nonlinear Processes in Geophysics Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Nonlinear Processes in Geophysics Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 ; >
@@ -1359,12 +1359,12 @@
       param[home_url] = https://www.ocean-science.net/
 
       au < crawling ; exists ; 2005 ; 2005 ; Ocean Science Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Ocean Science Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2006 ; 2006 ; Ocean Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2007 ; 2007 ; Ocean Science Volume 3 ; 3 ; >
       au < crawling ; exists ; 2008 ; 2008 ; Ocean Science Volume 4 ; 4 ; >
       au < crawling ; exists ; 2009 ; 2009 ; Ocean Science Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Ocean Science Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Ocean Science Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Ocean Science Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Ocean Science Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 ; >
@@ -1574,10 +1574,10 @@
       param[home_url] = https://www.the-cryosphere.net/
 
       au < finished ; manifest ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2008 ; 2008 ; The Cryosphere Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; The Cryosphere Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; The Cryosphere Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2009 ; 2009 ; The Cryosphere Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; >
@@ -1615,10 +1615,10 @@
       param[base_url] = https://we.copernicus.org/
       param[home_url] = https://www.web-ecology.net/
 
-      au < crawling ; exists ; 2000 ; 2000 ; Web Ecology Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; Web Ecology Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Web Ecology Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; Web Ecology Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2002 ; 2002 ; Web Ecology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2003 ; 2003 ; Web Ecology Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2003 ; 2003 ; Web Ecology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; 2005 ; Web Ecology Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2006 ; 2006 ; Web Ecology Volume 6 ; 6 ; >
       au < finished ; manifest ; 2007 ; 2007 ; Web Ecology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
