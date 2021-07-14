@@ -3,6 +3,7 @@
   provider = Ubiquity Press
   plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkBooksPlugin
   implicit < status ; status2 ; year ; isbn ; name ; param[book_doi] ; hidden[proxy] >
+  # <base_url>site/books/<book_doi>
   
   {
 
@@ -50,9 +51,9 @@
 
       param[base_url] = https://oa.finlit.fi/
 
-      au < manifest ; exists ; 2001 ; 978-951-746-019-4 ; Riddles (978-951-746-019-4) ; 10.21435/sff.10 ;  >
-      au < manifest ; exists ; 2002 ; 978-951-746-371-3 ; Myth and Mentality (978-951-746-371-3) ; 10.21435/sff.8 ;  >
-      au < manifest ; exists ; 2002 ; 978-951-746-357-7 ; Strategies of Sanity and Survival (978-951-746-357-7) ; 10.21435/sfh.2 ;  >
+      au < manifest ; exists ; 2001 ; 978-951-746-019-4 ; Riddles (978-951-746-019-4) ; m/10.21435/sff.10 ;  >
+      au < manifest ; exists ; 2002 ; 978-951-746-371-3 ; Myth and Mentality (978-951-746-371-3) ; e/10.21435/sff.8/ ;  >
+      au < manifest ; exists ; 2002 ; 978-951-746-357-7 ; Strategies of Sanity and Survival (978-951-746-357-7) ; m/10.21435/sfh.2/ ;  >
       au < manifest ; exists ; 2002 ; 978-951-746-366-9 ; Peasants, and Sacred Promises (978-951-746-366-9) ; 10.21435/sff.11 ;  >
       au < manifest ; exists ; 2002 ; 978-951-746-426-0 ; Dynamic Finland (978-951-746-426-0) ; 10.21435/sfh.3 ;  >
       au < manifest ; exists ; 2003 ; 978-951-746-544-1 ; Performative Histories, Foundational Fictions (978-951-746-544-1) ; 10.21435/sfh.7 ;  >
