@@ -245,10 +245,10 @@ while (my $line = <>) {
 
 #CLOCKSS
   } elsif ($plugin =~ m/^Clockss.+DrupalPlugin/) {
-        $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
-        $param{base_url}, $param{volume_name});
-        #printf("********************\n");  #debug
-        #printf("url=%s\n",$url);  #debug
+    $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
+      $param{base_url}, $param{volume_name});
+    #printf("********************\n");  #debug
+    #printf("url=%s\n",$url);  #debug
     $man_url = uri_unescape($url);
     #printf("man_url=%s\n",$man_url);  #debug
     $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
@@ -578,6 +578,81 @@ while (my $line = <>) {
       }
       sleep(5);
 
+  } elsif ($plugin eq "UbiquityPartnerNetworkBooksPlugin" ||
+           $plugin eq "ClockssUbiquityPartnerNetworkBooksPlugin") {
+    $url = sprintf("%ssite/books/%s/",
+      $param{base_url}, $param{book_doi});
+    $book_doi_short = uri_unescape($param{book_doi});
+    $book_doi_short =~ s/^..//;
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$cc_license_tag/ && $man_contents =~ m/$cc_license_url/) {
+        $result = "--NO_TAG--";
+    } elsif (($man_contents =~ m/<h1>\s*(\S.*\S)\s*<\/h1>/si) || ($man_contents =~ m/<title>\s*(\S.*\S)\s*<\/title>/si)) {
+        #Collect title
+        if ($man_contents =~ m/<h1>\s*(\S.*\S)\s*<\/h1>/si) {
+            $vol_title = $1;
+        }
+        if ($man_contents =~ m/<title>\s*(\S.*\S)\s*<\/title>/si) {
+            $vol_title = $1 . ". " . $vol_title;
+        }
+        #Test for link to book
+        if ($man_contents =~ m/\/site\/books\/$book_doi_short\/read\// or $man_contents =~ m/\/site\/books\/$book_doi_short\/download\//) {
+            #for example /site/books/10.21435/sff.10/read/ some books use /site/books/10.21525/kriterium.2/download/1252/
+            $result = "Manifest";
+        } else {
+            $result = "--NO_CONT--";
+        }
+    }
+    sleep(5);
+
+#  } elsif ($plugin eq "UbiquityPartnerNetworkBooksPlugin" ||
+#          $plugin eq "ClockssUbiquityPartnerNetworkBooksPlugin") {
+#      ####start url & permission url
+#      $url = sprintf("%ssite/books/%s/",
+#          $param{base_url}, $param{book_doi});
+#      $book_doi_short = uri_unescape($param{book_doi});
+#      $book_doi_short =~ s/^..//;
+#      #printf("\n**%s**\n", $book_doi_short); #debug
+#      $man_url = uri_unescape($url);
+#      my $req = HTTP::Request->new(GET, $man_url);
+#      my $resp = $ua->request($req);
+#      if ($resp->is_success) {
+#          my $man_contents = $resp->content;
+#          if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#          } elsif (defined($man_contents) && ($man_contents =~ m/$cc_license_tag/ && $man_contents =~ m/$cc_license_url/)) {
+#              #if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si || $man_contents =~ m/<h1>\s*(.*)\s*<\/h1>/si) {
+#              if ($man_contents =~ m/<h1>\s*(\S.*\S)\s*<\/h1>/si) {
+#                  $vol_title = $1;
+#              }
+#              if ($man_contents =~ m/<title>\s*(\S.*\S)\s*<\/title>/si) {
+#                  $vol_title = $1 . ". " . $vol_title;
+#              }
+#              if ($man_contents =~ m/\/site\/books\/$book_doi_short\/read\// or $man_contents =~ m/\/site\/books\/$book_doi_short\/download\//) {
+#                  #for example /site/books/10.21435/sff.10/read/ some books use /site/books/10.21525/kriterium.2/download/1252/
+#                  $result = "Manifest";
+#              } else {
+#                  $result = "--NO_CONT--";
+#              }
+#          } else {
+#              $result = "--NO_TAG--";
+#          }
+#      } else {
+#          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#      }
+#      sleep(5);
+#
   } elsif ($plugin eq "ClockssIUMJ2018Plugin") {
       ####start url
       #https://www.iumj.indiana.edu/IUMJ/toc.php?writeyear=2017
