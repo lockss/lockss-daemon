@@ -146,15 +146,15 @@
     {
       param[base_url] = https://www.cmajopen.ca/
 
-      au < HWDrupalPlugin ; exists ; 2013 ; CMAJ Open Volume 1 ; 1 >
-      au < HWDrupalPlugin ; exists ; 2014 ; CMAJ Open Volume 2 ; 2 >
-      au < HWDrupalPlugin ; exists ; 2015 ; CMAJ Open Volume 3 ; 3 >
-      au < HWDrupalPlugin ; exists ; 2016 ; CMAJ Open Volume 4 ; 4 >
-      au < HWDrupalPlugin ; exists ; 2017 ; CMAJ Open Volume 5 ; 5 >
-      au < HWDrupalPlugin ; exists ; 2018 ; CMAJ Open Volume 6 ; 6 >
-      au < HWDrupalPlugin ; exists ; 2019 ; CMAJ Open Volume 7 ; 7 >
-      au < HWDrupalPlugin ; exists ; 2020 ; CMAJ Open Volume 8 ; 8 >
-      au < HWDrupalPlugin ; exists ; 2021 ; CMAJ Open Volume 9 ; 9 >
+      au < HWDrupalPlugin ; manifest ; 2013 ; CMAJ Open Volume 1 ; 1 >
+      au < HWDrupalPlugin ; manifest ; 2014 ; CMAJ Open Volume 2 ; 2 >
+      au < HWDrupalPlugin ; manifest ; 2015 ; CMAJ Open Volume 3 ; 3 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; CMAJ Open Volume 4 ; 4 >
+      au < HWDrupalPlugin ; manifest ; 2017 ; CMAJ Open Volume 5 ; 5 >
+      au < HWDrupalPlugin ; manifest ; 2018 ; CMAJ Open Volume 6 ; 6 >
+      au < HWDrupalPlugin ; manifest ; 2019 ; CMAJ Open Volume 7 ; 7 >
+      au < HWDrupalPlugin ; manifest ; 2020 ; CMAJ Open Volume 8 ; 8 >
+      au < HWDrupalPlugin ; manifest ; 2021 ; CMAJ Open Volume 9 ; 9 >
     }
     {
       param[base_url] = http://cmajopen.ca/
