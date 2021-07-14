@@ -102,7 +102,7 @@
      au < deepCrawl ; exists ; 2018 ; 65 ; Deutsche Entomologische Zeitschrift Volume 2018 ; 2018 ; https://dez.pensoft.net/ ; >
      au < frozen ; exists ; 2019 ; 66 ; Deutsche Entomologische Zeitschrift Volume 2019 ; 2019 ; https://dez.pensoft.net/ ; >
      au < crawling ; exists ; 2020 ; 67 ; Deutsche Entomologische Zeitschrift Volume 2020 ; 2020 ; https://dez.pensoft.net/ ; >
-     au < ready ; exists ; 2021 ; 68 ; Deutsche Entomologische Zeitschrift Volume 2021 ; 2021 ; https://dez.pensoft.net/ ; >
+     au < crawling ; exists ; 2021 ; 68 ; Deutsche Entomologische Zeitschrift Volume 2021 ; 2021 ; https://dez.pensoft.net/ ; >
 
    }
    
@@ -195,7 +195,7 @@
     au < deepCrawl ; exists ; 2018 ; 24-31 ; Nature Conservation Volume 2018 ; 2018 ; https://natureconservation.pensoft.net/ ; >
     au < frozen ; exists ; 2019 ; 32-37 ; Nature Conservation Volume 2019 ; 2019 ; https://natureconservation.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 38-42 ; Nature Conservation Volume 2020 ; 2020 ; https://natureconservation.pensoft.net/ ; >
-    au < ready ; exists ; 2021 ; 43-47 ; Nature Conservation Volume 2021 ; 2021 ; https://natureconservation.pensoft.net/ ; >
+    au < crawling ; exists ; 2021 ; 43-47 ; Nature Conservation Volume 2021 ; 2021 ; https://natureconservation.pensoft.net/ ; >
 
    }
   
@@ -221,7 +221,7 @@
     au < frozen ; exists ; 2018 ; 37-41 ; NeoBiota Volume 2018 ; 2018 ; https://neobiota.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2019 ; 42-53 ; NeoBiota Volume 2019 ; 2019 ; https://neobiota.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 54-63 ; NeoBiota Volume 2020 ; 2020 ; https://neobiota.pensoft.net/ ; >
-    au < ready ; exists ; 2021 ; 64-73 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ ; >
+    au < crawling ; exists ; 2021 ; 64-73 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ ; >
 
    }
 
@@ -271,7 +271,7 @@
     au < deepCrawl ; exists ; 2018 ; 92-114 ; PhytoKeys Volume 2018 ; 2018 ; https://phytokeys.pensoft.net/ ; >
     au < frozen ; exists ; 2019 ; 115-136 ; PhytoKeys Volume 2019 ; 2019 ; https://phytokeys.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 137-170 ; PhytoKeys Volume 2020 ; 2020 ; https://phytokeys.pensoft.net/ ; >
-    au < ready ; exists ; 2021 ; 171-205 ; PhytoKeys Volume 2021 ; 2021 ; https://phytokeys.pensoft.net/ ; >
+    au < crawling ; exists ; 2021 ; 171-205 ; PhytoKeys Volume 2021 ; 2021 ; https://phytokeys.pensoft.net/ ; >
 
    }
   
@@ -326,7 +326,7 @@
     au < deepCrawl ; exists ; 2018 ; 726-811 ; ZooKeys Volume 2018 ; 2018 ; https://zookeys.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2019 ; 812-900 ; ZooKeys Volume 2019 ; 2019 ; https://zookeys.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 901-1008 ; ZooKeys Volume 2020 ; 2020 ; https://zookeys.pensoft.net/ ; >
-    au < ready ; exists ; 2021 ; 1009-1117 ; ZooKeys Volume 2021 ; 2021 ; https://zookeys.pensoft.net/ ; >
+    au < crawling ; exists ; 2021 ; 1009-1117 ; ZooKeys Volume 2021 ; 2021 ; https://zookeys.pensoft.net/ ; >
 
    }
    
@@ -351,7 +351,7 @@
     au < deepCrawl ; exists ; 2018 ; 94 ; Zoosystematics and Evolution Volume 2018 ; 2018 ; https://zse.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2019 ; 95 ; Zoosystematics and Evolution Volume 2019 ; 2019 ; https://zse.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 96 ; Zoosystematics and Evolution Volume 2020 ; 2020 ; https://zse.pensoft.net/ ; >
-    au < ready ; exists ; 2021 ; 97 ; Zoosystematics and Evolution Volume 2021 ; 2021 ; https://zse.pensoft.net/ ; >
+    au < crawling ; exists ; 2021 ; 97 ; Zoosystematics and Evolution Volume 2021 ; 2021 ; https://zse.pensoft.net/ ; >
 
     }
 
@@ -386,7 +386,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Arctic Environmental Research Volume 2018 ; 2018 ; https://aer.pensoft.net/ ; >
       au < frozen ; exists ; 2019 ; 2019 ; Arctic Environmental Research Volume 2019 ; 2019 ; https://aer.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Arctic Environmental Research Volume 2020 ; 2020 ; https://aer.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Arctic Environmental Research Volume 2021 ; 2021 ; https://aer.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Arctic Environmental Research Volume 2021 ; 2021 ; https://aer.pensoft.net/ ; >
 
   }
 
@@ -460,7 +460,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Check List Volume 2021 ; 2021 ; https://checklist.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Check List Volume 2021 ; 2021 ; https://checklist.pensoft.net/ ; >
 
   }
 
@@ -507,7 +507,7 @@
 
       au < deepCrawl ; exists ; 2019 ; 2019 ; Food Modeling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ ; >
       au < expected ; exists ; 2020 ; 2020 ; Food Modeling Journal (FMJ) Volume 2020 ; 2020 ; https://fmj.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Food Modeling Journal (FMJ) Volume 2021 ; 2021 ; https://fmj.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Food Modeling Journal (FMJ) Volume 2021 ; 2021 ; https://fmj.pensoft.net/ ; >
 
   }
 
@@ -543,7 +543,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Italian Botanist Volume 2018 ; 2018 ; https://italianbotanist.pensoft.net/ ; >
       au < frozen ; exists ; 2019 ; 2019 ; Italian Botanist Volume 2019 ; 2019 ; https://italianbotanist.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Italian Botanist Volume 2020 ; 2020 ; https://italianbotanist.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Italian Botanist Volume 2021 ; 2021 ; https://italianbotanist.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Italian Botanist Volume 2021 ; 2021 ; https://italianbotanist.pensoft.net/ ; >
 
   }
 
@@ -571,7 +571,7 @@
     au < deepCrawl ; exists ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ ; >
     au < frozen ; exists ; 2019 ; 13 ; Comparative Cytogenetics Volume 2019 ; 2019 ; https://compcytogen.pensoft.net/ ; >
     au < crawling ; exists ; 2020 ; 14 ; Comparative Cytogenetics Volume 2020 ; 2020 ; https://compcytogen.pensoft.net/ ; >
-    au < ready ; exists ; 2021 ; 15 ; Comparative Cytogenetics Volume 2021 ; 2021 ; https://compcytogen.pensoft.net/ ; >
+    au < crawling ; exists ; 2021 ; 15 ; Comparative Cytogenetics Volume 2021 ; 2021 ; https://compcytogen.pensoft.net/ ; >
 
    }
 
@@ -628,7 +628,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Metabarcoding and Metagenomics Volume 2018 ; 2018 ; https://mbmg.pensoft.net/ ; >
       au < frozen ; exists ; 2019 ; 2019 ; Metabarcoding and Metagenomics Volume 2019 ; 2019 ; https://mbmg.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Metabarcoding and Metagenomics Volume 2020 ; 2020 ; https://mbmg.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Metabarcoding and Metagenomics Volume 2021 ; 2021 ; https://mbmg.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Metabarcoding and Metagenomics Volume 2021 ; 2021 ; https://mbmg.pensoft.net/ ; >
 
   }
 
@@ -682,7 +682,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; One Ecosystem Volume 2018 ; 2018 ; https://oneecosystem.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; One Ecosystem Volume 2020 ; 2020 ; https://oneecosystem.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; One Ecosystem Volume 2021 ; 2021 ; https://oneecosystem.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; One Ecosystem Volume 2021 ; 2021 ; https://oneecosystem.pensoft.net/ ; >
 
   }
 
@@ -814,7 +814,7 @@
       au < frozen ; exists ; 2018 ; 35 ; Zoologia Volume 2018 ; 2018 ; https://zoologia.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 37 ; Zoologia Volume 2020 ; 2020 ; https://zoologia.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 38 ; Zoologia Volume 2021 ; 2021 ; https://zoologia.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 38 ; Zoologia Volume 2021 ; 2021 ; https://zoologia.pensoft.net/ ; >
 
   }
 
@@ -830,7 +830,7 @@
 
       au < ready ; exists ; 2019 ; 2019 ; ARPHA Proceedings Volume 2019 ; 2019 ; https://ap.pensoft.net/ ; >
       au < ready ; exists ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ ; >
 
   }
 
@@ -845,7 +845,7 @@
       param[au_oai_set] = abs
 
       au < ready ; exists ; 2020 ; 2020 ; Acta Biologica Sibirica Volume 2020 ; 2020 ; https://abs.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Acta Biologica Sibirica Volume 2021 ; 2021 ; https://abs.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Acta Biologica Sibirica Volume 2021 ; 2021 ; https://abs.pensoft.net/ ; >
 
   }
 
@@ -879,7 +879,7 @@
 
       au < ready ; exists ; 2019 ; 2019 ; OGH Herpetozoa Volume 2019 ; 2019 ; https://herpetozoa.pensoft.net/ ; >
       au < ready ; exists ; 2020 ; 2020 ; OGH Herpetozoa Volume 2020 ; 2020 ; https://herpetozoa.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; OGH Herpetozoa Volume 2021 ; 2021 ; https://herpetozoa.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; OGH Herpetozoa Volume 2021 ; 2021 ; https://herpetozoa.pensoft.net/ ; >
 
   }
 
@@ -912,7 +912,7 @@
 
       au < ready ; exists ; 2019 ; 2019 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2019 ; 2019 ; https://travaux.pensoft.net/ ; >
       au < ready ; exists ; 2020 ; 2020 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2020 ; 2020 ; https://travaux.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2021 ; 2021 ; https://travaux.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2021 ; 2021 ; https://travaux.pensoft.net/ ; >
 
   }
 
@@ -929,7 +929,7 @@
 
       au < ready ; exists ; 2019 ; 2019 ; Pharmacia Volume 2019 ; 2019 ; https://pharmacia.pensoft.net/ ; >
       au < ready ; exists ; 2020 ; 2020 ; Pharmacia Volume 2020 ; 2020 ; https://pharmacia.pensoft.net/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Pharmacia Volume 2021 ; 2021 ; https://pharmacia.pensoft.net/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Pharmacia Volume 2021 ; 2021 ; https://pharmacia.pensoft.net/ ; >
 
   }
 
@@ -944,7 +944,7 @@
       param[au_oai_set] = bgcardio
 
       au < ready ; exists ; 2020 ; 2020 ; Bulgarian Cardiology Volume 2020 ; 2020 ; http://journal.bgcardio.org/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; http://journal.bgcardio.org/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; http://journal.bgcardio.org/ ; >
 
   }
 
@@ -974,7 +974,7 @@
       param[au_oai_set] = jel
 
       au < ready ; exists ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ ; >
-      au < ready ; exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; >
 
   }
 

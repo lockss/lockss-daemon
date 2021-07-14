@@ -148,7 +148,7 @@
 
     au < crawling ; exists ; 2019 ; Future Drug Discover Volume 1 ; 1 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2020 ; Future Drug Discover Volume 2 ; 2 ; https://www.future-science.com/ ; >
-    au < ready ; exists ; 2021 ; Future Drug Discover Volume 3 ; 3 ; https://www.future-science.com/ ; >
+    au < crawling ; exists ; 2021 ; Future Drug Discover Volume 3 ; 3 ; https://www.future-science.com/ ; >
 
   }
 
@@ -198,7 +198,7 @@
     param[journal_id] = fsoa
 
     au < crawling ; exists ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ ; >
-    au < ready ; exists ; 2021 ; Future Science OA Volume 7 ; 7 ; https://www.future-science.com/ ; >
+    au < crawling ; exists ; 2021 ; Future Science OA Volume 7 ; 7 ; https://www.future-science.com/ ; >
     }
   }
 
@@ -255,7 +255,7 @@
     au < deepCrawl ; exists ; 2018 ; Pharmaceutical Patent Analyst Volume 7 ; 7 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Pharmaceutical Patent Analyst Volume 8 ; 8 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2020 ; Pharmaceutical Patent Analyst Volume 9 ; 9 ; https://www.future-science.com/ ; >
-    au < ready ; exists ; 2021 ; Pharmaceutical Patent Analyst Volume 10 ; 10 ; https://www.future-science.com/ ; >
+    au < crawling ; exists ; 2021 ; Pharmaceutical Patent Analyst Volume 10 ; 10 ; https://www.future-science.com/ ; >
 
   }
 

@@ -69,7 +69,7 @@
     au < finished ; manifest ; 2018 ; British Journal of Cardiac Nursing Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; British Journal of Cardiac Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; British Journal of Cardiac Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; British Journal of Cardiac Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; British Journal of Cardiac Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
@@ -258,7 +258,7 @@
     au < deepCrawl ; exists ; 2018 ; British Journal of Neuroscience Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; British Journal of Neuroscience Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; British Journal of Neuroscience Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; British Journal of Neuroscience Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; British Journal of Neuroscience Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
@@ -468,7 +468,7 @@
     au < deepCrawl ; exists ; 2018 ; International Journal of Therapy and Rehabilitation Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; International Journal of Therapy and Rehabilitation Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; International Journal of Therapy and Rehabilitation Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; International Journal of Therapy and Rehabilitation Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; International Journal of Therapy and Rehabilitation Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
@@ -494,7 +494,7 @@
     au < deepCrawl ; exists ; 2018 ; International Paramedic Practice Volume 8 ; 8 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; International Paramedic Practice Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; International Paramedic Practice Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; International Paramedic Practice Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; International Paramedic Practice Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
@@ -517,7 +517,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Aesthetic Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Aesthetic Nursing Volume 8 ; 8 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; Journal of Aesthetic Nursing Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; Journal of Aesthetic Nursing Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; Journal of Aesthetic Nursing Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
@@ -689,7 +689,7 @@
 
     au < frozen ; exists ; 2019 ; Journal of Prescribing Practice Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; Journal of Prescribing Practice Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; Journal of Prescribing Practice Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; Journal of Prescribing Practice Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
@@ -783,7 +783,7 @@
     au < deepCrawl ; exists ; 2018 ; Companion Animal Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Companion Animal Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; Companion Animal Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; Companion Animal Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; Companion Animal Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
     }
   }
 
@@ -845,7 +845,7 @@
     au < deepCrawl ; exists ; 2018 ; Livestock Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Livestock Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; Livestock Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; Livestock Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; Livestock Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
     }
   }
 
@@ -870,7 +870,7 @@
     au < deepCrawl ; exists ; 2018 ; The Veterinary Nurse Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; The Veterinary Nurse Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; The Veterinary Nurse Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; The Veterinary Nurse Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; The Veterinary Nurse Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
@@ -1102,7 +1102,7 @@
     au < deepCrawl ; exists ; 2018 ; SecEd Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2019 ; SecEd Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2020 ; SecEd Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2021 ; SecEd Volume 2021 ; 2021 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2021 ; SecEd Volume 2021 ; 2021 ; https://www.magonlinelibrary.com/ ; >
 
   }
 
