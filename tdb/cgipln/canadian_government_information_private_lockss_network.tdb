@@ -9,14 +9,37 @@
     title <
       name = Archive-It Collections
     >
+    {
+        plugin = org.lockss.plugin.archiveit.ArchiveItPlugin
+        param[base_url] = https://partner.archive-it.org/
+        nondefparam[content_domain] = partner.archive-it.org
+        implicit < status ; name ; param[collection] >
 
-    plugin = org.lockss.plugin.archiveit.ArchiveItPlugin
-    param[base_url] = https://partner.archive-it.org/
-    nondefparam[content_domain] = partner.archive-it.org
-    implicit < status ; name ; param[collection] >
+        au < released ; Government of Canada Publications (Archive-It Collection 3572) ; 3572 >
+        au < released ; Government of Canada Web Content (Archive-It Collection 5060) ; 5060 >
+    }
 
-    au < released ; Government of Canada Publications (Archive-It Collection 3572) ; 3572 >
-    au < released ; Government of Canada Web Content (Archive-It Collection 5060) ; 5060 >
+    {
+        plugin = org.lockss.plugin.archiveit.ArchiveItApiPlugin
+        param[base_url] = https://partner.archive-it.org/
+        param[download_url] = https://archive.org/
+        nondefparam[content_domain] = partner.archive-it.org
+        param[organization] = 700
+        implicit < status ; name ; param[collection] >
+
+        au < expected ; Government of Canada British Columbia government (Archive-It Collection 7711) ; 7711 >
+        au < expected ; Government of Canada Opioid crisis in Canada (Archive-It Collection 9304) ; 9304 >
+        au < expected ; Government of Canada Northwest Territories Government (Archive-It Collection 7778) ; 7778 >
+        au < expected ; Government of Canada Prince Edward Island government information (Archive-It Collection 7777) ; 7777 >
+        au < expected ; Government of Canada Yukon government information (Archive-It Collection 7655) ; 7655 >
+        au < expected ; Government of Canada Indian Affairs and Northern Development (Archive-It Collection 9331) ; 9331 >
+        au < expected ; Government of Canada Nunavut government information (Archive-It Collection 7774) ; 7774 >
+        au < expected ; Government of Canada ? (Archive-It Collection 5596) ; 5596 >
+        au < expected ; Government of Canada Nova Scotia government information (Archive-It Collection 7620) ; 7620 >
+        au < expected ; Government of Canada New Brunswick government information (Archive-It Collection 8074) ; 8074 >
+        au < expected ; Government of Canada Saskatchewan government information (Archive-It Collection 8313) ; 8313 >
+
+    }
 
   }
 
