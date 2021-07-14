@@ -595,7 +595,7 @@ while (my $line = <>) {
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
         $result = "--NOT_DEF--";
-    } elsif ($man_contents !~ m/$cc_license_tag/ && $man_contents =~ m/$cc_license_url/) {
+    } elsif ($man_contents !~ m/$cc_license_tag/ || $man_contents !~ m/$cc_license_url/) {
         $result = "--NO_TAG--";
     } elsif (($man_contents =~ m/<h1>\s*(\S.*\S)\s*<\/h1>/si) || ($man_contents =~ m/<title>\s*(\S.*\S)\s*<\/title>/si)) {
         #Collect title
