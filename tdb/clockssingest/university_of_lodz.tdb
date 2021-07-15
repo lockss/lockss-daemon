@@ -24,13 +24,13 @@
     param[journal_abbr] = turyzm
 
     au < manifest ; exists ; 2012 ; Tourism / Turyzm Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Tourism / Turyzm Volume 26 ; 26 ; >
     au < crawling ; exists ; 2017 ; Tourism / Turyzm Volume 27 ; 27 ; >
     au < crawling ; exists ; 2018 ; Tourism / Turyzm Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
     au < manifest ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
 
