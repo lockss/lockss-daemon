@@ -2498,7 +2498,50 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #University of Michigan Press Books
+  #pub2web
+  } elsif ($plugin eq "ClockssUMichFulcrumBooksPlugin") {
+    $url = sprintf("%s%s",
+      $param{base_url}, $param{book_uri});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+
+    my $p_url = "http://clockss-ingest.lockss.org/clockss.txt";
+    my $perm_url = uri_unescape($p_url);
+    my $p_req = HTTP::Request->new(GET, $perm_url);
+    my $p_resp = $ua->request($p_req);
+
+    if ($resp->is_success && $p_resp->is_success) {
+      my $man_contents = $resp->content;
+      my $perm_contents = $p_resp->content;
+      #my $has_no_chapters = "Chapters \\(0\\)";
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($perm_contents =~ m/$clockss_tag/)) {
+        if ($man_contents =~ m/01.xhtml/ || $man_contents =~ m/locale=en#page=/ || $man_contents =~ m/chapter01/ || $man_contents =~ m/chapter1/) {
+          if ($man_contents =~ m/<title>\s*(\S[^<]*\S)\s*<\/title>/si) {
+            $vol_title = $1;
+            $vol_title =~ s/\s*\n\s*/ /g;
+            if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+              $vol_title = "\"" . $vol_title . "\"";
+            }
+          }
+          $result = "Manifest"
+        } else {
+          $result = "--NO_CONT--";
+        }
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+
   #American Society for Microbiology Books
+  #pub2web
   } elsif ($plugin eq "ClockssASMscienceBooksPlugin") {
     $url = sprintf("%scontent/book/%s",
       $param{base_url}, $param{doi});
