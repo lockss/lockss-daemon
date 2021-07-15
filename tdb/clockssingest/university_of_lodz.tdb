@@ -54,8 +54,8 @@
       au < crawling ; exists ; 2013 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 9 ; 9 ; >
       au < ready ; exists ; 2014 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 10 ; 10 ; >
       au < ready ; exists ; 2015 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 11 ; 11 ; >
-      au < ready ; exists ; 2016 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 12 ; 12 ; >
-      au < ready ; exists ; 2017 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2016 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2017 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 13 ; 13 ; >
       au < ready ; exists ; 2018 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 14 ; 14 ; >
       au < ready ; exists ; 2019 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 15 ; 15 ; >
       au < exists ; exists ; 2020 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 16 ; 16 ; >
@@ -184,7 +184,7 @@
       au < ready ; exists ; 2015 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 12 ; 12 ; >
       au < ready ; exists ; 2016 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 13 ; 13 ; >
       au < ready ; exists ; 2017 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 14 ; 14 ; >
-      au < ready ; exists ; 2018 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2018 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 15 ; 15 ; >
       au < ready ; exists ; 2019 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 16 ; 16 ; >
       au < ready ; exists ; 2020 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 17 ; 17 ; >
       au < manifest ; exists ; 2021 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 18 ; 18 ; >
@@ -202,7 +202,7 @@
       param[journal_abbr] = rela
 
       au < ready ; exists ; 2018 ; Research in Language Volume 16 ; 16 ; >
-      au < ready ; exists ; 2019 ; Research in Language Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2019 ; Research in Language Volume 17 ; 17 ; >
       au < ready ; exists ; 2020 ; Research in Language Volume 18 ; 18 ; >
       au < expected ; exists ; 2021 ; Research in Language Volume 19 ; 19 ; >
 
