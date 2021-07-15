@@ -306,4 +306,25 @@
 
   }
 
+  {
+
+      title <
+        name = The Parish Review ;
+        eissn = 2634-145X
+      >
+
+      comment[publisher] = Open Library of Humanities
+      param[base_url] = https://parishreview.openlibhums.org/
+
+      au < manifest ; exists ; 2012 ; 1 ; The Parish Review Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 1-2 ; The Parish Review Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 2 ; The Parish Review Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 3 ; The Parish Review Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 3 ; The Parish Review Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 ; >
+
+  }
+
 }
