@@ -615,6 +615,38 @@ while (my $line = <>) {
     }
     sleep(5);
 
+  } elsif (($plugin eq "Emerald2020BooksPlugin") || 
+          ($plugin eq "ClockssEmerald2020BooksPlugin")) {
+    $url = sprintf("%sinsight/publication/doi/%s",
+      $param{base_url}, $param{book_uri});
+    $book_doi_short = uri_unescape($param{book_uri});
+    $book_doi_short =~ s/^..//;
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$lockss_tag/si && $man_contents !~ m/$clockss_tag/si) {
+        $result = "--NO_TAG--";
+    #Test for link to chapter
+    } elsif ($man_contents =~ m/\/insight\/content\/doi\/10.1/) {
+        #Collect title
+        if ($man_contents =~ m/<title>\s*(\S.*\S)\s*<\/title>/si) {
+            $vol_title = $1;
+        }
+        $result = "Manifest";
+    } else {
+        $result = "--NO_CONT--";
+    }
+  
+  sleep(5);
+
 #  } elsif ($plugin eq "UbiquityPartnerNetworkBooksPlugin" ||
 #          $plugin eq "ClockssUbiquityPartnerNetworkBooksPlugin") {
 #      ####start url & permission url
@@ -2499,7 +2531,6 @@ while (my $line = <>) {
     sleep(4);
 
   #University of Michigan Press Books
-  #pub2web
   } elsif ($plugin eq "ClockssUMichFulcrumBooksPlugin") {
     $url = sprintf("%s%s",
       $param{base_url}, $param{book_uri});
