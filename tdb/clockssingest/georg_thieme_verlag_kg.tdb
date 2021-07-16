@@ -114,7 +114,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Dermatologie Volume 44 ; 44 ; >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Dermatologie Volume 45 ; 45 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Aktuelle Dermatologie Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2020 ; 2020 ; Aktuelle Dermatologie Volume 46 ; 46 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Dermatologie Volume 47 ; 47 ; >
 
@@ -173,7 +173,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Kardiologie Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Kardiologie Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Aktuelle Kardiologie Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2020 ; 2020 ; Aktuelle Kardiologie Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Kardiologie Volume 10 ; 10 ; >
 
@@ -360,7 +360,7 @@
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Urologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Urologie Volume 49 ; 49 ; >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Aktuelle Urologie Volume 50 ; 50 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Aktuelle Urologie Volume 50 ; 50 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2020 ; 2020 ; Aktuelle Urologie Volume 51 ; 51 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Aktuelle Urologie Volume 52 ; 52 ; >
 
@@ -508,7 +508,7 @@
     au < finished ; frozen ; 2016 ; 2016 ; American Journal of Perinatology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; 2017 ; American Journal of Perinatology Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Perinatology Volume 35 ; 35 ; >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Perinatology Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; American Journal of Perinatology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2020 ; 2020 ; American Journal of Perinatology Volume 37 ; 37 ; >
     au < crawling ; exists ; 2021 ; 2021 ; American Journal of Perinatology Volume 38 ; 38 ; >
 
@@ -533,7 +533,7 @@
     au < deepCrawl ; exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2017 ; 2017 ; American Journal of Perinatology Reports Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Perinatology Reports Volume 8 ; 8 ; >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Perinatology Reports Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; American Journal of Perinatology Reports Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2020 ; 2020 ; American Journal of Perinatology Reports Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; 2021 ; American Journal of Perinatology Reports Volume 11 ; 11 ; >
 
@@ -572,7 +572,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; AORTA Volume 4 ; 4 ; >
     au < frozen ; exists ; 2017 ; 2017 ; AORTA Volume 5 ; 5 ; >
     au < finished ; manifest ; 2018 ; 2018 ; AORTA Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; 2020 ; AORTA Volume 8 ; 8 ; >
     au < expected ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
 
