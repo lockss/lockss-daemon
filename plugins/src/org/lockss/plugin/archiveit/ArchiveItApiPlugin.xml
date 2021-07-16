@@ -90,7 +90,7 @@ POSSIBILITY OF SUCH DAMAGE.
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
                 <key>download_url</key>
-                <displayName>Base URL</displayName>
+                <displayName>Download URL</displayName>
                 <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
                 <type>3</type>
                 <size>40</size>
@@ -134,21 +134,22 @@ POSSIBILITY OF SUCH DAMAGE.
             </org.lockss.daemon.ConfigParamDescr>
         </list>
     </entry>
-    <!--
     <entry>
         <string>plugin_per_host_permission_path</string>
+        <!--
         plugin_per_host_permission_path parses base_url for protocol and host (and port)
         so, include path relative to https://partner.archive-it.org/ not necessarily base_url
-
-        <string>/lockss-permission.html</string>
+        -->
+        <!--<string>/lockss-permission.html</string>-->
+        <string>https://archive.org/download/</string>
     </entry>
-    -->
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"^%s", base_url</string>
+            <string>1,"^%s(webdatafile|wasapi)", base_url</string>
             <string>1,"^%sdownload/", download_url</string>
             <string>1,"^https?://[^/]+\.%s/", content_domain</string>
+            <string>1,".*%s/", download_url_host</string>
         </list>
     </entry>
     <!-- crawlseed supersedes this, but leave in just in case. -->
@@ -185,8 +186,16 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.archiveit.ArchiveItHtmlFilterFactory</string>
     </entry>
     <entry>
-        <!-- https://partner.archive-it.org/login?next=/ -->
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>"archive\.org"</string>
+            <string>"warc\.archive-it\.org"</string>
+        </list>
+    </entry>
+    <!-- <entry>
+     < - https://partner.archive-it.org/login?next=/ ->
         <string>au_redirect_to_login_url_pattern</string>
         <string>"^https://%s/login\?.*", content_domain</string>
     </entry>
+    -->
 </map>
