@@ -153,7 +153,8 @@ public class ArchiveItCrawlSeed extends BaseCrawlSeed {
     } else {
 
       // Initialization
-      int page = 1;
+      //int page = 1;
+      int page=197;
       ArchiveItJsonLinkExtractor aijle = new ArchiveItJsonLinkExtractor();
 
       // Query API until done
