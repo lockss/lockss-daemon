@@ -756,11 +756,11 @@
 
       param[au_oai_set] = rujec
 
-      au < ready ; exists ; 2015 ; 2015 ; Russian Journal of Economics Volume 2015 ; 2015 ; https://rujec.org/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Russian Journal of Economics Volume 2015 ; 2015 ; https://rujec.org/ ; >
       au < ready ; exists ; 2016 ; 2016 ; Russian Journal of Economics Volume 2016 ; 2016 ; https://rujec.org/ ; >
-      au < ready ; exists ; 2017 ; 2017 ; Russian Journal of Economics Volume 2017 ; 2017 ; https://rujec.org/ ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Russian Journal of Economics Volume 2017 ; 2017 ; https://rujec.org/ ; >
       au < ready ; exists ; 2018 ; 2018 ; Russian Journal of Economics Volume 2018 ; 2018 ; https://rujec.org/ ; >
-      au < ready ; exists ; 2019 ; 2019 ; Russian Journal of Economics Volume 2019 ; 2019 ; https://rujec.org/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Russian Journal of Economics Volume 2019 ; 2019 ; https://rujec.org/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; Russian Journal of Economics Volume 2020 ; 2020 ; https://rujec.org/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Russian Journal of Economics Volume 2021 ; 2021 ; https://rujec.org/ ; >
 
@@ -828,8 +828,8 @@
 
       param[au_oai_set] = ap
 
-      au < ready ; exists ; 2019 ; 2019 ; ARPHA Proceedings Volume 2019 ; 2019 ; https://ap.pensoft.net/ ; >
-      au < ready ; exists ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; ARPHA Proceedings Volume 2019 ; 2019 ; https://ap.pensoft.net/ ; >
+      au < crawling ; exists ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ ; >
 
   }
@@ -861,7 +861,7 @@
       param[au_oai_set] = neotropical
 
       au < ready ; exists ; 2019 ; 2019 ; NeoTropical Biology and Conservation Volume 2019 ; 2019 ; https://neotropical.pensoft.net/ ; >
-      au < ready ; exists ; 2020 ; 2020 ; NeoTropical Biology and Conservation Volume 2020 ; 2020 ; https://neotropical.pensoft.net/ ; >
+      au < crawling ; exists ; 2020 ; 2020 ; NeoTropical Biology and Conservation Volume 2020 ; 2020 ; https://neotropical.pensoft.net/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; NeoTropical Biology and Conservation Volume 2021 ; 2021 ; https://neotropical.pensoft.net/ ; >
 
   }
@@ -877,7 +877,7 @@
 
       param[au_oai_set] = herpetozoa
 
-      au < ready ; exists ; 2019 ; 2019 ; OGH Herpetozoa Volume 2019 ; 2019 ; https://herpetozoa.pensoft.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; OGH Herpetozoa Volume 2019 ; 2019 ; https://herpetozoa.pensoft.net/ ; >
       au < crawling ; exists ; 2020 ; 2020 ; OGH Herpetozoa Volume 2020 ; 2020 ; https://herpetozoa.pensoft.net/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; OGH Herpetozoa Volume 2021 ; 2021 ; https://herpetozoa.pensoft.net/ ; >
 
@@ -927,7 +927,7 @@
 
       param[au_oai_set] = pharmacia
 
-      au < ready ; exists ; 2019 ; 2019 ; Pharmacia Volume 2019 ; 2019 ; https://pharmacia.pensoft.net/ ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Pharmacia Volume 2019 ; 2019 ; https://pharmacia.pensoft.net/ ; >
       au < ready ; exists ; 2020 ; 2020 ; Pharmacia Volume 2020 ; 2020 ; https://pharmacia.pensoft.net/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Pharmacia Volume 2021 ; 2021 ; https://pharmacia.pensoft.net/ ; >
 

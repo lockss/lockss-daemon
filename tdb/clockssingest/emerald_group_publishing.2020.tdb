@@ -1255,7 +1255,7 @@
     au < crawling ; exists ; 2000 ; The British Journal of Forensic Practice Volume 2 ; 2 ; >
     au < crawling ; exists ; 2001 ; The British Journal of Forensic Practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2002 ; The British Journal of Forensic Practice Volume 4 ; 4 ; >
-    au < ready ; exists ; 2003 ; The British Journal of Forensic Practice Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2003 ; The British Journal of Forensic Practice Volume 5 ; 5 ; >
     au < manifest ; exists ; 2004 ; The British Journal of Forensic Practice Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; The British Journal of Forensic Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 ; >
@@ -1697,7 +1697,7 @@
     au < crawling ; exists ; 2003 ; Collection Building Volume 22 ; 22 ; >
     au < crawling ; exists ; 2004 ; Collection Building Volume 23 ; 23 ; >
     au < crawling ; exists ; 2005 ; Collection Building Volume 24 ; 24 ; >
-    au < ready ; exists ; 2006 ; Collection Building Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2006 ; Collection Building Volume 25 ; 25 ; >
     au < crawling ; exists ; 2007 ; Collection Building Volume 26 ; 26 ; >
     au < crawling ; exists ; 2008 ; Collection Building Volume 27 ; 27 ; >
     au < crawling ; exists ; 2009 ; Collection Building Volume 28 ; 28 ; >
@@ -12103,7 +12103,7 @@
     comment[journal_id] = shr
     # online from 2005
 
-    au < ready ; exists ; 2004-2005 ; Strategic HR Review Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2004-2005 ; Strategic HR Review Volume 4 ; 4 ; >
     au < manifest ; exists ; 2006 ; Strategic HR Review Volume 5 ; 5 ; >
     au < manifest ; exists ; 2007 ; Strategic HR Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; Strategic HR Review Volume 7 ; 7 ; >
@@ -13056,7 +13056,7 @@
     comment[journal_id] = ijamc
     #continued_by = 1747-3616
 
-    au < ready ; exists ; 1999-2000 ; International Journal of Advertising and Marketing to Children Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1999-2000 ; International Journal of Advertising and Marketing to Children Volume 1 ; 1 ; >
     au < crawling ; exists ; 2000-2001 ; International Journal of Advertising and Marketing to Children Volume 2 ; 2 ; >
     au < manifest ; exists ; 2001 ; International Journal of Advertising and Marketing to Children Volume 3 issue 1 ; 3 ; >
 
