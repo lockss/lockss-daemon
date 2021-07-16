@@ -1,6 +1,7 @@
 {
   publisher <
-    name = Royal College of Physicians
+    name = Royal College of Physicians ;
+    info[platform] = New HW platform Origins
   >
 
     implicit < status ; year ; name ; param[volume_name] >
