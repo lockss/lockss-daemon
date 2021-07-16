@@ -1,6 +1,6 @@
 {
   publisher <
-    name = University of Technology Sydney ePress
+    name = University of Technology Sydney ePress ;
       info[contract] = 2014 ;
       info[back] = 2000 ;
       info[tester] = 5 ;
@@ -9,7 +9,7 @@
   >
 
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkBooksPlugin
-    implicit < status ; status2 ; year ; volume ; eisbn ; param[book_uri] ; series_name ; name ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; eisbn ; param[book_uri] ; name ; hidden[proxy] >
 
   {
 
