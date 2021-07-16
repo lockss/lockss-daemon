@@ -1,0 +1,52 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <!-- https transition enabled -->  
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.liverpool.ClockssLiverpoolBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>17</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Liverpool University Press Books Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.liverpool.LiverpoolBooksPlugin</string>
+  </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>17</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Liverpool University Press Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
+  </entry>
+  <entry>
+  <string>au_start_url</string>
+    <list>
+      <string>"%sclockss/eisbn/%s", to_http(base_url), book_eisbn</string>
+      <string>"%sclockss/eisbn/%s", to_https(base_url), book_eisbn</string>
+    </list>
+  </entry>
+  <entry>
+  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
+    <string>plugin_au_config_user_msg</string>
+    <org.lockss.util.Default />
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+ </map>
