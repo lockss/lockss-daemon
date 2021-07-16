@@ -17,7 +17,7 @@
         name = University of Technology Sydney ePress Books ;
         type = bookSeries
       >
-
+      #Note that books with a date of "2020" are not confirmed publication dates.
       au < exists ; exists ; 2019 ; UTS-001 ; 9780648124283 ; e/10.5130/978-0-6481242-8-3/ ; Reading the Country ; >
       au < exists ; exists ; 2020 ; UTS-002 ; 9780994503992 ; m/10.5130/978-0-9945039-9-2/ ; Intercultural Learning ; >
       au < exists ; exists ; 2020 ; UTS-003 ; 9780648124207 ; m/10.5130/978-0-6481242-0-7/ ; The Power of Conferences ; >
