@@ -135,15 +135,6 @@ POSSIBILITY OF SUCH DAMAGE.
         </list>
     </entry>
     <entry>
-        <string>plugin_per_host_permission_path</string>
-        <!--
-        plugin_per_host_permission_path parses base_url for protocol and host (and port)
-        so, include path relative to https://partner.archive-it.org/ not necessarily base_url
-        -->
-        <!--<string>/lockss-permission.html</string>-->
-        <string>https://archive.org/download/</string>
-    </entry>
-    <entry>
         <string>au_crawlrules</string>
         <list>
             <string>1,"^%s(webdatafile|wasapi)", base_url</string>
