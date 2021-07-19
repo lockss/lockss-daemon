@@ -70,8 +70,8 @@
       param[base_url] = https://eje.bioscientifica.com/
       ## http://www.eje-online.org/
 
-      au < releasing ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
-      au < releasing ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
+      au < released ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
+      au < released ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
       au < doNotProcess ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
       au < doNotProcess ; 1994 ; European Journal of Endocrinology Volume 131 ; 131 >
       au < doNotProcess ; 1995 ; European Journal of Endocrinology Volume 132 ; 132 >
@@ -120,7 +120,7 @@
       au < doNotProcess ; 2016 ; European Journal of Endocrinology Volume 175 ; 175 >
       au < doNotProcess ; 2017 ; European Journal of Endocrinology Volume 176 ; 176 >
       au < doNotProcess ; 2017 ; European Journal of Endocrinology Volume 177 ; 177 >
-      au < releasing ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
+      au < released ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
       au < released ; 2018 ; European Journal of Endocrinology Volume 179 ; 179 >
 
     }
@@ -142,15 +142,15 @@
       param[base_url] = https://rep.bioscientifica.com/
       ## http://www.reproduction-online.org/
 
-      au < releasing ; 1960 ; Journal of Reproduction and Fertility Volume 1 ; 1 >
-      au < releasing ; 1961 ; Journal of Reproduction and Fertility Volume 2 ; 2 >
+      au < released ; 1960 ; Journal of Reproduction and Fertility Volume 1 ; 1 >
+      au < released ; 1961 ; Journal of Reproduction and Fertility Volume 2 ; 2 >
       au < released ; 1962 ; Journal of Reproduction and Fertility Volume 3 ; 3 >
-      au < releasing ; 1962 ; Journal of Reproduction and Fertility Volume 4 ; 4 >
-      au < releasing ; 1963 ; Journal of Reproduction and Fertility Volume 5 ; 5 >
-      au < releasing ; 1963 ; Journal of Reproduction and Fertility Volume 6 ; 6 >
-      au < releasing ; 1964 ; Journal of Reproduction and Fertility Volume 7 ; 7 >
-      au < releasing ; 1964 ; Journal of Reproduction and Fertility Volume 8 ; 8 >
-      au < releasing ; 1965 ; Journal of Reproduction and Fertility Volume 9 ; 9 >
+      au < released ; 1962 ; Journal of Reproduction and Fertility Volume 4 ; 4 >
+      au < released ; 1963 ; Journal of Reproduction and Fertility Volume 5 ; 5 >
+      au < released ; 1963 ; Journal of Reproduction and Fertility Volume 6 ; 6 >
+      au < released ; 1964 ; Journal of Reproduction and Fertility Volume 7 ; 7 >
+      au < released ; 1964 ; Journal of Reproduction and Fertility Volume 8 ; 8 >
+      au < released ; 1965 ; Journal of Reproduction and Fertility Volume 9 ; 9 >
       au < doNotProcess ; 1965 ; Journal of Reproduction and Fertility Volume 10 ; 10 >
       au < doNotProcess ; 1966 ; Journal of Reproduction and Fertility Volume 11 ; 11 >
       au < doNotProcess ; 1966 ; Journal of Reproduction and Fertility Volume 12 ; 12 >
@@ -296,7 +296,7 @@
       au < doNotProcess ; 2016 ; Reproduction Volume 152 ; 152 >
       au < doNotProcess ; 2017 ; Reproduction Volume 153 ; 153 >
       au < doNotProcess ; 2017 ; Reproduction Volume 154 ; 154 >
-      au < releasing ; 2018 ; Reproduction Volume 155 ; 155 >
+      au < released ; 2018 ; Reproduction Volume 155 ; 155 >
       au < released ; 2018 ; Reproduction Volume 156 ; 156 >
 
     }
