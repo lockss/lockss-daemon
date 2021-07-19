@@ -25,7 +25,7 @@
 
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2019 ; Clinical Psychology in Europe Volume 2019 ; 2019 ; 2019 ; https://cpe.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Clinical Psychology in Europe Volume 2020 ; 2020 ; 2020 ; https://cpe.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Clinical Psychology in Europe Volume 2021 ; 2021 ; 2021 ; https://cpe.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Clinical Psychology in Europe Volume 2021 ; 2021 ; 2021 ; https://cpe.psychopen.eu/ ; >
 
   }
 
@@ -55,7 +55,7 @@
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2018 ; Europe's Journal of Psychology Volume 14 ; 14 ; 2018 ; https://ejop.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2019 ; Europe's Journal of Psychology Volume 15 ; 15 ; 2019 ; https://ejop.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Europe's Journal of Psychology Volume 16 ; 16 ; 2020 ; https://ejop.psychopen.eu/ ; > #no substance urls.
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Europe's Journal of Psychology Volume 17 ; 17 ; 2021 ; https://ejop.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Europe's Journal of Psychology Volume 17 ; 17 ; 2021 ; https://ejop.psychopen.eu/ ; >
 
   }
 
@@ -82,7 +82,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Interpersona: An International Journal on Personal Relationships Volume 12 ; 12 ; 2018 ; https://interpersona.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2019 ; Interpersona: An International Journal on Personal Relationships Volume 13 ; 13 ; 2019 ; https://interpersona.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Interpersona: An International Journal on Personal Relationships Volume 14 ; 14 ; 2020 ; https://interpersona.psychopen.eu/ ; > #no substance urls
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Interpersona: An International Journal on Personal Relationships Volume 15 ; 15 ; 2021 ; https://interpersona.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Interpersona: An International Journal on Personal Relationships Volume 15 ; 15 ; 2021 ; https://interpersona.psychopen.eu/ ; >
 
   }
 
@@ -124,7 +124,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2019 ; Journal of Social and Political Psychology Volume 7 ; 7 ; 2019 ; https://jspp.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Journal of Social and Political Psychology Volume 8 ; 8 ; 2020 ; https://jspp.psychopen.eu/ ; > #no substance
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Journal of Social and Political Psychology Volume 9 ; 9 ; 2021 ; https://jspp.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Journal of Social and Political Psychology Volume 9 ; 9 ; 2021 ; https://jspp.psychopen.eu/ ; >
 
   }
 
@@ -139,7 +139,7 @@
       param[journal_id] = meth
 
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2020 ; Methodology Volume 16 ; 16 ; 2020 ; https://meth.psychopen.eu/ ; > #no substance urls
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Methodology Volume 17 ; 17 ; 2021 ; https://meth.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Methodology Volume 17 ; 17 ; 2021 ; https://meth.psychopen.eu/ ; >
 
   }
 
@@ -153,7 +153,7 @@
       param[journal_id] = ps
 
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Personality Science Volume 1 ; 1 ; 2020 ; https://ps.psychopen.eu/ ; > #no substance urls
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Personality Science Volume 2 ; 2 ; 2021 ; https://ps.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Personality Science Volume 2 ; 2 ; 2021 ; https://ps.psychopen.eu/ ; >
 
   }
 
@@ -166,7 +166,7 @@
       #param[base_url] = https://qcmb.psychopen.eu/
       param[journal_id] = qcmb
 
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Quantitative and Computational Methods in Behavioral Sciences Volume 1 ; 1 ; 2021 ; https://qcmb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Quantitative and Computational Methods in Behavioral Sciences Volume 1 ; 1 ; 2021 ; https://qcmb.psychopen.eu/ ; >
 
   }
 
@@ -180,7 +180,7 @@
       param[journal_id] = sotrap
 
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Sexual Offending: Theory, Research, and Prevention Volume 15 ; 15 ; 2020 ; https://sotrap.psychopen.eu/ ; > #no substance urls
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Sexual Offending: Theory, Research, and Prevention Volume 16 ; 16 ; 2021 ; https://sotrap.psychopen.eu/ ; >
 
   }
 
@@ -197,7 +197,7 @@
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2018 ; Social Psychological Bulletin Volume 2018 ; 2018 ; 2018 ; https://spb.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2019 ; Social Psychological Bulletin Volume 2019 ; 2019 ; 2019 ; https://spb.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Social Psychological Bulletin Volume 2020 ; 2020 ; 2020 ; https://spb.psychopen.eu/ ; > #no substance urls
-      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Social Psychological Bulletin Volume 2021 ; 2021 ; 2021 ; https://spb.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Social Psychological Bulletin Volume 2021 ; 2021 ; 2021 ; https://spb.psychopen.eu/ ; >
 
   }
 ############MOVED below this line
