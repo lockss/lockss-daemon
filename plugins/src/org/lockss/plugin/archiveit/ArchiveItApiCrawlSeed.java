@@ -137,7 +137,7 @@ public class ArchiveItCrawlSeed extends BaseCrawlSeed {
     //recrawl and we think the intial crawl was good just grab all the start
     //URLs from the AU
     if (aus.hasCrawled() && au.getRefetchDepth() < 2 && !aus.hasNoSubstance()) {
-      log.debug3("au hasCrawled, has Substance, and will not be refectched");
+      log.debug3("au hasCrawled, has Substance, and will not be refetched");
 
       CachedUrlSet contents = au.getAuCachedUrlSet();
       CuIterable contentIter = contents.getCuIterable();
@@ -260,6 +260,8 @@ public class ArchiveItCrawlSeed extends BaseCrawlSeed {
               if (cset == null) {
                 cset = au_cset;
               }
+              log.info('cset: ' + cset);
+              log.info('au_cset: ' + au_cset);
               aijle.extractUrls(au,
                   fud.input,
                   cset,
