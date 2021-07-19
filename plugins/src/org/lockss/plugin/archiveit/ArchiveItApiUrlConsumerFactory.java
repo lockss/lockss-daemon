@@ -65,14 +65,14 @@ public class ArchiveItApiUrlConsumerFactory implements UrlConsumerFactory {
      */
     public boolean shouldStoreAtOrigUrl() {
       boolean should = false;
-      log.info("origUrl: " + fud.origUrl);
-      log.info("fetchUrl: " + fud.fetchUrl);
       if (fud.redirectUrls != null
-          && fud.redirectUrls.size() >= 1) {
+          && fud.redirectUrls.size() >= 1
+          // make sure it is a redirect from a warc file
+          && fud.origUrl.contains("webdatafile/")
+          // make sure this isn't a redirect to login
+          && !fud.fetchUrl.contains("/login?")) {
         String origWarc = StringUtils.substringAfter(fud.origUrl, "webdatafile/");
         String fetchWarc = getWarcFromRedirect(fud.fetchUrl);
-        log.info("origWarc: " + origWarc);
-        log.info("fetchWarc: " + fetchWarc);
         should = origWarc.equals(fetchWarc);
       }
       return should;
