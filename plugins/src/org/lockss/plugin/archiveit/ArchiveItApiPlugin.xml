@@ -130,8 +130,9 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>1,"^%s(webdatafile|wasapi)", base_url</string>
             <string>1,"^%sdownload/", download_url</string>
-            <string>1,"^https?://[^/]+\.%s/", content_domain</string>
-            <string>1,".*%s/", download_url_host</string>
+            <!-- https://partner.archive-it.org/ -->
+            <string>1,".*\.archive-it\.org/"</string>
+            <string>1,".*%s", download_url_host</string>
         </list>
     </entry>
     <!-- crawlseed supersedes this, but leave in just in case. -->
@@ -146,13 +147,13 @@ POSSIBILITY OF SUCH DAMAGE.
             <entry>
                 <!--  we don't want this to default to start_url because we need the synthetic url -->
                 <string>au_volume</string>
-                <string>org.lockss.plugin.archiveit.ArchiveItFeatureUrlHelperFactory</string>
+                <string>org.lockss.plugin.archiveit.ArchiveItApiFeatureUrlHelperFactory</string>
             </entry>
         </map>
     </entry>
     <entry>
         <string>plugin_access_url_factory</string>
-        <string>org.lockss.plugin.archiveit.ArchiveItFeatureUrlHelperFactory</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItApiFeatureUrlHelperFactory</string>
     </entry>
     <entry>
         <string>required_daemon_version</string>
@@ -161,16 +162,22 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <!-- Web Archiving Systems API (WASAPI) -->
         <string>plugin_crawl_seed_factory</string>
-        <string>org.lockss.plugin.archiveit.ArchiveItCrawlSeedFactory</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItApiCrawlSeedFactory</string>
     </entry>
     <entry>
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.archiveit.ArchiveItHtmlFilterFactory</string>
     </entry>
     <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItApiUrlConsumerFactory</string>
+    </entry>
+    <entry>
         <string>au_permitted_host_pattern</string>
         <list>
+            <!-- https://partner.archive-it.org/ -->
             <string>"archive\.org"</string>
+            <string>"archive-it\.org"</string>
         </list>
     </entry>
     <!-- <entry>
