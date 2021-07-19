@@ -3,8 +3,6 @@ package org.lockss.plugin.archiveit;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.Constants;
-import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 
 import java.io.*;
@@ -14,9 +12,9 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.*;
 
-public class ArchiveItJsonLinkExtractor implements LinkExtractor {
+public class ArchiveItApiJsonLinkExtractor implements LinkExtractor {
 
-  public static final Logger log = Logger.getLogger(ArchiveItJsonLinkExtractor.class);
+  public static final Logger log = Logger.getLogger(ArchiveItApiJsonLinkExtractor.class);
 
   public static final String WEBDATAFILE_URL = "https://warcs.archive-it.org/webdatafile/";
 
@@ -29,7 +27,7 @@ public class ArchiveItJsonLinkExtractor implements LinkExtractor {
    *
    * @since 1.67.5 #FIXME ?
    */
-  public ArchiveItJsonLinkExtractor() {
+  public ArchiveItApiJsonLinkExtractor() {
     this.done = false;
   }
 

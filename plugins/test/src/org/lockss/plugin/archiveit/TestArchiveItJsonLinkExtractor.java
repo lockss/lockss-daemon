@@ -11,7 +11,7 @@ import java.util.List;
 public class TestArchiveItJsonLinkExtractor  extends LockssTestCase {
 
   public void testArchiveItJsonLinkExtractor() throws Exception {
-    ArchiveItJsonLinkExtractor le = new ArchiveItJsonLinkExtractor();
+    ArchiveItApiJsonLinkExtractor le = new ArchiveItApiJsonLinkExtractor();
     final List<String> extracted = new ArrayList<String>();
     le.extractUrls(null,
         getClass().getResourceAsStream("archiveIt_page1.json"),

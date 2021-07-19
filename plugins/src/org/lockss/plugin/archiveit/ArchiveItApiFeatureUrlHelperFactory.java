@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
-public class ArchiveItFeatureUrlHelperFactory implements FeatureUrlHelperFactory {
-  private static final Logger log = Logger.getLogger(ArchiveItFeatureUrlHelperFactory.class);
+public class ArchiveItApiFeatureUrlHelperFactory implements FeatureUrlHelperFactory {
+  private static final Logger log = Logger.getLogger(ArchiveItApiFeatureUrlHelperFactory.class);
 
 
   @Override

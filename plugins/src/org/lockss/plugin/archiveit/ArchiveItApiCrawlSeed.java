@@ -58,9 +58,9 @@ import java.util.regex.Pattern;
  * @since 1.67.5
  * @see https://support.archive-it.org/hc/en-us/articles/360015225051-Find-and-download-your-WARC-files-with-WASAPI
  */
-public class ArchiveItCrawlSeed extends BaseCrawlSeed {
+public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
 
-  private static final Logger log = Logger.getLogger(ArchiveItCrawlSeed.class);
+  private static final Logger log = Logger.getLogger(ArchiveItApiCrawlSeed.class);
 
   /**
    * <p>
@@ -94,7 +94,7 @@ public class ArchiveItCrawlSeed extends BaseCrawlSeed {
    *          A crawler façade for this crawl seed.
    * @since 1.67.5
    */
-  public ArchiveItCrawlSeed(Crawler.CrawlerFacade facade) {
+  public ArchiveItApiCrawlSeed(Crawler.CrawlerFacade facade) {
     super(facade);
     if (au == null) {
       throw new IllegalArgumentException("Valid archival unit required for crawl seed");
@@ -155,7 +155,7 @@ public class ArchiveItCrawlSeed extends BaseCrawlSeed {
       // Initialization
       //int page = 1;
       int page=197;
-      ArchiveItJsonLinkExtractor aijle = new ArchiveItJsonLinkExtractor();
+      ArchiveItApiJsonLinkExtractor aijle = new ArchiveItApiJsonLinkExtractor();
 
       // Query API until done
       while (!aijle.isDone()) {
@@ -221,7 +221,7 @@ public class ArchiveItCrawlSeed extends BaseCrawlSeed {
     return url;
 
   };
-  protected UrlFetcher makeApiUrlFetcher(final ArchiveItJsonLinkExtractor aijle,
+  protected UrlFetcher makeApiUrlFetcher(final ArchiveItApiJsonLinkExtractor aijle,
                                          final String url) {
     // Make a URL fetcher
     UrlFetcher uf = facade.makeUrlFetcher(url);
@@ -260,8 +260,8 @@ public class ArchiveItCrawlSeed extends BaseCrawlSeed {
               if (cset == null) {
                 cset = au_cset;
               }
-              log.info('cset: ' + cset);
-              log.info('au_cset: ' + au_cset);
+              log.info("cset: " + cset);
+              log.info("au_cset: " + au_cset);
               aijle.extractUrls(au,
                   fud.input,
                   cset,
