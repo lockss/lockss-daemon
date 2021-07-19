@@ -2767,8 +2767,9 @@
 
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.liberquarterly.eu/
+      #Moved to 
 
-      au < manifest ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; https://www.liberquarterly.eu/ ; >
+      au < doNotProcess ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; https://www.liberquarterly.eu/ ; >
       au < finished ; finished ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; https://www.liberquarterly.eu/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2002 ; 4 ; LIBER Quarterly Volume 2002 ; 2002 ; https://www.liberquarterly.eu/ ; reingest2.clockss.org:8085 >
@@ -2790,7 +2791,7 @@
       au < finished ; manifest ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 22 ; LIBER Quarterly Volume 2020 ; 2020 ; https://www.liberquarterly.eu/ ; >
-      au < manifest ; exists ; 2021 ; 23 ; LIBER Quarterly Volume 2021 ; 2021 ; https://www.liberquarterly.eu/ ; >
+      au < doNotProcess ; exists ; 2021 ; 23 ; LIBER Quarterly Volume 2021 ; 2021 ; https://www.liberquarterly.eu/ ; >
 
   }
 
