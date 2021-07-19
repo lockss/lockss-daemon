@@ -5,7 +5,8 @@
     info[contract] = 9999 ;
     #info[back] = 2019 ;
     info[tester] = 8 ;
-    info[poller] = 6
+    info[poller] = 6 ;
+    info[platform] = HWDrupal. No contract yet.
   >
     #waiting for contract
     plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
