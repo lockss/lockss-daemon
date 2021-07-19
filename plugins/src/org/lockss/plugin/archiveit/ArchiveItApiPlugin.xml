@@ -180,10 +180,9 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>"archive-it\.org"</string>
         </list>
     </entry>
-    <!-- <entry>
-     < - https://partner.archive-it.org/login?next=/ ->
+    <entry>
+        <!-- https://partner.archive-it.org/login?next=/ -->
         <string>au_redirect_to_login_url_pattern</string>
-        <string>"^https://%s/login\?.*", content_domain</string>
+        <string>"archive-it\.org/login\?.*", </string>
     </entry>
-    -->
 </map>
