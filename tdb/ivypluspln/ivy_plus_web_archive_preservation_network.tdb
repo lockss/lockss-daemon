@@ -32,7 +32,7 @@
         param[download_url] = https://archive.org/
         # This is pre-processed by add_nondef_param
         hidden[up] = UP
-        nondefparam[content_domain] = partner.archive-it.org
+        #nondefparam[content_domain] = partner.archive-it.org
         param[organization] = 730
         implicit < status ; name ; param[collection] >
 

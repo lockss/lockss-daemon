@@ -23,7 +23,7 @@
         plugin = org.lockss.plugin.archiveit.ArchiveItApiPlugin
         param[base_url] = https://partner.archive-it.org/
         param[download_url] = https://archive.org/
-        nondefparam[content_domain] = partner.archive-it.org
+        #nondefparam[content_domain] = partner.archive-it.org
         param[organization] = 700
         implicit < status ; name ; param[collection] >
 

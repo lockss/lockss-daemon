@@ -98,15 +98,6 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>content_domain</key>
-                <displayName>Content Domain</displayName>
-                <description>Domain within which all content hosts reside</description>
-                <type>1</type>
-                <size>30</size>
-                <definitional>false</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
                 <key>collection</key>
                 <displayName>Collection</displayName>
                 <description>Collection identifier</description>
@@ -180,7 +171,6 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_permitted_host_pattern</string>
         <list>
             <string>"archive\.org"</string>
-            <string>"warc\.archive-it\.org"</string>
         </list>
     </entry>
     <!-- <entry>
