@@ -367,7 +367,7 @@ Args:
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.8.jar" /><!-- NOTE: 2.9.10.8 -->
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
 
-  <property name="json-path.jar" value="${lib}/json-path-2.5.0.jar" />
+  <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
 
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
