@@ -506,10 +506,10 @@
     #param[base_url] = https://informatics.bmj.com/
 
 
-    au < bmj.BMJDrupalPlugin ; manifest ; 2015 ; BMJ Health & Care Informatics Volume 22 ; 22 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Health & Care Informatics Volume 23 ; 23 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; BMJ Health & Care Informatics Volume 24 ; 24 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; BMJ Health & Care Informatics Volume 25 ; 25 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; testing ; 2015 ; BMJ Health & Care Informatics Volume 22 ; 22 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; testing ; 2016 ; BMJ Health & Care Informatics Volume 23 ; 23 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; testing ; 2017 ; BMJ Health & Care Informatics Volume 24 ; 24 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; testing ; 2018 ; BMJ Health & Care Informatics Volume 25 ; 25 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; BMJ Health & Care Informatics Volume 26 ; 26 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; BMJ Health & Care Informatics Volume 27 ; 27 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Health & Care Informatics Volume 28 ; 28 ; https://informatics.bmj.com/ >
@@ -1043,7 +1043,7 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; European Journal of Hospital Pharmacy: Science and Practice Volume 21 ; 21 ; http://ejhp.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; European Journal of Hospital Pharmacy: Science and Practice Volume 22 ; 22 ; http://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 ; https://ejhp.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2017 ; European Journal of Hospital Pharmacy: Science and Practice Volume 24 ; 24 ; https://ejhp.bmj.com/ > #login page. https://ejhp.bmj.com/content/suppl/2017/04/03/24.1.DC2
+    au < bmj.BMJDrupalPlugin ; testing ; 2017 ; European Journal of Hospital Pharmacy: Science and Practice Volume 24 ; 24 ; https://ejhp.bmj.com/ > #login page. https://ejhp.bmj.com/content/suppl/2017/04/03/24.1.DC2
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; European Journal of Hospital Pharmacy: Science and Practice Volume 25 ; 25 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; European Journal of Hospital Pharmacy: Science and Practice Volume 26 ; 26 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; European Journal of Hospital Pharmacy: Science and Practice Volume 27 ; 27 ; https://ejhp.bmj.com/ >
@@ -1090,7 +1090,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; OpenHeart Volume 5 ; 5 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; OpenHeart Volume 6 ; 6 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; OpenHeart Volume 7 ; 7 ; https://openheart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2021 ; OpenHeart Volume 8 ; 8 ; https://openheart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; OpenHeart Volume 8 ; 8 ; https://openheart.bmj.com/ >
 
   }
 
@@ -1251,7 +1251,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Evidence-Based Nursing Volume 18 ; 18 ; http://ebn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Evidence-Based Nursing Volume 19 ; 19 ; https://ebn.bmj.com/ > 
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Evidence-Based Nursing Volume 20 ; 20 ; https://ebn.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Evidence-Based Nursing Volume 21 ; 21 ; https://ebn.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; testing ; 2018 ; Evidence-Based Nursing Volume 21 ; 21 ; https://ebn.bmj.com/ > #login found
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Evidence-Based Nursing Volume 22 ; 22 ; https://ebn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Evidence-Based Nursing Volume 23 ; 23 ; https://ebn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Evidence-Based Nursing Volume 24 ; 24 ; https://ebn.bmj.com/ >
@@ -1454,7 +1454,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2015 ; Heart Volume 101 ; 101 ; http://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; Heart Volume 102 ; 102 ; https://heart.bmj.com/ > # Unable to fetch probe permission page
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Heart Volume 103 ; 103 ; https://heart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ > # File size (2418184395) differs from Content-Length header (2971933806): heartjnl-2014-307008supp_Oxford-Live-2011.mov
+    au < bmj.BMJDrupalPlugin ; testing ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ > # File size (2418184395) differs from Content-Length header (2971933806): heartjnl-2014-307008supp_Oxford-Live-2011.mov
     au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Heart Volume 105 ; 105 ; https://heart.bmj.com/ > #403 forbidden
     au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Heart Volume 106 ; 106 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Heart Volume 107 ; 107 ; https://heart.bmj.com/ >
@@ -2182,7 +2182,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2015 ; Journal of the Royal Army Medical Corps Volume 161 ; 161 ; http://jramc.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2016 ; Journal of the Royal Army Medical Corps Volume 162 ; 162 ; https://militaryhealth.bmj.com/ > #login found
       au < bmj.BMJDrupalPlugin ; released ; 2017 ; Journal of the Royal Army Medical Corps Volume 163 ; 163 ; https://militaryhealth.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2018 ; Journal of the Royal Army Medical Corps Volume 164 ; 164 ; https://militaryhealth.bmj.com/ > #login found
+      au < bmj.BMJDrupalPlugin ; released ; 2018 ; Journal of the Royal Army Medical Corps Volume 164 ; 164 ; https://militaryhealth.bmj.com/ > #login found
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; Journal of the Royal Army Medical Corps Volume 165 ; 165 ; https://militaryhealth.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; Journal of the Royal Army Medical Corps Volume 166 ; 166 ; https://militaryhealth.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Journal of the Royal Army Medical Corps Volume 167 ; 167 ; https://militaryhealth.bmj.com/ >

@@ -42,18 +42,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>69</string>
+    <string>74</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -258,23 +258,47 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/content/%s/%s/[0-9]{4}/[^/]+/[^/]+/[^/]+[?]crawler=true&amp;mimetype=application/pdf",  url_host(api_url), publisher_id, journal_id, volume_name</string>
+      <!--
+        For content before 2017,'mimetype=application/pdf' may not appear.
+        The following two links are all pdf
+        https://api.ingentaconnect.com/content/iuatld/ijtld/2016/00000020/00000012/art00007?crawler=true
+        https://api.ingentaconnect.com/content/iuatld/ijtld/2017/00000021/00000001/art00001?crawler=true&mimetype=application/pdf
+      -->
+      <string>"^https?://%s/content/%s/%s/[0-9]{4}/[^/]+/[^/]+/[^/]+[?]crawler=true(&amp;mimetype=application/pdf)?",  url_host(api_url), publisher_id, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory2020</string>
+    <string>org.lockss.plugin.ingenta.IngentaRisArticleIteratorFactory2020</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.ingenta.IngentaArticleIteratorFactory2020</string>
+    <string>org.lockss.plugin.ingenta.IngentaRisArticleIteratorFactory2020</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;DublinCore</string>
-        <string>org.lockss.plugin.ingenta.IngentaMetadataExtractorFactory2020</string>
+        <string>org.lockss.plugin.ingenta.IngentaRisMetadataExtractorFactory2020</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.ingenta.IngentaRisMetadataExtractorFactory2020</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.ingenta.IngentaRisMetadataExtractorFactory2020</string>
       </entry>
     </map>
   </entry>

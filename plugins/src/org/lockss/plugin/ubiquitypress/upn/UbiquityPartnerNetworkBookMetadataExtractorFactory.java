@@ -34,9 +34,11 @@ package org.lockss.plugin.ubiquitypress.upn;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 import java.io.IOException;
 
@@ -100,13 +102,12 @@ public class UbiquityPartnerNetworkBookMetadataExtractorFactory implements FileM
           extends SimpleHtmlMetaTagMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
-      tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
-      tagMap.put("dc.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
-      tagMap.put("DC.Date", MetadataField.DC_FIELD_DATE);
-      tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
-      tagMap.put("dc.Contributor", MetadataField.DC_FIELD_CONTRIBUTOR);
-      tagMap.put("dc.Subject", MetadataField.DC_FIELD_SUBJECT);
+      tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
+      tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
+      tagMap.put("citation_date", MetadataField.FIELD_DATE);
+      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
+      tagMap.put("citation_title", MetadataField.FIELD_PUBLICATION_TITLE);
     }
 
     @Override
@@ -114,6 +115,19 @@ public class UbiquityPartnerNetworkBookMetadataExtractorFactory implements FileM
             throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+
+      String publisherName = "Ubiquity Partner Network";
+
+      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+      if (tdbau != null) {
+        publisherName =  tdbau.getPublisherName();
+      }
+      
+      am.put(MetadataField.FIELD_PUBLISHER, publisherName);
+
+      am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+      am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+
       return am;
     }
   }

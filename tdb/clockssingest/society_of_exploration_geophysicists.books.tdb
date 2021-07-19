@@ -32,7 +32,7 @@
    au < finished ; finished ; 2007 ; 9781560801443 ; 9781560801641 ; 9781560801641 ; A Practical Understanding of Pre- and Poststack Migrations: Volume 1 (Poststack) (9781560801641) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2007 ; 9781560801450 ; 9781560801658 ; 9781560801658 ; A Practical Understanding of Pre- and Poststack Migrations: Volume 2 (Prestack) (9781560801658) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < notReady ; exists ; 2019 ; 9781560803614 ; 9781560803621 ; 9781560803621 ; Illustrated Seismic Processing: Volume 1: Imaging (9781560803621) ; https://library.seg.org/ ; > #no substance. Doesn't collect book.
-   au < manifest ; exists ; 2020 ; 9781560803683 ; 9781560803690 ; 9781560803690 ; Illustrated Seismic Processing: Volume 2: Preimaging (9781560803690) ; https://library.seg.org/ ; >
+   au < ready ; exists ; 2020 ; 9781560803683 ; 9781560803690 ; 9781560803690 ; Illustrated Seismic Processing: Volume 2: Preimaging (9781560803690) ; https://library.seg.org/ ; >
 
  }
 
@@ -119,7 +119,7 @@
    au < finished ; finished ; 2010 ; 9781560802228 ; 9781560802235 ; 9781560802235 ; Heavy Oils: Reservoir Characterization and Production Monitoring (9781560802235) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2013 ; 9781560803102 ; 9781560803119 ; 9781560803119 ; Hydrocarbon Seepage: From Source to Surface (9781560803119) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < notReady ; exists ; 2019 ; 9781560803669 ; 9781560803676 ; 9781560803676 ; Numerical Modeling of Seismic Responses from Fractured Reservoirs by the Grid-characteristic Method (9781560803676) ; https://library.seg.org/ ; >
-   au < manifest ; exists ; 2020 ; 9781560803782 ; 9781560803799 ; 9781560803799 ; Simultaneous Source Seismic Acquisition (9781560803799) ; https://library.seg.org/ ; >
+   au < ready ; exists ; 2020 ; 9781560803782 ; 9781560803799 ; 9781560803799 ; Simultaneous Source Seismic Acquisition (9781560803799) ; https://library.seg.org/ ; >
 
  }
 
@@ -154,8 +154,8 @@
    au < finished ; finished ; 2017 ; 9781560803492 ; 9781560803508 ; 9781560803508 ; High-resolution Seismic Exploration (9781560803508) ; https://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2017 ; 9781560803454 ; 9781560803461 ; 9781560803461 ; Basic Geophysics (9781560803461) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
    au < notReady ; exists ; 2019 ; 9781560803577 ; 9781560803584 ; 9781560803584 ; Understanding Signals: Basic waveform analysis from a geophysical perspective (9781560803584) ; https://library.seg.org/ ; >
-   au < manifest ; exists ; 2020 ; 9781560803720 ; 9781560803737 ; 9781560803737 ; Basic Wave Analysis (9781560803737) ; https://library.seg.org/ ; >
-   au < manifest ; exists ; 2020 ; 9781560803775 ; 9781560803768 ; 9781560803768 ; Blizzards and Broken Grousers (9781560803768) ; https://library.seg.org/ ; >
+   au < ready ; exists ; 2020 ; 9781560803720 ; 9781560803737 ; 9781560803737 ; Basic Wave Analysis (9781560803737) ; https://library.seg.org/ ; >
+   au < ready ; exists ; 2020 ; 9781560803775 ; 9781560803768 ; 9781560803768 ; Blizzards and Broken Grousers (9781560803768) ; https://library.seg.org/ ; >
 
  }
 
@@ -189,7 +189,7 @@
    au < finished ; finished ; 2016 ; 9781560803317 ; 9781560803324 ; 9781560803324 ; Handbook of Poststack Seismic Attributes (9781560803324) ; https://library.seg.org/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2017 ; 9781560803478 ; 9781560803485 ; 9781560803485 ; Microseismic Monitoring (9781560803485) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2018 ; 9781560803331 ; 9781560803348 ; 9781560803348 ; The Seismic Signal and Its Meaning (9781560803348) ; https://library.seg.org/ ; reingest5.clockss.org:8082 >
-   au < manifest ; exists ; 2020 ; 9781560803744 ; 9781560803751 ; 9781560803751 ; Anisotropy and Microseismics: Theory and Practice (9781560803751 ) ; https://library.seg.org/ ; >
+   au < ready ; exists ; 2020 ; 9781560803744 ; 9781560803751 ; 9781560803751 ; Anisotropy and Microseismics: Theory and Practice (9781560803751 ) ; https://library.seg.org/ ; >
 
  }
 

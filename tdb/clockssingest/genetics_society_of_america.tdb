@@ -26,7 +26,7 @@
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2013 ; G3: Genes, Genomes, Genetics Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2014 ; G3: Genes, Genomes, Genetics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2015 ; G3: Genes, Genomes, Genetics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; notReady ; exists ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 ; > #524: A timeout https://www.g3journal.org/highwire/filestream/472915/field_highwire_adjunct_files/6/FileS6.csv
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; crawling ; exists ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
@@ -250,7 +250,7 @@
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; crawling ; exists ; 2015 ; Genetics Volume 201 ; 201 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; frozen ; exists ; 2016 ; Genetics Volume 202 ; 202 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; frozen ; exists ; 2016 ; Genetics Volume 203 ; 203 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; notReady ; exists ; 2016 ; Genetics Volume 204 ; 204 ; > #524 timeout https://www.genetics.org/highwire/filestream/432803/field_highwire_adjunct_files/8/Table_S2.tif
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; crawling ; exists ; 2016 ; Genetics Volume 204 ; 204 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; frozen ; exists ; 2017 ; Genetics Volume 205 ; 205 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; frozen ; exists ; 2017 ; Genetics Volume 206 ; 206 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; crawling ; exists ; 2017 ; Genetics Volume 207 ; 207 ; >

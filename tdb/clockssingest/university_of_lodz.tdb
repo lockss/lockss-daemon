@@ -24,15 +24,15 @@
     param[journal_abbr] = turyzm
 
     au < manifest ; exists ; 2012 ; Tourism / Turyzm Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2016 ; Tourism / Turyzm Volume 26 ; 26 ; >
     au < crawling ; exists ; 2017 ; Tourism / Turyzm Volume 27 ; 27 ; >
     au < crawling ; exists ; 2018 ; Tourism / Turyzm Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
-    au < expected ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
 
   }
 
@@ -52,12 +52,12 @@
       au < manifest ; exists ; 2011 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 7 ; 7 ; >
       au < manifest ; exists ; 2012 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 9 ; 9 ; >
-      au < testing ; exists ; 2014 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 10 ; 10 ; >
-      au < testing ; exists ; 2015 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 11 ; 11 ; >
-      au < testing ; exists ; 2016 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 12 ; 12 ; >
-      au < testing ; exists ; 2017 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 13 ; 13 ; >
-      au < testing ; exists ; 2018 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 14 ; 14 ; >
-      au < testing ; exists ; 2019 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2014 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2015 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2016 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2017 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2018 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2019 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 15 ; 15 ; >
       au < exists ; exists ; 2020 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 16 ; 16 ; >
       au < exists ; exists ; 2021 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 17 ; 17 ; >
 
@@ -73,11 +73,11 @@
       comment[publisher] = University of Lodz
       param[journal_abbr] = polonica
 
-      au < testing ; exists ; 2016 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 32 ; 32 ; >
-      au < testing ; exists ; 2017 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 33 ; 33 ; >
-      au < testing ; exists ; 2018 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2016 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2017 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2018 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 34 ; 34 ; >
       au < crawling ; exists ; 2019 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 35 ; 35 ; >
-      au < testing ; exists ; 2020 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 36 ; 36 ; >
+      au < ready ; exists ; 2020 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 36 ; 36 ; >
       au < manifest ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
 
   }
@@ -138,7 +138,7 @@
       au < manifest ; exists ; 2011 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 13 ; 13 ; >
       au < manifest ; exists ; 2012 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 15 ; 15 ; >
-      au < testing ; exists ; 2014 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2014 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 16 ; 16 ; >
       au < crawling ; exists ; 2015 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 17 ; 17 ; >
       au < crawling ; exists ; 2016 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 18 ; 18 ; >
       au < crawling ; exists ; 2017 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 19 ; 19 ; >
@@ -179,14 +179,14 @@
 
       au < manifest ; exists ; 2011 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 8 ; 8 ; >
       au < manifest ; exists ; 2012 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 9 ; 9 ; >
-      au < testing ; exists ; 2013 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2013 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 10 ; 10 ; >
       au < crawling ; exists ; 2014 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 11 ; 11 ; >
-      au < testing ; exists ; 2015 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 12 ; 12 ; >
-      au < testing ; exists ; 2016 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 13 ; 13 ; >
-      au < testing ; exists ; 2017 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 14 ; 14 ; >
-      au < testing ; exists ; 2018 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 15 ; 15 ; >
-      au < testing ; exists ; 2019 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 16 ; 16 ; >
-      au < testing ; exists ; 2020 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 17 ; 17 ; >
+      au < ready ; exists ; 2015 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2016 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2017 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2018 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2019 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2020 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 17 ; 17 ; >
       au < manifest ; exists ; 2021 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 18 ; 18 ; >
 
   }
@@ -201,9 +201,9 @@
       comment[publisher] = University of Lodz
       param[journal_abbr] = rela
 
-      au < testing ; exists ; 2018 ; Research in Language Volume 16 ; 16 ; >
-      au < testing ; exists ; 2019 ; Research in Language Volume 17 ; 17 ; >
-      au < testing ; exists ; 2020 ; Research in Language Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2018 ; Research in Language Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2019 ; Research in Language Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2020 ; Research in Language Volume 18 ; 18 ; >
       au < expected ; exists ; 2021 ; Research in Language Volume 19 ; 19 ; >
 
   }

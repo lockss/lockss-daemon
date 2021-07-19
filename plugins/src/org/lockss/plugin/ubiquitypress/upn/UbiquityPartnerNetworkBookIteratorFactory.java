@@ -58,12 +58,16 @@ public class UbiquityPartnerNetworkBookIteratorFactory implements ArticleIterato
 
   https://utsepress.lib.uts.edu.au/site/books/10.5130/aae
   https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2948/
+
+  https://www.ubiquitypress.com/site/books/e/10.5334/bcj/
+  https://www.ubiquitypress.com/site/books/10.5334/bcj/download/3331
    */
 
   // Limit to just journal volume items
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   // Match on only those patters that could be an article
-  protected static final String PATTERN_TEMPLATE = "\"%ssite/books/([^/]+/[^/]+)$\", base_url";
+  //protected static final String PATTERN_TEMPLATE = "\"%ssite/books/([^/]+/[^/]+([^/]+/)?)$\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%ssite/books((/[^/]+)?/[^/]+/[^/]+)$\", base_url";
 
   //public static final Pattern PDF_PATTERN = Pattern.compile("/(.*/download/\\d+)$", Pattern.CASE_INSENSITIVE);
   public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);

@@ -447,7 +447,7 @@
       au < released ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ >
       au < released ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ >
       au < manifest ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; https://journal.digitalmedievalist.org/ >
-      au < expected ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; https://journal.digitalmedievalist.org/ >
+      au < manifest ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; https://journal.digitalmedievalist.org/ >
 
   }
 
@@ -464,7 +464,7 @@
 
       au < released ; 2011 ; 2011 ; Digital Studies / Le champ numérique Volume 2011 ; 2011 ; https://www.digitalstudies.org/ >
       au < released ; 2012 ; 2012 ; Digital Studies / Le champ numérique Volume 2012 ; 2012 ; https://www.digitalstudies.org/ >
-      au < manifest ; 2013 ; 2013 ; Digital Studies / Le champ numérique Volume 2013 ; 2013 ; https://www.digitalstudies.org/ >
+      au < ready ; 2013 ; 2013 ; Digital Studies / Le champ numérique Volume 2013 ; 2013 ; https://www.digitalstudies.org/ >
       au < released ; 2014 ; 2014 ; Digital Studies / Le champ numérique Volume 2014 ; 2014 ; https://www.digitalstudies.org/ >
       au < released ; 2015 ; 2015 ; Digital Studies / Le champ numérique Volume 2015 ; 2015 ; https://www.digitalstudies.org/ >
       au < released ; 2016 ; 2016 ; Digital Studies / Le champ numérique Volume 2016 ; 2016 ; https://www.digitalstudies.org/ >
@@ -1153,8 +1153,8 @@
       au < released ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; http://www.ijic.org/ >
       au < released ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; https://www.ijic.org/ >
       au < released ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; https://www.ijic.org/ >
-      au < manifest ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; https://www.ijic.org/ >
-      au < manifest ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; https://www.ijic.org/ >
+      au < ready ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; https://www.ijic.org/ >
+      au < ready ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; https://www.ijic.org/ >
       au < manifest ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; https://www.ijic.org/ >
 
   }
@@ -1443,7 +1443,7 @@
       au < released ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ >
       au < released ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ >
       au < released ; 2020 ; 8 ; Journal of Open Psychology Data Volume 2020 ; 2020 ; https://openpsychologydata.metajnl.com/ >
-      au < expected ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; https://openpsychologydata.metajnl.com/ >
+      au < manifest ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; https://openpsychologydata.metajnl.com/ >
 
   }
 
@@ -1585,7 +1585,7 @@
       au < released ; 2018 ; 5 ; Open Journal of Bioresources Volume 2018 ; 2018 ; https://openbioresources.metajnl.com/ >
       au < released ; 2019 ; 6 ; Open Journal of Bioresources Volume 2019 ; 2019 ; https://openbioresources.metajnl.com/ >
       au < released ; 2020 ; 7 ; Open Journal of Bioresources Volume 2020 ; 2020 ; https://openbioresources.metajnl.com/ >
-      au < expected ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 ; https://openbioresources.metajnl.com/ >
+      au < manifest ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 ; https://openbioresources.metajnl.com/ >
 
   }
 
@@ -2150,8 +2150,8 @@
       au < released ; 2016 ; 7 ; Yearbook of Swiss Administrative Science Volume 2016 ; 2016 ; https://www.ssas-yearbook.com/ >
       au < released ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; https://www.ssas-yearbook.com/ >
       au < released ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ >
-      au < manifest ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ >
-      au < manifest ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ >
+      au < ready ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ >
+      au < ready ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ >
       au < manifest ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ >
 
   }
@@ -2298,25 +2298,25 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = http://www.entsportslawjournal.com/
 
-      au < released ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2005 ; 3 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2006 ; 4 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2007 ; 5 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2008 ; 6 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2009 ; 7 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; http://www.entsportslawjournal.com/ >
-      au < released ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; http://www.entsportslawjournal.com/ >
-      au < released ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; http://www.entsportslawjournal.com/ >
-      au < released ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; http://www.entsportslawjournal.com/ >
-      au < released ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; http://www.entsportslawjournal.com/ >
-      au < released ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; http://www.entsportslawjournal.com/ >
-      au < released ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; http://www.entsportslawjournal.com/ >
-      au < released ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; https://www.entsportslawjournal.com/ >
-      au < released ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ >
-      au < manifest ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ >
-      au < expected ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2005 ; 3 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2006 ; 4 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2007 ; 5 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2008 ; 6 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2009 ; 7 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; http://www.entsportslawjournal.com/ >
+      au < down ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; http://www.entsportslawjournal.com/ >
+      au < down ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; http://www.entsportslawjournal.com/ >
+      au < down ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; http://www.entsportslawjournal.com/ >
+      au < down ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; http://www.entsportslawjournal.com/ >
+      au < down ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; http://www.entsportslawjournal.com/ >
+      au < down ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; http://www.entsportslawjournal.com/ >
+      au < down ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; https://www.entsportslawjournal.com/ >
+      au < down ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ >
+      au < doNotProcess ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ >
+      au < doNotProcess ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; https://www.entsportslawjournal.com/ >
 
   }
 
@@ -2330,23 +2330,23 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = https://delibdemjournal.org/
 
-      au < released ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ >
-      au < manifest ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ >
-      au < released ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ >
-      au < manifest ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ >
-      au < released ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ >
-      au < released ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ >
-      au < manifest ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ >
-      au < manifest ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ >
-      au < manifest ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ >
-      au < manifest ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ >
-      au < manifest ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 ; 2015 ; https://delibdemjournal.org/ >
-      au < released ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ >
-      au < manifest ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ >
-      au < manifest ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ >
-      au < released ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ >
-      au < manifest ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ >
-      au < expected ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; https://delibdemjournal.org/ >
+      au < down ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ >
+      au < down ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ >
+      au < down ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ >
+      au < down ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 ; 2015 ; https://delibdemjournal.org/ >
+      au < down ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ >
+      au < down ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ >
+      au < doNotProcess ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; https://delibdemjournal.org/ >
 
   }
 
@@ -2360,9 +2360,9 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = https://silkroadjournal.online/
 
-      au < released ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; https://silkroadjournal.online/ >
-      au < manifest ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; https://silkroadjournal.online/ >
-      au < expected ; 2021 ; 3 ; Silk Road Volume 2021 ; 2021 ; https://silkroadjournal.online/ >
+      au < down ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; https://silkroadjournal.online/ >
+      au < doNotProcess ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; https://silkroadjournal.online/ >
+      au < doNotProcess ; 2021 ; 3 ; Silk Road Volume 2021 ; 2021 ; https://silkroadjournal.online/ >
 
   }
 
@@ -2376,18 +2376,18 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = http://www.westminsterpapers.org/
 
-      au < released ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; https://www.westminsterpapers.org/ >
-      au < released ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; https://www.westminsterpapers.org/ >
-      au < released ; 2011 ; 8 ; Westminster Papers in Communication and Culture Volume 2011 ; 2011 ; https://www.westminsterpapers.org/ >
-      au < released ; 2012 ; 9 ; Westminster Papers in Communication and Culture Volume 2012 ; 2012 ; https://www.westminsterpapers.org/ >
-      au < released ; 2013 ; 9 ; Westminster Papers in Communication and Culture Volume 2013 ; 2013 ; https://www.westminsterpapers.org/ >
-      au < released ; 2015 ; 10 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; http://www.westminsterpapers.org/ >
-      au < released ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ >
-      au < released ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; https://www.westminsterpapers.org/ >
-      au < released ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ >
-      au < released ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ >
-      au < manifest ; 2020 ; 15 ; Westminster Papers in Communication and Culture Volume 2020 ; 2020 ; https://www.westminsterpapers.org/ >
-      au < expected ; 2021 ; 16 ; Westminster Papers in Communication and Culture Volume 2021 ; 2021 ; https://www.westminsterpapers.org/ >
+      au < down ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; https://www.westminsterpapers.org/ >
+      au < down ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; https://www.westminsterpapers.org/ >
+      au < down ; 2011 ; 8 ; Westminster Papers in Communication and Culture Volume 2011 ; 2011 ; https://www.westminsterpapers.org/ >
+      au < down ; 2012 ; 9 ; Westminster Papers in Communication and Culture Volume 2012 ; 2012 ; https://www.westminsterpapers.org/ >
+      au < down ; 2013 ; 9 ; Westminster Papers in Communication and Culture Volume 2013 ; 2013 ; https://www.westminsterpapers.org/ >
+      au < down ; 2015 ; 10 ; Westminster Papers in Communication and Culture Volume 2015 ; 2015 ; http://www.westminsterpapers.org/ >
+      au < down ; 2016 ; 11 ; Westminster Papers in Communication and Culture Volume 2016 ; 2016 ; http://www.westminsterpapers.org/ >
+      au < down ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; https://www.westminsterpapers.org/ >
+      au < down ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; https://www.westminsterpapers.org/ >
+      au < down ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; https://www.westminsterpapers.org/ >
+      au < doNotProcess ; 2020 ; 15 ; Westminster Papers in Communication and Culture Volume 2020 ; 2020 ; https://www.westminsterpapers.org/ >
+      au < doNotProcess ; 2021 ; 16 ; Westminster Papers in Communication and Culture Volume 2021 ; 2021 ; https://www.westminsterpapers.org/ >
 
   }
 
@@ -2531,7 +2531,7 @@
       au < released ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; http://www.erlacs.org/ >
       au < released ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; https://www.erlacs.org/ >
       au < released ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; https://www.erlacs.org/ >
-      au < manifest ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; https://www.erlacs.org/ >
+      au < ready ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; https://www.erlacs.org/ >
       au < released ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 ; https://www.erlacs.org/ >
       au < manifest ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; https://www.erlacs.org/ >
 
@@ -2651,29 +2651,29 @@
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.liberquarterly.eu/
 
-      au < manifest ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; https://www.liberquarterly.eu/ >
-      au < released ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; https://www.liberquarterly.eu/ >
-      au < released ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; https://www.liberquarterly.eu/ >
-      au < released ; 2002 ; 4 ; LIBER Quarterly Volume 2002 ; 2002 ; https://www.liberquarterly.eu/ >
-      au < released ; 2003 ; 5 ; LIBER Quarterly Volume 2003 ; 2003 ; https://www.liberquarterly.eu/ >
-      au < released ; 2004 ; 6 ; LIBER Quarterly Volume 2004 ; 2004 ; https://www.liberquarterly.eu/ >
-      au < released ; 2005 ; 7 ; LIBER Quarterly Volume 2005 ; 2005 ; https://www.liberquarterly.eu/ >
-      au < released ; 2006 ; 8 ; LIBER Quarterly Volume 2006 ; 2006 ; https://www.liberquarterly.eu/ >
-      au < released ; 2007 ; 9 ; LIBER Quarterly Volume 2007 ; 2007 ; https://www.liberquarterly.eu/ >
-      au < released ; 2008 ; 10 ; LIBER Quarterly Volume 2008 ; 2008 ; https://www.liberquarterly.eu/ >
-      au < released ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; https://www.liberquarterly.eu/ >
-      au < released ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; https://www.liberquarterly.eu/ >
-      au < released ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; https://www.liberquarterly.eu/ >
-      au < released ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; https://www.liberquarterly.eu/ >
-      au < released ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; https://www.liberquarterly.eu/ >
-      au < released ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; https://www.liberquarterly.eu/ >
-      au < released ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; https://www.liberquarterly.eu/ >
-      au < released ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; https://www.liberquarterly.eu/ >
-      au < released ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; https://www.liberquarterly.eu/ >
-      au < released ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ >
-      au < manifest ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ >
-      au < released ; 2020 ; 22 ; LIBER Quarterly Volume 2020 ; 2020 ; https://www.liberquarterly.eu/ >
-      au < manifest ; 2021 ; 23 ; LIBER Quarterly Volume 2021 ; 2021 ; https://www.liberquarterly.eu/ >
+      au < doNotProcess ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; https://www.liberquarterly.eu/ >
+      au < down ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; https://www.liberquarterly.eu/ >
+      au < down ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; https://www.liberquarterly.eu/ >
+      au < down ; 2002 ; 4 ; LIBER Quarterly Volume 2002 ; 2002 ; https://www.liberquarterly.eu/ >
+      au < down ; 2003 ; 5 ; LIBER Quarterly Volume 2003 ; 2003 ; https://www.liberquarterly.eu/ >
+      au < down ; 2004 ; 6 ; LIBER Quarterly Volume 2004 ; 2004 ; https://www.liberquarterly.eu/ >
+      au < down ; 2005 ; 7 ; LIBER Quarterly Volume 2005 ; 2005 ; https://www.liberquarterly.eu/ >
+      au < down ; 2006 ; 8 ; LIBER Quarterly Volume 2006 ; 2006 ; https://www.liberquarterly.eu/ >
+      au < down ; 2007 ; 9 ; LIBER Quarterly Volume 2007 ; 2007 ; https://www.liberquarterly.eu/ >
+      au < down ; 2008 ; 10 ; LIBER Quarterly Volume 2008 ; 2008 ; https://www.liberquarterly.eu/ >
+      au < down ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; https://www.liberquarterly.eu/ >
+      au < down ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; https://www.liberquarterly.eu/ >
+      au < down ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; https://www.liberquarterly.eu/ >
+      au < down ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; https://www.liberquarterly.eu/ >
+      au < down ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; https://www.liberquarterly.eu/ >
+      au < down ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; https://www.liberquarterly.eu/ >
+      au < down ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; https://www.liberquarterly.eu/ >
+      au < down ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; https://www.liberquarterly.eu/ >
+      au < down ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; https://www.liberquarterly.eu/ >
+      au < down ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; https://www.liberquarterly.eu/ >
+      au < doNotProcess ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ >
+      au < down ; 2020 ; 22 ; LIBER Quarterly Volume 2020 ; 2020 ; https://www.liberquarterly.eu/ >
+      au < doNotProcess ; 2021 ; 23 ; LIBER Quarterly Volume 2021 ; 2021 ; https://www.liberquarterly.eu/ >
 
   }
 
@@ -2739,23 +2739,23 @@
       comment[publisher] = Utrecht University Library
 #      param[base_url] = http://www.gewina-studium.nl/
 
-      au < released ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; https://www.gewina-studium.nl/ >
-      au < released ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; https://www.gewina-studium.nl/ >
-      au < released ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; http://www.gewina-studium.nl/ >
-      au < released ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; http://www.gewina-studium.nl/ >
-      au < released ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; http://www.gewina-studium.nl/ >
-      au < released ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; http://www.gewina-studium.nl/ >
-      au < released ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ >
-      au < released ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ >
-      au < released ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ >
-      au < released ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; https://www.gewina-studium.nl/ >
-      au < released ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ >
-      au < released ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ >
+      au < down ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; https://www.gewina-studium.nl/ >
+      au < down ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; https://www.gewina-studium.nl/ >
+      au < down ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; http://www.gewina-studium.nl/ >
+      au < down ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; http://www.gewina-studium.nl/ >
+      au < down ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; http://www.gewina-studium.nl/ >
+      au < down ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; http://www.gewina-studium.nl/ >
+      au < down ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ >
+      au < down ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ >
+      au < down ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ >
+      au < down ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; https://www.gewina-studium.nl/ >
+      au < down ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ >
+      au < down ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ >
       
       # This additional AU is needed because the last two TOCs of 2019 only
       # appear on a 2020 manifest page. Note how only the param[year] is 2020.
-      au < manifest ; 2019 ; 12 ; Studium Volume 2019 [additional tables of contents] ; 2020 ; https://www.gewina-studium.nl/ >
-
+      au < doNotProcess ; 2019 ; 12 ; Studium Volume 2019 [additional tables of contents] ; 2020 ; https://www.gewina-studium.nl/ >
+      #Triggered
   }
 
   {

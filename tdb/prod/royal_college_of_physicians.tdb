@@ -1,10 +1,9 @@
 {
-
   publisher <
-    name = Royal College of Physicians
+    name = Royal College of Physicians ;
+    info[platform] = New HW platform Origins
   >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
   {
@@ -15,30 +14,37 @@
       eissn = 1473-4893 
     >
 
-    param[base_url] = http://www.clinmed.rcpjournal.org/
+    {
+    param[base_url] = https://www.rcpjournals.org/content/clinmedicine
+    plugin = needs.plugin
 
-    au < exists ; 2001 ; Clinical Medicine Volume 1 ; 1 >
-    au < exists ; 2002 ; Clinical Medicine Volume 2 ; 2 >
-    au < exists ; 2003 ; Clinical Medicine Volume 3 ; 3 >
-    au < exists ; 2004 ; Clinical Medicine Volume 4 ; 4 >
-    au < released ; 2005 ; Clinical Medicine Volume 5 ; 5 >
-    au < released ; 2006 ; Clinical Medicine Volume 6 ; 6 >
-    au < released ; 2007 ; Clinical Medicine Volume 7 ; 7 >
-    au < released ; 2008 ; Clinical Medicine Volume 8 ; 8 >
-    au < released ; 2009 ; Clinical Medicine Volume 9 ; 9 >
-    au < released ; 2010 ; Clinical Medicine Volume 10 ; 10 >
-    au < released ; 2011 ; Clinical Medicine Volume 11 ; 11 >
-    au < released ; 2012 ; Clinical Medicine Volume 12 ; 12 >
-    au < released ; 2013 ; Clinical Medicine Volume 13 ; 13 >
-    au < released ; 2014 ; Clinical Medicine Volume 14 ; 14 >
-    au < released ; 2015 ; Clinical Medicine Volume 15 ; 15 >
     au < exists ; 2016 ; Clinical Medicine Volume 16 ; 16 >
     au < exists ; 2017 ; Clinical Medicine Volume 17 ; 17 >
     au < exists ; 2018 ; Clinical Medicine Volume 18 ; 18 >
-    au < expected ; 2019 ; Clinical Medicine Volume 19 ; 19 >
-    au < expected ; 2020 ; Clinical Medicine Volume 20 ; 20 >
-    au < expected ; 2021 ; Clinical Medicine Volume 21 ; 21 >
+    au < exists ; 2019 ; Clinical Medicine Volume 19 ; 19 >
+    au < exists ; 2020 ; Clinical Medicine Volume 20 ; 20 >
+    au < exists ; 2021 ; Clinical Medicine Volume 21 ; 21 >
+    }
+    {
+    param[base_url] = http://www.clinmed.rcpjournal.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
 
+    au < doNotProcess ; 2001 ; Clinical Medicine Volume 1 ; 1 >
+    au < doNotProcess ; 2002 ; Clinical Medicine Volume 2 ; 2 >
+    au < doNotProcess ; 2003 ; Clinical Medicine Volume 3 ; 3 >
+    au < doNotProcess ; 2004 ; Clinical Medicine Volume 4 ; 4 >
+    au < down ; 2005 ; Clinical Medicine Volume 5 ; 5 >
+    au < down ; 2006 ; Clinical Medicine Volume 6 ; 6 >
+    au < down ; 2007 ; Clinical Medicine Volume 7 ; 7 >
+    au < down ; 2008 ; Clinical Medicine Volume 8 ; 8 >
+    au < down ; 2009 ; Clinical Medicine Volume 9 ; 9 >
+    au < down ; 2010 ; Clinical Medicine Volume 10 ; 10 >
+    au < down ; 2011 ; Clinical Medicine Volume 11 ; 11 >
+    au < down ; 2012 ; Clinical Medicine Volume 12 ; 12 >
+    au < down ; 2013 ; Clinical Medicine Volume 13 ; 13 >
+    au < down ; 2014 ; Clinical Medicine Volume 14 ; 14 >
+    au < down ; 2015 ; Clinical Medicine Volume 15 ; 15 >
+    }
   }
     
   {
@@ -48,18 +54,24 @@
       issn = 2055-3323 ;
       eissn = 2055-3331 
     >
+    {
+    param[base_url] = https://www.rcpjournals.org/content/futurehosp
+    plugin = needs.plugin
 
+    au < exists ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
+    au < exists ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
+    au < exists ; 2021 ; Future Hospital Journal Volume 8 ; 8 >
+    }
+    {
     param[base_url] = http://futurehospital.rcpjournal.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
 
-    au < released ; 2014 ; Future Hospital Journal Volume 1 ; 1 >
-    au < released ; 2015 ; Future Hospital Journal Volume 2 ; 2 >
-    au < released ; 2016 ; Future Hospital Journal Volume 3 ; 3 >
-    au < released ; 2017 ; Future Hospital Journal Volume 4 ; 4 >
-    au < released ; 2018 ; Future Hospital Journal Volume 5 ; 5 >
-    au < expected ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
-    au < expected ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
-    au < expected ; 2021 ; Future Hospital Journal Volume 8 ; 8 >
-
+    au < down ; 2014 ; Future Hospital Journal Volume 1 ; 1 >
+    au < down ; 2015 ; Future Hospital Journal Volume 2 ; 2 >
+    au < down ; 2016 ; Future Hospital Journal Volume 3 ; 3 >
+    au < down ; 2017 ; Future Hospital Journal Volume 4 ; 4 >
+    au < down ; 2018 ; Future Hospital Journal Volume 5 ; 5 >
+    }
   }
 
 }
