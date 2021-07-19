@@ -85,9 +85,9 @@
 
     param[journal_abbr] = envirolabasia
 
-    au < ready ; 2017 ; EnviroLab Asia Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
-    au < ready ; 2019 ; EnviroLab Asia Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
-    au < ready ; 2019 ; EnviroLab Asia Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2017 ; EnviroLab Asia Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2019 ; EnviroLab Asia Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2019 ; EnviroLab Asia Volume 3 ; 3 ; https://scholarship.claremont.edu/ >
     au < manifest ; 2020 ; EnviroLab Asia Volume 4 ; 4 ; https://scholarship.claremont.edu/ >
     au < expected ; 2021 ; EnviroLab Asia Volume 5 ; 5 ; https://scholarship.claremont.edu/ >
 
@@ -102,8 +102,8 @@
 
     param[journal_abbr] = essay
 
-    au < ready ; 2017 ; essay: critical writing at pomona college Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
-    au < ready ; 2018 ; essay: critical writing at pomona college Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2017 ; essay: critical writing at pomona college Volume 1 ; 1 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2018 ; essay: critical writing at pomona college Volume 2 ; 2 ; https://scholarship.claremont.edu/ >
 
   }
 
@@ -258,7 +258,7 @@
     au < released ; 2014 ; CODEE Journal Volume 9 ; 9 ; http://scholarship.claremont.edu/ >
     au < released ; 2015 ; CODEE Journal Volume 10 ; 10 ; http://scholarship.claremont.edu/ >
     au < released ; 2016-2018 ; CODEE Journal Volume 11 ; 11 ; http://scholarship.claremont.edu/ >
-    au < ready ; 2019 ; CODEE Journal Volume 12 ; 12 ; https://scholarship.claremont.edu/ >
+    au < releasing ; 2019 ; CODEE Journal Volume 12 ; 12 ; https://scholarship.claremont.edu/ >
     au < manifest ; 2020 ; CODEE Journal Volume 13 ; 13 ; https://scholarship.claremont.edu/ >
     au < manifest ; 2021 ; CODEE Journal Volume 14 ; 14 ; https://scholarship.claremont.edu/ >
 
