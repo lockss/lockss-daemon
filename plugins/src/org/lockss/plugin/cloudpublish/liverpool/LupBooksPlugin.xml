@@ -49,14 +49,14 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LupBooksHtmlLinkExtractorFactory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlLinkExtractorFactory</string>
   </entry>
 </map>

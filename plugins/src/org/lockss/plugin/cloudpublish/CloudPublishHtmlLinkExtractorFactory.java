@@ -31,7 +31,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.cloudpublish.liverpool;
+package org.lockss.plugin.cloudpublish;
 
 import org.jsoup.nodes.Node;
 import org.lockss.extractor.JsoupHtmlLinkExtractor.LinkExtractor;
@@ -48,7 +48,7 @@ import java.util.regex.Pattern;
  *  extend this class in order to use the Liverpool books specific link tag 
  *  link extractor 
  */
-public class LupBooksHtmlLinkExtractorFactory
+public class CloudPublishHtmlLinkExtractorFactory
 extends BaseAtyponHtmlLinkExtractorFactory {
 
   private static final String HREF_NAME = "href";

@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -52,70 +52,15 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>"Liverpool University Press Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
-    <string>au_start_url</string>
-    <!-- https://www.liverpooluniversitypress.co.uk/journals/id/72/
-         https://www.liverpooluniversitypress.co.uk/journals/id/72/
-    -->
-    <string>"%sjournals/id/%s/[4 digit something]", base_url, journal_id, volume_name</string>
+    <string>plugin_name</string>
+    <string>Liverpool University Press Plugin</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <!-- https://www.liverpooluniversitypress.co.uk/journals/article/21290/ -->
-      <!-- https://www.liverpooluniversitypress.co.uk/journals/issue/3426 -->
-      <string>4,"^%s", base_url</string>
-    </list>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishPlugin</string>
   </entry>
   <entry>
-    <string>au_manifest</string>
-    <string>"%spages/rights-and-permissions/", base_url</string>
-  </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_id</key>
-        <displayName>Journal Identifier</displayName>
-        <description>Identifier for journal (often used as part of file names)</description>
-        <type>1</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
+    <string>plugin_parent_version</string>
+    <string>1</string>
   </entry>
 </map>

@@ -31,7 +31,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.cloudpublish.liverpool;
+package org.lockss.plugin.cloudpublish;
 
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
@@ -41,7 +41,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 import java.io.InputStream;
 
-public class LupHtmlCrawlFilterFactory
+public class CloudPublishHtmlCrawlFilterFactory
   extends BaseAtyponHtmlCrawlFilterFactory {
   
   static NodeFilter[] filters = new NodeFilter[] {

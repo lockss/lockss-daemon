@@ -31,7 +31,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.cloudpublish.liverpool;
+package org.lockss.plugin.cloudpublish;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -47,7 +47,7 @@ import java.util.Vector;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
-public class LupHtmlHashFilterFactory
+public class CloudPublishHtmlHashFilterFactory
   extends BaseAtyponHtmlHashFilterFactory  {
   
   @Override
