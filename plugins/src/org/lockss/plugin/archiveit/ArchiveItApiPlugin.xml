@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Archive-It API Plugin, Base URL %s, Organization %s, Collection %s", base_url, download_url, organization, collection</string>
+        <string>"Archive-It API Plugin, Base URL %s, Download URL %s, Organization %s, Collection %s", base_url, download_url, organization, collection</string>
     </entry>
     <entry>
         <string>plugin_name</string>

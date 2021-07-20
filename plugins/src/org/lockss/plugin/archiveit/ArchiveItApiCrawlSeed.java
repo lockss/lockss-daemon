@@ -235,11 +235,6 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
         "Accept",
         "application/json"
     );
-    uf.setRequestProperty(
-        "Accept-Encoding",
-        "gzip, deflate, br"
-    );
-
     // Set custom URL consumer factory, using custom link extractor
     uf.setUrlConsumerFactory(new UrlConsumerFactory() {
       @Override
@@ -253,15 +248,7 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
             final Set<String> warcUrls = new HashSet<String>();
             try {
               String au_cset = AuUtil.getCharsetOrDefault(fud.headers);
-              String cset = CharsetUtil.guessCharsetFromStream(fud.input,au_cset);
-              //FIXME 1.69
-              // Once guessCharsetFromStream correctly uses the hint instead of returning null
-              // this local bit won't be needed.
-              if (cset == null) {
-                cset = au_cset;
-              }
-              log.info("cset: " + cset);
-              log.info("au_cset: " + au_cset);
+              String cset = CharsetUtil.guessCharsetFromStream(fud.input, au_cset);
               aijle.extractUrls(au,
                   fud.input,
                   cset,
@@ -302,6 +289,13 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
       throws IOException {
     StringBuilder sb = new StringBuilder();
     sb.append("<html>\n");
+    try {
+      sb.append("<h1>" + au.getTdbAu().getName() + "</h1>");
+    } catch (NullPointerException npe) {
+      log.debug2("could not get name from tdb au");
+      sb.append("<h1>" + au.getName() + "</h1>");
+    }
+    sb.append("<h3>Collected and preserved urls:</h3>");
     for (String u : urlList) {
       sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
     }
