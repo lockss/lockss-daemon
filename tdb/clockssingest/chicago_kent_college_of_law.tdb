@@ -23,13 +23,13 @@
       #param[base_url] = http://scholarship.kentlaw.iit.edu/
       param[journal_abbr] = seventhcircuitreview
 
-      au < finished ; manifest ; 2009-2010 ; Seventh Circuit Review Volume 5 ; 5 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2010-2011 ; Seventh Circuit Review Volume 6 ; 6 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011-2012 ; Seventh Circuit Review Volume 7 ; 7 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012-2013 ; Seventh Circuit Review Volume 8 ; 8 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2013-2014 ; Seventh Circuit Review Volume 9 ; 9 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014-2015 ; Seventh Circuit Review Volume 10 ; 10 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015-2016 ; Seventh Circuit Review Volume 11 ; 11 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009-2010 ; Seventh Circuit Review Volume 5 ; 5 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010-2011 ; Seventh Circuit Review Volume 6 ; 6 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011-2012 ; Seventh Circuit Review Volume 7 ; 7 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012-2013 ; Seventh Circuit Review Volume 8 ; 8 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013-2014 ; Seventh Circuit Review Volume 9 ; 9 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014-2015 ; Seventh Circuit Review Volume 10 ; 10 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015-2016 ; Seventh Circuit Review Volume 11 ; 11 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; Seventh Circuit Review Volume 12 ; 12 ; http://scholarship.kentlaw.iit.edu/ ; >
 
     }
@@ -45,13 +45,13 @@
       #param[base_url] = http://scholarship.kentlaw.iit.edu/
       param[journal_abbr] = ckjip
 
-      au < finished ; manifest ; 2010-2011 ; Journal of Intellectual Property Volume 10 ; 10 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2011-2012 ; Journal of Intellectual Property Volume 11 ; 11 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2012-2013 ; Journal of Intellectual Property Volume 12 ; 12 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2013-2014 ; Journal of Intellectual Property Volume 13 ; 13 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2014-2015 ; Journal of Intellectual Property Volume 14 ; 14 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Intellectual Property Volume 15 ; 15 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016-2017 ; Journal of Intellectual Property Volume 16 ; 16 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010-2011 ; Journal of Intellectual Property Volume 10 ; 10 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2011-2012 ; Journal of Intellectual Property Volume 11 ; 11 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2012-2013 ; Journal of Intellectual Property Volume 12 ; 12 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013-2014 ; Journal of Intellectual Property Volume 13 ; 13 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014-2015 ; Journal of Intellectual Property Volume 14 ; 14 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Intellectual Property Volume 15 ; 15 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016-2017 ; Journal of Intellectual Property Volume 16 ; 16 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Journal of Intellectual Property Volume 17 ; 17 ; https://scholarship.kentlaw.iit.edu/ ; >
       au < deepCrawl ; exists ; 2019 ; Journal of Intellectual Property Volume 18 ; 18 ; https://scholarship.kentlaw.iit.edu/ ; >
       au < crawling ; exists ; 2020 ; Journal of Intellectual Property Volume 19 ; 19 ; https://scholarship.kentlaw.iit.edu/ ; >
@@ -70,23 +70,23 @@
       #param[base_url] = http://scholarship.kentlaw.iit.edu/
       param[journal_abbr] = ckjicl
 
-      au < finished ; manifest ; 2001 ; Journal of International and Comparative Law Volume 1 ; 1 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2002 ; Journal of International and Comparative Law Volume 2 ; 2 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2003 ; Journal of International and Comparative Law Volume 3 ; 3 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2004 ; Journal of International and Comparative Law Volume 4 ; 4 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2005 ; Journal of International and Comparative Law Volume 5 ; 5 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2006 ; Journal of International and Comparative Law Volume 6 ; 6 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2007 ; Journal of International and Comparative Law Volume 7 ; 7 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2008 ; Journal of International and Comparative Law Volume 8 ; 8 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; Journal of International and Comparative Law Volume 9 ; 9 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2010 ; Journal of International and Comparative Law Volume 10 ; 10 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2011 ; Journal of International and Comparative Law Volume 11 ; 11 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Journal of International and Comparative Law Volume 12 ; 12 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012-2013 ; Journal of International and Comparative Law Volume 13 ; 13 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013-2014 ; Journal of International and Comparative Law Volume 14 ; 14 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2015 ; Journal of International and Comparative Law Volume 15 ; 15 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2016 ; Journal of International and Comparative Law Volume 16 ; 16 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of International and Comparative Law Volume 17 ; 17 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2001 ; Journal of International and Comparative Law Volume 1 ; 1 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2002 ; Journal of International and Comparative Law Volume 2 ; 2 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2003 ; Journal of International and Comparative Law Volume 3 ; 3 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2004 ; Journal of International and Comparative Law Volume 4 ; 4 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2005 ; Journal of International and Comparative Law Volume 5 ; 5 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2006 ; Journal of International and Comparative Law Volume 6 ; 6 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2007 ; Journal of International and Comparative Law Volume 7 ; 7 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; Journal of International and Comparative Law Volume 8 ; 8 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; Journal of International and Comparative Law Volume 9 ; 9 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Journal of International and Comparative Law Volume 10 ; 10 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; Journal of International and Comparative Law Volume 11 ; 11 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Journal of International and Comparative Law Volume 12 ; 12 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012-2013 ; Journal of International and Comparative Law Volume 13 ; 13 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013-2014 ; Journal of International and Comparative Law Volume 14 ; 14 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; Journal of International and Comparative Law Volume 15 ; 15 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; Journal of International and Comparative Law Volume 16 ; 16 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of International and Comparative Law Volume 17 ; 17 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
 
     }
   

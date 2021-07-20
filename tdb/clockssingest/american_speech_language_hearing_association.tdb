@@ -43,15 +43,15 @@
       au < manifest ; exists ; 2007 ; American Journal of Audiology Volume 16 ; 16 ; >
       au < manifest ; exists ; 2008 ; American Journal of Audiology Volume 17 ; 17 ; >
       au < manifest ; exists ; 2009 ; American Journal of Audiology Volume 18 ; 18 ; >
-      au < finished ; manifest ; 2010 ; American Journal of Audiology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; American Journal of Audiology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; American Journal of Audiology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2013 ; American Journal of Audiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; American Journal of Audiology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; American Journal of Audiology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; American Journal of Audiology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; American Journal of Audiology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; American Journal of Audiology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; American Journal of Audiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; American Journal of Audiology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; American Journal of Audiology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Audiology Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Audiology Volume 26 ; 26 ; >
-      au < finished ; manifest ; 2018 ; American Journal of Audiology Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; American Journal of Audiology Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; American Journal of Audiology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; American Journal of Audiology Volume 29 ; 29 ; >
       au < ready ; exists ; 2021 ; American Journal of Audiology Volume 30 ; 30 ; >
@@ -87,15 +87,15 @@
       au < manifest ; exists ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 16 ; >
       au < manifest ; exists ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 17 ; >
       au < manifest ; exists ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 18 ; >
-      au < finished ; manifest ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2016 ; American Journal of Speech-Language Pathology Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; American Journal of Speech-Language Pathology Volume 26 ; 26 ; >
-      au < finished ; manifest ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; American Journal of Speech-Language Pathology Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; American Journal of Speech-Language Pathology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; American Journal of Speech-Language Pathology Volume 29 ; 29 ; >
       au < ready ; exists ; 2021 ; American Journal of Speech-Language Pathology Volume 30 ; 30 ; >
@@ -269,15 +269,15 @@
       au < manifest ; exists ; 2007 ; Journal of Speech, Language, and Hearing Research Volume 50 ; 50 ; >
       au < manifest ; exists ; 2008 ; Journal of Speech, Language, and Hearing Research Volume 51 ; 51 ; >
       au < manifest ; exists ; 2009 ; Journal of Speech, Language, and Hearing Research Volume 52 ; 52 ; >
-      au < finished ; manifest ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 53 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 54 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 55 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 56 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 57 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 58 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 55 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 57 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 58 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2016 ; Journal of Speech, Language, and Hearing Research Volume 59 ; 59 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Journal of Speech, Language, and Hearing Research Volume 60 ; 60 ; >
-      au < finished ; manifest ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; Journal of Speech, Language, and Hearing Research Volume 61 ; 61 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Journal of Speech, Language, and Hearing Research Volume 62 ; 62 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Journal of Speech, Language, and Hearing Research Volume 63 ; 63 ; >
       au < ready ; exists ; 2021 ; Journal of Speech, Language, and Hearing Research Volume 64 ; 64 ; >
@@ -335,15 +335,15 @@
       au < manifest ; exists ; 2007 ; Language, Speech, and Hearing Services in Schools Volume 38 ; 38 ; >
       au < manifest ; exists ; 2008 ; Language, Speech, and Hearing Services in Schools Volume 39 ; 39 ; >
       au < manifest ; exists ; 2009 ; Language, Speech, and Hearing Services in Schools Volume 40 ; 40 ; >
-      au < finished ; manifest ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 41 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 42 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 43 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 44 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 45 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 46 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 42 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 46 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2016 ; Language, Speech, and Hearing Services in Schools Volume 47 ; 47 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Language, Speech, and Hearing Services in Schools Volume 48 ; 48 ; >
-      au < finished ; manifest ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Language, Speech, and Hearing Services in Schools Volume 49 ; 49 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Language, Speech, and Hearing Services in Schools Volume 50 ; 50 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Language, Speech, and Hearing Services in Schools Volume 51 ; 51 ; >
       au < ready ; exists ; 2021 ; Language, Speech, and Hearing Services in Schools Volume 52 ; 52 ; >
@@ -370,15 +370,15 @@
       au < manifest ; exists ; 2007 ; ASHA Leader Volume 12 ; 12 ; >
       au < manifest ; exists ; 2008 ; ASHA Leader Volume 13 ; 13 ; >
       au < manifest ; exists ; 2009 ; ASHA Leader Volume 14 ; 14 ; >
-      au < finished ; manifest ; 2010 ; ASHA Leader Volume 15 ; 15 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; ASHA Leader Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; ASHA Leader Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013 ; ASHA Leader Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; ASHA Leader Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; ASHA Leader Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; ASHA Leader Volume 21 ; 21 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; ASHA Leader Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; ASHA Leader Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; ASHA Leader Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; ASHA Leader Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; ASHA Leader Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; ASHA Leader Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; ASHA Leader Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; ASHA Leader Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; ASHA Leader Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; ASHA Leader Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; ASHA Leader Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; ASHA Leader Volume 24 ; 24 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; ASHA Leader Volume 25 ; 25 ; >
       au < expected ; exists ; 2021 ; ASHA Leader Volume 26 ; 26 ; >
@@ -394,9 +394,9 @@
       param[journal_id] = persp
       param[base_url] = https://pubs.asha.org/
 
-      au < finished ; manifest ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Perspectives of the ASHA Special Interest Groups Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Perspectives of the ASHA Special Interest Groups Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Perspectives of the ASHA Special Interest Groups Volume 5 ; 5 ; >
       au < ready ; exists ; 2021 ; Perspectives of the ASHA Special Interest Groups Volume 6 ; 6 ; >

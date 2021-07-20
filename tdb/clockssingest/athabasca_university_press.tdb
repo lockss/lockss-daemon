@@ -242,7 +242,7 @@
       au < manifest ; exists ; 1991 ; Labour / Le Travail Volume 27-28 ; 27-28 ; 1991 ; >
       au < manifest ; exists ; 1992 ; Labour / Le Travail Volume 29-30 ; 29-30 ; 1992 ; >
       au < manifest ; exists ; 1993 ; Labour / Le Travail Volume 31-32 ; 31-32 ; 1993 ; >
-      au < finished ; manifest ; 1994 ; Labour / Le Travail Volume 33-34 ; 33-34 ; 1994 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1994 ; Labour / Le Travail Volume 33-34 ; 33-34 ; 1994 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 1995 ; Labour / Le Travail Volume 35-36 ; 35-36 ; 1995 ; >
       au < manifest ; exists ; 1996 ; Labour / Le Travail Volume 37-38 ; 37-38 ; 1996 ; >
       au < manifest ; exists ; 1997 ; Labour / Le Travail Volume 39-40 ; 39-40 ; 1997 ; >
@@ -308,7 +308,7 @@
       au < manifest ; exists ; 1993 ; Oral History Forum d'histoire orale Volume 13 ; 13 ; 1993 ; >
       au < manifest ; exists ; 1994 ; Oral History Forum d'histoire orale Volume 14 ; 14 ; 1994 ; >
       au < manifest ; exists ; 1995 ; Oral History Forum d'histoire orale Volume 15 ; 15 ; 1995 ; >
-      au < finished ; manifest ; 1996-1997 ; Oral History Forum d'histoire orale Volume 16-17 ; 16-17 ; 1997 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 1996-1997 ; Oral History Forum d'histoire orale Volume 16-17 ; 16-17 ; 1997 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 1998 ; Oral History Forum d'histoire orale Volume 18 ; 18 ; 1998 ; >
       au < manifest ; exists ; 1999-2000 ; Oral History Forum d'histoire orale Volume 19-20 ; 19-20 ; 2000 ; >
       au < manifest ; exists ; 2001-2002 ; Oral History Forum d'histoire orale Volume 21-22 ; 21-22 ; 2002 ; >
@@ -355,7 +355,7 @@
       param[base_url] = http://trumpeter.athabascau.ca/
       param[journal_id] = trumpet
 
-      au < finished ; manifest ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 1984 ; The Trumpeter Volume 1 (1984) ; 1 ; 1984 ; >
       au < manifest ; exists ; 1985 ; The Trumpeter Volume 2 ; 2 ; 1985 ; >
       au < manifest ; exists ; 1986 ; The Trumpeter Volume 3 ; 3 ; 1986 ; >
@@ -371,7 +371,7 @@
       au < manifest ; exists ; 1996 ; The Trumpeter Volume 13 ; 13 ; 1996 ; >
       au < manifest ; exists ; 1997 ; The Trumpeter Volume 14 ; 14 ; 1997 ; >
       au < manifest ; exists ; 1998 ; The Trumpeter Volume 15 ; 15 ; 1998 ; >
-      au < finished ; manifest ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2001 ; The Trumpeter Volume 17 ; 17 ; 2001 ; >
       au < manifest ; exists ; 2002 ; The Trumpeter Volume 18 ; 18 ; 2002 ; >
       au < manifest ; exists ; 2003 ; The Trumpeter Volume 19 ; 19 ; 2003 ; >
@@ -384,7 +384,7 @@
       au < frozen ; exists ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 ; >
       au < crawling ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
       au < frozen ; exists ; 2018 ; The Trumpeter Volume 34 ; 34 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; The Trumpeter Volume 36 ; 36 ; 2020 ; >
       au < expected ; exists ; 2021 ; The Trumpeter Volume 37 ; 37 ; 2021 ; >
     }

@@ -108,7 +108,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; British Journal of Radiology Volume 83 ; 83 ; https://bjr.birjournals.org/ ; >
       au < finished ; finished ; 2011 ; British Journal of Radiology Volume 84 ; 84 ; http://bjr.birjournals.org/ ; >
       au < zapped ; finished ; 2012 ; British Journal of Radiology Volume 85 ; 85 ; http://bjr.birjournals.org/ ; >
-      au < finished ; manifest ; 2013 ; British Journal of Radiology Volume 86 ; 86 ; http://bjr.birjournals.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; British Journal of Radiology Volume 86 ; 86 ; http://bjr.birjournals.org/ ; reingest3.clockss.org:8083 >
       
     }
     
@@ -135,10 +135,10 @@
       au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Radiology Volume 85 ; 85 ; https://www.birpublications.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Radiology Volume 86 ; 86 ; https://www.birpublications.org/ ; >
       au < finished ; finished ; 2014 ; British Journal of Radiology Volume 87 ; 87 ; http://www.birpublications.org/ ; >
-      au < finished ; manifest ; 2015 ; British Journal of Radiology Volume 88 ; 88 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; British Journal of Radiology Volume 89 ; 89 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; British Journal of Radiology Volume 90 ; 90 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; British Journal of Radiology Volume 91 ; 91 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; British Journal of Radiology Volume 88 ; 88 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; British Journal of Radiology Volume 89 ; 89 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; British Journal of Radiology Volume 90 ; 90 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; British Journal of Radiology Volume 91 ; 91 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; British Journal of Radiology Volume 92 ; 92 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; British Journal of Radiology Volume 93 ; 93 ; https://www.birpublications.org/ ; >
       au < manifest ; exists ; 2021 ; British Journal of Radiology Volume 94 ; 94 ; https://www.birpublications.org/ ; >
@@ -161,9 +161,9 @@
       param[journal_id] = bjrcr
 
       au < finished ; finished ; 2015 ; BJR|case reports Volume 1 ; 1 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; BJR|case reports Volume 2 ; 2 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; BJR|case reports Volume 3 ; 3 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; BJR|case reports Volume 4 ; 4 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; BJR|case reports Volume 2 ; 2 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; BJR|case reports Volume 3 ; 3 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; BJR|case reports Volume 4 ; 4 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; BJR|case reports Volume 5 ; 5 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2020 ; BJR|case reports Volume 6 ; 6 ; https://www.birpublications.org/ ; >
       au < manifest ; exists ; 2021 ; BJR|case reports Volume 7 ; 7 ; https://www.birpublications.org/ ; >
@@ -234,7 +234,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; https://dmfr.birjournals.org/ ; >
       au < finished ; finished ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; http://dmfr.birjournals.org/ ; > 
       au < finished ; finished ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; http://dmfr.birjournals.org/ ; >
-      au < finished ; manifest ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; http://dmfr.birjournals.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; http://dmfr.birjournals.org/ ; reingest3.clockss.org:8083 >
 
     }
 
@@ -259,11 +259,11 @@
       au < doNotProcess ; doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; https://www.birpublications.org/ ; > 
       au < doNotProcess ; doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; https://www.birpublications.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; https://www.birpublications.org/ ; >
-      au < finished ; manifest ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Dentomaxillofacial Radiology Volume 47 ; 47 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Dentomaxillofacial Radiology Volume 47 ; 47 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Dentomaxillofacial Radiology Volume 48 ; 48 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; https://www.birpublications.org/ ; >
       au < manifest ; exists ; 2021 ; Dentomaxillofacial Radiology Volume 50 ; 50 ; https://www.birpublications.org/ ; >
@@ -310,17 +310,17 @@
       # no issue in 2010-2012
 
       au < finished ; crawling ; 1999 ; Imaging Volume 11 ; 11 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2000 ; Imaging Volume 12 ; 12 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2001 ; Imaging Volume 13 ; 13 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2002 ; Imaging Volume 14 ; 14 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2003 ; Imaging Volume 15 ; 15 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2004 ; Imaging Volume 16 ; 16 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2005 ; Imaging Volume 17 ; 17 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2006 ; Imaging Volume 18 ; 18 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2007 ; Imaging Volume 19 ; 19 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2008 ; Imaging Volume 20 ; 20 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; Imaging Volume 21 ; 21 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Imaging Volume 22 ; 22 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2000 ; Imaging Volume 12 ; 12 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2001 ; Imaging Volume 13 ; 13 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2002 ; Imaging Volume 14 ; 14 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2003 ; Imaging Volume 15 ; 15 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2004 ; Imaging Volume 16 ; 16 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2005 ; Imaging Volume 17 ; 17 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2006 ; Imaging Volume 18 ; 18 ; http://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2007 ; Imaging Volume 19 ; 19 ; http://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; Imaging Volume 20 ; 20 ; http://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; Imaging Volume 21 ; 21 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Imaging Volume 22 ; 22 ; http://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Imaging Volume 23 ; 23 ; http://www.birpublications.org/ ; reingest1.clockss.org:8082 >
     
     }
