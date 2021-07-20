@@ -254,11 +254,11 @@ Args:
   <property name="commons.codec.jar" value="${lib}/commons-codec-1.15.jar" />
   <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
-  <property name="commons.compress.jar" value="${lib}/commons-compress-1.20.jar" />
+  <property name="commons.compress.jar" value="${lib}/commons-compress-1.21.jar" />
   <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
   <!-- commons-digester -->
   <!-- commons-fileupload -->
-  <property name="commons.io.jar" value="${lib}/commons-io-2.10.0.jar" />
+  <property name="commons.io.jar" value="${lib}/commons-io-2.11.0.jar" />
   <property name="commons.jxpath.jar" value="${lib}/commons-jxpath-1.3.jar" />
   <property name="commons.lang.jar" value="${lib}/commons-lang-2.6.jar" />
   <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.12.0.jar" />
