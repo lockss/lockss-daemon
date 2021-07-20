@@ -28,7 +28,9 @@ public class ArchiveItApiUrlConsumerFactory implements UrlConsumerFactory {
 
     public String getWarcFromRedirect(String fUrl) {
       String fetchWarc = null;
+      // only attempt the parse if we are reasonably sure the redirect url is to a warc file
       if (fUrl.contains("archive.org") &&
+          fUrl.contains(".warc") &&
           ( fUrl.contains("archive.org/download/") ||
             fUrl.contains("/items/")
           )) {
@@ -73,7 +75,9 @@ public class ArchiveItApiUrlConsumerFactory implements UrlConsumerFactory {
           && !fud.fetchUrl.contains("/login?")) {
         String origWarc = StringUtils.substringAfter(fud.origUrl, "webdatafile/");
         String fetchWarc = getWarcFromRedirect(fud.fetchUrl);
-        should = origWarc.equals(fetchWarc);
+        if (fetchWarc != null && origWarc != null) {
+          should = origWarc.equals(fetchWarc);
+        }
       }
       return should;
     }
