@@ -6,7 +6,7 @@
   <!-- https transition enabled -->  
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.liverpool.LiverpoolBooksPlugin</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LiverpoolBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -49,14 +49,14 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.liverpool.LupHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.liverpool.LupHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.liverpool.LupBooksHtmlLinkExtractorFactory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupBooksHtmlLinkExtractorFactory</string>
   </entry>
 </map>

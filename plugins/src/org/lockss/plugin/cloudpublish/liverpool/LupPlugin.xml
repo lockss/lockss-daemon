@@ -37,7 +37,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.liverpool.LupPlugin</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -103,18 +103,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.liverpool.LupHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.liverpool.LupHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;DublinCore</string>
-        <string>org.lockss.plugin.liverpool.LupHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

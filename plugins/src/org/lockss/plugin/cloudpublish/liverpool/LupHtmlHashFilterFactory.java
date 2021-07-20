@@ -31,7 +31,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.liverpool;
+package org.lockss.plugin.cloudpublish.liverpool;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
