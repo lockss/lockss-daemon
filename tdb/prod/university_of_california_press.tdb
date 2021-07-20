@@ -435,6 +435,28 @@
       au < manifest ; 2021 ; 2021 ; Departures in Critical Qualitative Research Volume 10 ; 10 >
 
   }
+
+  {
+
+      title <
+        name = Elementa: Science of the Anthropocene ;
+        eissn = 2325-1026
+    >
+      #param[base_url] = http://dcqr.ucpress.edu/
+
+      param[journal_id] = elementa
+
+      au < doNotProcess ; 2013 ; 2013 ; Elementa: Science of the Anthropocene Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; 2014 ; Elementa: Science of the Anthropocene Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; 2015 ; Elementa: Science of the Anthropocene Volume 3 ; 3 >
+      au < doNotProcess ; 2016 ; 2016 ; Elementa: Science of the Anthropocene Volume 4 ; 4 >
+      au < doNotProcess ; 2017 ; 2017 ; Elementa: Science of the Anthropocene Volume 5 ; 5 >
+      au < doNotProcess ; 2018 ; 2018 ; Elementa: Science of the Anthropocene Volume 6 ; 6 >
+      au < doNotProcess ; 2019 ; 2019 ; Elementa: Science of the Anthropocene Volume 7 ; 7 >
+      au < exists ; 2020 ; 2020 ; Elementa: Science of the Anthropocene Volume 8 ; 8 >
+      au < exists ; 2021 ; 2021 ; Elementa: Science of the Anthropocene Volume 9 ; 9 >
+
+  }
 #  {
 #
 #    title <

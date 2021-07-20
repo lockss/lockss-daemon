@@ -16,6 +16,7 @@
     param[journal_id] = oncology
 
     implicit < status ; year ; name ; volume ; param[year] ; param[base_url] >
+    #Moved to MDPI https://www.mdpi.com/journal/curroncol
 
     au < down ; 2005 ; Current Oncology Volume 12 ; 12 ; 2005 ; http://www.current-oncology.com/ >
     au < down ; 2006 ; Current Oncology Volume 13 ; 13 ; 2006 ; http://www.current-oncology.com/ >
@@ -30,10 +31,10 @@
     au < down ; 2015 ; Current Oncology Volume 22 ; 22 ; 2015 ; http://www.current-oncology.com/ >
     au < down ; 2016 ; Current Oncology Volume 23 ; 23 ; 2016 ; http://www.current-oncology.com/ >
     au < down ; 2017 ; Current Oncology Volume 24 ; 24 ; 2017 ; http://www.current-oncology.com/ >
-    au < released ; 2018 ; Current Oncology Volume 25 ; 25 ; 2018 ; https://current-oncology.com/ >
-    au < manifest ; 2019 ; Current Oncology Volume 26 ; 26 ; 2019 ; https://current-oncology.com/ >
-    au < expected ; 2020 ; Current Oncology Volume 27 ; 27 ; 2020 ; https://current-oncology.com/ >
-    au < expected ; 2021 ; Current Oncology Volume 28 ; 28 ; 2021 ; https://current-oncology.com/ >
+    au < down ; 2018 ; Current Oncology Volume 25 ; 25 ; 2018 ; https://current-oncology.com/ >
+    au < doNotProcess ; 2019 ; Current Oncology Volume 26 ; 26 ; 2019 ; https://current-oncology.com/ >
+    au < doNotProcess ; 2020 ; Current Oncology Volume 27 ; 27 ; 2020 ; https://current-oncology.com/ >
+    au < doNotProcess ; 2021 ; Current Oncology Volume 28 ; 28 ; 2021 ; https://current-oncology.com/ >
 
   }
 
@@ -84,48 +85,49 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.pdiconnect.com/
       implicit < status ; year ; name ; param[volume_name] >
+      #Moved to Sage https://journals.sagepub.com/home/ptd
 
-      au < released ; 1980-1981 ; Peritoneal Dialysis International Volume 1 ; 1 >
-      au < released ; 1982 ; Peritoneal Dialysis International Volume 2 ; 2 >
-      au < released ; 1983 ; Peritoneal Dialysis International Volume 3 ; 3 >
-      au < released ; 1984 ; Peritoneal Dialysis International Volume 4 ; 4 >
-      au < released ; 1985 ; Peritoneal Dialysis International Volume 5 ; 5 >
-      au < released ; 1986 ; Peritoneal Dialysis International Volume 6 ; 6 >
-      au < released ; 1987 ; Peritoneal Dialysis International Volume 7 ; 7 >
-      au < released ; 1988 ; Peritoneal Dialysis International Volume 8 ; 8 >
-      au < released ; 1989 ; Peritoneal Dialysis International Volume 9 ; 9 >
-      au < released ; 1990 ; Peritoneal Dialysis International Volume 10 ; 10 >
-      au < released ; 1991 ; Peritoneal Dialysis International Volume 11 ; 11 >
-      au < released ; 1992 ; Peritoneal Dialysis International Volume 12 ; 12 >
-      au < released ; 1993 ; Peritoneal Dialysis International Volume 13 ; 13 >
-      au < released ; 1994 ; Peritoneal Dialysis International Volume 14 ; 14 >
-      au < released ; 1995 ; Peritoneal Dialysis International Volume 15 ; 15 >
-      au < released ; 1996 ; Peritoneal Dialysis International Volume 16 ; 16 >
-      au < released ; 1997 ; Peritoneal Dialysis International Volume 17 ; 17 >
-      au < released ; 1998 ; Peritoneal Dialysis International Volume 18 ; 18 >
-      au < released ; 1999 ; Peritoneal Dialysis International Volume 19 ; 19 >
-      au < released ; 2000 ; Peritoneal Dialysis International Volume 20 ; 20 >
-      au < released ; 2001 ; Peritoneal Dialysis International Volume 21 ; 21 >
-      au < released ; 2002 ; Peritoneal Dialysis International Volume 22 ; 22 >
-      au < released ; 2003 ; Peritoneal Dialysis International Volume 23 ; 23 >
-      au < released ; 2004 ; Peritoneal Dialysis International Volume 24 ; 24 >
-      au < released ; 2005 ; Peritoneal Dialysis International Volume 25 ; 25 >
-      au < released ; 2006 ; Peritoneal Dialysis International Volume 26 ; 26 >
-      au < released ; 2007 ; Peritoneal Dialysis International Volume 27 ; 27 >
-      au < released ; 2008 ; Peritoneal Dialysis International Volume 28 ; 28 >
-      au < released ; 2009 ; Peritoneal Dialysis International Volume 29 ; 29 >
-      au < released ; 2010 ; Peritoneal Dialysis International Volume 30 ; 30 >
-      au < released ; 2011 ; Peritoneal Dialysis International Volume 31 ; 31 >
-      au < released ; 2012 ; Peritoneal Dialysis International Volume 32 ; 32 >
-      au < released ; 2013 ; Peritoneal Dialysis International Volume 33 ; 33 >
-      au < released ; 2014 ; Peritoneal Dialysis International Volume 34 ; 34 >
-      au < released ; 2015 ; Peritoneal Dialysis International Volume 35 ; 35 >
-      au < released ; 2016 ; Peritoneal Dialysis International Volume 36 ; 36 >
-      au < released ; 2017 ; Peritoneal Dialysis International Volume 37 ; 37 >
-      au < released ; 2018 ; Peritoneal Dialysis International Volume 38 ; 38 >
-      au < manifest ; 2019 ; Peritoneal Dialysis International Volume 39 ; 39 >
-      au < expected ; 2020 ; Peritoneal Dialysis International Volume 40 ; 40 >
-      au < expected ; 2021 ; Peritoneal Dialysis International Volume 41 ; 41 >
+      au < down ; 1980-1981 ; Peritoneal Dialysis International Volume 1 ; 1 >
+      au < down ; 1982 ; Peritoneal Dialysis International Volume 2 ; 2 >
+      au < down ; 1983 ; Peritoneal Dialysis International Volume 3 ; 3 >
+      au < down ; 1984 ; Peritoneal Dialysis International Volume 4 ; 4 >
+      au < down ; 1985 ; Peritoneal Dialysis International Volume 5 ; 5 >
+      au < down ; 1986 ; Peritoneal Dialysis International Volume 6 ; 6 >
+      au < down ; 1987 ; Peritoneal Dialysis International Volume 7 ; 7 >
+      au < down ; 1988 ; Peritoneal Dialysis International Volume 8 ; 8 >
+      au < down ; 1989 ; Peritoneal Dialysis International Volume 9 ; 9 >
+      au < down ; 1990 ; Peritoneal Dialysis International Volume 10 ; 10 >
+      au < down ; 1991 ; Peritoneal Dialysis International Volume 11 ; 11 >
+      au < down ; 1992 ; Peritoneal Dialysis International Volume 12 ; 12 >
+      au < down ; 1993 ; Peritoneal Dialysis International Volume 13 ; 13 >
+      au < down ; 1994 ; Peritoneal Dialysis International Volume 14 ; 14 >
+      au < down ; 1995 ; Peritoneal Dialysis International Volume 15 ; 15 >
+      au < down ; 1996 ; Peritoneal Dialysis International Volume 16 ; 16 >
+      au < down ; 1997 ; Peritoneal Dialysis International Volume 17 ; 17 >
+      au < down ; 1998 ; Peritoneal Dialysis International Volume 18 ; 18 >
+      au < down ; 1999 ; Peritoneal Dialysis International Volume 19 ; 19 >
+      au < down ; 2000 ; Peritoneal Dialysis International Volume 20 ; 20 >
+      au < down ; 2001 ; Peritoneal Dialysis International Volume 21 ; 21 >
+      au < down ; 2002 ; Peritoneal Dialysis International Volume 22 ; 22 >
+      au < down ; 2003 ; Peritoneal Dialysis International Volume 23 ; 23 >
+      au < down ; 2004 ; Peritoneal Dialysis International Volume 24 ; 24 >
+      au < down ; 2005 ; Peritoneal Dialysis International Volume 25 ; 25 >
+      au < down ; 2006 ; Peritoneal Dialysis International Volume 26 ; 26 >
+      au < down ; 2007 ; Peritoneal Dialysis International Volume 27 ; 27 >
+      au < down ; 2008 ; Peritoneal Dialysis International Volume 28 ; 28 >
+      au < down ; 2009 ; Peritoneal Dialysis International Volume 29 ; 29 >
+      au < down ; 2010 ; Peritoneal Dialysis International Volume 30 ; 30 >
+      au < down ; 2011 ; Peritoneal Dialysis International Volume 31 ; 31 >
+      au < down ; 2012 ; Peritoneal Dialysis International Volume 32 ; 32 >
+      au < down ; 2013 ; Peritoneal Dialysis International Volume 33 ; 33 >
+      au < down ; 2014 ; Peritoneal Dialysis International Volume 34 ; 34 >
+      au < down ; 2015 ; Peritoneal Dialysis International Volume 35 ; 35 >
+      au < down ; 2016 ; Peritoneal Dialysis International Volume 36 ; 36 >
+      au < down ; 2017 ; Peritoneal Dialysis International Volume 37 ; 37 >
+      au < down ; 2018 ; Peritoneal Dialysis International Volume 38 ; 38 >
+      au < doNotProcess ; 2019 ; Peritoneal Dialysis International Volume 39 ; 39 >
+      au < doNotProcess ; 2020 ; Peritoneal Dialysis International Volume 40 ; 40 >
+      au < doNotProcess ; 2021 ; Peritoneal Dialysis International Volume 41 ; 41 >
 
     }
 
