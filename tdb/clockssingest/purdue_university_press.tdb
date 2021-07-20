@@ -55,8 +55,6 @@
     au < finished ; finished ; 2017 ; Against the Grain Volume 29 ; 29 ; https://docs.lib.purdue.edu/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2018 ; Against the Grain Volume 30 ; 30 ; https://docs.lib.purdue.edu/ ; >
     au < crawling ; exists ; 2019 ; Against the Grain Volume 31 ; 31 ; https://docs.lib.purdue.edu/ ; >
-    au < expected ; exists ; 2020 ; Against the Grain Volume 32 ; 32 ; https://docs.lib.purdue.edu/ ; >
-    au < expected ; exists ; 2021 ; Against the Grain Volume 33 ; 33 ; https://docs.lib.purdue.edu/ ; >
 
   }
   
@@ -130,6 +128,7 @@
 #    param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = ijpbl
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
+    #move to Indiana University
 
     au < manifest ; exists ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
     au < manifest ; exists ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
@@ -143,9 +142,7 @@
     au < finished ; finished ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; http://docs.lib.purdue.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 11 ; 11 ; http://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 12 ; 12 ; https://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ ; >
-    au < expected ; exists ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; >
-    au < expected ; exists ; 2021 ; Interdisciplinary Journal of Problem-Based Learning Volume 15 ; 15 ; https://docs.lib.purdue.edu/ ; >
+    au < finished ; manifest ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 13 ; 13 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
 
   }
   
@@ -163,9 +160,8 @@
     
     au < frozen ; exists ; 2017 ; Journal of Applied Farm Economics Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2018 ; Journal of Applied Farm Economics Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
-    au < crawling ; exists ; 2019 ; Journal of Applied Farm Economics Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
-    au < expected ; exists ; 2020 ; Journal of Applied Farm Economics Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
-    au < expected ; exists ; 2021 ; Journal of Applied Farm Economics Volume 5 ; 5 ; https://docs.lib.purdue.edu/ ; >
+    au < crawling ; exists ; 2020 ; Journal of Applied Farm Economics Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
+    au < expected ; exists ; 2021 ; Journal of Applied Farm Economics Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
 
   }
   
