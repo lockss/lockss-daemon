@@ -39,7 +39,7 @@
     au < crawling ; exists ; 2001 ; 2001 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 36 ; 36 ; >
     au < crawling ; exists ; 2002 ; 2002 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 37 ; 37 ; >
     au < crawling ; exists ; 2003 ; 2003 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2004 ; 2004 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2004 ; 2004 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2005 ; 2005 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 40 ; 40 ; >
     au < crawling ; exists ; 2006 ; 2006 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 41 ; 41 ; >
     au < crawling ; exists ; 2007 ; 2007 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 42 ; 42 ; >
@@ -98,7 +98,7 @@
 
     au < crawling ; exists ; 2001 ; 2001 ; Aktuelle Dermatologie Volume 27 ; 27 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Dermatologie Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Aktuelle Dermatologie Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2003 ; 2003 ; Aktuelle Dermatologie Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Dermatologie Volume 30 ; 30 ; >
     au < frozen ; exists ; 2005 ; 2005 ; Aktuelle Dermatologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Dermatologie Volume 32 ; 32 ; >
@@ -264,7 +264,7 @@
     au < doNotProcess ; exists ; 1997 ; 1997 ; Aktuelle Rheumatologie Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 1998 ; 1998 ; Aktuelle Rheumatologie Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Aktuelle Rheumatologie Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2000 ; 2000 ; Aktuelle Rheumatologie Volume 27 ; 27 ; >
+    au < finished ; manifest ; 2000 ; 2000 ; Aktuelle Rheumatologie Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2001 ; 2001 ; Aktuelle Rheumatologie Volume 28 ; 28 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Rheumatologie Volume 29 ; 29 ; >
     au < frozen ; exists ; 2003 ; 2003 ; Aktuelle Rheumatologie Volume 30 ; 30 ; >
@@ -411,11 +411,11 @@
     au < crawling ; exists ; 2001 ; 2001 ; Allgemeine Homöopathische Zeitung Volume 246 ; 246 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Allgemeine Homöopathische Zeitung Volume 247 ; 247 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Allgemeine Homöopathische Zeitung Volume 248 ; 248 ; >
-    au < frozen ; exists ; 2004 ; 2004 ; Allgemeine Homöopathische Zeitung Volume 249 ; 249 ; >
+    au < finished ; manifest ; 2004 ; 2004 ; Allgemeine Homöopathische Zeitung Volume 249 ; 249 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2005 ; 2005 ; Allgemeine Homöopathische Zeitung Volume 250 ; 250 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Allgemeine Homöopathische Zeitung Volume 251 ; 251 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Allgemeine Homöopathische Zeitung Volume 252 ; 252 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Allgemeine Homöopathische Zeitung Volume 253 ; 253 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; Allgemeine Homöopathische Zeitung Volume 253 ; 253 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Allgemeine Homöopathische Zeitung Volume 254 ; 254 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Allgemeine Homöopathische Zeitung Volume 255 ; 255 ; >
     au < finished ; finished ; 2011 ; 2011 ; Allgemeine Homöopathische Zeitung Volume 256 ; 256 ; >
@@ -706,8 +706,8 @@
     comment[years] =  2004-current
 
       au < crawling ; exists ; 2004 ; 2004 ; B&G Bewegungstherapie und Gesundheitssport Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; B&G Bewegungstherapie und Gesundheitssport Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; B&G Bewegungstherapie und Gesundheitssport Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; B&G Bewegungstherapie und Gesundheitssport Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; B&G Bewegungstherapie und Gesundheitssport Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2007 ; 2007 ; B&G Bewegungstherapie und Gesundheitssport Volume 23 ; 23 ; >
       au < frozen ; exists ; 2008 ; 2008 ; B&G Bewegungstherapie und Gesundheitssport Volume 24 ; 24 ; >
       au < finished ; manifest ; 2009 ; 2009 ; B&G Bewegungstherapie und Gesundheitssport Volume 25 ; 25 ; reingest1.clockss.org:8082 >
@@ -848,7 +848,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Volume 10 ; 10 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Craniomaxillofacial Trauma & Reconstruction Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Volume 12 ; 12 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -900,7 +900,7 @@
 
    au < crawling ; exists ; 2006 ; 2006 ; Deutsche Heilpraktiker-Zeitschrift Volume 1 ; 1 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Deutsche Heilpraktiker-Zeitschrift Volume 2 ; 2 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Deutsche Heilpraktiker-Zeitschrift Volume 3 ; 3 ; >
+   au < finished ; manifest ; 2008 ; 2008 ; Deutsche Heilpraktiker-Zeitschrift Volume 3 ; 3 ; reingest4.clockss.org:8082 >
    au < finished ; manifest ; 2009 ; 2009 ; Deutsche Heilpraktiker-Zeitschrift Volume 4 ; 4 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Deutsche Heilpraktiker-Zeitschrift Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Deutsche Heilpraktiker-Zeitschrift Volume 6 ; 6 ; >
@@ -948,7 +948,7 @@
 
    au < crawling ; exists ; 2001 ; 2001 ; Deutsche Zeitschrift für Onkologie Volume 33 ; 33 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Deutsche Zeitschrift für Onkologie Volume 34 ; 34 ; >
-   au < frozen ; exists ; 2003 ; 2003 ; Deutsche Zeitschrift für Onkologie Volume 35 ; 35 ; >
+   au < finished ; manifest ; 2003 ; 2003 ; Deutsche Zeitschrift für Onkologie Volume 35 ; 35 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2004 ; 2004 ; Deutsche Zeitschrift für Onkologie Volume 36 ; 36 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Deutsche Zeitschrift für Onkologie Volume 37 ; 37 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Deutsche Zeitschrift für Onkologie Volume 38 ; 38 ; >
@@ -3221,7 +3221,7 @@
     au < crawling ; exists ; 2006 ; 2006 ; Journal of Reconstructive Microsurgery Volume 22 ; 22 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Journal of Reconstructive Microsurgery Volume 23 ; 23 ; >
     au < notReady ; exists ; 2008 ; 2008 ; Journal of Reconstructive Microsurgery Volume 24 ; 24 ; > #no metadata
-    au < frozen ; exists ; 2009 ; 2009 ; Journal of Reconstructive Microsurgery Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Journal of Reconstructive Microsurgery Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Reconstructive Microsurgery Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Journal of Reconstructive Microsurgery Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Journal of Reconstructive Microsurgery Volume 28 ; 28 ; reingest2.clockss.org:8085 >
@@ -3347,7 +3347,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; Kardiologie up2date Volume 1 ; 1 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Kardiologie up2date Volume 2 ; 2 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Kardiologie up2date Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Kardiologie up2date Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; Kardiologie up2date Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; 2009 ; Kardiologie up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Kardiologie up2date Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Kardiologie up2date Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -3975,7 +3975,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; Neuropediatrics Volume 36 ; 36 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Neuropediatrics Volume 37 ; 37 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Neuropediatrics Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Neuropediatrics Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; Neuropediatrics Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; 2009 ; Neuropediatrics Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Neuropediatrics Volume 41 ; 41 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Neuropediatrics Volume 42 ; 42 ; reingest2.clockss.org:8085 >
@@ -4552,7 +4552,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; physiopraxis Volume 3 ; 3 ; >
     au < crawling ; exists ; 2006 ; 2006 ; physiopraxis Volume 4 ; 4 ; >
     au < crawling ; exists ; 2007 ; 2007 ; physiopraxis Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; physiopraxis Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; physiopraxis Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; physiopraxis Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; physiopraxis Volume 8 ; 8 ; >
     au < frozen ; exists ; 2011 ; 2011 ; physiopraxis Volume 9 ; 9 ; >
@@ -6965,7 +6965,7 @@
 
     au < crawling ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 145 ; 145 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 146 ; 146 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 147 ; 147 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 147 ; 147 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 148 ; 148 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 149 ; 149 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 150 ; 150 ; >
