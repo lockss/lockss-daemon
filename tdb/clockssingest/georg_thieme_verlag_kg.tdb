@@ -100,7 +100,7 @@
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Dermatologie Volume 28 ; 28 ; >
     au < finished ; manifest ; 2003 ; 2003 ; Aktuelle Dermatologie Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Dermatologie Volume 30 ; 30 ; >
-    au < frozen ; exists ; 2005 ; 2005 ; Aktuelle Dermatologie Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2005 ; 2005 ; Aktuelle Dermatologie Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Dermatologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Dermatologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Dermatologie Volume 34 ; 34 ; >
@@ -135,7 +135,7 @@
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Ernährungsmedizin Volume 27 ; 27 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Ernährungsmedizin Volume 28 ; 28 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Ernährungsmedizin Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2005 ; 2005 ; Aktuelle Ernährungsmedizin Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2005 ; 2005 ; Aktuelle Ernährungsmedizin Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Ernährungsmedizin Volume 31 ; 31 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Ernährungsmedizin Volume 32 ; 32 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Ernährungsmedizin Volume 33 ; 33 ; >
@@ -216,10 +216,10 @@
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Neurologie Volume 30 ; 30 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Neurologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Neurologie Volume 32 ; 32 ; >
-    au < frozen ; exists ; 2006 ; 2006 ; Aktuelle Neurologie Volume 33 ; 33 ; >
+    au < finished ; manifest ; 2006 ; 2006 ; Aktuelle Neurologie Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Neurologie Volume 34 ; 34 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Aktuelle Neurologie Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Aktuelle Neurologie Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Aktuelle Neurologie Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Neurologie Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Neurologie Volume 38 ; 38 ; >
     au < finished ; finished ; 2012 ; 2012 ; Aktuelle Neurologie Volume 39 ; 39 ; reingest1.clockss.org:8082 >
@@ -267,7 +267,7 @@
     au < finished ; manifest ; 2000 ; 2000 ; Aktuelle Rheumatologie Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2001 ; 2001 ; Aktuelle Rheumatologie Volume 28 ; 28 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Rheumatologie Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Aktuelle Rheumatologie Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2003 ; 2003 ; Aktuelle Rheumatologie Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Rheumatologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Rheumatologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Rheumatologie Volume 33 ; 33 ; >
@@ -305,7 +305,7 @@
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Traumatologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Aktuelle Traumatologie Volume 33 ; 33 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Traumatologie Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2005 ; 2005 ; Aktuelle Traumatologie Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2005 ; 2005 ; Aktuelle Traumatologie Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Traumatologie Volume 36 ; 36 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Aktuelle Traumatologie Volume 37 ; 37 ; >
 
@@ -344,7 +344,7 @@
     au < crawling ; exists ; 2000 ; 2000 ; Aktuelle Urologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Aktuelle Urologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Aktuelle Urologie Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Aktuelle Urologie Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2003 ; 2003 ; Aktuelle Urologie Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2004 ; 2004 ; Aktuelle Urologie Volume 35 ; 35 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Aktuelle Urologie Volume 36 ; 36 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Aktuelle Urologie Volume 37 ; 37 ; >
@@ -407,14 +407,14 @@
     au < doNotProcess ; exists ; 1997 ; 1997 ; Allgemeine Homöopathische Zeitung Volume 242 ; 242 ; >
     au < doNotProcess ; exists ; 1998 ; 1998 ; Allgemeine Homöopathische Zeitung Volume 243 ; 243 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Allgemeine Homöopathische Zeitung Volume 244 ; 244 ; >
-    au < frozen ; exists ; 2000 ; 2000 ; Allgemeine Homöopathische Zeitung Volume 245 ; 245 ; >
+    au < finished ; manifest ; 2000 ; 2000 ; Allgemeine Homöopathische Zeitung Volume 245 ; 245 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2001 ; 2001 ; Allgemeine Homöopathische Zeitung Volume 246 ; 246 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Allgemeine Homöopathische Zeitung Volume 247 ; 247 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Allgemeine Homöopathische Zeitung Volume 248 ; 248 ; >
     au < finished ; manifest ; 2004 ; 2004 ; Allgemeine Homöopathische Zeitung Volume 249 ; 249 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2005 ; 2005 ; Allgemeine Homöopathische Zeitung Volume 250 ; 250 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Allgemeine Homöopathische Zeitung Volume 251 ; 251 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Allgemeine Homöopathische Zeitung Volume 252 ; 252 ; >
+    au < finished ; manifest ; 2007 ; 2007 ; Allgemeine Homöopathische Zeitung Volume 252 ; 252 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; 2008 ; Allgemeine Homöopathische Zeitung Volume 253 ; 253 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Allgemeine Homöopathische Zeitung Volume 254 ; 254 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Allgemeine Homöopathische Zeitung Volume 255 ; 255 ; >
@@ -497,7 +497,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; American Journal of Perinatology Volume 22 ; 22 ; >
     au < crawling ; exists ; 2006 ; 2006 ; American Journal of Perinatology Volume 23 ; 23 ; >
     au < crawling ; exists ; 2007 ; 2007 ; American Journal of Perinatology Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; American Journal of Perinatology Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; American Journal of Perinatology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; American Journal of Perinatology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; American Journal of Perinatology Volume 27 ; 27 ; >
     au < finished ; finished ; 2011 ; 2011 ; American Journal of Perinatology Volume 28 ; 28 ; >
@@ -633,7 +633,7 @@
     au < crawling ; exists ; 2001 ; 2001 ; Arzneimittelforschung Volume 51 ; 51 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Arzneimittelforschung Volume 52 ; 52 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 ; >
-    au < frozen ; exists ; 2004 ; 2004 ; Arzneimittelforschung Volume 54 ; 54 ; >
+    au < finished ; manifest ; 2004 ; 2004 ; Arzneimittelforschung Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2005 ; 2005 ; Arzneimittelforschung Volume 55 ; 55 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Arzneimittelforschung Volume 56 ; 56 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Arzneimittelforschung Volume 57 ; 57 ; >
@@ -709,7 +709,7 @@
       au < finished ; manifest ; 2005 ; 2005 ; B&G Bewegungstherapie und Gesundheitssport Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; 2006 ; B&G Bewegungstherapie und Gesundheitssport Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2007 ; 2007 ; B&G Bewegungstherapie und Gesundheitssport Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; B&G Bewegungstherapie und Gesundheitssport Volume 24 ; 24 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; B&G Bewegungstherapie und Gesundheitssport Volume 24 ; 24 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; B&G Bewegungstherapie und Gesundheitssport Volume 25 ; 25 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 2010 ; B&G Bewegungstherapie und Gesundheitssport Volume 26 ; 26 ; >
       au < finished ; finished ; 2011 ; 2011 ; B&G Bewegungstherapie und Gesundheitssport Volume 27 ; 27 ; >
@@ -744,7 +744,7 @@
       au < crawling ; exists ; 2005 ; 2005 ; Balint Journal Volume 6 ; 6 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Balint Journal Volume 7 ; 7 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Balint Journal Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; Balint Journal Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Balint Journal Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 2009 ; Balint Journal Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; 2010 ; Balint Journal Volume 11 ; 11 ; >
       au < finished ; finished ; 2011 ; 2011 ; Balint Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -845,9 +845,9 @@
     au < finished ; finished ; 2013 ; 2013 ; Craniomaxillofacial Trauma & Reconstruction Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Craniomaxillofacial Trauma & Reconstruction Volume 7 ; 7 ; >
     au < finished ; finished ; 2015 ; 2015 ; Craniomaxillofacial Trauma & Reconstruction Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Craniomaxillofacial Trauma & Reconstruction Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; 2018 ; Craniomaxillofacial Trauma & Reconstruction Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Volume 12 ; 12 ; reingest3.clockss.org:8083 >
 
   }
@@ -928,7 +928,7 @@
     param[journal_id] = 10.1055/s-00000010
     comment[years] = 2000-2002
 
-   au < frozen ; exists ; 2000 ; 2000 ; Deutsche Zeitschrift für Akupunktur Volume 43 ; 43 ; >
+   au < finished ; manifest ; 2000 ; 2000 ; Deutsche Zeitschrift für Akupunktur Volume 43 ; 43 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2001 ; 2001 ; Deutsche Zeitschrift für Akupunktur Volume 44 ; 44 ; >
    au < finished ; finished ; 2002 ; 2002 ; Deutsche Zeitschrift für Akupunktur Volume 45 ; 45 ; reingest2.clockss.org:8085 >
 
@@ -2313,7 +2313,7 @@
    au < crawling ; exists ; 2005 ; 2005 ; Hormone and Metabolic Research Volume 37 ; 37 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Hormone and Metabolic Research Volume 38 ; 38 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Hormone and Metabolic Research Volume 39 ; 39 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Hormone and Metabolic Research Volume 40 ; 40 ; >
+   au < finished ; manifest ; 2008 ; 2008 ; Hormone and Metabolic Research Volume 40 ; 40 ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2009 ; 2009 ; Hormone and Metabolic Research Volume 41 ; 41 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Hormone and Metabolic Research Volume 42 ; 42 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Hormone and Metabolic Research Volume 43 ; 43 ; reingest2.clockss.org:8085 >
@@ -2430,7 +2430,7 @@
    au < crawling ; exists ; 2005 ; 2005 ; Informationen aus Orthodontie & Kieferorthopädie Volume 37 ; 37 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Informationen aus Orthodontie & Kieferorthopädie Volume 38 ; 38 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 39 ; 39 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 40 ; 40 ; >
+   au < finished ; manifest ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 41 ; 41 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 43 ; 43 ; reingest2.clockss.org:8085 >
@@ -2899,7 +2899,7 @@
     au < ready ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 18 ; 18 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Journal of Knee Surgery Volume 19 ; 19 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Journal of Knee Surgery Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; Journal of Knee Surgery Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Knee Surgery Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Knee Surgery Volume 23 ; 23 ; >
     au < finished ; finished ; 2011 ; 2011 ; Journal of Knee Surgery Volume 24 ; 24 ; reingest1.clockss.org:8082 >
@@ -3278,7 +3278,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Social Health and Diabetes Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Social Health and Diabetes Volume 6 ; 6 ; >
       au < finished ; manifest ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; 2020 ; Journal of Social Health and Diabetes Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Journal of Social Health and Diabetes Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2021 ; 2021 ; Journal of Social Health and Diabetes Volume 9 ; 9 ; >
 
   }
@@ -4356,7 +4356,7 @@
 
     au < crawling ; exists ; 2006 ; 2006 ; Pädiatrie up2date Volume 1 ; 1 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Pädiatrie up2date Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Pädiatrie up2date Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; Pädiatrie up2date Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Pädiatrie up2date Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Pädiatrie up2date Volume 5 ; 5 ; >
     au < finished ; finished ; 2011 ; 2011 ; Pädiatrie up2date Volume 6 ; 6 ; >
@@ -4555,7 +4555,7 @@
     au < finished ; manifest ; 2008 ; 2008 ; physiopraxis Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; physiopraxis Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; physiopraxis Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2011 ; 2011 ; physiopraxis Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2011 ; 2011 ; physiopraxis Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; physiopraxis Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; 2013 ; physiopraxis Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; physiopraxis Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -5049,7 +5049,7 @@
     param[journal_id] = 10.1055/s-00000159
     comment[years] = 2008-current
 
-   au < frozen ; exists ; 2008 ; 2008 ; Radiopraxis Volume 1 ; 1 ; >
+   au < finished ; manifest ; 2008 ; 2008 ; Radiopraxis Volume 1 ; 1 ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2009 ; 2009 ; Radiopraxis Volume 2 ; 2 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Radiopraxis Volume 3 ; 3 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Radiopraxis Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -6167,7 +6167,7 @@
    au < crawling ; exists ; 2008 ; 2008 ; SYNLETT Volume 19 ; 19 ; >
    au < finished ; manifest ; 2009 ; 2009 ; SYNLETT Volume 20 ; 20 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; SYNLETT Volume 21 ; 21 ; reingest1.clockss.org:8082 >
-   au < frozen ; exists ; 2011 ; 2011 ; SYNLETT Volume 22 ; 22 ; >
+   au < finished ; manifest ; 2011 ; 2011 ; SYNLETT Volume 22 ; 22 ; reingest4.clockss.org:8082 >
    au < zapped ; finished ; 2012 ; 2012 ; SYNLETT Volume 23 ; 23 ; reingest2.clockss.org:8085 >
    au < zapped ; finished ; 2013 ; 2013 ; SYNLETT Volume 24 ; 24 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2014 ; 2014 ; SYNLETT Volume 25 ; 25 ; reingest5.clockss.org:8082 >
