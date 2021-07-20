@@ -31,36 +31,36 @@ POSSIBILITY OF SUCH DAMAGE.
 
 -->
 <map>
-    <entry>
-        <string>plugin_status</string>
-        <string>development</string>
-    </entry>
-    <entry>
-        <string>plugin_identifier</string>
-        <string>org.lockss.plugin.cloudpublish.liverpool.LupPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_version</string>
-        <string>1</string>
-    </entry>
-    <entry>
-        <string>plugin_name</string>
-        <string>Practical Action Publishing Plugin</string>
-    </entry>
-    <entry>
-        <string>au_name</string>
-        <string>"Practical Action Publishing Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-    </entry>
-    <entry>
-        <string>plugin_name</string>
-        <string>Practical Action Publishing Plugin</string>
-    </entry>
-    <entry>
-        <string>plugin_parent</string>
-        <string>org.lockss.plugin.cloudpublish.CloudPublishPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_parent_version</string>
-        <string>1</string>
-    </entry>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Practical Action Publishing Plugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Practical Action Publishing Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Practical Action Publishing Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
 </map>
