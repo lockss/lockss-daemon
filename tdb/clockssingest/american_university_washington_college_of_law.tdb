@@ -147,7 +147,7 @@
     au < finished ; crawling ; 2017 ; American University Law Review Volume 66 ; 66 ; http://digitalcommons.wcl.american.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; American University Law Review Volume 67 ; 67 ; http://digitalcommons.wcl.american.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; American University Law Review Volume 68 ; 68 ; https://digitalcommons.wcl.american.edu/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2020 ; American University Law Review Volume 69 ; 69 ; https://digitalcommons.wcl.american.edu/ ; >
+    au < deepCrawl ; exists ; 2020 ; American University Law Review Volume 69 ; 69 ; https://digitalcommons.wcl.american.edu/ ; >
     au < expected ; exists ; 2021 ; American University Law Review Volume 70 ; 70 ; https://digitalcommons.wcl.american.edu/ ; >
 
   }
@@ -190,7 +190,7 @@
     au < finished ; crawling ; 2017 ; The Journal of Gender, Social Policy & the Law Volume 25 ; 25 ; http://digitalcommons.wcl.american.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; The Journal of Gender, Social Policy & the Law Volume 26 ; 26 ; https://digitalcommons.wcl.american.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; The Journal of Gender, Social Policy & the Law Volume 27 ; 27 ; https://digitalcommons.wcl.american.edu/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; The Journal of Gender, Social Policy & the Law Volume 28 ; 28 ; https://digitalcommons.wcl.american.edu/ ; >
+    au < deepCrawl ; exists ; 2020 ; The Journal of Gender, Social Policy & the Law Volume 28 ; 28 ; https://digitalcommons.wcl.american.edu/ ; >
     au < expected ; exists ; 2021 ; The Journal of Gender, Social Policy & the Law Volume 29 ; 29 ; https://digitalcommons.wcl.american.edu/ ; >
 
   }
@@ -262,7 +262,7 @@
     au < finished ; finished ; 2017 ; Sustainable Development Law & Policy Volume 17 ; 17 ; http://digitalcommons.wcl.american.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Sustainable Development Law & Policy Volume 18 ; 18 ; http://digitalcommons.wcl.american.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Sustainable Development Law & Policy Volume 19 ; 19 ; https://digitalcommons.wcl.american.edu/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2020 ; Sustainable Development Law & Policy Volume 20 ; 20 ; https://digitalcommons.wcl.american.edu/ ; >
+    au < deepCrawl ; exists ; 2020 ; Sustainable Development Law & Policy Volume 20 ; 20 ; https://digitalcommons.wcl.american.edu/ ; >
     au < expected ; exists ; 2021 ; Sustainable Development Law & Policy Volume 21 ; 21 ; https://digitalcommons.wcl.american.edu/ ; >
 
   }

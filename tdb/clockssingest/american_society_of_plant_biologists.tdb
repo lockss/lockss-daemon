@@ -255,7 +255,7 @@
       au < aspb.ClockssASPBDrupalPlugin ; finished ; crawling ; 2019 ; Plant Physiology Volume 179 ; 179 ; reingest1.clockss.org:8082 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; crawling ; 2019 ; Plant Physiology Volume 180 ; 180 ; reingest3.clockss.org:8083 >
       au < aspb.ClockssASPBDrupalPlugin ; finished ; crawling ; 2019 ; Plant Physiology Volume 181 ; 181 ; reingest5.clockss.org:8082 >
-      au < aspb.ClockssASPBDrupalPlugin ; crawling ; exists ; 2020 ; Plant Physiology Volume 182 ; 182 ; >
+      au < aspb.ClockssASPBDrupalPlugin ; deepCrawl ; exists ; 2020 ; Plant Physiology Volume 182 ; 182 ; >
       au < aspb.ClockssASPBDrupalPlugin ; doNotProcess ; exists ; 2020 ; Plant Physiology Volume 183 ; 183 ; >
       au < aspb.ClockssASPBDrupalPlugin ; doNotProcess ; exists ; 2020 ; Plant Physiology Volume 184 ; 184 ; >
 

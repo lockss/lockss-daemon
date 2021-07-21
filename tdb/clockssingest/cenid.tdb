@@ -33,7 +33,7 @@
       au < finished ; crawling ; 2017 ; RIDE: Revista Iberoamericana para la Investigación y el Desarrollo Educativo Volume 2017 ; 7-8 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; RIDE: Revista Iberoamericana para la Investigación y el Desarrollo Educativo Volume 2018 ; 8-9 ; 2018 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; RIDE: Revista Iberoamericana para la Investigación y el Desarrollo Educativo Volume 2019 ; 9-10 ; 2019 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; RIDE: Revista Iberoamericana para la Investigación y el Desarrollo Educativo Volume 2020 ; 10-11 ; 2020 ; >
+      au < deepCrawl ; exists ; 2020 ; RIDE: Revista Iberoamericana para la Investigación y el Desarrollo Educativo Volume 2020 ; 10-11 ; 2020 ; >
       au < crawling ; exists ; 2021 ; RIDE: Revista Iberoamericana para la Investigación y el Desarrollo Educativo Volume 2021 ; 11-12 ; 2021 ; >
 
   }
@@ -56,7 +56,7 @@
       au < finished ; crawling ; 2017 ; RICSH: Revista Iberoamericana de las Ciencias Sociales y Humanísticas Volume 2017 ; 6 ; 2017 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; RICSH: Revista Iberoamericana de las Ciencias Sociales y Humanísticas Volume 2018 ; 7 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; RICSH: Revista Iberoamericana de las Ciencias Sociales y Humanísticas Volume 2019 ; 8 ; 2019 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; RICSH: Revista Iberoamericana de las Ciencias Sociales y Humanísticas Volume 2020 ; 9 ; 2020 ; >
+      au < deepCrawl ; exists ; 2020 ; RICSH: Revista Iberoamericana de las Ciencias Sociales y Humanísticas Volume 2020 ; 9 ; 2020 ; >
       au < crawling ; exists ; 2021 ; RICSH: Revista Iberoamericana de las Ciencias Sociales y Humanísticas Volume 2021 ; 10 ; 2021 ; >
 
   }

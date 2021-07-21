@@ -139,7 +139,7 @@
     param[journal_id] = anu-historical-journal
 
     au < deepCrawl ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
-    au < crawling ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
     au < manifest ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
 
   }

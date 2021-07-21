@@ -31,7 +31,7 @@
     au < finished ; crawling ; 2017 ; Journal of Patient-Centered Research and Reviews Volume 4 ; 4 ; http://digitalrepository.aurorahealthcare.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Patient-Centered Research and Reviews Volume 5 ; 5 ; http://digitalrepository.aurorahealthcare.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; Journal of Patient-Centered Research and Reviews Volume 6 ; 6 ; https://digitalrepository.aurorahealthcare.org/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2020 ; Journal of Patient-Centered Research and Reviews Volume 7 ; 7 ; https://institutionalrepository.aah.org/ ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of Patient-Centered Research and Reviews Volume 7 ; 7 ; https://institutionalrepository.aah.org/ ; >
     au < ready ; exists ; 2021 ; Journal of Patient-Centered Research and Reviews Volume 8 ; 8 ; https://institutionalrepository.aah.org/ ; >
 
   }
