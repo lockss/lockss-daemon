@@ -13,8 +13,8 @@
        name = Casalini Books Source Content
     >
 
-    #plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
+    #plugin = needs.plugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
 
     hidden[proxy] = DIRECT
