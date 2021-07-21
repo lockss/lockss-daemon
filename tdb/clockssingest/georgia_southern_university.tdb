@@ -22,7 +22,7 @@
 
       au < finished ; finished ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; >
       au < manifest ; exists ; 2021 ; Armstrong Undergraduate Journal of History Volume 11 ; 11 ; >
 
@@ -57,7 +57,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = cimle
 
-      au < deepCrawl ; exists ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; >
+      au < finished ; manifest ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Current Issues in Middle Level Education Volume 25 ; 25 ; >
       au < expected ; exists ; 2021 ; Current Issues in Middle Level Education Volume 26 ; 26 ; >
 
@@ -90,7 +90,7 @@
       au < finished ; finished ; 2016 ; Georgia Educational Researcher Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; >
+      au < finished ; manifest ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; >
       au < expected ; exists ; 2021 ; Georgia Educational Researcher Volume 19 ; 19 ; >
 
@@ -138,7 +138,7 @@
       au < finished ; finished ; 2016 ; International Journal for the Scholarship of Teaching & Learning Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; >
+      au < finished ; manifest ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; >
       au < manifest ; exists ; 2021 ; International Journal for the Scholarship of Teaching & Learning Volume 15 ; 15 ; >
 
@@ -239,7 +239,7 @@
 
       au < finished ; finished ; 2017 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2019 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 4 ; 4 ; >
 
   }
@@ -293,7 +293,7 @@
       au < finished ; finished ; 2015-2016 ; The Coastal Review Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016-2017 ; The Coastal Review Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017-2018 ; The Coastal Review Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018-2019 ; The Coastal Review Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2018-2019 ; The Coastal Review Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2019-2020 ; The Coastal Review Volume 11 ; 11 ; >
       au < crawling ; exists ; 2020-2021 ; The Coastal Review Volume 12 ; 12 ; >
       au < expected ; exists ; 2021-2022 ; The Coastal Review Volume 13 ; 13 ; >
@@ -312,8 +312,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = jssw
 
-      au < deepCrawl ; exists ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 ; >
-      au < expected ; exists ; 2021 ; The Journal of Student Success in Writing Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -333,7 +332,7 @@
       au < finished ; finished ; 2016 ; Theory and Applications of Graphs Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; Theory and Applications of Graphs Volume 6 ; 6 ; >
       au < manifest ; exists ; 2021 ; Theory and Applications of Graphs Volume 7 ; 7 ; >
 
