@@ -70,7 +70,7 @@
       au < frozen ; exists ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; >
       au < notReady ; exists ; 2020 ; Early Theatre Volume 23 ; 23 ; 2020 ; > #subscription for a year. Wait till 2022
-      au < ready ; exists ; 2021 ; Early Theatre Volume 24 ; 24 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Early Theatre Volume 24 ; 24 ; 2021 ; >
 
     }
 
@@ -135,7 +135,7 @@
       au < frozen ; exists ; 2018 ; Global Labour Journal Volume 9 ; 9 ; 2018 ; > 
       au < deepCrawl ; exists ; 2019 ; Global Labour Journal Volume 10 ; 10 ; 2019 ; > 
       au < crawling ; exists ; 2020 ; Global Labour Journal Volume 11 ; 11 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Global Labour Journal Volume 12 ; 12 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Global Labour Journal Volume 12 ; 12 ; 2021 ; >
 
       }
 
@@ -170,7 +170,7 @@
       au < frozen ; exists ; 2018 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 6 ; 6 ; 2018 ; > 
       au < deepCrawl ; exists ; 2019 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 7 ; 7 ; 2019 ; > 
       au < crawling ; exists ; 2020 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 8 ; 8 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 9 ; 9 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 9 ; 9 ; 2021 ; >
 
       }
 
@@ -200,7 +200,7 @@
       au < frozen ; exists ; 2018 ; International Journal for Students as Partners Volume 2 ; 2 ; 2018 ; > 
       au < deepCrawl ; exists ; 2019 ; International Journal for Students as Partners Volume 3 ; 3 ; 2019 ; > 
       au < ready ; exists ; 2020 ; International Journal for Students as Partners Volume 4 ; 4 ; 2020 ; >
-      au < ready ; exists ; 2021 ; International Journal for Students as Partners Volume 5 ; 5 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; International Journal for Students as Partners Volume 5 ; 5 ; 2021 ; >
 
       }
 
@@ -233,7 +233,7 @@
       au < frozen ; exists ; 2018 ; Journal for the History of Analytical Philosophy Volume 8 ; 8 ; 2018 ; >
       au < deepCrawl ; exists ; 2019 ; Journal for the History of Analytical Philosophy Volume 9 ; 9 ; 2019 ; >
       au < crawling ; exists ; 2020 ; Journal for the History of Analytical Philosophy Volume 10 ; 10 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Journal for the History of Analytical Philosophy Volume 11 ; 11 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Journal for the History of Analytical Philosophy Volume 11 ; 11 ; 2021 ; >
 
     }
 
@@ -319,7 +319,7 @@
       au < frozen ; exists ; 2018 ; Russell: the Journal of Bertrand Russell Studies Volume 38 ; 38 ; 2018 ; > 
       au < deepCrawl ; exists ; 2019 ; Russell: the Journal of Bertrand Russell Studies Volume 39 ; 39 ; 2019 ; > 
       au < ready ; exists ; 2020 ; Russell: the Journal of Bertrand Russell Studies Volume 40 ; 40 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Russell: the Journal of Bertrand Russell Studies Volume 41 ; 41 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Russell: the Journal of Bertrand Russell Studies Volume 41 ; 41 ; 2021 ; >
 
       }
 

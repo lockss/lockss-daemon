@@ -29,7 +29,7 @@
     au < finished ; crawling ; 2018 ; 2 ; Journal of the Endocrine Society Volume 2 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 3 ; Journal of the Endocrine Society Volume 3 ; 2019 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2020 ; 4 ; Journal of the Endocrine Society Volume 4 ; 2020 ; >
-    au < ready ; exists ; 2021 ; 5 ; Journal of the Endocrine Society Volume 5 ; 2021 ; >
+    au < crawling ; exists ; 2021 ; 5 ; Journal of the Endocrine Society Volume 5 ; 2021 ; >
 
   }
 
@@ -87,7 +87,7 @@
       au < finished ; manifest ; 2018 ; 39 ; Endocrine Reviews Volume 39 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; 40 ; Endocrine Reviews Volume 40 ; 2019 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 41 ; Endocrine Reviews Volume 41 ; 2020 ; >
-      au < ready ; exists ; 2021 ; 42 ; Endocrine Reviews Volume 42 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; 42 ; Endocrine Reviews Volume 42 ; 2021 ; >
 
     }
 
@@ -210,7 +210,7 @@
       au < finished ; manifest ; 2018 ; 159 ; Endocrinology Volume 159 ; 2018 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 160 ; Endocrinology Volume 160 ; 2019 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; 161 ; Endocrinology Volume 161 ; 2020 ; >
-      au < ready ; exists ; 2021 ; 162 ; Endocrinology Volume 162 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; 162 ; Endocrinology Volume 162 ; 2021 ; >
 
     }
 
@@ -309,7 +309,7 @@
       au < finished ; manifest ; 2018 ; 103 ; Journal of Clinical Endocrinology & Metabolism Volume 103 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 104 ; Journal of Clinical Endocrinology & Metabolism Volume 104 ; 2019 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 2020 ; 105 ; Journal of Clinical Endocrinology & Metabolism Volume 105 ; 2020 ; >
-      au < ready ; exists ; 2021 ; 106 ; Journal of Clinical Endocrinology & Metabolism Volume 106 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; 106 ; Journal of Clinical Endocrinology & Metabolism Volume 106 ; 2021 ; >
 
     }
 

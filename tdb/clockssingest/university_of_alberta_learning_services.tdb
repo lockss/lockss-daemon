@@ -30,7 +30,7 @@
         au < frozen ; exists ; 2018 ; Journal of Pharmacy and Pharmaceutical Science Volume 21 ; 2018 ; 21 ; >
         au < frozen ; exists ; 2019 ; Journal of Pharmacy and Pharmaceutical Science Volume 22 ; 2019 ; 22 ; >
         au < crawling ; exists ; 2020 ; Journal of Pharmacy and Pharmaceutical Science Volume 23 ; 2020 ; 22 ; >
-        au < ready ; exists ; 2021 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2021 ; 23 ; >
+        au < crawling ; exists ; 2021 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2021 ; 23 ; >
         }
         {
         plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
@@ -81,7 +81,7 @@
         au < crawling ; exists ; 2018 ; Evidence Based Library and Information Practice Volume 13 ; 2018 ; 13 ; >
         au < crawling ; exists ; 2019 ; Evidence Based Library and Information Practice Volume 14 ; 2019 ; 14 ; >
         au < crawling ; exists ; 2020 ; Evidence Based Library and Information Practice Volume 15 ; 2020 ; 15 ; >
-        au < ready ; exists ; 2021 ; Evidence Based Library and Information Practice Volume 16 ; 2021 ; 16 ; >
+        au < crawling ; exists ; 2021 ; Evidence Based Library and Information Practice Volume 16 ; 2021 ; 16 ; >
 
       }
       
