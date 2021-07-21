@@ -30,7 +30,7 @@
       au < finished ; crawling ; 2013-2014 ; Seventh Circuit Review Volume 9 ; 9 ; http://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014-2015 ; Seventh Circuit Review Volume 10 ; 10 ; http://scholarship.kentlaw.iit.edu/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2015-2016 ; Seventh Circuit Review Volume 11 ; 11 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; Seventh Circuit Review Volume 12 ; 12 ; http://scholarship.kentlaw.iit.edu/ ; >
+      au < finished ; manifest ; 2017 ; Seventh Circuit Review Volume 12 ; 12 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
 
     }
   
@@ -52,8 +52,8 @@
       au < finished ; crawling ; 2014-2015 ; Journal of Intellectual Property Volume 14 ; 14 ; http://scholarship.kentlaw.iit.edu/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Journal of Intellectual Property Volume 15 ; 15 ; http://scholarship.kentlaw.iit.edu/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016-2017 ; Journal of Intellectual Property Volume 16 ; 16 ; http://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2018 ; Journal of Intellectual Property Volume 17 ; 17 ; https://scholarship.kentlaw.iit.edu/ ; >
-      au < deepCrawl ; exists ; 2019 ; Journal of Intellectual Property Volume 18 ; 18 ; https://scholarship.kentlaw.iit.edu/ ; >
+      au < finished ; manifest ; 2018 ; Journal of Intellectual Property Volume 17 ; 17 ; https://scholarship.kentlaw.iit.edu/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Journal of Intellectual Property Volume 18 ; 18 ; https://scholarship.kentlaw.iit.edu/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; Journal of Intellectual Property Volume 19 ; 19 ; https://scholarship.kentlaw.iit.edu/ ; >
       au < manifest ; exists ; 2021 ; Journal of Intellectual Property Volume 20 ; 20 ; https://scholarship.kentlaw.iit.edu/ ; >
 
