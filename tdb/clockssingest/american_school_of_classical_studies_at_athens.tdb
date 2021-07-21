@@ -120,12 +120,12 @@
      # 2014 & 2016 have 2 pdf files that fail filtering - check manually
      
       au < frozen ; exists ; 2002 ; Hesperia Volume 71 ; 2002 ; http://www.jstor.org/ ; >
-      au < crawling ; exists ; 2003 ; Hesperia Volume 72 ; 2003 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2003 ; Hesperia Volume 72 ; 2003 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2004 ; Hesperia Volume 73 ; 2004 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2005 ; Hesperia Volume 74 ; 2005 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2006 ; Hesperia Volume 75 ; 2006 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2007 ; Hesperia Volume 76 ; 2007 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2008 ; Hesperia Volume 77 ; 2008 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2008 ; Hesperia Volume 77 ; 2008 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2009 ; Hesperia Volume 78 ; 2009 ; http://www.jstor.org/ ; >
       au < frozen ; exists ; 2010 ; Hesperia Volume 79 ; 2010 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2011 ; Hesperia Volume 80 ; 2011 ; https://www.jstor.org/ ; >
@@ -137,7 +137,7 @@
       au < deepCrawl ; exists ; 2017 ; Hesperia Volume 86 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Hesperia Volume 87 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Hesperia Volume 88 ; 2019 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2020 ; Hesperia Volume 89 ; 2020 ; https://www.jstor.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Hesperia Volume 89 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Hesperia Volume 90 ; 2021 ; https://www.jstor.org/ ; >
 
     }
