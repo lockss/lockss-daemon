@@ -8,7 +8,8 @@
     info[platform] = Janeway/OAI
   >
   
-    plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
     param[oai_granularity] = YYYY-MM-DD
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
