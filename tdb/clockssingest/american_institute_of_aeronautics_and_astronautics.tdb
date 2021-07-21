@@ -170,7 +170,7 @@
     au < finished ; crawling ; 2017 ; Journal of Aerospace Computing, Information, and Communication Volume 14 ; 14 ; http://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Journal of Aerospace Computing, Information, and Communication Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Journal of Aerospace Computing, Information, and Communication Volume 16 ; 16 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Journal of Aerospace Computing, Information, and Communication Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of Aerospace Computing, Information, and Communication Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2021 ; Journal of Aerospace Computing, Information, and Communication Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
 
   }
@@ -189,7 +189,7 @@
     au < finished ; finished ; 2017 ; Journal of Air Transportation Volume 25 ; 25 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Air Transportation Volume 26 ; 26 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Journal of Air Transportation Volume 27 ; 27 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Journal of Air Transportation Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of Air Transportation Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2021 ; Journal of Air Transportation Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
 
   }
@@ -295,10 +295,10 @@
     param[journal_id] = jgc
     #continued_by = 0731-5090
 
-    au < crawling ; exists ; 1978 ; Journal of Guidance and Control Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1979 ; Journal of Guidance and Control Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1978 ; Journal of Guidance and Control Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1979 ; Journal of Guidance and Control Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1980 ; Journal of Guidance and Control Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1981 ; Journal of Guidance and Control Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
 
   }
 
