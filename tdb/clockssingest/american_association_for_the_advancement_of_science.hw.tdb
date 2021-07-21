@@ -428,12 +428,12 @@
       au < deepCrawl ; exists ; 2018 ; Science Volume 361 ; 361 ; http://science.sciencemag.org/ ; > #no permission on deepCrawl
       au < deepCrawl ; exists ; 2018 ; Science Volume 362 ; 362 ; http://science.sciencemag.org/ ; > #no permission on deepCrawl
       au < frozen ; exists ; 2019 ; Science Volume 363 ; 363 ; https://science.sciencemag.org/ ; > #no permission
-      au < crawling ; exists ; 2019 ; Science Volume 364 ; 364 ; https://science.sciencemag.org/ ; > #no permission
-      au < crawling ; exists ; 2019 ; Science Volume 365 ; 365 ; https://science.sciencemag.org/ ; > #no permission
-      au < crawling ; exists ; 2019 ; Science Volume 366 ; 366 ; https://science.sciencemag.org/ ; > #no permission
-      au < crawling ; exists ; 2020 ; Science Volume 367 ; 367 ; https://science.sciencemag.org/ ; >
-      au < crawling ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
-      au < crawling ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
+      au < frozen ; exists ; 2019 ; Science Volume 364 ; 364 ; https://science.sciencemag.org/ ; > #no permission
+      au < frozen ; exists ; 2019 ; Science Volume 365 ; 365 ; https://science.sciencemag.org/ ; > #no permission
+      au < frozen ; exists ; 2019 ; Science Volume 366 ; 366 ; https://science.sciencemag.org/ ; > #no permission
+      au < deepCrawl ; exists ; 2020 ; Science Volume 367 ; 367 ; https://science.sciencemag.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Science Volume 368 ; 368 ; https://science.sciencemag.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Science Volume 369 ; 369 ; https://science.sciencemag.org/ ; >
       au < crawling ; exists ; 2020 ; Science Volume 370 ; 370 ; https://science.sciencemag.org/ ; >
       au < doNotProcess ; exists ; 2021 ; Science Volume 371 ; 371 ; https://science.sciencemag.org/ ; >
       au < doNotProcess ; exists ; 2021 ; Science Volume 372 ; 372 ; https://science.sciencemag.org/ ; >
@@ -464,7 +464,7 @@
       au < frozen ; exists ; 2017 ; Science Signaling Volume 10 ; 10 ; http://stke.sciencemag.org/ ; >
       au < deepCrawl ; exists ; 2018 ; Science Signaling Volume 11 ; 11 ; http://stke.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Signaling Volume 12 ; 12 ; https://stke.sciencemag.org/ ; >
-      au < crawling ; exists ; 2020 ; Science Signaling Volume 13 ; 13 ; https://stke.sciencemag.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Science Signaling Volume 13 ; 13 ; https://stke.sciencemag.org/ ; >
       au < doNotProcess ; exists ; 2021 ; Science Signaling Volume 14 ; 14 ; https://stke.sciencemag.org/ ; >
 
   }
@@ -508,8 +508,8 @@
       au < finished ; finished ; 2016 ; Science Advances Volume 2 ; 2 ; http://advances.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Science Advances Volume 3 ; 3 ; http://advances.sciencemag.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Science Advances Volume 4 ; 4 ; http://advances.sciencemag.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; Science Advances Volume 5 ; 5 ; https://advances.sciencemag.org/ ; >
-      au < crawling ; exists ; 2020 ; Science Advances Volume 6 ; 6 ; https://advances.sciencemag.org/ ; >
+      au < frozen ; exists ; 2019 ; Science Advances Volume 5 ; 5 ; https://advances.sciencemag.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Science Advances Volume 6 ; 6 ; https://advances.sciencemag.org/ ; >
       au < doNotProcess ; exists ; 2021 ; Science Advances Volume 7 ; 7 ; https://advances.sciencemag.org/ ; >
 
   }
@@ -527,7 +527,7 @@
       au < finished ; finished ; 2017 ; Science Robotics Volume 2 ; 2 ; http://robotics.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Science Robotics Volume 3 ; 3 ; http://robotics.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Robotics Volume 4 ; 4 ; https://robotics.sciencemag.org/ ; >
-      au < crawling ; exists ; 2020 ; Science Robotics Volume 5 ; 5 ; https://robotics.sciencemag.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Science Robotics Volume 5 ; 5 ; https://robotics.sciencemag.org/ ; >
       au < doNotProcess ; exists ; 2021 ; Science Robotics Volume 6 ; 6 ; https://robotics.sciencemag.org/ ; >
 
   }
@@ -545,7 +545,7 @@
       au < finished ; crawling ; 2017 ; Science Immunology Volume 2 ; 2 ; http://immunology.sciencemag.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Science Immunology Volume 3 ; 3 ; http://immunology.sciencemag.org/ ; >
       au < frozen ; exists ; 2019 ; Science Immunology Volume 4 ; 4 ; https://immunology.sciencemag.org/ ; >
-      au < crawling ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; https://immunology.sciencemag.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; https://immunology.sciencemag.org/ ; >
       au < doNotProcess ; exists ; 2021 ; Science Immunology Volume 6 ; 6 ; https://immunology.sciencemag.org/ ; >
 
   }
