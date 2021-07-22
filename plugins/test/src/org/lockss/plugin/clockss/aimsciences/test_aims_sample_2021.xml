@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch version="4.3.0">
+    <head>
+        <doi_batch_id>102</doi_batch_id>
+        <timestamp>20210719093922</timestamp>
+        <depositor>
+            <name>Susan</name>
+            <email_address>journal@aimsciences.org</email_address>
+        </depositor>
+        <registrant>American Institute of Mathematical Sciences</registrant>
+    </head>
+    <body>
+        <journal>
+            <journal_metadata language="en">
+                <full_title>AIMS Bioengineering</full_title>
+                <issn media_type="print">2375-1495</issn>
+                <doi_data>
+                    <resource>http://aimspress.com/journal/aimsboa</resource>
+                </doi_data>
+            </journal_metadata>
+            <journal_issue>
+                <publication_date media_type="print">
+                    <year>2021</year>
+                </publication_date>
+                <journal_volume>
+                    <volume>8</volume>
+                </journal_volume>
+                <issue>2</issue>
+            </journal_issue>
+            <journal_article>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Xiang-Xiang Guan</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Xiao-Juan Zhu</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Zhao-Hui Deng</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Yu-Rong Zeng</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Jie-Ru Liu</author_name>
+                    </person_name>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Jiang-Hua Li</author_name>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="print">
+                    <year>2021</year>
+                </publication_date>
+                <pages>
+                    <first_page>130</first_page>
+                    <last_page>139</last_page>
+                </pages>
+                <doi_data>
+                    <doi>10.3934/bioeng.2021012</doi>
+                    <resource>http://www.aimspress.com/article/id/603f1f6dba35de2c24d47c26</resource>
+                </doi_data>
+            </journal_article>
+            <journal_article>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Kranthi Kumar Lella</author_name>
+                    </person_name>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Alphonse PJA</author_name>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="print">
+                    <year>2021</year>
+                </publication_date>
+                <pages>
+                    <first_page>140</first_page>
+                    <last_page>153</last_page>
+                </pages>
+                <doi_data>
+                    <doi>10.3934/bioeng.2021013</doi>
+                    <resource>http://www.aimspress.com/article/id/6045b790ba35de58449dfcce</resource>
+                </doi_data>
+            </journal_article>
+            <journal_article>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Mi-Young Yun</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Kyoung-Sook Park</author_name>
+                    </person_name>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Kyung-Ah Yoon</author_name>
+                    </person_name>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Hwa-Jung Choi</author_name>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="print">
+                    <year>2021</year>
+                </publication_date>
+                <pages>
+                    <first_page>154</first_page>
+                    <last_page>164</last_page>
+                </pages>
+                <doi_data>
+                    <doi>10.3934/bioeng.2021014</doi>
+                    <resource>http://www.aimspress.com/article/id/60618102ba35de1a1fbde4ac</resource>
+                </doi_data>
+            </journal_article>
+            <journal_article>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Uri Adrian Prync Flato</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Karina Vilariço Ferreira</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Piero Biteli</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Daniela Ortega Balbo Rodrigues Reina</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Fábio Tadeu Rodrigues Reina</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Fausto Tucunduva Vernaschi</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Gabriela Achete de Souza</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Gyovanna Sorrentino dos Santos Campanari</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Júlia Novaes Matias</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Vinícius Marinho Lima</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Tereza Lais Menegucci Zutin</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Rogério Leone Buchaim</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Daniela Vieira Buchaim</author_name>
+                    </person_name>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Sandra Maria Barbalho</author_name>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="print">
+                    <year>2021</year>
+                </publication_date>
+                <pages>
+                    <first_page>165</first_page>
+                    <last_page>172</last_page>
+                </pages>
+                <doi_data>
+                    <doi>10.3934/bioeng.2021015</doi>
+                    <resource>http://www.aimspress.com/article/id/6077b2c7ba35de51d3b0cecc</resource>
+                </doi_data>
+            </journal_article>
+            <journal_article>
+                <contributors>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Bennet Brockhagen</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Fabian Schoden</author_name>
+                    </person_name>
+                    <person_name sequence="first" contributor_role="author">
+                        <author_name>Jan Lukas Storck</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Timo Grothe</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Christian Eßelmann</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Robin Böttjer</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Anke Rattenholl</author_name>
+                    </person_name>
+                    <person_name sequence="additional" contributor_role="author">
+                        <author_name>Frank Gudermann</author_name>
+                    </person_name>
+                </contributors>
+                <publication_date media_type="print">
+                    <year>2021</year>
+                </publication_date>
+                <pages>
+                    <first_page>173</first_page>
+                    <last_page>191</last_page>
+                </pages>
+                <doi_data>
+                    <doi>10.3934/bioeng.2021016</doi>
+                    <resource>http://www.aimspress.com/article/id/609c86b7ba35de2c2882c15d</resource>
+                </doi_data>
+            </journal_article>
+        </journal>
+    </body>
+</doi_batch>
