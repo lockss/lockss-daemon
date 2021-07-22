@@ -56,9 +56,9 @@
       au < manifest ; exists ; 2002 ; 2002 ; Analecta Volume 32 [2002] ; 32 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Analecta Volume 33 ; 33 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Analecta Volume 34 ; 34 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Analecta Volume 35 ; 35 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Analecta Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Analecta Volume 37 ; 37 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Analecta Volume 35 ; 35 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Analecta Volume 36 ; 36 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Analecta Volume 37 ; 37 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Analecta Volume 38 ; 38 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; 2009 ; Analecta Volume 39 ; 39 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; 2010 ; Analecta Volume 40 ; 40 ; reingest4.clockss.org:8082 >
@@ -67,9 +67,9 @@
       au < finished ; manifest ; 2013 ; 2013 ; Analecta Volume 43 ; 43 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2014 ; 2014 ; Analecta Volume 44 ; 44 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; 2015 ; Analecta Volume 45 ; 45 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; 2016 ; Analecta Volume 46 ; 46 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Analecta Volume 47 ; 47 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Analecta Volume 48 ; 48 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Analecta Volume 46 ; 46 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Analecta Volume 47 ; 47 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Analecta Volume 48 ; 48 ; >
       #No more published
 
   }
@@ -83,7 +83,7 @@
 
       param[journal_id] = artifact
       
-      au < crawling ; exists ; 2007 ; 2007 ; Artifact Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Artifact Volume 1 ; 1 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Artifact Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Artifact Volume 3 (2013) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 ; >
@@ -123,12 +123,12 @@
       au < manifest ; exists ; 2002 ; 2002 ; Anthropology of East Europe Review Volume 20 ; 20 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Anthropology of East Europe Review Volume 21 ; 21 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Anthropology of East Europe Review Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Anthropology of East Europe Review Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Anthropology of East Europe Review Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Anthropology of East Europe Review Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Anthropology of East Europe Review Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Anthropology of East Europe Review Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Anthropology of East Europe Review Volume 25 ; 25 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Anthropology of East Europe Review Volume 26 ; 26 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; Anthropology of East Europe Review Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 ; >
       au < finished ; manifest ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 ; >
@@ -168,7 +168,7 @@
       param[journal_id] = digest
       #Still in publication 2021
 
-      au < crawling ; exists ; 2019 ; 2019 ; Digest: A Journal of Foodways and Culture Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Digest: A Journal of Foodways and Culture Volume 7 ; 7 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Digest: A Journal of Foodways and Culture Volume 8 ; 8 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Digest: A Journal of Foodways and Culture Volume 9 ; 9 ; >
 
@@ -210,7 +210,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Hindsight: Journal of Optemetry History Volume 48 ; 48 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Hindsight: Journal of Optemetry History Volume 49 ; 49 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2019 ; 2019 ; Hindsight: Journal of Optemetry History Volume 50 ; 50 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; >
       au < expected ; exists ; 2021 ; 2021 ; Hindsight: Journal of Optemetry History Volume 52 ; 52 ; >
 
   }
@@ -233,9 +233,9 @@
       au < manifest ; exists ; 2002 ; 2002 ; Hindsight: newsletter of the Optometric Historical Society Volume 33 ; 33 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Hindsight: newsletter of the Optometric Historical Society Volume 34 ; 34 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Hindsight: newsletter of the Optometric Historical Society Volume 35 ; 35 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Hindsight: newsletter of the Optometric Historical Society Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Hindsight: newsletter of the Optometric Historical Society Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Hindsight: newsletter of the Optometric Historical Society Volume 38 ; 38 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Hindsight: newsletter of the Optometric Historical Society Volume 36 ; 36 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Hindsight: newsletter of the Optometric Historical Society Volume 37 ; 37 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Hindsight: newsletter of the Optometric Historical Society Volume 38 ; 38 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Hindsight: newsletter of the Optometric Historical Society Volume 39 ; 39 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; Hindsight: newsletter of the Optometric Historical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
 
@@ -253,7 +253,7 @@
       au < finished ; manifest ; 2017 ; 2017 ; The Hoosier Science Teacher Volume 40 ; 40 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; The Hoosier Science Teacher Volume 41 ; 41 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2019 ; 2019 ; The Hoosier Science Teacher Volume 42 ; 42 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
       au < expected ; exists ; 2021 ; 2021 ; The Hoosier Science Teacher Volume 44 ; 44 ; >
 
   }
@@ -315,7 +315,7 @@
       param[journal_id] = ried
       # no issue in 2011
 
-      au < crawling ; exists ; 2007 ; 2007 ; Inter-American Journal of Education for Democracy Volume 1 (2007) ; 1 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Inter-American Journal of Education for Democracy Volume 1 (2007) ; 1 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Inter-American Journal of Education for Democracy Volume 1 (2008) ; 1 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
@@ -342,7 +342,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; International Journal of Designs for Learning Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; International Journal of Designs for Learning Volume 8 ; 8 ; >
       au < finished ; manifest ; 2018 ; 2018 ; International Journal of Designs for Learning Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 2019 ; International Journal of Designs for Learning Volume 10 ; 10 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; International Journal of Designs for Learning Volume 10 ; 10 ; >
 
   }
 
@@ -366,9 +366,9 @@
       au < manifest ; exists ; 1999 ; 1999 ; InULA Notes: Indiana University Librarians Association Volume 15 ; 15 ; >
       au < manifest ; exists ; 2000 ; 2000 ; InULA Notes: Indiana University Librarians Association Volume 16 ; 16 ; >
       au < manifest ; exists ; 2003 ; 2003 ; InULA Notes: Indiana University Librarians Association Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; InULA Notes: Indiana University Librarians Association Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; InULA Notes: Indiana University Librarians Association Volume 19 (2006) ; 19 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; InULA Notes: Indiana University Librarians Association Volume 19-20 (2007) ; 19-20 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; InULA Notes: Indiana University Librarians Association Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; InULA Notes: Indiana University Librarians Association Volume 19 (2006) ; 19 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; InULA Notes: Indiana University Librarians Association Volume 19-20 (2007) ; 19-20 ; >
       au < finished ; manifest ; 2008 ; 2008 ; InULA Notes: Indiana University Librarians Association Volume 20-21 (2008) ; 20-21 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; 2009 ; InULA Notes: Indiana University Librarians Association Volume 21 (2009) ; 21 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 ; reingest4.clockss.org:8082 >
@@ -380,8 +380,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; InULA Notes: Indiana University Librarians Association Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; InULA Notes: Indiana University Librarians Association Volume 29 ; 29 ; >
       au < finished ; manifest ; 2018 ; 2018 ; InULA Notes: Indiana University Librarians Association Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; 2019 ; InULA Notes: Indiana University Librarians Association Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; InULA Notes: Indiana University Librarians Association Volume 32 ; 32 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; InULA Notes: Indiana University Librarians Association Volume 31 ; 31 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; InULA Notes: Indiana University Librarians Association Volume 32 ; 32 ; >
       au < crawling ; exists ; 2021 ; 2021 ; InULA Notes: Indiana University Librarians Association Volume 33 ; 33 ; >
 
   }
@@ -400,7 +400,7 @@
       au < finished ; manifest ; 2015 ; 2015 ; IUSB Undergraduate Research Journal of History Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; 2016 ; IUSB Undergraduate Research Journal of History Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; IUSB Undergraduate Research Journal of History Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; IUSB Undergraduate Research Journal of History Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; IUSB Undergraduate Research Journal of History Volume 8 ; 8 ; >
 
   }
 
@@ -413,8 +413,8 @@
       param[journal_id] = jedhe
 
       au < finished ; manifest ; 2016 ; 2016 ; Journal of Economic Development in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
       au < expected ; exists ; 2021 ; 2021 ; Journal of Economic Development in Higher Education Volume 4 ; 4 ; >
 
   }
@@ -427,7 +427,7 @@
 
       param[journal_id] = jpea
 
-      au < crawling ; exists ; 2020 ; 2020 ; Journal of Public and Environmental Affairs Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Journal of Public and Environmental Affairs Volume 1 ; 1 ; >
       au < expected ; exists ; 2021 ; 2021 ; Journal of Public and Environmental Affairs Volume 2 ; 2 ; >
 
   }
@@ -460,15 +460,15 @@
       param[journal_id] = jiuspa
       # no issue in 2007-2009
 
-      au < crawling ; exists ; 2006 ; 2006 ; Journal of the Indiana University Student Personnel Association Volume 2006 ; 2006 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Journal of the Indiana University Student Personnel Association Volume 2006 ; 2006 ; >
       au < finished ; manifest ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; Journal of the Indiana University Student Personnel Association Volume 2015 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Journal of the Indiana University Student Personnel Association Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Journal of the Indiana University Student Personnel Association Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Journal of the Indiana University Student Personnel Association Volume 2017 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of the Indiana University Student Personnel Association Volume 2019 ; 2019 ; >
       #no 2020 as of 12/5/2020
 
@@ -486,9 +486,9 @@
       au < manifest ; exists ; 2002 ; 2002 ; Journal of the Scholarship of Teaching and Learning Volume 2 ; 2 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Journal of the Scholarship of Teaching and Learning Volume 3 ; 3 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Journal of the Scholarship of Teaching and Learning Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Journal of the Scholarship of Teaching and Learning Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Journal of the Scholarship of Teaching and Learning Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Journal of the Scholarship of Teaching and Learning Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Journal of the Scholarship of Teaching and Learning Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Journal of the Scholarship of Teaching and Learning Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Journal of the Scholarship of Teaching and Learning Volume 7 ; 7 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Journal of the Scholarship of Teaching and Learning Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 ; reingest5.clockss.org:8082 >
@@ -555,9 +555,9 @@
       au < manifest ; exists ; 2002 ; 2002 ; Liberian Studies Journal Volume 27 ; 27 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Liberian Studies Journal Volume 28 ; 28 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Liberian Studies Journal Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Liberian Studies Journal Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Liberian Studies Journal Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Liberian Studies Journal Volume 32 ; 32 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Liberian Studies Journal Volume 30 ; 30 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Liberian Studies Journal Volume 31 ; 31 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Liberian Studies Journal Volume 32 ; 32 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Liberian Studies Journal Volume 33 ; 33 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 2009 ; Liberian Studies Journal Volume 34 ; 34 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; 2010 ; Liberian Studies Journal Volume 35 ; 35 ; reingest3.clockss.org:8083 >
@@ -572,7 +572,7 @@
 
       param[journal_id] = mar
 
-      au < crawling ; exists ; 2007 ; 2007 ; Museum Anthropology Review Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Museum Anthropology Review Volume 1 ; 1 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Museum Anthropology Review Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; 2009 ; Museum Anthropology Review Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Museum Anthropology Review Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -584,8 +584,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Museum Anthropology Review Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Museum Anthropology Review Volume 11 ; 11 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Museum Anthropology Review Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 2019 ; Museum Anthropology Review Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Museum Anthropology Review Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Museum Anthropology Review Volume 13 ; 13 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; Museum Anthropology Review Volume 14 ; 14 ; >
       au < expected ; exists ; 2021 ; 2021 ; Museum Anthropology Review Volume 15 ; 15 ; >
 
   }
@@ -633,7 +633,7 @@
       au < finished ; manifest ; 2016 ; 2016 ; New Views on Gender Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; 2017 ; New Views on Gender Volume 18 [2017] ; 18 ; >
       au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; New Views on Gender Volume 18 [2018] ; 18 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; New Views on Gender Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; New Views on Gender Volume 19 ; 19 ; >
 
   }
 
@@ -673,9 +673,9 @@
       au < manifest ; exists ; 1997 ; 1997 ; Olifant Volume 21 ; 21 ; >
       
       au < manifest ; exists ; 2003 ; 2003 ; Olifant Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; Olifant Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Olifant Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Olifant Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; Olifant Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Olifant Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Olifant Volume 25 ; 25 ; >
       
       au < finished ; manifest ; 2010 ; 2010 ; Olifant Volume 26 (2010) ; 26 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; 2011 ; Olifant Volume 26 (2011) ; 26 ; reingest5.clockss.org:8082 >
@@ -697,7 +697,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
       au < notReady ; exists ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; >#Not a typo. Really 2018
-      au < crawling ; exists ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; >#Not a typo. Really 2017
+      au < frozen ; exists ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; >#Not a typo. Really 2017
       #no 2020 as of 12/5/2020
 
   }
@@ -716,9 +716,9 @@
       au < finished ; manifest ; 2011 ; 2011 ; The World is Our Home Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 2012 ; The World is Our Home Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The World is Our Home Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; The World is Our Home Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; The World is Our Home Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; The World is Our Home Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; The World is Our Home Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; The World is Our Home Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; The World is Our Home Volume 8 ; 8 ; >
 
   }
 
@@ -831,9 +831,9 @@
       au < manifest ; exists ; 2002 ; 2002 ; Indiana Magazine of History Volume 2002 ; 98 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Indiana Magazine of History Volume 2003 ; 99 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Indiana Magazine of History Volume 2004 ; 100 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; Indiana Magazine of History Volume 2005 ; 101 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Indiana Magazine of History Volume 2006 ; 102 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; Indiana Magazine of History Volume 2007 ; 103 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Indiana Magazine of History Volume 2005 ; 101 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Indiana Magazine of History Volume 2006 ; 102 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Indiana Magazine of History Volume 2007 ; 103 ; >
       au < finished ; manifest ; 2008 ; 2008 ; Indiana Magazine of History Volume 2008 ; 104 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; 2009 ; Indiana Magazine of History Volume 2009 ; 105 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; 2010 ; Indiana Magazine of History Volume 2010 ; 106 ; reingest5.clockss.org:8082 >
@@ -881,7 +881,7 @@
          au < manifest ; exists ; 2001 ; 2001 ; IU South Bend Undergraduate Research Journal Volume 2001 ; 4 ; >
          au < manifest ; exists ; 2002 ; 2002 ; IU South Bend Undergraduate Research Journal Volume 2002 ; 5 ; >
          au < manifest ; exists ; 2003 ; 2003 ; IU South Bend Undergraduate Research Journal Volume 2003 ; 6 ; >
-         au < crawling ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
+         au < frozen ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
          au < frozen ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
          au < frozen ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
          au < frozen ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
@@ -890,7 +890,7 @@
          au < frozen ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
          au < frozen ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
          au < frozen ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
-         au < crawling ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
+         au < frozen ; exists ; 2018 ; 2018 ; IU South Bend Undergraduate Research Journal Volume 2018 ; 18 ; >
          au < frozen ; exists ; 2019 ; 2019 ; IU South Bend Undergraduate Research Journal Volume 2019 ; 19 ; >
          au < expected ; exists ; 2020 ; 2020 ; IU South Bend Undergraduate Research Journal Volume 2020 ; 20 ; >
          au < expected ; exists ; 2021 ; 2021 ; IU South Bend Undergraduate Research Journal Volume 2021 ; 21 ; >
@@ -910,7 +910,7 @@
          au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indiana University Undergraduate Research Journal Volume 2016 ; 2 ; >
          au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Indiana University Undergraduate Research Journal Volume 2017 ; 3 ; >
          au < frozen ; exists ; 2018 ; 2018 ; Indiana University Undergraduate Research Journal Volume 2018 ; 4 ; >
-         au < crawling ; exists ; 2019 ; 2019 ; Indiana University Undergraduate Research Journal Volume 2019 ; 5 ; >
+         au < frozen ; exists ; 2019 ; 2019 ; Indiana University Undergraduate Research Journal Volume 2019 ; 5 ; >
       }
   }
 
@@ -950,7 +950,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Medieval Review Volume 2017 ; 25 ; >
       au < finished ; manifest ; 2018 ; 2018 ; The Medieval Review Volume 2018 ; 26 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
       au < manifest ; exists ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; >
 
   }
@@ -971,7 +971,7 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Physical Disabilities: Education and Related Services Volume 2016 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Physical Disabilities: Education and Related Services Volume 2017 ; 36 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Physical Disabilities: Education and Related Services Volume 2018 ; 37 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; 2019 ; Physical Disabilities: Education and Related Services Volume 2019 ; 38 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Physical Disabilities: Education and Related Services Volume 2019 ; 38 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2020 ; 39 ; >
       au < expected ; exists ; 2021 ; 2021 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2021 ; 40 ; >
 
@@ -1009,8 +1009,8 @@
 
       param[journal_id] = ssj
 
-      au < crawling ; exists ; 2006 ; 2006 ; South Shore Journal Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; South Shore Journal Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; South Shore Journal Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; South Shore Journal Volume 2 ; 2 ; >
       au < finished ; manifest ; 2009 ; 2009 ; South Shore Journal Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2011 ; 2011 ; South Shore Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2013 ; 2013 ; South Shore Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
@@ -1029,7 +1029,7 @@
       au < notReady ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
       au < finished ; manifest ; 2018 ; 2018 ; Studies in Digital Heritage Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
       au < expected ; exists ; 2021 ; 2021 ; Studies in Digital Heritage Volume 5 ; 5 ; >
 
   }
@@ -1079,7 +1079,7 @@
 
       param[journal_id] = lad
 
-      au < crawling ; exists ; 2006 ; 2006 ; The Undergraduate Journal of Law & Disorder Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; The Undergraduate Journal of Law & Disorder Volume 1 ; 1 ; >
 
       au < finished ; manifest ; 2015 ; 2015 ; The Undergraduate Journal of Law & Disorder Volume 5 ; 5 ; reingest5.clockss.org:8082 >
 
@@ -1095,7 +1095,7 @@
       param[journal_id] = jaa
 
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Academic Advising Volume 2018 ; 1 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
       au < expected ; exists ; 2021 ; 2021 ; Journal of Academic Advising Volume 2021 ; 3 ; >
 
   }
@@ -1112,7 +1112,7 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1-2 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
       au < expected ; exists ; 2021 ; 2021 ; Global Engagement and Transformation Volume 2021 ; 5 ; >
 
   }
@@ -1127,12 +1127,12 @@
       param[journal_id] = risky
       #Still published 2021
 
-      au < crawling ; exists ; 2013 ; 2013 ; The Risky Academy  Volume 2013 ; 1 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; The Risky Academy  Volume 2013 ; 1 ; >
       au < frozen ; exists ; 2014 ; 2014 ; The Risky Academy  Volume 2014 ; 2 ; >
       au < frozen ; exists ; 2015 ; 2015 ; The Risky Academy  Volume 2015 ; 3 ; >
       au < frozen ; exists ; 2016 ; 2016 ; The Risky Academy  Volume 2016 ; 4 ; >
       au < frozen ; exists ; 2017 ; 2017 ; The Risky Academy  Volume 2017 ; 5 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
       au < frozen ; exists ; 2019 ; 2019 ; The Risky Academy  Volume 2019 ; 7 ; >
       au < expected ; exists ; 2020 ; 2020 ; The Risky Academy  Volume 2020 ; 8 ; >
       au < expected ; exists ; 2021 ; 2021 ; The Risky Academy  Volume 2021 ; 9 ; >
@@ -1149,8 +1149,8 @@
       param[journal_id] = gjte
       #Still in publication 2021
 
-      au < crawling ; exists ; 2019 ; 2019 ; Global Journal of Transformative Education Volume 2018 ; 1 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Global Journal of Transformative Education Volume 2020 ; 2 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Global Journal of Transformative Education Volume 2018 ; 1 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Global Journal of Transformative Education Volume 2020 ; 2 ; >
       au < expected ; exists ; 2021 ; 2021 ; Global Journal of Transformative Education Volume 2021 ; 3 ; >
 
   }
@@ -1164,11 +1164,11 @@
 
       param[journal_id] = IJLCLE
 
-      au < crawling ; exists ; 2012 ; 2012 ; International Journal of Literacy, Culture, and Language Education Volume 2012 ; 1 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; International Journal of Literacy, Culture, and Language Education Volume 2013 ; 2 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; International Journal of Literacy, Culture, and Language Education Volume 2014 ; 3 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; International Journal of Literacy, Culture, and Language Education Volume 2015 ; 4 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; International Journal of Literacy, Culture, and Language Education Volume 2017 ; 5 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; International Journal of Literacy, Culture, and Language Education Volume 2012 ; 1 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; International Journal of Literacy, Culture, and Language Education Volume 2013 ; 2 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; International Journal of Literacy, Culture, and Language Education Volume 2014 ; 3 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; International Journal of Literacy, Culture, and Language Education Volume 2015 ; 4 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; International Journal of Literacy, Culture, and Language Education Volume 2017 ; 5 ; >
 
   }
 
@@ -1184,22 +1184,22 @@
       au < manifest ; exists ; 2002 ; 2002 ; IULC Working Papers  Volume 2002 ; 1 ; >
       au < manifest ; exists ; 2003 ; 2003 ; IULC Working Papers  Volume 2003 ; 2 ; >
       au < crawling ; exists ; 2004 ; 2004 ; IULC Working Papers  Volume 2004 ; 3 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; IULC Working Papers  Volume 2005 ; 4 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; IULC Working Papers  Volume 2006 ; 5 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; IULC Working Papers  Volume 2007 ; 6 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; IULC Working Papers  Volume 2008 ; 7 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; IULC Working Papers  Volume 2005 ; 4 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; IULC Working Papers  Volume 2006 ; 5 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; IULC Working Papers  Volume 2007 ; 6 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; IULC Working Papers  Volume 2008 ; 7 ; >
       au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; IULC Working Papers  Volume 2009 ; 8 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; IULC Working Papers  Volume 2010 ; 9 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; IULC Working Papers  Volume 2011 ; 10 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; IULC Working Papers  Volume 2012 ; 11 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; IULC Working Papers  Volume 2013 ; 12 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; IULC Working Papers  Volume 2014 ; 13 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; IULC Working Papers  Volume 2015 ; 14 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; IULC Working Papers  Volume 2016 ; 15 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; IULC Working Papers  Volume 2017 ; 16 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; IULC Working Papers  Volume 2018 ; 17 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; IULC Working Papers  Volume 2019 ; 18 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; IULC Working Papers  Volume 2020 ; 19 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; IULC Working Papers  Volume 2010 ; 9 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; IULC Working Papers  Volume 2011 ; 10 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; IULC Working Papers  Volume 2012 ; 11 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; IULC Working Papers  Volume 2013 ; 12 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; IULC Working Papers  Volume 2014 ; 13 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; IULC Working Papers  Volume 2015 ; 14 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; IULC Working Papers  Volume 2016 ; 15 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; IULC Working Papers  Volume 2017 ; 16 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; IULC Working Papers  Volume 2018 ; 17 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; IULC Working Papers  Volume 2019 ; 18 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; IULC Working Papers  Volume 2020 ; 19 ; >
       au < crawling ; exists ; 2021 ; 2021 ; IULC Working Papers  Volume 2021 ; 20 ; >
 
   }
@@ -1214,7 +1214,7 @@
       param[journal_id] = iwpsalc
 
       au < frozen ; exists ; 2019 ; 2019 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2019 ; 1 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; >
       au < expected ; exists ; 2021 ; 2021 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2021 ; 3 ; >
 
   }
@@ -1228,7 +1228,7 @@
       param[journal_id] = iwpssa
       #no issn/eissn
 
-      au < crawling ; exists ; 2020 ; 2020 ; Indiana Working Papers in Speech Sound Articulation Volume 2020 ; 1 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Indiana Working Papers in Speech Sound Articulation Volume 2020 ; 1 ; >
       au < expected ; exists ; 2021 ; 2021 ; Indiana Working Papers in Speech Sound Articulation Volume 2021 ; 2 ; >
 
   }
@@ -1243,20 +1243,20 @@
       param[journal_id] = do
       #Still in publication 2021
 
-      au < crawling ; exists ; 2007 ; 2007 ; Developmental Observer Volume 2007 ; 1 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Developmental Observer Volume 2008 ; 2 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Developmental Observer Volume 2009 ; 3 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; Developmental Observer Volume 2010 ; 4 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Developmental Observer Volume 2011 ; 5 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; Developmental Observer Volume 2012 ; 5 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; Developmental Observer Volume 2013 ; 6 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; Developmental Observer Volume 2014 ; 7 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Developmental Observer Volume 2015 ; 8 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Developmental Observer Volume 2016 ; 9 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Developmental Observer Volume 2017 ; 10 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Developmental Observer Volume 2018 ; 11 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Developmental Observer Volume 2019 ; 12 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Developmental Observer Volume 2020 ; 13 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Developmental Observer Volume 2007 ; 1 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; Developmental Observer Volume 2008 ; 2 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; Developmental Observer Volume 2009 ; 3 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; Developmental Observer Volume 2010 ; 4 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Developmental Observer Volume 2011 ; 5 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; Developmental Observer Volume 2012 ; 5 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; Developmental Observer Volume 2013 ; 6 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; Developmental Observer Volume 2014 ; 7 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; Developmental Observer Volume 2015 ; 8 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Developmental Observer Volume 2016 ; 9 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Developmental Observer Volume 2017 ; 10 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Developmental Observer Volume 2018 ; 11 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Developmental Observer Volume 2019 ; 12 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Developmental Observer Volume 2020 ; 13 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Developmental Observer Volume 2021 ; 14 ; >
 
   }
@@ -1303,8 +1303,8 @@
       au < doesNotExist ; doesNotExist ; 2016 ; 2016 ; Indiana Journal of Earth Sciences Volume 2016 ; 8 ; >
       au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; Indiana Journal of Earth Sciences Volume 2017 ; 9 ; >
       au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; Indiana Journal of Earth Sciences Volume 2018 ; 10 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Indiana Journal of Earth Sciences Volume 2019 ; 11 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Indiana Journal of Earth Sciences Volume 2020 ; 12 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Indiana Journal of Earth Sciences Volume 2019 ; 11 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Indiana Journal of Earth Sciences Volume 2020 ; 12 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Indiana Journal of Earth Sciences Volume 2021 ; 13 ; >
 
   }
@@ -1318,21 +1318,21 @@
 
       param[journal_id] = ijpbl
 
-      au < crawling ; exists ; 2006 ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 2006 ; 1 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 2006 ; 1 ; >
       au < doesNotExist ; doesNotExist ; 2007 ; 2007 ; Interdisciplinary Journal of Problem-Based Learning Volume 2007 ; 2 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Interdisciplinary Journal of Problem-Based Learning Volume 2008 ; 3 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 2009 ; 4 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; Interdisciplinary Journal of Problem-Based Learning Volume 2008 ; 3 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 2009 ; 4 ; >
       au < frozen ; exists ; 2010 ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 2010 ; 5 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 2011 ; 6 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 2012 ; 7 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 2013 ; 8 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 2014 ; 9 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 2015 ; 10 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 2016 ; 11 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 2017 ; 12 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 2011 ; 6 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 2012 ; 7 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 2013 ; 8 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 2014 ; 9 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 2015 ; 10 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 2016 ; 11 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Interdisciplinary Journal of Problem-Based Learning Volume 2017 ; 12 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Interdisciplinary Journal of Problem-Based Learning Volume 2018 ; 13 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 2019 ; 14 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 2020 ; 15 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 2020 ; 15 ; >
       au < expected ; exists ; 2021 ; 2021 ; Interdisciplinary Journal of Problem-Based Learning Volume 2021 ; 16 ; >
 
   }
@@ -1369,9 +1369,9 @@
       au < manifest ; exists ; 2002 ; 2002 ; ReSOUND Volume 2002 ; 21 ; >
       au < manifest ; exists ; 2003 ; 2003 ; ReSOUND Volume 2003 ; 22 ; >
       au < crawling ; exists ; 2004 ; 2004 ; ReSOUND Volume 2004 ; 23 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; ReSOUND Volume 2005 ; 24 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; ReSOUND Volume 2006 ; 25 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; ReSOUND Volume 2007 ; 26 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; ReSOUND Volume 2005 ; 24 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; ReSOUND Volume 2006 ; 25 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; ReSOUND Volume 2007 ; 26 ; >
 
   }
 
@@ -1388,7 +1388,7 @@
       au < notReady ; exists ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; > #no metadata
       au < notReady ; exists ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; > #no metadata
       au < notReady ; exists ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; > #no metadata
-      au < crawling ; exists ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; >
 
   }
 

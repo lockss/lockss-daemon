@@ -24,15 +24,15 @@
 
       au < manifest ; exists ; 2009 ; 2009 ; Journal of Privacy and Confidentiality Volume 1 ; 1 ; >
       au < finished ; manifest ; 2010 ; 2010 ; Journal of Privacy and Confidentiality Volume 1-2 ; 1-2 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2011 ; 2011 ; Journal of Privacy and Confidentiality Volume 2-3 ; 2-3 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; Journal of Privacy and Confidentiality Volume 2-3 ; 2-3 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Journal of Privacy and Confidentiality Volume 4 No 1 ; 4 ; >
       au < finished ; manifest ; 2013 ; 2013 ; Journal of Privacy and Confidentiality Volume 4-5 ; 4-5 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2014 ; 2014 ; Journal of Privacy and Confidentiality Volume 5-6 ; 5-6 ; >
       au < finished ; manifest ; 2015 ; 2015 ; Journal of Privacy and Confidentiality Volume Vol 7 No 1 ; 7 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; 2016 ; Journal of Privacy and Confidentiality Volume Vol 7 No 2-3 ; 7 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; Journal of Privacy and Confidentiality Volume Vol 7 No 2-3 ; 7 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Journal of Privacy and Confidentiality Volume Vol 8 ; 8 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Privacy and Confidentiality Volume Vol 9 ; 9 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Journal of Privacy and Confidentiality Volume Vol 10 ; 10 ; >
+      au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Privacy and Confidentiality Volume Vol 10 ; 10 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Journal of Privacy and Confidentiality Volume Vol 11 ; 11 ; >
 
   }

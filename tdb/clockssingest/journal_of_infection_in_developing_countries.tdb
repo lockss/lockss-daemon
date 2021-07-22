@@ -24,7 +24,7 @@
       param[journal_id] = journal
 
       au < frozen ; exists ; 2007 ; Journal of Infection in Developing Countries Volume 1 ; 1 ; 2007 ; >
-      au < crawling ; exists ; 2008 ; Journal of Infection in Developing Countries Volume 2 ; 2 ; 2008 ; >
+      au < frozen ; exists ; 2008 ; Journal of Infection in Developing Countries Volume 2 ; 2 ; 2008 ; >
       au < finished ; manifest ; 2009 ; Journal of Infection in Developing Countries Volume 3 ; 3 ; 2009 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Journal of Infection in Developing Countries Volume 4 ; 4 ; 2010 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Journal of Infection in Developing Countries Volume 5 ; 5 ; 2011 ; reingest2.clockss.org:8085 >
@@ -36,7 +36,7 @@
       au < finished ; manifest ; 2017 ; Journal of Infection in Developing Countries Volume 11 ; 11 ; 2017 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Journal of Infection in Developing Countries Volume 12 ; 12 ; 2018 ; >
       au < deepCrawl ; exists ; 2019 ; Journal of Infection in Developing Countries Volume 13 ; 13 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Journal of Infection in Developing Countries Volume 14 ; 14 ; 2020 ; >
+      au < deepCrawl ; exists ; 2020 ; Journal of Infection in Developing Countries Volume 14 ; 14 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal of Infection in Developing Countries Volume 15 ; 15 ; 2021 ; >
 
     }
