@@ -58,15 +58,15 @@ import zeep.helpers
 import zeep.transports
 import zeep.exceptions
 
-from wsutil import requests_basic_auth, file_lines
+from wsutil import file_lines
 
 def request_deep_crawl_by_id(host, username, password, auid, refetch_depth, priority, force):
-    client = _make_client(host, requests_basic_auth(username, password))
+    client = _make_client(host, username, password)
     return zeep.helpers.serialize_object(
         client.service.requestDeepCrawlById(auId=auid, refetchDepth=refetch_depth, priority=priority, force=force))
 
 def request_deep_crawl_by_id_list(host, username, password, auids, refetch_depth, priority, force):
-    client = _make_client(host, requests_basic_auth(username, password))
+    client = _make_client(host, username, password)
     return client.service.requestDeepCrawlByIdList(auIds=auids, refetchDepth=refetch_depth, priority=priority, force=force)
 
 def _do_request_deep_crawl_by_id(options):
@@ -78,12 +78,12 @@ def _do_request_deep_crawl_by_id_list(options):
                                          options.refetch_depth, options.priority, options.force)
 
 def request_crawl_by_id(host, username, password, auid, priority, force):
-    client = _make_client(host, requests_basic_auth(username, password))
+    client = _make_client(host, username, password)
     return zeep.helpers.serialize_object(
         client.service.requestCrawlById(auId=auid, priority=priority, force=force))
 
 def request_crawl_by_id_list(host, username, password, auids, priority, force):
-    client = _make_client(host, requests_basic_auth(username, password))
+    client = _make_client(host, username, password)
     return client.service.requestCrawlByIdList(auIds=auids, priority=priority, force=force)
 
 def _do_request_crawl_by_id(options):
@@ -153,9 +153,9 @@ def _dispatch(options):
         raise RuntimeError('Unreachable')
 
 
-def _make_client(host, auth):
+def _make_client(host, username, password):
     session = requests.Session()
-    session.auth = auth
+    session.auth = requests.auth.HTTPBasicAuth(username, password)
     transport = zeep.transports.Transport(session=session)
     wsdl = 'http://{}/ws/AuControlService?wsdl'.format(host)
     client = zeep.Client(wsdl, transport=transport)
