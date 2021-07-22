@@ -40,8 +40,8 @@
       au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; PDA Journal of Pharmaceutical Science and Technology Volume 70 ; 70 ; http://journal.pda.org/ ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2017 ; PDA Journal of Pharmaceutical Science and Technology Volume 71 ; 71 ; http://journal.pda.org/ ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2018 ; PDA Journal of Pharmaceutical Science and Technology Volume 72 ; 72 ; http://journal.pda.org/ ; reingest4.clockss.org:8082 >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 2019 ; PDA Journal of Pharmaceutical Science and Technology Volume 73 ; 73 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 2020 ; PDA Journal of Pharmaceutical Science and Technology Volume 74 ; 74 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 2019 ; PDA Journal of Pharmaceutical Science and Technology Volume 73 ; 73 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 2020 ; PDA Journal of Pharmaceutical Science and Technology Volume 74 ; 74 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; manifest ; exists ; 2021 ; PDA Journal of Pharmaceutical Science and Technology Volume 75 ; 75 ; https://journal.pda.org/ ; >
 
   }

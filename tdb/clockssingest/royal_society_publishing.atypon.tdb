@@ -27,15 +27,15 @@
     {
     param[journal_id] = rsbm1932
     
-    au < crawling ; exists ; 1932-1935 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1932-1935] ; 1 ; >
-    au < crawling ; exists ; 1936-1939 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1936-1939] ; 2 ; >
-    au < crawling ; exists ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 ; >
-    au < crawling ; exists ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 ; >
-    au < crawling ; exists ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 ; >
-    au < crawling ; exists ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 ; >
-    au < crawling ; exists ; 1950-1951 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 [1950-1951] ; 7 ; >
-    au < crawling ; exists ; 1952-1953 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 [1952-1953] ; 8 ; >
-    au < crawling ; exists ; 1954 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1954] ; 9 ; >
+    au < frozen ; exists ; 1932-1935 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1932-1935] ; 1 ; >
+    au < frozen ; exists ; 1936-1939 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1936-1939] ; 2 ; >
+    au < frozen ; exists ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 ; >
+    au < frozen ; exists ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 ; >
+    au < frozen ; exists ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 ; >
+    au < frozen ; exists ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 ; >
+    au < frozen ; exists ; 1950-1951 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 [1950-1951] ; 7 ; >
+    au < frozen ; exists ; 1952-1953 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 [1952-1953] ; 8 ; >
+    au < frozen ; exists ; 1954 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1954] ; 9 ; >
     }
     {
     param[journal_id] = rsbm
@@ -108,8 +108,8 @@
     au < finished ; manifest ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66-67 [superseded] ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 ; >
-    au < crawling ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 ; >
+    au < deepCrawl ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 ; >
+    au < deepCrawl ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 ; >
     au < crawling ; exists ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 70 ; 70 ; >
     au < expected ; exists ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 71 ; 71 ; >
     }
@@ -142,7 +142,7 @@
     au < finished ; finished ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Biology Letters Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Biology Letters Volume 15 [superseded] ; 2019 ; >
-    au < crawling ; exists ; 2020 ; Biology Letters Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2020 ; Biology Letters Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; Biology Letters Volume 17 ; 17 ; >
 
   }
@@ -171,7 +171,7 @@
     au < finished ; finished ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Interface Focus Volume 9 [superseded] ; 2019 ; >
     au < finished ; manifest ; 2019 ; Interface Focus Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Interface Focus Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2020 ; Interface Focus Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; Interface Focus Volume 11 ; 11 ; >
 
   }
@@ -204,7 +204,7 @@
     au < finished ; finished ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 [superseded] ; 2019 ; >
     au < finished ; manifest ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Journal of the Royal Society Interface Volume 18 ; 18 ; >
 
   }
@@ -232,14 +232,14 @@
     au < doNotProcess ; doNotProcess ; 1950-1951 ; Notes and Records of the Royal Society Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1951-1952 ; Notes and Records of the Royal Society Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 1952-1953 ; Notes and Records of the Royal Society Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1954-1955 ; Notes and Records of the Royal Society Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1954-1955 ; Notes and Records of the Royal Society Volume 11 ; 11 ; >
     au < frozen ; exists ; 1956-1957 ; Notes and Records of the Royal Society Volume 12 ; 12 ; >
     au < frozen ; exists ; 1958 ; Notes and Records of the Royal Society Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1959 ; Notes and Records of the Royal Society Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1960 ; Notes and Records of the Royal Society Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1961 ; Notes and Records of the Royal Society Volume 16 ; 16 ; >
-    au < crawling ; exists ; 1962 ; Notes and Records of the Royal Society Volume 17 ; 17 ; >
-    au < crawling ; exists ; 1963 ; Notes and Records of the Royal Society Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1959 ; Notes and Records of the Royal Society Volume 14 ; 14 ; >
+    au < frozen ; exists ; 1960 ; Notes and Records of the Royal Society Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1961 ; Notes and Records of the Royal Society Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1962 ; Notes and Records of the Royal Society Volume 17 ; 17 ; >
+    au < frozen ; exists ; 1963 ; Notes and Records of the Royal Society Volume 18 ; 18 ; >
     au < crawling ; exists ; 1964 ; Notes and Records of the Royal Society Volume 19 ; 19 ; >
     au < frozen ; exists ; 1965 ; Notes and Records of the Royal Society Volume 20 ; 20 ; >
     au < crawling ; exists ; 1966 ; Notes and Records of the Royal Society Volume 21 ; 21 ; >
