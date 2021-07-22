@@ -2900,8 +2900,8 @@
     au < manifest ; exists ; 2008 ; foresight Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; foresight Volume 11 ; 11 ; >
     au < crawling ; exists ; 2010 ; foresight Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2011 ; foresight Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2012 ; foresight Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2011 ; foresight Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2012 ; foresight Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; foresight Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; foresight Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; foresight Volume 17 ; 17 ; >
@@ -2909,7 +2909,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; foresight Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; foresight Volume 20 ; 20 ; >
     au < frozen ; exists ; 2019 ; foresight Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2020 ; foresight Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2020 ; foresight Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; foresight Volume 23 ; 23 ; >
 
   }
@@ -2928,9 +2928,9 @@
 
     au < manifest ; exists ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 ; >
     au < manifest ; exists ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Gender in Management: An International Journal Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2012 ; Gender in Management: An International Journal Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2012 ; Gender in Management: An International Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Gender in Management: An International Journal Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Gender in Management: An International Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Gender in Management: An International Journal Volume 30 ; 30 ; >
@@ -2938,7 +2938,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Gender in Management: An International Journal Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Gender in Management: An International Journal Volume 33 ; 33 ; >
     au < frozen ; exists ; 2019 ; Gender in Management: An International Journal Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2020 ; Gender in Management: An International Journal Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2020 ; Gender in Management: An International Journal Volume 35 ; 35 ; >
     au < crawling ; exists ; 2021 ; Gender in Management: An International Journal Volume 36 ; 36 ; >
 
   }
@@ -2953,16 +2953,16 @@
     param[journal_issn] = 2043-9377
     comment[journal_id] = gs
 
-    au < crawling ; exists ; 2011 ; Grey Systems: Theory and Application Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; Grey Systems: Theory and Application Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2013 ; Grey Systems: Theory and Application Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; Grey Systems: Theory and Application Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2012 ; Grey Systems: Theory and Application Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; Grey Systems: Theory and Application Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Grey Systems: Theory and Application Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Grey Systems: Theory and Application Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Grey Systems: Theory and Application Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Grey Systems: Theory and Application Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Grey Systems: Theory and Application Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Grey Systems: Theory and Application Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2020 ; Grey Systems: Theory and Application Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2020 ; Grey Systems: Theory and Application Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; Grey Systems: Theory and Application Volume 11 ; 11 ; >
 
   }
@@ -3019,16 +3019,16 @@
     au < manifest ; exists ; 2008 ; Health Education Volume 108 ; 108 ; >
     au < manifest ; exists ; 2009 ; Health Education Volume 109 ; 109 ; >
     au < finished ; manifest ; 2010 ; Health Education Volume 110 ; 110 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2011 ; Health Education Volume 111 ; 111 ; >
-    au < crawling ; exists ; 2012 ; Health Education Volume 112 ; 112 ; >
-    au < crawling ; exists ; 2013 ; Health Education Volume 113 ; 113 ; >
+    au < frozen ; exists ; 2011 ; Health Education Volume 111 ; 111 ; >
+    au < frozen ; exists ; 2012 ; Health Education Volume 112 ; 112 ; >
+    au < frozen ; exists ; 2013 ; Health Education Volume 113 ; 113 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Health Education Volume 114 ; 114 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Health Education Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Health Education Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Health Education Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Health Education Volume 118 ; 118 ; >
-    au < crawling ; exists ; 2019 ; Health Education Volume 119 ; 119 ; >
-    au < crawling ; exists ; 2020 ; Health Education Volume 120 ; 120 ; >
+    au < frozen ; exists ; 2019 ; Health Education Volume 119 ; 119 ; >
+    au < deepCrawl ; exists ; 2020 ; Health Education Volume 120 ; 120 ; >
     au < crawling ; exists ; 2021 ; Health Education Volume 121 ; 121 ; >
 
   }
@@ -3066,16 +3066,16 @@
     param[journal_issn] = 2042-3896
     comment[journal_id] = heswbl
 
-    au < crawling ; exists ; 2011 ; Higher Education, Skills and Work-based Learning Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; Higher Education, Skills and Work-based Learning Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2013 ; Higher Education, Skills and Work-based Learning Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; Higher Education, Skills and Work-based Learning Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2012 ; Higher Education, Skills and Work-based Learning Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; Higher Education, Skills and Work-based Learning Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Higher Education, Skills and Work-based Learning Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Higher Education, Skills and Work-based Learning Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Higher Education, Skills and Work-based Learning Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Higher Education, Skills and Work-based Learning Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Higher Education, Skills and Work-based Learning Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Higher Education, Skills and Work-based Learning Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2020 ; Higher Education, Skills and Work-based Learning Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2020 ; Higher Education, Skills and Work-based Learning Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; Higher Education, Skills and Work-based Learning Volume 11 ; 11 ; >
 
   }
@@ -3097,17 +3097,17 @@
     au < manifest ; exists ; 2007 ; History of Education Review Volume 36 ; 36 ; >
     au < manifest ; exists ; 2008 ; History of Education Review Volume 37 ; 37 ; >
     au < manifest ; exists ; 2009 ; History of Education Review Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2010 ; History of Education Review Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2011 ; History of Education Review Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2012 ; History of Education Review Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2013 ; History of Education Review Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2010 ; History of Education Review Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2011 ; History of Education Review Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2012 ; History of Education Review Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2013 ; History of Education Review Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; History of Education Review Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; History of Education Review Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; History of Education Review Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; History of Education Review Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; History of Education Review Volume 47 ; 47 ; >
     au < frozen ; exists ; 2019 ; History of Education Review Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2020 ; History of Education Review Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2020 ; History of Education Review Volume 49 ; 49 ; >
     au < crawling ; exists ; 2021 ; History of Education Review Volume 50 ; 50 ; >
 
   }
@@ -3135,17 +3135,17 @@
     au < manifest ; exists ; 2007 ; Housing, Care and Support: A journal on policy, research and practice Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Housing, Care and Support: A journal on policy, research and practice Volume 11 ; 11 ; >
     au < manifest ; exists ; 2009 ; Housing, Care and Support: A journal on policy, research and practice Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2010 ; Housing, Care and Support: A journal on policy, research and practice Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2011 ; Housing, Care and Support: A journal on policy, research and practice Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2012 ; Housing, Care and Support: A journal on policy, research and practice Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2013 ; Housing, Care and Support: A journal on policy, research and practice Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2010 ; Housing, Care and Support: A journal on policy, research and practice Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2011 ; Housing, Care and Support: A journal on policy, research and practice Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2012 ; Housing, Care and Support: A journal on policy, research and practice Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2013 ; Housing, Care and Support: A journal on policy, research and practice Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Housing, Care and Support: A journal on policy, research and practice Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Housing, Care and Support: A journal on policy, research and practice Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Housing, Care and Support: A journal on policy, research and practice Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Housing, Care and Support: A journal on policy, research and practice Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Housing, Care and Support: A journal on policy, research and practice Volume 21 ; 21 ; >
     au < frozen ; exists ; 2019 ; Housing, Care and Support: A journal on policy, research and practice Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2020 ; Housing, Care and Support: A journal on policy, research and practice Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2020 ; Housing, Care and Support: A journal on policy, research and practice Volume 23 ; 23 ; >
     au < expected ; exists ; 2021 ; Housing, Care and Support: A journal on policy, research and practice Volume 24 ; 24 ; >
 
   }
@@ -3170,17 +3170,17 @@
     au < manifest ; exists ; 2007 ; Human Resource Management International Digest Volume 15 ; 15 ; >
     au < manifest ; exists ; 2008 ; Human Resource Management International Digest Volume 16 ; 16 ; >
     au < manifest ; exists ; 2009 ; Human Resource Management International Digest Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2010 ; Human Resource Management International Digest Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2010 ; Human Resource Management International Digest Volume 18 ; 18 ; >
     au < crawling ; exists ; 2011 ; Human Resource Management International Digest Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; Human Resource Management International Digest Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2013 ; Human Resource Management International Digest Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2013 ; Human Resource Management International Digest Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Human Resource Management International Digest Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Human Resource Management International Digest Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Human Resource Management International Digest Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Human Resource Management International Digest Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Human Resource Management International Digest Volume 26 ; 26 ; >
     au < frozen ; exists ; 2019 ; Human Resource Management International Digest Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2020 ; Human Resource Management International Digest Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2020 ; Human Resource Management International Digest Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; Human Resource Management International Digest Volume 29 ; 29 ; >
 
   }
@@ -3219,10 +3219,10 @@
     au < manifest ; exists ; 2007 ; Humanomics Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Humanomics Volume 24 ; 24 ; >
     au < manifest ; exists ; 2009 ; Humanomics Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2010 ; Humanomics Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2011 ; Humanomics Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2012 ; Humanomics Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2013 ; Humanomics Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2010 ; Humanomics Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2011 ; Humanomics Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2012 ; Humanomics Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2013 ; Humanomics Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Humanomics Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Humanomics Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Humanomics Volume 32 ; 32 ; >
@@ -3242,7 +3242,7 @@
 
     au < frozen ; exists ; 2018 ; International Journal of Ethics and Systems Volume 34 ; 34 ; >
     au < frozen ; exists ; 2019 ; International Journal of Ethics and Systems Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Ethics and Systems Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Ethics and Systems Volume 36 ; 36 ; >
     au < crawling ; exists ; 2021 ; International Journal of Ethics and Systems Volume 37 ; 37 ; >
 
   }
@@ -3260,16 +3260,16 @@
     au < manifest ; exists ; 2008 ; Indian Growth and Development Review Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; Indian Growth and Development Review Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Indian Growth and Development Review Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; Indian Growth and Development Review Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; Indian Growth and Development Review Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2013 ; Indian Growth and Development Review Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2011 ; Indian Growth and Development Review Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; Indian Growth and Development Review Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Indian Growth and Development Review Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Indian Growth and Development Review Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Indian Growth and Development Review Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Indian Growth and Development Review Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Indian Growth and Development Review Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Indian Growth and Development Review Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2019 ; Indian Growth and Development Review Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2020 ; Indian Growth and Development Review Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2019 ; Indian Growth and Development Review Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2020 ; Indian Growth and Development Review Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; Indian Growth and Development Review Volume 14 ; 14 ; >
 
   }
@@ -3329,15 +3329,15 @@
     au < manifest ; exists ; 2009 ; Industrial and Commercial Training Volume 41 ; 41 ; >
     au < crawling ; exists ; 2010 ; Industrial and Commercial Training Volume 42 ; 42 ; >
     au < crawling ; exists ; 2011 ; Industrial and Commercial Training Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2012 ; Industrial and Commercial Training Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2013 ; Industrial and Commercial Training Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2012 ; Industrial and Commercial Training Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2013 ; Industrial and Commercial Training Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Industrial and Commercial Training Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Industrial and Commercial Training Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Industrial and Commercial Training Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Industrial and Commercial Training Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Industrial and Commercial Training Volume 50 ; 50 ; >
     au < frozen ; exists ; 2019 ; Industrial and Commercial Training Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2020 ; Industrial and Commercial Training Volume 52 ; 52 ; >
+    au < deepCrawl ; exists ; 2020 ; Industrial and Commercial Training Volume 52 ; 52 ; >
     au < crawling ; exists ; 2021 ; Industrial and Commercial Training Volume 53 ; 53 ; >
 
   }
@@ -3415,9 +3415,9 @@
     au < manifest ; exists ; 2007 ; Industrial Lubrication and Tribology Volume 59 ; 59 ; >
     au < manifest ; exists ; 2008 ; Industrial Lubrication and Tribology Volume 60 ; 60 ; >
     au < manifest ; exists ; 2009 ; Industrial Lubrication and Tribology Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2010 ; Industrial Lubrication and Tribology Volume 62 ; 62 ; >
-    au < crawling ; exists ; 2011 ; Industrial Lubrication and Tribology Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2012 ; Industrial Lubrication and Tribology Volume 64 ; 64 ; >
+    au < frozen ; exists ; 2010 ; Industrial Lubrication and Tribology Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2011 ; Industrial Lubrication and Tribology Volume 63 ; 63 ; >
+    au < frozen ; exists ; 2012 ; Industrial Lubrication and Tribology Volume 64 ; 64 ; >
     au < crawling ; exists ; 2013 ; Industrial Lubrication and Tribology Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Industrial Lubrication and Tribology Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Industrial Lubrication and Tribology Volume 67 ; 67 ; >
@@ -3425,7 +3425,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Industrial Lubrication and Tribology Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Industrial Lubrication and Tribology Volume 70 ; 70 ; >
     au < frozen ; exists ; 2019 ; Industrial Lubrication and Tribology Volume 71 ; 71 ; >
-    au < crawling ; exists ; 2020 ; Industrial Lubrication and Tribology Volume 72 ; 72 ; >
+    au < deepCrawl ; exists ; 2020 ; Industrial Lubrication and Tribology Volume 72 ; 72 ; >
     au < crawling ; exists ; 2021 ; Industrial Lubrication and Tribology Volume 73 ; 73 ; >
 
   }
@@ -3483,16 +3483,16 @@
     au < manifest ; exists ; 2008 ; Industrial Management & Data Systems Volume 108 ; 108 ; >
     au < manifest ; exists ; 2009 ; Industrial Management & Data Systems Volume 109 ; 109 ; >
     au < frozen ; exists ; 2010 ; Industrial Management & Data Systems Volume 110 ; 110 ; >
-    au < crawling ; exists ; 2011 ; Industrial Management & Data Systems Volume 111 ; 111 ; >
+    au < frozen ; exists ; 2011 ; Industrial Management & Data Systems Volume 111 ; 111 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Industrial Management & Data Systems Volume 112 ; 112 ; >
-    au < crawling ; exists ; 2013 ; Industrial Management & Data Systems Volume 113 ; 113 ; >
+    au < frozen ; exists ; 2013 ; Industrial Management & Data Systems Volume 113 ; 113 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Industrial Management & Data Systems Volume 114 ; 114 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Industrial Management & Data Systems Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Industrial Management & Data Systems Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Industrial Management & Data Systems Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Industrial Management & Data Systems Volume 118 ; 118 ; >
-    au < crawling ; exists ; 2019 ; Industrial Management & Data Systems Volume 119 ; 119 ; >
-    au < crawling ; exists ; 2020 ; Industrial Management & Data Systems Volume 120 ; 120 ; >
+    au < frozen ; exists ; 2019 ; Industrial Management & Data Systems Volume 119 ; 119 ; >
+    au < deepCrawl ; exists ; 2020 ; Industrial Management & Data Systems Volume 120 ; 120 ; >
     au < crawling ; exists ; 2021 ; Industrial Management & Data Systems Volume 121 ; 121 ; >
 
   }
@@ -3582,10 +3582,10 @@
     au < doNotProcess ; doNotProcess ; 2007 ; info Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; info Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; info Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2010 ; info Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2010 ; info Volume 12 ; 12 ; >
     au < crawling ; exists ; 2011 ; info Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2012 ; info Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2013 ; info Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2012 ; info Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2013 ; info Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; info Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; info Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; info Volume 18 ; 18 ; >
@@ -3606,7 +3606,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Digital Policy, Regulation and Governance Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Digital Policy, Regulation and Governance Volume 20 ; 20 ; >
     au < frozen ; exists ; 2019 ; Digital Policy, Regulation and Governance Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2020 ; Digital Policy, Regulation and Governance Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2020 ; Digital Policy, Regulation and Governance Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; Digital Policy, Regulation and Governance Volume 23 ; 23 ; >
 
   }
@@ -3639,10 +3639,10 @@
     au < manifest ; exists ; 2007 ; Information Management & Computer Security Volume 15 ; 15 ; >
     au < manifest ; exists ; 2008 ; Information Management & Computer Security Volume 16 ; 16 ; >
     au < manifest ; exists ; 2009 ; Information Management & Computer Security Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2010 ; Information Management & Computer Security Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2011 ; Information Management & Computer Security Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2012 ; Information Management & Computer Security Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2013 ; Information Management & Computer Security Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2010 ; Information Management & Computer Security Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2011 ; Information Management & Computer Security Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2012 ; Information Management & Computer Security Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2013 ; Information Management & Computer Security Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Information Management & Computer Security Volume 22 ; 22 ; >
 
   }
@@ -3695,17 +3695,17 @@
     au < manifest ; exists ; 2007 ; Information Technology & People Volume 20 ; 20 ; >
     au < manifest ; exists ; 2008 ; Information Technology & People Volume 21 ; 21 ; >
     au < manifest ; exists ; 2009 ; Information Technology & People Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2010 ; Information Technology & People Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2011 ; Information Technology & People Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2012 ; Information Technology & People Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2013 ; Information Technology & People Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2010 ; Information Technology & People Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2011 ; Information Technology & People Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2012 ; Information Technology & People Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2013 ; Information Technology & People Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Information Technology & People Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Information Technology & People Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Information Technology & People Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Information Technology & People Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Information Technology & People Volume 31 ; 31 ; >
     au < frozen ; exists ; 2019 ; Information Technology & People Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2020 ; Information Technology & People Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2020 ; Information Technology & People Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; Information Technology & People Volume 34 ; 34 ; >
 
   }
@@ -3732,7 +3732,7 @@
     au < manifest ; exists ; 1997 ; Integrated Manufacturing Systems Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; Integrated Manufacturing Systems Volume 9 ; 9 ; >
     au < manifest ; exists ; 1999 ; Integrated Manufacturing Systems Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 ; >
     au < manifest ; exists ; 2001 ; Integrated Manufacturing Systems Volume 12 ; 12 ; >
     au < manifest ; exists ; 2002 ; Integrated Manufacturing Systems Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; Integrated Manufacturing Systems Volume 14 ; 14 ; >
@@ -3757,7 +3757,7 @@
     au < manifest ; exists ; 2008 ; Interactive Technology and Smart Education Volume 5 ; 5 ; >
     au < manifest ; exists ; 2009 ; Interactive Technology and Smart Education Volume 6 ; 6 ; >
     au < crawling ; exists ; 2010 ; Interactive Technology and Smart Education Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Interactive Technology and Smart Education Volume 9 ; 9 ; >
     au < manifest ; exists ; 2013 ; Interactive Technology and Smart Education Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Interactive Technology and Smart Education Volume 11 ; 11 ; >
@@ -3766,7 +3766,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Interactive Technology and Smart Education Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Interactive Technology and Smart Education Volume 15 ; 15 ; >
     au < frozen ; exists ; 2019 ; Interactive Technology and Smart Education Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2020 ; Interactive Technology and Smart Education Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2020 ; Interactive Technology and Smart Education Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Interactive Technology and Smart Education Volume 18 ; 18 ; >
 
   }
@@ -3800,14 +3800,14 @@
     comment[journal_id] = ijlls
 
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal for Lesson and Learning Studies Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; International Journal for Lesson and Learning Studies Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; International Journal for Lesson and Learning Studies Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal for Lesson and Learning Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal for Lesson and Learning Studies Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal for Lesson and Learning Studies Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal for Lesson and Learning Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal for Lesson and Learning Studies Volume 7 ; 7 ; >
     au < frozen ; exists ; 2019 ; International Journal for Lesson and Learning Studies Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2020 ; International Journal for Lesson and Learning Studies Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal for Lesson and Learning Studies Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; International Journal for Lesson and Learning Studies Volume 10 ; 10 ; >
 
   }
@@ -3847,7 +3847,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Studies in Graduate and Postdoctoral Education Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Studies in Graduate and Postdoctoral Education Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Studies in Graduate and Postdoctoral Education Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2020 ; Studies in Graduate and Postdoctoral Education Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; Studies in Graduate and Postdoctoral Education Volume 11 ; 11 ; >
     au < expected ; exists ; 2021 ; Studies in Graduate and Postdoctoral Education Volume 12 ; 12 ; >
 
   }
@@ -3870,14 +3870,14 @@
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Accounting & Information Management Volume 18 ; 18 ; >
     au < crawling ; exists ; 2011 ; International Journal of Accounting & Information Management Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Accounting & Information Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Accounting & Information Management Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Accounting & Information Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Accounting & Information Management Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Accounting & Information Management Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Accounting & Information Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Accounting & Information Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Accounting & Information Management Volume 26 ; 26 ; >
     au < frozen ; exists ; 2019 ; International Journal of Accounting & Information Management Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Accounting & Information Management Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Accounting & Information Management Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; International Journal of Accounting & Information Management Volume 29 ; 29 ; >
 
   }
@@ -3937,17 +3937,17 @@
     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Bank Marketing Volume 25 ; 25 ; >
     au < manifest ; exists ; 2008 ; International Journal of Bank Marketing Volume 26 ; 26 ; >
     au < manifest ; exists ; 2009 ; International Journal of Bank Marketing Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Bank Marketing Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Bank Marketing Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Bank Marketing Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Bank Marketing Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Bank Marketing Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Bank Marketing Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Bank Marketing Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Bank Marketing Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Bank Marketing Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Bank Marketing Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Bank Marketing Volume 36 ; 36 ; >
     au < frozen ; exists ; 2019 ; International Journal of Bank Marketing Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Bank Marketing Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Bank Marketing Volume 38 ; 38 ; >
     au < crawling ; exists ; 2021 ; International Journal of Bank Marketing Volume 39 ; 39 ; >
 
   }
@@ -3987,16 +3987,16 @@
 
     au < manifest ; exists ; 2009 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 ; >
     au < crawling ; exists ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Climate Change Strategies and Management Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Climate Change Strategies and Management Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Climate Change Strategies and Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Climate Change Strategies and Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Climate Change Strategies and Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Climate Change Strategies and Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Climate Change Strategies and Management Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Climate Change Strategies and Management Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Climate Change Strategies and Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; International Journal of Climate Change Strategies and Management Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Climate Change Strategies and Management Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Climate Change Strategies and Management Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; International Journal of Climate Change Strategies and Management Volume 13 ; 13 ; >
 
   }
@@ -4023,7 +4023,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Clothing Science and Technology Volume 9 ; 9 ; >
     au < manifest ; exists ; 1998 ; International Journal of Clothing Science and Technology Volume 10 ; 10 ; >
     au < manifest ; exists ; 1999 ; International Journal of Clothing Science and Technology Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2000 ; International Journal of Clothing Science and Technology Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Clothing Science and Technology Volume 12 ; 12 ; >
     au < manifest ; exists ; 2001 ; International Journal of Clothing Science and Technology Volume 13 ; 13 ; >
     au < manifest ; exists ; 2002 ; International Journal of Clothing Science and Technology Volume 14 ; 14 ; >
     au < manifest ; exists ; 2003 ; International Journal of Clothing Science and Technology Volume 15 ; 15 ; >
@@ -4033,17 +4033,17 @@
     au < manifest ; exists ; 2007 ; International Journal of Clothing Science and Technology Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; International Journal of Clothing Science and Technology Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Clothing Science and Technology Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Clothing Science and Technology Volume 23 ; 23 ; >
     au < frozen ; exists ; 2012 ; International Journal of Clothing Science and Technology Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Clothing Science and Technology Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Clothing Science and Technology Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Clothing Science and Technology Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Clothing Science and Technology Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Clothing Science and Technology Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Clothing Science and Technology Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Clothing Science and Technology Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Clothing Science and Technology Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Clothing Science and Technology Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Clothing Science and Technology Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Clothing Science and Technology Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; International Journal of Clothing Science and Technology Volume 33 ; 33 ; >
 
   }
@@ -4078,10 +4078,10 @@
     au < manifest ; exists ; 2007 ; International Journal of Commerce and Management Volume 17 ; 17 ; >
     au < manifest ; exists ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Commerce and Management Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Commerce and Management Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Commerce and Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Commerce and Management Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Commerce and Management Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Commerce and Management Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Commerce and Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Commerce and Management Volume 25 ; 25 ; >
 
@@ -4101,8 +4101,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Review of International Business and Strategy Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Review of International Business and Strategy Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Review of International Business and Strategy Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2019 ; Review of International Business and Strategy Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2020 ; Review of International Business and Strategy Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2019 ; Review of International Business and Strategy Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2020 ; Review of International Business and Strategy Volume 30 ; 30 ; >
     au < crawling ; exists ; 2021 ; Review of International Business and Strategy Volume 31 ; 31 ; >
 
   }
@@ -4138,17 +4138,17 @@
     au < manifest ; exists ; 2007 ; International Journal of Conflict Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 ; >
     au < manifest ; exists ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Conflict Management Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Conflict Management Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Conflict Management Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Conflict Management Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Conflict Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Conflict Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Conflict Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Conflict Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Conflict Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Conflict Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Conflict Management Volume 29 ; 29 ; >
     au < frozen ; exists ; 2019 ; International Journal of Conflict Management Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Conflict Management Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Conflict Management Volume 31 ; 31 ; >
     au < crawling ; exists ; 2021 ; International Journal of Conflict Management Volume 32 ; 32 ; >
 
   }
@@ -4185,17 +4185,17 @@
     au < manifest ; exists ; 2007 ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Contemporary Hospitality Management Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Contemporary Hospitality Management Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Contemporary Hospitality Management Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Contemporary Hospitality Management Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Contemporary Hospitality Management Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Contemporary Hospitality Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Contemporary Hospitality Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Contemporary Hospitality Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Contemporary Hospitality Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Contemporary Hospitality Management Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Contemporary Hospitality Management Volume 30 ; 30 ; >
     au < frozen ; exists ; 2019 ; International Journal of Contemporary Hospitality Management Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Contemporary Hospitality Management Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Contemporary Hospitality Management Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; International Journal of Contemporary Hospitality Management Volume 33 ; 33 ; >
 
   }
@@ -4214,17 +4214,17 @@
     au < manifest ; exists ; 2007 ; International Journal of Culture, Tourism and Hospitality Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; International Journal of Culture, Tourism and Hospitality Research Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; International Journal of Culture, Tourism and Hospitality Research Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Culture, Tourism and Hospitality Research Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Culture, Tourism and Hospitality Research Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Culture, Tourism and Hospitality Research Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Culture, Tourism and Hospitality Research Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Culture, Tourism and Hospitality Research Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Culture, Tourism and Hospitality Research Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Culture, Tourism and Hospitality Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Culture, Tourism and Hospitality Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Culture, Tourism and Hospitality Research Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Culture, Tourism and Hospitality Research Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Culture, Tourism and Hospitality Research Volume 12 ; 12 ; >
     au < frozen ; exists ; 2019 ; International Journal of Culture, Tourism and Hospitality Research Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Culture, Tourism and Hospitality Research Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Culture, Tourism and Hospitality Research Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; International Journal of Culture, Tourism and Hospitality Research Volume 15 ; 15 ; >
 
   }
@@ -4249,16 +4249,16 @@
     au < manifest ; exists ; 2008 ; International Journal of Development Issues Volume 7 ; 7 ; >
     au < manifest ; exists ; 2009 ; International Journal of Development Issues Volume 8 ; 8 ; >
     au < crawling ; exists ; 2010 ; International Journal of Development Issues Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Development Issues Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Development Issues Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Development Issues Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Development Issues Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Development Issues Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Development Issues Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Development Issues Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Development Issues Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Development Issues Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Development Issues Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Development Issues Volume 17 ; 17 ; >
     au < frozen ; exists ; 2019 ; International Journal of Development Issues Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Development Issues Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Development Issues Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; International Journal of Development Issues Volume 20 ; 20 ; >
 
   }
@@ -4276,15 +4276,15 @@
 
     au < frozen ; exists ; 2010 ; International Journal of Disaster Resilience in the Built Environment Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; International Journal of Disaster Resilience in the Built Environment Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Disaster Resilience in the Built Environment Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Disaster Resilience in the Built Environment Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Disaster Resilience in the Built Environment Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Disaster Resilience in the Built Environment Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Disaster Resilience in the Built Environment Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Disaster Resilience in the Built Environment Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Disaster Resilience in the Built Environment Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Disaster Resilience in the Built Environment Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Disaster Resilience in the Built Environment Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; International Journal of Disaster Resilience in the Built Environment Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Disaster Resilience in the Built Environment Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Disaster Resilience in the Built Environment Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; International Journal of Disaster Resilience in the Built Environment Volume 12 ; 12 ; >
 
   }
@@ -4323,17 +4323,17 @@
     au < manifest ; exists ; 2007 ; International Journal of Educational Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 2008 ; International Journal of Educational Management Volume 22 ; 22 ; >
     au < manifest ; exists ; 2009 ; International Journal of Educational Management Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Educational Management Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Educational Management Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Educational Management Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Educational Management Volume 25 ; 25 ; >
     au < crawling ; exists ; 2012 ; International Journal of Educational Management Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Educational Management Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Educational Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Educational Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Educational Management Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Educational Management Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Educational Management Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Educational Management Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Educational Management Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Educational Management Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Educational Management Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Educational Management Volume 34 ; 34 ; >
     au < crawling ; exists ; 2021 ; International Journal of Educational Management Volume 35 ; 35 ; >
 
   }
@@ -4347,15 +4347,15 @@
     param[journal_issn] = 2047-0894
     comment[journal_id] = ijes
 
-    au < crawling ; exists ; 2012 ; International Journal of Emergency Services Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Emergency Services Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Emergency Services Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Emergency Services Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Emergency Services Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Emergency Services Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Emergency Services Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Emergency Services Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Emergency Services Volume 7 ; 7 ; >
     au < frozen ; exists ; 2019 ; International Journal of Emergency Services Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Emergency Services Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Emergency Services Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; International Journal of Emergency Services Volume 10 ; 10 ; >
 
   }
@@ -4375,9 +4375,9 @@
     au < manifest ; exists ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; International Journal of Emerging Markets Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Emerging Markets Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Emerging Markets Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Emerging Markets Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; International Journal of Emerging Markets Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Emerging Markets Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Emerging Markets Volume 10 ; 10 ; >
@@ -4385,7 +4385,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Emerging Markets Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Emerging Markets Volume 13 ; 13 ; >
     au < frozen ; exists ; 2019 ; International Journal of Emerging Markets Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Emerging Markets Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Emerging Markets Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; International Journal of Emerging Markets Volume 16 ; 16 ; >
 
   }
@@ -4404,17 +4404,17 @@
     au < manifest ; exists ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Energy Sector Management Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Energy Sector Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Energy Sector Management Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Energy Sector Management Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Energy Sector Management Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Energy Sector Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Energy Sector Management Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Energy Sector Management Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Energy Sector Management Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Energy Sector Management Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Energy Sector Management Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; International Journal of Energy Sector Management Volume 15 ; 15 ; >
 
   }
@@ -4447,15 +4447,15 @@
     au < manifest ; exists ; 2009 ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 ; >
     au < manifest ; exists ; 2011 ; International Journal of Entrepreneurial Behaviour & Research Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Entrepreneurial Behaviour & Research Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Entrepreneurial Behaviour & Research Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Entrepreneurial Behaviour & Research Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Entrepreneurial Behaviour & Research Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of entrepreneurial Behaviour & Research Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of entrepreneurial Behaviour & Research Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of entrepreneurial Behaviour & Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of entrepreneurial Behaviour & Research Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of entrepreneurial Behaviour & Research Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2019 ; International Journal of entrepreneurial Behaviour & Research Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2020 ; International Journal of entrepreneurial Behaviour & Research Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2019 ; International Journal of entrepreneurial Behaviour & Research Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of entrepreneurial Behaviour & Research Volume 26 ; 26 ; >
     au < crawling ; exists ; 2021 ; International Journal of entrepreneurial Behaviour & Research Volume 27 ; 27 ; >
 
   }
@@ -4470,16 +4470,16 @@
     comment[journal_id] = ijefm
 
     au < frozen ; exists ; 2010 ; International Journal of Event and Festival Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Event and Festival Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Event and Festival Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Event and Festival Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Event and Festival Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Event and Festival Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Event and Festival Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Event and Festival Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Event and Festival Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Event and Festival Management Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Event and Festival Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; International Journal of Event and Festival Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Event and Festival Management Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Event and Festival Management Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; International Journal of Event and Festival Management Volume 12 ; 12 ; >
 
   }
@@ -4496,9 +4496,9 @@
     comment[journal_id] = ijge
 
     au < manifest ; exists ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; International Journal of Gender and Entrepreneurship Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Gender and Entrepreneurship Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Gender and Entrepreneurship Volume 4 ; 4 ; >
     au < frozen ; exists ; 2013 ; International Journal of Gender and Entrepreneurship Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Gender and Entrepreneurship Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Gender and Entrepreneurship Volume 7 ; 7 ; >
@@ -4506,7 +4506,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Gender and Entrepreneurship Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Gender and Entrepreneurship Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; International Journal of Gender and Entrepreneurship Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Gender and Entrepreneurship Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Gender and Entrepreneurship Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; International Journal of Gender and Entrepreneurship Volume 13 ; 13 ; >
 
   }
@@ -4553,8 +4553,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Health Care Quality Assurance Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Health Care Quality Assurance Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Health Care Quality Assurance Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Health Care Quality Assurance Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Health Care Quality Assurance Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Health Care Quality Assurance Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Health Care Quality Assurance Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; International Journal of Health Care Quality Assurance Volume 34 ; 34 ; >
 
   }
@@ -4572,17 +4572,17 @@
 
     au < manifest ; exists ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Housing Markets and Analysis Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Housing Markets and Analysis Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Housing Markets and Analysis Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Housing Markets and Analysis Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Housing Markets and Analysis Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Housing Markets and Analysis Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Housing Markets and Analysis Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Housing Markets and Analysis Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Housing Markets and Analysis Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Housing Markets and Analysis Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Housing Markets and Analysis Volume 11 ; 11 ; >
     au < frozen ; exists ; 2019 ; International Journal of Housing Markets and Analysis Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Housing Markets and Analysis Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Housing Markets and Analysis Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; International Journal of Housing Markets and Analysis Volume 14 ; 14 ; >
 
   }
@@ -4599,17 +4599,17 @@
 
     au < manifest ; exists ; 2008 ; International Journal of Intelligent Computing and Cybernetics Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; International Journal of Intelligent Computing and Cybernetics Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Intelligent Computing and Cybernetics Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Intelligent Computing and Cybernetics Volume 4 ; 4 ; >
     au < frozen ; exists ; 2012 ; International Journal of Intelligent Computing and Cybernetics Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Intelligent Computing and Cybernetics Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Intelligent Computing and Cybernetics Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Intelligent Computing and Cybernetics Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Intelligent Computing and Cybernetics Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Intelligent Computing and Cybernetics Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Intelligent Computing and Cybernetics Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Intelligent Computing and Cybernetics Volume 11 ; 11 ; >
     au < frozen ; exists ; 2019 ; International Journal of Intelligent Computing and Cybernetics Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Intelligent Computing and Cybernetics Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Intelligent Computing and Cybernetics Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; International Journal of Intelligent Computing and Cybernetics Volume 14 ; 14 ; >
 
   }
@@ -4627,7 +4627,7 @@
 
     au < manifest ; exists ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 2012 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 6 ; 6 ; >
@@ -4637,7 +4637,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2019 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 14 ; 14 ; >
 
   }
@@ -4666,7 +4666,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Law and Management Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Law and Management Volume 60 ; 60 ; >
     au < frozen ; exists ; 2019 ; International Journal of Law and Management Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Law and Management Volume 62 ; 62 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Law and Management Volume 62 ; 62 ; >
     au < crawling ; exists ; 2021 ; International Journal of Law and Management Volume 63 ; 63 ; >
 
   }
@@ -4707,7 +4707,7 @@
 
     au < frozen ; exists ; 2018 ; Journal of Property, Planning and Environmental Law Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; Journal of Property, Planning and Environmental Law Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2020 ; Journal of Property, Planning and Environmental Law Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of Property, Planning and Environmental Law Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; Journal of Property, Planning and Environmental Law Volume 13 ; 13 ; >
 
   }
@@ -4755,7 +4755,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Public Leadership Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Public Leadership Volume 14 ; 14 ; >
     au < frozen ; exists ; 2019 ; International Journal of Public Leadership Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Public Leadership Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Public Leadership Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Public Leadership Volume 17 ; 17 ; >
 
   }
@@ -4779,8 +4779,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Lean Six Sigma Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Lean Six Sigma Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Lean Six Sigma Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Lean Six Sigma Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Lean Six Sigma Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Lean Six Sigma Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Lean Six Sigma Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; International Journal of Lean Six Sigma Volume 12 ; 12 ; >
 
   }
@@ -4826,7 +4826,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; The International Journal of Logistics Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The International Journal of Logistics Management Volume 29 ; 29 ; >
     au < finished ; manifest ; 2019 ; The International Journal of Logistics Management Volume 30 ; 30 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; The International Journal of Logistics Management Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2020 ; The International Journal of Logistics Management Volume 31 ; 31 ; >
     au < crawling ; exists ; 2021 ; The International Journal of Logistics Management Volume 32 ; 32 ; >
 
   }
@@ -4857,7 +4857,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Managerial Finance Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Managerial Finance Volume 14 ; 14 ; >
     au < manifest ; exists ; 2019 ; International Journal of Managerial Finance Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Managerial Finance Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Managerial Finance Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Managerial Finance Volume 17 ; 17 ; >
 
   }
@@ -4885,7 +4885,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Managing Projects in Business Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Managing Projects in Business Volume 11 ; 11 ; >
     au < manifest ; exists ; 2019 ; International Journal of Managing Projects in Business Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Managing Projects in Business Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Managing Projects in Business Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; International Journal of Managing Projects in Business Volume 14 ; 14 ; >
 
   }
@@ -4940,8 +4940,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Manpower Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Manpower Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Manpower Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Manpower Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Manpower Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Manpower Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Manpower Volume 41 ; 41 ; >
     au < crawling ; exists ; 2021 ; International Journal of Manpower Volume 42 ; 42 ; >
 
   }
@@ -4962,8 +4962,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Mentoring and Coaching in Education Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Mentoring and Coaching in Education Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Mentoring and Coaching in Education Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Mentoring and Coaching in Education Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Mentoring and Coaching in Education Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Mentoring and Coaching in Education Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Mentoring and Coaching in Education Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; International Journal of Mentoring and Coaching in Education Volume 10 ; 10 ; >
 
   }
@@ -4994,7 +4994,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Migration, Health and Social Care Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Migration, Health and Social Care Volume 14 ; 14 ; >
     au < manifest ; exists ; 2019 ; International Journal of Migration, Health and Social Care Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Migration, Health and Social Care Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Migration, Health and Social Care Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Migration, Health and Social Care Volume 17 ; 17 ; >
 
   }
@@ -5019,7 +5019,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 7 ; 7 ; >
     au < manifest ; exists ; 1998 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 8 ; 8 ; >
     au < manifest ; exists ; 1999 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2000 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 10 ; 10 ; >
     au < manifest ; exists ; 2001 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 11 ; 11 ; >
     au < manifest ; exists ; 2002 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 12 ; 12 ; >
     au < manifest ; exists ; 2003 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 13 ; 13 ; >
@@ -5038,8 +5038,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 30 ; 30 ; >
     au < crawling ; exists ; 2021 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 31 ; 31 ; >
 
   }
@@ -5093,8 +5093,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Operations & Production Management Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Operations & Production Management Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Operations & Production Management Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Operations & Production Management Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Operations & Production Management Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Operations & Production Management Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Operations & Production Management Volume 40 ; 40 ; >
     au < crawling ; exists ; 2021 ; International Journal of Operations & Production Management Volume 41 ; 41 ; >
 
   }
@@ -5151,7 +5151,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Organizational Analysis Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Organizational Analysis Volume 26 ; 26 ; >
     au < frozen ; exists ; 2019 ; International Journal of Organizational Analysis Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Organizational Analysis Volume 28 ; 28 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Organizational Analysis Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; International Journal of Organizational Analysis Volume 29 ; 29 ; >
 
   }
@@ -5182,7 +5182,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Pervasive Computing and Communications Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Pervasive Computing and Communications Volume 14 ; 14 ; >
     au < manifest ; exists ; 2019 ; International Journal of Pervasive Computing and Communications Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Pervasive Computing and Communications Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Pervasive Computing and Communications Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Pervasive Computing and Communications Volume 17 ; 17 ; >
 
   }
@@ -5211,7 +5211,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 12 ; 12 ; >
     au < manifest ; exists ; 2019 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 15 ; 15 ; >
 
   }
@@ -5285,7 +5285,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Physical Distribution & Logistics Management Volume 27 ; 27 ; >
     au < manifest ; exists ; 1998 ; International Journal of Physical Distribution & Logistics Management Volume 28 ; 28 ; >
     au < manifest ; exists ; 1999 ; International Journal of Physical Distribution & Logistics Management Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2000 ; International Journal of Physical Distribution & Logistics Management Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Physical Distribution & Logistics Management Volume 30 ; 30 ; >
     au < manifest ; exists ; 2001 ; International Journal of Physical Distribution & Logistics Management Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Physical Distribution & Logistics Management Volume 32 ; 32 ; >
     au < manifest ; exists ; 2003 ; International Journal of Physical Distribution & Logistics Management Volume 33 ; 33 ; >
@@ -5304,8 +5304,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Physical Distribution & Logistics Management Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Physical Distribution & Logistics Management Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Physical Distribution & Logistics Management Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Physical Distribution & Logistics Management Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Physical Distribution & Logistics Management Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Physical Distribution & Logistics Management Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Physical Distribution & Logistics Management Volume 50 ; 50 ; >
     au < crawling ; exists ; 2021 ; International Journal of Physical Distribution & Logistics Management Volume 51 ; 51 ; >
 
   }
@@ -5336,8 +5336,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Prisoner Health Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Prisoner Health Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Prisoner Health Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Prisoner Health Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Prisoner Health Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Prisoner Health Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Prisoner Health Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Prisoner Health Volume 17 ; 17 ; >
 
   }
@@ -5370,7 +5370,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Productivity and Performance Management Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Productivity and Performance Management Volume 67 ; 67 ; >
     au < ready ; exists ; 2019 ; International Journal of Productivity and Performance Management Volume 68 ; 68 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Productivity and Performance Management Volume 69 ; 69 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Productivity and Performance Management Volume 69 ; 69 ; >
     au < crawling ; exists ; 2021 ; International Journal of Productivity and Performance Management Volume 70 ; 70 ; >
 
   }
@@ -5418,7 +5418,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Public Sector Management Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Public Sector Management Volume 31 ; 31 ; >
     au < crawling ; exists ; 2019 ; International Journal of Public Sector Management Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Public Sector Management Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Public Sector Management Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; International Journal of Public Sector Management Volume 34 ; 34 ; >
 
   }
@@ -5469,8 +5469,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Quality & Reliability Management Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Quality & Reliability Management Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Quality & Reliability Management Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Quality & Reliability Management Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Quality & Reliability Management Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Quality & Reliability Management Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Quality & Reliability Management Volume 37 ; 37 ; >
     au < crawling ; exists ; 2021 ; International Journal of Quality & Reliability Management Volume 38 ; 38 ; >
 
   }
@@ -5496,8 +5496,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Quality and Service Sciences Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Quality and Service Sciences Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Quality and Service Sciences Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Quality and Service Sciences Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Quality and Service Sciences Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Quality and Service Sciences Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Quality and Service Sciences Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; International Journal of Quality and Service Sciences Volume 13 ; 13 ; >
 
   }
@@ -5560,8 +5560,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Retail & Distribution Management Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Retail & Distribution Management Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Retail & Distribution Management Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Retail & Distribution Management Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Retail & Distribution Management Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Retail & Distribution Management Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Retail & Distribution Management Volume 48 ; 48 ; >
     au < crawling ; exists ; 2021 ; International Journal of Retail & Distribution Management Volume 49 ; 49 ; >
 
   }
