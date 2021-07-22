@@ -35,8 +35,8 @@
       au < crawling ; exists ; 2014 ; Applied Finance Letters Volume 3 ; 3 ; 2014 ; > 
       au < crawling ; exists ; 2015 ; Applied Finance Letters Volume 4 ; 4 ; 2015 ; > 
       au < crawling ; exists ; 2016 ; Applied Finance Letters Volume 5 ; 5 ; 2016 ; > 
-      au < crawling ; exists ; 2017 ; Applied Finance Letters Volume 6 ; 6 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Applied Finance Letters Volume 7 ; 7 ; 2018 ; >
+      au < frozen ; exists ; 2017 ; Applied Finance Letters Volume 6 ; 6 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Applied Finance Letters Volume 7 ; 7 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Applied Finance Letters Volume 8 ; 8 ; 2019 ; >
       au < crawling ; exists ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Applied Finance Letters Volume 10 ; 10 ; 2021 ; >
@@ -93,7 +93,7 @@
       au < frozen ; exists ; 2017 ; Te Kaharoa Volume 10 ; 10 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Te Kaharoa Volume 11 ; 11 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Te Kaharoa Volume 12 ; 12 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Te Kaharoa Volume 13 ; 13 ; 2020 ; >
+      au < deepCrawl ; exists ; 2020 ; Te Kaharoa Volume 13 ; 13 ; 2020 ; >
       au < expected ; exists ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; >
 
     }

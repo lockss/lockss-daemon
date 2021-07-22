@@ -31,7 +31,7 @@
       au < manifest ; exists ; 2015 ; Oncology Letters Volume 10 ; 10 ; >
       au < manifest ; exists ; 2016 ; Oncology Letters Volume 11 ; 11 ; >
       au < manifest ; exists ; 2016 ; Oncology Letters Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2017 ; Oncology Letters Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2017 ; Oncology Letters Volume 13 ; 13 ; >
       au < manifest ; exists ; 2017 ; Oncology Letters Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Letters Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Letters Volume 16 ; 16 ; >
@@ -80,7 +80,7 @@
       au < manifest ; exists ; 2004 ; International Journal of Oncology Volume 24 ; 24 ; >
       au < manifest ; exists ; 2004 ; International Journal of Oncology Volume 25 ; 25 ; >
       au < manifest ; exists ; 2005 ; International Journal of Oncology Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2005 ; International Journal of Oncology Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2005 ; International Journal of Oncology Volume 27 ; 27 ; >
       au < manifest ; exists ; 2006 ; International Journal of Oncology Volume 28 ; 28 ; >
       au < manifest ; exists ; 2006 ; International Journal of Oncology Volume 29 ; 29 ; >
       au < manifest ; exists ; 2007 ; International Journal of Oncology Volume 30 ; 30 ; >
@@ -109,8 +109,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Oncology Volume 53 ; 53 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Oncology Volume 54 ; 54 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; International Journal of Oncology Volume 55 ; 55 ; >
-      au < crawling ; exists ; 2020 ; International Journal of Oncology Volume 56 ; 56 ; >
-      au < crawling ; exists ; 2020 ; International Journal of Oncology Volume 57 ; 57 ; >
+      au < frozen ; exists ; 2020 ; International Journal of Oncology Volume 56 ; 56 ; >
+      au < frozen ; exists ; 2020 ; International Journal of Oncology Volume 57 ; 57 ; >
       au < crawling ; exists ; 2021 ; International Journal of Oncology Volume 58 ; 58 ; >
       au < crawling ; exists ; 2021 ; International Journal of Oncology Volume 59 ; 59 ; >
 
@@ -152,7 +152,7 @@
       
       param[journal_id] = etm
   
-      au < crawling ; exists ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 ; >
       au < manifest ; exists ; 2011 ; Experimental and Therapeutic Medicine Volume 2 ; 2 ; >
       au < manifest ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 3 ; 3 ; >
       au < manifest ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 4 ; 4 ; >
@@ -203,7 +203,7 @@
       au < manifest ; exists ; 2005 ; International Journal of Molecular Medicine Volume 15 ; 15 ; >
       au < manifest ; exists ; 2005 ; International Journal of Molecular Medicine Volume 16 ; 16 ; >
       au < manifest ; exists ; 2006 ; International Journal of Molecular Medicine Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2006 ; International Journal of Molecular Medicine Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2006 ; International Journal of Molecular Medicine Volume 18 ; 18 ; >
       au < manifest ; exists ; 2007 ; International Journal of Molecular Medicine Volume 19 ; 19 ; >
       au < manifest ; exists ; 2007 ; International Journal of Molecular Medicine Volume 20 ; 20 ; >
       au < manifest ; exists ; 2008 ; International Journal of Molecular Medicine Volume 21 ; 21 ; >
@@ -249,7 +249,7 @@
       au < manifest ; exists ; 2013 ; Biomedical Reports Volume 1 ; 1 ; >
       au < manifest ; exists ; 2014 ; Biomedical Reports Volume 2 ; 2 ; >
       au < manifest ; exists ; 2015 ; Biomedical Reports Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2016 ; Biomedical Reports Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2016 ; Biomedical Reports Volume 4 ; 4 ; >
       au < manifest ; exists ; 2016 ; Biomedical Reports Volume 5 ; 5 ; >
       au < manifest ; exists ; 2017 ; Biomedical Reports Volume 6 ; 6 ; >
       au < manifest ; exists ; 2017 ; Biomedical Reports Volume 7 ; 7 ; >
@@ -257,8 +257,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Biomedical Reports Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Biomedical Reports Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Biomedical Reports Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2020 ; Biomedical Reports Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2020 ; Biomedical Reports Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2020 ; Biomedical Reports Volume 13 ; 13 ; >
       au < crawling ; exists ; 2021 ; Biomedical Reports Volume 14 ; 14 ; >
       au < crawling ; exists ; 2021 ; Biomedical Reports Volume 15 ; 15 ; >
 
@@ -297,7 +297,7 @@
       au < manifest ; exists ; 2009 ; Oncology Reports Volume 22 ; 22 ; >
       au < manifest ; exists ; 2010 ; Oncology Reports Volume 23 ; 23 ; >
       au < manifest ; exists ; 2010 ; Oncology Reports Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2011 ; Oncology Reports Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2011 ; Oncology Reports Volume 25 ; 25 ; >
       au < manifest ; exists ; 2011 ; Oncology Reports Volume 26 ; 26 ; >
       au < manifest ; exists ; 2012 ; Oncology Reports Volume 27 ; 27 ; >
       au < manifest ; exists ; 2012 ; Oncology Reports Volume 28 ; 28 ; >
@@ -342,7 +342,7 @@
       au < manifest ; exists ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 ; >
       au < manifest ; exists ; 2014 ; Molecular Medicine Reports Volume 10 ; 10 ; >
       au < manifest ; exists ; 2015 ; Molecular Medicine Reports Volume 11 ; 11 ; >
-      au < crawling ; exists ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 ; >
       au < manifest ; exists ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 ; >
       au < manifest ; exists ; 2016 ; Molecular Medicine Reports Volume 14 ; 14 ; >
       au < manifest ; exists ; 2017 ; Molecular Medicine Reports Volume 15 ; 15 ; >
