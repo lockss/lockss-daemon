@@ -57,7 +57,7 @@ import zeep.exceptions
 import zeep.helpers
 import zeep.transports
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth, file_lines
+from wsutil import datems, datetimems, durationms, file_lines
 
 
 #
@@ -102,10 +102,10 @@ def get_au_status(host, username, password, auid):
     - volume (string) (the AU name)
     - year (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - auid (string): an AUID
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
     '''
     client = _make_client(host, username, password)
     try:
@@ -123,11 +123,11 @@ def get_au_urls(host, username, password, auid, prefix=None):
     given, limits the results to URLs with that prefix (including the URL itself).
 
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - auid (string): an AUID
-    - prefix (string): a URL prefix (default: None)
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
+    :param prefix: a URL prefix (string, default: None)
     '''
     client = _make_client(host, username, password)
     ret = client.service.getAuUrls(auId=auid, url=prefix)
@@ -139,11 +139,11 @@ def get_au_type_urls(host, username, password, auid, typ):
     the AU.  
 
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - auid (string): an AUID
-    - typ (string): one of 'articleUrls' or 'substanceUrls'
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
+    :param typ: one of 'articleUrls' or 'substanceUrls' (string)
     '''
     # query_aus with select='substanceUrls' returns [None] if there are no substance URLs;
     # _do_query_aus with select='substanceUrls' calls query_aus with select=['auId','substanceUrls']
@@ -165,9 +165,9 @@ def get_auids(host, username, password):
     - id (string)
     - name (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     '''
     client = _make_client(host, username, password)
     ret = client.service.getAuIds()
@@ -203,10 +203,10 @@ def get_peer_agreements(host, username, password, auid):
                 - PercentAgreementTimestamp (numeric)
     - PeerId (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - auid (string): an AUID
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
     '''
     # See get_au_type_urls for why 'auId' is also requested
     res = query_aus(host, username, password, ['auId', 'peerAgreements'], where='auId = "{}"'.format(auid))
@@ -248,9 +248,9 @@ def get_platform_configuration(host, username, password):
     - uptime (numeric)
     - v3Identity (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     '''
     client = _make_client(host, username, password)
     return zeep.helpers.serialize_object(client.service.getPlatformConfiguration())
@@ -259,9 +259,9 @@ def is_daemon_ready(host, username, password):
     '''Performs an isDaemonReady operation on the given host and returns True or
     False.
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     '''
     client = _make_client(host, username, password)
     return client.service.isDaemonReady()
@@ -348,13 +348,14 @@ def query_aus(host, username, password, select, where=None):
         - versionCount (numeric)
     - volume (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - select (string or list of strings): if a list of strings, the field names to
-    be used in the SELECT clause; if a string, the single field name to be used in
-    the SELECT clause
-    - where (string): optional statement for the WHERE clause (default: None)
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
+    :param select: if a list of strings, the field names to
+        be used in the SELECT clause; if a string, the single field name to be used in
+        the SELECT clause (string or list of strings)
+    :param where : optional statement for the WHERE clause (string, default: None)
     Raises:
     - ValueError if select is not of the right type
     '''
@@ -406,13 +407,14 @@ def query_crawls(host, username, password, select, where=None):
     - startTime (long)
     - startingUrls (list of strings)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - select (string or list of strings): if a list of strings, the field names to
-    be used in the SELECT clause; if a string, the single field name to be used in
-    the SELECT clause
-    - where (string): optional statement for the WHERE clause (default: None)
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
+    :param select: if a list of strings, the field names to
+        be used in the SELECT clause; if a string, the single field name to be used in
+        the SELECT clause (string or list of strings)
+    :param where : optional statement for the WHERE clause (string, default: None)
     Raises:
     - ValueError if select is not of the right type
     '''
@@ -553,7 +555,6 @@ class _DaemonStatusServiceOptions(object):
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
-    self.auth = requests_basic_auth(self._u, self._p)
 
   def __init_select(self, parser, args, field_dict):
     if args.select is None: return sorted(field_dict)

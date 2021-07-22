@@ -67,9 +67,10 @@ def create_export_files(host, username, password, auid, options):
   '''Performs a createExportFiles operation on the given host for the given AUID, and
   returns a record with the files.
   Parameters:
-  - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
-  - auid (string): an AUID
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
   Returns:
   - ret (dict):
     {
@@ -95,8 +96,6 @@ def create_export_files(host, username, password, auid, options):
   }
   client = _make_client(host, username, password)
   try:
-    # ret = _ws_port(host, auth).createExportFiles(req)
-    # return ret.Return
     ret = client.service.createExportFiles(req)
     return zeep.helpers.serialize_object(ret)
   except zeep.exceptions.Fault as e:
@@ -196,7 +195,6 @@ class _ExportServiceOptions(object):
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
-    #self.auth = requests_basic_auth(self._u, self._p)
 
 # Last modified 2018-03-19 for unicode support and boolean False when boolean is None
 def _output_record(options, lst):

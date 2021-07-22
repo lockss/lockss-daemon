@@ -58,7 +58,7 @@ import zeep.exceptions
 import zeep.helpers
 import zeep.transports
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth, file_lines
+from wsutil import datems, datetimems, durationms, file_lines
 
 #
 # Library
@@ -413,7 +413,6 @@ class _ContentConfigurationServiceOptions(object):
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
-    self.auth = requests_basic_auth(self._u, self._p)
 
 # This is to allow pickling, so the process pool works, but this isn't great
 # Have the sort and list params be enums and have keysort and keydisplay be methods?

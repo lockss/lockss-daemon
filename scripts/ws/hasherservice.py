@@ -57,7 +57,7 @@ import zeep.exceptions
 import zeep.helpers
 import zeep.transports
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth, file_lines
+from wsutil import datems, datetimems, durationms, file_lines
 
 #
 # Library
@@ -80,7 +80,8 @@ def hash_au(host, username, password, auid, include_weight=False):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param auid: an auid to hash (string)
     :param include_weight: a boolean indicating whether to include weight (boolean)
     :return:
@@ -401,8 +402,6 @@ class _HasherServiceOptions(object):
         # auth
         self._u = args.username or getpass.getpass('UI username: ')
         self._p = args.password or getpass.getpass('UI password: ')
-        self.auth = requests_basic_auth(self._u, self._p)
-
 
 def _do_hash(options, host):
     if options.url is None:

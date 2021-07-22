@@ -87,16 +87,6 @@ def durationms(ms):
   if w == 0: return '%dd%dh%dm' % (d, h, m)
   return '%dw%dd%dh' % (w, d, h)
 
-def requests_basic_auth(username, password):
-    '''Makes a requests.auth.AuthBase object of type HTTPBasicAuth (suitable
-    for Zeep-based Web Services modules). 
-    Parameters:
-    - username (string): a UI username
-    - password (string): a UI password
-    '''
-    return requests.auth.HTTPBasicAuth(username, password)
-
-
 # Last modified 2021-07-22 @markom
 def file_lines(fstr):
   with open(os.path.expanduser(fstr)) as f:
