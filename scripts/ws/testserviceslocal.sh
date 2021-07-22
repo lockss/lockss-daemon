@@ -7,7 +7,7 @@
 # Step 5. Run this file $. testserviceslocal.sh
 # Step 6. Inspect the output for errors. Note: --verbose, and --debug-zeep are set, unset them if desired
 
-LOCAL8081='localhost:8081'
+LOCAL8081='http://localhost:8081'
 AUID='org|lockss|plugin|springer|link|SpringerLinkJournalsPlugin&base_url~https%3A%2F%2Flink%2Espringer%2Ecom%2F&download_url~http%3A%2F%2Fdownload%2Espringer%2Ecom%2F&journal_eissn~1179-2043&volume_name~831'
 
 echo 'BASIC USAGE TEST: '
@@ -17,7 +17,7 @@ python exportservice.py
 python hasherservice.py
 python aucontrolservice.py
 echo 'BASIC USAGE TEST DONE: '
-
+echo $LOCKSSU
 echo '************ TESTING daemonstatusservice.py ******************************'
 python daemonstatusservice.py --host=$LOCAL8081 --auid=$AUID --get-au-status --username=$LOCKSSU --password=$LOCKSSUPW --debug-zeep
 echo '************  DONE W daemonstatusservice.py ******************************'

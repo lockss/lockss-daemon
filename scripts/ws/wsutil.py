@@ -107,7 +107,7 @@ def file_lines(fstr):
     sys.exit('Error: {} contains no meaningful lines'.format(fstr))
   return ret
 
-def make_client(host, username, password, service):
+def make_client(host, username, password, service, https=False):
   '''Returns a cleaned list of lines in a file.
   Parameters:
     :param host: a host:port pair (string)
@@ -118,11 +118,25 @@ def make_client(host, username, password, service):
   '''
   session = requests.Session()
   session.auth = requests.auth.HTTPBasicAuth(username, password)
+  session.verify = False
   transport = zeep.transports.Transport(session=session)
-  wsdl = 'http://{}/ws/{}?wsdl'.format(host, service)
+  wsdl = '{}/ws/{}?wsdl'.format(
+    add_protocol(host, https),
+    service)
   client = zeep.Client(wsdl, transport=transport)
   return client
 
+def add_protocol(host, https=False):
+  '''Given a host returns a <protocol><domain>:<port>
+  Parameters:
+    :param host: a [protocol://]host:port pair (string)
+  '''
+  # if the protocal is already assigned, there is nothing to do
+  if ('http://' == host[:7]) | ('https://' == host[:8]):
+    return host
+  if https:
+    return 'https://' + host
+  return 'http://' + host
 
 def enable_zeep_debugging():
   logging.config.dictConfig({
