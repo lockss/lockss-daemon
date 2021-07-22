@@ -23,7 +23,7 @@
       au < finished ; finished ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; >
+      au < deepCrawl ; exists ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; >
       au < manifest ; exists ; 2021 ; Armstrong Undergraduate Journal of History Volume 11 ; 11 ; >
 
   }
@@ -41,7 +41,7 @@
 
       au < finished ; finished ; 2018 ; Becoming: Journal of the Georgia Middle School Association Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < testing ; exists ; 2019 ; Becoming: Journal of the Georgia Middle School Association Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2020 ; Becoming: Journal of the Georgia Middle School Association Volume 31 ; 31 ; >
+      au < deepCrawl ; exists ; 2020 ; Becoming: Journal of the Georgia Middle School Association Volume 31 ; 31 ; >
       au < expected ; exists ; 2021 ; Becoming: Journal of the Georgia Middle School Association Volume 32 ; 32 ; >
 
   }
@@ -58,7 +58,7 @@
       param[journal_abbr] = cimle
 
       au < finished ; manifest ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Current Issues in Middle Level Education Volume 25 ; 25 ; >
+      au < deepCrawl ; exists ; 2020 ; Current Issues in Middle Level Education Volume 25 ; 25 ; >
       au < expected ; exists ; 2021 ; Current Issues in Middle Level Education Volume 26 ; 26 ; >
 
   }
@@ -91,7 +91,7 @@
       au < finished ; finished ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; >
       au < expected ; exists ; 2021 ; Georgia Educational Researcher Volume 19 ; 19 ; >
 
   }
@@ -139,7 +139,7 @@
       au < finished ; finished ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; >
+      au < deepCrawl ; exists ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; >
       au < manifest ; exists ; 2021 ; International Journal for the Scholarship of Teaching & Learning Volume 15 ; 15 ; >
 
   }
@@ -175,9 +175,9 @@
       au < manifest ; exists ; 2007 ; Journal of the Georgia Public Health Association Volume 2 ; 2 ; >
       au < manifest ; exists ; 2008 ; Journal of the Georgia Public Health Association Volume 3 ; 3 ; >
       au < manifest ; exists ; 2009 ; Journal of the Georgia Public Health Association Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2015-2016 ; Journal of the Georgia Public Health Association Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2017-2019 ; Journal of the Georgia Public Health Association Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2015-2016 ; Journal of the Georgia Public Health Association Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 ; >
+      au < frozen ; exists ; 2017-2019 ; Journal of the Georgia Public Health Association Volume 7 ; 7 ; >
       au < frozen ; exists ; 2020 ; Journal of the Georgia Public Health Association Volume 8 ; 8 ; >
       au < expected ; exists ; 2021 ; Journal of the Georgia Public Health Association Volume 9 ; 9 ; >
 
@@ -218,11 +218,11 @@
       au < manifest ; exists ; 2009 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 3 ; 3 ; >
       au < frozen ; exists ; 2020 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 4 ; 4 ; >
 
-      au < crawling ; exists ; 2013 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2014 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2013 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2014 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 9 ; 9 ; >
 
-      au < crawling ; exists ; 2019 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2019 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 13 ; 13 ; >
 
   }
 
@@ -262,13 +262,13 @@
       au < manifest ; exists ; 2003-2004 ; Southern Business Review Volume 29 ; 29 ; >
       au < manifest ; exists ; 2004-2005 ; Southern Business Review Volume 30 ; 30 ; >
       au < manifest ; exists ; 2005-2006 ; Southern Business Review Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2006-2020 ; Southern Business Review Volume 32 ; 32 ; >
+      au < frozen ; exists ; 2006-2020 ; Southern Business Review Volume 32 ; 32 ; >
       au < manifest ; exists ; 2008 ; Southern Business Review Volume 33 ; 33 ; >
       au < manifest ; exists ; 2009 ; Southern Business Review Volume 34 ; 34 ; >
       au < manifest ; exists ; 2010 ; Southern Business Review Volume 35 ; 35 ; >
       au < manifest ; exists ; 2011 ; Southern Business Review Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2012 ; Southern Business Review Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2013 ; Southern Business Review Volume 38 ; 38 ; >
+      au < frozen ; exists ; 2012 ; Southern Business Review Volume 37 ; 37 ; >
+      au < frozen ; exists ; 2013 ; Southern Business Review Volume 38 ; 38 ; >
 
   }
 
@@ -294,7 +294,7 @@
       au < finished ; finished ; 2016-2017 ; The Coastal Review Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017-2018 ; The Coastal Review Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018-2019 ; The Coastal Review Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019-2020 ; The Coastal Review Volume 11 ; 11 ; >
+      au < deepCrawl ; exists ; 2019-2020 ; The Coastal Review Volume 11 ; 11 ; >
       au < crawling ; exists ; 2020-2021 ; The Coastal Review Volume 12 ; 12 ; >
       au < expected ; exists ; 2021-2022 ; The Coastal Review Volume 13 ; 13 ; >
 
@@ -333,7 +333,7 @@
       au < finished ; finished ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Theory and Applications of Graphs Volume 6 ; 6 ; >
+      au < deepCrawl ; exists ; 2020 ; Theory and Applications of Graphs Volume 6 ; 6 ; >
       au < manifest ; exists ; 2021 ; Theory and Applications of Graphs Volume 7 ; 7 ; >
 
   }
