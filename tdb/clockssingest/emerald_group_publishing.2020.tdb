@@ -30,7 +30,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Academia Revista Latinoamericana de Administración Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Academia Revista Latinoamericana de Administración Volume 31 ; 31 ; >
     au < frozen ; exists ; 2019 ; Academia Revista Latinoamericana de Administración Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; Academia Revista Latinoamericana de Administración Volume 34 ; 34 ; >
 
   }
@@ -76,7 +76,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Accounting Research Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Accounting Research Journal Volume 31 ; 31 ; >
     au < frozen ; exists ; 2019 ; Accounting Research Journal Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2020 ; Accounting Research Journal Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2020 ; Accounting Research Journal Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; Accounting Research Journal Volume 34 ; 34 ; >
 
   }
@@ -123,8 +123,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Accounting, Auditing & Accountability Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Accounting, Auditing & Accountability Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Accounting, Auditing & Accountability Journal Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2019 ; Accounting, Auditing & Accountability Journal Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2020 ; Accounting, Auditing & Accountability Journal Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2019 ; Accounting, Auditing & Accountability Journal Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2020 ; Accounting, Auditing & Accountability Journal Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; Accounting, Auditing & Accountability Journal Volume 34 ; 34 ; >
 
   }
