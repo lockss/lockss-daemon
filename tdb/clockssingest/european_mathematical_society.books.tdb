@@ -46,7 +46,7 @@
       # series = esiam
 
       au < finished ; finished ; 2014 ; 978-3-03719-137-8 ; 978-3-03719-637-3 ; MATHEON - Mathematics for Key Technologies ; 177 ; reingest5.clockss.org:8082  >
-      au < crawling ; exists ; 2020 ; 978-3-03719-207-8 ; 978-3-03719-707-3 ; Decision Support Systems for Water Supply Systems ; 254 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-207-8 ; 978-3-03719-707-3 ; Decision Support Systems for Water Supply Systems ; 254 ; >
 
   }
 
@@ -75,7 +75,7 @@
       au < finished ; manifest ; 2018 ; 978-3-03719-182-8 ; 978-3-03719-682-3 ; Schubert Varieties, Equivariant Cohomology and Characteristic Classes ; 226 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 978-3-03719-186-6 ; 978-3-03719-686-1 ; Non-Linear Partial Differential Equations, Mathematical Physics, and Stochastic Analysis ; 231 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 978-3-03719-197-2 ; 978-3-03719-697-7 ; Spectral Structures and Topological Methods in Mathematics ; 244 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; 978-3-03719-198-9 ; 978-3-03719-698-4 ; $t$-Motives: Hodge Structures, Transcendence and Other Motivic Aspects ; 235 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-198-9 ; 978-3-03719-698-4 ; $t$-Motives: Hodge Structures, Transcendence and Other Motivic Aspects ; 235 ; >
       au < crawling ; exists ; 2021 ; 978-3-98547-005-1 ; 978-3-98547-505-6 ; Probabilistic Structures in Evolution ; 264 ; >
 
   }
@@ -120,7 +120,7 @@
       au < finished ; manifest ; 2017 ; 978-3-03719-180-4 ; 978-3-03719-680-9 ; Higher-Dimensional Knots According to Michel Kervaire ; 224 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 978-3-03719-185-9 ; 978-3-03719-685-4 ; Local Representation Theory and Simple Groups ; 230 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 978-3-03719-195-8 ; 978-3-03719-695-3 ; Function Spaces with Dominating Mixed Smoothness ; 241 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; 978-3-03719-210-8 ; 978-3-03719-710-3 ; Classification of Complex Algebraic Surfaces ; 257 ; >
+      au < frozen ; exists ; 2020 ; 978-3-03719-210-8 ; 978-3-03719-710-3 ; Classification of Complex Algebraic Surfaces ; 257 ; >
       au < crawling ; exists ; 2021 ; 978-3-98547-004-4 ; 978-3-98547-504-9 ; Lectures on Selected Topics in von Neumann Algebras ; 262 ; >
 
   }
@@ -197,7 +197,7 @@
       au < finished ; manifest ; 2018 ; 978-3-03719-181-1 ; 978-3-03719-681-6 ; Regular, Quasi-regular and Induced Representations of Infinite-dimensional Groups ; 225 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 978-3-03719-190-3 ; 978-3-03719-690-8 ; Boundary Behavior of Solutions to Elliptic Equations in General Domains ; 236 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 978-3-03719-191-0 ; 978-3-03719-691-5 ; Estimates for Differential Operators in Half-space ; 237 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; 978-3-03719-208-5 ; 978-3-03719-708-0 ; $K3$ Surfaces ; 255 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-208-5 ; 978-3-03719-708-0 ; $K3$ Surfaces ; 255 ; >
       au < crawling ; exists ; 2020 ; 978-3-03719-206-1 ; 978-3-03719-706-6 ; Accuracy of Mathematical Models ; 253 ; >
 
   }
@@ -304,9 +304,9 @@
       au < finished ; finished ; 2016 ; 978-3-03719-161-3 ; 978-3-03719-661-8 ; Handbook of Teichmüller Theory, Volume VI ; 202 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 978-3-03719-183-5 ; 978-3-03719-683-0 ; Linear Forms in Logarithms and Applications ; 228 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 978-3-03719-196-5 ; 978-3-03719-696-0 ; Eighteen Essays in Non-Euclidean Geometry ; 243 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; 978-3-03719-203-0 ; 978-3-03719-703-5 ; Handbook of Teichmüller Theory, Volume VII ; 250 ; >
-      au < crawling ; exists ; 2020 ; 978-3-03719-204-7 ; 978-3-03719-704-2 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 1 ; 251 ; >
-      au < crawling ; exists ; 2020 ; 978-3-03719-205-4 ; 978-3-03719-705-9 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 2 ; 252 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-203-0 ; 978-3-03719-703-5 ; Handbook of Teichmüller Theory, Volume VII ; 250 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-204-7 ; 978-3-03719-704-2 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 1 ; 251 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-205-4 ; 978-3-03719-705-9 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 2 ; 252 ; >
 
   }
 

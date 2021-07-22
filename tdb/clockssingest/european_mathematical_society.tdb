@@ -50,7 +50,7 @@
     au < finished ; crawling ; 2017 ; Annales de l’Institut Henri Poincaré D Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Annales de l’Institut Henri Poincaré D Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Annales de l’Institut Henri Poincaré D Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Annales de l’Institut Henri Poincaré D Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2020 ; Annales de l’Institut Henri Poincaré D Volume 7 ; 7 ; >
     au < manifest ; exists ; 2021 ; Annales de l’Institut Henri Poincaré D Volume 8 ; 8 ; >
 
   }
@@ -90,7 +90,7 @@
     au < finished ; crawling ; 2017 ; Commentarii Mathematici Helvetici Volume 92 ; 92 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Commentarii Mathematici Helvetici Volume 93 ; 93 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; Commentarii Mathematici Helvetici Volume 94 ; 94 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2020 ; Commentarii Mathematici Helvetici Volume 95 ; 95 ; >
+    au < deepCrawl ; exists ; 2020 ; Commentarii Mathematici Helvetici Volume 95 ; 95 ; >
     au < manifest ; exists ; 2021 ; Commentarii Mathematici Helvetici Volume 96 ; 96 ; >
 
   }
@@ -130,7 +130,7 @@
     au < finished ; crawling ; 2017 ; Elemente der Mathematik Volume 72 ; 72 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Elemente der Mathematik Volume 73 ; 73 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Elemente der Mathematik Volume 74 ; 74 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2020 ; Elemente der Mathematik Volume 75 ; 75 ; >
+    au < deepCrawl ; exists ; 2020 ; Elemente der Mathematik Volume 75 ; 75 ; >
     au < manifest ; exists ; 2021 ; Elemente der Mathematik Volume 76 ; 76 ; >
 
   }
@@ -183,7 +183,7 @@
     au < finished ; crawling ; 2017 ; Groups, Geometry, and Dynamics Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Groups, Geometry, and Dynamics Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Groups, Geometry, and Dynamics Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Groups, Geometry, and Dynamics Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2020 ; Groups, Geometry, and Dynamics Volume 14 ; 14 ; >
     au < manifest ; exists ; 2021 ; Groups, Geometry, and Dynamics Volume 15 ; 15 ; >
 
   }
@@ -221,7 +221,7 @@
     au < finished ; crawling ; 2017 ; Interfaces and Free Boundaries Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Interfaces and Free Boundaries Volume 20 ; 20 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Interfaces and Free Boundaries Volume 21 ; 21 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Interfaces and Free Boundaries Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2020 ; Interfaces and Free Boundaries Volume 22 ; 22 ; >
     au < manifest ; exists ; 2021 ; Interfaces and Free Boundaries Volume 23 ; 23 ; >
 
   }
@@ -241,7 +241,7 @@
     au < finished ; crawling ; 2017 ; Journal of Combinatorial Algebra Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Combinatorial Algebra Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; Journal of Combinatorial Algebra Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Journal of Combinatorial Algebra Volume 4 ; 4 ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of Combinatorial Algebra Volume 4 ; 4 ; >
     au < manifest ; exists ; 2021 ; Journal of Combinatorial Algebra Volume 5 ; 5 ; >
 
   }
@@ -264,7 +264,7 @@
     au < finished ; crawling ; 2017 ; Journal of Fractal Geometry Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Fractal Geometry Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal of Fractal Geometry Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2020 ; Journal of Fractal Geometry Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of Fractal Geometry Volume 7 ; 7 ; >
     au < manifest ; exists ; 2021 ; Journal of Fractal Geometry Volume 8 ; 8 ; >
 
   }
@@ -294,7 +294,7 @@
     au < finished ; crawling ; 2017 ; Journal of Noncommutative Geometry Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Journal of Noncommutative Geometry Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; Journal of Noncommutative Geometry Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Journal of Noncommutative Geometry Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of Noncommutative Geometry Volume 14 ; 14 ; >
     au < manifest ; exists ; 2021 ; Journal of Noncommutative Geometry Volume 15 ; 15 ; >
 
   }
@@ -320,7 +320,7 @@
     au < finished ; crawling ; 2017 ; Journal of Spectral Theory Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Journal of Spectral Theory Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal of Spectral Theory Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2020 ; Journal of Spectral Theory Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of Spectral Theory Volume 10 ; 10 ; >
     au < manifest ; exists ; 2021 ; Journal of Spectral Theory Volume 11 ; 11 ; >
 
   }
@@ -358,7 +358,7 @@
     au < finished ; crawling ; 2017 ; Journal of the European Mathematical Society Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Journal of the European Mathematical Society Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal of the European Mathematical Society Volume 21 ; 21 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Journal of the European Mathematical Society Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of the European Mathematical Society Volume 22 ; 22 ; >
     au < manifest ; exists ; 2021 ; Journal of the European Mathematical Society Volume 23 ; 23 ; >
 
   }
@@ -386,7 +386,7 @@
     au < finished ; crawling ; 2017 ; L’Enseignement Mathématique Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; L’Enseignement Mathématique Volume 64 ; 64 ; >
     au < manifest ; exists ; 2019 ; L’Enseignement Mathématique Volume 65 ; 65 ; >
-    au < crawling ; exists ; 2020 ; L’Enseignement Mathématique Volume 66 ; 66 ; >
+    au < deepCrawl ; exists ; 2020 ; L’Enseignement Mathématique Volume 66 ; 66 ; >
     au < expected ; exists ; 2021 ; L’Enseignement Mathématique Volume 67 ; 67 ; >
 
   }
@@ -416,7 +416,7 @@
     au < finished ; finished ; 2017 ; Portugaliae Mathematica Volume 74 ; 74 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Portugaliae Mathematica Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Portugaliae Mathematica Volume 76 ; 76 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Portugaliae Mathematica Volume 77 ; 77 ; >
+    au < deepCrawl ; exists ; 2020 ; Portugaliae Mathematica Volume 77 ; 77 ; >
     au < manifest ; exists ; 2021 ; Portugaliae Mathematica Volume 78 ; 78 ; >
 
   }
@@ -488,7 +488,7 @@
     au < finished ; finished ; 2017 ; Publications of the Research Institute for Mathematical Sciences Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Publications of the Research Institute for Mathematical Sciences Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; Publications of the Research Institute for Mathematical Sciences Volume 55 ; 55 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Publications of the Research Institute for Mathematical Sciences Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2020 ; Publications of the Research Institute for Mathematical Sciences Volume 56 ; 56 ; >
     au < manifest ; exists ; 2021 ; Publications of the Research Institute for Mathematical Sciences Volume 57 ; 57 ; >
 
   }
@@ -515,7 +515,7 @@
     au < finished ; crawling ; 2017 ; Quantum Topology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Quantum Topology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; Quantum Topology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2020 ; Quantum Topology Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; Quantum Topology Volume 11 ; 11 ; >
     au < manifest ; exists ; 2021 ; Quantum Topology Volume 12 ; 12 ; >
 
   }
@@ -556,7 +556,7 @@
     au < finished ; crawling ; 2018 ; Rendiconti del Seminario Matematico della Università di Padova Volume 140 ; 140 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Rendiconti del Seminario Matematico della Università di Padova Volume 141 ; 141 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; Rendiconti del Seminario Matematico della Università di Padova Volume 142 ; 142 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Rendiconti del Seminario Matematico della Università di Padova Volume 143 ; 143 ; >
+    au < deepCrawl ; exists ; 2020 ; Rendiconti del Seminario Matematico della Università di Padova Volume 143 ; 143 ; >
     au < manifest ; exists ; 2020 ; Rendiconti del Seminario Matematico della Università di Padova Volume 144 ; 144 ; >
     au < manifest ; exists ; 2021 ; Rendiconti del Seminario Matematico della Università di Padova Volume 145 ; 145 ; >
     au < expected ; exists ; 2021 ; Rendiconti del Seminario Matematico della Università di Padova Volume 146 ; 146 ; >
@@ -589,7 +589,7 @@
     au < finished ; crawling ; 2017 ; Rendiconti Lincei - Matematica e Applicazioni Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Rendiconti Lincei - Matematica e Applicazioni Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; Rendiconti Lincei - Matematica e Applicazioni Volume 30 ; 30 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Rendiconti Lincei - Matematica e Applicazioni Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2020 ; Rendiconti Lincei - Matematica e Applicazioni Volume 31 ; 31 ; >
     au < manifest ; exists ; 2021 ; Rendiconti Lincei - Matematica e Applicazioni Volume 32 ; 32 ; >
 
   }
@@ -641,7 +641,7 @@
     au < finished ; finished ; 2017 ; Revista Matemática Iberoamericana Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Revista Matemática Iberoamericana Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; Revista Matemática Iberoamericana Volume 35 ; 35 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Revista Matemática Iberoamericana Volume 36 ; 36 ; >
+    au < deepCrawl ; exists ; 2020 ; Revista Matemática Iberoamericana Volume 36 ; 36 ; >
     au < manifest ; exists ; 2021 ; Revista Matemática Iberoamericana Volume 37 ; 37 ; >
 
   }
@@ -696,7 +696,7 @@
     au < finished ; finished ; 2017 ; Zeitschrift für Analysis und ihre Anwendungen Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Zeitschrift für Analysis und ihre Anwendungen Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Zeitschrift für Analysis und ihre Anwendungen Volume 38 ; 38 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Zeitschrift für Analysis und ihre Anwendungen Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2020 ; Zeitschrift für Analysis und ihre Anwendungen Volume 39 ; 39 ; >
     au < manifest ; exists ; 2021 ; Zeitschrift für Analysis und ihre Anwendungen Volume 40 ; 40 ; >
 
   }

@@ -11541,7 +11541,7 @@
     au < manifest ; exists ; 1997 ; Records Management Journal Volume 7 ; 7 ; >
     au < manifest ; exists ; 1998 ; Records Management Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 1999 ; Records Management Journal Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2000 ; Records Management Journal Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2000 ; Records Management Journal Volume 10 ; 10 ; >
     au < manifest ; exists ; 2001 ; Records Management Journal Volume 11 ; 11 ; >
     au < manifest ; exists ; 2002 ; Records Management Journal Volume 12 ; 12 ; >
     au < manifest ; exists ; 2003 ; Records Management Journal Volume 13 ; 13 ; >
@@ -11560,8 +11560,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Records Management Journal Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Records Management Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Records Management Journal Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2019 ; Records Management Journal Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2020 ; Records Management Journal Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2019 ; Records Management Journal Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2020 ; Records Management Journal Volume 30 ; 30 ; >
     au < crawling ; exists ; 2021 ; Records Management Journal Volume 31 ; 31 ; >
 
   }
@@ -11659,7 +11659,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Reference Services Review Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Reference Services Review Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Reference Services Review Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2019 ; Reference Services Review Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2019 ; Reference Services Review Volume 47 ; 47 ; >
     au < crawling ; exists ; 2020 ; Reference Services Review Volume 48 ; 48 ; >
     au < crawling ; exists ; 2021 ; Reference Services Review Volume 49 ; 49 ; >
 
@@ -11694,7 +11694,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Review of Accounting and Finance Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Review of Accounting and Finance Volume 17 ; 17 ; >
     au < manifest ; exists ; 2019 ; Review of Accounting and Finance Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2020 ; Review of Accounting and Finance Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2020 ; Review of Accounting and Finance Volume 19 ; 19 ; >
     au < expected ; exists ; 2021 ; Review of Accounting and Finance Volume 20 ; 20 ; >
 
   }
@@ -11754,8 +11754,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Safer Communities: A journal of practice, opinion, policy and research Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Safer Communities: A journal of practice, opinion, policy and research Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Safer Communities: A journal of practice, opinion, policy and research Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2019 ; Safer Communities: A journal of practice, opinion, policy and research Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2020 ; Safer Communities: A journal of practice, opinion, policy and research Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2019 ; Safer Communities: A journal of practice, opinion, policy and research Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2020 ; Safer Communities: A journal of practice, opinion, policy and research Volume 19 ; 19 ; >
     au < crawling ; exists ; 2021 ; Safer Communities: A journal of practice, opinion, policy and research Volume 20 ; 20 ; >
 
   }
@@ -11809,8 +11809,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Sensor Review Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Sensor Review Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Sensor Review Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2019 ; Sensor Review Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2020 ; Sensor Review Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2019 ; Sensor Review Volume 39 ; 39 ; >
+    au < deepCrawl ; exists ; 2020 ; Sensor Review Volume 40 ; 40 ; >
     au < crawling ; exists ; 2021 ; Sensor Review Volume 41 ; 41 ; >
 
   }
@@ -11831,8 +11831,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Smart and Sustainable Built Environment Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Smart and Sustainable Built Environment Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Smart and Sustainable Built Environment Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; Smart and Sustainable Built Environment Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2020 ; Smart and Sustainable Built Environment Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2019 ; Smart and Sustainable Built Environment Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2020 ; Smart and Sustainable Built Environment Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; Smart and Sustainable Built Environment Volume 10 ; 10 ; >
 
   }
@@ -11882,7 +11882,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Social Enterprise Journal Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Social Enterprise Journal Volume 14 ; 14 ; >
     au < manifest ; exists ; 2019 ; Social Enterprise Journal Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; Social Enterprise Journal Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2020 ; Social Enterprise Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; Social Enterprise Journal Volume 17 ; 17 ; >
 
   }
@@ -11913,7 +11913,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Social Responsibility Journal Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Social Responsibility Journal Volume 14 ; 14 ; >
     au < manifest ; exists ; 2019 ; Social Responsibility Journal Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; Social Responsibility Journal Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2020 ; Social Responsibility Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; Social Responsibility Journal Volume 17 ; 17 ; >
 
   }
@@ -11943,7 +11943,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Society and Business Review Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Society and Business Review Volume 13 ; 13 ; >
     au < manifest ; exists ; 2019 ; Society and Business Review Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2020 ; Society and Business Review Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2020 ; Society and Business Review Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; Society and Business Review Volume 16 ; 16 ; >
 
   }
@@ -11970,7 +11970,7 @@
     au < manifest ; exists ; 1997 ; Soldering & Surface Mount Technology Volume 9 ; 9 ; >
     au < manifest ; exists ; 1998 ; Soldering & Surface Mount Technology Volume 10 ; 10 ; >
     au < manifest ; exists ; 1999 ; Soldering & Surface Mount Technology Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2000 ; Soldering & Surface Mount Technology Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2000 ; Soldering & Surface Mount Technology Volume 12 ; 12 ; >
     au < manifest ; exists ; 2001 ; Soldering & Surface Mount Technology Volume 13 ; 13 ; >
     au < manifest ; exists ; 2002 ; Soldering & Surface Mount Technology Volume 14 ; 14 ; >
     au < manifest ; exists ; 2003 ; Soldering & Surface Mount Technology Volume 15 ; 15 ; >
@@ -11989,8 +11989,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Soldering & Surface Mount Technology Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Soldering & Surface Mount Technology Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Soldering & Surface Mount Technology Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2019 ; Soldering & Surface Mount Technology Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2020 ; Soldering & Surface Mount Technology Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2019 ; Soldering & Surface Mount Technology Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2020 ; Soldering & Surface Mount Technology Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; Soldering & Surface Mount Technology Volume 33 ; 33 ; >
 
   }
@@ -12026,8 +12026,8 @@
 
     au < doNotProcess ; doNotProcess ; 2017 ; South Asian Journal of Business Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; South Asian Journal of Business Studies Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2019 ; South Asian Journal of Business Studies Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2020 ; South Asian Journal of Business Studies Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2019 ; South Asian Journal of Business Studies Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2020 ; South Asian Journal of Business Studies Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; South Asian Journal of Business Studies Volume 10 ; 10 ; >
 
   }
@@ -12051,7 +12051,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Sport, Business and Management: An International Journal Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Sport, Business and Management: An International Journal Volume 8 ; 8 ; >
     au < crawling ; exists ; 2019 ; Sport, Business and Management: An International Journal Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2020 ; Sport, Business and Management: An International Journal Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2020 ; Sport, Business and Management: An International Journal Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; Sport, Business and Management: An International Journal Volume 11 ; 11 ; >
 
   }
@@ -12085,8 +12085,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Strategic Direction Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Strategic Direction Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Strategic Direction Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2019 ; Strategic Direction Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2020 ; Strategic Direction Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2019 ; Strategic Direction Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2020 ; Strategic Direction Volume 36 ; 36 ; >
     au < crawling ; exists ; 2021 ; Strategic Direction Volume 37 ; 37 ; >
 
   }
@@ -12118,7 +12118,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Strategic HR Review Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Strategic HR Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 2019 ; Strategic HR Review Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2020 ; Strategic HR Review Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2020 ; Strategic HR Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 2021 ; Strategic HR Review Volume 20 ; 20 ; >
 
   }
@@ -12160,8 +12160,8 @@
 
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Global Operations and Strategic Sourcing Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Global Operations and Strategic Sourcing Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2019 ; Journal of Global Operations and Strategic Sourcing Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2020 ; Journal of Global Operations and Strategic Sourcing Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2019 ; Journal of Global Operations and Strategic Sourcing Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2020 ; Journal of Global Operations and Strategic Sourcing Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; Journal of Global Operations and Strategic Sourcing Volume 14 ; 14 ; >
 
   }
@@ -12305,8 +12305,8 @@
 
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Building Pathology and Adaptation Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Building Pathology and Adaptation Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Building Pathology and Adaptation Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Building Pathology and Adaptation Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Building Pathology and Adaptation Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Building Pathology and Adaptation Volume 38 ; 38 ; >
     au < crawling ; exists ; 2021 ; International Journal of Building Pathology and Adaptation Volume 39 ; 39 ; >
 
   }
@@ -12358,7 +12358,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Studies in Economics and Finance Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Studies in Economics and Finance Volume 35 ; 35 ; >
     au < manifest ; exists ; 2019 ; Studies in Economics and Finance Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2020 ; Studies in Economics and Finance Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2020 ; Studies in Economics and Finance Volume 37 ; 37 ; >
     au < crawling ; exists ; 2021 ; Studies in Economics and Finance Volume 38 ; 38 ; >
 
   }
@@ -12398,7 +12398,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Supply Chain Management: An International Journal Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Supply Chain Management: An International Journal Volume 23 ; 23 ; >
     au < manifest ; exists ; 2019 ; Supply Chain Management: An International Journal Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2020 ; Supply Chain Management: An International Journal Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2020 ; Supply Chain Management: An International Journal Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; Supply Chain Management: An International Journal Volume 26 ; 26 ; >
 
   }
@@ -12424,7 +12424,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Sustainability Accounting, Management and Policy Journal Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Sustainability Accounting, Management and Policy Journal Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Sustainability Accounting, Management and Policy Journal Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2020 ; Sustainability Accounting, Management and Policy Journal Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; Sustainability Accounting, Management and Policy Journal Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; Sustainability Accounting, Management and Policy Journal Volume 12 ; 12 ; >
 
   }
@@ -12465,7 +12465,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Team Performance Management Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Team Performance Management Volume 24 ; 24 ; >
     au < manifest ; exists ; 2019 ; Team Performance Management Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2020 ; Team Performance Management Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2020 ; Team Performance Management Volume 26 ; 26 ; >
     au < crawling ; exists ; 2021 ; Team Performance Management Volume 27 ; 27 ; >
 
   }
@@ -12505,7 +12505,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 23 ; 23 ; >
     au < manifest ; exists ; 2019 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2020 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2020 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 25 ; 25 ; >
     au < crawling ; exists ; 2021 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 26 ; 26 ; >
 
   }
@@ -12529,7 +12529,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 39 ; 39 ; >
     au < frozen ; exists ; 2019 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2020 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 41 ; 41 ; >
+    au < deepCrawl ; exists ; 2020 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 41 ; 41 ; >
     au < crawling ; exists ; 2021 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 42 ; 42 ; >
 
   }
@@ -12619,7 +12619,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Tourism Review Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Tourism Review Volume 73 ; 73 ; >
     au < manifest ; exists ; 2019 ; Tourism Review Volume 74 ; 74 ; >
-    au < crawling ; exists ; 2020 ; Tourism Review Volume 75 ; 75 ; >
+    au < deepCrawl ; exists ; 2020 ; Tourism Review Volume 75 ; 75 ; >
     au < crawling ; exists ; 2021 ; Tourism Review Volume 76 ; 76 ; >
 
   }
@@ -12649,7 +12649,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; The TQM Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The TQM Journal Volume 30 ; 30 ; >
     au < manifest ; exists ; 2019 ; The TQM Journal Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2020 ; The TQM Journal Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2020 ; The TQM Journal Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; The TQM Journal Volume 33 ; 33 ; >
 
   }
@@ -12749,7 +12749,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Transforming Government: People, Process and Policy Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Transforming Government: People, Process and Policy Volume 12 ; 12 ; >
     au < manifest ; exists ; 2019 ; Transforming Government: People, Process and Policy Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2020 ; Transforming Government: People, Process and Policy Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2020 ; Transforming Government: People, Process and Policy Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; Transforming Government: People, Process and Policy Volume 15 ; 15 ; >
 
   }
@@ -12947,7 +12947,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 22 ; 22 ; >
     au < manifest ; exists ; 2019 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2020 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 24 ; 24 ; >
+    au < deepCrawl ; exists ; 2020 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 24 ; 24 ; >
     au < crawling ; exists ; 2021 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 25 ; 25 ; >
 
   }
@@ -12987,8 +12987,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2019 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2020 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2019 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2020 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 17 ; 17 ; >
 
   }
@@ -13012,8 +13012,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; World Journal of Science, Technology and Sustainable Development Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; World Journal of Science, Technology and Sustainable Development Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; World Journal of Science, Technology and Sustainable Development Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2019 ; World Journal of Science, Technology and Sustainable Development Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2020 ; World Journal of Science, Technology and Sustainable Development Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2019 ; World Journal of Science, Technology and Sustainable Development Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2020 ; World Journal of Science, Technology and Sustainable Development Volume 17 ; 17 ; >
       au < crawling ; exists ; 2021 ; World Journal of Science, Technology and Sustainable Development Volume 18 ; 18 ; >
 
   }
@@ -13039,8 +13039,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Worldwide Hospitality and Tourism Themes Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Worldwide Hospitality and Tourism Themes Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Worldwide Hospitality and Tourism Themes Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2019 ; Worldwide Hospitality and Tourism Themes Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2020 ; Worldwide Hospitality and Tourism Themes Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2019 ; Worldwide Hospitality and Tourism Themes Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2020 ; Worldwide Hospitality and Tourism Themes Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; Worldwide Hospitality and Tourism Themes Volume 13 ; 13 ; >
 
   }
@@ -13092,7 +13092,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 19 ; 19 ; >
     au < finished ; manifest ; 2019 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 ; >
     au < manifest ; exists ; 2021 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 22 ; 22 ; >
 
   }
