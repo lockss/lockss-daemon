@@ -57,7 +57,7 @@ import zeep.exceptions
 import zeep.helpers
 import zeep.transports
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth
+from wsutil import datems, datetimems, durationms, requests_basic_auth, file_lines
 
 #
 # Library
@@ -370,7 +370,7 @@ class _HasherServiceOptions(object):
 # FIXME        if len(args) != 0: parser.error('extraneous arguments: %s' % (' '.join(args)))
         # hosts
         self.hosts = args.host[:]
-        for f in args.hosts: self.hosts.extend(_file_lines(f))
+        for f in args.hosts: self.hosts.extend(file_lines(f))
         if len(self.hosts) == 0: parser.error('at least one target host is required')
         # auid/url
         self.auid = args.auid
@@ -438,13 +438,6 @@ def _do_hashes(options):
             options.hosts):
         if result is False:
             sys.stderr.write('Warning: not found on %s\n' % (host,))
-
-
-# Last modified 2015-08-31
-def _file_lines(fstr):
-    with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-    if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
-    return ret
 
 def _make_client(host, username, password):
     session = requests.Session()

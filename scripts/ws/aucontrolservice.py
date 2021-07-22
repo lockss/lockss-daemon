@@ -58,8 +58,7 @@ import zeep.helpers
 import zeep.transports
 import zeep.exceptions
 
-from wsutil import requests_basic_auth
-
+from wsutil import requests_basic_auth, file_lines
 
 def request_deep_crawl_by_id(host, username, password, auid, refetch_depth, priority, force):
     client = _make_client(host, requests_basic_auth(username, password))
@@ -114,7 +113,7 @@ class _AuControlServiceOptions(object):
 
         # AUIDs
         group = parser.add_argument_group('Target AUIDs')
-        group.add_argument('--auid', help='add AUID to list of target AUIDs')
+        group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
         group.add_argument('--auids', action='append', default=list(), metavar='AFILE',
                            help='add AUIDs in AFILE to list of target AUIDs')
         # AUID operations
@@ -133,9 +132,8 @@ class _AuControlServiceOptions(object):
         super(_AuControlServiceOptions, self).__init__()
         if len(list(filter(None, [args.request_deep_crawl_by_id, args.request_deep_crawl_by_id_list]))) != 1:
             parser.error('exactly one of --request-deep-crawl-by-id --request-deep-crawl-by-id-list is required')
-        self.auid=args.auid
         self.auids = args.auid[:]
-        for f in args.auids: self.auids.extend(_file_lines(f))
+        for f in args.auids: self.auids.extend(file_lines(f))
         # request_deep_crawl_by_id/request_deep_crawl_by_id_list
         self.request_deep_crawl_by_id=args.request_deep_crawl_by_id
         self.request_deep_crawl_by_id_list=args.request_deep_crawl_by_id_list
@@ -145,12 +143,6 @@ class _AuControlServiceOptions(object):
         self.force = args.force
         self.priority = args.priority
         self.refetch_depth = args.refetch_depth
-
-def _file_lines(fstr):
-    with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-    if len(ret) == 0: sys.exit(f'Error: {fstr} contains no meaningful lines')
-    return ret
-
 
 def _dispatch(options):
     if options.request_deep_crawl_by_id:

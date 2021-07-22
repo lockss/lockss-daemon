@@ -58,7 +58,7 @@ import zeep.exceptions
 import zeep.helpers
 import zeep.transports
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth
+from wsutil import datems, datetimems, durationms, requests_basic_auth, file_lines
 
 #
 # Library
@@ -374,11 +374,11 @@ class _ContentConfigurationServiceOptions(object):
       parser.error('at most one of --table-output, --text-output can be specified')
     # hosts
     self.hosts = args.host[:]
-    for f in args.hosts: self.hosts.extend(_file_lines(f))
+    for f in args.hosts: self.hosts.extend(file_lines(f))
     if len(self.hosts) == 0: parser.error('at least one target host is required')
     # auids
     self.auids = args.auid[:]
-    for f in args.auids: self.auids.extend(_file_lines(f))
+    for f in args.auids: self.auids.extend(file_lines(f))
     # get_auids/get_auids_names/is_daemon_ready/is_daemon_ready_quiet
     if len(self.auids) == 0: parser.error('at least one target AUID is required')
     # au_operation
@@ -487,12 +487,6 @@ def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
     _output_record(options, rowpart + [x[j] for x in colkeys])
   for rowkey in sorted(set([k[0] for k in data]), key=rowsort):
     _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
-
-# Last modified 2015-08-31
-def _file_lines(fstr):
-  with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
-  return ret
 
 def _make_client(host, username, password):
     session = requests.Session()

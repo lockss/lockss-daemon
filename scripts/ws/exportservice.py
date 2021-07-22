@@ -56,6 +56,9 @@ import zeep.transports
 
 import logging.config
 
+from wsutil import file_lines
+
+
 #
 # Library
 #
@@ -158,11 +161,11 @@ class _ExportServiceOptions(object):
       parser.error('--auid, --auids can only be applied to --create-export-files')
     # hosts
     self.hosts = args.host[:]
-    for f in args.hosts: self.hosts.extend(_file_lines(f))
+    for f in args.hosts: self.hosts.extend(file_lines(f))
     if len(self.hosts) == 0: parser.error('at least one target host is required')
     # auids
     self.auids = args.auid[:]
-    for f in args.auids: self.auids.extend(_file_lines(f))
+    for f in args.auids: self.auids.extend(file_lines(f))
     # get_auids/get_auids_names/is_daemon_ready/is_daemon_ready_quiet
     if len(self.auids) == 0: parser.error('at least one target AUID is required')
     # create_export_files
@@ -210,13 +213,6 @@ def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
     _output_record(options, rowpart + [x[j] for x in colkeys])
   for rowkey in sorted(set([k[0] for k in data]), key=rowsort):
     _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
-
-# Last modified 2021-05-28
-def _file_lines(fstr):
-  with open(os.path.expanduser(fstr)) as f:
-    ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
-  return ret
 
 _AU_STATUS = {
   'name': ('File name', lambda r: r.get('name')),

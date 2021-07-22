@@ -38,7 +38,7 @@ POSSIBILITY OF SUCH DAMAGE.
 __version__ = '0.3.0'
 
 from datetime import date, datetime
-import sys
+import sys, os
 
 try: import requests.auth
 except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
@@ -96,3 +96,15 @@ def requests_basic_auth(username, password):
     '''
     return requests.auth.HTTPBasicAuth(username, password)
 
+
+# Last modified 2021-07-22 @markom
+def file_lines(fstr):
+  with open(os.path.expanduser(fstr)) as f:
+    ret = list(
+      filter(
+        lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]
+      )
+    )
+  if len(ret) == 0:
+    sys.exit('Error: {} contains no meaningful lines'.format(fstr))
+  return ret

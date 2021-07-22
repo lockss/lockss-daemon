@@ -57,7 +57,8 @@ import zeep.exceptions
 import zeep.helpers
 import zeep.transports
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth
+from wsutil import datems, datetimems, durationms, requests_basic_auth, file_lines
+
 
 #
 # Library
@@ -493,11 +494,11 @@ class _DaemonStatusServiceOptions(object):
       parser.error('--group-by-field can only be applied to --get-au-status, --query-aus')
     # hosts
     self.hosts = args.host[:]
-    for f in args.hosts: self.hosts.extend(_file_lines(f))
+    for f in args.hosts: self.hosts.extend(file_lines(f))
     if len(self.hosts) == 0: parser.error('at least one target host is required')
     # auids
     self.auids = args.auid[:]
-    for f in args.auids: self.auids.extend(_file_lines(f))
+    for f in args.auids: self.auids.extend(file_lines(f))
     # get_auids/get_auids_names/is_daemon_ready/is_daemon_ready_quiet
     self.get_auids = args.get_auids
     self.get_auids_names = args.get_auids_names
@@ -575,12 +576,6 @@ def _output_table(options, data, rowheaders, lstcolkeys):
     _output_record(options, rowpart + [x[j] for x in colkeys])
   for rowkey in sorted(set([k[0] for k in data])):
     _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
-
-# Last modified 2020-10-01
-def _file_lines(fstr):
-    with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-    if len(ret) == 0: sys.exit('Error: {} contains no meaningful lines'.format(fstr))
-    return ret
 
 _AU_STATUS = {
   'accessType': ('Access type', lambda r: r.get('accessType')),
