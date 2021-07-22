@@ -7629,7 +7629,7 @@
     au < crawling ; exists ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Nuklearmedizin Volume 47 ; 47 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Nuklearmedizin Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Nuklearmedizin Volume 49 ; 49 ; reingest3.clockss.org:8083 >
@@ -7642,7 +7642,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Nuklearmedizin Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Nuklearmedizin Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nuklearmedizin Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Nuklearmedizin Volume 59 ; 59 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Nuklearmedizin Volume 59 ; 59 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Nuklearmedizin Volume 60 ; 60 ; >
 
   }
@@ -7669,7 +7669,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Onkologische Welt Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Onkologische Welt Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Onkologische Welt Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Onkologische Welt Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Onkologische Welt Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Onkologische Welt Volume 12 ; 12 ; >
 
   }
@@ -7849,7 +7849,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 45 ; 45 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 48 ; 48 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 49 ; 49 ; >
 
   }
@@ -7883,7 +7883,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 19 ; 19 ; >
 
   }
@@ -7903,7 +7903,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Yearbook of Medical Informatics Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Yearbook of Medical Informatics Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 29 ; 29 ; >
     au < expected ; exists ; 2021 ; 2021 ; Yearbook of Medical Informatics Volume 30 ; 30 ; >
 
   }
