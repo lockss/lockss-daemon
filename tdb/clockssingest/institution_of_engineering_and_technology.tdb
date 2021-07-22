@@ -80,7 +80,7 @@
       au < finished ; finished ; 2017 ; Electronics Letters Volume 53 ; 53 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Electronics Letters Volume 54 ; 54 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Electronics Letters Volume 55 ; 55 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Electronics Letters Volume 56 ; 56 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Electronics Letters Volume 56 ; 56 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; Electronics Letters Volume 57 ; 57 ; https://digital-library.theiet.org/ ; >
 
     }
@@ -109,7 +109,7 @@
       au < finished ; finished ; 2017 ; Engineering & Technology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Engineering & Technology Volume 13 ; 13 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Engineering & Technology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Engineering & Technology Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Engineering & Technology Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
       au < crawling ; exists ; 2021 ; Engineering & Technology Volume 16 ; 16 ; https://digital-library.theiet.org/ ; >
 
 
@@ -133,7 +133,7 @@
       au < finished ; finished ; 2017 ; IET Biometrics Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; IET Biometrics Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; IET Biometrics Volume 8 ; 8 ; https://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; IET Biometrics Volume 9 ; 9 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; IET Biometrics Volume 9 ; 9 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Biometrics Volume 10 ; 10 ; https://digital-library.theiet.org/ ; >
 
 
@@ -162,7 +162,7 @@
       au < finished ; finished ; 2017 ; IET Circuits, Devices and Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; IET Circuits, Devices and Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; IET Circuits, Devices and Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; IET Circuits, Devices and Systems Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; IET Circuits, Devices and Systems Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Circuits, Devices and Systems Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
@@ -190,7 +190,7 @@
       au < finished ; crawling ; 2017 ; IET Communications Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; IET Communications Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; IET Communications Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; IET Communications Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; IET Communications Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Communications Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
@@ -218,7 +218,7 @@
       au < finished ; finished ; 2017 ; IET Computers & Digital Techniques Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; IET Computers & Digital Techniques Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; IET Computers & Digital Techniques Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; IET Computers & Digital Techniques Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; IET Computers & Digital Techniques Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Computers & Digital Techniques Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
@@ -246,7 +246,7 @@
       au < finished ; crawling ; 2017 ; IET Computer Vision Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; IET Computer Vision Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; IET Computer Vision Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; IET Computer Vision Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; IET Computer Vision Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Computer Vision Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
     }
