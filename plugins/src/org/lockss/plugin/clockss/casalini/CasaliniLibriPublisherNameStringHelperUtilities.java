@@ -109,6 +109,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("dipartimento di filosofia università di bologna", "CLUEB");
       canonical.put("ecole francaise d'athenes", "Ecole française d'Athènes");
       canonical.put("école française d'athènes", "Ecole française d'Athènes");
+      canonical.put("école française de rome", "École française de Rome");
       canonical.put("edisud", "Edisud");
       canonical.put("edisud salerno", "Edisud Salerno");
       canonical.put("editions l'harmattan", "Editions L'Harmattan");
@@ -199,6 +200,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("licosia", "Licosia Edizioni");
       canonical.put("licosia edizioni", "Licosia Edizioni");
       canonical.put("loffredo editore", "Loffredo");
+      canonical.put("longo", "Longo");
       canonical.put("l. s. olschki", "Leo S. Olschki");
       canonical.put("l.s. olschki", "Leo S. Olschki");
       canonical.put("l.s. olschki department of italian the university of w. australia", "Leo S. Olschki");
@@ -206,6 +208,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("l.s. olschki regione toscana", "Leo S. Olschki");
       canonical.put("mardaga", "Mardaga");
       canonical.put("mandragora", "Mandragora");
+      canonical.put("marcianum press", "Marcianum Press");
       canonical.put("marco saya edizioni", "Marco Saya Edizioni");
       canonical.put("matauro", "Metauro"); //sic
       canonical.put("metauro", "Metauro");
@@ -226,6 +229,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("partagees", "Giannini Editore");
       canonical.put("partagées", "Giannini Editore");
       canonical.put("paris expérimental", "Paris Expérimental");
+      canonical.put("pacini", "Pacini");
       canonical.put("passigli", "Passigli");
       canonical.put("patron", "Pàtron Editore");
       canonical.put("pàtron", "Pàtron Editore");
@@ -286,6 +290,8 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("università la sapienza", "CLUEB");
       canonical.put("uranoscopo", "CLUEB");
       canonical.put("urbaniana university press", "Urbaniana University Press");
+      canonical.put("viella", "Viella");
+      canonical.put("viella società italiana delle storiche", "Viella");
       canonical.put("visor libros", "Visor Libros");
       canonical.put("vita e pensiero", "Vita e Pensiero");
       canonical.put("vita e pensiero universita", "Vita e Pensiero");
