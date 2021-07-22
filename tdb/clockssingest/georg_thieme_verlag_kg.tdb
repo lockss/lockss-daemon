@@ -4519,7 +4519,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 15 ; 15 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 16 ; 16 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 18 ; 18 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 20 ; 20 ; >
     au < finished ; finished ; 2011 ; 2011 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 21 ; 21 ; reingest1.clockss.org:8082 >
@@ -4531,7 +4531,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 28 ; 28 ; >
     au < finished ; manifest ; 2019 ; 2019 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; 2020 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 30 ; 30 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 31 ; 31 ; >
 
   }
@@ -4564,7 +4564,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; physiopraxis Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; physiopraxis Volume 16 ; 16 ; >
     au < finished ; manifest ; 2019 ; 2019 ; physiopraxis Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2020 ; 2020 ; physiopraxis Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; physiopraxis Volume 18 ; 18 ; >
     au < crawling ; exists ; 2021 ; 2021 ; physiopraxis Volume 19 ; 19 ; >
 
   }
@@ -4583,7 +4583,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; physioscience Volume 1 ; 1 ; >
     au < crawling ; exists ; 2006 ; 2006 ; physioscience Volume 2 ; 2 ; >
     au < crawling ; exists ; 2007 ; 2007 ; physioscience Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; physioscience Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; physioscience Volume 4 ; 4 ; >
     au < finished ; manifest ; 2009 ; 2009 ; physioscience Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; physioscience Volume 6 ; 6 ; >
     au < finished ; finished ; 2011 ; 2011 ; physioscience Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -4595,7 +4595,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; physioscience Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; physioscience Volume 14 ; 14 ; >
     au < finished ; manifest ; 2019 ; 2019 ; physioscience Volume 15 ; 15 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; 2020 ; physioscience Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; physioscience Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; 2021 ; physioscience Volume 17 ; 17 ; >
 
   }
@@ -4618,8 +4618,8 @@
     au < crawling ; exists ; 2004 ; 2004 ; PiD - Psychotherapie im Dialog Volume 5 ; 5 ; >
     au < crawling ; exists ; 2005 ; 2005 ; PiD - Psychotherapie im Dialog Volume 6 ; 6 ; >
     au < crawling ; exists ; 2006 ; 2006 ; PiD - Psychotherapie im Dialog Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; PiD - Psychotherapie im Dialog Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; PiD - Psychotherapie im Dialog Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; PiD - Psychotherapie im Dialog Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; PiD - Psychotherapie im Dialog Volume 9 ; 9 ; >
     au < finished ; manifest ; 2009 ; 2009 ; PiD - Psychotherapie im Dialog Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; PiD - Psychotherapie im Dialog Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; PiD - Psychotherapie im Dialog Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -4631,7 +4631,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; PiD - Psychotherapie im Dialog Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; PiD - Psychotherapie im Dialog Volume 19 ; 19 ; >
     au < finished ; manifest ; 2019 ; 2019 ; PiD - Psychotherapie im Dialog Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2020 ; 2020 ; PiD - Psychotherapie im Dialog Volume 21 ; 21 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; PiD - Psychotherapie im Dialog Volume 21 ; 21 ; >
     au < crawling ; exists ; 2021 ; 2021 ; PiD - Psychotherapie im Dialog Volume 22 ; 22 ; >
 
   }
@@ -4656,7 +4656,7 @@
    au < crawling ; exists ; 2004 ; 2004 ; Plant Biology Volume 6 ; 6 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Plant Biology Volume 7 ; 7 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Plant Biology Volume 8 ; 8 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Plant Biology Volume 9 ; 9 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Plant Biology Volume 9 ; 9 ; >
 
   }
 
@@ -4726,8 +4726,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Planta Medica Volume 70 ; 70 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Planta Medica Volume 71 ; 71 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Planta Medica Volume 72 ; 72 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Planta Medica Volume 73 ; 73 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Planta Medica Volume 74 ; 74 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Planta Medica Volume 73 ; 73 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Planta Medica Volume 74 ; 74 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Planta Medica Volume 75 ; 75 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Planta Medica Volume 76 ; 76 ; >
    au < finished ; finished ; 2011 ; 2011 ; Planta Medica Volume 77 ; 77 ; >
@@ -4739,7 +4739,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Planta Medica Volume 83 ; 83 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Planta Medica Volume 84 ; 84 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Planta Medica Volume 85 ; 85 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; Planta Medica Volume 86 ; 86 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Planta Medica Volume 86 ; 86 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Planta Medica Volume 87 ; 87 ; >
 
   }
@@ -4758,7 +4758,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Planta Medica International Open Volume 2 ; 2 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Planta Medica International Open Volume 3 ; 3 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Planta Medica International Open Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2020 ; 2020 ; Planta Medica International Open Volume 5 ; 5 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Planta Medica International Open Volume 5 ; 5 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Planta Medica International Open Volume 6 ; 6 ; >
 
   }
@@ -4799,7 +4799,7 @@
    au < crawling ; exists ; 2005 ; 2005 ; Pneumologie Volume 59 ; 59 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Pneumologie Volume 60 ; 60 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Pneumologie Volume 61 ; 61 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Pneumologie Volume 62 ; 62 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Pneumologie Volume 62 ; 62 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Pneumologie Volume 63 ; 63 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Pneumologie Volume 64 ; 64 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Pneumologie Volume 65 ; 65 ; reingest2.clockss.org:8085 >
@@ -4811,7 +4811,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Pneumologie Volume 71 ; 71 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Pneumologie Volume 72 ; 72 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Pneumologie Volume 73 ; 73 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; Pneumologie Volume 74 ; 74 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Pneumologie Volume 74 ; 74 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Pneumologie Volume 75 ; 75 ; >
 
   }
@@ -4834,8 +4834,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 54 ; 54 ; >
    au < crawling ; exists ; 2005 ; 2005 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 55 ; 55 ; >
    au < crawling ; exists ; 2006 ; 2006 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 56 ; 56 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 57 ; 57 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 58 ; 58 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 57 ; 57 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 58 ; 58 ; >
    au < finished ; manifest ; 2009 ; 2009 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 59 ; 59 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 60 ; 60 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 61 ; 61 ; reingest2.clockss.org:8085 >
@@ -4847,7 +4847,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 67 ; 67 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 68 ; 68 ; >
    au < finished ; manifest ; 2019 ; 2019 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 69 ; 69 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 70 ; 70 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 70 ; 70 ; >
    au < crawling ; exists ; 2021 ; 2021 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 71 ; 71 ; >
 
   }
@@ -4871,7 +4871,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; PSYCH up2date Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; PSYCH up2date Volume 12 ; 12 ; >
     au < finished ; manifest ; 2019 ; 2019 ; PSYCH up2date Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; 2020 ; PSYCH up2date Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; PSYCH up2date Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; 2021 ; PSYCH up2date Volume 15 ; 15 ; >
 
   }
@@ -4893,8 +4893,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Psych Pflege Heute Volume 10 ; 10 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Psych Pflege Heute Volume 11 ; 11 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Psych Pflege Heute Volume 12 ; 12 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Psych Pflege Heute Volume 13 ; 13 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Psych Pflege Heute Volume 14 ; 14 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Psych Pflege Heute Volume 13 ; 13 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Psych Pflege Heute Volume 14 ; 14 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Psych Pflege Heute Volume 15 ; 15 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Psych Pflege Heute Volume 16 ; 16 ; >
    au < finished ; finished ; 2011 ; 2011 ; Psych Pflege Heute Volume 17 ; 17 ; >
@@ -4906,7 +4906,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Psych Pflege Heute Volume 23 ; 23 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Psych Pflege Heute Volume 24 ; 24 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Psych Pflege Heute Volume 25 ; 25 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; Psych Pflege Heute Volume 26 ; 26 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Psych Pflege Heute Volume 26 ; 26 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Psych Pflege Heute Volume 27 ; 27 ; >
 
   }
@@ -4924,7 +4924,7 @@
     comment[years] = 2007-2012
 
    au < crawling ; exists ; 2007 ; 2007 ; Psychiatrie und Psychotherapie up2date Volume 1 ; 1 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Psychiatrie und Psychotherapie up2date Volume 2 ; 2 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Psychiatrie und Psychotherapie up2date Volume 2 ; 2 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Psychiatrie und Psychotherapie up2date Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Psychiatrie und Psychotherapie up2date Volume 4 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Psychiatrie und Psychotherapie up2date Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -4950,7 +4950,7 @@
    au < ready ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Psychiatrische Praxis Volume 33 ; 33 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Psychiatrische Praxis Volume 34 ; 34 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Psychiatrische Praxis Volume 35 ; 35 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Psychiatrische Praxis Volume 35 ; 35 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Psychiatrische Praxis Volume 36 ; 36 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Psychiatrische Praxis Volume 37 ; 37 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Psychiatrische Praxis Volume 38 ; 38 ; reingest2.clockss.org:8085 >
@@ -4962,7 +4962,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Psychiatrische Praxis Volume 44 ; 44 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Psychiatrische Praxis Volume 45 ; 45 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Psychiatrische Praxis Volume 46 ; 46 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2020 ; 2020 ; Psychiatrische Praxis Volume 47 ; 47 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Psychiatrische Praxis Volume 47 ; 47 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Psychiatrische Praxis Volume 48 ; 48 ; >
 
   }
@@ -4982,8 +4982,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 34 ; 34 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 34 ; 34 ; >
 
   }
 
@@ -5021,7 +5021,7 @@
    au < crawling ; exists ; 2005 ; 2005 ; Radiologie up2date Volume 5 ; 5 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Radiologie up2date Volume 6 ; 6 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Radiologie up2date Volume 7 ; 7 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Radiologie up2date Volume 8 ; 8 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Radiologie up2date Volume 8 ; 8 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Radiologie up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Radiologie up2date Volume 10 ; 10 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Radiologie up2date Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -5033,7 +5033,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Radiologie up2date Volume 17 ; 17 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Radiologie up2date Volume 18 ; 18 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Radiologie up2date Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2020 ; 2020 ; Radiologie up2date Volume 20 ; 20 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Radiologie up2date Volume 20 ; 20 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Radiologie up2date Volume 21 ; 21 ; >
 
   }
@@ -5061,7 +5061,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Radiopraxis Volume 10 ; 10 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Radiopraxis Volume 11 ; 11 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Radiopraxis Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; Radiopraxis Volume 13 ; 13 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Radiopraxis Volume 13 ; 13 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Radiopraxis Volume 14 ; 14 ; >
 
   }
@@ -5085,7 +5085,7 @@
    au < crawling ; exists ; 2005 ; 2005 ; Rehabilitation Die Volume 44 ; 44 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Rehabilitation Die Volume 45 ; 45 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Rehabilitation Die Volume 46 ; 46 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Rehabilitation Die Volume 47 ; 47 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Rehabilitation Die Volume 47 ; 47 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Rehabilitation Die Volume 48 ; 48 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Rehabilitation Die Volume 49 ; 49 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Rehabilitation Die Volume 50 ; 50 ; reingest2.clockss.org:8085 >
@@ -5097,7 +5097,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Rehabilitation Die Volume 56 ; 56 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Rehabilitation Die Volume 57 ; 57 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Rehabilitation Die Volume 58 ; 58 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; Rehabilitation Die Volume 59 ; 59 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Rehabilitation Die Volume 59 ; 59 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Rehabilitation Die Volume 60 ; 60 ; >
 
   }
@@ -5121,7 +5121,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; retten! Volume 6 ; 6 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; retten! Volume 7 ; 7 ; >
    au < finished ; manifest ; 2019 ; 2019 ; retten! Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; retten! Volume 9 ; 9 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; retten! Volume 9 ; 9 ; >
    au < crawling ; exists ; 2021 ; 2021 ; retten! Volume 10 ; 10 ; >
 
   }
@@ -5143,7 +5143,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 39 ; 39 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 40 ; 40 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 42 ; 42 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 42 ; 42 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 43 ; 43 ; >
 
   }
@@ -5161,7 +5161,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Revista Chilena de Ortopedia y Traumatología Volume 1 ; 1 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Chilena de Ortopedia y Traumatología Volume 2 ; 2 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Revista Chilena de Ortopedia y Traumatología Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-   au < crawling ; exists ; 2020 ; 2020 ; Revista Chilena de Ortopedia y Traumatología Volume 4 ; 4 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Chilena de Ortopedia y Traumatología Volume 4 ; 4 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Revista Chilena de Ortopedia y Traumatología Volume 5 ; 5 ; >
 
   }
@@ -5236,8 +5236,8 @@
     au < crawling ; exists ; 2004 ; 2004 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 176 ; 176 ; >
     au < crawling ; exists ; 2005 ; 2005 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 177 ; 177 ; >
     au < crawling ; exists ; 2006 ; 2006 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 178 ; 178 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 179 ; 179 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 180 ; 180 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 179 ; 179 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 180 ; 180 ; >
     au < finished ; manifest ; 2009 ; 2009 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 181 ; 181 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 182 ; 182 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 183 ; 183 ; reingest2.clockss.org:8085 >
@@ -5249,7 +5249,7 @@
     au < deepCrawl ; exists ; 2017 ; 2017 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 189 ; 189 ; >
     au < deepCrawl ; exists ; 2018 ; 2018 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 190 ; 190 ; >
     au < finished ; manifest ; 2019 ; 2019 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 191 ; 191 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; 2020 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 192 ; 192 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 192 ; 192 ; >
     au < crawling ; exists ; 2021 ; 2021 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 193 ; 193 ; >
 
   }
@@ -5290,8 +5290,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Hearing Volume 25 ; 25 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Hearing Volume 26 ; 26 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Seminars in Hearing Volume 27 ; 27 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Hearing Volume 28 ; 28 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Seminars in Hearing Volume 29 ; 29 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Seminars in Hearing Volume 28 ; 28 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Seminars in Hearing Volume 29 ; 29 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Hearing Volume 30 ; 30 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Hearing Volume 31 ; 31 ; >
    au < finished ; finished ; 2011 ; 2011 ; Seminars in Hearing Volume 32 ; 32 ; reingest2.clockss.org:8085 >
@@ -5303,7 +5303,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Hearing Volume 38 ; 38 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Hearing Volume 39 ; 39 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Seminars in Hearing Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; Seminars in Hearing Volume 41 ; 41 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Hearing Volume 41 ; 41 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Hearing Volume 42 ; 42 ; >
 
   }
@@ -5342,9 +5342,9 @@
    au < ready ; exists ; 2003 ; 2003 ; Seminars in Interventional Radiology Volume 20 ; 20 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Seminars in Interventional Radiology Volume 23 ; 23 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Interventional Radiology Volume 23 ; 23 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 25 ; 25 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 25 ; 25 ; >
    au < finished ; manifest ; 2009 ; 2009 ; Seminars in Interventional Radiology Volume 26 ; 26 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 27 ; 27 ; >
    au < finished ; finished ; 2011 ; 2011 ; Seminars in Interventional Radiology Volume 28 ; 28 ; >
@@ -5356,7 +5356,7 @@
    au < deepCrawl ; exists ; 2017 ; 2017 ; Seminars in Interventional Radiology Volume 34 ; 34 ; >
    au < deepCrawl ; exists ; 2018 ; 2018 ; Seminars in Interventional Radiology Volume 35 ; 35 ; >
    au < finished ; manifest ; 2019 ; 2019 ; Seminars in Interventional Radiology Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 2020 ; Seminars in Interventional Radiology Volume 37 ; 37 ; >
+   au < deepCrawl ; exists ; 2020 ; 2020 ; Seminars in Interventional Radiology Volume 37 ; 37 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Seminars in Interventional Radiology Volume 38 ; 38 ; >
 
   }
