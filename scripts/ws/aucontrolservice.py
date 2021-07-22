@@ -130,9 +130,13 @@ class _AuControlServiceOptions(object):
         super(_AuControlServiceOptions, self).__init__()
         if len(list(filter(None, [args.request_deep_crawl_by_id, args.request_deep_crawl_by_id_list]))) != 1:
             parser.error('exactly one of --request-deep-crawl-by-id --request-deep-crawl-by-id-list is required')
-        self.auid = args.auid[:]
-        self.auids = args.auid[:]
-        for f in args.auids: self.auids.extend(file_lines(f))
+        if args.request_deep_crawl_by_id:
+            if len(args.auid) != 1:
+                parser.error('exactly one AUID required when --request-deep-crawl-by-id is set')
+            self.auid = args.auid[0]
+        else:
+            self.auids = args.auid[:]
+            for f in args.auids: self.auids.extend(file_lines(f))
         # request_deep_crawl_by_id/request_deep_crawl_by_id_list
         self.request_deep_crawl_by_id=args.request_deep_crawl_by_id
         self.request_deep_crawl_by_id_list=args.request_deep_crawl_by_id_list
