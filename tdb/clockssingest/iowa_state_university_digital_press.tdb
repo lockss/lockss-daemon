@@ -11,11 +11,48 @@
     plugin = org.lockss.plugin.janeway.iowastatedp.ClockssIowaStateDPPlugin
     param[base_url] = https://www.iastatedigitalpress.com/
     param[oai_granularity] = YYYY-MM-DD
-    implicit < status ; status2 ; param[year] ; volume ; name ; hidden[proxy] >
+    implicit < status ; status2 ; year ; param[year] ; volume ; name ; hidden[proxy] >
     
-    #Contracted titles:
-    #Journal of Critical Thought and Praxis 2325-1204 https://www.iastatedigitalpress.com/jctp/	jctp
-    #Meat and Muscle Biology 2575-985X https://www.iastatedigitalpress.com/mmb/	mmb
+    #Titles under contract:
+    #Journal of Critical Thought and Praxis   2325-1204   https://www.iastatedigitalpress.com/jctp/
+    #Meat and Muscle Biology   2575-985X   https://www.iastatedigitalpress.com/mmb/
+
+  {
+      title <
+        name = Journal of Critical Thought and Praxis ;
+        eissn = 2325-1204
+      >
+
+      nondefparam[journal_id] = jctp
+
+      au < exists ; exists ; 2012 ; 2012 ; 1 ; Journal of Critical Thought and Praxis Volume 1 ; >
+      au < exists ; exists ; 2013 ; 2013 ; 2 ; Journal of Critical Thought and Praxis Volume 2 ; >
+      au < exists ; exists ; 2014 ; 2014 ; 3 ; Journal of Critical Thought and Praxis Volume 3 ; >
+      au < exists ; exists ; 2015 ; 2015 ; 4 ; Journal of Critical Thought and Praxis Volume 4 ; >
+      au < exists ; exists ; 2016 ; 2016 ; 5 ; Journal of Critical Thought and Praxis Volume 5 ; >
+      au < exists ; exists ; 2017 ; 2017 ; 6 ; Journal of Critical Thought and Praxis Volume 6 ; >
+      au < exists ; exists ; 2018 ; 2018 ; 7 ; Journal of Critical Thought and Praxis Volume 7 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 8 ; Journal of Critical Thought and Praxis Volume 8 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 9 ; Journal of Critical Thought and Praxis Volume 9 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 10 ; Journal of Critical Thought and Praxis Volume 10 ; >
+
+  }
+
+  {
+      title <
+        name = Meat and Muscle Biology ;
+        eissn = 2575-985X
+      >
+
+      nondefparam[journal_id] = mmb
+
+      au < exists ; exists ; 2017 ; 2017 ; 1 ; Meat and Muscle Biology Volume 1 ; >
+      au < exists ; exists ; 2018 ; 2018 ; 2 ; Meat and Muscle Biology Volume 2 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 3 ; Meat and Muscle Biology Volume 3 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 4 ; Meat and Muscle Biology Volume 4 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 5 ; Meat and Muscle Biology Volume 5 ; >
+
+  }
 
   {
   
@@ -27,9 +64,11 @@
     nondefparam[journal_id] = aglawdigest
 
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2018-01-01&until=2018-12-31
-    au < crawling ; exists ; 2018 ; 29 ; Agricultural Law Digest Volume 29 ; >
+    au < superseded ; exists ; 2018 ; 2018 ; 29 ; Agricultural Law Digest Volume 29 [superseded] ; >
+
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    au < crawling ; exists ; 2019 ; 30 ; Agricultural Law Digest Volume 30 ; >
+    au < superseded ; exists ; 2019 ; 2019 ; 30 ; Agricultural Law Digest Volume 30 [superseded] ; >
+
     #No longer publishing. Not in contract.
 
   }
@@ -107,26 +146,6 @@
 #
 #  }
 #
-  {
-      title <
-        name = Journal of Critical Thought and Praxis ;
-        eissn = 2325-1204
-      >
-
-      nondefparam[journal_id] = jctp
-
-      au < exists ; exists ; 2012 ; 1 ; Journal of Critical Thought and Praxis Volume 1 ; >
-      au < exists ; exists ; 2013 ; 2 ; Journal of Critical Thought and Praxis Volume 2 ; >
-      au < exists ; exists ; 2014 ; 3 ; Journal of Critical Thought and Praxis Volume 3 ; >
-      au < exists ; exists ; 2015 ; 4 ; Journal of Critical Thought and Praxis Volume 4 ; >
-      au < exists ; exists ; 2016 ; 5 ; Journal of Critical Thought and Praxis Volume 5 ; >
-      au < exists ; exists ; 2017 ; 6 ; Journal of Critical Thought and Praxis Volume 6 ; >
-      au < exists ; exists ; 2018 ; 7 ; Journal of Critical Thought and Praxis Volume 7 ; >
-      au < exists ; exists ; 2019 ; 8 ; Journal of Critical Thought and Praxis Volume 8 ; >
-      au < exists ; exists ; 2020 ; 9 ; Journal of Critical Thought and Praxis Volume 9 ; >
-      au < exists ; exists ; 2021 ; 10 ; Journal of Critical Thought and Praxis Volume 10 ; >
-
-  }
 #
 #  {
 #      title <
@@ -143,21 +162,6 @@
 #
 #  }
 #
-  {
-      title <
-        name = Meat and Muscle Biology ;
-        eissn = 2575-985X
-      >
-
-      nondefparam[journal_id] = mmb
-
-      au < exists ; exists ; 2017 ; 1 ; Meat and Muscle Biology Volume 1 ; >
-      au < exists ; exists ; 2018 ; 2 ; Meat and Muscle Biology Volume 2 ; >
-      au < exists ; exists ; 2019 ; 3 ; Meat and Muscle Biology Volume 3 ; >
-      au < exists ; exists ; 2020 ; 4 ; Meat and Muscle Biology Volume 4 ; >
-      au < exists ; exists ; 2021 ; 5 ; Meat and Muscle Biology Volume 5 ; >
-
-  }
 #
 #  {
 #      title <
