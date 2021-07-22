@@ -38,26 +38,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.5.0'
 
+_service = 'HasherService'
+
 import sys
-
-try: import requests
-except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-
-try: import zeep
-except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 
 import argparse
 import getpass
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
-import requests.auth
 import time
 from threading import Thread
-import zeep.exceptions
-import zeep.helpers
-import zeep.transports
 
-from wsutil import datems, datetimems, durationms, file_lines
+from wsutil import datems, datetimems, durationms, file_lines, make_client, enable_zeep_debugging
 
 #
 # Library
@@ -147,7 +139,7 @@ def _hash(host, username, password, hasher_params):
     :param hasher_params: hasherWsParams
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.hash(hasherParams=hasher_params)
 
 
@@ -241,7 +233,7 @@ def _hash_asynchronously(host, username, password, hasher_params):
     :param hasher_params: hasherWsParams
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.hashAsynchronously(hasherParams=hasher_params)
 
 
@@ -268,7 +260,7 @@ def get_all_asynchronous_hash_results(host, username, password):
     :param password: a password for the host (string)
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.getAllAsynchronousHashResults()
 
 
@@ -296,7 +288,7 @@ def get_asynchronous_hash_result(host, username, password, request_id):
     :param request_id: a request ID (string)
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.getAsynchronousHashResult(requestId=request_id)
 
 
@@ -324,7 +316,7 @@ def remove_asynchronous_hash_request(host, username, password, request_id):
     :param request_id: a request id (string)
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.removeAsynchronousHashRequest(requestId=request_id)
 
 
@@ -363,6 +355,7 @@ class _HasherServiceOptions(object):
         group.add_argument('--threads', type=int, help='maximum number of parallel jobs allowed (default: no limit)')
         group.add_argument('--wait', type=int, help='seconds to wait between asynchronous checks (default: 10 with --url, 30 without)')
         group.add_argument('--include-weight', action='store_true', help='include hash weights in full tree hash')
+        group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
 
         return parser
 
@@ -399,6 +392,9 @@ class _HasherServiceOptions(object):
             self.wait = args.wait
         # threads
         self.threads = args.threads or len(self.hosts)
+        # add logging for zeep
+        if args.debug_zeep:
+            enable_zeep_debugging()
         # auth
         self._u = args.username or getpass.getpass('UI username: ')
         self._p = args.password or getpass.getpass('UI password: ')
@@ -437,14 +433,6 @@ def _do_hashes(options):
             options.hosts):
         if result is False:
             sys.stderr.write('Warning: not found on %s\n' % (host,))
-
-def _make_client(host, username, password):
-    session = requests.Session()
-    session.auth = requests.auth.HTTPBasicAuth(username, password)
-    transport = zeep.transports.Transport(session=session)
-    wsdl = 'http://{}/ws/HasherService?wsdl'.format(host)
-    client = zeep.Client(wsdl, transport=transport)
-    return client
 
 def _main():
     '''Main method.'''

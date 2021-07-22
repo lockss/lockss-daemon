@@ -38,10 +38,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.7.1'
 
-import sys
+_service = 'DaemonStatusService'
 
-try: import requests
-except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
+import sys
 
 try: import zeep
 except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
@@ -51,14 +50,11 @@ import getpass
 import itertools
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
-import requests.auth
 from threading import Thread
 import zeep.exceptions
 import zeep.helpers
-import zeep.transports
 
-from wsutil import datems, datetimems, durationms, file_lines
-
+from wsutil import datems, datetimems, durationms, file_lines, make_client, enable_zeep_debugging
 
 #
 # Library
@@ -107,7 +103,7 @@ def get_au_status(host, username, password, auid):
     :param password: a password for the host (string)
     :param auid: an auid to hash (string)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     try:
         ret = client.service.getAuStatus(auId=auid)
         return zeep.helpers.serialize_object(ret)
@@ -129,7 +125,7 @@ def get_au_urls(host, username, password, auid, prefix=None):
     :param auid: an auid to hash (string)
     :param prefix: a URL prefix (string, default: None)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     ret = client.service.getAuUrls(auId=auid, url=prefix)
     return ret
 
@@ -169,7 +165,7 @@ def get_auids(host, username, password):
     :param username: a username for the host (string)
     :param password: a password for the host (string)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     ret = client.service.getAuIds()
     return zeep.helpers.serialize_object(ret)
 
@@ -252,7 +248,7 @@ def get_platform_configuration(host, username, password):
     :param username: a username for the host (string)
     :param password: a password for the host (string)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return zeep.helpers.serialize_object(client.service.getPlatformConfiguration())
 
 def is_daemon_ready(host, username, password):
@@ -263,7 +259,7 @@ def is_daemon_ready(host, username, password):
     :param username: a username for the host (string)
     :param password: a password for the host (string)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.isDaemonReady()
 
 def query_aus(host, username, password, select, where=None):
@@ -367,7 +363,7 @@ def query_aus(host, username, password, select, where=None):
         raise ValueError('invalid type for select parameter: {}'.format(type(select)))
     if where is not None:
         query = '{} WHERE {}'.format(query, where)
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     ret = client.service.queryAus(auQuery=query)
     return zeep.helpers.serialize_object(ret)
 
@@ -426,7 +422,7 @@ def query_crawls(host, username, password, select, where=None):
         raise ValueError('invalid type for select parameter: {}'.format(type(select)))
     if where is not None:
         query = '{} WHERE {}'.format(query, where)
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     ret = client.service.queryCrawls(crawlQuery=query)
     return zeep.helpers.serialize_object(ret)
 
@@ -477,6 +473,8 @@ class _DaemonStatusServiceOptions(object):
     group.add_argument('--select', metavar='FIELDS', help='comma-separated list of fields for narrower output')
     group.add_argument('--threads', type=int, help='max parallel jobs allowed (default: no limit)')
     group.add_argument('--where', help='optional WHERE clause for query operations')
+    group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
+
     return parser
 
   def __init__(self, parser, args):
@@ -552,6 +550,9 @@ class _DaemonStatusServiceOptions(object):
     self.no_special_output = args.no_special_output
     # threads
     self.threads = args.threads or len(self.hosts)
+    # add logging for zeep
+    if args.debug_zeep:
+      enable_zeep_debugging()
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
@@ -845,14 +846,6 @@ def _dispatch(options):
   elif options.query_aus: _do_query_aus(options)
   elif options.query_crawls: _do_query_crawls(options)
   else: raise RuntimeError('Unreachable')
-
-def _make_client(host, username, password):
-    session = requests.Session()
-    session.auth = requests.auth.HTTPBasicAuth(username, password)
-    transport = zeep.transports.Transport(session=session)
-    wsdl = 'http://{}/ws/DaemonStatusService?wsdl'.format(host)
-    client = zeep.Client(wsdl, transport=transport)
-    return client
 
 def _main():
   '''Main method.'''

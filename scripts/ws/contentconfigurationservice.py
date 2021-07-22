@@ -38,13 +38,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.3.0'
 
+_service = 'ContentConfigurationService'
+
 import sys
-
-try: import requests
-except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-
-try: import zeep
-except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 
 import argparse
 import getpass
@@ -52,13 +48,9 @@ import itertools
 from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
-import requests.auth
 from threading import Lock, Thread
-import zeep.exceptions
-import zeep.helpers
-import zeep.transports
 
-from wsutil import datems, datetimems, durationms, file_lines
+from wsutil import datems, datetimems, durationms, file_lines, make_client, enable_zeep_debugging
 
 #
 # Library
@@ -79,7 +71,7 @@ def add_au_by_id(host, username, password, auid):
   - password (string): a password for the host
   - auid (string): an AUID
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.addAuById(auId = auid)
 
 def add_aus_by_id_list(host, username, password, auids):
@@ -97,7 +89,7 @@ def add_aus_by_id_list(host, username, password, auids):
   - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.addAusByIdList(auIds = auids)
 
 def deactivate_au_by_id(host, username, password, auid):
@@ -115,7 +107,7 @@ def deactivate_au_by_id(host, username, password, auid):
   - password (string): a password for the host
   - auid (string): an AUID
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.deactivateAuById(auId = auid)
 
 def deactivate_aus_by_id_list(host, username, password, auids):
@@ -133,7 +125,7 @@ def deactivate_aus_by_id_list(host, username, password, auids):
   - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.deactivateAusByIdList(auIds = auids)
 
 def delete_au_by_id(host, username, password, auid):
@@ -151,7 +143,7 @@ def delete_au_by_id(host, username, password, auid):
   - password (string): a password for the host
   - auid (string): an AUID
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.deleteAuById(auId = auid)
 
 def delete_aus_by_id_list(host, username, password, auids):
@@ -169,7 +161,7 @@ def delete_aus_by_id_list(host, username, password, auids):
   - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.deleteAusByIdList(auIds = auids)
 
 def reactivate_au_by_id(host, username, password, auid):
@@ -187,7 +179,7 @@ def reactivate_au_by_id(host, username, password, auid):
   - password (string): a password for the host
   - auid (string): an AUID
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.reactivateAuById(auId = auid)
 
 def reactivate_aus_by_id_list(host, username, password, auids):
@@ -205,7 +197,7 @@ def reactivate_aus_by_id_list(host, username, password, auids):
   - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.reactivateAusByIdList(auIds = auids)
 
 #
@@ -347,6 +339,8 @@ class _ContentConfigurationServiceOptions(object):
     # Other options
     group = parser.add_argument_group('Other options')
     group.add_argument('--batch-size', metavar='SIZE', type=int, default=100, help='size of AUID batches (default: %(default)s)')
+    group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
+
     return parser
 
   def __init__(self, parser, args):
@@ -410,6 +404,9 @@ class _ContentConfigurationServiceOptions(object):
     self.pool_class = ProcessPool if args.process_pool else ThreadPool
     self.pool_size = args.pool_size or len(self.hosts)
     self.batch_size = args.batch_size
+    # add logging for zeep
+    if args.debug_zeep:
+      enable_zeep_debugging()
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
@@ -486,14 +483,6 @@ def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
     _output_record(options, rowpart + [x[j] for x in colkeys])
   for rowkey in sorted(set([k[0] for k in data]), key=rowsort):
     _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
-
-def _make_client(host, username, password):
-    session = requests.Session()
-    session.auth = requests.auth.HTTPBasicAuth(username, password)
-    transport = zeep.transports.Transport(session=session)
-    wsdl = 'http://{}/ws/ContentConfigurationService?wsdl'.format(host)
-    client = zeep.Client(wsdl, transport=transport)
-    return client
 
 def _main():
   '''Main method.'''

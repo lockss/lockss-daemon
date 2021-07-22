@@ -38,6 +38,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.2'
 
+
+_service = 'AuControlService'
+
 import argparse
 import os.path
 import sys
@@ -45,28 +48,21 @@ import time
 from threading import Thread
 
 try:
-    import requests
-except ImportError:
-    sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-import requests.auth
-
-try:
     import zeep
 except ImportError:
     sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 import zeep.helpers
-import zeep.transports
-import zeep.exceptions
 
-from wsutil import file_lines
+from wsutil import file_lines, make_client, enable_zeep_debugging
+
 
 def request_deep_crawl_by_id(host, username, password, auid, refetch_depth, priority, force):
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return zeep.helpers.serialize_object(
         client.service.requestDeepCrawlById(auId=auid, refetchDepth=refetch_depth, priority=priority, force=force))
 
 def request_deep_crawl_by_id_list(host, username, password, auids, refetch_depth, priority, force):
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.requestDeepCrawlByIdList(auIds=auids, refetchDepth=refetch_depth, priority=priority, force=force)
 
 def _do_request_deep_crawl_by_id(options):
@@ -78,12 +74,12 @@ def _do_request_deep_crawl_by_id_list(options):
                                          options.refetch_depth, options.priority, options.force)
 
 def request_crawl_by_id(host, username, password, auid, priority, force):
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return zeep.helpers.serialize_object(
         client.service.requestCrawlById(auId=auid, priority=priority, force=force))
 
 def request_crawl_by_id_list(host, username, password, auids, priority, force):
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.requestCrawlByIdList(auIds=auids, priority=priority, force=force)
 
 def _do_request_crawl_by_id(options):
@@ -126,6 +122,8 @@ class _AuControlServiceOptions(object):
         group.add_argument('--refetch-depth', default=123, type=int, metavar='DEPTH', help='crawl depth (default: %(default)s)')
         group.add_argument('--priority', default=10, type=int, help='priority for crawl (default: %(default)s)' )
         group.add_argument('--force', action="store_true", help='force crawl outside of crawl window')
+        group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
+
         return parser
 
     def __init__(self, parser, args):
@@ -144,6 +142,9 @@ class _AuControlServiceOptions(object):
         self.force = args.force
         self.priority = args.priority
         self.refetch_depth = args.refetch_depth
+        # add logging for zeep
+        if args.debug_zeep:
+            enable_zeep_debugging()
 
 def _dispatch(options):
     if options.request_deep_crawl_by_id:
@@ -152,15 +153,6 @@ def _dispatch(options):
         _do_request_deep_crawl_by_id_list(options)
     else:
         raise RuntimeError('Unreachable')
-
-
-def _make_client(host, username, password):
-    session = requests.Session()
-    session.auth = requests.auth.HTTPBasicAuth(username, password)
-    transport = zeep.transports.Transport(session=session)
-    wsdl = 'http://{}/ws/AuControlService?wsdl'.format(host)
-    client = zeep.Client(wsdl, transport=transport)
-    return client
 
 def _main():
     '''Main method.'''

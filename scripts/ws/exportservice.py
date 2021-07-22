@@ -38,6 +38,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.1'
 
+_service = 'ExportService'
+
 import sys
 
 try: import zeep
@@ -48,16 +50,11 @@ import getpass
 import itertools
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
-import requests.auth
 from threading import Thread
 import zeep.exceptions
 import zeep.helpers
-import zeep.transports
 
-import logging.config
-
-from wsutil import file_lines
-
+from wsutil import file_lines, make_client, enable_zeep_debugging
 
 #
 # Library
@@ -94,7 +91,7 @@ def create_export_files(host, username, password, auid, options):
     'maxVersions': options.max_vers,
     'xlateFilenames': options.translate
   }
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   try:
     ret = client.service.createExportFiles(req)
     return zeep.helpers.serialize_object(ret)
@@ -115,7 +112,6 @@ class _ExportServiceOptions(object):
     usage = '%(prog)s {--host=HOST|--hosts=HFILE}... [OPTIONS]'
     parser = argparse.ArgumentParser(description=__doc__, usage=usage)
     parser.add_argument('--version', '-V', action='version', version=__version__)
-    parser.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
     # Hosts
     group = parser.add_argument_group('Target hosts')
     group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
@@ -144,6 +140,8 @@ class _ExportServiceOptions(object):
     group = parser.add_argument_group('Other options')
     group.add_argument('--group-by-field', action='store_true', default=False, help='group results by field instead of host')
     group.add_argument('--threads', type=int, help='max parallel jobs allowed (default: no limit)')
+    group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
+
     return parser
 
   def __init__(self, parser, args):
@@ -189,9 +187,9 @@ class _ExportServiceOptions(object):
     self.max_size = args.max_size
     self.max_vers = args.max_vers
     self.translate = args.translate
-    # verbosity (adds logging for zeep)
+    # add logging for zeep
     if args.debug_zeep:
-      _enable_zeep_debugging()
+      enable_zeep_debugging()
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
@@ -243,38 +241,6 @@ def _do_create_export_files(options):
 def _dispatch(options):
   if options.create_export_files: _do_create_export_files(options)
   else: raise RuntimeError('Unreachable')
-
-def _make_client(host, username, password):
-  session = requests.Session()
-  session.auth = requests.auth.HTTPBasicAuth(username, password)
-  transport = zeep.transports.Transport(session=session)
-  wsdl = 'http://{}/ws/ExportService?wsdl'.format(host)
-  client = zeep.Client(wsdl, transport=transport)
-  return client
-
-def _enable_zeep_debugging():
-  logging.config.dictConfig({
-    'version': 1,
-    'formatters': {
-      'verbose': {
-        'format': '%(name)s: %(message)s'
-      }
-    },
-    'handlers': {
-      'console': {
-        'level': 'DEBUG',
-        'class': 'logging.StreamHandler',
-        'formatter': 'verbose',
-      },
-    },
-    'loggers': {
-      'zeep.transports': {
-        'level': 'DEBUG',
-        'propagate': True,
-        'handlers': ['console'],
-      },
-    }
-  })
 
 def _main():
   '''Main method.'''

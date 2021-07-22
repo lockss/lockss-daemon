@@ -42,6 +42,10 @@ import sys, os
 
 try: import requests.auth
 except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
+try: import zeep
+except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
+
+import logging.config
 
 def datetimems(ms):
   '''Returns a datetime instance from a date and time expressed in milliseconds
@@ -89,6 +93,10 @@ def durationms(ms):
 
 # Last modified 2021-07-22 @markom
 def file_lines(fstr):
+  '''Returns a cleaned list of lines in a file.
+  Parameters:
+    :param fstr (string): file name
+  '''
   with open(os.path.expanduser(fstr)) as f:
     ret = list(
       filter(
@@ -98,3 +106,44 @@ def file_lines(fstr):
   if len(ret) == 0:
     sys.exit('Error: {} contains no meaningful lines'.format(fstr))
   return ret
+
+def make_client(host, username, password, service):
+  '''Returns a cleaned list of lines in a file.
+  Parameters:
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param service: a WS service on the host.(string)
+              One of: HasherService, ExportService, DaemonStatusService, ContentConfigurationService, AuControlService
+  '''
+  session = requests.Session()
+  session.auth = requests.auth.HTTPBasicAuth(username, password)
+  transport = zeep.transports.Transport(session=session)
+  wsdl = 'http://{}/ws/{}?wsdl'.format(host, service)
+  client = zeep.Client(wsdl, transport=transport)
+  return client
+
+
+def enable_zeep_debugging():
+  logging.config.dictConfig({
+    'version': 1,
+    'formatters': {
+      'verbose': {
+        'format': '%(name)s: %(message)s'
+      }
+    },
+    'handlers': {
+      'console': {
+        'level': 'DEBUG',
+        'class': 'logging.StreamHandler',
+        'formatter': 'verbose',
+      },
+    },
+    'loggers': {
+      'zeep.transports': {
+        'level': 'DEBUG',
+        'propagate': True,
+        'handlers': ['console'],
+      },
+    }
+  })
