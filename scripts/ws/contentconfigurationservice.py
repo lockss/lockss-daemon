@@ -47,10 +47,9 @@ import getpass
 import itertools
 from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
-import os.path
-from threading import Lock, Thread
+from threading import Thread
 
-from wsutil import datems, datetimems, durationms, file_lines, make_client, enable_zeep_debugging
+from wsutil import file_lines, make_client, enable_zeep_debugging, host_help_prefix
 
 #
 # Library
@@ -279,7 +278,8 @@ Adds the AUIDs contained in myfile.auids to all the hosts contained in
 mydaemons.hosts. Produces text output (the default) only if some operations do
 not succeed. AUs are sorted by AU name (the default) and displayed by AU name.
 
-$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --sort-by-auid --list-by-auid
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids \
+ --add-aus --sort-by-auid --list-by-auid
 
 Adds the AUIDs contained in myfile.auids to all the hosts contained in
 mydaemons.hosts. Produces text output (the default) only if some operations do
@@ -299,7 +299,8 @@ class _ContentConfigurationServiceOptions(object):
   @staticmethod
   def make_parser():
     '''Static method to make a command line parser suitable for this tool.'''
-    usage = '%(prog)s {--host=HOST|--hosts=HFILE}... {--auid=AUID|--auids=AFILE}... {--add-aus|--deactivate-aus|--delete-aus|--reactivate-aus} [OPTIONS]'
+    usage = ('%(prog)s {--host=HOST|--hosts=HFILE}... {--auid=AUID|--auids=AFILE}... '+
+             '{--add-aus|--deactivate-aus|--delete-aus|--reactivate-aus} [OPTIONS]')
     parser = argparse.ArgumentParser(description=__doc__, usage=usage)
     # Top-level options
     parser.add_argument('--copyright', action='store_true', help='display copyright and exit')
@@ -307,14 +308,17 @@ class _ContentConfigurationServiceOptions(object):
     parser.add_argument('--tutorial', action='store_true', help='display tutorial and exit')
     # Hosts
     group = parser.add_argument_group('Target hosts')
-    group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+    group.add_argument('--host', action='append', default=list(),
+                       help=host_help_prefix + ' to list of target hosts')
+    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE',
+                       help=host_help_prefix + ' in HFILE to list of target hosts')
     group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
     group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
     # AUIDs
     group = parser.add_argument_group('Target AUIDs')
     group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
-    group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
+    group.add_argument('--auids', action='append', default=list(), metavar='AFILE',
+                       help='add AUIDs in AFILE to list of target AUIDs')
     # Content configuration operations
     group = parser.add_argument_group('Content configuration operations')
     group.add_argument('--add-aus', action='store_true', help='add target AUs to target hosts')
@@ -330,15 +334,18 @@ class _ContentConfigurationServiceOptions(object):
     group.add_argument('--sort-by-name', action='store_true', help='sort output by AU name (default)')
     group.add_argument('--table-output', action='store_true', help='produce tabular output')
     group.add_argument('--text-output', action='store_true', help='produce text output (default)')
-    group.add_argument('--verbose', action='store_true', default=False, help='make --text-output verbose (default: %(default)s)')
+    group.add_argument('--verbose', action='store_true', default=False,
+                       help='make --text-output verbose (default: %(default)s)')
     # Job pool
     group = parser.add_argument_group('Job pool')
-    group.add_argument('--pool-size', metavar='SIZE', type=int, default=0, help='size of the job pool, 0 for unlimited (default: %(default)s)')
+    group.add_argument('--pool-size', metavar='SIZE', type=int, default=0,
+                       help='size of the job pool, 0 for unlimited (default: %(default)s)')
     group.add_argument('--process-pool', action='store_true', help='use a process pool')
     group.add_argument('--thread-pool', action='store_true', help='use a thread pool (default)')
     # Other options
     group = parser.add_argument_group('Other options')
-    group.add_argument('--batch-size', metavar='SIZE', type=int, default=100, help='size of AUID batches (default: %(default)s)')
+    group.add_argument('--batch-size', metavar='SIZE', type=int, default=100,
+                       help='size of AUID batches (default: %(default)s)')
     group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
 
     return parser

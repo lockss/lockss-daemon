@@ -49,7 +49,7 @@ import os.path
 import time
 from threading import Thread
 
-from wsutil import datems, datetimems, durationms, file_lines, make_client, enable_zeep_debugging
+from wsutil import file_lines, make_client, enable_zeep_debugging, host_help_prefix, remove_protocol
 
 #
 # Library
@@ -328,13 +328,16 @@ class _HasherServiceOptions(object):
 
     @staticmethod
     def make_parser():
-        usage = '%(prog)s [--host=HOST|--hosts=HFILE]... --auid=AUID [--url=URL] [--output-directory=OUTDIR] --output-prefix=PREFIX [OPTIONS]'
+        usage = ('%(prog)s [--host=HOST|--hosts=HFILE]... --auid=AUID ' +
+                 '[--url=URL] [--output-directory=OUTDIR] --output-prefix=PREFIX [OPTIONS]')
         parser = argparse.ArgumentParser(description=__doc__, usage=usage)
 
         # Hosts
         group = parser.add_argument_group('Target hosts')
-        group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-        group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+        group.add_argument('--host', action='append', default=list(),
+                           help=host_help_prefix + ' to list of target hosts')
+        group.add_argument('--hosts', action='append', default=list(), metavar='HFILE',
+                           help=host_help_prefix + ' in HFILE to list of target hosts')
         group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
         group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
 
@@ -345,15 +348,18 @@ class _HasherServiceOptions(object):
 
         # Output
         group = parser.add_argument_group('Output')
-        group.add_argument('--output-directory', metavar='OUTDIR', default='.', help='output directory (default: current directory)')
-        group.add_argument('--output-prefix', metavar='PREFIX', default='hasherservice', help='prefix for output file names (default: "hasherservice")')
+        group.add_argument('--output-directory', metavar='OUTDIR', default='.',
+                           help='output directory (default: current directory)')
+        group.add_argument('--output-prefix', metavar='PREFIX', default='hasherservice',
+                           help='prefix for output file names (default: "hasherservice")')
 
         # Other options
         group = parser.add_argument_group('Other options')
         group.add_argument('--long-html-line', action='store_true', help='add a newline before each "<" character')
         group.add_argument('--long-text-line', action='store_true', help='replace each space with a newline')
         group.add_argument('--threads', type=int, help='maximum number of parallel jobs allowed (default: no limit)')
-        group.add_argument('--wait', type=int, help='seconds to wait between asynchronous checks (default: 10 with --url, 30 without)')
+        group.add_argument('--wait', type=int,
+                           help='seconds to wait between asynchronous checks (default: 10 with --url, 30 without)')
         group.add_argument('--include-weight', action='store_true', help='include hash weights in full tree hash')
         group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
 
@@ -414,10 +420,10 @@ def _do_hash(options, host):
         if res.status == 'Done': break
     if options.url is None:
         source = res.blockFileDataHandler
-        fstr = '%s.%s.hash' % (options.output_prefix, host)
+        fstr = '%s.%s.hash' % (options.output_prefix, remove_protocol(host))
     else:
         source = res.recordFileDataHandler
-        fstr = '%s.%s.filtered' % (options.output_prefix, host)
+        fstr = '%s.%s.filtered' % (options.output_prefix, remove_protocol(host))
     if source is not None:
         if options.long_html_line: source = source.replace(b'<', b'\n<')
         if options.long_text_line: source = source.replace(b' ', b'\n')

@@ -54,7 +54,7 @@ from threading import Thread
 import zeep.exceptions
 import zeep.helpers
 
-from wsutil import file_lines, make_client, enable_zeep_debugging
+from wsutil import file_lines, make_client, enable_zeep_debugging, host_help_prefix
 
 #
 # Library
@@ -114,31 +114,42 @@ class _ExportServiceOptions(object):
     parser.add_argument('--version', '-V', action='version', version=__version__)
     # Hosts
     group = parser.add_argument_group('Target hosts')
-    group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+    group.add_argument('--host', action='append', default=list(),
+                       help=host_help_prefix + ' to list of target hosts')
+    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE',
+                       help=host_help_prefix + ' in HFILE to list of target hosts')
     group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
     group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
     # AUIDs
     group = parser.add_argument_group('Target AUIDs')
     group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
-    group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
+    group.add_argument('--auids', action='append', default=list(), metavar='AFILE',
+                       help='add AUIDs in AFILE to list of target AUIDs')
     # AUID operations
     group = parser.add_argument_group('AU operations')
     # this seems to be redundant. leaving in in case some future functionality does make this an optional flag
-    group.add_argument('--create-export-files', action='store_true', required=True, help='output export files of target AUIDs')
+    group.add_argument('--create-export-files', action='store_true', required=True,
+                       help='output export files of target AUIDs')
     # Output
     group = parser.add_argument_group('Output')
-    group.add_argument('--output-directory', metavar='OUTDIR', default='.', help='output directory (default: current directory)')
-    group.add_argument('--output-prefix', metavar='PREFIX', default='exportservice', help='prefix for output file names (default: %(default)s)')
-    group.add_argument('--compress', action='store_false', help='compress the export files (default: True).')
-    group.add_argument('--exclude-dir', action='store_false', help='exclude directory nodes from the export files (default: True).')
-    group.add_argument('--file-type', default="ZIP", choices=['ZIP'], help='file type of the exported AU. (default: %(default)s)')
+    group.add_argument('--output-directory', metavar='OUTDIR', default='.',
+                       help='output directory (default: current directory)')
+    group.add_argument('--output-prefix', metavar='PREFIX', default='exportservice',
+                       help='prefix for output file names (default: %(default)s)')
+    group.add_argument('--compress', action='store_false',
+                       help='compress the export files (default: True).')
+    group.add_argument('--exclude-dir', action='store_false',
+                       help='exclude directory nodes from the export files (default: True).')
+    group.add_argument('--file-type', default="ZIP", choices=['ZIP'],
+                       help='file type of the exported AU. (default: %(default)s)')
     group.add_argument('--max-size', default=1000, type=int, help=' (default: %(default)d)')
     group.add_argument('--max-vers', default=-1, type=int, help=' (default: %(default)d)')
-    group.add_argument('--translate', default=None, choices=[None], help='translate export file filenames. (default: %(default)s)')
+    group.add_argument('--translate', default=None, choices=[None],
+                       help='translate export file filenames. (default: %(default)s)')
     # Other options
     group = parser.add_argument_group('Other options')
-    group.add_argument('--group-by-field', action='store_true', default=False, help='group results by field instead of host')
+    group.add_argument('--group-by-field', action='store_true', default=False,
+                       help='group results by field instead of host')
     group.add_argument('--threads', type=int, help='max parallel jobs allowed (default: no limit)')
     group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
 

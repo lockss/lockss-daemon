@@ -49,12 +49,11 @@ import argparse
 import getpass
 import itertools
 from multiprocessing.dummy import Pool as ThreadPool
-import os.path
 from threading import Thread
 import zeep.exceptions
 import zeep.helpers
 
-from wsutil import datems, datetimems, durationms, file_lines, make_client, enable_zeep_debugging
+from wsutil import datetimems, durationms, file_lines, make_client, enable_zeep_debugging, host_help_prefix
 
 #
 # Library
@@ -439,36 +438,55 @@ class _DaemonStatusServiceOptions(object):
     parser.add_argument('--version', '-V', action='version', version=__version__)
     # Hosts
     group = parser.add_argument_group('Target hosts')
-    group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+    group.add_argument('--host', action='append', default=list(),
+                       help=host_help_prefix + ' to list of target hosts')
+    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE',
+                       help=host_help_prefix + ' in HFILE to list of target hosts')
     group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
     group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
     # AUIDs
     group = parser.add_argument_group('Target AUIDs')
     group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
-    group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
+    group.add_argument('--auids', action='append', default=list(), metavar='AFILE',
+                       help='add AUIDs in AFILE to list of target AUIDs')
     # Daemon operations
     group = parser.add_argument_group('Daemon operations')
-    group.add_argument('--get-platform-configuration', action='store_true', help='output platform configuration information for target hosts; narrow down with optional --select list chosen among %s' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),))
-    group.add_argument('--is-daemon-ready', action='store_true', help='output True/False table of ready status of target hosts; always exit with 0')
-    group.add_argument('--is-daemon-ready-quiet', action='store_true', help='output nothing; exit with 0 if all target hosts are ready, 1 otherwise')
+    group.add_argument('--get-platform-configuration', action='store_true',
+                       help=('output platform configuration information for target hosts; narrow down with optional' +
+                             ' --select list chosen among %s' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),)))
+    group.add_argument('--is-daemon-ready', action='store_true',
+                       help='output True/False table of ready status of target hosts; always exit with 0')
+    group.add_argument('--is-daemon-ready-quiet', action='store_true',
+                       help='output nothing; exit with 0 if all target hosts are ready, 1 otherwise')
     # AUID operations
     group = parser.add_argument_group('AU operations')
-    group.add_argument('--get-au-status', action='store_true', help='output status information about target AUIDs; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_AU_STATUS)),))
+    group.add_argument('--get-au-status', action='store_true',
+                       help=('output status information about target AUIDs; narrow down output with optional '+
+                            '--select list chosen among %s' % (', '.join(sorted(_AU_STATUS)),)))
     group.add_argument('--get-au-urls', action='store_true', help='output URLs in one AU on one host')
     group.add_argument('--get-au-article-urls', action='store_true', help='output article URLs in one AU on one host')
     group.add_argument('--get-au-subst-urls', action='store_true', help='output substance URLs in one AU on one host')
-    group.add_argument('--get-auids', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present on target hosts')
-    group.add_argument('--get-auids-names', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) and their names present on target hosts')
-    group.add_argument('--get-peer-agreements', action='store_true', help='output peer agreements for one AU on one hosts')
-    group.add_argument('--query-aus', action='store_true', help='perform AU query (with optional --where clause) with --select list chosen among %s' % (', '.join(sorted(_QUERY_AUS)),))
+    group.add_argument('--get-auids', action='store_true',
+                       help=('output True/False table of all AUIDs '+
+                            '(or target AUIDs if specified) present on target hosts'))
+    group.add_argument('--get-auids-names', action='store_true',
+                       help=('output True/False table of all AUIDs (or target AUIDs if specified) '+
+                             'and their names present on target hosts'))
+    group.add_argument('--get-peer-agreements', action='store_true',
+                       help='output peer agreements for one AU on one hosts')
+    group.add_argument('--query-aus', action='store_true',
+                       help='perform AU query (with optional --where clause) with --select list chosen among %s' %
+                            (', '.join(sorted(_QUERY_AUS)),))
     # Crawl operations
     group = parser.add_argument_group('Crawl operations')
-    group.add_argument('--query-crawls', action='store_true', help='perform crawl query (with optional --where clause) with --select list chosen among %s' % (', '.join(sorted(_QUERY_CRAWLS)),))
+    group.add_argument('--query-crawls', action='store_true',
+                       help='perform crawl query (with optional --where clause) with --select list chosen among %s' %
+                            (', '.join(sorted(_QUERY_CRAWLS)),))
     # Other options
     group = parser.add_argument_group('Other options')
     group.add_argument('--group-by-field', action='store_true', help='group results by field instead of host')
-    group.add_argument('--no-special-output', action='store_true', help='no special output format for a single target host')
+    group.add_argument('--no-special-output', action='store_true',
+                       help='no special output format for a single target host')
     group.add_argument('--prefix', help='prefix URL for --get-au-urls')
     group.add_argument('--select', metavar='FIELDS', help='comma-separated list of fields for narrower output')
     group.add_argument('--threads', type=int, help='max parallel jobs allowed (default: no limit)')
@@ -480,14 +498,23 @@ class _DaemonStatusServiceOptions(object):
   def __init__(self, parser, args):
     super(_DaemonStatusServiceOptions, self).__init__()
 #FIXME    if len(args) > 0: parser.error('extraneous arguments: %s' % (' '.join(args)))
-    if len(list(filter(None, [args.get_au_status, args.get_au_urls, args.get_au_article_urls, args.get_au_subst_urls, args.get_auids, args.get_auids_names, args.get_peer_agreements, args.get_platform_configuration, args.is_daemon_ready, args.is_daemon_ready_quiet, args.query_aus, args.query_crawls]))) != 1:
-      parser.error('exactly one of --get-au-status, --get-au-urls, --get-au-article-urls, --get-au-subst-urls,--get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, --is-daemon-ready, --is-daemon-ready-quiet, --query-aus --query-crawls is required')
-    if len(args.auid) + len(args.auids) > 0 and not any([args.get_au_status, args.get_au_urls, args.get_au_article_urls, args.get_au_subst_urls, args.get_auids, args.get_auids_names, args.get_peer_agreements]):
-      parser.error('--auid, --auids can only be applied to --get-au-status, --get-au-urls, --get-au-article-urls, --get-au-subst-urls, --get-auids, --get-auids-names, --get-peer-agreements')
+    if len(list(filter(None, [args.get_au_status, args.get_au_urls, args.get_au_article_urls, args.get_au_subst_urls,
+                              args.get_auids, args.get_auids_names, args.get_peer_agreements,
+                              args.get_platform_configuration, args.is_daemon_ready, args.is_daemon_ready_quiet,
+                              args.query_aus, args.query_crawls]))) != 1:
+      parser.error('exactly one of --get-au-status, --get-au-urls, --get-au-article-urls, --get-au-subst-urls,' +
+                    '--get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, '+
+                    '--is-daemon-ready, --is-daemon-ready-quiet, --query-aus --query-crawls is required')
+    if len(args.auid) + len(args.auids) > 0 and not any([args.get_au_status, args.get_au_urls, args.get_au_article_urls,
+        args.get_au_subst_urls, args.get_auids, args.get_auids_names, args.get_peer_agreements]):
+      parser.error('--auid, --auids can only be applied to --get-au-status, --get-au-urls, '+
+                   '--get-au-article-urls, --get-au-subst-urls, --get-auids, --get-auids-names, --get-peer-agreements')
     if args.prefix and not args.get_au_urls:
       parser.error('--prefix can only be applied to --get-au-urls')
-    if args.select and not any([args.get_au_status, args.get_platform_configuration, args.query_aus, args.query_crawls]):
-      parser.error('--select can only be applied to --get-au-status, --get-platform-configuration, --query-aus, --query-crawls')
+    if args.select and not any([args.get_au_status, args.get_platform_configuration,
+                                args.query_aus, args.query_crawls]):
+      parser.error('--select can only be applied to --get-au-status, '+
+                   '--get-platform-configuration, --query-aus, --query-crawls')
     if args.where and not any([args.query_aus, args.query_crawls]):
       parser.error('--where can only be applied to --query-aus, --query-crawls')
     if args.group_by_field and not any([args.get_au_status, args.query_aus]):
@@ -567,7 +594,9 @@ class _DaemonStatusServiceOptions(object):
 
 # Last modified 2018-03-19 for unicode support and boolean False when boolean is None
 def _output_record(options, lst):
-  print('\t'.join([x.decode('utf-8') if type(x) is bytes else str(x or False) if type(x)==type(True) else str(x or '') for x in lst]))
+  print('\t'.join([
+      x.decode('utf-8') if type(x) is bytes else str(x or False) if type(x)==type(True) else str(x or '') for x in lst
+  ]))
 
 # Last modified 2015-08-05
 def _output_table(options, data, rowheaders, lstcolkeys):
@@ -626,7 +655,9 @@ def _do_get_au_status(options):
         if options.group_by_field: colkey = (head, host)
         else: colkey = (host, head)
         data[((auid,), colkey)] = lamb(result)
-  _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
+  _output_table(options, data, ['AUID'],
+                [[x[0] for x in headlamb], sorted(options.hosts)]
+                if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 
 def _do_get_au_urls(options):
   # Single request to a single host: unthreaded
@@ -682,7 +713,10 @@ def _do_get_peer_agreements(options):
             percent_agreement_timestamp = agreement['percentAgreementTimestamp']
             highest_percent_agreement = agreement['highestPercentAgreement']
             highest_percent_agreement_timestamp = agreement['highestPercentAgreementTimestamp']
-            _output_record(options, [peer, agreement_type, percent_agreement, datetimems(percent_agreement_timestamp), highest_percent_agreement, datetimems(highest_percent_agreement_timestamp)]) 
+            _output_record(options,
+                           [peer, agreement_type, percent_agreement,
+                            datetimems(percent_agreement_timestamp),
+                            highest_percent_agreement, datetimems(highest_percent_agreement_timestamp)])
 
 _PLATFORM_CONFIGURATION = {
   'adminEmail': ('Admin e-mail', lambda r: r.get('adminEmail')),
@@ -700,7 +734,8 @@ _PLATFORM_CONFIGURATION = {
   'ipAddress': ('IP address', lambda r: r.get('ipAddress')),
   'javaRuntimeName': ('Java runtime name', lambda r: r.get('javaVersion', {}).get('runtimeName')),
   'javaRuntimeVersion': ('Java runtime version', lambda r: r.get('javaVersion', {}).get('runtimeVersion')),
-  'javaSpecificationVersion': ('Java specification version', lambda r: r.get('javaVersion', {}).get('specificationVersion')),
+  'javaSpecificationVersion':
+      ('Java specification version', lambda r: r.get('javaVersion', {}).get('specificationVersion')),
   'javaVersion': ('Java version', lambda r: r.get('javaVersion', {}).get('version')),
   'mailRelay': ('Mail relay', lambda r: r.get('mailRelay')),
   'platformName': ('Platform name', lambda r: r.get('platform', {}).get('name')),
@@ -791,7 +826,9 @@ def _do_query_aus(options):
         if options.group_by_field: colkey = (head, host)
         else: colkey = (host, head)
         data[((r['auId'],), colkey)] = lamb(r)
-  _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
+  _output_table(options, data, ['AUID'],
+                [[x[0] for x in headlamb], sorted(options.hosts)]
+                if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 
 _QUERY_CRAWLS = {
   'auId': ('AUID', lambda r: r.get('auId')),

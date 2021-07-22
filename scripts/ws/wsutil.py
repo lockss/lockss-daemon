@@ -47,6 +47,8 @@ except ImportError: sys.exit('The Python Zeep module must be installed (or on th
 
 import logging.config
 
+host_help_prefix = 'add [protocol://]host:port URI/Authority'
+
 def datetimems(ms):
   '''Returns a datetime instance from a date and time expressed in milliseconds
   since epoch (or None if the input is None or negative).
@@ -110,7 +112,8 @@ def file_lines(fstr):
 def make_client(host, username, password, service, https=False):
   '''Returns a cleaned list of lines in a file.
   Parameters:
-    :param host: a host:port pair (string)
+    :param host: a [protocol://]host:port pair (string)
+            if protocol left empty, defaults to http
     :param username: a username for the host (string)
     :param password: a password for the host (string)
     :param service: a WS service on the host.(string)
@@ -129,7 +132,8 @@ def make_client(host, username, password, service, https=False):
 def add_protocol(host, https=False):
   '''Given a host returns a <protocol><domain>:<port>
   Parameters:
-    :param host: a [protocol://]host:port pair (string)
+    :param host: a [protocol://]host:port URI/Authority (string)
+            if protocol left empty, defaults to http
   '''
   # if the protocal is already assigned, there is nothing to do
   if ('http://' == host[:7]) | ('https://' == host[:8]):
@@ -137,6 +141,17 @@ def add_protocol(host, https=False):
   if https:
     return 'https://' + host
   return 'http://' + host
+
+def remove_protocol(host):
+  '''Given a <protocol><domain>:<port> returns  host:port Authority
+  Parameters:
+    :param host: a [protocol://]host:port URI/Authority (string)
+  '''
+  if 'http://' == host[:7]:
+    return host[7:]
+  elif 'https://' == host[:8]:
+    return host[8:]
+  return host
 
 def enable_zeep_debugging():
   logging.config.dictConfig({

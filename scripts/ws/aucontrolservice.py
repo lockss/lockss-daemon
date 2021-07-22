@@ -42,9 +42,7 @@ __version__ = '0.2'
 _service = 'AuControlService'
 
 import argparse
-import os.path
 import sys
-import time
 from threading import Thread
 
 try:
@@ -53,7 +51,7 @@ except ImportError:
     sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 import zeep.helpers
 
-from wsutil import file_lines, make_client, enable_zeep_debugging
+from wsutil import file_lines, make_client, enable_zeep_debugging, host_help_prefix
 
 
 def request_deep_crawl_by_id(host, username, password, auid, refetch_depth, priority, force):
@@ -63,7 +61,8 @@ def request_deep_crawl_by_id(host, username, password, auid, refetch_depth, prio
 
 def request_deep_crawl_by_id_list(host, username, password, auids, refetch_depth, priority, force):
     client = make_client(host, username, password, _service)
-    return client.service.requestDeepCrawlByIdList(auIds=auids, refetchDepth=refetch_depth, priority=priority, force=force)
+    return client.service.requestDeepCrawlByIdList(
+        auIds=auids, refetchDepth=refetch_depth, priority=priority, force=force)
 
 def _do_request_deep_crawl_by_id(options):
     return request_deep_crawl_by_id(options.host, options.username, options.password, options.auid,
@@ -83,12 +82,12 @@ def request_crawl_by_id_list(host, username, password, auids, priority, force):
     return client.service.requestCrawlByIdList(auIds=auids, priority=priority, force=force)
 
 def _do_request_crawl_by_id(options):
-    return request_crawl_by_id(options.host, options.username, options.password, options.auid,
-                                    options.priority, options.force)
+    return request_crawl_by_id(
+        options.host, options.username, options.password, options.auid, options.priority, options.force)
 
 def _do_request_crawl_by_id_list(options):
-    return request_crawl_by_id_list(options.host, options.username, options.password, options.auids,
-                                         options.priority, options.force)
+    return request_crawl_by_id_list(
+        options.host, options.username, options.password, options.auids, options.priority, options.force)
 
 #
 # Command line tool
@@ -103,7 +102,7 @@ class _AuControlServiceOptions(object):
         parser.add_argument('--version', '-V', action='version', version=__version__)
         # Hosts
         group = parser.add_argument_group('Target hosts')
-        group.add_argument('--host',  help='add host:port pair to list of target hosts')
+        group.add_argument('--host', help=host_help_prefix + ' to list of target hosts')
         group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
         group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
 
@@ -115,11 +114,13 @@ class _AuControlServiceOptions(object):
         # AUID operations
         group = parser.add_argument_group('AU operations')
         group.add_argument('--request-deep-crawl-by-id', action='store_true', help='perform deep crawl on a single AU')
-        group.add_argument('--request-deep-crawl-by-id-list', action='store_true', help='perform a deep crawl on multiple AUs')
+        group.add_argument('--request-deep-crawl-by-id-list', action='store_true',
+                           help='perform a deep crawl on multiple AUs')
 
         # Other options
         group = parser.add_argument_group('Other options')
-        group.add_argument('--refetch-depth', default=123, type=int, metavar='DEPTH', help='crawl depth (default: %(default)s)')
+        group.add_argument('--refetch-depth', default=123, type=int, metavar='DEPTH',
+                           help='crawl depth (default: %(default)s)')
         group.add_argument('--priority', default=10, type=int, help='priority for crawl (default: %(default)s)' )
         group.add_argument('--force', action="store_true", help='force crawl outside of crawl window')
         group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
