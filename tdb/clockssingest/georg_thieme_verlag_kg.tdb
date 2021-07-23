@@ -1248,7 +1248,7 @@
    au < doNotProcess ; exists ; 1998 ; 1998 ; DMW - Deutsche Medizinische Wochenschrift Volume 124 ; 124 ; >
    au < doNotProcess ; exists ; 1999 ; 1999 ; DMW - Deutsche Medizinische Wochenschrift Volume 125 ; 125 ; >
    au < testing ; exists ; 2000 ; 2000 ; DMW - Deutsche Medizinische Wochenschrift Volume 126 ; 126 ; >
-   au < ready ; exists ; 2001 ; 2001 ; DMW - Deutsche Medizinische Wochenschrift Volume 127 ; 127 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; DMW - Deutsche Medizinische Wochenschrift Volume 127 ; 127 ; >
    au < ready ; exists ; 2002 ; 2002 ; DMW - Deutsche Medizinische Wochenschrift Volume 128 ; 128 ; >
    au < ready ; exists ; 2003 ; 2003 ; DMW - Deutsche Medizinische Wochenschrift Volume 129 ; 129 ; >
    au < crawling ; exists ; 2004 ; 2004 ; DMW - Deutsche Medizinische Wochenschrift Volume 130 ; 130 ; >
@@ -1381,7 +1381,7 @@
    au < doNotProcess ; exists ; 1998 ; 1998 ; Endoscopy Volume 30 ; 30 ; >
    au < doNotProcess ; exists ; 1999 ; 1999 ; Endoscopy Volume 31 ; 31 ; >
    au < testing ; exists ; 2000 ; 2000 ; Endoscopy Volume 32 ; 32 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Endoscopy Volume 33 ; 33 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Endoscopy Volume 33 ; 33 ; >
    au < ready ; exists ; 2002 ; 2002 ; Endoscopy Volume 34 ; 34 ; >
    au < testing ; exists ; 2003 ; 2003 ; Endoscopy Volume 35 ; 35 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Endoscopy Volume 36 ; 36 ; >
@@ -1441,7 +1441,7 @@
 
    au < ready ; exists ; 2002 ; 2002 ; Endoscopy heute Volume 15 ; 15 ; >
    au < testing ; exists ; 2003 ; 2003 ; Endoscopy heute Volume 16 ; 16 ; >
-   au < ready ; exists ; 2004 ; 2004 ; Endoscopy heute Volume 17 ; 17 ; >
+   au < crawling ; exists ; 2004 ; 2004 ; Endoscopy heute Volume 17 ; 17 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Endoscopy heute Volume 18 ; 18 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Endoscopy heute Volume 19 ; 19 ; >
    au < frozen ; exists ; 2007 ; 2007 ; Endoscopy heute Volume 20 ; 20 ; >
@@ -1598,7 +1598,7 @@
    au < doNotProcess ; exists ; 1998 ; 1998 ; European Journal of Pediatric Surgery Volume 8 ; 8 ; >
    au < doNotProcess ; exists ; 1999 ; 1999 ; European Journal of Pediatric Surgery Volume 9 ; 9 ; >
    au < testing ; exists ; 2000 ; 2000 ; European Journal of Pediatric Surgery Volume 10 ; 10 ; >
-   au < ready ; exists ; 2001 ; 2001 ; European Journal of Pediatric Surgery Volume 11 ; 11 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; European Journal of Pediatric Surgery Volume 11 ; 11 ; >
    au < ready ; exists ; 2002 ; 2002 ; European Journal of Pediatric Surgery Volume 12 ; 12 ; >
    au < crawling ; exists ; 2003 ; 2003 ; European Journal of Pediatric Surgery Volume 13 ; 13 ; >
    au < crawling ; exists ; 2004 ; 2004 ; European Journal of Pediatric Surgery Volume 14 ; 14 ; >
@@ -1783,9 +1783,9 @@
    au < doNotProcess ; exists ; 1998 ; 1998 ; Facial Plastic Surgery Volume 14 ; 14 ; >
    au < doNotProcess ; exists ; 1999 ; 1999 ; Facial Plastic Surgery Volume 15 ; 15 ; >
    au < testing ; exists ; 2000 ; 2000 ; Facial Plastic Surgery Volume 16 ; 16 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Facial Plastic Surgery Volume 17 ; 17 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Facial Plastic Surgery Volume 17 ; 17 ; >
    au < ready ; exists ; 2002 ; 2002 ; Facial Plastic Surgery Volume 18 ; 18 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Facial Plastic Surgery Volume 19 ; 19 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Facial Plastic Surgery Volume 19 ; 19 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Facial Plastic Surgery Volume 20 ; 20 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Facial Plastic Surgery Volume 21 ; 21 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Facial Plastic Surgery Volume 22 ; 22 ; >
@@ -2136,7 +2136,7 @@
 
    au < doNotProcess ; exists ; 1999 ; 1999 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 31 ; 31 ; >
    au < testing ; exists ; 2000 ; 2000 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 32 ; 32 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 33 ; 33 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 33 ; 33 ; >
    au < ready ; exists ; 2002 ; 2002 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 34 ; 34 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 35 ; 35 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 36 ; 36 ; >
@@ -2308,7 +2308,7 @@
    au < testing ; exists ; 2000 ; 2000 ; Hormone and Metabolic Research Volume 32 ; 32 ; >
    au < testing ; exists ; 2001 ; 2001 ; Hormone and Metabolic Research Volume 33 ; 33 ; >
    au < ready ; exists ; 2002 ; 2002 ; Hormone and Metabolic Research Volume 34 ; 34 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Hormone and Metabolic Research Volume 35 ; 35 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Hormone and Metabolic Research Volume 35 ; 35 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Hormone and Metabolic Research Volume 36 ; 36 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Hormone and Metabolic Research Volume 37 ; 37 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Hormone and Metabolic Research Volume 38 ; 38 ; >
@@ -2425,7 +2425,7 @@
    au < testing ; exists ; 2000 ; 2000 ; Informationen aus Orthodontie & Kieferorthopädie Volume 32 ; 32 ; >
    au < testing ; exists ; 2001 ; 2001 ; Informationen aus Orthodontie & Kieferorthopädie Volume 33 ; 33 ; >
    au < ready ; exists ; 2002 ; 2002 ; Informationen aus Orthodontie & Kieferorthopädie Volume 34 ; 34 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Informationen aus Orthodontie & Kieferorthopädie Volume 35 ; 35 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Informationen aus Orthodontie & Kieferorthopädie Volume 35 ; 35 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Informationen aus Orthodontie & Kieferorthopädie Volume 36 ; 36 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Informationen aus Orthodontie & Kieferorthopädie Volume 37 ; 37 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Informationen aus Orthodontie & Kieferorthopädie Volume 38 ; 38 ; >
@@ -2476,9 +2476,9 @@
 
 
     au < testing ; exists ; 2001 ; 2001 ; intensiv Volume 9 ; 9 ; >
-    au < ready ; exists ; 2002 ; 2002 ; intensiv Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; intensiv Volume 10 ; 10 ; >
     au < crawling ; exists ; 2003 ; 2003 ; intensiv Volume 11 ; 11 ; >
-    au < ready ; exists ; 2004 ; 2004 ; intensiv Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; intensiv Volume 12 ; 12 ; >
     au < ready ; exists ; 2005 ; 2005 ; intensiv Volume 13 ; 13 ; >
     au < crawling ; exists ; 2006 ; 2006 ; intensiv Volume 14 ; 14 ; >
     au < crawling ; exists ; 2007 ; 2007 ; intensiv Volume 15 ; 15 ; >
@@ -2577,7 +2577,7 @@
     au < doNotProcess ; exists ; 1999 ; 1999 ; International Journal of Angiology Volume 8 ; 8 ; >
     au < testing ; exists ; 2000 ; 2000 ; International Journal of Angiology Volume 9 ; 9 ; >
     au < ready ; exists ; 2001 ; 2001 ; International Journal of Angiology Volume 10 ; 10 ; >
-    au < ready ; exists ; 2002 ; 2002 ; International Journal of Angiology Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; International Journal of Angiology Volume 11 ; 11 ; >
     au < crawling ; exists ; 2003 ; 2003 ; International Journal of Angiology Volume 12 ; 12 ; >
     au < crawling ; exists ; 2004 ; 2004 ; International Journal of Angiology Volume 13 ; 13 ; >
     au < ready ; exists ; 2005 ; 2005 ; International Journal of Angiology Volume 14 ; 14 ; >
@@ -2634,7 +2634,7 @@
     au < doNotProcess ; exists ; 1999 ; 1999 ; International Journal of Sports Medicine Volume 20 ; 20 ; >
     au < testing ; exists ; 2000 ; 2000 ; International Journal of Sports Medicine Volume 21 ; 21 ; >
     au < ready ; exists ; 2001 ; 2001 ; International Journal of Sports Medicine Volume 22 ; 22 ; >
-    au < ready ; exists ; 2002 ; 2002 ; International Journal of Sports Medicine Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; International Journal of Sports Medicine Volume 23 ; 23 ; >
     au < testing ; exists ; 2003 ; 2003 ; International Journal of Sports Medicine Volume 24 ; 24 ; >
     au < crawling ; exists ; 2004 ; 2004 ; International Journal of Sports Medicine Volume 25 ; 25 ; >
     au < crawling ; exists ; 2005 ; 2005 ; International Journal of Sports Medicine Volume 26 ; 26 ; >
@@ -2896,7 +2896,7 @@
     comment[years] = 2004-current
 
     au < crawling ; exists ; 2004 ; 2004 ; Journal of Knee Surgery Volume 17 ; 17 ; >
-    au < ready ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 18 ; 18 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Journal of Knee Surgery Volume 19 ; 19 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 20 ; 20 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of Knee Surgery Volume 21 ; 21 ; reingest3.clockss.org:8083 >
@@ -3405,7 +3405,7 @@
     comment[years] = 2003-current
 
     au < crawling ; exists ; 2003 ; 2003 ; Klinikarzt Der Volume 32 ; 32 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Klinikarzt Der Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Klinikarzt Der Volume 33 ; 33 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Klinikarzt Der Volume 34 ; 34 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Klinikarzt Der Volume 35 ; 35 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Klinikarzt Der Volume 36 ; 36 ; >
@@ -3459,7 +3459,7 @@
     au < doNotProcess ; exists ; 1999 ; 1999 ; Klinische Monatsblätter für Augenheilkunde Volume 216 ; 216 ; >
     au < testing ; exists ; 2000 ; 2000 ; Klinische Monatsblätter für Augenheilkunde Volume 217 ; 217 ; >
     au < testing ; exists ; 2001 ; 2001 ; Klinische Monatsblätter für Augenheilkunde Volume 218 ; 218 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Klinische Monatsblätter für Augenheilkunde Volume 219 ; 219 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Klinische Monatsblätter für Augenheilkunde Volume 219 ; 219 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Klinische Monatsblätter für Augenheilkunde Volume 220 ; 220 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Klinische Monatsblätter für Augenheilkunde Volume 221 ; 221 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Klinische Monatsblätter für Augenheilkunde Volume 222 ; 222 ; >
@@ -3713,7 +3713,7 @@
     au < doNotProcess ; exists ; 1999 ; 1999 ; Laryngo-Rhino-Otologie Volume 78 ; 78 ; >
     au < testing ; exists ; 2000 ; 2000 ; Laryngo-Rhino-Otologie Volume 79 ; 79 ; >
     au < ready ; exists ; 2001 ; 2001 ; Laryngo-Rhino-Otologie Volume 80 ; 80 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Laryngo-Rhino-Otologie Volume 81 ; 81 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Laryngo-Rhino-Otologie Volume 81 ; 81 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Laryngo-Rhino-Otologie Volume 82 ; 82 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Laryngo-Rhino-Otologie Volume 83 ; 83 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Laryngo-Rhino-Otologie Volume 84 ; 84 ; >
@@ -4060,7 +4060,7 @@
     au < testing ; exists ; 2000 ; 2000 ; Notarzt Der Volume 16 ; 16 ; >
     au < ready ; exists ; 2001 ; 2001 ; Notarzt Der Volume 17 ; 17 ; >
     au < ready ; exists ; 2002 ; 2002 ; Notarzt Der Volume 18 ; 18 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Notarzt Der Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Notarzt Der Volume 19 ; 19 ; >
     au < ready ; exists ; 2004 ; 2004 ; Notarzt Der Volume 20 ; 20 ; >
     au < frozen ; exists ; 2005 ; 2005 ; Notarzt Der Volume 21 ; 21 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Notarzt Der Volume 22 ; 22 ; >
@@ -4178,7 +4178,7 @@
     au < crawling ; exists ; 2003 ; 2003 ; Der Nuklearmediziner Volume 26 ; 26 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Der Nuklearmediziner Volume 27 ; 27 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Der Nuklearmediziner Volume 28 ; 28 ; >
-    au < ready ; exists ; 2006 ; 2006 ; Der Nuklearmediziner Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2006 ; 2006 ; Der Nuklearmediziner Volume 29 ; 29 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Der Nuklearmediziner Volume 30 ; 30 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Der Nuklearmediziner Volume 31 ; 31 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Der Nuklearmediziner Volume 32 ; 32 ; reingest4.clockss.org:8082 >
@@ -4294,7 +4294,7 @@
     param[journal_id] = 10.1055/s-00000121
     comment[years] = 2003-2011
 
-    au < ready ; exists ; 2003 ; 2003 ; Orthopedic Trauma Directions Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Orthopedic Trauma Directions Volume 1 ; 1 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Orthopedic Trauma Directions Volume 2 ; 2 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Orthopedic Trauma Directions Volume 3 ; 3 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Orthopedic Trauma Directions Volume 4 ; 4 ; >
@@ -4339,7 +4339,7 @@
     comment[years] = 2001
     #continued_by = 1618-971X
     
-    au < ready ; exists ; 2001 ; 2001 ; Osteosynthese International Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Osteosynthese International Volume 9 ; 9 ; >
 
   }
 
@@ -4512,8 +4512,8 @@
     au < doNotProcess ; exists ; 1998 ; 1998 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 8 ; 8 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 9 ; 9 ; >
     au < testing ; exists ; 2000 ; 2000 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 10 ; 10 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 11 ; 11 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 12 ; 12 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 13 ; 13 ; >
     au < ready ; exists ; 2004 ; 2004 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 14 ; 14 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 15 ; 15 ; >
@@ -4721,7 +4721,7 @@
    au < doNotProcess ; exists ; 1999 ; 1999 ; Planta Medica Volume 65 ; 65 ; >
    au < testing ; exists ; 2000 ; 2000 ; Planta Medica Volume 66 ; 66 ; >
    au < ready ; exists ; 2001 ; 2001 ; Planta Medica Volume 67 ; 67 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Planta Medica Volume 68 ; 68 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Planta Medica Volume 68 ; 68 ; >
    au < ready ; exists ; 2003 ; 2003 ; Planta Medica Volume 69 ; 69 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Planta Medica Volume 70 ; 70 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Planta Medica Volume 71 ; 71 ; >
@@ -4794,7 +4794,7 @@
    au < testing ; exists ; 2000 ; 2000 ; Pneumologie Volume 54 ; 54 ; >
    au < testing ; exists ; 2001 ; 2001 ; Pneumologie Volume 55 ; 55 ; >
    au < ready ; exists ; 2002 ; 2002 ; Pneumologie Volume 56 ; 56 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Pneumologie Volume 57 ; 57 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Pneumologie Volume 57 ; 57 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Pneumologie Volume 58 ; 58 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Pneumologie Volume 59 ; 59 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Pneumologie Volume 60 ; 60 ; >
@@ -4828,7 +4828,7 @@
     comment[years] = 2000-current
 
    au < testing ; exists ; 2000 ; 2000 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 50 ; 50 ; >
-   au < ready ; exists ; 2001 ; 2001 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 51 ; 51 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 51 ; 51 ; >
    au < ready ; exists ; 2002 ; 2002 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 52 ; 52 ; >
    au < crawling ; exists ; 2003 ; 2003 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 53 ; 53 ; >
    au < crawling ; exists ; 2004 ; 2004 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 54 ; 54 ; >
@@ -4945,7 +4945,7 @@
 
    au < ready ; exists ; 2001 ; 2001 ; Psychiatrische Praxis Volume 28 ; 28 ; >
    au < ready ; exists ; 2002 ; 2002 ; Psychiatrische Praxis Volume 29 ; 29 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Psychiatrische Praxis Volume 30 ; 30 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Psychiatrische Praxis Volume 30 ; 30 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Psychiatrische Praxis Volume 31 ; 31 ; >
    au < ready ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Psychiatrische Praxis Volume 33 ; 33 ; >
@@ -5338,7 +5338,7 @@
    au < doNotProcess ; exists ; 1999 ; 1999 ; Seminars in Interventional Radiology Volume 16 ; 16 ; >
    au < testing ; exists ; 2000 ; 2000 ; Seminars in Interventional Radiology Volume 17 ; 17 ; >
    au < ready ; exists ; 2001 ; 2001 ; Seminars in Interventional Radiology Volume 18 ; 18 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; >
    au < ready ; exists ; 2003 ; 2003 ; Seminars in Interventional Radiology Volume 20 ; 20 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
@@ -5434,7 +5434,7 @@
    au < doNotProcess ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
    au < testing ; exists ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; >
    au < testing ; exists ; 2001 ; 2001 ; Seminars in Musculoskeletal Radiology Volume 5 ; 5 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Musculoskeletal Radiology Volume 7 ; 7 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Musculoskeletal Radiology Volume 8 ; 8 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Musculoskeletal Radiology Volume 9 ; 9 ; >
@@ -5612,7 +5612,7 @@
     comment[years] = 2000-current
 
    au < testing ; exists ; 2000 ; 2000 ; Seminars in Reproductive Medicine Volume 18 ; 18 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Seminars in Reproductive Medicine Volume 19 ; 19 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Reproductive Medicine Volume 19 ; 19 ; >
    au < ready ; exists ; 2002 ; 2002 ; Seminars in Reproductive Medicine Volume 20 ; 20 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Reproductive Medicine Volume 21 ; 21 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Reproductive Medicine Volume 22 ; 22 ; >
@@ -5657,7 +5657,7 @@
    au < testing ; exists ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; >
    au < testing ; exists ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; >
    au < ready ; exists ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Seminars in Respiratory and Critical Care Medicine Volume 24 ; 24 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Respiratory and Critical Care Medicine Volume 24 ; 24 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Respiratory and Critical Care Medicine Volume 25 ; 25 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Respiratory and Critical Care Medicine Volume 26 ; 26 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Seminars in Respiratory and Critical Care Medicine Volume 27 ; 27 ; >
@@ -5708,10 +5708,10 @@
     au < doNotProcess ; exists ; 1998 ; 1998 ; Seminars in Speech and Language Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Seminars in Speech and Language Volume 20 ; 20 ; >
     au < testing ; exists ; 2000 ; 2000 ; Seminars in Speech and Language Volume 21 ; 21 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Seminars in Speech and Language Volume 22 ; 22 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Seminars in Speech and Language Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Speech and Language Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Speech and Language Volume 23 ; 23 ; >
     au < ready ; exists ; 2003 ; 2003 ; Seminars in Speech and Language Volume 24 ; 24 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Seminars in Speech and Language Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Speech and Language Volume 25 ; 25 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Seminars in Speech and Language Volume 26 ; 26 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Seminars in Speech and Language Volume 27 ; 27 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Seminars in Speech and Language Volume 28 ; 28 ; >
@@ -5809,7 +5809,7 @@
 
     au < testing ; exists ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 ; >
     au < ready ; exists ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
 
@@ -5861,13 +5861,13 @@
     comment[years] = 2001-2011
 
     au < ready ; exists ; 2001 ; 2001 ; Skull Base Volume 11 ; 11 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Skull Base Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Skull Base Volume 12 ; 12 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Skull Base Volume 13 ; 13 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Skull Base Volume 14 ; 14 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Skull Base Volume 15 ; 15 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Skull Base Volume 16 ; 16 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Skull Base Volume 17 ; 17 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Skull Base Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Skull Base Volume 18 ; 18 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Skull Base Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Skull Base Volume 20 ; 20 ; >
     au < finished ; finished ; 2011 ; 2011 ; Skull Base Volume 21 ; 21 ; >
@@ -5905,7 +5905,7 @@
 
     au < manifest ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
     au < testing ; exists ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; >
     au < ready ; exists ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Sleep and Breathing Volume 7 ; 7 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Sleep and Breathing Volume 8 ; 8 ; >
@@ -6018,7 +6018,7 @@
     comment[years] = 2000-current
 
    au < testing ; exists ; 2000 ; 2000 ; Sprache Stimme Gehör Volume 24 ; 24 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Sprache Stimme Gehör Volume 25 ; 25 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Sprache Stimme Gehör Volume 25 ; 25 ; >
    au < ready ; exists ; 2002 ; 2002 ; Sprache Stimme Gehör Volume 26 ; 26 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Sprache Stimme Gehör Volume 27 ; 27 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Sprache Stimme Gehör Volume 28 ; 28 ; >
@@ -6056,7 +6056,7 @@
 
    au < testing ; exists ; 2000 ; 2000 ; Suchttherapie Volume 1 ; 1 ; >
    au < testing ; exists ; 2001 ; 2001 ; Suchttherapie Volume 2 ; 2 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Suchttherapie Volume 3 ; 3 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Suchttherapie Volume 3 ; 3 ; >
    au < ready ; exists ; 2003 ; 2003 ; Suchttherapie Volume 4 ; 4 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Suchttherapie Volume 5 ; 5 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Suchttherapie Volume 6 ; 6 ; >
@@ -6157,9 +6157,9 @@
    au < doNotProcess ; exists ; 1998 ; 1998 ; SYNLETT Volume 9 ; 9 ; >
    au < doNotProcess ; exists ; 1999 ; 1999 ; SYNLETT Volume 10 ; 10 ; >
    au < testing ; exists ; 2000 ; 2000 ; SYNLETT Volume 11 ; 11 ; >
-   au < ready ; exists ; 2001 ; 2001 ; SYNLETT Volume 12 ; 12 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; SYNLETT Volume 12 ; 12 ; >
    au < ready ; exists ; 2002 ; 2002 ; SYNLETT Volume 13 ; 13 ; >
-   au < ready ; exists ; 2003 ; 2003 ; SYNLETT Volume 14 ; 14 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; SYNLETT Volume 14 ; 14 ; >
    au < crawling ; exists ; 2004 ; 2004 ; SYNLETT Volume 15 ; 15 ; >
    au < crawling ; exists ; 2005 ; 2005 ; SYNLETT Volume 16 ; 16 ; >
    au < crawling ; exists ; 2006 ; 2006 ; SYNLETT Volume 17 ; 17 ; >
@@ -6440,12 +6440,12 @@
     au < testing ; exists ; 2000 ; 2000 ; TumorDiagnostik & Therapie Volume 23 ; 23 ; >
     au < testing ; exists ; 2001 ; 2001 ; TumorDiagnostik & Therapie Volume 24 ; 24 ; >
     au < ready ; exists ; 2002 ; 2002 ; TumorDiagnostik & Therapie Volume 25 ; 25 ; >
-    au < ready ; exists ; 2003 ; 2003 ; TumorDiagnostik & Therapie Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; TumorDiagnostik & Therapie Volume 26 ; 26 ; >
     au < crawling ; exists ; 2004 ; 2004 ; TumorDiagnostik & Therapie Volume 27 ; 27 ; >
     au < crawling ; exists ; 2005 ; 2005 ; TumorDiagnostik & Therapie Volume 28 ; 28 ; >
     au < crawling ; exists ; 2006 ; 2006 ; TumorDiagnostik & Therapie Volume 29 ; 29 ; >
     au < frozen ; exists ; 2007 ; 2007 ; TumorDiagnostik & Therapie Volume 30 ; 30 ; >
-    au < ready ; exists ; 2008 ; 2008 ; TumorDiagnostik & Therapie Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; TumorDiagnostik & Therapie Volume 31 ; 31 ; >
     au < finished ; manifest ; 2009 ; 2009 ; TumorDiagnostik & Therapie Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; TumorDiagnostik & Therapie Volume 33 ; 33 ; >
     au < finished ; finished ; 2011 ; 2011 ; TumorDiagnostik & Therapie Volume 34 ; 34 ; reingest2.clockss.org:8085 >
@@ -6495,8 +6495,8 @@
     au < doNotProcess ; exists ; 1998 ; 1998 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 20 ; 20 ; >
     au < testing ; exists ; 2000 ; 2000 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 21 ; 21 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 22 ; 22 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 23 ; 23 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 24 ; 24 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 25 ; 25 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 26 ; 26 ; >
@@ -6630,7 +6630,7 @@
     au < testing ; exists ; 2000 ; 2000 ; Viszeralchirurgie Volume 35 ; 35 ; >
     au < ready ; exists ; 2001 ; 2001 ; Viszeralchirurgie Volume 36 ; 36 ; >
     au < ready ; exists ; 2002 ; 2002 ; Viszeralchirurgie Volume 37 ; 37 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Viszeralchirurgie Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Viszeralchirurgie Volume 38 ; 38 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Viszeralchirurgie Volume 39 ; 39 ; >
     au < ready ; exists ; 2005 ; 2005 ; Viszeralchirurgie Volume 40 ; 40 ; >
     au < ready ; exists ; 2006 ; 2006 ; Viszeralchirurgie Volume 41 ; 41 ; >
@@ -6751,8 +6751,8 @@
     comment[years] = 2000-current
 
     au < testing ; exists ; 2000 ; 2000 ; Zeitschrift für Gastroenterologie Volume 38 ; 38 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Gastroenterologie Volume 39 ; 39 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Gastroenterologie Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Gastroenterologie Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Gastroenterologie Volume 40 ; 40 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Gastroenterologie Volume 41 ; 41 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Gastroenterologie Volume 42 ; 42 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Gastroenterologie Volume 43 ; 43 ; >
@@ -6789,7 +6789,7 @@
 
     au < testing ; exists ; 2000 ; 2000 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 204 ; 204 ; >
     au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 205 ; 205 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 206 ; 206 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 206 ; 206 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 207 ; 207 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 208 ; 208 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Geburtshilfe und Neonatologie Volume 209 ; 209 ; >
@@ -6869,10 +6869,10 @@
     au < doNotProcess ; exists ; 1998 ; 1998 ; Zeitschrift für Klassische Homöopathie Volume 42 ; 42 ; >
     au < doNotProcess ; exists ; 1999 ; 1999 ; Zeitschrift für Klassische Homöopathie Volume 43 ; 43 ; >
     au < testing ; exists ; 2000 ; 2000 ; Zeitschrift für Klassische Homöopathie Volume 44 ; 44 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Klassische Homöopathie Volume 45 ; 45 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Klassische Homöopathie Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Klassische Homöopathie Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Klassische Homöopathie Volume 46 ; 46 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Klassische Homöopathie Volume 47 ; 47 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Zeitschrift für Klassische Homöopathie Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Klassische Homöopathie Volume 48 ; 48 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Klassische Homöopathie Volume 49 ; 49 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Zeitschrift für Klassische Homöopathie Volume 50 ; 50 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Zeitschrift für Klassische Homöopathie Volume 51 ; 51 ; >
@@ -7017,7 +7017,7 @@
     au < testing ; exists ; 2000 ; 2000 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2000 ; 0 ; >
     au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2001 ; 0 ; >
     au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2002 ; 0 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2003 ; 0 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2003 ; 0 ; >
     au < ready ; exists ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 0 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 0 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2006 ; 0 ; >
@@ -7039,7 +7039,7 @@
 
     au < testing ; exists ; 2000 ; 2000 ; Zeitschrift für Palliativmedizin Volume 1 ; 1 ; >
     au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Palliativmedizin Volume 2 ; 2 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Palliativmedizin Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Palliativmedizin Volume 3 ; 3 ; >
     au < ready ; exists ; 2003 ; 2003 ; Zeitschrift für Palliativmedizin Volume 4 ; 4 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Palliativmedizin Volume 5 ; 5 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Palliativmedizin Volume 6 ; 6 ; >
@@ -7107,8 +7107,8 @@
     comment[years] = 2001-current
 
     au < testing ; exists ; 2001 ; 2001 ; Zeitschrift für Sexualforschung Volume 14 ; 14 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Sexualforschung Volume 15 ; 15 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Zeitschrift für Sexualforschung Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Sexualforschung Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Sexualforschung Volume 16 ; 16 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Sexualforschung Volume 17 ; 17 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Sexualforschung Volume 18 ; 18 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Zeitschrift für Sexualforschung Volume 19 ; 19 ; >
@@ -7144,13 +7144,13 @@
 
     au < testing ; exists ; 2000 ; 2000 ; Zeitschrift für Chirurgie Volume 125 ; 125 ; >
     au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Chirurgie Volume 126 ; 126 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Chirurgie Volume 127 ; 127 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Chirurgie Volume 127 ; 127 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Chirurgie Volume 128 ; 128 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Chirurgie Volume 129 ; 129 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Chirurgie Volume 130 ; 130 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Zeitschrift für Chirurgie Volume 131 ; 131 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Zeitschrift für Chirurgie Volume 132 ; 132 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Zeitschrift für Chirurgie Volume 133 ; 133 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Zeitschrift für Chirurgie Volume 133 ; 133 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Zeitschrift für Chirurgie Volume 134 ; 134 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Zeitschrift für Chirurgie Volume 135 ; 135 ; >
     au < finished ; finished ; 2011 ; 2011 ; Zeitschrift für Chirurgie Volume 136 ; 136 ; reingest2.clockss.org:8085 >
@@ -7182,9 +7182,9 @@
     au < testing ; exists ; 2000 ; 2000 ; Zeitschrift für Gynäkologie Volume 122 ; 122 ; >
     au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Gynäkologie Volume 123 ; 123 ; >
     au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Gynäkologie Volume 124 ; 124 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Zeitschrift für Gynäkologie Volume 125 ; 125 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Gynäkologie Volume 125 ; 125 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Gynäkologie Volume 126 ; 126 ; >
-    au < ready ; exists ; 2005 ; 2005 ; Zeitschrift für Gynäkologie Volume 127 ; 127 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Gynäkologie Volume 127 ; 127 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Zeitschrift für Gynäkologie Volume 128 ; 128 ; >
 
   }
@@ -7270,7 +7270,7 @@
     au < ready ; exists ; 2003 ; 2003 ; ZWR - Das Deutsche Zahnärzteblatt Volume 112 ; 112 ; >
     au < crawling ; exists ; 2004 ; 2004 ; ZWR - Das Deutsche Zahnärzteblatt Volume 113 ; 113 ; >
     au < crawling ; exists ; 2005 ; 2005 ; ZWR - Das Deutsche Zahnärzteblatt Volume 114 ; 114 ; >
-    au < ready ; exists ; 2006 ; 2006 ; ZWR - Das Deutsche Zahnärzteblatt Volume 115 ; 115 ; >
+    au < crawling ; exists ; 2006 ; 2006 ; ZWR - Das Deutsche Zahnärzteblatt Volume 115 ; 115 ; >
     au < crawling ; exists ; 2007 ; 2007 ; ZWR - Das Deutsche Zahnärzteblatt Volume 116 ; 116 ; >
     au < frozen ; exists ; 2008 ; 2008 ; ZWR - Das Deutsche Zahnärzteblatt Volume 117 ; 117 ; >
     au < finished ; manifest ; 2009 ; 2009 ; ZWR - Das Deutsche Zahnärzteblatt Volume 118 ; 118 ; reingest3.clockss.org:8083 >
@@ -7432,7 +7432,7 @@
 
     au < testing ; exists ; 2000 ; 2000 ; Hämostaseologie Volume 20 ; 20 ; >
     au < ready ; exists ; 2001 ; 2001 ; Hämostaseologie Volume 21 ; 21 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Hämostaseologie Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Hämostaseologie Volume 22 ; 22 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Hämostaseologie Volume 23 ; 23 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Hämostaseologie Volume 24 ; 24 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Hämostaseologie Volume 25 ; 25 ; >
@@ -7529,7 +7529,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; Kinder- und Jugendmedizin Volume 5 ; 5 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Kinder- und Jugendmedizin Volume 6 ; 6 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Kinder- und Jugendmedizin Volume 7 ; 7 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Kinder- und Jugendmedizin Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Kinder- und Jugendmedizin Volume 8 ; 8 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Kinder- und Jugendmedizin Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Kinder- und Jugendmedizin Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Kinder- und Jugendmedizin Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -7588,7 +7588,7 @@
     param[journal_id] = 10.1055/s-00034916
     comment[years] = 2003-current
 
-    au < ready ; exists ; 2003 ; 2003 ; Nervenheilkunde Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Nervenheilkunde Volume 22 ; 22 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Nervenheilkunde Volume 23 ; 23 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Nervenheilkunde Volume 24 ; 24 ; >
     au < ready ; exists ; 2006 ; 2006 ; Nervenheilkunde Volume 25 ; 25 ; >
@@ -7625,7 +7625,7 @@
     au < testing ; exists ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 ; >
     au < ready ; exists ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 ; >
     au < ready ; exists ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 ; >
@@ -7871,7 +7871,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 3 ; 3 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 4 ; 4 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 5 ; 5 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 6 ; 6 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 2011 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 9 ; 9 ; reingest3.clockss.org:8083 >
