@@ -266,13 +266,13 @@
       au < manifest ; exists ; 1973 ; Journal of the Engineering Mechanics Division Volume 99 ; 99 ;  >
       au < manifest ; exists ; 1974 ; Journal of the Engineering Mechanics Division Volume 100 ; 100 ;  >
       au < manifest ; exists ; 1975 ; Journal of the Engineering Mechanics Division Volume 101 ; 101 ;  >
-      au < ready ; exists ; 1976 ; Journal of the Engineering Mechanics Division Volume 102 ; 102 ;  >
+      au < crawling ; exists ; 1976 ; Journal of the Engineering Mechanics Division Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Journal of the Engineering Mechanics Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Engineering Mechanics Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Engineering Mechanics Division Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Journal of the Engineering Mechanics Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Engineering Mechanics Division Volume 107 ; 107 ;  >
-      au < ready ; exists ; 1982 ; Journal of the Engineering Mechanics Division Volume 108 ; 108 ;  >
+      au < crawling ; exists ; 1982 ; Journal of the Engineering Mechanics Division Volume 108 ; 108 ;  >
 
   }
 
@@ -378,10 +378,10 @@
       au < manifest ; exists ; 1974 ; Journal of the Hydraulics Division Volume 100 ; 100 ;  >
       au < manifest ; exists ; 1975 ; Journal of the Hydraulics Division Volume 101 ; 101 ;  >
       au < crawling ; exists ; 1976 ; Journal of the Hydraulics Division Volume 102 ; 102 ;  >
-      au < ready ; exists ; 1977 ; Journal of the Hydraulics Division Volume 103 ; 103 ;  >
+      au < crawling ; exists ; 1977 ; Journal of the Hydraulics Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Hydraulics Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Hydraulics Division Volume 105 ; 105 ;  >
-      au < ready ; exists ; 1980 ; Journal of the Hydraulics Division Volume 106 ; 106 ;  >
+      au < crawling ; exists ; 1980 ; Journal of the Hydraulics Division Volume 106 ; 106 ;  >
       au < crawling ; exists ; 1981 ; Journal of the Hydraulics Division Volume 107 ; 107 ;  >
       au < ready ; exists ; 1982 ; Journal of the Hydraulics Division Volume 108 ; 108 ;  >
 
@@ -420,7 +420,7 @@
       au < ready ; exists ; 1976 ; Journal of the Irrigation and Drainage Division Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Journal of the Irrigation and Drainage Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Irrigation and Drainage Division Volume 104 ; 104 ;  >
-      au < ready ; exists ; 1979 ; Journal of the Irrigation and Drainage Division Volume 105 ; 105 ;  >
+      au < crawling ; exists ; 1979 ; Journal of the Irrigation and Drainage Division Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Journal of the Irrigation and Drainage Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Irrigation and Drainage Division Volume 107 ; 107 ;  >
       au < ready ; exists ; 1982 ; Journal of the Irrigation and Drainage Division Volume 108 ; 108 ;  >
@@ -581,7 +581,7 @@
       au < manifest ; exists ; 1975 ; Journal of the Structural Division Volume 101 ; 101 ;  >
       au < manifest ; exists ; 1976 ; Journal of the Structural Division Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Journal of the Structural Division Volume 103 ; 103 ;  >
-      au < ready ; exists ; 1978 ; Journal of the Structural Division Volume 104 ; 104 ;  >
+      au < crawling ; exists ; 1978 ; Journal of the Structural Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Structural Division Volume 105 ; 105 ;  >
       au < crawling ; exists ; 1980 ; Journal of the Structural Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Structural Division Volume 107 ; 107 ;  >
@@ -692,8 +692,8 @@
 
       au < manifest ; exists ; 1976 ; Journal of the Water Resources Planning and Management Division Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Journal of the Water Resources Planning and Management Division Volume 103 ; 103 ;  >
-      au < ready ; exists ; 1978 ; Journal of the Water Resources Planning and Management Division Volume 104 ; 104 ;  >
-      au < ready ; exists ; 1979 ; Journal of the Water Resources Planning and Management Division Volume 105 ; 105 ;  >
+      au < crawling ; exists ; 1978 ; Journal of the Water Resources Planning and Management Division Volume 104 ; 104 ;  >
+      au < crawling ; exists ; 1979 ; Journal of the Water Resources Planning and Management Division Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Journal of the Water Resources Planning and Management Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Water Resources Planning and Management Division Volume 107 ; 107 ;  >
       au < ready ; exists ; 1982 ; Journal of the Water Resources Planning and Management Division Volume 108 ; 108 ;  >
@@ -713,7 +713,7 @@
       au < ready ; exists ; 1977 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 105 ; 105 ;  >
-      au < ready ; exists ; 1980 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 106 ; 106 ;  >
+      au < crawling ; exists ; 1980 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 107 ; 107 ;  >
       au < ready ; exists ; 1982 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 108 ; 108 ;  >
 
@@ -894,7 +894,7 @@
       au < ready ; exists ; 1978 ; Transportation Engineering Journal of ASCE Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Transportation Engineering Journal of ASCE Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Transportation Engineering Journal of ASCE Volume 106 ; 106 ;  >
-      au < ready ; exists ; 1981 ; Transportation Engineering Journal of ASCE Volume 107 ; 107 ;  >
+      au < crawling ; exists ; 1981 ; Transportation Engineering Journal of ASCE Volume 107 ; 107 ;  >
       au < ready ; exists ; 1982 ; Transportation Engineering Journal of ASCE Volume 108 ; 108 ;  >
 
   }
