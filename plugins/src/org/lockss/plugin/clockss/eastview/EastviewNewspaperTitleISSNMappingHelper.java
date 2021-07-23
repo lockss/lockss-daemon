@@ -17,7 +17,6 @@ public class EastviewNewspaperTitleISSNMappingHelper {
     private static final Logger log = Logger.getLogger(EastviewNewspaperTitleISSNMappingHelper.class);
 
     private static Pattern LINE_PAT = Pattern.compile("(.*),(.*),(.*)?");
-    private static Pattern DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
     public static Map<String, String> issnMap = new HashMap<>();
     public static Map<String, String> titleMap = new HashMap<>();
 
@@ -37,7 +36,6 @@ public class EastviewNewspaperTitleISSNMappingHelper {
 
         String nextline = null;
 
-        
         while ((nextline = bufr.readLine()) != null) {
             nextline = nextline.trim();
 
