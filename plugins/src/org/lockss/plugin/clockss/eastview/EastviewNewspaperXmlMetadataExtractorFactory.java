@@ -90,6 +90,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
      * a PDF file may or may not exist, but assume the XML is full text
      * when it does not
      */
+    /*
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
@@ -103,6 +104,26 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       log.debug3("Eastview Newspaper: getFilenamesAssociatedWithRecord pdfName is " + fullPathFile);
       List<String> returnList = new ArrayList<String>();
       returnList.add(fullPathFile);
+      return returnList;
+    }
+     */
+
+    /*
+     * a PDF file may or may not exist, but assume the XML is full text
+     * when it does not
+     */
+    @Override
+    protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+                                                            ArticleMetadata oneAM) {
+
+      // filename is just the same a the XML filename but with .pdf
+      // instead of .xml
+      String url_string = cu.getUrl();
+      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      log.debug3("pdfName is " + pdfName);
+      List<String> returnList = new ArrayList<String>();
+      returnList.add(pdfName);
+      returnList.add(url_string); // xml file
       return returnList;
     }
 
@@ -149,11 +170,13 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
                 title));
       }
 
+      /*
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       String rawPDFPath = thisAM.getRaw(EastviewNewspaperMetadataHelper.PAGE_PDF_PATH);
       String fullPathFile = cuBase + rawPDFPath;
       log.debug3("Eastview Newspaper: rawPDFPath = " + rawPDFPath + ", fullPathFile = " + fullPathFile);
       thisAM.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+       */
 
       String publicationTitle = thisAM.getRaw(EastviewNewspaperMetadataHelper.PUBLICATION_TITLE_PATH);
       log.debug3("Eastview Newspaper: publicationTitle = " + publicationTitle);
