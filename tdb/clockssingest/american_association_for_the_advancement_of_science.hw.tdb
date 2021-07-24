@@ -25,31 +25,31 @@
       #content available from 1880 volume os-1 to 2009 volume 326. 4 volumes/year starting 1962. 2 volumes/year starting 1895 volume 1.
       #volume 344 File size (346438) differs from Content-Length header (461302): http://science.sciencemag.org/content/sci/suppl/2014/04/23/344.6182.380.DC1/1249656s-tables.zip
 
-      au < finished ; crawling ; 1880 ; Science Volume os-1 ; os-1 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1881 ; Science Volume os-2 ; os-2 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1882 ; Science Volume os-3 ; os-3 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1880 ; Science Volume os-1 ; os-1 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1881 ; Science Volume os-2 ; os-2 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1882 ; Science Volume os-3 ; os-3 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
 
-      au < finished ; crawling ; 1883 ; Science Volume ns-1 ; ns-1 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1883 ; Science Volume ns-2 ; ns-2 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1884 ; Science Volume ns-3 ; ns-3 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1884 ; Science Volume ns-4 ; ns-4 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1885 ; Science Volume ns-5 ; ns-5 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1885 ; Science Volume ns-6 ; ns-6 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1886 ; Science Volume ns-7 ; ns-7 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1886 ; Science Volume ns-8 ; ns-8 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1887 ; Science Volume ns-9 ; ns-9 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1887 ; Science Volume ns-10 ; ns-10 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1888 ; Science Volume ns-11 ; ns-11 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1888 ; Science Volume ns-12 ; ns-12 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1889 ; Science Volume ns-13 ; ns-13 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1889 ; Science Volume ns-14 ; ns-14 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1890 ; Science Volume ns-15 ; ns-15 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1890 ; Science Volume ns-16 ; ns-16 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1891 ; Science Volume ns-17 ; ns-17 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1891 ; Science Volume ns-18 ; ns-18 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1892 ; Science Volume ns-19 ; ns-19 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1892 ; Science Volume ns-20 ; ns-20 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1893 ; Science Volume ns-21 ; ns-21 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1883 ; Science Volume ns-1 ; ns-1 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1883 ; Science Volume ns-2 ; ns-2 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1884 ; Science Volume ns-3 ; ns-3 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1884 ; Science Volume ns-4 ; ns-4 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1885 ; Science Volume ns-5 ; ns-5 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1885 ; Science Volume ns-6 ; ns-6 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1886 ; Science Volume ns-7 ; ns-7 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1886 ; Science Volume ns-8 ; ns-8 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1887 ; Science Volume ns-9 ; ns-9 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1887 ; Science Volume ns-10 ; ns-10 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1888 ; Science Volume ns-11 ; ns-11 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1888 ; Science Volume ns-12 ; ns-12 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1889 ; Science Volume ns-13 ; ns-13 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1889 ; Science Volume ns-14 ; ns-14 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1890 ; Science Volume ns-15 ; ns-15 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1890 ; Science Volume ns-16 ; ns-16 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1891 ; Science Volume ns-17 ; ns-17 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1891 ; Science Volume ns-18 ; ns-18 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1892 ; Science Volume ns-19 ; ns-19 ; http://science.sciencemag.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1892 ; Science Volume ns-20 ; ns-20 ; http://science.sciencemag.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1893 ; Science Volume ns-21 ; ns-21 ; http://science.sciencemag.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 1893 ; Science Volume ns-22 ; ns-22 ; http://science.sciencemag.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1894 ; Science Volume ns-23 ; ns-23 ; http://science.sciencemag.org/ ; reingest2.clockss.org:8085 >
 
