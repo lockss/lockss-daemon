@@ -1401,7 +1401,7 @@
       au < released ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 ; http://pubs.rsc.org/ >
       au < released ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 ; http://pubs.rsc.org/ >
-      au < manifest ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 ; https://pubs.rsc.org/ >
+      au < ready ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 ; https://pubs.rsc.org/ >
       au < released ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 ; http://pubs.rsc.org/ >
       au < released ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; Catalysis Science & Technology Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ >
@@ -1792,7 +1792,7 @@
       param[journal_code] = ta
 
       au < released ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; http://pubs.rsc.org/ >
-      au < manifest ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; https://pubs.rsc.org/ >
+      au < ready ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; https://pubs.rsc.org/ >
       au < released ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; http://pubs.rsc.org/ >
       au < released ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ >
@@ -2474,7 +2474,7 @@
 
       au < released ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 ; http://pubs.rsc.org/ >
-      au < manifest ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 ; https://pubs.rsc.org/ >
+      au < ready ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 ; https://pubs.rsc.org/ >
       au < released ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 ; http://pubs.rsc.org/ >
       au < released ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 ; http://pubs.rsc.org/ >
       au < released ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 ; http://pubs.rsc.org/ >
@@ -2537,7 +2537,7 @@
       comment[years] = Published 2014-2016
       param[journal_code] = qo
 
-      au < manifest ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; https://pubs.rsc.org/ >
+      au < ready ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; https://pubs.rsc.org/ >
       au < released ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; http://pubs.rsc.org/ >
       au < released ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; Organic Chemistry Frontiers Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ >
@@ -2853,9 +2853,9 @@
       param[journal_code] = ra
 
       au < released ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 ; http://pubs.rsc.org/ >
-      au < manifest ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 ; https://pubs.rsc.org/ >
+      au < ready ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 ; https://pubs.rsc.org/ >
       au < released ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 ; http://pubs.rsc.org/ >
-      au < manifest ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 ; https://pubs.rsc.org/ >
+      au < ready ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 ; https://pubs.rsc.org/ >
       au < released ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; http://pubs.rsc.org/ >
       au < released ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ >
