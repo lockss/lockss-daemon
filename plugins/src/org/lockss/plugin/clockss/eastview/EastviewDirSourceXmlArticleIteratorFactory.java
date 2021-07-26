@@ -51,6 +51,8 @@ public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIterat
 
   private static final Logger log = Logger.getLogger(EastviewDirSourceXmlArticleIteratorFactory.class);
 
+  //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/2015/03/001_31/46295500_MTH_2015_0024_0001_0001.pdf
+  //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/2015/03/001_31/46295500_MTH_2015_0024_0001_0001.xml
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
           "\"%s[^/]+/.*\\.zip!/.*\\.xml$\", base_url";
 
