@@ -32,17 +32,16 @@
 
 package org.lockss.plugin.clockss.eastview;
 
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
-import org.lockss.util.UrlUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -53,8 +52,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(EastviewNewspaperXmlMetadataExtractorFactory.class);
+public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+
+  private static final Logger log = Logger.getLogger(EastviewJournalXmlMetadataExtractorFactory.class);
+  private static SourceXmlSchemaHelper EastviewHelper = null;
+
   public static Map<String, String> issnMap = new HashMap<>();
 
   static {
@@ -65,7 +67,6 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
     }
   }
 
-  private static SourceXmlSchemaHelper EastviewHelper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -80,36 +81,73 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
       if (EastviewHelper == null) {
-        EastviewHelper = new EastviewNewspaperMetadataHelper();
+        EastviewHelper = new EastviewJournalMetadataHelper();
       }
       return EastviewHelper;
     }
 
-    /*
+    @Override
+    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+      log.debug3("Eastview Journal: in SourceXmlMetadataExtractor preEmitCheck");
+
+      List<String> filesToCheck;
+
+      // If no files get returned in the list, nothing to check
+      if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
+        return true;
+      }
+      ArchivalUnit B_au = cu.getArchivalUnit();
+      CachedUrl fileCu;
+      for (int i=0; i < filesToCheck.size(); i++)
+      {
+        fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
+        log.debug3("Eastview Journal: Check for existence of " + filesToCheck.get(i));
+        if(filesToCheck.get(i).contains(".pdf")) {
+          // Set a cooked value for an access file. Otherwise it would get set to xml file
+          log.debug3("Eastview Journal: set access_url to " + filesToCheck.get(i));
+          thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+          return true;
+        }
+      }
+      log.debug3("Eastview Journal: No file exists associated with this record");
+      return false; //No files found that match this record
+    }
+
+
+    /* 
      * a PDF file may or may not exist, but assume the XML is full text
      * when it does not
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
-                                                            ArticleMetadata oneAM) {
+        ArticleMetadata oneAM) {
 
-      // filename is just the same a the XML filename but with .pdf
+      // filename is just the same a the XML filename but with .pdf 
       // instead of .xml
       String url_string = cu.getUrl();
-      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
-      log.debug3("Eastview Newspaper: pdfName is " + pdfName);
+      String articlePDFName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      log.debug3("Eastview Journal: articlePDFName is " + articlePDFName);
+      
+      String rawPDFPath = oneAM.getRaw(EastviewJournalMetadataHelper.PAGE_PDF_PATH);
+      String manMadePagePDF = url_string.replace(".xml", "/") + rawPDFPath;
+      log.debug3("Eastview Journal: manMadePagePDF = " + manMadePagePDF);
+
       List<String> returnList = new ArrayList<String>();
-      returnList.add(pdfName);
+      //returnList.add(articlePDFName);
       returnList.add(url_string); // xml file
+      returnList.add(manMadePagePDF); // add man-made-pagePDF
+      //Do not add pagePDFName, since the pdf file are not delivered
       return returnList;
     }
-
+    
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
 
       String raw_title = thisAM.getRaw(EastviewSchemaHelper.ART_RAW_TITLE);
-      log.debug3(String.format("Eastview Newspaper: metadata raw title parsed: %s", raw_title));
+      log.debug3(String.format("Eastview metadata raw title parsed: %s", raw_title));
 
       Pattern pattern =  Pattern.compile("\\d\\d-\\d\\d-\\d\\d\\d\\d\\(([^)]+)-([^(]+)\\)\\s+(.*)");
 
@@ -127,7 +165,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
         title = m.group(2);
       }
 
-      log.debug3(String.format("Eastview Newspaper: metadata raw title parsed = %s | " +
+      log.debug3(String.format("Eastview metadata raw title parsed = %s | " +
                       "publisher_shortcut = %s | publisher_mapped = %s | volume = %s | title = %s",
               raw_title,
               publisher_shortcut,
@@ -138,7 +176,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       if (publisher_mapped != null) {
         thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped);
       }  else {
-        log.debug3(String.format("Eastview Newspaper: metadata raw title parsed = %s | " +
+        log.debug3(String.format("Eastview metadata raw title parsed = %s | " +
                         "publisher_shortcut = %s | Null publisher_mapped = %s | volume = %s | title = %s",
                 raw_title,
                 publisher_shortcut,
@@ -146,21 +184,24 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
                 volume,
                 title));
       }
-      
 
-      String publicationTitle = thisAM.getRaw(EastviewNewspaperMetadataHelper.PUBLICATION_TITLE_PATH);
-      log.debug3("Eastview Newspaper: publicationTitle = " + publicationTitle);
+      String articlePDFName = thisAM.get(MetadataField.FIELD_ACCESS_URL);
+      log.debug3("Eastview journal: original_access_url = " + articlePDFName);
+      
+      String publicationTitle = thisAM.getRaw(EastviewJournalMetadataHelper.PUBLICATION_TITLE_PATH);
+      log.debug3("Eastview Journal: publicationTitle = " + publicationTitle);
 
       if (publicationTitle != null) {
         String issn = issnMap.get(publicationTitle);
-        log.debug3("Eastview Newspaper: publicationTitle = " + publicationTitle + ", issn = " + issn);
+        log.debug3("Eastview Journal: publicationTitle = " + publicationTitle + ", issn = " + issn);
         thisAM.put(MetadataField.FIELD_ISSN, issn);
       } else {
-        log.debug3("Eastview Newspaper: publicationTitle is null");
+        log.debug3("Eastview Journal: publicationTitle is null");
       }
-      
+
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
     }
+
   }
 }

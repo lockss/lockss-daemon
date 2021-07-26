@@ -50,13 +50,13 @@ import java.util.Map;
  *  Eastview Information Services
  *  
  */
-public class EastviewNewspaperMetadataHelper
+public class EastviewJournalMetadataHelper
 implements SourceXmlSchemaHelper {
   
-  private static final Logger log = Logger.getLogger(EastviewNewspaperMetadataHelper.class);
-
+  private static final Logger log = Logger.getLogger(EastviewJournalMetadataHelper.class);
   static protected final String PAGE_PDF_PATH = "/ARTICLEDATAS/ARTICLEDATA/TEXT/pagemark/@pagepdf";
   static protected final String PUBLICATION_TITLE_PATH = "/ARTICLEDATAS/ARTICLEDATA/SOURCE";
+
 
   /*
    * <PAGE>3</PAGE>
@@ -91,11 +91,13 @@ implements SourceXmlSchemaHelper {
     }
   };
 
-  // For newspaper, we only get the first article of the xml/ARTICLEDATAS/ARTICLEDATA
-  private static final String top = "/ARTICLEDATAS/ARTICLEDATA[1]";
+  // For journals, we treat each page as a seperate article
+  private static final String top = "/ARTICLEDATAS/ARTICLEDATA";
 
   // The following are all relative to the article node
   // from the immediately preceeding sibling -
+  private static String pub_title = "SOURCE";
+  private static String src_title = "SRC";
   private static String pub_year = "DATE";
   private static String pub_volume = "VOLUME";
   private static String pub_issue = "NUMBER";
@@ -117,11 +119,13 @@ implements SourceXmlSchemaHelper {
     //This is raw title, it contains publisher acroname, like this:
     //title: 31-05-1961(DASZD-No.005) НОВЫЕ КНИГИ
     articleMap.put(ART_RAW_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(src_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(pub_volume, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(pub_year, XmlDomMetadataExtractor.TEXT_VALUE); 
     articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE); 
-    articleMap.put(art_contrib, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(art_contrib, XmlDomMetadataExtractor.TEXT_VALUE); 
+    articleMap.put(art_sp, STARTPAGE_VALUE);
     articleMap.put(PAGE_PDF_PATH, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 

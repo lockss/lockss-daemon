@@ -74,7 +74,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.eastview.EastviewXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.eastview.EastviewJournalXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -83,7 +83,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.eastview.EastviewXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.eastview.EastviewJournalXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
