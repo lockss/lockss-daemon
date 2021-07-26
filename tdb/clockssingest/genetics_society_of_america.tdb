@@ -21,14 +21,14 @@
     param[base_url] = https://www.g3journal.org/
     #move to OUP
 
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2013 ; G3: Genes, Genomes, Genetics Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2014 ; G3: Genes, Genomes, Genetics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2015 ; G3: Genes, Genomes, Genetics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2013 ; G3: Genes, Genomes, Genetics Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2014 ; G3: Genes, Genomes, Genetics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2015 ; G3: Genes, Genomes, Genetics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; crawling ; exists ; 2016 ; G3: Genes, Genomes, Genetics Volume 6 ; 6 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2017 ; G3: Genes, Genomes, Genetics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; deepCrawl ; exists ; 2020 ; G3: Genes, Genomes, Genetics Volume 10 ; 10 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; >
@@ -254,9 +254,9 @@
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; frozen ; exists ; 2017 ; Genetics Volume 205 ; 205 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; frozen ; exists ; 2017 ; Genetics Volume 206 ; 206 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; frozen ; exists ; 2017 ; Genetics Volume 207 ; 207 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2018 ; Genetics Volume 208 ; 208 ; reingest2.clockss.org:8085 >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2018 ; Genetics Volume 209 ; 209 ; reingest3.clockss.org:8083 >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; manifest ; 2018 ; Genetics Volume 210 ; 210 ; reingest4.clockss.org:8082 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2018 ; Genetics Volume 208 ; 208 ; reingest2.clockss.org:8085 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2018 ; Genetics Volume 209 ; 209 ; reingest3.clockss.org:8083 >
+    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2018 ; Genetics Volume 210 ; 210 ; reingest4.clockss.org:8082 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2019 ; Genetics Volume 211 ; 211 ; reingest5.clockss.org:8082 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2019 ; Genetics Volume 212 ; 212 ; reingest1.clockss.org:8082 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2019 ; Genetics Volume 213 ; 213 ; reingest2.clockss.org:8085 >
