@@ -1387,6 +1387,9 @@
       attr[journal_id] = polf
       param[base_url] = https://polf.copernicus.org/
       param[home_url] = https://www.polarforschung.net/
+
+      au < manifest ; exists ; 2021 ; 2021 ; Polarforschung Volume 89 ; 89 ; >
+
   }
 
   {
