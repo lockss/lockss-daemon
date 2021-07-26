@@ -25,8 +25,8 @@
       param[base_url] = https://www.ejobsat.cz/journal/
       param[journal_id] = ejobsat
 
-      au < finished ; manifest ; 2015 ; European Journal of Business Science and Technology Volume 1 [superseded] ; 1 ; 2015 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016 ; European Journal of Business Science and Technology Volume 2 [superseded] ; 2 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; European Journal of Business Science and Technology Volume 1 [superseded] ; 1 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016 ; European Journal of Business Science and Technology Volume 2 [superseded] ; 2 ; 2016 ; reingest3.clockss.org:8083 >
     }
     
     {

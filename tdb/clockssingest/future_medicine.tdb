@@ -27,8 +27,8 @@
     au < manifest ; exists ; 2009 ; Aging Health Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2010 ; Aging Health Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Aging Health Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Aging Health Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Aging Health Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Aging Health Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Aging Health Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     
   }
 
@@ -47,13 +47,13 @@
     au < manifest ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; Biomarkers in Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Biomarkers in Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Biomarkers in Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Biomarkers in Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Biomarkers in Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Biomarkers in Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
 
@@ -86,13 +86,13 @@
     param[journal_id] = bmt
 
     au < finished ; finished ; 2012 ; Breast Cancer Management Volume 1 ; 1 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Breast Cancer Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Breast Cancer Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Breast Cancer Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Breast Cancer Management Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Breast Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Breast Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; Breast Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Breast Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Breast Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Breast Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Breast Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Breast Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Breast Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2021 ; Breast Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
 
@@ -147,7 +147,7 @@
     #No longer published by Future Medicine, no content online
 
     au < finished ; finished ; 2012 ; Clinical Practice Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Clinical Practice Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Clinical Practice Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Clinical Practice Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     
   }
@@ -161,14 +161,14 @@
     
     param[journal_id] = cns
 
-    au < finished ; manifest ; 2012 ; CNS Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; CNS Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; CNS Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; CNS Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; CNS Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; CNS Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; CNS Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; CNS Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; CNS Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; CNS Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; CNS Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; CNS Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; CNS Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; CNS Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; CNS Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; CNS Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
 
@@ -184,13 +184,13 @@
     param[journal_id] = crc
 
     au < finished ; finished ; 2012 ; Colorectal Cancer Volume 1 ; 1 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Colorectal Cancer Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Colorectal Cancer Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Colorectal Cancer Volume 3 ; 3 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; Colorectal Cancer Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; Colorectal Cancer Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Colorectal Cancer Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; Colorectal Cancer Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Colorectal Cancer Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Colorectal Cancer Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Colorectal Cancer Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Colorectal Cancer Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2021 ; Colorectal Cancer Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
 
@@ -205,10 +205,10 @@
     
     param[journal_id] = cnc
 
-    au < finished ; manifest ; 2016 ; Concussion Volume 1 ; 1 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2017 ; Concussion Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; Concussion Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Concussion Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Concussion Volume 1 ; 1 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Concussion Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Concussion Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Concussion Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Concussion Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Concussion Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
 
@@ -225,8 +225,8 @@
     param[journal_id] = dmt
     #No longer published by Future Medicine, no content online
 
-    au < finished ; manifest ; 2012 ; Diabetes Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Diabetes Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Diabetes Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Diabetes Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Diabetes Management Volume 4 ; 4 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; Diabetes Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
   
@@ -244,14 +244,14 @@
     au < manifest ; exists ; 2009 ; Epigenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2010 ; Epigenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Epigenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Epigenomics Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Epigenomics Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Epigenomics Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Epigenomics Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Epigenomics Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Epigenomics Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Epigenomics Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Epigenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; Epigenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Epigenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Epigenomics Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Epigenomics Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Epigenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Epigenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Epigenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Epigenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Epigenomics Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
 
@@ -274,14 +274,14 @@
     au < manifest ; exists ; 2009 ; Future Cardiology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Future Cardiology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Future Cardiology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Future Cardiology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Future Cardiology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Future Cardiology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Future Cardiology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; Future Cardiology Volume 12 ; 12 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2017 ; Future Cardiology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; Future Cardiology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Future Cardiology Volume 15 ; 15 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Future Cardiology Volume 12 ; 12 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Future Cardiology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Future Cardiology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Future Cardiology Volume 15 ; 15 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Future Cardiology Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Future Cardiology Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
 
@@ -302,14 +302,14 @@
     au < manifest ; exists ; 2009 ; Future Microbiology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2010 ; Future Microbiology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Future Microbiology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Future Microbiology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Future Microbiology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; Future Microbiology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Future Microbiology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Future Microbiology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < zapped ; finished ; 2015 ; Future Microbiology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Future Microbiology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Future Microbiology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; Future Microbiology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Future Microbiology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Future Microbiology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Future Microbiology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Future Microbiology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Future Microbiology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Future Microbiology Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Future Microbiology Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
 
@@ -332,13 +332,13 @@
     au < manifest ; exists ; 2010 ; Future Neurology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Future Neurology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Future Neurology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Future Neurology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Future Neurology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Future Neurology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Future Neurology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; Future Neurology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Future Neurology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; Future Neurology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Future Neurology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Future Neurology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Future Neurology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Future Neurology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Future Neurology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Future Neurology Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2021 ; Future Neurology Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
 
@@ -361,14 +361,14 @@
     au < manifest ; exists ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Future Oncology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Future Oncology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; Future Oncology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Future Oncology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2014 ; Future Oncology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2015 ; Future Oncology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Future Oncology Volume 12 ; 12 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Future Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; Future Oncology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Future Oncology Volume 15 ; 15 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Future Oncology Volume 12 ; 12 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Future Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Future Oncology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Future Oncology Volume 15 ; 15 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Future Oncology Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Future Oncology Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
 
@@ -406,13 +406,13 @@
     au < manifest ; exists ; 2010 ; Future Virology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Future Virology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Future Virology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Future Virology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Future Virology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Future Virology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < zapped ; finished ; 2015 ; Future Virology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Future Virology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2017 ; Future Virology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; Future Virology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Future Virology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Future Virology Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Future Virology Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Future Virology Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Future Virology Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Future Virology Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Future Virology Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
 
@@ -430,10 +430,10 @@
 
     au < finished ; finished ; 2014 ; Hepatic Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; Hepatic Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Hepatic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Hepatic Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; Hepatic Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Hepatic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Hepatic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Hepatic Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Hepatic Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Hepatic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Hepatic Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Hepatic Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
 
@@ -480,8 +480,8 @@
     param[journal_id] = iim
     #No longer published by Future Medicine, no content online
 
-    au < finished ; manifest ; 2012 ; Imaging in Medicine Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Imaging in Medicine Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Imaging in Medicine Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Imaging in Medicine Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Imaging in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     
   }
@@ -499,14 +499,14 @@
     au < manifest ; exists ; 2009 ; Immunotherapy Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2010 ; Immunotherapy Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Immunotherapy Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Immunotherapy Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2013 ; Immunotherapy Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Immunotherapy Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Immunotherapy Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Immunotherapy Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2015 ; Immunotherapy Volume 7 ; 7 ; http://www.futuremedicine.com/ ; > #500 Error. Waiting for Atypon to fix.
-    au < finished ; manifest ; 2016 ; Immunotherapy Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; Immunotherapy Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Immunotherapy Volume 11 ; 11 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Immunotherapy Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Immunotherapy Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Immunotherapy Volume 11 ; 11 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Immunotherapy Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Immunotherapy Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
 
@@ -524,7 +524,7 @@
     #No longer published by Future Medicine, no content online
 
     au < finished ; finished ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; International Journal of Clinical Rheumatology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     
@@ -542,10 +542,10 @@
 
     au < finished ; finished ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; International Journal of Endocrine Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; International Journal of Endocrine Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; International Journal of Endocrine Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; International Journal of Endocrine Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; International Journal of Endocrine Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; International Journal of Endocrine Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; International Journal of Endocrine Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2021 ; International Journal of Endocrine Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
 
@@ -561,13 +561,13 @@
     param[journal_id] = ijh
 
     au < finished ; finished ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; International Journal of Hematologic Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; International Journal of Hematologic Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; International Journal of Hematologic Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; International Journal of Hematologic Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; International Journal of Hematologic Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; International Journal of Hematologic Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
 
@@ -585,8 +585,8 @@
     #No longer published by Future Medicine, no content online
 
     au < finished ; finished ; 2012 ; Interventional Cardiology Volume 4 ; 4 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Interventional Cardiology Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; Interventional Cardiology Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Interventional Cardiology Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; Interventional Cardiology Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Interventional Cardiology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     
   }
@@ -600,9 +600,9 @@
     
     param[journal_id] = 3dp
 
-    au < finished ; manifest ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; Journal of 3D Printing in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Journal of 3D Printing in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; Journal of 3D Printing in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Journal of 3D Printing in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of 3D Printing in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Journal of 3D Printing in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
 
@@ -618,13 +618,13 @@
     param[journal_id] = cer
 
     au < finished ; finished ; 2012 ; Journal of Comparative Effectiveness Research Volume 1 ; 1 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; Journal of Comparative Effectiveness Research Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; Journal of Comparative Effectiveness Research Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Journal of Comparative Effectiveness Research Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Journal of Comparative Effectiveness Research Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal of Comparative Effectiveness Research Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Journal of Comparative Effectiveness Research Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
 
@@ -640,13 +640,13 @@
     param[journal_id] = lmt
 
     au < finished ; finished ; 2012 ; Lung Cancer Management Volume 1 ; 1 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Lung Cancer Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Lung Cancer Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Lung Cancer Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2015 ; Lung Cancer Management Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; Lung Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Lung Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Lung Cancer Management Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Lung Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Lung Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Lung Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Lung Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
 
@@ -664,10 +664,10 @@
 
     au < finished ; finished ; 2014 ; Melanoma Management Volume 1 ; 1 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Melanoma Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Melanoma Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Melanoma Management Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; Melanoma Management Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Melanoma Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Melanoma Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Melanoma Management Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Melanoma Management Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Melanoma Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Melanoma Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < crawling ; exists ; 2021 ; Melanoma Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
 
@@ -690,10 +690,10 @@
     au < manifest ; exists ; 2010 ; Nanomedicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Nanomedicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < zapped ; finished ; 2012 ; Nanomedicine Volume 7 ; 7 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Nanomedicine Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Nanomedicine Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nanomedicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < zapped ; finished ; 2015 ; Nanomedicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; Nanomedicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Nanomedicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Nanomedicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Nanomedicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Nanomedicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
@@ -714,10 +714,10 @@
 
     au < manifest ; exists ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Neurodegenerative Disease Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Neurodegenerative Disease Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Neurodegenerative Disease Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
@@ -737,7 +737,7 @@
     #No longer published by Future Medicine, no content online
 
     au < finished ; finished ; 2012 ; Neuropsychiatry Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Neuropsychiatry Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     
   }
@@ -752,11 +752,11 @@
     param[journal_id] = pmt
 
     au < manifest ; exists ; 2011 ; Pain Management Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Pain Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2013 ; Pain Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2012 ; Pain Management Volume 2 ; 2 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Pain Management Volume 3 ; 3 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Pain Management Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Pain Management Volume 5 ; 5 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Pain Management Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Pain Management Volume 6 ; 6 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pain Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Pain Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Pain Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
@@ -801,11 +801,11 @@
     au < manifest ; exists ; 2009 ; Personalized Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2010 ; Personalized Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Personalized Medicine Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Personalized Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2013 ; Personalized Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Personalized Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Personalized Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Personalized Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Personalized Medicine Volume 12 ; 12 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; Personalized Medicine Volume 13 ; 13 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Personalized Medicine Volume 12 ; 12 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Personalized Medicine Volume 13 ; 13 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Personalized Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Personalized Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
@@ -837,10 +837,10 @@
     au < manifest ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Pharmacogenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Pharmacogenomics Volume 13 ; 13 ; http://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Pharmacogenomics Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Pharmacogenomics Volume 20 ; 20 ; https://www.futuremedicine.com/ ; >
@@ -866,10 +866,10 @@
     au < manifest ; exists ; 2010 ; Regenerative Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2011 ; Regenerative Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Regenerative Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2013 ; Regenerative Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Regenerative Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Regenerative Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < zapped ; finished ; 2015 ; Regenerative Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Regenerative Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Regenerative Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
@@ -896,8 +896,8 @@
     au < doNotProcess ; exists ; 2009 ; Women's Health Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < doNotProcess ; exists ; 2010 ; Women's Health Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
     au < doNotProcess ; exists ; 2011 ; Women's Health Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
-    au < finished ; manifest ; 2012 ; Women's Health Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2013 ; Women's Health Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Women's Health Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Women's Health Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Women's Health Volume 10 ; 10 ; http://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2015 ; Women's Health Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2016 ; Women's Health Volume 12 [superseded] ; 12 ; http://www.futuremedicine.com/ ; >
