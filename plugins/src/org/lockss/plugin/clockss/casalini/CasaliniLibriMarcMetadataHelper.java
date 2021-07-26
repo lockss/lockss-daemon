@@ -209,10 +209,12 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
           canonicalPublisherName = getCanonicalPublisherName(publisherCleanName);
 
+          // canonicalPublisherName used to be set to 'default' if it not found, but the team
+          // agreed to set it as is, since a lot of them are data entried
           if (canonicalPublisherName == null) {
             log.debug(String.format("Casalini-Metadata: missing canonicalPublisherName,  MARC_publisher %s | publisherCleanName: %s | " +
                     "NULL canonicalPublisherName %s ", MARC_publisher, publisherCleanName, canonicalPublisherName));
-            canonicalPublisherName = "default";
+            canonicalPublisherName = publisherCleanName;
 
           }
 
