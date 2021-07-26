@@ -166,7 +166,7 @@
       au < finished ; manifest ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; https://journal-redescriptions.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ ; >
-      au < expected ; exists ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; https://journal-redescriptions.org/ ; >
+      au < manifest ; exists ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; https://journal-redescriptions.org/ ; >
 
   }
 }
