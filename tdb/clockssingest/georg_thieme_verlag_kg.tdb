@@ -1378,7 +1378,7 @@
    au < crawling ; exists ; 2000 ; 2000 ; Endoscopy Volume 32 ; 32 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Endoscopy Volume 33 ; 33 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Endoscopy Volume 34 ; 34 ; >
-   au < testing ; exists ; 2003 ; 2003 ; Endoscopy Volume 35 ; 35 ; >
+   au < ready ; exists ; 2003 ; 2003 ; Endoscopy Volume 35 ; 35 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Endoscopy Volume 36 ; 36 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Endoscopy Volume 37 ; 37 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Endoscopy Volume 38 ; 38 ; >
@@ -1435,7 +1435,7 @@
     comment[years] = 2002-2015
 
    au < crawling ; exists ; 2002 ; 2002 ; Endoscopy heute Volume 15 ; 15 ; >
-   au < testing ; exists ; 2003 ; 2003 ; Endoscopy heute Volume 16 ; 16 ; >
+   au < ready ; exists ; 2003 ; 2003 ; Endoscopy heute Volume 16 ; 16 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Endoscopy heute Volume 17 ; 17 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Endoscopy heute Volume 18 ; 18 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Endoscopy heute Volume 19 ; 19 ; >
@@ -2630,7 +2630,7 @@
     au < crawling ; exists ; 2000 ; 2000 ; International Journal of Sports Medicine Volume 21 ; 21 ; >
     au < crawling ; exists ; 2001 ; 2001 ; International Journal of Sports Medicine Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; 2002 ; International Journal of Sports Medicine Volume 23 ; 23 ; >
-    au < testing ; exists ; 2003 ; 2003 ; International Journal of Sports Medicine Volume 24 ; 24 ; >
+    au < ready ; exists ; 2003 ; 2003 ; International Journal of Sports Medicine Volume 24 ; 24 ; >
     au < crawling ; exists ; 2004 ; 2004 ; International Journal of Sports Medicine Volume 25 ; 25 ; >
     au < crawling ; exists ; 2005 ; 2005 ; International Journal of Sports Medicine Volume 26 ; 26 ; >
     au < crawling ; exists ; 2006 ; 2006 ; International Journal of Sports Medicine Volume 27 ; 27 ; >
@@ -7797,7 +7797,7 @@
     au < deepCrawl ; exists ; 2018 ; 2018 ; TH Open Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; TH Open Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; TH Open Volume 4 ; 4 ; >
-    au < testing ; exists ; 2021 ; 2021 ; TH Open Volume 5 ; 5 ; >
+    au < ready ; exists ; 2021 ; 2021 ; TH Open Volume 5 ; 5 ; >
 
   }
 
