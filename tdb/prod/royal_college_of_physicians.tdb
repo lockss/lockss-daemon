@@ -13,9 +13,11 @@
       issn = 1470-2118 ;
       eissn = 1473-4893 
     >
+    #https://www.rcpjournals.org/content/clinmedicine
 
     {
-    param[base_url] = https://www.rcpjournals.org/content/clinmedicine
+    param[base_url] = https://www.rcpjournals.org/
+    param[journal_id] = clinmedicine
     plugin = needs.plugin
 
     au < exists ; 2016 ; Clinical Medicine Volume 16 ; 16 >
@@ -54,8 +56,11 @@
       issn = 2055-3323 ;
       eissn = 2055-3331 
     >
+    #https://www.rcpjournals.org/content/futurehosp
+
     {
-    param[base_url] = https://www.rcpjournals.org/content/futurehosp
+    param[base_url] = https://www.rcpjournals.org/
+    param[journal_id] = futurehosp
     plugin = needs.plugin
 
     au < exists ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
