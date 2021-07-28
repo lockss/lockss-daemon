@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.highwire;
 
+import java.net.UnknownHostException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -51,8 +52,11 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
    * A child can change this by extending this class and overriding the getter for the 403 pattern
    */
   protected static final Pattern DEFAULT_NON_FATAL_403_PAT = 
-      Pattern.compile("/filestream/[^/]+/field_highwire_adjunct_files/");  
-  
+      Pattern.compile("/filestream/[^/]+/field_highwire_adjunct_files/");
+
+  protected static final String GLENCOESOFTWARE_DOMAIN = "glencoesoftware.com";
+  protected static final String GLENCOESOFTWARE_MESSAGE = "subdomain for this Publisher is likely not configured.";
+
   @Override
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
@@ -102,6 +106,9 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
         if (url.endsWith(".index-by-author")) {
           return new NoFailRetryableNetworkException_2_10S("502 Bad Gateway (non-fatal)");
         }
+        if (url.contains(GLENCOESOFTWARE_DOMAIN)) {
+          return new CacheException.WarningOnly(GLENCOESOFTWARE_DOMAIN + " 502 Bad Gateway: " + GLENCOESOFTWARE_MESSAGE);
+        }
         return new CacheException.RetryableNetworkException_2_10S("502 Bad Gateway");
         
       case 503:
@@ -146,7 +153,12 @@ public class HighWireDrupalHttpResponseHandler implements CacheResultHandler {
       logger.debug3("Warning - not storing file " + url);
       // no store cache exception and continue
       return new org.lockss.util.urlconn.CacheException.NoStoreWarningOnly("ContentValidationException" + url);
-    } 
+    }
+    if ((ex instanceof UnknownHostException) &&
+        url.contains(GLENCOESOFTWARE_DOMAIN)) {
+      logger.debug3("Warning - not storing " + GLENCOESOFTWARE_DOMAIN + " url: " + url);
+      return new CacheException.NoStoreWarningOnly(GLENCOESOFTWARE_DOMAIN + " Unknown host: " + GLENCOESOFTWARE_MESSAGE);
+    }
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
