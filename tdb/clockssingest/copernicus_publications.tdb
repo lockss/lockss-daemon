@@ -290,7 +290,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Atmospheric Chemistry and Physics Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Atmospheric Chemistry and Physics Volume 19 ; 19 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Atmospheric Chemistry and Physics Volume 20 ; 20 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Atmospheric Chemistry and Physics Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Atmospheric Chemistry and Physics Volume 21 ; 21 ; >
 
   }
 
@@ -319,7 +319,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Atmospheric Measurement Techniques Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Atmospheric Measurement Techniques Volume 12 ; 12 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Atmospheric Measurement Techniques Volume 13 ; 13 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Atmospheric Measurement Techniques Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Atmospheric Measurement Techniques Volume 14 ; 14 ; >
 
   }
 
@@ -507,7 +507,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Earth System Science Data Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth System Science Data Volume 11 ; 11 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Earth System Science Data Volume 12 ; 12 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Earth System Science Data Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Earth System Science Data Volume 13 ; 13 ; >
 
   }
 
@@ -810,7 +810,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geoscientific Model Development Volume 12 ; 12 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Geoscientific Model Development Volume 13 ; 13 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Geoscientific Model Development Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Geoscientific Model Development Volume 14 ; 14 ; >
 
   }
 
@@ -898,7 +898,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Hydrology and Earth System Sciences Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Hydrology and Earth System Sciences Volume 24 ; 24 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Hydrology and Earth System Sciences Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Hydrology and Earth System Sciences Volume 25 ; 25 ; >
 
   }
 
@@ -1299,7 +1299,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Natural Hazards and Earth System Sciences Volume 19 ; 19 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Natural Hazards and Earth System Sciences Volume 20 ; 20 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Natural Hazards and Earth System Sciences Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Natural Hazards and Earth System Sciences Volume 21 ; 21 ; >
 
   }
 
@@ -1542,7 +1542,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Solid Earth Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Solid Earth Volume 10 ; 10 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Solid Earth Volume 11 ; 11 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Solid Earth Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Solid Earth Volume 12 ; 12 ; >
 
   }
 
@@ -1590,7 +1590,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; The Cryosphere Volume 13 ; 13 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Cryosphere Volume 14 ; 14 ; >
-      au < ready ; exists ; 2021 ; 2021 ; The Cryosphere Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; The Cryosphere Volume 15 ; 15 ; >
 
   }
 
@@ -1657,7 +1657,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Wind Energy Science Volume 4 ; 4 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Wind Energy Science Volume 5 ; 5 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Wind Energy Science Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Wind Energy Science Volume 6 ; 6 ; >
 
   }
 
