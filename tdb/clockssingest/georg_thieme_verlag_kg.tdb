@@ -470,8 +470,8 @@
       param[journal_id] = 10.1055/s-00000009
       comment[years] = 1983-current
 
-    au < exists ; exists ; 1983 ; 1983 ; American Journal of Perinatology Volume 1 ; 1 ; >
-    au < exists ; exists ; 1984 ; 1984 ; American Journal of Perinatology Volume 1 ; 1 ; >
+    au < exists ; exists ; 1983 ; 1983 ; American Journal of Perinatology Volume 1 (1983) ; 1 ; >
+    au < exists ; exists ; 1984 ; 1984 ; American Journal of Perinatology Volume 1 (1984) ; 1 ; >
     au < exists ; exists ; 1985 ; 1985 ; American Journal of Perinatology Volume 2 ; 2 ; >
     au < exists ; exists ; 1986 ; 1986 ; American Journal of Perinatology Volume 3 ; 3 ; >
     au < exists ; exists ; 1987 ; 1987 ; American Journal of Perinatology Volume 4 ; 4 ; >
@@ -1691,23 +1691,23 @@
     param[journal_id] = 10.1055/s-00000017
     comment[years] = 1995-current
 
-   au < exists ; exists ; 1983 ; 1983 ; Experimental and Clinical Endocrinology & Diabetes Volume 93 ; 93 ; >
-   au < exists ; exists ; 1984 ; 1984 ; Experimental and Clinical Endocrinology & Diabetes Volume 94 ; 94 ; >
-   au < exists ; exists ; 1985 ; 1985 ; Experimental and Clinical Endocrinology & Diabetes Volume 95 ; 95 ; >
-   au < exists ; exists ; 1986 ; 1986 ; Experimental and Clinical Endocrinology & Diabetes Volume 96 ; 96 ; >
-   au < exists ; exists ; 1987 ; 1987 ; Experimental and Clinical Endocrinology & Diabetes Volume 97 ; 97 ; >
-   au < exists ; exists ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 98 ; 98 ; >
-   au < exists ; exists ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 99 ; 99 ; >
-   au < exists ; exists ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 100 ; 100 ; >
-   au < exists ; exists ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 101 ; 101 ; >
-   au < exists ; exists ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 102 ; 102 ; >
-   au < exists ; exists ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 103 ; 103 ; >
-   au < exists ; exists ; 1994 ; 1994 ; Experimental and Clinical Endocrinology & Diabetes Volume 104 ; 104 ; >
-   au < exists ; exists ; 1995 ; 1995 ; Experimental and Clinical Endocrinology & Diabetes Volume 105 ; 105 ; >
-   au < exists ; exists ; 1996 ; 1996 ; Experimental and Clinical Endocrinology & Diabetes Volume 106 ; 106 ; >
-   au < exists ; exists ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 105 ; 105 ; >
-   au < exists ; exists ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 106 ; 106 ; >
-   au < exists ; exists ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 107 ; 107 ; >
+   au < exists ; exists ; 1983 ; 1983 ; Experimental and Clinical Endocrinology & Diabetes Volume 1983 ; 1983 ; >
+   au < exists ; exists ; 1984 ; 1984 ; Experimental and Clinical Endocrinology & Diabetes Volume 1984 ; 1984 ; >
+   au < exists ; exists ; 1985 ; 1985 ; Experimental and Clinical Endocrinology & Diabetes Volume 1985 ; 1985 ; >
+   au < exists ; exists ; 1986 ; 1986 ; Experimental and Clinical Endocrinology & Diabetes Volume 1986 ; 1986 ; >
+   au < exists ; exists ; 1987 ; 1987 ; Experimental and Clinical Endocrinology & Diabetes Volume 1987 ; 1987 ; >
+   au < exists ; exists ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 1988 ; 1988 ; >
+   au < exists ; exists ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 1989 ; 1989 ; >
+   au < exists ; exists ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 1990 ; 1990 ; >
+   au < exists ; exists ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 1991 ; 1991 ; >
+   au < exists ; exists ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 1992 ; 1992 ; >
+   au < exists ; exists ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 1993 ; 1993 ; >
+   au < exists ; exists ; 1994 ; 1994 ; Experimental and Clinical Endocrinology & Diabetes Volume 1994 ; 1994 ; >
+   au < exists ; exists ; 1995 ; 1995 ; Experimental and Clinical Endocrinology & Diabetes Volume 1995 ; 1995 ; >
+   au < exists ; exists ; 1996 ; 1996 ; Experimental and Clinical Endocrinology & Diabetes Volume 1996 ; 1996 ; >
+   au < exists ; exists ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 1997 ; 1997 ; >
+   au < exists ; exists ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 1998 ; 1998 ; >
+   au < exists ; exists ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 1999 ; 1999 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Experimental and Clinical Endocrinology & Diabetes Volume 108 ; 108 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Experimental and Clinical Endocrinology & Diabetes Volume 109 ; 109 ; >
    au < ready ; exists ; 2002 ; 2002 ; Experimental and Clinical Endocrinology & Diabetes Volume 110 ; 110 ; >
@@ -1761,10 +1761,10 @@
     param[journal_id] = 10.1055/s-00000018
     comment[years] = 1983-current
 
-   au < exists ; exists ; 1983 ; 1983 ; Facial Plastic Surgery Volume 1 ; 1 ; >
-   au < exists ; exists ; 1984 ; 1984 ; Facial Plastic Surgery Volume 1 ; 1 ; >
-   au < exists ; exists ; 1985 ; 1985 ; Facial Plastic Surgery Volume 2 ; 2 ; >
-   au < exists ; exists ; 1986 ; 1986 ; Facial Plastic Surgery Volume 2 ; 2 ; >
+   au < exists ; exists ; 1983 ; 1983 ; Facial Plastic Surgery Volume 1 (1983) ; 1 ; >
+   au < exists ; exists ; 1984 ; 1984 ; Facial Plastic Surgery Volume 1 (1984) ; 1 ; >
+   au < exists ; exists ; 1985 ; 1985 ; Facial Plastic Surgery Volume 2 (1985) ; 2 ; >
+   au < exists ; exists ; 1986 ; 1986 ; Facial Plastic Surgery Volume 2 (1986) ; 2 ; >
    au < exists ; exists ; 1987 ; 1987 ; Facial Plastic Surgery Volume 3 ; 3 ; >
    au < exists ; exists ; 1988 ; 1988 ; Facial Plastic Surgery Volume 4 ; 4 ; >
    au < exists ; exists ; 1989 ; 1989 ; Facial Plastic Surgery Volume 5 ; 5 ; >
@@ -3190,8 +3190,8 @@
     param[journal_id] = 10.1055/s-00000029
     comment[years] = 1984-current
 
-    au < exists ; exists ; 1984 ; 1984 ; Journal of Reconstructive Microsurgery Volume 1 ; 1 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Journal of Reconstructive Microsurgery Volume 1 ; 1 ; >
+    au < exists ; exists ; 1984 ; 1984 ; Journal of Reconstructive Microsurgery Volume 1 (1984) ; 1 ; >
+    au < exists ; exists ; 1985 ; 1985 ; Journal of Reconstructive Microsurgery Volume 1 (1985) ; 1 ; >
     au < exists ; exists ; 1986 ; 1986 ; Journal of Reconstructive Microsurgery Volume 2 ; 2 ; >
     au < exists ; exists ; 1987 ; 1987 ; Journal of Reconstructive Microsurgery Volume 3 ; 3 ; >
     au < exists ; exists ; 1988 ; 1988 ; Journal of Reconstructive Microsurgery Volume 4 ; 4 ; >
@@ -5735,8 +5735,8 @@
     param[journal_id] = 10.1055/s-00000077
     comment[years] = 1974-current
 
-    au < exists ; exists ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 ; 1 ; >
-    au < exists ; exists ; 1975 ; 1975 ; Seminars in Thrombosis and Hemostasis Volume 1 ; 1 ; >
+    au < exists ; exists ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 (1974) ; 1 ; >
+    au < exists ; exists ; 1975 ; 1975 ; Seminars in Thrombosis and Hemostasis Volume 1 (1975) ; 1 ; >
     au < exists ; exists ; 1976 ; 1976 ; Seminars in Thrombosis and Hemostasis Volume 2 ; 2 ; >
     au < exists ; exists ; 1977 ; 1977 ; Seminars in Thrombosis and Hemostasis Volume 3 ; 3 ; >
     au < exists ; exists ; 1978 ; 1978 ; Seminars in Thrombosis and Hemostasis Volume 4 ; 4 ; >
@@ -6136,8 +6136,8 @@
     param[journal_id] = 10.1055/s-00000083
     comment[years] = 1989-current
 
-   au < exists ; exists ; 1989 ; 1989 ; SYNLETT Volume 1 ; 1 ; >
-   au < exists ; exists ; 1990 ; 1990 ; SYNLETT Volume 1 ; 1 ; >
+   au < exists ; exists ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 ; >
+   au < exists ; exists ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1 ; >
    au < exists ; exists ; 1991 ; 1991 ; SYNLETT Volume 2 ; 2 ; >
    au < exists ; exists ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 ; >
    au < exists ; exists ; 1993 ; 1993 ; SYNLETT Volume 4 ; 4 ; >
