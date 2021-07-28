@@ -26,7 +26,7 @@
 #git checkout `git rev-list -n 1 --before="2021-05-01 00:00" master`
 #ant jar-lockss
 #./scripts/tdb/tdbout -t auid,status,publisher,plugin tdb/clockssingest/{,_retired/}a*.tdb | sort -u > ../SageEdits/file2.txt
-#./scripts/tdb/report_buckets.pl ../SageEdits/file1.txt ../SageEdits/file2.txt > ../SageEdits/buckets_today.tsv
+#./scripts/tdb/report_buckets_publplug.pl ../SageEdits/file1.txt ../SageEdits/file2.txt > ../SageEdits/buckets_today.tsv
 #git checkout master
 #git pull
 #ant jar-lockss
@@ -145,8 +145,9 @@ foreach my $auid (keys(%auid_status)) {
 #For each publisher, looping on each plugin for each publisher,
 #Print: $publisher \t $plugin \t $publ_plug{$publisher}{$plugin}
 
+printf("-D- Found %d publishers\n", scalar(keys(%publ_plug)));
 foreach my $x (sort keys(%publ_plug)) {
-    foreach my $y (sort keys(%publ_plug{$x})) {
+    foreach my $y (sort keys(%{ $publ_plug{$x} })) {
         printf("$x\t$y\t%d\n", $publ_plug{$x}{$y});
     }
 }
