@@ -591,7 +591,7 @@ public class MetadataField {
       new MetadataField(KEY_ITEM_NUMBER, Cardinality.Single);
 
   public static final String KEY_PROPRIETARY_IDENTIFIER =
-      "propietary_identifier";
+      "proprietary_identifier";
   public static final MetadataField FIELD_PROPRIETARY_IDENTIFIER =
       new MetadataField(KEY_PROPRIETARY_IDENTIFIER, Cardinality.Single);
 
