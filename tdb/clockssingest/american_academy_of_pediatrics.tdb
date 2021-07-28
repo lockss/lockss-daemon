@@ -56,7 +56,7 @@
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2006 ; AAP Grand Rounds Volume 16 ; 16 ; https://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 17 ; 17 ; https://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 18 ; 18 ; https://aapgrandrounds.aappublications.org/ ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; AAP Grand Rounds Volume 19 ; 19 ; http://aapgrandrounds.aappublications.org/ ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; AAP Grand Rounds Volume 19 ; 19 ; http://aapgrandrounds.aappublications.org/ ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; AAP Grand Rounds Volume 20 ; 20 ; http://aapgrandrounds.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 21 ; 21 ; http://aapgrandrounds.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 22 ; 22 ; http://aapgrandrounds.aappublications.org/ ; >
@@ -79,7 +79,7 @@
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; http://aapgrandrounds.aappublications.org/ ; reingest2.clockss.org:8085 >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; AAP Grand Rounds Volume 37 ; 37 ; http://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; AAP Grand Rounds Volume 38 ; 38 ; http://aapgrandrounds.aappublications.org/ ; >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2018 ; AAP Grand Rounds Volume 39 ; 39 ; https://aapgrandrounds.aappublications.org/ ; reingest4.clockss.org:8082 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; frozen ; 2018 ; AAP Grand Rounds Volume 39 ; 39 ; https://aapgrandrounds.aappublications.org/ ; reingest4.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; frozen ; exists ; 2018 ; AAP Grand Rounds Volume 40 ; 40 ; https://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2019 ; AAP Grand Rounds Volume 41 ; 41 ; https://aapgrandrounds.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; crawling ; exists ; 2019 ; AAP Grand Rounds Volume 42 ; 42 ; https://aapgrandrounds.aappublications.org/ ; >
@@ -157,7 +157,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; AAP News Volume 31 ; 31 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP News Volume 32 ; 32 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; AAP News Volume 33 ; 33 ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; AAP News Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; AAP News Volume 34 ; 34 ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; AAP News Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; AAP News Volume 36 [superseded] ; 36 ; >
       #new platform.
@@ -230,13 +230,13 @@
       au < aap.ClockssAAPDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 ; https://neoreviews.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; NeoReviews Volume 12 ; 12 ; http://neoreviews.aappublications.org/ ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; NeoReviews Volume 13 ; 13 ; http://neoreviews.aappublications.org/ ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; NeoReviews Volume 14 ; 14 ; http://neoreviews.aappublications.org/ ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; NeoReviews Volume 14 ; 14 ; http://neoreviews.aappublications.org/ ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; NeoReviews Volume 15 ; 15 ; http://neoreviews.aappublications.org/ ; reingest5.clockss.org:8082 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; NeoReviews Volume 16 [superseded] ; 16 ; http://neoreviews.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2015 ; NeoReviews Volume 16 ; 16 ; http://neoreviews.aappublications.org/ ; reingest1.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2016 ; NeoReviews Volume 17 ; 17 ; http://neoreviews.aappublications.org/ ; reingest1.clockss.org:8082 >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2017 ; NeoReviews Volume 18 ; 18 ; http://neoreviews.aappublications.org/ ; > #probe link empty
-      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2018 ; NeoReviews Volume 19 ; 19 ; http://neoreviews.aappublications.org/ ; reingest2.clockss.org:8085 >
+      au < aap.ClockssAAPDrupalPlugin ; finished ; frozen ; 2018 ; NeoReviews Volume 19 ; 19 ; http://neoreviews.aappublications.org/ ; reingest2.clockss.org:8085 >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2019 ; NeoReviews Volume 20 ; 20 ; https://neoreviews.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; deepCrawl ; exists ; 2020 ; NeoReviews Volume 21 ; 21 ; https://neoreviews.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2021 ; NeoReviews Volume 22 ; 22 ; https://neoreviews.aappublications.org/ ; >
@@ -408,7 +408,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pediatrics Volume 132 ; 132 ; http://pediatrics.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pediatrics Volume 133 ; 133 ; http://pediatrics.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2014 ; Pediatrics Volume 134 [superseded] ; 134 ; http://pediatrics.aappublications.org/ ; >
-      au < aap.ClockssAAPDrupalPlugin ; finished ; crawling ; 2014 ; Pediatrics Volume 134 ; 134 ; http://pediatrics.aappublications.org/ ; reingest3.clockss.org:8083 > #probe link outside of crawl spec
+      au < aap.ClockssAAPDrupalPlugin ; finished ; frozen ; 2014 ; Pediatrics Volume 134 ; 134 ; http://pediatrics.aappublications.org/ ; reingest3.clockss.org:8083 > #probe link outside of crawl spec
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2015 ; Pediatrics Volume 135 ; 135 ; http://pediatrics.aappublications.org/ ; reingest2.clockss.org:8085 >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Pediatrics Volume 136 [superseded] ; 136 ; http://pediatrics.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2015 ; Pediatrics Volume 136 ; 136 ; http://pediatrics.aappublications.org/ ; reingest1.clockss.org:8082 >
@@ -488,7 +488,7 @@
       au < aap.ClockssAAPDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Pediatrics in Review Volume 31 ; 31 ; https://pedsinreview.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Pediatrics in Review Volume 32 ; 32 ; http://pedsinreview.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Pediatrics in Review Volume 33 ; 33 ; http://pedsinreview.aappublications.org/ ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; http://pedsinreview.aappublications.org/ ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; http://pedsinreview.aappublications.org/ ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; http://pedsinreview.aappublications.org/ ; >
       au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2015 ; Pediatrics in Review Volume 36 [superseded] ; 36 ; http://pedsinreview.aappublications.org/ ; >
       au < aap.ClockssAAPDrupalPlugin ; finished ; finished ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; http://pedsinreview.aappublications.org/ ; reingest1.clockss.org:8082 >
