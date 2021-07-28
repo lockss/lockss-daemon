@@ -602,7 +602,7 @@
     {
     param[journal_id] = rstb1896
 
-    au < ready ; exists ; 1896 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 187 ; 187 ; >
+    au < crawling ; exists ; 1896 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 187 ; 187 ; >
     au < frozen ; exists ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 188 ; 188 ; >
     au < frozen ; exists ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 189 ; 189 ; >
     au < frozen ; exists ; 1898 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 190 ; 190 ; >
