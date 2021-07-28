@@ -3561,7 +3561,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Education Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Education Research International Volume 2019 ; 2019 ; 2019 ; >
     au < frozen ; exists ; 2020 ; Education Research International Volume 2020 ; 2020 ; 2020 ; >
-    au < ready ; exists ; 2021 ; Education Research International Volume 2021 ; 2021 ; 2021 ; >
+    au < crawling ; exists ; 2021 ; Education Research International Volume 2021 ; 2021 ; 2021 ; >
 
     }
 
@@ -5405,7 +5405,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Pediatrics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Pediatrics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Pediatrics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Pediatrics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Pediatrics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Pediatrics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Pediatrics Volume 2016 ; 2016 ; 2016 ; >
@@ -6218,7 +6218,7 @@
 
     au < manifest ; exists ; 2011 ; Journal of Anthropology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Anthropology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Anthropology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Anthropology Volume 2016 ; 2016 ; 2016 ; >
@@ -7509,7 +7509,7 @@
     param[journal_id] = jim
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 ; >
