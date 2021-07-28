@@ -118,7 +118,7 @@ POSSIBILITY OF SUCH DAMAGE.
    -->
   <entry>
     <string>plugin_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -275,6 +275,11 @@ POSSIBILITY OF SUCH DAMAGE.
         Make no store/no_fail due to article html returned for http://caseconnector.jbjs.org/content/2/2/e16
         we will count on polls to catch errors where no content was stored -->
       <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <!-- this exception only catches for urls from glencoesoftware.com (and subdomains)
+           Theory is that Highwire has some feature that allows publishers to host content at glencoesoftware
+           but that it gets enabled without publishers realizing it. And if they have no content there the url
+           still gets generated in the html. -->
+      <string>java.net.UnknownHostException=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
