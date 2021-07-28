@@ -63,7 +63,8 @@ my $file2_name = shift(@ARGV);
 # date.
 open(IFILE, "<$file1_name");
 while (my $line = <IFILE>) {
-    my ($auid, $status) = split(/\s+/, $line);
+    $line =~s/\n//g;
+    my ($auid, $status) = split(/\t/, $line);
     my $status_code = $code{"other"};
     if (exists($code{$status})) {
         $status_code = $code{$status};
@@ -76,12 +77,14 @@ close(IFILE);
 #foreach my $auid (keys(%auid_status)) {
 #    printf("%s %d\n", $auid, $auid_status{$auid}{start});
 #}
+#exit(0);
 
 # Read in second file. (Should be the report from the later
 # date.
 open(IFILE, "<$file2_name");
 while (my $line = <IFILE>) {
-    my ($auid, $status, $publisher, $plugin) = split(/\s+/, $line);
+    $line =~s/\n//g;
+    my ($auid, $status, $publisher, $plugin) = split(/\t/, $line);
     my $status_code = $code{"other"};
     if (exists($code{$status})) {
         $status_code = $code{$status};
@@ -92,6 +95,13 @@ while (my $line = <IFILE>) {
 }
 close(IFILE);
 
+# Debug report
+#foreach my $auid (keys(%auid_status)) {
+#    printf("%s %d %d %s %s\n", $auid, $auid_status{$auid}{start}, $auid_status{$auid}{end}, $auid_status{$auid}{plugin}, $auid_status{$auid}{publisher});
+#}
+
+#exit(0);
+
 # Clean up data structure by adding "notPresent" codes where
 # status is missing.
 foreach my $auid (keys(%auid_status)) {
@@ -101,14 +111,22 @@ foreach my $auid (keys(%auid_status)) {
     if (! exists($auid_status{$auid}{end})) {
         $auid_status{$auid}{end} = $code{"deleted"};
     }
+    #printf("%s %s %s %s\n", $auid, &code_name($auid_status{$auid}{start}), &code_name($auid_status{$auid}{end}), $auid_status{$auid}{publisher});
+
     $start_code = $auid_status{$auid}{start};
     $end_code = $auid_status{$auid}{end};
     $publisher = $auid_status{$auid}{publisher};
     $plugin = $auid_status{$auid}{plugin};
+    #if (!exists($publ_plug{$publisher}{$plugin})) {
+    #    $publ_plug{$publisher}{$plugin} = 0;
+    #}
     if ($start_code >= $code{"notPresent"} && 
         $start_code <= $code{"ready"} &&
         $end_code >= $code{"crawling"} &&
         $end_code <= $code{"finished"}) {
+            if (!exists($publ_plug{$publisher}{$plugin})) {
+                $publ_plug{$publisher}{$plugin} = 0;
+            }
             $publ_plug{$publisher}{$plugin} += 1;
         }
 }
@@ -148,7 +166,7 @@ foreach my $auid (keys(%auid_status)) {
 printf("-D- Found %d publishers\n", scalar(keys(%publ_plug)));
 foreach my $x (sort keys(%publ_plug)) {
     foreach my $y (sort keys(%{ $publ_plug{$x} })) {
-        printf("$x\t$y\t%d\n", $publ_plug{$x}{$y});
+        printf("%s\t%s\t%d\n", $x,$y,$publ_plug{$x}{$y});
     }
 }
 
