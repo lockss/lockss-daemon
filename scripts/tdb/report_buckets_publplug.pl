@@ -1,28 +1,31 @@
 #!/usr/bin/perl
 
 #This script is designed to evaluate a set of AUs and deliver a chart showing
-#status change from one point in time to another.
+#a count of AUs from a particular publisher/plugin pair that have been added to the ingest machines.
 
 #GLN: To create report, comparing two points in time.
 #git checkout master
 #git checkout `git rev-list -n 1 --before="2020-04-01 00:00" master`
 #ant jar-lockss
-#/scripts/tdb/tdbout -t auid,status tdb/prod/{,*/}*.tdb | sort -u > ../tmp/file1.txt
+#/scripts/tdb/tdbout -t auid,status tdb/prod/{,_retired/}*.tdb | sort -u > ../tmp/file1.txt
 #git checkout master
 #git checkout `git rev-list -n 1 --before="2021-04-01 00:00" master`
 #ant jar-lockss
-#./scripts/tdb/tdbout -t auid,status tdb/prod/{,*/}*.tdb | sort -u > ../tmp/file2.txt
+#./scripts/tdb/tdbout -t auid,status,publisher,plugin tdb/prod/{,_retired/}*.tdb | sort -u > ../tmp/file2.txt
 #./scripts/tdb/report_buckets.pl ../tmp/file1.txt ../tmp/file2.txt
 #git checkout master
 #git pull origin master
 #ant jar-lockss
 
-#CLOCKSS: To create a report, comparing clockss status1 and status2.
+#CLOCKSS: To create a report, comparing two points in time.
+#git checkout master
+#git checkout `git rev-list -n 1 --before="2021-04-01 00:00" master`
+#ant jar-lockss
+#./scripts/tdb/tdbout -t auid,status tdb/clockssingest/{,_retired/}a*.tdb | sort -u > ../SageEdits/file1.txt
 #git checkout master
 #git checkout `git rev-list -n 1 --before="2021-05-01 00:00" master`
 #ant jar-lockss
-#./scripts/tdb/tdbout -t auid,status tdb/clockssingest/{,*/}*.tdb | sort -u > ../SageEdits/file1.txt
-#./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/{,*/}*.tdb | sort -u > ../SageEdits/file2.txt
+#./scripts/tdb/tdbout -t auid,status,publisher,plugin tdb/clockssingest/{,_retired/}a*.tdb | sort -u > ../SageEdits/file2.txt
 #./scripts/tdb/report_buckets.pl ../SageEdits/file1.txt ../SageEdits/file2.txt > ../SageEdits/buckets_today.tsv
 #git checkout master
 #git pull
@@ -40,8 +43,8 @@ my %code = ("notPresent" => 0,
     "crawling" => 8,
     "deepCrawl" => 9,
     "frozen" => 10,
-    "ingNotReady" => 11,
-    "finished" => 12,
+    "finished" => 11,
+    "ingNotReady" => 12,
     "released" => 13,
     "down" => 14,
     "superseded" => 15,
@@ -78,17 +81,19 @@ close(IFILE);
 # date.
 open(IFILE, "<$file2_name");
 while (my $line = <IFILE>) {
-    my ($auid, $status) = split(/\s+/, $line);
+    my ($auid, $status, $publisher, $plugin) = split(/\s+/, $line);
     my $status_code = $code{"other"};
     if (exists($code{$status})) {
         $status_code = $code{$status};
     }
     $auid_status{$auid}{end} = $status_code;
+    $auid_status{$auid}{publisher} = $publisher;
+    $auid_status{$auid}{plugin} = $plugin;
 }
 close(IFILE);
 
 # Clean up data structure by adding "notPresent" codes where
-# things are missing.
+# status is missing.
 foreach my $auid (keys(%auid_status)) {
     if (! exists($auid_status{$auid}{start})) {
         $auid_status{$auid}{start} = $code{"notPresent"};
@@ -96,60 +101,55 @@ foreach my $auid (keys(%auid_status)) {
     if (! exists($auid_status{$auid}{end})) {
         $auid_status{$auid}{end} = $code{"deleted"};
     }
-}
-
-# Fill 2D array of buckets for each combination
-# of start and end status
-my @start_end = ();
-# Initialize all to 0
-foreach my $x (values(%code)) {
-	foreach my $y (values(%code)) {
-		$start_end[$x][$y] = 0;
-	}
-}
-foreach my $auid (keys(%auid_status)) {
     $start_code = $auid_status{$auid}{start};
     $end_code = $auid_status{$auid}{end};
-		$start_end[$start_code][$end_code] += 1;
-		if ($end_code == $code{"other"}) {
-			printf("Unexpected status:%s\n",$auid);
-		}
-#		if ($start_code == $code{"released"} && $end_code == $code{"deleted"}) {
-#			printf("Previously released, now deleted:%s\n",$auid);
+    $publisher = $auid_status{$auid}{publisher};
+    $plugin = $auid_status{$auid}{plugin};
+    if ($start_code >= $code{"notPresent"} && 
+        $start_code <= $code{"ready"} &&
+        $end_code >= $code{"crawling"} &&
+        $end_code <= $code{"finished"}) {
+            $publ_plug{$publisher}{$plugin} += 1;
+        }
+}
+
+#For each AUid, check start status and end status.
+#For CLOCKSS
+#If the start status is: notPresent, expected, exists, manifest, wanted, testing, notReady, or ready.
+#and the end status is: crawling, deepCrawl, frozen, or finished.
+#For GLN
+#If the start status is: notPresent, expected, exists, manifest, wanted, testing, notReady, or ready.
+#and the end status is: released
+#then add 1 to an array of the publisher+plugin
+
+#foreach my $auid (keys(%auid_status)) {
+#    $start_code = $auid_status{$auid}{start};
+#    $end_code = $auid_status{$auid}{end};
+#    $publisher = $auid_status{$auid}{publisher};
+#    $plugin = $auid_status{$auid}{plugin};
+#    if ($start_code >= $code{"notPresent"} && 
+#        $start_code <= $code{"ready"} &&
+#        $end_code >= $code{"crawling"} &&
+#        $end_code <= $code{"finished"}) {
+#            $publ_plug[$publisher][$plugin] += 1;
+#
+##		if (($start_code == $code{"released"} || $start_code == $code{"down"} || $start_code == $code{"superseded"}) &&
+#		     !($end_code == $code{"released"} || $end_code == $code{"down"} || $end_code == $code{"superseded"})) {
+#			printf("Previously %s, now %s: %s\n",&code_name($start_code),&code_name($end_code),$auid);
 #		}
-#		if ($start_code == $code{"down"} && $end_code == $code{"deleted"}) {
-#			printf("Previously down, now deleted:%s\n",$auid);
-#		}
-#		if ($start_code == $code{"superseded"} && $end_code == $code{"deleted"}) {
-#			printf("Previously superseded, now deleted:%s\n",$auid);
-#		}
-#		if ($start_code == $code{"released"} && $end_code == $code{"exists"}) {
-#			printf("Previously released, now exists:%s\n",$auid);
-#		}
-#		if ($start_code == $code{"released"} && $end_code == $code{"manifest"}) {
-#			printf("Previously released, now manifest:%s\n",$auid);
-#		}
-		if (($start_code == $code{"released"} || $start_code == $code{"down"} || $start_code == $code{"superseded"}) &&
-		     !($end_code == $code{"released"} || $end_code == $code{"down"} || $end_code == $code{"superseded"})) {
-			printf("Previously %s, now %s: %s\n",&code_name($start_code),&code_name($end_code),$auid);
-		}
-	}
+#    }
+#}
 
 # Print out report
-# Header
-printf("Status");
-foreach my $y (sort by_value values(%code)) {
-    printf("\t%s", &code_name($y));
-}
-print("\n");
-foreach my $x (sort by_value values(%code)) {
-    printf("%s", &code_name($x));
-    foreach my $y (sort by_value values(%code)) {
-        printf("\t%d", $start_end[$x][$y]);
+
+#For each publisher, looping on each plugin for each publisher,
+#Print: $publisher \t $plugin \t $publ_plug{$publisher}{$plugin}
+
+foreach my $x (sort keys(%publ_plug)) {
+    foreach my $y (sort keys(%publ_plug{$x})) {
+        printf("$x\t$y\t%d\n", $publ_plug{$x}{$y});
     }
-    print("\n");
 }
-print("\n");
 
 exit(0);
 
