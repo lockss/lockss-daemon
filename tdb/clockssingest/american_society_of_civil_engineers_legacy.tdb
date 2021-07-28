@@ -60,7 +60,7 @@
       param[journal_id] = jpapad
 
       au < ready ; exists ; 1966 ; Journal of Professional Activities Volume 92 ; 92 ;  >
-      au < ready ; exists ; 1967 ; Journal of Professional Activities Volume 93 ; 93 ;  >
+      au < crawling ; exists ; 1967 ; Journal of Professional Activities Volume 93 ; 93 ;  >
       au < ready ; exists ; 1968 ; Journal of Professional Activities Volume 94 ; 94 ;  >
       au < ready ; exists ; 1969 ; Journal of Professional Activities Volume 95 ; 95 ;  >
       au < exists ; exists ; 1970 ; Journal of Professional Activities Volume 96 ; 96 ;  >
@@ -202,7 +202,7 @@
       au < ready ; exists ; 1966 ; Journal of the Construction Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Construction Division Volume 93 ; 93 ;  >
       au < ready ; exists ; 1968 ; Journal of the Construction Division Volume 94 ; 94 ;  >
-      au < ready ; exists ; 1969 ; Journal of the Construction Division Volume 95 ; 95 ;  >
+      au < crawling ; exists ; 1969 ; Journal of the Construction Division Volume 95 ; 95 ;  >
       au < ready ; exists ; 1970 ; Journal of the Construction Division Volume 96 ; 96 ;  >
       au < ready ; exists ; 1971 ; Journal of the Construction Division Volume 97 ; 97 ;  >
       au < ready ; exists ; 1972 ; Journal of the Construction Division Volume 98 ; 98 ;  >
@@ -255,7 +255,7 @@
       au < manifest ; exists ; 1962 ; Journal of the Engineering Mechanics Division Volume 88 ; 88 ;  >
       au < manifest ; exists ; 1963 ; Journal of the Engineering Mechanics Division Volume 89 ; 89 ;  >
       au < manifest ; exists ; 1964 ; Journal of the Engineering Mechanics Division Volume 90 ; 90 ;  >
-      au < ready ; exists ; 1965 ; Journal of the Engineering Mechanics Division Volume 91 ; 91 ;  >
+      au < crawling ; exists ; 1965 ; Journal of the Engineering Mechanics Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Engineering Mechanics Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Engineering Mechanics Division Volume 93 ; 93 ;  >
       au < ready ; exists ; 1968 ; Journal of the Engineering Mechanics Division Volume 94 ; 94 ;  >
@@ -288,7 +288,7 @@
 
       au < ready ; exists ; 1973 ; Journal of the Environmental Engineering Division Volume 99 ; 99 ;  >
       au < ready ; exists ; 1974 ; Journal of the Environmental Engineering Division Volume 100 ; 100 ;  >
-      au < ready ; exists ; 1975 ; Journal of the Environmental Engineering Division Volume 101 ; 101 ;  >
+      au < crawling ; exists ; 1975 ; Journal of the Environmental Engineering Division Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Journal of the Environmental Engineering Division Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Journal of the Environmental Engineering Division Volume 103 ; 103 ;  >
       au < crawling ; exists ; 1978 ; Journal of the Environmental Engineering Division Volume 104 ; 104 ;  >
@@ -340,7 +340,7 @@
       au < manifest ; exists ; 1962 ; Journal of the Highway Division Volume 88 ; 88 ;  >
       au < manifest ; exists ; 1963 ; Journal of the Highway Division Volume 89 ; 89 ;  >
       au < manifest ; exists ; 1964 ; Journal of the Highway Division Volume 90 ; 90 ;  >
-      au < ready ; exists ; 1965 ; Journal of the Highway Division Volume 91 ; 91 ;  >
+      au < crawling ; exists ; 1965 ; Journal of the Highway Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Highway Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Highway Division Volume 93 ; 93 ;  >
       au < ready ; exists ; 1968 ; Journal of the Highway Division Volume 94 ; 94 ;  >
@@ -621,7 +621,7 @@
       au < ready ; exists ; 1975 ; Journal of the Surveying and Mapping Division Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Journal of the Surveying and Mapping Division Volume 102 ; 102 ;  >
       au < crawling ; exists ; 1977 ; Journal of the Surveying and Mapping Division Volume 103 ; 103 ;  >
-      au < ready ; exists ; 1978 ; Journal of the Surveying and Mapping Division Volume 104 ; 104 ;  >
+      au < crawling ; exists ; 1978 ; Journal of the Surveying and Mapping Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Surveying and Mapping Division Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Journal of the Surveying and Mapping Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Surveying and Mapping Division Volume 107 ; 107 ;  >
@@ -643,8 +643,8 @@
       au < ready ; exists ; 1978 ; Journal of the Technical Councils of ASCE Volume 104 ; 104 ;  >
       au < crawling ; exists ; 1979 ; Journal of the Technical Councils of ASCE Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Journal of the Technical Councils of ASCE Volume 106 ; 106 ;  >
-      au < ready ; exists ; 1981 ; Journal of the Technical Councils of ASCE Volume 107 ; 107 ;  >
-      au < ready ; exists ; 1982 ; Journal of the Technical Councils of ASCE Volume 108 ; 108 ;  >
+      au < crawling ; exists ; 1981 ; Journal of the Technical Councils of ASCE Volume 107 ; 107 ;  >
+      au < crawling ; exists ; 1982 ; Journal of the Technical Councils of ASCE Volume 108 ; 108 ;  >
 
   }
 
@@ -672,7 +672,7 @@
       au < ready ; exists ; 1975 ; Journal of the Urban Planning and Development Division Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Journal of the Urban Planning and Development Division Volume 102 ; 102 ;  >
       au < crawling ; exists ; 1977 ; Journal of the Urban Planning and Development Division Volume 103 ; 103 ;  >
-      au < ready ; exists ; 1978 ; Journal of the Urban Planning and Development Division Volume 104 ; 104 ;  >
+      au < crawling ; exists ; 1978 ; Journal of the Urban Planning and Development Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Urban Planning and Development Division Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Journal of the Urban Planning and Development Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Urban Planning and Development Division Volume 107 ; 107 ;  >
@@ -883,11 +883,11 @@
       param[journal_id] = tpejan
 
       au < ready ; exists ; 1969 ; Transportation Engineering Journal of ASCE Volume 95 ; 95 ;  >
-      au < ready ; exists ; 1970 ; Transportation Engineering Journal of ASCE Volume 96 ; 96 ;  >
+      au < crawling ; exists ; 1970 ; Transportation Engineering Journal of ASCE Volume 96 ; 96 ;  >
       au < ready ; exists ; 1971 ; Transportation Engineering Journal of ASCE Volume 97 ; 97 ;  >
       au < ready ; exists ; 1972 ; Transportation Engineering Journal of ASCE Volume 98 ; 98 ;  >
       au < ready ; exists ; 1973 ; Transportation Engineering Journal of ASCE Volume 99 ; 99 ;  >
-      au < ready ; exists ; 1974 ; Transportation Engineering Journal of ASCE Volume 100 ; 100 ;  >
+      au < crawling ; exists ; 1974 ; Transportation Engineering Journal of ASCE Volume 100 ; 100 ;  >
       au < ready ; exists ; 1975 ; Transportation Engineering Journal of ASCE Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Transportation Engineering Journal of ASCE Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Transportation Engineering Journal of ASCE Volume 103 ; 103 ;  >
