@@ -1436,7 +1436,7 @@
     comment[years] = 2002-2015
 
    au < crawling ; exists ; 2002 ; 2002 ; Endoscopy heute Volume 15 ; 15 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Endoscopy heute Volume 16 ; 16 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Endoscopy heute Volume 16 ; 16 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Endoscopy heute Volume 17 ; 17 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Endoscopy heute Volume 18 ; 18 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Endoscopy heute Volume 19 ; 19 ; >
@@ -1463,7 +1463,7 @@
     param[journal_id] = 10.1055/s-00000014
     comment[years] = 2000-current
 
-   au < ready ; exists ; 2000 ; 2000 ; Erfahrungsheilkunde Volume 49 ; 49 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Erfahrungsheilkunde Volume 49 ; 49 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Erfahrungsheilkunde Volume 50 ; 50 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Erfahrungsheilkunde Volume 51 ; 51 ; >
    au < ready ; exists ; 2003 ; 2003 ; Erfahrungsheilkunde Volume 52 ; 52 ; >
@@ -1595,7 +1595,7 @@
    au < exists ; exists ; 1999 ; 1999 ; European Journal of Pediatric Surgery Volume 9 ; 9 ; >
    au < crawling ; exists ; 2000 ; 2000 ; European Journal of Pediatric Surgery Volume 10 ; 10 ; >
    au < crawling ; exists ; 2001 ; 2001 ; European Journal of Pediatric Surgery Volume 11 ; 11 ; >
-   au < ready ; exists ; 2002 ; 2002 ; European Journal of Pediatric Surgery Volume 12 ; 12 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; European Journal of Pediatric Surgery Volume 12 ; 12 ; >
    au < crawling ; exists ; 2003 ; 2003 ; European Journal of Pediatric Surgery Volume 13 ; 13 ; >
    au < crawling ; exists ; 2004 ; 2004 ; European Journal of Pediatric Surgery Volume 14 ; 14 ; >
    au < crawling ; exists ; 2005 ; 2005 ; European Journal of Pediatric Surgery Volume 15 ; 15 ; >
@@ -1710,7 +1710,7 @@
    au < exists ; exists ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 1999 ; 1999 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Experimental and Clinical Endocrinology & Diabetes Volume 108 ; 108 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Experimental and Clinical Endocrinology & Diabetes Volume 109 ; 109 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Experimental and Clinical Endocrinology & Diabetes Volume 110 ; 110 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Experimental and Clinical Endocrinology & Diabetes Volume 110 ; 110 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Experimental and Clinical Endocrinology & Diabetes Volume 111 ; 111 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Experimental and Clinical Endocrinology & Diabetes Volume 112 ; 112 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Experimental and Clinical Endocrinology & Diabetes Volume 113 ; 113 ; >
@@ -2418,9 +2418,9 @@
     param[journal_id] = 10.1055/s-00000026
     comment[years] =  2000-current
 
-   au < ready ; exists ; 2000 ; 2000 ; Informationen aus Orthodontie & Kieferorthopädie Volume 32 ; 32 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Informationen aus Orthodontie & Kieferorthopädie Volume 32 ; 32 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Informationen aus Orthodontie & Kieferorthopädie Volume 33 ; 33 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Informationen aus Orthodontie & Kieferorthopädie Volume 34 ; 34 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Informationen aus Orthodontie & Kieferorthopädie Volume 34 ; 34 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Informationen aus Orthodontie & Kieferorthopädie Volume 35 ; 35 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Informationen aus Orthodontie & Kieferorthopädie Volume 36 ; 36 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Informationen aus Orthodontie & Kieferorthopädie Volume 37 ; 37 ; >
@@ -2631,7 +2631,7 @@
     au < crawling ; exists ; 2000 ; 2000 ; International Journal of Sports Medicine Volume 21 ; 21 ; >
     au < crawling ; exists ; 2001 ; 2001 ; International Journal of Sports Medicine Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; 2002 ; International Journal of Sports Medicine Volume 23 ; 23 ; >
-    au < ready ; exists ; 2003 ; 2003 ; International Journal of Sports Medicine Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; International Journal of Sports Medicine Volume 24 ; 24 ; >
     au < crawling ; exists ; 2004 ; 2004 ; International Journal of Sports Medicine Volume 25 ; 25 ; >
     au < crawling ; exists ; 2005 ; 2005 ; International Journal of Sports Medicine Volume 26 ; 26 ; >
     au < crawling ; exists ; 2006 ; 2006 ; International Journal of Sports Medicine Volume 27 ; 27 ; >
@@ -3139,7 +3139,7 @@
     au < crawling ; exists ; 2003 ; 2003 ; Journal of Pediatric Neurology Volume 1 ; 1 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Journal of Pediatric Neurology Volume 2 ; 2 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Journal of Pediatric Neurology Volume 3 ; 3 ; >
-    au < ready ; exists ; 2006 ; 2006 ; Journal of Pediatric Neurology Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2006 ; 2006 ; Journal of Pediatric Neurology Volume 4 ; 4 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Journal of Pediatric Neurology Volume 5 ; 5 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Pediatric Neurology Volume 6 ; 6 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Journal of Pediatric Neurology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
@@ -3958,7 +3958,7 @@
     au < exists ; exists ; 1997 ; 1997 ; Neuropediatrics Volume 28 ; 28 ; >
     au < exists ; exists ; 1998 ; 1998 ; Neuropediatrics Volume 29 ; 29 ; >
     au < exists ; exists ; 1999 ; 1999 ; Neuropediatrics Volume 30 ; 30 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Neuropediatrics Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Neuropediatrics Volume 31 ; 31 ; >
     au < ready ; exists ; 2001 ; 2001 ; Neuropediatrics Volume 32 ; 32 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Neuropediatrics Volume 33 ; 33 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Neuropediatrics Volume 34 ; 34 ; >
@@ -4199,7 +4199,7 @@
     param[journal_id] = 10.1055/s-00000046
     comment[years] = 2000-current
 
-    au < ready ; exists ; 2000 ; 2000 ; OP-Journal Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; OP-Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2001 ; 2001 ; OP-Journal Volume 17 ; 17 ; >
     au < crawling ; exists ; 2002 ; 2002 ; OP-Journal Volume 18 ; 18 ; >
     au < crawling ; exists ; 2003 ; 2003 ; OP-Journal Volume 19 ; 19 ; >
@@ -4457,7 +4457,7 @@
     au < exists ; exists ; 1997 ; 1997 ; Pharmacopsychiatry Volume 30 ; 30 ; >
     au < exists ; exists ; 1998 ; 1998 ; Pharmacopsychiatry Volume 31 ; 31 ; >
     au < exists ; exists ; 1999 ; 1999 ; Pharmacopsychiatry Volume 32 ; 32 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Pharmacopsychiatry Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Pharmacopsychiatry Volume 33 ; 33 ; >
     au < ready ; exists ; 2001 ; 2001 ; Pharmacopsychiatry Volume 34 ; 34 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Pharmacopsychiatry Volume 35 ; 35 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Pharmacopsychiatry Volume 36 ; 36 ; >
@@ -4711,7 +4711,7 @@
    au < exists ; exists ; 1998 ; 1998 ; Planta Medica Volume 64 ; 64 ; >
    au < exists ; exists ; 1999 ; 1999 ; Planta Medica Volume 65 ; 65 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Planta Medica Volume 66 ; 66 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Planta Medica Volume 67 ; 67 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Planta Medica Volume 67 ; 67 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Planta Medica Volume 68 ; 68 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Planta Medica Volume 69 ; 69 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Planta Medica Volume 70 ; 70 ; >
@@ -5479,7 +5479,7 @@
    au < exists ; exists ; 1997 ; 1997 ; Seminars in Neurology Volume 17 ; 17 ; >
    au < exists ; exists ; 1998 ; 1998 ; Seminars in Neurology Volume 18 ; 18 ; >
    au < exists ; exists ; 1999 ; 1999 ; Seminars in Neurology Volume 19 ; 19 ; >
-   au < ready ; exists ; 2000 ; 2000 ; Seminars in Neurology Volume 20 ; 20 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Neurology Volume 20 ; 20 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Neurology Volume 21 ; 21 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Neurology Volume 22 ; 22 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Neurology Volume 23 ; 23 ; >
@@ -5517,7 +5517,7 @@
     comment[years] = 2000-2004
 
    au < ready ; exists ; 2000 ; 2000 ; Seminars in Neurosurgery Volume 11 ; 11 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 ; >
    au < ready ; exists ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Neurosurgery Volume 14 ; 14 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Neurosurgery Volume 15 ; 15 ; >
@@ -5762,7 +5762,7 @@
     au < exists ; exists ; 1998 ; 1998 ; Seminars in Thrombosis and Hemostasis Volume 24 ; 24 ; >
     au < exists ; exists ; 1999 ; 1999 ; Seminars in Thrombosis and Hemostasis Volume 25 ; 25 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Seminars in Thrombosis and Hemostasis Volume 26 ; 26 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Seminars in Thrombosis and Hemostasis Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Thrombosis and Hemostasis Volume 27 ; 27 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Seminars in Thrombosis and Hemostasis Volume 28 ; 28 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Seminars in Thrombosis and Hemostasis Volume 29 ; 29 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Seminars in Thrombosis and Hemostasis Volume 30 ; 30 ; >
@@ -6008,7 +6008,7 @@
     param[journal_id] = 10.1055/s-00000082
     comment[years] = 2000-current
 
-   au < ready ; exists ; 2000 ; 2000 ; Sprache Stimme Gehör Volume 24 ; 24 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Sprache Stimme Gehör Volume 24 ; 24 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Sprache Stimme Gehör Volume 25 ; 25 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Sprache Stimme Gehör Volume 26 ; 26 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Sprache Stimme Gehör Volume 27 ; 27 ; >
@@ -6045,7 +6045,7 @@
     param[journal_id] = 10.1055/s-00000115
     comment[years] = 2000-current
 
-   au < ready ; exists ; 2000 ; 2000 ; Suchttherapie Volume 1 ; 1 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Suchttherapie Volume 1 ; 1 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Suchttherapie Volume 2 ; 2 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Suchttherapie Volume 3 ; 3 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Suchttherapie Volume 4 ; 4 ; >
@@ -6429,7 +6429,7 @@
     comment[years] = 2000-current
 
     au < crawling ; exists ; 2000 ; 2000 ; TumorDiagnostik & Therapie Volume 23 ; 23 ; >
-    au < ready ; exists ; 2001 ; 2001 ; TumorDiagnostik & Therapie Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; TumorDiagnostik & Therapie Volume 24 ; 24 ; >
     au < crawling ; exists ; 2002 ; 2002 ; TumorDiagnostik & Therapie Volume 25 ; 25 ; >
     au < crawling ; exists ; 2003 ; 2003 ; TumorDiagnostik & Therapie Volume 26 ; 26 ; >
     au < crawling ; exists ; 2004 ; 2004 ; TumorDiagnostik & Therapie Volume 27 ; 27 ; >
@@ -7006,7 +7006,7 @@
     au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2001 ; 0 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2002 ; 0 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2003 ; 0 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 0 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2004 ; 0 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2005 ; 0 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2006 ; 0 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2007 ; 0 ; >
@@ -7190,7 +7190,7 @@
     comment[years] = 2000-2002
 
     au < ready ; exists ; 2000 ; 2000 ; Zeitschrift für Kinderchirurgie Volume 9 ; 9 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Kinderchirurgie Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Kinderchirurgie Volume 10 ; 10 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Kinderchirurgie Volume 11 ; 11 ; >
 
   }
@@ -7255,7 +7255,7 @@
     param[journal_id] = 10.1055/s-00000112
     comment[years] = 2003-current
 
-    au < ready ; exists ; 2003 ; 2003 ; ZWR - Das Deutsche Zahnärzteblatt Volume 112 ; 112 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; ZWR - Das Deutsche Zahnärzteblatt Volume 112 ; 112 ; >
     au < crawling ; exists ; 2004 ; 2004 ; ZWR - Das Deutsche Zahnärzteblatt Volume 113 ; 113 ; >
     au < crawling ; exists ; 2005 ; 2005 ; ZWR - Das Deutsche Zahnärzteblatt Volume 114 ; 114 ; >
     au < crawling ; exists ; 2006 ; 2006 ; ZWR - Das Deutsche Zahnärzteblatt Volume 115 ; 115 ; >
@@ -7415,7 +7415,7 @@
     param[journal_id] = 10.1055/s-00034925
     comment[years] = 2000-current
 
-    au < ready ; exists ; 2000 ; 2000 ; Hämostaseologie Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Hämostaseologie Volume 20 ; 20 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Hämostaseologie Volume 21 ; 21 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Hämostaseologie Volume 22 ; 22 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Hämostaseologie Volume 23 ; 23 ; >
@@ -7607,7 +7607,7 @@
     param[journal_id] = 10.1055/s-00034924
     comment[years] = 1961-current
 
-    au < ready ; exists ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 ; >
     au < ready ; exists ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 ; >
