@@ -128,6 +128,11 @@ foreach my $auid (keys(%auid_status)) {
                 $publ_plug{$publisher}{$plugin} = 0;
             }
             $publ_plug{$publisher}{$plugin} += 1;
+        } else {
+            if (!exists($publ_plug{"All-publ"}{"All-plugin"})) {
+                $publ_plug{"All-publ"}{"All-plugin"} = 0;
+            }
+            $publ_plug{"All-publ"}{"All-plugin"} += 1;
         }
 }
 
@@ -140,23 +145,6 @@ foreach my $auid (keys(%auid_status)) {
 #and the end status is: released
 #then add 1 to an array of the publisher+plugin
 
-#foreach my $auid (keys(%auid_status)) {
-#    $start_code = $auid_status{$auid}{start};
-#    $end_code = $auid_status{$auid}{end};
-#    $publisher = $auid_status{$auid}{publisher};
-#    $plugin = $auid_status{$auid}{plugin};
-#    if ($start_code >= $code{"notPresent"} && 
-#        $start_code <= $code{"ready"} &&
-#        $end_code >= $code{"crawling"} &&
-#        $end_code <= $code{"finished"}) {
-#            $publ_plug[$publisher][$plugin] += 1;
-#
-##		if (($start_code == $code{"released"} || $start_code == $code{"down"} || $start_code == $code{"superseded"}) &&
-#		     !($end_code == $code{"released"} || $end_code == $code{"down"} || $end_code == $code{"superseded"})) {
-#			printf("Previously %s, now %s: %s\n",&code_name($start_code),&code_name($end_code),$auid);
-#		}
-#    }
-#}
 
 # Print out report
 
