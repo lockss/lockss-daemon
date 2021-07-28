@@ -63,8 +63,8 @@ my $file2_name = shift(@ARGV);
 # date.
 open(IFILE, "<$file1_name");
 while (my $line = <IFILE>) {
-    $line =~s/\n//g;
-    my ($auid, $status) = split(/\t/, $line);
+    $line =~s/\n//g; #trim
+    my ($auid, $status, $publisher, $plugin) = split(/\t/, $line);
     my $status_code = $code{"other"};
     if (exists($code{$status})) {
         $status_code = $code{$status};
@@ -83,7 +83,7 @@ close(IFILE);
 # date.
 open(IFILE, "<$file2_name");
 while (my $line = <IFILE>) {
-    $line =~s/\n//g;
+    $line =~s/\n//g; #trim
     my ($auid, $status, $publisher, $plugin) = split(/\t/, $line);
     my $status_code = $code{"other"};
     if (exists($code{$status})) {

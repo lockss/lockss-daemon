@@ -38,16 +38,16 @@
 #CLOCKSS: To create a report, comparing two points in time.
 #Copy this file and report_buckets_publplug.pl to SageEdits.
 git checkout master
-git checkout `git rev-list -n 1 --before="2021-05-01 00:00" master`
-ant jar-lockss
-./scripts/tdb/tdbout -t auid,status tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file_05.txt
-git checkout master
 git checkout `git rev-list -n 1 --before="2021-06-01 00:00" master`
 ant jar-lockss
-./scripts/tdb/tdbout -t auid,status,publisher,plugin tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file_06.txt
+./scripts/tdb/tdbout -CLZFt auid,status,publisher,plugin tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file_06.txt
+git checkout master
+git checkout `git rev-list -n 1 --before="2021-07-01 00:00" master`
+ant jar-lockss
+./scripts/tdb/tdbout -CLZFt auid,status,publisher,plugin tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file_07.txt
 git checkout master
 git pull
 ant jar-lockss
-./../SageEdits/report_buckets_publplug.pl ../SageEdits/file_05.txt ../SageEdits/file_06.txt > ../SageEdits/buckets__05.tsv
+./scripts/tdb/report_buckets_publplug.pl ../SageEdits/file_06.txt ../SageEdits/file_07.txt > ../SageEdits/buckets__06.tsv
 
 exit 0
