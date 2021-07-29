@@ -9,8 +9,8 @@ mkdir -p $tpath
   echo "taylor_and_francis.tdb" > $tpath/glnfilter
   echo "sage_publications.tdb" >> $tpath/glnfilter
 
-  ls tdb/prod | grep .tdb > $tpath/glnlist
-  ls tdb/clockssingest | grep .tdb > $tpath/clocksslist
+  ls tdb/prod/{,_retired}/*.tdb > $tpath/glnlist
+  ls tdb/clockssingest/{,_retired}/*.tdb > $tpath/clocksslist
   #do not look at Springer AUids.
   diff $tpath/glnlist $tpath/clocksslist | grep "< " | sed 's/..//' | grep -v springer > $tpath/notclockss
   echo "american_medical_association.tdb" >> $tpath/notclockss
@@ -38,7 +38,4 @@ do
 done
 cat $tpath/glntest_a | sort | grep -v "needs.plugin"
 exit 0
-
-
-
 
