@@ -1379,7 +1379,7 @@
    au < crawling ; exists ; 2000 ; 2000 ; Endoscopy Volume 32 ; 32 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Endoscopy Volume 33 ; 33 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Endoscopy Volume 34 ; 34 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Endoscopy Volume 35 ; 35 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Endoscopy Volume 35 ; 35 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Endoscopy Volume 36 ; 36 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Endoscopy Volume 37 ; 37 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Endoscopy Volume 38 ; 38 ; >
@@ -1466,7 +1466,7 @@
    au < crawling ; exists ; 2000 ; 2000 ; Erfahrungsheilkunde Volume 49 ; 49 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Erfahrungsheilkunde Volume 50 ; 50 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Erfahrungsheilkunde Volume 51 ; 51 ; >
-   au < ready ; exists ; 2003 ; 2003 ; Erfahrungsheilkunde Volume 52 ; 52 ; >
+   au < crawling ; exists ; 2003 ; 2003 ; Erfahrungsheilkunde Volume 52 ; 52 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Erfahrungsheilkunde Volume 53 ; 53 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Erfahrungsheilkunde Volume 54 ; 54 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Erfahrungsheilkunde Volume 55 ; 55 ; >
@@ -1778,9 +1778,9 @@
    au < exists ; exists ; 1997 ; 1997 ; Facial Plastic Surgery Volume 13 ; 13 ; >
    au < exists ; exists ; 1998 ; 1998 ; Facial Plastic Surgery Volume 14 ; 14 ; >
    au < exists ; exists ; 1999 ; 1999 ; Facial Plastic Surgery Volume 15 ; 15 ; >
-   au < ready ; exists ; 2000 ; 2000 ; Facial Plastic Surgery Volume 16 ; 16 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Facial Plastic Surgery Volume 16 ; 16 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Facial Plastic Surgery Volume 17 ; 17 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Facial Plastic Surgery Volume 18 ; 18 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Facial Plastic Surgery Volume 18 ; 18 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Facial Plastic Surgery Volume 19 ; 19 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Facial Plastic Surgery Volume 20 ; 20 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Facial Plastic Surgery Volume 21 ; 21 ; >
@@ -2073,7 +2073,7 @@
     comment[years] = 2000-current
 
    au < crawling ; exists ; 2000 ; 2000 ; Gesundheitswesen Das Volume 64 ; 64 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Gesundheitswesen Das Volume 65 ; 65 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Gesundheitswesen Das Volume 65 ; 65 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Gesundheitswesen Das Volume 66 ; 66 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Gesundheitswesen Das Volume 67 ; 67 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Gesundheitswesen Das Volume 68 ; 68 ; >
@@ -2303,7 +2303,7 @@
    au < exists ; exists ; 1999 ; 1999 ; Hormone and Metabolic Research Volume 31 ; 31 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Hormone and Metabolic Research Volume 32 ; 32 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Hormone and Metabolic Research Volume 33 ; 33 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Hormone and Metabolic Research Volume 34 ; 34 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Hormone and Metabolic Research Volume 34 ; 34 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Hormone and Metabolic Research Volume 35 ; 35 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Hormone and Metabolic Research Volume 36 ; 36 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Hormone and Metabolic Research Volume 37 ; 37 ; >
@@ -3666,7 +3666,7 @@
     au < crawling ; exists ; 2000 ; 2000 ; Krankenhauspsychiatrie Volume 11 ; 11 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Krankenhauspsychiatrie Volume 12 ; 12 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Krankenhauspsychiatrie Volume 13 ; 13 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Krankenhauspsychiatrie Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Krankenhauspsychiatrie Volume 14 ; 14 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Krankenhauspsychiatrie Volume 15 ; 15 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Krankenhauspsychiatrie Volume 16 ; 16 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Krankenhauspsychiatrie Volume 17 ; 17 ; >
@@ -3705,7 +3705,7 @@
     au < exists ; exists ; 1997 ; 1997 ; Laryngo-Rhino-Otologie Volume 76 ; 76 ; >
     au < exists ; exists ; 1998 ; 1998 ; Laryngo-Rhino-Otologie Volume 77 ; 77 ; >
     au < exists ; exists ; 1999 ; 1999 ; Laryngo-Rhino-Otologie Volume 78 ; 78 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Laryngo-Rhino-Otologie Volume 79 ; 79 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Laryngo-Rhino-Otologie Volume 79 ; 79 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Laryngo-Rhino-Otologie Volume 80 ; 80 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Laryngo-Rhino-Otologie Volume 81 ; 81 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Laryngo-Rhino-Otologie Volume 82 ; 82 ; >
@@ -3959,7 +3959,7 @@
     au < exists ; exists ; 1998 ; 1998 ; Neuropediatrics Volume 29 ; 29 ; >
     au < exists ; exists ; 1999 ; 1999 ; Neuropediatrics Volume 30 ; 30 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Neuropediatrics Volume 31 ; 31 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Neuropediatrics Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Neuropediatrics Volume 32 ; 32 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Neuropediatrics Volume 33 ; 33 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Neuropediatrics Volume 34 ; 34 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Neuropediatrics Volume 35 ; 35 ; >
@@ -4375,7 +4375,7 @@
     param[journal_id] = 10.1055/s-00000053
     comment[years] = 2000-2001
 
-    au < ready ; exists ; 2000 ; 2000 ; Perspectives in Vascular Surgery Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Perspectives in Vascular Surgery Volume 13 ; 13 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Perspectives in Vascular Surgery Volume 14 ; 14 ; >
 
   }
@@ -4502,7 +4502,7 @@
     au < exists ; exists ; 1997 ; 1997 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 7 ; 7 ; >
     au < exists ; exists ; 1998 ; 1998 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 8 ; 8 ; >
     au < exists ; exists ; 1999 ; 1999 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 9 ; 9 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 10 ; 10 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 11 ; 11 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 12 ; 12 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 13 ; 13 ; >
@@ -4641,7 +4641,7 @@
 
    au < exists ; exists ; 1999 ; 1999 ; Plant Biology Volume 1 ; 1 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Plant Biology Volume 2 ; 2 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Plant Biology Volume 3 ; 3 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Plant Biology Volume 3 ; 3 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Plant Biology Volume 4 ; 4 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Plant Biology Volume 5 ; 5 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Plant Biology Volume 6 ; 6 ; >
@@ -4935,10 +4935,10 @@
     comment[years] = 2001-current
 
    au < crawling ; exists ; 2001 ; 2001 ; Psychiatrische Praxis Volume 28 ; 28 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Psychiatrische Praxis Volume 29 ; 29 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Psychiatrische Praxis Volume 29 ; 29 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Psychiatrische Praxis Volume 30 ; 30 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Psychiatrische Praxis Volume 31 ; 31 ; >
-   au < ready ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
+   au < crawling ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Psychiatrische Praxis Volume 33 ; 33 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Psychiatrische Praxis Volume 34 ; 34 ; >
    au < frozen ; exists ; 2008 ; 2008 ; Psychiatrische Praxis Volume 35 ; 35 ; >
@@ -5220,8 +5220,8 @@
     au < exists ; exists ; 1997 ; 1997 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 169 ; 169 ; >
     au < exists ; exists ; 1998 ; 1998 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 170 ; 170 ; >
     au < exists ; exists ; 1999 ; 1999 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 171 ; 171 ; >
-    au < ready ; exists ; 2000 ; 2000 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 172 ; 172 ; >
-    au < ready ; exists ; 2001 ; 2001 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 173 ; 173 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 172 ; 172 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 173 ; 173 ; >
     au < crawling ; exists ; 2002 ; 2002 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 174 ; 174 ; >
     au < crawling ; exists ; 2003 ; 2003 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 175 ; 175 ; >
     au < crawling ; exists ; 2004 ; 2004 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 176 ; 176 ; >
@@ -5274,7 +5274,7 @@
    au < exists ; exists ; 1997 ; 1997 ; Seminars in Hearing Volume 18 ; 18 ; >
    au < exists ; exists ; 1998 ; 1998 ; Seminars in Hearing Volume 19 ; 19 ; >
    au < exists ; exists ; 1999 ; 1999 ; Seminars in Hearing Volume 20 ; 20 ; >
-   au < ready ; exists ; 2000 ; 2000 ; Seminars in Hearing Volume 21 ; 21 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Hearing Volume 21 ; 21 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Hearing Volume 22 ; 22 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Hearing Volume 23 ; 23 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Hearing Volume 24 ; 24 ; >
@@ -5328,7 +5328,7 @@
    au < exists ; exists ; 1998 ; 1998 ; Seminars in Interventional Radiology Volume 15 ; 15 ; >
    au < exists ; exists ; 1999 ; 1999 ; Seminars in Interventional Radiology Volume 16 ; 16 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Interventional Radiology Volume 17 ; 17 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Seminars in Interventional Radiology Volume 18 ; 18 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Interventional Radiology Volume 18 ; 18 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Interventional Radiology Volume 20 ; 20 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
@@ -5423,7 +5423,7 @@
    au < exists ; exists ; 1997 ; 1997 ; Seminars in Musculoskeletal Radiology Volume 1 ; 1 ; >
    au < exists ; exists ; 1998 ; 1998 ; Seminars in Musculoskeletal Radiology Volume 2 ; 2 ; >
    au < exists ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
-   au < ready ; exists ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Musculoskeletal Radiology Volume 5 ; 5 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Musculoskeletal Radiology Volume 7 ; 7 ; >
@@ -5518,7 +5518,7 @@
 
    au < ready ; exists ; 2000 ; 2000 ; Seminars in Neurosurgery Volume 11 ; 11 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Neurosurgery Volume 14 ; 14 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Neurosurgery Volume 15 ; 15 ; >
 
@@ -5646,7 +5646,7 @@
    au < exists ; exists ; 1998 ; 1998 ; Seminars in Respiratory and Critical Care Medicine Volume 19 ; 19 ; >
    au < exists ; exists ; 1999 ; 1999 ; Seminars in Respiratory and Critical Care Medicine Volume 20 ; 20 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; >
-   au < ready ; exists ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; >
+   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Respiratory and Critical Care Medicine Volume 24 ; 24 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Respiratory and Critical Care Medicine Volume 25 ; 25 ; >
@@ -5973,7 +5973,7 @@
    au < exists ; exists ; 1999 ; 1999 ; Sportverletzung - Sportschaden Volume 13 ; 13 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Sportverletzung - Sportschaden Volume 14 ; 14 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Sportverletzung - Sportschaden Volume 15 ; 15 ; >
-   au < ready ; exists ; 2002 ; 2002 ; Sportverletzung - Sportschaden Volume 16 ; 16 ; >
+   au < crawling ; exists ; 2002 ; 2002 ; Sportverletzung - Sportschaden Volume 16 ; 16 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Sportverletzung - Sportschaden Volume 17 ; 17 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Sportverletzung - Sportschaden Volume 18 ; 18 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Sportverletzung - Sportschaden Volume 19 ; 19 ; >
@@ -6485,7 +6485,7 @@
     au < exists ; exists ; 1997 ; 1997 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 18 ; 18 ; >
     au < exists ; exists ; 1998 ; 1998 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 19 ; 19 ; >
     au < exists ; exists ; 1999 ; 1999 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 20 ; 20 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 21 ; 21 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 23 ; 23 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 24 ; 24 ; >
@@ -7189,7 +7189,7 @@
     param[journal_id] = 10.1055/s-00000016
     comment[years] = 2000-2002
 
-    au < ready ; exists ; 2000 ; 2000 ; Zeitschrift für Kinderchirurgie Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Zeitschrift für Kinderchirurgie Volume 9 ; 9 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Kinderchirurgie Volume 10 ; 10 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Kinderchirurgie Volume 11 ; 11 ; >
 
@@ -7608,7 +7608,7 @@
     comment[years] = 1961-current
 
     au < crawling ; exists ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 ; >

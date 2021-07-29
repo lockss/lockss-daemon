@@ -4726,7 +4726,7 @@
 
     param[journal_id] = ijem
 
-    au < ready ; exists ; 2013 ; International Journal of Engineering Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Engineering Mathematics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Engineering Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Engineering Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Engineering Mathematics Volume 2016 ; 2016 ; 2016 ; >
@@ -4986,7 +4986,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Inorganic Chemistry Volume 2016 ; 2016 ; 2016 ; >
-    au < ready ; exists ; 2017 ; International Journal of Inorganic Chemistry Volume 2017 ; 2017 ; 2017 ; >
+    au < crawling ; exists ; 2017 ; International Journal of Inorganic Chemistry Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -5054,7 +5054,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Mathematics and Mathematical Sciences Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Mathematics and Mathematical Sciences Volume 2016 ; 2016 ; 2016 ; >
@@ -5116,7 +5116,7 @@
 
     param[journal_id] = ijmet
 
-    au < ready ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Metals Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Metals Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Metals Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Metals Volume 2016 ; 2016 ; 2016 ; >
@@ -5168,7 +5168,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Microwave Science and Technology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Microwave Science and Technology Volume 2016 ; 2016 ; 2016 ; >
@@ -5253,7 +5253,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Nephrology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Nephrology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Nephrology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Nephrology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Nephrology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Nephrology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Nephrology Volume 2016 ; 2016 ; 2016 ; >
@@ -5346,7 +5346,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Otolaryngology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Otolaryngology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Otolaryngology Volume 2016 ; 2016 ; 2016 ; >
@@ -5385,7 +5385,7 @@
     param[journal_id] = ijpde
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Partial Differential Equations Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Partial Differential Equations Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Partial Differential Equations Volume 2015 ; 2015 ; 2015 ; >
 
@@ -5601,7 +5601,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Reconfigurable Computing Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Reconfigurable Computing Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Reconfigurable Computing Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Reconfigurable Computing Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Reconfigurable Computing Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Reconfigurable Computing Volume 2016 ; 2016 ; 2016 ; >
@@ -5649,7 +5649,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Rheumatology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Rheumatology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Rheumatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Rheumatology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Rheumatology Volume 2016 ; 2016 ; 2016 ; >
@@ -5716,12 +5716,12 @@
     au < manifest ; exists ; 2010 ; International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Spectroscopy Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Spectroscopy Volume 2017 ; 2017 ; 2017 ; >
-    au < ready ; exists ; 2018 ; International Journal of Spectroscopy Volume 2018 ; 2018 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; International Journal of Spectroscopy Volume 2018 ; 2018 ; 2018 ; >
     au < exists ; exists ; 2019 ; International Journal of Spectroscopy Volume 2019 ; 2019 ; 2019 ; >
 
   }
@@ -5737,7 +5737,7 @@
     param[journal_id] = ijsm
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; International Journal of Statistical Mechanics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Statistical Mechanics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Statistical Mechanics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Statistical Mechanics Volume 2015 ; 2015 ; 2015 ; >
 
@@ -5819,7 +5819,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Surgical Oncology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Surgical Oncology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Surgical Oncology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Surgical Oncology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Surgical Oncology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Surgical Oncology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Surgical Oncology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Surgical Oncology Volume 2016 ; 2016 ; 2016 ; >
@@ -5846,7 +5846,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Telemedicine and Applications Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Telemedicine and Applications Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Telemedicine and Applications Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Telemedicine and Applications Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Telemedicine and Applications Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Telemedicine and Applications Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Telemedicine and Applications Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Telemedicine and Applications Volume 2016 ; 2016 ; 2016 ; >
@@ -5869,7 +5869,7 @@
     param[journal_id] = ijte
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; International Journal of Tissue Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Tissue Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Tissue Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Tissue Engineering Volume 2015 ; 2015 ; 2015 ; >
 
@@ -5916,7 +5916,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Vehicular Technology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Vehicular Technology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Vehicular Technology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Vehicular Technology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Vehicular Technology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Vehicular Technology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Vehicular Technology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Vehicular Technology Volume 2016 ; 2016 ; 2016 ; >
@@ -5968,7 +5968,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; International Scholarly Research Notices Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Scholarly Research Notices Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Scholarly Research Notices Volume 2017 ; 2017 ; 2017 ; >
-    au < ready ; exists ; 2018 ; International Scholarly Research Notices Volume 2018 ; 2018 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; International Scholarly Research Notices Volume 2018 ; 2018 ; 2018 ; >
     au < frozen ; exists ; 2019 ; International Scholarly Research Notices Volume 2019 ; 2019 ; 2019 ; >
     au < frozen ; exists ; 2020 ; International Scholarly Research Notices Volume 2020 ; 2020 ; 2020 ; >
     au < crawling ; exists ; 2021 ; International Scholarly Research Notices Volume 2021 ; 2021 ; 2021 ; >
@@ -5985,7 +5985,7 @@
 
     param[journal_id] = jad
 
-    au < ready ; exists ; 2013 ; Journal of Addiction Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Addiction Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Addiction Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Addiction Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Addiction Volume 2016 ; 2016 ; 2016 ; >
@@ -6044,7 +6044,7 @@
     au < manifest ; exists ; 2010 ; Journal of Aging Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Aging Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Aging Research Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Aging Research Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Aging Research Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Aging Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Aging Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Aging Research Volume 2016 ; 2016 ; 2016 ; >
@@ -6184,7 +6184,7 @@
     param[journal_id] = jangi
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Angiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Angiology Volume 2015 ; 2015 ; 2015 ; >
 
@@ -6237,7 +6237,7 @@
     param[journal_id] = jac
     #moved to archive
 
-    au < ready ; exists ; 2013 ; Journal of Applied Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Applied Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Chemistry Volume 2016 ; 2016 ; 2016 ; >
@@ -6307,7 +6307,7 @@
 
     param[journal_id] = jas
 
-    au < ready ; exists ; 2013 ; Journal of Astrophysics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Astrophysics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Astrophysics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Astrophysics Volume 2015 ; 2015 ; 2015 ; >
 
@@ -6450,7 +6450,7 @@
     au < manifest ; exists ; 2010 ; Journal of Botany Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Botany Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Botany Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Botany Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Botany Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Botany Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Botany Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Botany Volume 2016 ; 2016 ; 2016 ; >
@@ -6515,7 +6515,7 @@
     param[journal_id] = jcr
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Cancer Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Cancer Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Cancer Research Volume 2016 ; 2016 ; 2016 ; >
@@ -6629,7 +6629,7 @@
     param[journal_id] = jcli
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Climatology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Climatology Volume 2016 ; 2016 ; 2016 ; >
@@ -6690,7 +6690,7 @@
     param[journal_id] = jca
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Complex Analysis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Complex Analysis Volume 2016 ; 2016 ; 2016 ; >
@@ -6783,7 +6783,7 @@
     param[journal_id] = jcm
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Computational Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Computational Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -6801,7 +6801,7 @@
     param[journal_id] = jcmp
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2015 ; >
 
@@ -6822,7 +6822,7 @@
     au < manifest ; exists ; 2010 ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Computer Networks and Communications Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Computer Networks and Communications Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Computer Networks and Communications Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Computer Networks and Communications Volume 2016 ; 2016 ; 2016 ; >
@@ -6845,7 +6845,7 @@
     param[journal_id] = jcen
     #ceased publication in 2018
     
-    au < ready ; exists ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Construction Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Construction Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Construction Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Construction Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -6869,7 +6869,7 @@
     au < manifest ; exists ; 2010 ; Journal of Control Science and Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Control Science and Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Control Science and Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Control Science and Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Control Science and Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -6970,7 +6970,7 @@
     au < manifest ; exists ; 2010 ; Experimental Diabetes Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Experimental Diabetes Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Diabetes Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Diabetes Research Volume 2016 ; 2016 ; 2016 ; >
@@ -7010,7 +7010,7 @@
     param[journal_id] = jdm
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Discrete Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Discrete Mathematics Volume 2016 ; 2016 ; 2016 ; >
@@ -7029,7 +7029,7 @@
     
     au < manifest ; exists ; 2011 ; Journal of Drug Delivery Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Drug Delivery Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Drug Delivery Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Drug Delivery Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Drug Delivery Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Drug Delivery Volume 2016 ; 2016 ; 2016 ; >
@@ -7138,7 +7138,7 @@
 
     param[journal_id] = je
     
-    au < ready ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -7202,7 +7202,7 @@
     param[journal_id] = fluids
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Fluids Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Fluids Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Fluids Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Fluids Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Fluids Volume 2016 ; 2016 ; 2016 ; >
@@ -7281,7 +7281,7 @@
     au < manifest ; exists ; 2010 ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Function Spaces and Applications Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Function Spaces and Applications Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Function Spaces Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Function Spaces Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Function Spaces Volume 2016 ; 2016 ; 2016 ; >
@@ -7362,7 +7362,7 @@
     param[journal_id] = jgrav
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Gravity Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Gravity Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Gravity Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Gravity Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Gravity Volume 2016 ; 2016 ; 2016 ; >
@@ -7409,7 +7409,7 @@
     param[journal_id] = jh
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Histology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Histology Volume 2016 ; 2016 ; 2016 ; >
@@ -7427,7 +7427,7 @@
     param[journal_id] = jhor
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Hormones Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Hormones Volume 2016 ; 2016 ; 2016 ; >
@@ -7562,7 +7562,7 @@
 
     au < manifest ; exists ; 2011 ; Journal of Lipids Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Lipids Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Lipids Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Lipids Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Lipids Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Lipids Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Lipids Volume 2016 ; 2016 ; 2016 ; >
@@ -7630,7 +7630,7 @@
 
     param[journal_id] = jmath
     
-    au < ready ; exists ; 2013 ; Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Mathematics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Mathematics Volume 2016 ; 2016 ; 2016 ; >
