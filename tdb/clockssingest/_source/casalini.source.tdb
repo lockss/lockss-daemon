@@ -32,7 +32,7 @@
 
 
       plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriMarcDirSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalini-released
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalini-released/
 
       hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
