@@ -18,7 +18,6 @@ BEGIN {
   FS="\t"
   pn = 0
 }
-#$3>date
 
 {
   # add a loop to add line only if either status is (wanted or testing) or ending year is gt or eq to contract year
