@@ -583,14 +583,15 @@ while (my $line = <>) {
     $url = sprintf("%ssite/books/%s/",
       $param{base_url}, $param{book_doi});
     $book_doi_short = uri_unescape($param{book_doi});
-    $book_doi_short =~ s/^..//;
+    #$book_doi_short =~ s/^..//; only use this if the book_doi starts with m/ or e/
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     my $man_contents = $resp->is_success ? $resp->content : "";
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    } elsif ($req->url ne $resp->request->uri) {
+    #start_url redirects to a url with an m or an e. So only check first 20 characters. substr($string,0,19)
+    } elsif (substr($req->url,0,19) ne substr($resp->request->uri,0,19)) {
         $vol_title = $resp->request->uri;
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
