@@ -3396,7 +3396,7 @@
     param[journal_id] = dbj
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -4526,7 +4526,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Dentistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Dentistry Volume 2016 ; 2016 ; 2016 ; >
@@ -4854,7 +4854,7 @@
     au < manifest ; exists ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Genomics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Genomics Volume 2016 ; 2016 ; 2016 ; >
@@ -5094,7 +5094,7 @@
 
     au < manifest ; exists ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Medicinal Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Medicinal Chemistry Volume 2016 ; 2016 ; 2016 ; >
@@ -5138,7 +5138,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Microbiology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Microbiology Volume 2016 ; 2016 ; 2016 ; >
@@ -6071,7 +6071,7 @@
     au < manifest ; exists ; 2010 ; Journal of Allergy Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Allergy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Allergy Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Allergy Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Allergy Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Allergy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Allergy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Allergy Volume 2016 ; 2016 ; 2016 ; >
@@ -6144,7 +6144,7 @@
     au < manifest ; exists ; 2010 ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Analytical Methods in Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Analytical Methods in Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Analytical Methods in Chemistry Volume 2016 ; 2016 ; 2016 ; >
@@ -6269,7 +6269,7 @@
     au < manifest ; exists ; 2010 ; Journal of Applied Mathematics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Applied Mathematics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Applied Mathematics Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Applied Mathematics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Applied Mathematics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Mathematics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Mathematics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Mathematics Volume 2016 ; 2016 ; 2016 ; >
@@ -6425,7 +6425,7 @@
 
     au < manifest ; exists ; 2011 ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Blood Transfusion Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Blood Transfusion Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Blood Transfusion Volume 2016 ; 2016 ; 2016 ; >
@@ -6925,7 +6925,7 @@
     param[journal_id] = jcrys
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Crystallography Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Crystallography Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Crystallography Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Crystallography Volume 2016 ; 2016 ; 2016 ; >
@@ -7467,7 +7467,7 @@
     au < manifest ; exists ; 2010 ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Immunology Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Immunology Research Volume 2016 ; 2016 ; 2016 ; >
@@ -7490,7 +7490,7 @@
     param[journal_id] = jie
     #ceased publication in 2017
     
-    au < ready ; exists ; 2013 ; Journal of Industrial Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Industrial Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Industrial Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Industrial Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Industrial Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -7527,7 +7527,7 @@
     param[journal_id] = jic
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -7543,7 +7543,7 @@
     param[journal_id] = insects
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Insects Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Insects Volume 2016 ; 2016 ; 2016 ; >
@@ -7610,7 +7610,7 @@
 
     param[journal_id] = jma
     
-    au < ready ; exists ; 2013 ; Journal of Materials Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Materials Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Materials Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Materials Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Materials Volume 2016 ; 2016 ; 2016 ; >
