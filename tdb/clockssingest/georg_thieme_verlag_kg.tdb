@@ -3209,7 +3209,7 @@
     au < crawling ; exists ; 2000 ; 2000 ; Journal of Reconstructive Microsurgery Volume 16 ; 16 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Journal of Reconstructive Microsurgery Volume 17 ; 17 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Journal of Reconstructive Microsurgery Volume 18 ; 18 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Journal of Reconstructive Microsurgery Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Journal of Reconstructive Microsurgery Volume 19 ; 19 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Journal of Reconstructive Microsurgery Volume 20 ; 20 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Journal of Reconstructive Microsurgery Volume 21 ; 21 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Journal of Reconstructive Microsurgery Volume 22 ; 22 ; >
@@ -4309,7 +4309,7 @@
     comment[years] = 2002-2007
     #continues = 0944-6516
 
-    au < ready ; exists ; 2002 ; 2002 ; Osteosynthesis & Trauma Care Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Osteosynthesis & Trauma Care Volume 10 ; 10 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Osteosynthesis & Trauma Care Volume 11 ; 11 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Osteosynthesis & Trauma Care Volume 12 ; 12 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Osteosynthesis & Trauma Care Volume 13 ; 13 ; >
@@ -4458,7 +4458,7 @@
     au < exists ; exists ; 1998 ; 1998 ; Pharmacopsychiatry Volume 31 ; 31 ; >
     au < exists ; exists ; 1999 ; 1999 ; Pharmacopsychiatry Volume 32 ; 32 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Pharmacopsychiatry Volume 33 ; 33 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Pharmacopsychiatry Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Pharmacopsychiatry Volume 34 ; 34 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Pharmacopsychiatry Volume 35 ; 35 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Pharmacopsychiatry Volume 36 ; 36 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Pharmacopsychiatry Volume 37 ; 37 ; >
@@ -4988,8 +4988,8 @@
     param[journal_id] = 10.1055/s-00000113
     comment[years] = 2000-2002
 
-    au < ready ; exists ; 2000 ; 2000 ; Psychotraumatologie Volume 1 ; 1 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Psychotraumatologie Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Psychotraumatologie Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Psychotraumatologie Volume 2 ; 2 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 ; >
 
   }
@@ -5516,7 +5516,7 @@
     param[journal_id] = 10.1055/s-00000050
     comment[years] = 2000-2004
 
-   au < ready ; exists ; 2000 ; 2000 ; Seminars in Neurosurgery Volume 11 ; 11 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Neurosurgery Volume 11 ; 11 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Neurosurgery Volume 14 ; 14 ; >
@@ -6214,7 +6214,7 @@
    au < exists ; exists ; 1997 ; 1997 ; SYNTHESIS Volume 29 ; 29 ; >
    au < exists ; exists ; 1998 ; 1998 ; SYNTHESIS Volume 30 ; 30 ; >
    au < exists ; exists ; 1999 ; 1999 ; SYNTHESIS Volume 31 ; 31 ; >
-   au < ready ; exists ; 2000 ; 2000 ; SYNTHESIS Volume 32 ; 32 ; >
+   au < crawling ; exists ; 2000 ; 2000 ; SYNTHESIS Volume 32 ; 32 ; >
    au < crawling ; exists ; 2001 ; 2001 ; SYNTHESIS Volume 33 ; 33 ; >
    au < crawling ; exists ; 2002 ; 2002 ; SYNTHESIS Volume 34 ; 34 ; >
    au < crawling ; exists ; 2003 ; 2003 ; SYNTHESIS Volume 35 ; 35 ; >
@@ -6566,7 +6566,7 @@
     au < crawling ; exists ; 2005 ; 2005 ; veterinär spiegel Volume 15 ; 15 ; >
     au < crawling ; exists ; 2006 ; 2006 ; veterinär spiegel Volume 16 ; 16 ; >
     au < finished ; manifest ; 2007 ; 2007 ; veterinär spiegel Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2008 ; 2008 ; veterinär spiegel Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; veterinär spiegel Volume 18 ; 18 ; >
     au < finished ; manifest ; 2009 ; 2009 ; veterinär spiegel Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; veterinär spiegel Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; veterinär spiegel Volume 21 ; 21 ; reingest1.clockss.org:8082 >
@@ -7002,7 +7002,7 @@
     au < exists ; exists ; 1997 ; 1997 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1997 ; 0 ; >
     au < exists ; exists ; 1998 ; 1998 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1998 ; 0 ; >
     au < exists ; exists ; 1999 ; 1999 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1999 ; 0 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2000 ; 0 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2000 ; 0 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2001 ; 0 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2002 ; 0 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2003 ; 0 ; >
