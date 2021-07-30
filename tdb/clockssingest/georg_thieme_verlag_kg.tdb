@@ -53,7 +53,7 @@
     au < finished ; finished ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 ; >
     au < finished ; finished ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; 2016 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 51 ; 51 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; 2017 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 52 ; 52 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 52 ; 52 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 53 ; 53 ; >
     au < finished ; crawling ; 2019 ; 2019 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 54 ; 54 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 55 ; 55 ; >
@@ -113,7 +113,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Aktuelle Dermatologie Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Dermatologie Volume 44 ; 44 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Dermatologie Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Dermatologie Volume 46 ; 46 ; >
@@ -148,7 +148,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Ernährungsmedizin Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Ernährungsmedizin Volume 42 ; 42 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Aktuelle Ernährungsmedizin Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Ernährungsmedizin Volume 43 ; 43 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Ernährungsmedizin Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Ernährungsmedizin Volume 45 ; 45 ; >
@@ -228,7 +228,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Neurologie Volume 41 ; 41 ; >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Neurologie Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; 2016 ; Aktuelle Neurologie Volume 43 ; 43 ; >
-    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Neurologie Volume 44 ; 44 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Aktuelle Neurologie Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Neurologie Volume 45 ; 45 ; >
 
   }
@@ -279,7 +279,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 ; >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Rheumatologie Volume 44 ; 44 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Aktuelle Rheumatologie Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Rheumatologie Volume 45 ; 45 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Rheumatologie Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Rheumatologie Volume 47 ; 47 ; >
@@ -356,7 +356,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Aktuelle Urologie Volume 45 ; 45 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 2015 ; Aktuelle Urologie Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; 2016 ; Aktuelle Urologie Volume 47 ; 47 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Aktuelle Urologie Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Aktuelle Urologie Volume 49 ; 49 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Aktuelle Urologie Volume 50 ; 50 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Aktuelle Urologie Volume 51 ; 51 ; >
@@ -422,7 +422,7 @@
     au < finished ; finished ; 2014 ; 2014 ; Allgemeine Homöopathische Zeitung Volume 259 ; 259 ; >
     au < finished ; finished ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 260 ; 260 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; 2016 ; Allgemeine Homöopathische Zeitung Volume 261 ; 261 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; 2017 ; Allgemeine Homöopathische Zeitung Volume 262 ; 262 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Allgemeine Homöopathische Zeitung Volume 262 ; 262 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Allgemeine Homöopathische Zeitung Volume 263 ; 263 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Allgemeine Homöopathische Zeitung Volume 264 ; 264 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Allgemeine Homöopathische Zeitung Volume 265 ; 265 ; >
@@ -504,7 +504,7 @@
     au < finished ; finished ; 2014 ; 2014 ; American Journal of Perinatology Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 2015 ; American Journal of Perinatology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2016 ; 2016 ; American Journal of Perinatology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; 2017 ; American Journal of Perinatology Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; American Journal of Perinatology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; American Journal of Perinatology Volume 35 ; 35 ; >
     au < finished ; crawling ; 2019 ; 2019 ; American Journal of Perinatology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; American Journal of Perinatology Volume 37 ; 37 ; >
@@ -630,7 +630,7 @@
     au < exists ; exists ; 1999 ; 1999 ; Arzneimittelforschung Volume 50 ; 50 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Arzneimittelforschung Volume 51 ; 51 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Arzneimittelforschung Volume 52 ; 52 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 ; >
+    au < finished ; manifest ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2004 ; 2004 ; Arzneimittelforschung Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2005 ; 2005 ; Arzneimittelforschung Volume 55 ; 55 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Arzneimittelforschung Volume 56 ; 56 ; >
@@ -735,7 +735,7 @@
     param[journal_id] = 10.1055/s-00000114
     comment[years] = 2001-current
 
-      au < frozen ; exists ; 2001 ; 2001 ; Balint Journal Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2001 ; 2001 ; Balint Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2002 ; 2002 ; Balint Journal Volume 3 ; 3 ; >
       au < frozen ; exists ; 2003 ; 2003 ; Balint Journal Volume 4 ; 4 ; >
       au < frozen ; exists ; 2004 ; 2004 ; Balint Journal Volume 5 ; 5 ; >
@@ -1260,7 +1260,7 @@
    au < zapped ; finished ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 140 ; 140 ; reingest2.clockss.org:8085 >
    au < zapped ; finished ; 2015 ; 2015 ; DMW - Deutsche Medizinische Wochenschrift Volume 141 ; 141 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2016 ; 2016 ; DMW - Deutsche Medizinische Wochenschrift Volume 142 ; 142 ; reingest2.clockss.org:8085 >
-   au < deepCrawl ; exists ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 ; >
+   au < finished ; manifest ; 2017 ; 2017 ; DMW - Deutsche Medizinische Wochenschrift Volume 143 ; 143 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2018 ; 2018 ; DMW - Deutsche Medizinische Wochenschrift Volume 144 ; 144 ; >
    au < finished ; crawling ; 2019 ; 2019 ; DMW - Deutsche Medizinische Wochenschrift Volume 145 ; 145 ; reingest5.clockss.org:8082 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; DMW - Deutsche Medizinische Wochenschrift Volume 146 ; 146 ; >
@@ -2389,7 +2389,7 @@
    au < crawling ; exists ; 2004 ; 2004 ; Indian Journal of Neurotrauma Volume 1 ; 1 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Indian Journal of Neurotrauma Volume 2 ; 2 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Indian Journal of Neurotrauma Volume 3 ; 3 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Indian Journal of Neurotrauma Volume 4 ; 4 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Indian Journal of Neurotrauma Volume 4 ; 4 ; reingest3.clockss.org:8083 >
    au < frozen ; exists ; 2008 ; 2008 ; Indian Journal of Neurotrauma Volume 5 ; 5 ; >
    au < finished ; crawling ; 2009 ; 2009 ; Indian Journal of Neurotrauma Volume 6 ; 6 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Indian Journal of Neurotrauma Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -2578,7 +2578,7 @@
     au < crawling ; exists ; 2004 ; 2004 ; International Journal of Angiology Volume 13 ; 13 ; >
     au < crawling ; exists ; 2005 ; 2005 ; International Journal of Angiology Volume 14 ; 14 ; >
     au < crawling ; exists ; 2006 ; 2006 ; International Journal of Angiology Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; International Journal of Angiology Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2007 ; 2007 ; International Journal of Angiology Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2008 ; 2008 ; International Journal of Angiology Volume 17 ; 17 ; >
     au < finished ; crawling ; 2009 ; 2009 ; International Journal of Angiology Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; International Journal of Angiology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
@@ -3081,7 +3081,7 @@
     comment[years] = 2006-current
 
     au < crawling ; exists ; 2006 ; 2006 ; Journal of Pediatric Infectious Diseases Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Pediatric Infectious Diseases Volume 3 ; 3 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Journal of Pediatric Infectious Diseases Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Pediatric Infectious Diseases Volume 5 ; 5 ; reingest1.clockss.org:8082 >
@@ -4289,7 +4289,7 @@
     au < crawling ; exists ; 2004 ; 2004 ; Orthopedic Trauma Directions Volume 2 ; 2 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Orthopedic Trauma Directions Volume 3 ; 3 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Orthopedic Trauma Directions Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Orthopedic Trauma Directions Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2007 ; 2007 ; Orthopedic Trauma Directions Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2008 ; 2008 ; Orthopedic Trauma Directions Volume 6 ; 6 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Orthopedic Trauma Directions Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 8 ; 8 ; >
@@ -5333,7 +5333,7 @@
    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Interventional Radiology Volume 20 ; 20 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
-   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Interventional Radiology Volume 23 ; 23 ; >
+   au < finished ; manifest ; 2006 ; 2006 ; Seminars in Interventional Radiology Volume 23 ; 23 ; reingest2.clockss.org:8085 >
    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 24 ; 24 ; >
    au < frozen ; exists ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 25 ; 25 ; >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Interventional Radiology Volume 26 ; 26 ; reingest5.clockss.org:8082 >
@@ -6255,7 +6255,7 @@
    au < crawling ; exists ; 2004 ; 2004 ; team spiegel Volume 11 ; 11 ; >
    au < crawling ; exists ; 2005 ; 2005 ; team spiegel Volume 12 ; 12 ; >
    au < crawling ; exists ; 2006 ; 2006 ; team spiegel Volume 13 ; 13 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; team spiegel Volume 14 ; 14 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; team spiegel Volume 14 ; 14 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2008 ; 2008 ; team spiegel Volume 15 ; 15 ; >
    au < finished ; manifest ; 2009 ; 2009 ; team spiegel Volume 16 ; 16 ; reingest1.clockss.org:8082 >
 
@@ -6565,7 +6565,7 @@
     au < crawling ; exists ; 2004 ; 2004 ; veterinär spiegel Volume 14 ; 14 ; >
     au < crawling ; exists ; 2005 ; 2005 ; veterinär spiegel Volume 15 ; 15 ; >
     au < crawling ; exists ; 2006 ; 2006 ; veterinär spiegel Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; veterinär spiegel Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2007 ; 2007 ; veterinär spiegel Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2008 ; 2008 ; veterinär spiegel Volume 18 ; 18 ; >
     au < finished ; manifest ; 2009 ; 2009 ; veterinär spiegel Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; veterinär spiegel Volume 20 ; 20 ; reingest2.clockss.org:8085 >
@@ -7748,7 +7748,7 @@
     au < crawling ; exists ; 2004 ; 2004 ; Revista Iberoamericana de Cirugía de la Mano Volume 32 ; 32 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Revista Iberoamericana de Cirugía de la Mano Volume 33 ; 33 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Revista Iberoamericana de Cirugía de la Mano Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Revista Iberoamericana de Cirugía de la Mano Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2007 ; 2007 ; Revista Iberoamericana de Cirugía de la Mano Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2008 ; 2008 ; Revista Iberoamericana de Cirugía de la Mano Volume 36 ; 36 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Revista Iberoamericana de Cirugía de la Mano Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Revista Iberoamericana de Cirugía de la Mano Volume 38 ; 38 ; reingest3.clockss.org:8083 >
