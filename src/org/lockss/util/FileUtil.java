@@ -36,6 +36,7 @@ import java.nio.file.*;
 import java.nio.file.attribute.*;
 import java.nio.channels.*;
 import java.util.*;
+import org.apache.commons.io.IOUtils;
 import org.apache.oro.text.regex.*;
 
 /** Utilities for Files
@@ -517,6 +518,74 @@ public class FileUtil {
       return file.getAbsolutePath();
     }
   }
+
+  /**
+   * Reads password from file, then overwrites and deletes file.
+   *
+   * @param keyPasswordFile A String with the password file pathname.
+   * @return a String with the password read from the file.
+   * @throws IOException if there are problems reading the password.
+   */
+  public static String readPasswdFile(String keyPasswordFile)
+      throws IOException {
+    log.debug2("keyPasswordFile = " + keyPasswordFile);
+
+    // Parameter validation.
+    if (keyPasswordFile == null) {
+      throw new IOException("Null password file");
+    }
+
+    File file = new File(keyPasswordFile);
+    log.debug3("file.getAbsolutePath() = " + file.getAbsolutePath());
+
+    // File length validation.
+    long llen = file.length();
+    if (llen > 1000) {
+      throw new IOException("Unreasonably large password file: " + llen);
+    }
+
+    FileInputStream fis = new FileInputStream(file);
+    int len = (int)llen;
+    byte[] pwdChars = new byte[len];
+
+    try {
+      try {
+        // Read the password.
+        int nread = IOUtils.read(fis, pwdChars, 0, len);
+        if (nread != len) {
+          throw new IOException("short read: " + nread + " instead of " + len);
+        }
+      } finally {
+        IOUtils.closeQuietly(fis);
+      }
+    } finally {
+      overwriteAndDelete(file, len);
+    }
+    return new String(pwdChars);
+  }
+
+  /**
+   * Overwrites and deletes a file, trapping and logging any exceptions.
+   *
+   * @param file A File with the file to be overwritten and deleted.
+   * @param len  An int with the length of data to be used to overwrite the
+   *             file.
+   */
+  private static void overwriteAndDelete(File file, int len) {
+    OutputStream fos = null;
+    try {
+      fos = new FileOutputStream(file);
+      byte[] junk = new byte[len];
+      Arrays.fill(junk, (byte)0x5C);
+      fos.write(junk);
+    } catch (IOException e) {
+      log.warning("Couldn't overwrite file: " + file, e);
+    } finally {
+      IOUtils.closeQuietly(fos);
+    }
+    file.delete();
+  }
+
 
   /**
    * Deletes a file, handling a null reference appropriately.
