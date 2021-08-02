@@ -3742,7 +3742,8 @@ while (my $line = <>) {
   sleep(4);
     
   } elsif (($plugin eq "ClockssAnuPlugin")) {
-    $url = sprintf("%spublications/%s", $param{base_url}, $param{journal_id});
+    #$url = sprintf("%spublications/%s", $param{base_url}, $param{journal_id});
+    $url = sprintf("%spublications/journals/%s", $param{base_url}, $param{journal_id});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
@@ -3752,13 +3753,11 @@ while (my $line = <>) {
       if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-      } elsif (defined($man_contents)) {
-        # no lockss permission statement on start page. Permission statement is here: https://press.anu.edu.au/lockss.txt
-        # In order to do more better validation, would require searching all the pages for a match to the specific issue link(s)
-        # CLOCKSS only so probably okay to not do this
-        if ($man_contents =~ m/<title>(.*) - ANU Press - ANU<\/title>/si) {
-          #$vol_title = $1 . ": " . $param{volume_name}
-          $vol_title = $1 
+      } elsif (defined($man_contents) && ($man_contents =~ m/\/$param{journal_id}\/\S*$param{volume_name}/)) {
+        # no lockss permission statement on start page. Permission statements are here: https://press.anu.edu.au/lockss.txt
+        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+          $vol_title = $1 . ": " . $param{volume_name}
+          #$vol_title = $1 
         }
         $result = "Manifest"
       } else {
