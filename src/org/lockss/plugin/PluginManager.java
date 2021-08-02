@@ -1912,6 +1912,7 @@ public class PluginManager
         if (sb.length() != 0) {
           sb.append("\n");
         }
+        sb.append("  ");
         sb.append(feat);
         sb.append(": ");
         sb.append(val);
