@@ -288,7 +288,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertEquals("Substance_farty-two",
 		 definablePlugin.getFeatureVersion(Plugin.Feature.Substance));
 
-    assertEquals("Poll: Poll_2\nMetadata: Metadata_7\nSubstance: Substance_farty-two",
+    assertEquals("  Poll: Poll_2\n  Metadata: Metadata_7\n  Substance: Substance_farty-two",
                  PluginManager.pluginFeatureVersionsString(definablePlugin));
   }
 
