@@ -1026,7 +1026,7 @@
       au < frozen ; exists ; 2018 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 15 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 16 ; 2019 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 17 ; 2020 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2021 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 18 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 18 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1165,7 +1165,7 @@
       au < frozen ; exists ; 2018 ; Edith Wharton Review Volume 34 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Edith Wharton Review Volume 35 (2019) ; 2019 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Edith Wharton Review Volume 35 (2020) ; 2020 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2021 ; Edith Wharton Review Volume 36 (2021) ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Edith Wharton Review Volume 36 (2021) ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1313,7 +1313,7 @@
       au < frozen ; exists ; 2018 ; Journal of Asia-Pacific Pop Culture Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Journal of Asia-Pacific Pop Culture Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Asia-Pacific Pop Culture Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2021 ; Journal of Asia-Pacific Pop Culture Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Journal of Asia-Pacific Pop Culture Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2075,7 +2075,7 @@
       au < manifest ; exists ; 2018 ; Hungarian Studies Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2019 ; Hungarian Studies Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2020 ; Hungarian Studies Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2021 ; Hungarian Studies Review Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Hungarian Studies Review Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2100,12 +2100,12 @@
       au < manifest ; exists ; 2012 ; Journal of African Development Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2013 ; Journal of African Development Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2014 ; Journal of African Development Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2015 ; Journal of African Development Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2016 ; Journal of African Development Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2017 ; Journal of African Development Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2018 ; Journal of African Development Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2015 ; Journal of African Development Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2016 ; Journal of African Development Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2017 ; Journal of African Development Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2018 ; Journal of African Development Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2019 ; Journal of African Development Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2020 ; Journal of African Development Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Journal of African Development Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Journal of African Development Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -2120,10 +2120,10 @@
 
       param[journal_id] = jaustamerhist
 
-      au < exists ; exists ; 2017 ; Journal of Austrian-American History Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2018 ; Journal of Austrian-American History Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2019 ; Journal of Austrian-American History Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2020 ; Journal of Austrian-American History Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2017 ; Journal of Austrian-American History Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2018 ; Journal of Austrian-American History Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2019 ; Journal of Austrian-American History Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Journal of Austrian-American History Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Journal of Austrian-American History Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -2139,7 +2139,7 @@
 
       param[journal_id] = minoachicrealead
 
-      au < exists ; exists ; 2020 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -2200,14 +2200,14 @@
       au < exists ; exists ; 2011 ; Milton Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2012 ; Milton Studies Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2013 ; Milton Studies Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2014 ; Milton Studies Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2015 ; Milton Studies Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2016 ; Milton Studies Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2017 ; Milton Studies Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2018 ; Milton Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2019 ; Milton Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2020 ; Milton Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2021 ; Milton Studies Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2014 ; Milton Studies Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2015 ; Milton Studies Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2016 ; Milton Studies Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2017 ; Milton Studies Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2018 ; Milton Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2019 ; Milton Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Milton Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Milton Studies Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2246,16 +2246,16 @@
       au < exists ; exists ; 2008 ; Nineteenth Century Studies Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2009 ; Nineteenth Century Studies Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2010 ; Nineteenth Century Studies Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2011 ; Nineteenth Century Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2012 ; Nineteenth Century Studies Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2013 ; Nineteenth Century Studies Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2014 ; Nineteenth Century Studies Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2015 ; Nineteenth Century Studies Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2011 ; Nineteenth Century Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2012 ; Nineteenth Century Studies Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2013 ; Nineteenth Century Studies Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2014 ; Nineteenth Century Studies Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2015 ; Nineteenth Century Studies Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2016 ; Nineteenth Century Studies Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2017 ; Nineteenth Century Studies Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2018 ; Nineteenth Century Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2019 ; Nineteenth Century Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < exists ; exists ; 2020 ; Nineteenth Century Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2018 ; Nineteenth Century Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2019 ; Nineteenth Century Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Nineteenth Century Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Nineteenth Century Studies Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -2271,8 +2271,8 @@
 
       param[journal_id] = studamershorstor
 
-      au < exists ; exists ; 2020 ; Studies in the American Short Story Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2021 ; Studies in the American Short Story Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Studies in the American Short Story Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Studies in the American Short Story Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2287,8 +2287,8 @@
 
       param[journal_id] = thorntonwilderj
 
-      au < exists ; exists ; 2020 ; Thornton Wilder Journal Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2021 ; Thornton Wilder Journal Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2020 ; Thornton Wilder Journal Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Thornton Wilder Journal Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
