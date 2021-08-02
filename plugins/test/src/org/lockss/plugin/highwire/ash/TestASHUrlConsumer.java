@@ -48,14 +48,14 @@ public class TestASHUrlConsumer extends LockssTestCase {
       );
   
   public void testOrigPdfPattern() throws Exception {
-    Pattern origFullTextPat = ASHDrupalUrlConsumerFactory.getOrigPattern();
+    Pattern origFullTextPat = ASHJCoreUrlConsumerFactory.getOrigPattern();
     for (String url : originatingUrls) {
       assertMatchesRE(origFullTextPat, url);
     }
   }
   
   public void testDestPdfPattern() throws Exception {
-    Pattern destFullTextPat = ASHDrupalUrlConsumerFactory.getDestPattern();
+    Pattern destFullTextPat = ASHJCoreUrlConsumerFactory.getDestPattern();
     for (String url : destinationUrls) {
       assertMatchesRE(destFullTextPat, url);
     }

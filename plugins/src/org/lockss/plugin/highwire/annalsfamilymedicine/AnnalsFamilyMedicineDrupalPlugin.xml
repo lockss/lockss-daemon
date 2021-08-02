@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
@@ -78,10 +78,10 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalUrlConsumerFactory</string>
+    <string>org.lockss.plugin.highwire.HighWireJCoreUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineDrupalHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineJCoreHtmlCrawlFilterFactory</string>
   </entry>
 </map>

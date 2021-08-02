@@ -1,0 +1,369 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down - PARENT</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire Press Plugin (JCore)</string>
+  </entry>
+  <!--  
+        This is a list of HighWire Drupal Child plugins - be sure to update
+        the child's plugin_parent_version number to match, then
+        update the child's plugin_version number:
+        aaas.ClockssAAASDrupalPlugin.xml
+        aacc.AmAssocClinChemDrupalPlugin.xml
+        aacr.AmAssocCancerResearchDrupalPlugin.xml
+        aai.AAIDrupalPlugin.xml
+           (child)-> ClockssAAIDrupalPlugin.xml
+        aap.AAPDrupalPlugin.xml
+           (child)-> ClockssAAPDrupalPlugin.xml
+        aapl.AAPLDrupalPlugin.xml
+           (child)-> ClockssAAPLDrupalPlugin.xml
+        aarespcare.AmAssocRespCareDrupalPlugin.xml
+        accardiol.AmCollegeCardiologyDrupalPlugin.xml
+        ada.ADADrupalPlugin.xml
+           (child)-> ClockssADADrupalPlugin.xml
+        adha.ClockssADHADrupalPlugin.xml
+        aha.AHADrupalPlugin.xml
+           (child)-> ClockssAHADrupalPlugin.xml
+        annalsfamilymedicine.AnnalsFamilyMedicineDrupalPlugin.xml
+           (child)-> ClockssAnnalsFamilyMedicineDrupalPlugin.xml
+        aps.APSDrupalPlugin.xml
+           (child)-> ClockssAPSDrupalPlugin.xml
+        apta.APTADrupalPlugin.xml                           (Deprecated)
+        arf.ARFDrupalPlugin.xml
+        asenvit.AmSocEnVitDrupalPlugin.xml
+        ash.ASHDrupalPlugin.xml
+        ashealthsys.AmSocHealthSysDrupalPlugin.xml
+        asm.ASMDrupalPlugin.xml
+        aspb.ASPBDrupalPlugin.xml
+           (child)-> ClockssASPBDrupalPlugin.xml
+        aspet.ASPETDrupalPlugin.xml
+           (child)-> ClockssASPETDrupalPlugin.xml
+        besbjs.BESBJSDrupalPlugin.xml
+        biologists.BiologistsDrupalPlugin.xml
+           (child)-> ClockssBiologistsDrupalPlugin.xml
+        bmj.BMJDrupalPlugin.xml
+        cfpc.CollegeFamilyPhysCanadaDrupalPlugin.xml
+        elife.ClockssELifeDrupalPlugin.xml                   (Deprecated)
+        embo.EMBODrupalPlugin.xml
+        ers.ERSDrupalPlugin.xml
+           (child)-> ClockssERSDrupalPlugin.xml
+        fsf.FSFDrupalPlugin.xml
+        gensoc.GeneticsSocietyDrupalPlugin.xml
+           (child)-> ClockssGeneticsSocietyDrupalPlugin.xml
+        gsl.GSLDrupalPlugin.xml
+           (child)-> ClockssGSLDrupalPlugin.xml
+        gsw.GSWDrupalPlugin.xml                              (soon to be Deprecated)
+           (child)-> ClockssGSWDrupalPlugin.xml
+        iwa.IWADrupalPlugin.xml
+           (child)-> ClockssIWADrupalPlugin.xml
+        jbjs.JBJSDrupalPlugin.xml                            (Deprecated)
+        lsa.ClockssLifeScienceAllianceDrupalPlugin.xml
+        oup.OUPDrupalPlugin.xml	                             (Deprecated)
+           (child)-> ClockssOUPDrupalPlugin.xml
+        portlandpress.PortlandPressDrupalPlugin.xml
+           (child)-> ClockssPortlandPressDrupalPlugin.xml
+        rcgp.RCGPDrupalPlugin.xml
+        rcpsych.RCPsychDrupalPlugin.xml
+        rsp.RSPDrupalPlugin.xml
+           (child)-> ClockssRSPDrupalPlugin.xml
+        rup.RUPDrupalPlugin.xml
+           (child)-> ClockssRUPDrupalPlugin.xml
+        sfn.SFNDrupalPlugin.xml
+           (child)-> ClockssSFNDrupalPlugin.xml
+        ucpress.UCPressDrupalPlugin.xml
+
+        Note: the LOCKSS child is the parent of the CLOCKSS child plugin, therefore
+        update the CLOCKSS child plugin_version & plugin_parent_version with 
+        the LOCKSS child's new version
+        
+   -->
+  <entry>
+    <string>plugin_version</string>
+    <string>83</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>9</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>24</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>9</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.72.0</string> <!-- no store content validation -->
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"HighWire Press Plugin (JCore), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%scontent/%s/%s.toc", base_url, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>pdf+html;*</string>
+            <string>"%scontent/%s/%s/%s.full.pdf+html", base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>pdf</string>
+            <string>"%scontent/%s/%s/%s.full.pdf", base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>html</string>
+            <string>"%scontent/%s/%s/%s", base_url, volume_name, issue, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
+      <!-- iii.article-info was causing over counts, should not be collected -->
+      <string>2,"^https?://%s/content/(by/(year|volume)|current|.*(/|\.)article-)", url_host(base_url)</string>
+      <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
+      <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL 
+            page may also contain roman numerals, dot, & number (iii.2)  -->
+      <!-- ASH has a new pattern for supp data http://www.bloodjournal.org/content/121/1/170/tab-figures-only -->
+      <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
+      <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
+      <string>1,"^https?://%s/content/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
+      <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
+      <!-- allow content like http://msphere.asm.org/content/msph/1/1/e00001-15/DC2/embed/inline-supplementary-material-2.pdf?download=true -->
+      <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
+      <!-- allow content like http://imaging.onlinejacc.org/content/jimg/6/11/1129/DC1/embed/media-1.docx -->
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+){1,2}/DC[^/]{0,5}/embed/", url_host(base_url), volume_name</string>
+      <!-- otherwise, all content from glencoesoftware CDN -->
+      <string>1,"^https?://([^/]+\.glencoesoftware\.com/.)"</string>
+      <string>1,"^https?://signin\.hematology\.org/Login\.aspx"</string>
+      <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+).+[?]sso-checked=true$", url_host(base_url), volume_name</string>
+      <!--Allow movies from CDN/Subdomain goes through-->
+      <string>1,"^https?://movie\.biologists\.com/video/"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <!-- <entry>
+    <string>plugin_crawl_url_comparator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20CrawlUrlComparatorFactory</string>
+  </entry> -->
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireJCoreUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <!-- org.lockss.plugin.highwire.aaas.ClockssAAASDrupalPlugin and org.lockss.plugin.highwire.elife.ClockssELifeDrupalPlugin have their own rules-->
+    <list>
+      <!--  starting to see some 403 on supplementary content that isn't just a crawler issue -->
+      <string>403=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>      
+      <string>500=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>502=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>503=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>520=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>524=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <!-- Invalid content-type file; retry. Captures cases of html returned instead of PDF 
+        This usually was an html page with backend error message
+        Make no store/no_fail due to article html returned for http://caseconnector.jbjs.org/content/2/2/e16
+        we will count on polls to catch errors where no content was stored -->
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <!-- this exception only catches for urls from glencoesoftware.com (and subdomains)
+           Theory is that Highwire has some feature that allows publishers to host content at glencoesoftware
+           but that it gets enabled without publishers realizing it. And if they have no content there the url
+           still gets generated in the html. -->
+      <string>java.net.UnknownHostException=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireJCoreArticleIteratorVIPFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireJCoreArticleIteratorVIPFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.highwire.HighWireJCoreHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireJCoreHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.highwire.HighWireJCoreUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full([.]pdf)?)?)$", url_host(base_url), volume_name</string>
+      <string>"^https?://%s/content(/[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url), volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20LoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireContentValidator$Factory</string>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>title_attribute:highwire_crawl_pool:HighWireJCore</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <!-- As we want to use PDFs for agreement, also some supplementary content.
+         This excludes urls that
+        1) do not have /highwire/filestream/ nor .pdf nor /content/.../suppl/ in their path
+        2) do end with html     (for urls like .../1361.full.pdf+html)
+        3) do contain /twil. or /twis. (AAAS this week in literature|science)
+        4) do contain /findings. (AAAS findings)
+         -->
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <list>
+      <string>^https?(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$</string>
+      <string>^https?(.+)/twi[ls]\.</string>
+      <string>^https?(.+)/findings\.</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         ./ -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.glencoesoftware\.com</string>
+      <string>signin\.hematology\.org</string>
+      <!--Allow movies from CDN/Subdomain goes through-->
+      <string>movie\.biologists\.com</string>
+    </list>
+  </entry>
+</map>

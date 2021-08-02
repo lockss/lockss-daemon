@@ -48,7 +48,7 @@ public class TestHighWireContentValidator extends LockssTestCase {
   
   private static HighWireContentValidator.TextTypeValidator contentValidator;
   
-  private static final String PLUGIN_NAME = "org.lockss.plugin.highwire.HighWireDrupalPlugin";
+  private static final String PLUGIN_NAME = "org.lockss.plugin.highwire.HighWireJCorePlugin";
   private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private static final String BASE_URL = "http://www.example.com/";
