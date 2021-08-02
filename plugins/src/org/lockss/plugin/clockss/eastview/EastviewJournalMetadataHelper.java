@@ -54,8 +54,8 @@ public class EastviewJournalMetadataHelper
 implements SourceXmlSchemaHelper {
   
   private static final Logger log = Logger.getLogger(EastviewJournalMetadataHelper.class);
-  static protected final String PAGE_PDF_PATH = "/ARTICLEDATAS/ARTICLEDATA/TEXT/pagemark/@pagepdf";
-  static protected final String PUBLICATION_TITLE_PATH = "/ARTICLEDATAS/ARTICLEDATA/SOURCE";
+  static protected final String PAGE_PDF_PATH = "//ARTICLEDATA/TEXT/pagemark/@pagepdf";
+  static protected final String PUBLICATION_TITLE_PATH = "//ARTICLEDATA/SOURCE";
 
 
   /*
@@ -92,7 +92,7 @@ implements SourceXmlSchemaHelper {
   };
 
   // For journals, we treat each page as a seperate article
-  private static final String top = "/ARTICLEDATAS/ARTICLEDATA";
+  private static final String top = "//ARTICLEDATA";
 
   // The following are all relative to the article node
   // from the immediately preceeding sibling -

@@ -86,6 +86,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       return EastviewHelper;
     }
 
+    /*
     @Override
     protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
@@ -114,7 +115,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       log.debug3("Eastview Journal: No file exists associated with this record");
       return false; //No files found that match this record
     }
-
+     */
 
     /* 
      * a PDF file may or may not exist, but assume the XML is full text
@@ -129,16 +130,17 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       String url_string = cu.getUrl();
       String articlePDFName = url_string.substring(0,url_string.length() - 3) + "pdf";
       log.debug3("Eastview Journal: articlePDFName is " + articlePDFName);
-      
+
+      /*
       String rawPDFPath = oneAM.getRaw(EastviewJournalMetadataHelper.PAGE_PDF_PATH);
       String manMadePagePDF = url_string.replace(".xml", "/") + rawPDFPath;
       log.debug3("Eastview Journal: manMadePagePDF = " + manMadePagePDF);
+       */
 
       List<String> returnList = new ArrayList<String>();
-      //returnList.add(articlePDFName);
+      returnList.add(articlePDFName);
       returnList.add(url_string); // xml file
-      returnList.add(manMadePagePDF); // add man-made-pagePDF
-      //Do not add pagePDFName, since the pdf file are not delivered
+      //returnList.add(manMadePagePDF); // do not add man-made-pagePDF
       return returnList;
     }
     
@@ -184,9 +186,17 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
                 volume,
                 title));
       }
+      
 
-      String articlePDFName = thisAM.get(MetadataField.FIELD_ACCESS_URL);
-      log.debug3("Eastview journal: original_access_url = " + articlePDFName);
+      if (thisAM.get(MetadataField.FIELD_VOLUME) == null || thisAM.get(MetadataField.FIELD_VOLUME).equals("000") || thisAM.get(MetadataField.FIELD_VOLUME).equals('0')) {
+        log.debug3("Eastview Journal: invalid volume, set to " + thisAM.get(MetadataField.FIELD_DATE).substring(0,4));
+        thisAM.replace(MetadataField.FIELD_VOLUME,thisAM.get(MetadataField.FIELD_DATE).substring(0,4));
+      }
+
+      if (thisAM.get(MetadataField.FIELD_ISSUE) == null || thisAM.get(MetadataField.FIELD_ISSUE).equals("000") || thisAM.get(MetadataField.FIELD_ISSUE).equals('0')) {
+        log.debug3("Eastview Journal: invalid issue, set to " + thisAM.get(MetadataField.FIELD_DATE).replace("-", ""));
+        thisAM.replace(MetadataField.FIELD_ISSUE,thisAM.get(MetadataField.FIELD_DATE).replace("-", ""));
+      }
       
       String publicationTitle = thisAM.getRaw(EastviewJournalMetadataHelper.PUBLICATION_TITLE_PATH);
       log.debug3("Eastview Journal: publicationTitle = " + publicationTitle);
@@ -202,6 +212,5 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
     }
-
   }
 }
