@@ -857,13 +857,13 @@
 
     >
     param[journal_id] = 10.1055/s-00032027
-    #years = 2017-current
+    #years = 2017-2019
+    #As of 2020, this title is no longer published by Thieme. Move to Sage
+
 
     au < released ; 2017 ; 2017 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 1 ; 1 >
     au < released ; 2018 ; 2018 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 2 ; 2 >
     au < released ; 2019 ; 2019 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 3 ; 3 >
-    au < expected ; 2020 ; 2020 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 4 ; 4 >
-    au < expected ; 2021 ; 2021 ; Craniomaxillofacial Trauma & Reconstruction Open Volume 5 ; 5 >
 
   }
 
@@ -7404,13 +7404,10 @@
     >
 
     param[journal_id] = 10.1055/s-00033559
-    comment[years] = 2017-current
+    comment[years] = 2017-2018
 
     au < released ; 2017 ; 2017 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 1 ; 1 >
     au < released ; 2018 ; 2018 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 2 ; 2 >
-    au < expected ; 2019 ; 2019 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 3 ; 3 >
-    au < expected ; 2020 ; 2020 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 4 ; 4 >
-    au < expected ; 2021 ; 2021 ; GGP - Fachzeitschrift für Geriatrische und Gerontologische Pflege Volume 5 ; 5 >
 
   }
 
@@ -7787,13 +7784,15 @@
     >
 
     param[journal_id] = 10.1055/s-00035148
-    comment[years] = 2012-current
+    comment[years] = 2012-2018
 
+    au < exists ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 >
+    au < exists ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 >
+    au < exists ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 >
+    au < exists ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 >
+    au < exists ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 >
     au < released ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 >
     au < released ; 2018 ; 2018 ; Schlaf Volume 7 ; 7 >
-    au < expected ; 2019 ; 2019 ; Schlaf Volume 8 ; 8 >
-    au < expected ; 2020 ; 2020 ; Schlaf Volume 9 ; 9 >
-    au < expected ; 2021 ; 2021 ; Schlaf Volume 10 ; 10 >
 
   }
 
