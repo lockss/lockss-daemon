@@ -78,18 +78,18 @@
         <string>plugin_cache_result_list</string>
         <list>
             <!--  starting to see some 403 on supplementary content that isn't just a crawler issue -->
-            <string>403=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-            <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-            <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-            <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-            <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-            <string>520=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-            <string>524=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <string>403=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+            <string>500=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+            <string>502=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+            <string>503=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+            <string>504=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+            <string>520=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+            <string>524=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
             <!-- Invalid content-type file; retry. Captures cases of html returned instead of PDF
               This usually was an html page with backend error message
               Make no store/no_fail due to article html returned for http://caseconnector.jbjs.org/content/2/2/e16
               we will count on polls to catch errors where no content was stored -->
-            <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+            <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
         </list>
     </entry>
     <entry>

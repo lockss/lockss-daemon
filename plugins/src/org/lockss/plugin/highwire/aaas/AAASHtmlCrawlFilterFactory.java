@@ -40,10 +40,10 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory;
+import org.lockss.plugin.highwire.HighWireJCoreHtmlCrawlFilterFactory;
 import org.lockss.util.Logger;
 
-public class AAASHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFactory {
+public class AAASHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilterFactory {
   
   private static final Logger log = Logger.getLogger(AAASHtmlCrawlFilterFactory.class);
   
