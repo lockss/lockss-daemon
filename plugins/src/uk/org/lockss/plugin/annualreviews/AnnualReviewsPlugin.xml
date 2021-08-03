@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Annual Reviews Plugin (retired platform)</string>
+    <string>Annual Reviews Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -29,7 +29,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Annual Reviews Plugin (retired platform), Base URL %s, Journal ID %s, Short Journal ID %s, Volume %d", base_url, journal_id, short_journal_id, volume</string>
+    <string>"Annual Reviews Plugin (Legacy), Base URL %s, Journal ID %s, Short Journal ID %s, Volume %d", base_url, journal_id, short_journal_id, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
