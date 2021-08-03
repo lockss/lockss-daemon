@@ -6,8 +6,11 @@
 
   rights = openaccess
   implicit < status ; year ; name ; volume ; param[year] ; param[base_url] >
-  
   comment[moved] = base_url moved from http://www.uic.edu/htbin/cgiwrap/bin/ojs/ to http://journals.uic.edu/ojs/
+  
+  #Moved to OJS3.
+  #Version of OJS3 has a bug in the permission statement:
+  #See for example: https://journals.uic.edu/ojs/index.php/fm/gateway/lockss?year=2019
 
   {
   
