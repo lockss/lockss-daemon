@@ -42,7 +42,7 @@
 
       param[journal_id] = isend6
 
-      au < ready ; exists ; 1979 ; Issues in Engineering: Journal of Professional Activities Volume 105 ; 105 ;  >
+      au < crawling ; exists ; 1979 ; Issues in Engineering: Journal of Professional Activities Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Issues in Engineering: Journal of Professional Activities Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Issues in Engineering: Journal of Professional Activities Volume 107 ; 107 ;  >
       au < frozen ; exists ; 1982 ; Issues in Engineering: Journal of Professional Activities Volume 108 ; 108 ;  >
@@ -83,7 +83,7 @@
       au < ready ; exists ; 1961 ; Journal of Professional Practice Volume 87 ; 87 ;  >
       au < ready ; exists ; 1962 ; Journal of Professional Practice Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of Professional Practice Volume 89 ; 89 ;  >
-      au < ready ; exists ; 1964 ; Journal of Professional Practice Volume 90 ; 90 ;  >
+      au < crawling ; exists ; 1964 ; Journal of Professional Practice Volume 90 ; 90 ;  >
       au < frozen ; exists ; 1965 ; Journal of Professional Practice Volume 91 ; 91 ;  >
       au < exists ; exists ; 1966 ; Journal of Professional Practice Volume 92 ; 92 ;  >
 
@@ -154,7 +154,7 @@
 
       param[journal_id] = jbdeax
 
-      au < ready ; exists ; 1956 ; Journal of the Board of Direction Volume 82 ; 82 ;  >
+      au < crawling ; exists ; 1956 ; Journal of the Board of Direction Volume 82 ; 82 ;  >
       au < ready ; exists ; 1957 ; Journal of the Board of Direction Volume 83 ; 83 ;  >
 
   }
@@ -171,8 +171,8 @@
 
       au < ready ; exists ; 1956 ; Journal of the City Planning Division Volume 82 ; 82 ;  >
       au < ready ; exists ; 1957 ; Journal of the City Planning Division Volume 83 ; 83 ;  >
-      au < ready ; exists ; 1958 ; Journal of the City Planning Division Volume 84 ; 84 ;  >
-      au < ready ; exists ; 1959 ; Journal of the City Planning Division Volume 85 ; 85 ;  >
+      au < crawling ; exists ; 1958 ; Journal of the City Planning Division Volume 84 ; 84 ;  >
+      au < crawling ; exists ; 1959 ; Journal of the City Planning Division Volume 85 ; 85 ;  >
       au < ready ; exists ; 1960 ; Journal of the City Planning Division Volume 86 ; 86 ;  >
       au < ready ; exists ; 1961 ; Journal of the City Planning Division Volume 87 ; 87 ;  >
       au < ready ; exists ; 1962 ; Journal of the City Planning Division Volume 88 ; 88 ;  >
@@ -193,7 +193,7 @@
       au < ready ; exists ; 1957 ; Journal of the Construction Division Volume 83 ; 83 ;  >
       au < exists ; exists ; 1958 ; Journal of the Construction Division Volume 84 ; 84 ;  >
       au < ready ; exists ; 1959 ; Journal of the Construction Division Volume 85 ; 85 ;  >
-      au < ready ; exists ; 1960 ; Journal of the Construction Division Volume 86 ; 86 ;  >
+      au < crawling ; exists ; 1960 ; Journal of the Construction Division Volume 86 ; 86 ;  >
       au < ready ; exists ; 1961 ; Journal of the Construction Division Volume 87 ; 87 ;  >
       au < ready ; exists ; 1962 ; Journal of the Construction Division Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of the Construction Division Volume 89 ; 89 ;  >
@@ -211,7 +211,7 @@
       au < ready ; exists ; 1975 ; Journal of the Construction Division Volume 101 ; 101 ;  >
       au < frozen ; exists ; 1976 ; Journal of the Construction Division Volume 102 ; 102 ;  >
       au < frozen ; exists ; 1977 ; Journal of the Construction Division Volume 103 ; 103 ;  >
-      au < ready ; exists ; 1978 ; Journal of the Construction Division Volume 104 ; 104 ;  >
+      au < crawling ; exists ; 1978 ; Journal of the Construction Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Construction Division Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Journal of the Construction Division Volume 106 ; 106 ;  >
       au < frozen ; exists ; 1981 ; Journal of the Construction Division Volume 107 ; 107 ;  >
@@ -270,7 +270,7 @@
       au < ready ; exists ; 1977 ; Journal of the Engineering Mechanics Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Engineering Mechanics Division Volume 104 ; 104 ;  >
       au < frozen ; exists ; 1979 ; Journal of the Engineering Mechanics Division Volume 105 ; 105 ;  >
-      au < ready ; exists ; 1980 ; Journal of the Engineering Mechanics Division Volume 106 ; 106 ;  >
+      au < crawling ; exists ; 1980 ; Journal of the Engineering Mechanics Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Engineering Mechanics Division Volume 107 ; 107 ;  >
       au < frozen ; exists ; 1982 ; Journal of the Engineering Mechanics Division Volume 108 ; 108 ;  >
 
@@ -333,9 +333,9 @@
 
       au < ready ; exists ; 1956 ; Journal of the Highway Division Volume 82 ; 82 ;  >
       au < ready ; exists ; 1957 ; Journal of the Highway Division Volume 83 ; 83 ;  >
-      au < ready ; exists ; 1958 ; Journal of the Highway Division Volume 84 ; 84 ;  >
+      au < crawling ; exists ; 1958 ; Journal of the Highway Division Volume 84 ; 84 ;  >
       au < ready ; exists ; 1959 ; Journal of the Highway Division Volume 85 ; 85 ;  >
-      au < ready ; exists ; 1960 ; Journal of the Highway Division Volume 86 ; 86 ;  >
+      au < crawling ; exists ; 1960 ; Journal of the Highway Division Volume 86 ; 86 ;  >
       au < ready ; exists ; 1961 ; Journal of the Highway Division Volume 87 ; 87 ;  >
       au < ready ; exists ; 1962 ; Journal of the Highway Division Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of the Highway Division Volume 89 ; 89 ;  >
@@ -358,7 +358,7 @@
       param[journal_id] = jyceaj
 
       au < ready ; exists ; 1956 ; Journal of the Hydraulics Division Volume 82 ; 82 ;  >
-      au < ready ; exists ; 1957 ; Journal of the Hydraulics Division Volume 83 ; 83 ;  >
+      au < crawling ; exists ; 1957 ; Journal of the Hydraulics Division Volume 83 ; 83 ;  >
       au < ready ; exists ; 1958 ; Journal of the Hydraulics Division Volume 84 ; 84 ;  >
       au < ready ; exists ; 1959 ; Journal of the Hydraulics Division Volume 85 ; 85 ;  >
       au < ready ; exists ; 1960 ; Journal of the Hydraulics Division Volume 86 ; 86 ;  >
@@ -462,17 +462,17 @@
 
       param[journal_id] = jpweam
 
-      au < ready ; exists ; 1956 ; Journal of the Power Division Volume 82 ; 82 ;  >
+      au < crawling ; exists ; 1956 ; Journal of the Power Division Volume 82 ; 82 ;  >
       au < ready ; exists ; 1957 ; Journal of the Power Division Volume 83 ; 83 ;  >
       au < ready ; exists ; 1958 ; Journal of the Power Division Volume 84 ; 84 ;  >
-      au < ready ; exists ; 1959 ; Journal of the Power Division Volume 85 ; 85 ;  >
+      au < crawling ; exists ; 1959 ; Journal of the Power Division Volume 85 ; 85 ;  >
       au < ready ; exists ; 1960 ; Journal of the Power Division Volume 86 ; 86 ;  >
       au < ready ; exists ; 1961 ; Journal of the Power Division Volume 87 ; 87 ;  >
       au < ready ; exists ; 1962 ; Journal of the Power Division Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of the Power Division Volume 89 ; 89 ;  >
       au < ready ; exists ; 1964 ; Journal of the Power Division Volume 90 ; 90 ;  >
       au < ready ; exists ; 1965 ; Journal of the Power Division Volume 91 ; 91 ;  >
-      au < ready ; exists ; 1966 ; Journal of the Power Division Volume 92 ; 92 ;  >
+      au < crawling ; exists ; 1966 ; Journal of the Power Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Power Division Volume 93 ; 93 ;  >
       au < frozen ; exists ; 1968 ; Journal of the Power Division Volume 94 ; 94 ;  >
       au < ready ; exists ; 1969 ; Journal of the Power Division Volume 95 ; 95 ;  >
@@ -538,10 +538,10 @@
       au < ready ; exists ; 1963 ; Journal of the Soil Mechanics and Foundations Division Volume 89 ; 89 ;  >
       au < ready ; exists ; 1964 ; Journal of the Soil Mechanics and Foundations Division Volume 90 ; 90 ;  >
       au < ready ; exists ; 1965 ; Journal of the Soil Mechanics and Foundations Division Volume 91 ; 91 ;  >
-      au < ready ; exists ; 1966 ; Journal of the Soil Mechanics and Foundations Division Volume 92 ; 92 ;  >
+      au < crawling ; exists ; 1966 ; Journal of the Soil Mechanics and Foundations Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Soil Mechanics and Foundations Division Volume 93 ; 93 ;  >
-      au < ready ; exists ; 1968 ; Journal of the Soil Mechanics and Foundations Division Volume 94 ; 94 ;  >
-      au < ready ; exists ; 1969 ; Journal of the Soil Mechanics and Foundations Division Volume 95 ; 95 ;  >
+      au < crawling ; exists ; 1968 ; Journal of the Soil Mechanics and Foundations Division Volume 94 ; 94 ;  >
+      au < crawling ; exists ; 1969 ; Journal of the Soil Mechanics and Foundations Division Volume 95 ; 95 ;  >
       au < frozen ; exists ; 1970 ; Journal of the Soil Mechanics and Foundations Division Volume 96 ; 96 ;  >
       au < ready ; exists ; 1971 ; Journal of the Soil Mechanics and Foundations Division Volume 97 ; 97 ;  >
       au < ready ; exists ; 1972 ; Journal of the Soil Mechanics and Foundations Division Volume 98 ; 98 ;  >
@@ -576,7 +576,7 @@
       au < frozen ; exists ; 1970 ; Journal of the Structural Division Volume 96 ; 96 ;  >
       au < ready ; exists ; 1971 ; Journal of the Structural Division Volume 97 ; 97 ;  >
       au < ready ; exists ; 1972 ; Journal of the Structural Division Volume 98 ; 98 ;  >
-      au < ready ; exists ; 1973 ; Journal of the Structural Division Volume 99 ; 99 ;  >
+      au < crawling ; exists ; 1973 ; Journal of the Structural Division Volume 99 ; 99 ;  >
       au < ready ; exists ; 1974 ; Journal of the Structural Division Volume 100 ; 100 ;  >
       au < ready ; exists ; 1975 ; Journal of the Structural Division Volume 101 ; 101 ;  >
       au < frozen ; exists ; 1976 ; Journal of the Structural Division Volume 102 ; 102 ;  >
@@ -659,11 +659,11 @@
       param[journal_id] = jupdaj
 
       au < ready ; exists ; 1964 ; Journal of the Urban Planning and Development Division Volume 90 ; 90 ;  >
-      au < ready ; exists ; 1965 ; Journal of the Urban Planning and Development Division Volume 91 ; 91 ;  >
+      au < crawling ; exists ; 1965 ; Journal of the Urban Planning and Development Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Urban Planning and Development Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Urban Planning and Development Division Volume 93 ; 93 ;  >
       au < ready ; exists ; 1968 ; Journal of the Urban Planning and Development Division Volume 94 ; 94 ;  >
-      au < ready ; exists ; 1969 ; Journal of the Urban Planning and Development Division Volume 95 ; 95 ;  >
+      au < crawling ; exists ; 1969 ; Journal of the Urban Planning and Development Division Volume 95 ; 95 ;  >
       au < ready ; exists ; 1970 ; Journal of the Urban Planning and Development Division Volume 96 ; 96 ;  >
       au < ready ; exists ; 1971 ; Journal of the Urban Planning and Development Division Volume 97 ; 97 ;  >
       au < frozen ; exists ; 1972 ; Journal of the Urban Planning and Development Division Volume 98 ; 98 ;  >
@@ -673,8 +673,8 @@
       au < ready ; exists ; 1976 ; Journal of the Urban Planning and Development Division Volume 102 ; 102 ;  >
       au < frozen ; exists ; 1977 ; Journal of the Urban Planning and Development Division Volume 103 ; 103 ;  >
       au < frozen ; exists ; 1978 ; Journal of the Urban Planning and Development Division Volume 104 ; 104 ;  >
-      au < ready ; exists ; 1979 ; Journal of the Urban Planning and Development Division Volume 105 ; 105 ;  >
-      au < ready ; exists ; 1980 ; Journal of the Urban Planning and Development Division Volume 106 ; 106 ;  >
+      au < crawling ; exists ; 1979 ; Journal of the Urban Planning and Development Division Volume 105 ; 105 ;  >
+      au < crawling ; exists ; 1980 ; Journal of the Urban Planning and Development Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Urban Planning and Development Division Volume 107 ; 107 ;  >
       au < frozen ; exists ; 1982 ; Journal of the Urban Planning and Development Division Volume 108 ; 108 ;  >
 
@@ -729,15 +729,15 @@
 
       param[journal_id] = jwheau
 
-      au < ready ; exists ; 1956 ; Journal of the Waterways and Harbors Division Volume 82 ; 82 ;  >
+      au < crawling ; exists ; 1956 ; Journal of the Waterways and Harbors Division Volume 82 ; 82 ;  >
       au < ready ; exists ; 1957 ; Journal of the Waterways and Harbors Division Volume 83 ; 83 ;  >
       au < ready ; exists ; 1958 ; Journal of the Waterways and Harbors Division Volume 84 ; 84 ;  >
       au < ready ; exists ; 1959 ; Journal of the Waterways and Harbors Division Volume 85 ; 85 ;  >
       au < ready ; exists ; 1960 ; Journal of the Waterways and Harbors Division Volume 86 ; 86 ;  >
-      au < ready ; exists ; 1961 ; Journal of the Waterways and Harbors Division Volume 87 ; 87 ;  >
+      au < crawling ; exists ; 1961 ; Journal of the Waterways and Harbors Division Volume 87 ; 87 ;  >
       au < ready ; exists ; 1962 ; Journal of the Waterways and Harbors Division Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of the Waterways and Harbors Division Volume 89 ; 89 ;  >
-      au < ready ; exists ; 1964 ; Journal of the Waterways and Harbors Division Volume 90 ; 90 ;  >
+      au < crawling ; exists ; 1964 ; Journal of the Waterways and Harbors Division Volume 90 ; 90 ;  >
       au < ready ; exists ; 1965 ; Journal of the Waterways and Harbors Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Waterways and Harbors Division Volume 92 ; 92 ;  >
       au < frozen ; exists ; 1967 ; Journal of the Waterways and Harbors Division Volume 93 ; 93 ;  >
@@ -791,19 +791,19 @@
       au < ready ; exists ; 1883 ; Transactions of the American Society of Civil Engineers Volume 12 ; 12 ;  >
       au < ready ; exists ; 1884 ; Transactions of the American Society of Civil Engineers Volume 13 ; 13 ;  >
       au < ready ; exists ; 1885 ; Transactions of the American Society of Civil Engineers Volume 14 ; 14 ;  >
-      au < ready ; exists ; 1886 ; Transactions of the American Society of Civil Engineers Volume 15 ; 15 ;  >
+      au < crawling ; exists ; 1886 ; Transactions of the American Society of Civil Engineers Volume 15 ; 15 ;  >
       au < ready ; exists ; 1887 ; Transactions of the American Society of Civil Engineers Volume 16 ; 16 ;  >
       au < ready ; exists ; 1888 ; Transactions of the American Society of Civil Engineers Volume 17 ; 17 ;  >
       au < manifest ; exists ; 1889 ; Transactions of the American Society of Civil Engineers Volume 18 ; 18 ;  >
       au < ready ; exists ; 1890 ; Transactions of the American Society of Civil Engineers Volume 19 ; 19 ;  >
       au < ready ; exists ; 1891 ; Transactions of the American Society of Civil Engineers Volume 20 ; 20 ;  >
-      au < ready ; exists ; 1892 ; Transactions of the American Society of Civil Engineers Volume 21 ; 21 ;  >
+      au < crawling ; exists ; 1892 ; Transactions of the American Society of Civil Engineers Volume 21 ; 21 ;  >
       au < ready ; exists ; 1893 ; Transactions of the American Society of Civil Engineers Volume 22 ; 22 ;  >
       au < ready ; exists ; 1894 ; Transactions of the American Society of Civil Engineers Volume 23 ; 23 ;  >
       au < ready ; exists ; 1895 ; Transactions of the American Society of Civil Engineers Volume 24 ; 24 ;  >
-      au < ready ; exists ; 1896 ; Transactions of the American Society of Civil Engineers Volume 25 ; 25 ;  >
+      au < crawling ; exists ; 1896 ; Transactions of the American Society of Civil Engineers Volume 25 ; 25 ;  >
       au < ready ; exists ; 1897 ; Transactions of the American Society of Civil Engineers Volume 26 ; 26 ;  >
-      au < ready ; exists ; 1898 ; Transactions of the American Society of Civil Engineers Volume 27 ; 27 ;  >
+      au < crawling ; exists ; 1898 ; Transactions of the American Society of Civil Engineers Volume 27 ; 27 ;  >
       au < ready ; exists ; 1899 ; Transactions of the American Society of Civil Engineers Volume 28 ; 28 ;  >
       au < ready ; exists ; 1900 ; Transactions of the American Society of Civil Engineers Volume 29 ; 29 ;  >
       au < ready ; exists ; 1901 ; Transactions of the American Society of Civil Engineers Volume 30 ; 30 ;  >
@@ -830,12 +830,12 @@
       au < ready ; exists ; 1922 ; Transactions of the American Society of Civil Engineers Volume 51 ; 51 ;  >
       au < ready ; exists ; 1923 ; Transactions of the American Society of Civil Engineers Volume 52 ; 52 ;  >
       au < ready ; exists ; 1924 ; Transactions of the American Society of Civil Engineers Volume 53 ; 53 ;  >
-      au < ready ; exists ; 1925 ; Transactions of the American Society of Civil Engineers Volume 54 ; 54 ;  >
+      au < crawling ; exists ; 1925 ; Transactions of the American Society of Civil Engineers Volume 54 ; 54 ;  >
       au < ready ; exists ; 1926 ; Transactions of the American Society of Civil Engineers Volume 55 ; 55 ;  >
       au < ready ; exists ; 1927 ; Transactions of the American Society of Civil Engineers Volume 56 ; 56 ;  >
       au < ready ; exists ; 1928 ; Transactions of the American Society of Civil Engineers Volume 57 ; 57 ;  >
       au < ready ; exists ; 1929 ; Transactions of the American Society of Civil Engineers Volume 58 ; 58 ;  >
-      au < ready ; exists ; 1930 ; Transactions of the American Society of Civil Engineers Volume 59 ; 59 ;  >
+      au < crawling ; exists ; 1930 ; Transactions of the American Society of Civil Engineers Volume 59 ; 59 ;  >
       au < ready ; exists ; 1931 ; Transactions of the American Society of Civil Engineers Volume 60 ; 60 ;  >
       au < ready ; exists ; 1932 ; Transactions of the American Society of Civil Engineers Volume 61 ; 61 ;  >
       au < ready ; exists ; 1933 ; Transactions of the American Society of Civil Engineers Volume 62 ; 62 ;  >
@@ -854,16 +854,16 @@
       au < ready ; exists ; 1946 ; Transactions of the American Society of Civil Engineers Volume 75 ; 75 ;  >
       au < ready ; exists ; 1947 ; Transactions of the American Society of Civil Engineers Volume 76 ; 76 ;  >
       au < ready ; exists ; 1948 ; Transactions of the American Society of Civil Engineers Volume 77 ; 77 ;  >
-      au < ready ; exists ; 1949 ; Transactions of the American Society of Civil Engineers Volume 78 ; 78 ;  >
+      au < crawling ; exists ; 1949 ; Transactions of the American Society of Civil Engineers Volume 78 ; 78 ;  >
       au < ready ; exists ; 1950 ; Transactions of the American Society of Civil Engineers Volume 79 ; 79 ;  >
       au < ready ; exists ; 1951 ; Transactions of the American Society of Civil Engineers Volume 80 ; 80 ;  >
       au < ready ; exists ; 1952 ; Transactions of the American Society of Civil Engineers Volume 81 ; 81 ;  >
       au < ready ; exists ; 1953 ; Transactions of the American Society of Civil Engineers Volume 82 ; 82 ;  >
       au < ready ; exists ; 1954 ; Transactions of the American Society of Civil Engineers Volume 83 ; 83 ;  >
-      au < ready ; exists ; 1955 ; Transactions of the American Society of Civil Engineers Volume 84 ; 84 ;  >
+      au < crawling ; exists ; 1955 ; Transactions of the American Society of Civil Engineers Volume 84 ; 84 ;  >
       au < ready ; exists ; 1956 ; Transactions of the American Society of Civil Engineers Volume 85 ; 85 ;  >
       au < ready ; exists ; 1957 ; Transactions of the American Society of Civil Engineers Volume 86 ; 86 ;  >
-      au < ready ; exists ; 1958 ; Transactions of the American Society of Civil Engineers Volume 87 ; 87 ;  >
+      au < crawling ; exists ; 1958 ; Transactions of the American Society of Civil Engineers Volume 87 ; 87 ;  >
       au < ready ; exists ; 1959 ; Transactions of the American Society of Civil Engineers Volume 88 ; 88 ;  >
       au < ready ; exists ; 1960 ; Transactions of the American Society of Civil Engineers Volume 89 ; 89 ;  >
       au < ready ; exists ; 1961 ; Transactions of the American Society of Civil Engineers Volume 90 ; 90 ;  >
@@ -892,7 +892,7 @@
       au < ready ; exists ; 1976 ; Transportation Engineering Journal of ASCE Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Transportation Engineering Journal of ASCE Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Transportation Engineering Journal of ASCE Volume 104 ; 104 ;  >
-      au < ready ; exists ; 1979 ; Transportation Engineering Journal of ASCE Volume 105 ; 105 ;  >
+      au < crawling ; exists ; 1979 ; Transportation Engineering Journal of ASCE Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Transportation Engineering Journal of ASCE Volume 106 ; 106 ;  >
       au < frozen ; exists ; 1981 ; Transportation Engineering Journal of ASCE Volume 107 ; 107 ;  >
       au < frozen ; exists ; 1982 ; Transportation Engineering Journal of ASCE Volume 108 ; 108 ;  >
