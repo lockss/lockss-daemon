@@ -22,12 +22,12 @@
       param[journal_id] = egisbd
 
       au < ready ; exists ; 1971 ; Engineering Issues: Journal of Professional Activities Volume 96 ; 96 ;  >
-      au < frozen ; exists ; 1972 ; Engineering Issues: Journal of Professional Activities Volume 97 ; 97 ;  >
-      au < frozen ; exists ; 1973 ; Engineering Issues: Journal of Professional Activities Volume 98 ; 98 ;  >
-      au < frozen ; exists ; 1974 ; Engineering Issues: Journal of Professional Activities Volume 99 ; 99 ;  >
+      au < finished ; manifest ; 1972 ; Engineering Issues: Journal of Professional Activities Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1973 ; Engineering Issues: Journal of Professional Activities Volume 98 ; 98 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1974 ; Engineering Issues: Journal of Professional Activities Volume 99 ; 99 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1975 ; Engineering Issues: Journal of Professional Activities Volume 100 ; 100 ;  >
-      au < frozen ; exists ; 1976 ; Engineering Issues: Journal of Professional Activities Volume 101 ; 101 ;  >
-      au < frozen ; exists ; 1977 ; Engineering Issues: Journal of Professional Activities Volume 102 ; 102 ;  >
+      au < finished ; manifest ; 1976 ; Engineering Issues: Journal of Professional Activities Volume 101 ; 101 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1977 ; Engineering Issues: Journal of Professional Activities Volume 102 ; 102 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1978 ; Engineering Issues: Journal of Professional Activities Volume 103 ; 103 ;  >
 
   }
@@ -45,7 +45,7 @@
       au < crawling ; exists ; 1979 ; Issues in Engineering: Journal of Professional Activities Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Issues in Engineering: Journal of Professional Activities Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Issues in Engineering: Journal of Professional Activities Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Issues in Engineering: Journal of Professional Activities Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1982 ; Issues in Engineering: Journal of Professional Activities Volume 108 ; 108 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -60,7 +60,7 @@
       param[journal_id] = jpapad
 
       au < ready ; exists ; 1966 ; Journal of Professional Activities Volume 92 ; 92 ;  >
-      au < frozen ; exists ; 1967 ; Journal of Professional Activities Volume 93 ; 93 ;  >
+      au < finished ; manifest ; 1967 ; Journal of Professional Activities Volume 93 ; 93 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1968 ; Journal of Professional Activities Volume 94 ; 94 ;  >
       au < ready ; exists ; 1969 ; Journal of Professional Activities Volume 95 ; 95 ;  >
       au < exists ; exists ; 1970 ; Journal of Professional Activities Volume 96 ; 96 ;  >
@@ -84,7 +84,7 @@
       au < ready ; exists ; 1962 ; Journal of Professional Practice Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of Professional Practice Volume 89 ; 89 ;  >
       au < crawling ; exists ; 1964 ; Journal of Professional Practice Volume 90 ; 90 ;  >
-      au < frozen ; exists ; 1965 ; Journal of Professional Practice Volume 91 ; 91 ;  >
+      au < finished ; manifest ; 1965 ; Journal of Professional Practice Volume 91 ; 91 ; reingest3.clockss.org:8083 >
       au < exists ; exists ; 1966 ; Journal of Professional Practice Volume 92 ; 92 ;  >
 
   }
@@ -99,8 +99,8 @@
 
       param[journal_id] = jtcedl
 
-      au < frozen ; exists ; 1983 ; Journal of Technical Topics in Civil Engineering Volume 109 ; 109 ;  >
-      au < frozen ; exists ; 1984 ; Journal of Technical Topics in Civil Engineering Volume 110 ; 110 ;  >
+      au < finished ; manifest ; 1983 ; Journal of Technical Topics in Civil Engineering Volume 109 ; 109 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1984 ; Journal of Technical Topics in Civil Engineering Volume 110 ; 110 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1985 ; Journal of Technical Topics in Civil Engineering Volume 111 ; 111 ;  >
 
   }
@@ -200,21 +200,21 @@
       au < ready ; exists ; 1964 ; Journal of the Construction Division Volume 90 ; 90 ;  >
       au < ready ; exists ; 1965 ; Journal of the Construction Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Construction Division Volume 92 ; 92 ;  >
-      au < frozen ; exists ; 1967 ; Journal of the Construction Division Volume 93 ; 93 ;  >
-      au < frozen ; exists ; 1968 ; Journal of the Construction Division Volume 94 ; 94 ;  >
-      au < frozen ; exists ; 1969 ; Journal of the Construction Division Volume 95 ; 95 ;  >
+      au < finished ; manifest ; 1967 ; Journal of the Construction Division Volume 93 ; 93 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1968 ; Journal of the Construction Division Volume 94 ; 94 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1969 ; Journal of the Construction Division Volume 95 ; 95 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1970 ; Journal of the Construction Division Volume 96 ; 96 ;  >
-      au < frozen ; exists ; 1971 ; Journal of the Construction Division Volume 97 ; 97 ;  >
+      au < finished ; manifest ; 1971 ; Journal of the Construction Division Volume 97 ; 97 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1972 ; Journal of the Construction Division Volume 98 ; 98 ;  >
-      au < frozen ; exists ; 1973 ; Journal of the Construction Division Volume 99 ; 99 ;  >
+      au < finished ; manifest ; 1973 ; Journal of the Construction Division Volume 99 ; 99 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1974 ; Journal of the Construction Division Volume 100 ; 100 ;  >
       au < ready ; exists ; 1975 ; Journal of the Construction Division Volume 101 ; 101 ;  >
-      au < frozen ; exists ; 1976 ; Journal of the Construction Division Volume 102 ; 102 ;  >
-      au < frozen ; exists ; 1977 ; Journal of the Construction Division Volume 103 ; 103 ;  >
+      au < finished ; manifest ; 1976 ; Journal of the Construction Division Volume 102 ; 102 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1977 ; Journal of the Construction Division Volume 103 ; 103 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 1978 ; Journal of the Construction Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Construction Division Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Journal of the Construction Division Volume 106 ; 106 ;  >
-      au < frozen ; exists ; 1981 ; Journal of the Construction Division Volume 107 ; 107 ;  >
+      au < finished ; manifest ; 1981 ; Journal of the Construction Division Volume 107 ; 107 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1982 ; Journal of the Construction Division Volume 108 ; 108 ;  >
 
   }
@@ -229,10 +229,10 @@
 
       param[journal_id] = jdaedz
 
-      au < frozen ; exists ; 1979 ; Journal of the Energy Division Volume 105 ; 105 ;  >
-      au < frozen ; exists ; 1980 ; Journal of the Energy Division Volume 106 ; 106 ;  >
-      au < frozen ; exists ; 1981 ; Journal of the Energy Division Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Journal of the Energy Division Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1979 ; Journal of the Energy Division Volume 105 ; 105 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1980 ; Journal of the Energy Division Volume 106 ; 106 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1981 ; Journal of the Energy Division Volume 107 ; 107 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1982 ; Journal of the Energy Division Volume 108 ; 108 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -255,24 +255,24 @@
       au < ready ; exists ; 1962 ; Journal of the Engineering Mechanics Division Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of the Engineering Mechanics Division Volume 89 ; 89 ;  >
       au < ready ; exists ; 1964 ; Journal of the Engineering Mechanics Division Volume 90 ; 90 ;  >
-      au < frozen ; exists ; 1965 ; Journal of the Engineering Mechanics Division Volume 91 ; 91 ;  >
+      au < finished ; manifest ; 1965 ; Journal of the Engineering Mechanics Division Volume 91 ; 91 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1966 ; Journal of the Engineering Mechanics Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Engineering Mechanics Division Volume 93 ; 93 ;  >
-      au < frozen ; exists ; 1968 ; Journal of the Engineering Mechanics Division Volume 94 ; 94 ;  >
+      au < finished ; manifest ; 1968 ; Journal of the Engineering Mechanics Division Volume 94 ; 94 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1969 ; Journal of the Engineering Mechanics Division Volume 95 ; 95 ;  >
-      au < frozen ; exists ; 1970 ; Journal of the Engineering Mechanics Division Volume 96 ; 96 ;  >
-      au < frozen ; exists ; 1971 ; Journal of the Engineering Mechanics Division Volume 97 ; 97 ;  >
+      au < finished ; manifest ; 1970 ; Journal of the Engineering Mechanics Division Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1971 ; Journal of the Engineering Mechanics Division Volume 97 ; 97 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1972 ; Journal of the Engineering Mechanics Division Volume 98 ; 98 ;  >
       au < ready ; exists ; 1973 ; Journal of the Engineering Mechanics Division Volume 99 ; 99 ;  >
       au < ready ; exists ; 1974 ; Journal of the Engineering Mechanics Division Volume 100 ; 100 ;  >
       au < ready ; exists ; 1975 ; Journal of the Engineering Mechanics Division Volume 101 ; 101 ;  >
-      au < frozen ; exists ; 1976 ; Journal of the Engineering Mechanics Division Volume 102 ; 102 ;  >
+      au < finished ; manifest ; 1976 ; Journal of the Engineering Mechanics Division Volume 102 ; 102 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1977 ; Journal of the Engineering Mechanics Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Engineering Mechanics Division Volume 104 ; 104 ;  >
-      au < frozen ; exists ; 1979 ; Journal of the Engineering Mechanics Division Volume 105 ; 105 ;  >
+      au < finished ; manifest ; 1979 ; Journal of the Engineering Mechanics Division Volume 105 ; 105 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 1980 ; Journal of the Engineering Mechanics Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Engineering Mechanics Division Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Journal of the Engineering Mechanics Division Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1982 ; Journal of the Engineering Mechanics Division Volume 108 ; 108 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -288,14 +288,14 @@
 
       au < ready ; exists ; 1973 ; Journal of the Environmental Engineering Division Volume 99 ; 99 ;  >
       au < ready ; exists ; 1974 ; Journal of the Environmental Engineering Division Volume 100 ; 100 ;  >
-      au < frozen ; exists ; 1975 ; Journal of the Environmental Engineering Division Volume 101 ; 101 ;  >
+      au < finished ; manifest ; 1975 ; Journal of the Environmental Engineering Division Volume 101 ; 101 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1976 ; Journal of the Environmental Engineering Division Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Journal of the Environmental Engineering Division Volume 103 ; 103 ;  >
-      au < frozen ; exists ; 1978 ; Journal of the Environmental Engineering Division Volume 104 ; 104 ;  >
-      au < frozen ; exists ; 1979 ; Journal of the Environmental Engineering Division Volume 105 ; 105 ;  >
-      au < frozen ; exists ; 1980 ; Journal of the Environmental Engineering Division Volume 106 ; 106 ;  >
+      au < finished ; manifest ; 1978 ; Journal of the Environmental Engineering Division Volume 104 ; 104 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1979 ; Journal of the Environmental Engineering Division Volume 105 ; 105 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1980 ; Journal of the Environmental Engineering Division Volume 106 ; 106 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1981 ; Journal of the Environmental Engineering Division Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Journal of the Environmental Engineering Division Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1982 ; Journal of the Environmental Engineering Division Volume 108 ; 108 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -309,14 +309,14 @@
 
       param[journal_id] = ajgeb6
 
-      au < frozen ; exists ; 1974 ; Journal of the Geotechnical Engineering Division Volume 100 ; 100 ;  >
+      au < finished ; manifest ; 1974 ; Journal of the Geotechnical Engineering Division Volume 100 ; 100 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1975 ; Journal of the Geotechnical Engineering Division Volume 101 ; 101 ;  >
-      au < frozen ; exists ; 1976 ; Journal of the Geotechnical Engineering Division Volume 102 ; 102 ;  >
+      au < finished ; manifest ; 1976 ; Journal of the Geotechnical Engineering Division Volume 102 ; 102 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1977 ; Journal of the Geotechnical Engineering Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Geotechnical Engineering Division Volume 104 ; 104 ;  >
-      au < frozen ; exists ; 1979 ; Journal of the Geotechnical Engineering Division Volume 105 ; 105 ;  >
+      au < finished ; manifest ; 1979 ; Journal of the Geotechnical Engineering Division Volume 105 ; 105 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1980 ; Journal of the Geotechnical Engineering Division Volume 106 ; 106 ;  >
-      au < frozen ; exists ; 1981 ; Journal of the Geotechnical Engineering Division Volume 107 ; 107 ;  >
+      au < finished ; manifest ; 1981 ; Journal of the Geotechnical Engineering Division Volume 107 ; 107 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1982 ; Journal of the Geotechnical Engineering Division Volume 108 ; 108 ;  >
 
   }
@@ -340,7 +340,7 @@
       au < ready ; exists ; 1962 ; Journal of the Highway Division Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of the Highway Division Volume 89 ; 89 ;  >
       au < ready ; exists ; 1964 ; Journal of the Highway Division Volume 90 ; 90 ;  >
-      au < frozen ; exists ; 1965 ; Journal of the Highway Division Volume 91 ; 91 ;  >
+      au < finished ; manifest ; 1965 ; Journal of the Highway Division Volume 91 ; 91 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1966 ; Journal of the Highway Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Highway Division Volume 93 ; 93 ;  >
       au < ready ; exists ; 1968 ; Journal of the Highway Division Volume 94 ; 94 ;  >
@@ -373,16 +373,16 @@
       au < ready ; exists ; 1969 ; Journal of the Hydraulics Division Volume 95 ; 95 ;  >
       au < ready ; exists ; 1970 ; Journal of the Hydraulics Division Volume 96 ; 96 ;  >
       au < ready ; exists ; 1971 ; Journal of the Hydraulics Division Volume 97 ; 97 ;  >
-      au < frozen ; exists ; 1972 ; Journal of the Hydraulics Division Volume 98 ; 98 ;  >
+      au < finished ; manifest ; 1972 ; Journal of the Hydraulics Division Volume 98 ; 98 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1973 ; Journal of the Hydraulics Division Volume 99 ; 99 ;  >
       au < ready ; exists ; 1974 ; Journal of the Hydraulics Division Volume 100 ; 100 ;  >
       au < ready ; exists ; 1975 ; Journal of the Hydraulics Division Volume 101 ; 101 ;  >
-      au < frozen ; exists ; 1976 ; Journal of the Hydraulics Division Volume 102 ; 102 ;  >
-      au < frozen ; exists ; 1977 ; Journal of the Hydraulics Division Volume 103 ; 103 ;  >
-      au < frozen ; exists ; 1978 ; Journal of the Hydraulics Division Volume 104 ; 104 ;  >
+      au < finished ; manifest ; 1976 ; Journal of the Hydraulics Division Volume 102 ; 102 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1977 ; Journal of the Hydraulics Division Volume 103 ; 103 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1978 ; Journal of the Hydraulics Division Volume 104 ; 104 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1979 ; Journal of the Hydraulics Division Volume 105 ; 105 ;  >
-      au < frozen ; exists ; 1980 ; Journal of the Hydraulics Division Volume 106 ; 106 ;  >
-      au < frozen ; exists ; 1981 ; Journal of the Hydraulics Division Volume 107 ; 107 ;  >
+      au < finished ; manifest ; 1980 ; Journal of the Hydraulics Division Volume 106 ; 106 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1981 ; Journal of the Hydraulics Division Volume 107 ; 107 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1982 ; Journal of the Hydraulics Division Volume 108 ; 108 ;  >
 
   }
@@ -409,21 +409,21 @@
       au < ready ; exists ; 1965 ; Journal of the Irrigation and Drainage Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Irrigation and Drainage Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Irrigation and Drainage Division Volume 93 ; 93 ;  >
-      au < frozen ; exists ; 1968 ; Journal of the Irrigation and Drainage Division Volume 94 ; 94 ;  >
+      au < finished ; manifest ; 1968 ; Journal of the Irrigation and Drainage Division Volume 94 ; 94 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1969 ; Journal of the Irrigation and Drainage Division Volume 95 ; 95 ;  >
       au < ready ; exists ; 1970 ; Journal of the Irrigation and Drainage Division Volume 96 ; 96 ;  >
       au < ready ; exists ; 1971 ; Journal of the Irrigation and Drainage Division Volume 97 ; 97 ;  >
-      au < frozen ; exists ; 1972 ; Journal of the Irrigation and Drainage Division Volume 98 ; 98 ;  >
-      au < frozen ; exists ; 1973 ; Journal of the Irrigation and Drainage Division Volume 99 ; 99 ;  >
-      au < frozen ; exists ; 1974 ; Journal of the Irrigation and Drainage Division Volume 100 ; 100 ;  >
+      au < finished ; manifest ; 1972 ; Journal of the Irrigation and Drainage Division Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1973 ; Journal of the Irrigation and Drainage Division Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1974 ; Journal of the Irrigation and Drainage Division Volume 100 ; 100 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1975 ; Journal of the Irrigation and Drainage Division Volume 101 ; 101 ;  >
-      au < frozen ; exists ; 1976 ; Journal of the Irrigation and Drainage Division Volume 102 ; 102 ;  >
+      au < finished ; manifest ; 1976 ; Journal of the Irrigation and Drainage Division Volume 102 ; 102 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1977 ; Journal of the Irrigation and Drainage Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Irrigation and Drainage Division Volume 104 ; 104 ;  >
-      au < frozen ; exists ; 1979 ; Journal of the Irrigation and Drainage Division Volume 105 ; 105 ;  >
-      au < frozen ; exists ; 1980 ; Journal of the Irrigation and Drainage Division Volume 106 ; 106 ;  >
-      au < frozen ; exists ; 1981 ; Journal of the Irrigation and Drainage Division Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Journal of the Irrigation and Drainage Division Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1979 ; Journal of the Irrigation and Drainage Division Volume 105 ; 105 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1980 ; Journal of the Irrigation and Drainage Division Volume 106 ; 106 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1981 ; Journal of the Irrigation and Drainage Division Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1982 ; Journal of the Irrigation and Drainage Division Volume 108 ; 108 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -474,12 +474,12 @@
       au < ready ; exists ; 1965 ; Journal of the Power Division Volume 91 ; 91 ;  >
       au < crawling ; exists ; 1966 ; Journal of the Power Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Power Division Volume 93 ; 93 ;  >
-      au < frozen ; exists ; 1968 ; Journal of the Power Division Volume 94 ; 94 ;  >
+      au < finished ; manifest ; 1968 ; Journal of the Power Division Volume 94 ; 94 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1969 ; Journal of the Power Division Volume 95 ; 95 ;  >
-      au < frozen ; exists ; 1970 ; Journal of the Power Division Volume 96 ; 96 ;  >
+      au < finished ; manifest ; 1970 ; Journal of the Power Division Volume 96 ; 96 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1971 ; Journal of the Power Division Volume 97 ; 97 ;  >
-      au < frozen ; exists ; 1972 ; Journal of the Power Division Volume 98 ; 98 ;  >
-      au < frozen ; exists ; 1973 ; Journal of the Power Division Volume 99 ; 99 ;  >
+      au < finished ; manifest ; 1972 ; Journal of the Power Division Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1973 ; Journal of the Power Division Volume 99 ; 99 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1974 ; Journal of the Power Division Volume 100 ; 100 ;  >
       au < ready ; exists ; 1975 ; Journal of the Power Division Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Journal of the Power Division Volume 102 ; 102 ;  >
@@ -509,7 +509,7 @@
       au < ready ; exists ; 1964 ; Journal of the Sanitary Engineering Division Volume 90 ; 90 ;  >
       au < ready ; exists ; 1965 ; Journal of the Sanitary Engineering Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Sanitary Engineering Division Volume 92 ; 92 ;  >
-      au < frozen ; exists ; 1967 ; Journal of the Sanitary Engineering Division Volume 93 ; 93 ;  >
+      au < finished ; manifest ; 1967 ; Journal of the Sanitary Engineering Division Volume 93 ; 93 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1968 ; Journal of the Sanitary Engineering Division Volume 94 ; 94 ;  >
       au < ready ; exists ; 1969 ; Journal of the Sanitary Engineering Division Volume 95 ; 95 ;  >
       au < ready ; exists ; 1970 ; Journal of the Sanitary Engineering Division Volume 96 ; 96 ;  >
@@ -542,10 +542,10 @@
       au < ready ; exists ; 1967 ; Journal of the Soil Mechanics and Foundations Division Volume 93 ; 93 ;  >
       au < crawling ; exists ; 1968 ; Journal of the Soil Mechanics and Foundations Division Volume 94 ; 94 ;  >
       au < crawling ; exists ; 1969 ; Journal of the Soil Mechanics and Foundations Division Volume 95 ; 95 ;  >
-      au < frozen ; exists ; 1970 ; Journal of the Soil Mechanics and Foundations Division Volume 96 ; 96 ;  >
+      au < finished ; manifest ; 1970 ; Journal of the Soil Mechanics and Foundations Division Volume 96 ; 96 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1971 ; Journal of the Soil Mechanics and Foundations Division Volume 97 ; 97 ;  >
       au < ready ; exists ; 1972 ; Journal of the Soil Mechanics and Foundations Division Volume 98 ; 98 ;  >
-      au < frozen ; exists ; 1973 ; Journal of the Soil Mechanics and Foundations Division Volume 99 ; 99 ;  >
+      au < finished ; manifest ; 1973 ; Journal of the Soil Mechanics and Foundations Division Volume 99 ; 99 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -572,20 +572,20 @@
       au < ready ; exists ; 1966 ; Journal of the Structural Division Volume 92 ; 92 ;  >
       au < ready ; exists ; 1967 ; Journal of the Structural Division Volume 93 ; 93 ;  >
       au < ready ; exists ; 1968 ; Journal of the Structural Division Volume 94 ; 94 ;  >
-      au < frozen ; exists ; 1969 ; Journal of the Structural Division Volume 95 ; 95 ;  >
-      au < frozen ; exists ; 1970 ; Journal of the Structural Division Volume 96 ; 96 ;  >
+      au < finished ; manifest ; 1969 ; Journal of the Structural Division Volume 95 ; 95 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1970 ; Journal of the Structural Division Volume 96 ; 96 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1971 ; Journal of the Structural Division Volume 97 ; 97 ;  >
       au < ready ; exists ; 1972 ; Journal of the Structural Division Volume 98 ; 98 ;  >
       au < crawling ; exists ; 1973 ; Journal of the Structural Division Volume 99 ; 99 ;  >
       au < ready ; exists ; 1974 ; Journal of the Structural Division Volume 100 ; 100 ;  >
       au < ready ; exists ; 1975 ; Journal of the Structural Division Volume 101 ; 101 ;  >
-      au < frozen ; exists ; 1976 ; Journal of the Structural Division Volume 102 ; 102 ;  >
-      au < frozen ; exists ; 1977 ; Journal of the Structural Division Volume 103 ; 103 ;  >
-      au < frozen ; exists ; 1978 ; Journal of the Structural Division Volume 104 ; 104 ;  >
+      au < finished ; manifest ; 1976 ; Journal of the Structural Division Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1977 ; Journal of the Structural Division Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1978 ; Journal of the Structural Division Volume 104 ; 104 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1979 ; Journal of the Structural Division Volume 105 ; 105 ;  >
-      au < frozen ; exists ; 1980 ; Journal of the Structural Division Volume 106 ; 106 ;  >
+      au < finished ; manifest ; 1980 ; Journal of the Structural Division Volume 106 ; 106 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1981 ; Journal of the Structural Division Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Journal of the Structural Division Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1982 ; Journal of the Structural Division Volume 108 ; 108 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -610,19 +610,19 @@
       au < ready ; exists ; 1964 ; Journal of the Surveying and Mapping Division Volume 90 ; 90 ;  >
       au < ready ; exists ; 1965 ; Journal of the Surveying and Mapping Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Surveying and Mapping Division Volume 92 ; 92 ;  >
-      au < frozen ; exists ; 1967 ; Journal of the Surveying and Mapping Division Volume 93 ; 93 ;  >
+      au < finished ; manifest ; 1967 ; Journal of the Surveying and Mapping Division Volume 93 ; 93 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1968 ; Journal of the Surveying and Mapping Division Volume 94 ; 94 ;  >
       au < ready ; exists ; 1969 ; Journal of the Surveying and Mapping Division Volume 95 ; 95 ;  >
       au < ready ; exists ; 1970 ; Journal of the Surveying and Mapping Division Volume 96 ; 96 ;  >
-      au < frozen ; exists ; 1971 ; Journal of the Surveying and Mapping Division Volume 97 ; 97 ;  >
+      au < finished ; manifest ; 1971 ; Journal of the Surveying and Mapping Division Volume 97 ; 97 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1972 ; Journal of the Surveying and Mapping Division Volume 98 ; 98 ;  >
-      au < frozen ; exists ; 1973 ; Journal of the Surveying and Mapping Division Volume 99 ; 99 ;  >
-      au < frozen ; exists ; 1974 ; Journal of the Surveying and Mapping Division Volume 100 ; 100 ;  >
+      au < finished ; manifest ; 1973 ; Journal of the Surveying and Mapping Division Volume 99 ; 99 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1974 ; Journal of the Surveying and Mapping Division Volume 100 ; 100 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1975 ; Journal of the Surveying and Mapping Division Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Journal of the Surveying and Mapping Division Volume 102 ; 102 ;  >
-      au < frozen ; exists ; 1977 ; Journal of the Surveying and Mapping Division Volume 103 ; 103 ;  >
-      au < frozen ; exists ; 1978 ; Journal of the Surveying and Mapping Division Volume 104 ; 104 ;  >
-      au < frozen ; exists ; 1979 ; Journal of the Surveying and Mapping Division Volume 105 ; 105 ;  >
+      au < finished ; manifest ; 1977 ; Journal of the Surveying and Mapping Division Volume 103 ; 103 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1978 ; Journal of the Surveying and Mapping Division Volume 104 ; 104 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1979 ; Journal of the Surveying and Mapping Division Volume 105 ; 105 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1980 ; Journal of the Surveying and Mapping Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Surveying and Mapping Division Volume 107 ; 107 ;  >
       au < ready ; exists ; 1982 ; Journal of the Surveying and Mapping Division Volume 108 ; 108 ;  >
@@ -641,10 +641,10 @@
 
       au < ready ; exists ; 1977 ; Journal of the Technical Councils of ASCE Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Technical Councils of ASCE Volume 104 ; 104 ;  >
-      au < frozen ; exists ; 1979 ; Journal of the Technical Councils of ASCE Volume 105 ; 105 ;  >
-      au < frozen ; exists ; 1980 ; Journal of the Technical Councils of ASCE Volume 106 ; 106 ;  >
-      au < frozen ; exists ; 1981 ; Journal of the Technical Councils of ASCE Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Journal of the Technical Councils of ASCE Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1979 ; Journal of the Technical Councils of ASCE Volume 105 ; 105 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1980 ; Journal of the Technical Councils of ASCE Volume 106 ; 106 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1981 ; Journal of the Technical Councils of ASCE Volume 107 ; 107 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1982 ; Journal of the Technical Councils of ASCE Volume 108 ; 108 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -666,17 +666,17 @@
       au < crawling ; exists ; 1969 ; Journal of the Urban Planning and Development Division Volume 95 ; 95 ;  >
       au < ready ; exists ; 1970 ; Journal of the Urban Planning and Development Division Volume 96 ; 96 ;  >
       au < ready ; exists ; 1971 ; Journal of the Urban Planning and Development Division Volume 97 ; 97 ;  >
-      au < frozen ; exists ; 1972 ; Journal of the Urban Planning and Development Division Volume 98 ; 98 ;  >
-      au < frozen ; exists ; 1973 ; Journal of the Urban Planning and Development Division Volume 99 ; 99 ;  >
+      au < finished ; manifest ; 1972 ; Journal of the Urban Planning and Development Division Volume 98 ; 98 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1973 ; Journal of the Urban Planning and Development Division Volume 99 ; 99 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1974 ; Journal of the Urban Planning and Development Division Volume 100 ; 100 ;  >
       au < ready ; exists ; 1975 ; Journal of the Urban Planning and Development Division Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Journal of the Urban Planning and Development Division Volume 102 ; 102 ;  >
-      au < frozen ; exists ; 1977 ; Journal of the Urban Planning and Development Division Volume 103 ; 103 ;  >
-      au < frozen ; exists ; 1978 ; Journal of the Urban Planning and Development Division Volume 104 ; 104 ;  >
+      au < finished ; manifest ; 1977 ; Journal of the Urban Planning and Development Division Volume 103 ; 103 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1978 ; Journal of the Urban Planning and Development Division Volume 104 ; 104 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 1979 ; Journal of the Urban Planning and Development Division Volume 105 ; 105 ;  >
       au < crawling ; exists ; 1980 ; Journal of the Urban Planning and Development Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Urban Planning and Development Division Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Journal of the Urban Planning and Development Division Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1982 ; Journal of the Urban Planning and Development Division Volume 108 ; 108 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -692,11 +692,11 @@
 
       au < ready ; exists ; 1976 ; Journal of the Water Resources Planning and Management Division Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Journal of the Water Resources Planning and Management Division Volume 103 ; 103 ;  >
-      au < frozen ; exists ; 1978 ; Journal of the Water Resources Planning and Management Division Volume 104 ; 104 ;  >
-      au < frozen ; exists ; 1979 ; Journal of the Water Resources Planning and Management Division Volume 105 ; 105 ;  >
+      au < finished ; manifest ; 1978 ; Journal of the Water Resources Planning and Management Division Volume 104 ; 104 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1979 ; Journal of the Water Resources Planning and Management Division Volume 105 ; 105 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1980 ; Journal of the Water Resources Planning and Management Division Volume 106 ; 106 ;  >
       au < ready ; exists ; 1981 ; Journal of the Water Resources Planning and Management Division Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Journal of the Water Resources Planning and Management Division Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1982 ; Journal of the Water Resources Planning and Management Division Volume 108 ; 108 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -713,7 +713,7 @@
       au < ready ; exists ; 1977 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 104 ; 104 ;  >
       au < ready ; exists ; 1979 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 105 ; 105 ;  >
-      au < frozen ; exists ; 1980 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 106 ; 106 ;  >
+      au < finished ; manifest ; 1980 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 106 ; 106 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1981 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 107 ; 107 ;  >
       au < ready ; exists ; 1982 ; Journal of the Waterway, Port, Coastal and Ocean Division Volume 108 ; 108 ;  >
 
@@ -740,9 +740,9 @@
       au < crawling ; exists ; 1964 ; Journal of the Waterways and Harbors Division Volume 90 ; 90 ;  >
       au < ready ; exists ; 1965 ; Journal of the Waterways and Harbors Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Waterways and Harbors Division Volume 92 ; 92 ;  >
-      au < frozen ; exists ; 1967 ; Journal of the Waterways and Harbors Division Volume 93 ; 93 ;  >
+      au < finished ; manifest ; 1967 ; Journal of the Waterways and Harbors Division Volume 93 ; 93 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1968 ; Journal of the Waterways and Harbors Division Volume 94 ; 94 ;  >
-      au < frozen ; exists ; 1969 ; Journal of the Waterways and Harbors Division Volume 95 ; 95 ;  >
+      au < finished ; manifest ; 1969 ; Journal of the Waterways and Harbors Division Volume 95 ; 95 ; reingest4.clockss.org:8082 >
       au < exists ; exists ; 1970 ; Journal of the Waterways and Harbors Division Volume 96 ; 96 ;  >
 
   }
@@ -757,11 +757,11 @@
 
       param[journal_id] = awhcar
 
-      au < frozen ; exists ; 1970 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 96 ; 96 ;  >
+      au < finished ; manifest ; 1970 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 96 ; 96 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1971 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 97 ; 97 ;  >
       au < ready ; exists ; 1972 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 98 ; 98 ;  >
       au < ready ; exists ; 1973 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 99 ; 99 ;  >
-      au < frozen ; exists ; 1974 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 100 ; 100 ;  >
+      au < finished ; manifest ; 1974 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 100 ; 100 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1975 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Journal of the Waterways, Harbors and Coastal Engineering Division Volume 102 ; 102 ;  >
 
@@ -882,20 +882,20 @@
 
       param[journal_id] = tpejan
 
-      au < frozen ; exists ; 1969 ; Transportation Engineering Journal of ASCE Volume 95 ; 95 ;  >
-      au < frozen ; exists ; 1970 ; Transportation Engineering Journal of ASCE Volume 96 ; 96 ;  >
+      au < finished ; manifest ; 1969 ; Transportation Engineering Journal of ASCE Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1970 ; Transportation Engineering Journal of ASCE Volume 96 ; 96 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1971 ; Transportation Engineering Journal of ASCE Volume 97 ; 97 ;  >
       au < ready ; exists ; 1972 ; Transportation Engineering Journal of ASCE Volume 98 ; 98 ;  >
       au < ready ; exists ; 1973 ; Transportation Engineering Journal of ASCE Volume 99 ; 99 ;  >
-      au < frozen ; exists ; 1974 ; Transportation Engineering Journal of ASCE Volume 100 ; 100 ;  >
+      au < finished ; manifest ; 1974 ; Transportation Engineering Journal of ASCE Volume 100 ; 100 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1975 ; Transportation Engineering Journal of ASCE Volume 101 ; 101 ;  >
       au < ready ; exists ; 1976 ; Transportation Engineering Journal of ASCE Volume 102 ; 102 ;  >
       au < ready ; exists ; 1977 ; Transportation Engineering Journal of ASCE Volume 103 ; 103 ;  >
       au < ready ; exists ; 1978 ; Transportation Engineering Journal of ASCE Volume 104 ; 104 ;  >
       au < crawling ; exists ; 1979 ; Transportation Engineering Journal of ASCE Volume 105 ; 105 ;  >
       au < ready ; exists ; 1980 ; Transportation Engineering Journal of ASCE Volume 106 ; 106 ;  >
-      au < frozen ; exists ; 1981 ; Transportation Engineering Journal of ASCE Volume 107 ; 107 ;  >
-      au < frozen ; exists ; 1982 ; Transportation Engineering Journal of ASCE Volume 108 ; 108 ;  >
+      au < finished ; manifest ; 1981 ; Transportation Engineering Journal of ASCE Volume 107 ; 107 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1982 ; Transportation Engineering Journal of ASCE Volume 108 ; 108 ; reingest1.clockss.org:8082 >
 
   }
 
