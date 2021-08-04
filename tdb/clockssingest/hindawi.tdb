@@ -1188,7 +1188,7 @@
 
     au < manifest ; exists ; 2011 ; Advances in Orthopedics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Orthopedics Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Advances in Orthopedics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Orthopedics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Orthopedics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Orthopedics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Orthopedics Volume 2016 ; 2016 ; 2016 ; >
@@ -1423,7 +1423,7 @@
     au < manifest ; exists ; 2010 ; Advances in Software Engineering Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Advances in Software Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Advances in Software Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Software Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Software Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Software Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -1872,7 +1872,7 @@
     au < manifest ; exists ; 2010 ; Autism Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Autism Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Autism Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Autism Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Autism Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Autism Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Autism Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Autism Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
@@ -7736,7 +7736,7 @@
     au < manifest ; exists ; 2010 ; Journal of Nanomaterials Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Nanomaterials Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nanomaterials Volume 2016 ; 2016 ; 2016 ; >
@@ -7880,7 +7880,7 @@
     au < manifest ; exists ; 2010 ; Journal of Nucleic Acids Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Nucleic Acids Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Nucleic Acids Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Nucleic Acids Volume 2016 ; 2016 ; 2016 ; >
@@ -7946,7 +7946,7 @@
     au < manifest ; exists ; 2010 ; Journal of Obesity Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Obesity Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Obesity Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Obesity Volume 2016 ; 2016 ; 2016 ; >
@@ -8039,7 +8039,7 @@
 
     param[journal_id] = jopti
     
-    au < ready ; exists ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Optimization Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Optimization Volume 2016 ; 2016 ; 2016 ; >
@@ -8115,7 +8115,7 @@
     au < manifest ; exists ; 2010 ; Journal of Osteoporosis Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Osteoporosis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Osteoporosis Volume 2016 ; 2016 ; 2016 ; >
@@ -8188,7 +8188,7 @@
     param[journal_id] = jpe
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Petroleum Engineering Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Petroleum Engineering Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Petroleum Engineering Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Petroleum Engineering Volume 2016 ; 2016 ; 2016 ; >
@@ -8229,7 +8229,7 @@
     param[journal_id] = jpho
     #Moved to archive
     
-    au < ready ; exists ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Photonics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Photonics Volume 2016 ; 2016 ; 2016 ; >
@@ -8286,7 +8286,7 @@
     au < manifest ; exists ; 2010 ; Journal of Pregnancy Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Pregnancy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Pregnancy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Pregnancy Volume 2016 ; 2016 ; 2016 ; >
@@ -8403,7 +8403,7 @@
 
     param[journal_id] = jre
 
-    au < ready ; exists ; 2013 ; Journal of Renewable Energy Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Renewable Energy Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Renewable Energy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Renewable Energy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Renewable Energy Volume 2016 ; 2016 ; 2016 ; >
@@ -8426,7 +8426,7 @@
     param[journal_id] = jrm
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Respiratory Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Respiratory Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Respiratory Medicine Volume 2015 ; 2015 ; 2015 ; >
 
@@ -8472,7 +8472,7 @@
     au < manifest ; exists ; 2010 ; Journal of Sensors Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Sensors Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Sensors Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Sensors Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Sensors Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Sensors Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Sensors Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Sensors Volume 2016 ; 2016 ; 2016 ; >
@@ -8495,7 +8495,7 @@
     param[journal_id] = jstd
     #ceased publication in 2018
 
-    au < ready ; exists ; 2013 ; Journal of Sexually Transmitted Diseases Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Sexually Transmitted Diseases Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Sexually Transmitted Diseases Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Sexually Transmitted Diseases Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Sexually Transmitted Diseases Volume 2016 ; 2016 ; 2016 ; >
@@ -8558,7 +8558,7 @@
     param[journal_id] = jsmat
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Journal of Soft Matter Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Soft Matter Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Soft Matter Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -8594,7 +8594,7 @@
     param[journal_id] = jssp
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Journal of Solid State Physics Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Solid State Physics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Solid State Physics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Solid State Physics Volume 2015 ; 2015 ; 2015 ; >
 
@@ -8626,7 +8626,7 @@
     au < manifest ; exists ; 2010 ; Spectroscopy Volume 24 (2010) ; 2010 ; 24 ; >
     au < manifest ; exists ; 2011 ; Spectroscopy Volume 25-26 (2011) ; 2011 ; 25-26 ; >
     au < manifest ; exists ; 2012 ; Spectroscopy: An International Journal Volume 27 (2012) ; 2012 ; 27 ; >
-    au < ready ; exists ; 2013 ; Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Spectroscopy Volume 2016 ; 2016 ; 2016 ; >
@@ -8737,7 +8737,7 @@
     param[journal_id] = jtc
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Journal of Theoretical Chemistry Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Theoretical Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Theoretical Chemistry Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Theoretical Chemistry Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Theoretical Chemistry Volume 2016 ; 2016 ; 2016 ; >
@@ -8971,7 +8971,7 @@
     param[journal_id] = jwe
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Journal of Wind Energy Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Wind Energy Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Wind Energy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Wind Energy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Wind Energy Volume 2016 ; 2016 ; 2016 ; >
@@ -9320,7 +9320,7 @@
     au < manifest ; exists ; 2010 ; Neurology Research International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Neurology Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Neurology Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Neurology Research International Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Neurology Research International Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Neurology Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Neurology Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Neurology Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -9457,7 +9457,7 @@
     au < manifest ; exists ; 2010 ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Organic Chemistry International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Organic Chemistry International Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Organic Chemistry International Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Organic Chemistry International Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Organic Chemistry International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Organic Chemistry International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Organic Chemistry International Volume 2016 ; 2016 ; 2016 ; >
@@ -9504,7 +9504,7 @@
     au < manifest ; exists ; 2010 ; Pain Research and Management Volume 15 (2010) ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Pain Research and Management Volume 16 (2011) ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Pain Research and Management Volume 17 (2012) ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Pain Research and Management Volume 18 (2013) ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Pain Research and Management Volume 18 (2013) ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Pain Research and Management Volume 19 (2014) ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Pain Research and Management Volume 20 (2015) ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Pain Research and Management Volume 2016 ; 2016 ; 2016 ; >
@@ -9552,7 +9552,7 @@
     param[journal_id] = paleontology
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Paleontology Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Paleontology Journal Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Paleontology Journal Volume 2014 ; 2014 ; 2014 ; >
 
   }
@@ -9594,7 +9594,7 @@
     au < manifest ; exists ; 2010 ; Pathology Research International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Pathology Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Pathology Research International Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Pathology Research International Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Pathology Research International Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Pathology Research International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Pathology Research International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Pathology Research International Volume 2016 ; 2016 ; 2016 ; >
@@ -9640,7 +9640,7 @@
     param[journal_id] = physiology
     #Moved to archive
 
-    au < ready ; exists ; 2013 ; Physiology Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Physiology Journal Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Physiology Journal Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Physiology Journal Volume 2015 ; 2015 ; 2015 ; >
 
@@ -9710,7 +9710,7 @@
 
     au < manifest ; exists ; 2011 ; Prostate Cancer Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Prostate Cancer Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Prostate Cancer Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Prostate Cancer Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Prostate Cancer Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Prostate Cancer Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Prostate Cancer Volume 2016 ; 2016 ; 2016 ; >
@@ -9912,7 +9912,7 @@
     au < manifest ; exists ; 2010 ; Pulmonary Medicine Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Pulmonary Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Pulmonary Medicine Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Pulmonary Medicine Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Pulmonary Medicine Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Pulmonary Medicine Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Pulmonary Medicine Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Pulmonary Medicine Volume 2016 ; 2016 ; 2016 ; >
@@ -9999,7 +9999,7 @@
     au < manifest ; exists ; 2010 ; Sarcoma Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Sarcoma Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Sarcoma Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Sarcoma Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Sarcoma Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Sarcoma Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Sarcoma Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Sarcoma Volume 2016 ; 2016 ; 2016 ; >
@@ -10042,7 +10042,7 @@
 
     au < manifest ; exists ; 2011 ; Schizophrenia Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Schizophrenia Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Schizophrenia Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Schizophrenia Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Schizophrenia Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Schizophrenia Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
@@ -10070,7 +10070,7 @@
     au < manifest ; exists ; 2010 ; Science and Technology of Nuclear Installations Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Science and Technology of Nuclear Installations Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Science and Technology of Nuclear Installations Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Science and Technology of Nuclear Installations Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Science and Technology of Nuclear Installations Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Science and Technology of Nuclear Installations Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Science and Technology of Nuclear Installations Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Science and Technology of Nuclear Installations Volume 2016 ; 2016 ; 2016 ; >
@@ -10174,7 +10174,7 @@
     au < manifest ; exists ; 2010 ; Shock and Vibration Volume 17 (2010) ; 2010 ; 17 ; >
     au < manifest ; exists ; 2011 ; Shock and Vibration Volume 18 (2011) ; 2011 ; 18 ; >
     au < manifest ; exists ; 2012 ; Shock and Vibration Volume 19 (2012) ; 2012 ; 19 ; >
-    au < ready ; exists ; 2013 ; Shock and Vibration Volume 20 (2013) ; 2013 ; 20 ; >
+    au < crawling ; exists ; 2013 ; Shock and Vibration Volume 20 (2013) ; 2013 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Shock and Vibration Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Shock and Vibration Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Shock and Vibration Volume 2016 ; 2016 ; 2016 ; >
@@ -10223,7 +10223,7 @@
 
     au < manifest ; exists ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Smart Materials Research Volume 2016 ; 2016 ; 2016 ; >
