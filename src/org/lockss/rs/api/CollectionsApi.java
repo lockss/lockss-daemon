@@ -216,6 +216,7 @@ public class CollectionsApi {
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
+
     /**
      * Build call for deleteArtifact
      * @param collectionid Collection containing the artifact (required)

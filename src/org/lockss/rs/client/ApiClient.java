@@ -1116,7 +1116,14 @@ public class ApiClient {
                 Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\"; filename=\"" + file.getName() + "\"");
                 MediaType mediaType = MediaType.parse(guessContentTypeFromFile(file));
                 mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, file));
-            } else {
+            }
+            else if (param.getValue()  instanceof InputStream) {
+                InputStream instr = (InputStream) param.getValue();
+                Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\"");
+                MediaType mediaType = MediaType.parse("application/octet-stream ") ;
+                mpBuilder.addPart(partHeaders, new InputStreamRequestBody(mediaType, instr));
+            }
+            else {
                 Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\"");
                 mpBuilder.addPart(partHeaders, RequestBody.create(null, parameterToString(param.getValue())));
             }
@@ -1202,4 +1209,31 @@ public class ApiClient {
             throw new AssertionError(e);
         }
     }
+
+    static public class InputStreamRequestBody extends RequestBody {
+        private final MediaType contentType;
+        private final InputStream inStream;
+
+        public InputStreamRequestBody(MediaType contentType, InputStream instr) {
+            if (instr == null) throw new NullPointerException("InputStream instr == null");
+            this.contentType = contentType;
+            this.inStream = instr;
+        }
+
+        @Override
+        public MediaType contentType() {
+            return contentType;
+        }
+
+        @Override
+        public long contentLength() throws IOException {
+            return -1;
+        }
+
+        @Override
+        public void writeTo(BufferedSink sink) throws IOException {
+            sink.writeAll(Okio.source(inStream));
+        }
+    }
+
 }
