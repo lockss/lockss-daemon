@@ -124,7 +124,7 @@
   	  #2006 needed recollection in new layout
       au < finished ; finished ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
       au < expected ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
 
     }
@@ -257,11 +257,11 @@
     
     param[journal_id] = made-china-journal
 
-    au < crawling ; exists ; 2016 ; Made in China Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2017 ; Made in China Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2016 ; Made in China Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2017 ; Made in China Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
     au < manifest ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
 
   }

@@ -1517,7 +1517,7 @@
     param[journal_issn] = 1750-614X
     comment[journal_id] = cms
 
-    au < crawling ; exists ; 2007 ; Chinese Management Studies Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2007 ; Chinese Management Studies Volume 1 ; 1 ; >
     au < crawling ; exists ; 2008 ; Chinese Management Studies Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Chinese Management Studies Volume 3 ; 3 ; >
     au < frozen ; exists ; 2010 ; Chinese Management Studies Volume 4 ; 4 ; >
@@ -1759,7 +1759,7 @@
     au < manifest ; exists ; 1998 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 17 ; 17 ; >
     au < manifest ; exists ; 1999 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2001 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2001 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 20 ; 20 ; >
     au < crawling ; exists ; 2002 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 21 ; 21 ; >
     au < frozen ; exists ; 2003 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 22 ; 22 ; >
     au < crawling ; exists ; 2004 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 23 ; 23 ; >
@@ -1915,7 +1915,7 @@
 
     au < frozen ; exists ; 2001 ; Corporate Governance Volume 1 ; 1 ; >
     au < frozen ; exists ; 2002 ; Corporate Governance Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2003 ; Corporate Governance Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2003 ; Corporate Governance Volume 3 ; 3 ; >
     au < crawling ; exists ; 2004 ; Corporate Governance Volume 4 ; 4 ; >
     au < manifest ; exists ; 2005 ; Corporate Governance Volume 5 ; 5 ; >
     au < manifest ; exists ; 2006 ; Corporate Governance Volume 6 ; 6 ; >
