@@ -51,19 +51,39 @@ public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIterat
 
   private static final Logger log = Logger.getLogger(EastviewDirSourceXmlArticleIteratorFactory.class);
 
+  // Xml and PDF match from 2007, 2006 is a mixed year
   //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/2015/03/001_31/46295500_MTH_2015_0024_0001_0001.pdf
   //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/2015/03/001_31/46295500_MTH_2015_0024_0001_0001.xml
+
+  // Only xml exits for year 2002,2003,2004, 2005
+  //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/2003/03/001_31/01mth150.xml
+
+  // Only xhtml exists, before year 2002
+  //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/1990/04/004_01/0040002.xhtml
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-          "\"%s[^/]+/.*\\.zip!/.*\\.xml$\", base_url";
+          "\"%s[^/]+/.*\\.zip!/(.*)\\.(xml|xhtml)$\", base_url";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
           Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
                   Pattern.CASE_INSENSITIVE);
 
-  private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  protected Pattern getExcludeSubTreePattern() {
+    return SUB_NESTED_ARCHIVE_PATTERN;
+  }
+
+  protected String getIncludePatternTemplate() {
+    return ALL_ZIP_XML_PATTERN_TEMPLATE;
+  }
+
+
+  private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.(xml)$", Pattern.CASE_INSENSITIVE);
   private static final String XML_REPLACEMENT = "/$1.xml";
   private static final String PDF_REPLACEMENT = "/$1.pdf";
+
+  //For early years, like before 2002, the delivered content only have "xhtml"
+  private static final Pattern XHTML_PATTERN = Pattern.compile("/(.*)\\.(xhtml)$", Pattern.CASE_INSENSITIVE);
+  private static final String XHTML_REPLACEMENT = "/$1.xhtml";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -72,23 +92,32 @@ public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIterat
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
     builder.setSpec(builder.newSpec()
-        .setTarget(target)
-        .setPatternTemplate(ALL_ZIP_XML_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
-        .setExcludeSubTreePattern(SUB_NESTED_ARCHIVE_PATTERN)
-        .setVisitArchiveMembers(true));
-    
+            .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
+            .setExcludeSubTreePattern(getExcludeSubTreePattern())
+            .setVisitArchiveMembers(true)
+            .setVisitArchiveMembers(getIsArchive()));
+
+    builder.addAspect(XHTML_PATTERN,
+            XHTML_REPLACEMENT,
+            ArticleFiles.ROLE_ARTICLE_METADATA);
 
     builder.addAspect(XML_PATTERN,
         XML_REPLACEMENT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    builder.addAspect(PDF_REPLACEMENT,
+
+    builder.addAspect(XML_PATTERN,
+            PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_ARTICLE_METADATA); // emit even without PDF
 
     return builder.getSubTreeArticleIterator();
+  }
+
+  protected boolean getIsArchive() {
+    return true;
   }
   
   @Override

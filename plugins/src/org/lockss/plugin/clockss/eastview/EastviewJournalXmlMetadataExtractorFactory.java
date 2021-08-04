@@ -50,6 +50,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.commons.io.FilenameUtils;
 
 
 public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
@@ -80,13 +81,22 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (EastviewHelper == null) {
+
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+      if (cuBase.contains("DA-MLT/MTH/2002") || cuBase.contains("DA-MLT/MTH/2002")
+              || cuBase.contains("DA-MLT/MTH/2004") || cuBase.contains("DA-MLT/MTH/2005")) {
+        EastviewHelper = new EastviewJournalMetadataHtmlFormatHelper();
+        log.debug3("Eastview Journal Early Version: cuBase = " + cuBase);
+
+      } else {
         EastviewHelper = new EastviewJournalMetadataHelper();
+        log.debug3("Eastview Journal Later Version: cuBase == " + cuBase);
       }
+
       return EastviewHelper;
     }
 
-    /*
     @Override
     protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
@@ -105,17 +115,15 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       {
         fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
         log.debug3("Eastview Journal: Check for existence of " + filesToCheck.get(i));
-        if(filesToCheck.get(i).contains(".pdf")) {
+        if(filesToCheck.get(i).contains(".pdf") || filesToCheck.get(i).contains(".xml")) {
           // Set a cooked value for an access file. Otherwise it would get set to xml file
           log.debug3("Eastview Journal: set access_url to " + filesToCheck.get(i));
-          thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
           return true;
         }
       }
       log.debug3("Eastview Journal: No file exists associated with this record");
       return false; //No files found that match this record
     }
-     */
 
     /* 
      * a PDF file may or may not exist, but assume the XML is full text
