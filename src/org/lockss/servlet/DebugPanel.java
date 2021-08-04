@@ -33,6 +33,8 @@ import java.io.*;
 import java.util.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import org.lockss.repository.RepoSpec;
+import org.lockss.rs.V2RepoAuCopier;
 import org.mortbay.html.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -438,7 +440,9 @@ public class DebugPanel extends LockssServlet {
   private void doCopyToV2repo() throws IOException {
     ArchivalUnit au = getAu();
     if (au == null) return;
-    statusMsg = "Hi, this doesn't do anything yet: " + au.getName();
+
+    V2RepoAuCopier v2RepoAUCopier = new V2RepoAuCopier();
+    v2RepoAUCopier.moveAu(au);
 
   }
 

@@ -29,13 +29,13 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-package org.lockss.laaws;
+package org.lockss.rs;
 
 import java.io.File;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CuIterator;
@@ -47,44 +47,62 @@ import org.lockss.rs.model.Artifact;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
-public class LockssRepositoryMover {
+public class V2RepoAuCopier {
 
-  private static final Logger log = Logger.getLogger(LockssRepositoryMover.class);
-  private final StreamingCollectionsApi collectionsApi;
-  private final ApiClient repoClient;
+  private static final Logger log = Logger.getLogger(V2RepoAuCopier.class);
+  public static final String PREFIX = Configuration.PREFIX + "v2repo.";
+  public static final String PARAM_V2_REPO_SPEC =
+      PREFIX + "repo_spec";
+  public static final String PARAM_V2_REPO_USER =
+      PREFIX + "user";
+  public static final String PARAM_V2_REPO_PASSWD =
+      PREFIX + "passwd";
+
+  public static final String PARAM_V2_USER_AGENT =
+      PREFIX + "user_agent";
+
+  public static final String  DEFAULT_V2_USER_AGENT = "lockss";
+
+  /**
+   * The v2 REST collections api implemntation
+   */
+  private StreamingCollectionsApi collectionsApi;
+
+  /**
+   * The v2 Repository Client
+   */
+  private ApiClient repoClient;
+
   /**
    * The v2 Repository Spec
    */
-  private RepoSpec v2RepoSpec;
+  private RepoSpec repoSpec;
+
   /**
    * The v2 Collection
    */
-  private String v2Collection;
-
+  private String collection;
 
   /**
-   * The v2 Service URL
+   * The target v2 Service url
    */
-  private URL v2ServiceUrl;
+  private String serviceUrl;
 
-  public LockssRepositoryMover(RepoSpec repoSpec, String userName, String password) {
-    v2RepoSpec = repoSpec;
-    v2Collection = repoSpec.getCollection();
-    if (UrlUtil.isUrl(repoSpec.getUrl())) {
-      try {
-        v2ServiceUrl = new URL(repoSpec.getUrl());
-      } catch (MalformedURLException e) {
-        e.printStackTrace();
-      }
-    }
-    repoClient = new ApiClient();
-    repoClient.setUsername(userName);
-    repoClient.setPassword(password);
-    repoClient.setUserAgent("lockss");
-    repoClient.setBasePath(repoSpec.getUrl());
-    collectionsApi = new StreamingCollectionsApi(repoClient);
+  private String userAgent=DEFAULT_V2_USER_AGENT;
 
+  public V2RepoAuCopier() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    String rspec= config.get(PARAM_V2_REPO_SPEC);
+    String ruser=config.get(PARAM_V2_REPO_USER);
+    String rpass=config.get(PARAM_V2_REPO_PASSWD);
+    userAgent=config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
+    initClient(rspec,ruser, rpass);
   }
+
+
+  public V2RepoAuCopier(String rspec, String ruser, String rpass) {
+    initClient(rspec, ruser, rpass);
+ }
 
   public void moveAu(String auId) {
     moveAu(LockssDaemon.getLockssDaemon().getPluginManager().getAuFromId(auId));
@@ -98,10 +116,29 @@ public class LockssRepositoryMover {
     }
   }
 
+  protected void initClient(String rspec, String ruser, String rpass) {
+    try {
+      this.repoSpec=RepoSpec.fromSpec(rspec);
+      this.collection=repoSpec.getCollection();
+      this.serviceUrl=repoSpec.getUrl();
+      if(UrlUtil.isMalformedUrl(serviceUrl)) {
+        throw new IllegalArgumentException("RepoSpec contained malformed url"+serviceUrl);
+      }
+    }
+    catch(IllegalArgumentException iae) {
+      log.error(iae.getMessage());
+    }
+
+    repoClient = new ApiClient();
+    repoClient.setUsername(ruser);
+    repoClient.setPassword(rpass);
+    repoClient.setUserAgent(userAgent);
+    repoClient.setBasePath(serviceUrl);
+    collectionsApi = new StreamingCollectionsApi(repoClient);
+  }
+
   private void moveCuVersions(CachedUrl cachedUrl) {
     String auid = cachedUrl.getArchivalUnit().getAuId();
-    File artifact = null;
-    String collectionid = null;
     CachedUrl[] cu_vers = cachedUrl.getCuVersions();
     for (CachedUrl cu : cu_vers) {
       String uri = cu.getUrl();
@@ -109,7 +146,7 @@ public class LockssRepositoryMover {
           .parseLong(cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME));
       InputStream instr = cu.getUnfilteredInputStream();
       try {
-        Artifact response = moveArtifactStream(auid, uri, collectionDate, instr, collectionid);
+        Artifact response = moveArtifactStream(auid, uri, collectionDate, instr, collection);
       } catch (ApiException e) {
         e.printStackTrace();
       }
@@ -123,17 +160,12 @@ public class LockssRepositoryMover {
   }
 
   private Artifact moveArtifactFile(String auid, String fileName, String collection, String uri,
-      String date) {
+      String date) throws ApiException {
     File artifact = new File(fileName);
     String collectionId = collection == null ? "lockss" : collection;
     Long collectionDate = Long.parseLong(date);
-    Artifact response = null;
-    try {
-      response = collectionsApi
-          .createArtifact(auid, uri, collectionDate, artifact, collectionId);
-    } catch (ApiException e) {
-      e.printStackTrace();
-    }
+    Artifact response = collectionsApi
+        .createArtifact(auid, uri, collectionDate, artifact, collectionId);
     return response;
   }
 }
