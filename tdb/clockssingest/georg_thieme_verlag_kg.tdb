@@ -38,13 +38,13 @@
     au < manifest ; exists ; 1999 ; 1999 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 34 ; 34 ; >
     au < finished ; manifest ; 2000 ; 2000 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; 2001 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 36 ; 36 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2002 ; 2002 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 38 ; 38 ; >
+    au < finished ; manifest ; 2002 ; 2002 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2003 ; 2003 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2004 ; 2004 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2005 ; 2005 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 40 ; 40 ; >
-    au < frozen ; exists ; 2006 ; 2006 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 41 ; 41 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 42 ; 42 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 43 ; 43 ; >
+    au < finished ; manifest ; 2005 ; 2005 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006 ; 2006 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 2007 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; 2008 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 45 ; 45 ; >
     au < finished ; finished ; 2011 ; 2011 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 46 ; 46 ; >
@@ -97,14 +97,14 @@
     param[journal_id] = 10.1055/s-00000002
     comment[years] = 2001-current
 
-    au < frozen ; exists ; 2001 ; 2001 ; Aktuelle Dermatologie Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Aktuelle Dermatologie Volume 28 ; 28 ; >
+    au < finished ; manifest ; 2001 ; 2001 ; Aktuelle Dermatologie Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; 2002 ; Aktuelle Dermatologie Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2003 ; 2003 ; Aktuelle Dermatologie Volume 29 ; 29 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2004 ; 2004 ; Aktuelle Dermatologie Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2004 ; 2004 ; Aktuelle Dermatologie Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2005 ; 2005 ; Aktuelle Dermatologie Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2006 ; 2006 ; Aktuelle Dermatologie Volume 32 ; 32 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Aktuelle Dermatologie Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Aktuelle Dermatologie Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2006 ; 2006 ; Aktuelle Dermatologie Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 2007 ; Aktuelle Dermatologie Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; 2008 ; Aktuelle Dermatologie Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; Aktuelle Dermatologie Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Dermatologie Volume 36 ; 36 ; >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 ; >
