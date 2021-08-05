@@ -85,7 +85,7 @@
                     https://www.fulcrum.org/ebooks/vq27zq50v/download
               No    https://www.fulcrum.org/downloads/vq27zq50v
             -->
-            <string>"^%downloads/[^?/]+", base_url</string>
+            <string>"^%sdownloads/[^?/]+", base_url</string>
         </list>
     </entry>
     <entry>
