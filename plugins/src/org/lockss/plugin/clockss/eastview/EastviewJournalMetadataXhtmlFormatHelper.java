@@ -50,10 +50,10 @@ import java.util.Map;
  *  Eastview Information Services
  *  
  */
-public class EastviewJournalMetadataHtmlFormatHelper
+public class EastviewJournalMetadataXhtmlFormatHelper
 implements SourceXmlSchemaHelper {
   
-  private static final Logger log = Logger.getLogger(EastviewJournalMetadataHtmlFormatHelper.class);
+  private static final Logger log = Logger.getLogger(EastviewJournalMetadataXhtmlFormatHelper.class);
   static protected final String PUBLICATION_TITLE_PATH = "/html/head/title";
   
   /*
@@ -91,13 +91,6 @@ implements SourceXmlSchemaHelper {
 
   // For journals, we treat each page as a seperate article
   private static final String top = "//html/body";
-
-  // The following are all relative to the article node
-  // from the immediately preceeding sibling -
-  private static String art_title = "/center/font/b";
-  private static String art_contrib = "/p[1]";
-  private static String art_sp = "/ul/li[4]/font";
-  protected static String ART_RAW_TITLE = "//html/head/title";
   
 
   /*
@@ -109,12 +102,7 @@ implements SourceXmlSchemaHelper {
   articleMap = new HashMap<String,XPathValue>();
   static {
     articleMap.put(PUBLICATION_TITLE_PATH, CLEAN_TEXT);
-    articleMap.put(ART_RAW_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
-    //This is raw title, it contains publisher acroname, like this:
-    //title: 31-05-1961(DASZD-No.005) НОВЫЕ КНИГИ
-    articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE); 
-    articleMap.put(art_contrib, XmlDomMetadataExtractor.TEXT_VALUE); 
-    articleMap.put(art_sp, STARTPAGE_VALUE);
+
   }
 
   /* 2.  Top level per-article node */
@@ -130,10 +118,6 @@ implements SourceXmlSchemaHelper {
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
     cookMap.put(PUBLICATION_TITLE_PATH, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(art_title, MetadataField.FIELD_ARTICLE_TITLE);
-    cookMap.put(art_contrib, 
-        new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CH)));
-    cookMap.put(art_sp, MetadataField.FIELD_START_PAGE);
   }
 
   /**
@@ -195,6 +179,5 @@ implements SourceXmlSchemaHelper {
   public String getFilenameXPathKey() {
     return null;
   }
-
 
 }
