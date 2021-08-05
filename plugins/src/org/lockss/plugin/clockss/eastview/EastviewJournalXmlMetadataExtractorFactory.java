@@ -41,9 +41,14 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.XPathXmlMetadataParser;
+import org.lockss.plugin.clockss.XmlFilteringInputStream;
+import org.lockss.util.LineRewritingReader;
 import org.lockss.util.Logger;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -51,6 +56,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.lockss.util.ReaderInputStream;
 
 
 public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
@@ -80,14 +87,19 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-      // Once you have it, just keep returning the same one. It won't change.
-
+      
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
-      if (cuBase.contains("DA-MLT/MTH/2002") || cuBase.contains("DA-MLT/MTH/2002")
+      log.debug3("Eastview Journal All Version: cuBase = " + cuBase);
+
+      if (cuBase.contains("DA-MLT/MTH/2001") || cuBase.contains("DA-MLT/MTH/199")) {
+        EastviewHelper = new EastviewJournalMetadataXhtmlFormatHelper();
+        log.debug3("Eastview Journal Early Version(199X - 2001): cuBase = " + cuBase);
+
+      } else if (cuBase.contains("DA-MLT/MTH/2002") || cuBase.contains("DA-MLT/MTH/2002")
               || cuBase.contains("DA-MLT/MTH/2004") || cuBase.contains("DA-MLT/MTH/2005")) {
         EastviewHelper = new EastviewJournalMetadataHtmlFormatHelper();
-        log.debug3("Eastview Journal Early Version: cuBase = " + cuBase);
+        log.debug3("Eastview Journal Early Version(2002 - 2005): cuBase = " + cuBase);
 
       } else {
         EastviewHelper = new EastviewJournalMetadataHelper();
@@ -219,6 +231,47 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+    }
+
+    /**
+     * <p>Some IOP XML files contains HTML4 entities, that trip the SAX parser.
+     * Work around them with Apache Commons Lang3.</p>
+     */
+    @Override
+    protected XPathXmlMetadataParser createXpathXmlMetadataParser() {
+      return new XPathXmlMetadataParser(getDoXmlFiltering()) {
+        @Override
+        protected InputStream getInputStreamFromCU(CachedUrl cu) {
+          if (isDoXmlFiltering()) {
+            return new XmlFilteringInputStream(new ReaderInputStream(new LineRewritingReader(new InputStreamReader(cu.getUnfilteredInputStream())) {
+              @Override
+              public String rewriteLine(String line) {
+                //Sample troubled line:
+                /*
+                <head>
+                <title>
+                03-31-2003(MTH-No.001) R&D AT THE RUSSIAN DEFENSE MINISTRY: RECOMMENDATIONS ON PLANNING</title>
+                </head>
+                 */
+                log.debug3("Eastview Journal line = " + line + ", unescapeHtml4 line = " + StringEscapeUtils.unescapeHtml4(line)
+                        + "escapeHtml4 line = " + StringEscapeUtils.escapeHtml4(line));
+                return StringEscapeUtils.unescapeHtml4(line);
+              }
+            }));
+          }
+          else {
+            return cu.getUnfilteredInputStream();
+          }
+        }
+      };
+    }
+
+    /**
+     * @see #createXpathXmlMetadataParser()
+     */
+    @Override
+    public boolean getDoXmlFiltering() {
+      return true;
     }
   }
 }

@@ -76,10 +76,10 @@ public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIterat
     return ALL_ZIP_XML_PATTERN_TEMPLATE;
   }
 
-
   private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.(xml)$", Pattern.CASE_INSENSITIVE);
   private static final String XML_REPLACEMENT = "/$1.xml";
   private static final String PDF_REPLACEMENT = "/$1.pdf";
+
 
   //For early years, like before 2002, the delivered content only have "xhtml"
   private static final Pattern XHTML_PATTERN = Pattern.compile("/(.*)\\.(xhtml)$", Pattern.CASE_INSENSITIVE);
@@ -109,6 +109,7 @@ public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIterat
     builder.addAspect(XML_PATTERN,
             PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+
     
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_ARTICLE_METADATA); // emit even without PDF
