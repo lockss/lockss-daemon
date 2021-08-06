@@ -2249,7 +2249,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Biological Journal of the Linnean Society Volume 99-101 ; 99-101 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Biological Journal of the Linnean Society Volume 102-104 ; 102-104 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Biological Journal of the Linnean Society Volume 105-107 ; 105-107 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Biological Journal of the Linnean Society Volume 108-110 ; 108-110 ; >
+    au < notReady ; exists ; 2013 ; 2013 ; Biological Journal of the Linnean Society Volume 108-110 ; 108-110 ; > #504 gateway timeout https://academic.oup.com/view-large/82253110
     au < manifest ; exists ; 2014 ; 2014 ; Biological Journal of the Linnean Society Volume 111-113 ; 111-113 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Biological Journal of the Linnean Society Volume 114-116 ; 114-116 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Biological Journal of the Linnean Society Volume 117-119 ; 117-119 ; >
@@ -14420,7 +14420,7 @@
     au < frozen ; exists ; 2009 ; 2009 ; Neurosurgery Volume 64-65 ; 64-65 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Neurosurgery Volume 66-67 ; 66-67 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Neurosurgery Volume 58,68-69 ; 58,68-69 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Neurosurgery Volume 59,70-71 ; 59,70-71 ; >
+    au < ingNotReady ; exists ; 2012 ; 2012 ; Neurosurgery Volume 59,70-71 ; 59,70-71 ; > #403 forbidden on an article. https://academic.oup.com/neurosurgery/article-pdf/70/2/306/30234209/neurosurgery-70-2-306.pdf
     au < frozen ; exists ; 2013 ; 2013 ; Neurosurgery Volume 60,72-73 ; 60,72-73 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Neurosurgery Volume 61,74-75 ; 61,74-75 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 ; >
