@@ -2486,24 +2486,24 @@
 
   }
 
-  {
-
-      title <
-        name = Early Modern Low Countries ;
-        eissn = 2543-1587
-      >
-
-      comment[publisher] = Utrecht University Library
-#      param[base_url] = https://www.emlc-journal.org/
-#     refresh of De Zeventiende Eeuw
-
-      au < manifest ; 2017 ; 1 ; Early Modern Low Countries Volume 2017 ; 2017 ; https://www.emlc-journal.org/ >
-      au < manifest ; 2018 ; 2 ; Early Modern Low Countries Volume 2018 ; 2018 ; https://www.emlc-journal.org/ >
-      au < manifest ; 2019 ; 3 ; Early Modern Low Countries Volume 2019 ; 2019 ; https://www.emlc-journal.org/ >
-      au < manifest ; 2020 ; 4 ; Early Modern Low Countries Volume 2020 ; 2020 ; https://www.emlc-journal.org/ >
-      au < expected ; 2021 ; 5 ; Early Modern Low Countries Volume 2021 ; 2021 ; https://www.emlc-journal.org/ >
-
-  }
+#  {
+#
+#      title <
+#        name = Early Modern Low Countries ;
+#        eissn = 2543-1587
+#      >
+#
+#      comment[publisher] = Utrecht University Library
+##      param[base_url] = https://www.emlc-journal.org/
+##     refresh of De Zeventiende Eeuw
+#
+#      au < manifest ; 2017 ; 1 ; Early Modern Low Countries Volume 2017 ; 2017 ; https://www.emlc-journal.org/ >
+#      au < manifest ; 2018 ; 2 ; Early Modern Low Countries Volume 2018 ; 2018 ; https://www.emlc-journal.org/ >
+#      au < manifest ; 2019 ; 3 ; Early Modern Low Countries Volume 2019 ; 2019 ; https://www.emlc-journal.org/ >
+#      au < manifest ; 2020 ; 4 ; Early Modern Low Countries Volume 2020 ; 2020 ; https://www.emlc-journal.org/ >
+#      au < expected ; 2021 ; 5 ; Early Modern Low Countries Volume 2021 ; 2021 ; https://www.emlc-journal.org/ >
+#
+#  }
 
   {
 
