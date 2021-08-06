@@ -315,7 +315,7 @@
 
       au < finished ; manifest ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; https://www.journalofaltmetrics.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ ; reingest4.clockss.org:8082 >
-      au < notReady ; exists ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; https://www.journalofaltmetrics.org/ ; > #502 upstream error https://d39af2mgp1pqhg.cloudfront.net/widget-popup.js
+      au < notReady ; exists ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; https://www.journalofaltmetrics.org/ ; > #502 upstream error https://d39af2mgp1pqhg.cloudfront.net/widget-popup.js,"Unknown host: d39af2mgp1pqhg.cloudfront.net"
       au < manifest ; exists ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 ; https://www.journalofaltmetrics.org/ ; >
 
   }
@@ -917,6 +917,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www.ai-journal.com/
 #      about page (with permission statement) is at https://ai-journal.com/about/ (no www)
+      #Moved to UCL Press
 
       au < finished ; finished ; 2000 ; 4 ; Archaeology International Volume 2000 ; 2000 ; https://ai-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://ai-journal.com/ ; reingest2.clockss.org:8085 >
@@ -940,9 +941,6 @@
       au < finished ; finished ; 2016 ; 19 ; Archaeology International Volume 2016 ; 2016 ; https://ai-journal.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 20 ; Archaeology International Volume 2017 ; 2017 ; https://ai-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ ; reingest5.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; 22 ; Archaeology International Volume 2019 ; 2019 ; https://ai-journal.com/ ; >
-      au < expected ; exists ; 2020 ; 23 ; Archaeology International Volume 2020 ; 2020 ; https://ai-journal.com/ ; >
-      au < expected ; exists ; 2021 ; 24 ; Archaeology International Volume 2021 ; 2021 ; https://ai-journal.com/ ; >
 
   }
 
@@ -1063,7 +1061,7 @@
       au < finished ; manifest ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; http://theoryandpractice.citizenscienceassociation.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 3 ; Citizen Science: Theory and Practice Volume 2018 ; 2018 ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < notReady ; exists ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; https://theoryandpractice.citizenscienceassociation.org/ ; > #403 Forbidden cloudfront.net
       au < manifest ; exists ; 2021 ; 6 ; Citizen Science: Theory and Practice Volume 2021 ; 2021 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
 
   }
@@ -2093,15 +2091,13 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ejmcm.com/
+      #moved to eJournalPlus
 
       au < finished ; finished ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; https://www.ejmcm.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; https://www.ejmcm.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; 6 ; European Journal of Molecular and Clinical Medicine Volume 2019 ; 2019 ; https://www.ejmcm.com/ ; > #Unable to fetch permission page
-      au < expected ; exists ; 2020 ; 7 ; European Journal of Molecular and Clinical Medicine Volume 2020 ; 2020 ; https://www.ejmcm.com/ ; > 
-      au < expected ; exists ; 2021 ; 8 ; European Journal of Molecular and Clinical Medicine Volume 2021 ; 2021 ; https://www.ejmcm.com/ ; > 
 
   }
 
@@ -2148,12 +2144,12 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://kula.uvic.ca/
+      #Moved to OJS https://kula.uvic.ca/index.php/kula
 
       au < finished ; finished ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; https://kula.uvic.ca/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 ; 2020 ; https://kula.uvic.ca/ ; >
-      au < expected ; exists ; 2021 ; 5 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2021 ; 2021 ; https://kula.uvic.ca/ ; >
+      au < superseded ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 [superseded] ; 2020 ; https://kula.uvic.ca/ ; >
 
   }
 
@@ -2804,6 +2800,7 @@
 
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.revue-relief.org/
+      #Moved to OJS https://revue-relief.org/
 
       au < finished ; finished ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; https://www.revue-relief.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ ; reingest2.clockss.org:8085 >
@@ -2818,8 +2815,7 @@
       au < finished ; manifest ; 2017 ; 11 ; RELIEF Volume 2017 ; 2017 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 12 ; RELIEF Volume 2018 ; 2018 ; https://www.revue-relief.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 13 ; RELIEF Volume 2019 ; 2019 ; https://www.revue-relief.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; 14 ; RELIEF Volume 2020 ; 2020 ; https://www.revue-relief.org/ ; >
-      au < expected ; exists ; 2021 ; 15 ; RELIEF Volume 2021 ; 2021 ; https://www.revue-relief.org/ ; >
+      au < frozen ; exists ; 2020 ; 14 ; RELIEF Volume 2020 ; 2020 ; https://www.revue-relief.org/ ; >
 
   }
 
