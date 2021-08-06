@@ -276,7 +276,7 @@
 
       au < released ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; https://www.journalofaltmetrics.org/ >
       au < released ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; https://www.journalofaltmetrics.org/ >
-      au < manifest ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; https://www.journalofaltmetrics.org/ >
+      au < notReady ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; https://www.journalofaltmetrics.org/ > #502 upstream error https://d39af2mgp1pqhg.cloudfront.net/widget-popup.js,"Unknown host: d39af2mgp1pqhg.cloudfront.net"
       au < manifest ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 ; https://www.journalofaltmetrics.org/ >
 
   }
@@ -840,8 +840,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://journal-buildingscities.org/
 
-      au < manifest ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; https://journal-buildingscities.org/ >
-      au < manifest ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; https://journal-buildingscities.org/ >
+      au < notReady ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; https://journal-buildingscities.org/ > #403 forbidden cloudfront.net
+      au < notReady ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; https://journal-buildingscities.org/ > #403 forbidden cloudfront.net
 
   }
 
@@ -887,32 +887,30 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www.ai-journal.com/
 #      about page (with permission statement) is at https://ai-journal.com/about/ (no www)
+      #Moved to UCL Press
 
-      au < released ; 2000 ; 4 ; Archaeology International Volume 2000 ; 2000 ; https://ai-journal.com/ >
-      au < released ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://ai-journal.com/ >
-      au < released ; 2002 ; 6 ; Archaeology International Volume 2002 ; 2002 ; https://ai-journal.com/ >
-      au < released ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://ai-journal.com/ >
-      au < released ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://ai-journal.com/ >
-      au < released ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; https://ai-journal.com/ >
+      au < down ; 2000 ; 4 ; Archaeology International Volume 2000 ; 2000 ; https://ai-journal.com/ >
+      au < down ; 2001 ; 5 ; Archaeology International Volume 2001 ; 2001 ; https://ai-journal.com/ >
+      au < down ; 2002 ; 6 ; Archaeology International Volume 2002 ; 2002 ; https://ai-journal.com/ >
+      au < down ; 2003 ; 7 ; Archaeology International Volume 2003 ; 2003 ; https://ai-journal.com/ >
+      au < down ; 2004 ; 8 ; Archaeology International Volume 2004 ; 2004 ; https://ai-journal.com/ >
+      au < down ; 2005 ; 9 ; Archaeology International Volume 2005 ; 2005 ; https://ai-journal.com/ >
       au < doesNotExist ; 2006 ; 10 ; Archaeology International Volume 2006 ; 2006 ; https://ai-journal.com/ >
       au < superseded ; 2007 ; 11 ; Archaeology International Volume 2007 [superseded] ; 2007 ; http://www.ai-journal.com/ >
-      au < released ; 2007 ; 11 ; Archaeology International Volume 2007 ; 2007 ; https://ai-journal.com/ >
+      au < down ; 2007 ; 11 ; Archaeology International Volume 2007 ; 2007 ; https://ai-journal.com/ >
       au < superseded ; 2008 ; 12 ; Archaeology International Volume 2008 [superseded] ; 2008 ; http://www.ai-journal.com/ >
-      au < released ; 2008 ; 12 ; Archaeology International Volume 2008 ; 2008 ; https://ai-journal.com/ >
+      au < down ; 2008 ; 12 ; Archaeology International Volume 2008 ; 2008 ; https://ai-journal.com/ >
       au < superseded ; 2009 ; 13 ; Archaeology International Volume 2009 [superseded] ; 2009 ; http://www.ai-journal.com/ >
-      au < released ; 2009 ; 13 ; Archaeology International Volume 2009 ; 2009 ; https://ai-journal.com/ >
-      au < manifest ; 2012 ; 15 ; Archaeology International Volume 2012 ; 2012 ; https://ai-journal.com/ >
-      au < manifest ; 2013 ; 16 ; Archaeology International Volume 2013 ; 2013 ; https://ai-journal.com/ >
-      au < manifest ; 2014 ; 17 ; Archaeology International Volume 2014 ; 2014 ; https://ai-journal.com/ >
+      au < down ; 2009 ; 13 ; Archaeology International Volume 2009 ; 2009 ; https://ai-journal.com/ >
+      au < doNotProcess ; 2012 ; 15 ; Archaeology International Volume 2012 ; 2012 ; https://ai-journal.com/ >
+      au < doNotProcess ; 2013 ; 16 ; Archaeology International Volume 2013 ; 2013 ; https://ai-journal.com/ >
+      au < doNotProcess ; 2014 ; 17 ; Archaeology International Volume 2014 ; 2014 ; https://ai-journal.com/ >
       au < superseded ; 2015 ; 18 ; Archaeology International Volume 2015 [superseded] ; 2015 ; http://www.ai-journal.com/ >
-      au < manifest ; 2015 ; 18 ; Archaeology International Volume 2015 ; 2015 ; https://ai-journal.com/ >
+      au < doNotProcess ; 2015 ; 18 ; Archaeology International Volume 2015 ; 2015 ; https://ai-journal.com/ >
       au < superseded ; 2016 ; 19 ; Archaeology International Volume 2016 [superseded] ; 2016 ; http://www.ai-journal.com/ >
-      au < released ; 2016 ; 19 ; Archaeology International Volume 2016 ; 2016 ; https://ai-journal.com/ >
-      au < released ; 2017 ; 20 ; Archaeology International Volume 2017 ; 2017 ; https://ai-journal.com/ >
-      au < released ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ >
-      au < expected ; 2019 ; 22 ; Archaeology International Volume 2019 ; 2019 ; https://ai-journal.com/ >
-      au < manifest ; 2020 ; 23 ; Archaeology International Volume 2020 ; 2020 ; https://ai-journal.com/ >
-      au < expected ; 2021 ; 24 ; Archaeology International Volume 2021 ; 2021 ; https://ai-journal.com/ >
+      au < down ; 2016 ; 19 ; Archaeology International Volume 2016 ; 2016 ; https://ai-journal.com/ >
+      au < down ; 2017 ; 20 ; Archaeology International Volume 2017 ; 2017 ; https://ai-journal.com/ >
+      au < down ; 2018 ; 21 ; Archaeology International Volume 2018 ; 2018 ; https://ai-journal.com/ >
 
   }
 
@@ -1033,7 +1031,7 @@
       au < released ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; https://theoryandpractice.citizenscienceassociation.org/ >
       au < released ; 2018 ; 3 ; Citizen Science: Theory and Practice Volume 2018 ; 2018 ; https://theoryandpractice.citizenscienceassociation.org/ >
       au < released ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 ; https://theoryandpractice.citizenscienceassociation.org/ >
-      au < manifest ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; https://theoryandpractice.citizenscienceassociation.org/ >
+      au < notReady ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; https://theoryandpractice.citizenscienceassociation.org/ > #403 Forbidden cloudfront.net
       au < manifest ; 2021 ; 6 ; Citizen Science: Theory and Practice Volume 2021 ; 2021 ; https://theoryandpractice.citizenscienceassociation.org/ >
 
   }
@@ -2008,15 +2006,13 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ejmcm.com/
+      #moved to eJournalPlus
 
       au < released ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; https://www.ejmcm.com/ >
       au < released ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; https://www.ejmcm.com/ >
       au < released ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ >
       au < released ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ >
       au < released ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ >
-      au < manifest ; 2019 ; 6 ; European Journal of Molecular and Clinical Medicine Volume 2019 ; 2019 ; https://www.ejmcm.com/ >
-      au < expected ; 2020 ; 7 ; European Journal of Molecular and Clinical Medicine Volume 2020 ; 2020 ; https://www.ejmcm.com/ >
-      au < expected ; 2021 ; 8 ; European Journal of Molecular and Clinical Medicine Volume 2021 ; 2021 ; https://www.ejmcm.com/ >
 
   }
 
@@ -2063,12 +2059,12 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://kula.uvic.ca/
+      #Moved to OJS https://kula.uvic.ca/index.php/kula
 
       au < released ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ >
       au < released ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ >
       au < released ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; https://kula.uvic.ca/ >
-      au < manifest ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 ; 2020 ; https://kula.uvic.ca/ >
-      au < expected ; 2021 ; 5 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2021 ; 2021 ; https://kula.uvic.ca/ >
+      au < doNotProcess ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 ; 2020 ; https://kula.uvic.ca/ >
 
   }
 
@@ -2686,22 +2682,22 @@
 
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.revue-relief.org/
+      #Moved to OJS https://revue-relief.org/
 
-      au < released ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; https://www.revue-relief.org/ >
-      au < released ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ >
-      au < released ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; https://www.revue-relief.org/ >
-      au < released ; 2010 ; 4 ; RELIEF Volume 2010 ; 2010 ; https://www.revue-relief.org/ >
-      au < released ; 2011 ; 5 ; RELIEF Volume 2011 ; 2011 ; https://www.revue-relief.org/ >
-      au < released ; 2012 ; 6 ; RELIEF Volume 2012 ; 2012 ; https://www.revue-relief.org/ >
-      au < released ; 2013 ; 7 ; RELIEF Volume 2013 ; 2013 ; https://www.revue-relief.org/ >
-      au < released ; 2014 ; 8 ; RELIEF Volume 2014 ; 2014 ; https://www.revue-relief.org/ >
-      au < released ; 2015 ; 9 ; RELIEF Volume 2015 ; 2015 ; https://www.revue-relief.org/ >
-      au < released ; 2016 ; 10 ; RELIEF Volume 2016 ; 2016 ; https://www.revue-relief.org/ >
-      au < released ; 2017 ; 11 ; RELIEF Volume 2017 ; 2017 ; https://www.revue-relief.org/ >
-      au < released ; 2018 ; 12 ; RELIEF Volume 2018 ; 2018 ; https://www.revue-relief.org/ >
-      au < released ; 2019 ; 13 ; RELIEF Volume 2019 ; 2019 ; https://www.revue-relief.org/ >
-      au < manifest ; 2020 ; 14 ; RELIEF Volume 2020 ; 2020 ; https://www.revue-relief.org/ >
-      au < expected ; 2021 ; 15 ; RELIEF Volume 2021 ; 2021 ; https://www.revue-relief.org/ >
+      au < down ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; https://www.revue-relief.org/ >
+      au < down ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; https://www.revue-relief.org/ >
+      au < down ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; https://www.revue-relief.org/ >
+      au < down ; 2010 ; 4 ; RELIEF Volume 2010 ; 2010 ; https://www.revue-relief.org/ >
+      au < down ; 2011 ; 5 ; RELIEF Volume 2011 ; 2011 ; https://www.revue-relief.org/ >
+      au < down ; 2012 ; 6 ; RELIEF Volume 2012 ; 2012 ; https://www.revue-relief.org/ >
+      au < down ; 2013 ; 7 ; RELIEF Volume 2013 ; 2013 ; https://www.revue-relief.org/ >
+      au < down ; 2014 ; 8 ; RELIEF Volume 2014 ; 2014 ; https://www.revue-relief.org/ >
+      au < down ; 2015 ; 9 ; RELIEF Volume 2015 ; 2015 ; https://www.revue-relief.org/ >
+      au < down ; 2016 ; 10 ; RELIEF Volume 2016 ; 2016 ; https://www.revue-relief.org/ >
+      au < down ; 2017 ; 11 ; RELIEF Volume 2017 ; 2017 ; https://www.revue-relief.org/ >
+      au < down ; 2018 ; 12 ; RELIEF Volume 2018 ; 2018 ; https://www.revue-relief.org/ >
+      au < down ; 2019 ; 13 ; RELIEF Volume 2019 ; 2019 ; https://www.revue-relief.org/ >
+      au < doNotProcess ; 2020 ; 14 ; RELIEF Volume 2020 ; 2020 ; https://www.revue-relief.org/ >
 
   }
 
