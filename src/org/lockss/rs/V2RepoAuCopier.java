@@ -92,6 +92,8 @@ public class V2RepoAuCopier {
 
   public V2RepoAuCopier() {
     Configuration config = ConfigManager.getCurrentConfig();
+    //TODO: There are currently no defaults for any of these.
+    //FIXME: username password should not be read from a config file.
     String rspec= config.get(PARAM_V2_REPO_SPEC);
     String ruser=config.get(PARAM_V2_REPO_USER);
     String rpass=config.get(PARAM_V2_REPO_PASSWD);
@@ -100,14 +102,28 @@ public class V2RepoAuCopier {
   }
 
 
+  /**
+   * The primary constructor for a V2RepoAuCopier
+   * @param rspec The v2 RepoSpec string
+   * @param ruser The v2 login user
+   * @param rpass The v2 login password
+   */
   public V2RepoAuCopier(String rspec, String ruser, String rpass) {
     initClient(rspec, ruser, rpass);
  }
 
+  /**
+   * Move one au as identified by the name of the au
+   * @param auId The ArchivalUnit Id string
+   */
   public void moveAu(String auId) {
     moveAu(LockssDaemon.getLockssDaemon().getPluginManager().getAuFromId(auId));
   }
 
+  /**
+   * Move one AU
+   * @param au The ArchivalUnit to move
+   */
   public void moveAu(ArchivalUnit au) {
     /* get Au items from Lockss*/
     for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
@@ -116,6 +132,12 @@ public class V2RepoAuCopier {
     }
   }
 
+  /**
+   * Initialization for Rest client
+   * @param rspec The v2 RepoSpec string
+   * @param ruser The v2 login user
+   * @param rpass The v2 login password
+   */
   protected void initClient(String rspec, String ruser, String rpass) {
     try {
       this.repoSpec=RepoSpec.fromSpec(rspec);
@@ -147,10 +169,14 @@ public class V2RepoAuCopier {
       InputStream instr = cu.getUnfilteredInputStream();
       try {
         Artifact response = moveArtifactStream(auid, uri, collectionDate, instr, collection);
-      } catch (ApiException e) {
-        e.printStackTrace();
+        //TODO: what needs to be done with the response?
+        // Is there data that needs to be moved on an artifact basis?
+      } catch (ApiException ae) {
+        log.error("Attempt to move uri " + uri + " in au " + auid + "failed:" + ae.getCode());
+        //TODO: need much more complete error handling here.
       }
     }
+    log.debug3("Completed move of all versions of " + cachedUrl.getUrl());
   }
 
 
