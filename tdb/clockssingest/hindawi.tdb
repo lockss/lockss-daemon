@@ -8017,7 +8017,7 @@
     au < manifest ; exists ; 2010 ; Journal of Ophthalmology Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Ophthalmology Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Ophthalmology Volume 2016 ; 2016 ; 2016 ; >
@@ -8517,7 +8517,7 @@
     au < manifest ; exists ; 2010 ; Journal of Signal Transduction Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Signal Transduction Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Signal Transduction Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Journal of Signal Transduction Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Signal Transduction Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Signal Transduction Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Signal Transduction Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Signal Transduction Volume 2016 ; 2016 ; 2016 ; >
@@ -8573,7 +8573,7 @@
 
     param[journal_id] = jse
 
-    au < ready ; exists ; 2013 ; Journal of Solar Energy Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Journal of Solar Energy Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Solar Energy Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Solar Energy Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Solar Energy Volume 2016 ; 2016 ; 2016 ; >
@@ -10113,7 +10113,7 @@
     param[journal_id] = scientifica
 
     au < manifest ; exists ; 2012 ; Scientifica Volume 2012 ; 2012 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Scientifica Volume 2013 ; 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; Scientifica Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Scientifica Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Scientifica Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Scientifica Volume 2016 ; 2016 ; 2016 ; >
