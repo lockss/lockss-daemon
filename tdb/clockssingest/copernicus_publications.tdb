@@ -191,10 +191,10 @@
         au < manifest ; exists ; 1995 ; 1995 ; Annales Geophysicae Volume 13 [abstracts only] ; 13 ; >
       }
 
-      au < testing ; exists ; 1996 ; 1996 ; Annales Geophysicae Volume 14 ; 14 ; >
-      au < testing ; exists ; 1997 ; 1997 ; Annales Geophysicae Volume 15 ; 15 ; >
-      au < testing ; exists ; 1998 ; 1998 ; Annales Geophysicae Volume 16 ; 16 ; >
-      au < testing ; exists ; 1999 ; 1999 ; Annales Geophysicae Volume 17 ; 17 ; >
+      au < ready ; exists ; 1996 ; 1996 ; Annales Geophysicae Volume 14 ; 14 ; >
+      au < ready ; exists ; 1997 ; 1997 ; Annales Geophysicae Volume 15 ; 15 ; >
+      au < ready ; exists ; 1998 ; 1998 ; Annales Geophysicae Volume 16 ; 16 ; >
+      au < ready ; exists ; 1999 ; 1999 ; Annales Geophysicae Volume 17 ; 17 ; >
       au < finished ; crawling ; 2000 ; 2000 ; Annales Geophysicae Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 2001 ; Annales Geophysicae Volume 19 ; 19 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2002 ; 2002 ; Annales Geophysicae Volume 20 ; 20 ; reingest5.clockss.org:8082 >
@@ -233,7 +233,7 @@
       {
       comment[pdf] = https://doi.fbn-dummerstorf.de/ for 2013 & 2014
 
-      au < testing ; exists ; 1999 ; 1999 ; Archives Animal Breeding Volume 42 ; 42 ; >
+      au < ready ; exists ; 1999 ; 1999 ; Archives Animal Breeding Volume 42 ; 42 ; >
       au < finished ; crawling ; 2000 ; 2000 ; Archives Animal Breeding Volume 43 ; 43 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2001 ; 2001 ; Archives Animal Breeding Volume 44 ; 44 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2002 ; 2002 ; Archives Animal Breeding Volume 45 ; 45 ; reingest2.clockss.org:8085 >
@@ -523,53 +523,53 @@
       param[base_url] = https://egqsj.copernicus.org/
       param[home_url] = https://www.eg-quaternary-science-journal.net/
 
-      au < testing ; exists ; 1951 ; 1951 ; E&G Quaternary Science Journal Volume 1 ; 1 ; >
-      au < testing ; exists ; 1952 ; 1952 ; E&G Quaternary Science Journal Volume 2 ; 2 ; >
-      au < testing ; exists ; 1953 ; 1953 ; E&G Quaternary Science Journal Volume 3 ; 3 ; >
-      au < testing ; exists ; 1954 ; 1954 ; E&G Quaternary Science Journal Volume 4-5 ; 4-5 ; >
-      au < testing ; exists ; 1955 ; 1955 ; E&G Quaternary Science Journal Volume 6 ; 6 ; >
-      au < testing ; exists ; 1956 ; 1956 ; E&G Quaternary Science Journal Volume 7 ; 7 ; >
-      au < testing ; exists ; 1957 ; 1957 ; E&G Quaternary Science Journal Volume 8 ; 8 ; >
-      au < testing ; exists ; 1958 ; 1958 ; E&G Quaternary Science Journal Volume 9 ; 9 ; >
-      au < testing ; exists ; 1959 ; 1959 ; E&G Quaternary Science Journal Volume 10 ; 10 ; >
-      au < testing ; exists ; 1960 ; 1960 ; E&G Quaternary Science Journal Volume 11 ; 11 ; >
-      au < testing ; exists ; 1961 ; 1961 ; E&G Quaternary Science Journal Volume 12 ; 12 ; >
-      au < testing ; exists ; 1962 ; 1962 ; E&G Quaternary Science Journal Volume 13 ; 13 ; >
+      au < ready ; exists ; 1951 ; 1951 ; E&G Quaternary Science Journal Volume 1 ; 1 ; >
+      au < ready ; exists ; 1952 ; 1952 ; E&G Quaternary Science Journal Volume 2 ; 2 ; >
+      au < ready ; exists ; 1953 ; 1953 ; E&G Quaternary Science Journal Volume 3 ; 3 ; >
+      au < ready ; exists ; 1954 ; 1954 ; E&G Quaternary Science Journal Volume 4-5 ; 4-5 ; >
+      au < ready ; exists ; 1955 ; 1955 ; E&G Quaternary Science Journal Volume 6 ; 6 ; >
+      au < ready ; exists ; 1956 ; 1956 ; E&G Quaternary Science Journal Volume 7 ; 7 ; >
+      au < ready ; exists ; 1957 ; 1957 ; E&G Quaternary Science Journal Volume 8 ; 8 ; >
+      au < ready ; exists ; 1958 ; 1958 ; E&G Quaternary Science Journal Volume 9 ; 9 ; >
+      au < ready ; exists ; 1959 ; 1959 ; E&G Quaternary Science Journal Volume 10 ; 10 ; >
+      au < ready ; exists ; 1960 ; 1960 ; E&G Quaternary Science Journal Volume 11 ; 11 ; >
+      au < ready ; exists ; 1961 ; 1961 ; E&G Quaternary Science Journal Volume 12 ; 12 ; >
+      au < ready ; exists ; 1962 ; 1962 ; E&G Quaternary Science Journal Volume 13 ; 13 ; >
       au < testing ; exists ; 1963 ; 1963 ; E&G Quaternary Science Journal Volume 14 ; 14 ; >
-      au < testing ; exists ; 1964 ; 1964 ; E&G Quaternary Science Journal Volume 15 ; 15 ; >
-      au < testing ; exists ; 1965 ; 1965 ; E&G Quaternary Science Journal Volume 16 ; 16 ; >
+      au < ready ; exists ; 1964 ; 1964 ; E&G Quaternary Science Journal Volume 15 ; 15 ; >
+      au < ready ; exists ; 1965 ; 1965 ; E&G Quaternary Science Journal Volume 16 ; 16 ; >
       au < testing ; exists ; 1966 ; 1966 ; E&G Quaternary Science Journal Volume 17 ; 17 ; >
-      au < testing ; exists ; 1967 ; 1967 ; E&G Quaternary Science Journal Volume 18 ; 18 ; >
-      au < testing ; exists ; 1968 ; 1968 ; E&G Quaternary Science Journal Volume 19 ; 19 ; >
+      au < ready ; exists ; 1967 ; 1967 ; E&G Quaternary Science Journal Volume 18 ; 18 ; >
+      au < ready ; exists ; 1968 ; 1968 ; E&G Quaternary Science Journal Volume 19 ; 19 ; >
       au < testing ; exists ; 1969 ; 1969 ; E&G Quaternary Science Journal Volume 20 ; 20 ; >
       au < testing ; exists ; 1970 ; 1970 ; E&G Quaternary Science Journal Volume 21 ; 21 ; >
       au < testing ; exists ; 1971 ; 1971 ; E&G Quaternary Science Journal Volume 22 ; 22 ; >
-      au < testing ; exists ; 1973 ; 1973 ; E&G Quaternary Science Journal Volume 23-24 ; 23-24 ; >
-      au < testing ; exists ; 1974 ; 1974 ; E&G Quaternary Science Journal Volume 25 ; 25 ; >
-      au < testing ; exists ; 1975 ; 1975 ; E&G Quaternary Science Journal Volume 26 ; 26 ; >
-      au < testing ; exists ; 1976 ; 1976 ; E&G Quaternary Science Journal Volume 27 ; 27 ; >
-      au < testing ; exists ; 1978 ; 1978 ; E&G Quaternary Science Journal Volume 28 ; 28 ; >
-      au < testing ; exists ; 1979 ; 1979 ; E&G Quaternary Science Journal Volume 29 ; 29 ; >
-      au < testing ; exists ; 1980 ; 1980 ; E&G Quaternary Science Journal Volume 30 ; 30 ; >
-      au < manifest ; exists ; 1981 ; 1981 ; E&G Quaternary Science Journal Volume 31 ; 31 ; >
-      au < manifest ; exists ; 1982 ; 1982 ; E&G Quaternary Science Journal Volume 32 ; 32 ; >
-      au < manifest ; exists ; 1983 ; 1983 ; E&G Quaternary Science Journal Volume 33 ; 33 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; E&G Quaternary Science Journal Volume 34 ; 34 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; E&G Quaternary Science Journal Volume 35 ; 35 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; E&G Quaternary Science Journal Volume 36 ; 36 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; E&G Quaternary Science Journal Volume 37 ; 37 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; E&G Quaternary Science Journal Volume 38 ; 38 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; E&G Quaternary Science Journal Volume 39 ; 39 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; E&G Quaternary Science Journal Volume 40 ; 40 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; E&G Quaternary Science Journal Volume 41 ; 41 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; E&G Quaternary Science Journal Volume 42 ; 42 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; E&G Quaternary Science Journal Volume 43 ; 43 ; >
-      au < manifest ; exists ; 1994 ; 1994 ; E&G Quaternary Science Journal Volume 44 ; 44 ; >
-      au < manifest ; exists ; 1995 ; 1995 ; E&G Quaternary Science Journal Volume 45 ; 45 ; >
-      au < manifest ; exists ; 1996 ; 1996 ; E&G Quaternary Science Journal Volume 46 ; 46 ; >
-      au < manifest ; exists ; 1997 ; 1997 ; E&G Quaternary Science Journal Volume 47 ; 47 ; >
-      au < manifest ; exists ; 1998 ; 1998 ; E&G Quaternary Science Journal Volume 48 ; 48 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; E&G Quaternary Science Journal Volume 49 ; 49 ; >
+      au < ready ; exists ; 1973 ; 1973 ; E&G Quaternary Science Journal Volume 23-24 ; 23-24 ; >
+      au < ready ; exists ; 1974 ; 1974 ; E&G Quaternary Science Journal Volume 25 ; 25 ; >
+      au < ready ; exists ; 1975 ; 1975 ; E&G Quaternary Science Journal Volume 26 ; 26 ; >
+      au < ready ; exists ; 1976 ; 1976 ; E&G Quaternary Science Journal Volume 27 ; 27 ; >
+      au < ready ; exists ; 1978 ; 1978 ; E&G Quaternary Science Journal Volume 28 ; 28 ; >
+      au < ready ; exists ; 1979 ; 1979 ; E&G Quaternary Science Journal Volume 29 ; 29 ; >
+      au < ready ; exists ; 1980 ; 1980 ; E&G Quaternary Science Journal Volume 30 ; 30 ; >
+      au < testing ; exists ; 1981 ; 1981 ; E&G Quaternary Science Journal Volume 31 ; 31 ; >
+      au < testing ; exists ; 1982 ; 1982 ; E&G Quaternary Science Journal Volume 32 ; 32 ; >
+      au < testing ; exists ; 1983 ; 1983 ; E&G Quaternary Science Journal Volume 33 ; 33 ; >
+      au < testing ; exists ; 1984 ; 1984 ; E&G Quaternary Science Journal Volume 34 ; 34 ; >
+      au < testing ; exists ; 1985 ; 1985 ; E&G Quaternary Science Journal Volume 35 ; 35 ; >
+      au < testing ; exists ; 1986 ; 1986 ; E&G Quaternary Science Journal Volume 36 ; 36 ; >
+      au < testing ; exists ; 1987 ; 1987 ; E&G Quaternary Science Journal Volume 37 ; 37 ; >
+      au < testing ; exists ; 1988 ; 1988 ; E&G Quaternary Science Journal Volume 38 ; 38 ; >
+      au < testing ; exists ; 1989 ; 1989 ; E&G Quaternary Science Journal Volume 39 ; 39 ; >
+      au < testing ; exists ; 1990 ; 1990 ; E&G Quaternary Science Journal Volume 40 ; 40 ; >
+      au < testing ; exists ; 1991 ; 1991 ; E&G Quaternary Science Journal Volume 41 ; 41 ; >
+      au < testing ; exists ; 1992 ; 1992 ; E&G Quaternary Science Journal Volume 42 ; 42 ; >
+      au < testing ; exists ; 1993 ; 1993 ; E&G Quaternary Science Journal Volume 43 ; 43 ; >
+      au < testing ; exists ; 1994 ; 1994 ; E&G Quaternary Science Journal Volume 44 ; 44 ; >
+      au < testing ; exists ; 1995 ; 1995 ; E&G Quaternary Science Journal Volume 45 ; 45 ; >
+      au < testing ; exists ; 1996 ; 1996 ; E&G Quaternary Science Journal Volume 46 ; 46 ; >
+      au < testing ; exists ; 1997 ; 1997 ; E&G Quaternary Science Journal Volume 47 ; 47 ; >
+      au < testing ; exists ; 1998 ; 1998 ; E&G Quaternary Science Journal Volume 48 ; 48 ; >
+      au < testing ; exists ; 1999 ; 1999 ; E&G Quaternary Science Journal Volume 49 ; 49 ; >
       au < finished ; crawling ; 2000 ; 2000 ; E&G Quaternary Science Journal Volume 50 ; 50 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 2002 ; E&G Quaternary Science Journal Volume 51 ; 51 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2003 ; 2003 ; E&G Quaternary Science Journal Volume 52 ; 52 ; reingest5.clockss.org:8082 >
@@ -623,8 +623,8 @@
       param[home_url] = https://www.fossil-record.net/
       # Abstract only, not Open Access, from volume 1 to 16, eissn 1860-1014
 
-      au < testing ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 ; 1 ; >
-      au < testing ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 ; 2 ; >
+      au < ready ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 ; 1 ; >
+      au < ready ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 ; 2 ; >
       au < finished ; crawling ; 2000 ; 2000 ; Fossil Record Reports Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 2001 ; Fossil Record Reports Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 2002 ; Fossil Record Reports Volume 5 ; 5 ; reingest5.clockss.org:8082 >
@@ -666,59 +666,59 @@
       comment[notReady] = This journal is open access one year after publication. eg 2013 volume is available jan 1 2015.
 
       au < testing ; exists ; 1946 ; 1946 ; Geographica Helvetica Volume 1 ; 1 ; >
-      au < testing ; exists ; 1947 ; 1947 ; Geographica Helvetica Volume 2 ; 2 ; >
-      au < testing ; exists ; 1948 ; 1948 ; Geographica Helvetica Volume 3 ; 3 ; >
-      au < testing ; exists ; 1949 ; 1949 ; Geographica Helvetica Volume 4 ; 4 ; >
-      au < testing ; exists ; 1950 ; 1950 ; Geographica Helvetica Volume 5 ; 5 ; >
-      au < testing ; exists ; 1951 ; 1951 ; Geographica Helvetica Volume 6 ; 6 ; >
-      au < testing ; exists ; 1952 ; 1952 ; Geographica Helvetica Volume 7 ; 7 ; >
-      au < testing ; exists ; 1953 ; 1953 ; Geographica Helvetica Volume 8 ; 8 ; >
-      au < testing ; exists ; 1954 ; 1954 ; Geographica Helvetica Volume 9 ; 9 ; >
+      au < ready ; exists ; 1947 ; 1947 ; Geographica Helvetica Volume 2 ; 2 ; >
+      au < ready ; exists ; 1948 ; 1948 ; Geographica Helvetica Volume 3 ; 3 ; >
+      au < ready ; exists ; 1949 ; 1949 ; Geographica Helvetica Volume 4 ; 4 ; >
+      au < ready ; exists ; 1950 ; 1950 ; Geographica Helvetica Volume 5 ; 5 ; >
+      au < ready ; exists ; 1951 ; 1951 ; Geographica Helvetica Volume 6 ; 6 ; >
+      au < ready ; exists ; 1952 ; 1952 ; Geographica Helvetica Volume 7 ; 7 ; >
+      au < ready ; exists ; 1953 ; 1953 ; Geographica Helvetica Volume 8 ; 8 ; >
+      au < ready ; exists ; 1954 ; 1954 ; Geographica Helvetica Volume 9 ; 9 ; >
       au < testing ; exists ; 1955 ; 1955 ; Geographica Helvetica Volume 10 ; 10 ; >
-      au < testing ; exists ; 1956 ; 1956 ; Geographica Helvetica Volume 11 ; 11 ; >
-      au < testing ; exists ; 1957 ; 1957 ; Geographica Helvetica Volume 12 ; 12 ; >
-      au < testing ; exists ; 1958 ; 1958 ; Geographica Helvetica Volume 13 ; 13 ; >
-      au < testing ; exists ; 1959 ; 1959 ; Geographica Helvetica Volume 14 ; 14 ; >
-      au < testing ; exists ; 1960 ; 1960 ; Geographica Helvetica Volume 15 ; 15 ; >
-      au < testing ; exists ; 1961 ; 1961 ; Geographica Helvetica Volume 16 ; 16 ; >
-      au < testing ; exists ; 1962 ; 1962 ; Geographica Helvetica Volume 17 ; 17 ; >
-      au < testing ; exists ; 1963 ; 1963 ; Geographica Helvetica Volume 18 ; 18 ; >
-      au < testing ; exists ; 1964 ; 1964 ; Geographica Helvetica Volume 19 ; 19 ; >
-      au < testing ; exists ; 1965 ; 1965 ; Geographica Helvetica Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1966 ; 1966 ; Geographica Helvetica Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1967 ; 1967 ; Geographica Helvetica Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; Geographica Helvetica Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1969 ; 1969 ; Geographica Helvetica Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1970 ; 1970 ; Geographica Helvetica Volume 25 ; 25 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; Geographica Helvetica Volume 26 ; 26 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; Geographica Helvetica Volume 27 ; 27 ; >
-      au < manifest ; exists ; 1973 ; 1973 ; Geographica Helvetica Volume 28 ; 28 ; >
-      au < manifest ; exists ; 1974 ; 1974 ; Geographica Helvetica Volume 29 ; 29 ; >
-      au < manifest ; exists ; 1975 ; 1975 ; Geographica Helvetica Volume 30 ; 30 ; >
-      au < manifest ; exists ; 1976 ; 1976 ; Geographica Helvetica Volume 31 ; 31 ; >
-      au < manifest ; exists ; 1977 ; 1977 ; Geographica Helvetica Volume 32 ; 32 ; >
-      au < manifest ; exists ; 1978 ; 1978 ; Geographica Helvetica Volume 33 ; 33 ; >
-      au < manifest ; exists ; 1979 ; 1979 ; Geographica Helvetica Volume 34 ; 34 ; >
-      au < manifest ; exists ; 1980 ; 1980 ; Geographica Helvetica Volume 35 ; 35 ; >
-      au < manifest ; exists ; 1981 ; 1981 ; Geographica Helvetica Volume 36 ; 36 ; >
-      au < manifest ; exists ; 1982 ; 1982 ; Geographica Helvetica Volume 37 ; 37 ; >
-      au < manifest ; exists ; 1983 ; 1983 ; Geographica Helvetica Volume 38 ; 38 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; Geographica Helvetica Volume 39 ; 39 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; Geographica Helvetica Volume 40 ; 40 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; Geographica Helvetica Volume 41 ; 41 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Geographica Helvetica Volume 42 ; 42 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Geographica Helvetica Volume 43 ; 43 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; Geographica Helvetica Volume 44 ; 44 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; Geographica Helvetica Volume 45 ; 45 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; Geographica Helvetica Volume 46 ; 46 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; Geographica Helvetica Volume 47 ; 47 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; Geographica Helvetica Volume 48 ; 48 ; >
-      au < manifest ; exists ; 1994 ; 1994 ; Geographica Helvetica Volume 49 ; 49 ; >
-      au < manifest ; exists ; 1995 ; 1995 ; Geographica Helvetica Volume 50 ; 50 ; >
-      au < manifest ; exists ; 1996 ; 1996 ; Geographica Helvetica Volume 51 ; 51 ; >
-      au < manifest ; exists ; 1997 ; 1997 ; Geographica Helvetica Volume 52 ; 52 ; >
-      au < manifest ; exists ; 1998 ; 1998 ; Geographica Helvetica Volume 53 ; 53 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; Geographica Helvetica Volume 54 ; 54 ; >
+      au < ready ; exists ; 1956 ; 1956 ; Geographica Helvetica Volume 11 ; 11 ; >
+      au < ready ; exists ; 1957 ; 1957 ; Geographica Helvetica Volume 12 ; 12 ; >
+      au < ready ; exists ; 1958 ; 1958 ; Geographica Helvetica Volume 13 ; 13 ; >
+      au < ready ; exists ; 1959 ; 1959 ; Geographica Helvetica Volume 14 ; 14 ; >
+      au < ready ; exists ; 1960 ; 1960 ; Geographica Helvetica Volume 15 ; 15 ; >
+      au < ready ; exists ; 1961 ; 1961 ; Geographica Helvetica Volume 16 ; 16 ; >
+      au < ready ; exists ; 1962 ; 1962 ; Geographica Helvetica Volume 17 ; 17 ; >
+      au < ready ; exists ; 1963 ; 1963 ; Geographica Helvetica Volume 18 ; 18 ; >
+      au < ready ; exists ; 1964 ; 1964 ; Geographica Helvetica Volume 19 ; 19 ; >
+      au < ready ; exists ; 1965 ; 1965 ; Geographica Helvetica Volume 20 ; 20 ; >
+      au < testing ; exists ; 1966 ; 1966 ; Geographica Helvetica Volume 21 ; 21 ; >
+      au < testing ; exists ; 1967 ; 1967 ; Geographica Helvetica Volume 22 ; 22 ; >
+      au < testing ; exists ; 1968 ; 1968 ; Geographica Helvetica Volume 23 ; 23 ; >
+      au < testing ; exists ; 1969 ; 1969 ; Geographica Helvetica Volume 24 ; 24 ; >
+      au < testing ; exists ; 1970 ; 1970 ; Geographica Helvetica Volume 25 ; 25 ; >
+      au < testing ; exists ; 1971 ; 1971 ; Geographica Helvetica Volume 26 ; 26 ; >
+      au < testing ; exists ; 1972 ; 1972 ; Geographica Helvetica Volume 27 ; 27 ; >
+      au < testing ; exists ; 1973 ; 1973 ; Geographica Helvetica Volume 28 ; 28 ; >
+      au < testing ; exists ; 1974 ; 1974 ; Geographica Helvetica Volume 29 ; 29 ; >
+      au < testing ; exists ; 1975 ; 1975 ; Geographica Helvetica Volume 30 ; 30 ; >
+      au < testing ; exists ; 1976 ; 1976 ; Geographica Helvetica Volume 31 ; 31 ; >
+      au < testing ; exists ; 1977 ; 1977 ; Geographica Helvetica Volume 32 ; 32 ; >
+      au < testing ; exists ; 1978 ; 1978 ; Geographica Helvetica Volume 33 ; 33 ; >
+      au < testing ; exists ; 1979 ; 1979 ; Geographica Helvetica Volume 34 ; 34 ; >
+      au < testing ; exists ; 1980 ; 1980 ; Geographica Helvetica Volume 35 ; 35 ; >
+      au < testing ; exists ; 1981 ; 1981 ; Geographica Helvetica Volume 36 ; 36 ; >
+      au < testing ; exists ; 1982 ; 1982 ; Geographica Helvetica Volume 37 ; 37 ; >
+      au < testing ; exists ; 1983 ; 1983 ; Geographica Helvetica Volume 38 ; 38 ; >
+      au < testing ; exists ; 1984 ; 1984 ; Geographica Helvetica Volume 39 ; 39 ; >
+      au < testing ; exists ; 1985 ; 1985 ; Geographica Helvetica Volume 40 ; 40 ; >
+      au < testing ; exists ; 1986 ; 1986 ; Geographica Helvetica Volume 41 ; 41 ; >
+      au < testing ; exists ; 1987 ; 1987 ; Geographica Helvetica Volume 42 ; 42 ; >
+      au < testing ; exists ; 1988 ; 1988 ; Geographica Helvetica Volume 43 ; 43 ; >
+      au < testing ; exists ; 1989 ; 1989 ; Geographica Helvetica Volume 44 ; 44 ; >
+      au < testing ; exists ; 1990 ; 1990 ; Geographica Helvetica Volume 45 ; 45 ; >
+      au < testing ; exists ; 1991 ; 1991 ; Geographica Helvetica Volume 46 ; 46 ; >
+      au < testing ; exists ; 1992 ; 1992 ; Geographica Helvetica Volume 47 ; 47 ; >
+      au < testing ; exists ; 1993 ; 1993 ; Geographica Helvetica Volume 48 ; 48 ; >
+      au < testing ; exists ; 1994 ; 1994 ; Geographica Helvetica Volume 49 ; 49 ; >
+      au < testing ; exists ; 1995 ; 1995 ; Geographica Helvetica Volume 50 ; 50 ; >
+      au < testing ; exists ; 1996 ; 1996 ; Geographica Helvetica Volume 51 ; 51 ; >
+      au < testing ; exists ; 1997 ; 1997 ; Geographica Helvetica Volume 52 ; 52 ; >
+      au < testing ; exists ; 1998 ; 1998 ; Geographica Helvetica Volume 53 ; 53 ; >
+      au < testing ; exists ; 1999 ; 1999 ; Geographica Helvetica Volume 54 ; 54 ; >
       au < finished ; crawling ; 2000 ; 2000 ; Geographica Helvetica Volume 55 ; 55 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 2001 ; Geographica Helvetica Volume 56 ; 56 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 2002 ; Geographica Helvetica Volume 57 ; 57 ; reingest2.clockss.org:8085 >
@@ -875,9 +875,9 @@
       param[base_url] = https://hess.copernicus.org/
       param[home_url] = https://www.hydrology-and-earth-system-sciences.net/
 
-      au < testing ; exists ; 1997 ; 1997 ; Hydrology and Earth System Sciences Volume 1 ; 1 ; >
-      au < testing ; exists ; 1998 ; 1998 ; Hydrology and Earth System Sciences Volume 2 ; 2 ; >
-      au < testing ; exists ; 1999 ; 1999 ; Hydrology and Earth System Sciences Volume 3 ; 3 ; >
+      au < ready ; exists ; 1997 ; 1997 ; Hydrology and Earth System Sciences Volume 1 ; 1 ; >
+      au < ready ; exists ; 1998 ; 1998 ; Hydrology and Earth System Sciences Volume 2 ; 2 ; >
+      au < ready ; exists ; 1999 ; 1999 ; Hydrology and Earth System Sciences Volume 3 ; 3 ; >
       au < finished ; crawling ; 2000 ; 2000 ; Hydrology and Earth System Sciences Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2001 ; 2001 ; Hydrology and Earth System Sciences Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 2002 ; Hydrology and Earth System Sciences Volume 6 ; 6 ; reingest5.clockss.org:8082 >
@@ -1158,24 +1158,24 @@
       param[base_url] = https://jm.copernicus.org/
       param[home_url] = https://www.journal-of-micropalaeontology.net/
 
-      au < testing ; exists ; 1982 ; 1982 ; Journal of Micropalaeontology Volume 1 ; 1 ; >
-      au < testing ; exists ; 1983 ; 1983 ; Journal of Micropalaeontology Volume 2 ; 2 ; >
-      au < testing ; exists ; 1984 ; 1984 ; Journal of Micropalaeontology Volume 3 ; 3 ; >
-      au < testing ; exists ; 1985 ; 1985 ; Journal of Micropalaeontology Volume 4 ; 4 ; >
-      au < testing ; exists ; 1986 ; 1986 ; Journal of Micropalaeontology Volume 5 ; 5 ; >
-      au < testing ; exists ; 1987 ; 1987 ; Journal of Micropalaeontology Volume 6 ; 6 ; >
-      au < testing ; exists ; 1988 ; 1988 ; Journal of Micropalaeontology Volume 7 ; 7 ; >
-      au < testing ; exists ; 1989 ; 1989 ; Journal of Micropalaeontology Volume 8 ; 8 ; >
-      au < testing ; exists ; 1990 ; 1990 ; Journal of Micropalaeontology Volume 9 ; 9 ; >
-      au < testing ; exists ; 1991 ; 1991 ; Journal of Micropalaeontology Volume 10 ; 10 ; >
-      au < testing ; exists ; 1992 ; 1992 ; Journal of Micropalaeontology Volume 11 ; 11 ; >
-      au < testing ; exists ; 1993 ; 1993 ; Journal of Micropalaeontology Volume 12 ; 12 ; >
-      au < testing ; exists ; 1994 ; 1994 ; Journal of Micropalaeontology Volume 13 ; 13 ; >
-      au < testing ; exists ; 1995 ; 1995 ; Journal of Micropalaeontology Volume 14 ; 14 ; >
-      au < testing ; exists ; 1996 ; 1996 ; Journal of Micropalaeontology Volume 15 ; 15 ; >
-      au < testing ; exists ; 1997 ; 1997 ; Journal of Micropalaeontology Volume 16 ; 16 ; >
-      au < testing ; exists ; 1998 ; 1998 ; Journal of Micropalaeontology Volume 17 ; 17 ; >
-      au < testing ; exists ; 1999 ; 1999 ; Journal of Micropalaeontology Volume 18 ; 18 ; >
+      au < ready ; exists ; 1982 ; 1982 ; Journal of Micropalaeontology Volume 1 ; 1 ; >
+      au < ready ; exists ; 1983 ; 1983 ; Journal of Micropalaeontology Volume 2 ; 2 ; >
+      au < ready ; exists ; 1984 ; 1984 ; Journal of Micropalaeontology Volume 3 ; 3 ; >
+      au < ready ; exists ; 1985 ; 1985 ; Journal of Micropalaeontology Volume 4 ; 4 ; >
+      au < ready ; exists ; 1986 ; 1986 ; Journal of Micropalaeontology Volume 5 ; 5 ; >
+      au < ready ; exists ; 1987 ; 1987 ; Journal of Micropalaeontology Volume 6 ; 6 ; >
+      au < ready ; exists ; 1988 ; 1988 ; Journal of Micropalaeontology Volume 7 ; 7 ; >
+      au < ready ; exists ; 1989 ; 1989 ; Journal of Micropalaeontology Volume 8 ; 8 ; >
+      au < ready ; exists ; 1990 ; 1990 ; Journal of Micropalaeontology Volume 9 ; 9 ; >
+      au < ready ; exists ; 1991 ; 1991 ; Journal of Micropalaeontology Volume 10 ; 10 ; >
+      au < ready ; exists ; 1992 ; 1992 ; Journal of Micropalaeontology Volume 11 ; 11 ; >
+      au < ready ; exists ; 1993 ; 1993 ; Journal of Micropalaeontology Volume 12 ; 12 ; >
+      au < ready ; exists ; 1994 ; 1994 ; Journal of Micropalaeontology Volume 13 ; 13 ; >
+      au < ready ; exists ; 1995 ; 1995 ; Journal of Micropalaeontology Volume 14 ; 14 ; >
+      au < ready ; exists ; 1996 ; 1996 ; Journal of Micropalaeontology Volume 15 ; 15 ; >
+      au < ready ; exists ; 1997 ; 1997 ; Journal of Micropalaeontology Volume 16 ; 16 ; >
+      au < ready ; exists ; 1998 ; 1998 ; Journal of Micropalaeontology Volume 17 ; 17 ; >
+      au < ready ; exists ; 1999 ; 1999 ; Journal of Micropalaeontology Volume 18 ; 18 ; >
       au < finished ; crawling ; 2000 ; 2000 ; Journal of Micropalaeontology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 2001 ; Journal of Micropalaeontology Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 2002 ; Journal of Micropalaeontology Volume 21 ; 21 ; reingest5.clockss.org:8082 >
@@ -1316,12 +1316,12 @@
       param[base_url] = https://npg.copernicus.org/
       param[home_url] = https://www.nonlinear-processes-in-geophysics.net/
 
-      au < testing ; exists ; 1994 ; 1994 ; Nonlinear Processes in Geophysics Volume 1 ; 1 ; >
-      au < testing ; exists ; 1995 ; 1995 ; Nonlinear Processes in Geophysics Volume 2 ; 2 ; >
-      au < testing ; exists ; 1996 ; 1996 ; Nonlinear Processes in Geophysics Volume 3 ; 3 ; >
-      au < testing ; exists ; 1997 ; 1997 ; Nonlinear Processes in Geophysics Volume 4 ; 4 ; >
+      au < ready ; exists ; 1994 ; 1994 ; Nonlinear Processes in Geophysics Volume 1 ; 1 ; >
+      au < ready ; exists ; 1995 ; 1995 ; Nonlinear Processes in Geophysics Volume 2 ; 2 ; >
+      au < ready ; exists ; 1996 ; 1996 ; Nonlinear Processes in Geophysics Volume 3 ; 3 ; >
+      au < ready ; exists ; 1997 ; 1997 ; Nonlinear Processes in Geophysics Volume 4 ; 4 ; >
       au < testing ; exists ; 1998 ; 1998 ; Nonlinear Processes in Geophysics Volume 5 ; 5 ; >
-      au < testing ; exists ; 1999 ; 1999 ; Nonlinear Processes in Geophysics Volume 6 ; 6 ; >
+      au < ready ; exists ; 1999 ; 1999 ; Nonlinear Processes in Geophysics Volume 6 ; 6 ; >
       au < finished ; crawling ; 2000 ; 2000 ; Nonlinear Processes in Geophysics Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2001 ; 2001 ; Nonlinear Processes in Geophysics Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2002 ; 2002 ; Nonlinear Processes in Geophysics Volume 9 ; 9 ; reingest5.clockss.org:8082 >
@@ -1389,7 +1389,7 @@
       param[base_url] = https://polf.copernicus.org/
       param[home_url] = https://www.polarforschung.net/
 
-      au < testing ; exists ; 2021 ; 2021 ; Polarforschung Volume 89 ; 89 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Polarforschung Volume 89 ; 89 ; >
 
   }
 
@@ -1446,11 +1446,11 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 375 ; 375 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 376 ; 376 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 377 ; 377 ; >
-      au < testing ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 378 ; 378 ; >
-      au < testing ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 379 ; 379 ; >
-      au < testing ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 380 ; 380 ; >
-      au < testing ; exists ; 2019 ; 2019 ; Proceedings of the International Association of Hydrological Sciences Volume 381 ; 381 ; >
-      au < testing ; exists ; 2020 ; 2020 ; Proceedings of the International Association of Hydrological Sciences Volume 382 ; 382 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 378 ; 378 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 379 ; 379 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 380 ; 380 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Proceedings of the International Association of Hydrological Sciences Volume 381 ; 381 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Proceedings of the International Association of Hydrological Sciences Volume 382 ; 382 ; >
       au < testing ; exists ; 2020 ; 2020 ; Proceedings of the International Association of Hydrological Sciences Volume 383 ; 383 ; >
       au < expected ; exists ; 2021 ; 2021 ; Proceedings of the International Association of Hydrological Sciences Volume 384 ; 384 ; >
       au < expected ; exists ; 2021 ; 2021 ; Proceedings of the International Association of Hydrological Sciences Volume 385 ; 385 ; >
