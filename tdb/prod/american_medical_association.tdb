@@ -67,17 +67,16 @@
 
     param[resource_id] = 69
     param[journal_id] = jamafacialplasticsurgery
+    #move to liebertpub
     
-    au < manifest ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
-    au < manifest ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
-    au < manifest ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
-    au < manifest ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
+    au < doNotProcess ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 >
+    au < doNotProcess ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 >
+    au < doNotProcess ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 >
+    au < doNotProcess ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 >
     au < released ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 >
     au < released ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 >
     au < released ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 2018 >
     au < released ; 2019 ; JAMA Facial Plastic Surgery Volume 21 ; 2019 >
-    au < exists ; 2020 ; JAMA Facial Plastic Surgery Volume 22 ; 2020 >
-    au < exists ; 2021 ; JAMA Facial Plastic Surgery Volume 23 ; 2021 >
 
   }
 
