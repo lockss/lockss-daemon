@@ -71,7 +71,8 @@
 
     param[resource_id] = 69
     param[journal_id] = jamafacialplasticsurgery
-    
+    #move to liebertpub
+
     au < doNotProcess ; doNotProcess ; 2012 ; JAMA Facial Plastic Surgery Volume 14 ; 2012 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; https://jamanetwork.com/ ; >
@@ -80,8 +81,6 @@
     au < finished ; crawling ; 2017 ; JAMA Facial Plastic Surgery Volume 19 ; 2017 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; JAMA Facial Plastic Surgery Volume 20 ; 2018 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; JAMA Facial Plastic Surgery Volume 21 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2020 ; JAMA Facial Plastic Surgery Volume 22 ; 2020 ; https://jamanetwork.com/ ; >
-    au < exists ; exists ; 2021 ; JAMA Facial Plastic Surgery Volume 23 ; 2021 ; https://jamanetwork.com/ ; >
 
   }
 
