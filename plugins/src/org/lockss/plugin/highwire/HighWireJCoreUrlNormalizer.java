@@ -77,7 +77,9 @@ public class HighWireJCoreUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   protected static final String DOWNLOAD_PARAM = "?download=";
   
   protected static final String TOC_SEC_ID_PARAM = "facet[toc-section-id]";
-  
+
+  protected static final String DEST_STRING = "/content(/[^/]+)(/[^/]+)(/[^/]+/[^/]+[.]full[.]pdf)$";
+  protected static final Pattern DEST_PAT = Pattern.compile(DEST_STRING, Pattern.CASE_INSENSITIVE);
   
   @Override
   public String additionalNormalization(String url, ArchivalUnit au)
@@ -125,7 +127,7 @@ public class HighWireJCoreUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
     if (url.contains(UrlUtil.minimallyEncodeUrl(TOC_SEC_ID_PARAM))) {
       log.debug3(url);
     }
-    
+
     if (url.contains(WEB_VIEWER)) { 
       url = url.replace(WEB_VIEWER, "/");
       Matcher  mat = URL_PAT.matcher(url);
@@ -163,7 +165,14 @@ public class HighWireJCoreUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
         url.contains(DOWNLOAD_PARAM)) {
       url = url.replaceFirst("[?].+$", "");
     }
-    
+
+    if (url.endsWith(FULL_PDF_SUFFIX)) {
+      Matcher destMatcher;
+      if ((destMatcher = DEST_PAT.matcher(url)).find()) {
+        url = destMatcher.replaceFirst("/content$2$3");
+      }
+    }
+
     return(url);
   }
 }

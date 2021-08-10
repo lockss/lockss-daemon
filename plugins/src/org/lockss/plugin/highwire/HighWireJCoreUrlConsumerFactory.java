@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.highwire;
 
+import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
@@ -41,6 +42,7 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
 import org.lockss.util.Logger;
+import org.lockss.util.SetUtil;
 
 /**
  * @since 1.68.0 with storeAtOrigUrl()
@@ -49,10 +51,12 @@ public class HighWireJCoreUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(HighWireJCoreUrlConsumerFactory.class);
   
   // Looking for 2 patterns in the original URL, one for PDFs and the other for TOCs
-  protected static final String ORIG_STRING = "/content(/.+/[^/]+[.]full[.]pdf|/.+[.]toc)$";
+  // https://www.jrheum.org/content/46/11/E011.full.pdf" -> "https://www.jrheum.org/content/jrheum/46/11/E011.full.pdf",
+  // https://www.ghspjournal.org/content/7/4.toc" -> "https://www.ghspjournal.org/content/7/4"
+  protected static final String ORIG_STRING = "/content(/[^/]+)(/[^/]+/[^/]+[.]full[.]pdf|/.+[.]toc)$";
   // Should match either PDF URL that has an added sub-directory after /content/ or a TOC URL without the .toc extension
-  protected static final String DEST_STRING = "/content/([^/]+)(/.+/[^/]+[.]full[.]pdf|/[^/.]+)$";
-  
+  protected static final String DEST_STRING = "/content(/[^/]+)((/[^/]+)/[^/]+/[^/]+[.]full[.]pdf|/[^/.]+)$";
+
   protected static final Pattern origPat = Pattern.compile(ORIG_STRING, Pattern.CASE_INSENSITIVE);
   protected static final Pattern destPat = Pattern.compile(DEST_STRING, Pattern.CASE_INSENSITIVE);
   
@@ -111,27 +115,36 @@ public class HighWireJCoreUrlConsumerFactory implements UrlConsumerFactory {
     @Override
     public boolean shouldStoreAtOrigUrl() {
       boolean should = super.shouldStoreAtOrigUrl();
+      log.info("checking if super.shouldStore is true. for origUrl: " + fud.origUrl + "  fetchUrl: " + fud.fetchUrl);
       if (!should) {
         Matcher destMat = null;
+        Matcher destMatPdf = null;
         should = (fud.redirectUrls != null
             && fud.redirectUrls.size() >= 1
-            && (destMat = destPat.matcher(fud.fetchUrl)).find()
-            && origPat.matcher(fud.origUrl).find());
+        );
+        log.info("super.should store is not true, checking if the redirect occurred");
         if (should) {
-          if (fud.origUrl.endsWith(".toc")) {
-            // if the origUrl is a TOC, check that the first group of the dest {/content/(<vol>)(/<iss>)} matches the AU volume
-            should = destMat.group(1).equals(auconfig.get("volume_name"));
-          } else if (fud.origUrl.endsWith(".pdf")) {
-            // if the origUrl is a PDF, check that the second group of the dest {/content/(sub-dir)(/<vol>/<iss>/<article_id>} ends with .pdf
-            should = destMat.group(2).endsWith(".pdf");
-          } else {
-            log.warning("Huh! Should not happen: " + fud.fetchUrl + " " + fud.origUrl);
+          log.info("  should store is now true, meaning, the redirect occurred");
+          if ((destMat = destPat.matcher(fud.fetchUrl)).find()
+              && origPat.matcher(fud.origUrl).find()) {
+            log.info("  the first pattern matched (the one that always matches? ");
+            if (fud.origUrl.endsWith(".toc")) {
+              log.info("     it was a .toc ");
+              // if the origUrl is a TOC, check that the first group of the dest {/content/(<vol>)(/<iss>)} matches the AU volume
+              should = destMat.group(1).equals(auconfig.get("volume_name"));
+            } else if (fud.origUrl.endsWith(".pdf")) {
+              log.info("     it was a .pdf ");
+              // if the origUrl is a PDF, check that the second group of the dest {/content/(sub-dir)(/<vol>/<iss>/<article_id>} ends with .pdf
+              should = destMat.group(2).endsWith(".pdf");
+              log.info("     and the group2 matched? : " + should);
+            } else {
+              log.warning("Huh! Should not happen: " + fud.fetchUrl + " " + fud.origUrl);
+            }
           }
         }
       }
       return should;
     }
-    
   }
   
 }

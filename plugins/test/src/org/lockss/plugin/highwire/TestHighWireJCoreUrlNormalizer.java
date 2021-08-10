@@ -104,7 +104,7 @@ public class TestHighWireJCoreUrlNormalizer extends LockssTestCase {
         normalizer.normalizeUrl("http://www.example.com/content/ajpcell/303/1/C1/F1.large.jpg?download=true", m_mau));
     assertEquals("http://www.example.com/sites/default/files/color/jcore_1-15d49f53/colors.css",
         normalizer.normalizeUrl("http://www.example.com/sites/default/files/color/jcore_1-15d49f53/colors.css?n3sdk7", m_mau));
-    assertEquals("http://www.example.com/content/ajpheart/304/2/H253.full.pdf",
+    assertEquals("http://www.example.com/content/304/2/H253.full.pdf",
         normalizer.normalizeUrl("https://www.example.com/content/ajpheart/304/2/H253.full-text.pdf", m_mau));
     assertEquals("http://www.example.com/content/304/2/H253.full.pdf",
         normalizer.normalizeUrl("http://www.example.com/content/304/2/H253.full-text.pdf", m_mau));
@@ -136,6 +136,9 @@ public class TestHighWireJCoreUrlNormalizer extends LockssTestCase {
     
     assertEquals("https://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
         normalizer.normalizeUrl("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm", m_mau2));
+
+    assertEquals("http://www.example.com/content/303/1/C1.full.pdf",
+        normalizer.normalizeUrl("http://www.example.com/content/examp/303/1/C1.full.pdf", m_mau));
   }
   
 }
