@@ -42,6 +42,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.UrlUtil;
 
 import java.io.IOException;
@@ -154,7 +155,9 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       if (publicationTitle != null) {
         String issn = issnMap.get(publicationTitle);
         log.debug3("Eastview Newspaper: publicationTitle = " + publicationTitle + ", issn = " + issn);
-        thisAM.put(MetadataField.FIELD_ISSN, issn);
+        if (MetadataUtil.validateIssn(issn) != null) {
+          thisAM.put(MetadataField.FIELD_ISSN, MetadataUtil.validateIssn(issn));
+        }
       } else {
         log.debug3("Eastview Newspaper: publicationTitle is null");
       }

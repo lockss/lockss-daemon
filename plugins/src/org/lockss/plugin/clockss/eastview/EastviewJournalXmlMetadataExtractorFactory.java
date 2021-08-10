@@ -57,6 +57,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.ReaderInputStream;
 
 
@@ -224,7 +225,9 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       if (publicationTitle != null) {
         String issn = issnMap.get(publicationTitle);
         log.debug3("Eastview Journal: publicationTitle = " + publicationTitle + ", issn = " + issn);
-        thisAM.put(MetadataField.FIELD_ISSN, issn);
+        if (MetadataUtil.validateIssn(issn) != null) {
+          thisAM.put(MetadataField.FIELD_ISSN, MetadataUtil.validateIssn(issn));
+        }
       } else {
         log.debug3("Eastview Journal: publicationTitle is null");
       }
