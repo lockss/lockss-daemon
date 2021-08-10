@@ -16,7 +16,7 @@
 
     {
     param[base_url] = https://www.ajsonline.org/
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    plugin = org.lockss.plugin.highwire.ajs.AjsPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1860 ; American Journal of Science Series 2 Volume 29 (1860) ; s2-29 >
