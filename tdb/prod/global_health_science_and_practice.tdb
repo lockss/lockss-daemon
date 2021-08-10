@@ -26,11 +26,11 @@
     {
       param[base_url] = https://www.ghspjournal.org/
 
-      au < HWDrupalPlugin ; manifest ; 2017 ; Global Health: Science and Practice Volume 5 ; 5 >
-      au < HWDrupalPlugin ; manifest ; 2018 ; Global Health: Science and Practice Volume 6 ; 6 >
-      au < HWDrupalPlugin ; manifest ; 2019 ; Global Health: Science and Practice Volume 7 ; 7 >
-      au < HWDrupalPlugin ; manifest ; 2020 ; Global Health: Science and Practice Volume 8 ; 8 >
-      au < HWDrupalPlugin ; manifest ; 2021 ; Global Health: Science and Practice Volume 9 ; 9 >
+      au < ghsp.GhspDrupalPlugin ; manifest ; 2017 ; Global Health: Science and Practice Volume 5 ; 5 >
+      au < ghsp.GhspDrupalPlugin ; testing ; 2018 ; Global Health: Science and Practice Volume 6 ; 6 >
+      au < ghsp.GhspDrupalPlugin ; manifest ; 2019 ; Global Health: Science and Practice Volume 7 ; 7 >
+      au < ghsp.GhspDrupalPlugin ; testing ; 2020 ; Global Health: Science and Practice Volume 8 ; 8 >
+      au < ghsp.GhspDrupalPlugin ; manifest ; 2021 ; Global Health: Science and Practice Volume 9 ; 9 >
      }
   }
   
