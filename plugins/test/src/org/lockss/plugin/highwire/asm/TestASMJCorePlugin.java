@@ -102,7 +102,7 @@ public class TestASMJCorePlugin extends LockssTestCase {
         "https://www.example.com/lockss-manifest/vol_2_manifest.html",
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("American Society for Microbiology Plugin, Base URL http://www.example.com/, Volume 2",
+    assertEquals("American Society for Microbiology Journals Plugin (Legacy JCore), Base URL http://www.example.com/, Volume 2",
         au.getName());
     assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }

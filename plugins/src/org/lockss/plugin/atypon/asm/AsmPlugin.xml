@@ -53,11 +53,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Society for Microbiology Plugin (Atypon)</string>
+        <string>American Society for Microbiology Journals Plugin (Atypon)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Society for Microbiology Plugin (Atypon), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+        <string>"American Society for Microbiology Journals Plugin (Atypon), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
     </entry>
     <entry>
         <string>text/html_filter_factory</string>
