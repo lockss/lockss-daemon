@@ -5,10 +5,11 @@
     info[contract] = 2012 ;
     info[back] = 1940 ;
     info[tester] = 5 ;
-    info[poller] = 3
+    info[poller] = 3 ;
+    info[platform] = ISPRS journals need plugin. May be able to use Copernicus.
 
   >
-
+  {
     plugin = org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin
     #moved to https in summer 2017
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
@@ -230,7 +231,6 @@
       param[base_url] = https://aab.copernicus.org/
       param[home_url] = https://archives-animal-breeding.net/
 
-      {
       comment[pdf] = https://doi.fbn-dummerstorf.de/ for 2013 & 2014
 
       au < crawling ; exists ; 1999 ; 1999 ; Archives Animal Breeding Volume 42 ; 42 ; >
@@ -256,8 +256,6 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Archives Animal Breeding Volume 62 ; 62 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Archives Animal Breeding Volume 63 ; 63 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Archives Animal Breeding Volume 64 ; 64 ; >
-
-      }
 
   }
 
@@ -905,229 +903,6 @@
 
   {
     title <
-      name = ISPRS Annals ;
-      issn = 2194-9042 ;
-      eissn = 2194-9050
-    >
-      attr[journal_id] = isprsannals
-      #param[base_url] = https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
-      #param[home_url] = https://www.isprs.org/publications/annals.aspx
-      #param[base_url] = https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
-      param[home_url] = https://www.isprs.org/publications/
-      param[base_url] = https://www.isprs.org/publications/annals.aspx
-      #needs communication with publisher see LXQUEUE-1055
-
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Annals Volume I-2 ; I-2 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Annals Volume I-3 ; I-3 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Annals Volume I-4 ; I-4 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Annals Volume I-7 ; I-7 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W1 ; II-3-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-5/W1 ; II-5-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W2 ; II-3-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-5/W2 ; II-5-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W3 ; II-3-W3 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-2/W1 ; II-2-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-4/W1 ; II-4-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-1 ; II-1 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-2 ; II-2 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-3 ; II-3 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-4 ; II-4 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-5 ; II-5 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-6 ; II-6 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-7 ; II-7 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-1/W1 ; II-1-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-2/W2 ; II-2-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W5 ; II-3-W5 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-4/W2 ; II-4-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-5/W3 ; II-5-W3 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-1 ; III-1 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-2 ; III-2 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-3 ; III-3 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-4 ; III-4 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-5 ; III-5 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-6 ; III-6 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-7 ; III-7 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-8 ; III-8 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume IV-2/W1 ; IV-2-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume IV-4/W1 ; IV-4-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-1/W1 ; IV-1-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W2 ; IV-4-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W2 ; IV-2-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W3 ; IV-2-W3 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W4 ; IV-2-W4 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W3 ; IV-4-W3 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W4 ; IV-4-W4 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W5 ; IV-4-W5 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-5/W1 ; IV-5-W1 ; >
-      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-3 ; IV-3 ; >
-      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-2 ; IV-2 ; >
-      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-4/W6 ; IV-4/W6 ; >
-      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-4 ; IV-4 ; >
-      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-4/W7 ; IV-4/W7 ; >
-      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-1 ; IV-1 ; >
-      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-5 ; IV-5 ; >
-
-  }
-
-  {
-    title <
-      name = ISPRS Archives ;
-      issn = 1682-1750 ;
-      eissn = 2194-9034
-    >
-    {
-      attr[journal_id] = isprsarchives
-      #param[base_url] = https://www.isprs.org/proceedings/
-      param[base_url] = https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net
-      param[home_url] = https://www.isprs.org/publications/archives.aspx
-      # needs review on file directory on website
-      #needs communication with publisher see LXQUEUE-1055
-#      au < exists ; exists ; 1976 ; 1976 ; ISPRS Archives Volume XXI ; XXI ; >
-#      au < doesNotExist ; doesNotExist ; 1978 ; 1978 ; ISPRS Archives Volume XXII ; XXII ; >
-#      au < exists ; exists ; 1980 ; 1980 ; ISPRS Archives Volume XXIII ; XXIII ; >
-#      au < doesNotExist ; doesNotExist ; 1982 ; 1982 ; ISPRS Archives Volume XXIV ; XXIV ; >
-#      au < exists ; exists ; 1984 ; 1984 ; ISPRS Archives Volume XXV ; XXV ; >
-#      au < exists ; exists ; 1986 ; 1986 ; ISPRS Archives Volume XXVI ; XXVI ; >
-#      au < exists ; exists ; 1988 ; 1988 ; ISPRS Archives Volume XXVII ; XXVII ; >
-#      au < doesNotExist ; doesNotExist ; 1990 ; 1990 ; ISPRS Archives Volume XXVIII ; XXVIII ; >
-#      au < exists ; exists ; 1992 ; 1992 ; ISPRS Archives Volume XXIX ; XXIX ; >
-#      au < doesNotExist ; doesNotExist ; 1994 ; 1994 ; ISPRS Archives Volume XXX (1994) ; XXX ; >
-#      au < doesNotExist ; doesNotExist ; 1995 ; 1995 ; ISPRS Archives Volume XXX (1995) ; XXX ; >
-#      au < exists ; exists ; 1996 ; 1996 ; ISPRS Archives Volume XXXI ; XXXI ; >
-#      au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; ISPRS Archives Volume XXXII (1997) ; XXXII ; >
-#      au < exists ; exists ; 1998 ; 1998 ; ISPRS Archives Volume XXXII (1998) ; XXXII ; >
-#      au < exists ; exists ; 1999 ; 1999 ; ISPRS Archives Volume XXXII (1999) ; XXXII ; >
-#      au < exists ; exists ; 2000 ; 2000 ; ISPRS Archives Volume XXXIII ; XXXIII ; >
-#      au < exists ; exists ; 2001 ; 2001 ; ISPRS Archives Volume XXXIV (2001) ; XXXIV ; >
-#      au < exists ; exists ; 2002 ; 2002 ; ISPRS Archives Volume XXXIV (2002) ; XXXIV ; >
-#      au < exists ; exists ; 2003 ; 2003 ; ISPRS Archives Volume XXXIV (2003) ; XXXIV ; >
-#      au < exists ; exists ; 2003 ; 2003 ; ISPRS Archives Volume 2003 ; 2003 ; >
-#      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXIV (2004) ; XXXIV ; >
-#      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXV ; XXXV ; >
-#      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXVI (2004) ; XXXVI ; >
-#      au < exists ; exists ; 2005 ; 2005 ; ISPRS Archives Volume XXXVI (2005) ; XXXVI ; >
-#      au < exists ; exists ; 2005 ; 2005 ; ISPRS Archives Volume 2005 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; 2006 ; ISPRS Archives Volume XXXVI (2006) ; XXXVI ; >
-#      au < exists ; exists ; 2006 ; 2006 ; ISPRS Archives Volume 2006 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; 2007 ; ISPRS Archives Volume XXXVI (2007) ; XXXVI ; >
-#      au < exists ; exists ; 2007 ; 2007 ; ISPRS Archives Volume 2007 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVII ; XXXVII ; >
-#      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVIII (2008) ; XXXVIII ; >
-#      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume 2008 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; 2009 ; ISPRS Archives Volume XXXVIII (2009) ; XXXVIII ; >
-#      au < exists ; exists ; 2010 ; 2010 ; ISPRS Archives Volume XXXVIII (2010) ; XXXVIII ; >
-#      au < exists ; exists ; 2010 ; 2010 ; ISPRS Archives Volume 2010 ; 2010 ; >
-#      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume 2011 ; 2011 ; >
-#      au < exists ; exists ; 2012 ; 2012 ; ISPRS Archives Volume 2012 ; 2012 ; >
-#      au < exists ; exists ; 2013 ; 2013 ; ISPRS Archives Volume 2013 ; 2013 ; >
-#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume 2015 ; 2015 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume 2016 ; 2016 ; >
-
-
-    }
-
-    {
-      attr[journal_id] = isprsarchives
-      #param[base_url] = https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
-      #param[base_url] = https://isprsarchives.copernicus.org/articles/
-      param[base_url] = https://isprsarchives.copernicus.org/
-      param[home_url] = https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
-
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-1/C22 ; XXXVIII-1-C22 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-3/W22 ; XXXVIII-3-W22 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/C21 ; XXXVIII-4-C21 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W19 ; XXXVIII-4-W19 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W25 ; XXXVIII-4-W25 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W12 ; XXXVIII-5-W12 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W16 ; XXXVIII-5-W16 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-6/W27 ; XXXVIII-6-W27 ; >
-      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-8/W20 ; XXXVIII-8-W20 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXVIII-4/C26 ; XXXVIII-4-C26 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B2 ; XXXIX-B2 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B3 ; XXXIX-B3 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B4 ; XXXIX-B4 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B5 ; XXXIX-B5 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B6 ; XXXIX-B6 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B7 ; XXXIX-B7 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B8 ; XXXIX-B8 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W1 ; XL-1-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W2 ; XL-1-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W3 ; XL-1-W3 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W1 ; XL-2-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W2 ; XL-2-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W1 ; XL-4-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W2 ; XL-4-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W3 ; XL-4-W3 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W4 ; XL-4-W4 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W1 ; XL-5-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W3 ; XL-5-W3 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W1 ; XL-7-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W2 ; XL-7-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-2/W3 ; XL-2-W3 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-3/W1 ; XL-3-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-5/W2 ; XL-5-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-1 ; XL-1 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-2 ; XL-2 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-3 ; XL-3 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-4 ; XL-4 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-5 ; XL-5 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-6 ; XL-6 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-7 ; XL-7 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-8 ; XL-8 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W2 ; XL-3-W2 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W3 ; XL-7-W3 ; >
-      # may reposition these
-#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W4 ; XL-7-W4 ; >
-#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-1/W4 ; XL-1-W4 ; >
-#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W7 ; XL-5-W7 ; >
-#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W3 ; XL-3-W3 ; >
-#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-1/W5 ; XL-1-W5 ; >
-#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-2/W4 ; XL-2-W4 ; >
-#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W8 ; XL-5-W8 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XL-3/W4 ; XL-3-W4 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B1 ; XLI-B1 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B2 ; XLI-B2 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B3 ; XLI-B3 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B4 ; XLI-B4 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B5 ; XLI-B5 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B6 ; XLI-B6 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B7 ; XLI-B7 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B8 ; XLI-B8 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-4/W1 ; XLII-4-W1 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-2/W1 ; XLII-2-W1 ; >
-#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-2/W2 ; XLII-2-W2 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W3 ; XLII-2-W3 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W4 ; XLII-2-W4 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-5/W1 ; XLII-5-W1 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-1/W1 ; XLII-1-W1 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W8 ; XLII-2-8 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W7 ; XLII-4-7 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W6 ; XLII-4-6 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-3/W3 ; XLII-3-3 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W5 ; XLII-4-5 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W4 ; XLII-4-4 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W3 ; XLII-4-3 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W7 ; XLII-2-7 ; >
-#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W6 ; XLII-2-6 ; >
-      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W5 ; XLII-2-5 ; >
-      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-3/W1 ; XLII-3-1 ; >
-      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W2 ; XLII-4-2 ; >
-      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-3/W2 ; XLII-3-2 ; >
-
-     }
-  }
-
-  {
-    title <
       name = Journal of Bone and Joint Infection ;
       eissn = 2206-3552
     >
@@ -1567,7 +1342,7 @@
 
   }
 
-   {
+  {
     title <
       name = The Cryosphere ;
       issn = 1994-0416 ;
@@ -1676,6 +1451,239 @@
       au < finished ; crawling ; 2020 ; 2020 ; Geochronology: Advances in Gechronological Science Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; 2021 ; Geochronology: Advances in Gechronological Science Volume 3 ; 3 ; >
 
+  }#title
+  
+  }#copernicus plugin
+################################################
+  {#needs.plugin
+
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin
+    implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
+
+  {
+    title <
+      name = ISPRS Annals ;
+      issn = 2194-9042 ;
+      eissn = 2194-9050
+    >
+      attr[journal_id] = isprsannals
+      #param[base_url] = https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
+      #param[home_url] = https://www.isprs.org/publications/annals.aspx
+      #param[base_url] = https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
+      param[home_url] = https://www.isprs.org/publications/
+      param[base_url] = https://www.isprs.org/publications/annals.aspx
+      #needs communication with publisher see LXQUEUE-1055
+
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Annals Volume I-2 ; I-2 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Annals Volume I-3 ; I-3 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Annals Volume I-4 ; I-4 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Annals Volume I-7 ; I-7 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W1 ; II-3-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-5/W1 ; II-5-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W2 ; II-3-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-5/W2 ; II-5-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W3 ; II-3-W3 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-2/W1 ; II-2-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Annals Volume II-4/W1 ; II-4-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-1 ; II-1 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-2 ; II-2 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-3 ; II-3 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-4 ; II-4 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-5 ; II-5 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-6 ; II-6 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-7 ; II-7 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-1/W1 ; II-1-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-2/W2 ; II-2-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W5 ; II-3-W5 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-4/W2 ; II-4-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Annals Volume II-5/W3 ; II-5-W3 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-1 ; III-1 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-2 ; III-2 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-3 ; III-3 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-4 ; III-4 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-5 ; III-5 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-6 ; III-6 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-7 ; III-7 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume III-8 ; III-8 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume IV-2/W1 ; IV-2-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; ISPRS Annals Volume IV-4/W1 ; IV-4-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-1/W1 ; IV-1-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W2 ; IV-4-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W2 ; IV-2-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W3 ; IV-2-W3 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-2/W4 ; IV-2-W4 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W3 ; IV-4-W3 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W4 ; IV-4-W4 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-4/W5 ; IV-4-W5 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; ISPRS Annals Volume IV-5/W1 ; IV-5-W1 ; >
+      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-3 ; IV-3 ; >
+      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-2 ; IV-2 ; >
+      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-4/W6 ; IV-4/W6 ; >
+      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-4 ; IV-4 ; >
+      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-4/W7 ; IV-4/W7 ; >
+      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-1 ; IV-1 ; >
+      au < exists ; exists ; 2018 ; 2018 ; ISPRS Annals Volume IV-5 ; IV-5 ; >
+
   }
 
-}
+  {
+    title <
+      name = ISPRS Archives ;
+      issn = 1682-1750 ;
+      eissn = 2194-9034
+    >
+    {
+      attr[journal_id] = isprsarchives
+      #param[base_url] = https://www.isprs.org/proceedings/
+      param[base_url] = https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net
+      param[home_url] = https://www.isprs.org/publications/archives.aspx
+      # needs review on file directory on website
+      #needs communication with publisher see LXQUEUE-1055
+#      au < exists ; exists ; 1976 ; 1976 ; ISPRS Archives Volume XXI ; XXI ; >
+#      au < doesNotExist ; doesNotExist ; 1978 ; 1978 ; ISPRS Archives Volume XXII ; XXII ; >
+#      au < exists ; exists ; 1980 ; 1980 ; ISPRS Archives Volume XXIII ; XXIII ; >
+#      au < doesNotExist ; doesNotExist ; 1982 ; 1982 ; ISPRS Archives Volume XXIV ; XXIV ; >
+#      au < exists ; exists ; 1984 ; 1984 ; ISPRS Archives Volume XXV ; XXV ; >
+#      au < exists ; exists ; 1986 ; 1986 ; ISPRS Archives Volume XXVI ; XXVI ; >
+#      au < exists ; exists ; 1988 ; 1988 ; ISPRS Archives Volume XXVII ; XXVII ; >
+#      au < doesNotExist ; doesNotExist ; 1990 ; 1990 ; ISPRS Archives Volume XXVIII ; XXVIII ; >
+#      au < exists ; exists ; 1992 ; 1992 ; ISPRS Archives Volume XXIX ; XXIX ; >
+#      au < doesNotExist ; doesNotExist ; 1994 ; 1994 ; ISPRS Archives Volume XXX (1994) ; XXX ; >
+#      au < doesNotExist ; doesNotExist ; 1995 ; 1995 ; ISPRS Archives Volume XXX (1995) ; XXX ; >
+#      au < exists ; exists ; 1996 ; 1996 ; ISPRS Archives Volume XXXI ; XXXI ; >
+#      au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; ISPRS Archives Volume XXXII (1997) ; XXXII ; >
+#      au < exists ; exists ; 1998 ; 1998 ; ISPRS Archives Volume XXXII (1998) ; XXXII ; >
+#      au < exists ; exists ; 1999 ; 1999 ; ISPRS Archives Volume XXXII (1999) ; XXXII ; >
+#      au < exists ; exists ; 2000 ; 2000 ; ISPRS Archives Volume XXXIII ; XXXIII ; >
+#      au < exists ; exists ; 2001 ; 2001 ; ISPRS Archives Volume XXXIV (2001) ; XXXIV ; >
+#      au < exists ; exists ; 2002 ; 2002 ; ISPRS Archives Volume XXXIV (2002) ; XXXIV ; >
+#      au < exists ; exists ; 2003 ; 2003 ; ISPRS Archives Volume XXXIV (2003) ; XXXIV ; >
+#      au < exists ; exists ; 2003 ; 2003 ; ISPRS Archives Volume 2003 ; 2003 ; >
+#      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXIV (2004) ; XXXIV ; >
+#      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXV ; XXXV ; >
+#      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXVI (2004) ; XXXVI ; >
+#      au < exists ; exists ; 2005 ; 2005 ; ISPRS Archives Volume XXXVI (2005) ; XXXVI ; >
+#      au < exists ; exists ; 2005 ; 2005 ; ISPRS Archives Volume 2005 ; 2005 ; >
+#      au < exists ; exists ; 2006 ; 2006 ; ISPRS Archives Volume XXXVI (2006) ; XXXVI ; >
+#      au < exists ; exists ; 2006 ; 2006 ; ISPRS Archives Volume 2006 ; 2006 ; >
+#      au < exists ; exists ; 2007 ; 2007 ; ISPRS Archives Volume XXXVI (2007) ; XXXVI ; >
+#      au < exists ; exists ; 2007 ; 2007 ; ISPRS Archives Volume 2007 ; 2007 ; >
+#      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVII ; XXXVII ; >
+#      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVIII (2008) ; XXXVIII ; >
+#      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume 2008 ; 2008 ; >
+#      au < exists ; exists ; 2009 ; 2009 ; ISPRS Archives Volume XXXVIII (2009) ; XXXVIII ; >
+#      au < exists ; exists ; 2010 ; 2010 ; ISPRS Archives Volume XXXVIII (2010) ; XXXVIII ; >
+#      au < exists ; exists ; 2010 ; 2010 ; ISPRS Archives Volume 2010 ; 2010 ; >
+#      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume 2011 ; 2011 ; >
+#      au < exists ; exists ; 2012 ; 2012 ; ISPRS Archives Volume 2012 ; 2012 ; >
+#      au < exists ; exists ; 2013 ; 2013 ; ISPRS Archives Volume 2013 ; 2013 ; >
+#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume 2015 ; 2015 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume 2016 ; 2016 ; >
+
+
+    }
+
+    {
+      attr[journal_id] = isprsarchives
+      #param[base_url] = https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
+      #param[base_url] = https://isprsarchives.copernicus.org/articles/
+      param[base_url] = https://isprsarchives.copernicus.org/
+      param[home_url] = https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
+
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-1/C22 ; XXXVIII-1-C22 ; >
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-3/W22 ; XXXVIII-3-W22 ; >
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/C21 ; XXXVIII-4-C21 ; >
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W19 ; XXXVIII-4-W19 ; >
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W25 ; XXXVIII-4-W25 ; >
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W12 ; XXXVIII-5-W12 ; >
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W16 ; XXXVIII-5-W16 ; >
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-6/W27 ; XXXVIII-6-W27 ; >
+      au < exists ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-8/W20 ; XXXVIII-8-W20 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXVIII-4/C26 ; XXXVIII-4-C26 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B2 ; XXXIX-B2 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B3 ; XXXIX-B3 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B4 ; XXXIX-B4 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B5 ; XXXIX-B5 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B6 ; XXXIX-B6 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B7 ; XXXIX-B7 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B8 ; XXXIX-B8 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W1 ; XL-1-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W2 ; XL-1-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W3 ; XL-1-W3 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W1 ; XL-2-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W2 ; XL-2-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W1 ; XL-4-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W2 ; XL-4-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W3 ; XL-4-W3 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W4 ; XL-4-W4 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W1 ; XL-5-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W3 ; XL-5-W3 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W1 ; XL-7-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W2 ; XL-7-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-2/W3 ; XL-2-W3 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-3/W1 ; XL-3-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-5/W2 ; XL-5-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-1 ; XL-1 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-2 ; XL-2 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-3 ; XL-3 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-4 ; XL-4 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-5 ; XL-5 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-6 ; XL-6 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-7 ; XL-7 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ISPRS Archives Volume XL-8 ; XL-8 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W2 ; XL-3-W2 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W3 ; XL-7-W3 ; >
+      # may reposition these
+#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W4 ; XL-7-W4 ; >
+#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-1/W4 ; XL-1-W4 ; >
+#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W7 ; XL-5-W7 ; >
+#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W3 ; XL-3-W3 ; >
+#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-1/W5 ; XL-1-W5 ; >
+#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-2/W4 ; XL-2-W4 ; >
+#      au < exists ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W8 ; XL-5-W8 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XL-3/W4 ; XL-3-W4 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B1 ; XLI-B1 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B2 ; XLI-B2 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B3 ; XLI-B3 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B4 ; XLI-B4 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B5 ; XLI-B5 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B6 ; XLI-B6 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B7 ; XLI-B7 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLI-B8 ; XLI-B8 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-4/W1 ; XLII-4-W1 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-2/W1 ; XLII-2-W1 ; >
+#      au < exists ; exists ; 2016 ; 2016 ; ISPRS Archives Volume XLII-2/W2 ; XLII-2-W2 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W3 ; XLII-2-W3 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W4 ; XLII-2-W4 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-5/W1 ; XLII-5-W1 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-1/W1 ; XLII-1-W1 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W8 ; XLII-2-8 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W7 ; XLII-4-7 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W6 ; XLII-4-6 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-3/W3 ; XLII-3-3 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W5 ; XLII-4-5 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W4 ; XLII-4-4 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W3 ; XLII-4-3 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W7 ; XLII-2-7 ; >
+#      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W6 ; XLII-2-6 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-2/W5 ; XLII-2-5 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-3/W1 ; XLII-3-1 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-4/W2 ; XLII-4-2 ; >
+      au < exists ; exists ; 2017 ; 2017 ; ISPRS Archives Volume XLII-3/W2 ; XLII-3-2 ; >
+
+     }#base_url
+     }#title
+
+  }#needs plugin
+
+}#publisher
