@@ -67,8 +67,8 @@
     au < finished ; finished ; 2017 ; Aboriginal History Journal Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Aboriginal History Journal Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Aboriginal History Journal Volume 42 ; 42 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2019 ; Aboriginal History Journal Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2020 ; Aboriginal History Journal Volume 44 ; 44 ; >
+    au < ready ; exists ; 2019 ; Aboriginal History Journal Volume 43 ; 43 ; >
+    au < ready ; exists ; 2020 ; Aboriginal History Journal Volume 44 ; 44 ; >
 
   }
 
@@ -158,9 +158,9 @@
 
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
     au < finished ; finished ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
-    au < manifest ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
-    au < manifest ; exists ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
+    au < ready ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
+    au < ready ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
+    au < ready ; exists ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
     au < manifest ; exists ; 2021 ; Australian Journal of Biography and History: Number 5 ; 5 ; >
 
   }  
@@ -186,8 +186,8 @@
     au < finished ; finished ; 2017 ; East Asia Forum Quarterly Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; East Asia Forum Quarterly Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
+    au < ready ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
+    au < ready ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
 
   }
 
@@ -207,8 +207,8 @@
     au < finished ; finished ; 2016 ; Human Ecology Review: Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Human Ecology Review: Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Human Ecology Review: Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; Human Ecology Review: Volume 25 ; 25 ;  >
-    au < manifest ; exists ; 2021 ; Human Ecology Review: Volume 26 ; 26 ;  >
+    au < ready ; exists ; 2019 ; Human Ecology Review: Volume 25 ; 25 ;  >
+    au < ready ; exists ; 2021 ; Human Ecology Review: Volume 26 ; 26 ;  >
 
   }
 
@@ -228,8 +228,8 @@
     au < finished ; finished ; 2018 ; International Review of Environmental History: Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
     au < deepCrawl ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
+    au < ready ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
+    au < ready ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
 
   }
 
@@ -242,7 +242,7 @@
     
     param[journal_id] = lilith
 
-    au < manifest ; exists ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; >
+    au < ready ; exists ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; >
     au < expected ; exists ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; >
 
   }
@@ -262,7 +262,7 @@
     au < frozen ; exists ; 2018 ; Made in China Volume 3 ; 3 ; >
     au < frozen ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
     au < frozen ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
+    au < ready ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
 
   }
   

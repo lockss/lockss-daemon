@@ -85,7 +85,7 @@
       au < sfn.ClockssSFNDrupalPlugin ; finished ; manifest ; 2016 ; Journal of Neuroscience Volume 36 ; 36 ; reingest1.clockss.org:8082 >
       au < sfn.ClockssSFNDrupalPlugin ; finished ; manifest ; 2017 ; Journal of Neuroscience Volume 37 ; 37 ; reingest2.clockss.org:8085 >
       au < sfn.ClockssSFNDrupalPlugin ; finished ; manifest ; 2018 ; Journal of Neuroscience Volume 38 ; 38 ; reingest3.clockss.org:8083 >
-      au < sfn.ClockssSFNDrupalPlugin ; ingNotReady ; exists ; 2019 ; Journal of Neuroscience Volume 39 ; 39 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; ready ; exists ; 2019 ; Journal of Neuroscience Volume 39 ; 39 ; >
       au < sfn.ClockssSFNDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of Neuroscience Volume 40 ; 40 ; >
       au < sfn.ClockssSFNDrupalPlugin ; expected ; exists ; 2021 ; Journal of Neuroscience Volume 41 ; 41 ; >
 

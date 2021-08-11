@@ -118,7 +118,7 @@
       au < deepCrawl ; exists ; 2018 ; The Edgar Allan Poe Review Volume 19 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 2020 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2021 ; The Edgar Allan Poe Review Volume 22 ; 2021 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2021 ; The Edgar Allan Poe Review Volume 22 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -439,7 +439,7 @@
       au < deepCrawl ; exists ; 2018 ; Journal of Moravian History Volume 18 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Journal of Moravian History Volume 19 ; 2019 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Moravian History Volume 20 ; 2020 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2021 ; Journal of Moravian History Volume 21 ; 2021 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2021 ; Journal of Moravian History Volume 21 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -676,7 +676,7 @@
       au < deepCrawl ; exists ; 2018 ; Reception: Texts, Readers, Audiences, History Volume 10 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; Reception: Texts, Readers, Audiences, History Volume 11 ; 2019 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Reception: Texts, Readers, Audiences, History Volume 12 ; 2020 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 2021 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1870,7 +1870,7 @@
       au < frozen ; exists ; 2018 ; The Korean Language in America Volume 21-22 ; 2018 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2019 ; The Korean Language in America Volume 22-23 ; 2019 ; https://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2020 ; The Korean Language in America Volume 23-24 ; 2020 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2021 ; The Korean Language in America Volume 24-25 ; 2021 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2021 ; The Korean Language in America Volume 24-25 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2050,12 +2050,12 @@
       au < exists ; exists ; 2013 ; Hiperboreea Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2014 ; Hiperboreea Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2015 ; Hiperboreea Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2016 ; Hiperboreea Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2017 ; Hiperboreea Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2018 ; Hiperboreea Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2019 ; Hiperboreea Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2020 ; Hiperboreea Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2021 ; Hiperboreea Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2016 ; Hiperboreea Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2017 ; Hiperboreea Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2018 ; Hiperboreea Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2019 ; Hiperboreea Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2020 ; Hiperboreea Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2021 ; Hiperboreea Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2070,11 +2070,11 @@
 
       param[journal_id] = hungarianstud
 
-      au < manifest ; exists ; 2016 ; Hungarian Studies Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2017 ; Hungarian Studies Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2018 ; Hungarian Studies Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2016 ; Hungarian Studies Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2017 ; Hungarian Studies Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2018 ; Hungarian Studies Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2019 ; Hungarian Studies Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2020 ; Hungarian Studies Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2020 ; Hungarian Studies Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2021 ; Hungarian Studies Review Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -2095,11 +2095,11 @@
       au < manifest ; exists ; 2007 ; Journal of African Development Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; Journal of African Development Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Journal of African Development Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2010 ; Journal of African Development Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2011 ; Journal of African Development Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2012 ; Journal of African Development Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2013 ; Journal of African Development Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2014 ; Journal of African Development Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2010 ; Journal of African Development Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2011 ; Journal of African Development Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2012 ; Journal of African Development Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2013 ; Journal of African Development Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
+      au < ready ; exists ; 2014 ; Journal of African Development Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2015 ; Journal of African Development Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2016 ; Journal of African Development Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2017 ; Journal of African Development Volume 2017 ; 2017 ; https://www.jstor.org/ ; >

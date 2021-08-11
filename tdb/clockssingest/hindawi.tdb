@@ -5963,7 +5963,7 @@
 
     au < manifest ; exists ; 2011 ; International Scholarly Research Notices Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Scholarly Research Notices Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; International Scholarly Research Notices Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; International Scholarly Research Notices Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Scholarly Research Notices Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Scholarly Research Notices Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Scholarly Research Notices Volume 2016 ; 2016 ; 2016 ; >
@@ -7996,7 +7996,7 @@
     param[journal_id] = joper
     #no longer published
     
-    au < manifest ; exists ; 2013 ; Journal of Operators Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Journal of Operators Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Operators Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Operators Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Operators Volume 2016 ; 2016 ; 2016 ; >
@@ -8535,7 +8535,7 @@
 
     au < manifest ; exists ; 2011 ; Journal of Skin Cancer Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Skin Cancer Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Journal of Skin Cancer Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Journal of Skin Cancer Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Skin Cancer Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Skin Cancer Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Skin Cancer Volume 2016 ; 2016 ; 2016 ; >
@@ -8759,7 +8759,7 @@
     au < manifest ; exists ; 2010 ; Journal of Thermodynamics Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Thermodynamics Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Journal of Thermodynamics Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Journal of Thermodynamics Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Thermodynamics Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Thermodynamics Volume 2016 ; 2016 ; 2016 ; >
@@ -10340,7 +10340,7 @@
     au < manifest ; exists ; 2010 ; TheScientificWorldJOURNAL Volume 10 (2010) ; 2010 ; 10 ; >
     au < manifest ; exists ; 2011 ; TheScientificWorldJOURNAL Volume 11 (2011) ; 2011 ; 11 ; >
     au < manifest ; exists ; 2012 ; The Scientific World Journal Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; The Scientific World Journal Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; The Scientific World Journal Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The Scientific World Journal Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Scientific World Journal Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; The Scientific World Journal Volume 2016 ; 2016 ; 2016 ; >
@@ -10366,7 +10366,7 @@
     au < manifest ; exists ; 2010 ; Thrombosis Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Thrombosis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Thrombosis Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Thrombosis Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Thrombosis Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Thrombosis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Thrombosis Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Thrombosis Volume 2016 ; 2016 ; 2016 ; >
@@ -10387,7 +10387,7 @@
     au < manifest ; exists ; 2010 ; Tuberculosis Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Tuberculosis Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Tuberculosis Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Tuberculosis Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Tuberculosis Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Tuberculosis Research and Treatment Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Tuberculosis Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Tuberculosis Research and Treatment Volume 2016 ; 2016 ; 2016 ; >
@@ -10412,7 +10412,7 @@
     au < manifest ; exists ; 2010 ; Ulcers Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Ulcers Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Ulcers Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Ulcers Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Ulcers Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Ulcers Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Ulcers Volume 2015 ; 2015 ; 2015 ; >
     
@@ -10452,7 +10452,7 @@
     au < manifest ; exists ; 2010 ; Veterinary Medicine International Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Veterinary Medicine International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Veterinary Medicine International Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; Veterinary Medicine International Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; Veterinary Medicine International Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Veterinary Medicine International Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Veterinary Medicine International Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Veterinary Medicine International Volume 2016 ; 2016 ; 2016 ; >
@@ -10495,7 +10495,7 @@
     au < manifest ; exists ; 2010 ; VLSI Design Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; VLSI Design Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; VLSI Design Volume 2012 ; 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 ; >
+    au < ready ; exists ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; VLSI Design Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; VLSI Design Volume 2016 ; 2016 ; 2016 ; >
