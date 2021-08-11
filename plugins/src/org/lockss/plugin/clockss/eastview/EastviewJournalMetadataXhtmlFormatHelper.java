@@ -54,7 +54,7 @@ public class EastviewJournalMetadataXhtmlFormatHelper
 implements SourceXmlSchemaHelper {
   
   private static final Logger log = Logger.getLogger(EastviewJournalMetadataXhtmlFormatHelper.class);
-  static protected final String PUBLICATION_TITLE_PATH = "/html/head/title";
+  static protected final String PUBLICATION_TITLE_PATH = "//html/head/title";
   
   /*
    * <PAGE>3</PAGE>

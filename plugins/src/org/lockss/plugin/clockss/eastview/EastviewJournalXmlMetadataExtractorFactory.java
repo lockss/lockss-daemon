@@ -89,7 +89,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      String cuBase = cu.getUrl();
 
       log.debug3("Eastview Journal All Version: cuBase = " + cuBase);
 
@@ -97,9 +97,9 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         EastviewHelper = new EastviewJournalMetadataXhtmlFormatHelper();
         log.debug3("Eastview Journal Early Version(199X - 2001): cuBase = " + cuBase);
 
-      } else if (cuBase.contains("DA-MLT/MTH/2002") || cuBase.contains("DA-MLT/MTH/2002")
+      } else if (cuBase.contains("DA-MLT/MTH/2002") || cuBase.contains("DA-MLT/MTH/2003")
               || cuBase.contains("DA-MLT/MTH/2004") || cuBase.contains("DA-MLT/MTH/2005")) {
-        EastviewHelper = new EastviewJournalMetadataHtmlFormatHelper();
+        EastviewHelper = new EastviewJournalMetadataXmlFormatHelper();
         log.debug3("Eastview Journal Early Version(2002 - 2005): cuBase = " + cuBase);
 
       } else {
@@ -116,6 +116,10 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
       log.debug3("Eastview Journal: in SourceXmlMetadataExtractor preEmitCheck");
 
+      String url_string = cu.getUrl();
+
+      log.debug3("Eastview Journal: preEmitCheck url_string = " + url_string);
+
       List<String> filesToCheck;
 
       // If no files get returned in the list, nothing to check
@@ -128,7 +132,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       {
         fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
         log.debug3("Eastview Journal: Check for existence of " + filesToCheck.get(i));
-        if(filesToCheck.get(i).contains(".pdf") || filesToCheck.get(i).contains(".xml")) {
+        if(filesToCheck.get(i).contains(".pdf") || filesToCheck.get(i).contains(".xml") || filesToCheck.get(i).contains(".xhtml")) {
           // Set a cooked value for an access file. Otherwise it would get set to xml file
           log.debug3("Eastview Journal: set access_url to " + filesToCheck.get(i));
           return true;
@@ -146,17 +150,12 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      // filename is just the same a the XML filename but with .pdf 
-      // instead of .xml
       String url_string = cu.getUrl();
+
+      log.debug3("Eastview Journal: getFilenamesAssociatedWithRecord url_string = " + url_string);
+
       String articlePDFName = url_string.substring(0,url_string.length() - 3) + "pdf";
       log.debug3("Eastview Journal: articlePDFName is " + articlePDFName);
-
-      /*
-      String rawPDFPath = oneAM.getRaw(EastviewJournalMetadataHelper.PAGE_PDF_PATH);
-      String manMadePagePDF = url_string.replace(".xml", "/") + rawPDFPath;
-      log.debug3("Eastview Journal: manMadePagePDF = " + manMadePagePDF);
-       */
 
       List<String> returnList = new ArrayList<String>();
       returnList.add(articlePDFName);
@@ -169,54 +168,76 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
 
-      String raw_title = thisAM.getRaw(EastviewSchemaHelper.ART_RAW_TITLE);
-      log.debug3(String.format("Eastview metadata raw title parsed: %s", raw_title));
-
-      Pattern pattern =  Pattern.compile("\\d\\d-\\d\\d-\\d\\d\\d\\d\\(([^)]+)-([^(]+)\\)\\s+(.*)");
-
-      Matcher m = pattern.matcher(raw_title);
-
+      String raw_title = null;
       String publisher_shortcut = null;
       String publisher_mapped = null;
       String volume = null;
       String title = null;
+      String pubdate = null;
 
-      if(m.matches()){
-        publisher_shortcut = m.group(1).trim();
-        publisher_mapped = EastViewPublisherNameMappingHelper.canonical.get(publisher_shortcut);
-        volume = m.group(2);
-        title = m.group(2);
+      if (cu.getUrl().contains(".xml")) {
+        raw_title = thisAM.getRaw(EastviewSchemaHelper.ART_RAW_TITLE);
+        log.debug3(String.format("Eastview metadata raw title parsed - xml: %s, cu = %s", raw_title, cu.getUrl()));
+
+      } else if (cu.getUrl().contains(".xhtml")) {
+        raw_title = thisAM.getRaw(EastviewJournalMetadataXmlFormatHelper.ART_RAW_TITLE);
+        log.debug3(String.format("Eastview metadata raw title parsed - Html: %s, cu = %s, raw_title = %s", raw_title, cu.getUrl(), raw_title));
       }
 
-      log.debug3(String.format("Eastview metadata raw title parsed = %s | " +
-                      "publisher_shortcut = %s | publisher_mapped = %s | volume = %s | title = %s",
-              raw_title,
-              publisher_shortcut,
-              publisher_mapped,
-              volume,
-              title));
+      if (raw_title != null) {
 
-      if (publisher_mapped != null) {
-        thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped);
-      }  else {
+        Pattern pattern = Pattern.compile("(\\d\\d-\\d\\d-\\d{2,4})\\(([^)]+)-([^(]+)\\)\\s+(.*)");
+
+        Matcher m = pattern.matcher(raw_title);
+
+        if (m.matches()) {
+          pubdate = m.group(1);
+          publisher_shortcut = m.group(2).trim();
+          publisher_mapped = EastViewPublisherNameMappingHelper.canonical.get(publisher_shortcut);
+          volume = m.group(3);
+          title = m.group(4);
+        }
+
         log.debug3(String.format("Eastview metadata raw title parsed = %s | " +
-                        "publisher_shortcut = %s | Null publisher_mapped = %s | volume = %s | title = %s",
+                        "publisher_shortcut = %s | publisher_mapped = %s | volume = %s | title = %s",
                 raw_title,
                 publisher_shortcut,
                 publisher_mapped,
                 volume,
                 title));
+
+        if (publisher_mapped != null) {
+          thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped);
+        } else {
+          log.debug3(String.format("Eastview metadata raw title parsed = %s | " +
+                          "publisher_shortcut = %s | Null publisher_mapped = %s | volume = %s | title = %s",
+                  raw_title,
+                  publisher_shortcut,
+                  publisher_mapped,
+                  volume,
+                  title));
+          thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_shortcut);
+        }
       }
       
 
       if (thisAM.get(MetadataField.FIELD_VOLUME) == null || thisAM.get(MetadataField.FIELD_VOLUME).equals("000") || thisAM.get(MetadataField.FIELD_VOLUME).equals('0')) {
-        log.debug3("Eastview Journal: invalid volume, set to " + thisAM.get(MetadataField.FIELD_DATE).substring(0,4));
-        thisAM.replace(MetadataField.FIELD_VOLUME,thisAM.get(MetadataField.FIELD_DATE).substring(0,4));
+        if (thisAM.get(MetadataField.FIELD_DATE) != null) {
+          log.debug3("Eastview Journal: invalid volume, set to " + thisAM.get(MetadataField.FIELD_DATE).substring(0, 4));
+          thisAM.replace(MetadataField.FIELD_VOLUME, thisAM.get(MetadataField.FIELD_DATE).substring(0, 4));
+        } else if(volume != null) {
+          //For early .xhtml data, there is not date field
+          thisAM.replace(MetadataField.FIELD_VOLUME, volume.replace("No.", ""));
+        }
       }
 
       if (thisAM.get(MetadataField.FIELD_ISSUE) == null || thisAM.get(MetadataField.FIELD_ISSUE).equals("000") || thisAM.get(MetadataField.FIELD_ISSUE).equals('0')) {
-        log.debug3("Eastview Journal: invalid issue, set to " + thisAM.get(MetadataField.FIELD_DATE).replace("-", ""));
-        thisAM.replace(MetadataField.FIELD_ISSUE,thisAM.get(MetadataField.FIELD_DATE).replace("-", ""));
+        if (thisAM.get(MetadataField.FIELD_DATE) != null) {
+          log.debug3("Eastview Journal: invalid issue, set to " + thisAM.get(MetadataField.FIELD_DATE).replace("-", ""));
+          thisAM.replace(MetadataField.FIELD_ISSUE, thisAM.get(MetadataField.FIELD_DATE).replace("-", ""));
+        } else {
+          thisAM.replace(MetadataField.FIELD_ISSUE, pubdate);
+        }
       }
       
       String publicationTitle = thisAM.getRaw(EastviewJournalMetadataHelper.PUBLICATION_TITLE_PATH);
@@ -230,6 +251,10 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         }
       } else {
         log.debug3("Eastview Journal: publicationTitle is null");
+      }
+
+      if (title != null) {
+        thisAM.put(MetadataField.FIELD_ARTICLE_TITLE, title);
       }
 
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
@@ -256,8 +281,8 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
                 03-31-2003(MTH-No.001) R&D AT THE RUSSIAN DEFENSE MINISTRY: RECOMMENDATIONS ON PLANNING</title>
                 </head>
                  */
-                log.debug3("Eastview Journal line = " + line + ", unescapeHtml4 line = " + StringEscapeUtils.unescapeHtml4(line)
-                        + "escapeHtml4 line = " + StringEscapeUtils.escapeHtml4(line));
+                //log.debug3("Eastview Journal line = " + line + ", unescapeHtml4 line = " + StringEscapeUtils.unescapeHtml4(line)
+                //        + "escapeHtml4 line = " + StringEscapeUtils.escapeHtml4(line));
                 return StringEscapeUtils.unescapeHtml4(line);
               }
             }));

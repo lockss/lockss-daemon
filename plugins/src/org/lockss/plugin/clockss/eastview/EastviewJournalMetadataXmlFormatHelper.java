@@ -50,10 +50,10 @@ import java.util.Map;
  *  Eastview Information Services
  *  
  */
-public class EastviewJournalMetadataHtmlFormatHelper
+public class EastviewJournalMetadataXmlFormatHelper
 implements SourceXmlSchemaHelper {
   
-  private static final Logger log = Logger.getLogger(EastviewJournalMetadataHtmlFormatHelper.class);
+  private static final Logger log = Logger.getLogger(EastviewJournalMetadataXmlFormatHelper.class);
   static protected final String PUBLICATION_TITLE_PATH = "//html/head/title";
   static protected String ART_RAW_TITLE = "//html/head/title";
   

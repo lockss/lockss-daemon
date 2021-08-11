@@ -70,6 +70,12 @@
     <string>org.lockss.plugin.clockss.eastview.EastviewDirSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
+    <string>au_url_mime_type_map</string>
+    <list>
+      <string>.*\.xhtml$,text/xml</string>
+    </list>
+  </entry>
+  <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
