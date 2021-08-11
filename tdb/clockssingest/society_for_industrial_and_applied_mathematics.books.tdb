@@ -550,7 +550,7 @@
    au < frozen ; exists ; 2019 ; 978-1-61197-595-6 ; 978-1-61197-596-3 ; 978-1-61197-596-3 ; Introduction to Optimization and Hadamard Semidifferential Calculus, Second Edition (978-1-61197-596-3) ; https://epubs.siam.org/ ; >
    au < ready ; exists ; 2019 ; 978-1-61197-579-6 ; 978-1-61197-580-2 ; 978-1-61197-580-2 ; A Mathematical Introduction to Electronic Structure Theory (978-1-61197-580-2) ; https://epubs.siam.org/ ; >
    au < frozen ; exists ; 2019 ; 978-1-61197-561-1 ; 978-1-61197-562-8 ; 978-1-61197-562-8 ; Nonlocal Modeling, Analysis, and Computation (978-1-61197-562-8) ; https://epubs.siam.org/ ; >
-   au < ready ; exists ; 2019 ; 978-1-61197-569-7 ; 978-1-61197-570-3 ; 978-1-61197-570-3 ; Numerical Analysis: Theory and Experiments (978-1-61197-570-3) ; https://epubs.siam.org/ ; >
+   au < crawling ; exists ; 2019 ; 978-1-61197-569-7 ; 978-1-61197-570-3 ; 978-1-61197-570-3 ; Numerical Analysis: Theory and Experiments (978-1-61197-570-3) ; https://epubs.siam.org/ ; >
    au < frozen ; exists ; 2019 ; 978-1-61197-581-9 ; 978-1-61197-582-6 ; 978-1-61197-582-6 ; Passive Network Synthesis: An Approach to Classification (978-1-61197-582-6) ; https://epubs.siam.org/ ; >
    au < frozen ; exists ; 2019 ; 978-1-61197-589-5 ; 978-1-61197-590-1 ; 978-1-61197-590-1 ; Piecewise Affine Control: Continuous Time, Sampled Data, and Networked Systems (978-1-61197-590-1) ; https://epubs.siam.org/ ; >
    au < frozen ; exists ; 2019 ; 978-1-61197-559-8 ; 978-1-61197-560-4 ; 978-1-61197-560-4 ; Practical Optimization (978-1-61197-560-4) ; https://epubs.siam.org/ ; >
@@ -567,8 +567,8 @@
    au < frozen ; exists ; 2020 ; 978-1-61197-624-3 ; 978-1-61197-625-0 ; 978-1-61197-625-0 ; Observability: A New Theory Based on the Group of Invariance (978-1-61197-625-0) ; https://epubs.siam.org/ ; >
    au < crawling ; exists ; 2020 ; 978-1-61197-630-4 ; 978-1-61197-631-1 ; 978-1-61197-631-1 ; PETSc for Partial Differential Equations: Numerical Solutions in C and Python (978-1-61197-631-1) ; https://epubs.siam.org/ ; >
    au < crawling ; exists ; 2020 ; 978-1-61197-618-2 ; 978-1-61197-619-9 ; 978-1-61197-619-9 ; Practical Methods for Optimal Control Using Nonlinear Programing, Third Edition (978-1-61197-619-9) ; https://epubs.siam.org/ ; >
-   au < ready ; exists ; 2020 ; 978-1-61197-620-5 ; 978-1-61197-621-2 ; 978-1-61197-621-2 ; Riemann Problems and Jupyter Solutions (978-1-61197-621-2) ; https://epubs.siam.org/ ; >
-   au < ready ; exists ; 2020 ; 978-1-61197-634-2 ; 978-1-61197-635-9 ; 978-1-61197-635-9 ; A Software Repository for Gaussian Quadratures and Christoffel Functions (978-1-61197-635-9) ; https://epubs.siam.org/ ; >
+   au < crawling ; exists ; 2020 ; 978-1-61197-620-5 ; 978-1-61197-621-2 ; 978-1-61197-621-2 ; Riemann Problems and Jupyter Solutions (978-1-61197-621-2) ; https://epubs.siam.org/ ; >
+   au < crawling ; exists ; 2020 ; 978-1-61197-634-2 ; 978-1-61197-635-9 ; 978-1-61197-635-9 ; A Software Repository for Gaussian Quadratures and Christoffel Functions (978-1-61197-635-9) ; https://epubs.siam.org/ ; >
    au < deepCrawl ; exists ; 2020 ; 978-1-61197-614-4 ; 978-1-61197-615-1 ; 978-1-61197-615-1 ; Solving Problems in Multiply Connected Domains (978-1-61197-615-1) ; https://epubs.siam.org/ ; >
 
  }
