@@ -112,7 +112,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       String raw_title = thisAM.getRaw(EastviewSchemaHelper.ART_RAW_TITLE);
       log.debug3(String.format("Eastview Newspaper: metadata raw title parsed: %s", raw_title));
 
-      Pattern pattern =  Pattern.compile("\\d\\d-\\d\\d-\\d\\d\\d\\d\\(([^)]+)-([^(]+)\\)\\s+(.*)");
+      Pattern pattern =  Pattern.compile("\\d\\d-\\d\\d-\\d{2,4}\\(([^)]+)-([^(]+)\\)\\s+(.*)");
 
       Matcher m = pattern.matcher(raw_title);
 
@@ -125,7 +125,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
         publisher_shortcut = m.group(1).trim();
         publisher_mapped = EastViewPublisherNameMappingHelper.canonical.get(publisher_shortcut);
         volume = m.group(2);
-        title = m.group(2);
+        title = m.group(3);
       }
 
       log.debug3(String.format("Eastview Newspaper: metadata raw title parsed = %s | " +

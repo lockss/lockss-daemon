@@ -54,7 +54,8 @@ public class EastviewJournalMetadataHtmlFormatHelper
 implements SourceXmlSchemaHelper {
   
   private static final Logger log = Logger.getLogger(EastviewJournalMetadataHtmlFormatHelper.class);
-  static protected final String PUBLICATION_TITLE_PATH = "/html/head/title";
+  static protected final String PUBLICATION_TITLE_PATH = "//html/head/title";
+  static protected String ART_RAW_TITLE = "//html/head/title";
   
   /*
    * <PAGE>3</PAGE>
@@ -97,7 +98,6 @@ implements SourceXmlSchemaHelper {
   private static String art_title = "/center/font/b";
   private static String art_contrib = "/p[1]";
   private static String art_sp = "/ul/li[4]/font";
-  protected static String ART_RAW_TITLE = "//html/head/title";
   
 
   /*
