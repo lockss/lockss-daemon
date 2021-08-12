@@ -280,10 +280,11 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
                 <title>
                 03-31-2003(MTH-No.001) R&D AT THE RUSSIAN DEFENSE MINISTRY: RECOMMENDATIONS ON PLANNING</title>
                 </head>
+                log.debug3("Eastview Journal line = " + line + ", unescapeHtml4 line = " + StringEscapeUtils.unescapeHtml4(line)
+                        + "replaced line = " + line.replace("&", "&amp;"));
                  */
-                //log.debug3("Eastview Journal line = " + line + ", unescapeHtml4 line = " + StringEscapeUtils.unescapeHtml4(line)
-                //        + "escapeHtml4 line = " + StringEscapeUtils.escapeHtml4(line));
-                return StringEscapeUtils.unescapeHtml4(line);
+                //return StringEscapeUtils.unescapeHtml4(line);   //this will cause "<xml..." line parsing error.
+                return line.replaceAll("&", "&amp;");
               }
             }));
           }
