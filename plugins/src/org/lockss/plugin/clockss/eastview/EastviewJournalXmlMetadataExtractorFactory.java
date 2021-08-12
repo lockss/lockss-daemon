@@ -91,7 +91,6 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       
       String cuBase = cu.getUrl();
 
-      log.debug3("Eastview Journal All Version: cuBase = " + cuBase);
 
       if (cuBase.contains("DA-MLT/MTH/2001") || cuBase.contains("DA-MLT/MTH/199")) {
         EastviewHelper = new EastviewJournalMetadataXhtmlFormatHelper();
@@ -114,11 +113,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
     protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("Eastview Journal: in SourceXmlMetadataExtractor preEmitCheck");
-
       String url_string = cu.getUrl();
-
-      log.debug3("Eastview Journal: preEmitCheck url_string = " + url_string);
 
       List<String> filesToCheck;
 
@@ -151,8 +146,6 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         ArticleMetadata oneAM) {
 
       String url_string = cu.getUrl();
-
-      log.debug3("Eastview Journal: getFilenamesAssociatedWithRecord url_string = " + url_string);
 
       String articlePDFName = url_string.substring(0,url_string.length() - 3) + "pdf";
       log.debug3("Eastview Journal: articlePDFName is " + articlePDFName);
