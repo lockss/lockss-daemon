@@ -64,4 +64,23 @@
 
     }
 
+    {
+
+          title <
+             name = East View Information Services Newspaper Source Content
+          >
+
+          {
+
+            #plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewNewspaperDirSourcePlugin
+            #param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewnewspapers-released/
+            hidden[proxy] = DIRECT
+            implicit < status ; status2 ; year ; name ; param[directory] >
+
+            #au < expected ; exists ; 2020 ; East View Information Services Newspaper Source Content 2020 ; 2020 >
+
+          }
+
+        }
+
 }
