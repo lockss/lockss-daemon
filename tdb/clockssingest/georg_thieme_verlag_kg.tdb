@@ -943,14 +943,14 @@
     comment[years] = 2001-current
     comment[continues] = 1432-2919 
 
-   au < frozen ; exists ; 2001 ; 2001 ; Deutsche Zeitschrift für Onkologie Volume 33 ; 33 ; >
-   au < frozen ; exists ; 2002 ; 2002 ; Deutsche Zeitschrift für Onkologie Volume 34 ; 34 ; >
+   au < finished ; manifest ; 2001 ; 2001 ; Deutsche Zeitschrift für Onkologie Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+   au < finished ; manifest ; 2002 ; 2002 ; Deutsche Zeitschrift für Onkologie Volume 34 ; 34 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2003 ; 2003 ; Deutsche Zeitschrift für Onkologie Volume 35 ; 35 ; reingest5.clockss.org:8082 >
-   au < frozen ; exists ; 2004 ; 2004 ; Deutsche Zeitschrift für Onkologie Volume 36 ; 36 ; >
-   au < frozen ; exists ; 2005 ; 2005 ; Deutsche Zeitschrift für Onkologie Volume 37 ; 37 ; >
-   au < frozen ; exists ; 2006 ; 2006 ; Deutsche Zeitschrift für Onkologie Volume 38 ; 38 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Onkologie Volume 39 ; 39 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Onkologie Volume 40 ; 40 ; >
+   au < finished ; manifest ; 2004 ; 2004 ; Deutsche Zeitschrift für Onkologie Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2005 ; 2005 ; Deutsche Zeitschrift für Onkologie Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2006 ; 2006 ; Deutsche Zeitschrift für Onkologie Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2007 ; 2007 ; Deutsche Zeitschrift für Onkologie Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2008 ; 2008 ; Deutsche Zeitschrift für Onkologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2009 ; 2009 ; Deutsche Zeitschrift für Onkologie Volume 41 ; 41 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Deutsche Zeitschrift für Onkologie Volume 42 ; 42 ; >
    au < finished ; finished ; 2011 ; 2011 ; Deutsche Zeitschrift für Onkologie Volume 43 ; 43 ; reingest2.clockss.org:8085 >
@@ -1016,7 +1016,7 @@
     comment[years] = 2000 only - journal published 1996-2000
     comment[continued_by] = 1617-5891 Deutsche Zeitschrift fur Onkologie
 
-   au < frozen ; exists ; 2000 ; 2000 ; Zeitschrift für Onkologie Volume 32 ; 32 ; >
+   au < finished ; manifest ; 2000 ; 2000 ; Zeitschrift für Onkologie Volume 32 ; 32 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -1031,8 +1031,8 @@
     param[journal_id] = 10.1055/s-00000146
     comment[years] = 2007-current
 
-   au < frozen ; exists ; 2007 ; 2007 ; Diabetes aktuell Volume 5 ; 5 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Diabetes aktuell Volume 6 ; 6 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Diabetes aktuell Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2008 ; 2008 ; Diabetes aktuell Volume 6 ; 6 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Diabetes aktuell Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Diabetes aktuell Volume 8 ; 8 ; >
    au < finished ; finished ; 2011 ; 2011 ; Diabetes aktuell Volume 9 ; 9 ; reingest1.clockss.org:8082 >
@@ -1060,9 +1060,9 @@
     param[journal_id] = 10.1055/s-00000134
     comment[years] = 2006-current
 
-   au < frozen ; exists ; 2006 ; 2006 ; Diabetologie und Stoffwechsel Volume 1 ; 1 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Diabetologie und Stoffwechsel Volume 2 ; 2 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Diabetologie und Stoffwechsel Volume 3 ; 3 ; >
+   au < finished ; manifest ; 2006 ; 2006 ; Diabetologie und Stoffwechsel Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+   au < finished ; manifest ; 2007 ; 2007 ; Diabetologie und Stoffwechsel Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2008 ; 2008 ; Diabetologie und Stoffwechsel Volume 3 ; 3 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Diabetologie und Stoffwechsel Volume 4 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Diabetologie und Stoffwechsel Volume 5 ; 5 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Diabetologie und Stoffwechsel Volume 6 ; 6 ; >
@@ -1090,8 +1090,8 @@
     param[journal_id] = 10.1055/s-00000145
     comment[years] = 2007-current
 
-   au < frozen ; exists ; 2007 ; 2007 ; Dialyse aktuell Volume 2 ; 2 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Dialyse aktuell Volume 3 ; 3 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Dialyse aktuell Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Dialyse aktuell Volume 3 ; 3 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Dialyse aktuell Volume 4 ; 4 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Dialyse aktuell Volume 5 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Dialyse aktuell Volume 6 ; 6 ; >
