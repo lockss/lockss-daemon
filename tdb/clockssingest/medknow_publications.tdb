@@ -7312,7 +7312,7 @@
       au < finished ; finished ; 2016 ; Journal of Orofacial Sciences Volume 8 ; 2016 ; 8 ; http://www.jofs.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Orofacial Sciences Volume 9 ; 2017 ; 9 ; http://www.jofs.in/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Journal of Orofacial Sciences Volume 10 ; 2018 ; 10 ; http://www.jofs.in/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of Orofacial Sciences Volume 11 ; 2019 ; 11 ; https://www.jofs.in/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of Orofacial Sciences Volume 11 ; 2019 ; 11 ; https://www.jofs.in/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Orofacial Sciences Volume 12 ; 2020 ; 12 ; https://www.jofs.in/ ; ; >
       au < manifest ; exists ; 2021 ; Journal of Orofacial Sciences Volume 13 ; 2021 ; 13 ; https://www.jofs.in/ ; ; >
 
@@ -7590,7 +7590,7 @@
       au < finished ; finished ; 2016 ; Journal of the Scientific Society Volume 43 ; 2016 ; 43 ; http://www.jscisociety.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Journal of the Scientific Society Volume 44 ; 2017 ; 44 ; http://www.jscisociety.com/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Journal of the Scientific Society Volume 45 ; 2018 ; 45 ; http://www.jscisociety.com/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of the Scientific Society Volume 46 ; 2019 ; 46 ; https://www.jscisociety.com/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of the Scientific Society Volume 46 ; 2019 ; 46 ; https://www.jscisociety.com/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Journal of the Scientific Society Volume 47 ; 2020 ; 47 ; https://www.jscisociety.com/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of the Scientific Society Volume 48 ; 2021 ; 48 ; https://www.jscisociety.com/ ; ; >
 
@@ -8600,7 +8600,7 @@
       au < finished ; finished ; 2016 ; The Journal of Indian Prosthodontic Society Volume 16 ; 2016 ; 16 ; http://www.j-ips.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; The Journal of Indian Prosthodontic Society Volume 17 ; 2017 ; 17 ; http://www.j-ips.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; The Journal of Indian Prosthodontic Society Volume 18 ; 2018 ; 18 ; http://www.j-ips.org/ ; ; >
-      au < ready ; exists ; 2019 ; The Journal of Indian Prosthodontic Society Volume 19 ; 2019 ; 19 ; https://www.j-ips.org/ ; ; >
+      au < crawling ; exists ; 2019 ; The Journal of Indian Prosthodontic Society Volume 19 ; 2019 ; 19 ; https://www.j-ips.org/ ; ; >
       au < manifest ; exists ; 2020 ; The Journal of Indian Prosthodontic Society Volume 20 ; 2020 ; 20 ; https://www.j-ips.org/ ; ; >
       au < crawling ; exists ; 2021 ; The Journal of Indian Prosthodontic Society Volume 21 ; 2021 ; 21 ; https://www.j-ips.org/ ; ; >
 
@@ -9475,7 +9475,7 @@
       au < manifest ; exists ; 2016 ; Hamdan Medical Journal Volume 9 ; 2016 ; 9 ; https://www.hamdanjournal.org/ ; ; >
       au < manifest ; exists ; 2017 ; Hamdan Medical Journal Volume 10 ; 2017 ; 10 ; https://www.hamdanjournal.org/ ; ; >
       au < manifest ; exists ; 2018 ; Hamdan Medical Journal Volume 11 ; 2018 ; 11 ; https://www.hamdanjournal.org/ ; ; >
-      au < ready ; exists ; 2019 ; Hamdan Medical Journal Volume 12 ; 2019 ; 12 ; https://www.hamdanjournal.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Hamdan Medical Journal Volume 12 ; 2019 ; 12 ; https://www.hamdanjournal.org/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Hamdan Medical Journal Volume 13 ; 2020 ; 13 ; https://www.hamdanjournal.org/ ; ; >
       au < crawling ; exists ; 2021 ; Hamdan Medical Journal Volume 14 ; 2021 ; 14 ; https://www.hamdanjournal.org/ ; ; >
 
@@ -9681,7 +9681,7 @@
 #      param[base_url] = http://www.isjonline.com/
 
       au < manifest ; exists ; 2018 ; Indian Spine Journal Volume 1 ; 2018 ; 1 ; https://www.isjonline.com/ ; ; >
-      au < ready ; exists ; 2019 ; Indian Spine Journal Volume 2 ; 2019 ; 2 ; https://www.isjonline.com/ ; ; >
+      au < crawling ; exists ; 2019 ; Indian Spine Journal Volume 2 ; 2019 ; 2 ; https://www.isjonline.com/ ; ; >
       au < finished ; manifest ; 2020 ; Indian Spine Journal Volume 3 ; 2020 ; 3 ; https://www.isjonline.com/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Indian Spine Journal Volume 4 ; 2021 ; 4 ; https://www.isjonline.com/ ; ; >
 
@@ -9989,7 +9989,7 @@
       au < manifest ; exists ; 2016 ; Journal of Current Medical Research and Practice Volume 1 ; 2016 ; 1 ; https://www.jcmrp.eg.net/ ; ; >
       au < manifest ; exists ; 2017 ; Journal of Current Medical Research and Practice Volume 2 ; 2017 ; 2 ; https://www.jcmrp.eg.net/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Current Medical Research and Practice Volume 3 ; 2018 ; 3 ; https://www.jcmrp.eg.net/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of Current Medical Research and Practice Volume 4 ; 2019 ; 4 ; https://www.jcmrp.eg.net/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of Current Medical Research and Practice Volume 4 ; 2019 ; 4 ; https://www.jcmrp.eg.net/ ; ; >
       au < crawling ; exists ; 2020 ; Journal of Current Medical Research and Practice Volume 5 ; 2020 ; 5 ; https://www.jcmrp.eg.net/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Current Medical Research and Practice Volume 6 ; 2021 ; 6 ; https://www.jcmrp.eg.net/ ; ; >
 
@@ -10028,7 +10028,7 @@
 #      param[base_url] = http://www.jddsjournal.org/
 
       au < manifest ; exists ; 2018 ; Journal of Dermatology and Dermatologic Surgery Volume 22 ; 2018 ; 22 ; https://www.jddsjournal.org/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of Dermatology and Dermatologic Surgery Volume 23 ; 2019 ; 23 ; https://www.jddsjournal.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of Dermatology and Dermatologic Surgery Volume 23 ; 2019 ; 23 ; https://www.jddsjournal.org/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Dermatology and Dermatologic Surgery Volume 24 ; 2020 ; 24 ; https://www.jddsjournal.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Dermatology and Dermatologic Surgery Volume 25 ; 2021 ; 25 ; https://www.jddsjournal.org/ ; ; >
 
@@ -10109,7 +10109,7 @@
       au < manifest ; exists ; 2016 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 28 ; 2016 ; 28 ; https://www.jiaomr.in/ ; ; >
       au < manifest ; exists ; 2017 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 29 ; 2017 ; 29 ; https://www.jiaomr.in/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 30 ; 2018 ; 30 ; https://www.jiaomr.in/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 31 ; 2019 ; 31 ; https://www.jiaomr.in/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 31 ; 2019 ; 31 ; https://www.jiaomr.in/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 32 ; 2020 ; 32 ; https://www.jiaomr.in/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 33 ; 2021 ; 33 ; https://www.jiaomr.in/ ; ; >
 
@@ -10130,7 +10130,7 @@
       au < manifest ; exists ; 2016 ; Journal of International Oral Health Volume 8 ; 2016 ; 8 ; https://www.jioh.org/ ; ; >
       au < manifest ; exists ; 2017 ; Journal of International Oral Health Volume 9 ; 2017 ; 9 ; https://www.jioh.org/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of International Oral Health Volume 10 ; 2018 ; 10 ; https://www.jioh.org/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of International Oral Health Volume 11 ; 2019 ; 11 ; https://www.jioh.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of International Oral Health Volume 11 ; 2019 ; 11 ; https://www.jioh.org/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Journal of International Oral Health Volume 12 ; 2020 ; 12 ; https://www.jioh.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of International Oral Health Volume 13 ; 2021 ; 13 ; https://www.jioh.org/ ; ; >
 
@@ -10279,7 +10279,7 @@
 #      param[base_url] = http://www.jnsmonline.org/
 
       au < manifest ; exists ; 2018 ; Journal of Nature and Science of Medicine Volume 1 ; 2018 ; 1 ; https://www.jnsmonline.org/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of Nature and Science of Medicine Volume 2 ; 2019 ; 2 ; https://www.jnsmonline.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of Nature and Science of Medicine Volume 2 ; 2019 ; 2 ; https://www.jnsmonline.org/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Nature and Science of Medicine Volume 3 ; 2020 ; 3 ; https://www.jnsmonline.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Nature and Science of Medicine Volume 4 ; 2021 ; 4 ; https://www.jnsmonline.org/ ; ; >
 
@@ -10301,7 +10301,7 @@
       au < manifest ; exists ; 2016 ; Journal of Patient Safety and Infection Control Volume 4 ; 2016 ; 4 ; https://www.jpsiconline.com/ ; ; >
       au < manifest ; exists ; 2017 ; Journal of Patient Safety and Infection Control Volume 5 ; 2017 ; 5 ; https://www.jpsiconline.com/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Patient Safety and Infection Control Volume 6 ; 2018 ; 6 ; https://www.jpsiconline.com/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of Patient Safety and Infection Control Volume 7 ; 2019 ; 7 ; https://www.jpsiconline.com/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of Patient Safety and Infection Control Volume 7 ; 2019 ; 7 ; https://www.jpsiconline.com/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Patient Safety and Infection Control Volume 8 ; 2020 ; 8 ; https://www.jpsiconline.com/ ; ; >
       au < expected ; exists ; 2021 ; Journal of Patient Safety and Infection Control Volume 9 ; 2021 ; 9 ; https://www.jpsiconline.com/ ; ; >
 

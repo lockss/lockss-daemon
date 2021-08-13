@@ -349,7 +349,7 @@
     
     au < frozen ; exists ; 1887 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 ; >
     au < frozen ; exists ; 1888 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 ; >
-    au < ready ; exists ; 1889 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 180 ; 180 ; >
+    au < crawling ; exists ; 1889 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 180 ; 180 ; >
     au < frozen ; exists ; 1890 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 181 ; 181 ; >
     au < frozen ; exists ; 1891 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 182 ; 182 ; >
     au < frozen ; exists ; 1892 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 183 ; 183 ; >
@@ -590,7 +590,7 @@
     param[journal_id] = rstb1887
 
     au < frozen ; exists ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 ; >
-    au < ready ; exists ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 ; >
+    au < crawling ; exists ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 ; >
     au < frozen ; exists ; 1889 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 180 ; 180 ; >
     au < frozen ; exists ; 1890 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 181 ; 181 ; >
     au < frozen ; exists ; 1891 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 182 ; 182 ; >
@@ -915,7 +915,7 @@
     au < crawling ; exists ; 1801 ; Philosophical Transactions of the Royal Society of London Volume 91 ; 91 ; >
     au < frozen ; exists ; 1802 ; Philosophical Transactions of the Royal Society of London Volume 92 ; 92 ; >
     au < frozen ; exists ; 1803 ; Philosophical Transactions of the Royal Society of London Volume 93 ; 93 ; >
-    au < ready ; exists ; 1804 ; Philosophical Transactions of the Royal Society of London Volume 94 ; 94 ; >
+    au < crawling ; exists ; 1804 ; Philosophical Transactions of the Royal Society of London Volume 94 ; 94 ; >
     au < frozen ; exists ; 1805 ; Philosophical Transactions of the Royal Society of London Volume 95 ; 95 ; >
     au < frozen ; exists ; 1806 ; Philosophical Transactions of the Royal Society of London Volume 96 ; 96 ; >
     au < frozen ; exists ; 1807 ; Philosophical Transactions of the Royal Society of London Volume 97 ; 97 ; >
