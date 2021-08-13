@@ -312,7 +312,7 @@
       au < finished ; manifest ; 1974 ; Journal of the Geotechnical Engineering Division Volume 100 ; 100 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1975 ; Journal of the Geotechnical Engineering Division Volume 101 ; 101 ;  >
       au < finished ; manifest ; 1976 ; Journal of the Geotechnical Engineering Division Volume 102 ; 102 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 1977 ; Journal of the Geotechnical Engineering Division Volume 103 ; 103 ;  >
+      au < crawling ; exists ; 1977 ; Journal of the Geotechnical Engineering Division Volume 103 ; 103 ;  >
       au < crawling ; exists ; 1978 ; Journal of the Geotechnical Engineering Division Volume 104 ; 104 ;  >
       au < finished ; manifest ; 1979 ; Journal of the Geotechnical Engineering Division Volume 105 ; 105 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 1980 ; Journal of the Geotechnical Engineering Division Volume 106 ; 106 ;  >
@@ -357,13 +357,13 @@
 
       param[journal_id] = jyceaj
 
-      au < ready ; exists ; 1956 ; Journal of the Hydraulics Division Volume 82 ; 82 ;  >
+      au < crawling ; exists ; 1956 ; Journal of the Hydraulics Division Volume 82 ; 82 ;  >
       au < frozen ; exists ; 1957 ; Journal of the Hydraulics Division Volume 83 ; 83 ;  >
       au < ready ; exists ; 1958 ; Journal of the Hydraulics Division Volume 84 ; 84 ;  >
-      au < ready ; exists ; 1959 ; Journal of the Hydraulics Division Volume 85 ; 85 ;  >
+      au < crawling ; exists ; 1959 ; Journal of the Hydraulics Division Volume 85 ; 85 ;  >
       au < crawling ; exists ; 1960 ; Journal of the Hydraulics Division Volume 86 ; 86 ;  >
       au < crawling ; exists ; 1961 ; Journal of the Hydraulics Division Volume 87 ; 87 ;  >
-      au < ready ; exists ; 1962 ; Journal of the Hydraulics Division Volume 88 ; 88 ;  >
+      au < crawling ; exists ; 1962 ; Journal of the Hydraulics Division Volume 88 ; 88 ;  >
       au < crawling ; exists ; 1963 ; Journal of the Hydraulics Division Volume 89 ; 89 ;  >
       au < ready ; exists ; 1964 ; Journal of the Hydraulics Division Volume 90 ; 90 ;  >
       au < crawling ; exists ; 1965 ; Journal of the Hydraulics Division Volume 91 ; 91 ;  >
@@ -375,7 +375,7 @@
       au < crawling ; exists ; 1971 ; Journal of the Hydraulics Division Volume 97 ; 97 ;  >
       au < finished ; manifest ; 1972 ; Journal of the Hydraulics Division Volume 98 ; 98 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1973 ; Journal of the Hydraulics Division Volume 99 ; 99 ;  >
-      au < ready ; exists ; 1974 ; Journal of the Hydraulics Division Volume 100 ; 100 ;  >
+      au < crawling ; exists ; 1974 ; Journal of the Hydraulics Division Volume 100 ; 100 ;  >
       au < crawling ; exists ; 1975 ; Journal of the Hydraulics Division Volume 101 ; 101 ;  >
       au < finished ; manifest ; 1976 ; Journal of the Hydraulics Division Volume 102 ; 102 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1977 ; Journal of the Hydraulics Division Volume 103 ; 103 ; reingest1.clockss.org:8082 >
@@ -445,10 +445,10 @@
       au < exists ; exists ; 1962 ; Journal of the Pipeline Division Volume 88 ; 88 ;  >
       au < frozen ; exists ; 1963 ; Journal of the Pipeline Division Volume 89 ; 89 ;  >
       au < crawling ; exists ; 1964 ; Journal of the Pipeline Division Volume 90 ; 90 ;  >
-      au < ready ; exists ; 1965 ; Journal of the Pipeline Division Volume 91 ; 91 ;  >
+      au < crawling ; exists ; 1965 ; Journal of the Pipeline Division Volume 91 ; 91 ;  >
       au < ready ; exists ; 1966 ; Journal of the Pipeline Division Volume 92 ; 92 ;  >
       au < frozen ; exists ; 1967 ; Journal of the Pipeline Division Volume 93 ; 93 ;  >
-      au < ready ; exists ; 1968 ; Journal of the Pipeline Division Volume 94 ; 94 ;  >
+      au < crawling ; exists ; 1968 ; Journal of the Pipeline Division Volume 94 ; 94 ;  >
 
   }
 
@@ -463,7 +463,7 @@
       param[journal_id] = jpweam
 
       au < frozen ; exists ; 1956 ; Journal of the Power Division Volume 82 ; 82 ;  >
-      au < ready ; exists ; 1957 ; Journal of the Power Division Volume 83 ; 83 ;  >
+      au < crawling ; exists ; 1957 ; Journal of the Power Division Volume 83 ; 83 ;  >
       au < ready ; exists ; 1958 ; Journal of the Power Division Volume 84 ; 84 ;  >
       au < frozen ; exists ; 1959 ; Journal of the Power Division Volume 85 ; 85 ;  >
       au < crawling ; exists ; 1960 ; Journal of the Power Division Volume 86 ; 86 ;  >
@@ -471,7 +471,7 @@
       au < frozen ; exists ; 1962 ; Journal of the Power Division Volume 88 ; 88 ;  >
       au < frozen ; exists ; 1963 ; Journal of the Power Division Volume 89 ; 89 ;  >
       au < crawling ; exists ; 1964 ; Journal of the Power Division Volume 90 ; 90 ;  >
-      au < ready ; exists ; 1965 ; Journal of the Power Division Volume 91 ; 91 ;  >
+      au < crawling ; exists ; 1965 ; Journal of the Power Division Volume 91 ; 91 ;  >
       au < frozen ; exists ; 1966 ; Journal of the Power Division Volume 92 ; 92 ;  >
       au < frozen ; exists ; 1967 ; Journal of the Power Division Volume 93 ; 93 ;  >
       au < finished ; manifest ; 1968 ; Journal of the Power Division Volume 94 ; 94 ; reingest4.clockss.org:8082 >
@@ -529,15 +529,15 @@
       param[journal_id] = jsfeaq
 
       au < ready ; exists ; 1956 ; Journal of the Soil Mechanics and Foundations Division Volume 82 ; 82 ;  >
-      au < ready ; exists ; 1957 ; Journal of the Soil Mechanics and Foundations Division Volume 83 ; 83 ;  >
+      au < crawling ; exists ; 1957 ; Journal of the Soil Mechanics and Foundations Division Volume 83 ; 83 ;  >
       au < frozen ; exists ; 1958 ; Journal of the Soil Mechanics and Foundations Division Volume 84 ; 84 ;  >
       au < ready ; exists ; 1959 ; Journal of the Soil Mechanics and Foundations Division Volume 85 ; 85 ;  >
       au < ready ; exists ; 1960 ; Journal of the Soil Mechanics and Foundations Division Volume 86 ; 86 ;  >
       au < ready ; exists ; 1961 ; Journal of the Soil Mechanics and Foundations Division Volume 87 ; 87 ;  >
       au < crawling ; exists ; 1962 ; Journal of the Soil Mechanics and Foundations Division Volume 88 ; 88 ;  >
       au < crawling ; exists ; 1963 ; Journal of the Soil Mechanics and Foundations Division Volume 89 ; 89 ;  >
-      au < ready ; exists ; 1964 ; Journal of the Soil Mechanics and Foundations Division Volume 90 ; 90 ;  >
-      au < ready ; exists ; 1965 ; Journal of the Soil Mechanics and Foundations Division Volume 91 ; 91 ;  >
+      au < crawling ; exists ; 1964 ; Journal of the Soil Mechanics and Foundations Division Volume 90 ; 90 ;  >
+      au < crawling ; exists ; 1965 ; Journal of the Soil Mechanics and Foundations Division Volume 91 ; 91 ;  >
       au < frozen ; exists ; 1966 ; Journal of the Soil Mechanics and Foundations Division Volume 92 ; 92 ;  >
       au < crawling ; exists ; 1967 ; Journal of the Soil Mechanics and Foundations Division Volume 93 ; 93 ;  >
       au < frozen ; exists ; 1968 ; Journal of the Soil Mechanics and Foundations Division Volume 94 ; 94 ;  >
@@ -563,12 +563,12 @@
       au < ready ; exists ; 1957 ; Journal of the Structural Division Volume 83 ; 83 ;  >
       au < crawling ; exists ; 1958 ; Journal of the Structural Division Volume 84 ; 84 ;  >
       au < ready ; exists ; 1959 ; Journal of the Structural Division Volume 85 ; 85 ;  >
-      au < ready ; exists ; 1960 ; Journal of the Structural Division Volume 86 ; 86 ;  >
+      au < crawling ; exists ; 1960 ; Journal of the Structural Division Volume 86 ; 86 ;  >
       au < ready ; exists ; 1961 ; Journal of the Structural Division Volume 87 ; 87 ;  >
       au < crawling ; exists ; 1962 ; Journal of the Structural Division Volume 88 ; 88 ;  >
       au < ready ; exists ; 1963 ; Journal of the Structural Division Volume 89 ; 89 ;  >
       au < ready ; exists ; 1964 ; Journal of the Structural Division Volume 90 ; 90 ;  >
-      au < ready ; exists ; 1965 ; Journal of the Structural Division Volume 91 ; 91 ;  >
+      au < crawling ; exists ; 1965 ; Journal of the Structural Division Volume 91 ; 91 ;  >
       au < crawling ; exists ; 1966 ; Journal of the Structural Division Volume 92 ; 92 ;  >
       au < crawling ; exists ; 1967 ; Journal of the Structural Division Volume 93 ; 93 ;  >
       au < ready ; exists ; 1968 ; Journal of the Structural Division Volume 94 ; 94 ;  >
@@ -584,7 +584,7 @@
       au < finished ; manifest ; 1978 ; Journal of the Structural Division Volume 104 ; 104 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 1979 ; Journal of the Structural Division Volume 105 ; 105 ;  >
       au < finished ; manifest ; 1980 ; Journal of the Structural Division Volume 106 ; 106 ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 1981 ; Journal of the Structural Division Volume 107 ; 107 ;  >
+      au < crawling ; exists ; 1981 ; Journal of the Structural Division Volume 107 ; 107 ;  >
       au < finished ; manifest ; 1982 ; Journal of the Structural Division Volume 108 ; 108 ; reingest2.clockss.org:8085 >
 
   }
@@ -781,7 +781,7 @@
       au < ready ; exists ; 1873 ; Transactions of the American Society of Civil Engineers Volume 2 ; 2 ;  >
       au < crawling ; exists ; 1874 ; Transactions of the American Society of Civil Engineers Volume 3 ; 3 ;  >
       au < crawling ; exists ; 1875 ; Transactions of the American Society of Civil Engineers Volume 4 ; 4 ;  >
-      au < ready ; exists ; 1876 ; Transactions of the American Society of Civil Engineers Volume 5 ; 5 ;  >
+      au < crawling ; exists ; 1876 ; Transactions of the American Society of Civil Engineers Volume 5 ; 5 ;  >
       au < ready ; exists ; 1877 ; Transactions of the American Society of Civil Engineers Volume 6 ; 6 ;  >
       au < ready ; exists ; 1878 ; Transactions of the American Society of Civil Engineers Volume 7 ; 7 ;  >
       au < crawling ; exists ; 1879 ; Transactions of the American Society of Civil Engineers Volume 8 ; 8 ;  >
@@ -815,7 +815,7 @@
       au < frozen ; exists ; 1907 ; Transactions of the American Society of Civil Engineers Volume 36 ; 36 ;  >
       au < frozen ; exists ; 1908 ; Transactions of the American Society of Civil Engineers Volume 37 ; 37 ;  >
       au < crawling ; exists ; 1909 ; Transactions of the American Society of Civil Engineers Volume 38 ; 38 ;  >
-      au < ready ; exists ; 1910 ; Transactions of the American Society of Civil Engineers Volume 39 ; 39 ;  >
+      au < crawling ; exists ; 1910 ; Transactions of the American Society of Civil Engineers Volume 39 ; 39 ;  >
       au < crawling ; exists ; 1911 ; Transactions of the American Society of Civil Engineers Volume 40 ; 40 ;  >
       au < ready ; exists ; 1912 ; Transactions of the American Society of Civil Engineers Volume 41 ; 41 ;  >
       au < frozen ; exists ; 1913 ; Transactions of the American Society of Civil Engineers Volume 42 ; 42 ;  >
@@ -842,7 +842,7 @@
       au < ready ; exists ; 1934 ; Transactions of the American Society of Civil Engineers Volume 63 ; 63 ;  >
       au < crawling ; exists ; 1935 ; Transactions of the American Society of Civil Engineers Volume 64 ; 64 ;  >
       au < ready ; exists ; 1936 ; Transactions of the American Society of Civil Engineers Volume 65 ; 65 ;  >
-      au < ready ; exists ; 1937 ; Transactions of the American Society of Civil Engineers Volume 66 ; 66 ;  >
+      au < crawling ; exists ; 1937 ; Transactions of the American Society of Civil Engineers Volume 66 ; 66 ;  >
       au < ready ; exists ; 1938 ; Transactions of the American Society of Civil Engineers Volume 67 ; 67 ;  >
       au < frozen ; exists ; 1939 ; Transactions of the American Society of Civil Engineers Volume 68 ; 68 ;  >
       au < crawling ; exists ; 1940 ; Transactions of the American Society of Civil Engineers Volume 69 ; 69 ;  >
@@ -857,7 +857,7 @@
       au < frozen ; exists ; 1949 ; Transactions of the American Society of Civil Engineers Volume 78 ; 78 ;  >
       au < ready ; exists ; 1950 ; Transactions of the American Society of Civil Engineers Volume 79 ; 79 ;  >
       au < ready ; exists ; 1951 ; Transactions of the American Society of Civil Engineers Volume 80 ; 80 ;  >
-      au < ready ; exists ; 1952 ; Transactions of the American Society of Civil Engineers Volume 81 ; 81 ;  >
+      au < crawling ; exists ; 1952 ; Transactions of the American Society of Civil Engineers Volume 81 ; 81 ;  >
       au < frozen ; exists ; 1953 ; Transactions of the American Society of Civil Engineers Volume 82 ; 82 ;  >
       au < ready ; exists ; 1954 ; Transactions of the American Society of Civil Engineers Volume 83 ; 83 ;  >
       au < frozen ; exists ; 1955 ; Transactions of the American Society of Civil Engineers Volume 84 ; 84 ;  >

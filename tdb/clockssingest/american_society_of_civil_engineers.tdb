@@ -835,7 +835,7 @@
     au < frozen ; exists ; 2006 ; Journal of Infrastructure Systems Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2007 ; Journal of Infrastructure Systems Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2008 ; Journal of Infrastructure Systems Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2009 ; Journal of Infrastructure Systems Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2009 ; Journal of Infrastructure Systems Volume 15 ; 15 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Infrastructure Systems Volume 16 ; 16 ; https://ascelibrary.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Infrastructure Systems Volume 17 ; 17 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2012 ; Journal of Infrastructure Systems Volume 18 ; 18 ; http://ascelibrary.org/ ; >
@@ -895,7 +895,7 @@
     au < frozen ; exists ; 1990 ; Journal of Management in Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1991 ; Journal of Management in Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1992 ; Journal of Management in Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1993 ; Journal of Management in Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1993 ; Journal of Management in Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1994 ; Journal of Management in Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1995 ; Journal of Management in Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 1996 ; Journal of Management in Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
@@ -950,7 +950,7 @@
     au < ready ; exists ; 1999 ; Journal of Materials in Civil Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2000 ; Journal of Materials in Civil Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2001 ; Journal of Materials in Civil Engineering Volume 13 ; 13 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2002 ; Journal of Materials in Civil Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2002 ; Journal of Materials in Civil Engineering Volume 14 ; 14 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2003 ; Journal of Materials in Civil Engineering Volume 15 ; 15 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2004 ; Journal of Materials in Civil Engineering Volume 16 ; 16 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2005 ; Journal of Materials in Civil Engineering Volume 17 ; 17 ; https://ascelibrary.org/ ; >
@@ -1018,7 +1018,7 @@
     param[journal_id] = jpepe3
 
     au < frozen ; exists ; 1991 ; Journal of Professional Issues in Engineering Education and Practice Volume 117 ; 117 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1992 ; Journal of Professional Issues in Engineering Education and Practice Volume 118 ; 118 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1992 ; Journal of Professional Issues in Engineering Education and Practice Volume 118 ; 118 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1993 ; Journal of Professional Issues in Engineering Education and Practice Volume 119 ; 119 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1994 ; Journal of Professional Issues in Engineering Education and Practice Volume 120 ; 120 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1995 ; Journal of Professional Issues in Engineering Education and Practice Volume 121 ; 121 ; https://ascelibrary.org/ ; >
@@ -1407,7 +1407,7 @@
 
     param[journal_id] = lmeeaz
 
-    au < ready ; exists ; 2001 ; Leadership & Management in Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2001 ; Leadership & Management in Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2002 ; Leadership & Management in Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2003 ; Leadership & Management in Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2004 ; Leadership & Management in Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >

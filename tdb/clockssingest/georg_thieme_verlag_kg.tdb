@@ -1239,9 +1239,9 @@
    au < testing ; exists ; 1992 ; 1992 ; DMW - Deutsche Medizinische Wochenschrift Volume 118 ; 118 ; >
    au < ready ; exists ; 1993 ; 1993 ; DMW - Deutsche Medizinische Wochenschrift Volume 119 ; 119 ; >
    au < testing ; exists ; 1994 ; 1994 ; DMW - Deutsche Medizinische Wochenschrift Volume 120 ; 120 ; >
-   au < ready ; exists ; 1995 ; 1995 ; DMW - Deutsche Medizinische Wochenschrift Volume 121 ; 121 ; >
-   au < ready ; exists ; 1996 ; 1996 ; DMW - Deutsche Medizinische Wochenschrift Volume 122 ; 122 ; >
-   au < ready ; exists ; 1997 ; 1997 ; DMW - Deutsche Medizinische Wochenschrift Volume 123 ; 123 ; >
+   au < crawling ; exists ; 1995 ; 1995 ; DMW - Deutsche Medizinische Wochenschrift Volume 121 ; 121 ; >
+   au < crawling ; exists ; 1996 ; 1996 ; DMW - Deutsche Medizinische Wochenschrift Volume 122 ; 122 ; >
+   au < crawling ; exists ; 1997 ; 1997 ; DMW - Deutsche Medizinische Wochenschrift Volume 123 ; 123 ; >
    au < crawling ; exists ; 1998 ; 1998 ; DMW - Deutsche Medizinische Wochenschrift Volume 124 ; 124 ; >
    au < ready ; exists ; 1999 ; 1999 ; DMW - Deutsche Medizinische Wochenschrift Volume 125 ; 125 ; >
    au < crawling ; exists ; 2000 ; 2000 ; DMW - Deutsche Medizinische Wochenschrift Volume 126 ; 126 ; >
@@ -1370,8 +1370,8 @@
    au < testing ; exists ; 1990 ; 1990 ; Endoscopy Volume 22 ; 22 ; >
    au < ready ; exists ; 1991 ; 1991 ; Endoscopy Volume 23 ; 23 ; >
    au < ready ; exists ; 1992 ; 1992 ; Endoscopy Volume 24 ; 24 ; >
-   au < ready ; exists ; 1993 ; 1993 ; Endoscopy Volume 25 ; 25 ; >
-   au < ready ; exists ; 1994 ; 1994 ; Endoscopy Volume 26 ; 26 ; >
+   au < crawling ; exists ; 1993 ; 1993 ; Endoscopy Volume 25 ; 25 ; >
+   au < crawling ; exists ; 1994 ; 1994 ; Endoscopy Volume 26 ; 26 ; >
    au < testing ; exists ; 1995 ; 1995 ; Endoscopy Volume 27 ; 27 ; >
    au < ready ; exists ; 1996 ; 1996 ; Endoscopy Volume 28 ; 28 ; >
    au < ready ; exists ; 1997 ; 1997 ; Endoscopy Volume 29 ; 29 ; >
@@ -1701,13 +1701,13 @@
    au < manifest ; exists ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 1989 ; 1989 ; >
    au < ready ; exists ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 1990 ; 1990 ; >
    au < testing ; exists ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 1991 ; 1991 ; >
-   au < ready ; exists ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 1992 ; 1992 ; >
+   au < crawling ; exists ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 1992 ; 1992 ; >
    au < testing ; exists ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 1993 ; 1993 ; >
    au < ready ; exists ; 1994 ; 1994 ; Experimental and Clinical Endocrinology & Diabetes Volume 1994 ; 1994 ; >
    au < ready ; exists ; 1995 ; 1995 ; Experimental and Clinical Endocrinology & Diabetes Volume 1995 ; 1995 ; >
    au < ready ; exists ; 1996 ; 1996 ; Experimental and Clinical Endocrinology & Diabetes Volume 1996 ; 1996 ; >
    au < testing ; exists ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 1997 ; 1997 ; >
-   au < ready ; exists ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 1998 ; 1998 ; >
+   au < crawling ; exists ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 1998 ; 1998 ; >
    au < ready ; exists ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 1999 ; 1999 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Experimental and Clinical Endocrinology & Diabetes Volume 108 ; 108 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Experimental and Clinical Endocrinology & Diabetes Volume 109 ; 109 ; >
@@ -1773,9 +1773,9 @@
    au < doesNotExist ; exists ; 1991 ; 1991 ; Facial Plastic Surgery Volume 7 ; 7 ; >
    au < ready ; exists ; 1992 ; 1992 ; Facial Plastic Surgery Volume 8 ; 8 ; >
    au < testing ; exists ; 1993 ; 1993 ; Facial Plastic Surgery Volume 9 ; 9 ; >
-   au < ready ; exists ; 1994 ; 1994 ; Facial Plastic Surgery Volume 10 ; 10 ; >
+   au < crawling ; exists ; 1994 ; 1994 ; Facial Plastic Surgery Volume 10 ; 10 ; >
    au < testing ; exists ; 1995 ; 1995 ; Facial Plastic Surgery Volume 11 ; 11 ; >
-   au < ready ; exists ; 1996 ; 1996 ; Facial Plastic Surgery Volume 12 ; 12 ; >
+   au < crawling ; exists ; 1996 ; 1996 ; Facial Plastic Surgery Volume 12 ; 12 ; >
    au < ready ; exists ; 1997 ; 1997 ; Facial Plastic Surgery Volume 13 ; 13 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Facial Plastic Surgery Volume 14 ; 14 ; >
    au < testing ; exists ; 1999 ; 1999 ; Facial Plastic Surgery Volume 15 ; 15 ; >
@@ -1859,11 +1859,11 @@
    au < crawling ; exists ; 1992 ; 1992 ; Fortschritte der Neurologie - Psychiatrie Volume 60 ; 60 ; >
    au < ready ; exists ; 1993 ; 1993 ; Fortschritte der Neurologie - Psychiatrie Volume 61 ; 61 ; >
    au < ready ; exists ; 1994 ; 1994 ; Fortschritte der Neurologie - Psychiatrie Volume 62 ; 62 ; >
-   au < ready ; exists ; 1995 ; 1995 ; Fortschritte der Neurologie - Psychiatrie Volume 63 ; 63 ; >
+   au < crawling ; exists ; 1995 ; 1995 ; Fortschritte der Neurologie - Psychiatrie Volume 63 ; 63 ; >
    au < ready ; exists ; 1996 ; 1996 ; Fortschritte der Neurologie - Psychiatrie Volume 64 ; 64 ; >
-   au < ready ; exists ; 1997 ; 1997 ; Fortschritte der Neurologie - Psychiatrie Volume 65 ; 65 ; >
+   au < crawling ; exists ; 1997 ; 1997 ; Fortschritte der Neurologie - Psychiatrie Volume 65 ; 65 ; >
    au < ready ; exists ; 1998 ; 1998 ; Fortschritte der Neurologie - Psychiatrie Volume 66 ; 66 ; >
-   au < ready ; exists ; 1999 ; 1999 ; Fortschritte der Neurologie - Psychiatrie Volume 67 ; 67 ; >
+   au < crawling ; exists ; 1999 ; 1999 ; Fortschritte der Neurologie - Psychiatrie Volume 67 ; 67 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Fortschritte der Neurologie - Psychiatrie Volume 68 ; 68 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Fortschritte der Neurologie - Psychiatrie Volume 69 ; 69 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Fortschritte der Neurologie - Psychiatrie Volume 70 ; 70 ; >
@@ -1972,14 +1972,14 @@
    au < manifest ; exists ; 1988 ; 1988 ; Geburtshilfe und Frauenheilkunde Volume 48 ; 48 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Geburtshilfe und Frauenheilkunde Volume 49 ; 49 ; >
    au < crawling ; exists ; 1990 ; 1990 ; Geburtshilfe und Frauenheilkunde Volume 50 ; 50 ; >
-   au < ready ; exists ; 1991 ; 1991 ; Geburtshilfe und Frauenheilkunde Volume 51 ; 51 ; >
+   au < crawling ; exists ; 1991 ; 1991 ; Geburtshilfe und Frauenheilkunde Volume 51 ; 51 ; >
    au < ready ; exists ; 1992 ; 1992 ; Geburtshilfe und Frauenheilkunde Volume 52 ; 52 ; >
-   au < ready ; exists ; 1993 ; 1993 ; Geburtshilfe und Frauenheilkunde Volume 53 ; 53 ; >
-   au < ready ; exists ; 1994 ; 1994 ; Geburtshilfe und Frauenheilkunde Volume 54 ; 54 ; >
-   au < ready ; exists ; 1995 ; 1995 ; Geburtshilfe und Frauenheilkunde Volume 55 ; 55 ; >
+   au < crawling ; exists ; 1993 ; 1993 ; Geburtshilfe und Frauenheilkunde Volume 53 ; 53 ; >
+   au < crawling ; exists ; 1994 ; 1994 ; Geburtshilfe und Frauenheilkunde Volume 54 ; 54 ; >
+   au < crawling ; exists ; 1995 ; 1995 ; Geburtshilfe und Frauenheilkunde Volume 55 ; 55 ; >
    au < ready ; exists ; 1996 ; 1996 ; Geburtshilfe und Frauenheilkunde Volume 56 ; 56 ; >
    au < ready ; exists ; 1997 ; 1997 ; Geburtshilfe und Frauenheilkunde Volume 57 ; 57 ; >
-   au < ready ; exists ; 1998 ; 1998 ; Geburtshilfe und Frauenheilkunde Volume 58 ; 58 ; >
+   au < crawling ; exists ; 1998 ; 1998 ; Geburtshilfe und Frauenheilkunde Volume 58 ; 58 ; >
    au < ready ; exists ; 1999 ; 1999 ; Geburtshilfe und Frauenheilkunde Volume 59 ; 59 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Geburtshilfe und Frauenheilkunde Volume 60 ; 60 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Geburtshilfe und Frauenheilkunde Volume 61 ; 61 ; >
@@ -2292,16 +2292,16 @@
    au < manifest ; exists ; 1987 ; 1987 ; Hormone and Metabolic Research Volume 19 ; 19 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Hormone and Metabolic Research Volume 20 ; 20 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Hormone and Metabolic Research Volume 21 ; 21 ; >
-   au < ready ; exists ; 1990 ; 1990 ; Hormone and Metabolic Research Volume 22 ; 22 ; >
+   au < crawling ; exists ; 1990 ; 1990 ; Hormone and Metabolic Research Volume 22 ; 22 ; >
    au < testing ; exists ; 1991 ; 1991 ; Hormone and Metabolic Research Volume 23 ; 23 ; >
    au < ready ; exists ; 1992 ; 1992 ; Hormone and Metabolic Research Volume 24 ; 24 ; >
    au < ready ; exists ; 1993 ; 1993 ; Hormone and Metabolic Research Volume 25 ; 25 ; >
    au < ready ; exists ; 1994 ; 1994 ; Hormone and Metabolic Research Volume 26 ; 26 ; >
-   au < ready ; exists ; 1995 ; 1995 ; Hormone and Metabolic Research Volume 27 ; 27 ; >
-   au < ready ; exists ; 1996 ; 1996 ; Hormone and Metabolic Research Volume 28 ; 28 ; >
+   au < crawling ; exists ; 1995 ; 1995 ; Hormone and Metabolic Research Volume 27 ; 27 ; >
+   au < crawling ; exists ; 1996 ; 1996 ; Hormone and Metabolic Research Volume 28 ; 28 ; >
    au < testing ; exists ; 1997 ; 1997 ; Hormone and Metabolic Research Volume 29 ; 29 ; >
    au < ready ; exists ; 1998 ; 1998 ; Hormone and Metabolic Research Volume 30 ; 30 ; >
-   au < ready ; exists ; 1999 ; 1999 ; Hormone and Metabolic Research Volume 31 ; 31 ; >
+   au < crawling ; exists ; 1999 ; 1999 ; Hormone and Metabolic Research Volume 31 ; 31 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Hormone and Metabolic Research Volume 32 ; 32 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Hormone and Metabolic Research Volume 33 ; 33 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Hormone and Metabolic Research Volume 34 ; 34 ; >
@@ -2621,10 +2621,10 @@
     au < manifest ; exists ; 1989 ; 1989 ; International Journal of Sports Medicine Volume 10 ; 10 ; >
     au < ready ; exists ; 1990 ; 1990 ; International Journal of Sports Medicine Volume 11 ; 11 ; >
     au < ready ; exists ; 1991 ; 1991 ; International Journal of Sports Medicine Volume 12 ; 12 ; >
-    au < ready ; exists ; 1992 ; 1992 ; International Journal of Sports Medicine Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1992 ; 1992 ; International Journal of Sports Medicine Volume 13 ; 13 ; >
     au < testing ; exists ; 1993 ; 1993 ; International Journal of Sports Medicine Volume 14 ; 14 ; >
     au < ready ; exists ; 1994 ; 1994 ; International Journal of Sports Medicine Volume 15 ; 15 ; >
-    au < ready ; exists ; 1995 ; 1995 ; International Journal of Sports Medicine Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1995 ; 1995 ; International Journal of Sports Medicine Volume 16 ; 16 ; >
     au < ready ; exists ; 1996 ; 1996 ; International Journal of Sports Medicine Volume 17 ; 17 ; >
     au < ready ; exists ; 1997 ; 1997 ; International Journal of Sports Medicine Volume 18 ; 18 ; >
     au < ready ; exists ; 1998 ; 1998 ; International Journal of Sports Medicine Volume 19 ; 19 ; >
@@ -3198,14 +3198,14 @@
     au < manifest ; exists ; 1988 ; 1988 ; Journal of Reconstructive Microsurgery Volume 4 ; 4 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Journal of Reconstructive Microsurgery Volume 5 ; 5 ; >
     au < ready ; exists ; 1990 ; 1990 ; Journal of Reconstructive Microsurgery Volume 6 ; 6 ; >
-    au < ready ; exists ; 1991 ; 1991 ; Journal of Reconstructive Microsurgery Volume 7 ; 7 ; >
-    au < ready ; exists ; 1992 ; 1992 ; Journal of Reconstructive Microsurgery Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1991 ; 1991 ; Journal of Reconstructive Microsurgery Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1992 ; 1992 ; Journal of Reconstructive Microsurgery Volume 8 ; 8 ; >
     au < ready ; exists ; 1993 ; 1993 ; Journal of Reconstructive Microsurgery Volume 9 ; 9 ; >
     au < testing ; exists ; 1994 ; 1994 ; Journal of Reconstructive Microsurgery Volume 10 ; 10 ; >
     au < testing ; exists ; 1995 ; 1995 ; Journal of Reconstructive Microsurgery Volume 11 ; 11 ; >
     au < testing ; exists ; 1996 ; 1996 ; Journal of Reconstructive Microsurgery Volume 12 ; 12 ; >
-    au < ready ; exists ; 1997 ; 1997 ; Journal of Reconstructive Microsurgery Volume 13 ; 13 ; >
-    au < ready ; exists ; 1998 ; 1998 ; Journal of Reconstructive Microsurgery Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1997 ; 1997 ; Journal of Reconstructive Microsurgery Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1998 ; 1998 ; Journal of Reconstructive Microsurgery Volume 14 ; 14 ; >
     au < ready ; exists ; 1999 ; 1999 ; Journal of Reconstructive Microsurgery Volume 15 ; 15 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Journal of Reconstructive Microsurgery Volume 16 ; 16 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Journal of Reconstructive Microsurgery Volume 17 ; 17 ; >
@@ -3443,14 +3443,14 @@
     au < manifest ; exists ; 1988 ; 1988 ; Klinische Monatsblätter für Augenheilkunde Volume 205 ; 205 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Klinische Monatsblätter für Augenheilkunde Volume 206 ; 206 ; >
     au < testing ; exists ; 1990 ; 1990 ; Klinische Monatsblätter für Augenheilkunde Volume 207 ; 207 ; >
-    au < ready ; exists ; 1991 ; 1991 ; Klinische Monatsblätter für Augenheilkunde Volume 208 ; 208 ; >
+    au < crawling ; exists ; 1991 ; 1991 ; Klinische Monatsblätter für Augenheilkunde Volume 208 ; 208 ; >
     au < ready ; exists ; 1992 ; 1992 ; Klinische Monatsblätter für Augenheilkunde Volume 209 ; 209 ; >
-    au < ready ; exists ; 1993 ; 1993 ; Klinische Monatsblätter für Augenheilkunde Volume 210 ; 210 ; >
+    au < crawling ; exists ; 1993 ; 1993 ; Klinische Monatsblätter für Augenheilkunde Volume 210 ; 210 ; >
     au < ready ; exists ; 1994 ; 1994 ; Klinische Monatsblätter für Augenheilkunde Volume 211 ; 211 ; >
     au < ready ; exists ; 1995 ; 1995 ; Klinische Monatsblätter für Augenheilkunde Volume 212 ; 212 ; >
     au < ready ; exists ; 1996 ; 1996 ; Klinische Monatsblätter für Augenheilkunde Volume 213 ; 213 ; >
     au < ready ; exists ; 1997 ; 1997 ; Klinische Monatsblätter für Augenheilkunde Volume 214 ; 214 ; >
-    au < ready ; exists ; 1998 ; 1998 ; Klinische Monatsblätter für Augenheilkunde Volume 215 ; 215 ; >
+    au < crawling ; exists ; 1998 ; 1998 ; Klinische Monatsblätter für Augenheilkunde Volume 215 ; 215 ; >
     au < ready ; exists ; 1999 ; 1999 ; Klinische Monatsblätter für Augenheilkunde Volume 216 ; 216 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Klinische Monatsblätter für Augenheilkunde Volume 217 ; 217 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Klinische Monatsblätter für Augenheilkunde Volume 218 ; 218 ; >
@@ -3508,7 +3508,7 @@
     au < notReady ; exists ; 1995 ; 1995 ; Klinische Neurophysiologie Volume 26 ; 26 ; > #no metadata
     au < notReady ; exists ; 1996 ; 1996 ; Klinische Neurophysiologie Volume 27 ; 27 ; > #no metadata
     au < notReady ; exists ; 1997 ; 1997 ; Klinische Neurophysiologie Volume 28 ; 28 ; > #no metadata
-    au < ready ; exists ; 1998 ; 1998 ; Klinische Neurophysiologie Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1998 ; 1998 ; Klinische Neurophysiologie Volume 29 ; 29 ; >
     au < ready ; exists ; 1999 ; 1999 ; Klinische Neurophysiologie Volume 30 ; 30 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Klinische Neurophysiologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Klinische Neurophysiologie Volume 32 ; 32 ; >
