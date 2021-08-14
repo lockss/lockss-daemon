@@ -22,14 +22,14 @@
 #    au < cma.CmaDrupalPlugin ; exists ; 1967 ; Canadian Medical Association Journal Volume 96 [tables of contents only] ; 96 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1967 ; Canadian Medical Association Journal Volume 97 [tables of contents only] ; 97 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1968 ; Canadian Medical Association Journal Volume 98 [tables of contents only] ; 98 >
-#    au < cma.CmaDrupalPlugin ; testing ; 1968 ; Canadian Medical Association Journal Volume 99 [tables of contents only] ; 99 >
+#    au < cma.CmaDrupalPlugin ; exists ; 1968 ; Canadian Medical Association Journal Volume 99 [tables of contents only] ; 99 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1969 ; Canadian Medical Association Journal Volume 100 [tables of contents only] ; 100 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1969 ; Canadian Medical Association Journal Volume 101 [tables of contents only] ; 101 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1970 ; Canadian Medical Association Journal Volume 102 [tables of contents only] ; 102 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1970 ; Canadian Medical Association Journal Volume 103 [tables of contents only] ; 103 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1971 ; Canadian Medical Association Journal Volume 104 [tables of contents only] ; 104 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1971 ; Canadian Medical Association Journal Volume 105 [tables of contents only] ; 105 >
-#    au < cma.CmaDrupalPlugin ; testing ; 1972 ; Canadian Medical Association Journal Volume 106 [tables of contents only] ; 106 >
+#    au < cma.CmaDrupalPlugin ; exists ; 1972 ; Canadian Medical Association Journal Volume 106 [tables of contents only] ; 106 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1972 ; Canadian Medical Association Journal Volume 107 [tables of contents only] ; 107 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1973 ; Canadian Medical Association Journal Volume 108 [tables of contents only] ; 108 >
 #    au < cma.CmaDrupalPlugin ; exists ; 1973 ; Canadian Medical Association Journal Volume 109 [tables of contents only] ; 109 >
@@ -46,7 +46,7 @@
 #      au < cma.CmaDrupalPlugin ; exists ; 1977 ; Canadian Medical Association Journal Volume 116 [abstracts only] ; 116 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1977 ; Canadian Medical Association Journal Volume 117 [abstracts only] ; 117 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1978 ; Canadian Medical Association Journal Volume 118 [abstracts only] ; 118 >
-#      au < cma.CmaDrupalPlugin ; testing ; 1978 ; Canadian Medical Association Journal Volume 119 [abstracts only] ; 119 >
+#      au < cma.CmaDrupalPlugin ; exists ; 1978 ; Canadian Medical Association Journal Volume 119 [abstracts only] ; 119 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1979 ; Canadian Medical Association Journal Volume 120 [abstracts only] ; 120 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1979 ; Canadian Medical Association Journal Volume 121 [abstracts only] ; 121 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1980 ; Canadian Medical Association Journal Volume 122 [abstracts only] ; 122 >
@@ -62,7 +62,7 @@
 #      au < cma.CmaDrupalPlugin ; exists ; 1985 ; Canadian Medical Association Journal Volume 132 [abstracts only] ; 132 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1985 ; Canadian Medical Association Journal Volume 133 [abstracts only] ; 133 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1986 ; Canadian Medical Association Journal Volume 134 [abstracts only] ; 134 >
-#      au < cma.CmaDrupalPlugin ; testing ; 1986 ; Canadian Medical Association Journal Volume 135 [abstracts only] ; 135 >
+#      au < cma.CmaDrupalPlugin ; exists ; 1986 ; Canadian Medical Association Journal Volume 135 [abstracts only] ; 135 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1987 ; Canadian Medical Association Journal Volume 136 [abstracts only] ; 136 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1987 ; Canadian Medical Association Journal Volume 137 [abstracts only] ; 137 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1988 ; Canadian Medical Association Journal Volume 138 [abstracts only] ; 138 >
@@ -72,7 +72,7 @@
 #      au < cma.CmaDrupalPlugin ; exists ; 1990 ; Canadian Medical Association Journal Volume 142 [abstracts only] ; 142 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1990 ; Canadian Medical Association Journal Volume 143 [abstracts only] ; 143 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1991 ; Canadian Medical Association Journal Volume 144 [abstracts only] ; 144 >
-#      au < cma.CmaDrupalPlugin ; testing ; 1991 ; Canadian Medical Association Journal Volume 145 [abstracts only] ; 145 >
+#      au < cma.CmaDrupalPlugin ; exists ; 1991 ; Canadian Medical Association Journal Volume 145 [abstracts only] ; 145 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1992 ; Canadian Medical Association Journal Volume 146 [abstracts only] ; 146 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1992 ; Canadian Medical Association Journal Volume 147 [abstracts only] ; 147 >
 #      au < cma.CmaDrupalPlugin ; exists ; 1993 ; Canadian Medical Association Journal Volume 148 [abstracts only] ; 148 >
@@ -127,9 +127,9 @@
     param[base_url] = https://www.cmaj.ca/
 
     au < cma.CmaDrupalPlugin ; manifest ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
-    au < cma.CmaDrupalPlugin ; testing ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
+    au < cma.CmaDrupalPlugin ; ready ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
     au < cma.CmaDrupalPlugin ; manifest ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
-    au < cma.CmaDrupalPlugin ; testing ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
+    au < cma.CmaDrupalPlugin ; ready ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
     au < cma.CmaDrupalPlugin ; manifest ; 2021 ; Canadian Medical Association Journal Volume 193 ; 193 >
 
     }
@@ -148,11 +148,11 @@
 
       au < cma.CmaDrupalPlugin ; manifest ; 2013 ; CMAJ Open Volume 1 ; 1 >
       au < cma.CmaDrupalPlugin ; manifest ; 2014 ; CMAJ Open Volume 2 ; 2 >
-      au < cma.CmaDrupalPlugin ; testing ; 2015 ; CMAJ Open Volume 3 ; 3 >
+      au < cma.CmaDrupalPlugin ; ready ; 2015 ; CMAJ Open Volume 3 ; 3 >
       au < cma.CmaDrupalPlugin ; manifest ; 2016 ; CMAJ Open Volume 4 ; 4 >
       au < cma.CmaDrupalPlugin ; manifest ; 2017 ; CMAJ Open Volume 5 ; 5 >
       au < cma.CmaDrupalPlugin ; manifest ; 2018 ; CMAJ Open Volume 6 ; 6 >
-      au < cma.CmaDrupalPlugin ; testing ; 2019 ; CMAJ Open Volume 7 ; 7 >
+      au < cma.CmaDrupalPlugin ; ready ; 2019 ; CMAJ Open Volume 7 ; 7 >
       au < cma.CmaDrupalPlugin ; manifest ; 2020 ; CMAJ Open Volume 8 ; 8 >
       au < cma.CmaDrupalPlugin ; manifest ; 2021 ; CMAJ Open Volume 9 ; 9 >
     }
