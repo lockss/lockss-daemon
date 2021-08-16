@@ -10,7 +10,7 @@
   #param[base_url] = http://www.asmscience.org/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[doi] ; param[base_url] ; name ; hidden[proxy] >
 
-  #doesNotExist = move to Wiley. www.Wiley.com/ASMBooks
+  # Moved to Wiley. www.Wiley.com/ASMBooks
 
  {
   title <
@@ -131,7 +131,7 @@
    au < finished ; finished ; 2006 ; 9781555813451 ; 9781555816520 ; 10.1128/9781555816520 ; http://www.asmscience.org/ ; Biomedical Scientist as Expert Witness, The ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2006 ; 9781555813192 ; 9781555816704 ; 10.1128/9781555816704 ; http://www.asmscience.org/ ; DNA Repair and Mutagensis, Second Edition ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2006 ; 9781555813901 ; 9781555815660 ; 10.1128/9781555815660 ; http://www.asmscience.org/ ; Legionella: State of the Art 30 Years after Its Recognition ; reingest1.clockss.org:8082 >
-   au < exists ; exists ; 2006 ;  ; 9781555813864 ; 10.1128/9781555813864 ; https://www.asmscience.org/ ; The Invisible ABCs: Exploring the World of Microbes ;  >
+   au < doNotProcess ; exists ; 2006 ;  ; 9781555813864 ; 10.1128/9781555813864 ; https://www.asmscience.org/ ; The Invisible ABCs: Exploring the World of Microbes ;  >
    au < finished ; finished ; 2007 ; 9781555814663 ; 9781555816346 ; 10.1128/9781555816346 ; http://www.asmscience.org/ ; Twelve Diseases that Changed Our World ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2007 ; 9781555814212 ; 9781555815837 ; 10.1128/9781555815837 ; http://www.asmscience.org/ ; Sex in Fungi: Molecular Determination and Evolutionary Implications ; reingest5.clockss.org:8082 >
    au < zapped ; finished ; 2007 ; 9781555812232 ; 9781555817497 ; 10.1128/9781555817497 ; http://www.asmscience.org/ ; Methods for General and Molecular Microbiology, Third Edition ; reingest2.clockss.org:8085 >
@@ -193,8 +193,8 @@
    au < finished ; finished ; 2010 ; 9781555814731 ; 9781555816636 ; 10.1128/9781555816636 ; http://www.asmscience.org/ ; Cellular and Molecular Biology of Filamentous Fungi ;  >
    au < finished ; finished ; 2010 ; 9781555814991 ; 9781555816667 ; 10.1128/9781555816667 ; http://www.asmscience.org/ ; Second Messenger Cyclic Di-GMP, The ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 9781555814595 ; 9781555815936 ; 10.1128/9781555815936 ; http://www.asmscience.org/ ; Pathogens and Toxins in Food: Challenges and Interventions ; reingest5.clockss.org:8082 >
-   au < exists ; exists ; 2010 ; 9781555814700 ; 9781555815943 ; 10.1128/9781555815943 ; https://www.asmscience.org/ ; I, Microbiologist: A Discovery-Based Course in Microbial Ecology and Molecular Evolution ;  >
-   au < exists ; exists ; 2010 ; 9781555814762 ; 9781555816643 ; 10.1128/9781555816643 ; https://www.asmscience.org/ ; Cultural Heritage Microbiology: Fundamental Studies in Conservation Science ;  >
+   au < doNotProcess ; exists ; 2010 ; 9781555814700 ; 9781555815943 ; 10.1128/9781555815943 ; https://www.asmscience.org/ ; I, Microbiologist: A Discovery-Based Course in Microbial Ecology and Molecular Evolution ;  >
+   au < doNotProcess ; exists ; 2010 ; 9781555814762 ; 9781555816643 ; 10.1128/9781555816643 ; https://www.asmscience.org/ ; Cultural Heritage Microbiology: Fundamental Studies in Conservation Science ;  >
    au < finished ; finished ; 2011 ; 9781555815295 ; 9781555817220 ; 10.1128/9781555817220 ; http://www.asmscience.org/ ; Germ Theory: Medical Pioneers in Infectious Diseases ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 9781555815363 ; 9781555817190 ; 10.1128/9781555817190 ; http://www.asmscience.org/ ; Microbial Metal and Metalloid Metabolism: Advances and Applications ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2011 ; 9781555815035 ; 9781555817107 ; 10.1128/9781555817107 ; http://www.asmscience.org/ ; Oral Microbial Communities: Genomic Inquiry and Interspecies Communication ; reingest1.clockss.org:8082 >
@@ -213,14 +213,14 @@
    au < finished ; finished ; 2011 ; 9781555815011 ; 9781555816858 ; 10.1128/9781555816858 ; http://www.asmscience.org/ ; Cryptococcus: From Human Pathogen to Model Yeast ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 9781555815387 ; 9781555816810 ; 10.1128/9781555816810 ; http://www.asmscience.org/ ; Lure of Bacterial Genetics, The : A Tribute to John Roth ;  >
    au < finished ; finished ; 2011 ; 9781555814977 ; 9781555816834 ; 10.1128/9781555816834 ; http://www.asmscience.org/ ; Molecular Microbiology, Second Edition: Diagnostic Principles and Practice ; reingest5.clockss.org:8082 >
-   au < exists ; exists ; 2011 ; 9781555814182 ; 9781555816162 ; 10.1128/9781555816162 ; https://www.asmscience.org/ ; Bacterial Pathogenesis: A Molecular Approach, Third Edition ;  >
+   au < doNotProcess ; exists ; 2011 ; 9781555814182 ; 9781555816162 ; 10.1128/9781555816162 ; https://www.asmscience.org/ ; Bacterial Pathogenesis: A Molecular Approach, Third Edition ;  >
    au < finished ; finished ; 2012 ; 9781555815400 ; 9781555818470 ; 10.1128/9781555818470 ; http://www.asmscience.org/ ; Microbes and Evolution: The World That Darwin Never Saw ;  >
    au < finished ; finished ; 2012 ; 9781555816742 ; 9781555817329 ; 10.1128/9781555817329 ; http://www.asmscience.org/ ; Intracellular Pathogens I: Chlamydiales ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 9781555816773 ; 9781555817336 ; 10.1128/9781555817336 ; http://www.asmscience.org/ ; Intracellular Pathogens II: Rickettsiales ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 9781555816049 ; 9781555817183 ; 10.1128/9781555817183 ; http://www.asmscience.org/ ; Polar Mirobiology: Life in a Deep Freeze ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 9781555817084 ; 9781555817213 ; 10.1128/9781555817213 ; http://www.asmscience.org/ ; Genome Plasticity and Infectious Diseases ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 9781555815394 ; 9781555817176 ; 10.1128/9781555817176 ; http://www.asmscience.org/ ; Candida and Candidiasis, Second Edition ; reingest5.clockss.org:8082 >
-   au < exists ; exists ; 2012 ; 9781555816360 ; 9781555817206 ; 10.1128/9781555817206 ; https://www.asmscience.org/ ; Food Microbiology: An Introduction, Third Edition ;  >
+   au < doNotProcess ; exists ; 2012 ; 9781555816360 ; 9781555817206 ; 10.1128/9781555817206 ; https://www.asmscience.org/ ; Food Microbiology: An Introduction, Third Edition ;  >
    au < finished ; finished ; 2013 ; 9781555818746 ; 9781555818753 ; 10.1128/9781555818753 ; http://www.asmscience.org/ ; Forgotten People, Forgotten Diseases, Second Edition ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2013 ; 9781555815073 ; 9781555818586 ; 10.1128/9781555818586 ; http://www.asmscience.org/ ; To Catch a Virus ; reingest4.clockss.org:8082 >
    au < zapped ; finished ; 2013 ; 9781555816766 ; 9781555818524 ; 10.1128/9781555818524 ; http://www.asmscience.org/ ; Regulation of Bacterial Virulence ; reingest3.clockss.org:8083 >
@@ -232,7 +232,7 @@
    au < doesNotExist ; doesNotExist ; 2014 ; 9781555816612 ; 9781555818487 ; 10.1128/9781555818487 ; https://www.asmscience.org/ ; Scientific Integrity, Fourth Edition ;  >
    au < doesNotExist ; doesNotExist ; 2014 ; 9781555818685 ; 9781555818678 ; 10.1128/9781555818678 ; https://www.asmscience.org/ ; Cases in Medical Microbiology and Infectious Diseases, Fourth Edition ;  >
    au < doesNotExist ; doesNotExist ; 2014 ; 9781555817053 ; 9781555818890 ; 10.1128/9781555818890 ; https://www.asmscience.org/ ; Medical Biotechnology ;  >
-   au < exists ; exists ; 2014 ; 9781555816735 ; 9781555818906 ; 10.1128/9781555818906 ; https://www.asmscience.org/ ; Oral Microbiology and Immunology, Second Edition ;  >
+   au < doNotProcess ; exists ; 2014 ; 9781555816735 ; 9781555818906 ; 10.1128/9781555818906 ; https://www.asmscience.org/ ; Oral Microbiology and Immunology, Second Edition ;  >
    au < finished ; finished ; 2015 ; 9781555817350 ; 9781555817411 ; 10.1128/9781555817411 ; http://www.asmscience.org/ ; Antibodies for Infectious Diseases ; reingest2.clockss.org:8085 >
    au < zapped ; finished ; 2015 ; 9781555819200 ; 9781555819217 ; 10.1128/9781555819217 ; http://www.asmscience.org/ ; Mobile DNA III ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 9781555818975 ; 9781555818982 ; 10.1128/9781555818982 ; http://www.asmscience.org/ ; Plasmids ; reingest4.clockss.org:8082 >
@@ -242,7 +242,7 @@
    au < finished ; finished ; 2015 ; 9781555818869 ; 9781555818883 ; 10.1128/9781555818883 ; http://www.asmscience.org/ ; Metabolism and Bacterial Pathogenesis ; reingest4.clockss.org:8082 >
    au < doesNotExist ; doesNotExist ; 2015 ; 9781555819330 ; 9781555818951 ; 10.1128/9781555818951 ; https://www.asmscience.org/ ; Principles of Virology, Volume I: Molecular Biology, Fourth Edition ;  >
    au < doesNotExist ; doesNotExist ; 2015 ; 9781555819347 ; 9781555818968 ; 10.1128/9781555818968 ; https://www.asmscience.org/ ; Principles of Virology, Volume II: Pathogenesis & Control, Fourth Edition ;  >
-   au < exists ; exists ; 2015 ; 9781555819484 ; 9781555819491 ; 10.1128/9781555819491 ; https://www.asmscience.org/ ; Perspectives on Research Integrity ;  >
+   au < doNotProcess ; exists ; 2015 ; 9781555819484 ; 9781555819491 ; 10.1128/9781555819491 ; https://www.asmscience.org/ ; Perspectives on Research Integrity ;  >
    au < doesNotExist ; doesNotExist ; 2015 ; 9781555819514 ; 9781555819521 ; 10.1128/9781555819521 ; https://www.asmscience.org/ ; Principles of Virology, Fourth Edition, Bundle ;  >
    au < zapped ; finished ; 2016 ; 9781555818999 ; 9781555819002 ; 10.1128/9781555819002 ; http://www.asmscience.org/ ; Diagnostic Medical Parasitology ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2016 ; 9781555819255 ; 9781555819262 ; 10.1128/9781555819262 ; http://www.asmscience.org/ ; Zoonoses ; reingest4.clockss.org:8082 > #no substance, no articles, doi's etc
@@ -289,9 +289,9 @@
    au < frozen ; exists ; 2019 ; 9781683670230 ; 9781683670247 ; 10.1128/9781683670247 ; https://www.asmscience.org/ ; Regulating with RNA in Bacteria and Archaea ;  >
    au < frozen ; exists ; 2019 ; 9781683670278 ; 9781683670285 ; 10.1128/9781683670285 ; https://www.asmscience.org/ ; Protein Secretion in Bacteria ;  >
    au < frozen ; exists ; 2019 ; 9781683670254 ; 9781683670261 ; 10.1128/9781683670261 ; https://www.asmscience.org/ ; Bacteria and Intracellularity ;  >
-   au < manifest ; exists ; 2019 ; 9781683670124 ; 9781683670131 ; 10.1128/9781683670131 ; https://www.asmscience.org/ ; Gram-Positive Pathogens, Third Edition ;  >
+   au < doNotProcess ; exists ; 2019 ; 9781683670124 ; 9781683670131 ; 10.1128/9781683670131 ; https://www.asmscience.org/ ; Gram-Positive Pathogens, Third Edition ;  >
    au < frozen ; exists ; 2019 ; 9781555819965 ; 9781555819972 ; 10.1128/9781555819972 ; https://www.asmscience.org/ ; Food Microbiology: Fundamentals and Frontiers, 5th Edition ;  >
-   au < manifest ; exists ; 2020 ; 9781683670148 ; 9781683670179 ; 10.1128/9781683670179 ; https://www.asmscience.org/ ; Prepare and Protect: Safer Behaviors in Laboratories and Clinical Containment Settings ;  >
+   au < doNotProcess ; exists ; 2020 ; 9781683670148 ; 9781683670179 ; 10.1128/9781683670179 ; https://www.asmscience.org/ ; Prepare and Protect: Safer Behaviors in Laboratories and Clinical Containment Settings ;  >
 
  }
 
