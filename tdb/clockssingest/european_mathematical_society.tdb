@@ -152,8 +152,8 @@
     au < finished ; crawling ; 2016 ; EMS Surveys in Mathematical Sciences Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; EMS Surveys in Mathematical Sciences Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; EMS Surveys in Mathematical Sciences Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2019 ; EMS Surveys in Mathematical Sciences Volume 6 ; 6 ; >
-    au < ready ; exists ; 2020 ; EMS Surveys in Mathematical Sciences Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2019 ; EMS Surveys in Mathematical Sciences Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2020 ; EMS Surveys in Mathematical Sciences Volume 7 ; 7 ; >
     au < expected ; exists ; 2021 ; EMS Surveys in Mathematical Sciences Volume 8 ; 8 ; >
 
   }
@@ -385,7 +385,7 @@
     au < finished ; crawling ; 2016 ; L’Enseignement Mathématique Volume 62 ; 62 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; L’Enseignement Mathématique Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; L’Enseignement Mathématique Volume 64 ; 64 ; >
-    au < ready ; exists ; 2019 ; L’Enseignement Mathématique Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2019 ; L’Enseignement Mathématique Volume 65 ; 65 ; >
     au < deepCrawl ; exists ; 2020 ; L’Enseignement Mathématique Volume 66 ; 66 ; >
     au < expected ; exists ; 2021 ; L’Enseignement Mathématique Volume 67 ; 67 ; >
 
@@ -557,7 +557,7 @@
     au < finished ; crawling ; 2019 ; Rendiconti del Seminario Matematico della Università di Padova Volume 141 ; 141 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Rendiconti del Seminario Matematico della Università di Padova Volume 142 ; 142 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Rendiconti del Seminario Matematico della Università di Padova Volume 143 ; 143 ; >
-    au < ready ; exists ; 2020 ; Rendiconti del Seminario Matematico della Università di Padova Volume 144 ; 144 ; >
+    au < crawling ; exists ; 2020 ; Rendiconti del Seminario Matematico della Università di Padova Volume 144 ; 144 ; >
     au < crawling ; exists ; 2021 ; Rendiconti del Seminario Matematico della Università di Padova Volume 145 ; 145 ; >
     au < expected ; exists ; 2021 ; Rendiconti del Seminario Matematico della Università di Padova Volume 146 ; 146 ; >
 
