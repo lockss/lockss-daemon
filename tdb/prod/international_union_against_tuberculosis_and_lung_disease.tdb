@@ -84,8 +84,8 @@
      param[base_url] = https://www.ingentaconnect.com/
      param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; 2011 ; Public Health Action Volume 1 ; 1 >
-    au < manifest ; 2012 ; Public Health Action Volume 2 ; 2 >
+    au < ready ; 2011 ; Public Health Action Volume 1 ; 1 >
+    au < ready ; 2012 ; Public Health Action Volume 2 ; 2 >
 
     }
 
@@ -103,7 +103,7 @@
      param[base_url] = https://www.ingentaconnect.com/
      param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; 2016 ; Public Health Action Volume 6 ; 6 >
+    au < ready ; 2016 ; Public Health Action Volume 6 ; 6 >
     au < released ; 2017 ; Public Health Action Volume 7 ; 7 >
     au < released ; 2018 ; Public Health Action Volume 8 ; 8 >
     au < released ; 2019 ; Public Health Action Volume 9 ; 9 >
