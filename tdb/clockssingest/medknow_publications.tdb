@@ -461,21 +461,21 @@
       eissn = 2249-4464 ;
       issnl = 2231-0770
    >
-#    param[base_url] = http://www.avicennajmed.com/
-
+    #param[base_url] = http://www.avicennajmed.com/
     param[journal_issn] = 2231-0770
+    #Moved to Thieme
 
     au < finished ; finished ; 2011 ; Avicenna Journal of Medicine Volume 1 ; 2011 ; 1 ; http://www.avicennajmed.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Avicenna Journal of Medicine Volume 2 ; 2012 ; 2 ; http://www.avicennajmed.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 2013 ; 3 ; http://www.avicennajmed.com/ ; ; >
     au < finished ; finished ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 2014 ; 4 ; http://www.avicennajmed.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Avicenna Journal of Medicine Volume 5 ; 2015 ; 5 ; http://www.avicennajmed.com/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 2016 ; 6 ; http://www.avicennajmed.com/ ; ; >
+    au < frozen ; exists ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 2016 ; 6 ; http://www.avicennajmed.com/ ; ; >
     au < finished ; frozen ; 2017 ; Avicenna Journal of Medicine Volume 7 ; 2017 ; 7 ; http://www.avicennajmed.com/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Avicenna Journal of Medicine Volume 8 ; 2018 ; 8 ; http://www.avicennajmed.com/ ; ; >
-    au < manifest ; exists ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 2019 ; 9 ; https://www.avicennajmed.com/ ; ; >
-    au < manifest ; exists ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 2020 ; 10 ; https://www.avicennajmed.com/ ; ; >
-    au < expected ; exists ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 2021 ; 11 ; https://www.avicennajmed.com/ ; ; >
+    au < frozen ; exists ; 2018 ; Avicenna Journal of Medicine Volume 8 ; 2018 ; 8 ; http://www.avicennajmed.com/ ; ; >
+    au < doNotProcess ; exists ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 2019 ; 9 ; https://www.avicennajmed.com/ ; ; >
+    au < doNotProcess ; exists ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 2020 ; 10 ; https://www.avicennajmed.com/ ; ; >
+    au < doNotProcess ; exists ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 2021 ; 11 ; https://www.avicennajmed.com/ ; ; >
 
   }
 
@@ -969,71 +969,71 @@
       eissn = 0973-3922 ;
       issnl = 0378-6323
    >
-#    param[base_url] = http://www.ijdvl.com/
-
+    #param[base_url] = http://www.ijdvl.com/
     param[journal_issn] = 0378-6323
+    #Moved to Scientific scholar https://ijdvl.com/
 
-    au < manifest ; exists ; 1961 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 27 ; 1961 ; 27 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1962 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 28 ; 1962 ; 28 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1963 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 29 ; 1963 ; 29 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1964 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 30 ; 1964 ; 30 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1965 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 31 ; 1965 ; 31 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1966 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 32 ; 1966 ; 32 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1967 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 33 ; 1967 ; 33 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1968 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 34 ; 1968 ; 34 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1969 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 35 ; 1969 ; 35 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1970 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 36 ; 1970 ; 36 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1971 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 37 ; 1971 ; 37 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1972 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 38 ; 1972 ; 38 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1973 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 39 ; 1973 ; 39 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1974 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 40 ; 1974 ; 40 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1975 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 41 ; 1975 ; 41 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1976 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 42 ; 1976 ; 42 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1977 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 43 ; 1977 ; 43 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1978 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 44 ; 1978 ; 44 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1979 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 45 ; 1979 ; 45 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1980 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 46 ; 1980 ; 46 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1981 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 47 ; 1981 ; 47 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1982 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 48 ; 1982 ; 48 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1983 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 49 ; 1983 ; 49 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1984 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 50 ; 1984 ; 50 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1985 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 51 ; 1985 ; 51 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1986 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 52 ; 1986 ; 52 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1987 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 53 ; 1987 ; 53 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1988 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 54 ; 1988 ; 54 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1989 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 55 ; 1989 ; 55 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1990 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 56 ; 1990 ; 56 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1991 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 57 ; 1991 ; 57 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1992 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 58 ; 1992 ; 58 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1993 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 59 ; 1993 ; 59 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1994 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 60 ; 1994 ; 60 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1995 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 61 ; 1995 ; 61 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1996 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 62 ; 1996 ; 62 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1997 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 63 ; 1997 ; 63 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1998 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 64 ; 1998 ; 64 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 1999 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 65 ; 1999 ; 65 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2000 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 66 ; 2000 ; 66 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2001 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 67 ; 2001 ; 67 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2002 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 68 ; 2002 ; 68 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2003 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 69 ; 2003 ; 69 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 70 ; 2004 ; 70 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 71 ; 2005 ; 71 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 72 ; 2006 ; 72 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 73 ; 2007 ; 73 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 74 ; 2008 ; 74 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 75 ; 2009 ; 75 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 76 ; 2010 ; 76 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1961 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 27 ; 1961 ; 27 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1962 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 28 ; 1962 ; 28 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1963 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 29 ; 1963 ; 29 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1964 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 30 ; 1964 ; 30 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1965 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 31 ; 1965 ; 31 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1966 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 32 ; 1966 ; 32 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1967 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 33 ; 1967 ; 33 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1968 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 34 ; 1968 ; 34 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1969 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 35 ; 1969 ; 35 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1970 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 36 ; 1970 ; 36 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1971 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 37 ; 1971 ; 37 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1972 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 38 ; 1972 ; 38 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1973 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 39 ; 1973 ; 39 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1974 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 40 ; 1974 ; 40 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1975 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 41 ; 1975 ; 41 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1976 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 42 ; 1976 ; 42 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1977 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 43 ; 1977 ; 43 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1978 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 44 ; 1978 ; 44 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1979 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 45 ; 1979 ; 45 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1980 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 46 ; 1980 ; 46 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1981 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 47 ; 1981 ; 47 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1982 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 48 ; 1982 ; 48 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1983 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 49 ; 1983 ; 49 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1984 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 50 ; 1984 ; 50 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1985 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 51 ; 1985 ; 51 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1986 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 52 ; 1986 ; 52 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1987 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 53 ; 1987 ; 53 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1988 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 54 ; 1988 ; 54 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1989 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 55 ; 1989 ; 55 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1990 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 56 ; 1990 ; 56 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1991 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 57 ; 1991 ; 57 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1992 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 58 ; 1992 ; 58 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1993 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 59 ; 1993 ; 59 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1994 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 60 ; 1994 ; 60 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1995 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 61 ; 1995 ; 61 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1996 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 62 ; 1996 ; 62 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 63 ; 1997 ; 63 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 64 ; 1998 ; 64 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 65 ; 1999 ; 65 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 66 ; 2000 ; 66 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2001 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 67 ; 2001 ; 67 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 68 ; 2002 ; 68 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 69 ; 2003 ; 69 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 70 ; 2004 ; 70 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 71 ; 2005 ; 71 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 72 ; 2006 ; 72 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 73 ; 2007 ; 73 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 74 ; 2008 ; 74 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 75 ; 2009 ; 75 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 76 ; 2010 ; 76 ; https://www.ijdvl.com/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 77 ; 2011 ; 77 ; http://www.ijdvl.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 78 ; 2012 ; 78 ; http://www.ijdvl.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 79 ; 2013 ; 79 ; http://www.ijdvl.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 80 ; 2014 ; 80 ; http://www.ijdvl.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 81 ; 2015 ; 81 ; http://www.ijdvl.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 82 ; 2016 ; 82 ; http://www.ijdvl.com/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 82 ; 2016 ; 82 ; http://www.ijdvl.com/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 83 ; 2017 ; 83 ; http://www.ijdvl.com/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 84 ; 2018 ; 84 ; http://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2019 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 85 ; 2019 ; 85 ; https://www.ijdvl.com/ ; ; >
-    au < manifest ; exists ; 2020 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 86 ; 2020 ; 86 ; https://www.ijdvl.com/ ; ; >
-    au < expected ; exists ; 2021 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 87 ; 2021 ; 87 ; https://www.ijdvl.com/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 84 ; 2018 ; 84 ; http://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2019 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 85 ; 2019 ; 85 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2020 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 86 ; 2020 ; 86 ; https://www.ijdvl.com/ ; ; >
+    au < doNotProcess ; exists ; 2021 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 87 ; 2021 ; 87 ; https://www.ijdvl.com/ ; ; >
 
   }
 
@@ -5148,15 +5148,16 @@
       >
 
       param[journal_issn] = 1110-6611
-#      param[base_url] = http://www.bfpt.eg.net/
+      #param[base_url] = http://www.bfpt.eg.net/
+      #Moved to Springer
 
       au < finished ; finished ; 2015 ; Bulletin of Faculty of Physical Therapy Volume 20 ; 2015 ; 20 ; http://www.bfpt.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; Bulletin of Faculty of Physical Therapy Volume 21 ; 2016 ; 21 ; http://www.bfpt.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Bulletin of Faculty of Physical Therapy Volume 22 ; 2017 ; 22 ; http://www.bfpt.eg.net/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2018 ; Bulletin of Faculty of Physical Therapy Volume 23 ; 2018 ; 23 ; http://www.bfpt.eg.net/ ; ; >
-      au < manifest ; exists ; 2019 ; Bulletin of Faculty of Physical Therapy Volume 24 ; 2019 ; 24 ; https://www.bfpt.eg.net/ ; ; >
-      au < expected ; exists ; 2020 ; Bulletin of Faculty of Physical Therapy Volume 25 ; 2020 ; 25 ; https://www.bfpt.eg.net/ ; ; >
-      au < expected ; exists ; 2021 ; Bulletin of Faculty of Physical Therapy Volume 26 ; 2021 ; 26 ; https://www.bfpt.eg.net/ ; ; >
+      au < frozen ; exists ; 2018 ; Bulletin of Faculty of Physical Therapy Volume 23 ; 2018 ; 23 ; http://www.bfpt.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Bulletin of Faculty of Physical Therapy Volume 24 ; 2019 ; 24 ; https://www.bfpt.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Bulletin of Faculty of Physical Therapy Volume 25 ; 2020 ; 25 ; https://www.bfpt.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Bulletin of Faculty of Physical Therapy Volume 26 ; 2021 ; 26 ; https://www.bfpt.eg.net/ ; ; >
 
   }
 
@@ -5272,16 +5273,18 @@
       >
       #changed name from Clinical and Translational Orthopedics and changed issn, but not url.
       #see http://www.sherpa.ac.uk/romeo/journals.php?id=89&fIDnum=|&mode=advanced&la=en/&letter=C
+      #Changed name to BoneMaterials
+      #Moved to Wolters Kluwer
 
       param[journal_issn] = 2542-4157
 #      param[base_url] = http://www.clinicalto.com/
 
       au < finished ; frozen ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; http://www.clinicalto.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; http://www.clinicalto.com/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
-      au < crawling ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
-      au < expected ; exists ; 2021 ; Clinical Trials in Orthopedic Disorders Volume 6 ; 2021 ; 6 ; https://www.clinicalto.com/ ; ; >
+      au < frozen ; exists ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
+      au < superseded ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 [superseded] ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Clinical Trials in Orthopedic Disorders Volume 6 ; 2021 ; 6 ; https://www.clinicalto.com/ ; ; >
 
   }
 
@@ -5468,12 +5471,12 @@
       au < finished ; frozen ; 2013 ; Egyptian Journal of Bronchology Volume 7 ; 2013 ; 7 ; http://www.ejbronchology.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Egyptian Journal of Bronchology Volume 8 ; 2014 ; 8 ; http://www.ejbronchology.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Egyptian Journal of Bronchology Volume 9 ; 2015 ; 9 ; http://www.ejbronchology.eg.net/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2016 ; Egyptian Journal of Bronchology Volume 10 ; 2016 ; 10 ; http://www.ejbronchology.eg.net/ ; ; >
+      au < frozen ; exists ; 2016 ; Egyptian Journal of Bronchology Volume 10 ; 2016 ; 10 ; http://www.ejbronchology.eg.net/ ; ; >
       au < finished ; finished ; 2017 ; Egyptian Journal of Bronchology Volume 11 ; 2017 ; 11 ; http://www.ejbronchology.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Egyptian Journal of Bronchology Volume 12 ; 2018 ; 12 ; http://www.ejbronchology.eg.net/ ; ; >
-      au < manifest ; exists ; 2019 ; Egyptian Journal of Bronchology Volume 13 ; 2019 ; 13 ; https://www.ejbronchology.eg.net/ ; ; >
-      au < expected ; exists ; 2020 ; Egyptian Journal of Bronchology Volume 14 ; 2020 ; 14 ; https://www.ejbronchology.eg.net/ ; ; >
-      au < expected ; exists ; 2021 ; Egyptian Journal of Bronchology Volume 15 ; 2021 ; 15 ; https://www.ejbronchology.eg.net/ ; ; >
+      au < frozen ; exists ; 2018 ; Egyptian Journal of Bronchology Volume 12 ; 2018 ; 12 ; http://www.ejbronchology.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Egyptian Journal of Bronchology Volume 13 ; 2019 ; 13 ; https://www.ejbronchology.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Egyptian Journal of Bronchology Volume 14 ; 2020 ; 14 ; https://www.ejbronchology.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Egyptian Journal of Bronchology Volume 15 ; 2021 ; 15 ; https://www.ejbronchology.eg.net/ ; ; >
 
   }
 
@@ -5598,17 +5601,18 @@
       >
 
       param[journal_issn] = 1110-161X
-#      param[base_url] = http://www.err.eg.net/
+      #param[base_url] = http://www.err.eg.net/
+      #Moved to Springer
 
       au < finished ; finished ; 2013 ; Egyptian Rheumatology and Rehabilitation Volume 40 ; 2013 ; 40 ; http://www.err.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Egyptian Rheumatology and Rehabilitation Volume 41 ; 2014 ; 41 ; http://www.err.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Egyptian Rheumatology and Rehabilitation Volume 42 ; 2015 ; 42 ; http://www.err.eg.net/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Egyptian Rheumatology and Rehabilitation Volume 43 ; 2016 ; 43 ; http://www.err.eg.net/ ; ; >
+      au < frozen ; exists ; 2016 ; Egyptian Rheumatology and Rehabilitation Volume 43 ; 2016 ; 43 ; http://www.err.eg.net/ ; ; >
       au < finished ; frozen ; 2017 ; Egyptian Rheumatology and Rehabilitation Volume 44 ; 2017 ; 44 ; http://www.err.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Egyptian Rheumatology and Rehabilitation Volume 45 ; 2018 ; 45 ; http://www.err.eg.net/ ; ; >
-      au < manifest ; exists ; 2019 ; Egyptian Rheumatology and Rehabilitation Volume 46 ; 2019 ; 46 ; https://www.err.eg.net/ ; ; >
-      au < expected ; exists ; 2020 ; Egyptian Rheumatology and Rehabilitation Volume 47 ; 2020 ; 47 ; https://www.err.eg.net/ ; ; >
-      au < expected ; exists ; 2021 ; Egyptian Rheumatology and Rehabilitation Volume 48 ; 2021 ; 48 ; https://www.err.eg.net/ ; ; >
+      au < frozen ; exists ; 2018 ; Egyptian Rheumatology and Rehabilitation Volume 45 ; 2018 ; 45 ; http://www.err.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Egyptian Rheumatology and Rehabilitation Volume 46 ; 2019 ; 46 ; https://www.err.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Egyptian Rheumatology and Rehabilitation Volume 47 ; 2020 ; 47 ; https://www.err.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Egyptian Rheumatology and Rehabilitation Volume 48 ; 2021 ; 48 ; https://www.err.eg.net/ ; ; >
 
   }
 #  {
@@ -5727,18 +5731,19 @@
       >
 
       param[journal_issn] = 2278-9626
-#      param[base_url] = http://www.ejgd.org/
+      #param[base_url] = http://www.ejgd.org/
+      #Moved to Thieme
 
       au < finished ; manifest ; 2012 ; European Journal of General Dentistry Volume 1 ; 2012 ; 1 ; http://www.ejgd.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; European Journal of General Dentistry Volume 2 ; 2013 ; 2 ; http://www.ejgd.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; European Journal of General Dentistry Volume 3 ; 2014 ; 3 ; http://www.ejgd.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; European Journal of General Dentistry Volume 4 ; 2015 ; 4 ; http://www.ejgd.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; European Journal of General Dentistry Volume 5 ; 2016 ; 5 ; http://www.ejgd.org/ ; ; >
+      au < frozen ; exists ; 2016 ; European Journal of General Dentistry Volume 5 ; 2016 ; 5 ; http://www.ejgd.org/ ; ; >
       au < finished ; frozen ; 2017 ; European Journal of General Dentistry Volume 6 ; 2017 ; 6 ; http://www.ejgd.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; European Journal of General Dentistry Volume 7 ; 2018 ; 7 ; http://www.ejgd.org/ ; ; >
-      au < manifest ; exists ; 2019 ; European Journal of General Dentistry Volume 8 ; 2019 ; 8 ; https://www.ejgd.org/ ; ; >
-      au < deepCrawl ; exists ; 2020 ; European Journal of General Dentistry Volume 9 ; 2020 ; 9 ; https://www.ejgd.org/ ; ; >
-      au < expected ; exists ; 2021 ; European Journal of General Dentistry Volume 10 ; 2021 ; 10 ; https://www.ejgd.org/ ; ; >
+      au < frozen ; exists ; 2018 ; European Journal of General Dentistry Volume 7 ; 2018 ; 7 ; http://www.ejgd.org/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; European Journal of General Dentistry Volume 8 ; 2019 ; 8 ; https://www.ejgd.org/ ; ; >
+      au < frozen ; exists ; 2020 ; European Journal of General Dentistry Volume 9 ; 2020 ; 9 ; https://www.ejgd.org/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; European Journal of General Dentistry Volume 10 ; 2021 ; 10 ; https://www.ejgd.org/ ; ; >
 
   }
 
@@ -5786,9 +5791,9 @@
       au < notReady ; exists ; 2016 ; Genome Integrity Volume 7 ; 2016 ; 7 ; http://www.genome-integrity.org/ ; ; > #500 Internal Server error. http://www.genome-integrity.org/showbackIssue.asp?issn=2041-9414;year=2016;volume=7;issue=1
       au < notReady ; exists ; 2017 ; Genome Integrity Volume 8 ; 2017 ; 8 ; http://www.genome-integrity.org/ ; ; > #500 Internal Server error.
       au < notReady ; exists ; 2018 ; Genome Integrity Volume 9 ; 2018 ; 9 ; http://www.genome-integrity.org/ ; ; > #500 Internal Server error.
-      au < manifest ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; >
+      au < notReady ; exists ; 2019 ; Genome Integrity Volume 10 ; 2019 ; 10 ; https://www.genome-integrity.org/ ; ; >
+      au < notReady ; exists ; 2020 ; Genome Integrity Volume 11 ; 2020 ; 11 ; https://www.genome-integrity.org/ ; ; >
+      au < notReady ; exists ; 2021 ; Genome Integrity Volume 12 ; 2021 ; 12 ; https://www.genome-integrity.org/ ; ; >
 
   }
 
@@ -9081,13 +9086,14 @@
       >
 
       param[journal_issn] = 2542-7075
-#      param[base_url] = http://www.arabjir.com/
+      #param[base_url] = http://www.arabjir.com/
+      #Moved to thieme
 
       au < finished ; manifest ; 2017 ; Arab Journal of Interventional Radiology Volume 1 ; 2017 ; 1 ; http://www.arabjir.com/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Arab Journal of Interventional Radiology Volume 2 ; 2018 ; 2 ; http://www.arabjir.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Arab Journal of Interventional Radiology Volume 3 ; 2019 ; 3 ; https://www.arabjir.com/ ; ; >
-      au < deepCrawl ; exists ; 2020 ; Arab Journal of Interventional Radiology Volume 4 ; 2020 ; 4 ; https://www.arabjir.com/ ; ; >
-      au < expected ; exists ; 2021 ; Arab Journal of Interventional Radiology Volume 5 ; 2021 ; 5 ; https://www.arabjir.com/ ; ; >
+      au < frozen ; exists ; 2018 ; Arab Journal of Interventional Radiology Volume 2 ; 2018 ; 2 ; http://www.arabjir.com/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Arab Journal of Interventional Radiology Volume 3 ; 2019 ; 3 ; https://www.arabjir.com/ ; ; >
+      au < frozen ; exists ; 2020 ; Arab Journal of Interventional Radiology Volume 4 ; 2020 ; 4 ; https://www.arabjir.com/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Arab Journal of Interventional Radiology Volume 5 ; 2021 ; 5 ; https://www.arabjir.com/ ; ; >
 
   }
 
