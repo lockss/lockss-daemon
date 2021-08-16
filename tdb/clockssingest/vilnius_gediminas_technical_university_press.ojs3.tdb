@@ -54,7 +54,7 @@
   {
 
       title <
-        name = Business, Management and Education  ;
+        name = Business, Management and Education ;
         issn = 2029-7491 ;
         eissn = 2029-6169
       >
@@ -72,7 +72,21 @@
       au < finished ; manifest ; 2018 ; Business, Management and Education Volume 2018 ; 9 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Business, Management and Education Volume 2019 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Business, Management and Education Volume 2020 ; 11 ; 2020 ;  >
-      au < crawling ; exists ; 2021 ; Business, Management and Education Volume 2021 ; 12 ; 2021 ;  >
+      #As of 2021, name and issn changed: Business, Management and Economics Engineering 2669-2481
+
+  }
+
+  {
+
+      title <
+        name = Business, Management and Economics Engineering ;
+        eissn = 2669-2481
+      >
+
+      param[journal_id] = BME
+
+      #name and issn changed from: Business, Management and Education 2029-6169
+      au < crawling ; exists ; 2021 ; Business, Management and Economics Engineering Volume 2021 ; 12 ; 2021 ;  >
 
   }
 
