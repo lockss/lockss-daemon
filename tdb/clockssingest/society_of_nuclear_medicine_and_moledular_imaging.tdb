@@ -20,10 +20,18 @@
     >
     param[base_url] = https://jnm.snmjournals.org/
 
-    au < exists ; exists ; 2018 ; Annals of Nuclear Medicine Volume 59 ; 59 ; >
-    au < exists ; exists ; 2019 ; Annals of Nuclear Medicine Volume 60 ; 60 ; >
-    au < exists ; exists ; 2020 ; Annals of Nuclear Medicine Volume 61 ; 61 ; >
-    au < exists ; exists ; 2021 ; Annals of Nuclear Medicine Volume 62 ; 62 ; >
+    au < exists ; exists ; 2010 ; Annals of Nuclear Medicine Volume 51 ; 51 ; >
+    au < exists ; exists ; 2011 ; Annals of Nuclear Medicine Volume 52 ; 52 ; >
+    au < exists ; exists ; 2012 ; Annals of Nuclear Medicine Volume 53 ; 53 ; >
+    au < exists ; exists ; 2013 ; Annals of Nuclear Medicine Volume 54 ; 54 ; >
+    au < exists ; exists ; 2014 ; Annals of Nuclear Medicine Volume 55 ; 55 ; >
+    au < exists ; exists ; 2015 ; Annals of Nuclear Medicine Volume 56 ; 56 ; >
+    au < exists ; exists ; 2016 ; Annals of Nuclear Medicine Volume 57 ; 57 ; >
+    au < exists ; exists ; 2017 ; Annals of Nuclear Medicine Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2018 ; Annals of Nuclear Medicine Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2019 ; Annals of Nuclear Medicine Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2020 ; Annals of Nuclear Medicine Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2021 ; Annals of Nuclear Medicine Volume 62 ; 62 ; >
 
   }
   {
@@ -34,10 +42,18 @@
     >
     param[base_url] = https://tech.snmjournals.org/
 
-    au < exists ; exists ; 2018 ; Annals of Nuclear Medicine Technology Volume 46 ; 46 ; >
-    au < exists ; exists ; 2019 ; Annals of Nuclear Medicine Technology Volume 47 ; 47 ; >
-    au < exists ; exists ; 2020 ; Annals of Nuclear Medicine Technology Volume 48 ; 48 ; >
-    au < exists ; exists ; 2021 ; Annals of Nuclear Medicine Technology Volume 49 ; 49 ; >
+    au < exists ; exists ; 2010 ; Annals of Nuclear Medicine Technology Volume 38 ; 38 ; >
+    au < exists ; exists ; 2011 ; Annals of Nuclear Medicine Technology Volume 39 ; 39 ; >
+    au < exists ; exists ; 2012 ; Annals of Nuclear Medicine Technology Volume 40 ; 40 ; >
+    au < exists ; exists ; 2013 ; Annals of Nuclear Medicine Technology Volume 41 ; 41 ; >
+    au < exists ; exists ; 2014 ; Annals of Nuclear Medicine Technology Volume 42 ; 42 ; >
+    au < exists ; exists ; 2015 ; Annals of Nuclear Medicine Technology Volume 43 ; 43 ; >
+    au < exists ; exists ; 2016 ; Annals of Nuclear Medicine Technology Volume 44 ; 44 ; >
+    au < exists ; exists ; 2017 ; Annals of Nuclear Medicine Technology Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2018 ; Annals of Nuclear Medicine Technology Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2019 ; Annals of Nuclear Medicine Technology Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2020 ; Annals of Nuclear Medicine Technology Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2021 ; Annals of Nuclear Medicine Technology Volume 49 ; 49 ; >
 
   }
 
