@@ -8,7 +8,12 @@
     plugin = org.lockss.plugin.atypon.asm.AsmPlugin
     param[base_url] = https://journals.asm.org/
     implicit < status ; year ; name ; param[volume_name] >
-    #EcoSal Plus, Journal of Microbiology & Biology Education, Microbiology Spectrum using www.asmscience.org (pub2web)
+
+    #
+    #Two titles are also in clockss, and in atypon2 tdb file.
+    #EcoSal Plus, Journal of Microbiology & Biology Education, 
+    #Microbiology Spectrum 
+    #
 
   {
 
