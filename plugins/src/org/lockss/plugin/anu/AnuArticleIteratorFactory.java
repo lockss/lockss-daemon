@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.anu;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -49,53 +50,49 @@ implements ArticleIteratorFactory,
   
   protected static Logger log = Logger.getLogger(AnuArticleIteratorFactory.class);
   
-  // params from tdb file corresponding to AU
-  protected static final String ROOT_TEMPLATE = "\"%spublications/\", base_url";
-  //make the pattern after the journal id and volume number more general, we were missing content
-  // could be -2015, or -issue-xy or (add more examples here)
-  //in 2019 format changed and added extra layer publications/journals/journal-id/journal-id-volume-foo
-  // to support both old and new, add in optional level 
-  protected static final String PATTERN_TEMPLATE =
-      "\"^%spublications/(?:journals/(%s/)?)?(?!.+/download$)(%s|[a-z-]+)(-(ii-number|issue|volume|no-[1-9]|winter))?-%s(-[a-z0-9].+?)?$\", base_url, journal_id,journal_id, volume_name";
-  
-  //we don't even get here unless the PATTERN_TEMPLATE worked and that was checkeding journal_id
-  //allow option extra level of "journal-id/" just after publications/journals/
-  private static final Pattern LANDING_PATTERN = Pattern.compile(
-      "^((https?://[^/]+/)publications/(?:journals/)?(([^/]+/)?[^/]+))$",
+  // relevant files are all hosted on another domain (rather than the base_url)
+  // so it is hardcoded for now
+  protected static final String ROOT_TEMPLATE = "https://press-files.anu.edu.au/downloads/";
+  // pattern can include either the pdf or html aspects
+  protected static final String PATTERN_TEMPLATE = "^https://press-files.anu.edu.au/downloads/press/[^/]+/(pdf|html)/";
+
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
+      "([^/]+)/pdf/([^/.]+)\\.pdf",
       Pattern.CASE_INSENSITIVE);
-  private static final String LANDING_REPLACEMENT = "$1";
-  /* this link is no longer provided on the article landing page - it doesn't exist any more*/
-  /* leave this in for previously preserved content */
-  private static final String DOWNLOAD_REPLACEMENT = "$1/download";
-  
-  // https://press.anu.edu.au/publications/aboriginal-history-journal-volume-39
-  // https://press.anu.edu.au/publications/aboriginal-history-journal-volume-39/download
-  // https://press-files.anu.edu.au/downloads/press/p332783/pdf/book.pdf
-  // Later if needed, we can add scraping to get the full text PDF link
-  // NOTE - the raw metadata has: citation_pdf_url which we could use to get a PDF url 
+
+  private static final String PDF_REPLACEMENT = "$1/pdf/$2.pdf";
+  private static final String XHTML_REPLACEMENT = "$1/html/$2.xhtml";
+  // haven't seen this, but it is probable to exist, so include it for now.
+  private static final String HTML_REPLACEMENT = "$1/html/$2.html";
+
+  // https://press-files.anu.edu.au/downloads/press/p332783/pdf/chp01.pdf
+  // https://press-files.anu.edu.au/downloads/press/n8684/html/03_black.xhtml
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    
+
     builder.setSpec(target,
         ROOT_TEMPLATE,
         PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    
+
     builder.addAspect(
-        LANDING_PATTERN,
-        LANDING_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT, 
-        ArticleFiles.ROLE_ARTICLE_METADATA);
-    
+        PDF_PATTERN,
+        PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
     builder.addAspect(
-        DOWNLOAD_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
-    
+        Arrays.asList(
+          XHTML_REPLACEMENT,
+          HTML_REPLACEMENT
+        ),
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
+
     builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_ABSTRACT);
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     return builder.getSubTreeArticleIterator();
   }
