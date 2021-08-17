@@ -1252,7 +1252,7 @@
    au < crawling ; exists ; 2005 ; 2005 ; DMW - Deutsche Medizinische Wochenschrift Volume 131 ; 131 ; >
    au < crawling ; exists ; 2006 ; 2006 ; DMW - Deutsche Medizinische Wochenschrift Volume 132 ; 132 ; >
    au < crawling ; exists ; 2007 ; 2007 ; DMW - Deutsche Medizinische Wochenschrift Volume 133 ; 133 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; DMW - Deutsche Medizinische Wochenschrift Volume 134 ; 134 ; >
+   au < finished ; manifest ; 2008 ; 2008 ; DMW - Deutsche Medizinische Wochenschrift Volume 134 ; 134 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; DMW - Deutsche Medizinische Wochenschrift Volume 135 ; 135 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 136 ; 136 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 137 ; 137 ; >
@@ -1286,7 +1286,7 @@
    au < crawling ; exists ; 2005 ; 2005 ; Deutsche Zeitschrift für Osteopathie Volume 3 ; 3 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Deutsche Zeitschrift für Osteopathie Volume 4 ; 4 ; >
    au < crawling ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Osteopathie Volume 5 ; 5 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Osteopathie Volume 6 ; 6 ; >
+   au < finished ; manifest ; 2008 ; 2008 ; Deutsche Zeitschrift für Osteopathie Volume 6 ; 6 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 7 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Deutsche Zeitschrift für Osteopathie Volume 8 ; 8 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 9 ; 9 ; reingest2.clockss.org:8085 >
@@ -1315,8 +1315,8 @@
     comment[years] = 2006-current
 
    au < crawling ; exists ; 2006 ; 2006 ; Endo-Praxis Volume 22 ; 22 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Endo-Praxis Volume 23 ; 23 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Endo-Praxis Volume 24 ; 24 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Endo-Praxis Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Endo-Praxis Volume 24 ; 24 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2009 ; 2009 ; Endo-Praxis Volume 25 ; 25 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Endo-Praxis Volume 26 ; 26 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Endo-Praxis Volume 27 ; 27 ; >
@@ -1384,8 +1384,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Endoscopy Volume 36 ; 36 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Endoscopy Volume 37 ; 37 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Endoscopy Volume 38 ; 38 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Endoscopy Volume 39 ; 39 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Endoscopy Volume 40 ; 40 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Endoscopy Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Endoscopy Volume 40 ; 40 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2009 ; 2009 ; Endoscopy Volume 41 ; 41 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Endoscopy Volume 42 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Endoscopy Volume 43 ; 43 ; reingest2.clockss.org:8085 >
@@ -1441,8 +1441,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Endoscopy heute Volume 17 ; 17 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Endoscopy heute Volume 18 ; 18 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Endoscopy heute Volume 19 ; 19 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Endoscopy heute Volume 20 ; 20 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Endoscopy heute Volume 21 ; 21 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Endoscopy heute Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Endoscopy heute Volume 21 ; 21 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Endoscopy heute Volume 22 ; 22 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Endoscopy heute Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Endoscopy heute Volume 24 ; 24 ; reingest2.clockss.org:8085 >
@@ -1471,8 +1471,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Erfahrungsheilkunde Volume 53 ; 53 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Erfahrungsheilkunde Volume 54 ; 54 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Erfahrungsheilkunde Volume 55 ; 55 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Erfahrungsheilkunde Volume 56 ; 56 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Erfahrungsheilkunde Volume 57 ; 57 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Erfahrungsheilkunde Volume 56 ; 56 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Erfahrungsheilkunde Volume 57 ; 57 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Erfahrungsheilkunde Volume 58 ; 58 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Erfahrungsheilkunde Volume 59 ; 59 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Erfahrungsheilkunde Volume 60 ; 60 ; reingest2.clockss.org:8085 >
@@ -1500,7 +1500,7 @@
     param[journal_id] = 10.1055/s-00000163
     comment[years] = 2008-current
 
-   au < frozen ; exists ; 2008 ; 2008 ; Ergopraxis Volume 1 ; 1 ; >
+   au < finished ; manifest ; 2008 ; 2008 ; Ergopraxis Volume 1 ; 1 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2009 ; 2009 ; Ergopraxis Volume 2 ; 2 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Ergopraxis Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2011 ; 2011 ; Ergopraxis Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -1530,7 +1530,7 @@
 
     au < crawling ; exists ; 2006 ; 2006 ; Ergoscience Volume 1 ; 1 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 ; >
 
@@ -1554,8 +1554,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Ernährung & Medizin Volume 19 ; 19 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Ernährung & Medizin Volume 20 ; 20 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Ernährung & Medizin Volume 21 ; 21 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Ernährung & Medizin Volume 22 ; 22 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Ernährung & Medizin Volume 23 ; 23 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Ernährung & Medizin Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Ernährung & Medizin Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Ernährung & Medizin Volume 24 ; 24 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Ernährung & Medizin Volume 25 ; 25 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Ernährung & Medizin Volume 26 ; 26 ; reingest2.clockss.org:8085 >
@@ -1601,8 +1601,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; European Journal of Pediatric Surgery Volume 14 ; 14 ; >
    au < crawling ; exists ; 2005 ; 2005 ; European Journal of Pediatric Surgery Volume 15 ; 15 ; >
    au < crawling ; exists ; 2006 ; 2006 ; European Journal of Pediatric Surgery Volume 16 ; 16 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; European Journal of Pediatric Surgery Volume 17 ; 17 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; European Journal of Pediatric Surgery Volume 18 ; 18 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; European Journal of Pediatric Surgery Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; European Journal of Pediatric Surgery Volume 18 ; 18 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; European Journal of Pediatric Surgery Volume 19 ; 19 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 20 ; 20 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; European Journal of Pediatric Surgery Volume 21 ; 21 ; reingest1.clockss.org:8082 >
@@ -1716,8 +1716,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Experimental and Clinical Endocrinology & Diabetes Volume 112 ; 112 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Experimental and Clinical Endocrinology & Diabetes Volume 113 ; 113 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Experimental and Clinical Endocrinology & Diabetes Volume 114 ; 114 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Experimental and Clinical Endocrinology & Diabetes Volume 115 ; 115 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 116 ; 116 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Experimental and Clinical Endocrinology & Diabetes Volume 115 ; 115 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 116 ; 116 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Experimental and Clinical Endocrinology & Diabetes Volume 117 ; 117 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 118 ; 118 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 119 ; 119 ; reingest2.clockss.org:8085 >
@@ -1786,8 +1786,8 @@
    au < crawling ; exists ; 2004 ; 2004 ; Facial Plastic Surgery Volume 20 ; 20 ; >
    au < crawling ; exists ; 2005 ; 2005 ; Facial Plastic Surgery Volume 21 ; 21 ; >
    au < crawling ; exists ; 2006 ; 2006 ; Facial Plastic Surgery Volume 22 ; 22 ; >
-   au < frozen ; exists ; 2007 ; 2007 ; Facial Plastic Surgery Volume 23 ; 23 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Facial Plastic Surgery Volume 24 ; 24 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Facial Plastic Surgery Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Facial Plastic Surgery Volume 24 ; 24 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Facial Plastic Surgery Volume 25 ; 25 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Facial Plastic Surgery Volume 26 ; 26 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Facial Plastic Surgery Volume 27 ; 27 ; >
@@ -1815,8 +1815,8 @@
     param[journal_id] = 10.1055/s-00000148
     comment[years] = 2007-current
 
-   au < frozen ; exists ; 2007 ; 2007 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 14 ; 14 ; >
-   au < frozen ; exists ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 15 ; 15 ; >
+   au < finished ; manifest ; 2007 ; 2007 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+   au < finished ; manifest ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 15 ; 15 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 16 ; 16 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 17 ; 17 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 18 ; 18 ; >
