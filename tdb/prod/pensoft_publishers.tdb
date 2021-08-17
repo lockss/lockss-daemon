@@ -502,7 +502,7 @@
       param[au_oai_set] = fmj
 
       au < released ; 2019 ; 2019 ; Food Modeling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ >
-      au < expected ; 2020 ; 2020 ; Food Modeling Journal (FMJ) Volume 2020 ; 2020 ; https://fmj.pensoft.net/ >
+      au < doesNotExist ; 2020 ; 2020 ; Food Modeling Journal (FMJ) Volume 2020 ; 2020 ; https://fmj.pensoft.net/ >
       au < manifest ; 2021 ; 2021 ; Food Modeling Journal (FMJ) Volume 2021 ; 2021 ; https://fmj.pensoft.net/ >
 
   }
@@ -809,6 +809,149 @@
       au < released ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ >
       au < released ; 2020 ; 36 ; Zoologia Volume 2020 ; 2020 ; https://zoologia.pensoft.net/ >
       au < manifest ; 2021 ; 37 ; Zoologia Volume 2021 ; 2021 ; https://zoologia.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Acta Ichthyologica et Piscatoria ;
+        issn = 0137-1592 ;
+        eissn = 1734-1515
+      >
+
+      param[au_oai_set] = aiep
+
+      au < manifest ; 2021 ; 2021 ; Acta Ichthyologica et Piscatoria Volume 2021 ; 2021 ; https://aiep.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Arthropod Systematics & Phylogeny ;
+        issn = 1863-7221 ;
+        eissn = 1864-8312
+      >
+
+      param[au_oai_set] = arthropod-systematics
+
+      au < manifest ; 2021 ; 2021 ; Arthropod Systematics & Phylogeny Volume 2021 ; 2021 ; https://arthropod-systematics.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Folia Medica ;
+        issn = 0204-8043 ;
+        eissn = 1314-2143
+      >
+
+      param[au_oai_set] = foliamedica
+
+      au < manifest ; 2019 ; 2019 ; Folia Medica Volume 2019 ; 2019 ; https://foliamedica.bg/ >
+      au < manifest ; 2020 ; 2020 ; Folia Medica Volume 2020 ; 2020 ; https://foliamedica.bg/ >
+      au < manifest ; 2021 ; 2021 ; Folia Medica Volume 2021 ; 2021 ; https://foliamedica.bg/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Bulgarian Geographical Society ;
+        issn = 2738-8107 ;
+        eissn = 2738-8115
+      >
+
+      param[au_oai_set] = jbgs
+
+      au < manifest ; 2021 ; 2021 ; Journal of the Bulgarian Geographical Society Volume 2021 ; 2021 ; https://jbgs.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Universal Computer Science ;
+        issn = 0948-695X ;
+        eissn = 0948-6968
+      >
+
+      param[au_oai_set] = jucs
+
+      au < manifest ; 2019 ; 2019 ; Journal of Universal Computer Science Volume 2019 ; 2019 ; https://lib.jucs.org/ >
+      au < doesNotExist ; 2020 ; 2020 ; Journal of Universal Computer Science Volume 2020 ; 2020 ; https://lib.jucs.org/ >
+      au < manifest ; 2021 ; 2021 ; Journal of Universal Computer Science Volume 2021 ; 2021 ; https://lib.jucs.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Plant Sociology ;
+        issn = 2280-1855 ;
+        eissn = 2704-6192
+      >
+
+      param[au_oai_set] = plantsociology
+
+      au < manifest ; 2020 ; 2020 ; Plant Sociology Volume 2020 ; 2020 ; https://plantsociology.arphahub.com/ >
+      au < manifest ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Population and Economics ;
+        eissn = 2658-3798
+      >
+
+      param[au_oai_set] = populationandeconomics
+
+      au < manifest ; 2017 ; 2017 ; Population and Economics Volume 2017 ; 2017 ; https://populationandeconomics.pensoft.net/ >
+      au < manifest ; 2018 ; 2018 ; Population and Economics Volume 2018 ; 2018 ; https://populationandeconomics.pensoft.net/ >
+      au < manifest ; 2019 ; 2019 ; Population and Economics Volume 2019 ; 2019 ; https://populationandeconomics.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; Population and Economics Volume 2020 ; 2020 ; https://populationandeconomics.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Population and Economics Volume 2021 ; 2021 ; https://populationandeconomics.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Vertebrate Zoology ;
+        issn = 1864-5755 ;
+        eissn = 2625-8498
+      >
+
+      param[au_oai_set] = vertebrate-zoology
+
+      au < manifest ; 2021 ; 2021 ; Vertebrate Zoology Volume 2021 ; 2021 ; https://vertebrate-zoology.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Zitteliana ;
+        issn = 2512-5338 ;
+        eissn = 2747-8106
+      >
+
+      param[au_oai_set] = zitteliana
+
+      au < manifest ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ >
 
   }
 
