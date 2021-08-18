@@ -1234,11 +1234,11 @@
    au < manifest ; exists ; 1987 ; 1987 ; DMW - Deutsche Medizinische Wochenschrift Volume 113 ; 113 ; >
    au < manifest ; exists ; 1988 ; 1988 ; DMW - Deutsche Medizinische Wochenschrift Volume 114 ; 114 ; >
    au < manifest ; exists ; 1989 ; 1989 ; DMW - Deutsche Medizinische Wochenschrift Volume 115 ; 115 ; >
-   au < testing ; exists ; 1990 ; 1990 ; DMW - Deutsche Medizinische Wochenschrift Volume 116 ; 116 ; >
+   au < ready ; exists ; 1990 ; 1990 ; DMW - Deutsche Medizinische Wochenschrift Volume 116 ; 116 ; >
    au < crawling ; exists ; 1991 ; 1991 ; DMW - Deutsche Medizinische Wochenschrift Volume 117 ; 117 ; >
-   au < testing ; exists ; 1992 ; 1992 ; DMW - Deutsche Medizinische Wochenschrift Volume 118 ; 118 ; >
+   au < ready ; exists ; 1992 ; 1992 ; DMW - Deutsche Medizinische Wochenschrift Volume 118 ; 118 ; >
    au < crawling ; exists ; 1993 ; 1993 ; DMW - Deutsche Medizinische Wochenschrift Volume 119 ; 119 ; >
-   au < testing ; exists ; 1994 ; 1994 ; DMW - Deutsche Medizinische Wochenschrift Volume 120 ; 120 ; >
+   au < ready ; exists ; 1994 ; 1994 ; DMW - Deutsche Medizinische Wochenschrift Volume 120 ; 120 ; >
    au < crawling ; exists ; 1995 ; 1995 ; DMW - Deutsche Medizinische Wochenschrift Volume 121 ; 121 ; >
    au < crawling ; exists ; 1996 ; 1996 ; DMW - Deutsche Medizinische Wochenschrift Volume 122 ; 122 ; >
    au < crawling ; exists ; 1997 ; 1997 ; DMW - Deutsche Medizinische Wochenschrift Volume 123 ; 123 ; >
@@ -1367,7 +1367,7 @@
    au < manifest ; exists ; 1987 ; 1987 ; Endoscopy Volume 19 ; 19 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Endoscopy Volume 20 ; 20 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Endoscopy Volume 21 ; 21 ; >
-   au < testing ; exists ; 1990 ; 1990 ; Endoscopy Volume 22 ; 22 ; >
+   au < ready ; exists ; 1990 ; 1990 ; Endoscopy Volume 22 ; 22 ; >
    au < crawling ; exists ; 1991 ; 1991 ; Endoscopy Volume 23 ; 23 ; >
    au < crawling ; exists ; 1992 ; 1992 ; Endoscopy Volume 24 ; 24 ; >
    au < crawling ; exists ; 1993 ; 1993 ; Endoscopy Volume 25 ; 25 ; >
@@ -1700,13 +1700,13 @@
    au < manifest ; exists ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 1988 ; 1988 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 1989 ; 1989 ; >
    au < crawling ; exists ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 1990 ; 1990 ; >
-   au < testing ; exists ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 1991 ; 1991 ; >
+   au < ready ; exists ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 1991 ; 1991 ; >
    au < crawling ; exists ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 1992 ; 1992 ; >
-   au < testing ; exists ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 1993 ; 1993 ; >
+   au < ready ; exists ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 1993 ; 1993 ; >
    au < ready ; exists ; 1994 ; 1994 ; Experimental and Clinical Endocrinology & Diabetes Volume 1994 ; 1994 ; >
    au < ready ; exists ; 1995 ; 1995 ; Experimental and Clinical Endocrinology & Diabetes Volume 1995 ; 1995 ; >
    au < crawling ; exists ; 1996 ; 1996 ; Experimental and Clinical Endocrinology & Diabetes Volume 1996 ; 1996 ; >
-   au < testing ; exists ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 1997 ; 1997 ; >
+   au < ready ; exists ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 1997 ; 1997 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 1998 ; 1998 ; >
    au < crawling ; exists ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 1999 ; 1999 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Experimental and Clinical Endocrinology & Diabetes Volume 108 ; 108 ; >
@@ -1772,13 +1772,13 @@
    au < crawling ; exists ; 1990 ; 1990 ; Facial Plastic Surgery Volume 6 ; 6 ; >
    au < doesNotExist ; doesNotExist ; 1991 ; 1991 ; Facial Plastic Surgery Volume 7 ; 7 ; >
    au < crawling ; exists ; 1992 ; 1992 ; Facial Plastic Surgery Volume 8 ; 8 ; >
-   au < testing ; exists ; 1993 ; 1993 ; Facial Plastic Surgery Volume 9 ; 9 ; >
+   au < ready ; exists ; 1993 ; 1993 ; Facial Plastic Surgery Volume 9 ; 9 ; >
    au < crawling ; exists ; 1994 ; 1994 ; Facial Plastic Surgery Volume 10 ; 10 ; >
-   au < testing ; exists ; 1995 ; 1995 ; Facial Plastic Surgery Volume 11 ; 11 ; >
+   au < ready ; exists ; 1995 ; 1995 ; Facial Plastic Surgery Volume 11 ; 11 ; >
    au < crawling ; exists ; 1996 ; 1996 ; Facial Plastic Surgery Volume 12 ; 12 ; >
    au < ready ; exists ; 1997 ; 1997 ; Facial Plastic Surgery Volume 13 ; 13 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Facial Plastic Surgery Volume 14 ; 14 ; >
-   au < testing ; exists ; 1999 ; 1999 ; Facial Plastic Surgery Volume 15 ; 15 ; >
+   au < ready ; exists ; 1999 ; 1999 ; Facial Plastic Surgery Volume 15 ; 15 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Facial Plastic Surgery Volume 16 ; 16 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Facial Plastic Surgery Volume 17 ; 17 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Facial Plastic Surgery Volume 18 ; 18 ; >
@@ -1854,7 +1854,7 @@
    au < manifest ; exists ; 1987 ; 1987 ; Fortschritte der Neurologie - Psychiatrie Volume 55 ; 55 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Fortschritte der Neurologie - Psychiatrie Volume 56 ; 56 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Fortschritte der Neurologie - Psychiatrie Volume 57 ; 57 ; >
-   au < testing ; exists ; 1990 ; 1990 ; Fortschritte der Neurologie - Psychiatrie Volume 58 ; 58 ; >
+   au < ready ; exists ; 1990 ; 1990 ; Fortschritte der Neurologie - Psychiatrie Volume 58 ; 58 ; >
    au < crawling ; exists ; 1991 ; 1991 ; Fortschritte der Neurologie - Psychiatrie Volume 59 ; 59 ; >
    au < crawling ; exists ; 1992 ; 1992 ; Fortschritte der Neurologie - Psychiatrie Volume 60 ; 60 ; >
    au < crawling ; exists ; 1993 ; 1993 ; Fortschritte der Neurologie - Psychiatrie Volume 61 ; 61 ; >
@@ -2293,13 +2293,13 @@
    au < manifest ; exists ; 1988 ; 1988 ; Hormone and Metabolic Research Volume 20 ; 20 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Hormone and Metabolic Research Volume 21 ; 21 ; >
    au < crawling ; exists ; 1990 ; 1990 ; Hormone and Metabolic Research Volume 22 ; 22 ; >
-   au < testing ; exists ; 1991 ; 1991 ; Hormone and Metabolic Research Volume 23 ; 23 ; >
+   au < ready ; exists ; 1991 ; 1991 ; Hormone and Metabolic Research Volume 23 ; 23 ; >
    au < crawling ; exists ; 1992 ; 1992 ; Hormone and Metabolic Research Volume 24 ; 24 ; >
    au < crawling ; exists ; 1993 ; 1993 ; Hormone and Metabolic Research Volume 25 ; 25 ; >
    au < crawling ; exists ; 1994 ; 1994 ; Hormone and Metabolic Research Volume 26 ; 26 ; >
    au < crawling ; exists ; 1995 ; 1995 ; Hormone and Metabolic Research Volume 27 ; 27 ; >
    au < crawling ; exists ; 1996 ; 1996 ; Hormone and Metabolic Research Volume 28 ; 28 ; >
-   au < testing ; exists ; 1997 ; 1997 ; Hormone and Metabolic Research Volume 29 ; 29 ; >
+   au < ready ; exists ; 1997 ; 1997 ; Hormone and Metabolic Research Volume 29 ; 29 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Hormone and Metabolic Research Volume 30 ; 30 ; >
    au < crawling ; exists ; 1999 ; 1999 ; Hormone and Metabolic Research Volume 31 ; 31 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Hormone and Metabolic Research Volume 32 ; 32 ; >
@@ -2622,7 +2622,7 @@
     au < ready ; exists ; 1990 ; 1990 ; International Journal of Sports Medicine Volume 11 ; 11 ; >
     au < crawling ; exists ; 1991 ; 1991 ; International Journal of Sports Medicine Volume 12 ; 12 ; >
     au < crawling ; exists ; 1992 ; 1992 ; International Journal of Sports Medicine Volume 13 ; 13 ; >
-    au < testing ; exists ; 1993 ; 1993 ; International Journal of Sports Medicine Volume 14 ; 14 ; >
+    au < ready ; exists ; 1993 ; 1993 ; International Journal of Sports Medicine Volume 14 ; 14 ; >
     au < crawling ; exists ; 1994 ; 1994 ; International Journal of Sports Medicine Volume 15 ; 15 ; >
     au < crawling ; exists ; 1995 ; 1995 ; International Journal of Sports Medicine Volume 16 ; 16 ; >
     au < crawling ; exists ; 1996 ; 1996 ; International Journal of Sports Medicine Volume 17 ; 17 ; >
@@ -3201,9 +3201,9 @@
     au < crawling ; exists ; 1991 ; 1991 ; Journal of Reconstructive Microsurgery Volume 7 ; 7 ; >
     au < crawling ; exists ; 1992 ; 1992 ; Journal of Reconstructive Microsurgery Volume 8 ; 8 ; >
     au < crawling ; exists ; 1993 ; 1993 ; Journal of Reconstructive Microsurgery Volume 9 ; 9 ; >
-    au < testing ; exists ; 1994 ; 1994 ; Journal of Reconstructive Microsurgery Volume 10 ; 10 ; >
-    au < testing ; exists ; 1995 ; 1995 ; Journal of Reconstructive Microsurgery Volume 11 ; 11 ; >
-    au < testing ; exists ; 1996 ; 1996 ; Journal of Reconstructive Microsurgery Volume 12 ; 12 ; >
+    au < ready ; exists ; 1994 ; 1994 ; Journal of Reconstructive Microsurgery Volume 10 ; 10 ; >
+    au < ready ; exists ; 1995 ; 1995 ; Journal of Reconstructive Microsurgery Volume 11 ; 11 ; >
+    au < ready ; exists ; 1996 ; 1996 ; Journal of Reconstructive Microsurgery Volume 12 ; 12 ; >
     au < crawling ; exists ; 1997 ; 1997 ; Journal of Reconstructive Microsurgery Volume 13 ; 13 ; >
     au < crawling ; exists ; 1998 ; 1998 ; Journal of Reconstructive Microsurgery Volume 14 ; 14 ; >
     au < crawling ; exists ; 1999 ; 1999 ; Journal of Reconstructive Microsurgery Volume 15 ; 15 ; >
@@ -3442,7 +3442,7 @@
     au < manifest ; exists ; 1987 ; 1987 ; Klinische Monatsblätter für Augenheilkunde Volume 204 ; 204 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Klinische Monatsblätter für Augenheilkunde Volume 205 ; 205 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Klinische Monatsblätter für Augenheilkunde Volume 206 ; 206 ; >
-    au < testing ; exists ; 1990 ; 1990 ; Klinische Monatsblätter für Augenheilkunde Volume 207 ; 207 ; >
+    au < ready ; exists ; 1990 ; 1990 ; Klinische Monatsblätter für Augenheilkunde Volume 207 ; 207 ; >
     au < crawling ; exists ; 1991 ; 1991 ; Klinische Monatsblätter für Augenheilkunde Volume 208 ; 208 ; >
     au < crawling ; exists ; 1992 ; 1992 ; Klinische Monatsblätter für Augenheilkunde Volume 209 ; 209 ; >
     au < crawling ; exists ; 1993 ; 1993 ; Klinische Monatsblätter für Augenheilkunde Volume 210 ; 210 ; >
@@ -3556,16 +3556,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Klinische Pädiatrie Volume 199 ; 199 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Klinische Pädiatrie Volume 200 ; 200 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Klinische Pädiatrie Volume 201 ; 201 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Klinische Pädiatrie Volume 202 ; 202 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Klinische Pädiatrie Volume 203 ; 203 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Klinische Pädiatrie Volume 204 ; 204 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Klinische Pädiatrie Volume 205 ; 205 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Klinische Pädiatrie Volume 206 ; 206 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Klinische Pädiatrie Volume 207 ; 207 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Klinische Pädiatrie Volume 208 ; 208 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Klinische Pädiatrie Volume 209 ; 209 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Klinische Pädiatrie Volume 210 ; 210 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Klinische Pädiatrie Volume 211 ; 211 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Klinische Pädiatrie Volume 202 ; 202 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Klinische Pädiatrie Volume 203 ; 203 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Klinische Pädiatrie Volume 204 ; 204 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Klinische Pädiatrie Volume 205 ; 205 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Klinische Pädiatrie Volume 206 ; 206 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Klinische Pädiatrie Volume 207 ; 207 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Klinische Pädiatrie Volume 208 ; 208 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Klinische Pädiatrie Volume 209 ; 209 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Klinische Pädiatrie Volume 210 ; 210 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Klinische Pädiatrie Volume 211 ; 211 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Klinische Pädiatrie Volume 212 ; 212 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Klinische Pädiatrie Volume 213 ; 213 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Klinische Pädiatrie Volume 214 ; 214 ; >
@@ -3696,16 +3696,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Laryngo-Rhino-Otologie Volume 65 ; 65 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Laryngo-Rhino-Otologie Volume 66 ; 66 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Laryngo-Rhino-Otologie Volume 67 ; 67 ; >
-    au < testing ; exists ; 1990 ; 1990 ; Laryngo-Rhino-Otologie Volume 68 ; 68 ; >
-    au < testing ; exists ; 1991 ; 1991 ; Laryngo-Rhino-Otologie Volume 69 ; 69 ; >
-    au < testing ; exists ; 1992 ; 1992 ; Laryngo-Rhino-Otologie Volume 70 ; 70 ; >
-    au < testing ; exists ; 1993 ; 1993 ; Laryngo-Rhino-Otologie Volume 71 ; 71 ; >
-    au < testing ; exists ; 1994 ; 1994 ; Laryngo-Rhino-Otologie Volume 73 ; 73 ; >
-    au < testing ; exists ; 1995 ; 1995 ; Laryngo-Rhino-Otologie Volume 74 ; 74 ; >
-    au < testing ; exists ; 1996 ; 1996 ; Laryngo-Rhino-Otologie Volume 75 ; 75 ; >
-    au < testing ; exists ; 1997 ; 1997 ; Laryngo-Rhino-Otologie Volume 76 ; 76 ; >
-    au < testing ; exists ; 1998 ; 1998 ; Laryngo-Rhino-Otologie Volume 77 ; 77 ; >
-    au < testing ; exists ; 1999 ; 1999 ; Laryngo-Rhino-Otologie Volume 78 ; 78 ; >
+    au < ready ; exists ; 1990 ; 1990 ; Laryngo-Rhino-Otologie Volume 68 ; 68 ; >
+    au < ready ; exists ; 1991 ; 1991 ; Laryngo-Rhino-Otologie Volume 69 ; 69 ; >
+    au < ready ; exists ; 1992 ; 1992 ; Laryngo-Rhino-Otologie Volume 70 ; 70 ; >
+    au < ready ; exists ; 1993 ; 1993 ; Laryngo-Rhino-Otologie Volume 71 ; 71 ; >
+    au < ready ; exists ; 1994 ; 1994 ; Laryngo-Rhino-Otologie Volume 73 ; 73 ; >
+    au < ready ; exists ; 1995 ; 1995 ; Laryngo-Rhino-Otologie Volume 74 ; 74 ; >
+    au < ready ; exists ; 1996 ; 1996 ; Laryngo-Rhino-Otologie Volume 75 ; 75 ; >
+    au < ready ; exists ; 1997 ; 1997 ; Laryngo-Rhino-Otologie Volume 76 ; 76 ; >
+    au < ready ; exists ; 1998 ; 1998 ; Laryngo-Rhino-Otologie Volume 77 ; 77 ; >
+    au < ready ; exists ; 1999 ; 1999 ; Laryngo-Rhino-Otologie Volume 78 ; 78 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Laryngo-Rhino-Otologie Volume 79 ; 79 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Laryngo-Rhino-Otologie Volume 80 ; 80 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Laryngo-Rhino-Otologie Volume 81 ; 81 ; >
@@ -3843,16 +3843,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; min - Minimally Invasive Neurosurgery Volume 30 ; 30 ; >
     au < manifest ; exists ; 1988 ; 1988 ; min - Minimally Invasive Neurosurgery Volume 31 ; 31 ; >
     au < manifest ; exists ; 1989 ; 1989 ; min - Minimally Invasive Neurosurgery Volume 32 ; 32 ; >
-    au < testing ; exists ; 1990 ; 1990 ; min - Minimally Invasive Neurosurgery Volume 33 ; 33 ; >
-    au < testing ; exists ; 1991 ; 1991 ; min - Minimally Invasive Neurosurgery Volume 34 ; 34 ; >
-    au < testing ; exists ; 1992 ; 1992 ; min - Minimally Invasive Neurosurgery Volume 35 ; 35 ; >
-    au < testing ; exists ; 1993 ; 1993 ; min - Minimally Invasive Neurosurgery Volume 36 ; 36 ; >
-    au < testing ; exists ; 1994 ; 1994 ; min - Minimally Invasive Neurosurgery Volume 37 ; 37 ; >
-    au < testing ; exists ; 1995 ; 1995 ; min - Minimally Invasive Neurosurgery Volume 38 ; 38 ; >
-    au < testing ; exists ; 1996 ; 1996 ; min - Minimally Invasive Neurosurgery Volume 39 ; 39 ; >
-    au < testing ; exists ; 1997 ; 1997 ; min - Minimally Invasive Neurosurgery Volume 40 ; 40 ; >
-    au < testing ; exists ; 1998 ; 1998 ; min - Minimally Invasive Neurosurgery Volume 41 ; 41 ; >
-    au < testing ; exists ; 1999 ; 1999 ; min - Minimally Invasive Neurosurgery Volume 42 ; 42 ; >
+    au < ready ; exists ; 1990 ; 1990 ; min - Minimally Invasive Neurosurgery Volume 33 ; 33 ; >
+    au < ready ; exists ; 1991 ; 1991 ; min - Minimally Invasive Neurosurgery Volume 34 ; 34 ; >
+    au < ready ; exists ; 1992 ; 1992 ; min - Minimally Invasive Neurosurgery Volume 35 ; 35 ; >
+    au < ready ; exists ; 1993 ; 1993 ; min - Minimally Invasive Neurosurgery Volume 36 ; 36 ; >
+    au < ready ; exists ; 1994 ; 1994 ; min - Minimally Invasive Neurosurgery Volume 37 ; 37 ; >
+    au < ready ; exists ; 1995 ; 1995 ; min - Minimally Invasive Neurosurgery Volume 38 ; 38 ; >
+    au < ready ; exists ; 1996 ; 1996 ; min - Minimally Invasive Neurosurgery Volume 39 ; 39 ; >
+    au < ready ; exists ; 1997 ; 1997 ; min - Minimally Invasive Neurosurgery Volume 40 ; 40 ; >
+    au < ready ; exists ; 1998 ; 1998 ; min - Minimally Invasive Neurosurgery Volume 41 ; 41 ; >
+    au < ready ; exists ; 1999 ; 1999 ; min - Minimally Invasive Neurosurgery Volume 42 ; 42 ; >
     au < crawling ; exists ; 2000 ; 2000 ; min - Minimally Invasive Neurosurgery Volume 43 ; 43 ; >
     au < crawling ; exists ; 2001 ; 2001 ; min - Minimally Invasive Neurosurgery Volume 44 ; 44 ; >
     au < crawling ; exists ; 2002 ; 2002 ; min - Minimally Invasive Neurosurgery Volume 45 ; 45 ; >
@@ -3949,16 +3949,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Neuropediatrics Volume 18 ; 18 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Neuropediatrics Volume 19 ; 19 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Neuropediatrics Volume 20 ; 20 ; >
-    au < testing ; exists ; 1990 ; 1990 ; Neuropediatrics Volume 21 ; 21 ; >
-    au < testing ; exists ; 1991 ; 1991 ; Neuropediatrics Volume 22 ; 22 ; >
-    au < testing ; exists ; 1992 ; 1992 ; Neuropediatrics Volume 23 ; 23 ; >
-    au < testing ; exists ; 1993 ; 1993 ; Neuropediatrics Volume 24 ; 24 ; >
-    au < testing ; exists ; 1994 ; 1994 ; Neuropediatrics Volume 25 ; 25 ; >
-    au < testing ; exists ; 1995 ; 1995 ; Neuropediatrics Volume 26 ; 26 ; >
-    au < testing ; exists ; 1996 ; 1996 ; Neuropediatrics Volume 27 ; 27 ; >
-    au < testing ; exists ; 1997 ; 1997 ; Neuropediatrics Volume 28 ; 28 ; >
-    au < testing ; exists ; 1998 ; 1998 ; Neuropediatrics Volume 29 ; 29 ; >
-    au < testing ; exists ; 1999 ; 1999 ; Neuropediatrics Volume 30 ; 30 ; >
+    au < ready ; exists ; 1990 ; 1990 ; Neuropediatrics Volume 21 ; 21 ; >
+    au < ready ; exists ; 1991 ; 1991 ; Neuropediatrics Volume 22 ; 22 ; >
+    au < ready ; exists ; 1992 ; 1992 ; Neuropediatrics Volume 23 ; 23 ; >
+    au < ready ; exists ; 1993 ; 1993 ; Neuropediatrics Volume 24 ; 24 ; >
+    au < ready ; exists ; 1994 ; 1994 ; Neuropediatrics Volume 25 ; 25 ; >
+    au < ready ; exists ; 1995 ; 1995 ; Neuropediatrics Volume 26 ; 26 ; >
+    au < ready ; exists ; 1996 ; 1996 ; Neuropediatrics Volume 27 ; 27 ; >
+    au < ready ; exists ; 1997 ; 1997 ; Neuropediatrics Volume 28 ; 28 ; >
+    au < ready ; exists ; 1998 ; 1998 ; Neuropediatrics Volume 29 ; 29 ; >
+    au < ready ; exists ; 1999 ; 1999 ; Neuropediatrics Volume 30 ; 30 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Neuropediatrics Volume 31 ; 31 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Neuropediatrics Volume 32 ; 32 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Neuropediatrics Volume 33 ; 33 ; >
@@ -4448,15 +4448,15 @@
     au < manifest ; exists ; 1987 ; 1987 ; Pharmacopsychiatry Volume 20 ; 20 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Pharmacopsychiatry Volume 21 ; 21 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Pharmacopsychiatry Volume 22 ; 22 ; >
-    au < testing ; exists ; 1990 ; 1990 ; Pharmacopsychiatry Volume 23 ; 23 ; >
-    au < testing ; exists ; 1991 ; 1991 ; Pharmacopsychiatry Volume 24 ; 24 ; >
-    au < testing ; exists ; 1992 ; 1992 ; Pharmacopsychiatry Volume 25 ; 25 ; >
-    au < testing ; exists ; 1993 ; 1993 ; Pharmacopsychiatry Volume 26 ; 26 ; >
-    au < testing ; exists ; 1994 ; 1994 ; Pharmacopsychiatry Volume 27 ; 27 ; >
-    au < testing ; exists ; 1995 ; 1995 ; Pharmacopsychiatry Volume 28 ; 28 ; >
-    au < testing ; exists ; 1996 ; 1996 ; Pharmacopsychiatry Volume 29 ; 29 ; >
-    au < testing ; exists ; 1997 ; 1997 ; Pharmacopsychiatry Volume 30 ; 30 ; >
-    au < testing ; exists ; 1998 ; 1998 ; Pharmacopsychiatry Volume 31 ; 31 ; >
+    au < ready ; exists ; 1990 ; 1990 ; Pharmacopsychiatry Volume 23 ; 23 ; >
+    au < ready ; exists ; 1991 ; 1991 ; Pharmacopsychiatry Volume 24 ; 24 ; >
+    au < ready ; exists ; 1992 ; 1992 ; Pharmacopsychiatry Volume 25 ; 25 ; >
+    au < ready ; exists ; 1993 ; 1993 ; Pharmacopsychiatry Volume 26 ; 26 ; >
+    au < ready ; exists ; 1994 ; 1994 ; Pharmacopsychiatry Volume 27 ; 27 ; >
+    au < ready ; exists ; 1995 ; 1995 ; Pharmacopsychiatry Volume 28 ; 28 ; >
+    au < ready ; exists ; 1996 ; 1996 ; Pharmacopsychiatry Volume 29 ; 29 ; >
+    au < ready ; exists ; 1997 ; 1997 ; Pharmacopsychiatry Volume 30 ; 30 ; >
+    au < ready ; exists ; 1998 ; 1998 ; Pharmacopsychiatry Volume 31 ; 31 ; >
     au < testing ; exists ; 1999 ; 1999 ; Pharmacopsychiatry Volume 32 ; 32 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Pharmacopsychiatry Volume 33 ; 33 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Pharmacopsychiatry Volume 34 ; 34 ; >
@@ -4701,16 +4701,16 @@
    au < manifest ; exists ; 1987 ; 1987 ; Planta Medica Volume 53 ; 53 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Planta Medica Volume 54 ; 54 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Planta Medica Volume 55 ; 55 ; >
-   au < testing ; exists ; 1990 ; 1990 ; Planta Medica Volume 56 ; 56 ; >
-   au < testing ; exists ; 1991 ; 1991 ; Planta Medica Volume 57 ; 57 ; >
-   au < testing ; exists ; 1992 ; 1992 ; Planta Medica Volume 58 ; 58 ; >
-   au < testing ; exists ; 1993 ; 1993 ; Planta Medica Volume 59 ; 59 ; >
-   au < testing ; exists ; 1994 ; 1994 ; Planta Medica Volume 60 ; 60 ; >
-   au < testing ; exists ; 1995 ; 1995 ; Planta Medica Volume 61 ; 61 ; >
-   au < testing ; exists ; 1996 ; 1996 ; Planta Medica Volume 62 ; 62 ; >
-   au < testing ; exists ; 1997 ; 1997 ; Planta Medica Volume 63 ; 63 ; >
-   au < testing ; exists ; 1998 ; 1998 ; Planta Medica Volume 64 ; 64 ; >
-   au < testing ; exists ; 1999 ; 1999 ; Planta Medica Volume 65 ; 65 ; >
+   au < ready ; exists ; 1990 ; 1990 ; Planta Medica Volume 56 ; 56 ; >
+   au < ready ; exists ; 1991 ; 1991 ; Planta Medica Volume 57 ; 57 ; >
+   au < ready ; exists ; 1992 ; 1992 ; Planta Medica Volume 58 ; 58 ; >
+   au < ready ; exists ; 1993 ; 1993 ; Planta Medica Volume 59 ; 59 ; >
+   au < ready ; exists ; 1994 ; 1994 ; Planta Medica Volume 60 ; 60 ; >
+   au < ready ; exists ; 1995 ; 1995 ; Planta Medica Volume 61 ; 61 ; >
+   au < ready ; exists ; 1996 ; 1996 ; Planta Medica Volume 62 ; 62 ; >
+   au < ready ; exists ; 1997 ; 1997 ; Planta Medica Volume 63 ; 63 ; >
+   au < ready ; exists ; 1998 ; 1998 ; Planta Medica Volume 64 ; 64 ; >
+   au < ready ; exists ; 1999 ; 1999 ; Planta Medica Volume 65 ; 65 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Planta Medica Volume 66 ; 66 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Planta Medica Volume 67 ; 67 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Planta Medica Volume 68 ; 68 ; >
@@ -5211,16 +5211,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 159 ; 159 ; >
     au < manifest ; exists ; 1988 ; 1988 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 160 ; 160 ; >
     au < manifest ; exists ; 1989 ; 1989 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 161 ; 161 ; >
-    au < testing ; exists ; 1990 ; 1990 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 162 ; 162 ; >
-    au < testing ; exists ; 1991 ; 1991 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 163 ; 163 ; >
-    au < testing ; exists ; 1992 ; 1992 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 164 ; 164 ; >
-    au < testing ; exists ; 1993 ; 1993 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 165 ; 165 ; >
-    au < testing ; exists ; 1994 ; 1994 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 166 ; 166 ; >
-    au < testing ; exists ; 1995 ; 1995 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 167 ; 167 ; >
-    au < testing ; exists ; 1996 ; 1996 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 168 ; 168 ; >
-    au < testing ; exists ; 1997 ; 1997 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 169 ; 169 ; >
-    au < testing ; exists ; 1998 ; 1998 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 170 ; 170 ; >
-    au < testing ; exists ; 1999 ; 1999 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 171 ; 171 ; >
+    au < ready ; exists ; 1990 ; 1990 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 162 ; 162 ; >
+    au < ready ; exists ; 1991 ; 1991 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 163 ; 163 ; >
+    au < ready ; exists ; 1992 ; 1992 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 164 ; 164 ; >
+    au < ready ; exists ; 1993 ; 1993 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 165 ; 165 ; >
+    au < ready ; exists ; 1994 ; 1994 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 166 ; 166 ; >
+    au < ready ; exists ; 1995 ; 1995 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 167 ; 167 ; >
+    au < ready ; exists ; 1996 ; 1996 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 168 ; 168 ; >
+    au < ready ; exists ; 1997 ; 1997 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 169 ; 169 ; >
+    au < ready ; exists ; 1998 ; 1998 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 170 ; 170 ; >
+    au < ready ; exists ; 1999 ; 1999 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 171 ; 171 ; >
     au < crawling ; exists ; 2000 ; 2000 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 172 ; 172 ; >
     au < crawling ; exists ; 2001 ; 2001 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 173 ; 173 ; >
     au < crawling ; exists ; 2002 ; 2002 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 174 ; 174 ; >
@@ -5265,16 +5265,16 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Hearing Volume 8 ; 8 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Hearing Volume 9 ; 9 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Hearing Volume 10 ; 10 ; >
-   au < testing ; exists ; 1990 ; 1990 ; Seminars in Hearing Volume 11 ; 11 ; >
-   au < testing ; exists ; 1991 ; 1991 ; Seminars in Hearing Volume 12 ; 12 ; >
-   au < testing ; exists ; 1992 ; 1992 ; Seminars in Hearing Volume 13 ; 13 ; >
-   au < testing ; exists ; 1993 ; 1993 ; Seminars in Hearing Volume 14 ; 14 ; >
-   au < testing ; exists ; 1994 ; 1994 ; Seminars in Hearing Volume 15 ; 15 ; >
-   au < testing ; exists ; 1995 ; 1995 ; Seminars in Hearing Volume 16 ; 16 ; >
-   au < testing ; exists ; 1996 ; 1996 ; Seminars in Hearing Volume 17 ; 17 ; >
-   au < testing ; exists ; 1997 ; 1997 ; Seminars in Hearing Volume 18 ; 18 ; >
-   au < testing ; exists ; 1998 ; 1998 ; Seminars in Hearing Volume 19 ; 19 ; >
-   au < testing ; exists ; 1999 ; 1999 ; Seminars in Hearing Volume 20 ; 20 ; >
+   au < ready ; exists ; 1990 ; 1990 ; Seminars in Hearing Volume 11 ; 11 ; >
+   au < ready ; exists ; 1991 ; 1991 ; Seminars in Hearing Volume 12 ; 12 ; >
+   au < ready ; exists ; 1992 ; 1992 ; Seminars in Hearing Volume 13 ; 13 ; >
+   au < ready ; exists ; 1993 ; 1993 ; Seminars in Hearing Volume 14 ; 14 ; >
+   au < ready ; exists ; 1994 ; 1994 ; Seminars in Hearing Volume 15 ; 15 ; >
+   au < ready ; exists ; 1995 ; 1995 ; Seminars in Hearing Volume 16 ; 16 ; >
+   au < ready ; exists ; 1996 ; 1996 ; Seminars in Hearing Volume 17 ; 17 ; >
+   au < ready ; exists ; 1997 ; 1997 ; Seminars in Hearing Volume 18 ; 18 ; >
+   au < ready ; exists ; 1998 ; 1998 ; Seminars in Hearing Volume 19 ; 19 ; >
+   au < ready ; exists ; 1999 ; 1999 ; Seminars in Hearing Volume 20 ; 20 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Hearing Volume 21 ; 21 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Hearing Volume 22 ; 22 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Hearing Volume 23 ; 23 ; >
@@ -5318,16 +5318,16 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Interventional Radiology Volume 4 ; 4 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Interventional Radiology Volume 5 ; 5 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Interventional Radiology Volume 6 ; 6 ; >
-   au < testing ; exists ; 1990 ; 1990 ; Seminars in Interventional Radiology Volume 7 ; 7 ; >
-   au < testing ; exists ; 1991 ; 1991 ; Seminars in Interventional Radiology Volume 8 ; 8 ; >
-   au < testing ; exists ; 1992 ; 1992 ; Seminars in Interventional Radiology Volume 9 ; 9 ; >
-   au < testing ; exists ; 1993 ; 1993 ; Seminars in Interventional Radiology Volume 10 ; 10 ; >
-   au < testing ; exists ; 1994 ; 1994 ; Seminars in Interventional Radiology Volume 11 ; 11 ; >
-   au < testing ; exists ; 1995 ; 1995 ; Seminars in Interventional Radiology Volume 12 ; 12 ; >
-   au < testing ; exists ; 1996 ; 1996 ; Seminars in Interventional Radiology Volume 13 ; 13 ; >
-   au < testing ; exists ; 1997 ; 1997 ; Seminars in Interventional Radiology Volume 14 ; 14 ; >
-   au < testing ; exists ; 1998 ; 1998 ; Seminars in Interventional Radiology Volume 15 ; 15 ; >
-   au < testing ; exists ; 1999 ; 1999 ; Seminars in Interventional Radiology Volume 16 ; 16 ; >
+   au < ready ; exists ; 1990 ; 1990 ; Seminars in Interventional Radiology Volume 7 ; 7 ; >
+   au < ready ; exists ; 1991 ; 1991 ; Seminars in Interventional Radiology Volume 8 ; 8 ; >
+   au < ready ; exists ; 1992 ; 1992 ; Seminars in Interventional Radiology Volume 9 ; 9 ; >
+   au < ready ; exists ; 1993 ; 1993 ; Seminars in Interventional Radiology Volume 10 ; 10 ; >
+   au < ready ; exists ; 1994 ; 1994 ; Seminars in Interventional Radiology Volume 11 ; 11 ; >
+   au < ready ; exists ; 1995 ; 1995 ; Seminars in Interventional Radiology Volume 12 ; 12 ; >
+   au < ready ; exists ; 1996 ; 1996 ; Seminars in Interventional Radiology Volume 13 ; 13 ; >
+   au < ready ; exists ; 1997 ; 1997 ; Seminars in Interventional Radiology Volume 14 ; 14 ; >
+   au < ready ; exists ; 1998 ; 1998 ; Seminars in Interventional Radiology Volume 15 ; 15 ; >
+   au < ready ; exists ; 1999 ; 1999 ; Seminars in Interventional Radiology Volume 16 ; 16 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Interventional Radiology Volume 17 ; 17 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Interventional Radiology Volume 18 ; 18 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; >
@@ -5374,16 +5374,16 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Liver Disease Volume 7 ; 7 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Liver Disease Volume 8 ; 8 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Liver Disease Volume 9 ; 9 ; >
-   au < testing ; exists ; 1990 ; 1990 ; Seminars in Liver Disease Volume 10 ; 10 ; >
-   au < testing ; exists ; 1991 ; 1991 ; Seminars in Liver Disease Volume 11 ; 11 ; >
-   au < testing ; exists ; 1992 ; 1992 ; Seminars in Liver Disease Volume 12 ; 12 ; >
-   au < testing ; exists ; 1993 ; 1993 ; Seminars in Liver Disease Volume 13 ; 13 ; >
-   au < testing ; exists ; 1994 ; 1994 ; Seminars in Liver Disease Volume 14 ; 14 ; >
-   au < testing ; exists ; 1995 ; 1995 ; Seminars in Liver Disease Volume 15 ; 15 ; >
-   au < testing ; exists ; 1996 ; 1996 ; Seminars in Liver Disease Volume 16 ; 16 ; >
-   au < testing ; exists ; 1997 ; 1997 ; Seminars in Liver Disease Volume 17 ; 17 ; >
-   au < testing ; exists ; 1998 ; 1998 ; Seminars in Liver Disease Volume 18 ; 18 ; >
-   au < testing ; exists ; 1999 ; 1999 ; Seminars in Liver Disease Volume 19 ; 19 ; >
+   au < ready ; exists ; 1990 ; 1990 ; Seminars in Liver Disease Volume 10 ; 10 ; >
+   au < ready ; exists ; 1991 ; 1991 ; Seminars in Liver Disease Volume 11 ; 11 ; >
+   au < ready ; exists ; 1992 ; 1992 ; Seminars in Liver Disease Volume 12 ; 12 ; >
+   au < ready ; exists ; 1993 ; 1993 ; Seminars in Liver Disease Volume 13 ; 13 ; >
+   au < ready ; exists ; 1994 ; 1994 ; Seminars in Liver Disease Volume 14 ; 14 ; >
+   au < ready ; exists ; 1995 ; 1995 ; Seminars in Liver Disease Volume 15 ; 15 ; >
+   au < ready ; exists ; 1996 ; 1996 ; Seminars in Liver Disease Volume 16 ; 16 ; >
+   au < ready ; exists ; 1997 ; 1997 ; Seminars in Liver Disease Volume 17 ; 17 ; >
+   au < ready ; exists ; 1998 ; 1998 ; Seminars in Liver Disease Volume 18 ; 18 ; >
+   au < ready ; exists ; 1999 ; 1999 ; Seminars in Liver Disease Volume 19 ; 19 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Liver Disease Volume 20 ; 20 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Liver Disease Volume 21 ; 21 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Liver Disease Volume 22 ; 22 ; >
@@ -5470,16 +5470,16 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Neurology Volume 7 ; 7 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Neurology Volume 8 ; 8 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Neurology Volume 9 ; 9 ; >
-   au < testing ; exists ; 1990 ; 1990 ; Seminars in Neurology Volume 10 ; 10 ; >
-   au < testing ; exists ; 1991 ; 1991 ; Seminars in Neurology Volume 11 ; 11 ; >
-   au < testing ; exists ; 1992 ; 1992 ; Seminars in Neurology Volume 12 ; 12 ; >
-   au < testing ; exists ; 1993 ; 1993 ; Seminars in Neurology Volume 13 ; 13 ; >
-   au < testing ; exists ; 1994 ; 1994 ; Seminars in Neurology Volume 14 ; 14 ; >
-   au < testing ; exists ; 1995 ; 1995 ; Seminars in Neurology Volume 15 ; 15 ; >
-   au < testing ; exists ; 1996 ; 1996 ; Seminars in Neurology Volume 16 ; 16 ; >
-   au < testing ; exists ; 1997 ; 1997 ; Seminars in Neurology Volume 17 ; 17 ; >
-   au < testing ; exists ; 1998 ; 1998 ; Seminars in Neurology Volume 18 ; 18 ; >
-   au < testing ; exists ; 1999 ; 1999 ; Seminars in Neurology Volume 19 ; 19 ; >
+   au < ready ; exists ; 1990 ; 1990 ; Seminars in Neurology Volume 10 ; 10 ; >
+   au < ready ; exists ; 1991 ; 1991 ; Seminars in Neurology Volume 11 ; 11 ; >
+   au < ready ; exists ; 1992 ; 1992 ; Seminars in Neurology Volume 12 ; 12 ; >
+   au < ready ; exists ; 1993 ; 1993 ; Seminars in Neurology Volume 13 ; 13 ; >
+   au < ready ; exists ; 1994 ; 1994 ; Seminars in Neurology Volume 14 ; 14 ; >
+   au < ready ; exists ; 1995 ; 1995 ; Seminars in Neurology Volume 15 ; 15 ; >
+   au < ready ; exists ; 1996 ; 1996 ; Seminars in Neurology Volume 16 ; 16 ; >
+   au < ready ; exists ; 1997 ; 1997 ; Seminars in Neurology Volume 17 ; 17 ; >
+   au < ready ; exists ; 1998 ; 1998 ; Seminars in Neurology Volume 18 ; 18 ; >
+   au < ready ; exists ; 1999 ; 1999 ; Seminars in Neurology Volume 19 ; 19 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Neurology Volume 20 ; 20 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Neurology Volume 21 ; 21 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Neurology Volume 22 ; 22 ; >
@@ -5689,16 +5689,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Seminars in Speech and Language Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Seminars in Speech and Language Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Seminars in Speech and Language Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Seminars in Speech and Language Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Seminars in Speech and Language Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Seminars in Speech and Language Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Seminars in Speech and Language Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Seminars in Speech and Language Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Seminars in Speech and Language Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Seminars in Speech and Language Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Seminars in Speech and Language Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Seminars in Speech and Language Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Seminars in Speech and Language Volume 20 ; 20 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Seminars in Speech and Language Volume 11 ; 11 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Seminars in Speech and Language Volume 12 ; 12 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Seminars in Speech and Language Volume 13 ; 13 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Seminars in Speech and Language Volume 14 ; 14 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Seminars in Speech and Language Volume 15 ; 15 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Seminars in Speech and Language Volume 16 ; 16 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Seminars in Speech and Language Volume 17 ; 17 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Seminars in Speech and Language Volume 18 ; 18 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Seminars in Speech and Language Volume 19 ; 19 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Seminars in Speech and Language Volume 20 ; 20 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Seminars in Speech and Language Volume 21 ; 21 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Seminars in Speech and Language Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Seminars in Speech and Language Volume 23 ; 23 ; >
@@ -5752,16 +5752,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Seminars in Thrombosis and Hemostasis Volume 13 ; 13 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Seminars in Thrombosis and Hemostasis Volume 14 ; 14 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Seminars in Thrombosis and Hemostasis Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Seminars in Thrombosis and Hemostasis Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Seminars in Thrombosis and Hemostasis Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Seminars in Thrombosis and Hemostasis Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Seminars in Thrombosis and Hemostasis Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Seminars in Thrombosis and Hemostasis Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Seminars in Thrombosis and Hemostasis Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Seminars in Thrombosis and Hemostasis Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Seminars in Thrombosis and Hemostasis Volume 23 ; 23 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Seminars in Thrombosis and Hemostasis Volume 24 ; 24 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Seminars in Thrombosis and Hemostasis Volume 25 ; 25 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Seminars in Thrombosis and Hemostasis Volume 16 ; 16 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Seminars in Thrombosis and Hemostasis Volume 17 ; 17 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Seminars in Thrombosis and Hemostasis Volume 18 ; 18 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Seminars in Thrombosis and Hemostasis Volume 19 ; 19 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Seminars in Thrombosis and Hemostasis Volume 20 ; 20 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Seminars in Thrombosis and Hemostasis Volume 21 ; 21 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Seminars in Thrombosis and Hemostasis Volume 22 ; 22 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Seminars in Thrombosis and Hemostasis Volume 23 ; 23 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Seminars in Thrombosis and Hemostasis Volume 24 ; 24 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Seminars in Thrombosis and Hemostasis Volume 25 ; 25 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Seminars in Thrombosis and Hemostasis Volume 26 ; 26 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Seminars in Thrombosis and Hemostasis Volume 27 ; 27 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Seminars in Thrombosis and Hemostasis Volume 28 ; 28 ; >
@@ -5962,16 +5962,16 @@
    au < manifest ; exists ; 1987 ; 1987 ; Sportverletzung - Sportschaden Volume 1 ; 1 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Sportverletzung - Sportschaden Volume 2 ; 2 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Sportverletzung - Sportschaden Volume 3 ; 3 ; >
-   au < manifest ; exists ; 1990 ; 1990 ; Sportverletzung - Sportschaden Volume 4 ; 4 ; >
-   au < manifest ; exists ; 1991 ; 1991 ; Sportverletzung - Sportschaden Volume 5 ; 5 ; >
-   au < manifest ; exists ; 1992 ; 1992 ; Sportverletzung - Sportschaden Volume 6 ; 6 ; >
-   au < manifest ; exists ; 1993 ; 1993 ; Sportverletzung - Sportschaden Volume 7 ; 7 ; >
-   au < manifest ; exists ; 1994 ; 1994 ; Sportverletzung - Sportschaden Volume 8 ; 8 ; >
-   au < manifest ; exists ; 1995 ; 1995 ; Sportverletzung - Sportschaden Volume 9 ; 9 ; >
-   au < manifest ; exists ; 1996 ; 1996 ; Sportverletzung - Sportschaden Volume 10 ; 10 ; >
-   au < manifest ; exists ; 1997 ; 1997 ; Sportverletzung - Sportschaden Volume 11 ; 11 ; >
-   au < manifest ; exists ; 1998 ; 1998 ; Sportverletzung - Sportschaden Volume 12 ; 12 ; >
-   au < manifest ; exists ; 1999 ; 1999 ; Sportverletzung - Sportschaden Volume 13 ; 13 ; >
+   au < testing ; exists ; 1990 ; 1990 ; Sportverletzung - Sportschaden Volume 4 ; 4 ; >
+   au < testing ; exists ; 1991 ; 1991 ; Sportverletzung - Sportschaden Volume 5 ; 5 ; >
+   au < testing ; exists ; 1992 ; 1992 ; Sportverletzung - Sportschaden Volume 6 ; 6 ; >
+   au < testing ; exists ; 1993 ; 1993 ; Sportverletzung - Sportschaden Volume 7 ; 7 ; >
+   au < testing ; exists ; 1994 ; 1994 ; Sportverletzung - Sportschaden Volume 8 ; 8 ; >
+   au < testing ; exists ; 1995 ; 1995 ; Sportverletzung - Sportschaden Volume 9 ; 9 ; >
+   au < testing ; exists ; 1996 ; 1996 ; Sportverletzung - Sportschaden Volume 10 ; 10 ; >
+   au < testing ; exists ; 1997 ; 1997 ; Sportverletzung - Sportschaden Volume 11 ; 11 ; >
+   au < testing ; exists ; 1998 ; 1998 ; Sportverletzung - Sportschaden Volume 12 ; 12 ; >
+   au < testing ; exists ; 1999 ; 1999 ; Sportverletzung - Sportschaden Volume 13 ; 13 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Sportverletzung - Sportschaden Volume 14 ; 14 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Sportverletzung - Sportschaden Volume 15 ; 15 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Sportverletzung - Sportschaden Volume 16 ; 16 ; >
@@ -6138,16 +6138,16 @@
     comment[years] = 1989-current
 
    au < manifest ; exists ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 ; >
-   au < manifest ; exists ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1 ; >
-   au < manifest ; exists ; 1991 ; 1991 ; SYNLETT Volume 2 ; 2 ; >
-   au < manifest ; exists ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 ; >
-   au < manifest ; exists ; 1993 ; 1993 ; SYNLETT Volume 4 ; 4 ; >
-   au < manifest ; exists ; 1994 ; 1994 ; SYNLETT Volume 5 ; 5 ; >
-   au < manifest ; exists ; 1995 ; 1995 ; SYNLETT Volume 6 ; 6 ; >
-   au < manifest ; exists ; 1996 ; 1996 ; SYNLETT Volume 7 ; 7 ; >
-   au < manifest ; exists ; 1997 ; 1997 ; SYNLETT Volume 8 ; 8 ; >
-   au < manifest ; exists ; 1998 ; 1998 ; SYNLETT Volume 9 ; 9 ; >
-   au < manifest ; exists ; 1999 ; 1999 ; SYNLETT Volume 10 ; 10 ; >
+   au < testing ; exists ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1 ; >
+   au < testing ; exists ; 1991 ; 1991 ; SYNLETT Volume 2 ; 2 ; >
+   au < testing ; exists ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 ; >
+   au < testing ; exists ; 1993 ; 1993 ; SYNLETT Volume 4 ; 4 ; >
+   au < testing ; exists ; 1994 ; 1994 ; SYNLETT Volume 5 ; 5 ; >
+   au < testing ; exists ; 1995 ; 1995 ; SYNLETT Volume 6 ; 6 ; >
+   au < testing ; exists ; 1996 ; 1996 ; SYNLETT Volume 7 ; 7 ; >
+   au < testing ; exists ; 1997 ; 1997 ; SYNLETT Volume 8 ; 8 ; >
+   au < testing ; exists ; 1998 ; 1998 ; SYNLETT Volume 9 ; 9 ; >
+   au < testing ; exists ; 1999 ; 1999 ; SYNLETT Volume 10 ; 10 ; >
    au < crawling ; exists ; 2000 ; 2000 ; SYNLETT Volume 11 ; 11 ; >
    au < crawling ; exists ; 2001 ; 2001 ; SYNLETT Volume 12 ; 12 ; >
    au < crawling ; exists ; 2002 ; 2002 ; SYNLETT Volume 13 ; 13 ; >
@@ -6205,16 +6205,16 @@
     comment[years] = 1989-current
 
    au < manifest ; exists ; 1989 ; 1989 ; SYNTHESIS Volume 21 ; 21 ; >
-   au < manifest ; exists ; 1990 ; 1990 ; SYNTHESIS Volume 22 ; 22 ; >
-   au < manifest ; exists ; 1991 ; 1991 ; SYNTHESIS Volume 23 ; 23 ; >
-   au < manifest ; exists ; 1992 ; 1992 ; SYNTHESIS Volume 24 ; 24 ; >
-   au < manifest ; exists ; 1993 ; 1993 ; SYNTHESIS Volume 25 ; 25 ; >
-   au < manifest ; exists ; 1994 ; 1994 ; SYNTHESIS Volume 26 ; 26 ; >
-   au < manifest ; exists ; 1995 ; 1995 ; SYNTHESIS Volume 27 ; 27 ; >
-   au < manifest ; exists ; 1996 ; 1996 ; SYNTHESIS Volume 28 ; 28 ; >
-   au < manifest ; exists ; 1997 ; 1997 ; SYNTHESIS Volume 29 ; 29 ; >
-   au < manifest ; exists ; 1998 ; 1998 ; SYNTHESIS Volume 30 ; 30 ; >
-   au < manifest ; exists ; 1999 ; 1999 ; SYNTHESIS Volume 31 ; 31 ; >
+   au < testing ; exists ; 1990 ; 1990 ; SYNTHESIS Volume 22 ; 22 ; >
+   au < testing ; exists ; 1991 ; 1991 ; SYNTHESIS Volume 23 ; 23 ; >
+   au < testing ; exists ; 1992 ; 1992 ; SYNTHESIS Volume 24 ; 24 ; >
+   au < testing ; exists ; 1993 ; 1993 ; SYNTHESIS Volume 25 ; 25 ; >
+   au < testing ; exists ; 1994 ; 1994 ; SYNTHESIS Volume 26 ; 26 ; >
+   au < testing ; exists ; 1995 ; 1995 ; SYNTHESIS Volume 27 ; 27 ; >
+   au < testing ; exists ; 1996 ; 1996 ; SYNTHESIS Volume 28 ; 28 ; >
+   au < testing ; exists ; 1997 ; 1997 ; SYNTHESIS Volume 29 ; 29 ; >
+   au < testing ; exists ; 1998 ; 1998 ; SYNTHESIS Volume 30 ; 30 ; >
+   au < testing ; exists ; 1999 ; 1999 ; SYNTHESIS Volume 31 ; 31 ; >
    au < crawling ; exists ; 2000 ; 2000 ; SYNTHESIS Volume 32 ; 32 ; >
    au < crawling ; exists ; 2001 ; 2001 ; SYNTHESIS Volume 33 ; 33 ; >
    au < crawling ; exists ; 2002 ; 2002 ; SYNTHESIS Volume 34 ; 34 ; >
@@ -6312,16 +6312,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; The Thoracic and Cardiovascular Surgeon Volume 35 ; 35 ; >
     au < manifest ; exists ; 1988 ; 1988 ; The Thoracic and Cardiovascular Surgeon Volume 36 ; 36 ; >
     au < manifest ; exists ; 1989 ; 1989 ; The Thoracic and Cardiovascular Surgeon Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; The Thoracic and Cardiovascular Surgeon Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; The Thoracic and Cardiovascular Surgeon Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; The Thoracic and Cardiovascular Surgeon Volume 40 ; 40 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; The Thoracic and Cardiovascular Surgeon Volume 41 ; 41 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; The Thoracic and Cardiovascular Surgeon Volume 42 ; 42 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; The Thoracic and Cardiovascular Surgeon Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; The Thoracic and Cardiovascular Surgeon Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; The Thoracic and Cardiovascular Surgeon Volume 45 ; 45 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; The Thoracic and Cardiovascular Surgeon Volume 46 ; 46 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; The Thoracic and Cardiovascular Surgeon Volume 47 ; 47 ; >
+    au < testing ; exists ; 1990 ; 1990 ; The Thoracic and Cardiovascular Surgeon Volume 38 ; 38 ; >
+    au < testing ; exists ; 1991 ; 1991 ; The Thoracic and Cardiovascular Surgeon Volume 39 ; 39 ; >
+    au < testing ; exists ; 1992 ; 1992 ; The Thoracic and Cardiovascular Surgeon Volume 40 ; 40 ; >
+    au < testing ; exists ; 1993 ; 1993 ; The Thoracic and Cardiovascular Surgeon Volume 41 ; 41 ; >
+    au < testing ; exists ; 1994 ; 1994 ; The Thoracic and Cardiovascular Surgeon Volume 42 ; 42 ; >
+    au < testing ; exists ; 1995 ; 1995 ; The Thoracic and Cardiovascular Surgeon Volume 43 ; 43 ; >
+    au < testing ; exists ; 1996 ; 1996 ; The Thoracic and Cardiovascular Surgeon Volume 44 ; 44 ; >
+    au < testing ; exists ; 1997 ; 1997 ; The Thoracic and Cardiovascular Surgeon Volume 45 ; 45 ; >
+    au < testing ; exists ; 1998 ; 1998 ; The Thoracic and Cardiovascular Surgeon Volume 46 ; 46 ; >
+    au < testing ; exists ; 1999 ; 1999 ; The Thoracic and Cardiovascular Surgeon Volume 47 ; 47 ; >
     au < crawling ; exists ; 2000 ; 2000 ; The Thoracic and Cardiovascular Surgeon Volume 48 ; 48 ; >
     au < crawling ; exists ; 2001 ; 2001 ; The Thoracic and Cardiovascular Surgeon Volume 49 ; 49 ; >
     au < crawling ; exists ; 2002 ; 2002 ; The Thoracic and Cardiovascular Surgeon Volume 50 ; 50 ; >
@@ -6476,16 +6476,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 20 ; 20 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 11 ; 11 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 12 ; 12 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 13 ; 13 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 14 ; 14 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 15 ; 15 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 16 ; 16 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 17 ; 17 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 18 ; 18 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 19 ; 19 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 20 ; 20 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 21 ; 21 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 23 ; 23 ; >
@@ -6850,16 +6850,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Zeitschrift für Klassische Homöopathie Volume 31 ; 31 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Zeitschrift für Klassische Homöopathie Volume 32 ; 32 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Zeitschrift für Klassische Homöopathie Volume 33 ; 33 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Zeitschrift für Klassische Homöopathie Volume 34 ; 34 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Zeitschrift für Klassische Homöopathie Volume 35 ; 35 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Zeitschrift für Klassische Homöopathie Volume 36 ; 36 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Zeitschrift für Klassische Homöopathie Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Zeitschrift für Klassische Homöopathie Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Zeitschrift für Klassische Homöopathie Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Zeitschrift für Klassische Homöopathie Volume 40 ; 40 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Zeitschrift für Klassische Homöopathie Volume 41 ; 41 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Zeitschrift für Klassische Homöopathie Volume 42 ; 42 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Zeitschrift für Klassische Homöopathie Volume 43 ; 43 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Zeitschrift für Klassische Homöopathie Volume 34 ; 34 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Zeitschrift für Klassische Homöopathie Volume 35 ; 35 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Zeitschrift für Klassische Homöopathie Volume 36 ; 36 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Zeitschrift für Klassische Homöopathie Volume 37 ; 37 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Zeitschrift für Klassische Homöopathie Volume 38 ; 38 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Zeitschrift für Klassische Homöopathie Volume 39 ; 39 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Zeitschrift für Klassische Homöopathie Volume 40 ; 40 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Zeitschrift für Klassische Homöopathie Volume 41 ; 41 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Zeitschrift für Klassische Homöopathie Volume 42 ; 42 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Zeitschrift für Klassische Homöopathie Volume 43 ; 43 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Zeitschrift für Klassische Homöopathie Volume 44 ; 44 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Klassische Homöopathie Volume 45 ; 45 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Klassische Homöopathie Volume 46 ; 46 ; >
@@ -6993,16 +6993,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1987 ; 0 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1988 ; 0 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1989 ; 0 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1990 ; 0 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1991 ; 0 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1992 ; 0 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1993 ; 0 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1994 ; 0 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1995 ; 0 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1996 ; 0 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1997 ; 0 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1998 ; 0 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1999 ; 0 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1990 ; 0 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1991 ; 0 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1992 ; 0 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1993 ; 0 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1994 ; 0 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1995 ; 0 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1996 ; 0 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1997 ; 0 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1998 ; 0 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1999 ; 0 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2000 ; 0 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2001 ; 0 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 2002 ; 0 ; >
@@ -8025,18 +8025,18 @@
     au < manifest ; exists ; 1987 ; 1987 ; British Homeopathic Journal Volume 77 ; 77 ; >
     au < manifest ; exists ; 1988 ; 1988 ; British Homeopathic Journal Volume 78 ; 78 ; >
     au < manifest ; exists ; 1989 ; 1989 ; British Homeopathic Journal Volume 79 ; 79 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; British Homeopathic Journal Volume 80 ; 80 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; British Homeopathic Journal Volume 81 ; 81 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; British Homeopathic Journal Volume 82 ; 82 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; British Homeopathic Journal Volume 83 ; 83 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; British Homeopathic Journal Volume 84 ; 84 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; British Homeopathic Journal Volume 85 ; 85 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; British Homeopathic Journal Volume 86 ; 86 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; British Homeopathic Journal Volume 87 ; 87 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; British Homeopathic Journal Volume 88 ; 88 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; >
+    au < testing ; exists ; 1990 ; 1990 ; British Homeopathic Journal Volume 80 ; 80 ; >
+    au < testing ; exists ; 1991 ; 1991 ; British Homeopathic Journal Volume 81 ; 81 ; >
+    au < testing ; exists ; 1992 ; 1992 ; British Homeopathic Journal Volume 82 ; 82 ; >
+    au < testing ; exists ; 1993 ; 1993 ; British Homeopathic Journal Volume 83 ; 83 ; >
+    au < testing ; exists ; 1994 ; 1994 ; British Homeopathic Journal Volume 84 ; 84 ; >
+    au < testing ; exists ; 1995 ; 1995 ; British Homeopathic Journal Volume 85 ; 85 ; >
+    au < testing ; exists ; 1996 ; 1996 ; British Homeopathic Journal Volume 86 ; 86 ; >
+    au < testing ; exists ; 1997 ; 1997 ; British Homeopathic Journal Volume 87 ; 87 ; >
+    au < testing ; exists ; 1998 ; 1998 ; British Homeopathic Journal Volume 88 ; 88 ; >
+    au < testing ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; >
+    au < testing ; exists ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 ; >
+    au < testing ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; >
 
   }
 
