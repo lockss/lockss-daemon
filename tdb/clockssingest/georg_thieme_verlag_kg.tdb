@@ -1369,14 +1369,14 @@
    au < manifest ; exists ; 1989 ; 1989 ; Endoscopy Volume 21 ; 21 ; >
    au < testing ; exists ; 1990 ; 1990 ; Endoscopy Volume 22 ; 22 ; >
    au < crawling ; exists ; 1991 ; 1991 ; Endoscopy Volume 23 ; 23 ; >
-   au < ready ; exists ; 1992 ; 1992 ; Endoscopy Volume 24 ; 24 ; >
+   au < crawling ; exists ; 1992 ; 1992 ; Endoscopy Volume 24 ; 24 ; >
    au < crawling ; exists ; 1993 ; 1993 ; Endoscopy Volume 25 ; 25 ; >
    au < crawling ; exists ; 1994 ; 1994 ; Endoscopy Volume 26 ; 26 ; >
    au < testing ; exists ; 1995 ; 1995 ; Endoscopy Volume 27 ; 27 ; >
    au < crawling ; exists ; 1996 ; 1996 ; Endoscopy Volume 28 ; 28 ; >
    au < crawling ; exists ; 1997 ; 1997 ; Endoscopy Volume 29 ; 29 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Endoscopy Volume 30 ; 30 ; >
-   au < ready ; exists ; 1999 ; 1999 ; Endoscopy Volume 31 ; 31 ; >
+   au < crawling ; exists ; 1999 ; 1999 ; Endoscopy Volume 31 ; 31 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Endoscopy Volume 32 ; 32 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Endoscopy Volume 33 ; 33 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Endoscopy Volume 34 ; 34 ; >
@@ -2295,8 +2295,8 @@
    au < crawling ; exists ; 1990 ; 1990 ; Hormone and Metabolic Research Volume 22 ; 22 ; >
    au < testing ; exists ; 1991 ; 1991 ; Hormone and Metabolic Research Volume 23 ; 23 ; >
    au < crawling ; exists ; 1992 ; 1992 ; Hormone and Metabolic Research Volume 24 ; 24 ; >
-   au < ready ; exists ; 1993 ; 1993 ; Hormone and Metabolic Research Volume 25 ; 25 ; >
-   au < ready ; exists ; 1994 ; 1994 ; Hormone and Metabolic Research Volume 26 ; 26 ; >
+   au < crawling ; exists ; 1993 ; 1993 ; Hormone and Metabolic Research Volume 25 ; 25 ; >
+   au < crawling ; exists ; 1994 ; 1994 ; Hormone and Metabolic Research Volume 26 ; 26 ; >
    au < crawling ; exists ; 1995 ; 1995 ; Hormone and Metabolic Research Volume 27 ; 27 ; >
    au < crawling ; exists ; 1996 ; 1996 ; Hormone and Metabolic Research Volume 28 ; 28 ; >
    au < testing ; exists ; 1997 ; 1997 ; Hormone and Metabolic Research Volume 29 ; 29 ; >
@@ -3509,7 +3509,7 @@
     au < notReady ; exists ; 1996 ; 1996 ; Klinische Neurophysiologie Volume 27 ; 27 ; > #no metadata
     au < notReady ; exists ; 1997 ; 1997 ; Klinische Neurophysiologie Volume 28 ; 28 ; > #no metadata
     au < crawling ; exists ; 1998 ; 1998 ; Klinische Neurophysiologie Volume 29 ; 29 ; >
-    au < ready ; exists ; 1999 ; 1999 ; Klinische Neurophysiologie Volume 30 ; 30 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; Klinische Neurophysiologie Volume 30 ; 30 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Klinische Neurophysiologie Volume 31 ; 31 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Klinische Neurophysiologie Volume 32 ; 32 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Klinische Neurophysiologie Volume 33 ; 33 ; >
