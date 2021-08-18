@@ -830,7 +830,7 @@
     au < manifest ; exists ; 2010 ; Livestock Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2011 ; Livestock Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
     au < manifest ; exists ; 2012 ; Livestock Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
-    au < crawling ; exists ; 2013 ; Livestock Volume 18 (uklv) ; 18 ; https://www.magonlinelibrary.com/ ; >
+    au < frozen ; exists ; 2013 ; Livestock Volume 18 (uklv) ; 18 ; https://www.magonlinelibrary.com/ ; >
     }
     {
     param[journal_id] = live
