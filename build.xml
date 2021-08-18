@@ -3214,7 +3214,7 @@ Test results in ${test.results}
     <!-- Check for existence of gettext program msgfmt -->
     <trycatch>
       <try>
-        <exec executable="msgfmt"
+        <exec executable="xmsgfmt"
 	      outputproperty="gettext.available.output"
 	      failifexecutionfails="true">
           <arg value="-V"/> <!-- Just get version -->
@@ -3230,7 +3230,7 @@ Test results in ${test.results}
 		 classname="org.xnap.commons.ant.gettext.GettextDistTask"/>
 
         <!-- Set a flag if gettext is available -->
-        <property name="gettext.available" value="true"/>
+        <property name="gettext.available" value="false"/>
       </try>
       <catch>
         <echo message="Warning: gettext is not available, continuing without i18n"/>

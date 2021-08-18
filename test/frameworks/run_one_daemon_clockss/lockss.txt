@@ -76,3 +76,12 @@ org.lockss.plugin.restartAusWithNewPlugin=true
 org.lockss.platform.ui.username=lockss-u
 org.lockss.platform.ui.password=SHA1:ac4fc8fa9930a24c8d002d541c37ca993e1bc40f
 
+# V2 Rest Repo
+#org.lockss.v2repo.repo_spec=rest:lockss:http://localhost:24610
+#org.lockss.v2repo.user=lockss-u
+#org.lockss.v2repo.passwd=lockss-p
+org.lockss.v2repo.repo_spec=rest:lockss:http://sul-lockss-clairetg:24610
+org.lockss.v2repo.user=uiuser
+org.lockss.v2repo.passwd=uipass
+org.lockss.debugPanel.copyToV2repoEnabled=true
+

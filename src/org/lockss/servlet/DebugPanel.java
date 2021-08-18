@@ -33,11 +33,9 @@ import java.io.*;
 import java.util.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import org.lockss.repository.RepoSpec;
-import org.lockss.rs.V2RepoAuCopier;
+import org.lockss.laaws.V2AuMover;
 import org.mortbay.html.*;
 import org.lockss.app.*;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.poller.*;
@@ -440,10 +438,10 @@ public class DebugPanel extends LockssServlet {
   private void doCopyToV2repo() throws IOException {
     ArchivalUnit au = getAu();
     if (au == null) return;
-
-    V2RepoAuCopier v2RepoAUCopier = new V2RepoAuCopier();
-    v2RepoAUCopier.moveAu(au);
-
+    //TODO: Going forward we need request user:password at least
+    //TODO: Better error messaging is needed.
+    V2AuMover v2AuMover = new V2AuMover();
+    v2AuMover.moveAu(au);
   }
 
   private boolean startReindexingMetadata(ArchivalUnit au, boolean force) {

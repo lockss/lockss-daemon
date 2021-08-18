@@ -51,6 +51,12 @@ public class TestRepoSpec extends LockssTestCase {
     assertEquals("rest", rs3.getType());
     assertEquals("lockss", rs3.getCollection());
     assertEquals("http://lockss-repository-service:24610", rs3.getUrl());
+
+    RepoSpec rs4 = RepoSpec.fromSpec("rest:lockss:http://sul-lockss-clairetg:24610");
+    log.info("rs4: " + rs4);
+    assertEquals("rest", rs4.getType());
+    assertEquals("lockss", rs4.getCollection());
+    assertEquals("http://sul-lockss-clairetg:24610", rs4.getUrl());
   }
 
   public void testIll() {
