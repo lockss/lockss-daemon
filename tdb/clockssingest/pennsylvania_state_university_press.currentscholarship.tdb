@@ -168,7 +168,7 @@
       au < frozen ; exists ; 2017 ; The F. Scott Fitzgerald Review Volume 15 ; 2017 ; http://www.jstor.org/ ; >
       au < deepCrawl ; exists ; 2018 ; The F. Scott Fitzgerald Review Volume 16 ; 2018 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 2019 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 2020 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -914,8 +914,8 @@
 
       au < frozen ; exists ; 2010 ; Bustan - The Middle East Book Review Volume 1 ; 2010 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2011 ; Bustan - The Middle East Book Review Volume 2 ; 2011 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2012 ; Bustan - The Middle East Book Review Volume 3 ; 2012 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
-      au < crawling ; exists ; 2013 ; Bustan - The Middle East Book Review Volume 4 ; 2013 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
+      au < frozen ; exists ; 2012 ; Bustan - The Middle East Book Review Volume 3 ; 2012 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
+      au < frozen ; exists ; 2013 ; Bustan - The Middle East Book Review Volume 4 ; 2013 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
       au < frozen ; exists ; 2014 ; Bustan - The Middle East Book Review Volume 5 ; 2014 ; https://www.jstor.org/ ; > #see LXQUEUE-1598
       au < frozen ; exists ; 2015 ; Bustan - The Middle East Book Review Volume 6 ; 2015 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2016 ; Bustan - The Middle East Book Review Volume 7 ; 2016 ; https://www.jstor.org/ ; >
@@ -1292,7 +1292,7 @@
       au < frozen ; exists ; 2017 ; Journal for the Study of Paul and His Letters Volume 7 ; 2017 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2018 ; Journal for the Study of Paul and His Letters Volume 8 ; 2018 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2019 ; Journal for the Study of Paul and His Letters Volume 9 ; 2019 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2020 ; Journal for the Study of Paul and His Letters Volume 10 ; 2020 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2020 ; Journal for the Study of Paul and His Letters Volume 10 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Journal for the Study of Paul and His Letters Volume 11 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -2050,10 +2050,10 @@
       au < exists ; exists ; 2013 ; Hiperboreea Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2014 ; Hiperboreea Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2015 ; Hiperboreea Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2016 ; Hiperboreea Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2017 ; Hiperboreea Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2018 ; Hiperboreea Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2019 ; Hiperboreea Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2016 ; Hiperboreea Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2017 ; Hiperboreea Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2018 ; Hiperboreea Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2019 ; Hiperboreea Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2020 ; Hiperboreea Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Hiperboreea Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -2071,10 +2071,10 @@
       param[journal_id] = hungarianstud
 
       au < ready ; exists ; 2016 ; Hungarian Studies Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2017 ; Hungarian Studies Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2018 ; Hungarian Studies Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2017 ; Hungarian Studies Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2018 ; Hungarian Studies Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; >
       au < exists ; exists ; 2019 ; Hungarian Studies Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2020 ; Hungarian Studies Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2020 ; Hungarian Studies Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2021 ; Hungarian Studies Review Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -2095,11 +2095,11 @@
       au < manifest ; exists ; 2007 ; Journal of African Development Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; Journal of African Development Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Journal of African Development Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2010 ; Journal of African Development Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2011 ; Journal of African Development Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2012 ; Journal of African Development Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2013 ; Journal of African Development Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2014 ; Journal of African Development Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2010 ; Journal of African Development Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2011 ; Journal of African Development Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2012 ; Journal of African Development Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2013 ; Journal of African Development Volume 2013 ; 2013 ; https://www.jstor.org/ ; >
+      au < frozen ; exists ; 2014 ; Journal of African Development Volume 2014 ; 2014 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2015 ; Journal of African Development Volume 2015 ; 2015 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2016 ; Journal of African Development Volume 2016 ; 2016 ; https://www.jstor.org/ ; >
       au < ready ; exists ; 2017 ; Journal of African Development Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
