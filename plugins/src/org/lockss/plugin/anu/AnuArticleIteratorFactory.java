@@ -42,6 +42,7 @@ import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
+import org.lockss.plugin.SubTreeArticleIterator.Spec;
 import org.lockss.util.Logger;
 
 public class AnuArticleIteratorFactory
@@ -49,15 +50,43 @@ implements ArticleIteratorFactory,
            ArticleMetadataExtractorFactory {
   
   protected static Logger log = Logger.getLogger(AnuArticleIteratorFactory.class);
-  
+
+  Spec AnuSpec = new Spec();
+
   // relevant files are all hosted on another domain (rather than the base_url)
   // so it is hardcoded for now
   protected static final String ROOT_TEMPLATE = "https://press-files.anu.edu.au/downloads/";
   // pattern can include either the pdf or html aspects
-  protected static final String PATTERN_TEMPLATE = "^https://press-files.anu.edu.au/downloads/press/[^/]+/(pdf|html)/";
+  protected static final String INCLUDE_PATTERN = "^https://press-files.anu.edu.au/downloads/press/[^/]+/(pdf|html)/";
+  // exclude a number of urls,
+  // pdfs that are informational/generic to the journal,
+  // https://press-files.anu.edu.au/downloads/press/p74151/pdf/contributors26.pdf
+  // https://press-files.anu.edu.au/downloads/press/p10321/pdf/2_prelim_hr1_1998.pdf
+  // https://press-files.anu.edu.au/downloads/press/n8684/html/font/AGaramondPro-Bold.otf * and other static files
+  // title pages or separators like this
+  // https://press-files.anu.edu.au/downloads/press/n8444/html/part01.xhtml
+  protected static final String EXCLUDE_PATTERN =
+      "^https://press-files.anu.edu.au/downloads/press/[^/]+"+
+      "/(pdf|html)/"+
+      "(" +
+          "(\\d\\d?_)?" + /* 2_prelim_hr1_1998.pdf ugly, but this is the only way i can think of */
+          "(" + /* match any of these strings that are html and/or pdf pages that are not articles or article like */
+            "authors|author_profiles|bibliography|book|contents|c?over|contributors|" +
+            "images|inside_cover|journal_information|"+
+            "part|prelim(s|inary)?|upfront"+
+          ")" +
+          "(_...?\\d?\\d?_\\d)?" + /* again, ugly, but what else is there? */
+          "\\d?\\d?\\d?" + /* sometimes there is up to 3 digits e.g. part01, contributors26 */
+          "\\.(x?html|pdf)" +
+        "|css|jpg|ttc|otf|png|jpg" +
+      ")$";
 
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "([^/]+)/pdf/([^/.]+)\\.pdf",
+      Pattern.CASE_INSENSITIVE);
+
+  protected static final Pattern HTML_PATTERN = Pattern.compile(
+      "([^/]+)/html/([^/.]+)\\.x?html",
       Pattern.CASE_INSENSITIVE);
 
   private static final String PDF_REPLACEMENT = "$1/pdf/$2.pdf";
@@ -67,15 +96,23 @@ implements ArticleIteratorFactory,
 
   // https://press-files.anu.edu.au/downloads/press/p332783/pdf/chp01.pdf
   // https://press-files.anu.edu.au/downloads/press/n8684/html/03_black.xhtml
-  
+
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-    builder.setSpec(target,
-        ROOT_TEMPLATE,
-        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    AnuSpec.setTarget(target);
+    AnuSpec.setRootTemplate(ROOT_TEMPLATE);
+    //AnuSpec.setPatternTemplate(INCLUDE_PATTERN, Pattern.CASE_INSENSITIVE);
+    AnuSpec.setExcludeSubTreePatternTemplate(EXCLUDE_PATTERN, Pattern.CASE_INSENSITIVE);
+
+    builder.setSpec(AnuSpec);
+
+    //builder.setSpec(
+    //    target,
+    //    ROOT_TEMPLATE,
+    //    INCLUDE_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
     builder.addAspect(
         PDF_PATTERN,
@@ -83,16 +120,18 @@ implements ArticleIteratorFactory,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     builder.addAspect(
+        HTML_PATTERN,
         Arrays.asList(
           XHTML_REPLACEMENT,
           HTML_REPLACEMENT
         ),
         ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
 
     builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_PDF,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     return builder.getSubTreeArticleIterator();
   }

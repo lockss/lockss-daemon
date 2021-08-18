@@ -108,12 +108,29 @@ public class TestAnuArticleIteratorFactory extends ArticleIteratorTestCase {
 
   public void testUrls() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    Pattern pat = getPattern(artIter);
+    Pattern pat = Pattern.compile(AnuArticleIteratorFactory.INCLUDE_PATTERN);
     Pattern pdf = AnuArticleIteratorFactory.PDF_PATTERN;
+    Pattern exclude = Pattern.compile(
+        AnuArticleIteratorFactory.EXCLUDE_PATTERN);
     // make sure the first pass pattern succeeds
+
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/cover.xhtml");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/part01.xhtml");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/part02.xhtml");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/part03.xhtml");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/part04.xhtml");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/upfront.xhtml");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/book.pdf");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/prelims.pdf");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/preliminary.pdf");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/contributors26.pdf");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n1800/pdf/author_profiles.pdf");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p10321/pdf/1_over_hr1_1998.pdf");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p10321/pdf/2_prelim_hr1_1998.pdf");
+    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p10321/pdf/3_contents_hr1_1998.pdf");
+
     assertMatchesRE(pat, "https://press-files.anu.edu.au/downloads/press/n8684/pdf/01_white.pdf");
     assertMatchesRE(pat, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/Notes_documents4.pdf");
-    assertMatchesRE(pat, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/book.pdf");
     assertMatchesRE(pat, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/ch0154.pdf");
     assertMatchesRE(pat, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/ch0748.pdf");
     assertMatchesRE(pat, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/contributors26.pdf");
@@ -123,7 +140,6 @@ public class TestAnuArticleIteratorFactory extends ArticleIteratorTestCase {
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/n8684/pdf/book_review_01_allbrook.pdf");
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/ch0651.pdf");
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/ch0748.pdf");
-    assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/contributors26.pdf");
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/preface17.pdf");
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/prelims48.pdf");
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/reviews.pdf");
