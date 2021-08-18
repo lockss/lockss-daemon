@@ -138,14 +138,11 @@ public class SimulatedUrlFetcher extends BaseUrlFetcher {
   protected InputStream getDefaultStream(File file, String lastModified)
       throws IOException {
     if (lastModified != null) {
-      try {
-        long lastCached = GMT_DATE_PARSER.parse(lastModified).getTime();
-    	  if ((file.lastModified() <= lastCached)) {
-    	    log.debug3("Last-Modified: " + lastModified + " <= " +
-    	          GMT_DATE_FORMATTER.format(file.lastModified()));
-      	  return null;
-      	}
-      } catch (ParseException e) {}
+      if (GMT_DATE_FORMATTER.format(file.lastModified()).equals(lastModified)) {
+        log.debug3("Last-Modified: " + lastModified + " == " +
+                   GMT_DATE_FORMATTER.format(file.lastModified()));
+        return null;
+      }
     }
     return new SimulatedContentStream(new FileInputStream(file), false);
   }
