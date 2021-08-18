@@ -323,7 +323,12 @@
       title <
         name = Ubiquity Press Books
       >
-
+      {
+      #Released in error to the ingest machines.
+      param[base_url] = https://www.ubiquitypress.co #/
+      au < superseded ; exists ; 2019 ; 978-1-911529-72-9 ; Security Sector Reform and Citizen Security (978-1-911529-72-9) [superseded] ; 10.5334/bcc ;  >
+      }
+      {
       param[base_url] = https://www.ubiquitypress.com/
 
       au < manifest ; exists ; 2013 ; 978-1-909188-00-6 ; Conversations with Kenelm (978-1-909188-00-6) ; 10.5334/baa ;  >
@@ -362,7 +367,7 @@
       au < manifest ; exists ; 2018 ; 978-1-911529-44-6 ; Rethinking Community Policing in International Police Reform (978-1-911529-44-6) ; 10.5334/bcb ;  >
       au < manifest ; exists ; 2019 ; 978-1-911529-48-4 ; Pro-ecological Restructuring of Companies (978-1-911529-48-4) ; 10.5334/bbk ;  >
       au < manifest ; exists ; 2019 ; 978-1-911529-52-1 ; Application of Molecular Methods and Raman Microscopy/Spectroscopy in Agricultural Sciences and Food Technology (978-1-911529-52-1) ; 10.5334/bbj ;  >
-      au < crawling ; exists ; 2019 ; 978-1-911529-72-9 ; Security Sector Reform and Citizen Security (978-1-911529-72-9) ; 10.5334/bcc ;  >
+      au < manifest ; exists ; 2019 ; 978-1-911529-72-9 ; Security Sector Reform and Citizen Security (978-1-911529-72-9) ; 10.5334/bcc ;  >
       au < manifest ; exists ; 2019 ; 978-1-911529-76-7 ; Variance in Approach Toward a ‘Sustainable' Coffee Industry in Costa Rica (978-1-911529-76-7) ; 10.5334/bce ;  >
       au < manifest ; exists ; 2019 ; 978-1-911-52980-4 ; Educational visions (978-1-911-52980-4) ; 10.5334/bcg ;  >
       au < manifest ; exists ; 2020 ; 978-1-911529-64-4 ; Sharpening the Haze (978-1-911529-64-4) ; 10.5334/bcd ;  >
@@ -370,6 +375,8 @@
       au < manifest ; exists ; 2020 ; 978-1-911529-88-0 ; Dangerous Science (978-1-911529-88-0) ; 10.5334/bci ;  >
       au < manifest ; exists ; 2020 ; 978-1-911-52984-2 ; Communicating the Past in the Digital Age (978-1-911-52984-2) ; 10.5334/bch ;  >
       au < manifest ; exists ; 2020 ; 978-1-911529-60-6 ; Cultural heritage in the realm of the commons (978-1-911529-60-6) ; 10.5334/bcj ;  >
+
+      }
 
     }
 
