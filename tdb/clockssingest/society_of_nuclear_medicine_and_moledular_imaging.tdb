@@ -16,7 +16,8 @@
 
     title <
       name = Journal of Nuclear Medicine ;
-      eissn = 1544-1717
+      issn = 0161-5505 ;
+      eissn = 2159-662X
     >
     param[base_url] = https://jnm.snmjournals.org/
 
@@ -73,7 +74,8 @@
 
     title <
       name = Journal of Nuclear Medicine Technology;
-      eissn = 1544-1717
+      issn = 0091-4916 ;
+      eissn = 1535-5675
     >
     param[base_url] = https://tech.snmjournals.org/
 
