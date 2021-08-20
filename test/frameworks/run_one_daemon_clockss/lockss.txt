@@ -75,3 +75,13 @@ org.lockss.plugin.restartAusWithNewPlugin=true
 # UI username-passwd = lockss-u/lockss-p
 org.lockss.platform.ui.username=lockss-u
 org.lockss.platform.ui.password=SHA1:ac4fc8fa9930a24c8d002d541c37ca993e1bc40f
+
+# Defaults to run with a runcluster repository and configuration serve
+# This feature is turned off until merge into master
+#org.lockss.debugPanel.copyToV2repoEnabled=false
+#org.lockss.v2.repo.spec=rest:lockss:http://localhost:24610
+#org.lockss.v2.cfg.url=http://localhost:24620
+#org.lockss.v2.user=lockss-u
+#org.lockss.v2.passwd=lockss-p
+#org.lockss.v2.cfg.debug=false
+#org.lockss.v2.repo.debug=false

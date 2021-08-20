@@ -438,10 +438,11 @@ public class DebugPanel extends LockssServlet {
   private void doCopyToV2repo() throws IOException {
     ArchivalUnit au = getAu();
     if (au == null) return;
+    //TODO: We need to decide what conditions need to be enforced before the copy.
     //TODO: Going forward we need request user:password at least
-    //TODO: Better error messaging is needed.
     V2AuMover v2AuMover = new V2AuMover();
     v2AuMover.moveAu(au);
+    //TODO: We need to tell the system not to poll or crawl this AU.
   }
 
   private boolean startReindexingMetadata(ArchivalUnit au, boolean force) {
