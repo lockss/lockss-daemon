@@ -7747,7 +7747,7 @@
       au < finished ; finished ; 2016 ; Muller Journal of Medical Sciences and Research Volume 7 ; 2016 ; 7 ; http://www.mjmsr.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Muller Journal of Medical Sciences and Research Volume 8 ; 2017 ; 8 ; http://www.mjmsr.net/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Muller Journal of Medical Sciences and Research Volume 9 ; 2018 ; 9 ; http://www.mjmsr.net/ ; ; >
-      au < ready ; exists ; 2019 ; Muller Journal of Medical Sciences and Research Volume 10 ; 2019 ; 10 ; https://www.mjmsr.net/ ; ; >
+      au < crawling ; exists ; 2019 ; Muller Journal of Medical Sciences and Research Volume 10 ; 2019 ; 10 ; https://www.mjmsr.net/ ; ; >
       au < finished ; manifest ; 2020 ; Muller Journal of Medical Sciences and Research Volume 11 ; 2020 ; 11 ; https://www.mjmsr.net/ ; ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2021 ; Muller Journal of Medical Sciences and Research Volume 12 ; 2021 ; 12 ; https://www.mjmsr.net/ ; ; >
 
@@ -7772,7 +7772,7 @@
       au < deepCrawl ; exists ; 2016 ; Neural Regeneration Research Volume 11 ; 2016 ; 11 ; http://www.nrronline.org/ ; ; >
       au < finished ; manifest ; 2017 ; Neural Regeneration Research Volume 12 ; 2017 ; 12 ; http://www.nrronline.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Neural Regeneration Research Volume 13 ; 2018 ; 13 ; http://www.nrronline.org/ ; ; >
-      au < ready ; exists ; 2019 ; Neural Regeneration Research Volume 14 ; 2019 ; 14 ; https://www.nrronline.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Neural Regeneration Research Volume 14 ; 2019 ; 14 ; https://www.nrronline.org/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Neural Regeneration Research Volume 15 ; 2020 ; 15 ; https://www.nrronline.org/ ; ; >
       au < crawling ; exists ; 2021 ; Neural Regeneration Research Volume 16 ; 2021 ; 16 ; https://www.nrronline.org/ ; ; >
 
@@ -8048,7 +8048,7 @@
       au < finished ; finished ; 2016 ; Pigment International Volume 3 ; 2016 ; 3 ; http://www.pigmentinternational.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Pigment International Volume 4 ; 2017 ; 4 ; http://www.pigmentinternational.com/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Pigment International Volume 5 ; 2018 ; 5 ; http://www.pigmentinternational.com/ ; ; >
-      au < ready ; exists ; 2019 ; Pigment International Volume 6 ; 2019 ; 6 ; https://www.pigmentinternational.com/ ; ; >
+      au < crawling ; exists ; 2019 ; Pigment International Volume 6 ; 2019 ; 6 ; https://www.pigmentinternational.com/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Pigment International Volume 7 ; 2020 ; 7 ; https://www.pigmentinternational.com/ ; ; >
       au < crawling ; exists ; 2021 ; Pigment International Volume 8 ; 2021 ; 8 ; https://www.pigmentinternational.com/ ; ; >
 
@@ -8308,7 +8308,7 @@
       au < finished ; finished ; 2016 ; Saudi Surgical Journal Volume 4 ; 2016 ; 4 ; http://www.saudisurgj.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Saudi Surgical Journal Volume 5 ; 2017 ; 5 ; http://www.saudisurgj.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Saudi Surgical Journal Volume 6 ; 2018 ; 6 ; http://www.saudisurgj.org/ ; ; >
-      au < ready ; exists ; 2019 ; Saudi Surgical Journal Volume 7 ; 2019 ; 7 ; https://www.saudisurgj.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Saudi Surgical Journal Volume 7 ; 2019 ; 7 ; https://www.saudisurgj.org/ ; ; >
       au < frozen ; exists ; 2020 ; Saudi Surgical Journal Volume 8 ; 2020 ; 8 ; https://www.saudisurgj.org/ ; ; >
       au < expected ; exists ; 2021 ; Saudi Surgical Journal Volume 9 ; 2021 ; 9 ; https://www.saudisurgj.org/ ; ; >
 
@@ -8396,7 +8396,7 @@
       au < finished ; finished ; 2016 ; Sudanese Journal of Ophthalmology Volume 8 ; 2016 ; 8 ; http://www.sjopthal.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Sudanese Journal of Ophthalmology Volume 9 ; 2017 ; 9 ; http://www.sjopthal.net/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Sudanese Journal of Ophthalmology Volume 10 ; 2018 ; 10 ; http://www.sjopthal.net/ ; ; >
-      au < ready ; exists ; 2019 ; Sudanese Journal of Ophthalmology Volume 11 ; 2019 ; 11 ; https://www.sjopthal.net/ ; ; >
+      au < crawling ; exists ; 2019 ; Sudanese Journal of Ophthalmology Volume 11 ; 2019 ; 11 ; https://www.sjopthal.net/ ; ; >
       au < finished ; manifest ; 2020 ; Sudanese Journal of Ophthalmology Volume 12 ; 2020 ; 12 ; https://www.sjopthal.net/ ; ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2021 ; Sudanese Journal of Ophthalmology Volume 13 ; 2021 ; 13 ; https://www.sjopthal.net/ ; ; >
 
@@ -10496,7 +10496,7 @@
 
       au < manifest ; exists ; 2017 ; Libyan Journal of Medical Sciences Volume 1 ; 2017 ; 1 ; https://www.ljmsonline.com/ ; ; >
       au < manifest ; exists ; 2018 ; Libyan Journal of Medical Sciences Volume 2 ; 2018 ; 2 ; https://www.ljmsonline.com/ ; ; >
-      au < ready ; exists ; 2019 ; Libyan Journal of Medical Sciences Volume 3 ; 2019 ; 3 ; https://www.ljmsonline.com/ ; ; >
+      au < crawling ; exists ; 2019 ; Libyan Journal of Medical Sciences Volume 3 ; 2019 ; 3 ; https://www.ljmsonline.com/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Libyan Journal of Medical Sciences Volume 4 ; 2020 ; 4 ; https://www.ljmsonline.com/ ; ; >
       au < crawling ; exists ; 2021 ; Libyan Journal of Medical Sciences Volume 5 ; 2021 ; 5 ; https://www.ljmsonline.com/ ; ; >
 
@@ -10592,7 +10592,7 @@
 #      param[base_url] = http://www.njotonline.org/
 
       au < manifest ; exists ; 2018 ; Nigerian Journal of Orthopaedics and Trauma Volume 17 ; 2018 ; 17 ; https://www.njotonline.org/ ; ; >
-      au < ready ; exists ; 2019 ; Nigerian Journal of Orthopaedics and Trauma Volume 18 ; 2019 ; 18 ; https://www.njotonline.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Nigerian Journal of Orthopaedics and Trauma Volume 18 ; 2019 ; 18 ; https://www.njotonline.org/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Nigerian Journal of Orthopaedics and Trauma Volume 19 ; 2020 ; 19 ; https://www.njotonline.org/ ; ; >
       au < crawling ; exists ; 2021 ; Nigerian Journal of Orthopaedics and Trauma Volume 20 ; 2021 ; 20 ; https://www.njotonline.org/ ; ; >
 
@@ -10632,7 +10632,7 @@
 
       au < manifest ; exists ; 2017 ; Oncology Journal of India Volume 1 ; 2017 ; 1 ; https://www.ojionline.org/ ; ; >
       au < manifest ; exists ; 2018 ; Oncology Journal of India Volume 2 ; 2018 ; 2 ; https://www.ojionline.org/ ; ; >
-      au < ready ; exists ; 2019 ; Oncology Journal of India Volume 3 ; 2019 ; 3 ; https://www.ojionline.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Oncology Journal of India Volume 3 ; 2019 ; 3 ; https://www.ojionline.org/ ; ; >
       au < frozen ; exists ; 2020 ; Oncology Journal of India Volume 4 ; 2020 ; 4 ; https://www.ojionline.org/ ; ; >
       au < crawling ; exists ; 2021 ; Oncology Journal of India Volume 5 ; 2021 ; 5 ; https://www.ojionline.org/ ; ; >
 
