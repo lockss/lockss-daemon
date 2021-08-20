@@ -2143,7 +2143,7 @@
     au < manifest ; exists ; 2009 ; Drugs and Alcohol Today Volume 9 ; 9 ; >
     au < frozen ; exists ; 2010 ; Drugs and Alcohol Today Volume 10 ; 10 ; >
     au < manifest ; exists ; 2011 ; Drugs and Alcohol Today Volume 11 ; 11 ; >
-    au < ready ; exists ; 2012 ; Drugs and Alcohol Today Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2012 ; Drugs and Alcohol Today Volume 12 ; 12 ; >
     au < frozen ; exists ; 2013 ; Drugs and Alcohol Today Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Drugs and Alcohol Today Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Drugs and Alcohol Today Volume 15 ; 15 ; >
@@ -2294,7 +2294,7 @@
     au < manifest ; exists ; 2009 ; The Electronic Library Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; The Electronic Library Volume 28 ; 28 ; >
     au < manifest ; exists ; 2011 ; The Electronic Library Volume 29 ; 29 ; >
-    au < ready ; exists ; 2012 ; The Electronic Library Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2012 ; The Electronic Library Volume 30 ; 30 ; >
     au < frozen ; exists ; 2013 ; The Electronic Library Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The Electronic Library Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Electronic Library Volume 33 ; 33 ; >
@@ -4686,7 +4686,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 ; >
     au < manifest ; exists ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; International Journal of Law in the Built Environment Volume 3 ; 3 ; >
-    au < ready ; exists ; 2012 ; International Journal of Law in the Built Environment Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Law in the Built Environment Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; International Journal of Law in the Built Environment Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Law in the Built Environment Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Law in the Built Environment Volume 7 ; 7 ; >
@@ -4849,7 +4849,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 ; >
     au < manifest ; exists ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 ; >
     au < manifest ; exists ; 2011 ; International Journal of Managerial Finance Volume 7 ; 7 ; >
-    au < ready ; exists ; 2012 ; International Journal of Managerial Finance Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Managerial Finance Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; International Journal of Managerial Finance Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Managerial Finance Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Managerial Finance Volume 11 ; 11 ; >
@@ -5143,7 +5143,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Organizational Analysis Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Organizational Analysis Volume 18 ; 18 ; >
     au < manifest ; exists ; 2011 ; International Journal of Organizational Analysis Volume 19 ; 19 ; >
-    au < ready ; exists ; 2012 ; International Journal of Organizational Analysis Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Organizational Analysis Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; International Journal of Organizational Analysis Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Organizational Analysis Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Organizational Analysis Volume 23 ; 23 ; >
@@ -5462,7 +5462,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Quality & Reliability Management Volume 26 ; 26 ; >
     au < manifest ; exists ; 2010 ; International Journal of Quality & Reliability Management Volume 27 ; 27 ; >
     au < manifest ; exists ; 2011 ; International Journal of Quality & Reliability Management Volume 28 ; 28 ; >
-    au < ready ; exists ; 2012 ; International Journal of Quality & Reliability Management Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Quality & Reliability Management Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013 ; International Journal of Quality & Reliability Management Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Quality & Reliability Management Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Quality & Reliability Management Volume 32 ; 32 ; >
@@ -5553,7 +5553,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Retail & Distribution Management Volume 37 ; 37 ; >
     au < manifest ; exists ; 2010 ; International Journal of Retail & Distribution Management Volume 38 ; 38 ; >
     au < manifest ; exists ; 2011 ; International Journal of Retail & Distribution Management Volume 39 ; 39 ; >
-    au < ready ; exists ; 2012 ; International Journal of Retail & Distribution Management Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Retail & Distribution Management Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; International Journal of Retail & Distribution Management Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Retail & Distribution Management Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Retail & Distribution Management Volume 43 ; 43 ; >
@@ -6171,7 +6171,7 @@
     comment[journal_id] = jadee
 
     au < manifest ; exists ; 2011 ; Journal of Agribusiness in Developing and Emerging Economies Volume 1 ; 1 ; >
-    au < ready ; exists ; 2012 ; Journal of Agribusiness in Developing and Emerging Economies Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2012 ; Journal of Agribusiness in Developing and Emerging Economies Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; Journal of Agribusiness in Developing and Emerging Economies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Agribusiness in Developing and Emerging Economies Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Agribusiness in Developing and Emerging Economies Volume 5 ; 5 ; >
@@ -6639,7 +6639,7 @@
     au < manifest ; exists ; 2009 ; Journal of Corporate Real Estate Volume 11 ; 11 ; >
     au < manifest ; exists ; 2010 ; Journal of Corporate Real Estate Volume 12 ; 12 ; >
     au < manifest ; exists ; 2011 ; Journal of Corporate Real Estate Volume 13 ; 13 ; >
-    au < ready ; exists ; 2012 ; Journal of Corporate Real Estate Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2012 ; Journal of Corporate Real Estate Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Journal of Corporate Real Estate Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Corporate Real Estate Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Corporate Real Estate Volume 17 ; 17 ; >
@@ -7010,7 +7010,7 @@
     au < manifest ; exists ; 2009 ; Journal of Enterprise Information Management Volume 22 ; 22 ; >
     au < manifest ; exists ; 2010 ; Journal of Enterprise Information Management Volume 23 ; 23 ; >
     au < manifest ; exists ; 2011 ; Journal of Enterprise Information Management Volume 24 ; 24 ; >
-    au < ready ; exists ; 2012 ; Journal of Enterprise Information Management Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2012 ; Journal of Enterprise Information Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Enterprise Information Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Enterprise Information Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Enterprise Information Management Volume 28 ; 28 ; >
@@ -7498,7 +7498,7 @@
     au < manifest ; exists ; 2009 ; Journal of Historical Research in Marketing Volume 1 ; 1 ; >
     au < manifest ; exists ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; Journal of Historical Research in Marketing Volume 3 ; 3 ; >
-    au < ready ; exists ; 2012 ; Journal of Historical Research in Marketing Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2012 ; Journal of Historical Research in Marketing Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Historical Research in Marketing Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Historical Research in Marketing Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Historical Research in Marketing Volume 7 ; 7 ; >
@@ -8477,7 +8477,7 @@
     au < manifest ; exists ; 2009 ; Journal of Property Investment & Finance Volume 27 ; 27 ; >
     au < manifest ; exists ; 2010 ; Journal of Property Investment & Finance Volume 28 ; 28 ; >
     au < manifest ; exists ; 2011 ; Journal of Property Investment & Finance Volume 29 ; 29 ; >
-    au < ready ; exists ; 2012 ; Journal of Property Investment & Finance Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2012 ; Journal of Property Investment & Finance Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Property Investment & Finance Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Property Investment & Finance Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Property Investment & Finance Volume 33 ; 33 ; >
@@ -8661,7 +8661,7 @@
     au < manifest ; exists ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 ; >
     au < manifest ; exists ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 ; >
     au < manifest ; exists ; 2011 ; Journal of Research in Marketing and Entrepreneurship Volume 13 ; 13 ; >
-    au < ready ; exists ; 2012 ; Journal of Research in Marketing and Entrepreneurship Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2012 ; Journal of Research in Marketing and Entrepreneurship Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Journal of Research in Marketing and Entrepreneurship Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Research in Marketing and Entrepreneurship Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Research in Marketing and Entrepreneurship Volume 17 ; 17 ; >
@@ -10807,7 +10807,7 @@
     au < manifest ; exists ; 2009 ; Online Information Review Volume 33 ; 33 ; >
     au < manifest ; exists ; 2010 ; Online Information Review Volume 34 ; 34 ; >
     au < manifest ; exists ; 2011 ; Online Information Review Volume 35 ; 35 ; >
-    au < ready ; exists ; 2012 ; Online Information Review Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2012 ; Online Information Review Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Online Information Review Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Online Information Review Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Online Information Review Volume 39 ; 39 ; >
@@ -10897,7 +10897,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Performance Measurement and Metrics Volume 10 ; 10 ; >
     au < manifest ; exists ; 2010 ; Performance Measurement and Metrics Volume 11 ; 11 ; >
     au < manifest ; exists ; 2011 ; Performance Measurement and Metrics Volume 12 ; 12 ; >
-    au < ready ; exists ; 2012 ; Performance Measurement and Metrics Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2012 ; Performance Measurement and Metrics Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Performance Measurement and Metrics Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Performance Measurement and Metrics Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Performance Measurement and Metrics Volume 16 ; 16 ; >
@@ -11801,7 +11801,7 @@
     au < manifest ; exists ; 2008 ; Sensor Review Volume 28 ; 28 ; >
     au < manifest ; exists ; 2009 ; Sensor Review Volume 29 ; 29 ; >
     au < manifest ; exists ; 2010 ; Sensor Review Volume 30 ; 30 ; >
-    au < ready ; exists ; 2011 ; Sensor Review Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2011 ; Sensor Review Volume 31 ; 31 ; >
     au < crawling ; exists ; 2012 ; Sensor Review Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Sensor Review Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Sensor Review Volume 34 ; 34 ; >
@@ -12043,7 +12043,7 @@
     comment[journal_id] = sbm
 
     au < manifest ; exists ; 2011 ; Sport, Business and Management: An International Journal Volume 1 ; 1 ; >
-    au < ready ; exists ; 2012 ; Sport, Business and Management: An International Journal Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2012 ; Sport, Business and Management: An International Journal Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; Sport, Business and Management: An International Journal Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Sport, Business and Management: An International Journal Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Sport, Business and Management: An International Journal Volume 5 ; 5 ; >
@@ -12641,7 +12641,7 @@
     au < manifest ; exists ; 2009 ; The TQM Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2010 ; The TQM Journal Volume 22 ; 22 ; >
     au < manifest ; exists ; 2011 ; The TQM Journal Volume 23 ; 23 ; >
-    au < ready ; exists ; 2012 ; The TQM Journal Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2012 ; The TQM Journal Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; The TQM Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The TQM Journal Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The TQM Journal Volume 27 ; 27 ; >
@@ -13032,7 +13032,7 @@
     au < manifest ; exists ; 2009 ; Worldwide Hospitality and Tourism Themes Volume 1 ; 1 ; >
     au < manifest ; exists ; 2010 ; Worldwide Hospitality and Tourism Themes Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; Worldwide Hospitality and Tourism Themes Volume 3 ; 3 ; >
-    au < ready ; exists ; 2012 ; Worldwide Hospitality and Tourism Themes Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2012 ; Worldwide Hospitality and Tourism Themes Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Worldwide Hospitality and Tourism Themes Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Worldwide Hospitality and Tourism Themes Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Worldwide Hospitality and Tourism Themes Volume 7 ; 7 ; >
