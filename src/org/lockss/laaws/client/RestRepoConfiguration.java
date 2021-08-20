@@ -13,7 +13,7 @@
 package org.lockss.laaws.client;
 
 public class RestRepoConfiguration {
-    private static RestRepoClient defaultApiClient = new RestRepoClient();
+    private static V2RestClient defaultApiClient = new V2RestClient();
 
     /**
      * Get the default API client, which would be used when creating API
@@ -21,7 +21,7 @@ public class RestRepoConfiguration {
      *
      * @return Default API client
      */
-    public static RestRepoClient getDefaultApiClient() {
+    public static V2RestClient getDefaultApiClient() {
         return defaultApiClient;
     }
 
@@ -31,7 +31,7 @@ public class RestRepoConfiguration {
      *
      * @param apiClient API client
      */
-    public static void setDefaultApiClient(RestRepoClient apiClient) {
+    public static void setDefaultApiClient(V2RestClient apiClient) {
         defaultApiClient = apiClient;
     }
 }

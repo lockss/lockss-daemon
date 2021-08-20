@@ -12,1347 +12,1550 @@
 
 package org.lockss.laaws.api.rs;
 
-import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.RestRepoClient;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.ApiResponse;
-import org.lockss.laaws.client.RestRepoConfiguration;
-import org.lockss.laaws.client.Pair;
-import org.lockss.laaws.client.ProgressRequestBody;
-import org.lockss.laaws.client.ProgressResponseBody;
-
 import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import org.lockss.laaws.model.rs.Artifact;
-import org.lockss.laaws.model.rs.ArtifactPageInfo;
-import org.lockss.laaws.model.rs.AuidPageInfo;
 import java.io.File;
-
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.lockss.laaws.client.ApiCallback;
+import org.lockss.laaws.client.ApiException;
+import org.lockss.laaws.client.ApiResponse;
+import org.lockss.laaws.client.Pair;
+import org.lockss.laaws.client.ProgressRequestBody;
+import org.lockss.laaws.client.ProgressResponseBody;
+import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.client.RestRepoConfiguration;
+import org.lockss.laaws.model.rs.Artifact;
+import org.lockss.laaws.model.rs.ArtifactPageInfo;
+import org.lockss.laaws.model.rs.AuidPageInfo;
 
 public class CollectionsApi {
-    private RestRepoClient apiClient;
 
-    public CollectionsApi() {
-        this(RestRepoConfiguration.getDefaultApiClient());
-    }
+  private V2RestClient apiClient;
 
-    public CollectionsApi(RestRepoClient apiClient) {
-        this.apiClient = apiClient;
-    }
+  public CollectionsApi() {
+    this(RestRepoConfiguration.getDefaultApiClient());
+  }
 
-    public RestRepoClient getApiClient() {
-        return apiClient;
-    }
+  public CollectionsApi(V2RestClient apiClient) {
+    this.apiClient = apiClient;
+  }
 
-    public void setApiClient(RestRepoClient apiClient) {
-        this.apiClient = apiClient;
-    }
+  public V2RestClient getApiClient() {
+    return apiClient;
+  }
 
-    /**
-     * Build call for createArtifact
-     * @param auid  (required)
-     * @param uri  (required)
-     * @param collectionDate  (required)
-     * @param artifact  (required)
-     * @param collectionid Collection containing the artifact (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call createArtifactCall(String auid, String uri, Long collectionDate, File artifact, String collectionid, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+  public void setApiClient(V2RestClient apiClient) {
+    this.apiClient = apiClient;
+  }
 
-        // create path and map variables
-        String localVarPath = "/collections/{collectionid}/artifacts"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()));
+  /**
+   * Build call for createArtifact
+   *
+   * @param auid                    (required)
+   * @param uri                     (required)
+   * @param collectionDate          (required)
+   * @param artifact                (required)
+   * @param collectionid            Collection containing the artifact (required)
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call createArtifactCall(String auid, String uri, Long collectionDate,
+    File artifact, String collectionid,
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    // create path and map variables
+    String localVarPath = "/collections/{collectionid}/artifacts"
+      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()));
 
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (auid != null)
-        localVarFormParams.put("auid", auid);
-        if (uri != null)
-        localVarFormParams.put("uri", uri);
-        if (collectionDate != null)
-        localVarFormParams.put("collectionDate", collectionDate);
-        if (artifact != null)
-        localVarFormParams.put("artifact", artifact);
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+      if (auid != null) {
+          localVarFormParams.put("auid", auid);
+      }
+      if (uri != null) {
+          localVarFormParams.put("uri", uri);
+      }
+      if (collectionDate != null) {
+          localVarFormParams.put("collectionDate", collectionDate);
+      }
+      if (artifact != null) {
+          localVarFormParams.put("artifact", artifact);
+      }
 
-        final String[] localVarContentTypes = {
-            "multipart/form-data"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
 
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
+    final String[] localVarContentTypes = {
+      "multipart/form-data"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+      });
     }
 
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call createArtifactValidateBeforeCall(String auid, String uri, Long collectionDate, File artifact, String collectionid, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'auid' is set
-        if (auid == null) {
-            throw new ApiException("Missing the required parameter 'auid' when calling createArtifact(Async)");
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "POST", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call createArtifactValidateBeforeCall(String auid, String uri,
+    Long collectionDate, File artifact, String collectionid,
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    // verify the required parameter 'auid' is set
+    if (auid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'auid' when calling createArtifact(Async)");
+    }
+    // verify the required parameter 'uri' is set
+    if (uri == null) {
+      throw new ApiException(
+        "Missing the required parameter 'uri' when calling createArtifact(Async)");
+    }
+    // verify the required parameter 'collectionDate' is set
+    if (collectionDate == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionDate' when calling createArtifact(Async)");
+    }
+    // verify the required parameter 'artifact' is set
+    if (artifact == null) {
+      throw new ApiException(
+        "Missing the required parameter 'artifact' when calling createArtifact(Async)");
+    }
+    // verify the required parameter 'collectionid' is set
+    if (collectionid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionid' when calling createArtifact(Async)");
+    }
+
+    com.squareup.okhttp.Call call = createArtifactCall(auid, uri, collectionDate, artifact,
+      collectionid, progressListener, progressRequestListener);
+    return call;
+  }
+
+  /**
+   * Create an artifact
+   *
+   * @param auid           (required)
+   * @param uri            (required)
+   * @param collectionDate (required)
+   * @param artifact       (required)
+   * @param collectionid   Collection containing the artifact (required)
+   * @return Artifact
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public Artifact createArtifact(String auid, String uri, Long collectionDate, File artifact,
+    String collectionid) throws ApiException {
+    ApiResponse<Artifact> resp = createArtifactWithHttpInfo(auid, uri, collectionDate, artifact,
+      collectionid);
+    return resp.getData();
+  }
+
+  /**
+   * Create an artifact
+   *
+   * @param auid           (required)
+   * @param uri            (required)
+   * @param collectionDate (required)
+   * @param artifact       (required)
+   * @param collectionid   Collection containing the artifact (required)
+   * @return ApiResponse&lt;Artifact&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<Artifact> createArtifactWithHttpInfo(String auid, String uri,
+    Long collectionDate, File artifact, String collectionid) throws ApiException {
+    com.squareup.okhttp.Call call = createArtifactValidateBeforeCall(auid, uri, collectionDate,
+      artifact, collectionid, null, null);
+    Type localVarReturnType = new TypeToken<Artifact>() {
+    }.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * Create an artifact (asynchronously)
+   *
+   * @param auid           (required)
+   * @param uri            (required)
+   * @param collectionDate (required)
+   * @param artifact       (required)
+   * @param collectionid   Collection containing the artifact (required)
+   * @param callback       The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call createArtifactAsync(String auid, String uri, Long collectionDate,
+    File artifact, String collectionid, final ApiCallback<Artifact> callback) throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
-        // verify the required parameter 'uri' is set
-        if (uri == null) {
-            throw new ApiException("Missing the required parameter 'uri' when calling createArtifact(Async)");
+      };
+
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-        // verify the required parameter 'collectionDate' is set
-        if (collectionDate == null) {
-            throw new ApiException("Missing the required parameter 'collectionDate' when calling createArtifact(Async)");
+      };
+    }
+
+    com.squareup.okhttp.Call call = createArtifactValidateBeforeCall(auid, uri, collectionDate,
+      artifact, collectionid, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<Artifact>() {
+    }.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+
+  /**
+   * Build call for deleteArtifact
+   *
+   * @param collectionid            Collection containing the artifact (required)
+   * @param artifactid              Identifier of the artifact (required)
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call deleteArtifactCall(String collectionid, String artifactid,
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
+
+    // create path and map variables
+    String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
+      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid.toString()));
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {
+
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
+
+    final String[] localVarContentTypes = {
+
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-        // verify the required parameter 'artifact' is set
-        if (artifact == null) {
-            throw new ApiException("Missing the required parameter 'artifact' when calling createArtifact(Async)");
+      });
+    }
+
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call deleteArtifactValidateBeforeCall(String collectionid,
+    String artifactid, final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    // verify the required parameter 'collectionid' is set
+    if (collectionid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionid' when calling deleteArtifact(Async)");
+    }
+    // verify the required parameter 'artifactid' is set
+    if (artifactid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'artifactid' when calling deleteArtifact(Async)");
+    }
+
+    com.squareup.okhttp.Call call = deleteArtifactCall(collectionid, artifactid, progressListener,
+      progressRequestListener);
+    return call;
+
+
+  }
+
+  /**
+   * Remove an artifact from the repository
+   *
+   * @param collectionid Collection containing the artifact (required)
+   * @param artifactid   Identifier of the artifact (required)
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public void deleteArtifact(String collectionid, String artifactid) throws ApiException {
+    deleteArtifactWithHttpInfo(collectionid, artifactid);
+  }
+
+  /**
+   * Remove an artifact from the repository
+   *
+   * @param collectionid Collection containing the artifact (required)
+   * @param artifactid   Identifier of the artifact (required)
+   * @return ApiResponse&lt;Void&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<Void> deleteArtifactWithHttpInfo(String collectionid, String artifactid)
+    throws ApiException {
+    com.squareup.okhttp.Call call = deleteArtifactValidateBeforeCall(collectionid, artifactid, null,
+      null);
+    return apiClient.execute(call);
+  }
+
+  /**
+   * Remove an artifact from the repository (asynchronously)
+   *
+   * @param collectionid Collection containing the artifact (required)
+   * @param artifactid   Identifier of the artifact (required)
+   * @param callback     The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call deleteArtifactAsync(String collectionid, String artifactid,
+    final ApiCallback<Void> callback) throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
-        // verify the required parameter 'collectionid' is set
-        if (collectionid == null) {
-            throw new ApiException("Missing the required parameter 'collectionid' when calling createArtifact(Async)");
+      };
+
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-
-        com.squareup.okhttp.Call call = createArtifactCall(auid, uri, collectionDate, artifact, collectionid, progressListener, progressRequestListener);
-        return call;
+      };
     }
 
-    /**
-     * Create an artifact
-     *
-     * @param auid  (required)
-     * @param uri  (required)
-     * @param collectionDate  (required)
-     * @param artifact  (required)
-     * @param collectionid Collection containing the artifact (required)
-     * @return Artifact
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public Artifact createArtifact(String auid, String uri, Long collectionDate, File artifact, String collectionid) throws ApiException {
-        ApiResponse<Artifact> resp = createArtifactWithHttpInfo(auid, uri, collectionDate, artifact, collectionid);
-        return resp.getData();
-    }
+    com.squareup.okhttp.Call call = deleteArtifactValidateBeforeCall(collectionid, artifactid,
+      progressListener, progressRequestListener);
+    apiClient.executeAsync(call, callback);
+    return call;
+  }
 
-    /**
-     * Create an artifact
-     *
-     * @param auid  (required)
-     * @param uri  (required)
-     * @param collectionDate  (required)
-     * @param artifact  (required)
-     * @param collectionid Collection containing the artifact (required)
-     * @return ApiResponse&lt;Artifact&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Artifact> createArtifactWithHttpInfo(String auid, String uri, Long collectionDate, File artifact, String collectionid) throws ApiException {
-        com.squareup.okhttp.Call call = createArtifactValidateBeforeCall(auid, uri, collectionDate, artifact, collectionid, null, null);
-        Type localVarReturnType = new TypeToken<Artifact>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
+  /**
+   * Build call for getArtifact
+   *
+   * @param collectionid            Collection containing the artifact (required)
+   * @param artifactid              Identifier of the artifact (required)
+   * @param includeContent          Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call getArtifactCall(String collectionid, String artifactid,
+    String includeContent, final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
 
-    /**
-     * Create an artifact (asynchronously)
-     *
-     * @param auid  (required)
-     * @param uri  (required)
-     * @param collectionDate  (required)
-     * @param artifact  (required)
-     * @param collectionid Collection containing the artifact (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call createArtifactAsync(String auid, String uri, Long collectionDate, File artifact, String collectionid, final ApiCallback<Artifact> callback) throws ApiException {
+    // create path and map variables
+    String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
+      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid.toString()));
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+      if (includeContent != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("includeContent", includeContent));
+      }
 
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {
+      "multipart/form-data"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
+
+    final String[] localVarContentTypes = {
+
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-
-        com.squareup.okhttp.Call call = createArtifactValidateBeforeCall(auid, uri, collectionDate, artifact, collectionid, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Artifact>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+      });
     }
 
-    /**
-     * Build call for deleteArtifact
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call deleteArtifactCall(String collectionid, String artifactid, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
 
-        // create path and map variables
-        String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
-            .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid.toString()));
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call getArtifactValidateBeforeCall(String collectionid,
+    String artifactid, String includeContent,
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    // verify the required parameter 'collectionid' is set
+    if (collectionid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionid' when calling getArtifact(Async)");
+    }
+    // verify the required parameter 'artifactid' is set
+    if (artifactid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'artifactid' when calling getArtifact(Async)");
+    }
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    com.squareup.okhttp.Call call = getArtifactCall(collectionid, artifactid, includeContent,
+      progressListener, progressRequestListener);
+    return call;
 
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+  }
 
-        final String[] localVarAccepts = {
+  /**
+   * Get artifact content and metadata
+   *
+   * @param collectionid   Collection containing the artifact (required)
+   * @param artifactid     Identifier of the artifact (required)
+   * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
+   * @return File
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public File getArtifact(String collectionid, String artifactid, String includeContent)
+    throws ApiException {
+    ApiResponse<File> resp = getArtifactWithHttpInfo(collectionid, artifactid, includeContent);
+    return resp.getData();
+  }
 
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+  /**
+   * Get artifact content and metadata
+   *
+   * @param collectionid   Collection containing the artifact (required)
+   * @param artifactid     Identifier of the artifact (required)
+   * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
+   * @return ApiResponse&lt;File&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<File> getArtifactWithHttpInfo(String collectionid, String artifactid,
+    String includeContent) throws ApiException {
+    com.squareup.okhttp.Call call = getArtifactValidateBeforeCall(collectionid, artifactid,
+      includeContent, null, null);
+    Type localVarReturnType = new TypeToken<File>() {
+    }.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
 
-        final String[] localVarContentTypes = {
+  /**
+   * Get artifact content and metadata (asynchronously)
+   *
+   * @param collectionid   Collection containing the artifact (required)
+   * @param artifactid     Identifier of the artifact (required)
+   * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
+   * @param callback       The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call getArtifactAsync(String collectionid, String artifactid,
+    String includeContent, final ApiCallback<File> callback) throws ApiException {
 
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
+      };
 
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteArtifactValidateBeforeCall(String collectionid, String artifactid, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'collectionid' is set
-        if (collectionid == null) {
-            throw new ApiException("Missing the required parameter 'collectionid' when calling deleteArtifact(Async)");
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-        // verify the required parameter 'artifactid' is set
-        if (artifactid == null) {
-            throw new ApiException("Missing the required parameter 'artifactid' when calling deleteArtifact(Async)");
+      };
+    }
+
+    com.squareup.okhttp.Call call = getArtifactValidateBeforeCall(collectionid, artifactid,
+      includeContent, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<File>() {
+    }.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+
+  /**
+   * Build call for getArtifacts
+   *
+   * @param collectionid            Identifier of the collection containing the artifacts (required)
+   * @param auid                    Identifier of the Archival Unit containing the artifacts (required)
+   * @param url                     The URL contained by the artifacts (optional)
+   * @param urlPrefix               The prefix to be matched by the artifact URLs (optional)
+   * @param version                 The version of the artifact (optional)
+   * @param includeUncommitted      Indication of whether uncommitted artifacts should be returned (optional)
+   * @param limit                   The requested maximum number of artifacts per response (optional)
+   * @param continuationToken       The continuation token of the next page of artifacts to be returned (optional)
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call getArtifactsCall(String collectionid, String auid, String url,
+    String urlPrefix, String version, Boolean includeUncommitted, Integer limit,
+    String continuationToken, final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
+
+    // create path and map variables
+    String localVarPath = "/collections/{collectionid}/aus/{auid}/artifacts"
+      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid.toString()));
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+      if (url != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("url", url));
+      }
+      if (urlPrefix != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("urlPrefix", urlPrefix));
+      }
+      if (version != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("version", version));
+      }
+      if (includeUncommitted != null) {
+          localVarQueryParams.addAll(
+            apiClient.parameterToPair("includeUncommitted", includeUncommitted));
+      }
+      if (limit != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+      }
+      if (continuationToken != null) {
+          localVarQueryParams.addAll(
+            apiClient.parameterToPair("continuationToken", continuationToken));
+      }
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
+
+    final String[] localVarContentTypes = {
+
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-
-        com.squareup.okhttp.Call call = deleteArtifactCall(collectionid, artifactid, progressListener, progressRequestListener);
-        return call;
-
-
-
-
-
+      });
     }
 
-    /**
-     * Remove an artifact from the repository
-     *
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public void deleteArtifact(String collectionid, String artifactid) throws ApiException {
-        deleteArtifactWithHttpInfo(collectionid, artifactid);
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call getArtifactsValidateBeforeCall(String collectionid, String auid,
+    String url, String urlPrefix, String version, Boolean includeUncommitted, Integer limit,
+    String continuationToken, final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    // verify the required parameter 'collectionid' is set
+    if (collectionid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionid' when calling getArtifacts(Async)");
+    }
+    // verify the required parameter 'auid' is set
+    if (auid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'auid' when calling getArtifacts(Async)");
     }
 
-    /**
-     * Remove an artifact from the repository
-     *
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Void> deleteArtifactWithHttpInfo(String collectionid, String artifactid) throws ApiException {
-        com.squareup.okhttp.Call call = deleteArtifactValidateBeforeCall(collectionid, artifactid, null, null);
-        return apiClient.execute(call);
-    }
+    com.squareup.okhttp.Call call = getArtifactsCall(collectionid, auid, url, urlPrefix, version,
+      includeUncommitted, limit, continuationToken, progressListener, progressRequestListener);
+    return call;
 
-    /**
-     * Remove an artifact from the repository (asynchronously)
-     *
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call deleteArtifactAsync(String collectionid, String artifactid, final ApiCallback<Void> callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+  }
 
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
+  /**
+   * Get artifacts in a collection and Archival Unit
+   * Get a list of all artifacts in a collection and Archival Unit or a pageful of the list defined by the continuation token and size
+   *
+   * @param collectionid       Identifier of the collection containing the artifacts (required)
+   * @param auid               Identifier of the Archival Unit containing the artifacts (required)
+   * @param url                The URL contained by the artifacts (optional)
+   * @param urlPrefix          The prefix to be matched by the artifact URLs (optional)
+   * @param version            The version of the artifact (optional)
+   * @param includeUncommitted Indication of whether uncommitted artifacts should be returned (optional)
+   * @param limit              The requested maximum number of artifacts per response (optional)
+   * @param continuationToken  The continuation token of the next page of artifacts to be returned (optional)
+   * @return ArtifactPageInfo
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ArtifactPageInfo getArtifacts(String collectionid, String auid, String url,
+    String urlPrefix, String version, Boolean includeUncommitted, Integer limit,
+    String continuationToken) throws ApiException {
+    ApiResponse<ArtifactPageInfo> resp = getArtifactsWithHttpInfo(collectionid, auid, url,
+      urlPrefix, version, includeUncommitted, limit, continuationToken);
+    return resp.getData();
+  }
 
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
+  /**
+   * Get artifacts in a collection and Archival Unit
+   * Get a list of all artifacts in a collection and Archival Unit or a pageful of the list defined by the continuation token and size
+   *
+   * @param collectionid       Identifier of the collection containing the artifacts (required)
+   * @param auid               Identifier of the Archival Unit containing the artifacts (required)
+   * @param url                The URL contained by the artifacts (optional)
+   * @param urlPrefix          The prefix to be matched by the artifact URLs (optional)
+   * @param version            The version of the artifact (optional)
+   * @param includeUncommitted Indication of whether uncommitted artifacts should be returned (optional)
+   * @param limit              The requested maximum number of artifacts per response (optional)
+   * @param continuationToken  The continuation token of the next page of artifacts to be returned (optional)
+   * @return ApiResponse&lt;ArtifactPageInfo&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<ArtifactPageInfo> getArtifactsWithHttpInfo(String collectionid, String auid,
+    String url, String urlPrefix, String version, Boolean includeUncommitted, Integer limit,
+    String continuationToken) throws ApiException {
+    com.squareup.okhttp.Call call = getArtifactsValidateBeforeCall(collectionid, auid, url,
+      urlPrefix, version, includeUncommitted, limit, continuationToken, null, null);
+    Type localVarReturnType = new TypeToken<ArtifactPageInfo>() {
+    }.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * Get artifacts in a collection and Archival Unit (asynchronously)
+   * Get a list of all artifacts in a collection and Archival Unit or a pageful of the list defined by the continuation token and size
+   *
+   * @param collectionid       Identifier of the collection containing the artifacts (required)
+   * @param auid               Identifier of the Archival Unit containing the artifacts (required)
+   * @param url                The URL contained by the artifacts (optional)
+   * @param urlPrefix          The prefix to be matched by the artifact URLs (optional)
+   * @param version            The version of the artifact (optional)
+   * @param includeUncommitted Indication of whether uncommitted artifacts should be returned (optional)
+   * @param limit              The requested maximum number of artifacts per response (optional)
+   * @param continuationToken  The continuation token of the next page of artifacts to be returned (optional)
+   * @param callback           The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call getArtifactsAsync(String collectionid, String auid, String url,
+    String urlPrefix, String version, Boolean includeUncommitted, Integer limit,
+    String continuationToken, final ApiCallback<ArtifactPageInfo> callback) throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
+      };
 
-        com.squareup.okhttp.Call call = deleteArtifactValidateBeforeCall(collectionid, artifactid, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
-        return call;
-    }
-    /**
-     * Build call for getArtifact
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getArtifactCall(String collectionid, String artifactid, String includeContent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
-            .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (includeContent != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("includeContent", includeContent));
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "multipart/form-data"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+      };
     }
 
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getArtifactValidateBeforeCall(String collectionid, String artifactid, String includeContent, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'collectionid' is set
-        if (collectionid == null) {
-            throw new ApiException("Missing the required parameter 'collectionid' when calling getArtifact(Async)");
+    com.squareup.okhttp.Call call = getArtifactsValidateBeforeCall(collectionid, auid, url,
+      urlPrefix, version, includeUncommitted, limit, continuationToken, progressListener,
+      progressRequestListener);
+    Type localVarReturnType = new TypeToken<ArtifactPageInfo>() {
+    }.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+
+  /**
+   * Build call for getArtifactsAllVersionsAllAus
+   *
+   * @param collectionid            Identifier of the collection containing the artifacts (required)
+   * @param url                     The URL contained by the artifacts (optional)
+   * @param urlPrefix               The prefix to be matched by the artifact URLs (optional)
+   * @param limit                   The requested maximum number of artifacts per response (optional)
+   * @param continuationToken       The continuation token of the next page of artifacts to be returned (optional)
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call getArtifactsAllVersionsAllAusCall(String collectionid, String url,
+    String urlPrefix, Integer limit, String continuationToken,
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
+
+    // create path and map variables
+    String localVarPath = "/collections/{collectionid}/artifacts"
+      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()));
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+      if (url != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("url", url));
+      }
+      if (urlPrefix != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("urlPrefix", urlPrefix));
+      }
+      if (limit != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+      }
+      if (continuationToken != null) {
+          localVarQueryParams.addAll(
+            apiClient.parameterToPair("continuationToken", continuationToken));
+      }
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
+
+    final String[] localVarContentTypes = {
+
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-        // verify the required parameter 'artifactid' is set
-        if (artifactid == null) {
-            throw new ApiException("Missing the required parameter 'artifactid' when calling getArtifact(Async)");
+      });
+    }
+
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call getArtifactsAllVersionsAllAusValidateBeforeCall(
+    String collectionid, String url, String urlPrefix, Integer limit, String continuationToken,
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    // verify the required parameter 'collectionid' is set
+    if (collectionid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionid' when calling getArtifactsAllVersionsAllAus(Async)");
+    }
+
+    com.squareup.okhttp.Call call = getArtifactsAllVersionsAllAusCall(collectionid, url, urlPrefix,
+      limit, continuationToken, progressListener, progressRequestListener);
+    return call;
+
+
+  }
+
+  /**
+   * This endpoint returns the committed artifacts of all versions of a given URL, from a specified collection.
+   *
+   * @param collectionid      Identifier of the collection containing the artifacts (required)
+   * @param url               The URL contained by the artifacts (optional)
+   * @param urlPrefix         The prefix to be matched by the artifact URLs (optional)
+   * @param limit             The requested maximum number of artifacts per response (optional)
+   * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
+   * @return ArtifactPageInfo
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ArtifactPageInfo getArtifactsAllVersionsAllAus(String collectionid, String url,
+    String urlPrefix, Integer limit, String continuationToken) throws ApiException {
+    ApiResponse<ArtifactPageInfo> resp = getArtifactsAllVersionsAllAusWithHttpInfo(collectionid,
+      url, urlPrefix, limit, continuationToken);
+    return resp.getData();
+  }
+
+  /**
+   * This endpoint returns the committed artifacts of all versions of a given URL, from a specified collection.
+   *
+   * @param collectionid      Identifier of the collection containing the artifacts (required)
+   * @param url               The URL contained by the artifacts (optional)
+   * @param urlPrefix         The prefix to be matched by the artifact URLs (optional)
+   * @param limit             The requested maximum number of artifacts per response (optional)
+   * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
+   * @return ApiResponse&lt;ArtifactPageInfo&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<ArtifactPageInfo> getArtifactsAllVersionsAllAusWithHttpInfo(
+    String collectionid, String url, String urlPrefix, Integer limit, String continuationToken)
+    throws ApiException {
+    com.squareup.okhttp.Call call = getArtifactsAllVersionsAllAusValidateBeforeCall(collectionid,
+      url, urlPrefix, limit, continuationToken, null, null);
+    Type localVarReturnType = new TypeToken<ArtifactPageInfo>() {
+    }.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * This endpoint returns the committed artifacts of all versions of a given URL, from a specified collection. (asynchronously)
+   *
+   * @param collectionid      Identifier of the collection containing the artifacts (required)
+   * @param url               The URL contained by the artifacts (optional)
+   * @param urlPrefix         The prefix to be matched by the artifact URLs (optional)
+   * @param limit             The requested maximum number of artifacts per response (optional)
+   * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
+   * @param callback          The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call getArtifactsAllVersionsAllAusAsync(String collectionid,
+    String url, String urlPrefix, Integer limit, String continuationToken,
+    final ApiCallback<ArtifactPageInfo> callback) throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
+      };
 
-        com.squareup.okhttp.Call call = getArtifactCall(collectionid, artifactid, includeContent, progressListener, progressRequestListener);
-        return call;
-
-
-
-
-
-    }
-
-    /**
-     * Get artifact content and metadata
-     *
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
-     * @return File
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public File getArtifact(String collectionid, String artifactid, String includeContent) throws ApiException {
-        ApiResponse<File> resp = getArtifactWithHttpInfo(collectionid, artifactid, includeContent);
-        return resp.getData();
-    }
-
-    /**
-     * Get artifact content and metadata
-     *
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
-     * @return ApiResponse&lt;File&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<File> getArtifactWithHttpInfo(String collectionid, String artifactid, String includeContent) throws ApiException {
-        com.squareup.okhttp.Call call = getArtifactValidateBeforeCall(collectionid, artifactid, includeContent, null, null);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     * Get artifact content and metadata (asynchronously)
-     *
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @param includeContent Controls whether to include the artifact content part in multipart response (optional, default to ALWAYS)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getArtifactAsync(String collectionid, String artifactid, String includeContent, final ApiCallback<File> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-
-        com.squareup.okhttp.Call call = getArtifactValidateBeforeCall(collectionid, artifactid, includeContent, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+      };
     }
-    /**
-     * Build call for getArtifacts
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param auid Identifier of the Archival Unit containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param version The version of the artifact (optional)
-     * @param includeUncommitted Indication of whether uncommitted artifacts should be returned (optional)
-     * @param limit The requested maximum number of artifacts per response (optional)
-     * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getArtifactsCall(String collectionid, String auid, String url, String urlPrefix, String version, Boolean includeUncommitted, Integer limit, String continuationToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
 
-        // create path and map variables
-        String localVarPath = "/collections/{collectionid}/aus/{auid}/artifacts"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid.toString()));
+    com.squareup.okhttp.Call call = getArtifactsAllVersionsAllAusValidateBeforeCall(collectionid,
+      url, urlPrefix, limit, continuationToken, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<ArtifactPageInfo>() {
+    }.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (url != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("url", url));
-        if (urlPrefix != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("urlPrefix", urlPrefix));
-        if (version != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("version", version));
-        if (includeUncommitted != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("includeUncommitted", includeUncommitted));
-        if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
-        if (continuationToken != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("continuationToken", continuationToken));
+  /**
+   * Build call for getArtifactsSize
+   *
+   * @param collectionid            Identifier of the collection containing the artifacts (required)
+   * @param auid                    Identifier of the Archival Unit containing the artifacts (required)
+   * @param url                     The URL contained by the artifacts (optional)
+   * @param urlPrefix               The prefix to be matched by the artifact URLs (optional)
+   * @param version                 The version of the artifact (optional)
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call getArtifactsSizeCall(String collectionid, String auid, String url,
+    String urlPrefix, String version, final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
 
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    // create path and map variables
+    String localVarPath = "/collections/{collectionid}/aus/{auid}/size"
+      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid.toString()));
 
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+      if (url != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("url", url));
+      }
+      if (urlPrefix != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("urlPrefix", urlPrefix));
+      }
+      if (version != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("version", version));
+      }
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
-        final String[] localVarContentTypes = {
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
 
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
+    final String[] localVarContentTypes = {
+
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+      });
     }
 
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getArtifactsValidateBeforeCall(String collectionid, String auid, String url, String urlPrefix, String version, Boolean includeUncommitted, Integer limit, String continuationToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'collectionid' is set
-        if (collectionid == null) {
-            throw new ApiException("Missing the required parameter 'collectionid' when calling getArtifacts(Async)");
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call getArtifactsSizeValidateBeforeCall(String collectionid,
+    String auid, String url, String urlPrefix, String version,
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    // verify the required parameter 'collectionid' is set
+    if (collectionid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionid' when calling getArtifactsSize(Async)");
+    }
+    // verify the required parameter 'auid' is set
+    if (auid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'auid' when calling getArtifactsSize(Async)");
+    }
+
+    com.squareup.okhttp.Call call = getArtifactsSizeCall(collectionid, auid, url, urlPrefix,
+      version, progressListener, progressRequestListener);
+    return call;
+
+
+  }
+
+  /**
+   * Get the size of Archival Unit artifacts in a collection
+   *
+   * @param collectionid Identifier of the collection containing the artifacts (required)
+   * @param auid         Identifier of the Archival Unit containing the artifacts (required)
+   * @param url          The URL contained by the artifacts (optional)
+   * @param urlPrefix    The prefix to be matched by the artifact URLs (optional)
+   * @param version      The version of the artifact (optional)
+   * @return Long
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public Long getArtifactsSize(String collectionid, String auid, String url, String urlPrefix,
+    String version) throws ApiException {
+    ApiResponse<Long> resp = getArtifactsSizeWithHttpInfo(collectionid, auid, url, urlPrefix,
+      version);
+    return resp.getData();
+  }
+
+  /**
+   * Get the size of Archival Unit artifacts in a collection
+   *
+   * @param collectionid Identifier of the collection containing the artifacts (required)
+   * @param auid         Identifier of the Archival Unit containing the artifacts (required)
+   * @param url          The URL contained by the artifacts (optional)
+   * @param urlPrefix    The prefix to be matched by the artifact URLs (optional)
+   * @param version      The version of the artifact (optional)
+   * @return ApiResponse&lt;Long&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<Long> getArtifactsSizeWithHttpInfo(String collectionid, String auid,
+    String url, String urlPrefix, String version) throws ApiException {
+    com.squareup.okhttp.Call call = getArtifactsSizeValidateBeforeCall(collectionid, auid, url,
+      urlPrefix, version, null, null);
+    Type localVarReturnType = new TypeToken<Long>() {
+    }.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * Get the size of Archival Unit artifacts in a collection (asynchronously)
+   *
+   * @param collectionid Identifier of the collection containing the artifacts (required)
+   * @param auid         Identifier of the Archival Unit containing the artifacts (required)
+   * @param url          The URL contained by the artifacts (optional)
+   * @param urlPrefix    The prefix to be matched by the artifact URLs (optional)
+   * @param version      The version of the artifact (optional)
+   * @param callback     The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call getArtifactsSizeAsync(String collectionid, String auid,
+    String url, String urlPrefix, String version, final ApiCallback<Long> callback)
+    throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
-        // verify the required parameter 'auid' is set
-        if (auid == null) {
-            throw new ApiException("Missing the required parameter 'auid' when calling getArtifacts(Async)");
+      };
+
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-
-        com.squareup.okhttp.Call call = getArtifactsCall(collectionid, auid, url, urlPrefix, version, includeUncommitted, limit, continuationToken, progressListener, progressRequestListener);
-        return call;
-
-
-
-
-
+      };
     }
 
-    /**
-     * Get artifacts in a collection and Archival Unit
-     * Get a list of all artifacts in a collection and Archival Unit or a pageful of the list defined by the continuation token and size
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param auid Identifier of the Archival Unit containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param version The version of the artifact (optional)
-     * @param includeUncommitted Indication of whether uncommitted artifacts should be returned (optional)
-     * @param limit The requested maximum number of artifacts per response (optional)
-     * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
-     * @return ArtifactPageInfo
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ArtifactPageInfo getArtifacts(String collectionid, String auid, String url, String urlPrefix, String version, Boolean includeUncommitted, Integer limit, String continuationToken) throws ApiException {
-        ApiResponse<ArtifactPageInfo> resp = getArtifactsWithHttpInfo(collectionid, auid, url, urlPrefix, version, includeUncommitted, limit, continuationToken);
-        return resp.getData();
-    }
+    com.squareup.okhttp.Call call = getArtifactsSizeValidateBeforeCall(collectionid, auid, url,
+      urlPrefix, version, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<Long>() {
+    }.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
 
-    /**
-     * Get artifacts in a collection and Archival Unit
-     * Get a list of all artifacts in a collection and Archival Unit or a pageful of the list defined by the continuation token and size
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param auid Identifier of the Archival Unit containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param version The version of the artifact (optional)
-     * @param includeUncommitted Indication of whether uncommitted artifacts should be returned (optional)
-     * @param limit The requested maximum number of artifacts per response (optional)
-     * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
-     * @return ApiResponse&lt;ArtifactPageInfo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<ArtifactPageInfo> getArtifactsWithHttpInfo(String collectionid, String auid, String url, String urlPrefix, String version, Boolean includeUncommitted, Integer limit, String continuationToken) throws ApiException {
-        com.squareup.okhttp.Call call = getArtifactsValidateBeforeCall(collectionid, auid, url, urlPrefix, version, includeUncommitted, limit, continuationToken, null, null);
-        Type localVarReturnType = new TypeToken<ArtifactPageInfo>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
+  /**
+   * Build call for getAus
+   *
+   * @param collectionid            Identifier of the collection containing the Archival Units (required)
+   * @param limit                   The requested maximum number of Archival Unit identifiers per response (optional)
+   * @param continuationToken       The continuation token of the next page of Archival Unit identifiers to be returned (optional)
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call getAusCall(String collectionid, Integer limit,
+    String continuationToken, final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
 
-    /**
-     * Get artifacts in a collection and Archival Unit (asynchronously)
-     * Get a list of all artifacts in a collection and Archival Unit or a pageful of the list defined by the continuation token and size
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param auid Identifier of the Archival Unit containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param version The version of the artifact (optional)
-     * @param includeUncommitted Indication of whether uncommitted artifacts should be returned (optional)
-     * @param limit The requested maximum number of artifacts per response (optional)
-     * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getArtifactsAsync(String collectionid, String auid, String url, String urlPrefix, String version, Boolean includeUncommitted, Integer limit, String continuationToken, final ApiCallback<ArtifactPageInfo> callback) throws ApiException {
+    // create path and map variables
+    String localVarPath = "/collections/{collectionid}/aus"
+      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()));
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+      if (limit != null) {
+          localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+      }
+      if (continuationToken != null) {
+          localVarQueryParams.addAll(
+            apiClient.parameterToPair("continuationToken", continuationToken));
+      }
 
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
+
+    final String[] localVarContentTypes = {
+
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-
-        com.squareup.okhttp.Call call = getArtifactsValidateBeforeCall(collectionid, auid, url, urlPrefix, version, includeUncommitted, limit, continuationToken, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<ArtifactPageInfo>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+      });
     }
-    /**
-     * Build call for getArtifactsAllVersionsAllAus
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param limit The requested maximum number of artifacts per response (optional)
-     * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getArtifactsAllVersionsAllAusCall(String collectionid, String url, String urlPrefix, Integer limit, String continuationToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
 
-        // create path and map variables
-        String localVarPath = "/collections/{collectionid}/artifacts"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()));
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (url != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("url", url));
-        if (urlPrefix != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("urlPrefix", urlPrefix));
-        if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
-        if (continuationToken != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("continuationToken", continuationToken));
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call getAusValidateBeforeCall(String collectionid, Integer limit,
+    String continuationToken, final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    // verify the required parameter 'collectionid' is set
+    if (collectionid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionid' when calling getAus(Async)");
+    }
 
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    com.squareup.okhttp.Call call = getAusCall(collectionid, limit, continuationToken,
+      progressListener, progressRequestListener);
+    return call;
 
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+  }
 
-        final String[] localVarContentTypes = {
+  /**
+   * Get Archival Unit IDs (AUIDs) in a collection
+   * Get a list of all Archival Unit identifiers in a collection or a pageful of the list defined by the continuation token and size
+   *
+   * @param collectionid      Identifier of the collection containing the Archival Units (required)
+   * @param limit             The requested maximum number of Archival Unit identifiers per response (optional)
+   * @param continuationToken The continuation token of the next page of Archival Unit identifiers to be returned (optional)
+   * @return AuidPageInfo
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public AuidPageInfo getAus(String collectionid, Integer limit, String continuationToken)
+    throws ApiException {
+    ApiResponse<AuidPageInfo> resp = getAusWithHttpInfo(collectionid, limit, continuationToken);
+    return resp.getData();
+  }
 
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+  /**
+   * Get Archival Unit IDs (AUIDs) in a collection
+   * Get a list of all Archival Unit identifiers in a collection or a pageful of the list defined by the continuation token and size
+   *
+   * @param collectionid      Identifier of the collection containing the Archival Units (required)
+   * @param limit             The requested maximum number of Archival Unit identifiers per response (optional)
+   * @param continuationToken The continuation token of the next page of Archival Unit identifiers to be returned (optional)
+   * @return ApiResponse&lt;AuidPageInfo&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<AuidPageInfo> getAusWithHttpInfo(String collectionid, Integer limit,
+    String continuationToken) throws ApiException {
+    com.squareup.okhttp.Call call = getAusValidateBeforeCall(collectionid, limit, continuationToken,
+      null, null);
+    Type localVarReturnType = new TypeToken<AuidPageInfo>() {
+    }.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
 
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
+  /**
+   * Get Archival Unit IDs (AUIDs) in a collection (asynchronously)
+   * Get a list of all Archival Unit identifiers in a collection or a pageful of the list defined by the continuation token and size
+   *
+   * @param collectionid      Identifier of the collection containing the Archival Units (required)
+   * @param limit             The requested maximum number of Archival Unit identifiers per response (optional)
+   * @param continuationToken The continuation token of the next page of Archival Unit identifiers to be returned (optional)
+   * @param callback          The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call getAusAsync(String collectionid, Integer limit,
+    String continuationToken, final ApiCallback<AuidPageInfo> callback) throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
+      };
 
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getArtifactsAllVersionsAllAusValidateBeforeCall(String collectionid, String url, String urlPrefix, Integer limit, String continuationToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'collectionid' is set
-        if (collectionid == null) {
-            throw new ApiException("Missing the required parameter 'collectionid' when calling getArtifactsAllVersionsAllAus(Async)");
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-
-        com.squareup.okhttp.Call call = getArtifactsAllVersionsAllAusCall(collectionid, url, urlPrefix, limit, continuationToken, progressListener, progressRequestListener);
-        return call;
-
-
-
-
-
+      };
     }
 
-    /**
-     * This endpoint returns the committed artifacts of all versions of a given URL, from a specified collection.
-     *
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param limit The requested maximum number of artifacts per response (optional)
-     * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
-     * @return ArtifactPageInfo
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ArtifactPageInfo getArtifactsAllVersionsAllAus(String collectionid, String url, String urlPrefix, Integer limit, String continuationToken) throws ApiException {
-        ApiResponse<ArtifactPageInfo> resp = getArtifactsAllVersionsAllAusWithHttpInfo(collectionid, url, urlPrefix, limit, continuationToken);
-        return resp.getData();
-    }
+    com.squareup.okhttp.Call call = getAusValidateBeforeCall(collectionid, limit, continuationToken,
+      progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<AuidPageInfo>() {
+    }.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
 
-    /**
-     * This endpoint returns the committed artifacts of all versions of a given URL, from a specified collection.
-     *
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param limit The requested maximum number of artifacts per response (optional)
-     * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
-     * @return ApiResponse&lt;ArtifactPageInfo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<ArtifactPageInfo> getArtifactsAllVersionsAllAusWithHttpInfo(String collectionid, String url, String urlPrefix, Integer limit, String continuationToken) throws ApiException {
-        com.squareup.okhttp.Call call = getArtifactsAllVersionsAllAusValidateBeforeCall(collectionid, url, urlPrefix, limit, continuationToken, null, null);
-        Type localVarReturnType = new TypeToken<ArtifactPageInfo>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
+  /**
+   * Build call for getCollections
+   *
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call getCollectionsCall(
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
 
-    /**
-     * This endpoint returns the committed artifacts of all versions of a given URL, from a specified collection. (asynchronously)
-     *
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param limit The requested maximum number of artifacts per response (optional)
-     * @param continuationToken The continuation token of the next page of artifacts to be returned (optional)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getArtifactsAllVersionsAllAusAsync(String collectionid, String url, String urlPrefix, Integer limit, String continuationToken, final ApiCallback<ArtifactPageInfo> callback) throws ApiException {
+    // create path and map variables
+    String localVarPath = "/collections";
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
 
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
+
+    final String[] localVarContentTypes = {
+
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-
-        com.squareup.okhttp.Call call = getArtifactsAllVersionsAllAusValidateBeforeCall(collectionid, url, urlPrefix, limit, continuationToken, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<ArtifactPageInfo>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
+      });
     }
-    /**
-     * Build call for getArtifactsSize
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param auid Identifier of the Archival Unit containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param version The version of the artifact (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getArtifactsSizeCall(String collectionid, String auid, String url, String urlPrefix, String version, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
 
-        // create path and map variables
-        String localVarPath = "/collections/{collectionid}/aus/{auid}/size"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
-            .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid.toString()));
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
 
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (url != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("url", url));
-        if (urlPrefix != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("urlPrefix", urlPrefix));
-        if (version != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("version", version));
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call getCollectionsValidateBeforeCall(
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
 
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    com.squareup.okhttp.Call call = getCollectionsCall(progressListener, progressRequestListener);
+    return call;
 
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+  }
 
-        final String[] localVarContentTypes = {
+  /**
+   * Get collection identifiers of the committed artifacts in the repository
+   *
+   * @return List&lt;String&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public List<String> getCollections() throws ApiException {
+    ApiResponse<List<String>> resp = getCollectionsWithHttpInfo();
+    return resp.getData();
+  }
 
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+  /**
+   * Get collection identifiers of the committed artifacts in the repository
+   *
+   * @return ApiResponse&lt;List&lt;String&gt;&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<List<String>> getCollectionsWithHttpInfo() throws ApiException {
+    com.squareup.okhttp.Call call = getCollectionsValidateBeforeCall(null, null);
+    Type localVarReturnType = new TypeToken<List<String>>() {
+    }.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
 
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
+  /**
+   * Get collection identifiers of the committed artifacts in the repository (asynchronously)
+   *
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call getCollectionsAsync(final ApiCallback<List<String>> callback)
+    throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
+      };
 
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getArtifactsSizeValidateBeforeCall(String collectionid, String auid, String url, String urlPrefix, String version, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'collectionid' is set
-        if (collectionid == null) {
-            throw new ApiException("Missing the required parameter 'collectionid' when calling getArtifactsSize(Async)");
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-        // verify the required parameter 'auid' is set
-        if (auid == null) {
-            throw new ApiException("Missing the required parameter 'auid' when calling getArtifactsSize(Async)");
+      };
+    }
+
+    com.squareup.okhttp.Call call = getCollectionsValidateBeforeCall(progressListener,
+      progressRequestListener);
+    Type localVarReturnType = new TypeToken<List<String>>() {
+    }.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+
+  /**
+   * Build call for updateArtifact
+   *
+   * @param committed               (required)
+   * @param collectionid            Collection containing the artifact (required)
+   * @param artifactid              Identifier of the artifact (required)
+   * @param progressListener        Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call updateArtifactCall(Boolean committed, String collectionid,
+    String artifactid, final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    Object localVarPostBody = null;
+
+    // create path and map variables
+    String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
+      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid.toString()));
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    if (committed != null) {
+      //localVarFormParams.put("committed", committed);
+      localVarQueryParams.addAll(apiClient.parameterToPair("committed", committed));
+    }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+      if (localVarAccept != null) {
+          localVarHeaderParams.put("Accept", localVarAccept);
+      }
+
+    final String[] localVarContentTypes = {
+      "multipart/form-data"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+        @Override
+        public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain)
+          throws IOException {
+          com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+          return originalResponse.newBuilder()
+            .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+            .build();
         }
-
-        com.squareup.okhttp.Call call = getArtifactsSizeCall(collectionid, auid, url, urlPrefix, version, progressListener, progressRequestListener);
-        return call;
-
-
-
-
-
+      });
     }
 
-    /**
-     * Get the size of Archival Unit artifacts in a collection
-     *
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param auid Identifier of the Archival Unit containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param version The version of the artifact (optional)
-     * @return Long
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public Long getArtifactsSize(String collectionid, String auid, String url, String urlPrefix, String version) throws ApiException {
-        ApiResponse<Long> resp = getArtifactsSizeWithHttpInfo(collectionid, auid, url, urlPrefix, version);
-        return resp.getData();
+    String[] localVarAuthNames = new String[]{"basicAuth"};
+    return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
+      localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams,
+      localVarAuthNames, progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call updateArtifactValidateBeforeCall(Boolean committed,
+    String collectionid, String artifactid,
+    final ProgressResponseBody.ProgressListener progressListener,
+    final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    // verify the required parameter 'committed' is set
+    if (committed == null) {
+      throw new ApiException(
+        "Missing the required parameter 'committed' when calling updateArtifact(Async)");
+    }
+    // verify the required parameter 'collectionid' is set
+    if (collectionid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'collectionid' when calling updateArtifact(Async)");
+    }
+    // verify the required parameter 'artifactid' is set
+    if (artifactid == null) {
+      throw new ApiException(
+        "Missing the required parameter 'artifactid' when calling updateArtifact(Async)");
     }
 
-    /**
-     * Get the size of Archival Unit artifacts in a collection
-     *
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param auid Identifier of the Archival Unit containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param version The version of the artifact (optional)
-     * @return ApiResponse&lt;Long&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Long> getArtifactsSizeWithHttpInfo(String collectionid, String auid, String url, String urlPrefix, String version) throws ApiException {
-        com.squareup.okhttp.Call call = getArtifactsSizeValidateBeforeCall(collectionid, auid, url, urlPrefix, version, null, null);
-        Type localVarReturnType = new TypeToken<Long>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
+    com.squareup.okhttp.Call call = updateArtifactCall(committed, collectionid, artifactid,
+      progressListener, progressRequestListener);
+    return call;
 
-    /**
-     * Get the size of Archival Unit artifacts in a collection (asynchronously)
-     *
-     * @param collectionid Identifier of the collection containing the artifacts (required)
-     * @param auid Identifier of the Archival Unit containing the artifacts (required)
-     * @param url The URL contained by the artifacts (optional)
-     * @param urlPrefix The prefix to be matched by the artifact URLs (optional)
-     * @param version The version of the artifact (optional)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getArtifactsSizeAsync(String collectionid, String auid, String url, String urlPrefix, String version, final ApiCallback<Long> callback) throws ApiException {
 
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+  }
 
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
+  /**
+   * Update the committed property of an artifact
+   *
+   * @param committed    (required)
+   * @param collectionid Collection containing the artifact (required)
+   * @param artifactid   Identifier of the artifact (required)
+   * @return Artifact
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public Artifact updateArtifact(Boolean committed, String collectionid, String artifactid)
+    throws ApiException {
+    ApiResponse<Artifact> resp = updateArtifactWithHttpInfo(committed, collectionid, artifactid);
+    return resp.getData();
+  }
 
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
+  /**
+   * Update the committed property of an artifact
+   *
+   * @param committed    (required)
+   * @param collectionid Collection containing the artifact (required)
+   * @param artifactid   Identifier of the artifact (required)
+   * @return ApiResponse&lt;Artifact&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+   */
+  public ApiResponse<Artifact> updateArtifactWithHttpInfo(Boolean committed, String collectionid,
+    String artifactid) throws ApiException {
+    com.squareup.okhttp.Call call = updateArtifactValidateBeforeCall(committed, collectionid,
+      artifactid, null, null);
+    Type localVarReturnType = new TypeToken<Artifact>() {
+    }.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * Update the committed property of an artifact (asynchronously)
+   *
+   * @param committed    (required)
+   * @param collectionid Collection containing the artifact (required)
+   * @param artifactid   Identifier of the artifact (required)
+   * @param callback     The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call updateArtifactAsync(Boolean committed, String collectionid,
+    String artifactid, final ApiCallback<Artifact> callback) throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener = new ProgressResponseBody.ProgressListener() {
+        @Override
+        public void update(long bytesRead, long contentLength, boolean done) {
+          callback.onDownloadProgress(bytesRead, contentLength, done);
         }
+      };
 
-        com.squareup.okhttp.Call call = getArtifactsSizeValidateBeforeCall(collectionid, auid, url, urlPrefix, version, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Long>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for getAus
-     * @param collectionid Identifier of the collection containing the Archival Units (required)
-     * @param limit The requested maximum number of Archival Unit identifiers per response (optional)
-     * @param continuationToken The continuation token of the next page of Archival Unit identifiers to be returned (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getAusCall(String collectionid, Integer limit, String continuationToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/collections/{collectionid}/aus"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
-        if (continuationToken != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("continuationToken", continuationToken));
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
+      progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+        @Override
+        public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+          callback.onUploadProgress(bytesWritten, contentLength, done);
         }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+      };
     }
 
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getAusValidateBeforeCall(String collectionid, Integer limit, String continuationToken, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'collectionid' is set
-        if (collectionid == null) {
-            throw new ApiException("Missing the required parameter 'collectionid' when calling getAus(Async)");
-        }
-
-        com.squareup.okhttp.Call call = getAusCall(collectionid, limit, continuationToken, progressListener, progressRequestListener);
-        return call;
-
-
-
-
-
-    }
-
-    /**
-     * Get Archival Unit IDs (AUIDs) in a collection
-     * Get a list of all Archival Unit identifiers in a collection or a pageful of the list defined by the continuation token and size
-     * @param collectionid Identifier of the collection containing the Archival Units (required)
-     * @param limit The requested maximum number of Archival Unit identifiers per response (optional)
-     * @param continuationToken The continuation token of the next page of Archival Unit identifiers to be returned (optional)
-     * @return AuidPageInfo
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public AuidPageInfo getAus(String collectionid, Integer limit, String continuationToken) throws ApiException {
-        ApiResponse<AuidPageInfo> resp = getAusWithHttpInfo(collectionid, limit, continuationToken);
-        return resp.getData();
-    }
-
-    /**
-     * Get Archival Unit IDs (AUIDs) in a collection
-     * Get a list of all Archival Unit identifiers in a collection or a pageful of the list defined by the continuation token and size
-     * @param collectionid Identifier of the collection containing the Archival Units (required)
-     * @param limit The requested maximum number of Archival Unit identifiers per response (optional)
-     * @param continuationToken The continuation token of the next page of Archival Unit identifiers to be returned (optional)
-     * @return ApiResponse&lt;AuidPageInfo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<AuidPageInfo> getAusWithHttpInfo(String collectionid, Integer limit, String continuationToken) throws ApiException {
-        com.squareup.okhttp.Call call = getAusValidateBeforeCall(collectionid, limit, continuationToken, null, null);
-        Type localVarReturnType = new TypeToken<AuidPageInfo>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     * Get Archival Unit IDs (AUIDs) in a collection (asynchronously)
-     * Get a list of all Archival Unit identifiers in a collection or a pageful of the list defined by the continuation token and size
-     * @param collectionid Identifier of the collection containing the Archival Units (required)
-     * @param limit The requested maximum number of Archival Unit identifiers per response (optional)
-     * @param continuationToken The continuation token of the next page of Archival Unit identifiers to be returned (optional)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getAusAsync(String collectionid, Integer limit, String continuationToken, final ApiCallback<AuidPageInfo> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = getAusValidateBeforeCall(collectionid, limit, continuationToken, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<AuidPageInfo>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for getCollections
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getCollectionsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/collections";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getCollectionsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-
-        com.squareup.okhttp.Call call = getCollectionsCall(progressListener, progressRequestListener);
-        return call;
-
-
-
-
-
-    }
-
-    /**
-     * Get collection identifiers of the committed artifacts in the repository
-     *
-     * @return List&lt;String&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public List<String> getCollections() throws ApiException {
-        ApiResponse<List<String>> resp = getCollectionsWithHttpInfo();
-        return resp.getData();
-    }
-
-    /**
-     * Get collection identifiers of the committed artifacts in the repository
-     *
-     * @return ApiResponse&lt;List&lt;String&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<List<String>> getCollectionsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = getCollectionsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     * Get collection identifiers of the committed artifacts in the repository (asynchronously)
-     *
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getCollectionsAsync(final ApiCallback<List<String>> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = getCollectionsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for updateArtifact
-     * @param committed  (required)
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call updateArtifactCall(Boolean committed, String collectionid, String artifactid, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
-            .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid.toString()))
-            .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (committed != null)
-        localVarFormParams.put("committed", committed);
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "multipart/form-data"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call updateArtifactValidateBeforeCall(Boolean committed, String collectionid, String artifactid, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'committed' is set
-        if (committed == null) {
-            throw new ApiException("Missing the required parameter 'committed' when calling updateArtifact(Async)");
-        }
-        // verify the required parameter 'collectionid' is set
-        if (collectionid == null) {
-            throw new ApiException("Missing the required parameter 'collectionid' when calling updateArtifact(Async)");
-        }
-        // verify the required parameter 'artifactid' is set
-        if (artifactid == null) {
-            throw new ApiException("Missing the required parameter 'artifactid' when calling updateArtifact(Async)");
-        }
-
-        com.squareup.okhttp.Call call = updateArtifactCall(committed, collectionid, artifactid, progressListener, progressRequestListener);
-        return call;
-
-
-
-
-
-    }
-
-    /**
-     * Update the committed property of an artifact
-     *
-     * @param committed  (required)
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @return Artifact
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public Artifact updateArtifact(Boolean committed, String collectionid, String artifactid) throws ApiException {
-        ApiResponse<Artifact> resp = updateArtifactWithHttpInfo(committed, collectionid, artifactid);
-        return resp.getData();
-    }
-
-    /**
-     * Update the committed property of an artifact
-     *
-     * @param committed  (required)
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @return ApiResponse&lt;Artifact&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Artifact> updateArtifactWithHttpInfo(Boolean committed, String collectionid, String artifactid) throws ApiException {
-        com.squareup.okhttp.Call call = updateArtifactValidateBeforeCall(committed, collectionid, artifactid, null, null);
-        Type localVarReturnType = new TypeToken<Artifact>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     * Update the committed property of an artifact (asynchronously)
-     *
-     * @param committed  (required)
-     * @param collectionid Collection containing the artifact (required)
-     * @param artifactid Identifier of the artifact (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call updateArtifactAsync(Boolean committed, String collectionid, String artifactid, final ApiCallback<Artifact> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = updateArtifactValidateBeforeCall(committed, collectionid, artifactid, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<Artifact>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
+    com.squareup.okhttp.Call call = updateArtifactValidateBeforeCall(committed, collectionid,
+      artifactid, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<Artifact>() {
+    }.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
 }

@@ -13,7 +13,7 @@
 package org.lockss.laaws.api.cfg;
 
 import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.RestConfigClient;
+import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.ApiResponse;
 import org.lockss.laaws.client.RestConfigConfiguration;
@@ -35,21 +35,21 @@ import java.util.List;
 import java.util.Map;
 
 public class StatusApi {
-    private RestConfigClient apiClient;
+    private V2RestClient apiClient;
 
     public StatusApi() {
         this(RestConfigConfiguration.getDefaultApiClient());
     }
 
-    public StatusApi(RestConfigClient apiClient) {
+    public StatusApi(V2RestClient apiClient) {
         this.apiClient = apiClient;
     }
 
-    public RestConfigClient getApiClient() {
+    public V2RestClient getApiClient() {
         return apiClient;
     }
 
-    public void setApiClient(RestConfigClient apiClient) {
+    public void setApiClient(V2RestClient apiClient) {
         this.apiClient = apiClient;
     }
 

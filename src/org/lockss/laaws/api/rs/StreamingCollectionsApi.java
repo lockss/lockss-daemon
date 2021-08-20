@@ -13,25 +13,25 @@ import org.lockss.laaws.client.ApiResponse;
 import org.lockss.laaws.client.Pair;
 import org.lockss.laaws.client.ProgressRequestBody;
 import org.lockss.laaws.client.ProgressResponseBody;
-import org.lockss.laaws.client.RestRepoClient;
+import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.client.RestRepoConfiguration;
 import org.lockss.laaws.model.rs.Artifact;
 
 public class StreamingCollectionsApi extends CollectionsApi {
-  private RestRepoClient repoClient;
+  private V2RestClient apiClient;
 
   public StreamingCollectionsApi() {
     super(RestRepoConfiguration.getDefaultApiClient());
   }
 
-  public StreamingCollectionsApi(RestRepoClient repoClient) {
-    super(repoClient);
-    this.repoClient = repoClient;
+  public StreamingCollectionsApi(V2RestClient apiClient) {
+    super(apiClient);
+    this.apiClient = apiClient;
   }
 
-  public void setApiClient(RestRepoClient repoClient) {
-    super.setApiClient(repoClient);
-    this.repoClient = repoClient;
+  public void setApiClient(V2RestClient apiClient) {
+    super.setApiClient(apiClient);
+    this.apiClient = apiClient;
   }
 
   /**
@@ -51,7 +51,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts"
-        .replaceAll("\\{" + "collectionid" + "\\}", repoClient.escapeString(collectionid));
+        .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
 
     List<Pair> localVarQueryParams = new ArrayList<>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<>();
@@ -71,17 +71,17 @@ public class StreamingCollectionsApi extends CollectionsApi {
     final String[] localVarAccepts = {
         "application/json"
     };
-    final String localVarAccept = repoClient.selectHeaderAccept(localVarAccepts);
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
     final String[] localVarContentTypes = {
         "multipart/form-data"
     };
-    final String localVarContentType = repoClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if(progressListener != null) {
-      repoClient.getHttpClient().networkInterceptors().add(chain -> {
+      apiClient.getHttpClient().networkInterceptors().add(chain -> {
         com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
         return originalResponse.newBuilder()
             .body(new ProgressResponseBody(originalResponse.body(), progressListener))
@@ -89,8 +89,8 @@ public class StreamingCollectionsApi extends CollectionsApi {
       });
     }
 
-    String[] localVarAuthNames = new String[] { "basic-auth" };
-    return repoClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    String[] localVarAuthNames = new String[] { "basicAuth" };
+    return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
   }
 
   private com.squareup.okhttp.Call createArtifactValidateBeforeCall(String auid, String uri, Long collectionDate, CachedUrl artifact, String collectionid, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
@@ -150,7 +150,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
   public ApiResponse<Artifact> createArtifactWithHttpInfo(String auid, String uri, Long collectionDate, CachedUrl artifact, String collectionid) throws ApiException {
     com.squareup.okhttp.Call call = createArtifactValidateBeforeCall(auid, uri, collectionDate, artifact, collectionid, null, null);
     Type localVarReturnType = new TypeToken<Artifact>(){}.getType();
-    return repoClient.execute(call, localVarReturnType);
+    return apiClient.execute(call, localVarReturnType);
   }
 
   /**
@@ -178,7 +178,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
 
     com.squareup.okhttp.Call call = createArtifactValidateBeforeCall(auid, uri, collectionDate, artifact, collectionid, progressListener, progressRequestListener);
     Type localVarReturnType = new TypeToken<Artifact>(){}.getType();
-    repoClient.executeAsync(call, localVarReturnType, callback);
+    apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }
 

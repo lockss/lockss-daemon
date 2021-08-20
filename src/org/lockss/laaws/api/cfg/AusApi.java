@@ -13,7 +13,7 @@
 package org.lockss.laaws.api.cfg;
 
 import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.RestConfigClient;
+import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.ApiResponse;
 import org.lockss.laaws.client.RestConfigConfiguration;
@@ -40,21 +40,21 @@ import java.util.List;
 import java.util.Map;
 
 public class AusApi {
-    private RestConfigClient apiClient;
+    private V2RestClient apiClient;
 
     public AusApi() {
         this(RestConfigConfiguration.getDefaultApiClient());
     }
 
-    public AusApi(RestConfigClient apiClient) {
+    public AusApi(V2RestClient apiClient) {
         this.apiClient = apiClient;
     }
 
-    public RestConfigClient getApiClient() {
+    public V2RestClient getApiClient() {
         return apiClient;
     }
 
-    public void setApiClient(RestConfigClient apiClient) {
+    public void setApiClient(V2RestClient apiClient) {
         this.apiClient = apiClient;
     }
 
@@ -1309,7 +1309,7 @@ public class AusApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call patchAuAgreementsCall(String body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call patchAuAgreementsCall(Object body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1354,7 +1354,7 @@ public class AusApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call patchAuAgreementsValidateBeforeCall(String body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call patchAuAgreementsValidateBeforeCall(Object body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling patchAuAgreements(Async)");
@@ -1381,7 +1381,7 @@ public class AusApi {
      * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void patchAuAgreements(String body, String auid, String xLockssRequestCookie) throws ApiException {
+    public void patchAuAgreements(Object body, String auid, String xLockssRequestCookie) throws ApiException {
         patchAuAgreementsWithHttpInfo(body, auid, xLockssRequestCookie);
     }
 
@@ -1394,7 +1394,7 @@ public class AusApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> patchAuAgreementsWithHttpInfo(String body, String auid, String xLockssRequestCookie) throws ApiException {
+    public ApiResponse<Void> patchAuAgreementsWithHttpInfo(Object body, String auid, String xLockssRequestCookie) throws ApiException {
         com.squareup.okhttp.Call call = patchAuAgreementsValidateBeforeCall(body, auid, xLockssRequestCookie, null, null);
         return apiClient.execute(call);
     }
@@ -1409,7 +1409,7 @@ public class AusApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call patchAuAgreementsAsync(String body, String auid, String xLockssRequestCookie, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call patchAuAgreementsAsync(Object body, String auid, String xLockssRequestCookie, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1444,7 +1444,7 @@ public class AusApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call patchAuStateCall(String body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call patchAuStateCall(Object body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1489,7 +1489,7 @@ public class AusApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call patchAuStateValidateBeforeCall(String body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call patchAuStateValidateBeforeCall(Object body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling patchAuState(Async)");
@@ -1516,7 +1516,7 @@ public class AusApi {
      * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void patchAuState(String body, String auid, String xLockssRequestCookie) throws ApiException {
+    public void patchAuState(Object body, String auid, String xLockssRequestCookie) throws ApiException {
         patchAuStateWithHttpInfo(body, auid, xLockssRequestCookie);
     }
 
@@ -1529,7 +1529,7 @@ public class AusApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> patchAuStateWithHttpInfo(String body, String auid, String xLockssRequestCookie) throws ApiException {
+    public ApiResponse<Void> patchAuStateWithHttpInfo(Object body, String auid, String xLockssRequestCookie) throws ApiException {
         com.squareup.okhttp.Call call = patchAuStateValidateBeforeCall(body, auid, xLockssRequestCookie, null, null);
         return apiClient.execute(call);
     }
@@ -1544,7 +1544,7 @@ public class AusApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call patchAuStateAsync(String body, String auid, String xLockssRequestCookie, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call patchAuStateAsync(Object body, String auid, String xLockssRequestCookie, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1569,6 +1569,7 @@ public class AusApi {
         apiClient.executeAsync(call, callback);
         return call;
     }
+
     /**
      * Build call for postAus
      * @param body The identifiers of the Archival Units to be added (required)
@@ -1948,7 +1949,7 @@ public class AusApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call putAuSuspectUrlVersionsCall(String body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call putAuSuspectUrlVersionsCall(Object body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1993,7 +1994,7 @@ public class AusApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call putAuSuspectUrlVersionsValidateBeforeCall(String body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call putAuSuspectUrlVersionsValidateBeforeCall(Object body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling putAuSuspectUrlVersions(Async)");
@@ -2020,7 +2021,7 @@ public class AusApi {
      * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void putAuSuspectUrlVersions(String body, String auid, String xLockssRequestCookie) throws ApiException {
+    public void putAuSuspectUrlVersions(Object body, String auid, String xLockssRequestCookie) throws ApiException {
         putAuSuspectUrlVersionsWithHttpInfo(body, auid, xLockssRequestCookie);
     }
 
@@ -2033,7 +2034,7 @@ public class AusApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> putAuSuspectUrlVersionsWithHttpInfo(String body, String auid, String xLockssRequestCookie) throws ApiException {
+    public ApiResponse<Void> putAuSuspectUrlVersionsWithHttpInfo(Object body, String auid, String xLockssRequestCookie) throws ApiException {
         com.squareup.okhttp.Call call = putAuSuspectUrlVersionsValidateBeforeCall(body, auid, xLockssRequestCookie, null, null);
         return apiClient.execute(call);
     }
@@ -2048,7 +2049,7 @@ public class AusApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call putAuSuspectUrlVersionsAsync(String body, String auid, String xLockssRequestCookie, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call putAuSuspectUrlVersionsAsync(Object body, String auid, String xLockssRequestCookie, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2581,7 +2582,7 @@ public class AusApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call putNoAuPeersCall(String body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call putNoAuPeersCall(Object body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -2626,7 +2627,7 @@ public class AusApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call putNoAuPeersValidateBeforeCall(String body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call putNoAuPeersValidateBeforeCall(Object body, String auid, String xLockssRequestCookie, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling putNoAuPeers(Async)");
@@ -2653,7 +2654,7 @@ public class AusApi {
      * @param xLockssRequestCookie The LOCKSS-specific request cookie header (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void putNoAuPeers(String body, String auid, String xLockssRequestCookie) throws ApiException {
+    public void putNoAuPeers(Object body, String auid, String xLockssRequestCookie) throws ApiException {
         putNoAuPeersWithHttpInfo(body, auid, xLockssRequestCookie);
     }
 
@@ -2666,7 +2667,7 @@ public class AusApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> putNoAuPeersWithHttpInfo(String body, String auid, String xLockssRequestCookie) throws ApiException {
+    public ApiResponse<Void> putNoAuPeersWithHttpInfo(Object body, String auid, String xLockssRequestCookie) throws ApiException {
         com.squareup.okhttp.Call call = putNoAuPeersValidateBeforeCall(body, auid, xLockssRequestCookie, null, null);
         return apiClient.execute(call);
     }
@@ -2681,7 +2682,7 @@ public class AusApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call putNoAuPeersAsync(String body, String auid, String xLockssRequestCookie, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call putNoAuPeersAsync(Object body, String auid, String xLockssRequestCookie, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

@@ -29,8 +29,9 @@ package org.lockss.laaws.model.cfg;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin.Feature;
@@ -587,10 +588,47 @@ public class V2AuStateBean {
    * Serialize entire object to json string
    */
   public String toJson() {
-    Gson objGson = new GsonBuilder().setPrettyPrinting().create();
-    return objGson.toJson(this);
+    Gson gson = new GsonBuilder().create();
+    return gson.toJson(toMap());
   }
 
+  public Map toMap() {
+    Map<String, Object> propMap = new HashMap<>();
+    propMap.put("accessType", accessType);
+    propMap.put("auCreationTime", auCreationTime);
+    propMap.put("auId", auId);
+    propMap.put("averageHashDuration", averageHashDuration);
+    propMap.put("cdnStems", cdnStems);
+    propMap.put("clockssSubscriptionStatus", clockssSubscriptionStatus);
+    propMap.put("hasSubstance", hasSubstance);
+    propMap.put("highestV3Agreement", highestV3Agreement);
+    propMap.put("isMetadataExtractionEnabled", isMetadataExtractionEnabled);
+    propMap.put("lastContentChange", lastContentChange);
+    propMap.put("lastCrawlAttempt", lastCrawlAttempt);
+    propMap.put("lastCrawlResult", lastCrawlResult);
+    propMap.put("lastCrawlResultMsg", lastCrawlResultMsg);
+    propMap.put("lastCrawlTime", lastCrawlTime);
+    propMap.put("lastDeepCrawlAttempt", lastDeepCrawlAttempt);
+    propMap.put("lastDeepCrawlDepth", lastDeepCrawlDepth);
+    propMap.put("lastDeepCrawlResult", lastDeepCrawlResult);
+    propMap.put("lastDeepCrawlResultMsg", lastDeepCrawlResultMsg);
+    propMap.put("lastDeepCrawlTime", lastDeepCrawlTime);
+    propMap.put("lastLocalHashScan", lastLocalHashScan);
+    propMap.put("lastMetadataIndex", lastMetadataIndex);
+    propMap.put("lastPollResult", lastPollResult);
+    propMap.put("lastPollStart", lastPollStart);
+    propMap.put("lastPoPPoll", lastPoPPoll);
+    propMap.put("lastPoPPollResult", lastPoPPollResult);
+    propMap.put("lastTopLevelPollTime", lastTopLevelPollTime);
+    propMap.put("metadataVersion", metadataVersion);
+    propMap.put("numAgreePeersLastPoR", numAgreePeersLastPoR);
+    propMap.put("numCurrentSuspectVersions", numCurrentSuspectVersions);
+    propMap.put("numWillingRepairers", numWillingRepairers);
+    propMap.put("pollDuration", pollDuration);
+    propMap.put("substanceVersion", substanceVersion);
+    propMap.put("v3Agreement", v3Agreement);
+    return propMap;
+  }
 
   @Override
   public String toString() {

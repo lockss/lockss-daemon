@@ -13,7 +13,7 @@
 package org.lockss.laaws.client;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-08-17T15:05:28.577-07:00[America/Los_Angeles]")public class RestConfigConfiguration {
-    private static RestConfigClient defaultApiClient = new RestConfigClient();
+    private static V2RestClient defaultApiClient = new V2RestClient();
 
     /**
      * Get the default API client, which would be used when creating API
@@ -21,7 +21,7 @@ package org.lockss.laaws.client;
      *
      * @return Default API client
      */
-    public static RestConfigClient getDefaultApiClient() {
+    public static V2RestClient getDefaultApiClient() {
         return defaultApiClient;
     }
 
@@ -31,7 +31,7 @@ package org.lockss.laaws.client;
      *
      * @param apiClient API client
      */
-    public static void setDefaultApiClient(RestConfigClient apiClient) {
+    public static void setDefaultApiClient(V2RestClient apiClient) {
         defaultApiClient = apiClient;
     }
 }

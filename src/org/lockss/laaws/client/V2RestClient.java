@@ -1,6 +1,6 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * OpenAPI spec version: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -50,10 +50,13 @@ import org.lockss.laaws.client.auth.Authentication;
 import org.lockss.laaws.client.auth.HttpBasicAuth;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.OAuth;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
 
-public class RestConfigClient {
+public class V2RestClient {
+    private static final Logger log = Logger.getLogger(V2RestClient.class);
 
-    private String basePath = "https://laaws.lockss.org:443/";
+    private String basePath = "http://laaws.lockss.org:443/";
     private boolean debugging = false;
     private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
     private String tempFolderPath = null;
@@ -77,7 +80,7 @@ public class RestConfigClient {
     /*
      * Constructor for ApiClient
      */
-    public RestConfigClient() {
+    public V2RestClient() {
         httpClient = new OkHttpClient();
 
 
@@ -90,7 +93,7 @@ public class RestConfigClient {
 
         // Setup authentications (key: authentication name, value: authentication).
         authentications = new HashMap<String, Authentication>();
-        authentications.put("basicAuth", new HttpBasicAuth());
+        authentications.put("basicAuth",new HttpBasicAuth());
         // Prevent the authentications from being modified.
         authentications = Collections.unmodifiableMap(authentications);
     }
@@ -107,10 +110,10 @@ public class RestConfigClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g https://laaws.lockss.org:443/
+     * @param basePath Base path of the URL (e.g http://laaws.lockss.org:443/
      * @return An instance of OkHttpClient
      */
-    public RestConfigClient setBasePath(String basePath) {
+    public V2RestClient setBasePath(String basePath) {
         this.basePath = basePath;
         return this;
     }
@@ -130,7 +133,7 @@ public class RestConfigClient {
      * @param httpClient An instance of OkHttpClient
      * @return Api Client
      */
-    public RestConfigClient setHttpClient(OkHttpClient httpClient) {
+    public V2RestClient setHttpClient(OkHttpClient httpClient) {
         this.httpClient = httpClient;
         return this;
     }
@@ -150,7 +153,7 @@ public class RestConfigClient {
      * @param json JSON object
      * @return Api client
      */
-    public RestConfigClient setJSON(JSON json) {
+    public V2RestClient setJSON(JSON json) {
         this.json = json;
         return this;
     }
@@ -172,7 +175,7 @@ public class RestConfigClient {
      * @param verifyingSsl True to verify TLS/SSL connection
      * @return ApiClient
      */
-    public RestConfigClient setVerifyingSsl(boolean verifyingSsl) {
+    public V2RestClient setVerifyingSsl(boolean verifyingSsl) {
         this.verifyingSsl = verifyingSsl;
         applySslSettings();
         return this;
@@ -194,7 +197,7 @@ public class RestConfigClient {
      * @param sslCaCert input stream for SSL CA cert
      * @return ApiClient
      */
-    public RestConfigClient setSslCaCert(InputStream sslCaCert) {
+    public V2RestClient setSslCaCert(InputStream sslCaCert) {
         this.sslCaCert = sslCaCert;
         applySslSettings();
         return this;
@@ -211,7 +214,7 @@ public class RestConfigClient {
      * @param managers The KeyManagers to use
      * @return ApiClient
      */
-    public RestConfigClient setKeyManagers(KeyManager[] managers) {
+    public V2RestClient setKeyManagers(KeyManager[] managers) {
         this.keyManagers = managers;
         applySslSettings();
         return this;
@@ -221,27 +224,27 @@ public class RestConfigClient {
         return dateFormat;
     }
 
-    public RestConfigClient setDateFormat(DateFormat dateFormat) {
+    public V2RestClient setDateFormat(DateFormat dateFormat) {
         this.json.setDateFormat(dateFormat);
         return this;
     }
 
-    public RestConfigClient setSqlDateFormat(DateFormat dateFormat) {
+    public V2RestClient setSqlDateFormat(DateFormat dateFormat) {
         this.json.setSqlDateFormat(dateFormat);
         return this;
     }
 
-    public RestConfigClient setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
+    public V2RestClient setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
         this.json.setOffsetDateTimeFormat(dateFormat);
         return this;
     }
 
-    public RestConfigClient setLocalDateFormat(DateTimeFormatter dateFormat) {
+    public V2RestClient setLocalDateFormat(DateTimeFormatter dateFormat) {
         this.json.setLocalDateFormat(dateFormat);
         return this;
     }
 
-    public RestConfigClient setLenientOnJson(boolean lenientOnJson) {
+    public V2RestClient setLenientOnJson(boolean lenientOnJson) {
         this.json.setLenientOnJson(lenientOnJson);
         return this;
     }
@@ -346,7 +349,7 @@ public class RestConfigClient {
      * @param userAgent HTTP request's user agent
      * @return ApiClient
      */
-    public RestConfigClient setUserAgent(String userAgent) {
+    public V2RestClient setUserAgent(String userAgent) {
         addDefaultHeader("User-Agent", userAgent);
         return this;
     }
@@ -358,7 +361,7 @@ public class RestConfigClient {
      * @param value The header's value
      * @return ApiClient
      */
-    public RestConfigClient addDefaultHeader(String key, String value) {
+    public V2RestClient addDefaultHeader(String key, String value) {
         defaultHeaderMap.put(key, value);
         return this;
     }
@@ -378,7 +381,7 @@ public class RestConfigClient {
      * @param debugging To enable (true) or disable (false) debugging
      * @return ApiClient
      */
-    public RestConfigClient setDebugging(boolean debugging) {
+    public V2RestClient setDebugging(boolean debugging) {
         if (debugging != this.debugging) {
             if (debugging) {
                 loggingInterceptor = new HttpLoggingInterceptor();
@@ -411,7 +414,7 @@ public class RestConfigClient {
      * @param tempFolderPath Temporary folder path
      * @return ApiClient
      */
-    public RestConfigClient setTempFolderPath(String tempFolderPath) {
+    public V2RestClient setTempFolderPath(String tempFolderPath) {
         this.tempFolderPath = tempFolderPath;
         return this;
     }
@@ -432,7 +435,7 @@ public class RestConfigClient {
      * @param connectionTimeout connection timeout in milliseconds
      * @return Api client
      */
-    public RestConfigClient setConnectTimeout(int connectionTimeout) {
+    public V2RestClient setConnectTimeout(int connectionTimeout) {
         httpClient.setConnectTimeout(connectionTimeout, TimeUnit.MILLISECONDS);
         return this;
     }
@@ -454,7 +457,7 @@ public class RestConfigClient {
      * @param readTimeout read timeout in milliseconds
      * @return Api client
      */
-    public RestConfigClient setReadTimeout(int readTimeout) {
+    public V2RestClient setReadTimeout(int readTimeout) {
         httpClient.setReadTimeout(readTimeout, TimeUnit.MILLISECONDS);
         return this;
     }
@@ -476,7 +479,7 @@ public class RestConfigClient {
      * @param writeTimeout connection timeout in milliseconds
      * @return Api client
      */
-    public RestConfigClient setWriteTimeout(int writeTimeout) {
+    public V2RestClient setWriteTimeout(int writeTimeout) {
         httpClient.setWriteTimeout(writeTimeout, TimeUnit.MILLISECONDS);
         return this;
     }
@@ -738,6 +741,8 @@ public class RestConfigClient {
         } else if (obj instanceof File) {
             // File body parameter support.
             return RequestBody.create(MediaType.parse(contentType), (File) obj);
+        } else if (obj instanceof CachedUrl) {
+            return new CachedUrlRequestBody(MediaType.parse(contentType),(CachedUrl) obj);
         } else if (isJsonMime(contentType)) {
             String content;
             if (obj != null) {
@@ -923,6 +928,7 @@ public class RestConfigClient {
                     throw new ApiException(response.message(), e, response.code(), response.headers().toMultimap());
                 }
             }
+            log.warning("Error response " + response.code() +" : " + response.message());
             throw new ApiException(response.message(), response.code(), response.headers().toMultimap(), respBody);
         }
     }
@@ -981,7 +987,7 @@ public class RestConfigClient {
             reqBody = null;
         } else if ("application/x-www-form-urlencoded".equals(contentType)) {
             reqBody = buildRequestBodyFormEncoding(formParams);
-        } else if ("multipart/form-data".equals(contentType)) {
+        } else if ("multipart/form-data".equals(contentType) && !formParams.isEmpty()) {
             reqBody = buildRequestBodyMultipart(formParams);
         } else if (body == null) {
             if ("DELETE".equals(method)) {
@@ -1117,7 +1123,14 @@ public class RestConfigClient {
                 Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\"; filename=\"" + file.getName() + "\"");
                 MediaType mediaType = MediaType.parse(guessContentTypeFromFile(file));
                 mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, file));
-            } else {
+            }
+            else if (param.getValue()  instanceof CachedUrl) {
+                CachedUrl cu = (CachedUrl) param.getValue();
+                Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\"; filename=\"artifact\"");
+                MediaType mediaType = MediaType.parse("application/http;msgtype=response");
+                mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(mediaType, cu));
+            }
+            else {
                 Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\"");
                 mpBuilder.addPart(partHeaders, RequestBody.create(null, parameterToString(param.getValue())));
             }

@@ -149,7 +149,8 @@ public class CachedUrlRequestBody extends RequestBody {
 
   @Override
   public long contentLength() throws IOException {
-    return 0;
+    //return inputStream.available() == 0 ? -1 : inputStream.available();
+    return -1L;
   }
 
   @Override

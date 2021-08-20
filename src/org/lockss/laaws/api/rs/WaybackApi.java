@@ -13,7 +13,7 @@
 package org.lockss.laaws.api.rs;
 
 import org.lockss.laaws.client.ApiCallback;
-import org.lockss.laaws.client.RestRepoClient;
+import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.ApiResponse;
 import org.lockss.laaws.client.RestRepoConfiguration;
@@ -35,21 +35,21 @@ import java.util.List;
 import java.util.Map;
 
 public class WaybackApi {
-    private RestRepoClient apiClient;
+    private V2RestClient apiClient;
 
     public WaybackApi() {
         this(RestRepoConfiguration.getDefaultApiClient());
     }
 
-    public WaybackApi(RestRepoClient apiClient) {
+    public WaybackApi(V2RestClient apiClient) {
         this.apiClient = apiClient;
     }
 
-    public RestRepoClient getApiClient() {
+    public V2RestClient getApiClient() {
         return apiClient;
     }
 
-    public void setApiClient(RestRepoClient apiClient) {
+    public void setApiClient(V2RestClient apiClient) {
         this.apiClient = apiClient;
     }
 
