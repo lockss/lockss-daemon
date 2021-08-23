@@ -21,49 +21,64 @@
     >
     param[base_url] = https://jnm.snmjournals.org/
 
-    au < exists ; exists ; 1978 ; Annals of Nuclear Medicine Volume 19 ; 19 ; >
-    au < exists ; exists ; 1979 ; Annals of Nuclear Medicine Volume 20 ; 20 ; >
-    au < exists ; exists ; 1980 ; Annals of Nuclear Medicine Volume 21 ; 21 ; >
-    au < exists ; exists ; 1981 ; Annals of Nuclear Medicine Volume 22 ; 22 ; >
-    au < exists ; exists ; 1982 ; Annals of Nuclear Medicine Volume 23 ; 23 ; >
-    au < exists ; exists ; 1983 ; Annals of Nuclear Medicine Volume 24 ; 24 ; >
-    au < exists ; exists ; 1984 ; Annals of Nuclear Medicine Volume 25 ; 25 ; >
-    au < exists ; exists ; 1985 ; Annals of Nuclear Medicine Volume 26 ; 26 ; >
-    au < exists ; exists ; 1986 ; Annals of Nuclear Medicine Volume 27 ; 27 ; >
-    au < exists ; exists ; 1987 ; Annals of Nuclear Medicine Volume 28 ; 28 ; >
-
-    au < exists ; exists ; 1988 ; Annals of Nuclear Medicine Volume 29 ; 29 ; >
-    au < exists ; exists ; 1989 ; Annals of Nuclear Medicine Volume 30 ; 30 ; >
-    au < exists ; exists ; 1990 ; Annals of Nuclear Medicine Volume 31 ; 31 ; >
-    au < exists ; exists ; 1991 ; Annals of Nuclear Medicine Volume 32 ; 32 ; >
-    au < exists ; exists ; 1992 ; Annals of Nuclear Medicine Volume 33 ; 33 ; >
-    au < exists ; exists ; 1993 ; Annals of Nuclear Medicine Volume 34 ; 34 ; >
-    au < exists ; exists ; 1994 ; Annals of Nuclear Medicine Volume 35 ; 35 ; >
-    au < exists ; exists ; 1995 ; Annals of Nuclear Medicine Volume 36 ; 36 ; >
-    au < exists ; exists ; 1996 ; Annals of Nuclear Medicine Volume 37 ; 37 ; >
-    au < exists ; exists ; 1997 ; Annals of Nuclear Medicine Volume 38 ; 38 ; >
-
-    au < exists ; exists ; 1998 ; Annals of Nuclear Medicine Volume 39 ; 39 ; >
-    au < exists ; exists ; 1999 ; Annals of Nuclear Medicine Volume 40 ; 40 ; >
-    au < exists ; exists ; 2000 ; Annals of Nuclear Medicine Volume 41 ; 41 ; >
-    au < exists ; exists ; 2001 ; Annals of Nuclear Medicine Volume 42 ; 42 ; >
-    au < exists ; exists ; 2002 ; Annals of Nuclear Medicine Volume 43 ; 43 ; >
-    au < exists ; exists ; 2003 ; Annals of Nuclear Medicine Volume 44 ; 44 ; >
-    au < exists ; exists ; 2004 ; Annals of Nuclear Medicine Volume 45 ; 45 ; >
-    au < exists ; exists ; 2005 ; Annals of Nuclear Medicine Volume 46 ; 46 ; >
-    au < exists ; exists ; 2006 ; Annals of Nuclear Medicine Volume 47 ; 47 ; >
-    au < exists ; exists ; 2007 ; Annals of Nuclear Medicine Volume 48 ; 48 ; >
-
-    au < exists ; exists ; 2008 ; Annals of Nuclear Medicine Volume 49 ; 49 ; >
-    au < exists ; exists ; 2009 ; Annals of Nuclear Medicine Volume 50 ; 50 ; >
-    au < exists ; exists ; 2010 ; Annals of Nuclear Medicine Volume 51 ; 51 ; >
-    au < exists ; exists ; 2011 ; Annals of Nuclear Medicine Volume 52 ; 52 ; >
-    au < exists ; exists ; 2012 ; Annals of Nuclear Medicine Volume 53 ; 53 ; >
-    au < exists ; exists ; 2013 ; Annals of Nuclear Medicine Volume 54 ; 54 ; >
-    au < exists ; exists ; 2014 ; Annals of Nuclear Medicine Volume 55 ; 55 ; >
-    au < exists ; exists ; 2015 ; Annals of Nuclear Medicine Volume 56 ; 56 ; >
-    au < exists ; exists ; 2016 ; Annals of Nuclear Medicine Volume 57 ; 57 ; >
-    au < exists ; exists ; 2017 ; Annals of Nuclear Medicine Volume 58 ; 58 ; >
+    au < exists ; exists ; 1960 ; Annals of Nuclear Medicine Volume 1 ; 1 ; >
+    au < exists ; exists ; 1961 ; Annals of Nuclear Medicine Volume 2 ; 2 ; >
+    au < exists ; exists ; 1962 ; Annals of Nuclear Medicine Volume 3 ; 3 ; >
+    au < exists ; exists ; 1963 ; Annals of Nuclear Medicine Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1964 ; Annals of Nuclear Medicine Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1965 ; Annals of Nuclear Medicine Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1966 ; Annals of Nuclear Medicine Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1967 ; Annals of Nuclear Medicine Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1968 ; Annals of Nuclear Medicine Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1969 ; Annals of Nuclear Medicine Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1970 ; Annals of Nuclear Medicine Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1971 ; Annals of Nuclear Medicine Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1972 ; Annals of Nuclear Medicine Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1973 ; Annals of Nuclear Medicine Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1974 ; Annals of Nuclear Medicine Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1975 ; Annals of Nuclear Medicine Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1976 ; Annals of Nuclear Medicine Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1977 ; Annals of Nuclear Medicine Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1978 ; Annals of Nuclear Medicine Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1979 ; Annals of Nuclear Medicine Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1980 ; Annals of Nuclear Medicine Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1981 ; Annals of Nuclear Medicine Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1982 ; Annals of Nuclear Medicine Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1983 ; Annals of Nuclear Medicine Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1984 ; Annals of Nuclear Medicine Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1985 ; Annals of Nuclear Medicine Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1986 ; Annals of Nuclear Medicine Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1987 ; Annals of Nuclear Medicine Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1988 ; Annals of Nuclear Medicine Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1989 ; Annals of Nuclear Medicine Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1990 ; Annals of Nuclear Medicine Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1991 ; Annals of Nuclear Medicine Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1992 ; Annals of Nuclear Medicine Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1993 ; Annals of Nuclear Medicine Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1994 ; Annals of Nuclear Medicine Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1995 ; Annals of Nuclear Medicine Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1996 ; Annals of Nuclear Medicine Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1997 ; Annals of Nuclear Medicine Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1998 ; Annals of Nuclear Medicine Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1999 ; Annals of Nuclear Medicine Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2000 ; Annals of Nuclear Medicine Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2001 ; Annals of Nuclear Medicine Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2002 ; Annals of Nuclear Medicine Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2003 ; Annals of Nuclear Medicine Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2004 ; Annals of Nuclear Medicine Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2005 ; Annals of Nuclear Medicine Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2006 ; Annals of Nuclear Medicine Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2007 ; Annals of Nuclear Medicine Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2008 ; Annals of Nuclear Medicine Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2009 ; Annals of Nuclear Medicine Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2010 ; Annals of Nuclear Medicine Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2011 ; Annals of Nuclear Medicine Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2012 ; Annals of Nuclear Medicine Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2013 ; Annals of Nuclear Medicine Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2014 ; Annals of Nuclear Medicine Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2015 ; Annals of Nuclear Medicine Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2016 ; Annals of Nuclear Medicine Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2017 ; Annals of Nuclear Medicine Volume 58 ; 58 ; >
     au < manifest ; exists ; 2018 ; Annals of Nuclear Medicine Volume 59 ; 59 ; >
     au < manifest ; exists ; 2019 ; Annals of Nuclear Medicine Volume 60 ; 60 ; >
     au < manifest ; exists ; 2020 ; Annals of Nuclear Medicine Volume 61 ; 61 ; >
