@@ -225,12 +225,12 @@ while (my $line = <>) {
                 $result = "Base-Probe-Mismatch";
                 $vol_title = $pl_url;
             } elsif ($pl_url !~ m/\/$param{volume_name}\//) {
-                print ("Probe_url:$pl_url");
-                print ("Volume:$param{volume_name}");
+                #print ("Probe_url:$pl_url");
+                #print ("Volume:$param{volume_name}");
                 $result = "ProbeLink-BadVol";
                 $vol_title = $pl_url;
-            } elsif (! $resp->is_success) {
-                $result = "BadProbeLink-" . $resp_pl->code();
+            } elsif (! $resp_pl->is_success) {
+                $result = "BadProbeLink-" . $resp_pl->code() . " " . $resp_pl->message();
                 $vol_title = $pl_url;
             } elsif ($req_pl->url ne $resp_pl->request->uri) {
                 $result = "ProbeLinkRedirect";
@@ -296,12 +296,12 @@ while (my $line = <>) {
                 $result = "Base-Probe-Mismatch";
                 $vol_title = $pl_url;
             } elsif ($pl_url !~ m/\/$param{volume_name}\//) {
-                print ("Probe_url:$pl_url");
-                print ("Volume:$param{volume_name}");
+                #print ("Probe_url:$pl_url");
+                #print ("Volume:$param{volume_name}");
                 $result = "ProbeLink-BadVol";
                 $vol_title = $pl_url;
-            } elsif (! $resp->is_success) {
-                $result = "BadProbeLink-" . $resp_pl->code();
+            } elsif (! $resp_pl->is_success) {
+                $result = "BadProbeLink-" . $resp_pl->code() . " " . $resp_pl->message();
                 $vol_title = $pl_url;
             } elsif ($req_pl->url ne $resp_pl->request->uri) {
                 $result = "ProbeLinkRedirect";
