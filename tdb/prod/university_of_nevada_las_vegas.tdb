@@ -20,9 +20,9 @@
       #move to University of Hawai'i Press, 2018
 
 
-      au < manifest ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
-      au < manifest ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
-      au < manifest ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
+      au < ready ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < ready ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
+      au < ready ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
 
   }
 
@@ -62,9 +62,9 @@
     param[journal_abbr] = jrtc
     implicit < status ; year ; name ; param[volume] >
 
-    au < manifest ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 >
-    au < manifest ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 >
-    au < manifest ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 >
+    au < ready ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 >
+    au < ready ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 >
+    au < ready ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 >
     au < manifest ; 2020 ; Journal of Research in Technical Careers Volume 4 ; 4 >
     au < manifest ; 2021 ; Journal of Research in Technical Careers Volume 5 ; 5 >
 
