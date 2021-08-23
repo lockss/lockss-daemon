@@ -224,6 +224,11 @@ while (my $line = <>) {
                 #print substr($man_url,0,11);
                 $result = "Base-Probe-Mismatch";
                 $vol_title = $pl_url;
+            } elsif ($pl_url !~ m/\/$param{volume_name}\//) {
+                print ("Probe_url:$pl_url");
+                print ("Volume:$param{volume_name}");
+                $result = "ProbeLink-BadVol";
+                $vol_title = $pl_url;
             } elsif (! $resp->is_success) {
                 $result = "BadProbeLink-" . $resp_pl->code();
                 $vol_title = $pl_url;
@@ -289,6 +294,11 @@ while (my $line = <>) {
                 #print substr($pl_url,0,11);
                 #print substr($man_url,0,11);
                 $result = "Base-Probe-Mismatch";
+                $vol_title = $pl_url;
+            } elsif ($pl_url !~ m/\/$param{volume_name}\//) {
+                print ("Probe_url:$pl_url");
+                print ("Volume:$param{volume_name}");
+                $result = "ProbeLink-BadVol";
                 $vol_title = $pl_url;
             } elsif (! $resp->is_success) {
                 $result = "BadProbeLink-" . $resp_pl->code();
