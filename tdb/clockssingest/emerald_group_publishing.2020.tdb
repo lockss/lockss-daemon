@@ -1256,7 +1256,7 @@
     au < crawling ; exists ; 2001 ; The British Journal of Forensic Practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2002 ; The British Journal of Forensic Practice Volume 4 ; 4 ; >
     au < crawling ; exists ; 2003 ; The British Journal of Forensic Practice Volume 5 ; 5 ; >
-    au < ready ; exists ; 2004 ; The British Journal of Forensic Practice Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2004 ; The British Journal of Forensic Practice Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; The British Journal of Forensic Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 ; >
     au < crawling ; exists ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 ; >
@@ -3848,7 +3848,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Studies in Graduate and Postdoctoral Education Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Studies in Graduate and Postdoctoral Education Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; Studies in Graduate and Postdoctoral Education Volume 11 ; 11 ; >
-    au < ready ; exists ; 2021 ; Studies in Graduate and Postdoctoral Education Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2021 ; Studies in Graduate and Postdoctoral Education Volume 12 ; 12 ; >
 
   }
 
@@ -4731,7 +4731,7 @@
     au < manifest ; exists ; 2009 ; The International Journal of Leadership in Public Services Volume 5 ; 5 ; >
     au < manifest ; exists ; 2010 ; The International Journal of Leadership in Public Services Volume 6 ; 6 ; >
     au < manifest ; exists ; 2011 ; The International Journal of Leadership in Public Services Volume 7 ; 7 ; >
-    au < ready ; exists ; 2012 ; The International Journal of Leadership in Public Services Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2012 ; The International Journal of Leadership in Public Services Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; The International Journal of Leadership in Public Services Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The International Journal of Leadership in Public Services Volume 10 ; 10 ; >
     
@@ -4772,7 +4772,7 @@
 
     au < manifest ; exists ; 2010 ; International Journal of Lean Six Sigma Volume 1 ; 1 ; >
     au < manifest ; exists ; 2011 ; International Journal of Lean Six Sigma Volume 2 ; 2 ; >
-    au < ready ; exists ; 2012 ; International Journal of Lean Six Sigma Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Lean Six Sigma Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Lean Six Sigma Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Lean Six Sigma Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Lean Six Sigma Volume 6 ; 6 ; >
@@ -4955,7 +4955,7 @@
     param[journal_issn] = 2046-6854
     comment[journal_id] = ijmce
 
-    au < ready ; exists ; 2012 ; International Journal of Mentoring and Coaching in Education Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Mentoring and Coaching in Education Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; International Journal of Mentoring and Coaching in Education Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Mentoring and Coaching in Education Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Mentoring and Coaching in Education Volume 4 ; 4 ; >
@@ -5203,7 +5203,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 2010 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 4 ; 4 ; >
     au < manifest ; exists ; 2011 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 5 ; 5 ; >
-    au < ready ; exists ; 2012 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 9 ; 9 ; >
@@ -5702,7 +5702,7 @@
     au < manifest ; exists ; 2008 ; International Journal of Sociology and Social Policy Volume 28 ; 28 ; >
     au < manifest ; exists ; 2009 ; International Journal of Sociology and Social Policy Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sociology and Social Policy Volume 30 ; 30 ; >
-    au < ready ; exists ; 2011 ; International Journal of Sociology and Social Policy Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2011 ; International Journal of Sociology and Social Policy Volume 31 ; 31 ; >
     au < crawling ; exists ; 2012 ; International Journal of Sociology and Social Policy Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; International Journal of Sociology and Social Policy Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Sociology and Social Policy Volume 34 ; 34 ; >
@@ -6028,7 +6028,7 @@
     au < manifest ; exists ; 2009 ; Journal of Accounting & Organizational Change Volume 5 ; 5 ; >
     au < manifest ; exists ; 2010 ; Journal of Accounting & Organizational Change Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Accounting & Organizational Change Volume 7 ; 7 ; >
-    au < ready ; exists ; 2012 ; Journal of Accounting & Organizational Change Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2012 ; Journal of Accounting & Organizational Change Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; Journal of Accounting & Organizational Change Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Accounting & Organizational Change Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Accounting & Organizational Change Volume 11 ; 11 ; >
@@ -7061,7 +7061,7 @@
     param[journal_issn] = 2045-2101
     comment[journal_id] = jepp
 
-    au < ready ; exists ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Entrepreneurship and Public Policy Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Entrepreneurship and Public Policy Volume 4 ; 4 ; >
@@ -7604,7 +7604,7 @@
     au < manifest ; exists ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; Journal of Indian Business Research Volume 3 ; 3 ; >
-    au < ready ; exists ; 2012 ; Journal of Indian Business Research Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2012 ; Journal of Indian Business Research Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Indian Business Research Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Indian Business Research Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Indian Business Research Volume 7 ; 7 ; >
@@ -7740,7 +7740,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of International Education in Business Volume 2 ; 2 ; >
     au < manifest ; exists ; 2010 ; Journal of International Education in Business Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; Journal of International Education in Business Volume 4 ; 4 ; >
-    au < ready ; exists ; 2012 ; Journal of International Education in Business Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2012 ; Journal of International Education in Business Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of International Education in Business Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of International Education in Business Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of International Education in Business Volume 8 ; 8 ; >
@@ -7819,7 +7819,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Investment Compliance Volume 19 ; 19 ; >
     au < crawling ; exists ; 2019 ; Journal of Investment Compliance Volume 20 ; 20 ; >
     au < frozen ; exists ; 2020 ; Journal of Investment Compliance Volume 21 ; 21 ; >
-    au < ready ; exists ; 2021 ; Journal of Investment Compliance Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2021 ; Journal of Investment Compliance Volume 22 ; 22 ; >
 
   }
 
@@ -8322,7 +8322,7 @@
     au < manifest ; exists ; 2008 ; Journal of Organizational Change Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 2009 ; Journal of Organizational Change Management Volume 22 ; 22 ; >
     au < manifest ; exists ; 2010 ; Journal of Organizational Change Management Volume 23 ; 23 ; >
-    au < ready ; exists ; 2011 ; Journal of Organizational Change Management Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2011 ; Journal of Organizational Change Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; Journal of Organizational Change Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Organizational Change Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Organizational Change Management Volume 27 ; 27 ; >
@@ -8565,7 +8565,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 17 ; 17 ; >
     au < crawling ; exists ; 2019 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 19 ; 19 ; >
-    au < ready ; exists ; 2021 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2021 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 20 ; 20 ; >
 
   }
 
@@ -8722,7 +8722,7 @@
 
     au < manifest ; exists ; 2010 ; Journal of Science and Technology Policy in China Volume 1 ; 1 ; >
     au < manifest ; exists ; 2011 ; Journal of Science and Technology Policy in China Volume 2 ; 2 ; >
-    au < ready ; exists ; 2012 ; Journal of Science and Technology Policy in China Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2012 ; Journal of Science and Technology Policy in China Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of Science and Technology Policy in China Volume 4 ; 4 ; >
 
   }
@@ -9013,7 +9013,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Workplace Learning Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Workplace Learning Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Workplace Learning Volume 30 ; 30 ; >
-    au < ready ; exists ; 2019 ; Journal of Workplace Learning Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2019 ; Journal of Workplace Learning Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Workplace Learning Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; Journal of Workplace Learning Volume 33 ; 33 ; >
 
@@ -9312,7 +9312,7 @@
     au < manifest ; exists ; 2008 ; Library Hi Tech Volume 26 ; 26 ; >
     au < manifest ; exists ; 2009 ; Library Hi Tech Volume 27 ; 27 ; >
     au < manifest ; exists ; 2010 ; Library Hi Tech Volume 28 ; 28 ; >
-    au < ready ; exists ; 2011 ; Library Hi Tech Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2011 ; Library Hi Tech Volume 29 ; 29 ; >
     au < crawling ; exists ; 2012 ; Library Hi Tech Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Library Hi Tech Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Library Hi Tech Volume 32 ; 32 ; >
@@ -9618,7 +9618,7 @@
     au < manifest ; exists ; 2008 ; Management Decision Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Management Decision Volume 47 ; 47 ; >
     au < manifest ; exists ; 2010 ; Management Decision Volume 48 ; 48 ; >
-    au < ready ; exists ; 2011 ; Management Decision Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2011 ; Management Decision Volume 49 ; 49 ; >
     au < crawling ; exists ; 2012 ; Management Decision Volume 50 ; 50 ; >
     au < crawling ; exists ; 2013 ; Management Decision Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Management Decision Volume 52 ; 52 ; >
@@ -9674,7 +9674,7 @@
     au < manifest ; exists ; 2009 ; Management of Environmental Quality: An International Journal Volume 20 ; 20 ; >
     au < manifest ; exists ; 2010 ; Management of Environmental Quality: An International Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2011 ; Management of Environmental Quality: An International Journal Volume 22 ; 22 ; >
-    au < ready ; exists ; 2012 ; Management of Environmental Quality: An International Journal Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2012 ; Management of Environmental Quality: An International Journal Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Management of Environmental Quality: An International Journal Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Management of Environmental Quality: An International Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Management of Environmental Quality: An International Journal Volume 26 ; 26 ; >
@@ -10126,7 +10126,7 @@
     param[journal_issn] = 2049-372X
     comment[journal_id] = medar
 
-    au < ready ; exists ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2012 ; Meditari Accountancy Research Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Meditari Accountancy Research Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Meditari Accountancy Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Meditari Accountancy Research Volume 23 ; 23 ; >
@@ -11476,7 +11476,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 19 ; 19 ; >
     au < crawling ; exists ; 2019 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 21 ; 21 ; >
-    au < ready ; exists ; 2021 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2021 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 22 ; 22 ; >
 
   }
 
@@ -11695,7 +11695,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Review of Accounting and Finance Volume 17 ; 17 ; >
     au < crawling ; exists ; 2019 ; Review of Accounting and Finance Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; Review of Accounting and Finance Volume 19 ; 19 ; >
-    au < ready ; exists ; 2021 ; Review of Accounting and Finance Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2021 ; Review of Accounting and Finance Volume 20 ; 20 ; >
 
   }
 
@@ -11935,7 +11935,7 @@
     au < manifest ; exists ; 2009 ; Society and Business Review Volume 4 ; 4 ; >
     au < manifest ; exists ; 2010 ; Society and Business Review Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Society and Business Review Volume 6 ; 6 ; >
-    au < ready ; exists ; 2012 ; Society and Business Review Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2012 ; Society and Business Review Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Society and Business Review Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Society and Business Review Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Society and Business Review Volume 10 ; 10 ; >
@@ -12005,7 +12005,7 @@
     comment[journal_id] = sajgbr
     #continued_by = 2398-628X
 
-    au < ready ; exists ; 2012 ; South Asian Journal of Global Business Research Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; South Asian Journal of Global Business Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; South Asian Journal of Global Business Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; South Asian Journal of Global Business Research Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; South Asian Journal of Global Business Research Volume 4 ; 4 ; >
@@ -12980,7 +12980,7 @@
 
     au < manifest ; exists ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 ; >
     au < manifest ; exists ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 ; >
-    au < ready ; exists ; 2012 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2012 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 11 ; 11 ; >
@@ -13084,7 +13084,7 @@
     au < manifest ; exists ; 2009 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 11 ; 11 ; >
     au < manifest ; exists ; 2011 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 12 ; 12 ; >
-    au < ready ; exists ; 2012 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2012 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 16 ; 16 ; >
