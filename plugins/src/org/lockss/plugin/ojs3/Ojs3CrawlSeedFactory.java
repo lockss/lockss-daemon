@@ -94,7 +94,9 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
        for (Iterator<String> iter = origUrls.iterator(); iter.hasNext();) {
          String url = iter.next();
          // insert start_stem between baseUrl and anything that follows
-         if (url.startsWith(baseUrl)) {
+         // There are cases "http" and "https" urls are embedded in the same html source
+         if (url.replace("https://", "").replace("http://", "").startsWith(
+                 baseUrl.replace("https://", "").replace("http://", ""))) {
         	 StringBuilder sb = new StringBuilder(baseUrl);
         	 sb.append(start_stem);
         	 sb.append(url.substring(afterBaseUrl));
