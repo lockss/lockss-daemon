@@ -6,9 +6,9 @@
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     param[base_url] = https://journals.vgtu.lt/
     implicit < status ; year ; name ; volume ; param[year] >
-    #OJS3
     attr[start_stem] = index.php/
-    # The following titles are preserves in TnF, content from 2017 and prior
+
+    # The following titles are preserved in TnF, content from 2017 and prior
     # Aviation, Creativity Studies, Engineering Structures and Technologies, Geodesy and Cartography,
     # International Journal of Strategic Property Management, Journal of Architecture and Urbanism,
     # Journal of Business Economics and Management, Journal of Civil Engineering and Management,
@@ -48,7 +48,6 @@
   }
 
   {
-
       title <
         name = Business, Management and Education  ;
         issn = 2029-7491 ;
@@ -57,7 +56,7 @@
 
       param[journal_id] = BME
 
-      au < manifest ; 2010 ; Business, Management and Education Volume 2010 ; 1 ; 2010 >
+      au < notReady ; 2010 ; Business, Management and Education Volume 2010 ; 1 ; 2010 > #failed to fetch start url http://journals.vgtu.lt/BME/gateway/lockss?year=2010
       au < manifest ; 2011 ; Business, Management and Education Volume 2011 ; 2 ; 2011 >
       au < manifest ; 2012 ; Business, Management and Education Volume 2012 ; 3 ; 2012 >
       au < manifest ; 2013 ; Business, Management and Education Volume 2013 ; 4 ; 2013 >
@@ -68,8 +67,19 @@
       au < released ; 2018 ; Business, Management and Education Volume 2018 ; 9 ; 2018 >
       au < released ; 2019 ; Business, Management and Education Volume 2019 ; 10 ; 2019 >
       au < released ; 2020 ; Business, Management and Education Volume 2020 ; 11 ; 2020 >
-      au < manifest ; 2021 ; Business, Management and Education Volume 2021 ; 12 ; 2021 >
+      #Changed name after 2020 to Business, Management and Economic Engineering
+  }
+  {
+      title <
+        name = Business, Management and Economic Engineering ;
+        issn = 2669-2481 ;
+        eissn = 2669-249X
+      >
 
+      param[journal_id] = BME
+
+      #Changed name after 2020 from Business, Management and Economic Engineering
+      au < manifest ; 2021 ; Business, Management and Education Volume 2021 ; 12 ; 2021 >
   }
 
   {
