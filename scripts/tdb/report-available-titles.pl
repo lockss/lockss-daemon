@@ -199,7 +199,7 @@ my $tdbCsvProduction = "tdbout_production.csv";
 # Name of TDB report with all unreleased AUs
 my $tdbCsvUnreleased = "tdbout_unreleased.csv";
 # Name of TDB report with all active AUs
-my $tdbCsvActive = "tdbout_active.csv"
+#my $tdbCsvActive = "tdbout_active.csv"
 
 # Name of KBART report with production titles created in kreports.sh to be used
 # here.
@@ -209,7 +209,7 @@ my $kbartProduction = "kbart_production_for_keepers.csv";
 my $kbartUnreleased = "kbart_unreleased_for_keepers.csv";
 # Name of KBART report with all active titles created in kreports.sh to be
 # used here.
-my $kbartUnreleased = "kbart_active_for_keepers.csv"
+#my $kbartUnreleased = "kbart_active_for_keepers.csv"
 
 # Name of the report listing all committed titles; consists of "Publisher","Title","ISSN","eISSN"
 my $committedTitles = "committed_titles.csv";
