@@ -33,6 +33,7 @@
 package org.lockss.plugin.clockss.eastview;
 
 import org.apache.commons.io.FilenameUtils;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -164,6 +165,16 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+
+      String publisherName = "East View Information Services";
+
+      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+      if (tdbau != null) {
+        publisherName =  tdbau.getPublisherName();
+      }
+
+      thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+
     }
   }
 }
