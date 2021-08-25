@@ -127,9 +127,9 @@
     param[base_url] = https://www.cmaj.ca/
 
     au < cma.CmaDrupalPlugin ; manifest ; 2017 ; Canadian Medical Association Journal Volume 189 ; 189 >
-    au < cma.CmaDrupalPlugin ; ready ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
+    au < cma.CmaDrupalPlugin ; released ; 2018 ; Canadian Medical Association Journal Volume 190 ; 190 >
     au < cma.CmaDrupalPlugin ; manifest ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
-    au < cma.CmaDrupalPlugin ; ready ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
+    au < cma.CmaDrupalPlugin ; released ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
     au < cma.CmaDrupalPlugin ; manifest ; 2021 ; Canadian Medical Association Journal Volume 193 ; 193 >
 
     }
@@ -148,11 +148,11 @@
 
       au < cma.CmaDrupalPlugin ; manifest ; 2013 ; CMAJ Open Volume 1 ; 1 >
       au < cma.CmaDrupalPlugin ; manifest ; 2014 ; CMAJ Open Volume 2 ; 2 >
-      au < cma.CmaDrupalPlugin ; ready ; 2015 ; CMAJ Open Volume 3 ; 3 >
+      au < cma.CmaDrupalPlugin ; released ; 2015 ; CMAJ Open Volume 3 ; 3 >
       au < cma.CmaDrupalPlugin ; manifest ; 2016 ; CMAJ Open Volume 4 ; 4 >
       au < cma.CmaDrupalPlugin ; manifest ; 2017 ; CMAJ Open Volume 5 ; 5 >
       au < cma.CmaDrupalPlugin ; manifest ; 2018 ; CMAJ Open Volume 6 ; 6 >
-      au < cma.CmaDrupalPlugin ; ready ; 2019 ; CMAJ Open Volume 7 ; 7 >
+      au < cma.CmaDrupalPlugin ; released ; 2019 ; CMAJ Open Volume 7 ; 7 >
       au < cma.CmaDrupalPlugin ; manifest ; 2020 ; CMAJ Open Volume 8 ; 8 >
       au < cma.CmaDrupalPlugin ; manifest ; 2021 ; CMAJ Open Volume 9 ; 9 >
     }
