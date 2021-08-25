@@ -1,0 +1,192 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>ready</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItApiPlugin</string>
+    </entry>
+    <entry>
+        <string>au_def_pause_time</string>
+        <long>3000</long>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Archive-It API Plugin, Base URL %s, Download URL %s, Organization %s, Collection %s", base_url, download_url, organization, collection</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Archive-It API Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_def_new_content_crawl</string>
+        <long>1209600000</long>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>download_url</key>
+                <displayName>Download URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>collection</key>
+                <displayName>Collection</displayName>
+                <description>Collection identifier</description>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>organization</key>
+                <displayName>Organization</displayName>
+                <description>Organization identifier</description>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>user_pass</key>
+                <displayName>Username:Password</displayName>
+                <type>10</type>
+                <size>30</size>
+                <definitional>false</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^%s(webdatafile|wasapi)", base_url</string>
+            <string>1,"^%sdownload/", download_url</string>
+            <!-- https://partner.archive-it.org/ -->
+            <string>1,".*\.archive-it\.org/"</string>
+            <string>1,".*%s", download_url_host</string>
+        </list>
+    </entry>
+    <!-- crawlseed supersedes this, but leave in just in case. -->
+    <entry>
+        <string>au_start_url</string>
+        <!-- https://warcs.archive-it.org/wasapi/v1/webdata?collection=10181 -->
+        <string>"%swasapi/v1/webdata?collection=%s", base_url, collection</string>
+    </entry>
+    <entry>
+        <string>au_permission_url</string>
+        <string>https://partner.archive-it.org/static/LOCKSS</string>
+    </entry>
+    <entry>
+        <string>au_feature_urls</string>https://partner.archive-it.org/, Collection 5060
+        <map>
+            <entry>
+                <!--  we don't want this to default to start_url because we need the synthetic url -->
+                <string>au_volume</string>
+                <string>org.lockss.plugin.archiveit.ArchiveItApiFeatureUrlHelperFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_access_url_factory</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItApiFeatureUrlHelperFactory</string>
+    </entry>
+    <entry>
+        <string>required_daemon_version</string>
+        <string>1.73.0</string>
+    </entry>
+    <entry>
+        <!-- Web Archiving Systems API (WASAPI) -->
+        <string>plugin_crawl_seed_factory</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItApiCrawlSeedFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItHtmlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.archiveit.ArchiveItApiUrlConsumerFactory</string>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <!-- https://partner.archive-it.org/ -->
+            <string>"archive\.org"</string>
+            <string>"archive-it\.org"</string>
+        </list>
+    </entry>
+    <entry>
+        <!-- https://partner.archive-it.org/login?next=/ -->
+        <string>au_redirect_to_login_url_pattern</string>
+        <string>"archive-it\.org/login\?.*", </string>
+    </entry>
+</map>
