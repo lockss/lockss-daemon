@@ -122,7 +122,7 @@ public class ScBooksHtmlMetadataExtractorFactory extends ScHtmlMetadataExtractor
             if (cit_value.contains("eISBN:")) {
               idx = cit_value.indexOf("eISBN:");
               if (idx >= 0) {
-                value = cit_value.substring(idx + "eISBN:".length());
+                value = cit_value.substring(idx + "eISBN:".length()).trim();
                 if (!StringUtil.isNullString(value)) {
                   am.putRaw("citation_eisbn", value);
                   if(log.isDebug3()) log.debug3("added eisbn: "+value);
@@ -133,7 +133,7 @@ public class ScBooksHtmlMetadataExtractorFactory extends ScHtmlMetadataExtractor
               // ISBN = cits[1]
               idx = cit_value.indexOf("ISBN13:");
               if (idx >= 0) {
-                value = cit_value.substring(idx + "ISBN13:".length());
+                value = cit_value.substring(idx + "ISBN13:".length()).trim();
                 if (!StringUtil.isNullString(value)) {
                   am.putRaw("citation_isbn", value);
                   if(log.isDebug3()) log.debug3("added isbn: "+value);
