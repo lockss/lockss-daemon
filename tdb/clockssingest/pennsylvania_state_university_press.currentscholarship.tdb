@@ -32,12 +32,12 @@
       au < manifest ; exists ; 2006 ; The Chaucer Review Volume 2006 ; 2006 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2007 ; The Chaucer Review Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; The Chaucer Review Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
       au < frozen ; exists ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2012 ; The Chaucer Review Volume 2012 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The Chaucer Review Volume 2013 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 > #java.lang.UnsupportedOperationException
+      au < finished ; manifest ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; The Chaucer Review Volume 2015 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; The Chaucer Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2017 ; The Chaucer Review Volume 2017 ; 2017 ; http://www.jstor.org/ ; >
@@ -60,7 +60,7 @@
       
  
       au < finished ; manifest ; 2010 ; Comparative Literature Studies Volume 47 ; 2010 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; Comparative Literature Studies Volume 49 ; 2012 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2013 ; Comparative Literature Studies Volume 50 ; 2013 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Comparative Literature Studies Volume 51 ; 2014 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
@@ -108,7 +108,7 @@
       param[journal_id] = edgallpoerev
 
       au < finished ; manifest ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 2010 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 2012 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
@@ -159,7 +159,7 @@
 
 
       au < frozen ; exists ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
