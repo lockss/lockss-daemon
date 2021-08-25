@@ -2319,7 +2319,7 @@
       au < exists ; exists ; 2017 ; 4 ; Journal of Philosophy in Schools Volume 2017 ; 2017 ; https://jps.bham.ac.uk/ ; >
       au < exists ; exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ ; >
       au < exists ; exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ ; >
-      au < ready ; exists ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ ; >
+      au < crawling ; exists ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ ; >
       au < manifest ; exists ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ ; >
 
   }
@@ -2377,7 +2377,7 @@
       comment[publisher] = University of New South Wales
 #      param[base_url] = https://jglobalbiosecurity.com/
 
-      au < ready ; exists ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ ; >
+      au < crawling ; exists ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ ; >
       au < frozen ; exists ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ ; >
       au < expected ; exists ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ ; >
 
