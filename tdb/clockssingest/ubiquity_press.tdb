@@ -901,7 +901,7 @@
       au < notReady ; exists ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; https://www.current-journal.com/ ; > #malformed start url
       au < notReady ; exists ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; https://www.current-journal.com/ ; > #malformed start url
       au < ready ; exists ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ ; >
-      au < crawling ; exists ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ ; >
+      au < frozen ; exists ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ ; >
       au < deepCrawl ; exists ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ ; >
       au < expected ; exists ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; https://www.current-journal.com/ ; >
 
@@ -2378,7 +2378,7 @@
 #      param[base_url] = https://jglobalbiosecurity.com/
 
       au < ready ; exists ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ ; >
-      au < crawling ; exists ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ ; >
+      au < frozen ; exists ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ ; >
       au < expected ; exists ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ ; >
 
   }
