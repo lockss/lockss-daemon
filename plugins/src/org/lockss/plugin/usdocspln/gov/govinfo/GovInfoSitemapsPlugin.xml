@@ -239,7 +239,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>au_def_pause_time</string>
-        <long>1111</long><!-- 9/10 of the previous rate = 10/9 of the previous interval of 1000 -->
+        <long>2000</long>
       </entry>
     </map>
   </entry>
