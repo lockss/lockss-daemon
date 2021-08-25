@@ -2386,9 +2386,9 @@
     param[journal_id] = 10.1055/s-00029202
     comment[years] =  2004-current
 
-   au < ready ; 2004 ; 2004 ; Indian Journal of Neurotrauma Volume 1 ; 1 >
+   au < released ; 2004 ; 2004 ; Indian Journal of Neurotrauma Volume 1 ; 1 >
    au < manifest ; 2005 ; 2005 ; Indian Journal of Neurotrauma Volume 2 ; 2 >
-   au < ready ; 2006 ; 2006 ; Indian Journal of Neurotrauma Volume 3 ; 3 >
+   au < released ; 2006 ; 2006 ; Indian Journal of Neurotrauma Volume 3 ; 3 >
    au < released ; 2007 ; 2007 ; Indian Journal of Neurotrauma Volume 4 ; 4 >
    au < released ; 2008 ; 2008 ; Indian Journal of Neurotrauma Volume 5 ; 5 >
    au < released ; 2009 ; 2009 ; Indian Journal of Neurotrauma Volume 6 ; 6 >
@@ -3603,8 +3603,8 @@
     param[journal_id] = 10.1055/s-00025515
     #years = 2004-current
 
-    au < ready ; 2004 ; 2004 ; kma - Das Gesundheitswirtschaftsmagazin Volume 9 ; 9 >
-    au < ready ; 2005 ; 2005 ; kma - Das Gesundheitswirtschaftsmagazin Volume 10 ; 10 >
+    au < released ; 2004 ; 2004 ; kma - Das Gesundheitswirtschaftsmagazin Volume 9 ; 9 >
+    au < released ; 2005 ; 2005 ; kma - Das Gesundheitswirtschaftsmagazin Volume 10 ; 10 >
     au < released ; 2006 ; 2006 ; kma - Das Gesundheitswirtschaftsmagazin Volume 11 ; 11 >
     au < released ; 2007 ; 2007 ; kma - Das Gesundheitswirtschaftsmagazin Volume 12 ; 12 >
     au < released ; 2008 ; 2008 ; kma - Das Gesundheitswirtschaftsmagazin Volume 13 ; 13 >
@@ -3671,7 +3671,7 @@
     au < doNotProcess ; 2003 ; 2003 ; Krankenhauspsychiatrie Volume 14 ; 14 >
     au < doNotProcess ; 2004 ; 2004 ; Krankenhauspsychiatrie Volume 15 ; 15 >
     au < doNotProcess ; 2005 ; 2005 ; Krankenhauspsychiatrie Volume 16 ; 16 >
-    au < ready ; 2006 ; 2006 ; Krankenhauspsychiatrie Volume 17 ; 17 >
+    au < released ; 2006 ; 2006 ; Krankenhauspsychiatrie Volume 17 ; 17 >
 
   }
 
@@ -4110,7 +4110,7 @@
     comment[years] = 2004-2005
 
     au < doNotProcess ; 2004 ; 2004 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 30 ; 30 >
-    au < ready ; 2005 ; 2005 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 31 ; 31 >
+    au < released ; 2005 ; 2005 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 31 ; 31 >
 
   }
 
@@ -4380,8 +4380,8 @@
     param[journal_id] = 10.1055/s-00000053
     comment[years] = 2000-2001
 
-    au < ready ; 2000 ; 2000 ; Perspectives in Vascular Surgery Volume 13 ; 13 >
-    au < ready ; 2001 ; 2001 ; Perspectives in Vascular Surgery Volume 14 ; 14 >
+    au < released ; 2000 ; 2000 ; Perspectives in Vascular Surgery Volume 13 ; 13 >
+    au < released ; 2001 ; 2001 ; Perspectives in Vascular Surgery Volume 14 ; 14 >
 
   }
 
@@ -4544,8 +4544,8 @@
     comment[years] = 2010-current
 
     au < manifest ; 2003 ; 2003 ; physiopraxis Volume 1 ; 1 >
-    au < ready ; 2004 ; 2004 ; physiopraxis Volume 2 ; 2 >
-    au < ready ; 2005 ; 2005 ; physiopraxis Volume 3 ; 3 >
+    au < released ; 2004 ; 2004 ; physiopraxis Volume 2 ; 2 >
+    au < released ; 2005 ; 2005 ; physiopraxis Volume 3 ; 3 >
     au < manifest ; 2006 ; 2006 ; physiopraxis Volume 4 ; 4 >
     au < released ; 2007 ; 2007 ; physiopraxis Volume 5 ; 5 >
     au < released ; 2008 ; 2008 ; physiopraxis Volume 6 ; 6 >
@@ -4974,10 +4974,10 @@
     param[journal_id] = 10.1055/s-00000064
     comment[years] = 2003-2008
 
-   au < ready ; 2003 ; 2003 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 29 ; 29 >
+   au < released ; 2003 ; 2003 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 29 ; 29 >
    au < manifest ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 >
    au < manifest ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 >
-   au < ready ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 >
+   au < released ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 >
    au < released ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 >
    au < released ; 2008 ; 2008 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 34 ; 34 >
 
@@ -5525,7 +5525,7 @@
    au < doNotProcess ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 >
    au < doNotProcess ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 >
    au < doNotProcess ; 2003 ; 2003 ; Seminars in Neurosurgery Volume 14 ; 14 >
-   au < ready ; 2004 ; 2004 ; Seminars in Neurosurgery Volume 15 ; 15 >
+   au < released ; 2004 ; 2004 ; Seminars in Neurosurgery Volume 15 ; 15 >
 
   }
 
@@ -5803,9 +5803,9 @@
     param[journal_id] = 10.1055/s-00000116
     comment[years] = 2001-2005
 
-    au < ready ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 >
+    au < released ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 >
     au < manifest ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 >
-    au < ready ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 >
+    au < released ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 >
     au < manifest ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 >
     au < released ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 >
 
@@ -5900,10 +5900,10 @@
     comment[years] = 1999-2004
 
     au < manifest ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 >
-    au < ready ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 >
-    au < ready ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 >
-    au < ready ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 >
-    au < ready ; 2003 ; 2003 ; Sleep and Breathing Volume 7 ; 7 >
+    au < released ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 >
+    au < released ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 >
+    au < released ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 >
+    au < released ; 2003 ; 2003 ; Sleep and Breathing Volume 7 ; 7 >
     au < manifest ; 2004 ; 2004 ; Sleep and Breathing Volume 8 ; 8 >
 
   }
@@ -6623,13 +6623,13 @@
     param[journal_id] = 10.1055/s-00000091
     comment[years] = 2000-2007
 
-    au < ready ; 2000 ; 2000 ; Viszeralchirurgie Volume 35 ; 35 >
-    au < ready ; 2001 ; 2001 ; Viszeralchirurgie Volume 36 ; 36 >
-    au < ready ; 2002 ; 2002 ; Viszeralchirurgie Volume 37 ; 37 >
-    au < ready ; 2003 ; 2003 ; Viszeralchirurgie Volume 38 ; 38 >
-    au < ready ; 2004 ; 2004 ; Viszeralchirurgie Volume 39 ; 39 >
-    au < ready ; 2005 ; 2005 ; Viszeralchirurgie Volume 40 ; 40 >
-    au < ready ; 2006 ; 2006 ; Viszeralchirurgie Volume 41 ; 41 >
+    au < released ; 2000 ; 2000 ; Viszeralchirurgie Volume 35 ; 35 >
+    au < released ; 2001 ; 2001 ; Viszeralchirurgie Volume 36 ; 36 >
+    au < released ; 2002 ; 2002 ; Viszeralchirurgie Volume 37 ; 37 >
+    au < released ; 2003 ; 2003 ; Viszeralchirurgie Volume 38 ; 38 >
+    au < released ; 2004 ; 2004 ; Viszeralchirurgie Volume 39 ; 39 >
+    au < released ; 2005 ; 2005 ; Viszeralchirurgie Volume 40 ; 40 >
+    au < released ; 2006 ; 2006 ; Viszeralchirurgie Volume 41 ; 41 >
     au < released ; 2007 ; 2007 ; Viszeralchirurgie Volume 42 ; 42 >
 
   }
@@ -7175,11 +7175,11 @@
     param[journal_id] = 10.1055/s-00000105
     comment[years] = 2000-2006
 
-    au < ready ; 2000 ; 2000 ; Zeitschrift für Gynäkologie Volume 122 ; 122 >
-    au < ready ; 2001 ; 2001 ; Zeitschrift für Gynäkologie Volume 123 ; 123 >
-    au < ready ; 2002 ; 2002 ; Zeitschrift für Gynäkologie Volume 124 ; 124 >
-    au < ready ; 2003 ; 2003 ; Zeitschrift für Gynäkologie Volume 125 ; 125 >
-    au < ready ; 2004 ; 2004 ; Zeitschrift für Gynäkologie Volume 126 ; 126 >
+    au < released ; 2000 ; 2000 ; Zeitschrift für Gynäkologie Volume 122 ; 122 >
+    au < released ; 2001 ; 2001 ; Zeitschrift für Gynäkologie Volume 123 ; 123 >
+    au < released ; 2002 ; 2002 ; Zeitschrift für Gynäkologie Volume 124 ; 124 >
+    au < released ; 2003 ; 2003 ; Zeitschrift für Gynäkologie Volume 125 ; 125 >
+    au < released ; 2004 ; 2004 ; Zeitschrift für Gynäkologie Volume 126 ; 126 >
     au < manifest ; 2005 ; 2005 ; Zeitschrift für Gynäkologie Volume 127 ; 127 >
     au < released ; 2006 ; 2006 ; Zeitschrift für Gynäkologie Volume 128 ; 128 >
 
@@ -7197,8 +7197,8 @@
     param[journal_id] = 10.1055/s-00000016
     comment[years] = 2000-2002
 
-    au < ready ; 2000 ; 2000 ; Zeitschrift für Kinderchirurgie Volume 9 ; 9 >
-    au < ready ; 2001 ; 2001 ; Zeitschrift für Kinderchirurgie Volume 10 ; 10 >
+    au < released ; 2000 ; 2000 ; Zeitschrift für Kinderchirurgie Volume 9 ; 9 >
+    au < released ; 2001 ; 2001 ; Zeitschrift für Kinderchirurgie Volume 10 ; 10 >
     au < manifest ; 2002 ; 2002 ; Zeitschrift für Kinderchirurgie Volume 11 ; 11 >
 
   }
@@ -7216,11 +7216,11 @@
     comment[years] = 2003-2008
 
     au < manifest ; 2003 ; 2003 ; Zeitschrift für Allgemeinmedizin Volume 79 ; 79 >
-    au < ready ; 2004 ; 2004 ; Zeitschrift für Allgemeinmedizin Volume 80 ; 80 >
-    au < ready ; 2005 ; 2005 ; Zeitschrift für Allgemeinmedizin Volume 81 ; 81 >
-    au < ready ; 2006 ; 2006 ; Zeitschrift für Allgemeinmedizin Volume 82 ; 82 >
+    au < released ; 2004 ; 2004 ; Zeitschrift für Allgemeinmedizin Volume 80 ; 80 >
+    au < released ; 2005 ; 2005 ; Zeitschrift für Allgemeinmedizin Volume 81 ; 81 >
+    au < released ; 2006 ; 2006 ; Zeitschrift für Allgemeinmedizin Volume 82 ; 82 >
     au < released ; 2007 ; 2007 ; Zeitschrift für Allgemeinmedizin Volume 83 ; 83 >
-    au < ready ; 2008 ; 2008 ; Zeitschrift für Allgemeinmedizin Volume 84 ; 84 >
+    au < released ; 2008 ; 2008 ; Zeitschrift für Allgemeinmedizin Volume 84 ; 84 >
 
   }
 
@@ -7317,7 +7317,7 @@
     comment[years] = 2007-current
 
     au < released ; 2007 ; 2007 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 1 ; 1 >
-    au < ready ; 2008 ; 2008 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 2 ; 2 >
+    au < released ; 2008 ; 2008 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 2 ; 2 >
     au < released ; 2009 ; 2009 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 3 ; 3 >
     au < released ; 2010 ; 2010 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 4 ; 4 >
     au < released ; 2011 ; 2011 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 5 ; 5 >
@@ -7373,8 +7373,8 @@
     param[journal_id] = 10.1055/s-00034922
     comment[years] = 2004-current
 
-    au < ready ; 2004 ; 2004 ; Arthritis und Rheuma Volume 24 ; 24 >
-    au < ready ; 2005 ; 2005 ; Arthritis und Rheuma Volume 25 ; 25 >
+    au < released ; 2004 ; 2004 ; Arthritis und Rheuma Volume 24 ; 24 >
+    au < released ; 2005 ; 2005 ; Arthritis und Rheuma Volume 25 ; 25 >
     au < manifest ; 2006 ; 2006 ; Arthritis und Rheuma Volume 26 ; 26 >
     au < released ; 2007 ; 2007 ; Arthritis und Rheuma Volume 27 ; 27 >
     au < released ; 2008 ; 2008 ; Arthritis und Rheuma Volume 28 ; 28 >
@@ -7423,15 +7423,15 @@
     param[journal_id] = 10.1055/s-00034925
     comment[years] = 2000-current
 
-    au < ready ; 2000 ; 2000 ; Hämostaseologie Volume 20 ; 20 >
-    au < ready ; 2001 ; 2001 ; Hämostaseologie Volume 21 ; 21 >
+    au < released ; 2000 ; 2000 ; Hämostaseologie Volume 20 ; 20 >
+    au < released ; 2001 ; 2001 ; Hämostaseologie Volume 21 ; 21 >
     au < manifest ; 2002 ; 2002 ; Hämostaseologie Volume 22 ; 22 >
-    au < ready ; 2003 ; 2003 ; Hämostaseologie Volume 23 ; 23 >
-    au < ready ; 2004 ; 2004 ; Hämostaseologie Volume 24 ; 24 >
+    au < released ; 2003 ; 2003 ; Hämostaseologie Volume 23 ; 23 >
+    au < released ; 2004 ; 2004 ; Hämostaseologie Volume 24 ; 24 >
     au < manifest ; 2005 ; 2005 ; Hämostaseologie Volume 25 ; 25 >
-    au < ready ; 2006 ; 2006 ; Hämostaseologie Volume 26 ; 26 >
+    au < released ; 2006 ; 2006 ; Hämostaseologie Volume 26 ; 26 >
     au < released ; 2007 ; 2007 ; Hämostaseologie Volume 27 ; 27 >
-    au < ready ; 2008 ; 2008 ; Hämostaseologie Volume 28 ; 28 >
+    au < released ; 2008 ; 2008 ; Hämostaseologie Volume 28 ; 28 >
     au < released ; 2009 ; 2009 ; Hämostaseologie Volume 29 ; 29 >
     au < released ; 2010 ; 2010 ; Hämostaseologie Volume 30 ; 30 >
     au < released ; 2011 ; 2011 ; Hämostaseologie Volume 31 ; 31 >
@@ -7517,12 +7517,12 @@
     param[journal_id] = 10.1055/s-00034917
     comment[years] = 2003-current
 
-    au < ready ; 2003 ; 2003 ; Kinder- und Jugendmedizin Volume 3 ; 3 >
-    au < ready ; 2004 ; 2004 ; Kinder- und Jugendmedizin Volume 4 ; 4 >
-    au < ready ; 2005 ; 2005 ; Kinder- und Jugendmedizin Volume 5 ; 5 >
-    au < ready ; 2006 ; 2006 ; Kinder- und Jugendmedizin Volume 6 ; 6 >
+    au < released ; 2003 ; 2003 ; Kinder- und Jugendmedizin Volume 3 ; 3 >
+    au < released ; 2004 ; 2004 ; Kinder- und Jugendmedizin Volume 4 ; 4 >
+    au < released ; 2005 ; 2005 ; Kinder- und Jugendmedizin Volume 5 ; 5 >
+    au < released ; 2006 ; 2006 ; Kinder- und Jugendmedizin Volume 6 ; 6 >
     au < released ; 2007 ; 2007 ; Kinder- und Jugendmedizin Volume 7 ; 7 >
-    au < ready ; 2008 ; 2008 ; Kinder- und Jugendmedizin Volume 8 ; 8 >
+    au < released ; 2008 ; 2008 ; Kinder- und Jugendmedizin Volume 8 ; 8 >
     au < released ; 2009 ; 2009 ; Kinder- und Jugendmedizin Volume 9 ; 9 >
     au < released ; 2010 ; 2010 ; Kinder- und Jugendmedizin Volume 10 ; 10 >
     au < released ; 2011 ; 2011 ; Kinder- und Jugendmedizin Volume 11 ; 11 >
@@ -7581,10 +7581,10 @@
     param[journal_id] = 10.1055/s-00034916
     comment[years] = 2003-current
 
-    au < ready ; 2003 ; 2003 ; Nervenheilkunde Volume 22 ; 22 >
-    au < ready ; 2004 ; 2004 ; Nervenheilkunde Volume 23 ; 23 >
+    au < released ; 2003 ; 2003 ; Nervenheilkunde Volume 22 ; 22 >
+    au < released ; 2004 ; 2004 ; Nervenheilkunde Volume 23 ; 23 >
     au < manifest ; 2005 ; 2005 ; Nervenheilkunde Volume 24 ; 24 >
-    au < ready ; 2006 ; 2006 ; Nervenheilkunde Volume 25 ; 25 >
+    au < released ; 2006 ; 2006 ; Nervenheilkunde Volume 25 ; 25 >
     au < released ; 2007 ; 2007 ; Nervenheilkunde Volume 26 ; 26 >
     au < manifest ; 2008 ; 2008 ; Nervenheilkunde Volume 27 ; 27 >
     au < released ; 2009 ; 2009 ; Nervenheilkunde Volume 28 ; 28 >
@@ -7615,15 +7615,15 @@
     param[journal_id] = 10.1055/s-00034924
     comment[years] = 1961-current
 
-    au < ready ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 >
-    au < ready ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 >
-    au < ready ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 >
-    au < ready ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 >
+    au < released ; 2000 ; 2000 ; Nuklearmedizin Volume 39 ; 39 >
+    au < released ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 >
+    au < released ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 >
+    au < released ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 >
     au < manifest ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 >
-    au < ready ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 >
+    au < released ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 >
     au < released ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 >
     au < released ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 >
-    au < ready ; 2008 ; 2008 ; Nuklearmedizin Volume 47 ; 47 >
+    au < released ; 2008 ; 2008 ; Nuklearmedizin Volume 47 ; 47 >
     au < released ; 2009 ; 2009 ; Nuklearmedizin Volume 48 ; 48 >
     au < released ; 2010 ; 2010 ; Nuklearmedizin Volume 49 ; 49 >
     au < released ; 2011 ; 2011 ; Nuklearmedizin Volume 50 ; 50 >
@@ -7679,7 +7679,7 @@
     param[journal_id] = 10.1055/s-00034914
     comment[years] = 2008-current
 
-    au < ready ; 2008 ; 2008 ; Osteologie Volume 17 ; 17 >
+    au < released ; 2008 ; 2008 ; Osteologie Volume 17 ; 17 >
     au < released ; 2009 ; 2009 ; Osteologie Volume 18 ; 18 >
     au < released ; 2010 ; 2010 ; Osteologie Volume 19 ; 19 >
     au < released ; 2011 ; 2011 ; Osteologie Volume 20 ; 20 >
@@ -7724,7 +7724,7 @@
     param[journal_id] = 10.1055/s-00034913
     comment[years] = 1998-current
 
-    au < ready ; 2008 ; 2008 ; Phlebologie Volume 37 ; 37 >
+    au < released ; 2008 ; 2008 ; Phlebologie Volume 37 ; 37 >
     au < released ; 2009 ; 2009 ; Phlebologie Volume 38 ; 38 >
     au < released ; 2010 ; 2010 ; Phlebologie Volume 39 ; 39 >
     au < released ; 2011 ; 2011 ; Phlebologie Volume 40 ; 40 >
@@ -7753,9 +7753,9 @@
     param[journal_id] = 10.1055/s-00033287
     comment[years] = 2004-current
 
-    au < ready ; 2004 ; 2004 ; Revista Iberoamericana de Cirugía de la Mano Volume 32 ; 32 >
-    au < ready ; 2005 ; 2005 ; Revista Iberoamericana de Cirugía de la Mano Volume 33 ; 33 >
-    au < ready ; 2006 ; 2006 ; Revista Iberoamericana de Cirugía de la Mano Volume 34 ; 34 >
+    au < released ; 2004 ; 2004 ; Revista Iberoamericana de Cirugía de la Mano Volume 32 ; 32 >
+    au < released ; 2005 ; 2005 ; Revista Iberoamericana de Cirugía de la Mano Volume 33 ; 33 >
+    au < released ; 2006 ; 2006 ; Revista Iberoamericana de Cirugía de la Mano Volume 34 ; 34 >
     au < released ; 2007 ; 2007 ; Revista Iberoamericana de Cirugía de la Mano Volume 35 ; 35 >
     au < released ; 2008 ; 2008 ; Revista Iberoamericana de Cirugía de la Mano Volume 36 ; 36 >
     au < released ; 2009 ; 2009 ; Revista Iberoamericana de Cirugía de la Mano Volume 37 ; 37 >
@@ -7827,8 +7827,8 @@
     param[journal_id] = 10.1055/s-00034912
     comment[years] = 2003-current
 
-    au < ready ; 2003 ; 2003 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 31 ; 31 >
-    au < ready ; 2004 ; 2004 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 32 ; 32 >
+    au < released ; 2003 ; 2003 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 31 ; 31 >
+    au < released ; 2004 ; 2004 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 32 ; 32 >
     au < manifest ; 2005 ; 2005 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 33 ; 33 >
     au < released ; 2006 ; 2006 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 34 ; 34 >
     au < released ; 2007 ; 2007 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 35 ; 35 >
@@ -7861,12 +7861,12 @@
     param[journal_id] = 10.1055/s-00034911
     comment[years] = 2003-current
 
-    au < ready ; 2003 ; 2003 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 1 ; 1 >
-    au < ready ; 2004 ; 2004 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 2 ; 2 >
-    au < ready ; 2005 ; 2005 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 3 ; 3 >
-    au < ready ; 2006 ; 2006 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 4 ; 4 >
+    au < released ; 2003 ; 2003 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 1 ; 1 >
+    au < released ; 2004 ; 2004 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 2 ; 2 >
+    au < released ; 2005 ; 2005 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 3 ; 3 >
+    au < released ; 2006 ; 2006 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 4 ; 4 >
     au < released ; 2007 ; 2007 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 5 ; 5 >
-    au < ready ; 2008 ; 2008 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 6 ; 6 >
+    au < released ; 2008 ; 2008 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 6 ; 6 >
     au < released ; 2009 ; 2009 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 7 ; 7 >
     au < released ; 2010 ; 2010 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 8 ; 8 >
     au < released ; 2011 ; 2011 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 9 ; 9 >
