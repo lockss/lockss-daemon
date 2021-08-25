@@ -142,7 +142,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"%swasapi/v1/webdata?collection=%s", base_url, collection</string>
     </entry>
     <entry>
-        <string>au_feature_urls</string>
+        <string>au_permission_url</string>
+        <string>https://partner.archive-it.org/static/LOCKSS</string>
+    </entry>
+    <entry>
+        <string>au_feature_urls</string>https://partner.archive-it.org/, Collection 5060
         <map>
             <entry>
                 <!--  we don't want this to default to start_url because we need the synthetic url -->
