@@ -67,11 +67,11 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         String baseUrl = "https://journals.vgtu.lt/";
         String journal_id = "BME";
         String start_stem = "index.php/";
-        String url =  "https://journals.vgtu.lt/BTP/gateway/lockss?year=2012";
+        String url =  "https://journals.vgtu.lt/BME/gateway/lockss?year=2012";
 
         String expected = getStartUrl(baseUrl, url, start_stem);
 
-        assertEquals("https://journals.vgtu.lt/index.php/BTP/gateway/lockss?year=2012", expected);
+        assertEquals("https://journals.vgtu.lt/index.php/BME/gateway/lockss?year=2012", expected);
     }
     
     public void testAddStartStem2() {
@@ -79,11 +79,11 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         String baseUrl = "https://journals.vgtu.lt/";
         String journal_id = "BME";
         String start_stem = "index.php/";
-        String url =  "http://journals.vgtu.lt/BTP/gateway/lockss?year=2012";
+        String url =  "http://journals.vgtu.lt/BME/gateway/lockss?year=2012";
 
         String expected = getStartUrl(baseUrl, url, start_stem);
 
-        assertEquals("https://journals.vgtu.lt/index.php/BTP/gateway/lockss?year=2012", expected);
+        assertEquals("https://journals.vgtu.lt/index.php/BME/gateway/lockss?year=2012", expected);
     }
 
     public void testAddStartStem3() {
@@ -91,11 +91,11 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         String baseUrl = "http://journals.vgtu.lt/";
         String journal_id = "BME";
         String start_stem = "index.php/";
-        String url =  "http://journals.vgtu.lt/BTP/gateway/lockss?year=2012";
+        String url =  "http://journals.vgtu.lt/BME/gateway/lockss?year=2012";
 
         String expected = getStartUrl(baseUrl, url, start_stem);
 
-        assertEquals("http://journals.vgtu.lt/index.php/BTP/gateway/lockss?year=2012", expected);
+        assertEquals("http://journals.vgtu.lt/index.php/BME/gateway/lockss?year=2012", expected);
     }
 
     public void testAddStartStem4() {
@@ -103,11 +103,23 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         String baseUrl = "http://journals.vgtu.lt/";
         String journal_id = "BME";
         String start_stem = "index.php/";
-        String url =  "https://journals.vgtu.lt/BTP/gateway/lockss?year=2012";
+        String url =  "https://journals.vgtu.lt/BME/gateway/lockss?year=2012";
 
         String expected = getStartUrl(baseUrl, url, start_stem);
 
-        assertEquals("http://journals.vgtu.lt/index.php/BTP/gateway/lockss?year=2012", expected);
+        assertEquals("http://journals.vgtu.lt/index.php/BME/gateway/lockss?year=2012", expected);
+    }
+
+    public void testAddStartStem5() {
+
+        String baseUrl = "https://scholarworks.iu.edu/";
+        String journal_id = "iusbanalecta";
+        String start_stem = "journals/index.php/";
+        String url =  "https://scholarworks.iu.edu/iusbanalecta/gateway/lockss?year=2012";
+
+        String expected = getStartUrl(baseUrl, url, start_stem);
+
+        assertEquals("https://scholarworks.iu.edu/journals/index.php/iusbanalecta/gateway/lockss?year=2012", expected);
     }
 
     public String getProtocal(String url) {
