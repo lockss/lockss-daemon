@@ -29,10 +29,8 @@
     {
         plugin = org.lockss.plugin.archiveit.ArchiveItApiPlugin
         param[base_url] = https://partner.archive-it.org/
-        param[download_url] = https://archive.org/
         # This is pre-processed by add_nondef_param
         hidden[up] = UP
-        #nondefparam[content_domain] = partner.archive-it.org
         param[organization] = 730
         implicit < status ; name ; param[collection] >
 
