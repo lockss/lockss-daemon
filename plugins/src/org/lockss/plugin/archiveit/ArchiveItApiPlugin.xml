@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Archive-It Plugin, Base URL %s, Download URL %s, Organization %s, Collection %s", base_url, download_url, organization, collection</string>
+        <string>"Archive-It Plugin, Base URL %s, Organization %s, Collection %s", base_url, organization, collection</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -89,15 +89,6 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>download_url</key>
-                <displayName>Download URL</displayName>
-                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-                <type>3</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
                 <key>collection</key>
                 <displayName>Collection</displayName>
                 <description>Collection identifier</description>
@@ -129,10 +120,12 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_crawlrules</string>
         <list>
             <string>1,"^%s(webdatafile|wasapi)", base_url</string>
-            <string>1,"^%sdownload/", download_url</string>
-            <!-- https://partner.archive-it.org/ -->
-            <string>1,".*\.archive-it\.org/"</string>
-            <string>1,".*%s", download_url_host</string>
+            <string>1,"^https://warcs\.archive-it\.org/"</string>
+            <string>1,"^https://archive\.org/download/"</string>
+            <!-- redirects to subdomains with this pattern occur
+                ia903003.us.archive.org/31/items
+             -->
+            <string>1,".*\.us\.archive\.org/[0-9]*/items/"</string>
         </list>
     </entry>
     <!-- crawlseed supersedes this, but leave in just in case. -->
@@ -146,7 +139,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>https://partner.archive-it.org/static/LOCKSS</string>
     </entry>
     <entry>
-        <string>au_feature_urls</string>https://partner.archive-it.org/, Collection 5060
+        <string>au_feature_urls</string>
         <map>
             <entry>
                 <!--  we don't want this to default to start_url because we need the synthetic url -->
