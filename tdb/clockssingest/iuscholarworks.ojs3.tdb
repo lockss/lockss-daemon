@@ -40,20 +40,42 @@
       name = Analecta ;
       eissn = 2574-1799
     >
-
+      #Name is Realm for 1965-1967, Current 1991-1994, Visceral Pagoda 1996. Otherwise Analecta.
+      #Missing years: 1970-1972
       param[journal_id] = iusbanalecta
+
+      au < manifest ; exists ; 1965 ; 1965 ; Realm Volume 1965 ; 1965 ; >
+      au < manifest ; exists ; 1966 ; 1966 ; Realm Volume 1966 ; 1966 ; >
+      au < manifest ; exists ; 1967 ; 1967 ; Realm Volume 1967 ; 1967 ; >
+      au < manifest ; exists ; 1968 ; 1968 ; Analecta Volume 1968 ; 1968 ; >
+      au < manifest ; exists ; 1969 ; 1969 ; Analecta Volume 1969 ; 1969 ; >
+
+      au < manifest ; exists ; 1973 ; 1973 ; Analecta Volume 1973 ; 1973 ; >
+      au < manifest ; exists ; 1974 ; 1974 ; Analecta Volume 1974 ; 1974 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; Analecta Volume 1975 ; 1975 ; >
+
+      au < manifest ; exists ; 1979 ; 1979 ; Analecta Volume 1979 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Analecta Volume 1980 ; 1980 ; >
 
       au < manifest ; exists ; 1983 ; 1983 ; Analecta Volume 15 ; 15 ; >
       au < manifest ; exists ; 1984 ; 1984 ; Analecta Volume 16 ; 16 ; >
       au < manifest ; exists ; 1985 ; 1985 ; Analecta Volume 17 ; 17 ; >
       au < manifest ; exists ; 1986 ; 1986 ; Analecta Volume 18 ; 18 ; >
       au < manifest ; exists ; 1987 ; 1987 ; Analecta Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Analecta Volume 1988 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Analecta Volume 1989 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Analecta Volume 1990 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Current Volume 1991 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Current Volume 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Current Volume 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Current Volume 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Analecta Volume 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Visceral Pagoda Volume 1996 ; 1996 ; >
       au < manifest ; exists ; 1997 ; 1997 ; Analecta Volume 29 ; 29 ; >
       au < manifest ; exists ; 1998 ; 1998 ; Analecta Volume 30 ; 30 ; >
       au < manifest ; exists ; 1999 ; 1999 ; Analecta Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; Analecta Volume 31.5 ; 31.5 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; Analecta Volume 32 [2001] ; 32 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Analecta Volume 32 [2002] ; 32 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Analecta Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Analecta Volume 32 ; 32 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Analecta Volume 33 ; 33 ; >
       au < crawling ; exists ; 2004 ; 2004 ; Analecta Volume 34 ; 34 ; >
       au < frozen ; exists ; 2005 ; 2005 ; Analecta Volume 35 ; 35 ; >
@@ -71,25 +93,6 @@
       au < frozen ; exists ; 2017 ; 2017 ; Analecta Volume 47 ; 47 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Analecta Volume 48 ; 48 ; >
       #No more published
-
-  }
-
-  {
-    title <
-      name = Artifact ;
-      issn = 1749-3463 ;
-      eissn = 1749-3471
-    >
-
-      param[journal_id] = artifact
-      
-      au < frozen ; exists ; 2007 ; 2007 ; Artifact Volume 1 ; 1 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Artifact Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Artifact Volume 3 (2013) ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Artifact Volume 3 (2015) ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Artifact Volume 4 ; 4 ; >
-      #no more published
 
   }
 
@@ -143,24 +146,6 @@
 
   {
     title <
-      name = Black Diaspora Review ;
-      eissn = 2334-1521 
-    >
-
-      param[journal_id] = bdr
-
-      au < finished ; manifest ; 2009 ; 2009 ; Black Diaspora Review Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2010 ; 2010 ; Black Diaspora Review Volume 1-2 ; 1-2 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; Black Diaspora Review Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Black Diaspora Review Volume 3 (2012) ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Black Diaspora Review Volume 3 (2013) ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Black Diaspora Review Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Black Diaspora Review Volume 5 ; 5 ; >
-      #no more published
-  }
-
-  {
-    title <
       name = Digest: A Journal of Foodways and Culture ;
       eissn = 2329-4787
     >
@@ -187,7 +172,8 @@
       au < finished ; manifest ; 2017 ; 2017 ; Ethnomusicology Translations Volume 5-6 ; 5-6 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; Ethnomusicology Translations Volume 7-8 ; 7-8 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Ethnomusicology Translations Volume 9-10 ; 9-10 ; >
-      #no more published
+      au < manifest ; exists ; 2020 ; 2020 ; Ethnomusicology Translations Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Ethnomusicology Translations Volume 11-12 ; 11-12 ; >
   }
 
   {
@@ -225,6 +211,33 @@
       comment[continued_by] = 2374-3271
       # content available from 1970 volume 1 to 1999 volume 30
 
+      au < manifest ; exists ; 1970 ; 1970 ; Hindsight: newsletter of the Optometric Historical Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1971 ; 1971 ; Hindsight: newsletter of the Optometric Historical Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; Hindsight: newsletter of the Optometric Historical Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; Hindsight: newsletter of the Optometric Historical Society Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1974 ; 1974 ; Hindsight: newsletter of the Optometric Historical Society Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; Hindsight: newsletter of the Optometric Historical Society Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Hindsight: newsletter of the Optometric Historical Society Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; Hindsight: newsletter of the Optometric Historical Society Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Hindsight: newsletter of the Optometric Historical Society Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Hindsight: newsletter of the Optometric Historical Society Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Hindsight: newsletter of the Optometric Historical Society Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; Hindsight: newsletter of the Optometric Historical Society Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Hindsight: newsletter of the Optometric Historical Society Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Hindsight: newsletter of the Optometric Historical Society Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Hindsight: newsletter of the Optometric Historical Society Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; Hindsight: newsletter of the Optometric Historical Society Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; Hindsight: newsletter of the Optometric Historical Society Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Hindsight: newsletter of the Optometric Historical Society Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Hindsight: newsletter of the Optometric Historical Society Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Hindsight: newsletter of the Optometric Historical Society Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Hindsight: newsletter of the Optometric Historical Society Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Hindsight: newsletter of the Optometric Historical Society Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Hindsight: newsletter of the Optometric Historical Society Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Hindsight: newsletter of the Optometric Historical Society Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Hindsight: newsletter of the Optometric Historical Society Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Hindsight: newsletter of the Optometric Historical Society Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Hindsight: newsletter of the Optometric Historical Society Volume 27 ; 27 ; >
       au < manifest ; exists ; 1997 ; 1997 ; Hindsight: newsletter of the Optometric Historical Society Volume 28 ; 28 ; >
       au < manifest ; exists ; 1998 ; 1998 ; Hindsight: newsletter of the Optometric Historical Society Volume 29 ; 29 ; >
       au < manifest ; exists ; 1999 ; 1999 ; Hindsight: newsletter of the Optometric Historical Society Volume 30 ; 30 ; >
@@ -255,73 +268,6 @@
       au < frozen ; exists ; 2019 ; 2019 ; The Hoosier Science Teacher Volume 42 ; 42 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
       au < expected ; exists ; 2021 ; 2021 ; The Hoosier Science Teacher Volume 44 ; 44 ; >
-
-  }
-
-  {
-    title <
-      name = Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies ;
-      eissn = 2158-9089 
-    >
-
-      param[journal_id] = illuminare
-
-      au < finished ; manifest ; 2011 ; 2011 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 10 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 11 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 14 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 15 ; 15 ; >
-      #no more published
-
-  }
-
-  {
-    title <
-      name = Indiana University Bookman ;
-      issn = 0019-6800 ;
-      eissn = 2373-9339
-    >
-
-      param[journal_id] = bookman
-      # published from 1956 to 1988
-
-      au < manifest ; exists ; 1956 ; 1956 ; Indiana University Bookman Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1957 ; 1957 ; Indiana University Bookman Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1958 ; 1958 ; Indiana University Bookman Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1960 ; 1960 ; Indiana University Bookman Volume 4-5 ; 4-5 ; >
-      au < manifest ; exists ; 1963 ; 1963 ; Indiana University Bookman Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1965 ; 1965 ; Indiana University Bookman Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1967 ; 1967 ; Indiana University Bookman Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; Indiana University Bookman Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1969 ; 1969 ; Indiana University Bookman Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1973 ; 1973 ; Indiana University Bookman Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1977 ; 1977 ; Indiana University Bookman Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1979 ; 1979 ; Indiana University Bookman Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1982 ; 1982 ; Indiana University Bookman Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1983 ; 1983 ; Indiana University Bookman Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Indiana University Bookman Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Indiana University Bookman Volume 17 ; 17 ; >
-
-  }
-
-  {
-    title <
-      name = Inter-American Journal of Education for Democracy ;
-      eissn = 1941-7799
-    >
-
-      param[journal_id] = ried
-      # no issue in 2011
-
-      au < frozen ; exists ; 2007 ; 2007 ; Inter-American Journal of Education for Democracy Volume 1 (2007) ; 1 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Inter-American Journal of Education for Democracy Volume 1 (2008) ; 1 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Inter-American Journal of Education for Democracy Volume 5 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Inter-American Journal of Education for Democracy Volume 6 ; 6 ; >
 
   }
 
@@ -458,9 +404,22 @@
       eissn = 2334-1548
     >
       param[journal_id] = jiuspa
-      # no issue in 2007-2009
+      # no issue in 2007-2009. Added
 
+      au < manifest ; exists ; 1997 ; 1997 ; Journal of the Indiana University Student Personnel Association Volume 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Journal of the Indiana University Student Personnel Association Volume 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Journal of the Indiana University Student Personnel Association Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Journal of the Indiana University Student Personnel Association Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Journal of the Indiana University Student Personnel Association Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Journal of the Indiana University Student Personnel Association Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Journal of the Indiana University Student Personnel Association Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Journal of the Indiana University Student Personnel Association Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Journal of the Indiana University Student Personnel Association Volume 2005 ; 2005 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Journal of the Indiana University Student Personnel Association Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Journal of the Indiana University Student Personnel Association Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Journal of the Indiana University Student Personnel Association Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Journal of the Indiana University Student Personnel Association Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Journal of the Indiana University Student Personnel Association Volume 2010 ; 2010 ; >
       au < finished ; manifest ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 ; >
@@ -470,6 +429,8 @@
       au < frozen ; exists ; 2017 ; 2017 ; Journal of the Indiana University Student Personnel Association Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of the Indiana University Student Personnel Association Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Journal of the Indiana University Student Personnel Association Volume 2020 ; 2020 ; >
+
       #no 2020 as of 12/5/2020
 
   }
@@ -517,51 +478,6 @@
       #no 2018
       au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Student Research at Indiana University East Volume 1 (2019) ; 1 ; >
       #no 2020 as of 12/5/2020
-  }
-
-  {
-    title <
-      name = Liberian Studies ;
-      eissn = 0024-1989
-    >
-
-      param[journal_id] = lsj
-
-      au < manifest ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; Liberian Studies Journal Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1975 ; 1975 ; Liberian Studies Journal Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1976 ; 1976 ; Liberian Studies Journal Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1978 ; 1978 ; Liberian Studies Journal Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1980 ; 1980 ; Liberian Studies Journal Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1982 ; 1982 ; Liberian Studies Journal Volume 10 (1982) ; 10 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; Liberian Studies Journal Volume 10 (1984) ; 10 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; Liberian Studies Journal Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Liberian Studies Journal Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Liberian Studies Journal Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; Liberian Studies Journal Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; Liberian Studies Journal Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; Liberian Studies Journal Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; Liberian Studies Journal Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; Liberian Studies Journal Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1994 ; 1994 ; Liberian Studies Journal Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1995 ; 1995 ; Liberian Studies Journal Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1996 ; 1996 ; Liberian Studies Journal Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1997 ; 1997 ; Liberian Studies Journal Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1998 ; 1998 ; Liberian Studies Journal Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; Liberian Studies Journal Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; Liberian Studies Journal Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; Liberian Studies Journal Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Liberian Studies Journal Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Liberian Studies Journal Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; Liberian Studies Journal Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; Liberian Studies Journal Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Liberian Studies Journal Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; Liberian Studies Journal Volume 32 ; 32 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Liberian Studies Journal Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; 2009 ; Liberian Studies Journal Volume 34 ; 34 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2010 ; 2010 ; Liberian Studies Journal Volume 35 ; 35 ; reingest3.clockss.org:8083 >
-
   }
 
   {
@@ -615,7 +531,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; New Directions in Folklore Volume 15 ; 15 ; >
       au < finished ; manifest ; 2018 ; 2018 ; New Directions in Folklore Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; New Directions in Folklore Volume 17 ; 17 ; >
-      #no 2020 as of 12/5/2020
+      #no more published as of 2021-08-26
 
   }
 
@@ -634,71 +550,7 @@
       au < frozen ; exists ; 2017 ; 2017 ; New Views on Gender Volume 18 [2017] ; 18 ; >
       au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; New Views on Gender Volume 18 [2018] ; 18 ; >
       au < frozen ; exists ; 2019 ; 2019 ; New Views on Gender Volume 19 ; 19 ; >
-
-  }
-
-  {
-    title <
-      name = Olifant ;
-      issn = 0381-9132 ;
-      eissn = 1548-3037
-    >
-
-      param[journal_id] = olifant
-
-      au < manifest ; exists ; 1973 ; 1973 ; Olifant Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1974 ; 1974 ; Olifant Volume 1-2 ; 1-2 ; >
-      au < manifest ; exists ; 1975 ; 1975 ; Olifant Volume 2-3 ; 2-3 ; >
-      au < manifest ; exists ; 1976 ; 1976 ; Olifant Volume 3-4 ; 3-4 ; >
-      au < manifest ; exists ; 1977 ; 1977 ; Olifant Volume 4-5 ; 4-5 ; >
-      au < manifest ; exists ; 1978 ; 1978 ; Olifant Volume 5-6 ; 5-6 ; >
-      au < manifest ; exists ; 1979 ; 1979 ; Olifant Volume 6-7 ; 6-7 ; >
-      au < manifest ; exists ; 1980 ; 1980 ; Olifant Volume 7-8 ; 7-8 ; >
-      au < manifest ; exists ; 1981 ; 1981 ; Olifant Volume 8-9 ; 8-9 ; >
-      au < manifest ; exists ; 1982 ; 1982 ; Olifant Volume 9-10 ; 9-10 ; >
-      au < manifest ; exists ; 1983 ; 1983 ; Olifant Volume 10 (1983) ; 10 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; Olifant Volume 10 (1984) ; 10 ; >
-      
-      au < manifest ; exists ; 1986 ; 1986 ; Olifant Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Olifant Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Olifant Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; Olifant Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; Olifant Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; Olifant Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; Olifant Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; Olifant Volume 17-18 ; 17-18 ; >
-      au < manifest ; exists ; 1994 ; 1994 ; Olifant Volume 19 (1994) ; 19 ; >
-      au < manifest ; exists ; 1995 ; 1995 ; Olifant Volume 19 (1995) ; 19 ; >
-      au < manifest ; exists ; 1996 ; 1996 ; Olifant Volume 20-21 ; 20-21 ; >
-      au < manifest ; exists ; 1997 ; 1997 ; Olifant Volume 21 ; 21 ; >
-      
-      au < manifest ; exists ; 2003 ; 2003 ; Olifant Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; Olifant Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; Olifant Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Olifant Volume 25 ; 25 ; >
-      
-      au < finished ; manifest ; 2010 ; 2010 ; Olifant Volume 26 (2010) ; 26 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; Olifant Volume 26 (2011) ; 26 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; 2012 ; Olifant Volume 27 ; 27 ; reingest2.clockss.org:8085 >
-
-  }
-
-  {
-    title <
-      name = The Workshop ;
-      eissn = 2372-5931 
-    >
-    
-      param[journal_id] = 18cy
-
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Workshop Volume 2013 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Workshop Volume 2014 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Workshop Volume 2015 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
-      au < notReady ; exists ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; >#Not a typo. Really 2018
-      au < frozen ; exists ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; >#Not a typo. Really 2017
-      #no 2020 as of 12/5/2020
+      #no more published as of 2021-08-26
 
   }
 
@@ -710,6 +562,7 @@
     
       param[journal_id] = BB
       #eisbn = 978-0-89357-793-3
+      # Issues of this annual anthology are embargoed for two years after print publication in Rwanda.
 
       au < finished ; manifest ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; 2010 ; The World is Our Home Volume 2 ; 2 ; reingest4.clockss.org:8082 >
@@ -719,6 +572,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; The World is Our Home Volume 6 ; 6 ; >
       au < frozen ; exists ; 2015 ; 2015 ; The World is Our Home Volume 7 ; 7 ; >
       au < frozen ; exists ; 2016 ; 2016 ; The World is Our Home Volume 8 ; 8 ; >
+      #no more published as of 2021-08-26
 
   }
 
@@ -845,6 +699,7 @@
       au < finished ; manifest ; 2016 ; 2016 ; Indiana Magazine of History Volume 2016 ; 112 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; Indiana Magazine of History Volume 2017 ; 113 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Indiana Magazine of History Volume 2018 ; 114 ; >
+      #no more published as of 2021-08-26
 
   }
 
@@ -863,7 +718,7 @@
       au < frozen ; exists ; 2017 ; 2017 ; Indiana University South Bend Graduate Research Journal Volume 2017 ; 4 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Indiana University South Bend Graduate Research Journal Volume 2018 ; 5 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Indiana University South Bend Graduate Research Journal Volume 2019 ; 6 ; >
-      #no more published
+      #no more published as of 2021-08-26
   }
 
   {
@@ -877,16 +732,20 @@
          param[journal_id] = iusburj
          #still published 2021
 
+         au < manifest ; exists ; 1998 ; 1998 ; IU South Bend Undergraduate Research Journal Volume 1998 ; 1 ; >
+         au < manifest ; exists ; 1999 ; 1999 ; IU South Bend Undergraduate Research Journal Volume 1999 ; 2 ; >
          au < manifest ; exists ; 2000 ; 2000 ; IU South Bend Undergraduate Research Journal Volume 2000 ; 3 ; >
          au < manifest ; exists ; 2001 ; 2001 ; IU South Bend Undergraduate Research Journal Volume 2001 ; 4 ; >
          au < manifest ; exists ; 2002 ; 2002 ; IU South Bend Undergraduate Research Journal Volume 2002 ; 5 ; >
          au < manifest ; exists ; 2003 ; 2003 ; IU South Bend Undergraduate Research Journal Volume 2003 ; 6 ; >
+         #au < exists ; exists ; 2004 ; 2004 ; IU South Bend Undergraduate Research Journal Volume 2004 ; 7 ; >
          au < frozen ; exists ; 2008 ; 2008 ; IU South Bend Undergraduate Research Journal Volume 2008 ; 8 ; >
          au < frozen ; exists ; 2009 ; 2009 ; IU South Bend Undergraduate Research Journal Volume 2009 ; 9 ; >
          au < frozen ; exists ; 2010 ; 2010 ; IU South Bend Undergraduate Research Journal Volume 2010 ; 10 ; >
          au < frozen ; exists ; 2011 ; 2011 ; IU South Bend Undergraduate Research Journal Volume 2011 ; 11 ; >
          au < frozen ; exists ; 2012 ; 2012 ; IU South Bend Undergraduate Research Journal Volume 2012 ; 12 ; >
          au < frozen ; exists ; 2014 ; 2014 ; IU South Bend Undergraduate Research Journal Volume 2014 ; 14 ; >
+         #au < exists ; exists ; 2013 ; 2013 ; IU South Bend Undergraduate Research Journal Volume 2013 ; 13 ; >
          au < frozen ; exists ; 2015 ; 2015 ; IU South Bend Undergraduate Research Journal Volume 2015 ; 15 ; >
          au < frozen ; exists ; 2016 ; 2016 ; IU South Bend Undergraduate Research Journal Volume 2016 ; 16 ; >
          au < frozen ; exists ; 2017 ; 2017 ; IU South Bend Undergraduate Research Journal Volume 2017 ; 17 ; >
@@ -995,25 +854,7 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2014 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2015 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2017 ; 9 ; >
-      #no 2018 as of 3/14/19
       au < deepCrawl ; exists ; 2019 ; 2019 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2019 ; 10 ; >
-
-  }
-
-  {
-
-      title <
-        name = South Shore Journal ;
-        eissn = 1933-8163
-      >
-
-      param[journal_id] = ssj
-
-      au < frozen ; exists ; 2006 ; 2006 ; South Shore Journal Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; South Shore Journal Volume 2 ; 2 ; >
-      au < finished ; manifest ; 2009 ; 2009 ; South Shore Journal Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2011 ; 2011 ; South Shore Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2013 ; 2013 ; South Shore Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1061,6 +902,9 @@
 
       param[journal_id] = tributaries
 
+      au < manifest ; exists ; 2011 ; 2011 ; Tributaries Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Tributaries Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Tributaries Volume 16 ; 16 ; >
       au < finished ; manifest ; 2014 ; 2014 ; Tributaries Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2015 ; 2015 ; Tributaries Volume 18 ; 18 ; > #no substance, but the single pdf is collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1243/pdf_8
       au < finished ; manifest ; 2016 ; 2016 ; Tributaries Volume 19 ; 19 ; reingest4.clockss.org:8082 >
@@ -1114,28 +958,6 @@
       au < frozen ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
       au < expected ; exists ; 2021 ; 2021 ; Global Engagement and Transformation Volume 2021 ; 5 ; >
-
-  }
-
-  {
-
-      title <
-        name = The Risky Academy  ;
-        eissn = 2578-4897
-      >
-
-      param[journal_id] = risky
-      #Still published 2021
-
-      au < frozen ; exists ; 2013 ; 2013 ; The Risky Academy  Volume 2013 ; 1 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; The Risky Academy  Volume 2014 ; 2 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; The Risky Academy  Volume 2015 ; 3 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; The Risky Academy  Volume 2016 ; 4 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; The Risky Academy  Volume 2017 ; 5 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; The Risky Academy  Volume 2019 ; 7 ; >
-      au < expected ; exists ; 2020 ; 2020 ; The Risky Academy  Volume 2020 ; 8 ; >
-      au < expected ; exists ; 2021 ; 2021 ; The Risky Academy  Volume 2021 ; 9 ; >
 
   }
 
@@ -1264,29 +1086,6 @@
   {
 
       title <
-        name = Folklore and Folk Music Archivist ;
-        eissn = 0430-8840
-      >
-
-      param[journal_id] = ffma
-
-      au < manifest ; exists ; 1958 ; 1958 ; Folklore and Folk Music Archivist Volume 1958 ; 1 ; >
-      au < manifest ; exists ; 1959 ; 1959 ; Folklore and Folk Music Archivist Volume 1959 ; 2 ; >
-      au < manifest ; exists ; 1960 ; 1960 ; Folklore and Folk Music Archivist Volume 1960 ; 3 ; >
-      au < manifest ; exists ; 1961 ; 1961 ; Folklore and Folk Music Archivist Volume 1961 ; 4 ; >
-      au < manifest ; exists ; 1962 ; 1962 ; Folklore and Folk Music Archivist Volume 1962 ; 5 ; >
-      au < manifest ; exists ; 1963 ; 1963 ; Folklore and Folk Music Archivist Volume 1963 ; 6 ; >
-      au < manifest ; exists ; 1964 ; 1964 ; Folklore and Folk Music Archivist Volume 1964 ; 7 ; >
-      au < manifest ; exists ; 1965 ; 1965 ; Folklore and Folk Music Archivist Volume 1965 ; 8 ; >
-      au < manifest ; exists ; 1966 ; 1966 ; Folklore and Folk Music Archivist Volume 1966 ; 9 ; >
-      au < manifest ; exists ; 1967 ; 1967 ; Folklore and Folk Music Archivist Volume 1967 ; 10 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; Folklore and Folk Music Archivist Volume 1968 ; 11 ; >
-
-  }
-
-  {
-
-      title <
         name = Indiana Journal of Earth Sciences ;
         eissn = 
       >
@@ -1337,6 +1136,251 @@
 
   }
 
+#############################
+## LEGACY JOURNALS
+#############################
+
+  {
+    title <
+      name = Artifact ;
+      issn = 1749-3463 ;
+      eissn = 1749-3471
+    >
+
+      param[journal_id] = artifact
+      
+      au < frozen ; exists ; 2007 ; 2007 ; Artifact Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Artifact Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Artifact Volume 3 (2013) ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Artifact Volume 3 (2015) ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Artifact Volume 4 ; 4 ; >
+      #no more published
+
+  }
+
+  {
+    title <
+      name = Black Diaspora Review ;
+      eissn = 2334-1521 
+    >
+
+      param[journal_id] = bdr
+
+      au < finished ; manifest ; 2009 ; 2009 ; Black Diaspora Review Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 2010 ; Black Diaspora Review Volume 1-2 ; 1-2 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Black Diaspora Review Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Black Diaspora Review Volume 3 (2012) ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Black Diaspora Review Volume 3 (2013) ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Black Diaspora Review Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Black Diaspora Review Volume 5 ; 5 ; >
+      #no more published
+  }
+
+  {
+
+      title <
+        name = Folklore and Folk Music Archivist ;
+        eissn = 0430-8840
+      >
+
+      param[journal_id] = ffma
+
+      au < manifest ; exists ; 1958 ; 1958 ; Folklore and Folk Music Archivist Volume 1958 ; 1 ; >
+      au < manifest ; exists ; 1959 ; 1959 ; Folklore and Folk Music Archivist Volume 1959 ; 2 ; >
+      au < manifest ; exists ; 1960 ; 1960 ; Folklore and Folk Music Archivist Volume 1960 ; 3 ; >
+      au < manifest ; exists ; 1961 ; 1961 ; Folklore and Folk Music Archivist Volume 1961 ; 4 ; >
+      au < manifest ; exists ; 1962 ; 1962 ; Folklore and Folk Music Archivist Volume 1962 ; 5 ; >
+      au < manifest ; exists ; 1963 ; 1963 ; Folklore and Folk Music Archivist Volume 1963 ; 6 ; >
+      au < manifest ; exists ; 1964 ; 1964 ; Folklore and Folk Music Archivist Volume 1964 ; 7 ; >
+      au < manifest ; exists ; 1965 ; 1965 ; Folklore and Folk Music Archivist Volume 1965 ; 8 ; >
+      au < manifest ; exists ; 1966 ; 1966 ; Folklore and Folk Music Archivist Volume 1966 ; 9 ; >
+      au < manifest ; exists ; 1967 ; 1967 ; Folklore and Folk Music Archivist Volume 1967 ; 10 ; >
+      au < manifest ; exists ; 1968 ; 1968 ; Folklore and Folk Music Archivist Volume 1968 ; 11 ; >
+      #no more published
+
+  }
+
+  {
+    title <
+      name = Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies ;
+      eissn = 2158-9089 
+    >
+
+      param[journal_id] = illuminare
+
+      au < finished ; manifest ; 2011 ; 2011 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 15 ; 15 ; >
+      #no more published
+
+  }
+
+  {
+    title <
+      name = Indiana University Bookman ;
+      issn = 0019-6800 ;
+      eissn = 2373-9339
+    >
+
+      param[journal_id] = bookman
+      # published from 1956 to 1988
+
+      au < manifest ; exists ; 1956 ; 1956 ; Indiana University Bookman Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1957 ; 1957 ; Indiana University Bookman Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1958 ; 1958 ; Indiana University Bookman Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1960 ; 1960 ; Indiana University Bookman Volume 4-5 ; 4-5 ; >
+      au < manifest ; exists ; 1963 ; 1963 ; Indiana University Bookman Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1965 ; 1965 ; Indiana University Bookman Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1967 ; 1967 ; Indiana University Bookman Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1968 ; 1968 ; Indiana University Bookman Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1969 ; 1969 ; Indiana University Bookman Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; Indiana University Bookman Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; Indiana University Bookman Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Indiana University Bookman Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Indiana University Bookman Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Indiana University Bookman Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Indiana University Bookman Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Indiana University Bookman Volume 17 ; 17 ; >
+      #no more published
+
+  }
+
+  {
+    title <
+      name = Inter-American Journal of Education for Democracy ;
+      eissn = 1941-7799
+    >
+
+      param[journal_id] = ried
+      # no issue in 2011
+
+      au < frozen ; exists ; 2007 ; 2007 ; Inter-American Journal of Education for Democracy Volume 1 (2007) ; 1 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Inter-American Journal of Education for Democracy Volume 1 (2008) ; 1 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Inter-American Journal of Education for Democracy Volume 5 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Inter-American Journal of Education for Democracy Volume 6 ; 6 ; >
+      #no more published
+
+  }
+
+  {
+    title <
+      name = Liberian Studies ;
+      eissn = 0024-1989
+    >
+
+      param[journal_id] = lsj
+
+      au < manifest ; exists ; 1970 ; 1970 ; Liberian Studies Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1971 ; 1971 ; Liberian Studies Journal Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; Liberian Studies Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; Liberian Studies Journal Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Liberian Studies Journal Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Liberian Studies Journal Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Liberian Studies Journal Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Liberian Studies Journal Volume 10 (1982) ; 10 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Liberian Studies Journal Volume 10 (1984) ; 10 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; Liberian Studies Journal Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Liberian Studies Journal Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Liberian Studies Journal Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Liberian Studies Journal Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Liberian Studies Journal Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Liberian Studies Journal Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Liberian Studies Journal Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Liberian Studies Journal Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Liberian Studies Journal Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Liberian Studies Journal Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Liberian Studies Journal Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Liberian Studies Journal Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Liberian Studies Journal Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Liberian Studies Journal Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Liberian Studies Journal Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Liberian Studies Journal Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Liberian Studies Journal Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Liberian Studies Journal Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2004 ; 2004 ; Liberian Studies Journal Volume 29 ; 29 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Liberian Studies Journal Volume 30 ; 30 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Liberian Studies Journal Volume 31 ; 31 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; Liberian Studies Journal Volume 32 ; 32 ; >
+      au < finished ; manifest ; 2008 ; 2008 ; Liberian Studies Journal Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Liberian Studies Journal Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2010 ; 2010 ; Liberian Studies Journal Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+      #no more published
+
+  }
+
+  {
+    title <
+      name = Olifant ;
+      issn = 0381-9132 ;
+      eissn = 1548-3037
+    >
+
+      param[journal_id] = olifant
+
+      au < manifest ; exists ; 1973 ; 1973 ; Olifant Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1974 ; 1974 ; Olifant Volume 1-2 ; 1-2 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; Olifant Volume 2-3 ; 2-3 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Olifant Volume 3-4 ; 3-4 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; Olifant Volume 4-5 ; 4-5 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Olifant Volume 5-6 ; 5-6 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Olifant Volume 6-7 ; 6-7 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Olifant Volume 7-8 ; 7-8 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; Olifant Volume 8-9 ; 8-9 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Olifant Volume 9-10 ; 9-10 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Olifant Volume 10 (1983) ; 10 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Olifant Volume 10 (1984) ; 10 ; >
+      
+      au < manifest ; exists ; 1986 ; 1986 ; Olifant Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Olifant Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Olifant Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Olifant Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Olifant Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Olifant Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Olifant Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Olifant Volume 17-18 ; 17-18 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Olifant Volume 19 (1994) ; 19 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Olifant Volume 19 (1995) ; 19 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Olifant Volume 20-21 ; 20-21 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Olifant Volume 21 ; 21 ; >
+      
+      au < manifest ; exists ; 2003 ; 2003 ; Olifant Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; Olifant Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; Olifant Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Olifant Volume 25 ; 25 ; >
+      
+      au < finished ; manifest ; 2010 ; 2010 ; Olifant Volume 26 (2010) ; 26 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Olifant Volume 26 (2011) ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; Olifant Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      #no more published
+
+  }
+
+  {
+
+      title <
+        name = Primary Source: The Undergraduate Journal of History at Indiana University ;
+        eissn = 2379-206X
+      >
+
+      param[journal_id] = psource
+
+      au < notReady ; exists ; 2011 ; 2011 ; Primary Source Volume 2011 ; 1 ; > #no metadata
+      au < notReady ; exists ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; > #no metadata
+      au < notReady ; exists ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; > #no metadata
+      au < notReady ; exists ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; > #no metadata
+      au < frozen ; exists ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; >
+      #no more published
+
+  }
+  
   {
 
       title <
@@ -1372,23 +1416,65 @@
       au < frozen ; exists ; 2005 ; 2005 ; ReSOUND Volume 2005 ; 24 ; >
       au < frozen ; exists ; 2006 ; 2006 ; ReSOUND Volume 2006 ; 25 ; >
       au < frozen ; exists ; 2007 ; 2007 ; ReSOUND Volume 2007 ; 26 ; >
+      #no more published
 
   }
 
   {
 
       title <
-        name = Primary Source: The Undergraduate Journal of History at Indiana University ;
-        eissn = 2379-206X
+        name = The Risky Academy  ;
+        eissn = 2578-4897
       >
 
-      param[journal_id] = psource
+      param[journal_id] = risky
+      #Still published 2021
 
-      au < notReady ; exists ; 2011 ; 2011 ; Primary Source Volume 2011 ; 1 ; > #no metadata
-      au < notReady ; exists ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; > #no metadata
-      au < notReady ; exists ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; > #no metadata
-      au < notReady ; exists ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; > #no metadata
-      au < frozen ; exists ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; The Risky Academy  Volume 2013 ; 1 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; The Risky Academy  Volume 2014 ; 2 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; The Risky Academy  Volume 2015 ; 3 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; The Risky Academy  Volume 2016 ; 4 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; The Risky Academy  Volume 2017 ; 5 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; The Risky Academy  Volume 2018 ; 6 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; The Risky Academy  Volume 2019 ; 7 ; >
+      #no more published
+
+  }
+
+  {
+
+      title <
+        name = South Shore Journal ;
+        eissn = 1933-8163
+      >
+
+      param[journal_id] = ssj
+
+      au < frozen ; exists ; 2006 ; 2006 ; South Shore Journal Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; South Shore Journal Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2009 ; 2009 ; South Shore Journal Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; South Shore Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; 2013 ; South Shore Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      #no more published
+
+  }
+
+  {
+    title <
+      name = The Workshop ;
+      eissn = 2372-5931 
+    >
+    
+      param[journal_id] = 18cy
+
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Workshop Volume 2013 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Workshop Volume 2014 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Workshop Volume 2015 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
+      au < notReady ; exists ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; >#Not a typo. Really 2018
+      au < frozen ; exists ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; >#Not a typo. Really 2017
+      #no more published
 
   }
 
