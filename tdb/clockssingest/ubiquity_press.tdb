@@ -531,7 +531,7 @@
       au < finished ; manifest ; 2017 ; 13 ; Digital Medievalist Volume 2017 ; 2017 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; https://journal.digitalmedievalist.org/ ; >
+      au < crawling ; exists ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; https://journal.digitalmedievalist.org/ ; >
       au < crawling ; exists ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; https://journal.digitalmedievalist.org/ ; >
 
   }
@@ -900,7 +900,7 @@
       au < notReady ; exists ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; https://www.current-journal.com/ ; > #malformed start url
       au < notReady ; exists ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; https://www.current-journal.com/ ; > #malformed start url
       au < notReady ; exists ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; https://www.current-journal.com/ ; > #malformed start url
-      au < ready ; exists ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ ; >
+      au < crawling ; exists ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ ; >
       au < frozen ; exists ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ ; >
       au < deepCrawl ; exists ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ ; >
       au < expected ; exists ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; https://www.current-journal.com/ ; >
@@ -1233,7 +1233,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://journalhistoryknowledge.org/
 
-      au < ready ; exists ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; https://journalhistoryknowledge.org/ ; >
+      au < crawling ; exists ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; https://journalhistoryknowledge.org/ ; >
       au < manifest ; exists ; 2021 ; 2 ; Journal for the History of Knowledge Volume 2021 ; 2021 ; https://journalhistoryknowledge.org/ ; >
 
   }
