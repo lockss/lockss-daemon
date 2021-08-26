@@ -170,7 +170,11 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
             am.put(MetadataField.FIELD_AUTHOR, MARC_author.replace(".", ""));
           }
 
-          // Set publisher name
+          if (MARC_publisher != null) {
+            am.put(MetadataField.FIELD_PUBLISHER, MARC_publisher);
+          }
+
+          // Set provider name
           String publisherName = "East View Information Services";
 
           TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
@@ -178,7 +182,7 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
             publisherName = tdbau.getPublisherName();
           }
 
-          am.put(MetadataField.FIELD_PUBLISHER, publisherName);
+          am.put(MetadataField.FIELD_PROVIDER, publisherName);
 
           // Setup PDF
           String zippedFolderName = getZippedFolderName();
