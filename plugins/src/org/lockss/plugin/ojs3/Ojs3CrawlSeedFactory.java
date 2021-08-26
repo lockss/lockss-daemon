@@ -83,37 +83,95 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
 
 	private Collection<String> addStartStem(Collection<String> origUrls) {
        String start_stem = AuUtil.getTitleAttribute(super.au,START_STEM_ATTRIBUTE);
-       log.debug3("In addStartStem. start_stem = " + start_stem);
+       log.debug3("OJS3: In addStartStem. start_stem = " + start_stem);
        if(start_stem == null) {
-    	   log.debug3("No start_stem attributes, start_url is at represented in the plugin");
+    	   log.debug3("OJS3: No start_stem attributes, start_url is at represented in the plugin");
     	   return origUrls;
        }
        String baseUrl = (super.au).getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-       int afterBaseUrl = baseUrl.length(); // will be first index after end of base url
+       String journal_id = (super.au).getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
+
+        String baseUrlProtocal = getProtocal(baseUrl);
+        
+       
+       int afterBaseUrl = baseUrl.length(); // will be first index after end of base url, this will change when "http" and "https" mixed in the page
+        
+        log.debug3("OJS3: baseUrl = " + baseUrl + ", journal_id = " + journal_id);
+
        Collection<String> newUrls = new ArrayList<String>(origUrls.size());
        for (Iterator<String> iter = origUrls.iterator(); iter.hasNext();) {
          String url = iter.next();
-         // insert start_stem between baseUrl and anything that follows
-         // There are cases "http" and "https" urls are embedded in the same html source
-         if (url.replace("https://", "").replace("http://", "").startsWith(
-                 baseUrl.replace("https://", "").replace("http://", ""))) {
-        	 StringBuilder sb = new StringBuilder(baseUrl);
-        	 sb.append(start_stem);
-        	 sb.append(url.substring(afterBaseUrl));
-        	 newUrls.add(sb.toString());
+
+        String urlProtocal = getProtocal(url);
+        
+
+         String urlWithoutProtocal = url.replace(urlProtocal, "");
+         String baseurlWithoutProtocal =   baseUrl.replace(baseUrlProtocal, "");
+
+         log.debug3("OJS3: ------------url = " + url + ", urlWithoutProtocal = " + urlWithoutProtocal + ", base_url = "
+                   + baseUrl + ", baseurlWithoutProtocal = " + baseurlWithoutProtocal);
+            // insert start_stem between baseUrl and anything that follows
+            // There are cases "http" and "https" urls are embedded in the same html source
+           // url = https://journals.vgtu.lt/BME/gateway/lockss?year=2016, urlWithoutProtocal = journals.vgtu.lt/BME/gateway/lockss?year=2016, base_url=https://journals.vgtu.lt/, baseurlWithoutProtocal = journals.vgtu.lt/
+         if (urlWithoutProtocal.startsWith(baseurlWithoutProtocal)) {
+             String expected = getStartUrl(baseUrl, url, start_stem);
+             if (!newUrls.contains(expected)) {
+                 newUrls.add(expected);
+             }
+             log.debug3("OJS3: =========final sb = " + expected);
          } else {
         	 // if it doesn't start with start_url just leave it alone, not that this is currently happening
-        	 newUrls.add(url);
+             log.debug3("OJS3: .........adding other = " + url);
+             if (!newUrls.contains(url)) {
+                 newUrls.add(url);
+             }
          }
        }
        if (log.isDebug3()) {
     	   for(Iterator<String> debIt = newUrls.iterator(); debIt.hasNext();) {
     		   String url = debIt.next();
-    		   log.debug3("start url: " +  url);
+    		   log.debug3("OJS3: start url: " +  url);
     	   }
        }
        return newUrls;
 	}
+
+	public String getProtocal(String url) {
+          String urlProtocal = "";
+
+          if (url.startsWith("https://")) {
+              urlProtocal = "https://";
+          }  else if (url.startsWith("http://")) {
+              urlProtocal = "http://";
+          }
+
+          return urlProtocal;
+      }
+
+      public String getStartUrl(String baseUrl, String url, String start_stem) {
+
+          String urlWithoutProtocal = url.replace(getProtocal(url), "");
+          String baseurlWithoutProtocal =  baseUrl.replace(getProtocal(baseUrl), "");
+
+          StringBuilder sb = new StringBuilder(baseUrl);
+
+          //log.debug3("OJS3: ------------url = " + url + ", urlWithoutProtocal = " + urlWithoutProtocal + ", base_url = "
+                  //+ baseUrl + ", baseurlWithoutProtocal = " + baseurlWithoutProtocal);
+
+          if (urlWithoutProtocal.startsWith(baseurlWithoutProtocal)) {
+              //log.debug3("OJS3: sb = " + sb.toString());
+              sb.append(start_stem);
+              //log.debug3("OJS3: sb append = " + sb.toString());
+              //log.debug3("OJS3: url substring = " + urlWithoutProtocal.substring(baseurlWithoutProtocal.length()));
+              //log.debug3("OJS3: url substring replace= " + urlWithoutProtocal.substring(baseurlWithoutProtocal.length()).replace(start_stem, ""));
+              sb.append(urlWithoutProtocal.substring(baseurlWithoutProtocal.length()).replace(start_stem, ""));
+              //log.debug3("OJS3: adding = " + urlWithoutProtocal.substring(baseurlWithoutProtocal.length()).replace(start_stem, ""));
+
+              //log.debug3("OJS3: =========final sb = " + sb.toString());
+          }
+
+          return sb.toString();
+      }
 
   }
   
