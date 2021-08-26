@@ -71,7 +71,7 @@ implements ArticleIteratorFactory,
       "(" +
           "(\\d\\d?_)?" + /* 2_prelim_hr1_1998.pdf ugly, but this is the only way i can think of */
           "(" + /* match any of these strings that are html and/or pdf pages that are not articles or article like */
-            "authors|author_profiles|bibliography|book|contents|c?over|contributors|" +
+            "authors|author_profiles|bibliography|contents|c?over|contributors|" +
             "images|inside_cover|journal_information|"+
             "part|prelim(s|inary)?|upfront"+
           ")" +
