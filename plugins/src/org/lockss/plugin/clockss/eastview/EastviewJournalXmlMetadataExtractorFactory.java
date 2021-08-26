@@ -261,7 +261,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         publisherName =  tdbau.getPublisherName();
       }
 
-      thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+      thisAM.put(MetadataField.FIELD_PROVIDER, publisherName);
     }
 
     /**
