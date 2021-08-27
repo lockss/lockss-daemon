@@ -15,8 +15,8 @@
         nondefparam[content_domain] = partner.archive-it.org
         implicit < status ; name ; param[collection] >
 
-        au < released ; Government of Canada Publications (Archive-It Collection 3572) ; 3572 >
-        au < released ; Government of Canada Web Content (Archive-It Collection 5060) ; 5060 >
+        au < superseded ; Government of Canada Publications (Archive-It Collection 3572) [superseded] ; 3572 >
+        au < superseded ; Government of Canada Web Content (Archive-It Collection 5060) [superseded] ; 5060 >
     }
 
     {
