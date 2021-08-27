@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -138,6 +138,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https://%s/(content|metadata)/pkg/%s-%s", url_host(base_url), collection_id, court_id</string>
       <string>1,"^https://%s/app/details/%s-%s", url_host(base_url), collection_id, court_id</string>
       <string>1,"^https://maxcdn\.bootstrapcdn\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
+      <!-- these file extensions are used in GovInfoSitemapsHttpResponseHandler for 404 & 504 Non-fatal exceptions
+           if you add to them here, the pattern there should be updated as well
+       -->
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
     </list>
   </entry>
