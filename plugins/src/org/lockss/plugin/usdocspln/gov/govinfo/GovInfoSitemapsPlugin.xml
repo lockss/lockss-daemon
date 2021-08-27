@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -134,6 +134,9 @@ POSSIBILITY OF SUCH DAMAGE.
 <!--  https://www.govinfo.gov/app/frtoc/2018-01-02 -->
 	  <string>1,"^https://%s/app/frtoc/%d", url_host(base_url), year</string>
       <string>1,"^https://maxcdn\.bootstrapcdn\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
+      <!-- these file extensions are used in GovInfoSitemapsHttpResponseHandler for 404 & 504 Non-fatal exceptions
+           if you add to them here, the pattern there should be updated as well
+       -->
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
     </list>
   </entry>
@@ -201,6 +204,14 @@ POSSIBILITY OF SUCH DAMAGE.
       https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css
       -->
       <string>"maxcdn\.bootstrapcdn\.com"</string>
+    </list>
+  </entry>
+  <entry>
+  <string>plugin_cache_result_list</string>
+    <list>
+      <!-- 504s occur on certain image files, we want to collect these but if they 504 they shouldnt kill the crawl -->
+      <string>404=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
