@@ -109,23 +109,20 @@ public class TestGovInfoSitemapsHttpResponseHandler extends LockssTestCase {
       conn.setURL(url);
       CacheException exc = ((HttpResultMap) plugin.getCacheResultMap()).mapException(GIau, conn, responseCode, "foo");
       if (noFail) {
-        assertClass(GovInfoSitemapsHttpResponseHandler.NoFailRetryableNetworkException_2_10S.class, exc);
+        assertClass(CacheException.NoRetryDeadLinkException.class, exc);
       } else {
         assertClass(CacheException.RetrySameUrlException.class, exc);
       }
     }
   }
 
-  public void testShouldReturnNotFatal404() throws Exception {
-    testUrls(NON_FATAL_URLS, 404, true);
-  }
   // as the pattern is currently the same for 404 and 504, this test is redundant
   public void testShouldReturnNotFatal504() throws Exception {
     testUrls(NON_FATAL_URLS, 504, true);
   }
 
   public void testShoulBeFatal504() throws Exception {
-    testUrls(FATAL_URLS, 404, false);
+    testUrls(FATAL_URLS, 504, false);
   }
 }
 
