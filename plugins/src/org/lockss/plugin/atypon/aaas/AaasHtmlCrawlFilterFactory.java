@@ -58,8 +58,18 @@ public class AaasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-navigation"),
 
       // Article pages
+        // sidebar
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-aside"),
+        // ref, cite, ack, bib, suppl,
+      HtmlNodeFilters.tagWithAttribute("div", "id", "acknowledgments"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "pill-references"),
+        // citation section lists articles citing, if applicable.
+      HtmlNodeFilters.tagWithAttribute("section", "id", "cited-by"),
+      HtmlNodeFilters.tagWithAttribute("section", "id", "backmatter"),
+      //HtmlNodeFilters.tagWithAttribute("section", "id", "supplementary-materials"),
+      HtmlNodeFilters.tagWithAttribute("section", "id", "bibliography"),
+      HtmlNodeFilters.tagWithAttribute("section", "id", "elettersSection"),
+
         // popup
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
 
