@@ -19,11 +19,11 @@
         nondefparam[content_domain] = partner.archive-it.org
         implicit < status ; name ; param[collection] >
 
-        au < released ; Contemporary Composers Web Archive (CCWA) (Archive-It Collection 4019) ; 4019 >
-        au < released ; Collaborative Architecture, Urbanism, and Sustainability Web Archive (CAUSEWAY) (Archive-It Collection 4638) ; 4638 >
-        au < released ; Global Webcomics Web Archive (Archive-It Collection 10181) ; 10181 >
-        au < released ; National Statistical Offices and Central Banks Web Archive (Archive-It Collection 10637) ; 10637 >
-        au < released ; State Elections Web Archive (Archive-It Collection 10793) ; 10793 >
+        au < superseded ; Contemporary Composers Web Archive (CCWA) (Archive-It Collection 4019) [superseded] ; 4019 >
+        au < superseded ; Collaborative Architecture, Urbanism, and Sustainability Web Archive (CAUSEWAY) (Archive-It Collection 4638) [superseded] ; 4638 >
+        au < superseded ; Global Webcomics Web Archive (Archive-It Collection 10181) [superseded] ; 10181 >
+        au < superseded ; National Statistical Offices and Central Banks Web Archive (Archive-It Collection 10637) [superseded] ; 10637 >
+        au < superseded ; State Elections Web Archive (Archive-It Collection 10793) [superseded] ; 10793 >
     }
 
     {
