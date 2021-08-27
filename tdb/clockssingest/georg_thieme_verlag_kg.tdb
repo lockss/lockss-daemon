@@ -254,8 +254,8 @@
     au < manifest ; exists ; 1989 ; 1989 ; Aktuelle Rheumatologie Volume 16 ; 16 ; >
     au < crawling ; exists ; 1990 ; 1990 ; Aktuelle Rheumatologie Volume 17 ; 17 ; >
     au < crawling ; exists ; 1991 ; 1991 ; Aktuelle Rheumatologie Volume 18 ; 18 ; >
-    au < ready ; exists ; 1992 ; 1992 ; Aktuelle Rheumatologie Volume 19 ; 19 ; >
-    au < ready ; exists ; 1993 ; 1993 ; Aktuelle Rheumatologie Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1992 ; 1992 ; Aktuelle Rheumatologie Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1993 ; 1993 ; Aktuelle Rheumatologie Volume 20 ; 20 ; >
     au < crawling ; exists ; 1994 ; 1994 ; Aktuelle Rheumatologie Volume 21 ; 21 ; >
     au < crawling ; exists ; 1995 ; 1995 ; Aktuelle Rheumatologie Volume 22 ; 22 ; >
     au < crawling ; exists ; 1996 ; 1996 ; Aktuelle Rheumatologie Volume 23 ; 23 ; >
@@ -480,9 +480,9 @@
     au < crawling ; exists ; 1990 ; 1990 ; American Journal of Perinatology Volume 7 ; 7 ; >
     au < crawling ; exists ; 1991 ; 1991 ; American Journal of Perinatology Volume 8 ; 8 ; >
     au < crawling ; exists ; 1992 ; 1992 ; American Journal of Perinatology Volume 9 ; 9 ; >
-    au < ready ; exists ; 1993 ; 1993 ; American Journal of Perinatology Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1993 ; 1993 ; American Journal of Perinatology Volume 10 ; 10 ; >
     au < crawling ; exists ; 1994 ; 1994 ; American Journal of Perinatology Volume 11 ; 11 ; >
-    au < ready ; exists ; 1995 ; 1995 ; American Journal of Perinatology Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1995 ; 1995 ; American Journal of Perinatology Volume 12 ; 12 ; >
     au < crawling ; exists ; 1996 ; 1996 ; American Journal of Perinatology Volume 13 ; 13 ; >
     au < crawling ; exists ; 1997 ; 1997 ; American Journal of Perinatology Volume 14 ; 14 ; >
     au < crawling ; exists ; 1998 ; 1998 ; American Journal of Perinatology Volume 15 ; 15 ; >
@@ -8741,7 +8741,7 @@
     au < crawling ; exists ; 1993 ; 1993 ; Thrombosis and Haemostasis Volume 37 ; 37 ; >
     au < crawling ; exists ; 1994 ; 1994 ; Thrombosis and Haemostasis Volume 38 ; 38 ; >
     au < crawling ; exists ; 1995 ; 1995 ; Thrombosis and Haemostasis Volume 39 ; 39 ; >
-    au < ready ; exists ; 1996 ; 1996 ; Thrombosis and Haemostasis Volume 40 ; 40 ; >
+    au < crawling ; exists ; 1996 ; 1996 ; Thrombosis and Haemostasis Volume 40 ; 40 ; >
     au < crawling ; exists ; 1997 ; 1997 ; Thrombosis and Haemostasis Volume 41 ; 41 ; >
     au < crawling ; exists ; 1998 ; 1998 ; Thrombosis and Haemostasis Volume 42 ; 42 ; >
     au < crawling ; exists ; 1999 ; 1999 ; Thrombosis and Haemostasis Volume 43 ; 43 ; >
@@ -8757,14 +8757,14 @@
     au < crawling ; exists ; 2009 ; 2009 ; Thrombosis and Haemostasis Volume 53 ; 53 ; >
     au < testing ; exists ; 2010 ; 2010 ; Thrombosis and Haemostasis Volume 54 ; 54 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Thrombosis and Haemostasis Volume 55 ; 55 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Thrombosis and Haemostasis Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Thrombosis and Haemostasis Volume 56 ; 56 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Thrombosis and Haemostasis Volume 57 ; 57 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Thrombosis and Haemostasis Volume 58 ; 58 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Thrombosis and Haemostasis Volume 59 ; 59 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Thrombosis and Haemostasis Volume 60 ; 60 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Thrombosis and Haemostasis Volume 61 ; 61 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Thrombosis and Haemostasis Volume 62 ; 62 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Thrombosis and Haemostasis Volume 63 ; 63 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Thrombosis and Haemostasis Volume 63 ; 63 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Thrombosis and Haemostasis Volume 64 ; 64 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Thrombosis and Haemostasis Volume 65 ; 65 ; >
 
@@ -8814,7 +8814,7 @@
     au < testing ; exists ; 1999 ; 1999 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 12 ; 12 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 13 ; 13 ; >
     au < testing ; exists ; 2001 ; 2001 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 14 ; 14 ; >
-    au < ready ; exists ; 2002 ; 2002 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 15 ; 15 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 16 ; 16 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 17 ; 17 ; >
     au < testing ; exists ; 2005 ; 2005 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 18 ; 18 ; >
