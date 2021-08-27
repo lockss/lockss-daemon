@@ -39,35 +39,18 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
     throw new UnsupportedOperationException("Unexpected call to GovInfoSitemapsHttpResponseHandler.init()");
   }
 
-  public static final class NoFailRetryableNetworkException_2_10S
-      extends CacheException.RetryableNetworkException_2_10S {
-
-    private static final long serialVersionUID = 1L;
-
-    public NoFailRetryableNetworkException_2_10S(String message) {
-      super(message);
-    }
-
-    @Override
-    protected void setAttributes() {
-      super.setAttributes();
-      attributeBits.clear(ATTRIBUTE_FAIL);
-    }
-  }
-
   @Override
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      int responseCode) {
       logger.debug2(responseCode + " " + url);
       switch (responseCode) {
-        case 404:
         case 504:
           Matcher fmat = NON_FATAL_GRAPHICS_PATTERN.matcher(url);
           if (fmat.find()) {
-            return new NoFailRetryableNetworkException_2_10S(responseCode + " Forbidden (non-fatal)");
+            return new CacheException.NoRetryDeadLinkException(responseCode + " Gateway Timeout (non-fatal)");
           }
-          return new CacheException.RetrySameUrlException(responseCode + " Not Found");
+          return new CacheException.RetrySameUrlException(responseCode + " Gateway Timeout");
 
         default:
           logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
