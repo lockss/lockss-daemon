@@ -45,3 +45,7 @@ org.lockss.blockHasher.ignoreFilesOutsideCrawlSpec=true
 
 org.lockss.baseau.minFetchDelay=3000
 org.lockss.plugin.restartAusWithNewPlugin=true
+
+org.lockss.titleSet.allaus.class=allaus
+org.lockss.titleSet.activeaus.class=activeaus
+org.lockss.titleSet.inactiveaus.class=inactiveaus
