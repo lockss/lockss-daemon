@@ -591,7 +591,7 @@
       au < finished ; manifest ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 2012 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 2014 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 ; 2015 ; http://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 ; 2015 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 83 ; 2016 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 85 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
@@ -641,11 +641,11 @@
       au < finished ; manifest ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 2012 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2013 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 ; 2015 ; http://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 ; 2015 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Preternature: Critical and Historical Studies on the Preternatural Volume 5 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Preternature: Critical and Historical Studies on the Preternatural Volume 6 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Preternature: Critical and Historical Studies on the Preternatural Volume 7 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; Preternature: Critical and Historical Studies on the Preternatural Volume 8 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Preternature: Critical and Historical Studies on the Preternatural Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Preternature: Critical and Historical Studies on the Preternatural Volume 9 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Preternature: Critical and Historical Studies on the Preternatural Volume 10 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -697,7 +697,7 @@
       au < finished ; manifest ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 2014 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 ; 2015 ; http://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 ; 2016 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; SHAW: The Journal of Bernard Shaw Studies Volume 37 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; SHAW: The Journal of Bernard Shaw Studies Volume 38 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
@@ -719,15 +719,15 @@
       param[journal_id] = soundings
 
       au < finished ; manifest ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 2010 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 2011 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 2012 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 2013 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 2014 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 ; 2015 ; http://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; Soundings: An Interdisciplinary Journal Volume 99 ; 2016 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; Soundings: An Interdisciplinary Journal Volume 100 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Soundings: An Interdisciplinary Journal Volume 101 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Soundings: An Interdisciplinary Journal Volume 102 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Soundings: An Interdisciplinary Journal Volume 102 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Soundings: An Interdisciplinary Journal Volume 103 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Soundings: An Interdisciplinary Journal Volume 104 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -744,15 +744,15 @@
 
       param[journal_id] = steinbeckreview
 
-      au < frozen ; exists ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2010 ; Steinbeck Review Volume 7 ; 2010 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2011 ; Steinbeck Review Volume 8 ; 2011 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2012 ; Steinbeck Review Volume 9 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Steinbeck Review Volume 10 ; 2013 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2014 ; Steinbeck Review Volume 11 ; 2014 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2015 ; Steinbeck Review Volume 12 ; 2015 ; http://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; Steinbeck Review Volume 12 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; Steinbeck Review Volume 13 ; 2016 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; Steinbeck Review Volume 14 ; 2017 ; http://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Steinbeck Review Volume 15 ; 2018 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2017 ; Steinbeck Review Volume 14 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Steinbeck Review Volume 15 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Steinbeck Review Volume 16 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Steinbeck Review Volume 17 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Steinbeck Review Volume 18 ; 2021 ; https://www.jstor.org/ ; >
@@ -770,15 +770,15 @@
 
       param[journal_id] = studamerjewilite
 
-      au < frozen ; exists ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2010 ; Studies in American Jewish Literature Volume 29 ; 2010 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Studies in American Jewish Literature Volume 30 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2012 ; Studies in American Jewish Literature Volume 31 ; 2012 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2013 ; Studies in American Jewish Literature Volume 32 ; 2013 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Studies in American Jewish Literature Volume 33 ; 2014 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Studies in American Jewish Literature Volume 34 ; 2015 ; http://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; Studies in American Jewish Literature Volume 34 ; 2015 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; Studies in American Jewish Literature Volume 35 ; 2016 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2017 ; Studies in American Jewish Literature Volume 36 ; 2017 ; http://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Studies in American Jewish Literature Volume 37 ; 2018 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2017 ; Studies in American Jewish Literature Volume 36 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Studies in American Jewish Literature Volume 37 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Studies in American Jewish Literature Volume 38 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Studies in American Jewish Literature Volume 39 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Studies in American Jewish Literature Volume 40 ; 2021 ; https://www.jstor.org/ ; >
@@ -988,12 +988,12 @@
       au < doNotProcess ; exists ; 2012 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 18 (2012) ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2013 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 18 (2013) ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2014 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 19 ; 2014 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2015 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 20 ; 2015 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2016 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 21 ; 2016 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2017 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 22 ; 2017 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2018 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 23 ; 2018 ; https://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 24 ; 2019 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2020 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 25 ; 2020 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 20 ; 2015 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 21 ; 2016 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 22 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 23 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 24 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 25 ; 2020 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 26 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -1114,12 +1114,12 @@
       au < doNotProcess ; exists ; 2012 ; Ecumenica: Performance and Religion Volume 5 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2013 ; Ecumenica: Performance and Religion Volume 6 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2014 ; Ecumenica: Performance and Religion Volume 7 ; 2014 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2015 ; Ecumenica: Performance and Religion Volume 8 ; 2015 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2016 ; Ecumenica: Performance and Religion Volume 9 ; 2016 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2017 ; Ecumenica: Performance and Religion Volume 10 ; 2017 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2018 ; Ecumenica: Performance and Religion Volume 11 ; 2018 ; https://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; Ecumenica: Performance and Religion Volume 12 ; 2019 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 2020 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; Ecumenica: Performance and Religion Volume 8 ; 2015 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Ecumenica: Performance and Religion Volume 9 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Ecumenica: Performance and Religion Volume 10 ; 2017 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Ecumenica: Performance and Religion Volume 11 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Ecumenica: Performance and Religion Volume 12 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 2020 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Ecumenica: Performance and Religion Volume 14 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -1199,15 +1199,15 @@
       au < doNotProcess ; exists ; 2008 ; George Eliot-George Henry Lewes Studies Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; George Eliot-George Henry Lewes Studies Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2010 ; George Eliot-George Henry Lewes Studies Volume 2010 ; 2010 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; George Eliot-George Henry Lewes Studies Volume 2012 ; 2012 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; George Eliot-George Henry Lewes Studies Volume 2013 ; 2013 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; George Eliot-George Henry Lewes Studies Volume 66 ; 2014 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2015 ; George Eliot-George Henry Lewes Studies Volume 67 ; 2015 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2015 ; George Eliot-George Henry Lewes Studies Volume 67 ; 2015 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; George Eliot-George Henry Lewes Studies Volume 68 ; 2016 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; George Eliot-George Henry Lewes Studies Volume 69 ; 2017 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; George Eliot-George Henry Lewes Studies Volume 70 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; George Eliot-George Henry Lewes Studies Volume 71 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; George Eliot-George Henry Lewes Studies Volume 71 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; George Eliot-George Henry Lewes Studies Volume 72 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; George Eliot-George Henry Lewes Studies Volume 73 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1286,13 +1286,13 @@
       au < doNotProcess ; exists ; 2011 ; Journal for the Study of Paul and His Letters Volume 1 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2012 ; Journal for the Study of Paul and His Letters Volume 2 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2013 ; Journal for the Study of Paul and His Letters Volume 3 ; 2013 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2014 ; Journal for the Study of Paul and His Letters Volume 4 ; 2014 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2015 ; Journal for the Study of Paul and His Letters Volume 5 ; 2015 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2016 ; Journal for the Study of Paul and His Letters Volume 6 ; 2016 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2017 ; Journal for the Study of Paul and His Letters Volume 7 ; 2017 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2018 ; Journal for the Study of Paul and His Letters Volume 8 ; 2018 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2019 ; Journal for the Study of Paul and His Letters Volume 9 ; 2019 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2020 ; Journal for the Study of Paul and His Letters Volume 10 ; 2020 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2014 ; Journal for the Study of Paul and His Letters Volume 4 ; 2014 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Journal for the Study of Paul and His Letters Volume 5 ; 2015 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Journal for the Study of Paul and His Letters Volume 6 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Journal for the Study of Paul and His Letters Volume 7 ; 2017 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal for the Study of Paul and His Letters Volume 8 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; Journal for the Study of Paul and His Letters Volume 9 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Journal for the Study of Paul and His Letters Volume 10 ; 2020 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Journal for the Study of Paul and His Letters Volume 11 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -1328,7 +1328,7 @@
 
       param[journal_id] = jinfopoli
 
-      au < frozen ; exists ; 2011 ; Journal of Information Policy Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2011 ; Journal of Information Policy Volume 2011 ; 2011 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Journal of Information Policy Volume 2012 ; 2012 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; Journal of Information Policy Volume 2013 ; 2013 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2014 ; Journal of Information Policy Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
@@ -1336,7 +1336,7 @@
       au < finished ; manifest ; 2016 ; Journal of Information Policy Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of Information Policy Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Journal of Information Policy Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; Journal of Information Policy Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Journal of Information Policy Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Information Policy Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Information Policy Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1357,8 +1357,8 @@
       au < finished ; manifest ; 2016 ; Journal of Jewish Ethics Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of Jewish Ethics Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of Jewish Ethics Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; Journal of Jewish Ethics Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2020 ; Journal of Jewish Ethics Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Journal of Jewish Ethics Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; Journal of Jewish Ethics Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Jewish Ethics Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -1473,13 +1473,13 @@
       au < doNotProcess ; exists ; 2011 ; Journal of Theological Interpretation Volume 5 ; 2011 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2012 ; Journal of Theological Interpretation Volume 6 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2013 ; Journal of Theological Interpretation Volume 7 ; 2013 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2014 ; Journal of Theological Interpretation Volume 8 ; 2014 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2015 ; Journal of Theological Interpretation Volume 9 ; 2015 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2016 ; Journal of Theological Interpretation Volume 10 ; 2016 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2017 ; Journal of Theological Interpretation Volume 11 ; 2017 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2018 ; Journal of Theological Interpretation Volume 12 ; 2018 ; https://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; Journal of Theological Interpretation Volume 13 ; 2019 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2020 ; Journal of Theological Interpretation Volume 14 ; 2020 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2014 ; Journal of Theological Interpretation Volume 8 ; 2014 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Journal of Theological Interpretation Volume 9 ; 2015 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Journal of Theological Interpretation Volume 10 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Journal of Theological Interpretation Volume 11 ; 2017 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Theological Interpretation Volume 12 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of Theological Interpretation Volume 13 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Journal of Theological Interpretation Volume 14 ; 2020 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Theological Interpretation Volume 15 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -1657,7 +1657,7 @@
       au < doNotProcess ; exists ; 2007 ; Studies in American Humor Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2008 ; Studies in American Humor Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Studies in American Humor Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2010 ; Studies in American Humor Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2010 ; Studies in American Humor Volume 2010 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Studies in American Humor Volume 2012 ; 2012 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; Studies in American Humor Volume 2013 ; 2013 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
@@ -1666,7 +1666,7 @@
       au < finished ; manifest ; 2016 ; Studies in American Humor Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Studies in American Humor Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Studies in American Humor Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; Studies in American Humor Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Studies in American Humor Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Studies in American Humor Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Studies in American Humor Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1726,7 +1726,7 @@
       au < doNotProcess ; exists ; 2007 ; Style Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2008 ; Style Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2009 ; Style Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2010 ; Style Volume 2010 ; 2010 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2010 ; Style Volume 2010 ; 2010 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2011 ; Style Volume 2011 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Style Volume 2012 ; 2012 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Style Volume 2013 ; 2013 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
@@ -1735,7 +1735,7 @@
       au < finished ; manifest ; 2016 ; Style Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Style Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Style Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Style Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Style Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Style Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Style Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1909,8 +1909,8 @@
       au < doNotProcess ; exists ; 2008 ; The Langston Hughes Review Volume 22 ; 2008 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2009 ; The Langston Hughes Review Volume 23 ; 2009 ; https://www.jstor.org/ ; >
       au < doNotProcess ; exists ; 2010 ; The Langston Hughes Review Volume 24 ; 2010 ; https://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; The Langston Hughes Review Volume 25 ; 2019 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2020 ; The Langston Hughes Review Volume 26 ; 2020 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; The Langston Hughes Review Volume 25 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; The Langston Hughes Review Volume 26 ; 2020 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; The Langston Hughes Review Volume 27 ; 2021 ; https://www.jstor.org/ ; >
 
   }
