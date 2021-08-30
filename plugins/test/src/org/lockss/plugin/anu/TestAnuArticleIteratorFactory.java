@@ -120,7 +120,8 @@ public class TestAnuArticleIteratorFactory extends ArticleIteratorTestCase {
     assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/part03.xhtml");
     assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/part04.xhtml");
     assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/n8684/html/upfront.xhtml");
-    assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/book.pdf");
+    // we do not want all book.pdf files, but sometimes it is all we get, so we have to take them
+      //assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/book.pdf");
     assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/prelims.pdf");
     assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/preliminary.pdf");
     assertMatchesRE(exclude, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/contributors26.pdf");
@@ -136,6 +137,8 @@ public class TestAnuArticleIteratorFactory extends ArticleIteratorTestCase {
     assertMatchesRE(pat, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/contributors26.pdf");
     assertMatchesRE(pat, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/preface17.pdf");
     // and then the actual pdf files
+      // we do not want all book.pdf files, but sometimes it is all we get, so we have to take them
+    assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/book.pdf");
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/n8684/pdf/10_goot_rowse.pdf");
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/n8684/pdf/book_review_01_allbrook.pdf");
     assertMatchesRE(pdf, "https://press-files.anu.edu.au/downloads/press/p74151/pdf/ch0651.pdf");
