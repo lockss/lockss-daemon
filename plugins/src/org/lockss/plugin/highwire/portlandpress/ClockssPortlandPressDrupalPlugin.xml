@@ -43,7 +43,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Portland Press Plugin (CLOCKSS)</string>
+    <string>Portland Press Plugin (Legacy JCore, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Portland Press Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Portland Press Plugin (Legacy JCore, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
