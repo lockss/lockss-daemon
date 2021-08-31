@@ -713,7 +713,7 @@
     au < finished ; frozen ; 2017 ; Indian Dermatology Online Journal Volume 8 ; 2017 ; 8 ; http://www.idoj.in/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Dermatology Online Journal Volume 9 ; 2018 ; 9 ; http://www.idoj.in/ ; ; >
     au < finished ; manifest ; 2019 ; Indian Dermatology Online Journal Volume 10 ; 2019 ; 10 ; https://www.idoj.in/ ; ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ ; ; >
+    au < notReady ; exists ; 2020 ; Indian Dermatology Online Journal Volume 11 ; 2020 ; 11 ; https://www.idoj.in/ ; ; > # 500 error https://www.idoj.in/article.asp?issn=2229-5178;year=2020;volume=11;issue=4;spage=479;epage=481;aulast=Singal;type=2
     au < crawling ; exists ; 2021 ; Indian Dermatology Online Journal Volume 12 ; 2021 ; 12 ; https://www.idoj.in/ ; ; >
 
   }
@@ -1084,37 +1084,37 @@
       issnl = 0971-5851
     >
 #    param[base_url] = http://www.ijmpo.org/
+     #Moved to Thieme
 
     param[journal_issn] = 0971-5851
 
-    au < manifest ; exists ; 1994 ; Indian Journal of Medical and Paediatric Oncology Volume 15 ; 1994 ; 15 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 1995 ; Indian Journal of Medical and Paediatric Oncology Volume 16 ; 1995 ; 16 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 1996 ; Indian Journal of Medical and Paediatric Oncology Volume 17 ; 1996 ; 17 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 1997 ; Indian Journal of Medical and Paediatric Oncology Volume 18 ; 1997 ; 18 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 1998 ; Indian Journal of Medical and Paediatric Oncology Volume 19 ; 1998 ; 19 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 1999 ; Indian Journal of Medical and Paediatric Oncology Volume 20 ; 1999 ; 20 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2000 ; Indian Journal of Medical and Paediatric Oncology Volume 21 ; 2000 ; 21 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2001 ; Indian Journal of Medical and Paediatric Oncology Volume 22 ; 2001 ; 22 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2002 ; Indian Journal of Medical and Paediatric Oncology Volume 23 ; 2002 ; 23 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2003 ; Indian Journal of Medical and Paediatric Oncology Volume 24 ; 2003 ; 24 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Medical and Paediatric Oncology Volume 25 ; 2004 ; 25 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Medical and Paediatric Oncology Volume 26 ; 2005 ; 26 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Medical and Paediatric Oncology Volume 27 ; 2006 ; 27 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Medical and Paediatric Oncology Volume 28 ; 2007 ; 28 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Medical and Paediatric Oncology Volume 29 ; 2008 ; 29 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Medical and Paediatric Oncology Volume 30 ; 2009 ; 30 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Medical and Paediatric Oncology Volume 31 ; 2010 ; 31 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 1994 ; Indian Journal of Medical and Paediatric Oncology Volume 15 ; 1994 ; 15 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 1995 ; Indian Journal of Medical and Paediatric Oncology Volume 16 ; 1995 ; 16 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 1996 ; Indian Journal of Medical and Paediatric Oncology Volume 17 ; 1996 ; 17 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Indian Journal of Medical and Paediatric Oncology Volume 18 ; 1997 ; 18 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Indian Journal of Medical and Paediatric Oncology Volume 19 ; 1998 ; 19 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Indian Journal of Medical and Paediatric Oncology Volume 20 ; 1999 ; 20 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Indian Journal of Medical and Paediatric Oncology Volume 21 ; 2000 ; 21 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2001 ; Indian Journal of Medical and Paediatric Oncology Volume 22 ; 2001 ; 22 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Indian Journal of Medical and Paediatric Oncology Volume 23 ; 2002 ; 23 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Indian Journal of Medical and Paediatric Oncology Volume 24 ; 2003 ; 24 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Medical and Paediatric Oncology Volume 25 ; 2004 ; 25 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Indian Journal of Medical and Paediatric Oncology Volume 26 ; 2005 ; 26 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Medical and Paediatric Oncology Volume 27 ; 2006 ; 27 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Medical and Paediatric Oncology Volume 28 ; 2007 ; 28 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Medical and Paediatric Oncology Volume 29 ; 2008 ; 29 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Medical and Paediatric Oncology Volume 30 ; 2009 ; 30 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Medical and Paediatric Oncology Volume 31 ; 2010 ; 31 ; https://www.ijmpo.org/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Medical and Paediatric Oncology Volume 32 ; 2011 ; 32 ; http://www.ijmpo.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Indian Journal of Medical and Paediatric Oncology Volume 33 ; 2012 ; 33 ; http://www.ijmpo.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Indian Journal of Medical and Paediatric Oncology Volume 34 ; 2013 ; 34 ; http://www.ijmpo.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Medical and Paediatric Oncology Volume 35 ; 2014 ; 35 ; http://www.ijmpo.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Indian Journal of Medical and Paediatric Oncology Volume 36 ; 2015 ; 36 ; http://www.ijmpo.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Medical and Paediatric Oncology Volume 37 ; 2016 ; 37 ; http://www.ijmpo.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Medical and Paediatric Oncology Volume 37 ; 2016 ; 37 ; http://www.ijmpo.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Medical and Paediatric Oncology Volume 38 ; 2017 ; 38 ; http://www.ijmpo.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Medical and Paediatric Oncology Volume 39 ; 2018 ; 39 ; http://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Indian Journal of Medical and Paediatric Oncology Volume 40 ; 2019 ; 40 ; https://www.ijmpo.org/ ; ; >
-    au < manifest ; exists ; 2020 ; Indian Journal of Medical and Paediatric Oncology Volume 41 ; 2020 ; 41 ; https://www.ijmpo.org/ ; ; >
-    au < expected ; exists ; 2021 ; Indian Journal of Medical and Paediatric Oncology Volume 42 ; 2021 ; 42 ; https://www.ijmpo.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Medical and Paediatric Oncology Volume 39 ; 2018 ; 39 ; http://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2019 ; Indian Journal of Medical and Paediatric Oncology Volume 40 ; 2019 ; 40 ; https://www.ijmpo.org/ ; ; >
+    au < doNotProcess ; exists ; 2020 ; Indian Journal of Medical and Paediatric Oncology Volume 41 ; 2020 ; 41 ; https://www.ijmpo.org/ ; ; >
 
   }
 
@@ -1126,47 +1126,47 @@
       issnl = 0255-0857
    >
 #    param[base_url] = http://www.ijmm.org/
+     #Moved to Elsevier
 
     param[journal_issn] = 0255-0857
 
-    au < manifest ; exists ; 1984 ; Indian Journal of Medical Microbiology Volume 2 ; 1984 ; 2 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1984 ; Indian Journal of Medical Microbiology Volume 2 ; 1984 ; 2 ; https://www.ijmm.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 0 ; Indian Journal of Medical Microbiology Volume 3 ; 0 ; 0 ; http://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1986 ; Indian Journal of Medical Microbiology Volume 4 ; 1986 ; 4 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1987 ; Indian Journal of Medical Microbiology Volume 5 ; 1987 ; 5 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1988 ; Indian Journal of Medical Microbiology Volume 6 ; 1988 ; 6 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1989 ; Indian Journal of Medical Microbiology Volume 7 ; 1989 ; 7 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1990 ; Indian Journal of Medical Microbiology Volume 8 ; 1990 ; 8 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1991 ; Indian Journal of Medical Microbiology Volume 9 ; 1991 ; 9 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1992 ; Indian Journal of Medical Microbiology Volume 10 ; 1992 ; 10 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1993 ; Indian Journal of Medical Microbiology Volume 11 ; 1993 ; 11 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1986 ; Indian Journal of Medical Microbiology Volume 4 ; 1986 ; 4 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1987 ; Indian Journal of Medical Microbiology Volume 5 ; 1987 ; 5 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1988 ; Indian Journal of Medical Microbiology Volume 6 ; 1988 ; 6 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1989 ; Indian Journal of Medical Microbiology Volume 7 ; 1989 ; 7 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1990 ; Indian Journal of Medical Microbiology Volume 8 ; 1990 ; 8 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1991 ; Indian Journal of Medical Microbiology Volume 9 ; 1991 ; 9 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1992 ; Indian Journal of Medical Microbiology Volume 10 ; 1992 ; 10 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1993 ; Indian Journal of Medical Microbiology Volume 11 ; 1993 ; 11 ; https://www.ijmm.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 0 ; Indian Journal of Medical Microbiology Volume 12 ; 0 ; 0 ; http://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1995 ; Indian Journal of Medical Microbiology Volume 13 ; 1995 ; 13 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1996 ; Indian Journal of Medical Microbiology Volume 14 ; 1996 ; 14 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1997 ; Indian Journal of Medical Microbiology Volume 15 ; 1997 ; 15 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1998 ; Indian Journal of Medical Microbiology Volume 16 ; 1998 ; 16 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 1999 ; Indian Journal of Medical Microbiology Volume 17 ; 1999 ; 17 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2000 ; Indian Journal of Medical Microbiology Volume 18 ; 2000 ; 18 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2001 ; Indian Journal of Medical Microbiology Volume 19 ; 2001 ; 19 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2002 ; Indian Journal of Medical Microbiology Volume 20 ; 2002 ; 20 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2003 ; Indian Journal of Medical Microbiology Volume 21 ; 2003 ; 21 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Medical Microbiology Volume 22 ; 2004 ; 22 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Medical Microbiology Volume 23 ; 2005 ; 23 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Medical Microbiology Volume 24 ; 2006 ; 24 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Medical Microbiology Volume 25 ; 2007 ; 25 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Medical Microbiology Volume 26 ; 2008 ; 26 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Medical Microbiology Volume 27 ; 2009 ; 27 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Medical Microbiology Volume 28 ; 2010 ; 28 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1995 ; Indian Journal of Medical Microbiology Volume 13 ; 1995 ; 13 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1996 ; Indian Journal of Medical Microbiology Volume 14 ; 1996 ; 14 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Indian Journal of Medical Microbiology Volume 15 ; 1997 ; 15 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Indian Journal of Medical Microbiology Volume 16 ; 1998 ; 16 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Indian Journal of Medical Microbiology Volume 17 ; 1999 ; 17 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Indian Journal of Medical Microbiology Volume 18 ; 2000 ; 18 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2001 ; Indian Journal of Medical Microbiology Volume 19 ; 2001 ; 19 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Indian Journal of Medical Microbiology Volume 20 ; 2002 ; 20 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Indian Journal of Medical Microbiology Volume 21 ; 2003 ; 21 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Medical Microbiology Volume 22 ; 2004 ; 22 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Indian Journal of Medical Microbiology Volume 23 ; 2005 ; 23 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Medical Microbiology Volume 24 ; 2006 ; 24 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Medical Microbiology Volume 25 ; 2007 ; 25 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Medical Microbiology Volume 26 ; 2008 ; 26 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Medical Microbiology Volume 27 ; 2009 ; 27 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Medical Microbiology Volume 28 ; 2010 ; 28 ; https://www.ijmm.org/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Medical Microbiology Volume 29 ; 2011 ; 29 ; http://www.ijmm.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2012 ; Indian Journal of Medical Microbiology Volume 30 ; 2012 ; 30 ; http://www.ijmm.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Indian Journal of Medical Microbiology Volume 31 ; 2013 ; 31 ; http://www.ijmm.org/ ; ; >
     au < finished ; frozen ; 2014 ; Indian Journal of Medical Microbiology Volume 32 ; 2014 ; 32 ; http://www.ijmm.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Indian Journal of Medical Microbiology Volume 33 ; 2015 ; 33 ; http://www.ijmm.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Medical Microbiology Volume 34 ; 2016 ; 34 ; http://www.ijmm.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Medical Microbiology Volume 34 ; 2016 ; 34 ; http://www.ijmm.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Medical Microbiology Volume 35 ; 2017 ; 35 ; http://www.ijmm.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Medical Microbiology Volume 36 ; 2018 ; 36 ; http://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Indian Journal of Medical Microbiology Volume 37 ; 2019 ; 37 ; https://www.ijmm.org/ ; ; >
-    au < manifest ; exists ; 2020 ; Indian Journal of Medical Microbiology Volume 38 ; 2020 ; 38 ; https://www.ijmm.org/ ; ; >
-    au < expected ; exists ; 2021 ; Indian Journal of Medical Microbiology Volume 39 ; 2021 ; 39 ; https://www.ijmm.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Medical Microbiology Volume 36 ; 2018 ; 36 ; http://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2019 ; Indian Journal of Medical Microbiology Volume 37 ; 2019 ; 37 ; https://www.ijmm.org/ ; ; >
+    au < doNotProcess ; exists ; 2020 ; Indian Journal of Medical Microbiology Volume 38 ; 2020 ; 38 ; https://www.ijmm.org/ ; ; >
 
   }
 
@@ -1404,7 +1404,7 @@
     au < finished ; frozen ; 2017 ; Indian Journal of Ophthalmology Volume 65 ; 2017 ; 65 ; http://www.ijo.in/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Ophthalmology Volume 66 ; 2018 ; 66 ; http://www.ijo.in/ ; ; >
     au < crawling ; exists ; 2019 ; Indian Journal of Ophthalmology Volume 67 ; 2019 ; 67 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2020 ; Indian Journal of Ophthalmology Volume 68 ; 2020 ; 68 ; https://www.ijo.in/ ; ; >
+    au < notReady ; exists ; 2020 ; Indian Journal of Ophthalmology Volume 68 ; 2020 ; 68 ; https://www.ijo.in/ ; ; >#no substance
     au < expected ; exists ; 2021 ; Indian Journal of Ophthalmology Volume 69 ; 2021 ; 69 ; https://www.ijo.in/ ; ; >
 
   }
@@ -2880,22 +2880,21 @@
       issnl = 0975-1475
     >
 #    param[base_url] = http://www.jfds.org/
+    #Moved
 
     param[journal_issn] = 0975-1475
 
-    au < manifest ; exists ; 2009 ; Journal of Forensic Dental Sciences Volume 1 ; 2009 ; 1 ; https://www.jfds.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Journal of Forensic Dental Sciences Volume 2 ; 2010 ; 2 ; https://www.jfds.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Forensic Dental Sciences Volume 1 ; 2009 ; 1 ; https://www.jfds.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Forensic Dental Sciences Volume 2 ; 2010 ; 2 ; https://www.jfds.org/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Forensic Dental Sciences Volume 3 ; 2011 ; 3 ; http://www.jfds.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Journal of Forensic Dental Sciences Volume 4 ; 2012 ; 4 ; http://www.jfds.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Journal of Forensic Dental Sciences Volume 5 ; 2013 ; 5 ; http://www.jfds.org/ ; ; >
     au < finished ; finished ; 2014 ; Journal of Forensic Dental Sciences Volume 6 ; 2014 ; 6 ; http://www.jfds.org/ ; ; >
     au < finished ; frozen ; 2015 ; Journal of Forensic Dental Sciences Volume 7 ; 2015 ; 7 ; http://www.jfds.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Forensic Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.jfds.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Journal of Forensic Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.jfds.org/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Forensic Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.jfds.org/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Forensic Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.jfds.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Journal of Forensic Dental Sciences Volume 11 ; 2019 ; 11 ; https://www.jfds.org/ ; ; >
-    au < expected ; exists ; 2020 ; Journal of Forensic Dental Sciences Volume 12 ; 2020 ; 12 ; https://www.jfds.org/ ; ; >
-    au < expected ; exists ; 2021 ; Journal of Forensic Dental Sciences Volume 13 ; 2021 ; 13 ; https://www.jfds.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Journal of Forensic Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.jfds.org/ ; ; >
+    au < doNotProcess ; exists ; 2019 ; Journal of Forensic Dental Sciences Volume 11 ; 2019 ; 11 ; https://www.jfds.org/ ; ; >
 
   }
 
@@ -3746,47 +3745,48 @@
       issnl = 0970-2113
     >
 #    param[base_url] = http://www.lungindia.com/
+     #Moved to Wolters Kluwer
 
     param[journal_issn] = 0970-2113
 
-    au < manifest ; exists ; 1983 ; Lung India Volume 1 ; 1983 ; 1 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1984 ; Lung India Volume 2 ; 1984 ; 2 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1985 ; Lung India Volume 3 ; 1985 ; 3 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1986 ; Lung India Volume 4 ; 1986 ; 4 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1987 ; Lung India Volume 5 ; 1987 ; 5 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1988 ; Lung India Volume 6 ; 1988 ; 6 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1989 ; Lung India Volume 7 ; 1989 ; 7 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1990 ; Lung India Volume 8 ; 1990 ; 8 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1991 ; Lung India Volume 9 ; 1991 ; 9 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1992 ; Lung India Volume 10 ; 1992 ; 10 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1993 ; Lung India Volume 11 ; 1993 ; 11 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1994 ; Lung India Volume 12 ; 1994 ; 12 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1995 ; Lung India Volume 13 ; 1995 ; 13 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1996 ; Lung India Volume 14 ; 1996 ; 14 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1997 ; Lung India Volume 15 ; 1997 ; 15 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1998 ; Lung India Volume 16 ; 1998 ; 16 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 1999 ; Lung India Volume 17 ; 1999 ; 17 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2000 ; Lung India Volume 18 ; 2000 ; 18 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2001 ; Lung India Volume 19 ; 2001 ; 19 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2002 ; Lung India Volume 20 ; 2002 ; 20 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2004 ; Lung India Volume 21 ; 2004 ; 21 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2005 ; Lung India Volume 22 ; 2005 ; 22 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2006 ; Lung India Volume 23 ; 2006 ; 23 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2007 ; Lung India Volume 24 ; 2007 ; 24 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2008 ; Lung India Volume 25 ; 2008 ; 25 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2009 ; Lung India Volume 26 ; 2009 ; 26 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2010 ; Lung India Volume 27 ; 2010 ; 27 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1983 ; Lung India Volume 1 ; 1983 ; 1 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1984 ; Lung India Volume 2 ; 1984 ; 2 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1985 ; Lung India Volume 3 ; 1985 ; 3 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1986 ; Lung India Volume 4 ; 1986 ; 4 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1987 ; Lung India Volume 5 ; 1987 ; 5 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1988 ; Lung India Volume 6 ; 1988 ; 6 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1989 ; Lung India Volume 7 ; 1989 ; 7 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1990 ; Lung India Volume 8 ; 1990 ; 8 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1991 ; Lung India Volume 9 ; 1991 ; 9 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1992 ; Lung India Volume 10 ; 1992 ; 10 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1993 ; Lung India Volume 11 ; 1993 ; 11 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1994 ; Lung India Volume 12 ; 1994 ; 12 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1995 ; Lung India Volume 13 ; 1995 ; 13 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1996 ; Lung India Volume 14 ; 1996 ; 14 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Lung India Volume 15 ; 1997 ; 15 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Lung India Volume 16 ; 1998 ; 16 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Lung India Volume 17 ; 1999 ; 17 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Lung India Volume 18 ; 2000 ; 18 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2001 ; Lung India Volume 19 ; 2001 ; 19 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Lung India Volume 20 ; 2002 ; 20 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Lung India Volume 21 ; 2004 ; 21 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Lung India Volume 22 ; 2005 ; 22 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Lung India Volume 23 ; 2006 ; 23 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Lung India Volume 24 ; 2007 ; 24 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Lung India Volume 25 ; 2008 ; 25 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Lung India Volume 26 ; 2009 ; 26 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Lung India Volume 27 ; 2010 ; 27 ; https://www.lungindia.com/ ; ; >
     au < finished ; frozen ; 2011 ; Lung India Volume 28 ; 2011 ; 28 ; http://www.lungindia.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; Lung India Volume 29 ; 2012 ; 29 ; http://www.lungindia.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Lung India Volume 30 ; 2013 ; 30 ; http://www.lungindia.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Lung India Volume 31 ; 2014 ; 31 ; http://www.lungindia.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Lung India Volume 32 ; 2015 ; 32 ; http://www.lungindia.com/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2016 ; Lung India Volume 33 ; 2016 ; 33 ; http://www.lungindia.com/ ; ; >
+    au < frozen ; exists ; 2016 ; Lung India Volume 33 ; 2016 ; 33 ; http://www.lungindia.com/ ; ; >
     au < finished ; frozen ; 2017 ; Lung India Volume 34 ; 2017 ; 34 ; http://www.lungindia.com/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Lung India Volume 35 ; 2018 ; 35 ; http://www.lungindia.com/ ; ; >
+    au < frozen ; exists ; 2018 ; Lung India Volume 35 ; 2018 ; 35 ; http://www.lungindia.com/ ; ; >
     au < frozen ; exists ; 2019 ; Lung India Volume 36 ; 2019 ; 36 ; https://www.lungindia.com/ ; ; >
-    au < manifest ; exists ; 2020 ; Lung India Volume 37 ; 2020 ; 37 ; https://www.lungindia.com/ ; ; >
-    au < crawling ; exists ; 2021 ; Lung India Volume 38 ; 2021 ; 38 ; https://www.lungindia.com/ ; ; >
+    au < doNotProcess ; exists ; 2020 ; Lung India Volume 37 ; 2020 ; 37 ; https://www.lungindia.com/ ; ; >
+    au < superseded ; exists ; 2021 ; Lung India Volume 38 ; 2021 ; 38 ; https://www.lungindia.com/ ; ; >
 
   }
 #  {
@@ -5327,9 +5327,9 @@
       au < finished ; finished ; 2015 ; Community Acquired Infection Volume 2 ; 2015 ; 2 ; http://www.caijournal.com/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Community Acquired Infection Volume 3 ; 2016 ; 3 ; http://www.caijournal.com/ ; ; >
       au < finished ; finished ; 2017 ; Community Acquired Infection Volume 4 ; 2017 ; 4 ; http://www.caijournal.com/ ; ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ ; ; >
-      au < manifest ; exists ; 2020 ; Community Acquired Infection Volume 7 ; 2020 ; 7 ; https://www.caijournal.com/ ; ; >
+      au < notReady ; exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ ; ; > #no substance
+      au < notReady ; exists ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ ; ; > #no substance
+      au < notReady ; exists ; 2020 ; Community Acquired Infection Volume 7 ; 2020 ; 7 ; https://www.caijournal.com/ ; ; > #no substance
       au < expected ; exists ; 2021 ; Community Acquired Infection Volume 8 ; 2021 ; 8 ; https://www.caijournal.com/ ; ; >
 
   }
@@ -7359,17 +7359,15 @@
 
       param[journal_issn] = 2319-2585
 #      param[base_url] = http://www.joas.in/
+      #Moved to Woltors Klewer and changed name to Journal of Orthopaedics and Spine
 
       au < finished ; finished ; 2013 ; Journal of Orthopaedics and Allied Sciences Volume 1 ; 2013 ; 1 ; http://www.joas.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Orthopaedics and Allied Sciences Volume 2 ; 2014 ; 2 ; http://www.joas.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Journal of Orthopaedics and Allied Sciences Volume 3 ; 2015 ; 3 ; http://www.joas.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Journal of Orthopaedics and Allied Sciences Volume 4 ; 2016 ; 4 ; http://www.joas.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Orthopaedics and Allied Sciences Volume 5 ; 2017 ; 5 ; http://www.joas.in/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Journal of Orthopaedics and Allied Sciences Volume 6 ; 2018 ; 6 ; http://www.joas.in/ ; ; >
-      au < manifest ; exists ; 2019 ; Journal of Orthopaedics and Allied Sciences Volume 7 ; 2019 ; 7 ; https://www.joas.in/ ; ; >
-      au < expected ; exists ; 2020 ; Journal of Orthopaedics and Allied Sciences Volume 8 ; 2020 ; 8 ; https://www.joas.in/ ; ; >
-      au < expected ; exists ; 2021 ; Journal of Orthopaedics and Allied Sciences Volume 9 ; 2021 ; 9 ; https://www.joas.in/ ; ; >
-
+      au < frozen ; exists ; 2018 ; Journal of Orthopaedics and Allied Sciences Volume 6 ; 2018 ; 6 ; http://www.joas.in/ ; ; >
+      #changed name to Journal of Orthopaedics and Spine
   }
 
   {
