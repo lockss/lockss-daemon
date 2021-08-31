@@ -21,6 +21,7 @@
 
       param[journal_id] = egisbd
 
+      au < doesNotExist ; doesNotExist ; 1970 ; Engineering Issues: Journal of Professional Activities Volume 95 ; 95 ;  >
       au < crawling ; exists ; 1971 ; Engineering Issues: Journal of Professional Activities Volume 96 ; 96 ;  >
       au < finished ; crawling ; 1972 ; Engineering Issues: Journal of Professional Activities Volume 97 ; 97 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1973 ; Engineering Issues: Journal of Professional Activities Volume 98 ; 98 ; reingest2.clockss.org:8085 >
@@ -63,7 +64,6 @@
       au < finished ; crawling ; 1967 ; Journal of Professional Activities Volume 93 ; 93 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 1968 ; Journal of Professional Activities Volume 94 ; 94 ;  >
       au < crawling ; exists ; 1969 ; Journal of Professional Activities Volume 95 ; 95 ;  >
-      au < exists ; exists ; 1970 ; Journal of Professional Activities Volume 96 ; 96 ;  >
 
   }
 
@@ -79,13 +79,12 @@
 
       au < crawling ; exists ; 1958 ; Journal of Professional Practice Volume 84 ; 84 ;  >
       au < crawling ; exists ; 1959 ; Journal of Professional Practice Volume 85 ; 85 ;  >
-      au < exists ; exists ; 1960 ; Journal of Professional Practice Volume 86 ; 86 ;  >
+      au < doesNotExist ; doesNotExist ; 1960 ; Journal of Professional Practice Volume 86 ; 86 ;  >
       au < crawling ; exists ; 1961 ; Journal of Professional Practice Volume 87 ; 87 ;  >
       au < finished ; manifest ; 1962 ; Journal of Professional Practice Volume 88 ; 88 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 1963 ; Journal of Professional Practice Volume 89 ; 89 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 1964 ; Journal of Professional Practice Volume 90 ; 90 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 1965 ; Journal of Professional Practice Volume 91 ; 91 ; reingest3.clockss.org:8083 >
-      au < exists ; exists ; 1966 ; Journal of Professional Practice Volume 92 ; 92 ;  >
 
   }
 
@@ -121,7 +120,7 @@
       au < crawling ; exists ; 1965 ; Journal of the Aero-Space Transport Division Volume 92 ; 92 ;  >
       au < finished ; manifest ; 1966 ; Journal of the Aero-Space Transport Division Volume 93 ; 93 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 1967 ; Journal of the Aero-Space Transport Division Volume 94 ; 94 ;  >
-      au < exists ; exists ; 1968 ; Journal of the Aero-Space Transport Division Volume 95 ; 95 ;  >
+      au < doesNotExist ; doesNotExist ; 1968 ; Journal of the Aero-Space Transport Division Volume 95 ; 95 ;  >
 
   }
 
@@ -191,7 +190,7 @@
       param[journal_id] = jcceaz
 
       au < finished ; manifest ; 1957 ; Journal of the Construction Division Volume 83 ; 83 ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 1958 ; Journal of the Construction Division Volume 84 ; 84 ;  >
+      au < doesNotExist ; doesNotExist ; 1958 ; Journal of the Construction Division Volume 84 ; 84 ;  >
       au < crawling ; exists ; 1959 ; Journal of the Construction Division Volume 85 ; 85 ;  >
       au < finished ; manifest ; 1960 ; Journal of the Construction Division Volume 86 ; 86 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 1961 ; Journal of the Construction Division Volume 87 ; 87 ;  >
@@ -440,9 +439,9 @@
       au < finished ; manifest ; 1957 ; Journal of the Pipeline Division Volume 83 ; 83 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 1958 ; Journal of the Pipeline Division Volume 84 ; 84 ;  >
       au < finished ; manifest ; 1959 ; Journal of the Pipeline Division Volume 85 ; 85 ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 1960 ; Journal of the Pipeline Division Volume 86 ; 86 ;  >
+      au < doesNotExist ; doesNotExist ; 1960 ; Journal of the Pipeline Division Volume 86 ; 86 ;  >
       au < crawling ; exists ; 1961 ; Journal of the Pipeline Division Volume 87 ; 87 ;  >
-      au < exists ; exists ; 1962 ; Journal of the Pipeline Division Volume 88 ; 88 ;  >
+      au < doesNotExist ; doesNotExist ; 1962 ; Journal of the Pipeline Division Volume 88 ; 88 ;  >
       au < finished ; manifest ; 1963 ; Journal of the Pipeline Division Volume 89 ; 89 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 1964 ; Journal of the Pipeline Division Volume 90 ; 90 ;  >
       au < crawling ; exists ; 1965 ; Journal of the Pipeline Division Volume 91 ; 91 ;  >
@@ -743,7 +742,6 @@
       au < finished ; crawling ; 1967 ; Journal of the Waterways and Harbors Division Volume 93 ; 93 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 1968 ; Journal of the Waterways and Harbors Division Volume 94 ; 94 ;  >
       au < finished ; crawling ; 1969 ; Journal of the Waterways and Harbors Division Volume 95 ; 95 ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 1970 ; Journal of the Waterways and Harbors Division Volume 96 ; 96 ;  >
 
   }
 
