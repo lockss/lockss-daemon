@@ -42,7 +42,7 @@
       au < finished ; manifest ; 2016 ; The Chaucer Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; The Chaucer Review Volume 2017 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; The Chaucer Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; The Chaucer Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; The Chaucer Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; The Chaucer Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Chaucer Review Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -68,7 +68,7 @@
       au < finished ; manifest ; 2016 ; Comparative Literature Studies Volume 53 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; Comparative Literature Studies Volume 54 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Comparative Literature Studies Volume 55 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Comparative Literature Studies Volume 56 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Comparative Literature Studies Volume 56 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Comparative Literature Studies Volume 57 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Comparative Literature Studies Volume 58 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -91,7 +91,7 @@
       au < finished ; manifest ; 2016 ; Critical Philosophy of Race Volume 4 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Critical Philosophy of Race Volume 5 ; 2017 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Critical Philosophy of Race Volume 6 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; Critical Philosophy of Race Volume 7 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Critical Philosophy of Race Volume 7 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Critical Philosophy of Race Volume 8 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Critical Philosophy of Race Volume 9 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -116,7 +116,7 @@
       au < finished ; manifest ; 2016 ; The Edgar Allan Poe Review Volume 17 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; The Edgar Allan Poe Review Volume 18 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; The Edgar Allan Poe Review Volume 19 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Edgar Allan Poe Review Volume 22 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -230,11 +230,11 @@
       au < doNotProcess ; doNotProcess ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 2014 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2015 ; Interdisciplinary Literary Studies Volume 17 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Interdisciplinary Literary Studies Volume 18 ; 2016 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; Interdisciplinary Literary Studies Volume 19 ; 2017 ; http://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2018 ; Interdisciplinary Literary Studies Volume 20 ; 2018 ; https://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; Interdisciplinary Literary Studies Volume 21 (2019) ; 2019 ; https://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2020 ; Interdisciplinary Literary Studies Volume 21 (2020) ; 2020 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2021 ; Interdisciplinary Literary Studies Volume 22 (2021) ; 2021 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2017 ; Interdisciplinary Literary Studies Volume 19 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Interdisciplinary Literary Studies Volume 20 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; Interdisciplinary Literary Studies Volume 21 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Interdisciplinary Literary Studies Volume 22 ; 2020 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2021 ; Interdisciplinary Literary Studies Volume 23 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -255,7 +255,7 @@
       au < finished ; manifest ; 2016 ; Journal of Africana Religions Volume 5 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of Africana Religions Volume 6 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of Africana Religions Volume 7 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Journal of Africana Religions Volume 8 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Journal of Africana Religions Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Africana Religions Volume 9 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Africana Religions Volume 10 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -304,7 +304,7 @@
       au < finished ; manifest ; 2016 ; The Journal of Ayn Rand Studies Volume 16 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; The Journal of Ayn Rand Studies Volume 17 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; The Journal of Ayn Rand Studies Volume 18 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Journal of Ayn Rand Studies Volume 20 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Journal of Ayn Rand Studies Volume 21 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -327,7 +327,7 @@
       au < finished ; manifest ; 2016 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 4 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 6 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 9 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -380,7 +380,7 @@
       au < finished ; manifest ; 2016 ; Journal of Medieval Religious Cultures Volume 42 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of Medieval Religious Cultures Volume 43 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; Journal of Medieval Religious Cultures Volume 44 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Medieval Religious Cultures Volume 46 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Medieval Religious Cultures Volume 47 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -850,7 +850,7 @@
 
       au < finished ; manifest ; 2017 ; ab-Original Volume 1 ; 2017 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; ab-Original Volume 1-2 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; ab-Original Volume 3 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; ab-Original Volume 3 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; ab-Original Volume 4 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; ab-Original Volume 5 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -951,7 +951,7 @@
       au < finished ; manifest ; 2016 ; The Arthur Miller Journal Volume 11 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; The Arthur Miller Journal Volume 12 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; The Arthur Miller Journal Volume 13 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; The Arthur Miller Journal Volume 14 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; The Arthur Miller Journal Volume 14 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; The Arthur Miller Journal Volume 15 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Arthur Miller Journal Volume 16 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1024,7 +1024,7 @@
       au < finished ; manifest ; 2016 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 13 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 14 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 15 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 16 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 16 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 17 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 18 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1090,7 +1090,7 @@
       au < doNotProcess ; exists ; 2016 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 47 ; 2016 ; https://www.jstor.org/ ; >
       au < finished ; manifest ; 2017 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 48 ; 2017 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 49 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 50 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 50 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 51 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 52 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1163,8 +1163,8 @@
       au < finished ; manifest ; 2016 ; Edith Wharton Review Volume 32 ; 2016 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Edith Wharton Review Volume 33 ; 2017 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Edith Wharton Review Volume 34 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; Edith Wharton Review Volume 35 (2019) ; 2019 ; https://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2020 ; Edith Wharton Review Volume 35 (2020) ; 2020 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Edith Wharton Review Volume 35 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Edith Wharton Review Volume 36 (2020) ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Edith Wharton Review Volume 36 (2021) ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -1246,7 +1246,7 @@
       au < finished ; manifest ; 2016 ; Gestalt Review Volume 20 ; 2016 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; Gestalt Review Volume 21 ; 2017 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Gestalt Review Volume 22 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Gestalt Review Volume 23 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Gestalt Review Volume 23 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Gestalt Review Volume 24 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Gestalt Review Volume 25 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1311,7 +1311,7 @@
       au < finished ; manifest ; 2016 ; Journal of Asia-Pacific Pop Culture Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of Asia-Pacific Pop Culture Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of Asia-Pacific Pop Culture Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Journal of Asia-Pacific Pop Culture Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Journal of Asia-Pacific Pop Culture Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Asia-Pacific Pop Culture Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Asia-Pacific Pop Culture Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1401,7 +1401,7 @@
 
       au < finished ; manifest ; 2017 ; Journal of Posthuman Studies Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Journal of Posthuman Studies Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Posthuman Studies Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Journal of Posthuman Studies Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1448,10 +1448,9 @@
       au < finished ; manifest ; 2015 ; Journal of the Pennsylvania Academy of Science Volume 89 ; 2015 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; Journal of the Pennsylvania Academy of Science Volume 90 ; 2016 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of the Pennsylvania Academy of Science Volume 91 ; 2017 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Journal of the Pennsylvania Academy of Science Volume 92 ; 2018 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2018 ; Journal of the Pennsylvania Academy of Science Volume 92 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 93 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2020 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 2020 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 95 ; 2021 ; https://www.jstor.org/ ; >
+      au < crawling ; exists ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1497,7 +1496,7 @@
 
       au < finished ; manifest ; 2017 ; Libraries: Culture, History, and Society Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Libraries: Culture, History, and Society Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; Libraries: Culture, History, and Society Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Libraries: Culture, History, and Society Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Libraries: Culture, History, and Society Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Libraries: Culture, History, and Society Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1547,7 +1546,7 @@
       au < finished ; manifest ; 2016 ; Nathaniel Hawthorne Review Volume 42 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Nathaniel Hawthorne Review Volume 43 ; 2017 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Nathaniel Hawthorne Review Volume 44 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; Nathaniel Hawthorne Review Volume 45 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Nathaniel Hawthorne Review Volume 45 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Nathaniel Hawthorne Review Volume 46 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Nathaniel Hawthorne Review Volume 47 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1604,9 +1603,9 @@
       au < finished ; manifest ; 2014 ; Resources for American Literary Study Volume 37 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; Resources for American Literary Study Volume 38 ; 2015 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Resources for American Literary Study Volume 39 ; 2017 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Resources for American Literary Study Volume 40-41 ; 2019 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2020 ; Resources for American Literary Study Volume 42 ; 2020 ; https://www.jstor.org/ ; >
-      au < crawling ; exists ; 2021 ; Resources for American Literary Study Volume 43 ; 2021 ; https://www.jstor.org/ ; >
+      au < exists ; exists ; 2018 ; Resources for American Literary Study Volume 40 ; 2018 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Resources for American Literary Study Volume 41 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2021 ; Resources for American Literary Study Volume 42 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -1766,8 +1765,8 @@
       au < finished ; manifest ; 2015 ; The Cormac McCarthy Journal Volume 13 ; 2015 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; The Cormac McCarthy Journal Volume 14 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; The Cormac McCarthy Journal Volume 15 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2018 ; The Cormac McCarthy Journal Volume 16 ; 2018 ; https://www.jstor.org/ ; >
-      au < deepCrawl ; exists ; 2019 ; The Cormac McCarthy Journal Volume 17 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2018 ; The Cormac McCarthy Journal Volume 16 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; The Cormac McCarthy Journal Volume 17 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Cormac McCarthy Journal Volume 18 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Cormac McCarthy Journal Volume 19 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1786,7 +1785,7 @@
 
       au < finished ; manifest ; 2017 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1868,7 +1867,7 @@
       au < finished ; manifest ; 2016 ; The Korean Language in America Volume 19-20 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; The Korean Language in America Volume 20-21 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; The Korean Language in America Volume 21-22 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; The Korean Language in America Volume 22-23 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; The Korean Language in America Volume 22-23 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Korean Language in America Volume 23-24 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Korean Language in America Volume 24-25 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -1954,7 +1953,7 @@
       au < finished ; manifest ; 2016 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 25-26 ; 2016 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 27 ; 2017 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 28 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 29 ; 2019 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2019 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 29 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 30 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 31 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -2070,12 +2069,11 @@
 
       param[journal_id] = hungarianstud
 
-      au < finished ; manifest ; 2016 ; Hungarian Studies Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2017 ; Hungarian Studies Review Volume 2017 ; 2017 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2018 ; Hungarian Studies Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; Hungarian Studies Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2020 ; Hungarian Studies Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2021 ; Hungarian Studies Review Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2016 ; Hungarian Studies Review Volume 43 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Hungarian Studies Review Volume 44 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Hungarian Studies Review Volume 45 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Hungarian Studies Review Volume 46-47 ; 2020 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2021 ; Hungarian Studies Review Volume 48 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2090,23 +2088,22 @@
 
       param[journal_id] = jafrideve
 
-      au < manifest ; exists ; 2005 ; Journal of African Development Volume 2005 ; 2005 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2006 ; Journal of African Development Volume 2006 ; 2006 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2007 ; Journal of African Development Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2008 ; Journal of African Development Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
-      au < manifest ; exists ; 2009 ; Journal of African Development Volume 2009 ; 2009 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2010 ; Journal of African Development Volume 2010 ; 2010 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2011 ; Journal of African Development Volume 2011 ; 2011 ; https://www.jstor.org/ ; >
-      au < frozen ; exists ; 2012 ; Journal of African Development Volume 2012 ; 2012 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2013 ; Journal of African Development Volume 2013 ; 2013 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Journal of African Development Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Journal of African Development Volume 2015 ; 2015 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of African Development Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Journal of African Development Volume 2017 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; Journal of African Development Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2019 ; Journal of African Development Volume 2019 ; 2019 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2020 ; Journal of African Development Volume 2020 ; 2020 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; Journal of African Development Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2005 ; Journal of African Development Volume 7 ; 2005 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2006 ; Journal of African Development Volume 8 ; 2006 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2007 ; Journal of African Development Volume 9 ; 2007 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2008 ; Journal of African Development Volume 10 ; 2008 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2009 ; Journal of African Development Volume 11 ; 2009 ; https://www.jstor.org/ ; >
+      au < finished ; manifest ; 2010 ; Journal of African Development Volume 12 ; 2010 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; Journal of African Development Volume 13 ; 2011 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Journal of African Development Volume 14 ; 2012 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; Journal of African Development Volume 15 ; 2013 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Journal of African Development Volume 16 ; 2014 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Journal of African Development Volume 17 ; 2015 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Journal of African Development Volume 18 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Journal of African Development Volume 19 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Journal of African Development Volume 20 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Journal of African Development Volume 21 ; 2020 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < expected ; exists ; 2021 ; Journal of African Development Volume 22 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
