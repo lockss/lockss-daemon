@@ -4212,20 +4212,21 @@
 #    param[base_url] = http://www.phcogres.com/
 
     param[journal_issn] = 0974-8490
+    #Moved
 
-    au < manifest ; exists ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; https://www.phcogres.com/ ; ; >
-    au < manifest ; exists ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; https://www.phcogres.com/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; https://www.phcogres.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; https://www.phcogres.com/ ; ; >
     au < finished ; frozen ; 2011 ; Pharmacognosy Research Volume 3 ; 2011 ; 3 ; http://www.phcogres.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Pharmacognosy Research Volume 4 ; 2012 ; 4 ; http://www.phcogres.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Pharmacognosy Research Volume 5 ; 2013 ; 5 ; http://www.phcogres.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2014 ; Pharmacognosy Research Volume 6 ; 2014 ; 6 ; http://www.phcogres.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Pharmacognosy Research Volume 7 ; 2015 ; 7 ; http://www.phcogres.com/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Pharmacognosy Research Volume 8 ; 2016 ; 8 ; http://www.phcogres.com/ ; ; >
+    au < frozen ; exists ; 2016 ; Pharmacognosy Research Volume 8 ; 2016 ; 8 ; http://www.phcogres.com/ ; ; >
     au < finished ; frozen ; 2017 ; Pharmacognosy Research Volume 9 ; 2017 ; 9 ; http://www.phcogres.com/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Pharmacognosy Research Volume 10 ; 2018 ; 10 ; http://www.phcogres.com/ ; ; >
+    au < frozen ; exists ; 2018 ; Pharmacognosy Research Volume 10 ; 2018 ; 10 ; http://www.phcogres.com/ ; ; >
     au < frozen ; exists ; 2019 ; Pharmacognosy Research Volume 11 ; 2019 ; 11 ; https://www.phcogres.com/ ; ; >
-    au < manifest ; exists ; 2020 ; Pharmacognosy Research Volume 12 ; 2020 ; 12 ; https://www.phcogres.com/ ; ; >
-    au < manifest ; exists ; 2021 ; Pharmacognosy Research Volume 13 ; 2021 ; 13 ; https://www.phcogres.com/ ; ; >
+    au < doNotProcess ; exists ; 2020 ; Pharmacognosy Research Volume 12 ; 2020 ; 12 ; https://www.phcogres.com/ ; ; >
+    au < doNotProcess ; exists ; 2021 ; Pharmacognosy Research Volume 13 ; 2021 ; 13 ; https://www.phcogres.com/ ; ; >
 
   }
 
@@ -5813,7 +5814,7 @@
       au < deepCrawl ; exists ; 2018 ; Global Journal of Transfusion Medicine Volume 3 ; 2018 ; 3 ; http://www.gjtmonline.com/ ; ; >
       au < frozen ; exists ; 2019 ; Global Journal of Transfusion Medicine Volume 4 ; 2019 ; 4 ; https://www.gjtmonline.com/ ; ; >
       au < frozen ; exists ; 2020 ; Global Journal of Transfusion Medicine Volume 5 ; 2020 ; 5 ; https://www.gjtmonline.com/ ; ; >
-      au < manifest ; exists ; 2021 ; Global Journal of Transfusion Medicine Volume 6 ; 2021 ; 6 ; https://www.gjtmonline.com/ ; ; >
+      au < notReady ; exists ; 2021 ; Global Journal of Transfusion Medicine Volume 6 ; 2021 ; 6 ; https://www.gjtmonline.com/ ; ; > #500 error
 
   }
 
@@ -7046,15 +7047,16 @@
 
       param[journal_issn] = 2394-2916
 #      param[base_url] = http://www.journal-ina.com/
+      #home page 500 error. See https://www.journal-ina.com/backissues.asp, http://www.journal-ina.com/lockss.txt
 
       au < finished ; finished ; 2014 ; Journal of Integrative Nephrology and Andrology Volume 1 ; 2014 ; 1 ; http://www.journal-ina.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Journal of Integrative Nephrology and Andrology Volume 2 ; 2015 ; 2 ; http://www.journal-ina.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Journal of Integrative Nephrology and Andrology Volume 3 ; 2016 ; 3 ; http://www.journal-ina.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Journal of Integrative Nephrology and Andrology Volume 4 ; 2017 ; 4 ; http://www.journal-ina.com/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Journal of Integrative Nephrology and Andrology Volume 5 ; 2018 ; 5 ; http://www.journal-ina.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Journal of Integrative Nephrology and Andrology Volume 6 ; 2019 ; 6 ; https://www.journal-ina.com/ ; ; >
-      au < manifest ; exists ; 2020 ; Journal of Integrative Nephrology and Andrology Volume 7 ; 2020 ; 7 ; https://www.journal-ina.com/ ; ; >
-      au < manifest ; exists ; 2021 ; Journal of Integrative Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://www.journal-ina.com/ ; ; >
+      au < frozen ; exists ; 2018 ; Journal of Integrative Nephrology and Andrology Volume 5 ; 2018 ; 5 ; http://www.journal-ina.com/ ; ; >
+      au < notReady ; exists ; 2019 ; Journal of Integrative Nephrology and Andrology Volume 6 ; 2019 ; 6 ; https://www.journal-ina.com/ ; ; >
+      au < notReady ; exists ; 2020 ; Journal of Integrative Nephrology and Andrology Volume 7 ; 2020 ; 7 ; https://www.journal-ina.com/ ; ; >
+      au < notReady ; exists ; 2021 ; Journal of Integrative Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://www.journal-ina.com/ ; ; >
 
   }
 
@@ -7787,13 +7789,16 @@
 
       param[journal_issn] = 2250-9658
 #      param[base_url] = http://www.mdcan-uath.org/
+      #500 errors. For example
+      #https://www.mdcan-uath.org/showBackIssue.asp?issn=2250-9658;year=2019;volume=8;issue=14
+      #https://www.mdcan-uath.org/showBackIssue.asp?issn=2250-9658;year=2020;volume=9;issue=16
 
       au < notReady ; exists ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; http://www.mdcan-uath.org/ ; 500 Error ; >
       au < notReady ; exists ; 2017 ; New Nigerian Journal of Clinical Research Volume 6 ; 2017 ; 6 ; http://www.mdcan-uath.org/ ; 500 Error ; >
       au < notReady ; exists ; 2018 ; New Nigerian Journal of Clinical Research Volume 7 ; 2018 ; 7 ; http://www.mdcan-uath.org/ ; 500 Error ; >
-      au < manifest ; exists ; 2019 ; New Nigerian Journal of Clinical Research Volume 8 ; 2019 ; 8 ; https://www.mdcan-uath.org/ ; 500 Error ; >
-      au < manifest ; exists ; 2020 ; New Nigerian Journal of Clinical Research Volume 9 ; 2020 ; 9 ; https://www.mdcan-uath.org/ ; 500 Error ; >
-      au < manifest ; exists ; 2021 ; New Nigerian Journal of Clinical Research Volume 10 ; 2021 ; 10 ; https://www.mdcan-uath.org/ ; 500 Error ; >
+      au < notReady ; exists ; 2019 ; New Nigerian Journal of Clinical Research Volume 8 ; 2019 ; 8 ; https://www.mdcan-uath.org/ ; 500 Error ; >
+      au < notReady ; exists ; 2020 ; New Nigerian Journal of Clinical Research Volume 9 ; 2020 ; 9 ; https://www.mdcan-uath.org/ ; 500 Error ; >
+      au < notReady ; exists ; 2021 ; New Nigerian Journal of Clinical Research Volume 10 ; 2021 ; 10 ; https://www.mdcan-uath.org/ ; 500 Error ; >
 
   }
 
@@ -10263,12 +10268,13 @@
 
       param[journal_issn] = 2589-1219
 #      param[base_url] = http://www.journalmsr.com/
+      #Moved
 
-      au < manifest ; exists ; 2017 ; Journal of Musculoskeletal Surgery and Research Volume 1 ; 2017 ; 1 ; https://www.journalmsr.com/ ; ; >
-      au < manifest ; exists ; 2018 ; Journal of Musculoskeletal Surgery and Research Volume 2 ; 2018 ; 2 ; https://www.journalmsr.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Journal of Musculoskeletal Surgery and Research Volume 3 ; 2019 ; 3 ; https://www.journalmsr.com/ ; ; >
+      au < doNotProcess ; exists ; 2017 ; Journal of Musculoskeletal Surgery and Research Volume 1 ; 2017 ; 1 ; https://www.journalmsr.com/ ; ; >
+      au < doNotProcess ; exists ; 2018 ; Journal of Musculoskeletal Surgery and Research Volume 2 ; 2018 ; 2 ; https://www.journalmsr.com/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Journal of Musculoskeletal Surgery and Research Volume 3 ; 2019 ; 3 ; https://www.journalmsr.com/ ; ; >
       au < frozen ; exists ; 2020 ; Journal of Musculoskeletal Surgery and Research Volume 4 ; 2020 ; 4 ; https://www.journalmsr.com/ ; ; >
-      au < manifest ; exists ; 2021 ; Journal of Musculoskeletal Surgery and Research Volume 5 ; 2021 ; 5 ; https://www.journalmsr.com/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Journal of Musculoskeletal Surgery and Research Volume 5 ; 2021 ; 5 ; https://www.journalmsr.com/ ; ; >
 
   }
 
