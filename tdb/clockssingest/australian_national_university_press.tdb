@@ -85,32 +85,32 @@
     
     param[journal_id] = agenda-journal-policy-analysis-and-reform
 
-    au < crawling ; down ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < crawling ; down ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < crawling ; down ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < crawling ; down ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < crawling ; down ; 1998 ; Agenda - A Journal of Policy Analysis and Reform Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < crawling ; down ; 1999 ; Agenda - A Journal of Policy Analysis and Reform Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < crawling ; down ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < crawling ; down ; 2001 ; Agenda - A Journal of Policy Analysis and Reform Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < crawling ; down ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < crawling ; down ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < crawling ; down ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < crawling ; down ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < frozen ; down ; 1998 ; Agenda - A Journal of Policy Analysis and Reform Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < frozen ; down ; 1999 ; Agenda - A Journal of Policy Analysis and Reform Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 2001 ; Agenda - A Journal of Policy Analysis and Reform Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < frozen ; down ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < frozen ; down ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     #mark as superseded once a clean copy is possible using updated plugin
     au < superseded ; exists ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 [superseded] ; 13 ; > #one PDF is bad on all ingest machines - may not be collectible with journal id change
-    au < crawling ; down ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < crawling ; down ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < crawling ; down ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < crawling ; down ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-    au < crawling ; down ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < crawling ; down ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < crawling ; down ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < crawling ; down ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 ; reingest4.clockss.org:8082 >
-    au < crawling ; down ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-    au < crawling ; down ; 2016 ; Agenda - A Journal of Policy Analysis and Reform Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-    au < crawling ; down ; 2017 ; Agenda - A Journal of Policy Analysis and Reform Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-    au < crawling ; down ; 2018 ; Agenda - A Journal of Policy Analysis and Reform Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < frozen ; down ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < frozen ; down ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < frozen ; down ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < frozen ; down ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < frozen ; down ; 2016 ; Agenda - A Journal of Policy Analysis and Reform Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < frozen ; down ; 2017 ; Agenda - A Journal of Policy Analysis and Reform Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < frozen ; down ; 2018 ; Agenda - A Journal of Policy Analysis and Reform Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     #this version of the journal_id has ceased; see below for continuation
     }
      

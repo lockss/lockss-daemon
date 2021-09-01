@@ -5,8 +5,8 @@
   >
 
     implicit < status ; year ; name ; volume ; param[year] >
-    attr[start_stem] = index.php/
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/
     
 
   {
