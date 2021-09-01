@@ -888,7 +888,7 @@
     param[journal_id] = jmenea
 
     au < frozen ; exists ; 1985 ; Journal of Management in Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 1996 ; Journal of Management in Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 1996 ; Journal of Management in Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 1987 ; Journal of Management in Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1988 ; Journal of Management in Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1989 ; Journal of Management in Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
