@@ -99,7 +99,8 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
       if (cuBase.contains("released/2016")) {
         log.debug3("Casalini-Metadata: Year 2016: cuBase = " + cuBase);
         is_year_2016 = true;
-      } else if (cuBase.contains("casalinibooks-released") || cuBase.contains("casalini2012-released")) {
+        is_books = true;
+      } else if (cuBase.contains("casalinibooks-released")) {
         // 2012 was legacy content, it is books, but it does not have "book" in the url
         log.debug3("Casalini-Metadata for books: cuBase = " + cuBase);
         is_books = true;
