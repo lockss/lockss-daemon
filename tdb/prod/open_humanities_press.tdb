@@ -250,9 +250,9 @@
       param[base_url] = https://www.postcolonial.org/
       param[journal_id] = pct
 
-      au < ojs2.OJS2Plugin ; notReady ; 2018 ; Postcolonial Text Volume 13 ; 13 ; 2018 > #Crawl completed with no substance
-      au < ojs2.OJS2Plugin ; manifest ; 2019 ; Postcolonial Text Volume 14 ; 14 ; 2019 > #Crawl completed with no substance
-      au < ojs2.OJS2Plugin ; manifest ; 2020 ; Postcolonial Text Volume 15 ; 15 ; 2020 > #Crawl completed with no substance
+      au < ojs2.OJS2Plugin ; exists ; 2018 ; Postcolonial Text Volume 13 ; 13 ; 2018 > #Permission statement malformed: LOCKSS system has permission to ingest...
+      au < ojs2.OJS2Plugin ; exists ; 2019 ; Postcolonial Text Volume 14 ; 14 ; 2019 > #Permission statement malformed: LOCKSS system has permission to ingest...
+      au < ojs2.OJS2Plugin ; exists ; 2020 ; Postcolonial Text Volume 15 ; 15 ; 2020 > #Permission statement malformed: LOCKSS system has permission to ingest...
       au < ojs2.OJS2Plugin ; expected ; 2021 ; Postcolonial Text Volume 16 ; 16 ; 2021 > #Crawl completed with no substance
 
       }
