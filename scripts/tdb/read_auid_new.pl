@@ -955,7 +955,7 @@ while (my $line = <>) {
             if ($req->url ne $resp->request->uri) {
                 $vol_title = $resp->request->uri;
                 $result = "Redirected";
-            } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
+            } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents !~ m/Open Journal Systems 3.1.1/) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
                 if ($man_contents =~ m/<title>([^<>]*)<\/title>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
@@ -968,6 +968,8 @@ while (my $line = <>) {
                 #$result = "--NO_TAG--";
                 if (!defined($man_contents)) {
                     $result = "--NO_CONT--";
+                } elsif ($man_contents =~ m/Open Journal Systems 3.1.1/) {
+                    $result = "--BAD_V_3X--";
                 } elsif (($man_contents !~ m/$clockss_tag/) && ($man_contents !~ m/$oa_tag/)) {
                     $result = "--NO_TAG--";
                 } elsif (($man_contents !~ m/\($param{year}\)/) && ($man_contents !~ m/: $param{year}/)) {
@@ -1000,7 +1002,8 @@ while (my $line = <>) {
             if ($req->url ne $resp->request->uri) {
                 $vol_title = $resp->request->uri;
                 $result = "Redirected";
-            } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
+            } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents !~ m/Open Journal Systems 3.1.1/) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
+#            } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
                 if ($man_contents =~ m/<title>([^<>]*)<\/title>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
@@ -1013,6 +1016,8 @@ while (my $line = <>) {
                 #$result = "--NO_TAG--";
                 if (!defined($man_contents)) {
                     $result = "--NO_CONT--";
+                } elsif ($man_contents =~ m/Open Journal Systems 3.1.1/) {
+                    $result = "--BAD_V_3X--";
                 } elsif (($man_contents !~ m/$lockss_tag/) && ($man_contents !~ m/$oa_tag/)) {
                     $result = "--NO_TAG--";
                 } elsif (($man_contents !~ m/\($param{year}\)/) && ($man_contents !~ m/: $param{year}/)) {
