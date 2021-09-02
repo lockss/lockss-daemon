@@ -71,6 +71,20 @@
   {
 
     title <
+      name = Legalities: The Australian and New Zealand Journal of Law and Society ;
+      issn = 2634-3770 ;
+      eissn = 2634-3789 ;
+      issnl = 2634-3770 
+     >
+
+    param[journal_id] = legal
+
+    au < manifest ; exists ; 2021 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+  }
+
+  {
+
+    title <
       name = Burns Chronicle ;
       issn = 1365-7518 ;
       eissn = 2634-7059 ;
