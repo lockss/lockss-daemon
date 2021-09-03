@@ -91,7 +91,7 @@
       au < finished ; finished ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; >
+      au < finished ; manifest ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2021 ; Georgia Educational Researcher Volume 19 ; 19 ; >
 
   }
@@ -175,11 +175,10 @@
       au < manifest ; exists ; 2007 ; Journal of the Georgia Public Health Association Volume 2 ; 2 ; >
       au < manifest ; exists ; 2008 ; Journal of the Georgia Public Health Association Volume 3 ; 3 ; >
       au < manifest ; exists ; 2009 ; Journal of the Georgia Public Health Association Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2015-2016 ; Journal of the Georgia Public Health Association Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2017-2019 ; Journal of the Georgia Public Health Association Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2020 ; Journal of the Georgia Public Health Association Volume 8 ; 8 ; >
-      au < expected ; exists ; 2021 ; Journal of the Georgia Public Health Association Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2015-2016 ; Journal of the Georgia Public Health Association Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017-2019 ; Journal of the Georgia Public Health Association Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2020-2021 ; Journal of the Georgia Public Health Association Volume 8 ; 8 ; >
 
   }
 
@@ -262,13 +261,13 @@
       au < manifest ; exists ; 2003-2004 ; Southern Business Review Volume 29 ; 29 ; >
       au < manifest ; exists ; 2004-2005 ; Southern Business Review Volume 30 ; 30 ; >
       au < manifest ; exists ; 2005-2006 ; Southern Business Review Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2006-2020 ; Southern Business Review Volume 32 ; 32 ; >
+      au < finished ; manifest ; 2006-2020 ; Southern Business Review Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2008 ; Southern Business Review Volume 33 ; 33 ; >
       au < manifest ; exists ; 2009 ; Southern Business Review Volume 34 ; 34 ; >
       au < manifest ; exists ; 2010 ; Southern Business Review Volume 35 ; 35 ; >
       au < manifest ; exists ; 2011 ; Southern Business Review Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2012 ; Southern Business Review Volume 37 ; 37 ; >
-      au < frozen ; exists ; 2013 ; Southern Business Review Volume 38 ; 38 ; >
+      au < finished ; manifest ; 2012 ; Southern Business Review Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Southern Business Review Volume 38 ; 38 ; reingest5.clockss.org:8082 >
 
   }
 
