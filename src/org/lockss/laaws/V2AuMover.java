@@ -34,12 +34,15 @@ package org.lockss.laaws;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
 import java.util.Vector;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.api.rs.StreamingCollectionsApi;
+import org.lockss.laaws.client.ApiCallback;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.cfg.AuConfiguration;
@@ -104,8 +107,8 @@ public class V2AuMover {
 
   // Access information for the V2 Rest Repository
   private String rsRestLocation = null;
-  private String rsUser = null;
-  private String rsPass = null;
+  private String rsUser;
+  private String rsPass;
 
   private final String cliendId =
     org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(8);
@@ -142,6 +145,8 @@ public class V2AuMover {
   private boolean debugRepoReq;
   private boolean debugConfigReq;
 
+  private static String currentAu;
+  private static String currentCu;
 
 
   public V2AuMover() {
@@ -183,7 +188,7 @@ public class V2AuMover {
   }
 
   public void moveAu(ArchivalUnit au) throws IOException {
-    String auId = au.getAuId();
+    currentAu = au.getAuId();
     String auName = au.getName();
     log.debug("Handling request to move AU: "+ auName);
     try {
@@ -197,11 +202,11 @@ public class V2AuMover {
         log.error("V2 Configuration Service: NOT READY");
         throw new IOException(auName+ ": Unable to move au. V2 Configuration Service is not ready.");
       }
-      log.debug(auName+ ": Moving AU Artifacts...");
+      log.info(auName+ ": Moving AU Artifacts...");
       moveAuArtifacts(au);
-      log.debug(auName+ ": Moving AU State...");
+      log.info(auName+ ": Moving AU State...");
       moveAuState(au);
-      log.debug(auName+ ": Moving AU Configuration...");
+      log.info(auName+ ": Moving AU Configuration...");
       moveAuConfig(au);
     }
     catch (ApiException apie) {
@@ -272,6 +277,7 @@ public class V2AuMover {
     /* get Au items from Lockss*/
     for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
       CachedUrl cachedUrl = iter.next();
+      currentCu=cachedUrl.getUrl();
       moveCuVersions(cachedUrl);
       cuMoved++;
     }
@@ -315,21 +321,33 @@ public class V2AuMover {
       String uri = cu.getUrl();
       Long collectionDate = Long
           .parseLong(cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME));
-        Artifact response = moveArtifact(auid, uri, collectionDate, cu, collection);
-        log.debug3("Moved version " + cu.getVersion() + " has repo id: " + response.getId());
-        cuVersionsMoved++;
+        moveArtifact(auid, uri, collectionDate, cu, collection);
     }
-    log.debug2("Completed move of all versions of " + cachedUrl.getUrl());
+    log.debug2("Completed move of all versions of " + currentCu);
   }
 
-  private Artifact moveArtifact(String auid, String uri, Long collectionDate,
+  private void moveArtifact(String auid, String uri, Long collectionDate,
       CachedUrl cu, String collectionId) throws ApiException {
-    Artifact uncommitted;
-    Artifact commited = null;
-    uncommitted = rsCollectionsApi.createArtifact(auid, uri, collectionDate, cu, collectionId);
-    if(uncommitted != null)
-      commited = rsCollectionsApi.updateArtifact(true,uncommitted.getCollection(), uncommitted.getId());
-    return commited;
+    rsCollectionsApi.createArtifactAsync(auid, uri, collectionDate, cu, collectionId,
+      new ArtifactCallback("Create Artifact") {
+      @Override
+      public void onSuccess(Artifact result, int statusCode,
+      Map<String, List<String>> responseHeaders) {
+        try {
+          rsCollectionsApi.updateArtifactAsync(true,result.getCollection(), result.getId(),
+            new ArtifactCallback("Update Artifact") {
+              @Override
+              public void onSuccess(Artifact result, int statusCode,
+                Map<String, List<String>> responseHeaders) {
+                log.debug("Successfully updated artifact " + result.getId());
+                cuVersionsMoved++;
+              }
+          });
+        } catch (ApiException e) {
+          log.error("Update Artifact request failed " + statusCode + " - " + e.getMessage());
+        }
+      }
+    });
   }
 
   // cfg utilities
@@ -378,7 +396,7 @@ public class V2AuMover {
     final String DEBUG_HEADER = "parseCredentials(): ";
     Vector<String> credentials = StringUtil.breakAt(credentialsAsString, ":");
 
-    if (credentials != null && credentials.size() == 2) {
+    if (credentials.size() == 2) {
       cfgUser = credentials.get(0);
       cfgPass = credentials.get(1);
       if (log.isDebug3()) {
@@ -390,5 +408,35 @@ public class V2AuMover {
 
   private String makeCookie() {
     return cliendId + "-" + ++reqId;
+  }
+
+  protected static class ArtifactCallback implements ApiCallback<Artifact> {
+    String request;
+
+    ArtifactCallback(String request) {
+      this.request=request;
+    }
+
+    @Override
+    public void onFailure(ApiException e, int statusCode,
+      Map<String, List<String>> responseHeaders) {
+      log.error(request + " request failed " + statusCode + " - " + e.getMessage());
+    }
+
+    @Override
+    public void onSuccess(Artifact result, int statusCode,
+      Map<String, List<String>> responseHeaders) {
+      log.debug2(request + " request succeeded " + statusCode);
+    }
+
+    @Override
+    public void onUploadProgress(long bytesWritten, long contentLength, boolean done) {
+      log.debug3(request + " uploaded " + bytesWritten + " of " + contentLength + "bytes..");
+    }
+
+    @Override
+    public void onDownloadProgress(long bytesRead, long contentLength, boolean done) {
+
+    }
   }
 }
