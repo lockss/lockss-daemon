@@ -1818,8 +1818,8 @@ public class ServletUtil {
   }
 
   private static void layoutPageHeaders(Page page) {
-    page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
-    page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
+//     page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
+//     page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
     page.addHeader("<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />");
     page.addHeader(  "<style type=\"text/css\"> <!--\n"
                    + "sup {font-weight: normal; vertical-align: super; }\n"
