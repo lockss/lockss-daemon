@@ -83,7 +83,6 @@
       attr[journal_id] = ars
       param[base_url] = https://ars.copernicus.org/
       param[home_url] = https://www.advances-in-radio-science.net/
-      #nothing published in 2020
 
       au < doNotProcess ; 2003 ; 2003 ; Advances in Radio Science 2002 Volume 1 ; 1 >
       au < doNotProcess ; 2004 ; 2004 ; Advances in Radio Science 2003 Volume 2 ; 2 >
@@ -103,7 +102,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Advances in Radio Science 2017 Volume 16 ; 16 >
       au < doNotProcess ; 2019 ; 2019 ; Advances in Radio Science 2018 Volume 17 ; 17 >
       au < manifest ; 2020 ; 2020 ; Advances in Radio Science 2019 Volume 18 ; 18 >
-      au < exists ; 2021 ; 2021 ; Advances in Radio Science 2020 Volume 19 ; 19 >
+      au < expected ; 2021 ; 2021 ; Advances in Radio Science 2020 Volume 19 ; 19 >
 
    }
     
