@@ -37,11 +37,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.highwire.nas.ClockssNasDrupalPlugin</string>
+        <string>org.lockss.plugin.highwire.nas.NasDrupalPlugin</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>National Academy of Sciences Plugin (CLOCKSS)</string>
+        <string>National Academy of Sciences Plugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -49,36 +49,31 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.highwire.nas.NasDrupalPlugin</string>
+        <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>2</string>
+        <string>83</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"National Academy of Sciences Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
-    </entry>
-    <entry>
-        <string>au_start_url</string>
-        <string>"%sclockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-            <entry>
-                <string>au_mime_rate_limiter_map</string>
-                <map>
-                    <entry>
-                        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-                        <string>1/100</string>
-                    </entry>
-                </map>
-            </entry>
-        </map>
+        <string>"National Academy of Sciences Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
     </entry>
 </map>
