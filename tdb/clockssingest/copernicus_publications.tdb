@@ -190,8 +190,8 @@
 
       {
         attr[au_coverage_depth] = abstracts
-        au < manifest ; exists ; 1994 ; 1994 ; Annales Geophysicae Volume 12 [abstracts only] ; 12 ; >
-        au < manifest ; exists ; 1995 ; 1995 ; Annales Geophysicae Volume 13 [abstracts only] ; 13 ; >
+        au < doNotProcess ; exists ; 1994 ; 1994 ; Annales Geophysicae Volume 12 [abstracts only] ; 12 ; >
+        au < doNotProcess ; exists ; 1995 ; 1995 ; Annales Geophysicae Volume 13 [abstracts only] ; 13 ; >
       }
 
       au < crawling ; exists ; 1996 ; 1996 ; Annales Geophysicae Volume 14 ; 14 ; >

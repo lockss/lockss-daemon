@@ -2,9 +2,9 @@
 
   publisher <
     name = Open Library Of Humanities ;
-    #info[contract] = 2019 ;
-    #info[tester] = 5 ;
-    #info[poller] = 2 ;
+    info[contract] = 2019 ;
+    info[tester] = 5 ;
+    info[poller] = 2 ;
     info[platform] = Janeway/OAI
   >
   
