@@ -145,10 +145,10 @@
     {
         param[base_url] = https://www.pnas.org/
 
-    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 ; >
-    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; >
-    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 ; >
-    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 ; >
+    au < nas.ClockssNasJCorePlugin ; testing ; exists ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 ; >
+    au < nas.ClockssNasJCorePlugin ; testing ; exists ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; >
+    au < nas.ClockssNasJCorePlugin ; testing ; exists ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 ; >
+    au < nas.ClockssNasJCorePlugin ; testing ; exists ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 ; >
 
     }
 
