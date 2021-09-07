@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -37,5 +37,9 @@
       <!--https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
       <string>"%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Janeway Plugin (CLOCKSS),, Base URL %s, Year %d, OAI Granularity %s", base_url, year, oai_granularity</string>
   </entry>
 </map>
