@@ -1595,7 +1595,7 @@
     au < deepCrawl ; exists ; 2016 ; Indian Journal of Pathology and Microbiology Volume 59 ; 2016 ; 59 ; http://www.ijpmonline.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Pathology and Microbiology Volume 60 ; 2017 ; 60 ; http://www.ijpmonline.org/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Pathology and Microbiology Volume 61 ; 2018 ; 61 ; http://www.ijpmonline.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Indian Journal of Pathology and Microbiology Volume 62 ; 2019 ; 62 ; https://www.ijpmonline.org/ ; ; >
+    au < notReady ; exists ; 2019 ; Indian Journal of Pathology and Microbiology Volume 62 ; 2019 ; 62 ; https://www.ijpmonline.org/ ; ; > #500 https://www.ijpmonline.org/article.asp?issn=0377-4929;year=2019;volume=62;issue=3;spage=517;epage=518;aulast=;type=2
     au < finished ; manifest ; 2020 ; Indian Journal of Pathology and Microbiology Volume 63 ; 2020 ; 63 ; https://www.ijpmonline.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Indian Journal of Pathology and Microbiology Volume 64 ; 2021 ; 64 ; https://www.ijpmonline.org/ ; ; >
 
@@ -2109,7 +2109,7 @@
     au < finished ; frozen ; 2015 ; International Journal of Applied and Basic Medical Research Volume 5 ; 2015 ; 5 ; http://www.ijabmr.org/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Applied and Basic Medical Research Volume 6 ; 2016 ; 6 ; http://www.ijabmr.org/ ; ; >
     au < finished ; frozen ; 2017 ; International Journal of Applied and Basic Medical Research Volume 7 ; 2017 ; 7 ; http://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ ; 500 Error ; >
+    au < notReady ; exists ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ ; 500 Error ; > #500 https://www.ijabmr.org/article.asp?issn=2229-516X;year=2018;volume=8;issue=3;spage=155;epage=157;aulast=Sahbaz;type=2
     au < finished ; manifest ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ ; 500 Error ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ ; 500 Error ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; 500 Error ; >
@@ -2461,7 +2461,7 @@
     au < deepCrawl ; exists ; 2016 ; Journal of Cancer Research and Therapeutics Volume 12 ; 2016 ; 12 ; http://www.cancerjournal.net/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Cancer Research and Therapeutics Volume 13 ; 2017 ; 13 ; http://www.cancerjournal.net/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Journal of Cancer Research and Therapeutics Volume 14 ; 2018 ; 14 ; http://www.cancerjournal.net/ ; ; >
-    au < manifest ; exists ; 2019 ; Journal of Cancer Research and Therapeutics Volume 15 ; 2019 ; 15 ; https://www.cancerjournal.net/ ; ; >
+    au < notReady ; exists ; 2019 ; Journal of Cancer Research and Therapeutics Volume 15 ; 2019 ; 15 ; https://www.cancerjournal.net/ ; ; > #500 https://www.cancerjournal.net/article.asp?issn=0973-1482;year=2019;volume=15;issue=7;spage=1471;epage=1476;aulast=Feng;type=2
     au < deepCrawl ; exists ; 2020 ; Journal of Cancer Research and Therapeutics Volume 16 ; 2020 ; 16 ; https://www.cancerjournal.net/ ; ; >
     au < crawling ; exists ; 2021 ; Journal of Cancer Research and Therapeutics Volume 17 ; 2021 ; 17 ; https://www.cancerjournal.net/ ; ; >
 
@@ -6725,7 +6725,7 @@
       au < finished ; finished ; 2017 ; Journal of Dental Research and Review Volume 4 ; 2017 ; 4 ; http://www.jdrr.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Journal of Dental Research and Review Volume 5 ; 2018 ; 5 ; http://www.jdrr.org/ ; ; >
       au < frozen ; exists ; 2019 ; Journal of Dental Research and Review Volume 6 ; 2019 ; 6 ; https://www.jdrr.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Journal of Dental Research and Review Volume 7 ; 2020 ; 7 ; https://www.jdrr.org/ ; ; >
+      au < notReady ; exists ; 2020 ; Journal of Dental Research and Review Volume 7 ; 2020 ; 7 ; https://www.jdrr.org/ ; ; > #500 https://www.jdrr.org/article.asp?issn=2348-2915;year=2020;volume=7;issue=3;spage=105;epage=114;aulast=Hassan;type=2
       au < crawling ; exists ; 2021 ; Journal of Dental Research and Review Volume 8 ; 2021 ; 8 ; https://www.jdrr.org/ ; ; >
 
   }
@@ -8221,7 +8221,7 @@
       au < finished ; finished ; 2016 ; Saudi Journal of Medicine and Medical Sciences Volume 4 ; 2016 ; 4 ; http://www.sjmms.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Saudi Journal of Medicine and Medical Sciences Volume 5 ; 2017 ; 5 ; http://www.sjmms.net/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Saudi Journal of Medicine and Medical Sciences Volume 6 ; 2018 ; 6 ; http://www.sjmms.net/ ; ; >
-      au < manifest ; exists ; 2019 ; Saudi Journal of Medicine and Medical Sciences Volume 7 ; 2019 ; 7 ; https://www.sjmms.net/ ; ; >
+      au < notReady ; exists ; 2019 ; Saudi Journal of Medicine and Medical Sciences Volume 7 ; 2019 ; 7 ; https://www.sjmms.net/ ; ; > #500 https://www.sjmms.net/article.asp?issn=1658-631X;year=2019;volume=7;issue=2;spage=130;epage=130;aulast=;type=2
       au < frozen ; exists ; 2020 ; Saudi Journal of Medicine and Medical Sciences Volume 8 ; 2020 ; 8 ; https://www.sjmms.net/ ; ; >
       au < crawling ; exists ; 2021 ; Saudi Journal of Medicine and Medical Sciences Volume 9 ; 2021 ; 9 ; https://www.sjmms.net/ ; ; >
 
@@ -8482,6 +8482,7 @@
 
       param[journal_issn] = 1110-7782
 #      param[base_url] = http://www.esim.eg.net/
+      #Moved to Springer
 
       au < finished ; finished ; 2012 ; The Egyptian Journal of Internal Medicine Volume 24 ; 2012 ; 24 ; http://www.esim.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; The Egyptian Journal of Internal Medicine Volume 25 ; 2013 ; 25 ; http://www.esim.eg.net/ ; ; reingest4.clockss.org:8082 >
@@ -8490,9 +8491,8 @@
       au < finished ; frozen ; 2016 ; The Egyptian Journal of Internal Medicine Volume 28 ; 2016 ; 28 ; http://www.esim.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; The Egyptian Journal of Internal Medicine Volume 29 ; 2017 ; 29 ; http://www.esim.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; The Egyptian Journal of Internal Medicine Volume 30 ; 2018 ; 30 ; http://www.esim.eg.net/ ; ; >
-      au < manifest ; exists ; 2019 ; The Egyptian Journal of Internal Medicine Volume 31 ; 2019 ; 31 ; https://www.esim.eg.net/ ; ; >
-      au < expected ; exists ; 2020 ; The Egyptian Journal of Internal Medicine Volume 32 ; 2020 ; 32 ; https://www.esim.eg.net/ ; ; >
-      au < expected ; exists ; 2021 ; The Egyptian Journal of Internal Medicine Volume 33 ; 2021 ; 33 ; https://www.esim.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; The Egyptian Journal of Internal Medicine Volume 31 ; 2019 ; 31 ; https://www.esim.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; The Egyptian Journal of Internal Medicine Volume 32 ; 2020 ; 32 ; https://www.esim.eg.net/ ; ; >
 
   }
 
@@ -8530,9 +8530,8 @@
       au < finished ; frozen ; 2016 ; The Egyptian Journal of Otolaryngology Volume 32 ; 2016 ; 32 ; http://www.ejo.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; The Egyptian Journal of Otolaryngology Volume 33 ; 2017 ; 33 ; http://www.ejo.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; The Egyptian Journal of Otolaryngology Volume 34 ; 2018 ; 34 ; http://www.ejo.eg.net/ ; ; >
-      au < manifest ; exists ; 2019 ; The Egyptian Journal of Otolaryngology Volume 35 ; 2019 ; 35 ; https://www.ejo.eg.net/ ; ; >
-      au < expected ; exists ; 2020 ; The Egyptian Journal of Otolaryngology Volume 36 ; 2020 ; 36 ; https://www.ejo.eg.net/ ; ; >
-      au < expected ; exists ; 2021 ; The Egyptian Journal of Otolaryngology Volume 37 ; 2021 ; 37 ; https://www.ejo.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; The Egyptian Journal of Otolaryngology Volume 35 ; 2019 ; 35 ; https://www.ejo.eg.net/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; The Egyptian Journal of Otolaryngology Volume 36 ; 2020 ; 36 ; https://www.ejo.eg.net/ ; ; >
 
   }
 
@@ -8609,7 +8608,7 @@
       au < finished ; finished ; 2017 ; The Journal of Indian Prosthodontic Society Volume 17 ; 2017 ; 17 ; http://www.j-ips.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; The Journal of Indian Prosthodontic Society Volume 18 ; 2018 ; 18 ; http://www.j-ips.org/ ; ; >
       au < frozen ; exists ; 2019 ; The Journal of Indian Prosthodontic Society Volume 19 ; 2019 ; 19 ; https://www.j-ips.org/ ; ; >
-      au < manifest ; exists ; 2020 ; The Journal of Indian Prosthodontic Society Volume 20 ; 2020 ; 20 ; https://www.j-ips.org/ ; ; >
+      au < notReady ; exists ; 2020 ; The Journal of Indian Prosthodontic Society Volume 20 ; 2020 ; 20 ; https://www.j-ips.org/ ; ; > #500 https://www.j-ips.org/article.asp?issn=0972-4052;year=2020;volume=20;issue=5;spage=34;epage=35;aulast=Khaire;type=2
       au < crawling ; exists ; 2021 ; The Journal of Indian Prosthodontic Society Volume 21 ; 2021 ; 21 ; https://www.j-ips.org/ ; ; >
 
   }
