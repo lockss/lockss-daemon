@@ -10,7 +10,7 @@
   
     plugin = org.lockss.plugin.janeway.iowastatedp.ClockssIowaStateDPPlugin
     param[base_url] = https://www.iastatedigitalpress.com/
-    param[oai_granularity] = YYYY-MM-DD
+    #param[oai_granularity] = YYYY-MM-DD   # no longer in use, set as default
     implicit < status ; status2 ; year ; param[year] ; volume ; name ; hidden[proxy] >
     
     #Titles under contract:

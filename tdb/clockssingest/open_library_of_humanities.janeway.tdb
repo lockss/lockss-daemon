@@ -9,7 +9,7 @@
   >
   
     plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
-    param[oai_granularity] = YYYY-MM-DD
+    #param[oai_granularity] = YYYY-MM-DD  #no longer in use, set as default
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
   {
