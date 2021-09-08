@@ -23,7 +23,7 @@
       au < finished ; finished ; 2017 ; Armstrong Undergraduate Journal of History Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Armstrong Undergraduate Journal of History Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Armstrong Undergraduate Journal of History Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2020 ; Armstrong Undergraduate Journal of History Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2021 ; Armstrong Undergraduate Journal of History Volume 11 ; 11 ; >
 
   }
@@ -41,7 +41,7 @@
 
       au < finished ; finished ; 2018 ; Becoming: Journal of the Georgia Middle School Association Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < testing ; exists ; 2019 ; Becoming: Journal of the Georgia Middle School Association Volume 30 ; 30 ; >
-      au < deepCrawl ; exists ; 2020 ; Becoming: Journal of the Georgia Middle School Association Volume 31 ; 31 ; >
+      au < finished ; manifest ; 2020 ; Becoming: Journal of the Georgia Middle School Association Volume 31 ; 31 ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Becoming: Journal of the Georgia Middle School Association Volume 32 ; 32 ; >
 
   }
@@ -58,7 +58,7 @@
       param[journal_abbr] = cimle
 
       au < finished ; crawling ; 2019 ; Current Issues in Middle Level Education Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Current Issues in Middle Level Education Volume 25 ; 25 ; >
+      au < finished ; manifest ; 2020 ; Current Issues in Middle Level Education Volume 25 ; 25 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Current Issues in Middle Level Education Volume 26 ; 26 ; >
 
   }
@@ -139,7 +139,7 @@
       au < finished ; finished ; 2017 ; International Journal for the Scholarship of Teaching & Learning Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal for the Scholarship of Teaching & Learning Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; International Journal for the Scholarship of Teaching & Learning Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2020 ; International Journal for the Scholarship of Teaching & Learning Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2021 ; International Journal for the Scholarship of Teaching & Learning Volume 15 ; 15 ; >
 
   }
@@ -293,7 +293,7 @@
       au < finished ; finished ; 2016-2017 ; The Coastal Review Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017-2018 ; The Coastal Review Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; The Coastal Review Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019-2020 ; The Coastal Review Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2019-2020 ; The Coastal Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020-2021 ; The Coastal Review Volume 12 ; 12 ; >
       au < expected ; exists ; 2021-2022 ; The Coastal Review Volume 13 ; 13 ; >
 
@@ -332,7 +332,7 @@
       au < finished ; finished ; 2017 ; Theory and Applications of Graphs Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Theory and Applications of Graphs Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Theory and Applications of Graphs Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2020 ; Theory and Applications of Graphs Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2020 ; Theory and Applications of Graphs Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2021 ; Theory and Applications of Graphs Volume 7 ; 7 ; >
 
   }
