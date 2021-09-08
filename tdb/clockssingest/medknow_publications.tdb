@@ -153,7 +153,7 @@
     au < finished ; frozen ; 2015 ; Annals of Cardiac Anaesthesia Volume 18 ; 2015 ; 18 ; http://www.annals.in/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Annals of Cardiac Anaesthesia Volume 19 ; 2016 ; 19 ; http://www.annals.in/ ; ; >
     au < finished ; frozen ; 2017 ; Annals of Cardiac Anaesthesia Volume 20 ; 2017 ; 20 ; http://www.annals.in/ ; ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2018 ; Annals of Cardiac Anaesthesia Volume 21 ; 2018 ; 21 ; https://www.annals.in/ ; 500 Error ; >
+    au < notReady ; exists ; 2018 ; Annals of Cardiac Anaesthesia Volume 21 ; 2018 ; 21 ; https://www.annals.in/ ; 500 Error ; > #500 https://www.annals.in/article.asp?issn=0971-9784;year=2018;volume=21;issue=2;spage=221;epage=221;aulast=;type=2
     au < frozen ; exists ; 2019 ; Annals of Cardiac Anaesthesia Volume 22 ; 2019 ; 22 ; https://www.annals.in/ ; ; >
     au < deepCrawl ; exists ; 2020 ; Annals of Cardiac Anaesthesia Volume 23 ; 2020 ; 23 ; https://www.annals.in/ ; ; >
     au < crawling ; exists ; 2021 ; Annals of Cardiac Anaesthesia Volume 24 ; 2021 ; 24 ; https://www.annals.in/ ; ; >
@@ -332,21 +332,20 @@
 #    param[base_url] = http://www.atmph.org/
 
     param[journal_issn] = 1755-6783
+    #Moved to Index Copernicus International
 
-    au < manifest ; exists ; 2008 ; Annals of Tropical Medicine and Public Health Volume 1 ; 2008 ; 1 ; https://www.atmph.org/ ; ; >
-    au < manifest ; exists ; 2009 ; Annals of Tropical Medicine and Public Health Volume 2 ; 2009 ; 2 ; https://www.atmph.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Annals of Tropical Medicine and Public Health Volume 3 ; 2010 ; 3 ; https://www.atmph.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Annals of Tropical Medicine and Public Health Volume 1 ; 2008 ; 1 ; https://www.atmph.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Annals of Tropical Medicine and Public Health Volume 2 ; 2009 ; 2 ; https://www.atmph.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Annals of Tropical Medicine and Public Health Volume 3 ; 2010 ; 3 ; https://www.atmph.org/ ; ; >
     au < finished ; frozen ; 2011 ; Annals of Tropical Medicine and Public Health Volume 4 ; 2011 ; 4 ; http://www.atmph.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Annals of Tropical Medicine and Public Health Volume 5 ; 2012 ; 5 ; http://www.atmph.org/ ; ; >
     au < finished ; frozen ; 2013 ; Annals of Tropical Medicine and Public Health Volume 6 ; 2013 ; 6 ; http://www.atmph.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Annals of Tropical Medicine and Public Health Volume 7 ; 2014 ; 7 ; http://www.atmph.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 ; http://www.atmph.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 ; http://www.atmph.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 ; http://www.atmph.org/ ; ; >
     au < finished ; manifest ; 2017 ; Annals of Tropical Medicine and Public Health Volume 10 ; 2017 ; 10 ; http://www.atmph.org/ ; ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2018 ; Annals of Tropical Medicine and Public Health Volume 11 ; 2018 ; 11 ; https://www.atmph.org/ ; ; >
-    au < expected ; exists ; 2019 ; Annals of Tropical Medicine and Public Health Volume 12 ; 2019 ; 12 ; https://www.atmph.org/ ; ; >
-    au < expected ; exists ; 2020 ; Annals of Tropical Medicine and Public Health Volume 13 ; 2020 ; 13 ; https://www.atmph.org/ ; ; >
-    au < expected ; exists ; 2021 ; Annals of Tropical Medicine and Public Health Volume 14 ; 2021 ; 14 ; https://www.atmph.org/ ; ; >
+    au < doNotProcess ; exists ; 2018 ; Annals of Tropical Medicine and Public Health Volume 11 ; 2018 ; 11 ; https://www.atmph.org/ ; ; >
+    au < doNotProcess ; exists ; 2019 ; Annals of Tropical Medicine and Public Health Volume 12 ; 2019 ; 12 ; https://www.atmph.org/ ; ; >
 
   }
 
@@ -2199,7 +2198,7 @@
     au < finished ; finished ; 2015 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 5 ; 2015 ; 5 ; http://www.ijnpnd.com/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 6 ; 2016 ; 6 ; http://www.ijnpnd.com/ ; ; >
     au < finished ; frozen ; 2017 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 7 ; 2017 ; 7 ; http://www.ijnpnd.com/ ; ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2018 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 8 ; 2018 ; 8 ; https://www.ijnpnd.com/ ; 500 Error ; > 
+    au < notReady ; exists ; 2018 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 8 ; 2018 ; 8 ; https://www.ijnpnd.com/ ; 500 Error ; > #500 https://www.ijnpnd.com/article.asp?issn=2231-0738;year=2018;volume=8;issue=1;spage=16;epage=31;aulast=Madan;type=2
     au < finished ; manifest ; 2019 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 9 ; 2019 ; 9 ; https://www.ijnpnd.com/ ; 500 Error ; reingest3.clockss.org:8083 > 
     au < frozen ; exists ; 2020 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 10 ; 2020 ; 10 ; https://www.ijnpnd.com/ ; 500 Error ; > 
     au < crawling ; exists ; 2021 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 11 ; 2021 ; 11 ; https://www.ijnpnd.com/ ; 500 Error ; > 
@@ -9667,7 +9666,7 @@
       au < ready ; exists ; 2013 ; Indian Journal of Transplantation Volume 7 ; 2013 ; 7 ; https://www.ijtonline.in/ ; ; >
       au < ready ; exists ; 2014 ; Indian Journal of Transplantation Volume 8 ; 2014 ; 8 ; https://www.ijtonline.in/ ; ; >
       au < ready ; exists ; 2015 ; Indian Journal of Transplantation Volume 9 ; 2015 ; 9 ; https://www.ijtonline.in/ ; ; >
-      au < manifest ; exists ; 2016 ; Indian Journal of Transplantation Volume 10 ; 2016 ; 10 ; https://www.ijtonline.in/ ; ; >
+      au < notReady ; exists ; 2016 ; Indian Journal of Transplantation Volume 10 ; 2016 ; 10 ; https://www.ijtonline.in/ ; ; > #500 https://www.ijtonline.in/article.asp?issn=2212-0017;year=2016;volume=10;issue=4;spage=81;epage=117;aulast=;type=2
       au < crawling ; exists ; 2017 ; Indian Journal of Transplantation Volume 11 ; 2017 ; 11 ; https://www.ijtonline.in/ ; ; >
       au < crawling ; exists ; 2018 ; Indian Journal of Transplantation Volume 12 ; 2018 ; 12 ; https://www.ijtonline.in/ ; ; >
       au < frozen ; exists ; 2019 ; Indian Journal of Transplantation Volume 13 ; 2019 ; 13 ; https://www.ijtonline.in/ ; ; >
