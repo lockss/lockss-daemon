@@ -149,16 +149,8 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
                                          " must not be null");
       }
     }
-    if(config.containsKey(KEY_AU_OAI_GRANULARITY)) {
-      logger.debug3(" - KEY_AU_OAI_GRANULARITY is set");
-      if(!setGranularity(config.get(KEY_AU_OAI_GRANULARITY))) {
-        throw new ConfigurationException(KEY_AU_OAI_GRANULARITY + 
-                                         " must be " + Granularity.Day + 
-                                         " or " + Granularity.Second);
-      }  else {
-        logger.debug3(" - granularity is set to : " + config.get(KEY_AU_OAI_GRANULARITY));
-      }
-    }
+
+    setGranularity("YYYY-MM-DD");
       
   }
 

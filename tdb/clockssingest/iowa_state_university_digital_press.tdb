@@ -64,10 +64,10 @@
     param[journal_id] = aglawdigest
 
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2018-01-01&until=2018-12-31
-    au < superseded ; exists ; 2018 ; 2018 ; 29 ; Agricultural Law Digest Volume 29 [superseded] ; >
+    #au < superseded ; exists ; 2018 ; 2018 ; 29 ; Agricultural Law Digest Volume 29 [superseded] ; >
 
     # I got volume from here: https://www.iastatedigitalpress.com/aglawdigest/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    au < superseded ; exists ; 2019 ; 2019 ; 30 ; Agricultural Law Digest Volume 30 [superseded] ; >
+    #au < superseded ; exists ; 2019 ; 2019 ; 30 ; Agricultural Law Digest Volume 30 [superseded] ; >
 
     #No longer publishing. Not in contract.
 

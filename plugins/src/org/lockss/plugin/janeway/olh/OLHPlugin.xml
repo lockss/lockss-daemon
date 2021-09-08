@@ -40,6 +40,7 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <!--
       <org.lockss.daemon.ConfigParamDescr>
         <key>oai_granularity</key>
         <displayName>OAI Granularity</displayName>
@@ -49,6 +50,7 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      -->
     </list>
   </entry>
   <entry>
@@ -79,7 +81,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Janeway Plugin, Base URL %s, Year %d, OAI Granularity %s", base_url, year, oai_granularity</string>
+    <string>"Janeway Plugin, Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
