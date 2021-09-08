@@ -40,17 +40,6 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-      <!--
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>oai_granularity</key>
-        <displayName>OAI Granularity</displayName>
-        <description>Rules to filter records based upon granularity, use "YYYY-MM-DD"</description>
-        <type>1</type>
-        <size>128</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      -->
     </list>
   </entry>
   <entry>
