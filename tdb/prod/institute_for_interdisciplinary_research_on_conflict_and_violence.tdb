@@ -4,9 +4,8 @@
     name = Institute for Interdisciplinary Research on Conflict and Violence
   >
 
-  plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  param[base_url] = http://www.ijcv.org/
   implicit < status ; year ; name ; volume ; param[year] >
+  # no permission pages. Sent email 2021-09-08
 
   {
 
@@ -14,7 +13,19 @@
       name = International Journal of Conflict and Violence ;
       issn = 1864-1385
     >
+    {
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/
+    param[base_url] = https://www.ijcv.org/
+    param[journal_id] = ijcv
 
+    au < exists ; 2019 ; International Journal of Conflict and Violence Volume 13 ; 13 ; 2019 >
+    au < expected ; 2020 ; International Journal of Conflict and Violence Volume 14 ; 14 ; 2020 >
+    au < expected ; 2021 ; International Journal of Conflict and Violence Volume 15 ; 15 ; 2021 >
+    }
+    {
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://www.ijcv.org/
     param[journal_id] = ijcv
 
     au < released ; 2007 ; International Journal of Conflict and Violence Volume 1 ; 1 ; 2007 >
@@ -29,10 +40,7 @@
     au < released ; 2016 ; International Journal of Conflict and Violence Volume 10 ; 10 ; 2016 >
     au < released ; 2017 ; International Journal of Conflict and Violence Volume 11 ; 11 ; 2017 >
     au < released ; 2018 ; International Journal of Conflict and Violence Volume 12 ; 12 ; 2018 >
-    au < manifest ; 2019 ; International Journal of Conflict and Violence Volume 13 ; 13 ; 2019 >
-    au < expected ; 2020 ; International Journal of Conflict and Violence Volume 14 ; 14 ; 2020 >
-    au < expected ; 2021 ; International Journal of Conflict and Violence Volume 15 ; 15 ; 2021 >
-
+    }
   }
 
 }
