@@ -164,7 +164,7 @@ public class CrawlerStatus {
     DEFAULT_MESSAGES.put(Crawler.STATUS_PLUGIN_ERROR, "Plugin error");
     DEFAULT_MESSAGES.put(Crawler.STATUS_REPO_ERR, "Repository error");
     DEFAULT_MESSAGES.put(Crawler.STATUS_RUNNING_AT_CRASH,
-			 "Interrupted by daemon exit");
+			 "Interrupted by plugin reload or daemon exit");
     DEFAULT_MESSAGES.put(Crawler.STATUS_EXTRACTOR_ERROR,
 			 "Link extractor error");
 
