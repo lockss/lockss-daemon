@@ -456,8 +456,8 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.mjhid.org/
 
-    au < manifest ; 2018 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 10 ; 10 ; 2018 >
-    au < manifest ; 2019 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 11 ; 11 ; 2019 >
+    au < notReady ; 2018 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 10 ; 10 ; 2018 > #malformed url https://www.mjhid.org/index.php/mjhid/article/view/2018.017/ayodeleolaniyi8@gmail.com
+    au < notReady ; 2019 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 11 ; 11 ; 2019 > #malformed url https://www.mjhid.org/index.php/mjhid/article/view/2019.064/www.graphpad.com
     au < ready ; 2020 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 12 ; 12 ; 2020 >
     au < manifest ; 2021 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 13 ; 13 ; 2021 >
     }
