@@ -114,7 +114,7 @@
     au < released ; 1940 ; Additional Government Publications 1940 ; 1940 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 1941 ; Additional Government Publications 1941 ; 1941 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Additional Government Publications 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Additional Government Publications 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Additional Government Publications 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < manifest ; 2021 ; Additional Government Publications 2021 ; 2021 ; https://www.govinfo.gov/ >
 
   }
@@ -263,7 +263,7 @@
     au < released ; 1965 ; Congressional Hearings 1965 ; 1965 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 1966 ; Congressional Hearings 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < ready ; 1967 ; Congressional Hearings 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < manifest ; 1968 ; Congressional Hearings 1968 ; 1968 ; https://www.govinfo.gov/ >
+    au < ready ; 1968 ; Congressional Hearings 1968 ; 1968 ; https://www.govinfo.gov/ >
     au < ready ; 1969 ; Congressional Hearings 1969 ; 1969 ; https://www.govinfo.gov/ >
     au < ready ; 1970 ; Congressional Hearings 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < ready ; 1971 ; Congressional Hearings 1971 ; 1971 ; https://www.govinfo.gov/ >
@@ -352,7 +352,7 @@
     param[collection_id] = CRECB
 
 
-    au < manifest ; 2002 ; Congressional Record (Bound) 2002 ; 2002 ; https://www.govinfo.gov/ >
+    au < ready ; 2002 ; Congressional Record (Bound) 2002 ; 2002 ; https://www.govinfo.gov/ >
     au < ready ; 2003 ; Congressional Record (Bound) 2003 ; 2003 ; https://www.govinfo.gov/ >
     au < ready ; 2004 ; Congressional Record (Bound) 2004 ; 2004 ; https://www.govinfo.gov/ >
     au < released ; 2005 ; Congressional Record (Bound) 2005 ; 2005 ; https://www.govinfo.gov/ > #continuously fails testing on old platform.
@@ -660,8 +660,8 @@
 
     au < ready ; 1989 ; Government Accountability Office Reports and Comptroller General Decisions 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < ready ; 1990 ; Government Accountability Office Reports and Comptroller General Decisions 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < manifest ; 1991 ; Government Accountability Office Reports and Comptroller General Decisions 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < manifest ; 1992 ; Government Accountability Office Reports and Comptroller General Decisions 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < ready ; 1991 ; Government Accountability Office Reports and Comptroller General Decisions 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < ready ; 1992 ; Government Accountability Office Reports and Comptroller General Decisions 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.govinfo.gov/ >#EMPTY
 
   }
@@ -786,7 +786,7 @@
     au < ready ; 1956 ; Public Papers of the Presidents of the United States 1956 ; 1956 ; https://www.govinfo.gov/ >
     au < ready ; 1957 ; Public Papers of the Presidents of the United States 1957 ; 1957 ; https://www.govinfo.gov/ >
     au < ready ; 1958 ; Public Papers of the Presidents of the United States 1958 ; 1958 ; https://www.govinfo.gov/ >
-    au < manifest ; 1959 ; Public Papers of the Presidents of the United States 1959 ; 1959 ; https://www.govinfo.gov/ >
+    au < ready ; 1959 ; Public Papers of the Presidents of the United States 1959 ; 1959 ; https://www.govinfo.gov/ >
     au < ready ; 1960 ; Public Papers of the Presidents of the United States 1960 ; 1960 ; https://www.govinfo.gov/ >
     au < ready ; 1961 ; Public Papers of the Presidents of the United States 1961 ; 1961 ; https://www.govinfo.gov/ >
     au < ready ; 1962 ; Public Papers of the Presidents of the United States 1962 ; 1962 ; https://www.govinfo.gov/ >
@@ -794,7 +794,7 @@
     au < manifest ; 1964 ; Public Papers of the Presidents of the United States 1964 ; 1964 ; https://www.govinfo.gov/ >
     au < manifest ; 1965 ; Public Papers of the Presidents of the United States 1965 ; 1965 ; https://www.govinfo.gov/ >
     au < manifest ; 1966 ; Public Papers of the Presidents of the United States 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < manifest ; 1967 ; Public Papers of the Presidents of the United States 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < ready ; 1967 ; Public Papers of the Presidents of the United States 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < ready ; 1968 ; Public Papers of the Presidents of the United States 1968 ; 1968 ; https://www.govinfo.gov/ >
     au < ready ; 1969 ; Public Papers of the Presidents of the United States 1969 ; 1969 ; https://www.govinfo.gov/ >
     au < ready ; 1970 ; Public Papers of the Presidents of the United States 1970 ; 1970 ; https://www.govinfo.gov/ >
@@ -835,7 +835,7 @@
     param[collection_id] = SMAN
 
     au < manifest ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Senate Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Senate Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
 
   }
 
