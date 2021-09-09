@@ -7,8 +7,6 @@
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified
-  
-  # Some journals possibly moving to Drupal. Marking AUs doNotProcess while waiting for response.
 
   {
   
@@ -55,10 +53,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 ; http://aim.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 ; http://aim.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 ; http://aim.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2016 ; Acupuncture in Medicine Volume 34 ; 34 ; https://aim.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2017 ; Acupuncture in Medicine Volume 35 ; 35 ; https://aim.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2018 ; Acupuncture in Medicine Volume 36 ; 36 ; https://aim.bmj.com/ >
-
+    #Moved to Sage
   }
 
   {
@@ -652,7 +647,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Simulation & Technology Enhanced Learning Volume 3 ; 3 ; https://stel.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Simulation & Technology Enhanced Learning Volume 4 ; 4 ; https://stel.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Simulation & Technology Enhanced Learning Volume 5 ; 5 ; https://stel.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2020 ; BMJ Simulation & Technology Enhanced Learning Volume 6 ; 6 ; https://stel.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; BMJ Simulation & Technology Enhanced Learning Volume 6 ; 6 ; https://stel.bmj.com/ > #Found login page. https://stel.bmj.com/content/6/1/10
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Simulation & Technology Enhanced Learning Volume 7 ; 7 ; https://stel.bmj.com/ >
 
   }
@@ -675,7 +670,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Supportive & Palliative Care Volume 7 ; 7 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Supportive & Palliative Care Volume 8 ; 8 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Supportive & Palliative Care Volume 9 ; 9 ; https://spcare.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2020 ; BMJ Supportive & Palliative Care Volume 10 ; 10 ; https://spcare.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; BMJ Supportive & Palliative Care Volume 10 ; 10 ; https://spcare.bmj.com/ > #Found a login page. https://spcare.bmj.com/content/10/1/36.full.pdf
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Supportive & Palliative Care Volume 11 ; 11 ; https://spcare.bmj.com/ >
 
   }
@@ -863,7 +858,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; British Journal of Sports Medicine Volume 51 ; 51 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; British Journal of Sports Medicine Volume 52 ; 52 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; British Journal of Sports Medicine Volume 53 ; 53 ; https://bjsm.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2020 ; British Journal of Sports Medicine Volume 54 ; 54 ; https://bjsm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; British Journal of Sports Medicine Volume 54 ; 54 ; https://bjsm.bmj.com/ > #Found a login page. https://bjsm.bmj.com/content/54/2/94.full.pdf
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; British Journal of Sports Medicine Volume 55 ; 55 ; https://bjsm.bmj.com/ >
 
   }
@@ -938,7 +933,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Drug and Therapeutics Bulletin Volume 55 ; 55 ; https://dtb.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Drug and Therapeutics Bulletin Volume 56 ; 56 ; https://dtb.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Drug and Therapeutics Bulletin Volume 57 ; 57 ; https://dtb.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2020 ; Drug and Therapeutics Bulletin Volume 58 ; 58 ; https://dtb.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; Drug and Therapeutics Bulletin Volume 58 ; 58 ; https://dtb.bmj.com/ > #https://dtb.bmj.com/content/58/12/178,"Unable to fetch probe permission page"
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Drug and Therapeutics Bulletin Volume 59 ; 59 ; https://dtb.bmj.com/ >
 
   }
@@ -1452,10 +1447,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2013 ; Heart Volume 99 ; 99 ; http://heart.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Heart Volume 100 ; 100 ; http://heart.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Heart Volume 101 ; 101 ; http://heart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2016 ; Heart Volume 102 ; 102 ; https://heart.bmj.com/ > # Unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; released ; 2016 ; Heart Volume 102 ; 102 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Heart Volume 103 ; 103 ; https://heart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ > # File size (2418184395) differs from Content-Length header (2971933806): heartjnl-2014-307008supp_Oxford-Live-2011.mov
-    au < bmj.BMJDrupalPlugin ; manifest ; 2019 ; Heart Volume 105 ; 105 ; https://heart.bmj.com/ > #403 forbidden
+    au < bmj.BMJDrupalPlugin ; notReady ; 2018 ; Heart Volume 104 ; 104 ; https://heart.bmj.com/ > # File size (2418184395) differs from Content-Length header (2971933806): heartjnl-2014-307008supp_Oxford-Live-2011.mov
+    au < bmj.BMJDrupalPlugin ; notReady ; 2019 ; Heart Volume 105 ; 105 ; https://heart.bmj.com/ > #403 https://heart.bmj.com/content/105/8/596
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Heart Volume 106 ; 106 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Heart Volume 107 ; 107 ; https://heart.bmj.com/ >
 
@@ -1683,7 +1678,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Journal of Epidemiology & Community Health Volume 71 ; 71 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Journal of Epidemiology & Community Health Volume 72 ; 72 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Journal of Epidemiology & Community Health Volume 73 ; 73 ; https://jech.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2020 ; Journal of Epidemiology & Community Health Volume 74 ; 74 ; https://jech.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; Journal of Epidemiology & Community Health Volume 74 ; 74 ; https://jech.bmj.com/ > #Found login page. https://jech.bmj.com/content/74/10/778
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Journal of Epidemiology & Community Health Volume 75 ; 75 ; https://jech.bmj.com/ >
 
   }
@@ -1740,7 +1735,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Sexual & Reproductive Health Volume 44 ; 44 ; https://srh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Sexual & Reproductive Health Volume 45 ; 45 ; https://srh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2020 ; BMJ Sexual & Reproductive Health Volume 46 ; 46 ; https://srh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; BMJ Sexual & Reproductive Health Volume 46 ; 46 ; https://srh.bmj.com/ > #Unable to fetch probe permission page https://srh.bmj.com/content/46/2/132
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Sexual & Reproductive Health Volume 47 ; 47 ; https://srh.bmj.com/ >
 
   }
@@ -1896,7 +1891,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Journal of NeuroInterventional Surgery Volume 9 ; 9 ; https://jnis.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Journal of NeuroInterventional Surgery Volume 10 ; 10 ; https://jnis.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Journal of NeuroInterventional Surgery Volume 11 ; 11 ; https://jnis.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2020 ; Journal of NeuroInterventional Surgery Volume 12 ; 12 ; https://jnis.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; Journal of NeuroInterventional Surgery Volume 12 ; 12 ; https://jnis.bmj.com/ > #Found login page.
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Journal of NeuroInterventional Surgery Volume 13 ; 13 ; https://jnis.bmj.com/ >
 
   }
@@ -2782,7 +2777,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Thorax Volume 72 ; 72 ; https://thorax.bmj.com/ > # Login page https://thorax.bmj.com/content/suppl/2017/11/15/72.Suppl_3.DC2
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Thorax Volume 73 ; 73 ; https://thorax.bmj.com/ > # Login page https://thorax.bmj.com/content/suppl/2018/02/19/73.Suppl_1.DC1
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Thorax Volume 74 ; 74 ; https://thorax.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2020 ; Thorax Volume 75 ; 75 ; https://thorax.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; Thorax Volume 75 ; 75 ; https://thorax.bmj.com/ > #login page https://thorax.bmj.com/content/75/10/826
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Thorax Volume 76 ; 76 ; https://thorax.bmj.com/ >
 
   }
