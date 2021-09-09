@@ -128,7 +128,7 @@ public class TestCrawlerStatus extends LockssTestCase {
 		 c1.getDefaultMessage(Crawler.STATUS_PLUGIN_ERROR));
     assertEquals("Repository error",
 		 c1.getDefaultMessage(Crawler.STATUS_REPO_ERR));
-    assertEquals("Interrupted by daemon exit",
+    assertEquals("Interrupted by plugin reload or daemon exit",
 		 c1.getDefaultMessage(Crawler.STATUS_RUNNING_AT_CRASH));
     assertEquals("Link extractor error",
 		 c1.getDefaultMessage(Crawler.STATUS_EXTRACTOR_ERROR));
