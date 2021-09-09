@@ -323,11 +323,11 @@ public class TestAuState extends LockssTestCase {
     assertEquals(-1, aus.getLastCrawlTime());
     assertEquals(t1, aus.getLastCrawlAttempt());
     assertEquals(Crawler.STATUS_RUNNING_AT_CRASH, aus.getLastCrawlResult());
-    assertEquals("Interrupted by daemon exit", aus.getLastCrawlResultMsg());
+    assertEquals("Interrupted by plugin reload or daemon exit", aus.getLastCrawlResultMsg());
     assertEquals(-1, aus.getLastDeepCrawlTime());
     assertEquals(456, aus.getLastDeepCrawlAttempt());
     assertEquals(Crawler.STATUS_RUNNING_AT_CRASH, aus.getLastDeepCrawlResult());
-    assertEquals("Interrupted by daemon exit", aus.getLastDeepCrawlResultMsg());
+    assertEquals("Interrupted by plugin reload or daemon exit", aus.getLastDeepCrawlResultMsg());
     assertFalse(aus.isCrawlActive());
 
     TimeBase.setSimulated(t3);
