@@ -4003,16 +4003,18 @@ while (my $line = <>) {
           my $perm_contents = $man_resp->content; 
           my $lcl_tag = $lockss_tag;
           #for CLOCKSS permission is on https://www.spandidos-publications.com/lockss.txt
-          if ($plugin eq "ClockssSpandidos2020Plugin") {
-          $lcl_tag = $clockss_tag;
-          my $perm_url_sprintf = sprintf("%slockss.txt",$param{base_url});
-          my $perm_url = uri_unescape($perm_url_sprintf );
-          my $perm_req = HTTP::Request->new(GET, $perm_url);
-          my $perm_resp = $ua->request($perm_req);
-          #if this fails, it just won't reset - which will fail to have permission - so okay
-          if ($perm_resp->is_success) {
-              $perm_contents = $perm_resp->content;
-          }
+          if ($plugin eq "ClockssSpandidos2020Plugin" || $plugin eq "Spandidos2020Plugin") {
+            if ($plugin eq "ClockssSpandidos2020Plugin") {
+              $lcl_tag = $clockss_tag;
+            }
+            my $perm_url_sprintf = sprintf("%slockss.txt",$param{base_url});
+            my $perm_url = uri_unescape($perm_url_sprintf );
+            my $perm_req = HTTP::Request->new(GET, $perm_url);
+            my $perm_resp = $ua->request($perm_req);
+            #if this fails, it just won't reset - which will fail to have permission - so okay
+            if ($perm_resp->is_success) {
+                $perm_contents = $perm_resp->content;
+            }
           }
           $lcl_tag =~ s/ /./g;
           if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
