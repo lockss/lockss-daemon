@@ -4038,8 +4038,8 @@ while (my $line = <>) {
       }
 
     sleep(4);
-
   # End Spandidos plugin check
+
   } elsif ($plugin eq "ClockssGigaSciencePlugin") {
       $url = sprintf("%s/api/list?start_date=%d-01-01&end_date=%d-12-31",
       $param{base_url}, $param{year}, $param{year});
@@ -4064,8 +4064,9 @@ while (my $line = <>) {
           $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
       sleep(4);
-   # End of Giga Science
-   } elsif ($plugin eq "ClockssResilienceAlliancePlugin") {
+  # End of Giga Science
+
+  } elsif ($plugin eq "ClockssResilienceAlliancePlugin") {
          $url = sprintf("%sissues/",
          $param{base_url});
          $man_url = uri_unescape($url);
@@ -4091,7 +4092,8 @@ while (my $line = <>) {
              $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
          }
          sleep(4);
-    } # End of Resilience Alliance
+  # End of Resilience Alliance
+  } 
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
