@@ -346,7 +346,6 @@ def query_aus(host, username, password, select, where=None):
     :param host: a host:port pair (string)
     :param username: a username for the host (string)
     :param password: a password for the host (string)
-    :param auid: an auid to hash (string)
     :param select: if a list of strings, the field names to
         be used in the SELECT clause; if a string, the single field name to be used in
         the SELECT clause (string or list of strings)
@@ -354,14 +353,7 @@ def query_aus(host, username, password, select, where=None):
     Raises:
     - ValueError if select is not of the right type
     '''
-    if type(select) is list:
-        query = 'SELECT {}'.format(', '.join(select))
-    elif type(select) is str:
-        query = 'SELECT {}'.format(select)
-    else:
-        raise ValueError('invalid type for select parameter: {}'.format(type(select)))
-    if where is not None:
-        query = '{} WHERE {}'.format(query, where)
+    query = construct_query(select, where)
     client = make_client(host, username, password, _service)
     ret = client.service.queryAus(auQuery=query)
     return zeep.helpers.serialize_object(ret)
@@ -405,7 +397,6 @@ def query_crawls(host, username, password, select, where=None):
     :param host: a host:port pair (string)
     :param username: a username for the host (string)
     :param password: a password for the host (string)
-    :param auid: an auid to hash (string)
     :param select: if a list of strings, the field names to
         be used in the SELECT clause; if a string, the single field name to be used in
         the SELECT clause (string or list of strings)
@@ -413,6 +404,52 @@ def query_crawls(host, username, password, select, where=None):
     Raises:
     - ValueError if select is not of the right type
     '''
+    query = construct_query(select, where)
+    client = make_client(host, username, password, _service)
+    ret = client.service.queryCrawls(crawlQuery=query)
+    return zeep.helpers.serialize_object(ret)
+
+def query_tdb_titles_by_auid(host, username, password, auid, select="*"):
+    '''Performs a queryTdbTitles operation on the given host for the given auid,
+    and returns an list of records with these fields (populated or
+    not depending on the SELECT clause):
+    - EIssn (string)
+    - id (string)
+    - issn (string)
+    - issnL (string)
+    - issns (string)
+    - name (string)
+    - printIssn (string)
+    - proprietaryId (string)
+    - proprietaryIds (string)
+    - publicationType (string)
+    - tdbPublisher (tns:tdbPublisherWsResult)
+    Parameters:
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
+    :param select: if a list of strings, the field names to
+        be used in the SELECT clause; if a string, the single field name to be used in
+        the SELECT clause (string or list of strings)
+    Raises:
+    - ValueError if auid or select is not of the right type
+    '''
+    client = make_client(host, username, password, _service)
+    query = construct_query(select)
+    try:
+        # first we get the publisher given the auid and filter the query
+        au_publisher = client.service.getAuStatus(auId=auid)['publisher']
+        query += f" WHERE tdbPublisher.name='{au_publisher}'"
+        ret = client.service.queryTdbTitles(tdbTitleQuery=query)
+        return zeep.helpers.serialize_object(ret)
+    except zeep.exceptions.Fault as e:
+        if e.message == 'No Archival Unit with provided identifier':
+            return None
+        else:
+            raise
+
+def construct_query(select="*", where=None):
     if type(select) is list:
         query = 'SELECT {}'.format(', '.join(select))
     elif type(select) is str:
@@ -421,10 +458,7 @@ def query_crawls(host, username, password, select, where=None):
         raise ValueError('invalid type for select parameter: {}'.format(type(select)))
     if where is not None:
         query = '{} WHERE {}'.format(query, where)
-    client = make_client(host, username, password, _service)
-    ret = client.service.queryCrawls(crawlQuery=query)
-    return zeep.helpers.serialize_object(ret)
-
+    return query
 #
 # Command line tool
 #
