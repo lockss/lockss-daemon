@@ -58,7 +58,7 @@ public class V2RestClient {
 
     private String basePath = "http://laaws.lockss.org:443/";
     private boolean debugging = false;
-    private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
+    private Map<String, String> defaultHeaderMap = new HashMap<>();
     private String tempFolderPath = null;
 
     private Map<String, Authentication> authentications;
@@ -82,17 +82,15 @@ public class V2RestClient {
      */
     public V2RestClient() {
         httpClient = new OkHttpClient();
-
-
         verifyingSsl = true;
 
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("Swagger-Codegen/1.0.0/java");
+        setUserAgent("LOCKSS");
 
         // Setup authentications (key: authentication name, value: authentication).
-        authentications = new HashMap<String, Authentication>();
+        authentications = new HashMap<>();
         authentications.put("basicAuth",new HttpBasicAuth());
         // Prevent the authentications from being modified.
         authentications = Collections.unmodifiableMap(authentications);
@@ -521,7 +519,7 @@ public class V2RestClient {
      * @return A list containing a single {@code Pair} object.
      */
     public List<Pair> parameterToPair(String name, Object value) {
-        List<Pair> params = new ArrayList<Pair>();
+        List<Pair> params = new ArrayList<>();
 
         // preconditions
         if (name == null || name.isEmpty() || value == null || value instanceof Collection) return params;
@@ -541,7 +539,7 @@ public class V2RestClient {
      * @return A list of {@code Pair} objects.
      */
     public List<Pair> parameterToPairs(String collectionFormat, String name, Collection value) {
-        List<Pair> params = new ArrayList<Pair>();
+        List<Pair> params = new ArrayList<>();
 
         // preconditions
         if (name == null || name.isEmpty() || value == null || value.isEmpty()) {

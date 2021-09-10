@@ -77,7 +77,11 @@ public class V2AuMover {
   public static final String DEBUG_REPO_REQUEST = PREFIX + "repo.debug";
   public static final boolean  DEFAULT_DEBUG_REPO_REQUEST = false;
 
+  public static final String PARAM_MAX_REQUESTS = PREFIX + "max_requests";
+  public static final int  DEFAULT_MAX_REQUESTS = 50;
+
   private static final Logger log = Logger.getLogger(V2AuMover.class);
+  private int maxRequests;
 
 
   /**
@@ -138,8 +142,8 @@ public class V2AuMover {
   private final String userAgent;
 
   // counters
-  public long cuMoved=0;
-  public long cuVersionsMoved=0;
+  public static long cuMoved=0;
+  public static long cuVersionsMoved=0;
 
   // debug support
   private boolean debugRepoReq;
@@ -174,6 +178,7 @@ public class V2AuMover {
     userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST, DEFAULT_DEBUG_REPO_REQUEST);
     debugConfigReq = config.getBoolean(DEBUG_CONFIG_REQUEST, DEFAULT_DEBUG_CONFIG_REQUEST);
+    maxRequests= config.getInt(PARAM_MAX_REQUESTS,DEFAULT_MAX_REQUESTS);
     initRepoClient(rspec);
     initConfigClient(cfgService);
   }
@@ -188,22 +193,27 @@ public class V2AuMover {
   }
 
   public void moveAu(ArchivalUnit au) throws IOException {
+    long startTime = System.currentTimeMillis(); // Get the start Time
+    long endTime;
     currentAu = au.getAuId();
     String auName = au.getName();
-    log.debug("Handling request to move AU: "+ auName);
+    log.info("Handling request to move AU: "+ auName);
+    log.info("AuId: " + currentAu);
     try {
-      log.debug("Checking V2 Repository Status");
+      log.info("Checking V2 Repository Status");
       if (!rsStatusApi.getStatus().isReady()) {
         log.error("V2 Repository Service Status: NOT READY");
         throw new IOException(auName+ ": Unable to move au. V2 Repository Service is not ready.");
       }
-      log.debug("Checking V2 Configuration Status");
+      log.info("Checking V2 Configuration Status");
       if(!cfgStatusApi.getStatus().isReady()) {
         log.error("V2 Configuration Service: NOT READY");
         throw new IOException(auName+ ": Unable to move au. V2 Configuration Service is not ready.");
       }
       log.info(auName+ ": Moving AU Artifacts...");
       moveAuArtifacts(au);
+      while(repoClient.getHttpClient().getDispatcher().getRunningCallCount() != 0)
+        ;
       log.info(auName+ ": Moving AU State...");
       moveAuState(au);
       log.info(auName+ ": Moving AU Configuration...");
@@ -213,6 +223,10 @@ public class V2AuMover {
       log.error("Attempt to move Au " + auName + " failed:" + apie.getCode() + ": " + apie.getResponseBody());
       throw new IOException("Attempt to move Au " + auName + " failed:" + apie.getCode()+ ": " + apie.getResponseBody());
     }
+    endTime=System.currentTimeMillis();
+    log.info(au.getName() + ": Successfully moved AU " + au.getName() + " Artifacts.");
+    log.info("CachedUrls Moved: " + cuMoved + "     Artifacts Moved: " +cuVersionsMoved +
+      "   runTime (secs): " + (endTime - startTime) /1000);
   }
 
   /**
@@ -236,6 +250,7 @@ public class V2AuMover {
     repoClient.setUserAgent(userAgent);
     repoClient.setBasePath(rsRestLocation);
     repoClient.setDebugging(debugRepoReq);
+    repoClient.getHttpClient().getDispatcher().setMaxRequests(maxRequests);
     // Assign client to CollectionsApi and StatusApi
     rsStatusApi= new org.lockss.laaws.api.rs.StatusApi(repoClient);
     rsCollectionsApi = new StreamingCollectionsApi(repoClient);
@@ -272,8 +287,6 @@ public class V2AuMover {
    * @param au The ArchivalUnit to move
    */
   protected void moveAuArtifacts(ArchivalUnit au) throws ApiException {
-    long startTime = System.currentTimeMillis(); // Get the start Time
-    long endTime;
     /* get Au items from Lockss*/
     for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
       CachedUrl cachedUrl = iter.next();
@@ -281,10 +294,6 @@ public class V2AuMover {
       moveCuVersions(cachedUrl);
       cuMoved++;
     }
-    endTime=System.currentTimeMillis();
-    log.info(au.getName() + ": Successfully moved AU Artifacts.");
-    log.info("CachedUrls Moved: " + cuMoved + "     Artifacts Moved: " +cuVersionsMoved +
-      "   runTime (secs): " + (endTime - startTime) /1000);
   }
 
   protected void moveAuConfig(ArchivalUnit au) throws ApiException {
@@ -329,25 +338,15 @@ public class V2AuMover {
   private void moveArtifact(String auid, String uri, Long collectionDate,
       CachedUrl cu, String collectionId) throws ApiException {
     rsCollectionsApi.createArtifactAsync(auid, uri, collectionDate, cu, collectionId,
-      new ArtifactCallback("Create Artifact") {
-      @Override
-      public void onSuccess(Artifact result, int statusCode,
-      Map<String, List<String>> responseHeaders) {
-        try {
-          rsCollectionsApi.updateArtifactAsync(true,result.getCollection(), result.getId(),
-            new ArtifactCallback("Update Artifact") {
-              @Override
-              public void onSuccess(Artifact result, int statusCode,
-                Map<String, List<String>> responseHeaders) {
-                log.debug("Successfully updated artifact " + result.getId());
-                cuVersionsMoved++;
-              }
-          });
-        } catch (ApiException e) {
-          log.error("Update Artifact request failed " + statusCode + " - " + e.getMessage());
-        }
-      }
-    });
+      new CreateArtifactCallback());
+  }
+
+  private void commitArtifact(Artifact uncommitted) throws ApiException {
+    Artifact committed;
+    committed=rsCollectionsApi.updateArtifact(true,uncommitted.getCollection(),
+      uncommitted.getId());
+    log.debug("Successfully commited artifact " + committed.getId());
+    cuVersionsMoved++;
   }
 
   // cfg utilities
@@ -410,32 +409,37 @@ public class V2AuMover {
     return cliendId + "-" + ++reqId;
   }
 
-  protected static class ArtifactCallback implements ApiCallback<Artifact> {
-    String request;
-
-    ArtifactCallback(String request) {
-      this.request=request;
-    }
-
+  protected class CreateArtifactCallback implements ApiCallback<Artifact> {
     @Override
     public void onFailure(ApiException e, int statusCode,
       Map<String, List<String>> responseHeaders) {
-      log.error(request + " request failed " + statusCode + " - " + e.getMessage());
+      log.error("Create Artifact request failed " + statusCode + " - " + e.getMessage());
     }
 
     @Override
     public void onSuccess(Artifact result, int statusCode,
       Map<String, List<String>> responseHeaders) {
-      log.debug2(request + " request succeeded " + statusCode);
+      try {
+        commitArtifact(result);
+      } catch (ApiException e) {
+        log.error("Attempt to commit artifact failed" + statusCode + " - " + e.getMessage());
+      }
     }
 
     @Override
     public void onUploadProgress(long bytesWritten, long contentLength, boolean done) {
-      log.debug3(request + " uploaded " + bytesWritten + " of " + contentLength + "bytes..");
+      log.debug3("Create Artifact uploaded " + bytesWritten + " of " + contentLength + "bytes..");
+      if (done) {
+        log.debug2("Create Artifact upload of " +  bytesWritten + " complete.");
+      }
     }
 
     @Override
     public void onDownloadProgress(long bytesRead, long contentLength, boolean done) {
+      log.debug3("Create Artifact downloaded " + bytesRead + " of " + contentLength + "bytes..");
+      if (done) {
+        log.debug2("Create Artifact download " +  bytesRead + "  complete");
+      }
 
     }
   }
