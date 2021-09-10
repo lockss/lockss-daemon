@@ -40,7 +40,7 @@
     au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2019 ; Annals of Family Medicine Volume 17 [superseded] ; 17 ; http://www.annfammed.org/ ; >
     au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; finished ; crawling ; 2019 ; Annals of Family Medicine Volume 17 ; 17 ; https://www.annfammed.org/ ; reingest2.clockss.org:8085 >
     au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; deepCrawl ; exists ; 2020 ; Annals of Family Medicine Volume 18 ; 18 ; https://www.annfammed.org/ ; >
-    au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; testing ; exists ; 2021 ; Annals of Family Medicine Volume 19 ; 19 ; https://www.annfammed.org/ ; >
+    au < annalsfamilymedicine.ClockssAnnalsFamilyMedicineDrupalPlugin ; ready ; exists ; 2021 ; Annals of Family Medicine Volume 19 ; 19 ; https://www.annfammed.org/ ; >
 
   }
 
