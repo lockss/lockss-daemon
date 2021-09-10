@@ -43,7 +43,7 @@
     au < finished ; crawling ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Therapeutics and Clinical Risk Management Volume 16 ; 16 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Therapeutics and Clinical Risk Management Volume 17 ; 17 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Therapeutics and Clinical Risk Management Volume 17 ; 17 ; 2021 ; >
 
   }
 
@@ -72,7 +72,7 @@
     au < finished ; crawling ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Vascular Health and Risk Management Volume 16 ; 16 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Vascular Health and Risk Management Volume 17 ; 17 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Vascular Health and Risk Management Volume 17 ; 17 ; 2021 ; >
 
   }
 
@@ -101,7 +101,7 @@
     au < finished ; crawling ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Neuropsychiatric Disease and Treatment Volume 16 ; 16 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Neuropsychiatric Disease and Treatment Volume 17 ; 17 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Neuropsychiatric Disease and Treatment Volume 17 ; 17 ; 2021 ; >
 
   }
 
@@ -129,7 +129,7 @@
     au < finished ; crawling ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Clinical Interventions in Aging Volume 15 ; 15 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical Interventions in Aging Volume 16 ; 16 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical Interventions in Aging Volume 16 ; 16 ; 2021 ; >
 
   }
 
@@ -157,7 +157,7 @@
     au < finished ; crawling ; 2018 ; International Journal of Nanomedicine Volume 13 ; 13 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; International Journal of Nanomedicine Volume 14 ; 14 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; International Journal of Nanomedicine Volume 15 ; 15 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; International Journal of Nanomedicine Volume 16 ; 16 ; 2021 ; >
+    au < testing ; exists ; 2021 ; International Journal of Nanomedicine Volume 16 ; 16 ; 2021 ; >
 
   }
 
@@ -185,7 +185,7 @@
     au < finished ; crawling ; 2018 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 13 ; 13 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 15 ; 15 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 16 ; 16 ; 2021 ; >
+    au < testing ; exists ; 2021 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 16 ; 16 ; 2021 ; >
 
   }
 
@@ -211,7 +211,7 @@
     au < finished ; crawling ; 2018 ; Journal of Multidisciplinary Healthcare Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Journal of Multidisciplinary Healthcare Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Multidisciplinary Healthcare Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Multidisciplinary Healthcare Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Multidisciplinary Healthcare Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -239,7 +239,7 @@
     au < finished ; crawling ; 2018 ; Biologics: Targets and Therapy Volume 12 ; 12 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Biologics: Targets and Therapy Volume 13 ; 13 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Biologics: Targets and Therapy Volume 14 ; 14 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Biologics: Targets and Therapy Volume 15 ; 15 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Biologics: Targets and Therapy Volume 15 ; 15 ; 2021 ; >
 
   }
 
@@ -266,7 +266,7 @@
     au < finished ; crawling ; 2018 ; Clinical Ophthalmology Volume 12 ; 12 ; 2018 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Clinical Ophthalmology Volume 13 ; 13 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Clinical Ophthalmology Volume 14 ; 14 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical Ophthalmology Volume 15 ; 15 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical Ophthalmology Volume 15 ; 15 ; 2021 ; >
 
   }
 
@@ -292,7 +292,7 @@
     au < finished ; crawling ; 2018 ; Nanotechnology, Science and Applications Volume 11 ; 11 ; 2018 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Nanotechnology, Science and Applications Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Nanotechnology, Science and Applications Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Nanotechnology, Science and Applications Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Nanotechnology, Science and Applications Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -319,7 +319,7 @@
     au < deepCrawl ; exists ; 2018 ; Drug Design, Development and Therapy Volume 12 ; 12 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Drug Design, Development and Therapy Volume 13 ; 13 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Drug Design, Development and Therapy Volume 14 ; 14 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Drug Design, Development and Therapy Volume 15 ; 15 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Drug Design, Development and Therapy Volume 15 ; 15 ; 2021 ; >
 
   }
 
@@ -346,7 +346,7 @@
     au < deepCrawl ; exists ; 2018 ; Patient Preference and Adherence Volume 12 ; 12 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Patient Preference and Adherence Volume 13 ; 13 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Patient Preference and Adherence Volume 14 ; 14 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Patient Preference and Adherence Volume 15 ; 15 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Patient Preference and Adherence Volume 15 ; 15 ; 2021 ; >
 
   }
 
@@ -372,7 +372,7 @@
     au < finished ; crawling ; 2018 ; OncoTargets and Therapy Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; OncoTargets and Therapy Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; OncoTargets and Therapy Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; OncoTargets and Therapy Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; OncoTargets and Therapy Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -398,7 +398,7 @@
     au < deepCrawl ; exists ; 2018 ; Medical Devices: Evidence and Research Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Medical Devices: Evidence and Research Volume 12 ; 12 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Medical Devices: Evidence and Research Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Medical Devices: Evidence and Research Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Medical Devices: Evidence and Research Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -446,7 +446,7 @@
     au < finished ; crawling ; 2018 ; Stem Cells and Cloning: Advances and Applications Volume 11 ; 11 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Stem Cells and Cloning: Advances and Applications Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Stem Cells and Cloning: Advances and Applications Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Stem Cells and Cloning: Advances and Applications Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Stem Cells and Cloning: Advances and Applications Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -472,7 +472,7 @@
     au < finished ; crawling ; 2018 ; Journal of Asthma and Allergy Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Journal of Asthma and Allergy Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Asthma and Allergy Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Asthma and Allergy Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Asthma and Allergy Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -498,7 +498,7 @@
     au < deepCrawl ; exists ; 2018 ; Infection and Drug Resistance Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Infection and Drug Resistance Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Infection and Drug Resistance Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Infection and Drug Resistance Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Infection and Drug Resistance Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -523,7 +523,7 @@
     au < finished ; crawling ; 2018 ; ClinicoEconomics and Outcomes Research Volume 10 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; ClinicoEconomics and Outcomes Research Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; ClinicoEconomics and Outcomes Research Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; ClinicoEconomics and Outcomes Research Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; ClinicoEconomics and Outcomes Research Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -571,7 +571,7 @@
     au < finished ; crawling ; 2018 ; Local and Regional Anesthesia Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Local and Regional Anesthesia Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Local and Regional Anesthesia Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Local and Regional Anesthesia Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Local and Regional Anesthesia Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -597,7 +597,7 @@
     au < finished ; crawling ; 2018 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 11 ; 11 ; 2018 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -623,7 +623,7 @@
     au < finished ; crawling ; 2018 ; Clinical, Cosmetic and Investigational Dermatology Volume 11 ; 11 ; 2018 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Clinical, Cosmetic and Investigational Dermatology Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Clinical, Cosmetic and Investigational Dermatology Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical, Cosmetic and Investigational Dermatology Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical, Cosmetic and Investigational Dermatology Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -649,7 +649,7 @@
     au < finished ; crawling ; 2018 ; Clinical and Experimental Gastroenterology Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Clinical and Experimental Gastroenterology Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Clinical and Experimental Gastroenterology Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical and Experimental Gastroenterology Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical and Experimental Gastroenterology Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -675,7 +675,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Inflammation Research Volume 11 ; 11 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Inflammation Research Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Inflammation Research Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Inflammation Research Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Inflammation Research Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -701,7 +701,7 @@
     au < deepCrawl ; exists ; 2018 ; The Application of Clinical Genetics Volume 11 ; 11 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; The Application of Clinical Genetics Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; The Application of Clinical Genetics Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; The Application of Clinical Genetics Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; The Application of Clinical Genetics Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -727,7 +727,7 @@
     au < deepCrawl ; exists ; 2018 ; International Journal of Nephrology and Renovascular Disease Volume 11 ; 11 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; International Journal of Nephrology and Renovascular Disease Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Nephrology and Renovascular Disease Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; International Journal of Nephrology and Renovascular Disease Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; International Journal of Nephrology and Renovascular Disease Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -753,7 +753,7 @@
     au < deepCrawl ; exists ; 2018 ; Pharmacogenomics and Personalized Medicine Volume 11 ; 11 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Pharmacogenomics and Personalized Medicine Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Pharmacogenomics and Personalized Medicine Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Pharmacogenomics and Personalized Medicine Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Pharmacogenomics and Personalized Medicine Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -779,7 +779,7 @@
     au < deepCrawl ; exists ; 2018 ; International Journal of General Medicine Volume 11 ; 11 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; International Journal of General Medicine Volume 12 ; 12 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of General Medicine Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; International Journal of General Medicine Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; International Journal of General Medicine Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -805,7 +805,7 @@
     au < deepCrawl ; exists ; 2018 ; Open Access Surgery Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Open Access Surgery Volume 12 ; 12 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Open Access Surgery Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Open Access Surgery Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Open Access Surgery Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -831,7 +831,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Pain Research Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Journal of Pain Research Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal of Pain Research Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Pain Research Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Pain Research Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -857,7 +857,7 @@
     au < deepCrawl ; exists ; 2018 ; Integrated Blood Pressure Control Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Integrated Blood Pressure Control Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Integrated Blood Pressure Control Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Integrated Blood Pressure Control Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Integrated Blood Pressure Control Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -882,7 +882,7 @@
     au < deepCrawl ; exists ; 2018 ; Clinical Epidemiology Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Clinical Epidemiology Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Clinical Epidemiology Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical Epidemiology Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical Epidemiology Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -907,7 +907,7 @@
     au < deepCrawl ; exists ; 2018 ; Drug, Healthcare and Patient Safety Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Drug, Healthcare and Patient Safety Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Drug, Healthcare and Patient Safety Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Drug, Healthcare and Patient Safety Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Drug, Healthcare and Patient Safety Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -932,7 +932,7 @@
     au < deepCrawl ; exists ; 2018 ; International Journal of Women's Health Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; International Journal of Women's Health Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Women's Health Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; International Journal of Women's Health Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; International Journal of Women's Health Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -958,7 +958,7 @@
     au < deepCrawl ; exists ; 2018 ; International Medical Case Reports Journal Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; International Medical Case Reports Journal Volume 12 ; 12 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; International Medical Case Reports Journal Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; International Medical Case Reports Journal Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; International Medical Case Reports Journal Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -983,7 +983,7 @@
     au < deepCrawl ; exists ; 2018 ; Open Access Emergency Medicine Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Open Access Emergency Medicine Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Open Access Emergency Medicine Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Open Access Emergency Medicine Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Open Access Emergency Medicine Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1030,7 +1030,7 @@
     au < deepCrawl ; exists ; 2018 ; Reports in Medical Imaging Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Reports in Medical Imaging Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Reports in Medical Imaging Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Reports in Medical Imaging Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Reports in Medical Imaging Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -1055,7 +1055,7 @@
     au < deepCrawl ; exists ; 2018 ; Research and Reports in Urology Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Research and Reports in Urology Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Research and Reports in Urology Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Research and Reports in Urology Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Research and Reports in Urology Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1080,7 +1080,7 @@
     au < deepCrawl ; exists ; 2018 ; Open Access Journal of Clinical Trials Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Open Access Journal of Clinical Trials Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Open Access Journal of Clinical Trials Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Open Access Journal of Clinical Trials Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Open Access Journal of Clinical Trials Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1131,7 +1131,7 @@
     au < deepCrawl ; exists ; 2018 ; Psychology Research and Behavior Management Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Psychology Research and Behavior Management Volume 12 ; 12 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Psychology Research and Behavior Management Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Psychology Research and Behavior Management Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Psychology Research and Behavior Management Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -1156,7 +1156,7 @@
     au < deepCrawl ; exists ; 2018 ; Clinical, Cosmetic and Investigational Dentistry Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Clinical, Cosmetic and Investigational Dentistry Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Clinical, Cosmetic and Investigational Dentistry Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical, Cosmetic and Investigational Dentistry Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical, Cosmetic and Investigational Dentistry Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1181,7 +1181,7 @@
     au < deepCrawl ; exists ; 2018 ; Cancer Management and Research Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Cancer Management and Research Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Cancer Management and Research Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Cancer Management and Research Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Cancer Management and Research Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1207,7 +1207,7 @@
     au < deepCrawl ; exists ; 2018 ; Risk Management and Healthcare Policy Volume 11 ; 11 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Risk Management and Healthcare Policy Volume 12 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Risk Management and Healthcare Policy Volume 13 ; 13 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Risk Management and Healthcare Policy Volume 14 ; 14 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Risk Management and Healthcare Policy Volume 14 ; 14 ; 2021 ; >
 
   }
 
@@ -1232,7 +1232,7 @@
     au < finished ; crawling ; 2018 ; Transplant Research and Risk Management Volume 10 ; 10 ; 2018 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Transplant Research and Risk Management Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Transplant Research and Risk Management Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Transplant Research and Risk Management Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Transplant Research and Risk Management Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1278,7 +1278,7 @@
     au < deepCrawl ; exists ; 2018 ; Open Access Rheumatology: Research and Reviews Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Open Access Rheumatology: Research and Reviews Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Open Access Rheumatology: Research and Reviews Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Open Access Rheumatology: Research and Reviews Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Open Access Rheumatology: Research and Reviews Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1325,7 +1325,7 @@
     au < deepCrawl ; exists ; 2018 ; Hepatic Medicine: Evidence and Research Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Hepatic Medicine: Evidence and Research Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Hepatic Medicine: Evidence and Research Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Hepatic Medicine: Evidence and Research Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Hepatic Medicine: Evidence and Research Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1364,7 +1364,7 @@
     au < deepCrawl ; exists ; 2018 ; Open Access Journal of Sports Medicine Volume 9 ; 9 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Open Access Journal of Sports Medicine Volume 10 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Open Access Journal of Sports Medicine Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Open Access Journal of Sports Medicine Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Open Access Journal of Sports Medicine Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -1389,7 +1389,7 @@
     au < deepCrawl ; exists ; 2018 ; Clinical Pharmacology: Advances and Applications Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Clinical Pharmacology: Advances and Applications Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Clinical Pharmacology: Advances and Applications Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical Pharmacology: Advances and Applications Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical Pharmacology: Advances and Applications Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1414,7 +1414,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Experimental Pharmacology Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Journal of Experimental Pharmacology Volume 11 ; 11 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Experimental Pharmacology Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Experimental Pharmacology Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Experimental Pharmacology Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1439,7 +1439,7 @@
     au < deepCrawl ; exists ; 2018 ; HIV/AIDS - Research and Palliative Care Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; HIV/AIDS - Research and Palliative Care Volume 11 ; 11 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; HIV/AIDS - Research and Palliative Care Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; HIV/AIDS - Research and Palliative Care Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; HIV/AIDS - Research and Palliative Care Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1464,7 +1464,7 @@
     au < deepCrawl ; exists ; 2018 ; Breast Cancer: Targets and Therapy Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Breast Cancer: Targets and Therapy Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Breast Cancer: Targets and Therapy Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Breast Cancer: Targets and Therapy Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Breast Cancer: Targets and Therapy Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1489,7 +1489,7 @@
     au < deepCrawl ; exists ; 2018 ; Nutrition and Dietary Supplements Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Nutrition and Dietary Supplements Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Nutrition and Dietary Supplements Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Nutrition and Dietary Supplements Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Nutrition and Dietary Supplements Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1514,7 +1514,7 @@
     au < deepCrawl ; exists ; 2018 ; Orthopedic Research and Reviews Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Orthopedic Research and Reviews Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Orthopedic Research and Reviews Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Orthopedic Research and Reviews Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Orthopedic Research and Reviews Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1539,7 +1539,7 @@
     au < deepCrawl ; exists ; 2018 ; Nature and Science of Sleep Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Nature and Science of Sleep Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Nature and Science of Sleep Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Nature and Science of Sleep Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Nature and Science of Sleep Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1563,7 +1563,7 @@
     au < deepCrawl ; exists ; 2018 ; Open Access Journal of Contraception Volume 9 ; 9 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Open Access Journal of Contraception Volume 10 ; 10 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Open Access Journal of Contraception Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Open Access Journal of Contraception Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Open Access Journal of Contraception Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -1608,7 +1608,7 @@
     au < deepCrawl ; exists ; 2018 ; Clinical Optometry Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Clinical Optometry Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Clinical Optometry Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical Optometry Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical Optometry Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1633,7 +1633,7 @@
     au < deepCrawl ; exists ; 2018 ; Eye and Brain Volume 10 ; 10 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Eye and Brain Volume 11 ; 11 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Eye and Brain Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Eye and Brain Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Eye and Brain Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1658,7 +1658,7 @@
     au < finished ; crawling ; 2018 ; Pathology and Laboratory Medicine International Volume 10 ; 10 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Pathology and Laboratory Medicine International Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Pathology and Laboratory Medicine International Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Pathology and Laboratory Medicine International Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Pathology and Laboratory Medicine International Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1704,7 +1704,7 @@
     au < finished ; crawling ; 2018 ; Clinical Audit Volume 10 ; 10 ; 2018 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; Clinical Audit Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Clinical Audit Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Clinical Audit Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Clinical Audit Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1728,7 +1728,7 @@
     au < deepCrawl ; exists ; 2018 ; Lung Cancer: Targets and Therapy Volume 9 ; 9 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Lung Cancer: Targets and Therapy Volume 10 ; 10 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Lung Cancer: Targets and Therapy Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Lung Cancer: Targets and Therapy Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Lung Cancer: Targets and Therapy Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -1752,7 +1752,7 @@
     au < deepCrawl ; exists ; 2018 ; Patient Related Outcome Measures Volume 9 ; 9 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Patient Related Outcome Measures Volume 10 ; 10 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Patient Related Outcome Measures Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Patient Related Outcome Measures Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Patient Related Outcome Measures Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -1776,7 +1776,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Blood Medicine Volume 9 ; 9 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Journal of Blood Medicine Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Blood Medicine Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Blood Medicine Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Blood Medicine Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -1869,7 +1869,7 @@
     au < deepCrawl ; exists ; 2018 ; Adolescent Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Adolescent Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Adolescent Health, Medicine and Therapeutics Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Adolescent Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Adolescent Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -1915,7 +1915,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Healthcare Leadership Volume 10 ; 10 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Healthcare Leadership Volume 11 ; 11 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Healthcare Leadership Volume 12 ; 12 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Healthcare Leadership Volume 13 ; 13 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Healthcare Leadership Volume 13 ; 13 ; 2021 ; >
 
   }
 
@@ -1939,7 +1939,7 @@
     au < finished ; crawling ; 2018 ; Advances in Medical Education and Practice Volume 9 ; 9 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Advances in Medical Education and Practice Volume 10 ; 10 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Advances in Medical Education and Practice Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Advances in Medical Education and Practice Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Advances in Medical Education and Practice Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -1963,7 +1963,7 @@
     au < deepCrawl ; exists ; 2018 ; Research and Reports in Tropical Medicine Volume 9 ; 9 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Research and Reports in Tropical Medicine Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Research and Reports in Tropical Medicine Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Research and Reports in Tropical Medicine Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Research and Reports in Tropical Medicine Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -2008,7 +2008,7 @@
     au < deepCrawl ; exists ; 2018 ; Pragmatic and Observational Research Volume 9 ; 9 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Pragmatic and Observational Research Volume 10 ; 10 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Pragmatic and Observational Research Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Pragmatic and Observational Research Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Pragmatic and Observational Research Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -2032,7 +2032,7 @@
     au < deepCrawl ; exists ; 2018 ; Research Reports in Clinical Cardiology Volume 9 ; 9 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Research Reports in Clinical Cardiology Volume 10 ; 10 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Research Reports in Clinical Cardiology Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Research Reports in Clinical Cardiology Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Research Reports in Clinical Cardiology Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -2076,7 +2076,7 @@
     au < deepCrawl ; exists ; 2018 ; Substance Abuse and Rehabilitation Volume 9 ; 9 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Substance Abuse and Rehabilitation Volume 10 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Substance Abuse and Rehabilitation Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Substance Abuse and Rehabilitation Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Substance Abuse and Rehabilitation Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -2099,7 +2099,7 @@
     au < deepCrawl ; exists ; 2018 ; Degenerative Neurological and Neuromuscular Disease Volume 8 ; 8 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Degenerative Neurological and Neuromuscular Disease Volume 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Degenerative Neurological and Neuromuscular Disease Volume 10 ; 10 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Degenerative Neurological and Neuromuscular Disease Volume 11 ; 11 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Degenerative Neurological and Neuromuscular Disease Volume 11 ; 11 ; 2021 ; >
 
   }
 
@@ -2142,7 +2142,7 @@
     au < deepCrawl ; exists ; 2018 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 9 ; 9 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 10 ; 10 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 11 ; 11 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 11 ; 11 ; 2021 ; >
 
   }
 
@@ -2186,7 +2186,7 @@
     au < deepCrawl ; exists ; 2018 ; Pediatric Health, Medicine and Therapeutics Volume 9 ; 9 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Pediatric Health, Medicine and Therapeutics Volume 10 ; 10 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Pediatric Health, Medicine and Therapeutics Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Pediatric Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Pediatric Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -2209,7 +2209,7 @@
     au < deepCrawl ; exists ; 2018 ; Research and Reports in Neonatology Volume 8 ; 8 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Research and Reports in Neonatology Volume 9 ; 9 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Research and Reports in Neonatology Volume 10 ; 10 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Research and Reports in Neonatology Volume 11 ; 11 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Research and Reports in Neonatology Volume 11 ; 11 ; 2021 ; >
 
   }
 
@@ -2291,7 +2291,7 @@
     au < deepCrawl ; exists ; 2018 ; Veterinary Medicine: Research and Reports Volume 9 ; 9 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Veterinary Medicine: Research and Reports Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Veterinary Medicine: Research and Reports Volume 11 ; 11 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Veterinary Medicine: Research and Reports Volume 12 ; 12 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Veterinary Medicine: Research and Reports Volume 12 ; 12 ; 2021 ; >
 
   }
 
@@ -2547,7 +2547,7 @@
     au < deepCrawl ; exists ; 2018 ; Psoriasis: Targets and Therapy Volume 8 ; 8 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Psoriasis: Targets and Therapy Volume 9 ; 9 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Psoriasis: Targets and Therapy Volume 10 ; 10 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Psoriasis: Targets and Therapy Volume 11 ; 11 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Psoriasis: Targets and Therapy Volume 11 ; 11 ; 2021 ; >
 
   }
 
@@ -2625,7 +2625,7 @@
     au < deepCrawl ; exists ; 2018 ; Nursing: Research and Reviews Volume 8 ; 8 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Nursing: Research and Reviews Volume 9 ; 9 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Nursing: Research and Reviews Volume 10 ; 10 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Nursing: Research and Reviews Volume 11 ; 11 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Nursing: Research and Reviews Volume 11 ; 11 ; 2021 ; >
 
   }
 
@@ -2685,7 +2685,7 @@
     au < deepCrawl ; exists ; 2018 ; Integrated Pharmacy Research and Practice Volume 7 ; 7 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Integrated Pharmacy Research and Practice Volume 8 ; 8 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Integrated Pharmacy Research and Practice Volume 9 ; 9 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Integrated Pharmacy Research and Practice Volume 10 ; 10 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Integrated Pharmacy Research and Practice Volume 10 ; 10 ; 2021 ; >
 
   }
 
@@ -2745,7 +2745,7 @@
     au < deepCrawl ; exists ; 2018 ; ImmunoTargets and Therapy Volume 7 ; 7 ; 2018 ; >
     au < finished ; crawling ; 2019 ; ImmunoTargets and Therapy Volume 8 ; 8 ; 2019 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; ImmunoTargets and Therapy Volume 9 ; 9 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; ImmunoTargets and Therapy Volume 10 ; 10 ; 2021 ; >
+    au < testing ; exists ; 2021 ; ImmunoTargets and Therapy Volume 10 ; 10 ; 2021 ; >
 
   }
 
@@ -2765,7 +2765,7 @@
     au < deepCrawl ; exists ; 2018 ; Smart Homecare Technology and TeleHealth Volume 5 ; 5 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Smart Homecare Technology and TeleHealth Volume 6 ; 6 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Smart Homecare Technology and TeleHealth Volume 7 ; 7 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Smart Homecare Technology and TeleHealth Volume 8 ; 8 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Smart Homecare Technology and TeleHealth Volume 8 ; 8 ; 2021 ; >
 
   }
 
@@ -2787,7 +2787,7 @@
     au < deepCrawl ; exists ; 2018 ; Oncolytic Virotherapy Volume 7 ; 7 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Oncolytic Virotherapy Volume 8 ; 8 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Oncolytic Virotherapy Volume 9 ; 9 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Oncolytic Virotherapy Volume 10 ; 10 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Oncolytic Virotherapy Volume 10 ; 10 ; 2021 ; >
 
   }
 
@@ -2879,7 +2879,7 @@
     au < deepCrawl ; exists ; 2018 ; International Journal of Clinical Transfusion Medicine Volume 6 ; 6 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; International Journal of Clinical Transfusion Medicine Volume 7 ; 7 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Clinical Transfusion Medicine Volume 8 ; 8 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; International Journal of Clinical Transfusion Medicine Volume 9 ; 9 ; 2021 ; >
+    au < testing ; exists ; 2021 ; International Journal of Clinical Transfusion Medicine Volume 9 ; 9 ; 2021 ; >
 
   }
 
@@ -2902,7 +2902,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 8 ; 8 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 9 ; 9 ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 10 ; 10 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 11 ; 11 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 11 ; 11 ; 2021 ; >
 
   }
 
@@ -2922,7 +2922,7 @@
     au < deepCrawl ; exists ; 2018 ; Journal of Hepatocellular Carcinoma Volume 5 ; 5 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Journal of Hepatocellular Carcinoma Volume 6 ; 6 ; 2019 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Hepatocellular Carcinoma Volume 7 ; 7 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Journal of Hepatocellular Carcinoma Volume 8 ; 8 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Journal of Hepatocellular Carcinoma Volume 8 ; 8 ; 2021 ; >
 
   }
 
@@ -3022,7 +3022,7 @@
     au < deepCrawl ; exists ; 2018 ; Chronic Wound Care Management and Research Volume 5 ; 5 ; 2018 ; >
     au < finished ; crawling ; 2019 ; Chronic Wound Care Management and Research Volume 6 ; 6 ; 2019 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Chronic Wound Care Management and Research Volume 7 ; 7 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Chronic Wound Care Management and Research Volume 8 ; 8 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Chronic Wound Care Management and Research Volume 8 ; 8 ; 2021 ; >
 
   }
   {
@@ -3041,7 +3041,7 @@
     au < finished ; crawling ; 2018 ; Robotic Surgery: Research and Reviews Volume 5 ; 5 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Robotic Surgery: Research and Reviews Volume 6 ; 6 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Robotic Surgery: Research and Reviews Volume 7 ; 7 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Robotic Surgery: Research and Reviews Volume 8 ; 8 ; 2021 ; >
+    au < testing ; exists ; 2021 ; Robotic Surgery: Research and Reviews Volume 8 ; 8 ; 2021 ; >
 
   }
 

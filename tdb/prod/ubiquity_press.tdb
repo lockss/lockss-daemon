@@ -526,8 +526,8 @@
       #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
 
-      au < manifest ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; https://foucaldien.net/ >
-      au < manifest ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ >
+      au < ready ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 ; https://foucaldien.net/ >
+      au < ready ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ >
       au < released ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ >
       au < released ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ >
       au < released ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ >
@@ -817,9 +817,9 @@
 
       au < released ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 ; http://www.ancient-asia-journal.com/ >
       au < released ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 ; http://www.ancient-asia-journal.com/ >
-      au < manifest ; 2012 ; 3 ; Ancient Asia Volume 2012 ; 2012 ; https://www.ancient-asia-journal.com/ >
-      au < manifest ; 2013 ; 4 ; Ancient Asia Volume 2013 ; 2013 ; https://www.ancient-asia-journal.com/ >
-      au < manifest ; 2014 ; 5 ; Ancient Asia Volume 2014 ; 2014 ; https://www.ancient-asia-journal.com/ >
+      au < ready ; 2012 ; 3 ; Ancient Asia Volume 2012 ; 2012 ; https://www.ancient-asia-journal.com/ >
+      au < ready ; 2013 ; 4 ; Ancient Asia Volume 2013 ; 2013 ; https://www.ancient-asia-journal.com/ >
+      au < ready ; 2014 ; 5 ; Ancient Asia Volume 2014 ; 2014 ; https://www.ancient-asia-journal.com/ >
       au < released ; 2015 ; 6 ; Ancient Asia Volume 2015 ; 2015 ; http://www.ancient-asia-journal.com/ >
       au < released ; 2016 ; 7 ; Ancient Asia Volume 2016 ; 2016 ; http://www.ancient-asia-journal.com/ >
       au < released ; 2017 ; 8 ; Ancient Asia Volume 2017 ; 2017 ; https://www.ancient-asia-journal.com/ >
@@ -870,7 +870,7 @@
       au < notReady ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; https://www.current-journal.com/ > #no substance
       au < notReady ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; https://www.current-journal.com/ > #no substance
       au < notReady ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; https://www.current-journal.com/ > #no substance
-      au < manifest ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ >
+      au < ready ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ >
       au < released ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ >
       au < released ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ >
       au < expected ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; https://www.current-journal.com/ >
@@ -1003,10 +1003,10 @@
       au < released ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; http://www.archaeologybulletin.org/ >
       au < released ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; http://www.archaeologybulletin.org/ >
       au < released ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; http://www.archaeologybulletin.org/ >
-      au < manifest ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; https://www.archaeologybulletin.org/ >
-      au < manifest ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; https://www.archaeologybulletin.org/ >
-      au < manifest ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; https://www.archaeologybulletin.org/ >
-      au < manifest ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; https://www.archaeologybulletin.org/ >
+      au < ready ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; https://www.archaeologybulletin.org/ >
+      au < ready ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; https://www.archaeologybulletin.org/ >
+      au < ready ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; https://www.archaeologybulletin.org/ >
+      au < ready ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; https://www.archaeologybulletin.org/ >
       au < released ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; http://www.archaeologybulletin.org/ >
       au < released ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; http://www.archaeologybulletin.org/ >
       au < released ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; https://www.archaeologybulletin.org/ >
@@ -1169,7 +1169,7 @@
 
       au < released ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; http://www.rips-irsp.com/ >
       au < released ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; https://www.rips-irsp.com/ >
-      au < manifest ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ >
+      au < ready ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; https://www.rips-irsp.com/ >
       au < released ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ >
       au < released ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ >
       au < manifest ; 2021 ; 6 ; International Review of Social Psychology Volume 2021 ; 2021 ; https://www.rips-irsp.com/ >
@@ -1193,11 +1193,11 @@
       au < released ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; https://www.jcircadianrhythms.com/ >
       au < manifest ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; https://www.jcircadianrhythms.com/ >
       au < manifest ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; https://www.jcircadianrhythms.com/ >
-      au < manifest ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; https://www.jcircadianrhythms.com/ >
-      au < manifest ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; https://www.jcircadianrhythms.com/ >
-      au < manifest ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; https://www.jcircadianrhythms.com/ >
-      au < manifest ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; https://www.jcircadianrhythms.com/ >
-      au < manifest ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; https://www.jcircadianrhythms.com/ >
+      au < ready ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; https://www.jcircadianrhythms.com/ >
+      au < ready ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; https://www.jcircadianrhythms.com/ >
+      au < ready ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; https://www.jcircadianrhythms.com/ >
+      au < ready ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; https://www.jcircadianrhythms.com/ >
+      au < ready ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; https://www.jcircadianrhythms.com/ >
       au < released ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; http://www.jcircadianrhythms.com/ >
       au < released ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; http://www.jcircadianrhythms.com/ >
       au < released ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; https://www.jcircadianrhythms.com/ >
@@ -1224,10 +1224,10 @@
       au < manifest ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; https://www.jcms-journal.com/ >
       au < released ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; https://www.jcms-journal.com/ >
       au < released ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; https://www.jcms-journal.com/ >
-      au < manifest ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; https://www.jcms-journal.com/ >
-      au < manifest ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; https://www.jcms-journal.com/ >
-      au < manifest ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; https://www.jcms-journal.com/ >
-      au < manifest ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; https://www.jcms-journal.com/ >
+      au < ready ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; https://www.jcms-journal.com/ >
+      au < ready ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; https://www.jcms-journal.com/ >
+      au < ready ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; https://www.jcms-journal.com/ >
+      au < ready ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; https://www.jcms-journal.com/ >
       au < released ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; http://www.jcms-journal.com/ >
       au < released ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; http://www.jcms-journal.com/ >
       au < released ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; https://www.jcms-journal.com/ >
@@ -1250,9 +1250,9 @@
 
       au < released ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; https://jeps.efpsa.org/ >
       au < released ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; http://jeps.efpsa.org/ >
-      au < manifest ; 2012 ; 3 ; Journal of European Psychology Students Volume 2012 ; 2012 ; https://jeps.efpsa.org/ >
-      au < manifest ; 2013 ; 4 ; Journal of European Psychology Students Volume 2013 ; 2013 ; https://jeps.efpsa.org/ >
-      au < manifest ; 2014 ; 5 ; Journal of European Psychology Students Volume 2014 ; 2014 ; https://jeps.efpsa.org/ >
+      au < ready ; 2012 ; 3 ; Journal of European Psychology Students Volume 2012 ; 2012 ; https://jeps.efpsa.org/ >
+      au < ready ; 2013 ; 4 ; Journal of European Psychology Students Volume 2013 ; 2013 ; https://jeps.efpsa.org/ >
+      au < ready ; 2014 ; 5 ; Journal of European Psychology Students Volume 2014 ; 2014 ; https://jeps.efpsa.org/ >
       au < released ; 2015 ; 6 ; Journal of European Psychology Students Volume 2015 ; 2015 ; http://jeps.efpsa.org/ >
       au < released ; 2016 ; 7 ; Journal of European Psychology Students Volume 2016 ; 2016 ; http://jeps.efpsa.org/ >
       au < released ; 2017 ; 8 ; Journal of European Psychology Students Volume 2017 ; 2017 ; https://jeps.efpsa.org/ >
@@ -1307,9 +1307,9 @@
       au < released ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; https://jime.open.ac.uk/ >
       au < released ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; https://jime.open.ac.uk/ >
       au < released ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; https://jime.open.ac.uk/ >
-      au < manifest ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ >
+      au < ready ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ >
       au < released ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ >
-      au < manifest ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ >
+      au < ready ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ >
       au < released ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ >
       au < released ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ >
       au < manifest ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ >
@@ -1355,9 +1355,9 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://openarchaeologydata.metajnl.com/
 
-      au < manifest ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; https://openarchaeologydata.metajnl.com/ >
-      au < manifest ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; https://openarchaeologydata.metajnl.com/ >
-      au < manifest ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; https://openarchaeologydata.metajnl.com/ >
+      au < ready ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; https://openarchaeologydata.metajnl.com/ >
+      au < ready ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; https://openarchaeologydata.metajnl.com/ >
+      au < ready ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; https://openarchaeologydata.metajnl.com/ >
       au < released ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; http://openarchaeologydata.metajnl.com/ >
       au < released ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; http://openarchaeologydata.metajnl.com/ >
       au < released ; 2018 ; 6 ; Journal of Open Archaeology Data Volume 2018 ; 2018 ; https://openarchaeologydata.metajnl.com/ >
@@ -1378,7 +1378,7 @@
 #      param[base_url] = http://openhealthdata.metajnl.com/
       # continued by Journal of Open Health Data
 
-      au < manifest ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ >
+      au < ready ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ >
 
   }
 
@@ -1433,8 +1433,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://openpsychologydata.metajnl.com/
 
-      au < manifest ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; https://openpsychologydata.metajnl.com/ >
-      au < manifest ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; https://openpsychologydata.metajnl.com/ >
+      au < ready ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; https://openpsychologydata.metajnl.com/ >
+      au < ready ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; https://openpsychologydata.metajnl.com/ >
       au < released ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; http://openpsychologydata.metajnl.com/ >
       au < released ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ >
       au < released ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; https://openpsychologydata.metajnl.com/ >
@@ -1455,8 +1455,8 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://openresearchsoftware.metajnl.com/
 
-      au < manifest ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; https://openresearchsoftware.metajnl.com/ >
-      au < manifest ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; https://openresearchsoftware.metajnl.com/ >
+      au < ready ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; https://openresearchsoftware.metajnl.com/ >
+      au < ready ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; https://openresearchsoftware.metajnl.com/ >
       au < released ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; http://openresearchsoftware.metajnl.com/ >
       au < released ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; http://openresearchsoftware.metajnl.com/ >
       au < released ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; https://openresearchsoftware.metajnl.com/ >
@@ -1576,7 +1576,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://openbioresources.metajnl.com/
 
-      au < manifest ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; https://openbioresources.metajnl.com/ >
+      au < ready ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; https://openbioresources.metajnl.com/ >
       au < released ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; http://openbioresources.metajnl.com/ >
       au < released ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; http://openbioresources.metajnl.com/ >
       au < released ; 2017 ; 4 ; Open Journal of Bioresources Volume 2017 ; 2017 ; https://openbioresources.metajnl.com/ >
@@ -1686,7 +1686,7 @@
       au < released ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; http://www.openquaternary.com/ >
       au < released ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; http://www.openquaternary.com/ >
       au < released ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; https://www.openquaternary.com/ >
-      au < manifest ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; https://www.openquaternary.com/ >
+      au < ready ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; https://www.openquaternary.com/ >
       au < released ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; https://www.openquaternary.com/ >
       au < released ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ >
       au < manifest ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; https://www.openquaternary.com/ >
@@ -1771,11 +1771,11 @@
 
       au < doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://presentpasts.info/ >
       au < released ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; https://presentpasts.info/ >
-      au < manifest ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://presentpasts.info/ >
+      au < ready ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://presentpasts.info/ >
       au < doesNotExist ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://presentpasts.info/ >
-      au < manifest ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; https://presentpasts.info/ >
-      au < manifest ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; https://presentpasts.info/ >
-      au < manifest ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ >
+      au < ready ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; https://presentpasts.info/ >
+      au < ready ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; https://presentpasts.info/ >
+      au < ready ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ >
       au < released ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ >
       au < released ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ >
       au < released ; 2019 ; 10 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ >
@@ -1800,10 +1800,10 @@
       au < released ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ >
       au < released ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; https://www.psychologicabelgica.com/ >
       au < released ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; http://www.psychologicabelgica.com/ >
-      au < manifest ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://www.psychologicabelgica.com/ >
-      au < manifest ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; https://www.psychologicabelgica.com/ >
-      au < manifest ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; https://www.psychologicabelgica.com/ >
-      au < manifest ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; https://www.psychologicabelgica.com/ >
+      au < ready ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://www.psychologicabelgica.com/ >
+      au < ready ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; https://www.psychologicabelgica.com/ >
+      au < ready ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; https://www.psychologicabelgica.com/ >
+      au < ready ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; https://www.psychologicabelgica.com/ >
       au < released ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; http://www.psychologicabelgica.com/ >
       au < released ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; http://www.psychologicabelgica.com/ >
       au < released ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ >
@@ -1837,10 +1837,10 @@
        #no www. do use this.
 #      param[base_url] = https://secularismandnonreligion.org/
 
-      au < manifest ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://secularismandnonreligion.org/ >
-      au < manifest ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://secularismandnonreligion.org/ >
-      au < manifest ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://secularismandnonreligion.org/ >
-      au < manifest ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; https://secularismandnonreligion.org/ >
+      au < ready ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://secularismandnonreligion.org/ >
+      au < ready ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://secularismandnonreligion.org/ >
+      au < ready ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://secularismandnonreligion.org/ >
+      au < ready ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; https://secularismandnonreligion.org/ >
       au < released ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; https://secularismandnonreligion.org/ >
       au < released ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ >
       au < released ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ >
@@ -1879,8 +1879,8 @@
       au < notReady ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://utrechtjournal.org/ > #no substance
       au < notReady ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://utrechtjournal.org/ > #no substance
       au < notReady ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://utrechtjournal.org/ > #no substance
-      au < manifest ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://utrechtjournal.org/ >
-      au < manifest ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; https://utrechtjournal.org/ >
+      au < ready ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://utrechtjournal.org/ >
+      au < ready ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; https://utrechtjournal.org/ >
       au < released ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; https://utrechtjournal.org/ >
       au < released ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ >
       au < released ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://utrechtjournal.org/ >
@@ -2027,7 +2027,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.journalofcognition.org/
 
-      au < manifest ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ >
+      au < ready ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ >
       au < released ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ >
       au < released ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ >
       au < manifest ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; https://www.journalofcognition.org/ >
@@ -2957,9 +2957,9 @@
       comment[publisher] = Centre for Security Governance
 #      param[base_url] = http://www.stabilityjournal.org/
 
-      au < manifest ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; https://www.stabilityjournal.org/ >
-      au < manifest ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; https://www.stabilityjournal.org/ >
-      au < manifest ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; https://www.stabilityjournal.org/ >
+      au < ready ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; https://www.stabilityjournal.org/ >
+      au < ready ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; https://www.stabilityjournal.org/ >
+      au < ready ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; https://www.stabilityjournal.org/ >
       au < released ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ >
       au < released ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ >
       au < released ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; https://www.stabilityjournal.org/ >
