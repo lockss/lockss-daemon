@@ -469,8 +469,8 @@
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 375 ; 375 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 376 ; 376 ; https://jpet.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 377 ; 377 ; https://jpet.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 378 ; 378 ; https://jpet.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 377 ; 377 ; https://jpet.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 378 ; 378 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 379 ; 379 ; https://jpet.aspetjournals.org/ ; >
 
     }
@@ -702,7 +702,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Pharmacological Reviews Volume 70 ; 70 ; http://pharmrev.aspetjournals.org/ ; reingest4.clockss.org:8082 >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; http://pharmrev.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Pharmacological Reviews Volume 72 ; 72 ; http://pharmrev.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ ; >
 
     }
   }
