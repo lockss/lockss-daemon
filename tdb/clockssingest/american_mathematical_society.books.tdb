@@ -66,7 +66,7 @@
     au < finished ; finished ; 2018 ; Contemporary Mathematics 2018 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; Contemporary Mathematics 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Contemporary Mathematics 2020 ; 2020 ; >
-    au < ready ; exists ; 2021 ; Contemporary Mathematics 2021 ; 2021 ; >
+    au < crawling ; exists ; 2021 ; Contemporary Mathematics 2021 ; 2021 ; >
 #assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
 
     }
@@ -214,7 +214,7 @@
     au < finished ; finished ; 2018 ; Memoirs of the American Mathematical Society 2018 ; 2018 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Memoirs of the American Mathematical Society 2019 ; 2019 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Memoirs of the American Mathematical Society 2020 ; 2020 ; >
-    au < ready ; exists ; 2021 ; Memoirs of the American Mathematical Society 2021 ; 2021 ; >
+    au < crawling ; exists ; 2021 ; Memoirs of the American Mathematical Society 2021 ; 2021 ; >
 #assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
 
     }
