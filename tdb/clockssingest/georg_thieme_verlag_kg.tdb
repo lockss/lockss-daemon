@@ -8055,7 +8055,7 @@
     au < testing ; exists ; 2016 ; 2016 ; CNE Pflegemanagement Volume 3 ; 3 ; >
     au < testing ; exists ; 2017 ; 2017 ; CNE Pflegemanagement Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; CNE Pflegemanagement Volume 5 ; 5 ; >
-    au < testing ; exists ; 2019 ; 2019 ; CNE Pflegemanagement Volume 6 ; 6 ; >
+    au < ready ; exists ; 2019 ; 2019 ; CNE Pflegemanagement Volume 6 ; 6 ; >
     au < testing ; exists ; 2020 ; 2020 ; CNE Pflegemanagement Volume 7 ; 7 ; >
     au < testing ; exists ; 2021 ; 2021 ; CNE Pflegemanagement Volume 8 ; 8 ; >
 
@@ -8075,7 +8075,7 @@
 
     au < testing ; exists ; 2013 ; 2013 ; Dental Journal of Advance Studies Volume 1 ; 1 ; >
     au < testing ; exists ; 2014 ; 2014 ; Dental Journal of Advance Studies Volume 2 ; 2 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Dental Journal of Advance Studies Volume 3 ; 3 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Dental Journal of Advance Studies Volume 3 ; 3 ; >
     au < testing ; exists ; 2016 ; 2016 ; Dental Journal of Advance Studies Volume 4 ; 4 ; >
     au < testing ; exists ; 2017 ; 2017 ; Dental Journal of Advance Studies Volume 5 ; 5 ; >
     au < testing ; exists ; 2018 ; 2018 ; Dental Journal of Advance Studies Volume 6 ; 6 ; >
@@ -8097,7 +8097,7 @@
     param[journal_id] = 10.1055/s-00035232
     comment[years] = 2018-current
 
-    au < testing ; exists ; 2018 ; 2018 ; Der Schmerzpatient Volume 1 ; 1 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Der Schmerzpatient Volume 1 ; 1 ; >
     au < testing ; exists ; 2019 ; 2019 ; Der Schmerzpatient Volume 2 ; 2 ; >
     au < testing ; exists ; 2020 ; 2020 ; Der Schmerzpatient Volume 3 ; 3 ; >
     au < testing ; exists ; 2021 ; 2021 ; Der Schmerzpatient Volume 4 ; 4 ; >
@@ -8244,7 +8244,7 @@
     au < testing ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; >
     au < testing ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; >
     au < testing ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 ; >
     au < testing ; exists ; 2021 ; 2021 ; Indian Journal of Plastic Surgery Volume 54 ; 54 ; >
 
   }
@@ -8308,7 +8308,7 @@
     param[journal_id] = 10.1055/s-00040446
     comment[years] = 2018-current
 
-    au < testing ; exists ; 2018 ; 2018 ; International Journal of Practical Otolaryngology Volume 1 ; 1 ; >
+    au < ready ; exists ; 2018 ; 2018 ; International Journal of Practical Otolaryngology Volume 1 ; 1 ; >
     au < testing ; exists ; 2019 ; 2019 ; International Journal of Practical Otolaryngology Volume 2 ; 2 ; >
     au < testing ; exists ; 2020 ; 2020 ; International Journal of Practical Otolaryngology Volume 3 ; 3 ; >
     au < testing ; exists ; 2021 ; 2021 ; International Journal of Practical Otolaryngology Volume 4 ; 4 ; >
@@ -8357,7 +8357,7 @@
     au < testing ; exists ; 2016 ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 7 ; >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 8 ; >
     au < testing ; exists ; 2018 ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 9 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Journal of Digestive Endoscopy Volume 10 ; 10 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Journal of Digestive Endoscopy Volume 10 ; 10 ; >
     au < testing ; exists ; 2020 ; 2020 ; Journal of Digestive Endoscopy Volume 11 ; 11 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Digestive Endoscopy Volume 12 ; 12 ; >
 
@@ -8399,9 +8399,9 @@
     au < testing ; exists ; 2014 ; 2014 ; Journal of Health and Allied Sciences NU Volume 4 ; 4 ; >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Health and Allied Sciences NU Volume 5 ; 5 ; >
     au < testing ; exists ; 2016 ; 2016 ; Journal of Health and Allied Sciences NU Volume 6 ; 6 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Health and Allied Sciences NU Volume 7 ; 7 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Journal of Health and Allied Sciences NU Volume 8 ; 8 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Journal of Health and Allied Sciences NU Volume 9 ; 9 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Health and Allied Sciences NU Volume 7 ; 7 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Journal of Health and Allied Sciences NU Volume 8 ; 8 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Journal of Health and Allied Sciences NU Volume 9 ; 9 ; >
     au < testing ; exists ; 2020 ; 2020 ; Journal of Health and Allied Sciences NU Volume 10 ; 10 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Health and Allied Sciences NU Volume 11 ; 11 ; >
 
@@ -8501,7 +8501,7 @@
     au < testing ; exists ; 2018 ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 9 ; >
     au < testing ; exists ; 2019 ; 2019 ; Journal of Neurosciences in Rural Practice Volume 10 ; 10 ; >
     au < testing ; exists ; 2020 ; 2020 ; Journal of Neurosciences in Rural Practice Volume 11 ; 11 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Journal of Neurosciences in Rural Practice Volume 12 ; 12 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Journal of Neurosciences in Rural Practice Volume 12 ; 12 ; >
 
   }
 
@@ -8517,7 +8517,7 @@
     param[journal_id] = 10.1055/s-00042619
     comment[years] = 2019-current
 
-    au < testing ; exists ; 2019 ; 2019 ; Klinik Einkauf Volume 1 ; 1 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Klinik Einkauf Volume 1 ; 1 ; >
     au < testing ; exists ; 2020 ; 2020 ; Klinik Einkauf Volume 2 ; 2 ; >
     au < testing ; exists ; 2021 ; 2021 ; Klinik Einkauf Volume 3 ; 3 ; >
 
@@ -8574,7 +8574,7 @@
     comment[years] = 2019-current
 
     au < testing ; exists ; 2019 ; 2019 ; Notaufnahme up2date Volume 1 ; 1 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Notaufnahme up2date Volume 2 ; 2 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Notaufnahme up2date Volume 2 ; 2 ; >
     au < testing ; exists ; 2021 ; 2021 ; Notaufnahme up2date Volume 3 ; 3 ; >
 
   }
@@ -8644,8 +8644,8 @@
     param[journal_id] = 10.1055/s-00043234
     comment[years] = 2020-current
 
-    au < testing ; exists ; 2020 ; 2020 ; Praxis Handreha Volume 1 ; 1 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Praxis Handreha Volume 2 ; 2 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Praxis Handreha Volume 1 ; 1 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Praxis Handreha Volume 2 ; 2 ; >
 
   }
 
@@ -8661,8 +8661,8 @@
     param[journal_id] = 10.1055/s-00042410
     comment[years] = 2019-current
 
-    au < testing ; exists ; 2019 ; 2019 ; Revista Brasileira de Ortopedia Volume 54 ; 54 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Revista Brasileira de Ortopedia Volume 55 ; 55 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Revista Brasileira de Ortopedia Volume 54 ; 54 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Revista Brasileira de Ortopedia Volume 55 ; 55 ; >
     au < testing ; exists ; 2021 ; 2021 ; Revista Brasileira de Ortopedia Volume 56 ; 56 ; >
 
   }

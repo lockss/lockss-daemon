@@ -280,7 +280,7 @@
       au < finished ; manifest ; 2018 ; Chemical Society Reviews Volume 47 ; 47 ; 2018 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Chemical Society Reviews Volume 48 ; 48 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Chemical Society Reviews Volume 49 ; 49 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; Chemical Society Reviews Volume 50 ; 50 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Chemical Society Reviews Volume 50 ; 50 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -352,7 +352,7 @@
       au < finished ; manifest ; 2018 ; CrystEngComm Volume 20 ; 20 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; CrystEngComm Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; CrystEngComm Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; CrystEngComm Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; CrystEngComm Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -572,12 +572,12 @@
       au < deepCrawl ; exists ; 2020 ; Faraday Discussions Volume 223 ; 223 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Faraday Discussions Volume 224 ; 224 ; 2020 ; https://pubs.rsc.org/ ; >
 
-      au < testing ; exists ; 2021 ; Faraday Discussions Volume 225 ; 225 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; Faraday Discussions Volume 226 ; 226 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Faraday Discussions Volume 225 ; 225 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Faraday Discussions Volume 226 ; 226 ; 2021 ; https://pubs.rsc.org/ ; >
       au < testing ; exists ; 2021 ; Faraday Discussions Volume 227 ; 227 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; Faraday Discussions Volume 228 ; 228 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Faraday Discussions Volume 228 ; 228 ; 2021 ; https://pubs.rsc.org/ ; >
       au < testing ; exists ; 2021 ; Faraday Discussions Volume 229 ; 229 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 231 ; 231 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 232 ; 232 ; 2021 ; https://pubs.rsc.org/ ; >
 
@@ -617,7 +617,7 @@
       au < finished ; manifest ; 2018 ; Green Chemistry Volume 20 ; 20 ; 2018 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Green Chemistry Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Green Chemistry Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; Green Chemistry Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Green Chemistry Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -796,7 +796,7 @@
       au < finished ; manifest ; 2018 ; Lab on a Chip Volume 18 ; 18 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Lab on a Chip Volume 19 ; 19 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Lab on a Chip Volume 20 ; 20 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; Lab on a Chip Volume 21 ; 21 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Lab on a Chip Volume 21 ; 21 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1549,7 +1549,7 @@
       au < finished ; manifest ; 2018 ; Environmental Science: Water Research & Technology Volume 4 ; 4 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Environmental Science: Water Research & Technology Volume 5 ; 5 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Environmental Science: Water Research & Technology Volume 6 ; 6 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; Environmental Science: Water Research & Technology Volume 7 ; 7 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Environmental Science: Water Research & Technology Volume 7 ; 7 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2506,7 +2506,7 @@
       au < finished ; manifest ; 2018 ; MedChemComm Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; MedChemComm Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; MedChemComm Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; MedChemComm Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; MedChemComm Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2635,7 +2635,7 @@
       au < finished ; manifest ; 2018 ; Polymer Chemistry Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Polymer Chemistry Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Polymer Chemistry Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2021 ; Polymer Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < ready ; exists ; 2021 ; Polymer Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
