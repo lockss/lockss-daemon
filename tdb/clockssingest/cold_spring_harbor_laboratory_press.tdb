@@ -63,7 +63,7 @@
       au < finished ; finished ; 2018 ; Cold Spring Harbor Perspectives in Biology Volume 10 ; 10 ; http://cshperspectives.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Biology Volume 12 ; 12 ; https://cshperspectives.cshlp.org/ ; >
-      au < ready ; exists ; 2021 ; Cold Spring Harbor Perspectives in Biology Volume 13 ; 13 ; https://cshperspectives.cshlp.org/ ; >
+      au < crawling ; exists ; 2021 ; Cold Spring Harbor Perspectives in Biology Volume 13 ; 13 ; https://cshperspectives.cshlp.org/ ; >
 
     }
     
@@ -129,7 +129,7 @@
       au < finished ; finished ; 2018 ; Cold Spring Harbor Protocols Volume 2018 ; 2018 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Cold Spring Harbor Protocols Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Protocols Volume 2020 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Cold Spring Harbor Protocols Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Cold Spring Harbor Protocols Volume 2021 ; 2021 ; >
 
     }
     
@@ -292,7 +292,7 @@
       au < finished ; finished ; 2018 ; Genes & Development Volume 32 ; 32 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Genes & Development Volume 33 ; 33 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Genes & Development Volume 34 ; 34 ; >
-      au < ready ; exists ; 2021 ; Genes & Development Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2021 ; Genes & Development Volume 35 ; 35 ; >
 
     }
 
@@ -391,7 +391,7 @@
       au < finished ; finished ; 2018 ; Learning & Memory Volume 25 ; 25 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Learning & Memory Volume 26 ; 26 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Learning & Memory Volume 27 ; 27 ; >
-      au < ready ; exists ; 2021 ; Learning & Memory Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2021 ; Learning & Memory Volume 28 ; 28 ; >
 
     }
 
