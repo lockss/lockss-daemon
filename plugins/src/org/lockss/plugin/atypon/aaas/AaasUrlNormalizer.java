@@ -33,7 +33,6 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.atypon.aaas;
 
-import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.HttpHttpsParamUrlNormalizer;
 import org.lockss.util.Logger;
@@ -44,8 +43,8 @@ import java.util.regex.Pattern;
 public class AaasUrlNormalizer extends HttpHttpsParamUrlNormalizer {
   protected static Logger log = Logger.getLogger(AaasUrlNormalizer.class);
 
-  protected static final String DOWNLOAD_STRING = "\\?download=true";
-  protected static final Pattern DOWNLOAD_PAT = Pattern.compile(DOWNLOAD_STRING, Pattern.CASE_INSENSITIVE);
+  protected static final String DOWNLOAD_STRING = "?download=true";
+  protected static final Pattern DOWNLOAD_PAT = Pattern.compile("\\?download=true", Pattern.CASE_INSENSITIVE);
 
   protected static final String EPDF_STRING = "/doi/epdf/";
   protected static final String PDF_STRING = "/doi/pdf/";
