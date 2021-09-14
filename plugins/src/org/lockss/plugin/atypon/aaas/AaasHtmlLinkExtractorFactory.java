@@ -61,7 +61,12 @@ public class AaasHtmlLinkExtractorFactory
           if (hrefval.contains(PILL_CITATIONS_ANCHOR)) {
             logger.info("found #pill-citations, rewriting");
             // the "/" gets normalized to %2F
-            String newUrl = doiMat.group(1) + ACTION_DOWNLOAD_CITATION + "?doi=" + doiMat.group(2) + "/" + doiMat.group(3) + DOWNLOAD_RIS_TAIL;
+            String urlPath = ACTION_DOWNLOAD_CITATION +
+                "?doi=" + doiMat.group(2) + "/" + doiMat.group(3) +
+                DOWNLOAD_RIS_TAIL;
+            // set the href (doesnt work)
+            //node.attr("href", "/" + urlPath);
+            String newUrl = doiMat.group(1) + urlPath;
             logger.debug3("Generated ris citation url: " + newUrl);
             cb.foundLink(newUrl);
           }
