@@ -60,7 +60,9 @@ public class AaasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       // Article pages
         // sidebar
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-aside"),
-        // ref, cite, ack, bib, suppl,
+        // mobile puts this elsewhere
+      HtmlNodeFilters.tagWithAttribute("div", "class", "current-issue-aside"),
+      // ref, cite, ack, bib, suppl,
       HtmlNodeFilters.tagWithAttribute("div", "id", "acknowledgments"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "pill-references"),
         // citation section lists articles citing, if applicable.
@@ -72,6 +74,7 @@ public class AaasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
 
         // popup
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
+
 
   };
 
