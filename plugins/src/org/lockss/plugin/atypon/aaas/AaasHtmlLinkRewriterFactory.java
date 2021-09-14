@@ -33,7 +33,6 @@ public class AaasHtmlLinkRewriterFactory implements LinkRewriterFactory {
                                         LinkTransform xfm)
       throws PluginException, IOException {
 
-    logger.info("what the actual ");
     return BaseAtyponHtmlLinkRewriterFactory.createLinkRewriter(mimeType,
                                                                 au,
                                                                 in,
@@ -54,7 +53,7 @@ public class AaasHtmlLinkRewriterFactory implements LinkRewriterFactory {
     private static final Pattern DOI_URL_PATTERN =
         Pattern.compile("^(?:https?://.*/)doi/([.0-9]+)/([^/]+)");
     private static final String CIT_DOWNLOAD_ACTION = "action/downloadCitation";
-    private static final String PILL_CITATIONS_ANCHOR = "pill-citations";
+    private static final String PILL_CITATIONS_ANCHOR = "#pill-citations";
     private static final String DOWNLOAD_RIS_TAIL = "&format=ris&include=cit";
 
     private String html_url = null;
@@ -62,29 +61,24 @@ public class AaasHtmlLinkRewriterFactory implements LinkRewriterFactory {
 
     public AaasPreFilter(ArchivalUnit au, String url) {
       super();
-      logger.info("what the hell");
       html_url = url;
       thisau = au;
     }
 
     public boolean accept(Node node) {
-      logger.info("what the fhuck");
-      // store the value of the link arguments for later reassembly
+      // store the value of tgit statuhe link arguments for later reassembly
       if (node instanceof LinkTag) {
-        logger.info("found a link");
         Matcher doiMat = DOI_URL_PATTERN.matcher(html_url);
         // Are we on a page for which this would be pertinent?
         if (doiMat.find()) {
-          logger.info("found a link on the DOI page");
           // now do we have a link to #pill-citations
           String linkval = ((LinkTag) node).getLink();
-          logger.info(" its href is: " + linkval);
           if (linkval == null) {
             return false;
           }
           if (linkval.contains(PILL_CITATIONS_ANCHOR)) {
 
-            logger.info("found a pill citations anchor");
+            logger.info("found a pill citations anchor, rewriting");
             String newUrl =  "/" + CIT_DOWNLOAD_ACTION + "?doi=" + doiMat.group(1) + "/" + doiMat.group(2) + DOWNLOAD_RIS_TAIL;
             ((TagNode) node).setAttribute("target", "_blank");
             ((LinkTag) node).setLink(newUrl);
