@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -68,7 +68,18 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.atypon.aaas.AaasHtmlCrawlFilterFactory</string>
     </entry>
     <entry>
+        <!-- removes 'download=true', replaces 'epdf' w/'pdf' -->
         <string>au_url_normalizer</string>
         <string>org.lockss.plugin.atypon.aaas.AaasUrlNormalizer</string>
+    </entry>
+    <entry>
+        <!-- adds a .ris file url to the crawler when it encounters a doi html article url -->
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.atypon.aaas.AaasHtmlLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <!-- changes an anchor ref to a .ris file link -->
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.atypon.aaas.AaasHtmlLinkRewriterFactory</string>
     </entry>
 </map>
