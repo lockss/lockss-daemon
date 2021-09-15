@@ -42,11 +42,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Association for the Advancement of Science Plugin (CLOCKSS)</string>
+    <string>American Association for the Advancement of Science Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -92,7 +92,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Association for the Advancement of Science Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Association for the Advancement of Science Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
