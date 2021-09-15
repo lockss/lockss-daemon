@@ -89,7 +89,7 @@ public class HighWireJCoreHttpResponseHandler implements CacheResultHandler {
         logger.debug2("403 - pattern is " + getNonFatal403Pattern().toString());
         Matcher fmat = getNonFatal403Pattern().matcher(url);
         if (fmat.find()) {
-          return new CacheException.NoRetryDeadLinkException("403 Foridden (non-fatal)");
+          return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
         }
         return new CacheException.RetrySameUrlException("403 Forbidden");
         
