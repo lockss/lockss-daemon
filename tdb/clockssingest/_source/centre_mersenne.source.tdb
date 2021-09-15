@@ -24,7 +24,7 @@
     au < readySource ; crawling ; 2021 ; Centre Mersenne Source Content 2021 ; 2021 >
     #Moved to directory based structured
     ##Do not move to production until new content has been tested
-    au < manifest ; exists ; 2021 ; Centre Mersenne Source Content 2021_01 ; 2021_01 >
+    au < notReady ; exists ; 2021 ; Centre Mersenne Source Content 2021_01 ; 2021_01 >
 
 
   }
