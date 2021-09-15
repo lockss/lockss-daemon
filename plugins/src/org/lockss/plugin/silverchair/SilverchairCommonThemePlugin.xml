@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -29,7 +29,7 @@
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
         </map>
     </entry>
@@ -156,6 +156,7 @@
             -->
             <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
+            <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
         </list>
     </entry>
     <entry>
@@ -224,6 +225,7 @@
             <!--this is for california unviersity press-->
             <string>ucp\.silverchair-cdn\.com</string>
             <string>watermark\.silverchair\.com</string>
+            <string>ajot2\.silverchair-cdn\.com</string>
         </list>
     </entry>
     <entry>
