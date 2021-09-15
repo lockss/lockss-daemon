@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -77,12 +77,9 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>text/html_link_extractor_factory</string>
         <string>org.lockss.plugin.atypon.aaas.AaasHtmlLinkExtractorFactory</string>
     </entry>
-    <!-- changes an anchor ref to a .ris file link
-    DOES NOT WORK
-    NO IDEA WHY
     <entry>
         <string>text/html_link_rewriter_factory</string>
         <string>org.lockss.plugin.atypon.aaas.AaasHtmlLinkRewriterFactory</string>
     </entry>
-    -->
+
 </map>
