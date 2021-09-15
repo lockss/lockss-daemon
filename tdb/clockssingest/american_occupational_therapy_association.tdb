@@ -7,9 +7,7 @@
     info[platform] = Silverchair. L+C. 1 journal
   >
   
-
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.aota.ClockssAOTASilverchairPlugin
+  plugin = org.lockss.plugin.silverchair.aota.ClockssAOTASilverchairPlugin
   implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
   param[base_url] = https://ajot.aota.org/
 
