@@ -343,7 +343,7 @@
       au < finished ; crawling ; 2018 ; Genome Research Volume 28 ; 28 ; https://genome.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Genome Research Volume 29 ; 29 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Genome Research Volume 30 ; 30 ; https://genome.cshlp.org/ ; >
-      au < ready ; exists ; 2021 ; Genome Research Volume 31 ; 31 ; https://genome.cshlp.org/ ; >
+      au < crawling ; exists ; 2021 ; Genome Research Volume 31 ; 31 ; https://genome.cshlp.org/ ; >
 
     }
 
@@ -438,7 +438,7 @@
       au < finished ; finished ; 2018 ; RNA Volume 24 ; 24 ; http://rnajournal.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ ; >
-      au < ready ; exists ; 2021 ; RNA Volume 27 ; 27 ; https://rnajournal.cshlp.org/ ; >
+      au < crawling ; exists ; 2021 ; RNA Volume 27 ; 27 ; https://rnajournal.cshlp.org/ ; >
 
     }
 
