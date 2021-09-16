@@ -7940,7 +7940,7 @@
     au < ready ; exists ; 2016 ; 2016 ; Annals of the National Academy of Medical Sciences (India) Volume 52 ; 52 ; >
     au < ready ; exists ; 2017 ; 2017 ; Annals of the National Academy of Medical Sciences (India) Volume 53 ; 53 ; >
     au < ready ; exists ; 2018 ; 2018 ; Annals of the National Academy of Medical Sciences (India) Volume 54 ; 54 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Annals of the National Academy of Medical Sciences (India) Volume 55 ; 55 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Annals of the National Academy of Medical Sciences (India) Volume 55 ; 55 ; >
     au < ready ; exists ; 2020 ; 2020 ; Annals of the National Academy of Medical Sciences (India) Volume 56 ; 56 ; >
     au < testing ; exists ; 2021 ; 2021 ; Annals of the National Academy of Medical Sciences (India) Volume 57 ; 57 ; >
 
@@ -7959,7 +7959,7 @@
     comment[years] = 2015-current
 
     au < testing ; exists ; 2015 ; 2015 ; Asian Journal of Oncology Volume 1 ; 1 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Asian Journal of Oncology Volume 2 ; 2 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Asian Journal of Oncology Volume 2 ; 2 ; >
     au < testing ; exists ; 2017 ; 2017 ; Asian Journal of Oncology Volume 3 ; 3 ; >
     au < ready ; exists ; 2018 ; 2018 ; Asian Journal of Oncology Volume 4 ; 4 ; >
     au < testing ; exists ; 2019 ; 2019 ; Asian Journal of Oncology Volume 5 ; 5 ; >
@@ -8053,10 +8053,10 @@
     comment[years] = 2016-current
 
     au < testing ; exists ; 2016 ; 2016 ; CNE Pflegemanagement Volume 3 ; 3 ; >
-    au < testing ; exists ; 2017 ; 2017 ; CNE Pflegemanagement Volume 4 ; 4 ; >
+    au < ready ; exists ; 2017 ; 2017 ; CNE Pflegemanagement Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; CNE Pflegemanagement Volume 5 ; 5 ; >
     au < ready ; exists ; 2019 ; 2019 ; CNE Pflegemanagement Volume 6 ; 6 ; >
-    au < testing ; exists ; 2020 ; 2020 ; CNE Pflegemanagement Volume 7 ; 7 ; >
+    au < ready ; exists ; 2020 ; 2020 ; CNE Pflegemanagement Volume 7 ; 7 ; >
     au < ready ; exists ; 2021 ; 2021 ; CNE Pflegemanagement Volume 8 ; 8 ; >
 
   }
@@ -8077,11 +8077,11 @@
     au < ready ; exists ; 2014 ; 2014 ; Dental Journal of Advance Studies Volume 2 ; 2 ; >
     au < ready ; exists ; 2015 ; 2015 ; Dental Journal of Advance Studies Volume 3 ; 3 ; >
     au < testing ; exists ; 2016 ; 2016 ; Dental Journal of Advance Studies Volume 4 ; 4 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Dental Journal of Advance Studies Volume 5 ; 5 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Dental Journal of Advance Studies Volume 6 ; 6 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Dental Journal of Advance Studies Volume 7 ; 7 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Dental Journal of Advance Studies Volume 5 ; 5 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Dental Journal of Advance Studies Volume 6 ; 6 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Dental Journal of Advance Studies Volume 7 ; 7 ; >
     au < testing ; exists ; 2020 ; 2020 ; Dental Journal of Advance Studies Volume 8 ; 8 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Dental Journal of Advance Studies Volume 9 ; 9 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Dental Journal of Advance Studies Volume 9 ; 9 ; >
 
   }
 
@@ -8122,7 +8122,7 @@
     au < ready ; exists ; 2013 ; 2013 ; Die Psychiatrie Volume 10 ; 10 ; >
     au < ready ; exists ; 2014 ; 2014 ; Die Psychiatrie Volume 11 ; 11 ; >
     au < ready ; exists ; 2015 ; 2015 ; Die Psychiatrie Volume 12 ; 12 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Die Psychiatrie Volume 13 ; 13 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Die Psychiatrie Volume 13 ; 13 ; >
     au < testing ; exists ; 2017 ; 2017 ; Die Psychiatrie Volume 14 ; 14 ; >
 
   }
@@ -8139,8 +8139,8 @@
     param[journal_id] = 10.1055/s-00042133
     comment[years] = 2019-current
 
-    au < testing ; exists ; 2019 ; 2019 ; European Journal of Dentistry Volume 13 ; 13 ; >
-    au < testing ; exists ; 2020 ; 2020 ; European Journal of Dentistry Volume 14 ; 14 ; >
+    au < ready ; exists ; 2019 ; 2019 ; European Journal of Dentistry Volume 13 ; 13 ; >
+    au < ready ; exists ; 2020 ; 2020 ; European Journal of Dentistry Volume 14 ; 14 ; >
     au < testing ; exists ; 2021 ; 2021 ; European Journal of Dentistry Volume 15 ; 15 ; >
 
   }
@@ -8157,9 +8157,9 @@
     param[journal_id] = 10.1055/s-00042229
     comment[years] = 2019-current
 
-    au < testing ; exists ; 2019 ; 2019 ; Geriatrie up2date Volume 1 ; 1 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Geriatrie up2date Volume 1 ; 1 ; >
     au < testing ; exists ; 2020 ; 2020 ; Geriatrie up2date Volume 2 ; 2 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Geriatrie up2date Volume 3 ; 3 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Geriatrie up2date Volume 3 ; 3 ; >
 
   }
 
@@ -8176,8 +8176,8 @@
     comment[years] = 2019-current
 
     au < ready ; exists ; 2019 ; 2019 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 1 ; 1 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 2 ; 2 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 3 ; 3 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 2 ; 2 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 3 ; 3 ; >
 
   }
 
@@ -8261,8 +8261,8 @@
     param[journal_id] = 10.1055/s-00037682
     comment[years] = 2014-current
 
-    au < testing ; exists ; 2014 ; 2014 ; International Journal of Epilepsy Volume 1 ; 1 ; >
-    au < testing ; exists ; 2015 ; 2015 ; International Journal of Epilepsy Volume 2 ; 2 ; >
+    au < ready ; exists ; 2014 ; 2014 ; International Journal of Epilepsy Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; 2015 ; International Journal of Epilepsy Volume 2 ; 2 ; >
     au < testing ; exists ; 2016 ; 2016 ; International Journal of Epilepsy Volume 3 ; 3 ; >
     au < ready ; exists ; 2017 ; 2017 ; International Journal of Epilepsy Volume 4 ; 4 ; >
     au < testing ; exists ; 2018 ; 2018 ; International Journal of Epilepsy Volume 5 ; 5 ; >
@@ -8290,7 +8290,7 @@
     au < manifest ; exists ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 ; >
     au < manifest ; exists ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 ; >
     au < manifest ; exists ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 ; >
-    au < testing ; exists ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 ; >
+    au < ready ; exists ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 ; >
     au < testing ; exists ; 2019 ; 2019 ; International Journal of Nutrology Volume 12 ; 12 ; >
     au < ready ; exists ; 2020 ; 2020 ; International Journal of Nutrology Volume 13 ; 13 ; >
     au < ready ; exists ; 2021 ; 2021 ; International Journal of Nutrology Volume 14 ; 14 ; >
@@ -8310,8 +8310,8 @@
 
     au < ready ; exists ; 2018 ; 2018 ; International Journal of Practical Otolaryngology Volume 1 ; 1 ; >
     au < testing ; exists ; 2019 ; 2019 ; International Journal of Practical Otolaryngology Volume 2 ; 2 ; >
-    au < testing ; exists ; 2020 ; 2020 ; International Journal of Practical Otolaryngology Volume 3 ; 3 ; >
-    au < testing ; exists ; 2021 ; 2021 ; International Journal of Practical Otolaryngology Volume 4 ; 4 ; >
+    au < ready ; exists ; 2020 ; 2020 ; International Journal of Practical Otolaryngology Volume 3 ; 3 ; >
+    au < ready ; exists ; 2021 ; 2021 ; International Journal of Practical Otolaryngology Volume 4 ; 4 ; >
 
   }
 
@@ -8327,9 +8327,9 @@
     param[journal_id] = 10.1055/s-00042120
     comment[years] = 2015-current
 
-    au < testing ; exists ; 2015 ; 2015 ; International Journal of Recent Surgical and Medical Sciences Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; 2015 ; International Journal of Recent Surgical and Medical Sciences Volume 1 ; 1 ; >
     au < ready ; exists ; 2016 ; 2016 ; International Journal of Recent Surgical and Medical Sciences Volume 2 ; 2 ; >
-    au < testing ; exists ; 2017 ; 2017 ; International Journal of Recent Surgical and Medical Sciences Volume 3 ; 3 ; >
+    au < ready ; exists ; 2017 ; 2017 ; International Journal of Recent Surgical and Medical Sciences Volume 3 ; 3 ; >
     au < ready ; exists ; 2018 ; 2018 ; International Journal of Recent Surgical and Medical Sciences Volume 4 ; 4 ; >
     au < testing ; exists ; 2019 ; 2019 ; International Journal of Recent Surgical and Medical Sciences Volume 5 ; 5 ; >
     au < ready ; exists ; 2020 ; 2020 ; International Journal of Recent Surgical and Medical Sciences Volume 6 ; 6 ; >
@@ -8349,10 +8349,10 @@
     param[journal_id] = 10.1055/s-00043283
     comment[years] = 2011-current
 
-    au < testing ; exists ; 2011 ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2 ; >
     au < testing ; exists ; 2012 ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 3 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 4 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 5 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 4 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 5 ; >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 6 ; >
     au < ready ; exists ; 2016 ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 7 ; >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 8 ; >
@@ -8374,7 +8374,7 @@
     param[journal_id] = 10.1055/s-00043197
     comment[years] = 2018-current
 
-    au < testing ; exists ; 2018 ; 2018 ; Journal of Gastrointestinal and Abdominal Radiology Volume 1 ; 1 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Journal of Gastrointestinal and Abdominal Radiology Volume 1 ; 1 ; >
     au < ready ; exists ; 2019 ; 2019 ; Journal of Gastrointestinal and Abdominal Radiology Volume 2 ; 2 ; >
     au < ready ; exists ; 2020 ; 2020 ; Journal of Gastrointestinal and Abdominal Radiology Volume 3 ; 3 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Gastrointestinal and Abdominal Radiology Volume 4 ; 4 ; >
@@ -8398,7 +8398,7 @@
     au < ready ; exists ; 2013 ; 2013 ; Journal of Health and Allied Sciences NU Volume 3 ; 3 ; >
     au < ready ; exists ; 2014 ; 2014 ; Journal of Health and Allied Sciences NU Volume 4 ; 4 ; >
     au < testing ; exists ; 2015 ; 2015 ; Journal of Health and Allied Sciences NU Volume 5 ; 5 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Journal of Health and Allied Sciences NU Volume 6 ; 6 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Journal of Health and Allied Sciences NU Volume 6 ; 6 ; >
     au < ready ; exists ; 2017 ; 2017 ; Journal of Health and Allied Sciences NU Volume 7 ; 7 ; >
     au < ready ; exists ; 2018 ; 2018 ; Journal of Health and Allied Sciences NU Volume 8 ; 8 ; >
     au < ready ; exists ; 2019 ; 2019 ; Journal of Health and Allied Sciences NU Volume 9 ; 9 ; >
@@ -8518,8 +8518,8 @@
     comment[years] = 2019-current
 
     au < ready ; exists ; 2019 ; 2019 ; Klinik Einkauf Volume 1 ; 1 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Klinik Einkauf Volume 2 ; 2 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Klinik Einkauf Volume 3 ; 3 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Klinik Einkauf Volume 2 ; 2 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Klinik Einkauf Volume 3 ; 3 ; >
 
   }
 
@@ -8554,7 +8554,7 @@
     param[journal_id] = 10.1055/s-00040811
     comment[years] = 2018-current
 
-    au < testing ; exists ; 2018 ; 2018 ; Neurologie up2date Volume 1 ; 1 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Neurologie up2date Volume 1 ; 1 ; >
     au < testing ; exists ; 2019 ; 2019 ; Neurologie up2date Volume 2 ; 2 ; >
     au < testing ; exists ; 2020 ; 2020 ; Neurologie up2date Volume 3 ; 3 ; >
     au < testing ; exists ; 2021 ; 2021 ; Neurologie up2date Volume 4 ; 4 ; >
@@ -8609,7 +8609,7 @@
     comment[years] = 2019-current
 
     au < ready ; exists ; 2019 ; 2019 ; Organic Materials Volume 1 ; 1 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Organic Materials Volume 2 ; 2 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Organic Materials Volume 2 ; 2 ; >
     au < ready ; exists ; 2021 ; 2021 ; Organic Materials Volume 3 ; 3 ; >
 
   }
@@ -8626,8 +8626,8 @@
     param[journal_id] = 10.1055/s-00043364
     comment[years] = 2019-current
 
-    au < testing ; exists ; 2019 ; 2019 ; Pharmaceutical Fronts Volume 1 ; 1 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Pharmaceutical Fronts Volume 2 ; 2 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Pharmaceutical Fronts Volume 1 ; 1 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Pharmaceutical Fronts Volume 2 ; 2 ; >
     au < testing ; exists ; 2021 ; 2021 ; Pharmaceutical Fronts Volume 3 ; 3 ; >
 
   }
@@ -8698,7 +8698,7 @@
 
     au < testing ; exists ; 2018 ; 2018 ; Revista Urología Colombiana Volume 27 ; 27 ; >
     au < ready ; exists ; 2019 ; 2019 ; Revista Urología Colombiana Volume 28 ; 28 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Revista Urología Colombiana Volume 29 ; 29 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Revista Urología Colombiana Volume 29 ; 29 ; >
     au < testing ; exists ; 2021 ; 2021 ; Revista Urología Colombiana Volume 30 ; 30 ; >
 
   }
@@ -8796,7 +8796,7 @@
 
     au < testing ; exists ; 2018 ; 2018 ; VCOT Open Volume 1 ; 1 ; >
     au < ready ; exists ; 2019 ; 2019 ; VCOT Open Volume 2 ; 2 ; >
-    au < testing ; exists ; 2020 ; 2020 ; VCOT Open Volume 3 ; 3 ; >
+    au < ready ; exists ; 2020 ; 2020 ; VCOT Open Volume 3 ; 3 ; >
     au < ready ; exists ; 2021 ; 2021 ; VCOT Open Volume 4 ; 4 ; >
 
   }
