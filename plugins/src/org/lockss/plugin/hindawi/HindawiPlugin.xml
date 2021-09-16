@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -148,8 +148,9 @@
     <entry>
         <string>plugin_cache_result_list</string>
         <list>
-            <string>400=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
-            <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+            <string>400=org.lockss.plugin.hindawi.Hindawi2020HttpResponseHandler</string>
+            <string>403=org.lockss.plugin.hindawi.Hindawi2020HttpResponseHandler</string>
+            <string>500=org.lockss.plugin.hindawi.Hindawi2020HttpResponseHandler</string>
         </list>
     </entry>
     <entry>
