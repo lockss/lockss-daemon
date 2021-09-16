@@ -74,8 +74,6 @@ public class AaasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
 
         // popup
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
-
-
   };
 
 
