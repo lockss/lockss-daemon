@@ -110,9 +110,8 @@ public class AaasHtmlLinkRewriterFactory implements LinkRewriterFactory {
             return false;
           }
           if (linkval.contains(PILL_CITATIONS_ANCHOR)) {
-
-            logger.info("found a pill citations anchor, rewriting");
             String newUrl =  "/" + CIT_DOWNLOAD_ACTION + "?doi=" + doiMat.group(1) + "/" + doiMat.group(2) + DOWNLOAD_RIS_TAIL;
+            logger.debug3("found a pill citations anchor, rewriting: <" + linkval + "> to: <" + newUrl + ">");
             ((TagNode) node).setAttribute("target", "_blank");
             ((LinkTag) node).setLink(newUrl);
           }
