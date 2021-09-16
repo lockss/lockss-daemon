@@ -93,7 +93,7 @@ public class TestASCEArticleIteratorFactory extends ArticleIteratorTestCase {
   private final String EXPECTED_FULL_URL = "http://ascelibrary.org/doi/full/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29";
   private final String EXPECTED_REF_URL = "http://ascelibrary.org/doi/ref/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29";
   private final String EXPECTED_PDF_URL = "http://ascelibrary.org/doi/pdf/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29";
-  private final String EXPECTED_FULL_TEXT_URL = EXPECTED_PDF_URL;
+  private final String EXPECTED_FULL_TEXT_URL = EXPECTED_FULL_URL;
 
   public void setUp() throws Exception {
     super.setUp();
