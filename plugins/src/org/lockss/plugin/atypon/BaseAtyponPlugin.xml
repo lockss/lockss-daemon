@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>121</string>
+    <string>122</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -67,7 +67,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Poll</string>
-        <string>46</string>
+        <string>47</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -422,7 +422,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_url_poll_result_weight</string>
     <list>
       <string>://[^/]+/(templates/jsp|(css|img|js)Jawr|fonts|pb-assets|releasedAssets|resources|sda|wro|products/photo-theme)/, 0</string>
-      <string>/(assets|css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
+      <string>/(assets?|css|img|js|wro|card-type\d?)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$, 0</string>
       <string>://[^/]+/na[0-9]+/home/(readonly|literatum)/publisher/.*(cover\.jpg|/covergifs/.*\.jpg|\.fp\.png(_v[0-9]+)?)$, 0</string>
       <!--  even though they replicate, the second na101 pattern should remain at poll weight of 1.0 -->
     </list>
