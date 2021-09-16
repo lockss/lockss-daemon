@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>121</string>
+        <string>122</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -66,6 +66,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>text/html_crawl_filter_factory</string>
         <string>org.lockss.plugin.atypon.aaas.AaasHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.atypon.aaas.AaasHtmlHashFilterFactory</string>
     </entry>
     <entry>
         <!-- removes 'download=true', replaces 'epdf' w/'pdf' -->
