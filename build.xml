@@ -369,13 +369,13 @@ Args:
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
 
   <!-- Jars for okhttp -->
-  <property name="okhttp.version" value="2.7.5" />
+  <property name="okhttp.version" value="3.14.9" />
   <property name="okhttp.jar" value="${lib}/okhttp-${okhttp.version}.jar" />
   <property name="logging-interceptor.jar" value="${lib}/logging-interceptor-${okhttp.version}.jar" />
-  <property name="okio.jar" value="${lib}/okio-1.6.0.jar" />
-  <property name="gson.jar" value="${lib}/gson-2.8.1.jar" />
-  <property name="gson-fire.jar" value="${lib}/gson-fire-1.8.3.jar" />
-  <property name="swagger-annotations.jar" value="${lib}/swagger-annotations-2.0.0.jar" />
+  <property name="okio.jar" value="${lib}/okio-1.17.5.jar" />
+  <property name="gson.jar" value="${lib}/gson-2.8.6.jar" />
+  <property name="gson-fire.jar" value="${lib}/gson-fire-1.8.4.jar" />
+  <property name="swagger-annotations.jar" value="${lib}/swagger-annotations-1.5.24.jar" />
 
   <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
 

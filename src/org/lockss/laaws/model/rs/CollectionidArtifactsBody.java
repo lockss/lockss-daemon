@@ -12,22 +12,17 @@
 
 package org.lockss.laaws.model.rs;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.File;
-import java.io.IOException;
+import java.util.Objects;
+
 /**
  * CollectionidArtifactsBody
  */
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-08-17T14:50:09.666-07:00[America/Los_Angeles]")
 public class CollectionidArtifactsBody {
+
   @SerializedName("auid")
   private String auid = null;
 
@@ -45,11 +40,11 @@ public class CollectionidArtifactsBody {
     return this;
   }
 
-   /**
+  /**
    * Archival Unit ID (AUID) of new artifact
+   *
    * @return auid
-  **/
-  @Schema(required = true, description = "Archival Unit ID (AUID) of new artifact")
+   **/
   public String getAuid() {
     return auid;
   }
@@ -63,11 +58,11 @@ public class CollectionidArtifactsBody {
     return this;
   }
 
-   /**
+  /**
    * URI represented by this artifact
+   *
    * @return uri
-  **/
-  @Schema(required = true, description = "URI represented by this artifact")
+   **/
   public String getUri() {
     return uri;
   }
@@ -81,11 +76,11 @@ public class CollectionidArtifactsBody {
     return this;
   }
 
-   /**
+  /**
    * Artifact collection/crawl date (milliseconds since epoch; UTC)
+   *
    * @return collectionDate
-  **/
-  @Schema(description = "Artifact collection/crawl date (milliseconds since epoch; UTC)")
+   **/
   public Long getCollectionDate() {
     return collectionDate;
   }
@@ -99,11 +94,11 @@ public class CollectionidArtifactsBody {
     return this;
   }
 
-   /**
+  /**
    * Artifact data
+   *
    * @return artifact
-  **/
-  @Schema(required = true, description = "Artifact data")
+   **/
   public File getArtifact() {
     return artifact;
   }
@@ -123,9 +118,9 @@ public class CollectionidArtifactsBody {
     }
     CollectionidArtifactsBody collectionidArtifactsBody = (CollectionidArtifactsBody) o;
     return Objects.equals(this.auid, collectionidArtifactsBody.auid) &&
-        Objects.equals(this.uri, collectionidArtifactsBody.uri) &&
-        Objects.equals(this.collectionDate, collectionidArtifactsBody.collectionDate) &&
-        Objects.equals(this.artifact, collectionidArtifactsBody.artifact);
+      Objects.equals(this.uri, collectionidArtifactsBody.uri) &&
+      Objects.equals(this.collectionDate, collectionidArtifactsBody.collectionDate) &&
+      Objects.equals(this.artifact, collectionidArtifactsBody.artifact);
   }
 
   @Override
@@ -138,7 +133,7 @@ public class CollectionidArtifactsBody {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CollectionidArtifactsBody {\n");
-    
+
     sb.append("    auid: ").append(toIndentedString(auid)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");

@@ -12,21 +12,15 @@
 
 package org.lockss.laaws.model.rs;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.v3.oas.annotations.media.Schema;
-import java.io.IOException;
+import java.util.Objects;
+
 /**
  * ArtifactsArtifactidBody
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-08-17T14:50:09.666-07:00[America/Los_Angeles]")
 public class ArtifactsArtifactidBody {
+
   @SerializedName("committed")
   private Boolean committed = null;
 
@@ -35,11 +29,11 @@ public class ArtifactsArtifactidBody {
     return this;
   }
 
-   /**
+  /**
    * New commit status of artifact
+   *
    * @return committed
-  **/
-  @Schema(required = true, description = "New commit status of artifact")
+   **/
   public Boolean isCommitted() {
     return committed;
   }
@@ -71,7 +65,7 @@ public class ArtifactsArtifactidBody {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ArtifactsArtifactidBody {\n");
-    
+
     sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
     sb.append("}");
     return sb.toString();

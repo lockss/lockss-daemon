@@ -1,14 +1,14 @@
 package org.lockss.laaws.client;
 
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.internal.Util;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.SequenceInputStream;
 import java.util.Map;
 import java.util.Set;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+import okhttp3.internal.Util;
 import okio.BufferedSink;
 import okio.Okio;
 import okio.Source;
@@ -79,6 +79,7 @@ public class CachedUrlRequestBody extends RequestBody {
 
   /**
    * Return a byte arroy representation of an HttpResponse
+   *
    * @param response
    * @return
    * @throws IOException

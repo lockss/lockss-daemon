@@ -13,7 +13,7 @@
 package org.lockss.laaws.model.rs;
 
 import java.util.Objects;
-import java.util.Arrays;
+
 /**
  * StreamingResponseBody
  */
@@ -42,7 +42,7 @@ public class StreamingResponseBody {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class StreamingResponseBody {\n");
-    
+
     sb.append("}");
     return sb.toString();
   }

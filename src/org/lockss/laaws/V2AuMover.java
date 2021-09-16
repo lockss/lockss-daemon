@@ -65,23 +65,23 @@ public class V2AuMover {
   public static final String PARAM_CFG_ACCESS_URL = PREFIX + "cfg.url";
 
   public static final String PARAM_V2_USER_AGENT = PREFIX + "user_agent";
-  public static final String  DEFAULT_V2_USER_AGENT = "lockss";
+  public static final String DEFAULT_V2_USER_AGENT = "lockss";
 
   public static final String PARAM_V2_USER = PREFIX + "user";
   public static final String PARAM_V2_PASSWD = PREFIX + "passwd";
 
 
   public static final String DEBUG_CONFIG_REQUEST = PREFIX + "cfg.debug";
-  public static final boolean  DEFAULT_DEBUG_CONFIG_REQUEST = false;
+  public static final boolean DEFAULT_DEBUG_CONFIG_REQUEST = false;
 
   public static final String DEBUG_REPO_REQUEST = PREFIX + "repo.debug";
-  public static final boolean  DEFAULT_DEBUG_REPO_REQUEST = false;
+  public static final boolean DEFAULT_DEBUG_REPO_REQUEST = false;
 
   public static final String PARAM_MAX_REQUESTS = PREFIX + "max_requests";
-  public static final int  DEFAULT_MAX_REQUESTS = 50;
+  public static final int DEFAULT_MAX_REQUESTS = 50;
 
   private static final Logger log = Logger.getLogger(V2AuMover.class);
-  private int maxRequests;
+  private final int maxRequests;
 
 
   /**
@@ -95,7 +95,7 @@ public class V2AuMover {
   private StreamingCollectionsApi rsCollectionsApi;
 
   /**
-   *  The v2 REST status api implementation
+   * The v2 REST status api implementation
    */
   private org.lockss.laaws.api.rs.StatusApi rsStatusApi;
 
@@ -111,8 +111,8 @@ public class V2AuMover {
 
   // Access information for the V2 Rest Repository
   private String rsRestLocation = null;
-  private String rsUser;
-  private String rsPass;
+  private final String rsUser;
+  private final String rsPass;
 
   private final String cliendId =
     org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(8);
@@ -142,12 +142,12 @@ public class V2AuMover {
   private final String userAgent;
 
   // counters
-  public static long cuMoved=0;
-  public static long cuVersionsMoved=0;
+  public static long cuMoved = 0;
+  public static long cuVersionsMoved = 0;
 
   // debug support
-  private boolean debugRepoReq;
-  private boolean debugConfigReq;
+  private final boolean debugRepoReq;
+  private final boolean debugConfigReq;
 
   private static String currentAu;
   private static String currentCu;
@@ -160,6 +160,7 @@ public class V2AuMover {
 
   /**
    * The primary constructor for a V2RepoAuCopier
+   *
    * @param rspec The v2 RepoSpec string
    * @param ruser The v2 login user
    * @param rpass The v2 login password
@@ -178,13 +179,14 @@ public class V2AuMover {
     userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST, DEFAULT_DEBUG_REPO_REQUEST);
     debugConfigReq = config.getBoolean(DEBUG_CONFIG_REQUEST, DEFAULT_DEBUG_CONFIG_REQUEST);
-    maxRequests= config.getInt(PARAM_MAX_REQUESTS,DEFAULT_MAX_REQUESTS);
+    maxRequests = config.getInt(PARAM_MAX_REQUESTS, DEFAULT_MAX_REQUESTS);
     initRepoClient(rspec);
     initConfigClient(cfgService);
   }
 
   /**
    * Move one au as identified by the name of the au
+   *
    * @param auId The ArchivalUnit Id string
    */
   public void moveAu(String auId) throws IOException {
@@ -197,52 +199,55 @@ public class V2AuMover {
     long endTime;
     currentAu = au.getAuId();
     String auName = au.getName();
-    log.info("Handling request to move AU: "+ auName);
+    log.info("Handling request to move AU: " + auName);
     log.info("AuId: " + currentAu);
     try {
       log.info("Checking V2 Repository Status");
-      if (!rsStatusApi.getStatus().isReady()) {
+      if (!rsStatusApi.getStatus().getReady()) {
         log.error("V2 Repository Service Status: NOT READY");
-        throw new IOException(auName+ ": Unable to move au. V2 Repository Service is not ready.");
+        throw new IOException(auName + ": Unable to move au. V2 Repository Service is not ready.");
       }
       log.info("Checking V2 Configuration Status");
-      if(!cfgStatusApi.getStatus().isReady()) {
+      if (!cfgStatusApi.getStatus().getReady()) {
         log.error("V2 Configuration Service: NOT READY");
-        throw new IOException(auName+ ": Unable to move au. V2 Configuration Service is not ready.");
+        throw new IOException(
+          auName + ": Unable to move au. V2 Configuration Service is not ready.");
       }
-      log.info(auName+ ": Moving AU Artifacts...");
+      log.info(auName + ": Moving AU Artifacts...");
       moveAuArtifacts(au);
-      while(repoClient.getHttpClient().getDispatcher().getRunningCallCount() != 0)
+      while (repoClient.getHttpClient().dispatcher().runningCallsCount() != 0)
         ;
-      log.info(auName+ ": Moving AU State...");
+      log.info(auName + ": Moving AU State...");
       moveAuState(au);
-      log.info(auName+ ": Moving AU Configuration...");
+      log.info(auName + ": Moving AU Configuration...");
       moveAuConfig(au);
+    } catch (ApiException apie) {
+      log.error("Attempt to move Au " + auName + " failed:" + apie.getCode() + ": "
+        + apie.getResponseBody());
+      throw new IOException("Attempt to move Au " + auName + " failed:" + apie.getCode() + ": "
+        + apie.getResponseBody());
     }
-    catch (ApiException apie) {
-      log.error("Attempt to move Au " + auName + " failed:" + apie.getCode() + ": " + apie.getResponseBody());
-      throw new IOException("Attempt to move Au " + auName + " failed:" + apie.getCode()+ ": " + apie.getResponseBody());
-    }
-    endTime=System.currentTimeMillis();
+    endTime = System.currentTimeMillis();
     log.info(au.getName() + ": Successfully moved AU " + au.getName() + " Artifacts.");
-    log.info("CachedUrls Moved: " + cuMoved + "     Artifacts Moved: " +cuVersionsMoved +
-      "   runTime (secs): " + (endTime - startTime) /1000);
+    log.info("CachedUrls Moved: " + cuMoved + "     Artifacts Moved: " + cuVersionsMoved +
+      "   runTime (secs): " + (endTime - startTime) / 1000);
   }
 
   /**
    * Initialization for Rest Bepository client
+   *
    * @param rspec The v2 RepoSpec string
    */
   protected void initRepoClient(String rspec) {
-    log.debug3("RepoSpec="+rspec);
-    this.repoSpec=RepoSpec.fromSpec(rspec);
-    this.collection=repoSpec.getCollection();
+    log.debug3("RepoSpec=" + rspec);
+    this.repoSpec = RepoSpec.fromSpec(rspec);
+    this.collection = repoSpec.getCollection();
     rsRestLocation = repoSpec.getUrl();
-    if(UrlUtil.isMalformedUrl(rsRestLocation)) {
+    if (UrlUtil.isMalformedUrl(rsRestLocation)) {
       log.error("Malformed repository service url: " + cfgRestLocation);
-      throw new IllegalArgumentException("RepoSpec contained malformed url: "+ rsRestLocation);
+      throw new IllegalArgumentException("RepoSpec contained malformed url: " + rsRestLocation);
     }
-    log.debug3("Setting user: "+ rsUser + "setting password: " + rsPass);
+    log.debug3("Setting user: " + rsUser + "setting password: " + rsPass);
     // Create a new RepoClient
     repoClient = new V2RestClient();
     repoClient.setUsername(rsUser);
@@ -250,28 +255,32 @@ public class V2AuMover {
     repoClient.setUserAgent(userAgent);
     repoClient.setBasePath(rsRestLocation);
     repoClient.setDebugging(debugRepoReq);
-    repoClient.getHttpClient().getDispatcher().setMaxRequests(maxRequests);
+    repoClient.getHttpClient().dispatcher().setMaxRequests(maxRequests);
     // Assign client to CollectionsApi and StatusApi
-    rsStatusApi= new org.lockss.laaws.api.rs.StatusApi(repoClient);
+    rsStatusApi = new org.lockss.laaws.api.rs.StatusApi(repoClient);
     rsCollectionsApi = new StreamingCollectionsApi(repoClient);
   }
 
   /**
    * Initialization of the Configuration Service Client
+   *
    * @param accessUrl the url in with or without user:pass
    */
   protected void initConfigClient(String accessUrl) {
     configClient = new V2RestClient();
-    log.debug("Configuration Service: "+accessUrl);
+    log.debug("Configuration Service: " + accessUrl);
     parseConfigServiceAccessUrl(accessUrl);
-    if(cfgRestLocation == null || UrlUtil.isMalformedUrl(cfgRestLocation)) {
+    if (cfgRestLocation == null || UrlUtil.isMalformedUrl(cfgRestLocation)) {
       log.error("Missing or Invalid configuration service url: " + cfgRestLocation);
-      throw new IllegalArgumentException("RestConfigurationService Url is malformed: "+ rsRestLocation);
+      throw new IllegalArgumentException(
+        "RestConfigurationService Url is malformed: " + rsRestLocation);
     }
-    if(cfgUser == null)
+    if (cfgUser == null) {
       cfgUser = rsUser;
-    if(cfgPass == null)
+    }
+    if (cfgPass == null) {
       cfgPass = rsPass;
+    }
     configClient.setUsername(cfgUser);
     configClient.setPassword(cfgPass);
     configClient.setUserAgent(userAgent);
@@ -284,13 +293,14 @@ public class V2AuMover {
 
   /**
    * Move one AU
+   *
    * @param au The ArchivalUnit to move
    */
   protected void moveAuArtifacts(ArchivalUnit au) throws ApiException {
     /* get Au items from Lockss*/
     for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
       CachedUrl cachedUrl = iter.next();
-      currentCu=cachedUrl.getUrl();
+      currentCu = cachedUrl.getUrl();
       moveCuVersions(cachedUrl);
       cuMoved++;
     }
@@ -305,20 +315,19 @@ public class V2AuMover {
       v1config.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
         .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
       // send the configuration
-      cfgAusApi.putAuConfig(v2config);
+      cfgAusApi.putAuConfig(au.getAuId(), v2config);
       log.info(au.getName() + ": Successfully moved AU Configuration");
-    }
-    else {
+    } else {
       // TODO: should this be an error or a warning?
       log.warning(au.getName() + ": No Configuration found for au");
     }
   }
 
-  protected void moveAuState(ArchivalUnit au) throws ApiException{
+  protected void moveAuState(ArchivalUnit au) throws ApiException {
     AuState v1State = AuUtil.getAuState(au);
     if (v1State != null) {
       V2AuStateBean v2State = new V2AuStateBean(v1State);
-      cfgAusApi.patchAuState(v2State.toMap(), au.getAuId(), makeCookie());
+      cfgAusApi.patchAuState(au.getAuId(), v2State.toJson(), makeCookie());
     }
   }
 
@@ -329,27 +338,28 @@ public class V2AuMover {
     for (CachedUrl cu : cu_vers) {
       String uri = cu.getUrl();
       Long collectionDate = Long
-          .parseLong(cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME));
-        moveArtifact(auid, uri, collectionDate, cu, collection);
+        .parseLong(cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME));
+      moveArtifact(auid, uri, collectionDate, cu, collection);
     }
     log.debug2("Completed move of all versions of " + currentCu);
   }
 
   private void moveArtifact(String auid, String uri, Long collectionDate,
-      CachedUrl cu, String collectionId) throws ApiException {
-    rsCollectionsApi.createArtifactAsync(auid, uri, collectionDate, cu, collectionId,
+    CachedUrl cu, String collectionId) throws ApiException {
+    rsCollectionsApi.createArtifactAsync(collectionId, auid, uri, cu, collectionDate,
       new CreateArtifactCallback());
   }
 
   private void commitArtifact(Artifact uncommitted) throws ApiException {
     Artifact committed;
-    committed=rsCollectionsApi.updateArtifact(true,uncommitted.getCollection(),
-      uncommitted.getId());
-    log.debug("Successfully commited artifact " + committed.getId());
+    committed = rsCollectionsApi.updateArtifact(uncommitted.getCollection(),
+      uncommitted.getId(), true);
+    log.debug("Successfully committed artifact " + committed.getId());
     cuVersionsMoved++;
   }
 
   // cfg utilities
+
   /**
    * Saves the individual components of the Configuration REST web service URL.
    */
@@ -366,8 +376,10 @@ public class V2AuMover {
 
       // Get the passed credentials.
       String credentialsAsString = url.getUserInfo();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER
-        + "credentialsAsString = " + credentialsAsString);
+      if (log.isDebug3()) {
+        log.debug3(DEBUG_HEADER
+          + "credentialsAsString = " + credentialsAsString);
+      }
 
       // Check whether credentials were passed.
       if (StringUtil.isNullString(credentialsAsString)) {
@@ -410,6 +422,7 @@ public class V2AuMover {
   }
 
   protected class CreateArtifactCallback implements ApiCallback<Artifact> {
+
     @Override
     public void onFailure(ApiException e, int statusCode,
       Map<String, List<String>> responseHeaders) {
@@ -430,7 +443,7 @@ public class V2AuMover {
     public void onUploadProgress(long bytesWritten, long contentLength, boolean done) {
       log.debug3("Create Artifact uploaded " + bytesWritten + " of " + contentLength + "bytes..");
       if (done) {
-        log.debug2("Create Artifact upload of " +  bytesWritten + " complete.");
+        log.debug2("Create Artifact upload of " + bytesWritten + " complete.");
       }
     }
 
@@ -438,7 +451,7 @@ public class V2AuMover {
     public void onDownloadProgress(long bytesRead, long contentLength, boolean done) {
       log.debug3("Create Artifact downloaded " + bytesRead + " of " + contentLength + "bytes..");
       if (done) {
-        log.debug2("Create Artifact download " +  bytesRead + "  complete");
+        log.debug2("Create Artifact download " + bytesRead + "  complete");
       }
 
     }
