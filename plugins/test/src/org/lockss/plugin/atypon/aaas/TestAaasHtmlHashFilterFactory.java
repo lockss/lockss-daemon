@@ -39,7 +39,7 @@ public class TestAaasHtmlHashFilterFactory extends LockssTestCase {
     "</div>" + "</div>" + "</div>";
 
   String toc_h4w_id_filtered =
-    " Research Articles ";
+    " ";
 
   String toc_div_card_footer =
     "<div class=\"card-footer \">" +
@@ -132,6 +132,89 @@ public class TestAaasHtmlHashFilterFactory extends LockssTestCase {
         "</div>\n" +
       "</div>\n" +
     "</article>";
+
+  String toc_podcast =
+    "<div class=\"card--podcast-item--featured card--podcast--column\">\n" +
+      "<div class=\"multi-search\"><div>\n" +
+      "<div class=\"card card--podcast flex-column\">\n" +
+      "\t<a href=\"/content/podcast/potty-training-cows-and-sardines-swimming-ecological-trap\" title=\"Potty training cows, and sardines swimming into an ecological trap\" data-rel=\"animation-underline\" class=\"card-img overflow-hidden mb-3\">\n" +
+      "\t\t<img src=\"/do/10.1126/science.acx9120/card-type2/_20210917_pod-sardines2.jpg\" class=\"w-100 animation-image-scale-down\" alt=\"sardines in a swirling bait ball\">\n" +
+      "\t</a>\n" +
+      "\t<div class=\"card-content\">\n" +
+      "\t\t<div class=\"card-meta text-uppercase d-inline-block text-darker-gray\">\n" +
+      "\t\t\t<time class=\"text-uppercase pl-0 pr-2 text-darker-gray\">16 Sep 2021</time><div class=\"card-contribs authors d-inline-block border-left pl-2\">By <ul title=\"list of authors\" class=\"list-inline\"><li class=\"list-inline-item\">Sarah Crespi, David Grimm</li></ul>\n" +
+      "\t\t\t</div>\n" +
+      "\t\t</div>\n" +
+      "\t\t<div class=\"card-header\">\n" +
+      "\t\t\t<div class=\"card__title sans-serif\">\n" +
+      "\t\t\t\t<a href=\"/content/podcast/potty-training-cows-and-sardines-swimming-ecological-trap\" title=\"Potty training cows, and sardines swimming into an ecological trap\" class=\"text-reset animation-underline\">Potty training cows, and sardines swimming into an ecological trap</a>\n" +
+      "\t\t\t</div>\n" +
+      "\t\t</div>\n" +
+      "\t\t<div class=\" mt-3 \">\n" +
+      "\t\t\t<div class=\"audio-player\" data-audio=\"https://traffic.omny.fm/d/clips/aaea4e69-af51-495e-afc9-a9760146922b/95ab13e7-f709-4a58-acad-aaea01775538/6d467157-398d-4299-a102-ada500ee64d1/audio.mp3\">\n" +
+      "\t\t\t\t<div class=\"audio-player__row d-flex align-items-center\">\n" +
+      "\t\t\t\t\t<button role=\"button\" class=\"btn audio-player__trigger\">\n" +
+      "\t\t\t\t\t\t<i class=\"icon-play audio-player__trigger-play\"></i>\n" +
+      "\t\t\t\t\t\t<i class=\"icon-pause audio-player__trigger-pause\"></i>\n" +
+      "\t\t\t\t\t</button>\n" +
+      "\t\t\t\t\t<div class=\"audio-player__progress\">\n" +
+      "\t\t\t\t\t\t<div class=\"audio-player__progress-buffer\"></div>\n" +
+      "\t\t\t\t\t\t<div class=\"audio-player__progress-play\"></div>\n" +
+      "\t\t\t\t\t\t<div class=\"audio-player__progress-tooltip text-uppercase text-xss\"></div>\n" +
+      "\t\t\t\t\t\t<label for=\"audio-progress-39\" class=\"sr-only\"></label>\n" +
+      "\t\t\t\t\t\t<input id=\"audio-progress-39\" type=\"range\" name=\"track\" max=\"100\" value=\"50\" class=\"audio-player__progress-current\"> \n" +
+      "\t\t\t\t\t</div>\n" +
+      "\t\t\t\t\t<div class=\"audio-player__volume\">\n" +
+      "\t\t\t\t\t\t<button class=\"btn audio-player__volume-btn\">\n" +
+      "\t\t\t\t\t\t\t<i class=\"icon-soundon audio-player__volume-btn-on\"></i>\n" +
+      "\t\t\t\t\t\t\t<i class=\"icon-soundoff audio-player__volume-btn-off\"></i>\n" +
+      "\t\t\t\t\t\t</button>\n" +
+      "\t\t\t\t\t\t<div class=\"audio-player__volume-control\">\n" +
+      "\t\t\t\t\t\t\t<label for=\"volume-control-8\" class=\"sr-only\"></label>\n" +
+      "\t\t\t\t\t\t\t<input id=\"volume-control-8\" type=\"range\" name=\"track\" min=\"0.0\" max=\"1.0\" value=\"0.5\" step=\"0.1\" class=\"audio-player__volume-control-slider\">\n" +
+      "\t\t\t\t\t\t</div>\n" +
+      "\t\t\t\t\t</div>\n" +
+      "\t\t\t\t\t<div class=\"audio-player__time d-flex text-xxs text-dark-gray\">\n" +
+      "\t\t\t\t\t\t<div class=\"audio-player__time-current border-right pr-2 mr-2\">00:00</div>\n" +
+      "\t\t\t\t\t\t<div class=\"audio-player__time-total\">16:58</div>\n" +
+      "\t\t\t\t\t</div>\n" +
+      "\t\t\t\t</div>\n" +
+      "\t\t\t\t<div class=\"audio-player__row d-flex align-items-center mt-2 pt-2 justify-content-between\">\n" +
+      "\t\t\t\t\t<a href=\"#\" class=\"text-xs audio-player__transcript\"></a>\n" +
+      "\t\t\t\t\t<div class=\"d-flex align-items-center\">\n" +
+      "\t\t\t\t\t\t<div class=\"audio-player__dropdown dropdown\">\n" +
+      "\t\t\t\t\t\t\t<a href=\"#\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" class=\"btn text-xxs btn-outline-secondary py-1 px-2 text-uppercase dropdown-toggle\">\n" +
+      "\t\t\t\t\t\t\t\t<i class=\"icon-plus text-xs\"></i>\n" +
+      "\t\t\t\t\t\t\t\tSubscribe\n" +
+      "\t\t\t\t\t\t\t</a>\n" +
+      "\t\t\t\t\t\t\t<div class=\"dropdown-menu text-xs audio-player__dropdown-menu\">\n" +
+      "\t\t\t\t\t\t\t\t<div class=\"dropdown-content\">\n" +
+      "\t\t\t\t\t\t\t\t\t<a href=\"https://podcasts.apple.com/us/podcast/science-magazine-podcast/id120329020\" class=\"dropdown-item pl-2\">\n" +
+      "\t\t\t\t\t\t\t\t\t\t<img src=\"/specs/products/aaas/releasedAssets/images/logo-apple.svg\" class=\"ml-1 mr-2\" height=\"16\">\n" +
+      "\t\t\t\t\t\t\t\t\t\t<span>Apple</span>\n" +
+      "\t\t\t\t\t\t\t\t\t</a>\n" +
+      "\t\t\t\t\t\t\t\t\t<a href=\"https://www.stitcher.com/show/science-magazine-podcast\" class=\"dropdown-item pl-2\">\n" +
+      "\t\t\t\t\t\t\t\t\t\t<img src=\"/specs/products/aaas/releasedAssets/images/logo-stitcher.svg\" class=\"ml-1 mr-2\" height=\"16\">\n" +
+      "\t\t\t\t\t\t\t\t\t\t<span>Stitcher</span>\n" +
+      "\t\t\t\t\t\t\t\t\t</a>\n" +
+      "\t\t\t\t\t\t\t\t\t<a href=\"https://open.spotify.com/show/6S1RCtUXQ7UvKUTB77x7xH\" class=\"dropdown-item pl-2\">\n" +
+      "\t\t\t\t\t\t\t\t\t\t<img src=\"/specs/products/aaas/releasedAssets/images/logo-spotify.svg\" class=\"ml-1 mr-2\" height=\"16\">\n" +
+      "\t\t\t\t\t\t\t\t\t\t<span>Spotify</span>\n" +
+      "\t\t\t\t\t\t\t\t\t</a>\n" +
+      "\t\t\t\t\t\t\t\t\t<a href=\"https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuc2NpZW5jZW1hZy5vcmcvcnNzL3BvZGNhc3QueG1s\" class=\"dropdown-item pl-2\">\n" +
+      "\t\t\t\t\t\t\t\t\t\t<img src=\"/specs/products/aaas/releasedAssets/images/logo-google.svg\" class=\"ml-1 mr-2\" height=\"16\">\n" +
+      "\t\t\t\t\t\t\t\t\t\t<span>Google</span>\n" +
+      "\t\t\t\t\t\t\t\t\t</a>\n" +
+      "\t\t\t\t\t\t\t\t</div>\n" +
+      "\t\t\t\t\t\t\t</div>\n" +
+      "\t\t\t\t\t\t</div>\n" +
+      "\t\t\t\t\t</div>\n" +
+      "\t\t\t\t</div>\n" +
+      "\t\t\t</div>\n" +
+      "\t\t</div>\n" +
+      "\t</div>\n" +
+      "</div></div></div>\n" +
+    "</div>";
   
   public void testH4Filtering() throws Exception {
     assertEquals(toc_h4w_id_filtered, filterString(toc_h4w_id));
@@ -141,6 +224,12 @@ public class TestAaasHtmlHashFilterFactory extends LockssTestCase {
     String filtered1 = filterString(toc_div_card_footer);
     log.info(filtered1);
     assertEquals(filterString(toc_div_card_footer2), filtered1);
+  }
+
+  public void testTocPodcastFiltering() throws Exception {
+    String filtered1 = filterString(toc_podcast);
+    log.info(filtered1);
+    assertEquals(filtered1, "");
   }
 
   public void testArticleRecFiltering() throws Exception {
