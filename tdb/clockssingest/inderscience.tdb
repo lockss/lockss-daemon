@@ -472,7 +472,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Advanced Mechatronic Systems Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Advanced Mechatronic Systems Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016-2017 ; International Journal of Advanced Mechatronic Systems Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Advanced Mechatronic Systems Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Advanced Mechatronic Systems Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Advanced Mechatronic Systems Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1758,7 +1758,7 @@
       au < finished ; finished ; 2016 ; International Journal of Business Performance and Supply Chain Modelling Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; International Journal of Business Performance and Supply Chain Modelling Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Business Performance and Supply Chain Modelling Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Business Performance and Supply Chain Modelling Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Business Performance and Supply Chain Modelling Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Journal of Business Performance and Supply Chain Modelling Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -2163,7 +2163,7 @@
 
       param[journal_id] = ijcmh
 
-      au < frozen ; exists ; 2019 ; International Journal of Computational Medicine and Healthcare Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2 ,3 ,4 not online
+      au < finished ; manifest ; 2019 ; International Journal of Computational Medicine and Healthcare Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 2 ,3 ,4 not online
 
     }
 
@@ -2357,7 +2357,7 @@
       au < finished ; manifest ; 2019 ; International Journal of Computer Applications in Technology Volume 61 ; 61 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Computer Applications in Technology Volume 62 ; 62 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Computer Applications in Technology Volume 63 ; 63 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Computer Applications in Technology Volume 64 ; 64 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Computer Applications in Technology Volume 64 ; 64 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Computer Applications in Technology Volume 65 ; 65 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2021 ; International Journal of Computer Applications in Technology Volume 66 ; 66 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2021 ; International Journal of Computer Applications in Technology Volume 67 ; 67 ; https://www.inderscienceonline.com/ ; >
@@ -2615,8 +2615,8 @@
 
       param[journal_id] = ijcm
 
-      au < frozen ; exists ; 2018 ; International Journal of Comparative Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2019 ; International Journal of Comparative Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2018 ; International Journal of Comparative Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; International Journal of Comparative Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2020 ; International Journal of Comparative Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2021 ; International Journal of Comparative Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
@@ -2753,7 +2753,7 @@
       au < finished ; finished ; 2015-2016 ; International Journal of Decision Sciences, Risk and Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Decision Sciences, Risk and Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Decision Sciences, Risk and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; International Journal of Decision Sciences, Risk and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Decision Sciences, Risk and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2021 ; International Journal of Decision Sciences, Risk and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -3782,7 +3782,7 @@
       au < doNotProcess ; exists ; 2006 ; International Journal of Environment, Workplace and Employment Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2007 ; International Journal of Environment, Workplace and Employment Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2008-2018 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Environment, Workplace and Employment Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2021 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
@@ -4014,7 +4014,7 @@
       au < finished ; finished ; 2014 ; International Journal of Financial Services Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015-2016 ; International Journal of Financial Services Management Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018-2019 ; International Journal of Financial Services Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; International Journal of Financial Services Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Financial Services Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Journal of Financial Services Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -4318,7 +4318,7 @@
       au < finished ; finished ; 2016 ; International Journal of Globalisation and Small Business Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Globalisation and Small Business Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Globalisation and Small Business Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Globalisation and Small Business Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Globalisation and Small Business Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; International Journal of Globalisation and Small Business Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -4531,7 +4531,7 @@
       au < finished ; finished ; 2016 ; International Journal of High Performance Systems Architecture Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of High Performance Systems Architecture Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018-2019 ; International Journal of High Performance Systems Architecture Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of High Performance Systems Architecture Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of High Performance Systems Architecture Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of High Performance Systems Architecture Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5151,7 +5151,7 @@
       au < finished ; finished ; 2015-2016 ; International Journal of Innovation in Education Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Innovation in Education Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Innovation in Education Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Innovation in Education Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Innovation in Education Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Innovation in Education Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5221,7 +5221,7 @@
       au < finished ; finished ; 2016 ; International Journal of Integrated Supply Management Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Integrated Supply Management Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Integrated Supply Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; International Journal of Integrated Supply Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Integrated Supply Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Integrated Supply Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5246,7 +5246,7 @@
       au < finished ; finished ; 2014 ; International Journal of Intellectual Property Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; International Journal of Intellectual Property Management Volume 8 ; 8 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016-2019 ; International Journal of Intellectual Property Management Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; International Journal of Intellectual Property Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Intellectual Property Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Journal of Intellectual Property Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6594,7 +6594,7 @@
       au < finished ; finished ; 2014 ; International Journal of Mechatronics and Automation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015-2016 ; International Journal of Mechatronics and Automation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Mechatronics and Automation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; International Journal of Mechatronics and Automation Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Mechatronics and Automation Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; International Journal of Mechatronics and Automation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -7556,7 +7556,7 @@
       au < finished ; finished ; 2014 ; International Journal of Postharvest Technology and Innovation Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015-2017 ; International Journal of Postharvest Technology and Innovation Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; International Journal of Postharvest Technology and Innovation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Postharvest Technology and Innovation Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Postharvest Technology and Innovation Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Postharvest Technology and Innovation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -7656,7 +7656,7 @@
       au < finished ; finished ; 2016 ; International Journal of Precision Technology Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; International Journal of Precision Technology Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Precision Technology Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Precision Technology Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Precision Technology Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2021 ; International Journal of Precision Technology Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9106,7 +9106,7 @@
       au < finished ; finished ; 2012-2014 ; International Journal of Sustainable Materials and Structural Systems Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015-2016 ; International Journal of Sustainable Materials and Structural Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017-2018 ; International Journal of Sustainable Materials and Structural Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; International Journal of Sustainable Materials and Structural Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Sustainable Materials and Structural Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Sustainable Materials and Structural Systems Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9175,7 +9175,7 @@
       au < finished ; finished ; 2013-2015 ; International Journal of Swarm Intelligence Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016 ; International Journal of Swarm Intelligence Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Swarm Intelligence Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; International Journal of Swarm Intelligence Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019 ; International Journal of Swarm Intelligence Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Swarm Intelligence Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Journal of Swarm Intelligence Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
@@ -9521,7 +9521,7 @@
       au < finished ; finished ; 2016 ; International Journal of Technology Marketing Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; International Journal of Technology Marketing Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Technology Marketing Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; International Journal of Technology Marketing Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Technology Marketing Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2021 ; International Journal of Technology Marketing Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9570,7 +9570,7 @@
       au < finished ; finished ; 2016 ; International Journal of Technology Transfer and Commercialisation Volume 14 ; 14 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; International Journal of Technology Transfer and Commercialisation Volume 15 ; 15 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Technology Transfer and Commercialisation Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Technology Transfer and Commercialisation Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Technology Transfer and Commercialisation Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Technology Transfer and Commercialisation Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9903,7 +9903,7 @@
       au < finished ; crawling ; 2019 ; International Journal of Vehicle Design Volume 79 ; 79 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; International Journal of Vehicle Design Volume 80 ; 80 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Vehicle Design Volume 81 ; 81 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Vehicle Design Volume 82 ; 82 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Vehicle Design Volume 82 ; 82 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Vehicle Design Volume 83 ; 83 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Vehicle Design Volume 84 ; 84 ; https://www.inderscienceonline.com/ ; >
 
@@ -9976,7 +9976,7 @@
       au < finished ; finished ; 2017 ; International Journal of Vehicle Performance Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of Vehicle Performance Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Vehicle Performance Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; International Journal of Vehicle Performance Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Vehicle Performance Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Vehicle Performance Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -10603,8 +10603,8 @@
       au < finished ; finished ; 2013-2014 ; Asian Journal of Management Science and Applications Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015-2016 ; Asian Journal of Management Science and Applications Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; Asian Journal of Management Science and Applications Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; Asian Journal of Management Science and Applications Volume 4 ; 4 ; https://www.inderscienceonline.com/ ;  >
-      au < frozen ; exists ; 2020 ; Asian Journal of Management Science and Applications Volume 5 ; 5 ; https://www.inderscienceonline.com/ ;  >
+      au < finished ; manifest ; 2019 ; Asian Journal of Management Science and Applications Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; Asian Journal of Management Science and Applications Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2021 ; Asian Journal of Management Science and Applications Volume 6 ; 6 ; https://www.inderscienceonline.com/ ;  >
 
   }
@@ -10714,7 +10714,7 @@
       au < finished ; finished ; 2016 ; International Journal of Human Rights and Constitutional Studies Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; International Journal of Human Rights and Constitutional Studies Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Human Rights and Constitutional Studies Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; International Journal of Human Rights and Constitutional Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Human Rights and Constitutional Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Human Rights and Constitutional Studies Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
   }
