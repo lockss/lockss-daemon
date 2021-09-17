@@ -315,7 +315,7 @@
       au < finished ; manifest ; 2018 ; Chemistry Education Research and Practice Volume 19 ; 19 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Chemistry Education Research and Practice Volume 20 ; 20 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Chemistry Education Research and Practice Volume 21 ; 21 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Chemistry Education Research and Practice Volume 22 ; 22 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Chemistry Education Research and Practice Volume 22 ; 22 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -352,7 +352,7 @@
       au < finished ; manifest ; 2018 ; CrystEngComm Volume 20 ; 20 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; CrystEngComm Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; CrystEngComm Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; CrystEngComm Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; CrystEngComm Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -379,7 +379,7 @@
       au < finished ; manifest ; 2018 ; Dalton Transactions Volume 47 ; 47 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Dalton Transactions Volume 48 ; 48 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Dalton Transactions Volume 49 ; 49 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Dalton Transactions Volume 50 ; 50 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Dalton Transactions Volume 50 ; 50 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -408,7 +408,7 @@
       au < finished ; manifest ; 2018 ; Energy & Environmental Science Volume 11 ; 11 ; 2018 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Energy & Environmental Science Volume 12 ; 12 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Energy & Environmental Science Volume 13 ; 13 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Energy & Environmental Science Volume 14 ; 14 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Energy & Environmental Science Volume 14 ; 14 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -572,12 +572,12 @@
       au < deepCrawl ; exists ; 2020 ; Faraday Discussions Volume 223 ; 223 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Faraday Discussions Volume 224 ; 224 ; 2020 ; https://pubs.rsc.org/ ; >
 
-      au < ready ; exists ; 2021 ; Faraday Discussions Volume 225 ; 225 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Faraday Discussions Volume 225 ; 225 ; 2021 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 226 ; 226 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Faraday Discussions Volume 227 ; 227 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Faraday Discussions Volume 227 ; 227 ; 2021 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 228 ; 228 ; 2021 ; https://pubs.rsc.org/ ; >
       au < testing ; exists ; 2021 ; Faraday Discussions Volume 229 ; 229 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 231 ; 231 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 232 ; 232 ; 2021 ; https://pubs.rsc.org/ ; >
 
@@ -683,7 +683,7 @@
       au < finished ; manifest ; 2018 ; Journal of Analytical Atomic Spectrometry Volume 33 ; 33 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Journal of Analytical Atomic Spectrometry Volume 34 ; 34 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Analytical Atomic Spectrometry Volume 35 ; 35 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Journal of Analytical Atomic Spectrometry Volume 36 ; 36 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Journal of Analytical Atomic Spectrometry Volume 36 ; 36 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1375,7 +1375,7 @@
       au < finished ; manifest ; 2018 ; Catalysis Science & Technology Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Catalysis Science & Technology Volume 9 ; 9 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Catalysis Science & Technology Volume 10 ; 10 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Catalysis Science & Technology Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Catalysis Science & Technology Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1655,7 +1655,7 @@
       au < finished ; manifest ; 2018 ; Food & Function Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Food & Function Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Food & Function Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Food & Function Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Food & Function Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1696,7 +1696,7 @@
       au < finished ; manifest ; 2018 ; Inorganic Chemistry Frontiers Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Inorganic Chemistry Frontiers Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Inorganic Chemistry Frontiers Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Inorganic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Inorganic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1788,7 +1788,7 @@
       au < finished ; manifest ; 2018 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1812,7 +1812,7 @@
       au < finished ; manifest ; 2018 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2479,7 +2479,7 @@
       au < finished ; manifest ; 2018 ; Materials Horizons Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Materials Horizons Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Materials Horizons Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Materials Horizons Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Materials Horizons Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2506,7 +2506,7 @@
       au < finished ; manifest ; 2018 ; MedChemComm Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; MedChemComm Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; MedChemComm Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; MedChemComm Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; MedChemComm Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2547,7 +2547,7 @@
       au < finished ; manifest ; 2018 ; Nanoscale Horizons Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Nanoscale Horizons Volume 4 ; 4 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Nanoscale Horizons Volume 5 ; 5 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Nanoscale Horizons Volume 6 ; 6 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Nanoscale Horizons Volume 6 ; 6 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
