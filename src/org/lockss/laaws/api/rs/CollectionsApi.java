@@ -77,7 +77,8 @@ public class CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
+      .replaceAll("\\{" + "collectionid" + "\\}",
+        apiClient.escapeString(collectionid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -112,7 +113,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
       "multipart/form-data"
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};
@@ -267,8 +269,10 @@ public class CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid))
-      .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid));
+      .replaceAll("\\{" + "collectionid" + "\\}",
+        apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "artifactid" + "\\}",
+        apiClient.escapeString(artifactid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -287,7 +291,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
 
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};
@@ -408,8 +413,10 @@ public class CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid))
-      .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid));
+      .replaceAll("\\{" + "collectionid" + "\\}",
+        apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "artifactid" + "\\}",
+        apiClient.escapeString(artifactid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -418,7 +425,8 @@ public class CollectionsApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     if (includeContent != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("includeContent", includeContent));
+      localVarQueryParams.addAll(
+        apiClient.parameterToPair("includeContent", includeContent));
     }
 
     final String[] localVarAccepts = {
@@ -432,7 +440,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
 
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};
@@ -572,8 +581,9 @@ public class CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/aus/{auid}/artifacts"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid))
-      .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+      .replaceAll("\\{" + "collectionid" + "\\}",
+        apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -603,7 +613,8 @@ public class CollectionsApi {
     }
 
     if (continuationToken != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("continuationToken", continuationToken));
+      localVarQueryParams.addAll(
+        apiClient.parameterToPair("continuationToken", continuationToken));
     }
 
     final String[] localVarAccepts = {
@@ -617,7 +628,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
 
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};
@@ -776,7 +788,8 @@ public class CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
+      .replaceAll("\\{" + "collectionid" + "\\}",
+        apiClient.escapeString(collectionid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -797,7 +810,8 @@ public class CollectionsApi {
     }
 
     if (continuationToken != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("continuationToken", continuationToken));
+      localVarQueryParams.addAll(
+        apiClient.parameterToPair("continuationToken", continuationToken));
     }
 
     final String[] localVarAccepts = {
@@ -811,7 +825,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
 
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};
@@ -950,8 +965,9 @@ public class CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/aus/{auid}/size"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid))
-      .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid));
+      .replaceAll("\\{" + "collectionid" + "\\}",
+        apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "auid" + "\\}", apiClient.escapeString(auid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -982,7 +998,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
 
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};
@@ -1122,7 +1139,8 @@ public class CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/aus"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
+      .replaceAll("\\{" + "collectionid" + "\\}",
+        apiClient.escapeString(collectionid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1135,7 +1153,8 @@ public class CollectionsApi {
     }
 
     if (continuationToken != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("continuationToken", continuationToken));
+      localVarQueryParams.addAll(
+        apiClient.parameterToPair("continuationToken", continuationToken));
     }
 
     final String[] localVarAccepts = {
@@ -1149,7 +1168,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
 
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};
@@ -1289,7 +1309,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
 
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};
@@ -1384,8 +1405,10 @@ public class CollectionsApi {
 
     // create path and map variables
     String localVarPath = "/collections/{collectionid}/artifacts/{artifactid}"
-      .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid))
-      .replaceAll("\\{" + "artifactid" + "\\}", apiClient.escapeString(artifactid));
+      .replaceAll("\\{" + "collectionid" + "\\}",
+        apiClient.escapeString(collectionid.toString()))
+      .replaceAll("\\{" + "artifactid" + "\\}",
+        apiClient.escapeString(artifactid.toString()));
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1408,7 +1431,8 @@ public class CollectionsApi {
     final String[] localVarContentTypes = {
       "multipart/form-data"
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String localVarContentType = apiClient.selectHeaderContentType(
+      localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     String[] localVarAuthNames = new String[]{};

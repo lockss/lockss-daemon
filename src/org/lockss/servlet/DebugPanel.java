@@ -436,13 +436,16 @@ public class DebugPanel extends LockssServlet {
   }
 
   private void doCopyToV2repo() throws IOException {
-    ArchivalUnit au = getAu();
-    if (au == null) return;
-    //TODO: We need to decide what conditions need to be enforced before the copy.
-    //TODO: Going forward we need request user:password at least
     V2AuMover v2AuMover = new V2AuMover();
-    v2AuMover.moveAu(au);
-    //TODO: We need to tell the system not to poll or crawl this AU.
+    ArchivalUnit au = getAu();
+    if (au == null) {
+      log.info("No Au selected...moving all known aus");
+      v2AuMover.moveAllAus();
+    }
+    else {
+      log.info("Sending request to move au "+ au.getName());
+      v2AuMover.moveAu(au);
+    }
   }
 
   private boolean startReindexingMetadata(ArchivalUnit au, boolean force) {

@@ -34,9 +34,12 @@ package org.lockss.laaws;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
+import java.util.stream.Collectors;
+import org.apache.commons.collections.ListUtils;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -48,10 +51,12 @@ import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.laaws.model.rs.Artifact;
+import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CuIterator;
+import org.lockss.plugin.PluginManager;
 import org.lockss.repository.RepoSpec;
 import org.lockss.state.AuState;
 import org.lockss.util.Logger;
@@ -151,6 +156,7 @@ public class V2AuMover {
 
   private static String currentAu;
   private static String currentCu;
+  private PluginManager pluginManager;
 
 
   public V2AuMover() {
@@ -180,8 +186,19 @@ public class V2AuMover {
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST, DEFAULT_DEBUG_REPO_REQUEST);
     debugConfigReq = config.getBoolean(DEBUG_CONFIG_REQUEST, DEFAULT_DEBUG_CONFIG_REQUEST);
     maxRequests = config.getInt(PARAM_MAX_REQUESTS, DEFAULT_MAX_REQUESTS);
+    pluginManager = LockssDaemon.getLockssDaemon().getPluginManager();
     initRepoClient(rspec);
     initConfigClient(cfgService);
+  }
+
+  /**
+   * Move all available Aus.
+   * @throws IOException
+   */
+  public void moveAllAus() throws IOException {
+    for (ArchivalUnit au : pluginManager.getAllAus()) {
+      moveAu(au);
+    }
   }
 
   /**
@@ -190,10 +207,9 @@ public class V2AuMover {
    * @param auId The ArchivalUnit Id string
    */
   public void moveAu(String auId) throws IOException {
-    ArchivalUnit au = LockssDaemon.getLockssDaemon().getPluginManager().getAuFromId(auId);
+    ArchivalUnit au = pluginManager.getAuFromId(auId);
     moveAu(au);
   }
-
   public void moveAu(ArchivalUnit au) throws IOException {
     long startTime = System.currentTimeMillis(); // Get the start Time
     long endTime;
@@ -297,11 +313,25 @@ public class V2AuMover {
    * @param au The ArchivalUnit to move
    */
   protected void moveAuArtifacts(ArchivalUnit au) throws ApiException {
-    /* get Au items from Lockss*/
+    //Get the au artifacts from the repo.
+    List<Artifact> auArtifacts= new ArrayList<>();
+    try {
+      ArtifactPageInfo pageInfo = rsCollectionsApi.getArtifacts(collection, au.getAuId(),
+        null, null, null, false, null, null);
+      auArtifacts = pageInfo.getArtifacts();
+    }
+    catch(ApiException apie) {
+      log.warning("Unable to determine if repo has prexisting artifacts for " + au.getName());
+      log.warning("All CachedUrls will be added");
+    }
+    /* get Au cachedUrls from Lockss*/
     for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
       CachedUrl cachedUrl = iter.next();
       currentCu = cachedUrl.getUrl();
-      moveCuVersions(cachedUrl);
+      List<Artifact> cuArtifacts = auArtifacts.stream()
+        .filter(artifact -> artifact.getUri().equals(currentCu))
+        .collect(Collectors.toList());
+      moveCuVersions(cachedUrl, cuArtifacts);
       cuMoved++;
     }
   }
@@ -332,14 +362,30 @@ public class V2AuMover {
   }
 
 
-  private void moveCuVersions(CachedUrl cachedUrl) throws ApiException {
+  private void moveCuVersions(CachedUrl cachedUrl, List<Artifact> cuArtifacts)
+      throws ApiException {
     String auid = cachedUrl.getArchivalUnit().getAuId();
     CachedUrl[] cu_vers = cachedUrl.getCuVersions();
     for (CachedUrl cu : cu_vers) {
       String uri = cu.getUrl();
       Long collectionDate = Long
         .parseLong(cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME));
-      moveArtifact(auid, uri, collectionDate, cu, collection);
+      // if we've moved at least one version
+      if(cuArtifacts.size() > 0) {
+        boolean matched=false;
+        for(Artifact artifact : cuArtifacts) {
+          if (collectionDate.equals(artifact.getCollectionDate())) {
+            matched = true;
+            break;
+          }
+        }
+        if(!matched) {
+          moveArtifact(auid, uri, collectionDate, cu, collection);
+        }
+      }
+      else {
+        moveArtifact(auid, uri, collectionDate, cu, collection);
+      }
     }
     log.debug2("Completed move of all versions of " + currentCu);
   }
