@@ -616,8 +616,8 @@
       au < manifest ; exists ; 2009 ; 2009 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2009 ; 2009 ; https://mab-online.nl/ ; >
       au < manifest ; exists ; 2010 ; 2010 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2010 ; 2010 ; https://mab-online.nl/ ; >
       au < manifest ; exists ; 2011 ; 2011 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2011 ; 2011 ; https://mab-online.nl/ ; >
-      au < crawling ; exists ; 2012 ; 2012 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2012 ; 2012 ; https://mab-online.nl/ ; >
-      au < crawling ; exists ; 2013 ; 2013 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2013 ; 2013 ; https://mab-online.nl/ ; >
+      au < frozen ; exists ; 2012 ; 2012 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2012 ; 2012 ; https://mab-online.nl/ ; >
+      au < frozen ; exists ; 2013 ; 2013 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2013 ; 2013 ; https://mab-online.nl/ ; >
       au < frozen ; exists ; 2014 ; 2014 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2014 ; 2014 ; https://mab-online.nl/ ; >
       au < frozen ; exists ; 2015 ; 2015 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2015 ; 2015 ; https://mab-online.nl/ ; >
       au < frozen ; exists ; 2016 ; 2016 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2016 ; 2016 ; https://mab-online.nl/ ; >
@@ -1049,8 +1049,8 @@
 
       param[au_oai_set] = foliamedica
 
-      au < crawling ; exists ; 2019 ; 2019 ; Folia Medica Volume 2019 ; 2019 ; https://foliamedica.bg/ ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Folia Medica Volume 2020 ; 2020 ; https://foliamedica.bg/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Folia Medica Volume 2019 ; 2019 ; https://foliamedica.bg/ ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Folia Medica Volume 2020 ; 2020 ; https://foliamedica.bg/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Folia Medica Volume 2021 ; 2021 ; https://foliamedica.bg/ ; >
 
   }
@@ -1081,7 +1081,7 @@
 
       param[au_oai_set] = jucs
 
-      au < crawling ; exists ; 2019 ; 2019 ; Journal of Universal Computer Science Volume 2019 ; 2019 ; https://lib.jucs.org/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Journal of Universal Computer Science Volume 2019 ; 2019 ; https://lib.jucs.org/ ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 2020 ; Journal of Universal Computer Science Volume 2020 ; 2020 ; https://lib.jucs.org/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Journal of Universal Computer Science Volume 2021 ; 2021 ; https://lib.jucs.org/ ; >
 
@@ -1098,7 +1098,7 @@
 
       param[au_oai_set] = plantsociology
 
-      au < crawling ; exists ; 2020 ; 2020 ; Plant Sociology Volume 2020 ; 2020 ; https://plantsociology.arphahub.com/ ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Plant Sociology Volume 2020 ; 2020 ; https://plantsociology.arphahub.com/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ ; >
 
   }
@@ -1113,10 +1113,10 @@
 
       param[au_oai_set] = populationandeconomics
 
-      au < crawling ; exists ; 2017 ; 2017 ; Population and Economics Volume 2017 ; 2017 ; https://populationandeconomics.pensoft.net/ ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Population and Economics Volume 2018 ; 2018 ; https://populationandeconomics.pensoft.net/ ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Population and Economics Volume 2019 ; 2019 ; https://populationandeconomics.pensoft.net/ ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Population and Economics Volume 2020 ; 2020 ; https://populationandeconomics.pensoft.net/ ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Population and Economics Volume 2017 ; 2017 ; https://populationandeconomics.pensoft.net/ ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Population and Economics Volume 2018 ; 2018 ; https://populationandeconomics.pensoft.net/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Population and Economics Volume 2019 ; 2019 ; https://populationandeconomics.pensoft.net/ ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Population and Economics Volume 2020 ; 2020 ; https://populationandeconomics.pensoft.net/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Population and Economics Volume 2021 ; 2021 ; https://populationandeconomics.pensoft.net/ ; >
 
   }
