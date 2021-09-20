@@ -62,7 +62,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
     String localVarPath = "/collections/{collectionid}/artifacts"
       .replaceAll("\\{" + "collectionid" + "\\}", apiClient.escapeString(collectionid));
 
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarQueryParams = new ArrayList<>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, String> localVarCookieParams = new HashMap<String, String>();
@@ -98,7 +98,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{ "basicAuth" };
     return apiClient.buildCall(localVarPath, "POST", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);

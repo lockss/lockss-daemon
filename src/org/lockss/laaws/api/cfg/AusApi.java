@@ -1581,7 +1581,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call patchAuStateCall(String auid, String auState, String xLockssRequestCookie,
+  public okhttp3.Call patchAuStateCall(String auid, Object auState, String xLockssRequestCookie,
     final ApiCallback _callback) throws ApiException {
     Object localVarPostBody = auState;
 
@@ -1621,7 +1621,7 @@ public class AusApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call patchAuStateValidateBeforeCall(String auid, String auState,
+  private okhttp3.Call patchAuStateValidateBeforeCall(String auid, Object auState,
     String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
 
     // verify the required parameter 'auid' is set
@@ -1660,7 +1660,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public void patchAuState(String auid, String auState, String xLockssRequestCookie)
+  public void patchAuState(String auid, Object auState, String xLockssRequestCookie)
     throws ApiException {
     patchAuStateWithHttpInfo(auid, auState, xLockssRequestCookie);
   }
@@ -1685,7 +1685,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public ApiResponse<Void> patchAuStateWithHttpInfo(String auid, String auState,
+  public ApiResponse<Void> patchAuStateWithHttpInfo(String auid, Object auState,
     String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall = patchAuStateValidateBeforeCall(auid, auState, xLockssRequestCookie,
       null);
@@ -1713,7 +1713,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call patchAuStateAsync(String auid, String auState, String xLockssRequestCookie,
+  public okhttp3.Call patchAuStateAsync(String auid, Object auState, String xLockssRequestCookie,
     final ApiCallback<Void> _callback) throws ApiException {
 
     okhttp3.Call localVarCall = patchAuStateValidateBeforeCall(auid, auState, xLockssRequestCookie,

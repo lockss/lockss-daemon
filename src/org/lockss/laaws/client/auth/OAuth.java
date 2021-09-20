@@ -17,7 +17,7 @@ import org.lockss.laaws.client.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-08-17T15:05:28.577-07:00[America/Los_Angeles]")public class OAuth implements Authentication {
+public class OAuth implements Authentication {
   private String accessToken;
 
   public String getAccessToken() {
@@ -28,10 +28,13 @@ import java.util.List;
     this.accessToken = accessToken;
   }
 
+
   @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
+  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams,
+    Map<String, String> cookieParams) {
     if (accessToken != null) {
       headerParams.put("Authorization", "Bearer " + accessToken);
     }
+
   }
 }

@@ -444,7 +444,7 @@ public class DebugPanel extends LockssServlet {
     }
     else {
       log.info("Sending request to move au "+ au.getName());
-      v2AuMover.moveAu(au);
+      v2AuMover.moveOneAu(au);
     }
   }
 

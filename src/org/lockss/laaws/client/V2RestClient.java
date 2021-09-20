@@ -67,17 +67,17 @@ import okio.Okio;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.Authentication;
 import org.lockss.laaws.client.auth.HttpBasicAuth;
+import org.lockss.laaws.client.auth.OAuth;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
 public class V2RestClient {
 
   private static final Logger log = Logger.getLogger(V2RestClient.class);
-
-  private String basePath = "http://laaws.lockss.org:443/";
-  private boolean debugging = false;
   private final Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   private final Map<String, String> defaultCookieMap = new HashMap<String, String>();
+  private String basePath = "http://laaws.lockss.org:443/";
+  private boolean debugging = false;
   private String tempFolderPath = null;
 
   private Map<String, Authentication> authentications;
@@ -143,7 +143,7 @@ public class V2RestClient {
     json = new JSON();
 
     // Set default User-Agent.
-    setUserAgent("OpenAPI-Generator/2.0.0/java");
+    setUserAgent("Lockss");
 
     authentications = new HashMap<String, Authentication>();
   }
@@ -390,6 +390,12 @@ public class V2RestClient {
    * @param accessToken Access token
    */
   public void setAccessToken(String accessToken) {
+    for (Authentication auth : authentications.values()) {
+      if (auth instanceof OAuth) {
+        ((OAuth) auth).setAccessToken(accessToken);
+        return;
+      }
+    }
     throw new RuntimeException("No OAuth2 authentication configured!");
   }
 
@@ -800,11 +806,11 @@ public class V2RestClient {
 
     String respBody;
     try {
-        if (response.body() != null) {
-            respBody = response.body().string();
-        } else {
-            respBody = null;
-        }
+      if (response.body() != null) {
+        respBody = response.body().string();
+      } else {
+        respBody = null;
+      }
     } catch (IOException e) {
       throw new ApiException(e);
     }
@@ -915,16 +921,16 @@ public class V2RestClient {
         suffix = filename.substring(pos);
       }
       // File.createTempFile requires the prefix to be at least three characters long
-        if (prefix.length() < 3) {
-            prefix = "download-";
-        }
+      if (prefix.length() < 3) {
+        prefix = "download-";
+      }
     }
 
-      if (tempFolderPath == null) {
-          return File.createTempFile(prefix, suffix);
-      } else {
-          return File.createTempFile(prefix, suffix, new File(tempFolderPath));
-      }
+    if (tempFolderPath == null) {
+      return File.createTempFile(prefix, suffix);
+    } else {
+      return File.createTempFile(prefix, suffix, new File(tempFolderPath));
+    }
   }
 
   /**
@@ -1111,7 +1117,7 @@ public class V2RestClient {
       reqBody = null;
     } else if ("application/x-www-form-urlencoded".equals(contentType)) {
       reqBody = buildRequestBodyFormEncoding(formParams);
-    } else if ("multipart/form-data".equals(contentType)) {
+    } else if ("multipart/form-data".equals(contentType) && !formParams.isEmpty()) {
       reqBody = buildRequestBodyMultipart(formParams);
     } else if (body == null) {
       if ("DELETE".equals(method)) {

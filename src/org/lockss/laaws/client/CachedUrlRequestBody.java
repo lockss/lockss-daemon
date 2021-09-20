@@ -23,6 +23,7 @@ import org.apache.http.impl.io.HttpTransportMetricsImpl;
 import org.apache.http.impl.io.SessionOutputBufferImpl;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
@@ -165,6 +166,7 @@ public class CachedUrlRequestBody extends RequestBody {
       }
     } finally {
       Util.closeQuietly(source);
+      AuUtil.safeRelease(artifactCu);
     }
 
   }

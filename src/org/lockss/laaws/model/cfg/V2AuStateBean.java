@@ -592,7 +592,7 @@ public class V2AuStateBean {
     return gson.toJson(toMap());
   }
 
-  public Map toMap() {
+  public Map<String,Object> toMap() {
     Map<String, Object> propMap = new HashMap<>();
     propMap.put("accessType", accessType);
     propMap.put("auCreationTime", auCreationTime);

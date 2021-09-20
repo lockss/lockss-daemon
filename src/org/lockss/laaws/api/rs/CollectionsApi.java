@@ -117,7 +117,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "POST", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
@@ -295,7 +295,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
@@ -444,7 +444,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
@@ -632,7 +632,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
@@ -829,7 +829,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
@@ -1002,7 +1002,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
@@ -1172,7 +1172,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
@@ -1313,7 +1313,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "GET", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
@@ -1409,7 +1409,6 @@ public class CollectionsApi {
         apiClient.escapeString(collectionid.toString()))
       .replaceAll("\\{" + "artifactid" + "\\}",
         apiClient.escapeString(artifactid.toString()));
-
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
@@ -1417,7 +1416,8 @@ public class CollectionsApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
     if (committed != null) {
-      localVarFormParams.put("committed", committed);
+      //localVarFormParams.put("committed", committed);
+      localVarQueryParams.addAll(apiClient.parameterToPair("committed", committed));
     }
 
     final String[] localVarAccepts = {
@@ -1435,7 +1435,7 @@ public class CollectionsApi {
       localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
-    String[] localVarAuthNames = new String[]{};
+    String[] localVarAuthNames = new String[]{"basicAuth"};
     return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams,
       localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
       localVarFormParams, localVarAuthNames, _callback);
