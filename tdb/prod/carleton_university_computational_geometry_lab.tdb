@@ -36,9 +36,9 @@
       attr[start_stem] = index.php/
       #publisher contacted 2/22/2021 for certificate failure
 
-      au < ready ; 2018 ; Journal of Computational Geometry Volume 9 ; 9 ; 2018 > #Unable to fetch permission page
-      au < ready ; 2019 ; Journal of Computational Geometry Volume 10 ; 10 ; 2019 > #Unable to fetch permission page
-      au < ready ; 2020 ; Journal of Computational Geometry Volume 11 ; 11 ; 2020 > #Unable to fetch permission page
+      au < releasing ; 2018 ; Journal of Computational Geometry Volume 9 ; 9 ; 2018 > #Unable to fetch permission page
+      au < releasing ; 2019 ; Journal of Computational Geometry Volume 10 ; 10 ; 2019 > #Unable to fetch permission page
+      au < releasing ; 2020 ; Journal of Computational Geometry Volume 11 ; 11 ; 2020 > #Unable to fetch permission page
       au < manifest ; 2021 ; Journal of Computational Geometry Volume 12 ; 12 ; 2021 > #Unable to fetch permission page
 
       }
