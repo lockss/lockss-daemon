@@ -355,7 +355,7 @@
       au < finished ; finished ; 2018 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < ingNotReady ; exists ; 2020 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 16 [partial] ; 16 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
-      au < expected ; exists ; 2021 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1237,7 +1237,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Biomedical Engineering and Technology Volume 34 ; 34 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Biomedical Engineering and Technology Volume 35 ; 35 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Biomedical Engineering and Technology Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2021 ; International Journal of Biomedical Engineering and Technology Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Biomedical Engineering and Technology Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2754,7 +2754,7 @@
       au < finished ; finished ; 2017 ; International Journal of Decision Sciences, Risk and Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Decision Sciences, Risk and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Decision Sciences, Risk and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; International Journal of Decision Sciences, Risk and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Decision Sciences, Risk and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3913,7 +3913,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Exergy Volume 33 ; 33 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Exergy Volume 34 ; 34 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Exergy Volume 35 ; 35 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2021 ; International Journal of Exergy Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Exergy Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4112,7 +4112,7 @@
       au < finished ; finished ; 2017 ; International Journal of Foresight and Innovation Policy Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > 
       au < finished ; finished ; 2018 ; International Journal of Foresight and Innovation Policy Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 > 
       au < finished ; crawling ; 2019-2020 ; International Journal of Foresight and Innovation Policy Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2021 ; International Journal of Foresight and Innovation Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Foresight and Innovation Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5560,7 +5560,7 @@
       au < finished ; finished ; 2018 ; International Journal of Islamic Marketing and Branding Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Islamic Marketing and Branding Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Islamic Marketing and Branding Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; International Journal of Islamic Marketing and Branding Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Islamic Marketing and Branding Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
