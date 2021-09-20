@@ -451,7 +451,7 @@
     au < released ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 10 ; 10 >
     au < released ; 2017 ; 2017 ; Allgemein- und Viszeralchirurgie up2date Volume 11 ; 11 >
     au < released ; 2018 ; 2018 ; Allgemein- und Viszeralchirurgie up2date Volume 12 ; 12 >
-    au < releasing ; 2019 ; 2019 ; Allgemein- und Viszeralchirurgie up2date Volume 13 ; 13 >
+    au < released ; 2019 ; 2019 ; Allgemein- und Viszeralchirurgie up2date Volume 13 ; 13 >
     au < released ; 2020 ; 2020 ; Allgemein- und Viszeralchirurgie up2date Volume 14 ; 14 >
     au < manifest ; 2021 ; 2021 ; Allgemein- und Viszeralchirurgie up2date Volume 15 ; 15 >
 
@@ -907,7 +907,7 @@
    au < released ; 2016 ; 2016 ; Deutsche Heilpraktiker-Zeitschrift Volume 11 ; 11 >
    au < released ; 2017 ; 2017 ; Deutsche Heilpraktiker-Zeitschrift Volume 12 ; 12 >
    au < released ; 2018 ; 2018 ; Deutsche Heilpraktiker-Zeitschrift Volume 13 ; 13 >
-   au < releasing ; 2019 ; 2019 ; Deutsche Heilpraktiker-Zeitschrift Volume 14 ; 14 >
+   au < released ; 2019 ; 2019 ; Deutsche Heilpraktiker-Zeitschrift Volume 14 ; 14 >
    au < released ; 2020 ; 2020 ; Deutsche Heilpraktiker-Zeitschrift Volume 15 ; 15 >
    au < manifest ; 2021 ; 2021 ; Deutsche Heilpraktiker-Zeitschrift Volume 16 ; 16 >
 
@@ -2387,7 +2387,7 @@
     comment[years] =  2004-current
 
    au < released ; 2004 ; 2004 ; Indian Journal of Neurotrauma Volume 1 ; 1 >
-   au < releasing ; 2005 ; 2005 ; Indian Journal of Neurotrauma Volume 2 ; 2 >
+   au < released ; 2005 ; 2005 ; Indian Journal of Neurotrauma Volume 2 ; 2 >
    au < released ; 2006 ; 2006 ; Indian Journal of Neurotrauma Volume 3 ; 3 >
    au < released ; 2007 ; 2007 ; Indian Journal of Neurotrauma Volume 4 ; 4 >
    au < released ; 2008 ; 2008 ; Indian Journal of Neurotrauma Volume 5 ; 5 >
@@ -4125,7 +4125,7 @@
     param[journal_id] = 10.1055/s-00000044
     comment[years] = 2003
 
-    au < releasing ; 2003 ; 2003 ; Notfall Medizin Volume 29 ; 29 >
+    au < released ; 2003 ; 2003 ; Notfall Medizin Volume 29 ; 29 >
 
   }
 
@@ -4335,7 +4335,7 @@
     comment[years] = 2001
     #continued_by = 1618-971X
     
-    au < releasing ; 2001 ; 2001 ; Osteosynthese International Volume 9 ; 9 >
+    au < released ; 2001 ; 2001 ; Osteosynthese International Volume 9 ; 9 >
 
   }
 
@@ -4543,10 +4543,10 @@
     param[journal_id] = 10.1055/s-00000162
     comment[years] = 2010-current
 
-    au < releasing ; 2003 ; 2003 ; physiopraxis Volume 1 ; 1 >
+    au < released ; 2003 ; 2003 ; physiopraxis Volume 1 ; 1 >
     au < released ; 2004 ; 2004 ; physiopraxis Volume 2 ; 2 >
     au < released ; 2005 ; 2005 ; physiopraxis Volume 3 ; 3 >
-    au < releasing ; 2006 ; 2006 ; physiopraxis Volume 4 ; 4 >
+    au < released ; 2006 ; 2006 ; physiopraxis Volume 4 ; 4 >
     au < released ; 2007 ; 2007 ; physiopraxis Volume 5 ; 5 >
     au < released ; 2008 ; 2008 ; physiopraxis Volume 6 ; 6 >
     au < released ; 2009 ; 2009 ; physiopraxis Volume 7 ; 7 >
@@ -4975,8 +4975,8 @@
     comment[years] = 2003-2008
 
    au < released ; 2003 ; 2003 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 29 ; 29 >
-   au < releasing ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 >
-   au < releasing ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 >
+   au < released ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 >
+   au < released ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 >
    au < released ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 >
    au < released ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 >
    au < released ; 2008 ; 2008 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 34 ; 34 >
@@ -4995,7 +4995,7 @@
 
     au < doNotProcess ; 2000 ; 2000 ; Psychotraumatologie Volume 1 ; 1 >
     au < doNotProcess ; 2001 ; 2001 ; Psychotraumatologie Volume 2 ; 2 >
-    au < releasing ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 >
+    au < released ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 >
 
   }
 
@@ -5804,9 +5804,9 @@
     comment[years] = 2001-2005
 
     au < released ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 >
-    au < releasing ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 >
+    au < released ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 >
     au < released ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 >
-    au < releasing ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 >
+    au < released ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 >
     au < released ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 >
 
   }
@@ -5904,7 +5904,7 @@
     au < released ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 >
     au < released ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 >
     au < released ; 2003 ; 2003 ; Sleep and Breathing Volume 7 ; 7 >
-    au < releasing ; 2004 ; 2004 ; Sleep and Breathing Volume 8 ; 8 >
+    au < released ; 2004 ; 2004 ; Sleep and Breathing Volume 8 ; 8 >
 
   }
 
@@ -5926,7 +5926,7 @@
     au < released ; 2016 ; 2016 ; Sportphysio Volume 4 ; 4 >
     au < released ; 2017 ; 2017 ; Sportphysio Volume 5 ; 5 >
     au < released ; 2018 ; 2018 ; Sportphysio Volume 6 ; 6 >
-    au < releasing ; 2019 ; 2019 ; Sportphysio Volume 7 ; 7 >
+    au < released ; 2019 ; 2019 ; Sportphysio Volume 7 ; 7 >
     au < released ; 2020 ; 2020 ; Sportphysio Volume 8 ; 8 >
     au < manifest ; 2021 ; 2021 ; Sportphysio Volume 9 ; 9 >
 
@@ -7199,7 +7199,7 @@
 
     au < released ; 2000 ; 2000 ; Zeitschrift für Kinderchirurgie Volume 9 ; 9 >
     au < released ; 2001 ; 2001 ; Zeitschrift für Kinderchirurgie Volume 10 ; 10 >
-    au < releasing ; 2002 ; 2002 ; Zeitschrift für Kinderchirurgie Volume 11 ; 11 >
+    au < released ; 2002 ; 2002 ; Zeitschrift für Kinderchirurgie Volume 11 ; 11 >
 
   }
 
@@ -7215,7 +7215,7 @@
     param[journal_id] = 10.1055/s-00000111
     comment[years] = 2003-2008
 
-    au < releasing ; 2003 ; 2003 ; Zeitschrift für Allgemeinmedizin Volume 79 ; 79 >
+    au < released ; 2003 ; 2003 ; Zeitschrift für Allgemeinmedizin Volume 79 ; 79 >
     au < released ; 2004 ; 2004 ; Zeitschrift für Allgemeinmedizin Volume 80 ; 80 >
     au < released ; 2005 ; 2005 ; Zeitschrift für Allgemeinmedizin Volume 81 ; 81 >
     au < released ; 2006 ; 2006 ; Zeitschrift für Allgemeinmedizin Volume 82 ; 82 >
@@ -7328,7 +7328,7 @@
     au < released ; 2016 ; 2016 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 10 ; 10 >
     au < released ; 2017 ; 2017 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 11 ; 11 >
     au < released ; 2018 ; 2018 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 12 ; 12 >
-    au < releasing ; 2019 ; 2019 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 13 ; 13 >
+    au < released ; 2019 ; 2019 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 13 ; 13 >
     au < released ; 2020 ; 2020 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 14 ; 14 >
     au < manifest ; 2021 ; 2021 ; Adipositas - Ursachen, Folgeerkrankungen, Therapie Volume 15 ; 15 >
 
@@ -7375,7 +7375,7 @@
 
     au < released ; 2004 ; 2004 ; Arthritis und Rheuma Volume 24 ; 24 >
     au < released ; 2005 ; 2005 ; Arthritis und Rheuma Volume 25 ; 25 >
-    au < releasing ; 2006 ; 2006 ; Arthritis und Rheuma Volume 26 ; 26 >
+    au < released ; 2006 ; 2006 ; Arthritis und Rheuma Volume 26 ; 26 >
     au < released ; 2007 ; 2007 ; Arthritis und Rheuma Volume 27 ; 27 >
     au < released ; 2008 ; 2008 ; Arthritis und Rheuma Volume 28 ; 28 >
     au < released ; 2009 ; 2009 ; Arthritis und Rheuma Volume 29 ; 29 >
@@ -7425,10 +7425,10 @@
 
     au < released ; 2000 ; 2000 ; Hämostaseologie Volume 20 ; 20 >
     au < released ; 2001 ; 2001 ; Hämostaseologie Volume 21 ; 21 >
-    au < releasing ; 2002 ; 2002 ; Hämostaseologie Volume 22 ; 22 >
+    au < released ; 2002 ; 2002 ; Hämostaseologie Volume 22 ; 22 >
     au < released ; 2003 ; 2003 ; Hämostaseologie Volume 23 ; 23 >
     au < released ; 2004 ; 2004 ; Hämostaseologie Volume 24 ; 24 >
-    au < releasing ; 2005 ; 2005 ; Hämostaseologie Volume 25 ; 25 >
+    au < released ; 2005 ; 2005 ; Hämostaseologie Volume 25 ; 25 >
     au < released ; 2006 ; 2006 ; Hämostaseologie Volume 26 ; 26 >
     au < released ; 2007 ; 2007 ; Hämostaseologie Volume 27 ; 27 >
     au < released ; 2008 ; 2008 ; Hämostaseologie Volume 28 ; 28 >
@@ -7583,10 +7583,10 @@
 
     au < released ; 2003 ; 2003 ; Nervenheilkunde Volume 22 ; 22 >
     au < released ; 2004 ; 2004 ; Nervenheilkunde Volume 23 ; 23 >
-    au < releasing ; 2005 ; 2005 ; Nervenheilkunde Volume 24 ; 24 >
+    au < released ; 2005 ; 2005 ; Nervenheilkunde Volume 24 ; 24 >
     au < released ; 2006 ; 2006 ; Nervenheilkunde Volume 25 ; 25 >
     au < released ; 2007 ; 2007 ; Nervenheilkunde Volume 26 ; 26 >
-    au < releasing ; 2008 ; 2008 ; Nervenheilkunde Volume 27 ; 27 >
+    au < released ; 2008 ; 2008 ; Nervenheilkunde Volume 27 ; 27 >
     au < released ; 2009 ; 2009 ; Nervenheilkunde Volume 28 ; 28 >
     au < released ; 2010 ; 2010 ; Nervenheilkunde Volume 29 ; 29 >
     au < released ; 2011 ; 2011 ; Nervenheilkunde Volume 30 ; 30 >
@@ -7619,7 +7619,7 @@
     au < released ; 2001 ; 2001 ; Nuklearmedizin Volume 40 ; 40 >
     au < released ; 2002 ; 2002 ; Nuklearmedizin Volume 41 ; 41 >
     au < released ; 2003 ; 2003 ; Nuklearmedizin Volume 42 ; 42 >
-    au < releasing ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 >
+    au < released ; 2004 ; 2004 ; Nuklearmedizin Volume 43 ; 43 >
     au < released ; 2005 ; 2005 ; Nuklearmedizin Volume 44 ; 44 >
     au < released ; 2006 ; 2006 ; Nuklearmedizin Volume 45 ; 45 >
     au < released ; 2007 ; 2007 ; Nuklearmedizin Volume 46 ; 46 >
@@ -7786,11 +7786,11 @@
     param[journal_id] = 10.1055/s-00035148
     comment[years] = 2012-2018
 
-    au < releasing ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 >
-    au < releasing ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 >
-    au < releasing ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 >
-    au < releasing ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 >
-    au < releasing ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 >
+    au < released ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 >
+    au < released ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 >
+    au < released ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 >
+    au < released ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 >
+    au < released ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 >
     au < released ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 >
     au < released ; 2018 ; 2018 ; Schlaf Volume 7 ; 7 >
 
@@ -7829,7 +7829,7 @@
 
     au < released ; 2003 ; 2003 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 31 ; 31 >
     au < released ; 2004 ; 2004 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 32 ; 32 >
-    au < releasing ; 2005 ; 2005 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 33 ; 33 >
+    au < released ; 2005 ; 2005 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 33 ; 33 >
     au < released ; 2006 ; 2006 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 34 ; 34 >
     au < released ; 2007 ; 2007 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 35 ; 35 >
     au < released ; 2008 ; 2008 ; Tierärztliche Praxis G: Großtiere/Nutztiere Volume 36 ; 36 >
