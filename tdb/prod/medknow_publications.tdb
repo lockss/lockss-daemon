@@ -4700,11 +4700,11 @@
 #      param[base_url] = http://www.advbiores.net/
       #browse. no back issues page.
 
-      au < manifest ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; https://www.advbiores.net/ >
-      au < manifest ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; https://www.advbiores.net/ >
-      au < manifest ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; https://www.advbiores.net/ >
-      au < manifest ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; https://www.advbiores.net/ >
-      au < manifest ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; https://www.advbiores.net/ >
+      au < ready ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; https://www.advbiores.net/ >
+      au < ready ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; https://www.advbiores.net/ >
+      au < ready ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; https://www.advbiores.net/ >
+      au < ready ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; https://www.advbiores.net/ >
+      au < ready ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; https://www.advbiores.net/ >
       au < manifest ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; https://www.advbiores.net/ >
       au < manifest ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; https://www.advbiores.net/ >
       au < released ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ >
@@ -8833,11 +8833,11 @@
       param[journal_issn] = 2349-0578
 #      param[base_url] = http://www.actamedicainternational.com/
 
-      au < manifest ; 2014 ; Acta Medica International Volume 1 ; 2014 ; 1 ; https://www.actamedicainternational.com/ >
-      au < manifest ; 2015 ; Acta Medica International Volume 2 ; 2015 ; 2 ; https://www.actamedicainternational.com/ >
-      au < manifest ; 2016 ; Acta Medica International Volume 3 ; 2016 ; 3 ; https://www.actamedicainternational.com/ >
+      au < ready ; 2014 ; Acta Medica International Volume 1 ; 2014 ; 1 ; https://www.actamedicainternational.com/ >
+      au < ready ; 2015 ; Acta Medica International Volume 2 ; 2015 ; 2 ; https://www.actamedicainternational.com/ >
+      au < ready ; 2016 ; Acta Medica International Volume 3 ; 2016 ; 3 ; https://www.actamedicainternational.com/ >
       au < released ; 2017 ; Acta Medica International Volume 4 ; 2017 ; 4 ; http://www.actamedicainternational.com/ >
-      au < manifest ; 2018 ; Acta Medica International Volume 5 ; 2018 ; 5 ; https://www.actamedicainternational.com/ >
+      au < ready ; 2018 ; Acta Medica International Volume 5 ; 2018 ; 5 ; https://www.actamedicainternational.com/ >
       au < released ; 2019 ; Acta Medica International Volume 6 ; 2019 ; 6 ; https://www.actamedicainternational.com/ >
       au < released ; 2020 ; Acta Medica International Volume 7 ; 2020 ; 7 ; https://www.actamedicainternational.com/ >
       au < manifest ; 2021 ; Acta Medica International Volume 8 ; 2021 ; 8 ; https://www.actamedicainternational.com/ >
@@ -10431,9 +10431,9 @@
       param[journal_issn] = 2519-139X
 #      param[base_url] = http://journal.limu.edu.ly/
 
-      au < manifest ; 2016 ; Libyan International Medical University Journal Volume 1 ; 2016 ; 1 ; https://journal.limu.edu.ly/ >
+      au < ready ; 2016 ; Libyan International Medical University Journal Volume 1 ; 2016 ; 1 ; https://journal.limu.edu.ly/ >
       au < released ; 2017 ; Libyan International Medical University Journal Volume 2 ; 2017 ; 2 ; http://journal.limu.edu.ly/ >
-      au < manifest ; 2018 ; Libyan International Medical University Journal Volume 3 ; 2018 ; 3 ; https://journal.limu.edu.ly/ >
+      au < ready ; 2018 ; Libyan International Medical University Journal Volume 3 ; 2018 ; 3 ; https://journal.limu.edu.ly/ >
       au < released ; 2019 ; Libyan International Medical University Journal Volume 4 ; 2019 ; 4 ; https://journal.limu.edu.ly/ >
       au < released ; 2020 ; Libyan International Medical University Journal Volume 5 ; 2020 ; 5 ; https://journal.limu.edu.ly/ >
       au < manifest ; 2021 ; Libyan International Medical University Journal Volume 6 ; 2021 ; 6 ; https://journal.limu.edu.ly/ >
