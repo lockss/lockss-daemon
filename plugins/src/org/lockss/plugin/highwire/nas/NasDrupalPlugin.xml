@@ -56,6 +56,10 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>83</string>
     </entry>
     <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.highwire.nas.NasDrupalUrlConsumerFactory</string>
+    </entry>
+    <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
