@@ -833,7 +833,8 @@
     au < frozen ; exists ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 ; >
     au < frozen ; exists ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 ; >
     au < frozen ; exists ; 1676 ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 ; >
-    au < frozen ; exists ; 1677-1678 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1677-1679 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 ; >
+    #During this period Philosophical Collections was published
     au < frozen ; exists ; 1683 ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 ; >
     au < frozen ; exists ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 ; >
     au < frozen ; exists ; 1685 ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 ; >
@@ -999,6 +1000,29 @@
     au < frozen ; exists ; 1884 ; Philosophical Transactions of the Royal Society of London Volume 175 ; 175 ; >
     au < frozen ; exists ; 1885 ; Philosophical Transactions of the Royal Society of London Volume 176 ; 176 ; >
     au < frozen ; exists ; 1886 ; Philosophical Transactions of the Royal Society of London Volume 177 ; 177 ; >
+
+  }
+
+  {
+
+    title <
+      name = Philosophical Collections of the Royal Society of London ;
+      issn = 0369-8696 ;
+      eissn = 2397-9755 ;
+      issnl = 0369-8696
+    >
+
+    # Edited by Robert Hooke FRS, Philosophical Collections was published between 1679 and 1682. 
+    # Articles before and after these dates are published in Philosophical Transactions.
+    param[journal_id] = rscl
+
+    au < manifest ; exists ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 7 ; 7 ; >
 
   }
 
