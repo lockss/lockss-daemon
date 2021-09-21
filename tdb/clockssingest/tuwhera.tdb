@@ -189,7 +189,7 @@
       au < frozen ; exists ; 2018 ; Hospitality Insights Volume 2 ; 2 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Hospitality Insights Volume 3 ; 3 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Hospitality Insights Volume 4 ; 4 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Hospitality Insights Volume 5 ; 5 ; 2021 ; >
+      au < ready ; exists ; 2021 ; Hospitality Insights Volume 5 ; 5 ; 2021 ; >
 
   }
 
@@ -338,7 +338,7 @@
       au < frozen ; exists ; 2018 ; Teachers Work Volume 15 ; 15 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Teachers Work Volume 16 ; 16 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Teachers Work Volume 17 ; 17 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Teachers Work Volume 18 ; 18 ; 2021 ; >
+      au < ready ; exists ; 2021 ; Teachers Work Volume 18 ; 18 ; 2021 ; >
 
   }
 
@@ -354,9 +354,9 @@
       attr[start_stem] = 
 
       #Manifest pages not enabled
-      au < manifest ; exists ; 2001 ; Working Papers in Communication Volume 1 ; 1 ; 2001 ; >
-      au < manifest ; exists ; 2005 ; Working Papers in Communication Volume 2 ; 2 ; 2005 ; >
-      au < manifest ; exists ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; >
+      au < ready ; exists ; 2001 ; Working Papers in Communication Volume 1 ; 1 ; 2001 ; >
+      au < ready ; exists ; 2005 ; Working Papers in Communication Volume 2 ; 2 ; 2005 ; >
+      au < ready ; exists ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; >
       au < frozen ; exists ; 2010 ; Working Papers in Communication Volume 4 ; 4 ; 2010 ; >
       #no further volumes published
   }
