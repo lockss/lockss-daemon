@@ -62,6 +62,7 @@ Args:
   -Dnowarn=true            Turn off compiler warnings.
   -Dpapersize=letter       The medium to pass to a2ps for index and print.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
+  -Dskipgettext=yes        Bypass running gettext (i18n)
   -Dsuite=suite-name       Specify stf suite name.
   -Dtimeout=msecs          Override the default test failure timeout.
   -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
@@ -3206,30 +3207,39 @@ Test results in ${test.results}
   <!-- Load the Ant gettext tasks -->
   <target name="check.gettext" depends="check.contrib" unless="gettext.checked">
     <!-- Check for existence of gettext program msgfmt -->
-    <trycatch>
-      <try>
-        <exec executable="msgfmt"
-	      outputproperty="gettext.available.output"
-	      failifexecutionfails="true">
-          <arg value="-V"/> <!-- Just get version -->
-        </exec>
-	<!-- Load gettext-commons tasks -->
-	<taskdef name="gettext-extract" classpath="${gettext.tasks.jar}"
-		 classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" />
-	<taskdef name="gettext-merge" classpath="${gettext.tasks.jar}"
-		 classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask"/>
-	<taskdef name="gettext-generate-default" classpath="${gettext.tasks.jar}"
-		 classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask"/>
-	<taskdef name="gettext-dist" classpath="${gettext.tasks.jar}"
-		 classname="org.xnap.commons.ant.gettext.GettextDistTask"/>
+    <if>
+      <istrue value="${skipgettext}" />
+      <then>
+        <echo message="Skipping i18n (gettext)"/>
+        <property name="gettext.checked" value="skip"/>
+      </then>
+      <else>
+        <trycatch>
+          <try>
+            <exec executable="msgfmt"
+	          outputproperty="gettext.available.output"
+	          failifexecutionfails="true">
+              <arg value="-V"/> <!-- Just get version -->
+            </exec>
+	    <!-- Load gettext-commons tasks -->
+	    <taskdef name="gettext-extract" classpath="${gettext.tasks.jar}"
+		     classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" />
+	    <taskdef name="gettext-merge" classpath="${gettext.tasks.jar}"
+		     classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask"/>
+	    <taskdef name="gettext-generate-default" classpath="${gettext.tasks.jar}"
+		     classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask"/>
+	    <taskdef name="gettext-dist" classpath="${gettext.tasks.jar}"
+		     classname="org.xnap.commons.ant.gettext.GettextDistTask"/>
 
-        <!-- Set a flag if gettext is available -->
-        <property name="gettext.available" value="true"/>
-      </try>
-      <catch>
-        <echo message="Warning: gettext is not available, continuing without i18n"/>
-      </catch>
-    </trycatch>
+            <!-- Set a flag if gettext is available -->
+            <property name="gettext.available" value="true"/>
+          </try>
+          <catch>
+            <echo message="Warning: gettext is not available, continuing without i18n"/>
+          </catch>
+        </trycatch>
+      </else>
+    </if>
     <!-- Don't check again even if isn't available -->
     <property name="gettext.checked" value="true" />
   </target>
