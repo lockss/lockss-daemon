@@ -132,11 +132,6 @@ public class HighWireJCoreHttpResponseHandler implements CacheResultHandler {
       case 520:
         // http://www.plantcell.org/content/29/2/202.full.pdf 520 Origin Error
         logger.debug2("520: " + url);
-        Matcher nfmat = getNonFatal403Pattern().matcher(url);
-        if (nfmat.find()) {
-          return new CacheException.NoRetryDeadLinkException("520 Origin Error (non-fatal)");
-        }
-
         return new CacheException.RetryableNetworkException_3_10S("520 Origin Error");
         
       case 524:
