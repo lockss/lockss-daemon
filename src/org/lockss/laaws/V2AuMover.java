@@ -156,7 +156,7 @@ public class V2AuMover {
   private static String currentCu;
   private int auCount = 0;
   private PluginManager pluginManager;
-  private List<ArchivalUnit> auList;
+  private List<ArchivalUnit> auList= new ArrayList<>();
   private int ausToMove =0;
 
   public V2AuMover() {
