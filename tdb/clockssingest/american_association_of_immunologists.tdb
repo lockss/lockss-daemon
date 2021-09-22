@@ -204,14 +204,14 @@
         au < aai.ClockssAAIDrupalPlugin ; manifest ; exists ; 2008 ; The Journal of Immunology Volume 181 ; 181 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; manifest ; exists ; 2009 ; The Journal of Immunology Volume 182 ; 182 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; manifest ; exists ; 2009 ; The Journal of Immunology Volume 183 ; 183 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2010 ; The Journal of Immunology Volume 184 ; 184 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2010 ; The Journal of Immunology Volume 185 ; 185 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2011 ; The Journal of Immunology Volume 186 ; 186 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2011 ; The Journal of Immunology Volume 187 ; 187 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2012 ; The Journal of Immunology Volume 188 ; 188 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2012 ; The Journal of Immunology Volume 189 ; 189 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2013 ; The Journal of Immunology Volume 190 ; 190 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2013 ; The Journal of Immunology Volume 191 ; 191 ; https://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2010 ; The Journal of Immunology Volume 184 ; 184 ; https://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2010 ; The Journal of Immunology Volume 185 ; 185 ; https://www.jimmunol.org/ ; reingest5.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2011 ; The Journal of Immunology Volume 186 ; 186 ; https://www.jimmunol.org/ ; reingest1.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2011 ; The Journal of Immunology Volume 187 ; 187 ; https://www.jimmunol.org/ ; reingest2.clockss.org:8085 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2012 ; The Journal of Immunology Volume 188 ; 188 ; https://www.jimmunol.org/ ; reingest3.clockss.org:8083 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2012 ; The Journal of Immunology Volume 189 ; 189 ; https://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2013 ; The Journal of Immunology Volume 190 ; 190 ; https://www.jimmunol.org/ ; reingest5.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2013 ; The Journal of Immunology Volume 191 ; 191 ; https://www.jimmunol.org/ ; reingest1.clockss.org:8082 >
         au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; The Journal of Immunology Volume 192 ; 192 ; http://www.jimmunol.org/ ; >
         au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; The Journal of Immunology Volume 193 ; 193 ; http://www.jimmunol.org/ ; >
         au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; The Journal of Immunology Volume 194 ; 194 ; http://www.jimmunol.org/ ; >
@@ -219,7 +219,7 @@
         au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; The Journal of Immunology Volume 196 [superseded] ; 196 ; http://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2016 ; The Journal of Immunology Volume 196 ; 196 ; http://www.jimmunol.org/ ; >
         au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; The Journal of Immunology Volume 197 [superseded] ; 197 ; http://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2016 ; The Journal of Immunology Volume 197 ; 197 ; http://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2016 ; The Journal of Immunology Volume 197 ; 197 ; http://www.jimmunol.org/ ; reingest3.clockss.org:8083 >
         au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2017 ; The Journal of Immunology Volume 198 ; 198 ; http://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2017 ; The Journal of Immunology Volume 199 ; 199 ; http://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2018 ; The Journal of Immunology Volume 200 ; 200 ; http://www.jimmunol.org/ ; >
