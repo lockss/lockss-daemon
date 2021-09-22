@@ -2548,6 +2548,15 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       {
       #param[base_url] = http://qualitysafety.bmj.com/
 
+      au < bmj.BMJDrupalPlugin ; exists ; 2001 ; BMJ Quality & Safety Volume 10 ; 10 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2002 ; BMJ Quality & Safety Volume 11 ; 11 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2003 ; BMJ Quality & Safety Volume 12 ; 12 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2004 ; BMJ Quality & Safety Volume 13 ; 13 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2005 ; BMJ Quality & Safety Volume 14 ; 14 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2006 ; BMJ Quality & Safety Volume 15 ; 15 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2007 ; BMJ Quality & Safety Volume 16 ; 16 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2008 ; BMJ Quality & Safety Volume 17 ; 17 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2009 ; BMJ Quality & Safety Volume 18 ; 18 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2010 ; BMJ Quality & Safety Volume 19 ; 19 ; https://qualitysafety.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 2011 ; BMJ Quality & Safety Volume 20 ; 20 ; http://qualitysafety.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 2012 ; BMJ Quality & Safety Volume 21 ; 21 ; http://qualitysafety.bmj.com/ >
