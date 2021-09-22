@@ -8,6 +8,8 @@
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified
 
+    #move to Wiley, 2021
+
   {
     title <
       name = In Practice ;
@@ -15,8 +17,6 @@
       eissn = 2042-7689 
     >
     #param[base_url] = http://inpractice.bmj.com/
-    #move to Wiley, 2021
-
 
     au < HighWirePressH20Plugin ; down ; 1979 ; In Practice Volume 1 ; 1 ; http://inpractice.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1980 ; In Practice Volume 2 ; 2 ; http://inpractice.bmj.com/ >
