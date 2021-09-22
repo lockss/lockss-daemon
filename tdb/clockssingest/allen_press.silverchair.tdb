@@ -8,11 +8,10 @@
     info[platform] = Silverchair
   >
 
-  #param[base_url] = https://allenpress.com/ #comment out this url
   plugin = org.lockss.plugin.silverchair.allenpress.ClockssAllenPressSilverchairPlugin
   implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
 
-    {
+  {
 
     title <
       name = Journal of Graduate Medical Education ;
@@ -21,9 +20,18 @@
     >
 
     param[journal_id] = jgme
+    {
     param[base_url] = https://meridian.allenpress.com/
 
-    au < crawling ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education 12 ; 12 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Journal of Graduate Medical Education 11 ; 11 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Journal of Graduate Medical Education 10 ; 10 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Journal of Graduate Medical Education 11 ; 11 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education 12 ; 12 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Journal of Graduate Medical Education 13 ; 13 ; >
     }
+    {
+    param[base_url] = https://allenpress.com/
+
+    au < superseded ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education 12 [superseded] ; 12 ; >
+    }
+  }
 }
