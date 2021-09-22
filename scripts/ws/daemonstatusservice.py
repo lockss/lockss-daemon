@@ -440,7 +440,7 @@ def query_tdb_titles_by_auid(host, username, password, auid, select="*"):
     try:
         # first we get the publisher given the auid and filter the query
         au_journal = client.service.getAuStatus(auId=auid)['journalTitle']
-        query += " WHERE name='{}'".format(au_journal)
+        query += " WHERE name={}".format(repr(au_journal))
         ret = client.service.queryTdbTitles(tdbTitleQuery=query)
         return zeep.helpers.serialize_object(ret)
     except zeep.exceptions.Fault as e:
