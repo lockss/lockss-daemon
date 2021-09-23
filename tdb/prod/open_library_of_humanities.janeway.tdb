@@ -5,7 +5,7 @@
     info[platform] = Janeway/OAI
   >
   
-    plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
+    plugin = org.lockss.plugin.janeway.olh.OLHPlugin
     param[oai_granularity] = YYYY-MM-DD
     implicit < status ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
@@ -26,8 +26,8 @@
     au < doNotProcess ; 2017 ; 5 ; Comics Grid Volume 2017 ; 2017 ; >
     au < doNotProcess ; 2018 ; 6 ; Comics Grid Volume 2018 ; 2018 ; >
     au < doNotProcess ; 2019 ; 7 ; Comics Grid Volume 2019 ; 2019 ; >
-    au < manifest ; 2020 ; 8 ; Comics Grid Volume 2020 ; 2020 ; >
-    au < manifest ; 2021 ; 9 ; Comics Grid Volume 2021 ; 2021 ; >
+    au < exists ; 2020 ; 8 ; Comics Grid Volume 2020 ; 2020 ; >
+    au < exists ; 2021 ; 9 ; Comics Grid Volume 2021 ; 2021 ; >
 
   }
 
@@ -41,16 +41,16 @@
 
       param[base_url] = https://orbit.openlibhums.org/
 
-      au < manifest ; 2012 ; 1 ; Orbit: A Journal of American Literature Volume 2012 ; 2012 ; >
-      au < manifest ; 2013 ; 2 ; Orbit: A Journal of American Literature Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 3 ; Orbit: A Journal of American Literature Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 4 ; Orbit: A Journal of American Literature Volume 2015 ; 2015 ; >
-      au < manifest ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
-      au < manifest ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
-      au < manifest ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
-      au < manifest ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; >
-      au < manifest ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; >
-      au < manifest ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; >
+      au < exists ; 2012 ; 1 ; Orbit: A Journal of American Literature Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 2 ; Orbit: A Journal of American Literature Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 3 ; Orbit: A Journal of American Literature Volume 2014 ; 2014 ; >
+      au < exists ; 2015 ; 4 ; Orbit: A Journal of American Literature Volume 2015 ; 2015 ; >
+      au < exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
+      au < exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
+      au < exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
+      au < exists ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; >
+      au < exists ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; >
+      au < exists ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; >
 
   }
 
