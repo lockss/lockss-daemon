@@ -71,7 +71,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; finished ; finished ; 2018 ; Drug Metabolism and Disposition Volume 46 ; 46 ; http://dmd.aspetjournals.org/ ; reingest2.clockss.org:8085 >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; http://dmd.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Drug Metabolism and Disposition Volume 48 ; 48 ; http://dmd.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; testing ; exists ; 2021 ; Drug Metabolism and Disposition Volume 49 ; 49 ; https://dmd.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; ready ; exists ; 2021 ; Drug Metabolism and Disposition Volume 49 ; 49 ; https://dmd.aspetjournals.org/ ; >
 
     }
   }
