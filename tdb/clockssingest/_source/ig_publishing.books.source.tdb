@@ -20,7 +20,7 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     au < readySource ; crawling ; 2020 ; IG Publishing Books Source Content 2020 ; 2020 >
-    au < ready ; exists ; 2021 ; IG Publishing Books Source Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2021 ; IG Publishing Books Source Content 2021 ; 2021 >
 
   }
 
