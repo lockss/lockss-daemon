@@ -134,12 +134,19 @@ public class CachedUrlRequestBody extends RequestBody {
     // Craft a new HTTP response object representation from the artifact
     BasicHttpResponse response = new BasicHttpResponse(STATUS_LINE_OK);
     // Create an InputStreamEntity from artifact InputStream
-    response.setEntity(new InputStreamEntity(artifactCu.getUnfilteredInputStream()));
-    // Add artifact headers into HTTP response
-    CIProperties props = artifactCu.getProperties();
-    if (props != null) {
-      ((Set<String>) ((Map) props).keySet()).forEach(
-        key -> response.addHeader(key, props.getProperty(key)));
+    try {
+      InputStream is = artifactCu.getUnfilteredInputStream();
+      response.setEntity(new InputStreamEntity(artifactCu.getUnfilteredInputStream()));
+      // Add artifact headers into HTTP response
+      CIProperties props = artifactCu.getProperties();
+      if (props != null) {
+        ((Set<String>) ((Map) props).keySet()).forEach(
+          key -> response.addHeader(key, props.getProperty(key)));
+      }
+    }
+    catch (Exception ex) {
+      log.error("Unable to open input stream for " + artifactCu.getUrl(), ex);
+      AuUtil.safeRelease(artifactCu);
     }
     return response;
   }
@@ -168,6 +175,5 @@ public class CachedUrlRequestBody extends RequestBody {
       Util.closeQuietly(source);
       AuUtil.safeRelease(artifactCu);
     }
-
   }
 }

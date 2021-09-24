@@ -39,6 +39,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 import java.util.stream.Collectors;
+import okhttp3.Dispatcher;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -58,6 +59,7 @@ import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.PluginManager;
 import org.lockss.repository.RepoSpec;
 import org.lockss.state.AuState;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
@@ -86,6 +88,18 @@ public class V2AuMover {
 
   private static final Logger log = Logger.getLogger(V2AuMover.class);
   private final int maxRequests;
+
+  private static final String THREADPOOL_PREFIX = PREFIX + "threadPool.";
+
+  /** Max number of background threads running UI-initiated hashes */
+  static final String PARAM_THREADPOOL_SIZE =
+    THREADPOOL_PREFIX + "size";
+  static final int DEFAULT_THREADPOOL_SIZE = 2;
+
+  /** Duration after which idle threads will be terminated..  -1 = never */
+  public static final String PARAM_THREADPOOL_KEEPALIVE =
+    THREADPOOL_PREFIX + "keepAlive";
+  static final long DEFAULT_THREADPOOL_KEEPALIVE = 5 * Constants.MINUTE;
 
 
   /**
@@ -153,11 +167,16 @@ public class V2AuMover {
   private final boolean debugRepoReq;
   private final boolean debugConfigReq;
 
-  private static String currentCu;
-  private int auCount = 0;
+  private String currentAu;
+  private String currentCu;
   private PluginManager pluginManager;
   private List<ArchivalUnit> auList= new ArrayList<>();
   private int ausToMove =0;
+  private Dispatcher dispatcher;
+  private long startTime;
+  private int auCount = 0;
+  boolean allCusQueued=false;
+
 
   public V2AuMover() {
     this(null, null, null, null);
@@ -196,7 +215,7 @@ public class V2AuMover {
    * @throws IOException
    */
   public void moveAllAus() throws IOException {
-    auList = pluginManager.getAllAus();
+    auList.addAll(pluginManager.getAllAus());
     ausToMove=auList.size();
     auCount=0;
     log.debug("Moving all " + ausToMove + " aus.");
@@ -243,7 +262,9 @@ public class V2AuMover {
     repoClient.setUserAgent(userAgent);
     repoClient.setBasePath(rsRestLocation);
     repoClient.setDebugging(debugRepoReq);
-    repoClient.getHttpClient().dispatcher().setMaxRequests(maxRequests);
+    dispatcher = repoClient.getHttpClient().dispatcher();
+//   dispatcher().setMaxRequests(maxRequests);
+    log.debug("Dispatcher - max requests: " + dispatcher.getMaxRequests());
     // Assign client to CollectionsApi and StatusApi
     rsStatusApi = new org.lockss.laaws.api.rs.StatusApi(repoClient);
     rsCollectionsApi = new StreamingCollectionsApi(repoClient);
@@ -279,20 +300,21 @@ public class V2AuMover {
     cfgAusApi = new AusApi(configClient);
   }
 
-  protected void moveNextAu()  throws IOException {
+  protected void moveNextAu() throws IOException {
     if(auCount < auList.size()) {
       ArchivalUnit au = auList.get(auCount);
-      log.debug("Moving " + auCount+1 + " of " + auList.size());
+      allCusQueued=false;
       cuVersionsMoved=0;
       cuMoved=0;
+      auCount++;
+      log.debug("Moving " + auCount + " of " + auList.size());
       moveAu(au);
     }
   }
 
   protected void moveAu(ArchivalUnit au) throws IOException {
-    long startTime = System.currentTimeMillis(); // Get the start Time
-    long endTime;
-    String currentAu = au.getAuId();
+    startTime = System.currentTimeMillis(); // Get the start Time
+    currentAu = au.getAuId();
     String auName = au.getName();
     log.info("Handling request to move AU: " + auName);
     log.info("AuId: " + currentAu);
@@ -310,23 +332,10 @@ public class V2AuMover {
       }
       log.info(auName + ": Moving AU Artifacts...");
       moveAuArtifacts(au);
-      while (repoClient.getHttpClient().dispatcher().runningCallsCount() != 0)
-        ;
-      log.info(auName + ": Moving AU State...");
-      moveAuState(au);
-      log.info(auName + ": Moving AU Configuration...");
-      moveAuConfig(au);
-      auCount++;
-      endTime = System.currentTimeMillis();
-      log.info(au.getName() + ": Successfully moved AU " + au.getName() + " Artifacts.");
-      log.info("CachedUrls Moved: " + cuMoved + "     Artifacts Moved: " + cuVersionsMoved +
-        "   runTime (secs): " + (endTime - startTime) / 1000);
-      moveNextAu();
+      finishAuMove(au);
     } catch (ApiException apie) {
-      log.error("Attempt to move Au " + auName + " failed:" + apie.getCode() + ": "
-        + apie.getResponseBody());
-      throw new IOException("Attempt to move Au " + auName + " failed:" + apie.getCode() + ": "
-        + apie.getResponseBody());
+      log.error(auName + ": Attempt to move Au failed:" + apie.getCode() + ": "
+        + apie.getMessage());
     }
   }
 
@@ -360,69 +369,87 @@ public class V2AuMover {
       List<Artifact> cuArtifacts = auArtifacts.stream()
         .filter(artifact -> artifact.getUri().equals(currentCu))
         .collect(Collectors.toList());
-      log.debug2(currentCu + ": Found " + cuArtifacts.size() + " previously moved artifacts");
+      log.debug(currentCu + ": Found " + cuArtifacts.size() + " previously moved artifacts");
       moveCuVersions(cachedUrl, cuArtifacts);
       cuMoved++;
     }
-  }
+    allCusQueued=true;
+   }
 
-  protected void moveAuConfig(ArchivalUnit au) throws ApiException {
+  protected void moveAuConfig(ArchivalUnit au) {
     Configuration v1config = au.getConfiguration();
     AuConfiguration v2config = new AuConfiguration().auId(au.getAuId());
-
+    String auName=au.getName();
     if (v1config != null) {
-      // copy the keys
-      v1config.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
-        .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
-      // send the configuration
-      cfgAusApi.putAuConfig(au.getAuId(), v2config);
-      log.info(au.getName() + ": Successfully moved AU Configuration");
+      try {
+        // copy the keys
+        v1config.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
+          .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
+        // send the configuration
+        cfgAusApi.putAuConfig(au.getAuId(), v2config);
+        log.info(auName + ": Successfully moved AU Configuration.");
+      } catch (ApiException apie) {
+        log.error(auName + ": Attempt to move au configuration failed: " + apie.getCode() +
+          "- " + apie.getMessage());
+      }
     } else {
-      // TODO: should this be an error or a warning?
-      log.warning(au.getName() + ": No Configuration found for au");
+      log.warning(auName + ": No Configuration found for au");
     }
   }
 
-  protected void moveAuState(ArchivalUnit au) throws ApiException {
+  protected void moveAuState(ArchivalUnit au) {
     AuState v1State = AuUtil.getAuState(au);
+    String auName=au.getName();
     if (v1State != null) {
-      V2AuStateBean v2State = new V2AuStateBean(v1State);
-      cfgAusApi.patchAuState(au.getAuId(), v2State.toMap(), makeCookie());
+      try {
+        V2AuStateBean v2State = new V2AuStateBean(v1State);
+        cfgAusApi.patchAuState(au.getAuId(), v2State.toMap(), makeCookie());
+        log.info(auName + ": Successfully moved AU State.");
+      } catch (ApiException apie) {
+        log.error(auName + ": Attempt to move au state failed: " + apie.getCode() +
+          "- " + apie.getMessage());
+      }
+    }
+    else {
+      log.warning(auName + ": No State information found for au");
     }
   }
 
-  private void moveCuVersions(CachedUrl cachedUrl, List<Artifact> cuArtifacts)
-      throws ApiException {
+  private void moveCuVersions(CachedUrl cachedUrl, List<Artifact> cuArtifacts) {
     String auid = cachedUrl.getArchivalUnit().getAuId();
+    String uri = cachedUrl.getUrl();
     CachedUrl[] cu_vers = cachedUrl.getCuVersions();
     for (CachedUrl cu : cu_vers) {
-      String uri = cu.getUrl();
-      String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
-      if(StringUtil.isNullString(fetchTime)) {
-        log.warning(uri +" version " + cu.getVersion() + " has null fetchTime.");
-      }
-      else {
-        boolean foundMatch=false;
-        Long collectionDate = Long.parseLong(fetchTime);
-        // if we've moved at least one version
-        if (cuArtifacts.size() > 0) {
+      try {
+        Long collectionDate = null;
+        String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
+        boolean skip = false;
+        if (fetchTime != null)
+          collectionDate = Long.parseLong(fetchTime);
+        if (collectionDate != null) {
           for (Artifact artifact : cuArtifacts) {
             if (collectionDate.equals(artifact.getCollectionDate())) {
-              foundMatch = true;
+              skip = true;
               break;
             }
           }
         }
-        if(!foundMatch) {
-          log.debug2("Moving cu version " + cu.getVersion() + " - fetched at " +fetchTime);
-          moveArtifact(auid, uri, collectionDate, cu, collection);
+        if (!skip) {
+          log.debug2("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
+          createArtifact(auid, uri, collectionDate, cu, collection);
         }
+      } catch( ApiException apie) {
+        log.error(uri + ": failed to move version: " + cu.getVersion() + ": "+
+          apie.getCode() + " - " + apie.getMessage());
+      } finally {
+        AuUtil.safeRelease(cu);
       }
     }
     log.debug2("Completed move of all versions of " + currentCu);
   }
 
-  private void moveArtifact(String auid, String uri, Long collectionDate,
+
+  private void createArtifact(String auid, String uri, Long collectionDate,
     CachedUrl cu, String collectionId) throws ApiException {
     rsCollectionsApi.createArtifactAsync(collectionId, auid, uri, cu, collectionDate,
       new CreateArtifactCallback());
@@ -436,6 +463,27 @@ public class V2AuMover {
     cuVersionsMoved++;
   }
 
+  private void finishAuMove(ArchivalUnit au) throws IOException{
+    do { //Wait until we are done the processing
+      try {
+        Thread.sleep(200);
+      } catch (InterruptedException e) {
+        throw new RuntimeException(e);
+      }
+    } while (dispatcher.runningCallsCount() != 0 );
+    String auName = au.getName();
+    log.info(auName + ": Moving AU State...");
+    moveAuState(au);
+    log.info(auName + ": Moving AU Configuration...");
+    moveAuConfig(au);
+    log.info(auName + ": Successfully moved AU Artifacts.");
+    if (log.isDebug()) {
+      long endTime = System.currentTimeMillis();
+      log.debug("CachedUrls Moved: " + cuMoved + "     Artifacts Moved: " + cuVersionsMoved +
+        "   runTime (secs): " + (endTime - startTime) / 1000);
+    }
+    moveNextAu();
+  }
   // cfg utilities
 
   /**
