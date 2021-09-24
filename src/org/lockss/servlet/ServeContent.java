@@ -1397,6 +1397,10 @@ public class ServeContent extends LockssServlet {
       if (contentEncoding != null) {
         if (log.isDebug2())
           log.debug2("Wrapping Content-Encoding: " + contentEncoding);
+        // XXX If/when upstream compression is again supported, if
+        // uncompressing fails, should act as if there's no rewriter.
+        // (Currently tries to rewrite probably-compressed stream,
+        // which is then recompressed by servlet response filter.)
 	InputStream uncResp =
 	  StreamUtil.getUncompressedInputStreamOrFallback(respStrm,
 							  contentEncoding,
@@ -1483,9 +1487,15 @@ public class ServeContent extends LockssServlet {
         continue;
       }
 
-      // XXX Conceivably should suppress Accept-Encoding: header if it
-      // specifies an encoding we don't understand, as that would prevent
-      // us from rewriting.
+      // Suppress Accept-Encoding: header as it may specify an
+      // encoding we don't understand, which would prevent us from
+      // rewriting.  In order to fetch compressed content from
+      // publisher, must either compute intersection of client's
+      // Accept-Encoding and what we understand, or send our normal
+      // list and always uncompress.
+      if (HttpFields.__AcceptEncoding.equalsIgnoreCase(hdr)) {
+        continue;
+      }
 
       // copy request headers to connection
       Enumeration vals = req.getHeaders(hdr);
