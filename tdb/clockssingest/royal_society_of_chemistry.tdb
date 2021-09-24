@@ -80,7 +80,7 @@
       au < finished ; manifest ; 2018 ; Analytical Methods Volume 10 ; 10 ; 2018 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Analytical Methods Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Analytical Methods Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Analytical Methods Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Analytical Methods Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -576,7 +576,7 @@
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 226 ; 226 ; 2021 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 227 ; 227 ; 2021 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 228 ; 228 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Faraday Discussions Volume 229 ; 229 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Faraday Discussions Volume 229 ; 229 ; 2021 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 231 ; 231 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 232 ; 232 ; 2021 ; https://pubs.rsc.org/ ; >
@@ -898,7 +898,7 @@
       au < finished ; manifest ; 2018 ; Nanoscale Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Nanoscale Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Nanoscale Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Nanoscale Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Nanoscale Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -939,7 +939,7 @@
       au < finished ; manifest ; 2018 ; Natural Product Reports Volume 35 ; 35 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Natural Product Reports Volume 36 ; 36 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Natural Product Reports Volume 37 ; 37 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Natural Product Reports Volume 38 ; 38 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Natural Product Reports Volume 38 ; 38 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -978,7 +978,7 @@
       au < finished ; manifest ; 2018 ; New Journal of Chemistry Volume 42 ; 42 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; New Journal of Chemistry Volume 43 ; 43 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; New Journal of Chemistry Volume 44 ; 44 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; New Journal of Chemistry Volume 45 ; 45 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; New Journal of Chemistry Volume 45 ; 45 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1012,7 +1012,7 @@
       au < finished ; manifest ; 2018 ; Organic & Biomolecular Chemistry Volume 16 ; 16 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Organic & Biomolecular Chemistry Volume 17 ; 17 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Organic & Biomolecular Chemistry Volume 18 ; 18 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Organic & Biomolecular Chemistry Volume 19 ; 19 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Organic & Biomolecular Chemistry Volume 19 ; 19 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1503,7 +1503,7 @@
       au < finished ; manifest ; 2018 ; Environmental Science: Nano Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Environmental Science: Nano Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Environmental Science: Nano Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Environmental Science: Nano Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Environmental Science: Nano Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1527,7 +1527,7 @@
       au < finished ; manifest ; 2018 ; Environmental Science: Processes & Impacts Volume 20 ; 20 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Environmental Science: Processes & Impacts Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Environmental Science: Processes & Impacts Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Environmental Science: Processes & Impacts Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Environmental Science: Processes & Impacts Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1836,7 +1836,7 @@
       au < finished ; manifest ; 2018 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2569,7 +2569,7 @@
       au < finished ; manifest ; 2018 ; Organic Chemistry Frontiers Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Organic Chemistry Frontiers Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Organic Chemistry Frontiers Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Organic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Organic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2918,7 +2918,7 @@
       au < finished ; manifest ; 2018 ; Reaction Chemistry & Engineering Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Reaction Chemistry & Engineering Volume 4 ; 4 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Reaction Chemistry & Engineering Volume 5 ; 5 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Reaction Chemistry & Engineering Volume 6 ; 6 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Reaction Chemistry & Engineering Volume 6 ; 6 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
