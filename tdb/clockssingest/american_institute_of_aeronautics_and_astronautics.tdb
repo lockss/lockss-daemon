@@ -492,17 +492,17 @@
     au < finished ; frozen ; 2006 ; Journal of Spacecraft and Rockets Volume 43 ; 43 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2007 ; Journal of Spacecraft and Rockets Volume 44 ; 44 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2008 ; Journal of Spacecraft and Rockets Volume 45 ; 45 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2009 ; Journal of Spacecraft and Rockets Volume 46 ; 46 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Journal of Spacecraft and Rockets Volume 47 ; 47 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2011 ; Journal of Spacecraft and Rockets Volume 48 ; 48 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Journal of Spacecraft and Rockets Volume 49 ; 49 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Journal of Spacecraft and Rockets Volume 50 ; 50 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Journal of Spacecraft and Rockets Volume 51 ; 51 ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Spacecraft and Rockets Volume 52 ; 52 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Journal of Spacecraft and Rockets Volume 53 ; 53 ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2009 ; Journal of Spacecraft and Rockets Volume 46 ; 46 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Journal of Spacecraft and Rockets Volume 47 ; 47 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Journal of Spacecraft and Rockets Volume 48 ; 48 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Journal of Spacecraft and Rockets Volume 49 ; 49 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Journal of Spacecraft and Rockets Volume 50 ; 50 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Journal of Spacecraft and Rockets Volume 51 ; 51 ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Spacecraft and Rockets Volume 52 ; 52 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Journal of Spacecraft and Rockets Volume 53 ; 53 ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Journal of Spacecraft and Rockets Volume 54 ; 54 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; Journal of Spacecraft and Rockets Volume 55 ; 55 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2019 ; Journal of Spacecraft and Rockets Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2018 ; Journal of Spacecraft and Rockets Volume 55 ; 55 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; Journal of Spacecraft and Rockets Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; Journal of Spacecraft and Rockets Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2021 ; Journal of Spacecraft and Rockets Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
 
@@ -518,23 +518,23 @@
     >
     param[journal_id] = jtht
 
-    au < finished ; crawling ; 1987 ; Journal of Thermophysics and Heat Transfer Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1988 ; Journal of Thermophysics and Heat Transfer Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1989 ; Journal of Thermophysics and Heat Transfer Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1990 ; Journal of Thermophysics and Heat Transfer Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1991 ; Journal of Thermophysics and Heat Transfer Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1992 ; Journal of Thermophysics and Heat Transfer Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1993 ; Journal of Thermophysics and Heat Transfer Volume 7 ; 7 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1994 ; Journal of Thermophysics and Heat Transfer Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1995 ; Journal of Thermophysics and Heat Transfer Volume 9 ; 9 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; Journal of Thermophysics and Heat Transfer Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Journal of Thermophysics and Heat Transfer Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Journal of Thermophysics and Heat Transfer Volume 12 ; 12 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Journal of Thermophysics and Heat Transfer Volume 13 ; 13 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2000 ; Journal of Thermophysics and Heat Transfer Volume 14 ; 14 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2001 ; Journal of Thermophysics and Heat Transfer Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2002 ; Journal of Thermophysics and Heat Transfer Volume 16 ; 16 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2003 ; Journal of Thermophysics and Heat Transfer Volume 17 ; 17 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1987 ; Journal of Thermophysics and Heat Transfer Volume 1 ; 1 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1988 ; Journal of Thermophysics and Heat Transfer Volume 2 ; 2 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1989 ; Journal of Thermophysics and Heat Transfer Volume 3 ; 3 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1990 ; Journal of Thermophysics and Heat Transfer Volume 4 ; 4 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1991 ; Journal of Thermophysics and Heat Transfer Volume 5 ; 5 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1992 ; Journal of Thermophysics and Heat Transfer Volume 6 ; 6 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1993 ; Journal of Thermophysics and Heat Transfer Volume 7 ; 7 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1994 ; Journal of Thermophysics and Heat Transfer Volume 8 ; 8 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1995 ; Journal of Thermophysics and Heat Transfer Volume 9 ; 9 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; Journal of Thermophysics and Heat Transfer Volume 10 ; 10 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1997 ; Journal of Thermophysics and Heat Transfer Volume 11 ; 11 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Journal of Thermophysics and Heat Transfer Volume 12 ; 12 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Journal of Thermophysics and Heat Transfer Volume 13 ; 13 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2000 ; Journal of Thermophysics and Heat Transfer Volume 14 ; 14 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2001 ; Journal of Thermophysics and Heat Transfer Volume 15 ; 15 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2002 ; Journal of Thermophysics and Heat Transfer Volume 16 ; 16 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2003 ; Journal of Thermophysics and Heat Transfer Volume 17 ; 17 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2004 ; Journal of Thermophysics and Heat Transfer Volume 18 ; 18 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2005 ; Journal of Thermophysics and Heat Transfer Volume 19 ; 19 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2006 ; Journal of Thermophysics and Heat Transfer Volume 20 ; 20 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
