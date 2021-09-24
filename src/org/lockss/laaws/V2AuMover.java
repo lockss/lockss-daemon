@@ -212,7 +212,7 @@ public class V2AuMover {
 
   /**
    * Move all available Aus.
-   * @throws IOException
+   * @throws IOException if error occurred while moving au.
    */
   public void moveAllAus() throws IOException {
     auList.addAll(pluginManager.getAllAus());
@@ -234,6 +234,11 @@ public class V2AuMover {
     }
   }
 
+  /**
+   * Move one Au
+   * @param au the ArchivalUnit to move
+   * @throws IOException
+   */
   public void moveOneAu(ArchivalUnit au) throws IOException {
     auCount=0;
     auList.add(au);
@@ -369,7 +374,8 @@ public class V2AuMover {
       List<Artifact> cuArtifacts = auArtifacts.stream()
         .filter(artifact -> artifact.getUri().equals(currentCu))
         .collect(Collectors.toList());
-      log.debug(currentCu + ": Found " + cuArtifacts.size() + " previously moved artifacts");
+      if(log.isDebug2())
+        log.debug2(currentCu + ": Found " + cuArtifacts.size() + " previously moved artifacts");
       moveCuVersions(cachedUrl, cuArtifacts);
       cuMoved++;
     }
@@ -418,31 +424,31 @@ public class V2AuMover {
   private void moveCuVersions(CachedUrl cachedUrl, List<Artifact> cuArtifacts) {
     String auid = cachedUrl.getArchivalUnit().getAuId();
     String uri = cachedUrl.getUrl();
-    CachedUrl[] cu_vers = cachedUrl.getCuVersions();
-    for (CachedUrl cu : cu_vers) {
-      try {
+    CachedUrl[] localVersions = cachedUrl.getCuVersions();
+    int start;
+    if (localVersions.length > cuArtifacts.size()) {
+      // we have at least one unmoved version
+      start = cuArtifacts.size();
+      // there are version of the cu which need to be moved.
+      for (int i = start; i < localVersions.length; i++) {
         Long collectionDate = null;
-        String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
-        boolean skip = false;
-        if (fetchTime != null)
-          collectionDate = Long.parseLong(fetchTime);
-        if (collectionDate != null) {
-          for (Artifact artifact : cuArtifacts) {
-            if (collectionDate.equals(artifact.getCollectionDate())) {
-              skip = true;
-              break;
-            }
+        CachedUrl cu = localVersions[i];
+        try {
+          String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
+          if (!StringUtil.isNullString(fetchTime)) {
+            collectionDate = Long.parseLong(fetchTime);
           }
-        }
-        if (!skip) {
+          else {
+            log.debug(uri + ":version: " + cu.getVersion() + " is missing fetch time.");
+          }
           log.debug2("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
           createArtifact(auid, uri, collectionDate, cu, collection);
+        } catch (ApiException apie) {
+          log.error(uri + ": failed to move version: " + cu.getVersion() + ": " +
+            apie.getCode() + " - " + apie.getMessage());
+        } finally {
+          AuUtil.safeRelease(cu);
         }
-      } catch( ApiException apie) {
-        log.error(uri + ": failed to move version: " + cu.getVersion() + ": "+
-          apie.getCode() + " - " + apie.getMessage());
-      } finally {
-        AuUtil.safeRelease(cu);
       }
     }
     log.debug2("Completed move of all versions of " + currentCu);
