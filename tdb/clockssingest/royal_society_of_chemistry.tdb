@@ -127,8 +127,8 @@
       param[journal_code] = oc
 
       #complete
-      au < manifest ; exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 ; 93 ; 1996 ; https://pubs.rsc.org/ ; >
-      au < finished ; manifest ; 1997 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < manifest ; exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1996] ; 93 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 1997 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1997] ; 93 ; 1997 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1998 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 1999 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2000 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 96 ; 96 ; 2000 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
