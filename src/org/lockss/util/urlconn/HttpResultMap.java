@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,20 +43,53 @@ import org.lockss.plugin.ContentValidationException;
 public class HttpResultMap implements CacheResultMap {
   static Logger log = Logger.getLogger("HttpResultMap");
 
-  int[] SuccessCodes = {200, 203, 304};
-  int[] RetrySameUrlCodes = { 408, 409, 413, 500, 502, 503, 504};
-  int[] MovePermCodes = {301};
-  int[] MoveTempCodes = { 307, 303, 302};
-  int[] UnimplementedCodes = {};
-  int[] PermissionCodes = { 401, 403,  407};
-  int[] ExpectedCodes = { 305, 402};
-  int[] RetryDeadLinkCodes = {};
-  int[] NoRetryDeadLinkCodes= {204, 300, 400, 404, 405, 406, 410};
-  int[] UnexpectedFailCodes = {
-    201, 202, 205, 206, 306,
-    411, 412, 416, 417, 501, 505};
-  int[] UnexpectedNoFailCodes = { 414, 415 };
+  /** Categories of HTTP response codes which the daemon normally
+   * treats similarly, along with the default Exception mapping and
+   * list of codes. */
+  public enum HttpResultCodeCategory {
+    SUCCESS(CacheSuccess.class,
+            200, 203, 304),
+    RETRY_SAME_URL(CacheException.RetrySameUrlException.class,
+                   408, 409, 413, 500, 502, 503, 504),
+    MOVE_PERM(CacheException.NoRetryPermUrlException.class,
+              301),
+    MOVE_TEMP(CacheException.NoRetryTempUrlException.class,
+              302, 303, 307),
+    UNIMPLEMENTED(CacheException.UnimplementedCodeException.class),
+    PERMISSION(CacheException.PermissionException.class,
+               401, 403,  407),
+    EXPECTED(CacheException.ExpectedNoRetryException.class,
+             305, 402),
+    RETRY_DEAD_LINK(CacheException.RetryDeadLinkException.class),
+    NO_RETRY_DEAD_LINK(CacheException.NoRetryDeadLinkException.class,
+                       204, 300, 400, 404, 405, 406, 410),
+    UNEXPECTED_FAIL(CacheException.UnexpectedNoRetryFailException.class,
+                    201, 202, 205, 206, 306, 411, 412, 416, 417, 501, 505),
+    UNEXPECTED_NO_FAIL(CacheException.UnexpectedNoRetryNoFailException.class,
+                       414, 415);
 
+    private Class exceptionClass;
+    private List<Integer> codes;
+
+    private HttpResultCodeCategory(Class exceptionClass, Integer... codes) {
+      this.exceptionClass = exceptionClass;
+      this.codes = Collections.unmodifiableList(Arrays.asList(codes));
+    }
+
+    /** Return the list of response codes comprising the category */
+    public List<Integer> getCodes() {
+      return codes;
+    }
+
+    /** Return the default Exception mapping */
+    public Class getExceptionClass() {
+      return exceptionClass;
+    }
+  }
+
+  public static List<Integer> getHttpResultCodesForCategory(HttpResultCodeCategory category) {
+    return category.getCodes();
+  }
 
   /** Abstracts the event we're determining how to handle.  Either an HTTP
    * response or an Exception */
@@ -345,29 +374,14 @@ public class HttpResultMap implements CacheResultMap {
 
   protected void initExceptionTable() {
     // HTTP result codes
-    storeArrayEntries(SuccessCodes, CacheSuccess.class);
-    storeArrayEntries(RetrySameUrlCodes,
-                      CacheException.RetrySameUrlException.class);
-    storeArrayEntries(MovePermCodes,
-                      CacheException.NoRetryPermUrlException.class);
-    storeArrayEntries(MoveTempCodes,
-                      CacheException.NoRetryTempUrlException.class);
-    storeArrayEntries(UnimplementedCodes,
-                      CacheException.UnimplementedCodeException.class);
-    storeArrayEntries(PermissionCodes,
-                      CacheException.PermissionException.class);
-    storeArrayEntries(ExpectedCodes,
-                      CacheException.ExpectedNoRetryException.class);
-    storeArrayEntries(UnexpectedFailCodes,
-                      CacheException.UnexpectedNoRetryFailException.class);
-    storeArrayEntries(UnexpectedNoFailCodes,
-                      CacheException.UnexpectedNoRetryNoFailException.class);
-    storeArrayEntries(RetryDeadLinkCodes,
-                      CacheException.RetryDeadLinkException.class);
-    storeArrayEntries(NoRetryDeadLinkCodes,
-                      CacheException.NoRetryDeadLinkException.class);
+    for (HttpResultCodeCategory category : HttpResultCodeCategory.values()) {
+      storeResultCategoryEntries(category, category.getExceptionClass());
+    }
 
     // IOExceptions
+    storeMapEntry(MalformedURLException.class,
+ 		  CacheException.MalformedURLException.class,
+		  "Malformed URL: %s");
     storeMapEntry(UnknownHostException.class,
  		  CacheException.RetryableNetworkException_2_30S.class,
 		  "Unknown host: %s");
@@ -393,7 +407,7 @@ public class HttpResultMap implements CacheResultMap {
     // Default ContentValidationException
     storeMapEntry(ContentValidationException.class,
 		  CacheException.UnretryableException.class);
-    // Specific ContentValidationException s
+    // Specific ContentValidationException's
     storeMapEntry(ContentValidationException.EmptyFile.class,
 		  CacheException.WarningOnly.class);
     storeMapEntry(ContentValidationException.WrongLength.class,
@@ -403,11 +417,21 @@ public class HttpResultMap implements CacheResultMap {
 
     storeMapEntry(ContentValidationException.ValidatorExeception.class,
 		  CacheException.UnexpectedNoRetryFailException.class);
-}
+  }
 
-  public void storeArrayEntries(int[] codeArray, Class exceptionClass) {
-    for (int i=0; i< codeArray.length; i++) {
-      storeMapEntry(codeArray[i], exceptionClass);
+  /** Set the exception for all result codes of specified category */
+  public void storeResultCategoryEntries(HttpResultCodeCategory category,
+                                         Class exceptionClass) {
+    for (int code : getHttpResultCodesForCategory(category)) {
+      storeMapEntry(code, exceptionClass);
+    }
+  }
+
+  /** Set the handler for all result codes of specified category */
+  public void storeResultCategoryEntries(HttpResultCodeCategory category,
+                                         CacheResultHandler handler) {
+    for (int code : getHttpResultCodesForCategory(category)) {
+      storeMapEntry(code, handler);
     }
   }
 
@@ -503,8 +527,16 @@ public class HttpResultMap implements CacheResultMap {
     exceptionTable.put(code, ei);
   }
 
+  @Deprecated
   public CacheException getMalformedURLException(Exception nestedException) {
-    return new CacheException.MalformedURLException(nestedException);
+    return getMalformedURLException(null, null, nestedException, null);
+  }
+
+  public CacheException getMalformedURLException(ArchivalUnit au,
+                                                 String url,
+                                                 Exception nestedException,
+                                                 String message) {
+    return mapException(au, url, nestedException, message);
   }
 
   public CacheException getRepositoryException(Exception nestedException) {

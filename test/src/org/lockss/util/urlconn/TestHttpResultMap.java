@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,9 +33,11 @@ import java.net.*;
 import java.util.*;
 
 import org.lockss.test.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.util.urlconn.HttpResultMap.HttpResultCodeCategory;
 
 public class TestHttpResultMap extends LockssTestCase {
   private HttpResultMap resultMap = null;
@@ -56,78 +54,59 @@ public class TestHttpResultMap extends LockssTestCase {
     super.tearDown();
   }
 
-  void assertX(int code, Class cls) {
-    CacheException exception = resultMap.mapException(null, "", code, "foo");
-    assertTrue("code:" + code, cls.isInstance(exception));
+  int[] SuccessCodes = {200, 203, 304};
+  int[] RetrySameUrlCodes = { 408, 409, 413, 500, 502, 503, 504};
+  int[] MovePermCodes = {301};
+  int[] MoveTempCodes = { 307, 303, 302};
+  int[] UnimplementedCodes = {};
+  int[] PermissionCodes = { 401, 403,  407};
+  int[] ExpectedCodes = { 305, 402};
+  int[] RetryDeadLinkCodes = {};
+  int[] NoRetryDeadLinkCodes= {204, 300, 400, 404, 405, 406, 410};
+  int[] UnexpectedFailCodes = {
+    201, 202, 205, 206, 306, 411, 412, 416, 417, 501, 505};
+  int[] UnexpectedNoFailCodes = { 414, 415 };
+
+  /** Assert that all the codes map to the expected exception */
+  void assertCodeMappings(int[] codes, Class cls) {
+    for (int code : codes) {
+      if (cls == null) {
+        assertNull("code " + code + " should be null, was " + cls, cls);
+      } else {
+        CacheException exception = resultMap.mapException(null, "", code, "foo");
+        assertTrue("code:" + code + ", " + exception + " isn't an instance of " + cls,
+                   cls.isInstance(exception));
+      }
+    }
   }
 
   public void testGetResultCodeException() {
     CacheException exception;
-    int result_code = 0;
     int ic;
 
-    //check unknown result code
-    exception = resultMap.mapException(null, "", result_code, "foo");
-    assertTrue("code " + result_code + ": " + exception,
-	       exception instanceof CacheException.UnknownCodeException);
-
-    // check Success result codes
-    exception = resultMap.mapException(null, "", 200, "foo");
-    assertNull("code " + result_code + ": " + exception, exception);
-    exception = resultMap.mapException(null, "", 203, "foo");
-    assertNull("code " + result_code + ": " + exception, exception);
-    exception = resultMap.mapException(null, "", 304, "foo");
-    assertNull("code " + result_code + ": " + exception, exception);
-
-    // check RetrySameUrlExceptions
-    assertX(408, CacheException.RetrySameUrlException.class);
-    assertX(409, CacheException.RetrySameUrlException.class);
-    assertX(413, CacheException.RetrySameUrlException.class);
-    assertX(500, CacheException.RetrySameUrlException.class);
-    assertX(502, CacheException.RetrySameUrlException.class);
-    assertX(503, CacheException.RetrySameUrlException.class);
-    assertX(504, CacheException.RetrySameUrlException.class);
-
-    // test the moved permanently codes
-    assertX(301, CacheException.NoRetryPermUrlException.class);
-
-    // test the moved temporarily codes
-    assertX(307, CacheException.NoRetryTempUrlException.class);
-    assertX(303, CacheException.NoRetryTempUrlException.class);
-    assertX(302, CacheException.NoRetryTempUrlException.class);
-
-    // test the UnimplementedCodeException
-
-    // test the ExpectedNoRetryException
-    assertX(305, CacheException.ExpectedNoRetryException.class);
-    assertX(402, CacheException.ExpectedNoRetryException.class);
-
-    // test the PermissionException codes
-    assertX(401, CacheException.PermissionException.class);
-    assertX(403, CacheException.PermissionException.class);
-    assertX(407, CacheException.PermissionException.class);
-
-    // test NoRetryDeadLinkException codes
-    assertX(204, CacheException.NoRetryDeadLinkException.class);
-    assertX(300, CacheException.NoRetryDeadLinkException.class);
-    assertX(400, CacheException.NoRetryDeadLinkException.class);
-    assertX(404, CacheException.NoRetryDeadLinkException.class);
-    assertX(405, CacheException.NoRetryDeadLinkException.class);
-    assertX(406, CacheException.NoRetryDeadLinkException.class);
-    assertX(410, CacheException.NoRetryDeadLinkException.class);
-
-    // test the UnexpectedNoRetryException codes
-    assertX(201, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(202, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(205, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(206, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(306, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(411, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(412, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(416, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(417, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(501, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(505, CacheException.UnexpectedNoRetryFailException.class);
+    // unknown result code
+    assertCodeMappings(new int[] {666},
+                       CacheException.UnknownCodeException.class);
+    assertCodeMappings(SuccessCodes, null);
+    assertCodeMappings(RetrySameUrlCodes,
+                       CacheException.RetrySameUrlException.class);
+    assertCodeMappings(MovePermCodes,
+                       CacheException.NoRetryPermUrlException.class);
+    assertCodeMappings(MoveTempCodes,
+                       CacheException.NoRetryTempUrlException.class);
+    assertCodeMappings(UnimplementedCodes, null);
+    assertCodeMappings(ExpectedCodes,
+                       CacheException.ExpectedNoRetryException.class);
+    assertCodeMappings(ExpectedCodes,
+                       CacheException.ExpectedNoRetryException.class);
+    assertCodeMappings(PermissionCodes,
+                       CacheException.PermissionException.class);
+    assertCodeMappings(NoRetryDeadLinkCodes,
+                       CacheException.NoRetryDeadLinkException.class);
+    assertCodeMappings(UnexpectedFailCodes,
+                       CacheException.UnexpectedNoRetryFailException.class);
+    assertCodeMappings(UnexpectedNoFailCodes,
+                       CacheException.UnexpectedNoRetryNoFailException.class);
   }
 
   public void testGetExceptionException() {
@@ -191,6 +170,27 @@ public class TestHttpResultMap extends LockssTestCase {
 	       CacheException.RetryableNetworkException_3_30S);
 
     exception = resultMap.mapException(null, "",
+				       new MalformedURLException("Mal URL: u:u"),
+				       "foo");
+    assertTrue(exception instanceof
+	       CacheException.MalformedURLException);
+    assertEquals("Mal URL: u:u", exception.getCause().getMessage());
+
+    exception =
+      resultMap.getMalformedURLException(null, "",
+                                         new MalformedURLException("Mal URL: u:x"),
+                                         "foo");
+    assertTrue(exception instanceof
+	       CacheException.MalformedURLException);
+    assertEquals("Mal URL: u:x", exception.getCause().getMessage());
+
+    exception =
+      resultMap.getRepositoryException(new RuntimeException("repo ex"));
+    assertTrue(exception instanceof
+	       CacheException.RepositoryException);
+    assertEquals("repo ex", exception.getCause().getMessage());
+
+    exception = resultMap.mapException(null, "",
 				       new ContentValidationException.EmptyFile("Empty File 42"),
 				       "foo");
     assertTrue(exception instanceof CacheException.WarningOnly);
@@ -221,50 +221,26 @@ public class TestHttpResultMap extends LockssTestCase {
   }
 
   public void testInitExceptionTable() {
-    int[] checkArray;
-    String   checkClassName;
-
-    // test the RetrySameUrlException
-    checkArray = resultMap.RetrySameUrlCodes;
-    checkExceptionClass(checkArray,
-			CacheException.RetrySameUrlException.class);
-
-    // test the RetryPermUrlException
-    checkArray = resultMap.MovePermCodes;
-    checkExceptionClass(checkArray,
-			CacheException.NoRetryPermUrlException.class);
-
-    // test the RetryTempUrlException
-    checkArray = resultMap.MoveTempCodes;
-    checkExceptionClass(checkArray,
-			CacheException.NoRetryTempUrlException.class);
-
-    // test the UnimplentedCodeException
-    checkArray = resultMap.UnimplementedCodes;
-    checkExceptionClass(checkArray,
-			CacheException.UnimplementedCodeException.class);
-
-    // test the ExpectedNoRetryException
-    checkArray = resultMap.ExpectedCodes;
-    checkExceptionClass(checkArray,
-			CacheException.ExpectedNoRetryException.class);
-
-   // test the UnexpectedNoRetryException
-    checkArray = resultMap.UnexpectedFailCodes;
-    checkExceptionClass(checkArray,
-			CacheException.UnexpectedNoRetryFailException.class);
-
-    checkArray = resultMap.UnexpectedNoFailCodes;
-    checkExceptionClass(checkArray,
-                        CacheException.UnexpectedNoRetryNoFailException.class);
-
-    checkArray = resultMap.RetryDeadLinkCodes;
-    checkExceptionClass(checkArray,
+    checkExceptionClass(RetrySameUrlCodes,
+                        CacheException.RetrySameUrlException.class);
+    checkExceptionClass(MovePermCodes,
+                        CacheException.NoRetryPermUrlException.class);
+    checkExceptionClass(MoveTempCodes,
+                        CacheException.NoRetryTempUrlException.class);
+    checkExceptionClass(UnimplementedCodes,
+                        CacheException.UnimplementedCodeException.class);
+    checkExceptionClass(PermissionCodes,
+                        CacheException.PermissionException.class);
+    checkExceptionClass(ExpectedCodes,
+                        CacheException.ExpectedNoRetryException.class);
+    checkExceptionClass(RetryDeadLinkCodes,
                         CacheException.RetryDeadLinkException.class);
-
-    checkArray = resultMap.NoRetryDeadLinkCodes;
-    checkExceptionClass(checkArray,
+    checkExceptionClass(NoRetryDeadLinkCodes,
                         CacheException.NoRetryDeadLinkException.class);
+    checkExceptionClass(UnexpectedFailCodes,
+                        CacheException.UnexpectedNoRetryFailException.class);
+    checkExceptionClass(UnexpectedNoFailCodes,
+                        CacheException.UnexpectedNoRetryNoFailException.class);
   }
 
   public void testClassTree() {
@@ -345,30 +321,49 @@ public class TestHttpResultMap extends LockssTestCase {
                exception instanceof CacheException.UnretryableException);
   }
 
-  public void testHttpResultHandlerInit() {
-    int[] handledCodes = {200, 405, 302};
-    CacheException exception;
-    int result_code = 0;
+  public void testHttpResultHandlerInit() throws PluginException {
+    // result handler that will be invoked for selected codes
+    CacheResultHandler h1 = new CacheResultHandler() {
+        public CacheException handleResult(ArchivalUnit au,
+                                           String url,
+                                           int responseCode) {
+          return new RecordingCacheException(au, url, responseCode, null);
+        }
+        public CacheException handleResult(ArchivalUnit au,
+                                           String url,
+                                           Exception ex) {
+          return new RecordingCacheException(au, url, -1, ex);
+        }};
 
-    MyHttpResultHandler handler = new MyHttpResultHandler();
-    handler.setHandledCodes(handledCodes);
+    MyHttpResultHandler handler = new MyHttpResultHandler() {
+        @Override
+        public void init(HttpResultMap map) {
+          map.storeResultCategoryEntries(HttpResultCodeCategory.MOVE_TEMP,
+                                         h1);
+          map.storeResultCategoryEntries(HttpResultCodeCategory.PERMISSION,
+                                         CacheException.RetryableNetworkException_5_60S.class);
+        }};
     handler.init(resultMap);
-    // now lets find out if we actually handle the codes.
-    // test the UnexpectedNoRetryException
-    for(int ic =0; ic < handledCodes.length; ic++) {
-      result_code = handledCodes[ic];
-      exception = resultMap.mapException(null, "", result_code, "foo");
-      assertClass("code:" + result_code,
-		  CacheException.class, exception);
-      assertNotClass("code:" + result_code,
-		     CacheException.UnknownCodeException.class, exception);
+    resultMap.storeMapEntry(667, CacheException.RetryableNetworkException_5_5M.class);
+
+    for (int code : new int[] {302, 303, 307}) {
+      CacheException exception = resultMap.mapException(null, "", code, "foo");
+      assertClass("code:" + code, CacheException.class, exception);
+      assertMatchesRE("code: " + code, exception.getMessage());
     }
+    for (int code : new int[] {401, 403,  407}) {
+      CacheException exception = resultMap.mapException(null, "", code, "foo");
+      assertClass("code:" + code, CacheException.RetryableNetworkException_5_60S.class, exception);
+      assertMatchesRE(code + " foo", exception.getMessage());
+    }
+    CacheException e667 = resultMap.mapException(null, "", 667, "bar");
+    assertClass("code: 667", CacheException.RetryableNetworkException_5_5M.class, e667);
+    assertMatchesRE("667 bar", e667.getMessage());
   }
 
   public void testHttpResultHandlerHandleCode() throws IOException {
     int[] handledCodes = {200, 405, 302};
     CacheException exception;
-    int result_code = 0;
 
     MyHttpResultHandler handler = new MyHttpResultHandler();
     handler.setHandledCodes(handledCodes);
@@ -410,7 +405,7 @@ public class TestHttpResultMap extends LockssTestCase {
   }
 
   private void checkExceptionClass(int[] checkArray,
-                                  Class checkClass) {
+                                   Class checkClass) {
     for (int ic = 0; ic < checkArray.length; ic++) {
       CacheException ex = resultMap.mapException(null, "",
 						 checkArray[ic], null);
@@ -445,6 +440,10 @@ public class TestHttpResultMap extends LockssTestCase {
       this.responseCode = responseCode;
       this.triggerException = triggerException;
     }
+
+    public String getMessage() {
+      return "code: " + responseCode;
+    }
   }
 
   static public class MyHttpResultHandler implements CacheResultHandler {
@@ -452,13 +451,6 @@ public class TestHttpResultMap extends LockssTestCase {
     private static Set<Exception> m_exceptions;
 
     public MyHttpResultHandler() {
-    }
-
-    public void init(CacheResultMap crmap) {
-      HttpResultMap map = (HttpResultMap)crmap;
-      if (m_returnCodes != null) {
-        map.storeArrayEntries(m_returnCodes, this);
-      }
     }
 
     void setHandledCodes(int[] returnCodes) {

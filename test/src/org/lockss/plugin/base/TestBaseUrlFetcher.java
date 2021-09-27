@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -243,6 +239,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
       fetcher.reset();
       fetcher._input = null;
       fetcher._headers = new CIProperties();
+      log.warning("NullPointerException expected");
       fetcher.fetch();
     } catch (Exception e) {
       fail("should not have thrown " + e);
