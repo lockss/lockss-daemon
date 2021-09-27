@@ -457,14 +457,14 @@
 
       param[au_oai_set] = checklist
 
-      au < exists ; exists ; 2010 ; 2010 ; Check List Volume 2010 ; 2010 ; https://checklist.pensoft.net/ ; >
-      au < exists ; exists ; 2011 ; 2011 ; Check List Volume 2011 ; 2011 ; https://checklist.pensoft.net/ ; >
-      au < exists ; exists ; 2012 ; 2012 ; Check List Volume 2012 ; 2012 ; https://checklist.pensoft.net/ ; >
-      au < exists ; exists ; 2013 ; 2013 ; Check List Volume 2013 ; 2013 ; https://checklist.pensoft.net/ ; >
-      au < exists ; exists ; 2014 ; 2014 ; Check List Volume 2014 ; 2014 ; https://checklist.pensoft.net/ ; >
-      au < exists ; exists ; 2015 ; 2015 ; Check List Volume 2015 ; 2015 ; https://checklist.pensoft.net/ ; >
-      au < exists ; exists ; 2016 ; 2016 ; Check List Volume 2016 ; 2016 ; https://checklist.pensoft.net/ ; >
-      au < exists ; exists ; 2017 ; 2017 ; Check List Volume 2017 ; 2017 ; https://checklist.pensoft.net/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Check List Volume 2010 ; 2010 ; https://checklist.pensoft.net/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Check List Volume 2011 ; 2011 ; https://checklist.pensoft.net/ ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Check List Volume 2012 ; 2012 ; https://checklist.pensoft.net/ ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Check List Volume 2013 ; 2013 ; https://checklist.pensoft.net/ ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Check List Volume 2014 ; 2014 ; https://checklist.pensoft.net/ ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Check List Volume 2015 ; 2015 ; https://checklist.pensoft.net/ ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Check List Volume 2016 ; 2016 ; https://checklist.pensoft.net/ ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Check List Volume 2017 ; 2017 ; https://checklist.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ ; >
