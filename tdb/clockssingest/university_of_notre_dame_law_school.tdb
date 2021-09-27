@@ -59,15 +59,15 @@
     au < manifest ; exists ; 2007 ; Journal of Legislation Volume 33 ; 33 ; https://scholarship.law.nd.edu/ ; >
     au < manifest ; exists ; 2008 ; Journal of Legislation Volume 34 ; 34 ; https://scholarship.law.nd.edu/ ; >
     au < manifest ; exists ; 2009 ; Journal of Legislation Volume 35 ; 35 ; https://scholarship.law.nd.edu/ ; >
-    au < finished ; manifest ; 2010 ; Journal of Legislation Volume 36 ; 36 ; https://scholarship.law.nd.edu/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2011 ; Journal of Legislation Volume 37 ; 37 ; https://scholarship.law.nd.edu/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2012 ; Journal of Legislation Volume 38 ; 38 ; https://scholarship.law.nd.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; Journal of Legislation Volume 36 ; 36 ; https://scholarship.law.nd.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2011 ; Journal of Legislation Volume 37 ; 37 ; https://scholarship.law.nd.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; Journal of Legislation Volume 38 ; 38 ; https://scholarship.law.nd.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journal of Legislation Volume 39 ; 39 ; http://scholarship.law.nd.edu/ ; >
     au < finished ; finished ; 2014 ; Journal of Legislation Volume 40 ; 40 ; http://scholarship.law.nd.edu/ ; >
     au < finished ; finished ; 2015 ; Journal of Legislation Volume 41 ; 41 ; http://scholarship.law.nd.edu/ ; >
     au < finished ; finished ; 2016 ; Journal of Legislation Volume 42 ; 42 ; http://scholarship.law.nd.edu/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; Journal of Legislation Volume 43 ; 43 ; http://scholarship.law.nd.edu/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; Journal of Legislation Volume 44 ; 44 ; https://scholarship.law.nd.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; Journal of Legislation Volume 43 ; 43 ; http://scholarship.law.nd.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; Journal of Legislation Volume 44 ; 44 ; https://scholarship.law.nd.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Journal of Legislation Volume 45 ; 45 ; https://scholarship.law.nd.edu/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal of Legislation Volume 46 ; 46 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 2021 ; Journal of Legislation Volume 47 ; 47 ; https://scholarship.law.nd.edu/ ; >
@@ -86,10 +86,10 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       param[journal_abbr] = ndjicl
 
-      au < finished ; manifest ; 2011 ; Notre Dame Journal of International & Comparative Law Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2012 ; Notre Dame Journal of International & Comparative Law Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Notre Dame Journal of International & Comparative Law Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Notre Dame Journal of International & Comparative Law Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; Notre Dame Journal of International & Comparative Law Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2012 ; Notre Dame Journal of International & Comparative Law Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Notre Dame Journal of International & Comparative Law Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Notre Dame Journal of International & Comparative Law Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; Notre Dame Journal of International & Comparative Law Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Notre Dame Journal of International & Comparative Law Volume 6 ; 6 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Notre Dame Journal of International & Comparative Law Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -135,12 +135,12 @@
       au < manifest ; exists ; 2007 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 21 ; 21 ; >
       au < manifest ; exists ; 2008 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 22 ; 22 ; >
       au < manifest ; exists ; 2009 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 23 ; 23 ; >
-      au < finished ; manifest ; 2010 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 25 ; 25 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 29 ; 29 ; reingest4.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2014 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 30 ; 30 ; >
       au < finished ; finished ; 2017 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       #nothing after 2017 as of 20201209
@@ -242,11 +242,11 @@
       au < manifest ; exists ; 2007 ; Notre Dame Law Review Volume 82 ; 82 ; >
       au < manifest ; exists ; 2008 ; Notre Dame Law Review Volume 83 ; 83 ; >
       au < manifest ; exists ; 2009 ; Notre Dame Law Review Volume 84 ; 84 ; >
-      au < finished ; manifest ; 2010 ; Notre Dame Law Review Volume 85 ; 85 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Notre Dame Law Review Volume 86 ; 86 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Notre Dame Law Review Volume 87 ; 87 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Notre Dame Law Review Volume 88 ; 88 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; Notre Dame Law Review Volume 89 ; 89 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; Notre Dame Law Review Volume 85 ; 85 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Notre Dame Law Review Volume 86 ; 86 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Notre Dame Law Review Volume 87 ; 87 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Notre Dame Law Review Volume 88 ; 88 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Notre Dame Law Review Volume 89 ; 89 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; Notre Dame Law Review Volume 90 ; 90 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Notre Dame Law Review Volume 91 ; 91 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Notre Dame Law Review Volume 92 ; 92 ; reingest4.clockss.org:8082 >
