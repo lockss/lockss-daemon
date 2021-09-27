@@ -29,9 +29,9 @@
     au < manifest ; exists ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 ; >
+    au < ready ; exists ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; >
+    au < ready ; exists ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 ; >
+    au < ready ; exists ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 ; >
     au < frozen ; exists ; 2016 ; Anthropological Journal of European Cultures Volume 25 ; 25 ; >
     au < finished ; finished ; 2017 ; Anthropological Journal of European Cultures Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Anthropological Journal of European Cultures Volume 27 ; 27 ; >
@@ -61,9 +61,9 @@
     au < manifest ; exists ; 2010 ; Anthropology in Action Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropology in Action Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropology in Action Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2013 ; Anthropology in Action Volume 20 ; 20 ; >
+    au < ready ; exists ; 2013 ; Anthropology in Action Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Anthropology in Action Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2015 ; Anthropology in Action Volume 22 ; 22 ; >
+    au < ready ; exists ; 2015 ; Anthropology in Action Volume 22 ; 22 ; >
     au < frozen ; exists ; 2016 ; Anthropology in Action Volume 23 ; 23 ; >
     au < finished ; finished ; 2017 ; Anthropology in Action Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Anthropology in Action Volume 25 ; 25 ; >
@@ -93,8 +93,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 ; >
+    au < ready ; exists ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 ; >
+    au < ready ; exists ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 ; >
     au < frozen ; exists ; 2016 ; Anthropology of the Middle East Volume 11 ; 11 ; >
     au < finished ; finished ; 2017 ; Anthropology of the Middle East Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Anthropology of the Middle East Volume 13 ; 13 ; >
@@ -144,13 +144,13 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Aspasia Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Aspasia Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Aspasia Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2015 ; Aspasia Volume 9 ; 9 ; >
+    au < ready ; exists ; 2015 ; Aspasia Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; Aspasia Volume 10 ; 10 ; >
     au < finished ; finished ; 2017 ; Aspasia Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Aspasia Volume 12 ; 12 ; >
     au < frozen ; exists ; 2019 ; Aspasia Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2020 ; Aspasia Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2021 ; Aspasia Volume 15 ; 15 ; >
+    au < ready ; exists ; 2021 ; Aspasia Volume 15 ; 15 ; >
 
   }
 
@@ -197,8 +197,8 @@
 
     au < doNotProcess ; doNotProcess ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 ; >
+    au < ready ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 ; >
+    au < ready ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; The Cambridge Journal of Anthropology Volume 34 ; 34 ; >
     au < finished ; finished ; 2017 ; The Cambridge Journal of Anthropology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; The Cambridge Journal of Anthropology Volume 36 ; 36 ; >
@@ -226,7 +226,7 @@
     au < deepCrawl ; exists ; 2018 ; Conflict and Society Volume 4 ; 4 ; >
     au < frozen ; exists ; 2019 ; Conflict and Society Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2020 ; Conflict and Society Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2021 ; Conflict and Society Volume 7 ; 7 ; >
+    au < ready ; exists ; 2021 ; Conflict and Society Volume 7 ; 7 ; >
 
   }
 
@@ -274,7 +274,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 ; >
+    au < ready ; exists ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 ; >
     au < frozen ; exists ; 2016 ; Contributions to the History of Concepts Volume 11 ; 11 ; >
     au < finished ; finished ; 2017 ; Contributions to the History of Concepts Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Contributions to the History of Concepts Volume 13 ; 13 ; >
@@ -337,7 +337,7 @@
     #param[journal_issn] = 2332-8894
 
     au < doNotProcess ; doNotProcess ; 2014 ; Democratic Theory Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
     au < frozen ; exists ; 2016 ; Democratic Theory Volume 3 ; 3 ; >
     au < finished ; finished ; 2017 ; Democratic Theory Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Democratic Theory Volume 5 ; 5 ; >
@@ -390,15 +390,15 @@
     au < manifest ; exists ; 2010 ; Environment and Society Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Environment and Society Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Environment and Society Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2013 ; Environment and Society Volume 4 ; 4 ; >
+    au < ready ; exists ; 2013 ; Environment and Society Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Environment and Society Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Environment and Society Volume 6 ; 6 ; >
+    au < ready ; exists ; 2015 ; Environment and Society Volume 6 ; 6 ; >
     au < frozen ; exists ; 2016 ; Environment and Society Volume 7 ; 7 ; >
     au < finished ; finished ; 2017 ; Environment and Society Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Environment and Society Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; Environment and Society Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; Environment and Society Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2021 ; Environment and Society Volume 12 ; 12 ; >
+    au < ready ; exists ; 2021 ; Environment and Society Volume 12 ; 12 ; >
 
   }
 
@@ -460,7 +460,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; European Judaism Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Judaism Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; European Judaism Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2015 ; European Judaism Volume 48 ; 48 ; >
+    au < ready ; exists ; 2015 ; European Judaism Volume 48 ; 48 ; >
     au < frozen ; exists ; 2016 ; European Judaism Volume 49 ; 49 ; >
     au < finished ; finished ; 2017 ; European Judaism Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; European Judaism Volume 51 ; 51 ; >
@@ -493,7 +493,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Focaal Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Focaal Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Focaal Volume 2014 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; Focaal Volume 2015 ; 2015 ; >
+    au < ready ; exists ; 2015 ; Focaal Volume 2015 ; 2015 ; >
     au < frozen ; exists ; 2016 ; Focaal Volume 2016 ; 2016 ; >
     au < finished ; finished ; 2017 ; Focaal Volume 2017 ; 2017 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Focaal Volume 2018 ; 2018 ; >
@@ -531,7 +531,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 ; >
+    au < ready ; exists ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; French Politics, Culture & Society Volume 34 ; 34 ; >
     au < finished ; finished ; 2017 ; French Politics, Culture & Society Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; French Politics, Culture & Society Volume 36 ; 36 ; >
@@ -570,7 +570,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; German Politics and Society Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; German Politics and Society Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; German Politics and Society Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2015 ; German Politics and Society Volume 33 ; 33 ; >
+    au < ready ; exists ; 2015 ; German Politics and Society Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; German Politics and Society Volume 34 ; 34 ; >
     au < finished ; finished ; 2017 ; German Politics and Society Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; German Politics and Society Volume 36 ; 36 ; >
@@ -596,10 +596,10 @@
     au < manifest ; exists ; 2009 ; Girlhood Studies Volume 2 ; 2 ; >
     au < manifest ; exists ; 2010 ; Girlhood Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Girlhood Studies Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2012 ; Girlhood Studies Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2013 ; Girlhood Studies Volume 6 ; 6 ; >
+    au < ready ; exists ; 2012 ; Girlhood Studies Volume 5 ; 5 ; >
+    au < ready ; exists ; 2013 ; Girlhood Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Girlhood Studies Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2015 ; Girlhood Studies Volume 8 ; 8 ; >
+    au < ready ; exists ; 2015 ; Girlhood Studies Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; Girlhood Studies Volume 9 ; 9 ; >
     au < finished ; finished ; 2017 ; Girlhood Studies Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Girlhood Studies Volume 11 ; 11 ; >
@@ -628,7 +628,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Historical Reflections/Reflexions Historiques Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 ; >
+    au < ready ; exists ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 ; >
     au < frozen ; exists ; 2016 ; Historical Reflections/Reflexions Historiques Volume 42 ; 42 ; >
     au < finished ; finished ; 2017 ; Historical Reflections/Reflexions Historiques Volume 43 ; 43 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Historical Reflections/Reflexions Historiques Volume 44 ; 44 ; >
@@ -654,7 +654,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Social Quality Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Social Quality Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Social Quality Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2015 ; International Journal of Social Quality Volume 5 ; 5 ; >
+    au < ready ; exists ; 2015 ; International Journal of Social Quality Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; International Journal of Social Quality Volume 6 ; 6 ; >
     au < finished ; finished ; 2017 ; International Journal of Social Quality Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Social Quality Volume 8 ; 8 ; >
@@ -678,9 +678,9 @@
     
     au < doNotProcess ; doNotProcess ; 2011 ; Israel Studies Review Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Israel Studies Review Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2013 ; Israel Studies Review Volume 28 ; 28 ; >
+    au < ready ; exists ; 2013 ; Israel Studies Review Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Israel Studies Review Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2015 ; Israel Studies Review Volume 30 ; 30 ; >
+    au < ready ; exists ; 2015 ; Israel Studies Review Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; Israel Studies Review Volume 31 ; 31 ; >
     au < finished ; finished ; 2017 ; Israel Studies Review Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Israel Studies Review Volume 33 ; 33 ; >
@@ -740,7 +740,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; >
+    au < ready ; exists ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; Journal of Educational Media, Memory, and Society Volume 8 ; 8 ; >
     au < finished ; finished ; 2017 ; Journal of Educational Media, Memory, and Society Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Educational Media, Memory, and Society Volume 10 ; 10 ; >
@@ -777,7 +777,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journeys Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journeys Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journeys Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2015 ; Journeys Volume 16 ; 16 ; >
+    au < ready ; exists ; 2015 ; Journeys Volume 16 ; 16 ; >
     au < frozen ; exists ; 2016 ; Journeys Volume 17 ; 17 ; >
     au < finished ; finished ; 2017 ; Journeys Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journeys Volume 19 ; 19 ; >
@@ -803,9 +803,9 @@
     au < manifest ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; >
+    au < ready ; exists ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 ; >
+    au < ready ; exists ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; Learning and Teaching (LATISS) Volume 9 ; 9 ; >
     au < finished ; finished ; 2017 ; Learning and Teaching (LATISS) Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Learning and Teaching (LATISS) Volume 11 ; 11 ; >
@@ -846,8 +846,8 @@
 
     au < doNotProcess ; doNotProcess ; 2013 ; Mobility in History Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Mobility in History Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Mobility in History Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2016 ; Mobility in History Volume 7 ; 7 ; >
+    au < ready ; exists ; 2015 ; Mobility in History Volume 6 ; 6 ; >
+    au < ready ; exists ; 2016 ; Mobility in History Volume 7 ; 7 ; >
     au < finished ; finished ; 2017 ; Mobility in History Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
   }
@@ -891,11 +891,11 @@
     au < manifest ; exists ; 2008 ; Nature and Culture Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; Nature and Culture Volume 4 ; 4 ; >
     au < manifest ; exists ; 2010 ; Nature and Culture Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2011 ; Nature and Culture Volume 6 ; 6 ; >
+    au < ready ; exists ; 2011 ; Nature and Culture Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Nature and Culture Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Nature and Culture Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2014 ; Nature and Culture Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2015 ; Nature and Culture Volume 10 ; 10 ; >
+    au < ready ; exists ; 2014 ; Nature and Culture Volume 9 ; 9 ; >
+    au < ready ; exists ; 2015 ; Nature and Culture Volume 10 ; 10 ; >
     au < frozen ; exists ; 2016 ; Nature and Culture Volume 11 ; 11 ; >
     au < finished ; finished ; 2017 ; Nature and Culture Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Nature and Culture Volume 13 ; 13 ; >
@@ -959,7 +959,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Projections Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Projections Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Projections Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2015 ; Projections Volume 9 ; 9 ; >
+    au < ready ; exists ; 2015 ; Projections Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; Projections Volume 10 ; 10 ; >
     au < finished ; finished ; 2017 ; Projections Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Projections Volume 12 ; 12 ; >
@@ -984,8 +984,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Regions & Cohesion Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Regions & Cohesion Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Regions & Cohesion Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
+    au < ready ; exists ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
+    au < ready ; exists ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; Regions & Cohesion Volume 6 ; 6 ; >
     au < finished ; finished ; 2017 ; Regions & Cohesion Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Regions & Cohesion Volume 8 ; 8 ; >
@@ -1010,9 +1010,9 @@
     au < manifest ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; >
+    au < ready ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; >
+    au < ready ; exists ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; >
     au < frozen ; exists ; 2016 ; Religion and Society: Advances in Research Volume 7 ; 7 ; >
     au < finished ; finished ; 2017 ; Religion and Society: Advances in Research Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Religion and Society: Advances in Research Volume 9 ; 9 ; >
@@ -1051,7 +1051,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Sartre Studies International Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sartre Studies International Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Sartre Studies International Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2015 ; Sartre Studies International Volume 21 ; 21 ; >
+    au < ready ; exists ; 2015 ; Sartre Studies International Volume 21 ; 21 ; >
     au < frozen ; exists ; 2016 ; Sartre Studies International Volume 22 ; 22 ; >
     au < finished ; finished ; 2017 ; Sartre Studies International Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Sartre Studies International Volume 24 ; 24 ; >
@@ -1102,7 +1102,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Sibirica Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sibirica Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Sibirica Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2015 ; Sibirica Volume 14 ; 14 ; >
+    au < ready ; exists ; 2015 ; Sibirica Volume 14 ; 14 ; >
     au < frozen ; exists ; 2016 ; Sibirica Volume 15 ; 15 ; >
     au < finished ; finished ; 2017 ; Sibirica Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Sibirica Volume 17 ; 17 ; >
@@ -1135,8 +1135,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Social Analysis Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Analysis Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Social Analysis Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2014 ; Social Analysis Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
+    au < ready ; exists ; 2014 ; Social Analysis Volume 58 ; 58 ; >
+    au < ready ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
     au < frozen ; exists ; 2016 ; Social Analysis Volume 60 ; 60 ; >
     au < finished ; finished ; 2017 ; Social Analysis Volume 61 ; 61 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Social Analysis Volume 62 ; 62 ; >
@@ -1176,7 +1176,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Theoria Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Theoria Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Theoria Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2015 ; Theoria Volume 62 ; 62 ; >
+    au < ready ; exists ; 2015 ; Theoria Volume 62 ; 62 ; >
     au < frozen ; exists ; 2016 ; Theoria Volume 63 ; 63 ; >
     au < finished ; finished ; 2017 ; Theoria Volume 64 ; 64 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Theoria Volume 65 ; 65 ; >
@@ -1201,7 +1201,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Transfers Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Transfers Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Transfers Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Transfers Volume 5 ; 5 ; >
+    au < ready ; exists ; 2015 ; Transfers Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; Transfers Volume 6 ; 6 ; >
     au < finished ; finished ; 2017 ; Transfers Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Transfers Volume 8 ; 8 ; >

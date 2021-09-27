@@ -70,7 +70,7 @@
     au < finished ; manifest ; 2018 ; Journal of Legislation Volume 44 ; 44 ; https://scholarship.law.nd.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Journal of Legislation Volume 45 ; 45 ; https://scholarship.law.nd.edu/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal of Legislation Volume 46 ; 46 ; https://scholarship.law.nd.edu/ ; >
-    au < manifest ; exists ; 2021 ; Journal of Legislation Volume 47 ; 47 ; https://scholarship.law.nd.edu/ ; >
+    au < ready ; exists ; 2021 ; Journal of Legislation Volume 47 ; 47 ; https://scholarship.law.nd.edu/ ; >
 
   }
 
@@ -96,7 +96,7 @@
       au < finished ; finished ; 2018 ; Notre Dame Journal of International & Comparative Law Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Notre Dame Journal of International & Comparative Law Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Notre Dame Journal of International & Comparative Law Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2021 ; Notre Dame Journal of International & Comparative Law Volume 11 ; 11 ; >
+      au < ready ; exists ; 2021 ; Notre Dame Journal of International & Comparative Law Volume 11 ; 11 ; >
 
   }
 
@@ -253,7 +253,7 @@
       au < finished ; finished ; 2018 ; Notre Dame Law Review Volume 93 ; 93 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Notre Dame Law Review Volume 94 ; 94 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Notre Dame Law Review Volume 95 ; 95 ; >
-      au < manifest ; exists ; 2021 ; Notre Dame Law Review Volume 96 ; 96 ; >
+      au < ready ; exists ; 2021 ; Notre Dame Law Review Volume 96 ; 96 ; >
 
   }
 
