@@ -760,8 +760,8 @@ public class DefinablePlugin extends BasePlugin {
 
       }
     } else {
-      // Expect a list of mappings from either result code or exception
-      // name to CacheException name
+      // Expect a list of mappings from result code, name of category
+      // of result codes, or Exception name to CacheException name
       Collection<String> mappings =
 	definitionMap.getCollection(KEY_EXCEPTION_LIST, null);
       if (mappings != null) {
@@ -800,42 +800,59 @@ public class DefinablePlugin extends BasePlugin {
 						"CacheResultHandler class: " +
 						entry + ", in " + mapName);
 	  }
-	  try {
-	    int code = Integer.parseInt(first);
-	    // If parseable as an integer, it's a result code.
-	    hResultMap.storeMapEntry(code, val);
-	  } catch (NumberFormatException e) {
-	    if ("EmptyFile".equalsIgnoreCase(first)) {
-	      hResultMap.storeMapEntry(ContentValidationException.EmptyFile.class,
-				       val);
-	    } else {
-	      try {
- 		Class eClass = loadPluginClass(first, Exception.class);
-		// If a class name, it should be an exception class
-		if (Exception.class.isAssignableFrom(eClass)) {
-		  hResultMap.storeMapEntry(eClass, val);
-		} else {
-		  throw new
-		    PluginException.InvalidDefinition("First arg not an " +
-						      "Exception class: " +
-						      entry + ", in " + mapName);
-		}		  
-	      } catch (Exception ex) {
-		throw new
-		  PluginException.InvalidDefinition("First arg not a " +
-						    "number or class: " +
-						    entry + ", in " + mapName);
-	      } catch (LinkageError le) {
-		throw new PluginException.InvalidDefinition("Can't load " +
-							    first,
-							    le);
-	      }
-	    }
-	  }
+          storeResultMapVal(hResultMap, entry, first, val);
 	}
       }
     }
     resultMap = hResultMap;
+  }
+
+  /** Determine the type of the result map LHS, and store the RHS
+   * value accordingly */
+  private void storeResultMapVal(HttpResultMap hResultMap, String entry,
+                                 String lhs, Object val) {
+    // Try it as an integer
+    try {
+      int code = Integer.parseInt(lhs);
+
+      // If parseable as an integer, it's a result code.
+      hResultMap.storeMapEntry(code, val);
+      return;
+    } catch (NumberFormatException e) {
+    }
+
+    // Try it as a category name
+    try {
+      HttpResultMap.HttpResultCodeCategory cat =
+        HttpResultMap.HttpResultCodeCategory.valueOf(lhs);
+      hResultMap.storeResultCategoryEntries(cat, val);
+      return;
+    } catch (IllegalArgumentException e) {
+    }
+
+    // Try it as an Exception class name
+    try {
+      Class eClass = loadPluginClass(lhs, Exception.class);
+      // If a class name, it should be an exception class
+      if (Exception.class.isAssignableFrom(eClass)) {
+        hResultMap.storeMapEntry(eClass, val);
+        return;
+      } else {
+        throw new
+          PluginException.InvalidDefinition("Lhs arg not an " +
+                                            "Exception class: " +
+                                            entry + ", in " + mapName);
+      }
+    } catch (Exception ex) {
+      throw new
+        PluginException.InvalidDefinition("Lhs arg not a number, " +
+                                          "exception class nor category: " +
+                                          entry + ", in " + mapName);
+    } catch (LinkageError le) {
+      throw new PluginException.InvalidDefinition("Can't load " +
+                                                  lhs,
+                                                  le);
+    }
   }
 
   protected void initFeatureVersions()

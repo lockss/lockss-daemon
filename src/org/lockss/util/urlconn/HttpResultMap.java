@@ -39,56 +39,82 @@ import org.lockss.plugin.ContentValidationException;
  * Maps an HTTP result to success (null) or an exception, usually one under
  * CacheException
  */
-
 public class HttpResultMap implements CacheResultMap {
   static Logger log = Logger.getLogger("HttpResultMap");
 
-  /** Categories of HTTP response codes which the daemon normally
-   * treats similarly, along with the default Exception mapping and
-   * list of codes. */
+  private static List<Integer> L(Integer... ints) {
+    return Collections.unmodifiableList(Arrays.asList(ints));
+  }
+
+  /** Categories of HTTP responses and pseudo-responses, along with
+   * their default mapping (usually a CacheException).  These are used
+   * both to initialize the default mappings and to provide better
+   * names for certain internal conditions (such as EmptyFile)
+   */
   public enum HttpResultCodeCategory {
-    SUCCESS(CacheSuccess.class,
-            200, 203, 304),
-    RETRY_SAME_URL(CacheException.RetrySameUrlException.class,
-                   408, 409, 413, 500, 502, 503, 504),
-    MOVE_PERM(CacheException.NoRetryPermUrlException.class,
-              301),
-    MOVE_TEMP(CacheException.NoRetryTempUrlException.class,
-              302, 303, 307),
+    SUCCESS(L(200, 203, 304),
+            CacheSuccess.class),
+    RETRY_SAME_URL(L(408, 409, 413, 500, 502, 503, 504),
+                   CacheException.RetrySameUrlException.class),
+    MOVE_PERM(L(301),
+              CacheException.NoRetryPermUrlException.class),
+    MOVE_TEMP(L(302, 303, 307),
+              CacheException.NoRetryTempUrlException.class),
     UNIMPLEMENTED(CacheException.UnimplementedCodeException.class),
-    PERMISSION(CacheException.PermissionException.class,
-               401, 403,  407),
-    EXPECTED(CacheException.ExpectedNoRetryException.class,
-             305, 402),
+    PERMISSION(L(401, 403,  407),
+               CacheException.PermissionException.class),
+    EXPECTED(L(305, 402),
+             CacheException.ExpectedNoRetryException.class),
     RETRY_DEAD_LINK(CacheException.RetryDeadLinkException.class),
-    NO_RETRY_DEAD_LINK(CacheException.NoRetryDeadLinkException.class,
-                       204, 300, 400, 404, 405, 406, 410),
-    UNEXPECTED_FAIL(CacheException.UnexpectedNoRetryFailException.class,
-                    201, 202, 205, 206, 306, 411, 412, 416, 417, 501, 505),
-    UNEXPECTED_NO_FAIL(CacheException.UnexpectedNoRetryNoFailException.class,
-                       414, 415);
+    NO_RETRY_DEAD_LINK(L(204, 300, 400, 404, 405, 406, 410),
+                       CacheException.NoRetryDeadLinkException.class),
+    UNEXPECTED_FAIL(L(201, 202, 205, 206, 306, 411, 412, 416, 417, 501, 505),
+                    CacheException.UnexpectedNoRetryFailException.class),
+    UNEXPECTED_NO_FAIL(L(414, 415),
+                       CacheException.UnexpectedNoRetryNoFailException.class),
 
-    private Class exceptionClass;
+    /** Short name for validation failure thrown when an empty file is
+     * collected */
+    EmptyFile(ContentValidationException.EmptyFile.class);
+
+    private Class exceptionClass;       // Usually a CacheException
     private List<Integer> codes;
+    private Class triggerClass;
 
-    private HttpResultCodeCategory(Class exceptionClass, Integer... codes) {
+    /** Create a category mapping a list of HTTP result codes to a
+     * CacheException */
+    private HttpResultCodeCategory(List<Integer> codes, Class exceptionClass) {
+      this.codes = codes;
       this.exceptionClass = exceptionClass;
-      this.codes = Collections.unmodifiableList(Arrays.asList(codes));
     }
 
-    /** Return the list of response codes comprising the category */
+    /** Create a category mapping a triggering exception to a
+     * CacheException */
+    private HttpResultCodeCategory(Class triggerClass, Class exceptionClass) {
+      this.triggerClass = triggerClass;
+      this.exceptionClass = exceptionClass;
+    }
+
+    /** Create a category naming a triggering exception, without
+     * establishing a default mapping */
+    private HttpResultCodeCategory(Class triggerClass) {
+      this.triggerClass = triggerClass;
+    }
+
+    /** Return the list of response codes comprising the category, null */
     public List<Integer> getCodes() {
       return codes;
+    }
+
+    /** Return the trigger Exception class, or null */
+    public Class getTriggerClass() {
+      return triggerClass;
     }
 
     /** Return the default Exception mapping */
     public Class getExceptionClass() {
       return exceptionClass;
     }
-  }
-
-  public static List<Integer> getHttpResultCodesForCategory(HttpResultCodeCategory category) {
-    return category.getCodes();
   }
 
   /** Abstracts the event we're determining how to handle.  Either an HTTP
@@ -375,7 +401,9 @@ public class HttpResultMap implements CacheResultMap {
   protected void initExceptionTable() {
     // HTTP result codes
     for (HttpResultCodeCategory category : HttpResultCodeCategory.values()) {
-      storeResultCategoryEntries(category, category.getExceptionClass());
+      if (category.getExceptionClass() != null) {
+        storeResultCategoryEntries(category, category.getExceptionClass());
+      }
     }
 
     // IOExceptions
@@ -421,17 +449,13 @@ public class HttpResultMap implements CacheResultMap {
 
   /** Set the exception for all result codes of specified category */
   public void storeResultCategoryEntries(HttpResultCodeCategory category,
-                                         Class exceptionClass) {
-    for (int code : getHttpResultCodesForCategory(category)) {
-      storeMapEntry(code, exceptionClass);
-    }
-  }
-
-  /** Set the handler for all result codes of specified category */
-  public void storeResultCategoryEntries(HttpResultCodeCategory category,
-                                         CacheResultHandler handler) {
-    for (int code : getHttpResultCodesForCategory(category)) {
-      storeMapEntry(code, handler);
+                                         Object response) {
+    if (category.getCodes() != null) {
+      for (int code : category.getCodes()) {
+        storeMapEntry(code, response);
+      }
+    } else if (category.getTriggerClass() != null) {
+      storeMapEntry(category.getTriggerClass(), response);
     }
   }
 
