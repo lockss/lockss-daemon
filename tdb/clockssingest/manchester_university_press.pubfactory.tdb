@@ -14,7 +14,7 @@
     plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversityPressPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-    {
+  {
 
       title <
         name = Bulletin of the John Rylands Library ;
@@ -40,10 +40,10 @@
      au < manifest ; exists ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 ; >
      au < manifest ; exists ; 2021 ; Bulletin of the John Rylands Library Volume 97 ; 97 ; >
 
-    }
+  }
 
 
-    {
+  {
     title <
       name = Film Studies ;
       issn = 1469-0314 ;
@@ -54,8 +54,6 @@
       param[journal_id] = fs
       #param[journal_issn] = 1469-0314
       #move to pubfactory, https://www.manchesterhive.com/abstract/journals/fs/fs-overview.xml
-
-      {
 
         au < doNotProcess ; doNotProcess ; 2004 ; Film Studies Volume 4 ; 4 ; >
         au < doNotProcess ; doNotProcess ; 2004 ; Film Studies Volume 5 ; 5 ; >
@@ -76,11 +74,9 @@
         au < manifest ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
         au < frozen ; exists ; 2019 ; Film Studies Volume 21 ; 21 ; >
 
-      }
+  }
 
-    }
-
-    {
+  {
     title <
       name = Human Remains and Violence ;
       eissn = 2054-2240 ;
@@ -91,20 +87,15 @@
     #param[journal_issn] = 2054-2240
     #move to pubfactory, https://www.manchesteropenhive.com/view/journals/hrv/hrv-overview.xml
 
-     {
-      
       au < doNotProcess ; doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 ; >
       au < manifest ; exists ; 2018 ; Human Remains and Violence Volume 4 ; 4 ; >
       au < manifest ; exists ; 2019 ; Human Remains and Violence Volume 5 ; 5 ; >
       au < frozen ; exists ; 2020 ; Human Remains and Violence Volume 6 ; 6 ; >
-    
       au < manifest ; exists ; 2021 ; Human Remains and Violence Volume 7 ; 7 ; >
-     }
     
-    }
-
+  }
 
   {
     title <
@@ -114,7 +105,6 @@
     >
       param[journal_id] = jbr
 
-      {
       #param[base_url] = https://jbr.openlibrary.manchester.ac.uk/
       #move to PubFactory, https://www.manchesteropenhive.com/view/journals/jbr/jbr-overview.xml
 
@@ -125,8 +115,6 @@
       au < frozen ; exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 ; >
       au < manifest ; exists ; 2020 ; James Baldwin Journal Volume 6 ; 6 ; >
       au < expected ; exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 ; >
-
-      }
 
   }
 }
