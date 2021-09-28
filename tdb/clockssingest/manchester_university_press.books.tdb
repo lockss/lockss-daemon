@@ -5,7 +5,7 @@
     info[contract] = 2012 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
-    info[platform] = PubFactory. Manchester Hive
+    info[platform] = PubFactory. Manchester Hive. Books
  >
 
   #moved to PubFactory.
@@ -22,9 +22,14 @@
    param[base_url] = https://www.manchesterhive.com/
    #Website says collection is 41 texts. We have 34. We are missing 7
 
-   au < doNotProcess ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble society ;  >
-   au < doNotProcess ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in medieval England ;  >
-   au < doNotProcess ; exists ; 2020 ; 9781526134837 ;  ; 9781526134837 ; Confronting crisis in the Carolingian empire ;  >
+   au < exists ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble Society: Five lives from twelfth-century Germany  ; >
+   au < exists ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in Medieval England: Selected Sources ; >
+   au < exists ; exists ; 2019 ; 9781526127228 ;  ; 9781526127228 ; Hermits and Anchorites in England: 1200-1550 ; >
+   au < exists ; exists ; 2019 ; 9781526121837 ;  ; 9781526121837 ; John Wyclif: Selected Latin Works in Translation ; >
+   au < exists ; exists ; 2019 ; 9781526142900 ;  ; 9781526142900 ; Jacopo Da Varagine's: Chronicle of the City of Genoa ; >
+   au < exists ; exists ; 2020 ; 9781526126795 ;  ; 9781526126795 ; Monastic Experience in Twelfth-Century Germany: The Chronicle of Petershausen ; >
+   au < exists ; exists ; 2020 ; 9781526134837 ;  ; 9781526134837 ; Confronting Crisis in the Carolingian Empire: Paschasius Radbertus' Funeral Oration for Wala of Corbie ; >
+
   }
 
   {
@@ -67,7 +72,7 @@
    au < finished ; manifest ; 2016 ; 9781847799678 ;  ; 9781847799678 ; The Political Writings of Archbishop Wulfstan of York ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 2017 ; 9781784997267 ;  ; 9781784997267 ; Heresy and inquisition in France, 1200-1300 ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2017 ; 9781784997434 ;  ; 9781784997434 ; The divorce of King Lothar and Queen Theutberga: Hincmar of Rheims's De divortio ; reingest3.clockss.org:8083 >
-   #34 books
+   #34 books. Moved to new platform
   }
 
  }
