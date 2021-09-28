@@ -73,6 +73,41 @@
 
     {
     title <
+      name = Gothic Studies ;
+      issn = 1362-7937 ;
+      eissn = 2050-456X ;
+      issnl = 1362-7937
+    >
+
+      param[journal_id] = gs
+      #param[journal_issn] = 2050-456X
+     
+        au < doNotProcess ; 1999 ; Gothic Studies Volume 1 ; 1 >
+        au < manifest ; 2000 ; Gothic Studies Volume 2 ; 2 >
+        au < manifest ; 2001 ; Gothic Studies Volume 3 ; 3 >
+        au < exists ; 2002 ; Gothic Studies Volume 4 ; 4 >
+        au < exists ; 2003 ; Gothic Studies Volume 5 ; 5 >
+        au < exists ; 2004 ; Gothic Studies Volume 6 ; 6 >
+        au < exists ; 2005 ; Gothic Studies Volume 7 ; 7 >
+        au < exists ; 2006 ; Gothic Studies Volume 8 ; 8 >
+        au < exists ; 2007 ; Gothic Studies Volume 9 ; 9 >
+        au < exists ; 2008 ; Gothic Studies Volume 10 ; 10 >
+        au < exists ; 2009 ; Gothic Studies Volume 11 ; 11 >
+        au < exists ; 2010 ; Gothic Studies Volume 12 ; 12 >
+        au < exists ; 2011 ; Gothic Studies Volume 13 ; 13 >
+        au < exists ; 2012 ; Gothic Studies Volume 14 ; 14 >
+        au < exists ; 2013 ; Gothic Studies Volume 15 ; 15 >
+        au < exists ; 2014 ; Gothic Studies Volume 16 ; 16 >
+        au < exists ; 2015 ; Gothic Studies Volume 17 ; 17 >
+        au < manifest ; 2016 ; Gothic Studies Volume 18 ; 18 >
+        au < manifest ; 2017 ; Gothic Studies Volume 19 ; 19 >
+        au < manifest ; 2018 ; Gothic Studies Volume 20 ; 20 >
+        au < expected ; 2021 ; Gothic Studies Volume 21 ; 21 >
+
+    }
+
+    {
+    title <
       name = Human Remains and Violence ;
       eissn = 2054-2240 ;
       issnl = 2054-2240
@@ -113,4 +148,4 @@
 
   }
 
-  }
+}
