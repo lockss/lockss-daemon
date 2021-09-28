@@ -5,7 +5,7 @@
     info[platform] = HWDrupal. Two titles. Manifest pages exist. 503 errors.
   >
     #waiting for contract
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    plugin = org.lockss.plugin.highwire.snmmi.SnmmiDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
   {
