@@ -157,8 +157,10 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>1.73.0</string>
     </entry>
     <entry>
-        <string>plugin_cache_result_handler</string>
-        <string>org.lockss.plugin.archiveit.ArchiveItApiHttpResponseHandler</string>
+      <string>plugin_cache_result_list</string>
+      <list>
+        <string>RETRY_SAME_URL=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_30S</string>
+      </list>
     </entry>
     <entry>
         <!-- Web Archiving Systems API (WASAPI) -->
