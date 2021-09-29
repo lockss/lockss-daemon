@@ -1311,7 +1311,7 @@ while (my $line = <>) {
   } elsif (($plugin eq "TaylorAndFrancisPlugin") ||
            ($plugin eq "GenericAtyponPlugin") ||
            ($plugin eq "AIAAPlugin") ||
-           ($plugin eq "AllenPressJournalsPlugin") ||
+#           ($plugin eq "AllenPressJournalsPlugin") ||
            ($plugin eq "AmericanSpeechLanguageHearingAssocAtyponPlugin") ||
            ($plugin eq "AmPublicHealthAssocPlugin") ||
            ($plugin eq "AMetSocPlugin") ||
@@ -1388,7 +1388,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssGenericAtyponPlugin") ||
            ($plugin eq "ClockssAaasPlugin") ||
            ($plugin eq "ClockssAIAAPlugin") ||
-           ($plugin eq "ClockssAllenPressJournalsPlugin") ||
+#           ($plugin eq "ClockssAllenPressJournalsPlugin") ||
            ($plugin eq "ClockssAmericanSpeechLanguageHearingAssocAtyponPlugin") ||
            ($plugin eq "ClockssAMetSocPlugin") ||
            ($plugin eq "ClockssAmmonsScientificPlugin") ||
@@ -3583,7 +3583,8 @@ while (my $line = <>) {
   sleep(4);
     
   } elsif (($plugin eq "IwapSilverchairPlugin") ||
-           ($plugin eq "AOTASilverchairPlugin")) {
+           ($plugin eq "AOTASilverchairPlugin") ||
+           ($plugin eq "AllenPressSilverchairPlugin")) {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3612,7 +3613,8 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif (($plugin eq "ClockssIwapSilverchairPlugin") || 
-           ($plugin eq "ClockssAOTASilverchairPlugin")) { 
+           ($plugin eq "ClockssAOTASilverchairPlugin") || 
+           ($plugin eq "ClockssAllenPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
