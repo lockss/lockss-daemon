@@ -5,10 +5,10 @@
   >
   
 
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.aota.AOTASilverchairPlugin
+  #plugin = needs.plugin
+  plugin = org.lockss.plugin.silverchair.aota.AOTASilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
-  param[base_url] = https://ajot.aota.org/
+  param[base_url] = https://research.aota.org/
 
   {
     title <
@@ -17,7 +17,8 @@
       eissn = 1943-7676
     >
 
-      param[resource_id] = 167
+      #param[journal_id] = 167 # it moved to Silverchair common theme platform
+      param[journal_id] = ajot
 
       au < exists ; 1980 ; 1980 ; American Journal of Occupational Therapy Volume 34 ; 34 >
       au < exists ; 1981 ; 1981 ; American Journal of Occupational Therapy Volume 35 ; 35 >

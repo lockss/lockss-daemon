@@ -3305,47 +3305,47 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "AOTASilverchairPlugin") {
-    $url = sprintf("%sissuebrowsebyyear.aspx?year=%d",
-      $param{base_url}, $param{year});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    }
-    sleep(4);
-
-  } elsif ($plugin eq "ClockssAOTASilverchairPlugin") {
-    $url = sprintf("%sissuebrowsebyyear.aspx?year=%d",
-      $param{base_url}, $param{year});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    }
-    sleep(4);
+#  } elsif ($plugin eq "AOTASilverchairPlugin") {
+#    $url = sprintf("%sissuebrowsebyyear.aspx?year=%d",
+#      $param{base_url}, $param{year});
+#    $man_url = uri_unescape($url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#    }
+#    sleep(4);
+#
+#  } elsif ($plugin eq "ClockssAOTASilverchairPlugin") {
+#    $url = sprintf("%sissuebrowsebyyear.aspx?year=%d",
+#      $param{base_url}, $param{year});
+#    $man_url = uri_unescape($url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#    }
+#    sleep(4);
 
   } elsif ($plugin eq "SilverchairProceedingsPlugin") {
     $url = sprintf("%sLOCKSS/ListOfVolumes.aspx?year=%d",
@@ -3582,7 +3582,8 @@ while (my $line = <>) {
     }
   sleep(4);
     
-  } elsif ($plugin eq "IwapSilverchairPlugin") {
+  } elsif (($plugin eq "IwapSilverchairPlugin") ||
+           ($plugin eq "AOTASilverchairPlugin")) {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -3610,7 +3611,8 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "ClockssIwapSilverchairPlugin") { 
+  } elsif (($plugin eq "ClockssIwapSilverchairPlugin") || 
+           ($plugin eq "ClockssAOTASilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
