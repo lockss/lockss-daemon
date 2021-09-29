@@ -76,7 +76,7 @@
       au < frozen ; exists ; 2018 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 34 ; 34 ; >
       au < frozen ; exists ; 2019 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 35 ; 35 ; >
       au < frozen ; exists ; 2020 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 36 ; 36 ; >
-      au < ready ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
 
   }
 
@@ -119,7 +119,7 @@
       param[journal_abbr] = esrap
 
       au < frozen ; exists ; 2020 ; European Spatial Research and Policy Volume 16 ; 16 ; >
-      au < ready ; exists ; 2021 ; European Spatial Research and Policy Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2021 ; European Spatial Research and Policy Volume 17 ; 17 ; >
 
   }
 
