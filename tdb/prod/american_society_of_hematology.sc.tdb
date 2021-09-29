@@ -1,0 +1,85 @@
+{
+
+  publisher <
+    name = American Society of Hematology ;
+    info[platform] = Silverchair. GLN only
+  >
+
+    # move to SilverChair 2019
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.silverchair.oup.OupSilverchairPlugin
+    implicit < status ; year ; param[year] ; name ; volume >
+    param[base_url] = https://ashpublications.org/
+
+  {
+
+    title <
+      name = Blood ;
+      issn = 0006-4971 ;
+      eissn = 1528-0020 ;
+      issnl = 0006-4971
+    >
+
+      #Processed 1946-2018 on HW
+      param[journal_id] = blood
+
+      au < doNotProcess ; 2015 ; 2015 ; Blood Volume 125 ; 125 >
+      au < doNotProcess ; 2015 ; 2015 ; Blood Volume 126 ; 126 >
+      au < doNotProcess ; 2016 ; 2016 ; Blood Volume 127 ; 127 >
+      au < doNotProcess ; 2016 ; 2016 ; Blood Volume 128 ; 128 >
+      au < doNotProcess ; 2017 ; 2017 ; Blood Volume 129 ; 129 >
+      au < doNotProcess ; 2017 ; 2017 ; Blood Volume 130 ; 130 >
+      au < doNotProcess ; 2018 ; 2018 ; Blood Volume 131 ; 131 >
+      au < doNotProcess ; 2018 ; 2018 ; Blood Volume 132 ; 132 >
+      au < exists ; 2019 ; 2019 ; Blood Volume 133 ; 133 >
+      au < exists ; 2019 ; 2019 ; Blood Volume 134 ; 134 >
+      au < exists ; 2020 ; 2020 ; Blood Volume 135 ; 135 >
+      au < exists ; 2020 ; 2020 ; Blood Volume 136 ; 136 >
+      au < exists ; 2021 ; 2021 ; Blood Volume 137 ; 137 >
+      au < exists ; 2021 ; 2021 ; Blood Volume 138 ; 138 >
+
+  }
+
+  {
+
+    title <
+      name = Blood Advances ;
+      eissn = 2473-9537
+    >
+
+      param[journal_id] = bloodadvances
+
+      au < exists ; 2016 ; 2016 ; Blood Advances Volume 1 [2016] ; 1 >
+      au < exists ; 2017 ; 2017 ; Blood Advances Volume 1 [2017] ; 1 >
+      au < exists ; 2018 ; 2018 ; Blood Advances Volume 2 ; 2 >
+      au < exists ; 2019 ; 2019 ; Blood Advances Volume 3 ; 3 >
+      au < exists ; 2020 ; 2020 ; Blood Advances Volume 4 ; 4 >
+      au < exists ; 2021 ; 2021 ; Blood Advances Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Hematology: ASH Education Program Book ;
+      issn = 1520-4391 ;
+      eissn = 1520-4383 ;
+      issnl = 1520-4383
+    >
+
+    #Processed 2000-2018 on HW
+
+    #param[base_url] = http://asheducationbook.hematologylibrary.org/
+    param[journal_id] = asheducationbook
+
+    au < doNotProcess ; 2015 ; 2015 ; Hematology: ASH Education Program Book Volume 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; 2016 ; Hematology: ASH Education Program Book Volume 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; 2017 ; Hematology: ASH Education Program Book Volume 2017 ; 2017 >
+    au < doNotProcess ; 2018 ; 2018 ; Hematology: ASH Education Program Book Volume 2018 ; 2018 >
+    au < exists ; 2019 ; 2019 ; Hematology: ASH Education Program Book Volume 2019 ; 2019 >
+    au < exists ; 2020 ; 2020 ; Hematology: ASH Education Program Book Volume 2020 ; 2020 >
+    au < expected ; 2021 ; 2021 ; Hematology: ASH Education Program Book Volume 2021 ; 2021 >
+
+  }
+
+}
