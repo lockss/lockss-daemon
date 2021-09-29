@@ -3,7 +3,7 @@
   publisher <
     name = Company of Biologists ;
     info[contract] = 2011 ;
-    info[back] = 2011 ;
+    info[back] = 2005 ;
     info[tester] = 5 ;
     info[poller] = 2 ;
     info[platform] = Silverchair
@@ -34,7 +34,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Biology Open Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Biology Open Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Biology Open Volume 9 ; 9 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Biology Open Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Biology Open Volume 10 ; 10 ; >
 
   }
 
