@@ -895,9 +895,9 @@
       au < manifest ; exists ; 1998 ; 1998 ; The Medieval Review Volume 1998 ; 6 ; >
       au < manifest ; exists ; 1999 ; 1999 ; The Medieval Review Volume 1999 ; 7 ; >
       au < finished ; manifest ; 2000 ; 2000 ; The Medieval Review Volume 2000 ; 8 ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2001 ; 2001 ; The Medieval Review Volume 2001 ; 9 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; The Medieval Review Volume 2002 ; 10 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; The Medieval Review Volume 2003 ; 11 ; >
+      au < notReady ; exists ; 2001 ; 2001 ; The Medieval Review Volume 2001 ; 9 ; > #0 article, 0 metadata
+      au < notReady ; exists ; 2002 ; 2002 ; The Medieval Review Volume 2002 ; 10 ; > #0 article, 0 metadata
+      au < notReady ; exists ; 2003 ; 2003 ; The Medieval Review Volume 2003 ; 11 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2004 ; 2004 ; The Medieval Review Volume 2004 ; 12 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2005 ; 2005 ; The Medieval Review Volume 2005 ; 13 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2006 ; 2006 ; The Medieval Review Volume 2006 ; 14 ; > #0 article, 0 metadata
@@ -1007,15 +1007,15 @@
 
       param[journal_id] = tributaries
 
-      au < manifest ; exists ; 2011 ; 2011 ; Tributaries Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; Tributaries Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; Tributaries Volume 16 ; 16 ; >
+      au < notReady ; exists ; 2011 ; 2011 ; Tributaries Volume 14 ; 14 ; > #0 article, 0 metadata
+      au < notReady ; exists ; 2012 ; 2012 ; Tributaries Volume 15 ; 15 ; > #0 article, 0 metadata
+      au < notReady ; exists ; 2013 ; 2013 ; Tributaries Volume 16 ; 16 ; > #0 article, 0 metadata
       au < finished ; manifest ; 2014 ; 2014 ; Tributaries Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2015 ; 2015 ; Tributaries Volume 18 ; 18 ; > #no substance, but the single pdf is collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1243/pdf_8
       au < finished ; manifest ; 2016 ; 2016 ; Tributaries Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; Tributaries Volume 20 ; 20 ; > #no substance, but the two pdfs are collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1881/103 & 4
-      au < notReady ; exists ; 2018 ; 2018 ; Tributaries Volume 21 ; 21 ; > #no articles, no metadata
-      au < notReady ; exists ; 2019 ; 2019 ; Tributaries Volume 22 ; 22 ; > #no articles, no metadata
+      au < notReady ; exists ; 2018 ; 2018 ; Tributaries Volume 21 ; 21 ; > #0 article, 0 metadata
+      au < notReady ; exists ; 2019 ; 2019 ; Tributaries Volume 22 ; 22 ; > #0 article, 0 metadata
 
   }
 
@@ -1029,7 +1029,6 @@
       param[journal_id] = lad
 
       au < frozen ; exists ; 2006 ; 2006 ; The Undergraduate Journal of Law & Disorder Volume 1 ; 1 ; >
-
       au < finished ; manifest ; 2015 ; 2015 ; The Undergraduate Journal of Law & Disorder Volume 5 ; 5 ; reingest5.clockss.org:8082 >
 
   }
