@@ -409,7 +409,7 @@
     param[journal_id] = rels
     comment[journal] = stopped publishing.
 
-    au < testing ; exists ; 2009 ; Religions: A Scholarly Journal Volume 2009 ; 2009 ; >
+    au < notReady ; exists ; 2009 ; Religions: A Scholarly Journal Volume 2009 ; 2009 ; > #no pdf file collected
     au < doNotProcess ; doNotProcess ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 ; >
