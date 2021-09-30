@@ -103,8 +103,8 @@
     au < notReady ; exists ; 2012 ; Geophysics Volume 77 ; 77 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2013 ; Geophysics Volume 78 ; 78 ; http://library.seg.org/ ; >
     au < zapped ; finished ; 2014 ; Geophysics Volume 79 ; 79 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2015 ; Geophysics Volume 80 ; 80 ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; Geophysics Volume 81 ; 81 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2015 ; Geophysics Volume 80 ; 80 ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; Geophysics Volume 81 ; 81 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2017 ; Geophysics Volume 82 ; 82 ; http://library.seg.org/ ; >
     au < deepCrawl ; exists ; 2018 ; Geophysics Volume 83 ; 83 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2019 ; Geophysics Volume 84 ; 84 ; https://library.seg.org/ ; >
@@ -154,10 +154,10 @@
     au < frozen ; exists ; 2010 ; The Leading Edge Volume 29 ; 29 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2011 ; The Leading Edge Volume 30 ; 30 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2012 ; The Leading Edge Volume 31 ; 31 ; https://library.seg.org/ ; >
-    au < finished ; manifest ; 2013 ; The Leading Edge Volume 32 ; 32 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; The Leading Edge Volume 32 ; 32 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; The Leading Edge Volume 33 ; 33 ; http://library.seg.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2015 ; The Leading Edge Volume 34 ; 34 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; The Leading Edge Volume 35 ; 35 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2015 ; The Leading Edge Volume 34 ; 34 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; The Leading Edge Volume 35 ; 35 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; The Leading Edge Volume 36 ; 36 ; http://library.seg.org/ ; >
     au < deepCrawl ; exists ; 2018 ; The Leading Edge Volume 37 ; 37 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2019 ; The Leading Edge Volume 38 ; 38 ; https://library.seg.org/ ; >
@@ -176,7 +176,7 @@
     
     param[journal_id] = inteio
 
-    au < finished ; manifest ; 2013 ; Interpretation Volume 1 ; 1 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Interpretation Volume 1 ; 1 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Interpretation Volume 2 ; 2 ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2015 ; Interpretation Volume 3 ; 3 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Interpretation Volume 4 ; 4 ; http://library.seg.org/ ; reingest3.clockss.org:8083 >
@@ -218,7 +218,7 @@
     au < finished ; finished ; 2013 ; Journal of Environmental and Engineering Geophysics Volume 18 ; 18 ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Environmental and Engineering Geophysics Volume 19 ; 19 ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Environmental and Engineering Geophysics Volume 20 ; 20 ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; Journal of Environmental and Engineering Geophysics Volume 21 ; 21 ; http://library.seg.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; Journal of Environmental and Engineering Geophysics Volume 21 ; 21 ; http://library.seg.org/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2017 ; Journal of Environmental and Engineering Geophysics Volume 22 ; 22 ; http://library.seg.org/ ; >
     au < deepCrawl ; exists ; 2018 ; Journal of Environmental and Engineering Geophysics Volume 23 ; 23 ; https://library.seg.org/ ; >
     au < finished ; crawling ; 2019 ; Journal of Environmental and Engineering Geophysics Volume 24 ; 24 ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
