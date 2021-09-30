@@ -87,7 +87,7 @@
     param[journal_abbr] = spectra
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < ready ; exists ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 ; >
 
   }
 
