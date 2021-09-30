@@ -32,8 +32,8 @@
     au < finished ; manifest ; 2017 ; 7 ; Residência Pediátrica Volume 7 ; 2017 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 8 ; Residência Pediátrica Volume 8 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 9 ; Residência Pediátrica Volume 9 ; 2019 ; reingest4.clockss.org:8082 >
-    au < ingNotReady ; exists ; 2020 ; 10 ; Residência Pediátrica Volume 10 ; 2020 ; > #no substance crawl on ingest machines
-    au < notReady ; exists ; 2021 ; 11 ; Residência Pediátrica Volume 11 ; 2021 ; > #no substance crawl
+    au < crawling ; exists ; 2020 ; 10 ; Residência Pediátrica Volume 10 ; 2020 ; >
+    au < testing ; exists ; 2021 ; 11 ; Residência Pediátrica Volume 11 ; 2021 ; >
 
   }
 
