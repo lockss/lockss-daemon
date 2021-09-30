@@ -89,7 +89,7 @@
     au < finished ; finished ; 2018 ; AIAA Journal Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; AIAA Journal Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 2020 ; AIAA Journal Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ; AIAA Journal Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
+    au < notReady ; exists ; 2021 ; AIAA Journal Volume 59 ; 59 ; https://arc.aiaa.org/ ; > #https://arc.aiaa.org/cms/10.2514/1.J059425/asset/images/medium/figure20.gif,"500 Internal Server Error
 
   }
 
@@ -354,7 +354,7 @@
     au < finished ; crawling ; 2017 ; Journal of Guidance, Control, and Dynamics Volume 40 ; 40 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Guidance, Control, and Dynamics Volume 41 ; 41 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2019 ; Journal of Guidance, Control, and Dynamics Volume 42 ; 42 ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2020 ; Journal of Guidance, Control, and Dynamics Volume 43 ; 43 ; https://arc.aiaa.org/ ; >
+    au < notReady ; exists ; 2020 ; Journal of Guidance, Control, and Dynamics Volume 43 ; 43 ; https://arc.aiaa.org/ ; > #https://arc.aiaa.org/cms/10.2514/1.G002808/asset/images/medium/figure11.gif,"500 Internal Server Error"
     au < manifest ; exists ; 2021 ; Journal of Guidance, Control, and Dynamics Volume 44 ; 44 ; https://arc.aiaa.org/ ; >
 
   }
@@ -551,7 +551,7 @@
     au < finished ; down ; 2017 ; Journal of Thermophysics and Heat Transfer Volume 31 ; 31 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Thermophysics and Heat Transfer Volume 32 ; 32 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Journal of Thermophysics and Heat Transfer Volume 33 ; 33 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2020 ; Journal of Thermophysics and Heat Transfer Volume 34 ; 34 ; https://arc.aiaa.org/ ; >
+    au < notReady ; exists ; 2020 ; Journal of Thermophysics and Heat Transfer Volume 34 ; 34 ; https://arc.aiaa.org/ ; > #https://arc.aiaa.org/cms/10.2514/1.T5367/asset/images/medium/figure1.gif,"500 Internal Server Error
     au < manifest ; exists ; 2021 ; Journal of Thermophysics and Heat Transfer Volume 35 ; 35 ; https://arc.aiaa.org/ ; >
 
   }

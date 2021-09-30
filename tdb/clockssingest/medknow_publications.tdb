@@ -186,7 +186,7 @@
     au < manifest ; exists ; 2010 ; Annals of Indian Academy of Neurology Volume 13 ; 2010 ; 13 ; https://www.annalsofian.org/ ; ; >
     au < finished ; frozen ; 2011 ; Annals of Indian Academy of Neurology Volume 14 ; 2011 ; 14 ; http://www.annalsofian.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Annals of Indian Academy of Neurology Volume 15 ; 2012 ; 15 ; http://www.annalsofian.org/ ; ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2013 ; Annals of Indian Academy of Neurology Volume 16 ; 2013 ; 16 ; https://www.annalsofian.org/ ; ; >
+    au < notReady ; exists ; 2013 ; Annals of Indian Academy of Neurology Volume 16 ; 2013 ; 16 ; https://www.annalsofian.org/ ; ; > #500 error
     au < finished ; frozen ; 2014 ; Annals of Indian Academy of Neurology Volume 17 ; 2014 ; 17 ; http://www.annalsofian.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Annals of Indian Academy of Neurology Volume 18 ; 2015 ; 18 ; http://www.annalsofian.org/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2016 ; Annals of Indian Academy of Neurology Volume 19 ; 2016 ; 19 ; http://www.annalsofian.org/ ; ; >
@@ -497,7 +497,7 @@
     au < manifest ; exists ; 2010 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 31 ; 2010 ; 31 ; https://www.ayujournal.org/ ; ; >
     au < finished ; frozen ; 2011 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 32 ; 2011 ; 32 ; http://www.ayujournal.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 33 ; 2012 ; 33 ; http://www.ayujournal.org/ ; ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2013 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 34 ; 2013 ; 34 ; https://www.ayujournal.org/ ; 500 Error ; >
+    au < notReady ; exists ; 2013 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 34 ; 2013 ; 34 ; https://www.ayujournal.org/ ; 500 Error ; > #500 error
     au < finished ; finished ; 2014 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 35 ; 2014 ; 35 ; http://www.ayujournal.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2015 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 36 ; 2015 ; 36 ; http://www.ayujournal.org/ ; ; reingest1.clockss.org:8082 >
 
@@ -1925,7 +1925,7 @@
     au < manifest ; exists ; 2008 ; Indian Journal of Radiology and Imaging Volume 18 ; 2008 ; 18 ; https://www.ijri.org/ ; ; >
     au < manifest ; exists ; 2009 ; Indian Journal of Radiology and Imaging Volume 19 ; 2009 ; 19 ; https://www.ijri.org/ ; ; >
     au < manifest ; exists ; 2010 ; Indian Journal of Radiology and Imaging Volume 20 ; 2010 ; 20 ; https://www.ijri.org/ ; ; >
-    au < manifest ; exists ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 2011 ; 21 ; https://www.ijri.org/ ; ; >
+    au < notReady ; exists ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 2011 ; 21 ; https://www.ijri.org/ ; ; > #500 error
     au < finished ; frozen ; 2012 ; Indian Journal of Radiology and Imaging Volume 22 ; 2012 ; 22 ; http://www.ijri.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Indian Journal of Radiology and Imaging Volume 23 ; 2013 ; 23 ; http://www.ijri.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Radiology and Imaging Volume 24 ; 2014 ; 24 ; http://www.ijri.org/ ; ; reingest2.clockss.org:8085 >
@@ -2265,7 +2265,7 @@
     au < finished ; frozen ; 2011 ; International Journal of Trichology Volume 3 ; 2011 ; 3 ; http://www.ijtrichology.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; International Journal of Trichology Volume 4 ; 2012 ; 4 ; http://www.ijtrichology.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; International Journal of Trichology Volume 5 ; 2013 ; 5 ; http://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2014 ; International Journal of Trichology Volume 6 ; 2014 ; 6 ; https://www.ijtrichology.com/ ; ; >
+    au < notReady ; exists ; 2014 ; International Journal of Trichology Volume 6 ; 2014 ; 6 ; https://www.ijtrichology.com/ ; ; > #500 error
     au < finished ; frozen ; 2015 ; International Journal of Trichology Volume 7 ; 2015 ; 7 ; http://www.ijtrichology.com/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2016 ; International Journal of Trichology Volume 8 ; 2016 ; 8 ; http://www.ijtrichology.com/ ; ; >
     au < finished ; frozen ; 2017 ; International Journal of Trichology Volume 9 ; 2017 ; 9 ; http://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
@@ -4726,7 +4726,7 @@
       au < frozen ; exists ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; https://www.advbiores.net/ ; ; >
       au < frozen ; exists ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; https://www.advbiores.net/ ; ; >
       au < frozen ; exists ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; https://www.advbiores.net/ ; ; > #no substance
-      au < manifest ; exists ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; https://www.advbiores.net/ ; ; >
+      au < notReady ; exists ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; https://www.advbiores.net/ ; ; >#500 error
       au < frozen ; exists ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; https://www.advbiores.net/ ; ; >
       au < frozen ; exists ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ ; ; >
@@ -8553,7 +8553,7 @@
       au < ready ; exists ; 2018 ; The Egyptian Orthopaedic Journal Volume 53 ; 2018 ; 53 ; https://www.eoj.eg.net/ ; ; >
       au < ready ; exists ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ ; ; >
       au < frozen ; exists ; 2020 ; The Egyptian Orthopaedic Journal Volume 55 ; 2020 ; 55 ; https://www.eoj.eg.net/ ; ; >
-      au < manifest ; exists ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ ; ; >
+      au < notReady ; exists ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ ; ; > #site cert failed
 
   }
 
@@ -9521,7 +9521,7 @@
       au < manifest ; exists ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ ; ; >
       au < manifest ; exists ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ ; ; >
       au < frozen ; exists ; 2011 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 3 ; 2011 ; 3 ; https://www.ijmbs.org/ ; ; >
-      au < manifest ; exists ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 ; https://www.ijmbs.org/ ; ; >
+      au < notReady ; exists ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 ; https://www.ijmbs.org/ ; ; > #500 errors
       au < frozen ; exists ; 2013 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 5 ; 2013 ; 5 ; https://www.ijmbs.org/ ; ; >
       au < frozen ; exists ; 2014 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 6 ; 2014 ; 6 ; https://www.ijmbs.org/ ; ; >
       au < frozen ; exists ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 2015 ; 7 ; https://www.ijmbs.org/ ; ; >
@@ -9589,7 +9589,7 @@
       param[journal_issn] = 2589-7934
 #      param[base_url] = http://www.theiaforum.org/
 
-      au < frozen ; exists ; 2016 ; Indian Anaesthetists' Forum Volume 17 ; 2016 ; 17 ; https://www.theiaforum.org/ ; ; >
+      au < frozen ; exists ; 2016 ; Indian Anaesthetists' Forum Volume 17 ; 2016 ; 17 ; https://www.theiaforum.org/ ; ; > #unknown result code
       au < frozen ; exists ; 2017 ; Indian Anaesthetists' Forum Volume 18 ; 2017 ; 18 ; https://www.theiaforum.org/ ; ; >
       au < frozen ; exists ; 2018 ; Indian Anaesthetists' Forum Volume 19 ; 2018 ; 19 ; https://www.theiaforum.org/ ; ; >
       au < frozen ; exists ; 2019 ; Indian Anaesthetists' Forum Volume 20 ; 2019 ; 20 ; https://www.theiaforum.org/ ; ; >
@@ -9784,10 +9784,10 @@
 #      param[base_url] = http://www.ijmyco.org/
 
       au < frozen ; exists ; 2012 ; International Journal of Mycobacteriology Volume 1 ; 2012 ; 1 ; https://www.ijmyco.org/ ; ; >
-      au < manifest ; exists ; 2013 ; International Journal of Mycobacteriology Volume 2 ; 2013 ; 2 ; https://www.ijmyco.org/ ; ; >
+      au < notReady ; exists ; 2013 ; International Journal of Mycobacteriology Volume 2 ; 2013 ; 2 ; https://www.ijmyco.org/ ; ; > #500 error
       au < frozen ; exists ; 2014 ; International Journal of Mycobacteriology Volume 3 ; 2014 ; 3 ; https://www.ijmyco.org/ ; ; >
-      au < manifest ; exists ; 2015 ; International Journal of Mycobacteriology Volume 4 ; 2015 ; 4 ; https://www.ijmyco.org/ ; ; >
-      au < manifest ; exists ; 2016 ; International Journal of Mycobacteriology Volume 5 ; 2016 ; 5 ; https://www.ijmyco.org/ ; ; >
+      au < notReady ; exists ; 2015 ; International Journal of Mycobacteriology Volume 4 ; 2015 ; 4 ; https://www.ijmyco.org/ ; ; > #500 error
+      au < notReady ; exists ; 2016 ; International Journal of Mycobacteriology Volume 5 ; 2016 ; 5 ; https://www.ijmyco.org/ ; ; > #500 error
       au < frozen ; exists ; 2017 ; International Journal of Mycobacteriology Volume 6 ; 2017 ; 6 ; https://www.ijmyco.org/ ; ; >
       au < frozen ; exists ; 2018 ; International Journal of Mycobacteriology Volume 7 ; 2018 ; 7 ; https://www.ijmyco.org/ ; ; >
       au < frozen ; exists ; 2019 ; International Journal of Mycobacteriology Volume 8 ; 2019 ; 8 ; https://www.ijmyco.org/ ; ; >
@@ -10053,7 +10053,7 @@
 #      param[base_url] = http://www.journalofdiabetology.org/
 
       au < manifest ; exists ; 2010 ; Journal of Diabetology Volume 1 ; 2010 ; 1 ; https://www.journalofdiabetology.org/ ; ; >
-      au < manifest ; exists ; 2011 ; Journal of Diabetology Volume 2 ; 2011 ; 2 ; https://www.journalofdiabetology.org/ ; ; >
+      au < notReady ; exists ; 2011 ; Journal of Diabetology Volume 2 ; 2011 ; 2 ; https://www.journalofdiabetology.org/ ; ; > #500 error
       au < frozen ; exists ; 2012 ; Journal of Diabetology Volume 3 ; 2012 ; 3 ; https://www.journalofdiabetology.org/ ; ; >
       au < frozen ; exists ; 2013 ; Journal of Diabetology Volume 4 ; 2013 ; 4 ; https://www.journalofdiabetology.org/ ; ; >
       au < frozen ; exists ; 2014 ; Journal of Diabetology Volume 5 ; 2014 ; 5 ; https://www.journalofdiabetology.org/ ; ; >
@@ -10154,7 +10154,7 @@
       param[journal_issn] = 0975-3605
 #      param[base_url] = http://www.marinemedicalsociety.in/
 
-      au < manifest ; exists ; 2012 ; Journal of Marine Medical Society Volume 14 ; 2012 ; 14 ; https://www.marinemedicalsociety.in/ ; ; >
+      au < notReady ; exists ; 2012 ; Journal of Marine Medical Society Volume 14 ; 2012 ; 14 ; https://www.marinemedicalsociety.in/ ; ; > #500 error
       au < frozen ; exists ; 2013 ; Journal of Marine Medical Society Volume 15 ; 2013 ; 15 ; https://www.marinemedicalsociety.in/ ; ; >
       au < frozen ; exists ; 2014 ; Journal of Marine Medical Society Volume 16 ; 2014 ; 16 ; https://www.marinemedicalsociety.in/ ; ; >
       au < frozen ; exists ; 2015 ; Journal of Marine Medical Society Volume 17 ; 2015 ; 17 ; https://www.marinemedicalsociety.in/ ; ; >
@@ -10179,7 +10179,7 @@
       param[journal_issn] = 1011-4564
 #      param[base_url] = http://www.jmedscindmc.com/
 
-      au < manifest ; exists ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ ; ; >
+      au < exists ; exists ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ ; ; > 
       au < frozen ; exists ; 2015 ; Journal of Medical Sciences Volume 35 ; 2015 ; 35 ; https://www.jmedscindmc.com/ ; ; >
       au < frozen ; exists ; 2016 ; Journal of Medical Sciences Volume 36 ; 2016 ; 36 ; https://www.jmedscindmc.com/ ; ; >
       au < frozen ; exists ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; https://www.jmedscindmc.com/ ; ; >
@@ -10304,7 +10304,7 @@
 #      param[base_url] = http://www.jpsiconline.com/
 
       au < frozen ; exists ; 2014 ; Journal of Patient Safety and Infection Control Volume 2 ; 2014 ; 2 ; https://www.jpsiconline.com/ ; ; >
-      au < manifest ; exists ; 2015 ; Journal of Patient Safety and Infection Control Volume 3 ; 2015 ; 3 ; https://www.jpsiconline.com/ ; ; >
+      au < notReady ; exists ; 2015 ; Journal of Patient Safety and Infection Control Volume 3 ; 2015 ; 3 ; https://www.jpsiconline.com/ ; ; > #500 error
       au < frozen ; exists ; 2016 ; Journal of Patient Safety and Infection Control Volume 4 ; 2016 ; 4 ; https://www.jpsiconline.com/ ; ; >
       au < frozen ; exists ; 2017 ; Journal of Patient Safety and Infection Control Volume 5 ; 2017 ; 5 ; https://www.jpsiconline.com/ ; ; >
       au < frozen ; exists ; 2018 ; Journal of Patient Safety and Infection Control Volume 6 ; 2018 ; 6 ; https://www.jpsiconline.com/ ; ; >
@@ -10432,7 +10432,7 @@
 #      param[base_url] = http://www.jvbd.org/
 
       au < frozen ; exists ; 2012 ; Journal of Vector Borne Diseases Volume 49 ; 2012 ; 49 ; https://www.jvbd.org/ ; ; >
-      au < manifest ; exists ; 2013 ; Journal of Vector Borne Diseases Volume 50 ; 2013 ; 50 ; https://www.jvbd.org/ ; ; >
+      au < notReady ; exists ; 2013 ; Journal of Vector Borne Diseases Volume 50 ; 2013 ; 50 ; https://www.jvbd.org/ ; ; > #500 error
       au < frozen ; exists ; 2014 ; Journal of Vector Borne Diseases Volume 51 ; 2014 ; 51 ; https://www.jvbd.org/ ; ; >
       au < frozen ; exists ; 2015 ; Journal of Vector Borne Diseases Volume 52 ; 2015 ; 52 ; https://www.jvbd.org/ ; ; >
       au < frozen ; exists ; 2016 ; Journal of Vector Borne Diseases Volume 53 ; 2016 ; 53 ; https://www.jvbd.org/ ; ; >
@@ -10804,7 +10804,7 @@
       au < frozen ; exists ; 2012 ; Taiwan Journal of Ophthalmology Volume 2 ; 2012 ; 2 ; https://www.e-tjo.org/ ; ; >
       au < frozen ; exists ; 2013 ; Taiwan Journal of Ophthalmology Volume 3 ; 2013 ; 3 ; https://www.e-tjo.org/ ; ; >
       au < frozen ; exists ; 2014 ; Taiwan Journal of Ophthalmology Volume 4 ; 2014 ; 4 ; https://www.e-tjo.org/ ; ; >
-      au < manifest ; exists ; 2015 ; Taiwan Journal of Ophthalmology Volume 5 ; 2015 ; 5 ; https://www.e-tjo.org/ ; ; >
+      au < notReady ; exists ; 2015 ; Taiwan Journal of Ophthalmology Volume 5 ; 2015 ; 5 ; https://www.e-tjo.org/ ; ; > #500 error
       au < frozen ; exists ; 2016 ; Taiwan Journal of Ophthalmology Volume 6 ; 2016 ; 6 ; https://www.e-tjo.org/ ; ; >
       au < frozen ; exists ; 2017 ; Taiwan Journal of Ophthalmology Volume 7 ; 2017 ; 7 ; https://www.e-tjo.org/ ; ; >
       au < frozen ; exists ; 2018 ; Taiwan Journal of Ophthalmology Volume 8 ; 2018 ; 8 ; https://www.e-tjo.org/ ; ; >
