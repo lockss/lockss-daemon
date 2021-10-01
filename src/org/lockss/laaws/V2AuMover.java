@@ -35,8 +35,10 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Vector;
 import java.util.stream.Collectors;
 import okhttp3.Dispatcher;
@@ -101,6 +103,7 @@ public class V2AuMover {
     THREADPOOL_PREFIX + "keepAlive";
   static final long DEFAULT_THREADPOOL_KEEPALIVE = 5 * Constants.MINUTE;
 
+  private static V2AuMover instance;
 
   /**
    * The v2 Repository Client
@@ -170,18 +173,29 @@ public class V2AuMover {
   private String currentAu;
   private String currentCu;
   private PluginManager pluginManager;
-  private List<ArchivalUnit> auList= new ArrayList<>();
-  private int ausToMove =0;
+  private Queue<ArchivalUnit> auMoveQueue=new LinkedList<>();
   private Dispatcher dispatcher;
   private long startTime;
   private int auCount = 0;
   boolean allCusQueued=false;
 
-
-  public V2AuMover() {
-    this(null, null, null, null);
+  //---------------
+  // Construction
+  //---------------
+  public static V2AuMover getInstance() {
+    if (instance == null) {
+      synchronized (V2AuMover.class) {
+        if (instance == null) {
+          instance = new V2AuMover();
+        }
+      }
+    }
+    return instance;
   }
 
+  private V2AuMover() {
+    this(null, null, null, null);
+  }
 
   /**
    * The primary constructor for a V2RepoAuCopier
@@ -190,7 +204,7 @@ public class V2AuMover {
    * @param ruser The v2 login user
    * @param rpass The v2 login password
    */
-  public V2AuMover(String rspec, String ruser, String rpass, String cfgService) {
+  private V2AuMover(String rspec, String ruser, String rpass, String cfgService) {
     Configuration config = ConfigManager.getCurrentConfig();
     if (rspec == null) {
       rspec = config.get(PARAM_V2_REPO_SPEC);
@@ -211,46 +225,11 @@ public class V2AuMover {
   }
 
   /**
-   * Move all available Aus.
-   * @throws IOException if error occurred while moving au.
-   */
-  public void moveAllAus() throws IOException {
-    auList.addAll(pluginManager.getAllAus());
-    ausToMove=auList.size();
-    auCount=0;
-    log.debug("Moving all " + ausToMove + " aus.");
-    moveNextAu();
-  }
-
-  /**
-   * Move one au as identified by the name of the au
-   *
-   * @param auId The ArchivalUnit Id string
-   */
-  public void moveOneAu(String auId) throws IOException {
-    ArchivalUnit au = pluginManager.getAuFromId(auId);
-    if(au != null) {
-      moveOneAu(au);
-    }
-  }
-
-  /**
-   * Move one Au
-   * @param au the ArchivalUnit to move
-   * @throws IOException
-   */
-  public void moveOneAu(ArchivalUnit au) throws IOException {
-    auCount=0;
-    auList.add(au);
-    moveNextAu();
-  }
-
-  /**
    * Initialization for Rest Bepository client
    *
    * @param rspec The v2 RepoSpec string
    */
-  protected void initRepoClient(String rspec) {
+  private void initRepoClient(String rspec) {
     log.debug3("RepoSpec=" + rspec);
     this.repoSpec = RepoSpec.fromSpec(rspec);
     this.collection = repoSpec.getCollection();
@@ -280,7 +259,7 @@ public class V2AuMover {
    *
    * @param accessUrl the url in with or without user:pass
    */
-  protected void initConfigClient(String accessUrl) {
+  private void initConfigClient(String accessUrl) {
     configClient = new V2RestClient();
     log.debug("Configuration Service: " + accessUrl);
     parseConfigServiceAccessUrl(accessUrl);
@@ -305,21 +284,72 @@ public class V2AuMover {
     cfgAusApi = new AusApi(configClient);
   }
 
+  //-------------------------
+  // Primary Public Functions
+  // -------------------------
+
+  /**
+   * Move all Aus that are not currently in the move queue.
+   * @throws IOException if error occurred while moving au.
+   */
+  public void moveAllAus() throws IOException {
+    for (ArchivalUnit au: pluginManager.getAllAus()) {
+      if (!auMoveQueue.contains(au)) {
+        auMoveQueue.add(au);
+      }
+    }
+    log.debug("Moving " + auMoveQueue.size() + " aus.");
+    // Check to see if we are currently working on an au.
+    if(currentAu == null)
+      moveNextAu();
+  }
+
+
+
+  /**
+   * Move one au as identified by the name of the au
+   * iff it's not already in the queue
+   * @param auId The ArchivalUnit Id string
+   */
+  public void moveOneAu(String auId) throws IOException {
+    ArchivalUnit au = pluginManager.getAuFromId(auId);
+    if(au != null) {
+      moveOneAu(au);
+    }
+  }
+
+  /**
+   * Move the requested Au
+   * iff it's not already in the queue.
+   * @param au the ArchivalUnit to move
+   * @throws IOException
+   */
+  public void moveOneAu(ArchivalUnit au) throws IOException {
+    if (!auMoveQueue.contains(au)) {
+      auMoveQueue.add(au);
+    }
+    // if we aren't working on an au move the next au.
+    if(currentAu == null)
+      moveNextAu();
+  }
+
+
   protected void moveNextAu() throws IOException {
-    if(auCount < auList.size()) {
-      ArchivalUnit au = auList.get(auCount);
+    ArchivalUnit au = auMoveQueue.poll();
+    if(au != null) {
       allCusQueued=false;
       cuVersionsMoved=0;
       cuMoved=0;
-      auCount++;
-      log.debug("Moving " + auCount + " of " + auList.size());
+      log.debug("Moving " + au.getName() + " - " + auMoveQueue.size() +" remaining.");
+      currentAu = au.getAuId();
+      //todo: turn off au crawling?
+      //todo: turn off au polling?
       moveAu(au);
     }
   }
 
   protected void moveAu(ArchivalUnit au) throws IOException {
     startTime = System.currentTimeMillis(); // Get the start Time
-    currentAu = au.getAuId();
     String auName = au.getName();
     log.info("Handling request to move AU: " + auName);
     log.info("AuId: " + currentAu);
@@ -346,9 +376,9 @@ public class V2AuMover {
 
 
   /**
-   * Move one AU
-   *
-   * @param au The ArchivalUnit to move
+   *  Move one V1 Au including all cachedUrls and all versions.
+   * @param au au The ArchivalUnit to move
+   * @throws ApiException
    */
   protected void moveAuArtifacts(ArchivalUnit au) throws ApiException {
     //Get the au artifacts from the repo.
@@ -382,45 +412,12 @@ public class V2AuMover {
     allCusQueued=true;
    }
 
-  protected void moveAuConfig(ArchivalUnit au) {
-    Configuration v1config = au.getConfiguration();
-    AuConfiguration v2config = new AuConfiguration().auId(au.getAuId());
-    String auName=au.getName();
-    if (v1config != null) {
-      try {
-        // copy the keys
-        v1config.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
-          .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
-        // send the configuration
-        cfgAusApi.putAuConfig(au.getAuId(), v2config);
-        log.info(auName + ": Successfully moved AU Configuration.");
-      } catch (ApiException apie) {
-        log.error(auName + ": Attempt to move au configuration failed: " + apie.getCode() +
-          "- " + apie.getMessage());
-      }
-    } else {
-      log.warning(auName + ": No Configuration found for au");
-    }
-  }
 
-  protected void moveAuState(ArchivalUnit au) {
-    AuState v1State = AuUtil.getAuState(au);
-    String auName=au.getName();
-    if (v1State != null) {
-      try {
-        V2AuStateBean v2State = new V2AuStateBean(v1State);
-        cfgAusApi.patchAuState(au.getAuId(), v2State.toMap(), makeCookie());
-        log.info(auName + ": Successfully moved AU State.");
-      } catch (ApiException apie) {
-        log.error(auName + ": Attempt to move au state failed: " + apie.getCode() +
-          "- " + apie.getMessage());
-      }
-    }
-    else {
-      log.warning(auName + ": No State information found for au");
-    }
-  }
-
+  /**
+   * Move all versions of a cachedUrl.
+   * @param cachedUrl The cachedUrl we which to move
+   * @param cuArtifacts The list of artifacts which already match this cachedUrl uri.
+   */
   private void moveCuVersions(CachedUrl cachedUrl, List<Artifact> cuArtifacts) {
     String auid = cachedUrl.getArchivalUnit().getAuId();
     String uri = cachedUrl.getUrl();
@@ -455,12 +452,26 @@ public class V2AuMover {
   }
 
 
+  /**
+   * Make an asynchronous rest call to the V2 repository to create a new artifact.
+   * @param auid au identifer for the CachedUrl we are moving.
+   * @param uri the uri  for the CachedUrl we are moving.
+   * @param collectionDate the date at which this item was collected or null
+   * @param cu the CachedUrl we are moving.
+   * @param collectionId the v2 collection we are moving to
+   * @throws ApiException the rest exception thrown should anything fail in the request.
+   */
   private void createArtifact(String auid, String uri, Long collectionDate,
     CachedUrl cu, String collectionId) throws ApiException {
     rsCollectionsApi.createArtifactAsync(collectionId, auid, uri, cu, collectionDate,
       new CreateArtifactCallback());
   }
 
+  /**
+   * Make a synchronous rest call to commit the artifact that just completed successful creation.
+   * @param uncommitted the v2 artifact to be committed
+   * @throws ApiException the rest exception thrown should anything fail in the request.
+   */
   private void commitArtifact(Artifact uncommitted) throws ApiException {
     Artifact committed;
     committed = rsCollectionsApi.updateArtifact(uncommitted.getCollection(),
@@ -469,6 +480,11 @@ public class V2AuMover {
     cuVersionsMoved++;
   }
 
+  /**
+   * Complete the au move by moving the state and config information.
+   * @param au the au we are moving.
+   * @throws IOException
+   */
   private void finishAuMove(ArchivalUnit au) throws IOException{
     do { //Wait until we are done the processing
       try {
@@ -488,9 +504,58 @@ public class V2AuMover {
       log.debug("CachedUrls Moved: " + cuMoved + "     Artifacts Moved: " + cuVersionsMoved +
         "   runTime (secs): " + (endTime - startTime) / 1000);
     }
+    // we are no longer actively working on any au so null out the currentAu.
+    currentAu=null;
     moveNextAu();
   }
-  // cfg utilities
+
+  /**
+   * Make a synchronous rest call to configuration service to add configuration info for an au.
+   * @param au The ArchivalUnit whose configuration is to be move
+   */
+  private void moveAuConfig(ArchivalUnit au) {
+    Configuration v1config = au.getConfiguration();
+    AuConfiguration v2config = new AuConfiguration().auId(au.getAuId());
+    String auName=au.getName();
+    if (v1config != null) {
+      try {
+        // copy the keys
+        v1config.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
+          .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
+        // send the configuration
+        cfgAusApi.putAuConfig(au.getAuId(), v2config);
+        log.info(auName + ": Successfully moved AU Configuration.");
+      } catch (ApiException apie) {
+        log.error(auName + ": Attempt to move au configuration failed: " + apie.getCode() +
+          "- " + apie.getMessage());
+      }
+    } else {
+      log.warning(auName + ": No Configuration found for au");
+    }
+  }
+
+  /**
+   * Make a synchronous rest call to configuration service to add state info for an au.
+   * @param au The ArchivalUnit  to move
+   */
+  private void moveAuState(ArchivalUnit au) {
+    AuState v1State = AuUtil.getAuState(au);
+    String auName=au.getName();
+    if (v1State != null) {
+      try {
+        V2AuStateBean v2State = new V2AuStateBean(v1State);
+        cfgAusApi.patchAuState(au.getAuId(), v2State.toMap(), makeCookie());
+        log.info(auName + ": Successfully moved AU State.");
+      } catch (ApiException apie) {
+        log.error(auName + ": Attempt to move au state failed: " + apie.getCode() +
+          "- " + apie.getMessage());
+      }
+    }
+    else {
+      log.warning(auName + ": No State information found for au");
+    }
+  }
+  // config service utilities
 
   /**
    * Saves the individual components of the Configuration REST web service URL.
@@ -553,6 +618,9 @@ public class V2AuMover {
     return cliendId + "-" + ++reqId;
   }
 
+  /**
+   * A simple class to encompass an ApiCallback
+   */
   protected class CreateArtifactCallback implements ApiCallback<Artifact> {
 
     @Override

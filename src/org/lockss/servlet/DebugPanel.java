@@ -436,15 +436,15 @@ public class DebugPanel extends LockssServlet {
   }
 
   private void doCopyToV2repo() throws IOException {
-    V2AuMover v2AuMover = new V2AuMover();
+    V2AuMover auMover = V2AuMover.getInstance();
     ArchivalUnit au = getAu();
     if (au == null) {
       log.info("No Au selected...moving all known aus");
-      v2AuMover.moveAllAus();
+      auMover.moveAllAus();
     }
     else {
       log.info("Sending request to move au "+ au.getName());
-      v2AuMover.moveOneAu(au);
+      auMover.moveOneAu(au);
     }
   }
 
