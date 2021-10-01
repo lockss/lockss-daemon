@@ -27,7 +27,7 @@
     param[journal_id] = 10.1055/s-00000001
     comment[years] = 1991-current
 
-    au < manifest ; exists ; 1991 ; 1991 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 26 ; 26 ; >
+    au < ready ; exists ; 1991 ; 1991 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 26 ; 26 ; >
     au < ready ; exists ; 1992 ; 1992 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 27 ; 27 ; >
     au < ready ; exists ; 1993 ; 1993 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 28 ; 28 ; >
     au < ready ; exists ; 1994 ; 1994 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 29 ; 29 ; >
@@ -593,7 +593,7 @@
    au < deepCrawl ; exists ; 2018 ; 2018 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 37 ; 37 ; >
    au < finished ; crawling ; 2019 ; 2019 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 38 ; 38 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 39 ; 39 ; >
-   au < manifest ; exists ; 2021 ; 2021 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 40 ; 40 ; >
+   au < ready ; exists ; 2021 ; 2021 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 40 ; 40 ; >
 
    }
 
@@ -627,7 +627,7 @@
     comment[years] = 1999-2012
     # includes Arzneimittelforschung Drug Research. Published as Drug Research after 2012.
 
-    au < manifest ; exists ; 1999 ; 1999 ; Arzneimittelforschung Volume 50 ; 50 ; >
+    au < ready ; exists ; 1999 ; 1999 ; Arzneimittelforschung Volume 50 ; 50 ; >
     au < finished ; crawling ; 2001 ; 2001 ; Arzneimittelforschung Volume 51 ; 51 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2002 ; 2002 ; Arzneimittelforschung Volume 52 ; 52 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 ; reingest1.clockss.org:8082 >
@@ -1585,7 +1585,7 @@
     comment[years] = 1991-current
     comment[pre_1991] = Journals before 1991 redirect to Zeitschrift für Kinderchirurgie with a different volume and DOI
 
-   au < manifest ; exists ; 1991 ; 1991 ; European Journal of Pediatric Surgery Volume 1 ; 1 ; >
+   au < ready ; exists ; 1991 ; 1991 ; European Journal of Pediatric Surgery Volume 1 ; 1 ; >
    au < ready ; exists ; 1992 ; 1992 ; European Journal of Pediatric Surgery Volume 2 ; 2 ; >
    au < ready ; exists ; 1993 ; 1993 ; European Journal of Pediatric Surgery Volume 3 ; 3 ; >
    au < ready ; exists ; 1994 ; 1994 ; European Journal of Pediatric Surgery Volume 4 ; 4 ; >
@@ -2564,14 +2564,14 @@
     param[journal_id] = 10.1055/s-00000167
     comment[years] = 1992-current
 
-    au < manifest ; exists ; 1992 ; 1992 ; International Journal of Angiology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; International Journal of Angiology Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; International Journal of Angiology Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; International Journal of Angiology Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; International Journal of Angiology Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; International Journal of Angiology Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; International Journal of Angiology Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; International Journal of Angiology Volume 8 ; 8 ; >
+    au < ready ; exists ; 1992 ; 1992 ; International Journal of Angiology Volume 1 ; 1 ; >
+    au < ready ; exists ; 1993 ; 1993 ; International Journal of Angiology Volume 2 ; 2 ; >
+    au < ready ; exists ; 1994 ; 1994 ; International Journal of Angiology Volume 3 ; 3 ; >
+    au < ready ; exists ; 1995 ; 1995 ; International Journal of Angiology Volume 4 ; 4 ; >
+    au < ready ; exists ; 1996 ; 1996 ; International Journal of Angiology Volume 5 ; 5 ; >
+    au < ready ; exists ; 1997 ; 1997 ; International Journal of Angiology Volume 6 ; 6 ; >
+    au < ready ; exists ; 1998 ; 1998 ; International Journal of Angiology Volume 7 ; 7 ; >
+    au < ready ; exists ; 1999 ; 1999 ; International Journal of Angiology Volume 8 ; 8 ; >
     au < frozen ; exists ; 2000 ; 2000 ; International Journal of Angiology Volume 9 ; 9 ; >
     au < frozen ; exists ; 2001 ; 2001 ; International Journal of Angiology Volume 10 ; 10 ; >
     au < frozen ; exists ; 2002 ; 2002 ; International Journal of Angiology Volume 11 ; 11 ; >
@@ -4782,7 +4782,7 @@
     param[journal_id] = 10.1055/s-00000059
     comment[years] = 1999-current
 
-   au < manifest ; exists ; 1999 ; 1999 ; Pneumologie Volume 53 ; 53 ; >
+   au < ready ; exists ; 1999 ; 1999 ; Pneumologie Volume 53 ; 53 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Pneumologie Volume 54 ; 54 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Pneumologie Volume 55 ; 55 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Pneumologie Volume 56 ; 56 ; >
@@ -5645,7 +5645,7 @@
    au < ready ; exists ; 1996 ; 1996 ; Seminars in Respiratory and Critical Care Medicine Volume 17 ; 17 ; >
    au < ready ; exists ; 1997 ; 1997 ; Seminars in Respiratory and Critical Care Medicine Volume 18 ; 18 ; >
    au < ready ; exists ; 1998 ; 1998 ; Seminars in Respiratory and Critical Care Medicine Volume 19 ; 19 ; >
-   au < manifest ; exists ; 1999 ; 1999 ; Seminars in Respiratory and Critical Care Medicine Volume 20 ; 20 ; >
+   au < ready ; exists ; 1999 ; 1999 ; Seminars in Respiratory and Critical Care Medicine Volume 20 ; 20 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; >
@@ -5895,7 +5895,7 @@
     param[journal_id] = 10.1055/s-00000080
     comment[years] = 1999-2004
 
-    au < manifest ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
+    au < ready ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; >
@@ -7558,7 +7558,7 @@
     au < deepCrawl ; exists ; 2018 ; 2018 ; Methods of Information in Medicine Volume 57 ; 57 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Methods of Information in Medicine Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Methods of Information in Medicine Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Methods of Information in Medicine Volume 60 ; 60 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Methods of Information in Medicine Volume 60 ; 60 ; >
 
   }
 
@@ -7763,7 +7763,7 @@
     au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Revista Iberoamericana de Cirugía de la Mano Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Iberoamericana de Cirugía de la Mano Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Revista Iberoamericana de Cirugía de la Mano Volume 49 ; 49 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Revista Iberoamericana de Cirugía de la Mano Volume 49 ; 49 ; >
 
   }
 
@@ -7779,11 +7779,11 @@
     param[journal_id] = 10.1055/s-00035148
     comment[years] = 2012-2018
 
-    au < manifest ; exists ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Schlaf Volume 7 ; 7 ; >
 
@@ -8228,19 +8228,19 @@
     param[journal_id] = 10.1055/s-00042863
     comment[years] = 2004-current
 
-    au < manifest ; exists ; 2004 ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
+    au < ready ; exists ; 2004 ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 37 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 38 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 39 ; >
+    au < ready ; exists ; 2007 ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 40 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 41 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 42 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 43 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 44 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 45 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
     au < testing ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; >
     au < testing ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; >
     au < ready ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
@@ -8283,13 +8283,13 @@
     param[journal_id] = 10.1055/s-00040442
     comment[years] = 2011-current
 
-    au < manifest ; exists ; 2011 ; 2011 ; International Journal of Nutrology Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 ; >
+    au < ready ; exists ; 2011 ; 2011 ; International Journal of Nutrology Volume 4 ; 4 ; >
+    au < ready ; exists ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 ; >
+    au < ready ; exists ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 ; >
+    au < ready ; exists ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 ; >
+    au < ready ; exists ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 ; >
+    au < ready ; exists ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 ; >
+    au < ready ; exists ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 ; >
     au < crawling ; exists ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 ; >
     au < ready ; exists ; 2019 ; 2019 ; International Journal of Nutrology Volume 12 ; 12 ; >
     au < crawling ; exists ; 2020 ; 2020 ; International Journal of Nutrology Volume 13 ; 13 ; >
