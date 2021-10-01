@@ -1083,7 +1083,7 @@
       au < finished ; manifest ; 2018 ; Physical Chemistry Chemical Physics Volume 20 ; 20 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Physical Chemistry Chemical Physics Volume 21 ; 21 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Physical Chemistry Chemical Physics Volume 22 ; 22 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Physical Chemistry Chemical Physics Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Physical Chemistry Chemical Physics Volume 23 ; 23 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2899,7 +2899,7 @@
       au < finished ; manifest ; 2018 ; RSC Advances Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; RSC Advances Volume 9 ; 9 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; RSC Advances Volume 10 ; 10 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; RSC Advances Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; RSC Advances Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; >
 
   }
 

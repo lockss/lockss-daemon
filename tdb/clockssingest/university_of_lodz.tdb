@@ -216,7 +216,7 @@
       comment[publisher] = University of Lodz
       param[journal_abbr] = textmatters
 
-      au < ready ; exists ; 2011-2020 ; Text Matters: A Journal of Literature, Theory and Culture Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2011-2020 ; Text Matters: A Journal of Literature, Theory and Culture Volume 1 ; 1 ; >
       au < expected ; exists ; 2021-2030 ; Text Matters: A Journal of Literature, Theory and Culture Volume 2 ; 2 ; >
 
   }
