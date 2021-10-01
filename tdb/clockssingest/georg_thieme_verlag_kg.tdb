@@ -7958,9 +7958,9 @@
     param[journal_id] = 10.1055/s-00042137
     comment[years] = 2015-current
 
-    au < testing ; exists ; 2015 ; 2015 ; Asian Journal of Oncology Volume 1 ; 1 ; >
+    au < notReady ; exists ; 2015 ; 2015 ; Asian Journal of Oncology Volume 1 ; 1 ; > #pdf, no metadata
     au < crawling ; exists ; 2016 ; 2016 ; Asian Journal of Oncology Volume 2 ; 2 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Asian Journal of Oncology Volume 3 ; 3 ; >
+    au < notReady ; exists ; 2017 ; 2017 ; Asian Journal of Oncology Volume 3 ; 3 ; > #pdf, no metadata
     au < crawling ; exists ; 2018 ; 2018 ; Asian Journal of Oncology Volume 4 ; 4 ; >
     au < ready ; exists ; 2019 ; 2019 ; Asian Journal of Oncology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Asian Journal of Oncology Volume 6 ; 6 ; >
@@ -8034,9 +8034,9 @@
     au < crawling ; exists ; 1996 ; 1996 ; British Homeopathic Journal Volume 86 ; 86 ; >
     au < crawling ; exists ; 1997 ; 1997 ; British Homeopathic Journal Volume 87 ; 87 ; >
     au < crawling ; exists ; 1998 ; 1998 ; British Homeopathic Journal Volume 88 ; 88 ; >
-    au < notReady ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; > #no metadata
-    au < notReady ; exists ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 ; > #no metadata
-    au < notReady ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; > #no metadata
+    au < notReady ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; > #pdf, no metadata
+    au < notReady ; exists ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 ; > #pdf, no metadata
+    au < notReady ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; > #pdf, no metadata
 
   }
 
@@ -8193,22 +8193,22 @@
     param[journal_id] = 10.1055/s-00034926
     comment[years] = 2002-current
 
-    au < testing ; exists ; 2002 ; 2002 ; Homeopathy Volume 91 ; 91 ; >
+    au < notReady ; exists ; 2002 ; 2002 ; Homeopathy Volume 91 ; 91 ; > #pdf, no metadata
     au < crawling ; exists ; 2003 ; 2003 ; Homeopathy Volume 92 ; 92 ; >
-    au < testing ; exists ; 2004 ; 2004 ; Homeopathy Volume 93 ; 93 ; >
-    au < testing ; exists ; 2005 ; 2005 ; Homeopathy Volume 94 ; 94 ; >
-    au < testing ; exists ; 2006 ; 2006 ; Homeopathy Volume 95 ; 95 ; >
+    au < notReady ; exists ; 2004 ; 2004 ; Homeopathy Volume 93 ; 93 ; > #pdf, no metadata
+    au < notReady ; exists ; 2005 ; 2005 ; Homeopathy Volume 94 ; 94 ; > #pdf, no metadata
+    au < notReady ; exists ; 2006 ; 2006 ; Homeopathy Volume 95 ; 95 ; > #pdf, no metadata
     au < crawling ; exists ; 2007 ; 2007 ; Homeopathy Volume 96 ; 96 ; >
-    au < testing ; exists ; 2008 ; 2008 ; Homeopathy Volume 97 ; 97 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Homeopathy Volume 98 ; 98 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Homeopathy Volume 99 ; 99 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Homeopathy Volume 100 ; 100 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Homeopathy Volume 101 ; 101 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Homeopathy Volume 102 ; 102 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Homeopathy Volume 103 ; 103 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Homeopathy Volume 104 ; 104 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Homeopathy Volume 105 ; 105 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Homeopathy Volume 106 ; 106 ; >
+    au < notReady ; exists ; 2008 ; 2008 ; Homeopathy Volume 97 ; 97 ; > #pdf, no metadata
+    au < notReady ; exists ; 2009 ; 2009 ; Homeopathy Volume 98 ; 98 ; > #pdf, no metadata
+    au < notReady ; exists ; 2010 ; 2010 ; Homeopathy Volume 99 ; 99 ; > #pdf, no metadata
+    au < notReady ; exists ; 2011 ; 2011 ; Homeopathy Volume 100 ; 100 ; > #pdf, no metadata
+    au < notReady ; exists ; 2012 ; 2012 ; Homeopathy Volume 101 ; 101 ; > #pdf, no metadata
+    au < notReady ; exists ; 2013 ; 2013 ; Homeopathy Volume 102 ; 102 ; > #pdf, no metadata
+    au < notReady ; exists ; 2014 ; 2014 ; Homeopathy Volume 103 ; 103 ; > #pdf, no metadata
+    au < notReady ; exists ; 2015 ; 2015 ; Homeopathy Volume 104 ; 104 ; > #pdf, no metadata
+    au < notReady ; exists ; 2016 ; 2016 ; Homeopathy Volume 105 ; 105 ; > #pdf, no metadata
+    au < notReady ; exists ; 2017 ; 2017 ; Homeopathy Volume 106 ; 106 ; > #pdf, no metadata
     au < crawling ; exists ; 2018 ; 2018 ; Homeopathy Volume 107 ; 107 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Homeopathy Volume 108 ; 108 ; >
     au < ready ; exists ; 2020 ; 2020 ; Homeopathy Volume 109 ; 109 ; >
@@ -8241,8 +8241,8 @@
     au < ready ; exists ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 ; >
     au < ready ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
     au < ready ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; >
+    au < notReady ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; > #pdf, no metadata
+    au < notReady ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; > #pdf, no metadata
     au < ready ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Plastic Surgery Volume 54 ; 54 ; >
@@ -8350,13 +8350,13 @@
     comment[years] = 2011-current
 
     au < crawling ; exists ; 2011 ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 3 ; >
+    au < notReady ; exists ; 2012 ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 3 ; > #pdf, no metadata
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 5 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 6 ; >
+    au < notReady ; exists ; 2015 ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 6 ; > #pdf, no metadata
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 7 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 8 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 9 ; >
+    au < notReady ; exists ; 2017 ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 8 ; > #pdf, no metadata
+    au < notReady ; exists ; 2018 ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 9 ; > #pdf, no metadata
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Digestive Endoscopy Volume 10 ; 10 ; >
     au < ready ; exists ; 2020 ; 2020 ; Journal of Digestive Endoscopy Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Digestive Endoscopy Volume 12 ; 12 ; >
@@ -8419,17 +8419,17 @@
     param[journal_id] = 10.1055/s-00044881
     comment[years] = 2009-current
 
-    au < testing ; exists ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 3 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 4 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 5 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 6 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 7 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 8 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Laboratory Physicians Volume 9 ; 9 ; >
-    au < testing ; exists ; 2018 ; 2018 ; Journal of Laboratory Physicians Volume 10 ; 10 ; >
-    au < testing ; exists ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 ; >
+    au < notReady ; exists ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2010 ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2011 ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 3 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2012 ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 4 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2013 ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 5 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2014 ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 6 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2015 ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 7 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2016 ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 8 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2017 ; 2017 ; Journal of Laboratory Physicians Volume 9 ; 9 ; >  #pdf, no metadata
+    au < notReady ; exists ; 2018 ; 2018 ; Journal of Laboratory Physicians Volume 10 ; 10 ; > #pdf, no metadata
+    au < notReady ; exists ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 ; > #pdf, no metadata
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Laboratory Physicians Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Laboratory Physicians Volume 13 ; 13 ; >
 
@@ -8446,10 +8446,10 @@
     param[journal_id] = 10.1055/s-00040444
     comment[years] = 2014-2019
 
-    au < testing ; exists ; 2014 ; 2014 ; Journal of Morphological Sciences Volume 31 ; 31 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Journal of Morphological Sciences Volume 32 ; 32 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Journal of Morphological Sciences Volume 33 ; 33 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Journal of Morphological Sciences Volume 34 ; 34 ; >
+    au < notReady ; exists ; 2014 ; 2014 ; Journal of Morphological Sciences Volume 31 ; 31 ; > #pdf, no metadata
+    au < notReady ; exists ; 2015 ; 2015 ; Journal of Morphological Sciences Volume 32 ; 32 ; > #pdf, no metadata
+    au < notReady ; exists ; 2016 ; 2016 ; Journal of Morphological Sciences Volume 33 ; 33 ; > #pdf, no metadata
+    au < notReady ; exists ; 2017 ; 2017 ; Journal of Morphological Sciences Volume 34 ; 34 ; > #pdf, no metadata
     au < ready ; exists ; 2018 ; 2018 ; Journal of Morphological Sciences Volume 35 ; 35 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Morphological Sciences Volume 36 ; 36 ; >
 
@@ -8495,10 +8495,10 @@
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Neurosciences in Rural Practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Neurosciences in Rural Practice Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Neurosciences in Rural Practice Volume 5 ; 5 ; >
-    au < notReady ; exists ; 2015 ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 6 ; > #no article and metadata
-    au < notReady ; exists ; 2016 ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 7 ; > #no article and metadata
-    au < notReady ; exists ; 2017 ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 8 ; > #no article and metadata
-    au < notReady ; exists ; 2018 ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 9 ; > #no article and metadata
+    au < notReady ; exists ; 2015 ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 6 ; > #pdf, no metadata
+    au < notReady ; exists ; 2016 ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 7 ; > #pdf, no metadata
+    au < notReady ; exists ; 2017 ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 8 ; > #pdf, no metadata
+    au < notReady ; exists ; 2018 ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 9 ; > #pdf, no metadata
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Neurosciences in Rural Practice Volume 10 ; 10 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Neurosciences in Rural Practice Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Neurosciences in Rural Practice Volume 12 ; 12 ; >
