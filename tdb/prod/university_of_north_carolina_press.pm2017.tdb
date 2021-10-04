@@ -73,6 +73,22 @@
 
     {
     title <
+      name = Arris ;
+      issn = 1048-5945 ;
+      eissn = 2769-2434
+
+    >
+
+      attr[journal_id] = 838
+
+      au < manifest ; 2018 ; Arris Volume 29 [2018] ; 16500 >
+      au < manifest ; 2019 ; Arris Volume 30 [2019] ; 16501 >
+      au < manifest ; 2020 ; Arris Volume 31 [2020] ; 16502 >
+
+    }
+
+    {
+    title <
       name = CrossCurrents ;
       issn = 0011-1953 ;
       eissn = 1939-3881
