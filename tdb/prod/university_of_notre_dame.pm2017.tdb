@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = University of Notre Dame
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:418
 
     {
     title <
       name = Religion & Literature ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0888-3769 ;
+      eissn = 2328-6911
 
     >
 
