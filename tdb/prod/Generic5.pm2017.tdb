@@ -1,0 +1,40 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Michigan Historical Review ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 775
+
+      au < manifest ; 2006 ; Michigan Historical Review Volume 32 [2006] ; 15347 >
+      au < manifest ; 2007 ; Michigan Historical Review Volume 33 [2007] ; 15346 >
+      au < manifest ; 2008 ; Michigan Historical Review Volume 34 [2008] ; 15345 >
+      au < manifest ; 2009 ; Michigan Historical Review Volume 35 [2009] ; 15344 >
+      au < manifest ; 2010 ; Michigan Historical Review Volume 36 [2010] ; 15343 >
+      au < manifest ; 2011 ; Michigan Historical Review Volume 37 [2011] ; 15342 >
+      au < manifest ; 2012 ; Michigan Historical Review Volume 38 [2012] ; 15341 >
+      au < manifest ; 2013 ; Michigan Historical Review Volume 39 [2013] ; 15340 >
+      au < manifest ; 2014 ; Michigan Historical Review Volume 40 [2014] ; 15339 >
+      au < manifest ; 2015 ; Michigan Historical Review Volume 41 [2015] ; 15338 >
+      au < manifest ; 2016 ; Michigan Historical Review Volume 42 [2016] ; 15337 >
+      au < manifest ; 2017 ; Michigan Historical Review Volume 43 [2017] ; 15336 >
+      au < manifest ; 2018 ; Michigan Historical Review Volume 44 [2018] ; 15335 >
+      au < manifest ; 2019 ; Michigan Historical Review Volume 45 [2019] ; 15334 >
+      au < manifest ; 2020 ; Michigan Historical Review Volume 46 [2020] ; 15280 >
+      au < manifest ; 2021 ; Michigan Historical Review Volume 47 [2021] ; 15737 >
+
+    }
+
+}

@@ -1,0 +1,36 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = The Yale Review ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 789
+
+      au < manifest ; 2010 ; The Yale Review Volume 98 [2010] ; 15920 >
+      au < manifest ; 2011 ; The Yale Review Volume 99 [2011] ; 15813 >
+      au < manifest ; 2012 ; The Yale Review Volume 100 [2012] ; 15814 >
+      au < manifest ; 2013 ; The Yale Review Volume 101 [2013] ; 15815 >
+      au < manifest ; 2014 ; The Yale Review Volume 102 [2014] ; 15816 >
+      au < manifest ; 2015 ; The Yale Review Volume 103 [2015] ; 15817 >
+      au < manifest ; 2016 ; The Yale Review Volume 104 [2016] ; 15818 >
+      au < manifest ; 2017 ; The Yale Review Volume 105 [2017] ; 15819 >
+      au < manifest ; 2018 ; The Yale Review Volume 106 [2018] ; 15820 >
+      au < manifest ; 2019 ; The Yale Review Volume 107 [2019] ; 15821 >
+      au < manifest ; 2020 ; The Yale Review Volume 108 [2020] ; 15822 >
+      au < manifest ; 2021 ; The Yale Review Volume 109 [2021] ; 15559 >
+
+    }
+
+}

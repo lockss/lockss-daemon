@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Journal of Advanced Military Studies ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 797
+
+      au < manifest ; 2020 ; Journal of Advanced Military Studies Volume 11 [2020] ; 15915 >
+      au < manifest ; 2021 ; Journal of Advanced Military Studies Volume 12 [2021] ; 15916 >
+
+    }
+
+}

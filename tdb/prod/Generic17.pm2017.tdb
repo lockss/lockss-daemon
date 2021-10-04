@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Religion & Literature ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 795
+
+      au < manifest ; 2018 ; Religion & Literature Volume 50 [2018] ; 15862 >
+      au < manifest ; 2019 ; Religion & Literature Volume 51 [2019] ; 15863 >
+      au < manifest ; 2020 ; Religion & Literature Volume 52 [2020] ; 15864 >
+
+    }
+
+}
