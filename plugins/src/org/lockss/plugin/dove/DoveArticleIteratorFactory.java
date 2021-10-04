@@ -67,6 +67,9 @@ import org.lockss.util.UrlUtil;
  * HTML Abstract: https://www.dovepress.com/title-words-go-here-article-RTC
  * HTML f-t: https://www.dovepress.com/title-words-go-here-fulltext-article-RTC
  * <meta name="citation_pdf_url" content="https://www.dovepress.com/getfile.php?fileID=26034">
+ *
+ * Confirmed on 10/2021, the publisher will no longer publisher abstract, only full text article,
+ * see Jira for more detail
  */
 
 public class DoveArticleIteratorFactory implements ArticleIteratorFactory,
@@ -81,8 +84,8 @@ public class DoveArticleIteratorFactory implements ArticleIteratorFactory,
   // fulltext would also match the abstract pattern so manually check inside the method 
   // https://www.dovepress.com/the-articletitle-peer-reviewed-article-GICTT
   // https://www.dovepress.com/the-articletitle-peer-reviewed-fulltext-article-GICTT
-  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("([^/]+)-article-([A-Z]+)$", Pattern.CASE_INSENSITIVE);
-  //protected Pattern FULLTEXT_PATTERN = Pattern.compile("([^/]+)-fulltext-article-([A-Z]+)$", Pattern.CASE_INSENSITIVE);
+  //protected static Pattern ABSTRACT_PATTERN = Pattern.compile("([^/]+)-article-([A-Z]+)$", Pattern.CASE_INSENSITIVE);
+  protected static Pattern FULLTEXT_PATTERN = Pattern.compile("([^/]+)-fulltext-article-([A-Z]+)$", Pattern.CASE_INSENSITIVE);
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -105,11 +108,9 @@ public class DoveArticleIteratorFactory implements ArticleIteratorFactory,
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
-      Matcher mat = ABSTRACT_PATTERN.matcher(url);
+      Matcher mat = FULLTEXT_PATTERN.matcher(url);
       if (mat.find()) {
-        if (!url.contains("fulltext-article")) {
-          return processAbstract(cu, mat);
-        } 
+          return processArticle(cu, mat);
       } else {
         // we want to filter out fulltext version (we iterate on the abstract)
         // but if it failed for any reason, log a warning
@@ -123,7 +124,7 @@ public class DoveArticleIteratorFactory implements ArticleIteratorFactory,
      * abstract html pull out the pdf url normalize it and find the matching
      * cached URL
      */
-    protected ArticleFiles processAbstract(CachedUrl absCu, Matcher absMat) {
+    protected ArticleFiles processArticle(CachedUrl absCu, Matcher absMat) {
       NodeList nl = null;
       ArticleFiles af = new ArticleFiles();
       if (absCu != null && absCu.hasContent()) {
