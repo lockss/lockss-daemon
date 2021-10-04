@@ -398,40 +398,6 @@
 
     {
     title <
-      name = Performing Arts Journal ;
-      issn = 0735-8393  ;
-      eissn = 1086-3281  ;
-      issnl = 0735-8393
-
-    >
-
-      attr[journal_id] = 149
-      #continued_by = 1520-281X
-
-        au < released ; 1979-1982 ; Performance Art Magazine LIVE Volumes 1-7 [1979-1982] ; 12567 >
-
-        au < released ; 1976-1977 ; Performing Arts Journal Volume 1 [1976-1977 (1-3)] ; 9961 >
-        au < released ; 1977-1978 ; Performing Arts Journal Volume 2 [1977-1978 (4-6)] ; 9960 >
-        au < released ; 1978-1979 ; Performing Arts Journal Volume 3 [1978-1979 (7-9)] ; 9959 >
-        au < released ; 1979-1980 ; Performing Arts Journal Volume 4 [1979-1980 (10-12)] ; 9958 >
-        au < released ; 1980-1981 ; Performing Arts Journal Volume 5 [1980-1981 (13-15)] ; 9957 >
-        au < released ; 1982 ; Performing Arts Journal Volume 6 [1982 (16-18)] ; 9956 >
-        au < released ; 1983 ; Performing Arts Journal Volume 7 [1983 (19-21)] ; 9955 >
-        au < released ; 1984 ; Performing Arts Journal Volume 8 [1984 (22-24)] ; 9954 >
-        au < released ; 1985-1986 ; Performing Arts Journal Volume 9 [1985-1986 (25-27)] ; 9953 >
-        au < released ; 1986-1987 ; Performing Arts Journal Volume 10 [1986-1987 (28-30)] ; 9952 >
-        au < released ; 1988-1989 ; Performing Arts Journal Volume 11 [1988-1989 (31-34)] ; 9951 >
-        au < released ; 1990 ; Performing Arts Journal Volume 12 [1990 (35-36)] ; 9950 >
-        au < released ; 1991 ; Performing Arts Journal Volume 13 [1991 (37-39)] ; 9949 >
-        au < released ; 1992 ; Performing Arts Journal Volume 14 [1992 (40-42)] ; 9948 >
-        au < released ; 1993 ; Performing Arts Journal Volume 15 [1993 (43-45)] ; 9947 >
-        au < released ; 1994 ; Performing Arts Journal Volume 16 [1994 (46-48)] ; 9946 >
-        au < released ; 1995 ; Performing Arts Journal Volume 17 [1995 (49-51)] ; 9945 >
-
-    }
-    
-    {
-    title <
       name = PAJ: A Journal of Performance and Art ;
       issn = 1520-281X  ;
       eissn = 1537-9477  ;
@@ -467,6 +433,40 @@
         au < released ; 2018 ; PAJ: A Journal of Performance and Art Volume 40 [2018 (118-120)] ; 13180 >
         au < released ; 2019 ; PAJ: A Journal of Performance and Art Volume 41 [2019 (121-123)] ; 13889 >
         au < testing ; 2020 ; PAJ: A Journal of Performance and Art Volume 42 [2020] ; 14590 >
+
+    }
+    
+    {
+    title <
+      name = Performing Arts Journal ;
+      issn = 0735-8393  ;
+      eissn = 1086-3281  ;
+      issnl = 0735-8393
+
+    >
+
+      attr[journal_id] = 149
+      #continued_by = 1520-281X
+
+        au < released ; 1979-1982 ; Performance Art Magazine LIVE Volumes 1-7 [1979-1982] ; 12567 >
+
+        au < released ; 1976-1977 ; Performing Arts Journal Volume 1 [1976-1977 (1-3)] ; 9961 >
+        au < released ; 1977-1978 ; Performing Arts Journal Volume 2 [1977-1978 (4-6)] ; 9960 >
+        au < released ; 1978-1979 ; Performing Arts Journal Volume 3 [1978-1979 (7-9)] ; 9959 >
+        au < released ; 1979-1980 ; Performing Arts Journal Volume 4 [1979-1980 (10-12)] ; 9958 >
+        au < released ; 1980-1981 ; Performing Arts Journal Volume 5 [1980-1981 (13-15)] ; 9957 >
+        au < released ; 1982 ; Performing Arts Journal Volume 6 [1982 (16-18)] ; 9956 >
+        au < released ; 1983 ; Performing Arts Journal Volume 7 [1983 (19-21)] ; 9955 >
+        au < released ; 1984 ; Performing Arts Journal Volume 8 [1984 (22-24)] ; 9954 >
+        au < released ; 1985-1986 ; Performing Arts Journal Volume 9 [1985-1986 (25-27)] ; 9953 >
+        au < released ; 1986-1987 ; Performing Arts Journal Volume 10 [1986-1987 (28-30)] ; 9952 >
+        au < released ; 1988-1989 ; Performing Arts Journal Volume 11 [1988-1989 (31-34)] ; 9951 >
+        au < released ; 1990 ; Performing Arts Journal Volume 12 [1990 (35-36)] ; 9950 >
+        au < released ; 1991 ; Performing Arts Journal Volume 13 [1991 (37-39)] ; 9949 >
+        au < released ; 1992 ; Performing Arts Journal Volume 14 [1992 (40-42)] ; 9948 >
+        au < released ; 1993 ; Performing Arts Journal Volume 15 [1993 (43-45)] ; 9947 >
+        au < released ; 1994 ; Performing Arts Journal Volume 16 [1994 (46-48)] ; 9946 >
+        au < released ; 1995 ; Performing Arts Journal Volume 17 [1995 (49-51)] ; 9945 >
 
     }
     
