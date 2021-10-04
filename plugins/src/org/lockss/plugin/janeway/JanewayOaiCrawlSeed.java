@@ -176,10 +176,16 @@ public class JanewayOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     List<String> idTags = recSearcher.findAll(FULL_TEXT_URL_TAG);
     if(idTags != null && !idTags.isEmpty()) {
       for(String value : idTags) {
-          logger.debug3(" idTag is not null, its value = " + value);
-        if (value.startsWith(baseUrl)) {
-          return value;
-        }
+          logger.debug3(" idTag is not null, its value = " + value + ", base_url = " + baseUrl);
+        // comment out because it may have http/https difference
+        if(value.startsWith("https") && baseUrl.startsWith("https") && value.startsWith(baseUrl)) {
+              logger.debug3(" idTag is not null, both starts with https: its value = " + value + ", base_url = " + baseUrl + ", adding = " + value);
+              return value;
+          } else if ( value.startsWith("http") && baseUrl.startsWith("https") && value.replace("https://", "").replace("http://", "").contains(baseUrl.replace("https://", "").replace("http://", ""))) {
+
+            logger.debug3(" idTag is not null, value start with http and baseUrl starts with https, its value = " + value + ", base_url = " + baseUrl + ", adding = " + value.replace("http", "https"));
+            return value.replace("http", "https");
+        }  
       }
     }
     logger.debug3(" idTag is null");
