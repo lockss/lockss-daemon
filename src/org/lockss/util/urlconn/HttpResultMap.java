@@ -36,23 +36,27 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ContentValidationException;
 
 /**
- * Maps an HTTP result to success (null) or an exception, usually one under
- * CacheException
+ * Maps an HTTP result (response code or exception thrown during
+ * processing) to an action, either success or an exception, usually
+ * under CacheException
  */
 public class HttpResultMap implements CacheResultMap {
   static Logger log = Logger.getLogger("HttpResultMap");
 
-  private static List<Integer> L(Integer... ints) {
-    return Collections.unmodifiableList(Arrays.asList(ints));
-  }
-
-  /** Categories of HTTP responses and pseudo-responses, along with
-   * their default mapping (usually a CacheException).  These are used
-   * both to initialize the default mappings and to provide better
-   * names for certain internal conditions (such as EmptyFile)
+  /** Multipurpose enum used to:<ul>
+   *
+   * <li>Declare the default mappings for new HttpResultMap
+   * instances</li>
+   *
+   * <li>Assign names to groups (categories) of results so plugins can
+   * remap them without knowing/repeating all the codes/exceptions in
+   * a category</li>
+   *
+   * </ul>
+   * 
    */
   public enum HttpResultCodeCategory {
-    SUCCESS(L(200, 203, 304),
+    Success(L(200, 203, 304),
             CacheSuccess.class),
     RETRY_SAME_URL(L(408, 409, 413, 500, 502, 503, 504),
                    CacheException.RetrySameUrlException.class),
@@ -60,12 +64,12 @@ public class HttpResultMap implements CacheResultMap {
               CacheException.NoRetryPermUrlException.class),
     MOVE_TEMP(L(302, 303, 307),
               CacheException.NoRetryTempUrlException.class),
-    UNIMPLEMENTED(CacheException.UnimplementedCodeException.class),
+    UNIMPLEMENTED(L(CacheException.UnimplementedCodeException.class)),
     PERMISSION(L(401, 403,  407),
                CacheException.PermissionException.class),
     EXPECTED(L(305, 402),
              CacheException.ExpectedNoRetryException.class),
-    RETRY_DEAD_LINK(CacheException.RetryDeadLinkException.class),
+    RETRY_DEAD_LINK(L(CacheException.RetryDeadLinkException.class)),
     NO_RETRY_DEAD_LINK(L(204, 300, 400, 404, 405, 406, 410),
                        CacheException.NoRetryDeadLinkException.class),
     UNEXPECTED_FAIL(L(201, 202, 205, 206, 306, 411, 412, 416, 417, 501, 505),
@@ -73,48 +77,125 @@ public class HttpResultMap implements CacheResultMap {
     UNEXPECTED_NO_FAIL(L(414, 415),
                        CacheException.UnexpectedNoRetryNoFailException.class),
 
-    /** Short name for validation failure thrown when an empty file is
-     * collected */
-    EmptyFile(ContentValidationException.EmptyFile.class);
+    // IOExceptions
+    MalformedUrl(L(MalformedURLException.class),
+                 CacheException.MalformedURLException.class,
+                 "Malformed URL: %s"),
 
-    private Class exceptionClass;       // Usually a CacheException
-    private List<Integer> codes;
-    private Class triggerClass;
+    UnkownHost(L(UnknownHostException.class),
+               CacheException.RetryableNetworkException_2_30S.class,
+               "Unknown host: %s"),
+
+    // Network errors, timeouts, etc. default retryable
+    NetworkError(L(
+                   // SocketException subsumes ConnectException,
+                   // NoRouteToHostException and PortUnreachableException
+                   SocketException.class,
+
+                   LockssUrlConnection.ConnectionTimeoutException.class,
+
+                   // SocketTimeoutException is an InterruptedIOException, not a
+                   // SocketException
+                   SocketTimeoutException.class,
+                   javax.net.ssl.SSLException.class,
+                   ProtocolException.class,
+                   java.nio.channels.ClosedChannelException.class),
+                 CacheException.RetryableNetworkException_3_30S.class
+                 ),
+
+    // ContentValidationException
+    ContentValidation(L(ContentValidationException.class),
+                      CacheException.UnretryableException.class),
+    EmptyFile(L(ContentValidationException.EmptyFile.class),
+              CacheException.WarningOnly.class),
+    WrongLength(L(ContentValidationException.WrongLength.class),
+                CacheException.RetryableNetworkException_3_10S.class),
+    LogOnly(L(ContentValidationException.LogOnly.class),
+            CacheException.WarningOnly.class);
+
+    private Class cls;       // Result class, Usually a CacheException
+    private Triggers triggers; // Triggering response codes and/or exceptions
+    private String fmt;
 
     /** Create a category mapping a list of HTTP result codes to a
-     * CacheException */
-    private HttpResultCodeCategory(List<Integer> codes, Class exceptionClass) {
-      this.codes = codes;
-      this.exceptionClass = exceptionClass;
+     * CacheException or CacheResultHandler */
+    private HttpResultCodeCategory(Triggers triggers, Class cls) {
+      this(triggers, cls, null);
     }
 
-    /** Create a category mapping a triggering exception to a
-     * CacheException */
-    private HttpResultCodeCategory(Class triggerClass, Class exceptionClass) {
-      this.triggerClass = triggerClass;
-      this.exceptionClass = exceptionClass;
+    /** Create a category mapping a list of HTTP result codes to a
+     * CacheException or CacheResultHandler */
+    private HttpResultCodeCategory(Triggers triggers, Class cls, String fmt) {
+      this.triggers = triggers;
+      this.cls = cls;
+      this.fmt = fmt;
     }
 
     /** Create a category naming a triggering exception, without
      * establishing a default mapping */
-    private HttpResultCodeCategory(Class triggerClass) {
-      this.triggerClass = triggerClass;
+    private HttpResultCodeCategory(Triggers triggers) {
+      this.triggers = triggers;
     }
 
     /** Return the list of response codes comprising the category, null */
     public List<Integer> getCodes() {
-      return codes;
+      return triggers.getCodes();
     }
 
     /** Return the trigger Exception class, or null */
-    public Class getTriggerClass() {
-      return triggerClass;
+    public List<Class> getTriggerClasses() {
+      return triggers.getTriggerClasses();
     }
 
     /** Return the default Exception mapping */
     public Class getExceptionClass() {
-      return exceptionClass;
+      return cls;
     }
+
+    /** Return the default Exception mapping */
+    public String getFmt() {
+      return fmt;
+    }
+  }
+
+  /** Helper class to represent lists of triggers (result codes and/or
+   * exceptions) in HttpResultCodeCategory */
+  static class Triggers {
+    private List<Integer> codes;
+    private List<Class> triggerClasses;
+
+    Triggers(Object[] lst) {
+      List<Integer> ints = new ArrayList<>();
+      List<Class> eClasses = new ArrayList<>();
+      for (Object x : lst) {
+        if (x instanceof Integer) {
+          ints.add((Integer)x);
+        }
+        if (x instanceof Class) {
+          eClasses.add((Class)x);
+        }
+      }
+      if (!ints.isEmpty()) {
+        this.codes = Collections.unmodifiableList(ints);
+      }
+
+      if (!eClasses.isEmpty()) {
+        this.triggerClasses = Collections.unmodifiableList(eClasses);
+      }
+    }
+
+    List<Integer> getCodes() {
+      return codes;
+    }
+
+    List<Class> getTriggerClasses() {
+      return triggerClasses;
+    }
+  }    
+
+  /** Terse way to create a Triggers */
+  private static Triggers L(Object... triggers) {
+    return new Triggers(triggers);
   }
 
   /** Abstracts the event we're determining how to handle.  Either an HTTP
@@ -392,59 +473,20 @@ public class HttpResultMap implements CacheResultMap {
     }
   }
 
-  HashMap<Object,ExceptionInfo> exceptionTable = new HashMap();
+  Map<Object,ExceptionInfo> exceptionTable = new HashMap<>();
 
   public HttpResultMap() {
     initExceptionTable();
   }
 
   protected void initExceptionTable() {
-    // HTTP result codes
+    // Initialize map with all entries specified by
+    // HttpResultCodeCategory enum constants
     for (HttpResultCodeCategory category : HttpResultCodeCategory.values()) {
       if (category.getExceptionClass() != null) {
         storeResultCategoryEntries(category, category.getExceptionClass());
       }
     }
-
-    // IOExceptions
-    storeMapEntry(MalformedURLException.class,
- 		  CacheException.MalformedURLException.class,
-		  "Malformed URL: %s");
-    storeMapEntry(UnknownHostException.class,
- 		  CacheException.RetryableNetworkException_2_30S.class,
-		  "Unknown host: %s");
-    // SocketException subsumes ConnectException, NoRouteToHostException
-    // and PortUnreachableException
-    storeMapEntry(SocketException.class,
- 		  CacheException.RetryableNetworkException_3_30S.class);
-    storeMapEntry(LockssUrlConnection.ConnectionTimeoutException.class,
- 		  CacheException.RetryableNetworkException_3_30S.class);
-    // SocketTimeoutException is an InterruptedIOException, not a
-    // SocketException
-    storeMapEntry(SocketTimeoutException.class,
- 		  CacheException.RetryableNetworkException_3_30S.class);
-    // SSL
-    storeMapEntry(javax.net.ssl.SSLException.class,
- 		  CacheException.RetryableNetworkException_3_30S.class);
-    // I don't think these can happen
-    storeMapEntry(ProtocolException.class,
- 		  CacheException.RetryableNetworkException_3_30S.class);
-    storeMapEntry(java.nio.channels.ClosedChannelException.class,
- 		  CacheException.RetryableNetworkException_3_30S.class);
-
-    // Default ContentValidationException
-    storeMapEntry(ContentValidationException.class,
-		  CacheException.UnretryableException.class);
-    // Specific ContentValidationException's
-    storeMapEntry(ContentValidationException.EmptyFile.class,
-		  CacheException.WarningOnly.class);
-    storeMapEntry(ContentValidationException.WrongLength.class,
-		  CacheException.RetryableNetworkException_3_10S.class);
-    storeMapEntry(ContentValidationException.LogOnly.class,
-		  CacheException.WarningOnly.class);
-
-    storeMapEntry(ContentValidationException.ValidatorExeception.class,
-		  CacheException.UnexpectedNoRetryFailException.class);
   }
 
   /** Set the exception for all result codes of specified category */
@@ -454,8 +496,14 @@ public class HttpResultMap implements CacheResultMap {
       for (int code : category.getCodes()) {
         storeMapEntry(code, response);
       }
-    } else if (category.getTriggerClass() != null) {
-      storeMapEntry(category.getTriggerClass(), response);
+    } else if (category.getTriggerClasses() != null) {
+      for (Class cls : category.getTriggerClasses()) {
+        if (response instanceof Class) {
+          storeMapEntry(cls, (Class)response, category.getFmt());
+        } else {
+          storeMapEntry(cls, response);
+        }
+      }
     }
   }
 
@@ -534,7 +582,6 @@ public class HttpResultMap implements CacheResultMap {
 			    String fmt) {
     storeMapEntry(fetchExceptionClass,
 		  new ExceptionInfo.Handler(handler, fmt));
-
   }
 
   /** Map the fetch exception (SocketException, IOException, etc.) to the
@@ -657,6 +704,7 @@ public class HttpResultMap implements CacheResultMap {
     } while (resultEi == null
 	     && ((exClass = exClass.getSuperclass()) != null
 		 && exClass != Exception.class));
+    log.critical("nearest to: " + fetchException + " = " + exClass);
     return resultEi;
   }
 

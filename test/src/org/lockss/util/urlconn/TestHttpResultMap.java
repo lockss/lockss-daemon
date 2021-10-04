@@ -160,21 +160,13 @@ public class TestHttpResultMap extends LockssTestCase {
 				       new java.io.IOException("CRLF expected at end of chunk: -1/-1"),
 				       "foo");
     assertTrue(exception instanceof CacheException.UnknownExceptionException);
-    resultMap.storeMapEntry(IOException.class,
-			    CacheException.RetryableNetworkException_3_30S.class);
-
     exception = resultMap.mapException(null, "",
-				       new java.io.IOException("CRLF expected at end of chunk: -1/-1"),
-				       "foo");
-    assertTrue(exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
-
-    exception = resultMap.mapException(null, "",
-				       new MalformedURLException("Mal URL: u:u"),
+				       new MalformedURLException("http:::/mal.url"),
 				       "foo");
     assertTrue(exception instanceof
 	       CacheException.MalformedURLException);
-    assertEquals("Mal URL: u:u", exception.getCause().getMessage());
+    assertEquals("http:::/mal.url", exception.getCause().getMessage());
+    assertEquals("Malformed URL: http:::/mal.url", exception.getMessage());
 
     exception =
       resultMap.getMalformedURLException(null, "",
@@ -202,6 +194,13 @@ public class TestHttpResultMap extends LockssTestCase {
 	       exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);
 
+    exception = resultMap.mapException(null, "",
+				       new ProtocolException("foo bar"),
+				       "foo");
+    assertTrue(exception.toString(),
+	       exception instanceof
+	       CacheException.RetryableNetworkException_3_30S);
+
     // Unmapped subclass of ContentValidationException should map to what
     // ContentValidationException maps to
     exception = resultMap.mapException(null, "",
@@ -213,6 +212,15 @@ public class TestHttpResultMap extends LockssTestCase {
 				       new ContentValidationException.LogOnly("Important warning message"),
 				       "foo");
     assertTrue(exception instanceof CacheException.WarningOnly);
+
+    resultMap.storeMapEntry(IOException.class,
+			    CacheException.RetryableNetworkException_3_30S.class);
+
+    exception = resultMap.mapException(null, "",
+				       new java.io.IOException("CRLF expected at end of chunk: -1/-1"),
+				       "foo");
+    assertTrue(exception instanceof
+	       CacheException.RetryableNetworkException_3_30S);
 
   }
 
