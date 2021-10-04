@@ -2730,7 +2730,7 @@
       au < finished ; finished ; 2018 ; International Journal of Data Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; International Journal of Data Science Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2020 ; International Journal of Data Science Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2021 ; International Journal of Data Science Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Data Science Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2754,7 +2754,7 @@
       au < finished ; finished ; 2017 ; International Journal of Decision Sciences, Risk and Management Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Decision Sciences, Risk and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Decision Sciences, Risk and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2021 ; International Journal of Decision Sciences, Risk and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Decision Sciences, Risk and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2962,7 +2962,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Economics and Business Research Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Economics and Business Research Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Economics and Business Research Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Economics and Business Research Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Economics and Business Research Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3763,7 +3763,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Environment and Waste Management Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Environment and Waste Management Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; International Journal of Environment and Waste Management Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Environment and Waste Management Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Environment and Waste Management Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3913,7 +3913,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Exergy Volume 33 ; 33 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Exergy Volume 34 ; 34 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Exergy Volume 35 ; 35 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Exergy Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Exergy Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4112,7 +4112,7 @@
       au < finished ; finished ; 2017 ; International Journal of Foresight and Innovation Policy Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > 
       au < finished ; finished ; 2018 ; International Journal of Foresight and Innovation Policy Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 > 
       au < finished ; crawling ; 2019-2020 ; International Journal of Foresight and Innovation Policy Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2021 ; International Journal of Foresight and Innovation Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Foresight and Innovation Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4293,7 +4293,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Global Warming Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Global Warming Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Global Warming Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Global Warming Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Global Warming Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4366,7 +4366,7 @@
       au < finished ; finished ; 2018 ; International Journal of Green Economics Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Green Economics Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Green Economics Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2021 ; International Journal of Green Economics Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Green Economics Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4758,7 +4758,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Industrial and Systems Engineering Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Industrial and Systems Engineering Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Industrial and Systems Engineering Volume 38 ; 38 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Industrial and Systems Engineering Volume 39 ; 39 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Industrial and Systems Engineering Volume 39 ; 39 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4830,7 +4830,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Information and Communication Technology Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Information and Communication Technology Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Journal of Information and Communication Technology Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Information and Communication Technology Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Information and Communication Technology Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5079,7 +5079,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Innovation and Learning Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Innovation and Learning Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; International Journal of Innovation and Learning Volume 29 ; 29 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Innovation and Learning Volume 30 ; 30 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Innovation and Learning Volume 30 ; 30 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5560,7 +5560,7 @@
       au < finished ; finished ; 2018 ; International Journal of Islamic Marketing and Branding Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Islamic Marketing and Branding Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Islamic Marketing and Branding Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2021 ; International Journal of Islamic Marketing and Branding Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Islamic Marketing and Branding Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5974,7 +5974,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Logistics Systems and Management Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Journal of Logistics Systems and Management Volume 38 ; 38 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Logistics Systems and Management Volume 39 ; 39 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Logistics Systems and Management Volume 40 ; 40 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Logistics Systems and Management Volume 40 ; 40 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6267,7 +6267,7 @@
       au < finished ; finished ; 2018 ; International Journal of Managerial and Financial Accounting Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Managerial and Financial Accounting Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Managerial and Financial Accounting Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2021 ; International Journal of Managerial and Financial Accounting Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Managerial and Financial Accounting Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6442,7 +6442,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Materials and Product Technology Volume 60 ; 60 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Materials and Product Technology Volume 61 ; 61 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Materials and Product Technology Volume 62 ; 62 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Materials and Product Technology Volume 63 ; 63 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Materials and Product Technology Volume 63 ; 63 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7313,7 +7313,7 @@
 
       param[journal_id] = ijnss
 
-      au < manifest ; exists ; 2019 ; International Journal of Nuclear Safety and Security Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < ready ; exists ; 2019 ; International Journal of Nuclear Safety and Security Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -7370,7 +7370,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Oil, Gas and Coal Technology Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; International Journal of Oil, Gas and Coal Technology Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Oil, Gas and Coal Technology Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Oil, Gas and Coal Technology Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Oil, Gas and Coal Technology Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7426,7 +7426,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Operational Research Volume 39 ; 39 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Operational Research Volume 40 ; 40 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Operational Research Volume 41 ; 41 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Operational Research Volume 42 ; 42 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Operational Research Volume 42 ; 42 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7657,7 +7657,7 @@
       au < finished ; finished ; 2017 ; International Journal of Precision Technology Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Precision Technology Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Precision Technology Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2021 ; International Journal of Precision Technology Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Precision Technology Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8417,7 +8417,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Services and Operations Management Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Services and Operations Management Volume 38 ; 38 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021 ; International Journal of Services and Operations Management Volume 39 ; 39 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Services and Operations Management Volume 40 ; 40 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Services and Operations Management Volume 40 ; 40 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9522,7 +9522,7 @@
       au < finished ; finished ; 2017 ; International Journal of Technology Marketing Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Technology Marketing Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2020 ; International Journal of Technology Marketing Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < testing ; exists ; 2021 ; International Journal of Technology Marketing Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Technology Marketing Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 

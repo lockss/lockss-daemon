@@ -195,10 +195,10 @@
 
       param[base_url] = https://www.humanities-map.net/
 
-      au < manifest ; exists ; 2015 ; 978-3-95896-000-8 ; An den Wurzeln der Tugend (978-3-95896-000-8) ; 10.16994/baa ;  >
-      au < manifest ; exists ; 2015 ; 978-3-946198-04-8 ; Architekturzeichnungen der deutschen Renaissance (978-3-946198-04-8) ; 10.16994/bac ;  >
-      au < manifest ; exists ; 2015 ; 978-3-946198-00-0 ; Traumdramaturgie und Selbstreflexion (978-3-946198-00-0) ; 10.16994/bab ;  >
-      au < manifest ; exists ; 2015 ; 978-3-946198-08-6 ; Mehrsprachigkeit im Spiegel des Buchdrucks (978-3-946198-08-6) ; 10.16994/bad ;  >
+      au < ready ; exists ; 2015 ; 978-3-95896-000-8 ; An den Wurzeln der Tugend (978-3-95896-000-8) ; 10.16994/baa ;  >
+      au < ready ; exists ; 2015 ; 978-3-946198-04-8 ; Architekturzeichnungen der deutschen Renaissance (978-3-946198-04-8) ; 10.16994/bac ;  >
+      au < ready ; exists ; 2015 ; 978-3-946198-00-0 ; Traumdramaturgie und Selbstreflexion (978-3-946198-00-0) ; 10.16994/bab ;  >
+      au < ready ; exists ; 2015 ; 978-3-946198-08-6 ; Mehrsprachigkeit im Spiegel des Buchdrucks (978-3-946198-08-6) ; 10.16994/bad ;  >
       au < frozen ; exists ; 2016 ; 978-3-946198-12-3 ; Fortschritt und Verfall (978-3-946198-12-3) ; 10.16994/bae ;  >
       au < manifest ; exists ; 2016 ; 978-3-946198-16-1 ; Hunger and Modern Writing (978-3-946198-16-1) ; 10.16994/baf ;  >
       au < manifest ; exists ; 2017 ; 978-3-946198-24-6 ; Rodin-Lektüren (978-3-946198-24-6) ; 10.16994/bah ;  >
@@ -271,11 +271,11 @@
 
       param[base_url] = https://www.stockholmuniversitypress.se/
 
-      au < manifest ; exists ; 2015 ; 978-91-7635-000-3 ; Platonic Occasions (978-91-7635-000-3) ; 10.16993/sup.baa ;  >
-      au < manifest ; exists ; 2015 ; 978-91-7635-004-1 ; From Clerks to Corpora (978-91-7635-004-1) ; 10.16993/sup.bab ;  >
-      au < manifest ; exists ; 2015 ; 978-91-7635-011-9 ; Festival Romanistica (978-91-7635-011-9) ; 10.16993/bac ;  >
-      au < manifest ; exists ; 2015 ; 978-91-7635-015-7 ; Médiations interculturelles entre la France et la Suède (978-91-7635-015-7) ; 10.16993/bad ;  >
-      au < manifest ; exists ; 2015 ; 978-91-7635-019-5 ; Polemik in den Schriften Melchior Hoffmans (978-91-7635-019-5) ; 10.16993/bae ;  >
+      au < ready ; exists ; 2015 ; 978-91-7635-000-3 ; Platonic Occasions (978-91-7635-000-3) ; 10.16993/sup.baa ;  >
+      au < ready ; exists ; 2015 ; 978-91-7635-004-1 ; From Clerks to Corpora (978-91-7635-004-1) ; 10.16993/sup.bab ;  >
+      au < ready ; exists ; 2015 ; 978-91-7635-011-9 ; Festival Romanistica (978-91-7635-011-9) ; 10.16993/bac ;  >
+      au < ready ; exists ; 2015 ; 978-91-7635-015-7 ; Médiations interculturelles entre la France et la Suède (978-91-7635-015-7) ; 10.16993/bad ;  >
+      au < ready ; exists ; 2015 ; 978-91-7635-019-5 ; Polemik in den Schriften Melchior Hoffmans (978-91-7635-019-5) ; 10.16993/bae ;  >
       au < manifest ; exists ; 2016 ; 978-91-7635-023-2 ; Don't Be Quiet, Start a Riot! (978-91-7635-023-2) ; 10.16993/baf ;  >
       au < manifest ; exists ; 2016 ; 978-91-7635-027-0 ; Horizons of Shamanism (978-91-7635-027-0) ; 10.16993/bag ;  >
       au < manifest ; exists ; 2016 ; 978-91-7635-031-7 ; Krig och fred i vendel- och vikingatida traditioner (978-91-7635-031-7) ; 10.16993/bah ;  >
@@ -331,25 +331,25 @@
       {
       param[base_url] = https://www.ubiquitypress.com/
 
-      au < manifest ; exists ; 2013 ; 978-1-909188-00-6 ; Conversations with Kenelm (978-1-909188-00-6) ; 10.5334/baa ;  >
-      au < manifest ; exists ; 2013 ; 978-1-909188-03-7 ; Dante and Aquinas (978-1-909188-03-7) ; 10.5334/bad ;  >
-      au < manifest ; exists ; 2013 ; 978-1-909188-02-0 ; Studies in Strindberg (978-1-909188-02-0) ; 10.5334/bac ;  >
-      au < manifest ; exists ; 2013 ; 978-1-909188-01-3 ; Strindberg and Autobiography (978-1-909188-01-3) ; 10.5334/bab ;  >
-      au < manifest ; exists ; 2013 ; 978-1-909188-15-0 ; Open Source Free Software e Open Format nei processi di ricerca archeologica (978-1-909188-15-0) ; 10.5334/bae ;  >
-      au < manifest ; exists ; 2013 ; 978-1-909188-18-1 ; Imagining the Future City (978-1-909188-18-1) ; 10.5334/bag ;  >
-      au < manifest ; exists ; 2013 ; 978-1-909188-21-1 ; Reading With My Eyes Open (978-1-909188-21-1) ; 10.5334/baj ;  >
-      au < manifest ; exists ; 2013 ; 978-1-909188-24-2 ; Writing as Material Practice (978-1-909188-24-2) ; 10.5334/bai ;  >
-      au < manifest ; exists ; 2014 ; 978-1-909188-27-3 ; Past in the Present (978-1-909188-27-3) ; 10.5334/bak ;  >
-      au < manifest ; exists ; 2014 ; 978-1-909188-33-4 ; Battle for Open (978-1-909188-33-4) ; 10.5334/bam ;  >
-      au < manifest ; exists ; 2014 ; 978-1-909188-37-2 ; Ebooks in education (978-1-909188-37-2) ; 10.5334/bal ;  >
-      au < manifest ; exists ; 2014 ; 978-1-909188-30-3 ; Issues in Open Research Data (978-1-909188-30-3) ; 10.5334/ban ;  >
-      au < manifest ; exists ; 2015 ; 978-1-909188-42-6 ; Thinking Beyond Sectors for Sustainable Development (978-1-909188-42-6) ; 10.5334/bao ;  >
-      au < manifest ; exists ; 2015 ; 978-1-909188-49-5 ; Högskolans ansvar (978-1-909188-49-5) ; 10.5334/bap ;  >
-      au < manifest ; exists ; 2015 ; 978-1-909188-53-2 ; Mobile Research Methods (978-1-909188-53-2) ; 10.5334/bar ;  >
-      au < manifest ; exists ; 2015 ; 978-1-909188-57-0 ; The Value of the University Armed Service Units (978-1-909188-57-0) ; 10.5334/baq ;  >
-      au < manifest ; exists ; 2015 ; 978-1-909188-67-9 ; Learning from West African Experiences in Security Sector Governance (978-1-909188-67-9) ; 10.5334/bau ;  >
-      au < manifest ; exists ; 2015 ; 978-1-909188-63-1 ; Garden Learning (978-1-909188-63-1) ; 10.5334/bas ;  >
-      au < manifest ; exists ; 2015 ; 978-1-909188-71-6 ; Gouvernance du secteur de la Sécurité (978-1-909188-71-6) ; 10.5334/bav ;  >
+      au < ready ; exists ; 2013 ; 978-1-909188-00-6 ; Conversations with Kenelm (978-1-909188-00-6) ; 10.5334/baa ;  >
+      au < ready ; exists ; 2013 ; 978-1-909188-03-7 ; Dante and Aquinas (978-1-909188-03-7) ; 10.5334/bad ;  >
+      au < ready ; exists ; 2013 ; 978-1-909188-02-0 ; Studies in Strindberg (978-1-909188-02-0) ; 10.5334/bac ;  >
+      au < ready ; exists ; 2013 ; 978-1-909188-01-3 ; Strindberg and Autobiography (978-1-909188-01-3) ; 10.5334/bab ;  >
+      au < ready ; exists ; 2013 ; 978-1-909188-15-0 ; Open Source Free Software e Open Format nei processi di ricerca archeologica (978-1-909188-15-0) ; 10.5334/bae ;  >
+      au < ready ; exists ; 2013 ; 978-1-909188-18-1 ; Imagining the Future City (978-1-909188-18-1) ; 10.5334/bag ;  >
+      au < ready ; exists ; 2013 ; 978-1-909188-21-1 ; Reading With My Eyes Open (978-1-909188-21-1) ; 10.5334/baj ;  >
+      au < ready ; exists ; 2013 ; 978-1-909188-24-2 ; Writing as Material Practice (978-1-909188-24-2) ; 10.5334/bai ;  >
+      au < ready ; exists ; 2014 ; 978-1-909188-27-3 ; Past in the Present (978-1-909188-27-3) ; 10.5334/bak ;  >
+      au < ready ; exists ; 2014 ; 978-1-909188-33-4 ; Battle for Open (978-1-909188-33-4) ; 10.5334/bam ;  >
+      au < ready ; exists ; 2014 ; 978-1-909188-37-2 ; Ebooks in education (978-1-909188-37-2) ; 10.5334/bal ;  >
+      au < ready ; exists ; 2014 ; 978-1-909188-30-3 ; Issues in Open Research Data (978-1-909188-30-3) ; 10.5334/ban ;  >
+      au < ready ; exists ; 2015 ; 978-1-909188-42-6 ; Thinking Beyond Sectors for Sustainable Development (978-1-909188-42-6) ; 10.5334/bao ;  >
+      au < ready ; exists ; 2015 ; 978-1-909188-49-5 ; Högskolans ansvar (978-1-909188-49-5) ; 10.5334/bap ;  >
+      au < ready ; exists ; 2015 ; 978-1-909188-53-2 ; Mobile Research Methods (978-1-909188-53-2) ; 10.5334/bar ;  >
+      au < ready ; exists ; 2015 ; 978-1-909188-57-0 ; The Value of the University Armed Service Units (978-1-909188-57-0) ; 10.5334/baq ;  >
+      au < ready ; exists ; 2015 ; 978-1-909188-67-9 ; Learning from West African Experiences in Security Sector Governance (978-1-909188-67-9) ; 10.5334/bau ;  >
+      au < ready ; exists ; 2015 ; 978-1-909188-63-1 ; Garden Learning (978-1-909188-63-1) ; 10.5334/bas ;  >
+      au < ready ; exists ; 2015 ; 978-1-909188-71-6 ; Gouvernance du secteur de la Sécurité (978-1-909188-71-6) ; 10.5334/bav ;  >
       au < manifest ; exists ; 2016 ; 978-1-909188-46-4 ; Digital Classics Outside the Echo-Chamber (978-1-909188-46-4) ; 10.5334/bat ;  >
       au < manifest ; exists ; 2016 ; 978-1-909188-83-9 ; Animal (De)liberation (978-1-909188-83-9) ; 10.5334/bay ;  >
       au < manifest ; exists ; 2016 ; 978-1-909188-75-4 ; Multi-Agent Transport Simulation MATSim (978-1-909188-75-4) ; 10.5334/baw ;  >
@@ -401,15 +401,15 @@
 
       param[base_url] = https://www.luminosoa.org/
 
-      au < manifest ; exists ; 2015 ; 978-0-520-28763-1 ; Art of Fugue (978-0-520-28763-1) ; 10.1525/luminos.1 ;  >
-      au < manifest ; exists ; 2015 ; 978-0-520-28771-6 ; The Place of Devotion (978-0-520-28771-6) ; 10.1525/luminos.2 ;  >
-      au < manifest ; exists ; 2015 ; 978-0-520-28150-9 ; Representing Mass Violence (978-0-520-28150-9) ; 10.1525/luminos.4 ;  >
-      au < manifest ; exists ; 2015 ; 978-0-520-28546-0 ; Migrating into Financial Markets (978-0-520-28546-0) ; 10.1525/luminos.5 ;  >
-      au < manifest ; exists ; 2015 ; 978-0-520-28646-7 ; Writing Self, Writing Empire (978-0-520-28646-7) ; 10.1525/luminos.3 ;  >
-      au < manifest ; exists ; 2015 ; 978-0-520-28441-8 ; Equity, Growth, and Community (978-0-520-28441-8) ; 10.1525/luminos.6 ;  >
-      au < manifest ; exists ; 2015 ; 978-0-520-28802-7 ; Instruments for New Music (978-0-520-28802-7) ; 10.1525/luminos.7 ;  >
-      au < manifest ; exists ; 2015 ; 978-0-520-28959-8 ; Imperial Genus (978-0-520-28959-8) ; 10.1525/luminos.9 ;  >
-      au < manifest ; exists ; 2015 ; 978-0-520-28585-9 ; Christianity, Islam, and Orisa Religion (978-0-520-28585-9) ; 10.1525/luminos.8 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28763-1 ; Art of Fugue (978-0-520-28763-1) ; 10.1525/luminos.1 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28771-6 ; The Place of Devotion (978-0-520-28771-6) ; 10.1525/luminos.2 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28150-9 ; Representing Mass Violence (978-0-520-28150-9) ; 10.1525/luminos.4 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28546-0 ; Migrating into Financial Markets (978-0-520-28546-0) ; 10.1525/luminos.5 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28646-7 ; Writing Self, Writing Empire (978-0-520-28646-7) ; 10.1525/luminos.3 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28441-8 ; Equity, Growth, and Community (978-0-520-28441-8) ; 10.1525/luminos.6 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28802-7 ; Instruments for New Music (978-0-520-28802-7) ; 10.1525/luminos.7 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28959-8 ; Imperial Genus (978-0-520-28959-8) ; 10.1525/luminos.9 ;  >
+      au < ready ; exists ; 2015 ; 978-0-520-28585-9 ; Christianity, Islam, and Orisa Religion (978-0-520-28585-9) ; 10.1525/luminos.8 ;  >
       au < manifest ; exists ; 2016 ; 978-0-520-29085-3 ; Precarious Creativity (978-0-520-29085-3) ; 10.1525/luminos.10 ;  >
       au < manifest ; exists ; 2016 ; 978-0-520-28380-0 ; Discrimination at Work (978-0-520-28380-0) ; 10.1525/luminos.11 ;  >
       au < manifest ; exists ; 2016 ; 978-0-520-28404-3 ; Making Things Stick (978-0-520-28404-3) ; 10.1525/luminos.12 ;  >

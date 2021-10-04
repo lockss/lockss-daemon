@@ -2357,7 +2357,7 @@
     au < manifest ; exists ; 1997 ; Employee Relations: An International Journal Volume 19 ; 19 ; >
     au < manifest ; exists ; 1998 ; Employee Relations: An International Journal Volume 20 ; 20 ; >
     au < manifest ; exists ; 1999 ; Employee Relations: An International Journal Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2000 ; Employee Relations: An International Journal Volume 22 ; 22 ; >
+    au < ready ; exists ; 2000 ; Employee Relations: An International Journal Volume 22 ; 22 ; >
     au < manifest ; exists ; 2001 ; Employee Relations: An International Journal Volume 23 ; 23 ; >
     au < manifest ; exists ; 2002 ; Employee Relations: An International Journal Volume 24 ; 24 ; >
     au < manifest ; exists ; 2003 ; Employee Relations: An International Journal Volume 25 ; 25 ; >
@@ -2430,7 +2430,7 @@
     au < manifest ; exists ; 1997 ; Engineering Computations Volume 14 ; 14 ; >
     au < manifest ; exists ; 1998 ; Engineering Computations Volume 15 ; 15 ; >
     au < manifest ; exists ; 1999 ; Engineering Computations Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2000 ; Engineering Computations Volume 17 ; 17 ; >
+    au < ready ; exists ; 2000 ; Engineering Computations Volume 17 ; 17 ; >
     au < manifest ; exists ; 2001 ; Engineering Computations Volume 18 ; 18 ; >
     au < manifest ; exists ; 2002 ; Engineering Computations Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; Engineering Computations Volume 20 ; 20 ; >
@@ -2472,7 +2472,7 @@
     au < manifest ; exists ; 1997 ; Engineering, Construction and Architectural Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1998 ; Engineering, Construction and Architectural Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 1999 ; Engineering, Construction and Architectural Management Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2000 ; Engineering, Construction and Architectural Management Volume 7 ; 7 ; >
+    au < ready ; exists ; 2000 ; Engineering, Construction and Architectural Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 2001 ; Engineering, Construction and Architectural Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 2002 ; Engineering, Construction and Architectural Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 2003 ; Engineering, Construction and Architectural Management Volume 10 ; 10 ; >
@@ -2555,7 +2555,7 @@
     au < manifest ; exists ; 1997 ; Equal Opportunities International Volume 16 ; 16 ; >
     au < manifest ; exists ; 1998 ; Equal Opportunities International Volume 17 ; 17 ; >
     au < manifest ; exists ; 1999 ; Equal Opportunities International Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; >
+    au < ready ; exists ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; >
     au < manifest ; exists ; 2001 ; Equal Opportunities International Volume 20 ; 20 ; >
     au < manifest ; exists ; 2002 ; Equal Opportunities International Volume 21 ; 21 ; >
     au < manifest ; exists ; 2003 ; Equal Opportunities International Volume 22 ; 22 ; >
@@ -2852,7 +2852,7 @@
     au < manifest ; exists ; 1997 ; Facilities Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; Facilities Volume 16 ; 16 ; >
     au < manifest ; exists ; 1999 ; Facilities Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2000 ; Facilities Volume 18 ; 18 ; >
+    au < ready ; exists ; 2000 ; Facilities Volume 18 ; 18 ; >
     au < manifest ; exists ; 2001 ; Facilities Volume 19 ; 19 ; >
     au < manifest ; exists ; 2002 ; Facilities Volume 20 ; 20 ; >
     au < manifest ; exists ; 2003 ; Facilities Volume 21 ; 21 ; >
@@ -2889,7 +2889,7 @@
     comment[journal_id] = fs
 
     au < manifest ; exists ; 1999 ; foresight Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2000 ; foresight Volume 2 ; 2 ; >
+    au < ready ; exists ; 2000 ; foresight Volume 2 ; 2 ; >
     au < manifest ; exists ; 2001 ; foresight Volume 3 ; 3 ; >
     au < manifest ; exists ; 2002 ; foresight Volume 4 ; 4 ; >
     au < manifest ; exists ; 2003 ; foresight Volume 5 ; 5 ; >
@@ -2978,7 +2978,7 @@
     comment[journal_id] = hbs
     comment[continued_by] = 1751-5637
 
-    au < manifest ; exists ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 ; >
+    au < ready ; exists ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 ; >
     au < doesNotExist ; doesNotExist ; 2001 ; Handbook of Business Strategy Volume 2 ; 2 ; >
     au < doesNotExist ; doesNotExist ; 2002 ; Handbook of Business Strategy Volume 3 ; 3 ; >
     au < manifest ; exists ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 ; >
@@ -3125,7 +3125,7 @@
 
     au < manifest ; exists ; 1998 ; Housing, Care and Support: A journal on policy, research and practice Volume 1 ; 1 ; >
     au < manifest ; exists ; 1999 ; Housing, Care and Support: A journal on policy, research and practice Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2000 ; Housing, Care and Support: A journal on policy, research and practice Volume 3 ; 3 ; >
+    au < ready ; exists ; 2000 ; Housing, Care and Support: A journal on policy, research and practice Volume 3 ; 3 ; >
     au < manifest ; exists ; 2001 ; Housing, Care and Support: A journal on policy, research and practice Volume 4 ; 4 ; >
     au < manifest ; exists ; 2002 ; Housing, Care and Support: A journal on policy, research and practice Volume 5 ; 5 ; >
     au < manifest ; exists ; 2003 ; Housing, Care and Support: A journal on policy, research and practice Volume 6 ; 6 ; >
@@ -3326,7 +3326,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Industrial and Commercial Training Volume 38 ; 38 ; >
     au < manifest ; exists ; 2007 ; Industrial and Commercial Training Volume 39 ; 39 ; >
     au < manifest ; exists ; 2008 ; Industrial and Commercial Training Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2009 ; Industrial and Commercial Training Volume 41 ; 41 ; >
+    au < ready ; exists ; 2009 ; Industrial and Commercial Training Volume 41 ; 41 ; >
     au < crawling ; exists ; 2010 ; Industrial and Commercial Training Volume 42 ; 42 ; >
     au < crawling ; exists ; 2011 ; Industrial and Commercial Training Volume 43 ; 43 ; >
     au < frozen ; exists ; 2012 ; Industrial and Commercial Training Volume 44 ; 44 ; >
@@ -3414,7 +3414,7 @@
     au < manifest ; exists ; 2006 ; Industrial Lubrication and Tribology Volume 58 ; 58 ; >
     au < manifest ; exists ; 2007 ; Industrial Lubrication and Tribology Volume 59 ; 59 ; >
     au < manifest ; exists ; 2008 ; Industrial Lubrication and Tribology Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2009 ; Industrial Lubrication and Tribology Volume 61 ; 61 ; >
+    au < ready ; exists ; 2009 ; Industrial Lubrication and Tribology Volume 61 ; 61 ; >
     au < frozen ; exists ; 2010 ; Industrial Lubrication and Tribology Volume 62 ; 62 ; >
     au < frozen ; exists ; 2011 ; Industrial Lubrication and Tribology Volume 63 ; 63 ; >
     au < frozen ; exists ; 2012 ; Industrial Lubrication and Tribology Volume 64 ; 64 ; >
@@ -3472,7 +3472,7 @@
     au < manifest ; exists ; 1997 ; Industrial Management & Data Systems Volume 97 ; 97 ; >
     au < manifest ; exists ; 1998 ; Industrial Management & Data Systems Volume 98 ; 98 ; >
     au < manifest ; exists ; 1999 ; Industrial Management & Data Systems Volume 99 ; 99 ; >
-    au < manifest ; exists ; 2000 ; Industrial Management & Data Systems Volume 100 ; 100 ; >
+    au < ready ; exists ; 2000 ; Industrial Management & Data Systems Volume 100 ; 100 ; >
     au < manifest ; exists ; 2001 ; Industrial Management & Data Systems Volume 101 ; 101 ; >
     au < manifest ; exists ; 2002 ; Industrial Management & Data Systems Volume 102 ; 102 ; >
     au < manifest ; exists ; 2003 ; Industrial Management & Data Systems Volume 103 ; 103 ; >
@@ -3572,7 +3572,7 @@
     #continued_by = 2398-5038
 
     au < manifest ; exists ; 1999 ; info Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2000 ; info Volume 2 ; 2 ; >
+    au < ready ; exists ; 2000 ; info Volume 2 ; 2 ; >
     au < manifest ; exists ; 2001 ; info Volume 3 ; 3 ; >
     au < manifest ; exists ; 2002 ; info Volume 4 ; 4 ; >
     au < manifest ; exists ; 2003 ; info Volume 5 ; 5 ; >
@@ -3927,7 +3927,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Bank Marketing Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; International Journal of Bank Marketing Volume 16 ; 16 ; >
     au < manifest ; exists ; 1999 ; International Journal of Bank Marketing Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2000 ; International Journal of Bank Marketing Volume 18 ; 18 ; >
+    au < ready ; exists ; 2000 ; International Journal of Bank Marketing Volume 18 ; 18 ; >
     au < manifest ; exists ; 2001 ; International Journal of Bank Marketing Volume 19 ; 19 ; >
     au < manifest ; exists ; 2002 ; International Journal of Bank Marketing Volume 20 ; 20 ; >
     au < manifest ; exists ; 2003 ; International Journal of Bank Marketing Volume 21 ; 21 ; >
@@ -4068,7 +4068,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Commerce and Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2000 ; International Journal of Commerce and Management Volume 10 ; 10 ; >
+    au < ready ; exists ; 2000 ; International Journal of Commerce and Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 2001 ; International Journal of Commerce and Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Commerce and Management Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Commerce and Management Volume 13 ; 13 ; >
@@ -4128,7 +4128,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 ; >
+    au < ready ; exists ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 2001 ; International Journal of Conflict Management Volume 12 ; 12 ; >
     au < manifest ; exists ; 2002 ; International Journal of Conflict Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; International Journal of Conflict Management Volume 14 ; 14 ; >
@@ -4729,7 +4729,7 @@
     au < manifest ; exists ; 2007 ; The International Journal of Leadership in Public Services Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; The International Journal of Leadership in Public Services Volume 4 ; 4 ; >
     au < manifest ; exists ; 2009 ; The International Journal of Leadership in Public Services Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2010 ; The International Journal of Leadership in Public Services Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; The International Journal of Leadership in Public Services Volume 6 ; 6 ; >
     au < crawling ; exists ; 2011 ; The International Journal of Leadership in Public Services Volume 7 ; 7 ; >
     au < crawling ; exists ; 2012 ; The International Journal of Leadership in Public Services Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; The International Journal of Leadership in Public Services Volume 9 ; 9 ; >
@@ -4847,7 +4847,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Managerial Finance Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 ; >
     au < manifest ; exists ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 ; >
     au < crawling ; exists ; 2011 ; International Journal of Managerial Finance Volume 7 ; 7 ; >
     au < crawling ; exists ; 2012 ; International Journal of Managerial Finance Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; International Journal of Managerial Finance Volume 9 ; 9 ; >
@@ -4875,7 +4875,7 @@
 
     au < manifest ; exists ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 ; >
     au < crawling ; exists ; 2011 ; International Journal of Managing Projects in Business Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; International Journal of Managing Projects in Business Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; International Journal of Managing Projects in Business Volume 6 ; 6 ; >
@@ -4984,7 +4984,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Migration, Health and Social Care Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; International Journal of Migration, Health and Social Care Volume 4 ; 4 ; >
     au < manifest ; exists ; 2009 ; International Journal of Migration, Health and Social Care Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Migration, Health and Social Care Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; International Journal of Migration, Health and Social Care Volume 6 ; 6 ; >
     au < crawling ; exists ; 2011 ; International Journal of Migration, Health and Social Care Volume 7 ; 7 ; >
     au < crawling ; exists ; 2012 ; International Journal of Migration, Health and Social Care Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; International Journal of Migration, Health and Social Care Volume 9 ; 9 ; >
@@ -5074,7 +5074,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 ; >
     au < manifest ; exists ; 1998 ; International Journal of Operations & Production Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 ; >
+    au < ready ; exists ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 2001 ; International Journal of Operations & Production Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 2002 ; International Journal of Operations & Production Management Volume 22 ; 22 ; >
     au < manifest ; exists ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 ; >
@@ -5172,7 +5172,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Pervasive Computing and Communications Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; International Journal of Pervasive Computing and Communications Volume 4 ; 4 ; >
     au < manifest ; exists ; 2009 ; International Journal of Pervasive Computing and Communications Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 ; >
     au < crawling ; exists ; 2011 ; International Journal of Pervasive Computing and Communications Volume 7 ; 7 ; >
     au < crawling ; exists ; 2012 ; International Journal of Pervasive Computing and Communications Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; International Journal of Pervasive Computing and Communications Volume 9 ; 9 ; >
@@ -5360,7 +5360,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Productivity and Performance Management Volume 56 ; 56 ; >
     au < manifest ; exists ; 2008 ; International Journal of Productivity and Performance Management Volume 57 ; 57 ; >
     au < manifest ; exists ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 ; >
+    au < ready ; exists ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Productivity and Performance Management Volume 60 ; 60 ; >
     au < crawling ; exists ; 2012 ; International Journal of Productivity and Performance Management Volume 61 ; 61 ; >
     au < crawling ; exists ; 2013 ; International Journal of Productivity and Performance Management Volume 62 ; 62 ; >
@@ -5727,7 +5727,7 @@
     param[journal_issn] = 1757-9864
     comment[journal_id] = ijsi
 
-    au < manifest ; exists ; 2010 ; International Journal of Structural Integrity Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; International Journal of Structural Integrity Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; International Journal of Structural Integrity Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; International Journal of Structural Integrity Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Structural Integrity Volume 4 ; 4 ; >
@@ -5753,7 +5753,7 @@
     param[journal_issn] = 1467-6370
     comment[journal_id] = ijshe
 
-    au < manifest ; exists ; 2000 ; International Journal of Sustainability in Higher Education Volume 1 ; 1 ; >
+    au < ready ; exists ; 2000 ; International Journal of Sustainability in Higher Education Volume 1 ; 1 ; >
     au < manifest ; exists ; 2001 ; International Journal of Sustainability in Higher Education Volume 2 ; 2 ; >
     au < manifest ; exists ; 2002 ; International Journal of Sustainability in Higher Education Volume 3 ; 3 ; >
     au < manifest ; exists ; 2003 ; International Journal of Sustainability in Higher Education Volume 4 ; 4 ; >
@@ -5794,7 +5794,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Web Information Systems Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; International Journal of Web Information Systems Volume 4 ; 4 ; >
     au < manifest ; exists ; 2009 ; International Journal of Web Information Systems Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Web Information Systems Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; International Journal of Web Information Systems Volume 6 ; 6 ; >
     au < crawling ; exists ; 2011 ; International Journal of Web Information Systems Volume 7 ; 7 ; >
     au < crawling ; exists ; 2012 ; International Journal of Web Information Systems Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; International Journal of Web Information Systems Volume 9 ; 9 ; >
@@ -5824,7 +5824,7 @@
     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Wine Business Research Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; International Journal of Wine Business Research Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; International Journal of Wine Business Research Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Wine Business Research Volume 22 ; 22 ; >
+    au < ready ; exists ; 2010 ; International Journal of Wine Business Research Volume 22 ; 22 ; >
     au < crawling ; exists ; 2011 ; International Journal of Wine Business Research Volume 23 ; 23 ; >
     au < crawling ; exists ; 2012 ; International Journal of Wine Business Research Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Journal of Wine Business Research Volume 25 ; 25 ; >
@@ -5885,7 +5885,7 @@
 
     au < manifest ; exists ; 2008 ; International Journal of Workplace Health Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; International Journal of Workplace Health Management Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2011 ; International Journal of Workplace Health Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Workplace Health Management Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; International Journal of Workplace Health Management Volume 6 ; 6 ; >
@@ -5942,7 +5942,7 @@
     au < manifest ; exists ; 1997 ; International Marketing Review Volume 14 ; 14 ; >
     au < manifest ; exists ; 1998 ; International Marketing Review Volume 15 ; 15 ; >
     au < manifest ; exists ; 1999 ; International Marketing Review Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2000 ; International Marketing Review Volume 17 ; 17 ; >
+    au < ready ; exists ; 2000 ; International Marketing Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 2001 ; International Marketing Review Volume 18 ; 18 ; >
     au < manifest ; exists ; 2002 ; International Marketing Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 2003 ; International Marketing Review Volume 20 ; 20 ; >
@@ -5986,7 +5986,7 @@
     au < manifest ; exists ; 1997 ; Internet Research Volume 7 ; 7 ; >
     au < manifest ; exists ; 1998 ; Internet Research Volume 8 ; 8 ; >
     au < manifest ; exists ; 1999 ; Internet Research Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2000 ; Internet Research Volume 10 ; 10 ; >
+    au < ready ; exists ; 2000 ; Internet Research Volume 10 ; 10 ; >
     au < manifest ; exists ; 2001 ; Internet Research Volume 11 ; 11 ; >
     au < manifest ; exists ; 2002 ; Internet Research Volume 12 ; 12 ; >
     au < manifest ; exists ; 2003 ; Internet Research Volume 13 ; 13 ; >
@@ -6146,7 +6146,7 @@
     #  online from 2009
 
     au < manifest ; exists ; 2009 ; Journal of Aggression, Conflict and Peace Research Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Journal of Aggression, Conflict and Peace Research Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Journal of Aggression, Conflict and Peace Research Volume 2 ; 2 ; >
     au < ready ; exists ; 2011 ; Journal of Aggression, Conflict and Peace Research Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Aggression, Conflict and Peace Research Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Aggression, Conflict and Peace Research Volume 5 ; 5 ; >
@@ -6230,7 +6230,7 @@
     # online from 2009
 
     au < manifest ; exists ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 ; >
     au < ready ; exists ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Applied Research in Higher Education Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Applied Research in Higher Education Volume 5 ; 5 ; >
@@ -6259,7 +6259,7 @@
     au < manifest ; exists ; 2007 ; Journal of Asia Business Studies Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; Journal of Asia Business Studies Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; Journal of Asia Business Studies Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2010 ; Journal of Asia Business Studies Volume 4 ; 4 ; >
+    au < ready ; exists ; 2010 ; Journal of Asia Business Studies Volume 4 ; 4 ; >
     au < crawling ; exists ; 2011 ; Journal of Asia Business Studies Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; Journal of Asia Business Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Asia Business Studies Volume 7 ; 7 ; >
@@ -6289,7 +6289,7 @@
     au < manifest ; exists ; 2007 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 2 ; 2 ; >
     au < manifest ; exists ; 2009 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2010 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 4 ; 4 ; >
+    au < ready ; exists ; 2010 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 4 ; 4 ; >
     au < crawling ; exists ; 2011 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 7 ; 7 ; >
@@ -6397,7 +6397,7 @@
     au < manifest ; exists ; 1997 ; Journal of Business Strategy Volume 18 ; 18 ; >
     au < manifest ; exists ; 1998 ; Journal of Business Strategy Volume 19 ; 19 ; >
     au < manifest ; exists ; 1999 ; Journal of Business Strategy Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2000 ; Journal of Business Strategy Volume 21 ; 21 ; >
+    au < ready ; exists ; 2000 ; Journal of Business Strategy Volume 21 ; 21 ; >
     au < manifest ; exists ; 2001 ; Journal of Business Strategy Volume 22 ; 22 ; >
     au < manifest ; exists ; 2002 ; Journal of Business Strategy Volume 23 ; 23 ; >
     au < manifest ; exists ; 2003 ; Journal of Business Strategy Volume 24 ; 24 ; >
@@ -6437,7 +6437,7 @@
     au < manifest ; exists ; 2007 ; Journal of Children’s Services: Research informing policy and practice Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; Journal of Children’s Services: Research informing policy and practice Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Children’s Services: Research informing policy and practice Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; Journal of Children’s Services: Research informing policy and practice Volume 5 ; 5 ; >
+    au < ready ; exists ; 2010 ; Journal of Children’s Services: Research informing policy and practice Volume 5 ; 5 ; >
     au < crawling ; exists ; 2011 ; Journal of Children’s Services: Research informing policy and practice Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Journal of Children’s Services: Research informing policy and practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Children’s Services: Research informing policy and practice Volume 8 ; 8 ; >
@@ -6465,7 +6465,7 @@
 
     au < manifest ; exists ; 2008 ; Journal of Chinese Economic and Foreign Trade Studies Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; Journal of Chinese Economic and Foreign Trade Studies Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; Journal of Chinese Economic and Foreign Trade Studies Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; Journal of Chinese Economic and Foreign Trade Studies Volume 3 ; 3 ; >
     au < crawling ; exists ; 2011 ; Journal of Chinese Economic and Foreign Trade Studies Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Journal of Chinese Economic and Foreign Trade Studies Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of Chinese Economic and Foreign Trade Studies Volume 6 ; 6 ; >
@@ -6492,7 +6492,7 @@
     comment[journal_id] = jce
 
     au < manifest ; exists ; 2009 ; Journal of Chinese Entrepreneurship Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Journal of Chinese Entrepreneurship Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Journal of Chinese Entrepreneurship Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; Journal of Chinese Entrepreneurship Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Chinese Entrepreneurship Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Chinese Entrepreneurship Volume 5 ; 5 ; >
@@ -6510,7 +6510,7 @@
     param[journal_issn] = 2040-8005
     comment[journal_id] = jchrm
 
-    au < manifest ; exists ; 2010 ; Journal of Chinese Human Resources Management Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; Journal of Chinese Human Resources Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Chinese Human Resources Management Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; Journal of Chinese Human Resources Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of Chinese Human Resources Management Volume 4 ; 4 ; >
@@ -6539,7 +6539,7 @@
     au < manifest ; exists ; 1997 ; Journal of Communication Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1998 ; Journal of Communication Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 1999 ; Journal of Communication Management Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2000 ; Journal of Communication Management Volume 4 ; 4 ; >
+    au < ready ; exists ; 2000 ; Journal of Communication Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 2001 ; Journal of Communication Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2002 ; Journal of Communication Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 2003 ; Journal of Communication Management Volume 7 ; 7 ; >
@@ -6637,7 +6637,7 @@
     au < manifest ; exists ; 2007 ; Journal of Corporate Real Estate Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; Journal of Corporate Real Estate Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; Journal of Corporate Real Estate Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2010 ; Journal of Corporate Real Estate Volume 12 ; 12 ; >
+    au < ready ; exists ; 2010 ; Journal of Corporate Real Estate Volume 12 ; 12 ; >
     au < crawling ; exists ; 2011 ; Journal of Corporate Real Estate Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Journal of Corporate Real Estate Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Journal of Corporate Real Estate Volume 15 ; 15 ; >
@@ -6765,7 +6765,7 @@
     au < manifest ; exists ; 1997 ; Journal of Documentation Volume 53 ; 53 ; >
     au < manifest ; exists ; 1998 ; Journal of Documentation Volume 54 ; 54 ; >
     au < manifest ; exists ; 1999 ; Journal of Documentation Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2000 ; Journal of Documentation Volume 56 ; 56 ; >
+    au < ready ; exists ; 2000 ; Journal of Documentation Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Journal of Documentation Volume 57 ; 57 ; >
     au < manifest ; exists ; 2002 ; Journal of Documentation Volume 58 ; 58 ; >
     au < manifest ; exists ; 2003 ; Journal of Documentation Volume 59 ; 59 ; >
@@ -6859,7 +6859,7 @@
     au < manifest ; exists ; 1997 ; Journal of Economic Studies Volume 24 ; 24 ; >
     au < manifest ; exists ; 1998 ; Journal of Economic Studies Volume 25 ; 25 ; >
     au < manifest ; exists ; 1999 ; Journal of Economic Studies Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2000 ; Journal of Economic Studies Volume 27 ; 27 ; >
+    au < ready ; exists ; 2000 ; Journal of Economic Studies Volume 27 ; 27 ; >
     au < manifest ; exists ; 2001 ; Journal of Economic Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Economic Studies Volume 29 ; 29 ; >
     au < manifest ; exists ; 2003 ; Journal of Economic Studies Volume 30 ; 30 ; >
@@ -6975,7 +6975,7 @@
     au < manifest ; exists ; 2007 ; Journal of Engineering, Design and Technology Volume 5 ; 5 ; >
     au < manifest ; exists ; 2008 ; Journal of Engineering, Design and Technology Volume 6 ; 6 ; >
     au < manifest ; exists ; 2009 ; Journal of Engineering, Design and Technology Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2010 ; Journal of Engineering, Design and Technology Volume 8 ; 8 ; >
+    au < ready ; exists ; 2010 ; Journal of Engineering, Design and Technology Volume 8 ; 8 ; >
     au < crawling ; exists ; 2011 ; Journal of Engineering, Design and Technology Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Engineering, Design and Technology Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Journal of Engineering, Design and Technology Volume 11 ; 11 ; >
@@ -7008,7 +7008,7 @@
     au < manifest ; exists ; 2007 ; Journal of Enterprise Information Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 2008 ; Journal of Enterprise Information Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 2009 ; Journal of Enterprise Information Management Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2010 ; Journal of Enterprise Information Management Volume 23 ; 23 ; >
+    au < ready ; exists ; 2010 ; Journal of Enterprise Information Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2011 ; Journal of Enterprise Information Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; Journal of Enterprise Information Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Enterprise Information Management Volume 26 ; 26 ; >
@@ -7136,7 +7136,7 @@
 
     au < manifest ; exists ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 ; >
     au < crawling ; exists ; 2011 ; Journal of European Real Estate Research Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Journal of European Real Estate Research Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of European Real Estate Research Volume 6 ; 6 ; >
@@ -7169,7 +7169,7 @@
     au < manifest ; exists ; 2007 ; Journal of Facilities Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2008 ; Journal of Facilities Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 2009 ; Journal of Facilities Management Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2010 ; Journal of Facilities Management Volume 8 ; 8 ; >
+    au < ready ; exists ; 2010 ; Journal of Facilities Management Volume 8 ; 8 ; >
     au < crawling ; exists ; 2011 ; Journal of Facilities Management Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Facilities Management Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Journal of Facilities Management Volume 11 ; 11 ; >
@@ -7301,7 +7301,7 @@
     comment[journal_id] = jfep
 
     au < manifest ; exists ; 2009 ; Journal of Financial Economic Policy Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Journal of Financial Economic Policy Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Journal of Financial Economic Policy Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; Journal of Financial Economic Policy Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Financial Economic Policy Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Financial Economic Policy Volume 5 ; 5 ; >
@@ -7366,7 +7366,7 @@
     au < manifest ; exists ; 1997 ; Journal of Financial Regulation and Compliance Volume 5 ; 5 ; >
     au < manifest ; exists ; 1998 ; Journal of Financial Regulation and Compliance Volume 6 ; 6 ; >
     au < manifest ; exists ; 1999 ; Journal of Financial Regulation and Compliance Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2000 ; Journal of Financial Regulation and Compliance Volume 8 ; 8 ; >
+    au < ready ; exists ; 2000 ; Journal of Financial Regulation and Compliance Volume 8 ; 8 ; >
     au < manifest ; exists ; 2001 ; Journal of Financial Regulation and Compliance Volume 9 ; 9 ; >
     au < manifest ; exists ; 2002 ; Journal of Financial Regulation and Compliance Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; Journal of Financial Regulation and Compliance Volume 11 ; 11 ; >
@@ -7435,7 +7435,7 @@
     param[journal_issn] = 2041-2568
     comment[journal_id] = jgr
 
-    au < manifest ; exists ; 2010 ; Journal of Global Responsibility Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; Journal of Global Responsibility Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; Journal of Global Responsibility Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; Journal of Global Responsibility Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of Global Responsibility Volume 4 ; 4 ; >
@@ -7496,7 +7496,7 @@
     comment[journal_id] = jhrm
 
     au < manifest ; exists ; 2009 ; Journal of Historical Research in Marketing Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; Journal of Historical Research in Marketing Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Historical Research in Marketing Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Historical Research in Marketing Volume 5 ; 5 ; >
@@ -7602,7 +7602,7 @@
     comment[journal_id] = jibr
 
     au < manifest ; exists ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; Journal of Indian Business Research Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Indian Business Research Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Indian Business Research Volume 5 ; 5 ; >
@@ -7701,7 +7701,7 @@
     param[journal_issn] = 1469-1930
     comment[journal_id] = jic
 
-    au < manifest ; exists ; 2000 ; Journal of Intellectual Capital Volume 1 ; 1 ; >
+    au < ready ; exists ; 2000 ; Journal of Intellectual Capital Volume 1 ; 1 ; >
     au < manifest ; exists ; 2001 ; Journal of Intellectual Capital Volume 2 ; 2 ; >
     au < manifest ; exists ; 2002 ; Journal of Intellectual Capital Volume 3 ; 3 ; >
     au < manifest ; exists ; 2003 ; Journal of Intellectual Capital Volume 4 ; 4 ; >
@@ -7738,7 +7738,7 @@
 
     au < manifest ; exists ; 2008 ; Journal of International Education in Business Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of International Education in Business Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2010 ; Journal of International Education in Business Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; Journal of International Education in Business Volume 3 ; 3 ; >
     au < ready ; exists ; 2011 ; Journal of International Education in Business Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Journal of International Education in Business Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of International Education in Business Volume 6 ; 6 ; >
@@ -7772,7 +7772,7 @@
     au < manifest ; exists ; 2007 ; Journal of International Trade Law and Policy Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; Journal of International Trade Law and Policy Volume 7 ; 7 ; >
     au < manifest ; exists ; 2009 ; Journal of International Trade Law and Policy Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2010 ; Journal of International Trade Law and Policy Volume 9 ; 9 ; >
+    au < ready ; exists ; 2010 ; Journal of International Trade Law and Policy Volume 9 ; 9 ; >
     au < crawling ; exists ; 2011 ; Journal of International Trade Law and Policy Volume 10 ; 10 ; >
     au < crawling ; exists ; 2012 ; Journal of International Trade Law and Policy Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Journal of International Trade Law and Policy Volume 12 ; 12 ; >
@@ -7889,7 +7889,7 @@
     au < manifest ; exists ; 1997 ; Journal of Knowledge Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1998 ; Journal of Knowledge Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 1999 ; Journal of Knowledge Management Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2000 ; Journal of Knowledge Management Volume 4 ; 4 ; >
+    au < ready ; exists ; 2000 ; Journal of Knowledge Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 2001 ; Journal of Knowledge Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 2002 ; Journal of Knowledge Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 2003 ; Journal of Knowledge Management Volume 7 ; 7 ; >
@@ -7926,7 +7926,7 @@
     comment[journal_id] = jkic
 
     au < manifest ; exists ; 2009 ; Journal of Knowledge-based Innovation in China Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Journal of Knowledge-based Innovation in China Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Journal of Knowledge-based Innovation in China Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; Journal of Knowledge-based Innovation in China Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Knowledge-based Innovation in China Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Knowledge-based Innovation in China Volume 5 ; 5 ; >
@@ -7944,7 +7944,7 @@
     param[journal_issn] = 2042-0927
     comment[journal_id] = jldob
 
-    au < manifest ; exists ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 3 ; 3 ; >
 
@@ -7979,7 +7979,7 @@
     au < manifest ; exists ; 1997 ; Journal of Management Development Volume 16 ; 16 ; >
     au < manifest ; exists ; 1998 ; Journal of Management Development Volume 17 ; 17 ; >
     au < manifest ; exists ; 1999 ; Journal of Management Development Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2000 ; Journal of Management Development Volume 19 ; 19 ; >
+    au < ready ; exists ; 2000 ; Journal of Management Development Volume 19 ; 19 ; >
     au < manifest ; exists ; 2001 ; Journal of Management Development Volume 20 ; 20 ; >
     au < manifest ; exists ; 2002 ; Journal of Management Development Volume 21 ; 21 ; >
     au < manifest ; exists ; 2003 ; Journal of Management Development Volume 22 ; 22 ; >
@@ -8020,7 +8020,7 @@
     au < manifest ; exists ; 2007 ; Journal of Management History Volume 13 ; 13 ; >
     au < manifest ; exists ; 2008 ; Journal of Management History Volume 14 ; 14 ; >
     au < manifest ; exists ; 2009 ; Journal of Management History Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2010 ; Journal of Management History Volume 16 ; 16 ; >
+    au < ready ; exists ; 2010 ; Journal of Management History Volume 16 ; 16 ; >
     au < crawling ; exists ; 2011 ; Journal of Management History Volume 17 ; 17 ; >
     au < crawling ; exists ; 2012 ; Journal of Management History Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Journal of Management History Volume 19 ; 19 ; >
@@ -8081,7 +8081,7 @@
     au < manifest ; exists ; 1997 ; Journal of Management in Medicine Volume 11 ; 11 ; >
     au < manifest ; exists ; 1998 ; Journal of Management in Medicine Volume 12 ; 12 ; >
     au < manifest ; exists ; 1999 ; Journal of Management in Medicine Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2000 ; Journal of Management in Medicine Volume 14 ; 14 ; >
+    au < ready ; exists ; 2000 ; Journal of Management in Medicine Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Journal of Management in Medicine Volume 15 ; 15 ; >
     au < manifest ; exists ; 2002 ; Journal of Management in Medicine Volume 16 ; 16 ; >
 
@@ -8155,7 +8155,7 @@
     au < manifest ; exists ; 2007 ; Journal of Manufacturing Technology Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 2008 ; Journal of Manufacturing Technology Management Volume 19 ; 19 ; >
     au < manifest ; exists ; 2009 ; Journal of Manufacturing Technology Management Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2010 ; Journal of Manufacturing Technology Management Volume 21 ; 21 ; >
+    au < ready ; exists ; 2010 ; Journal of Manufacturing Technology Management Volume 21 ; 21 ; >
     au < crawling ; exists ; 2011 ; Journal of Manufacturing Technology Management Volume 22 ; 22 ; >
     au < crawling ; exists ; 2012 ; Journal of Manufacturing Technology Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Journal of Manufacturing Technology Management Volume 24 ; 24 ; >
@@ -8205,7 +8205,7 @@
     au < manifest ; exists ; 2007 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 5 ; 5 ; >
+    au < ready ; exists ; 2010 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 5 ; 5 ; >
     au < crawling ; exists ; 2011 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 8 ; 8 ; >
@@ -8235,7 +8235,7 @@
     au < manifest ; exists ; 2007 ; Journal of Modelling in Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; Journal of Modelling in Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; Journal of Modelling in Management Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; Journal of Modelling in Management Volume 5 ; 5 ; >
+    au < ready ; exists ; 2010 ; Journal of Modelling in Management Volume 5 ; 5 ; >
     au < crawling ; exists ; 2011 ; Journal of Modelling in Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Modelling in Management Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Modelling in Management Volume 8 ; 8 ; >
@@ -8263,7 +8263,7 @@
 
     au < manifest ; exists ; 1998 ; Journal of Money Laundering Control Volume 1 ; 1 ; >
     au < manifest ; exists ; 1999 ; Journal of Money Laundering Control Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2000 ; Journal of Money Laundering Control Volume 3 ; 3 ; >
+    au < ready ; exists ; 2000 ; Journal of Money Laundering Control Volume 3 ; 3 ; >
     au < manifest ; exists ; 2001 ; Journal of Money Laundering Control Volume 4 ; 4 ; >
     au < manifest ; exists ; 2002 ; Journal of Money Laundering Control Volume 5 ; 5 ; >
     au < manifest ; exists ; 2003 ; Journal of Money Laundering Control Volume 6 ; 6 ; >
@@ -8404,7 +8404,7 @@
     au < manifest ; exists ; 1997 ; Journal of Product & Brand Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1998 ; Journal of Product & Brand Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1999 ; Journal of Product & Brand Management Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2000 ; Journal of Product & Brand Management Volume 9 ; 9 ; >
+    au < ready ; exists ; 2000 ; Journal of Product & Brand Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 2001 ; Journal of Product & Brand Management Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Product & Brand Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 2003 ; Journal of Product & Brand Management Volume 12 ; 12 ; >
@@ -8475,7 +8475,7 @@
     au < manifest ; exists ; 2007 ; Journal of Property Investment & Finance Volume 25 ; 25 ; >
     au < manifest ; exists ; 2008 ; Journal of Property Investment & Finance Volume 26 ; 26 ; >
     au < manifest ; exists ; 2009 ; Journal of Property Investment & Finance Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2010 ; Journal of Property Investment & Finance Volume 28 ; 28 ; >
+    au < ready ; exists ; 2010 ; Journal of Property Investment & Finance Volume 28 ; 28 ; >
     au < crawling ; exists ; 2011 ; Journal of Property Investment & Finance Volume 29 ; 29 ; >
     au < crawling ; exists ; 2012 ; Journal of Property Investment & Finance Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Property Investment & Finance Volume 31 ; 31 ; >
@@ -8585,7 +8585,7 @@
     au < manifest ; exists ; 1997 ; Journal of Quality in Maintenance Engineering Volume 3 ; 3 ; >
     au < manifest ; exists ; 1998 ; Journal of Quality in Maintenance Engineering Volume 4 ; 4 ; >
     au < manifest ; exists ; 1999 ; Journal of Quality in Maintenance Engineering Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2000 ; Journal of Quality in Maintenance Engineering Volume 6 ; 6 ; >
+    au < ready ; exists ; 2000 ; Journal of Quality in Maintenance Engineering Volume 6 ; 6 ; >
     au < manifest ; exists ; 2001 ; Journal of Quality in Maintenance Engineering Volume 7 ; 7 ; >
     au < manifest ; exists ; 2002 ; Journal of Quality in Maintenance Engineering Volume 8 ; 8 ; >
     au < manifest ; exists ; 2003 ; Journal of Quality in Maintenance Engineering Volume 9 ; 9 ; >
@@ -8649,7 +8649,7 @@
     comment[journal_id] = jrme
 
     au < manifest ; exists ; 1999 ; Journal of Research in Marketing and Entrepreneurship Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2000 ; Journal of Research in Marketing and Entrepreneurship Volume 2 ; 2 ; >
+    au < ready ; exists ; 2000 ; Journal of Research in Marketing and Entrepreneurship Volume 2 ; 2 ; >
     au < manifest ; exists ; 2001 ; Journal of Research in Marketing and Entrepreneurship Volume 3 ; 3 ; >
     au < manifest ; exists ; 2002 ; Journal of Research in Marketing and Entrepreneurship Volume 4 ; 4 ; >
     au < manifest ; exists ; 2003 ; Journal of Research in Marketing and Entrepreneurship Volume 5 ; 5 ; >
@@ -8659,7 +8659,7 @@
     au < manifest ; exists ; 2007 ; Journal of Research in Marketing and Entrepreneurship Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; Journal of Research in Marketing and Entrepreneurship Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 ; >
+    au < ready ; exists ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 ; >
     au < crawling ; exists ; 2011 ; Journal of Research in Marketing and Entrepreneurship Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Journal of Research in Marketing and Entrepreneurship Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Journal of Research in Marketing and Entrepreneurship Volume 15 ; 15 ; >
@@ -8694,7 +8694,7 @@
     au < manifest ; exists ; 2007 ; The Journal of Risk Finance Volume 8 ; 8 ; >
     au < manifest ; exists ; 2008 ; The Journal of Risk Finance Volume 9 ; 9 ; >
     au < manifest ; exists ; 2009 ; The Journal of Risk Finance Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2010 ; The Journal of Risk Finance Volume 11 ; 11 ; >
+    au < ready ; exists ; 2010 ; The Journal of Risk Finance Volume 11 ; 11 ; >
     au < crawling ; exists ; 2011 ; The Journal of Risk Finance Volume 12 ; 12 ; >
     au < crawling ; exists ; 2012 ; The Journal of Risk Finance Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; The Journal of Risk Finance Volume 14 ; 14 ; >
@@ -8740,7 +8740,7 @@
     # online from 2009
 
     au < manifest ; exists ; 2009 ; Journal of Service Management Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2010 ; Journal of Service Management Volume 21 ; 21 ; >
+    au < ready ; exists ; 2010 ; Journal of Service Management Volume 21 ; 21 ; >
     au < crawling ; exists ; 2011 ; Journal of Service Management Volume 22 ; 22 ; >
     au < crawling ; exists ; 2012 ; Journal of Service Management Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Journal of Service Management Volume 24 ; 24 ; >
@@ -8820,7 +8820,7 @@
     au < manifest ; exists ; 1997 ; Journal of Small Business and Enterprise Development Volume 4 ; 4 ; >
     au < manifest ; exists ; 1998 ; Journal of Small Business and Enterprise Development Volume 5 ; 5 ; >
     au < manifest ; exists ; 1999 ; Journal of Small Business and Enterprise Development Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2000 ; Journal of Small Business and Enterprise Development Volume 7 ; 7 ; >
+    au < ready ; exists ; 2000 ; Journal of Small Business and Enterprise Development Volume 7 ; 7 ; >
     au < manifest ; exists ; 2001 ; Journal of Small Business and Enterprise Development Volume 8 ; 8 ; >
     au < manifest ; exists ; 2002 ; Journal of Small Business and Enterprise Development Volume 9 ; 9 ; >
     au < manifest ; exists ; 2003 ; Journal of Small Business and Enterprise Development Volume 10 ; 10 ; >
@@ -8830,7 +8830,7 @@
     au < manifest ; exists ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 ; >
     au < manifest ; exists ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 ; >
     au < manifest ; exists ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 ; >
+    au < ready ; exists ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 ; >
     au < crawling ; exists ; 2011 ; Journal of Small Business and Enterprise Development Volume 18 ; 18 ; >
     au < crawling ; exists ; 2012 ; Journal of Small Business and Enterprise Development Volume 19 ; 19 ; >
     au < crawling ; exists ; 2013 ; Journal of Small Business and Enterprise Development Volume 20 ; 20 ; >
@@ -8911,7 +8911,7 @@
     au < manifest ; exists ; 1997 ; Journal of Systems and Information Technology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1998 ; Journal of Systems and Information Technology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1999 ; Journal of Systems and Information Technology Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2000 ; Journal of Systems and Information Technology Volume 4 ; 4 ; >
+    au < ready ; exists ; 2000 ; Journal of Systems and Information Technology Volume 4 ; 4 ; >
     au < manifest ; exists ; 2001 ; Journal of Systems and Information Technology Volume 5 ; 5 ; >
     au < manifest ; exists ; 2002 ; Journal of Systems and Information Technology Volume 6 ; 6 ; >
     au < manifest ; exists ; 2003 ; Journal of Systems and Information Technology Volume 7 ; 7 ; >
@@ -8949,7 +8949,7 @@
     au < manifest ; exists ; 2007 ; Journal of Technology Management in China Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; Journal of Technology Management in China Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; Journal of Technology Management in China Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 ; >
+    au < ready ; exists ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 ; >
     au < crawling ; exists ; 2011 ; Journal of Technology Management in China Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Journal of Technology Management in China Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Technology Management in China Volume 8 ; 8 ; >
@@ -9114,7 +9114,7 @@
     au < manifest ; exists ; 1997 ; Leadership & Organization Development Journal Volume 18 ; 18 ; >
     au < manifest ; exists ; 1998 ; Leadership & Organization Development Journal Volume 19 ; 19 ; >
     au < manifest ; exists ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 ; >
+    au < ready ; exists ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2001 ; Leadership & Organization Development Journal Volume 22 ; 22 ; >
     au < manifest ; exists ; 2002 ; Leadership & Organization Development Journal Volume 23 ; 23 ; >
     au < manifest ; exists ; 2003 ; Leadership & Organization Development Journal Volume 24 ; 24 ; >
@@ -9153,7 +9153,7 @@
     au < manifest ; exists ; 1997 ; Leadership in Health Services Volume 10 ; 10 ; >
     au < manifest ; exists ; 1998 ; Leadership in Health Services Volume 11 ; 11 ; >
     au < manifest ; exists ; 1999 ; Leadership in Health Services Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2000 ; Leadership in Health Services Volume 13 ; 13 ; >
+    au < ready ; exists ; 2000 ; Leadership in Health Services Volume 13 ; 13 ; >
     au < manifest ; exists ; 2001 ; Leadership in Health Services Volume 14 ; 14 ; >
     au < manifest ; exists ; 2002 ; Leadership in Health Services Volume 15 ; 15 ; >
     au < manifest ; exists ; 2003 ; Leadership in Health Services Volume 16 ; 16 ; >
@@ -9487,7 +9487,7 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Library Review Volume 55 ; 55 ; >
     au < manifest ; exists ; 2007 ; Library Review Volume 56 ; 56 ; >
     au < manifest ; exists ; 2008 ; Library Review Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2009 ; Library Review Volume 58 ; 58 ; >
+    au < ready ; exists ; 2009 ; Library Review Volume 58 ; 58 ; >
     au < ready ; exists ; 2010 ; Library Review Volume 59 ; 59 ; >
     au < crawling ; exists ; 2011 ; Library Review Volume 60 ; 60 ; >
     au < crawling ; exists ; 2012 ; Library Review Volume 61 ; 61 ; >
@@ -9818,7 +9818,7 @@
     au < manifest ; exists ; 1997 ; Managerial Auditing Journal Volume 12 ; 12 ; >
     au < manifest ; exists ; 1998 ; Managerial Auditing Journal Volume 13 ; 13 ; >
     au < manifest ; exists ; 1999 ; Managerial Auditing Journal Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2000 ; Managerial Auditing Journal Volume 15 ; 15 ; >
+    au < ready ; exists ; 2000 ; Managerial Auditing Journal Volume 15 ; 15 ; >
     au < manifest ; exists ; 2001 ; Managerial Auditing Journal Volume 16 ; 16 ; >
     au < manifest ; exists ; 2002 ; Managerial Auditing Journal Volume 17 ; 17 ; >
     au < manifest ; exists ; 2003 ; Managerial Auditing Journal Volume 18 ; 18 ; >
@@ -10083,7 +10083,7 @@
     au < manifest ; exists ; 2007 ; Measuring Business Excellence Volume 11 ; 11 ; >
     au < manifest ; exists ; 2008 ; Measuring Business Excellence Volume 12 ; 12 ; >
     au < manifest ; exists ; 2009 ; Measuring Business Excellence Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2010 ; Measuring Business Excellence Volume 14 ; 14 ; >
+    au < ready ; exists ; 2010 ; Measuring Business Excellence Volume 14 ; 14 ; >
     au < crawling ; exists ; 2011 ; Measuring Business Excellence Volume 15 ; 15 ; >
     au < crawling ; exists ; 2012 ; Measuring Business Excellence Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; Measuring Business Excellence Volume 17 ; 17 ; >
@@ -10108,7 +10108,7 @@
     param[journal_issn] = 1022-2529
     comment[journal_id] = mar
 
-    au < manifest ; exists ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 ; >
+    au < ready ; exists ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 ; >
     au < manifest ; exists ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 ; >
@@ -10211,7 +10211,7 @@
     au < manifest ; exists ; 1997 ; Mental Health Review Journal: Research, Policy and Practice Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; Mental Health Review Journal: Research, Policy and Practice Volume 3 ; 3 ; >
     au < manifest ; exists ; 1999 ; Mental Health Review Journal: Research, Policy and Practice Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2000 ; Mental Health Review Journal: Research, Policy and Practice Volume 5 ; 5 ; >
+    au < ready ; exists ; 2000 ; Mental Health Review Journal: Research, Policy and Practice Volume 5 ; 5 ; >
     au < manifest ; exists ; 2001 ; Mental Health Review Journal: Research, Policy and Practice Volume 6 ; 6 ; >
     au < manifest ; exists ; 2002 ; Mental Health Review Journal: Research, Policy and Practice Volume 7 ; 7 ; >
     au < manifest ; exists ; 2003 ; Mental Health Review Journal: Research, Policy and Practice Volume 8 ; 8 ; >
@@ -10263,7 +10263,7 @@
     au < manifest ; exists ; 1997 ; Microelectronics International Volume 14 ; 14 ; >
     au < manifest ; exists ; 1998 ; Microelectronics International Volume 15 ; 15 ; >
     au < manifest ; exists ; 1999 ; Microelectronics International Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2000 ; Microelectronics International Volume 17 ; 17 ; >
+    au < ready ; exists ; 2000 ; Microelectronics International Volume 17 ; 17 ; >
     au < manifest ; exists ; 2001 ; Microelectronics International Volume 18 ; 18 ; >
     au < manifest ; exists ; 2002 ; Microelectronics International Volume 19 ; 19 ; >
     au < manifest ; exists ; 2003 ; Microelectronics International Volume 20 ; 20 ; >
@@ -10355,7 +10355,7 @@
     au < manifest ; exists ; 2007 ; Multinational Business Review Volume 15 ; 15 ; >
     au < manifest ; exists ; 2008 ; Multinational Business Review Volume 16 ; 16 ; >
     au < manifest ; exists ; 2009 ; Multinational Business Review Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2010 ; Multinational Business Review Volume 18 ; 18 ; >
+    au < ready ; exists ; 2010 ; Multinational Business Review Volume 18 ; 18 ; >
     au < crawling ; exists ; 2011 ; Multinational Business Review Volume 19 ; 19 ; >
     au < crawling ; exists ; 2012 ; Multinational Business Review Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Multinational Business Review Volume 21 ; 21 ; >
@@ -10655,7 +10655,7 @@
     au < manifest ; exists ; 1997 ; OCLC Systems & Services Volume 13 ; 13 ; >
     au < manifest ; exists ; 1998 ; OCLC Systems & Services Volume 14 ; 14 ; >
     au < manifest ; exists ; 1999 ; OCLC Systems & Services Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2000 ; OCLC Systems & Services Volume 16 ; 16 ; >
+    au < ready ; exists ; 2000 ; OCLC Systems & Services Volume 16 ; 16 ; >
     au < manifest ; exists ; 2001 ; OCLC Systems & Services Volume 17 ; 17 ; >
     au < manifest ; exists ; 2002 ; OCLC Systems & Services Volume 18 ; 18 ; >
     au < manifest ; exists ; 2003 ; OCLC Systems & Services Volume 19 ; 19 ; >
@@ -10706,7 +10706,7 @@
     comment[journal_id] = oth
     # online from 2000
 
-    au < manifest ; exists ; 2000 ; On The Horizon Volume 8 ; 8 ; >
+    au < ready ; exists ; 2000 ; On The Horizon Volume 8 ; 8 ; >
     au < manifest ; exists ; 2001 ; On The Horizon Volume 9 ; 9 ; >
     au < manifest ; exists ; 2002 ; On The Horizon Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; On The Horizon Volume 11 ; 11 ; >
@@ -10795,7 +10795,7 @@
     comment[journal_id] = oir
     #continues = 1353-2642
 
-    au < manifest ; exists ; 2000 ; Online Information Review Volume 24 ; 24 ; >
+    au < ready ; exists ; 2000 ; Online Information Review Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Online Information Review Volume 25 ; 25 ; >
     au < manifest ; exists ; 2002 ; Online Information Review Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; Online Information Review Volume 27 ; 27 ; >
@@ -10895,7 +10895,7 @@
     au < manifest ; exists ; 2007 ; Performance Measurement and Metrics Volume 8 ; 8 ; >
     au < manifest ; exists ; 2008 ; Performance Measurement and Metrics Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Performance Measurement and Metrics Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2010 ; Performance Measurement and Metrics Volume 11 ; 11 ; >
+    au < ready ; exists ; 2010 ; Performance Measurement and Metrics Volume 11 ; 11 ; >
     au < crawling ; exists ; 2011 ; Performance Measurement and Metrics Volume 12 ; 12 ; >
     au < crawling ; exists ; 2012 ; Performance Measurement and Metrics Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Performance Measurement and Metrics Volume 14 ; 14 ; >
@@ -11069,7 +11069,7 @@
     au < manifest ; exists ; 1997 ; Policing: An International Journal of Police Strategies & Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 1998 ; Policing: An International Journal of Police Strategies & Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 1999 ; Policing: An International Journal of Police Strategies & Management Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2000 ; Policing: An International Journal of Police Strategies & Management Volume 23 ; 23 ; >
+    au < ready ; exists ; 2000 ; Policing: An International Journal of Police Strategies & Management Volume 23 ; 23 ; >
     au < manifest ; exists ; 2001 ; Policing: An International Journal of Police Strategies & Management Volume 24 ; 24 ; >
     au < manifest ; exists ; 2002 ; Policing: An International Journal of Police Strategies & Management Volume 25 ; 25 ; >
     au < manifest ; exists ; 2003 ; Policing: An International Journal of Police Strategies & Management Volume 26 ; 26 ; >
@@ -11165,7 +11165,7 @@
     au < manifest ; exists ; 2006 ; Program: Electronic Library and Information Systems Volume 40 ; 40 ; >
     au < manifest ; exists ; 2007 ; Program: Electronic Library and Information Systems Volume 41 ; 41 ; >
     au < manifest ; exists ; 2008 ; Program: Electronic Library and Information Systems Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2009 ; Program: Electronic Library and Information Systems Volume 43 ; 43 ; >
+    au < ready ; exists ; 2009 ; Program: Electronic Library and Information Systems Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Program: Electronic Library and Information Systems Volume 44 ; 44 ; >
     au < crawling ; exists ; 2011 ; Program: Electronic Library and Information Systems Volume 45 ; 45 ; >
     au < crawling ; exists ; 2012 ; Program: Electronic Library and Information Systems Volume 46 ; 46 ; >
@@ -11222,7 +11222,7 @@
     au < manifest ; exists ; 1997 ; Property Management Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; Property Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 1999 ; Property Management Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2000 ; Property Management Volume 18 ; 18 ; >
+    au < ready ; exists ; 2000 ; Property Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 2001 ; Property Management Volume 19 ; 19 ; >
     au < manifest ; exists ; 2002 ; Property Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 2003 ; Property Management Volume 21 ; 21 ; >
@@ -11357,7 +11357,7 @@
     au < manifest ; exists ; 2007 ; Qualitative Research in Organizations and Management: An International Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 2008 ; Qualitative Research in Organizations and Management: An International Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; Qualitative Research in Organizations and Management: An International Journal Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; Qualitative Research in Organizations and Management: An International Journal Volume 5 ; 5 ; >
+    au < ready ; exists ; 2010 ; Qualitative Research in Organizations and Management: An International Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2011 ; Qualitative Research in Organizations and Management: An International Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Qualitative Research in Organizations and Management: An International Journal Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Qualitative Research in Organizations and Management: An International Journal Volume 8 ; 8 ; >
@@ -11386,7 +11386,7 @@
     au < manifest ; exists ; 2007 ; Qualitative Research Journal Volume 7 ; 7 ; >
     au < manifest ; exists ; 2008 ; Qualitative Research Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 2009 ; Qualitative Research Journal Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2010 ; Qualitative Research Journal Volume 10 ; 10 ; >
+    au < ready ; exists ; 2010 ; Qualitative Research Journal Volume 10 ; 10 ; >
     au < crawling ; exists ; 2011 ; Qualitative Research Journal Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; Qualitative Research Journal Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Qualitative Research Journal Volume 13 ; 13 ; >
@@ -11455,7 +11455,7 @@
     param[journal_issn] = 1471-7794
     comment[journal_id] = qaoa
 
-    au < manifest ; exists ; 2000 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 1 ; 1 ; >
+    au < ready ; exists ; 2000 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 1 ; 1 ; >
     au < manifest ; exists ; 2001 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 2 ; 2 ; >
     au < manifest ; exists ; 2002 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 3 ; 3 ; >
     au < manifest ; exists ; 2003 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 4 ; 4 ; >
@@ -11465,7 +11465,7 @@
     au < manifest ; exists ; 2007 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 8 ; 8 ; >
     au < manifest ; exists ; 2008 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 9 ; 9 ; >
     au < manifest ; exists ; 2009 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2010 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 11 ; 11 ; >
+    au < ready ; exists ; 2010 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 11 ; 11 ; >
     au < crawling ; exists ; 2011 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 12 ; 12 ; >
     au < crawling ; exists ; 2012 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 14 ; 14 ; >
@@ -11496,7 +11496,7 @@
     au < manifest ; exists ; 1997 ; Rapid Prototyping Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 1998 ; Rapid Prototyping Journal Volume 4 ; 4 ; >
     au < manifest ; exists ; 1999 ; Rapid Prototyping Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2000 ; Rapid Prototyping Journal Volume 6 ; 6 ; >
+    au < ready ; exists ; 2000 ; Rapid Prototyping Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 2001 ; Rapid Prototyping Journal Volume 7 ; 7 ; >
     au < manifest ; exists ; 2002 ; Rapid Prototyping Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 2003 ; Rapid Prototyping Journal Volume 9 ; 9 ; >
@@ -11711,7 +11711,7 @@
     comment[journal_id] = rbf
 
     au < manifest ; exists ; 2009 ; Review of Behavioral Finance Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2010 ; Review of Behavioral Finance Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Review of Behavioral Finance Volume 2 ; 2 ; >
     au < ready ; exists ; 2011 ; Review of Behavioral Finance Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Review of Behavioral Finance Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Review of Behavioral Finance Volume 5 ; 5 ; >
@@ -11790,7 +11790,7 @@
     au < manifest ; exists ; 1997 ; Sensor Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 1998 ; Sensor Review Volume 18 ; 18 ; >
     au < manifest ; exists ; 1999 ; Sensor Review Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2000 ; Sensor Review Volume 20 ; 20 ; >
+    au < ready ; exists ; 2000 ; Sensor Review Volume 20 ; 20 ; >
     au < manifest ; exists ; 2001 ; Sensor Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Sensor Review Volume 22 ; 22 ; >
     au < manifest ; exists ; 2003 ; Sensor Review Volume 23 ; 23 ; >
@@ -11903,7 +11903,7 @@
     au < manifest ; exists ; 2007 ; Social Responsibility Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; Social Responsibility Journal Volume 4 ; 4 ; >
     au < manifest ; exists ; 2009 ; Social Responsibility Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2010 ; Social Responsibility Journal Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; Social Responsibility Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 2011 ; Social Responsibility Journal Volume 7 ; 7 ; >
     au < crawling ; exists ; 2012 ; Social Responsibility Journal Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; Social Responsibility Journal Volume 9 ; 9 ; >
@@ -11933,7 +11933,7 @@
     au < manifest ; exists ; 2007 ; Society and Business Review Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Society and Business Review Volume 3 ; 3 ; >
     au < manifest ; exists ; 2009 ; Society and Business Review Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2010 ; Society and Business Review Volume 5 ; 5 ; >
+    au < ready ; exists ; 2010 ; Society and Business Review Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Society and Business Review Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Society and Business Review Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Society and Business Review Volume 8 ; 8 ; >
@@ -12108,7 +12108,7 @@
     au < manifest ; exists ; 2007 ; Strategic HR Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; Strategic HR Review Volume 7 ; 7 ; >
     au < manifest ; exists ; 2009 ; Strategic HR Review Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2010 ; Strategic HR Review Volume 9 ; 9 ; >
+    au < ready ; exists ; 2010 ; Strategic HR Review Volume 9 ; 9 ; >
     au < crawling ; exists ; 2011 ; Strategic HR Review Volume 10 ; 10 ; >
     au < crawling ; exists ; 2012 ; Strategic HR Review Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Strategic HR Review Volume 12 ; 12 ; >
@@ -12218,7 +12218,7 @@
     au < manifest ; exists ; 1997 ; Strategy & Leadership Volume 25 ; 25 ; >
     au < manifest ; exists ; 1998 ; Strategy & Leadership Volume 26 ; 26 ; >
     au < manifest ; exists ; 1999 ; Strategy & Leadership Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2000 ; Strategy & Leadership Volume 28 ; 28 ; >
+    au < ready ; exists ; 2000 ; Strategy & Leadership Volume 28 ; 28 ; >
     au < manifest ; exists ; 2001 ; Strategy & Leadership Volume 29 ; 29 ; >
     au < manifest ; exists ; 2002 ; Strategy & Leadership Volume 30 ; 30 ; >
     au < manifest ; exists ; 2003 ; Strategy & Leadership Volume 31 ; 31 ; >
@@ -12272,7 +12272,7 @@
     au < manifest ; exists ; 1997 ; Structural Survey Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; Structural Survey Volume 16 ; 16 ; >
     au < manifest ; exists ; 1999 ; Structural Survey Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2000 ; Structural Survey Volume 18 ; 18 ; >
+    au < ready ; exists ; 2000 ; Structural Survey Volume 18 ; 18 ; >
     au < manifest ; exists ; 2001 ; Structural Survey Volume 19 ; 19 ; >
     au < manifest ; exists ; 2002 ; Structural Survey Volume 20 ; 20 ; >
     au < manifest ; exists ; 2003 ; Structural Survey Volume 21 ; 21 ; >
@@ -12378,7 +12378,7 @@
     au < manifest ; exists ; 1997 ; Supply Chain Management: An International Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; Supply Chain Management: An International Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 1999 ; Supply Chain Management: An International Journal Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2000 ; Supply Chain Management: An International Journal Volume 5 ; 5 ; >
+    au < ready ; exists ; 2000 ; Supply Chain Management: An International Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 2001 ; Supply Chain Management: An International Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 2002 ; Supply Chain Management: An International Journal Volume 7 ; 7 ; >
     au < manifest ; exists ; 2003 ; Supply Chain Management: An International Journal Volume 8 ; 8 ; >
@@ -12414,7 +12414,7 @@
     param[journal_issn] = 2040-8021
     comment[journal_id] = sampj
 
-    au < manifest ; exists ; 2010 ; Sustainability Accounting, Management and Policy Journal Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; Sustainability Accounting, Management and Policy Journal Volume 1 ; 1 ; >
     au < ready ; exists ; 2011 ; Sustainability Accounting, Management and Policy Journal Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; Sustainability Accounting, Management and Policy Journal Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Sustainability Accounting, Management and Policy Journal Volume 4 ; 4 ; >
@@ -12485,7 +12485,7 @@
     au < manifest ; exists ; 1997 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 2 ; 2 ; >
     au < manifest ; exists ; 1998 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 3 ; 3 ; >
     au < manifest ; exists ; 1999 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2000 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 5 ; 5 ; >
+    au < ready ; exists ; 2000 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 5 ; 5 ; >
     au < manifest ; exists ; 2001 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 7 ; 7 ; >
     au < manifest ; exists ; 2003 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 8 ; 8 ; >
@@ -12609,7 +12609,7 @@
     au < manifest ; exists ; 2007 ; Tourism Review Volume 62 ; 62 ; >
     au < manifest ; exists ; 2008 ; Tourism Review Volume 63 ; 63 ; >
     au < manifest ; exists ; 2009 ; Tourism Review Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2010 ; Tourism Review Volume 65 ; 65 ; >
+    au < ready ; exists ; 2010 ; Tourism Review Volume 65 ; 65 ; >
     au < crawling ; exists ; 2011 ; Tourism Review Volume 66 ; 66 ; >
     au < crawling ; exists ; 2012 ; Tourism Review Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; Tourism Review Volume 68 ; 68 ; >
@@ -12639,7 +12639,7 @@
 
     au < manifest ; exists ; 2008 ; The TQM Journal Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; The TQM Journal Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2010 ; The TQM Journal Volume 22 ; 22 ; >
+    au < ready ; exists ; 2010 ; The TQM Journal Volume 22 ; 22 ; >
     au < crawling ; exists ; 2011 ; The TQM Journal Volume 23 ; 23 ; >
     au < crawling ; exists ; 2012 ; The TQM Journal Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; The TQM Journal Volume 25 ; 25 ; >
@@ -12910,7 +12910,7 @@
     au < manifest ; exists ; 1997 ; Work Study Volume 46 ; 46 ; >
     au < manifest ; exists ; 1998 ; Work Study Volume 47 ; 47 ; >
     au < manifest ; exists ; 1999 ; Work Study Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2000 ; Work Study Volume 49 ; 49 ; >
+    au < ready ; exists ; 2000 ; Work Study Volume 49 ; 49 ; >
     au < manifest ; exists ; 2001 ; Work Study Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Work Study Volume 51 ; 51 ; >
     au < manifest ; exists ; 2003 ; Work Study Volume 52 ; 52 ; >
@@ -13003,7 +13003,7 @@
     param[journal_issn] = 2042-5945
     comment[journal_id] = wjstsd
 
-      au < manifest ; exists ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 ; >
+      au < ready ; exists ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 ; >
       au < ready ; exists ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 ; >
       au < crawling ; exists ; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 ; >
       au < crawling ; exists ; 2013 ; World Journal of Science, Technology and Sustainable Development Volume 10 ; 10 ; >
