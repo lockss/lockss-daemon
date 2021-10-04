@@ -33,7 +33,7 @@
     au < ready ; exists ; 1994 ; 1994 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 29 ; 29 ; >
     au < ready ; exists ; 1995 ; 1995 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 30 ; 30 ; >
     au < crawling ; exists ; 1996 ; 1996 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 31 ; 31 ; >
-    au < ready ; exists ; 1997 ; 1997 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 32 ; 32 ; >
+    au < crawling ; exists ; 1997 ; 1997 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 32 ; 32 ; >
     au < crawling ; exists ; 1998 ; 1998 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 33 ; 33 ; >
     au < crawling ; exists ; 1999 ; 1999 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 34 ; 34 ; >
     au < finished ; crawling ; 2000 ; 2000 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 35 ; 35 ; reingest3.clockss.org:8083 >
@@ -593,7 +593,7 @@
    au < deepCrawl ; exists ; 2018 ; 2018 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 37 ; 37 ; >
    au < finished ; crawling ; 2019 ; 2019 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 38 ; 38 ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 39 ; 39 ; >
-   au < ready ; exists ; 2021 ; 2021 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 40 ; 40 ; >
+   au < crawling ; exists ; 2021 ; 2021 ; Arquivos Brasileiros de Neurocirurgia: Brazilian Neurosurgery Volume 40 ; 40 ; >
 
    }
 
@@ -1588,11 +1588,11 @@
    au < ready ; exists ; 1991 ; 1991 ; European Journal of Pediatric Surgery Volume 1 ; 1 ; >
    au < crawling ; exists ; 1992 ; 1992 ; European Journal of Pediatric Surgery Volume 2 ; 2 ; >
    au < ready ; exists ; 1993 ; 1993 ; European Journal of Pediatric Surgery Volume 3 ; 3 ; >
-   au < ready ; exists ; 1994 ; 1994 ; European Journal of Pediatric Surgery Volume 4 ; 4 ; >
-   au < ready ; exists ; 1995 ; 1995 ; European Journal of Pediatric Surgery Volume 5 ; 5 ; >
-   au < ready ; exists ; 1996 ; 1996 ; European Journal of Pediatric Surgery Volume 6 ; 6 ; >
-   au < ready ; exists ; 1997 ; 1997 ; European Journal of Pediatric Surgery Volume 7 ; 7 ; >
-   au < ready ; exists ; 1998 ; 1998 ; European Journal of Pediatric Surgery Volume 8 ; 8 ; >
+   au < crawling ; exists ; 1994 ; 1994 ; European Journal of Pediatric Surgery Volume 4 ; 4 ; >
+   au < crawling ; exists ; 1995 ; 1995 ; European Journal of Pediatric Surgery Volume 5 ; 5 ; >
+   au < crawling ; exists ; 1996 ; 1996 ; European Journal of Pediatric Surgery Volume 6 ; 6 ; >
+   au < crawling ; exists ; 1997 ; 1997 ; European Journal of Pediatric Surgery Volume 7 ; 7 ; >
+   au < crawling ; exists ; 1998 ; 1998 ; European Journal of Pediatric Surgery Volume 8 ; 8 ; >
    au < crawling ; exists ; 1999 ; 1999 ; European Journal of Pediatric Surgery Volume 9 ; 9 ; >
    au < frozen ; exists ; 2000 ; 2000 ; European Journal of Pediatric Surgery Volume 10 ; 10 ; >
    au < frozen ; exists ; 2001 ; 2001 ; European Journal of Pediatric Surgery Volume 11 ; 11 ; >
@@ -2565,12 +2565,12 @@
     comment[years] = 1992-current
 
     au < ready ; exists ; 1992 ; 1992 ; International Journal of Angiology Volume 1 ; 1 ; >
-    au < ready ; exists ; 1993 ; 1993 ; International Journal of Angiology Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1993 ; 1993 ; International Journal of Angiology Volume 2 ; 2 ; >
     au < ready ; exists ; 1994 ; 1994 ; International Journal of Angiology Volume 3 ; 3 ; >
     au < ready ; exists ; 1995 ; 1995 ; International Journal of Angiology Volume 4 ; 4 ; >
-    au < ready ; exists ; 1996 ; 1996 ; International Journal of Angiology Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1996 ; 1996 ; International Journal of Angiology Volume 5 ; 5 ; >
     au < ready ; exists ; 1997 ; 1997 ; International Journal of Angiology Volume 6 ; 6 ; >
-    au < ready ; exists ; 1998 ; 1998 ; International Journal of Angiology Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1998 ; 1998 ; International Journal of Angiology Volume 7 ; 7 ; >
     au < ready ; exists ; 1999 ; 1999 ; International Journal of Angiology Volume 8 ; 8 ; >
     au < frozen ; exists ; 2000 ; 2000 ; International Journal of Angiology Volume 9 ; 9 ; >
     au < frozen ; exists ; 2001 ; 2001 ; International Journal of Angiology Volume 10 ; 10 ; >
@@ -4494,15 +4494,15 @@
     param[journal_id] = 10.1055/s-00000056
     comment[years] = 1991-current
 
-    au < ready ; exists ; 1991 ; 1991 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1991 ; 1991 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 1 ; 1 ; >
     au < ready ; exists ; 1992 ; 1992 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2 ; 2 ; >
-    au < ready ; exists ; 1993 ; 1993 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1993 ; 1993 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 3 ; 3 ; >
     au < ready ; exists ; 1994 ; 1994 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 4 ; 4 ; >
     au < ready ; exists ; 1995 ; 1995 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 5 ; 5 ; >
     au < crawling ; exists ; 1996 ; 1996 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 6 ; 6 ; >
     au < crawling ; exists ; 1997 ; 1997 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 7 ; 7 ; >
     au < ready ; exists ; 1998 ; 1998 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 8 ; 8 ; >
-    au < ready ; exists ; 1999 ; 1999 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 9 ; 9 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 10 ; 10 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 11 ; 11 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 12 ; 12 ; >
@@ -4640,7 +4640,7 @@
     param[journal_id] = 10.1055/s-00000057
     comment[years] = 1999-2007
 
-   au < ready ; exists ; 1999 ; 1999 ; Plant Biology Volume 1 ; 1 ; >
+   au < crawling ; exists ; 1999 ; 1999 ; Plant Biology Volume 1 ; 1 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Plant Biology Volume 2 ; 2 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Plant Biology Volume 3 ; 3 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Plant Biology Volume 4 ; 4 ; >
@@ -5643,7 +5643,7 @@
    au < crawling ; exists ; 1994 ; 1994 ; Seminars in Respiratory and Critical Care Medicine Volume 15 ; 15 ; >
    au < crawling ; exists ; 1995 ; 1995 ; Seminars in Respiratory and Critical Care Medicine Volume 16 ; 16 ; >
    au < crawling ; exists ; 1996 ; 1996 ; Seminars in Respiratory and Critical Care Medicine Volume 17 ; 17 ; >
-   au < ready ; exists ; 1997 ; 1997 ; Seminars in Respiratory and Critical Care Medicine Volume 18 ; 18 ; >
+   au < crawling ; exists ; 1997 ; 1997 ; Seminars in Respiratory and Critical Care Medicine Volume 18 ; 18 ; >
    au < ready ; exists ; 1998 ; 1998 ; Seminars in Respiratory and Critical Care Medicine Volume 19 ; 19 ; >
    au < ready ; exists ; 1999 ; 1999 ; Seminars in Respiratory and Critical Care Medicine Volume 20 ; 20 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; >
@@ -7558,7 +7558,7 @@
     au < deepCrawl ; exists ; 2018 ; 2018 ; Methods of Information in Medicine Volume 57 ; 57 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Methods of Information in Medicine Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Methods of Information in Medicine Volume 59 ; 59 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Methods of Information in Medicine Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Methods of Information in Medicine Volume 60 ; 60 ; >
 
   }
 
@@ -7763,7 +7763,7 @@
     au < deepCrawl ; exists ; 2018 ; 2018 ; Revista Iberoamericana de Cirugía de la Mano Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Revista Iberoamericana de Cirugía de la Mano Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Revista Iberoamericana de Cirugía de la Mano Volume 48 ; 48 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Revista Iberoamericana de Cirugía de la Mano Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Revista Iberoamericana de Cirugía de la Mano Volume 49 ; 49 ; >
 
   }
 
@@ -7781,8 +7781,8 @@
 
     au < ready ; exists ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 ; >
     au < ready ; exists ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 ; >
     au < ready ; exists ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 ; >
     au < finished ; crawling ; 2017 ; 2017 ; Schlaf Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; 2018 ; Schlaf Volume 7 ; 7 ; >
@@ -8231,16 +8231,16 @@
     au < ready ; exists ; 2004 ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 37 ; >
     au < ready ; exists ; 2005 ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 38 ; >
     au < ready ; exists ; 2006 ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 39 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 40 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 41 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 42 ; >
     au < ready ; exists ; 2010 ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 43 ; >
     au < ready ; exists ; 2011 ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 44 ; >
     au < ready ; exists ; 2012 ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 45 ; >
     au < ready ; exists ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 ; >
     au < ready ; exists ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 ; >
     au < ready ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
     au < notReady ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; > #pdf, no metadata
     au < notReady ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; > #pdf, no metadata
     au < ready ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
@@ -8284,10 +8284,10 @@
     comment[years] = 2011-current
 
     au < ready ; exists ; 2011 ; 2011 ; International Journal of Nutrology Volume 4 ; 4 ; >
-    au < ready ; exists ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 ; >
     au < ready ; exists ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 ; >
-    au < ready ; exists ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 ; >
-    au < ready ; exists ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 ; >
     au < ready ; exists ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 ; >
     au < ready ; exists ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 ; >
     au < crawling ; exists ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 ; >
@@ -8309,7 +8309,7 @@
     comment[years] = 2018-current
 
     au < crawling ; exists ; 2018 ; 2018 ; International Journal of Practical Otolaryngology Volume 1 ; 1 ; >
-    au < ready ; exists ; 2019 ; 2019 ; International Journal of Practical Otolaryngology Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; International Journal of Practical Otolaryngology Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; 2020 ; International Journal of Practical Otolaryngology Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; 2021 ; International Journal of Practical Otolaryngology Volume 4 ; 4 ; >
 
@@ -8331,7 +8331,7 @@
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Recent Surgical and Medical Sciences Volume 2 ; 2 ; >
     au < crawling ; exists ; 2017 ; 2017 ; International Journal of Recent Surgical and Medical Sciences Volume 3 ; 3 ; >
     au < crawling ; exists ; 2018 ; 2018 ; International Journal of Recent Surgical and Medical Sciences Volume 4 ; 4 ; >
-    au < ready ; exists ; 2019 ; 2019 ; International Journal of Recent Surgical and Medical Sciences Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; International Journal of Recent Surgical and Medical Sciences Volume 5 ; 5 ; >
     au < crawling ; exists ; 2020 ; 2020 ; International Journal of Recent Surgical and Medical Sciences Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; 2021 ; International Journal of Recent Surgical and Medical Sciences Volume 7 ; 7 ; >
 
@@ -8450,7 +8450,7 @@
     au < notReady ; exists ; 2015 ; 2015 ; Journal of Morphological Sciences Volume 32 ; 32 ; > #pdf, no metadata
     au < notReady ; exists ; 2016 ; 2016 ; Journal of Morphological Sciences Volume 33 ; 33 ; > #pdf, no metadata
     au < notReady ; exists ; 2017 ; 2017 ; Journal of Morphological Sciences Volume 34 ; 34 ; > #pdf, no metadata
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Morphological Sciences Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Morphological Sciences Volume 35 ; 35 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Morphological Sciences Volume 36 ; 36 ; >
 
   }
@@ -8794,7 +8794,7 @@
     param[journal_id] = 10.1055/s-00040903
     comment[years] = 2018-current
 
-    au < ready ; exists ; 2018 ; 2018 ; VCOT Open Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; VCOT Open Volume 1 ; 1 ; >
     au < crawling ; exists ; 2019 ; 2019 ; VCOT Open Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; 2020 ; VCOT Open Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; 2021 ; VCOT Open Volume 4 ; 4 ; >
