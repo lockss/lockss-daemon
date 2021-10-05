@@ -44,10 +44,10 @@
 git checkout master
 git checkout `git rev-list -n 1 --before="2021-10-01 00:00" master`
 ant jar-lockss
-./scripts/tdb/tdbout -CLZFt auid,status,publisher,plugin tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file_10.txt
+./scripts/tdb/tdbout -CLZFt auid,status,publisher,plugin tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file_10a.txt
 git checkout master
 git pull
 ant jar-lockss
-./scripts/tdb/report_buckets_publplug.pl ../SageEdits/file_09.txt ../SageEdits/file_10.txt > ../SageEdits/buckets__09.tsv
+./scripts/tdb/report_buckets_publplug.pl ../SageEdits/file_09a.txt ../SageEdits/file_10a.txt > ../SageEdits/buckets__09.tsv
 
 exit 0
