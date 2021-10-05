@@ -22,19 +22,4 @@
 
   }
 
-  {
-
-    title <
-      name = Example Title
-    >
-
-    plugin = needs.plugin
-    param[base_url] = http://clockss-test.lockss.org/sourcefiles/example-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[directory] >
-
-    au < testing ; exists ; 1111 ; Example Source Content 1111 ; 1111 >
-
-  }
-
 }
