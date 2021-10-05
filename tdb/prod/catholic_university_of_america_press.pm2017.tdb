@@ -31,6 +31,7 @@
         au < released ; 2018 ; Antiphon: A Journal for Liturgical Renewal Volume 22 [2018] ; 13404 >
         au < released ; 2019 ; Antiphon: A Journal for Liturgical Renewal Volume 23 [2019] ; 14173 >
         au < testing ; 2020 ; Antiphon: A Journal for Liturgical Renewal Volume 24 [2020] ; 14898 >
+        au < manifest ; 2021 ; Antiphon: A Journal for Liturgical Renewal Volume 25 [2021] ; 15682 >
 
     }
 
@@ -53,6 +54,21 @@
         au < released ; 2018 ; Bulletin of Medieval Canon Law Volume 35 [2018] ; 14082 >
         au < released ; 2019 ; Bulletin of Medieval Canon Law Volume 36 [2019] ; 14830 >
         au < released ; 2020 ; Bulletin of Medieval Canon Law Volume 37 [2020] ; 15529 >
+
+    }
+
+    {
+    title <
+      name = International Journal of Evangelization and Catechetics ;
+      issn = 2689-6206 ;
+      eissn = 2689-6214
+
+    >
+
+      attr[journal_id] = 773
+
+      au < manifest ; 2020 ; International Journal of Evangelization and Catechetics Volume 1 [2020] ; 14985 >
+      au < manifest ; 2021 ; International Journal of Evangelization and Catechetics Volume 2 [2021] ; 15836 >
 
     }
 
@@ -206,6 +222,7 @@
         au < released ; 2018 ; Newman Studies Journal Volume 15 [2018] ; 13620 >
         au < released ; 2019 ; Newman Studies Journal Volume 16 [2019] ; 14344 >
         au < released ; 2020 ; Newman Studies Journal Volume 17 [2020] ; 15138 >
+        au < manifest ; 2021 ; Newman Studies Journal Volume 18 [2021] ; 16499 >
 
     }
 
@@ -226,6 +243,20 @@
         au < released ; 2019 ; Nova et vetera Volume 17 [2019] ; 14002 >
         au < released ; 2020 ; Nova et vetera Volume 18 [2020] ; 14737 >
         au < manifest ; 2021 ; Nova et vetera Volume 19 [2021] ; 15532 >
+
+    }
+
+    {
+    title <
+      name = Review for Religious: New Series ;
+      issn = 0034-639X ;
+      eissn = 2767-8547
+
+    >
+
+      attr[journal_id] = 805
+
+      au < manifest ; 2021 ; Review for Religious: New Series Volume 1 [2021] ; 16063 >
 
     }
 

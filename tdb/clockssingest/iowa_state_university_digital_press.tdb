@@ -32,9 +32,9 @@
       au < manifest ; exists ; 2016 ; 2016 ; 5 ; Journal of Critical Thought and Praxis Volume 5 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 6 ; Journal of Critical Thought and Praxis Volume 6 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 7 ; Journal of Critical Thought and Praxis Volume 7 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; 8 ; Journal of Critical Thought and Praxis Volume 8 ; >
+      au < ready ; exists ; 2019 ; 2019 ; 8 ; Journal of Critical Thought and Praxis Volume 8 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 9 ; Journal of Critical Thought and Praxis Volume 9 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; 10 ; Journal of Critical Thought and Praxis Volume 10 ; >
+      au < ready ; exists ; 2021 ; 2021 ; 10 ; Journal of Critical Thought and Praxis Volume 10 ; >
 
   }
 
@@ -49,7 +49,7 @@
       # webpage "print" button has 500 error for "mmb" content 09/2021
       au < notReady ; exists ; 2017 ; 2017 ; 1 ; Meat and Muscle Biology Volume 1 ; >
       au < notReady ; exists ; 2018 ; 2018 ; 2 ; Meat and Muscle Biology Volume 2 ; >
-      au < notReady ; exists ; 2019 ; 2019 ; 3 ; Meat and Muscle Biology Volume 3 ; >
+      au < ready ; exists ; 2019 ; 2019 ; 3 ; Meat and Muscle Biology Volume 3 ; >
       au < notReady ; exists ; 2020 ; 2020 ; 4 ; Meat and Muscle Biology Volume 4 ; > #500 error https://www.iastatedigitalpress.com/mmb/article/id/10373/print/
       au < exists ; exists ; 2021 ; 2021 ; 5 ; Meat and Muscle Biology Volume 5 ; >
 

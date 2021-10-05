@@ -29,7 +29,7 @@
     au < manifest ; exists ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 ; >
-    au < ready ; exists ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; >
     au < crawling ; exists ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 ; >
     au < ready ; exists ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 ; >
     au < frozen ; exists ; 2016 ; Anthropological Journal of European Cultures Volume 25 ; 25 ; >
@@ -144,7 +144,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Aspasia Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Aspasia Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Aspasia Volume 8 ; 8 ; >
-    au < ready ; exists ; 2015 ; Aspasia Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2015 ; Aspasia Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; Aspasia Volume 10 ; 10 ; >
     au < finished ; finished ; 2017 ; Aspasia Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Aspasia Volume 12 ; 12 ; >
@@ -197,7 +197,7 @@
 
     au < doNotProcess ; doNotProcess ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 ; >
-    au < ready ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 ; >
     au < ready ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 ; >
     au < frozen ; exists ; 2016 ; The Cambridge Journal of Anthropology Volume 34 ; 34 ; >
     au < finished ; finished ; 2017 ; The Cambridge Journal of Anthropology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
@@ -596,10 +596,10 @@
     au < manifest ; exists ; 2009 ; Girlhood Studies Volume 2 ; 2 ; >
     au < manifest ; exists ; 2010 ; Girlhood Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Girlhood Studies Volume 4 ; 4 ; >
-    au < ready ; exists ; 2012 ; Girlhood Studies Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2012 ; Girlhood Studies Volume 5 ; 5 ; >
     au < ready ; exists ; 2013 ; Girlhood Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Girlhood Studies Volume 7 ; 7 ; >
-    au < ready ; exists ; 2015 ; Girlhood Studies Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2015 ; Girlhood Studies Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; Girlhood Studies Volume 9 ; 9 ; >
     au < finished ; finished ; 2017 ; Girlhood Studies Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Girlhood Studies Volume 11 ; 11 ; >
@@ -959,7 +959,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Projections Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Projections Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Projections Volume 8 ; 8 ; >
-    au < ready ; exists ; 2015 ; Projections Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2015 ; Projections Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; Projections Volume 10 ; 10 ; >
     au < finished ; finished ; 2017 ; Projections Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Projections Volume 12 ; 12 ; >
@@ -984,7 +984,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Regions & Cohesion Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Regions & Cohesion Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Regions & Cohesion Volume 3 ; 3 ; >
-    au < ready ; exists ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
     au < ready ; exists ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; Regions & Cohesion Volume 6 ; 6 ; >
     au < finished ; finished ; 2017 ; Regions & Cohesion Volume 7 ; 7 ; reingest1.clockss.org:8082 >
@@ -1051,7 +1051,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Sartre Studies International Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sartre Studies International Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Sartre Studies International Volume 20 ; 20 ; >
-    au < ready ; exists ; 2015 ; Sartre Studies International Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2015 ; Sartre Studies International Volume 21 ; 21 ; >
     au < frozen ; exists ; 2016 ; Sartre Studies International Volume 22 ; 22 ; >
     au < finished ; finished ; 2017 ; Sartre Studies International Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Sartre Studies International Volume 24 ; 24 ; >
@@ -1135,7 +1135,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Social Analysis Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Analysis Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Social Analysis Volume 57 ; 57 ; >
-    au < ready ; exists ; 2014 ; Social Analysis Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2014 ; Social Analysis Volume 58 ; 58 ; >
     au < ready ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
     au < frozen ; exists ; 2016 ; Social Analysis Volume 60 ; 60 ; >
     au < finished ; finished ; 2017 ; Social Analysis Volume 61 ; 61 ; reingest5.clockss.org:8082 >

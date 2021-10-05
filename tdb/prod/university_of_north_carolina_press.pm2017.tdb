@@ -67,6 +67,50 @@
         au < released ; 2018 ; Appalachian Heritage Volume 46 [2018] ; 14206 >
         au < released ; 2019 ; Appalachian Heritage Volume 47 [2019] ; 14207 >
         au < released ; 2020 ; Appalachian Review Volume 48 [2020] ; 14969 >
+        au < manifest ; 2021 ; Appalachian Review Volume 49 [2021] ; 15760 >
+
+    }
+
+    {
+    title <
+      name = Arris ;
+      issn = 1048-5945 ;
+      eissn = 2769-2434
+
+    >
+
+      attr[journal_id] = 838
+
+      au < manifest ; 2018 ; Arris Volume 29 [2018] ; 16500 >
+      au < manifest ; 2019 ; Arris Volume 30 [2019] ; 16501 >
+      au < manifest ; 2020 ; Arris Volume 31 [2020] ; 16502 >
+
+    }
+
+    {
+    title <
+      name = CrossCurrents ;
+      issn = 0011-1953 ;
+      eissn = 1939-3881
+
+    >
+
+      attr[journal_id] = 784
+
+      au < manifest ; 2008 ; CrossCurrents Volume 58 [2008] ; 15411 >
+      au < manifest ; 2009 ; CrossCurrents Volume 59 [2009] ; 15412 >
+      au < manifest ; 2010 ; CrossCurrents Volume 60 [2010] ; 15413 >
+      au < manifest ; 2011 ; CrossCurrents Volume 61 [2011] ; 15414 >
+      au < manifest ; 2012 ; CrossCurrents Volume 62 [2012] ; 15415 >
+      au < manifest ; 2013 ; CrossCurrents Volume 63 [2013] ; 15416 >
+      au < manifest ; 2014 ; CrossCurrents Volume 64 [2014] ; 15417 >
+      au < manifest ; 2015 ; CrossCurrents Volume 65 [2015] ; 15418 >
+      au < manifest ; 2016 ; CrossCurrents Volume 66 [2016] ; 15419 >
+      au < manifest ; 2017 ; CrossCurrents Volume 67 [2017] ; 15420 >
+      au < manifest ; 2018 ; CrossCurrents Volume 68 [2018] ; 15421 >
+      au < manifest ; 2019 ; CrossCurrents Volume 69 [2019] ; 15422 >
+      au < manifest ; 2020 ; CrossCurrents Volume 70 [2020] ; 15423 >
+      au < manifest ; 2021 ; CrossCurrents Volume 71 [2021] ; 15691 >
 
     }
 
@@ -252,6 +296,7 @@
         au < released ; 2018 ; Studies in Philology Volume 115 [2018] ; 13135 >
         au < released ; 2019 ; Studies in Philology Volume 116 [2019] ; 13853 >
         au < released ; 2020 ; Studies in Philology Volume 117 [2020] ; 14601 >
+        au < manifest ; 2021 ; Studies in Philology Volume 118 [2021] ; 15460 >
 
     }
 
@@ -291,6 +336,7 @@
         au < released ; 2017 ; The Comparatist Volume 41 [October 2017] ; 12999 >
         au < released ; 2018 ; The Comparatist Volume 42 [October 2018] ; 13768 >
         au < released ; 2019 ; The Comparatist Volume 43 [2019] ; 14483 >
+        au < manifest ; 2020 ; The Comparatist Volume 44 [2020] ; 15224 >
 
     }
 
@@ -349,6 +395,7 @@
         au < released ; 2018 ; The Journal of the Civil War Era Volume 8 [2018] ; 13273 >
         au < released ; 2019 ; The Journal of the Civil War Era Volume 9 [2019] ; 13960 >
         au < released ; 2020 ; The Journal of the Civil War Era Volume 10 [2020] ; 14755 >
+        au < manifest ; 2021 ; The Journal of the Civil War Era Volume 11 [2021] ; 15499 >
 
     }
 
@@ -381,6 +428,7 @@
         au < released ; 2018 ; The Latin Americanist Volume 62 [2018] ; 13668 >
         au < released ; 2019 ; The Latin Americanist Volume 63 [2019] ; 14059 >
         au < released ; 2020 ; The Latin Americanist Volume 64 [2020] ; 14833 >
+        au < manifest ; 2021 ; The Latin Americanist Volume 65 [2021] ; 15673 >
 
     }
 

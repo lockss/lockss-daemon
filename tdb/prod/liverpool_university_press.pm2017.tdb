@@ -80,6 +80,7 @@
         au < released ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 [2018] ; 13398 >
         au < released ; 2019 ; European Journal of Language Policy Volume 11 [2019] ; 14129 >
         au < testing ; 2020 ; European Journal of Language Policy Volume 12 [2020] ; 14872 >
+        au < manifest ; 2021 ; European Journal of Language Policy Volume 13 [2021] ; 15704 >
 
     }
 
@@ -112,6 +113,20 @@
 
     {
     title <
+      name = Labour History: A Journal of Labour and Social History ;
+      issn = 1839-3039 ;
+      eissn = 0023-6942
+
+    >
+
+      attr[journal_id] = 788
+
+      au < manifest ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 [2020] ; 15362 >
+
+    }
+
+    {
+    title <
       name = Music, Sound, and the Moving Image ;
       issn = 1753-0768  ;
       eissn = 1753-0776  ;
@@ -135,6 +150,7 @@
         au < released ; 2018 ; Music, Sound, and the Moving Image Volume 12 [2018] ; 13718 >
         au < released ; 2019 ; Music, Sound, and the Moving Image Volume 13 [2019] ; 14369 >
         au < released ; 2020 ; Music, Sound, and the Moving Image Volume 14 [2020] ; 15110 >
+        au < manifest ; 2021 ; Music, Sound, and the Moving Image Volume 15 [2021] ; 15958 >
 
     }
 
@@ -181,6 +197,7 @@
         au < released ; 2018 ; Romani Studies Volume 28 [2018] ; 13551 >
         au < released ; 2019 ; Romani Studies Volume 29 [2019] ; 14287 >
         au < released ; 2020 ; Romani Studies Volume 30 [2020] ; 15023 >
+        au < manifest ; 2021 ; Romani Studies Volume 31 [2021] ; 15903 >
 
     }
 
@@ -235,6 +252,7 @@
         au < released ; 2018 ; The Byron Journal Volume 46 [2018] ; 13558 >
         au < released ; 2019 ; The Byron Journal Volume 47 [2019] ; 14271 >
         au < released ; 2020 ; The Byron Journal Volume 48 [2020] ; 15037 >
+        au < manifest ; 2021 ; The Byron Journal Volume 49 [2021] ; 15879 >
 
     }
 

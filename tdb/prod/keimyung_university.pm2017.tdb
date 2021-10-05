@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Keimyung University
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:334
+
+    {
+    title <
+      name = Acta Koreana ;
+      issn = 2733-5348 ;
+      eissn = 1520-7412
+
+    >
+
+      attr[journal_id] = 772
+
+      au < manifest ; 2017 ; Acta Koreana Volume 20 [2017] ; 14974 >
+      au < manifest ; 2018 ; Acta Koreana Volume 21 [2018] ; 14975 >
+      au < manifest ; 2019 ; Acta Koreana Volume 22 [2019] ; 14976 >
+      au < manifest ; 2021 ; Acta Koreana Volume 24 [2021] ; 15926 >
+
+    }
+
+}

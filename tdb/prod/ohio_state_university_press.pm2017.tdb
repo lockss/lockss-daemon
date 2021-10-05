@@ -8,6 +8,29 @@
   implicit < status ; year ; name ; param[resource_id] >
   #publisher_id:30
 
+
+    {
+    title <
+      name = Adoption & Culture ;
+      issn = 1944-4990 ;
+      eissn = 2574-2523
+
+    >
+
+      attr[journal_id] = 786
+
+      au < manifest ; 2007 ; Adoption & Culture Volume 1 [2007] ; 15403 >
+      au < manifest ; 2009 ; Adoption & Culture Volume 2 [2009] ; 15404 >
+      au < manifest ; 2012 ; Adoption & Culture Volume 3 [2012] ; 15405 >
+      au < manifest ; 2014 ; Adoption & Culture Volume 4 [2014] ; 15406 >
+      au < manifest ; 2017 ; Adoption & Culture Volume 5 [2017] ; 15407 >
+      au < manifest ; 2018 ; Adoption & Culture Volume 6 [2018] ; 15408 >
+      au < manifest ; 2019 ; Adoption & Culture Volume 7 [2019] ; 15409 >
+      au < manifest ; 2020 ; Adoption & Culture Volume 8 [2020] ; 15410 >
+      au < manifest ; 2021 ; Adoption & Culture Volume 9 [2021] ; 16083 >
+
+    }
+
     {
     title <
       name = American Periodicals: A Journal of History & Criticism ;
@@ -37,6 +60,7 @@
         au < released ; 2018 ; American Periodicals: A Journal of History & Criticism Volume 28 [2018] ; 13324 >
         au < released ; 2019 ; American Periodicals: A Journal of History & Criticism Volume 29 [2019] ; 14052 >
         au < released ; 2020 ; American Periodicals: A Journal of History & Criticism Volume 30 [2020] ; 14808 >
+        au < manifest ; 2021 ; American Periodicals: A Journal of History & Criticism Volume 31 [2021] ; 15859 >
 
     }
 
@@ -72,6 +96,7 @@
         au < released ; 2018 ; Inks: The Journal of the Comics Studies Society Volume 2 [2018] ; 13362 >
         au < released ; 2019 ; Inks: The Journal of the Comics Studies Society Volume 3 [2019] ; 14263 >
         au < released ; 2020 ; Inks: The Journal of the Comics Studies Society Volume 4 [2020] ; 14978 >
+        au < manifest ; 2021 ; Inks: The Journal of the Comics Studies Society Volume 5 [2021] ; 15850 >
 
     }
 
@@ -141,6 +166,25 @@
         au < released ; 2019 ; Narrative Volume 27 [2019] ; 13824 >
         au < released ; 2020 ; Narrative Volume 28 [2020] ; 14567 >
         au < manifest ; 2021 ; Narrative Volume 29 [2021] ; 15387 >
+
+    }
+
+
+    {
+    title <
+      name = North American journal of Celtic studies ;
+      issn = 2472-7482 ;
+      eissn = 2472-7490
+
+    >
+
+      attr[journal_id] = 787
+
+      au < manifest ; 2017 ; North American journal of Celtic studies Volume 1 [2017] ; 15399 >
+      au < manifest ; 2018 ; North American journal of Celtic studies Volume 2 [2018] ; 15400 >
+      au < manifest ; 2019 ; North American journal of Celtic studies Volume 3 [2019] ; 15401 >
+      au < manifest ; 2020 ; North American journal of Celtic studies Volume 4 [2020] ; 15402 >
+      au < manifest ; 2021 ; North American journal of Celtic studies Volume 5 [2021] ; 15785 >
 
     }
 

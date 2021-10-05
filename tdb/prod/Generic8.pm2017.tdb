@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = CLA Journal ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 779
+
+      au < manifest ; 2016-2017 ; CLA Journal Volume 60 [2016-2017] ; 15300 >
+      au < manifest ; 2017-2018 ; CLA Journal Volume 61 [2017-2018] ; 15320 >
+      au < manifest ; 2019 ; CLA Journal Volume 62 [2019] ; 15321 >
+      au < manifest ; 2020 ; CLA Journal Volume 63 [2020] ; 15322 >
+
+    }
+
+}

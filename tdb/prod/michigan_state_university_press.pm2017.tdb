@@ -37,6 +37,7 @@
         au < released ; 2017 ; CR: The New Centennial Review Volume 17 [2017] ; 12817 >
         au < released ; 2018 ; CR: The New Centennial Review Volume 18 [2018] ; 13527 >
         au < released ; 2019 ; CR: The New Centennial Review Volume 19 [2019] ; 14158 >
+        au < manifest ; 2020 ; CR: The New Centennial Review Volume 20 [2020] ; 15018 >
 
     }
 
@@ -74,6 +75,8 @@
         au < released ; 2017 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 24 [2017] ; 12800 >
         au < released ; 2018 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 25 [2018] ; 13589 >
         au < released ; 2019 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 26 [2019] ; 14305 >
+        au < manifest ; 2020 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 27 [2020] ; 14995 >
+        au < manifest ; 2021 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 28 [2021] ; 15964 >
 
     }
 
@@ -109,6 +112,7 @@
         au < released ; 2018 ; Fourth Genre: Explorations in Nonfiction Volume 20 [2018] ; 13348 >
         au < released ; 2019 ; Fourth Genre: Explorations in Nonfiction Volume 21 [2019] ; 14088 >
         au < released ; 2020 ; Fourth Genre: Explorations in Nonfiction Volume 22 [2020] ; 14768 >
+        au < manifest ; 2021 ; Fourth Genre: Explorations in Nonfiction Volume 23 [2021] ; 15686 >
 
     }
 
@@ -140,6 +144,8 @@
         au < released ; 2016 ; French Colonial History Volume 16 [2016] ; 12412 >
         au < released ; 2017 ; French Colonial History Volume 17 [2017] ; 12979 >
         au < released ; 2019 ; French Colonial History Volume 18 [2019] ; 14622 >
+        au < manifest ; 2020 ; French Colonial History Volume 19 [2020] ; 15393 >
+        au < manifest ; 2021 ; French Colonial History Volume 20 [2021] ; 16488 >
 
     }
 
@@ -202,6 +208,8 @@
         au < released ; 2017 ; Journal of West African History Volume 3 [2017] ; 12539 >
         au < released ; 2018 ; Journal of West African History Volume 4 [2018] ; 13512 >
         au < released ; 2019 ; Journal of West African History Volume 5 [2019] ; 14174 >
+        au < manifest ; 2020 ; Journal of West African History Volume 6 [2020] ; 14968 >
+        au < manifest ; 2021 ; Journal of West African History Volume 7 [2021] ; 16323 >
 
     }
 
@@ -234,6 +242,7 @@
         au < released ; 2017 ; Northeast African Studies Volume 17 [2017 (New Series)] ; 12983 >
         au < released ; 2018 ; Northeast African Studies Volume 18 [2018] ; 14364 >
         au < released ; 2019 ; Northeast African Studies Volume 19 [2019] ; 14655 >
+        au < manifest ; 2020 ; Northeast African Studies Volume 20 [2020] ; 15317 >
 
     }
 
@@ -255,6 +264,7 @@
         au < released ; 2018 ; QED: A Journal in GLBTQ Worldmaking Volume 5 [2018] ; 13506 >
         au < released ; 2019 ; QED: A Journal in GLBTQ Worldmaking Volume 6 [2019] ; 14310 >
         au < released ; 2020 ; QED: A Journal in GLBTQ Worldmaking Volume 7 [2020] ; 14910 >
+        au < manifest ; 2021 ; QED: A Journal in GLBTQ Worldmaking Volume 8 [2021] ; 16128 >
 
     }
 
@@ -314,6 +324,21 @@
         au < released ; 2018 ; Rhetoric & Public Affairs Volume 21 [2018] ; 13522 >
         au < released ; 2019 ; Rhetoric & Public Affairs Volume 22 [2019] ; 13983 >
         au < released ; 2020 ; Rhetoric & Public Affairs Volume 23 [2020] ; 14876 >
+        au < manifest ; 2021 ; Rhetoric & Public Affairs Volume 24 [2021] ; 16483 >
+
+    }
+
+    {
+    title <
+      name = Rhetoric, Politics & Culture ;
+      issn = 2693-7522 ;
+      eissn = 2693-7549
+
+    >
+
+      attr[journal_id] = 781
+
+      au < manifest ; 2021 ; Rhetoric, Politics & Culture Volume 1 [2021] ; 16129 >
 
     }
 

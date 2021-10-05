@@ -1,0 +1,41 @@
+{
+  publisher <
+    name = Marine Corps University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:419
+
+    {
+    title <
+      name = Journal of Advanced Military Studies ;
+      issn = 2164-4209 ;
+      eissn = 2164-4217
+
+    >
+
+      attr[journal_id] = 797
+
+      au < manifest ; 2020 ; Journal of Advanced Military Studies Volume 11 [2020] ; 15915 >
+      au < manifest ; 2021 ; Journal of Advanced Military Studies Volume 12 [2021] ; 15916 >
+
+    }
+
+    {
+    title <
+      name = Marine Corps History ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 798
+
+      au < manifest ; 2019 ; Marine Corps History Volume 5 [2019] ; 15918 >
+      au < manifest ; 2020 ; Marine Corps History Volume 6 [2020] ; 15917 >
+
+    }
+
+}

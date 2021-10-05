@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = University of Notre Dame
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:418
+
+    {
+    title <
+      name = Religion & Literature ;
+      issn = 0888-3769 ;
+      eissn = 2328-6911
+
+    >
+
+      attr[journal_id] = 795
+
+      au < manifest ; 2018 ; Religion & Literature Volume 50 [2018] ; 15862 >
+      au < manifest ; 2019 ; Religion & Literature Volume 51 [2019] ; 15863 >
+      au < manifest ; 2020 ; Religion & Literature Volume 52 [2020] ; 15864 >
+
+    }
+
+}
