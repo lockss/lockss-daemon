@@ -25,26 +25,26 @@
     pluginSuffix = ClockssHighWirePlugin
     param[base_url] = http://archneurpsyc.ama-assn.org/
 
-    au < finished ; crawling ; 1919 ; AMA Archives of Neurology and Psychiatry Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1919 ; AMA Archives of Neurology and Psychiatry Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1920 ; AMA Archives of Neurology and Psychiatry Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1920 ; AMA Archives of Neurology and Psychiatry Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1921 ; AMA Archives of Neurology and Psychiatry Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1921 ; AMA Archives of Neurology and Psychiatry Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1922 ; AMA Archives of Neurology and Psychiatry Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1922 ; AMA Archives of Neurology and Psychiatry Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1919 ; AMA Archives of Neurology and Psychiatry Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1919 ; AMA Archives of Neurology and Psychiatry Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1920 ; AMA Archives of Neurology and Psychiatry Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1920 ; AMA Archives of Neurology and Psychiatry Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1921 ; AMA Archives of Neurology and Psychiatry Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1921 ; AMA Archives of Neurology and Psychiatry Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1922 ; AMA Archives of Neurology and Psychiatry Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1922 ; AMA Archives of Neurology and Psychiatry Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1924 ; AMA Archives of Neurology and Psychiatry Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1924 ; AMA Archives of Neurology and Psychiatry Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1925 ; AMA Archives of Neurology and Psychiatry Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1925 ; AMA Archives of Neurology and Psychiatry Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1926 ; AMA Archives of Neurology and Psychiatry Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1926 ; AMA Archives of Neurology and Psychiatry Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1927 ; AMA Archives of Neurology and Psychiatry Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1927 ; AMA Archives of Neurology and Psychiatry Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1928 ; AMA Archives of Neurology and Psychiatry Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1928 ; AMA Archives of Neurology and Psychiatry Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1924 ; AMA Archives of Neurology and Psychiatry Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1924 ; AMA Archives of Neurology and Psychiatry Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1925 ; AMA Archives of Neurology and Psychiatry Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1925 ; AMA Archives of Neurology and Psychiatry Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1926 ; AMA Archives of Neurology and Psychiatry Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1926 ; AMA Archives of Neurology and Psychiatry Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1927 ; AMA Archives of Neurology and Psychiatry Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1927 ; AMA Archives of Neurology and Psychiatry Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1928 ; AMA Archives of Neurology and Psychiatry Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1928 ; AMA Archives of Neurology and Psychiatry Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1930 ; AMA Archives of Neurology and Psychiatry Volume 23 ; 23 ; reingest2.clockss.org:8085 >
