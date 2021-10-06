@@ -355,7 +355,7 @@
 
       #Manifest pages not enabled
       au < ready ; exists ; 2001 ; Working Papers in Communication Volume 1 ; 1 ; 2001 ; >
-      au < ready ; exists ; 2005 ; Working Papers in Communication Volume 2 ; 2 ; 2005 ; >
+      au < crawling ; exists ; 2005 ; Working Papers in Communication Volume 2 ; 2 ; 2005 ; >
       au < ready ; exists ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; >
       au < frozen ; exists ; 2010 ; Working Papers in Communication Volume 4 ; 4 ; 2010 ; >
       #no further volumes published

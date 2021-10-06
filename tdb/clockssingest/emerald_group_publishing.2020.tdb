@@ -5727,7 +5727,7 @@
     param[journal_issn] = 1757-9864
     comment[journal_id] = ijsi
 
-    au < ready ; exists ; 2010 ; International Journal of Structural Integrity Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2010 ; International Journal of Structural Integrity Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; International Journal of Structural Integrity Volume 2 ; 2 ; >
     au < crawling ; exists ; 2012 ; International Journal of Structural Integrity Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Structural Integrity Volume 4 ; 4 ; >
@@ -5942,7 +5942,7 @@
     au < manifest ; exists ; 1997 ; International Marketing Review Volume 14 ; 14 ; >
     au < manifest ; exists ; 1998 ; International Marketing Review Volume 15 ; 15 ; >
     au < manifest ; exists ; 1999 ; International Marketing Review Volume 16 ; 16 ; >
-    au < ready ; exists ; 2000 ; International Marketing Review Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2000 ; International Marketing Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 2001 ; International Marketing Review Volume 18 ; 18 ; >
     au < manifest ; exists ; 2002 ; International Marketing Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 2003 ; International Marketing Review Volume 20 ; 20 ; >
@@ -5986,7 +5986,7 @@
     au < manifest ; exists ; 1997 ; Internet Research Volume 7 ; 7 ; >
     au < manifest ; exists ; 1998 ; Internet Research Volume 8 ; 8 ; >
     au < manifest ; exists ; 1999 ; Internet Research Volume 9 ; 9 ; >
-    au < ready ; exists ; 2000 ; Internet Research Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2000 ; Internet Research Volume 10 ; 10 ; >
     au < manifest ; exists ; 2001 ; Internet Research Volume 11 ; 11 ; >
     au < manifest ; exists ; 2002 ; Internet Research Volume 12 ; 12 ; >
     au < manifest ; exists ; 2003 ; Internet Research Volume 13 ; 13 ; >
@@ -6087,7 +6087,7 @@
     au < manifest ; exists ; 2007 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 10 ; 10 ; >
     au < manifest ; exists ; 2009 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 11 ; 11 ; >
-    au < ready ; exists ; 2010 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2010 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 12 ; 12 ; >
     au < crawling ; exists ; 2011 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 13 ; 13 ; >
     au < crawling ; exists ; 2012 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 15 ; 15 ; >
@@ -6202,7 +6202,7 @@
     au < manifest ; exists ; 2007 ; Journal of Applied Accounting Research Volume 8 ; 8 ; >
     au < manifest ; exists ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 ; >
     au < manifest ; exists ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 ; >
-    au < ready ; exists ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 ; >
     au < crawling ; exists ; 2011 ; Journal of Applied Accounting Research Volume 12 ; 12 ; >
     au < crawling ; exists ; 2012 ; Journal of Applied Accounting Research Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Journal of Applied Accounting Research Volume 14 ; 14 ; >
@@ -8622,7 +8622,7 @@
     comment[journal_id] = jrim
     # online from 2010
 
-    au < ready ; exists ; 2010 ; Journal of Research in Interactive Marketing Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2010 ; Journal of Research in Interactive Marketing Volume 4 ; 4 ; >
     au < ready ; exists ; 2011 ; Journal of Research in Interactive Marketing Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Research in Interactive Marketing Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Journal of Research in Interactive Marketing Volume 7 ; 7 ; >
@@ -10108,7 +10108,7 @@
     param[journal_issn] = 1022-2529
     comment[journal_id] = mar
 
-    au < ready ; exists ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 ; >
     au < manifest ; exists ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 ; >
     au < manifest ; exists ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 ; >
