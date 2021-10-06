@@ -138,9 +138,13 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.jasper.JasperCrawlSeedFactory</string>
     </entry>
     <entry>
-        <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.jasper.JasperUrlConsumerFactory</string>
+        <string>plugin_url_fetcher_factory</string>
+        <string>org.lockss.plugin.jasper.JasperUrlFetcherFactory</string>
     </entry>
+<!--     <entry> -->
+<!--         <string>plugin_url_consumer_factory</string> -->
+<!--         <string>org.lockss.plugin.jasper.JasperUrlConsumerFactory</string> -->
+<!--     </entry> -->
     <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.jasper.JasperZipArticleIteratorFactory</string>

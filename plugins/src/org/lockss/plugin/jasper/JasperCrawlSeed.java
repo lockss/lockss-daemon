@@ -113,7 +113,6 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
 
   @Override
   public Collection<String> doGetStartUrls() throws PluginException, IOException {
-    establishSession();
 //    if (urlList == null) {
 //      populateUrlList();
 //    }
@@ -316,42 +315,4 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
 //    cacher.storeContent();
 //  }
   
-  /**
-   * Cribbed from https://github.com/jjjake/internetarchive/blob/v2.1.0/internetarchive/config.py#L41-L73
-   */
-  protected void establishSession() {
-    String userPass = au.getConfiguration().get(ConfigParamDescr.USER_CREDENTIALS.getKey());
-    final StringRequestEntity strReqEnt =
-      new StringRequestEntity(String.format("email=%s&password=%s",
-                                            UrlUtil.encodeUrl(StringUtils.substringBefore(userPass, ':')),
-                                            UrlUtil.encodeUrl(StringUtils.substringAfter(userPass, ':'))));
-    
-    UrlFetcher uf = new BaseUrlFetcher(facade, String.format("%sservices/xauthn/?op=login", baseUrl)) {
-      @Override
-      protected LockssUrlConnection makeConnection0(String url,
-                                                    LockssUrlConnectionPool pool)
-          throws IOException {
-        return new HttpClientUrlConnection(LockssUrlConnection.METHOD_POST,
-                                           url,
-                                           connectionPool == null ? new HttpClient() : connectionPool.getHttpClient(),
-                                           pool);
-      }
-      @Override
-      protected void customizeConnection(LockssUrlConnection conn) {
-        super.customizeConnection(conn);
-        conn.setFollowRedirects(true); // FIXME maybe?
-        conn.setRequestProperty("content-type", Constants.FORM_ENCODING_URL);
-        ((HttpClientUrlConnection)conn).setRequestEntity(strReqEnt);
-      }
-    };
-    try {
-      FetchResult fr = uf.fetch();
-      log.critical(fr.name(), new Throwable()); // FIXME
-    }
-    catch (CacheException ce) {
-      log.critical("CacheException", ce); // FIXME
-    }
-
-  }
-
 }
