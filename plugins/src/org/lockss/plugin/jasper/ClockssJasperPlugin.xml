@@ -110,13 +110,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"^%s(webdatafile|wasapi)", base_url</string>
-            <string>1,"^https://warcs\.archive-it\.org/"</string>
-            <string>1,"^https://archive\.org/download/"</string>
-            <!-- redirects to subdomains with this pattern occur
-                ia903003.us.archive.org/31/items
-             -->
-            <string>1,".*\.us\.archive\.org/[0-9]*/items/"</string>
+            <string>1,"^%sdownload/%s/", base_url, collection</string>
+            <string>1,"^https?://.*\.archive\.org/[0-9]*/items/"</string>
         </list>
     </entry>
     <!-- crawlseed supersedes this, but leave in just in case. -->
@@ -141,17 +136,26 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>plugin_url_fetcher_factory</string>
         <string>org.lockss.plugin.jasper.JasperUrlFetcherFactory</string>
     </entry>
-<!--     <entry> -->
-<!--         <string>plugin_url_consumer_factory</string> -->
-<!--         <string>org.lockss.plugin.jasper.JasperUrlConsumerFactory</string> -->
-<!--     </entry> -->
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.jasper.JasperUrlConsumerFactory</string>
+    </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.jasper.JasperZipArticleIteratorFactory</string>
+        <string>org.lockss.plugin.jasper.JasperArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.jasper.JasperJsonMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.jasper.JasperArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>application/json_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.jasper.JasperJsonMetadataExtractorFactory</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>au_permitted_host_pattern</string>
@@ -159,13 +163,18 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>"archive\.org"</string>
         </list>
     </entry>
-<!--     <entry> -->
-<!--         https://partner.archive-it.org/login?next=/ -->
-<!--         <string>au_redirect_to_login_url_pattern</string> -->
-<!--         <string>"archive-it\.org/login\?.*", </string> -->
-<!--     </entry> -->
     <entry>
         <string>plugin_crawl_url_comparator_factory</string>
         <string>org.lockss.plugin.jasper.JasperCrawlUrlComparatorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_archive_file_types</string>
+        <string>standard</string>
+    </entry>
+    <entry>
+        <string>au_url_mime_type_map</string>
+        <list>
+            <string>.*\.json$,application/json</string>
+        </list>
     </entry>
 </map>
