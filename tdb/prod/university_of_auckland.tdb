@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = University of Auckland
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:426
 
     {
     title <
       name = New Zealand Journal of History ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0028-8322 ;
+      eissn = 2463-5057
 
     >
 
