@@ -19,7 +19,7 @@ public class JasperZipArticleIteratorFactory implements ArticleIteratorFactory, 
   protected static Logger log = Logger.getLogger(JasperZipArticleIteratorFactory.class);
 
   protected static final String ALL_ZIP_JSON_PATTERN_TEMPLATE =
-      "\"%s[^/]+/.*\\.zip!/.*\\.json$\", base_url";
+      "\"[^/]+/.*\\.tar.gz!/.*\\.json$\"";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =

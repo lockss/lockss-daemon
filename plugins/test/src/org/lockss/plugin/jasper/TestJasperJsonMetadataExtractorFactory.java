@@ -257,8 +257,6 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
 
-    Iterator<String> actAuthIter = md.getList(MetadataField.FIELD_AUTHOR).iterator();
-
     assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodJournal, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
@@ -300,8 +298,6 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
 
     map.entrySet()
         .forEach(System.out::println);
-
-
   }
 
 /*
