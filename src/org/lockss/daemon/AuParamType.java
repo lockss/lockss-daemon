@@ -182,10 +182,10 @@ public enum AuParamType {
     public Object parse(String val) throws InvalidFormatException {
       if (!StringUtil.isNullString(val)) {
 	List<String> lst = StringUtil.breakAt(val, ':', -1, true, false);
-	if (lst.size() != 2) {
-	  throw new InvalidFormatException("User:Passwd must consist of two" +
-					   "strings separated by a colon: " +
-					   val);
+	if (lst.size() != 2) { // FIXME
+//	  throw new InvalidFormatException("User:Passwd must consist of two" +
+//					   "strings separated by a colon: " +
+//					   val);
 	}
 	return lst;
       } else {
