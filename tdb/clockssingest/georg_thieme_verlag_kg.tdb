@@ -771,12 +771,12 @@
     comment[years] = 2000-2011
     # combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
 
-    au < notReady ; exists ; 2000 ; 2000 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 60 ; 60 ; >
-    au < notReady ; exists ; 2001 ; 2001 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 61 ; 61 ; >
-    au < notReady ; exists ; 2002 ; 2002 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 62 ; 62 ; >
-    au < notReady ; exists ; 2003 ; 2003 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 63 ; 63 ; >
-    au < notReady ; exists ; 2004 ; 2004 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 64 ; 64 ; >
-    au < notReady ; exists ; 2005 ; 2005 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 65 ; 65 ; >
+    au < notReady ; exists ; 2000 ; 2000 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 60 ; 60 ; > #no metadata
+    au < notReady ; exists ; 2001 ; 2001 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 61 ; 61 ; > #no metadata
+    au < notReady ; exists ; 2002 ; 2002 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 62 ; 62 ; > #no metadata
+    au < notReady ; exists ; 2003 ; 2003 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 63 ; 63 ; > #no metadata
+    au < notReady ; exists ; 2004 ; 2004 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 64 ; 64 ; > #no metadata
+    au < notReady ; exists ; 2005 ; 2005 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 65 ; 65 ; > #no metadata
     au < notReady ; exists ; 2006 ; 2006 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 66 ; 66 ; > #no metadata
     au < notReady ; exists ; 2007 ; 2007 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 67 ; 67 ; > #no metadata
     au < notReady ; exists ; 2008 ; 2008 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 68 ; 68 ; > #no metadata
@@ -2223,8 +2223,9 @@
     >
     param[journal_id] = 10.1055/s-00000130
     comment[years] = 2005 inclusive
+    #content no longer online available
 
-   au < notReady ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 84 ; 84 ; > # 500 error on https://www.thieme-connect.de/products/ejournals/issues/10.1055/s-00000130/2005
+   au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; HNO-Informationen Volume 84 ; 84 ; > # 500 error on https://www.thieme-connect.de/products/ejournals/issues/10.1055/s-00000130/2005
 
   }
 
@@ -8034,9 +8035,9 @@
     au < crawling ; exists ; 1996 ; 1996 ; British Homeopathic Journal Volume 86 ; 86 ; >
     au < crawling ; exists ; 1997 ; 1997 ; British Homeopathic Journal Volume 87 ; 87 ; >
     au < crawling ; exists ; 1998 ; 1998 ; British Homeopathic Journal Volume 88 ; 88 ; >
-    au < notReady ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; > #pdf, no metadata
-    au < notReady ; exists ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 ; > #pdf, no metadata
-    au < notReady ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; > #pdf, no metadata
+    au < ready ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; > #pdf, no metadata
+    au < ready ; exists ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 ; > #pdf, no metadata
+    au < ready ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; > #pdf, no metadata
 
   }
 
@@ -8242,7 +8243,7 @@
     au < ready ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
     au < ready ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; > #pdf, no metadata
-    au < notReady ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; > #pdf, no metadata
+    au < ready ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; > #pdf, no metadata
     au < ready ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Plastic Surgery Volume 54 ; 54 ; >
@@ -8419,7 +8420,7 @@
     param[journal_id] = 10.1055/s-00044881
     comment[years] = 2009-current
 
-    au < notReady ; exists ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 ; >  #pdf, no metadata
+    au < ready ; exists ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 ; >  #pdf, no metadata
     au < ready ; exists ; 2010 ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2 ; >  #pdf, no metadata
     au < ready ; exists ; 2011 ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 3 ; >  #pdf, no metadata
     au < ready ; exists ; 2012 ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 4 ; >  #pdf, no metadata
@@ -8495,7 +8496,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Neurosciences in Rural Practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Neurosciences in Rural Practice Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Neurosciences in Rural Practice Volume 5 ; 5 ; >
-    au < notReady ; exists ; 2015 ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 6 ; > #pdf, no metadata
+    au < ready ; exists ; 2015 ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 6 ; > #pdf, no metadata
     au < ready ; exists ; 2016 ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 7 ; > #pdf, no metadata
     au < ready ; exists ; 2017 ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 8 ; > #pdf, no metadata
     au < ready ; exists ; 2018 ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 9 ; > #pdf, no metadata
