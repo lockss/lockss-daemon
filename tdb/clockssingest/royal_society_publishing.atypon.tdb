@@ -104,9 +104,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biographical Memoirs of Fellows of the Royal Society Volume 63 ; 63 ; >
     au < finished ; finished ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66-67 [superseded] ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 ; >
@@ -140,7 +140,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Biology Letters Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Biology Letters Volume 13 ; 13 ; >
     au < finished ; finished ; 2018 ; Biology Letters Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Biology Letters Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Biology Letters Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Biology Letters Volume 15 [superseded] ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Biology Letters Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; Biology Letters Volume 17 ; 17 ; >
@@ -170,7 +170,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Interface Focus Volume 7 ; 7 ; >
     au < finished ; finished ; 2018 ; Interface Focus Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Interface Focus Volume 9 [superseded] ; 2019 ; >
-    au < finished ; manifest ; 2019 ; Interface Focus Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Interface Focus Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Interface Focus Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; Interface Focus Volume 11 ; 11 ; >
 
@@ -203,7 +203,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Royal Society Interface Volume 14 ; 14 ; >
     au < finished ; finished ; 2018 ; Journal of the Royal Society Interface Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2019 ; Journal of the Royal Society Interface Volume 16 [superseded] ; 2019 ; >
-    au < finished ; manifest ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Journal of the Royal Society Interface Volume 18 ; 18 ; >
 
@@ -299,7 +299,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Notes and Records the Royal Society Journal of the History of Science Volume 71 ; 71 ; >
     au < finished ; finished ; 2018 ; Notes and Records the Royal Society Journal of the History of Science Volume 72 ; 72 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 [superseded] ; 2019 ; >
-    au < finished ; manifest ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 ; >
     au < crawling ; exists ; 2021 ; Notes and Records the Royal Society Journal of the History of Science Volume 75 ; 75 ; >
 
@@ -325,7 +325,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Open Biology Volume 7 ; 7 ; >
     au < finished ; finished ; 2018 ; Open Biology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2019 ; Open Biology Volume 9 [superseded] ; 2019 ; >
-    au < finished ; manifest ; 2019 ; Open Biology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Open Biology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Open Biology Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; Open Biology Volume 11 ; 11 ; >
 
@@ -507,52 +507,52 @@
     au < frozen ; exists ; 1988-1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 327 ; 327 ; >
     au < frozen ; exists ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 328 ; 328 ; >
     au < frozen ; exists ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 329 ; 329 ; >
-    au < finished ; manifest ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 ; reingest5.clockss.org:8082 >
     }
     {
     param[journal_id] = rsta1990
     
     au < frozen ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 ; >
     au < frozen ; exists ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 333 ; 333 ; >
-    au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 335 ; 335 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 336 ; 336 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 337 ; 337 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 338 ; 338 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 339 ; 339 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 340 ; 340 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 341 ; 341 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 342 ; 342 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 335 ; 335 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 336 ; 336 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 337 ; 337 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 338 ; 338 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 339 ; 339 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 340 ; 340 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 341 ; 341 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 342 ; 342 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 343 ; 343 ; >
-    au < finished ; manifest ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 344 ; 344 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 345 ; 345 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 344 ; 344 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1993 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 345 ; 345 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 346 ; 346 ; >
     au < frozen ; exists ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 347 ; 347 ; >
-    au < finished ; manifest ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 348 ; 348 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 349 ; 349 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 348 ; 348 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 349 ; 349 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 ; >
     au < frozen ; exists ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 ; >
-    au < finished ; manifest ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 ; reingest1.clockss.org:8082 >
     }
     {
     param[journal_id] = rsta1996
     
-    au < finished ; manifest ; 1996 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1996 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1998 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 ; >
-    au < finished ; manifest ; 1999 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 357 ; 357 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2000 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 358 ; 358 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2001 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 359 ; 359 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 360 ; 360 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2003 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1999 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 357 ; 357 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2000 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 358 ; 358 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2001 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 359 ; 359 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2002 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 360 ; 360 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2003 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 361 ; 361 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2004 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 362 ; 362 ; reingest3.clockss.org:8083 >
     }
     {
     param[journal_id] = rsta
     
-    au < finished ; manifest ; 2005 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 363 ; 363 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2005 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 363 ; 363 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2006 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 ; >
@@ -566,7 +566,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 375 ; 375 ; >
     au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 376 ; 376 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 ; >
     au < crawling ; exists ; 2021 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 379 ; 379 ; >
 
@@ -750,50 +750,50 @@
     au < frozen ; exists ; 1989 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 324 ; 324 ; >
     au < frozen ; exists ; 1989 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 325 ; 325 ; >
     au < frozen ; exists ; 1989-1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 326 ; 326 ; >
-    au < finished ; manifest ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 327 ; 327 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 328 ; 328 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 327 ; 327 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 328 ; 328 ; reingest1.clockss.org:8082 >
     }
     {
     param[journal_id] = rstb1990
 
-    au < finished ; manifest ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 329 ; 329 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 330 ; 330 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 331 ; 331 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 329 ; 329 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 330 ; 330 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 331 ; 331 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 332 ; 332 ; >
-    au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 333 ; 333 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 334 ; 334 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 335 ; 335 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1992 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 336 ; 336 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 333 ; 333 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 334 ; 334 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 335 ; 335 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1992 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 336 ; 336 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1992 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 337 ; 337 ; >
-    au < finished ; manifest ; 1992 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 338 ; 338 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1993 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 339 ; 339 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1993 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 340 ; 340 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1993 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 341 ; 341 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1993 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 342 ; 342 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1992 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 338 ; 338 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1993 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 339 ; 339 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1993 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 340 ; 340 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1993 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 341 ; 341 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1993 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 342 ; 342 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1994 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 343 ; 343 ; >
-    au < finished ; manifest ; 1994 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 344 ; 344 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1994 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 345 ; 345 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1994 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 346 ; 346 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 347 ; 347 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 348 ; 348 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1994 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 344 ; 344 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1994 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 345 ; 345 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1994 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 346 ; 346 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 347 ; 347 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 348 ; 348 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 349 ; 349 ; >
-    au < finished ; manifest ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 350 ; 350 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1996 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 351 ; 351 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1997 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 352 ; 352 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1998 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 353 ; 353 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 1999 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 354 ; 354 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2000 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 355 ; 355 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 350 ; 350 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1996 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 351 ; 351 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1997 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 352 ; 352 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1998 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 353 ; 353 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1999 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 354 ; 354 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2000 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 355 ; 355 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2001 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 356 ; 356 ; >
-    au < finished ; manifest ; 2002 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 357 ; 357 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2002 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 357 ; 357 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2003 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 358 ; 358 ; >
-    au < finished ; manifest ; 2004 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 359 ; 359 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2004 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 359 ; 359 ; reingest1.clockss.org:8082 >
     }
     {
     param[journal_id] = rstb
 
-    au < finished ; manifest ; 2005 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 360 ; 360 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2005 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 360 ; 360 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2006 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 361 ; 361 ; >
-    au < finished ; manifest ; 2007 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 362 ; 362 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2007 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 362 ; 362 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2008 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 363 ; 363 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 ; >
@@ -805,7 +805,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 372 ; 372 ; >
     au < finished ; finished ; 2018 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 373 ; 373 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 375 ; >
     au < crawling ; exists ; 2021 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 376 ; 376 ; >
 
@@ -1403,53 +1403,53 @@
     au < frozen ; exists ; 1989 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 426 ; 426 ; >
     au < frozen ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 427 ; 427 ; >
     au < frozen ; exists ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 428 ; 428 ; >
-    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 429 ; 429 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 429 ; 429 ; reingest1.clockss.org:8082 >
     }
     {
       param[journal_id] = rspa1990
 
-    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 430 ; 430 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 431 ; 431 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 432 ; 432 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 433 ; 433 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 430 ; 430 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 431 ; 431 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 432 ; 432 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 433 ; 433 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 434 ; 434 ; >
-    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 435 ; 435 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 436 ; 436 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 437 ; 437 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 438 ; 438 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 435 ; 435 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 436 ; 436 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 437 ; 437 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 438 ; 438 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1992 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 439 ; 439 ; >
     au < frozen ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 440 ; 440 ; >
-    au < finished ; manifest ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 441 ; 441 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 441 ; 441 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 442 ; 442 ; >
-    au < finished ; manifest ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 443 ; 443 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1993 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 443 ; 443 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 444 ; 444 ; >
-    au < finished ; manifest ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 445 ; 445 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 446 ; 446 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 447 ; 447 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 448 ; 448 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 449 ; 449 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 450 ; 450 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 451 ; 451 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 445 ; 445 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 446 ; 446 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1994 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 447 ; 447 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 448 ; 448 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 449 ; 449 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 450 ; 450 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 451 ; 451 ; reingest1.clockss.org:8082 >
     }
     {
       param[journal_id] = rspa1996
 
-    au < finished ; manifest ; 1996 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 452 ; 452 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1997 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 453 ; 453 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1996 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 452 ; 452 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1997 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 453 ; 453 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1998 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 454 ; 454 ; >
-    au < finished ; manifest ; 1999 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 455 ; 455 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2000 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 456 ; 456 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2001 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 457 ; 457 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 458 ; 458 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2003 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 459 ; 459 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 460 ; 460 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1999 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 455 ; 455 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2000 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 456 ; 456 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2001 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 457 ; 457 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2002 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 458 ; 458 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2003 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 459 ; 459 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2004 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 460 ; 460 ; reingest1.clockss.org:8082 >
     }
     {
       param[journal_id] = rspa
 
-    au < finished ; manifest ; 2005 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 461 ; 461 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2005 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 461 ; 461 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2006 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 462 ; 462 ; >
-    au < finished ; manifest ; 2007 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 463 ; 463 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2007 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 463 ; 463 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 464 ; 464 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 ; >
@@ -1461,7 +1461,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 473 ; 473 ; >
     au < finished ; finished ; 2018 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 474 ; 474 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; reingest5.clockss.org:8082 > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
+    au < finished ; crawling ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; reingest5.clockss.org:8082 > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
     au < deepCrawl ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 ; >
     au < crawling ; exists ; 2021 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 477 ; 477 ; >
 
@@ -1655,21 +1655,21 @@
     au < frozen ; exists ; 1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 236 ; 236 ; >
     au < frozen ; exists ; 1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 237 ; 237 ; >
     au < frozen ; exists ; 1989-1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 238 ; 238 ; >
-    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 239 ; 239 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 240 ; 240 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 239 ; 239 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 240 ; 240 ; reingest5.clockss.org:8082 >
     }
     {
     param[journal_id] = rspb1990
 
-    au < finished ; manifest ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 241 ; 241 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 241 ; 241 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 242 ; 242 ; >
-    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 244 ; 244 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 245 ; 245 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 244 ; 244 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 245 ; 245 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 ; 246 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 ; reingest2.clockss.org:8085 >
     }
     {
     param[journal_id] = rspb
@@ -1710,7 +1710,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 ; >
     au < finished ; finished ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 ; >
     au < crawling ; exists ; 2021 ; Proceedings of the Royal Society B: Biological Sciences Volume 288 ; 288 ; >
 
@@ -1729,73 +1729,73 @@
     {
     param[journal_id] = rspl1800
 
-    au < finished ; manifest ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1837 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1843 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1837 ; Proceedings of the Royal Society of London Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1843 ; Proceedings of the Royal Society of London Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     }
     {
     param[journal_id] = rspl1843
 
-    au < finished ; manifest ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1854 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1854 ; Proceedings of the Royal Society of London Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     }
     {
     param[journal_id] = rspl
 
-    au < finished ; manifest ; 1856 ; Proceedings of the Royal Society of London Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 1857 ; Proceedings of the Royal Society of London Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1859 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1860 ; Proceedings of the Royal Society of London Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1862 ; Proceedings of the Royal Society of London Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1863 ; Proceedings of the Royal Society of London Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1856 ; Proceedings of the Royal Society of London Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1857 ; Proceedings of the Royal Society of London Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1859 ; Proceedings of the Royal Society of London Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1860 ; Proceedings of the Royal Society of London Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1862 ; Proceedings of the Royal Society of London Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1863 ; Proceedings of the Royal Society of London Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1864 ; Proceedings of the Royal Society of London Volume 13 ; 13 ; >
-    au < finished ; manifest ; 1865 ; Proceedings of the Royal Society of London Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1867 ; Proceedings of the Royal Society of London Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1868 ; Proceedings of the Royal Society of London Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1869 ; Proceedings of the Royal Society of London Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1870 ; Proceedings of the Royal Society of London Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1871 ; Proceedings of the Royal Society of London Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1872 ; Proceedings of the Royal Society of London Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1873 ; Proceedings of the Royal Society of London Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1874 ; Proceedings of the Royal Society of London Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1875 ; Proceedings of the Royal Society of London Volume 23 ; 23 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1876 ; Proceedings of the Royal Society of London Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1877 ; Proceedings of the Royal Society of London Volume 25 ; 25 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1878 ; Proceedings of the Royal Society of London Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1878 ; Proceedings of the Royal Society of London Volume 27 ; 27 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1879 ; Proceedings of the Royal Society of London Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1865 ; Proceedings of the Royal Society of London Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1867 ; Proceedings of the Royal Society of London Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1868 ; Proceedings of the Royal Society of London Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1869 ; Proceedings of the Royal Society of London Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1870 ; Proceedings of the Royal Society of London Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1871 ; Proceedings of the Royal Society of London Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1872 ; Proceedings of the Royal Society of London Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1873 ; Proceedings of the Royal Society of London Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1874 ; Proceedings of the Royal Society of London Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1875 ; Proceedings of the Royal Society of London Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1876 ; Proceedings of the Royal Society of London Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1877 ; Proceedings of the Royal Society of London Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1878 ; Proceedings of the Royal Society of London Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1878 ; Proceedings of the Royal Society of London Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1879 ; Proceedings of the Royal Society of London Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1879 ; Proceedings of the Royal Society of London Volume 29 ; 29 ; >
-    au < finished ; manifest ; 1880 ; Proceedings of the Royal Society of London Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1880 ; Proceedings of the Royal Society of London Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1881 ; Proceedings of the Royal Society of London Volume 31 ; 31 ; >
     au < frozen ; exists ; 1881 ; Proceedings of the Royal Society of London Volume 32 ; 32 ; >
-    au < finished ; manifest ; 1882 ; Proceedings of the Royal Society of London Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1883 ; Proceedings of the Royal Society of London Volume 34 ; 34 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1883 ; Proceedings of the Royal Society of London Volume 35 ; 35 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 1884 ; Proceedings of the Royal Society of London Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1884 ; Proceedings of the Royal Society of London Volume 37 ; 37 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1885 ; Proceedings of the Royal Society of London Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1882 ; Proceedings of the Royal Society of London Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1883 ; Proceedings of the Royal Society of London Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1883 ; Proceedings of the Royal Society of London Volume 35 ; 35 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 1884 ; Proceedings of the Royal Society of London Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1884 ; Proceedings of the Royal Society of London Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1885 ; Proceedings of the Royal Society of London Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1886 ; Proceedings of the Royal Society of London Volume 39 ; 39 ; >
-    au < finished ; manifest ; 1886 ; Proceedings of the Royal Society of London Volume 40 ; 40 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1887 ; Proceedings of the Royal Society of London Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1887 ; Proceedings of the Royal Society of London Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1888 ; Proceedings of the Royal Society of London Volume 43 ; 43 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1888 ; Proceedings of the Royal Society of London Volume 44 ; 44 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 1889 ; Proceedings of the Royal Society of London Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1886 ; Proceedings of the Royal Society of London Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1887 ; Proceedings of the Royal Society of London Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1887 ; Proceedings of the Royal Society of London Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1888 ; Proceedings of the Royal Society of London Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1888 ; Proceedings of the Royal Society of London Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1889 ; Proceedings of the Royal Society of London Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 46 ; 46 ; >
-    au < finished ; manifest ; 1890 ; Proceedings of the Royal Society of London Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1890 ; Proceedings of the Royal Society of London Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1890 ; Proceedings of the Royal Society of London Volume 48 ; 48 ; >
     au < frozen ; exists ; 1891 ; Proceedings of the Royal Society of London Volume 49 ; 49 ; >
-    au < finished ; manifest ; 1892 ; Proceedings of the Royal Society of London Volume 50 ; 50 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1892 ; Proceedings of the Royal Society of London Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1892 ; Proceedings of the Royal Society of London Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1892 ; Proceedings of the Royal Society of London Volume 51 ; 51 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1893 ; Proceedings of the Royal Society of London Volume 52 ; 52 ; >
-    au < finished ; manifest ; 1893 ; Proceedings of the Royal Society of London Volume 53 ; 53 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1894 ; Proceedings of the Royal Society of London Volume 54 ; 54 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 1894 ; Proceedings of the Royal Society of London Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1893 ; Proceedings of the Royal Society of London Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1894 ; Proceedings of the Royal Society of London Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 1894 ; Proceedings of the Royal Society of London Volume 55 ; 55 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 56 ; 56 ; >
-    au < finished ; manifest ; 1895 ; Proceedings of the Royal Society of London Volume 57 ; 57 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 1895 ; Proceedings of the Royal Society of London Volume 58 ; 58 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 1896 ; Proceedings of the Royal Society of London Volume 59 ; 59 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 1895 ; Proceedings of the Royal Society of London Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 1895 ; Proceedings of the Royal Society of London Volume 58 ; 58 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 1896 ; Proceedings of the Royal Society of London Volume 59 ; 59 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 1897 ; Proceedings of the Royal Society of London Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 1897 ; Proceedings of the Royal Society of London Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 1898 ; Proceedings of the Royal Society of London Volume 62 ; 62 ; >
@@ -1832,7 +1832,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Royal Society Open Science Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Royal Society Open Science Volume 5 ; 5 ; >
     au < superseded ; exists ; 2019 ; Royal Society Open Science Volume 6 [superseded] ; 2019 ; >
-    au < finished ; manifest ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Royal Society Open Science Volume 7 ; 7 ; >
     au < crawling ; exists ; 2021 ; Royal Society Open Science Volume 8 ; 8 ; >
 
