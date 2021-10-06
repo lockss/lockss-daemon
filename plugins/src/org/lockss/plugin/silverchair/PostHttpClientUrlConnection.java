@@ -406,7 +406,11 @@ public class PostHttpClientUrlConnection extends BaseLockssUrlConnection {
     } catch (ArrayIndexOutOfBoundsException e) {
       return null;
     }
-    }
+  }
+
+  public void setRequestEntity(String entity) {
+    throw new UnsupportedOperationException();
+  }
 
   public int getResponseCode() {
     assertExecuted();

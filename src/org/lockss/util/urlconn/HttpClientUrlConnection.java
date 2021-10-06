@@ -36,9 +36,7 @@ import java.util.*;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.auth.*;
 import org.apache.commons.httpclient.cookie.CookiePolicy;
-import org.apache.commons.httpclient.methods.GetMethod;
-import org.apache.commons.httpclient.methods.PostMethod;
-import org.apache.commons.httpclient.methods.RequestEntity;
+import org.apache.commons.httpclient.methods.*;
 import org.apache.commons.httpclient.params.*;
 import org.apache.commons.httpclient.protocol.*;
 import org.apache.commons.httpclient.util.*;
@@ -403,7 +401,13 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
-    /** method for passing through the post content */
+  /** Set the body of a POST request */
+  @Override
+  public void setRequestEntity(String entity) {
+    setRequestEntity(new StringRequestEntity(entity));
+  }
+
+  /** Set the body of a POST request */
   public void setRequestEntity(RequestEntity entity) {
     assertNotExecuted();
     if(method instanceof PostMethod) {
