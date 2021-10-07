@@ -74,9 +74,9 @@
       au < doNotProcess ; 2016 ; Journal of Nuclear Medicine Volume 57 ; 57 >
       au < doNotProcess ; 2017 ; Journal of Nuclear Medicine Volume 58 ; 58 >
       au < doNotProcess ; 2018 ; Journal of Nuclear Medicine Volume 59 ; 59 >
-      au < testing ; 2019 ; Journal of Nuclear Medicine Volume 60 ; 60 >
-      au < testing ; 2020 ; Journal of Nuclear Medicine Volume 61 ; 61 >
-      au < testing ; 2021 ; Journal of Nuclear Medicine Volume 62 ; 62 >
+      au < ready ; 2019 ; Journal of Nuclear Medicine Volume 60 ; 60 >
+      au < ready ; 2020 ; Journal of Nuclear Medicine Volume 61 ; 61 >
+      au < ready ; 2021 ; Journal of Nuclear Medicine Volume 62 ; 62 >
       }
       {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -176,9 +176,9 @@
       au < doNotProcess ; 2016 ; Journal of Nuclear Medicine Technology Volume 44 ; 44 >
       au < doNotProcess ; 2017 ; Journal of Nuclear Medicine Technology Volume 45 ; 45 >
       au < doNotProcess ; 2018 ; Journal of Nuclear Medicine Technology Volume 46 ; 46 >
-      au < testing ; 2019 ; Journal of Nuclear Medicine Technology Volume 47 ; 47 >
-      au < testing ; 2020 ; Journal of Nuclear Medicine Technology Volume 48 ; 48 >
-      au < testing ; 2021 ; Journal of Nuclear Medicine Technology Volume 49 ; 49 >
+      au < ready ; 2019 ; Journal of Nuclear Medicine Technology Volume 47 ; 47 >
+      au < ready ; 2020 ; Journal of Nuclear Medicine Technology Volume 48 ; 48 >
+      au < ready ; 2021 ; Journal of Nuclear Medicine Technology Volume 49 ; 49 >
     }
     {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
