@@ -1,0 +1,148 @@
+{
+
+  publisher <
+    name = National Academy of Sciences ;
+    info[contract] = 2010 ;
+    info[tester] = 8 ;
+    info[poller] = 6 ;
+    info[platform] = Atypon
+  >
+  
+  {
+  
+    title <
+      name = Proceedings of the National Academy of Sciences ;
+      issn = 0027-8424 ;
+      eissn = 1091-6490
+    >
+
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; param[journal_id] ; hidden[proxy] >
+    param[base_url] = https://www.pnas.org/
+
+    {
+
+      au < doNotProcess ; doNotProcess ; 1915 ; Proceedings of the National Academy of Sciences Volume 1 ; 1 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1916 ; Proceedings of the National Academy of Sciences Volume 2 ; 2 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1917 ; Proceedings of the National Academy of Sciences Volume 3 ; 3 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1918 ; Proceedings of the National Academy of Sciences Volume 4 ; 4 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1919 ; Proceedings of the National Academy of Sciences Volume 5 ; 5 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1920 ; Proceedings of the National Academy of Sciences Volume 6 ; 6 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1921 ; Proceedings of the National Academy of Sciences Volume 7 ; 7 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1922 ; Proceedings of the National Academy of Sciences Volume 8 ; 8 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1923 ; Proceedings of the National Academy of Sciences Volume 9 ; 9 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1924 ; Proceedings of the National Academy of Sciences Volume 10 ; 10 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1925 ; Proceedings of the National Academy of Sciences Volume 11 ; 11 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1926 ; Proceedings of the National Academy of Sciences Volume 12 ; 12 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1927 ; Proceedings of the National Academy of Sciences Volume 13 ; 13 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1928 ; Proceedings of the National Academy of Sciences Volume 14 ; 14 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1929 ; Proceedings of the National Academy of Sciences Volume 15 ; 15 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1930 ; Proceedings of the National Academy of Sciences Volume 16 ; 16 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1931 ; Proceedings of the National Academy of Sciences Volume 17 ; 17 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1932 ; Proceedings of the National Academy of Sciences Volume 18 ; 18 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1933 ; Proceedings of the National Academy of Sciences Volume 19 ; 19 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1934 ; Proceedings of the National Academy of Sciences Volume 20 ; 20 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1935 ; Proceedings of the National Academy of Sciences Volume 21 ; 21 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1936 ; Proceedings of the National Academy of Sciences Volume 22 ; 22 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1937 ; Proceedings of the National Academy of Sciences Volume 23 ; 23 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1938 ; Proceedings of the National Academy of Sciences Volume 24 ; 24 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1939 ; Proceedings of the National Academy of Sciences Volume 25 ; 25 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1940 ; Proceedings of the National Academy of Sciences Volume 26 ; 26 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1941 ; Proceedings of the National Academy of Sciences Volume 27 ; 27 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1942 ; Proceedings of the National Academy of Sciences Volume 28 ; 28 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1943 ; Proceedings of the National Academy of Sciences Volume 29 ; 29 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1944 ; Proceedings of the National Academy of Sciences Volume 30 ; 30 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1945 ; Proceedings of the National Academy of Sciences Volume 31 ; 31 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1946 ; Proceedings of the National Academy of Sciences Volume 32 ; 32 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1947 ; Proceedings of the National Academy of Sciences Volume 33 ; 33 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1948 ; Proceedings of the National Academy of Sciences Volume 34 ; 34 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1949 ; Proceedings of the National Academy of Sciences Volume 35 ; 35 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1950 ; Proceedings of the National Academy of Sciences Volume 36 ; 36 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1951 ; Proceedings of the National Academy of Sciences Volume 37 ; 37 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1952 ; Proceedings of the National Academy of Sciences Volume 38 ; 38 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1953 ; Proceedings of the National Academy of Sciences Volume 39 ; 39 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1954 ; Proceedings of the National Academy of Sciences Volume 40 ; 40 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1955 ; Proceedings of the National Academy of Sciences Volume 41 ; 41 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1956 ; Proceedings of the National Academy of Sciences Volume 42 ; 42 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1957 ; Proceedings of the National Academy of Sciences Volume 43 ; 43 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1958 ; Proceedings of the National Academy of Sciences Volume 44 ; 44 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1959 ; Proceedings of the National Academy of Sciences Volume 45 ; 45 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1960 ; Proceedings of the National Academy of Sciences Volume 46 ; 46 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1961 ; Proceedings of the National Academy of Sciences Volume 47 ; 47 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1962 ; Proceedings of the National Academy of Sciences Volume 48 ; 48 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1963 ; Proceedings of the National Academy of Sciences Volume 49 ; 49 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1963 ; Proceedings of the National Academy of Sciences Volume 50 ; 50 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1964 ; Proceedings of the National Academy of Sciences Volume 51 ; 51 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1964 ; Proceedings of the National Academy of Sciences Volume 52 ; 52 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1965 ; Proceedings of the National Academy of Sciences Volume 53 ; 53 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1965 ; Proceedings of the National Academy of Sciences Volume 54 ; 54 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1966 ; Proceedings of the National Academy of Sciences Volume 55 ; 55 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1966 ; Proceedings of the National Academy of Sciences Volume 56 ; 56 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1967 ; Proceedings of the National Academy of Sciences Volume 57 ; 57 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1967 ; Proceedings of the National Academy of Sciences Volume 58 ; 58 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1968 ; Proceedings of the National Academy of Sciences Volume 59 ; 59 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1968 ; Proceedings of the National Academy of Sciences Volume 60 ; 60 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1969 ; Proceedings of the National Academy of Sciences Volume 61 ; 61 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1969 ; Proceedings of the National Academy of Sciences Volume 62 ; 62 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1970 ; Proceedings of the National Academy of Sciences Volume 63 ; 63 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1970 ; Proceedings of the National Academy of Sciences Volume 64 ; 64 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1971 ; Proceedings of the National Academy of Sciences Volume 65 ; 65 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1971 ; Proceedings of the National Academy of Sciences Volume 66 ; 66 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1972 ; Proceedings of the National Academy of Sciences Volume 67 ; 67 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1972 ; Proceedings of the National Academy of Sciences Volume 68 ; 68 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1973 ; Proceedings of the National Academy of Sciences Volume 69 ; 69 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1973 ; Proceedings of the National Academy of Sciences Volume 70 ; 70 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1974 ; Proceedings of the National Academy of Sciences Volume 71 ; 71 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1975 ; Proceedings of the National Academy of Sciences Volume 72 ; 72 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1976 ; Proceedings of the National Academy of Sciences Volume 73 ; 73 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1977 ; Proceedings of the National Academy of Sciences Volume 74 ; 74 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1978 ; Proceedings of the National Academy of Sciences Volume 75 ; 75 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1979 ; Proceedings of the National Academy of Sciences Volume 76 ; 76 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1980 ; Proceedings of the National Academy of Sciences Volume 77 ; 77 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1981 ; Proceedings of the National Academy of Sciences Volume 78 ; 78 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1982 ; Proceedings of the National Academy of Sciences Volume 79 ; 79 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1983 ; Proceedings of the National Academy of Sciences Volume 80 ; 80 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1984 ; Proceedings of the National Academy of Sciences Volume 81 ; 81 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1985 ; Proceedings of the National Academy of Sciences Volume 82 ; 82 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1986 ; Proceedings of the National Academy of Sciences Volume 83 ; 83 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1987 ; Proceedings of the National Academy of Sciences Volume 84 ; 84 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1988 ; Proceedings of the National Academy of Sciences Volume 85 ; 85 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; Proceedings of the National Academy of Sciences Volume 86 ; 86 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1990 ; Proceedings of the National Academy of Sciences Volume 87 ; 87 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1991 ; Proceedings of the National Academy of Sciences Volume 88 ; 88 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1992 ; Proceedings of the National Academy of Sciences Volume 89 ; 89 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1993 ; Proceedings of the National Academy of Sciences Volume 90 ; 90 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1994 ; Proceedings of the National Academy of Sciences Volume 91 ; 91 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1995 ; Proceedings of the National Academy of Sciences Volume 92 ; 92 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; Proceedings of the National Academy of Sciences Volume 93 ; 93 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; Proceedings of the National Academy of Sciences Volume 94 ; 94 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Proceedings of the National Academy of Sciences Volume 95 ; 95 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Proceedings of the National Academy of Sciences Volume 96 ; 96 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Proceedings of the National Academy of Sciences Volume 97 ; 97 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Proceedings of the National Academy of Sciences Volume 98 ; 98 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Proceedings of the National Academy of Sciences Volume 99 ; 99 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Proceedings of the National Academy of Sciences Volume 100 ; 100 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Proceedings of the National Academy of Sciences Volume 101 ; 101 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Proceedings of the National Academy of Sciences Volume 102 ; 102 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Proceedings of the National Academy of Sciences Volume 103 ; 103 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Proceedings of the National Academy of Sciences Volume 104 ; 104 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the National Academy of Sciences Volume 105 ; 105 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Proceedings of the National Academy of Sciences Volume 106 ; 106 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Proceedings of the National Academy of Sciences Volume 107 ; 107 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Proceedings of the National Academy of Sciences Volume 108 ; 108 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Proceedings of the National Academy of Sciences Volume 109 ; 109 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Proceedings of the National Academy of Sciences Volume 110 ; 110 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Proceedings of the National Academy of Sciences Volume 111 ; 111 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Proceedings of the National Academy of Sciences Volume 112 ; 112 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Proceedings of the National Academy of Sciences Volume 113 ; 113 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Proceedings of the National Academy of Sciences Volume 114 ; 114 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 ; pnas ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 ; pnas ; >
+
+    }
+
+  }
+
+}
