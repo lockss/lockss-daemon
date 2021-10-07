@@ -1587,7 +1587,7 @@
 
    au < ready ; exists ; 1991 ; 1991 ; European Journal of Pediatric Surgery Volume 1 ; 1 ; >
    au < crawling ; exists ; 1992 ; 1992 ; European Journal of Pediatric Surgery Volume 2 ; 2 ; >
-   au < ready ; exists ; 1993 ; 1993 ; European Journal of Pediatric Surgery Volume 3 ; 3 ; >
+   au < crawling ; exists ; 1993 ; 1993 ; European Journal of Pediatric Surgery Volume 3 ; 3 ; >
    au < crawling ; exists ; 1994 ; 1994 ; European Journal of Pediatric Surgery Volume 4 ; 4 ; >
    au < crawling ; exists ; 1995 ; 1995 ; European Journal of Pediatric Surgery Volume 5 ; 5 ; >
    au < crawling ; exists ; 1996 ; 1996 ; European Journal of Pediatric Surgery Volume 6 ; 6 ; >
@@ -2568,9 +2568,9 @@
     au < ready ; exists ; 1992 ; 1992 ; International Journal of Angiology Volume 1 ; 1 ; >
     au < crawling ; exists ; 1993 ; 1993 ; International Journal of Angiology Volume 2 ; 2 ; >
     au < ready ; exists ; 1994 ; 1994 ; International Journal of Angiology Volume 3 ; 3 ; >
-    au < ready ; exists ; 1995 ; 1995 ; International Journal of Angiology Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1995 ; 1995 ; International Journal of Angiology Volume 4 ; 4 ; >
     au < crawling ; exists ; 1996 ; 1996 ; International Journal of Angiology Volume 5 ; 5 ; >
-    au < ready ; exists ; 1997 ; 1997 ; International Journal of Angiology Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1997 ; 1997 ; International Journal of Angiology Volume 6 ; 6 ; >
     au < crawling ; exists ; 1998 ; 1998 ; International Journal of Angiology Volume 7 ; 7 ; >
     au < ready ; exists ; 1999 ; 1999 ; International Journal of Angiology Volume 8 ; 8 ; >
     au < frozen ; exists ; 2000 ; 2000 ; International Journal of Angiology Volume 9 ; 9 ; >
@@ -4498,11 +4498,11 @@
     au < crawling ; exists ; 1991 ; 1991 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 1 ; 1 ; >
     au < ready ; exists ; 1992 ; 1992 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2 ; 2 ; >
     au < crawling ; exists ; 1993 ; 1993 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 3 ; 3 ; >
-    au < ready ; exists ; 1994 ; 1994 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 4 ; 4 ; >
-    au < ready ; exists ; 1995 ; 1995 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1994 ; 1994 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1995 ; 1995 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 5 ; 5 ; >
     au < crawling ; exists ; 1996 ; 1996 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 6 ; 6 ; >
     au < crawling ; exists ; 1997 ; 1997 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 7 ; 7 ; >
-    au < ready ; exists ; 1998 ; 1998 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1998 ; 1998 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 8 ; 8 ; >
     au < crawling ; exists ; 1999 ; 1999 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 9 ; 9 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 10 ; 10 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 11 ; 11 ; >
@@ -4783,7 +4783,7 @@
     param[journal_id] = 10.1055/s-00000059
     comment[years] = 1999-current
 
-   au < ready ; exists ; 1999 ; 1999 ; Pneumologie Volume 53 ; 53 ; >
+   au < crawling ; exists ; 1999 ; 1999 ; Pneumologie Volume 53 ; 53 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Pneumologie Volume 54 ; 54 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Pneumologie Volume 55 ; 55 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Pneumologie Volume 56 ; 56 ; >
@@ -5422,7 +5422,7 @@
     param[journal_id] = 10.1055/s-00000070
     comment[years] = 1997-current
 
-   au < ready ; exists ; 1997 ; 1997 ; Seminars in Musculoskeletal Radiology Volume 1 ; 1 ; >
+   au < crawling ; exists ; 1997 ; 1997 ; Seminars in Musculoskeletal Radiology Volume 1 ; 1 ; >
    au < ready ; exists ; 1998 ; 1998 ; Seminars in Musculoskeletal Radiology Volume 2 ; 2 ; >
    au < ready ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; >
@@ -5896,7 +5896,7 @@
     param[journal_id] = 10.1055/s-00000080
     comment[years] = 1999-2004
 
-    au < ready ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; >
     au < crawling ; exists ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; >
@@ -8198,16 +8198,16 @@
     au < crawling ; exists ; 2003 ; 2003 ; Homeopathy Volume 92 ; 92 ; >
     au < ready ; exists ; 2004 ; 2004 ; Homeopathy Volume 93 ; 93 ; > #pdf, no metadata
     au < ready ; exists ; 2005 ; 2005 ; Homeopathy Volume 94 ; 94 ; > #pdf, no metadata
-    au < ready ; exists ; 2006 ; 2006 ; Homeopathy Volume 95 ; 95 ; > #pdf, no metadata
+    au < crawling ; exists ; 2006 ; 2006 ; Homeopathy Volume 95 ; 95 ; > #pdf, no metadata
     au < crawling ; exists ; 2007 ; 2007 ; Homeopathy Volume 96 ; 96 ; >
     au < ready ; exists ; 2008 ; 2008 ; Homeopathy Volume 97 ; 97 ; > #pdf, no metadata
     au < ready ; exists ; 2009 ; 2009 ; Homeopathy Volume 98 ; 98 ; > #pdf, no metadata
     au < crawling ; exists ; 2010 ; 2010 ; Homeopathy Volume 99 ; 99 ; > #pdf, no metadata
     au < ready ; exists ; 2011 ; 2011 ; Homeopathy Volume 100 ; 100 ; > #pdf, no metadata
     au < ready ; exists ; 2012 ; 2012 ; Homeopathy Volume 101 ; 101 ; > #pdf, no metadata
-    au < ready ; exists ; 2013 ; 2013 ; Homeopathy Volume 102 ; 102 ; > #pdf, no metadata
+    au < crawling ; exists ; 2013 ; 2013 ; Homeopathy Volume 102 ; 102 ; > #pdf, no metadata
     au < ready ; exists ; 2014 ; 2014 ; Homeopathy Volume 103 ; 103 ; > #pdf, no metadata
-    au < ready ; exists ; 2015 ; 2015 ; Homeopathy Volume 104 ; 104 ; > #pdf, no metadata
+    au < crawling ; exists ; 2015 ; 2015 ; Homeopathy Volume 104 ; 104 ; > #pdf, no metadata
     au < ready ; exists ; 2016 ; 2016 ; Homeopathy Volume 105 ; 105 ; > #pdf, no metadata
     au < ready ; exists ; 2017 ; 2017 ; Homeopathy Volume 106 ; 106 ; > #pdf, no metadata
     au < crawling ; exists ; 2018 ; 2018 ; Homeopathy Volume 107 ; 107 ; >
@@ -8235,15 +8235,15 @@
     au < crawling ; exists ; 2007 ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 40 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 41 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 42 ; >
-    au < ready ; exists ; 2010 ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 43 ; >
     au < ready ; exists ; 2011 ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 44 ; >
     au < ready ; exists ; 2012 ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 45 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 ; >
     au < ready ; exists ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 ; >
     au < ready ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
     au < ready ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; > #pdf, no metadata
-    au < ready ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; > #pdf, no metadata
+    au < crawling ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; > #pdf, no metadata
     au < ready ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Plastic Surgery Volume 54 ; 54 ; >
@@ -8264,7 +8264,7 @@
 
     au < crawling ; exists ; 2014 ; 2014 ; International Journal of Epilepsy Volume 1 ; 1 ; >
     au < crawling ; exists ; 2015 ; 2015 ; International Journal of Epilepsy Volume 2 ; 2 ; >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Epilepsy Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Epilepsy Volume 3 ; 3 ; >
     au < crawling ; exists ; 2017 ; 2017 ; International Journal of Epilepsy Volume 4 ; 4 ; >
     au < ready ; exists ; 2018 ; 2018 ; International Journal of Epilepsy Volume 5 ; 5 ; >
     au < crawling ; exists ; 2020 ; 2020 ; International Journal of Epilepsy Volume 6 ; 6 ; >
@@ -8289,7 +8289,7 @@
     au < ready ; exists ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 ; >
     au < crawling ; exists ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 ; >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 ; >
     au < ready ; exists ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 ; >
     au < crawling ; exists ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 ; >
     au < crawling ; exists ; 2019 ; 2019 ; International Journal of Nutrology Volume 12 ; 12 ; >
@@ -8351,7 +8351,7 @@
     comment[years] = 2011-current
 
     au < crawling ; exists ; 2011 ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 3 ; > #pdf, no metadata
+    au < crawling ; exists ; 2012 ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 3 ; > #pdf, no metadata
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 5 ; >
     au < ready ; exists ; 2015 ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 6 ; > #pdf, no metadata
@@ -8422,15 +8422,15 @@
 
     au < ready ; exists ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 ; >  #pdf, no metadata
     au < ready ; exists ; 2010 ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2 ; >  #pdf, no metadata
-    au < ready ; exists ; 2011 ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 3 ; >  #pdf, no metadata
+    au < crawling ; exists ; 2011 ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 3 ; >  #pdf, no metadata
     au < ready ; exists ; 2012 ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 4 ; >  #pdf, no metadata
-    au < ready ; exists ; 2013 ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 5 ; >  #pdf, no metadata
+    au < crawling ; exists ; 2013 ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 5 ; >  #pdf, no metadata
     au < ready ; exists ; 2014 ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 6 ; >  #pdf, no metadata
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 7 ; >  #pdf, no metadata
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 7 ; >  #pdf, no metadata
     au < ready ; exists ; 2016 ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 8 ; >  #pdf, no metadata
     au < ready ; exists ; 2017 ; 2017 ; Journal of Laboratory Physicians Volume 9 ; 9 ; >  #pdf, no metadata
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Laboratory Physicians Volume 10 ; 10 ; > #pdf, no metadata
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 ; > #pdf, no metadata
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Laboratory Physicians Volume 10 ; 10 ; > #pdf, no metadata
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 ; > #pdf, no metadata
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Laboratory Physicians Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Laboratory Physicians Volume 13 ; 13 ; >
 
@@ -8474,7 +8474,7 @@
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Neuroanaesthesiology and Critical Care Volume 4 ; 4 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Neuroanaesthesiology and Critical Care Volume 5 ; 5 ; >
     au < ready ; exists ; 2019 ; 2019 ; Journal of Neuroanaesthesiology and Critical Care Volume 6 ; 6 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Neuroanaesthesiology and Critical Care Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Neuroanaesthesiology and Critical Care Volume 7 ; 7 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Neuroanaesthesiology and Critical Care Volume 8 ; 8 ; >
 
   }
@@ -8592,7 +8592,7 @@
     param[journal_id] = 10.1055/s-00041899
     comment[years] = 2019-current
 
-    au < ready ; exists ; 2019 ; 2019 ; Onkologie up2date Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Onkologie up2date Volume 1 ; 1 ; >
     au < ready ; exists ; 2020 ; 2020 ; Onkologie up2date Volume 2 ; 2 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Onkologie up2date Volume 3 ; 3 ; >
 
@@ -8749,7 +8749,7 @@
     au < manifest ; exists ; 1987 ; 1987 ; Thrombosis and Haemostasis Volume 31 ; 31 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Thrombosis and Haemostasis Volume 32 ; 32 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Thrombosis and Haemostasis Volume 33 ; 33 ; >
-    au < ready ; exists ; 1990 ; 1990 ; Thrombosis and Haemostasis Volume 34 ; 34 ; >
+    au < crawling ; exists ; 1990 ; 1990 ; Thrombosis and Haemostasis Volume 34 ; 34 ; >
     au < crawling ; exists ; 1991 ; 1991 ; Thrombosis and Haemostasis Volume 35 ; 35 ; >
     au < crawling ; exists ; 1992 ; 1992 ; Thrombosis and Haemostasis Volume 36 ; 36 ; >
     au < crawling ; exists ; 1993 ; 1993 ; Thrombosis and Haemostasis Volume 37 ; 37 ; >
@@ -8827,7 +8827,7 @@
     au < crawling ; exists ; 1998 ; 1998 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 11 ; 11 ; >
     au < crawling ; exists ; 1999 ; 1999 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 12 ; 12 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 13 ; 13 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 14 ; 14 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 15 ; 15 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 16 ; 16 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 17 ; 17 ; >

@@ -337,7 +337,7 @@
     #param[journal_issn] = 2332-8894
 
     au < doNotProcess ; doNotProcess ; 2014 ; Democratic Theory Volume 1 ; 1 ; >
-    au < ready ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
     au < frozen ; exists ; 2016 ; Democratic Theory Volume 3 ; 3 ; >
     au < finished ; finished ; 2017 ; Democratic Theory Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Democratic Theory Volume 5 ; 5 ; >
@@ -597,7 +597,7 @@
     au < manifest ; exists ; 2010 ; Girlhood Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Girlhood Studies Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Girlhood Studies Volume 5 ; 5 ; >
-    au < ready ; exists ; 2013 ; Girlhood Studies Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2013 ; Girlhood Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Girlhood Studies Volume 7 ; 7 ; >
     au < crawling ; exists ; 2015 ; Girlhood Studies Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; Girlhood Studies Volume 9 ; 9 ; >
@@ -628,7 +628,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Historical Reflections/Reflexions Historiques Volume 40 ; 40 ; >
-    au < ready ; exists ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 ; >
     au < frozen ; exists ; 2016 ; Historical Reflections/Reflexions Historiques Volume 42 ; 42 ; >
     au < finished ; finished ; 2017 ; Historical Reflections/Reflexions Historiques Volume 43 ; 43 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Historical Reflections/Reflexions Historiques Volume 44 ; 44 ; >
@@ -678,7 +678,7 @@
     
     au < doNotProcess ; doNotProcess ; 2011 ; Israel Studies Review Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Israel Studies Review Volume 27 ; 27 ; >
-    au < ready ; exists ; 2013 ; Israel Studies Review Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2013 ; Israel Studies Review Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Israel Studies Review Volume 29 ; 29 ; >
     au < ready ; exists ; 2015 ; Israel Studies Review Volume 30 ; 30 ; >
     au < frozen ; exists ; 2016 ; Israel Studies Review Volume 31 ; 31 ; >
@@ -985,7 +985,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Regions & Cohesion Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Regions & Cohesion Volume 3 ; 3 ; >
     au < crawling ; exists ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
-    au < ready ; exists ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; Regions & Cohesion Volume 6 ; 6 ; >
     au < finished ; finished ; 2017 ; Regions & Cohesion Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Regions & Cohesion Volume 8 ; 8 ; >
@@ -1010,7 +1010,7 @@
     au < manifest ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 ; >
-    au < ready ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 ; >
     au < ready ; exists ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; >
     au < frozen ; exists ; 2016 ; Religion and Society: Advances in Research Volume 7 ; 7 ; >
@@ -1102,7 +1102,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Sibirica Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sibirica Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Sibirica Volume 13 ; 13 ; >
-    au < ready ; exists ; 2015 ; Sibirica Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2015 ; Sibirica Volume 14 ; 14 ; >
     au < frozen ; exists ; 2016 ; Sibirica Volume 15 ; 15 ; >
     au < finished ; finished ; 2017 ; Sibirica Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Sibirica Volume 17 ; 17 ; >

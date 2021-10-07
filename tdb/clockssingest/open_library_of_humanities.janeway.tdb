@@ -28,7 +28,7 @@
     au < doNotProcess ; exists ; 2016 ; 6 ; Comics Grid Volume 2016 ; 2016 ; >
     au < doNotProcess ; exists ; 2017 ; 7 ; Comics Grid Volume 2017 ; 2017 ; >
     au < doNotProcess ; exists ; 2018 ; 8 ; Comics Grid Volume 2018 ; 2018 ; >
-    au < ready ; exists ; 2019 ; 9 ; Comics Grid Volume 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; 9 ; Comics Grid Volume 2019 ; 2019 ; >
     au < crawling ; exists ; 2020 ; 10 ; Comics Grid Volume 2020 ; 2020 ; >
     au < crawling ; exists ; 2021 ; 11 ; Comics Grid Volume 2021 ; 2021 ; >
 
@@ -49,8 +49,8 @@
       au < manifest ; exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
       au < manifest ; exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
-      au < ready ; exists ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; >
-      au < ready ; exists ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; >
 
   }
@@ -212,7 +212,7 @@
         au < manifest ; exists ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 ; >
         au < manifest ; exists ; 2018 ; 5 ; International Journal of Welsh Writing in English Volume 2018 ; 2018 ; >
         au < ready ; exists ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 ; >
-        au < ready ; exists ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; >
+        au < crawling ; exists ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; >
         au < crawling ; exists ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 ; >
 
   }
@@ -250,8 +250,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; >
-      au < ready ; exists ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; >
-      au < ready ; exists ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 7 ; Open Library of Humanities Volume 2021 ; 2021 ; >
 
   }
@@ -322,8 +322,8 @@
       au < manifest ; exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; >
-      au < ready ; exists ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; >
-      au < ready ; exists ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
 
   }
@@ -339,7 +339,7 @@
       param[base_url] = https://zff.openlibhums.org/
 
       au < ready ; exists ; 2019 ; 7 ; ZFF: Zeitschrift für Fantastikforschung Volume 2019 ; 2019 ; >
-      au < ready ; exists ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 9 ; ZFF: Zeitschrift für Fantastikforschung Volume 2021 ; 2021 ; >
 
   }
