@@ -42,7 +42,7 @@
         au < released ; 2016 ; Change Over Time Volume 6 [2016] ; 11257 >
         au < released ; 2017 ; Change Over Time Volume 7 [2017] ; 13210 >
         au < released ; 2018 ; Change Over Time Volume 8 [2018] ; 13965 >
-        au < manifest ; 2019 ; Change Over Time Volume 9 [2019] ; 15077 >
+        au < testing ; 2019 ; Change Over Time Volume 9 [2019] ; 15077 >
 
     }
 
@@ -141,7 +141,7 @@
         au < released ; 2017 ; French Forum Volume 42 [2017] ; 12684 >
         au < released ; 2018 ; French Forum Volume 43 [2018] ; 13678 >
         au < released ; 2019 ; French Forum Volume 44 [2019] ; 14379 >
-        au < manifest ; 2020 ; French Forum Volume 45 [2020] ; 15153 >
+        au < testing ; 2020 ; French Forum Volume 45 [2020] ; 15153 >
         au < manifest ; 2021 ; French Forum Volume 46 [2021] ; 16105 >
 
     }
@@ -308,7 +308,7 @@
         au < released ; 2017 ; Journal for Early Modern Cultural Studies Volume 17 [2017] ; 12584 >
         au < released ; 2018 ; Journal for Early Modern Cultural Studies Volume 18 [2018] ; 13793 >
         au < released ; 2019 ; Journal for Early Modern Cultural Studies Volume 19 [2019] ; 14620 >
-        au < manifest ; 2020 ; Journal for Early Modern Cultural Studies Volume 20 [2020] ; 15241 >
+        au < testing ; 2020 ; Journal for Early Modern Cultural Studies Volume 20 [2020] ; 15241 >
         au < manifest ; 2021 ; Journal for Early Modern Cultural Studies Volume 21 [2021] ; 16130 >
 
     }
@@ -430,7 +430,7 @@
         au < released ; 2017 ; Magic, Ritual, and Witchcraft Volume 12 [2017] ; 12569 >
         au < released ; 2018 ; Magic, Ritual, and Witchcraft Volume 13 [2018] ; 13737 >
         au < released ; 2019 ; Magic, Ritual, and Witchcraft Volume 14 [2019] ; 14314 >
-        au < manifest ; 2020 ; Magic, Ritual, and Witchcraft Volume 15 [2020] ; 15076 >
+        au < testing ; 2020 ; Magic, Ritual, and Witchcraft Volume 15 [2020] ; 15076 >
         au < manifest ; 2021 ; Magic, Ritual, and Witchcraft Volume 16 [2021] ; 16108 >
 
     }
@@ -463,12 +463,12 @@
 
       attr[journal_id] = 793
 
-      au < manifest ; 2015 ; Observational Studies Volume 1 [2015] ; 15848 >
-      au < manifest ; 2016 ; Observational Studies Volume 2 [2016] ; 15847 >
-      au < manifest ; 2017 ; Observational Studies Volume 3 [2017] ; 15846 >
-      au < manifest ; 2018 ; Observational Studies Volume 4 [2018] ; 15845 >
-      au < manifest ; 2019 ; Observational Studies Volume 5 [2019] ; 15844 >
-      au < manifest ; 2020 ; Observational Studies Volume 6 [2020] ; 15843 >
+      au < testing ; 2015 ; Observational Studies Volume 1 [2015] ; 15848 >
+      au < testing ; 2016 ; Observational Studies Volume 2 [2016] ; 15847 >
+      au < testing ; 2017 ; Observational Studies Volume 3 [2017] ; 15846 >
+      au < testing ; 2018 ; Observational Studies Volume 4 [2018] ; 15845 >
+      au < testing ; 2019 ; Observational Studies Volume 5 [2019] ; 15844 >
+      au < testing ; 2020 ; Observational Studies Volume 6 [2020] ; 15843 >
       au < manifest ; 2021 ; Observational Studies Volume 7 [2021] ; 16089 >
 
     }
@@ -547,7 +547,7 @@
         au < released ; 2017 ; The Eighteenth Century Volume 58 [2017] ; 12463 >
         au < released ; 2018 ; The Eighteenth Century Volume 59 [2018] ; 13334 >
         au < released ; 2019 ; The Eighteenth Century Volume 60 [2019] ; 14296 >
-        au < manifest ; 2020 ; The Eighteenth Century Volume 61 [2020] ; 15245 >
+        au < testing ; 2020 ; The Eighteenth Century Volume 61 [2020] ; 15245 >
 
     }
 

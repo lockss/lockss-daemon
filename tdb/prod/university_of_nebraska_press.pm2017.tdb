@@ -18,7 +18,7 @@
 
       attr[journal_id] = 792
 
-      au < manifest ; 2020 ; Americas: A Hemispheric Music Journal Volume 29 [2020] ; 15950 >
+      au < testing ; 2020 ; Americas: A Hemispheric Music Journal Volume 29 [2020] ; 15950 >
 
     }
 
@@ -32,8 +32,9 @@
 
       attr[journal_id] = 770
 
-      au < manifest ; 2018 ; American Journal of Psychiatric Rehabilitation Volume 21 [2018] ; 15064 >
-      au < manifest ; 2019 ; American Journal of Psychiatric Rehabilitation Volume 22 [2019] ; 15063 >
+      au < testing ; 2018 ; American Journal of Psychiatric Rehabilitation Volume 21 [2018] ; 15064 >
+      au < testing ; 2019 ; American Journal of Psychiatric Rehabilitation Volume 22 [2019] ; 15063 >
+      au < manifest ; 2020 ; American Journal of Psychiatric Rehabilitation Volume 23 [2020] ; 16589 >
 
     }
 
@@ -101,7 +102,7 @@
         au < released ; 2017-2018 ; Collaborative Anthropologies Volume 10 [2017-2018] ; 13813 >
         au < released ; 2018-2019 ; Collaborative Anthropologies Volume 11 [2018-2019] ; 14425 >
         au < released ; 2019-2020 ; Collaborative Anthropologies Volume 12 [2019-2020] ; 15083 >
-        au < released ; 2020 ; Collaborative Anthropologies Volume 13 [2020] ; 15105 >
+        au < released ; 2020-2021 ; Collaborative Anthropologies Volume 13 [2020-2021] ; 15105 >
 
     }
 
@@ -347,12 +348,10 @@
 
       attr[journal_id] = 739
 
-        au < released ; 2017-2018 ; Journal of Magazine Media Volume 18 [2017-2018] ; 13911 >
-        au < released ; 2018-2019 ; Journal of Magazine Media Volume 19 [2018-2019] ; 14188 >
-        au < manifest ; 2004-2005 ; Journal of Magazine Media Volume 7 [2004-2005] ; 15259 >
-        au < manifest ; 2005-2006 ; Journal of Magazine Media Volume 8 [2005-2006] ; 15258 >
-        au < manifest ; 2006-2007 ; Journal of Magazine Media Volume 9 [2006-2007] ; 15257 >
-        au < manifest ; 2008-2009 ; Journal of Magazine Media Volume 10 [2008-2009] ; 15256 >
+        au < testing ; 2004-2005 ; Journal of Magazine Media Volume 7 [2004-2005] ; 15259 >
+        au < testing ; 2005-2006 ; Journal of Magazine Media Volume 8 [2005-2006] ; 15258 >
+        au < testing ; 2006-2007 ; Journal of Magazine Media Volume 9 [2006-2007] ; 15257 >
+        au < testing ; 2008-2009 ; Journal of Magazine Media Volume 10 [2008-2009] ; 15256 >
         au < released ; 2009-2010 ; Journal of Magazine Media Volume 11 [2009-2010] ; 15255 >
         au < released ; 2010-2011 ; Journal of Magazine Media Volume 12 [2010-2011] ; 15254 >
         au < released ; 2012 ; Journal of Magazine Media Volume 13 [2012] ; 15253 >
@@ -360,6 +359,9 @@
         au < released ; 2014 ; Journal of Magazine Media Volume 15 [2014] ; 15251 >
         au < released ; 2015-2016 ; Journal of Magazine Media Volume 16 [2015-2016] ; 15250 >
         au < released ; 2016-2017 ; Journal of Magazine Media Volume 17 [2016-2017] ; 15249 >
+        au < released ; 2017-2018 ; Journal of Magazine Media Volume 18 [2017-2018] ; 13911 >
+        au < released ; 2018-2019 ; Journal of Magazine Media Volume 19 [2018-2019] ; 14188 >
+        au < manifest ; 2019-2020 ; Journal of Magazine Media Volume 20 [2019-2020] ; 15158 >
         au < manifest ; 2020-2021 ; Journal of Magazine Media Volume 21 [2020-2021] ; 15841 >
 
     }
@@ -643,7 +645,7 @@
         au < released ; 2016 ; Storyworlds: A Journal of Narrative Studies Volume 8 [2016] ; 11405 >
         au < released ; 2017 ; Storyworlds: A Journal of Narrative Studies Volume 9 [2017] ; 14307 >
         au < released ; 2018 ; Storyworlds: A Journal of Narrative Studies Volume 10 [2018] ; 15005 >
-        au < manifest ; 2019 ; Storyworlds: A Journal of Narrative Studies Volume 11 [2019] ; 16087 >
+        au < testing ; 2019 ; Storyworlds: A Journal of Narrative Studies Volume 11 [2019] ; 16087 >
 
     }
 
