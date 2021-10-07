@@ -18,7 +18,7 @@
 
       attr[journal_id] = 792
 
-      au < testing ; 2020 ; Americas: A Hemispheric Music Journal Volume 29 [2020] ; 15950 >
+      au < ready ; 2020 ; Americas: A Hemispheric Music Journal Volume 29 [2020] ; 15950 >
 
     }
 
@@ -32,8 +32,8 @@
 
       attr[journal_id] = 770
 
-      au < testing ; 2018 ; American Journal of Psychiatric Rehabilitation Volume 21 [2018] ; 15064 >
-      au < testing ; 2019 ; American Journal of Psychiatric Rehabilitation Volume 22 [2019] ; 15063 >
+      au < ready ; 2018 ; American Journal of Psychiatric Rehabilitation Volume 21 [2018] ; 15064 >
+      au < ready ; 2019 ; American Journal of Psychiatric Rehabilitation Volume 22 [2019] ; 15063 >
       au < manifest ; 2020 ; American Journal of Psychiatric Rehabilitation Volume 23 [2020] ; 16589 >
 
     }
@@ -136,7 +136,7 @@
         au < released ; 2017 ; Frontiers: A Journal of Women Studies Volume 38 [2017] ; 12545 >
         au < released ; 2018 ; Frontiers: A Journal of Women Studies Volume 39 [2018] ; 13399 >
         au < released ; 2019 ; Frontiers: A Journal of Women Studies Volume 40 [2019] ; 14027 >
-        au < testing ; 2020 ; Frontiers: A Journal of Women Studies Volume 41 [2020] ; 14944 >
+        au < ready ; 2020 ; Frontiers: A Journal of Women Studies Volume 41 [2020] ; 14944 >
         au < manifest ; 2021 ; Frontiers: A Journal of Women Studies Volume 42 [2021] ; 15773 >
 
     }
@@ -348,10 +348,10 @@
 
       attr[journal_id] = 739
 
-        au < testing ; 2004-2005 ; Journal of Magazine Media Volume 7 [2004-2005] ; 15259 >
-        au < testing ; 2005-2006 ; Journal of Magazine Media Volume 8 [2005-2006] ; 15258 >
-        au < testing ; 2006-2007 ; Journal of Magazine Media Volume 9 [2006-2007] ; 15257 >
-        au < testing ; 2008-2009 ; Journal of Magazine Media Volume 10 [2008-2009] ; 15256 >
+        au < ready ; 2004-2005 ; Journal of Magazine Media Volume 7 [2004-2005] ; 15259 >
+        au < ready ; 2005-2006 ; Journal of Magazine Media Volume 8 [2005-2006] ; 15258 >
+        au < ready ; 2006-2007 ; Journal of Magazine Media Volume 9 [2006-2007] ; 15257 >
+        au < ready ; 2008-2009 ; Journal of Magazine Media Volume 10 [2008-2009] ; 15256 >
         au < released ; 2009-2010 ; Journal of Magazine Media Volume 11 [2009-2010] ; 15255 >
         au < released ; 2010-2011 ; Journal of Magazine Media Volume 12 [2010-2011] ; 15254 >
         au < released ; 2012 ; Journal of Magazine Media Volume 13 [2012] ; 15253 >
@@ -541,7 +541,7 @@
         au < released ; 2016-2017 ; Nineteenth-Century French Studies Volume 45 [2016-2017] ; 11414 >
         au < released ; 2017-2018 ; Nineteenth-Century French Studies Volume 46 [2017-2018] ; 12898 >
         au < released ; 2018-2019 ; Nineteenth-Century French Studies Volume 47 [2018-2019] ; 13659 >
-        au < testing ; 2019-2020 ; Nineteenth-Century French Studies Volume 48 [2019-2020] ; 14444 >
+        au < ready ; 2019-2020 ; Nineteenth-Century French Studies Volume 48 [2019-2020] ; 14444 >
         au < manifest ; 2020-2021 ; Nineteenth-Century French Studies Volume 49 [2020-2021] ; 15264 >
 
     }
@@ -645,7 +645,7 @@
         au < released ; 2016 ; Storyworlds: A Journal of Narrative Studies Volume 8 [2016] ; 11405 >
         au < released ; 2017 ; Storyworlds: A Journal of Narrative Studies Volume 9 [2017] ; 14307 >
         au < released ; 2018 ; Storyworlds: A Journal of Narrative Studies Volume 10 [2018] ; 15005 >
-        au < testing ; 2019 ; Storyworlds: A Journal of Narrative Studies Volume 11 [2019] ; 16087 >
+        au < ready ; 2019 ; Storyworlds: A Journal of Narrative Studies Volume 11 [2019] ; 16087 >
 
     }
 
@@ -846,7 +846,7 @@
         au < released ; 2017 ; Western American Literature Volume 52 [2017] ; 12749 >
         au < released ; 2018 ; Western American Literature Volume 53 [2018] ; 13536 >
         au < released ; 2019-2020 ; Western American Literature Volume 54 [2019-2020] ; 14259 >
-        au < testing ; 2020 ; Western American Literature Volume 55 [2020] ; 14941 >
+        au < ready ; 2020 ; Western American Literature Volume 55 [2020] ; 14941 >
         au < manifest ; 2021 ; Western American Literature Volume 56 [2021] ; 15840 >
 
     }
