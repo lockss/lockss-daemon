@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Villanova University
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:340
 
     {
     title <
       name = Journal of South Asian and Middle Eastern Studies ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0149-1784 ;
+      eissn = 2766-0176
 
     >
 
