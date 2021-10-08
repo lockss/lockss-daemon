@@ -1,18 +1,17 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Moise A. Khayrallah Center for Lebanese Diaspora Studies
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:353
 
     {
     title <
       name = Mashriq & Mahjar: Journal of Middle East and North African Migration Studies ;
-      issn = ISSN ;
-      eissn = EISSN
+      eissn = 2169-4435
 
     >
 
