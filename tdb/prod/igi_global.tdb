@@ -109,10 +109,7 @@
     >
     param[journal_issn] = 2640-9976
     #continues = 1942-535X & 2155-6334
-
-    au < expected ; 2019 ; International Journal of Technological Innovation and Social Dynamics (IJTISD) Volume 7 ; 7 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Technological Innovation and Social Dynamics (IJTISD) Volume 8 ; 8 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Technological Innovation and Social Dynamics (IJTISD) Volume 9 ; 9 ; https://www.igi-global.com/ >
+    #Out of print
 
   }
 
@@ -146,6 +143,7 @@
       issnl = 1947-8607
     >
     param[journal_issn] = 1947-8607
+    #continued_by = 2643-7996
 
     au < released ; 2010 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2011 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -157,8 +155,22 @@
     au < released ; 2017 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 8 ; 8 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 10 ; 10 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 11 ; 11 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Adult Vocational Education and Technology (IJAVET) Volume 12 ; 12 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Adult Education and Technology (IJAET) ;
+      issn = 2643-7996 ;
+      eissn = 2643-8003 ;
+      issnl = 2643-7996
+    >
+    param[journal_issn] = 2643-7996
+    #continues = 1947-8607
+
+    au < expected ; 2020 ; International Journal of Adult Education and Technology (IJAET) Volume 11 ; 11 ; https://www.igi-global.com/ >
+    au < expected ; 2021 ; International Journal of Adult Education and Technology (IJAET) Volume 12 ; 12 ; https://www.igi-global.com/ >
 
   }
 
@@ -171,6 +183,7 @@
       issnl = 1937-965X
     >
     param[journal_issn] = 1937-965X
+    #continued_by = 2643-7937
 
     au < released ; 2009 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2010 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -183,8 +196,22 @@
     au < released ; 2017 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 10 ; 10 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 11 ; 11 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 12 ; 12 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 13 ; 13 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Security and Privacy in Pervasive Computing (IJSPPC) ;
+      issn = 2643-7937 ;
+      eissn = 2643-7945 ;
+      issnl = 2643-7937
+    >
+    param[journal_issn] = 2643-7937
+    #continues = 1937-965X
+
+    au < expected ; 2020 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 12 ; 12 ; https://www.igi-global.com/ >
+    au < expected ; 2021 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 13 ; 13 ; https://www.igi-global.com/ >
 
   }
 
@@ -630,6 +657,7 @@
       issnl = 2155-4110
     >
     param[journal_issn] = 2155-4110
+    #Out of print
 
     au < released ; 2011 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2012 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -639,8 +667,6 @@
     au < released ; 2017 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 6 ; 6 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 7 ; 7 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 8 ; 8 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 9 ; 9 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Chemoinformatics and Chemical Engineering (IJCCE) Volume 10 ; 10 ; https://www.igi-global.com/ >
 
   }
 
@@ -724,13 +750,12 @@
     >
     param[journal_issn] = 2470-8526
     #continues = 1947-3133
+    #Out of print
 
     au < released ; 2016 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2017 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 2 ; 2 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 3 ; 3 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 4 ; 4 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 5 ; 5 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Computers in Clinical Practice (IJCCP) Volume 6 ; 6 ; https://www.igi-global.com/ >
 
   }
 
@@ -791,6 +816,7 @@
     >
 
     param[journal_issn] = 2166-7292
+    #Out of print
 
     au < released ; 2013 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2014 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -798,9 +824,6 @@
     au < released ; 2016 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 4 ; 4 ; http://www.igi-global.com/ >
     au < released ; 2017 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 5 ; 5 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 6 ; 6 ; https://www.igi-global.com/ >
-    au < expected ; 2019 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 7 ; 7 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 8 ; 8 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 9 ; 9 ; https://www.igi-global.com/ >
 
   }
 
@@ -1395,6 +1418,7 @@
       issnl = 1947-9131
     >
     param[journal_issn] = 1947-9131
+    #Out of print
 
     au < released ; 2010 ; International Journal of E-Politics (IJEP) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2011 ; International Journal of E-Politics (IJEP) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -1406,8 +1430,6 @@
     au < released ; 2017 ; International Journal of E-Politics (IJEP) Volume 8 ; 8 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of E-Politics (IJEP) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of E-Politics (IJEP) Volume 10 ; 10 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of E-Politics (IJEP) Volume 11 ; 11 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of E-Politics (IJEP) Volume 12 ; 12 ; https://www.igi-global.com/ >
 
   }
 
@@ -1555,8 +1577,22 @@
     au < released ; 2017 ; International Journal of Green Computing (IJGC) Volume 8 ; 8 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Green Computing (IJGC) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Green Computing (IJGC) Volume 10 ; 10 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Green Computing (IJGC) Volume 11 ; 11 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Green Computing (IJGC) Volume 12 ; 12 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Environmental Sustainability and Green Technologies (IJESGT) ;
+      issn = 2643-7406 ;
+      eissn = 2643-7414 ;
+      issnl = 2643-7406
+    >
+    param[journal_issn] = 2643-7406
+    #continues = 1948-5018
+
+    au < expected ; 2020 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 11 ; 11 ; https://www.igi-global.com/ >
+    au < expected ; 2021 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 12 ; 12 ; https://www.igi-global.com/ >
 
   }
 
@@ -1621,8 +1657,7 @@
 
     au < released ; 2018 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 10 ; 10 ; https://www.igi-global.com/ >
-    au < manifest ; 2020 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 11 ; 11 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 12 ; 12 ; https://www.igi-global.com/ >
+    au < manifest ; 2021 ; International Journal of Mobile Devices, Wearable Technology, and Flexible Electronics (IJMDWTFE) Volume 11 ; 11 ; https://www.igi-global.com/ >
 
   }
 
@@ -1922,8 +1957,6 @@
     au < released ; 2017 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 10 ; 10 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 11 ; 11 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 12 ; 12 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Information Systems for Crisis Response and Management (IJISCRAM) Volume 13 ; 13 ; https://www.igi-global.com/ >
 
   }
 
@@ -2191,6 +2224,7 @@
       issnl = 1947-9611
     >
     param[journal_issn] = 1947-9611
+    #continued_by = 2643-8054
 
     au < released ; 2010 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2011 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -2202,8 +2236,21 @@
     au < released ; 2017 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 8 ; 8 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 10 ; 10 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 11 ; 11 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 12 ; 12 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Digital Strategy, Governance, and Business Transformation (IJDSGBT) ;
+      issn = 2643-8054 ;
+      eissn = 2643-8062 ;
+      issnl = 2643-8054
+    >
+    param[journal_issn] = 2643-8054
+    #continues = 1947-9611
+
+    au < expected ; 2021 ; International Journal of Digital Strategy, Governance, and Business Transformation (IJDSGBT) Volume 11 ; 11 ; https://www.igi-global.com/ >
 
   }
 
@@ -2474,7 +2521,7 @@
   {
 
     title <
-      name = International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) ;
+      name = International Journal of Smart Security Technologies (IJSST) ;
       issn = 2640-4079 ;
       eissn = 2640-4087 ;
       issnl = 2640-4079
@@ -2482,9 +2529,9 @@
     param[journal_issn] = 2640-4079
     #continues = 2166-7241
 
-    au < exists ; 2019 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 6 ; 6 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 7 ; 7 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Applied Research on Smart Surveillance Technologies and Society (IJARSSTS) Volume 8 ; 8 ; https://www.igi-global.com/ >
+    au < exists ; 2019 ; International Journal of Smart Security Technologies (IJSST) Volume 6 ; 6 ; https://www.igi-global.com/ >
+    au < exists ; 2020 ; International Journal of Smart Security Technologies (IJSST) Volume 7 ; 7 ; https://www.igi-global.com/ >
+    au < exists ; 2021 ; International Journal of Smart Security Technologies (IJSST) Volume 8 ; 8 ; https://www.igi-global.com/ >
 
   }
 
@@ -2707,11 +2754,10 @@
 
     param[journal_issn] = 2640-4109
     #continues = 2156-1796
+    #Out of print
 
     au < released ; 2018 ; International Journal of End-User Computing and Development (IJEUCD) Volume 7 ; 7 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of End-User Computing and Development (IJEUCD) Volume 8 ; 8 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of End-User Computing and Development (IJEUCD) Volume 9 ; 9 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of End-User Computing and Development (IJEUCD) Volume 10 ; 10 ; https://www.igi-global.com/ >
 
   }
 
@@ -2725,6 +2771,7 @@
     >
 
     param[journal_issn] = 2155-5621
+    #Out of print
 
     au < released ; 2013 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2014 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -2734,7 +2781,6 @@
     au < released ; 2018 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 6 ; 6 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 7 ; 7 ; https://www.igi-global.com/ >
     au < manifest ; 2020 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 8 ; 8 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 9 ; 9 ; https://www.igi-global.com/ >
 
   }
 
@@ -2756,8 +2802,23 @@
     au < released ; 2017 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 5 ; 5 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 6 ; 6 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 7 ; 7 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 8 ; 8 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 9 ; 9 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Project Management and Productivity Assessment (IJPMPA) ;
+      issn = 2643-8089 ;
+      eissn = 2643-8097 ;
+      issnl = 2643-8089
+    >
+
+    param[journal_issn] = 2643-8089
+    #continues = 2160-9837
+
+    au < expected ; 2020 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 8 ; 8 ; https://www.igi-global.com/ >
+    au < expected ; 2021 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 9 ; 9 ; https://www.igi-global.com/ >
 
   }
 
@@ -2872,6 +2933,7 @@
     # forthcoming 2013
 
     param[journal_issn] = 2166-7195
+    #Out of print
 
     au < released ; 2013 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2014 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -2879,9 +2941,6 @@
     au < released ; 2016 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 4 ; 4 ; http://www.igi-global.com/ >
     au < released ; 2017 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 5 ; 5 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 6 ; 6 ; https://www.igi-global.com/ >
-    au < expected ; 2019 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 7 ; 7 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 8 ; 8 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 9 ; 9 ; https://www.igi-global.com/ >
 
   }
 
@@ -3138,6 +3197,7 @@
       issnl = 1947-3095
     >
     param[journal_issn] = 1947-3095
+    #Out of print
 
     au < released ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 ; http://www.igi-global.com/ >
     au < released ; 2011 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 2 ; 2 ; http://www.igi-global.com/ >
@@ -3149,8 +3209,6 @@
     au < released ; 2017 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 8 ; 8 ; https://www.igi-global.com/ >
     au < released ; 2018 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 9 ; 9 ; https://www.igi-global.com/ >
     au < released ; 2019 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 10 ; 10 ; https://www.igi-global.com/ >
-    au < expected ; 2020 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 11 ; 11 ; https://www.igi-global.com/ >
-    au < expected ; 2021 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 12 ; 12 ; https://www.igi-global.com/ >
 
   }
 
