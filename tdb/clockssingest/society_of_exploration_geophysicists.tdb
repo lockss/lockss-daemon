@@ -74,17 +74,17 @@
     au < crawling ; exists ; 1983 ; Geophysics Volume 48 ; 48 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1984 ; Geophysics Volume 49 ; 49 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1985 ; Geophysics Volume 50 ; 50 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1986 ; Geophysics Volume 51 ; 51 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1987 ; Geophysics Volume 52 ; 52 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1988 ; Geophysics Volume 53 ; 53 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1989 ; Geophysics Volume 54 ; 54 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1986 ; Geophysics Volume 51 ; 51 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1987 ; Geophysics Volume 52 ; 52 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1988 ; Geophysics Volume 53 ; 53 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1989 ; Geophysics Volume 54 ; 54 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1990 ; Geophysics Volume 55 ; 55 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1991 ; Geophysics Volume 56 ; 56 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1992 ; Geophysics Volume 57 ; 57 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1993 ; Geophysics Volume 58 ; 58 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1992 ; Geophysics Volume 57 ; 57 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1993 ; Geophysics Volume 58 ; 58 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1994 ; Geophysics Volume 59 ; 59 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1995 ; Geophysics Volume 60 ; 60 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1996 ; Geophysics Volume 61 ; 61 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1995 ; Geophysics Volume 60 ; 60 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1996 ; Geophysics Volume 61 ; 61 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1997 ; Geophysics Volume 62 ; 62 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1998 ; Geophysics Volume 63 ; 63 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 1999 ; Geophysics Volume 64 ; 64 ; https://library.seg.org/ ; >
@@ -134,13 +134,13 @@
     au < frozen ; exists ; 1990 ; The Leading Edge Volume 9 ; 9 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 1991 ; The Leading Edge Volume 10 ; 10 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 1992 ; The Leading Edge Volume 11 ; 11 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1993 ; The Leading Edge Volume 12 ; 12 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1993 ; The Leading Edge Volume 12 ; 12 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 1994 ; The Leading Edge Volume 13 ; 13 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1995 ; The Leading Edge Volume 14 ; 14 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1995 ; The Leading Edge Volume 14 ; 14 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 1996 ; The Leading Edge Volume 15 ; 15 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1997 ; The Leading Edge Volume 16 ; 16 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 1998 ; The Leading Edge Volume 17 ; 17 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1999 ; The Leading Edge Volume 18 ; 18 ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1999 ; The Leading Edge Volume 18 ; 18 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2000 ; The Leading Edge Volume 19 ; 19 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2001 ; The Leading Edge Volume 20 ; 20 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2002 ; The Leading Edge Volume 21 ; 21 ; https://library.seg.org/ ; >
@@ -199,7 +199,7 @@
     param[journal_id] = jeegxx
 
     au < crawling ; exists ; 1995-1996 ; Journal of Environmental and Engineering Geophysics Volume 1 ; 1 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 1997 ; Journal of Environmental and Engineering Geophysics Volume 2 ; 2  ; https://library.seg.org/ ; >
+    au < ready ; exists ; 1997 ; Journal of Environmental and Engineering Geophysics Volume 2 ; 2  ; https://library.seg.org/ ; >
     au < frozen ; exists ; 1998 ; Journal of Environmental and Engineering Geophysics Volume 3 ; 3  ; https://library.seg.org/ ; >
     au < crawling ; exists ; 1999 ; Journal of Environmental and Engineering Geophysics Volume 4 ; 4  ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2000 ; Journal of Environmental and Engineering Geophysics Volume 5 ; 5  ; https://library.seg.org/ ; >
