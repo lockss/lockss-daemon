@@ -103,9 +103,9 @@
       param[base_url] = https://c21.openlibhums.org/
 
          au < manifest ; exists ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 ; >
-         au < manifest ; exists ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; >
-         au < manifest ; exists ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; >
-         au < manifest ; exists ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; >
+         au < testing ; exists ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; >
+         au < testing ; exists ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; >
+         au < testing ; exists ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; >
 
   }
 
@@ -121,9 +121,9 @@
         au < doNotProcess ; exists ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; >
         au < manifest ; exists ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 ; 2017 ; >
         au < manifest ; exists ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 ; 2018 ; >
-        au < manifest ; exists ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 ; >
-        au < manifest ; exists ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 ; >
-        au < manifest ; exists ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 ; >
+        au < testing ; exists ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 ; >
+        au < testing ; exists ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 ; >
+        au < testing ; exists ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 ; >
   }
 
   {
@@ -276,9 +276,9 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 13 ; Studies in the Maternal Volume 2021 ; 2021 ; >
+      au < testing ; exists ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; >
+      au < testing ; exists ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 ; >
+      au < testing ; exists ; 2021 ; 13 ; Studies in the Maternal Volume 2021 ; 2021 ; >
 
   }
 

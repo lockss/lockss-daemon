@@ -73,7 +73,7 @@
         au < ready ; exists ; 2018 ; Film Studies Volume 19 ; 19 ; >
         au < ready ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
         au < frozen ; exists ; 2019 ; Film Studies Volume 21 ; 21 ; >
-        au < manifest ; exists ; 2020 ; Film Studies Volume 22 ; 22 ; >
+        au < testing ; exists ; 2020 ; Film Studies Volume 22 ; 22 ; >
         au < exists ; exists ; 2021 ; Film Studies Volume 23 ; 23 ; >
 
   }
@@ -101,14 +101,14 @@
         au < manifest ; exists ; 2008 ; Gothic Studies Volume 10 ; 10 ; >
         au < manifest ; exists ; 2009 ; Gothic Studies Volume 11 ; 11 ; >
         au < manifest ; exists ; 2010 ; Gothic Studies Volume 12 ; 12 ; >
-        au < manifest ; exists ; 2011 ; Gothic Studies Volume 13 ; 13 ; >
-        au < manifest ; exists ; 2012 ; Gothic Studies Volume 14 ; 14 ; >
-        au < manifest ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 ; >
-        au < manifest ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 ; >
-        au < manifest ; exists ; 2015 ; Gothic Studies Volume 17 ; 17 ; >
-        au < manifest ; exists ; 2016 ; Gothic Studies Volume 18 ; 18 ; >
-        au < manifest ; exists ; 2017 ; Gothic Studies Volume 19 ; 19 ; >
-        au < manifest ; exists ; 2018 ; Gothic Studies Volume 20 ; 20 ; >
+        au < testing ; exists ; 2011 ; Gothic Studies Volume 13 ; 13 ; >
+        au < testing ; exists ; 2012 ; Gothic Studies Volume 14 ; 14 ; >
+        au < testing ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 ; >
+        au < testing ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 ; >
+        au < testing ; exists ; 2015 ; Gothic Studies Volume 17 ; 17 ; >
+        au < testing ; exists ; 2016 ; Gothic Studies Volume 18 ; 18 ; >
+        au < testing ; exists ; 2017 ; Gothic Studies Volume 19 ; 19 ; >
+        au < testing ; exists ; 2018 ; Gothic Studies Volume 20 ; 20 ; >
         au < expected ; exists ; 2021 ; Gothic Studies Volume 21 ; 21 ; >
 
     }
@@ -151,7 +151,7 @@
       au < ready ; exists ; 2018 ; James Baldwin Journal Volume 4 ; 4 ; >
       au < frozen ; exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 ; >
       au < ready ; exists ; 2020 ; James Baldwin Journal Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 ; >
+      au < testing ; exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 ; >
 
   }
 }
