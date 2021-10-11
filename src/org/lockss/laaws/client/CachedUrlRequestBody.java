@@ -53,7 +53,7 @@ public class CachedUrlRequestBody extends RequestBody {
    * @throws IOException
    * @throws HttpException
    */
-  public InputStream getHttpResponseStreamCachedUrl()
+  public InputStream getHttpResponseStreamFromCachedUrl()
     throws IOException {
     InputStream httpResponse = getHttpResponseStreamFromHttpResponse(
       getHttpResponseFromCachedUrl()
@@ -166,7 +166,7 @@ public class CachedUrlRequestBody extends RequestBody {
   public void writeTo(BufferedSink sink) throws IOException {
     Source source = null;
     try {
-      InputStream inputStream = getHttpResponseStreamCachedUrl();
+      InputStream inputStream = getHttpResponseStreamFromCachedUrl();
       if (inputStream != null) {
         source = Okio.source(inputStream);
         sink.writeAll(source);

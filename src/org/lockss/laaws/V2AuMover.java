@@ -34,13 +34,15 @@ package org.lockss.laaws;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Vector;
-import java.util.stream.Collectors;
 import okhttp3.Dispatcher;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -61,7 +63,6 @@ import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.PluginManager;
 import org.lockss.repository.RepoSpec;
 import org.lockss.state.AuState;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
@@ -78,7 +79,6 @@ public class V2AuMover {
   public static final String PARAM_V2_USER = PREFIX + "user";
   public static final String PARAM_V2_PASSWD = PREFIX + "passwd";
 
-
   public static final String DEBUG_CONFIG_REQUEST = PREFIX + "cfg.debug";
   public static final boolean DEFAULT_DEBUG_CONFIG_REQUEST = false;
 
@@ -91,18 +91,6 @@ public class V2AuMover {
   private static final Logger log = Logger.getLogger(V2AuMover.class);
   private final int maxRequests;
 
-  private static final String THREADPOOL_PREFIX = PREFIX + "threadPool.";
-
-  /** Max number of background threads running UI-initiated hashes */
-  static final String PARAM_THREADPOOL_SIZE =
-    THREADPOOL_PREFIX + "size";
-  static final int DEFAULT_THREADPOOL_SIZE = 2;
-
-  /** Duration after which idle threads will be terminated..  -1 = never */
-  public static final String PARAM_THREADPOOL_KEEPALIVE =
-    THREADPOOL_PREFIX + "keepAlive";
-  static final long DEFAULT_THREADPOOL_KEEPALIVE = 5 * Constants.MINUTE;
-
   private static V2AuMover instance;
 
   /**
@@ -113,12 +101,12 @@ public class V2AuMover {
   /**
    * The v2 REST collections api implemntation
    */
-  private StreamingCollectionsApi rsCollectionsApi;
+  private StreamingCollectionsApi rsCollectionsApiClient;
 
   /**
    * The v2 REST status api implementation
    */
-  private org.lockss.laaws.api.rs.StatusApi rsStatusApi;
+  private org.lockss.laaws.api.rs.StatusApi rsStatusApiClient;
 
   /**
    * The v2 Repository Spec
@@ -148,8 +136,8 @@ public class V2AuMover {
   /**
    * The v2 configuration api we use
    */
-  private AusApi cfgAusApi;
-  private org.lockss.laaws.api.cfg.StatusApi cfgStatusApi;
+  private AusApi cfgAusApiClient;
+  private org.lockss.laaws.api.cfg.StatusApi cfgStatusApiClient;
 
 
   // Access information for the V2 Configuration Service
@@ -165,6 +153,8 @@ public class V2AuMover {
   // counters
   public long cuMoved = 0;
   public long cuVersionsMoved = 0;
+  public long bytesMoved = 0;
+  public long ausMoved;
 
   // debug support
   private final boolean debugRepoReq;
@@ -173,11 +163,13 @@ public class V2AuMover {
   private String currentAu;
   private String currentCu;
   private PluginManager pluginManager;
-  private Queue<ArchivalUnit> auMoveQueue=new LinkedList<>();
+  private LinkedHashSet<ArchivalUnit> auMoveQueue=new LinkedHashSet<>();
   private Dispatcher dispatcher;
   private long startTime;
   private int auCount = 0;
   boolean allCusQueued=false;
+
+
 
   //---------------
   // Construction
@@ -233,6 +225,10 @@ public class V2AuMover {
     log.debug3("RepoSpec=" + rspec);
     this.repoSpec = RepoSpec.fromSpec(rspec);
     this.collection = repoSpec.getCollection();
+    if(!repoSpec.getType().equalsIgnoreCase("rest")) {
+      log.error("Unable to move v1 repository to a v2 repo which is not of type 'rest'");
+      throw new IllegalArgumentException("RepoSpec contained unsupported v2 repo type " + repoSpec.getType());
+    }
     rsRestLocation = repoSpec.getUrl();
     if (UrlUtil.isMalformedUrl(rsRestLocation)) {
       log.error("Malformed repository service url: " + cfgRestLocation);
@@ -247,11 +243,11 @@ public class V2AuMover {
     repoClient.setBasePath(rsRestLocation);
     repoClient.setDebugging(debugRepoReq);
     dispatcher = repoClient.getHttpClient().dispatcher();
-//   dispatcher().setMaxRequests(maxRequests);
+    dispatcher.setMaxRequests(maxRequests);
     log.debug("Dispatcher - max requests: " + dispatcher.getMaxRequests());
     // Assign client to CollectionsApi and StatusApi
-    rsStatusApi = new org.lockss.laaws.api.rs.StatusApi(repoClient);
-    rsCollectionsApi = new StreamingCollectionsApi(repoClient);
+    rsStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
+    rsCollectionsApiClient = new StreamingCollectionsApi(repoClient);
   }
 
   /**
@@ -280,8 +276,8 @@ public class V2AuMover {
     configClient.setBasePath(cfgRestLocation);
     configClient.setDebugging(debugConfigReq);
     // Assign the client to the status api and aus api
-    cfgStatusApi = new org.lockss.laaws.api.cfg.StatusApi(configClient);
-    cfgAusApi = new AusApi(configClient);
+    cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(configClient);
+    cfgAusApiClient = new AusApi(configClient);
   }
 
   //-------------------------
@@ -293,11 +289,8 @@ public class V2AuMover {
    * @throws IOException if error occurred while moving au.
    */
   public void moveAllAus() throws IOException {
-    for (ArchivalUnit au: pluginManager.getAllAus()) {
-      if (!auMoveQueue.contains(au)) {
-        auMoveQueue.add(au);
-      }
-    }
+    // make sure the repo is up and collect all of the known aus.
+    auMoveQueue.addAll(pluginManager.getAllAus());
     log.debug("Moving " + auMoveQueue.size() + " aus.");
     // Check to see if we are currently working on an au.
     if(currentAu == null)
@@ -325,25 +318,21 @@ public class V2AuMover {
    * @throws IOException
    */
   public void moveOneAu(ArchivalUnit au) throws IOException {
-    if (!auMoveQueue.contains(au)) {
-      auMoveQueue.add(au);
-    }
-    // if we aren't working on an au move the next au.
+    auMoveQueue.add(au);
+    // if we aren't working on an au move the next au (sync this).
     if(currentAu == null)
       moveNextAu();
   }
 
 
   protected void moveNextAu() throws IOException {
-    ArchivalUnit au = auMoveQueue.poll();
+    ArchivalUnit au = auMoveQueue.iterator().next();
     if(au != null) {
       allCusQueued=false;
       cuVersionsMoved=0;
       cuMoved=0;
       log.debug("Moving " + au.getName() + " - " + auMoveQueue.size() +" remaining.");
       currentAu = au.getAuId();
-      //todo: turn off au crawling?
-      //todo: turn off au polling?
       moveAu(au);
     }
   }
@@ -355,12 +344,12 @@ public class V2AuMover {
     log.info("AuId: " + currentAu);
     try {
       log.info("Checking V2 Repository Status");
-      if (!rsStatusApi.getStatus().getReady()) {
+      if (!rsStatusApiClient.getStatus().getReady()) {
         log.error("V2 Repository Service Status: NOT READY");
         throw new IOException(auName + ": Unable to move au. V2 Repository Service is not ready.");
       }
       log.info("Checking V2 Configuration Status");
-      if (!cfgStatusApi.getStatus().getReady()) {
+      if (!cfgStatusApiClient.getStatus().getReady()) {
         log.error("V2 Configuration Service: NOT READY");
         throw new IOException(
           auName + ": Unable to move au. V2 Configuration Service is not ready.");
@@ -381,32 +370,38 @@ public class V2AuMover {
    * @throws ApiException
    */
   protected void moveAuArtifacts(ArchivalUnit au) throws ApiException {
-    //Get the au artifacts from the repo.
     List<Artifact> auArtifacts= new ArrayList<>();
-    ArtifactPageInfo pageInfo;
-    try {
-      String token = null;
-      do {
-        pageInfo = rsCollectionsApi.getArtifacts(collection, au.getAuId(),
-          null, null, null, false, null, token);
-        auArtifacts.addAll(pageInfo.getArtifacts());
-        token= pageInfo.getPageInfo().getContinuationToken();
-      } while (!StringUtil.isNullString(token));
-    }
-    catch(ApiException apie) {
-      log.warning("Unable to determine if repo has prexisting artifacts for " + au.getName());
-      log.warning("All CachedUrls will be added");
-    }
+    List<Artifact>cuArtifacts=new ArrayList<>();
+
+    //Get the au artifacts from the v1 repo.
     /* get Au cachedUrls from Lockss*/
     for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
       CachedUrl cachedUrl = iter.next();
       currentCu = cachedUrl.getUrl();
-      List<Artifact> cuArtifacts = auArtifacts.stream()
-        .filter(artifact -> artifact.getUri().equals(currentCu))
-        .collect(Collectors.toList());
-      if(log.isDebug2())
-        log.debug2(currentCu + ": Found " + cuArtifacts.size() + " previously moved artifacts");
-      moveCuVersions(cachedUrl, cuArtifacts);
+      String v2Url;
+      try {
+        v2Url = UrlUtil.normalizeUrl(cachedUrl.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL), au);
+      } catch (Exception ex) {
+        log.error("Unable to normalize uri for " + currentCu +".");
+        v2Url=currentCu;
+      }
+      // we have the possibility that some or all of the artifacts were moved.
+      // We looking for previously moved versions of the 'current' cu
+      ArtifactPageInfo pageInfo;
+      try {
+        String token = null;
+        do {
+          pageInfo = rsCollectionsApiClient.getArtifacts(collection, au.getAuId(),
+            v2Url, null, null, false, null, token);
+          cuArtifacts.addAll(pageInfo.getArtifacts());
+          token= pageInfo.getPageInfo().getContinuationToken();
+        } while (!StringUtil.isNullString(token));
+      }
+      catch(ApiException apie) {
+        log.warning("Unable to determine if repo has preexisting artifacts for " + currentCu);
+        log.warning("All CachedUrls will be added");
+      }
+      moveCuVersions(v2Url, cachedUrl, cuArtifacts);
       cuMoved++;
     }
     allCusQueued=true;
@@ -416,45 +411,53 @@ public class V2AuMover {
   /**
    * Move all versions of a cachedUrl.
    * @param cachedUrl The cachedUrl we which to move
-   * @param cuArtifacts The list of artifacts which already match this cachedUrl uri.
+   * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
    */
-  private void moveCuVersions(CachedUrl cachedUrl, List<Artifact> cuArtifacts) {
+  private void moveCuVersions(String uri, CachedUrl cachedUrl, List<Artifact> v2Artifacts) {
     String auid = cachedUrl.getArchivalUnit().getAuId();
-    String uri = cachedUrl.getUrl();
     CachedUrl[] localVersions = cachedUrl.getCuVersions();
-    int start;
-    if (localVersions.length > cuArtifacts.size()) {
-      // we have at least one unmoved version
-      start = cuArtifacts.size();
-      // there are version of the cu which need to be moved.
-      for (int i = start; i < localVersions.length; i++) {
-        Long collectionDate = null;
-        CachedUrl cu = localVersions[i];
-        try {
-          String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
-          if (!StringUtil.isNullString(fetchTime)) {
-            collectionDate = Long.parseLong(fetchTime);
-          }
-          else {
-            log.debug(uri + ":version: " + cu.getVersion() + " is missing fetch time.");
-          }
-          log.debug2("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
-          createArtifact(auid, uri, collectionDate, cu, collection);
-        } catch (ApiException apie) {
-          log.error(uri + ": failed to move version: " + cu.getVersion() + ": " +
-            apie.getCode() + " - " + apie.getMessage());
-        } finally {
-          AuUtil.safeRelease(cu);
-        }
+    Queue<CachedUrl> cuQueue = Collections.asLifoQueue(new ArrayDeque<>());
+    cuQueue.addAll(Arrays.asList(localVersions));
+    if(!v2Artifacts.isEmpty()){
+      for(int i=0; i< v2Artifacts.size(); i++) {
+        // remove the previous number of artifacts from the queue
+        cuQueue.remove();
       }
     }
-    log.debug2("Completed move of all versions of " + currentCu);
+    // Now loop through the queue (but use a callback to handle the next element)
+    moveNextCuVersion(auid, uri,cuQueue);
+
+  }
+
+  private void moveNextCuVersion(String auid, String uri, Queue<CachedUrl> cuQueue) {
+    Long collectionDate = null;
+    CachedUrl cu = cuQueue.poll();
+    if(cu == null) {
+      log.debug2("Queued move requests of all versions of " + currentCu);
+      return;
+    }
+    try {
+      String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
+      if (!StringUtil.isNullString(fetchTime)) {
+        collectionDate = Long.parseLong(fetchTime);
+      }
+      else {
+        log.debug(uri + ":version: " + cu.getVersion() + " is missing fetch time.");
+      }
+      log.debug2("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
+      createArtifact(auid, uri, collectionDate, cu, collection,cuQueue);
+    } catch (ApiException apie) {
+      log.error(uri + ": failed to create version: " + cu.getVersion() + ": " +
+        apie.getCode() + " - " + apie.getMessage());
+    } finally {
+      AuUtil.safeRelease(cu);
+    }
   }
 
 
   /**
    * Make an asynchronous rest call to the V2 repository to create a new artifact.
-   * @param auid au identifer for the CachedUrl we are moving.
+   * @param auid au identifier for the CachedUrl we are moving.
    * @param uri the uri  for the CachedUrl we are moving.
    * @param collectionDate the date at which this item was collected or null
    * @param cu the CachedUrl we are moving.
@@ -462,9 +465,9 @@ public class V2AuMover {
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
   private void createArtifact(String auid, String uri, Long collectionDate,
-    CachedUrl cu, String collectionId) throws ApiException {
-    rsCollectionsApi.createArtifactAsync(collectionId, auid, uri, cu, collectionDate,
-      new CreateArtifactCallback());
+    CachedUrl cu, String collectionId, Queue<CachedUrl> cuQueue) throws ApiException {
+    rsCollectionsApiClient.createArtifactAsync(collectionId, auid, uri, cu, collectionDate,
+      new CreateArtifactCallback(auid, uri, cuQueue));
   }
 
   /**
@@ -474,7 +477,7 @@ public class V2AuMover {
    */
   private void commitArtifact(Artifact uncommitted) throws ApiException {
     Artifact committed;
-    committed = rsCollectionsApi.updateArtifact(uncommitted.getCollection(),
+    committed = rsCollectionsApiClient.updateArtifact(uncommitted.getCollection(),
       uncommitted.getId(), true);
     log.debug("Successfully committed artifact " + committed.getId());
     cuVersionsMoved++;
@@ -505,6 +508,7 @@ public class V2AuMover {
         "   runTime (secs): " + (endTime - startTime) / 1000);
     }
     // we are no longer actively working on any au so null out the currentAu.
+    auMoveQueue.remove(au);
     currentAu=null;
     moveNextAu();
   }
@@ -523,7 +527,7 @@ public class V2AuMover {
         v1config.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
           .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
         // send the configuration
-        cfgAusApi.putAuConfig(au.getAuId(), v2config);
+        cfgAusApiClient.putAuConfig(au.getAuId(), v2config);
         log.info(auName + ": Successfully moved AU Configuration.");
       } catch (ApiException apie) {
         log.error(auName + ": Attempt to move au configuration failed: " + apie.getCode() +
@@ -544,7 +548,7 @@ public class V2AuMover {
     if (v1State != null) {
       try {
         V2AuStateBean v2State = new V2AuStateBean(v1State);
-        cfgAusApi.patchAuState(au.getAuId(), v2State.toMap(), makeCookie());
+        cfgAusApiClient.patchAuState(au.getAuId(), v2State.toMap(), makeCookie());
         log.info(auName + ": Successfully moved AU State.");
       } catch (ApiException apie) {
         log.error(auName + ": Attempt to move au state failed: " + apie.getCode() +
@@ -622,6 +626,15 @@ public class V2AuMover {
    * A simple class to encompass an ApiCallback
    */
   protected class CreateArtifactCallback implements ApiCallback<Artifact> {
+    String auId;
+    String uri;
+    Queue<CachedUrl> cuQueue;
+
+    public CreateArtifactCallback(String auid, String uri, Queue<CachedUrl> cuQueue) {
+      this.auId= auid;
+      this.uri= uri;
+      this.cuQueue=cuQueue;
+    }
 
     @Override
     public void onFailure(ApiException e, int statusCode,
@@ -635,6 +648,8 @@ public class V2AuMover {
       try {
         log.debug("Successfully created artifact (" + statusCode + "): " + result.getId());
         commitArtifact(result);
+        if(cuQueue.peek() != null)
+          moveNextCuVersion(auId, uri, cuQueue);
       } catch (ApiException e) {
         log.error("Attempt to commit artifact failed: " + e.getCode() + " - " + e.getMessage());
       }
