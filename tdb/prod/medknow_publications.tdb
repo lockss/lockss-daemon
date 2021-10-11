@@ -452,18 +452,19 @@
 #    param[base_url] = http://www.avicennajmed.com/
 
     param[journal_issn] = 2231-0770
+    #Moved to Thieme
 
-    au < released ; 2011 ; Avicenna Journal of Medicine Volume 1 ; 2011 ; 1 ; http://www.avicennajmed.com/ >
-    au < released ; 2012 ; Avicenna Journal of Medicine Volume 2 ; 2012 ; 2 ; http://www.avicennajmed.com/ >
-    au < released ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 2013 ; 3 ; http://www.avicennajmed.com/ >
-    au < released ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 2014 ; 4 ; http://www.avicennajmed.com/ >
-    au < released ; 2015 ; Avicenna Journal of Medicine Volume 5 ; 2015 ; 5 ; http://www.avicennajmed.com/ >
-    au < released ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 2016 ; 6 ; http://www.avicennajmed.com/ >
-    au < released ; 2017 ; Avicenna Journal of Medicine Volume 7 ; 2017 ; 7 ; http://www.avicennajmed.com/ >
-    au < released ; 2018 ; Avicenna Journal of Medicine Volume 8 ; 2018 ; 8 ; http://www.avicennajmed.com/ >
-    au < manifest ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 2019 ; 9 ; https://www.avicennajmed.com/ >
-    au < manifest ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 2020 ; 10 ; https://www.avicennajmed.com/ >
-    au < manifest ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 2021 ; 11 ; https://www.avicennajmed.com/ >
+    au < down ; 2011 ; Avicenna Journal of Medicine Volume 1 ; 2011 ; 1 ; http://www.avicennajmed.com/ >
+    au < down ; 2012 ; Avicenna Journal of Medicine Volume 2 ; 2012 ; 2 ; http://www.avicennajmed.com/ >
+    au < down ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 2013 ; 3 ; http://www.avicennajmed.com/ >
+    au < down ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 2014 ; 4 ; http://www.avicennajmed.com/ >
+    au < down ; 2015 ; Avicenna Journal of Medicine Volume 5 ; 2015 ; 5 ; http://www.avicennajmed.com/ >
+    au < down ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 2016 ; 6 ; http://www.avicennajmed.com/ >
+    au < down ; 2017 ; Avicenna Journal of Medicine Volume 7 ; 2017 ; 7 ; http://www.avicennajmed.com/ >
+    au < down ; 2018 ; Avicenna Journal of Medicine Volume 8 ; 2018 ; 8 ; http://www.avicennajmed.com/ >
+    au < doNotProcess ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 2019 ; 9 ; https://www.avicennajmed.com/ >
+    au < doNotProcess ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 2020 ; 10 ; https://www.avicennajmed.com/ >
+    au < doNotProcess ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 2021 ; 11 ; https://www.avicennajmed.com/ >
 
   }
 
@@ -1901,30 +1902,31 @@
 #    param[base_url] = http://www.ijri.org/
 
     param[journal_issn] = 0971-3026
+    #Moved to Thieme
 
-    au < manifest ; 1999 ; Indian Journal of Radiology and Imaging Volume 9 ; 1999 ; 9 ; https://www.ijri.org/ >
-    au < manifest ; 2000 ; Indian Journal of Radiology and Imaging Volume 10 ; 2000 ; 10 ; https://www.ijri.org/ >
-    au < manifest ; 2001 ; Indian Journal of Radiology and Imaging Volume 11 ; 2001 ; 11 ; https://www.ijri.org/ >
-    au < manifest ; 2002 ; Indian Journal of Radiology and Imaging Volume 12 ; 2002 ; 12 ; https://www.ijri.org/ >
-    au < manifest ; 2003 ; Indian Journal of Radiology and Imaging Volume 13 ; 2003 ; 13 ; https://www.ijri.org/ >
-    au < manifest ; 2004 ; Indian Journal of Radiology and Imaging Volume 14 ; 2004 ; 14 ; https://www.ijri.org/ >
-    au < manifest ; 2005 ; Indian Journal of Radiology and Imaging Volume 15 ; 2005 ; 15 ; https://www.ijri.org/ >
-    au < manifest ; 2006 ; Indian Journal of Radiology and Imaging Volume 16 ; 2006 ; 16 ; https://www.ijri.org/ >
-    au < manifest ; 2007 ; Indian Journal of Radiology and Imaging Volume 17 ; 2007 ; 17 ; https://www.ijri.org/ >
-    au < manifest ; 2008 ; Indian Journal of Radiology and Imaging Volume 18 ; 2008 ; 18 ; https://www.ijri.org/ >
-    au < manifest ; 2009 ; Indian Journal of Radiology and Imaging Volume 19 ; 2009 ; 19 ; https://www.ijri.org/ >
-    au < manifest ; 2010 ; Indian Journal of Radiology and Imaging Volume 20 ; 2010 ; 20 ; https://www.ijri.org/ >
-    au < manifest ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 2011 ; 21 ; https://www.ijri.org/ >
-    au < released ; 2012 ; Indian Journal of Radiology and Imaging Volume 22 ; 2012 ; 22 ; http://www.ijri.org/ >
-    au < released ; 2013 ; Indian Journal of Radiology and Imaging Volume 23 ; 2013 ; 23 ; http://www.ijri.org/ >
-    au < released ; 2014 ; Indian Journal of Radiology and Imaging Volume 24 ; 2014 ; 24 ; http://www.ijri.org/ >
-    au < released ; 2015 ; Indian Journal of Radiology and Imaging Volume 25 ; 2015 ; 25 ; http://www.ijri.org/ >
-    au < released ; 2016 ; Indian Journal of Radiology and Imaging Volume 26 ; 2016 ; 26 ; http://www.ijri.org/ >
-    au < released ; 2017 ; Indian Journal of Radiology and Imaging Volume 27 ; 2017 ; 27 ; http://www.ijri.org/ >
-    au < released ; 2018 ; Indian Journal of Radiology and Imaging Volume 28 ; 2018 ; 28 ; http://www.ijri.org/ >
-    au < manifest ; 2019 ; Indian Journal of Radiology and Imaging Volume 29 ; 2019 ; 29 ; https://www.ijri.org/ >
-    au < manifest ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 2020 ; 30 ; https://www.ijri.org/ >
-    au < expected ; 2021 ; Indian Journal of Radiology and Imaging Volume 31 ; 2021 ; 31 ; https://www.ijri.org/ >
+    au < doNotProcess ; 1999 ; Indian Journal of Radiology and Imaging Volume 9 ; 1999 ; 9 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2000 ; Indian Journal of Radiology and Imaging Volume 10 ; 2000 ; 10 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2001 ; Indian Journal of Radiology and Imaging Volume 11 ; 2001 ; 11 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2002 ; Indian Journal of Radiology and Imaging Volume 12 ; 2002 ; 12 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2003 ; Indian Journal of Radiology and Imaging Volume 13 ; 2003 ; 13 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2004 ; Indian Journal of Radiology and Imaging Volume 14 ; 2004 ; 14 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2005 ; Indian Journal of Radiology and Imaging Volume 15 ; 2005 ; 15 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2006 ; Indian Journal of Radiology and Imaging Volume 16 ; 2006 ; 16 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2007 ; Indian Journal of Radiology and Imaging Volume 17 ; 2007 ; 17 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Radiology and Imaging Volume 18 ; 2008 ; 18 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Radiology and Imaging Volume 19 ; 2009 ; 19 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2010 ; Indian Journal of Radiology and Imaging Volume 20 ; 2010 ; 20 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 2011 ; 21 ; https://www.ijri.org/ >
+    au < down ; 2012 ; Indian Journal of Radiology and Imaging Volume 22 ; 2012 ; 22 ; http://www.ijri.org/ >
+    au < down ; 2013 ; Indian Journal of Radiology and Imaging Volume 23 ; 2013 ; 23 ; http://www.ijri.org/ >
+    au < down ; 2014 ; Indian Journal of Radiology and Imaging Volume 24 ; 2014 ; 24 ; http://www.ijri.org/ >
+    au < down ; 2015 ; Indian Journal of Radiology and Imaging Volume 25 ; 2015 ; 25 ; http://www.ijri.org/ >
+    au < down ; 2016 ; Indian Journal of Radiology and Imaging Volume 26 ; 2016 ; 26 ; http://www.ijri.org/ >
+    au < down ; 2017 ; Indian Journal of Radiology and Imaging Volume 27 ; 2017 ; 27 ; http://www.ijri.org/ >
+    au < down ; 2018 ; Indian Journal of Radiology and Imaging Volume 28 ; 2018 ; 28 ; http://www.ijri.org/ >
+    au < doNotProcess ; 2019 ; Indian Journal of Radiology and Imaging Volume 29 ; 2019 ; 29 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 2020 ; 30 ; https://www.ijri.org/ >
+    au < doNotProcess ; 2021 ; Indian Journal of Radiology and Imaging Volume 31 ; 2021 ; 31 ; https://www.ijri.org/ >
 
   }
 

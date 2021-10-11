@@ -644,6 +644,32 @@
    }
 
    {
+     title <
+       name = Avicenna Journal of Medicine ;
+       issn = 2231-0770 ;
+       eissn = 2249-4464 ;
+       issnl = 2231-0770 ;
+       doi = 10.1055/s-00051312
+    >
+     param[journal_id] = 10.1055/s-00051312
+    comment[years] = 2011-current
+     #Moved from Medknow
+
+     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Avicenna Journal of Medicine Volume 1 ; 1 ; >
+     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Avicenna Journal of Medicine Volume 2 ; 2 ; >
+     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 3 ; >
+     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 4 ; >
+     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Avicenna Journal of Medicine Volume 5 ; 5 ; >
+     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 6 ; >
+     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Avicenna Journal of Medicine Volume 7 ; 7 ; >
+     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Avicenna Journal of Medicine Volume 8 ; 8 ; >
+     au < exists ; exists ; 2019 ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 9 ; >
+     au < exists ; exists ; 2020 ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 10 ; >
+     au < exists ; exists ; 2021 ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 11 ; >
+
+   }
+
+   {
     title <
       name = Drug Research ;
       issn = 2194-9379 ;
@@ -2406,6 +2432,39 @@
    au < finished ; crawling ; 2019 ; 2019 ; Indian Journal of Neurotrauma Volume 16 ; 16 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Indian Journal of Neurotrauma Volume 17 ; 17 ; >
    au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Neurotrauma Volume 18 ; 18 ; >
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Radiology and Imaging ;
+      issn = 0971-3026 ;
+      eissn = 1998-3808 ;
+      issnl = 0971-3026 ;
+      doi = 10.1055/s-00050590
+
+    >
+    param[journal_id] = 10.1055/s-00050590
+    comment[years] =  2005-current
+    #Moved from Medknow
+
+    au < exists ; exists ; 2005 ; 2005 ; Indian Journal of Radiology and Imaging Volume 15 ; 15 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Indian Journal of Radiology and Imaging Volume 16 ; 16 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Indian Journal of Radiology and Imaging Volume 17 ; 17 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Indian Journal of Radiology and Imaging Volume 18 ; 18 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Indian Journal of Radiology and Imaging Volume 19 ; 19 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Indian Journal of Radiology and Imaging Volume 20 ; 20 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Indian Journal of Radiology and Imaging Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Indian Journal of Radiology and Imaging Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Indian Journal of Radiology and Imaging Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indian Journal of Radiology and Imaging Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Indian Journal of Radiology and Imaging Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Indian Journal of Radiology and Imaging Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Indian Journal of Radiology and Imaging Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Indian Journal of Radiology and Imaging Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 30 ; >
+    au < exists ; exists ; 2021 ; Indian Journal of Radiology and Imaging Volume 31 ; 31 ; >
 
   }
 
