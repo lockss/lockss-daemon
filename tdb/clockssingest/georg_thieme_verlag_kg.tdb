@@ -572,7 +572,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; AORTA Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; AORTA Volume 8 ; 8 ; >
-    au < expected ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
 
    }
 

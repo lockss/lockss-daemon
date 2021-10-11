@@ -172,8 +172,8 @@
     param[journal_issn] = 2643-7996
     #continues = 1947-8607
 
-    au < expected ; exists ; 2020 ; International Journal of Adult Education and Technology (IJAET) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2021 ; International Journal of Adult Education and Technology (IJAET) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2020 ; International Journal of Adult Education and Technology (IJAET) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2021 ; International Journal of Adult Education and Technology (IJAET) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -213,8 +213,8 @@
     param[journal_issn] = 2643-7937
     #continues = 1937-965X
 
-    au < expected ; exists ; 2020 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2021 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2020 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2021 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -1595,8 +1595,8 @@
     param[journal_issn] = 2643-7406
     #continues = 1948-5018
 
-    au < expected ; exists ; 2020 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2021 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2020 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2021 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2254,7 +2254,7 @@
     param[journal_issn] = 2643-8054
     #continues = 1947-9611
 
-    au < expected ; exists ; 2021 ; International Journal of Digital Strategy, Governance, and Business Transformation (IJDSGBT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2021 ; International Journal of Digital Strategy, Governance, and Business Transformation (IJDSGBT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -2820,8 +2820,8 @@
     param[journal_issn] = 2643-8089
     #continues = 2160-9837
 
-    au < expected ; exists ; 2020 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2021 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2020 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2021 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
 
   }
 

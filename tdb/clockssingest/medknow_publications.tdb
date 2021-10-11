@@ -10179,7 +10179,7 @@
       param[journal_issn] = 1011-4564
 #      param[base_url] = http://www.jmedscindmc.com/
 
-      au < exists ; exists ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ ; ; > 
+      au < manifest ; exists ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ ; ; > 
       au < frozen ; exists ; 2015 ; Journal of Medical Sciences Volume 35 ; 2015 ; 35 ; https://www.jmedscindmc.com/ ; ; >
       au < frozen ; exists ; 2016 ; Journal of Medical Sciences Volume 36 ; 2016 ; 36 ; https://www.jmedscindmc.com/ ; ; >
       au < frozen ; exists ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; https://www.jmedscindmc.com/ ; ; >
@@ -10537,7 +10537,7 @@
       au < frozen ; exists ; 2018 ; Middle East Journal of Medical Genetics Volume 7 ; 2018 ; 7 ; https://www.mxe.eg.net/ ; ; >
       au < frozen ; exists ; 2019 ; Middle East Journal of Medical Genetics Volume 8 ; 2019 ; 8 ; https://www.mxe.eg.net/ ; ; >
       au < frozen ; exists ; 2020 ; Middle East Journal of Medical Genetics Volume 9 ; 2020 ; 9 ; https://www.mxe.eg.net/ ; ; >
-      au < expected ; exists ; 2021 ; Middle East Journal of Medical Genetics Volume 10 ; 2021 ; 10 ; https://www.mxe.eg.net/ ; ; >
+      au < manifest ; exists ; 2021 ; Middle East Journal of Medical Genetics Volume 10 ; 2021 ; 10 ; https://www.mxe.eg.net/ ; ; >
 
   }
 
