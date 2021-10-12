@@ -1186,12 +1186,12 @@
     au < frozen ; exists ; 2005 ; British Food Journal Volume 107 ; 107 ; >
     au < crawling ; exists ; 2006 ; British Food Journal Volume 108 ; 108 ; >
     au < frozen ; exists ; 2007 ; British Food Journal Volume 109 ; 109 ; >
-    au < crawling ; exists ; 2008 ; British Food Journal Volume 110 ; 110 ; >
+    au < frozen ; exists ; 2008 ; British Food Journal Volume 110 ; 110 ; >
     au < crawling ; exists ; 2009 ; British Food Journal Volume 111 ; 111 ; >
     au < frozen ; exists ; 2010 ; British Food Journal Volume 112 ; 112 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; British Food Journal Volume 113 ; 113 ; >
     au < frozen ; exists ; 2012 ; British Food Journal Volume 114 ; 114 ; >
-    au < crawling ; exists ; 2013 ; British Food Journal Volume 115 ; 115 ; >
+    au < frozen ; exists ; 2013 ; British Food Journal Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; British Food Journal Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; British Food Journal Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; British Food Journal Volume 118 ; 118 ; >
@@ -1259,7 +1259,7 @@
     au < crawling ; exists ; 2004 ; The British Journal of Forensic Practice Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; The British Journal of Forensic Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 ; >
     au < frozen ; exists ; 2008 ; The British Journal of Forensic Practice Volume 10 ; 10 ; >
     au < frozen ; exists ; 2009 ; The British Journal of Forensic Practice Volume 11 ; 11 ; >
     au < crawling ; exists ; 2010 ; The British Journal of Forensic Practice Volume 12 ; 12 ; >
@@ -1325,10 +1325,10 @@
     au < manifest ; exists ; 1998 ; Business Process Management Journal Volume 4 ; 4 ; >
     au < manifest ; exists ; 1999 ; Business Process Management Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2000 ; Business Process Management Journal Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2001 ; Business Process Management Journal Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2001 ; Business Process Management Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 2002 ; Business Process Management Journal Volume 8 ; 8 ; >
     au < crawling ; exists ; 2003 ; Business Process Management Journal Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2004 ; Business Process Management Journal Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2004 ; Business Process Management Journal Volume 10 ; 10 ; >
     au < frozen ; exists ; 2005 ; Business Process Management Journal Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Business Process Management Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 2007 ; Business Process Management Journal Volume 13 ; 13 ; >
@@ -1363,7 +1363,7 @@
 
     au < frozen ; exists ; 2007 ; Business Strategy Series Volume 8 ; 8 ; >
     au < frozen ; exists ; 2008 ; Business Strategy Series Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2009 ; Business Strategy Series Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2009 ; Business Strategy Series Volume 10 ; 10 ; >
     au < frozen ; exists ; 2010 ; Business Strategy Series Volume 11 ; 11 ; >
     au < frozen ; exists ; 2011 ; Business Strategy Series Volume 12 ; 12 ; >
     au < frozen ; exists ; 2012 ; Business Strategy Series Volume 13 ; 13 ; >
@@ -1401,7 +1401,7 @@
     au < frozen ; exists ; 2001 ; Campus-Wide Information Systems Volume 18 ; 18 ; >
     au < frozen ; exists ; 2002 ; Campus-Wide Information Systems Volume 19 ; 19 ; >
     au < frozen ; exists ; 2003 ; Campus-Wide Information Systems Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2004 ; Campus-Wide Information Systems Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2004 ; Campus-Wide Information Systems Volume 21 ; 21 ; >
     au < frozen ; exists ; 2005 ; Campus-Wide Information Systems Volume 22 ; 22 ; >
     au < frozen ; exists ; 2006 ; Campus-Wide Information Systems Volume 23 ; 23 ; >
     au < crawling ; exists ; 2007 ; Campus-Wide Information Systems Volume 24 ; 24 ; >
@@ -1437,9 +1437,9 @@
     au < crawling ; exists ; 2004 ; Career Development International Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Career Development International Volume 10 ; 10 ; >
     au < frozen ; exists ; 2006 ; Career Development International Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2007 ; Career Development International Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2007 ; Career Development International Volume 12 ; 12 ; >
     au < crawling ; exists ; 2008 ; Career Development International Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2009 ; Career Development International Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2009 ; Career Development International Volume 14 ; 14 ; >
     au < frozen ; exists ; 2010 ; Career Development International Volume 15 ; 15 ; >
     au < frozen ; exists ; 2011 ; Career Development International Volume 16 ; 16 ; >
     au < frozen ; exists ; 2012 ; Career Development International Volume 17 ; 17 ; >
@@ -1609,7 +1609,7 @@
     # online from 2003
     #continued_by = 2059-4631
 
-    au < crawling ; exists ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 ; >
     au < crawling ; exists ; 2004 ; Clinical Governance: An International Journal Volume 9 ; 9 ; >
     au < frozen ; exists ; 2005 ; Clinical Governance: An International Journal Volume 10 ; 10 ; >
     au < crawling ; exists ; 2006 ; Clinical Governance: An International Journal Volume 11 ; 11 ; >
@@ -1760,10 +1760,10 @@
     au < manifest ; exists ; 1999 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 19 ; 19 ; >
     au < frozen ; exists ; 2001 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2002 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2002 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 21 ; 21 ; >
     au < frozen ; exists ; 2003 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 22 ; 22 ; >
     au < crawling ; exists ; 2004 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2005 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2005 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 24 ; 24 ; >
     au < frozen ; exists ; 2006 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 25 ; 25 ; >
     au < crawling ; exists ; 2007 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 26 ; 26 ; >
     au < frozen ; exists ; 2008 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 27 ; 27 ; >
