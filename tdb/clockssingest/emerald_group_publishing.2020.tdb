@@ -9338,7 +9338,7 @@
 
     au < manifest ; exists ; 1999 ; Library Hi Tech News Volume 16 ; 16 ; >
     au < frozen ; exists ; 2000 ; Library Hi Tech News Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2001 ; Library Hi Tech News Volume 18 ; 18 ; >
+    au < notReady ; exists ; 2001 ; Library Hi Tech News Volume 18 ; 18 ; > #403 Forbidden https://d1bxh8uas1mnw7.cloudfront.net/assets/embed
     au < manifest ; exists ; 2002 ; Library Hi Tech News Volume 19 ; 19 ; >
     au < manifest ; exists ; 2003 ; Library Hi Tech News Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Library Hi Tech News Volume 21 ; 21 ; >
@@ -9346,7 +9346,7 @@
     au < manifest ; exists ; 2006 ; Library Hi Tech News Volume 23 ; 23 ; >
     au < manifest ; exists ; 2007 ; Library Hi Tech News Volume 24 ; 24 ; >
     au < manifest ; exists ; 2008 ; Library Hi Tech News Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; >
+    au < notReady ; exists ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; > #403 Forbidden
     au < crawling ; exists ; 2010 ; Library Hi Tech News Volume 27 ; 27 ; >
     au < crawling ; exists ; 2011 ; Library Hi Tech News Volume 28 ; 28 ; >
     au < crawling ; exists ; 2012 ; Library Hi Tech News Volume 29 ; 29 ; >
