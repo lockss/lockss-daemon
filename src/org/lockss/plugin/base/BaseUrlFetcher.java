@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -249,14 +245,17 @@ public class BaseUrlFetcher implements UrlFetcher {
 	  log.debug3("Not modified: " + fetchUrl);
           return FetchResult.FETCHED_NOT_MODIFIED;
         } else if (headers == null) {
-          return FetchResult.NOT_FETCHED;
+          // This is impossible
+          throw resultMap.mapException(au, conn,
+                                       new IllegalStateException("headers can't be empty"),
+                                       null);
         } else {
           FetchedUrlData fud = new FetchedUrlData(origUrl, fetchUrl,
 						  input, headers,
 						  redirectUrls, this);
           fud.setStoreRedirects(redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_STORE_ALL));
           fud.setFetchFlags(fetchFlags);
-          getUrlConsumerFactory().createUrlConsumer(crawlFacade, fud).consume();
+          consume(fud);
           return FetchResult.FETCHED;
         }
       } catch (CacheException e) {
@@ -300,6 +299,10 @@ public class BaseUrlFetcher implements UrlFetcher {
     }
   }
   
+  protected void consume(FetchedUrlData fud) throws IOException {
+    getUrlConsumerFactory().createUrlConsumer(crawlFacade, fud).consume();
+  }
+
   protected String getLastModified(){
     String lastModified = null;
     CachedUrl cachedVersion = au.makeCachedUrl(origUrl);
@@ -554,7 +557,8 @@ public class BaseUrlFetcher implements UrlFetcher {
   }
   
   /** Override to change connection settings */
-  protected void customizeConnection(LockssUrlConnection conn) {
+  protected void customizeConnection(LockssUrlConnection conn)
+      throws IOException {
   }
 
   /** Override to modify/wrap conn.execute() */
@@ -642,7 +646,11 @@ public class BaseUrlFetcher implements UrlFetcher {
   protected LockssUrlConnection makeConnection0(String url,
 						LockssUrlConnectionPool pool)
       throws IOException {
-    return UrlUtil.openConnection(url, pool);
+    return UrlUtil.openConnection(getMethod(), url, pool);
+  }
+
+  protected int getMethod() {
+    return LockssUrlConnection.METHOD_GET;
   }
 
   protected String getUserPass() {

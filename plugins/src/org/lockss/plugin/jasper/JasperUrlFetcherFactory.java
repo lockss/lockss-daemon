@@ -40,7 +40,12 @@ public class JasperUrlFetcherFactory implements UrlFetcherFactory {
 
   @Override
   public UrlFetcher createUrlFetcher(CrawlerFacade crawlerFacade, String url) {
-    return new JasperUrlFetcher(crawlerFacade, url);
+    if (crawlerFacade.getStateObj(JasperUrlFetcher.FACADE_KEY_MAKE_POSTER)
+        != null) {
+      return new JasperUrlFetcher.JasperUrlPoster(crawlerFacade, url);
+    } else {
+      return new JasperUrlFetcher(crawlerFacade, url);
+    }
   }
   
 }

@@ -34,10 +34,13 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.jasper;
 
 import java.io.IOException;
+import java.util.*;
 
 import org.apache.commons.lang3.StringUtils;
+import org.lockss.daemon.AuParamType;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseUrlFetcher;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -45,11 +48,15 @@ import org.lockss.util.urlconn.*;
 import com.fasterxml.jackson.databind.*;
 
 public class JasperUrlFetcher extends BaseUrlFetcher {
-
-  public static final String FACADE_KEY_AUTHORIZATION_STRING = "authorizationString";
-  
   private static final Logger log = Logger.getLogger(JasperUrlFetcher.class);
-  
+
+  /** Auth string returned from POST */
+  public static final String FACADE_KEY_AUTHORIZATION_STRING =
+    "authorizationString";
+  /** Signal to JasperUrlFetcherFactory to make a JasperUrlPoster
+   * UrlFetcher */
+  public static String FACADE_KEY_MAKE_POSTER = "makePostFetcher";
+
   public JasperUrlFetcher(CrawlerFacade crawlerFacade, String url) {
     super(crawlerFacade, url);
   }
@@ -76,52 +83,85 @@ public class JasperUrlFetcher extends BaseUrlFetcher {
       return;
     } 
     log.debug2("Attempting to establish a session");
-    BaseUrlFetcher buf = new BaseUrlFetcher(crawlFacade,
-                                            String.format("%sservices/xauthn/?op=login",
-                                                          au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()))) {
-      @Override
-      protected LockssUrlConnection makeConnection0(String url, LockssUrlConnectionPool pool) throws IOException {
-        return UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, url, pool);
-      }
-      @Override
-      protected void addRequestHeaders() {
-        super.addRequestHeaders();
-        conn.setRequestProperty("content-type", Constants.FORM_ENCODING_URL);
-      }
-      @Override
-      protected void customizeConnection(LockssUrlConnection conn) {
-        super.customizeConnection(conn);
-        String userPass = au.getConfiguration().get(ConfigParamDescr.USER_CREDENTIALS.getKey());
-        conn.setRequestEntity(String.format("email=%s&password=%s",
-                                            UrlUtil.encodeUrl(StringUtils.substringBefore(userPass, ':')),
-                                            UrlUtil.encodeUrl(StringUtils.substringAfter(userPass, ':'))));
-      }
-    };
+
+    String postUrl = String.format("%sservices/xauthn/?op=login",
+                                   au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
+    // XXX
+    crawlFacade.putStateObj(FACADE_KEY_MAKE_POSTER, "true");
+    UrlFetcher uf;
     try {
-      log.debug2("Ready to make the POST request to establish the session");
-      FetchResult fr = buf.fetch();
-      log.debug2(String.format("The fetch result from the POST request was: %s", fr));
-      if (fr != FetchResult.FETCHED) {
-        // FIXME
+      uf = crawlFacade.makeUrlFetcher(postUrl);
+    } finally {
+      crawlFacade.putStateObj(FACADE_KEY_MAKE_POSTER, null);
+    }
+    BitSet fetchFlags = uf.getFetchFlags();
+    fetchFlags.set(UrlCacher.REFETCH_FLAG);
+    uf.setFetchFlags(fetchFlags);
+    // XXX Set redirect options?
+
+    log.debug2("Ready to make the POST request to establish the session");
+    FetchResult fr = uf.fetch();
+    log.debug2(String.format("The fetch result from the POST request was: %s", fr));
+    if (fr != FetchResult.FETCHED) {
+      // XXX
+      throw new CacheException.PermissionException("Authorizing POST failed");
+    }
+//     }
+//     catch (CacheException ce) {
+//       log.debug2("Fatal exception in the POST request to establish the session", ce);
+//       throw ce; // FIXME
+//     }
+//     catch (IOException ioe) {
+//       log.debug2("I/O exception processing the POST request to establish the session", ioe);
+//       CacheException ce = new CacheException();
+//       ce.initCause(ioe);
+//       throw ce; // FIXME
+  }
+
+  /** UrlFetcher used to make authorization POST request */
+  static class JasperUrlPoster extends BaseUrlFetcher {
+    public JasperUrlPoster(CrawlerFacade crawlerFacade, String url) {
+      super(crawlerFacade, url);
+    }
+
+    @Override
+    protected int getMethod() {
+      return LockssUrlConnection.METHOD_POST;
+    }
+
+    @Override
+    protected void customizeConnection(LockssUrlConnection conn)
+        throws IOException {
+      super.customizeConnection(conn);
+      try {
+        String userPassStr =
+          au.getConfiguration().get(ConfigParamDescr.USER_CREDENTIALS.getKey());
+        List<String> userPass =
+          (List<String>)AuParamType.UserPasswd.parse(userPassStr);
+        conn.setRequestProperty("content-type", Constants.FORM_ENCODING_URL);
+        conn.setRequestEntity(String.format("email=%s&password=%s",
+                                            UrlUtil.encodeUrl(userPass.get(0)),
+                                            UrlUtil.encodeUrl(userPass.get(1))));
+      } catch (AuParamType.InvalidFormatException e) {
+        // XXX
+        CacheException ce =
+          new CacheException.PermissionException("Malformed credentials");
+        ce.initCause(e);
+        throw ce;
       }
+    }
+
+    @Override
+    protected void consume(FetchedUrlData fud) throws IOException {
       ObjectMapper objectMapper = new ObjectMapper();
-      JsonNode json = objectMapper.readTree(conn.getUncompressedResponseInputStream());
+      JsonNode json = objectMapper.readTree(fud.getInputStream());
       String authStr = String.format("LOW %s:%s",
                                      json.get("values").get("s3").get("access").asText(),
                                      json.get("values").get("s3").get("secret").asText());
       log.debug3(String.format("Resulting authorization string: %s", authStr));
       crawlFacade.putStateObj(FACADE_KEY_AUTHORIZATION_STRING, authStr);
     }
-    catch (CacheException ce) {
-      log.debug2("Fatal exception in the POST request to establish the session", ce);
-      throw ce; // FIXME
-    }
-    catch (IOException ioe) {
-      log.debug2("I/O exception processing the POST request to establish the session", ioe);
-      CacheException ce = new CacheException();
-      ce.initCause(ioe);
-      throw ce; // FIXME
-    }
+
   }
 
 }
