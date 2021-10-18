@@ -90,7 +90,22 @@ public class MsHtmlHashFilterFactory implements FilterFactory {
     // <span class="access_icon_s keyicon accesskey-icon"
     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "access_icon"),
 
-    };
+    // filter out the following https://www.microbiologyresearch.org/content/journal/jmm/10.1099/jmm.0.000032     
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "mostcitedcontainer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "mostreadcontainer"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "mostviewedloading"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "copyright-info"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "metrics_content"),
+    HtmlNodeFilters.tagWithAttributeRegex("form", "id", "pptDwnld"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "itemFullTextLoading"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hiddenjsdiv"),
+    HtmlNodeFilters.tagWithAttributeRegex("form", "id","dataandmedia"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class","itemDataMediaLoading"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journal-volume-issue-container"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-access-icon-and-access"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hidden-js-div"),
+          
+  };
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
