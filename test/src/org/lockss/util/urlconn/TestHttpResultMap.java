@@ -346,9 +346,9 @@ public class TestHttpResultMap extends LockssTestCase {
     MyHttpResultHandler handler = new MyHttpResultHandler() {
         @Override
         public void init(HttpResultMap map) {
-          map.storeResultCategoryEntries(HttpResultCodeCategory.MOVE_TEMP,
+          map.storeResultCategoryEntries(HttpResultCodeCategory.RedirectTempCodes,
                                          h1);
-          map.storeResultCategoryEntries(HttpResultCodeCategory.PERMISSION,
+          map.storeResultCategoryEntries(HttpResultCodeCategory.AuthCodes,
                                          CacheException.RetryableNetworkException_5_60S.class);
         }};
     handler.init(resultMap);

@@ -56,26 +56,41 @@ public class HttpResultMap implements CacheResultMap {
    * 
    */
   public enum HttpResultCodeCategory {
-    Success(L(200, 203, 304),
-            CacheSuccess.class),
-    RETRY_SAME_URL(L(408, 409, 413, 500, 502, 503, 504),
-                   CacheException.RetrySameUrlException.class),
-    MOVE_PERM(L(301),
-              CacheException.NoRetryPermUrlException.class),
-    MOVE_TEMP(L(302, 303, 307),
-              CacheException.NoRetryTempUrlException.class),
-    UNIMPLEMENTED(L(CacheException.UnimplementedCodeException.class)),
-    PERMISSION(L(401, 403,  407),
-               CacheException.PermissionException.class),
-    EXPECTED(L(305, 402),
-             CacheException.ExpectedNoRetryException.class),
-    RETRY_DEAD_LINK(L(CacheException.RetryDeadLinkException.class)),
-    NO_RETRY_DEAD_LINK(L(204, 300, 400, 404, 405, 406, 410),
-                       CacheException.NoRetryDeadLinkException.class),
-    UNEXPECTED_FAIL(L(201, 202, 205, 206, 306, 411, 412, 416, 417, 501, 505),
-                    CacheException.UnexpectedNoRetryFailException.class),
-    UNEXPECTED_NO_FAIL(L(414, 415),
-                       CacheException.UnexpectedNoRetryNoFailException.class),
+    AuthCodes(L(401, 402, 403, 407, 495, 496, 511, 526, 561),
+              CacheException.PermissionException.class),
+    ClientErrorCodes(L(400, 405, 411, 413, 414, 415, 416, 417, 421,
+                       431, 449, 463, 494, 497, 498, 499, 510),
+                     CacheException.UnexpectedNoRetryFailException.class),
+    DeadLinkCodes(L(204, 404, 410, 451),
+                         CacheException.NoRetryDeadLinkException.class),
+    InformationalCodes(L(100, 101, 102, 103),
+                       CacheException.UnexpectedNoRetryFailException.class),
+    PermenentServerCondiditionCodes(L(406, 501, 505, 506, 520, 525, 530),
+                        CacheException.UnexpectedNoRetryFailException.class),
+    RedirectTempCodes(L(302, 303, 307),
+                  CacheException.NoRetryTempUrlException.class),
+    RedirectPermCodes(L(301, 308),
+                  CacheException.NoRetryPermUrlException.class),
+    RedirectCodes(L(301, 302, 303, 307, 308)),
+    RetryableNetworkCodes(L(460, 499),
+                          CacheException.RetryableNetworkException_3_30S.class),
+    ServerLimitCodes(L(509, 529),
+                     CacheException.RetryableNetworkException_3_30S.class),
+    SuccessCodes(L(200, 203, 304),
+                 CacheSuccess.class),
+    TimeoutCodes(L(408, 440, 522, 524, 527, 598),
+                 CacheException.RetrySameUrlException.class),
+    TransientServerConditionCodes(L(409, 412, 426, 429,
+                                    500, 502, 503, 504, 507, 521, 523),
+                 CacheException.RetrySameUrlException.class),
+    UnexpectedCodes(L(201, 206, 418, 444, 530),
+                 CacheException.UnexpectedNoRetryFailException.class),
+    UnHandledCodes(L(202, 205, 218, 226, 300, 305, 306,
+                     419, 420, 420, 426, 428, 430, 450, 451),
+                 CacheException.UnexpectedNoRetryFailException.class),
+    WebDAVCodes(L(207, 208, 422, 423, 424, 508),
+                 CacheException.UnexpectedNoRetryFailException.class),
+    
 
     // IOExceptions
     MalformedUrl(L(MalformedURLException.class),
@@ -191,7 +206,7 @@ public class HttpResultMap implements CacheResultMap {
     List<Class> getTriggerClasses() {
       return triggerClasses;
     }
-  }    
+  }
 
   /** Terse way to create a Triggers */
   private static Triggers L(Object... triggers) {
