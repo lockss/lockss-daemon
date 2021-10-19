@@ -501,6 +501,22 @@ public class SubTreeArticleIteratorBuilder {
               logger.debug2("Skipping additional aspects");
             }
           }
+          // Set roles from other roles if orders specified (unless only counting articles)
+          if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
+            for (Map.Entry<String, List<String>> entry : rolesFromOtherRoles.entrySet()) {
+              String role = entry.getKey();
+              for (String otherRole : entry.getValue()) {
+                CachedUrl foundCu = af.getRoleCu(otherRole); 
+                if (foundCu != null) {
+                  if (isDebug2) {
+                    logger.debug2(String.format("CU for %s set to: %s", otherRole, foundCu.getUrl()));
+                  }
+                  af.setRoleCu(role, foundCu);
+                  break;
+                }
+              }
+            }
+          }
           // Override full text CU if order specified
           if (rolesForFullText.size() > 0) {
             if (isDebug2) {
@@ -518,27 +534,11 @@ public class SubTreeArticleIteratorBuilder {
               }
             }
           }
-          // Set roles from other roles if orders specified (unless only counting articles)
-          if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
-            for (Map.Entry<String, List<String>> entry : rolesFromOtherRoles.entrySet()) {
-              String role = entry.getKey();
-              for (String otherRole : entry.getValue()) {
-                CachedUrl foundCu = af.getRoleCu(otherRole); 
-                if (foundCu != null) {
-                  if (isDebug2) {
-                    logger.debug2(String.format("CU for %s set to: %s", otherRole, foundCu.getUrl()));
-                  }
-                  af.setRoleCu(role, foundCu);
-                  break;
-                }
-              }
-            }
-          }
           // Callers should call emitArticleFiles(af);
           return af;
         }
       }
-      logger.warning(String.format("%s in %s did not match any expected patterns", url, au.getName()));
+      logger.debug(String.format("%s in %s did not match any expected patterns", url, au.getName()));
       return null;
     }
 
