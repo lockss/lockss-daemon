@@ -87,6 +87,16 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
 
 
 
+    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+      // check if we are loking at a chapter, if so, ignore it.
+      if (thisAM.getRaw(ScienceOpenBookXmlSchemaHelper.chapter_title)!=null) {
+        log.debug3("found a book_chapter, not emitting");
+        return false;
+      }
+      return super.preEmitCheck(schemaHelper, cu, thisAM);
+    }
+
     /*
      * There are two types of XML files
      * Each meeting has a top level XML that encompasses the entire conference.
@@ -118,7 +128,7 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("in AIAA postCookProcess");
+      log.debug3("in postCookProcess");
       //If we didn't get a valid date value, use the copyright year if it's there
       if (thisAM.get(MetadataField.FIELD_DATE) == null) {
         if (thisAM.getRaw(ScienceOpenBookXmlSchemaHelper.chapter_copyright_year) != null) {
@@ -131,7 +141,7 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
           }
         }
       }
-      // this is definnitely a book
+      // this is definitely a book
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
       if (thisAM.get(MetadataField.FIELD_ACCESS_URL).endsWith(".pdf")) {
         // but only a chapter if we have content associated with it
