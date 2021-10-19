@@ -32,17 +32,17 @@
       au < manifest ; exists ; 2006 ; The Chaucer Review Volume 2006 ; 2006 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2007 ; The Chaucer Review Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; The Chaucer Review Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; The Chaucer Review Volume 2012 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; The Chaucer Review Volume 2013 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; The Chaucer Review Volume 2015 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2016 ; The Chaucer Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; The Chaucer Review Volume 2017 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; The Chaucer Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; The Chaucer Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; The Chaucer Review Volume 2012 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; The Chaucer Review Volume 2013 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; The Chaucer Review Volume 2015 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; The Chaucer Review Volume 2016 ; 2016 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; The Chaucer Review Volume 2017 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; The Chaucer Review Volume 2018 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; The Chaucer Review Volume 2019 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; The Chaucer Review Volume 2020 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Chaucer Review Volume 2021 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -59,16 +59,16 @@
       param[journal_id] = complitstudies
       
  
-      au < finished ; manifest ; 2010 ; Comparative Literature Studies Volume 47 ; 2010 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Comparative Literature Studies Volume 47 ; 2010 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Comparative Literature Studies Volume 48 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; Comparative Literature Studies Volume 49 ; 2012 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2013 ; Comparative Literature Studies Volume 50 ; 2013 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Comparative Literature Studies Volume 51 ; 2014 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Comparative Literature Studies Volume 52 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Comparative Literature Studies Volume 53 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Comparative Literature Studies Volume 54 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Comparative Literature Studies Volume 55 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; Comparative Literature Studies Volume 56 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; Comparative Literature Studies Volume 50 ; 2013 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Comparative Literature Studies Volume 51 ; 2014 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Comparative Literature Studies Volume 52 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Comparative Literature Studies Volume 53 ; 2016 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Comparative Literature Studies Volume 54 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Comparative Literature Studies Volume 55 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; Comparative Literature Studies Volume 56 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Comparative Literature Studies Volume 57 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Comparative Literature Studies Volume 58 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -85,13 +85,13 @@
     
       param[journal_id] = critphilrace
 
-      au < finished ; manifest ; 2013 ; Critical Philosophy of Race Volume 1 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2014 ; Critical Philosophy of Race Volume 2 ; 2014 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Critical Philosophy of Race Volume 3 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Critical Philosophy of Race Volume 4 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Critical Philosophy of Race Volume 5 ; 2017 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Critical Philosophy of Race Volume 6 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2019 ; Critical Philosophy of Race Volume 7 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; Critical Philosophy of Race Volume 1 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; Critical Philosophy of Race Volume 2 ; 2014 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Critical Philosophy of Race Volume 3 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Critical Philosophy of Race Volume 4 ; 2016 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Critical Philosophy of Race Volume 5 ; 2017 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Critical Philosophy of Race Volume 6 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; Critical Philosophy of Race Volume 7 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Critical Philosophy of Race Volume 8 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Critical Philosophy of Race Volume 9 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -107,16 +107,16 @@
     >
       param[journal_id] = edgallpoerev
 
-      au < finished ; manifest ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 2010 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 2010 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 2012 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; The Edgar Allan Poe Review Volume 17 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; The Edgar Allan Poe Review Volume 18 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; The Edgar Allan Poe Review Volume 19 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; The Edgar Allan Poe Review Volume 17 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; The Edgar Allan Poe Review Volume 18 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; The Edgar Allan Poe Review Volume 19 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 2019 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Edgar Allan Poe Review Volume 22 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -132,15 +132,15 @@
     >
       param[journal_id] = eugeoneirevi
 
-      au < finished ; manifest ; 2010 ; The Eugene O'Neill Review Volume 32 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; The Eugene O'Neill Review Volume 33 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; The Eugene O'Neill Review Volume 32 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; The Eugene O'Neill Review Volume 33 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; The Eugene O'Neill Review Volume 34 ; 2013 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2014 ; The Eugene O'Neill Review Volume 35 ; 2014 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; The Eugene O'Neill Review Volume 36 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2016 ; The Eugene O'Neill Review Volume 37 ; 2016 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; The Eugene O'Neill Review Volume 38 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; The Eugene O'Neill Review Volume 39 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; The Eugene O'Neill Review Volume 40 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; The Eugene O'Neill Review Volume 35 ; 2014 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; The Eugene O'Neill Review Volume 36 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; The Eugene O'Neill Review Volume 37 ; 2016 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; The Eugene O'Neill Review Volume 38 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; The Eugene O'Neill Review Volume 39 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; The Eugene O'Neill Review Volume 40 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Eugene O'Neill Review Volume 41 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Eugene O'Neill Review Volume 42 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -158,17 +158,17 @@
       param[journal_id] = fscotfitzrevi
 
 
-      au < finished ; manifest ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; The F. Scott Fitzgerald Review Volume 13 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; The F. Scott Fitzgerald Review Volume 14 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; The F. Scott Fitzgerald Review Volume 15 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; The F. Scott Fitzgerald Review Volume 16 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 2020 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 2010 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 2013 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 2014 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; The F. Scott Fitzgerald Review Volume 13 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; The F. Scott Fitzgerald Review Volume 14 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; The F. Scott Fitzgerald Review Volume 15 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; The F. Scott Fitzgerald Review Volume 16 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 2020 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 2021 ; https://www.jstor.org/ ; >
 
   }
@@ -185,16 +185,16 @@
       param[journal_id] = goodsociety
       comment[continues] = 2157-2968
 
-      au < finished ; manifest ; 2010 ; The Good Society Volume 19 ; 2010 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; The Good Society Volume 20 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; The Good Society Volume 21 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; The Good Society Volume 22 ; 2013 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; The Good Society Volume 19 ; 2010 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; The Good Society Volume 20 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; The Good Society Volume 21 ; 2012 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; The Good Society Volume 22 ; 2013 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2014 ; The Good Society Volume 23 ; 2014 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2015 ; The Good Society Volume 24 ; 2015 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; The Good Society Volume 25 ; 2016 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2017 ; The Good Society Volume 26 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; The Good Society Volume 27 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; The Good Society Volume 28 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; The Good Society Volume 24 ; 2015 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; The Good Society Volume 25 ; 2016 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; The Good Society Volume 26 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; The Good Society Volume 27 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; The Good Society Volume 28 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Good Society Volume 29 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Good Society Volume 30 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -222,17 +222,17 @@
       au < doNotProcess ; exists ; 2006 ; Interdisciplinary Literary Studies Volume 7-8 ; 2006 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8-9 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9-10 ; 2008 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 2009 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 2010 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 2011 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 2009 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 2010 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 2011 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 2014 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2015 ; Interdisciplinary Literary Studies Volume 17 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Interdisciplinary Literary Studies Volume 18 ; 2016 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Interdisciplinary Literary Studies Volume 19 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Interdisciplinary Literary Studies Volume 20 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2019 ; Interdisciplinary Literary Studies Volume 21 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Interdisciplinary Literary Studies Volume 17 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Interdisciplinary Literary Studies Volume 18 ; 2016 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Interdisciplinary Literary Studies Volume 19 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Interdisciplinary Literary Studies Volume 20 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; Interdisciplinary Literary Studies Volume 21 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Interdisciplinary Literary Studies Volume 22 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Interdisciplinary Literary Studies Volume 23 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -249,13 +249,13 @@
 
       param[journal_id] = jafrireli
 
-      au < finished ; manifest ; 2013 ; Journal of Africana Religions Volume 1-2 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; Journal of Africana Religions Volume 1-2 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Africana Religions Volume 3 ; 2014 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2015 ; Journal of Africana Religions Volume 4 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Africana Religions Volume 5 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Journal of Africana Religions Volume 6 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Journal of Africana Religions Volume 7 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; Journal of Africana Religions Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Journal of Africana Religions Volume 4 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Africana Religions Volume 5 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Journal of Africana Religions Volume 6 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Journal of Africana Religions Volume 7 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; Journal of Africana Religions Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Africana Religions Volume 9 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Africana Religions Volume 10 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -272,14 +272,14 @@
 
       param[journal_id] = jasseinsteffe
 
-      au < finished ; manifest ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 2013 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 4-5 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Assessment and Institutional Effectiveness Volume 5-6 ; 2016 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Journal of Assessment and Institutional Effectiveness Volume 6 ; 2017 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Journal of Assessment and Institutional Effectiveness Volume 7 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2019 ; Journal of Assessment and Institutional Effectiveness Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 2013 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 4-5 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Assessment and Institutional Effectiveness Volume 5-6 ; 2016 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Journal of Assessment and Institutional Effectiveness Volume 6 ; 2017 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Journal of Assessment and Institutional Effectiveness Volume 7 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; Journal of Assessment and Institutional Effectiveness Volume 8 ; 2019 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < ingNotReady ; exists ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 9 ; 2020 ; https://www.jstor.org/ ; >
       au < expected ; exists ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -296,15 +296,15 @@
 
       param[journal_id] = jaynrandstud
 
-      au < finished ; manifest ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 2012 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 2012 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 2014 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2015 ; The Journal of Ayn Rand Studies Volume 15 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2016 ; The Journal of Ayn Rand Studies Volume 16 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; The Journal of Ayn Rand Studies Volume 17 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; The Journal of Ayn Rand Studies Volume 18 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; The Journal of Ayn Rand Studies Volume 15 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; The Journal of Ayn Rand Studies Volume 16 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; The Journal of Ayn Rand Studies Volume 17 ; 2017 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; The Journal of Ayn Rand Studies Volume 18 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; The Journal of Ayn Rand Studies Volume 20 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Journal of Ayn Rand Studies Volume 21 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -322,12 +322,12 @@
       param[journal_id] = jeasmedarcherstu
 
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 2013 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2014 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 3 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2016 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 4 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 6 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2014 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 3 ; 2015 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 4 ; 2016 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 6 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 9 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -344,16 +344,16 @@
 
       param[journal_id] = jgeneeduc
 
-      au < finished ; manifest ; 2010 ; The Journal of General Education Volume 59 ; 2010 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2011 ; The Journal of General Education Volume 60 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; The Journal of General Education Volume 59 ; 2010 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; The Journal of General Education Volume 60 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of General Education Volume 61 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of General Education Volume 62 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of General Education Volume 63 ; 2014 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2015 ; The Journal of General Education Volume 64 ; 2015 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; The Journal of General Education Volume 65 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; The Journal of General Education Volume 66 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; The Journal of General Education Volume 67 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; The Journal of General Education Volume 68 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; The Journal of General Education Volume 64 ; 2015 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; The Journal of General Education Volume 65 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; The Journal of General Education Volume 66 ; 2017 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; The Journal of General Education Volume 67 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; The Journal of General Education Volume 68 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < ingNotReady ; exists ; 2020 ; The Journal of General Education Volume 69 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; The Journal of General Education Volume 70 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -371,16 +371,16 @@
       param[journal_id] = jmedirelicult
       comment[continues] = Mystics Quarterly 0742-5503
 
-      au < finished ; manifest ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 2010 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 2012 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 2013 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 2014 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2015 ; Journal of Medieval Religious Cultures Volume 41 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Medieval Religious Cultures Volume 42 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Journal of Medieval Religious Cultures Volume 43 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; Journal of Medieval Religious Cultures Volume 44 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Medieval Religious Cultures Volume 41 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Medieval Religious Cultures Volume 42 ; 2016 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Journal of Medieval Religious Cultures Volume 43 ; 2017 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; Journal of Medieval Religious Cultures Volume 44 ; 2018 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Medieval Religious Cultures Volume 46 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Medieval Religious Cultures Volume 47 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -398,16 +398,16 @@
       param[journal_id] = jmodeperistud
       # volume numbers don't line up with years - how to handle already processed content?
 
-      au < finished ; manifest ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 2010 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 2010 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2011 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 2012 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Modern Periodical Studies Volume 4-5 ; 2014 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2015 ; Journal of Modern Periodical Studies Volume 5-6 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Modern Periodical Studies Volume 6 ; 2016 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2017 ; Journal of Modern Periodical Studies Volume 7 ; 2017 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Journal of Modern Periodical Studies Volume 8 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2019 ; Journal of Modern Periodical Studies Volume 9 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Modern Periodical Studies Volume 5-6 ; 2015 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Modern Periodical Studies Volume 6 ; 2016 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; Journal of Modern Periodical Studies Volume 7 ; 2017 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Journal of Modern Periodical Studies Volume 8 ; 2018 ; https://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; Journal of Modern Periodical Studies Volume 9 ; 2019 ; https://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Modern Periodical Studies Volume 10 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Modern Periodical Studies Volume 11 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -427,17 +427,17 @@
       au < doNotProcess ; exists ; 2006 ; Journal of Moravian History Volume 2006 ; 2006 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2007 ; Journal of Moravian History Volume 2007 ; 2007 ; https://www.jstor.org/ ; >
       au < manifest ; exists ; 2008 ; Journal of Moravian History Volume 2008 ; 2008 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Journal of Moravian History Volume 12 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Journal of Moravian History Volume 12 ; 2012 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Moravian History Volume 13 ; 2013 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2014 ; Journal of Moravian History Volume 14 ; 2014 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2015 ; Journal of Moravian History Volume 15 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Moravian History Volume 16 ; 2016 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2017 ; Journal of Moravian History Volume 17 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Journal of Moravian History Volume 18 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2019 ; Journal of Moravian History Volume 19 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Moravian History Volume 14 ; 2014 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; Journal of Moravian History Volume 15 ; 2015 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Moravian History Volume 16 ; 2016 ; http://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; Journal of Moravian History Volume 17 ; 2017 ; http://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Journal of Moravian History Volume 18 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019 ; Journal of Moravian History Volume 19 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Moravian History Volume 20 ; 2020 ; https://www.jstor.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Moravian History Volume 21 ; 2021 ; https://www.jstor.org/ ; >
 
@@ -454,12 +454,12 @@
 
       param[journal_id] = jnietstud
 
-      au < finished ; manifest ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 2011 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 2012 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 2013 ; https://www.jstor.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 2014 ; https://www.jstor.org/ ; >
-      au < finished ; manifest ; 2015 ; The Journal of Nietzsche Studies Volume 46 ; 2015 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016 ; The Journal of Nietzsche Studies Volume 47 ; 2016 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; The Journal of Nietzsche Studies Volume 46 ; 2015 ; http://www.jstor.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016 ; The Journal of Nietzsche Studies Volume 47 ; 2016 ; http://www.jstor.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; The Journal of Nietzsche Studies Volume 48 ; 2017 ; http://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; The Journal of Nietzsche Studies Volume 49 ; 2018 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; The Journal of Nietzsche Studies Volume 50 ; 2019 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >

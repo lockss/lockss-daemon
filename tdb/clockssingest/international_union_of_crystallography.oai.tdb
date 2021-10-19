@@ -247,9 +247,9 @@
     au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (July 2009) ; 2009-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (August 2009) ; 2009-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (September 2009) ; 2009-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (October 2009) ; 2009-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (October 2009) ; 2009-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (November 2009) ; 2009-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < finished ; manifest ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (December 2009) ; 2009-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; 65 ; Acta Crystallographica Section E: Structure Reports Online Volume 65 (December 2009) ; 2009-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
 
     au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (January 2010) ; 2010-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
     au < doNotProcess ; exists ; 2010 ; 66 ; Acta Crystallographica Section E: Structure Reports Online Volume 66 (February 2010) ; 2010-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
@@ -288,7 +288,7 @@
     au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (November 2012) ; 2012-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
     au < doNotProcess ; exists ; 2012 ; 68 ; Acta Crystallographica Section E: Structure Reports Online Volume 68 (December 2012) ; 2012-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
     #process a few 2013 dates in order to pick up early-publication-date articles from volume 70
-    au < finished ; manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (January 2013) ; 2013-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (January 2013) ; 2013-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (February 2013) ; 2013-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (March 2013) ; 2013-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (April 2013) ; 2013-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
@@ -299,13 +299,13 @@
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (September 2013) ; 2013-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (October 2013) ; 2013-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (November 2013) ; 2013-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; >
-    au < finished ; manifest ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (December 2013) ; 2013-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; 69 ; Acta Crystallographica Section E: Structure Reports Online Volume 69 (December 2013) ; 2013-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (January 2014) ; 2014-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (February 2014) ; 2014-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (March 2014) ; 2014-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (April 2014) ; 2014-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (May 2014) ; 2014-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (June 2014) ; 2014-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (June 2014) ; 2014-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (July 2014) ; 2014-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (August 2014) ; 2014-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 (September 2014) ; 2014-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
@@ -329,8 +329,8 @@
     
     param[au_oai_set] = iucrj
 
-    au < finished ; manifest ; 2013 ; 1 ; IUCrJ Volume 1 (October 2013 2013) ; 2013-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2013 ; 1 ; IUCrJ Volume 1 (December 2013 2013) ; 2013-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; 1 ; IUCrJ Volume 1 (October 2013 2013) ; 2013-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; 1 ; IUCrJ Volume 1 (December 2013 2013) ; 2013-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     
     #jan mar may jul sep nov
     au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 (January 2014) ; 2014-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -359,56 +359,56 @@
     au < finished ; finished ; 2015 ; 2 ; IUCrJ Volume 2 (November 2015) ; 2015-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2015 ; 2 ; IUCrJ Volume 2 (December 2015) ; 2015-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (January 2016) ; 2016-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (February 2016) ; 2016-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (March 2016) ; 2016-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (April 2016) ; 2016-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (January 2016) ; 2016-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (February 2016) ; 2016-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (March 2016) ; 2016-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (April 2016) ; 2016-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < doesNotExist ; doesNotExist ; 2016 ; 3 ; IUCrJ Volume 3 (May 2016) ; 2016-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (June 2016) ; 2016-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (July 2016) ; 2016-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (August 2016) ; 2016-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (September 2016) ; 2016-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (October 2016) ; 2016-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (June 2016) ; 2016-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (July 2016) ; 2016-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (August 2016) ; 2016-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (September 2016) ; 2016-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (October 2016) ; 2016-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < doesNotExist ; doesNotExist ; 2016 ; 3 ; IUCrJ Volume 3 (November 2016) ; 2016-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < finished ; manifest ; 2016 ; 3 ; IUCrJ Volume 3 (December 2016) ; 2016-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 3 ; IUCrJ Volume 3 (December 2016) ; 2016-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
 
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (January 2017) ; 2017-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (February 2017) ; 2017-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (March 2017) ; 2017-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (April 2017) ; 2017-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (May 2017) ; 2017-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (June 2017) ; 2017-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (July 2017) ; 2017-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (August 2017) ; 2017-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (September 2017) ; 2017-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2017 ; 4 ; IUCrJ Volume 4 (October 2017) ; 2017-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (January 2017) ; 2017-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (February 2017) ; 2017-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (March 2017) ; 2017-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (April 2017) ; 2017-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (May 2017) ; 2017-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (June 2017) ; 2017-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (July 2017) ; 2017-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (August 2017) ; 2017-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (September 2017) ; 2017-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; 4 ; IUCrJ Volume 4 (October 2017) ; 2017-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < doesNotExist ; doesNotExist ; 2017 ; 4 ; IUCrJ Volume 4 (November 2017) ; 2017-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < doesNotExist ; doesNotExist ; 2017 ; 4 ; IUCrJ Volume 4 (December 2017) ; 2017-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (January 2018) ; 2018-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (February 2018) ; 2018-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (March 2018) ; 2018-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (April 2018) ; 2018-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (May 2018) ; 2018-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (June 2018) ; 2018-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (July 2018) ; 2018-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (August 2018) ; 2018-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (September 2018) ; 2018-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 5 ; IUCrJ Volume 5 (October 2018) ; 2018-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (January 2018) ; 2018-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (February 2018) ; 2018-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (March 2018) ; 2018-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (April 2018) ; 2018-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (May 2018) ; 2018-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (June 2018) ; 2018-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (July 2018) ; 2018-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (August 2018) ; 2018-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (September 2018) ; 2018-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 5 ; IUCrJ Volume 5 (October 2018) ; 2018-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2018 ; 5 ; IUCrJ Volume 5 (November 2018) ; 2018-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < doesNotExist ; doesNotExist ; 2018 ; 5 ; IUCrJ Volume 5 (December 2018) ; 2018-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (January 2019) ; 2019-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (February 2019) ; 2019-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (March 2019) ; 2019-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (April 2019) ; 2019-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (May 2019) ; 2019-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (June 2019) ; 2019-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (July 2019) ; 2019-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (August 2019) ; 2019-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (September 2019) ; 2019-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (October 2019) ; 2019-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 6 ; IUCrJ Volume 6 (November 2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (January 2019) ; 2019-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (February 2019) ; 2019-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (March 2019) ; 2019-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (April 2019) ; 2019-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (May 2019) ; 2019-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (June 2019) ; 2019-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (July 2019) ; 2019-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (August 2019) ; 2019-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (September 2019) ; 2019-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (October 2019) ; 2019-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 6 ; IUCrJ Volume 6 (November 2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (December 2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
     au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (January 2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -452,20 +452,20 @@
     
     param[au_oai_set] = iucrdata
     
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (January 2016) ; 2016-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (February 2016) ; 2016-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (March 2016) ; 2016-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (April 2016) ; 2016-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (May 2016) ; 2016-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (June 2016) ; 2016-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (July 2016) ; 2016-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (August 2016) ; 2016-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (September 2016) ; 2016-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (October 2016) ; 2016-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (November 2016) ; 2016-11 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2016 ; 1 ; IUCrData Volume 1 (December 2016) ; 2016-12 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (January 2016) ; 2016-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (February 2016) ; 2016-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (March 2016) ; 2016-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (April 2016) ; 2016-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (May 2016) ; 2016-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (June 2016) ; 2016-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (July 2016) ; 2016-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (August 2016) ; 2016-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (September 2016) ; 2016-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (October 2016) ; 2016-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (November 2016) ; 2016-11 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 1 ; IUCrData Volume 1 (December 2016) ; 2016-12 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     
-    au < finished ; manifest ; 2017 ; 2 ; IUCrData Volume 2 (January 2017) ; 2017-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (January 2017) ; 2017-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (February 2017) ; 2017-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (March 2017) ; 2017-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (April 2017) ; 2017-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
@@ -478,31 +478,31 @@
     au < finished ; crawling ; 2017 ; 2 ; IUCrData Volume 2 (November 2017) ; 2017-11 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2017 ; 2 ; IUCrData Volume 2 (December 2017) ; 2017-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (January 2018) ; 2018-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (February 2018) ; 2018-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (March 2018) ; 2018-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (April 2018) ; 2018-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (May 2018) ; 2018-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (June 2018) ; 2018-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (July 2018) ; 2018-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (August 2018) ; 2018-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (September 2018) ; 2018-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (October 2018) ; 2018-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (November 2018) ; 2018-11 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 3 ; IUCrData Volume 3 (December 2018) ; 2018-12 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (January 2018) ; 2018-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (February 2018) ; 2018-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (March 2018) ; 2018-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (April 2018) ; 2018-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (May 2018) ; 2018-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (June 2018) ; 2018-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (July 2018) ; 2018-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (August 2018) ; 2018-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (September 2018) ; 2018-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (October 2018) ; 2018-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (November 2018) ; 2018-11 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 3 ; IUCrData Volume 3 (December 2018) ; 2018-12 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
 
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (January 2019) ; 2019-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (February 2019) ; 2019-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (March 2019) ; 2019-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (April 2019) ; 2019-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (May 2019) ; 2019-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (June 2019) ; 2019-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (July 2019) ; 2019-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (August 2019) ; 2019-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (September 2019) ; 2019-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (October 2019) ; 2019-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (November 2019) ; 2019-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 4 ; IUCrData Volume 4 (December 2019) ; 2019-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (January 2019) ; 2019-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (February 2019) ; 2019-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (March 2019) ; 2019-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (April 2019) ; 2019-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (May 2019) ; 2019-05 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (June 2019) ; 2019-06 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (July 2019) ; 2019-07 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (August 2019) ; 2019-08 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (September 2019) ; 2019-09 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (October 2019) ; 2019-10 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (November 2019) ; 2019-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 4 ; IUCrData Volume 4 (December 2019) ; 2019-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
 
     au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (January 2020) ; 2020-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (February 2020) ; 2020-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >

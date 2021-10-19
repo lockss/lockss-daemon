@@ -81,14 +81,14 @@
       au < frozen ; exists ; 2005 ; 2005 ; Analecta Volume 35 ; 35 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Analecta Volume 36 ; 36 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Analecta Volume 37 ; 37 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Analecta Volume 38 ; 38 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2009 ; 2009 ; Analecta Volume 39 ; 39 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2010 ; 2010 ; Analecta Volume 40 ; 40 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; Analecta Volume 41 ; 41 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; 2012 ; Analecta Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013 ; 2013 ; Analecta Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2014 ; 2014 ; Analecta Volume 44 ; 44 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; 2015 ; Analecta Volume 45 ; 45 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; 2008 ; Analecta Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; 2009 ; Analecta Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; 2010 ; Analecta Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; Analecta Volume 41 ; 41 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; 2012 ; Analecta Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; 2013 ; Analecta Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; 2014 ; Analecta Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 2015 ; Analecta Volume 45 ; 45 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; 2016 ; Analecta Volume 46 ; 46 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Analecta Volume 47 ; 47 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Analecta Volume 48 ; 48 ; >
@@ -129,16 +129,16 @@
       au < frozen ; exists ; 2005 ; 2005 ; Anthropology of East Europe Review Volume 23 ; 23 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Anthropology of East Europe Review Volume 24 ; 24 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Anthropology of East Europe Review Volume 25 ; 25 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Anthropology of East Europe Review Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2009 ; 2009 ; Anthropology of East Europe Review Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; 2008 ; Anthropology of East Europe Review Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2009 ; 2009 ; Anthropology of East Europe Review Volume 27 ; 27 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 ; >
-      au < finished ; manifest ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Anthropology of East Europe Review Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Anthropology of East Europe Review Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Anthropology of East Europe Review Volume 34 ; 34 ; >
-      au < finished ; manifest ; 2017 ; 2017 ; Anthropology of East Europe Review Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; 2017 ; Anthropology of East Europe Review Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; 2019 ; Anthropology of East Europe Review Volume 36 ; 36 ; > 
       #no more published
 
@@ -272,10 +272,10 @@
 
       param[journal_id] = emt
 
-      au < finished ; manifest ; 2015 ; 2015 ; Ethnomusicology Translations Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016 ; 2016 ; Ethnomusicology Translations Volume 2-4 ; 2-4 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2017 ; 2017 ; Ethnomusicology Translations Volume 5-6 ; 5-6 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 2018 ; Ethnomusicology Translations Volume 7-8 ; 7-8 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 2015 ; Ethnomusicology Translations Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016 ; 2016 ; Ethnomusicology Translations Volume 2-4 ; 2-4 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; 2017 ; Ethnomusicology Translations Volume 5-6 ; 5-6 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; Ethnomusicology Translations Volume 7-8 ; 7-8 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Ethnomusicology Translations Volume 9-10 ; 9-10 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Ethnomusicology Translations Volume 10 ; 10 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Ethnomusicology Translations Volume 11-12 ; 11-12 ; >
@@ -299,7 +299,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Hindsight: Journal of Optemetry History Volume 46 ; 46 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Hindsight: Journal of Optemetry History Volume 47 ; 47 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Hindsight: Journal of Optemetry History Volume 48 ; 48 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; Hindsight: Journal of Optemetry History Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 2018 ; Hindsight: Journal of Optemetry History Volume 49 ; 49 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2019 ; 2019 ; Hindsight: Journal of Optemetry History Volume 50 ; 50 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Hindsight: Journal of Optemetry History Volume 52 ; 52 ; >
@@ -354,8 +354,8 @@
       au < frozen ; exists ; 2005 ; 2005 ; Hindsight: newsletter of the Optometric Historical Society Volume 36 ; 36 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Hindsight: newsletter of the Optometric Historical Society Volume 37 ; 37 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Hindsight: newsletter of the Optometric Historical Society Volume 38 ; 38 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Hindsight: newsletter of the Optometric Historical Society Volume 39 ; 39 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2009 ; 2009 ; Hindsight: newsletter of the Optometric Historical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; 2008 ; Hindsight: newsletter of the Optometric Historical Society Volume 39 ; 39 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2009 ; 2009 ; Hindsight: newsletter of the Optometric Historical Society Volume 40 ; 40 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -368,8 +368,8 @@
 
       param[journal_id] = thst
 
-      au < finished ; manifest ; 2017 ; 2017 ; The Hoosier Science Teacher Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 2018 ; The Hoosier Science Teacher Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; 2017 ; The Hoosier Science Teacher Volume 40 ; 40 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; The Hoosier Science Teacher Volume 41 ; 41 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2019 ; 2019 ; The Hoosier Science Teacher Volume 42 ; 42 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
       au < expected ; exists ; 2021 ; 2021 ; The Hoosier Science Teacher Volume 44 ; 44 ; >
@@ -384,15 +384,15 @@
 
       param[journal_id] = ijdl
 
-      au < finished ; manifest ; 2010 ; 2010 ; International Journal of Designs for Learning Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2011 ; 2011 ; International Journal of Designs for Learning Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; 2010 ; International Journal of Designs for Learning Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; 2011 ; International Journal of Designs for Learning Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; International Journal of Designs for Learning Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal of Designs for Learning Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Designs for Learning Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Designs for Learning Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; International Journal of Designs for Learning Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; International Journal of Designs for Learning Volume 8 ; 8 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; International Journal of Designs for Learning Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; International Journal of Designs for Learning Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; International Journal of Designs for Learning Volume 10 ; 10 ; >
 
   }
@@ -420,17 +420,17 @@
       au < frozen ; exists ; 2005 ; 2005 ; InULA Notes: Indiana University Librarians Association Volume 18 ; 18 ; >
       au < frozen ; exists ; 2006 ; 2006 ; InULA Notes: Indiana University Librarians Association Volume 19 (2006) ; 19 ; >
       au < frozen ; exists ; 2007 ; 2007 ; InULA Notes: Indiana University Librarians Association Volume 19-20 (2007) ; 19-20 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; InULA Notes: Indiana University Librarians Association Volume 20-21 (2008) ; 20-21 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2009 ; 2009 ; InULA Notes: Indiana University Librarians Association Volume 21 (2009) ; 21 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; InULA Notes: Indiana University Librarians Association Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; 2008 ; InULA Notes: Indiana University Librarians Association Volume 20-21 (2008) ; 20-21 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; 2009 ; InULA Notes: Indiana University Librarians Association Volume 21 (2009) ; 21 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; InULA Notes: Indiana University Librarians Association Volume 23 ; 23 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; InULA Notes: Indiana University Librarians Association Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; InULA Notes: Indiana University Librarians Association Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; InULA Notes: Indiana University Librarians Association Volume 27 ; 27 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; InULA Notes: Indiana University Librarians Association Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; InULA Notes: Indiana University Librarians Association Volume 29 ; 29 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; InULA Notes: Indiana University Librarians Association Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 2018 ; InULA Notes: Indiana University Librarians Association Volume 30 ; 30 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2019 ; 2019 ; InULA Notes: Indiana University Librarians Association Volume 31 ; 31 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; InULA Notes: Indiana University Librarians Association Volume 32 ; 32 ; >
       au < crawling ; exists ; 2021 ; 2021 ; InULA Notes: Indiana University Librarians Association Volume 33 ; 33 ; >
@@ -446,10 +446,10 @@
       param[journal_id] = iusburjh
       #Still in publication 2021
 
-      au < finished ; manifest ; 2012 ; 2012 ; IUSB Undergraduate Research Journal of History Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; 2014 ; IUSB Undergraduate Research Journal of History Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2015 ; 2015 ; IUSB Undergraduate Research Journal of History Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2016 ; 2016 ; IUSB Undergraduate Research Journal of History Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; 2012 ; IUSB Undergraduate Research Journal of History Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 2014 ; IUSB Undergraduate Research Journal of History Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; 2015 ; IUSB Undergraduate Research Journal of History Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; 2016 ; IUSB Undergraduate Research Journal of History Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; IUSB Undergraduate Research Journal of History Volume 7 ; 7 ; >
       au < frozen ; exists ; 2018 ; 2018 ; IUSB Undergraduate Research Journal of History Volume 8 ; 8 ; >
 
@@ -463,7 +463,7 @@
 
       param[journal_id] = jedhe
 
-      au < finished ; manifest ; 2016 ; 2016 ; Journal of Economic Development in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; 2016 ; Journal of Economic Development in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
       au < expected ; exists ; 2021 ; 2021 ; Journal of Economic Development in Higher Education Volume 4 ; 4 ; >
@@ -497,7 +497,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Teaching and Learning with Technology Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Teaching and Learning with Technology Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Teaching and Learning with Technology Volume 6 ; 6 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; Journal of Teaching and Learning with Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; Journal of Teaching and Learning with Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Teaching and Learning with Technology Volume 8 ; 8 ; >
       #no 2020 as of 12/5/2020
 
@@ -525,7 +525,7 @@
       au < ready ; exists ; 2008 ; 2008 ; Journal of the Indiana University Student Personnel Association Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; 2009 ; Journal of the Indiana University Student Personnel Association Volume 2009 ; 2009 ; >
       au < crawling ; exists ; 2010 ; 2010 ; Journal of the Indiana University Student Personnel Association Volume 2010 ; 2010 ; >
-      au < finished ; manifest ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 ; >
@@ -548,17 +548,17 @@
 
       param[journal_id] = josotl
 
-      au < finished ; manifest ; 2001 ; 2001 ; Journal of the Scholarship of Teaching and Learning Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2001 ; 2001 ; Journal of the Scholarship of Teaching and Learning Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2002 ; 2002 ; Journal of the Scholarship of Teaching and Learning Volume 2 ; 2 ; >
       au < crawling ; exists ; 2003 ; 2003 ; Journal of the Scholarship of Teaching and Learning Volume 3 ; 3 ; >
       au < frozen ; exists ; 2004 ; 2004 ; Journal of the Scholarship of Teaching and Learning Volume 4 ; 4 ; >
       au < frozen ; exists ; 2005 ; 2005 ; Journal of the Scholarship of Teaching and Learning Volume 5 ; 5 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Journal of the Scholarship of Teaching and Learning Volume 6 ; 6 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Journal of the Scholarship of Teaching and Learning Volume 7 ; 7 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Journal of the Scholarship of Teaching and Learning Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; Journal of the Scholarship of Teaching and Learning Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2008 ; 2008 ; Journal of the Scholarship of Teaching and Learning Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; Journal of the Scholarship of Teaching and Learning Volume 11 ; 11 ; reingest2.clockss.org:8085 >
 
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 ; >
@@ -566,7 +566,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of the Scholarship of Teaching and Learning Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of the Scholarship of Teaching and Learning Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of the Scholarship of Teaching and Learning Volume 17 ; 17 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; Journal of the Scholarship of Teaching and Learning Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; 2018 ; Journal of the Scholarship of Teaching and Learning Volume 18 ; 18 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of the Scholarship of Teaching and Learning Volume 19 ; 19 ; >
       #no 2020 as of 12/5/2020
 
@@ -579,7 +579,7 @@
     >
       param[journal_id] = jsriue
 
-      au < finished ; manifest ; 2017 ;2017 ; Journal of Student Research at Indiana University East Volume 1 (2017) ; 1 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ;2017 ; Journal of Student Research at Indiana University East Volume 1 (2017) ; 1 ; reingest4.clockss.org:8082 >
       #no 2018
       au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Student Research at Indiana University East Volume 1 (2019) ; 1 ; >
       #no 2020 as of 12/5/2020
@@ -594,17 +594,17 @@
       param[journal_id] = mar
 
       au < frozen ; exists ; 2007 ; 2007 ; Museum Anthropology Review Volume 1 ; 1 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Museum Anthropology Review Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; 2009 ; Museum Anthropology Review Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2010 ; 2010 ; Museum Anthropology Review Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2011 ; 2011 ; Museum Anthropology Review Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2008 ; 2008 ; Museum Anthropology Review Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; 2009 ; Museum Anthropology Review Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; 2010 ; Museum Anthropology Review Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2011 ; 2011 ; Museum Anthropology Review Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Museum Anthropology Review Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Museum Anthropology Review Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Museum Anthropology Review Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Museum Anthropology Review Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Museum Anthropology Review Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Museum Anthropology Review Volume 11 ; 11 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; Museum Anthropology Review Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; Museum Anthropology Review Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Museum Anthropology Review Volume 13 ; 13 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Museum Anthropology Review Volume 14 ; 14 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Museum Anthropology Review Volume 15 ; 15 ; >
@@ -626,15 +626,15 @@
       au < ready ; exists ; 2001 ; 2001 ; New Directions in Folklore Volume 5 ; 5 ; >
       au < crawling ; exists ; 2002 ; 2002 ; New Directions in Folklore Volume 6 ; 6 ; >
       au < crawling ; exists ; 2003 ; 2003 ; New Directions in Folklore Volume 7 ; 7 ; >
-      au < finished ; manifest ; 2010 ; 2010 ; New Directions in Folklore Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; New Directions in Folklore Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; 2010 ; New Directions in Folklore Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; New Directions in Folklore Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; New Directions in Folklore Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; New Directions in Folklore Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; New Directions in Folklore Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; New Directions in Folklore Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; New Directions in Folklore Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; New Directions in Folklore Volume 15 ; 15 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; New Directions in Folklore Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; 2018 ; New Directions in Folklore Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; New Directions in Folklore Volume 17 ; 17 ; >
       #no more published as of 2021-08-26
 
@@ -648,10 +648,10 @@
 
       param[journal_id] = iusbgender
 
-      au < finished ; manifest ; 2013 ; 2013 ; New Views on Gender Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; 2014 ; New Views on Gender Volume 15 ; 15 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; 2015 ; New Views on Gender Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016 ; 2016 ; New Views on Gender Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; 2013 ; New Views on Gender Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 2014 ; New Views on Gender Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 2015 ; New Views on Gender Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016 ; 2016 ; New Views on Gender Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; 2017 ; New Views on Gender Volume 18 [2017] ; 18 ; >
       au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; New Views on Gender Volume 18 [2018] ; 18 ; >
       au < frozen ; exists ; 2019 ; 2019 ; New Views on Gender Volume 19 ; 19 ; >
@@ -669,10 +669,10 @@
       #eisbn = 978-0-89357-793-3
       # Issues of this annual anthology are embargoed for two years after print publication in Rwanda.
 
-      au < finished ; manifest ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2010 ; 2010 ; The World is Our Home Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; The World is Our Home Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; 2012 ; The World is Our Home Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; 2010 ; The World is Our Home Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; The World is Our Home Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; 2012 ; The World is Our Home Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The World is Our Home Volume 5 ; 5 ; >
       au < frozen ; exists ; 2014 ; 2014 ; The World is Our Home Volume 6 ; 6 ; >
       au < frozen ; exists ; 2015 ; 2015 ; The World is Our Home Volume 7 ; 7 ; >
@@ -793,15 +793,15 @@
       au < frozen ; exists ; 2005 ; 2005 ; Indiana Magazine of History Volume 2005 ; 101 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Indiana Magazine of History Volume 2006 ; 102 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Indiana Magazine of History Volume 2007 ; 103 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Indiana Magazine of History Volume 2008 ; 104 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2009 ; 2009 ; Indiana Magazine of History Volume 2009 ; 105 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2010 ; 2010 ; Indiana Magazine of History Volume 2010 ; 106 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; Indiana Magazine of History Volume 2011 ; 107 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; 2012 ; Indiana Magazine of History Volume 2012 ; 108 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2008 ; 2008 ; Indiana Magazine of History Volume 2008 ; 104 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2009 ; 2009 ; Indiana Magazine of History Volume 2009 ; 105 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; 2010 ; Indiana Magazine of History Volume 2010 ; 106 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; Indiana Magazine of History Volume 2011 ; 107 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; 2012 ; Indiana Magazine of History Volume 2012 ; 108 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Indiana Magazine of History Volume 2013 ; 109 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Indiana Magazine of History Volume 2014 ; 110 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Indiana Magazine of History Volume 2015 ; 111 ; >
-      au < finished ; manifest ; 2016 ; 2016 ; Indiana Magazine of History Volume 2016 ; 112 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; 2016 ; Indiana Magazine of History Volume 2016 ; 112 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; Indiana Magazine of History Volume 2017 ; 113 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Indiana Magazine of History Volume 2018 ; 114 ; >
       #no more published as of 2021-08-26
@@ -888,13 +888,13 @@
       param[journal_id] = tmr
 
       au < manifest ; exists ; 1993 ; 1993 ; The Medieval Review Volume 1993 ; 1 ; >
-      au < finished ; manifest ; 1994 ; 1994 ; The Medieval Review Volume 1994 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1994 ; 1994 ; The Medieval Review Volume 1994 ; 2 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 1995 ; 1995 ; The Medieval Review Volume 1995 ; 3 ; >
       au < manifest ; exists ; 1996 ; 1996 ; The Medieval Review Volume 1996 ; 4 ; >
       au < manifest ; exists ; 1997 ; 1997 ; The Medieval Review Volume 1997 ; 5 ; >
       au < manifest ; exists ; 1998 ; 1998 ; The Medieval Review Volume 1998 ; 6 ; >
       au < manifest ; exists ; 1999 ; 1999 ; The Medieval Review Volume 1999 ; 7 ; >
-      au < finished ; manifest ; 2000 ; 2000 ; The Medieval Review Volume 2000 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2000 ; 2000 ; The Medieval Review Volume 2000 ; 8 ; reingest1.clockss.org:8082 >
       au < notReady ; exists ; 2001 ; 2001 ; The Medieval Review Volume 2001 ; 9 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2002 ; 2002 ; The Medieval Review Volume 2002 ; 10 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2003 ; 2003 ; The Medieval Review Volume 2003 ; 11 ; > #0 article, 0 metadata
@@ -902,17 +902,17 @@
       au < notReady ; exists ; 2005 ; 2005 ; The Medieval Review Volume 2005 ; 13 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2006 ; 2006 ; The Medieval Review Volume 2006 ; 14 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2007 ; 2007 ; The Medieval Review Volume 2007 ; 15 ; > #0 article, 0 metadata
-      au < finished ; manifest ; 2008 ; 2008 ; The Medieval Review Volume 2008 ; 16 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2009 ; 2009 ; The Medieval Review Volume 2009 ; 17 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2010 ; 2010 ; The Medieval Review Volume 2010 ; 18 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; The Medieval Review Volume 2011 ; 19 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; 2012 ; The Medieval Review Volume 2012 ; 20 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; 2008 ; The Medieval Review Volume 2008 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; 2009 ; The Medieval Review Volume 2009 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; 2010 ; The Medieval Review Volume 2010 ; 18 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; The Medieval Review Volume 2011 ; 19 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; 2012 ; The Medieval Review Volume 2012 ; 20 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Medieval Review Volume 2013 ; 21 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Medieval Review Volume 2014 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Medieval Review Volume 2015 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Medieval Review Volume 2016 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Medieval Review Volume 2017 ; 25 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; The Medieval Review Volume 2018 ; 26 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; The Medieval Review Volume 2018 ; 26 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
       au < notReady ; exists ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; > #has substance, but no metadata, no articles.
@@ -934,7 +934,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Physical Disabilities: Education and Related Services Volume 2015 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Physical Disabilities: Education and Related Services Volume 2016 ; 35 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Physical Disabilities: Education and Related Services Volume 2017 ; 36 ; >
-      au < finished ; manifest ; 2018 ; 2018 ; Physical Disabilities: Education and Related Services Volume 2018 ; 37 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; Physical Disabilities: Education and Related Services Volume 2018 ; 37 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Physical Disabilities: Education and Related Services Volume 2019 ; 38 ; >
       au < manifest ; exists ; 2020 ; 2020 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2020 ; 39 ; >
       au < expected ; exists ; 2021 ; 2021 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2021 ; 40 ; >
@@ -950,11 +950,11 @@
 
       param[journal_id] = plath
 
-      au < finished ; manifest ; 2008 ; 2008 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2008 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2009 ; 2009 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2009 ; 2 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2010 ; 2010 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2010 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2008 ; 2008 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2008 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; 2009 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2009 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; 2010 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2010 ; 3 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; 2011 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2011 ; 4 ; >
-      au < finished ; manifest ; 2012 ; 2012 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2012 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; 2012 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2012 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2013 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2014 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Plath Profiles: An Interdisciplinary Journal for Sylvia Plath Studies Volume 2015 ; 8 ; >
@@ -973,7 +973,7 @@
       param[journal_id] = sdh
 
       au < notReady ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
-      au < finished ; manifest ; 2018 ; 2018 ; Studies in Digital Heritage Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; Studies in Digital Heritage Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Studies in Digital Heritage Volume 5 ; 5 ; >
@@ -992,7 +992,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Textual Cultures: Texts, Contexts, Interpretation Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Textual Cultures: Texts, Contexts, Interpretation Volume 10 (2015) ; 10 ; >
-      au < finished ; manifest ; 2016 ; 2016 ; Textual Cultures: Texts, Contexts, Interpretation Volume 10 (2016) ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016 ; 2016 ; Textual Cultures: Texts, Contexts, Interpretation Volume 10 (2016) ; 10 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2017 ; 2017 ; Textual Cultures: Texts, Contexts, Interpretation Volume 11 (2017) ; 11 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Textual Cultures: Texts, Contexts, Interpretation Volume 12 (2019) ; 12 ; >
 
@@ -1010,9 +1010,9 @@
       au < notReady ; exists ; 2011 ; 2011 ; Tributaries Volume 14 ; 14 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2012 ; 2012 ; Tributaries Volume 15 ; 15 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2013 ; 2013 ; Tributaries Volume 16 ; 16 ; > #0 article, 0 metadata
-      au < finished ; manifest ; 2014 ; 2014 ; Tributaries Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; 2014 ; Tributaries Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2015 ; 2015 ; Tributaries Volume 18 ; 18 ; > #no substance, but the single pdf is collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1243/pdf_8
-      au < finished ; manifest ; 2016 ; 2016 ; Tributaries Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; 2016 ; Tributaries Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; Tributaries Volume 20 ; 20 ; > #no substance, but the two pdfs are collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1881/103 & 4
       au < notReady ; exists ; 2018 ; 2018 ; Tributaries Volume 21 ; 21 ; > #0 article, 0 metadata
       au < notReady ; exists ; 2019 ; 2019 ; Tributaries Volume 22 ; 22 ; > #0 article, 0 metadata
@@ -1029,7 +1029,7 @@
       param[journal_id] = lad
 
       au < frozen ; exists ; 2006 ; 2006 ; The Undergraduate Journal of Law & Disorder Volume 1 ; 1 ; >
-      au < finished ; manifest ; 2015 ; 2015 ; The Undergraduate Journal of Law & Disorder Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; 2015 ; The Undergraduate Journal of Law & Disorder Volume 5 ; 5 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -1254,7 +1254,7 @@
       param[journal_id] = artifact
       
       au < frozen ; exists ; 2007 ; 2007 ; Artifact Volume 1 ; 1 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Artifact Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2008 ; 2008 ; Artifact Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Artifact Volume 3 (2013) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Artifact Volume 3 (2015) ; 3 ; >
@@ -1271,9 +1271,9 @@
 
       param[journal_id] = bdr
 
-      au < finished ; manifest ; 2009 ; 2009 ; Black Diaspora Review Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2010 ; 2010 ; Black Diaspora Review Volume 1-2 ; 1-2 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; Black Diaspora Review Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; 2009 ; Black Diaspora Review Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2010 ; 2010 ; Black Diaspora Review Volume 1-2 ; 1-2 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; Black Diaspora Review Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Black Diaspora Review Volume 3 (2012) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Black Diaspora Review Volume 3 (2013) ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Black Diaspora Review Volume 4 ; 4 ; >
@@ -1313,7 +1313,7 @@
 
       param[journal_id] = illuminare
 
-      au < finished ; manifest ; 2011 ; 2011 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; 2011 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 12 ; 12 ; >
@@ -1364,9 +1364,9 @@
       # no issue in 2011
 
       au < frozen ; exists ; 2007 ; 2007 ; Inter-American Journal of Education for Democracy Volume 1 (2007) ; 1 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Inter-American Journal of Education for Democracy Volume 1 (2008) ; 1 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2008 ; 2008 ; Inter-American Journal of Education for Democracy Volume 1 (2008) ; 1 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Inter-American Journal of Education for Democracy Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Inter-American Journal of Education for Democracy Volume 6 ; 6 ; >
@@ -1413,9 +1413,9 @@
       au < frozen ; exists ; 2005 ; 2005 ; Liberian Studies Journal Volume 30 ; 30 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Liberian Studies Journal Volume 31 ; 31 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Liberian Studies Journal Volume 32 ; 32 ; >
-      au < finished ; manifest ; 2008 ; 2008 ; Liberian Studies Journal Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; 2009 ; Liberian Studies Journal Volume 34 ; 34 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2010 ; 2010 ; Liberian Studies Journal Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2008 ; 2008 ; Liberian Studies Journal Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; 2009 ; Liberian Studies Journal Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; 2010 ; Liberian Studies Journal Volume 35 ; 35 ; reingest3.clockss.org:8083 >
       #no more published
 
   }
@@ -1460,9 +1460,9 @@
       au < frozen ; exists ; 2005 ; 2005 ; Olifant Volume 24 ; 24 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Olifant Volume 25 ; 25 ; >
       
-      au < finished ; manifest ; 2010 ; 2010 ; Olifant Volume 26 (2010) ; 26 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; 2011 ; Olifant Volume 26 (2011) ; 26 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; 2012 ; Olifant Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; 2010 ; Olifant Volume 26 (2010) ; 26 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; Olifant Volume 26 (2011) ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; 2012 ; Olifant Volume 27 ; 27 ; reingest2.clockss.org:8085 >
       #no more published
 
   }
@@ -1556,9 +1556,9 @@
 
       au < frozen ; exists ; 2006 ; 2006 ; South Shore Journal Volume 1 ; 1 ; >
       au < frozen ; exists ; 2007 ; 2007 ; South Shore Journal Volume 2 ; 2 ; >
-      au < finished ; manifest ; 2009 ; 2009 ; South Shore Journal Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2011 ; 2011 ; South Shore Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2013 ; 2013 ; South Shore Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; 2009 ; South Shore Journal Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2011 ; 2011 ; South Shore Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; 2013 ; South Shore Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       #no more published
 
   }

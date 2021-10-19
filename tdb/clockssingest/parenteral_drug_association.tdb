@@ -35,15 +35,15 @@
       au < pda.ClockssPDADrupalPlugin ; manifest ; exists ; 2007 ; PDA Journal of Pharmaceutical Science and Technology Volume 61 ; 61 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; manifest ; exists ; 2008 ; PDA Journal of Pharmaceutical Science and Technology Volume 62 ; 62 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; manifest ; exists ; 2009 ; PDA Journal of Pharmaceutical Science and Technology Volume 63 ; 63 ; https://journal.pda.org/ ; >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2010 ; PDA Journal of Pharmaceutical Science and Technology Volume 64 ; 64 ; http://journal.pda.org/ ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2011 ; PDA Journal of Pharmaceutical Science and Technology Volume 65 ; 65 ; http://journal.pda.org/ ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2012 ; PDA Journal of Pharmaceutical Science and Technology Volume 66 ; 66 ; http://journal.pda.org/ ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2013 ; PDA Journal of Pharmaceutical Science and Technology Volume 67 ; 67 ; http://journal.pda.org/ ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2014 ; PDA Journal of Pharmaceutical Science and Technology Volume 68 ; 68 ; http://journal.pda.org/ ; reingest5.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2015 ; PDA Journal of Pharmaceutical Science and Technology Volume 69 ; 69 ; http://journal.pda.org/ ; reingest1.clockss.org:8082 >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2016 ; PDA Journal of Pharmaceutical Science and Technology Volume 70 ; 70 ; http://journal.pda.org/ ; reingest2.clockss.org:8085 >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2017 ; PDA Journal of Pharmaceutical Science and Technology Volume 71 ; 71 ; http://journal.pda.org/ ; reingest3.clockss.org:8083 >
-      au < ClockssHighWirePressH20Plugin ; finished ; manifest ; 2018 ; PDA Journal of Pharmaceutical Science and Technology Volume 72 ; 72 ; http://journal.pda.org/ ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2010 ; PDA Journal of Pharmaceutical Science and Technology Volume 64 ; 64 ; http://journal.pda.org/ ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; PDA Journal of Pharmaceutical Science and Technology Volume 65 ; 65 ; http://journal.pda.org/ ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; PDA Journal of Pharmaceutical Science and Technology Volume 66 ; 66 ; http://journal.pda.org/ ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; PDA Journal of Pharmaceutical Science and Technology Volume 67 ; 67 ; http://journal.pda.org/ ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; PDA Journal of Pharmaceutical Science and Technology Volume 68 ; 68 ; http://journal.pda.org/ ; reingest5.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2015 ; PDA Journal of Pharmaceutical Science and Technology Volume 69 ; 69 ; http://journal.pda.org/ ; reingest1.clockss.org:8082 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2016 ; PDA Journal of Pharmaceutical Science and Technology Volume 70 ; 70 ; http://journal.pda.org/ ; reingest2.clockss.org:8085 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2017 ; PDA Journal of Pharmaceutical Science and Technology Volume 71 ; 71 ; http://journal.pda.org/ ; reingest3.clockss.org:8083 >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2018 ; PDA Journal of Pharmaceutical Science and Technology Volume 72 ; 72 ; http://journal.pda.org/ ; reingest4.clockss.org:8082 >
       au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 2019 ; PDA Journal of Pharmaceutical Science and Technology Volume 73 ; 73 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 2020 ; PDA Journal of Pharmaceutical Science and Technology Volume 74 ; 74 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; manifest ; exists ; 2021 ; PDA Journal of Pharmaceutical Science and Technology Volume 75 ; 75 ; https://journal.pda.org/ ; >

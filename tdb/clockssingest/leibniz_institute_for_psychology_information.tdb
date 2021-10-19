@@ -38,14 +38,14 @@
       #param[base_url] = http://ejop.psychopen.eu/
       param[journal_id] = ejop
 
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2005 ; Europe's Journal of Psychology Volume 1 ; 1 ; 2005 ; https://ejop.psychopen.eu/ ; reingest2.clockss.org:8085 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2006 ; Europe's Journal of Psychology Volume 2 ; 2 ; 2006 ; https://ejop.psychopen.eu/ ; reingest3.clockss.org:8083 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2007 ; Europe's Journal of Psychology Volume 3 ; 3 ; 2007 ; https://ejop.psychopen.eu/ ; reingest4.clockss.org:8082 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2008 ; Europe's Journal of Psychology Volume 4 ; 4 ; 2008 ; https://ejop.psychopen.eu/ ; reingest5.clockss.org:8082 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2009 ; Europe's Journal of Psychology Volume 5 ; 5 ; 2009 ; https://ejop.psychopen.eu/ ; reingest2.clockss.org:8085 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2010 ; Europe's Journal of Psychology Volume 6 ; 6 ; 2010 ; https://ejop.psychopen.eu/ ; reingest3.clockss.org:8083 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2011 ; Europe's Journal of Psychology Volume 7 ; 7 ; 2011 ; https://ejop.psychopen.eu/ ; reingest4.clockss.org:8082 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2012 ; Europe's Journal of Psychology Volume 8 ; 8 ; 2012 ; https://ejop.psychopen.eu/ ; reingest5.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2005 ; Europe's Journal of Psychology Volume 1 ; 1 ; 2005 ; https://ejop.psychopen.eu/ ; reingest2.clockss.org:8085 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2006 ; Europe's Journal of Psychology Volume 2 ; 2 ; 2006 ; https://ejop.psychopen.eu/ ; reingest3.clockss.org:8083 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2007 ; Europe's Journal of Psychology Volume 3 ; 3 ; 2007 ; https://ejop.psychopen.eu/ ; reingest4.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2008 ; Europe's Journal of Psychology Volume 4 ; 4 ; 2008 ; https://ejop.psychopen.eu/ ; reingest5.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2009 ; Europe's Journal of Psychology Volume 5 ; 5 ; 2009 ; https://ejop.psychopen.eu/ ; reingest2.clockss.org:8085 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2010 ; Europe's Journal of Psychology Volume 6 ; 6 ; 2010 ; https://ejop.psychopen.eu/ ; reingest3.clockss.org:8083 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2011 ; Europe's Journal of Psychology Volume 7 ; 7 ; 2011 ; https://ejop.psychopen.eu/ ; reingest4.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2012 ; Europe's Journal of Psychology Volume 8 ; 8 ; 2012 ; https://ejop.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2013 ; Europe's Journal of Psychology Volume 9 ; 9 ; 2013 ; http://ejop.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; Europe's Journal of Psychology Volume 10 ; 10 ; 2014 ; http://ejop.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; Europe's Journal of Psychology Volume 11 ; 11 ; 2015 ; http://ejop.psychopen.eu/ ; reingest2.clockss.org:8085 >
@@ -68,18 +68,18 @@
       #param[base_url] = http://interpersona.psychopen.eu/
       param[journal_id] = interpersona
 
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2007 ; Interpersona: An International Journal on Personal Relationships Volume 1 ; 1 ; 2007 ; https://interpersona.psychopen.eu/ ; reingest2.clockss.org:8085 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2008 ; Interpersona: An International Journal on Personal Relationships Volume 2 ; 2 ; 2008 ; https://interpersona.psychopen.eu/ ; reingest3.clockss.org:8083 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2009 ; Interpersona: An International Journal on Personal Relationships Volume 3 ; 3 ; 2009 ; https://interpersona.psychopen.eu/ ; reingest4.clockss.org:8082 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2010 ; Interpersona: An International Journal on Personal Relationships Volume 4 ; 4 ; 2010 ; https://interpersona.psychopen.eu/ ; reingest5.clockss.org:8082 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2011 ; Interpersona: An International Journal on Personal Relationships Volume 5 ; 5 ; 2011 ; https://interpersona.psychopen.eu/ ; reingest2.clockss.org:8085 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2012 ; Interpersona: An International Journal on Personal Relationships Volume 6 ; 6 ; 2012 ; https://interpersona.psychopen.eu/ ; reingest3.clockss.org:8083 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2007 ; Interpersona: An International Journal on Personal Relationships Volume 1 ; 1 ; 2007 ; https://interpersona.psychopen.eu/ ; reingest2.clockss.org:8085 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2008 ; Interpersona: An International Journal on Personal Relationships Volume 2 ; 2 ; 2008 ; https://interpersona.psychopen.eu/ ; reingest3.clockss.org:8083 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2009 ; Interpersona: An International Journal on Personal Relationships Volume 3 ; 3 ; 2009 ; https://interpersona.psychopen.eu/ ; reingest4.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2010 ; Interpersona: An International Journal on Personal Relationships Volume 4 ; 4 ; 2010 ; https://interpersona.psychopen.eu/ ; reingest5.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2011 ; Interpersona: An International Journal on Personal Relationships Volume 5 ; 5 ; 2011 ; https://interpersona.psychopen.eu/ ; reingest2.clockss.org:8085 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2012 ; Interpersona: An International Journal on Personal Relationships Volume 6 ; 6 ; 2012 ; https://interpersona.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2013 ; Interpersona: An International Journal on Personal Relationships Volume 7 ; 7 ; 2013 ; http://interpersona.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; Interpersona: An International Journal on Personal Relationships Volume 8 ; 8 ; 2014 ; http://interpersona.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; Interpersona: An International Journal on Personal Relationships Volume 9 ; 9 ; 2015 ; http://interpersona.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2016 ; Interpersona: An International Journal on Personal Relationships Volume 10 ; 10 ; 2016 ; http://interpersona.psychopen.eu/ ; reingest3.clockss.org:8083 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2017 ; Interpersona: An International Journal on Personal Relationships Volume 11 ; 11 ; 2017 ; https://interpersona.psychopen.eu/ ; reingest4.clockss.org:8082 >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Interpersona: An International Journal on Personal Relationships Volume 12 ; 12 ; 2018 ; https://interpersona.psychopen.eu/ ; reingest5.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2017 ; Interpersona: An International Journal on Personal Relationships Volume 11 ; 11 ; 2017 ; https://interpersona.psychopen.eu/ ; reingest4.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2018 ; Interpersona: An International Journal on Personal Relationships Volume 12 ; 12 ; 2018 ; https://interpersona.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2019 ; Interpersona: An International Journal on Personal Relationships Volume 13 ; 13 ; 2019 ; https://interpersona.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2020 ; Interpersona: An International Journal on Personal Relationships Volume 14 ; 14 ; 2020 ; https://interpersona.psychopen.eu/ ; > #no substance urls
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2021 ; Interpersona: An International Journal on Personal Relationships Volume 15 ; 15 ; 2021 ; https://interpersona.psychopen.eu/ ; >
@@ -97,7 +97,7 @@
       param[journal_id] = jnc
       #Still OJS2 20210126
 
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2015 ; Journal of Numerical Cognition Volume 1 ; 1 ; 2015 ; http://jnc.psychopen.eu/ ; reingest3.clockss.org:8083 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2015 ; Journal of Numerical Cognition Volume 1 ; 1 ; 2015 ; http://jnc.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2016 ; Journal of Numerical Cognition Volume 2 ; 2 ; 2016 ; http://jnc.psychopen.eu/ ; reingest4.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Journal of Numerical Cognition Volume 3 ; 3 ; 2017 ; https://jnc.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2018 ; Journal of Numerical Cognition Volume 4 ; 4 ; 2018 ; https://jnc.psychopen.eu/ ; >
@@ -118,10 +118,10 @@
 
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2013 ; Journal of Social and Political Psychology Volume 1 ; 1 ; 2013 ; http://jspp.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; Journal of Social and Political Psychology Volume 2 ; 2 ; 2014 ; http://jspp.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2015 ; Journal of Social and Political Psychology Volume 3 ; 3 ; 2015 ; http://jspp.psychopen.eu/ ; reingest5.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2015 ; Journal of Social and Political Psychology Volume 3 ; 3 ; 2015 ; http://jspp.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2016 ; Journal of Social and Political Psychology Volume 4 ; 4 ; 2016 ; http://jspp.psychopen.eu/ ; reingest1.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2017 ; Journal of Social and Political Psychology Volume 5 ; 5 ; 2017 ; https://jspp.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ ; reingest3.clockss.org:8083 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2018 ; Journal of Social and Political Psychology Volume 6 ; 6 ; 2018 ; https://jspp.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2019 ; Journal of Social and Political Psychology Volume 7 ; 7 ; 2019 ; https://jspp.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2020 ; Journal of Social and Political Psychology Volume 8 ; 8 ; 2020 ; https://jspp.psychopen.eu/ ; > #no substance
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2021 ; Journal of Social and Political Psychology Volume 9 ; 9 ; 2021 ; https://jspp.psychopen.eu/ ; >
@@ -255,7 +255,7 @@
       param[journal_id] = psyct
       #Still OJS2 20201205
 
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2012 ; Psychological Thought Volume 5 ; 5 ; 2012 ; https://psyct.psychopen.eu/ ; reingest4.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2012 ; Psychological Thought Volume 5 ; 5 ; 2012 ; https://psyct.psychopen.eu/ ; reingest4.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2013 ; Psychological Thought Volume 6 ; 6 ; 2013 ; http://psyct.psychopen.eu/ ; reingest3.clockss.org:8083 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; Psychological Thought Volume 7 ; 7 ; 2014 ; http://psyct.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; Psychological Thought Volume 8 ; 8 ; 2015 ; http://psyct.psychopen.eu/ ; reingest1.clockss.org:8082 >
@@ -276,13 +276,13 @@
       param[journal_id] = pch
       #Still OJS2 20200125. Nothing published for 2020
 
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2012 ; Psychology, Community & Health Volume 1 ; 1 ; 2012 ; https://pch.psychopen.eu/ ; reingest5.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2012 ; Psychology, Community & Health Volume 1 ; 1 ; 2012 ; https://pch.psychopen.eu/ ; reingest5.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2013 ; Psychology, Community & Health Volume 2 ; 2 ; 2013 ; http://pch.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; Psychology, Community & Health Volume 3 ; 3 ; 2014 ; http://pch.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; Psychology, Community & Health Volume 4 ; 4 ; 2015 ; http://pch.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2016 ; Psychology, Community & Health Volume 5 ; 5 ; 2016 ; http://pch.psychopen.eu/ ; reingest1.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; deepCrawl ; exists ; 2017 ; Psychology, Community & Health Volume 6 ; 6 ; 2017 ; https://pch.psychopen.eu/ ; >
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2018 ; Psychology, Community & Health Volume 7 ; 7 ; 2018 ; https://pch.psychopen.eu/ ; reingest4.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2018 ; Psychology, Community & Health Volume 7 ; 7 ; 2018 ; https://pch.psychopen.eu/ ; reingest4.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; frozen ; exists ; 2019 ; Psychology, Community & Health Volume 8 ; 8 ; 2019 ; https://pch.psychopen.eu/ ; >
       #MOVED - reported by publisher
   }
@@ -296,7 +296,7 @@
       #param[base_url] = http://ejcop.psychopen.eu/
       param[journal_id] = ejcop
 
-      au < ojs2.ClockssOJS2Plugin ; finished ; manifest ; 2009 ; The European Journal of Counselling Psychology Volume 1 ; 1 ; 2009 ; https://ejcop.psychopen.eu/ ; reingest4.clockss.org:8082 >
+      au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2009 ; The European Journal of Counselling Psychology Volume 1 ; 1 ; 2009 ; https://ejcop.psychopen.eu/ ; reingest4.clockss.org:8082 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2013 ; The European Journal of Counselling Psychology Volume 2 ; 2 ; 2013 ; http://ejcop.psychopen.eu/ ; reingest2.clockss.org:8085 >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2014 ; The European Journal of Counselling Psychology Volume 3 ; 3 ; 2014 ; http://ejcop.psychopen.eu/ ; >
       au < ojs2.ClockssOJS2Plugin ; finished ; finished ; 2015 ; The European Journal of Counselling Psychology Volume 4 ; 4 ; 2015 ; http://ejcop.psychopen.eu/ ; reingest1.clockss.org:8082 >
