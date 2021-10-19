@@ -166,7 +166,7 @@
       au < finished ; crawling ; 2018 ; BJR|case reports Volume 4 ; 4 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; BJR|case reports Volume 5 ; 5 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; BJR|case reports Volume 6 ; 6 ; https://www.birpublications.org/ ; >
-      au < manifest ; exists ; 2021 ; BJR|case reports Volume 7 ; 7 ; https://www.birpublications.org/ ; >
+      au < notReady ; exists ; 2021 ; BJR|case reports Volume 7 ; 7 ; https://www.birpublications.org/ ; > #524 https://www.birpublications.org/specs/ux3/releasedAssets/images/widgets/ad-placeholder/placeholder.png
 
   }
 

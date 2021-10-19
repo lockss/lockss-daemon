@@ -120,8 +120,8 @@
     param[resource_id] = 206
     param[journal_id] = health-forum
     
-    au < manifest ; exists ; 2020 ; JAMA Health Forum Volume 1 ; 2020 ; https://jamanetwork.com/ ; >
-    au < manifest ; exists ; 2021 ; JAMA Health Forum Volume 2 ; 2021 ; https://jamanetwork.com/ ; >
+    au < exists ; exists ; 2020 ; JAMA Health Forum Volume 1 ; 2020 ; https://jamanetwork.com/ ; >
+    au < exists ; exists ; 2021 ; JAMA Health Forum Volume 2 ; 2021 ; https://jamanetwork.com/ ; >
 
   }
 
