@@ -297,7 +297,7 @@
     au < manifest ; 2007 ; Annals of Thoracic Medicine Volume 2 ; 2007 ; 2 ; https://www.thoracicmedicine.org/ >
     au < manifest ; 2008 ; Annals of Thoracic Medicine Volume 3 ; 2008 ; 3 ; https://www.thoracicmedicine.org/ >
     au < manifest ; 2009 ; Annals of Thoracic Medicine Volume 4 ; 2009 ; 4 ; https://www.thoracicmedicine.org/ >
-    au < manifest ; 2010 ; Annals of Thoracic Medicine Volume 5 ; 2010 ; 5 ; https://www.thoracicmedicine.org/ >
+    au < ready ; 2010 ; Annals of Thoracic Medicine Volume 5 ; 2010 ; 5 ; https://www.thoracicmedicine.org/ >
     au < released ; 2011 ; Annals of Thoracic Medicine Volume 6 ; 2011 ; 6 ; http://www.thoracicmedicine.org/ >
     au < released ; 2012 ; Annals of Thoracic Medicine Volume 7 ; 2012 ; 7 ; http://www.thoracicmedicine.org/ >
     au < released ; 2013 ; Annals of Thoracic Medicine Volume 8 ; 2013 ; 8 ; http://www.thoracicmedicine.org/ >
@@ -5370,7 +5370,7 @@
       au < released ; 2017 ; Dentistry and Medical Research Volume 5 ; 2017 ; 5 ; http://www.dmrjournal.org/ >
       au < released ; 2018 ; Dentistry and Medical Research Volume 6 ; 2018 ; 6 ; http://www.dmrjournal.org/ >
       au < released ; 2019 ; Dentistry and Medical Research Volume 7 ; 2019 ; 7 ; https://www.dmrjournal.org/ >
-      au < manifest ; 2020 ; Dentistry and Medical Research Volume 8 ; 2020 ; 8 ; https://www.dmrjournal.org/ >
+      au < ready ; 2020 ; Dentistry and Medical Research Volume 8 ; 2020 ; 8 ; https://www.dmrjournal.org/ >
       au < manifest ; 2021 ; Dentistry and Medical Research Volume 9 ; 2021 ; 9 ; https://www.dmrjournal.org/ >
 
   }
@@ -6037,7 +6037,7 @@
       au < released ; 2017 ; Indian Journal of Oral Health and Research Volume 3 ; 2017 ; 3 ; http://www.ijohr.org/ >
       au < released ; 2018 ; Indian Journal of Oral Health and Research Volume 4 ; 2018 ; 4 ; http://www.ijohr.org/ >
       au < released ; 2019 ; Indian Journal of Oral Health and Research Volume 5 ; 2019 ; 5 ; https://www.ijohr.org/ >
-      au < manifest ; 2020 ; Indian Journal of Oral Health and Research Volume 6 ; 2020 ; 6 ; https://www.ijohr.org/ >
+      au < ready ; 2020 ; Indian Journal of Oral Health and Research Volume 6 ; 2020 ; 6 ; https://www.ijohr.org/ >
       au < manifest ; 2021 ; Indian Journal of Oral Health and Research Volume 7 ; 2021 ; 7 ; https://www.ijohr.org/ >
 
   }
@@ -8084,7 +8084,7 @@
       au < manifest ; 2007 ; Sahel Medical Journal Volume 10 ; 2007 ; 10 ; https://www.smjonline.org/ >
       au < manifest ; 2008 ; Sahel Medical Journal Volume 11 ; 2008 ; 11 ; https://www.smjonline.org/ >
       au < manifest ; 2009 ; Sahel Medical Journal Volume 12 ; 2009 ; 12 ; https://www.smjonline.org/ >
-      au < manifest ; 2010 ; Sahel Medical Journal Volume 13 ; 2010 ; 13 ; https://www.smjonline.org/ >
+      au < ready ; 2010 ; Sahel Medical Journal Volume 13 ; 2010 ; 13 ; https://www.smjonline.org/ >
       au < released ; 2011 ; Sahel Medical Journal Volume 14 ; 2011 ; 14 ; http://www.smjonline.org/ >
       au < released ; 2012 ; Sahel Medical Journal Volume 15 ; 2012 ; 15 ; http://www.smjonline.org/ >
       au < released ; 2013 ; Sahel Medical Journal Volume 16 ; 2013 ; 16 ; http://www.smjonline.org/ >
@@ -8308,7 +8308,7 @@
       param[journal_issn] = 0976-433X
 #      param[base_url] = http://www.srmjrds.in/
 
-      au < manifest ; 2010 ; SRM Journal of Research in Dental Sciences Volume 1 ; 2010 ; 1 ; https://www.srmjrds.in/ >
+      au < ready ; 2010 ; SRM Journal of Research in Dental Sciences Volume 1 ; 2010 ; 1 ; https://www.srmjrds.in/ >
       au < released ; 2011 ; SRM Journal of Research in Dental Sciences Volume 2 ; 2011 ; 2 ; http://www.srmjrds.in/ >
       au < released ; 2012 ; SRM Journal of Research in Dental Sciences Volume 3 ; 2012 ; 3 ; http://www.srmjrds.in/ >
       au < released ; 2013 ; SRM Journal of Research in Dental Sciences Volume 4 ; 2013 ; 4 ; http://www.srmjrds.in/ >
@@ -8516,8 +8516,8 @@
       au < released ; 2015 ; The Egyptian Orthopaedic Journal Volume 50 ; 2015 ; 50 ; http://www.eoj.eg.net/ >
       au < released ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 ; http://www.eoj.eg.net/ >
       au < released ; 2017 ; The Egyptian Orthopaedic Journal Volume 52 ; 2017 ; 52 ; http://www.eoj.eg.net/ >
-      au < manifest ; 2018 ; The Egyptian Orthopaedic Journal Volume 53 ; 2018 ; 53 ; https://www.eoj.eg.net/ >
-      au < manifest ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ >
+      au < ready ; 2018 ; The Egyptian Orthopaedic Journal Volume 53 ; 2018 ; 53 ; https://www.eoj.eg.net/ >
+      au < ready ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ >
       au < released ; 2020 ; The Egyptian Orthopaedic Journal Volume 55 ; 2020 ; 55 ; https://www.eoj.eg.net/ >
       au < manifest ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ >
 
@@ -8670,7 +8670,7 @@
       au < manifest ; 2007 ; Thyroid Research and Practice Volume 4 ; 2007 ; 4 ; https://www.thetrp.net/ >
       au < manifest ; 2008 ; Thyroid Research and Practice Volume 5 ; 2008 ; 5 ; https://www.thetrp.net/ >
       au < manifest ; 2009 ; Thyroid Research and Practice Volume 6 ; 2009 ; 6 ; https://www.thetrp.net/ >
-      au < manifest ; 2010 ; Thyroid Research and Practice Volume 7 ; 2010 ; 7 ; https://www.thetrp.net/ >
+      au < ready ; 2010 ; Thyroid Research and Practice Volume 7 ; 2010 ; 7 ; https://www.thetrp.net/ >
       au < released ; 2011 ; Thyroid Research and Practice Volume 8 ; 2011 ; 8 ; http://www.thetrp.net/ >
       au < released ; 2012 ; Thyroid Research and Practice Volume 9 ; 2012 ; 9 ; http://www.thetrp.net/ >
       au < released ; 2013 ; Thyroid Research and Practice Volume 10 ; 2013 ; 10 ; http://www.thetrp.net/ >
@@ -8786,7 +8786,7 @@
       au < manifest ; 2007 ; West African Journal of Radiology Volume 14 ; 2007 ; 14 ; https://www.wajradiology.org/ >
       au < manifest ; 2008 ; West African Journal of Radiology Volume 15 ; 2008 ; 15 ; https://www.wajradiology.org/ >
       au < manifest ; 2009 ; West African Journal of Radiology Volume 16 ; 2009 ; 16 ; https://www.wajradiology.org/ >
-      au < manifest ; 2010 ; West African Journal of Radiology Volume 17 ; 2010 ; 17 ; https://www.wajradiology.org/ >
+      au < ready ; 2010 ; West African Journal of Radiology Volume 17 ; 2010 ; 17 ; https://www.wajradiology.org/ >
       au < released ; 2011 ; West African Journal of Radiology Volume 18 ; 2011 ; 18 ; http://www.wajradiology.org/ >
       au < released ; 2012 ; West African Journal of Radiology Volume 19 ; 2012 ; 19 ; http://www.wajradiology.org/ >
       au < released ; 2013 ; West African Journal of Radiology Volume 20 ; 2013 ; 20 ; http://www.wajradiology.org/ >
@@ -9548,10 +9548,10 @@
       param[journal_issn] = 2589-7934
 #      param[base_url] = http://www.theiaforum.org/
 
-      au < manifest ; 2016 ; Indian Anaesthetists' Forum Volume 17 ; 2016 ; 17 ; https://www.theiaforum.org/ >
+      au < ready ; 2016 ; Indian Anaesthetists' Forum Volume 17 ; 2016 ; 17 ; https://www.theiaforum.org/ >
       au < released ; 2017 ; Indian Anaesthetists' Forum Volume 18 ; 2017 ; 18 ; http://www.theiaforum.org/ >
-      au < manifest ; 2018 ; Indian Anaesthetists' Forum Volume 19 ; 2018 ; 19 ; https://www.theiaforum.org/ >
-      au < manifest ; 2019 ; Indian Anaesthetists' Forum Volume 20 ; 2019 ; 20 ; https://www.theiaforum.org/ >
+      au < ready ; 2018 ; Indian Anaesthetists' Forum Volume 19 ; 2018 ; 19 ; https://www.theiaforum.org/ >
+      au < ready ; 2019 ; Indian Anaesthetists' Forum Volume 20 ; 2019 ; 20 ; https://www.theiaforum.org/ >
       au < released ; 2020 ; Indian Anaesthetists' Forum Volume 21 ; 2020 ; 21 ; https://www.theiaforum.org/ >
       au < manifest ; 2021 ; Indian Anaesthetists' Forum Volume 22 ; 2021 ; 22 ; https://www.theiaforum.org/ >
 
@@ -10880,7 +10880,7 @@
       param[journal_issn] = 1941-8213
 #      param[base_url] = http://www.wjcs.us.com/
 
-      au < manifest ; 2018 ; World Journal of Colorectal Surgery Volume 7 ; 2018 ; 7 ; https://www.wjcs.us.com/ >
+      au < ready ; 2018 ; World Journal of Colorectal Surgery Volume 7 ; 2018 ; 7 ; https://www.wjcs.us.com/ >
       au < released ; 2019 ; World Journal of Colorectal Surgery Volume 8 ; 2019 ; 8 ; https://www.wjcs.us.com/ >
       au < released ; 2020 ; World Journal of Colorectal Surgery Volume 9 ; 2020 ; 9 ; https://www.wjcs.us.com/ >
       au < expected ; 2021 ; World Journal of Colorectal Surgery Volume 10 ; 2021 ; 10 ; https://www.wjcs.us.com/ >
