@@ -316,7 +316,25 @@ public class BaseUrlFetcher implements UrlFetcher {
   }
   
   protected boolean forceRefetch(){
-    return fetchFlags.get(UrlCacher.REFETCH_FLAG);
+    return fetchFlags.get(UrlCacher.REFETCH_FLAG) ||
+      (isStateChangingMethod(getMethod()) && forceRefetchOnPost());
+  }
+
+  /** Override if state-changing requests (e.g.,POST) should check for
+   * and send If-Modified-Since */
+  protected boolean forceRefetchOnPost(){
+    return true;
+  }
+
+  protected boolean isStateChangingMethod(int method) {
+    switch (method) {
+    case LockssUrlConnection.METHOD_POST:
+//     case LockssUrlConnection.METHOD_PUT:
+//     case LockssUrlConnection.METHOD_DELETE:
+      return true;
+    default:
+      return false;
+    }
   }
   
   public void setConnectionPool(LockssUrlConnectionPool connectionPool) {

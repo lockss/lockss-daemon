@@ -93,9 +93,6 @@ public class JasperUrlFetcher extends BaseUrlFetcher {
     } finally {
       crawlFacade.putStateObj(FACADE_KEY_MAKE_POSTER, null);
     }
-    BitSet fetchFlags = uf.getFetchFlags();
-    fetchFlags.set(UrlCacher.REFETCH_FLAG);
-    uf.setFetchFlags(fetchFlags);
     uf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_DONT_FOLLOW);
 
     log.debug2("Ready to make the POST request to establish the session");
