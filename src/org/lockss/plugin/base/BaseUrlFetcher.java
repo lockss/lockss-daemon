@@ -488,7 +488,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       throw new IllegalStateException("Must call reset() before reusing UrlCacher");
     }
     try {
-      conn = makeConnection(fetchUrl, connectionPool);
+      conn = makeConnection(getFetchUrl(), connectionPool);
       if (proxyHost != null) {
         if (log.isDebug3()) log.debug3("Proxying through " + proxyHost
 					     + ":" + proxyPort);
@@ -651,6 +651,11 @@ public class BaseUrlFetcher implements UrlFetcher {
 
   protected int getMethod() {
     return LockssUrlConnection.METHOD_GET;
+  }
+
+  /** Return the URL to use in the HTTP request, normally fetchUrl */
+  protected String getFetchUrl() throws IOException {
+    return fetchUrl;
   }
 
   protected String getUserPass() {

@@ -86,7 +86,6 @@ public class JasperUrlFetcher extends BaseUrlFetcher {
 
     String postUrl = String.format("%sservices/xauthn/?op=login",
                                    au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
-    // XXX
     crawlFacade.putStateObj(FACADE_KEY_MAKE_POSTER, "true");
     UrlFetcher uf;
     try {
@@ -97,25 +96,14 @@ public class JasperUrlFetcher extends BaseUrlFetcher {
     BitSet fetchFlags = uf.getFetchFlags();
     fetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(fetchFlags);
-    // XXX Set redirect options?
+    uf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_DONT_FOLLOW);
 
     log.debug2("Ready to make the POST request to establish the session");
     FetchResult fr = uf.fetch();
     log.debug2(String.format("The fetch result from the POST request was: %s", fr));
     if (fr != FetchResult.FETCHED) {
-      // XXX
       throw new CacheException.PermissionException("Authorizing POST failed");
     }
-//     }
-//     catch (CacheException ce) {
-//       log.debug2("Fatal exception in the POST request to establish the session", ce);
-//       throw ce; // FIXME
-//     }
-//     catch (IOException ioe) {
-//       log.debug2("I/O exception processing the POST request to establish the session", ioe);
-//       CacheException ce = new CacheException();
-//       ce.initCause(ioe);
-//       throw ce; // FIXME
   }
 
   /** UrlFetcher used to make authorization POST request */
@@ -143,7 +131,6 @@ public class JasperUrlFetcher extends BaseUrlFetcher {
                                             UrlUtil.encodeUrl(userPass.get(0)),
                                             UrlUtil.encodeUrl(userPass.get(1))));
       } catch (AuParamType.InvalidFormatException e) {
-        // XXX
         CacheException ce =
           new CacheException.PermissionException("Malformed credentials");
         ce.initCause(e);

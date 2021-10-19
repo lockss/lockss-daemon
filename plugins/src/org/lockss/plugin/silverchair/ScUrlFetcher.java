@@ -31,8 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.silverchair;
 
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.methods.StringRequestEntity;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.base.HttpToHttpsUrlFetcher;
 import org.lockss.util.Logger;
@@ -44,6 +42,10 @@ import java.net.URLDecoder;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * URLs ending in "&post=json" are a signal from the link extractor to
+ * issue a POST, whose body comes from the "json" query arg.
+ */
 public class ScUrlFetcher extends HttpToHttpsUrlFetcher {
 
   protected static final Pattern PATTERN_POST =
@@ -51,68 +53,36 @@ public class ScUrlFetcher extends HttpToHttpsUrlFetcher {
                     Pattern.CASE_INSENSITIVE);
   private static final Logger log = Logger.getLogger("ScUrlFetcher");
 
+  private boolean doPost;
 
   public ScUrlFetcher(final CrawlerFacade crawlFacade,
                                  final String url) {
     super(crawlFacade, url);
+    Matcher postMatch = PATTERN_POST.matcher(url);
+    if (postMatch.find()) {
+      doPost = true;
+    }
   }
 
   @Override
-  protected LockssUrlConnection makeConnection(String url,
-                                               LockssUrlConnectionPool pool)
-    throws IOException {
-    LockssUrlConnection res;
-
-    Matcher postMatch = PATTERN_POST.matcher(url);
-    if (postMatch.find()) {
-      log.debug3("found post url:" + url);
-      res = makePostConnection(url, pool);
-    }
-    else {
-      res = makeConnection0(url, pool);
-    }
-    String cookiePolicy = au.getCookiePolicy();
-    if (cookiePolicy != null) {
-      res.setCookiePolicy(cookiePolicy);
-    }
-    return res;
+  protected String getFetchUrl() throws IOException {
+    String url = super.getFetchUrl();
+    return doPost ? UrlUtil.stripQuery(url) : url;
   }
 
-  /**
-   * make a POST connection using the url which has appended the POST payload as query arguments.
-   * EXtract the pdf url from the POST results and return a connection to it.
-   * @param url the url we will be posting to
-   * @param pool  the Connection pool for this au
-   * @return a new connection to the pdf url
-   * @throws IOException
-   */
-  protected LockssUrlConnection makePostConnection(String url,
-                                                   LockssUrlConnectionPool pool)
-    throws IOException {
-    LockssUrlConnection conn;
+  @Override
+  protected int getMethod() {
+    return doPost ? LockssUrlConnection.METHOD_POST : super.getMethod();
+  }
 
-    // strip the arguments from the url and turn into json equivalent
-    String baseurl = UrlUtil.stripQuery(url);
-    // get the connection and add the payload
-    conn = openConnection(PostHttpClientUrlConnection.METHOD_POST,
-                                  baseurl,
-                                  pool);
-    conn.setRequestProperty("content-type", "application/json");
-    StringRequestEntity reqEnt = new StringRequestEntity(queryToJsonString(url));
-    ((PostHttpClientUrlConnection)conn).setRequestEntity(reqEnt);
-//    // execute and make a second non-post connection
-//    pauseBeforeFetch();
-//    conn.execute();
-//    checkConnectException(conn);
-//    String ctype = conn.getResponseContentType();
-//    String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
-//    if ("application/json".equalsIgnoreCase(mimeType)) {
-//      InputStream in = conn.getResponseInputStream();
-//      String pdf_url = UrlUtil.getHost(url) + extractUrlFromInput(in);
-//      conn.release();
-//      conn = makeConnection0(pdf_url, pool) ;
-//    }
-    return conn;
+  @Override
+  protected void customizeConnection(LockssUrlConnection conn)
+      throws IOException {
+    super.customizeConnection(conn);
+    if (doPost) {
+      conn.setRequestProperty("content-type", "application/json");
+      conn.setRequestEntity(queryToJsonString(fetchUrl));
+    }
   }
 
   /**
@@ -143,47 +113,4 @@ public class ScUrlFetcher extends HttpToHttpsUrlFetcher {
     return "";
   }
 
-  /**
-   * A mirror of the UrlUtil#openConnection that uses PostHttpClientUrlConnection instead of the
-   * standard HttpClientUrlConnection until we have a released version with POST capability
-   * @param methodCode the method to use for the connection POST or GET
-   * @param urlString the url to which we will connect
-   * @param connectionPool  the connection pool
-   * @return a new LockssUrlConnection
-   * @throws IOException if any of the HttpConnection calls fail
-   */
-  LockssUrlConnection openConnection(int methodCode, String urlString,
-                 LockssUrlConnectionPool connectionPool)
-    throws IOException {
-    LockssUrlConnection luc;
-    HttpClient client;
-    if (connectionPool != null) {
-      client = connectionPool.getHttpClient();
-    } else {
-      client = new HttpClient();
-    }
-    luc = new PostHttpClientUrlConnection(methodCode, urlString, client,
-                                      connectionPool);
-    return luc;
-  }
-  
-  /*
-   * Support for http to https conversion - do we need to override?
-   * 
-   */
-  /*
-  @Override
-  protected boolean isHttpToHttpsRedirect(String fetched,
-                                          String redirect,
-                                          String normalized) {
-  return UrlUtil.isHttpUrl(fetched)
-        && UrlUtil.isHttpsUrl(redirect)
-        && UrlUtil.isHttpUrl(normalized)
-        && UrlUtil.stripProtocol(fetched).equals(UrlUtil.stripProtocol(redirect))
-        && fetched.equals(normalized);
-  }
-}
-*/
-  
-  
 }
