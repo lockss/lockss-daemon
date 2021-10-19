@@ -65,8 +65,8 @@ public class ScUrlFetcher extends HttpToHttpsUrlFetcher {
   }
 
   @Override
-  protected String getFetchUrl() throws IOException {
-    String url = super.getFetchUrl();
+  protected String getRequestUrl() throws IOException {
+    String url = super.getRequestUrl();
     return doPost ? UrlUtil.stripQuery(url) : url;
   }
 
