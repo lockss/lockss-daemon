@@ -90,17 +90,20 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
       isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolume)));
     }
 
+    ////Decided on team aggreed on Oct/2021, no longer check tdb title vs metadata title
+    ////Comment out the following section
+    /*
     // Now check journalTitle with some flexibility for string differences
     if (isInAu && !(StringUtils.isEmpty(foundJournalTitle) || StringUtils.isEmpty(AU_journal_title)) ) {
       // normalize titles to catch unimportant differences
       String normAuTitle = normalizeTitle(AU_journal_title);
       String normFoundTitle = normalizeTitle(foundJournalTitle);
-      log.debug3("normalized title from AU is : " + normAuTitle);
-      log.debug3("normalized title from metadata is : " + normFoundTitle);
+      log.debug3("TaylorAndFrancis: normalized title from AU is : " + normAuTitle);
+      log.debug3("TaylorAndFrancis: normalized title from metadata is : " + normFoundTitle);
       // If the titles are a subset of each other or are equal after normalizatin
       isInAu = ( 
           ( (StringUtils.contains(normAuTitle,normFoundTitle)) || 
-              (StringUtils.contains(normFoundTitle,normAuTitle))) ); 
+              (StringUtils.contains(normFoundTitle,normAuTitle))) );
 
       // last chance... cover weird cases, such as when the publisher mistakenly
       // converts multi-byte in to ? in their text output
@@ -112,8 +115,16 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
         log.debug3("raw foundTitle: " + rawTextFoundTitle);
         isInAu =( ( (StringUtils.contains(rawTextAuTitle,rawTextFoundTitle)) || 
             (StringUtils.contains(rawTextFoundTitle,rawTextAuTitle))) );
+
+        if (isInAu == true) {
+          log.debug3("TaylorAndFrancis: isInAu is true");
+        } else {
+          log.debug3("TaylorAndFrancis: isInAu is false");
+        }
       }
     }
+
+     */
 
     if (isInAu) {
       // Well we might as well pick up and fill in this since we're already peeking in the AU

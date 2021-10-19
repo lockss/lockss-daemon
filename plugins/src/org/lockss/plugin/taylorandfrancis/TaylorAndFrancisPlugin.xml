@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>124</string>
+    <string>125</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->
   <entry>
@@ -59,14 +59,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>120</string>
+    <string>122</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>22</string>
+        <string>23</string>
       </entry>
       <entry>
         <string>Poll</string>
