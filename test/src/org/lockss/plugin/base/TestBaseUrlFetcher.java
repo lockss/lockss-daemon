@@ -514,7 +514,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     try {
       muf.getUncachedInputStream();
       fail("Should have thrown");
-    } catch (CacheException.RetryableNetworkException_3_30S ex) {
+    } catch (CacheException.RetryableNetworkException ex) {
     }
   }
 
@@ -527,7 +527,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     try {
       muf.getUncachedInputStream();
       fail("Should have thrown");
-    } catch (CacheException.RetryableNetworkException_3_30S ex) {
+    } catch (CacheException.RetryableNetworkException ex) {
     }
   }
 
@@ -540,7 +540,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     try {
       muf.getUncachedInputStream();
       fail("Should have thrown");
-    } catch (CacheException.RetryableNetworkException_2_30S ex) {
+    } catch (CacheException.RetryableNetworkException ex) {
     }
   }
 

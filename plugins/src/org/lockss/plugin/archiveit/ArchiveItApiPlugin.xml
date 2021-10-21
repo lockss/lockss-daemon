@@ -159,7 +159,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
       <string>plugin_cache_result_list</string>
       <list>
-        <string>RETRY_SAME_URL=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_30S</string>
+        <string>Retryable=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_30S</string>
       </list>
     </entry>
     <entry>

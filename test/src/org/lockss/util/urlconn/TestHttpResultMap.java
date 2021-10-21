@@ -54,18 +54,26 @@ public class TestHttpResultMap extends LockssTestCase {
     super.tearDown();
   }
 
-  int[] SuccessCodes = {200, 203, 304};
-  int[] RetrySameUrlCodes = { 408, 409, 413, 500, 502, 503, 504};
-  int[] MovePermCodes = {301};
-  int[] MoveTempCodes = { 307, 303, 302};
+  int[] SuccessCodes = { 200, 203, 304 };
+  int[] InfoCodes = { 100, 101, 102, 103 };
+  int[] RetrySameUrlCodes = { 409, 429, 440, 460, 408, 499,
+                              500, 502, 503, 504, 507, 509,
+                              521, 522, 523, 524, 527, 529, 598};
+  int[] MovePermCodes = { 301, 308 };
+  int[] MoveTempCodes = { 302, 303, 307 };
   int[] UnimplementedCodes = {};
-  int[] PermissionCodes = { 401, 403,  407};
-  int[] ExpectedCodes = { 305, 402};
+  int[] PermissionCodes = { 401, 402, 403, 407, 495, 496, 511, 526, 561 };
+  int[] ExpectedCodes = { };
   int[] RetryDeadLinkCodes = {};
-  int[] NoRetryDeadLinkCodes= {204, 300, 400, 404, 405, 406, 410};
+  int[] NoRetryDeadLinkCodes= {204, 404, 410, 451};
   int[] UnexpectedFailCodes = {
-    201, 202, 205, 206, 306, 411, 412, 416, 417, 501, 505};
-  int[] UnexpectedNoFailCodes = { 414, 415 };
+    201, 202, 205, 206, 207, 208, 218, 226,
+    300, 305, 306,
+    400, 405, 406, 411, 412, 413, 414, 415, 416, 417, 418, 419,
+    420, 421, 422, 423, 424, 426, 428, 430, 431, 444, 449, 450,
+    463, 494, 497, 498,
+    508, 510, 520, 525, 530, 501, 505, 506};
+  int[] UnexpectedNoFailCodes = {  };
 
   /** Assert that all the codes map to the expected exception */
   void assertCodeMappings(int[] codes, Class cls) {
@@ -73,21 +81,21 @@ public class TestHttpResultMap extends LockssTestCase {
       if (cls == null) {
         assertNull("code " + code + " should be null, was " + cls, cls);
       } else {
-        CacheException exception = resultMap.mapException(null, "", code, "foo");
-        assertTrue("code:" + code + ", " + exception + " isn't an instance of " + cls,
+        CacheException exception = resultMap.mapException(null, "", code, "Msg");
+        assertTrue("code:" + code + ", " + exception +
+                   " should be instance of " + cls,
                    cls.isInstance(exception));
       }
     }
   }
 
   public void testGetResultCodeException() {
-    CacheException exception;
-    int ic;
-
     // unknown result code
     assertCodeMappings(new int[] {666},
                        CacheException.UnknownCodeException.class);
     assertCodeMappings(SuccessCodes, null);
+    assertCodeMappings(InfoCodes,
+                       CacheException.UnexpectedNoRetryFailException.class);
     assertCodeMappings(RetrySameUrlCodes,
                        CacheException.RetrySameUrlException.class);
     assertCodeMappings(MovePermCodes,
@@ -95,8 +103,6 @@ public class TestHttpResultMap extends LockssTestCase {
     assertCodeMappings(MoveTempCodes,
                        CacheException.NoRetryTempUrlException.class);
     assertCodeMappings(UnimplementedCodes, null);
-    assertCodeMappings(ExpectedCodes,
-                       CacheException.ExpectedNoRetryException.class);
     assertCodeMappings(ExpectedCodes,
                        CacheException.ExpectedNoRetryException.class);
     assertCodeMappings(PermissionCodes,
@@ -113,58 +119,48 @@ public class TestHttpResultMap extends LockssTestCase {
     CacheException exception;
 
     //check unknown exception
-    exception = resultMap.mapException(null, "", new Exception(), "foo");
-    assertTrue(exception instanceof CacheException.UnknownExceptionException);
+    assertClass(CacheException.UnknownExceptionException.class,
+                resultMap.mapException(null, "", new Exception(), "foo"));
 
-    exception = resultMap.mapException(null, "",
-				       new RuntimeException(), "foo");
-    assertTrue(exception instanceof CacheException.UnknownExceptionException);
+    assertClass(CacheException.UnknownExceptionException.class,
+                resultMap.mapException(null, "",
+				       new RuntimeException(), "foo"));
 
-    exception = resultMap.mapException(null, "",
-				       new SocketException(), "foo");
-    assertTrue(exception.toString(),
-	       exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
+    assertClass(CacheException.RetryableNetworkException.class,
+                resultMap.mapException(null, "",
+                                       new SocketException(), "foo"));
 
-    exception = resultMap.mapException(null, "",
-				       new SocketTimeoutException(), "foo");
-    assertTrue(exception.toString(),
-	       exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
+    assertClass(CacheException.RetryableNetworkException.class,
+                resultMap.mapException(null, "",
+				       new SocketTimeoutException(), "foo"));
 
-    exception = resultMap.mapException(null, "",
-				       new ConnectException(), "foo");
-    assertTrue(exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
+    assertClass(CacheException.RetryableNetworkException.class,
+               resultMap.mapException(null, "",
+				       new ConnectException(), "foo"));
 
-    exception = resultMap.mapException(null, "",
+    assertClass(CacheException.RetryableNetworkException.class,
+                resultMap.mapException(null, "",
 				       new NoRouteToHostException(),
-				       "foo");
-    assertTrue(exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
-
+				       "foo"));
     exception = resultMap.mapException(null, "",
 				       new UnknownHostException("h.tld"),
 				       "foo");
-    assertTrue(exception instanceof
-	       CacheException.RetryableNetworkException_2_30S);
+    assertClass(CacheException.RetryableNetworkException.class, exception);
     assertEquals("Unknown host: h.tld", exception.getMessage());
 
-    exception = resultMap.mapException(null, "",
+    assertClass(CacheException.RetryableNetworkException.class,
+                resultMap.mapException(null, "",
 				       new LockssUrlConnection.ConnectionTimeoutException("msg"),
-				       "foo");
-    assertTrue(exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
+				       "foo"));
 
-    exception = resultMap.mapException(null, "",
+    assertClass(CacheException.UnknownExceptionException.class,
+                resultMap.mapException(null, "",
 				       new java.io.IOException("CRLF expected at end of chunk: -1/-1"),
-				       "foo");
-    assertTrue(exception instanceof CacheException.UnknownExceptionException);
+				       "foo"));
     exception = resultMap.mapException(null, "",
 				       new MalformedURLException("http:::/mal.url"),
 				       "foo");
-    assertTrue(exception instanceof
-	       CacheException.MalformedURLException);
+    assertClass(CacheException.MalformedURLException.class, exception);
     assertEquals("http:::/mal.url", exception.getCause().getMessage());
     assertEquals("Malformed URL: http:::/mal.url", exception.getMessage());
 
@@ -172,34 +168,28 @@ public class TestHttpResultMap extends LockssTestCase {
       resultMap.getMalformedURLException(null, "",
                                          new MalformedURLException("Mal URL: u:x"),
                                          "foo");
-    assertTrue(exception instanceof
-	       CacheException.MalformedURLException);
+    assertClass(CacheException.MalformedURLException.class, exception);
     assertEquals("Mal URL: u:x", exception.getCause().getMessage());
 
     exception =
       resultMap.getRepositoryException(new RuntimeException("repo ex"));
-    assertTrue(exception instanceof
-	       CacheException.RepositoryException);
+    assertClass(CacheException.RepositoryException.class, exception);
     assertEquals("repo ex", exception.getCause().getMessage());
 
     exception = resultMap.mapException(null, "",
 				       new ContentValidationException.EmptyFile("Empty File 42"),
 				       "foo");
-    assertTrue(exception instanceof CacheException.WarningOnly);
+    assertClass(CacheException.WarningOnly.class, exception);
 
     exception = resultMap.mapException(null, "",
 				       new javax.net.ssl.SSLException("ssl ex"),
 				       "foo");
-    assertTrue(exception.toString(),
-	       exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
+    assertClass(CacheException.RetryableNetworkException.class, exception);
 
     exception = resultMap.mapException(null, "",
 				       new ProtocolException("foo bar"),
 				       "foo");
-    assertTrue(exception.toString(),
-	       exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
+    assertClass(CacheException.RetryableNetworkException.class, exception);
 
     // Unmapped subclass of ContentValidationException should map to what
     // ContentValidationException maps to
@@ -211,7 +201,7 @@ public class TestHttpResultMap extends LockssTestCase {
     exception = resultMap.mapException(null, "",
 				       new ContentValidationException.LogOnly("Important warning message"),
 				       "foo");
-    assertTrue(exception instanceof CacheException.WarningOnly);
+    assertClass(CacheException.WarningOnly.class, exception);
 
     resultMap.storeMapEntry(IOException.class,
 			    CacheException.RetryableNetworkException_3_30S.class);
@@ -219,36 +209,12 @@ public class TestHttpResultMap extends LockssTestCase {
     exception = resultMap.mapException(null, "",
 				       new java.io.IOException("CRLF expected at end of chunk: -1/-1"),
 				       "foo");
-    assertTrue(exception instanceof
-	       CacheException.RetryableNetworkException_3_30S);
+    assertClass(CacheException.RetryableNetworkException.class, exception);
 
   }
 
   static class UnmappedContentValidationException
     extends ContentValidationException {
-  }
-
-  public void testInitExceptionTable() {
-    checkExceptionClass(RetrySameUrlCodes,
-                        CacheException.RetrySameUrlException.class);
-    checkExceptionClass(MovePermCodes,
-                        CacheException.NoRetryPermUrlException.class);
-    checkExceptionClass(MoveTempCodes,
-                        CacheException.NoRetryTempUrlException.class);
-    checkExceptionClass(UnimplementedCodes,
-                        CacheException.UnimplementedCodeException.class);
-    checkExceptionClass(PermissionCodes,
-                        CacheException.PermissionException.class);
-    checkExceptionClass(ExpectedCodes,
-                        CacheException.ExpectedNoRetryException.class);
-    checkExceptionClass(RetryDeadLinkCodes,
-                        CacheException.RetryDeadLinkException.class);
-    checkExceptionClass(NoRetryDeadLinkCodes,
-                        CacheException.NoRetryDeadLinkException.class);
-    checkExceptionClass(UnexpectedFailCodes,
-                        CacheException.UnexpectedNoRetryFailException.class);
-    checkExceptionClass(UnexpectedNoFailCodes,
-                        CacheException.UnexpectedNoRetryNoFailException.class);
   }
 
   public void testClassTree() {
@@ -408,18 +374,8 @@ public class TestHttpResultMap extends LockssTestCase {
     assertSame(e1, re.triggerException);
     assertEquals(-1, re.responseCode);
 
-    assertEquals(CacheException.RetryableNetworkException_3_30S.class,
+    assertEquals(CacheException.RetryableNetworkException.class,
 		 resultMap.mapException(null, "", e2, null).getClass());
-  }
-
-  private void checkExceptionClass(int[] checkArray,
-                                   Class checkClass) {
-    for (int ic = 0; ic < checkArray.length; ic++) {
-      CacheException ex = resultMap.mapException(null, "",
-						 checkArray[ic], null);
-      assertTrue("Wrong class for " + checkArray[ic] + ": " + ex.getClass(),
-		 checkClass.isInstance(ex));
-    }
   }
 
   private Exception makeException(Class exceptionClass) {

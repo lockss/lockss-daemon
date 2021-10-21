@@ -37,56 +37,99 @@ import org.lockss.plugin.ContentValidationException;
 
 /**
  * Maps an HTTP result (response code or exception thrown during
- * processing) to an action, either success or an exception, usually
- * under CacheException
+ * processing) to an action represented as a CacheException.  Many of
+ * the CacheExceptions are handled specially by the crawler
+ * infrastructure.
  */
 public class HttpResultMap implements CacheResultMap {
   static Logger log = Logger.getLogger("HttpResultMap");
 
-  /** Multipurpose enum used to:<ul>
+  /** This enum used to:<ul>
    *
-   * <li>Declare the default mappings for new HttpResultMap
-   * instances</li>
+   * <li>Establish the default mappings.</li>
    *
-   * <li>Assign names to groups (categories) of results so plugins can
-   * remap them without knowing/repeating all the codes/exceptions in
-   * a category</li>
+   * <li>Assign names to categories of results so plugins can remap
+   * them without knowing/repeating all the codes/exceptions in a
+   * category.  E.g., to change the retry count/interval for all
+   * retryable errors, or to map a set of special purpose codes
+   * (WebDAV) to a handler.</li>
    *
    * </ul>
+   *
+   * These are the CacheExceptions used in the default mapping.  Their
+   * characteristics are defined in {@link CacheExceptions} but are
+   * repeated here<! --- because I only need them when I'm looking at
+   * this file and I'm tired of constantly looking them up --->.
+   * "warning" does not prevent crawl from succeeding, "error" allows
+   * crawl to proceed but will end with an error, "abort" immediately
+   * terminates crawl with an error.  There's some inconsistent naming
+   * and overlap in behavior.<ul>
+   *
+   * <li>CacheSuccess - "Exception" that indicates success.</li>
+   *
+   * <li>CacheException.WarningOnly - Warning in log, no error.</li>
+   *
+   * <li>CacheException.NoRetryDeadLinkException - No retry, warning.</li>
+   *
+   * <li>CacheException.UnexpectedNoRetryFailException - No retry, error.</li>
+   *
+   * <li>CacheException.PermissionException - No retry, abort.</li>
+   *
+   * <li>CacheException.RetrySameUrlException - Retry, then error if
+   * no retry succeeds.  Retries {@value
+   * org.lockss.crawler.BaseCrawler#DEFAULT_DEFAULT_RETRY_COUNT} times
+   * at {@value
+   * org.lockss.crawler.BaseCrawler#DEFAULT_DEFAULT_RETRY_DELAY}ms
+   * intervals by default; can be configured globally with {@value
+   * org.lockss.crawler.BaseCrawler#PARAM_DEFAULT_RETRY_COUNT} and
+   * {@value
+   * org.lockss.crawler.BaseCrawler#PARAM_DEFAULT_RETRY_DELAY}.</li>
+   *
+   * <li>CacheException.RetryableNetworkException_3_30S - Retry 3
+   * times at 30 second intervals, then error.</li>
+   *
+   * <li>CacheException.NoRetryPermUrlException<br>
+   * CacheException.NoRetryTempUrlException - Trigger logic to follow
+   * redirect.</li>
    * 
+   * <li>CacheException.MalformedURLException - no retry, no error</li>
+   *
+   * <li>CacheException.UnretryableException - no retry, error</li>
+   *
+   * </ul>
    */
   public enum HttpResultCodeCategory {
     AuthCodes(L(401, 402, 403, 407, 495, 496, 511, 526, 561),
               CacheException.PermissionException.class),
     ClientErrorCodes(L(400, 405, 411, 413, 414, 415, 416, 417, 421,
-                       431, 449, 463, 494, 497, 498, 499, 510),
+                       431, 449, 463, 494, 497, 498, 510),
                      CacheException.UnexpectedNoRetryFailException.class),
     DeadLinkCodes(L(204, 404, 410, 451),
                          CacheException.NoRetryDeadLinkException.class),
     InformationalCodes(L(100, 101, 102, 103),
                        CacheException.UnexpectedNoRetryFailException.class),
-    PermenentServerCondiditionCodes(L(406, 501, 505, 506, 520, 525, 530),
+    PermenentServerCondiditionCodes(L(406, 412, 501, 505, 506, 520, 525, 530),
                         CacheException.UnexpectedNoRetryFailException.class),
     RedirectTempCodes(L(302, 303, 307),
                   CacheException.NoRetryTempUrlException.class),
     RedirectPermCodes(L(301, 308),
                   CacheException.NoRetryPermUrlException.class),
-    RedirectCodes(L(301, 302, 303, 307, 308)),
+    RedirectCodes(L(RedirectPermCodes, RedirectTempCodes)),
     RetryableNetworkCodes(L(460, 499),
-                          CacheException.RetryableNetworkException_3_30S.class),
+                          CacheException.RetrySameUrlException.class),
     ServerLimitCodes(L(509, 529),
-                     CacheException.RetryableNetworkException_3_30S.class),
+                     CacheException.RetrySameUrlException.class),
     SuccessCodes(L(200, 203, 304),
                  CacheSuccess.class),
-    TimeoutCodes(L(408, 440, 522, 524, 527, 598),
+    TimeoutCodes(L(440, 408, 522, 524, 527, 598),
                  CacheException.RetrySameUrlException.class),
-    TransientServerConditionCodes(L(409, 412, 426, 429,
+    TransientServerConditionCodes(L(409, 429,
                                     500, 502, 503, 504, 507, 521, 523),
                  CacheException.RetrySameUrlException.class),
     UnexpectedCodes(L(201, 206, 418, 444, 530),
                  CacheException.UnexpectedNoRetryFailException.class),
     UnHandledCodes(L(202, 205, 218, 226, 300, 305, 306,
-                     419, 420, 420, 426, 428, 430, 450, 451),
+                     419, 420, 426, 428, 430, 450),
                  CacheException.UnexpectedNoRetryFailException.class),
     WebDAVCodes(L(207, 208, 422, 423, 424, 508),
                  CacheException.UnexpectedNoRetryFailException.class),
@@ -98,7 +141,7 @@ public class HttpResultMap implements CacheResultMap {
                  "Malformed URL: %s"),
 
     UnkownHost(L(UnknownHostException.class),
-               CacheException.RetryableNetworkException_2_30S.class,
+               CacheException.RetryableNetworkException.class,
                "Unknown host: %s"),
 
     // Network errors, timeouts, etc. default retryable
@@ -115,7 +158,7 @@ public class HttpResultMap implements CacheResultMap {
                    javax.net.ssl.SSLException.class,
                    ProtocolException.class,
                    java.nio.channels.ClosedChannelException.class),
-                 CacheException.RetryableNetworkException_3_30S.class
+                 CacheException.RetryableNetworkException.class
                  ),
 
     // ContentValidationException
@@ -124,9 +167,14 @@ public class HttpResultMap implements CacheResultMap {
     EmptyFile(L(ContentValidationException.EmptyFile.class),
               CacheException.WarningOnly.class),
     WrongLength(L(ContentValidationException.WrongLength.class),
-                CacheException.RetryableNetworkException_3_10S.class),
+                CacheException.RetrySameUrlException.class),
     LogOnly(L(ContentValidationException.LogOnly.class),
-            CacheException.WarningOnly.class);
+            CacheException.WarningOnly.class),
+
+    /** Macro for all retryable conditions */
+    Retryable(L(RetryableNetworkCodes, NetworkError, TimeoutCodes,
+                TransientServerConditionCodes, WrongLength));
+
 
     private Class cls;       // Result class, Usually a CacheException
     private Triggers triggers; // Triggering response codes and/or exceptions
@@ -146,7 +194,7 @@ public class HttpResultMap implements CacheResultMap {
       this.fmt = fmt;
     }
 
-    /** Create a category naming a triggering exception, without
+    /** Create a category naming a set of triggering exceptions, without
      * establishing a default mapping */
     private HttpResultCodeCategory(Triggers triggers) {
       this.triggers = triggers;
@@ -160,6 +208,11 @@ public class HttpResultMap implements CacheResultMap {
     /** Return the trigger Exception class, or null */
     public List<Class> getTriggerClasses() {
       return triggers.getTriggerClasses();
+    }
+
+    /** Return the trigger categories to expand, or null */
+    public List<HttpResultCodeCategory> getTriggerCategories() {
+      return triggers.getTriggerCategories();
     }
 
     /** Return the default Exception mapping */
@@ -178,13 +231,18 @@ public class HttpResultMap implements CacheResultMap {
   static class Triggers {
     private List<Integer> codes;
     private List<Class> triggerClasses;
+    private List<HttpResultCodeCategory> categories;
 
     Triggers(Object[] lst) {
       List<Integer> ints = new ArrayList<>();
       List<Class> eClasses = new ArrayList<>();
+      List<HttpResultCodeCategory> cats = new ArrayList<>();
       for (Object x : lst) {
         if (x instanceof Integer) {
           ints.add((Integer)x);
+        }
+        if (x instanceof HttpResultCodeCategory) {
+          cats.add((HttpResultCodeCategory)x);
         }
         if (x instanceof Class) {
           eClasses.add((Class)x);
@@ -197,6 +255,10 @@ public class HttpResultMap implements CacheResultMap {
       if (!eClasses.isEmpty()) {
         this.triggerClasses = Collections.unmodifiableList(eClasses);
       }
+
+      if (!cats.isEmpty()) {
+        this.categories = Collections.unmodifiableList(cats);
+      }
     }
 
     List<Integer> getCodes() {
@@ -205,6 +267,10 @@ public class HttpResultMap implements CacheResultMap {
 
     List<Class> getTriggerClasses() {
       return triggerClasses;
+    }
+
+    List<HttpResultCodeCategory> getTriggerCategories() {
+      return categories;
     }
   }
 
@@ -511,13 +577,21 @@ public class HttpResultMap implements CacheResultMap {
       for (int code : category.getCodes()) {
         storeMapEntry(code, response);
       }
-    } else if (category.getTriggerClasses() != null) {
+    }
+    if (category.getTriggerClasses() != null) {
       for (Class cls : category.getTriggerClasses()) {
         if (response instanceof Class) {
           storeMapEntry(cls, (Class)response, category.getFmt());
         } else {
           storeMapEntry(cls, response);
         }
+      }
+    }
+    // Cycles in Category macros will cause stack overflow or infinite
+    // loop here.
+    if (category.getTriggerCategories() != null) {
+      for (HttpResultCodeCategory cat : category.getTriggerCategories()) {
+        storeResultCategoryEntries(cat, response);
       }
     }
   }

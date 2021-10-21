@@ -296,8 +296,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
     try {
       doStore("invalid_3", null);
-      fail("Should have thrown CacheException.RetryableNetworkException_2");
-    } catch (CacheException.RetryableNetworkException_2 e) {
+      fail("Should have thrown CacheException.RetryableNetworkException");
+    } catch (CacheException.RetryableNetworkException e) {
       // expected
       assertEquals("v ex 3", e.getMessage());
       assertNull(cacher.getInfoException());
@@ -375,8 +375,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
     try {
       doStore("", "invalid_3");
-      fail("Should have thrown CacheException.RetryableNetworkException_2");
-    } catch (CacheException.RetryableNetworkException_2 e) {
+      fail("Should have thrown CacheException.RetryableNetworkException");
+    } catch (CacheException.RetryableNetworkException e) {
       // expected
       assertEquals("v ex 3", e.getMessage());
       assertNull(cacher.getInfoException());
@@ -452,8 +452,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
     try {
       cacher.storeContent();
-      fail("Should have thrown CacheException.RetryableNetworkException_2");
-    } catch (CacheException.RetryableNetworkException_2 e) {
+      fail("Should have thrown CacheException.RetryableNetworkException");
+    } catch (CacheException.RetryableNetworkException e) {
     }
 
     CachedUrl rcu1 = new BaseCachedUrl(mau, TEST_URL);
@@ -716,7 +716,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 	assertClass(CacheException.UnretryableException.class, e);
 	break;
       case Default:
-	assertClass(CacheException.RetryableNetworkException_3_10S.class, e);
+	assertClass(CacheException.RetrySameUrlException.class, e);
 	break;
       }
       assertMatchesRE("File size \\(9\\) differs from Content-Length header \\(8\\): http://www.example.com/testDir/leaf1",

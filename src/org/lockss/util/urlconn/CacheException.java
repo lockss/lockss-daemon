@@ -250,8 +250,35 @@ public class CacheException
     }
   }
 
+  /** Retryable network error, with default retry characteristics */
+  public static class RetryableNetworkException extends RetryableException {
+    public RetryableNetworkException() {
+      super();
+    }
+
+    public RetryableNetworkException(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException(Exception e) {
+      super(e.toString());
+      initCause(e);
+    }
+
+    public long getRetryDelay() {
+      return CurrentConfig.getLongParam(BaseCrawler.PARAM_DEFAULT_NETWORK_RETRY_DELAY,
+                                        BaseCrawler.DEFAULT_DEFAULT_NETWORK_RETRY_DELAY);
+    }
+
+    public int getRetryCount() {
+      return CurrentConfig.getIntParam(BaseCrawler.PARAM_DEFAULT_NETWORK_RETRY_COUNT,
+                                       BaseCrawler.DEFAULT_DEFAULT_NETWORK_RETRY_COUNT);
+    }
+  }
+
   /** Retryable network error; two tries with default */
-  public static class RetryableNetworkException_2 extends RetryableException {
+  public static class RetryableNetworkException_2 extends RetryableNetworkException {
     public RetryableNetworkException_2() {
       super();
     }
@@ -272,7 +299,7 @@ public class CacheException
   }
 
   /** Retryable network error; three tries with default */
-  public static class RetryableNetworkException_3 extends RetryableException {
+  public static class RetryableNetworkException_3 extends RetryableNetworkException {
     public RetryableNetworkException_3() {
       super();
     }
@@ -293,7 +320,7 @@ public class CacheException
   }
 
   /** Retryable network error; five tries with default */
-  public static class RetryableNetworkException_5 extends RetryableException {
+  public static class RetryableNetworkException_5 extends RetryableNetworkException {
     public RetryableNetworkException_5() {
       super();
     }
