@@ -48,10 +48,6 @@ import org.lockss.util.urlconn.LockssUrlConnectionPool;
 
 public interface UrlFetcher {
   
-  public static final int DEFAULT_DEFAULT_RETRY_COUNT = 3;
-  public static final long DEFAULT_DEFAULT_RETRY_DELAY = 10 * Constants.SECOND;
-  public static final int DEFAULT_MAX_RETRY_COUNT = 10;
-  public static final long DEFAULT_MIN_RETRY_DELAY = 1 * Constants.SECOND;
   /** Don't follow redirects; throw CacheException.RetryNewUrlException if
    * redirect response received */
   public static final RedirectScheme REDIRECT_SCHEME_DONT_FOLLOW =

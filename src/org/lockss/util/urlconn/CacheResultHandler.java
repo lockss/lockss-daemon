@@ -38,9 +38,20 @@ import org.lockss.plugin.*;
 
 public interface CacheResultHandler extends PluginFetchEventResponse {
 
-  /** Unused */
-  @Deprecated
-  public void init(CacheResultMap map) throws PluginException;
+  /** Called when plugin loaded to initialize the CacheResultMap, if
+   * it isn't an HttpResultMap.
+   * @param map the default CacheResultMap
+   */
+  public default void init(CacheResultMap map) throws PluginException {
+  }
+
+  /** Called (in lieu of {@link #init(CacheResultMap)}) when plugin
+   * loaded to initialize the HttpResultMap.
+   * @param map the default HttpResultMap
+   */
+  public default void init(HttpResultMap map) throws PluginException {
+    init((CacheResultMap)map);
+  }
 
   /** Determine what action to take in response to HTTP result codes.
    *

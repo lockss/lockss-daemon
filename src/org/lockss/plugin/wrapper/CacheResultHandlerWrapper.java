@@ -58,6 +58,14 @@ public class CacheResultHandlerWrapper
     }
   }
 
+  public void init(HttpResultMap map) throws PluginException {
+    try {
+      inst.init(map);
+    } catch (LinkageError e) {
+      throw new PluginException.LinkageError(e);
+    }
+  }
+
   public CacheException handleResult(ArchivalUnit au,
 				     String url,
 				     int code)

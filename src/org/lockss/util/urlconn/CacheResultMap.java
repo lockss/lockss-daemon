@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,9 +36,15 @@ import org.lockss.plugin.ArchivalUnit;
  * success (null) or an exception understood by LOCKSS, usually one under
  * CacheException
  */
-
 public interface CacheResultMap {
+
+  @Deprecated
   public CacheException getMalformedURLException(Exception nestedException);
+
+  public CacheException getMalformedURLException(ArchivalUnit au,
+                                                 String url,
+                                                 Exception nestedException,
+                                                 String message);
 
   public CacheException getRepositoryException(Exception nestedException);
 

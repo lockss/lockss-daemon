@@ -38,8 +38,8 @@ public class MockHttpResultHandler implements CacheResultHandler {
   public MockHttpResultHandler() {
   }
 
-  public void init(CacheResultMap crmap) {
-    ((HttpResultMap)crmap).storeMapEntry(200, this.getClass());
+  public void init(HttpResultMap map) {
+    map.storeMapEntry(200, this.getClass());
   }
 
   public CacheException handleResult(ArchivalUnit au,
