@@ -187,6 +187,7 @@ public class TestEditableDefinablePlugin
     "UnimplementedCodeException",
     "MalformedURLException",
     "ExtractionError",
+    "RetryableNetworkException",
     "RetryableNetworkException_2",
     "RetryableNetworkException_3",
     "RetryableNetworkException_5",

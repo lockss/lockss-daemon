@@ -76,13 +76,34 @@ public abstract class BaseCrawler implements Crawler {
     PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
   
+  /** Number of times to retry fetch operations that return a
+   * retryable error and don't otherwise specify retry
+   * characteristics */
   public static final String PARAM_DEFAULT_RETRY_COUNT =
     PREFIX + "retryCount";
   public static final int DEFAULT_DEFAULT_RETRY_COUNT = 3;
 
+  /** Interval at which to retry fetch operations that return a
+   * retryable error and don't otherwise specify retry
+   * characteristics */
   public static final String PARAM_DEFAULT_RETRY_DELAY =
     PREFIX + "retryDelay";
   public static final long DEFAULT_DEFAULT_RETRY_DELAY = 10 * Constants.SECOND;
+
+  /** Number of times to retry fetch operations that return a
+   * retryable network error and don't otherwise specify retry
+   * characteristics */
+  public static final String PARAM_DEFAULT_NETWORK_RETRY_COUNT =
+    PREFIX + "networkRetryCount";
+  public static final int DEFAULT_DEFAULT_NETWORK_RETRY_COUNT = 3;
+
+  /** Interval at which to retry fetch operations that return a
+   * retryable network error and don't otherwise specify retry
+   * characteristics */
+  public static final String PARAM_DEFAULT_NETWORK_RETRY_DELAY =
+    PREFIX + "networkRetryDelay";
+  public static final long DEFAULT_DEFAULT_NETWORK_RETRY_DELAY =
+    30 * Constants.SECOND;
 
   public static final String PARAM_MAX_RETRY_COUNT =
     PREFIX + "maxRetryCount";

@@ -522,10 +522,10 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertClass(CacheException.NoRetryDeadLinkException.class,
 		getHttpResultMap(plugin).mapException(null, "",
 						      404, null));
-    assertClass(CacheException.RetryableNetworkException_3_30S.class,
+    assertClass(CacheException.RetryableNetworkException.class,
 		getHttpResultMap(plugin).mapException(null, "",
 						      ioe1, null));
-    assertClass(CacheException.RetryableNetworkException_3_30S.class,
+    assertClass(CacheException.RetryableNetworkException.class,
 		getHttpResultMap(plugin).mapException(null, "",
 						      ioe2, null));
 
