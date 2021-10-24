@@ -841,7 +841,7 @@ public class HttpResultMap implements CacheResultMap {
     } while (resultEi == null
 	     && ((exClass = exClass.getSuperclass()) != null
 		 && exClass != Exception.class));
-    log.critical("nearest to: " + fetchException + " = " + exClass);
+    log.debug3("nearest to: " + fetchException + " = " + exClass);
     return resultEi;
   }
 
