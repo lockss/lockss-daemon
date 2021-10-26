@@ -170,7 +170,7 @@
         au < doNotProcess ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
         au < manifest ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 ; 2017 ; >
         au < manifest ; exists ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 ; 2018 ; >
-        au < ready ; exists ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; >
+        au < crawling ; exists ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; >
         au < crawling ; exists ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 ; >
         au < crawling ; exists ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 ; >
 
@@ -339,7 +339,7 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://zff.openlibhums.org/
 
-      au < ready ; exists ; 2019 ; 7 ; ZFF: Zeitschrift für Fantastikforschung Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2019 ; 7 ; ZFF: Zeitschrift für Fantastikforschung Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 9 ; ZFF: Zeitschrift für Fantastikforschung Volume 2021 ; 2021 ; >
 
@@ -361,7 +361,7 @@
       au < manifest ; exists ; 2015 ; 3 ; The Parish Review Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 3 ; The Parish Review Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 ; >
-      au < ready ; exists ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 ; >
 
   }

@@ -27,11 +27,11 @@
     param[journal_id] = 10.1055/s-00000001
     comment[years] = 1991-current
 
-    au < ready ; exists ; 1991 ; 1991 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 26 ; 26 ; >
+    au < crawling ; exists ; 1991 ; 1991 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 26 ; 26 ; >
     au < crawling ; exists ; 1992 ; 1992 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 27 ; 27 ; >
     au < crawling ; exists ; 1993 ; 1993 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 28 ; 28 ; >
-    au < ready ; exists ; 1994 ; 1994 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 29 ; 29 ; >
-    au < ready ; exists ; 1995 ; 1995 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 30 ; 30 ; >
+    au < crawling ; exists ; 1994 ; 1994 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1995 ; 1995 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 30 ; 30 ; >
     au < crawling ; exists ; 1996 ; 1996 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 31 ; 31 ; >
     au < crawling ; exists ; 1997 ; 1997 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 32 ; 32 ; >
     au < crawling ; exists ; 1998 ; 1998 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 33 ; 33 ; >
@@ -627,7 +627,7 @@
     comment[years] = 1999-2012
     # includes Arzneimittelforschung Drug Research. Published as Drug Research after 2012.
 
-    au < ready ; exists ; 1999 ; 1999 ; Arzneimittelforschung Volume 50 ; 50 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; Arzneimittelforschung Volume 50 ; 50 ; >
     au < finished ; crawling ; 2001 ; 2001 ; Arzneimittelforschung Volume 51 ; 51 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2002 ; 2002 ; Arzneimittelforschung Volume 52 ; 52 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2003 ; 2003 ; Arzneimittelforschung Volume 53 ; 53 ; reingest1.clockss.org:8082 >
@@ -5482,8 +5482,8 @@
     comment[years] = 1997-current
 
    au < crawling ; exists ; 1997 ; 1997 ; Seminars in Musculoskeletal Radiology Volume 1 ; 1 ; >
-   au < ready ; exists ; 1998 ; 1998 ; Seminars in Musculoskeletal Radiology Volume 2 ; 2 ; >
-   au < ready ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
+   au < crawling ; exists ; 1998 ; 1998 ; Seminars in Musculoskeletal Radiology Volume 2 ; 2 ; >
+   au < crawling ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; >
    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Musculoskeletal Radiology Volume 5 ; 5 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; >
@@ -7839,8 +7839,8 @@
     param[journal_id] = 10.1055/s-00035148
     comment[years] = 2012-2018
 
-    au < ready ; exists ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Schlaf Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Schlaf Volume 2 ; 2 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Schlaf Volume 3 ; 3 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Schlaf Volume 4 ; 4 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Schlaf Volume 5 ; 5 ; >
@@ -8020,7 +8020,7 @@
 
     au < ready ; exists ; 2015 ; 2015 ; Asian Journal of Oncology Volume 1 ; 1 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Asian Journal of Oncology Volume 2 ; 2 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Asian Journal of Oncology Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Asian Journal of Oncology Volume 3 ; 3 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Asian Journal of Oncology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Asian Journal of Oncology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Asian Journal of Oncology Volume 6 ; 6 ; >
@@ -8260,10 +8260,10 @@
     au < crawling ; exists ; 2006 ; 2006 ; Homeopathy Volume 95 ; 95 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Homeopathy Volume 96 ; 96 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Homeopathy Volume 97 ; 97 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Homeopathy Volume 98 ; 98 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Homeopathy Volume 98 ; 98 ; >
     au < crawling ; exists ; 2010 ; 2010 ; Homeopathy Volume 99 ; 99 ; >
     au < ready ; exists ; 2011 ; 2011 ; Homeopathy Volume 100 ; 100 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Homeopathy Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Homeopathy Volume 101 ; 101 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Homeopathy Volume 102 ; 102 ; >
     au < ready ; exists ; 2014 ; 2014 ; Homeopathy Volume 103 ; 103 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Homeopathy Volume 104 ; 104 ; >
@@ -8289,7 +8289,7 @@
     comment[years] = 2004-current
 
     au < ready ; exists ; 2004 ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 37 ; >
-    au < ready ; exists ; 2005 ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 38 ; >
     au < ready ; exists ; 2006 ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 39 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 40 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 41 ; >
@@ -8298,10 +8298,10 @@
     au < ready ; exists ; 2011 ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 44 ; >
     au < ready ; exists ; 2012 ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 45 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 ; >
     au < ready ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; >
     au < ready ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 ; >
@@ -8325,7 +8325,7 @@
     au < crawling ; exists ; 2015 ; 2015 ; International Journal of Epilepsy Volume 2 ; 2 ; >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Epilepsy Volume 3 ; 3 ; >
     au < crawling ; exists ; 2017 ; 2017 ; International Journal of Epilepsy Volume 4 ; 4 ; >
-    au < ready ; exists ; 2018 ; 2018 ; International Journal of Epilepsy Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; International Journal of Epilepsy Volume 5 ; 5 ; >
     au < crawling ; exists ; 2020 ; 2020 ; International Journal of Epilepsy Volume 6 ; 6 ; >
     au < expected ; exists ; 2021 ; 2021 ; International Journal of Epilepsy Volume 7 ; 7 ; >
 
@@ -8345,7 +8345,7 @@
 
     au < ready ; exists ; 2011 ; 2011 ; International Journal of Nutrology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 ; >
-    au < ready ; exists ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 ; >
     au < crawling ; exists ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 ; >
     au < crawling ; exists ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 ; >
@@ -8413,10 +8413,10 @@
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 5 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 6 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 7 ; >
     au < ready ; exists ; 2017 ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 8 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 9 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Digestive Endoscopy Volume 10 ; 10 ; >
     au < ready ; exists ; 2020 ; 2020 ; Journal of Digestive Endoscopy Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Digestive Endoscopy Volume 12 ; 12 ; >
@@ -8480,7 +8480,7 @@
     comment[years] = 2009-current
 
     au < crawling ; exists ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 ; >
-    au < ready ; exists ; 2010 ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 3 ; >
     au < ready ; exists ; 2012 ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 5 ; >
@@ -8508,7 +8508,7 @@
 
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Morphological Sciences Volume 31 ; 31 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Morphological Sciences Volume 32 ; 32 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Journal of Morphological Sciences Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Journal of Morphological Sciences Volume 33 ; 33 ; >
     au < ready ; exists ; 2017 ; 2017 ; Journal of Morphological Sciences Volume 34 ; 34 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Morphological Sciences Volume 35 ; 35 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Morphological Sciences Volume 36 ; 36 ; >
@@ -8555,8 +8555,8 @@
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Neurosciences in Rural Practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Neurosciences in Rural Practice Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Neurosciences in Rural Practice Volume 5 ; 5 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 6 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 7 ; >
     au < ready ; exists ; 2017 ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 8 ; >
     au < ready ; exists ; 2018 ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 9 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Neurosciences in Rural Practice Volume 10 ; 10 ; >
