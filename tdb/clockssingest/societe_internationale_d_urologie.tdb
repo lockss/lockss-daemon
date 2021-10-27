@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Société Internationale d’Urologie ;
+    info[contract] = 2021 ;
+    info[back] = 2020 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    attr[start_stem] = index.php/
+
+
+  {
+  
+    title < 
+      name = Société Internationale d’Urologie Journal ;
+      eissn = 2563-6499 
+    >
+
+      param[base_url] = https://siuj.org/
+      param[journal_id] = siuj
+
+      au < manifest ; exists ; 2020 ; Société Internationale d’Urologie Journal Volume 1 ; 21 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Société Internationale d’Urologie Journal Volume 2 ; 22 ; 2021 ; >
+    
+  }
+
+}
