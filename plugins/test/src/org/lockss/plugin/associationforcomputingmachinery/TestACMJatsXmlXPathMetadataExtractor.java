@@ -1,25 +1,23 @@
 package org.lockss.plugin.associationforcomputingmachinery;
 
-import org.apache.commons.io.FileUtils;
-import org.lockss.daemon.PluginException;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.*;
-import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.springer.TestSpringerJatsXmlXPathMetadataExtractor;
-import org.lockss.util.Constants;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 import org.w3c.dom.Document;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
+
 
 public class TestACMJatsXmlXPathMetadataExtractor extends SourceXmlMetadataExtractorTest {
 
@@ -30,17 +28,18 @@ public class TestACMJatsXmlXPathMetadataExtractor extends SourceXmlMetadataExtra
     private static String BaseUrl = "http://source.host.org/sourcefiles/springer/";
     private static String Directory = "2019_04";
 
-    private static String getXmlFileContent(String fname) {
+    private String getXmlFileContent(String fname) {
         String xmlContent = "";
+        InputStream file_input = null;
+
         try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/associationforcomputingmachinery/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-
-
-        } catch(IOException e) {
+            file_input = getResourceAsStream(fname);
+            xmlContent = StringUtil.fromInputStream(file_input);
+            IOUtil.safeClose(file_input);
+        } catch (IOException e) {
             log.error(e.getMessage(), e);
+        } finally {
+            IOUtil.safeClose(file_input);
         }
         return xmlContent;
     }
