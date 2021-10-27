@@ -1,6 +1,5 @@
 package org.lockss.plugin.clockss.scienceopen;
 
-import org.apache.commons.io.FileUtils;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -11,12 +10,12 @@ import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.util.Constants;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 import org.w3c.dom.Document;
-
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,19 +26,21 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
     private static String BaseUrl = "http://source.host.org/sourcefiles/scienceopen/";
     private static String Directory = "2020";
 
-    private static String getXmlFileContent(String fname) {
+    private String getXmlFileContent(String fname) {
         String xmlContent = "";
+        InputStream file_input = null;
+
         try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/scienceopen/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch(IOException e) {
+            file_input = getResourceAsStream(fname);
+            xmlContent = StringUtil.fromInputStream(file_input);
+            IOUtil.safeClose(file_input);
+        } catch (IOException e) {
             log.error(e.getMessage(), e);
+        } finally {
+            IOUtil.safeClose(file_input);
         }
         return xmlContent;
     }
-
 
     public void testExtractArticleXmlSchema() throws Exception {
 
