@@ -1,17 +1,13 @@
 package org.lockss.plugin.clockss.liverpool;
 
-import org.apache.commons.io.FileUtils;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
-import org.lockss.util.CIProperties;
-import org.lockss.util.Constants;
-import org.lockss.util.Logger;
-
-import java.io.File;
+import org.lockss.util.*;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class TestLiverpoolOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataExtractorTest {
@@ -21,15 +17,18 @@ public class TestLiverpoolOnix3XmlMetadataExtractorFactory extends SourceXmlMeta
     private static String BaseUrl = "http://source.host.org/sourcefiles/liverpool/";
     private static String Directory = "2019";
 
-    private static String getXmlFileContent(String fname) {
+    private String getXmlFileContent(String fname) {
         String xmlContent = "";
+        InputStream file_input = null;
+
         try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/liverpool/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
+            file_input = getResourceAsStream(fname);
+            xmlContent = StringUtil.fromInputStream(file_input);
+            IOUtil.safeClose(file_input);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
+        } finally {
+            IOUtil.safeClose(file_input);
         }
         return xmlContent;
     }
