@@ -159,7 +159,7 @@
 
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
     au < crawling ; down ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
+    au < ready ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
     au < crawling ; exists ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; Australian Journal of Biography and History: Number 5 ; 5 ; >
@@ -229,7 +229,7 @@
     au < crawling ; down ; 2018 ; International Review of Environmental History: Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
     au < crawling ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
+    au < ready ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
 
   }
