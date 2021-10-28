@@ -260,6 +260,9 @@ public class MockCachedUrl implements CachedUrl {
     return openForHashing(null);
   }
 
+  public void delete() throws UnsupportedOperationException, IOException {
+  }
+
   public InputStream openForHashing(HashedInputStream.Hasher hasher) {
     String contentType = getContentType();
     InputStream is = null;
