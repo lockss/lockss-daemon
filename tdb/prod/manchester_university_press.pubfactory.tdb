@@ -141,10 +141,10 @@
       au < doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 >
       au < doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 >
       au < doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 >
-      au < exists ; 2018 ; Human Remains and Violence Volume 4 ; 4 >
-      au < exists ; 2019 ; Human Remains and Violence Volume 5 ; 5 >
-      au < testing ; 2020 ; Human Remains and Violence Volume 6 ; 6 >
-      au < exists ; 2021 ; Human Remains and Violence Volume 7 ; 7 >
+      au < ready ; 2018 ; Human Remains and Violence Volume 4 ; 4 >
+      au < ready ; 2019 ; Human Remains and Violence Volume 5 ; 5 >
+      au < ready ; 2020 ; Human Remains and Violence Volume 6 ; 6 >
+      au < ready ; 2021 ; Human Remains and Violence Volume 7 ; 7 >
 
     }
 
@@ -177,13 +177,13 @@
 
       param[base_url] = https://www.manchesteropenhive.com/
 
-      au < exists ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
-      au < exists ; 2016 ; James Baldwin Journal Volume 2 ; 2 >
-      au < exists ; 2017 ; James Baldwin Journal Volume 3 ; 3 >
-      au < exists ; 2018 ; James Baldwin Journal Volume 4 ; 4 >
-      au < exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 >
-      au < exists ; 2020 ; James Baldwin Journal Volume 6 ; 6 >
-      au < exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 >
+      au < ready ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
+      au < ready ; 2016 ; James Baldwin Journal Volume 2 ; 2 >
+      au < ready ; 2017 ; James Baldwin Journal Volume 3 ; 3 >
+      au < ready ; 2018 ; James Baldwin Journal Volume 4 ; 4 >
+      au < ready ; 2019 ; James Baldwin Journal Volume 5 ; 5 >
+      au < ready ; 2020 ; James Baldwin Journal Volume 6 ; 6 >
+      au < ready ; 2021 ; James Baldwin Journal Volume 7 ; 7 >
 
     }
   }
