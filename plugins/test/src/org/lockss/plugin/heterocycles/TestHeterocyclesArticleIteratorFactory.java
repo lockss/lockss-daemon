@@ -37,8 +37,8 @@ import java.util.regex.Pattern;
 
 import org.lockss.util.ListUtil;
 import org.lockss.util.StringUtil;
-import org.lockss.state.NodeManager;
 import org.lockss.test.ArticleIteratorTestCase;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.CachedUrlSetSpec;
@@ -94,6 +94,8 @@ public class TestHeterocyclesArticleIteratorFactory
     // au is protected archival unit from super class ArticleIteratorTestCase
     au = createAu(); 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
   
   public void tearDown() throws Exception {
@@ -166,16 +168,16 @@ public class TestHeterocyclesArticleIteratorFactory
     PluginTestUtil.crawlSimAu(sau);
 
     String pdfPat = "branch(\\d+)/(\\d+)file\\.pdf";
-    String pdfRep = "/clockss/downloads/PDF/11111/87/$1$2";
-    String pdfWithLinksRep = "/clockss/downloads/PDFwithLinks/11111/87/$1$2";
-    String pdfSiRep = "/clockss/downloads/PDFsi/11111/87/$1$2";
+    String pdfRep = "clockss/downloads/PDF/11111/87/$1$2";
+    String pdfWithLinksRep = "clockss/downloads/PDFwithLinks/11111/87/$1$2";
+    String pdfSiRep = "clockss/downloads/PDFsi/11111/87/$1$2";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfWithLinksRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfSiRep);
     
     String htmlPat = "branch(\\d+)/(\\d+)file\\.html";
-    String htmlRep = "/clockss/libraries/fulltext/11111/87/$1$2";
-    String hiddenAbsRep = "/clockss/libraries/abst/11111/87/$1$2";
+    String htmlRep = "clockss/libraries/fulltext/11111/87/$1$2";
+    String hiddenAbsRep = "clockss/libraries/abst/11111/87/$1$2";
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, htmlRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, hiddenAbsRep);    
     
@@ -260,11 +262,7 @@ public class TestHeterocyclesArticleIteratorFactory
  
   private void deleteBlock(CachedUrl cu) throws IOException {
     log.info("deleting " + cu.getUrl());
-    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-    ArchivalUnit au = cu.getArchivalUnit();
-    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-    nm.deleteNode(cus);
+    cu.delete();
   }
 
 }

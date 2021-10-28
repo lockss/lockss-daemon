@@ -47,7 +47,6 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.state.NodeManager;
 import org.lockss.test.ArticleIteratorTestCase;
 import org.lockss.test.PrivilegedAccessor;
 import org.lockss.util.ListUtil;

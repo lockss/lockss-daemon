@@ -36,10 +36,9 @@ import java.util.regex.Pattern;
 
 import org.lockss.util.ListUtil;
 import org.lockss.util.StringUtil;
-import org.lockss.state.NodeManager;
 import org.lockss.test.ArticleIteratorTestCase;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.lockss.test.ConfigurationUtil;
+import org.lockss.config.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
 import org.lockss.extractor.MetadataTarget;
@@ -84,6 +83,8 @@ public class TestDigitalCommonsRepositoryArticleIteratorFactory
     super.setUp();
     au = createAu(); 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
   
   public void tearDown() throws Exception {
@@ -151,7 +152,7 @@ public class TestDigitalCommonsRepositoryArticleIteratorFactory
     PluginTestUtil.crawlSimAu(sau);
     String pdfPat = "branch(\\d+)/(\\d+)file\\.pdf";
     // $2 is article number, and collection is xxxdept
-    String pdfRep = "/cgi/viewcontent.cgi?article=$2&&context=xxxdept";
+    String pdfRep = "cgi/viewcontent.cgi?article=$2&&context=xxxdept";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfRep);   
     // Remove some urls: pdf urls containing string 
     // "article=002" and "article=004"
@@ -196,11 +197,7 @@ public class TestDigitalCommonsRepositoryArticleIteratorFactory
  
   private void deleteBlock(CachedUrl cu) throws IOException {
     log.debug3("deleting " + cu.getUrl());
-    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-    ArchivalUnit au = cu.getArchivalUnit();
-    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-    nm.deleteNode(cus);
+    cu.delete();
   }
 
 }

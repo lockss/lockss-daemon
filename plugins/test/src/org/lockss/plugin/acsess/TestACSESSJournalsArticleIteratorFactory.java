@@ -37,8 +37,8 @@ import java.util.regex.Pattern;
 
 import org.lockss.util.ListUtil;
 import org.lockss.util.StringUtil;
-import org.lockss.state.NodeManager;
 import org.lockss.test.ArticleIteratorTestCase;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.CachedUrlSetSpec;
@@ -99,6 +99,8 @@ public class TestACSESSJournalsArticleIteratorFactory
     // au is protected archival unit from super class ArticleIteratorTestCase
     au = createAu(); 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
   
   public void tearDown() throws Exception {
@@ -229,12 +231,12 @@ public class TestACSESSJournalsArticleIteratorFactory
 
     // html full text: https://dl.sciencesocieties.org/publications/aj/articles/106/1/57
     String htmlPat = "branch(\\d+)/(\\d+)file\\.html";
-    String htmlRep = "/publications/xxxjid/articles/106/$1/$2";
-    String absRep = "/publications/xxxjid/abstracts/106/$1/$2";
-    String previewHtmlLandingRep = "/publications/xxxjid/abstracts/106/$1/$2/preview";
-    String pdfRep = "/publications/xxxjid/pdfs/106/$1/$2";
-    String risRep = "/publications/citation-manager/down/pc/xxxjid/106/$1/$2";
-    String xlsxSupplement1Rep = "/publications/xxxjid/supplements/106/$2-supplement1.xlsx";
+    String htmlRep = "publications/xxxjid/articles/106/$1/$2";
+    String absRep = "publications/xxxjid/abstracts/106/$1/$2";
+    String previewHtmlLandingRep = "publications/xxxjid/abstracts/106/$1/$2/preview";
+    String pdfRep = "publications/xxxjid/pdfs/106/$1/$2";
+    String risRep = "publications/citation-manager/down/pc/xxxjid/106/$1/$2";
+    String xlsxSupplement1Rep = "publications/xxxjid/supplements/106/$2-supplement1.xlsx";
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, htmlRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, absRep); 
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, previewHtmlLandingRep); 
@@ -315,11 +317,7 @@ public class TestACSESSJournalsArticleIteratorFactory
  
   private void deleteBlock(CachedUrl cu) throws IOException {
     log.info("deleting " + cu.getUrl());
-    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-    ArchivalUnit au = cu.getArchivalUnit();
-    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-    nm.deleteNode(cus);
+    cu.delete();
   }
 
 }

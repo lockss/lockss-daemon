@@ -153,25 +153,25 @@ public class TestAPSJCoreArticleIteratorFactory extends ArticleIteratorTestCase 
     
     String pat0 = "(?!branch)00([2-6])file[.]html";
     // turn xxfile.html into body
-    String rep0 = "/content/1/1/C$1";
-    String rep0e = "/content/ajpendo/1/1/C$1";
+    String rep0 = "content/1/1/C$1";
+    String rep0e = "content/ajpendo/1/1/C$1";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat0, rep0);
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat0, rep0e);
     
     String pat1 = "branch(\\d+)/\\d+([1356])file[.]html";
-    String rep1 = "/content/1/$1/C$2.full.pdf+html";
+    String rep1 = "content/1/$1/C$2.full.pdf+html";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat1, rep1);
     
     String pat2 = "branch(\\d+)/\\d+([237])file[.]pdf";
-    String rep2 = "/content/1/$1/C$2.full.pdf";
-    String rep2e = "/content/ajpendo/1/$1/C$2.full.pdf";
+    String rep2 = "content/1/$1/C$2.full.pdf";
+    String rep2e = "content/ajpendo/1/$1/C$2.full.pdf";
     PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, rep2);
     PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, rep2e);
     
     String pat3 = "(?!branch)00([1])file[.]html";
     // turn xxfile.html into toc
-    String rep3 = "/content/1/$1";
-    String rep3t = "/content/1/$1.toc";
+    String rep3 = "content/1/$1";
+    String rep3t = "content/1/$1.toc";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat3, rep3);
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat3, rep3t);
     

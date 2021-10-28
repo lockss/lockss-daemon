@@ -158,15 +158,15 @@ public class TestBMJJCoreArticleIteratorFactory extends ArticleIteratorTestCase 
     
     String pat0 = "(?!branch)00([1-6])file[.]html";
     // turn xxfile.html into body
-    String rep0 = "/content/347/bmj.f$1";
+    String rep0 = "content/347/bmj.f$1";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat0, rep0);
     
     String pat1 = "branch(\\d+)/\\d+([45])file[.]pdf";
-    String rep1 = "/content/347/bmj.f$2.full.pdf";
+    String rep1 = "content/347/bmj.f$2.full.pdf";
     PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat1, rep1);
     
     String pat2 = "branch(\\d+)/\\d+([23])file[.]pdf";
-    String rep2 = "/content/347/bmj.f$2.full.pdf";
+    String rep2 = "content/347/bmj.f$2.full.pdf";
     PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, rep2);
     
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());

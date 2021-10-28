@@ -159,25 +159,25 @@ public class TestHighWirePressH20ArticleIteratorFactory extends ArticleIteratorT
     
     String pat0 = "(?!branch)00([12])file[.]html";
     // turn xxfile.html into body
-    String rep0b = "/content/$1/SEC$1.body";
-    String rep0e = "/content/$1/SEC$1.extract";
+    String rep0b = "content/$1/SEC$1.body";
+    String rep0e = "content/$1/SEC$1.extract";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat0, rep0b);
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat0, rep0e);
     
     String pat1 = "branch(\\d+)/(\\d+[3-5])file[.]html";
-    String rep1 = "/content/1/$1/$2.full";
+    String rep1 = "content/1/$1/$2.full";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat1, rep1);
     
     String pat2 = "branch(\\d+)/(\\d+[1-3])file[.]pdf";
-    String rep2 = "/content/1/$1/$2.full.pdf";
+    String rep2 = "content/1/$1/$2.full.pdf";
     PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, rep2);
     
     String pat3 = "branch(\\d+)/(\\d+[356])file[.]html";
-    String rep3 = "/content/1/$1/$2.full.pdf+html";
+    String rep3 = "content/1/$1/$2.full.pdf+html";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat3, rep3);
     
     String pat4 = "branch(\\d+)/(\\d+[7])file[.]html";
-    String rep4 = "/content/1/$1/$2.extract";
+    String rep4 = "content/1/$1/$2.extract";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat4, rep4);
     
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());

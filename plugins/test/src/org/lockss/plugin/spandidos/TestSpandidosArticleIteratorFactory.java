@@ -41,7 +41,6 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.state.NodeManager;
 import org.lockss.test.*;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;

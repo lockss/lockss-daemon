@@ -41,7 +41,6 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.state.NodeManager;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 
@@ -76,6 +75,8 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
     
     au = createAu();
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
   
   @Override
@@ -224,10 +225,6 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
 
   private void deleteBlock(CachedUrl cu) throws IOException {
     //log.info("deleting " + cu.getUrl());
-    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-    ArchivalUnit au = cu.getArchivalUnit();
-    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-    nm.deleteNode(cus);
+    cu.delete();
   }
 }

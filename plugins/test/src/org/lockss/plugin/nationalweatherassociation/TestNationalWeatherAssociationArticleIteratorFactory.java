@@ -35,8 +35,8 @@ import java.util.regex.Pattern;
 
 import org.lockss.util.ListUtil;
 import org.lockss.util.StringUtil;
-import org.lockss.state.NodeManager;
 import org.lockss.test.ArticleIteratorTestCase;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.CachedUrlSetSpec;
@@ -83,6 +83,8 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
     // au is protected archival unit from super class ArticleIteratorTestCase
     au = createAu(); 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
   
   public void tearDown() throws Exception {
@@ -179,12 +181,12 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
 
     String pdfPat = "branch(\\d+)/(\\d+)file\\.pdf";
     // <nwabase>.org/xjid/articles/2013/2013-XJID12/2013-XJID12.pdf
-    String pdfRep = "/" + JID + "/articles/2013/2013-xjid$1$2/2013-xjid$1$2.pdf";
+    String pdfRep = JID + "/articles/2013/2013-xjid$1$2/2013-xjid$1$2.pdf";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfRep);
 
     String htmlPat = "branch(\\d+)/(\\d+)file\\.html";
     // <nwabase>.org/xjid/abstracts/2013/2013-XJID22/abstract.php
-    String absRep = "/" + JID +"/abstracts/2013/2013-xjid$1$2/abstract.php";
+    String absRep = JID +"/abstracts/2013/2013-xjid$1$2/abstract.php";
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", htmlPat, absRep);
         
     // Remove some URLs:
@@ -252,11 +254,7 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
  
   private void deleteBlock(CachedUrl cu) throws IOException {
     log.info("deleting " + cu.getUrl());
-    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-    ArchivalUnit au = cu.getArchivalUnit();
-    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-    nm.deleteNode(cus);
+    cu.delete();
   }
 
 }
