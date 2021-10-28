@@ -608,6 +608,9 @@ public class CrawlRuleTester extends Thread {
     public void release() {
     }
 
+    public void delete() throws UnsupportedOperationException, IOException {
+    }
+
     public String toString() {
       StringBuffer sb = new StringBuffer(url.length() + 17);
       sb.append("[MyMockCachedUrl: ");
