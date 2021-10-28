@@ -2332,12 +2332,9 @@ public class V3Poller extends BasePoll {
       if (AuUtil.isDeleteExtraFiles(getAu(),
 				    (deleteExtraFiles &&
 				     AuUtil.okDeleteExtraFiles(getAu())))) {
-        CachedUrlSetSpec cuss =
-          new SingleNodeCachedUrlSetSpec(url);
-        CachedUrlSet cus = getAu().makeCachedUrlSet(cuss);
-        NodeManager nm = theDaemon.getNodeManager(getAu());
+        CachedUrl cu = getAu().makeCachedUrl(url);
         log.debug("Marking block deleted: " + url);
-        nm.deleteNode(cus);
+        cu.delete();
       } else {
         log.info("Asked to mark file " + url + " deleted in poll " +
                  pollerState.getPollKey() + ".  Not actually deleting.");

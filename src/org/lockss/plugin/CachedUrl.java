@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +31,7 @@ package org.lockss.plugin;
 import java.io.*;
 
 import org.mortbay.http.HttpFields;
+import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
@@ -56,6 +53,12 @@ import org.lockss.extractor.*;
  * @see UrlCacher
  * @version 0.0 */
 public interface CachedUrl extends CachedUrlSetNode {
+
+  public static final String PREFIX = Configuration.PREFIX + "cachedUrl.";
+
+  /** Allow CachedUrls to be deleted from the repository */
+  public static final String PARAM_ALLOW_DELETE = PREFIX + "allowDelete";
+  public static final boolean DEFAULT_ALLOW_DELETE = false;
 
   /** The string prepended to response header names as they're copied into
    * the CachedUrl's properties.  null means no prefix.
@@ -189,6 +192,15 @@ public interface CachedUrl extends CachedUrlSetNode {
    */
   public int getVersion();
   
+  /**
+   * Deletes the Artifact from the repository.  May require explicit
+   * configuraton to enable.
+   * @throws UnsupportedOperationException if configuration or
+   * repository doesn't allow deletion.
+   * @throws IOException if deletion failed.
+   */
+  public void delete() throws UnsupportedOperationException, IOException;
+
   /**
    * Set options that control behavior<br>
    *

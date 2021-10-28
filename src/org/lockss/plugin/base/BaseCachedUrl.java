@@ -47,6 +47,7 @@ import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
+import org.lockss.state.*;
 import org.lockss.extractor.*;
 
 /** Base class for CachedUrls.  Expects the LockssRepository for storage.
@@ -174,6 +175,20 @@ public class BaseCachedUrl implements CachedUrl {
     } else {
       logger.debug3("Filtering off, returning unfiltered stream");
       return getUncompressedInputStream(hasher);
+    }
+  }
+
+  public void delete() throws UnsupportedOperationException, IOException {
+    if (CurrentConfig.getBooleanParam(PARAM_ALLOW_DELETE,
+                                      DEFAULT_ALLOW_DELETE)) {
+      NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
+      // Inexplicably, NodeManager wants a CUS, not a CU
+      CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(getUrl());
+      CachedUrlSet cus = au.makeCachedUrlSet(cuss);
+      nm.deleteNode(cus);
+      release();
+    } else {
+      throw new UnsupportedOperationException("Delete not allowed unless explicitly confugured with " + PARAM_ALLOW_DELETE);
     }
   }
 
@@ -380,11 +395,16 @@ public class BaseCachedUrl implements CachedUrl {
       rnc.release();
       rnc = null;
     }
+    leaf = null;
   }
 
   protected synchronized void ensureRnc() {
     if (rnc == null) {
+      if (getNodeVersion() == null) {
+        throw new UnsupportedOperationException("Node has no content");
+      }
       rnc = getNodeVersion().getNodeContents();
+      logger.debug3("got rnc: " + rnc);
     }
   }
 
@@ -487,8 +507,13 @@ public class BaseCachedUrl implements CachedUrl {
       return nodeVer;
     }
 
+    public void delete() throws UnsupportedOperationException, IOException {
+      super.delete();
+      nodeVer = null;
+    }
+
     public boolean hasContent() {
-      if (!getNodeVersion().hasContent()) {
+      if (nodeVer == null || !getNodeVersion().hasContent()) {
 	return false;
       }
       if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
