@@ -81,7 +81,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
     mau.setPlugin(plugin);
 
     repo = theDaemon.getLockssRepository(mau);
-    theDaemon.getNodeManager(mau);
+    theDaemon.getNodeManager(mau).startService();
   }
 
   public void tearDown() throws Exception {
@@ -211,6 +211,24 @@ public class TestBaseCachedUrl extends LockssTestCase {
     /** Concrete class must return either the current version or an older
      * version here */
     abstract CachedUrl getTestCu(String url);
+
+    public void testDelete() throws Exception {
+      ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
+      createLeaf(url1, content1, null);
+      mau.addUrlToBeCached(url1);
+
+      CachedUrl cu = getTestCu(url1);
+      assertEquals(url1, cu.getUrl());
+      assertTrue(cu.hasContent());
+      cu.delete();
+      assertFalse(cu.hasContent());
+      try {
+        cu.getUnfilteredInputStream();
+      } catch (UnsupportedOperationException e) {
+      }
+      CachedUrl newcu = mau.makeCachedUrl(url1);
+      assertFalse(newcu.hasContent());
+    }
 
     public void testGetUrl() throws Exception {
       createLeaf(url1, content1, null);
