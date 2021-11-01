@@ -87,8 +87,8 @@ public class TestSpandidosMetadataExtractor extends LockssTestCase {
   static String goodPublisher = "Spandidos Publications";
 
 
-  private static final String ABS_URL =  BASE_URL + "/jid/6/6/1234?text=abstract";
-  private static final String PDF_URL =  BASE_URL + "/jid/6/6/1234/download";
+  private static final String ABS_URL =  BASE_URL + JID + "/6/6/1234?text=abstract";
+  private static final String PDF_URL =  BASE_URL + JID + "/6/6/1234/download";
 
 
   public void setUp() throws Exception {
