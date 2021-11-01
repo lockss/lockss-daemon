@@ -29,7 +29,7 @@
 
 {
   publisher <
-    name = Ganzaga Library Publishing ;
+    name = Gonzaga Library Publishing ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
     info[tester] = 8 ;
@@ -47,7 +47,7 @@
         eissn = 2169-7442
       >
 
-      comment[publisher] = Ganzaga Library Publishing
+      comment[publisher] = Gonzaga Library Publishing
 #      param[base_url] = https://jhs.press.gonzaga.edu/
 
       au < released ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; https://jhs.press.gonzaga.edu/ >
@@ -82,6 +82,32 @@
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Estetika: The European Journal of Aesthetics ;
+        eissn = 2571-0915
+      >
+
+      comment[publisher] = Helsinki University Press
+#      param[base_url] = https://estetikajournal.org/
+
+      au < exists ; 2008 ; 45 ; Estetika: The European Journal of Aesthetics Volume 2008 ; 2008 ; https://estetikajournal.org/ >
+      au < exists ; 2009 ; 46 ; Estetika: The European Journal of Aesthetics Volume 2009 ; 2009 ; https://estetikajournal.org/ >
+      au < exists ; 2010 ; 47 ; Estetika: The European Journal of Aesthetics Volume 2010 ; 2010 ; https://estetikajournal.org/ >
+      au < exists ; 2011 ; 48 ; Estetika: The European Journal of Aesthetics Volume 2011 ; 2011 ; https://estetikajournal.org/ >
+      au < exists ; 2012 ; 49 ; Estetika: The European Journal of Aesthetics Volume 2012 ; 2012 ; https://estetikajournal.org/ >
+      au < exists ; 2013 ; 50 ; Estetika: The European Journal of Aesthetics Volume 2013 ; 2013 ; https://estetikajournal.org/ >
+      au < exists ; 2014 ; 51 ; Estetika: The European Journal of Aesthetics Volume 2014 ; 2014 ; https://estetikajournal.org/ >
+      au < exists ; 2015 ; 52 ; Estetika: The European Journal of Aesthetics Volume 2015 ; 2015 ; https://estetikajournal.org/ >
+      au < exists ; 2016 ; 53 ; Estetika: The European Journal of Aesthetics Volume 2016 ; 2016 ; https://estetikajournal.org/ >
+      au < exists ; 2017 ; 54 ; Estetika: The European Journal of Aesthetics Volume 2017 ; 2017 ; https://estetikajournal.org/ >
+      au < exists ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 ; 2018 ; https://estetikajournal.org/ >
+      au < exists ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 ; https://estetikajournal.org/ >
+      au < exists ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; https://estetikajournal.org/ >
+      au < exists ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; https://estetikajournal.org/ >
+  }
 
   {
 
@@ -539,49 +565,6 @@
   {
 
       title <
-        name = Pynchon Notes ;
-        eissn = 0278-1891
-      >
-
-      comment[publisher] = Open Library of Humanities
-#      param[base_url] = https://pynchonnotes.openlibhums.org/
-      #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-      #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-      #1979 to 2009
-      
-      #Moved to Janeway platform
-
-      au < doNotProcess ; 1979 ; 1 ; Pynchon Notes Volume 1979 ; 1979 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1980 ; 2 ; Pynchon Notes Volume 1980 ; 1980 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1981 ; 3 ; Pynchon Notes Volume 1981 ; 1981 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1982 ; 4 ; Pynchon Notes Volume 1982 ; 1982 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1983 ; 5 ; Pynchon Notes Volume 1983 ; 1983 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1984 ; 6 ; Pynchon Notes Volume 1984 ; 1984 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1985 ; 7 ; Pynchon Notes Volume 1985 ; 1985 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1986 ; 8 ; Pynchon Notes Volume 1986 ; 1986 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1987 ; 9 ; Pynchon Notes Volume 1987 ; 1987 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1988 ; 10 ; Pynchon Notes Volume 1988 ; 1988 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1989 ; 11 ; Pynchon Notes Volume 1989 ; 1989 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1990 ; 12 ; Pynchon Notes Volume 1990 ; 1990 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1991 ; 13 ; Pynchon Notes Volume 1991 ; 1991 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1992 ; 14 ; Pynchon Notes Volume 1992 ; 1992 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1993 ; 15 ; Pynchon Notes Volume 1993 ; 1993 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1994 ; 16 ; Pynchon Notes Volume 1994 ; 1994 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1996 ; 18 ; Pynchon Notes Volume 1996 ; 1996 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1997 ; 19 ; Pynchon Notes Volume 1997 ; 1997 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1998 ; 20 ; Pynchon Notes Volume 1998 ; 1998 ; https://pynchonnotes.openlibhums.org/ >
-      au < doNotProcess ; 1999 ; 21 ; Pynchon Notes Volume 1999 ; 1999 ; https://pynchonnotes.openlibhums.org/ >
-      au < down ; 2001 ; 23 ; Pynchon Notes Volume 2001 ; 2001 ; https://pynchonnotes.openlibhums.org/ >
-      au < down ; 2002 ; 24 ; Pynchon Notes Volume 2002 ; 2002 ; https://pynchonnotes.openlibhums.org/ >
-      au < down ; 2003 ; 25 ; Pynchon Notes Volume 2003 ; 2003 ; https://pynchonnotes.openlibhums.org/ >
-      au < down ; 2008 ; 30 ; Pynchon Notes Volume 2008 ; 2008 ; https://pynchonnotes.openlibhums.org/ >
-      au < down ; 2009 ; 31 ; Pynchon Notes Volume 2009 ; 2009 ; https://pynchonnotes.openlibhums.org/ >
-
-  }
-
-  {
-
-      title <
         name = Open Screens ;
         eissn = 2516-2888
       >
@@ -650,6 +633,21 @@
       au < released ; 2019 ; 5 ; Karib: Nordic Journal for Caribbean Studies Volume 2019 ; 2019 ; https://www.karib.no/ >
       au < expected ; 2020 ; 6 ; Karib: Nordic Journal for Caribbean Studies Volume 2020 ; 2020 ; https://www.karib.no/ >
       au < manifest ; 2021 ; 7 ; Karib: Nordic Journal for Caribbean Studies Volume 2021 ; 2021 ; https://www.karib.no/ >
+
+  }
+
+  {
+
+      title <
+        name = Nordic Journal of Transitions, Careers and Guidance  ;
+        eissn = 2003-8046
+      >
+
+      comment[publisher] = Stockholm University Press
+#      param[base_url] = https://njtcg.org/
+
+      au < expected ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ >
+      au < expected ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ >
 
   }
 
@@ -1039,6 +1037,24 @@
   {
 
       title <
+        name = Computational Psychiatry ;
+        eissn = 2379-6227
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://cpsyjournal.org/
+
+      au < exists ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; https://cpsyjournal.org/ >
+      au < exists ; 2018 ; 2 ; Computational Psychiatry Volume 2018 ; 2018 ; https://cpsyjournal.org/ >
+      au < exists ; 2019 ; 3 ; Computational Psychiatry Volume 2019 ; 2019 ; https://cpsyjournal.org/ >
+      au < exists ; 2020 ; 4 ; Computational Psychiatry Volume 2020 ; 2020 ; https://cpsyjournal.org/ >
+      au < exists ; 2021 ; 5 ; Computational Psychiatry Volume 2021 ; 2021 ; https://cpsyjournal.org/ >
+
+  }
+
+  {
+
+      title <
         name = Data Science Journal ;
         eissn = 1683-1470
       >
@@ -1173,6 +1189,21 @@
       au < released ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; https://www.rips-irsp.com/ >
       au < released ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; https://www.rips-irsp.com/ >
       au < manifest ; 2021 ; 6 ; International Review of Social Psychology Volume 2021 ; 2021 ; https://www.rips-irsp.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal for the History of Knowledge ;
+        eissn = 2632-282X
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://journalhistoryknowledge.org/
+
+      au < exists ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; https://journalhistoryknowledge.org/ >
+      au < exists ; 2021 ; 2 ; Journal for the History of Knowledge Volume 2021 ; 2021 ; https://journalhistoryknowledge.org/ >
 
   }
 
@@ -2276,6 +2307,101 @@
   }
 
 }
+
+{
+  publisher <
+    name = University of Birmingham ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Journal of Philosophy in Schools ;
+        eissn = 2204-2482
+      >
+
+      comment[publisher] = University of Birmingham
+#      param[base_url] = https://jps.bham.ac.uk/
+
+      au < exists ; 2014 ; 1 ; Journal of Philosophy in Schools Volume 2014 ; 2014 ; https://jps.bham.ac.uk/ >
+      au < exists ; 2015 ; 2 ; Journal of Philosophy in Schools Volume 2015 ; 2015 ; https://jps.bham.ac.uk/ >
+      au < exists ; 2016 ; 3 ; Journal of Philosophy in Schools Volume 2016 ; 2016 ; https://jps.bham.ac.uk/ >
+      au < exists ; 2017 ; 4 ; Journal of Philosophy in Schools Volume 2017 ; 2017 ; https://jps.bham.ac.uk/ >
+      au < exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ >
+      au < exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ >
+      au < exists ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ >
+      au < exists ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ > #no substance
+
+  }
+}
+
+{
+  publisher <
+    name = University of East Anglia ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = New Area Studies ;
+        eissn = 2633-3716
+      >
+
+      comment[publisher] = University of East Anglia
+#      param[base_url] = https://newareastudies.com/
+
+      au < exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
+      au < expected ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ >
+
+  }
+}
+
+{
+  publisher <
+    name = University of New South Wales ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Global Biosecurity ;
+        eissn = 2652-0036
+      >
+
+      comment[publisher] = University of New South Wales
+#      param[base_url] = https://jglobalbiosecurity.com/
+
+      au < exists ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ >
+      au < exists ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ >
+      au < expected ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ >
+
+  }
+}
+
 {
   publisher <
     name = University of Westminster Press

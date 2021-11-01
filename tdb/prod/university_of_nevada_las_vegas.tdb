@@ -70,4 +70,20 @@
 
   }
 
+  {
+  
+    title < 
+      name = Spectra Undergraduate Research Journal ;
+      eissn = 2766-7227
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    param[base_url] = https://digitalscholarship.unlv.edu/
+    param[journal_abbr] = spectra
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 >
+
+  }
+
 }
