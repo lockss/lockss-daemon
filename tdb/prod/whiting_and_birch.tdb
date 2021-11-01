@@ -69,7 +69,8 @@
     au < ojs2.OJS2Plugin ; down ; 2016 ; 2016 ; The Journal of Practice Teaching and Learning Volume 2016 ; 14 ; https://journals.whitingbirch.net/ >
     au < ojs2.OJS2Plugin ; down ; 2017 ; 2017 ; The Journal of Practice Teaching and Learning Volume 2017 ; 15 ; https://journals.whitingbirch.net/ >
     au < ojs2.OJS2Plugin ; down ; 2018 ; 2018 ; The Journal of Practice Teaching and Learning Volume 2018 ; 16 ; https://journals.whitingbirch.net/ >
-    #Nothing published in 2019 or 2020
+    #Nothing published in 2019
+    au < ojs3.Ojs3Plugin ; exists ; 2020 ; 2020 ; The Journal of Practice Teaching and Learning Volume 2020 ; 17 ; https://journals.whitingbirch.net/ >
     au < ojs3.Ojs3Plugin ; expected ; 2021 ; 2021 ; The Journal of Practice Teaching and Learning Volume 2021 ; 17 ; https://journals.whitingbirch.net/ >
 
   }
