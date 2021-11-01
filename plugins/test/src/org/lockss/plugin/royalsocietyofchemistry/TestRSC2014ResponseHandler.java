@@ -59,9 +59,6 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
 
   private static final Logger log = Logger.getLogger(TestRSC2014ResponseHandler.class);
-  private MockLockssDaemon theDaemon;
-  private DefinablePlugin plugin;
-  private DefinablePlugin booksplugin;
 
   static final String PLUGIN_ID = "org.lockss.plugin.royalsocietyofchemistry.ClockssRSC2014Plugin";
   static final String BOOKS_ID = "org.lockss.plugin.royalsocietyofchemistry.ClockssRSCBooksPlugin";
@@ -76,15 +73,13 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getHashService();
-    theDaemon.getRepositoryManager();
-    plugin = new DefinablePlugin();
-    plugin.initPlugin(theDaemon,
-        PLUGIN_ID);
-    booksplugin = new DefinablePlugin();
-    booksplugin.initPlugin(theDaemon,
-        BOOKS_ID);
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    PluginManager pluginMgr = daemon.getPluginManager();
+    pluginMgr.setLoadablePluginsReady(true);
+    daemon.setDaemonInited(true);
+    pluginMgr.startService();
+    daemon.getAlertManager();
+    daemon.getCrawlManager();
   }
 
   public void tearDown() throws Exception {
@@ -92,15 +87,16 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
   }
 
 
-  private DefinableArchivalUnit makeAuFromProps(Properties props)
+  private ArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (DefinableArchivalUnit)plugin.configureAu(config, null);
+    return PluginTestUtil.createAndStartAu(PLUGIN_ID,  config);
   }
-  private DefinableArchivalUnit makeBooksAuFromProps(Properties props)
+
+  private ArchivalUnit makeBooksAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (DefinableArchivalUnit)booksplugin.configureAu(config, null);
+    return PluginTestUtil.createAndStartAu(BOOKS_ID,  config);
   }
 
   public void testShouldCacheWrongSize2() throws Exception {
@@ -112,12 +108,7 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
     props.setProperty(JOURNAL_CODE_KEY, "an");
     props.setProperty(VOLUME_NAME_KEY, "123");
     props.setProperty(YEAR_KEY, "2013");
-    DefinableArchivalUnit RSCau = makeAuFromProps(props);
-    LockssRepository repo =
-        (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
-            RSCau);
-    theDaemon.setLockssRepository(repo, RSCau);
-    repo.startService();
+    ArchivalUnit RSCau = makeAuFromProps(props);
     String url = "http://pubs.example.com/en/content/articlelanding/2013/an/b916736f";
     CIProperties cprops = new CIProperties();
 
@@ -140,12 +131,7 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://pubs.example.com/");
     props.setProperty(GRAPHICS_URL_KEY, "http://img.example.com/");
     props.setProperty(YEAR_KEY, "2013");
-    DefinableArchivalUnit booksau = makeBooksAuFromProps(props);
-    LockssRepository repo =
-        (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
-            booksau);
-    theDaemon.setLockssRepository(repo, booksau);
-    repo.startService();
+    ArchivalUnit booksau = makeBooksAuFromProps(props);
     String url = "http://pubs.example.com/en/content/chapter/am9780851860343-00441/978-0-85186-034-3";
     CIProperties cprops = new CIProperties();
 
@@ -177,7 +163,7 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
     props.setProperty(JOURNAL_CODE_KEY, "an");
     props.setProperty(VOLUME_NAME_KEY, "123");
     props.setProperty(YEAR_KEY, "2013");
-    DefinableArchivalUnit RSCau = makeAuFromProps(props);
+    ArchivalUnit RSCau = makeAuFromProps(props);
     
     ContentValidatorFactory cvfact = new RSCContentValidator.Factory();
     RSCContentValidator.TextTypeValidator contentValidator = 
