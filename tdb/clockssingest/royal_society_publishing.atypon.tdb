@@ -778,6 +778,10 @@
     au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 348 ; 348 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 349 ; 349 ; >
     au < finished ; crawling ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 350 ; 350 ; reingest1.clockss.org:8082 >
+    }
+    {
+    param[journal_id] = rstb1996
+
     au < finished ; crawling ; 1996 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 351 ; 351 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1997 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 352 ; 352 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1998 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 353 ; 353 ; reingest3.clockss.org:8083 >

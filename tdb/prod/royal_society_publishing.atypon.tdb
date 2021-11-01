@@ -21,32 +21,45 @@
       issnl = 0080-4606
     >
 
+    {
+    param[journal_id] = rsbm1932
+    
+    au < exists ; 1932-1935 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1932-1935] ; 1 >
+    au < exists ; 1936-1939 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1936-1939] ; 2 >
+    au < exists ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 >
+    au < exists ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 >
+    au < exists ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 >
+    au < exists ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 >
+    au < exists ; 1950-1951 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 [1950-1951] ; 7 >
+    au < exists ; 1952-1953 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 [1952-1953] ; 8 >
+    au < exists ; 1954 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1954] ; 9 >
+    }
+    {
     param[journal_id] = rsbm
-    comment[legacy] = there are more AUs in an earlier incarnation of the journal
 
-    au < doNotProcess ; 1955 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 ; 1 >
-    au < doNotProcess ; 1956 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 ; 2 >
-    au < doNotProcess ; 1957 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 ; 3 >
-    au < doNotProcess ; 1958 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 ; 4 >
-    au < doNotProcess ; 1959 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 ; 5 >
-    au < doNotProcess ; 1960 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 ; 6 >
-    au < doNotProcess ; 1961 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 ; 7 >
-    au < doNotProcess ; 1962 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 ; 8 >
-    au < doNotProcess ; 1963 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 ; 9 >
-    au < doNotProcess ; 1964 ; Biographical Memoirs of Fellows of the Royal Society Volume 10 ; 10 >
-    au < doNotProcess ; 1965 ; Biographical Memoirs of Fellows of the Royal Society Volume 11 ; 11 >
-    au < doNotProcess ; 1966 ; Biographical Memoirs of Fellows of the Royal Society Volume 12 ; 12 >
-    au < doNotProcess ; 1967 ; Biographical Memoirs of Fellows of the Royal Society Volume 13 ; 13 >
-    au < doNotProcess ; 1968 ; Biographical Memoirs of Fellows of the Royal Society Volume 14 ; 14 >
-    au < doNotProcess ; 1969 ; Biographical Memoirs of Fellows of the Royal Society Volume 15 ; 15 >
-    au < doNotProcess ; 1970 ; Biographical Memoirs of Fellows of the Royal Society Volume 16 ; 16 >
-    au < doNotProcess ; 1971 ; Biographical Memoirs of Fellows of the Royal Society Volume 17 ; 17 >
-    au < doNotProcess ; 1972 ; Biographical Memoirs of Fellows of the Royal Society Volume 18 ; 18 >
-    au < doNotProcess ; 1973 ; Biographical Memoirs of Fellows of the Royal Society Volume 19 ; 19 >
-    au < doNotProcess ; 1974 ; Biographical Memoirs of Fellows of the Royal Society Volume 20 ; 20 >
-    au < doNotProcess ; 1975 ; Biographical Memoirs of Fellows of the Royal Society Volume 21 ; 21 >
-    au < doNotProcess ; 1976 ; Biographical Memoirs of Fellows of the Royal Society Volume 22 ; 22 >
-    au < doNotProcess ; 1977 ; Biographical Memoirs of Fellows of the Royal Society Volume 23 ; 23 >
+    au < doNotProcess ; 1955 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1955] ; 1 >
+    au < doNotProcess ; 1956 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1956] ; 2 >
+    au < doNotProcess ; 1957 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1957] ; 3 >
+    au < doNotProcess ; 1958 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1958] ; 4 >
+    au < doNotProcess ; 1959 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1959] ; 5 >
+    au < doNotProcess ; 1960 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1960] ; 6 >
+    au < doNotProcess ; 1961 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 [1961] ; 7 >
+    au < doNotProcess ; 1962 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 [1962] ; 8 >
+    au < doNotProcess ; 1963 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1963] ; 9 >
+    au < doNotProcess ; 1964 ; Biographical Memoirs of Fellows of the Royal Society Volume 10 [1964] ; 10 >
+    au < doNotProcess ; 1965 ; Biographical Memoirs of Fellows of the Royal Society Volume 11 [1965] ; 11 >
+    au < doNotProcess ; 1966 ; Biographical Memoirs of Fellows of the Royal Society Volume 12 [1966] ; 12 >
+    au < doNotProcess ; 1967 ; Biographical Memoirs of Fellows of the Royal Society Volume 13 [1967] ; 13 >
+    au < doNotProcess ; 1968 ; Biographical Memoirs of Fellows of the Royal Society Volume 14 [1968] ; 14 >
+    au < doNotProcess ; 1969 ; Biographical Memoirs of Fellows of the Royal Society Volume 15 [1969] ; 15 >
+    au < doNotProcess ; 1970 ; Biographical Memoirs of Fellows of the Royal Society Volume 16 [1970] ; 16 >
+    au < doNotProcess ; 1971 ; Biographical Memoirs of Fellows of the Royal Society Volume 17 [1971] ; 17 >
+    au < doNotProcess ; 1972 ; Biographical Memoirs of Fellows of the Royal Society Volume 18 [1972] ; 18 >
+    au < doNotProcess ; 1973 ; Biographical Memoirs of Fellows of the Royal Society Volume 19 [1973] ; 19 >
+    au < doNotProcess ; 1974 ; Biographical Memoirs of Fellows of the Royal Society Volume 20 [1974] ; 20 >
+    au < doNotProcess ; 1975 ; Biographical Memoirs of Fellows of the Royal Society Volume 21 [1975] ; 21 >
+    au < doNotProcess ; 1976 ; Biographical Memoirs of Fellows of the Royal Society Volume 22 [1976] ; 22 >
+    au < doNotProcess ; 1977 ; Biographical Memoirs of Fellows of the Royal Society Volume 23 [1977] ; 23 >
     au < doNotProcess ; 1978 ; Biographical Memoirs of Fellows of the Royal Society Volume 24 ; 24 >
     au < doNotProcess ; 1979 ; Biographical Memoirs of Fellows of the Royal Society Volume 25 ; 25 >
     au < doNotProcess ; 1980 ; Biographical Memoirs of Fellows of the Royal Society Volume 26 ; 26 >
@@ -96,7 +109,7 @@
     au < released ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 >
     au < manifest ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 70 ; 70 >
     au < manifest ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 71 ; 71 >
-
+    }
   }
 
   {
@@ -201,8 +214,9 @@
       issnl = 0035-9149
     >
 
-    param[journal_id] = rsnr
     comment[name] = title changed in 2014
+    {
+    param[journal_id] = rsnr1938
 
     au < doNotProcess ; 1938 ; Notes and Records of the Royal Society Volume 1 ; 1 >
     au < doNotProcess ; 1939 ; Notes and Records of the Royal Society Volume 2 ; 2 >
@@ -245,6 +259,10 @@
     au < doNotProcess ; 1984-1985 ; Notes and Records of the Royal Society Volume 39 ; 39 >
     au < doNotProcess ; 1985-1986 ; Notes and Records of the Royal Society Volume 40 ; 40 >
     au < doNotProcess ; 1986-1987 ; Notes and Records of the Royal Society Volume 41 ; 41 >
+    }
+    {
+    param[journal_id] = rsnr
+
     au < doNotProcess ; 1988 ; Notes and Records of the Royal Society Volume 42 ; 42 >
     au < doNotProcess ; 1989 ; Notes and Records of the Royal Society Volume 43 ; 43 >
     au < doNotProcess ; 1990 ; Notes and Records of the Royal Society Volume 44 ; 44 >
@@ -281,6 +299,7 @@
     au < released ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 >
     au < manifest ; 2021 ; Notes and Records the Royal Society Journal of the History of Science Volume 75 ; 75 >
 
+    }
   }
 
 
@@ -317,8 +336,12 @@
       eissn = 1471-2962 ;
       issnl = 1364-503X
     >
+#    {
+#    param[journal_id] = rstl
+#    #See Philosophical Transactions of the Royal Society of London V1-177 1665-1886
+#    }
     {
-    param[journal_id] = rsta
+    param[journal_id] = rsta1887
     
     au < doNotProcess ; 1887 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 >
     au < doNotProcess ; 1888 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 >
@@ -329,6 +352,10 @@
     au < doNotProcess ; 1893 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 184 ; 184 >
     au < doNotProcess ; 1894 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 185 ; 185 >
     au < doNotProcess ; 1895 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 186 ; 186 >
+    }
+    {
+    param[journal_id] = rsta1896
+    
     au < doNotProcess ; 1896 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 187 ; 187 >
     au < doNotProcess ; 1896 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 188 ; 188 >
     au < doNotProcess ; 1897 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 189 ; 189 >
@@ -376,6 +403,10 @@
     au < doNotProcess ; 1933 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 231 ; 231 >
     au < doNotProcess ; 1934 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 232 ; 232 >
     au < doNotProcess ; 1934 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 233 ; 233 >
+    }
+    {
+    param[journal_id] = rsta1934
+    
     au < doNotProcess ; 1934-1935 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 234 ; 234 >
     au < doNotProcess ; 1935-1936 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 235 ; 235 >
     au < doNotProcess ; 1936-1938 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 236 ; 236 >
@@ -472,12 +503,12 @@
     au < doNotProcess ; 1988-1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 327 ; 327 >
     au < doNotProcess ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 328 ; 328 >
     au < doNotProcess ; 1989 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 329 ; 329 >
+    au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 >
+    au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 >
     }
     {
     param[journal_id] = rsta1990
     
-    au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 330 ; 330 >
-    au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 331 ; 331 >
     au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 332 ; 332 >
     au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 333 ; 333 >
     au < doNotProcess ; 1991 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 334 ; 334 >
@@ -496,14 +527,14 @@
     au < doNotProcess ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 347 ; 347 >
     au < doNotProcess ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 348 ; 348 >
     au < doNotProcess ; 1994 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 349 ; 349 >
-    }
-    {
-    param[journal_id] = rsta1996
-    
     au < doNotProcess ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 350 ; 350 >
     au < doNotProcess ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 351 ; 351 >
     au < doNotProcess ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 352 ; 352 >
     au < doNotProcess ; 1995 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 353 ; 353 >
+    }
+    {
+    param[journal_id] = rsta1996
+    
     au < doNotProcess ; 1996 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 354 ; 354 >
     au < doNotProcess ; 1997 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 355 ; 355 >
     au < doNotProcess ; 1998 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 356 ; 356 >
@@ -546,8 +577,12 @@
       issnl = 0962-8436
     >
 
+#    {
+#    param[journal_id] = rstl
+#    #See Philosophical Transactions of the Royal Society of London V1-177 1665-1886
+#    }
     {
-    param[journal_id] = rstb
+    param[journal_id] = rstb1887
 
     au < doNotProcess ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 >
     au < doNotProcess ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 >
@@ -558,6 +593,10 @@
     au < doNotProcess ; 1893 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 184 ; 184 >
     au < doNotProcess ; 1894 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 185 ; 185 >
     au < doNotProcess ; 1895 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 186 ; 186 >
+    }
+    {
+    param[journal_id] = rstb1896
+
     au < doNotProcess ; 1896 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 187 ; 187 >
     au < doNotProcess ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 188 ; 188 >
     au < doNotProcess ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 189 ; 189 >
@@ -595,6 +634,10 @@
     au < doNotProcess ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 221 ; 221 >
     au < doNotProcess ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 222 ; 222 >
     au < doNotProcess ; 1934 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 223 ; 223 >
+    }
+    {
+    param[journal_id] = rstb1934
+
     au < doNotProcess ; 1934-1935 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 224 ; 224 >
     au < doNotProcess ; 1935 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 225 ; 225 >
     au < doNotProcess ; 1936 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 226 ; 226 >
@@ -627,6 +670,10 @@
     au < doNotProcess ; 1967-1968 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 253 ; 253 >
     au < doNotProcess ; 1968 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 254 ; 254 >
     au < doNotProcess ; 1969 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 255 ; 255 >
+    }
+    {
+    param[journal_id] = rstb1969
+
     au < doNotProcess ; 1969-1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 256 ; 256 >
     au < doNotProcess ; 1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 257 ; 257 >
     au < doNotProcess ; 1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 258 ; 258 >
@@ -698,12 +745,12 @@
     au < doNotProcess ; 1989 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 324 ; 324 >
     au < doNotProcess ; 1989 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 325 ; 325 >
     au < doNotProcess ; 1989-1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 326 ; 326 >
+    au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 327 ; 327 >
+    au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 328 ; 328 >
     }
     {
     param[journal_id] = rstb1990
 
-    au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 327 ; 327 >
-    au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 328 ; 328 >
     au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 329 ; 329 >
     au < doNotProcess ; 1990 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 330 ; 330 >
     au < doNotProcess ; 1991 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 331 ; 331 >
@@ -784,7 +831,8 @@
     au < doNotProcess ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 >
     au < doNotProcess ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 >
     au < doNotProcess ; 1676 ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 >
-    au < doNotProcess ; 1677-1678 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 >
+    au < doNotProcess ; 1677-1679 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 >
+    #During this period Philosophical Collections was published
     au < doNotProcess ; 1683 ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 >
     au < doNotProcess ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 >
     au < doNotProcess ; 1685 ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 >
@@ -940,16 +988,39 @@
     au < doNotProcess ; 1875 ; Philosophical Transactions of the Royal Society of London Volume 165 ; 165 >
     au < doNotProcess ; 1876 ; Philosophical Transactions of the Royal Society of London Volume 166 ; 166 >
     au < doNotProcess ; 1877 ; Philosophical Transactions of the Royal Society of London Volume 167 ; 167 >
-    au < doNotProcess ; 1878 ; Philosophical Transactions of the Royal Society of London Volume 168 ; 168 >
-    au < doNotProcess ; 1879 ; Philosophical Transactions of the Royal Society of London Volume 169 ; 169 >
-    au < doNotProcess ; 1880 ; Philosophical Transactions of the Royal Society of London Volume 170 ; 170 >
-    au < doNotProcess ; 1881 ; Philosophical Transactions of the Royal Society of London Volume 171 ; 171 >
-    au < doNotProcess ; 1882 ; Philosophical Transactions of the Royal Society of London Volume 172 ; 172 >
-    au < doNotProcess ; 1883 ; Philosophical Transactions of the Royal Society of London Volume 173 ; 173 >
-    au < doNotProcess ; 1884 ; Philosophical Transactions of the Royal Society of London Volume 174 ; 174 >
-    au < doNotProcess ; 1885 ; Philosophical Transactions of the Royal Society of London Volume 175 ; 175 >
-    au < doNotProcess ; 1886 ; Philosophical Transactions of the Royal Society of London Volume 176 ; 176 >
-    au < doNotProcess ; 1887 ; Philosophical Transactions of the Royal Society of London Volume 177 ; 177 >
+    au < doNotProcess ; 1879 ; Philosophical Transactions of the Royal Society of London Volume 168 ; 168 >
+    au < doNotProcess ; 1878 ; Philosophical Transactions of the Royal Society of London Volume 169 ; 169 > #volume is empty.
+    au < doNotProcess ; 1879 ; Philosophical Transactions of the Royal Society of London Volume 170 ; 170 >
+    au < doNotProcess ; 1880 ; Philosophical Transactions of the Royal Society of London Volume 171 ; 171 >
+    au < doNotProcess ; 1881 ; Philosophical Transactions of the Royal Society of London Volume 172 ; 172 >
+    au < doNotProcess ; 1882 ; Philosophical Transactions of the Royal Society of London Volume 173 ; 173 >
+    au < doNotProcess ; 1883 ; Philosophical Transactions of the Royal Society of London Volume 174 ; 174 >
+    au < doNotProcess ; 1884 ; Philosophical Transactions of the Royal Society of London Volume 175 ; 175 >
+    au < doNotProcess ; 1885 ; Philosophical Transactions of the Royal Society of London Volume 176 ; 176 >
+    au < doNotProcess ; 1886 ; Philosophical Transactions of the Royal Society of London Volume 177 ; 177 >
+
+  }
+
+  {
+
+    title <
+      name = Philosophical Collections of the Royal Society of London ;
+      issn = 0369-8696 ;
+      eissn = 2397-9755 ;
+      issnl = 0369-8696
+    >
+
+    # Edited by Robert Hooke FRS, Philosophical Collections was published between 1679 and 1682. 
+    # Articles before and after these dates are published in Philosophical Transactions.
+    param[journal_id] = rscl
+
+    au < exists ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 >
+    au < exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 2 ; 2 >
+    au < exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 3 ; 3 >
+    au < exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 4 ; 4 >
+    au < exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 5 ; 5 >
+    au < exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 6 ; 6 >
+    au < exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 7 ; 7 >
 
   }
 
@@ -962,7 +1033,8 @@
       issnl = 1364-5021
     >
 
-    param[journal_id] = rspa
+    {
+    param[journal_id] = rspa1905
 
     au < doNotProcess ; 1905 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 76 ; 76 >
     au < doNotProcess ; 1906 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 77 ; 77 >
@@ -1035,6 +1107,10 @@
     au < doNotProcess ; 1934 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 144 ; 144 >
     au < doNotProcess ; 1934 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 145 ; 145 >
     au < doNotProcess ; 1934 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 146 ; 146 >
+    }
+    {
+      param[journal_id] = rspa1934
+
     au < doNotProcess ; 1934 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 147 ; 147 >
     au < doNotProcess ; 1935 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 148 ; 148 >
     au < doNotProcess ; 1935 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 149 ; 149 >
@@ -1053,6 +1129,10 @@
     au < doNotProcess ; 1937 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 162 ; 162 >
     au < doNotProcess ; 1937 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 163 ; 163 >
     au < doNotProcess ; 1938 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 164 ; 164 >
+    }
+    {
+      param[journal_id] = rspa1938
+
     au < doNotProcess ; 1938 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 165 ; 165 >
     au < doNotProcess ; 1938 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 166 ; 166 >
     au < doNotProcess ; 1938 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 167 ; 167 >
@@ -1197,6 +1277,10 @@
     au < doNotProcess ; 1968 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 306 ; 306 >
     au < doNotProcess ; 1968 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 307 ; 307 >
     au < doNotProcess ; 1968-1969 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 308 ; 308 >
+    }
+    {
+      param[journal_id] = rspa1969
+
     au < doNotProcess ; 1969 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 309 ; 309 >
     au < doNotProcess ; 1969 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 310 ; 310 >
     au < doNotProcess ; 1969 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 311 ; 311 >
@@ -1318,6 +1402,10 @@
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 427 ; 427 >
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 428 ; 428 >
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 429 ; 429 >
+    }
+    {
+      param[journal_id] = rspa1990
+
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 430 ; 430 >
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 431 ; 431 >
     au < doNotProcess ; 1991 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 432 ; 432 >
@@ -1340,6 +1428,10 @@
     au < doNotProcess ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 449 ; 449 >
     au < doNotProcess ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 450 ; 450 >
     au < doNotProcess ; 1995 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 451 ; 451 >
+    }
+    {
+      param[journal_id] = rspa1996
+
     au < doNotProcess ; 1996 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 452 ; 452 >
     au < doNotProcess ; 1997 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 453 ; 453 >
     au < doNotProcess ; 1998 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 454 ; 454 >
@@ -1349,6 +1441,10 @@
     au < doNotProcess ; 2002 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 458 ; 458 >
     au < doNotProcess ; 2003 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 459 ; 459 >
     au < doNotProcess ; 2004 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 460 ; 460 >
+    }
+    {
+      param[journal_id] = rspa
+
     au < doNotProcess ; 2005 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 461 ; 461 >
     au < doNotProcess ; 2006 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 462 ; 462 >
     au < doNotProcess ; 2007 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 463 ; 463 >
@@ -1367,6 +1463,7 @@
     au < released ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 >
     au < manifest ; 2021 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 477 ; 477 >
 
+    }
   }
 
   {
@@ -1378,7 +1475,8 @@
       issnl = 0962-8452
     >
 
-    param[journal_id] = rspb
+    {
+    param[journal_id] = rspb1905
 
     au < doNotProcess ; 1905 ; Proceedings of the Royal Society B: Biological Sciences Volume 76 ; 76 >
     au < doNotProcess ; 1905-1906 ; Proceedings of the Royal Society B: Biological Sciences Volume 77 ; 77 >
@@ -1420,6 +1518,10 @@
     au < doNotProcess ; 1933 ; Proceedings of the Royal Society B: Biological Sciences Volume 113 ; 113 >
     au < doNotProcess ; 1933-1934 ; Proceedings of the Royal Society B: Biological Sciences Volume 114 ; 114 >
     au < doNotProcess ; 1934 ; Proceedings of the Royal Society B: Biological Sciences Volume 115 ; 115 >
+    }
+    {
+    param[journal_id] = rspb1934
+
     au < doNotProcess ; 1934-1935 ; Proceedings of the Royal Society B: Biological Sciences Volume 116 ; 116 >
     au < doNotProcess ; 1935 ; Proceedings of the Royal Society B: Biological Sciences Volume 117 ; 117 >
     au < doNotProcess ; 1935 ; Proceedings of the Royal Society B: Biological Sciences Volume 118 ; 118 >
@@ -1455,6 +1557,10 @@
     au < doNotProcess ; 1958 ; Proceedings of the Royal Society B: Biological Sciences Volume 148 ; 148 >
     au < doNotProcess ; 1958 ; Proceedings of the Royal Society B: Biological Sciences Volume 149 ; 149 >
     au < doNotProcess ; 1959 ; Proceedings of the Royal Society B: Biological Sciences Volume 150 ; 150 >
+    }
+    {
+    param[journal_id] = rspb1959
+
     au < doNotProcess ; 1959-1960 ; Proceedings of the Royal Society B: Biological Sciences Volume 151 ; 151 >
     au < doNotProcess ; 1960 ; Proceedings of the Royal Society B: Biological Sciences Volume 152 ; 152 >
     au < doNotProcess ; 1960-1961 ; Proceedings of the Royal Society B: Biological Sciences Volume 153 ; 153 >
@@ -1540,11 +1646,19 @@
     au < doNotProcess ; 1988 ; Proceedings of the Royal Society B: Biological Sciences Volume 233 ; 233 >
     au < doNotProcess ; 1988 ; Proceedings of the Royal Society B: Biological Sciences Volume 234 ; 234 >
     au < doNotProcess ; 1988-1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 235 ; 235 >
+    }
+    {
+    param[journal_id] = rspb1989
+
     au < doNotProcess ; 1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 236 ; 236 >
     au < doNotProcess ; 1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 237 ; 237 >
     au < doNotProcess ; 1989-1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 238 ; 238 >
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 239 ; 239 >
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 240 ; 240 >
+    }
+    {
+    param[journal_id] = rspb1990
+
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 241 ; 241 >
     au < doNotProcess ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 242 ; 242 >
     au < doNotProcess ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 ; 243 >
@@ -1554,6 +1668,10 @@
     au < doNotProcess ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 ; 247 >
     au < doNotProcess ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 ; 248 >
     au < doNotProcess ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 ; 249 >
+    }
+    {
+    param[journal_id] = rspb
+
     au < doNotProcess ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 250 ; 250 >
     au < doNotProcess ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 251 ; 251 >
     au < doNotProcess ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 252 ; 252 >
@@ -1594,6 +1712,7 @@
     au < released ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 >
     au < manifest ; 2021 ; Proceedings of the Royal Society B: Biological Sciences Volume 288 ; 288 >
 
+    }
   }
 
   {
@@ -1604,14 +1723,23 @@
       issnl = 0370-1662 
     >
 
-    param[journal_id] = rspl
+    {
+    param[journal_id] = rspl1800
 
     au < doNotProcess ; 1832 ; Proceedings of the Royal Society of London Volume 1 ; 1 >
     au < doNotProcess ; 1833 ; Proceedings of the Royal Society of London Volume 2 ; 2 >
     au < doNotProcess ; 1837 ; Proceedings of the Royal Society of London Volume 3 ; 3 >
     au < doNotProcess ; 1843 ; Proceedings of the Royal Society of London Volume 4 ; 4 >
+    }
+    {
+    param[journal_id] = rspl1843
+
     au < doNotProcess ; 1851 ; Proceedings of the Royal Society of London Volume 5 ; 5 >
     au < doNotProcess ; 1854 ; Proceedings of the Royal Society of London Volume 6 ; 6 >
+    }
+    {
+    param[journal_id] = rspl
+
     au < doNotProcess ; 1856 ; Proceedings of the Royal Society of London Volume 7 ; 7 >
     au < doNotProcess ; 1857 ; Proceedings of the Royal Society of London Volume 8 ; 8 >
     au < doNotProcess ; 1859 ; Proceedings of the Royal Society of London Volume 9 ; 9 >
@@ -1681,7 +1809,7 @@
     au < doNotProcess ; 1904 ; Proceedings of the Royal Society of London Volume 73 ; 73 >
     au < doNotProcess ; 1905 ; Proceedings of the Royal Society of London Volume 74 ; 74 >
     au < doNotProcess ; 1905 ; Proceedings of the Royal Society of London Volume 75 ; 75 >
-
+    }
   }
 
   {
