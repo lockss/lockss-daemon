@@ -688,7 +688,7 @@ public class UrlUtil {
    */
   public static String encodeUri(String uri, String enc)  {
     try {
-      return org.springframework.web.util.UriUtils.encodeUri(uri, enc);
+      return UriUtils.encodeUri(uri, enc);
     } catch (UnsupportedEncodingException e) {
       // The system should always have the platform default
       throw new RuntimeException("Encoding (" + enc + ") unsupported", e);
