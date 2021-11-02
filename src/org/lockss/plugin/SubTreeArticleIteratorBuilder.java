@@ -382,6 +382,11 @@ public class SubTreeArticleIteratorBuilder {
         }
       }
       
+      public String toString() {
+        return "[Aspect: roles: " + roles +
+          ", pats: " + patterns +
+          ", reps: " + matcherReplacements + "]";
+      }
     }
     
     /**
@@ -491,6 +496,7 @@ public class SubTreeArticleIteratorBuilder {
             for (int cj = ci + 1; cj < aspects.size(); ++cj) {
               Aspect lowerAspect = aspects.get(cj);
               CachedUrl lowerCu = lowerAspect.findCuByPatternReplacement(matcher);
+              log.debug3("Aspect: " + lowerAspect + ", cu: " + lowerCu);
               if (lowerCu != null) {
                 lowerAspect.processRoles(af, lowerCu);
               }
