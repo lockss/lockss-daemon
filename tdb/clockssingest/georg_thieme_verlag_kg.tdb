@@ -2624,7 +2624,7 @@
     param[journal_id] = 10.1055/s-00000167
     comment[years] = 1992-current
 
-    au < ready ; exists ; 1992 ; 1992 ; International Journal of Angiology Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1992 ; 1992 ; International Journal of Angiology Volume 1 ; 1 ; >
     au < crawling ; exists ; 1993 ; 1993 ; International Journal of Angiology Volume 2 ; 2 ; >
     au < crawling ; exists ; 1994 ; 1994 ; International Journal of Angiology Volume 3 ; 3 ; >
     au < crawling ; exists ; 1995 ; 1995 ; International Journal of Angiology Volume 4 ; 4 ; >
@@ -8094,7 +8094,7 @@
     au < crawling ; exists ; 1996 ; 1996 ; British Homeopathic Journal Volume 86 ; 86 ; >
     au < crawling ; exists ; 1997 ; 1997 ; British Homeopathic Journal Volume 87 ; 87 ; >
     au < crawling ; exists ; 1998 ; 1998 ; British Homeopathic Journal Volume 88 ; 88 ; >
-    au < ready ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; >
     au < crawling ; exists ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 ; >
     au < ready ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; >
 
@@ -8158,7 +8158,7 @@
     comment[years] = 2018-current
 
     au < crawling ; exists ; 2018 ; 2018 ; Der Schmerzpatient Volume 1 ; 1 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Der Schmerzpatient Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Der Schmerzpatient Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Der Schmerzpatient Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Der Schmerzpatient Volume 4 ; 4 ; >
 
@@ -8253,9 +8253,9 @@
     param[journal_id] = 10.1055/s-00034926
     comment[years] = 2002-current
 
-    au < ready ; exists ; 2002 ; 2002 ; Homeopathy Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Homeopathy Volume 91 ; 91 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Homeopathy Volume 92 ; 92 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Homeopathy Volume 93 ; 93 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Homeopathy Volume 93 ; 93 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Homeopathy Volume 94 ; 94 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Homeopathy Volume 95 ; 95 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Homeopathy Volume 96 ; 96 ; >
@@ -8271,7 +8271,7 @@
     au < crawling ; exists ; 2017 ; 2017 ; Homeopathy Volume 106 ; 106 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Homeopathy Volume 107 ; 107 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Homeopathy Volume 108 ; 108 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Homeopathy Volume 109 ; 109 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Homeopathy Volume 109 ; 109 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Homeopathy Volume 110 ; 110 ; >
 
   }
@@ -8299,11 +8299,11 @@
     au < crawling ; exists ; 2012 ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 45 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Indian Journal of Plastic Surgery Volume 54 ; 54 ; >
 
@@ -8509,7 +8509,7 @@
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Morphological Sciences Volume 31 ; 31 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Morphological Sciences Volume 32 ; 32 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Morphological Sciences Volume 33 ; 33 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Journal of Morphological Sciences Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Journal of Morphological Sciences Volume 34 ; 34 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Morphological Sciences Volume 35 ; 35 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Morphological Sciences Volume 36 ; 36 ; >
 
@@ -8532,7 +8532,7 @@
     au < crawling ; exists ; 2016 ; 2016 ; Journal of Neuroanaesthesiology and Critical Care Volume 3 ; 3 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Neuroanaesthesiology and Critical Care Volume 4 ; 4 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Neuroanaesthesiology and Critical Care Volume 5 ; 5 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Neuroanaesthesiology and Critical Care Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Neuroanaesthesiology and Critical Care Volume 6 ; 6 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Neuroanaesthesiology and Critical Care Volume 7 ; 7 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Neuroanaesthesiology and Critical Care Volume 8 ; 8 ; >
 
@@ -8756,7 +8756,7 @@
     param[journal_id] = 10.1055/s-00035331
     comment[years] = 2018-current
 
-    au < ready ; exists ; 2018 ; 2018 ; Revista Urología Colombiana Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Revista Urología Colombiana Volume 27 ; 27 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Revista Urología Colombiana Volume 28 ; 28 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Revista Urología Colombiana Volume 29 ; 29 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Revista Urología Colombiana Volume 30 ; 30 ; >

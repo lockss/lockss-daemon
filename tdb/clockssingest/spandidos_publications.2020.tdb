@@ -29,9 +29,9 @@
       au < manifest ; exists ; 2014 ; Oncology Letters Volume 7 ; 7 ; >
       au < manifest ; exists ; 2014 ; Oncology Letters Volume 8 ; 8 ; >
       au < crawling ; exists ; 2015 ; Oncology Letters Volume 9 ; 9 ; >
-      au < ready ; exists ; 2015 ; Oncology Letters Volume 10 ; 10 ; >
-      au < ready ; exists ; 2016 ; Oncology Letters Volume 11 ; 11 ; >
-      au < ready ; exists ; 2016 ; Oncology Letters Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2015 ; Oncology Letters Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2016 ; Oncology Letters Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2016 ; Oncology Letters Volume 12 ; 12 ; >
       au < frozen ; exists ; 2017 ; Oncology Letters Volume 13 ; 13 ; >
       au < ready ; exists ; 2017 ; Oncology Letters Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Letters Volume 15 ; 15 ; >
@@ -130,9 +130,9 @@
       au < manifest ; exists ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 ; >
       au < crawling ; exists ; 2015 ; Molecular and Clinical Oncology Volume 3 ; 3 ; >
       au < crawling ; exists ; 2016 ; Molecular and Clinical Oncology Volume 4 ; 4 ; >
-      au < ready ; exists ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 ; >
-      au < ready ; exists ; 2017 ; Molecular and Clinical Oncology Volume 6 ; 6 ; >
-      au < ready ; exists ; 2017 ; Molecular and Clinical Oncology Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2017 ; Molecular and Clinical Oncology Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2017 ; Molecular and Clinical Oncology Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular and Clinical Oncology Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular and Clinical Oncology Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular and Clinical Oncology Volume 10 ; 10 ; >
@@ -161,10 +161,10 @@
       au < manifest ; exists ; 2013 ; Experimental and Therapeutic Medicine Volume 6 ; 6 ; >
       au < manifest ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 7 ; 7 ; >
       au < manifest ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 8 ; 8 ; >
-      au < ready ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 9 ; 9 ; >
       au < crawling ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 10 ; 10 ; >
       au < crawling ; exists ; 2016 ; Experimental and Therapeutic Medicine Volume 11 ; 11 ; >
-      au < ready ; exists ; 2016 ; Experimental and Therapeutic Medicine Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2016 ; Experimental and Therapeutic Medicine Volume 12 ; 12 ; >
       au < ready ; exists ; 2017 ; Experimental and Therapeutic Medicine Volume 13 ; 13 ; >
       au < ready ; exists ; 2017 ; Experimental and Therapeutic Medicine Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Experimental and Therapeutic Medicine Volume 15 ; 15 ; >
@@ -225,7 +225,7 @@
       au < ready ; exists ; 2015 ; International Journal of Molecular Medicine Volume 36 ; 36 ; >
       au < crawling ; exists ; 2016 ; International Journal of Molecular Medicine Volume 37 ; 37 ; >
       au < crawling ; exists ; 2016 ; International Journal of Molecular Medicine Volume 38 ; 38 ; >
-      au < ready ; exists ; 2017 ; International Journal of Molecular Medicine Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2017 ; International Journal of Molecular Medicine Volume 39 ; 39 ; >
       au < ready ; exists ; 2017 ; International Journal of Molecular Medicine Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Molecular Medicine Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Molecular Medicine Volume 42 ; 42 ; >
@@ -252,7 +252,7 @@
       au < crawling ; exists ; 2015 ; Biomedical Reports Volume 3 ; 3 ; >
       au < frozen ; exists ; 2016 ; Biomedical Reports Volume 4 ; 4 ; >
       au < ready ; exists ; 2016 ; Biomedical Reports Volume 5 ; 5 ; >
-      au < ready ; exists ; 2017 ; Biomedical Reports Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2017 ; Biomedical Reports Volume 6 ; 6 ; >
       au < crawling ; exists ; 2017 ; Biomedical Reports Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Biomedical Reports Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Biomedical Reports Volume 9 ; 9 ; >
@@ -306,10 +306,10 @@
       au < manifest ; exists ; 2013 ; Oncology Reports Volume 30 ; 30 ; >
       au < manifest ; exists ; 2014 ; Oncology Reports Volume 31 ; 31 ; >
       au < manifest ; exists ; 2014 ; Oncology Reports Volume 32 ; 32 ; >
-      au < ready ; exists ; 2015 ; Oncology Reports Volume 33 ; 33 ; >
-      au < ready ; exists ; 2015 ; Oncology Reports Volume 34 ; 34 ; >
-      au < ready ; exists ; 2016 ; Oncology Reports Volume 35 ; 35 ; >
-      au < ready ; exists ; 2016 ; Oncology Reports Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2015 ; Oncology Reports Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2015 ; Oncology Reports Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2016 ; Oncology Reports Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2016 ; Oncology Reports Volume 36 ; 36 ; >
       au < crawling ; exists ; 2017 ; Oncology Reports Volume 37 ; 37 ; >
       au < crawling ; exists ; 2017 ; Oncology Reports Volume 38 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Oncology Reports Volume 39 ; 39 ; >
@@ -346,8 +346,8 @@
       au < frozen ; exists ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 ; >
       au < crawling ; exists ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 ; >
       au < crawling ; exists ; 2016 ; Molecular Medicine Reports Volume 14 ; 14 ; >
-      au < ready ; exists ; 2017 ; Molecular Medicine Reports Volume 15 ; 15 ; >
-      au < ready ; exists ; 2017 ; Molecular Medicine Reports Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2017 ; Molecular Medicine Reports Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2017 ; Molecular Medicine Reports Volume 16 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular Medicine Reports Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Molecular Medicine Reports Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Molecular Medicine Reports Volume 19 ; 19 ; >
