@@ -46,7 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>38</string>
+    <string>39</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
@@ -72,7 +72,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>119</string>
+    <string>122</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
