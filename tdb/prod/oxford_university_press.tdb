@@ -1330,7 +1330,6 @@
     au < down ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 >
     au < down ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 >
     au < doNotProcess ; 2019 ; 2019 ; Annals of Oncology Volume 30 ; 30 >
-    au < doNotProcess ; 2020 ; 2020 ; Annals of Oncology Volume 31 ; 31 >
 
   }
 
@@ -1470,7 +1469,6 @@
     au < down ; 2017 ; 2017 ; Applied Economic Perspectives and Policy Volume 39 ; 39 >
     au < down ; 2018 ; 2018 ; Applied Economic Perspectives and Policy Volume 40 ; 40 >
     au < doNotProcess ; 2019 ; 2019 ; Applied Economic Perspectives and Policy Volume 41 ; 41 >
-    au < doNotProcess ; 2020 ; 2020 ; Applied Economic Perspectives and Policy Volume 42 ; 42 >
 
   }
 
@@ -5270,6 +5268,10 @@
     au < doNotProcess ; 2015 ; 2015 ; European Heart Journal Volume 36 ; 36 >
     au < released ; 2016 ; 2016 ; European Heart Journal Volume 37 ; 37 >
     au < released ; 2017 ; 2017 ; European Heart Journal Volume 38 ; 38 >
+    au < exists ; 2018 ; 2018 ; European Heart Journal Volume 39 ; 39 >
+    au < exists ; 2019 ; 2019 ; European Heart Journal Volume 40 ; 40 >
+    au < exists ; 2020 ; 2020 ; European Heart Journal Volume 41 ; 41 >
+    au < exists ; 2021 ; 2021 ; European Heart Journal Volume 42 ; 42 >
 
   }
 
@@ -5302,6 +5304,10 @@
     au < doNotProcess ; 2015 ; 2015 ; European Heart Journal - Cardiovascular Imaging Volume 16 ; 16 >
     au < released ; 2016 ; 2016 ; European Heart Journal - Cardiovascular Imaging Volume 17 ; 17 >
     au < released ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Imaging Volume 18 ; 18 >
+    au < exists ; 2018 ; 2018 ; European Heart Journal - Cardiovascular Imaging Volume 19 ; 19 >
+    au < exists ; 2019 ; 2019 ; European Heart Journal - Cardiovascular Imaging Volume 20 ; 20 >
+    au < exists ; 2020 ; 2020 ; European Heart Journal - Cardiovascular Imaging Volume 21 ; 21 >
+    au < exists ; 2021 ; 2021 ; European Heart Journal - Cardiovascular Imaging Volume 22 ; 22 >
 
   }
 
@@ -5328,6 +5334,30 @@
   {
 
     title <
+      name = European Heart Journal: Acute Cardiovascular Care ;
+      issn = 2048-8726 ;
+      eissn = 2048-8734 ;
+      issnl = 2048-8726
+    >
+
+    param[journal_id] = ehjacc
+
+    au < exists ; 2012 ; 2012 ; European Heart Journal. Acute Cardiovascular Care Volume 1 ; 1 >
+    au < exists ; 2013 ; 2013 ; European Heart Journal. Acute Cardiovascular Care Volume 2 ; 2 >
+    au < exists ; 2014 ; 2014 ; European Heart Journal. Acute Cardiovascular Care Volume 3 ; 3 >
+    au < exists ; 2015 ; 2015 ; European Heart Journal. Acute Cardiovascular Care Volume 4 ; 4 >
+    au < exists ; 2016 ; 2016 ; European Heart Journal. Acute Cardiovascular Care Volume 5 ; 5 >
+    au < exists ; 2017 ; 2017 ; European Heart Journal. Acute Cardiovascular Care Volume 6 ; 6 >
+    au < exists ; 2018 ; 2018 ; European Heart Journal. Acute Cardiovascular Care Volume 7 ; 7 >
+    au < exists ; 2019 ; 2019 ; European Heart Journal. Acute Cardiovascular Care Volume 8 ; 8 >
+    au < exists ; 2020 ; 2020 ; European Heart Journal. Acute Cardiovascular Care Volume 9 ; 9 >
+    au < exists ; 2021 ; 2021 ; European Heart Journal. Acute Cardiovascular Care Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
       name = European Heart Journal - Quality of Care and Clinical Outcomes ;
       issn = 2058-5225 ;
       eissn = 2058-1742 ;
@@ -5339,6 +5369,10 @@
     au < doNotProcess ; 2015 ; 2015 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 1 ; 1 >
     au < released ; 2016 ; 2016 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 2 ; 2 >
     au < released ; 2017 ; 2017 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 3 ; 3 >
+    au < exists ; 2018 ; 2018 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 4 ; 4 >
+    au < exists ; 2019 ; 2019 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 5 ; 5 >
+    au < exists ; 2020 ; 2020 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 6 ; 6 >
+    au < exists ; 2021 ; 2021 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 7 ; 7 >
 
   }
 
@@ -5418,7 +5452,7 @@
     au < doNotProcess ; 2014 ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45-46 ; 45-46 >
     au < doNotProcess ; 2015 ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47-48 ; 47-48 >
     au < released ; 2016 ; 2016 ; European Journal of Cardio-Thoracic Surgery Volume 49-50 ; 49-50 >
-    au < released ; 2017 ; 2017 ; European Journal of Cardio-Thoracic Surgery Volume 51 ; 51 >
+    au < released ; 2017 ; 2017 ; European Journal of Cardio-Thoracic Surgery Volume 51-52 ; 51-52 >
     au < released ; 2018 ; 2018 ; European Journal of Cardio-Thoracic Surgery Volume 53-54 ; 53-54 >
     au < released ; 2019 ; 2019 ; European Journal of Cardio-Thoracic Surgery Volume 55-56 ; 55-56 >
     au < manifest ; 2020 ; 2020 ; European Journal of Cardio-Thoracic Surgery Volume 57-58 ; 57-58 >
@@ -5438,6 +5472,40 @@
     param[journal_id] = 
     #this title was ONLY in the previous TDB listing - suppressing AU generation 
 
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Cardiovascular Nursing ;
+      issn = 1474-5151 ;
+      eissn = 1873-1953 ;
+      issnl = 1474-5151
+    >
+
+    param[journal_id] = eurjcn
+
+    au < exists ; 2002 ; 2002 ; European Journal of Cardiovascular Nursing Volume 1 ; 1 >
+    au < exists ; 2003 ; 2003 ; European Journal of Cardiovascular Nursing Volume 2 ; 2 >
+    au < exists ; 2004 ; 2004 ; European Journal of Cardiovascular Nursing Volume 3 ; 3 >
+    au < exists ; 2005 ; 2005 ; European Journal of Cardiovascular Nursing Volume 4 ; 4>
+    au < exists ; 2006 ; 2006 ; European Journal of Cardiovascular Nursing Volume 5 ; 5>
+    au < exists ; 2007 ; 2007 ; European Journal of Cardiovascular Nursing Volume 6 ; 6>
+    au < exists ; 2008 ; 2008 ; European Journal of Cardiovascular Nursing Volume 7 ; 7>
+    au < exists ; 2009 ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8>
+    au < exists ; 2010 ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9>
+    au < exists ; 2011 ; 2011 ; European Journal of Cardiovascular Nursing Volume 10 ; 10 >
+    au < exists ; 2012 ; 2012 ; European Journal of Cardiovascular Nursing Volume 11 ; 10 >
+    au < exists ; 2013 ; 2013 ; European Journal of Cardiovascular Nursing Volume 12 ; 10 >
+    au < exists ; 2014 ; 2014 ; European Journal of Cardiovascular Nursing Volume 13 ; 13 >
+    au < exists ; 2015 ; 2015 ; European Journal of Cardiovascular Nursing Volume 14 ; 14 >
+    au < exists ; 2016 ; 2016 ; European Journal of Cardiovascular Nursing Volume 15 ; 15 >
+    au < exists ; 2017 ; 2017 ; European Journal of Cardiovascular Nursing Volume 16 ; 16 >
+    au < exists ; 2018 ; 2018 ; European Journal of Cardiovascular Nursing Volume 17 ; 17 >
+    au < exists ; 2019 ; 2019 ; European Journal of Cardiovascular Nursing Volume 18 ; 18 >
+    au < exists ; 2020 ; 2020 ; European Journal of Cardiovascular Nursing Volume 19 ; 19 >
+    au < exists ; 2021 ; 2021 ; European Journal of Cardiovascular Nursing Volume 20 ; 20 >
 
   }
 
@@ -5586,6 +5654,32 @@
     au < released ; 2019 ; 2019 ; European Journal of Public Health Volume 29 ; 29 >
     au < manifest ; 2020 ; 2020 ; European Journal of Public Health Volume 30 ; 30 >
     au < manifest ; 2021 ; 2021 ; European Journal of Public Health Volume 31 ; 31 >
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Preventive Cardiology ;
+      issn = 2047-4873 ;
+      eissn = 2047-4881 ;
+      issnl = 2047-4873
+    >
+
+    param[journal_id] = eurjpc
+    comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
+    #Moved from Sage
+
+    au < exists ; 2012 ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 >
+    au < exists ; 2013 ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 >
+    au < exists ; 2014 ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 >
+    au < exists ; 2015 ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 >
+    au < exists ; 2016 ; 2016 ; European Journal of Preventive Cardiology Volume 23 ; 23 >
+    au < exists ; 2017 ; 2017 ; European Journal of Preventive Cardiology Volume 24 ; 24 >
+    au < exists ; 2018 ; 2018 ; European Journal of Preventive Cardiology Volume 25 ; 25 >
+    au < exists ; 2019 ; 2019 ; European Journal of Preventive Cardiology Volume 26 ; 26 >
+    au < exists ; 2020 ; 2020 ; European Journal of Preventive Cardiology Volume 27 ; 27 >
+    au < exists ; 2021 ; 2021 ; European Journal of Preventive Cardiology Volume 28 ; 28 >
 
   }
 
@@ -9875,6 +9969,26 @@
     au < released ; 2019 ; 2019 ; Journal of Complex Networks Volume 7 ; 7 >
     au < released ; 2020 ; 2020 ; Journal of Complex Networks Volume 8 ; 8 >
     au < manifest ; 2021 ; 2021 ; Journal of Complex Networks Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Computational Design and Engineering ;
+      eissn = 2288-5048 
+    >
+
+    param[journal_id] = jcde
+
+    au < exists ; 2014 ; 2014 ; Journal of Computational Design and Engineering Volume 1 ; 1 >
+    au < exists ; 2015 ; 2015 ; Journal of Computational Design and Engineering Volume 2 ; 2 >
+    au < exists ; 2016 ; 2016 ; Journal of Computational Design and Engineering Volume 3 ; 3 >
+    au < exists ; 2017 ; 2017 ; Journal of Computational Design and Engineering Volume 4 ; 4 >
+    au < exists ; 2018 ; 2018 ; Journal of Computational Design and Engineering Volume 5 ; 5 >
+    au < exists ; 2019 ; 2019 ; Journal of Computational Design and Engineering Volume 6 ; 6 >
+    au < exists ; 2020 ; 2020 ; Journal of Computational Design and Engineering Volume 7 ; 7 >
+    au < exists ; 2021 ; 2021 ; Journal of Computational Design and Engineering Volume 8 ; 8 >
 
   }
 
@@ -15923,8 +16037,6 @@
     au < down ; 2016 ; 2016 ; Poultry Science Volume 95 ; 95 >
     au < down ; 2017 ; 2017 ; Poultry Science Volume 96 ; 96 >
     au < doNotProcess ; 2018 ; 2018 ; Poultry Science Volume 97 ; 97 >
-    au < doNotProcess ; 2019 ; 2019 ; Poultry Science Volume 98 ; 98 >
-    au < doNotProcess ; 2020 ; 2020 ; Poultry Science Volume 99 ; 99 >
 
   }
 
@@ -19244,7 +19356,6 @@
     au < down ; 2017 ; 2017 ; The Journal of Applied Poultry Research Volume 26 ; 26 >
     au < down ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 >
     au < doNotProcess ; 2019 ; 2019 ; The Journal of Applied Poultry Research Volume 28 ; 28 >
-    au < doNotProcess ; 2020 ; 2020 ; The Journal of Applied Poultry Research Volume 29 ; 29 >
 
   }
 

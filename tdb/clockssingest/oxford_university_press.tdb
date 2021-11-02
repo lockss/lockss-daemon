@@ -1337,8 +1337,6 @@
     au < finished ; crawling ; 2017 ; 2017 ; Annals of Oncology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Annals of Oncology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Annals of Oncology Volume 30 ; 30 ; reingest5.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; Annals of Oncology Volume 31 ; 31 ; >
-    au < doNotProcess ; exists ; 2021 ; 2021 ; Annals of Oncology Volume 32 ; 32 ; >
 
   }
 
@@ -1478,8 +1476,6 @@
     au < frozen ; exists ; 2017 ; 2017 ; Applied Economic Perspectives and Policy Volume 39 ; 39 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Applied Economic Perspectives and Policy Volume 40 ; 40 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Applied Economic Perspectives and Policy Volume 41 ; 41 ; >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; Applied Economic Perspectives and Policy Volume 42 ; 42 ; >
-    au < doNotProcess ; exists ; 2021 ; 2021 ; Applied Economic Perspectives and Policy Volume 43 ; 43 ; >
 
   }
 
@@ -2257,7 +2253,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Biological Journal of the Linnean Society Volume 123-125 ; 123-125 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Biological Journal of the Linnean Society Volume 126-128 ; 126-128 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Biological Journal of the Linnean Society Volume 129-131 ; 129-131 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Biological Journal of the Linnean Society Volume 133-135 ; 133-135 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Biological Journal of the Linnean Society Volume 132-134 ; 132-134 ; >
 
   }
 
@@ -16028,9 +16024,6 @@
     au < finished ; crawling ; 2016 ; 2016 ; Poultry Science Volume 95 ; 95 ; reingest2.clockss.org:8085>
     au < finished ; crawling ; 2017 ; 2017 ; Poultry Science Volume 96 ; 96 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; 2018 ; Poultry Science Volume 97 ; 97 ; reingest4.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2019 ; 2019 ; Poultry Science Volume 98 ; 98 ; >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; Poultry Science Volume 99 ; 99 ; >
-    au < doNotProcess ; exists ; 2021 ; 2021 ; Poultry Science Volume 100 ; 100 ; >
 
   }
 
@@ -19351,8 +19344,6 @@
     au < finished ; crawling ; 2017 ; 2017 ; The Journal of Applied Poultry Research Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; 2018 ; The Journal of Applied Poultry Research Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; The Journal of Applied Poultry Research Volume 28 ; 28 ; reingest2.clockss.org:8085 >
-    au < doNotProcess ; exists ; 2020 ; 2020 ; The Journal of Applied Poultry Research Volume 29 ; 29 ; >
-    au < doNotProcess ; exists ; 2021 ; 2021 ; The Journal of Applied Poultry Research Volume 30 ; 30 ; >
 
   }
 
