@@ -127,7 +127,7 @@
       param[journal_code] = oc
 
       #complete
-      au < manifest ; exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1996] ; 93 ; 1996 ; https://pubs.rsc.org/ ; >
+      au < testing ; exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1996] ; 93 ; 1996 ; https://pubs.rsc.org/ ; >
       au < finished ; crawling ; 1997 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1997] ; 93 ; 1997 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 1998 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 1999 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
@@ -578,7 +578,7 @@
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 228 ; 228 ; 2021 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 229 ; 229 ; 2021 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2021 ; Faraday Discussions Volume 231 ; 231 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < testing ; exists ; 2021 ; Faraday Discussions Volume 231 ; 231 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 232 ; 232 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 233 ; 233 ; 2021 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2021 ; Faraday Discussions Volume 234 ; 234 ; 2021 ; https://pubs.rsc.org/ ; >
