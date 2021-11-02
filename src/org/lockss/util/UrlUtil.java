@@ -681,14 +681,14 @@ public class UrlUtil {
   }
 
   /**
-   * encode a url using the java URLEncoder
+   * Encode a url as necessary according to the rules for each component
    * @param uri the url to encode
-   * @param enc the encoding to use
-   * @return  the encoded url string
+   * @param enc the character encoding to use
+   * @return the encoded url string
    */
   public static String encodeUri(String uri, String enc)  {
     try {
-      return UriUtils.encodeUri(uri, enc);
+      return org.springframework.web.util.UriUtils.encodeUri(uri, enc);
     } catch (UnsupportedEncodingException e) {
       // The system should always have the platform default
       throw new RuntimeException("Encoding (" + enc + ") unsupported", e);
