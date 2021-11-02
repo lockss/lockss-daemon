@@ -517,7 +517,7 @@
       au < finished ; crawling ; 2018 ; The Mark Twain Annual Volume 16 ; 2018 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; The Mark Twain Annual Volume 17 ; 2019 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; The Mark Twain Annual Volume 18 ; 2020 ; https://www.jstor.org/ ; >
-      au < expected ; exists ; 2021 ; The Mark Twain Annual Volume 19 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; The Mark Twain Annual Volume 19 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
@@ -2099,7 +2099,7 @@
       au < finished ; crawling ; 2017 ; Journal of African Development Volume 19 ; 2017 ; https://www.jstor.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Journal of African Development Volume 20 ; 2018 ; https://www.jstor.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of African Development Volume 21 ; 2020 ; https://www.jstor.org/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; Journal of African Development Volume 22 ; 2021 ; https://www.jstor.org/ ; >
+      au < manifest ; exists ; 2021 ; Journal of African Development Volume 22 ; 2021 ; https://www.jstor.org/ ; >
 
   }
 
