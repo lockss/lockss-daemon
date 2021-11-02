@@ -702,6 +702,27 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.decodeUrl("http%3A%2F%2Fhost%2FINT-%E2%80%9CToll%E2%80%9D-Extending"));
   }
 
+  public void testEncodeUri() throws Exception {
+    assertEquals("", UrlUtil.encodeUri("", Constants.ENCODING_UTF_8));
+    assertEquals("foo", UrlUtil.encodeUri("foo", Constants.ENCODING_UTF_8));
+    assertEquals("http://host/foo%20bar",
+		 UrlUtil.encodeUri("http://host/foo bar",
+                                   Constants.ENCODING_UTF_8));
+    assertEquals("f%22oo%20", UrlUtil.encodeUri("f\"oo ",
+                                              Constants.ENCODING_UTF_8));
+    assertEquals("%20foo%7C", UrlUtil.encodeUri(" foo|",
+                                              Constants.ENCODING_UTF_8));
+    assertEquals("%5Bfoo%5D", UrlUtil.encodeUri("[foo]",
+                                                Constants.ENCODING_UTF_8));
+    // "smart" left/right double quotes
+    assertEquals("http://host/INT-%E2%80%9CToll%E2%80%9D-Extending",
+		 UrlUtil.encodeUri("http://host/INT-\u201cToll\u201d-Extending",
+                                   Constants.ENCODING_UTF_8));
+    // ascii control chars
+    assertEquals("foo%13bar", UrlUtil.encodeUri("foo\u0013bar",
+                                                Constants.ENCODING_UTF_8));
+  }
+
   boolean uri=false;
 
   public void testResolveUrl() throws Exception {
