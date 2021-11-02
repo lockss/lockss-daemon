@@ -36,7 +36,6 @@ import org.dspace.xoai.serviceprovider.exceptions.HttpException;
 import org.dspace.xoai.serviceprovider.parameters.Parameters;
 import org.lockss.crawler.CrawlUrlData;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.daemon.LockssWatchdog;
 import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlConsumer;

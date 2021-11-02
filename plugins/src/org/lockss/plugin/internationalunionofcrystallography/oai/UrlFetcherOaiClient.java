@@ -40,7 +40,6 @@ import org.dspace.xoai.serviceprovider.client.OAIClient;
 import org.dspace.xoai.serviceprovider.exceptions.HttpException;
 import org.dspace.xoai.serviceprovider.parameters.Parameters;
 import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.daemon.LockssWatchdog;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlFetcher;
 import org.lockss.util.Deadline;
@@ -66,13 +65,12 @@ public class UrlFetcherOaiClient implements OAIClient{
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(permFetchFlags);
-    LockssWatchdog wdog = uf.getWatchdog();
     facade.getCrawlerStatus().addPendingUrl(url);
     int retriesLeft = -1;
     int totalRetries = -1;
     while (true) {
         try {
-          wdog.pokeWDog();
+          uf.getWatchdog().pokeWDog();
           content = uf.getUncachedInputStream();
           if(content == null) {
         	  throw new HttpException("UrlFetcher returned null for an OAI response");
