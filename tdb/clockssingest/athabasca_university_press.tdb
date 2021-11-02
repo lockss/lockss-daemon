@@ -176,7 +176,9 @@
       au < frozen ; exists ; 2016 ; Journal of Research Practice Volume 12 ; 12 ; 2016 ; >
       au < superseded ; exists ; 2017 ; Journal of Research Practice Volume 13 [superseded] ; 13 ; 2017 ; >
       au < superseded ; exists ; 2018 ; Journal of Research Practice Volume 14 [superseded] ; 14 ; 2018 ; >
+
       }
+
       {
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://jrp.icaap.org/
@@ -191,9 +193,7 @@
       au < frozen ; exists ; 2011 ; Journal of Research Practice Volume 7 ; 7 ; 2011 ; >
       au < frozen ; exists ; 2017 ; Journal of Research Practice Volume 13 ; 13 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Journal of Research Practice Volume 14 ; 14 ; 2018 ; >
-      au < expected ; exists ; 2019 ; Journal of Research Practice Volume 15 ; 15 ; 2019 ; >
-      au < expected ; exists ; 2020 ; Journal of Research Practice Volume 16 ; 16 ; 2020 ; >
-      au < expected ; exists ; 2021 ; Journal of Research Practice Volume 17 ; 17 ; 2021 ; >
+
       }
     
   }
@@ -217,7 +217,9 @@
       au < frozen ; exists ; 2014  ; Labour / Le Travail Volume 73-74 ; 73-74 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Labour / Le Travail Volume 75-76 ; 75-76 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Labour / Le Travail Volume 77-78 ; 77-78 ; 2016 ; >
+
       }
+
       {
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://www.lltjournal.ca/
@@ -261,7 +263,8 @@
       au < frozen ; exists ; 2010 ; Labour / Le Travail Volume 65-66 ; 65-66 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Labour / Le Travail Volume 67-68 ; 67-68 ; 2011 ; >
       au < frozen ; exists ; 2017 ; Labour / Le Travail Volume 79-80 ; 79-80 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Labour / Le Travail Volume 81-82 ; 81-82 ; 2018 ; > #one year embargo.
+      au < frozen ; exists ; 2018 ; Labour / Le Travail Volume 81-82 ; 81-82 ; 2018 ; >
+
       }
     
   }
@@ -285,7 +288,9 @@
       au < finished ; finished ; 2014  ; Oral History Forum d'histoire orale Volume 34 ; 34 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Oral History Forum d'histoire orale Volume 35 ; 35 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Oral History Forum d'histoire orale Volume 36 ; 36 ; 2016 ; >
+
       }
+
       {
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://www.oralhistoryforum.ca/
@@ -322,10 +327,8 @@
       au < frozen ; exists ; 2011 ; Oral History Forum d'histoire orale Volume 31 ; 31 ; 2011 ; >
 
       au < frozen ; exists ; 2017 ; Oral History Forum d'histoire orale Volume 37 ; 37 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Oral History Forum d'histoire orale Volume 38 ; 38 ; 2018 ; >#one year embargo?
-      au < expected ; exists ; 2019 ; Oral History Forum d'histoire orale Volume 39 ; 39 ; 2019 ; >
-      au < expected ; exists ; 2020 ; Oral History Forum d'histoire orale Volume 40 ; 40 ; 2020 ; >
-      au < expected ; exists ; 2021 ; Oral History Forum d'histoire orale Volume 41 ; 41 ; 2021 ; >
+      au < frozen ; exists ; 2018 ; Oral History Forum d'histoire orale Volume 38 ; 38 ; 2018 ; >
+
       }
     
   }
@@ -349,7 +352,9 @@
       au < frozen ; exists ; 2015 ; The Trumpeter Volume 31 ; 31 ; 2015 ; >
       au < frozen ; exists ; 2016 ; The Trumpeter Volume 32 ; 32 ; 2016 ; > 
       au < frozen ; exists ; 2017 ; The Trumpeter Volume 33 ; 33 ; 2017 ; >
+
     }
+
     {
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       param[base_url] = http://trumpeter.athabascau.ca/
@@ -387,6 +392,7 @@
       au < finished ; crawling ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; The Trumpeter Volume 36 ; 36 ; 2020 ; >
       au < expected ; exists ; 2021 ; The Trumpeter Volume 37 ; 37 ; 2021 ; >
+
     }
     
   }
