@@ -91,6 +91,10 @@ public class JavaUrlConnection extends BaseLockssUrlConnection {
     urlConn.setIfModifiedSince(ifmodifiedsince);
   }
 
+  public void setRequestEntity(String entity) {
+    throw new UnsupportedOperationException();
+  }
+
   public int getResponseCode() {
     throw new UnsupportedOperationException();
   }
