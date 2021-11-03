@@ -9,8 +9,8 @@
     info[platform] = PubFactory. Manchester Hive
   >
 
-    param[base_url] = https://www.manchesterhive.com/
     param[base_url2] = https://www.manchesteropenhive.com/
+    # base_url2 param is not used, was a parameter for a setup that has changed.
     plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversityPressPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
@@ -23,6 +23,7 @@
         issnl = 2054-9318
       >
 
+     param[base_url] = https://www.manchesterhive.com/
      param[journal_id] = bjrl
      #param[journal_issn] = 2054-9326
 
@@ -51,6 +52,7 @@
       issnl = 1469-0314
     >
 
+      param[base_url] = https://www.manchesterhive.com/
       param[journal_id] = fs
       #param[journal_issn] = 1469-0314
       #move to pubfactory, https://www.manchesterhive.com/abstract/journals/fs/fs-overview.xml
@@ -74,7 +76,7 @@
         au < crawling ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
         au < frozen ; exists ; 2019 ; Film Studies Volume 21 ; 21 ; >
         au < crawling ; exists ; 2020 ; Film Studies Volume 22 ; 22 ; >
-        au < exists ; exists ; 2021 ; Film Studies Volume 23 ; 23 ; >
+        au < expected ; exists ; 2021 ; Film Studies Volume 23 ; 23 ; >
 
   }
 
@@ -86,6 +88,7 @@
       issnl = 1362-7937
     >
 
+      param[base_url] = https://www.manchesterhive.com/
       param[journal_id] = gs
       #param[journal_issn] = 2050-456X
      
@@ -123,15 +126,28 @@
     param[journal_id] = hrv
     #param[journal_issn] = 2054-2240
     #move to pubfactory, https://www.manchesteropenhive.com/view/journals/hrv/hrv-overview.xml
+    {
+      param[base_url] = https://www.manchesterhive.com/
 
       au < doNotProcess ; doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2018 ; Human Remains and Violence Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2019 ; Human Remains and Violence Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2020 ; Human Remains and Violence Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2021 ; Human Remains and Violence Volume 7 ; 7 ; >
-    
+      au < superseded ; exists ; 2018 ; Human Remains and Violence Volume 4 [superseded] ; 4 ; >
+      au < superseded ; exists ; 2019 ; Human Remains and Violence Volume 5 [superseded] ; 5 ; >
+      au < superseded ; exists ; 2020 ; Human Remains and Violence Volume 6 [superseded] ; 6 ; >
+      au < superseded ; exists ; 2021 ; Human Remains and Violence Volume 7 [superseded] ; 7 ; >
+    }
+    {
+      param[base_url] = https://www.manchesteropenhive.com/
+
+      au < doNotProcess ; doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 ; >
+      au < exists ; exists ; 2018 ; Human Remains and Violence Volume 4 ; 4 ; >
+      au < exists ; exists ; 2019 ; Human Remains and Violence Volume 5 ; 5 ; >
+      au < exists ; exists ; 2020 ; Human Remains and Violence Volume 6 ; 6 ; >
+      au < exists ; exists ; 2021 ; Human Remains and Violence Volume 7 ; 7 ; >
+    }
   }
 
   {
@@ -141,17 +157,28 @@
       issnl = 2056-9211
     >
       param[journal_id] = jbr
-
-      #param[base_url] = https://jbr.openlibrary.manchester.ac.uk/
       #move to PubFactory, https://www.manchesteropenhive.com/view/journals/jbr/jbr-overview.xml
+    {
+      param[base_url] = https://www.manchesterhive.com/
 
       au < doNotProcess ; doNotProcess ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2018 ; James Baldwin Journal Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2020 ; James Baldwin Journal Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 ; >
+      au < superseded ; exists ; 2018 ; James Baldwin Journal Volume 4 [superseded] ; 4 ; >
+      au < superseded ; exists ; 2019 ; James Baldwin Journal Volume 5 [superseded] ; 5 ; >
+      au < superseded ; exists ; 2020 ; James Baldwin Journal Volume 6 [superseded] ; 6 ; >
+      au < superseded ; exists ; 2021 ; James Baldwin Journal Volume 7 [superseded] ; 7 ; >
+    }
+    {
+      param[base_url] = https://www.manchesteropenhive.com/
 
+      au < doNotProcess ; doNotProcess ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 2018 ; James Baldwin Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 2020 ; James Baldwin Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 ; >
+    }
   }
 }

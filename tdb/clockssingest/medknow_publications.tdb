@@ -342,8 +342,6 @@
     au < finished ; frozen ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 ; http://www.atmph.org/ ; ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 ; http://www.atmph.org/ ; ; >
     au < finished ; crawling ; 2017 ; Annals of Tropical Medicine and Public Health Volume 10 ; 2017 ; 10 ; http://www.atmph.org/ ; ; reingest5.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2018 ; Annals of Tropical Medicine and Public Health Volume 11 ; 2018 ; 11 ; https://www.atmph.org/ ; ; >
-    au < doNotProcess ; exists ; 2019 ; Annals of Tropical Medicine and Public Health Volume 12 ; 2019 ; 12 ; https://www.atmph.org/ ; ; >
 
   }
 
@@ -843,6 +841,7 @@
 #    param[base_url] = http://www.ijccm.org/
 
     param[journal_issn] = 0972-5229
+    #Moved to ciplamed
 
     au < exists ; exists ; 2003 ; Indian Journal of Critical Care Medicine Volume 7 ; 2003 ; 7 ; https://www.ijccm.org/ ; ; >
     au < exists ; exists ; 2004 ; Indian Journal of Critical Care Medicine Volume 8 ; 2004 ; 8 ; https://www.ijccm.org/ ; ; >
@@ -857,12 +856,9 @@
     au < finished ; frozen ; 2013 ; Indian Journal of Critical Care Medicine Volume 17 ; 2013 ; 17 ; http://www.ijccm.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Critical Care Medicine Volume 18 ; 2014 ; 18 ; http://www.ijccm.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Indian Journal of Critical Care Medicine Volume 19 ; 2015 ; 19 ; http://www.ijccm.org/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Critical Care Medicine Volume 20 ; 2016 ; 20 ; http://www.ijccm.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Critical Care Medicine Volume 20 ; 2016 ; 20 ; http://www.ijccm.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Critical Care Medicine Volume 21 ; 2017 ; 21 ; http://www.ijccm.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Critical Care Medicine Volume 22 ; 2018 ; 22 ; http://www.ijccm.org/ ; ; >
-    au < exists ; exists ; 2019 ; Indian Journal of Critical Care Medicine Volume 23 ; 2019 ; 23 ; https://www.ijccm.org/ ; ; >
-    au < exists ; exists ; 2020 ; Indian Journal of Critical Care Medicine Volume 24 ; 2020 ; 24 ; https://www.ijccm.org/ ; ; >
-    au < exists ; exists ; 2021 ; Indian Journal of Critical Care Medicine Volume 25 ; 2021 ; 25 ; https://www.ijccm.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Critical Care Medicine Volume 22 ; 2018 ; 22 ; http://www.ijccm.org/ ; ; >
 
   }
 
@@ -1110,8 +1106,6 @@
     au < frozen ; exists ; 2016 ; Indian Journal of Medical and Paediatric Oncology Volume 37 ; 2016 ; 37 ; http://www.ijmpo.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Medical and Paediatric Oncology Volume 38 ; 2017 ; 38 ; http://www.ijmpo.org/ ; ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; Indian Journal of Medical and Paediatric Oncology Volume 39 ; 2018 ; 39 ; http://www.ijmpo.org/ ; ; >
-    au < doNotProcess ; exists ; 2019 ; Indian Journal of Medical and Paediatric Oncology Volume 40 ; 2019 ; 40 ; https://www.ijmpo.org/ ; ; >
-    au < doNotProcess ; exists ; 2020 ; Indian Journal of Medical and Paediatric Oncology Volume 41 ; 2020 ; 41 ; https://www.ijmpo.org/ ; ; >
 
   }
 
@@ -1162,8 +1156,6 @@
     au < frozen ; exists ; 2016 ; Indian Journal of Medical Microbiology Volume 34 ; 2016 ; 34 ; http://www.ijmm.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Medical Microbiology Volume 35 ; 2017 ; 35 ; http://www.ijmm.org/ ; ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; Indian Journal of Medical Microbiology Volume 36 ; 2018 ; 36 ; http://www.ijmm.org/ ; ; >
-    au < doNotProcess ; exists ; 2019 ; Indian Journal of Medical Microbiology Volume 37 ; 2019 ; 37 ; https://www.ijmm.org/ ; ; >
-    au < doNotProcess ; exists ; 2020 ; Indian Journal of Medical Microbiology Volume 38 ; 2020 ; 38 ; https://www.ijmm.org/ ; ; >
 
   }
 
@@ -1965,8 +1957,8 @@
   {
     title <
       name = Indian Journal of Sexually Transmitted Diseases and AIDS ;
-      issn = 0253-7184 ;
-      eissn = 1998-3816 ;
+      issn = 2589-0557 ;
+      eissn = 2589-0565 ;
       issnl = 0253-7184
    >
 #    param[base_url] = http://www.ijstd.org/
@@ -2874,7 +2866,7 @@
       issnl = 0975-1475
     >
 #    param[base_url] = http://www.jfds.org/
-    #Moved
+    #Moved to OJS
 
     param[journal_issn] = 0975-1475
 
@@ -2888,7 +2880,6 @@
     au < frozen ; exists ; 2016 ; Journal of Forensic Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.jfds.org/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Forensic Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.jfds.org/ ; ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; Journal of Forensic Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.jfds.org/ ; ; >
-    au < doNotProcess ; exists ; 2019 ; Journal of Forensic Dental Sciences Volume 11 ; 2019 ; 11 ; https://www.jfds.org/ ; ; >
 
   }
 
@@ -4204,7 +4195,7 @@
 #    param[base_url] = http://www.phcogres.com/
 
     param[journal_issn] = 0974-8490
-    #Moved
+    #Moved Unknown platform
 
     au < doNotProcess ; exists ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; https://www.phcogres.com/ ; ; >
     au < doNotProcess ; exists ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; https://www.phcogres.com/ ; ; >
@@ -4217,7 +4208,6 @@
     au < finished ; frozen ; 2017 ; Pharmacognosy Research Volume 9 ; 2017 ; 9 ; http://www.phcogres.com/ ; ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; Pharmacognosy Research Volume 10 ; 2018 ; 10 ; http://www.phcogres.com/ ; ; >
     au < finished ; crawling ; 2019 ; Pharmacognosy Research Volume 11 ; 2019 ; 11 ; https://www.phcogres.com/ ; ; reingest1.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2020 ; Pharmacognosy Research Volume 12 ; 2020 ; 12 ; https://www.phcogres.com/ ; ; >
 
   }
 
@@ -8468,9 +8458,7 @@
       au < finished ; frozen ; 2015 ; The Egyptian Journal of Internal Medicine Volume 27 ; 2015 ; 27 ; http://www.esim.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; The Egyptian Journal of Internal Medicine Volume 28 ; 2016 ; 28 ; http://www.esim.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; The Egyptian Journal of Internal Medicine Volume 29 ; 2017 ; 29 ; http://www.esim.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; The Egyptian Journal of Internal Medicine Volume 30 ; 2018 ; 30 ; http://www.esim.eg.net/ ; ; >
-      au < doNotProcess ; exists ; 2019 ; The Egyptian Journal of Internal Medicine Volume 31 ; 2019 ; 31 ; https://www.esim.eg.net/ ; ; >
-      au < doNotProcess ; exists ; 2020 ; The Egyptian Journal of Internal Medicine Volume 32 ; 2020 ; 32 ; https://www.esim.eg.net/ ; ; >
+      au < frozen ; exists ; 2018 ; The Egyptian Journal of Internal Medicine Volume 30 ; 2018 ; 30 ; http://www.esim.eg.net/ ; ; >
 
   }
 
@@ -8508,8 +8496,6 @@
       au < finished ; frozen ; 2016 ; The Egyptian Journal of Otolaryngology Volume 32 ; 2016 ; 32 ; http://www.ejo.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; The Egyptian Journal of Otolaryngology Volume 33 ; 2017 ; 33 ; http://www.ejo.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; The Egyptian Journal of Otolaryngology Volume 34 ; 2018 ; 34 ; http://www.ejo.eg.net/ ; ; >
-      au < doNotProcess ; exists ; 2019 ; The Egyptian Journal of Otolaryngology Volume 35 ; 2019 ; 35 ; https://www.ejo.eg.net/ ; ; >
-      au < doNotProcess ; exists ; 2020 ; The Egyptian Journal of Otolaryngology Volume 36 ; 2020 ; 36 ; https://www.ejo.eg.net/ ; ; >
 
   }
 
