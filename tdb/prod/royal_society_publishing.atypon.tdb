@@ -773,10 +773,10 @@
     au < doNotProcess ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 348 ; 348 >
     au < doNotProcess ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 349 ; 349 >
     au < doNotProcess ; 1995 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 350 ; 350 >
-    }
-    {
-    param[journal_id] = rstb1996
-
+#    }
+#    {
+#    param[journal_id] = rstb1996
+#
     au < doNotProcess ; 1996 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 351 ; 351 >
     au < doNotProcess ; 1997 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 352 ; 352 >
     au < doNotProcess ; 1998 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 353 ; 353 >
