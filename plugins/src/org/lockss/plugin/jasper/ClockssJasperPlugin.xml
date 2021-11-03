@@ -112,6 +112,9 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>1,"^%sdownload/%s/", base_url, collection</string>
             <string>1,"^https?://.*\.archive\.org/[0-9]*/items/"</string>
+            <!-- Added so that test URL in
+                 TestJasperJsonMetadataExtractorFactory is in crawl spec -->
+            <string>1,"^%s.*metadata/", base_url</string>
         </list>
     </entry>
     <!-- crawlseed supersedes this, but leave in just in case. -->

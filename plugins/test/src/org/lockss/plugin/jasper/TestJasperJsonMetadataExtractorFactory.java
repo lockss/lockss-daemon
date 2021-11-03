@@ -68,9 +68,8 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new JasperJsonMetadataExtractorFactory();
-    super.setUp();
     setUpDiskSpace(); // you need this to have startService work properly...
+    fact = new JasperJsonMetadataExtractorFactory();
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
