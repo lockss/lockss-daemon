@@ -29,16 +29,11 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
 
     private String getXmlFileContent(String fname) {
         String xmlContent = "";
-        InputStream file_input = null;
 
-        try {
-            file_input = getResourceAsStream(fname);
+        try (InputStream file_input = getResourceAsStream(fname)) {
             xmlContent = StringUtil.fromInputStream(file_input);
-            IOUtil.safeClose(file_input);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-        } finally {
-            IOUtil.safeClose(file_input);
         }
         return xmlContent;
     }
@@ -48,15 +43,15 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
 
         String fname = "dois_api.xml";
 
-        String fileName= System.getProperty("user.dir") +
-                "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
-        Document document = getDocument(fileName);
+        try (InputStream ins = getResourceAsStream(fname)) {
+          Document document = getDocument(ins);
 
-        String xpathExpression = "";
+          String xpathExpression = "";
 
-        xpathExpression = "//doi/text()";
+          xpathExpression = "//doi/text()";
 
-        evaluateXPath(document, xpathExpression);
+          evaluateXPath(document, xpathExpression);
+        }
     }
 
     private void  evaluateXPath(Document document, String xpathExpression) throws Exception
@@ -97,12 +92,12 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
         assertEquals(out.size(), 23);
     }
 
-    private Document getDocument(String fileName) throws Exception
+    private Document getDocument(InputStream ins) throws Exception
     {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(fileName);
+        Document doc = builder.parse(ins);
         return doc;
     }
 
