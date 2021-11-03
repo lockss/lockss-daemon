@@ -49,27 +49,30 @@
       issnl = 1469-0314
     >
 
-      param[journal_id] = fs
-      param[base_url] = https://www.manchesterhive.com/
-      #move to pubfactory, https://www.manchesterhive.com/abstract/journals/fs/fs-overview.xml
-     
-      au < doNotProcess ; 2004 ; Film Studies Volume 4 ; 4 >
-      au < doNotProcess ; 2004 ; Film Studies Volume 5 ; 5 >
-      au < doNotProcess ; 2005 ; Film Studies Volume 6 ; 6 >
-      au < doNotProcess ; 2005 ; Film Studies Volume 7 ; 7 >
-      au < doNotProcess ; 2006 ; Film Studies Volume 8 ; 8 >
-      au < doNotProcess ; 2006 ; Film Studies Volume 9 ; 9 >
-      au < doNotProcess ; 2007 ; Film Studies Volume 10 ; 10 >
-      au < doNotProcess ; 2007 ; Film Studies Volume 11 ; 11 >
-      au < doNotProcess ; 2015 ; Film Studies Volume 12 ; 12 >
-      au < doNotProcess ; 2015 ; Film Studies Volume 13 ; 13 >
-      au < doNotProcess ; 2016 ; Film Studies Volume 14 ; 14 >
-      au < doNotProcess ; 2016 ; Film Studies Volume 15 ; 15 >
-      au < doNotProcess ; 2017 ; Film Studies Volume 16 ; 16 >
-      au < released ; 2018 ; Film Studies Volume 17 ; 17 >
-      au < released ; 2019 ; Film Studies Volume 18 ; 18 >
-      au < manifest ; 2020 ; Film Studies Volume 19 ; 19 >
-      au < manifest ; 2021 ; Film Studies Volume 20 ; 20 >
+    param[journal_id] = fs
+    param[base_url] = https://www.manchesterhive.com/
+    #move to pubfactory, https://www.manchesterhive.com/abstract/journals/fs/fs-overview.xml
+   
+    au < doNotProcess ; 2004 ; Film Studies Volume 4 ; 4 >
+    au < doNotProcess ; 2004 ; Film Studies Volume 5 ; 5 >
+    au < doNotProcess ; 2005 ; Film Studies Volume 6 ; 6 >
+    au < doNotProcess ; 2005 ; Film Studies Volume 7 ; 7 >
+    au < doNotProcess ; 2006 ; Film Studies Volume 8 ; 8 >
+    au < doNotProcess ; 2006 ; Film Studies Volume 9 ; 9 >
+    au < doNotProcess ; 2007 ; Film Studies Volume 10 ; 10 >
+    au < doNotProcess ; 2007 ; Film Studies Volume 11 ; 11 >
+    au < doNotProcess ; 2015 ; Film Studies Volume 12 ; 12 >
+    au < doNotProcess ; 2015 ; Film Studies Volume 13 ; 13 >
+    au < doNotProcess ; 2016 ; Film Studies Volume 14 ; 14 >
+    au < doNotProcess ; 2016 ; Film Studies Volume 15 ; 15 >
+    au < doNotProcess ; 2017 ; Film Studies Volume 16 ; 16 >
+    au < released ; 2017 ; Film Studies Volume 17 ; 17 >
+    au < released ; 2018 ; Film Studies Volume 18 ; 18 >
+    au < manifest ; 2018 ; Film Studies Volume 19 ; 19 >
+    au < manifest ; 2019 ; Film Studies Volume 20 ; 20 >
+    au < manifest ; 2019 ; Film Studies Volume 21 ; 21 >
+    au < manifest ; 2020 ; Film Studies Volume 22 ; 22 >
+    au < expected ; 2021 ; Film Studies Volume 23 ; 23 >
 
   }
 

@@ -2,7 +2,7 @@
 
   publisher <
     name = Liverpool University Press ;
-    info[platform] = CloudPublish
+    info[platform] = CloudPublish BLOCKED LXPLUG-2054
   >
 
   comment[moving1] = from MetaPress to Atypon
@@ -130,9 +130,8 @@
     au < doNotProcess ; 2016 ; British Journal of Canadian Studies Volume 29 ; 29 >
     au < doNotProcess ; 2017 ; British Journal of Canadian Studies Volume 30 ; 30 >
     au < doNotProcess ; 2018 ; British Journal of Canadian Studies Volume 31 ; 31 >
-    au < expected ; 2019 ; British Journal of Canadian Studies Volume 32 ; 32 >
-    au < expected ; 2020 ; British Journal of Canadian Studies Volume 33 ; 33 >
-    au < expected ; 2021 ; British Journal of Canadian Studies Volume 34 ; 34 >
+    au < exists ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 >
+    au < exists ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 >
 
   }
 

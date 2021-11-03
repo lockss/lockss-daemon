@@ -233,19 +233,16 @@
 #    param[base_url] = http://www.anmjournal.com/
 
     param[journal_issn] = 0331-3131
+    #content not available
 
-    au < manifest ; exists ; 2010 ; Annals of Nigerian Medicine Volume 4 ; 2010 ; 4 ; https://www.anmjournal.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Annals of Nigerian Medicine Volume 4 ; 2010 ; 4 ; https://www.anmjournal.com/ ; ; >
     au < finished ; finished ; 2011 ; Annals of Nigerian Medicine Volume 5 ; 2011 ; 5 ; http://www.anmjournal.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Annals of Nigerian Medicine Volume 6 ; 2012 ; 6 ; http://www.anmjournal.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Annals of Nigerian Medicine Volume 7 ; 2013 ; 7 ; http://www.anmjournal.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Annals of Nigerian Medicine Volume 8 ; 2014 ; 8 ; http://www.anmjournal.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Annals of Nigerian Medicine Volume 9 ; 2015 ; 9 ; http://www.anmjournal.com/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2016 ; Annals of Nigerian Medicine Volume 10 ; 2016 ; 10 ; http://www.anmjournal.com/ ; ; >
+    au < frozen ; exists ; 2016 ; Annals of Nigerian Medicine Volume 10 ; 2016 ; 10 ; http://www.anmjournal.com/ ; ; >
     au < finished ; finished ; 2017 ; Annals of Nigerian Medicine Volume 11 ; 2017 ; 11 ; http://www.anmjournal.com/ ; ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2018 ; Annals of Nigerian Medicine Volume 12 ; 2018 ; 12 ; https://www.anmjournal.com/ ; ; >
-    au < expected ; exists ; 2019 ; Annals of Nigerian Medicine Volume 13 ; 2019 ; 13 ; https://www.anmjournal.com/ ; ; >
-    au < expected ; exists ; 2020 ; Annals of Nigerian Medicine Volume 14 ; 2020 ; 14 ; https://www.anmjournal.com/ ; ; >
-    au < expected ; exists ; 2021 ; Annals of Nigerian Medicine Volume 15 ; 2021 ; 15 ; https://www.anmjournal.com/ ; ; >
 
   }
 
@@ -276,6 +273,7 @@
     au < crawling ; exists ; 2021 ; Annals of Pediatric Cardiology Volume 14 ; 2021 ; 14 ; https://www.annalspc.com/ ; ; >
 
   }
+
 #  {
 #    title <
 #      name = Annals of Saudi Medicine ;
@@ -344,8 +342,6 @@
     au < finished ; frozen ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 ; http://www.atmph.org/ ; ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 ; http://www.atmph.org/ ; ; >
     au < finished ; crawling ; 2017 ; Annals of Tropical Medicine and Public Health Volume 10 ; 2017 ; 10 ; http://www.atmph.org/ ; ; reingest5.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2018 ; Annals of Tropical Medicine and Public Health Volume 11 ; 2018 ; 11 ; https://www.atmph.org/ ; ; >
-    au < doNotProcess ; exists ; 2019 ; Annals of Tropical Medicine and Public Health Volume 12 ; 2019 ; 12 ; https://www.atmph.org/ ; ; >
 
   }
 
@@ -845,6 +841,7 @@
 #    param[base_url] = http://www.ijccm.org/
 
     param[journal_issn] = 0972-5229
+    #Moved to ciplamed
 
     au < exists ; exists ; 2003 ; Indian Journal of Critical Care Medicine Volume 7 ; 2003 ; 7 ; https://www.ijccm.org/ ; ; >
     au < exists ; exists ; 2004 ; Indian Journal of Critical Care Medicine Volume 8 ; 2004 ; 8 ; https://www.ijccm.org/ ; ; >
@@ -859,12 +856,9 @@
     au < finished ; frozen ; 2013 ; Indian Journal of Critical Care Medicine Volume 17 ; 2013 ; 17 ; http://www.ijccm.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Critical Care Medicine Volume 18 ; 2014 ; 18 ; http://www.ijccm.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Indian Journal of Critical Care Medicine Volume 19 ; 2015 ; 19 ; http://www.ijccm.org/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Critical Care Medicine Volume 20 ; 2016 ; 20 ; http://www.ijccm.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Critical Care Medicine Volume 20 ; 2016 ; 20 ; http://www.ijccm.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Critical Care Medicine Volume 21 ; 2017 ; 21 ; http://www.ijccm.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Critical Care Medicine Volume 22 ; 2018 ; 22 ; http://www.ijccm.org/ ; ; >
-    au < expected ; exists ; 2019 ; Indian Journal of Critical Care Medicine Volume 23 ; 2019 ; 23 ; https://www.ijccm.org/ ; ; >
-    au < expected ; exists ; 2020 ; Indian Journal of Critical Care Medicine Volume 24 ; 2020 ; 24 ; https://www.ijccm.org/ ; ; >
-    au < expected ; exists ; 2021 ; Indian Journal of Critical Care Medicine Volume 25 ; 2021 ; 25 ; https://www.ijccm.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Critical Care Medicine Volume 22 ; 2018 ; 22 ; http://www.ijccm.org/ ; ; >
 
   }
 
@@ -1112,8 +1106,6 @@
     au < frozen ; exists ; 2016 ; Indian Journal of Medical and Paediatric Oncology Volume 37 ; 2016 ; 37 ; http://www.ijmpo.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Medical and Paediatric Oncology Volume 38 ; 2017 ; 38 ; http://www.ijmpo.org/ ; ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; Indian Journal of Medical and Paediatric Oncology Volume 39 ; 2018 ; 39 ; http://www.ijmpo.org/ ; ; >
-    au < doNotProcess ; exists ; 2019 ; Indian Journal of Medical and Paediatric Oncology Volume 40 ; 2019 ; 40 ; https://www.ijmpo.org/ ; ; >
-    au < doNotProcess ; exists ; 2020 ; Indian Journal of Medical and Paediatric Oncology Volume 41 ; 2020 ; 41 ; https://www.ijmpo.org/ ; ; >
 
   }
 
@@ -1164,8 +1156,6 @@
     au < frozen ; exists ; 2016 ; Indian Journal of Medical Microbiology Volume 34 ; 2016 ; 34 ; http://www.ijmm.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Medical Microbiology Volume 35 ; 2017 ; 35 ; http://www.ijmm.org/ ; ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; Indian Journal of Medical Microbiology Volume 36 ; 2018 ; 36 ; http://www.ijmm.org/ ; ; >
-    au < doNotProcess ; exists ; 2019 ; Indian Journal of Medical Microbiology Volume 37 ; 2019 ; 37 ; https://www.ijmm.org/ ; ; >
-    au < doNotProcess ; exists ; 2020 ; Indian Journal of Medical Microbiology Volume 38 ; 2020 ; 38 ; https://www.ijmm.org/ ; ; >
 
   }
 
@@ -1418,62 +1408,60 @@
 #    param[base_url] = http://www.ijoonline.com/
 
     param[journal_issn] = 0019-5413
+    #Moved to Springer
 
-    au < exists ; exists ; 1967 ; Indian Journal of Orthopaedics Volume 1 ; 1967 ; 1 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1968 ; Indian Journal of Orthopaedics Volume 2 ; 1968 ; 2 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1969 ; Indian Journal of Orthopaedics Volume 3 ; 1969 ; 3 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; Indian Journal of Orthopaedics Volume 1 ; 1967 ; 1 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Indian Journal of Orthopaedics Volume 2 ; 1968 ; 2 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Indian Journal of Orthopaedics Volume 3 ; 1969 ; 3 ; https://www.ijoonline.com/ ; ; >
     au < doesNotExist ; doesNotExist ; 1970 ; Indian Journal of Orthopaedics Volume 4 ; 0 ; 0 ; http://www.ijoonline.com/ ; ; >
     au < doesNotExist ; doesNotExist ; 1971 ; Indian Journal of Orthopaedics Volume 5 ; 0 ; 0 ; http://www.ijoonline.com/ ; ; >
     au < doesNotExist ; doesNotExist ; 1972 ; Indian Journal of Orthopaedics Volume 6 ; 0 ; 0 ; http://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1973 ; Indian Journal of Orthopaedics Volume 7 ; 1973 ; 7 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1974 ; Indian Journal of Orthopaedics Volume 8 ; 1974 ; 8 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1975 ; Indian Journal of Orthopaedics Volume 9 ; 1975 ; 9 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1976 ; Indian Journal of Orthopaedics Volume 10 ; 1976 ; 10 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1977 ; Indian Journal of Orthopaedics Volume 11 ; 1977 ; 11 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1978 ; Indian Journal of Orthopaedics Volume 12 ; 1978 ; 12 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1979 ; Indian Journal of Orthopaedics Volume 13 ; 1979 ; 13 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1980 ; Indian Journal of Orthopaedics Volume 14 ; 1980 ; 14 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1981 ; Indian Journal of Orthopaedics Volume 15 ; 1981 ; 15 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1982 ; Indian Journal of Orthopaedics Volume 16 ; 1982 ; 16 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1983 ; Indian Journal of Orthopaedics Volume 17 ; 1983 ; 17 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1984 ; Indian Journal of Orthopaedics Volume 18 ; 1984 ; 18 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1985 ; Indian Journal of Orthopaedics Volume 19 ; 1985 ; 19 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1986 ; Indian Journal of Orthopaedics Volume 20 ; 1986 ; 20 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1987 ; Indian Journal of Orthopaedics Volume 21 ; 1987 ; 21 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1988 ; Indian Journal of Orthopaedics Volume 22 ; 1988 ; 22 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; Indian Journal of Orthopaedics Volume 7 ; 1973 ; 7 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Indian Journal of Orthopaedics Volume 8 ; 1974 ; 8 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Indian Journal of Orthopaedics Volume 9 ; 1975 ; 9 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Indian Journal of Orthopaedics Volume 10 ; 1976 ; 10 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Indian Journal of Orthopaedics Volume 11 ; 1977 ; 11 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Indian Journal of Orthopaedics Volume 12 ; 1978 ; 12 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Indian Journal of Orthopaedics Volume 13 ; 1979 ; 13 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Indian Journal of Orthopaedics Volume 14 ; 1980 ; 14 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Indian Journal of Orthopaedics Volume 15 ; 1981 ; 15 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Indian Journal of Orthopaedics Volume 16 ; 1982 ; 16 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Indian Journal of Orthopaedics Volume 17 ; 1983 ; 17 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Indian Journal of Orthopaedics Volume 18 ; 1984 ; 18 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Indian Journal of Orthopaedics Volume 19 ; 1985 ; 19 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Indian Journal of Orthopaedics Volume 20 ; 1986 ; 20 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Indian Journal of Orthopaedics Volume 21 ; 1987 ; 21 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Indian Journal of Orthopaedics Volume 22 ; 1988 ; 22 ; https://www.ijoonline.com/ ; ; >
     au < doesNotExist ; doesNotExist ; 1989 ; Indian Journal of Orthopaedics Volume 23 ; 0 ; 0 ; http://www.ijoonline.com/ ; ; >
     au < doesNotExist ; doesNotExist ; 1990 ; Indian Journal of Orthopaedics Volume 24 ; 0 ; 0 ; http://www.ijoonline.com/ ; ; >
     au < doesNotExist ; doesNotExist ; 1991 ; Indian Journal of Orthopaedics Volume 25 ; 0 ; 0 ; http://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1992 ; Indian Journal of Orthopaedics Volume 26 ; 1992 ; 26 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Indian Journal of Orthopaedics Volume 26 ; 1992 ; 26 ; https://www.ijoonline.com/ ; ; >
     au < doesNotExist ; doesNotExist ; 1993 ; Indian Journal of Orthopaedics Volume 27 ; 0 ; 0 ; http://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1994 ; Indian Journal of Orthopaedics Volume 28 ; 1994 ; 28 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1995 ; Indian Journal of Orthopaedics Volume 29 ; 1995 ; 29 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1996 ; Indian Journal of Orthopaedics Volume 30 ; 1996 ; 30 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1997 ; Indian Journal of Orthopaedics Volume 31 ; 1997 ; 31 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Indian Journal of Orthopaedics Volume 28 ; 1994 ; 28 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Indian Journal of Orthopaedics Volume 29 ; 1995 ; 29 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Indian Journal of Orthopaedics Volume 30 ; 1996 ; 30 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Indian Journal of Orthopaedics Volume 31 ; 1997 ; 31 ; https://www.ijoonline.com/ ; ; >
     au < doesNotExist ; doesNotExist ; 1998 ; Indian Journal of Orthopaedics Volume 32 ; 0 ; 0 ; http://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 1999 ; Indian Journal of Orthopaedics Volume 33 ; 1999 ; 33 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2000 ; Indian Journal of Orthopaedics Volume 34 ; 2000 ; 34 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2001 ; Indian Journal of Orthopaedics Volume 35 ; 2001 ; 35 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2002 ; Indian Journal of Orthopaedics Volume 36 ; 2002 ; 36 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2003 ; Indian Journal of Orthopaedics Volume 37 ; 2003 ; 37 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2004 ; Indian Journal of Orthopaedics Volume 38 ; 2004 ; 38 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2005 ; Indian Journal of Orthopaedics Volume 39 ; 2005 ; 39 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2006 ; Indian Journal of Orthopaedics Volume 40 ; 2006 ; 40 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2007 ; Indian Journal of Orthopaedics Volume 41 ; 2007 ; 41 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2008 ; Indian Journal of Orthopaedics Volume 42 ; 2008 ; 42 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2009 ; Indian Journal of Orthopaedics Volume 43 ; 2009 ; 43 ; https://www.ijoonline.com/ ; ; >
-    au < exists ; exists ; 2010 ; Indian Journal of Orthopaedics Volume 44 ; 2010 ; 44 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Indian Journal of Orthopaedics Volume 33 ; 1999 ; 33 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Indian Journal of Orthopaedics Volume 34 ; 2000 ; 34 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Indian Journal of Orthopaedics Volume 35 ; 2001 ; 35 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Indian Journal of Orthopaedics Volume 36 ; 2002 ; 36 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Indian Journal of Orthopaedics Volume 37 ; 2003 ; 37 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Indian Journal of Orthopaedics Volume 38 ; 2004 ; 38 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Indian Journal of Orthopaedics Volume 39 ; 2005 ; 39 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Indian Journal of Orthopaedics Volume 40 ; 2006 ; 40 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Indian Journal of Orthopaedics Volume 41 ; 2007 ; 41 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Indian Journal of Orthopaedics Volume 42 ; 2008 ; 42 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Indian Journal of Orthopaedics Volume 43 ; 2009 ; 43 ; https://www.ijoonline.com/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Indian Journal of Orthopaedics Volume 44 ; 2010 ; 44 ; https://www.ijoonline.com/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Orthopaedics Volume 45 ; 2011 ; 45 ; http://www.ijoonline.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Indian Journal of Orthopaedics Volume 46 ; 2012 ; 46 ; http://www.ijoonline.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2013 ; Indian Journal of Orthopaedics Volume 47 ; 2013 ; 47 ; http://www.ijoonline.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2014 ; Indian Journal of Orthopaedics Volume 48 ; 2014 ; 48 ; http://www.ijoonline.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2015 ; Indian Journal of Orthopaedics Volume 49 ; 2015 ; 49 ; http://www.ijoonline.com/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Orthopaedics Volume 50 ; 2016 ; 50 ; http://www.ijoonline.com/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Orthopaedics Volume 50 ; 2016 ; 50 ; http://www.ijoonline.com/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Orthopaedics Volume 51 ; 2017 ; 51 ; http://www.ijoonline.com/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Orthopaedics Volume 52 ; 2018 ; 52 ; http://www.ijoonline.com/ ; ; >
-    au < expected ; exists ; 2019 ; Indian Journal of Orthopaedics Volume 53 ; 2019 ; 53 ; https://www.ijoonline.com/ ; ; >
-    au < expected ; exists ; 2020 ; Indian Journal of Orthopaedics Volume 54 ; 2020 ; 54 ; https://www.ijoonline.com/ ; ; >
-    au < expected ; exists ; 2021 ; Indian Journal of Orthopaedics Volume 55 ; 2021 ; 55 ; https://www.ijoonline.com/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Orthopaedics Volume 52 ; 2018 ; 52 ; http://www.ijoonline.com/ ; ; >
 
   }
 
@@ -1697,43 +1685,41 @@
 #    param[base_url] = http://www.ijps.org/
 
     param[journal_issn] = 0970-0358
+    #move to Thieme
 
-    au < exists ; exists ; 1986 ; Indian Journal of Plastic Surgery Volume 19 ; 1986 ; 19 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1987 ; Indian Journal of Plastic Surgery Volume 20 ; 1987 ; 20 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1988 ; Indian Journal of Plastic Surgery Volume 21 ; 1988 ; 21 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Indian Journal of Plastic Surgery Volume 19 ; 1986 ; 19 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Indian Journal of Plastic Surgery Volume 20 ; 1987 ; 20 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Indian Journal of Plastic Surgery Volume 21 ; 1988 ; 21 ; https://www.ijps.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 1989 ; Indian Journal of Plastic Surgery Volume 22 ; 0 ; 0 ; http://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1990 ; Indian Journal of Plastic Surgery Volume 23 ; 1990 ; 23 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1991 ; Indian Journal of Plastic Surgery Volume 24 ; 1991 ; 24 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1992 ; Indian Journal of Plastic Surgery Volume 25 ; 1992 ; 25 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1993 ; Indian Journal of Plastic Surgery Volume 26 ; 1993 ; 26 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1994 ; Indian Journal of Plastic Surgery Volume 27 ; 1994 ; 27 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1995 ; Indian Journal of Plastic Surgery Volume 28 ; 1995 ; 28 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 1996 ; Indian Journal of Plastic Surgery Volume 29 ; 1996 ; 29 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Indian Journal of Plastic Surgery Volume 23 ; 1990 ; 23 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Indian Journal of Plastic Surgery Volume 24 ; 1991 ; 24 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Indian Journal of Plastic Surgery Volume 25 ; 1992 ; 25 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Indian Journal of Plastic Surgery Volume 26 ; 1993 ; 26 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Indian Journal of Plastic Surgery Volume 27 ; 1994 ; 27 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Indian Journal of Plastic Surgery Volume 28 ; 1995 ; 28 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Indian Journal of Plastic Surgery Volume 29 ; 1996 ; 29 ; https://www.ijps.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 1997 ; Indian Journal of Plastic Surgery Volume 30 ; 0 ; 0 ; http://www.ijps.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 1998 ; Indian Journal of Plastic Surgery Volume 31 ; 0 ; 0 ; http://www.ijps.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 1999 ; Indian Journal of Plastic Surgery Volume 32 ; 0 ; 0 ; http://www.ijps.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 2000 ; Indian Journal of Plastic Surgery Volume 33 ; 0 ; 0 ; http://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2001 ; Indian Journal of Plastic Surgery 34 ; 2001 ; 34 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Indian Journal of Plastic Surgery 34 ; 2001 ; 34 ; https://www.ijps.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 2002 ; Indian Journal of Plastic Surgery Volume 35 ; 0 ; 0 ; http://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2003 ; Indian Journal of Plastic Surgery Volume 36 ; 2003 ; 36 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 2004 ; 37 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 2005 ; 38 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 2006 ; 39 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 2007 ; 40 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 2008 ; 41 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 2009 ; 42 ; https://www.ijps.org/ ; ; >
-    au < exists ; exists ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 2010 ; 43 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Indian Journal of Plastic Surgery Volume 36 ; 2003 ; 36 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 2004 ; 37 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 2005 ; 38 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 2006 ; 39 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 2007 ; 40 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 2008 ; 41 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 2009 ; 42 ; https://www.ijps.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 2010 ; 43 ; https://www.ijps.org/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 2011 ; 44 ; http://www.ijps.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 2012 ; 45 ; http://www.ijps.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 2013 ; 46 ; http://www.ijps.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 2014 ; 47 ; http://www.ijps.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 2015 ; 48 ; http://www.ijps.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 2016 ; 49 ; http://www.ijps.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 2016 ; 49 ; http://www.ijps.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 2017 ; 50 ; http://www.ijps.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 2018 ; 51 ; http://www.ijps.org/ ; ; >
-    au < expected ; exists ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 2019 ; 52 ; https://www.ijps.org/ ; ; >
-    au < expected ; exists ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 2020 ; 53 ; https://www.ijps.org/ ; ; >
-    au < expected ; exists ; 2021 ; Indian Journal of Plastic Surgery Volume 54 ; 2021 ; 54 ; https://www.ijps.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 2018 ; 51 ; http://www.ijps.org/ ; ; >
 
   }
 
@@ -1971,8 +1957,8 @@
   {
     title <
       name = Indian Journal of Sexually Transmitted Diseases and AIDS ;
-      issn = 0253-7184 ;
-      eissn = 1998-3816 ;
+      issn = 2589-0557 ;
+      eissn = 2589-0565 ;
       issnl = 0253-7184
    >
 #    param[base_url] = http://www.ijstd.org/
@@ -2536,6 +2522,8 @@
     # instead of by a listing like this: http://www.clinicalimagingscience.org/backissues.asp
     # has a lockss permission statement http://www.clinicalimagingscience.org/lockss.txt
 
+    #move to Scientific Scholar
+
     au < notReady ; exists ; 2011 ; Journal of Clinical Imaging Science Volume 1 ; 2011 ; 1 ; http://www.clinicalimagingscience.org/ ; ; >
     au < notReady ; exists ; 2012 ; Journal of Clinical Imaging Science Volume 2 ; 2012 ; 2 ; http://www.clinicalimagingscience.org/ ; ; >
     au < notReady ; exists ; 2013 ; Journal of Clinical Imaging Science Volume 3 ; 2013 ; 3 ; http://www.clinicalimagingscience.org/ ; ; >
@@ -2543,10 +2531,10 @@
     au < notReady ; exists ; 2015 ; Journal of Clinical Imaging Science Volume 5 ; 2015 ; 5 ; http://www.clinicalimagingscience.org/ ; ; >
     au < finished ; crawling ; 2016 ; Journal of Clinical Imaging Science Volume 6 ; 2016 ; 6 ; http://www.clinicalimagingscience.org/ ; ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 2017 ; Journal of Clinical Imaging Science Volume 7 ; 2017 ; 7 ; http://www.clinicalimagingscience.org/ ; ; >
-    au < deepCrawl ; exists ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; http://www.clinicalimagingscience.org/ ; ; >
-    au < expected ; exists ; 2019 ; Journal of Clinical Imaging Science Volume 9 ; 2019 ; 9 ; https://www.clinicalimagingscience.org/ ; ; >
-    au < expected ; exists ; 2020 ; Journal of Clinical Imaging Science Volume 10 ; 2020 ; 10 ; https://www.clinicalimagingscience.org/ ; ; >
-    au < expected ; exists ; 2021 ; Journal of Clinical Imaging Science Volume 11 ; 2021 ; 11 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Journal of Clinical Imaging Science Volume 8 ; 2018 ; 8 ; http://www.clinicalimagingscience.org/ ; ; >
+    au < notReady ; exists ; 2019 ; Journal of Clinical Imaging Science Volume 9 ; 2019 ; 9 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < notReady ; exists ; 2020 ; Journal of Clinical Imaging Science Volume 10 ; 2020 ; 10 ; https://www.clinicalimagingscience.org/ ; ; >
+    au < notReady ; exists ; 2021 ; Journal of Clinical Imaging Science Volume 11 ; 2021 ; 11 ; https://www.clinicalimagingscience.org/ ; ; >
 
   }
 
@@ -2878,7 +2866,7 @@
       issnl = 0975-1475
     >
 #    param[base_url] = http://www.jfds.org/
-    #Moved
+    #Moved to OJS
 
     param[journal_issn] = 0975-1475
 
@@ -2892,7 +2880,6 @@
     au < frozen ; exists ; 2016 ; Journal of Forensic Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.jfds.org/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Forensic Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.jfds.org/ ; ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; Journal of Forensic Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.jfds.org/ ; ; >
-    au < doNotProcess ; exists ; 2019 ; Journal of Forensic Dental Sciences Volume 11 ; 2019 ; 11 ; https://www.jfds.org/ ; ; >
 
   }
 
@@ -3135,20 +3122,18 @@
 #    param[base_url] = http://www.jlponline.org/
 
     param[journal_issn] = 0974-2727
+    #move to Thieme
 
-    au < exists ; exists ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 2009 ; 1 ; https://www.jlponline.org/ ; ; >
-    au < exists ; exists ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2010 ; 2 ; https://www.jlponline.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 2009 ; 1 ; https://www.jlponline.org/ ; ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2010 ; 2 ; https://www.jlponline.org/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 2011 ; 3 ; http://www.jlponline.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 2012 ; 4 ; http://www.jlponline.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 2013 ; 5 ; http://www.jlponline.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 2014 ; 6 ; http://www.jlponline.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 2015 ; 7 ; http://www.jlponline.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 2016 ; 8 ; http://www.jlponline.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 2016 ; 8 ; http://www.jlponline.org/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Laboratory Physicians Volume 9 ; 2017 ; 9 ; http://www.jlponline.org/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Laboratory Physicians Volume 10 ; 2018 ; 10 ; http://www.jlponline.org/ ; ; >
-    au < expected ; exists ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 2019 ; 11 ; https://www.jlponline.org/ ; ; >
-    au < expected ; exists ; 2020 ; Journal of Laboratory Physicians Volume 12 ; 2020 ; 12 ; https://www.jlponline.org/ ; ; >
-    au < expected ; exists ; 2021 ; Journal of Laboratory Physicians Volume 13 ; 2021 ; 13 ; https://www.jlponline.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Journal of Laboratory Physicians Volume 10 ; 2018 ; 10 ; http://www.jlponline.org/ ; ; >
 
   }
 
@@ -3375,9 +3360,9 @@
     au < deepCrawl ; exists ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 2016 ; 7 ; http://www.ruralneuropractice.com/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 2017 ; 8 ; http://www.ruralneuropractice.com/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 2018 ; 9 ; http://www.ruralneuropractice.com/ ; ; >
-    au < expected ; exists ; 2019 ; Journal of Neurosciences in Rural Practice Volume 10 ; 2019 ; 10 ; https://www.ruralneuropractice.com/ ; ; >
-    au < expected ; exists ; 2020 ; Journal of Neurosciences in Rural Practice Volume 11 ; 2020 ; 11 ; https://www.ruralneuropractice.com/ ; ; >
-    au < expected ; exists ; 2021 ; Journal of Neurosciences in Rural Practice Volume 12 ; 2021 ; 12 ; https://www.ruralneuropractice.com/ ; ; >
+    au < exists ; exists ; 2019 ; Journal of Neurosciences in Rural Practice Volume 10 ; 2019 ; 10 ; https://www.ruralneuropractice.com/ ; ; >
+    au < exists ; exists ; 2020 ; Journal of Neurosciences in Rural Practice Volume 11 ; 2020 ; 11 ; https://www.ruralneuropractice.com/ ; ; >
+    au < exists ; exists ; 2021 ; Journal of Neurosciences in Rural Practice Volume 12 ; 2021 ; 12 ; https://www.ruralneuropractice.com/ ; ; >
 
   }
 
@@ -3517,9 +3502,9 @@
     au < deepCrawl ; exists ; 2016 ; Journal of Pharmaceutical Negative Results Volume 7 ; 2016 ; 7 ; http://www.pnrjournal.com/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Pharmaceutical Negative Results Volume 8 ; 2017 ; 8 ; http://www.pnrjournal.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Journal of Pharmaceutical Negative Results Volume 9 ; 2018 ; 9 ; http://www.pnrjournal.com/ ; ; >
-    au < expected ; exists ; 2019 ; Journal of Pharmaceutical Negative Results Volume 10 ; 2019 ; 10 ; https://www.pnrjournal.com/ ; ; >
-    au < expected ; exists ; 2020 ; Journal of Pharmaceutical Negative Results Volume 11 ; 2020 ; 11 ; https://www.pnrjournal.com/ ; ; >
-    au < expected ; exists ; 2021 ; Journal of Pharmaceutical Negative Results Volume 12 ; 2021 ; 12 ; https://www.pnrjournal.com/ ; ; >
+    au < exists ; exists ; 2019 ; Journal of Pharmaceutical Negative Results Volume 10 ; 2019 ; 10 ; https://www.pnrjournal.com/ ; ; >
+    au < exists ; exists ; 2020 ; Journal of Pharmaceutical Negative Results Volume 11 ; 2020 ; 11 ; https://www.pnrjournal.com/ ; ; >
+    au < exists ; exists ; 2021 ; Journal of Pharmaceutical Negative Results Volume 12 ; 2021 ; 12 ; https://www.pnrjournal.com/ ; ; >
 
   }
 
@@ -4210,7 +4195,7 @@
 #    param[base_url] = http://www.phcogres.com/
 
     param[journal_issn] = 0974-8490
-    #Moved
+    #Moved Unknown platform
 
     au < doNotProcess ; exists ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; https://www.phcogres.com/ ; ; >
     au < doNotProcess ; exists ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; https://www.phcogres.com/ ; ; >
@@ -4223,7 +4208,6 @@
     au < finished ; frozen ; 2017 ; Pharmacognosy Research Volume 9 ; 2017 ; 9 ; http://www.phcogres.com/ ; ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; Pharmacognosy Research Volume 10 ; 2018 ; 10 ; http://www.phcogres.com/ ; ; >
     au < finished ; crawling ; 2019 ; Pharmacognosy Research Volume 11 ; 2019 ; 11 ; https://www.phcogres.com/ ; ; reingest1.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2020 ; Pharmacognosy Research Volume 12 ; 2020 ; 12 ; https://www.phcogres.com/ ; ; >
 
   }
 
@@ -4250,11 +4234,12 @@
     au < deepCrawl ; exists ; 2016 ; Pharmacognosy Reviews Volume 10 ; 2016 ; 10 ; http://www.phcogrev.com/ ; ; >
     au < finished ; finished ; 2017 ; Pharmacognosy Reviews Volume 11 ; 2017 ; 11 ; http://www.phcogrev.com/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Pharmacognosy Reviews Volume 12 ; 2018 ; 12 ; http://www.phcogrev.com/ ; ; >
-    au < expected ; exists ; 2019 ; Pharmacognosy Reviews Volume 13 ; 2019 ; 13 ; https://www.phcogrev.com/ ; ; >
-    au < expected ; exists ; 2020 ; Pharmacognosy Reviews Volume 14 ; 2020 ; 14 ; https://www.phcogrev.com/ ; ; >
-    au < expected ; exists ; 2021 ; Pharmacognosy Reviews Volume 15 ; 2021 ; 15 ; https://www.phcogrev.com/ ; ; >
+    au < exists ; exists ; 2019 ; Pharmacognosy Reviews Volume 13 ; 2019 ; 13 ; https://www.phcogrev.com/ ; ; >
+    au < exists ; exists ; 2020 ; Pharmacognosy Reviews Volume 14 ; 2020 ; 14 ; https://www.phcogrev.com/ ; ; >
+    au < exists ; exists ; 2021 ; Pharmacognosy Reviews Volume 15 ; 2021 ; 15 ; https://www.phcogrev.com/ ; ; >
 
   }
+
 #  {
 #    title <
 #      name = Pulmonary Circulation ;
@@ -4679,15 +4664,12 @@
 #    param[base_url] = http://www.ddtjournal.org/
 
     param[journal_issn] = 2394-6555
+    #move to https://ddtjournal.net and Ingenta https://www.ingentaconnect.com/content/doaj/
 
     au < finished ; finished ; 2014 ; Drug Development and Therapeutics Volume 5 ; 2014 ; 5 ; http://www.ddtjournal.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Drug Development and Therapeutics Volume 6 ; 2015 ; 6 ; http://www.ddtjournal.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Drug Development and Therapeutics Volume 7 ; 2016 ; 7 ; http://www.ddtjournal.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Drug Development and Therapeutics Volume 7 ; 2016 ; 7 ; http://www.ddtjournal.org/ ; ; >
     au < finished ; finished ; 2017 ; Drug Development and Therapeutics Volume 8 ; 2017 ; 8 ; http://www.ddtjournal.org/ ; ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2018 ; Drug Development and Therapeutics Volume 9 ; 2018 ; 9 ; https://www.ddtjournal.org/ ; ; >
-    au < expected ; exists ; 2019 ; Drug Development and Therapeutics Volume 10 ; 2019 ; 10 ; https://www.ddtjournal.org/ ; ; >
-    au < expected ; exists ; 2020 ; Drug Development and Therapeutics Volume 11 ; 2020 ; 11 ; https://www.ddtjournal.org/ ; ; >
-    au < expected ; exists ; 2021 ; Drug Development and Therapeutics Volume 12 ; 2021 ; 12 ; https://www.ddtjournal.org/ ; ; >
 
   }
 
@@ -4743,16 +4725,14 @@
 
       param[journal_issn] = 2384-5589
 #      param[base_url] = http://www.ajmhs.org/
+      #move to Academic Journals
 
       au < finished ; finished ; 2013 ; African Journal of Medical and Health Sciences Volume 12 ; 2013 ; 12 ; http://www.ajmhs.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; African Journal of Medical and Health Sciences Volume 13 ; 2014 ; 13 ; http://www.ajmhs.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; African Journal of Medical and Health Sciences Volume 14 ; 2015 ; 14 ; http://www.ajmhs.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; African Journal of Medical and Health Sciences Volume 15 ; 2016 ; 15 ; http://www.ajmhs.org/ ; ; >
+      au < frozen ; exists ; 2016 ; African Journal of Medical and Health Sciences Volume 15 ; 2016 ; 15 ; http://www.ajmhs.org/ ; ; >
       au < finished ; finished ; 2017 ; African Journal of Medical and Health Sciences Volume 16 ; 2017 ; 16 ; http://www.ajmhs.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; African Journal of Medical and Health Sciences Volume 17 ; 2018 ; 17 ; http://www.ajmhs.org/ ; ; >
-      au < expected ; exists ; 2019 ; African Journal of Medical and Health Sciences Volume 18 ; 2019 ; 18 ; https://www.ajmhs.org/ ; ; >
-      au < expected ; exists ; 2020 ; African Journal of Medical and Health Sciences Volume 19 ; 2020 ; 19 ; https://www.ajmhs.org/ ; ; >
-      au < expected ; exists ; 2021 ; African Journal of Medical and Health Sciences Volume 20 ; 2021 ; 20 ; https://www.ajmhs.org/ ; ; >
+      au < frozen ; exists ; 2018 ; African Journal of Medical and Health Sciences Volume 17 ; 2018 ; 17 ; http://www.ajmhs.org/ ; ; >
 
   }
 
@@ -4770,10 +4750,6 @@
       au < finished ; finished ; 2015 ; African Journal of Trauma Volume 4 ; 2015 ; 4 ; http://www.afrjtrauma.com/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; African Journal of Trauma Volume 5 ; 2016 ; 5 ; http://www.afrjtrauma.com/ ; ; >
       au < finished ; finished ; 2017 ; African Journal of Trauma Volume 6 ; 2017 ; 6 ; http://www.afrjtrauma.com/ ; ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2018 ; African Journal of Trauma Volume 7 ; 2018 ; 7 ; https://www.afrjtrauma.com/ ; ; >
-      au < expected ; exists ; 2019 ; African Journal of Trauma Volume 8 ; 2019 ; 8 ; https://www.afrjtrauma.com/ ; ; >
-      au < expected ; exists ; 2020 ; African Journal of Trauma Volume 9 ; 2020 ; 9 ; https://www.afrjtrauma.com/ ; ; >
-      au < expected ; exists ; 2021 ; African Journal of Trauma Volume 10 ; 2021 ; 10 ; https://www.afrjtrauma.com/ ; ; >
 
   }
 
@@ -4847,9 +4823,6 @@
       au < finished ; crawling ; 2016 ; Ancient Science of Life Volume 35 ; 2016 ; 35 ; http://www.ancientscienceoflife.org/ ; ; reingest1.clockss.org:8082 >   #do not use reingest4
       au < finished ; finished ; 2017 ; Ancient Science of Life Volume 36 ; 2017 ; 36 ; http://www.ancientscienceoflife.org/ ; ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Ancient Science of Life Volume 37 ; 2018 ; 37 ; https://www.ancientscienceoflife.org/ ; ; >
-      au < expected ; exists ; 2019 ; Ancient Science of Life Volume 38 ; 2019 ; 38 ; https://www.ancientscienceoflife.org/ ; ; >
-      au < expected ; exists ; 2020 ; Ancient Science of Life Volume 39 ; 2020 ; 39 ; https://www.ancientscienceoflife.org/ ; ; >
-      au < expected ; exists ; 2021 ; Ancient Science of Life Volume 40 ; 2021 ; 40 ; https://www.ancientscienceoflife.org/ ; ; >
 
   }
 
@@ -4883,9 +4856,9 @@
 
       au < exists ; exists ; 2017 ; Annals of Medical and Health Sciences Research Volume 7 ; 2017 ; 7 ; https://www.amhsr.org/ ; ; >
       au < exists ; exists ; 2018 ; Annals of Medical and Health Sciences Research Volume 8 ; 2018 ; 8 ; https://www.amhsr.org/ ; ; >
-      au < expected ; exists ; 2019 ; Annals of Medical and Health Sciences Research Volume 9 ; 2019 ; 9 ; https://www.amhsr.org/ ; ; >
-      au < expected ; exists ; 2020 ; Annals of Medical and Health Sciences Research Volume 10 ; 2020 ; 10 ; https://www.amhsr.org/ ; ; >
-      au < expected ; exists ; 2021 ; Annals of Medical and Health Sciences Research Volume 11 ; 2021 ; 11 ; https://www.amhsr.org/ ; ; >
+      au < exists ; exists ; 2019 ; Annals of Medical and Health Sciences Research Volume 9 ; 2019 ; 9 ; https://www.amhsr.org/ ; ; >
+      au < exists ; exists ; 2020 ; Annals of Medical and Health Sciences Research Volume 10 ; 2020 ; 10 ; https://www.amhsr.org/ ; ; >
+      au < exists ; exists ; 2021 ; Annals of Medical and Health Sciences Research Volume 11 ; 2021 ; 11 ; https://www.amhsr.org/ ; ; >
 
     }
 
@@ -4901,18 +4874,16 @@
 
       param[journal_issn] = 2321-1407
 #      param[base_url] = http://www.apospublications.com/
+#     move to Scientific Scholar
 
       au < finished ; frozen ; 2011 ; APOS Trends in Orthodontics Volume 1 ; 2011 ; 1 ; http://www.apospublications.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2012 ; APOS Trends in Orthodontics Volume 2 ; 2012 ; 2 ; http://www.apospublications.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2013 ; APOS Trends in Orthodontics Volume 3 ; 2013 ; 3 ; http://www.apospublications.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; APOS Trends in Orthodontics Volume 4 ; 2014 ; 4 ; http://www.apospublications.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; APOS Trends in Orthodontics Volume 5 ; 2015 ; 5 ; http://www.apospublications.com/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; APOS Trends in Orthodontics Volume 6 ; 2016 ; 6 ; http://www.apospublications.com/ ; ; >
+      au < frozen ; exists ; 2016 ; APOS Trends in Orthodontics Volume 6 ; 2016 ; 6 ; http://www.apospublications.com/ ; ; >
       au < finished ; frozen ; 2017 ; APOS Trends in Orthodontics Volume 7 ; 2017 ; 7 ; http://www.apospublications.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; APOS Trends in Orthodontics Volume 8 ; 2018 ; 8 ; http://www.apospublications.com/ ; ; >
-      au < expected ; exists ; 2019 ; APOS Trends in Orthodontics Volume 9 ; 2019 ; 9 ; https://www.apospublications.com/ ; ; >
-      au < expected ; exists ; 2020 ; APOS Trends in Orthodontics Volume 10 ; 2020 ; 10 ; https://www.apospublications.com/ ; ; >
-      au < expected ; exists ; 2021 ; APOS Trends in Orthodontics Volume 11 ; 2021 ; 11 ; https://www.apospublications.com/ ; ; >
+      au < frozen ; exists ; 2018 ; APOS Trends in Orthodontics Volume 8 ; 2018 ; 8 ; http://www.apospublications.com/ ; ; >
 
   }
 
@@ -8487,9 +8458,7 @@
       au < finished ; frozen ; 2015 ; The Egyptian Journal of Internal Medicine Volume 27 ; 2015 ; 27 ; http://www.esim.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; The Egyptian Journal of Internal Medicine Volume 28 ; 2016 ; 28 ; http://www.esim.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; The Egyptian Journal of Internal Medicine Volume 29 ; 2017 ; 29 ; http://www.esim.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; The Egyptian Journal of Internal Medicine Volume 30 ; 2018 ; 30 ; http://www.esim.eg.net/ ; ; >
-      au < doNotProcess ; exists ; 2019 ; The Egyptian Journal of Internal Medicine Volume 31 ; 2019 ; 31 ; https://www.esim.eg.net/ ; ; >
-      au < doNotProcess ; exists ; 2020 ; The Egyptian Journal of Internal Medicine Volume 32 ; 2020 ; 32 ; https://www.esim.eg.net/ ; ; >
+      au < frozen ; exists ; 2018 ; The Egyptian Journal of Internal Medicine Volume 30 ; 2018 ; 30 ; http://www.esim.eg.net/ ; ; >
 
   }
 
@@ -8527,8 +8496,6 @@
       au < finished ; frozen ; 2016 ; The Egyptian Journal of Otolaryngology Volume 32 ; 2016 ; 32 ; http://www.ejo.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; The Egyptian Journal of Otolaryngology Volume 33 ; 2017 ; 33 ; http://www.ejo.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; The Egyptian Journal of Otolaryngology Volume 34 ; 2018 ; 34 ; http://www.ejo.eg.net/ ; ; >
-      au < doNotProcess ; exists ; 2019 ; The Egyptian Journal of Otolaryngology Volume 35 ; 2019 ; 35 ; https://www.ejo.eg.net/ ; ; >
-      au < doNotProcess ; exists ; 2020 ; The Egyptian Journal of Otolaryngology Volume 36 ; 2020 ; 36 ; https://www.ejo.eg.net/ ; ; >
 
   }
 
@@ -8948,7 +8915,7 @@
   {
 
       title <
-        name = Ain-Shams Journal of Anaesthesiology ;
+        name = Ain-Shams Journal of Anesthesiology ;
         issn = 1687-7934 ;
         eissn = 2090-925X
       >
@@ -8956,17 +8923,13 @@
       param[journal_issn] = 1687-7934
 #      param[base_url] = http://www.asja.eg.net/
 
-      au < finished ; crawling ; 2012 ; Ain-Shams Journal of Anaesthesiology Volume 5 ; 2012 ; 5 ; http://www.asja.eg.net/ ; ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; Ain-Shams Journal of Anaesthesiology Volume 6 ; 2013 ; 6 ; http://www.asja.eg.net/ ; ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Ain-Shams Journal of Anaesthesiology Volume 7 ; 2014 ; 7 ; http://www.asja.eg.net/ ; ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2015 ; Ain-Shams Journal of Anaesthesiology Volume 8 ; 2015 ; 8 ; http://www.asja.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Ain-Shams Journal of Anaesthesiology Volume 9 ; 2016 ; 9 ; http://www.asja.eg.net/ ; ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; Ain-Shams Journal of Anaesthesiology Volume 10 ; 2017 ; 10 ; http://www.asja.eg.net/ ; ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2018 ; Ain-Shams Journal of Anaesthesiology Volume 11 ; 2018 ; 11 ; https://www.asja.eg.net/ ; ; >
-      au < expected ; exists ; 2019 ; Ain-Shams Journal of Anaesthesiology Volume 12 ; 2019 ; 12 ; https://www.asja.eg.net/ ; ; >
-      au < expected ; exists ; 2020 ; Ain-Shams Journal of Anaesthesiology Volume 13 ; 2020 ; 13 ; https://www.asja.eg.net/ ; ; >
-      au < expected ; exists ; 2021 ; Ain-Shams Journal of Anaesthesiology Volume 14 ; 2021 ; 14 ; https://www.asja.eg.net/ ; ; >
-
+      au < finished ; crawling ; 2012 ; Ain-Shams Journal of Anesthesiology Volume 5 ; 2012 ; 5 ; http://www.asja.eg.net/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Ain-Shams Journal of Anesthesiology Volume 6 ; 2013 ; 6 ; http://www.asja.eg.net/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Ain-Shams Journal of Anesthesiology Volume 7 ; 2014 ; 7 ; http://www.asja.eg.net/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Ain-Shams Journal of Anesthesiology Volume 8 ; 2015 ; 8 ; http://www.asja.eg.net/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Ain-Shams Journal of Anesthesiology Volume 9 ; 2016 ; 9 ; http://www.asja.eg.net/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Ain-Shams Journal of Anesthesiology Volume 10 ; 2017 ; 10 ; http://www.asja.eg.net/ ; ; reingest1.clockss.org:8082 >
+      #Nothing published after 2017. As of 2021/02/09. Moved to Springer
   }
 
 
