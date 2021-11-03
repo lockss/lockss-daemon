@@ -199,6 +199,10 @@ public interface Crawler {
     public void updateCdnStems(String url);
 
     public CrawlUrl addChild(CrawlUrl curl, String url);
+
+    public Object putStateObj(String key, Object val);
+
+    public Object getStateObj(String key);
   }
 
 }

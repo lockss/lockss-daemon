@@ -131,7 +131,6 @@ public class TestHttpResultMap extends LockssTestCase {
                                new UnknownHostException("h.tld"))
                  .getMessage());
 
-
     assertMappings(CacheException.RetryableNetworkException.class,
                    new Exception[] {
                      new SocketException(),
@@ -201,6 +200,11 @@ public class TestHttpResultMap extends LockssTestCase {
                    ClientCodes);
     assertMappings(CacheException.NoRetryDeadLinkException.class,
                    DeadLinkCodes);
+
+    // Ensure CacheException not remapped
+    Exception ce =
+      new CacheException.PermissionException("Already mapped exception");
+    assertSame(ce, resultMap.mapException(null, "", ce, "foo"));
   }
 
   public void testClassTree() {
