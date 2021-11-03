@@ -5,7 +5,7 @@
     #info[contract] = 2018 ;
     #info[tester] = 5 ;
     #info[poller] = 2 ;
-    info[platform] = Janeway/OAI
+    info[platform] = Janeway/OAI BLOCKED, partially, see each title and Jira#LXPLUG-2019
   >
   
     plugin = needs.plugin
@@ -20,7 +20,7 @@
         eissn = 2732-4184
     >
 
-    param[base_url] = https://activetravelstudies.org/ 
+    param[base_url] = https://activetravelstudies.org/ #API not ready
 
     au < manifest ; exists ; 2021 ; 1 ; Active Travel Studies Volume 2021 ; 2021 ; >
 
@@ -33,7 +33,7 @@
         eissn = 2633-4321
     >
 
-    param[base_url] = https://www.anthropocenes.net/ 
+    param[base_url] = https://www.anthropocenes.net/  #API not ready
 
     au < manifest ; exists ; 2020 ; 1 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2020 ; 2020 ; >
     au < manifest ; exists ; 2021 ; 2 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2021 ; 2021 ; >
@@ -78,7 +78,7 @@
         eissn = 2634-0488
     >
 
-    param[base_url] = https://delibdemjournal.org/ 
+    param[base_url] = https://delibdemjournal.org/   #API not ready
 
     au < doNotProcess ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; >
     au < doNotProcess ; exists ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; >
