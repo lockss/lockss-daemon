@@ -8929,7 +8929,7 @@
   {
 
       title <
-        name = Ain-Shams Journal of Anaesthesiology ;
+        name = Ain-Shams Journal of Anesthesiology ;
         issn = 1687-7934 ;
         eissn = 2090-925X
       >
@@ -8937,17 +8937,13 @@
       param[journal_issn] = 1687-7934
 #      param[base_url] = http://www.asja.eg.net/
 
-      au < finished ; crawling ; 2012 ; Ain-Shams Journal of Anaesthesiology Volume 5 ; 2012 ; 5 ; http://www.asja.eg.net/ ; ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; Ain-Shams Journal of Anaesthesiology Volume 6 ; 2013 ; 6 ; http://www.asja.eg.net/ ; ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; Ain-Shams Journal of Anaesthesiology Volume 7 ; 2014 ; 7 ; http://www.asja.eg.net/ ; ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2015 ; Ain-Shams Journal of Anaesthesiology Volume 8 ; 2015 ; 8 ; http://www.asja.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2016 ; Ain-Shams Journal of Anaesthesiology Volume 9 ; 2016 ; 9 ; http://www.asja.eg.net/ ; ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; Ain-Shams Journal of Anaesthesiology Volume 10 ; 2017 ; 10 ; http://www.asja.eg.net/ ; ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2018 ; Ain-Shams Journal of Anaesthesiology Volume 11 ; 2018 ; 11 ; https://www.asja.eg.net/ ; ; >
-      au < expected ; exists ; 2019 ; Ain-Shams Journal of Anaesthesiology Volume 12 ; 2019 ; 12 ; https://www.asja.eg.net/ ; ; >
-      au < expected ; exists ; 2020 ; Ain-Shams Journal of Anaesthesiology Volume 13 ; 2020 ; 13 ; https://www.asja.eg.net/ ; ; >
-      au < expected ; exists ; 2021 ; Ain-Shams Journal of Anaesthesiology Volume 14 ; 2021 ; 14 ; https://www.asja.eg.net/ ; ; >
-
+      au < finished ; crawling ; 2012 ; Ain-Shams Journal of Anesthesiology Volume 5 ; 2012 ; 5 ; http://www.asja.eg.net/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Ain-Shams Journal of Anesthesiology Volume 6 ; 2013 ; 6 ; http://www.asja.eg.net/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Ain-Shams Journal of Anesthesiology Volume 7 ; 2014 ; 7 ; http://www.asja.eg.net/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Ain-Shams Journal of Anesthesiology Volume 8 ; 2015 ; 8 ; http://www.asja.eg.net/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Ain-Shams Journal of Anesthesiology Volume 9 ; 2016 ; 9 ; http://www.asja.eg.net/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Ain-Shams Journal of Anesthesiology Volume 10 ; 2017 ; 10 ; http://www.asja.eg.net/ ; ; reingest1.clockss.org:8082 >
+      #Nothing published after 2017. As of 2021/02/09. Moved to Springer
   }
 
 

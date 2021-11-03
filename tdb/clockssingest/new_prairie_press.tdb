@@ -329,9 +329,8 @@
       au < finished ; finished ; 2015-2018 ; The Advocate Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; The Advocate Volume 24 ; 24 ; >
       au < frozen ; exists ; 2019-2020 ; The Advocate Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2020 ; The Advocate Volume 26 ; 26 ; >
-      au < expected ; exists ; 2021 ; The Advocate Volume 27 ; 27 ; >
-      au < expected ; exists ; 2021 ; The Advocate Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2020-2021 ; The Advocate Volume 26 ; 26 ; >
+      au < expected ; exists ; 2022 ; The Advocate Volume 27 ; 27 ; >
 
   }
 
@@ -912,7 +911,8 @@
       au < finished ; finished ; 2017 ; Seek Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Seek Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Seek Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2021 ; Seek Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2020 ; Seek Volume 10 ; 10 ; >
+      au < expected ; exists ; 2021 ; Seek Volume 11 ; 11 ; >
 
   }
 
