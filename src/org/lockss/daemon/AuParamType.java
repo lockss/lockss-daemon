@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +30,7 @@ package org.lockss.daemon;
 import java.net.*;
 import java.util.*;
 import java.util.regex.*;
+import org.apache.commons.lang3.StringUtils;
 
 import org.lockss.util.*;
 import static org.lockss.daemon.ConfigParamDescr.*;
@@ -181,8 +178,10 @@ public enum AuParamType {
   UserPasswd(TYPE_USER_PASSWD) {
     public Object parse(String val) throws InvalidFormatException {
       if (!StringUtil.isNullString(val)) {
-	List<String> lst = StringUtil.breakAt(val, ':', -1, true, false);
-	if (lst.size() != 2) {
+	List<String> lst = ListUtil.list(StringUtils.substringBefore(val, ':'),
+                                         StringUtils.substringAfter(val, ':'));
+	if (StringUtil.isNullString(lst.get(0)) ||
+            StringUtil.isNullString(lst.get(1))) {
 	  throw new InvalidFormatException("User:Passwd must consist of two" +
 					   "strings separated by a colon: " +
 					   val);
