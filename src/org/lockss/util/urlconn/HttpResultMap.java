@@ -807,6 +807,9 @@ public class HttpResultMap implements CacheResultMap {
 				     Exception fetchException,
 				     String message)  {
 
+    if (fetchException instanceof CacheException) {
+      return (CacheException)fetchException;
+    }
     Event evt = new ExceptionEvent(fetchException, message);
     ExceptionInfo ei = findNearestException(fetchException);
     if (ei == null) {

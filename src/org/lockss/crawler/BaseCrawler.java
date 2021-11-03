@@ -234,6 +234,7 @@ public abstract class BaseCrawler implements Crawler {
   protected CrawlReq req;
   protected CrawlerFacade facade;
   protected CrawlSeed crawlSeed;
+  protected Map<String,Object> clientState = new HashMap<>();
 
   protected BaseCrawler(ArchivalUnit au, AuState aus) {
     if (au == null) {
@@ -897,6 +898,17 @@ public abstract class BaseCrawler implements Crawler {
       curld.addChild(child);
       return child;
     }
+
+    @Override
+    public Object putStateObj(String key, Object val) {
+      return crawler.clientState.put(key, val);
+    }
+
+    @Override
+    public Object getStateObj(String key) {
+      return crawler.clientState.get(key);
+    }
+
   }
 
 }
