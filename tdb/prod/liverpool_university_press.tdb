@@ -2,7 +2,7 @@
 
   publisher <
     name = Liverpool University Press ;
-    info[platform] = CloudPublish
+    info[platform] = CloudPublish BLOCKED LXPLUG-2054
   >
 
   comment[moving1] = from MetaPress to Atypon
