@@ -6,7 +6,7 @@
     info[contract] = 2009 ;
     info[tester] = 8 ;
     info[poller] = 3 ;
-    info[platform] = CloudPublish
+    info[platform] = CloudPublish BLOCKED LXPLUG-2032
   >
   
   comment[moving] = from MetaPress to Atypon to CloudPublish
