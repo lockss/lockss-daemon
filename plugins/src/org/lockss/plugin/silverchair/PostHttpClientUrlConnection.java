@@ -386,9 +386,6 @@ public class PostHttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
-  public void setRequestEntity(String entity) {
-  }
-
   HttpClient getClient() {
     return client;
   }
