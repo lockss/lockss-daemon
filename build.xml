@@ -251,7 +251,7 @@ Args:
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
 
   <property name="commons.beanutils.jar" value="${lib}/commons-beanutils-1.9.4.jar" />
-  <property name="commons.cli.jar" value="${lib}/commons-cli-1.4.jar" />
+  <property name="commons.cli.jar" value="${lib}/commons-cli-1.5.0.jar" />
   <property name="commons.codec.jar" value="${lib}/commons-codec-1.15.jar" />
   <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
