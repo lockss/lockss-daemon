@@ -573,7 +573,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; AORTA Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; AORTA Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; AORTA Volume 8 ; 8 ; >
-    au < ready ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; AORTA Volume 9 ; 9 ; >
 
    }
 
@@ -664,9 +664,9 @@
      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 6 ; >
      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Avicenna Journal of Medicine Volume 7 ; 7 ; >
      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Avicenna Journal of Medicine Volume 8 ; 8 ; >
-     au < ready ; exists ; 2019 ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 9 ; >
-     au < ready ; exists ; 2020 ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 10 ; >
-     au < ready ; exists ; 2021 ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 11 ; >
+     au < crawling ; exists ; 2019 ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 9 ; >
+     au < crawling ; exists ; 2020 ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 10 ; >
+     au < crawling ; exists ; 2021 ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 11 ; >
 
    }
 
@@ -2449,13 +2449,13 @@
     comment[years] =  2005-current
     #Moved from Medknow
 
-    au < ready ; exists ; 2005 ; 2005 ; Indian Journal of Radiology and Imaging Volume 15 ; 15 ; >
-    au < ready ; exists ; 2006 ; 2006 ; Indian Journal of Radiology and Imaging Volume 16 ; 16 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Indian Journal of Radiology and Imaging Volume 17 ; 17 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Indian Journal of Radiology and Imaging Volume 18 ; 18 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Indian Journal of Radiology and Imaging Volume 19 ; 19 ; >
-    au < ready ; exists ; 2010 ; 2010 ; Indian Journal of Radiology and Imaging Volume 20 ; 20 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Indian Journal of Radiology and Imaging Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2006 ; 2006 ; Indian Journal of Radiology and Imaging Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Indian Journal of Radiology and Imaging Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Indian Journal of Radiology and Imaging Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Indian Journal of Radiology and Imaging Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; Indian Journal of Radiology and Imaging Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Indian Journal of Radiology and Imaging Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Indian Journal of Radiology and Imaging Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Indian Journal of Radiology and Imaging Volume 24 ; 24 ; >
@@ -8097,7 +8097,7 @@
     au < crawling ; exists ; 1998 ; 1998 ; British Homeopathic Journal Volume 88 ; 88 ; >
     au < crawling ; exists ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 ; >
     au < crawling ; exists ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 ; >
-    au < ready ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 ; >
 
   }
 
@@ -8113,7 +8113,7 @@
     param[journal_id] = 10.1055/s-00041927
     comment[years] = 2016-current
 
-    au < ready ; exists ; 2016 ; 2016 ; CNE Pflegemanagement Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; CNE Pflegemanagement Volume 3 ; 3 ; >
     au < crawling ; exists ; 2017 ; 2017 ; CNE Pflegemanagement Volume 4 ; 4 ; >
     au < crawling ; exists ; 2018 ; 2018 ; CNE Pflegemanagement Volume 5 ; 5 ; >
     au < crawling ; exists ; 2019 ; 2019 ; CNE Pflegemanagement Volume 6 ; 6 ; >
@@ -8289,7 +8289,7 @@
     param[journal_id] = 10.1055/s-00042863
     comment[years] = 2004-current
 
-    au < ready ; exists ; 2004 ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 37 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 38 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 39 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 40 ; >
@@ -8487,7 +8487,7 @@
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 5 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 6 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 7 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 8 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Laboratory Physicians Volume 9 ; 9 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Laboratory Physicians Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 ; >

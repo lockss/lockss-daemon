@@ -803,7 +803,7 @@
     au < manifest ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 ; >
-    au < ready ; exists ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 ; >
     au < crawling ; exists ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; Learning and Teaching (LATISS) Volume 9 ; 9 ; >
@@ -1136,7 +1136,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Social Analysis Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Social Analysis Volume 57 ; 57 ; >
     au < crawling ; exists ; 2014 ; Social Analysis Volume 58 ; 58 ; >
-    au < ready ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
+    au < crawling ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
     au < frozen ; exists ; 2016 ; Social Analysis Volume 60 ; 60 ; >
     au < finished ; finished ; 2017 ; Social Analysis Volume 61 ; 61 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Social Analysis Volume 62 ; 62 ; >
@@ -1201,7 +1201,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Transfers Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Transfers Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Transfers Volume 4 ; 4 ; >
-    au < ready ; exists ; 2015 ; Transfers Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2015 ; Transfers Volume 5 ; 5 ; >
     au < frozen ; exists ; 2016 ; Transfers Volume 6 ; 6 ; >
     au < finished ; finished ; 2017 ; Transfers Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Transfers Volume 8 ; 8 ; >

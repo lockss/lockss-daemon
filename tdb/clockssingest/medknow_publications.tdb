@@ -1303,7 +1303,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Indian Journal of Occupational and Environmental Medicine Volume 16 ; 2012 ; 16 ; https://www.ijoem.com/ ; ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Indian Journal of Occupational and Environmental Medicine Volume 17 ; 2013 ; 17 ; https://www.ijoem.com/ ; ; >
     au < crawling ; exists ; 2014 ; Indian Journal of Occupational and Environmental Medicine Volume 18 ; 2014 ; 18 ; https://www.ijoem.com/ ; ; >
-    au < ready ; exists ; 2015 ; Indian Journal of Occupational and Environmental Medicine Volume 19 ; 2015 ; 19 ; https://www.ijoem.com/ ; ; >
+    au < crawling ; exists ; 2015 ; Indian Journal of Occupational and Environmental Medicine Volume 19 ; 2015 ; 19 ; https://www.ijoem.com/ ; ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Indian Journal of Occupational and Environmental Medicine Volume 20 ; 2016 ; 20 ; http://www.ijoem.com/ ; ; >
     au < finished ; finished ; 2017 ; Indian Journal of Occupational and Environmental Medicine Volume 21 ; 2017 ; 21 ; http://www.ijoem.com/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Occupational and Environmental Medicine Volume 22 ; 2018 ; 22 ; http://www.ijoem.com/ ; ; >
@@ -10141,7 +10141,7 @@
       param[journal_issn] = 1011-4564
 #      param[base_url] = http://www.jmedscindmc.com/
 
-      au < ready ; exists ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ ; ; >
+      au < crawling ; exists ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ ; ; >
       au < frozen ; exists ; 2015 ; Journal of Medical Sciences Volume 35 ; 2015 ; 35 ; https://www.jmedscindmc.com/ ; ; >
       au < frozen ; exists ; 2016 ; Journal of Medical Sciences Volume 36 ; 2016 ; 36 ; https://www.jmedscindmc.com/ ; ; >
       au < frozen ; exists ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; https://www.jmedscindmc.com/ ; ; >
