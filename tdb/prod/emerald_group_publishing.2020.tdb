@@ -3441,18 +3441,18 @@
 
     param[journal_issn] = 0263-5577
     comment[journal_id] = imds
-    # online from 1970
+    # online from 1980
 
-    au < exists ; 1970 ; Industrial Management & Data Systems Volume 70 ; 70 >
-    au < exists ; 1971 ; Industrial Management & Data Systems Volume 71 ; 71 >
-    au < exists ; 1972 ; Industrial Management & Data Systems Volume 72 ; 72 >
-    au < exists ; 1973 ; Industrial Management & Data Systems Volume 73 ; 73 >
-    au < exists ; 1974 ; Industrial Management & Data Systems Volume 74 ; 74 >
-    au < exists ; 1975 ; Industrial Management & Data Systems Volume 75 ; 75 >
-    au < exists ; 1976 ; Industrial Management & Data Systems Volume 76 ; 76 >
-    au < exists ; 1977 ; Industrial Management & Data Systems Volume 77 ; 77 >
-    au < exists ; 1978 ; Industrial Management & Data Systems Volume 78 ; 78 >
-    au < exists ; 1979 ; Industrial Management & Data Systems Volume 79 ; 79 >
+#    au < exists ; 1970 ; Industrial Management & Data Systems Volume 70 ; 70 >
+#    au < exists ; 1971 ; Industrial Management & Data Systems Volume 71 ; 71 >
+#    au < exists ; 1972 ; Industrial Management & Data Systems Volume 72 ; 72 >
+#    au < exists ; 1973 ; Industrial Management & Data Systems Volume 73 ; 73 >
+#    au < exists ; 1974 ; Industrial Management & Data Systems Volume 74 ; 74 >
+#    au < exists ; 1975 ; Industrial Management & Data Systems Volume 75 ; 75 >
+#    au < exists ; 1976 ; Industrial Management & Data Systems Volume 76 ; 76 >
+#    au < exists ; 1977 ; Industrial Management & Data Systems Volume 77 ; 77 >
+#    au < exists ; 1978 ; Industrial Management & Data Systems Volume 78 ; 78 >
+#    au < exists ; 1979 ; Industrial Management & Data Systems Volume 79 ; 79 >
     au < manifest ; 1980 ; Industrial Management & Data Systems Volume 80 ; 80 >
     au < manifest ; 1981 ; Industrial Management & Data Systems Volume 81 ; 81 >
     au < manifest ; 1982 ; Industrial Management & Data Systems Volume 82 ; 82 >
@@ -3782,12 +3782,15 @@
 
     param[journal_issn] = 0264-1615
     comment[journal_id] = ilr
+    #Published 1983-2016
 
-    au < exists ; 1978 ; Interlending & Document Supply Volume 6 ; 6 >
-    au < exists ; 1979 ; Interlending & Document Supply Volume 7 ; 7 >
-    au < exists ; 1980 ; Interlending & Document Supply Volume 8 ; 8 >
-    au < exists ; 1981 ; Interlending & Document Supply Volume 9 ; 9 >
-    au < exists ; 1982 ; Interlending & Document Supply Volume 10 ; 10 >
+    au < exists ; 2010 ; Interlending & Document Supply Volume 38 ; 38 >
+    au < exists ; 2011 ; Interlending & Document Supply Volume 39 ; 39 >
+    au < exists ; 2012 ; Interlending & Document Supply Volume 40 ; 40 >
+    au < exists ; 2013 ; Interlending & Document Supply Volume 41 ; 41 >
+    au < exists ; 2014 ; Interlending & Document Supply Volume 42 ; 42 >
+    au < exists ; 2015 ; Interlending & Document Supply Volume 43 ; 43 >
+    au < exists ; 2016 ; Interlending & Document Supply Volume 44 ; 44 >
 
   }
 
@@ -11593,31 +11596,29 @@
     comment[journal_id] = rr
     # online from 1997
 
-    au < manifest ; 1997 ; Reference Reviews Volume 11 ; 11 >
-    au < manifest ; 1998 ; Reference Reviews Volume 12 ; 12 >
-    au < manifest ; 1999 ; Reference Reviews Volume 13 ; 13 >
-    au < manifest ; 2000 ; Reference Reviews Volume 14 ; 14 >
-    au < manifest ; 2001 ; Reference Reviews Volume 15 ; 15 >
-    au < manifest ; 2002 ; Reference Reviews Volume 16 ; 16 >
-    au < manifest ; 2003 ; Reference Reviews Volume 17 ; 17 >
-    au < manifest ; 2004 ; Reference Reviews Volume 18 ; 18 >
-    au < manifest ; 2005 ; Reference Reviews Volume 19 ; 19 >
-    au < manifest ; 2006 ; Reference Reviews Volume 20 ; 20 >
-    au < manifest ; 2007 ; Reference Reviews Volume 21 ; 21 >
-    au < manifest ; 2008 ; Reference Reviews Volume 22 ; 22 >
-    au < manifest ; 2009 ; Reference Reviews Volume 23 ; 23 >
-    au < manifest ; 2010 ; Reference Reviews Volume 24 ; 24 >
-    au < manifest ; 2011 ; Reference Reviews Volume 25 ; 25 >
-    au < manifest ; 2012 ; Reference Reviews Volume 26 ; 26 >
+    au < notReady ; 1997 ; Reference Reviews Volume 11 ; 11 >
+    au < notReady ; 1998 ; Reference Reviews Volume 12 ; 12 >
+    au < notReady ; 1999 ; Reference Reviews Volume 13 ; 13 >
+    au < notReady ; 2000 ; Reference Reviews Volume 14 ; 14 > #no substance. Possibly abstracts only
+    au < notReady ; 2001 ; Reference Reviews Volume 15 ; 15 >
+    au < notReady ; 2002 ; Reference Reviews Volume 16 ; 16 >
+    au < notReady ; 2003 ; Reference Reviews Volume 17 ; 17 >
+    au < notReady ; 2004 ; Reference Reviews Volume 18 ; 18 >
+    au < notReady ; 2005 ; Reference Reviews Volume 19 ; 19 >
+    au < notReady ; 2006 ; Reference Reviews Volume 20 ; 20 >
+    au < notReady ; 2007 ; Reference Reviews Volume 21 ; 21 >
+    au < notReady ; 2008 ; Reference Reviews Volume 22 ; 22 >
+    au < notReady ; 2009 ; Reference Reviews Volume 23 ; 23 >
+    au < notReady ; 2010 ; Reference Reviews Volume 24 ; 24 >
+    au < notReady ; 2011 ; Reference Reviews Volume 25 ; 25 >
+    au < notReady ; 2012 ; Reference Reviews Volume 26 ; 26 >
     au < doNotProcess ; 2013 ; Reference Reviews Volume 27 ; 27 >
     au < doNotProcess ; 2014 ; Reference Reviews Volume 28 ; 28 >
     au < doNotProcess ; 2015 ; Reference Reviews Volume 29 ; 29 >
     au < doNotProcess ; 2016 ; Reference Reviews Volume 30 ; 30 >
     au < doNotProcess ; 2017 ; Reference Reviews Volume 31 ; 31 >
-    au < manifest ; 2018 ; Reference Reviews Volume 32 ; 32 >
-    au < expected ; 2019 ; Reference Reviews Volume 33 ; 33 >
-    au < expected ; 2020 ; Reference Reviews Volume 34 ; 34 >
-    au < expected ; 2021 ; Reference Reviews Volume 35 ; 35 >
+    au < notReady ; 2018 ; Reference Reviews Volume 32 ; 32 >
+    #stopped publishing after 2018
 
   }
 
@@ -12571,62 +12572,63 @@
 
     param[journal_issn] = 1660-5373
     comment[journal_id] = tr
+    #Published 2001 to present
 
-    au < exists ; 1946 ; Tourism Review Volume 1 ; 1 >
-    au < exists ; 1947 ; Tourism Review Volume 2 ; 2 >
-    au < exists ; 1948 ; Tourism Review Volume 3 ; 3 >
-    au < exists ; 1949 ; Tourism Review Volume 4 ; 4 >
-    au < exists ; 1950 ; Tourism Review Volume 5 ; 5 >
-    au < exists ; 1951 ; Tourism Review Volume 6 ; 6 >
-    au < exists ; 1952 ; Tourism Review Volume 7 ; 7 >
-    au < exists ; 1953 ; Tourism Review Volume 8 ; 8 >
-    au < exists ; 1954 ; Tourism Review Volume 9 ; 9 >
-    au < exists ; 1955 ; Tourism Review Volume 10 ; 10 >
-    au < exists ; 1956 ; Tourism Review Volume 11 ; 11 >
-    au < exists ; 1957 ; Tourism Review Volume 12 ; 12 >
-    au < exists ; 1958 ; Tourism Review Volume 13 ; 13 >
-    au < exists ; 1959 ; Tourism Review Volume 14 ; 14 >
-    au < exists ; 1960 ; Tourism Review Volume 15 ; 15 >
-    au < exists ; 1961 ; Tourism Review Volume 16 ; 16 >
-    au < exists ; 1962 ; Tourism Review Volume 17 ; 17 >
-    au < exists ; 1963 ; Tourism Review Volume 18 ; 18 >
-    au < exists ; 1964 ; Tourism Review Volume 19 ; 19 >
-    au < exists ; 1965 ; Tourism Review Volume 20 ; 20 >
-    au < exists ; 1966 ; Tourism Review Volume 21 ; 21 >
-    au < exists ; 1967 ; Tourism Review Volume 22 ; 22 >
-    au < exists ; 1968 ; Tourism Review Volume 23 ; 23 >
-    au < exists ; 1969 ; Tourism Review Volume 24 ; 24 >
-    au < exists ; 1970 ; Tourism Review Volume 25 ; 25 >
-    au < exists ; 1971 ; Tourism Review Volume 26 ; 26 >
-    au < exists ; 1972 ; Tourism Review Volume 27 ; 27 >
-    au < exists ; 1973 ; Tourism Review Volume 28 ; 28 >
-    au < exists ; 1974 ; Tourism Review Volume 29 ; 29 >
-    au < exists ; 1975 ; Tourism Review Volume 30 ; 30 >
-    au < exists ; 1976 ; Tourism Review Volume 31 ; 31 >
-    au < exists ; 1977 ; Tourism Review Volume 32 ; 32 >
-    au < exists ; 1978 ; Tourism Review Volume 33 ; 33 >
-    au < exists ; 1979 ; Tourism Review Volume 34 ; 34 >
-    au < exists ; 1980 ; Tourism Review Volume 35 ; 35 >
-    au < exists ; 1981 ; Tourism Review Volume 36 ; 36 >
-    au < exists ; 1982 ; Tourism Review Volume 37 ; 37 >
-    au < exists ; 1983 ; Tourism Review Volume 38 ; 38 >
-    au < exists ; 1984 ; Tourism Review Volume 39 ; 39 >
-    au < exists ; 1985 ; Tourism Review Volume 40 ; 40 >
-    au < exists ; 1986 ; Tourism Review Volume 41 ; 41 >
-    au < exists ; 1987 ; Tourism Review Volume 42 ; 42 >
-    au < exists ; 1988 ; Tourism Review Volume 43 ; 43 >
-    au < exists ; 1989 ; Tourism Review Volume 44 ; 44 >
-    au < exists ; 1990 ; Tourism Review Volume 45 ; 45 >
-    au < exists ; 1991 ; Tourism Review Volume 46 ; 46 >
-    au < exists ; 1992 ; Tourism Review Volume 47 ; 47 >
-    au < exists ; 1993 ; Tourism Review Volume 48 ; 48 >
-    au < exists ; 1994 ; Tourism Review Volume 49 ; 49 >
-    au < exists ; 1995 ; Tourism Review Volume 50 ; 50 >
-    au < exists ; 1996 ; Tourism Review Volume 51 ; 51 >
-    au < exists ; 1997 ; Tourism Review Volume 52 ; 52 >
-    au < exists ; 1998 ; Tourism Review Volume 53 ; 53 >
-    au < exists ; 1999 ; Tourism Review Volume 54 ; 54 >
-    au < exists ; 2000 ; Tourism Review Volume 55 ; 55 >
+#    au < exists ; 1946 ; Tourism Review Volume 1 ; 1 >
+#    au < exists ; 1947 ; Tourism Review Volume 2 ; 2 >
+#    au < exists ; 1948 ; Tourism Review Volume 3 ; 3 >
+#    au < exists ; 1949 ; Tourism Review Volume 4 ; 4 >
+#    au < exists ; 1950 ; Tourism Review Volume 5 ; 5 >
+#    au < exists ; 1951 ; Tourism Review Volume 6 ; 6 >
+#    au < exists ; 1952 ; Tourism Review Volume 7 ; 7 >
+#    au < exists ; 1953 ; Tourism Review Volume 8 ; 8 >
+#    au < exists ; 1954 ; Tourism Review Volume 9 ; 9 >
+#    au < exists ; 1955 ; Tourism Review Volume 10 ; 10 >
+#    au < exists ; 1956 ; Tourism Review Volume 11 ; 11 >
+#    au < exists ; 1957 ; Tourism Review Volume 12 ; 12 >
+#    au < exists ; 1958 ; Tourism Review Volume 13 ; 13 >
+#    au < exists ; 1959 ; Tourism Review Volume 14 ; 14 >
+#    au < exists ; 1960 ; Tourism Review Volume 15 ; 15 >
+#    au < exists ; 1961 ; Tourism Review Volume 16 ; 16 >
+#    au < exists ; 1962 ; Tourism Review Volume 17 ; 17 >
+#    au < exists ; 1963 ; Tourism Review Volume 18 ; 18 >
+#    au < exists ; 1964 ; Tourism Review Volume 19 ; 19 >
+#    au < exists ; 1965 ; Tourism Review Volume 20 ; 20 >
+#    au < exists ; 1966 ; Tourism Review Volume 21 ; 21 >
+#    au < exists ; 1967 ; Tourism Review Volume 22 ; 22 >
+#    au < exists ; 1968 ; Tourism Review Volume 23 ; 23 >
+#    au < exists ; 1969 ; Tourism Review Volume 24 ; 24 >
+#    au < exists ; 1970 ; Tourism Review Volume 25 ; 25 >
+#    au < exists ; 1971 ; Tourism Review Volume 26 ; 26 >
+#    au < exists ; 1972 ; Tourism Review Volume 27 ; 27 >
+#    au < exists ; 1973 ; Tourism Review Volume 28 ; 28 >
+#    au < exists ; 1974 ; Tourism Review Volume 29 ; 29 >
+#    au < exists ; 1975 ; Tourism Review Volume 30 ; 30 >
+#    au < exists ; 1976 ; Tourism Review Volume 31 ; 31 >
+#    au < exists ; 1977 ; Tourism Review Volume 32 ; 32 >
+#    au < exists ; 1978 ; Tourism Review Volume 33 ; 33 >
+#    au < exists ; 1979 ; Tourism Review Volume 34 ; 34 >
+#    au < exists ; 1980 ; Tourism Review Volume 35 ; 35 >
+#    au < exists ; 1981 ; Tourism Review Volume 36 ; 36 >
+#    au < exists ; 1982 ; Tourism Review Volume 37 ; 37 >
+#    au < exists ; 1983 ; Tourism Review Volume 38 ; 38 >
+#    au < exists ; 1984 ; Tourism Review Volume 39 ; 39 >
+#    au < exists ; 1985 ; Tourism Review Volume 40 ; 40 >
+#    au < exists ; 1986 ; Tourism Review Volume 41 ; 41 >
+#    au < exists ; 1987 ; Tourism Review Volume 42 ; 42 >
+#    au < exists ; 1988 ; Tourism Review Volume 43 ; 43 >
+#    au < exists ; 1989 ; Tourism Review Volume 44 ; 44 >
+#    au < exists ; 1990 ; Tourism Review Volume 45 ; 45 >
+#    au < exists ; 1991 ; Tourism Review Volume 46 ; 46 >
+#    au < exists ; 1992 ; Tourism Review Volume 47 ; 47 >
+#    au < exists ; 1993 ; Tourism Review Volume 48 ; 48 >
+#    au < exists ; 1994 ; Tourism Review Volume 49 ; 49 >
+#    au < exists ; 1995 ; Tourism Review Volume 50 ; 50 >
+#    au < exists ; 1996 ; Tourism Review Volume 51 ; 51 >
+#    au < exists ; 1997 ; Tourism Review Volume 52 ; 52 >
+#    au < exists ; 1998 ; Tourism Review Volume 53 ; 53 >
+#    au < exists ; 1999 ; Tourism Review Volume 54 ; 54 >
+#    au < exists ; 2000 ; Tourism Review Volume 55 ; 55 >
     au < manifest ; 2001 ; Tourism Review Volume 56 ; 56 >
     au < manifest ; 2002 ; Tourism Review Volume 57 ; 57 >
     au < manifest ; 2003 ; Tourism Review Volume 58 ; 58 >

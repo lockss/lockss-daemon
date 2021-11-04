@@ -225,9 +225,7 @@
     au < released ; 2016 ; 2016 ; Aktuelle Neurologie Volume 43 ; 43 >
     au < released ; 2017 ; 2017 ; Aktuelle Neurologie Volume 44 ; 44 >
     au < released ; 2018 ; 2018 ; Aktuelle Neurologie Volume 45 ; 45 >
-    au < expected ; 2019 ; 2019 ; Aktuelle Neurologie Volume 46 ; 46 >
-    au < expected ; 2020 ; 2020 ; Aktuelle Neurologie Volume 47 ; 47 >
-    au < expected ; 2021 ; 2021 ; Aktuelle Neurologie Volume 48 ; 48 >
+    #stopped publishing in 2018
 
   }
 
@@ -468,8 +466,8 @@
       param[journal_id] = 10.1055/s-00000009
       comment[years] = 1983-current
 
-    au < doNotProcess ; 1983 ; 1983 ; American Journal of Perinatology Volume 1 ; 1 >
-    au < doNotProcess ; 1984 ; 1984 ; American Journal of Perinatology Volume 1 ; 1 >
+    au < doNotProcess ; 1983 ; 1983 ; American Journal of Perinatology Volume 1 (1983) ; 1 >
+    au < doNotProcess ; 1984 ; 1984 ; American Journal of Perinatology Volume 1 (1984) ; 1 >
     au < doNotProcess ; 1985 ; 1985 ; American Journal of Perinatology Volume 2 ; 2 >
     au < doNotProcess ; 1986 ; 1986 ; American Journal of Perinatology Volume 3 ; 3 >
     au < doNotProcess ; 1987 ; 1987 ; American Journal of Perinatology Volume 4 ; 4 >
@@ -1717,23 +1715,23 @@
     param[journal_id] = 10.1055/s-00000017
     comment[years] = 1995-current
 
-   au < doNotProcess ; 1983 ; 1983 ; Experimental and Clinical Endocrinology & Diabetes Volume 93 ; 93 >
-   au < doNotProcess ; 1984 ; 1984 ; Experimental and Clinical Endocrinology & Diabetes Volume 94 ; 94 >
-   au < doNotProcess ; 1985 ; 1985 ; Experimental and Clinical Endocrinology & Diabetes Volume 95 ; 95 >
-   au < doNotProcess ; 1986 ; 1986 ; Experimental and Clinical Endocrinology & Diabetes Volume 96 ; 96 >
-   au < doNotProcess ; 1987 ; 1987 ; Experimental and Clinical Endocrinology & Diabetes Volume 97 ; 97 >
-   au < doNotProcess ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 98 ; 98 >
-   au < doNotProcess ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 99 ; 99 >
-   au < doNotProcess ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 100 ; 100 >
-   au < doNotProcess ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 101 ; 101 >
-   au < doNotProcess ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 102 ; 102 >
-   au < doNotProcess ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 103 ; 103 >
-   au < doNotProcess ; 1994 ; 1994 ; Experimental and Clinical Endocrinology & Diabetes Volume 104 ; 104 >
-   au < doNotProcess ; 1995 ; 1995 ; Experimental and Clinical Endocrinology & Diabetes Volume 105 ; 105 >
-   au < doNotProcess ; 1996 ; 1996 ; Experimental and Clinical Endocrinology & Diabetes Volume 106 ; 106 >
-   au < doNotProcess ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 105 ; 105 >
-   au < doNotProcess ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 106 ; 106 >
-   au < doNotProcess ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 107 ; 107 >
+   au < doNotProcess ; 1983 ; 1983 ; Experimental and Clinical Endocrinology & Diabetes Volume 1983 ; 1983 >
+   au < doNotProcess ; 1984 ; 1984 ; Experimental and Clinical Endocrinology & Diabetes Volume 1984 ; 1984 >
+   au < doNotProcess ; 1985 ; 1985 ; Experimental and Clinical Endocrinology & Diabetes Volume 1985 ; 1985 >
+   au < doNotProcess ; 1986 ; 1986 ; Experimental and Clinical Endocrinology & Diabetes Volume 1986 ; 1986 >
+   au < doNotProcess ; 1987 ; 1987 ; Experimental and Clinical Endocrinology & Diabetes Volume 1987 ; 1987 >
+   au < doNotProcess ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 1988 ; 1988 >
+   au < doNotProcess ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 1989 ; 1989 >
+   au < doNotProcess ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 1990 ; 1990 >
+   au < doNotProcess ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 1991 ; 1991 >
+   au < doNotProcess ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 1992 ; 1992 >
+   au < doNotProcess ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 1993 ; 1993 >
+   au < doNotProcess ; 1994 ; 1994 ; Experimental and Clinical Endocrinology & Diabetes Volume 1994 ; 1994 >
+   au < doNotProcess ; 1995 ; 1995 ; Experimental and Clinical Endocrinology & Diabetes Volume 1995 ; 1995 >
+   au < doNotProcess ; 1996 ; 1996 ; Experimental and Clinical Endocrinology & Diabetes Volume 1996 ; 1996 >
+   au < doNotProcess ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 1997 ; 1997 >
+   au < doNotProcess ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 1998 ; 1998 >
+   au < doNotProcess ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 1999 ; 1999 >
    au < doNotProcess ; 2000 ; 2000 ; Experimental and Clinical Endocrinology & Diabetes Volume 108 ; 108 >
    au < doNotProcess ; 2001 ; 2001 ; Experimental and Clinical Endocrinology & Diabetes Volume 109 ; 109 >
    au < doNotProcess ; 2002 ; 2002 ; Experimental and Clinical Endocrinology & Diabetes Volume 110 ; 110 >
@@ -1787,10 +1785,10 @@
     param[journal_id] = 10.1055/s-00000018
     comment[years] = 1983-current
 
-   au < doNotProcess ; 1983 ; 1983 ; Facial Plastic Surgery Volume 1 ; 1 >
-   au < doNotProcess ; 1984 ; 1984 ; Facial Plastic Surgery Volume 1 ; 1 >
-   au < doNotProcess ; 1985 ; 1985 ; Facial Plastic Surgery Volume 2 ; 2 >
-   au < doNotProcess ; 1986 ; 1986 ; Facial Plastic Surgery Volume 2 ; 2 >
+   au < doNotProcess ; 1983 ; 1983 ; Facial Plastic Surgery Volume 1 (1983) ; 1 >
+   au < doNotProcess ; 1984 ; 1984 ; Facial Plastic Surgery Volume 1 (1984) ; 1 >
+   au < doNotProcess ; 1985 ; 1985 ; Facial Plastic Surgery Volume 2 (1985) ; 2 >
+   au < doNotProcess ; 1986 ; 1986 ; Facial Plastic Surgery Volume 2 (1986) ; 2 >
    au < doNotProcess ; 1987 ; 1987 ; Facial Plastic Surgery Volume 3 ; 3 >
    au < doNotProcess ; 1988 ; 1988 ; Facial Plastic Surgery Volume 4 ; 4 >
    au < doNotProcess ; 1989 ; 1989 ; Facial Plastic Surgery Volume 5 ; 5 >
@@ -2746,8 +2744,6 @@
     au < released ; 2017 ; 2017 ; Joints Volume 1 ; 1 >
     au < released ; 2018 ; 2018 ; Joints Volume 2 ; 2 >
     au < released ; 2019 ; 2019 ; Joints Volume 3 ; 3 >
-    au < expected ; 2020 ; 2020 ; Joints Volume 4 ; 4 >
-    au < expected ; 2021 ; 2021 ; Joints Volume 5 ; 5 >
 
   }
 
@@ -2930,11 +2926,11 @@
 
     param[journal_id] = 10.1055/s-00031934 
     
-    au < released ; 2017 ; 2017 ; The Journal of Hip Surgery  Volume 1 ; 1 >
-    au < released ; 2018 ; 2018 ; The Journal of Hip Surgery  Volume 2 ; 2 >
-    au < released ; 2019 ; 2019 ; The Journal of Hip Surgery  Volume 3 ; 3 >
-    au < released ; 2020 ; 2020 ; The Journal of Hip Surgery  Volume 4 ; 4 >
-    au < manifest ; 2021 ; 2021 ; The Journal of Hip Surgery  Volume 5 ; 5 >
+    au < released ; 2017 ; 2017 ; The Journal of Hip Surgery Volume 1 ; 1 >
+    au < released ; 2018 ; 2018 ; The Journal of Hip Surgery Volume 2 ; 2 >
+    au < released ; 2019 ; 2019 ; The Journal of Hip Surgery Volume 3 ; 3 >
+    au < released ; 2020 ; 2020 ; The Journal of Hip Surgery Volume 4 ; 4 >
+    au < manifest ; 2021 ; 2021 ; The Journal of Hip Surgery Volume 5 ; 5 >
 
   }
 
@@ -3251,8 +3247,8 @@
     param[journal_id] = 10.1055/s-00000029
     comment[years] = 1984-current
 
-    au < doNotProcess ; 1984 ; 1984 ; Journal of Reconstructive Microsurgery Volume 1 ; 1 >
-    au < doNotProcess ; 1985 ; 1985 ; Journal of Reconstructive Microsurgery Volume 1 ; 1 >
+    au < doNotProcess ; 1984 ; 1984 ; Journal of Reconstructive Microsurgery Volume 1 (1984) ; 1 >
+    au < doNotProcess ; 1985 ; 1985 ; Journal of Reconstructive Microsurgery Volume 1 (1985) ; 1 >
     au < doNotProcess ; 1986 ; 1986 ; Journal of Reconstructive Microsurgery Volume 2 ; 2 >
     au < doNotProcess ; 1987 ; 1987 ; Journal of Reconstructive Microsurgery Volume 3 ; 3 >
     au < doNotProcess ; 1988 ; 1988 ; Journal of Reconstructive Microsurgery Volume 4 ; 4 >
@@ -3984,9 +3980,6 @@
 
     au < released ; 2017 ; 2017 ; Neurology International Open Volume 1 ; 1 >
     au < released ; 2018 ; 2018 ; Neurology International Open Volume 2 ; 2 >
-    au < expected ; 2019 ; 2019 ; Neurology International Open Volume 3 ; 3 >
-    au < expected ; 2020 ; 2020 ; Neurology International Open Volume 4 ; 4 >
-    au < expected ; 2021 ; 2021 ; Neurology International Open Volume 5 ; 5 >
 
   }
 
@@ -5799,8 +5792,8 @@
     param[journal_id] = 10.1055/s-00000077
     comment[years] = 1974-current
 
-    au < doNotProcess ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 ; 1 >
-    au < doNotProcess ; 1975 ; 1975 ; Seminars in Thrombosis and Hemostasis Volume 1 ; 1 >
+    au < doNotProcess ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 (1974) ; 1 >
+    au < doNotProcess ; 1975 ; 1975 ; Seminars in Thrombosis and Hemostasis Volume 1 (1975) ; 1 >
     au < doNotProcess ; 1976 ; 1976 ; Seminars in Thrombosis and Hemostasis Volume 2 ; 2 >
     au < doNotProcess ; 1977 ; 1977 ; Seminars in Thrombosis and Hemostasis Volume 3 ; 3 >
     au < doNotProcess ; 1978 ; 1978 ; Seminars in Thrombosis and Hemostasis Volume 4 ; 4 >
@@ -6200,8 +6193,8 @@
     param[journal_id] = 10.1055/s-00000083
     comment[years] = 1989-current
 
-   au < doNotProcess ; 1989 ; 1989 ; SYNLETT Volume 1 ; 1 >
-   au < doNotProcess ; 1990 ; 1990 ; SYNLETT Volume 1 ; 1 >
+   au < doNotProcess ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 >
+   au < doNotProcess ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1 >
    au < doNotProcess ; 1991 ; 1991 ; SYNLETT Volume 2 ; 2 >
    au < doNotProcess ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 >
    au < doNotProcess ; 1993 ; 1993 ; SYNLETT Volume 4 ; 4 >
@@ -6942,10 +6935,7 @@
     au < released ; 2016 ; 2016 ; Zeitschrift für Klassische Homöopathie Volume 60 ; 60 >
     au < released ; 2017 ; 2017 ; Zeitschrift für Klassische Homöopathie Volume 61 ; 61 >
     au < released ; 2018 ; 2018 ; Zeitschrift für Klassische Homöopathie Volume 62 ; 62 >
-    au < expected ; 2019 ; 2019 ; Zeitschrift für Klassische Homöopathie Volume 63 ; 63 >
-    au < expected ; 2020 ; 2020 ; Zeitschrift für Klassische Homöopathie Volume 64 ; 64 >
-    au < expected ; 2021 ; 2021 ; Zeitschrift für Klassische Homöopathie Volume 65 ; 65 >
-
+    #stopped publishing 2018
   }
 
   {
