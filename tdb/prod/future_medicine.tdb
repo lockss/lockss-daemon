@@ -59,6 +59,22 @@
   {
   
     title < 
+      name = Bioelectronics in Medicine ;
+      issn = 2059-1500 ;
+      eissn = 2059-1519
+    >
+    
+    param[journal_id] = bem
+
+    au < exists ; 2018 ; Bioelectronics in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < exists ; 2019 ; Bioelectronics in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < exists ; 2020 ; Bioelectronics in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    #Ceased
+  }
+
+  {
+  
+    title < 
       name = Breast Cancer Management ;
       issn = 1758-1923
     >
@@ -349,6 +365,21 @@
     au < released ; 2019 ; Future Oncology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
     au < released ; 2020 ; Future Oncology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
     au < manifest ; 2021 ; Future Oncology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+
+  }
+
+  {
+  
+    title < 
+      name = Future Rare Diseases ;
+      issn = 2399-5262 ;
+      eissn = 2399-5270
+    >
+    
+    param[journal_id] = frd
+
+    au < exists ; 2020 ; Future Rare Diseases Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < exists ; 2021 ; Future Rare Diseases Volume 2 ; 2 ; https://www.futuremedicine.com/ >
 
   }
 

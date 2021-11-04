@@ -3442,15 +3442,16 @@
     comment[journal_id] = imds
     # online from 1980
 
-    #au < exists ; exists ; 1970 ; Industrial Management & Data Systems Volume 70 ; 70 ; >
-    #au < exists ; exists ; 1971 ; Industrial Management & Data Systems Volume 71 ; 71 ; >
-    #au < exists ; exists ; 1972 ; Industrial Management & Data Systems Volume 72 ; 72 ; >
-    #au < exists ; exists ; 1974 ; Industrial Management & Data Systems Volume 74 ; 74 ; >
-    #au < exists ; exists ; 1975 ; Industrial Management & Data Systems Volume 75 ; 75 ; >
-    #au < exists ; exists ; 1976 ; Industrial Management & Data Systems Volume 76 ; 76 ; >
-    #au < exists ; exists ; 1977 ; Industrial Management & Data Systems Volume 77 ; 77 ; >
-    #au < exists ; exists ; 1978 ; Industrial Management & Data Systems Volume 78 ; 78 ; >
-    #au < exists ; exists ; 1979 ; Industrial Management & Data Systems Volume 79 ; 79 ; >
+#    au < exists ; exists ; 1970 ; Industrial Management & Data Systems Volume 70 ; 70 ; >
+#    au < exists ; exists ; 1971 ; Industrial Management & Data Systems Volume 71 ; 71 ; >
+#    au < exists ; exists ; 1972 ; Industrial Management & Data Systems Volume 72 ; 72 ; >
+#    au < exists ; exists ; 1973 ; Industrial Management & Data Systems Volume 73 ; 73 ; >
+#    au < exists ; exists ; 1974 ; Industrial Management & Data Systems Volume 74 ; 74 ; >
+#    au < exists ; exists ; 1975 ; Industrial Management & Data Systems Volume 75 ; 75 ; >
+#    au < exists ; exists ; 1976 ; Industrial Management & Data Systems Volume 76 ; 76 ; >
+#    au < exists ; exists ; 1977 ; Industrial Management & Data Systems Volume 77 ; 77 ; >
+#    au < exists ; exists ; 1978 ; Industrial Management & Data Systems Volume 78 ; 78 ; >
+#    au < exists ; exists ; 1979 ; Industrial Management & Data Systems Volume 79 ; 79 ; >
     au < manifest ; exists ; 1980 ; Industrial Management & Data Systems Volume 80 ; 80 ; >
     au < manifest ; exists ; 1981 ; Industrial Management & Data Systems Volume 81 ; 81 ; >
     au < manifest ; exists ; 1982 ; Industrial Management & Data Systems Volume 82 ; 82 ; >
@@ -3780,6 +3781,7 @@
 
     param[journal_issn] = 0264-1615
     comment[journal_id] = ilr
+    #Published 1983-2016
 
     au < crawling ; exists ; 2010 ; Interlending & Document Supply Volume 38 ; 38 ; >
     au < manifest ; exists ; 2011 ; Interlending & Document Supply Volume 39 ; 39 ; >
