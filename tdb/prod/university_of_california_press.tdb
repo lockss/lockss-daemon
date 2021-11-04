@@ -13,6 +13,30 @@
     implicit < status ; year ; param[year] ; name ; param[volume_name] >
     param[base_url] = https://online.ucpress.edu/
 
+#  {
+#      title <
+#        name = Advances in Global Health ;
+#        eissn = 2689-9558 
+#    >
+#
+#      param[journal_id] = agh
+#      au < exists ; 2021 ; 2021 ; Advances in Global Health Volume 1 ; 1 >
+#  }
+
+  {
+      title <
+        name = Afterimage ;
+        eissn = 2578-8531 
+    >
+
+      param[journal_id] = afterimage
+
+      au < exists ; 2019 ; 2019 ; Afterimage Volume 46 ; 46 >
+      au < exists ; 2020 ; 2020 ; Afterimage Volume 47 ; 47 >
+      au < exists ; 2021 ; 2021 ; Afterimage Volume 48 ; 48 >
+
+  }
+
   {
 
       title <
@@ -131,36 +155,36 @@
 
       param[journal_id] = as
 
-      au < exists ; 1961 ; 1961 ; Asian Survey Volume 1 [1961] ; 1 >
-      au < exists ; 1962 ; 1962 ; Asian Survey Volume 1 [1962] ; 1 >
-      au < exists ; 1962 ; 1962 ; Asian Survey Volume 2 ; 2 >
+      au < exists ; 1961 ; 1961 ; Asian Survey Volume 1 [1961] ; 1 > #incorrect vol #
+      au < exists ; 1962 ; 1962 ; Asian Survey Volume 1 [1962] ; 1 > #incorrect vol #
+      au < exists ; 1962 ; 1962 ; Asian Survey Volume 2 ; 2 > #incorrect vol #
       au < manifest ; 1963 ; 1963 ; Asian Survey Volume 3 ; 3 >
       au < manifest ; 1964 ; 1964 ; Asian Survey Volume 4 ; 4 >
       au < manifest ; 1965 ; 1965 ; Asian Survey Volume 5 ; 5 >
       au < manifest ; 1966 ; 1966 ; Asian Survey Volume 6 ; 6 >
       au < manifest ; 1967 ; 1967 ; Asian Survey Volume 7 ; 7 >
-      au < exists ; 1968 ; 1968 ; Asian Survey Volume 8 ; 8 >
-      au < exists ; 1969 ; 1969 ; Asian Survey Volume 9 ; 9 >
-      au < exists ; 1970 ; 1970 ; Asian Survey Volume 10 ; 10 >
-      au < exists ; 1971 ; 1971 ; Asian Survey Volume 11 ; 11 >
+      au < exists ; 1968 ; 1968 ; Asian Survey Volume 8 ; 8 > #incorrect vol #
+      au < exists ; 1969 ; 1969 ; Asian Survey Volume 9 ; 9 > #incorrect vol #
+      au < exists ; 1970 ; 1970 ; Asian Survey Volume 10 ; 10 > #incorrect vol #
+      au < exists ; 1971 ; 1971 ; Asian Survey Volume 11 ; 11 > #incorrect vol #
       au < manifest ; 1972 ; 1972 ; Asian Survey Volume 12 ; 12 >
-      au < exists ; 1973 ; 1973 ; Asian Survey Volume 13 ; 13 >
+      au < exists ; 1973 ; 1973 ; Asian Survey Volume 13 ; 13 > #incorrect vol #
       au < manifest ; 1974 ; 1974 ; Asian Survey Volume 14 ; 14 >
       au < manifest ; 1975 ; 1975 ; Asian Survey Volume 15 ; 15 >
-      au < exists ; 1976 ; 1976 ; Asian Survey Volume 16 ; 16 >
-      au < exists ; 1977 ; 1977 ; Asian Survey Volume 17 ; 17 >
+      au < exists ; 1976 ; 1976 ; Asian Survey Volume 16 ; 16 > #incorrect vol #
+      au < exists ; 1977 ; 1977 ; Asian Survey Volume 17 ; 17 > #incorrect vol #
       au < manifest ; 1978 ; 1978 ; Asian Survey Volume 18 ; 18 >
-      au < exists ; 1979 ; 1979 ; Asian Survey Volume 19 ; 19 >
-      au < exists ; 1980 ; 1980 ; Asian Survey Volume 20 ; 20 >
-      au < exists ; 1981 ; 1981 ; Asian Survey Volume 21 ; 21 >
+      au < exists ; 1979 ; 1979 ; Asian Survey Volume 19 ; 19 > #incorrect vol #
+      au < exists ; 1980 ; 1980 ; Asian Survey Volume 20 ; 20 > #incorrect vol #
+      au < exists ; 1981 ; 1981 ; Asian Survey Volume 21 ; 21 > #incorrect vol #
       au < manifest ; 1982 ; 1982 ; Asian Survey Volume 22 ; 22 >
       au < manifest ; 1983 ; 1983 ; Asian Survey Volume 23 ; 23 >
-      au < exists ; 1984 ; 1984 ; Asian Survey Volume 24 ; 24 >
-      au < exists ; 1985 ; 1985 ; Asian Survey Volume 25 ; 25 >
-      au < exists ; 1986 ; 1986 ; Asian Survey Volume 26 ; 26 >
-      au < exists ; 1987 ; 1987 ; Asian Survey Volume 27 ; 27 >
-      au < exists ; 1988 ; 1988 ; Asian Survey Volume 28 ; 28 >
-      au < exists ; 1989 ; 1989 ; Asian Survey Volume 29 ; 29 >
+      au < exists ; 1984 ; 1984 ; Asian Survey Volume 24 ; 24 > #incorrect vol #
+      au < exists ; 1985 ; 1985 ; Asian Survey Volume 25 ; 25 > #incorrect vol #
+      au < exists ; 1986 ; 1986 ; Asian Survey Volume 26 ; 26 > #incorrect vol #
+      au < exists ; 1987 ; 1987 ; Asian Survey Volume 27 ; 27 > #incorrect vol #
+      au < exists ; 1988 ; 1988 ; Asian Survey Volume 28 ; 28 > #incorrect vol #
+      au < exists ; 1989 ; 1989 ; Asian Survey Volume 29 ; 29 > #incorrect vol #
       au < manifest ; 1990 ; 1990 ; Asian Survey Volume 30 ; 30 >
       au < manifest ; 1991 ; 1991 ; Asian Survey Volume 31 ; 31 >
       au < manifest ; 1992 ; 1992 ; Asian Survey Volume 32 ; 32 >
@@ -204,7 +228,7 @@
         eissn = 2153-764X 
     >
       #param[base_url] = http://boom.ucpress.edu/
-      #nothing published after 2016.
+      #After 2016, articles are published, but not put into volumes. See https://online.ucpress.edu/boom/issue/browse-by-year
 
       param[journal_id] = boom
 
@@ -214,6 +238,11 @@
       au < doNotProcess ; 2014 ; 2014 ; Boom: A Journal of California Volume 4 ; 4 >
       au < doNotProcess ; 2015 ; 2015 ; Boom: A Journal of California Volume 5 ; 5 >
       au < doNotProcess ; 2016 ; 2016 ; Boom: A Journal of California Volume 6 ; 6 >
+      au < exists ; 2017 ; 2017 ; Boom: A Journal of California Volume 7 ; 7 > #manifest page is blank
+      au < exists ; 2018 ; 2018 ; Boom: A Journal of California Volume 8 ; 8 > #manifest page is blank
+      au < exists ; 2019 ; 2019 ; Boom: A Journal of California Volume 9 ; 9 > #manifest page is blank
+      au < exists ; 2020 ; 2020 ; Boom: A Journal of California Volume 10 ; 10 > #manifest page is blank
+      au < exists ; 2021 ; 2021 ; Boom: A Journal of California Volume 11 ; 11 > #manifest page is blank
 
   }
 
@@ -705,17 +734,17 @@
         eissn = 1533-8622 
     >
       #param[base_url] = http://gcfs.ucpress.edu/
+      param[journal_id] = gastronomica
 
-      param[journal_id] = gcfs
+      au < manifest ; 2001 ; 2001 ; Gastronomica: The Journal of Critical Food Studies Volume 1 ; 1 >
+      au < manifest ; 2002 ; 2002 ; Gastronomica: The Journal of Critical Food Studies Volume 2 ; 2 >
+      au < manifest ; 2003 ; 2003 ; Gastronomica: The Journal of Critical Food Studies Volume 3 ; 3 >
+      au < manifest ; 2004 ; 2004 ; Gastronomica: The Journal of Critical Food Studies Volume 4 ; 4 >
+      au < manifest ; 2005 ; 2005 ; Gastronomica: The Journal of Critical Food Studies Volume 5 ; 5 >
+      au < manifest ; 2006 ; 2006 ; Gastronomica: The Journal of Critical Food Studies Volume 6 ; 6 >
+      au < manifest ; 2007 ; 2007 ; Gastronomica: The Journal of Critical Food Studies Volume 7 ; 7 >
+      au < manifest ; 2008 ; 2008 ; Gastronomica: The Journal of Critical Food Studies Volume 8 ; 8 >
 
-      au < exists ; 2001 ; 2001 ; Gastronomica: The Journal of Critical Food Studies Volume 1 ; 1 >
-      au < exists ; 2002 ; 2002 ; Gastronomica: The Journal of Critical Food Studies Volume 2 ; 2 >
-      au < exists ; 2003 ; 2003 ; Gastronomica: The Journal of Critical Food Studies Volume 3 ; 3 >
-      au < exists ; 2004 ; 2004 ; Gastronomica: The Journal of Critical Food Studies Volume 4 ; 4 >
-      au < exists ; 2005 ; 2005 ; Gastronomica: The Journal of Critical Food Studies Volume 5 ; 5 >
-      au < exists ; 2006 ; 2006 ; Gastronomica: The Journal of Critical Food Studies Volume 6 ; 6 >
-      au < exists ; 2007 ; 2007 ; Gastronomica: The Journal of Critical Food Studies Volume 7 ; 7 >
-      au < exists ; 2008 ; 2008 ; Gastronomica: The Journal of Critical Food Studies Volume 8 ; 8 >
       au < doNotProcess ; 2009 ; 2009 ; Gastronomica: The Journal of Critical Food Studies Volume 9 ; 9 >
       au < doNotProcess ; 2010 ; 2010 ; Gastronomica: The Journal of Critical Food Studies Volume 10 ; 10 >
       au < doNotProcess ; 2011 ; 2011 ; Gastronomica: The Journal of Critical Food Studies Volume 11 ; 11 >
@@ -727,8 +756,9 @@
       au < doNotProcess ; 2017 ; 2017 ; Gastronomica: The Journal of Critical Food Studies Volume 17 ; 17 >
       au < doNotProcess ; 2018 ; 2018 ; Gastronomica: The Journal of Critical Food Studies Volume 18 ; 18 >
       au < doNotProcess ; 2019 ; 2019 ; Gastronomica: The Journal of Critical Food Studies Volume 19 ; 19 >
-      au < exists ; 2020 ; 2020 ; Gastronomica: The Journal of Critical Food Studies Volume 20 ; 20 >
-      au < expected ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
+
+      au < manifest ; 2020 ; 2020 ; Gastronomica: The Journal of Critical Food Studies Volume 20 ; 20 >
+      au < manifest ; 2021 ; 2021 ; Gastronomica: The Journal of Critical Food Studies Volume 21 ; 21 >
 
   }
 
@@ -797,33 +827,33 @@
 
   }
 
-  {
-
-      title <
-        name = International Review of Qualitative Research ;
-        issn = 1940-8447 ;
-        eissn = 1940-8455 
-    >
-      #param[base_url] = http://irqr.ucpress.edu/
-
-      param[journal_id] = irqr
-
-      au < doNotProcess ; 2008 ; 2008 ; International Review of Qualitative Research Volume 1 ; 1 >
-      au < doNotProcess ; 2009 ; 2009 ; International Review of Qualitative Research Volume 2 ; 2 >
-      au < doNotProcess ; 2010 ; 2010 ; International Review of Qualitative Research Volume 3 ; 3 >
-      au < doNotProcess ; 2011 ; 2011 ; International Review of Qualitative Research Volume 4 ; 4 >
-      au < doNotProcess ; 2012 ; 2012 ; International Review of Qualitative Research Volume 5 ; 5 >
-      au < doNotProcess ; 2013 ; 2013 ; International Review of Qualitative Research Volume 6 ; 6 >
-      au < doNotProcess ; 2014 ; 2014 ; International Review of Qualitative Research Volume 7 ; 7 >
-      au < doNotProcess ; 2015 ; 2015 ; International Review of Qualitative Research Volume 8 ; 8 >
-      au < doNotProcess ; 2016 ; 2016 ; International Review of Qualitative Research Volume 9 ; 9 >
-      au < doNotProcess ; 2017 ; 2017 ; International Review of Qualitative Research Volume 10 ; 10 >
-      au < doNotProcess ; 2018 ; 2018 ; International Review of Qualitative Research Volume 11 ; 11 >
-      au < doNotProcess ; 2019 ; 2019 ; International Review of Qualitative Research Volume 12 ; 12 >
-      au < exists ; 2020 ; 2020 ; International Review of Qualitative Research Volume 13 ; 13 >
-      au < expected ; 2021 ; 2021 ; International Review of Qualitative Research Volume 14 ; 14 >
-
-  }
+#  {
+#
+#      title <
+#        name = International Review of Qualitative Research ;
+#        issn = 1940-8447 ;
+#        eissn = 1940-8455 
+#    >
+#      #param[base_url] = http://irqr.ucpress.edu/
+#      param[journal_id] = irqr
+#      #Moved to Sage https://journals.sagepub.com/home/irq
+#
+#      au < doNotProcess ; 2008 ; 2008 ; International Review of Qualitative Research Volume 1 ; 1 >
+#      au < doNotProcess ; 2009 ; 2009 ; International Review of Qualitative Research Volume 2 ; 2 >
+#      au < doNotProcess ; 2010 ; 2010 ; International Review of Qualitative Research Volume 3 ; 3 >
+#      au < doNotProcess ; 2011 ; 2011 ; International Review of Qualitative Research Volume 4 ; 4 >
+#      au < doNotProcess ; 2012 ; 2012 ; International Review of Qualitative Research Volume 5 ; 5 >
+#      au < doNotProcess ; 2013 ; 2013 ; International Review of Qualitative Research Volume 6 ; 6 >
+#      au < doNotProcess ; 2014 ; 2014 ; International Review of Qualitative Research Volume 7 ; 7 >
+#      au < doNotProcess ; 2015 ; 2015 ; International Review of Qualitative Research Volume 8 ; 8 >
+#      au < doNotProcess ; 2016 ; 2016 ; International Review of Qualitative Research Volume 9 ; 9 >
+#      au < doNotProcess ; 2017 ; 2017 ; International Review of Qualitative Research Volume 10 ; 10 >
+#      au < doNotProcess ; 2018 ; 2018 ; International Review of Qualitative Research Volume 11 ; 11 >
+#      au < doNotProcess ; 2019 ; 2019 ; International Review of Qualitative Research Volume 12 ; 12 >
+#      au < exists ; 2020 ; 2020 ; International Review of Qualitative Research Volume 13 ; 13 >
+#      au < expected ; 2021 ; 2021 ; International Review of Qualitative Research Volume 14 ; 14 >
+#
+#  }
 
   {
 
@@ -832,24 +862,6 @@
         issn = 0003-0139 ;
         eissn = 1547-3848 
     >
-#    {
-#      #param[base_url] = http://jams.ucpress.edu/content/ucpbams/
-#      #base_url has extra journal_id embedded http://jams.ucpress.edu/content/ucpbams/
-#      param[journal_id] = ch
-#
-#      au < exists ; 1936 ; 1936 ; Journal of the American Musicological Society Volume 1 ; 1 >
-#      au < exists ; 1937 ; 1937 ; Journal of the American Musicological Society Volume 2 ; 2 >
-#      au < exists ; 1939 ; 1939 ; Journal of the American Musicological Society Volume 3 ; 3 >
-#      au < exists ; 1940 ; 1940 ; Journal of the American Musicological Society Volume 4 ; 4 >
-#      au < exists ; 1941 ; 1941 ; Journal of the American Musicological Society Volume 5 ; 5 >
-#      au < exists ; 1942 ; 1942 ; Journal of the American Musicological Society Volume 6 ; 6 >
-#      au < exists ; 1943 ; 1943 ; Journal of the American Musicological Society Volume 7 ; 7 >
-#      au < exists ; 1945 ; 1945 ; Journal of the American Musicological Society Volume 8 ; 8 >
-#      au < exists ; 1947 ; 1947 ; Journal of the American Musicological Society Volume 9-10 ; 9-10 >
-#      au < exists ; 1948 ; 1948 ; Journal of the American Musicological Society Volume 11-13 ; 11-13 >
-#      
-#    }
-#
 
     {
       #param[base_url] = http://jams.ucpress.edu/
@@ -1042,12 +1054,14 @@
 #      au < doNotProcess ; 2013-2014 ; Journal of Palestine Studies Volume 43 ; 43 >
 #      au < doNotProcess ; 2014-2015 ; Journal of Palestine Studies Volume 44 ; 44 >
 #      au < doNotProcess ; 2015-2016 ; Journal of Palestine Studies Volume 45 ; 45 >
-#      au < doNotProcess ; 2016-2017 ; Journal of Palestine Studies Volume 46 ; 46 >
-#      au < doNotProcess ; 2017-2018 ; Journal of Palestine Studies Volume 47 ; 47 >
-#      au < doNotProcess ; 2018-2019 ; Journal of Palestine Studies Volume 48 ; 48 >
+      au < doNotProcess ; 2016 ; 2016 ; Journal of Palestine Studies Volume 46 [2016] ; 46 >
+      au < doNotProcess ; 2017 ; 2017 ; Journal of Palestine Studies Volume 46 [2017] ; 46 >
+      au < doNotProcess ; 2017 ; 2017 ; Journal of Palestine Studies Volume 47 [2017] ; 47 >
+      au < doNotProcess ; 2018 ; 2018 ; Journal of Palestine Studies Volume 47 [2018] ; 47 >
+      au < doNotProcess ; 2018 ; 2018 ; Journal of Palestine Studies Volume 48 [2018] ; 48 >
+      au < doNotProcess ; 2019 ; 2019 ; Journal of Palestine Studies Volume 48 [2019] ; 48 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Palestine Studies Volume 49 [2019] ; 49 >
-      au < doNotProcess ; 2020 ; 2020 ; Journal of Palestine Studies Volume 49 [2020] ; 49 >
-      au < expected ; 2020 ; 2020 ; Journal of Palestine Studies Volume 50 [2020] ; 50 >
+      au < manifest ; 2020 ; 2020 ; Journal of Palestine Studies Volume 49 [2020] ; 49 >
       au < expected ; 2021 ; 2021 ; Journal of Palestine Studies Volume 50 [2021] ; 50 >
 
   }
@@ -1609,47 +1623,47 @@
 
   }
 
-  {
-
-      title <
-        name = Religion and American Culture: A Journal of Interpretation ;
-        issn = 1052-1151 ;
-        eissn = 1533-8568 
-    >
-      #param[base_url] = http://rac.ucpress.edu/
-      #move to Cambridge University Press
-
-      param[journal_id] = rac
-
-      au < exists ; 1991 ; 1991 ; Religion and American Culture: A Journal of Interpretation Volume 1 ; 1 >
-      au < exists ; 1992 ; 1992 ; Religion and American Culture: A Journal of Interpretation Volume 2 ; 2 >
-      au < exists ; 1993 ; 1993 ; Religion and American Culture: A Journal of Interpretation Volume 3 ; 3 >
-      au < exists ; 1994 ; 1994 ; Religion and American Culture: A Journal of Interpretation Volume 4 ; 4 >
-      au < exists ; 1995 ; 1995 ; Religion and American Culture: A Journal of Interpretation Volume 5 ; 5 >
-      au < exists ; 1996 ; 1996 ; Religion and American Culture: A Journal of Interpretation Volume 6 ; 6 >
-      au < exists ; 1997 ; 1997 ; Religion and American Culture: A Journal of Interpretation Volume 7 ; 7 >
-      au < exists ; 1998 ; 1998 ; Religion and American Culture: A Journal of Interpretation Volume 8 ; 8 >
-      au < exists ; 1999 ; 1999 ; Religion and American Culture: A Journal of Interpretation Volume 9 ; 9 >
-      au < exists ; 2000 ; 2000 ; Religion and American Culture: A Journal of Interpretation Volume 10 ; 10 >
-      au < exists ; 2001 ; 2001 ; Religion and American Culture: A Journal of Interpretation Volume 11 ; 11 >
-      au < exists ; 2002 ; 2002 ; Religion and American Culture: A Journal of Interpretation Volume 12 ; 12 >
-      au < exists ; 2003 ; 2003 ; Religion and American Culture: A Journal of Interpretation Volume 13 ; 13 >
-      au < exists ; 2004 ; 2004 ; Religion and American Culture: A Journal of Interpretation Volume 14 ; 14 >
-      au < exists ; 2005 ; 2005 ; Religion and American Culture: A Journal of Interpretation Volume 15 ; 15 >
-      au < exists ; 2006 ; 2006 ; Religion and American Culture: A Journal of Interpretation Volume 16 ; 16 >
-      au < exists ; 2007 ; 2007 ; Religion and American Culture: A Journal of Interpretation Volume 17 ; 17 >
-      au < exists ; 2008 ; 2008 ; Religion and American Culture: A Journal of Interpretation Volume 18 ; 18 >
-      au < exists ; 2009 ; 2009 ; Religion and American Culture: A Journal of Interpretation Volume 19 ; 19 >
-      au < exists ; 2010 ; 2010 ; Religion and American Culture: A Journal of Interpretation Volume 20 ; 20 >
-      au < doNotProcess ; 2011 ; 2011 ; Religion and American Culture: A Journal of Interpretation Volume 21 ; 21 >
-      au < doNotProcess ; 2012 ; 2012 ; Religion and American Culture: A Journal of Interpretation Volume 22 ; 22 >
-      au < doNotProcess ; 2013 ; 2013 ; Religion and American Culture: A Journal of Interpretation Volume 23 ; 23 >
-      au < doNotProcess ; 2014 ; 2014 ; Religion and American Culture: A Journal of Interpretation Volume 24 ; 24 >
-      au < doNotProcess ; 2015 ; 2015 ; Religion and American Culture: A Journal of Interpretation Volume 25 ; 25 >
-      au < doNotProcess ; 2016 ; 2016 ; Religion and American Culture: A Journal of Interpretation Volume 26 ; 26 >
-      au < exists ; 2017 ; 2017 ; Religion and American Culture: A Journal of Interpretation Volume 27 ; 27 >
-
-  }
+#  {
+#
+#      title <
+#        name = Religion and American Culture: A Journal of Interpretation ;
+#        issn = 1052-1151 ;
+#        eissn = 1533-8568 
+#    >
+#      #param[base_url] = http://rac.ucpress.edu/
+#      #moved to Cambridge University Press
+#
+#      param[journal_id] = rac
+#
+#      au < exists ; 1991 ; 1991 ; Religion and American Culture: A Journal of Interpretation Volume 1 ; 1 >
+#      au < exists ; 1992 ; 1992 ; Religion and American Culture: A Journal of Interpretation Volume 2 ; 2 >
+#      au < exists ; 1993 ; 1993 ; Religion and American Culture: A Journal of Interpretation Volume 3 ; 3 >
+#      au < exists ; 1994 ; 1994 ; Religion and American Culture: A Journal of Interpretation Volume 4 ; 4 >
+#      au < exists ; 1995 ; 1995 ; Religion and American Culture: A Journal of Interpretation Volume 5 ; 5 >
+#      au < exists ; 1996 ; 1996 ; Religion and American Culture: A Journal of Interpretation Volume 6 ; 6 >
+#      au < exists ; 1997 ; 1997 ; Religion and American Culture: A Journal of Interpretation Volume 7 ; 7 >
+#      au < exists ; 1998 ; 1998 ; Religion and American Culture: A Journal of Interpretation Volume 8 ; 8 >
+#      au < exists ; 1999 ; 1999 ; Religion and American Culture: A Journal of Interpretation Volume 9 ; 9 >
+#      au < exists ; 2000 ; 2000 ; Religion and American Culture: A Journal of Interpretation Volume 10 ; 10 >
+#      au < exists ; 2001 ; 2001 ; Religion and American Culture: A Journal of Interpretation Volume 11 ; 11 >
+#      au < exists ; 2002 ; 2002 ; Religion and American Culture: A Journal of Interpretation Volume 12 ; 12 >
+#      au < exists ; 2003 ; 2003 ; Religion and American Culture: A Journal of Interpretation Volume 13 ; 13 >
+#      au < exists ; 2004 ; 2004 ; Religion and American Culture: A Journal of Interpretation Volume 14 ; 14 >
+#      au < exists ; 2005 ; 2005 ; Religion and American Culture: A Journal of Interpretation Volume 15 ; 15 >
+#      au < exists ; 2006 ; 2006 ; Religion and American Culture: A Journal of Interpretation Volume 16 ; 16 >
+#      au < exists ; 2007 ; 2007 ; Religion and American Culture: A Journal of Interpretation Volume 17 ; 17 >
+#      au < exists ; 2008 ; 2008 ; Religion and American Culture: A Journal of Interpretation Volume 18 ; 18 >
+#      au < exists ; 2009 ; 2009 ; Religion and American Culture: A Journal of Interpretation Volume 19 ; 19 >
+#      au < exists ; 2010 ; 2010 ; Religion and American Culture: A Journal of Interpretation Volume 20 ; 20 >
+#      au < doNotProcess ; 2011 ; 2011 ; Religion and American Culture: A Journal of Interpretation Volume 21 ; 21 >
+#      au < doNotProcess ; 2012 ; 2012 ; Religion and American Culture: A Journal of Interpretation Volume 22 ; 22 >
+#      au < doNotProcess ; 2013 ; 2013 ; Religion and American Culture: A Journal of Interpretation Volume 23 ; 23 >
+#      au < doNotProcess ; 2014 ; 2014 ; Religion and American Culture: A Journal of Interpretation Volume 24 ; 24 >
+#      au < doNotProcess ; 2015 ; 2015 ; Religion and American Culture: A Journal of Interpretation Volume 25 ; 25 >
+#      au < doNotProcess ; 2016 ; 2016 ; Religion and American Culture: A Journal of Interpretation Volume 26 ; 26 >
+#      au < exists ; 2017 ; 2017 ; Religion and American Culture: A Journal of Interpretation Volume 27 ; 27 >
+#
+#  }
 
   {
 
@@ -1660,7 +1674,7 @@
     >
       #param[base_url] = http://rep.ucpress.edu/
 
-      param[journal_id] = rep
+      param[journal_id] = representations
 
       au < exists ; 1983 ; 1983 ; Representations Volume 1 ; 1 >
       au < exists ; 1983 ; 1983 ; Representations Volume 2 ; 2 >
@@ -1762,6 +1776,7 @@
       au < exists ; 2007 ; 2007 ; Representations Volume 98 ; 98 >
       au < exists ; 2007 ; 2007 ; Representations Volume 99 ; 99 >
       au < exists ; 2007 ; 2007 ; Representations Volume 100 ; 100 >
+
       au < doNotProcess ; 2008 ; 2008 ; Representations Volume 101 ; 101 >
       au < doNotProcess ; 2008 ; 2008 ; Representations Volume 102 ; 102 >
       au < doNotProcess ; 2008 ; 2008 ; Representations Volume 103 ; 103 >
@@ -1806,12 +1821,21 @@
       au < doNotProcess ; 2018 ; 2018 ; Representations Volume 142 ; 142 >
       au < doNotProcess ; 2018 ; 2018 ; Representations Volume 143 ; 143 >
       au < doNotProcess ; 2018 ; 2018 ; Representations Volume 144 ; 144 >
+
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 145 ; 145 >
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 146 ; 146 >
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 147 ; 147 >
       au < doNotProcess ; 2019 ; 2019 ; Representations Volume 148 ; 148 >
-      au < exists ; 2020 ; 2020 ; Representations Volume 149 ; 149 >
-      au < expected ; 2021 ; 2021 ; Representations Volume 150 ; 150 >
+
+      au < manifest ; 2020 ; 2020 ; Representations Volume 149 ; 149 >
+      au < manifest ; 2020 ; 2020 ; Representations Volume 150 ; 150 >
+      au < manifest ; 2020 ; 2020 ; Representations Volume 151 ; 151 >
+      au < manifest ; 2020 ; 2020 ; Representations Volume 152 ; 152 >
+
+      au < manifest ; 2021 ; 2021 ; Representations Volume 153 ; 153 >
+      au < manifest ; 2021 ; 2021 ; Representations Volume 154 ; 154 >
+      au < manifest ; 2021 ; 2021 ; Representations Volume 155 ; 155 >
+      au < manifest ; 2021 ; 2021 ; Representations Volume 156 ; 156 >
 
   }
 
@@ -1824,7 +1848,7 @@
     >
       #param[base_url] = http://rh.ucpress.edu/
 
-      param[journal_id] = rh
+      param[journal_id] = rhetorica
 
       au < exists ; 1983 ; 1983 ; Rhetorica: A Journal of the History of Rhetoric Volume 1 ; 1 >
       au < exists ; 1984 ; 1984 ; Rhetorica: A Journal of the History of Rhetoric Volume 2 ; 2 >
@@ -1863,8 +1887,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Rhetorica: A Journal of the History of Rhetoric Volume 35 ; 35 >
       au < doNotProcess ; 2018 ; 2018 ; Rhetorica: A Journal of the History of Rhetoric Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Rhetorica: A Journal of the History of Rhetoric Volume 37 ; 37 >
-      au < exists ; 2020 ; 2020 ; Rhetorica: A Journal of the History of Rhetoric Volume 38 ; 38 >
-      au < expected ; 2021 ; 2021 ; Rhetorica: A Journal of the History of Rhetoric Volume 39 ; 39 >
+      au < manifest ; 2020 ; 2020 ; Rhetorica: A Journal of the History of Rhetoric Volume 38 ; 38 >
+      au < manifest ; 2021 ; 2021 ; Rhetorica: A Journal of the History of Rhetoric Volume 39 ; 39 >
 
   }
 
@@ -1996,13 +2020,13 @@
     >
       #param[base_url] = http://sla.ucpress.edu/
 
-      param[journal_id] = sla
+      param[journal_id] = SLA
 
       au < doNotProcess ; 2017 ; 2017 ; Studies in Late Antiquity Volume 1 ; 1 >
       au < doNotProcess ; 2018 ; 2018 ; Studies in Late Antiquity Volume 2 ; 2 >
       au < doNotProcess ; 2019 ; 2019 ; Studies in Late Antiquity Volume 3 ; 3 >
-      au < exists ; 2020 ; 2020 ; Studies in Late Antiquity Volume 4 ; 4 >
-      au < expected ; 2021 ; 2021 ; Studies in Late Antiquity Volume 5 ; 5 >
+      au < manifest ; 2020 ; 2020 ; Studies in Late Antiquity Volume 4 ; 4 >
+      au < manifest ; 2021 ; 2021 ; Studies in Late Antiquity Volume 5 ; 5 >
 
   }
 
@@ -2094,7 +2118,7 @@
     >
       #param[base_url] = http://vs.ucpress.edu/
 
-      param[journal_id] = vs
+      param[journal_id] = jvs
 
       au < exists ; 2006 ; 2006 ; Journal of Vietnamese Studies Volume 1 ; 1 >
       au < exists ; 2007 ; 2007 ; Journal of Vietnamese Studies Volume 2 ; 2 >
@@ -2110,8 +2134,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Journal of Vietnamese Studies Volume 12 ; 12 >
       au < doNotProcess ; 2018 ; 2018 ; Journal of Vietnamese Studies Volume 13 ; 13 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Vietnamese Studies Volume 14 ; 14 >
-      au < exists ; 2020 ; 2020 ; Journal of Vietnamese Studies Volume 15 ; 15 >
-      au < expected ; 2021 ; 2021 ; Journal of Vietnamese Studies Volume 16 ; 16 >
+      au < manifest ; 2020 ; 2020 ; Journal of Vietnamese Studies Volume 15 ; 15 >
+      au < manifest ; 2021 ; 2021 ; Journal of Vietnamese Studies Volume 16 ; 16 >
 
   }
 
