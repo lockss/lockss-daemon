@@ -1,0 +1,171 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>ready</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.pubfactory.PubFactoryBooksPlugin</string>
+    </entry>
+    <entry>
+        <string>required_daemon_version</string>
+        <string>1.67.3</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"PubFactory Books Plugin, Base URL %s, Book ISBN %s", base_url, book_isbn</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>PubFactory Books Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_fetch_rate_limiter_source</string>
+        <string>host:base_url</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <list>
+            <string>"%slockss-manifest/book/%s", base_url, book_isbn</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>4,"^%s", base_url</string>
+            <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$", base_url_host</string>
+            <!-- trailing 'print is the same as the landing page. -->
+            <string>2,"^%s.*print$", base_url</string>
+            <!--  citation overlay and ris download have odd normalization; allow for both -->
+            <!-- https://www.manchesteropenhive.com/cite/$002f9789198557718$002f9789198557718.xml/9789198557718?t:state:client=udcqgjFrvfPXFRp1SuqeVm8f+RA=:H4sIAAAAAAAAAH2Tv28TMRTHnZTQVomARq06ITHAhHSZkJCYStOKqEeIlIiB7d3dy8Xgs49nX34sCBY6MLDAxsDA2H+FkYENwQwTElIn7EtpSCv3pLPurI++/r73vj76yWqTS4yxbU3sQFEaQA7xCAMDOWpDszsBlwZJggg00pjHqINdwVGaHpLm2tivfY4i6RtFkGIny8XNA5x9/b39dvXH8WGVrYSsHqssV9KincSwZvgUxtASINNW3xCX6b2QrQ+dSBcyfM5esErI1nKrdvo/zQ27HSs55GlBEAm03+5oB0UqmVm/dlMNT7a1YRt6pCZtHEIhzL6iDIxhm/8rtHZPWGIbzlDgDAX3lRII8vMNevnlw/GvKqs8YbUxiAKnOdPOC3PLimFX3AEDbgSGEKFwuzW3rC5RW7ESAnKNXSUfArevse0s4ZK7XFnCG0605/ooh+pUsnGe6ReRcWd7mKuO2ZNFhgSGK+lxV2I7sR2q7tjeaI/aZomNgQvXuHk3tUdyvayAbFA8wJoDOjryeSoHt5dwmycOYjDLfUL10lVhRop8xpsLLZvJiaLEZ7sRF0Q2DW3MzWg+nqVcdGxWUqTm94+f/rw6vGtz0fmXC2LXFly3yCKk10fvr9fffXtTZczGxj7nK9whw2OBc95nquxlMgy5fOYzXrdXgEswOFCxb8oZTB8gJPamLcpzy60zUQXZI5WSTQMfY5vrXMDsoubPO+tzVpb5SAousVdEbWvx4kRoXyK2ysAjcdSPlbCZPnPh/gKl4SCkxQQAAA==# -->
+            <string>1,"^%scite/\$002f%s", base_url, book_isbn</string>
+            <!-- https://www.manchesteropenhive.com/view/9789198557718/9789198557718.00016.xml?chapterBody=PDF -->
+            <!-- https://www.manchesteropenhive.com/downloadpdf/9789198557718/9789198557718.00006.xml -->
+            <!-- https://www.manchesteropenhive.com/downloadmarc/9789198557718/9789198557718.xml -->
+            <string>1,"^%s(view|downloadpdf|downloadmarc)/%s", base_url, book_isbn</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>book_isbn</key>
+                <displayName>Book ISBN</displayName>
+                <description>International Standard Book Number</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%sdownloadpdf/%s", base_url, book_isbn</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.pubfactory.PubFactoryHtmlHashFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.pubfactory.PubFactoryHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>au_url_normalizer</string>
+        <string>org.lockss.plugin.pubfactory.PubFactoryUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.pubfactory.PubFactoryBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.pubfactory.PubFactoryBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;DublinCore</string>
+                <string>org.lockss.plugin.pubfactory.PubFactoryHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>://[^/]+/(assets|fileasset|skin)/</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>://[^/]+/(assets|fileasset|skin)/, 0</string>
+        </list>
+    </entry>
+</map>
