@@ -70,11 +70,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Manchester University Press Plugin (PubFactory)</string>
+        <string>Manchester University Press Journals Plugin</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Manchester University Press (PubFactory), Base URL %s, Second Base URL %s, Journal ID %s, Volume %s", base_url, base_url2, journal_id, volume_name</string>
+        <string>"Manchester University Press Journals Plugin, Base URL %s, Second Base URL %s, Journal ID %s, Volume %s", base_url, base_url2, journal_id, volume_name</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
