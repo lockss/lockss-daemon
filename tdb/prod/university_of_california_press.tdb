@@ -4,14 +4,17 @@
     name = University of California Press ;
     info[platform] = SC GLN. Like RUP
   >
-    #Moved from Drupal to SC
 
-    #plugin = needs.plugin
     plugin = org.lockss.plugin.silverchair.ucpress.UCPressSilverchairPlugin
-    #plugin = org.lockss.plugin.silverchair.rockefelleruniversitypress.RockefellerUniversityPressSilverchairPlugin
-    #implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     implicit < status ; year ; param[year] ; name ; param[volume_name] >
     param[base_url] = https://online.ucpress.edu/
+    
+    #Add titles
+    #Latin American and Latinx Visual Culture
+    #Media and Environment # Different platform.
+    #National Review of Black Politics
+    #Resonance
+    #
 
 #  {
 #      title <
