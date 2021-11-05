@@ -4930,10 +4930,10 @@
       au < released ; 2015 ; Archives of Pharmacy Practice Volume 6 ; 2015 ; 6 ; http://www.archivepp.com/ >
       au < released ; 2016 ; Archives of Pharmacy Practice Volume 7 ; 2016 ; 7 ; http://www.archivepp.com/ >
       au < released ; 2017 ; Archives of Pharmacy Practice Volume 8 ; 2017 ; 8 ; http://www.archivepp.com/ >
-      au < expected ; 2018 ; Archives of Pharmacy Practice Volume 9 ; 2018 ; 9 ; https://www.archivepp.com/ >
-      au < expected ; 2019 ; Archives of Pharmacy Practice Volume 10 ; 2019 ; 10 ; https://www.archivepp.com/ >
-      au < expected ; 2020 ; Archives of Pharmacy Practice Volume 11 ; 2020 ; 11 ; https://www.archivepp.com/ >
-      au < expected ; 2021 ; Archives of Pharmacy Practice Volume 12 ; 2021 ; 12 ; https://www.archivepp.com/ >
+      au < exists ; 2018 ; Archives of Pharmacy Practice Volume 9 ; 2018 ; 9 ; https://www.archivepp.com/ >
+      au < exists ; 2019 ; Archives of Pharmacy Practice Volume 10 ; 2019 ; 10 ; https://www.archivepp.com/ >
+      au < exists ; 2020 ; Archives of Pharmacy Practice Volume 11 ; 2020 ; 11 ; https://www.archivepp.com/ >
+      au < exists ; 2021 ; Archives of Pharmacy Practice Volume 12 ; 2021 ; 12 ; https://www.archivepp.com/ >
 
   }
 
@@ -4969,14 +4969,12 @@
 
       param[journal_issn] = 2454-6798
 #      param[base_url] = http://www.asjo.in/
+      #move to Thieme
 
       au < released ; 2015 ; Asian Journal of Oncology Volume 1 ; 2015 ; 1 ; http://www.asjo.in/ >
       au < released ; 2016 ; Asian Journal of Oncology Volume 2 ; 2016 ; 2 ; http://www.asjo.in/ >
       au < released ; 2017 ; Asian Journal of Oncology Volume 3 ; 2017 ; 3 ; http://www.asjo.in/ >
-      au < exists ; 2018 ; Asian Journal of Oncology Volume 4 ; 2018 ; 4 ; https://www.asjo.in/ >
-      au < expected ; 2019 ; Asian Journal of Oncology Volume 5 ; 2019 ; 5 ; https://www.asjo.in/ >
-      au < expected ; 2020 ; Asian Journal of Oncology Volume 6 ; 2020 ; 6 ; https://www.asjo.in/ >
-      au < expected ; 2021 ; Asian Journal of Oncology Volume 7 ; 2021 ; 7 ; https://www.asjo.in/ >
+      au < doNotProcess ; 2018 ; Asian Journal of Oncology Volume 4 ; 2018 ; 4 ; https://www.asjo.in/ >
 
   }
 
@@ -5017,10 +5015,7 @@
       au < released ; 2015 ; Astrocyte Volume 2 ; 2015 ; 2 ; http://www.astrocyte.in/ >
       au < released ; 2016 ; Astrocyte Volume 3 ; 2016 ; 3 ; http://www.astrocyte.in/ >
       au < released ; 2017 ; Astrocyte Volume 4 ; 2017 ; 4 ; http://www.astrocyte.in/ >
-      au < exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; https://www.astrocyte.in/ >
-      au < expected ; 2019 ; Astrocyte Volume 6 ; 2019 ; 6 ; https://www.astrocyte.in/ >
-      au < expected ; 2020 ; Astrocyte Volume 7 ; 2020 ; 7 ; https://www.astrocyte.in/ >
-      au < expected ; 2021 ; Astrocyte Volume 8 ; 2021 ; 8 ; https://www.astrocyte.in/ >
+      au < exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; http://www.astrocyte.in/ >
 
   }
 
@@ -5038,9 +5033,6 @@
       au < released ; 2016 ; Benha Medical Journal Volume 33 ; 2016 ; 33 ; http://www.bmfj.eg.net/ >
       au < released ; 2017 ; Benha Medical Journal Volume 34 ; 2017 ; 34 ; http://www.bmfj.eg.net/ >
       au < released ; 2018 ; Benha Medical Journal Volume 35 ; 2018 ; 35 ; http://www.bmfj.eg.net/ >
-      au < expected ; 2019 ; Benha Medical Journal Volume 36 ; 2019 ; 36 ; https://www.bmfj.eg.net/ >
-      au < expected ; 2020 ; Benha Medical Journal Volume 37 ; 2020 ; 37 ; https://www.bmfj.eg.net/ >
-      au < expected ; 2021 ; Benha Medical Journal Volume 38 ; 2021 ; 38 ; https://www.bmfj.eg.net/ >
 
   }
 
@@ -5650,16 +5642,14 @@
 
       param[journal_issn] = 1305-7456
 #      param[base_url] = http://www.eurjdent.com/
+      #move to Thieme
 
-      au < released ; 2013 ; European Journal of Dentistry Volume 7 ; 2013 ; 7 ; http://www.eurjdent.com/ >
-      au < released ; 2014 ; European Journal of Dentistry Volume 8 ; 2014 ; 8 ; http://www.eurjdent.com/ >
-      au < released ; 2015 ; European Journal of Dentistry Volume 9 ; 2015 ; 9 ; http://www.eurjdent.com/ >
-      au < released ; 2016 ; European Journal of Dentistry Volume 10 ; 2016 ; 10 ; http://www.eurjdent.com/ >
-      au < released ; 2017 ; European Journal of Dentistry Volume 11 ; 2017 ; 11 ; http://www.eurjdent.com/ >
-      au < exists ; 2018 ; European Journal of Dentistry Volume 12 ; 2018 ; 12 ; https://www.eurjdent.com/ >
-      au < expected ; 2019 ; European Journal of Dentistry Volume 13 ; 2019 ; 13 ; https://www.eurjdent.com/ >
-      au < expected ; 2020 ; European Journal of Dentistry Volume 14 ; 2020 ; 14 ; https://www.eurjdent.com/ >
-      au < expected ; 2021 ; European Journal of Dentistry Volume 15 ; 2021 ; 15 ; https://www.eurjdent.com/ >
+      au < down ; 2013 ; European Journal of Dentistry Volume 7 ; 2013 ; 7 ; http://www.eurjdent.com/ >
+      au < down ; 2014 ; European Journal of Dentistry Volume 8 ; 2014 ; 8 ; http://www.eurjdent.com/ >
+      au < down ; 2015 ; European Journal of Dentistry Volume 9 ; 2015 ; 9 ; http://www.eurjdent.com/ >
+      au < down ; 2016 ; European Journal of Dentistry Volume 10 ; 2016 ; 10 ; http://www.eurjdent.com/ >
+      au < down ; 2017 ; European Journal of Dentistry Volume 11 ; 2017 ; 11 ; http://www.eurjdent.com/ >
+      au < doNotProcess ; 2018 ; European Journal of Dentistry Volume 12 ; 2018 ; 12 ; https://www.eurjdent.com/ >
 
   }
 
@@ -5917,15 +5907,30 @@
 
       param[journal_issn] = 2349-5006
 #      param[base_url] = http://www.ijournalhs.org/
+      #continued_by = 2542-6214
 
       au < released ; 2014 ; Indian Journal of Health Sciences and Biomedical Research Volume 7 ; 2014 ; 7 ; http://www.ijournalhs.org/ >
       au < released ; 2015 ; Indian Journal of Health Sciences and Biomedical Research Volume 8 ; 2015 ; 8 ; http://www.ijournalhs.org/ >
       au < released ; 2016 ; Indian Journal of Health Sciences and Biomedical Research Volume 9 ; 2016 ; 9 ; http://www.ijournalhs.org/ >
       au < released ; 2017 ; Indian Journal of Health Sciences and Biomedical Research Volume 10 ; 2017 ; 10 ; http://www.ijournalhs.org/ >
       au < exists ; 2018 ; Indian Journal of Health Sciences and Biomedical Research Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ >
-      au < expected ; 2019 ; Indian Journal of Health Sciences and Biomedical Research Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ >
-      au < expected ; 2020 ; Indian Journal of Health Sciences and Biomedical Research Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ >
-      au < expected ; 2021 ; Indian Journal of Health Sciences and Biomedical Research Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Indian Journal of Health Sciences and Biomedical Research KLEU ;
+        issn = 2542-6214 ;
+        eissn = 2542-6222
+      >
+
+      param[journal_issn] = 2349-5006
+      #continues = 2349-5006
+
+      au < exists ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ >
+      au < exists ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ >
+      au < exists ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ >
 
   }
 
@@ -6176,15 +6181,13 @@
 
       param[journal_issn] = 2348-8832
 #      param[base_url] = http://www.ijcep.org/
+      #move to OJS platform
 
       au < released ; 2014 ; International Journal of Clinical and Experimental Physiology Volume 1 ; 2014 ; 1 ; http://www.ijcep.org/ >
       au < released ; 2015 ; International Journal of Clinical and Experimental Physiology Volume 2 ; 2015 ; 2 ; http://www.ijcep.org/ >
       au < released ; 2016 ; International Journal of Clinical and Experimental Physiology Volume 3 ; 2016 ; 3 ; http://www.ijcep.org/ >
       au < released ; 2017 ; International Journal of Clinical and Experimental Physiology Volume 4 ; 2017 ; 4 ; http://www.ijcep.org/ >
-      au < exists ; 2018 ; International Journal of Clinical and Experimental Physiology Volume 5 ; 2018 ; 5 ; https://www.ijcep.org/ >
-      au < expected ; 2019 ; International Journal of Clinical and Experimental Physiology Volume 6 ; 2019 ; 6 ; https://www.ijcep.org/ >
-      au < expected ; 2020 ; International Journal of Clinical and Experimental Physiology Volume 7 ; 2020 ; 7 ; https://www.ijcep.org/ >
-      au < expected ; 2021 ; International Journal of Clinical and Experimental Physiology Volume 8 ; 2021 ; 8 ; https://www.ijcep.org/ >
+      au < doNotProcess ; 2018 ; International Journal of Clinical and Experimental Physiology Volume 5 ; 2018 ; 5 ; https://www.ijcep.org/ >
 
   }
 
@@ -6202,9 +6205,6 @@
       au < released ; 2016 ; International Journal of Educational and Psychological Researches Volume 2 ; 2016 ; 2 ; http://www.ijeprjournal.org/ >
       au < released ; 2017 ; International Journal of Educational and Psychological Researches Volume 3 ; 2017 ; 3 ; http://www.ijeprjournal.org/ >
       au < released ; 2018 ; International Journal of Educational and Psychological Researches Volume 4 ; 2018 ; 4 ; http://www.ijeprjournal.org/ >
-      au < expected ; 2019 ; International Journal of Educational and Psychological Researches Volume 5 ; 2019 ; 5 ; https://www.ijeprjournal.org/ >
-      au < expected ; 2020 ; International Journal of Educational and Psychological Researches Volume 6 ; 2020 ; 6 ; https://www.ijeprjournal.org/ >
-      au < expected ; 2021 ; International Journal of Educational and Psychological Researches Volume 7 ; 2021 ; 7 ; https://www.ijeprjournal.org/ >
 
   }
 
@@ -6266,10 +6266,6 @@
       au < released ; 2015 ; International Journal of Health System and Disaster Management Volume 3 ; 2015 ; 3 ; http://www.ijhsdm.org/ >
       au < released ; 2016 ; International Journal of Health System and Disaster Management Volume 4 ; 2016 ; 4 ; http://www.ijhsdm.org/ >
       au < released ; 2017 ; International Journal of Health System and Disaster Management Volume 5 ; 2017 ; 5 ; http://www.ijhsdm.org/ >
-      au < expected ; 2018 ; International Journal of Health System and Disaster Management Volume 6 ; 2018 ; 6 ; https://www.ijhsdm.org/ >
-      au < expected ; 2019 ; International Journal of Health System and Disaster Management Volume 7 ; 2019 ; 7 ; https://www.ijhsdm.org/ >
-      au < expected ; 2020 ; International Journal of Health System and Disaster Management Volume 8 ; 2020 ; 8 ; https://www.ijhsdm.org/ >
-      au < expected ; 2021 ; International Journal of Health System and Disaster Management Volume 9 ; 2021 ; 9 ; https://www.ijhsdm.org/ >
 
   }
 
@@ -6443,9 +6439,9 @@
 
       au < exists ; 2017 ; Journal of Basic and Clinical Reproductive Sciences Volume 6 ; 2017 ; 6 ; https://www.jbcrs.org/ >
       au < exists ; 2018 ; Journal of Basic and Clinical Reproductive Sciences Volume 7 ; 2018 ; 7 ; https://www.jbcrs.org/ >
-      au < expected ; 2019 ; Journal of Basic and Clinical Reproductive Sciences Volume 8 ; 2019 ; 8 ; https://www.jbcrs.org/ >
-      au < expected ; 2020 ; Journal of Basic and Clinical Reproductive Sciences Volume 9 ; 2020 ; 9 ; https://www.jbcrs.org/ >
-      au < expected ; 2021 ; Journal of Basic and Clinical Reproductive Sciences Volume 10 ; 2021 ; 10 ; https://www.jbcrs.org/ >
+      au < exists ; 2019 ; Journal of Basic and Clinical Reproductive Sciences Volume 8 ; 2019 ; 8 ; https://www.jbcrs.org/ >
+      au < exists ; 2020 ; Journal of Basic and Clinical Reproductive Sciences Volume 9 ; 2020 ; 9 ; https://www.jbcrs.org/ >
+      au < exists ; 2021 ; Journal of Basic and Clinical Reproductive Sciences Volume 10 ; 2021 ; 10 ; https://www.jbcrs.org/ >
 
     }
 
@@ -6608,9 +6604,6 @@
       au < released ; 2016 ; Journal of Dental and Allied Sciences Volume 5 ; 2016 ; 5 ; http://www.jdas.in/ >
       au < released ; 2017 ; Journal of Dental and Allied Sciences Volume 6 ; 2017 ; 6 ; http://www.jdas.in/ >
       au < released ; 2018 ; Journal of Dental and Allied Sciences Volume 7 ; 2018 ; 7 ; http://www.jdas.in/ >
-      au < expected ; 2019 ; Journal of Dental and Allied Sciences Volume 8 ; 2019 ; 8 ; https://www.jdas.in/ >
-      au < expected ; 2020 ; Journal of Dental and Allied Sciences Volume 9 ; 2020 ; 9 ; https://www.jdas.in/ >
-      au < expected ; 2021 ; Journal of Dental and Allied Sciences Volume 10 ; 2021 ; 10 ; https://www.jdas.in/ >
 
   }
 
@@ -6638,8 +6631,6 @@
       au < released ; 2017 ; Journal of Dental Lasers Volume 11 ; 2017 ; 11 ; http://www.jdentlasers.org/ >
       au < released ; 2018 ; Journal of Dental Lasers Volume 12 ; 2018 ; 12 ; http://www.jdentlasers.org/ >
       au < released ; 2019 ; Journal of Dental Lasers Volume 13 ; 2019 ; 13 ; https://www.jdentlasers.org/ >
-      au < expected ; 2020 ; Journal of Dental Lasers Volume 14 ; 2020 ; 14 ; https://www.jdentlasers.org/ >
-      au < expected ; 2021 ; Journal of Dental Lasers Volume 15 ; 2021 ; 15 ; https://www.jdentlasers.org/ >
 
   }
 
@@ -6675,18 +6666,16 @@
 
       param[journal_issn] = 0976-5042
 #      param[base_url] = http://www.jdeonline.in/
+      #move to Thieme
 
-      au < released ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2011 ; 2 ; http://www.jdeonline.in/ >
-      au < released ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 2012 ; 3 ; http://www.jdeonline.in/ >
-      au < released ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 2013 ; 4 ; http://www.jdeonline.in/ >
-      au < released ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 2014 ; 5 ; http://www.jdeonline.in/ >
-      au < released ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 2015 ; 6 ; http://www.jdeonline.in/ >
-      au < released ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 2016 ; 7 ; http://www.jdeonline.in/ >
-      au < released ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 2017 ; 8 ; http://www.jdeonline.in/ >
-      au < exists ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 2018 ; 9 ; https://www.jdeonline.in/ >
-      au < expected ; 2019 ; Journal of Digestive Endoscopy Volume 10 ; 2019 ; 10 ; https://www.jdeonline.in/ >
-      au < expected ; 2020 ; Journal of Digestive Endoscopy Volume 11 ; 2020 ; 11 ; https://www.jdeonline.in/ >
-      au < expected ; 2021 ; Journal of Digestive Endoscopy Volume 12 ; 2021 ; 12 ; https://www.jdeonline.in/ >
+      au < down ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2011 ; 2 ; http://www.jdeonline.in/ >
+      au < down ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 2012 ; 3 ; http://www.jdeonline.in/ >
+      au < down ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 2013 ; 4 ; http://www.jdeonline.in/ >
+      au < down ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 2014 ; 5 ; http://www.jdeonline.in/ >
+      au < down ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 2015 ; 6 ; http://www.jdeonline.in/ >
+      au < down ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 2016 ; 7 ; http://www.jdeonline.in/ >
+      au < down ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 2017 ; 8 ; http://www.jdeonline.in/ >
+      au < doNotProcess ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 2018 ; 9 ; https://www.jdeonline.in/ >
 
   }
 
