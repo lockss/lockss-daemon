@@ -84,6 +84,38 @@
   {
 
     title <
+      name = Legalities: The Australian and New Zealand Journal of Law and Society ;
+      issn = 2634-3770 ;
+      eissn = 2634-3789 ;
+      issnl = 2634-3770 
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = legal
+
+    au < exists ; 2021 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 1 ; 1 ; https://www.euppublishing.com/ >
+  }
+
+  {
+
+    title <
+      name = Burns Chronicle ;
+      issn = 1365-7518 ;
+      eissn = 2634-7059 ;
+      issnl = 1365-7518 
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = burns
+
+    au < exists ; 2021 ; Burns Chronicle Volume 130 ; 130 ; https://www.euppublishing.com/ >
+  }
+
+  {
+
+    title <
       name = Scottish Church History ;
       issn = 2516-6298 ;
       eissn = 2516-6301 ;
@@ -483,6 +515,65 @@
     }
   }
     
+  
+  {
+
+    title <
+      name = Crime Fiction Studies ;
+      issn = 2517-7982 ;
+      eissn = 2517-7990 ;
+      issnl = 2517-7982 
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = cfs
+
+    au < exists ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < exists ; 2021 ; Crime Fiction Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
+    au < exists ; 2021 ; Crime Fiction Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
+
+  }
+  
+  {
+
+    title <
+      name = Global Energy Law and Sustainability ;
+      issn = 2632-4512 ;
+      eissn = 2632-4520 ;
+      issnl = 2632-4512 
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = gels
+
+    au < exists ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < exists ; 2020 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ >
+    au < expected ; 2021 ; Global Energy Law and Sustainability Volume 3 ; 3 ; https://www.euppublishing.com/ >
+    au < expected ; 2021 ; Global Energy Law and Sustainability Volume 4 ; 4 ; https://www.euppublishing.com/ >
+
+  }
+  
+  {
+
+    title <
+      name = Library and Information History ;
+      issn = 1758-3489 ;
+      eissn = 1758-3497 ;
+      issnl = 1758-3489 
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = lih
+
+    au < exists ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ >
+    au < exists ; 2020 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ >
+    au < expected ; 2021 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ >
+    au < expected ; 2021 ; Library and Information History Volume 39 ; 39 ; https://www.euppublishing.com/ >
+
+  }
   
   {
 
