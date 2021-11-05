@@ -11,9 +11,7 @@
     
     #Add titles
     #See https://online.ucpress.edu/journals
-    #Latin American and Latinx Visual Culture
     #Media and Environment # Different platform.
-    #National Review of Black Politics
     #Resonance
     #
 
@@ -1407,6 +1405,21 @@
   {
 
       title <
+        name = Latin American and Latinx Visual Culture ;
+        eissn = 2576-0947 
+    >
+
+      param[journal_id] = lalvc
+
+      au < manifest ; 2019 ; 2019 ; Latin American and Latinx Visual Culture Volume 1 ; 1 >
+      au < manifest ; 2020 ; 2020 ; Latin American and Latinx Visual Culture Volume 2 ; 2 >
+      au < manifest ; 2021 ; 2021 ; Latin American and Latinx Visual Culture Volume 3 ; 3 >
+
+  }
+
+  {
+
+      title <
         name = Mexican Studies/Estudios Mexicanos ;
         issn = 0742-9797 ;
         eissn = 1533-8320 
@@ -1505,6 +1518,21 @@
       au < doNotProcess ; 2019 ; 2019 ; Music Perception: An Interdisciplinary Journal Volume 37 ; 37 >
       au < manifest ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 38 ; 38 >
       au < manifest ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 39 ; 39 >
+
+  }
+
+  {
+
+      title <
+        name = National Review of Black Politics ;
+        issn = 2688-0105 ;
+        eissn = 2688-0113 
+    >
+
+      param[journal_id] = nrbp
+
+      au < manifest ; 2020 ; 2020 ; National Review of Black Politics Volume 1 ; 1 >
+      au < manifest ; 2021 ; 2021 ; National Review of Black Politics Volume 2 ; 2 >
 
   }
 
@@ -1861,6 +1889,20 @@
 #      #moved to Cambridge University Press
 #
 #  }
+
+  {
+
+      title <
+        name = Resonance: The Journal of Sound and Culture ;
+        eissn = 2688-867X 
+    >
+
+      param[journal_id] = res
+
+      au < manifest ; 2020 ; 2020 ; Resonance: The Journal of Sound and Culture Volume 1 ; 1 >
+      au < manifest ; 2021 ; 2021 ; Resonance: The Journal of Sound and Culture Volume 2 ; 2 >
+
+  }
 
   {
 
