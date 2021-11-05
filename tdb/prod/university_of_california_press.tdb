@@ -9,28 +9,11 @@
     implicit < status ; year ; param[year] ; name ; param[volume_name] >
     param[base_url] = https://online.ucpress.edu/
     
-    #Add titles
+    #New titles
     #See https://online.ucpress.edu/journals
-    #Media and Environment # Different platform.
-    #Resonance
-    #
-
-#  {
-#      title <
-#        name = Advances in Global Health ;
-#        eissn = 2689-9558 
-#    >
-#      param[journal_id] = agh
-#      #Published Continuously
-#  }
-#  {
-#      title <
-#        name = Global Perspectives ;
-#        eissn = 2575-7350 
-#    >
-#      param[journal_id] = gp
-#      #Published Continuously
-#  }
+    #Media and Environment Different platform.
+    #Advances in Global Health agh 2689-9558 Published continuously
+    #Global Perspectives gp 2575-7350 Published continuously
 
   {
       title <
