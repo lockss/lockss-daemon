@@ -322,6 +322,7 @@ class V3TestCases( LockssTestCases ):
                           'org.lockss.id.initialV3PeerList': ';'.join( [ peer.getV3Identity() for peer in self.clients ] + self.offline_peers ),
                           'org.lockss.platform.v3.identity': client.getV3Identity(),
                           'org.lockss.dbManager.enabled': False,
+                          'org.lockss.cachedUrl.allowDelete': True,
                           'org.lockss.poll.v3.enableV3Poller': False,
                           'org.lockss.poll.v3.enableV3Voter': True,
                           'org.lockss.poll.v3.enableLocalPolls': 'true',
