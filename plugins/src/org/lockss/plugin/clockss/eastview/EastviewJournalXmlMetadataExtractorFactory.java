@@ -128,7 +128,8 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       {
         fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
         log.debug3("Eastview Journal: Check for existence of " + filesToCheck.get(i));
-        if(filesToCheck.get(i).contains(".pdf") || filesToCheck.get(i).contains(".xml") || filesToCheck.get(i).contains(".xhtml")) {
+        // return true for all xml/xhtml file, since a lot of older content has no PDF provided
+        if(filesToCheck.get(i).contains(".xml") || filesToCheck.get(i).contains(".xhtml")) {
           // Set a cooked value for an access file. Otherwise it would get set to xml file
           log.debug3("Eastview Journal: set access_url to " + filesToCheck.get(i));
           return true;
@@ -180,7 +181,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
       if (raw_title != null) {
 
-        Pattern pattern = Pattern.compile("(\\d\\d-\\d\\d-\\d{2,4})\\(([^)]+)-([^(]+)\\)\\s+(.*)");
+        Pattern pattern = Pattern.compile("(\\d\\d-\\d\\d-\\d{2,4})\\s+\\(([^)]+)-([^(]+)\\)\\s+(.*)");
 
         Matcher m = pattern.matcher(raw_title);
 
