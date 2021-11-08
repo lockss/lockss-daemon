@@ -3842,10 +3842,10 @@
 
     param[journal_issn] = 0974-9233
 
-    au < exists ; exists ; 2007 ; Middle East African Journal of Ophthalmology Volume 14 ; 2007 ; 14 ; http://www.meajo.org/ ; ; >
-    au < exists ; exists ; 2008 ; Middle East African Journal of Ophthalmology Volume 15 ; 2008 ; 15 ; http://www.meajo.org/ ; ; >
-    au < exists ; exists ; 2009 ; Middle East African Journal of Ophthalmology Volume 16 ; 2009 ; 16 ; http://www.meajo.org/ ; ; >
-    au < exists ; exists ; 2010 ; Middle East African Journal of Ophthalmology Volume 17 ; 2010 ; 17 ; http://www.meajo.org/ ; ; >
+    au < manifest ; exists ; 2007 ; Middle East African Journal of Ophthalmology Volume 14 ; 2007 ; 14 ; http://www.meajo.org/ ; ; >
+    au < manifest ; exists ; 2008 ; Middle East African Journal of Ophthalmology Volume 15 ; 2008 ; 15 ; http://www.meajo.org/ ; ; >
+    au < manifest ; exists ; 2009 ; Middle East African Journal of Ophthalmology Volume 16 ; 2009 ; 16 ; http://www.meajo.org/ ; ; >
+    au < manifest ; exists ; 2010 ; Middle East African Journal of Ophthalmology Volume 17 ; 2010 ; 17 ; http://www.meajo.org/ ; ; >
     au < finished ; frozen ; 2011 ; Middle East African Journal of Ophthalmology Volume 18 ; 2011 ; 18 ; http://www.meajo.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; Middle East African Journal of Ophthalmology Volume 19 ; 2012 ; 19 ; http://www.meajo.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Middle East African Journal of Ophthalmology Volume 20 ; 2013 ; 20 ; http://www.meajo.org/ ; ; reingest4.clockss.org:8082 >
@@ -3854,9 +3854,9 @@
     au < deepCrawl ; exists ; 2016 ; Middle East African Journal of Ophthalmology Volume 23 ; 2016 ; 23 ; http://www.meajo.org/ ; ; >
     au < finished ; finished ; 2017 ; Middle East African Journal of Ophthalmology Volume 24 ; 2017 ; 24 ; http://www.meajo.org/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Middle East African Journal of Ophthalmology Volume 25 ; 2018 ; 25 ; http://www.meajo.org/ ; ; >
-    au < exists ; exists ; 2019 ; Middle East African Journal of Ophthalmology Volume 26 ; 2019 ; 26 ; http://www.meajo.org/ ; ; >
-    au < exists ; exists ; 2020 ; Middle East African Journal of Ophthalmology Volume 27 ; 2020 ; 27 ; http://www.meajo.org/ ; ; >
-    au < exists ; exists ; 2021 ; Middle East African Journal of Ophthalmology Volume 28 ; 2021 ; 28 ; http://www.meajo.org/ ; ; >
+    au < manifest ; exists ; 2019 ; Middle East African Journal of Ophthalmology Volume 26 ; 2019 ; 26 ; http://www.meajo.org/ ; ; >
+    au < manifest ; exists ; 2020 ; Middle East African Journal of Ophthalmology Volume 27 ; 2020 ; 27 ; http://www.meajo.org/ ; ; >
+    au < manifest ; exists ; 2021 ; Middle East African Journal of Ophthalmology Volume 28 ; 2021 ; 28 ; http://www.meajo.org/ ; ; >
 
   }
 
@@ -5028,7 +5028,7 @@
       au < finished ; frozen ; 2015 ; Astrocyte Volume 2 ; 2015 ; 2 ; http://www.astrocyte.in/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Astrocyte Volume 3 ; 2016 ; 3 ; http://www.astrocyte.in/ ; ; >
       au < finished ; frozen ; 2017 ; Astrocyte Volume 4 ; 2017 ; 4 ; http://www.astrocyte.in/ ; ; reingest3.clockss.org:8083 >
-      au < exists ; exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; http://www.astrocyte.in/ ; ; >
+      au < manifest ; exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; http://www.astrocyte.in/ ; ; >
 
   }
 
@@ -7636,10 +7636,10 @@
 
       param[journal_issn] = 2589-8302
 
-      au < exists ; exists ; 2018 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 11 ; 2018 ; 11 ; https://www.mjdrdypv.org/ ; ; >
-      au < exists ; exists ; 2019 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 12 ; 2019 ; 12 ; https://www.mjdrdypv.org/ ; ; >
-      au < exists ; exists ; 2020 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 13 ; 2020 ; 13 ; https://www.mjdrdypv.org/ ; ; >
-      au < exists ; exists ; 2021 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 14 ; 2021 ; 14 ; https://www.mjdrdypv.org/ ; ; >
+      au < manifest ; exists ; 2018 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 11 ; 2018 ; 11 ; https://www.mjdrdypv.org/ ; ; >
+      au < manifest ; exists ; 2019 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 12 ; 2019 ; 12 ; https://www.mjdrdypv.org/ ; ; >
+      au < manifest ; exists ; 2020 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 13 ; 2020 ; 13 ; https://www.mjdrdypv.org/ ; ; >
+      au < manifest ; exists ; 2021 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 14 ; 2021 ; 14 ; https://www.mjdrdypv.org/ ; ; >
 
   }
 
@@ -8609,8 +8609,8 @@
       au < finished ; frozen ; 2015 ; The Saint's International Dental Journal Volume 1 ; 2015 ; 1 ; http://www.sidj.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; The Saint's International Dental Journal Volume 2 ; 2016 ; 2 ; http://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; The Saint's International Dental Journal Volume 3 ; 2017 ; 3 ; http://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
-      au < exists ; exists ; 2020 ; The Saint's International Dental Journal Volume 4 ; 2020 ; 4 ; https://www.sidj.org/ ; ; >
-      au < exists ; exists ; 2021 ; The Saint's International Dental Journal Volume 5 ; 2021 ; 5 ; https://www.sidj.org/ ; ; >
+      au < manifest ; exists ; 2020 ; The Saint's International Dental Journal Volume 4 ; 2020 ; 4 ; https://www.sidj.org/ ; ; >
+      au < manifest ; exists ; 2021 ; The Saint's International Dental Journal Volume 5 ; 2021 ; 5 ; https://www.sidj.org/ ; ; >
 
   }
 
@@ -9510,12 +9510,12 @@
       param[journal_issn] = 0976-4003
 #      param[base_url] = http://www.ijds.in/
 
-      au < exists ; exists ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.ijds.in/ ; ; >
-      au < exists ; exists ; 2017 ; Indian Journal of Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.ijds.in/ ; ; >
-      au < exists ; exists ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.ijds.in/ ; ; >
-      au < exists ; exists ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; http://www.ijds.in/ ; ; >
-      au < exists ; exists ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; http://www.ijds.in/ ; ; >
-      au < exists ; exists ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; http://www.ijds.in/ ; ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.ijds.in/ ; ; >
+      au < manifest ; exists ; 2017 ; Indian Journal of Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.ijds.in/ ; ; >
+      au < manifest ; exists ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.ijds.in/ ; ; >
+      au < manifest ; exists ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; http://www.ijds.in/ ; ; >
+      au < manifest ; exists ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; http://www.ijds.in/ ; ; >
+      au < manifest ; exists ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; http://www.ijds.in/ ; ; >
 
   }
 
@@ -9531,16 +9531,16 @@
       param[journal_issn] = 2277-9019
 #      param[base_url] = http://www.ijrconline.org/
 
-      au < exists ; exists ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; >
-      au < exists ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; >
+      au < manifest ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
 
   }
 
@@ -9782,13 +9782,13 @@
       param[journal_issn] = 2321-6662
 #      param[base_url] = http://www.ijsronline.net/
 
-      au < exists ; exists ; 2011 ; International Journal of Students' Research Volume 1 ; 2011 ; 1 ; http://www.ijsronline.net/ ; ; >
-      au < exists ; exists ; 2012 ; International Journal of Students' Research Volume 2 ; 2012 ; 2 ; http://www.ijsronline.net/ ; ; >
-      au < exists ; exists ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; http://www.ijsronline.net/ ; ; >
-      au < exists ; exists ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; http://www.ijsronline.net/ ; ; >
-      au < exists ; exists ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; http://www.ijsronline.net/ ; ; >
-      au < exists ; exists ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; http://www.ijsronline.net/ ; ; >
-      au < exists ; exists ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 ; http://www.ijsronline.net/ ; ; >
+      au < manifest ; exists ; 2011 ; International Journal of Students' Research Volume 1 ; 2011 ; 1 ; http://www.ijsronline.net/ ; ; >
+      au < manifest ; exists ; 2012 ; International Journal of Students' Research Volume 2 ; 2012 ; 2 ; http://www.ijsronline.net/ ; ; >
+      au < manifest ; exists ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; http://www.ijsronline.net/ ; ; >
+      au < manifest ; exists ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; http://www.ijsronline.net/ ; ; >
+      au < manifest ; exists ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; http://www.ijsronline.net/ ; ; >
+      au < manifest ; exists ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; http://www.ijsronline.net/ ; ; >
+      au < manifest ; exists ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 ; http://www.ijsronline.net/ ; ; >
 
   }
 
@@ -9903,11 +9903,11 @@
       param[journal_issn] = 0974-3901
 #      param[base_url] = http://www.journaldmims.com/
 
-      au < exists ; exists ; 2017 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 12 ; 2017 ; 12 ; http://www.journaldmims.com/ ; ; >
-      au < exists ; exists ; 2018 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 13 ; 2018 ; 13 ; http://www.journaldmims.com/ ; ; >
-      au < exists ; exists ; 2019 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 14 ; 2019 ; 14 ; http://www.journaldmims.com/ ; ; >
-      au < exists ; exists ; 2020 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 15 ; 2020 ; 15 ; http://www.journaldmims.com/ ; ; >
-      au < exists ; exists ; 2021 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 16 ; 2021 ; 16 ; http://www.journaldmims.com/ ; ; >
+      au < manifest ; exists ; 2017 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 12 ; 2017 ; 12 ; http://www.journaldmims.com/ ; ; >
+      au < manifest ; exists ; 2018 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 13 ; 2018 ; 13 ; http://www.journaldmims.com/ ; ; >
+      au < manifest ; exists ; 2019 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 14 ; 2019 ; 14 ; http://www.journaldmims.com/ ; ; >
+      au < manifest ; exists ; 2020 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 15 ; 2020 ; 15 ; http://www.journaldmims.com/ ; ; >
+      au < manifest ; exists ; 2021 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 16 ; 2021 ; 16 ; http://www.journaldmims.com/ ; ; >
 
   }
 
@@ -10215,8 +10215,8 @@
       param[journal_issn] = 2395-1540
 #      param[base_url] = http://www.jrnm.in/
 
-      au < exists ; exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; http://www.jrnm.in/ ; ; >
-      au < exists ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; http://www.jrnm.in/ ; ; >
+      au < manifest ; exists ; 2016 ; Journal of Renal Nutrition and Metabolism Volume 2 ; 2016 ; 2 ; http://www.jrnm.in/ ; ; >
+      au < manifest ; exists ; 2018 ; Journal of Renal Nutrition and Metabolism Volume 3 ; 2018 ; 3 ; http://www.jrnm.in/ ; ; >
       au < exists ; exists ; 2019 ; Journal of Renal Nutrition and Metabolism Volume 4 ; 2019 ; 4 ; http://www.jrnm.in/ ; ; >
       au < exists ; exists ; 2020 ; Journal of Renal Nutrition and Metabolism Volume 5 ; 2020 ; 5 ; http://www.jrnm.in/ ; ; >
       au < exists ; exists ; 2021 ; Journal of Renal Nutrition and Metabolism Volume 6 ; 2021 ; 6 ; http://www.jrnm.in/ ; ; >
@@ -10459,11 +10459,11 @@
       param[journal_issn] = 2468-7391
 #      param[base_url] = http://www.nigjourcvtsurg.org/
 
-      au < exists ; exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; http://www.nigjourcvtsurg.org/ ; ; >
-      au < exists ; exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2016 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 1 ; 2016 ; 1 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2017 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 2 ; 2017 ; 2 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2018 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 3 ; 2018 ; 3 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2019 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 4 ; 2019 ; 4 ; http://www.nigjourcvtsurg.org/ ; ; >
+      au < manifest ; exists ; 2020 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 5 ; 2020 ; 5 ; http://www.nigjourcvtsurg.org/ ; ; >
       au < expected ; exists ; 2021 ; Nigerian Journal of Cardiovascular & Thoracic Surgery Volume 6 ; 2021 ; 6 ; http://www.nigjourcvtsurg.org/ ; ; >
 
   }
@@ -10741,10 +10741,10 @@
       param[journal_issn] = 1300-6878
 #      param[base_url] = http://www.turkjplastsurg.org/
 
-      au < exists ; exists ; 2018 ; Turkish Journal of Plastic Surgery Volume 26 ; 2018 ; 26 ; http://www.turkjplastsurg.org/ ; ; >
-      au < exists ; exists ; 2019 ; Turkish Journal of Plastic Surgery Volume 27 ; 2019 ; 27 ; http://www.turkjplastsurg.org/ ; ; >
-      au < exists ; exists ; 2020 ; Turkish Journal of Plastic Surgery Volume 28 ; 2020 ; 28 ; http://www.turkjplastsurg.org/ ; ; >
-      au < exists ; exists ; 2021 ; Turkish Journal of Plastic Surgery Volume 29 ; 2021 ; 29 ; http://www.turkjplastsurg.org/ ; ; >
+      au < manifest ; exists ; 2018 ; Turkish Journal of Plastic Surgery Volume 26 ; 2018 ; 26 ; http://www.turkjplastsurg.org/ ; ; >
+      au < manifest ; exists ; 2019 ; Turkish Journal of Plastic Surgery Volume 27 ; 2019 ; 27 ; http://www.turkjplastsurg.org/ ; ; >
+      au < manifest ; exists ; 2020 ; Turkish Journal of Plastic Surgery Volume 28 ; 2020 ; 28 ; http://www.turkjplastsurg.org/ ; ; >
+      au < manifest ; exists ; 2021 ; Turkish Journal of Plastic Surgery Volume 29 ; 2021 ; 29 ; http://www.turkjplastsurg.org/ ; ; >
 
   }
 
