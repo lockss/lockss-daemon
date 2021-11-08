@@ -137,6 +137,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String FAIL_OVER_PROXY_MANAGER = "FailOverProxyManager";
   public static final String SYSTEM_METRICS = "SystemMetrics";
   public static final String REMOTE_API = "RemoteApi";
+  public static final String MISC_MANAGER = "MiscSetupManager";
   public static final String URL_MANAGER = "UrlManager";
   public static final String NODE_MANAGER_MANAGER = "NodeManagerManager";
   public static final String REPOSITORY_STATUS = "RepositoryStatus";
@@ -158,6 +159,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
   protected final ManagerDesc[] managerDescs = {
+    new ManagerDesc(MISC_MANAGER, "org.lockss.daemon.MiscSetupManager"),
     new ManagerDesc(RANDOM_MANAGER, "org.lockss.daemon.RandomManager"),
     new ManagerDesc(RESOURCE_MANAGER, DEFAULT_RESOURCE_MANAGER),
     new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
