@@ -173,8 +173,14 @@ class LockssDaemon:
 
     def start( self ):
         if not self.daemon:
-            self.daemon = subprocess.Popen( ( self.javaBin, '-server', '-cp', self.classpath, '-Dorg.lockss.defaultLogLevel=debug',
-                                              'org.lockss.app.LockssDaemon' ) + self.configList,
+            args = [self.javaBin, '-server', '-cp', self.classpath, '-Dorg.lockss.defaultLogLevel=debug']
+            tmpdir = os.environ[ 'java.io.tmpdir' ]
+            if tmpdir is not None:
+                args.append('-Djava.io.tmpdir=%s' % tmpdir)
+            args.append('org.lockss.app.LockssDaemon')
+            args.extend(self.configList)
+
+            self.daemon = subprocess.Popen( args,
                                             stdout = self.logfile, stderr = self.logfile, cwd = self.daemonDir )
             lockss_util.write_to_file( '%i\n' % self.daemon.pid, os.path.join( self.daemonDir, 'dpid' ) )
 

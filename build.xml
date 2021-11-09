@@ -2790,6 +2790,7 @@ Test results in ${test.results}
            failonerror="true">
       <arg value="testsuite.py"/>
       <arg value="${suite}"/>
+      <env key="java.io.tmpdir" value="${tmpdir}"/>
     </exec>
   </target>
 
