@@ -235,7 +235,7 @@ Args:
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
   <!-- the jars needed for xml processeing using xerces2j and xalan -->
-  <property name="xerces.jar"     value="${lib}/xercesImpl-2.11.0.jar"/>
+  <property name="xerces.jar"     value="${lib}/xercesImpl-2.12.1.jar"/>
   <property name="xml-apis.jar"   value="${lib}/xml-apis-1.4.01.jar"/>
   <property name="xalan.jar"      value="${lib}/xalan-2.7.2.jar"/>
   <property name="xml-resolver.jar" value="${lib}/xml-resolver-1.2.jar" />
@@ -249,37 +249,28 @@ Args:
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
+
+  <property name="commons.beanutils.jar" value="${lib}/commons-beanutils-1.9.4.jar" />
+  <property name="commons.cli.jar" value="${lib}/commons-cli-1.5.0.jar" />
+  <property name="commons.codec.jar" value="${lib}/commons-codec-1.15.jar" />
+  <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
+  <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
+  <property name="commons.compress.jar" value="${lib}/commons-compress-1.21.jar" />
+  <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
+  <!-- commons-csv -->
+  <!-- commons-digester -->
+  <!-- commons-fileupload -->
+  <property name="commons.io.jar" value="${lib}/commons-io-2.11.0.jar" />
+  <property name="commons.jxpath.jar" value="${lib}/commons-jxpath-1.3.jar" />
+  <property name="commons.lang.jar" value="${lib}/commons-lang-2.6.jar" />
+  <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.12.0.jar" />
+  <property name="commons.logging.jar" value="${lib}/commons-logging-1.2.jar" />
+  <property name="commons.primitives.jar" value="${lib}/commons-primitives-1.0.jar" />
   <property name="commons.text.jar" value="${lib}/commons-text-1.9.jar" />
-  <property name="commons.lang.jar"
-				  value="${lib}/commons-lang-2.6.jar"/>
-  <property name="commons.lang3.jar"
-				  value="${lib}/commons-lang3-3.11.jar"/>
-  <property name="commons.cli.jar"
-                                 value="${lib}/commons-cli-1.5.0.jar" />
-  <property name="commons.collections.jar"
-  				  value="${lib}/commons-collections-3.2.2.jar"/>
-  <property name="commons.collections4.jar"
-	 			  value="${lib}/commons-collections4-4.4.jar"/>
-  <property name="commons.configuration.jar"
-                  value="${lib}/commons-configuration-1.10.jar"/>
-  <property name="commons.logging.jar"
-  				  value="${lib}/commons-logging-1.2.jar"/>
-  <property name="commons.codec.jar"
-  				  value="${lib}/commons-codec-1.15.jar"/>
-  <property name="commons.compress.jar"
-  				  value="${lib}/commons-compress-1.20.jar"/>
+  <property name="commons.validator.jar" value="${lib}/commons-validator-1.7.jar" />
+
   <property name="commons.httpclient.jar"
-  			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
-  <property name="commons.io.jar"
-	        value="${lib}/commons-io-2.8.0.jar" />
-  <property name="commons.jxpath.jar"
-				  value="${lib}/commons-jxpath-1.3.jar"/>
-  <property name="commons.beanutils.jar"
-				  value="${lib}/commons-beanutils-1.9.4.jar"/>
-    <property name="commons.validator.jar"
-              value="${lib}/commons-validator-1.7.jar"/>
-  <property name="commons.primitives.jar"
-				  value="${lib}/commons-primitives-1.0.jar"/>
+            value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <!-- gettext jars, for i18n -->
   <property name="gettext.tasks.jar"
             value="${lib}/gettext-ant-tasks-0.9.7.jar"/>
@@ -385,7 +376,7 @@ Args:
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.8.jar" /><!-- NOTE: 2.9.10.8 -->
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
 
-  <property name="json-path.jar" value="${lib}/json-path-2.5.0.jar" />
+  <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
 
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
