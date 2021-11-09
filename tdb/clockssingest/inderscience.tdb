@@ -916,7 +916,7 @@
 
       au < finished ; finished ; 2013-2015 ; International Journal of Automation and Logistics Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016 ; International Journal of Automation and Logistics Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < ingNotReady ; crawling ; 2017-2022 ; International Journal of Automation and Logistics Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #issue 3, 4 not online
+      au < ingNotReady ; down ; 2017-2021 ; International Journal of Automation and Logistics Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #issue 3, 4 not online
 
     }
 
@@ -6882,7 +6882,7 @@
       au < finished ; finished ; 2015 ; International Journal of Modelling in Operations Management Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016-2017 ; International Journal of Modelling in Operations Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Modelling in Operations Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < notReady ; exists ; 2020-2021 ; International Journal of Modelling in Operations Management Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < notReady ; exists ; 2020-2021 ; International Journal of Modelling in Operations Management Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
 
     }
 
@@ -6997,7 +6997,7 @@
       au < finished ; finished ; 2015 ; International Journal of Multicriteria Decision Making Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; International Journal of Multicriteria Decision Making Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Multicriteria Decision Making Volume 7 ; 7 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2019 ; International Journal of Multicriteria Decision Making Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < frozen ; exists ; 2019 ; International Journal of Multicriteria Decision Making Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -7463,7 +7463,8 @@
 
       au < finished ; finished ; 2014-2015 ; International Journal of Petroleum Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016 ; International Journal of Petroleum Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017-2019 ; International Journal of Petroleum Engineering Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #issue 4 not online
+      au < ingNotReady ; crawling ; 2017-2020 ; International Journal of Petroleum Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < expected ; exists ; 2021-2024 ; International Journal of Petroleum Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9643,7 +9644,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2011-2013 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
-      au < ingNotReady ; down ; 2014-2021 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < ingNotReady ; down ; 2014-2020 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ ; > #issue 4 not online
 
     }
 
@@ -10736,7 +10737,7 @@
       au < finished ; finished ; 2014-2015 ; International Journal of Automotive Composites Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; International Journal of Automotive Composites Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; International Journal of Automotive Composites Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2018-2019 ; International Journal of Automotive Composites Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < frozen ; exists ; 2018-2019 ; International Journal of Automotive Composites Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
   }
 
@@ -10905,7 +10906,7 @@
 
       param[journal_id] = ijbise
 
-      au < ingNotReady ; exists ; 2016-2019 ; International Journal of Business Intelligence and Systems Engineering Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ;  > # issue 4 not online
+      au < frozen ; exists ; 2016-2019 ; International Journal of Business Intelligence and Systems Engineering Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ;  > # issue 4 not online
 
   }
 
@@ -11038,7 +11039,7 @@
 
       param[journal_id] = ijstmis
 
-      au < ingNotReady ; exists ; 2016-2019 ; International Journal of Spatial, Temporal and Multimedia Information Systems Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < frozen ; exists ; 2016-2019 ; International Journal of Spatial, Temporal and Multimedia Information Systems Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ; > #issue 4 not online
 
   }
 
@@ -11098,7 +11099,7 @@
 
       param[journal_id] = ijbbm
 
-      au < ingNotReady ; exists ; 2017-2019 ; International Journal of Bibliometrics in Business and Management Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < frozen ; exists ; 2017-2019 ; International Journal of Bibliometrics in Business and Management Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ; > #issue 4 not online
 
   }
 
