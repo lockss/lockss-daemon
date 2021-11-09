@@ -411,12 +411,12 @@
     #param[base_url] = http://jeb.biologists.org/
     param[journal_id] = jeb
 
-    #au < doNotProcess ; 1923-1924 ; The British Journal of Experimental Biology Volume 1 ; 1 >
-    #au < doNotProcess ; 1924-1925 ; The British Journal of Experimental Biology Volume 2 ; 2 >
-    #au < doNotProcess ; 1925-1926 ; The British Journal of Experimental Biology Volume 3 ; 3 >
-    #au < doNotProcess ; 1926-1927 ; The British Journal of Experimental Biology Volume 4 ; 4 >
-    #au < doNotProcess ; 1927-1928 ; The British Journal of Experimental Biology Volume 5 ; 5 >
-    #au < doNotProcess ; 1928-1929 ; The British Journal of Experimental Biology Volume 6 ; 6 >
+    au < doNotProcess ; 1923 ; 1923 ; The British Journal of Experimental Biology Volume 1 ; 1 > #1923-1924
+    au < doNotProcess ; 1924 ; 1924 ; The British Journal of Experimental Biology Volume 2 ; 2 > #1924-1925
+    au < doNotProcess ; 1925 ; 1925 ; The British Journal of Experimental Biology Volume 3 ; 3 > #1925-1926
+    au < doNotProcess ; 1926 ; 1926 ; The British Journal of Experimental Biology Volume 4 ; 4 > #1926-1927
+    au < doNotProcess ; 1927 ; 1927 ; The British Journal of Experimental Biology Volume 5 ; 5 > #1927-1928
+    au < doNotProcess ; 1928 ; 1928 ; The British Journal of Experimental Biology Volume 6 ; 6 > #1928-1929
     au < doNotProcess ; 1930 ; 1930 ; Journal of Experimental Biology Volume 7 ; 7 >
     au < doNotProcess ; 1931 ; 1931 ; Journal of Experimental Biology Volume 8 ; 8 >
     au < doNotProcess ; 1932 ; 1932 ; Journal of Experimental Biology Volume 9 ; 9 >
