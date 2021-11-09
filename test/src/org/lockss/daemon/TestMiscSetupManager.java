@@ -31,64 +31,49 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.util;
+package org.lockss.daemon;
 
-import java.util.*;
+import org.lockss.test.LockssTestCase;
 
-import com.jayway.jsonpath.*;
-import com.jayway.jsonpath.spi.json.*;
-import com.jayway.jsonpath.spi.mapper.*;
+import com.jayway.jsonpath.Configuration;
+import com.jayway.jsonpath.spi.json.JacksonJsonProvider;
+import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider;
 
 /**
  * <p>
- * Utilities related to <a href="https://github.com/json-path/JsonPath">Jayway
- * JsonPath</a>.
+ * Unit tests related to {@link MiscSetupManager}.
  * </p>
- * 
+ *
  * @since 1.75.8
- * @see <a href="https://github.com/json-path/JsonPath">Jayway JsonPath</a>
+ * @see MiscSetupManager
  */
-public class JsonPathUtil {
+public class TestMiscSetupManager extends LockssTestCase {
 
-  private static boolean initialized = false;
-  
   /**
-   * <p>Initializes JsonPath so it uses Jackson (which is on our classpath) and
-   * not the default json-smart (which is not).</p>
    * <p>
-   * Call once, for example from a class' static initializer:
+   * Tests {@link MiscSetupManager#initializeJsonPath()}.
    * </p>
-<pre>
-  class ClassThatUsesJsonPath {
-    static {
-      JsonPathUtil.initializeJsonPath();
-    }
-  }
-</pre>
-   *
+   * 
+   * @throws Exception
+   *           if an exception occurs
    * @since 1.75.8
-   * @see <a href="https://github.com/json-path/JsonPath#jsonprovider-spi">https://github.com/json-path/JsonPath#jsonprovider-spi</a>
+   * @see MiscSetupManager#initializeJsonPath()
    */
-  public static synchronized void initializeJsonPath() {
-    if (!initialized) {
-      Configuration.setDefaults(new Configuration.Defaults() {
-        private final JsonProvider jsonProvider = new JacksonJsonProvider();
-        private final MappingProvider mappingProvider = new JacksonMappingProvider();
-        @Override
-        public JsonProvider jsonProvider() {
-          return jsonProvider;
-        }
-        @Override
-        public MappingProvider mappingProvider() {
-          return mappingProvider;
-        }
-        @Override
-        public Set<Option> options() {
-          return EnumSet.noneOf(Option.class);
-        }
-      });
-      initialized = true;
+  public void testInitializeJsonPath() throws Exception {
+    Configuration jsonPathConfig = null;
+    try {
+      jsonPathConfig = Configuration.defaultConfiguration();
+      fail("Did not get the expected NoClassDefFoundError");
     }
+    catch (NoClassDefFoundError ncdfe) {
+      assertTrue("Expected NoClassDefFoundError on net.minidev.json.writer.JsonReaderI but got: " + ncdfe.getMessage(),
+                 ncdfe.getMessage().endsWith("net/minidev/json/writer/JsonReaderI"));
+    }
+    MiscSetupManager.initializeJsonPath();
+    jsonPathConfig = Configuration.defaultConfiguration();
+    assertTrue(jsonPathConfig.jsonProvider() instanceof JacksonJsonProvider);
+    assertTrue(jsonPathConfig.mappingProvider() instanceof JacksonMappingProvider);
+    assertEquals(0, jsonPathConfig.getOptions().size());
   }
   
 }
