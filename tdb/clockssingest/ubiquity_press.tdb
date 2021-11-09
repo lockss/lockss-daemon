@@ -164,7 +164,7 @@
       au < finished ; crawling ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; https://journal-redescriptions.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; https://journal-redescriptions.org/ ; >
 
@@ -499,7 +499,7 @@
       au < finished ; finished ; 2016 ; 2016 ; Body, Space & Technology Volume 2016 ; 2016 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; 2017 ; Body, Space & Technology Volume 2017 ; 2017 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Body, Space & Technology Volume 2021 ; 2021 ; https://www.bstjournal.com/ ; >
 
@@ -531,7 +531,7 @@
       au < finished ; finished ; 2016 ; 12 ; Digital Medievalist Volume 2016 ; 2016 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 13 ; Digital Medievalist Volume 2017 ; 2017 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; https://journal.digitalmedievalist.org/ ; >
 
@@ -557,7 +557,7 @@
       au < finished ; finished ; 2016 ; 2016 ; Digital Studies / Le champ numérique Volume 2016 ; 2016 ; https://www.digitalstudies.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 ; 2021 ; https://www.digitalstudies.org/ ; >
 
@@ -580,7 +580,7 @@
       au < finished ; finished ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ ; >
       au < crawling ; exists ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 ; https://foucaldien.net/ ; >
 
@@ -600,7 +600,7 @@
 
 
       au < finished ; crawling ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 ; https://jer.openlibhums.org/ ; >
 

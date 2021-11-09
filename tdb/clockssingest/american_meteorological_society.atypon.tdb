@@ -77,7 +77,7 @@
     au < finished ; crawling ; 2016 ; Bulletin of the American Meteorological Society Volume 97 ; 97 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Bulletin of the American Meteorological Society Volume 98 ; 98 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Bulletin of the American Meteorological Society Volume 99 ; 99 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Bulletin of the American Meteorological Society Volume 100 ; 100 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Bulletin of the American Meteorological Society Volume 100 ; 100 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Bulletin of the American Meteorological Society Volume 101 ; 101 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -114,7 +114,7 @@
     au < finished ; crawling ; 2016 ; Earth Interactions Volume 20 ; 20 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Earth Interactions Volume 21 ; 21 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Earth Interactions Volume 22 ; 22 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Earth Interactions Volume 23 ; 23 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Earth Interactions Volume 23 ; 23 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Earth Interactions Volume 24 ; 24 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -233,7 +233,7 @@
     au < finished ; crawling ; 2016 ; Journal of Applied Meteorology and Climatology Volume 55 ; 55 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Journal of Applied Meteorology and Climatology Volume 56 ; 56 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Journal of Applied Meteorology and Climatology Volume 57 ; 57 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Journal of Applied Meteorology and Climatology Volume 58 ; 58 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Journal of Applied Meteorology and Climatology Volume 58 ; 58 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Journal of Applied Meteorology and Climatology Volume 59 ; 59 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -284,7 +284,7 @@
     au < finished ; crawling ; 2016 ; Journal of Atmospheric and Oceanic Technology Volume 33 ; 33 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Atmospheric and Oceanic Technology Volume 34 ; 34 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Atmospheric and Oceanic Technology Volume 35 ; 35 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2019 ; Journal of Atmospheric and Oceanic Technology Volume 36 ; 36 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Journal of Atmospheric and Oceanic Technology Volume 36 ; 36 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Journal of Atmospheric and Oceanic Technology Volume 37 ; 37 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -331,7 +331,7 @@
     au < finished ; crawling ; 2016 ; Journal of Climate Volume 29 ; 29 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Climate Volume 30 ; 30 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Climate Volume 31 ; 31 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Journal of Climate Volume 32 ; 32 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Journal of Climate Volume 32 ; 32 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Journal of Climate Volume 33 ; 33 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -367,7 +367,7 @@
     au < finished ; crawling ; 2016 ; Journal of Hydrometeorology Volume 17 ; 17 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < ingNotReady ; exists ; 2017 ; Journal of Hydrometeorology Volume 18 ; 18 ; http://journals.ametsoc.org/ ; >
     au < finished ; crawling ; 2018 ; Journal of Hydrometeorology Volume 19 ; 19 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2020 ; Journal of Hydrometeorology Volume 21 ; 21 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -431,7 +431,7 @@
     au < ingNotReady ; exists ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 ; http://journals.ametsoc.org/ ; >
     au < finished ; crawling ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 ; http://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Physical Oceanography Volume 48 ; 48 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Journal of Physical Oceanography Volume 50 ; 50 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -522,7 +522,7 @@
     au < ingNotReady ; exists ; 2016 ; Journal of the Atmospheric Sciences Volume 73 ; 73 ; http://journals.ametsoc.org/ ; >
     au < finished ; crawling ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Journal of the Atmospheric Sciences Volume 75 ; 75 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Journal of the Atmospheric Sciences Volume 77 ; 77 ; https://journals.ametsoc.org/ ; >
 
   }

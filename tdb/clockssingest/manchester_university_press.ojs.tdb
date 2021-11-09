@@ -45,8 +45,8 @@
       #move to PubFactory, https://www.manchesteropenhive.com/view/journals/jbr/jbr-overview.xml
 
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2017 ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2017 ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; reingest5.clockss.org:8082 >
 
       }
 
