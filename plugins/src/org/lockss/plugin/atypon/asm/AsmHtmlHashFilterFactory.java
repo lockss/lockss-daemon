@@ -116,8 +116,15 @@ public class AsmHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
           }
       ),
       // Check if the img src is a dynamically generated path. remove the src link if so.
-      // <img src="/cms/asset/4c00858f-aabd-495c-a0b1-59c46ac3afe0/jb.2021.203.issue-10.cover.gif" alt="Journal of Bacteriology cover image"/>
-      HtmlNodeFilters.tagWithAttributeRegex("img", "src", "/cms/asset/"),
+        // e.g.
+        // <img src="/cms/10.1128/ecosalplus.ESP-0008-2016/asset/887afaf0-ba50-4a7d-ac07-8af515c6489e/assets/graphic/esp-0008-2016_fig_002.gif" >
+        // ASM  <img src="/cms/asset/4c00858f-aabd-495c-a0b1-59c46ac3afe0/jb.2021.203.issue-10.cover.gif" alt="Journal of Bacteriology cover image"/>
+      HtmlNodeFilters.tagWithAttributeRegex("img", "src", "/cms/.*assets?/"),
+
+        // <div class="issue-item__header">
+
+      HtmlNodeFilters.tagWithAttribute("div", "class", "issue-item__header"),
+
       // the We recommend section at the bottom of the page can differ, or not be present at all.
       // remove the entire parent div.
       new NodeFilter() {
