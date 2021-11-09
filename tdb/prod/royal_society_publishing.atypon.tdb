@@ -24,15 +24,15 @@
     {
     param[journal_id] = rsbm1932
     
-    au < exists ; 1932-1935 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1932-1935] ; 1 >
-    au < exists ; 1936-1939 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1936-1939] ; 2 >
-    au < exists ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 >
-    au < exists ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 >
-    au < exists ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 >
-    au < exists ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 >
-    au < exists ; 1950-1951 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 [1950-1951] ; 7 >
-    au < exists ; 1952-1953 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 [1952-1953] ; 8 >
-    au < exists ; 1954 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1954] ; 9 >
+    au < manifest ; 1932-1935 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1932-1935] ; 1 >
+    au < manifest ; 1936-1939 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1936-1939] ; 2 >
+    au < manifest ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 >
+    au < manifest ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 >
+    au < manifest ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 >
+    au < manifest ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 >
+    au < manifest ; 1950-1951 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 [1950-1951] ; 7 >
+    au < manifest ; 1952-1953 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 [1952-1953] ; 8 >
+    au < manifest ; 1954 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1954] ; 9 >
     }
     {
     param[journal_id] = rsbm
@@ -1014,13 +1014,13 @@
     # Articles before and after these dates are published in Philosophical Transactions.
     param[journal_id] = rscl
 
-    au < exists ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 >
-    au < exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 2 ; 2 >
-    au < exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 3 ; 3 >
-    au < exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 4 ; 4 >
-    au < exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 5 ; 5 >
-    au < exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 6 ; 6 >
-    au < exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 7 ; 7 >
+    au < manifest ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 >
+    au < manifest ; 1681 ; Philosophical Collections of the Royal Society of London Volume 2 ; 2 >
+    au < manifest ; 1681 ; Philosophical Collections of the Royal Society of London Volume 3 ; 3 >
+    au < manifest ; 1682 ; Philosophical Collections of the Royal Society of London Volume 4 ; 4 >
+    au < manifest ; 1682 ; Philosophical Collections of the Royal Society of London Volume 5 ; 5 >
+    au < manifest ; 1682 ; Philosophical Collections of the Royal Society of London Volume 6 ; 6 >
+    au < manifest ; 1682 ; Philosophical Collections of the Royal Society of London Volume 7 ; 7 >
 
   }
 

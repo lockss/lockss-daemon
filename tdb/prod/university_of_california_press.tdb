@@ -23,14 +23,14 @@
 
       param[journal_id] = afterimage
 
-      au < exists ; 2007 ; 2007 ; Afterimage Volume 34 ; 34 >
-      au < exists ; 2007 ; 2007 ; Afterimage Volume 35 (2007) ; 35 >
+      au < manifest ; 2007 ; 2007 ; Afterimage Volume 34 ; 34 >
+      au < manifest ; 2007 ; 2007 ; Afterimage Volume 35 (2007) ; 35 >
 
-      au < exists ; 2008 ; 2008 ; Afterimage Volume 35 (2008) ; 35 >
-      au < exists ; 2008 ; 2008 ; Afterimage Volume 36 (2008) ; 36 >
+      au < manifest ; 2008 ; 2008 ; Afterimage Volume 35 (2008) ; 35 >
+      au < manifest ; 2008 ; 2008 ; Afterimage Volume 36 (2008) ; 36 >
 
-      au < exists ; 2009 ; 2009 ; Afterimage Volume 36 (2009) ; 36 >
-      au < exists ; 2009 ; 2009 ; Afterimage Volume 37 (2009) ; 37 >
+      au < manifest ; 2009 ; 2009 ; Afterimage Volume 36 (2009) ; 36 >
+      au < manifest ; 2009 ; 2009 ; Afterimage Volume 37 (2009) ; 37 >
 
       au < manifest ; 2010 ; 2010 ; Afterimage Volume 37 (2010) ; 37 >
       au < manifest ; 2010 ; 2010 ; Afterimage Volume 38 (2010) ; 38 >
@@ -295,31 +295,31 @@
 
       param[journal_id] = cpcs
 
-      au < exists ; 1962 ; 1962 ; Communist and Post-Communist Studies Volume 1 (1962) ; 1 >
-      au < exists ; 1963 ; 1963 ; Communist and Post-Communist Studies Volume 1 (1963) ; 1 >
-      au < exists ; 1964 ; 1964 ; Communist and Post-Communist Studies Volume 2 (1964) ; 2 >
-      au < exists ; 1965 ; 1965 ; Communist and Post-Communist Studies Volume 3 (1965) ; 3 >
-      au < exists ; 1966 ; 1966 ; Communist and Post-Communist Studies Volume 4 (1966) ; 4 >
-      au < exists ; 1967 ; 1967 ; Communist and Post-Communist Studies Volume 5 (1967) ; 5 >
-      au < exists ; 1968 ; 1968 ; Communist and Post-Communist Studies Volume 6 (1968) ; 6 >
-      au < exists ; 1969 ; 1969 ; Communist and Post-Communist Studies Volume 2 (1969) ; 2 > #yes, really, V2 1969
-      au < exists ; 1970 ; 1970 ; Communist and Post-Communist Studies Volume 3 (1970) ; 3 > #yes, really, V3 1970
-      au < exists ; 1971 ; 1971 ; Communist and Post-Communist Studies Volume 4 (1971) ; 4 > #yes, really, V4 1971
-      au < exists ; 1972 ; 1972 ; Communist and Post-Communist Studies Volume 5 (1972) ; 5 > #yes, really, V5 1972
-      au < exists ; 1973 ; 1973 ; Communist and Post-Communist Studies Volume 6 (1973) ; 6 > #yes, really, V6 1973
-      au < exists ; 1974 ; 1974 ; Communist and Post-Communist Studies Volume 7 (1974) ; 7 >
-      au < exists ; 1975 ; 1975 ; Communist and Post-Communist Studies Volume 8 ; 8 >
-      au < exists ; 1976 ; 1976 ; Communist and Post-Communist Studies Volume 9 ; 9 >
-      au < exists ; 1977 ; 1977 ; Communist and Post-Communist Studies Volume 10 ; 10 >
-      au < exists ; 1978 ; 1978 ; Communist and Post-Communist Studies Volume 11 ; 11 >
-      au < exists ; 1979 ; 1979 ; Communist and Post-Communist Studies Volume 12 ; 12 >
+      au < manifest ; 1962 ; 1962 ; Communist and Post-Communist Studies Volume 1 (1962) ; 1 >
+      au < manifest ; 1963 ; 1963 ; Communist and Post-Communist Studies Volume 1 (1963) ; 1 >
+      au < manifest ; 1964 ; 1964 ; Communist and Post-Communist Studies Volume 2 (1964) ; 2 >
+      au < manifest ; 1965 ; 1965 ; Communist and Post-Communist Studies Volume 3 (1965) ; 3 >
+      au < manifest ; 1966 ; 1966 ; Communist and Post-Communist Studies Volume 4 (1966) ; 4 >
+      au < manifest ; 1967 ; 1967 ; Communist and Post-Communist Studies Volume 5 (1967) ; 5 >
+      au < manifest ; 1968 ; 1968 ; Communist and Post-Communist Studies Volume 6 (1968) ; 6 >
+      au < manifest ; 1969 ; 1969 ; Communist and Post-Communist Studies Volume 2 (1969) ; 2 > #yes, really, V2 1969
+      au < manifest ; 1970 ; 1970 ; Communist and Post-Communist Studies Volume 3 (1970) ; 3 > #yes, really, V3 1970
+      au < manifest ; 1971 ; 1971 ; Communist and Post-Communist Studies Volume 4 (1971) ; 4 > #yes, really, V4 1971
+      au < manifest ; 1972 ; 1972 ; Communist and Post-Communist Studies Volume 5 (1972) ; 5 > #yes, really, V5 1972
+      au < manifest ; 1973 ; 1973 ; Communist and Post-Communist Studies Volume 6 (1973) ; 6 > #yes, really, V6 1973
+      au < manifest ; 1974 ; 1974 ; Communist and Post-Communist Studies Volume 7 (1974) ; 7 >
+      au < manifest ; 1975 ; 1975 ; Communist and Post-Communist Studies Volume 8 ; 8 >
+      au < manifest ; 1976 ; 1976 ; Communist and Post-Communist Studies Volume 9 ; 9 >
+      au < manifest ; 1977 ; 1977 ; Communist and Post-Communist Studies Volume 10 ; 10 >
+      au < manifest ; 1978 ; 1978 ; Communist and Post-Communist Studies Volume 11 ; 11 >
+      au < manifest ; 1979 ; 1979 ; Communist and Post-Communist Studies Volume 12 ; 12 >
 
-      au < exists ; 2004 ; 2004 ; Communist and Post-Communist Studies Volume 37 ; 37 >
-      au < exists ; 2005 ; 2005 ; Communist and Post-Communist Studies Volume 38 ; 38 >
-      au < exists ; 2006 ; 2006 ; Communist and Post-Communist Studies Volume 39 ; 39 >
-      au < exists ; 2007 ; 2007 ; Communist and Post-Communist Studies Volume 40 ; 40 >
-      au < exists ; 2008 ; 2008 ; Communist and Post-Communist Studies Volume 41 ; 41 >
-      au < exists ; 2009 ; 2009 ; Communist and Post-Communist Studies Volume 42 ; 42 >
+      au < manifest ; 2004 ; 2004 ; Communist and Post-Communist Studies Volume 37 ; 37 >
+      au < manifest ; 2005 ; 2005 ; Communist and Post-Communist Studies Volume 38 ; 38 >
+      au < manifest ; 2006 ; 2006 ; Communist and Post-Communist Studies Volume 39 ; 39 >
+      au < manifest ; 2007 ; 2007 ; Communist and Post-Communist Studies Volume 40 ; 40 >
+      au < manifest ; 2008 ; 2008 ; Communist and Post-Communist Studies Volume 41 ; 41 >
+      au < manifest ; 2009 ; 2009 ; Communist and Post-Communist Studies Volume 42 ; 42 >
       au < manifest ; 2010 ; 2010 ; Communist and Post-Communist Studies Volume 43 ; 43 >
       au < manifest ; 2011 ; 2011 ; Communist and Post-Communist Studies Volume 44 ; 44 >
       au < manifest ; 2012 ; 2012 ; Communist and Post-Communist Studies Volume 45 ; 45 >
@@ -364,8 +364,8 @@
 
       param[journal_id] = caa
 
-      au < exists ; 2008 ; 2008 ; Contemporary Arab Affairs Volume 1 ; 1 >
-      au < exists ; 2009 ; 2009 ; Contemporary Arab Affairs Volume 2 ; 2 >
+      au < manifest ; 2008 ; 2008 ; Contemporary Arab Affairs Volume 1 ; 1 >
+      au < manifest ; 2009 ; 2009 ; Contemporary Arab Affairs Volume 2 ; 2 >
       au < manifest ; 2010 ; 2010 ; Contemporary Arab Affairs Volume 3 ; 3 >
       au < manifest ; 2011 ; 2011 ; Contemporary Arab Affairs Volume 4 ; 4 >
       au < manifest ; 2012 ; 2012 ; Contemporary Arab Affairs Volume 5 ; 5 >
@@ -1970,34 +1970,34 @@
       au < exists ; 2000 ; 2000 ; Representations Volume 70 ; 70 >
       au < exists ; 2000 ; 2000 ; Representations Volume 71 ; 71 >
       au < exists ; 2000 ; 2000 ; Representations Volume 72 ; 72 >
-      au < exists ; 2001 ; 2001 ; Representations Volume 73 ; 73 >
-      au < exists ; 2001 ; 2001 ; Representations Volume 74 ; 74 >
-      au < exists ; 2001 ; 2001 ; Representations Volume 75 ; 75 >
-      au < exists ; 2001 ; 2001 ; Representations Volume 76 ; 76 >
-      au < exists ; 2002 ; 2002 ; Representations Volume 77 ; 77 >
-      au < exists ; 2002 ; 2002 ; Representations Volume 78 ; 78 >
-      au < exists ; 2002 ; 2002 ; Representations Volume 79 ; 79 >
-      au < exists ; 2002 ; 2002 ; Representations Volume 80 ; 80 >
-      au < exists ; 2003 ; 2003 ; Representations Volume 81 ; 81 >
-      au < exists ; 2003 ; 2003 ; Representations Volume 82 ; 82 >
-      au < exists ; 2003 ; 2003 ; Representations Volume 83 ; 83 >
-      au < exists ; 2003 ; 2003 ; Representations Volume 84 ; 84 >
-      au < exists ; 2004 ; 2004 ; Representations Volume 85 ; 85 >
-      au < exists ; 2004 ; 2004 ; Representations Volume 86 ; 86 >
-      au < exists ; 2004 ; 2004 ; Representations Volume 87 ; 87 >
-      au < exists ; 2004 ; 2004 ; Representations Volume 88 ; 88 >
-      au < exists ; 2005 ; 2005 ; Representations Volume 89 ; 89 >
-      au < exists ; 2005 ; 2005 ; Representations Volume 90 ; 90 >
-      au < exists ; 2005 ; 2005 ; Representations Volume 91 ; 91 >
-      au < exists ; 2005 ; 2005 ; Representations Volume 92 ; 92 >
-      au < exists ; 2006 ; 2006 ; Representations Volume 93 ; 93 >
-      au < exists ; 2006 ; 2006 ; Representations Volume 94 ; 94 >
-      au < exists ; 2006 ; 2006 ; Representations Volume 95 ; 95 >
-      au < exists ; 2006 ; 2006 ; Representations Volume 96 ; 96 >
-      au < exists ; 2007 ; 2007 ; Representations Volume 97 ; 97 >
-      au < exists ; 2007 ; 2007 ; Representations Volume 98 ; 98 >
-      au < exists ; 2007 ; 2007 ; Representations Volume 99 ; 99 >
-      au < exists ; 2007 ; 2007 ; Representations Volume 100 ; 100 >
+      au < manifest ; 2001 ; 2001 ; Representations Volume 73 ; 73 >
+      au < manifest ; 2001 ; 2001 ; Representations Volume 74 ; 74 >
+      au < manifest ; 2001 ; 2001 ; Representations Volume 75 ; 75 >
+      au < manifest ; 2001 ; 2001 ; Representations Volume 76 ; 76 >
+      au < manifest ; 2002 ; 2002 ; Representations Volume 77 ; 77 >
+      au < manifest ; 2002 ; 2002 ; Representations Volume 78 ; 78 >
+      au < manifest ; 2002 ; 2002 ; Representations Volume 79 ; 79 >
+      au < manifest ; 2002 ; 2002 ; Representations Volume 80 ; 80 >
+      au < manifest ; 2003 ; 2003 ; Representations Volume 81 ; 81 >
+      au < manifest ; 2003 ; 2003 ; Representations Volume 82 ; 82 >
+      au < manifest ; 2003 ; 2003 ; Representations Volume 83 ; 83 >
+      au < manifest ; 2003 ; 2003 ; Representations Volume 84 ; 84 >
+      au < manifest ; 2004 ; 2004 ; Representations Volume 85 ; 85 >
+      au < manifest ; 2004 ; 2004 ; Representations Volume 86 ; 86 >
+      au < manifest ; 2004 ; 2004 ; Representations Volume 87 ; 87 >
+      au < manifest ; 2004 ; 2004 ; Representations Volume 88 ; 88 >
+      au < manifest ; 2005 ; 2005 ; Representations Volume 89 ; 89 >
+      au < manifest ; 2005 ; 2005 ; Representations Volume 90 ; 90 >
+      au < manifest ; 2005 ; 2005 ; Representations Volume 91 ; 91 >
+      au < manifest ; 2005 ; 2005 ; Representations Volume 92 ; 92 >
+      au < manifest ; 2006 ; 2006 ; Representations Volume 93 ; 93 >
+      au < manifest ; 2006 ; 2006 ; Representations Volume 94 ; 94 >
+      au < manifest ; 2006 ; 2006 ; Representations Volume 95 ; 95 >
+      au < manifest ; 2006 ; 2006 ; Representations Volume 96 ; 96 >
+      au < manifest ; 2007 ; 2007 ; Representations Volume 97 ; 97 >
+      au < manifest ; 2007 ; 2007 ; Representations Volume 98 ; 98 >
+      au < manifest ; 2007 ; 2007 ; Representations Volume 99 ; 99 >
+      au < manifest ; 2007 ; 2007 ; Representations Volume 100 ; 100 >
 
       au < doNotProcess ; 2008 ; 2008 ; Representations Volume 101 ; 101 >
       au < doNotProcess ; 2008 ; 2008 ; Representations Volume 102 ; 102 >
@@ -2072,31 +2072,31 @@
 
       param[journal_id] = rhetorica
 
-      au < exists ; 1983 ; 1983 ; Rhetorica: A Journal of the History of Rhetoric Volume 1 ; 1 >
-      au < exists ; 1984 ; 1984 ; Rhetorica: A Journal of the History of Rhetoric Volume 2 ; 2 >
-      au < exists ; 1985 ; 1985 ; Rhetorica: A Journal of the History of Rhetoric Volume 3 ; 3 >
-      au < exists ; 1986 ; 1986 ; Rhetorica: A Journal of the History of Rhetoric Volume 4 ; 4 >
-      au < exists ; 1987 ; 1987 ; Rhetorica: A Journal of the History of Rhetoric Volume 5 ; 5 >
-      au < exists ; 1988 ; 1988 ; Rhetorica: A Journal of the History of Rhetoric Volume 6 ; 6 >
-      au < exists ; 1989 ; 1989 ; Rhetorica: A Journal of the History of Rhetoric Volume 7 ; 7 >
-      au < exists ; 1990 ; 1990 ; Rhetorica: A Journal of the History of Rhetoric Volume 8 ; 8 >
-      au < exists ; 1991 ; 1991 ; Rhetorica: A Journal of the History of Rhetoric Volume 9 ; 9 >
-      au < exists ; 1992 ; 1992 ; Rhetorica: A Journal of the History of Rhetoric Volume 10 ; 10 >
-      au < exists ; 1993 ; 1993 ; Rhetorica: A Journal of the History of Rhetoric Volume 11 ; 11 >
-      au < exists ; 1994 ; 1994 ; Rhetorica: A Journal of the History of Rhetoric Volume 12 ; 12 >
-      au < exists ; 1995 ; 1995 ; Rhetorica: A Journal of the History of Rhetoric Volume 13 ; 13 >
-      au < exists ; 1996 ; 1996 ; Rhetorica: A Journal of the History of Rhetoric Volume 14 ; 14 >
-      au < exists ; 1997 ; 1997 ; Rhetorica: A Journal of the History of Rhetoric Volume 15 ; 15 >
-      au < exists ; 1998 ; 1998 ; Rhetorica: A Journal of the History of Rhetoric Volume 16 ; 16 >
-      au < exists ; 1999 ; 1999 ; Rhetorica: A Journal of the History of Rhetoric Volume 17 ; 17 >
-      au < exists ; 2000 ; 2000 ; Rhetorica: A Journal of the History of Rhetoric Volume 18 ; 18 >
-      au < exists ; 2001 ; 2001 ; Rhetorica: A Journal of the History of Rhetoric Volume 19 ; 19 >
-      au < exists ; 2002 ; 2002 ; Rhetorica: A Journal of the History of Rhetoric Volume 20 ; 20 >
-      au < exists ; 2003 ; 2003 ; Rhetorica: A Journal of the History of Rhetoric Volume 21 ; 21 >
-      au < exists ; 2004 ; 2004 ; Rhetorica: A Journal of the History of Rhetoric Volume 22 ; 22 >
-      au < exists ; 2005 ; 2005 ; Rhetorica: A Journal of the History of Rhetoric Volume 23 ; 23 >
-      au < exists ; 2006 ; 2006 ; Rhetorica: A Journal of the History of Rhetoric Volume 24 ; 24 >
-      au < exists ; 2007 ; 2007 ; Rhetorica: A Journal of the History of Rhetoric Volume 25 ; 25 >
+      au < manifest ; 1983 ; 1983 ; Rhetorica: A Journal of the History of Rhetoric Volume 1 ; 1 >
+      au < manifest ; 1984 ; 1984 ; Rhetorica: A Journal of the History of Rhetoric Volume 2 ; 2 >
+      au < manifest ; 1985 ; 1985 ; Rhetorica: A Journal of the History of Rhetoric Volume 3 ; 3 >
+      au < manifest ; 1986 ; 1986 ; Rhetorica: A Journal of the History of Rhetoric Volume 4 ; 4 >
+      au < manifest ; 1987 ; 1987 ; Rhetorica: A Journal of the History of Rhetoric Volume 5 ; 5 >
+      au < manifest ; 1988 ; 1988 ; Rhetorica: A Journal of the History of Rhetoric Volume 6 ; 6 >
+      au < manifest ; 1989 ; 1989 ; Rhetorica: A Journal of the History of Rhetoric Volume 7 ; 7 >
+      au < manifest ; 1990 ; 1990 ; Rhetorica: A Journal of the History of Rhetoric Volume 8 ; 8 >
+      au < manifest ; 1991 ; 1991 ; Rhetorica: A Journal of the History of Rhetoric Volume 9 ; 9 >
+      au < manifest ; 1992 ; 1992 ; Rhetorica: A Journal of the History of Rhetoric Volume 10 ; 10 >
+      au < manifest ; 1993 ; 1993 ; Rhetorica: A Journal of the History of Rhetoric Volume 11 ; 11 >
+      au < manifest ; 1994 ; 1994 ; Rhetorica: A Journal of the History of Rhetoric Volume 12 ; 12 >
+      au < manifest ; 1995 ; 1995 ; Rhetorica: A Journal of the History of Rhetoric Volume 13 ; 13 >
+      au < manifest ; 1996 ; 1996 ; Rhetorica: A Journal of the History of Rhetoric Volume 14 ; 14 >
+      au < manifest ; 1997 ; 1997 ; Rhetorica: A Journal of the History of Rhetoric Volume 15 ; 15 >
+      au < manifest ; 1998 ; 1998 ; Rhetorica: A Journal of the History of Rhetoric Volume 16 ; 16 >
+      au < manifest ; 1999 ; 1999 ; Rhetorica: A Journal of the History of Rhetoric Volume 17 ; 17 >
+      au < manifest ; 2000 ; 2000 ; Rhetorica: A Journal of the History of Rhetoric Volume 18 ; 18 >
+      au < manifest ; 2001 ; 2001 ; Rhetorica: A Journal of the History of Rhetoric Volume 19 ; 19 >
+      au < manifest ; 2002 ; 2002 ; Rhetorica: A Journal of the History of Rhetoric Volume 20 ; 20 >
+      au < manifest ; 2003 ; 2003 ; Rhetorica: A Journal of the History of Rhetoric Volume 21 ; 21 >
+      au < manifest ; 2004 ; 2004 ; Rhetorica: A Journal of the History of Rhetoric Volume 22 ; 22 >
+      au < manifest ; 2005 ; 2005 ; Rhetorica: A Journal of the History of Rhetoric Volume 23 ; 23 >
+      au < manifest ; 2006 ; 2006 ; Rhetorica: A Journal of the History of Rhetoric Volume 24 ; 24 >
+      au < manifest ; 2007 ; 2007 ; Rhetorica: A Journal of the History of Rhetoric Volume 25 ; 25 >
       au < doNotProcess ; 2008 ; 2008 ; Rhetorica: A Journal of the History of Rhetoric Volume 26 ; 26 >
       au < doNotProcess ; 2009 ; 2009 ; Rhetorica: A Journal of the History of Rhetoric Volume 27 ; 27 >
       au < doNotProcess ; 2010 ; 2010 ; Rhetorica: A Journal of the History of Rhetoric Volume 28 ; 28 >
@@ -2342,8 +2342,8 @@
 
       param[journal_id] = jvs
 
-      au < exists ; 2006 ; 2006 ; Journal of Vietnamese Studies Volume 1 ; 1 >
-      au < exists ; 2007 ; 2007 ; Journal of Vietnamese Studies Volume 2 ; 2 >
+      au < manifest ; 2006 ; 2006 ; Journal of Vietnamese Studies Volume 1 ; 1 >
+      au < manifest ; 2007 ; 2007 ; Journal of Vietnamese Studies Volume 2 ; 2 >
       au < doNotProcess ; 2008 ; 2008 ; Journal of Vietnamese Studies Volume 3 ; 3 >
       au < doNotProcess ; 2009 ; 2009 ; Journal of Vietnamese Studies Volume 4 ; 4 >
       au < doNotProcess ; 2010 ; 2010 ; Journal of Vietnamese Studies Volume 5 ; 5 >

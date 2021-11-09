@@ -106,11 +106,11 @@
      param[api_url] = https://api.ingentaconnect.com/
      param[journal_issn] = 2637-8329
 
-      au < exists ; 2017 ; Neurographics Volume 7 ; 7 > #Unable to fetch permission page, https://www.ingentaconnect.com/content/2637-8329?format=lockss&volume=7
-      au < exists ; 2018 ; Neurographics Volume 8 ; 8 >
-      au < exists ; 2019 ; Neurographics Volume 9 ; 9 >
-      au < expected ; 2020 ; Neurographics Volume 10 ; 10 >
-      au < expected ; 2021 ; Neurographics Volume 11 ; 11 >
+      au < manifest ; 2017 ; Neurographics Volume 7 ; 7 > #Unable to fetch permission page, https://www.ingentaconnect.com/content/2637-8329?format=lockss&volume=7
+      au < manifest ; 2018 ; Neurographics Volume 8 ; 8 >
+      au < manifest ; 2019 ; Neurographics Volume 9 ; 9 >
+      au < manifest ; 2020 ; Neurographics Volume 10 ; 10 >
+      au < manifest ; 2021 ; Neurographics Volume 11 ; 11 >
 
     }
 

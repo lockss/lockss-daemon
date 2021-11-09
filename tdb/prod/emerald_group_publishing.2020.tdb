@@ -3784,13 +3784,13 @@
     comment[journal_id] = ilr
     #Published 1983-2016
 
-    au < exists ; 2010 ; Interlending & Document Supply Volume 38 ; 38 >
-    au < exists ; 2011 ; Interlending & Document Supply Volume 39 ; 39 >
-    au < exists ; 2012 ; Interlending & Document Supply Volume 40 ; 40 >
-    au < exists ; 2013 ; Interlending & Document Supply Volume 41 ; 41 >
-    au < exists ; 2014 ; Interlending & Document Supply Volume 42 ; 42 >
-    au < exists ; 2015 ; Interlending & Document Supply Volume 43 ; 43 >
-    au < exists ; 2016 ; Interlending & Document Supply Volume 44 ; 44 >
+    au < manifest ; 2010 ; Interlending & Document Supply Volume 38 ; 38 >
+    au < manifest ; 2011 ; Interlending & Document Supply Volume 39 ; 39 >
+    au < manifest ; 2012 ; Interlending & Document Supply Volume 40 ; 40 >
+    au < manifest ; 2013 ; Interlending & Document Supply Volume 41 ; 41 >
+    au < manifest ; 2014 ; Interlending & Document Supply Volume 42 ; 42 >
+    au < manifest ; 2015 ; Interlending & Document Supply Volume 43 ; 43 >
+    au < manifest ; 2016 ; Interlending & Document Supply Volume 44 ; 44 >
 
   }
 

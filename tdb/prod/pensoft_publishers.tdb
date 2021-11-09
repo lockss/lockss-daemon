@@ -72,7 +72,7 @@
     au < doNotProcess ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 ; https://biorisk.pensoft.net/ >
     au < released ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 ; http://biorisk.pensoft.net/ >
     au < released ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 ; http://biorisk.pensoft.net/ >
-    au < exists ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 ; https://biorisk.pensoft.net/ > #no substance.
+    au < manifest ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 ; https://biorisk.pensoft.net/ > #no substance.
     au < released ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ >
     au < released ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ >
     au < released ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ >
@@ -452,14 +452,14 @@
 
       param[au_oai_set] = checklist
 
-      au < exists ; 2010 ; 2010 ; Check List Volume 2010 ; 2010 ; https://checklist.pensoft.net/ >
-      au < exists ; 2011 ; 2011 ; Check List Volume 2011 ; 2011 ; https://checklist.pensoft.net/ >
-      au < exists ; 2012 ; 2012 ; Check List Volume 2012 ; 2012 ; https://checklist.pensoft.net/ >
-      au < exists ; 2013 ; 2013 ; Check List Volume 2013 ; 2013 ; https://checklist.pensoft.net/ >
-      au < exists ; 2014 ; 2014 ; Check List Volume 2014 ; 2014 ; https://checklist.pensoft.net/ >
-      au < exists ; 2015 ; 2015 ; Check List Volume 2015 ; 2015 ; https://checklist.pensoft.net/ >
-      au < exists ; 2016 ; 2016 ; Check List Volume 2016 ; 2016 ; https://checklist.pensoft.net/ >
-      au < exists ; 2017 ; 2017 ; Check List Volume 2017 ; 2017 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2010 ; 2010 ; Check List Volume 2010 ; 2010 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2011 ; 2011 ; Check List Volume 2011 ; 2011 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2012 ; 2012 ; Check List Volume 2012 ; 2012 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2013 ; 2013 ; Check List Volume 2013 ; 2013 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2014 ; 2014 ; Check List Volume 2014 ; 2014 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2015 ; 2015 ; Check List Volume 2015 ; 2015 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2016 ; 2016 ; Check List Volume 2016 ; 2016 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2017 ; 2017 ; Check List Volume 2017 ; 2017 ; https://checklist.pensoft.net/ >
       au < released ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ >
       au < released ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ >
@@ -607,20 +607,20 @@
 
       param[au_oai_set] = mab
 
-      au < exists ; 2000 ; 2000 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2000 ; 2000 ; https://mab-online.nl/ >
-      au < exists ; 2001 ; 2001 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2001 ; 2001 ; https://mab-online.nl/ >
-      au < exists ; 2002 ; 2002 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2002 ; 2002 ; https://mab-online.nl/ >
-      au < exists ; 2003 ; 2003 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2003 ; 2003 ; https://mab-online.nl/ >
-      au < exists ; 2004 ; 2004 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2004 ; 2004 ; https://mab-online.nl/ >
-      au < exists ; 2005 ; 2005 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2005 ; 2005 ; https://mab-online.nl/ >
-      au < exists ; 2006 ; 2006 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2006 ; 2006 ; https://mab-online.nl/ >
-      au < exists ; 2007 ; 2007 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2007 ; 2007 ; https://mab-online.nl/ >
-      au < exists ; 2008 ; 2008 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2008 ; 2008 ; https://mab-online.nl/ >
-      au < exists ; 2009 ; 2009 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2009 ; 2009 ; https://mab-online.nl/ >
-      au < exists ; 2010 ; 2010 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2010 ; 2010 ; https://mab-online.nl/ >
-      au < exists ; 2011 ; 2011 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2011 ; 2011 ; https://mab-online.nl/ >
-      au < exists ; 2012 ; 2012 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2012 ; 2012 ; https://mab-online.nl/ >
-      au < exists ; 2013 ; 2013 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2013 ; 2013 ; https://mab-online.nl/ >
+      au < manifest ; 2000 ; 2000 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2000 ; 2000 ; https://mab-online.nl/ >
+      au < manifest ; 2001 ; 2001 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2001 ; 2001 ; https://mab-online.nl/ >
+      au < manifest ; 2002 ; 2002 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2002 ; 2002 ; https://mab-online.nl/ >
+      au < manifest ; 2003 ; 2003 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2003 ; 2003 ; https://mab-online.nl/ >
+      au < manifest ; 2004 ; 2004 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2004 ; 2004 ; https://mab-online.nl/ >
+      au < manifest ; 2005 ; 2005 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2005 ; 2005 ; https://mab-online.nl/ >
+      au < manifest ; 2006 ; 2006 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2006 ; 2006 ; https://mab-online.nl/ >
+      au < manifest ; 2007 ; 2007 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2007 ; 2007 ; https://mab-online.nl/ >
+      au < manifest ; 2008 ; 2008 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2008 ; 2008 ; https://mab-online.nl/ >
+      au < manifest ; 2009 ; 2009 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2009 ; 2009 ; https://mab-online.nl/ >
+      au < manifest ; 2010 ; 2010 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2010 ; 2010 ; https://mab-online.nl/ >
+      au < manifest ; 2011 ; 2011 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2011 ; 2011 ; https://mab-online.nl/ >
+      au < manifest ; 2012 ; 2012 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2012 ; 2012 ; https://mab-online.nl/ >
+      au < manifest ; 2013 ; 2013 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2013 ; 2013 ; https://mab-online.nl/ >
       au < released ; 2014 ; 2014 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2014 ; 2014 ; https://mab-online.nl/ >
       au < released ; 2015 ; 2015 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2015 ; 2015 ; https://mab-online.nl/ >
       au < released ; 2016 ; 2016 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2016 ; 2016 ; https://mab-online.nl/ >
@@ -664,7 +664,7 @@
       au < released ; 2018 ; 2018 ; Modern Electronic Materials Volume 2018 ; 2018 ; https://moem.pensoft.net/ >
       au < released ; 2019 ; 2019 ; Modern Electronic Materials Volume 2019 ; 2019 ; https://moem.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Modern Electronic Materials Volume 2020 ; 2020 ; https://moem.pensoft.net/ >
-      au < expected ; 2021 ; 2021 ; Modern Electronic Materials Volume 2021 ; 2021 ; https://moem.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Modern Electronic Materials Volume 2021 ; 2021 ; https://moem.pensoft.net/ >
 
   }
 
@@ -773,13 +773,13 @@
 
       param[au_oai_set] = rujec
 
-      au < exists ; 2015 ; 2015 ; Russian Journal of Economics Volume 2015 ; 2015 ; https://rujec.org/ >
-      au < exists ; 2016 ; 2016 ; Russian Journal of Economics Volume 2016 ; 2016 ; https://rujec.org/ >
-      au < exists ; 2017 ; 2017 ; Russian Journal of Economics Volume 2017 ; 2017 ; https://rujec.org/ >
-      au < exists ; 2018 ; 2018 ; Russian Journal of Economics Volume 2018 ; 2018 ; https://rujec.org/ >
-      au < exists ; 2019 ; 2019 ; Russian Journal of Economics Volume 2019 ; 2019 ; https://rujec.org/ >
-      au < exists ; 2020 ; 2020 ; Russian Journal of Economics Volume 2020 ; 2020 ; https://rujec.org/ >
-      au < exists ; 2021 ; 2021 ; Russian Journal of Economics Volume 2021 ; 2021 ; https://rujec.org/ >
+      au < manifest ; 2015 ; 2015 ; Russian Journal of Economics Volume 2015 ; 2015 ; https://rujec.org/ >
+      au < manifest ; 2016 ; 2016 ; Russian Journal of Economics Volume 2016 ; 2016 ; https://rujec.org/ >
+      au < manifest ; 2017 ; 2017 ; Russian Journal of Economics Volume 2017 ; 2017 ; https://rujec.org/ >
+      au < manifest ; 2018 ; 2018 ; Russian Journal of Economics Volume 2018 ; 2018 ; https://rujec.org/ >
+      au < manifest ; 2019 ; 2019 ; Russian Journal of Economics Volume 2019 ; 2019 ; https://rujec.org/ >
+      au < manifest ; 2020 ; 2020 ; Russian Journal of Economics Volume 2020 ; 2020 ; https://rujec.org/ >
+      au < manifest ; 2021 ; 2021 ; Russian Journal of Economics Volume 2021 ; 2021 ; https://rujec.org/ >
 
   }
 
@@ -865,9 +865,9 @@
 
       param[au_oai_set] = ap
 
-      au < exists ; 2019 ; 2019 ; ARPHA Proceedings Volume 2019 ; 2019 ; https://ap.pensoft.net/ >
-      au < exists ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ >
-      au < exists ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ >
+      au < manifest ; 2019 ; 2019 ; ARPHA Proceedings Volume 2019 ; 2019 ; https://ap.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ >
 
   }
 
@@ -881,8 +881,8 @@
 
       param[au_oai_set] = abs
 
-      au < exists ; 2020 ; 2020 ; Acta Biologica Sibirica Volume 2020 ; 2020 ; https://abs.pensoft.net/ >
-      au < exists ; 2021 ; 2021 ; Acta Biologica Sibirica Volume 2021 ; 2021 ; https://abs.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; Acta Biologica Sibirica Volume 2020 ; 2020 ; https://abs.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Acta Biologica Sibirica Volume 2021 ; 2021 ; https://abs.pensoft.net/ >
 
   }
 
@@ -897,9 +897,9 @@
 
       param[au_oai_set] = neotropical
 
-      au < exists ; 2019 ; 2019 ; NeoTropical Biology and Conservation Volume 2019 ; 2019 ; https://neotropical.pensoft.net/ >
-      au < exists ; 2020 ; 2020 ; NeoTropical Biology and Conservation Volume 2020 ; 2020 ; https://neotropical.pensoft.net/ >
-      au < exists ; 2021 ; 2021 ; NeoTropical Biology and Conservation Volume 2021 ; 2021 ; https://neotropical.pensoft.net/ >
+      au < manifest ; 2019 ; 2019 ; NeoTropical Biology and Conservation Volume 2019 ; 2019 ; https://neotropical.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; NeoTropical Biology and Conservation Volume 2020 ; 2020 ; https://neotropical.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; NeoTropical Biology and Conservation Volume 2021 ; 2021 ; https://neotropical.pensoft.net/ >
 
   }
 
@@ -914,9 +914,9 @@
 
       param[au_oai_set] = herpetozoa
 
-      au < exists ; 2019 ; 2019 ; OGH Herpetozoa Volume 2019 ; 2019 ; https://herpetozoa.pensoft.net/ >
-      au < exists ; 2020 ; 2020 ; OGH Herpetozoa Volume 2020 ; 2020 ; https://herpetozoa.pensoft.net/ >
-      au < exists ; 2021 ; 2021 ; OGH Herpetozoa Volume 2021 ; 2021 ; https://herpetozoa.pensoft.net/ >
+      au < manifest ; 2019 ; 2019 ; OGH Herpetozoa Volume 2019 ; 2019 ; https://herpetozoa.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; OGH Herpetozoa Volume 2020 ; 2020 ; https://herpetozoa.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; OGH Herpetozoa Volume 2021 ; 2021 ; https://herpetozoa.pensoft.net/ >
 
   }
 
@@ -931,8 +931,8 @@
 
       param[au_oai_set] = ese
 
-      au < exists ; 2020 ; 2020 ; European Science Editing (ESE) Volume 2020 ; 2020 ; https://ese.arphahub.com/ >
-      au < exists ; 2021 ; 2021 ; European Science Editing (ESE) Volume 2021 ; 2021 ; https://ese.arphahub.com/ >
+      au < manifest ; 2020 ; 2020 ; European Science Editing (ESE) Volume 2020 ; 2020 ; https://ese.arphahub.com/ >
+      au < manifest ; 2021 ; 2021 ; European Science Editing (ESE) Volume 2021 ; 2021 ; https://ese.arphahub.com/ >
 
   }
 
@@ -947,9 +947,9 @@
 
       param[au_oai_set] = travaux
 
-      au < exists ; 2019 ; 2019 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2019 ; 2019 ; https://travaux.pensoft.net/ >
-      au < exists ; 2020 ; 2020 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2020 ; 2020 ; https://travaux.pensoft.net/ >
-      au < exists ; 2021 ; 2021 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2021 ; 2021 ; https://travaux.pensoft.net/ >
+      au < manifest ; 2019 ; 2019 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2019 ; 2019 ; https://travaux.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2020 ; 2020 ; https://travaux.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2021 ; 2021 ; https://travaux.pensoft.net/ >
 
   }
 
@@ -964,9 +964,9 @@
 
       param[au_oai_set] = pharmacia
 
-      au < exists ; 2019 ; 2019 ; Pharmacia Volume 2019 ; 2019 ; https://pharmacia.pensoft.net/ >
-      au < exists ; 2020 ; 2020 ; Pharmacia Volume 2020 ; 2020 ; https://pharmacia.pensoft.net/ >
-      au < exists ; 2021 ; 2021 ; Pharmacia Volume 2021 ; 2021 ; https://pharmacia.pensoft.net/ >
+      au < manifest ; 2019 ; 2019 ; Pharmacia Volume 2019 ; 2019 ; https://pharmacia.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; Pharmacia Volume 2020 ; 2020 ; https://pharmacia.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Pharmacia Volume 2021 ; 2021 ; https://pharmacia.pensoft.net/ >
 
   }
 
@@ -980,8 +980,8 @@
 
       param[au_oai_set] = bgcardio
 
-      au < exists ; 2020 ; 2020 ; Bulgarian Cardiology Volume 2020 ; 2020 ; http://journal.bgcardio.org/ >
-      au < exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; http://journal.bgcardio.org/ >
+      au < manifest ; 2020 ; 2020 ; Bulgarian Cardiology Volume 2020 ; 2020 ; http://journal.bgcardio.org/ >
+      au < manifest ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; http://journal.bgcardio.org/ >
 
   }
 
@@ -995,8 +995,8 @@
 
       param[au_oai_set] = silvabalcanica
 
-      au < exists ; 2020 ; 2020 ; Silva Balcanica Volume 2020 ; 2020 ; https://silvabalcanica.pensoft.net/ >
-      au < exists ; 2021 ; 2021 ; Silva Balcanica Volume 2021 ; 2021 ; https://silvabalcanica.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; Silva Balcanica Volume 2020 ; 2020 ; https://silvabalcanica.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Silva Balcanica Volume 2021 ; 2021 ; https://silvabalcanica.pensoft.net/ >
 
   }
 
@@ -1010,8 +1010,8 @@
 
       param[au_oai_set] = jel
 
-      au < exists ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ >
-      au < exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ >
+      au < manifest ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ >
+      au < manifest ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ >
 
   }
 
@@ -1025,8 +1025,8 @@
 
       param[au_oai_set] = vcs
 
-      au < exists ; 2020 ; 2020 ; Vegetation Classification and Survey Volume 2020 ; 2020 ; https://vcs.pensoft.net/ >
-      au < exists ; 2021 ; 2021 ; Vegetation Classification and Survey Volume 2021 ; 2021 ; https://vcs.pensoft.net/ >
+      au < manifest ; 2020 ; 2020 ; Vegetation Classification and Survey Volume 2020 ; 2020 ; https://vcs.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Vegetation Classification and Survey Volume 2021 ; 2021 ; https://vcs.pensoft.net/ >
 
   }
 
