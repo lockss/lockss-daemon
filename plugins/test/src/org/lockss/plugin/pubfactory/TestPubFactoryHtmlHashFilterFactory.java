@@ -359,6 +359,23 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
       "</li>" +
     "</ul>";
 
+  private static final String divIdAbstract =
+    "<div id=\"ABSTRACT_OR_EXCERPT-28119-836330272\" class=\"abstract pf-summary-abstract_or_excerpt text-body1 cg-primary\">" +
+      "<abstract>" +
+        "<p>" +
+          "For over five decades, the Cold War security agenda was distinguished by the principal strategic balance, that of a structure of bipolarity, between the United States (US) and the Soviet Union (USSR). This book seeks to draw from current developments in critical security studies in order to establish a new framework of inquiry for security in the Middle East. It addresses the need to redefine security in the Middle East. The focus is squarely on the Arab-Israeli context in general, and the Palestinian-Israeli context in particular. The character of Arab-Israeli relations are measured by the Israeli foreign policy debate from the 1950s to the 1990s. A dialogue between Islam and Islamism as a means to broaden the terrain on which conflict resolution and post-bipolar security in the Middle East is to be understood is presented. The Middle East peace process (MEPP) was an additional factor in problematizing the military-strategic concept of security in the Middle East. The shift in analysis from national security to human security reflects the transformations of the post-Cold War era by combining military with non-military concerns such as environmental damage, social unrest, economic mismanagement, cultural conflict, gender inequity and radical fundamentalism. By way of contrast to realist international relations (IR) theory, developing-world theorists have proposed a different set of variables to explain the unique challenges facing developing states. Finally, the book examines the significance of ecopolitics in security agendas in the Middle East.</p>" +
+        "</p>" +
+      "</abstract>" +
+    "</div>";
+
+  private static final String filteredDivIdAbstract =
+    "<div class=\"abstract pf-summary-abstract_or_excerpt text-body1 cg-primary\">"+
+      "<abstract>" +
+        "<p>" +
+          "For over five decades, the Cold War security agenda was distinguished by the principal strategic balance, that of a structure of bipolarity, between the United States (US) and the Soviet Union (USSR). This book seeks to draw from current developments in critical security studies in order to establish a new framework of inquiry for security in the Middle East. It addresses the need to redefine security in the Middle East. The focus is squarely on the Arab-Israeli context in general, and the Palestinian-Israeli context in particular. The character of Arab-Israeli relations are measured by the Israeli foreign policy debate from the 1950s to the 1990s. A dialogue between Islam and Islamism as a means to broaden the terrain on which conflict resolution and post-bipolar security in the Middle East is to be understood is presented. The Middle East peace process (MEPP) was an additional factor in problematizing the military-strategic concept of security in the Middle East. The shift in analysis from national security to human security reflects the transformations of the post-Cold War era by combining military with non-military concerns such as environmental damage, social unrest, economic mismanagement, cultural conflict, gender inequity and radical fundamentalism. By way of contrast to realist international relations (IR) theory, developing-world theorists have proposed a different set of variables to explain the unique challenges facing developing states. Finally, the book examines the significance of ecopolitics in security agendas in the Middle East.</p>" +
+        "</p>" +
+      "</abstract>" +
+    "</div>";
 
   public void testFiltering() throws Exception {
 	    doFilterTest(bau, fact, blockHtml, blockFiltered);
@@ -418,5 +435,8 @@ public class TestPubFactoryHtmlHashFilterFactory extends LockssTestCase {
   }
   public void testOffsiteTextFiltering() throws Exception {
     doFilterTest(bau, fact, offSiteText, filteredOffSiteText);
+  }
+  public void testDivIdAbstractFiltering() throws Exception {
+    doFilterTest(bau, fact, divIdAbstract, filteredDivIdAbstract);
   }
 }
