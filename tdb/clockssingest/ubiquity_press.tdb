@@ -195,9 +195,7 @@
 #      param[base_url] = https://www.amscasereports.com/
 
       au < finished ; crawling ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ ; reingest2.clockss.org:8085 >
-      au < doesNotExist ; doesNotExist ; 2019 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2019 ; 2019 ; https://www.amscasereports.com/ ; >
-      au < expected ; exists ; 2020 ; 3 ; Annals of Medicine and Surgery Case Reports Volume 2020 ; 2020 ; https://www.amscasereports.com/ ; >
-      au < crawling ; exists ; 2021 ; 4 ; Annals of Medicine and Surgery Case Reports Volume 2021 ; 2021 ; https://www.amscasereports.com/ ; >
+      au < crawling ; exists ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2021 ; 2021 ; https://www.amscasereports.com/ ; >
 
   }
 
@@ -212,9 +210,6 @@
 #      param[base_url] = https://www.amsprotocols.com/
 
       au < finished ; crawling ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ ; reingest3.clockss.org:8083 >
-      au < doesNotExist ; doesNotExist ; 2019 ; 2 ; Annals of Medicine and Surgery Protocols Volume 2019 ; 2019 ; https://www.amsprotocols.com/ ; >
-      au < expected ; exists ; 2020 ; 2 ; Annals of Medicine and Surgery Protocols Volume 2020 ; 2020 ; https://www.amsprotocols.com/ ; >
-      au < expected ; exists ; 2021 ; 3 ; Annals of Medicine and Surgery Protocols Volume 2021 ; 2021 ; https://www.amsprotocols.com/ ; >
 
   }
 
@@ -230,8 +225,6 @@
 
       au < finished ; crawling ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; https://ijops.com/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2020 ; 3 ; International Journal of Orthoplastic Surgery Volume 2020 ; 2020 ; https://ijops.com/ ; >
-      au < expected ; exists ; 2021 ; 4 ; International Journal of Orthoplastic Surgery Volume 2021 ; 2021 ; https://ijops.com/ ; >
 
   }
 
