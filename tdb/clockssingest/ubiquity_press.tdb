@@ -21,8 +21,8 @@
       comment[publisher] = frommann-holzboog
 #      param[base_url] = https://steiner-studies.org/
 
-      au < exists ; exists ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ ; >
-      au < expected ; exists ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ ; >
+      au < manifest ; exists ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ ; >
+      au < manifest ; exists ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ ; >
 
   }
 }
@@ -376,8 +376,8 @@
       au < finished ; finished ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; https://www.modernlanguagesopen.org/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; https://www.modernlanguagesopen.org/ ; >
-      au < expected ; exists ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; https://www.modernlanguagesopen.org/ ; >
+      au < manifest ; exists ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; https://www.modernlanguagesopen.org/ ; >
+      au < manifest ; exists ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; https://www.modernlanguagesopen.org/ ; >
 
   }
 
@@ -595,7 +595,7 @@
       au < finished ; crawling ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 ; https://jer.openlibhums.org/ ; >
+      au < exists ; exists ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 ; https://jer.openlibhums.org/ ; >
 
   }
 
@@ -654,8 +654,7 @@
       au < finished ; finished ; 2017 ; 3 ; Karib: Nordic Journal for Caribbean Studies Volume 2017 ; 2017 ; https://www.karib.no/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 4 ; Karib: Nordic Journal for Caribbean Studies Volume 2018 ; 2018 ; https://www.karib.no/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 5 ; Karib: Nordic Journal for Caribbean Studies Volume 2019 ; 2019 ; https://www.karib.no/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2020 ; 6 ; Karib: Nordic Journal for Caribbean Studies Volume 2020 ; 2020 ; https://www.karib.no/ ; >
-      au < crawling ; exists ; 2021 ; 7 ; Karib: Nordic Journal for Caribbean Studies Volume 2021 ; 2021 ; https://www.karib.no/ ; >
+      au < crawling ; exists ; 2021 ; 6 ; Karib: Nordic Journal for Caribbean Studies Volume 2021 ; 2021 ; https://www.karib.no/ ; >
 
   }
 
@@ -669,8 +668,8 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://njtcg.org/
 
-      au < expected ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
-      au < expected ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
+      au < manifest ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
+      au < manifest ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
 
   }
 
@@ -879,6 +878,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.current-journal.com/
       #No substance on testing. Start url malformed.
+      #notReady - no content available on webpage
 
       au < notReady ; exists ; 2003 ; 19 ; Current: Journal of Marine Education Volume 2003 ; 2003 ; https://www.current-journal.com/ ; >
       au < doesNotExist ; doesNotExist ; 2004 ; 20 ; Current: Journal of Marine Education Volume 2004 ; 2004 ; https://www.current-journal.com/ ; >
@@ -898,7 +898,7 @@
       au < finished ; crawling ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; https://www.current-journal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; https://www.current-journal.com/ ; >
-      au < expected ; exists ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; https://www.current-journal.com/ ; >
+      au < manifest ; exists ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; https://www.current-journal.com/ ; >
 
   }
 
@@ -1194,8 +1194,8 @@
       au < finished ; crawling ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; http://www.ijic.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; https://www.ijic.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; https://www.ijic.org/ ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; https://www.ijic.org/ ; >
-      au < expected ; exists ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; https://www.ijic.org/ ; >
+      au < manifest ; exists ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; https://www.ijic.org/ ; >
 
   }
 
@@ -1367,9 +1367,9 @@
       au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 > #no www
       au < finished ; crawling ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 > #no www
-      au < exists ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
-      au < expected ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ ; >
-      au < expected ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
     }
   }
 
@@ -1396,9 +1396,8 @@
       au < finished ; finished ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; http://www.jmolecularsignaling.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; http://www.jmolecularsignaling.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; https://www.jmolecularsignaling.com/ ; reingest1.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2019 ; 14 ; Journal of Molecular Signaling Volume 2019 ; 2019 ; https://www.jmolecularsignaling.com/ ; >
-      au < deepCrawl ; exists ; 2020 ; 15 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; https://www.jmolecularsignaling.com/ ; >
-      au < expected ; exists ; 2021 ; 16 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; https://www.jmolecularsignaling.com/ ; >
+      au < deepCrawl ; exists ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; https://www.jmolecularsignaling.com/ ; >
+      au < expected ; exists ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; https://www.jmolecularsignaling.com/ ; >
 
   }
 
@@ -1615,12 +1614,12 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www.mahkuscript.com/
 
-      au < finished ; finished ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 2016 ; 2016 ; http://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2017 ; 2017 ; https://www.mahkuscript.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 2018 ; 2018 ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 2019 ; 2019 ; https://www.mahkuscript.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2020 ; 5 ; MaHKUscript: Journal of Fine Art Research Volume 2020 ; 2020 ; https://www.mahkuscript.com/ ; >
-      au < expected ; exists ; 2021 ; 6 ; MaHKUscript: Journal of Fine Art Research Volume 2021 ; 2021 ; https://www.mahkuscript.com/ ; >
+      au < finished ; finished ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 1 (2016) ; 2016 ; http://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 2 (2017) ; 2017 ; https://www.mahkuscript.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2 ; 2018 ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 3 ; 2019 ; https://www.mahkuscript.com/ ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; https://www.mahkuscript.com/ ; >
+      au < expected ; exists ; 2021 ; 5 ; MaHKUscript: Journal of Fine Art Research Volume 5 ; 2021 ; https://www.mahkuscript.com/ ; >
 
   }
 
@@ -1823,22 +1822,23 @@
       au < finished ; finished ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; http://www.presentpasts.info/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 [superseded] ; 2016 ; http://www.presentpasts.info/ ; >
     }
+
     {
       #Moved to https and removed www.
 #      param[base_url] = https://presentpasts.info/  #no www. use this
 
-      au < doesNotExist ; doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://presentpasts.info/ ; > #M exists. No articles for that year.
+      au < doesNotExist ; doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://presentpasts.info/ ; > #Articles in 2010.
       au < finished ; finished ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; https://presentpasts.info/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://presentpasts.info/ ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://presentpasts.info/ ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://presentpasts.info/ ; > #Articles in 2013.
       au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; https://presentpasts.info/ ; >
       au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; https://presentpasts.info/ ; >
-      au < doNotProcess ; exists ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ ; >
-      au < finished ; finished ; 2016 ; 8 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; 9 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; 10 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; 11 ; Present Pasts Volume 2020 ; 2020 ; https://presentpasts.info/ ; >
-      au < expected ; exists ; 2021 ; 12 ; Present Pasts Volume 2021 ; 2021 ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2015 ; 0 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ ; >
+      au < finished ; finished ; 2016 ; 7 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 8 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; 9 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; 10 ; Present Pasts Volume 2020 ; 2020 ; https://presentpasts.info/ ; >
+      au < expected ; exists ; 2021 ; 11 ; Present Pasts Volume 2021 ; 2021 ; https://presentpasts.info/ ; >
 
     }
   }
@@ -1912,6 +1912,7 @@
       au < superseded ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 [superseded] ; 2016 ; http://www.secularismandnonreligion.org/ ; >
       au < doNotProcess ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://www.secularismandnonreligion.org/ ; >
     }
+
     {
       #moved to https and lost www.
 #      param[base_url] = https://secularismandnonreligion.org/
@@ -2012,6 +2013,7 @@
       au < crawling ; exists ; 2021 ; 11 ; Tremor and Other Hyperkinetic Movements Volume 2021 ; 2021 ; https://tremorjournal.org/ ; >
 
   }
+
   {
 
       title <
@@ -2029,6 +2031,7 @@
       au < crawling ; exists ; 2021 ; 5 ; Journal of Open Hardware Volume 2021 ; 2021 ; https://openhardware.metajnl.com/ ; >
 
   }
+
   {
       title <
         name = Cultural Science Journal ;
@@ -2047,11 +2050,11 @@
       au < finished ; finished ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; https://culturalscience.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 10 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; 11 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; 12 ; Cultural Science Journal Volume 2019 ; 2019 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; 13 ; Cultural Science Journal Volume 2020 ; 2020 ; https://culturalscience.org/ ; >
-      au < expected ; exists ; 2021 ; 14 ; Cultural Science Journal Volume 2021 ; 2021 ; https://culturalscience.org/ ; >
+      au < finished ; finished ; 2017 ; 0 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 10 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; 11 ; Cultural Science Journal Volume 2019 ; 2019 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; 12 ; Cultural Science Journal Volume 2020 ; 2020 ; https://culturalscience.org/ ; >
+      au < expected ; exists ; 2021 ; 13 ; Cultural Science Journal Volume 2021 ; 2021 ; https://culturalscience.org/ ; >
 
   }
 
@@ -2073,8 +2076,6 @@
       au < finished ; finished ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; https://egems.academyhealth.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2020 ; 8 ; eGEMs Volume 2020 ; 2020 ; https://egems.academyhealth.org/ ; >
-      au < expected ; exists ; 2021 ; 9 ; eGEMs Volume 2021 ; 2021 ; https://egems.academyhealth.org/ ; >
 
   }
 
@@ -2195,16 +2196,16 @@
 #      param[base_url] = https://tilburglawreview.com/
       #name changed in 2008 to: Tilburg Law Review: Journal of International and Comparative Law. 
 
-      au < finished ; finished ; 2012 ; 1 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2012 ; 2012 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2013 ; 2 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2013 ; 2013 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2014 ; 3 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2014 ; 2014 ; https://tilburglawreview.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 4 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2015 ; 2015 ; https://tilburglawreview.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 5 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2016 ; 2016 ; https://tilburglawreview.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 6 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2018 ; 7 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; 8 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; 9 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ ; >
-      au < expected ; exists ; 2021 ; 10 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 ; https://tilburglawreview.com/ ; >
+      au < finished ; finished ; 2012 ; 17 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2012 ; 2012 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; 18 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2013 ; 2013 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; 19 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2014 ; 2014 ; https://tilburglawreview.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 20 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2015 ; 2015 ; https://tilburglawreview.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 21 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2016 ; 2016 ; https://tilburglawreview.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 22 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 23 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019 ; 24 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; 25 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ ; >
+      au < expected ; exists ; 2021 ; 26 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 ; https://tilburglawreview.com/ ; >
 
   }
 
@@ -2228,8 +2229,8 @@
       au < finished ; finished ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; https://www.ssas-yearbook.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ ; >
-      au < expected ; exists ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ ; >
+      au < manifest ; exists ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ ; >
+      au < manifest ; exists ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ ; >
 
   }
 
@@ -2244,9 +2245,6 @@
 #      param[base_url] = https://www.ijds.eu/
 
       au < finished ; finished ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ ; reingest1.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2019 ; 2 ; International Journal of Driving Science Volume 2019 ; 2019 ; https://www.ijds.eu/ ; >
-      au < expected ; exists ; 2020 ; 3 ; International Journal of Driving Science Volume 2020 ; 2020 ; https://www.ijds.eu/ ; >
-      au < expected ; exists ; 2021 ; 4 ; International Journal of Driving Science Volume 2021 ; 2021 ; https://www.ijds.eu/ ; >
 
   }
 
@@ -2344,7 +2342,7 @@
       comment[publisher] = University of East Anglia
 #      param[base_url] = https://newareastudies.com/
 
-      au < exists ; exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ ; >
+      au < manifest ; exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ ; >
       au < expected ; exists ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ ; >
 
   }
@@ -2375,7 +2373,7 @@
 
       au < finished ; crawling ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ ; >
+      au < manifest ; exists ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ ; >
 
   }
 }
@@ -2520,58 +2518,58 @@
       comment[publisher] = Utrecht University Library
 #      param[base_url] = http://www.bmgn-lchr.nl/
 
-      au < manifest ; exists ; 1970 ; 1 ; BMGN - Low Countries Historical Review Volume 1970 ; 1970 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1971 ; 2 ; BMGN - Low Countries Historical Review Volume 1971 ; 1971 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1972 ; 3 ; BMGN - Low Countries Historical Review Volume 1972 ; 1972 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1973 ; 4 ; BMGN - Low Countries Historical Review Volume 1973 ; 1973 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1974 ; 5 ; BMGN - Low Countries Historical Review Volume 1974 ; 1974 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1975 ; 6 ; BMGN - Low Countries Historical Review Volume 1975 ; 1975 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1976 ; 7 ; BMGN - Low Countries Historical Review Volume 1976 ; 1976 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1977 ; 8 ; BMGN - Low Countries Historical Review Volume 1977 ; 1977 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1978 ; 9 ; BMGN - Low Countries Historical Review Volume 1978 ; 1978 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1979 ; 10 ; BMGN - Low Countries Historical Review Volume 1979 ; 1979 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1980 ; 11 ; BMGN - Low Countries Historical Review Volume 1980 ; 1980 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1981 ; 12 ; BMGN - Low Countries Historical Review Volume 1981 ; 1981 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1982 ; 13 ; BMGN - Low Countries Historical Review Volume 1982 ; 1982 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1983 ; 14 ; BMGN - Low Countries Historical Review Volume 1983 ; 1983 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1984 ; 15 ; BMGN - Low Countries Historical Review Volume 1984 ; 1984 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1985 ; 16 ; BMGN - Low Countries Historical Review Volume 1985 ; 1985 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1986 ; 17 ; BMGN - Low Countries Historical Review Volume 1986 ; 1986 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1987 ; 18 ; BMGN - Low Countries Historical Review Volume 1987 ; 1987 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1988 ; 19 ; BMGN - Low Countries Historical Review Volume 1988 ; 1988 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1989 ; 20 ; BMGN - Low Countries Historical Review Volume 1989 ; 1989 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1990 ; 21 ; BMGN - Low Countries Historical Review Volume 1990 ; 1990 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1991 ; 22 ; BMGN - Low Countries Historical Review Volume 1991 ; 1991 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1992 ; 23 ; BMGN - Low Countries Historical Review Volume 1992 ; 1992 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1993 ; 24 ; BMGN - Low Countries Historical Review Volume 1993 ; 1993 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1994 ; 25 ; BMGN - Low Countries Historical Review Volume 1994 ; 1994 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1995 ; 26 ; BMGN - Low Countries Historical Review Volume 1995 ; 1995 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1996 ; 27 ; BMGN - Low Countries Historical Review Volume 1996 ; 1996 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1997 ; 28 ; BMGN - Low Countries Historical Review Volume 1997 ; 1997 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1998 ; 29 ; BMGN - Low Countries Historical Review Volume 1998 ; 1998 ; https://www.bmgn-lchr.nl/ ; >
-      au < manifest ; exists ; 1999 ; 30 ; BMGN - Low Countries Historical Review Volume 1999 ; 1999 ; https://www.bmgn-lchr.nl/ ; >
-      au < finished ; finished ; 2000 ; 31 ; BMGN - Low Countries Historical Review Volume 2000 ; 2000 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2001 ; 32 ; BMGN - Low Countries Historical Review Volume 2001 ; 2001 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2002 ; 33 ; BMGN - Low Countries Historical Review Volume 2002 ; 2002 ; https://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2003 ; 34 ; BMGN - Low Countries Historical Review Volume 2003 ; 2003 ; https://www.bmgn-lchr.nl/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2004 ; 35 ; BMGN - Low Countries Historical Review Volume 2004 ; 2004 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2005 ; 36 ; BMGN - Low Countries Historical Review Volume 2005 ; 2005 ; https://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2006 ; 37 ; BMGN - Low Countries Historical Review Volume 2006 ; 2006 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2007 ; 38 ; BMGN - Low Countries Historical Review Volume 2007 ; 2007 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2008 ; 39 ; BMGN - Low Countries Historical Review Volume 2008 ; 2008 ; https://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2009 ; 40 ; BMGN - Low Countries Historical Review Volume 2009 ; 2009 ; https://www.bmgn-lchr.nl/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2010 ; 41 ; BMGN - Low Countries Historical Review Volume 2010 ; 2010 ; http://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2011 ; 42 ; BMGN - Low Countries Historical Review Volume 2011 ; 2011 ; http://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2012 ; 43 ; BMGN - Low Countries Historical Review Volume 2012 ; 2012 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2013 ; 44 ; BMGN - Low Countries Historical Review Volume 2013 ; 2013 ; http://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; 45 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; http://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 46 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2016 ; 47 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2017 ; 48 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; http://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2018 ; 49 ; BMGN - Low Countries Historical Review Volume 2018 ; 2018 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; 50 ; BMGN - Low Countries Historical Review Volume 2019 ; 2019 ; https://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2020 ; 51 ; BMGN - Low Countries Historical Review Volume 2020 ; 2020 ; https://www.bmgn-lchr.nl/ ; >
-      au < expected ; exists ; 2021 ; 52 ; BMGN - Low Countries Historical Review Volume 2021 ; 2021 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1970 ; 85 ; BMGN - Low Countries Historical Review Volume 1970 ; 1970 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1971 ; 86 ; BMGN - Low Countries Historical Review Volume 1971 ; 1971 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1972 ; 87 ; BMGN - Low Countries Historical Review Volume 1972 ; 1972 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1973 ; 88 ; BMGN - Low Countries Historical Review Volume 1973 ; 1973 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1974 ; 89 ; BMGN - Low Countries Historical Review Volume 1974 ; 1974 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1975 ; 90 ; BMGN - Low Countries Historical Review Volume 1975 ; 1975 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1976 ; 91 ; BMGN - Low Countries Historical Review Volume 1976 ; 1976 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1977 ; 92 ; BMGN - Low Countries Historical Review Volume 1977 ; 1977 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1978 ; 93 ; BMGN - Low Countries Historical Review Volume 1978 ; 1978 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1979 ; 94 ; BMGN - Low Countries Historical Review Volume 1979 ; 1979 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1980 ; 95 ; BMGN - Low Countries Historical Review Volume 1980 ; 1980 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1981 ; 96 ; BMGN - Low Countries Historical Review Volume 1981 ; 1981 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1982 ; 97 ; BMGN - Low Countries Historical Review Volume 1982 ; 1982 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1983 ; 98 ; BMGN - Low Countries Historical Review Volume 1983 ; 1983 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1984 ; 99 ; BMGN - Low Countries Historical Review Volume 1984 ; 1984 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1985 ; 100 ; BMGN - Low Countries Historical Review Volume 1985 ; 1985 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1986 ; 101 ; BMGN - Low Countries Historical Review Volume 1986 ; 1986 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1987 ; 102 ; BMGN - Low Countries Historical Review Volume 1987 ; 1987 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1988 ; 103 ; BMGN - Low Countries Historical Review Volume 1988 ; 1988 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1989 ; 104 ; BMGN - Low Countries Historical Review Volume 1989 ; 1989 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1990 ; 105 ; BMGN - Low Countries Historical Review Volume 1990 ; 1990 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1991 ; 106 ; BMGN - Low Countries Historical Review Volume 1991 ; 1991 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1992 ; 107 ; BMGN - Low Countries Historical Review Volume 1992 ; 1992 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1993 ; 108 ; BMGN - Low Countries Historical Review Volume 1993 ; 1993 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1994 ; 109 ; BMGN - Low Countries Historical Review Volume 1994 ; 1994 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1995 ; 110 ; BMGN - Low Countries Historical Review Volume 1995 ; 1995 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1996 ; 111 ; BMGN - Low Countries Historical Review Volume 1996 ; 1996 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1997 ; 112 ; BMGN - Low Countries Historical Review Volume 1997 ; 1997 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1998 ; 113 ; BMGN - Low Countries Historical Review Volume 1998 ; 1998 ; https://www.bmgn-lchr.nl/ ; >
+      au < manifest ; exists ; 1999 ; 114 ; BMGN - Low Countries Historical Review Volume 1999 ; 1999 ; https://www.bmgn-lchr.nl/ ; >
+      au < finished ; finished ; 2000 ; 115 ; BMGN - Low Countries Historical Review Volume 2000 ; 2000 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2001 ; 116 ; BMGN - Low Countries Historical Review Volume 2001 ; 2001 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2002 ; 117 ; BMGN - Low Countries Historical Review Volume 2002 ; 2002 ; https://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2003 ; 118 ; BMGN - Low Countries Historical Review Volume 2003 ; 2003 ; https://www.bmgn-lchr.nl/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; 119 ; BMGN - Low Countries Historical Review Volume 2004 ; 2004 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 120 ; BMGN - Low Countries Historical Review Volume 2005 ; 2005 ; https://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 121 ; BMGN - Low Countries Historical Review Volume 2006 ; 2006 ; https://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 122 ; BMGN - Low Countries Historical Review Volume 2007 ; 2007 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; 123 ; BMGN - Low Countries Historical Review Volume 2008 ; 2008 ; https://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; 124 ; BMGN - Low Countries Historical Review Volume 2009 ; 2009 ; https://www.bmgn-lchr.nl/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 125 ; BMGN - Low Countries Historical Review Volume 2010 ; 2010 ; http://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; 126 ; BMGN - Low Countries Historical Review Volume 2011 ; 2011 ; http://www.bmgn-lchr.nl/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 127 ; BMGN - Low Countries Historical Review Volume 2012 ; 2012 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; 128 ; BMGN - Low Countries Historical Review Volume 2013 ; 2013 ; http://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 129 ; BMGN - Low Countries Historical Review Volume 2014 ; 2014 ; http://www.bmgn-lchr.nl/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 130 ; BMGN - Low Countries Historical Review Volume 2015 ; 2015 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; 131 ; BMGN - Low Countries Historical Review Volume 2016 ; 2016 ; http://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; 132 ; BMGN - Low Countries Historical Review Volume 2017 ; 2017 ; http://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 133 ; BMGN - Low Countries Historical Review Volume 2018 ; 2018 ; https://www.bmgn-lchr.nl/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; 134 ; BMGN - Low Countries Historical Review Volume 2019 ; 2019 ; https://www.bmgn-lchr.nl/ ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2020 ; 135 ; BMGN - Low Countries Historical Review Volume 2020 ; 2020 ; https://www.bmgn-lchr.nl/ ; >
+      au < exists ; exists ; 2021 ; 136 ; BMGN - Low Countries Historical Review Volume 2021 ; 2021 ; https://www.bmgn-lchr.nl/ ; >
 
   }
 
@@ -2585,12 +2583,13 @@
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.de-zeventiende-eeuw.nl/
 #     stopped publication after 2016
+      #website gone
 
       au < finished ; finished ; 2012 ; 28 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2012 ; 2012 ; https://www.de-zeventiende-eeuw.nl/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 29 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2013 ; 2013 ; https://www.de-zeventiende-eeuw.nl/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 30 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2014 ; 2014 ; https://www.de-zeventiende-eeuw.nl/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 31 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2015 ; 2015 ; https://www.de-zeventiende-eeuw.nl/ ; reingest2.clockss.org:8085 >
-      au < notReady ; exists ; 2016 ; 32 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; https://www.de-zeventiende-eeuw.nl/ ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 32 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; https://www.de-zeventiende-eeuw.nl/ ; >
       au < finished ; crawling ; 2017 ; 33 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2017 ; 2017 ; https://www.de-zeventiende-eeuw.nl/ ; reingest2.clockss.org:8085 >
 
   }
@@ -2715,8 +2714,6 @@
       au < finished ; crawling ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; https://www.history-culture-modernity.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; 6 ; International Journal for History, Culture and Modernity Volume 2018 ; 2018 ; https://www.history-culture-modernity.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 7 ; International Journal for History, Culture and Modernity Volume 2019 ; 2019 ; https://www.history-culture-modernity.org/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2020 ; 8 ; International Journal for History, Culture and Modernity Volume 2020 ; 2020 ; https://www.history-culture-modernity.org/ ; >
-      au < expected ; exists ; 2021 ; 9 ; International Journal for History, Culture and Modernity Volume 2021 ; 2021 ; https://www.history-culture-modernity.org/ ; >
 
   }
 
@@ -3135,8 +3132,6 @@
 
       au < finished ; crawling ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2020 ; 3 ; Undergraduate Journal of Politics and International Relations Volume 2020 ; 2020 ; https://www.ujpir-journal.com/ ; >
-      au < expected ; exists ; 2021 ; 4 ; Undergraduate Journal of Politics and International Relations Volume 2021 ; 2021 ; https://www.ujpir-journal.com/ ; >
 
   }
 }
