@@ -1,0 +1,68 @@
+{
+  publisher <
+    name = Society of Exploration Geophysicists ;
+    info[contract] = 2013 ;
+    #info[back] = 1900 ;
+    info[tester] = 8 ;
+    info[poller] = 3 ;
+    comment[platform] = Atypon/Abstracts
+ >
+  plugin = needs.plugin
+  param[base_url] = https://library.seg.org/
+
+  ####plugin = org.lockss.plugin.atypon.seg.ClockssSEGBooksPlugin #### Similar plugin
+  implicit < status ; status2 ; year ; param[item_doi] ; name ; hidden[proxy] >
+
+
+ {
+  title <
+   name = SEG Technical Program Expanded Abstracts ;
+   eissn = 1949-4645 ;
+   type = bookSeries
+  >
+
+
+   au < exists ; exists ; 1982 ; 10.1190/SEGEAB.1 ; SEG Technical Program Expanded Abstracts Volume 1982 ; >
+   au < exists ; exists ; 1983 ; 10.1190/SEGEAB.2 ; SEG Technical Program Expanded Abstracts Volume 1983 ; >
+   au < exists ; exists ; 1984 ; 10.1190/SEGEAB.3 ; SEG Technical Program Expanded Abstracts Volume 1984 ; >
+   au < exists ; exists ; 1985 ; 10.1190/SEGEAB.4 ; SEG Technical Program Expanded Abstracts Volume 1985 ; >
+   au < exists ; exists ; 1986 ; 10.1190/SEGEAB.5 ; SEG Technical Program Expanded Abstracts Volume 1986 ; >
+   au < exists ; exists ; 1987 ; 10.1190/SEGEAB.6 ; SEG Technical Program Expanded Abstracts Volume 1987 ; >
+   au < exists ; exists ; 1988 ; 10.1190/SEGEAB.7 ; SEG Technical Program Expanded Abstracts Volume 1988 ; >
+   au < exists ; exists ; 1989 ; 10.1190/SEGEAB.8 ; SEG Technical Program Expanded Abstracts Volume 1989 ; >
+   au < exists ; exists ; 1990 ; 10.1190/SEGEAB.9 ; SEG Technical Program Expanded Abstracts Volume 1990 ; >
+   au < exists ; exists ; 1991 ; 10.1190/SEGEAB.10 ; SEG Technical Program Expanded Abstracts Volume 1991 ; >
+   au < exists ; exists ; 1992 ; 10.1190/SEGEAB.11 ; SEG Technical Program Expanded Abstracts Volume 1992 ; >
+   au < exists ; exists ; 1993 ; 10.1190/SEGEAB.12 ; SEG Technical Program Expanded Abstracts Volume 1993 ; >
+   au < exists ; exists ; 1994 ; 10.1190/SEGEAB.13 ; SEG Technical Program Expanded Abstracts Volume 1994 ; >
+   au < exists ; exists ; 1995 ; 10.1190/SEGEAB.14 ; SEG Technical Program Expanded Abstracts Volume 1995 ; >
+   au < exists ; exists ; 1996 ; 10.1190/SEGEAB.15 ; SEG Technical Program Expanded Abstracts Volume 1996 ; >
+   au < exists ; exists ; 1997 ; 10.1190/SEGEAB.16 ; SEG Technical Program Expanded Abstracts Volume 1997 ; >
+   au < exists ; exists ; 1998 ; 10.1190/SEGEAB.17 ; SEG Technical Program Expanded Abstracts Volume 1998 ; >
+   au < exists ; exists ; 1999 ; 10.1190/SEGEAB.18 ; SEG Technical Program Expanded Abstracts Volume 1999 ; >
+   au < exists ; exists ; 2000 ; 10.1190/SEGEAB.19 ; SEG Technical Program Expanded Abstracts Volume 2000 ; >
+   au < exists ; exists ; 2001 ; 10.1190/SEGEAB.20 ; SEG Technical Program Expanded Abstracts Volume 2001 ; >
+   au < exists ; exists ; 2002 ; 10.1190/SEGEAB.21 ; SEG Technical Program Expanded Abstracts Volume 2002 ; >
+   au < exists ; exists ; 2003 ; 10.1190/SEGEAB.22 ; SEG Technical Program Expanded Abstracts Volume 2003 ; >
+   au < exists ; exists ; 2004 ; 10.1190/SEGEAB.23 ; SEG Technical Program Expanded Abstracts Volume 2004 ; >
+   au < exists ; exists ; 2005 ; 10.1190/SEGEAB.24 ; SEG Technical Program Expanded Abstracts Volume 2005 ; >
+   au < exists ; exists ; 2006 ; 10.1190/SEGEAB.25 ; SEG Technical Program Expanded Abstracts Volume 2006 ; >
+   au < exists ; exists ; 2007 ; 10.1190/SEGEAB.26 ; SEG Technical Program Expanded Abstracts Volume 2007 ; >
+   au < exists ; exists ; 2008 ; 10.1190/SEGEAB.27 ; SEG Technical Program Expanded Abstracts Volume 2008 ; >
+   au < exists ; exists ; 2009 ; 10.1190/SEGEAB.28 ; SEG Technical Program Expanded Abstracts Volume 2009 ; >
+   au < exists ; exists ; 2010 ; 10.1190/SEGEAB.29 ; SEG Technical Program Expanded Abstracts Volume 2010 ; >
+   au < exists ; exists ; 2011 ; 10.1190/SEGEAB.30 ; SEG Technical Program Expanded Abstracts Volume 2011 ; >
+   au < exists ; exists ; 2012 ; 10.1190/SEGEAB.31 ; SEG Technical Program Expanded Abstracts Volume 2012 ; >
+   au < exists ; exists ; 2013 ; 10.1190/SEGEAB.32 ; SEG Technical Program Expanded Abstracts Volume 2013 ; >
+   au < exists ; exists ; 2014 ; 10.1190/SEGEAB.33 ; SEG Technical Program Expanded Abstracts Volume 2014 ; >
+   au < exists ; exists ; 2015 ; 10.1190/SEGEAB.34 ; SEG Technical Program Expanded Abstracts Volume 2015 ; >
+   au < exists ; exists ; 2016 ; 10.1190/SEGEAB.35 ; SEG Technical Program Expanded Abstracts Volume 2016 ; >
+   au < exists ; exists ; 2017 ; 10.1190/SEGEAB.36 ; SEG Technical Program Expanded Abstracts Volume 2017 ; >
+   au < exists ; exists ; 2018 ; 10.1190/SEGEAB.37 ; SEG Technical Program Expanded Abstracts Volume 2018 ; >
+   au < exists ; exists ; 2019 ; 10.1190/SEGEAB.38 ; SEG Technical Program Expanded Abstracts Volume 2019 ; >
+   au < exists ; exists ; 2020 ; 10.1190/SEGEAB.39 ; SEG Technical Program Expanded Abstracts Volume 2020 ; >
+   au < expected ; exists ; 2021 ; 10.1190/SEGEAB.40 ; SEG Technical Program Expanded Abstracts Volume 2021 ; >
+
+ }
+
+}
