@@ -312,8 +312,21 @@
     au < released ; 2017 ; British Journal of School Nursing Volume 12 ; 12 ; https://www.magonlinelibrary.com/ >
     au < released ; 2018 ; British Journal of School Nursing Volume 13 ; 13 ; https://www.magonlinelibrary.com/ >
     au < released ; 2019 ; British Journal of School Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2020 ; British Journal of School Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2021 ; British Journal of School Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ >
+
+  }
+
+  {
+    title <
+      name = British Journal of Child Health ;
+      issn = 2633-5417 ;
+      eissn = 2633-5425
+    >
+
+    param[journal_id] = chhe
+    #continues = 1752-2803
+
+    au < exists ; 2020 ; British Journal of Child Health Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
+    au < exists ; 2021 ; British Journal of Child Health Volume 2 ; 2 ; https://www.magonlinelibrary.com/ >
 
   }
 
@@ -902,8 +915,6 @@
     au < released ; 2017 ; Child Care Volume 14 ; 14 ; https://www.magonlinelibrary.com/ >
     au < released ; 2018 ; Child Care Volume 15 ; 15 ; https://www.magonlinelibrary.com/ >
     au < released ; 2019 ; Child Care Volume 16 ; 16 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2020 ; Child Care Volume 17 ; 17 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2021 ; Child Care Volume 18 ; 18 ; https://www.magonlinelibrary.com/ >
 
   }
 
@@ -1045,8 +1056,6 @@
     au < released ; 2017 ; Practical Pre-School Volume 2017 ; 2017 ; https://www.magonlinelibrary.com/ >
     au < released ; 2018 ; Practical Pre-School Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ >
     au < released ; 2019 ; Practical Pre-School Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2020 ; Practical Pre-School Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ >
-    au < expected ; 2021 ; Practical Pre-School Volume 2021 ; 2021 ; https://www.magonlinelibrary.com/ >
 
   }
 
