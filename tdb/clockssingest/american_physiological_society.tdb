@@ -23,7 +23,7 @@
     >
 
     param[journal_id] = advances
-    #content available from 1989 volume 257 to 2016 volume 30, preserved with HW
+    #content available from 1989 V257 to 2016 V30, preserved with HW
 
     {
 
@@ -35,6 +35,251 @@
       au < crawling ; exists ; 2021 ; Advances in Physiology Education Volume 45 ; 45 ; https://journals.physiology.org/ ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Physiology - Legacy Content ;
+      issn = 0002-9513 ;
+      issnl = 0002-9513
+    >
+
+#    param[base_url] = http://ajplegacy.physiology.org/
+    param[journal_id] = ajplegacy
+    
+    au < doNotProcess ; exist ; 1898 ; American Journal of Physiology Volume 1 ; 1 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1899-1900 ; American Journal of Physiology Volume 3 ; 3 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1900-1901 ; American Journal of Physiology Volume 4 ; 4 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1901 ; American Journal of Physiology Volume 5 ; 5 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1901-1902 ; American Journal of Physiology Volume 6 ; 6 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1902 ; American Journal of Physiology Volume 7 ; 7 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1902-1903 ; American Journal of Physiology Volume 8 ; 8 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1903 ; American Journal of Physiology Volume 9 ; 9 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1903-1904 ; American Journal of Physiology Volume 10 ; 10 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1904 ; American Journal of Physiology Volume 11 ; 11 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1904-1905 ; American Journal of Physiology Volume 12 ; 12 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1905 ; American Journal of Physiology Volume 13 ; 13 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1905 ; American Journal of Physiology Volume 14 ; 14 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1905-1906 ; American Journal of Physiology Volume 15 ; 15 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1906 ; American Journal of Physiology Volume 16 ; 16 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1906-1907 ; American Journal of Physiology Volume 17 ; 17 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1907 ; American Journal of Physiology Volume 18 ; 18 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1907 ; American Journal of Physiology Volume 19 ; 19 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1907-1908 ; American Journal of Physiology Volume 20 ; 20 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1908 ; American Journal of Physiology Volume 21 ; 21 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1908 ; American Journal of Physiology Volume 22 ; 22 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1908-1909 ; American Journal of Physiology Volume 23 ; 23 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1909 ; American Journal of Physiology Volume 24 ; 24 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1909-1910 ; American Journal of Physiology Volume 25 ; 25 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1910 ; American Journal of Physiology Volume 26 ; 26 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1910-1911 ; American Journal of Physiology Volume 27 ; 27 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1911 ; American Journal of Physiology Volume 28 ; 28 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1911-1912 ; American Journal of Physiology Volume 29 ; 29 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1912 ; American Journal of Physiology Volume 30 ; 30 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1912-1913 ; American Journal of Physiology Volume 31 ; 31 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1913 ; American Journal of Physiology Volume 32 ; 32 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1914 ; American Journal of Physiology Volume 33 ; 33 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1914 ; American Journal of Physiology Volume 34 ; 34 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1914 ; American Journal of Physiology Volume 35 ; 35 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1914-1915 ; American Journal of Physiology Volume 36 ; 36 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1915 ; American Journal of Physiology Volume 37 ; 37 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1915 ; American Journal of Physiology Volume 38 ; 38 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1915-1916 ; American Journal of Physiology Volume 39 ; 39 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1916 ; American Journal of Physiology Volume 40 ; 40 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1916 ; American Journal of Physiology Volume 41 ; 41 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1916-1917 ; American Journal of Physiology Volume 42 ; 42 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1917 ; American Journal of Physiology Volume 43 ; 43 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1917 ; American Journal of Physiology Volume 44 ; 44 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1917-1918 ; American Journal of Physiology Volume 45 ; 45 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1918 ; American Journal of Physiology Volume 46 ; 46 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1918-1919 ; American Journal of Physiology Volume 47 ; 47 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1919 ; American Journal of Physiology Volume 48 ; 48 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1919 ; American Journal of Physiology Volume 49 ; 49 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1919-1920 ; American Journal of Physiology Volume 50 ; 50 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1920 ; American Journal of Physiology Volume 51 ; 51 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1920 ; American Journal of Physiology Volume 52 ; 52 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1920 ; American Journal of Physiology Volume 53 ; 53 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1920-1921 ; American Journal of Physiology Volume 54 ; 54 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1921 ; American Journal of Physiology Volume 55 ; 55 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1921 ; American Journal of Physiology Volume 56 ; 56 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1921 ; American Journal of Physiology Volume 57 ; 57 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1921-1922 ; American Journal of Physiology Volume 58 ; 58 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1922 ; American Journal of Physiology Volume 59 ; 59 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1922 ; American Journal of Physiology Volume 60 ; 60 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1922 ; American Journal of Physiology Volume 61 ; 61 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1922 ; American Journal of Physiology Volume 62 ; 62 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1922-1923 ; American Journal of Physiology Volume 63 ; 63 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1923 ; American Journal of Physiology Volume 64 ; 64 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1923 ; American Journal of Physiology Volume 65 ; 65 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1923 ; American Journal of Physiology Volume 66 ; 66 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1923-1924 ; American Journal of Physiology Volume 67 ; 67 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1924 ; American Journal of Physiology Volume 68 ; 68 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1924 ; American Journal of Physiology Volume 69 ; 69 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1924 ; American Journal of Physiology Volume 70 ; 70 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1924-1925 ; American Journal of Physiology Volume 71 ; 71 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1925 ; American Journal of Physiology Volume 72 ; 72 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1925 ; American Journal of Physiology Volume 73 ; 73 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1925 ; American Journal of Physiology Volume 74 ; 74 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1925-1926 ; American Journal of Physiology Volume 75 ; 75 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1926 ; American Journal of Physiology Volume 76 ; 76 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1926 ; American Journal of Physiology Volume 77 ; 77 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1926 ; American Journal of Physiology Volume 78 ; 78 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1926-1927 ; American Journal of Physiology Volume 79 ; 79 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1927 ; American Journal of Physiology Volume 80 ; 80 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1927 ; American Journal of Physiology Volume 81 ; 81 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1927 ; American Journal of Physiology Volume 82 ; 82 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1927-1928 ; American Journal of Physiology Volume 83 ; 83 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1928 ; American Journal of Physiology Volume 84 ; 84 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1928 ; American Journal of Physiology Volume 85 ; 85 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1928 ; American Journal of Physiology Volume 86 ; 86 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1928-1929 ; American Journal of Physiology Volume 87 ; 87 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1929 ; American Journal of Physiology Volume 88 ; 88 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1929 ; American Journal of Physiology Volume 89 ; 89 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1929 ; American Journal of Physiology Volume 90 ; 90 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1929-1930 ; American Journal of Physiology Volume 91 ; 91 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1930 ; American Journal of Physiology Volume 92 ; 92 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1930 ; American Journal of Physiology Volume 93 ; 93 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1930 ; American Journal of Physiology Volume 94 ; 94 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1930 ; American Journal of Physiology Volume 95 ; 95 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1931 ; American Journal of Physiology Volume 96 ; 96 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1931 ; American Journal of Physiology Volume 97 ; 97 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1931 ; American Journal of Physiology Volume 98 ; 98 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1931-1932 ; American Journal of Physiology Volume 99 ; 99 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1932 ; American Journal of Physiology Volume 100 ; 100 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1932 ; American Journal of Physiology Volume 101 ; 101 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1932 ; American Journal of Physiology Volume 102 ; 102 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1932-1933 ; American Journal of Physiology Volume 103 ; 103 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1933 ; American Journal of Physiology Volume 104 ; 104 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1933 ; American Journal of Physiology Volume 105 ; 105 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1933 ; American Journal of Physiology Volume 106 ; 106 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1933-1934 ; American Journal of Physiology Volume 107 ; 107 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1934 ; American Journal of Physiology Volume 108 ; 108 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1934 ; American Journal of Physiology Volume 109 ; 109 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1934 ; American Journal of Physiology Volume 110 ; 110 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1935 ; American Journal of Physiology Volume 111 ; 111 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1935 ; American Journal of Physiology Volume 112 ; 112 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1935 ; American Journal of Physiology Volume 113 ; 113 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1935-1936 ; American Journal of Physiology Volume 114 ; 114 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1936 ; American Journal of Physiology Volume 115 ; 115 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1936 ; American Journal of Physiology Volume 116 ; 116 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1936 ; American Journal of Physiology Volume 117 ; 117 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1936-1937 ; American Journal of Physiology Volume 118 ; 118 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1937 ; American Journal of Physiology Volume 119 ; 119 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1937 ; American Journal of Physiology Volume 120 ; 120 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1937-1938 ; American Journal of Physiology Volume 121 ; 121 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1938 ; American Journal of Physiology Volume 122 ; 122 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1938 ; American Journal of Physiology Volume 123 ; 123 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1938 ; American Journal of Physiology Volume 124 ; 124 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1938-1939 ; American Journal of Physiology Volume 125 ; 125 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1939 ; American Journal of Physiology Volume 126 ; 126 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1939 ; American Journal of Physiology Volume 127 ; 127 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1939-1940 ; American Journal of Physiology Volume 128 ; 128 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1940 ; American Journal of Physiology Volume 129 ; 129 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1940 ; American Journal of Physiology Volume 130 ; 130 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1940 ; American Journal of Physiology Volume 131 ; 131 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1941 ; American Journal of Physiology Volume 132 ; 132 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1941 ; American Journal of Physiology Volume 133 ; 133 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1941 ; American Journal of Physiology Volume 134 ; 134 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1941-1942 ; American Journal of Physiology Volume 135 ; 135 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1942 ; American Journal of Physiology Volume 136 ; 136 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1942 ; American Journal of Physiology Volume 137 ; 137 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1942-1943 ; American Journal of Physiology Volume 138 ; 138 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1943 ; American Journal of Physiology Volume 139 ; 139 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1943-1944 ; American Journal of Physiology Volume 140 ; 140 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1944 ; American Journal of Physiology Volume 141 ; 141 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1944 ; American Journal of Physiology Volume 142 ; 142 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1945 ; American Journal of Physiology Volume 143 ; 143 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1945 ; American Journal of Physiology Volume 144 ; 144 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1945-1946 ; American Journal of Physiology Volume 145 ; 145 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1946 ; American Journal of Physiology Volume 146 ; 146 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1946 ; American Journal of Physiology Volume 147 ; 147 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1947 ; American Journal of Physiology Volume 148 ; 148 ; https://www.physiology.org/ ; >
+    au < doNotProcess ; exist ; 1947 ; American Journal of Physiology Volume 149 ; 149 ; https://www.physiology.org/ ; >
+    au < exists ; exist ; 1947 ; American Journal of Physiology Volume 150 ; 150 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1947 ; American Journal of Physiology Volume 151 ; 151 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1947-1948 ; American Journal of Physiology Volume 152 ; 152 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1948 ; American Journal of Physiology Volume 153 ; 153 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1948 ; American Journal of Physiology Volume 154 ; 154 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1948 ; American Journal of Physiology Volume 155 ; 155 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1949 ; American Journal of Physiology Volume 156 ; 156 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1949 ; American Journal of Physiology Volume 157 ; 157 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1949 ; American Journal of Physiology Volume 158 ; 158 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1949 ; American Journal of Physiology Volume 159 ; 159 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1949-1950 ; American Journal of Physiology Volume 160 ; 160 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1950 ; American Journal of Physiology Volume 161 ; 161 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1950 ; American Journal of Physiology Volume 162 ; 162 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1950 ; American Journal of Physiology Volume 163 ; 163 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1950-1951 ; American Journal of Physiology Volume 164 ; 164 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1951 ; American Journal of Physiology Volume 165 ; 165 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1951 ; American Journal of Physiology Volume 166 ; 166 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1951 ; American Journal of Physiology Volume 167 ; 167 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1951-1952 ; American Journal of Physiology Volume 168 ; 168 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1952 ; American Journal of Physiology Volume 169 ; 169 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1952 ; American Journal of Physiology Volume 170 ; 170 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1952 ; American Journal of Physiology Volume 171 ; 171 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1952-1953 ; American Journal of Physiology Volume 172 ; 172 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1953 ; American Journal of Physiology Volume 173 ; 173 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1953 ; American Journal of Physiology Volume 174 ; 174 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1953 ; American Journal of Physiology Volume 175 ; 175 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1953-1954 ; American Journal of Physiology Volume 176 ; 176 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1954 ; American Journal of Physiology Volume 177 ; 177 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1954 ; American Journal of Physiology Volume 178 ; 178 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1954 ; American Journal of Physiology Volume 179 ; 179 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1954-1955 ; American Journal of Physiology Volume 180 ; 180 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1955 ; American Journal of Physiology Volume 181 ; 181 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1955 ; American Journal of Physiology Volume 182 ; 182 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1955 ; American Journal of Physiology Volume 183 ; 183 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1955-1956 ; American Journal of Physiology Volume 184 ; 184 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1956 ; American Journal of Physiology Volume 185 ; 185 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1956 ; American Journal of Physiology Volume 186 ; 186 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1956 ; American Journal of Physiology Volume 187 ; 187 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1956-1957 ; American Journal of Physiology Volume 188 ; 188 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1957 ; American Journal of Physiology Volume 189 ; 189 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1957 ; American Journal of Physiology Volume 190 ; 190 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1957 ; American Journal of Physiology Volume 191 ; 191 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1957-1958 ; American Journal of Physiology Volume 192 ; 192 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1958 ; American Journal of Physiology Volume 193 ; 193 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1958 ; American Journal of Physiology Volume 194 ; 194 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1958 ; American Journal of Physiology Volume 195 ; 195 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1958-1959 ; American Journal of Physiology Volume 196 ; 196 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1959 ; American Journal of Physiology Volume 197 ; 197 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1960 ; American Journal of Physiology Volume 198 ; 198 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1960 ; American Journal of Physiology Volume 199 ; 199 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1961 ; American Journal of Physiology Volume 200 ; 200 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1961 ; American Journal of Physiology Volume 201 ; 201 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1962 ; American Journal of Physiology Volume 202 ; 202 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1962 ; American Journal of Physiology Volume 203 ; 203 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1963 ; American Journal of Physiology Volume 204 ; 204 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1963 ; American Journal of Physiology Volume 205 ; 205 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1964 ; American Journal of Physiology Volume 206 ; 206 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1964 ; American Journal of Physiology Volume 207 ; 207 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; https://www.physiology.org/ ; >
+    au < exists ; exist ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; https://www.physiology.org/ ; >
+    au < exists ; exist ; 1966 ; American Journal of Physiology Volume 210 ; 210 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1966 ; American Journal of Physiology Volume 211 ; 211 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1967 ; American Journal of Physiology Volume 212 ; 212 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1967 ; American Journal of Physiology Volume 213 ; 213 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1968 ; American Journal of Physiology Volume 214 ; 214 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1968 ; American Journal of Physiology Volume 215 ; 215 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; https://www.physiology.org/ ; >
+    au < exists ; exist ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; https://www.physiology.org/ ; >
+    au < exists ; exist ; 1970 ; American Journal of Physiology Volume 218 ; 218 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1970 ; American Journal of Physiology Volume 219 ; 219 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1971 ; American Journal of Physiology Volume 220 ; 220 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1971 ; American Journal of Physiology Volume 221 ; 221 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1972 ; American Journal of Physiology Volume 222 ; 222 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1972 ; American Journal of Physiology Volume 223 ; 223 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1973 ; American Journal of Physiology Volume 224 ; 224 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1973 ; American Journal of Physiology Volume 225 ; 225 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1974 ; American Journal of Physiology Volume 226 ; 226 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1974 ; American Journal of Physiology Volume 227 ; 227 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1975 ; American Journal of Physiology Volume 228 ; 228 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1975 ; American Journal of Physiology Volume 229 ; 229 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1976 ; American Journal of Physiology Volume 230 ; 230 ; https://journals.physiology.org/ ; >
+    au < exists ; exist ; 1976 ; American Journal of Physiology Volume 231 ; 231 ; https://journals.physiology.org/ ; >
 
   }
 
@@ -61,10 +306,8 @@
       au < finished ; crawling ; 2019 ; American Journal of Physiology - Cell Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < crawling ; exists ; 2020 ; American Journal of Physiology - Cell Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Cell Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -93,10 +336,8 @@
       au < finished ; crawling ; 2019 ; American Journal of Physiology - Endocrinology and Metabolism Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 320 ; 320 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 321 ; 321 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 323 ; 323 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -125,10 +366,8 @@
       au < finished ; crawling ; 2019 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -157,10 +396,8 @@
       au < finished ; crawling ; 2019 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -189,10 +426,8 @@
       au < finished ; crawling ; 2019 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -221,10 +456,8 @@
       au < finished ; crawling ; 2019 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -254,10 +487,8 @@
       au < finished ; crawling ; 2019 ; American Journal of Physiology - Renal Physiology Volume 317 ; 317 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 318 ; 318 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 319 ; 319 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; American Journal of Physiology - Renal Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 320 ; 320 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 321 ; 321 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 322 ; 322 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; American Journal of Physiology - Renal Physiology Volume 323 ; 323 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -287,10 +518,8 @@
       au < finished ; crawling ; 2019 ; Journal of Applied Physiology Volume 127 ; 127 ; https://journals.physiology.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Applied Physiology Volume 128 ; 128 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Applied Physiology Volume 129 ; 129 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; Journal of Applied Physiology Volume 130 ; 130 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; Journal of Applied Physiology Volume 130 ; 130 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Applied Physiology Volume 131 ; 131 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; Journal of Applied Physiology Volume 132 ; 132 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; Journal of Applied Physiology Volume 133 ; 133 ; https://journals.physiology.org/ ; >
 
     }
 
@@ -320,10 +549,8 @@
       au < frozen ; exists ; 2019 ; Journal of Neurophysiology Volume 122 ; 122 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Neurophysiology Volume 123 ; 123 ; https://journals.physiology.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Neurophysiology Volume 124 ; 124 ; https://journals.physiology.org/ ; >
-      au < frozen ; exists ; 2020 ; Journal of Neurophysiology Volume 125 ; 125 ; https://journals.physiology.org/ ; >
+      au < frozen ; exists ; 2021 ; Journal of Neurophysiology Volume 125 ; 125 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2021 ; Journal of Neurophysiology Volume 126 ; 126 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; Journal of Neurophysiology Volume 127 ; 127 ; https://journals.physiology.org/ ; >
-      au < expected ; exists ; 2021 ; Journal of Neurophysiology Volume 128 ; 128 ; https://journals.physiology.org/ ; >
 
     }
 
