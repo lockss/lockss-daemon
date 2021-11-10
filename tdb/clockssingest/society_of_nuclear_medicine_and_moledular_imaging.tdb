@@ -31,7 +31,7 @@
     au < manifest ; exists ; 1967 ; Journal of Nuclear Medicine Volume 8 ; 8 ; >
     au < manifest ; exists ; 1968 ; Journal of Nuclear Medicine Volume 9 ; 9 ; >
     au < manifest ; exists ; 1969 ; Journal of Nuclear Medicine Volume 10 ; 10 ; >
-    au < testing ; exists ; 1970 ; Journal of Nuclear Medicine Volume 11 ; 11 ; >
+    au < ready ; exists ; 1970 ; Journal of Nuclear Medicine Volume 11 ; 11 ; >
     au < manifest ; exists ; 1971 ; Journal of Nuclear Medicine Volume 12 ; 12 ; >
     au < manifest ; exists ; 1972 ; Journal of Nuclear Medicine Volume 13 ; 13 ; >
     au < manifest ; exists ; 1973 ; Journal of Nuclear Medicine Volume 14 ; 14 ; >
@@ -51,7 +51,7 @@
     au < manifest ; exists ; 1987 ; Journal of Nuclear Medicine Volume 28 ; 28 ; >
     au < manifest ; exists ; 1988 ; Journal of Nuclear Medicine Volume 29 ; 29 ; >
     au < manifest ; exists ; 1989 ; Journal of Nuclear Medicine Volume 30 ; 30 ; >
-    au < testing ; exists ; 1990 ; Journal of Nuclear Medicine Volume 31 ; 31 ; >
+    au < ready ; exists ; 1990 ; Journal of Nuclear Medicine Volume 31 ; 31 ; >
     au < manifest ; exists ; 1991 ; Journal of Nuclear Medicine Volume 32 ; 32 ; >
     au < manifest ; exists ; 1992 ; Journal of Nuclear Medicine Volume 33 ; 33 ; >
     au < manifest ; exists ; 1993 ; Journal of Nuclear Medicine Volume 34 ; 34 ; >
@@ -69,7 +69,7 @@
     au < manifest ; exists ; 2005 ; Journal of Nuclear Medicine Volume 46 ; 46 ; >
     au < manifest ; exists ; 2006 ; Journal of Nuclear Medicine Volume 47 ; 47 ; >
     au < manifest ; exists ; 2007 ; Journal of Nuclear Medicine Volume 48 ; 48 ; >
-    au < testing ; exists ; 2008 ; Journal of Nuclear Medicine Volume 49 ; 49 ; >
+    au < ready ; exists ; 2008 ; Journal of Nuclear Medicine Volume 49 ; 49 ; >
     au < manifest ; exists ; 2009 ; Journal of Nuclear Medicine Volume 50 ; 50 ; >
     au < manifest ; exists ; 2010 ; Journal of Nuclear Medicine Volume 51 ; 51 ; >
     au < manifest ; exists ; 2011 ; Journal of Nuclear Medicine Volume 52 ; 52 ; >
@@ -80,9 +80,9 @@
     au < manifest ; exists ; 2016 ; Journal of Nuclear Medicine Volume 57 ; 57 ; >
     au < manifest ; exists ; 2017 ; Journal of Nuclear Medicine Volume 58 ; 58 ; >
     au < manifest ; exists ; 2018 ; Journal of Nuclear Medicine Volume 59 ; 59 ; >
-    au < testing ; exists ; 2019 ; Journal of Nuclear Medicine Volume 60 ; 60 ; >
+    au < ready ; exists ; 2019 ; Journal of Nuclear Medicine Volume 60 ; 60 ; >
     au < manifest ; exists ; 2020 ; Journal of Nuclear Medicine Volume 61 ; 61 ; >
-    au < testing ; exists ; 2021 ; Journal of Nuclear Medicine Volume 62 ; 62 ; >
+    au < ready ; exists ; 2021 ; Journal of Nuclear Medicine Volume 62 ; 62 ; >
 
   }
   {
@@ -96,7 +96,7 @@
 
     au < manifest ; exists ; 1973 ; Journal of Nuclear Medicine Technology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1974 ; Journal of Nuclear Medicine Technology Volume 2 ; 2 ; >
-    au < testing ; exists ; 1975 ; Journal of Nuclear Medicine Technology Volume 3 ; 3 ; >
+    au < ready ; exists ; 1975 ; Journal of Nuclear Medicine Technology Volume 3 ; 3 ; >
     au < manifest ; exists ; 1976 ; Journal of Nuclear Medicine Technology Volume 4 ; 4 ; >
     au < manifest ; exists ; 1977 ; Journal of Nuclear Medicine Technology Volume 5 ; 5 ; >
     au < manifest ; exists ; 1978 ; Journal of Nuclear Medicine Technology Volume 6 ; 6 ; >
@@ -105,7 +105,7 @@
     au < manifest ; exists ; 1981 ; Journal of Nuclear Medicine Technology Volume 9 ; 9 ; >
     au < manifest ; exists ; 1982 ; Journal of Nuclear Medicine Technology Volume 10 ; 10 ; >
     au < manifest ; exists ; 1983 ; Journal of Nuclear Medicine Technology Volume 11 ; 11 ; >
-    au < testing ; exists ; 1984 ; Journal of Nuclear Medicine Technology Volume 12 ; 12 ; >
+    au < ready ; exists ; 1984 ; Journal of Nuclear Medicine Technology Volume 12 ; 12 ; >
     au < manifest ; exists ; 1985 ; Journal of Nuclear Medicine Technology Volume 13 ; 13 ; >
     au < manifest ; exists ; 1986 ; Journal of Nuclear Medicine Technology Volume 14 ; 14 ; >
     au < manifest ; exists ; 1987 ; Journal of Nuclear Medicine Technology Volume 15 ; 15 ; >
@@ -116,7 +116,7 @@
     au < manifest ; exists ; 1992 ; Journal of Nuclear Medicine Technology Volume 20 ; 20 ; >
     au < manifest ; exists ; 1993 ; Journal of Nuclear Medicine Technology Volume 21 ; 21 ; >
     au < manifest ; exists ; 1994 ; Journal of Nuclear Medicine Technology Volume 22 ; 22 ; >
-    au < testing ; exists ; 1995 ; Journal of Nuclear Medicine Technology Volume 23 ; 23 ; >
+    au < ready ; exists ; 1995 ; Journal of Nuclear Medicine Technology Volume 23 ; 23 ; >
     au < manifest ; exists ; 1996 ; Journal of Nuclear Medicine Technology Volume 24 ; 24 ; >
     au < manifest ; exists ; 1997 ; Journal of Nuclear Medicine Technology Volume 25 ; 25 ; >
     au < manifest ; exists ; 1998 ; Journal of Nuclear Medicine Technology Volume 26 ; 26 ; >
@@ -128,7 +128,7 @@
     au < manifest ; exists ; 2004 ; Journal of Nuclear Medicine Technology Volume 32 ; 32 ; >
     au < manifest ; exists ; 2005 ; Journal of Nuclear Medicine Technology Volume 33 ; 33 ; >
     au < manifest ; exists ; 2006 ; Journal of Nuclear Medicine Technology Volume 34 ; 34 ; >
-    au < testing ; exists ; 2007 ; Journal of Nuclear Medicine Technology Volume 35 ; 35 ; >
+    au < ready ; exists ; 2007 ; Journal of Nuclear Medicine Technology Volume 35 ; 35 ; >
     au < manifest ; exists ; 2008 ; Journal of Nuclear Medicine Technology Volume 36 ; 36 ; >
     au < manifest ; exists ; 2009 ; Journal of Nuclear Medicine Technology Volume 37 ; 37 ; >
     au < manifest ; exists ; 2010 ; Journal of Nuclear Medicine Technology Volume 38 ; 38 ; >
@@ -141,8 +141,8 @@
     au < manifest ; exists ; 2017 ; Journal of Nuclear Medicine Technology Volume 45 ; 45 ; >
     au < manifest ; exists ; 2018 ; Journal of Nuclear Medicine Technology Volume 46 ; 46 ; >
     au < manifest ; exists ; 2019 ; Journal of Nuclear Medicine Technology Volume 47 ; 47 ; >
-    au < testing ; exists ; 2020 ; Journal of Nuclear Medicine Technology Volume 48 ; 48 ; >
-    au < testing ; exists ; 2021 ; Journal of Nuclear Medicine Technology Volume 49 ; 49 ; >
+    au < ready ; exists ; 2020 ; Journal of Nuclear Medicine Technology Volume 48 ; 48 ; >
+    au < ready ; exists ; 2021 ; Journal of Nuclear Medicine Technology Volume 49 ; 49 ; >
 
   }
 
