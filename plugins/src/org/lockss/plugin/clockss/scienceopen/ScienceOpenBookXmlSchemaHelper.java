@@ -49,7 +49,7 @@ public class ScienceOpenBookXmlSchemaHelper
   static Logger log = Logger.getLogger(ScienceOpenBookXmlSchemaHelper.class);
 
   /*
-
+  Parse the surname and given names of all the authors into a comma seperated list.
   <contrib-group>
       <contrib contrib-type="author">
           <name>
@@ -159,17 +159,19 @@ public class ScienceOpenBookXmlSchemaHelper
   // set children
   public static final String book_doi = book_meta + "book-id[@book-id-type = 'doi']";
   public static final String book_title = book_meta + "book-title-group/book-title";
-  private static final String book_publisher = book_meta + "publisher/publisher-name";
-  private static final String book_pub_date = book_meta + "pub-date";
-  private static final String book_isbn = book_meta + "isbn[@publication-format = 'print']";
-  private static final String book_eisbn = book_meta + "isbn[@publication-format = 'electronic']";
+  public static final String book_publisher = book_meta + "publisher/publisher-name";
+  public static final String book_pub_date = book_meta + "pub-date";
+  public static final String book_isbn = book_meta + "isbn[@publication-format = 'print']";
+  public static final String book_eisbn = book_meta + "isbn[@publication-format = 'electronic']";
+  public static final String book_editor = book_meta + "contrib-group/contrib[@contrib-type = 'editor']/name";
+  public static final String book_page_count = book_meta + "counts/book-page-count/@count";
 
   // set parent of chapter meta
-  private static final String chapter_meta = "book-body/book-part[@book-part-type = 'chapter']/book-part-meta/";
+  public static final String chapter_meta = "book-body/book-part[@book-part-type = 'chapter']/book-part-meta/";
   // set children
-  private static final String chapter_doi = chapter_meta + "book-part-id[@book-part-id-type = 'doi']";
+  public static final String chapter_doi = chapter_meta + "book-part-id[@book-part-id-type = 'doi']";
   public static final String chapter_title = chapter_meta + "title-group/title";
-  private static final String chapter_author = chapter_meta + "contrib-group/contrib[@contrib-type = 'author']/name";
+  public static final String chapter_author = chapter_meta + "contrib-group/contrib[@contrib-type = 'author']/name";
   public static final String chapter_copyright_year = chapter_meta + "permissions/copyright-year";
   public static final String chapter_pdf = chapter_meta + "alternate-form[@alternate-form-type = 'pdf']/@href";
 
@@ -185,6 +187,7 @@ public class ScienceOpenBookXmlSchemaHelper
     articleMap.put(book_pub_date, DATE_VALUE);
     articleMap.put(chapter_doi, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(chapter_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(book_editor, AUTHOR_VALUE);
     articleMap.put(chapter_author, AUTHOR_VALUE);
     articleMap.put(chapter_copyright_year, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(chapter_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -198,11 +201,14 @@ public class ScienceOpenBookXmlSchemaHelper
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    // do NOT cook publisher_name; get from TDB file for consistency
     cookMap.put(book_isbn, MetadataField.FIELD_ISBN);
+    cookMap.put(book_eisbn, MetadataField.FIELD_EISBN);
     cookMap.put(book_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(book_publisher, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(book_page_count, MetadataField.FIELD_END_PAGE);
     cookMap.put(chapter_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(chapter_author, MetadataField.FIELD_AUTHOR);
+    cookMap.put(book_editor, MetadataField.FIELD_AUTHOR);
     cookMap.put(chapter_doi, MetadataField.FIELD_DOI);
     cookMap.put(book_pub_date, MetadataField.FIELD_DATE);
   }

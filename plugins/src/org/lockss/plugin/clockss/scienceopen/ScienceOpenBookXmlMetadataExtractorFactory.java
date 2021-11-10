@@ -67,6 +67,8 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
   // currently only for meeting papers which is book format
   private static SourceXmlSchemaHelper ScienceOpenBookHelper = null;
 
+  private static String ScienceOpen = "ScienceOpen";
+
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                            String contentType)
@@ -157,13 +159,18 @@ public class ScienceOpenBookXmlMetadataExtractorFactory extends SourceXmlMetadat
           thisAM.put(MetadataField.FIELD_DOI,thisAM.getRaw(ScienceOpenBookXmlSchemaHelper.book_doi));
         }
       }
-      // Fill in Publisher Name from TDB, with this fall back for safety.
-      String publisherName = "Carl Grossman";
+      // Fill in Publisher Name from TDB, if missing, with this fall back for safety.
+      String publisherName = ScienceOpen; //"Carl Grossman";
       TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
       if (tdbau != null) {
         publisherName =  tdbau.getPublisherName();
       }
-      thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+      if (thisAM.getRaw(ScienceOpenBookXmlSchemaHelper.book_publisher) != null) {
+        thisAM.putIfBetter(MetadataField.FIELD_PUBLISHER, publisherName);
+      }
+      // as ScienceOpen wants to all material they provide 'counted' as one,
+      // setting the Provider field to ScienceOpen makes sense.
+      thisAM.put(MetadataField.FIELD_PROVIDER, ScienceOpen);
     }
 
   }
