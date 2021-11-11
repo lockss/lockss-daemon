@@ -2343,27 +2343,28 @@
       eissn = 2231-2730 ;
       issnl = 0970-9185
    >
-#    param[base_url] = http://www.joacp.org/
+    #param[base_url] = http://www.joacp.org/
+    #Moved to Wolters Kluwer
 
     param[journal_issn] = 0970-9185
 
-    au < manifest ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 ; https://www.joacp.org/ >
-    au < manifest ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 ; https://www.joacp.org/ >
-    au < manifest ; 2007 ; Journal of Anaesthesiology Clinical Pharmacology Volume 23 ; 2007 ; 23 ; https://www.joacp.org/ >
-    au < manifest ; 2008 ; Journal of Anaesthesiology Clinical Pharmacology Volume 24 ; 2008 ; 24 ; https://www.joacp.org/ >
-    au < manifest ; 2009 ; Journal of Anaesthesiology Clinical Pharmacology Volume 25 ; 2009 ; 25 ; https://www.joacp.org/ >
-    au < manifest ; 2010 ; Journal of Anaesthesiology Clinical Pharmacology Volume 26 ; 2010 ; 26 ; https://www.joacp.org/ >
-    au < released ; 2011 ; Journal of Anaesthesiology Clinical Pharmacology Volume 27 ; 2011 ; 27 ; http://www.joacp.org/ >
-    au < released ; 2012 ; Journal of Anaesthesiology Clinical Pharmacology Volume 28 ; 2012 ; 28 ; http://www.joacp.org/ >
-    au < released ; 2013 ; Journal of Anaesthesiology Clinical Pharmacology Volume 29 ; 2013 ; 29 ; http://www.joacp.org/ >
-    au < released ; 2014 ; Journal of Anaesthesiology Clinical Pharmacology Volume 30 ; 2014 ; 30 ; http://www.joacp.org/ >
-    au < released ; 2015 ; Journal of Anaesthesiology Clinical Pharmacology Volume 31 ; 2015 ; 31 ; http://www.joacp.org/ >
-    au < released ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; http://www.joacp.org/ >
-    au < released ; 2017 ; Journal of Anaesthesiology Clinical Pharmacology Volume 33 ; 2017 ; 33 ; http://www.joacp.org/ >
-    au < manifest ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; https://www.joacp.org/ >
-    au < released ; 2019 ; Journal of Anaesthesiology Clinical Pharmacology Volume 35 ; 2019 ; 35 ; https://www.joacp.org/ >
-    au < released ; 2020 ; Journal of Anaesthesiology Clinical Pharmacology Volume 36 ; 2020 ; 36 ; https://www.joacp.org/ >
-    au < manifest ; 2021 ; Journal of Anaesthesiology Clinical Pharmacology Volume 37 ; 2021 ; 37 ; https://www.joacp.org/ >
+    au < doNotProcess ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 ; https://www.joacp.org/ >
+    au < doNotProcess ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 ; https://www.joacp.org/ >
+    au < doNotProcess ; 2007 ; Journal of Anaesthesiology Clinical Pharmacology Volume 23 ; 2007 ; 23 ; https://www.joacp.org/ >
+    au < doNotProcess ; 2008 ; Journal of Anaesthesiology Clinical Pharmacology Volume 24 ; 2008 ; 24 ; https://www.joacp.org/ >
+    au < doNotProcess ; 2009 ; Journal of Anaesthesiology Clinical Pharmacology Volume 25 ; 2009 ; 25 ; https://www.joacp.org/ >
+    au < doNotProcess ; 2010 ; Journal of Anaesthesiology Clinical Pharmacology Volume 26 ; 2010 ; 26 ; https://www.joacp.org/ >
+    au < down ; 2011 ; Journal of Anaesthesiology Clinical Pharmacology Volume 27 ; 2011 ; 27 ; http://www.joacp.org/ >
+    au < down ; 2012 ; Journal of Anaesthesiology Clinical Pharmacology Volume 28 ; 2012 ; 28 ; http://www.joacp.org/ >
+    au < down ; 2013 ; Journal of Anaesthesiology Clinical Pharmacology Volume 29 ; 2013 ; 29 ; http://www.joacp.org/ >
+    au < down ; 2014 ; Journal of Anaesthesiology Clinical Pharmacology Volume 30 ; 2014 ; 30 ; http://www.joacp.org/ >
+    au < down ; 2015 ; Journal of Anaesthesiology Clinical Pharmacology Volume 31 ; 2015 ; 31 ; http://www.joacp.org/ >
+    au < down ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; http://www.joacp.org/ >
+    au < down ; 2017 ; Journal of Anaesthesiology Clinical Pharmacology Volume 33 ; 2017 ; 33 ; http://www.joacp.org/ >
+    au < doNotProcess ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; https://www.joacp.org/ >
+    au < down ; 2019 ; Journal of Anaesthesiology Clinical Pharmacology Volume 35 ; 2019 ; 35 ; https://www.joacp.org/ >
+    au < down ; 2020 ; Journal of Anaesthesiology Clinical Pharmacology Volume 36 ; 2020 ; 36 ; https://www.joacp.org/ >
+    au < doNotProcess ; 2021 ; Journal of Anaesthesiology Clinical Pharmacology Volume 37 ; 2021 ; 37 ; https://www.joacp.org/ >
 
   }
 #  {

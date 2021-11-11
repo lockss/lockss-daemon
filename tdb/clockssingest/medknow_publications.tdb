@@ -2350,27 +2350,28 @@
       eissn = 2231-2730 ;
       issnl = 0970-9185
    >
-#    param[base_url] = http://www.joacp.org/
+    #param[base_url] = http://www.joacp.org/
+    #Moved to Wolters Kluwer
 
     param[journal_issn] = 0970-9185
 
-    au < manifest ; exists ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 ; https://www.joacp.org/ ; ; >
-    au < manifest ; exists ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 ; https://www.joacp.org/ ; ; >
-    au < manifest ; exists ; 2007 ; Journal of Anaesthesiology Clinical Pharmacology Volume 23 ; 2007 ; 23 ; https://www.joacp.org/ ; ; >
-    au < manifest ; exists ; 2008 ; Journal of Anaesthesiology Clinical Pharmacology Volume 24 ; 2008 ; 24 ; https://www.joacp.org/ ; ; >
-    au < manifest ; exists ; 2009 ; Journal of Anaesthesiology Clinical Pharmacology Volume 25 ; 2009 ; 25 ; https://www.joacp.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Journal of Anaesthesiology Clinical Pharmacology Volume 26 ; 2010 ; 26 ; https://www.joacp.org/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 ; https://www.joacp.org/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 ; https://www.joacp.org/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Anaesthesiology Clinical Pharmacology Volume 23 ; 2007 ; 23 ; https://www.joacp.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Anaesthesiology Clinical Pharmacology Volume 24 ; 2008 ; 24 ; https://www.joacp.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Anaesthesiology Clinical Pharmacology Volume 25 ; 2009 ; 25 ; https://www.joacp.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Anaesthesiology Clinical Pharmacology Volume 26 ; 2010 ; 26 ; https://www.joacp.org/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Anaesthesiology Clinical Pharmacology Volume 27 ; 2011 ; 27 ; http://www.joacp.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Journal of Anaesthesiology Clinical Pharmacology Volume 28 ; 2012 ; 28 ; http://www.joacp.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Journal of Anaesthesiology Clinical Pharmacology Volume 29 ; 2013 ; 29 ; http://www.joacp.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2014 ; Journal of Anaesthesiology Clinical Pharmacology Volume 30 ; 2014 ; 30 ; http://www.joacp.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Journal of Anaesthesiology Clinical Pharmacology Volume 31 ; 2015 ; 31 ; http://www.joacp.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; http://www.joacp.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; http://www.joacp.org/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Anaesthesiology Clinical Pharmacology Volume 33 ; 2017 ; 33 ; http://www.joacp.org/ ; ; reingest3.clockss.org:8083 >
-    au < notReady ; exists ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; http://www.joacp.org/ ; 500 Error ; >
+    au < doNotProcess ; exists ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; http://www.joacp.org/ ; 500 Error ; >
     au < finished ; crawling ; 2019 ; Journal of Anaesthesiology Clinical Pharmacology Volume 35 ; 2019 ; 35 ; https://www.joacp.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Anaesthesiology Clinical Pharmacology Volume 36 ; 2020 ; 36 ; https://www.joacp.org/ ; ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Journal of Anaesthesiology Clinical Pharmacology Volume 37 ; 2021 ; 37 ; https://www.joacp.org/ ; ; >
+    au < superseded ; exists ; 2021 ; Journal of Anaesthesiology Clinical Pharmacology Volume 37 [superseded] ; 2021 ; 37 ; https://www.joacp.org/ ; ; >
 
   }
 #  {
