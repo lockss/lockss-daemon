@@ -69,6 +69,7 @@
     {
       #param[base_url] = http://diabeticfootandankle.net/
       param[journal_id] = zdfa20
+      #This title has ceased (2020)
 
       au < doNotProcess ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
       au < doNotProcess ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -80,8 +81,6 @@
       au < released ; 2017 ; Diabetic Foot & Ankle [including Supplements] Volume 8 ; 8 ; http://www.tandfonline.com/ >
       au < released ; 2018 ; Diabetic Foot & Ankle [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
       au < ready ; 2019 ; Diabetic Foot & Ankle [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
-      au < expected ; 2020 ; Diabetic Foot & Ankle [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
-      au < expected ; 2021 ; Diabetic Foot & Ankle [including Supplements] Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
     }
   }
@@ -572,6 +571,7 @@
     #param[base_url] = http://www.microbecolhealthdis.net/
 
     param[journal_id] = zmeh20
+    #This journal has ceased (2019)
 
     au < doNotProcess ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -602,9 +602,6 @@
     au < released ; 2016 ; Microbial Ecology in Health and Disease Volume 27 ; 27 ; http://www.tandfonline.com/ >
     au < released ; 2017 ; Microbial Ecology in Health and Disease Volume 28 ; 28 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Microbial Ecology in Health and Disease Volume 29 ; 29 ; https://www.tandfonline.com/ >
-    au < expected ; 2019 ; Microbial Ecology in Health and Disease Volume 30 ; 30 ; https://www.tandfonline.com/ >
-    au < expected ; 2020 ; Microbial Ecology in Health and Disease Volume 31 ; 31 ; https://www.tandfonline.com/ >
-    au < expected ; 2021 ; Microbial Ecology in Health and Disease Volume 32 ; 32 ; https://www.tandfonline.com/ >
 
   }
 
@@ -640,13 +637,11 @@
     comment[continues] = 2000-5121
     #param[base_url] = http://www.nanoreviewsexperiments.net/
     param[journal_id] = zano20
+    #This title has ceased (2019)
 
     au < released ; 2016 ; Nano Reviews & Experiments [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
     au < released ; 2017 ; Nano Reviews & Experiments [including Supplements] Volume 8 ; 8 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Nano Reviews & Experiments [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
-    au < expected ; 2019 ; Nano Reviews & Experiments [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
-    au < expected ; 2020 ; Nano Reviews & Experiments [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
-    au < expected ; 2021 ; Nano Reviews & Experiments [including Supplements] Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
 
@@ -660,6 +655,7 @@
     #param[base_url] = http://www.pathobiologyofaging.net/
 
     param[journal_id] = zpba20
+    #This title has ceased (2019)
 
     au < doNotProcess ; 2011 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 1 ; 1 ; httpd://www.tandfonline.com/ >
     au < doNotProcess ; 2012 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 2 ; 2 ; httpd://www.tandfonline.com/ >
@@ -670,8 +666,6 @@
     au < released ; 2017 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < released ; 2019 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
-    au < expected ; 2020 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
-    au < expected ; 2021 ; Pathobiology of Aging & Age-related Diseases [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
 
@@ -686,7 +680,7 @@
     
     #param[base_url] = http://www.polarresearch.net/
     param[journal_id] = zpor20
-    #move to Open Academia in 2019
+    #Published by Norwegian Polar Institute from 2019
 
     au < doNotProcess ; 1982 ; Polar Research Volume 1982 ; 1982 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 1983 ; Polar Research Volume 1 ; 1 ; https://www.tandfonline.com/ >
@@ -725,9 +719,6 @@
     au < released ; 2016 ; Polar Research [including Supplements] Volume 35 ; 35 ; http://www.tandfonline.com/ >
     au < released ; 2017 ; Polar Research [including Supplements] Volume 36 ; 36 ; http://www.tandfonline.com/ >
     au < released ; 2018 ; Polar Research [including Supplements] Volume 37 ; 37 ; https://www.tandfonline.com/ >
-    au < expected ; 2019 ; Polar Research [including Supplements] Volume 38 ; 38 ; https://www.tandfonline.com/ >
-    au < expected ; 2020 ; Polar Research [including Supplements] Volume 39 ; 39 ; https://www.tandfonline.com/ >
-    au < expected ; 2021 ; Polar Research [including Supplements] Volume 40 ; 40 ; https://www.tandfonline.com/ >
 
   }
 
@@ -837,6 +828,7 @@
       #param[base_url] = http://www.socioaffectiveneuroscipsychol.net/
 
       param[journal_id] = zsnp20
+      #This title has ceased (2018)
 
       au < doNotProcess ; 2011 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 1 ; 1 ; https://www.tandfonline.com/ >
       au < doNotProcess ; 2012 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 2 ; 2 ; https://www.tandfonline.com/ >
@@ -846,9 +838,6 @@
       au < released ; 2016 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 6 ; 6 ; http://www.tandfonline.com/ >
       au < released ; 2017 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 7 ; 7 ; http://www.tandfonline.com/ >
       au < released ; 2018 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 8 ; 8 ; https://www.tandfonline.com/ >
-      au < expected ; 2019 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 9 ; 9 ; https://www.tandfonline.com/ >
-      au < expected ; 2020 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 10 ; 10 ; https://www.tandfonline.com/ >
-      au < expected ; 2021 ; Socioaffective Neuroscience & Psychology [including Supplements] Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
   
@@ -1022,14 +1011,13 @@
 
     param[journal_id] = zvgi20
     #continues = 2000-8023
+    #This title has ceased (2019)
 
     au < released ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 ; https://www.tandfonline.com/ >
     au < released ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 ; https://www.tandfonline.com/ >
     au < released ; 2017 ; Society, Health & Vulnerability Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < released ; 2018 ; Society, Health & Vulnerability Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < released ; 2019 ; Society, Health & Vulnerability Volume 10 ; 10 ; https://www.tandfonline.com/ >
-    au < expected ; 2020 ; Society, Health & Vulnerability Volume 11 ; 11 ; https://www.tandfonline.com/ >
-    au < expected ; 2021 ; Society, Health & Vulnerability Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
 
