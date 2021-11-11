@@ -7,14 +7,15 @@
     info[poller] = 3 ;
     comment[platform] = Atypon/Abstracts
  >
-  plugin = needs.plugin
+  #plugin = needs.plugin
   param[base_url] = https://library.seg.org/
 
-  ####plugin = org.lockss.plugin.atypon.seg.ClockssSEGBooksPlugin #### Similar plugin
-  implicit < status ; status2 ; year ; param[item_doi] ; name ; hidden[proxy] >
+  plugin = org.lockss.plugin.atypon.seg.ClockssSEGAbstractsPlugin #### Similar plugin
+  #plugin = org.lockss.plugin.atypon.seg.ClockssSEGBooksPlugin #### Similar plugin
+  implicit < status ; status2 ; year ; param[book_eisbn] ; name ; hidden[proxy] >
 
 
- {
+  {
   title <
    name = SEG Technical Program Expanded Abstracts ;
    eissn = 1949-4645 ;
@@ -22,6 +23,7 @@
   >
 
    #Material at, for example: https://library.seg.org/doi/book/10.1190/SEGEAB.1
+   #All content at https://library.seg.org/series/segeab
 
    au < exists ; exists ; 1982 ; 10.1190/SEGEAB.1 ; SEG Technical Program Expanded Abstracts Volume 1982 ; >
    au < exists ; exists ; 1983 ; 10.1190/SEGEAB.2 ; SEG Technical Program Expanded Abstracts Volume 1983 ; >
@@ -64,6 +66,66 @@
    au < exists ; exists ; 2020 ; 10.1190/SEGEAB.39 ; SEG Technical Program Expanded Abstracts Volume 2020 ; >
    au < expected ; exists ; 2021 ; 10.1190/SEGEAB.40 ; SEG Technical Program Expanded Abstracts Volume 2021 ; >
 
- }
+  }
+ 
+  {
+  title <
+   name = Symposium on the Application of Geophysics to Engineering and Environmental Problems ;
+   eissn = 1554-8015 ;
+   type = bookSeries
+  >
 
+   #Material at, for example: https://library.seg.org/doi/book/10.1190/SAGEEP.1
+
+   au < exists ; exists ; 1988 ; 10.1190/SAGEEP.1 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1988 ; >
+   au < exists ; exists ; 1989 ; 10.1190/SAGEEP.2 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1989 ; >
+   au < exists ; exists ; 1990 ; 10.1190/SAGEEP.3 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1990 ; >
+   au < exists ; exists ; 1991 ; 10.1190/SAGEEP.4 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1991 ; >
+   au < exists ; exists ; 1992 ; 10.1190/SAGEEP.5 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1992 ; >
+   au < exists ; exists ; 1993 ; 10.1190/SAGEEP.6 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1993 ; >
+   au < exists ; exists ; 1994 ; 10.1190/SAGEEP.7 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1994 ; >
+   au < exists ; exists ; 1995 ; 10.1190/SAGEEP.8 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1995 ; >
+   au < exists ; exists ; 1996 ; 10.1190/SAGEEP.9 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1996 ; >
+   au < exists ; exists ; 1997 ; 10.1190/SAGEEP.11 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1997 ; >
+   au < exists ; exists ; 1998 ; 10.1190/SAGEEP.12 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1998 ; >
+   au < exists ; exists ; 1999 ; 10.1190/SAGEEP.13 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 1999 ; >
+   au < exists ; exists ; 2000 ; 10.1190/SAGEEP.14 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2000 ; >
+   au < exists ; exists ; 2001 ; 10.1190/SAGEEP.15 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2001 ; >
+   au < exists ; exists ; 2002 ; 10.1190/SAGEEP.16 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2002 ; >
+   au < exists ; exists ; 2003 ; 10.1190/SAGEEP.17 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2003 ; >
+   au < exists ; exists ; 2004 ; 10.1190/SAGEEP.18 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2004 ; >
+   au < exists ; exists ; 2005 ; 10.1190/SAGEEP.19 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2005 ; >
+   au < exists ; exists ; 2006 ; 10.1190/SAGEEP.20 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2006 ; >
+   au < exists ; exists ; 2007 ; 10.1190/SAGEEP.21 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2007 ; >
+   au < exists ; exists ; 2008 ; 10.1190/SAGEEP.22 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2008 ; >
+   au < exists ; exists ; 2009 ; 10.1190/SAGEEP.23 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2009 ; >
+   au < exists ; exists ; 2010 ; 10.1190/SAGEEP.24 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2010 ; >
+   au < exists ; exists ; 2011 ; 10.1190/SAGEEP.25 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2011 ; >
+   au < exists ; exists ; 2012 ; 10.1190/SAGEEP.26 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2012 ; >
+   au < exists ; exists ; 2013 ; 10.1190/sageep2013 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2013 ; >
+   au < exists ; exists ; 2014 ; 10.1190/SAGEEP.28 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2014 ; >
+   au < exists ; exists ; 2015 ; 10.1190/SAGEEP.29 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2015 ; >
+   au < exists ; exists ; 2016 ; 10.1190/SAGEEP.30 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2016 ; >
+   au < exists ; exists ; 2017 ; 10.1190/SAGEEP.31 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2017 ; >
+   au < exists ; exists ; 2018 ; 10.1190/SAGEEP.32 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2018 ; >
+   au < exists ; exists ; 2019 ; 10.1190/SAGEEP.33 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2019 ; >
+   au < exists ; exists ; 2020 ; 10.1190/SAGEEP.34 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2020 ; >
+   au < exists ; exists ; 2021 ; 10.1190/SAGEEP.35 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2021 ; >
+  }
+
+  {
+  title <
+   name = Global Meeting Abstracts ;
+   eissn = 2159-6832 ;
+   type = bookSeries
+  >
+
+   #Material at, for example: https://library.seg.org/doi/book/10.1190/SBGf2007
+   #All content at, https://library.seg.org/series/gmalch
+
+   au < exists ; exists ; 2007 ; 10.1190/SBGf2007 ; 10th International Congress of the Brazilian Geophysical Society & EXPOGEF 2007 ; >
+   au < exists ; exists ; 2009 ; 10.1190/SBGf2009 ; 11th International Congress of the Brazilian Geophysical Society & EXPOGEF 2009 ; >
+   au < exists ; exists ; 2011 ; 10.1190/SBGf2011 ; 12th International Congress of the Brazilian Geophysical Society & EXPOGEF 2011 ; >
+
+  }
 }
