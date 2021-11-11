@@ -156,6 +156,8 @@
    au < notReady ; exists ; 2019 ; 9781560803577 ; 9781560803584 ; 9781560803584 ; Understanding Signals: Basic waveform analysis from a geophysical perspective (9781560803584) ; https://library.seg.org/ ; >
    au < frozen ; exists ; 2020 ; 9781560803720 ; 9781560803737 ; 9781560803737 ; Basic Wave Analysis (9781560803737) ; https://library.seg.org/ ; >
    au < frozen ; exists ; 2020 ; 9781560803775 ; 9781560803768 ; 9781560803768 ; Blizzards and Broken Grousers (9781560803768) ; https://library.seg.org/ ; >
+   au < exists ; exists ; 2021 ; 9781560803829 ; 9781560803836 ; 9781560803836 ; Understanding Amplitudes: Basic seismic analysis for rock properties (9781560803836) ; https://library.seg.org/ ; >
+   au < exists ; exists ; 2021 ; 9781560803805 ;  9781560803812 ; 9781560803812 ; Land Seismic Case Studies for Near-Surface Modeling and Subsurface Imaging (9781560803812) ; https://library.seg.org/ ; >
 
  }
 
@@ -219,9 +221,9 @@
   #series# = iig0464
 
    au < finished ; finished ; 1988 ; 9780931830518 ; 9781560802631 ; 9781560802631 ; Electromagnetic Methods in Applied Geophysics: Volume 1, Theory (9781560802631) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
-   au < exists ; exists ; 1990 ; 9781560800002 ; 9781560802785.1 ; 9781560802785.1 ; Geotechnical and Environmental Geophysics: Volume I: Review and Tutorial (9781560802785) ; https://library.seg.org/ ; >
+   au < manifest ; exists ; 1990 ; 9781560800002 ; 9781560802785.1 ; 9781560802785.1 ; Geotechnical and Environmental Geophysics: Volume I: Review and Tutorial (9781560802785) ; https://library.seg.org/ ; >
    au < finished ; finished ; 1990 ;  9781560800019 ; 9781560802785 ; 9781560802785 ; Geotechnical and Environmental Geophysics: Volume II: Environmental and Groundwater (9781560802785.2) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
-   au < exists ; exists ; 1990 ; 9781560800026 ; 9781560802785.3 ; 9781560802785.3 ; Geotechnical and Environmental Geophysics: Volume III: Geotechnical (9781560802785.3) ; https://library.seg.org/ ;  >
+   au < manifest ; exists ; 1990 ; 9781560800026 ; 9781560802785.3 ; 9781560802785.3 ; Geotechnical and Environmental Geophysics: Volume III: Geotechnical (9781560802785.3) ; https://library.seg.org/ ;  >
    au < finished ; finished ; 1990 ; 9780931830891 ; 9781560802594 ; 9781560802594 ; Induced Polarization Applications and Case Histories (9781560802594) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 1991 ; 9781560800224 ; 9781560802686 ; 9781560802686 ; Electromagnetic Methods in Applied Geophysics: Volume 2, Application, Parts A and B (9781560802686) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 1991 ; 9781560800514 ; 9781560802556 ; 9781560802556 ; Multicomponent Seismology in Petroleum Exploration (9781560802556) ; http://library.seg.org/ ;  >

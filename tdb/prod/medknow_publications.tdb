@@ -2449,26 +2449,27 @@
     # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
     # does have a lockss/clockss permission statement. http://www.carcinogenesis.com/lockss.txt
 
-    au < manifest ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2003 ; Journal of Carcinogenesis Volume 2 ; 2003 ; 2 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2004 ; Journal of Carcinogenesis Volume 3 ; 2004 ; 3 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2005 ; Journal of Carcinogenesis Volume 4 ; 2005 ; 4 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2006 ; Journal of Carcinogenesis Volume 5 ; 2006 ; 5 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2007 ; Journal of Carcinogenesis Volume 6 ; 2007 ; 6 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2008 ; Journal of Carcinogenesis Volume 7 ; 2008 ; 7 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2009 ; Journal of Carcinogenesis Volume 8 ; 2009 ; 8 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2010 ; Journal of Carcinogenesis Volume 9 ; 2010 ; 9 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2011 ; Journal of Carcinogenesis Volume 10 ; 2011 ; 10 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2012 ; Journal of Carcinogenesis Volume 11 ; 2012 ; 11 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2013 ; Journal of Carcinogenesis Volume 12 ; 2013 ; 12 ; http://www.carcinogenesis.com/ >
     au < released ; 2014 ; Journal of Carcinogenesis Volume 13 ; 2014 ; 13 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ >
     au < released ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ >
     au < released ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ >
-    au < manifest ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ >
+    au < notReady ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ >
+    #deactivated. No further content.
 
   }
 #  {
@@ -9612,6 +9613,28 @@
       au < released ; 2020 ; International Journal of Forensic Odontology Volume 5 ; 2020 ; 5 ; https://www.ijofo.org/ >
       au < manifest ; 2021 ; International Journal of Forensic Odontology Volume 6 ; 2021 ; 6 ; https://www.ijofo.org/ >
 
+  }
+
+  {
+
+      title <
+        name = International Journal of Food and Nutritional Sciences ;
+        eissn = 2319-1775
+      >
+
+      param[journal_issn] = 2319-1775
+
+      au < manifest ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ >
+      au < manifest ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ >
+      au < manifest ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ >
+      au < manifest ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ >
+      au < manifest ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ >
+      au < manifest ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ >
+      au < manifest ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ >
+      au < manifest ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ >
+      au < manifest ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ >
+      au < manifest ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ >
+      #deactivated
   }
 
 
