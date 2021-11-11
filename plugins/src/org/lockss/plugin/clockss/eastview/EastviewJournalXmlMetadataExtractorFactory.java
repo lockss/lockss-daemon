@@ -181,7 +181,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
       if (raw_title != null) {
 
-        Pattern pattern = Pattern.compile("(\\d\\d-\\d\\d-\\d{2,4})\\s+\\(([^)]+)-([^(]+)\\)\\s+(.*)");
+        Pattern pattern = Pattern.compile("(\\d\\d-\\d\\d-\\d{2,4})\\s*\\(([^)]+)-([^(]+)\\)\\s*(.*)");
 
         Matcher m = pattern.matcher(raw_title);
 
