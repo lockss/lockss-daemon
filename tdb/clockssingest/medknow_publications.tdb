@@ -2453,7 +2453,7 @@
 
     param[journal_issn] = 1477-3163
     # different format from other journals. Issues are accessed individually by clicking http://www.carcinogenesis.com/browse.asp
-    # instead of by a listing like this: http://www.jcnonweb.com/backissues.asp
+    # instead of by a listing like this: http://www.carcinogenesis.com/backissues.asp
     # does have a lockss/clockss permission statement. http://www.carcinogenesis.com/lockss.txt
 
     au < notReady ; exists ; 2002 ; Journal of Carcinogenesis Volume 1 ; 2002 ; 1 ; http://www.carcinogenesis.com/ ; ; >
@@ -2476,7 +2476,7 @@
     au < notReady ; exists ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ ; ; >
-
+    #deactivated. No further content.
   }
 #  {
 #    title <
@@ -9654,6 +9654,28 @@
 
   }
 
+
+  {
+
+      title <
+        name = International Journal of Food and Nutritional Sciences ;
+        eissn = 2319-1775
+      >
+
+      param[journal_issn] = 2319-1775
+
+      au < manifest ; exists ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ ; ; >
+      au < manifest ; exists ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ ; ; >
+      #deactivated
+  }
 
   {
 
