@@ -159,6 +159,22 @@
   {
   
     title <
+      name = Water Reuse ;
+      issn = 2709-6092 ;
+      eissn = 2709-6106 ;
+      issnl = 2709-6092
+    >
+
+    param[journal_id] = jwrd
+
+    #name changed from Journal of Water Reuse and Desalination
+    au < crawling ; exists ; 2021 ; 2021 ; Water Reuse Volume 11 ; 11 ; >
+
+  }
+
+  {
+  
+    title <
       name = Journal of Water Reuse and Desalination ;
       issn = 2220-1319 ;
       eissn = 2408-9370 ;
@@ -177,7 +193,6 @@
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Water Reuse and Desalination Volume 8 ; 8 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Water Reuse and Desalination Volume 9 ; 9 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Water Reuse and Desalination Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Water Reuse and Desalination Volume 11 ; 11 ; >
 
   }
 
@@ -206,6 +221,22 @@
 
   }
 
+  {
+  
+    title <
+      name = AQUA: Water Infrastructure, Ecosystems and Society ;
+      issn = 2709-8028 ;
+      eissn = 2709-8036 ;
+      issnl = 2709-8028
+    >
+
+    param[journal_id] = aqua
+
+    #Previously Journal of Water Supply: Research and Technology - Aqua
+    au < crawling ; exists ; 2021 ; 2021 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 70 ; 70 ; >
+
+  }
+  
   {
   
     title <
@@ -240,8 +271,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Water Supply: Research and Technology - Aqua Volume 68 ; 68 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Water Supply: Research and Technology - Aqua Volume 69 ; 69 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Water Supply: Research and Technology - Aqua Volume 70 ; 70 ; >
-
+    #publisher changed name, issn AQUA: Water Infrastructure, Ecosystems and Society
   }
   
   {
@@ -347,6 +377,26 @@
   
     title <
       name = Water Quality Research Journal ; 
+      issn = 2709-8044 ;
+      eissn = 2709-8052 ;
+      issnl = 2709-8044
+    >
+
+    param[journal_id] = wqrj
+    #param[base_url] = http://wqrjc.iwaponline.com/
+    #name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
+
+    au < crawling ; exists ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Water Quality Research Journal Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 ; >
+
+  }
+  
+  {
+  
+    title <
+      name = Water Quality Research Journal of Canada ; 
       issn = 1201-3080 ;
       eissn = 2408-9443 ;
       issnl = 1201-3080
@@ -354,7 +404,7 @@
 
     param[journal_id] = wqrj
     #param[base_url] = http://wqrjc.iwaponline.com/
-#      name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
+    #name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
 
     au < manifest ; exists ; 2011 ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; >
@@ -363,11 +413,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 ; > #IWADrupal plugin
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Quality Research Journal of Canada Volume 51 ; 51 ; > #IWADrupal plugin
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Quality Research Journal of Canada Volume 52 ; 52 ; > #IWADrupal plugin
-    au < crawling ; exists ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Water Quality Research Journal Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 ; >
-
+    #name and issn changed to Water Quality Research Journal
   }
   
   {
@@ -427,13 +473,14 @@
   {
   
     title <
-      name = Water Science and Technology: Water Supply ;
+      name = Water Supply ;
       issn = 1606-9749 ;
       eissn = 1607-0798 ;
       issnl = 1606-9749
     >
 
     param[journal_id] = ws
+    #Publisher reported that name changed to Water Supply with no change in issn.
 
     au < manifest ; exists ; 2001 ; 2001 ; Water Science and Technology: Water Supply Volume 1 ; 1 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Water Science and Technology: Water Supply Volume 2 ; 2 ; >
@@ -455,7 +502,7 @@
     au < crawling ; exists ; 2018 ; 2018 ; Water Science and Technology: Water Supply Volume 18 ; 18 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Water Science and Technology: Water Supply Volume 19 ; 19 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Water Science and Technology: Water Supply Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Water Science and Technology: Water Supply Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Water Supply Volume 21 ; 21 ; >
 
   }
   
