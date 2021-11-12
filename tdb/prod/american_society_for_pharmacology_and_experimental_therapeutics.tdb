@@ -600,10 +600,10 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Molecular Pharmacology Volume 94 ; 94 ; http://molpharm.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Molecular Pharmacology Volume 95 ; 95 ; http://molpharm.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Molecular Pharmacology Volume 97 ; 97 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Molecular Pharmacology Volume 97 ; 97 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; https://molpharm.aspetjournals.org/ >
 
   }
 
@@ -689,8 +689,8 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Pharmacological Reviews Volume 69 ; 69 ; http://pharmrev.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Pharmacological Reviews Volume 70 ; 70 ; http://pharmrev.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; http://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Pharmacological Reviews Volume 72 ; 72 ; https://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Pharmacological Reviews Volume 72 ; 72 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; exists ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ >
 
   }
 
