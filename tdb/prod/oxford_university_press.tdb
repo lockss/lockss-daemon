@@ -4005,6 +4005,7 @@
     >
 
     param[journal_id] = criticalvalues
+    #As of January 2020, Oxford University Press is no longer publisher of Critical Values on behalf of ASCP
 
     au < released ; 2008 ; 2008 ; Critical Values Volume 1 ; 1 >
     au < doNotProcess ; 2009 ; 2009 ; Critical Values Volume 2 ; 2 >
@@ -4018,8 +4019,6 @@
     au < released ; 2017 ; 2017 ; Critical Values Volume 10 ; 10 >
     au < released ; 2018 ; 2018 ; Critical Values Volume 11 ; 11 >
     au < released ; 2019 ; 2019 ; Critical Values Volume 12 ; 12 >
-    au < expected ; 2020 ; 2020 ; Critical Values Volume 13 ; 13 >
-    au < expected ; 2021 ; 2021 ; Critical Values Volume 14 ; 14 >
 
   }
 
@@ -4080,8 +4079,7 @@
     au < released ; 2017 ; 2017 ; Current Legal Problems Volume 70 ; 70 >
     au < released ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 >
     au < released ; 2019 ; 2019 ; Current Legal Problems Volume 72 ; 72 >
-    au < expected ; 2020 ; 2020 ; Current Legal Problems Volume 73 ; 73 >
-    au < manifest ; 2021 ; 2021 ; Current Legal Problems Volume 74 ; 74 >
+    au < manifest ; 2021 ; 2021 ; Current Legal Problems Volume 73 ; 73 >
 
   }
 
@@ -7691,8 +7689,7 @@
     au < released ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 >
     au < released ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 >
     au < released ;  2019 ; 2019 ; ICSID Review: Foreign Investment Law Journal Volume 34 ; 34 >
-    au < expected ;  2020 ; 2020 ; ICSID Review: Foreign Investment Law Journal Volume 35 ; 35 >
-    au < manifest ;  2021 ; 2021 ; ICSID Review: Foreign Investment Law Journal Volume 36 ; 36 >
+    au < manifest ;  2021 ; 2021 ; ICSID Review: Foreign Investment Law Journal Volume 35 ; 35 >
 
   }
 
@@ -16319,7 +16316,7 @@
     au < released ; 2018 ; 2018 ; Protein Engineering, Design and Selection (PEDS) Volume 31 ; 31 >
     au < released ; 2019 ; 2019 ; Protein Engineering, Design and Selection (PEDS) Volume 32 ; 32 >
     au < exists ; 2020 ; 2020 ; Protein Engineering, Design and Selection (PEDS) Volume 33 ; 33 >
-    au < expected ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 >
+    au < exists ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 >
 
   }
 
@@ -16876,8 +16873,7 @@
     au < released ; 2017 ; 2017 ; Reports of Patent, Design and Trade Mark Cases Volume 134 ; 134 >
     au < released ; 2018 ; 2018 ; Reports of Patent, Design and Trade Mark Cases Volume 135 ; 135 >
     au < released ; 2019 ; 2019 ; Reports of Patent, Design and Trade Mark Cases Volume 136 ; 136 >
-    au < expected ; 2020 ; 2020 ; Reports of Patent, Design and Trade Mark Cases Volume 137 ; 137 >
-    au < manifest ; 2021 ; 2021 ; Reports of Patent, Design and Trade Mark Cases Volume 138 ; 138 >
+    au < manifest ; 2021 ; 2021 ; Reports of Patent, Design and Trade Mark Cases Volume 136-137 ; 136-137 >
 
   }
 
@@ -20162,8 +20158,7 @@
     au < released ; 2017 ; 2017 ; The Leo Baeck Institute Year Book Volume 62 ; 62 >
     au < released ; 2018 ; 2018 ; The Leo Baeck Institute Year Book Volume 63 ; 63 >
     au < released ; 2019 ; 2019 ; The Leo Baeck Institute Year Book Volume 64 ; 64 >
-    au < expected ; 2020 ; 2020 ; The Leo Baeck Institute Year Book Volume 65 ; 65 >
-    au < manifest ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 66 ; 66 >
+    au < manifest ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 65 ; 65 >
 
   }
   #Publisher and previous TDB differ on title - The Library vs The Library: The Transactions of the Bibliographical Society 
@@ -20518,8 +20513,7 @@
     au < released ; 2017 ; 2017 ; The Opera Quarterly Volume 33 ; 33 >
     au < released ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 >
     au < released ; 2019 ; 2019 ; The Opera Quarterly Volume 35 (2019) ; 35 >
-    au < exists ; 2020 ; 2020 ; The Opera Quarterly Volume 35 (2020) ; 36 >
-    au < expected ; 2021 ; 2021 ; The Opera Quarterly Volume 35 (2021) ; 37 >
+    au < exists ; 2021 ; 2021 ; The Opera Quarterly Volume 36 (2021) ; 36 >
 
   }
 
@@ -21457,8 +21451,7 @@
     au < released ; 2017 ; 2017 ; The Year's Work in Critical and Cultural Theory Volume 25 ; 25 >
     au < released ; 2018 ; 2018 ; The Year's Work in Critical and Cultural Theory Volume 26 ; 26 >
     au < released ; 2019 ; 2019 ; The Year's Work in Critical and Cultural Theory Volume 27 ; 27 >
-    au < expected ; 2020 ; 2020 ; The Year's Work in Critical and Cultural Theory Volume 28 ; 28 >
-    au < manifest ; 2021 ; 2021 ; The Year's Work in Critical and Cultural Theory Volume 29 ; 29 >
+    au < manifest ; 2021 ; 2021 ; The Year's Work in Critical and Cultural Theory Volume 28 ; 28 >
 
   }
 
@@ -22153,8 +22146,7 @@
     au < released ; 2017 ; 2017 ; Yearbook of European Law Volume 36 ; 36 >
     au < released ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 >
     au < exists ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 >
-    au < manifest ; 2020 ; 2020 ; Yearbook of European Law Volume 39 ; 39 >
-    au < expected ; 2021 ; 2021 ; Yearbook of European Law Volume 40 ; 40 >
+    au < exists ; 2021 ; 2021 ; Yearbook of European Law Volume 39 ; 39 >
 
   }
 
