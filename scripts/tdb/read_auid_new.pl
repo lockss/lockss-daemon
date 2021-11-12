@@ -198,6 +198,10 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$lockss_tag/) {
         $result = "--NO_TAG--";
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+        #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
+        #or must be a relative url, in which case, the link would not start with https://.
+        $result = "--BAD_ISS_URL--";
     } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
         $result = "CGI_probe_link";
     } elsif (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//)) {
@@ -251,9 +255,9 @@ while (my $line = <>) {
 #CLOCKSS
   } elsif ($plugin =~ m/^Clockss.+DrupalPlugin/) {
     $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
-      $param{base_url}, $param{volume_name});
-    #printf("********************\n");  #debug
-    #printf("url=%s\n",$url);  #debug
+        $param{base_url}, $param{volume_name});
+        #printf("********************\n");  #debug
+        #printf("url=%s\n",$url);  #debug
     $man_url = uri_unescape($url);
     #printf("man_url=%s\n",$man_url);  #debug
     $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
@@ -269,6 +273,10 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$clockss_tag/) {
         $result = "--NO_TAG--";
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+        #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
+        #or must be a relative url, in which case, the link would not start with https://.
+        $result = "--BAD_ISS_URL--";
     } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
         $result = "CGI_probe_link";
     } elsif (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//)) {
