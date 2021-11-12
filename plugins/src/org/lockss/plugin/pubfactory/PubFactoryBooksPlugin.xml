@@ -66,11 +66,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"PubFactory Books Plugin, Base URL %s, Book ISBN %s", base_url, book_isbn</string>
+        <string>"Parent PubFactory Books Plugin, Base URL %s, Book ISBN %s", base_url, book_isbn</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>PubFactory Books Plugin</string>
+        <string>Parent PubFactory Books Plugin</string>
     </entry>
     <entry>
         <string>plugin_fetch_rate_limiter_source</string>

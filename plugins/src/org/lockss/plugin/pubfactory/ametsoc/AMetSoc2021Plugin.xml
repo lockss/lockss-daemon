@@ -70,11 +70,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Meteorological Society Plugin</string>
+    <string>American Meteorological Society Journals Plugin</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Meteorological Society Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Meteorological Society Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

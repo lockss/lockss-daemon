@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"PubFactory Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Parent PubFactory Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>PubFactory Journals Plugin</string>
+    <string>Parent PubFactory Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
