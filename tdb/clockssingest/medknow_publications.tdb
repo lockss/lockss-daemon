@@ -1723,73 +1723,74 @@
 #    param[base_url] = http://www.indianjpsychiatry.org/
 
     param[journal_issn] = 0019-5545
+    #Moved to Wolders Kluwer
 
-    au < manifest ; exists ; 1949 ; Indian Journal of Psychiatry Volume 1 (1949) ; 1949 ; 1 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1950 ; Indian Journal of Psychiatry Volume 2 (1950) ; 1950 ; 2 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1952 ; Indian Journal of Psychiatry Volume 3 (1952) ; 1952 ; 3 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1959 ; Indian Journal of Psychiatry Volume 1 (1959) ; 1959 ; 1 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1960 ; Indian Journal of Psychiatry Volume 2 (1960) ; 1960 ; 2 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1961 ; Indian Journal of Psychiatry Volume 3 (1961) ; 1961 ; 3 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1962 ; Indian Journal of Psychiatry Volume 4 (1962) ; 1962 ; 4 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1963 ; Indian Journal of Psychiatry Volume 5 ; 1963 ; 5 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1964 ; Indian Journal of Psychiatry Volume 6 ; 1964 ; 6 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1965 ; Indian Journal of Psychiatry Volume 7 ; 1965 ; 7 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1966 ; Indian Journal of Psychiatry Volume 8 ; 1966 ; 8 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1967 ; Indian Journal of Psychiatry Volume 9 ; 1967 ; 9 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1968 ; Indian Journal of Psychiatry Volume 10 ; 1968 ; 10 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1949 ; Indian Journal of Psychiatry Volume 1 (1949) ; 1949 ; 1 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1950 ; Indian Journal of Psychiatry Volume 2 (1950) ; 1950 ; 2 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1952 ; Indian Journal of Psychiatry Volume 3 (1952) ; 1952 ; 3 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1959 ; Indian Journal of Psychiatry Volume 1 (1959) ; 1959 ; 1 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1960 ; Indian Journal of Psychiatry Volume 2 (1960) ; 1960 ; 2 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1961 ; Indian Journal of Psychiatry Volume 3 (1961) ; 1961 ; 3 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1962 ; Indian Journal of Psychiatry Volume 4 (1962) ; 1962 ; 4 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1963 ; Indian Journal of Psychiatry Volume 5 ; 1963 ; 5 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1964 ; Indian Journal of Psychiatry Volume 6 ; 1964 ; 6 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1965 ; Indian Journal of Psychiatry Volume 7 ; 1965 ; 7 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1966 ; Indian Journal of Psychiatry Volume 8 ; 1966 ; 8 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1967 ; Indian Journal of Psychiatry Volume 9 ; 1967 ; 9 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1968 ; Indian Journal of Psychiatry Volume 10 ; 1968 ; 10 ; https://www.indianjpsychiatry.org/ ; ; >
     au < doesNotExist ; doesNotExist ; 1969 ; Indian Journal of Psychiatry Volume 11 ; 0 ; 0 ; http://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1970 ; Indian Journal of Psychiatry Volume 12 ; 1970 ; 12 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1971 ; Indian Journal of Psychiatry Volume 13 ; 1971 ; 13 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1972 ; Indian Journal of Psychiatry Volume 14 ; 1972 ; 14 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1973 ; Indian Journal of Psychiatry Volume 15 ; 1973 ; 15 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1974 ; Indian Journal of Psychiatry Volume 16 ; 1974 ; 16 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1975 ; Indian Journal of Psychiatry Volume 17 ; 1975 ; 17 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1976 ; Indian Journal of Psychiatry Volume 18 ; 1976 ; 18 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1977 ; Indian Journal of Psychiatry Volume 19 ; 1977 ; 19 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1978 ; Indian Journal of Psychiatry Volume 20 ; 1978 ; 20 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1979 ; Indian Journal of Psychiatry Volume 21 ; 1979 ; 21 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1980 ; Indian Journal of Psychiatry Volume 22 ; 1980 ; 22 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1981 ; Indian Journal of Psychiatry Volume 23 ; 1981 ; 23 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1982 ; Indian Journal of Psychiatry Volume 24 ; 1982 ; 24 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1983 ; Indian Journal of Psychiatry Volume 25 ; 1983 ; 25 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1984 ; Indian Journal of Psychiatry Volume 26 ; 1984 ; 26 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1985 ; Indian Journal of Psychiatry Volume 27 ; 1985 ; 27 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1986 ; Indian Journal of Psychiatry Volume 28 ; 1986 ; 28 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1987 ; Indian Journal of Psychiatry Volume 29 ; 1987 ; 29 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1988 ; Indian Journal of Psychiatry Volume 30 ; 1988 ; 30 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1989 ; Indian Journal of Psychiatry Volume 31 ; 1989 ; 31 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1990 ; Indian Journal of Psychiatry Volume 32 ; 1990 ; 32 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1991 ; Indian Journal of Psychiatry Volume 33 ; 1991 ; 33 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1992 ; Indian Journal of Psychiatry Volume 34 ; 1992 ; 34 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1993 ; Indian Journal of Psychiatry Volume 35 ; 1993 ; 35 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1994 ; Indian Journal of Psychiatry Volume 36 ; 1994 ; 36 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1995 ; Indian Journal of Psychiatry Volume 37 ; 1995 ; 37 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1996 ; Indian Journal of Psychiatry Volume 38 ; 1996 ; 38 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1997 ; Indian Journal of Psychiatry Volume 39 ; 1997 ; 39 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1998 ; Indian Journal of Psychiatry Volume 40 ; 1998 ; 40 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 1999 ; Indian Journal of Psychiatry Volume 41 ; 1999 ; 41 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2000 ; Indian Journal of Psychiatry Volume 42 ; 2000 ; 42 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2001 ; Indian Journal of Psychiatry Volume 43 ; 2001 ; 43 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2002 ; Indian Journal of Psychiatry Volume 44 ; 2002 ; 44 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2003 ; Indian Journal of Psychiatry Volume 45 ; 2003 ; 45 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Psychiatry Volume 46 ; 2004 ; 46 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Psychiatry Volume 47 ; 2005 ; 47 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Psychiatry Volume 48 ; 2006 ; 48 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Psychiatry Volume 49 ; 2007 ; 49 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Psychiatry Volume 50 ; 2008 ; 50 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Psychiatry Volume 51 ; 2009 ; 51 ; https://www.indianjpsychiatry.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Psychiatry Volume 52 ; 2010 ; 52 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1970 ; Indian Journal of Psychiatry Volume 12 ; 1970 ; 12 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1971 ; Indian Journal of Psychiatry Volume 13 ; 1971 ; 13 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1972 ; Indian Journal of Psychiatry Volume 14 ; 1972 ; 14 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1973 ; Indian Journal of Psychiatry Volume 15 ; 1973 ; 15 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1974 ; Indian Journal of Psychiatry Volume 16 ; 1974 ; 16 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1975 ; Indian Journal of Psychiatry Volume 17 ; 1975 ; 17 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1976 ; Indian Journal of Psychiatry Volume 18 ; 1976 ; 18 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1977 ; Indian Journal of Psychiatry Volume 19 ; 1977 ; 19 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1978 ; Indian Journal of Psychiatry Volume 20 ; 1978 ; 20 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1979 ; Indian Journal of Psychiatry Volume 21 ; 1979 ; 21 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1980 ; Indian Journal of Psychiatry Volume 22 ; 1980 ; 22 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1981 ; Indian Journal of Psychiatry Volume 23 ; 1981 ; 23 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1982 ; Indian Journal of Psychiatry Volume 24 ; 1982 ; 24 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1983 ; Indian Journal of Psychiatry Volume 25 ; 1983 ; 25 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1984 ; Indian Journal of Psychiatry Volume 26 ; 1984 ; 26 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1985 ; Indian Journal of Psychiatry Volume 27 ; 1985 ; 27 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1986 ; Indian Journal of Psychiatry Volume 28 ; 1986 ; 28 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1987 ; Indian Journal of Psychiatry Volume 29 ; 1987 ; 29 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1988 ; Indian Journal of Psychiatry Volume 30 ; 1988 ; 30 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1989 ; Indian Journal of Psychiatry Volume 31 ; 1989 ; 31 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1990 ; Indian Journal of Psychiatry Volume 32 ; 1990 ; 32 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1991 ; Indian Journal of Psychiatry Volume 33 ; 1991 ; 33 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1992 ; Indian Journal of Psychiatry Volume 34 ; 1992 ; 34 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1993 ; Indian Journal of Psychiatry Volume 35 ; 1993 ; 35 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1994 ; Indian Journal of Psychiatry Volume 36 ; 1994 ; 36 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1995 ; Indian Journal of Psychiatry Volume 37 ; 1995 ; 37 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1996 ; Indian Journal of Psychiatry Volume 38 ; 1996 ; 38 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Indian Journal of Psychiatry Volume 39 ; 1997 ; 39 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Indian Journal of Psychiatry Volume 40 ; 1998 ; 40 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Indian Journal of Psychiatry Volume 41 ; 1999 ; 41 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Indian Journal of Psychiatry Volume 42 ; 2000 ; 42 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2001 ; Indian Journal of Psychiatry Volume 43 ; 2001 ; 43 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Indian Journal of Psychiatry Volume 44 ; 2002 ; 44 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Indian Journal of Psychiatry Volume 45 ; 2003 ; 45 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Psychiatry Volume 46 ; 2004 ; 46 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Indian Journal of Psychiatry Volume 47 ; 2005 ; 47 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Psychiatry Volume 48 ; 2006 ; 48 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Psychiatry Volume 49 ; 2007 ; 49 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Psychiatry Volume 50 ; 2008 ; 50 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Psychiatry Volume 51 ; 2009 ; 51 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Psychiatry Volume 52 ; 2010 ; 52 ; https://www.indianjpsychiatry.org/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Psychiatry Volume 53 ; 2011 ; 53 ; http://www.indianjpsychiatry.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2012 ; Indian Journal of Psychiatry Volume 54 ; 2012 ; 54 ; http://www.indianjpsychiatry.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Indian Journal of Psychiatry Volume 55 ; 2013 ; 55 ; http://www.indianjpsychiatry.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Psychiatry Volume 56 ; 2014 ; 56 ; http://www.indianjpsychiatry.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Indian Journal of Psychiatry Volume 57 ; 2015 ; 57 ; http://www.indianjpsychiatry.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Psychiatry Volume 58 ; 2016 ; 58 ; http://www.indianjpsychiatry.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Psychiatry Volume 58 ; 2016 ; 58 ; http://www.indianjpsychiatry.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Psychiatry Volume 59 ; 2017 ; 59 ; http://www.indianjpsychiatry.org/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Psychiatry Volume 60 ; 2018 ; 60 ; http://www.indianjpsychiatry.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Psychiatry Volume 60 ; 2018 ; 60 ; http://www.indianjpsychiatry.org/ ; ; >
     au < finished ; crawling ; 2019 ; Indian Journal of Psychiatry Volume 61 ; 2019 ; 61 ; https://www.indianjpsychiatry.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Indian Journal of Psychiatry Volume 62 ; 2020 ; 62 ; https://www.indianjpsychiatry.org/ ; ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; Indian Journal of Psychiatry Volume 63 ; 2021 ; 63 ; https://www.indianjpsychiatry.org/ ; ; >
+    au < superseded ; exists ; 2021 ; Indian Journal of Psychiatry Volume 63 [superseded] ; 2021 ; 63 ; https://www.indianjpsychiatry.org/ ; ; >
 
   }
 
@@ -3941,12 +3942,12 @@
 
     param[journal_issn] = 1119-3077
 
-    au < manifest ; exists ; 2005 ; Nigerian Journal of Clinical Practice Volume 8 ; 2005 ; 8 ; https://www.njcponline.com/ ; ; >
-    au < manifest ; exists ; 2006 ; Nigerian Journal of Clinical Practice Volume 9 ; 2006 ; 9 ; https://www.njcponline.com/ ; ; >
-    au < manifest ; exists ; 2007 ; Nigerian Journal of Clinical Practice Volume 10 ; 2007 ; 10 ; https://www.njcponline.com/ ; ; >
-    au < manifest ; exists ; 2008 ; Nigerian Journal of Clinical Practice Volume 11 ; 2008 ; 11 ; https://www.njcponline.com/ ; ; >
-    au < manifest ; exists ; 2009 ; Nigerian Journal of Clinical Practice Volume 12 ; 2009 ; 12 ; https://www.njcponline.com/ ; ; >
-    au < manifest ; exists ; 2010 ; Nigerian Journal of Clinical Practice Volume 13 ; 2010 ; 13 ; https://www.njcponline.com/ ; ; >
+    au < exists ; exists ; 2005 ; Nigerian Journal of Clinical Practice Volume 8 ; 2005 ; 8 ; https://www.njcponline.com/ ; ; >
+    au < exists ; exists ; 2006 ; Nigerian Journal of Clinical Practice Volume 9 ; 2006 ; 9 ; https://www.njcponline.com/ ; ; >
+    au < exists ; exists ; 2007 ; Nigerian Journal of Clinical Practice Volume 10 ; 2007 ; 10 ; https://www.njcponline.com/ ; ; >
+    au < exists ; exists ; 2008 ; Nigerian Journal of Clinical Practice Volume 11 ; 2008 ; 11 ; https://www.njcponline.com/ ; ; >
+    au < exists ; exists ; 2009 ; Nigerian Journal of Clinical Practice Volume 12 ; 2009 ; 12 ; https://www.njcponline.com/ ; ; >
+    au < exists ; exists ; 2010 ; Nigerian Journal of Clinical Practice Volume 13 ; 2010 ; 13 ; https://www.njcponline.com/ ; ; >
     au < finished ; finished ; 2011 ; Nigerian Journal of Clinical Practice Volume 14 ; 2011 ; 14 ; http://www.njcponline.com/ ; ; >
     au < finished ; frozen ; 2012 ; Nigerian Journal of Clinical Practice Volume 15 ; 2012 ; 15 ; http://www.njcponline.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Nigerian Journal of Clinical Practice Volume 16 ; 2013 ; 16 ; http://www.njcponline.com/ ; ; reingest5.clockss.org:8082 >
