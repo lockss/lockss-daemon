@@ -367,10 +367,7 @@
     au < exists ; 2014 ; KCA Journal of Business Management Volume 5 ; 5 ; 2014 >
     au < exists ; 2015 ; KCA Journal of Business Management Volume 6-7 ; 6-7 ; 2015 >
     au < exists ; 2017 ; KCA Journal of Business Management Volume 8 ; 8 ; 2017 >
-    au < expected ; 2018 ; KCA Journal of Business Management Volume 9 ; 9 ; 2018 >
-    au < expected ; 2019 ; KCA Journal of Business Management Volume 10 ; 10 ; 2019 >
-    au < expected ; 2020 ; KCA Journal of Business Management Volume 11 ; 11 ; 2020 >
-    au < expected ; 2021 ; KCA Journal of Business Management Volume 12 ; 12 ; 2021 >
+    au < exists ; 2019 ; KCA Journal of Business Management Volume 9 ; 9 ; 2019 >
 
   }
 }
@@ -405,7 +402,9 @@
     au < down ; 2014 ; Khyber Medical University Journal Volume 6 ; 6 ; 2014 >
     au < down ; 2015 ; Khyber Medical University Journal Volume 7 ; 7 ; 2015 >
     au < down ; 2016 ; Khyber Medical University Journal Volume 8 ; 8 ; 2016 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
@@ -413,8 +412,10 @@
     
     au < exists ; 2017 ; Khyber Medical University Journal Volume 9 ; 9 ; 2017 >
     au < exists ; 2018 ; Khyber Medical University Journal Volume 10 ; 10 ; 2018 >
-    au < expected ; 2019 ; Khyber Medical University Journal Volume 11 ; 11 ; 2019 >
-    au < expected ; 2020 ; Khyber Medical University Journal Volume 12 ; 12 ; 2020 >
+    au < exists ; 2019 ; Khyber Medical University Journal Volume 11 ; 11 ; 2019 >
+    au < exists ; 2020 ; Khyber Medical University Journal Volume 12 ; 12 ; 2020 >
+    au < exists ; 2021 ; Khyber Medical University Journal Volume 13 ; 13 ; 2021 >
+
     }
   }
 }  
@@ -450,7 +451,9 @@
     au < down ; 2015 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 7 ; 7 ; 2015 >
     au < down ; 2016 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 8 ; 8 ; 2016 >
     au < down ; 2017 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 9 ; 9 ; 2017 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
@@ -460,6 +463,7 @@
     au < notReady ; 2019 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 11 ; 11 ; 2019 > #malformed url https://www.mjhid.org/index.php/mjhid/article/view/2019.064/www.graphpad.com
     au < released ; 2020 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 12 ; 12 ; 2020 >
     au < manifest ; 2021 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 13 ; 13 ; 2021 >
+
     }
   }
 }
@@ -501,6 +505,7 @@
     param[base_url] = https://www.syllabusjournal.org/
 
     au < manifest ; 2021 ; Syllabus Volume 10 ; 10 ; 2021 >
+
     }
   }
 }  
@@ -533,7 +538,9 @@
     au < down ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
     au < down ; 2015 ; Understanding and Dismantling Privilege Volume 5 ; 5 ; 2015 >
     au < down ; 2016 ; Understanding and Dismantling Privilege Volume 6 ; 6 ; 2016 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
@@ -541,8 +548,9 @@
 
     au < exists ; 2017 ; Understanding and Dismantling Privilege Volume 7 ; 7 ; 2017 >
     au < exists ; 2018 ; Understanding and Dismantling Privilege Volume 8 ; 8 ; 2018 >
-    au < expected ; 2019 ; Understanding and Dismantling Privilege Volume 9 ; 9 ; 2019 >
-    au < expected ; 2020 ; Understanding and Dismantling Privilege Volume 10 ; 10 ; 2020 >
+    au < exists ; 2019 ; Understanding and Dismantling Privilege Volume 9 ; 9 ; 2019 >
+    au < exists ; 2020 ; Understanding and Dismantling Privilege Volume 10 ; 10 ; 2020 >
+
     }
   }
 }
