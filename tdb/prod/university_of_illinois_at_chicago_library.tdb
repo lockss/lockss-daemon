@@ -126,8 +126,8 @@
       attr[start_stem] = index.php/
     
       au < exists ; 2019 ; First Monday Volume 24 ; 24 ; 2019 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2020 ; First Monday Volume 25 ; 25 ; 2020 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2021 ; First Monday Volume 26 ; 26 ; 2021 ; https://journals.uic.edu/ojs/ >
+      au < exists ; 2020 ; First Monday Volume 25 ; 25 ; 2020 ; https://journals.uic.edu/ojs/ >
+      au < exists ; 2021 ; First Monday Volume 26 ; 26 ; 2021 ; https://journals.uic.edu/ojs/ >
 
     }
 
@@ -175,8 +175,8 @@
       attr[start_stem] = index.php/
     
       au < exists ; 2019 ; Online Journal of Public Health Informatics Volume 11 ; 11 ; 2019 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2020 ; Online Journal of Public Health Informatics Volume 12 ; 12 ; 2020 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2021 ; Online Journal of Public Health Informatics Volume 13 ; 13 ; 2021 ; https://journals.uic.edu/ojs/ >
+      au < exists ; 2020 ; Online Journal of Public Health Informatics Volume 12 ; 12 ; 2020 ; https://journals.uic.edu/ojs/ >
+      au < exists ; 2021 ; Online Journal of Public Health Informatics Volume 13 ; 13 ; 2021 ; https://journals.uic.edu/ojs/ >
 
     }
 
@@ -211,17 +211,6 @@
       au < down ; 2014 ; Uncommon Culture Volume 5 ; 5 ; 2014 ; http://journals.uic.edu/ojs/ >
       au < down ; 2015 ; Uncommon Culture Volume 6 ; 6 ; 2015 ; http://journals.uic.edu/ojs/ >
       au < down ; 2018 ; Uncommon Culture Volume 7 ; 7 ; 2018 ; https://journals.uic.edu/ojs/ >
-
-    }
-
-    {
-    
-      plugin = org.lockss.plugin.ojs3.Ojs3Plugin
-      #param[base_url] = http://journals.uic.edu/ojs/
-      param[journal_id] = UC
-      attr[start_stem] = index.php/
-    
-      au < expected ; 2021 ; Uncommon Culture Volume 8 ; 8 ; 2021 ; https://journals.uic.edu/ojs/ >
 
     }
 
