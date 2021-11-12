@@ -5080,14 +5080,15 @@
 
       param[journal_issn] = 1110-6611
 #      param[base_url] = http://www.bfpt.eg.net/
+      #Moved to Springer
 
-      au < released ; 2015 ; Bulletin of Faculty of Physical Therapy Volume 20 ; 2015 ; 20 ; http://www.bfpt.eg.net/ >
-      au < released ; 2016 ; Bulletin of Faculty of Physical Therapy Volume 21 ; 2016 ; 21 ; http://www.bfpt.eg.net/ >
-      au < released ; 2017 ; Bulletin of Faculty of Physical Therapy Volume 22 ; 2017 ; 22 ; http://www.bfpt.eg.net/ >
-      au < released ; 2018 ; Bulletin of Faculty of Physical Therapy Volume 23 ; 2018 ; 23 ; http://www.bfpt.eg.net/ >
-      au < manifest ; 2019 ; Bulletin of Faculty of Physical Therapy Volume 24 ; 2019 ; 24 ; https://www.bfpt.eg.net/ >
-      au < expected ; 2020 ; Bulletin of Faculty of Physical Therapy Volume 25 ; 2020 ; 25 ; https://www.bfpt.eg.net/ >
-      au < expected ; 2021 ; Bulletin of Faculty of Physical Therapy Volume 26 ; 2021 ; 26 ; https://www.bfpt.eg.net/ >
+      au < down ; 2015 ; Bulletin of Faculty of Physical Therapy Volume 20 ; 2015 ; 20 ; http://www.bfpt.eg.net/ >
+      au < down ; 2016 ; Bulletin of Faculty of Physical Therapy Volume 21 ; 2016 ; 21 ; http://www.bfpt.eg.net/ >
+      au < down ; 2017 ; Bulletin of Faculty of Physical Therapy Volume 22 ; 2017 ; 22 ; http://www.bfpt.eg.net/ >
+      au < down ; 2018 ; Bulletin of Faculty of Physical Therapy Volume 23 ; 2018 ; 23 ; http://www.bfpt.eg.net/ >
+      au < doNotProcess ; 2019 ; Bulletin of Faculty of Physical Therapy Volume 24 ; 2019 ; 24 ; https://www.bfpt.eg.net/ >
+      au < doNotProcess ; 2020 ; Bulletin of Faculty of Physical Therapy Volume 25 ; 2020 ; 25 ; https://www.bfpt.eg.net/ >
+      au < doNotProcess ; 2021 ; Bulletin of Faculty of Physical Therapy Volume 26 ; 2021 ; 26 ; https://www.bfpt.eg.net/ >
 
   }
 
@@ -5138,14 +5139,15 @@
 
       param[journal_issn] = 0366-6999
 #      param[base_url] = http://www.cmj.org/
+#     Moved to Wolters Klewer
 
-      au < released ; 2015 ; Chinese Medical Journal Volume 128 ; 2015 ; 128 ; http://www.cmj.org/ >
-      au < released ; 2016 ; Chinese Medical Journal Volume 129 ; 2016 ; 129 ; http://www.cmj.org/ >
-      au < released ; 2017 ; Chinese Medical Journal Volume 130 ; 2017 ; 130 ; http://www.cmj.org/ >
-      au < exists ; 2018 ; Chinese Medical Journal Volume 131 ; 2018 ; 131 ; https://www.cmj.org/ >
-      au < expected ; 2019 ; Chinese Medical Journal Volume 132 ; 2019 ; 132 ; https://www.cmj.org/ >
-      au < expected ; 2020 ; Chinese Medical Journal Volume 133 ; 2020 ; 133 ; https://www.cmj.org/ >
-      au < expected ; 2021 ; Chinese Medical Journal Volume 134 ; 2021 ; 134 ; https://www.cmj.org/ >
+      au < down ; 2015 ; Chinese Medical Journal Volume 128 ; 2015 ; 128 ; http://www.cmj.org/ >
+      au < down ; 2016 ; Chinese Medical Journal Volume 129 ; 2016 ; 129 ; http://www.cmj.org/ >
+      au < down ; 2017 ; Chinese Medical Journal Volume 130 ; 2017 ; 130 ; http://www.cmj.org/ >
+      au < doNotProcess ; 2018 ; Chinese Medical Journal Volume 131 ; 2018 ; 131 ; https://www.cmj.org/ >
+      au < doNotProcess ; 2019 ; Chinese Medical Journal Volume 132 ; 2019 ; 132 ; https://www.cmj.org/ >
+      au < doNotProcess ; 2020 ; Chinese Medical Journal Volume 133 ; 2020 ; 133 ; https://www.cmj.org/ >
+      au < doNotProcess ; 2021 ; Chinese Medical Journal Volume 134 ; 2021 ; 134 ; https://www.cmj.org/ >
 
   }
 
@@ -5396,15 +5398,15 @@
 #      param[base_url] = http://www.ejbronchology.eg.net/
       #Moved to Springer
 
-      au < released ; 2013 ; Egyptian Journal of Bronchology Volume 7 ; 2013 ; 7 ; http://www.ejbronchology.eg.net/ >
-      au < released ; 2014 ; Egyptian Journal of Bronchology Volume 8 ; 2014 ; 8 ; http://www.ejbronchology.eg.net/ >
-      au < released ; 2015 ; Egyptian Journal of Bronchology Volume 9 ; 2015 ; 9 ; http://www.ejbronchology.eg.net/ >
-      au < released ; 2016 ; Egyptian Journal of Bronchology Volume 10 ; 2016 ; 10 ; http://www.ejbronchology.eg.net/ >
-      au < released ; 2017 ; Egyptian Journal of Bronchology Volume 11 ; 2017 ; 11 ; http://www.ejbronchology.eg.net/ >
-      au < released ; 2018 ; Egyptian Journal of Bronchology Volume 12 ; 2018 ; 12 ; http://www.ejbronchology.eg.net/ >
-      au < manifest ; 2019 ; Egyptian Journal of Bronchology Volume 13 ; 2019 ; 13 ; https://www.ejbronchology.eg.net/ >
-      au < expected ; 2020 ; Egyptian Journal of Bronchology Volume 14 ; 2020 ; 14 ; https://www.ejbronchology.eg.net/ >
-      au < expected ; 2021 ; Egyptian Journal of Bronchology Volume 15 ; 2021 ; 15 ; https://www.ejbronchology.eg.net/ >
+      au < down ; 2013 ; Egyptian Journal of Bronchology Volume 7 ; 2013 ; 7 ; http://www.ejbronchology.eg.net/ >
+      au < down ; 2014 ; Egyptian Journal of Bronchology Volume 8 ; 2014 ; 8 ; http://www.ejbronchology.eg.net/ >
+      au < down ; 2015 ; Egyptian Journal of Bronchology Volume 9 ; 2015 ; 9 ; http://www.ejbronchology.eg.net/ >
+      au < down ; 2016 ; Egyptian Journal of Bronchology Volume 10 ; 2016 ; 10 ; http://www.ejbronchology.eg.net/ >
+      au < down ; 2017 ; Egyptian Journal of Bronchology Volume 11 ; 2017 ; 11 ; http://www.ejbronchology.eg.net/ >
+      au < down ; 2018 ; Egyptian Journal of Bronchology Volume 12 ; 2018 ; 12 ; http://www.ejbronchology.eg.net/ >
+      au < doNotProcess ; 2019 ; Egyptian Journal of Bronchology Volume 13 ; 2019 ; 13 ; https://www.ejbronchology.eg.net/ >
+      au < doNotProcess ; 2020 ; Egyptian Journal of Bronchology Volume 14 ; 2020 ; 14 ; https://www.ejbronchology.eg.net/ >
+      au < doNotProcess ; 2021 ; Egyptian Journal of Bronchology Volume 15 ; 2021 ; 15 ; https://www.ejbronchology.eg.net/ >
 
   }
 
@@ -5528,16 +5530,17 @@
 
       param[journal_issn] = 1110-161X
 #      param[base_url] = http://www.err.eg.net/
+      #Moved to Springer
 
-      au < released ; 2013 ; Egyptian Rheumatology and Rehabilitation Volume 40 ; 2013 ; 40 ; http://www.err.eg.net/ >
-      au < released ; 2014 ; Egyptian Rheumatology and Rehabilitation Volume 41 ; 2014 ; 41 ; http://www.err.eg.net/ >
-      au < released ; 2015 ; Egyptian Rheumatology and Rehabilitation Volume 42 ; 2015 ; 42 ; http://www.err.eg.net/ >
-      au < released ; 2016 ; Egyptian Rheumatology and Rehabilitation Volume 43 ; 2016 ; 43 ; http://www.err.eg.net/ >
-      au < released ; 2017 ; Egyptian Rheumatology and Rehabilitation Volume 44 ; 2017 ; 44 ; http://www.err.eg.net/ >
-      au < released ; 2018 ; Egyptian Rheumatology and Rehabilitation Volume 45 ; 2018 ; 45 ; http://www.err.eg.net/ >
-      au < manifest ; 2019 ; Egyptian Rheumatology and Rehabilitation Volume 46 ; 2019 ; 46 ; https://www.err.eg.net/ >
-      au < expected ; 2020 ; Egyptian Rheumatology and Rehabilitation Volume 47 ; 2020 ; 47 ; https://www.err.eg.net/ >
-      au < expected ; 2021 ; Egyptian Rheumatology and Rehabilitation Volume 48 ; 2021 ; 48 ; https://www.err.eg.net/ >
+      au < down ; 2013 ; Egyptian Rheumatology and Rehabilitation Volume 40 ; 2013 ; 40 ; http://www.err.eg.net/ >
+      au < down ; 2014 ; Egyptian Rheumatology and Rehabilitation Volume 41 ; 2014 ; 41 ; http://www.err.eg.net/ >
+      au < down ; 2015 ; Egyptian Rheumatology and Rehabilitation Volume 42 ; 2015 ; 42 ; http://www.err.eg.net/ >
+      au < down ; 2016 ; Egyptian Rheumatology and Rehabilitation Volume 43 ; 2016 ; 43 ; http://www.err.eg.net/ >
+      au < down ; 2017 ; Egyptian Rheumatology and Rehabilitation Volume 44 ; 2017 ; 44 ; http://www.err.eg.net/ >
+      au < down ; 2018 ; Egyptian Rheumatology and Rehabilitation Volume 45 ; 2018 ; 45 ; http://www.err.eg.net/ >
+      au < doNotProcess ; 2019 ; Egyptian Rheumatology and Rehabilitation Volume 46 ; 2019 ; 46 ; https://www.err.eg.net/ >
+      au < doNotProcess ; 2020 ; Egyptian Rheumatology and Rehabilitation Volume 47 ; 2020 ; 47 ; https://www.err.eg.net/ >
+      au < doNotProcess ; 2021 ; Egyptian Rheumatology and Rehabilitation Volume 48 ; 2021 ; 48 ; https://www.err.eg.net/ >
 
   }
 #  {
@@ -9408,13 +9411,14 @@
 
       param[journal_issn] = 2468-7332
 #      param[base_url] = http://www.ijsshortreports.com/
+#     Moved to Wolters Klewer
 
-      au < exists ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 ; https://www.ijsshortreports.com/ >
-      au < exists ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; https://www.ijsshortreports.com/ >
-      au < exists ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 ; https://www.ijsshortreports.com/ >
-      au < expected ; 2019 ; IJS Short Reports Volume 4 ; 2019 ; 4 ; https://www.ijsshortreports.com/ >
-      au < expected ; 2020 ; IJS Short Reports Volume 5 ; 2020 ; 5 ; https://www.ijsshortreports.com/ >
-      au < expected ; 2021 ; IJS Short Reports Volume 6 ; 2021 ; 6 ; https://www.ijsshortreports.com/ >
+      au < doNotProcess ; 2016 ; IJS Short Reports Volume 1 ; 2016 ; 1 ; https://www.ijsshortreports.com/ >
+      au < doNotProcess ; 2017 ; IJS Short Reports Volume 2 ; 2017 ; 2 ; https://www.ijsshortreports.com/ >
+      au < doNotProcess ; 2018 ; IJS Short Reports Volume 3 ; 2018 ; 3 ; https://www.ijsshortreports.com/ >
+      au < doNotProcess ; 2019 ; IJS Short Reports Volume 4 ; 2019 ; 4 ; https://www.ijsshortreports.com/ >
+      au < doNotProcess ; 2020 ; IJS Short Reports Volume 5 ; 2020 ; 5 ; https://www.ijsshortreports.com/ >
+      au < doNotProcess ; 2021 ; IJS Short Reports Volume 6 ; 2021 ; 6 ; https://www.ijsshortreports.com/ >
 
   }
 
@@ -9434,8 +9438,8 @@
       au < exists ; 2017 ; Imam Journal of Applied Sciences Volume 2 ; 2017 ; 2 ; https://www.e-ijas.org/ >
       au < exists ; 2018 ; Imam Journal of Applied Sciences Volume 3 ; 2018 ; 3 ; https://www.e-ijas.org/ >
       au < exists ; 2019 ; Imam Journal of Applied Sciences Volume 4 ; 2019 ; 4 ; https://www.e-ijas.org/ >
-      au < expected ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ >
-      au < expected ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ >
+      au < exists ; 2020 ; Imam Journal of Applied Sciences Volume 5 ; 2020 ; 5 ; https://www.e-ijas.org/ >
+      au < exists ; 2021 ; Imam Journal of Applied Sciences Volume 6 ; 2021 ; 6 ; https://www.e-ijas.org/ >
 
   }
 
