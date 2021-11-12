@@ -55,7 +55,9 @@
     au < down ; 2013 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
     au < down ; 2015 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 5 ; 5 ; 2015 >
     au < down ; 2016 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 6 ; 6 ; 2016 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
@@ -63,8 +65,10 @@
 
     au < exists ; 2017 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 7 ; 7 ; 2017 >
     au < exists ; 2018 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 8 ; 8 ; 2018 >
-    au < expected ; 2019 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 9 ; 9 ; 2019 >
-    au < expected ; 2020 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 ; 10 ; 2020 >
+    au < exists ; 2019 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 9 ; 9 ; 2019 >
+    au < exists ; 2020 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 (2020) ; 10 ; 2020 >
+    au < exists ; 2021 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 (2021) ; 10 ; 2021 >
+
     }
   }
 }  
@@ -98,7 +102,9 @@
     au < down ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
     au < down ; 2015 ; International Journal of Infection Control Volume 11 ; 11 ; 2015 >
     au < down ; 2016 ; International Journal of Infection Control Volume 12 ; 12 ; 2016 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
@@ -106,8 +112,10 @@
 
     au < exists ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
     au < exists ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
-    au < expected ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
-    au < expected ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
+    au < exists ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
+    au < exists ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
+    au < exists ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
+
     }
   }
 }
@@ -142,15 +150,19 @@
     au < down ; 2015 ; International Journal of Transactional Analysis Research & Practice Volume 6 ; 6 ; 2015 >
     au < down ; 2016 ; International Journal of Transactional Analysis Research & Practice Volume 7 ; 7 ; 2016 >
     au < down ; 2017 ; International Journal of Transactional Analysis Research & Practice Volume 8 ; 8 ; 2017 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
     param[base_url] = https://www.ijtarp.org/
     
     au < exists ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
-    au < expected ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
-    au < expected ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
+    au < exists ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
+    au < exists ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
+    au < exists ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
+
     }
   }
 }
@@ -186,7 +198,9 @@
     au < down ; 2014 ; Intersticios Volume 8 ; 8 ; 2014 >
     au < down ; 2015 ; Intersticios Volume 9 ; 9 ; 2015 >
     au < down ; 2016 ; Intersticios Volume 10 ; 10 ; 2016 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
@@ -194,8 +208,10 @@
 
     au < exists ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
     au < exists ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
-    au < expected ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
-    au < expected ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
+    au < exists ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
+    au < exists ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
+    au < exists ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
+
     }
 
   }
@@ -260,16 +276,19 @@
     au < down ; 2014 ; Journal of Applied Leadership and Management Volume 2014 ; 2014 ; 2014 >
     au < down ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2015 ; 2015 ; 2015 >
     au < down ; 2015-2016 ; Journal of Applied Leadership and Management Volume 2016 ; 2016 ; 2016 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
     param[base_url] = https://www.journal-alm.org/
 
-    au < exists ; 2017 ; Journal of Applied Leadership and Management Volume 2017 ; 2017 ; 2017 >
-    au < exists ; 2018 ; Journal of Applied Leadership and Management Volume 2018 ; 2018 ; 2018 >
-    au < expected ; 2019 ; Journal of Applied Leadership and Management Volume 2019 ; 2019 ; 2019 >
-    au < expected ; 2020 ; Journal of Applied Leadership and Management Volume 2020 ; 2020 ; 2020 >
+    au < exists ; 2017 ; Journal of Applied Leadership and Management Volume 5 ; 5 ; 2017 >
+    au < exists ; 2018 ; Journal of Applied Leadership and Management Volume 6 ; 6 ; 2018 >
+    au < exists ; 2019 ; Journal of Applied Leadership and Management Volume 7 ; 7 ; 2019 >
+    au < exists ; 2020 ; Journal of Applied Leadership and Management Volume 8 ; 8 ; 2020 >
+
     }
   }
 }
@@ -498,7 +517,9 @@
     au < down ; 2018 ; Syllabus Volume 7 ; 7 ; 2018 >
     au < down ; 2019 ; Syllabus Volume 8 ; 8 ; 2019 >
     au < down ; 2020 ; Syllabus Volume 9 ; 9 ; 2020 >
+
     }
+
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
