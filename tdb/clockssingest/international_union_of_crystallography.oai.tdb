@@ -433,9 +433,9 @@
     au < manifest ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (July 2021) ; 2021-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < manifest ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (August 2021) ; 2021-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < manifest ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (September 2021) ; 2021-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (October 2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (November 2021) ; 2021-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (December 2021) ; 2021-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < exists ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (October 2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < exists ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (November 2021) ; 2021-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < exists ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (December 2021) ; 2021-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
   
@@ -526,9 +526,9 @@
     au < manifest ; exists ; 2021 ; 6 ; IUCrData Volume 6 (July 2021) ; 2021-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < manifest ; exists ; 2021 ; 6 ; IUCrData Volume 6 (August 2021) ; 2021-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < manifest ; exists ; 2021 ; 6 ; IUCrData Volume 6 (September 2021) ; 2021-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2021 ; 6 ; IUCrData Volume 6 (October 2021) ; 2021-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2021 ; 6 ; IUCrData Volume 6 (November 2021) ; 2021-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2021 ; 6 ; IUCrData Volume 6 (December 2021) ; 2021-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < exists ; exists ; 2021 ; 6 ; IUCrData Volume 6 (October 2021) ; 2021-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < exists ; exists ; 2021 ; 6 ; IUCrData Volume 6 (November 2021) ; 2021-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < exists ; exists ; 2021 ; 6 ; IUCrData Volume 6 (December 2021) ; 2021-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
 
