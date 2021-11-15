@@ -21,6 +21,8 @@
 
     au < readySource ; crawling ; 2020 ; BioOne Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; BioOne Source Content 2021 ; 2021 >
+    au < doNotProcess ; exists ; 2021 ; BioOne Source Content 2022 ; 2022 >
+    #do not process 2022. Publishers have asked that the material be split up between each publisher.
 
   }
 
