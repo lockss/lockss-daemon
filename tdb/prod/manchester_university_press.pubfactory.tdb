@@ -34,7 +34,7 @@
     au < doNotProcess ; 2017 ; Bulletin of the John Rylands Library Volume 93 ; 93 >
     au < released ; 2018 ; Bulletin of the John Rylands Library Volume 94 ; 94 >
     au < released ; 2019 ; Bulletin of the John Rylands Library Volume 95 ; 95 >
-    au < ready ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 >
+    au < releasing ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 >
     au < manifest ; 2021 ; Bulletin of the John Rylands Library Volume 97 ; 97 >
 
   }
@@ -68,10 +68,10 @@
     au < doNotProcess ; 2017 ; Film Studies Volume 16 ; 16 >
     au < released ; 2017 ; Film Studies Volume 17 ; 17 >
     au < released ; 2018 ; Film Studies Volume 18 ; 18 >
-    au < ready ; 2018 ; Film Studies Volume 19 ; 19 >
-    au < ready ; 2019 ; Film Studies Volume 20 ; 20 >
-    au < ready ; 2019 ; Film Studies Volume 21 ; 21 >
-    au < ready ; 2020 ; Film Studies Volume 22 ; 22 >
+    au < releasing ; 2018 ; Film Studies Volume 19 ; 19 >
+    au < releasing ; 2019 ; Film Studies Volume 20 ; 20 >
+    au < releasing ; 2019 ; Film Studies Volume 21 ; 21 >
+    au < releasing ; 2020 ; Film Studies Volume 22 ; 22 >
     au < expected ; 2021 ; Film Studies Volume 23 ; 23 >
 
   }
@@ -100,11 +100,11 @@
     au < manifest ; 2008 ; Gothic Studies Volume 10 ; 10 >
     au < manifest ; 2009 ; Gothic Studies Volume 11 ; 11 >
     au < manifest ; 2010 ; Gothic Studies Volume 12 ; 12 >
-    au < ready ; 2011 ; Gothic Studies Volume 13 ; 13 >
-    au < ready ; 2012 ; Gothic Studies Volume 14 ; 14 >
-    au < ready ; 2013 ; Gothic Studies Volume 15 ; 15 >
+    au < releasing ; 2011 ; Gothic Studies Volume 13 ; 13 >
+    au < releasing ; 2012 ; Gothic Studies Volume 14 ; 14 >
+    au < releasing ; 2013 ; Gothic Studies Volume 15 ; 15 >
     au < manifest ; 2014 ; Gothic Studies Volume 16 ; 16 >
-    au < ready ; 2015 ; Gothic Studies Volume 17 ; 17 >
+    au < releasing ; 2015 ; Gothic Studies Volume 17 ; 17 >
     au < released ; 2016 ; Gothic Studies Volume 18 ; 18 >
     au < released ; 2017 ; Gothic Studies Volume 19 ; 19 >
     au < released ; 2018 ; Gothic Studies Volume 20 ; 20 >
@@ -144,10 +144,10 @@
       au < doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 >
       au < doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 >
       au < doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 >
-      au < ready ; 2018 ; Human Remains and Violence Volume 4 ; 4 >
-      au < ready ; 2019 ; Human Remains and Violence Volume 5 ; 5 >
-      au < ready ; 2020 ; Human Remains and Violence Volume 6 ; 6 >
-      au < ready ; 2021 ; Human Remains and Violence Volume 7 ; 7 >
+      au < releasing ; 2018 ; Human Remains and Violence Volume 4 ; 4 >
+      au < releasing ; 2019 ; Human Remains and Violence Volume 5 ; 5 >
+      au < releasing ; 2020 ; Human Remains and Violence Volume 6 ; 6 >
+      au < releasing ; 2021 ; Human Remains and Violence Volume 7 ; 7 >
 
     }
 
@@ -180,13 +180,13 @@
 
       param[base_url] = https://www.manchesteropenhive.com/
 
-      au < ready ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
-      au < ready ; 2016 ; James Baldwin Journal Volume 2 ; 2 >
-      au < ready ; 2017 ; James Baldwin Journal Volume 3 ; 3 >
-      au < ready ; 2018 ; James Baldwin Journal Volume 4 ; 4 >
-      au < ready ; 2019 ; James Baldwin Journal Volume 5 ; 5 >
-      au < ready ; 2020 ; James Baldwin Journal Volume 6 ; 6 >
-      au < ready ; 2021 ; James Baldwin Journal Volume 7 ; 7 >
+      au < releasing ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
+      au < releasing ; 2016 ; James Baldwin Journal Volume 2 ; 2 >
+      au < releasing ; 2017 ; James Baldwin Journal Volume 3 ; 3 >
+      au < releasing ; 2018 ; James Baldwin Journal Volume 4 ; 4 >
+      au < releasing ; 2019 ; James Baldwin Journal Volume 5 ; 5 >
+      au < releasing ; 2020 ; James Baldwin Journal Volume 6 ; 6 >
+      au < releasing ; 2021 ; James Baldwin Journal Volume 7 ; 7 >
 
     }
   }

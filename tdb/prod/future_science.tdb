@@ -142,8 +142,8 @@
     
     param[journal_id] = fdd
 
-    au < ready ; 2019 ; Future Drug Discover Volume 1 ; 1 ; https://www.future-science.com/ >
-    au < ready ; 2020 ; Future Drug Discover Volume 2 ; 2 ; https://www.future-science.com/ >
+    au < releasing ; 2019 ; Future Drug Discover Volume 1 ; 1 ; https://www.future-science.com/ >
+    au < releasing ; 2020 ; Future Drug Discover Volume 2 ; 2 ; https://www.future-science.com/ >
     au < manifest ; 2021 ; Future Drug Discover Volume 3 ; 3 ; https://www.future-science.com/ >
 
   }

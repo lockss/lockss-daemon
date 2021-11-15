@@ -659,7 +659,7 @@
      au < doNotProcess ; 2016 ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 6 >
      au < doNotProcess ; 2017 ; 2017 ; Avicenna Journal of Medicine Volume 7 ; 7 >
      au < doNotProcess ; 2018 ; 2018 ; Avicenna Journal of Medicine Volume 8 ; 8 >
-     au < ready ; 2019 ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 9 >
+     au < releasing ; 2019 ; 2019 ; Avicenna Journal of Medicine Volume 9 ; 9 >
      au < manifest ; 2020 ; 2020 ; Avicenna Journal of Medicine Volume 10 ; 10 >
      au < manifest ; 2021 ; 2021 ; Avicenna Journal of Medicine Volume 11 ; 11 >
 
@@ -2444,13 +2444,13 @@
     comment[years] =  2005-current
     #Moved from Medknow
 
-    au < ready ; 2005 ; 2005 ; Indian Journal of Radiology and Imaging Volume 15 ; 15 >
-    au < ready ; 2006 ; 2006 ; Indian Journal of Radiology and Imaging Volume 16 ; 16 >
-    au < ready ; 2007 ; 2007 ; Indian Journal of Radiology and Imaging Volume 17 ; 17 >
-    au < ready ; 2008 ; 2008 ; Indian Journal of Radiology and Imaging Volume 18 ; 18 >
-    au < ready ; 2009 ; 2009 ; Indian Journal of Radiology and Imaging Volume 19 ; 19 >
-    au < ready ; 2010 ; 2010 ; Indian Journal of Radiology and Imaging Volume 20 ; 20 >
-    au < ready ; 2011 ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 21 >
+    au < releasing ; 2005 ; 2005 ; Indian Journal of Radiology and Imaging Volume 15 ; 15 >
+    au < releasing ; 2006 ; 2006 ; Indian Journal of Radiology and Imaging Volume 16 ; 16 >
+    au < releasing ; 2007 ; 2007 ; Indian Journal of Radiology and Imaging Volume 17 ; 17 >
+    au < releasing ; 2008 ; 2008 ; Indian Journal of Radiology and Imaging Volume 18 ; 18 >
+    au < releasing ; 2009 ; 2009 ; Indian Journal of Radiology and Imaging Volume 19 ; 19 >
+    au < releasing ; 2010 ; 2010 ; Indian Journal of Radiology and Imaging Volume 20 ; 20 >
+    au < releasing ; 2011 ; 2011 ; Indian Journal of Radiology and Imaging Volume 21 ; 21 >
     au < doNotProcess ; 2012 ; 2012 ; Indian Journal of Radiology and Imaging Volume 22 ; 22 >
     au < doNotProcess ; 2013 ; 2013 ; Indian Journal of Radiology and Imaging Volume 23 ; 23 >
     au < doNotProcess ; 2014 ; 2014 ; Indian Journal of Radiology and Imaging Volume 24 ; 24 >
@@ -7992,11 +7992,11 @@
     au < doesNotExist ; 2013 ; 2013 ; Annals of the National Academy of Medical Sciences (India) Volume 49 ; 49 >
     au < doesNotExist ; 2014 ; 2014 ; Annals of the National Academy of Medical Sciences (India) Volume 50 ; 50 >
     au < doesNotExist ; 2015 ; 2015 ; Annals of the National Academy of Medical Sciences (India) Volume 51 ; 51 >
-    au < ready ; 2016 ; 2016 ; Annals of the National Academy of Medical Sciences (India) Volume 52 ; 52 >
-    au < ready ; 2017 ; 2017 ; Annals of the National Academy of Medical Sciences (India) Volume 53 ; 53 >
-    au < ready ; 2018 ; 2018 ; Annals of the National Academy of Medical Sciences (India) Volume 54 ; 54 >
-    au < ready ; 2019 ; 2019 ; Annals of the National Academy of Medical Sciences (India) Volume 55 ; 55 >
-    au < ready ; 2020 ; 2020 ; Annals of the National Academy of Medical Sciences (India) Volume 56 ; 56 >
+    au < releasing ; 2016 ; 2016 ; Annals of the National Academy of Medical Sciences (India) Volume 52 ; 52 >
+    au < releasing ; 2017 ; 2017 ; Annals of the National Academy of Medical Sciences (India) Volume 53 ; 53 >
+    au < releasing ; 2018 ; 2018 ; Annals of the National Academy of Medical Sciences (India) Volume 54 ; 54 >
+    au < releasing ; 2019 ; 2019 ; Annals of the National Academy of Medical Sciences (India) Volume 55 ; 55 >
+    au < releasing ; 2020 ; 2020 ; Annals of the National Academy of Medical Sciences (India) Volume 56 ; 56 >
     au < manifest ; 2021 ; 2021 ; Annals of the National Academy of Medical Sciences (India) Volume 57 ; 57 >
 
   }
@@ -8013,12 +8013,12 @@
     param[journal_id] = 10.1055/s-00042137
     comment[years] = 2015-current
 
-    au < ready ; 2015 ; 2015 ; Asian Journal of Oncology Volume 1 ; 1 >
-    au < ready ; 2016 ; 2016 ; Asian Journal of Oncology Volume 2 ; 2 >
+    au < releasing ; 2015 ; 2015 ; Asian Journal of Oncology Volume 1 ; 1 >
+    au < releasing ; 2016 ; 2016 ; Asian Journal of Oncology Volume 2 ; 2 >
     au < manifest ; 2017 ; 2017 ; Asian Journal of Oncology Volume 3 ; 3 >
-    au < ready ; 2018 ; 2018 ; Asian Journal of Oncology Volume 4 ; 4 >
-    au < ready ; 2019 ; 2019 ; Asian Journal of Oncology Volume 5 ; 5 >
-    au < ready ; 2020 ; 2020 ; Asian Journal of Oncology Volume 6 ; 6 >
+    au < releasing ; 2018 ; 2018 ; Asian Journal of Oncology Volume 4 ; 4 >
+    au < releasing ; 2019 ; 2019 ; Asian Journal of Oncology Volume 5 ; 5 >
+    au < releasing ; 2020 ; 2020 ; Asian Journal of Oncology Volume 6 ; 6 >
     au < manifest ; 2021 ; 2021 ; Asian Journal of Oncology Volume 7 ; 7 >
 
   }
@@ -8091,7 +8091,7 @@
     au < manifest ; 1998 ; 1998 ; British Homeopathic Journal Volume 88 ; 88 >
     au < manifest ; 1999 ; 1999 ; British Homeopathic Journal Volume 89 ; 89 >
     au < manifest ; 2000 ; 2000 ; British Homeopathic Journal Volume 90 ; 90 >
-    au < ready ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 >
+    au < releasing ; 2001 ; 2001 ; British Homeopathic Journal Volume 91 ; 91 >
 
   }
 
@@ -8107,11 +8107,11 @@
     param[journal_id] = 10.1055/s-00041927
     comment[years] = 2016-current
 
-    au < ready ; 2016 ; 2016 ; CNE Pflegemanagement Volume 3 ; 3 >
-    au < ready ; 2017 ; 2017 ; CNE Pflegemanagement Volume 4 ; 4 >
+    au < releasing ; 2016 ; 2016 ; CNE Pflegemanagement Volume 3 ; 3 >
+    au < releasing ; 2017 ; 2017 ; CNE Pflegemanagement Volume 4 ; 4 >
     au < manifest ; 2018 ; 2018 ; CNE Pflegemanagement Volume 5 ; 5 >
-    au < ready ; 2019 ; 2019 ; CNE Pflegemanagement Volume 6 ; 6 >
-    au < ready ; 2020 ; 2020 ; CNE Pflegemanagement Volume 7 ; 7 >
+    au < releasing ; 2019 ; 2019 ; CNE Pflegemanagement Volume 6 ; 6 >
+    au < releasing ; 2020 ; 2020 ; CNE Pflegemanagement Volume 7 ; 7 >
     au < manifest ; 2021 ; 2021 ; CNE Pflegemanagement Volume 8 ; 8 >
 
   }
@@ -8128,13 +8128,13 @@
     param[journal_id] = 10.1055/s-00041004
     comment[years] = 2013-current
 
-    au < ready ; 2013 ; 2013 ; Dental Journal of Advance Studies Volume 1 ; 1 >
-    au < ready ; 2014 ; 2014 ; Dental Journal of Advance Studies Volume 2 ; 2 >
-    au < ready ; 2015 ; 2015 ; Dental Journal of Advance Studies Volume 3 ; 3 >
-    au < ready ; 2016 ; 2016 ; Dental Journal of Advance Studies Volume 4 ; 4 >
-    au < ready ; 2017 ; 2017 ; Dental Journal of Advance Studies Volume 5 ; 5 >
-    au < ready ; 2018 ; 2018 ; Dental Journal of Advance Studies Volume 6 ; 6 >
-    au < ready ; 2019 ; 2019 ; Dental Journal of Advance Studies Volume 7 ; 7 >
+    au < releasing ; 2013 ; 2013 ; Dental Journal of Advance Studies Volume 1 ; 1 >
+    au < releasing ; 2014 ; 2014 ; Dental Journal of Advance Studies Volume 2 ; 2 >
+    au < releasing ; 2015 ; 2015 ; Dental Journal of Advance Studies Volume 3 ; 3 >
+    au < releasing ; 2016 ; 2016 ; Dental Journal of Advance Studies Volume 4 ; 4 >
+    au < releasing ; 2017 ; 2017 ; Dental Journal of Advance Studies Volume 5 ; 5 >
+    au < releasing ; 2018 ; 2018 ; Dental Journal of Advance Studies Volume 6 ; 6 >
+    au < releasing ; 2019 ; 2019 ; Dental Journal of Advance Studies Volume 7 ; 7 >
     au < manifest ; 2020 ; 2020 ; Dental Journal of Advance Studies Volume 8 ; 8 >
     au < manifest ; 2021 ; 2021 ; Dental Journal of Advance Studies Volume 9 ; 9 >
 
@@ -8152,9 +8152,9 @@
     param[journal_id] = 10.1055/s-00035232
     comment[years] = 2018-current
 
-    au < ready ; 2018 ; 2018 ; Der Schmerzpatient Volume 1 ; 1 >
-    au < ready ; 2019 ; 2019 ; Der Schmerzpatient Volume 2 ; 2 >
-    au < ready ; 2020 ; 2020 ; Der Schmerzpatient Volume 3 ; 3 >
+    au < releasing ; 2018 ; 2018 ; Der Schmerzpatient Volume 1 ; 1 >
+    au < releasing ; 2019 ; 2019 ; Der Schmerzpatient Volume 2 ; 2 >
+    au < releasing ; 2020 ; 2020 ; Der Schmerzpatient Volume 3 ; 3 >
     au < manifest ; 2021 ; 2021 ; Der Schmerzpatient Volume 4 ; 4 >
 
   }
@@ -8170,15 +8170,15 @@
     param[journal_id] = 10.1055/s-00041103
     comment[years] = 2009-2017
 
-    au < ready ; 2009 ; 2009 ; Die Psychiatrie Volume 6 ; 6 >
-    au < ready ; 2010 ; 2010 ; Die Psychiatrie Volume 7 ; 7 >
-    au < ready ; 2011 ; 2011 ; Die Psychiatrie Volume 8 ; 8 >
-    au < ready ; 2012 ; 2012 ; Die Psychiatrie Volume 9 ; 9 >
-    au < ready ; 2013 ; 2013 ; Die Psychiatrie Volume 10 ; 10 >
-    au < ready ; 2014 ; 2014 ; Die Psychiatrie Volume 11 ; 11 >
-    au < ready ; 2015 ; 2015 ; Die Psychiatrie Volume 12 ; 12 >
-    au < ready ; 2016 ; 2016 ; Die Psychiatrie Volume 13 ; 13 >
-    au < ready ; 2017 ; 2017 ; Die Psychiatrie Volume 14 ; 14 >
+    au < releasing ; 2009 ; 2009 ; Die Psychiatrie Volume 6 ; 6 >
+    au < releasing ; 2010 ; 2010 ; Die Psychiatrie Volume 7 ; 7 >
+    au < releasing ; 2011 ; 2011 ; Die Psychiatrie Volume 8 ; 8 >
+    au < releasing ; 2012 ; 2012 ; Die Psychiatrie Volume 9 ; 9 >
+    au < releasing ; 2013 ; 2013 ; Die Psychiatrie Volume 10 ; 10 >
+    au < releasing ; 2014 ; 2014 ; Die Psychiatrie Volume 11 ; 11 >
+    au < releasing ; 2015 ; 2015 ; Die Psychiatrie Volume 12 ; 12 >
+    au < releasing ; 2016 ; 2016 ; Die Psychiatrie Volume 13 ; 13 >
+    au < releasing ; 2017 ; 2017 ; Die Psychiatrie Volume 14 ; 14 >
 
   }
 
@@ -8194,8 +8194,8 @@
     param[journal_id] = 10.1055/s-00042133
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; European Journal of Dentistry Volume 13 ; 13 >
-    au < ready ; 2020 ; 2020 ; European Journal of Dentistry Volume 14 ; 14 >
+    au < releasing ; 2019 ; 2019 ; European Journal of Dentistry Volume 13 ; 13 >
+    au < releasing ; 2020 ; 2020 ; European Journal of Dentistry Volume 14 ; 14 >
     au < manifest ; 2021 ; 2021 ; European Journal of Dentistry Volume 15 ; 15 >
 
   }
@@ -8212,8 +8212,8 @@
     param[journal_id] = 10.1055/s-00042229
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Geriatrie up2date Volume 1 ; 1 >
-    au < ready ; 2020 ; 2020 ; Geriatrie up2date Volume 2 ; 2 >
+    au < releasing ; 2019 ; 2019 ; Geriatrie up2date Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Geriatrie up2date Volume 2 ; 2 >
     au < manifest ; 2021 ; 2021 ; Geriatrie up2date Volume 3 ; 3 >
 
   }
@@ -8230,8 +8230,8 @@
     param[journal_id] = 10.1055/s-00042927
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 1 ; 1 >
-    au < ready ; 2020 ; 2020 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 2 ; 2 >
+    au < releasing ; 2019 ; 2019 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 2 ; 2 >
     au < manifest ; 2021 ; 2021 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 3 ; 3 >
 
   }
@@ -8248,24 +8248,24 @@
     param[journal_id] = 10.1055/s-00034926
     comment[years] = 2002-current
 
-    au < ready ; 2002 ; 2002 ; Homeopathy Volume 91 ; 91 >
-    au < ready ; 2003 ; 2003 ; Homeopathy Volume 92 ; 92 >
-    au < ready ; 2004 ; 2004 ; Homeopathy Volume 93 ; 93 >
+    au < releasing ; 2002 ; 2002 ; Homeopathy Volume 91 ; 91 >
+    au < releasing ; 2003 ; 2003 ; Homeopathy Volume 92 ; 92 >
+    au < releasing ; 2004 ; 2004 ; Homeopathy Volume 93 ; 93 >
     au < manifest ; 2005 ; 2005 ; Homeopathy Volume 94 ; 94 >
     au < manifest ; 2006 ; 2006 ; Homeopathy Volume 95 ; 95 >
-    au < ready ; 2007 ; 2007 ; Homeopathy Volume 96 ; 96 >
+    au < releasing ; 2007 ; 2007 ; Homeopathy Volume 96 ; 96 >
     au < manifest ; 2008 ; 2008 ; Homeopathy Volume 97 ; 97 >
-    au < ready ; 2009 ; 2009 ; Homeopathy Volume 98 ; 98 >
-    au < ready ; 2010 ; 2010 ; Homeopathy Volume 99 ; 99 >
-    au < ready ; 2011 ; 2011 ; Homeopathy Volume 100 ; 100 >
-    au < ready ; 2012 ; 2012 ; Homeopathy Volume 101 ; 101 >
+    au < releasing ; 2009 ; 2009 ; Homeopathy Volume 98 ; 98 >
+    au < releasing ; 2010 ; 2010 ; Homeopathy Volume 99 ; 99 >
+    au < releasing ; 2011 ; 2011 ; Homeopathy Volume 100 ; 100 >
+    au < releasing ; 2012 ; 2012 ; Homeopathy Volume 101 ; 101 >
     au < manifest ; 2013 ; 2013 ; Homeopathy Volume 102 ; 102 >
-    au < ready ; 2014 ; 2014 ; Homeopathy Volume 103 ; 103 >
+    au < releasing ; 2014 ; 2014 ; Homeopathy Volume 103 ; 103 >
     au < manifest ; 2015 ; 2015 ; Homeopathy Volume 104 ; 104 >
-    au < ready ; 2016 ; 2016 ; Homeopathy Volume 105 ; 105 >
+    au < releasing ; 2016 ; 2016 ; Homeopathy Volume 105 ; 105 >
     au < manifest ; 2017 ; 2017 ; Homeopathy Volume 106 ; 106 >
-    au < ready ; 2018 ; 2018 ; Homeopathy Volume 107 ; 107 >
-    au < ready ; 2019 ; 2019 ; Homeopathy Volume 108 ; 108 >
+    au < releasing ; 2018 ; 2018 ; Homeopathy Volume 107 ; 107 >
+    au < releasing ; 2019 ; 2019 ; Homeopathy Volume 108 ; 108 >
     au < manifest ; 2020 ; 2020 ; Homeopathy Volume 109 ; 109 >
     au < manifest ; 2021 ; 2021 ; Homeopathy Volume 110 ; 110 >
 
@@ -8283,23 +8283,23 @@
     param[journal_id] = 10.1055/s-00042863
     comment[years] = 2004-current
 
-    au < ready ; 2004 ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 37 >
-    au < ready ; 2005 ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 38 >
-    au < ready ; 2006 ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 39 >
+    au < releasing ; 2004 ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 37 >
+    au < releasing ; 2005 ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 38 >
+    au < releasing ; 2006 ; 2006 ; Indian Journal of Plastic Surgery Volume 39 ; 39 >
     au < manifest ; 2007 ; 2007 ; Indian Journal of Plastic Surgery Volume 40 ; 40 >
-    au < ready ; 2008 ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 41 >
-    au < ready ; 2009 ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 42 >
-    au < ready ; 2010 ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 43 >
-    au < ready ; 2011 ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 44 >
-    au < ready ; 2012 ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 45 >
-    au < ready ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 >
-    au < ready ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 >
-    au < ready ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 >
+    au < releasing ; 2008 ; 2008 ; Indian Journal of Plastic Surgery Volume 41 ; 41 >
+    au < releasing ; 2009 ; 2009 ; Indian Journal of Plastic Surgery Volume 42 ; 42 >
+    au < releasing ; 2010 ; 2010 ; Indian Journal of Plastic Surgery Volume 43 ; 43 >
+    au < releasing ; 2011 ; 2011 ; Indian Journal of Plastic Surgery Volume 44 ; 44 >
+    au < releasing ; 2012 ; 2012 ; Indian Journal of Plastic Surgery Volume 45 ; 45 >
+    au < releasing ; 2013 ; 2013 ; Indian Journal of Plastic Surgery Volume 46 ; 46 >
+    au < releasing ; 2014 ; 2014 ; Indian Journal of Plastic Surgery Volume 47 ; 47 >
+    au < releasing ; 2015 ; 2015 ; Indian Journal of Plastic Surgery Volume 48 ; 48 >
     au < manifest ; 2016 ; 2016 ; Indian Journal of Plastic Surgery Volume 49 ; 49 >
     au < manifest ; 2017 ; 2017 ; Indian Journal of Plastic Surgery Volume 50 ; 50 >
-    au < ready ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 >
-    au < ready ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 >
-    au < ready ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 >
+    au < releasing ; 2018 ; 2018 ; Indian Journal of Plastic Surgery Volume 51 ; 51 >
+    au < releasing ; 2019 ; 2019 ; Indian Journal of Plastic Surgery Volume 52 ; 52 >
+    au < releasing ; 2020 ; 2020 ; Indian Journal of Plastic Surgery Volume 53 ; 53 >
     au < manifest ; 2021 ; 2021 ; Indian Journal of Plastic Surgery Volume 54 ; 54 >
 
   }
@@ -8316,12 +8316,12 @@
     param[journal_id] = 10.1055/s-00037682
     comment[years] = 2014-current
 
-    au < ready ; 2014 ; 2014 ; International Journal of Epilepsy Volume 1 ; 1 >
-    au < ready ; 2015 ; 2015 ; International Journal of Epilepsy Volume 2 ; 2 >
+    au < releasing ; 2014 ; 2014 ; International Journal of Epilepsy Volume 1 ; 1 >
+    au < releasing ; 2015 ; 2015 ; International Journal of Epilepsy Volume 2 ; 2 >
     au < manifest ; 2016 ; 2016 ; International Journal of Epilepsy Volume 3 ; 3 >
-    au < ready ; 2017 ; 2017 ; International Journal of Epilepsy Volume 4 ; 4 >
+    au < releasing ; 2017 ; 2017 ; International Journal of Epilepsy Volume 4 ; 4 >
     au < manifest ; 2018 ; 2018 ; International Journal of Epilepsy Volume 5 ; 5 >
-    au < ready ; 2020 ; 2020 ; International Journal of Epilepsy Volume 6 ; 6 >
+    au < releasing ; 2020 ; 2020 ; International Journal of Epilepsy Volume 6 ; 6 >
     au < expected ; 2021 ; 2021 ; International Journal of Epilepsy Volume 7 ; 7 >
 
   }
@@ -8338,16 +8338,16 @@
     param[journal_id] = 10.1055/s-00040442
     comment[years] = 2011-current
 
-    au < ready ; 2011 ; 2011 ; International Journal of Nutrology Volume 4 ; 4 >
-    au < ready ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 >
-    au < ready ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 >
-    au < ready ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 >
-    au < ready ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 >
-    au < ready ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 >
-    au < ready ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 >
-    au < ready ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 >
-    au < ready ; 2019 ; 2019 ; International Journal of Nutrology Volume 12 ; 12 >
-    au < ready ; 2020 ; 2020 ; International Journal of Nutrology Volume 13 ; 13 >
+    au < releasing ; 2011 ; 2011 ; International Journal of Nutrology Volume 4 ; 4 >
+    au < releasing ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 >
+    au < releasing ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 >
+    au < releasing ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 >
+    au < releasing ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 >
+    au < releasing ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 >
+    au < releasing ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 >
+    au < releasing ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 >
+    au < releasing ; 2019 ; 2019 ; International Journal of Nutrology Volume 12 ; 12 >
+    au < releasing ; 2020 ; 2020 ; International Journal of Nutrology Volume 13 ; 13 >
     au < manifest ; 2021 ; 2021 ; International Journal of Nutrology Volume 14 ; 14 >
 
   }
@@ -8363,9 +8363,9 @@
     param[journal_id] = 10.1055/s-00040446
     comment[years] = 2018-current
 
-    au < ready ; 2018 ; 2018 ; International Journal of Practical Otolaryngology Volume 1 ; 1 >
-    au < ready ; 2019 ; 2019 ; International Journal of Practical Otolaryngology Volume 2 ; 2 >
-    au < ready ; 2020 ; 2020 ; International Journal of Practical Otolaryngology Volume 3 ; 3 >
+    au < releasing ; 2018 ; 2018 ; International Journal of Practical Otolaryngology Volume 1 ; 1 >
+    au < releasing ; 2019 ; 2019 ; International Journal of Practical Otolaryngology Volume 2 ; 2 >
+    au < releasing ; 2020 ; 2020 ; International Journal of Practical Otolaryngology Volume 3 ; 3 >
     au < manifest ; 2021 ; 2021 ; International Journal of Practical Otolaryngology Volume 4 ; 4 >
 
   }
@@ -8382,12 +8382,12 @@
     param[journal_id] = 10.1055/s-00042120
     comment[years] = 2015-current
 
-    au < ready ; 2015 ; 2015 ; International Journal of Recent Surgical and Medical Sciences Volume 1 ; 1 >
-    au < ready ; 2016 ; 2016 ; International Journal of Recent Surgical and Medical Sciences Volume 2 ; 2 >
-    au < ready ; 2017 ; 2017 ; International Journal of Recent Surgical and Medical Sciences Volume 3 ; 3 >
-    au < ready ; 2018 ; 2018 ; International Journal of Recent Surgical and Medical Sciences Volume 4 ; 4 >
-    au < ready ; 2019 ; 2019 ; International Journal of Recent Surgical and Medical Sciences Volume 5 ; 5 >
-    au < ready ; 2020 ; 2020 ; International Journal of Recent Surgical and Medical Sciences Volume 6 ; 6 >
+    au < releasing ; 2015 ; 2015 ; International Journal of Recent Surgical and Medical Sciences Volume 1 ; 1 >
+    au < releasing ; 2016 ; 2016 ; International Journal of Recent Surgical and Medical Sciences Volume 2 ; 2 >
+    au < releasing ; 2017 ; 2017 ; International Journal of Recent Surgical and Medical Sciences Volume 3 ; 3 >
+    au < releasing ; 2018 ; 2018 ; International Journal of Recent Surgical and Medical Sciences Volume 4 ; 4 >
+    au < releasing ; 2019 ; 2019 ; International Journal of Recent Surgical and Medical Sciences Volume 5 ; 5 >
+    au < releasing ; 2020 ; 2020 ; International Journal of Recent Surgical and Medical Sciences Volume 6 ; 6 >
     au < manifest ; 2021 ; 2021 ; International Journal of Recent Surgical and Medical Sciences Volume 7 ; 7 >
 
   }
@@ -8404,16 +8404,16 @@
     param[journal_id] = 10.1055/s-00043283
     comment[years] = 2011-current
 
-    au < ready ; 2011 ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2 >
+    au < releasing ; 2011 ; 2011 ; Journal of Digestive Endoscopy Volume 2 ; 2 >
     au < manifest ; 2012 ; 2012 ; Journal of Digestive Endoscopy Volume 3 ; 3 >
-    au < ready ; 2013 ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 4 >
-    au < ready ; 2014 ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 5 >
+    au < releasing ; 2013 ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 4 >
+    au < releasing ; 2014 ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 5 >
     au < manifest ; 2015 ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 6 >
-    au < ready ; 2016 ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 7 >
-    au < ready ; 2017 ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 8 >
-    au < ready ; 2018 ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 9 >
-    au < ready ; 2019 ; 2019 ; Journal of Digestive Endoscopy Volume 10 ; 10 >
-    au < ready ; 2020 ; 2020 ; Journal of Digestive Endoscopy Volume 11 ; 11 >
+    au < releasing ; 2016 ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 7 >
+    au < releasing ; 2017 ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 8 >
+    au < releasing ; 2018 ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 9 >
+    au < releasing ; 2019 ; 2019 ; Journal of Digestive Endoscopy Volume 10 ; 10 >
+    au < releasing ; 2020 ; 2020 ; Journal of Digestive Endoscopy Volume 11 ; 11 >
     au < manifest ; 2021 ; 2021 ; Journal of Digestive Endoscopy Volume 12 ; 12 >
 
   }
@@ -8429,9 +8429,9 @@
     param[journal_id] = 10.1055/s-00043197
     comment[years] = 2018-current
 
-    au < ready ; 2018 ; 2018 ; Journal of Gastrointestinal and Abdominal Radiology Volume 1 ; 1 >
-    au < ready ; 2019 ; 2019 ; Journal of Gastrointestinal and Abdominal Radiology Volume 2 ; 2 >
-    au < ready ; 2020 ; 2020 ; Journal of Gastrointestinal and Abdominal Radiology Volume 3 ; 3 >
+    au < releasing ; 2018 ; 2018 ; Journal of Gastrointestinal and Abdominal Radiology Volume 1 ; 1 >
+    au < releasing ; 2019 ; 2019 ; Journal of Gastrointestinal and Abdominal Radiology Volume 2 ; 2 >
+    au < releasing ; 2020 ; 2020 ; Journal of Gastrointestinal and Abdominal Radiology Volume 3 ; 3 >
     au < manifest ; 2021 ; 2021 ; Journal of Gastrointestinal and Abdominal Radiology Volume 4 ; 4 >
 
   }
@@ -8448,16 +8448,16 @@
     param[journal_id] = 10.1055/s-00045654
     comment[years] = 2011-current
 
-    au < ready ; 2011 ; 2011 ; Journal of Health and Allied Sciences NU Volume 1 ; 1 >
-    au < ready ; 2012 ; 2012 ; Journal of Health and Allied Sciences NU Volume 2 ; 2 >
-    au < ready ; 2013 ; 2013 ; Journal of Health and Allied Sciences NU Volume 3 ; 3 >
-    au < ready ; 2014 ; 2014 ; Journal of Health and Allied Sciences NU Volume 4 ; 4 >
-    au < ready ; 2015 ; 2015 ; Journal of Health and Allied Sciences NU Volume 5 ; 5 >
-    au < ready ; 2016 ; 2016 ; Journal of Health and Allied Sciences NU Volume 6 ; 6 >
-    au < ready ; 2017 ; 2017 ; Journal of Health and Allied Sciences NU Volume 7 ; 7 >
-    au < ready ; 2018 ; 2018 ; Journal of Health and Allied Sciences NU Volume 8 ; 8 >
-    au < ready ; 2019 ; 2019 ; Journal of Health and Allied Sciences NU Volume 9 ; 9 >
-    au < ready ; 2020 ; 2020 ; Journal of Health and Allied Sciences NU Volume 10 ; 10 >
+    au < releasing ; 2011 ; 2011 ; Journal of Health and Allied Sciences NU Volume 1 ; 1 >
+    au < releasing ; 2012 ; 2012 ; Journal of Health and Allied Sciences NU Volume 2 ; 2 >
+    au < releasing ; 2013 ; 2013 ; Journal of Health and Allied Sciences NU Volume 3 ; 3 >
+    au < releasing ; 2014 ; 2014 ; Journal of Health and Allied Sciences NU Volume 4 ; 4 >
+    au < releasing ; 2015 ; 2015 ; Journal of Health and Allied Sciences NU Volume 5 ; 5 >
+    au < releasing ; 2016 ; 2016 ; Journal of Health and Allied Sciences NU Volume 6 ; 6 >
+    au < releasing ; 2017 ; 2017 ; Journal of Health and Allied Sciences NU Volume 7 ; 7 >
+    au < releasing ; 2018 ; 2018 ; Journal of Health and Allied Sciences NU Volume 8 ; 8 >
+    au < releasing ; 2019 ; 2019 ; Journal of Health and Allied Sciences NU Volume 9 ; 9 >
+    au < releasing ; 2020 ; 2020 ; Journal of Health and Allied Sciences NU Volume 10 ; 10 >
     au < manifest ; 2021 ; 2021 ; Journal of Health and Allied Sciences NU Volume 11 ; 11 >
 
   }
@@ -8474,18 +8474,18 @@
     param[journal_id] = 10.1055/s-00044881
     comment[years] = 2009-current
 
-    au < ready ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 >
+    au < releasing ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 >
     au < manifest ; 2010 ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2 >
     au < manifest ; 2011 ; 2011 ; Journal of Laboratory Physicians Volume 3 ; 3 >
     au < manifest ; 2012 ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 4 >
     au < manifest ; 2013 ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 5 >
-    au < ready ; 2014 ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 6 >
-    au < ready ; 2015 ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 7 >
-    au < ready ; 2016 ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 8 >
-    au < ready ; 2017 ; 2017 ; Journal of Laboratory Physicians Volume 9 ; 9 >
+    au < releasing ; 2014 ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 6 >
+    au < releasing ; 2015 ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 7 >
+    au < releasing ; 2016 ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 8 >
+    au < releasing ; 2017 ; 2017 ; Journal of Laboratory Physicians Volume 9 ; 9 >
     au < manifest ; 2018 ; 2018 ; Journal of Laboratory Physicians Volume 10 ; 10 >
-    au < ready ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 >
-    au < ready ; 2020 ; 2020 ; Journal of Laboratory Physicians Volume 12 ; 12 >
+    au < releasing ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 >
+    au < releasing ; 2020 ; 2020 ; Journal of Laboratory Physicians Volume 12 ; 12 >
     au < manifest ; 2021 ; 2021 ; Journal of Laboratory Physicians Volume 13 ; 13 >
 
   }
@@ -8501,12 +8501,12 @@
     param[journal_id] = 10.1055/s-00040444
     comment[years] = 2014-2019
 
-    au < ready ; 2014 ; 2014 ; Journal of Morphological Sciences Volume 31 ; 31 >
+    au < releasing ; 2014 ; 2014 ; Journal of Morphological Sciences Volume 31 ; 31 >
     au < manifest ; 2015 ; 2015 ; Journal of Morphological Sciences Volume 32 ; 32 >
-    au < ready ; 2016 ; 2016 ; Journal of Morphological Sciences Volume 33 ; 33 >
-    au < ready ; 2017 ; 2017 ; Journal of Morphological Sciences Volume 34 ; 34 >
-    au < ready ; 2018 ; 2018 ; Journal of Morphological Sciences Volume 35 ; 35 >
-    au < ready ; 2019 ; 2019 ; Journal of Morphological Sciences Volume 36 ; 36 >
+    au < releasing ; 2016 ; 2016 ; Journal of Morphological Sciences Volume 33 ; 33 >
+    au < releasing ; 2017 ; 2017 ; Journal of Morphological Sciences Volume 34 ; 34 >
+    au < releasing ; 2018 ; 2018 ; Journal of Morphological Sciences Volume 35 ; 35 >
+    au < releasing ; 2019 ; 2019 ; Journal of Morphological Sciences Volume 36 ; 36 >
 
   }
 
@@ -8522,13 +8522,13 @@
     param[journal_id] = 10.1055/s-00037681
     comment[years] = 2014-current
 
-    au < ready ; 2014 ; 2014 ; Journal of Neuroanaesthesiology and Critical Care Volume 1 ; 1 >
-    au < ready ; 2015 ; 2015 ; Journal of Neuroanaesthesiology and Critical Care Volume 2 ; 2 >
-    au < ready ; 2016 ; 2016 ; Journal of Neuroanaesthesiology and Critical Care Volume 3 ; 3 >
-    au < ready ; 2017 ; 2017 ; Journal of Neuroanaesthesiology and Critical Care Volume 4 ; 4 >
-    au < ready ; 2018 ; 2018 ; Journal of Neuroanaesthesiology and Critical Care Volume 5 ; 5 >
+    au < releasing ; 2014 ; 2014 ; Journal of Neuroanaesthesiology and Critical Care Volume 1 ; 1 >
+    au < releasing ; 2015 ; 2015 ; Journal of Neuroanaesthesiology and Critical Care Volume 2 ; 2 >
+    au < releasing ; 2016 ; 2016 ; Journal of Neuroanaesthesiology and Critical Care Volume 3 ; 3 >
+    au < releasing ; 2017 ; 2017 ; Journal of Neuroanaesthesiology and Critical Care Volume 4 ; 4 >
+    au < releasing ; 2018 ; 2018 ; Journal of Neuroanaesthesiology and Critical Care Volume 5 ; 5 >
     au < manifest ; 2019 ; 2019 ; Journal of Neuroanaesthesiology and Critical Care Volume 6 ; 6 >
-    au < ready ; 2020 ; 2020 ; Journal of Neuroanaesthesiology and Critical Care Volume 7 ; 7 >
+    au < releasing ; 2020 ; 2020 ; Journal of Neuroanaesthesiology and Critical Care Volume 7 ; 7 >
     au < manifest ; 2021 ; 2021 ; Journal of Neuroanaesthesiology and Critical Care Volume 8 ; 8 >
 
   }
@@ -8545,17 +8545,17 @@
     param[journal_id] = 10.1055/s-00043281
     comment[years] = 2010-current
 
-    au < ready ; 2010 ; 2010 ; Journal of Neurosciences in Rural Practice Volume 1 ; 1 >
-    au < ready ; 2011 ; 2011 ; Journal of Neurosciences in Rural Practice Volume 2 ; 2 >
-    au < ready ; 2012 ; 2012 ; Journal of Neurosciences in Rural Practice Volume 3 ; 3 >
-    au < ready ; 2013 ; 2013 ; Journal of Neurosciences in Rural Practice Volume 4 ; 4 >
-    au < ready ; 2014 ; 2014 ; Journal of Neurosciences in Rural Practice Volume 5 ; 5 >
-    au < ready ; 2015 ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 6 >
+    au < releasing ; 2010 ; 2010 ; Journal of Neurosciences in Rural Practice Volume 1 ; 1 >
+    au < releasing ; 2011 ; 2011 ; Journal of Neurosciences in Rural Practice Volume 2 ; 2 >
+    au < releasing ; 2012 ; 2012 ; Journal of Neurosciences in Rural Practice Volume 3 ; 3 >
+    au < releasing ; 2013 ; 2013 ; Journal of Neurosciences in Rural Practice Volume 4 ; 4 >
+    au < releasing ; 2014 ; 2014 ; Journal of Neurosciences in Rural Practice Volume 5 ; 5 >
+    au < releasing ; 2015 ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 6 >
     au < manifest ; 2016 ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 7 >
-    au < ready ; 2017 ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 8 >
-    au < ready ; 2018 ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 9 >
-    au < ready ; 2019 ; 2019 ; Journal of Neurosciences in Rural Practice Volume 10 ; 10 >
-    au < ready ; 2020 ; 2020 ; Journal of Neurosciences in Rural Practice Volume 11 ; 11 >
+    au < releasing ; 2017 ; 2017 ; Journal of Neurosciences in Rural Practice Volume 8 ; 8 >
+    au < releasing ; 2018 ; 2018 ; Journal of Neurosciences in Rural Practice Volume 9 ; 9 >
+    au < releasing ; 2019 ; 2019 ; Journal of Neurosciences in Rural Practice Volume 10 ; 10 >
+    au < releasing ; 2020 ; 2020 ; Journal of Neurosciences in Rural Practice Volume 11 ; 11 >
     au < manifest ; 2021 ; 2021 ; Journal of Neurosciences in Rural Practice Volume 12 ; 12 >
 
   }
@@ -8572,8 +8572,8 @@
     param[journal_id] = 10.1055/s-00042619
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Klinik Einkauf Volume 1 ; 1 >
-    au < ready ; 2020 ; 2020 ; Klinik Einkauf Volume 2 ; 2 >
+    au < releasing ; 2019 ; 2019 ; Klinik Einkauf Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Klinik Einkauf Volume 2 ; 2 >
     au < manifest ; 2021 ; 2021 ; Klinik Einkauf Volume 3 ; 3 >
 
   }
@@ -8609,7 +8609,7 @@
     param[journal_id] = 10.1055/s-00040811
     comment[years] = 2018-current
 
-    au < ready ; 2018 ; 2018 ; Neurologie up2date Volume 1 ; 1 >
+    au < releasing ; 2018 ; 2018 ; Neurologie up2date Volume 1 ; 1 >
     au < manifest ; 2019 ; 2019 ; Neurologie up2date Volume 2 ; 2 >
     au < manifest ; 2020 ; 2020 ; Neurologie up2date Volume 3 ; 3 >
     au < manifest ; 2021 ; 2021 ; Neurologie up2date Volume 4 ; 4 >
@@ -8628,8 +8628,8 @@
     param[journal_id] = 10.1055/s-00043001
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Notaufnahme up2date Volume 1 ; 1 >
-    au < ready ; 2020 ; 2020 ; Notaufnahme up2date Volume 2 ; 2 >
+    au < releasing ; 2019 ; 2019 ; Notaufnahme up2date Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Notaufnahme up2date Volume 2 ; 2 >
     au < manifest ; 2021 ; 2021 ; Notaufnahme up2date Volume 3 ; 3 >
 
   }
@@ -8646,8 +8646,8 @@
     param[journal_id] = 10.1055/s-00041899
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Onkologie up2date Volume 1 ; 1 >
-    au < ready ; 2020 ; 2020 ; Onkologie up2date Volume 2 ; 2 >
+    au < releasing ; 2019 ; 2019 ; Onkologie up2date Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Onkologie up2date Volume 2 ; 2 >
     au < manifest ; 2021 ; 2021 ; Onkologie up2date Volume 3 ; 3 >
 
   }
@@ -8663,8 +8663,8 @@
     param[journal_id] = 10.1055/s-00040992
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Organic Materials Volume 1 ; 1 >
-    au < ready ; 2020 ; 2020 ; Organic Materials Volume 2 ; 2 >
+    au < releasing ; 2019 ; 2019 ; Organic Materials Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Organic Materials Volume 2 ; 2 >
     au < manifest ; 2021 ; 2021 ; Organic Materials Volume 3 ; 3 >
 
   }
@@ -8681,8 +8681,8 @@
     param[journal_id] = 10.1055/s-00043364
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Pharmaceutical Fronts Volume 1 ; 1 >
-    au < ready ; 2020 ; 2020 ; Pharmaceutical Fronts Volume 2 ; 2 >
+    au < releasing ; 2019 ; 2019 ; Pharmaceutical Fronts Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Pharmaceutical Fronts Volume 2 ; 2 >
     au < manifest ; 2021 ; 2021 ; Pharmaceutical Fronts Volume 3 ; 3 >
 
   }
@@ -8699,7 +8699,7 @@
     param[journal_id] = 10.1055/s-00043234
     comment[years] = 2020-current
 
-    au < ready ; 2020 ; 2020 ; Praxis Handreha Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Praxis Handreha Volume 1 ; 1 >
     au < manifest ; 2021 ; 2021 ; Praxis Handreha Volume 2 ; 2 >
 
   }
@@ -8716,8 +8716,8 @@
     param[journal_id] = 10.1055/s-00042410
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Revista Brasileira de Ortopedia Volume 54 ; 54 >
-    au < ready ; 2020 ; 2020 ; Revista Brasileira de Ortopedia Volume 55 ; 55 >
+    au < releasing ; 2019 ; 2019 ; Revista Brasileira de Ortopedia Volume 54 ; 54 >
+    au < releasing ; 2020 ; 2020 ; Revista Brasileira de Ortopedia Volume 55 ; 55 >
     au < manifest ; 2021 ; 2021 ; Revista Brasileira de Ortopedia Volume 56 ; 56 >
 
   }
@@ -8733,8 +8733,8 @@
     param[journal_id] = 10.1055/s-00042778
     comment[years] = 2019-current
 
-    au < ready ; 2019 ; 2019 ; Revista Fisioterapia Invasiva Volume 1 ; 1 >
-    au < ready ; 2020 ; 2020 ; Revista Fisioterapia Invasiva Volume 2 ; 2 >
+    au < releasing ; 2019 ; 2019 ; Revista Fisioterapia Invasiva Volume 1 ; 1 >
+    au < releasing ; 2020 ; 2020 ; Revista Fisioterapia Invasiva Volume 2 ; 2 >
     au < expected ; 2021 ; 2021 ; Revista Fisioterapia Invasiva Volume 3 ; 3 >
 
   }
@@ -8751,9 +8751,9 @@
     param[journal_id] = 10.1055/s-00035331
     comment[years] = 2018-current
 
-    au < ready ; 2018 ; 2018 ; Revista Urología Colombiana Volume 27 ; 27 >
-    au < ready ; 2019 ; 2019 ; Revista Urología Colombiana Volume 28 ; 28 >
-    au < ready ; 2020 ; 2020 ; Revista Urología Colombiana Volume 29 ; 29 >
+    au < releasing ; 2018 ; 2018 ; Revista Urología Colombiana Volume 27 ; 27 >
+    au < releasing ; 2019 ; 2019 ; Revista Urología Colombiana Volume 28 ; 28 >
+    au < releasing ; 2020 ; 2020 ; Revista Urología Colombiana Volume 29 ; 29 >
     au < manifest ; 2021 ; 2021 ; Revista Urología Colombiana Volume 30 ; 30 >
 
   }
@@ -8813,27 +8813,27 @@
     au < manifest ; 1997 ; 1997 ; Thrombosis and Haemostasis Volume 41 ; 41 >
     au < manifest ; 1998 ; 1998 ; Thrombosis and Haemostasis Volume 42 ; 42 >
     au < manifest ; 1999 ; 1999 ; Thrombosis and Haemostasis Volume 43 ; 43 >
-    au < ready ; 2000 ; 2000 ; Thrombosis and Haemostasis Volume 44 ; 44 >
-    au < ready ; 2001 ; 2001 ; Thrombosis and Haemostasis Volume 45 ; 45 >
-    au < ready ; 2002 ; 2002 ; Thrombosis and Haemostasis Volume 46 ; 46 >
-    au < ready ; 2003 ; 2003 ; Thrombosis and Haemostasis Volume 47 ; 47 >
-    au < ready ; 2004 ; 2004 ; Thrombosis and Haemostasis Volume 48 ; 48 >
-    au < ready ; 2005 ; 2005 ; Thrombosis and Haemostasis Volume 49 ; 49 >
-    au < ready ; 2006 ; 2006 ; Thrombosis and Haemostasis Volume 50 ; 50 >
-    au < ready ; 2007 ; 2007 ; Thrombosis and Haemostasis Volume 51 ; 51 >
-    au < ready ; 2008 ; 2008 ; Thrombosis and Haemostasis Volume 52 ; 52 >
-    au < ready ; 2009 ; 2009 ; Thrombosis and Haemostasis Volume 53 ; 53 >
-    au < ready ; 2010 ; 2010 ; Thrombosis and Haemostasis Volume 54 ; 54 >
-    au < ready ; 2011 ; 2011 ; Thrombosis and Haemostasis Volume 55 ; 55 >
-    au < ready ; 2012 ; 2012 ; Thrombosis and Haemostasis Volume 56 ; 56 >
-    au < ready ; 2013 ; 2013 ; Thrombosis and Haemostasis Volume 57 ; 57 >
-    au < ready ; 2014 ; 2014 ; Thrombosis and Haemostasis Volume 58 ; 58 >
-    au < ready ; 2015 ; 2015 ; Thrombosis and Haemostasis Volume 59 ; 59 >
-    au < ready ; 2016 ; 2016 ; Thrombosis and Haemostasis Volume 60 ; 60 >
-    au < ready ; 2017 ; 2017 ; Thrombosis and Haemostasis Volume 61 ; 61 >
-    au < ready ; 2018 ; 2018 ; Thrombosis and Haemostasis Volume 62 ; 62 >
-    au < ready ; 2019 ; 2019 ; Thrombosis and Haemostasis Volume 63 ; 63 >
-    au < ready ; 2020 ; 2020 ; Thrombosis and Haemostasis Volume 64 ; 64 >
+    au < releasing ; 2000 ; 2000 ; Thrombosis and Haemostasis Volume 44 ; 44 >
+    au < releasing ; 2001 ; 2001 ; Thrombosis and Haemostasis Volume 45 ; 45 >
+    au < releasing ; 2002 ; 2002 ; Thrombosis and Haemostasis Volume 46 ; 46 >
+    au < releasing ; 2003 ; 2003 ; Thrombosis and Haemostasis Volume 47 ; 47 >
+    au < releasing ; 2004 ; 2004 ; Thrombosis and Haemostasis Volume 48 ; 48 >
+    au < releasing ; 2005 ; 2005 ; Thrombosis and Haemostasis Volume 49 ; 49 >
+    au < releasing ; 2006 ; 2006 ; Thrombosis and Haemostasis Volume 50 ; 50 >
+    au < releasing ; 2007 ; 2007 ; Thrombosis and Haemostasis Volume 51 ; 51 >
+    au < releasing ; 2008 ; 2008 ; Thrombosis and Haemostasis Volume 52 ; 52 >
+    au < releasing ; 2009 ; 2009 ; Thrombosis and Haemostasis Volume 53 ; 53 >
+    au < releasing ; 2010 ; 2010 ; Thrombosis and Haemostasis Volume 54 ; 54 >
+    au < releasing ; 2011 ; 2011 ; Thrombosis and Haemostasis Volume 55 ; 55 >
+    au < releasing ; 2012 ; 2012 ; Thrombosis and Haemostasis Volume 56 ; 56 >
+    au < releasing ; 2013 ; 2013 ; Thrombosis and Haemostasis Volume 57 ; 57 >
+    au < releasing ; 2014 ; 2014 ; Thrombosis and Haemostasis Volume 58 ; 58 >
+    au < releasing ; 2015 ; 2015 ; Thrombosis and Haemostasis Volume 59 ; 59 >
+    au < releasing ; 2016 ; 2016 ; Thrombosis and Haemostasis Volume 60 ; 60 >
+    au < releasing ; 2017 ; 2017 ; Thrombosis and Haemostasis Volume 61 ; 61 >
+    au < releasing ; 2018 ; 2018 ; Thrombosis and Haemostasis Volume 62 ; 62 >
+    au < releasing ; 2019 ; 2019 ; Thrombosis and Haemostasis Volume 63 ; 63 >
+    au < releasing ; 2020 ; 2020 ; Thrombosis and Haemostasis Volume 64 ; 64 >
     au < manifest ; 2021 ; 2021 ; Thrombosis and Haemostasis Volume 65 ; 65 >
 
   }
@@ -8849,9 +8849,9 @@
     param[journal_id] = 10.1055/s-00040903
     comment[years] = 2018-current
 
-    au < ready ; 2018 ; 2018 ; VCOT Open Volume 1 ; 1 >
-    au < ready ; 2019 ; 2019 ; VCOT Open Volume 2 ; 2 >
-    au < ready ; 2020 ; 2020 ; VCOT Open Volume 3 ; 3 >
+    au < releasing ; 2018 ; 2018 ; VCOT Open Volume 1 ; 1 >
+    au < releasing ; 2019 ; 2019 ; VCOT Open Volume 2 ; 2 >
+    au < releasing ; 2020 ; 2020 ; VCOT Open Volume 3 ; 3 >
     au < manifest ; 2021 ; 2021 ; VCOT Open Volume 4 ; 4 >
 
   }
@@ -8880,27 +8880,27 @@
     au < manifest ; 1997 ; 1997 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 10 ; 10 >
     au < manifest ; 1998 ; 1998 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 11 ; 11 >
     au < manifest ; 1999 ; 1999 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 12 ; 12 >
-    au < ready ; 2000 ; 2000 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 13 ; 13 >
-    au < ready ; 2001 ; 2001 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 14 ; 14 >
-    au < ready ; 2002 ; 2002 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 15 ; 15 >
-    au < ready ; 2003 ; 2003 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 16 ; 16 >
-    au < ready ; 2004 ; 2004 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 17 ; 17 >
-    au < ready ; 2005 ; 2005 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 18 ; 18 >
-    au < ready ; 2006 ; 2006 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 19 ; 19 >
-    au < ready ; 2007 ; 2007 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 20 ; 20 >
-    au < ready ; 2008 ; 2008 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 21 ; 21 >
-    au < ready ; 2009 ; 2009 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 22 ; 22 >
-    au < ready ; 2010 ; 2010 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 23 ; 23 >
-    au < ready ; 2011 ; 2011 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 24 ; 24 >
-    au < ready ; 2012 ; 2012 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 25 ; 25 >
-    au < ready ; 2013 ; 2013 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 26 ; 26 >
-    au < ready ; 2014 ; 2014 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 27 ; 27 >
-    au < ready ; 2015 ; 2015 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 28 ; 28 >
-    au < ready ; 2016 ; 2016 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 29 ; 29 >
-    au < ready ; 2017 ; 2017 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 30 ; 30 >
-    au < ready ; 2018 ; 2018 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 31 ; 31 >
-    au < ready ; 2019 ; 2019 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 32 ; 32 >
-    au < ready ; 2020 ; 2020 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 33 ; 33 >
+    au < releasing ; 2000 ; 2000 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 13 ; 13 >
+    au < releasing ; 2001 ; 2001 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 14 ; 14 >
+    au < releasing ; 2002 ; 2002 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 15 ; 15 >
+    au < releasing ; 2003 ; 2003 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 16 ; 16 >
+    au < releasing ; 2004 ; 2004 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 17 ; 17 >
+    au < releasing ; 2005 ; 2005 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 18 ; 18 >
+    au < releasing ; 2006 ; 2006 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 19 ; 19 >
+    au < releasing ; 2007 ; 2007 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 20 ; 20 >
+    au < releasing ; 2008 ; 2008 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 21 ; 21 >
+    au < releasing ; 2009 ; 2009 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 22 ; 22 >
+    au < releasing ; 2010 ; 2010 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 23 ; 23 >
+    au < releasing ; 2011 ; 2011 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 24 ; 24 >
+    au < releasing ; 2012 ; 2012 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 25 ; 25 >
+    au < releasing ; 2013 ; 2013 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 26 ; 26 >
+    au < releasing ; 2014 ; 2014 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 27 ; 27 >
+    au < releasing ; 2015 ; 2015 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 28 ; 28 >
+    au < releasing ; 2016 ; 2016 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 29 ; 29 >
+    au < releasing ; 2017 ; 2017 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 30 ; 30 >
+    au < releasing ; 2018 ; 2018 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 31 ; 31 >
+    au < releasing ; 2019 ; 2019 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 32 ; 32 >
+    au < releasing ; 2020 ; 2020 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 33 ; 33 >
     au < manifest ; 2021 ; 2021 ; Veterinary and Comparative Orthopaedics and Traumatology Volume 34 ; 34 >
 
   }
