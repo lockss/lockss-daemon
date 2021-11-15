@@ -19,82 +19,82 @@
     plugin = org.lockss.plugin.highwire.ajs.AjsDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1860 ; American Journal of Science Series 2 Volume 29 (1860) ; s2-29 >
-    au < exists ; 1860 ; American Journal of Science Series 2 Volume 30 (1860) ; s2-30 >
-    au < exists ; 1861 ; American Journal of Science Series 2 Volume 31 (1861) ; s2-31 >
-    au < exists ; 1861 ; American Journal of Science Series 2 Volume 32 (1861) ; s2-32 >
-    au < exists ; 1862 ; American Journal of Science Series 2 Volume 33 (1862) ; s2-33 >
-    au < exists ; 1862 ; American Journal of Science Series 2 Volume 34 (1862) ; s2-34 >
-    au < exists ; 1863 ; American Journal of Science Series 2 Volume 35 (1863) ; s2-35 >
-    au < exists ; 1863 ; American Journal of Science Series 2 Volume 36 (1863) ; s2-36 >
+    au < manifest ; 1860 ; American Journal of Science Series 2 Volume 29 (1860) ; s2-29 >
+    au < manifest ; 1860 ; American Journal of Science Series 2 Volume 30 (1860) ; s2-30 >
+    au < manifest ; 1861 ; American Journal of Science Series 2 Volume 31 (1861) ; s2-31 >
+    au < manifest ; 1861 ; American Journal of Science Series 2 Volume 32 (1861) ; s2-32 >
+    au < manifest ; 1862 ; American Journal of Science Series 2 Volume 33 (1862) ; s2-33 >
+    au < manifest ; 1862 ; American Journal of Science Series 2 Volume 34 (1862) ; s2-34 >
+    au < manifest ; 1863 ; American Journal of Science Series 2 Volume 35 (1863) ; s2-35 >
+    au < manifest ; 1863 ; American Journal of Science Series 2 Volume 36 (1863) ; s2-36 >
     au < testing ; 1864 ; American Journal of Science Series 2 Volume 37 (1864) ; s2-37 >
-    au < exists ; 1864 ; American Journal of Science Series 2 Volume 38 (1864) ; s2-38 >
-    au < exists ; 1865 ; American Journal of Science Series 2 Volume 39 (1865) ; s2-39 >
-    au < exists ; 1865 ; American Journal of Science Series 2 Volume 40 (1865) ; s2-40 >
-    au < exists ; 1866 ; American Journal of Science Series 2 Volume 41 (1866) ; s2-41 >
-    au < exists ; 1866 ; American Journal of Science Series 2 Volume 42 (1866) ; s2-42 >
-    au < exists ; 1867 ; American Journal of Science Series 2 Volume 43 (1867) ; s2-43 >
-    au < exists ; 1867 ; American Journal of Science Series 2 Volume 44 (1867) ; s2-44 >
-    au < exists ; 1868 ; American Journal of Science Series 2 Volume 45 (1868) ; s2-45 >
-    au < exists ; 1868 ; American Journal of Science Series 2 Volume 46 (1868) ; s2-46 >
+    au < manifest ; 1864 ; American Journal of Science Series 2 Volume 38 (1864) ; s2-38 >
+    au < manifest ; 1865 ; American Journal of Science Series 2 Volume 39 (1865) ; s2-39 >
+    au < manifest ; 1865 ; American Journal of Science Series 2 Volume 40 (1865) ; s2-40 >
+    au < manifest ; 1866 ; American Journal of Science Series 2 Volume 41 (1866) ; s2-41 >
+    au < manifest ; 1866 ; American Journal of Science Series 2 Volume 42 (1866) ; s2-42 >
+    au < manifest ; 1867 ; American Journal of Science Series 2 Volume 43 (1867) ; s2-43 >
+    au < manifest ; 1867 ; American Journal of Science Series 2 Volume 44 (1867) ; s2-44 >
+    au < manifest ; 1868 ; American Journal of Science Series 2 Volume 45 (1868) ; s2-45 >
+    au < manifest ; 1868 ; American Journal of Science Series 2 Volume 46 (1868) ; s2-46 >
     au < testing ; 1869 ; American Journal of Science Series 2 Volume 47 (1869) ; s2-47 >
-    au < exists ; 1869 ; American Journal of Science Series 2 Volume 48 (1869) ; s2-48 >
-    au < exists ; 1870 ; American Journal of Science Series 2 Volume 49 (1870) ; s2-49 >
-    au < exists ; 1870 ; American Journal of Science Series 2 Volume 50 (1870) ; s2-50 >
-    au < exists ; 1871 ; American Journal of Science Series 3 Volume 1 (1871) ; s3-1 >
-    au < exists ; 1871 ; American Journal of Science Series 3 Volume 2 (1871) ; s3-2 >
-    au < exists ; 1872 ; American Journal of Science Series 3 Volume 3 (1872) ; s3-3 >
-    au < exists ; 1872 ; American Journal of Science Series 3 Volume 4 (1872) ; s3-4 >
-    au < exists ; 1873 ; American Journal of Science Series 3 Volume 5 (1873) ; s3-5 >
-    au < exists ; 1873 ; American Journal of Science Series 3 Volume 6 (1873) ; s3-6 >
-    au < exists ; 1874 ; American Journal of Science Series 3 Volume 7 (1874) ; s3-7 >
-    au < exists ; 1874 ; American Journal of Science Series 3 Volume 8 (1874) ; s3-8 >
-    au < exists ; 1875 ; American Journal of Science Series 3 Volume 9 (1875) ; s3-9 >
-    au < exists ; 1875 ; American Journal of Science Series 3 Volume 10 (1875) ; s3-10 >
-    au < exists ; 1876 ; American Journal of Science Series 3 Volume 11 (1876) ; s3-11 >
-    au < exists ; 1876 ; American Journal of Science Series 3 Volume 12 (1876) ; s3-12 >
-    au < exists ; 1877 ; American Journal of Science Series 3 Volume 13 (1877) ; s3-13 >
-    au < exists ; 1877 ; American Journal of Science Series 3 Volume 14 (1877) ; s3-14 >
-    au < exists ; 1878 ; American Journal of Science Series 3 Volume 15 (1878) ; s3-15 >
-    au < exists ; 1878 ; American Journal of Science Series 3 Volume 16 (1878) ; s3-16 >
-    au < exists ; 1879 ; American Journal of Science Series 3 Volume 17 (1879) ; s3-17 >
-    au < exists ; 1879 ; American Journal of Science Series 3 Volume 18 (1879) ; s3-18 >
-    au < exists ; 1880 ; American Journal of Science Series 3 Volume 19 (1880) ; s3-19 >
-    au < exists ; 1880 ; American Journal of Science Series 3 Volume 20 (1880) ; s3-20 >
-    au < exists ; 1881 ; American Journal of Science Series 3 Volume 21 (1881) ; s3-21 >
-    au < exists ; 1881 ; American Journal of Science Series 3 Volume 22 (1881) ; s3-22 >
-    au < exists ; 1882 ; American Journal of Science Series 3 Volume 23 (1882) ; s3-23 >
-    au < exists ; 1882 ; American Journal of Science Series 3 Volume 24 (1882) ; s3-24 >
-    au < exists ; 1883 ; American Journal of Science Series 3 Volume 25 (1883) ; s3-25 >
-    au < exists ; 1883 ; American Journal of Science Series 3 Volume 26 (1883) ; s3-26 >
-    au < exists ; 1884 ; American Journal of Science Series 3 Volume 27 (1884) ; s3-27 >
+    au < manifest ; 1869 ; American Journal of Science Series 2 Volume 48 (1869) ; s2-48 >
+    au < manifest ; 1870 ; American Journal of Science Series 2 Volume 49 (1870) ; s2-49 >
+    au < manifest ; 1870 ; American Journal of Science Series 2 Volume 50 (1870) ; s2-50 >
+    au < manifest ; 1871 ; American Journal of Science Series 3 Volume 1 (1871) ; s3-1 >
+    au < manifest ; 1871 ; American Journal of Science Series 3 Volume 2 (1871) ; s3-2 >
+    au < manifest ; 1872 ; American Journal of Science Series 3 Volume 3 (1872) ; s3-3 >
+    au < manifest ; 1872 ; American Journal of Science Series 3 Volume 4 (1872) ; s3-4 >
+    au < manifest ; 1873 ; American Journal of Science Series 3 Volume 5 (1873) ; s3-5 >
+    au < manifest ; 1873 ; American Journal of Science Series 3 Volume 6 (1873) ; s3-6 >
+    au < manifest ; 1874 ; American Journal of Science Series 3 Volume 7 (1874) ; s3-7 >
+    au < manifest ; 1874 ; American Journal of Science Series 3 Volume 8 (1874) ; s3-8 >
+    au < manifest ; 1875 ; American Journal of Science Series 3 Volume 9 (1875) ; s3-9 >
+    au < manifest ; 1875 ; American Journal of Science Series 3 Volume 10 (1875) ; s3-10 >
+    au < manifest ; 1876 ; American Journal of Science Series 3 Volume 11 (1876) ; s3-11 >
+    au < manifest ; 1876 ; American Journal of Science Series 3 Volume 12 (1876) ; s3-12 >
+    au < manifest ; 1877 ; American Journal of Science Series 3 Volume 13 (1877) ; s3-13 >
+    au < manifest ; 1877 ; American Journal of Science Series 3 Volume 14 (1877) ; s3-14 >
+    au < manifest ; 1878 ; American Journal of Science Series 3 Volume 15 (1878) ; s3-15 >
+    au < manifest ; 1878 ; American Journal of Science Series 3 Volume 16 (1878) ; s3-16 >
+    au < manifest ; 1879 ; American Journal of Science Series 3 Volume 17 (1879) ; s3-17 >
+    au < manifest ; 1879 ; American Journal of Science Series 3 Volume 18 (1879) ; s3-18 >
+    au < manifest ; 1880 ; American Journal of Science Series 3 Volume 19 (1880) ; s3-19 >
+    au < manifest ; 1880 ; American Journal of Science Series 3 Volume 20 (1880) ; s3-20 >
+    au < manifest ; 1881 ; American Journal of Science Series 3 Volume 21 (1881) ; s3-21 >
+    au < manifest ; 1881 ; American Journal of Science Series 3 Volume 22 (1881) ; s3-22 >
+    au < manifest ; 1882 ; American Journal of Science Series 3 Volume 23 (1882) ; s3-23 >
+    au < manifest ; 1882 ; American Journal of Science Series 3 Volume 24 (1882) ; s3-24 >
+    au < manifest ; 1883 ; American Journal of Science Series 3 Volume 25 (1883) ; s3-25 >
+    au < manifest ; 1883 ; American Journal of Science Series 3 Volume 26 (1883) ; s3-26 >
+    au < manifest ; 1884 ; American Journal of Science Series 3 Volume 27 (1884) ; s3-27 >
     au < testing ; 1884 ; American Journal of Science Series 3 Volume 28 (1884) ; s3-28 >
-    au < exists ; 1885 ; American Journal of Science Series 3 Volume 29 (1885) ; s3-29 >
-    au < exists ; 1885 ; American Journal of Science Series 3 Volume 30 (1885) ; s3-30 >
-    au < exists ; 1886 ; American Journal of Science Series 3 Volume 31 (1886) ; s3-31 >
-    au < exists ; 1886 ; American Journal of Science Series 3 Volume 32 (1886) ; s3-32 >
-    au < exists ; 1887 ; American Journal of Science Series 3 Volume 33 (1887) ; s3-33 >
-    au < exists ; 1887 ; American Journal of Science Series 3 Volume 34 (1887) ; s3-34 >
-    au < exists ; 1888 ; American Journal of Science Series 3 Volume 35 (1888) ; s3-35 >
-    au < exists ; 1888 ; American Journal of Science Series 3 Volume 36 (1888) ; s3-36 >
-    au < exists ; 1889 ; American Journal of Science Series 3 Volume 37 (1889) ; s3-37 >
-    au < exists ; 1889 ; American Journal of Science Series 3 Volume 38 (1889) ; s3-38 >
-    au < exists ; 1890 ; American Journal of Science Series 3 Volume 39 (1890) ; s3-39 >
-    au < exists ; 1890 ; American Journal of Science Series 3 Volume 40 (1890) ; s3-40 >
-    au < exists ; 1891 ; American Journal of Science Series 3 Volume 41 (1891) ; s3-41 >
-    au < exists ; 1891 ; American Journal of Science Series 3 Volume 42 (1891) ; s3-42 >
+    au < manifest ; 1885 ; American Journal of Science Series 3 Volume 29 (1885) ; s3-29 >
+    au < manifest ; 1885 ; American Journal of Science Series 3 Volume 30 (1885) ; s3-30 >
+    au < manifest ; 1886 ; American Journal of Science Series 3 Volume 31 (1886) ; s3-31 >
+    au < manifest ; 1886 ; American Journal of Science Series 3 Volume 32 (1886) ; s3-32 >
+    au < manifest ; 1887 ; American Journal of Science Series 3 Volume 33 (1887) ; s3-33 >
+    au < manifest ; 1887 ; American Journal of Science Series 3 Volume 34 (1887) ; s3-34 >
+    au < manifest ; 1888 ; American Journal of Science Series 3 Volume 35 (1888) ; s3-35 >
+    au < manifest ; 1888 ; American Journal of Science Series 3 Volume 36 (1888) ; s3-36 >
+    au < manifest ; 1889 ; American Journal of Science Series 3 Volume 37 (1889) ; s3-37 >
+    au < manifest ; 1889 ; American Journal of Science Series 3 Volume 38 (1889) ; s3-38 >
+    au < manifest ; 1890 ; American Journal of Science Series 3 Volume 39 (1890) ; s3-39 >
+    au < manifest ; 1890 ; American Journal of Science Series 3 Volume 40 (1890) ; s3-40 >
+    au < manifest ; 1891 ; American Journal of Science Series 3 Volume 41 (1891) ; s3-41 >
+    au < manifest ; 1891 ; American Journal of Science Series 3 Volume 42 (1891) ; s3-42 >
     au < testing ; 1892 ; American Journal of Science Series 3 Volume 43 (1892) ; s3-43 >
-    au < exists ; 1892 ; American Journal of Science Series 3 Volume 44 (1892) ; s3-44 >
-    au < exists ; 1893 ; American Journal of Science Series 3 Volume 45 (1893) ; s3-45 >
-    au < exists ; 1893 ; American Journal of Science Series 3 Volume 46 (1893) ; s3-46 >
-    au < exists ; 1894 ; American Journal of Science Series 3 Volume 47 (1894) ; s3-47 >
-    au < exists ; 1894 ; American Journal of Science Series 3 Volume 48 (1894) ; s3-48 >
-    au < exists ; 1895 ; American Journal of Science Series 3 Volume 49 (1895) ; s3-49 >
-    au < exists ; 1895 ; American Journal of Science Series 3 Volume 50 (1895) ; s3-50 >
+    au < manifest ; 1892 ; American Journal of Science Series 3 Volume 44 (1892) ; s3-44 >
+    au < manifest ; 1893 ; American Journal of Science Series 3 Volume 45 (1893) ; s3-45 >
+    au < manifest ; 1893 ; American Journal of Science Series 3 Volume 46 (1893) ; s3-46 >
+    au < manifest ; 1894 ; American Journal of Science Series 3 Volume 47 (1894) ; s3-47 >
+    au < manifest ; 1894 ; American Journal of Science Series 3 Volume 48 (1894) ; s3-48 >
+    au < manifest ; 1895 ; American Journal of Science Series 3 Volume 49 (1895) ; s3-49 >
+    au < manifest ; 1895 ; American Journal of Science Series 3 Volume 50 (1895) ; s3-50 >
 
     au < testing ; 2019 ; American Journal of Science Volume 319 ; 319 >
-    au < exists ; 2020 ; American Journal of Science Volume 320 ; 320 >
-    au < exists ; 2021 ; American Journal of Science Volume 321 ; 321 > #probe url has wrong volume.
+    au < manifest ; 2020 ; American Journal of Science Volume 320 ; 320 >
+    au < manifest ; 2021 ; American Journal of Science Volume 321 ; 321 >
 
     }
 
