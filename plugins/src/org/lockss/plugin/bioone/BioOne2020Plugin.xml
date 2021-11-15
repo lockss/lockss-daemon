@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -133,9 +133,16 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
  <entry>
-   <!--https://bioone.org/journalArticle/Download?fullDOI=10.1139%2Fcjas-2018-0252-->
+   <!--https://bioone.org/journalArticle/Download?fullDOI=10.1139%2Fcjas-2018-0252
+       https://bioone.org/journalArticle/Download?urlId=10.1139%2Fcjas-2019-0031
+      https://bioone.org/journalArticle/Download?urlid=10.1139%2Fcjas-2019-0031
+   -->
      <string>au_substance_url_pattern</string>
+     <list>
        <string>"^%sjournalArticle/Download\?fullDOI=", base_url</string>
+       <string>"^%sjournalArticle/Download\?urlId=", base_url</string>
+       <string>"^%sjournalArticle/Download\?urlid=", base_url</string>
+     </list>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
