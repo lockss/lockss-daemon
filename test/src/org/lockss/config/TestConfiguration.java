@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -522,6 +518,7 @@ public class TestConfiguration extends LockssTestCase {
     config.put("foo", "x");
     config.put("bar", "y");
     config.put("baz", "Y");
+    config.put("frob", "zz");
     assertSame(TestEnum.x, config.getEnum(TestEnum.class, "foo"));
     assertSame(TestEnum.Y, config.getEnum(TestEnum.class, "baz", TestEnum.x));
     assertSame(TestEnum.x, config.getEnum(TestEnum.class, "xxx", TestEnum.x));
@@ -530,6 +527,14 @@ public class TestConfiguration extends LockssTestCase {
       fail("Should have thrown IllegalArgumentException");
     } catch (Exception ex) {
     }
+
+    // Test case independent match
+    try {
+      config.getEnum(TestEnum.class, "frob");
+      fail("Should have thrown IllegalArgumentException");
+    } catch (Exception ex) {
+    }
+    assertSame(TestEnum.zZ, config.getEnumIgnoreCase(TestEnum.class, "frob"));
   }
 
   private static final String c3 =
