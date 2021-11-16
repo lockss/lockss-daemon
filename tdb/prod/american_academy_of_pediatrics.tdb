@@ -6,7 +6,7 @@
   >
 
   plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.iwap.IwapSilverchairPlugin <= Like this
+  #plugin = org.lockss.plugin.silverchair.iwap.IwapSilverchairPlugin ##<= Like this
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
   param[base_url] = https://publications.aap.org/
 
@@ -126,8 +126,8 @@
       au < doNotProcess ; 2013 ; 2013 ; AAP News Volume 34 ; 34 >
       au < doNotProcess ; 2014 ; 2014 ; AAP News Volume 35 ; 35 >
       au < doNotProcess ; 2015 ; 2015 ; AAP News Volume 36 ; 36 >
-      #different platform.
       au < exists ; 2016 ; 2016 ; AAP News Volume 37 ; 37 >
+      #different platform.
     }
 
   }
