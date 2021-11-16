@@ -2,11 +2,11 @@
   publisher <
     name = American Academy of Pediatrics ;
     info[tester] = 5 ;
-    info[platform] = SC. Like Iwap
+    info[platform] = SC, BLOCKED, Jire #LXPLUG-2135, manifest page autologin
   >
 
   plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.iwap.IwapSilverchairPlugin ##<= Like this
+  #plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
   param[base_url] = https://publications.aap.org/
 
