@@ -325,8 +325,8 @@
     param[journal_id] = chhe
     #continues = 1752-2803
 
-    au < exists ; 2020 ; British Journal of Child Health Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
-    au < exists ; 2021 ; British Journal of Child Health Volume 2 ; 2 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2020 ; British Journal of Child Health Volume 1 ; 1 ; https://www.magonlinelibrary.com/ >
+    au < manifest ; 2021 ; British Journal of Child Health Volume 2 ; 2 ; https://www.magonlinelibrary.com/ >
 
   }
 
