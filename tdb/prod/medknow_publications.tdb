@@ -541,7 +541,7 @@
 
     param[journal_issn] = 0976-237X
 
-    au < releasing ; 2010 ; Contemporary Clinical Dentistry Volume 1 ; 2010 ; 1 ; https://www.contempclindent.org/ >
+    au < released ; 2010 ; Contemporary Clinical Dentistry Volume 1 ; 2010 ; 1 ; https://www.contempclindent.org/ >
     au < released ; 2011 ; Contemporary Clinical Dentistry Volume 2 ; 2011 ; 2 ; http://www.contempclindent.org/ >
     au < released ; 2012 ; Contemporary Clinical Dentistry Volume 3 ; 2012 ; 3 ; http://www.contempclindent.org/ >
     au < released ; 2013 ; Contemporary Clinical Dentistry Volume 4 ; 2013 ; 4 ; http://www.contempclindent.org/ >
@@ -630,7 +630,7 @@
     au < manifest ; 2007 ; Heart Views Volume 8 ; 2007 ; 8 ; https://www.heartviews.org/ >
     au < manifest ; 2008 ; Heart Views Volume 9 ; 2008 ; 9 ; https://www.heartviews.org/ >
     au < manifest ; 2009 ; Heart Views Volume 10 ; 2009 ; 10 ; https://www.heartviews.org/ >
-    au < releasing ; 2010 ; Heart Views Volume 11 ; 2010 ; 11 ; https://www.heartviews.org/ >
+    au < released ; 2010 ; Heart Views Volume 11 ; 2010 ; 11 ; https://www.heartviews.org/ >
     au < released ; 2011 ; Heart Views Volume 12 ; 2011 ; 12 ; http://www.heartviews.org/ >
     au < released ; 2012 ; Heart Views Volume 13 ; 2012 ; 13 ; http://www.heartviews.org/ >
     au < released ; 2013 ; Heart Views Volume 14 ; 2013 ; 14 ; http://www.heartviews.org/ >
@@ -797,7 +797,7 @@
     au < manifest ; 2007 ; Indian Journal of Community Medicine Volume 32 ; 2007 ; 32 ; https://www.ijcm.org.in/ >
     au < manifest ; 2008 ; Indian Journal of Community Medicine Volume 33 ; 2008 ; 33 ; https://www.ijcm.org.in/ >
     au < manifest ; 2009 ; Indian Journal of Community Medicine Volume 34 ; 2009 ; 34 ; https://www.ijcm.org.in/ >
-    au < releasing ; 2010 ; Indian Journal of Community Medicine Volume 35 ; 2010 ; 35 ; https://www.ijcm.org.in/ >
+    au < released ; 2010 ; Indian Journal of Community Medicine Volume 35 ; 2010 ; 35 ; https://www.ijcm.org.in/ >
     au < released ; 2011 ; Indian Journal of Community Medicine Volume 36 ; 2011 ; 36 ; http://www.ijcm.org.in/ >
     au < released ; 2012 ; Indian Journal of Community Medicine Volume 37 ; 2012 ; 37 ; http://www.ijcm.org.in/ >
     au < released ; 2013 ; Indian Journal of Community Medicine Volume 38 ; 2013 ; 38 ; http://www.ijcm.org.in/ >
@@ -859,7 +859,7 @@
     au < manifest ; 2007 ; Indian Journal of Dental Research Volume 18 ; 2007 ; 18 ; https://www.ijdr.in/ >
     au < manifest ; 2008 ; Indian Journal of Dental Research Volume 19 ; 2008 ; 19 ; https://www.ijdr.in/ >
     au < manifest ; 2009 ; Indian Journal of Dental Research Volume 20 ; 2009 ; 20 ; https://www.ijdr.in/ >
-    au < releasing ; 2010 ; Indian Journal of Dental Research Volume 21 ; 2010 ; 21 ; https://www.ijdr.in/ >
+    au < released ; 2010 ; Indian Journal of Dental Research Volume 21 ; 2010 ; 21 ; https://www.ijdr.in/ >
     au < released ; 2011 ; Indian Journal of Dental Research Volume 22 ; 2011 ; 22 ; http://www.ijdr.in/ >
     au < released ; 2012 ; Indian Journal of Dental Research Volume 23 ; 2012 ; 23 ; http://www.ijdr.in/ >
     au < released ; 2013 ; Indian Journal of Dental Research Volume 24 ; 2013 ; 24 ; http://www.ijdr.in/ >
@@ -9215,7 +9215,7 @@
       param[journal_issn] = 0422-7638
 #      param[base_url] = http://www.ejcdt.eg.net/
 
-      au < releasing ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 ; https://www.ejcdt.eg.net/ >
+      au < released ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 ; https://www.ejcdt.eg.net/ >
       au < released ; 2019 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 68 ; 2019 ; 68 ; https://www.ejcdt.eg.net/ >
       au < released ; 2020 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 69 ; 2020 ; 69 ; https://www.ejcdt.eg.net/ >
       au < manifest ; 2021 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 70 ; 2021 ; 70 ; https://www.ejcdt.eg.net/ >
@@ -9338,7 +9338,7 @@
 
       au < manifest ; 2008 ; Hamdan Medical Journal Volume 1 ; 2008 ; 1 ; https://www.hamdanjournal.org/ >
       au < manifest ; 2009 ; Hamdan Medical Journal Volume 2 ; 2009 ; 2 ; https://www.hamdanjournal.org/ >
-      au < releasing ; 2010 ; Hamdan Medical Journal Volume 3 ; 2010 ; 3 ; https://www.hamdanjournal.org/ >
+      au < released ; 2010 ; Hamdan Medical Journal Volume 3 ; 2010 ; 3 ; https://www.hamdanjournal.org/ >
       au < released ; 2011 ; Hamdan Medical Journal Volume 4 ; 2011 ; 4 ; https://www.hamdanjournal.org/ >
       au < released ; 2012 ; Hamdan Medical Journal Volume 5 ; 2012 ; 5 ; https://www.hamdanjournal.org/ >
       au < released ; 2013 ; Hamdan Medical Journal Volume 6 ; 2013 ; 6 ; https://www.hamdanjournal.org/ >
@@ -9385,7 +9385,7 @@
 #      param[base_url] = http://www.ijmbs.org/
 
       au < manifest ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ >
-      au < releasing ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ >
+      au < released ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ >
       au < released ; 2011 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 3 ; 2011 ; 3 ; https://www.ijmbs.org/ >
       au < manifest ; 2012 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 4 ; 2012 ; 4 ; https://www.ijmbs.org/ >
       au < released ; 2013 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 5 ; 2013 ; 5 ; https://www.ijmbs.org/ >

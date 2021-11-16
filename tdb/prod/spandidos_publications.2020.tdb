@@ -17,24 +17,24 @@
 
     param[journal_id] = ol
 
-    au < releasing ; 2010 ; Oncology Letters Volume 1 ; 1 >
-    au < releasing ; 2011 ; Oncology Letters Volume 2 ; 2 >
-    au < releasing ; 2012 ; Oncology Letters Volume 3 ; 3 >
-    au < releasing ; 2012 ; Oncology Letters Volume 4 ; 4 >
-    au < releasing ; 2013 ; Oncology Letters Volume 5 ; 5 >
+    au < released ; 2010 ; Oncology Letters Volume 1 ; 1 >
+    au < released ; 2011 ; Oncology Letters Volume 2 ; 2 >
+    au < released ; 2012 ; Oncology Letters Volume 3 ; 3 >
+    au < released ; 2012 ; Oncology Letters Volume 4 ; 4 >
+    au < released ; 2013 ; Oncology Letters Volume 5 ; 5 >
     au < manifest ; 2013 ; Oncology Letters Volume 6 ; 6 >
     au < manifest ; 2014 ; Oncology Letters Volume 7 ; 7 >
-    au < releasing ; 2014 ; Oncology Letters Volume 8 ; 8 >
-    au < releasing ; 2015 ; Oncology Letters Volume 9 ; 9 >
-    au < releasing ; 2015 ; Oncology Letters Volume 10 ; 10 >
-    au < releasing ; 2016 ; Oncology Letters Volume 11 ; 11 >
-    au < releasing ; 2016 ; Oncology Letters Volume 12 ; 12 >
+    au < released ; 2014 ; Oncology Letters Volume 8 ; 8 >
+    au < released ; 2015 ; Oncology Letters Volume 9 ; 9 >
+    au < released ; 2015 ; Oncology Letters Volume 10 ; 10 >
+    au < released ; 2016 ; Oncology Letters Volume 11 ; 11 >
+    au < released ; 2016 ; Oncology Letters Volume 12 ; 12 >
     au < released ; 2017 ; Oncology Letters Volume 13 ; 13 >
-    au < releasing ; 2017 ; Oncology Letters Volume 14 ; 14 >
+    au < released ; 2017 ; Oncology Letters Volume 14 ; 14 >
     au < doNotProcess ; 2018 ; Oncology Letters Volume 15 ; 15 >
     au < doNotProcess ; 2018 ; Oncology Letters Volume 16 ; 16 >
-    au < releasing ; 2019 ; Oncology Letters Volume 17 ; 17 >
-    au < releasing ; 2019 ; Oncology Letters Volume 18 ; 18 >
+    au < released ; 2019 ; Oncology Letters Volume 17 ; 17 >
+    au < released ; 2019 ; Oncology Letters Volume 18 ; 18 >
     au < released ; 2020 ; Oncology Letters Volume 19 ; 19 >
     au < released ; 2020 ; Oncology Letters Volume 20 ; 20 >
     au < manifest ; 2021 ; Oncology Letters Volume 21 ; 21 >
@@ -89,7 +89,7 @@
     au < manifest ; 2009 ; International Journal of Oncology Volume 35 ; 35 >
     au < released ; 2010 ; International Journal of Oncology Volume 36 ; 36 >
     au < released ; 2010 ; International Journal of Oncology Volume 37 ; 37 >
-    au < releasing ; 2011 ; International Journal of Oncology Volume 38 ; 38 >
+    au < released ; 2011 ; International Journal of Oncology Volume 38 ; 38 >
     au < manifest ; 2011 ; International Journal of Oncology Volume 39 ; 39 >
     au < manifest ; 2012 ; International Journal of Oncology Volume 40 ; 40 >
     au < manifest ; 2012 ; International Journal of Oncology Volume 41 ; 41 >
@@ -97,12 +97,12 @@
     au < manifest ; 2013 ; International Journal of Oncology Volume 43 ; 43 >
     au < manifest ; 2014 ; International Journal of Oncology Volume 44 ; 44 >
     au < manifest ; 2014 ; International Journal of Oncology Volume 45 ; 45 >
-    au < releasing ; 2015 ; International Journal of Oncology Volume 46 ; 46 >
+    au < released ; 2015 ; International Journal of Oncology Volume 46 ; 46 >
     au < manifest ; 2015 ; International Journal of Oncology Volume 47 ; 47 >
-    au < releasing ; 2016 ; International Journal of Oncology Volume 48 ; 48 >
+    au < released ; 2016 ; International Journal of Oncology Volume 48 ; 48 >
     au < manifest ; 2016 ; International Journal of Oncology Volume 49 ; 49 >
-    au < releasing ; 2017 ; International Journal of Oncology Volume 50 ; 50 >
-    au < releasing ; 2017 ; International Journal of Oncology Volume 51 ; 51 >
+    au < released ; 2017 ; International Journal of Oncology Volume 50 ; 50 >
+    au < released ; 2017 ; International Journal of Oncology Volume 51 ; 51 >
     au < doNotProcess ; 2018 ; International Journal of Oncology Volume 52 ; 52 >
     au < doNotProcess ; 2018 ; International Journal of Oncology Volume 53 ; 53 >
     au < manifest ; 2019 ; International Journal of Oncology Volume 54 ; 54 >
@@ -125,11 +125,11 @@
 
     au < manifest ; 2013 ; Molecular and Clinical Oncology Volume 1 ; 1 >
     au < manifest ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 >
-    au < releasing ; 2015 ; Molecular and Clinical Oncology Volume 3 ; 3 >
-    au < releasing ; 2016 ; Molecular and Clinical Oncology Volume 4 ; 4 >
-    au < releasing ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 >
-    au < releasing ; 2017 ; Molecular and Clinical Oncology Volume 6 ; 6 >
-    au < releasing ; 2017 ; Molecular and Clinical Oncology Volume 7 ; 7 >
+    au < released ; 2015 ; Molecular and Clinical Oncology Volume 3 ; 3 >
+    au < released ; 2016 ; Molecular and Clinical Oncology Volume 4 ; 4 >
+    au < released ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 >
+    au < released ; 2017 ; Molecular and Clinical Oncology Volume 6 ; 6 >
+    au < released ; 2017 ; Molecular and Clinical Oncology Volume 7 ; 7 >
     au < doNotProcess ; 2018 ; Molecular and Clinical Oncology Volume 8 ; 8 >
     au < doNotProcess ; 2018 ; Molecular and Clinical Oncology Volume 9 ; 9 >
     au < manifest ; 2019 ; Molecular and Clinical Oncology Volume 10 ; 10 >
@@ -339,10 +339,10 @@
     au < manifest ; 2013 ; Molecular Medicine Reports Volume 8 ; 8 >
     au < manifest ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 >
     au < manifest ; 2014 ; Molecular Medicine Reports Volume 10 ; 10 >
-    au < releasing ; 2015 ; Molecular Medicine Reports Volume 11 ; 11 >
+    au < released ; 2015 ; Molecular Medicine Reports Volume 11 ; 11 >
     au < released ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 >
-    au < releasing ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 >
-    au < releasing ; 2016 ; Molecular Medicine Reports Volume 14 ; 14 >
+    au < released ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 >
+    au < released ; 2016 ; Molecular Medicine Reports Volume 14 ; 14 >
     au < manifest ; 2017 ; Molecular Medicine Reports Volume 15 ; 15 >
     au < manifest ; 2017 ; Molecular Medicine Reports Volume 16 ; 16 >
     au < doNotProcess ; 2018 ; Molecular Medicine Reports Volume 17 ; 17 >

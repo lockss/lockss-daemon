@@ -529,7 +529,7 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = cfs
 
-    au < releasing ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < released ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
     au < manifest ; 2021 ; Crime Fiction Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
     au < exists ; 2021 ; Crime Fiction Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
 
@@ -548,8 +548,8 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = gels
 
-    au < releasing ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ >
-    au < releasing ; 2020 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ >
+    au < released ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < released ; 2020 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ >
     au < expected ; 2021 ; Global Energy Law and Sustainability Volume 3 ; 3 ; https://www.euppublishing.com/ >
     au < expected ; 2021 ; Global Energy Law and Sustainability Volume 4 ; 4 ; https://www.euppublishing.com/ >
 
@@ -568,8 +568,8 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = lih
 
-    au < releasing ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ >
-    au < releasing ; 2020 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ >
+    au < released ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ >
+    au < released ; 2020 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ >
     au < expected ; 2021 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ >
     au < expected ; 2021 ; Library and Information History Volume 39 ; 39 ; https://www.euppublishing.com/ >
 

@@ -31,9 +31,9 @@
     param[base_url] = https://www.ncmedicaljournal.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < releasing ; 2019 ; North Carolina Medical Journal Volume 80 ; 80 >
-    au < releasing ; 2020 ; North Carolina Medical Journal Volume 81 ; 81 >
-    au < releasing ; 2021 ; North Carolina Medical Journal Volume 82 ; 82 >
+    au < released ; 2019 ; North Carolina Medical Journal Volume 80 ; 80 >
+    au < released ; 2020 ; North Carolina Medical Journal Volume 81 ; 81 >
+    au < released ; 2021 ; North Carolina Medical Journal Volume 82 ; 82 >
 
     }
   }
