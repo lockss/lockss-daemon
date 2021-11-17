@@ -1,4 +1,4 @@
-<!--
+/*
 
 Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
@@ -29,52 +29,22 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-    <entry>
-        <string>plugin_status</string>
-        <string>testing</string>
-    </entry>
-    <entry>
-        <string>plugin_identifier</string>
-        <string>org.lockss.plugin.atypon.asm.ClockssAsmPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_version</string>
-        <string>6</string>
-    </entry>
-    <entry>
-        <string>plugin_name</string>
-        <string>American Society for Microbiology Journals Plugin (CLOCKSS)</string>
-    </entry>
-    <entry>
-        <string>plugin_parent</string>
-        <string>org.lockss.plugin.atypon.asm.AsmPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_parent_version</string>
-        <string>6</string>
-    </entry>
-    <entry>
-        <string>au_name</string>
-        <string>"American Society for Microbiology Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-    </entry>
-    <entry>
-        <string>au_start_url</string>
-        <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
-    </entry>
-    <entry>
-        <!--  CLOCKSS does not need this warning message about registering IP addresses -->
-        <string>plugin_au_config_user_msg</string>
-        <org.lockss.util.Default />
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-        </map>
-    </entry>
-</map>
+*/
+
+package org.lockss.plugin.atypon.asm;
+
+import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
+
+/*
+ * The PDF plus offer a growing list of Cited by items. Remove them
+ * Also remove the information at the front of the PDF file about how it was produced
+ */
+public class AsmPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
+
+  // The PDF Producer added in new information - remove it all
+  @Override
+  public boolean doRemoveAllDocumentInfo() {
+    return true;
+  }
+
+}

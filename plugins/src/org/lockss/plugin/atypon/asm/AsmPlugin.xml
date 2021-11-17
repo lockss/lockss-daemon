@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -63,8 +63,14 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.atypon.asm.AsmHtmlHashFilterFactory</string>
     </entry>
-    <!-- Note: A 'watermark' is applied to pdfs when downloaded by the browser, with
-           base_url journal id, date, ad ipv6 address
-         but the lockss crawler does not get this
-      e.g. "Downloaded from https://journals.asm.org/journal/aac on 02 June 2021 by 2600:1700:2320:4420::49" -->
+    <entry>
+        <!-- removes '?download=true', replaces 'epdf' w/'pdf' -->
+        <string>au_url_normalizer</string>
+        <string>org.lockss.plugin.atypon.asm.AsmUrlNormalizer</string>
+    </entry>
+    <!-- pdfs have a fair bit of things to remove. -->
+    <entry>
+        <string>application/pdf_filter_factory</string>
+        <string>org.lockss.plugin.atypon.asm.AsmPdfFilterFactory</string>
+    </entry>
 </map>
