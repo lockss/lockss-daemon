@@ -32,11 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import static org.lockss.laaws.V2AuMover.compileRegexps;
+import static org.lockss.laaws.V2AuMover.isMatch;
+
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -82,9 +82,6 @@ public class MigrateContent extends LockssServlet {
   public static final String ACTION_MIGRATE_AU= "Migrate One AU to V2 Repository";
   public static final String ACTION_MIGRATE_ALL= "Migrate All AUs to V2 Repository";
 
-  static final String COL2 = "colspan=2";
-  static final String COL2CENTER = COL2 + " align=center";
-
   private static final String HOST_URL_FOOT =
     "The V2 REST Service host name (localhost by default).";
   private static final String USER_NAME_FOOT =
@@ -112,12 +109,14 @@ public class MigrateContent extends LockssServlet {
     auid = null;
     errMsg = null;
     statusMsg = null;
-    hostName=DEFAULT_HOSTNAME;
     userName=null;
     userPass =null;
     Configuration config = ConfigManager.getCurrentConfig();
+    hostName=config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
     auSelectFilter=config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
-    auSelectPatterns=compileRegexps(auSelectFilter);
+    if(auSelectFilter != DEFAULT_AU_SELECT_FILTER) {
+      auSelectPatterns = compileRegexps(auSelectFilter);
+    }
   }
 
   public void init(ServletConfig config) throws ServletException {
@@ -151,7 +150,7 @@ public class MigrateContent extends LockssServlet {
   private void doMigrateAll() {
     try {
       auMover = new V2AuMover();
-      auMover.moveAllAus(hostName, userName, userPass);
+      auMover.moveAllAus(hostName, userName, userPass, auSelectPatterns);
       java.util.List<String> errs = auMover.getErrors();
       if (!errs.isEmpty()) {
         errMsg = StringUtil.separatedString(errs, "<br>");
@@ -238,18 +237,19 @@ public class MigrateContent extends LockssServlet {
   }
 
 
-  void addInputToTable(Table tbl, String label, String key, String init, int size) {
+  private void addInputToTable(Table tbl, String label, String key, String init, int size) {
     Input in = new Input(Input.Text, key, init);
     in.setSize(size);
     addElementToTable(tbl, label, in);
   }
-  void addHiddenInputToTable(Table tbl, String label, String key, String init, int size) {
+
+  private void addHiddenInputToTable(Table tbl, String label, String key, String init, int size) {
     Input in = new Input(Input.Password, key, init);
     in.setSize(size);
     addElementToTable(tbl, label, in);
   }
 
-  void addElementToTable(Table tbl, String label, Element elem) {
+  private void addElementToTable(Table tbl, String label, Element elem) {
     tbl.newRow();
     tbl.newCell("align=right");
     tbl.add(label);
@@ -260,22 +260,20 @@ public class MigrateContent extends LockssServlet {
     tbl.add(elem);
   }
 
-  void addAusToTable( Table tbl, String key, String preselId) {
+  private void addAusToTable( Table tbl, String key, String preselId) {
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
     tbl.add("Select AU<br>");
     Select sel = new Select(key, false);
     sel.add("", preselId == null, "");
-    for (Iterator iter = pluginMgr.getAllAus().iterator(); iter.hasNext(); ) {
-      ArchivalUnit au0 = (ArchivalUnit) iter.next();
+    for (ArchivalUnit au0 : pluginMgr.getAllAus()) {
       String id = au0.getAuId();
-      log.info(id);
-      if(auSelectFilter != null) {
+      log.debug(id);
+      if (auSelectPatterns != null) {
         if (isMatch(id, auSelectPatterns)) {
           sel.add(encodeAttr(au0.getName()), id.equals(preselId), id);
         }
-      }
-      else {
+      } else {
         sel.add(encodeAttr(au0.getName()), id.equals(preselId), id);
       }
     }
@@ -283,32 +281,4 @@ public class MigrateContent extends LockssServlet {
     setTabOrder(sel);
   }
 
-  /**
-   * Compile a list of regular expression into a list of Patterns
-   * @param regexps the list of java regular expressions
-   * @return a list of java regular patterns
-   */
-  List<Pattern> compileRegexps(List<String> regexps) {
-    List<Pattern> res = new ArrayList<Pattern>();
-    for (String re : regexps) {
-      res.add(Pattern.compile(re));
-    }
-    return res;
-  }
-
-  /**
-   * Return true if string matches any of a list of Patterns
-   * @param auid the string we are looking for
-   * @param pats the list of compiled java patterns
-   * @return true if string matches any pattern, false otherwise.
-   */
-  boolean isMatch(String auid, List<Pattern> pats) {
-    for (Pattern pat : pats) {
-      Matcher matcher = pat.matcher(auid);
-      if (matcher.find()) {
-        return true;
-      }
-    }
-    return false;
-  }
 }

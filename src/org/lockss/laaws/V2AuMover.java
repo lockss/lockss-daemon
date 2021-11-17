@@ -31,14 +31,15 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.laaws;
 
+import static java.nio.file.StandardOpenOption.CREATE_NEW;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
-import java.nio.file.OpenOption;
-import java.nio.file.StandardOpenOption;
+import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,6 +48,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import okhttp3.Dispatcher;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -66,8 +69,10 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.PluginManager;
 import org.lockss.state.AuState;
+import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.lockss.util.TimeBase;
 import org.lockss.util.UrlUtil;
 
 public class V2AuMover {
@@ -89,8 +94,8 @@ public class V2AuMover {
   public static final String PARAM_V2_COLLECTION = PREFIX + "collection";
   public static final String DEFAULT_V2_COLLECTION = "lockss";
 
-  private static final String PARAM_HOSTNAME = PREFIX + "hostname";
-  private static final String DEFAULT_HOSTNAME = "localhost";
+  public static final String PARAM_HOSTNAME = PREFIX + "hostname";
+  public static final String DEFAULT_HOSTNAME = "localhost";
 
   public static final String PARAM_RS_PORT = PREFIX + "rs.port";
   public static final int DEFAULT_RS_PORT = 24610;
@@ -99,9 +104,12 @@ public class V2AuMover {
   public static final int DEFAULT_CFG_PORT = 24620;
 
   public static final String PARAM_REPORT_FILE= PREFIX + "report.file";
-  public static final String DEFAULT_REPORT_FILE = "migration.txt";
+  public static final String DEFAULT_REPORT_FILE = "v2migration.txt";
   private static final Logger log = Logger.getLogger(V2AuMover.class);
   private static final List<String> errorList = new ArrayList<>();
+  // The format of a date as required by the export output file name.
+  private static final SimpleDateFormat dateFormat = new SimpleDateFormat(
+    "yyyy-MM-dd-HH-mm-ss");
 
   private final String cliendId =
     org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(8);
@@ -179,7 +187,7 @@ public class V2AuMover {
   private boolean debugRepoReq;
   private boolean debugConfigReq;
 
-  private final PluginManager pluginManager;
+  PluginManager pluginManager;
   private LinkedHashSet<ArchivalUnit> auMoveQueue=new LinkedHashSet<>();
   private Dispatcher dispatcher;
   boolean allCusQueued=false;
@@ -215,10 +223,11 @@ public class V2AuMover {
     collection = config.get(PARAM_V2_COLLECTION, DEFAULT_V2_COLLECTION);
     cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
     rsPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
-    // add a timer to make this unique
-    reportFileName = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
-    if(reportFileName != null)
-      startReportFile(reportFileName,false);
+    String baseFileName = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
+    if (!StringUtil.isNullString(baseFileName)) {
+      reportFileName = getUniqueReportFileName(baseFileName);
+      startReportFile();
+    }
     repoClient = new V2RestClient();
     rsStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
     rsCollectionsApiClient = new StreamingCollectionsApi(repoClient);
@@ -229,6 +238,35 @@ public class V2AuMover {
     cfgAusApiClient = new AusApi(configClient);
   }
 
+  /**
+   * Compile a list of regular expression into a list of Patterns
+   * @param regexps the list of java regular expressions
+   * @return a list of java regular patterns
+   */
+  static public List<Pattern> compileRegexps(List<String> regexps) {
+    List<Pattern> res = new ArrayList<>();
+    for (String re : regexps) {
+      res.add(Pattern.compile(re));
+    }
+    return res;
+  }
+
+  /**
+   * Return true if string matches any of a list of Patterns
+   * @param str the string we are looking for
+   * @param pats the list of compiled java patterns
+   * @return true if string matches any pattern, false otherwise.
+   */
+  static public boolean isMatch(String str, List<Pattern> pats) {
+    for (Pattern pat : pats) {
+      Matcher matcher = pat.matcher(str);
+      if (matcher.find()) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   //-------------------------
   // Primary Public Functions
   // -------------------------
@@ -236,9 +274,18 @@ public class V2AuMover {
    * Move all Aus that are not currently in the move queue.
    * @throws IOException if error occurred while moving au.
    */
-  public void moveAllAus(String host, String uname, String upass) throws IOException {
+  public void moveAllAus(String host, String uname, String upass,  List<Pattern> selPatterns) throws IOException {
     initRequest(host, uname, upass);
-    auMoveQueue.addAll(pluginManager.getAllAus());
+    if(selPatterns != null && !selPatterns.isEmpty()) {
+      for (ArchivalUnit au : pluginManager.getAllAus()) {
+        if (isMatch(au.getAuId(), selPatterns)) {
+          auMoveQueue.add(au);
+        }
+      }
+    }
+    else {
+      auMoveQueue.addAll(pluginManager.getAllAus());
+    }
     log.debug("Moving " + auMoveQueue.size() + " aus.");
     // Check to see if we are currently working on an au.
     if(currentAu == null)
@@ -261,6 +308,9 @@ public class V2AuMover {
     return auMoveQueue.isEmpty();
   }
 
+  public List<String> getErrors() {
+    return errorList;
+  }
 
   /**
    * Move the requested Au
@@ -294,6 +344,10 @@ public class V2AuMover {
     }
     if(upass != null) {
       userPass =upass;
+    }
+    if(userName== null || userPass == null) {
+      errorList.add("Missing user name or password.");
+      throw new IllegalArgumentException("Missing user name or password");
     }
     try {
       cfgAccessUrl=new URL("http", hostName, cfgPort,"").toString();
@@ -333,19 +387,33 @@ public class V2AuMover {
     startTime=System.currentTimeMillis();
   }
 
+  /**
+   * Provides the name of time stamped report file.
+   *
+   * @return a String with the report file name. The format is
+   *         'reportFileName-yyyy-MM-dd-HH-mm-ss.txt'.
+   */
+  private String getUniqueReportFileName(String baseFileName) {
+    return String.format("%s-%s.%s", baseFileName, dateFormat.format(TimeBase.nowDate()), "txt");
+  }
 
-  void startReportFile(String fileName, boolean append) {
-    File file = new File(fileName);
-    boolean fileExists = file.exists();
-    OpenOption[] openOptions = append ? new OpenOption[] { StandardOpenOption.CREATE, StandardOpenOption.APPEND }
-      : new OpenOption[] { StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING };
-    try (PrintWriter writer = new PrintWriter(Files.newOutputStream(file.toPath(), openOptions))) {
-      reportWriter = writer;
-      reportWriter.println("-------------");
-      reportWriter.println();
+  void startReportFile() {
+    if(StringUtil.isNullString((reportFileName))) {
+      log.warning("Report file will not be written: No Report File configured.");
+    }
+    File file = new File(reportFileName);
+    try {
+      log.info("Writing report to file "+ file.getAbsolutePath());
+      reportWriter = new PrintWriter(Files.newOutputStream(file.toPath(), CREATE_NEW),true);
+      reportWriter.println("--------------------------------------------------");
+      reportWriter.println("  V2 Au Migration Report - "+ DateFormatter.now());
+      reportWriter.println("--------------------------------------------------");
+      if(reportWriter.checkError()) {
+        log.warning("Error writing report file.");
+      }
     }
     catch (IOException e) {
-      log.error("Unable to open report file:"+ e.getMessage());
+      log.error("Report file will not be written: Unable to open report file:"+ e.getMessage());
 
     }
   }
@@ -359,14 +427,15 @@ public class V2AuMover {
       "  totalRuntime: " + auRunTime / 1000 + " secs.";
     if(reportWriter != null) {
       reportWriter.println(auData);
-      reportWriter.flush();
+      if(reportWriter.checkError()) {
+        log.warning("Error writing report file.");
+      }
     }
     log.info(auData);
   }
 
   void closeReport() {
-    totalRunTime=System.currentTimeMillis() - startTime;
-    String summary = "AusMoved:" + totalAusMoved +
+    String summary = "AusMoved: " + totalAusMoved +
       "  urlsMoved: "+ totalUrlsMoved +
       "  artifactsMoved: "+ totalArtifactsMoved +
       "  bytesMoved: " + totalBytesMoved +
@@ -374,14 +443,17 @@ public class V2AuMover {
       "  totalRuntime: " + totalRunTime/1000 + " secs.";
     if(reportWriter != null) {
       reportWriter.println(summary);
+      if(reportWriter.checkError()) {
+        log.warning("Error writing report file.");
+      }
       reportWriter.close();
     }
     log.info(summary);
   }
 
   protected void moveNextAu() throws IOException {
-    ArchivalUnit au = auMoveQueue.iterator().next();
-    if(au != null) {
+    if(auMoveQueue.iterator().hasNext()) {
+      ArchivalUnit au = auMoveQueue.iterator().next();
       allCusQueued=false;
       log.debug("Moving " + au.getName() + " - " + auMoveQueue.size() +" remaining.");
       currentAu = au.getAuId();
@@ -393,6 +465,7 @@ public class V2AuMover {
       moveAu(au);
     }
     else {
+      totalRunTime=System.currentTimeMillis() - startTime;
       closeReport();
     }
   }
@@ -417,7 +490,7 @@ public class V2AuMover {
       moveAuArtifacts(au);
       finishAuMove(au);
       log.info(auName + ": Successfully moved AU Artifacts.");
-      long auRunTime = System.currentTimeMillis() -  au_move_start;
+      auRunTime = System.currentTimeMillis() -  au_move_start;
       updateReport();
       //update our totals.
       totalBytesMoved+=auBytesMoved;
@@ -442,7 +515,6 @@ public class V2AuMover {
    * @throws ApiException if REST request results in errors
    */
   protected void moveAuArtifacts(ArchivalUnit au) throws ApiException {
-    List<Artifact> auArtifacts= new ArrayList<>();
     List<Artifact>cuArtifacts=new ArrayList<>();
 
     //Get the au artifacts from the v1 repo.
@@ -479,6 +551,54 @@ public class V2AuMover {
     allCusQueued=true;
    }
 
+/* ------------------
+  testing getters & setters
+ */
+  void setAuCounters(long urls, long artifacts, long bytes, long runTime, long errors)
+  {
+    auUrlsMoved = urls;
+    auArtifactsMoved = artifacts;
+    auBytesMoved = bytes;
+    auRunTime= runTime;
+    auErrorCount = errors;
+  }
+
+  void setTotalCounters(long aus, long urls, long artifacts, long bytes, long runTime, long errors)
+  {
+    totalAusMoved = aus;
+    totalUrlsMoved = urls;
+    totalArtifactsMoved = artifacts;
+    totalBytesMoved = bytes;
+    totalRunTime = runTime;
+    totalErrorCount = errors;
+  }
+
+  LinkedHashSet<ArchivalUnit> getAuMoveQueue() {
+    return auMoveQueue;
+  }
+
+  void setCurrentAu(String auName) {
+    currentAu=auName;
+  }
+  String getUserName() {
+    return userName;
+  }
+
+  String getUserPass() {
+    return userPass;
+  }
+
+  String getReportFileName() {
+    return reportFileName;
+  }
+
+  String getCfgAccessUrl() {
+    return cfgAccessUrl;
+  }
+
+  String getRsAccessUrl() {
+    return rsAccessUrl;
+  }
 
   /**
    * Move all versions of a cachedUrl.
@@ -559,9 +679,8 @@ public class V2AuMover {
   /**
    * Complete the au move by moving the state and config information.
    * @param au the au we are moving.
-   * @throws IOException if
    */
-  private void finishAuMove(ArchivalUnit au) throws IOException{
+  private void finishAuMove(ArchivalUnit au) {
     do { //Wait until we are done the processing
       try {
         Thread.sleep(200);
@@ -631,9 +750,6 @@ public class V2AuMover {
     return cliendId + "-" + ++reqId;
   }
 
-  public List<String> getErrors() {
-    return errorList;
-  }
 
   /**
    * A simple class to encompass an ApiCallback
@@ -673,9 +789,9 @@ public class V2AuMover {
     @Override
     public void onUploadProgress(long bytesWritten, long contentLength, boolean done) {
       log.debug3("Create Artifact uploaded " + bytesWritten + " of " + contentLength + "bytes..");
+      auBytesMoved+=bytesWritten;
       if (done) {
         log.debug2("Create Artifact upload of " + bytesWritten + " complete.");
-        auBytesMoved+=bytesWritten;
       }
     }
 

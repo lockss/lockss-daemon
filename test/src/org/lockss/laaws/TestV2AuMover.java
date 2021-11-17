@@ -1,0 +1,246 @@
+package org.lockss.laaws;
+
+import static org.lockss.laaws.V2AuMover.compileRegexps;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Pattern;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.PluginManager;
+import org.lockss.test.ConfigurationUtil;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
+import org.lockss.test.MockLockssDaemon;
+import org.lockss.test.MockPlugin;
+
+public class TestV2AuMover extends LockssTestCase {
+
+  V2AuMover auMover;
+  String tempDirPath;
+  String testUser = "tester";
+  String testPassword = "testPass";
+  String defaultCfgUrl = "http://"+ V2AuMover.DEFAULT_HOSTNAME + ":" + V2AuMover.DEFAULT_CFG_PORT;
+  String defaultRsUrl = "http://"+ V2AuMover.DEFAULT_HOSTNAME + ":" + V2AuMover.DEFAULT_RS_PORT;
+  private long numAus;
+  private long numUrls;
+  private long numArtifacts;
+  private long totTime;
+  private long numErrors;
+  private long numBytes;
+  private String aPluginRegex="(aplugin)";
+  private String bPluginRegex="(bplugin)";
+  private String cPluginRegex="(cplugin)";
+
+  String[] reportLines = {
+    "Au:au1  urlsMoved: 10  artifactsMoved: 10  bytesMoved: 1000  errors: 0  totalRuntime: 0 secs.",
+    "Au:au2  urlsMoved: 20  artifactsMoved: 33  bytesMoved: 3000  errors: 1  totalRuntime: 1 secs.",
+    "Au:au3  urlsMoved: 100  artifactsMoved: 150  bytesMoved: 10000  errors: 3  totalRuntime: 2 secs.",
+    "AusMoved: 3  urlsMoved: 130  artifactsMoved: 193  bytesMoved: 14000  errors: 4  totalRuntime: 3 secs."
+  };
+
+  public void setUp() throws Exception {
+    super.setUp();
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String reportFile = tempDirPath + "v2AuMigration.txt";
+    ConfigurationUtil.addFromArgs(V2AuMover.PARAM_REPORT_FILE,reportFile);
+    auMover = new V2AuMover();
+  }
+
+  public void tearDown() throws Exception {
+    super.tearDown();
+  }
+
+  public void testIsAvailable() {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    assertTrue(auMover.isAvailable());
+    auMover.getAuMoveQueue().add(mau);
+    assertFalse(auMover.isAvailable());
+  }
+
+  public void testInitRequest() {
+    auMover = new V2AuMover();
+    // test file defaults
+    auMover.initRequest(null, testUser,testPassword);
+    // check the locals
+    assertEquals(defaultCfgUrl,auMover.getCfgAccessUrl());
+    assertEquals(defaultRsUrl,auMover.getRsAccessUrl());
+    assertEquals(testUser,auMover.getUserName());
+    assertEquals(testPassword, auMover.getUserPass());
+
+    // test a different host
+    String base="http://mockhost:";
+    String user="user1";
+    String passwd="passwd1";
+    auMover.initRequest("mockhost", user,passwd);
+    assertEquals(base+24620,auMover.getCfgAccessUrl());
+    assertEquals(base+24610,auMover.getRsAccessUrl());
+    assertEquals(user,auMover.getUserName());
+    assertEquals(passwd, auMover.getUserPass());
+
+    // test config from configuration file
+    ConfigurationUtil.addFromArgs(
+      V2AuMover.PARAM_HOSTNAME,"test.com",
+      V2AuMover.PARAM_CFG_PORT, "25620",
+      V2AuMover.PARAM_RS_PORT, "25610");
+    base="http://test.com:";
+    user="user2";
+    passwd="passwd2";
+    auMover.initRequest(null, user, passwd);
+    assertEquals(base+24620,auMover.getCfgAccessUrl());
+    assertEquals(base+24610,auMover.getRsAccessUrl());
+    assertEquals(user,auMover.getUserName());
+    assertEquals(passwd, auMover.getUserPass());
+
+  }
+
+  public void testReportFile() {
+    numAus=0;
+    numUrls=0;
+    numArtifacts=0;
+    totTime=0;
+    numErrors=0;
+    numBytes=0;
+    auMover.setCurrentAu("au1");
+    addAu("au1", 10,10,1000, 300, 0);
+    auMover.updateReport();
+    addAu("au2", 20,33, 3000, 1000,1);
+    auMover.updateReport();
+    addAu("au3",100,150,10000,2000, 3);
+    auMover.updateReport();
+    auMover.closeReport();
+    Path myPath = Paths.get(auMover.getReportFileName());
+    List< String > lines = null;
+    try {
+      lines = Files.readAllLines(myPath, StandardCharsets.UTF_8);
+    } catch (IOException ioe) {
+      fail("IOException thrown",ioe);
+    }
+    assertEquals(7,lines.size());
+    // we're only checking the report lines.
+    for(int i=0; i < 4; i++) {
+      assertEquals(reportLines[i],lines.get(i+3));
+    }
+
+  }
+
+  public void testMoveOneAu() throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit("mockAuId");
+    MockV2AuMover mover = new MockV2AuMover();
+    mover.moveOneAu(null, testUser,testPassword, mau);
+    assertTrue(mover.getAuMoveQueue().isEmpty());
+    List<String> movedAus = mover.getMovedAus();
+    assertEquals(1, movedAus.size());
+    assertEquals("mockAuId",movedAus.get(0));
+  }
+
+  public void testMoveAllAus() throws Exception{
+    MockV2AuMover mover = new MockV2AuMover();
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    MyMockPluginManager mpm = new MyMockPluginManager();
+    daemon.setPluginManager(mpm);
+    List<ArchivalUnit> aus = makeMockAuList();
+    mpm.setAllAus(aus);
+    mover.setPluginManager(mpm);
+    // move all unfiltered aus
+    mover.moveAllAus(null, testUser,testPassword, null);
+    assertTrue(mover.getAuMoveQueue().isEmpty());
+    List<String> movedAus = mover.getMovedAus();
+    assertEquals(aus.size(), movedAus.size());
+    for (ArchivalUnit au : aus) {
+      assertTrue(movedAus.contains(au.getAuId()));
+    }
+  }
+
+  public void testMoveAllAusWithFilter() throws Exception{
+    MockV2AuMover mover = new MockV2AuMover();
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    MyMockPluginManager mpm = new MyMockPluginManager();
+    daemon.setPluginManager(mpm);
+    List<ArchivalUnit> aus = makeMockAuList();
+    mpm.setAllAus(aus);
+    mover.setPluginManager(mpm);
+    List<String> filters=Arrays.asList(aPluginRegex,bPluginRegex);
+    List<Pattern> selPatterns = compileRegexps(filters);
+    // move all unfiltered aus
+    mover.moveAllAus(null, testUser,testPassword, selPatterns);
+    assertTrue(mover.getAuMoveQueue().isEmpty());
+    List<String> movedAus = mover.getMovedAus();
+    assertNotEquals(aus.size(),movedAus.size());
+    assertEquals(5, movedAus.size());
+    assertDoesNotContain(movedAus,aus.get(5).getAuId());
+  }
+
+  private void addAu(String auName, long urls, long artifacts, long bytes, long runTime, long errors){
+    numAus++;
+    numUrls+=urls;
+    numArtifacts+=artifacts;
+    numBytes+=bytes;
+    totTime+=runTime;
+    numErrors+=errors;
+    auMover.setCurrentAu(auName);
+    auMover.setAuCounters(urls, artifacts, bytes, runTime, errors);
+    auMover.setTotalCounters(numAus, numUrls, numArtifacts, numBytes,totTime, numErrors);
+
+  }
+
+  List<ArchivalUnit> makeMockAuList() {
+    // Test with dummy AUs
+    MockPlugin plugin = new MockPlugin();
+    plugin.setPluginId("aplugin");
+    ArchivalUnit au1 = new MockArchivalUnit(plugin, "aplugin|auid1");
+    ArchivalUnit au2 = new MockArchivalUnit(plugin, "aplugin|auid2");
+    ArchivalUnit au3 = new MockArchivalUnit(plugin, "aplugin|auid3");
+    plugin = new MockPlugin();
+    plugin.setPluginId("bplugin");
+    ArchivalUnit au4 = new MockArchivalUnit(plugin, "bplugin|auid1");
+    ArchivalUnit au5 = new MockArchivalUnit(plugin, "bplugin|auid2");
+    plugin.setPluginId("cplugin");
+    ArchivalUnit au6 = new MockArchivalUnit(plugin, "cplugin|auid1");
+    return Arrays.asList(au1, au2, au3,au4, au5,au6);
+  }
+
+  class MockV2AuMover extends V2AuMover {
+    List<String> movedAus= new ArrayList<>();
+
+   public MockV2AuMover() {
+      super();
+    }
+
+    protected void moveAu(ArchivalUnit au) throws IOException {
+      movedAus.add(au.getAuId());
+      getAuMoveQueue().remove(au);
+      setCurrentAu(null);
+      moveNextAu();
+    }
+
+    protected List<String> getMovedAus() {
+      return movedAus;
+    }
+
+    protected void setPluginManager(PluginManager pmgr) {
+     super.pluginManager = pmgr;
+    }
+
+  }
+
+  class MyMockPluginManager extends PluginManager {
+    List<ArchivalUnit> allAus = new ArrayList<>();
+
+    void setAllAus(List<ArchivalUnit> allAus) {
+      this.allAus = allAus;
+    }
+
+    public List<ArchivalUnit> getAllAus() {
+      return allAus;
+    }
+
+  }
+
+}
