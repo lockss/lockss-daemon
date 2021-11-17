@@ -233,7 +233,7 @@
 #    param[base_url] = http://www.anmjournal.com/
 
     param[journal_issn] = 0331-3131
-    #content not available
+    #content not available/moved
 
     au < doNotProcess ; doNotProcess ; 2010 ; Annals of Nigerian Medicine Volume 4 ; 2010 ; 4 ; https://www.anmjournal.com/ ; ; >
     au < finished ; finished ; 2011 ; Annals of Nigerian Medicine Volume 5 ; 2011 ; 5 ; http://www.anmjournal.com/ ; ; reingest1.clockss.org:8082 >
@@ -711,29 +711,29 @@
       issnl = 0019-5049
    >
 #    param[base_url] = http://www.ijaweb.org/
-
     param[journal_issn] = 0019-5049
+    #Moved to Wolters Kluwer
 
-    au < manifest ; exists ; 2002 ; Indian Journal of Anaesthesia Volume 46 ; 2002 ; 46 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2003 ; Indian Journal of Anaesthesia Volume 47 ; 2003 ; 47 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Anaesthesia Volume 48 ; 2004 ; 48 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Anaesthesia Volume 49 ; 2005 ; 49 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Anaesthesia Volume 50 ; 2006 ; 50 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Anaesthesia Volume 51 ; 2007 ; 51 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Anaesthesia Volume 52 ; 2008 ; 52 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Anaesthesia Volume 53 ; 2009 ; 53 ; https://www.ijaweb.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Anaesthesia Volume 54 ; 2010 ; 54 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Indian Journal of Anaesthesia Volume 46 ; 2002 ; 46 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Indian Journal of Anaesthesia Volume 47 ; 2003 ; 47 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Anaesthesia Volume 48 ; 2004 ; 48 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Indian Journal of Anaesthesia Volume 49 ; 2005 ; 49 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Anaesthesia Volume 50 ; 2006 ; 50 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Anaesthesia Volume 51 ; 2007 ; 51 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Anaesthesia Volume 52 ; 2008 ; 52 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Anaesthesia Volume 53 ; 2009 ; 53 ; https://www.ijaweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Anaesthesia Volume 54 ; 2010 ; 54 ; https://www.ijaweb.org/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Anaesthesia Volume 55 ; 2011 ; 55 ; http://www.ijaweb.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; Indian Journal of Anaesthesia Volume 56 ; 2012 ; 56 ; http://www.ijaweb.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Indian Journal of Anaesthesia Volume 57 ; 2013 ; 57 ; http://www.ijaweb.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Anaesthesia Volume 58 ; 2014 ; 58 ; http://www.ijaweb.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Indian Journal of Anaesthesia Volume 59 ; 2015 ; 59 ; http://www.ijaweb.org/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Anaesthesia Volume 60 ; 2016 ; 60 ; http://www.ijaweb.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Anaesthesia Volume 60 ; 2016 ; 60 ; http://www.ijaweb.org/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Anaesthesia Volume 61 ; 2017 ; 61 ; http://www.ijaweb.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Anaesthesia Volume 62 ; 2018 ; 62 ; http://www.ijaweb.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Anaesthesia Volume 62 ; 2018 ; 62 ; http://www.ijaweb.org/ ; ; >
     au < finished ; crawling ; 2019 ; Indian Journal of Anaesthesia Volume 63 ; 2019 ; 63 ; https://www.ijaweb.org/ ; ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2020 ; Indian Journal of Anaesthesia Volume 64 ; 2020 ; 64 ; https://www.ijaweb.org/ ; ; >
-    au < crawling ; exists ; 2021 ; Indian Journal of Anaesthesia Volume 65 ; 2021 ; 65 ; https://www.ijaweb.org/ ; ; >
+    au < superseded ; exists ; 2021 ; Indian Journal of Anaesthesia Volume 65 [superseded] ; 2021 ; 65 ; https://www.ijaweb.org/ ; ; >
 
   }
 
@@ -1028,34 +1028,34 @@
       issnl = 2230-8210
     >
 #    param[base_url] = http://www.ijem.in/
-
     param[journal_issn] = 2230-8210
+    #Moved to Wolters Kluwer
 
-    au < manifest ; exists ; 1997 ; Indian Journal of Endocrinology and Metabolism Volume 1 ; 1997 ; 1 ; https://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 1998 ; Indian Journal of Endocrinology and Metabolism Volume 2 ; 1998 ; 2 ; https://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 1999 ; Indian Journal of Endocrinology and Metabolism Volume 3 ; 1999 ; 3 ; https://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 2000 ; Indian Journal of Endocrinology and Metabolism Volume 4 ; 2000 ; 4 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Indian Journal of Endocrinology and Metabolism Volume 1 ; 1997 ; 1 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Indian Journal of Endocrinology and Metabolism Volume 2 ; 1998 ; 2 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Indian Journal of Endocrinology and Metabolism Volume 3 ; 1999 ; 3 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Indian Journal of Endocrinology and Metabolism Volume 4 ; 2000 ; 4 ; https://www.ijem.in/ ; ; >
     au < doesNotExist ; doesNotExist ; 2001 ; Indian Journal of Endocrinology and Metabolism Volume 5 ; 2001 ; 5 ; http://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Endocrinology and Metabolism Volume 6 ; 2004 ; 6 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Endocrinology and Metabolism Volume 6 ; 2004 ; 6 ; https://www.ijem.in/ ; ; >
     au < doesNotExist ; doesNotExist ; 2003 ; Indian Journal of Endocrinology and Metabolism Volume 7 ; 2003 ; 7 ; http://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 8 ; 2006 ; 8 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 8 ; 2006 ; 8 ; https://www.ijem.in/ ; ; >
     au < doesNotExist ; doesNotExist ; 2005 ; Indian Journal of Endocrinology and Metabolism Volume 9 ; 2005 ; 9 ; http://www.ijem.in/ ; ; >
     au < doesNotExist ; doesNotExist ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 10 ; 2006 ; 10 ; http://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Endocrinology and Metabolism Volume 11 ; 2007 ; 11 ; https://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Endocrinology and Metabolism Volume 12 ; 2008 ; 12 ; https://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Endocrinology and Metabolism Volume 13 ; 2009 ; 13 ; https://www.ijem.in/ ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Endocrinology and Metabolism Volume 14 ; 2010 ; 14 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Endocrinology and Metabolism Volume 11 ; 2007 ; 11 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Endocrinology and Metabolism Volume 12 ; 2008 ; 12 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Endocrinology and Metabolism Volume 13 ; 2009 ; 13 ; https://www.ijem.in/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Endocrinology and Metabolism Volume 14 ; 2010 ; 14 ; https://www.ijem.in/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Endocrinology and Metabolism Volume 15 ; 2011 ; 15 ; http://www.ijem.in/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; Indian Journal of Endocrinology and Metabolism Volume 16 ; 2012 ; 16 ; http://www.ijem.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Indian Journal of Endocrinology and Metabolism Volume 17 ; 2013 ; 17 ; http://www.ijem.in/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Indian Journal of Endocrinology and Metabolism Volume 18 ; 2014 ; 18 ; http://www.ijem.in/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Indian Journal of Endocrinology and Metabolism Volume 19 ; 2015 ; 19 ; http://www.ijem.in/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Endocrinology and Metabolism Volume 20 ; 2016 ; 20 ; http://www.ijem.in/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Endocrinology and Metabolism Volume 20 ; 2016 ; 20 ; http://www.ijem.in/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Endocrinology and Metabolism Volume 21 ; 2017 ; 21 ; http://www.ijem.in/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Endocrinology and Metabolism Volume 22 ; 2018 ; 22 ; http://www.ijem.in/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Endocrinology and Metabolism Volume 22 ; 2018 ; 22 ; http://www.ijem.in/ ; ; >
     au < finished ; crawling ; 2019 ; Indian Journal of Endocrinology and Metabolism Volume 23 ; 2019 ; 23 ; https://www.ijem.in/ ; ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2020 ; Indian Journal of Endocrinology and Metabolism Volume 24 ; 2020 ; 24 ; https://www.ijem.in/ ; ; >
-    au < crawling ; exists ; 2021 ; Indian Journal of Endocrinology and Metabolism Volume 25 ; 2021 ; 25 ; https://www.ijem.in/ ; ; >
+    au < superseded ; exists ; 2021 ; Indian Journal of Endocrinology and Metabolism Volume 25 [superseded] ; 2021 ; 25 ; https://www.ijem.in/ ; ; >
 
   }
 
@@ -1067,9 +1067,8 @@
       issnl = 0971-5851
     >
 #    param[base_url] = http://www.ijmpo.org/
-     #Moved to Thieme
-
     param[journal_issn] = 0971-5851
+     #Moved to Thieme
 
     au < doNotProcess ; exists ; 1994 ; Indian Journal of Medical and Paediatric Oncology Volume 15 ; 1994 ; 15 ; https://www.ijmpo.org/ ; ; >
     au < doNotProcess ; exists ; 1995 ; Indian Journal of Medical and Paediatric Oncology Volume 16 ; 1995 ; 16 ; https://www.ijmpo.org/ ; ; >
@@ -1373,7 +1372,7 @@
     au < manifest ; exists ; 2007 ; Indian Journal of Ophthalmology Volume 55 ; 2007 ; 55 ; https://www.ijo.in/ ; ; >
     au < manifest ; exists ; 2008 ; Indian Journal of Ophthalmology Volume 56 ; 2008 ; 56 ; https://www.ijo.in/ ; ; >
     au < manifest ; exists ; 2009 ; Indian Journal of Ophthalmology Volume 57 ; 2009 ; 57 ; https://www.ijo.in/ ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Ophthalmology Volume 58 ; 2010 ; 58 ; https://www.ijo.in/ ; ; >
+    au < notReady ; exists ; 2010 ; Indian Journal of Ophthalmology Volume 58 ; 2010 ; 58 ; https://www.ijo.in/ ; ; > #no substance
     au < finished ; frozen ; 2011 ; Indian Journal of Ophthalmology Volume 59 ; 2011 ; 59 ; http://www.ijo.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2012 ; Indian Journal of Ophthalmology Volume 60 ; 2012 ; 60 ; http://www.ijo.in/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Indian Journal of Ophthalmology Volume 61 ; 2013 ; 61 ; http://www.ijo.in/ ; ; reingest4.clockss.org:8082 >
@@ -1512,28 +1511,28 @@
       issnl = 0973-1075
    >
 #    param[base_url] = http://www.jpalliativecare.com/
-
     param[journal_issn] = 0973-1075
+    #Moved to Scientific Scholar
 
-    au < manifest ; exists ; 2003 ; Indian Journal of Palliative Care Volume 9 ; 2003 ; 9 ; https://www.jpalliativecare.com/ ; ; >
-    au < manifest ; exists ; 2004 ; Indian Journal of Palliative Care Volume 10 ; 2004 ; 10 ; https://www.jpalliativecare.com/ ; ; >
-    au < manifest ; exists ; 2005 ; Indian Journal of Palliative Care Volume 11 ; 2005 ; 11 ; https://www.jpalliativecare.com/ ; ; >
-    au < manifest ; exists ; 2006 ; Indian Journal of Palliative Care Volume 12 ; 2006 ; 12 ; https://www.jpalliativecare.com/ ; ; >
-    au < manifest ; exists ; 2007 ; Indian Journal of Palliative Care Volume 13 ; 2007 ; 13 ; https://www.jpalliativecare.com/ ; ; >
-    au < manifest ; exists ; 2008 ; Indian Journal of Palliative Care Volume 14 ; 2008 ; 14 ; https://www.jpalliativecare.com/ ; ; >
-    au < manifest ; exists ; 2009 ; Indian Journal of Palliative Care Volume 15 ; 2009 ; 15 ; https://www.jpalliativecare.com/ ; ; >
-    au < manifest ; exists ; 2010 ; Indian Journal of Palliative Care Volume 16 ; 2010 ; 16 ; https://www.jpalliativecare.com/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Indian Journal of Palliative Care Volume 9 ; 2003 ; 9 ; https://www.jpalliativecare.com/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Indian Journal of Palliative Care Volume 10 ; 2004 ; 10 ; https://www.jpalliativecare.com/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Indian Journal of Palliative Care Volume 11 ; 2005 ; 11 ; https://www.jpalliativecare.com/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Indian Journal of Palliative Care Volume 12 ; 2006 ; 12 ; https://www.jpalliativecare.com/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Indian Journal of Palliative Care Volume 13 ; 2007 ; 13 ; https://www.jpalliativecare.com/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Indian Journal of Palliative Care Volume 14 ; 2008 ; 14 ; https://www.jpalliativecare.com/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Indian Journal of Palliative Care Volume 15 ; 2009 ; 15 ; https://www.jpalliativecare.com/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Indian Journal of Palliative Care Volume 16 ; 2010 ; 16 ; https://www.jpalliativecare.com/ ; ; >
     au < finished ; frozen ; 2011 ; Indian Journal of Palliative Care Volume 17 ; 2011 ; 17 ; http://www.jpalliativecare.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Indian Journal of Palliative Care Volume 18 ; 2012 ; 18 ; http://www.jpalliativecare.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Indian Journal of Palliative Care Volume 19 ; 2013 ; 19 ; http://www.jpalliativecare.com/ ; ; >
     au < finished ; frozen ; 2014 ; Indian Journal of Palliative Care Volume 20 ; 2014 ; 20 ; http://www.jpalliativecare.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Indian Journal of Palliative Care Volume 21 ; 2015 ; 21 ; http://www.jpalliativecare.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Indian Journal of Palliative Care Volume 22 ; 2016 ; 22 ; http://www.jpalliativecare.com/ ; ; >
+    au < frozen ; exists ; 2016 ; Indian Journal of Palliative Care Volume 22 ; 2016 ; 22 ; http://www.jpalliativecare.com/ ; ; >
     au < finished ; frozen ; 2017 ; Indian Journal of Palliative Care Volume 23 ; 2017 ; 23 ; http://www.jpalliativecare.com/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Indian Journal of Palliative Care Volume 24 ; 2018 ; 24 ; http://www.jpalliativecare.com/ ; ; >
+    au < frozen ; exists ; 2018 ; Indian Journal of Palliative Care Volume 24 ; 2018 ; 24 ; http://www.jpalliativecare.com/ ; ; >
     au < finished ; crawling ; 2019 ; Indian Journal of Palliative Care Volume 25 ; 2019 ; 25 ; https://www.jpalliativecare.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2020 ; Indian Journal of Palliative Care Volume 26 ; 2020 ; 26 ; https://www.jpalliativecare.com/ ; ; >
-    au < crawling ; exists ; 2021 ; Indian Journal of Palliative Care Volume 27 ; 2021 ; 27 ; https://www.jpalliativecare.com/ ; ; >
+    au < frozen ; exists ; 2020 ; Indian Journal of Palliative Care Volume 26 ; 2020 ; 26 ; https://www.jpalliativecare.com/ ; ; >
+    au < superseded ; exists ; 2021 ; Indian Journal of Palliative Care Volume 27 [superseded] ; 2021 ; 27 ; https://www.jpalliativecare.com/ ; ; >
 
   }
 
@@ -2352,9 +2351,8 @@
       issnl = 0970-9185
    >
     #param[base_url] = http://www.joacp.org/
-    #Moved to Wolters Kluwer
-
     param[journal_issn] = 0970-9185
+    #Moved to Wolters Kluwer
 
     au < doNotProcess ; exists ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 ; https://www.joacp.org/ ; ; >
     au < doNotProcess ; exists ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 ; https://www.joacp.org/ ; ; >
@@ -2473,7 +2471,7 @@
     au < notReady ; exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ ; ; >
+    au < frozen ; exists ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ ; ; >
@@ -2858,9 +2856,8 @@
       issnl = 0975-1475
     >
 #    param[base_url] = http://www.jfds.org/
-    #Moved to OJS
-
     param[journal_issn] = 0975-1475
+    #Moved to OJS
 
     au < doNotProcess ; exists ; 2009 ; Journal of Forensic Dental Sciences Volume 1 ; 2009 ; 1 ; https://www.jfds.org/ ; ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Forensic Dental Sciences Volume 2 ; 2010 ; 2 ; https://www.jfds.org/ ; ; >
@@ -5236,7 +5233,6 @@
       au < frozen ; exists ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ ; ; >
       au < doNotProcess ; exists ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
       au < superseded ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 [superseded] ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
-      au < doNotProcess ; exists ; 2021 ; Clinical Trials in Orthopedic Disorders Volume 6 ; 2021 ; 6 ; https://www.clinicalto.com/ ; ; >
 
   }
 
@@ -6986,6 +6982,7 @@
       param[journal_issn] = 2394-2916
 #      param[base_url] = http://www.journal-ina.com/
       #home page 500 error. See https://www.journal-ina.com/backissues.asp, http://www.journal-ina.com/lockss.txt
+      #Content at https://www.journal-ina.com/browse.asp
 
       au < finished ; finished ; 2014 ; Journal of Integrative Nephrology and Andrology Volume 1 ; 2014 ; 1 ; http://www.journal-ina.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Journal of Integrative Nephrology and Andrology Volume 2 ; 2015 ; 2 ; http://www.journal-ina.com/ ; ; reingest5.clockss.org:8082 >
@@ -9003,7 +9000,6 @@
       au < frozen ; exists ; 2018 ; Arab Journal of Interventional Radiology Volume 2 ; 2018 ; 2 ; http://www.arabjir.com/ ; ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Arab Journal of Interventional Radiology Volume 3 ; 2019 ; 3 ; https://www.arabjir.com/ ; ; >
       au < frozen ; exists ; 2020 ; Arab Journal of Interventional Radiology Volume 4 ; 2020 ; 4 ; https://www.arabjir.com/ ; ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; Arab Journal of Interventional Radiology Volume 5 ; 2021 ; 5 ; https://www.arabjir.com/ ; ; >
 
   }
 
@@ -9668,11 +9664,11 @@
       au < manifest ; exists ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ ; ; >
       au < manifest ; exists ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ ; ; >
       au < manifest ; exists ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ ; ; >
-      au < manifest ; exists ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ ; ; >
-      au < manifest ; exists ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ ; ; >
-      au < manifest ; exists ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ ; ; >
-      au < manifest ; exists ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ ; ; >
-      au < manifest ; exists ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ ; ; >
+      au < notReady ; exists ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ ; ; > #500
+      au < notReady ; exists ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ ; ; > #500
+      au < notReady ; exists ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ ; ; > #500
+      au < notReady ; exists ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ ; ; > #500
+      au < notReady ; exists ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ ; ; > #500 error https://www.ijfans.org/article.asp?issn=2319-1775;year=2019;volume=8;issue=4;spage=1;epage=6;aulast=Ugale;type=2
       au < manifest ; exists ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ ; ; >
       au < manifest ; exists ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ ; ; >
       #deactivated
