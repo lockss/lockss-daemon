@@ -5555,8 +5555,8 @@
     au < crawling ; exists ; 2009 ; International Journal of Retail & Distribution Management Volume 37 ; 37 ; >
     au < crawling ; exists ; 2010 ; International Journal of Retail & Distribution Management Volume 38 ; 38 ; >
     au < frozen ; exists ; 2011 ; International Journal of Retail & Distribution Management Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Retail & Distribution Management Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Retail & Distribution Management Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Retail & Distribution Management Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Retail & Distribution Management Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Retail & Distribution Management Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Retail & Distribution Management Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Retail & Distribution Management Volume 44 ; 44 ; >
@@ -5650,8 +5650,8 @@
     au < crawling ; exists ; 2009 ; International Journal of Social Economics Volume 36 ; 36 ; >
     au < crawling ; exists ; 2010 ; International Journal of Social Economics Volume 37 ; 37 ; >
     au < crawling ; exists ; 2011 ; International Journal of Social Economics Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Social Economics Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Social Economics Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Social Economics Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Social Economics Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Social Economics Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Social Economics Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Social Economics Volume 43 ; 43 ; >
@@ -5704,9 +5704,9 @@
     au < ready ; exists ; 2008 ; International Journal of Sociology and Social Policy Volume 28 ; 28 ; >
     au < crawling ; exists ; 2009 ; International Journal of Sociology and Social Policy Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sociology and Social Policy Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Sociology and Social Policy Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Sociology and Social Policy Volume 31 ; 31 ; >
     au < crawling ; exists ; 2012 ; International Journal of Sociology and Social Policy Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Sociology and Social Policy Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Sociology and Social Policy Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Sociology and Social Policy Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Sociology and Social Policy Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Sociology and Social Policy Volume 36 ; 36 ; >
@@ -5730,8 +5730,8 @@
     comment[journal_id] = ijsi
 
     au < crawling ; exists ; 2010 ; International Journal of Structural Integrity Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Structural Integrity Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Structural Integrity Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Structural Integrity Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Structural Integrity Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Structural Integrity Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Structural Integrity Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Structural Integrity Volume 6 ; 6 ; >
@@ -5805,7 +5805,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Web Information Systems Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Web Information Systems Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Web Information Systems Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2019 ; International Journal of Web Information Systems Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2019 ; International Journal of Web Information Systems Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; International Journal of Web Information Systems Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; International Journal of Web Information Systems Volume 17 ; 17 ; >
 
