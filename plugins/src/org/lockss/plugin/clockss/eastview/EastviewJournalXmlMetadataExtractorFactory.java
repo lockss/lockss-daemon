@@ -184,8 +184,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         // eastview_journal_2021_02/DA-NN/NEW/1993/09/004_30/12375018_new_19930901_000_001.xml: <TITLE>01-09-1993(NEW-No.004 Vol.033) In This Issue</TITLE>
         // eastview_journal_2021_02/DA-VI/ISM/1932/06/003_30/193203im002.xml: <TITLE>30-06-1932(ISM-No. 003(025)) something!</TITLE>
         // eastview_journal_2021_02/DA-VI/ISM/1932/06/003_30/193203im060.xml<TITLE>30-06-1932(ISM-No. 003(025)) something (1874 - 1932) </TITLE>
-        Pattern pattern = Pattern.compile("(\\d\\d-\\d\\d-\\d{2,4})\\s*\\(([^)]+)-([^(]+)\\)\\s*(.*)");
-        //better one: (\d\d-\d\d-\d{2,4})\s*\((.*)\s*\-\s*(.*)\)\s*(.*)
+        Pattern pattern = Pattern.compile("(\\d\\d-\\d\\d-\\d{2,4})\\s*\\(([^-]*)\\s*\\-\\s*((?:\\([^)]*\\)|[^()])*)\\)\\s*(.*)");
 
         Matcher m = pattern.matcher(raw_title);
 
