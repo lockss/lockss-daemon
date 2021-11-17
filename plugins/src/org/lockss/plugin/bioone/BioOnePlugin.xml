@@ -63,11 +63,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"BioOne Plugin (retired Allen Press site), Base URL %s, Journal ID %s, Volume %d", base_url, journal_id, volume</string>
+    <string>"BioOne Journals Plugin (retired Allen Press site), Base URL %s, Journal ID %s, Volume %d", base_url, journal_id, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioOne Plugin (retired Allen Press site)</string>
+    <string>BioOne Journals Plugin (retired Allen Press site)</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
