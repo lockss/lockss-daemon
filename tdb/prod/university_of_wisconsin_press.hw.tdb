@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = University of Wisconsin Press
+    name = University of Wisconsin Press ;
+    info[platform] = Moving to HW JCore in 2022.
   >
  
   {
@@ -12,8 +13,6 @@
       eissn = 1553-4448 ;
       issnl = 0065-955X
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aoj.uwpress.org/
@@ -38,8 +37,6 @@
       au < released ; 2016 ; American Orthoptic Journal Volume 66 ; 66 >
       au < released ; 2017 ; American Orthoptic Journal Volume 67 ; 67 >
 
-    }
-
   }
 
   {
@@ -50,8 +47,6 @@
       eissn = 1933-8139 ;
       issnl = 0066-6939
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aa.uwpress.org/
@@ -77,46 +72,6 @@
       au < released ; 2019 ; Arctic Anthropology Volume 56 ; 56 >
       au < released ; 2020 ; Arctic Anthropology Volume 57 ; 57 >
       au < expected ; 2021 ; Arctic Anthropology Volume 58 ; 58 >
-
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = arctic_anthropology
-      attr[journal_id] = arc
-      implicit < status ; year ; name ; param[volume] >
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2003 ; Arctic Anthropology Volume 40 [Project MUSE] ; 40 >
-        au < down ; 2004 ; Arctic Anthropology Volume 41 [Project MUSE] ; 41 >
-        au < down ; 2005 ; Arctic Anthropology Volume 42 [Project MUSE] ; 42 >
-        au < down ; 2006 ; Arctic Anthropology Volume 43 [Project MUSE] ; 43 >
-        au < down ; 2007 ; Arctic Anthropology Volume 44 [Project MUSE] ; 44 >
-        au < down ; 2008 ; Arctic Anthropology Volume 45 [Project MUSE] ; 45 >
-        au < down ; 2009 ; Arctic Anthropology Volume 46 [Project MUSE] ; 46 >
-        au < down ; 2010 ; Arctic Anthropology Volume 47 [Project MUSE] ; 47 >
-        au < down ; 2011 ; Arctic Anthropology Volume 48 [Project MUSE] ; 48 >
-        au < down ; 2012 ; Arctic Anthropology Volume 49 [Project MUSE] ; 49 >
-        au < down ; 2013 ; Arctic Anthropology Volume 50 [Project MUSE] ; 50 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Arctic Anthropology Volume 51 [Project MUSE] ; 51 >
-        au < down ; 2015 ; Arctic Anthropology Volume 52 [Project MUSE] ; 52 >
-        au < doNotProcess ; 2016 ; Arctic Anthropology Volume 53 [Project MUSE] ; 53 >
-
-      }
-
-
-    }
     
   }
 
@@ -128,8 +83,6 @@
       eissn = 1548-9949 ;
       issnl = 0010-7484
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://cl.uwpress.org/
@@ -155,44 +108,6 @@
       au < released ; 2020 ; Contemporary Literature Volume 61 ; 61 >
       au < expected ; 2021 ; Contemporary Literature Volume 62 ; 62 >
 
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = contemporary_literature
-      attr[journal_id] = cli
-      implicit < status ; year ; name ; param[volume] >
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2004 ; Contemporary Literature Volume 45 [Project MUSE] ; 45 >
-        au < down ; 2005 ; Contemporary Literature Volume 46 [Project MUSE] ; 46 >
-        au < down ; 2006 ; Contemporary Literature Volume 47 [Project MUSE] ; 47 >
-        au < down ; 2007 ; Contemporary Literature Volume 48 [Project MUSE] ; 48 >
-        au < down ; 2008 ; Contemporary Literature Volume 49 [Project MUSE] ; 49 >
-        au < down ; 2009 ; Contemporary Literature Volume 50 [Project MUSE] ; 50 >
-        au < down ; 2010 ; Contemporary Literature Volume 51 [Project MUSE] ; 51 >
-        au < down ; 2011 ; Contemporary Literature Volume 52 [Project MUSE] ; 52 >
-        au < down ; 2012 ; Contemporary Literature Volume 53 [Project MUSE] ; 53 >
-        au < down ; 2013 ; Contemporary Literature Volume 54 [Project MUSE] ; 54 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Contemporary Literature Volume 55 [Project MUSE] ; 55 >
-        au < down ; 2015 ; Contemporary Literature Volume 56 [Project MUSE] ; 56 >
-        au < doNotProcess ; 2016 ; Contemporary Literature Volume 57 [Project MUSE] ; 57 >
-
-      }
-
-    }
-
   }
 
   {
@@ -203,8 +118,6 @@
       eissn = 1543-4079 ;
       issnl = 1543-4060
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://er.uwpress.org/
@@ -250,64 +163,6 @@
       au < released ; 2020 ; Ecological Restoration Volume 38 ; 38 >
       au < manifest ; 2021 ; Ecological Restoration Volume 39 ; 39 >
 
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = ecological_restoration
-      attr[journal_id] = ecr
-      implicit < status ; year ; name ; param[volume] >
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2010 ; Ecological Restoration Volume 28 [Project MUSE] ; 28 >
-        au < down ; 2011 ; Ecological Restoration Volume 29 [Project MUSE] ; 29 >
-        au < down ; 2012 ; Ecological Restoration Volume 30 [Project MUSE] ; 30 >
-        au < down ; 2013 ; Ecological Restoration Volume 31 [Project MUSE] ; 31 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Ecological Restoration Volume 32 [Project MUSE] ; 32 >
-        au < down ; 2015 ; Ecological Restoration Volume 33 [Project MUSE] ; 33 >
-        au < doNotProcess ; 2016 ; Ecological Restoration Volume 34 [Project MUSE] ; 34 >
-
-      }
-
-    }
-
-  }
-
-  {
- 
-    title <
-      name = Ghana Studies ;
-      issn = 1536-5514 ;
-      eissn = 2333-7168 ;
-      issnl = 1536-5514
-    >
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = ghana_studies
-      attr[journal_id] = ghs
-      implicit < status ; year ; name ; param[volume] >
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Ghana Studies Volume 17 ; 17 >
-        au < down ; 2015 ; Ghana Studies Volume 18 ; 18 >
-        au < doNotProcess ; 2016 ; Ghana Studies Volume 19 ; 19 >
-
-      }
-
   }
 
   {
@@ -318,8 +173,6 @@
       eissn = 1548-8004 ;
       issnl = 0022-166X
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jhr.uwpress.org/
@@ -345,47 +198,6 @@
       au < released ; 2020 ; The Journal of Human Resources Volume 55 ; 55 >
       au < manifest ; 2021 ; The Journal of Human Resources Volume 56 ; 56 >
 
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = journal_of_human_resources
-      attr[journal_id] = jhr
-      implicit < status ; year ; name ; param[volume] >
-         
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2008 ; The Journal of Human Resources Volume 43 [Project MUSE] ; 43 >
-        au < down ; 2009 ; The Journal of Human Resources Volume 44 [Project MUSE] ; 44 >
-        au < doNotProcess ; 2010 ; The Journal of Human Resources Volume 45 [Project MUSE] ; 45 >
-        au < doNotProcess ; 2011 ; The Journal of Human Resources Volume 46 [Project MUSE] ; 46 >
-
-      }
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2012 ; The Journal of Human Resources Volume 47 [Project MUSE] ; 47 >
-        au < down ; 2013 ; The Journal of Human Resources Volume 48 [Project MUSE] ; 48 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; The Journal of Human Resources Volume 49 [Project MUSE] ; 49 >
-        au < down ; 2015 ; The Journal of Human Resources Volume 50 [Project MUSE] ; 50 >
-        au < doNotProcess ; 2016 ; The Journal of Human Resources Volume 51 [Project MUSE] ; 51 >
-
-      }
-
-    }
-
   }
 
   {
@@ -396,8 +208,6 @@
       eissn = 1543-8325 ;
       issnl = 0023-7639
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://le.uwpress.org/
@@ -425,40 +235,6 @@
       au < released ; 2020 ; Land Economics Volume 96 ; 96 >
       au < manifest ; 2021 ; Land Economics Volume 97 ; 97 >
 
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = land_economics
-      attr[journal_id] = lde
-      implicit < status ; year ; name ; param[volume] >
-      
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2008 ; Land Economics Volume 84 [Project MUSE] ; 84 >
-        au < down ; 2009 ; Land Economics Volume 85 [Project MUSE] ; 85 >
-        au < down ; 2010 ; Land Economics Volume 86 [Project MUSE] ; 86 >
-        au < down ; 2011 ; Land Economics Volume 87 [Project MUSE] ; 87 >
-        au < down ; 2012 ; Land Economics Volume 88 [Project MUSE] ; 88 >
-        au < down ; 2013 ; Land Economics Volume 89 [Project MUSE] ; 89 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Land Economics Volume 90 [Project MUSE] ; 90 >
-        au < down ; 2015 ; Land Economics Volume 91 [Project MUSE] ; 91 >
-        au < doNotProcess ; 2016 ; Land Economics Volume 92 [Project MUSE] ; 92 >
-
-      }
-
-    }
-
   }
 
   {
@@ -469,8 +245,6 @@
       eissn = 1553-2704 ;
       issnl = 0277-2426
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://lj.uwpress.org/
@@ -517,37 +291,6 @@
       au < released ; 2020 ; Landscape Journal: design, planning, and management of the land Volume 39 ; 39 >
       au < manifest ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 >
 
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = landscape_journal
-      attr[journal_id] = lnd
-      implicit < status ; year ; name ; param[volume] >
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2011 ; Landscape Journal: design, planning, and management of the land Volume 30 [Project MUSE] ; 30 >
-        au < down ; 2012 ; Landscape Journal: design, planning, and management of the land Volume 31 [Project MUSE] ; 31 >
-        au < down ; 2013 ; Landscape Journal: design, planning, and management of the land Volume 32 [Project MUSE] ; 32 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Landscape Journal: design, planning, and management of the land Volume 33 [Project MUSE] ; 33 >
-        au < down ; 2015 ; Landscape Journal: design, planning, and management of the land Volume 34 [Project MUSE] ; 34 >
-        au < doNotProcess ; 2016 ; Landscape Journal: design, planning, and management of the land Volume 35 [Project MUSE] ; 35 >
-
-      }
-
-    }
-
   }
 
   {
@@ -558,8 +301,6 @@
       eissn = 1548-9957 ;
       issnl = 0024-7413
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://lbr.uwpress.org/
@@ -587,44 +328,6 @@
       au < released ; 2020 ; Luso-Brazilian Review Volume 57 ; 57 >
       au < manifest ; 2021 ; Luso-Brazilian Review Volume 58 ; 58 >
 
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = luso-brazilian_review
-      attr[journal_id] = lbr
-      implicit < status ; year ; name ; param[volume] >
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2004 ; Luso-Brazilian Review Volume 41 [Project MUSE] ; 41 >
-        au < down ; 2005 ; Luso-Brazilian Review Volume 42 [Project MUSE] ; 42 >
-        au < down ; 2006 ; Luso-Brazilian Review Volume 43 [Project MUSE] ; 43 >
-        au < down ; 2007 ; Luso-Brazilian Review Volume 44 [Project MUSE] ; 44 >
-        au < down ; 2008 ; Luso-Brazilian Review Volume 45 [Project MUSE] ; 45 >
-        au < down ; 2009 ; Luso-Brazilian Review Volume 46 [Project MUSE] ; 46 >
-        au < down ; 2010 ; Luso-Brazilian Review Volume 47 [Project MUSE] ; 47 >
-        au < down ; 2011 ; Luso-Brazilian Review Volume 48 [Project MUSE] ; 48 >
-        au < down ; 2012 ; Luso-Brazilian Review Volume 49 [Project MUSE] ; 49 >
-        au < down ; 2013 ; Luso-Brazilian Review Volume 50 [Project MUSE] ; 50 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Luso-Brazilian Review Volume 51 [Project MUSE] ; 51 >
-        au < down ; 2015 ; Luso-Brazilian Review Volume 52 [Project MUSE] ; 52 >
-        au < doNotProcess ; 2016 ; Luso-Brazilian Review Volume 53 [Project MUSE] ; 53 >
-
-      }
-
-    }
-
   }
 
   {
@@ -635,8 +338,6 @@
       eissn = 1934-2810 ;
       issnl = 0026-9271
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://mon.uwpress.org/
@@ -662,41 +363,6 @@
       au < released ; 2020 ; Monatshefte Volume 112 ; 112 >
       au < manifest ; 2021 ; Monatshefte Volume 113 ; 113 >
 
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = monatshefte
-      attr[journal_id] = mon
-      implicit < status ; year ; name ; param[volume] >
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2007 ; Monatshefte Volume 99 [Project MUSE] ; 99 >
-        au < down ; 2008 ; Monatshefte Volume 100 [Project MUSE] ; 100 >
-        au < down ; 2009 ; Monatshefte Volume 101 [Project MUSE] ; 101 >
-        au < down ; 2010 ; Monatshefte Volume 102 [Project MUSE] ; 102 >
-        au < down ; 2011 ; Monatshefte Volume 103 [Project MUSE] ; 103 >
-        au < down ; 2012 ; Monatshefte Volume 104 [Project MUSE] ; 104 >
-        au < down ; 2013 ; Monatshefte Volume 105 [Project MUSE] ; 105 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Monatshefte Volume 106 [Project MUSE] ; 106 >
-        au < down ; 2015 ; Monatshefte Volume 107 [Project MUSE] ; 107 >
-        au < doNotProcess ; 2016 ; Monatshefte Volume 108 [Project MUSE] ; 108 >
-
-      }
-
-    }
-
   }
 
   {
@@ -706,8 +372,6 @@
       issn = 1522-8339 ;
       eissn = 1548-4785 
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://npj.uwpress.org/
@@ -737,45 +401,7 @@
       au < released ; 2020 ; Native Plants Journal Volume 21 ; 21 >
     
       au < manifest ; 2021 ; Native Plants Journal Volume 22 ; 22 >
-    }
     
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = native_plants_journal
-      attr[journal_id] = npj
-      implicit < status ; year ; name ; param[volume] >
-      # vols. 5-11 released under U of Illinois Press (also Project Muse)
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 2004 ; Native Plants Journal Volume 5 [Project MUSE] ; 5 >
-        au < down ; 2005 ; Native Plants Journal Volume 6 [Project MUSE] ; 6 >
-        au < down ; 2006 ; Native Plants Journal Volume 7 [Project MUSE] ; 7 >
-        au < down ; 2007 ; Native Plants Journal Volume 8 [Project MUSE] ; 8 >
-        au < down ; 2008 ; Native Plants Journal Volume 9 [Project MUSE] ; 9 >
-        au < down ; 2009 ; Native Plants Journal Volume 10 [Project MUSE] ; 10 >
-        au < down ; 2010 ; Native Plants Journal Volume 11 [Project MUSE] ; 11 >
-        au < down ; 2011 ; Native Plants Journal Volume 12 [Project MUSE] ; 12 >
-        au < down ; 2012 ; Native Plants Journal Volume 13 [Project MUSE] ; 13 >
-        au < down ; 2013 ; Native Plants Journal Volume 14 [Project MUSE] ; 14 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; Native Plants Journal Volume 15 [Project MUSE] ; 15 >
-        au < down ; 2015 ; Native Plants Journal Volume 16 [Project MUSE] ; 16 >
-        au < doNotProcess ; 2016 ; Native Plants Journal Volume 17 [Project MUSE] ; 17 >
-
-      }
-
-    }
-
   }
 
   {
@@ -786,8 +412,6 @@
       eissn = 0049-2426 ;
       issnl = 0049-2426
     >
-
-    {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://sub.uwpress.org/
@@ -812,49 +436,6 @@
       au < exists ; 2019 ; SubStance Volume 48 ; 48 >
       au < exists ; 2020 ; SubStance Volume 49 ; 49 >
       au < expected ; 2021 ; SubStance Volume 50 ; 50 >
-
-    }
-
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[journal_dir] = substance
-      attr[journal_id] = sub
-      implicit < status ; year ; name ; param[volume] >
-
-      {
-
-        param[base_url] = http://muse.jhu.edu/
-
-        au < down ; 1999 ; SubStance Volume 28 [Project MUSE] ; 28 >
-        au < down ; 2000 ; SubStance Volume 29 [Project MUSE] ; 29 >
-        au < down ; 2001 ; SubStance Volume 30 [Project MUSE] ; 30 >
-        au < down ; 2002 ; SubStance Volume 31 [Project MUSE] ; 31 >
-        au < down ; 2003 ; SubStance Volume 32 [Project MUSE] ; 32 >
-        au < down ; 2004 ; SubStance Volume 33 [Project MUSE] ; 33 >
-        au < down ; 2005 ; SubStance Volume 34 [Project MUSE] ; 34 >
-        au < down ; 2006 ; SubStance Volume 35 [Project MUSE] ; 35 >
-        au < down ; 2007 ; SubStance Volume 36 [Project MUSE] ; 36 >
-        au < down ; 2008 ; SubStance Volume 37 [Project MUSE] ; 37 >
-        au < down ; 2009 ; SubStance Volume 38 [Project MUSE] ; 38 >
-        au < down ; 2010 ; SubStance Volume 39 [Project MUSE] ; 39 >
-        au < down ; 2011 ; SubStance Volume 40 [Project MUSE] ; 40 >
-        au < down ; 2012 ; SubStance Volume 41 [Project MUSE] ; 41 >
-        au < down ; 2013 ; SubStance Volume 42 [Project MUSE] ; 42 >
-
-      }
-
-      {
-
-        param[base_url] = https://muse.jhu.edu/
-
-        au < down ; 2014 ; SubStance Volume 43 [Project MUSE] ; 43 >
-        au < down ; 2015 ; SubStance Volume 44 [Project MUSE] ; 44 >
-        au < doNotProcess ; 2016 ; SubStance Volume 45 [Project MUSE] ; 45 >
-
-      }
-
-    }
 
   }
 
