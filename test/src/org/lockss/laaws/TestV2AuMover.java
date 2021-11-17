@@ -37,11 +37,18 @@ public class TestV2AuMover extends LockssTestCase {
   private String aPluginRegex="(aplugin)";
   private String bPluginRegex="(bplugin)";
   private String cPluginRegex="(cplugin)";
-
+  private static int HEADER_LENGTH=4;
   String[] reportLines = {
     "Au:au1  urlsMoved: 10  artifactsMoved: 10  bytesMoved: 1000  errors: 0  totalRuntime: 0 secs.",
+    "",
     "Au:au2  urlsMoved: 20  artifactsMoved: 33  bytesMoved: 3000  errors: 1  totalRuntime: 1 secs.",
+    "cu2 Attempt to move artifact failed.",
+    "",
     "Au:au3  urlsMoved: 100  artifactsMoved: 150  bytesMoved: 10000  errors: 3  totalRuntime: 2 secs.",
+    "cu1: Attempt to move artifact failed.",
+    "cu5: Attempt to commit artifact failed.",
+    "cu80: Attempt to commit artifact failed.",
+    "",
     "AusMoved: 3  urlsMoved: 130  artifactsMoved: 193  bytesMoved: 14000  errors: 4  totalRuntime: 3 secs."
   };
 
@@ -108,11 +115,17 @@ public class TestV2AuMover extends LockssTestCase {
     numErrors=0;
     numBytes=0;
     auMover.setCurrentAu("au1");
-    addAu("au1", 10,10,1000, 300, 0);
+    List<String> errs = new ArrayList<>();
+    addAu("au1", 10,10,1000, 300, 0, errs);
     auMover.updateReport();
-    addAu("au2", 20,33, 3000, 1000,1);
+    errs.add("cu2 Attempt to move artifact failed.");
+    addAu("au2", 20,33, 3000, 1000,1, errs);
     auMover.updateReport();
-    addAu("au3",100,150,10000,2000, 3);
+    errs.clear();
+    errs.add("cu1: Attempt to move artifact failed.");
+    errs.add("cu5: Attempt to commit artifact failed.");
+    errs.add("cu80: Attempt to commit artifact failed.");
+    addAu("au3",100,150,10000,2000, 3, errs);
     auMover.updateReport();
     auMover.closeReport();
     Path myPath = Paths.get(auMover.getReportFileName());
@@ -122,10 +135,10 @@ public class TestV2AuMover extends LockssTestCase {
     } catch (IOException ioe) {
       fail("IOException thrown",ioe);
     }
-    assertEquals(7,lines.size());
+    assertEquals(reportLines.length + HEADER_LENGTH, lines.size());
     // we're only checking the report lines.
-    for(int i=0; i < 4; i++) {
-      assertEquals(reportLines[i],lines.get(i+3));
+    for(int i=0; i < reportLines.length; i++) {
+      assertEquals(reportLines[i],lines.get(i+HEADER_LENGTH));
     }
 
   }
@@ -177,7 +190,7 @@ public class TestV2AuMover extends LockssTestCase {
     assertDoesNotContain(movedAus,aus.get(5).getAuId());
   }
 
-  private void addAu(String auName, long urls, long artifacts, long bytes, long runTime, long errors){
+  private void addAu(String auName, long urls, long artifacts, long bytes, long runTime, long errors,List<String> errs){
     numAus++;
     numUrls+=urls;
     numArtifacts+=artifacts;
@@ -185,7 +198,7 @@ public class TestV2AuMover extends LockssTestCase {
     totTime+=runTime;
     numErrors+=errors;
     auMover.setCurrentAu(auName);
-    auMover.setAuCounters(urls, artifacts, bytes, runTime, errors);
+    auMover.setAuCounters(urls, artifacts, bytes, runTime, errors,errs);
     auMover.setTotalCounters(numAus, numUrls, numArtifacts, numBytes,totTime, numErrors);
 
   }

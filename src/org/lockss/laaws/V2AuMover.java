@@ -106,7 +106,6 @@ public class V2AuMover {
   public static final String PARAM_REPORT_FILE= PREFIX + "report.file";
   public static final String DEFAULT_REPORT_FILE = "v2migration.txt";
   private static final Logger log = Logger.getLogger(V2AuMover.class);
-  private static final List<String> errorList = new ArrayList<>();
   // The format of a date as required by the export output file name.
   private static final SimpleDateFormat dateFormat = new SimpleDateFormat(
     "yyyy-MM-dd-HH-mm-ss");
@@ -206,6 +205,7 @@ public class V2AuMover {
   private long totalBytesMoved = 0;
   private long totalRunTime = 0;
   private long totalErrorCount = 0;
+  private List<String> errorList = new ArrayList<>();
 
   // Counters for a single au
   private long auUrlsMoved =0;
@@ -213,6 +213,7 @@ public class V2AuMover {
   private long auBytesMoved=0;
   private long auRunTime=0;
   private long auErrorCount=0;
+  private List<String> auErrors= new ArrayList<>();
 
 
   public V2AuMover() {
@@ -408,6 +409,7 @@ public class V2AuMover {
       reportWriter.println("--------------------------------------------------");
       reportWriter.println("  V2 Au Migration Report - "+ DateFormatter.now());
       reportWriter.println("--------------------------------------------------");
+      reportWriter.println();
       if(reportWriter.checkError()) {
         log.warning("Error writing report file.");
       }
@@ -427,11 +429,18 @@ public class V2AuMover {
       "  totalRuntime: " + auRunTime / 1000 + " secs.";
     if(reportWriter != null) {
       reportWriter.println(auData);
+      for(String err : auErrors) {
+        reportWriter.println(err);
+      }
+      reportWriter.println();
       if(reportWriter.checkError()) {
         log.warning("Error writing report file.");
       }
     }
     log.info(auData);
+    for(String err : auErrors) {
+      log.error(err);
+    }
   }
 
   void closeReport() {
@@ -461,6 +470,7 @@ public class V2AuMover {
       auUrlsMoved =0;
       auArtifactsMoved =0;
       auErrorCount=0;
+      auErrors.clear();
       auRunTime=0;
       moveAu(au);
     }
@@ -501,8 +511,10 @@ public class V2AuMover {
       // add our totals then move to the next au.
       moveNextAu();
     } catch (ApiException apie) {
-      errorList.add(auName + ": Attempt to move Au failed:" + apie.getCode() + ": "
-        + apie.getMessage());
+      String err=auName + ": Attempt to move Au failed:" + apie.getCode() + ": "
+        + apie.getMessage();
+      auErrors.add(err);
+      errorList.add(err);
       auErrorCount++;
     }
     totalErrorCount+=auErrorCount;
@@ -554,13 +566,14 @@ public class V2AuMover {
 /* ------------------
   testing getters & setters
  */
-  void setAuCounters(long urls, long artifacts, long bytes, long runTime, long errors)
+  void setAuCounters(long urls, long artifacts, long bytes, long runTime, long errors, List<String>errs)
   {
     auUrlsMoved = urls;
     auArtifactsMoved = artifacts;
     auBytesMoved = bytes;
     auRunTime= runTime;
     auErrorCount = errors;
+    auErrors=errs;
   }
 
   void setTotalCounters(long aus, long urls, long artifacts, long bytes, long runTime, long errors)
@@ -639,8 +652,10 @@ public class V2AuMover {
       log.debug2("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
       createArtifact(auid, uri, collectionDate, cu, collection,cuQueue);
     } catch (ApiException apie) {
-      errorList.add(uri + ": failed to create version: " + cu.getVersion() + ": " +
-        apie.getCode() + " - " + apie.getMessage());
+      String err=uri + ": failed to create version: " + cu.getVersion() + ": " +
+        apie.getCode() + " - " + apie.getMessage();
+      errorList.add(err);
+      auErrors.add(err);
       auErrorCount++;
     } finally {
       AuUtil.safeRelease(cu);
@@ -712,8 +727,10 @@ public class V2AuMover {
         cfgAusApiClient.putAuConfig(au.getAuId(), v2config);
         log.info(auName + ": Successfully moved AU Configuration.");
       } catch (ApiException apie) {
-        errorList.add(auName + ": Attempt to move au configuration failed: " + apie.getCode() +
-          "- " + apie.getMessage());
+        String err = auName + ": Attempt to move au configuration failed: " + apie.getCode() +
+          "- " + apie.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
         auErrorCount++;
       }
     } else {
@@ -734,8 +751,10 @@ public class V2AuMover {
         cfgAusApiClient.patchAuState(au.getAuId(), v2State.toMap(), makeCookie());
         log.info(auName + ": Successfully moved AU State.");
       } catch (ApiException apie) {
-        errorList.add(auName + ": Attempt to move au state failed: " + apie.getCode() +
-          "- " + apie.getMessage());
+        String err = auName + ": Attempt to move au state failed: " + apie.getCode() +
+          "- " + apie.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
         auErrorCount++;
       }
     }
@@ -768,7 +787,9 @@ public class V2AuMover {
     @Override
     public void onFailure(ApiException e, int statusCode,
       Map<String, List<String>> responseHeaders) {
-      errorList.add("Create Artifact request failed: " + statusCode + " - " + e.getMessage());
+      String err = "Create Artifact request failed: " + statusCode + " - " + e.getMessage();
+      errorList.add(err);
+      auErrors.add(err);
       auErrorCount++;
     }
 
@@ -781,7 +802,9 @@ public class V2AuMover {
         if(cuQueue.peek() != null)
           moveNextCuVersion(auId, uri, cuQueue);
       } catch (ApiException e) {
-        errorList.add("Attempt to commit artifact failed: " + e.getCode() + " - " + e.getMessage());
+        String err = "Attempt to commit artifact failed: " + e.getCode() + " - " + e.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
         auErrorCount++;
       }
     }
