@@ -3,7 +3,7 @@
   publisher <
     name = Genetics Society of America ;
     info[contract] = 2019 ; 
-    info[back] = 2010 ; 
+    info[back] = 2009 ; 
     info[tester] = 5 ;
     info[poller] = 5
   >
@@ -19,7 +19,7 @@
     >
 
     param[base_url] = https://www.g3journal.org/
-    #move to OUP
+    #moving to OUP end of 2020. Still present on HW platform.
 
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
@@ -31,7 +31,6 @@
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2018 ; G3: Genes, Genomes, Genetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; finished ; crawling ; 2019 ; G3: Genes, Genomes, Genetics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; deepCrawl ; exists ; 2020 ; G3: Genes, Genomes, Genetics Volume 10 ; 10 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; >
 
   }
     
@@ -45,7 +44,7 @@
      >
 
     param[base_url] = https://www.genetics.org/
-    #move to OUP
+    #moving to OUP end of 2020. Still present on HW platform.
 
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1916 ; Genetics Volume 1 ; 1 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; manifest ; exists ; 1917 ; Genetics Volume 2 ; 2 ; >
@@ -263,9 +262,6 @@
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; deepCrawl ; exists ; 2020 ; Genetics Volume 214 ; 214 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; deepCrawl ; exists ; 2020 ; Genetics Volume 215 ; 215 ; >
     au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; frozen ; exists ; 2020 ; Genetics Volume 216 ; 216 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2021 ; Genetics Volume 217 ; 217 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2021 ; Genetics Volume 218 ; 218 ; >
-    au < gensoc.ClockssGeneticsSocietyDrupalPlugin ; expected ; exists ; 2021 ; Genetics Volume 219 ; 219 ; >
 
   }
 

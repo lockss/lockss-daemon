@@ -6700,7 +6700,7 @@
     >
 
     param[journal_id] = g3journal
-    #2011 volume 1 to 2020 volume 10 had been processed in Genetics Society of America
+    #2011 V1 to 2020 V10 had been processed in Genetics Society of America
 
     au < manifest ; exists ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; >
 
@@ -6716,10 +6716,12 @@
     >
 
     param[journal_id] = genetics
-    #1916 volume 1 to 2009 volume 183 had NOT processed in Genetics Society of America
-    #2010 volume 184 to 2020 volume 10 had been processed in Genetics Society of America
+    #1916 V1 to 2009 V183 NOT processed in Genetics Society of America (HW)
+    #2010 V184 to 2020 V216 processed in Genetics Society of America (HW)
 
-    au < manifest ; exists ; 2021 ; 2021 ; Genetics Volume 217-219 ; 217-219 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Genetics Volume 217 ; 217 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Genetics Volume 218 ; 218 ; >
+    au < expected ; exists ; 2021 ; 2021 ; Genetics Volume 219 ; 219 ; >
 
   }
 
