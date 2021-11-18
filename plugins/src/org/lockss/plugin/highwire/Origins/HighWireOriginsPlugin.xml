@@ -1,0 +1,185 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.highwire.Origins.HighWireOriginsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>HighWire Press Plugin (Origins)</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>83</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal (often used as part of file names)</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>volume_name</key>
+                <displayName>Volume Name</displayName>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"HighWire Press Plugin (Origins), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <!-- https://www.rcpjournals.org/content/clinmedicine/lockss-manifest/vol_8_manifest.html -->
+        <string>au_start_url</string>
+        <string>"%scontent/%s/lockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_feature_urls</string>
+        <map>
+            <entry>
+                <string>au_title</string>
+                <string>"%s", base_url</string>
+            </entry>
+            <entry>
+                <!-- https://www.rcpjournals.org/content/clinmedicine/8/6 -->
+                <string>au_issue</string>
+                <string>"%scontent/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
+            </entry>
+            <entry>
+                <string>au_article</string>
+                <map>
+                    <entry>
+                        <string>pdf+html;*</string>
+                        <string>"%scontent/%s/%s/%s/%s.full.pdf+html", base_url, journal_id, volume_name, issue, article</string>
+                    </entry>
+                    <entry>
+                        <!-- https://www.rcpjournals.org/content/clinmedicine/8/1/6.full-text.pdf -->
+                        <string>pdf</string>
+                        <string>"%scontent/%s/%s/%s/%s.full.pdf", base_url, journal_id, volume_name, issue, article</string>
+                    </entry>
+                    <entry>
+                        <string>html</string>
+                        <string>"%scontent/%s/%s/%s/%s", base_url, journal_id, volume_name, issue, article</string>
+                    </entry>
+                </map>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <!-- https://www.rcpjournals.org/content/clinmedicine/8/6 -->
+            <string>1,"^https?://%s/(misc|sites/(default|all)/(files|modules|themes))/", url_host(base_url)</string>
+            <string>1,"^https?://%s/content/%s/c?lockss-manifest/[^/.]*vol_%s_manifest.html", url_host(base_url), journal_id, volume_name</string>
+            <string>1,"^https?://%s/content/%s(/[^/]+)?/suppl/", url_host(base_url), journal_id</string>
+            <!-- iii.article-info was causing over counts, should not be collected -->
+            <string>2,"^https?://%s/content/%s/(by/(year|volume)|current|.*(/|\.)article-)", url_host(base_url), journal_id</string>
+            <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
+            <string>1,"^https?://%s/content/%s(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), journal_id, volume_name</string>
+            <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL
+                  page may also contain roman numerals, dot, & number (iii.2)  -->
+            <!-- ASH has a new pattern for supp data http://www.bloodjournal.org/content/121/1/170/tab-figures-only -->
+            <string>1,"^https?://%s/content/%s/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-(data|only))$", url_host(base_url), journal_id, volume_name</string>
+            <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
+            <string>1,"^https?://%s/content/%s/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-(data|only))$", url_host(base_url), journal_id, volume_name</string>
+            <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
+            <string>1,"^https?://%s/content/%s(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), journal_id, volume_name</string>
+            <string>1,"^https?://%s/content/%s(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), journal_id, volume_name</string>
+            <string>1,"^https?://%s/content/%s(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), journal_id, volume_name</string>
+            <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
+            <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
+            <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
+            <!-- allow content like http://msphere.asm.org/content/msph/1/1/e00001-15/DC2/embed/inline-supplementary-material-2.pdf?download=true -->
+            <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
+            <!-- allow content like http://imaging.onlinejacc.org/content/jimg/6/11/1129/DC1/embed/media-1.docx -->
+            <string>1,"^https?://%s/content/%s(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+){1,2}/DC[^/]{0,5}/embed/", url_host(base_url), journal_id, volume_name</string>
+            <!-- otherwise, all content from glencoesoftware CDN -->
+            <string>1,"^https?://([^/]+\.glencoesoftware\.com/.)"</string>
+            <string>1,"^https?://signin\.hematology\.org/Login\.aspx"</string>
+            <string>1,"^https?://%s/content/%s(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+).+[?]sso-checked=true$", url_host(base_url), journal_id, volume_name</string>
+            <!--Allow movies from CDN/Subdomain goes through-->
+            <string>1,"^https?://movie\.biologists\.com/video/"</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.highwire.Origins.HighWireOriginsArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.highwire.Origins.HighWireOriginsArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^https?://%s/content/%s(/[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full([.]pdf)?)?)$", url_host(base_url), journal_id, volume_name</string>
+            <string>"^https?://%s/content/%s(/[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt)\.[0-9.-]+)(\.(?:full([.]pdf)?)?)$", url_host(base_url), journal_id, volume_name</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.highwire.Origins.HighWireOriginsLinkRewriterFactory</string>
+    </entry>
+</map>
