@@ -85,6 +85,7 @@ public class TestV2AuMover extends LockssTestCase {
     String base="http://mockhost:";
     String user="user1";
     String passwd="passwd1";
+    auMover = new V2AuMover();
     auMover.initRequest("mockhost", user,passwd);
     assertEquals(base+24620,auMover.getCfgAccessUrl());
     assertEquals(base+24610,auMover.getRsAccessUrl());
@@ -99,15 +100,27 @@ public class TestV2AuMover extends LockssTestCase {
     base="http://test.com:";
     user="user2";
     passwd="passwd2";
+    auMover = new V2AuMover();
     auMover.initRequest(null, user, passwd);
-    assertEquals(base+24620,auMover.getCfgAccessUrl());
-    assertEquals(base+24610,auMover.getRsAccessUrl());
+    assertEquals(base+25620,auMover.getCfgAccessUrl());
+    assertEquals(base+25610,auMover.getRsAccessUrl());
     assertEquals(user,auMover.getUserName());
     assertEquals(passwd, auMover.getUserPass());
+
+    auMover = new V2AuMover();
+    try {
+      // test null entries
+      auMover.initRequest(null, null, null);
+      fail("null input should throw IllegalArgumentException");
+    }
+    catch(IllegalArgumentException iae) {
+
+    }
 
   }
 
   public void testReportFile() {
+    auMover.startReportFile();
     numAus=0;
     numUrls=0;
     numArtifacts=0;

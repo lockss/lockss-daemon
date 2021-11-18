@@ -206,7 +206,6 @@ public class V2AuMover {
   private long totalBytesMoved = 0;
   private long totalRunTime = 0;
   private long totalErrorCount = 0;
-  private List<String> errorList = new ArrayList<>();
 
   // Counters for a single au
   private long auUrlsMoved =0;
@@ -215,6 +214,7 @@ public class V2AuMover {
   private long auRunTime=0;
   private long auErrorCount=0;
   private List<String> auErrors= new ArrayList<>();
+  private List<String> errorList = new ArrayList<>();
 
 
   public V2AuMover() {
@@ -228,7 +228,6 @@ public class V2AuMover {
     String baseFileName = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
     if (!StringUtil.isNullString(baseFileName)) {
       reportFileName = getUniqueReportFileName(baseFileName);
-      startReportFile();
     }
     repoClient = new V2RestClient();
     rsStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
@@ -328,7 +327,8 @@ public class V2AuMover {
       moveNextAu();
   }
 
-  public void initRequest(String host, String uname, String upass)
+  public void initRequest(String host, String uname, String upass) throws
+    IllegalArgumentException
   {
     errorList.clear();
     Configuration config = ConfigManager.getCurrentConfig();
@@ -356,19 +356,26 @@ public class V2AuMover {
       if (cfgAccessUrl == null || UrlUtil.isMalformedUrl(cfgAccessUrl)) {
         errorList.add("Missing or Invalid configuration service url: " + cfgAccessUrl);
         throw new IllegalArgumentException(
-          "RestConfigurationService Url is malformed: " + cfgAccessUrl);
+          "Missing or Invalid configuration service url: " + cfgAccessUrl);
       }
       configClient.setUsername(userName);
       configClient.setPassword(userPass);
       configClient.setUserAgent(userAgent);
       configClient.setBasePath(cfgAccessUrl);
       configClient.setDebugging(debugConfigReq);
+    } catch (MalformedURLException mue) {
+      errorList.add("Error parsing REST Configuration Service URL: "
+        + mue.getMessage());
+      throw new IllegalArgumentException(
+        "Missing or Invalid configuration service url: " + cfgAccessUrl);
+    }
 
+    try {
       rsAccessUrl=new URL("http", hostName, rsPort, "").toString();
       if (rsAccessUrl == null || UrlUtil.isMalformedUrl(rsAccessUrl)) {
         errorList.add("Missing or Invalid repository service url: " + rsAccessUrl);
         throw new IllegalArgumentException(
-          "RestConfigurationService Url is malformed: " + rsAccessUrl);
+          "Missing or Invalid configuration service url: " + rsAccessUrl);
       }
       // Create a new RepoClient
       repoClient.setUsername(userName);
@@ -379,9 +386,12 @@ public class V2AuMover {
       dispatcher = repoClient.getHttpClient().dispatcher();
       dispatcher.setMaxRequests(maxRequests);
     } catch (MalformedURLException mue) {
-      errorList.add("Error parsing REST Configuration Service URL: "
-        + mue.getMessage());
+      errorList.add("Error parsing REST Configuration Service URL: " + mue.getMessage());
+      throw new IllegalArgumentException(
+        "Missing or Invalid configuration service url: " + rsAccessUrl);
     }
+
+    startReportFile();
     totalArtifactsMoved =0;
     totalUrlsMoved =0;
     totalBytesMoved=0;
@@ -417,7 +427,6 @@ public class V2AuMover {
     }
     catch (IOException e) {
       log.error("Report file will not be written: Unable to open report file:"+ e.getMessage());
-
     }
   }
 
@@ -515,9 +524,11 @@ public class V2AuMover {
     } catch (ApiException apie) {
       String err=auName + ": Attempt to move Au failed:" + apie.getCode() + ": "
         + apie.getMessage();
+      log.error(err);
       auErrors.add(err);
       errorList.add(err);
       auErrorCount++;
+      finishAuMove(au);
     }
     totalErrorCount+=auErrorCount;
   }
@@ -666,7 +677,7 @@ public class V2AuMover {
     } catch (ApiException apie) {
       String err=uri + ": failed to create version: " + cu.getVersion() + ": " +
         apie.getCode() + " - " + apie.getMessage();
-      errorList.add(err);
+      log.warning(err);
       auErrors.add(err);
       auErrorCount++;
     } finally {
