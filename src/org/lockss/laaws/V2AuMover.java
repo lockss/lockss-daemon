@@ -48,6 +48,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import okhttp3.Dispatcher;
@@ -426,7 +427,7 @@ public class V2AuMover {
       "  artifactsMoved: " + auArtifactsMoved +
       "  bytesMoved: " + auBytesMoved +
       "  errors: " + auErrorCount +
-      "  totalRuntime: " + auRunTime / 1000 + " secs.";
+      "  totalRuntime: " + formatInterval(auRunTime);
     if(reportWriter != null) {
       reportWriter.println(auData);
       for(String err : auErrors) {
@@ -449,7 +450,7 @@ public class V2AuMover {
       "  artifactsMoved: "+ totalArtifactsMoved +
       "  bytesMoved: " + totalBytesMoved +
       "  errors: " + totalErrorCount +
-      "  totalRuntime: " + totalRunTime/1000 + " secs.";
+      "  totalRuntime: " + formatInterval(totalRunTime);
     if(reportWriter != null) {
       reportWriter.println(summary);
       if(reportWriter.checkError()) {
@@ -503,6 +504,7 @@ public class V2AuMover {
       auRunTime = System.currentTimeMillis() -  au_move_start;
       updateReport();
       //update our totals.
+      totalAusMoved++;
       totalBytesMoved+=auBytesMoved;
       totalUrlsMoved += auUrlsMoved;
       totalArtifactsMoved += auArtifactsMoved;
@@ -563,7 +565,17 @@ public class V2AuMover {
     allCusQueued=true;
    }
 
-/* ------------------
+   private static String formatInterval(final long l)
+   {
+     final long hr = TimeUnit.MILLISECONDS.toHours(l);
+     final long min = TimeUnit.MILLISECONDS.toMinutes(l - TimeUnit.HOURS.toMillis(hr));
+     final long sec = TimeUnit.MILLISECONDS.toSeconds(l - TimeUnit.HOURS.toMillis(hr) - TimeUnit.MINUTES.toMillis(min));
+     final long ms = TimeUnit.MILLISECONDS.toMillis(l - TimeUnit.HOURS.toMillis(hr) - TimeUnit.MINUTES.toMillis(min) - TimeUnit.SECONDS.toMillis(sec));
+     return String.format("%02d:%02d:%02d.%03d", hr, min, sec, ms);
+   }
+
+
+  /* ------------------
   testing getters & setters
  */
   void setAuCounters(long urls, long artifacts, long bytes, long runTime, long errors, List<String>errs)

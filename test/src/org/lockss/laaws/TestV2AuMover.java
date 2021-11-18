@@ -39,17 +39,17 @@ public class TestV2AuMover extends LockssTestCase {
   private String cPluginRegex="(cplugin)";
   private static int HEADER_LENGTH=4;
   String[] reportLines = {
-    "Au:au1  urlsMoved: 10  artifactsMoved: 10  bytesMoved: 1000  errors: 0  totalRuntime: 0 secs.",
+    "Au:au1  urlsMoved: 10  artifactsMoved: 10  bytesMoved: 1000  errors: 0  totalRuntime: 00:00:00.300",
     "",
-    "Au:au2  urlsMoved: 20  artifactsMoved: 33  bytesMoved: 3000  errors: 1  totalRuntime: 1 secs.",
+    "Au:au2  urlsMoved: 20  artifactsMoved: 33  bytesMoved: 3000  errors: 1  totalRuntime: 00:00:01.000",
     "cu2 Attempt to move artifact failed.",
     "",
-    "Au:au3  urlsMoved: 100  artifactsMoved: 150  bytesMoved: 10000  errors: 3  totalRuntime: 2 secs.",
+    "Au:au3  urlsMoved: 100  artifactsMoved: 150  bytesMoved: 10000  errors: 3  totalRuntime: 00:00:02.000",
     "cu1: Attempt to move artifact failed.",
     "cu5: Attempt to commit artifact failed.",
     "cu80: Attempt to commit artifact failed.",
     "",
-    "AusMoved: 3  urlsMoved: 130  artifactsMoved: 193  bytesMoved: 14000  errors: 4  totalRuntime: 3 secs."
+    "AusMoved: 3  urlsMoved: 130  artifactsMoved: 193  bytesMoved: 14000  errors: 4  totalRuntime: 00:00:03.300"
   };
 
   public void setUp() throws Exception {
