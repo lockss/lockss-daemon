@@ -3302,21 +3302,21 @@
       issnl = 0976-9668
     >
 #    param[base_url] = http://www.jnsbm.org/
-
     param[journal_issn] = 0976-9668
+    #Moved
 
-    au < manifest ; 2010 ; Journal of Natural Science, Biology and Medicine Volume 1 ; 2010 ; 1 ; https://www.jnsbm.org/ >
-    au < released ; 2011 ; Journal of Natural Science, Biology and Medicine Volume 2 ; 2011 ; 2 ; http://www.jnsbm.org/ >
-    au < released ; 2012 ; Journal of Natural Science, Biology and Medicine Volume 3 ; 2012 ; 3 ; http://www.jnsbm.org/ >
-    au < released ; 2013 ; Journal of Natural Science, Biology and Medicine Volume 4 ; 2013 ; 4 ; http://www.jnsbm.org/ >
-    au < released ; 2014 ; Journal of Natural Science, Biology and Medicine Volume 5 ; 2014 ; 5 ; http://www.jnsbm.org/ >
-    au < released ; 2015 ; Journal of Natural Science, Biology and Medicine Volume 6 ; 2015 ; 6 ; http://www.jnsbm.org/ >
-    au < released ; 2016 ; Journal of Natural Science, Biology and Medicine Volume 7 ; 2016 ; 7 ; http://www.jnsbm.org/ >
-    au < released ; 2017 ; Journal of Natural Science, Biology and Medicine Volume 8 ; 2017 ; 8 ; http://www.jnsbm.org/ >
-    au < released ; 2018 ; Journal of Natural Science, Biology and Medicine Volume 9 ; 2018 ; 9 ; http://www.jnsbm.org/ >
-    au < released ; 2019 ; Journal of Natural Science, Biology and Medicine Volume 10 ; 2019 ; 10 ; https://www.jnsbm.org/ >
-    au < manifest ; 2020 ; Journal of Natural Science, Biology and Medicine Volume 11 ; 2020 ; 11 ; https://www.jnsbm.org/ >
-    au < manifest ; 2021 ; Journal of Natural Science, Biology and Medicine Volume 12 ; 2021 ; 12 ; https://www.jnsbm.org/ >
+    au < doNotProcess ; 2010 ; Journal of Natural Science, Biology and Medicine Volume 1 ; 2010 ; 1 ; https://www.jnsbm.org/ >
+    au < down ; 2011 ; Journal of Natural Science, Biology and Medicine Volume 2 ; 2011 ; 2 ; http://www.jnsbm.org/ >
+    au < down ; 2012 ; Journal of Natural Science, Biology and Medicine Volume 3 ; 2012 ; 3 ; http://www.jnsbm.org/ >
+    au < down ; 2013 ; Journal of Natural Science, Biology and Medicine Volume 4 ; 2013 ; 4 ; http://www.jnsbm.org/ >
+    au < down ; 2014 ; Journal of Natural Science, Biology and Medicine Volume 5 ; 2014 ; 5 ; http://www.jnsbm.org/ >
+    au < down ; 2015 ; Journal of Natural Science, Biology and Medicine Volume 6 ; 2015 ; 6 ; http://www.jnsbm.org/ >
+    au < down ; 2016 ; Journal of Natural Science, Biology and Medicine Volume 7 ; 2016 ; 7 ; http://www.jnsbm.org/ >
+    au < down ; 2017 ; Journal of Natural Science, Biology and Medicine Volume 8 ; 2017 ; 8 ; http://www.jnsbm.org/ >
+    au < down ; 2018 ; Journal of Natural Science, Biology and Medicine Volume 9 ; 2018 ; 9 ; http://www.jnsbm.org/ >
+    au < down ; 2019 ; Journal of Natural Science, Biology and Medicine Volume 10 ; 2019 ; 10 ; https://www.jnsbm.org/ >
+    au < doNotProcess ; 2020 ; Journal of Natural Science, Biology and Medicine Volume 11 ; 2020 ; 11 ; https://www.jnsbm.org/ >
+    au < doNotProcess ; 2021 ; Journal of Natural Science, Biology and Medicine Volume 12 ; 2021 ; 12 ; https://www.jnsbm.org/ >
 
   }
   
@@ -3703,47 +3703,47 @@
       issnl = 0970-2113
     >
 #    param[base_url] = http://www.lungindia.com/
+     param[journal_issn] = 0970-2113
+     #Moved to Wolters Kluwer
 
-    param[journal_issn] = 0970-2113
-
-    au < manifest ; 1983 ; Lung India Volume 1 ; 1983 ; 1 ; https://www.lungindia.com/ >
-    au < manifest ; 1984 ; Lung India Volume 2 ; 1984 ; 2 ; https://www.lungindia.com/ >
-    au < manifest ; 1985 ; Lung India Volume 3 ; 1985 ; 3 ; https://www.lungindia.com/ >
-    au < manifest ; 1986 ; Lung India Volume 4 ; 1986 ; 4 ; https://www.lungindia.com/ >
-    au < manifest ; 1987 ; Lung India Volume 5 ; 1987 ; 5 ; https://www.lungindia.com/ >
-    au < manifest ; 1988 ; Lung India Volume 6 ; 1988 ; 6 ; https://www.lungindia.com/ >
-    au < manifest ; 1989 ; Lung India Volume 7 ; 1989 ; 7 ; https://www.lungindia.com/ >
-    au < manifest ; 1990 ; Lung India Volume 8 ; 1990 ; 8 ; https://www.lungindia.com/ >
-    au < manifest ; 1991 ; Lung India Volume 9 ; 1991 ; 9 ; https://www.lungindia.com/ >
-    au < manifest ; 1992 ; Lung India Volume 10 ; 1992 ; 10 ; https://www.lungindia.com/ >
-    au < manifest ; 1993 ; Lung India Volume 11 ; 1993 ; 11 ; https://www.lungindia.com/ >
-    au < manifest ; 1994 ; Lung India Volume 12 ; 1994 ; 12 ; https://www.lungindia.com/ >
-    au < manifest ; 1995 ; Lung India Volume 13 ; 1995 ; 13 ; https://www.lungindia.com/ >
-    au < manifest ; 1996 ; Lung India Volume 14 ; 1996 ; 14 ; https://www.lungindia.com/ >
-    au < manifest ; 1997 ; Lung India Volume 15 ; 1997 ; 15 ; https://www.lungindia.com/ >
-    au < manifest ; 1998 ; Lung India Volume 16 ; 1998 ; 16 ; https://www.lungindia.com/ >
-    au < manifest ; 1999 ; Lung India Volume 17 ; 1999 ; 17 ; https://www.lungindia.com/ >
-    au < manifest ; 2000 ; Lung India Volume 18 ; 2000 ; 18 ; https://www.lungindia.com/ >
-    au < manifest ; 2001 ; Lung India Volume 19 ; 2001 ; 19 ; https://www.lungindia.com/ >
-    au < manifest ; 2002 ; Lung India Volume 20 ; 2002 ; 20 ; https://www.lungindia.com/ >
-    au < manifest ; 2004 ; Lung India Volume 21 ; 2004 ; 21 ; https://www.lungindia.com/ >
-    au < manifest ; 2005 ; Lung India Volume 22 ; 2005 ; 22 ; https://www.lungindia.com/ >
-    au < manifest ; 2006 ; Lung India Volume 23 ; 2006 ; 23 ; https://www.lungindia.com/ >
-    au < manifest ; 2007 ; Lung India Volume 24 ; 2007 ; 24 ; https://www.lungindia.com/ >
-    au < manifest ; 2008 ; Lung India Volume 25 ; 2008 ; 25 ; https://www.lungindia.com/ >
-    au < manifest ; 2009 ; Lung India Volume 26 ; 2009 ; 26 ; https://www.lungindia.com/ >
-    au < manifest ; 2010 ; Lung India Volume 27 ; 2010 ; 27 ; https://www.lungindia.com/ >
-    au < released ; 2011 ; Lung India Volume 28 ; 2011 ; 28 ; http://www.lungindia.com/ >
-    au < released ; 2012 ; Lung India Volume 29 ; 2012 ; 29 ; http://www.lungindia.com/ >
-    au < released ; 2013 ; Lung India Volume 30 ; 2013 ; 30 ; http://www.lungindia.com/ >
-    au < released ; 2014 ; Lung India Volume 31 ; 2014 ; 31 ; http://www.lungindia.com/ >
-    au < released ; 2015 ; Lung India Volume 32 ; 2015 ; 32 ; http://www.lungindia.com/ >
-    au < released ; 2016 ; Lung India Volume 33 ; 2016 ; 33 ; http://www.lungindia.com/ >
-    au < released ; 2017 ; Lung India Volume 34 ; 2017 ; 34 ; http://www.lungindia.com/ >
-    au < released ; 2018 ; Lung India Volume 35 ; 2018 ; 35 ; http://www.lungindia.com/ >
-    au < released ; 2019 ; Lung India Volume 36 ; 2019 ; 36 ; https://www.lungindia.com/ >
-    au < manifest ; 2020 ; Lung India Volume 37 ; 2020 ; 37 ; https://www.lungindia.com/ >
-    au < manifest ; 2021 ; Lung India Volume 38 ; 2021 ; 38 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1983 ; Lung India Volume 1 ; 1983 ; 1 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1984 ; Lung India Volume 2 ; 1984 ; 2 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1985 ; Lung India Volume 3 ; 1985 ; 3 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1986 ; Lung India Volume 4 ; 1986 ; 4 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1987 ; Lung India Volume 5 ; 1987 ; 5 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1988 ; Lung India Volume 6 ; 1988 ; 6 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1989 ; Lung India Volume 7 ; 1989 ; 7 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1990 ; Lung India Volume 8 ; 1990 ; 8 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1991 ; Lung India Volume 9 ; 1991 ; 9 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1992 ; Lung India Volume 10 ; 1992 ; 10 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1993 ; Lung India Volume 11 ; 1993 ; 11 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1994 ; Lung India Volume 12 ; 1994 ; 12 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1995 ; Lung India Volume 13 ; 1995 ; 13 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1996 ; Lung India Volume 14 ; 1996 ; 14 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1997 ; Lung India Volume 15 ; 1997 ; 15 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1998 ; Lung India Volume 16 ; 1998 ; 16 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 1999 ; Lung India Volume 17 ; 1999 ; 17 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2000 ; Lung India Volume 18 ; 2000 ; 18 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2001 ; Lung India Volume 19 ; 2001 ; 19 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2002 ; Lung India Volume 20 ; 2002 ; 20 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2004 ; Lung India Volume 21 ; 2004 ; 21 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2005 ; Lung India Volume 22 ; 2005 ; 22 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2006 ; Lung India Volume 23 ; 2006 ; 23 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2007 ; Lung India Volume 24 ; 2007 ; 24 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2008 ; Lung India Volume 25 ; 2008 ; 25 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2009 ; Lung India Volume 26 ; 2009 ; 26 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2010 ; Lung India Volume 27 ; 2010 ; 27 ; https://www.lungindia.com/ >
+    au < down ; 2011 ; Lung India Volume 28 ; 2011 ; 28 ; http://www.lungindia.com/ >
+    au < down ; 2012 ; Lung India Volume 29 ; 2012 ; 29 ; http://www.lungindia.com/ >
+    au < down ; 2013 ; Lung India Volume 30 ; 2013 ; 30 ; http://www.lungindia.com/ >
+    au < down ; 2014 ; Lung India Volume 31 ; 2014 ; 31 ; http://www.lungindia.com/ >
+    au < down ; 2015 ; Lung India Volume 32 ; 2015 ; 32 ; http://www.lungindia.com/ >
+    au < down ; 2016 ; Lung India Volume 33 ; 2016 ; 33 ; http://www.lungindia.com/ >
+    au < down ; 2017 ; Lung India Volume 34 ; 2017 ; 34 ; http://www.lungindia.com/ >
+    au < down ; 2018 ; Lung India Volume 35 ; 2018 ; 35 ; http://www.lungindia.com/ >
+    au < down ; 2019 ; Lung India Volume 36 ; 2019 ; 36 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2020 ; Lung India Volume 37 ; 2020 ; 37 ; https://www.lungindia.com/ >
+    au < doNotProcess ; 2021 ; Lung India Volume 38 ; 2021 ; 38 ; https://www.lungindia.com/ >
 
   }
     
@@ -3797,20 +3797,20 @@
       issnl = 0973-1229
    >
 #    param[base_url] = http://www.msmonographs.org/
-
     param[journal_issn] = 0973-1229
+    #Moved
 
-    au < manifest ; 2003 ; Mens Sana Monographs Volume 1 ; 2003 ; 1 ; https://www.msmonographs.org/ >
-    au < manifest ; 2004 ; Mens Sana Monographs Volume 2 ; 2004 ; 2 ; https://www.msmonographs.org/ >
-    au < manifest ; 2005 ; Mens Sana Monographs Volume 3 ; 2005 ; 3 ; https://www.msmonographs.org/ >
-    au < manifest ; 2006 ; Mens Sana Monographs Volume 4 ; 2006 ; 4 ; https://www.msmonographs.org/ >
-    au < manifest ; 2007 ; Mens Sana Monographs Volume 5 ; 2007 ; 5 ; https://www.msmonographs.org/ >
-    au < manifest ; 2008 ; Mens Sana Monographs Volume 6 ; 2008 ; 6 ; https://www.msmonographs.org/ >
-    au < manifest ; 2009 ; Mens Sana Monographs Volume 7 ; 2009 ; 7 ; https://www.msmonographs.org/ >
-    au < manifest ; 2010 ; Mens Sana Monographs Volume 8 ; 2010 ; 8 ; https://www.msmonographs.org/ >
-    au < manifest ; 2011 ; Mens Sana Monographs Volume 9 ; 2011 ; 9 ; https://www.msmonographs.org/ >
-    au < manifest ; 2012 ; Mens Sana Monographs Volume 10 ; 2012 ; 10 ; https://www.msmonographs.org/ >
-    au < manifest ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2003 ; Mens Sana Monographs Volume 1 ; 2003 ; 1 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2004 ; Mens Sana Monographs Volume 2 ; 2004 ; 2 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2005 ; Mens Sana Monographs Volume 3 ; 2005 ; 3 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2006 ; Mens Sana Monographs Volume 4 ; 2006 ; 4 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2007 ; Mens Sana Monographs Volume 5 ; 2007 ; 5 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2008 ; Mens Sana Monographs Volume 6 ; 2008 ; 6 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2009 ; Mens Sana Monographs Volume 7 ; 2009 ; 7 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2010 ; Mens Sana Monographs Volume 8 ; 2010 ; 8 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2011 ; Mens Sana Monographs Volume 9 ; 2011 ; 9 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2012 ; Mens Sana Monographs Volume 10 ; 2012 ; 10 ; https://www.msmonographs.org/ >
+    au < doNotProcess ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 ; https://www.msmonographs.org/ >
     au < released ; 2014 ; Mens Sana Monographs Volume 12 ; 2014 ; 12 ; http://www.msmonographs.org/ >
     au < released ; 2015 ; Mens Sana Monographs Volume 13 ; 2015 ; 13 ; http://www.msmonographs.org/ >
     au < released ; 2016 ; Mens Sana Monographs Volume 14 ; 2016 ; 14 ; http://www.msmonographs.org/ >
@@ -4166,9 +4166,8 @@
       issnl = 0976-4836
     >
 #    param[base_url] = http://www.phcogres.com/
-
     param[journal_issn] = 0974-8490
-    #move to new publisher, using same base_url
+    #moved to new publisher, using same base_url
 
     au < doNotProcess ; 2009 ; Pharmacognosy Research Volume 1 ; 2009 ; 1 ; https://www.phcogres.com/ >
     au < doNotProcess ; 2010 ; Pharmacognosy Research Volume 2 ; 2010 ; 2 ; https://www.phcogres.com/ >
@@ -4569,8 +4568,8 @@
       issnl = 1450-1147
    >
 #    param[base_url] = http://www.wjnm.org/
-
     param[journal_issn] = 1450-1147
+    # notReady V10 2011. 500 error, replicated. http://www.wjnm.org/article.asp?issn=1450-1147;year=2011;volume=10;issue=1;spage=5;epage=6;aulast=Baum;type=2
 
     au < manifest ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ >
     au < manifest ; 2006 ; World Journal of Nuclear Medicine Volume 5 ; 2006 ; 5 ; https://www.wjnm.org/ >
@@ -4578,7 +4577,7 @@
     au < manifest ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 ; https://www.wjnm.org/ >
     au < manifest ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 ; https://www.wjnm.org/ >
     au < exists ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 ; https://www.wjnm.org/ >
-    au < manifest ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ >
+    au < notReady ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ >
     au < released ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 ; http://www.wjnm.org/ >
     au < released ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 ; http://www.wjnm.org/ >
     au < released ; 2014 ; World Journal of Nuclear Medicine Volume 13 ; 2014 ; 13 ; http://www.wjnm.org/ >
@@ -7265,12 +7264,12 @@
 #      param[base_url] = http://www.joas.in/
       #Moved to Woltors Klewer and changed name to Journal of Orthopaedics and Spine
 
-      au < released ; 2013 ; Journal of Orthopaedics and Allied Sciences Volume 1 ; 2013 ; 1 ; http://www.joas.in/ >
-      au < released ; 2014 ; Journal of Orthopaedics and Allied Sciences Volume 2 ; 2014 ; 2 ; http://www.joas.in/ >
-      au < released ; 2015 ; Journal of Orthopaedics and Allied Sciences Volume 3 ; 2015 ; 3 ; http://www.joas.in/ >
-      au < released ; 2016 ; Journal of Orthopaedics and Allied Sciences Volume 4 ; 2016 ; 4 ; http://www.joas.in/ >
-      au < released ; 2017 ; Journal of Orthopaedics and Allied Sciences Volume 5 ; 2017 ; 5 ; http://www.joas.in/ >
-      au < released ; 2018 ; Journal of Orthopaedics and Allied Sciences Volume 6 ; 2018 ; 6 ; http://www.joas.in/ >
+      au < down ; 2013 ; Journal of Orthopaedics and Allied Sciences Volume 1 ; 2013 ; 1 ; http://www.joas.in/ >
+      au < down ; 2014 ; Journal of Orthopaedics and Allied Sciences Volume 2 ; 2014 ; 2 ; http://www.joas.in/ >
+      au < down ; 2015 ; Journal of Orthopaedics and Allied Sciences Volume 3 ; 2015 ; 3 ; http://www.joas.in/ >
+      au < down ; 2016 ; Journal of Orthopaedics and Allied Sciences Volume 4 ; 2016 ; 4 ; http://www.joas.in/ >
+      au < down ; 2017 ; Journal of Orthopaedics and Allied Sciences Volume 5 ; 2017 ; 5 ; http://www.joas.in/ >
+      au < down ; 2018 ; Journal of Orthopaedics and Allied Sciences Volume 6 ; 2018 ; 6 ; http://www.joas.in/ >
       #changed name to Journal of Orthopaedics and Spine
   }
 
@@ -7697,13 +7696,16 @@
 
       param[journal_issn] = 2250-9658
 #      param[base_url] = http://www.mdcan-uath.org/
+      #500 errors. For example
+      #https://www.mdcan-uath.org/showBackIssue.asp?issn=2250-9658;year=2019;volume=8;issue=14
+      #https://www.mdcan-uath.org/showBackIssue.asp?issn=2250-9658;year=2020;volume=9;issue=16
 
-      au < manifest ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; https://www.mdcan-uath.org/ >
-      au < manifest ; 2017 ; New Nigerian Journal of Clinical Research Volume 6 ; 2017 ; 6 ; https://www.mdcan-uath.org/ >
-      au < manifest ; 2018 ; New Nigerian Journal of Clinical Research Volume 7 ; 2018 ; 7 ; https://www.mdcan-uath.org/ >
-      au < manifest ; 2019 ; New Nigerian Journal of Clinical Research Volume 8 ; 2019 ; 8 ; https://www.mdcan-uath.org/ >
-      au < manifest ; 2020 ; New Nigerian Journal of Clinical Research Volume 9 ; 2020 ; 9 ; https://www.mdcan-uath.org/ >
-      au < manifest ; 2021 ; New Nigerian Journal of Clinical Research Volume 10 ; 2021 ; 10 ; https://www.mdcan-uath.org/ >
+      au < notReady ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; https://www.mdcan-uath.org/ > #500 Error
+      au < notReady ; 2017 ; New Nigerian Journal of Clinical Research Volume 6 ; 2017 ; 6 ; https://www.mdcan-uath.org/ > #500 Error
+      au < notReady ; 2018 ; New Nigerian Journal of Clinical Research Volume 7 ; 2018 ; 7 ; https://www.mdcan-uath.org/ > #500 Error
+      au < notReady ; 2019 ; New Nigerian Journal of Clinical Research Volume 8 ; 2019 ; 8 ; https://www.mdcan-uath.org/ > #500 Error
+      au < notReady ; 2020 ; New Nigerian Journal of Clinical Research Volume 9 ; 2020 ; 9 ; https://www.mdcan-uath.org/ > #500 Error
+      au < notReady ; 2021 ; New Nigerian Journal of Clinical Research Volume 10 ; 2021 ; 10 ; https://www.mdcan-uath.org/ > #500 Error
 
   }
 
@@ -7871,7 +7873,7 @@
       au < manifest ; 2007 ; Nigerian Postgraduate Medical Journal Volume 14 ; 2007 ; 14 ; https://www.npmj.org/ >
       au < manifest ; 2008 ; Nigerian Postgraduate Medical Journal Volume 15 ; 2008 ; 15 ; https://www.npmj.org/ >
       au < manifest ; 2009 ; Nigerian Postgraduate Medical Journal Volume 16 ; 2009 ; 16 ; https://www.npmj.org/ >
-      au < manifest ; 2010 ; Nigerian Postgraduate Medical Journal Volume 17 ; 2010 ; 17 ; https://www.npmj.org/ >
+      au < notReady ; 2010 ; Nigerian Postgraduate Medical Journal Volume 17 ; 2010 ; 17 ; https://www.npmj.org/ > #no substance
       au < released ; 2011 ; Nigerian Postgraduate Medical Journal Volume 18 ; 2011 ; 18 ; http://www.npmj.org/ >
       au < released ; 2012 ; Nigerian Postgraduate Medical Journal Volume 19 ; 2012 ; 19 ; http://www.npmj.org/ >
       au < released ; 2013 ; Nigerian Postgraduate Medical Journal Volume 20 ; 2013 ; 20 ; http://www.npmj.org/ >
@@ -8125,7 +8127,7 @@
       au < released ; 2016 ; Saudi Journal of Medicine and Medical Sciences Volume 4 ; 2016 ; 4 ; http://www.sjmms.net/ >
       au < released ; 2017 ; Saudi Journal of Medicine and Medical Sciences Volume 5 ; 2017 ; 5 ; http://www.sjmms.net/ >
       au < released ; 2018 ; Saudi Journal of Medicine and Medical Sciences Volume 6 ; 2018 ; 6 ; http://www.sjmms.net/ >
-      au < manifest ; 2019 ; Saudi Journal of Medicine and Medical Sciences Volume 7 ; 2019 ; 7 ; https://www.sjmms.net/ >
+      au < notReady ; 2019 ; Saudi Journal of Medicine and Medical Sciences Volume 7 ; 2019 ; 7 ; https://www.sjmms.net/ > #500 error
       au < released ; 2020 ; Saudi Journal of Medicine and Medical Sciences Volume 8 ; 2020 ; 8 ; https://www.sjmms.net/ >
       au < manifest ; 2021 ; Saudi Journal of Medicine and Medical Sciences Volume 9 ; 2021 ; 9 ; https://www.sjmms.net/ >
 
@@ -8557,7 +8559,7 @@
       au < released ; 2014 ; The Nigerian Journal of General Practice Volume 12 ; 2014 ; 12 ; http://www.njgp.org/ >
       au < released ; 2015 ; The Nigerian Journal of General Practice Volume 13 ; 2015 ; 13 ; http://www.njgp.org/ >
       au < released ; 2016 ; The Nigerian Journal of General Practice Volume 14 ; 2016 ; 14 ; http://www.njgp.org/ >
-      au < manifest ; 2017 ; The Nigerian Journal of General Practice Volume 15 ; 2017 ; 15 ; https://www.njgp.org/ >
+      au < notReady ; 2017 ; The Nigerian Journal of General Practice Volume 15 ; 2017 ; 15 ; https://www.njgp.org/ > #500
       au < released ; 2018 ; The Nigerian Journal of General Practice Volume 16 ; 2018 ; 16 ; http://www.njgp.org/ >
       au < released ; 2019 ; The Nigerian Journal of General Practice Volume 17 ; 2019 ; 17 ; https://www.njgp.org/ >
       au < released ; 2020 ; The Nigerian Journal of General Practice Volume 18 ; 2020 ; 18 ; https://www.njgp.org/ >
@@ -10034,7 +10036,7 @@
       param[journal_issn] = 0975-3605
 #      param[base_url] = http://www.marinemedicalsociety.in/
 
-      au < manifest ; 2012 ; Journal of Marine Medical Society Volume 14 ; 2012 ; 14 ; https://www.marinemedicalsociety.in/ >
+      au < notReady ; 2012 ; Journal of Marine Medical Society Volume 14 ; 2012 ; 14 ; https://www.marinemedicalsociety.in/ > #500 error
       au < released ; 2013 ; Journal of Marine Medical Society Volume 15 ; 2013 ; 15 ; https://www.marinemedicalsociety.in/ >
       au < released ; 2014 ; Journal of Marine Medical Society Volume 16 ; 2014 ; 16 ; https://www.marinemedicalsociety.in/ >
       au < released ; 2015 ; Journal of Marine Medical Society Volume 17 ; 2015 ; 17 ; https://www.marinemedicalsociety.in/ >
@@ -10143,12 +10145,13 @@
 
       param[journal_issn] = 2589-1219
 #      param[base_url] = http://www.journalmsr.com/
+      #Moved to scientific Scholar
 
       au < released ; 2017 ; Journal of Musculoskeletal Surgery and Research Volume 1 ; 2017 ; 1 ; http://www.journalmsr.com/ >
-      au < manifest ; 2018 ; Journal of Musculoskeletal Surgery and Research Volume 2 ; 2018 ; 2 ; https://www.journalmsr.com/ >
-      au < manifest ; 2019 ; Journal of Musculoskeletal Surgery and Research Volume 3 ; 2019 ; 3 ; https://www.journalmsr.com/ >
+      au < doNotProcess ; 2018 ; Journal of Musculoskeletal Surgery and Research Volume 2 ; 2018 ; 2 ; https://www.journalmsr.com/ >
+      au < doNotProcess ; 2019 ; Journal of Musculoskeletal Surgery and Research Volume 3 ; 2019 ; 3 ; https://www.journalmsr.com/ >
       au < released ; 2020 ; Journal of Musculoskeletal Surgery and Research Volume 4 ; 2020 ; 4 ; https://www.journalmsr.com/ >
-      au < manifest ; 2021 ; Journal of Musculoskeletal Surgery and Research Volume 5 ; 2021 ; 5 ; https://www.journalmsr.com/ >
+      au < doNotProcess ; 2021 ; Journal of Musculoskeletal Surgery and Research Volume 5 ; 2021 ; 5 ; https://www.journalmsr.com/ >
 
   }
 
@@ -10183,7 +10186,7 @@
 #      param[base_url] = http://www.jpsiconline.com/
 
       au < released ; 2014 ; Journal of Patient Safety and Infection Control Volume 2 ; 2014 ; 2 ; https://www.jpsiconline.com/ >
-      au < manifest ; 2015 ; Journal of Patient Safety and Infection Control Volume 3 ; 2015 ; 3 ; https://www.jpsiconline.com/ >
+      au < notReady ; 2015 ; Journal of Patient Safety and Infection Control Volume 3 ; 2015 ; 3 ; https://www.jpsiconline.com/ > #500 
       au < released ; 2016 ; Journal of Patient Safety and Infection Control Volume 4 ; 2016 ; 4 ; https://www.jpsiconline.com/ >
       au < released ; 2017 ; Journal of Patient Safety and Infection Control Volume 5 ; 2017 ; 5 ; http://www.jpsiconline.com/ >
       au < released ; 2018 ; Journal of Patient Safety and Infection Control Volume 6 ; 2018 ; 6 ; https://www.jpsiconline.com/ >
@@ -10308,7 +10311,7 @@
 #      param[base_url] = http://www.jvbd.org/
 
       au < released ; 2012 ; Journal of Vector Borne Diseases Volume 49 ; 2012 ; 49 ; https://www.jvbd.org/ >
-      au < manifest ; 2013 ; Journal of Vector Borne Diseases Volume 50 ; 2013 ; 50 ; https://www.jvbd.org/ >
+      au < notReady ; 2013 ; Journal of Vector Borne Diseases Volume 50 ; 2013 ; 50 ; https://www.jvbd.org/ > #500
       au < released ; 2014 ; Journal of Vector Borne Diseases Volume 51 ; 2014 ; 51 ; https://www.jvbd.org/ >
       au < released ; 2015 ; Journal of Vector Borne Diseases Volume 52 ; 2015 ; 52 ; https://www.jvbd.org/ >
       au < released ; 2016 ; Journal of Vector Borne Diseases Volume 53 ; 2016 ; 53 ; https://www.jvbd.org/ >
