@@ -31,26 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.laaws;
 
-import static java.nio.file.StandardOpenOption.CREATE_NEW;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.text.SimpleDateFormat;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
-import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import okhttp3.Dispatcher;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -64,17 +44,26 @@ import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.CuIterator;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 import org.lockss.util.UrlUtil;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static java.nio.file.StandardOpenOption.CREATE_NEW;
 
 public class V2AuMover {
 
@@ -436,7 +425,7 @@ public class V2AuMover {
       "  artifactsMoved: " + auArtifactsMoved +
       "  bytesMoved: " + auBytesMoved +
       "  errors: " + auErrorCount +
-      "  totalRuntime: " + formatInterval(auRunTime);
+      "  totalRuntime: " + StringUtil.timeIntervalToString(auRunTime);
     if(reportWriter != null) {
       reportWriter.println(auData);
       for(String err : auErrors) {
@@ -459,7 +448,7 @@ public class V2AuMover {
       "  artifactsMoved: "+ totalArtifactsMoved +
       "  bytesMoved: " + totalBytesMoved +
       "  errors: " + totalErrorCount +
-      "  totalRuntime: " + formatInterval(totalRunTime);
+      "  totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
     if(reportWriter != null) {
       reportWriter.println(summary);
       if(reportWriter.checkError()) {
@@ -574,15 +563,6 @@ public class V2AuMover {
       auUrlsMoved++;
     }
     allCusQueued=true;
-   }
-
-   private static String formatInterval(final long l)
-   {
-     final long hr = TimeUnit.MILLISECONDS.toHours(l);
-     final long min = TimeUnit.MILLISECONDS.toMinutes(l - TimeUnit.HOURS.toMillis(hr));
-     final long sec = TimeUnit.MILLISECONDS.toSeconds(l - TimeUnit.HOURS.toMillis(hr) - TimeUnit.MINUTES.toMillis(min));
-     final long ms = TimeUnit.MILLISECONDS.toMillis(l - TimeUnit.HOURS.toMillis(hr) - TimeUnit.MINUTES.toMillis(min) - TimeUnit.SECONDS.toMillis(sec));
-     return String.format("%02d:%02d:%02d.%03d", hr, min, sec, ms);
    }
 
 
