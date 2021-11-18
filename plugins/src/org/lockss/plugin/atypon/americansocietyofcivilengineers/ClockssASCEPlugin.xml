@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Society of Civil Engineers Plugin (CLOCKSS)</string>
+    <string>American Society of Civil Engineers Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Society of Civil Engineers Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Society of Civil Engineers Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -131,4 +131,3 @@ POSSIBILITY OF SUCH DAMAGE.
     </map>
   </entry>
 </map>
-

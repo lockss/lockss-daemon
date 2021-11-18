@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Psychiatric Association Publishing Plugin</string>
+    <string>American Psychiatric Association Publishing Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Psychiatric Association Publishing Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Psychiatric Association Publishing Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!-- Needed for http links in some html pages -->
   <entry>

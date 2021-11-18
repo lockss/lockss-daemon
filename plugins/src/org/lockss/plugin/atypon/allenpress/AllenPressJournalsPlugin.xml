@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <!--  updating since has hash/crawl filter, must have own feature_version_map -->  
   <entry>
@@ -64,7 +64,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Allen Press Plugin (Legacy)</string>
+    <string>Allen Press Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -72,11 +72,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>120</string>
+    <string>122</string>
   </entry>  
   <entry>
     <string>au_name</string>
-    <string>"Allen Press Plugin (Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Allen Press Journals Plugin (Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>

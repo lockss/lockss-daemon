@@ -46,19 +46,19 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Allen Press Plugin (Legacy, CLOCKSS)</string>
+    <string>Allen Press Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Allen Press Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Allen Press Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
     <entry>

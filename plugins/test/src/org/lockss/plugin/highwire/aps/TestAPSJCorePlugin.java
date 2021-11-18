@@ -101,7 +101,7 @@ public class TestAPSJCorePlugin extends LockssTestCase {
         "http://www.example.com/lockss-manifest/vol_303_manifest.html",
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("American Physiological Society Plugin (Legacy), Base URL http://www.example.com/, Volume 303",
+    assertEquals("American Physiological Society Journals Plugin (Legacy), Base URL http://www.example.com/, Volume 303",
         au.getName());
     assertEquals(ListUtil.list(starturl[0]), au.getStartUrls());
   }
