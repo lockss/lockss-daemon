@@ -39,17 +39,17 @@ public class TestV2AuMover extends LockssTestCase {
   private String cPluginRegex="(cplugin)";
   private static int HEADER_LENGTH=4;
   String[] reportLines = {
-    "Au:au1  urlsMoved: 10  artifactsMoved: 10  bytesMoved: 1000  errors: 0  totalRuntime: 00:00:00.300",
+    "Au:au1  urlsMoved: 10  artifactsMoved: 10  bytesMoved: 1000  errors: 0  totalRuntime: 300ms",
     "",
-    "Au:au2  urlsMoved: 20  artifactsMoved: 33  bytesMoved: 3000  errors: 1  totalRuntime: 00:00:01.000",
+    "Au:au2  urlsMoved: 20  artifactsMoved: 33  bytesMoved: 3000  errors: 1  totalRuntime: 1500ms",
     "cu2 Attempt to move artifact failed.",
     "",
-    "Au:au3  urlsMoved: 100  artifactsMoved: 150  bytesMoved: 10000  errors: 3  totalRuntime: 00:00:02.000",
+    "Au:au3  urlsMoved: 4000  artifactsMoved: 4300  bytesMoved: 100000  errors: 3  totalRuntime: 20s",
     "cu1: Attempt to move artifact failed.",
     "cu5: Attempt to commit artifact failed.",
     "cu80: Attempt to commit artifact failed.",
     "",
-    "AusMoved: 3  urlsMoved: 130  artifactsMoved: 193  bytesMoved: 14000  errors: 4  totalRuntime: 00:00:03.300"
+    "AusMoved: 3  urlsMoved: 4030  artifactsMoved: 4343  bytesMoved: 104000  errors: 4  totalRuntime: 21s"
   };
 
   public void setUp() throws Exception {
@@ -132,13 +132,13 @@ public class TestV2AuMover extends LockssTestCase {
     addAu("au1", 10,10,1000, 300, 0, errs);
     auMover.updateReport();
     errs.add("cu2 Attempt to move artifact failed.");
-    addAu("au2", 20,33, 3000, 1000,1, errs);
+    addAu("au2", 20,33, 3000, 1500,1, errs);
     auMover.updateReport();
     errs.clear();
     errs.add("cu1: Attempt to move artifact failed.");
     errs.add("cu5: Attempt to commit artifact failed.");
     errs.add("cu80: Attempt to commit artifact failed.");
-    addAu("au3",100,150,10000,2000, 3, errs);
+    addAu("au3",4000,4300,100000,20000, 3, errs);
     auMover.updateReport();
     auMover.closeReport();
     Path myPath = Paths.get(auMover.getReportFileName());
