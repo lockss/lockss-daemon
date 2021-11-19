@@ -59,11 +59,11 @@ public class ManchesterUniversityPressPdfFilterFactory extends ExtractingPdfFilt
               if (str.startsWith("\ufeff")) {
                 String rewritten = new String(str.substring(1).getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_16BE);
                 if (WATERMARK_LINE_1.matcher(rewritten).find()) {
-                  accumulator.clear();
                   // now that we've seen watermark line 1, we set to true
                   SEEN_WATERMARK_LINE_1 = true;
-                  return;
                 }
+                accumulator.clear();
+                return;
               } else if (SEEN_WATERMARK_LINE_1) {
                 // the next line must be WATERMARK_LINE_2, if it exists
                 SEEN_WATERMARK_LINE_1 = false;
@@ -181,7 +181,6 @@ public class ManchesterUniversityPressPdfFilterFactory extends ExtractingPdfFilt
 
   public static void main(String[] args) throws Exception {
     String[] fileStrs = {
-
     };
     for (String fileStr : fileStrs) {
       FilterFactory fact = new ManchesterUniversityPressPdfFilterFactory();
