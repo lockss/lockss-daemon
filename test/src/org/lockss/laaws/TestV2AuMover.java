@@ -141,7 +141,7 @@ public class TestV2AuMover extends LockssTestCase {
     addAu("au3",4000,4300,100000,20000, 3, errs);
     auMover.updateReport();
     auMover.closeReport();
-    Path myPath = Paths.get(auMover.getReportFileName());
+    Path myPath = auMover.getReportFile().toPath();
     List< String > lines = null;
     try {
       lines = Files.readAllLines(myPath, StandardCharsets.UTF_8);
