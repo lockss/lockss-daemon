@@ -32,6 +32,7 @@ import java.io.*;
 import java.net.*;
 import java.security.KeyStore;
 import java.util.*;
+import java.util.function.Consumer;
 import java.util.jar.*;
 import java.util.regex.*;
 import org.apache.commons.collections.map.*;
@@ -421,8 +422,33 @@ public class PluginManager
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     synchStaticPluginList(config);
+
+    // Batch up PluginMissing alerts during startup.
+    deferredMissingPluginAlerts = new ArrayList<>();
+    // Start all configured AUs.
     configureAllPlugins(config);
+    raiseMissingPluginAlerts();
     loadablePluginsReady = true;
+  }
+
+  // Accumulate PluginMissing alerts during startup so that they'll
+  // all be grouped into one alert mail
+  private List<String> deferredMissingPluginAlerts = null;
+
+  private void enqueueMissingPluginAlert(String msg) {
+    if (deferredMissingPluginAlerts != null) {
+      deferredMissingPluginAlerts.add(msg);
+    } else {
+      raiseAlert(Alert.cacheAlert(Alert.PLUGIN_MISSING), msg);
+    }
+  }
+
+  private void raiseMissingPluginAlerts() {
+    List<String> msgs = deferredMissingPluginAlerts;
+    deferredMissingPluginAlerts = null;
+    for (String msg : msgs) {
+      raiseAlert(Alert.cacheAlert(Alert.PLUGIN_MISSING), msg);
+    }
   }
 
   public void setLoadablePluginsReady(boolean val) {
@@ -1632,7 +1658,8 @@ public class PluginManager
    * clasloader is 'null', this method will use the default
    * classloader.
    */
-  PluginInfo retrievePlugin(String pluginKey, ClassLoader loader)
+  PluginInfo retrievePlugin(String pluginKey, ClassLoader loader,
+                            Consumer<String> alertHandler)
       throws Exception {
     if (pluginfoMap.containsKey(pluginKey)) {
       return (PluginInfo)pluginfoMap.get(pluginKey);
@@ -1660,36 +1687,40 @@ public class PluginManager
                  " of " + newPlug.getPluginName());
       return info;
     } catch (PluginException.PluginNotFound e) {
-      logAndAlert(pluginName, "Plugin not found", e);
+      logAndAlert(pluginName, "Plugin not found", e, alertHandler);
     } catch (PluginException.LinkageError e) {
-      logAndAlertStack(pluginName, "Can't load plugin", e);
+      logAndAlertStack(pluginName, "Can't load plugin", e, alertHandler);
     } catch (PluginException.IncompatibleDaemonVersion e) {
-      logAndAlert(pluginName, "Incompatible Plugin", e);
+      logAndAlert(pluginName, "Incompatible Plugin", e, alertHandler);
     } catch (PluginException.InvalidDefinition e) {
-      logAndAlert(pluginName, "Error in plugin", e);
+      logAndAlert(pluginName, "Error in plugin", e, alertHandler);
     } catch (Exception e) {
-      logAndAlertStack(pluginName, "Can't load plugin", e);
+      logAndAlertStack(pluginName, "Can't load plugin", e, alertHandler);
     }
     return null;
   }
 
-  void logAndAlertStack(String pluginName, String msg, Exception e) {
+  void logAndAlertStack(String pluginName, String msg, Exception e,
+                        Consumer<String> alertHandler) {
     log.error(msg + ": " + pluginName, e);
-    alert0(pluginName, msg, e.getMessage());
+    alert0(pluginName, msg, e.getMessage(), alertHandler);
   }
 
-  void logAndAlert(String pluginName, String msg, Exception e) {
-    logAndAlert(pluginName, msg, e.getMessage());
+  void logAndAlert(String pluginName, String msg, Exception e,
+                   Consumer<String> alertHandler) {
+    logAndAlert(pluginName, msg, e.getMessage(), alertHandler);
   }
 
-  void logAndAlert(String pluginName, String msg, String emsg) {
+  void logAndAlert(String pluginName, String msg, String emsg,
+                   Consumer<String> alertHandler) {
     log.error(msg + ": " + pluginName + ": " + emsg);
-    alert0(pluginName, msg, emsg);
+    alert0(pluginName, msg, emsg, alertHandler);
   }
 
-  void alert0(String pluginName, String msg, String emsg) {
-    raiseAlert(Alert.cacheAlert(Alert.PLUGIN_NOT_LOADED), 
-	       String.format("%s: %s\n%s", msg, pluginName, emsg));
+  void alert0(String pluginName, String msg, String emsg,
+              Consumer<String> alertHandler) {
+    String alertMsg = String.format("%s: %s\n%s", msg, pluginName, emsg);
+    alertHandler.accept(alertMsg);
   }
 
   /**
@@ -1818,7 +1849,9 @@ public class PluginManager
     try {
       pluginName = pluginNameFromKey(pluginKey);
       log.debug3("Trying to retrieve "+pluginKey);
-      info = retrievePlugin(pluginKey, loader);
+      info = retrievePlugin(pluginKey, loader,
+                            (msg) ->
+                            {enqueueMissingPluginAlert(msg);});
       if (info != null) {
 	setPlugin(pluginKey, info.getPlugin());
 	pluginfoMap.put(pluginKey, info);
@@ -3250,7 +3283,11 @@ public class PluginManager
       Plugin plugin;
       PluginInfo info;
       try {
-	info = retrievePlugin(pluginName, pluginLoader);
+	info =
+          retrievePlugin(pluginName, pluginLoader,
+                         (msg) ->
+                         {raiseAlert(Alert.cacheAlert(Alert.PLUGIN_NOT_LOADED),
+                                     msg);});
 	if (info == null) {
 	  log.warning("Probable plugin packaging error: plugin " +
                       pluginName + " could not be loaded from " +
