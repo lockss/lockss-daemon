@@ -55,8 +55,8 @@ public class TestV2AuMover extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String reportFile = tempDirPath + "v2AuMigration.txt";
-    ConfigurationUtil.addFromArgs(V2AuMover.PARAM_REPORT_FILE,reportFile);
+    ConfigurationUtil.addFromArgs(V2AuMover.PARAM_REPORT_DIR, tempDirPath);
+    String reportFile = new File(tempDirPath, "v2AuMigration.txt").toString();
     auMover = new V2AuMover();
   }
 

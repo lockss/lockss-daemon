@@ -94,8 +94,9 @@ public class V2AuMover {
   public static final String PARAM_CFG_PORT = PREFIX + "cfg.port";
   public static final int DEFAULT_CFG_PORT = 24620;
   /** Path to directory holding daemon logs */
-  public static final String PARAM_LOGDIR =
-          Configuration.PREFIX +  "platform.logdirectory";
+  public static final String PARAM_REPORT_DIR =
+    ConfigManager.PARAM_PLATFORM_LOG_DIR;
+  public static final String DEFAULT_REPORT_DIR = "/tmp";
 
   public static final String PARAM_REPORT_FILE= PREFIX + "report.file";
   public static final String DEFAULT_REPORT_FILE = "v2migration.txt";
@@ -218,7 +219,7 @@ public class V2AuMover {
     collection = config.get(PARAM_V2_COLLECTION, DEFAULT_V2_COLLECTION);
     cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
     rsPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
-    String logdir = config.get(PARAM_LOGDIR);
+    String logdir = config.get(PARAM_REPORT_DIR, DEFAULT_REPORT_DIR);
     String logfile = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
     reportFile = new File(logdir, logfile);
     repoClient = new V2RestClient();
