@@ -100,6 +100,12 @@ public class Alert {
     new Alert("PluginNotLoaded").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
+  /** An attempt was made to load/create an AU whose plugin is not
+   * available */
+  public static final Alert PLUGIN_MISSING =
+    new Alert("PluginMissing").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+
   public static final Alert PLUGIN_RELOADED =
     new Alert("PluginReloaded").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
