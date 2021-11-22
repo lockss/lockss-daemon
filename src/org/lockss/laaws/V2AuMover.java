@@ -63,7 +63,8 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static java.nio.file.StandardOpenOption.CREATE_NEW;
+import static java.nio.file.StandardOpenOption.CREATE;
+import static java.nio.file.StandardOpenOption.APPEND;
 
 public class V2AuMover {
 
@@ -92,6 +93,9 @@ public class V2AuMover {
 
   public static final String PARAM_CFG_PORT = PREFIX + "cfg.port";
   public static final int DEFAULT_CFG_PORT = 24620;
+  /** Path to directory holding daemon logs */
+  public static final String PARAM_LOGDIR =
+          Configuration.PREFIX +  "platform.logdirectory";
 
   public static final String PARAM_REPORT_FILE= PREFIX + "report.file";
   public static final String DEFAULT_REPORT_FILE = "v2migration.txt";
@@ -161,7 +165,7 @@ public class V2AuMover {
    */
   private final int rsPort;
 
-  private String reportFileName;
+  private File reportFile;
 
   // Access information for the V2 Configuration Service
   private String cfgAccessUrl = null;
@@ -214,10 +218,9 @@ public class V2AuMover {
     collection = config.get(PARAM_V2_COLLECTION, DEFAULT_V2_COLLECTION);
     cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
     rsPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
-    String baseFileName = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
-    if (!StringUtil.isNullString(baseFileName)) {
-      reportFileName = getUniqueReportFileName(baseFileName);
-    }
+    String logdir = config.get(PARAM_LOGDIR);
+    String logfile = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
+    reportFile = new File(logdir, logfile);
     repoClient = new V2RestClient();
     rsStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
     rsCollectionsApiClient = new StreamingCollectionsApi(repoClient);
@@ -388,24 +391,12 @@ public class V2AuMover {
     startTime=System.currentTimeMillis();
   }
 
-  /**
-   * Provides the name of time stamped report file.
-   *
-   * @return a String with the report file name. The format is
-   *         'reportFileName-yyyy-MM-dd-HH-mm-ss.txt'.
-   */
-  private String getUniqueReportFileName(String baseFileName) {
-    return String.format("%s-%s.%s", baseFileName, dateFormat.format(TimeBase.nowDate()), "txt");
-  }
 
   void startReportFile() {
-    if(StringUtil.isNullString((reportFileName))) {
-      log.warning("Report file will not be written: No Report File configured.");
-    }
-    File file = new File(reportFileName);
+
     try {
-      log.info("Writing report to file "+ file.getAbsolutePath());
-      reportWriter = new PrintWriter(Files.newOutputStream(file.toPath(), CREATE_NEW),true);
+      log.info("Writing report to file "+ reportFile.getAbsolutePath());
+      reportWriter = new PrintWriter(Files.newOutputStream(reportFile.toPath(), CREATE, APPEND),true);
       reportWriter.println("--------------------------------------------------");
       reportWriter.println("  V2 Au Migration Report - "+ DateFormatter.now());
       reportWriter.println("--------------------------------------------------");
@@ -604,8 +595,8 @@ public class V2AuMover {
     return userPass;
   }
 
-  String getReportFileName() {
-    return reportFileName;
+  File getReportFile() {
+    return reportFile;
   }
 
   String getCfgAccessUrl() {
