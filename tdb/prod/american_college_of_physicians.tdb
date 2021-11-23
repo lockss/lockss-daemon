@@ -184,7 +184,7 @@
   
   {
 
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    plugin = org.lockss.plugin.atypon.acp.ACPJournalsPlugin
     param[base_url] = https://www.acpjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
     
