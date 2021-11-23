@@ -262,7 +262,7 @@
     au < finished ; crawling ; 2016 ; Catalan Review Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Catalan Review Volume 31 ; 31 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Catalan Review Volume 32 ; 32 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2019 ; Catalan Review Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Catalan Review Volume 33 ; 33 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2020 ; Catalan Review Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -334,7 +334,7 @@
     au < finished ; crawling ; 2016 ; Essays in Romanticism Volume 23 ; 23 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Essays in Romanticism Volume 24 ; 24 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Essays in Romanticism Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Essays in Romanticism Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Essays in Romanticism Volume 26 ; 26 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -360,7 +360,7 @@
     au < finished ; crawling ; 2016 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 8 ; 8 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 9 ; 9 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -410,7 +410,7 @@
     au < finished ; crawling ; 2016 ; Francosphères Volume 5 ; 5 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Francosphères Volume 6 ; 6 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Francosphères Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2019 ; Francosphères Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Francosphères Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; Francosphères Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -603,9 +603,9 @@
     au < finished ; crawling ; 2016 ; Journal of Romance Studies Volume 16 ; 16 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Romance Studies Volume 17 ; 17 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Journal of Romance Studies Volume 18 ; 18 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
-    
-    au < frozen ; exists ; 2019 ; Journal of Romance Studies Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Journal of Romance Studies Volume 19 ; 19 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; https://online.liverpooluniversitypress.co.uk/ ; >
+
   }
 
   {
@@ -623,8 +623,8 @@
     au < doNotProcess ; doNotProcess ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 1964 ; Labour History: A Journal of Labour and Social History Volume 6 ; 6 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 1964 ; Labour History: A Journal of Labour and Social History Volume 7 ; 7 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < exists ; exists ; 1965 ; Labour History: A Journal of Labour and Social History Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
-    au < exists ; exists ; 1965 ; Labour History: A Journal of Labour and Social History Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1965 ; Labour History: A Journal of Labour and Social History Volume 8 ; 8 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 1965 ; Labour History: A Journal of Labour and Social History Volume 9 ; 9 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 1966 ; Labour History: A Journal of Labour and Social History Volume 10 ; 10 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 1966 ; Labour History: A Journal of Labour and Social History Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 1967 ; Labour History: A Journal of Labour and Social History Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
@@ -731,7 +731,7 @@
     au < finished ; crawling ; 2017 ; Labour History: A Journal of Labour and Social History Volume 113 ; 113 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Labour History: A Journal of Labour and Social History Volume 114 ; 114 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
 
   }
 
