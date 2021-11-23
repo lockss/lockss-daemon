@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>  
   <entry>
     <string>plugin_name</string>
-    <string>American College of Physicians Plugin</string>
+    <string>American College of Physicians Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>   
   <entry>
     <string>au_name</string>
-    <string>"American College of Physicians Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American College of Physicians Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
