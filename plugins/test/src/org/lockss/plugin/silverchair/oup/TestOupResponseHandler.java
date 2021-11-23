@@ -36,7 +36,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
-import org.lockss.repository.LockssRepository;
 import org.lockss.test.*;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
@@ -62,7 +61,7 @@ public class TestOupResponseHandler extends LockssTestCase {
   static final String PLUGIN_ID = "org.lockss.plugin.silverchair.oup.ClockssOupSilverchairPlugin";
   static final String ROOT_URL = "http://academic.oup.com/";
   private MockLockssDaemon theDaemon;
-  private DefinablePlugin plugin;
+  private Plugin plugin;
 
   private static final String TEXT = "text that is longer than reported";
   private static final int LEN_TOOSHORT = TEXT.length() - 4;
@@ -71,11 +70,14 @@ public class TestOupResponseHandler extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
+
     theDaemon = getMockLockssDaemon();
-    theDaemon.getHashService();
-    theDaemon.getRepositoryManager();
-    plugin = new DefinablePlugin();
-    plugin.initPlugin(theDaemon, PLUGIN_ID);
+    PluginManager pluginMgr = theDaemon.getPluginManager();
+    pluginMgr.setLoadablePluginsReady(true);
+    theDaemon.setDaemonInited(true);
+    pluginMgr.startService();
+    theDaemon.getAlertManager();
+    theDaemon.getCrawlManager();
   }
 
   public void tearDown() throws Exception {
@@ -83,10 +85,12 @@ public class TestOupResponseHandler extends LockssTestCase {
   }
 
 
-  private DefinableArchivalUnit makeAuFromProps(Properties props)
+  private ArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (DefinableArchivalUnit)plugin.configureAu(config, null);
+    ArchivalUnit res = PluginTestUtil.createAndStartAu(PLUGIN_ID,  config);
+    plugin = res.getPlugin();
+    return res;
   }
 
   public void testHandlesExceptionResult() throws Exception {
@@ -94,7 +98,7 @@ public class TestOupResponseHandler extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(YEAR_KEY, "2017");
     props.setProperty(JID_KEY, "xxx");
-    DefinableArchivalUnit au = makeAuFromProps(props);
+    ArchivalUnit au = makeAuFromProps(props);
     String cdn_url = "https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css";
     String suppl_url = "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/biomet/Issue/105/1/1/biomet_105_1cover.png?Expires=2147483647&Signature=4zA98V__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA";
     MockLockssUrlConnection conn = new MockLockssUrlConnection();
@@ -121,12 +125,7 @@ public class TestOupResponseHandler extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(YEAR_KEY, "2017");
     props.setProperty(JID_KEY, "xxx");
-    DefinableArchivalUnit OUPau = makeAuFromProps(props);
-    LockssRepository repo =
-        (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
-            OUPau);
-    theDaemon.setLockssRepository(repo, OUPau);
-    repo.startService();
+    ArchivalUnit OUPau = makeAuFromProps(props);
     String url = ROOT_URL + "biomet/article/105/1/215/4742247";
     CIProperties cprops = new CIProperties();
     
@@ -151,12 +150,7 @@ public class TestOupResponseHandler extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(YEAR_KEY, "2017");
     props.setProperty(JID_KEY, "xxx");
-    DefinableArchivalUnit OUPau = makeAuFromProps(props);
-    LockssRepository repo =
-        (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
-            OUPau);
-    theDaemon.setLockssRepository(repo, OUPau);
-    repo.startService();
+    ArchivalUnit OUPau = makeAuFromProps(props);
     String url = ROOT_URL + "UI/app/img/favicon-32x32.png";
     CIProperties cprops = new CIProperties();
     
