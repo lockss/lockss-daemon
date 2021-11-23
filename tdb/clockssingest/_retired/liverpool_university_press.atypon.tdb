@@ -39,7 +39,7 @@
     au < finished ; crawling ; 2016 ; Archives Volume 51 ; 51 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Archives Volume 52 ; 52 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Archives Volume 53 ; 53 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Archives Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Archives Volume 54 ; 54 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; Archives Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -68,9 +68,9 @@
     au < finished ; finished ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Australian Journal of French Studies Volume 53 ; 53 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; Australian Journal of French Studies Volume 54 ; 54 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2017 ; Australian Journal of French Studies Volume 54 ; 54 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Australian Journal of French Studies Volume 55 ; 55 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Australian Journal of French Studies Volume 56 ; 56 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -177,7 +177,7 @@
     au < finished ; crawling ; 2016 ; Bulletin of Hispanic Studies Volume 93 ; 93 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Bulletin of Hispanic Studies Volume 94 ; 94 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Bulletin of Hispanic Studies Volume 95 ; 95 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -208,7 +208,7 @@
     au < finished ; crawling ; 2016 ; The Byron Journal Volume 44 ; 44 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; The Byron Journal Volume 45 ; 45 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; The Byron Journal Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; The Byron Journal Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; The Byron Journal Volume 47 ; 47 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; The Byron Journal Volume 48 ; 48 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -293,7 +293,7 @@
     au < finished ; crawling ; 2016 ; Contemporary French Civilization Volume 41 ; 41 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Contemporary French Civilization Volume 42 ; 42 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Contemporary French Civilization Volume 43 ; 43 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2019 ; Contemporary French Civilization Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Contemporary French Civilization Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -387,7 +387,7 @@
       au < finished ; crawling ; 2016 ; Extrapolation Volume 57 ; 57 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Extrapolation Volume 58 ; 58 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Extrapolation Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; Extrapolation Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; >
+      au < finished ; manifest ; 2019 ; Extrapolation Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2020 ; Extrapolation Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -460,7 +460,7 @@
     au < finished ; crawling ; 2016 ; Historical Studies in Industrial Relations Volume 37 ; 37 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Historical Studies in Industrial Relations Volume 38 ; 38 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Historical Studies in Industrial Relations Volume 39 ; 39 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Historical Studies in Industrial Relations Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -487,7 +487,7 @@
     au < finished ; crawling ; 2016 ; The Indexer: the international journal of indexing Volume 34 ; 34 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; The Indexer: the international journal of indexing Volume 35 ; 35 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; The Indexer: the international journal of indexing Volume 36 ; 36 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; The Indexer: the international journal of indexing Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; The Indexer: the international journal of indexing Volume 37 ; 37 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; The Indexer: the international journal of indexing Volume 38 ; 38 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -520,7 +520,7 @@
     au < finished ; crawling ; 2016 ; International Development Planning Review Volume 38 ; 38 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; International Development Planning Review Volume 39 ; 39 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; International Development Planning Review Volume 40 ; 40 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; International Development Planning Review Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; International Development Planning Review Volume 41 ; 41 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; International Development Planning Review Volume 42 ; 42 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -540,7 +540,7 @@
 
     au < finished ; finished ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -568,7 +568,7 @@
     au < finished ; crawling ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Journal of Literary & Cultural Disability Studies Volume 11 ; 11 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Literary & Cultural Disability Studies Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Journal of Literary & Cultural Disability Studies Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -760,7 +760,7 @@
     au < finished ; crawling ; 2016 ; Labour History Review Volume 81 [Atypon] ; 81 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Labour History Review Volume 82 [Atypon] ; 82 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Labour History Review Volume 83 [Atypon] ; 83 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2019 ; Labour History Review Volume 84 [Atypon] ; 84 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Labour History Review Volume 84 [Atypon] ; 84 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2020 ; Labour History Review Volume 85 [Atypon] ; 85 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -787,7 +787,7 @@
     au < finished ; crawling ; 2016 ; Modern Believing Volume 57 ; 57 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Modern Believing Volume 58 ; 58 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Modern Believing Volume 59 ; 59 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Modern Believing Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Modern Believing Volume 60 ; 60 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; Modern Believing Volume 61 ; 61 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -864,7 +864,7 @@
     au < finished ; crawling ; 2016 ; Music, Sound, and the Moving Image Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Music, Sound, and the Moving Image Volume 11 ; 11 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Music, Sound, and the Moving Image Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Music, Sound, and the Moving Image Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -909,7 +909,7 @@
     au < finished ; finished ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2016-2017 ; Quaker Studies Volume 21 ; 21 ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017-2018 ; Quaker Studies Volume 22 ; 22 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
@@ -945,7 +945,7 @@
     au < finished ; crawling ; 2016 ; Romani Studies Volume 26 ; 26 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Romani Studies Volume 27 ; 27 ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Romani Studies Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Romani Studies Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Romani Studies Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2020 ; Romani Studies Volume 30 ; 30 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -985,7 +985,7 @@
     au < finished ; crawling ; 2017 ; Quebec Studies Volume 64 ; 64 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Quebec Studies Volume 65 ; 65 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Quebec Studies Volume 66 ; 66 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2019 ; Quebec Studies Volume 67 ; 67 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Quebec Studies Volume 67 ; 67 ; https://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2019 ; Quebec Studies Volume 68 ; 68 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Quebec Studies Volume 69 ; 69 ; https://online.liverpooluniversitypress.co.uk/ ; >
     au < expected ; exists ; 2020 ; Quebec Studies Volume 70 ; 70 ; https://online.liverpooluniversitypress.co.uk/ ; >
@@ -1014,7 +1014,7 @@
     au < finished ; crawling ; 2016 ; Science Fiction Film and Television Volume 9 ; 9 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Science Fiction Film and Television Volume 10 ; 10 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Science Fiction Film and Television Volume 11 ; 11 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Science Fiction Film and Television Volume 12 ; 12 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -1045,7 +1045,7 @@
     au < finished ; crawling ; 2016 ; Sculpture Journal Volume 25 ; 25 ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Sculpture Journal Volume 26 ; 26 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Sculpture Journal Volume 27 ; 27 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Sculpture Journal Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Sculpture Journal Volume 28 ; 28 ; https://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2020 ; Sculpture Journal Volume 29 ; 29 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -1069,7 +1069,7 @@
     au < finished ; crawling ; 2016 ; Studia Hibernica Volume 42 ; 42 ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Studia Hibernica Volume 43 ; 43 ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Studia Hibernica Volume 44 ; 44 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2019 ; Studia Hibernica Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Studia Hibernica Volume 45 ; 45 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
@@ -1265,7 +1265,7 @@
     au < finished ; crawling ; 2016 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 165 ; 165 ; https://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 166 ; 166 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 167 ; 167 ; https://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 ; https://online.liverpooluniversitypress.co.uk/ ; >
+    au < finished ; manifest ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 ; https://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; https://online.liverpooluniversitypress.co.uk/ ; >
 
   }
