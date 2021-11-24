@@ -5098,6 +5098,7 @@
 
       param[journal_issn] = 2395-3977
 #      param[base_url] = http://www.cancertm.com/
+      #Moved to publisher Plascipub per Medknow.
 
       au < released ; 2015 ; Cancer Translational Medicine Volume 1 ; 2015 ; 1 ; http://www.cancertm.com/ >
       au < released ; 2016 ; Cancer Translational Medicine Volume 2 ; 2016 ; 2 ; http://www.cancertm.com/ >
@@ -5105,7 +5106,6 @@
       au < released ; 2018 ; Cancer Translational Medicine Volume 4 ; 2018 ; 4 ; http://www.cancertm.com/ >
       au < released ; 2019 ; Cancer Translational Medicine Volume 5 ; 2019 ; 5 ; https://www.cancertm.com/ >
       au < released ; 2020 ; Cancer Translational Medicine Volume 6 ; 2020 ; 6 ; https://www.cancertm.com/ >
-      au < expected ; 2021 ; Cancer Translational Medicine Volume 7 ; 2021 ; 7 ; https://www.cancertm.com/ >
 
   }
 
@@ -8625,6 +8625,7 @@
 
       param[journal_issn] = 2468-5585
 #      param[base_url] = http://www.translsurg.com/
+      #Moved to publisher Plascipub per Medknow.
 
       au < released ; 2016 ; Translational Surgery Volume 1 ; 2016 ; 1 ; http://www.translsurg.com/ >
       au < released ; 2017 ; Translational Surgery Volume 2 ; 2017 ; 2 ; http://www.translsurg.com/ >
@@ -9626,7 +9627,8 @@
 
       title <
         name = International Journal of Food and Nutritional Sciences ;
-        eissn = 2319-1775
+        issn = 2319-1775 ;
+        eissn = 2320-7876
       >
 
       param[journal_issn] = 2319-1775
