@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -154,7 +154,13 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>required_daemon_version</string>
-        <string>1.73.0</string>
+        <string>1.75.8</string>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>Retryable=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_30S</string>
+        </list>
     </entry>
     <entry>
         <!-- Web Archiving Systems API (WASAPI) -->
