@@ -118,7 +118,7 @@ public class TestHighWireJCorePlugin extends LockssTestCase {
         "http://www.example.com/lockss-manifest/vol_303_manifest.html" 
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Press Plugin (JCore), Base URL http://www.example.com/, Volume 303",
+    assertEquals("Parent HighWire Press Journals Plugin (JCore), Base URL http://www.example.com/, Volume 303",
         au.getName());
     assertEquals(ListUtil.list(starturl[0]), au.getStartUrls());
   }

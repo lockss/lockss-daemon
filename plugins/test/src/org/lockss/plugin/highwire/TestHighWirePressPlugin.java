@@ -97,7 +97,7 @@ public class TestHighWirePressPlugin extends LockssTestCase {
     String starturl =
         "http://www.example.com/lockss-manifest/vol_322_manifest.dtl";
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Press Plugin (Legacy H10c), Base URL http://www.example.com/, Volume 322", 
+    assertEquals("HighWire Press Journals Plugin (Legacy H10c), Base URL http://www.example.com/, Volume 322", 
         au.getName());
     assertEquals(ListUtil.list(starturl), au.getStartUrls());
   }

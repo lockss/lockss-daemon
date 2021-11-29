@@ -196,10 +196,10 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void testgetName() throws Exception {
     DefinableArchivalUnit au =
       makeAu(new URL("http://shadow1.stanford.edu/"), 42);
-    assertEquals("HighWire Press Plugin (Legacy H10a), Base URL http://shadow1.stanford.edu/, Volume 42", au.getName());
+    assertEquals("HighWire Press Journals Plugin (Legacy H10a), Base URL http://shadow1.stanford.edu/, Volume 42", au.getName());
     DefinableArchivalUnit au1 =
       makeAu(new URL("http://www.bmj.com/"), 42);
-    assertEquals("HighWire Press Plugin (Legacy H10a), Base URL http://www.bmj.com/, Volume 42", au1.getName());
+    assertEquals("HighWire Press Journals Plugin (Legacy H10a), Base URL http://www.bmj.com/, Volume 42", au1.getName());
   }
 
  public void testGetFilterRuleNoContentTytpe() throws Exception {

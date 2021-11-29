@@ -119,7 +119,7 @@ public class TestHighWirePlugin extends LockssTestCase {
 //     props.setProperty(YEAR_KEY, "2004");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Press Plugin (Legacy H10a), Base URL http://www.example.com/, Volume 322", au.getName());
+    assertEquals("HighWire Press Journals Plugin (Legacy H10a), Base URL http://www.example.com/, Volume 322", au.getName());
   }
 
   public void testGetPluginId() {

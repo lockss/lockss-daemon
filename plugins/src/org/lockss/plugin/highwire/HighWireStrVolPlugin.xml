@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWire Press Plugin (Legacy H10b)</string>
+    <string>HighWire Press Journals Plugin (Legacy H10b)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -92,7 +92,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"HighWire Press Plugin (Legacy H10b), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"HighWire Press Journals Plugin (Legacy H10b), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

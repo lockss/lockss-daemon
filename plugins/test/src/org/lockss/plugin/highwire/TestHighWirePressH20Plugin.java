@@ -114,7 +114,7 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Press Plugin (Legacy H20), Base URL http://www.example.com/, Volume 322", au.getName());
+    assertEquals("HighWire Press Journals Plugin (Legacy H20), Base URL http://www.example.com/, Volume 322", au.getName());
     assertEquals(ListUtil.list(starturls), au.getStartUrls());
   }
 
