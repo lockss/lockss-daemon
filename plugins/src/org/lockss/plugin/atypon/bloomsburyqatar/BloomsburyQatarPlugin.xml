@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>deprecated - publisher formerly known as Bloomsbury Qatar Foundation</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Bloomsbury Qatar Foundation Plugin</string>
+    <string>HBKU Press Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Bloomsbury Qatar Foundation Plugin, Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"HBKU Press Journals Plugin (Legacy), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
