@@ -252,7 +252,7 @@
 
     au < manifest ; 2008 ; Annals of Pediatric Cardiology Volume 1 ; 2008 ; 1 ; https://www.annalspc.com/ >
     au < manifest ; 2009 ; Annals of Pediatric Cardiology Volume 2 ; 2009 ; 2 ; https://www.annalspc.com/ >
-    au < manifest ; 2010 ; Annals of Pediatric Cardiology Volume 3 ; 2010 ; 3 ; https://www.annalspc.com/ >
+    au < ready ; 2010 ; Annals of Pediatric Cardiology Volume 3 ; 2010 ; 3 ; https://www.annalspc.com/ >
     au < released ; 2011 ; Annals of Pediatric Cardiology Volume 4 ; 2011 ; 4 ; http://www.annalspc.com/ >
     au < released ; 2012 ; Annals of Pediatric Cardiology Volume 5 ; 2012 ; 5 ; http://www.annalspc.com/ >
     au < released ; 2013 ; Annals of Pediatric Cardiology Volume 6 ; 2013 ; 6 ; http://www.annalspc.com/ >
@@ -426,7 +426,7 @@
     au < manifest ; 2007 ; Asian Journal of Transfusion Science Volume 1 ; 2007 ; 1 ; https://www.ajts.org/ >
     au < manifest ; 2008 ; Asian Journal of Transfusion Science Volume 2 ; 2008 ; 2 ; https://www.ajts.org/ >
     au < manifest ; 2009 ; Asian Journal of Transfusion Science Volume 3 ; 2009 ; 3 ; https://www.ajts.org/ >
-    au < manifest ; 2010 ; Asian Journal of Transfusion Science Volume 4 ; 2010 ; 4 ; https://www.ajts.org/ >
+    au < ready ; 2010 ; Asian Journal of Transfusion Science Volume 4 ; 2010 ; 4 ; https://www.ajts.org/ >
     au < released ; 2011 ; Asian Journal of Transfusion Science Volume 5 ; 2011 ; 5 ; http://www.ajts.org/ >
     au < released ; 2012 ; Asian Journal of Transfusion Science Volume 6 ; 2012 ; 6 ; http://www.ajts.org/ >
     au < released ; 2013 ; Asian Journal of Transfusion Science Volume 7 ; 2013 ; 7 ; http://www.ajts.org/ >
@@ -662,7 +662,7 @@
     au < manifest ; 2007 ; Hepatitis B Annual Volume 4 ; 2007 ; 4 ; https://www.hepatitisbannual.org/ >
     au < manifest ; 2008 ; Hepatitis B Annual Volume 5 ; 2008 ; 5 ; https://www.hepatitisbannual.org/ >
     au < manifest ; 2009 ; Hepatitis B Annual Volume 6 ; 2009 ; 6 ; https://www.hepatitisbannual.org/ >
-    au < manifest ; 2010 ; Hepatitis B Annual Volume 7 ; 2010 ; 7 ; https://www.hepatitisbannual.org/ >
+    au < ready ; 2010 ; Hepatitis B Annual Volume 7 ; 2010 ; 7 ; https://www.hepatitisbannual.org/ >
     au < released ; 2011 ; Hepatitis B Annual Volume 8 ; 2011 ; 8 ; http://www.hepatitisbannual.org/ >
     au < released ; 2012 ; Hepatitis B Annual Volume 9 ; 2012 ; 9 ; http://www.hepatitisbannual.org/ >
 
@@ -679,7 +679,7 @@
 
     param[journal_issn] = 2229-5178
 
-    au < manifest ; 2010 ; Indian Dermatology Online Journal Volume 1 ; 2010 ; 1 ; https://www.idoj.in/ >
+    au < ready ; 2010 ; Indian Dermatology Online Journal Volume 1 ; 2010 ; 1 ; https://www.idoj.in/ >
     au < released ; 2011 ; Indian Dermatology Online Journal Volume 2 ; 2011 ; 2 ; http://www.idoj.in/ >
     au < released ; 2012 ; Indian Dermatology Online Journal Volume 3 ; 2012 ; 3 ; http://www.idoj.in/ >
     au < released ; 2013 ; Indian Dermatology Online Journal Volume 4 ; 2013 ; 4 ; http://www.idoj.in/ >
@@ -4398,7 +4398,7 @@
     au < manifest ; 2007 ; Saudi Journal of Gastroenterology Volume 13 ; 2007 ; 13 ; https://www.saudijgastro.com/ >
     au < manifest ; 2008 ; Saudi Journal of Gastroenterology Volume 14 ; 2008 ; 14 ; https://www.saudijgastro.com/ >
     au < manifest ; 2009 ; Saudi Journal of Gastroenterology Volume 15 ; 2009 ; 15 ; https://www.saudijgastro.com/ >
-    au < manifest ; 2010 ; Saudi Journal of Gastroenterology Volume 16 ; 2010 ; 16 ; https://www.saudijgastro.com/ >
+    au < ready ; 2010 ; Saudi Journal of Gastroenterology Volume 16 ; 2010 ; 16 ; https://www.saudijgastro.com/ >
     au < released ; 2011 ; Saudi Journal of Gastroenterology Volume 17 ; 2011 ; 17 ; http://www.saudijgastro.com/ >
     au < released ; 2012 ; Saudi Journal of Gastroenterology Volume 18 ; 2012 ; 18 ; http://www.saudijgastro.com/ >
     au < released ; 2013 ; Saudi Journal of Gastroenterology Volume 19 ; 2013 ; 19 ; http://www.saudijgastro.com/ >
@@ -4545,7 +4545,7 @@
     param[journal_issn] = 0974-7796
 
     au < manifest ; 2009 ; Urology Annals Volume 1 ; 2009 ; 1 ; https://www.urologyannals.com/ >
-    au < manifest ; 2010 ; Urology Annals Volume 2 ; 2010 ; 2 ; https://www.urologyannals.com/ >
+    au < ready ; 2010 ; Urology Annals Volume 2 ; 2010 ; 2 ; https://www.urologyannals.com/ >
     au < released ; 2011 ; Urology Annals Volume 3 ; 2011 ; 3 ; http://www.urologyannals.com/ >
     au < released ; 2012 ; Urology Annals Volume 4 ; 2012 ; 4 ; http://www.urologyannals.com/ >
     au < released ; 2013 ; Urology Annals Volume 5 ; 2013 ; 5 ; http://www.urologyannals.com/ >
@@ -7609,8 +7609,8 @@
 
       param[journal_issn] = 2589-8302
 
-      au < manifest ; 2018 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 11 ; 2018 ; 11 ; https://www.mjdrdypv.org/ >
-      au < manifest ; 2019 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 12 ; 2019 ; 12 ; https://www.mjdrdypv.org/ >
+      au < ready ; 2018 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 11 ; 2018 ; 11 ; https://www.mjdrdypv.org/ >
+      au < ready ; 2019 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 12 ; 2019 ; 12 ; https://www.mjdrdypv.org/ >
       au < manifest ; 2020 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 13 ; 2020 ; 13 ; https://www.mjdrdypv.org/ >
       au < manifest ; 2021 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 14 ; 2021 ; 14 ; https://www.mjdrdypv.org/ >
 
@@ -8902,7 +8902,7 @@
 #      param[base_url] = http://www.anip.co.in/
 
       au < released ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; http://www.anip.co.in/ >
-      au < manifest ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; https://www.anip.co.in/ >
+      au < ready ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; https://www.anip.co.in/ >
       au < released ; 2019 ; Annals of Indian Psychiatry Volume 3 ; 2019 ; 3 ; https://www.anip.co.in/ >
       au < released ; 2020 ; Annals of Indian Psychiatry Volume 4 ; 2020 ; 4 ; https://www.anip.co.in/ >
       au < manifest ; 2021 ; Annals of Indian Psychiatry Volume 5 ; 2021 ; 5 ; https://www.anip.co.in/ >
@@ -9084,7 +9084,7 @@
       param[journal_issn] = 2221-1691
 #      param[base_url] = http://www.apjtb.org/
 
-      au < manifest ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 ; https://www.apjtb.org/ >
+      au < ready ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 ; https://www.apjtb.org/ >
       au < released ; 2019 ; Asian Pacific Journal of Tropical Biomedicine Volume 9 ; 2019 ; 9 ; https://www.apjtb.org/ >
       au < released ; 2020 ; Asian Pacific Journal of Tropical Biomedicine Volume 10 ; 2020 ; 10 ; https://www.apjtb.org/ >
       au < manifest ; 2021 ; Asian Pacific Journal of Tropical Biomedicine Volume 11 ; 2021 ; 11 ; https://www.apjtb.org/ >
@@ -9143,7 +9143,7 @@
 #      param[base_url] = http://www.cardiologyplus.org/
 
       au < released ; 2017 ; Cardiology Plus Volume 2 ; 2017 ; 2 ; http://www.cardiologyplus.org/ >
-      au < manifest ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 ; https://www.cardiologyplus.org/ >
+      au < ready ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 ; https://www.cardiologyplus.org/ >
       au < released ; 2019 ; Cardiology Plus Volume 4 ; 2019 ; 4 ; https://www.cardiologyplus.org/ >
       au < released ; 2020 ; Cardiology Plus Volume 5 ; 2020 ; 5 ; https://www.cardiologyplus.org/ >
       au < manifest ; 2021 ; Cardiology Plus Volume 6 ; 2021 ; 6 ; https://www.cardiologyplus.org/ >
@@ -9501,15 +9501,15 @@
       param[journal_issn] = 2277-9019
 #      param[base_url] = http://www.ijrconline.org/
 
-      au < manifest ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ >
-      au < manifest ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ >
-      au < manifest ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ >
-      au < manifest ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ >
-      au < manifest ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ >
+      au < ready ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ >
+      au < ready ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ >
+      au < ready ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ >
+      au < ready ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ >
+      au < ready ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ >
       au < superseded ; 2017 ; Indian Journal of Respiratory Care Volume 6 [superseded] ; 2017 ; 6 ; http://www.ijrconline.org/ >
       au < manifest ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ >
-      au < manifest ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ >
-      au < manifest ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ >
+      au < ready ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ >
+      au < ready ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ >
       au < manifest ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ >
       au < manifest ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ >
 
@@ -9633,9 +9633,9 @@
 
       param[journal_issn] = 2319-1775
 
-      au < manifest ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ >
-      au < manifest ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ >
-      au < manifest ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ >
+      au < ready ; 2012 ; International Journal of Food and Nutritional Sciences Volume 1 ; 2012 ; 1 ; https://www.ijfans.org/ >
+      au < ready ; 2013 ; International Journal of Food and Nutritional Sciences Volume 2 ; 2013 ; 2 ; https://www.ijfans.org/ >
+      au < ready ; 2014 ; International Journal of Food and Nutritional Sciences Volume 3 ; 2014 ; 3 ; https://www.ijfans.org/ >
       au < notReady ; 2015 ; International Journal of Food and Nutritional Sciences Volume 4 ; 2015 ; 4 ; https://www.ijfans.org/ > #500
       au < notReady ; 2016 ; International Journal of Food and Nutritional Sciences Volume 5 ; 2016 ; 5 ; https://www.ijfans.org/ > #500
       au < notReady ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ > #500
