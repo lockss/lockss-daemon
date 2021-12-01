@@ -3,9 +3,14 @@ package org.lockss.plugin.archiveit;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.CuIterable;
 import org.lockss.util.Logger;
 
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -54,6 +59,8 @@ public class ArchiveItApiJsonLinkExtractor implements LinkExtractor {
     JsonNode filesNode = rootNode.path("files");
 
     List<String> warcUrls = new ArrayList<String>();
+    CachedUrlSet cachedUrls = au.getAuCachedUrlSet();
+    CuIterable cachedUrlIter = cachedUrls.getCuIterable();
 
     String apiUrl;
 
@@ -69,7 +76,7 @@ public class ArchiveItApiJsonLinkExtractor implements LinkExtractor {
         int size =  file.path("size").asInt(-1);
         int collection =  file.path("collection").asInt(-1);
         int crawl =  file.path("crawl").asInt(-1);
-        String crawlTime =  file.path("crawl-time").asText(null);
+        String crawlTime =  file.path("crawl-time").asText(null); // 2019-05-17T18:05:22.502000Z
         String crawlStart =  file.path("crawl-start").asText(null);
         String storeTime =  file.path("store-time").asText(null);
         JsonNode locationsNode =  file.path("locations"); // url to warcs.archive-it.org & archive.org
@@ -79,7 +86,25 @@ public class ArchiveItApiJsonLinkExtractor implements LinkExtractor {
           for (int j = 1 ; locationIter.hasNext() ; ++j) {
             String location = locationIter.next().asText(null);
             if (location.contains(WEBDATAFILE_URL)) {
-              warcUrls.add(location);
+              boolean storeIt = true;
+              // lets check if this url is already stored
+              if (cachedUrls.containsUrl(location)) {
+                CachedUrl cu = au.makeCachedUrl(location);
+                if (cu.hasContent()) {
+                  // lets check if the WASAPI content has been updated since the last time this url was collected
+                  LocalDateTime archiveItCrawlTime = LocalDateTime.parse(crawlTime, DateTimeFormatter.ISO_DATE_TIME);
+                  String dateStr = cu.getProperties().get("date").toString(); // Thu, 26 Aug 2021 18:21:55 GMT
+                  LocalDateTime cachedUrlTime = LocalDateTime.parse(dateStr, DateTimeFormatter.RFC_1123_DATE_TIME);
+                  if (archiveItCrawlTime.isBefore(cachedUrlTime)) {
+                    // the content on WASAPI is older than the stored content, no need to refetch
+                    log.info("Archive It file is older than stored content. Skipping.");
+                    storeIt = false;
+                  }
+                }
+              }
+              if (storeIt) {
+                warcUrls.add(location);
+              }
             }
           }
         }
