@@ -29,7 +29,7 @@
       au < zapped ; finished ; 2015 ; Springer Source Content 2015 ; 2015 >
       au < zapped ; finished ; 2016 ; Springer Source Content 2016 ; 2016 >
       au < zapped ; finished ; 2017 ; Springer Source Content 2017 ; 2017 >
-   	#no more AUs expected using this plugin
+      #no more AUs expected using this plugin
 
     }
 
@@ -52,7 +52,7 @@
       au < zapped ; finished ; 2019 ; Springer Source Content 2019_3 ; 2019_3 >
       au < zapped ; finished ; 2019 ; Springer Source Content 2019_4 ; 2019_4 >
       au < zapped ; finished ; 2019 ; Springer Source Content 2019_5 (Legacy) ; 2019_5 >
-   	#no more AUs expected using this plugin
+      #no more AUs expected using this plugin
 
     }
 
@@ -90,6 +90,11 @@
       au < readySource ; crawling ; 2021 ; Springer Source Content 2021_10 ; 2021_10 >
       au < readySource ; crawling ; 2021 ; Springer Source Content 2021_11 ; 2021_11 >
       au < expected ; exists ; 2021 ; Springer Source Content 2021_12 ; 2021_12 >
+
+      au < expected ; exists ; 2022 ; Springer Source Content 2022_01 ; 2022_01 >
+      au < expected ; exists ; 2022 ; Springer Source Content 2022_02 ; 2022_02 >
+      au < expected ; exists ; 2022 ; Springer Source Content 2022_03 ; 2022_03 >
+      au < expected ; exists ; 2022 ; Springer Source Content 2022_04 ; 2022_04 >
 
     }
 
