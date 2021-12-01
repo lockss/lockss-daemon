@@ -293,38 +293,38 @@
   }
 }
   
-{
-
-  publisher <
-    name = Sims Institute Press Ltd
-  >
-
-  {
-  
-    title < 
-      name = Journal of Experimental & Clinical Assisted Reproduction ;
-      eissn = 1743-1050
-    >
-    
-    provider = Scholarly Exchange
-    plugin = needs.plugin
-    implicit < status ; year ; name ; volume ; param[year] >
-    param[base_url] = http://www.jexpclinassistreprod.com/
-    param[journal_id] = JECAR
-    #Journal closed to new content. Last volume 2011.
-    #Changed from ojs to word press
-
-    au < doNotProcess ; 2004 ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 ; 2004 >
-    au < doNotProcess ; 2005 ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 ; 2005 >
-    au < doNotProcess ; 2006 ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 ; 2006 >
-    au < doNotProcess ; 2007 ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 ; 2007 >
-    au < doNotProcess ; 2008 ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 ; 2008 >
-    au < doNotProcess ; 2009 ; Journal of Experimental & Clinical Assisted Reproduction Volume 6 ; 6 ; 2009 >
-    au < doNotProcess ; 2010 ; Journal of Experimental & Clinical Assisted Reproduction Volume 7 ; 7 ; 2010 >
-    au < doNotProcess ; 2011 ; Journal of Experimental & Clinical Assisted Reproduction Volume 8 ; 8 ; 2011 >
-    
-  }
-}
+#{
+#
+#  publisher <
+#    name = Sims Institute Press Ltd
+#  >
+#
+#  {
+#  
+#    title < 
+#      name = Journal of Experimental & Clinical Assisted Reproduction ;
+#      eissn = 1743-1050
+#    >
+#    
+#    provider = Scholarly Exchange
+#    plugin = needs.plugin
+#    implicit < status ; year ; name ; volume ; param[year] >
+#    param[base_url] = http://www.jexpclinassistreprod.com/
+#    param[journal_id] = JECAR
+#    #Journal closed to new content. Last volume 2011.
+#    #Changed from ojs to word press
+#
+#    au < doNotProcess ; 2004 ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 ; 2004 >
+#    au < doNotProcess ; 2005 ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 ; 2005 >
+#    au < doNotProcess ; 2006 ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 ; 2006 >
+#    au < doNotProcess ; 2007 ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 ; 2007 >
+#    au < doNotProcess ; 2008 ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 ; 2008 >
+#    au < doNotProcess ; 2009 ; Journal of Experimental & Clinical Assisted Reproduction Volume 6 ; 6 ; 2009 >
+#    au < doNotProcess ; 2010 ; Journal of Experimental & Clinical Assisted Reproduction Volume 7 ; 7 ; 2010 >
+#    au < doNotProcess ; 2011 ; Journal of Experimental & Clinical Assisted Reproduction Volume 8 ; 8 ; 2011 >
+#    
+#  }
+#}
   
 {
 
