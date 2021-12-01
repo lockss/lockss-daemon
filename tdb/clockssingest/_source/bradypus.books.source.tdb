@@ -3,7 +3,8 @@
   publisher <
     name = BraDypUS ;
     info[contract] = 2013 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
     plugin = org.lockss.plugin.clockss.bradypus.ClockssBradypusBooksSourcePlugin

@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = BioOne Complete ;
+    name = BioOne ;
+    info[contract] = 2013 ; #earliest of contracts for different publishers
     info[tester] = S ;
     info[platform] = Source
   >

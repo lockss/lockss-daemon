@@ -3,7 +3,8 @@
   publisher <
     name = Association of Research Libraries ;
     info[contract] = 2011 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source or Warc?
   >
 
   {
@@ -18,6 +19,6 @@
     implicit < status ; status2 ; year ; name ; param[year] >
     
     au < zapped ; finished ; 2016 ; Association of Research Libraries Source Content 2016 ; 2016 >
-        
+
   }
 }

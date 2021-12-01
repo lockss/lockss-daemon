@@ -3,7 +3,7 @@
   publisher <
     name = Bioscience Research Institute ;
     info[contract] = 2021 ;
-    info[tester] = MM ;
+    info[tester] = S ;
     info[platform] = Source
   >
 
@@ -21,6 +21,7 @@
 
 
     au < readySource ; crawling ; 2021 ; Bioscience Research Institute Source Content 2021_01 ; 2021_01 >
+    au < expected ; exists ; 2022 ; Bioscience Research Institute Source Content 2022_01 ; 2022_01 >
 
   }
 
