@@ -1,9 +1,10 @@
 {
 
   publisher <
-    name = Centre Mersenne for open scientific publishing ;
+    name = Centre Mersenne for Open Scientific Publishing ;
     info[contract] = 2017 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -24,6 +25,7 @@
     au < readySource ; crawling ; 2021 ; Centre Mersenne Source Content 2021 ; 2021 >
     #Plugin update to ignore content - JIRA LXPLUG-2080
     au < readySource ; crawling ; 2021 ; Centre Mersenne Source Content 2021_01 ; 2021_01 >
+    au < expected ; exists ; 2021 ; Centre Mersenne Source Content 2022_01 ; 2022_01 >
 
 
   }

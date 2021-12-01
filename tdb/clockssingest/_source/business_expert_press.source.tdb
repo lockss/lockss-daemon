@@ -3,7 +3,8 @@
   publisher <
     name = Business Expert Press ;
     info[contract] = 2011 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -26,6 +27,7 @@
     au < zapped ; finished ; 2019 ; Business Expert Press Source Content 2019 ; 2019 >
     au < zapped ; finished ; 2020 ; Business Expert Press Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; Business Expert Press Source Content 2021 ; 2021 >
+    au < expected ; exists ; 2022 ; Business Expert Press Source Content 2022 ; 2022 >
 
   }
 

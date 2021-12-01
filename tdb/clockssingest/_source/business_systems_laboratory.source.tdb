@@ -3,7 +3,8 @@
   publisher <
     name = Business Systems Laboratory ;
     info[contract] = 2013 ;
-    info[tester] = S 
+    info[tester] = S ;
+    info[platform] = WARC
   >
     plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
     hidden[proxy] = DIRECT
