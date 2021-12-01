@@ -5,7 +5,7 @@
     #info[back] = 1900 ;
     info[tester] = 8 ;
     info[poller] = 3 ;
-    comment[platform] = Atypon/Abstracts. RT11022
+    info[platform] = Atypon/Abstracts. RT11022
  >
   plugin = needs.plugin
   param[base_url] = https://library.seg.org/
