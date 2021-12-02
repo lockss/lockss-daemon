@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -122,6 +122,12 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"^%s(webdatafile|wasapi)", base_url</string>
             <string>1,"^https://warcs\.archive-it\.org/"</string>
             <string>1,"^https://archive\.org/download/"</string>
+            <!-- synthetic url, if you want to update the pattern you must update it in all of these places
+                 1. ArchiveItApiPlugin - crawl_rules
+                 2. ArchiveItApiCrawlSeed.populateUrlList()
+                 3. ArchiveItApiFeatureUrlHelperFactory.getSyntheticUrl()
+            -->
+            <string>1,"^%sorganization=", base_url</string>
             <!-- redirects to subdomains with this pattern occur
                 ia903003.us.archive.org/31/items
              -->

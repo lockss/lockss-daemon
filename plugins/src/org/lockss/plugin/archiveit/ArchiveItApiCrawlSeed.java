@@ -45,6 +45,10 @@ import org.lockss.util.urlconn.CacheException;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -80,10 +84,21 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
    *
    * @since 1.67.5
    */
-  protected List<String> urlList;
+  protected List<String> fetchUrls;
+
+
+  /**
+   * <p>
+   * All urls in this au, used to construct a synthetic landing page.
+   * </p>
+   *
+   * @since 1.67.5
+   */
+  protected List<String> allUrls;
 
   protected String baseUrl;
   protected String collection;
+  protected String organization;
 
   /**
    * <p>
@@ -107,18 +122,20 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
       throws ArchivalUnit.ConfigurationException, PluginException, IOException {
     this.baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     this.collection = au.getConfiguration().get(ConfigParamDescr.COLLECTION.getKey());
-    this.urlList = null;
+    this.organization = au.getConfiguration().get("organization");
+    this.fetchUrls = null;
+    this.allUrls = null;
   }
 
   @Override
   public Collection<String> doGetStartUrls() throws PluginException, IOException {
-    if (urlList == null) {
+    if (fetchUrls == null) {
       populateUrlList();
     }
-    if (urlList.isEmpty()) {
+    if (fetchUrls.isEmpty()) {
       throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
     }
-    return urlList;
+    return fetchUrls;
   }
 
   /**
@@ -131,8 +148,15 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
    */
   protected void populateUrlList() throws IOException {
     AuState aus = AuUtil.getAuState(au);
-    urlList = new ArrayList<String>();
-    String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
+    allUrls = new ArrayList<>();
+    fetchUrls = new ArrayList<>();
+    // synthetic url, if you want to update the pattern you must update it in all of these places
+    // 1. ArchiveItApiPlugin - crawl_rules
+    // 2. ArchiveItApiCrawlSeed.populateUrlList()
+    // 3. ArchiveItApiFeatureUrlHelperFactory.getSyntheticUrl()
+    String storeUrl = baseUrl +
+        "organization=" + UrlUtil.encodeUrl(organization) +
+        "&collection=" + UrlUtil.encodeUrl(collection);
     //In order to query the metadata service less if this is a normal
     //recrawl and we think the intial crawl was good just grab all the start
     //URLs from the AU
@@ -147,7 +171,7 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
         String url = cu.getUrl();
         Matcher mat = articlePattern.matcher(url);
         if (mat.find()) {
-          urlList.add(url);
+          allUrls.add(url);
         }
       }
     } else {
@@ -170,7 +194,7 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
         facade.getCrawlerStatus().addPendingUrl(url);
 
         // Make request
-        UrlFetcher.FetchResult fr = null;
+        UrlFetcher.FetchResult fr;
         try {
           fr = uf.fetch();
         }
@@ -203,13 +227,8 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
 
       }
     }
-    Collections.sort(urlList);
-    makeStartUrlContent(urlList, storeUrl);
-    log.debug2(String.format("Ending with %d URLs", urlList.size()));
-    if (log.isDebug3()) {
-      log.debug3("Start URLs: " + urlList.toString());
-
-    }
+    Collections.sort(allUrls);
+    makeStartUrlContent(allUrls, storeUrl);
   }
 
   protected String makeApiUrl(int page) {
@@ -244,7 +263,7 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
           @Override
           public void consume() throws IOException {
             // Apply link extractor to URL and output results into a list
-            final Set<String> warcUrls = new HashSet<String>();
+            List<Map.Entry<String, String>> warcUrlsAndTimes = new ArrayList<>();
             try {
               String au_cset = AuUtil.getCharsetOrDefault(fud.headers);
               String cset = CharsetUtil.guessCharsetFromStream(fud.input, au_cset);
@@ -252,7 +271,8 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
                   fud.input,
                   cset,
                   fud.origUrl,
-                  url1 -> warcUrls.add(url1));
+                  urlAndTime -> warcUrlsAndTimes.add(urlAndTime)
+              );
             }
             catch (IOException | PluginException ioe) {
               log.debug2("Link extractor threw", ioe);
@@ -260,12 +280,17 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
             }
             finally {
               // Logging
-              log.debug2(String.format("Step ending with %d URLs", warcUrls.size()));
-              if (log.isDebug3()) {
-                log.debug3("URLs from step: " + warcUrls.toString());
-              }
+              log.debug2(String.format("Step ending with %d URLs", warcUrlsAndTimes.size()));
+              List toFetchWarcs = getOnlyNeedFetchedUrls(warcUrlsAndTimes);
+              log.debug2(String.format("Needing to fetch or refetch %d URLS", toFetchWarcs.size()));
+              List allWarcs = getAllUrls(warcUrlsAndTimes);
               // Output accumulated URLs to start URL list
-              urlList.addAll(warcUrls);
+              if (toFetchWarcs != null) {
+                fetchUrls.addAll(toFetchWarcs);
+              }
+              if (allWarcs != null) {
+                allUrls.addAll(allWarcs);
+              }
             }
           }
         };
@@ -312,6 +337,53 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
     );
     UrlCacher cacher = facade.makeUrlCacher(ud);
     cacher.storeContent();
+  }
+
+  protected List<String> getOnlyNeedFetchedUrls(List<Map.Entry<String, String>> urlsAndTimes) {
+    boolean storeIt;
+    // lets check if this url is already stored
+    CachedUrlSet cachedUrls = au.getAuCachedUrlSet();
+    List<String> needFetched = new ArrayList<>();
+    String url;
+    String crawlTime;
+    for (Map.Entry<String, String> urlAndTime : urlsAndTimes) {
+      url = urlAndTime.getKey();
+      crawlTime = urlAndTime.getValue();
+      storeIt = true;
+      if (cachedUrls.containsUrl(url)) {
+        CachedUrl cu = au.makeCachedUrl(url);
+        // hasContent() check accesses disk, so we need to close the cu afterwards!
+        try {
+          if (cu.hasContent()) {
+            // lets check if the WASAPI content has been updated since the last time this url was collected
+            LocalDateTime crawlTimeDT = LocalDateTime.parse(crawlTime, DateTimeFormatter.ISO_DATE_TIME);
+            String lastModified = cu.getProperties().getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+            // Thu, 26 Aug 2021 18:21:55 GMT
+            LocalDateTime lastModifiedDT = LocalDateTime.parse(lastModified, DateTimeFormatter.RFC_1123_DATE_TIME);
+            if (crawlTimeDT.isBefore(lastModifiedDT)) {
+              // the content on WASAPI is older than the stored content, no need to refetch
+              log.info("Archive It file is older than stored content. Skipping.");
+              storeIt = false;
+            }
+          }
+        } finally {
+          // close the cu
+          cu.release();
+        }
+      }
+      if (storeIt) {
+        needFetched.add(url);
+      }
+    }
+    return needFetched;
+  }
+
+  protected List<String> getAllUrls(List<Map.Entry<String, String>> urlsAndTimes) {
+    List<String> urls = new ArrayList<>();
+    for (Map.Entry<String, String> urlAndTime : urlsAndTimes) {
+      urls.add(urlAndTime.getKey());
+    }
+    return urls;
   }
 
 }

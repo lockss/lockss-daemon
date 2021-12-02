@@ -32,9 +32,7 @@ public class ArchiveItApiFeatureUrlHelperFactory implements FeatureUrlHelperFact
         return null;
       }
       // return the synthetic url
-      String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-      String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
-      return (ListUtil.list(storeUrl));
+      return (ListUtil.list(getSyntheticUrl(au)));
     }
 
     @Override
@@ -48,12 +46,21 @@ public class ArchiveItApiFeatureUrlHelperFactory implements FeatureUrlHelperFact
         return null;
       }
       if (itemType == OpenUrlResolver.OpenUrlInfo.ResolvedTo.VOLUME) {
-        String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-        String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
-        return(ListUtil.list(storeUrl));
+        return (ListUtil.list(getSyntheticUrl(au)));
       } else {
         return null;
       }
+    }
+    public String getSyntheticUrl(ArchivalUnit au) {
+      // synthetic url, if you want to update the pattern you must update it in all of these places
+      // 1. ArchiveItApiPlugin - crawl_rules
+      // 2. ArchiveItApiCrawlSeed.populateUrlList()
+      // 3. ArchiveItApiFeatureUrlHelperFactory.getSyntheticUrl()
+      String sytheticUrl =
+          au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()) +
+          "organization=" + UrlUtil.encodeUrl(au.getConfiguration().get("organization")) +
+          "&collection=" + UrlUtil.encodeUrl(au.getConfiguration().get(ConfigParamDescr.COLLECTION.getKey()));
+      return sytheticUrl;
     }
   }
 }
