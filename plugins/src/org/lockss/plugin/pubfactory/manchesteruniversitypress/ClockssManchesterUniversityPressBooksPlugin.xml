@@ -41,15 +41,15 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.pubfactory.PubFactoryBooksPlugin</string>
+        <string>org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>2</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -58,13 +58,5 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_name</string>
         <string>"Manchester University Press Books Plugin (CLOCKSS), Base URL %s, Book ISBN %s", base_url, book_isbn</string>
-    </entry>
-    <entry>
-        <string>au_login_page_checker</string>
-        <string>org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressLoginPageChecker</string>
-    </entry>
-    <entry>
-        <string>application/pdf_filter_factory</string>
-        <string>org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressPdfFilterFactory</string>
     </entry>
 </map>
