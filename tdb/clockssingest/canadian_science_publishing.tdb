@@ -2,14 +2,12 @@
 
   publisher <
     name = Canadian Science Publishing ;
-    #name = NRC Research Press ;
+    #name = NRC Research Press ; #previously
     info[contract] = 2012 ;
     info[tester] = 8 ;
-    info[poller] = 6
-    #Canadian Science Publishing
+    info[poller] = 6 ;
+    info[platform] = Atypon
   >
-
-  comment[platform] = Atypon
   
   plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin
   #param[base_url] = http://www.nrcresearchpress.com/
@@ -1785,11 +1783,11 @@
 {
 
   publisher <
-    name = NRC Research Press ;
+    name = Canadian Science Publishing ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
     info[poller] = 6 ;
-    info[platform] = Like atypon, but not
+    info[platform] = Atypon
   >
   
   plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin
