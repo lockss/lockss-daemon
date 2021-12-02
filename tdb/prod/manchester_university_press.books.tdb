@@ -9,8 +9,8 @@
    name = Manchester Security, Conflict & Peace ;
    type = bookSeries
  >
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin
+
+  plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin
   implicit < status ; year ; isbn ; eisbn ; param[book_isbn] ; name >
 
   {
@@ -85,8 +85,8 @@
    name = Manchester Shakespeare ;
    type = bookSeries
  >
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin
+
+  plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin
   implicit < status ; year ; isbn ; eisbn ; param[book_isbn] ; name >
 
   {
@@ -147,8 +147,8 @@
  >
 
   {
-   plugin = needs.plugin
-   #plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin
+
+   plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin
    implicit < status ; year ; isbn ; eisbn ; param[book_isbn] ; name >
 
    #Manchester Hive
@@ -167,8 +167,8 @@
 
   {
    #Not collected on previous platform
-   plugin = needs.plugin
-   #plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin
+
+   plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin
    implicit < status ; year ; isbn ; eisbn ; param[book_isbn] ; name >
 
    #Manchester Hive
