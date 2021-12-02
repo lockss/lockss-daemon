@@ -19,6 +19,7 @@
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
 
   {
+    #Manchester Hive
     param[base_url] = https://www.manchesterhive.com/
 
     au < manifest ; exists ; 2016 ; 9780719098352 ;  ; 9780719098352 ; Interrogation, intelligence and security ; >
@@ -72,6 +73,7 @@
   }
   
   {
+    #Manchester Open Hive
     param[base_url] = https://www.manchesteropenhive.com/
 
     au < manifest ; exists ; 2018 ; 9781526108364 ;  ; 9781526108364 ; Security/Mobility ; >
@@ -91,6 +93,7 @@
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
 
   {
+    #Manchester Hive
     param[base_url] = https://www.manchesterhive.com/
 
     au < manifest ; exists ; 2015 ; 9780719098796 ;  ; 9780719098796 ; Between two stools ; >
@@ -133,6 +136,7 @@
   }
 
   {
+    #Manchester Open Hive
     param[base_url] = https://www.manchesteropenhive.com/
 
     au < ready ; exists ; 2015 ; 9781847798916 ;  ; 9781847798916 ; Making and unmaking in early modern English drama ; >
@@ -149,16 +153,17 @@
    plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversityPressBooksPlugin
    implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_isbn] ; name ; hidden[proxy] >
 
+   #Manchester Hive
    param[base_url] = https://www.manchesterhive.com/
-   #Website says collection is 41 texts. We have 34. We are missing 7
+   #Website says collection is 41 texts. We have 34 on previous platform. These are the remaining 7
 
-   au < exists ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble Society: Five lives from twelfth-century Germany  ; >
-   au < exists ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in Medieval England: Selected Sources ; >
-   au < exists ; exists ; 2019 ; 9781526127228 ;  ; 9781526127228 ; Hermits and Anchorites in England: 1200-1550 ; >
-   au < exists ; exists ; 2019 ; 9781526121837 ;  ; 9781526121837 ; John Wyclif: Selected Latin Works in Translation ; >
-   au < exists ; exists ; 2019 ; 9781526142900 ;  ; 9781526142900 ; Jacopo Da Varagine's: Chronicle of the City of Genoa ; >
-   au < exists ; exists ; 2020 ; 9781526126795 ;  ; 9781526126795 ; Monastic Experience in Twelfth-Century Germany: The Chronicle of Petershausen ; >
-   au < exists ; exists ; 2020 ; 9781526134837 ;  ; 9781526134837 ; Confronting Crisis in the Carolingian Empire: Paschasius Radbertus' Funeral Oration for Wala of Corbie ; >
+   au < manifest ; exists ; 2018 ; 9781526119162 ;  ; 9781526119162 ; Noble Society: Five lives from twelfth-century Germany  ; >
+   au < manifest ; exists ; 2018 ; 9781526135193 ;  ; 9781526135193 ; Towns in Medieval England: Selected Sources ; >
+   au < manifest ; exists ; 2019 ; 9781526127228 ;  ; 9781526127228 ; Hermits and Anchorites in England: 1200-1550 ; >
+   au < manifest ; exists ; 2019 ; 9781526121837 ;  ; 9781526121837 ; John Wyclif: Selected Latin Works in Translation ; >
+   au < manifest ; exists ; 2019 ; 9781526142900 ;  ; 9781526142900 ; Jacopo Da Varagine's: Chronicle of the City of Genoa ; >
+   au < manifest ; exists ; 2020 ; 9781526126795 ;  ; 9781526126795 ; Monastic Experience in Twelfth-Century Germany: The Chronicle of Petershausen ; >
+   au < manifest ; exists ; 2020 ; 9781526134837 ;  ; 9781526134837 ; Confronting Crisis in the Carolingian Empire: Paschasius Radbertus' Funeral Oration for Wala of Corbie ; >
 
   }
 
