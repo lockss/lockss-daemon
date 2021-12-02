@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>  
   <entry>
     <string>plugin_name</string>
@@ -66,6 +66,13 @@ POSSIBILITY OF SUCH DAMAGE.
       https://www.acpjournals.org/lockss/aim/141/index.html
       -->
       <string>"%slockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!--some quiz and exam page requires login, like https://www.acpjournals.org/doi/exam/10.7326/AITC202111160-quiz -->
+      <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
     </list>
   </entry>
 </map>
