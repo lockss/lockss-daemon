@@ -2,7 +2,7 @@
 
   publisher <
     name = Rocky Mountain Mathematics Consortium ;
-    info[platform] = Project Euclid. Clockss source
+    info[platform] = Project Euclid. LXPLUG-241
   >
   
   plugin = needs.plugin
@@ -73,7 +73,7 @@
     au < doNotProcess ; 2018 ; Rocky Mountain Journal of Mathematics Volume 48 ; 48 >
     au < doNotProcess ; 2019 ; Rocky Mountain Journal of Mathematics Volume 49 ; 49 >
     au < doNotProcess ; 2020 ; Rocky Mountain Journal of Mathematics Volume 50 ; 50 >
-    au < expected ; 2021 ; Rocky Mountain Journal of Mathematics Volume 51 ; 51 >
+    au < doNotProcess ; 2021 ; Rocky Mountain Journal of Mathematics Volume 51 ; 51 >
 
   }
 
