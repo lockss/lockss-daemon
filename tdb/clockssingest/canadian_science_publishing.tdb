@@ -1792,7 +1792,9 @@
     info[platform] = Like atypon, but not
   >
   
-  plugin = needs.plugin, #I crawled Journal ID facets, Volume 3, I think the plugin existing "org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin" is working, just need to make sure the year of pubdate match ris file, otherwise, metadata will be generated
+  plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin
+  #plugin = needs.plugin
+  #I crawled Journal ID facets, Volume 3, I think the plugin existing "org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin" is working, just need to make sure the year of pubdate match ris file, otherwise, metadata will be generated
   param[base_url] = https://www.facetsjournal.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     
@@ -1804,8 +1806,12 @@
      
     param[journal_id] = facets
 
-    au < notReady ; exists ; 2016 ; FACETS Volume 1 ; 1 ; >#not really atypon. https://www.facetsjournal.com/clockss/facets/1/index.html
-    au < notReady ; exists ; 2017 ; FACETS Volume 2 ; 2 ; >#not really atypon. https://www.facetsjournal.com/clockss/facets/2/index.html
+    au < manifest ; exists ; 2016 ; FACETS Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2017 ; FACETS Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2018 ; FACETS Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2019 ; FACETS Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2020 ; FACETS Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2021 ; FACETS Volume 6 ; 6 ; >
 
     }
     
