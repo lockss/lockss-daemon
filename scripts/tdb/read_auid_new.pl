@@ -1247,6 +1247,7 @@ while (my $line = <>) {
         }
         sleep(4);
 
+#PubFactory Journals GLN
   } elsif (($plugin eq "BerghahnJournalsPlugin")   ||
            ($plugin eq "PubFactoryJournalsPlugin") ||
            ($plugin eq "AjtmhPlugin")      ||
@@ -1257,7 +1258,6 @@ while (my $line = <>) {
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
-
       my $resp = $ua->request($req);
       if ($resp->is_success) {
           my $man_contents = $resp->content;
@@ -1283,37 +1283,7 @@ while (my $line = <>) {
       }
         sleep(4);
 
-  } elsif ($plugin eq "ClockssManchesterUniversityPressBooksPlugin") {
-      $url = sprintf("%slockss-manifest/book/%s",
-      $param{base_url}, $param{book_isbn});
-      $man_url = uri_unescape($url);
-      my $req = HTTP::Request->new(GET, $man_url);
-
-      my $resp = $ua->request($req);
-      if ($resp->is_success) {
-          my $man_contents = $resp->content;
-          if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) &&
-                  ($man_contents =~ m/\/view\/$param{book_isbn}\/$param{book_isbn}\./))) {
-              if ($man_contents =~ m/<h1>\s*(.*) LOCKSS Manifest Page\s*<\/h1>/si) {
-                  $vol_title = $1;
-                  $vol_title =~ s/\s*\n\s*/ /g;
-                  $vol_title =~ s/ &amp\; / & /;
-                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-                      $vol_title = "\"" . $vol_title . "\"";
-                  }
-              }
-              $result = "Manifest";
-          } else {
-              $result = "--NO_TAG--"
-          }
-      } else {
-          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-      }
-        sleep(4);
-
+#PubFactory Journals CLOCKSS
   } elsif (($plugin eq "ClockssBerghahnJournalsPlugin") ||
            ($plugin eq "ClockssAjtmhPlugin")            ||
            ($plugin eq "ClockssAMetSoc2021Plugin")      ||
@@ -1347,6 +1317,68 @@ while (my $line = <>) {
       }
         sleep(4);
         
+#PubFactory Books GLN
+  } elsif ($plugin eq "ManchesterUniversityPressBooksPlugin") {
+      $url = sprintf("%slockss-manifest/book/%s",
+      $param{base_url}, $param{book_isbn});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) &&
+                  ($man_contents =~ m/\/view\/$param{book_isbn}\/$param{book_isbn}\./))) {
+              if ($man_contents =~ m/<h1>\s*(.*) LOCKSS Manifest Page\s*<\/h1>/si) {
+                  $vol_title = $1;
+                  $vol_title =~ s/\s*\n\s*/ /g;
+                  $vol_title =~ s/ &amp\; / & /;
+                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                      $vol_title = "\"" . $vol_title . "\"";
+                  }
+              }
+              $result = "Manifest";
+          } else {
+              $result = "--NO_TAG--"
+          }
+      } else {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      }
+        sleep(4);
+
+#PubFactory Books CLOCKSS
+  } elsif ($plugin eq "ClockssManchesterUniversityPressBooksPlugin") {
+      $url = sprintf("%slockss-manifest/book/%s",
+      $param{base_url}, $param{book_isbn});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) &&
+                  ($man_contents =~ m/\/view\/$param{book_isbn}\/$param{book_isbn}\./))) {
+              if ($man_contents =~ m/<h1>\s*(.*) LOCKSS Manifest Page\s*<\/h1>/si) {
+                  $vol_title = $1;
+                  $vol_title =~ s/\s*\n\s*/ /g;
+                  $vol_title =~ s/ &amp\; / & /;
+                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                      $vol_title = "\"" . $vol_title . "\"";
+                  }
+              }
+              $result = "Manifest";
+          } else {
+              $result = "--NO_TAG--"
+          }
+      } else {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      }
+        sleep(4);
+
   } elsif (($plugin eq "TaylorAndFrancisPlugin") ||
            ($plugin eq "GenericAtyponPlugin") ||
            ($plugin eq "AIAAPlugin") ||
