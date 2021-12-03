@@ -48,6 +48,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -155,8 +156,8 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
     // 2. ArchiveItApiCrawlSeed.populateUrlList()
     // 3. ArchiveItApiFeatureUrlHelperFactory.getSyntheticUrl()
     String storeUrl = baseUrl +
-        "organization=" + UrlUtil.encodeUrl(organization) +
-        "&collection=" + UrlUtil.encodeUrl(collection);
+      "organization=" + UrlUtil.encodeUrl(organization) +
+      "&collection=" + UrlUtil.encodeUrl(collection);
     //In order to query the metadata service less if this is a normal
     //recrawl and we think the intial crawl was good just grab all the start
     //URLs from the AU
@@ -233,9 +234,9 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
 
   protected String makeApiUrl(int page) {
     String url = String.format("%swasapi/v1/webdata?collection=%s&page=%d",
-        API_URL,
-        collection,
-        page);
+      API_URL,
+      collection,
+      page);
     return url;
 
   };
@@ -243,15 +244,14 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
                                          final String url) {
     // Make a URL fetcher
     UrlFetcher uf = facade.makeUrlFetcher(url);
-
     // Set refetch flag // markom- not sure this is necessary?
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(permFetchFlags);
     // set header to application/json and encoding per WASAPI recommendation
     uf.setRequestProperty(
-        "Accept",
-        "application/json"
+      "Accept",
+      "application/json"
     );
     // Set custom URL consumer factory, using custom link extractor
     uf.setUrlConsumerFactory(new UrlConsumerFactory() {
@@ -327,13 +327,10 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
     CIProperties headers = new CIProperties();
     //Should use a constant here
     headers.setProperty("content-type", "text/html; charset=utf-8");
-    UrlData ud = new UrlData(new ByteArrayInputStream(
-                                  sb.toString().getBytes(
-                                      Constants.ENCODING_UTF_8
-                                  )
-                             ),
-                             headers,
-                             url
+    UrlData ud = new UrlData(
+      new ByteArrayInputStream(sb.toString().getBytes(Constants.ENCODING_UTF_8)),
+      headers,
+      url
     );
     UrlCacher cacher = facade.makeUrlCacher(ud);
     cacher.storeContent();
@@ -356,14 +353,20 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
         try {
           if (cu.hasContent()) {
             // lets check if the WASAPI content has been updated since the last time this url was collected
-            LocalDateTime crawlTimeDT = LocalDateTime.parse(crawlTime, DateTimeFormatter.ISO_DATE_TIME);
+            ZonedDateTime crawlTimeDT = ZonedDateTime.parse(crawlTime, DateTimeFormatter.ISO_DATE_TIME);
             String lastModified = cu.getProperties().getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
             // Thu, 26 Aug 2021 18:21:55 GMT
-            LocalDateTime lastModifiedDT = LocalDateTime.parse(lastModified, DateTimeFormatter.RFC_1123_DATE_TIME);
+            ZonedDateTime lastModifiedDT = ZonedDateTime.parse(lastModified, DateTimeFormatter.RFC_1123_DATE_TIME);
+
             if (crawlTimeDT.isBefore(lastModifiedDT)) {
               // the content on WASAPI is older than the stored content, no need to refetch
-              log.info("Archive It file is older than stored content. Skipping.");
+              log.debug2("Archive It file is older than stored content. Skipping.");
               storeIt = false;
+            }
+            if (log.isDebug3()) {
+              log.debug3("warc file found in CachedUrls: " + url);
+              log.debug3("  with       WASAPI crawlTime: " + crawlTimeDT );
+              log.debug3("  and CachedUrl Last-Modified: " + lastModifiedDT );
             }
           }
         } finally {
