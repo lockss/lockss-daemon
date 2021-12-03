@@ -47,7 +47,7 @@ import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-public class HealthAffairsHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+public class ProjectHopeHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
   protected static final Pattern corrections = Pattern.compile("^( |&nbsp;)*(original article):?", Pattern.CASE_INSENSITIVE);
 

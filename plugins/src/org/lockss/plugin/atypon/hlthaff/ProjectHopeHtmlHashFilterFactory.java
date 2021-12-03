@@ -44,7 +44,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
-public class HealthAffairsHtmlHashFilterFactory 
+public class ProjectHopeHtmlHashFilterFactory 
   extends BaseAtyponHtmlHashFilterFactory  {
   
   @Override

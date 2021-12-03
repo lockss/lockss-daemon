@@ -40,7 +40,7 @@ import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
  * vary from collection to collection. Filter them out to avoid incorrect hash failures.
  * Because of varying BASEFONT values, must also extract text/images for hash comparison
  */
-public class HealthAffairsPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
+public class ProjectHopePdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
   
   
   // The PDF Producer added in new information - remove it all
