@@ -29,7 +29,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Academia Revista Latinoamericana de Administración Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Academia Revista Latinoamericana de Administración Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Academia Revista Latinoamericana de Administración Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2019 ; Academia Revista Latinoamericana de Administración Volume 32 ; 32 ; >
+    au < finished ; manifest ; 2019 ; Academia Revista Latinoamericana de Administración Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; Academia Revista Latinoamericana de Administración Volume 34 ; 34 ; >
 
@@ -1052,9 +1052,9 @@
     au < doNotProcess ; doNotProcess ; 2008 ; The Bottom Line: Managing Library Finances Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Bottom Line: Managing Library Finances Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; The Bottom Line: Managing Library Finances Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2012 ; The Bottom Line: Managing Library Finances Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2013 ; The Bottom Line: Managing Library Finances Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; The Bottom Line: Managing Library Finances Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; The Bottom Line: Managing Library Finances Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; The Bottom Line: Managing Library Finances Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Bottom Line: Managing Library Finances Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; The Bottom Line: Managing Library Finances Volume 29 ; 29 ; >
@@ -1234,9 +1234,9 @@
     comment[continued_by] = 1477-7274
 
     au < manifest ; exists ; 1999 ; British Journal of Clinical Governance Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2000 ; British Journal of Clinical Governance Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2000 ; British Journal of Clinical Governance Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2001 ; British Journal of Clinical Governance Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2002 ; British Journal of Clinical Governance Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2002 ; British Journal of Clinical Governance Volume 7 ; 7 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1258,10 +1258,10 @@
     au < crawling ; exists ; 2003 ; The British Journal of Forensic Practice Volume 5 ; 5 ; >
     au < crawling ; exists ; 2004 ; The British Journal of Forensic Practice Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; The British Journal of Forensic Practice Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2008 ; The British Journal of Forensic Practice Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2009 ; The British Journal of Forensic Practice Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2006 ; The British Journal of Forensic Practice Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2007 ; The British Journal of Forensic Practice Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; The British Journal of Forensic Practice Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; The British Journal of Forensic Practice Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2010 ; The British Journal of Forensic Practice Volume 12 ; 12 ; >
     au < frozen ; exists ; 2011 ; The British Journal of Forensic Practice Volume 13 ; 13 ; >
     au < frozen ; exists ; 2012 ; The British Journal of Forensic Practice Volume 14 ; 14 ; >
@@ -1361,13 +1361,13 @@
     comment[journal_id] = bss
     # online from 2007
 
-    au < frozen ; exists ; 2007 ; Business Strategy Series Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2008 ; Business Strategy Series Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2009 ; Business Strategy Series Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2010 ; Business Strategy Series Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2011 ; Business Strategy Series Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2012 ; Business Strategy Series Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2013 ; Business Strategy Series Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2007 ; Business Strategy Series Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Business Strategy Series Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; Business Strategy Series Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; Business Strategy Series Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Business Strategy Series Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Business Strategy Series Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Business Strategy Series Volume 14 ; 14 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1398,19 +1398,19 @@
     au < manifest ; exists ; 1998 ; Campus-Wide Information Systems Volume 15 ; 15 ; >
     au < manifest ; exists ; 1999 ; Campus-Wide Information Systems Volume 16 ; 16 ; >
     au < crawling ; exists ; 2000 ; Campus-Wide Information Systems Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2001 ; Campus-Wide Information Systems Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2002 ; Campus-Wide Information Systems Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2003 ; Campus-Wide Information Systems Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2004 ; Campus-Wide Information Systems Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2005 ; Campus-Wide Information Systems Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2006 ; Campus-Wide Information Systems Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2001 ; Campus-Wide Information Systems Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; Campus-Wide Information Systems Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; Campus-Wide Information Systems Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; Campus-Wide Information Systems Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Campus-Wide Information Systems Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006 ; Campus-Wide Information Systems Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2007 ; Campus-Wide Information Systems Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2008 ; Campus-Wide Information Systems Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2009 ; Campus-Wide Information Systems Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2008 ; Campus-Wide Information Systems Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Campus-Wide Information Systems Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2010 ; Campus-Wide Information Systems Volume 27 ; 27 ; >
     au < frozen ; exists ; 2011 ; Campus-Wide Information Systems Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2012 ; Campus-Wide Information Systems Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2013 ; Campus-Wide Information Systems Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2012 ; Campus-Wide Information Systems Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Campus-Wide Information Systems Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Campus-Wide Information Systems Volume 31 ; 31 ; >
 
   }
@@ -1469,7 +1469,7 @@
     au < frozen ; exists ; 2009 ; China Agricultural Economic Review Volume 1 ; 1 ; >
     au < frozen ; exists ; 2010 ; China Agricultural Economic Review Volume 2 ; 2 ; >
     au < frozen ; exists ; 2011 ; China Agricultural Economic Review Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2012 ; China Agricultural Economic Review Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2012 ; China Agricultural Economic Review Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2013 ; China Agricultural Economic Review Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; China Agricultural Economic Review Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; China Agricultural Economic Review Volume 7 ; 7 ; >
@@ -1492,9 +1492,9 @@
     param[journal_issn] = 2044-1398
     comment[journal_id] = cfri
 
-    au < frozen ; exists ; 2011 ; China Finance Review International Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2011 ; China Finance Review International Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; China Finance Review International Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2013 ; China Finance Review International Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2013 ; China Finance Review International Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; China Finance Review International Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; China Finance Review International Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; China Finance Review International Volume 6 ; 6 ; >
@@ -1529,7 +1529,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Chinese Management Studies Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Chinese Management Studies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Chinese Management Studies Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2019 ; Chinese Management Studies Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2019 ; Chinese Management Studies Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Chinese Management Studies Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; Chinese Management Studies Volume 15 ; 15 ; >
 
@@ -1590,7 +1590,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Circuit World Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Circuit World Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Circuit World Volume 44 ; 44 ; >
-    au < frozen ; exists ; 2019 ; Circuit World Volume 45 ; 45 ; >
+    au < finished ; manifest ; 2019 ; Circuit World Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Circuit World Volume 46 ; 46 ; >
     au < crawling ; exists ; 2021 ; Circuit World Volume 47 ; 47 ; >
 
@@ -1609,16 +1609,16 @@
     # online from 2003
     #continued_by = 2059-4631
 
-    au < frozen ; exists ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2004 ; Clinical Governance: An International Journal Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2005 ; Clinical Governance: An International Journal Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2005 ; Clinical Governance: An International Journal Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2006 ; Clinical Governance: An International Journal Volume 11 ; 11 ; >
     au < crawling ; exists ; 2007 ; Clinical Governance: An International Journal Volume 12 ; 12 ; >
     au < crawling ; exists ; 2008 ; Clinical Governance: An International Journal Volume 13 ; 13 ; >
     au < crawling ; exists ; 2009 ; Clinical Governance: An International Journal Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Clinical Governance: An International Journal Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2011 ; Clinical Governance: An International Journal Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2012 ; Clinical Governance: An International Journal Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2011 ; Clinical Governance: An International Journal Volume 16 ; 16 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Clinical Governance: An International Journal Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Clinical Governance: An International Journal Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Governance: An International Journal Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Clinical Governance: An International Journal Volume 20 ; 20 ; >
@@ -1692,19 +1692,19 @@
     au < manifest ; exists ; 1998 ; Collection Building Volume 17 ; 17 ; >
     au < manifest ; exists ; 1999 ; Collection Building Volume 18 ; 18 ; >
     au < crawling ; exists ; 2000 ; Collection Building Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2001 ; Collection Building Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2001 ; Collection Building Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2002 ; Collection Building Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2003 ; Collection Building Volume 22 ; 22 ; >
+    au < finished ; manifest ; 2003 ; Collection Building Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2004 ; Collection Building Volume 23 ; 23 ; >
     au < crawling ; exists ; 2005 ; Collection Building Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2006 ; Collection Building Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2006 ; Collection Building Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2007 ; Collection Building Volume 26 ; 26 ; >
     au < crawling ; exists ; 2008 ; Collection Building Volume 27 ; 27 ; >
     au < crawling ; exists ; 2009 ; Collection Building Volume 28 ; 28 ; >
     au < frozen ; exists ; 2010 ; Collection Building Volume 29 ; 29 ; >
     au < frozen ; exists ; 2011 ; Collection Building Volume 30 ; 30 ; >
     au < frozen ; exists ; 2012 ; Collection Building Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2013 ; Collection Building Volume 32 ; 32 ; >
+    au < finished ; manifest ; 2013 ; Collection Building Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Collection Building Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Collection Building Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Collection Building Volume 35 ; 35 ; >
@@ -1760,24 +1760,24 @@
     au < manifest ; exists ; 1999 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 19 ; 19 ; >
     au < frozen ; exists ; 2001 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2002 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2002 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2003 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 22 ; 22 ; >
     au < crawling ; exists ; 2004 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 23 ; 23 ; >
     au < frozen ; exists ; 2005 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2006 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2006 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2007 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2008 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2009 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2010 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2011 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2008 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2013 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 32 ; 32 ; >
+    au < finished ; manifest ; 2013 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2019 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 38 ; 38 ; >
+    au < finished ; manifest ; 2019 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 39 ; 39 ; >
     au < crawling ; exists ; 2021 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 40 ; 40 ; >
 
@@ -1996,10 +1996,10 @@
     au < manifest ; exists ; 2007 ; Cross Cultural Management: An International Journal Volume 14 ; 14 ; >
     au < ready ; exists ; 2008 ; Cross Cultural Management: An International Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2009 ; Cross Cultural Management: An International Journal Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2010 ; Cross Cultural Management: An International Journal Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2011 ; Cross Cultural Management: An International Journal Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2010 ; Cross Cultural Management: An International Journal Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Cross Cultural Management: An International Journal Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Cross Cultural Management: An International Journal Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2013 ; Cross Cultural Management: An International Journal Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2013 ; Cross Cultural Management: An International Journal Volume 20 ; 20 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Cross Cultural Management: An International Journal Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Cross Cultural Management: An International Journal Volume 22 ; 22 ; >
 
@@ -2106,9 +2106,9 @@
     au < manifest ; exists ; 2007 ; Disaster Prevention and Management Volume 16 ; 16 ; >
     au < ready ; exists ; 2008 ; Disaster Prevention and Management Volume 17 ; 17 ; >
     au < crawling ; exists ; 2009 ; Disaster Prevention and Management Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2010 ; Disaster Prevention and Management Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2010 ; Disaster Prevention and Management Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2011 ; Disaster Prevention and Management Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2012 ; Disaster Prevention and Management Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2012 ; Disaster Prevention and Management Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2013 ; Disaster Prevention and Management Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Disaster Prevention and Management Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Disaster Prevention and Management Volume 24 ; 24 ; >
@@ -2246,10 +2246,10 @@
 
     au < ready ; exists ; 2008 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 1 ; 1 ; >
     au < crawling ; exists ; 2009 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2010 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2011 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2010 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2013 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2013 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Education, Business and Society: Contemporary Middle Eastern issues Volume 7 ; 7 ; >
 
   }
@@ -2301,7 +2301,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; The Electronic Library Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; The Electronic Library Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The Electronic Library Volume 36 ; 36 ; >
-    au < frozen ; exists ; 2019 ; The Electronic Library Volume 37 ; 37 ; >
+    au < finished ; manifest ; 2019 ; The Electronic Library Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; The Electronic Library Volume 38 ; 38 ; >
     au < crawling ; exists ; 2021 ; The Electronic Library Volume 39 ; 39 ; >
 
@@ -2519,7 +2519,7 @@
     au < manifest ; exists ; 1997 ; Environmental Management and Health Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; >
     au < manifest ; exists ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2000 ; Environmental Management and Health Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2000 ; Environmental Management and Health Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2001 ; Environmental Management and Health Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Environmental Management and Health Volume 13 ; 13 ; >
 
@@ -2610,8 +2610,8 @@
     au < ready ; exists ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Ethnicity and Inequalities in Health and Social Care Volume 3 ; 3 ; >
     au < frozen ; exists ; 2011 ; Ethnicity and Inequalities in Health and Social Care Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2012 ; Ethnicity and Inequalities in Health and Social Care Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2013 ; Ethnicity and Inequalities in Health and Social Care Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2012 ; Ethnicity and Inequalities in Health and Social Care Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Ethnicity and Inequalities in Health and Social Care Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Ethnicity and Inequalities in Health and Social Care Volume 7 ; 7 ; >
 
   }
@@ -2631,16 +2631,16 @@
     au < manifest ; exists ; 2007 ; EuroMed Journal of Business Volume 2 ; 2 ; >
     au < ready ; exists ; 2008 ; EuroMed Journal of Business Volume 3 ; 3 ; >
     au < crawling ; exists ; 2009 ; EuroMed Journal of Business Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2010 ; EuroMed Journal of Business Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2011 ; EuroMed Journal of Business Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2012 ; EuroMed Journal of Business Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2013 ; EuroMed Journal of Business Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2010 ; EuroMed Journal of Business Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; EuroMed Journal of Business Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; EuroMed Journal of Business Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; EuroMed Journal of Business Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; EuroMed Journal of Business Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; EuroMed Journal of Business Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; EuroMed Journal of Business Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; EuroMed Journal of Business Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; EuroMed Journal of Business Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2019 ; EuroMed Journal of Business Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2019 ; EuroMed Journal of Business Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; EuroMed Journal of Business Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; EuroMed Journal of Business Volume 16 ; 16 ; >
 
@@ -2788,14 +2788,14 @@
     au < crawling ; exists ; 2009 ; European Journal of Marketing Volume 43 ; 43 ; >
     au < frozen ; exists ; 2010 ; European Journal of Marketing Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Marketing Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2012 ; European Journal of Marketing Volume 46 ; 46 ; >
+    au < finished ; manifest ; 2012 ; European Journal of Marketing Volume 46 ; 46 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; European Journal of Marketing Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; European Journal of Marketing Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; European Journal of Marketing Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; European Journal of Marketing Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; European Journal of Marketing Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Marketing Volume 52 ; 52 ; >
-    au < frozen ; exists ; 2019 ; European Journal of Marketing Volume 53 ; 53 ; >
+    au < finished ; manifest ; 2019 ; European Journal of Marketing Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; European Journal of Marketing Volume 54 ; 54 ; >
     au < crawling ; exists ; 2021 ; European Journal of Marketing Volume 55 ; 55 ; >
 
@@ -3066,7 +3066,7 @@
     param[journal_issn] = 2042-3896
     comment[journal_id] = heswbl
 
-    au < frozen ; exists ; 2011 ; Higher Education, Skills and Work-based Learning Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2011 ; Higher Education, Skills and Work-based Learning Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2012 ; Higher Education, Skills and Work-based Learning Volume 2 ; 2 ; >
     au < frozen ; exists ; 2013 ; Higher Education, Skills and Work-based Learning Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Higher Education, Skills and Work-based Learning Volume 4 ; 4 ; >
@@ -3144,7 +3144,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Housing, Care and Support: A journal on policy, research and practice Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Housing, Care and Support: A journal on policy, research and practice Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Housing, Care and Support: A journal on policy, research and practice Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2019 ; Housing, Care and Support: A journal on policy, research and practice Volume 22 ; 22 ; >
+    au < finished ; manifest ; 2019 ; Housing, Care and Support: A journal on policy, research and practice Volume 22 ; 22 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Housing, Care and Support: A journal on policy, research and practice Volume 23 ; 23 ; >
     au < crawling ; exists ; 2021 ; Housing, Care and Support: A journal on policy, research and practice Volume 24 ; 24 ; >
 
@@ -3179,7 +3179,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Human Resource Management International Digest Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Human Resource Management International Digest Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Human Resource Management International Digest Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2019 ; Human Resource Management International Digest Volume 27 ; 27 ; >
+    au < finished ; manifest ; 2019 ; Human Resource Management International Digest Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Human Resource Management International Digest Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; Human Resource Management International Digest Volume 29 ; 29 ; >
 
@@ -3219,10 +3219,10 @@
     au < manifest ; exists ; 2007 ; Humanomics Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Humanomics Volume 24 ; 24 ; >
     au < crawling ; exists ; 2009 ; Humanomics Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2010 ; Humanomics Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2011 ; Humanomics Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2012 ; Humanomics Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2013 ; Humanomics Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2010 ; Humanomics Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Humanomics Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; Humanomics Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Humanomics Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Humanomics Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Humanomics Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Humanomics Volume 32 ; 32 ; >
@@ -3582,10 +3582,10 @@
     au < doNotProcess ; doNotProcess ; 2007 ; info Volume 9 ; 9 ; >
     au < ready ; exists ; 2008 ; info Volume 10 ; 10 ; >
     au < crawling ; exists ; 2009 ; info Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2010 ; info Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2010 ; info Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2011 ; info Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2012 ; info Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2013 ; info Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2012 ; info Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; info Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; info Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; info Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; info Volume 18 ; 18 ; >
@@ -3605,7 +3605,7 @@
 
     au < doNotProcess ; doNotProcess ; 2017 ; Digital Policy, Regulation and Governance Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Digital Policy, Regulation and Governance Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2019 ; Digital Policy, Regulation and Governance Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2019 ; Digital Policy, Regulation and Governance Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Digital Policy, Regulation and Governance Volume 22 ; 22 ; >
     au < crawling ; exists ; 2021 ; Digital Policy, Regulation and Governance Volume 23 ; 23 ; >
 
@@ -3639,10 +3639,10 @@
     au < manifest ; exists ; 2007 ; Information Management & Computer Security Volume 15 ; 15 ; >
     au < ready ; exists ; 2008 ; Information Management & Computer Security Volume 16 ; 16 ; >
     au < crawling ; exists ; 2009 ; Information Management & Computer Security Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2010 ; Information Management & Computer Security Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2011 ; Information Management & Computer Security Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2012 ; Information Management & Computer Security Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2013 ; Information Management & Computer Security Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2010 ; Information Management & Computer Security Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Information Management & Computer Security Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Information Management & Computer Security Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Information Management & Computer Security Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Information Management & Computer Security Volume 22 ; 22 ; >
 
   }
@@ -3732,7 +3732,7 @@
     au < manifest ; exists ; 1997 ; Integrated Manufacturing Systems Volume 8 ; 8 ; >
     au < manifest ; exists ; 1998 ; Integrated Manufacturing Systems Volume 9 ; 9 ; >
     au < manifest ; exists ; 1999 ; Integrated Manufacturing Systems Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2001 ; Integrated Manufacturing Systems Volume 12 ; 12 ; >
     au < manifest ; exists ; 2002 ; Integrated Manufacturing Systems Volume 13 ; 13 ; >
     au < manifest ; exists ; 2003 ; Integrated Manufacturing Systems Volume 14 ; 14 ; >
@@ -3757,7 +3757,7 @@
     au < ready ; exists ; 2008 ; Interactive Technology and Smart Education Volume 5 ; 5 ; >
     au < crawling ; exists ; 2009 ; Interactive Technology and Smart Education Volume 6 ; 6 ; >
     au < crawling ; exists ; 2010 ; Interactive Technology and Smart Education Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2011 ; Interactive Technology and Smart Education Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Interactive Technology and Smart Education Volume 9 ; 9 ; >
     au < frozen ; exists ; 2013 ; Interactive Technology and Smart Education Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Interactive Technology and Smart Education Volume 11 ; 11 ; >
@@ -3849,7 +3849,7 @@
 
     au < doNotProcess ; doNotProcess ; 2017 ; Studies in Graduate and Postdoctoral Education Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Studies in Graduate and Postdoctoral Education Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2019 ; Studies in Graduate and Postdoctoral Education Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2019 ; Studies in Graduate and Postdoctoral Education Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Studies in Graduate and Postdoctoral Education Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; Studies in Graduate and Postdoctoral Education Volume 12 ; 12 ; >
 
@@ -4038,7 +4038,7 @@
     au < crawling ; exists ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 ; >
     au < frozen ; exists ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 ; >
     au < frozen ; exists ; 2011 ; International Journal of Clothing Science and Technology Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2012 ; International Journal of Clothing Science and Technology Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2012 ; International Journal of Clothing Science and Technology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; International Journal of Clothing Science and Technology Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Clothing Science and Technology Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Clothing Science and Technology Volume 27 ; 27 ; >
@@ -4081,10 +4081,10 @@
     au < manifest ; exists ; 2007 ; International Journal of Commerce and Management Volume 17 ; 17 ; >
     au < ready ; exists ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 ; >
     au < crawling ; exists ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2011 ; International Journal of Commerce and Management Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2012 ; International Journal of Commerce and Management Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2013 ; International Journal of Commerce and Management Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2011 ; International Journal of Commerce and Management Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; International Journal of Commerce and Management Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; International Journal of Commerce and Management Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Commerce and Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Commerce and Management Volume 25 ; 25 ; >
 
@@ -4104,7 +4104,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Review of International Business and Strategy Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Review of International Business and Strategy Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Review of International Business and Strategy Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2019 ; Review of International Business and Strategy Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2019 ; Review of International Business and Strategy Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Review of International Business and Strategy Volume 30 ; 30 ; >
     au < crawling ; exists ; 2021 ; Review of International Business and Strategy Volume 31 ; 31 ; >
 
@@ -4144,7 +4144,7 @@
     au < frozen ; exists ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 ; >
     au < frozen ; exists ; 2011 ; International Journal of Conflict Management Volume 22 ; 22 ; >
     au < frozen ; exists ; 2012 ; International Journal of Conflict Management Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2013 ; International Journal of Conflict Management Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2013 ; International Journal of Conflict Management Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Conflict Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Conflict Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Conflict Management Volume 27 ; 27 ; >
@@ -4226,7 +4226,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Culture, Tourism and Hospitality Research Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Culture, Tourism and Hospitality Research Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Culture, Tourism and Hospitality Research Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2019 ; International Journal of Culture, Tourism and Hospitality Research Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2019 ; International Journal of Culture, Tourism and Hospitality Research Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; International Journal of Culture, Tourism and Hospitality Research Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; International Journal of Culture, Tourism and Hospitality Research Volume 15 ; 15 ; >
 
@@ -4253,8 +4253,8 @@
     au < crawling ; exists ; 2009 ; International Journal of Development Issues Volume 8 ; 8 ; >
     au < crawling ; exists ; 2010 ; International Journal of Development Issues Volume 9 ; 9 ; >
     au < frozen ; exists ; 2011 ; International Journal of Development Issues Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2012 ; International Journal of Development Issues Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2013 ; International Journal of Development Issues Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2012 ; International Journal of Development Issues Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; International Journal of Development Issues Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Development Issues Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Development Issues Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Development Issues Volume 15 ; 15 ; >
@@ -4357,7 +4357,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; International Journal of Emergency Services Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Emergency Services Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Emergency Services Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2019 ; International Journal of Emergency Services Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2019 ; International Journal of Emergency Services Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; International Journal of Emergency Services Volume 9 ; 9 ; >
     au < crawling ; exists ; 2021 ; International Journal of Emergency Services Volume 10 ; 10 ; >
 
@@ -4409,7 +4409,7 @@
     au < crawling ; exists ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 2011 ; International Journal of Energy Sector Management Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2012 ; International Journal of Energy Sector Management Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2013 ; International Journal of Energy Sector Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Energy Sector Management Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; International Journal of Energy Sector Management Volume 9 ; 9 ; >
