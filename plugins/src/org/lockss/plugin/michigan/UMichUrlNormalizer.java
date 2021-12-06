@@ -63,7 +63,7 @@ public class UMichUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   public String normalizeUrl(String url, ArchivalUnit au)
 		  throws PluginException {
 
-    log.info("------UMichUrlNormalizer, original url = " + url);
+    log.debug2("------UMichUrlNormalizer, original url = " + url);
     //url = url.replaceFirst(LOCALE_PARAM, "");
     //url = url.replaceFirst(UTF_PARAM, "");
     url = url.replaceAll(LOCALE_PARAM, "");
@@ -83,7 +83,7 @@ public class UMichUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
       url = url.substring(0, url.length() - 1);
     }
 
-    log.info("=========UMichUrlNormalizer, after replaced url = " + url);
+    log.debug2("=========UMichUrlNormalizer, after replaced url = " + url);
     return(url);
   }
 
