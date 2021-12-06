@@ -69,6 +69,18 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
 
   /**
    * <p>
+   * Don't cause the crawl to fail if any of our potentially thousands of urls in the crawl seed fail.
+   * </p>
+   *
+   * @since 1.67.5
+   */
+  @Override
+  public boolean isFailOnStartUrlError() {
+    return false;
+  }
+
+  /**
+   * <p>
    * The API URL (<code>api_url</code>) of this crawl seed's AU.
    * </p>
    *
