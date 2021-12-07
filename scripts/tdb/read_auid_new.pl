@@ -3522,59 +3522,6 @@ while (my $line = <>) {
     }
     sleep(4);
 
-#  } elsif (($plugin eq "OupSilverchairPlugin") || 
-#           ($plugin eq "DupSilverchairPlugin")) {
-#    $url = sprintf("%s%s/list-of-issues/%d",
-#      $param{base_url}, $param{journal_id}, $param{year});
-#    $man_url = uri_unescape($url);
-#    my $req = HTTP::Request->new(GET, $man_url);
-#    my $resp = $ua->request($req);
-#    if ($resp->is_success) {
-#      my $man_contents = $resp->content;
-#      if ($req->url ne $resp->request->uri) {
-#              $vol_title = $resp->request->uri;
-#              $result = "Redirected";
-#      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
-#        if ($man_contents =~ m/<title>(.*) [|] \w* University Press<\/title>/si) {
-#          $vol_title = $1;
-#          $vol_title =~ s/\s*\n\s*/ /g;
-#        }
-#        $result = "Manifest"
-#      } else {
-#        $result = "--NO_TAG--"
-#      }
-#    } else {
-#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-#    }
-#    sleep(4);
-#
-#  } elsif (($plugin eq "ClockssOupSilverchairPlugin") || 
-#           ($plugin eq "ClockssDupSilverchairPlugin") || 
-#           ($plugin eq "ClockssGeoscienceWorldSilverchairPlugin")) {
-#    $url = sprintf("%s%s/list-of-issues/%d",
-#      $param{base_url}, $param{journal_id}, $param{year});
-#    $man_url = uri_unescape($url);
-#    my $req = HTTP::Request->new(GET, $man_url);
-#    my $resp = $ua->request($req);
-#    #printf("resp is %s\n",$resp->status_line);
-#    if ($resp->is_success) {
-#      my $man_contents = $resp->content;
-#      if ($req->url ne $resp->request->uri) {
-#              $vol_title = $resp->request->uri;
-#              $result = "Redirected";
-#      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
-#        if ($man_contents =~ m/<title>(.*) [|] \w* University Press<\/title>/si) {
-#          $vol_title = $1;
-#          $vol_title =~ s/\s*\n\s*/ /g;
-#        }
-#        $result = "Manifest"
-#      } else {
-#        $result = "--NO_TAG--"
-#      }
-#    } else {
-#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-#    }
-#    sleep(4);
 #    
   } elsif (($plugin eq "AjtmhPlugin") ||
           ($plugin eq "ClockssAjtmhPlugin")) {
@@ -3662,7 +3609,8 @@ while (my $line = <>) {
         }
     }
   sleep(4);
-    
+  
+  #Silverchair GLN no year/volume_name. Common Theme
   } elsif (($plugin eq "IwapSilverchairPlugin") ||
            ($plugin eq "AOTASilverchairPlugin") ||
            ($plugin eq "ASHSilverchairPlugin") ||
@@ -3694,6 +3642,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #Silverchair CLOCKSS no year/volume_name. Common Theme
   } elsif (($plugin eq "ClockssIwapSilverchairPlugin") || 
            ($plugin eq "ClockssAOTASilverchairPlugin") || 
            ($plugin eq "ClockssAllenPressSilverchairPlugin")) { 
@@ -3725,9 +3674,11 @@ while (my $line = <>) {
     }
     sleep(4);
     
+  #Silverchair GLN. Includes year/volume_name. Common Theme
   } elsif (($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
            ($plugin eq "UCPressSilverchairPlugin") || 
            ($plugin eq "CompanyBiologistsSilverchairPlugin") || 
+           ($plugin eq "AAPSilverchairPlugin") || 
            ($plugin eq "PortlandPressSilverchairPlugin")) {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
@@ -3756,8 +3707,10 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #Silverchair CLOCKSS. Includes year/volume_name. Common Theme
   } elsif (($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
            ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
+           ($plugin eq "ClockssAAPSilverchairPlugin") || 
            ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
@@ -3787,6 +3740,7 @@ while (my $line = <>) {
     }
     sleep(4);
     
+  #Silverchair CLOCKSS OUP & DUP. No year/volume_name
   } elsif (($plugin eq "ClockssOupSilverchairPlugin") || 
            ($plugin eq "ClockssDupSilverchairPlugin")) {
     $url = sprintf("%s%s/list-of-issues/%d",
@@ -3816,6 +3770,7 @@ while (my $line = <>) {
     }
   sleep(4);
     
+  #Silverchair CLOCKSS OUP & DUP. No year/volume_name
   } elsif (($plugin eq "OupSilverchairPlugin") || 
            ($plugin eq "DupSilverchairPlugin")) {
     $url = sprintf("%s%s/list-of-issues/%d",

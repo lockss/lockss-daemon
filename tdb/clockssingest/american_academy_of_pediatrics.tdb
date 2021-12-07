@@ -8,8 +8,8 @@
     info[platform] = SC, BLOCKED, Jire #LXPLUG-2135, manifest page autologin
   >
   
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin
+  #plugin = needs.plugin
+  plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin
   implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
   param[base_url] = https://publications.aap.org/
 
