@@ -165,6 +165,10 @@ public class MigrateContent extends LockssServlet {
   private void doMigrateAu() {
     ArchivalUnit au = getAu();
     if (au == null) return;
+    if (pluginMgr.isInternalAu(au)) {
+      errMsg = "Can't migrate internal AUs";
+      return;
+    }
     try {
       auMover = new V2AuMover();
       auMover.moveOneAu(hostName, userName, userPass, au);
@@ -267,13 +271,12 @@ public class MigrateContent extends LockssServlet {
     Select sel = new Select(key, false);
     sel.add("", preselId == null, "");
     for (ArchivalUnit au0 : pluginMgr.getAllAus()) {
+      if (pluginMgr.isInternalAu(au0)) {
+        continue;
+      }
       String id = au0.getAuId();
-      log.debug(id);
-      if (auSelectPatterns != null) {
-        if (isMatch(id, auSelectPatterns)) {
-          sel.add(encodeAttr(au0.getName()), id.equals(preselId), id);
-        }
-      } else {
+      if (auSelectPatterns == null || auSelectPatterns.isEmpty() ||
+          isMatch(id, auSelectPatterns)) {
         sel.add(encodeAttr(au0.getName()), id.equals(preselId), id);
       }
     }

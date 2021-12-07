@@ -270,15 +270,14 @@ public class V2AuMover {
    */
   public void moveAllAus(String host, String uname, String upass,  List<Pattern> selPatterns) throws IOException {
     initRequest(host, uname, upass);
-    if(selPatterns != null && !selPatterns.isEmpty()) {
-      for (ArchivalUnit au : pluginManager.getAllAus()) {
-        if (isMatch(au.getAuId(), selPatterns)) {
-          auMoveQueue.add(au);
-        }
+    for (ArchivalUnit au : pluginManager.getAllAus()) {
+      if (pluginManager.isInternalAu(au)) {
+        continue;
       }
-    }
-    else {
-      auMoveQueue.addAll(pluginManager.getAllAus());
+      if (selPatterns == null || selPatterns.isEmpty() ||
+          isMatch(au.getAuId(), selPatterns)) {
+        auMoveQueue.add(au);
+      }
     }
     log.debug("Moving " + auMoveQueue.size() + " aus.");
     // Check to see if we are currently working on an au.
