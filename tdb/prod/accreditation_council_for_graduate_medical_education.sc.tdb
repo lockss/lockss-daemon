@@ -7,6 +7,7 @@
 
   plugin = org.lockss.plugin.silverchair.allenpress.AllenPressSilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
+  param[base_url] = https://meridian.allenpress.com/
 
   {
 
@@ -18,21 +19,21 @@
 
     param[journal_id] = jgme
     {
-    param[base_url] = https://meridian.allenpress.com/
 
-    au < doNotProcess ; 2009 ; 2009 ; Journal of Graduate Medical Education 1 ; 1 >
-    au < doNotProcess ; 2010 ; 2010 ; Journal of Graduate Medical Education 2 ; 2 >
-    au < doNotProcess ; 2011 ; 2011 ; Journal of Graduate Medical Education 3 ; 3 >
-    au < doNotProcess ; 2012 ; 2012 ; Journal of Graduate Medical Education 4 ; 4 >
-    au < doNotProcess ; 2013 ; 2013 ; Journal of Graduate Medical Education 5 ; 5 >
-    au < doNotProcess ; 2014 ; 2014 ; Journal of Graduate Medical Education 6 ; 6 >
-    au < doNotProcess ; 2015 ; 2015 ; Journal of Graduate Medical Education 7 ; 7 >
-    au < doNotProcess ; 2016 ; 2016 ; Journal of Graduate Medical Education 8 ; 8 >
-    au < doNotProcess ; 2017 ; 2017 ; Journal of Graduate Medical Education 9 ; 9 >
-    au < doNotProcess ; 2018 ; 2018 ; Journal of Graduate Medical Education 10 ; 10 >
-    au < doNotProcess ; 2019 ; 2019 ; Journal of Graduate Medical Education 11 ; 11 >
-    au < manifest ; 2020 ; 2020 ; Journal of Graduate Medical Education 12 ; 12 >
-    au < manifest ; 2021 ; 2021 ; Journal of Graduate Medical Education 13 ; 13 >
+    au < doNotProcess ; 2009 ; 2009 ; Journal of Graduate Medical Education Volume 1 ; 1 >
+    au < doNotProcess ; 2010 ; 2010 ; Journal of Graduate Medical Education Volume 2 ; 2 >
+    au < doNotProcess ; 2011 ; 2011 ; Journal of Graduate Medical Education Volume 3 ; 3 >
+    au < doNotProcess ; 2012 ; 2012 ; Journal of Graduate Medical Education Volume 4 ; 4 >
+    au < doNotProcess ; 2013 ; 2013 ; Journal of Graduate Medical Education Volume 5 ; 5 >
+    au < doNotProcess ; 2014 ; 2014 ; Journal of Graduate Medical Education Volume 6 ; 6 >
+    au < doNotProcess ; 2015 ; 2015 ; Journal of Graduate Medical Education Volume 7 ; 7 >
+    au < doNotProcess ; 2016 ; 2016 ; Journal of Graduate Medical Education Volume 8 ; 8 >
+    au < doNotProcess ; 2017 ; 2017 ; Journal of Graduate Medical Education Volume 9 ; 9 >
+    au < doNotProcess ; 2018 ; 2018 ; Journal of Graduate Medical Education Volume 10 ; 10 >
+    au < doNotProcess ; 2019 ; 2019 ; Journal of Graduate Medical Education Volume 11 ; 11 >
+    au < manifest ; 2020 ; 2020 ; Journal of Graduate Medical Education Volume 12 ; 12 >
+    au < manifest ; 2021 ; 2021 ; Journal of Graduate Medical Education Volume 13 ; 13 >
+
     }
   }
 }
