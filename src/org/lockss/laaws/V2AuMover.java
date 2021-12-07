@@ -189,7 +189,7 @@ public class V2AuMover {
 
   // report
   private String currentAu;
-  private String currentCu;
+  private String currentUrl;
 
   private PrintWriter reportWriter;
 
@@ -526,13 +526,17 @@ public class V2AuMover {
     /* get Au cachedUrls from Lockss*/
     for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
       CachedUrl cachedUrl = iter.next();
-      currentCu = cachedUrl.getUrl();
-      String v2Url;
+      currentUrl = cachedUrl.getUrl();
+      String v2Url = null;
       try {
         v2Url = UrlUtil.normalizeUrl(cachedUrl.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL), au);
       } catch (Exception ex) {
-        log.warning("Unable to normalize uri for " + currentCu +".");
-        v2Url=currentCu;
+        log.warning("Unable to normalize uri for " + currentUrl, ex);
+      } finally {
+        AuUtil.safeRelease(cachedUrl);
+      }
+      if (v2Url == null) {
+        v2Url = currentUrl;
       }
       // we have the possibility that some or all of the artifacts were moved.
       // We looking for previously moved versions of the 'current' cu
@@ -547,7 +551,7 @@ public class V2AuMover {
         } while (!StringUtil.isNullString(token));
       }
       catch(ApiException apie) {
-        log.warning("Unable to determine if repo has preexisting artifacts for " + currentCu);
+        log.warning("Unable to determine if repo has preexisting artifacts for " + currentUrl);
         log.warning("All CachedUrls will be added");
       }
       moveCuVersions(v2Url, cachedUrl, cuArtifacts);
@@ -632,7 +636,7 @@ public class V2AuMover {
     Long collectionDate = null;
     CachedUrl cu = cuQueue.poll();
     if(cu == null) {
-      log.debug2("Queued move requests of all versions of " + currentCu);
+      log.debug3("Queued move requests of all versions of " + currentUrl);
       return;
     }
     try {
@@ -641,9 +645,9 @@ public class V2AuMover {
         collectionDate = Long.parseLong(fetchTime);
       }
       else {
-        log.debug(uri + ":version: " + cu.getVersion() + " is missing fetch time.");
+        log.debug2(uri + ":version: " + cu.getVersion() + " is missing fetch time.");
       }
-      log.debug2("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
+      log.debug3("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
       createArtifact(auid, uri, collectionDate, cu, collection,cuQueue);
     } catch (ApiException apie) {
       String err=uri + ": failed to create version: " + cu.getVersion() + ": " +
@@ -681,7 +685,7 @@ public class V2AuMover {
     Artifact committed;
     committed = rsCollectionsApiClient.updateArtifact(uncommitted.getCollection(),
       uncommitted.getId(), true);
-    log.debug("Successfully committed artifact " + committed.getId());
+    log.debug3("Successfully committed artifact " + committed.getId());
     auArtifactsMoved++;
   }
 
@@ -791,7 +795,7 @@ public class V2AuMover {
     public void onSuccess(Artifact result, int statusCode,
       Map<String, List<String>> responseHeaders) {
       try {
-        log.debug("Successfully created artifact (" + statusCode + "): " + result.getId());
+        log.debug3("Successfully created artifact (" + statusCode + "): " + result.getId());
         commitArtifact(result);
         if(cuQueue.peek() != null)
           moveNextCuVersion(auId, uri, cuQueue);
@@ -808,7 +812,7 @@ public class V2AuMover {
       log.debug3("Create Artifact uploaded " + bytesWritten + " of " + contentLength + "bytes..");
       auBytesMoved+=bytesWritten;
       if (done) {
-        log.debug2("Create Artifact upload of " + bytesWritten + " complete.");
+        log.debug("Create Artifact upload of " + bytesWritten + " complete.");
       }
     }
 
