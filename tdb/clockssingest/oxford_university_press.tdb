@@ -2479,10 +2479,10 @@
     au < frozen ; exists ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Bioscience Horizons: The International Journal of Student Research Volume 5 ; 5 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Bioscience Horizons: The International Journal of Student Research Volume 7 ; 7 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Bioscience Horizons: The International Journal of Student Research Volume 5 ; 5 ; > # different volume url: https://academic.oup.com/biohorizons/issue/volume/5
+    au < manifest ; exists ; 2013 ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Bioscience Horizons: The International Journal of Student Research Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Bioscience Horizons: The International Journal of Student Research Volume 8 ; 8 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Bioscience Horizons: The International Journal of Student Research Volume 9 ; 9 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Bioscience Horizons: The International Journal of Student Research Volume 10 ; 10 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Bioscience Horizons: The International Journal of Student Research Volume 11 ; 11 ; >
@@ -11185,9 +11185,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Legal Analysis Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Legal Analysis Volume 8 ; 8 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Legal Analysis Volume 9 ; 9 ; >
-    au < exists ; exists ; 2018 ; 2018 ; Journal of Legal Analysis Volume 10 ; 10 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Journal of Legal Analysis Volume 11 ; 11 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Journal of Legal Analysis Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Legal Analysis Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Legal Analysis Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Legal Analysis Volume 12 ; 12 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Journal of Legal Analysis Volume 13 ; 13 ; >
 
   }
@@ -16302,8 +16302,8 @@
     au < frozen ; exists ; 2017 ; 2017 ; Protein Engineering, Design and Selection (PEDS) Volume 30 ; 30 ; >
     au < finished ; finished ; 2018 ; 2018 ; Protein Engineering, Design and Selection (PEDS) Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Protein Engineering, Design and Selection (PEDS) Volume 32 ; 32 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Protein Engineering, Design and Selection (PEDS) Volume 33 ; 33 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Protein Engineering, Design and Selection (PEDS) Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 ; >
 
   }
 
@@ -22133,8 +22133,8 @@
     au < frozen ; exists ; 2016 ; 2016 ; Yearbook of European Law Volume 35 ; 35 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Yearbook of European Law Volume 36 ; 36 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Yearbook of European Law Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Yearbook of European Law Volume 39 ; 39 ; >
 
   }
 
