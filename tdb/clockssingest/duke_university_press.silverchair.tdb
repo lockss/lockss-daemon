@@ -29,7 +29,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
       au < frozen ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
-      au < testing ; exists ; 2021 ; 2021 ; American Literary Scholarship 2021 ; 2019 ; >
+      au < notReady ; exists ; 2021 ; 2021 ; American Literary Scholarship 2021 ; 2019 ; > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
 
   }
 
@@ -673,9 +673,9 @@
 
       param[journal_id] = mediterranean-quarterly
 
-      au < testing ; exists ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; >
-      au < testing ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; >
-      au < testing ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; >
+      au < notReady ; exists ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; > #no permission statement on manifest page
+      au < notReady ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; > #no permission statement on manifest page
+      au < notReady ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; > #no permission statement on manifest page
 
     }
 
