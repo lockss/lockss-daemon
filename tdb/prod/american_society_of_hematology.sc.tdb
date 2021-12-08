@@ -6,7 +6,6 @@
   >
 
     # move to SilverChair 2019
-    #plugin = needs.plugin
     plugin = org.lockss.plugin.silverchair.ash.ASHSilverchairPlugin
     implicit < status ; year ; param[year] ; name ; volume >
     param[base_url] = https://ashpublications.org/

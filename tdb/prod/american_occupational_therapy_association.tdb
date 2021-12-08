@@ -5,7 +5,6 @@
   >
   
 
-  #plugin = needs.plugin
   plugin = org.lockss.plugin.silverchair.aota.AOTASilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
   param[base_url] = https://research.aota.org/
