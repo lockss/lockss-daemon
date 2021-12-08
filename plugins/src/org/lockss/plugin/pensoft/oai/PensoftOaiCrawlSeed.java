@@ -102,9 +102,8 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
 		  throws ConfigurationException, IOException {
-      String storeUrl = String.format("%slockss?au_oai_set=%s&au_oai_date=%s",
-                                      UrlUtil.encodeUrl(au.getConfiguration().get("au_oai_set")),
-                                      UrlUtil.encodeUrl(au.getConfiguration().get("au_oai_date")));
+      String storeUrl = String.format("%slockss?au_oai_set=%s&au_oai_date=%d",
+                                      baseUrl, UrlUtil.encodeUrl(set), year);
       String link;
       Boolean error = false;
       Set<String> idSet = new HashSet<String>();
