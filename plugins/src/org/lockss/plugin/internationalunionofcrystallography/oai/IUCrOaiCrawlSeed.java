@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -246,7 +246,8 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
  * @throws IOException 
    */
   public Collection<String> idsToUrls(Collection<String> ids) throws IOException {
-	String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
+        String storeUrl = String.format("%slockss?au_oai_set=%s&au_oai_date=%s",
+                                        baseUrl, UrlUtil.encodeUrl(set), yearMonth);
 	List<String> urlList = new ArrayList<String>();
 	if(error) {
 		  urlList.add(storeUrl);
@@ -262,4 +263,10 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	  }
 	return urlList;
   }
+  
+  @Override
+  public boolean isFailOnStartUrlError() {
+    return false;
+  }
+  
 }

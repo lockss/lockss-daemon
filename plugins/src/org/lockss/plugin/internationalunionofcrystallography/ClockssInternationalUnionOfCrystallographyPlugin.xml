@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -54,15 +54,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>International Union of Crystallography Plugin (CLOCKSS)</string>
+    <string>International Union of Crystallography Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"International Union of Crystallography Plugin (CLOCKSS), Base URL %s, Scripts URL %s, Journal ID %s, Year %d, Issue %s", base_url, scripts_url, journal_id, year, issue</string>
+    <string>"International Union of Crystallography Plugin (Legacy, CLOCKSS), Base URL %s, Scripts URL %s, Journal ID %s, Year %d, Issue %s", base_url, scripts_url, journal_id, year, issue</string>
   </entry>
   <entry>
     <string>clockss_override</string>

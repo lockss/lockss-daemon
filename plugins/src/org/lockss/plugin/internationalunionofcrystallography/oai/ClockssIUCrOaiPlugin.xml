@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>International Union of Crystallography OAI Plugin (CLOCKSS)</string>
+    <string>International Union of Crystallography Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -50,15 +50,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"International Union of Crystallography OAI Plugin (CLOCKSS), Base URL %s, Script URL %s, OAI Set %s, OAI Date %s", base_url, script_url, au_oai_set, au_oai_date</string>
+    <string>"International Union of Crystallography Plugin (CLOCKSS), Base URL %s, Script URL %s, OAI Set %s, OAI Date %s", base_url, script_url, au_oai_set, au_oai_date</string>
   </entry>
   <entry>
     <string>clockss_override</string>
@@ -66,6 +66,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <entry>
         <string>au_def_pause_time</string>
         <long>100</long>
+      </entry>
+      <entry>
+        <string>plugin_crawl_seed_factory</string>
+        <org.lockss.util.Default/>
       </entry>
     </map>
   </entry>
