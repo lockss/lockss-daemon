@@ -1209,6 +1209,19 @@
 
   {
     title <
+      name = Safety of Nuclear Waste Disposal ;
+      eissn = 2700-8150
+    >
+      attr[journal_id] = sand
+      param[base_url] = https://sand.copernicus.org/
+      param[home_url] = https://www.safety-of-nuclear-waste-disposal.net/
+
+      au < manifest ; exists ; 2021 ; 2021 ; Safety of Nuclear Waste Disposal Volume 1 ; 1 ; >
+
+  }
+
+  {
+    title <
       name = Scientific Drilling ;
       issn = 1816-8957 ;
       eissn = 1816-3459
