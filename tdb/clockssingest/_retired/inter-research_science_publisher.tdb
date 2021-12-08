@@ -1,0 +1,142 @@
+{
+
+  publisher <
+    name = Inter-Research Science Publisher ;
+    info[contract] = 2021 ;
+    info[tester] = 5 ;
+    info[poller] = 8 ;
+    info[platform] = Custom.
+  >
+  
+  plugin = needs.plugin 
+  implicit < status ; status2 ; year ; param[year] ; name ; hidden[proxy] >
+  param[base_url] = https://www.int-res.com/
+  
+  {
+  
+    title <
+      name = Marine Ecology Progress Series ;
+      eissn = 0171-8630 
+    >
+      #published 1979 to present
+      param[journal_abbr] = meps
+
+      au < exists ; exists ; 2019 ; 2019 ; Marine Ecology Progress Series Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Marine Ecology Progress Series Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Marine Ecology Progress Series Volume 2021 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Diseases of Aquatic Organisms ;
+      issn = 0177-5103 ;
+      eissn = 1616-1580 
+    >
+      #published 1985 to present
+      param[journal_abbr] = dao
+
+      au < exists ; exists ; 2019 ; 2019 ; Diseases of Aquatic Organisms Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Diseases of Aquatic Organisms Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Diseases of Aquatic Organisms Volume 2021 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Climate Research ;
+      issn = 0936-577X ;
+      eissn = 1616-1572 
+    >
+      #published 1990 to present
+      param[journal_abbr] = cr
+
+      au < exists ; exists ; 2019 ; 2019 ; Climate Research Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Climate Research Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Climate Research Volume 2021 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Aquatic Microbial Ecology ;
+      issn = 0948-3055 ;
+      eissn = 1515-1564 
+    >
+      #published 1995 to present
+      param[journal_abbr] = ame
+
+      au < exists ; exists ; 2019 ; 2019 ; Aquatic Microbial Ecology Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Aquatic Microbial Ecology Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Aquatic Microbial Ecology Volume 2021 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Ethics in Science and Enviromental Politics ;
+      issn = 1611-8014 ;
+      eissn = 1863-5415 
+    >
+      #published 2001 to present
+      param[journal_abbr] = esep
+
+      au < exists ; exists ; 2019 ; 2019 ; Ethics in Science and Enviromental Politics Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Ethics in Science and Enviromental Politics Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Ethics in Science and Enviromental Politics Volume 2021 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Endangered Species Research ;
+      issn = 1863-5407 ;
+      eissn = 1613-4796 
+    >
+      #published 2004 to present
+      param[journal_abbr] = esr
+
+      au < exists ; exists ; 2019 ; 2019 ; Endangered Species Research Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Endangered Species Research Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Endangered Species Research Volume 2021 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Aquatic Biology ;
+      issn = 1864-7782 ;
+      eissn = 1864-7790 
+    >
+      #published 2007 to present
+      param[journal_abbr] = ab
+
+      au < exists ; exists ; 2019 ; 2019 ; Aquatic Biology Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Aquatic Biology Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Aquatic Biology Volume 2021 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Acquaculture Environment Interactions ;
+      issn = 1869-215X ;
+      eissn = 1869-7534 
+    >
+      #published 2009 to present
+      param[journal_abbr] = aei
+
+      au < exists ; exists ; 2019 ; 2019 ; Acquaculture Environment Interactions Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Acquaculture Environment Interactions Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Acquaculture Environment Interactions Volume 2021 ; >
+
+  }
+
+}
