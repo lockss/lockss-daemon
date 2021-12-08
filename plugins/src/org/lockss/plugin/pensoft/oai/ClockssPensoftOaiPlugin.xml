@@ -50,11 +50,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -67,10 +67,10 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_def_pause_time</string>
         <long>100</long>
       </entry>
+      <entry>
+        <string>plugin_crawl_seed_factory</string>
+        <org.lockss.util.Default/>
+      </entry>
     </map>
-  </entry>
-  <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <org.lockss.util.Default/>
   </entry>
 </map>
