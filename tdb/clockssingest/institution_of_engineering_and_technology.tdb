@@ -846,21 +846,21 @@
       >
 
       #years: 1990-2002; volumes:1-13
-      param[journal_id] = cce
+      param[journal_id] = ccej
 
-      au < exists ; exists ; 1990 ; Computing & Control Engineering Journal Volume 1 ; 1 ; >
-      au < exists ; exists ; 1991 ; Computing & Control Engineering Journal Volume 2 ; 2 ; >
-      au < exists ; exists ; 1992 ; Computing & Control Engineering Journal Volume 3 ; 3 ; >
-      au < exists ; exists ; 1993 ; Computing & Control Engineering Journal Volume 4 ; 4 ; >
-      au < exists ; exists ; 1994 ; Computing & Control Engineering Journal Volume 5 ; 5 ; >
-      au < exists ; exists ; 1995 ; Computing & Control Engineering Journal Volume 6 ; 6 ; >
-      au < exists ; exists ; 1996 ; Computing & Control Engineering Journal Volume 7 ; 7 ; >
-      au < exists ; exists ; 1997 ; Computing & Control Engineering Journal Volume 8 ; 8 ; >
-      au < exists ; exists ; 1998 ; Computing & Control Engineering Journal Volume 9 ; 9 ; >
-      au < exists ; exists ; 1999 ; Computing & Control Engineering Journal Volume 10 ; 10 ; >
-      au < exists ; exists ; 2000 ; Computing & Control Engineering Journal Volume 11 ; 11 ; >
-      au < exists ; exists ; 2001 ; Computing & Control Engineering Journal Volume 12 ; 12 ; >
-      au < exists ; exists ; 2002 ; Computing & Control Engineering Journal Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1990 ; Computing & Control Engineering Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1991 ; Computing & Control Engineering Journal Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1992 ; Computing & Control Engineering Journal Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1993 ; Computing & Control Engineering Journal Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1994 ; Computing & Control Engineering Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1995 ; Computing & Control Engineering Journal Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1996 ; Computing & Control Engineering Journal Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1997 ; Computing & Control Engineering Journal Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1998 ; Computing & Control Engineering Journal Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1999 ; Computing & Control Engineering Journal Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2000 ; Computing & Control Engineering Journal Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2001 ; Computing & Control Engineering Journal Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2002 ; Computing & Control Engineering Journal Volume 13 ; 13 ; >
 
   }
 
@@ -875,10 +875,10 @@
       #years: 1986-1989; volumes:1986-1989
       param[journal_id] = cm
 
-      au < exists ; exists ; 1986 ; Computerised Manufacturing Volume 1986 ; 1986 ; >
-      au < exists ; exists ; 1987 ; Computerised Manufacturing Volume 1987 ; 1987 ; >
-      au < exists ; exists ; 1988 ; Computerised Manufacturing Volume 1988 ; 1988 ; >
-      au < exists ; exists ; 1989 ; Computerised Manufacturing Volume 1989 ; 1989 ; >
+      au < manifest ; exists ; 1986 ; Computerised Manufacturing Volume 1986 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; Computerised Manufacturing Volume 1987 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; Computerised Manufacturing Volume 1988 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; Computerised Manufacturing Volume 1989 ; 1989 ; >
 
   }
 
@@ -893,20 +893,20 @@
       #years: 1989-2002; volumes:1-14
       param[journal_id] = ecej
 
-      au < exists ; exists ; 1989 ; Electronics & Communication Engineering Journal Volume 1 ; 1 ; >
-      au < exists ; exists ; 1990 ; Electronics & Communication Engineering Journal Volume 2 ; 2 ; >
-      au < exists ; exists ; 1991 ; Electronics & Communication Engineering Journal Volume 3 ; 3 ; >
-      au < exists ; exists ; 1992 ; Electronics & Communication Engineering Journal Volume 4 ; 4 ; >
-      au < exists ; exists ; 1993 ; Electronics & Communication Engineering Journal Volume 5 ; 5 ; >
-      au < exists ; exists ; 1994 ; Electronics & Communication Engineering Journal Volume 6 ; 6 ; >
-      au < exists ; exists ; 1995 ; Electronics & Communication Engineering Journal Volume 7 ; 7 ; >
-      au < exists ; exists ; 1996 ; Electronics & Communication Engineering Journal Volume 8 ; 8 ; >
-      au < exists ; exists ; 1997 ; Electronics & Communication Engineering Journal Volume 9 ; 9 ; >
-      au < exists ; exists ; 1998 ; Electronics & Communication Engineering Journal Volume 10 ; 10 ; >
-      au < exists ; exists ; 1999 ; Electronics & Communication Engineering Journal Volume 11 ; 11 ; >
-      au < exists ; exists ; 2000 ; Electronics & Communication Engineering Journal Volume 12 ; 12 ; >
-      au < exists ; exists ; 2001 ; Electronics & Communication Engineering Journal Volume 13 ; 13 ; >
-      au < exists ; exists ; 2002 ; Electronics & Communication Engineering Journal Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1989 ; Electronics & Communication Engineering Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1990 ; Electronics & Communication Engineering Journal Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1991 ; Electronics & Communication Engineering Journal Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1992 ; Electronics & Communication Engineering Journal Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1993 ; Electronics & Communication Engineering Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1994 ; Electronics & Communication Engineering Journal Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1995 ; Electronics & Communication Engineering Journal Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1996 ; Electronics & Communication Engineering Journal Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1997 ; Electronics & Communication Engineering Journal Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1998 ; Electronics & Communication Engineering Journal Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1999 ; Electronics & Communication Engineering Journal Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2000 ; Electronics & Communication Engineering Journal Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2001 ; Electronics & Communication Engineering Journal Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2002 ; Electronics & Communication Engineering Journal Volume 14 ; 14 ; >
 
   }
 
@@ -921,26 +921,26 @@
       #years: 1990-2009; volumes:1990-2009
       param[journal_id] = ee
 
-      au < exists ; exists ; 1990 ; Electronics Education Volume 1990 ; 1990 ; >
-      au < exists ; exists ; 1991 ; Electronics Education Volume 1991 ; 1991 ; >
-      au < exists ; exists ; 1992 ; Electronics Education Volume 1992 ; 1992 ; >
-      au < exists ; exists ; 1993 ; Electronics Education Volume 1993 ; 1993 ; >
-      au < exists ; exists ; 1994 ; Electronics Education Volume 1994 ; 1994 ; >
-      au < exists ; exists ; 1995 ; Electronics Education Volume 1995 ; 1995 ; >
-      au < exists ; exists ; 1996 ; Electronics Education Volume 1996 ; 1996 ; >
-      au < exists ; exists ; 1997 ; Electronics Education Volume 1997 ; 1997 ; >
-      au < exists ; exists ; 1998 ; Electronics Education Volume 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; Electronics Education Volume 1999 ; 1999 ; >
-      au < exists ; exists ; 2000 ; Electronics Education Volume 2000 ; 2000 ; >
-      au < exists ; exists ; 2001 ; Electronics Education Volume 2001 ; 2001 ; >
-      au < exists ; exists ; 2002 ; Electronics Education Volume 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; Electronics Education Volume 2003 ; 2003 ; >
-      au < exists ; exists ; 2004 ; Electronics Education Volume 2004 ; 2004 ; >
-      au < exists ; exists ; 2005 ; Electronics Education Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; Electronics Education Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Electronics Education Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Electronics Education Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; Electronics Education Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 1990 ; Electronics Education Volume 1990 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; Electronics Education Volume 1991 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Electronics Education Volume 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; Electronics Education Volume 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; Electronics Education Volume 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Electronics Education Volume 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Electronics Education Volume 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Electronics Education Volume 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Electronics Education Volume 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Electronics Education Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Electronics Education Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Electronics Education Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Electronics Education Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Electronics Education Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Electronics Education Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Electronics Education Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Electronics Education Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Electronics Education Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Electronics Education Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Electronics Education Volume 2009 ; 2009 ; >
 
   }
 
