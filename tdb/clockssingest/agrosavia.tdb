@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Agrosavia ;
+    info[contract] = 2021 ;
+    info[back] = 2018 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = http://revistacta.agrosavia.co/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+  
+    title < 
+      name = Ciencia y Tecnología Agropecuaria ;
+      issn = 0122-8706 ;
+      eissn = 2500-5308 
+    >
+
+      param[journal_id] = revista
+      #published 1996 to present
+
+      au < manifest ; exists ; 2017 ; Ciencia y Tecnología Agropecuaria Volume 2017 ; 18 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Ciencia y Tecnología Agropecuaria Volume 2018 ; 19 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Ciencia y Tecnología Agropecuaria Volume 2019 ; 20 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Ciencia y Tecnología Agropecuaria Volume 2020 ; 21 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Ciencia y Tecnología Agropecuaria Volume 2021 ; 22 ; 2021 ; >
+    
+  }
+
+}
