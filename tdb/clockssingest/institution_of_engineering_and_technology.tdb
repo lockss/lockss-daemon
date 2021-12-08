@@ -5,14 +5,15 @@
     info[contract] = 2012 ;
     info[back] = 1900 ;
     info[tester] = 8 ;
-    info[poller] = 3
+    info[poller] = 3 ;
+    info[platform] = pub2web / Ingenta
   >
 
     plugin = org.lockss.plugin.pub2web.iet.ClockssIetJournalsPlugin
 #    param[base_url] = http://digital-library.theiet.org/
     #Platform is pub2web
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-    #move to Wiley in 2021
+    #move to Wiley in 2021. Old material staying at Ingenta?
 
      {
 
