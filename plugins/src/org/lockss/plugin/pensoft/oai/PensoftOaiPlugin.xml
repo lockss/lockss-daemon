@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://(fonts|ajax)[.]googleapis[.]com/."</string>
       <string>1,"^https?://%s/(articles|article_preview)\.php\?id=[0-9]+$", url_host(base_url)</string>
       <string>1,"^https?://%s/article/[0-9]+/?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/auid=.*$", url_host(base_url)</string>
+      <string>1,"^https?://%s/lockss\?", url_host(base_url)</string>
       <string>1,"^https?://%s/lib/ajax_srv/article_elements_srv\.php\?action=download_pdf&amp;item_id=[0-9]+$", url_host(base_url)</string>
       <string>1,"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+", url_host(base_url)</string>
       <!-- There are content patterns available for preservation, including an html page with images and captions -->
