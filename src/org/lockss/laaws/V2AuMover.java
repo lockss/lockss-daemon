@@ -812,7 +812,7 @@ public class V2AuMover {
       log.debug3("Create Artifact uploaded " + bytesWritten + " of " + contentLength + "bytes..");
       auBytesMoved+=bytesWritten;
       if (done) {
-        log.debug("Create Artifact upload of " + bytesWritten + " complete.");
+        log.debug2("Create Artifact upload of " + bytesWritten + " complete.");
       }
     }
 
