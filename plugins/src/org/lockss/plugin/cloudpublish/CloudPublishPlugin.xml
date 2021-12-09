@@ -76,10 +76,11 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- https://www.liverpooluniversitypress.co.uk/journals/issue/3426 -->
       <string>1,"^%sjournals/(article|issue)/", base_url</string>
       <string>1,"^%sread", base_url</string>
-      <string>1,"https://[^.]+\.cloudpublish.co.uk/read"</string>
-      <string>1,"https://[^.]+\.cloudpublish.co.uk/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$"</string>
       <string>1,"https://mediaserver.cloudpublish.co.uk/"</string>
       <string>1,"https://bam.eu01.nr-data.net"</string>
+      <!-- ToDo REMOVE AFTER TESTING -->
+      <string>1,"https://[^.]+\.cloudpublish.co.uk/read"</string>
+      <string>1,"https://[^.]+\.cloudpublish.co.uk/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$"</string>
     </list>
   </entry>
   <entry>
@@ -145,7 +146,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js -->
       <string>*\.cloudfront\.net</string>
       <string>cdnjs\.cloudflare\.com</string>
-      <!-- https://liverpoolup.cloudpublish.co.uk/read/?id=20149&type=journal_article&cref=LUP0923&peref=&drm=soft&exit=http%3A%2F%2Fdev-liverpoolup.cloudpublish.co.uk%2Fjournals%2Fissue%2F2993&p=6&uid=LUP&t=1639008587&h=0187aa3d76d6fa507bd21aa81c533dc4 -->
+      <!-- mediaserver -->
       <string>*\.cloudpublish\.co\.uk</string>
       <string>bam\.eu01\.nr-data\.net</string>
     </list>
