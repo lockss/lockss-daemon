@@ -484,7 +484,7 @@
       param[journal_id] = hope
 
       au < frozen ; exists ; 2017 ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 2019 ; History of Political Economy Volume 51 ; 51 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 ; >
       au < crawling ; exists ; 2021 ; 2021 ; History of Political Economy Volume 53 ; 53 ; >
@@ -500,15 +500,15 @@
 
       param[journal_id] = history-of-the-present
 
-      au < frozen ; exists ; 2011 ; 2011 ; History of the Present Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; History of the Present Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; History of the Present Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; History of the Present Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; 2012 ; History of the Present Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; 2013 ; History of the Present Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2014 ; 2014 ; History of the Present Volume 4 ; 4 ; >
       au < frozen ; exists ; 2015 ; 2015 ; History of the Present Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; History of the Present Volume 7 ; 7 ; >
       au < frozen ; exists ; 2018 ; 2018 ; History of the Present Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; History of the Present Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; History of the Present Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; History of the Present Volume 10 ; 10 ; >
       au < crawling ; exists ; 2021 ; 2021 ; History of the Present Volume 11 ; 11 ; >
 
@@ -559,8 +559,8 @@
 
       param[journal_id] = journal-of-korean-studies
 
-      au < frozen ; exists ; 2014 ; 2014 ; Journal of Korean Studies Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Journal of Korean Studies Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2014 ; 2014 ; Journal of Korean Studies Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; Journal of Korean Studies Volume 10 ; 10 ; reingest3.clockss.org:8083 >
 
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Korean Studies Volume 23 ; 23 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Korean Studies Volume 24 ; 24 ; >
@@ -579,9 +579,9 @@
 
       param[journal_id] = jmems
 
-      au < frozen ; exists ; 2017 ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Medieval and Early Modern Studies Volume 48 ; 48 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Medieval and Early Modern Studies Volume 49 ; 49 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Journal of Medieval and Early Modern Studies Volume 49 ; 49 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Medieval and Early Modern Studies Volume 50 ; 50 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Journal of Medieval and Early Modern Studies Volume 51 ; 51 ; >
 
@@ -597,21 +597,21 @@
 
       param[journal_id] = jmews
 
-      au < frozen ; exists ; 2005 ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2008 ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 ; >
       au < frozen ; exists ; 2009 ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Journal of Middle East Women's Studies Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Journal of Middle East Women's Studies Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; Journal of Middle East Women's Studies Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Journal of Middle East Women's Studies Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2015 ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Middle East Women's Studies Volume 16 ; 16 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Journal of Middle East Women's Studies Volume 17 ; 17 ; >
 
@@ -627,9 +627,9 @@
 
       param[journal_id] = journal-of-music-theory
 
-      au < frozen ; exists ; 2017 ; 2017 ; Journal of Music Theory Volume 61 ; 61 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Music Theory Volume 62 ; 62 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Music Theory Volume 63 ; 63 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Journal of Music Theory Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Music Theory Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; 2019 ; Journal of Music Theory Volume 63 ; 63 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Music Theory Volume 64 ; 64 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Journal of Music Theory Volume 65 ; 65 ; >
 
@@ -645,8 +645,8 @@
 
       param[journal_id] = labor
 
-      au < frozen ; exists ; 2017 ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Labor: Studies in Working-Class History of the Americas Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Labor: Studies in Working-Class History of the Americas Volume 17 ; 17 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Labor: Studies in Working-Class History of the Americas Volume 18 ; 18 ; >
