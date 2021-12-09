@@ -497,7 +497,10 @@ public class ArticleMetadata {
    * 
    * @param rawToCooked
    *          maps raw key -> cooked MatadataField.
+   * @deprecated Switch to commons collections4 and use {@link
+   *             #cook(org.apache.commons.collections4.map.MultiMap)}
    */
+  @Deprecated
   public List<MetadataException> cook(org.apache.commons.collections.MultiMap rawToCooked) {
     List<MetadataException> errors = new ArrayList<MetadataException>();
     for (Map.Entry ent : 
