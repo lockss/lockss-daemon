@@ -51,14 +51,17 @@ public class Emerald2020ArticleIteratorFactory implements ArticleIteratorFactory
           Logger.getLogger(Emerald2020ArticleIteratorFactory.class);
 
   /*
-  https://www.emerald.com/insight/content/doi/10.1108/SR-02-2018-0043/full/html
-  https://www.emerald.com/insight/content/doi/10.1108/SR-02-2018-0043/full/pdf?title=point-cloud-measurements-uncertainty-calculation-on-spatial-feature-based-registration
-  */
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0062/full/html
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0062/full/pdf?title=a-holistic-model-for-measuring-continuous-innovation-capability-of-manufacturing-industry-a-case-study
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0063/full/html
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0063/full/link=resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJPPM-02-2021-0063/urn:emeraldgroup.com:asset:id:binary:IJPPM-02-2021-0063001.tif
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0063/full/link=resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJPPM-02-2021-0063/urn:emeraldgroup.com:asset:id:binary:IJPPM-02-2021-0063002.tif
+   */
 
   // Limit to just journal volume items
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   // Match on only those patters that could be an article
-  protected static final String PATTERN_TEMPLATE = "\"%sinsight/content/doi\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%sinsight/content/doi/[^/]+/[^/]+/full/(html|pdf)\", base_url";
 
   public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)/full/(pdf\\?title=[^/]+)", Pattern.CASE_INSENSITIVE);
   public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/(.*)/full/(html)$", Pattern.CASE_INSENSITIVE);
