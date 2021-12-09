@@ -476,34 +476,9 @@ public class ArticleMetadata {
    * @param rawToCooked
    *          maps raw key -> cooked MatadataField.
    */
-  public List<MetadataException> cook(org.apache.commons.collections4.MultiMap rawToCooked) {
-    List<MetadataException> errors = new ArrayList<MetadataException>();
-    for (Map.Entry ent :
-      (Collection<Map.Entry<String, Collection<MetadataField>>>)
-        (rawToCooked.entrySet())) {
-      String rawKey = (String) ent.getKey();
-      Collection<MetadataField> fields = (Collection) ent.getValue();
-      for (MetadataField field : fields) {
-        cookField(rawKey, field, errors);
-      }
-    }
-    return errors;
-  }
-
-  /**
-   * Copies values from the raw metadata map to the cooked map according to the
-   * supplied map. Any MetadataExceptions thrown while storing into the cooked
-   * map are returned in a List.
-   *
-   * @param rawToCooked
-   *          maps raw key -> cooked MatadataField.
-   * @deprecated Switch to commons collections4 and use {@link
-   *             #cook(org.apache.commons.collections4.map.MultiMap)}
-   */
-  @Deprecated
   public List<MetadataException> cook(MultiMap rawToCooked) {
     List<MetadataException> errors = new ArrayList<MetadataException>();
-    for (Map.Entry ent :
+    for (Map.Entry ent : 
       (Collection<Map.Entry<String, Collection<MetadataField>>>)
         (rawToCooked.entrySet())) {
       String rawKey = (String) ent.getKey();
