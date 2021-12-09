@@ -34,33 +34,38 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.cloudpublish;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
+import org.lockss.plugin.FilterFactory;
+import org.lockss.util.Logger;
 
 import java.io.InputStream;
 
-public class CloudPublishHtmlCrawlFilterFactory
-  extends BaseAtyponHtmlCrawlFilterFactory {
+public class CloudPublishHtmlCrawlFilterFactory implements FilterFactory {
+  protected static Logger log = Logger.getLogger(CloudPublishHtmlCrawlFilterFactory.class);
   
-  static NodeFilter[] filters = new NodeFilter[] {
-    // handled by parent:
-    // toc previous/next issue and article - <td class="journalNavRightTd">
-    // toc, abs, ref - breadcrumbs
-
-    // toc, abs, ref - right column most read/most cited
-    // too restrictive - it relates to any tabbed content, which could be main
-    // TODO - look for a better solution
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),    
-                                             
-    // all has been moved up to parent
+  static NodeFilter[] excludeFilters = new NodeFilter[] {
+      HtmlNodeFilters.tag("header"),
+      HtmlNodeFilters.tag("footer"),
+      HtmlNodeFilters.tag("nav"),
+      //HtmlNodeFilters.tagWithAttribute("nav", "id", "site-sidebar"),
+      //HtmlNodeFilters.tagWithAttribute("nav", "role", "navigation"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "journal-full-text"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "journal-references"),
+      //HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^www\\.", true),
   };
 
-  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) throws PluginException{
-    return super.createFilteredInputStream(au, in, encoding, filters);
+    return new HtmlFilterInputStream(in,
+        encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(
+            excludeFilters
+        )));
   }
   
 }
