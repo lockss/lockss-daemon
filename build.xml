@@ -248,7 +248,7 @@ Args:
                                   value="${lib}/pjl-comp-filter-1.6.5.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
-  <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
+  <property name="log4j.jar" value="${lib}/log4j-1.2.17.jar"/>
 
   <property name="commons.beanutils.jar" value="${lib}/commons-beanutils-1.9.4.jar" />
   <property name="commons.cli.jar" value="${lib}/commons-cli-1.5.0.jar" />
