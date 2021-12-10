@@ -142,7 +142,7 @@
       au < ready ; exists ; 2019 ; 978-91-88909-28-2 ; Renegater (978-91-88909-28-2) ; 10.21525/kriterium.20 ;  >
       au < frozen ; exists ; 2019 ; 978-91-7031-316-5 ; Mamsell Bohmans fall (978-91-7031-316-5) ; 10.33819/kriterium.17 ;  >
       au < ready ; exists ; 2019 ; 978-91-88661-85-2 ; Making the invisible visible (978-91-88661-85-2) ; 10.21525/kriterium.21 ;  >
-      au < testing ; exists ; 2020 ; 978-91-7963-006-5 ; Romanistiken i Sverige (978-91-7963-006-5) ; 10.21524/kriterium.18 ;  >
+      au < notReady ; exists ; 2020 ; 978-91-7963-006-5 ; Romanistiken i Sverige (978-91-7963-006-5) ; 10.21524/kriterium.18 ;  > #no permission from publisher
       au < ready ; exists ; 2020 ; 978-91-88661-87-6 ; Forbidden Literature (978-91-88661-87-6) ; 10.21525/kriterium.22 ;  >
       au < ready ; exists ; 2020 ; 978-91-88909-34-3 ; Movement of knowledge (978-91-88909-34-3) ; 10.21525/kriterium.24 ;  >
       au < ready ; exists ; 2020 ; 978-91-88909-44-2 ; Det villrådiga samhället (978-91-88909-44-2) ; 10.21525/kriterium.27 ;  >
@@ -367,7 +367,7 @@
       au < ready ; exists ; 2018 ; 978-1-911529-44-6 ; Rethinking Community Policing in International Police Reform (978-1-911529-44-6) ; 10.5334/bcb ;  >
       au < ready ; exists ; 2019 ; 978-1-911529-48-4 ; Pro-ecological Restructuring of Companies (978-1-911529-48-4) ; 10.5334/bbk ;  >
       au < ready ; exists ; 2019 ; 978-1-911529-52-1 ; Application of Molecular Methods and Raman Microscopy/Spectroscopy in Agricultural Sciences and Food Technology (978-1-911529-52-1) ; 10.5334/bbj ;  >
-      au < testing ; exists ; 2019 ; 978-1-911529-72-9 ; Security Sector Reform and Citizen Security (978-1-911529-72-9) ; 10.5334/bcc ;  >
+      au < ready ; exists ; 2019 ; 978-1-911529-72-9 ; Security Sector Reform and Citizen Security (978-1-911529-72-9) ; 10.5334/bcc ;  >
       au < ready ; exists ; 2019 ; 978-1-911529-76-7 ; Variance in Approach Toward a ‘Sustainable' Coffee Industry in Costa Rica (978-1-911529-76-7) ; 10.5334/bce ;  >
       au < ready ; exists ; 2019 ; 978-1-911-52980-4 ; Educational visions (978-1-911-52980-4) ; 10.5334/bcg ;  >
       au < ready ; exists ; 2020 ; 978-1-911529-64-4 ; Sharpening the Haze (978-1-911529-64-4) ; 10.5334/bcd ;  >
@@ -618,7 +618,7 @@
 
           param[base_url] = https://www.stockholmuniversitypress.se/
 
-          au < testing ; exists ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II  ( 	978-91-7635-125-3) ; 10.16993/bbf ;  >
+          au < ready ; exists ; 2020 ;  978-91-7635-125-3 ; Working-Class Literature(s) Volume II  ( 	978-91-7635-125-3) ; 10.16993/bbf ;  >
 
     }
 
