@@ -117,8 +117,8 @@
       au < finished ; manifest ; 2015 ; 2015 ; Archives of Asian Art Volume 65 ; 65 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
       au < notReady ; exists ; 2021 ; 2021 ; Archives of Asian Art Volume 71 ; 71 ; >
 
@@ -393,8 +393,8 @@
 
       param[journal_id] = ethnohistory
 
-      au < frozen ; exists ; 2017 ; 2017 ; Ethnohistory Volume 64 ; 64 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Ethnohistory Volume 64 ; 64 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; Ethnohistory Volume 66 ; 66 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Ethnohistory Volume 67 ; 67 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Ethnohistory Volume 68 ; 68 ; >
@@ -430,7 +430,7 @@
       param[journal_id] = genre
 
       au < finished ; manifest ; 2017 ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2018 ; 2018 ; Genre: Forms of Discourse and Culture Volume 51 ; 51 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Genre: Forms of Discourse and Culture Volume 51 ; 51 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 2019 ; Genre: Forms of Discourse and Culture Volume 52 ; 52 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Genre: Forms of Discourse and Culture Volume 53 ; 53 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Genre: Forms of Discourse and Culture Volume 54 ; 54 ; >
@@ -465,8 +465,8 @@
 
       param[journal_id] = hahr
 
-      au < frozen ; exists ; 2017 ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; Hispanic American Historical Review Volume 99 ; 99 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Hispanic American Historical Review Volume 100 ; 100 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Hispanic American Historical Review Volume 101 ; 101 ; >
@@ -503,7 +503,7 @@
       au < finished ; manifest ; 2011 ; 2011 ; History of the Present Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2012 ; 2012 ; History of the Present Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2013 ; 2013 ; History of the Present Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2014 ; 2014 ; History of the Present Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2014 ; 2014 ; History of the Present Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2015 ; 2015 ; History of the Present Volume 5 ; 5 ; >
       au < finished ; manifest ; 2016 ; 2016 ; History of the Present Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; History of the Present Volume 7 ; 7 ; >
@@ -523,8 +523,8 @@
 
       param[journal_id] = jclc
 
-     au < frozen ; exists ; 2017 ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; >
-     au < frozen ; exists ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; >
+     au < finished ; manifest ; 2017 ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+     au < finished ; manifest ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; reingest5.clockss.org:8082 >
      au < frozen ; exists ; 2019 ; 2019 ; Journal of Chinese Literature and Culture Volume 6 ; 6 ; >
      au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Chinese Literature and Culture Volume 7 ; 7 ; >
      au < crawling ; exists ; 2021 ; 2021 ; Journal of Chinese Literature and Culture Volume 8 ; 8 ; >
@@ -541,9 +541,9 @@
 
       param[journal_id] = jhppl
 
-      au < frozen ; exists ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Health Politics, Policy and Law Volume 45 ; 45 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Journal of Health Politics, Policy and Law Volume 46 ; 46 ; >
 
@@ -562,7 +562,7 @@
       au < finished ; manifest ; 2014 ; 2014 ; Journal of Korean Studies Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2015 ; 2015 ; Journal of Korean Studies Volume 10 ; 10 ; reingest3.clockss.org:8083 >
 
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Korean Studies Volume 23 ; 23 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Korean Studies Volume 23 ; 23 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Korean Studies Volume 24 ; 24 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Korean Studies Volume 25 ; 25 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Journal of Korean Studies Volume 26 ; 26 ; >
@@ -607,7 +607,7 @@
       au < finished ; manifest ; 2012 ; 2012 ; Journal of Middle East Women's Studies Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; 2013 ; Journal of Middle East Women's Studies Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2015 ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 ; >
       au < finished ; manifest ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 ; reingest5.clockss.org:8082 >
