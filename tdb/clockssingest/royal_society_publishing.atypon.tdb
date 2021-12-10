@@ -29,10 +29,10 @@
     
     au < frozen ; exists ; 1932-1935 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1932-1935] ; 1 ; >
     au < frozen ; exists ; 1936-1939 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1936-1939] ; 2 ; >
-    au < frozen ; exists ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 ; >
-    au < frozen ; exists ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 ; >
-    au < frozen ; exists ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 ; >
-    au < frozen ; exists ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 ; >
+    au < finished ; manifest ; 1940-1941 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1940-1941] ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1942-1944 ; Biographical Memoirs of Fellows of the Royal Society Volume 4 [1942-1944] ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1945-1947 ; Biographical Memoirs of Fellows of the Royal Society Volume 5 [1945-1947] ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1948-1949 ; Biographical Memoirs of Fellows of the Royal Society Volume 6 [1948-1949] ; 6 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1950-1951 ; Biographical Memoirs of Fellows of the Royal Society Volume 7 [1950-1951] ; 7 ; >
     au < frozen ; exists ; 1952-1953 ; Biographical Memoirs of Fellows of the Royal Society Volume 8 [1952-1953] ; 8 ; >
     au < frozen ; exists ; 1954 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1954] ; 9 ; >
@@ -261,7 +261,7 @@
     au < frozen ; exists ; 1982-1983 ; Notes and Records of the Royal Society Volume 37 ; 37 ; >
     au < frozen ; exists ; 1983-1984 ; Notes and Records of the Royal Society Volume 38 ; 38 ; >
     au < frozen ; exists ; 1984-1985 ; Notes and Records of the Royal Society Volume 39 ; 39 ; >
-    au < frozen ; exists ; 1985-1986 ; Notes and Records of the Royal Society Volume 40 ; 40 ; >
+    au < finished ; manifest ; 1985-1986 ; Notes and Records of the Royal Society Volume 40 ; 40 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1986-1987 ; Notes and Records of the Royal Society Volume 41 ; 41 ; >
     }
     {
@@ -348,41 +348,41 @@
     param[journal_id] = rsta1887
     
     au < frozen ; exists ; 1887 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 178 ; 178 ; >
-    au < frozen ; exists ; 1888 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 ; >
+    au < finished ; manifest ; 1888 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 179 ; 179 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1889 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 180 ; 180 ; >
     au < frozen ; exists ; 1890 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 181 ; 181 ; >
     au < frozen ; exists ; 1891 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 182 ; 182 ; >
-    au < frozen ; exists ; 1892 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 183 ; 183 ; >
+    au < finished ; manifest ; 1892 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 183 ; 183 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1893 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 184 ; 184 ; >
     au < frozen ; exists ; 1894 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 185 ; 185 ; >
-    au < frozen ; exists ; 1895 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 186 ; 186 ; >
+    au < finished ; manifest ; 1895 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 186 ; 186 ; reingest3.clockss.org:8083 >
     }
     {
     param[journal_id] = rsta1896
     
     au < frozen ; exists ; 1896 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 187 ; 187 ; >
     au < frozen ; exists ; 1896 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 188 ; 188 ; >
-    au < frozen ; exists ; 1897 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 189 ; 189 ; >
-    au < frozen ; exists ; 1897 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 190 ; 190 ; >
+    au < finished ; manifest ; 1897 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 189 ; 189 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1897 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 190 ; 190 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1898 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 191 ; 191 ; >
     au < frozen ; exists ; 1899 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 192 ; 192 ; >
     au < frozen ; exists ; 1900 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 193 ; 193 ; >
     au < frozen ; exists ; 1900 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 194 ; 194 ; >
     au < frozen ; exists ; 1900 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 195 ; 195 ; >
-    au < frozen ; exists ; 1901 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 196 ; 196 ; >
+    au < finished ; manifest ; 1901 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 196 ; 196 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1901 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 197 ; 197 ; >
-    au < frozen ; exists ; 1902 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 198 ; 198 ; >
+    au < finished ; manifest ; 1902 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 198 ; 198 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1902 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 199 ; 199 ; >
     au < frozen ; exists ; 1903 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 200 ; 200 ; >
-    au < frozen ; exists ; 1903 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 201 ; 201 ; >
+    au < finished ; manifest ; 1903 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 201 ; 201 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1904 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 202 ; 202 ; >
-    au < frozen ; exists ; 1904 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 203 ; 203 ; >
-    au < frozen ; exists ; 1905 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 204 ; 204 ; >
+    au < finished ; manifest ; 1904 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 203 ; 203 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1905 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 204 ; 204 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1906 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 205 ; 205 ; >
     au < frozen ; exists ; 1906 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 206 ; 206 ; >
-    au < frozen ; exists ; 1908 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 207 ; 207 ; >
+    au < finished ; manifest ; 1908 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 207 ; 207 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1908 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 208 ; 208 ; >
-    au < frozen ; exists ; 1909 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 209 ; 209 ; >
+    au < finished ; manifest ; 1909 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 209 ; 209 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1911 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 210 ; 210 ; >
     au < frozen ; exists ; 1912 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 211 ; 211 ; >
     au < frozen ; exists ; 1913 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 212 ; 212 ; >
@@ -391,17 +391,17 @@
     au < frozen ; exists ; 1915 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 215 ; 215 ; >
     au < frozen ; exists ; 1916 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 216 ; 216 ; >
     au < frozen ; exists ; 1918 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 217 ; 217 ; >
-    au < frozen ; exists ; 1919 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 218 ; 218 ; >
+    au < finished ; manifest ; 1919 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 218 ; 218 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1919 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 219 ; 219 ; >
-    au < frozen ; exists ; 1920 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 220 ; 220 ; >
+    au < finished ; manifest ; 1920 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 220 ; 220 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1921 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 221 ; 221 ; >
     au < frozen ; exists ; 1922 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 222 ; 222 ; >
     au < frozen ; exists ; 1923 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 223 ; 223 ; >
     au < frozen ; exists ; 1924 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 224 ; 224 ; >
-    au < frozen ; exists ; 1926 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 225 ; 225 ; >
-    au < frozen ; exists ; 1927 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 226 ; 226 ; >
+    au < finished ; manifest ; 1926 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 225 ; 225 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1927 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 226 ; 226 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1928 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 227 ; 227 ; >
-    au < frozen ; exists ; 1929 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 228 ; 228 ; >
+    au < finished ; manifest ; 1929 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 228 ; 228 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1930 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 229 ; 229 ; >
     au < frozen ; exists ; 1932 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 230 ; 230 ; >
     au < frozen ; exists ; 1933 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 231 ; 231 ; >
@@ -412,13 +412,13 @@
     param[journal_id] = rsta1934
     
     au < frozen ; exists ; 1934-1935 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 234 ; 234 ; >
-    au < frozen ; exists ; 1935-1936 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 235 ; 235 ; >
+    au < finished ; manifest ; 1935-1936 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 235 ; 235 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1936-1938 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 236 ; 236 ; >
     au < frozen ; exists ; 1938-1939 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 237 ; 237 ; >
-    au < frozen ; exists ; 1939-1940 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 238 ; 238 ; >
-    au < frozen ; exists ; 1940-1946 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 239 ; 239 ; >
-    au < frozen ; exists ; 1946-1948 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 240 ; 240 ; >
-    au < frozen ; exists ; 1948-1949 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 241 ; 241 ; >
+    au < finished ; manifest ; 1939-1940 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 238 ; 238 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1940-1946 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 239 ; 239 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1946-1948 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 240 ; 240 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1948-1949 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 241 ; 241 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1949-1950 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 242 ; 242 ; >
     au < frozen ; exists ; 1950-1951 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 243 ; 243 ; >
     au < frozen ; exists ; 1951-1952 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 244 ; 244 ; >
@@ -443,7 +443,7 @@
     au < frozen ; exists ; 1968-1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 263 ; 263 ; >
     au < frozen ; exists ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 264 ; 264 ; >
     au < frozen ; exists ; 1969 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 265 ; 265 ; >
-    au < frozen ; exists ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 266 ; 266 ; >
+    au < finished ; manifest ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 266 ; 266 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1970 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 267 ; 267 ; >
     au < frozen ; exists ; 1970-1971 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 268 ; 268 ; >
     au < frozen ; exists ; 1970-1971 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 269 ; 269 ; >
@@ -468,7 +468,7 @@
     au < frozen ; exists ; 1978 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 288 ; 288 ; >
     au < frozen ; exists ; 1978 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 289 ; 289 ; >
     au < frozen ; exists ; 1978-1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 290 ; 290 ; >
-    au < frozen ; exists ; 1978-1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 291 ; 291 ; >
+    au < finished ; manifest ; 1978-1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 291 ; 291 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1979 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 292 ; 292 ; >
     au < frozen ; exists ; 1979-1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 293 ; 293 ; >
     au < frozen ; exists ; 1980 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 294 ; 294 ; >
@@ -590,12 +590,12 @@
     param[journal_id] = rstb1887
 
     au < frozen ; exists ; 1887 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 178 ; 178 ; >
-    au < frozen ; exists ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 ; >
-    au < frozen ; exists ; 1889 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 180 ; 180 ; >
-    au < frozen ; exists ; 1890 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 181 ; 181 ; >
-    au < frozen ; exists ; 1891 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 182 ; 182 ; >
-    au < frozen ; exists ; 1892 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 183 ; 183 ; >
-    au < frozen ; exists ; 1893 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 184 ; 184 ; >
+    au < finished ; manifest ; 1888 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 179 ; 179 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1889 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 180 ; 180 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1890 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 181 ; 181 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1891 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 182 ; 182 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1892 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 183 ; 183 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1893 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 184 ; 184 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1894 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 185 ; 185 ; >
     au < frozen ; exists ; 1895 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 186 ; 186 ; >
     }
@@ -604,55 +604,55 @@
 
     au < frozen ; exists ; 1896 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 187 ; 187 ; >
     au < frozen ; exists ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 188 ; 188 ; >
-    au < frozen ; exists ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 189 ; 189 ; >
-    au < frozen ; exists ; 1898 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 190 ; 190 ; >
-    au < frozen ; exists ; 1899 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 191 ; 191 ; >
+    au < finished ; manifest ; 1897 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 189 ; 189 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1898 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 190 ; 190 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1899 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 191 ; 191 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1900 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 192 ; 192 ; >
     au < frozen ; exists ; 1900 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 193 ; 193 ; >
     au < frozen ; exists ; 1901 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 194 ; 194 ; >
     au < frozen ; exists ; 1903 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 195 ; 195 ; >
-    au < frozen ; exists ; 1904 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 196 ; 196 ; >
-    au < frozen ; exists ; 1905 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 197 ; 197 ; >
+    au < finished ; manifest ; 1904 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 196 ; 196 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1905 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 197 ; 197 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1906 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 198 ; 198 ; >
     au < frozen ; exists ; 1908 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 199 ; 199 ; >
-    au < frozen ; exists ; 1909 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 200 ; 200 ; >
+    au < finished ; manifest ; 1909 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 200 ; 200 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1911 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 201 ; 201 ; >
-    au < frozen ; exists ; 1912 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 202 ; 202 ; >
+    au < finished ; manifest ; 1912 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 202 ; 202 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1913 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 203 ; 203 ; >
     au < frozen ; exists ; 1914 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 204 ; 204 ; >
-    au < frozen ; exists ; 1914 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 205 ; 205 ; >
-    au < frozen ; exists ; 1915 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 206 ; 206 ; >
+    au < finished ; manifest ; 1914 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 205 ; 205 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1915 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 206 ; 206 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1916 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 207 ; 207 ; >
     au < frozen ; exists ; 1918 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 208 ; 208 ; >
     au < frozen ; exists ; 1920 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 209 ; 209 ; >
     au < frozen ; exists ; 1921 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 210 ; 210 ; >
     au < frozen ; exists ; 1923 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 211 ; 211 ; >
-    au < frozen ; exists ; 1924 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 212 ; 212 ; >
+    au < finished ; manifest ; 1924 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 212 ; 212 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1925 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 213 ; 213 ; >
     au < frozen ; exists ; 1926 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 214 ; 214 ; >
-    au < frozen ; exists ; 1927 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 215 ; 215 ; >
-    au < frozen ; exists ; 1928 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 216 ; 216 ; >
+    au < finished ; manifest ; 1927 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 215 ; 215 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1928 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 216 ; 216 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1929 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 217 ; 217 ; >
     au < frozen ; exists ; 1930 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 218 ; 218 ; >
-    au < frozen ; exists ; 1931 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 219 ; 219 ; >
+    au < finished ; manifest ; 1931 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 219 ; 219 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1931 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 220 ; 220 ; >
-    au < frozen ; exists ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 221 ; 221 ; >
-    au < frozen ; exists ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 222 ; 222 ; >
-    au < frozen ; exists ; 1934 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 223 ; 223 ; >
+    au < finished ; manifest ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 221 ; 221 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1932 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 222 ; 222 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1934 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 223 ; 223 ; reingest3.clockss.org:8083 >
     }
     {
     param[journal_id] = rstb1934
 
     au < frozen ; exists ; 1934-1935 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 224 ; 224 ; >
     au < frozen ; exists ; 1935 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 225 ; 225 ; >
-    au < frozen ; exists ; 1936 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 226 ; 226 ; >
-    au < frozen ; exists ; 1937 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 227 ; 227 ; >
-    au < frozen ; exists ; 1937-1938 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 228 ; 228 ; >
-    au < frozen ; exists ; 1938-1939 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 229 ; 229 ; >
-    au < frozen ; exists ; 1939-1941 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 230 ; 230 ; >
-    au < frozen ; exists ; 1941-1946 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 231 ; 231 ; >
-    au < frozen ; exists ; 1946-1947 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 232 ; 232 ; >
-    au < frozen ; exists ; 1947-1949 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 233 ; 233 ; >
+    au < finished ; manifest ; 1936 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 226 ; 226 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1937 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 227 ; 227 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1937-1938 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 228 ; 228 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1938-1939 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 229 ; 229 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1939-1941 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 230 ; 230 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1941-1946 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 231 ; 231 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1946-1947 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 232 ; 232 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1947-1949 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 233 ; 233 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1949-1950 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 234 ; 234 ; >
     au < frozen ; exists ; 1950-1951 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 235 ; 235 ; >
     au < frozen ; exists ; 1952 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 236 ; 236 ; >
@@ -684,7 +684,7 @@
     au < frozen ; exists ; 1970 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 258 ; 258 ; >
     au < frozen ; exists ; 1970-1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 259 ; 259 ; >
     au < frozen ; exists ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 260 ; 260 ; >
-    au < frozen ; exists ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 261 ; 261 ; >
+    au < finished ; manifest ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 261 ; 261 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1971 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 262 ; 262 ; >
     au < frozen ; exists ; 1971-1972 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 263 ; 263 ; >
     au < frozen ; exists ; 1972-1973 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 264 ; 264 ; >
@@ -835,174 +835,174 @@
     au < frozen ; exists ; 1672 ; Philosophical Transactions of the Royal Society of London Volume 7 ; 7 ; >
     au < frozen ; exists ; 1673 ; Philosophical Transactions of the Royal Society of London Volume 8 ; 8 ; >
     au < frozen ; exists ; 1674 ; Philosophical Transactions of the Royal Society of London Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 ; >
+    au < finished ; manifest ; 1675 ; Philosophical Transactions of the Royal Society of London Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1676 ; Philosophical Transactions of the Royal Society of London Volume 11 ; 11 ; >
     au < frozen ; exists ; 1677-1679 ; Philosophical Transactions of the Royal Society of London Volume 12 ; 12 ; >
     #During this period Philosophical Collections was published
     au < frozen ; exists ; 1683 ; Philosophical Transactions of the Royal Society of London Volume 13 ; 13 ; >
-    au < frozen ; exists ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 ; >
+    au < finished ; manifest ; 1684 ; Philosophical Transactions of the Royal Society of London Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1685 ; Philosophical Transactions of the Royal Society of London Volume 15 ; 15 ; >
     au < frozen ; exists ; 1686-1692 ; Philosophical Transactions of the Royal Society of London Volume 16 ; 16 ; >
     au < frozen ; exists ; 1693 ; Philosophical Transactions of the Royal Society of London Volume 17 ; 17 ; >
-    au < frozen ; exists ; 1694 ; Philosophical Transactions of the Royal Society of London Volume 18 ; 18 ; >
+    au < finished ; manifest ; 1694 ; Philosophical Transactions of the Royal Society of London Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1695-1697 ; Philosophical Transactions of the Royal Society of London Volume 19 ; 19 ; >
-    au < frozen ; exists ; 1698 ; Philosophical Transactions of the Royal Society of London Volume 20 ; 20 ; >
+    au < finished ; manifest ; 1698 ; Philosophical Transactions of the Royal Society of London Volume 20 ; 20 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1699 ; Philosophical Transactions of the Royal Society of London Volume 21 ; 21 ; >
-    au < frozen ; exists ; 1700-1701 ; Philosophical Transactions of the Royal Society of London Volume 22 ; 22 ; >
+    au < finished ; manifest ; 1700-1701 ; Philosophical Transactions of the Royal Society of London Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1702-1703 ; Philosophical Transactions of the Royal Society of London Volume 23 ; 23 ; >
     au < frozen ; exists ; 1704-1705 ; Philosophical Transactions of the Royal Society of London Volume 24 ; 24 ; >
     au < frozen ; exists ; 1706-1707 ; Philosophical Transactions of the Royal Society of London Volume 25 ; 25 ; >
-    au < frozen ; exists ; 1708-1709 ; Philosophical Transactions of the Royal Society of London Volume 26 ; 26 ; >
+    au < finished ; manifest ; 1708-1709 ; Philosophical Transactions of the Royal Society of London Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1710-1711 ; Philosophical Transactions of the Royal Society of London Volume 27 ; 27 ; >
     au < frozen ; exists ; 1712-1713 ; Philosophical Transactions of the Royal Society of London Volume 28 ; 28 ; >
-    au < frozen ; exists ; 1714-1716 ; Philosophical Transactions of the Royal Society of London Volume 29 ; 29 ; >
-    au < frozen ; exists ; 1717-1719 ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 ; >
-    au < frozen ; exists ; 1720-1721 ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 ; >
-    au < frozen ; exists ; 1722-1723 ; Philosophical Transactions of the Royal Society of London Volume 32 ; 32 ; >
-    au < frozen ; exists ; 1724-1725 ; Philosophical Transactions of the Royal Society of London Volume 33 ; 33 ; >
+    au < finished ; manifest ; 1714-1716 ; Philosophical Transactions of the Royal Society of London Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1717-1719 ; Philosophical Transactions of the Royal Society of London Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1720-1721 ; Philosophical Transactions of the Royal Society of London Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1722-1723 ; Philosophical Transactions of the Royal Society of London Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1724-1725 ; Philosophical Transactions of the Royal Society of London Volume 33 ; 33 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1726-1727 ; Philosophical Transactions of the Royal Society of London Volume 34 ; 34 ; >
     au < frozen ; exists ; 1727-1728 ; Philosophical Transactions of the Royal Society of London Volume 35 ; 35 ; >
-    au < frozen ; exists ; 1729-1730 ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 ; >
+    au < finished ; manifest ; 1729-1730 ; Philosophical Transactions of the Royal Society of London Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1731-1732 ; Philosophical Transactions of the Royal Society of London Volume 37 ; 37 ; >
-    au < frozen ; exists ; 1733-1734 ; Philosophical Transactions of the Royal Society of London Volume 38 ; 38 ; >
-    au < frozen ; exists ; 1735-1736 ; Philosophical Transactions of the Royal Society of London Volume 39 ; 39 ; >
+    au < finished ; manifest ; 1733-1734 ; Philosophical Transactions of the Royal Society of London Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1735-1736 ; Philosophical Transactions of the Royal Society of London Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1737-1738 ; Philosophical Transactions of the Royal Society of London Volume 40 ; 40 ; >
-    au < frozen ; exists ; 1739-1741 ; Philosophical Transactions of the Royal Society of London Volume 41 ; 41 ; >
-    au < frozen ; exists ; 1742-1743 ; Philosophical Transactions of the Royal Society of London Volume 42 ; 42 ; >
+    au < finished ; manifest ; 1739-1741 ; Philosophical Transactions of the Royal Society of London Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1742-1743 ; Philosophical Transactions of the Royal Society of London Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1744-1745 ; Philosophical Transactions of the Royal Society of London Volume 43 ; 43 ; >
     au < frozen ; exists ; 1746-1747 ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 ; >
     au < frozen ; exists ; 1748 ; Philosophical Transactions of the Royal Society of London Volume 45 ; 45 ; >
     au < frozen ; exists ; 1749-1750 ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 ; >
-    au < frozen ; exists ; 1751-1752 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 ; >
+    au < finished ; manifest ; 1751-1752 ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1753-1754 ; Philosophical Transactions of the Royal Society of London Volume 48 ; 48 ; >
     au < frozen ; exists ; 1755-1756 ; Philosophical Transactions of the Royal Society of London Volume 49 ; 49 ; >
-    au < frozen ; exists ; 1757-1758 ; Philosophical Transactions of the Royal Society of London Volume 50 ; 50 ; >
+    au < finished ; manifest ; 1757-1758 ; Philosophical Transactions of the Royal Society of London Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1759-1760 ; Philosophical Transactions of the Royal Society of London Volume 51 ; 51 ; >
     au < frozen ; exists ; 1761-1762 ; Philosophical Transactions of the Royal Society of London Volume 52 ; 52 ; >
     au < frozen ; exists ; 1763 ; Philosophical Transactions of the Royal Society of London Volume 53 ; 53 ; >
     au < frozen ; exists ; 1764 ; Philosophical Transactions of the Royal Society of London Volume 54 ; 54 ; >
     au < frozen ; exists ; 1765 ; Philosophical Transactions of the Royal Society of London Volume 55 ; 55 ; >
-    au < frozen ; exists ; 1766 ; Philosophical Transactions of the Royal Society of London Volume 56 ; 56 ; >
-    au < frozen ; exists ; 1767 ; Philosophical Transactions of the Royal Society of London Volume 57 ; 57 ; >
+    au < finished ; manifest ; 1766 ; Philosophical Transactions of the Royal Society of London Volume 56 ; 56 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1767 ; Philosophical Transactions of the Royal Society of London Volume 57 ; 57 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1768 ; Philosophical Transactions of the Royal Society of London Volume 58 ; 58 ; >
     au < frozen ; exists ; 1769 ; Philosophical Transactions of the Royal Society of London Volume 59 ; 59 ; >
     au < frozen ; exists ; 1770 ; Philosophical Transactions of the Royal Society of London Volume 60 ; 60 ; >
     au < frozen ; exists ; 1771 ; Philosophical Transactions of the Royal Society of London Volume 61 ; 61 ; >
     au < frozen ; exists ; 1772 ; Philosophical Transactions of the Royal Society of London Volume 62 ; 62 ; >
     au < frozen ; exists ; 1773 ; Philosophical Transactions of the Royal Society of London Volume 63 ; 63 ; >
-    au < frozen ; exists ; 1774 ; Philosophical Transactions of the Royal Society of London Volume 64 ; 64 ; >
-    au < frozen ; exists ; 1775 ; Philosophical Transactions of the Royal Society of London Volume 65 ; 65 ; >
-    au < frozen ; exists ; 1776 ; Philosophical Transactions of the Royal Society of London Volume 66 ; 66 ; >
-    au < frozen ; exists ; 1777 ; Philosophical Transactions of the Royal Society of London Volume 67 ; 67 ; >
+    au < finished ; manifest ; 1774 ; Philosophical Transactions of the Royal Society of London Volume 64 ; 64 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1775 ; Philosophical Transactions of the Royal Society of London Volume 65 ; 65 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1776 ; Philosophical Transactions of the Royal Society of London Volume 66 ; 66 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1777 ; Philosophical Transactions of the Royal Society of London Volume 67 ; 67 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1778 ; Philosophical Transactions of the Royal Society of London Volume 68 ; 68 ; >
     au < frozen ; exists ; 1779 ; Philosophical Transactions of the Royal Society of London Volume 69 ; 69 ; >
-    au < frozen ; exists ; 1780 ; Philosophical Transactions of the Royal Society of London Volume 70 ; 70 ; >
-    au < frozen ; exists ; 1781 ; Philosophical Transactions of the Royal Society of London Volume 71 ; 71 ; >
-    au < frozen ; exists ; 1782 ; Philosophical Transactions of the Royal Society of London Volume 72 ; 72 ; >
-    au < frozen ; exists ; 1783 ; Philosophical Transactions of the Royal Society of London Volume 73 ; 73 ; >
+    au < finished ; manifest ; 1780 ; Philosophical Transactions of the Royal Society of London Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1781 ; Philosophical Transactions of the Royal Society of London Volume 71 ; 71 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1782 ; Philosophical Transactions of the Royal Society of London Volume 72 ; 72 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1783 ; Philosophical Transactions of the Royal Society of London Volume 73 ; 73 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1784 ; Philosophical Transactions of the Royal Society of London Volume 74 ; 74 ; >
     au < frozen ; exists ; 1785 ; Philosophical Transactions of the Royal Society of London Volume 75 ; 75 ; >
     au < frozen ; exists ; 1786 ; Philosophical Transactions of the Royal Society of London Volume 76 ; 76 ; >
     au < frozen ; exists ; 1787 ; Philosophical Transactions of the Royal Society of London Volume 77 ; 77 ; >
     au < frozen ; exists ; 1788 ; Philosophical Transactions of the Royal Society of London Volume 78 ; 78 ; >
-    au < frozen ; exists ; 1789 ; Philosophical Transactions of the Royal Society of London Volume 79 ; 79 ; >
+    au < finished ; manifest ; 1789 ; Philosophical Transactions of the Royal Society of London Volume 79 ; 79 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1790 ; Philosophical Transactions of the Royal Society of London Volume 80 ; 80 ; >
     au < frozen ; exists ; 1791 ; Philosophical Transactions of the Royal Society of London Volume 81 ; 81 ; >
     au < frozen ; exists ; 1792 ; Philosophical Transactions of the Royal Society of London Volume 82 ; 82 ; >
     au < frozen ; exists ; 1793 ; Philosophical Transactions of the Royal Society of London Volume 83 ; 83 ; >
     au < frozen ; exists ; 1794 ; Philosophical Transactions of the Royal Society of London Volume 84 ; 84 ; >
     au < frozen ; exists ; 1795 ; Philosophical Transactions of the Royal Society of London Volume 85 ; 85 ; >
-    au < frozen ; exists ; 1796 ; Philosophical Transactions of the Royal Society of London Volume 86 ; 86 ; >
+    au < finished ; manifest ; 1796 ; Philosophical Transactions of the Royal Society of London Volume 86 ; 86 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1797 ; Philosophical Transactions of the Royal Society of London Volume 87 ; 87 ; >
-    au < frozen ; exists ; 1798 ; Philosophical Transactions of the Royal Society of London Volume 88 ; 88 ; >
-    au < frozen ; exists ; 1799 ; Philosophical Transactions of the Royal Society of London Volume 89 ; 89 ; >
+    au < finished ; manifest ; 1798 ; Philosophical Transactions of the Royal Society of London Volume 88 ; 88 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1799 ; Philosophical Transactions of the Royal Society of London Volume 89 ; 89 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1800 ; Philosophical Transactions of the Royal Society of London Volume 90 ; 90 ; >
-    au < frozen ; exists ; 1801 ; Philosophical Transactions of the Royal Society of London Volume 91 ; 91 ; >
+    au < finished ; manifest ; 1801 ; Philosophical Transactions of the Royal Society of London Volume 91 ; 91 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1802 ; Philosophical Transactions of the Royal Society of London Volume 92 ; 92 ; >
-    au < frozen ; exists ; 1803 ; Philosophical Transactions of the Royal Society of London Volume 93 ; 93 ; >
-    au < frozen ; exists ; 1804 ; Philosophical Transactions of the Royal Society of London Volume 94 ; 94 ; >
+    au < finished ; manifest ; 1803 ; Philosophical Transactions of the Royal Society of London Volume 93 ; 93 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1804 ; Philosophical Transactions of the Royal Society of London Volume 94 ; 94 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1805 ; Philosophical Transactions of the Royal Society of London Volume 95 ; 95 ; >
-    au < frozen ; exists ; 1806 ; Philosophical Transactions of the Royal Society of London Volume 96 ; 96 ; >
-    au < frozen ; exists ; 1807 ; Philosophical Transactions of the Royal Society of London Volume 97 ; 97 ; >
+    au < finished ; manifest ; 1806 ; Philosophical Transactions of the Royal Society of London Volume 96 ; 96 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1807 ; Philosophical Transactions of the Royal Society of London Volume 97 ; 97 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1808 ; Philosophical Transactions of the Royal Society of London Volume 98 ; 98 ; >
-    au < frozen ; exists ; 1809 ; Philosophical Transactions of the Royal Society of London Volume 99 ; 99 ; >
+    au < finished ; manifest ; 1809 ; Philosophical Transactions of the Royal Society of London Volume 99 ; 99 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1810 ; Philosophical Transactions of the Royal Society of London Volume 100 ; 100 ; >
-    au < frozen ; exists ; 1811 ; Philosophical Transactions of the Royal Society of London Volume 101 ; 101 ; >
+    au < finished ; manifest ; 1811 ; Philosophical Transactions of the Royal Society of London Volume 101 ; 101 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1812 ; Philosophical Transactions of the Royal Society of London Volume 102 ; 102 ; >
-    au < frozen ; exists ; 1813 ; Philosophical Transactions of the Royal Society of London Volume 103 ; 103 ; >
-    au < frozen ; exists ; 1814 ; Philosophical Transactions of the Royal Society of London Volume 104 ; 104 ; >
-    au < frozen ; exists ; 1815 ; Philosophical Transactions of the Royal Society of London Volume 105 ; 105 ; >
-    au < frozen ; exists ; 1816 ; Philosophical Transactions of the Royal Society of London Volume 106 ; 106 ; >
-    au < frozen ; exists ; 1817 ; Philosophical Transactions of the Royal Society of London Volume 107 ; 107 ; >
-    au < frozen ; exists ; 1818 ; Philosophical Transactions of the Royal Society of London Volume 108 ; 108 ; >
+    au < finished ; manifest ; 1813 ; Philosophical Transactions of the Royal Society of London Volume 103 ; 103 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1814 ; Philosophical Transactions of the Royal Society of London Volume 104 ; 104 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1815 ; Philosophical Transactions of the Royal Society of London Volume 105 ; 105 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1816 ; Philosophical Transactions of the Royal Society of London Volume 106 ; 106 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1817 ; Philosophical Transactions of the Royal Society of London Volume 107 ; 107 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1818 ; Philosophical Transactions of the Royal Society of London Volume 108 ; 108 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1819 ; Philosophical Transactions of the Royal Society of London Volume 109 ; 109 ; >
     au < frozen ; exists ; 1820 ; Philosophical Transactions of the Royal Society of London Volume 110 ; 110 ; >
-    au < frozen ; exists ; 1821 ; Philosophical Transactions of the Royal Society of London Volume 111 ; 111 ; >
+    au < finished ; manifest ; 1821 ; Philosophical Transactions of the Royal Society of London Volume 111 ; 111 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1822 ; Philosophical Transactions of the Royal Society of London Volume 112 ; 112 ; >
-    au < frozen ; exists ; 1823 ; Philosophical Transactions of the Royal Society of London Volume 113 ; 113 ; >
+    au < finished ; manifest ; 1823 ; Philosophical Transactions of the Royal Society of London Volume 113 ; 113 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1824 ; Philosophical Transactions of the Royal Society of London Volume 114 ; 114 ; >
-    au < frozen ; exists ; 1825 ; Philosophical Transactions of the Royal Society of London Volume 115 ; 115 ; >
-    au < frozen ; exists ; 1826 ; Philosophical Transactions of the Royal Society of London Volume 116 ; 116 ; >
+    au < finished ; manifest ; 1825 ; Philosophical Transactions of the Royal Society of London Volume 115 ; 115 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1826 ; Philosophical Transactions of the Royal Society of London Volume 116 ; 116 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1827 ; Philosophical Transactions of the Royal Society of London Volume 117 ; 117 ; >
-    au < frozen ; exists ; 1828 ; Philosophical Transactions of the Royal Society of London Volume 118 ; 118 ; >
-    au < frozen ; exists ; 1829 ; Philosophical Transactions of the Royal Society of London Volume 119 ; 119 ; >
+    au < finished ; manifest ; 1828 ; Philosophical Transactions of the Royal Society of London Volume 118 ; 118 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1829 ; Philosophical Transactions of the Royal Society of London Volume 119 ; 119 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1830 ; Philosophical Transactions of the Royal Society of London Volume 120 ; 120 ; >
     au < frozen ; exists ; 1831 ; Philosophical Transactions of the Royal Society of London Volume 121 ; 121 ; >
-    au < frozen ; exists ; 1832 ; Philosophical Transactions of the Royal Society of London Volume 122 ; 122 ; >
-    au < frozen ; exists ; 1833 ; Philosophical Transactions of the Royal Society of London Volume 123 ; 123 ; >
-    au < frozen ; exists ; 1834 ; Philosophical Transactions of the Royal Society of London Volume 124 ; 124 ; >
-    au < frozen ; exists ; 1835 ; Philosophical Transactions of the Royal Society of London Volume 125 ; 125 ; >
-    au < frozen ; exists ; 1836 ; Philosophical Transactions of the Royal Society of London Volume 126 ; 126 ; >
-    au < frozen ; exists ; 1837 ; Philosophical Transactions of the Royal Society of London Volume 127 ; 127 ; >
+    au < finished ; manifest ; 1832 ; Philosophical Transactions of the Royal Society of London Volume 122 ; 122 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1833 ; Philosophical Transactions of the Royal Society of London Volume 123 ; 123 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1834 ; Philosophical Transactions of the Royal Society of London Volume 124 ; 124 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1835 ; Philosophical Transactions of the Royal Society of London Volume 125 ; 125 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1836 ; Philosophical Transactions of the Royal Society of London Volume 126 ; 126 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1837 ; Philosophical Transactions of the Royal Society of London Volume 127 ; 127 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1838 ; Philosophical Transactions of the Royal Society of London Volume 128 ; 128 ; >
-    au < frozen ; exists ; 1839 ; Philosophical Transactions of the Royal Society of London Volume 129 ; 129 ; >
+    au < finished ; manifest ; 1839 ; Philosophical Transactions of the Royal Society of London Volume 129 ; 129 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1840 ; Philosophical Transactions of the Royal Society of London Volume 130 ; 130 ; >
-    au < frozen ; exists ; 1841 ; Philosophical Transactions of the Royal Society of London Volume 131 ; 131 ; >
-    au < frozen ; exists ; 1842 ; Philosophical Transactions of the Royal Society of London Volume 132 ; 132 ; >
-    au < frozen ; exists ; 1843 ; Philosophical Transactions of the Royal Society of London Volume 133 ; 133 ; >
-    au < frozen ; exists ; 1844 ; Philosophical Transactions of the Royal Society of London Volume 134 ; 134 ; >
+    au < finished ; manifest ; 1841 ; Philosophical Transactions of the Royal Society of London Volume 131 ; 131 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1842 ; Philosophical Transactions of the Royal Society of London Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1843 ; Philosophical Transactions of the Royal Society of London Volume 133 ; 133 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1844 ; Philosophical Transactions of the Royal Society of London Volume 134 ; 134 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1845 ; Philosophical Transactions of the Royal Society of London Volume 135 ; 135 ; >
     au < frozen ; exists ; 1846 ; Philosophical Transactions of the Royal Society of London Volume 136 ; 136 ; >
     au < frozen ; exists ; 1847 ; Philosophical Transactions of the Royal Society of London Volume 137 ; 137 ; >
-    au < frozen ; exists ; 1848 ; Philosophical Transactions of the Royal Society of London Volume 138 ; 138 ; >
-    au < frozen ; exists ; 1849 ; Philosophical Transactions of the Royal Society of London Volume 139 ; 139 ; >
+    au < finished ; manifest ; 1848 ; Philosophical Transactions of the Royal Society of London Volume 138 ; 138 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1849 ; Philosophical Transactions of the Royal Society of London Volume 139 ; 139 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1850 ; Philosophical Transactions of the Royal Society of London Volume 140 ; 140 ; >
     au < frozen ; exists ; 1851 ; Philosophical Transactions of the Royal Society of London Volume 141 ; 141 ; >
-    au < frozen ; exists ; 1852 ; Philosophical Transactions of the Royal Society of London Volume 142 ; 142 ; >
-    au < frozen ; exists ; 1853 ; Philosophical Transactions of the Royal Society of London Volume 143 ; 143 ; >
-    au < frozen ; exists ; 1854 ; Philosophical Transactions of the Royal Society of London Volume 144 ; 144 ; >
-    au < frozen ; exists ; 1855 ; Philosophical Transactions of the Royal Society of London Volume 145 ; 145 ; >
-    au < frozen ; exists ; 1856 ; Philosophical Transactions of the Royal Society of London Volume 146 ; 146 ; >
+    au < finished ; manifest ; 1852 ; Philosophical Transactions of the Royal Society of London Volume 142 ; 142 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1853 ; Philosophical Transactions of the Royal Society of London Volume 143 ; 143 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1854 ; Philosophical Transactions of the Royal Society of London Volume 144 ; 144 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1855 ; Philosophical Transactions of the Royal Society of London Volume 145 ; 145 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1856 ; Philosophical Transactions of the Royal Society of London Volume 146 ; 146 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1857 ; Philosophical Transactions of the Royal Society of London Volume 147 ; 147 ; >
-    au < frozen ; exists ; 1858 ; Philosophical Transactions of the Royal Society of London Volume 148 ; 148 ; >
-    au < frozen ; exists ; 1859 ; Philosophical Transactions of the Royal Society of London Volume 149 ; 149 ; >
-    au < frozen ; exists ; 1860 ; Philosophical Transactions of the Royal Society of London Volume 150 ; 150 ; >
-    au < frozen ; exists ; 1861 ; Philosophical Transactions of the Royal Society of London Volume 151 ; 151 ; >
-    au < frozen ; exists ; 1862 ; Philosophical Transactions of the Royal Society of London Volume 152 ; 152 ; >
-    au < frozen ; exists ; 1863 ; Philosophical Transactions of the Royal Society of London Volume 153 ; 153 ; >
-    au < frozen ; exists ; 1864 ; Philosophical Transactions of the Royal Society of London Volume 154 ; 154 ; >
-    au < frozen ; exists ; 1865 ; Philosophical Transactions of the Royal Society of London Volume 155 ; 155 ; >
-    au < frozen ; exists ; 1866 ; Philosophical Transactions of the Royal Society of London Volume 156 ; 156 ; >
-    au < frozen ; exists ; 1867 ; Philosophical Transactions of the Royal Society of London Volume 157 ; 157 ; >
-    au < frozen ; exists ; 1868 ; Philosophical Transactions of the Royal Society of London Volume 158 ; 158 ; >
+    au < finished ; manifest ; 1858 ; Philosophical Transactions of the Royal Society of London Volume 148 ; 148 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1859 ; Philosophical Transactions of the Royal Society of London Volume 149 ; 149 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1860 ; Philosophical Transactions of the Royal Society of London Volume 150 ; 150 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1861 ; Philosophical Transactions of the Royal Society of London Volume 151 ; 151 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1862 ; Philosophical Transactions of the Royal Society of London Volume 152 ; 152 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1863 ; Philosophical Transactions of the Royal Society of London Volume 153 ; 153 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1864 ; Philosophical Transactions of the Royal Society of London Volume 154 ; 154 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1865 ; Philosophical Transactions of the Royal Society of London Volume 155 ; 155 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1866 ; Philosophical Transactions of the Royal Society of London Volume 156 ; 156 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1867 ; Philosophical Transactions of the Royal Society of London Volume 157 ; 157 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1868 ; Philosophical Transactions of the Royal Society of London Volume 158 ; 158 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1869 ; Philosophical Transactions of the Royal Society of London Volume 159 ; 159 ; >
-    au < frozen ; exists ; 1870 ; Philosophical Transactions of the Royal Society of London Volume 160 ; 160 ; >
+    au < finished ; manifest ; 1870 ; Philosophical Transactions of the Royal Society of London Volume 160 ; 160 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1871 ; Philosophical Transactions of the Royal Society of London Volume 161 ; 161 ; >
-    au < frozen ; exists ; 1872 ; Philosophical Transactions of the Royal Society of London Volume 162 ; 162 ; >
-    au < frozen ; exists ; 1873 ; Philosophical Transactions of the Royal Society of London Volume 163 ; 163 ; >
+    au < finished ; manifest ; 1872 ; Philosophical Transactions of the Royal Society of London Volume 162 ; 162 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1873 ; Philosophical Transactions of the Royal Society of London Volume 163 ; 163 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1874 ; Philosophical Transactions of the Royal Society of London Volume 164 ; 164 ; >
     au < frozen ; exists ; 1875 ; Philosophical Transactions of the Royal Society of London Volume 165 ; 165 ; >
-    au < frozen ; exists ; 1876 ; Philosophical Transactions of the Royal Society of London Volume 166 ; 166 ; >
-    au < frozen ; exists ; 1877 ; Philosophical Transactions of the Royal Society of London Volume 167 ; 167 ; >
+    au < finished ; manifest ; 1876 ; Philosophical Transactions of the Royal Society of London Volume 166 ; 166 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1877 ; Philosophical Transactions of the Royal Society of London Volume 167 ; 167 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1879 ; Philosophical Transactions of the Royal Society of London Volume 168 ; 168 ; >
     au < doNotProcess ; doNotProcess ; 1878 ; Philosophical Transactions of the Royal Society of London Volume 169 ; 169 ; > #volume is empty
-    au < frozen ; exists ; 1879 ; Philosophical Transactions of the Royal Society of London Volume 170 ; 170 ; >
+    au < finished ; manifest ; 1879 ; Philosophical Transactions of the Royal Society of London Volume 170 ; 170 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1880 ; Philosophical Transactions of the Royal Society of London Volume 171 ; 171 ; >
-    au < frozen ; exists ; 1881 ; Philosophical Transactions of the Royal Society of London Volume 172 ; 172 ; >
-    au < frozen ; exists ; 1882 ; Philosophical Transactions of the Royal Society of London Volume 173 ; 173 ; >
+    au < finished ; manifest ; 1881 ; Philosophical Transactions of the Royal Society of London Volume 172 ; 172 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1882 ; Philosophical Transactions of the Royal Society of London Volume 173 ; 173 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1883 ; Philosophical Transactions of the Royal Society of London Volume 174 ; 174 ; >
     au < frozen ; exists ; 1884 ; Philosophical Transactions of the Royal Society of London Volume 175 ; 175 ; >
-    au < frozen ; exists ; 1885 ; Philosophical Transactions of the Royal Society of London Volume 176 ; 176 ; >
+    au < finished ; manifest ; 1885 ; Philosophical Transactions of the Royal Society of London Volume 176 ; 176 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1886 ; Philosophical Transactions of the Royal Society of London Volume 177 ; 177 ; >
 
   }
@@ -1044,16 +1044,16 @@
 
     au < frozen ; exists ; 1905 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 76 ; 76 ; >
     au < frozen ; exists ; 1906 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 77 ; 77 ; >
-    au < frozen ; exists ; 1906-1907 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 78 ; 78 ; >
+    au < finished ; manifest ; 1906-1907 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 78 ; 78 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 1907 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 79 ; 79 ; >
-    au < frozen ; exists ; 1907-1908 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 80 ; 80 ; >
+    au < finished ; manifest ; 1907-1908 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 80 ; 80 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1908 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 81 ; 81 ; >
-    au < frozen ; exists ; 1909 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 82 ; 82 ; >
+    au < finished ; manifest ; 1909 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 82 ; 82 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1909-1910 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 83 ; 83 ; >
     au < frozen ; exists ; 1910-1911 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 84 ; 84 ; >
     au < frozen ; exists ; 1911 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 85 ; 85 ; >
     au < frozen ; exists ; 1911-1912 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 86 ; 86 ; >
-    au < frozen ; exists ; 1912 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 87 ; 87 ; >
+    au < finished ; manifest ; 1912 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 87 ; 87 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1913 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 88 ; 88 ; >
     au < frozen ; exists ; 1913-1914 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 89 ; 89 ; >
     au < frozen ; exists ; 1914 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 90 ; 90 ; >
