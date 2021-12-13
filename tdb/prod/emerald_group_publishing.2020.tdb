@@ -403,9 +403,9 @@
     au < manifest ; 2007 ; American Journal of Business Volume 22 ; 22 >
     au < manifest ; 2008 ; American Journal of Business Volume 23 ; 23 >
     au < manifest ; 2009 ; American Journal of Business Volume 24 ; 24 >
-    au < manifest ; 2010 ; American Journal of Business Volume 25 ; 25 >
-    au < manifest ; 2011 ; American Journal of Business Volume 26 ; 26 >
-    au < manifest ; 2012 ; American Journal of Business Volume 27 ; 27 >
+    au < ready ; 2010 ; American Journal of Business Volume 25 ; 25 >
+    au < ready ; 2011 ; American Journal of Business Volume 26 ; 26 >
+    au < ready ; 2012 ; American Journal of Business Volume 27 ; 27 >
     au < doNotProcess ; 2013 ; American Journal of Business Volume 28 ; 28 >
     au < doNotProcess ; 2014 ; American Journal of Business Volume 29 ; 29 >
     au < doNotProcess ; 2015 ; American Journal of Business Volume 30 ; 30 >
@@ -550,7 +550,7 @@
     #stopped publishing after volume 4.
 
     au < ready ; 2011 ; Arts Marketing: An International Journal Volume 1 ; 1 >
-    au < manifest ; 2012 ; Arts Marketing: An International Journal Volume 2 ; 2 >
+    au < ready ; 2012 ; Arts Marketing: An International Journal Volume 2 ; 2 >
     au < doNotProcess ; 2013 ; Arts Marketing: An International Journal Volume 3 ; 3 >
     au < doNotProcess ; 2014 ; Arts Marketing: An International Journal Volume 4 ; 4 >
     au < exists ; 2015 ; Arts Marketing: An International Journal Volume 5 ; 5 >
@@ -683,7 +683,7 @@
     au < doNotProcess ; 2015 ; Asian Education and Development Studies Volume 4 ; 4 >
     au < doNotProcess ; 2016 ; Asian Education and Development Studies Volume 5 ; 5 >
     au < doNotProcess ; 2017 ; Asian Education and Development Studies Volume 6 ; 6 >
-    au < manifest ; 2018 ; Asian Education and Development Studies Volume 7 ; 7 >
+    au < ready ; 2018 ; Asian Education and Development Studies Volume 7 ; 7 >
     au < released ; 2019 ; Asian Education and Development Studies Volume 8 ; 8 >
     au < released ; 2020 ; Asian Education and Development Studies Volume 9 ; 9 >
     au < manifest ; 2021 ; Asian Education and Development Studies Volume 10 ; 10 >
@@ -762,7 +762,7 @@
     au < manifest ; 2007 ; Asian Review of Accounting Volume 15 ; 15 >
     au < manifest ; 2008 ; Asian Review of Accounting Volume 16 ; 16 >
     au < manifest ; 2009 ; Asian Review of Accounting Volume 17 ; 17 >
-    au < manifest ; 2010 ; Asian Review of Accounting Volume 18 ; 18 >
+    au < ready ; 2010 ; Asian Review of Accounting Volume 18 ; 18 >
     au < ready ; 2011 ; Asian Review of Accounting Volume 19 ; 19 >
     au < ready ; 2012 ; Asian Review of Accounting Volume 20 ; 20 >
     au < doNotProcess ; 2013 ; Asian Review of Accounting Volume 21 ; 21 >
@@ -1004,14 +1004,14 @@
     au < manifest ; 2008 ; Benchmarking: An International Journal Volume 15 ; 15 >
     au < manifest ; 2009 ; Benchmarking: An International Journal Volume 16 ; 16 >
     au < ready ; 2010 ; Benchmarking: An International Journal Volume 17 ; 17 >
-    au < manifest ; 2011 ; Benchmarking: An International Journal Volume 18 ; 18 >
+    au < ready ; 2011 ; Benchmarking: An International Journal Volume 18 ; 18 >
     au < ready ; 2012 ; Benchmarking: An International Journal Volume 19 ; 19 >
     au < doNotProcess ; 2013 ; Benchmarking: An International Journal Volume 20 ; 20 >
     au < doNotProcess ; 2014 ; Benchmarking: An International Journal Volume 21 ; 21 >
     au < doNotProcess ; 2015 ; Benchmarking: An International Journal Volume 22 ; 22 >
     au < doNotProcess ; 2016 ; Benchmarking: An International Journal Volume 23 ; 23 >
     au < doNotProcess ; 2017 ; Benchmarking: An International Journal Volume 24 ; 24 >
-    au < manifest ; 2018 ; Benchmarking: An International Journal Volume 25 ; 25 >
+    au < ready ; 2018 ; Benchmarking: An International Journal Volume 25 ; 25 >
     au < released ; 2019 ; Benchmarking: An International Journal Volume 26 ; 26 >
     au < released ; 2020 ; Benchmarking: An International Journal Volume 27 ; 27 >
     au < manifest ; 2021 ; Benchmarking: An International Journal Volume 28 ; 28 >
@@ -1058,7 +1058,7 @@
     au < doNotProcess ; 2015 ; The Bottom Line: Managing Library Finances Volume 28 ; 28 >
     au < doNotProcess ; 2016 ; The Bottom Line: Managing Library Finances Volume 29 ; 29 >
     au < doNotProcess ; 2017 ; The Bottom Line: Managing Library Finances Volume 30 ; 30 >
-    au < manifest ; 2018 ; The Bottom Line: Managing Library Finances Volume 31 ; 31 >
+    au < ready ; 2018 ; The Bottom Line: Managing Library Finances Volume 31 ; 31 >
     au < released ; 2019 ; The Bottom Line: Managing Library Finances Volume 32 ; 32 >
     au < released ; 2020 ; The Bottom Line: Managing Library Finances Volume 33 ; 33 >
     au < manifest ; 2021 ; The Bottom Line: Managing Library Finances Volume 34 ; 34 >
@@ -1776,7 +1776,7 @@
     au < doNotProcess ; 2015 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 34 ; 34 >
     au < doNotProcess ; 2016 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 35 ; 35 >
     au < doNotProcess ; 2017 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 36 ; 36 >
-    au < manifest ; 2018 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 37 ; 37 >
+    au < ready ; 2018 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 37 ; 37 >
     au < released ; 2019 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 38 ; 38 >
     au < released ; 2020 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 39 ; 39 >
     au < manifest ; 2021 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 40 ; 40 >
@@ -2489,7 +2489,7 @@
     au < doNotProcess ; 2015 ; Engineering, Construction and Architectural Management Volume 22 ; 22 >
     au < doNotProcess ; 2016 ; Engineering, Construction and Architectural Management Volume 23 ; 23 >
     au < doNotProcess ; 2017 ; Engineering, Construction and Architectural Management Volume 24 ; 24 >
-    au < manifest ; 2018 ; Engineering, Construction and Architectural Management Volume 25 ; 25 >
+    au < ready ; 2018 ; Engineering, Construction and Architectural Management Volume 25 ; 25 >
     au < released ; 2019 ; Engineering, Construction and Architectural Management Volume 26 ; 26 >
     au < released ; 2020 ; Engineering, Construction and Architectural Management Volume 27 ; 27 >
     au < manifest ; 2021 ; Engineering, Construction and Architectural Management Volume 28 ; 28 >
@@ -10917,7 +10917,7 @@
     au < doNotProcess ; 2015 ; Performance Measurement and Metrics Volume 16 ; 16 >
     au < doNotProcess ; 2016 ; Performance Measurement and Metrics Volume 17 ; 17 >
     au < doNotProcess ; 2017 ; Performance Measurement and Metrics Volume 18 ; 18 >
-    au < manifest ; 2018 ; Performance Measurement and Metrics Volume 19 ; 19 >
+    au < ready ; 2018 ; Performance Measurement and Metrics Volume 19 ; 19 >
     au < released ; 2019 ; Performance Measurement and Metrics Volume 20 ; 20 >
     au < released ; 2020 ; Performance Measurement and Metrics Volume 21 ; 21 >
     au < manifest ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 >
@@ -11045,7 +11045,7 @@
     au < doNotProcess ; 2015 ; Pigment & Resin Technology Volume 44 ; 44 >
     au < doNotProcess ; 2016 ; Pigment & Resin Technology Volume 45 ; 45 >
     au < doNotProcess ; 2017 ; Pigment & Resin Technology Volume 46 ; 46 >
-    au < manifest ; 2018 ; Pigment & Resin Technology Volume 47 ; 47 >
+    au < ready ; 2018 ; Pigment & Resin Technology Volume 47 ; 47 >
     au < released ; 2019 ; Pigment & Resin Technology Volume 48 ; 48 >
     au < released ; 2020 ; Pigment & Resin Technology Volume 49 ; 49 >
     au < manifest ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 >
@@ -11095,14 +11095,14 @@
     au < manifest ; 2008 ; Policing: An International Journal of Police Strategies & Management Volume 31 ; 31 >
     au < manifest ; 2009 ; Policing: An International Journal of Police Strategies & Management Volume 32 ; 32 >
     au < released ; 2010 ; Policing: An International Journal of Police Strategies & Management Volume 33 ; 33 >
-    au < manifest ; 2011 ; Policing: An International Journal of Police Strategies & Management Volume 34 ; 34 >
+    au < ready ; 2011 ; Policing: An International Journal of Police Strategies & Management Volume 34 ; 34 >
     au < released ; 2012 ; Policing: An International Journal of Police Strategies & Management Volume 35 ; 35 >
     au < doNotProcess ; 2013 ; Policing: An International Journal of Police Strategies & Management Volume 36 ; 36 >
     au < doNotProcess ; 2014 ; Policing: An International Journal of Police Strategies & Management Volume 37 ; 37 >
     au < doNotProcess ; 2015 ; Policing: An International Journal of Police Strategies & Management Volume 38 ; 38 >
     au < doNotProcess ; 2016 ; Policing: An International Journal of Police Strategies & Management Volume 39 ; 39 >
     au < doNotProcess ; 2017 ; Policing: An International Journal of Police Strategies & Management Volume 40 ; 40 >
-    au < manifest ; 2018 ; Policing: An International Journal of Police Strategies & Management Volume 41 ; 41 >
+    au < ready ; 2018 ; Policing: An International Journal of Police Strategies & Management Volume 41 ; 41 >
     au < released ; 2019 ; Policing: An International Journal of Police Strategies & Management Volume 42 ; 42 >
     au < released ; 2020 ; Policing: An International Journal of Police Strategies & Management Volume 43 ; 43 >
     au < manifest ; 2021 ; Policing: An International Journal of Police Strategies & Management Volume 44 ; 44 >
@@ -11248,7 +11248,7 @@
     au < manifest ; 2007 ; Property Management Volume 25 ; 25 >
     au < manifest ; 2008 ; Property Management Volume 26 ; 26 >
     au < manifest ; 2009 ; Property Management Volume 27 ; 27 >
-    au < manifest ; 2010 ; Property Management Volume 28 ; 28 >
+    au < ready ; 2010 ; Property Management Volume 28 ; 28 >
     au < released ; 2011 ; Property Management Volume 29 ; 29 >
     au < released ; 2012 ; Property Management Volume 30 ; 30 >
     au < doNotProcess ; 2013 ; Property Management Volume 31 ; 31 >
@@ -11256,7 +11256,7 @@
     au < doNotProcess ; 2015 ; Property Management Volume 33 ; 33 >
     au < doNotProcess ; 2016 ; Property Management Volume 34 ; 34 >
     au < doNotProcess ; 2017 ; Property Management Volume 35 ; 35 >
-    au < manifest ; 2018 ; Property Management Volume 36 ; 36 >
+    au < ready ; 2018 ; Property Management Volume 36 ; 36 >
     au < released ; 2019 ; Property Management Volume 37 ; 37 >
     au < released ; 2020 ; Property Management Volume 38 ; 38 >
     au < manifest ; 2021 ; Property Management Volume 39 ; 39 >
@@ -11286,7 +11286,7 @@
     au < manifest ; 2007 ; Qualitative Market Research: An International Journal Volume 10 ; 10 >
     au < manifest ; 2008 ; Qualitative Market Research: An International Journal Volume 11 ; 11 >
     au < manifest ; 2009 ; Qualitative Market Research: An International Journal Volume 12 ; 12 >
-    au < manifest ; 2010 ; Qualitative Market Research: An International Journal Volume 13 ; 13 >
+    au < ready ; 2010 ; Qualitative Market Research: An International Journal Volume 13 ; 13 >
     au < released ; 2011 ; Qualitative Market Research: An International Journal Volume 14 ; 14 >
     au < released ; 2012 ; Qualitative Market Research: An International Journal Volume 15 ; 15 >
     au < doNotProcess ; 2013 ; Qualitative Market Research: An International Journal Volume 16 ; 16 >
@@ -11294,7 +11294,7 @@
     au < doNotProcess ; 2015 ; Qualitative Market Research: An International Journal Volume 18 ; 18 >
     au < doNotProcess ; 2016 ; Qualitative Market Research: An International Journal Volume 19 ; 19 >
     au < doNotProcess ; 2017 ; Qualitative Market Research: An International Journal Volume 20 ; 20 >
-    au < manifest ; 2018 ; Qualitative Market Research: An International Journal Volume 21 ; 21 >
+    au < ready ; 2018 ; Qualitative Market Research: An International Journal Volume 21 ; 21 >
     au < released ; 2019 ; Qualitative Market Research: An International Journal Volume 22 ; 22 >
     au < released ; 2020 ; Qualitative Market Research: An International Journal Volume 23 ; 23 >
     au < manifest ; 2021 ; Qualitative Market Research: An International Journal Volume 24 ; 24 >
@@ -11318,7 +11318,7 @@
     au < manifest ; 2007 ; Qualitative Research in Accounting & Management Volume 4 ; 4 >
     au < manifest ; 2008 ; Qualitative Research in Accounting & Management Volume 5 ; 5 >
     au < manifest ; 2009 ; Qualitative Research in Accounting & Management Volume 6 ; 6 >
-    au < manifest ; 2010 ; Qualitative Research in Accounting & Management Volume 7 ; 7 >
+    au < ready ; 2010 ; Qualitative Research in Accounting & Management Volume 7 ; 7 >
     au < released ; 2011 ; Qualitative Research in Accounting & Management Volume 8 ; 8 >
     au < released ; 2012 ; Qualitative Research in Accounting & Management Volume 9 ; 9 >
     au < doNotProcess ; 2013 ; Qualitative Research in Accounting & Management Volume 10 ; 10 >
@@ -11410,7 +11410,7 @@
     au < doNotProcess ; 2015 ; Qualitative Research Journal Volume 15 ; 15 >
     au < doNotProcess ; 2016 ; Qualitative Research Journal Volume 16 ; 16 >
     au < doNotProcess ; 2017 ; Qualitative Research Journal Volume 17 ; 17 >
-    au < manifest ; 2018 ; Qualitative Research Journal Volume 18 ; 18 >
+    au < ready ; 2018 ; Qualitative Research Journal Volume 18 ; 18 >
     au < released ; 2019 ; Qualitative Research Journal Volume 19 ; 19 >
     au < released ; 2020 ; Qualitative Research Journal Volume 20 ; 20 >
     au < manifest ; 2021 ; Qualitative Research Journal Volume 21 ; 21 >
@@ -11445,7 +11445,7 @@
     au < manifest ; 2007 ; Quality Assurance in Education Volume 15 ; 15 >
     au < manifest ; 2008 ; Quality Assurance in Education Volume 16 ; 16 >
     au < manifest ; 2009 ; Quality Assurance in Education Volume 17 ; 17 >
-    au < manifest ; 2010 ; Quality Assurance in Education Volume 18 ; 18 >
+    au < ready ; 2010 ; Quality Assurance in Education Volume 18 ; 18 >
     au < released ; 2011 ; Quality Assurance in Education Volume 19 ; 19 >
     au < released ; 2012 ; Quality Assurance in Education Volume 20 ; 20 >
     au < doNotProcess ; 2013 ; Quality Assurance in Education Volume 21 ; 21 >
@@ -11453,7 +11453,7 @@
     au < doNotProcess ; 2015 ; Quality Assurance in Education Volume 23 ; 23 >
     au < doNotProcess ; 2016 ; Quality Assurance in Education Volume 24 ; 24 >
     au < doNotProcess ; 2017 ; Quality Assurance in Education Volume 25 ; 25 >
-    au < manifest ; 2018 ; Quality Assurance in Education Volume 26 ; 26 >
+    au < ready ; 2018 ; Quality Assurance in Education Volume 26 ; 26 >
     au < released ; 2019 ; Quality Assurance in Education Volume 27 ; 27 >
     au < released ; 2020 ; Quality Assurance in Education Volume 28 ; 28 >
     au < manifest ; 2021 ; Quality Assurance in Education Volume 29 ; 29 >
@@ -11568,14 +11568,14 @@
     au < manifest ; 2008 ; Records Management Journal Volume 18 ; 18 >
     au < released ; 2009 ; Records Management Journal Volume 19 ; 19 >
     au < released ; 2010 ; Records Management Journal Volume 20 ; 20 >
-    au < manifest ; 2011 ; Records Management Journal Volume 21 ; 21 >
+    au < ready ; 2011 ; Records Management Journal Volume 21 ; 21 >
     au < released ; 2012 ; Records Management Journal Volume 22 ; 22 >
     au < doNotProcess ; 2013 ; Records Management Journal Volume 23 ; 23 >
     au < doNotProcess ; 2014 ; Records Management Journal Volume 24 ; 24 >
     au < doNotProcess ; 2015 ; Records Management Journal Volume 25 ; 25 >
     au < doNotProcess ; 2016 ; Records Management Journal Volume 26 ; 26 >
     au < doNotProcess ; 2017 ; Records Management Journal Volume 27 ; 27 >
-    au < manifest ; 2018 ; Records Management Journal Volume 28 ; 28 >
+    au < ready ; 2018 ; Records Management Journal Volume 28 ; 28 >
     au < released ; 2019 ; Records Management Journal Volume 29 ; 29 >
     au < released ; 2020 ; Records Management Journal Volume 30 ; 30 >
     au < manifest ; 2021 ; Records Management Journal Volume 31 ; 31 >
@@ -11730,15 +11730,15 @@
 
     au < manifest ; 2009 ; Review of Behavioral Finance Volume 1 ; 1 >
     au < released ; 2010 ; Review of Behavioral Finance Volume 2 ; 2 >
-    au < manifest ; 2011 ; Review of Behavioral Finance Volume 3 ; 3 >
-    au < manifest ; 2012 ; Review of Behavioral Finance Volume 4 ; 4 >
+    au < ready ; 2011 ; Review of Behavioral Finance Volume 3 ; 3 >
+    au < ready ; 2012 ; Review of Behavioral Finance Volume 4 ; 4 >
     au < doNotProcess ; 2013 ; Review of Behavioral Finance Volume 5 ; 5 >
     au < doNotProcess ; 2014 ; Review of Behavioral Finance Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; Review of Behavioral Finance Volume 7 ; 7 >
     au < doNotProcess ; 2016 ; Review of Behavioral Finance Volume 8 ; 8 >
     au < doNotProcess ; 2017 ; Review of Behavioral Finance Volume 9 ; 9 >
-    au < manifest ; 2018 ; Review of Behavioral Finance Volume 10 ; 10 >
-    au < manifest ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 >
+    au < ready ; 2018 ; Review of Behavioral Finance Volume 10 ; 10 >
+    au < ready ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 >
     au < manifest ; 2020 ; Review of Behavioral Finance Volume 12 ; 12 >
     au < manifest ; 2021 ; Review of Behavioral Finance Volume 13 ; 13 >
 
@@ -11772,7 +11772,7 @@
     au < doNotProcess ; 2015 ; Safer Communities: A journal of practice, opinion, policy and research Volume 14 ; 14 >
     au < doNotProcess ; 2016 ; Safer Communities: A journal of practice, opinion, policy and research Volume 15 ; 15 >
     au < doNotProcess ; 2017 ; Safer Communities: A journal of practice, opinion, policy and research Volume 16 ; 16 >
-    au < manifest ; 2018 ; Safer Communities: A journal of practice, opinion, policy and research Volume 17 ; 17 >
+    au < ready ; 2018 ; Safer Communities: A journal of practice, opinion, policy and research Volume 17 ; 17 >
     au < released ; 2019 ; Safer Communities: A journal of practice, opinion, policy and research Volume 18 ; 18 >
     au < released ; 2020 ; Safer Communities: A journal of practice, opinion, policy and research Volume 19 ; 19 >
     au < manifest ; 2021 ; Safer Communities: A journal of practice, opinion, policy and research Volume 20 ; 20 >
@@ -11820,7 +11820,7 @@
     au < manifest ; 2007 ; Sensor Review Volume 27 ; 27 >
     au < manifest ; 2008 ; Sensor Review Volume 28 ; 28 >
     au < manifest ; 2009 ; Sensor Review Volume 29 ; 29 >
-    au < manifest ; 2010 ; Sensor Review Volume 30 ; 30 >
+    au < ready ; 2010 ; Sensor Review Volume 30 ; 30 >
     au < released ; 2011 ; Sensor Review Volume 31 ; 31 >
     au < released ; 2012 ; Sensor Review Volume 32 ; 32 >
     au < doNotProcess ; 2013 ; Sensor Review Volume 33 ; 33 >
@@ -11828,7 +11828,7 @@
     au < doNotProcess ; 2015 ; Sensor Review Volume 35 ; 35 >
     au < doNotProcess ; 2016 ; Sensor Review Volume 36 ; 36 >
     au < doNotProcess ; 2017 ; Sensor Review Volume 37 ; 37 >
-    au < manifest ; 2018 ; Sensor Review Volume 38 ; 38 >
+    au < ready ; 2018 ; Sensor Review Volume 38 ; 38 >
     au < released ; 2019 ; Sensor Review Volume 39 ; 39 >
     au < released ; 2020 ; Sensor Review Volume 40 ; 40 >
     au < manifest ; 2021 ; Sensor Review Volume 41 ; 41 >
@@ -11850,7 +11850,7 @@
     au < doNotProcess ; 2015 ; Smart and Sustainable Built Environment Volume 4 ; 4 >
     au < doNotProcess ; 2016 ; Smart and Sustainable Built Environment Volume 5 ; 5 >
     au < doNotProcess ; 2017 ; Smart and Sustainable Built Environment Volume 6 ; 6 >
-    au < manifest ; 2018 ; Smart and Sustainable Built Environment Volume 7 ; 7 >
+    au < ready ; 2018 ; Smart and Sustainable Built Environment Volume 7 ; 7 >
     au < released ; 2019 ; Smart and Sustainable Built Environment Volume 8 ; 8 >
     au < released ; 2020 ; Smart and Sustainable Built Environment Volume 9 ; 9 >
     au < manifest ; 2021 ; Smart and Sustainable Built Environment Volume 10 ; 10 >
@@ -11869,7 +11869,7 @@
     param[journal_issn] = 2042-0919
     comment[journal_id] = scn
 
-    au < manifest ; 2010 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 1 ; 1 >
+    au < ready ; 2010 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 1 ; 1 >
     au < released ; 2011 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 2 ; 2 >
     au < released ; 2012 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 3 ; 3 >
     au < doNotProcess ; 2013 ; Social Care and Neurodisability: A journal on practice, management, research and law Volume 4 ; 4 >
@@ -11894,14 +11894,14 @@
     au < manifest ; 2008 ; Social Enterprise Journal Volume 4 ; 4 >
     au < manifest ; 2009 ; Social Enterprise Journal Volume 5 ; 5 >
     au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
-    au < manifest ; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
+    au < ready ; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
     au < released ; 2012 ; Social Enterprise Journal Volume 8 ; 8 >
     au < doNotProcess ; 2013 ; Social Enterprise Journal Volume 9 ; 9 >
     au < doNotProcess ; 2014 ; Social Enterprise Journal Volume 10 ; 10 >
     au < doNotProcess ; 2015 ; Social Enterprise Journal Volume 11 ; 11 >
     au < doNotProcess ; 2016 ; Social Enterprise Journal Volume 12 ; 12 >
     au < doNotProcess ; 2017 ; Social Enterprise Journal Volume 13 ; 13 >
-    au < manifest ; 2018 ; Social Enterprise Journal Volume 14 ; 14 >
+    au < ready ; 2018 ; Social Enterprise Journal Volume 14 ; 14 >
     au < released ; 2019 ; Social Enterprise Journal Volume 15 ; 15 >
     au < released ; 2020 ; Social Enterprise Journal Volume 16 ; 16 >
     au < manifest ; 2021 ; Social Enterprise Journal Volume 17 ; 17 >
@@ -12001,15 +12001,15 @@
     au < manifest ; 2007 ; Soldering & Surface Mount Technology Volume 19 ; 19 >
     au < manifest ; 2008 ; Soldering & Surface Mount Technology Volume 20 ; 20 >
     au < manifest ; 2009 ; Soldering & Surface Mount Technology Volume 21 ; 21 >
-    au < manifest ; 2010 ; Soldering & Surface Mount Technology Volume 22 ; 22 >
+    au < ready ; 2010 ; Soldering & Surface Mount Technology Volume 22 ; 22 >
     au < released ; 2011 ; Soldering & Surface Mount Technology Volume 23 ; 23 >
-    au < manifest ; 2012 ; Soldering & Surface Mount Technology Volume 24 ; 24 >
+    au < ready ; 2012 ; Soldering & Surface Mount Technology Volume 24 ; 24 >
     au < doNotProcess ; 2013 ; Soldering & Surface Mount Technology Volume 25 ; 25 >
     au < doNotProcess ; 2014 ; Soldering & Surface Mount Technology Volume 26 ; 26 >
     au < doNotProcess ; 2015 ; Soldering & Surface Mount Technology Volume 27 ; 27 >
     au < doNotProcess ; 2016 ; Soldering & Surface Mount Technology Volume 28 ; 28 >
     au < doNotProcess ; 2017 ; Soldering & Surface Mount Technology Volume 29 ; 29 >
-    au < manifest ; 2018 ; Soldering & Surface Mount Technology Volume 30 ; 30 >
+    au < ready ; 2018 ; Soldering & Surface Mount Technology Volume 30 ; 30 >
     au < released ; 2019 ; Soldering & Surface Mount Technology Volume 31 ; 31 >
     au < released ; 2020 ; Soldering & Surface Mount Technology Volume 32 ; 32 >
     au < manifest ; 2021 ; Soldering & Surface Mount Technology Volume 33 ; 33 >
@@ -12046,7 +12046,7 @@
     #continues = 2045-4457
 
     au < doNotProcess ; 2017 ; South Asian Journal of Business Studies Volume 6 ; 6 >
-    au < manifest ; 2018 ; South Asian Journal of Business Studies Volume 7 ; 7 >
+    au < ready ; 2018 ; South Asian Journal of Business Studies Volume 7 ; 7 >
     au < released ; 2019 ; South Asian Journal of Business Studies Volume 8 ; 8 >
     au < released ; 2020 ; South Asian Journal of Business Studies Volume 9 ; 9 >
     au < manifest ; 2021 ; South Asian Journal of Business Studies Volume 10 ; 10 >
@@ -12063,14 +12063,14 @@
     param[journal_issn] = 2042-678X
     comment[journal_id] = sbm
 
-    au < manifest ; 2011 ; Sport, Business and Management: An International Journal Volume 1 ; 1 >
+    au < ready ; 2011 ; Sport, Business and Management: An International Journal Volume 1 ; 1 >
     au < released ; 2012 ; Sport, Business and Management: An International Journal Volume 2 ; 2 >
     au < doNotProcess ; 2013 ; Sport, Business and Management: An International Journal Volume 3 ; 3 >
     au < doNotProcess ; 2014 ; Sport, Business and Management: An International Journal Volume 4 ; 4 >
     au < doNotProcess ; 2015 ; Sport, Business and Management: An International Journal Volume 5 ; 5 >
     au < doNotProcess ; 2016 ; Sport, Business and Management: An International Journal Volume 6 ; 6 >
     au < doNotProcess ; 2017 ; Sport, Business and Management: An International Journal Volume 7 ; 7 >
-    au < manifest ; 2018 ; Sport, Business and Management: An International Journal Volume 8 ; 8 >
+    au < ready ; 2018 ; Sport, Business and Management: An International Journal Volume 8 ; 8 >
     au < released ; 2019 ; Sport, Business and Management: An International Journal Volume 9 ; 9 >
     au < released ; 2020 ; Sport, Business and Management: An International Journal Volume 10 ; 10 >
     au < manifest ; 2021 ; Sport, Business and Management: An International Journal Volume 11 ; 11 >
@@ -12097,7 +12097,7 @@
     au < manifest ; 2007 ; Strategic Direction Volume 23 ; 23 >
     au < manifest ; 2008 ; Strategic Direction Volume 24 ; 24 >
     au < manifest ; 2009 ; Strategic Direction Volume 25 ; 25 >
-    au < manifest ; 2010 ; Strategic Direction Volume 26 ; 26 >
+    au < ready ; 2010 ; Strategic Direction Volume 26 ; 26 >
     au < released ; 2011 ; Strategic Direction Volume 27 ; 27 >
     au < released ; 2012 ; Strategic Direction Volume 28 ; 28 >
     au < doNotProcess ; 2013 ; Strategic Direction Volume 29 ; 29 >
@@ -12105,7 +12105,7 @@
     au < doNotProcess ; 2015 ; Strategic Direction Volume 31 ; 31 >
     au < doNotProcess ; 2016 ; Strategic Direction Volume 32 ; 32 >
     au < doNotProcess ; 2017 ; Strategic Direction Volume 33 ; 33 >
-    au < manifest ; 2018 ; Strategic Direction Volume 34 ; 34 >
+    au < ready ; 2018 ; Strategic Direction Volume 34 ; 34 >
     au < released ; 2019 ; Strategic Direction Volume 35 ; 35 >
     au < released ; 2020 ; Strategic Direction Volume 36 ; 36 >
     au < manifest ; 2021 ; Strategic Direction Volume 37 ; 37 >
@@ -12181,7 +12181,7 @@
     #continues = 1753-8297
 
     au < doNotProcess ; 2017 ; Journal of Global Operations and Strategic Sourcing Volume 10 ; 10 >
-    au < manifest ; 2018 ; Journal of Global Operations and Strategic Sourcing Volume 11 ; 11 >
+    au < ready ; 2018 ; Journal of Global Operations and Strategic Sourcing Volume 11 ; 11 >
     au < released ; 2019 ; Journal of Global Operations and Strategic Sourcing Volume 12 ; 12 >
     au < released ; 2020 ; Journal of Global Operations and Strategic Sourcing Volume 13 ; 13 >
     au < manifest ; 2021 ; Journal of Global Operations and Strategic Sourcing Volume 14 ; 14 >
@@ -12258,7 +12258,7 @@
     au < doNotProcess ; 2015 ; Strategy & Leadership Volume 43 ; 43 >
     au < doNotProcess ; 2016 ; Strategy & Leadership Volume 44 ; 44 >
     au < doNotProcess ; 2017 ; Strategy & Leadership Volume 45 ; 45 >
-    au < manifest ; 2018 ; Strategy & Leadership Volume 46 ; 46 >
+    au < ready ; 2018 ; Strategy & Leadership Volume 46 ; 46 >
     au < released ; 2019 ; Strategy & Leadership Volume 47 ; 47 >
     au < released ; 2020 ; Strategy & Leadership Volume 48 ; 48 >
     au < manifest ; 2021 ; Strategy & Leadership Volume 49 ; 49 >
@@ -12326,7 +12326,7 @@
     #continues = 0263-080X
 
     au < doNotProcess ; 2017 ; International Journal of Building Pathology and Adaptation Volume 35 ; 35 >
-    au < manifest ; 2018 ; International Journal of Building Pathology and Adaptation Volume 36 ; 36 >
+    au < ready ; 2018 ; International Journal of Building Pathology and Adaptation Volume 36 ; 36 >
     au < released ; 2019 ; International Journal of Building Pathology and Adaptation Volume 37 ; 37 >
     au < released ; 2020 ; International Journal of Building Pathology and Adaptation Volume 38 ; 38 >
     au < manifest ; 2021 ; International Journal of Building Pathology and Adaptation Volume 39 ; 39 >
@@ -12370,7 +12370,7 @@
     au < manifest ; 2007 ; Studies in Economics and Finance Volume 24 ; 24 >
     au < manifest ; 2008 ; Studies in Economics and Finance Volume 25 ; 25 >
     au < released ; 2009 ; Studies in Economics and Finance Volume 26 ; 26 >
-    au < manifest ; 2010 ; Studies in Economics and Finance Volume 27 ; 27 >
+    au < ready ; 2010 ; Studies in Economics and Finance Volume 27 ; 27 >
     au < released ; 2011 ; Studies in Economics and Finance Volume 28 ; 28 >
     au < released ; 2012 ; Studies in Economics and Finance Volume 29 ; 29 >
     au < doNotProcess ; 2013 ; Studies in Economics and Finance Volume 30 ; 30 >
@@ -12378,7 +12378,7 @@
     au < doNotProcess ; 2015 ; Studies in Economics and Finance Volume 32 ; 32 >
     au < doNotProcess ; 2016 ; Studies in Economics and Finance Volume 33 ; 33 >
     au < doNotProcess ; 2017 ; Studies in Economics and Finance Volume 34 ; 34 >
-    au < manifest ; 2018 ; Studies in Economics and Finance Volume 35 ; 35 >
+    au < ready ; 2018 ; Studies in Economics and Finance Volume 35 ; 35 >
     au < released ; 2019 ; Studies in Economics and Finance Volume 36 ; 36 >
     au < released ; 2020 ; Studies in Economics and Finance Volume 37 ; 37 >
     au < manifest ; 2021 ; Studies in Economics and Finance Volume 38 ; 38 >
@@ -12410,7 +12410,7 @@
     au < manifest ; 2007 ; Supply Chain Management: An International Journal Volume 12 ; 12 >
     au < manifest ; 2008 ; Supply Chain Management: An International Journal Volume 13 ; 13 >
     au < released ; 2009 ; Supply Chain Management: An International Journal Volume 14 ; 14 >
-    au < manifest ; 2010 ; Supply Chain Management: An International Journal Volume 15 ; 15 >
+    au < ready ; 2010 ; Supply Chain Management: An International Journal Volume 15 ; 15 >
     au < released ; 2011 ; Supply Chain Management: An International Journal Volume 16 ; 16 >
     au < released ; 2012 ; Supply Chain Management: An International Journal Volume 17 ; 17 >
     au < doNotProcess ; 2013 ; Supply Chain Management: An International Journal Volume 18 ; 18 >
@@ -12418,7 +12418,7 @@
     au < doNotProcess ; 2015 ; Supply Chain Management: An International Journal Volume 20 ; 20 >
     au < doNotProcess ; 2016 ; Supply Chain Management: An International Journal Volume 21 ; 21 >
     au < doNotProcess ; 2017 ; Supply Chain Management: An International Journal Volume 22 ; 22 >
-    au < manifest ; 2018 ; Supply Chain Management: An International Journal Volume 23 ; 23 >
+    au < ready ; 2018 ; Supply Chain Management: An International Journal Volume 23 ; 23 >
     au < released ; 2019 ; Supply Chain Management: An International Journal Volume 24 ; 24 >
     au < released ; 2020 ; Supply Chain Management: An International Journal Volume 25 ; 25 >
     au < manifest ; 2021 ; Supply Chain Management: An International Journal Volume 26 ; 26 >
@@ -12445,7 +12445,7 @@
     au < doNotProcess ; 2015 ; Sustainability Accounting, Management and Policy Journal Volume 6 ; 6 >
     au < doNotProcess ; 2016 ; Sustainability Accounting, Management and Policy Journal Volume 7 ; 7 >
     au < doNotProcess ; 2017 ; Sustainability Accounting, Management and Policy Journal Volume 8 ; 8 >
-    au < manifest ; 2018 ; Sustainability Accounting, Management and Policy Journal Volume 9 ; 9 >
+    au < ready ; 2018 ; Sustainability Accounting, Management and Policy Journal Volume 9 ; 9 >
     au < released ; 2019 ; Sustainability Accounting, Management and Policy Journal Volume 10 ; 10 >
     au < released ; 2020 ; Sustainability Accounting, Management and Policy Journal Volume 11 ; 11 >
     au < manifest ; 2021 ; Sustainability Accounting, Management and Policy Journal Volume 12 ; 12 >
@@ -12486,7 +12486,7 @@
     au < doNotProcess ; 2015 ; Team Performance Management Volume 21 ; 21 >
     au < doNotProcess ; 2016 ; Team Performance Management Volume 22 ; 22 >
     au < doNotProcess ; 2017 ; Team Performance Management Volume 23 ; 23 >
-    au < manifest ; 2018 ; Team Performance Management Volume 24 ; 24 >
+    au < ready ; 2018 ; Team Performance Management Volume 24 ; 24 >
     au < released ; 2019 ; Team Performance Management Volume 25 ; 25 >
     au < released ; 2020 ; Team Performance Management Volume 26 ; 26 >
     au < manifest ; 2021 ; Team Performance Management Volume 27 ; 27 >
@@ -12527,7 +12527,7 @@
     au < doNotProcess ; 2015 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 20 ; 20 >
     au < doNotProcess ; 2016 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 21 ; 21 >
     au < doNotProcess ; 2017 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 22 ; 22 >
-    au < manifest ; 2018 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 23 ; 23 >
+    au < ready ; 2018 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 23 ; 23 >
     au < released ; 2019 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 24 ; 24 >
     au < released ; 2020 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 25 ; 25 >
     au < manifest ; 2021 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 26 ; 26 >
@@ -12552,7 +12552,7 @@
     au < doNotProcess ; 2015 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 36 ; 36 >
     au < doNotProcess ; 2016 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 37 ; 37 >
     au < doNotProcess ; 2017 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 38 ; 38 >
-    au < manifest ; 2018 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 39 ; 39 >
+    au < ready ; 2018 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 39 ; 39 >
     au < released ; 2019 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 40 ; 40 >
     au < released ; 2020 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 41 ; 41 >
     au < manifest ; 2021 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 42 ; 42 >
@@ -12644,7 +12644,7 @@
     au < doNotProcess ; 2015 ; Tourism Review Volume 70 ; 70 >
     au < doNotProcess ; 2016 ; Tourism Review Volume 71 ; 71 >
     au < doNotProcess ; 2017 ; Tourism Review Volume 72 ; 72 >
-    au < manifest ; 2018 ; Tourism Review Volume 73 ; 73 >
+    au < ready ; 2018 ; Tourism Review Volume 73 ; 73 >
     au < released ; 2019 ; Tourism Review Volume 74 ; 74 >
     au < released ; 2020 ; Tourism Review Volume 75 ; 75 >
     au < manifest ; 2021 ; Tourism Review Volume 76 ; 76 >
@@ -12666,7 +12666,7 @@
 
     au < manifest ; 2008 ; The TQM Journal Volume 20 ; 20 >
     au < manifest ; 2009 ; The TQM Journal Volume 21 ; 21 >
-    au < manifest ; 2010 ; The TQM Journal Volume 22 ; 22 >
+    au < ready ; 2010 ; The TQM Journal Volume 22 ; 22 >
     au < released ; 2011 ; The TQM Journal Volume 23 ; 23 >
     au < released ; 2012 ; The TQM Journal Volume 24 ; 24 >
     au < doNotProcess ; 2013 ; The TQM Journal Volume 25 ; 25 >
@@ -12674,7 +12674,7 @@
     au < doNotProcess ; 2015 ; The TQM Journal Volume 27 ; 27 >
     au < doNotProcess ; 2016 ; The TQM Journal Volume 28 ; 28 >
     au < doNotProcess ; 2017 ; The TQM Journal Volume 29 ; 29 >
-    au < manifest ; 2018 ; The TQM Journal Volume 30 ; 30 >
+    au < ready ; 2018 ; The TQM Journal Volume 30 ; 30 >
     au < released ; 2019 ; The TQM Journal Volume 31 ; 31 >
     au < released ; 2020 ; The TQM Journal Volume 32 ; 32 >
     au < manifest ; 2021 ; The TQM Journal Volume 33 ; 33 >
@@ -12768,13 +12768,13 @@
     au < manifest ; 2009 ; Transforming Government: People, Process and Policy Volume 3 ; 3 >
     au < released ; 2010 ; Transforming Government: People, Process and Policy Volume 4 ; 4 >
     au < released ; 2011 ; Transforming Government: People, Process and Policy Volume 5 ; 5 >
-    au < manifest ; 2012 ; Transforming Government: People, Process and Policy Volume 6 ; 6 >
+    au < ready ; 2012 ; Transforming Government: People, Process and Policy Volume 6 ; 6 >
     au < doNotProcess ; 2013 ; Transforming Government: People, Process and Policy Volume 7 ; 7 >
     au < doNotProcess ; 2014 ; Transforming Government: People, Process and Policy Volume 8 ; 8 >
     au < doNotProcess ; 2015 ; Transforming Government: People, Process and Policy Volume 9 ; 9 >
     au < doNotProcess ; 2016 ; Transforming Government: People, Process and Policy Volume 10 ; 10 >
     au < doNotProcess ; 2017 ; Transforming Government: People, Process and Policy Volume 11 ; 11 >
-    au < manifest ; 2018 ; Transforming Government: People, Process and Policy Volume 12 ; 12 >
+    au < ready ; 2018 ; Transforming Government: People, Process and Policy Volume 12 ; 12 >
     au < manifest ; 2019 ; Transforming Government: People, Process and Policy Volume 13 ; 13 >
     au < released ; 2020 ; Transforming Government: People, Process and Policy Volume 14 ; 14 >
     au < manifest ; 2021 ; Transforming Government: People, Process and Policy Volume 15 ; 15 >
@@ -12972,7 +12972,7 @@
     au < doNotProcess ; 2015 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 19 ; 19 >
     au < doNotProcess ; 2016 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 20 ; 20 >
     au < doNotProcess ; 2017 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 21 ; 21 >
-    au < manifest ; 2018 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 22 ; 22 >
+    au < ready ; 2018 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 22 ; 22 >
     au < released ; 2019 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 23 ; 23 >
     au < released ; 2020 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 24 ; 24 >
     au < manifest ; 2021 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 25 ; 25 >
@@ -13005,7 +13005,7 @@
     param[journal_issn] = 2042-5961
     comment[journal_id] = wjemsd
 
-    au < manifest ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
+    au < ready ; 2010 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
     au < doNotProcess ; 2011 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
     au < released ; 2012 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
     au < doNotProcess ; 2013 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
@@ -13013,7 +13013,7 @@
     au < doNotProcess ; 2015 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 11 ; 11 >
     au < doNotProcess ; 2016 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 12 ; 12 >
     au < doNotProcess ; 2017 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 13 ; 13 >
-    au < manifest ; 2018 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 14 ; 14 >
+    au < ready ; 2018 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 14 ; 14 >
     au < released ; 2019 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 15 ; 15 >
     au < released ; 2020 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 16 ; 16 >
     au < manifest ; 2021 ; World Journal of Entrepreneurship, Management and Sustainable Development Volume 17 ; 17 >
@@ -13031,14 +13031,14 @@
     comment[journal_id] = wjstsd
 
       au < released ; 2010 ; World Journal of Science, Technology and Sustainable Development Volume 7 ; 7 >
-      au < manifest ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
+      au < ready ; 2011 ; World Journal of Science, Technology and Sustainable Development Volume 8 ; 8 >
       au < released ; 2012 ; World Journal of Science, Technology and Sustainable Development Volume 9 ; 9 >
       au < doNotProcess ; 2013 ; World Journal of Science, Technology and Sustainable Development Volume 10 ; 10 >
       au < doNotProcess ; 2014 ; World Journal of Science, Technology and Sustainable Development Volume 11 ; 11 >
       au < doNotProcess ; 2015 ; World Journal of Science, Technology and Sustainable Development Volume 12 ; 12 >
       au < doNotProcess ; 2016 ; World Journal of Science, Technology and Sustainable Development Volume 13 ; 13 >
       au < doNotProcess ; 2017 ; World Journal of Science, Technology and Sustainable Development Volume 14 ; 14 >
-      au < manifest ; 2018 ; World Journal of Science, Technology and Sustainable Development Volume 15 ; 15 >
+      au < ready ; 2018 ; World Journal of Science, Technology and Sustainable Development Volume 15 ; 15 >
       au < released ; 2019 ; World Journal of Science, Technology and Sustainable Development Volume 16 ; 16 >
       au < released ; 2020 ; World Journal of Science, Technology and Sustainable Development Volume 17 ; 17 >
       au < manifest ; 2021 ; World Journal of Science, Technology and Sustainable Development Volume 18 ; 18 >
