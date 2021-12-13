@@ -2315,7 +2315,7 @@
   >
 
     provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
   {
@@ -2350,7 +2350,7 @@
   >
 
     provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
   {
@@ -2363,7 +2363,7 @@
       comment[publisher] = University of East Anglia
 #      param[base_url] = https://newareastudies.com/
 
-      au < manifest ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
+      au < exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
       au < expected ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ >
 
   }
@@ -2379,7 +2379,7 @@
   >
 
     provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
   {
@@ -2392,9 +2392,9 @@
       comment[publisher] = University of New South Wales
 #      param[base_url] = https://jglobalbiosecurity.com/
 
-      au < manifest ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ >
-      au < manifest ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ >
-      au < manifest ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ >
+      au < exists ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ >
+      au < exists ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ >
+      au < expected ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ >
 
   }
 }
