@@ -1475,7 +1475,7 @@
     au < deepCrawl ; exists ; 2018 ; Indian Journal of Otology Volume 24 ; 2018 ; 24 ; http://www.indianjotol.org/ ; ; >
     au < finished ; crawling ; 2019 ; Indian Journal of Otology Volume 25 ; 2019 ; 25 ; https://www.indianjotol.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Indian Journal of Otology Volume 26 ; 2020 ; 26 ; https://www.indianjotol.org/ ; ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2021 ; Indian Journal of Otology Volume 27 ; 2021 ; 27 ; https://www.indianjotol.org/ ; ; >
+    au < crawling ; exists ; 2021 ; Indian Journal of Otology Volume 27 ; 2021 ; 27 ; https://www.indianjotol.org/ ; ; >
 
   }
 
@@ -5472,7 +5472,7 @@
       au < deepCrawl ; exists ; 2018 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 4 ; 2018 ; 4 ; http://www.ejode.eg.net/ ; ; >
       au < frozen ; exists ; 2019 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 5 ; 2019 ; 5 ; https://www.ejode.eg.net/ ; ; >
       au < frozen ; exists ; 2020 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 6 ; 2020 ; 6 ; https://www.ejode.eg.net/ ; ; >
-      au < ready ; exists ; 2021 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 7 ; 2021 ; 7 ; https://www.ejode.eg.net/ ; ; >
+      au < crawling ; exists ; 2021 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 7 ; 2021 ; 7 ; https://www.ejode.eg.net/ ; ; >
 
   }
 
@@ -7641,8 +7641,8 @@
 
       au < manifest ; exists ; 2018 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 11 ; 2018 ; 11 ; https://www.mjdrdypv.org/ ; ; >
       au < ready ; exists ; 2019 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 12 ; 2019 ; 12 ; https://www.mjdrdypv.org/ ; ; >
-      au < ready ; exists ; 2020 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 13 ; 2020 ; 13 ; https://www.mjdrdypv.org/ ; ; >
-      au < ready ; exists ; 2021 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 14 ; 2021 ; 14 ; https://www.mjdrdypv.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 13 ; 2020 ; 13 ; https://www.mjdrdypv.org/ ; ; >
+      au < crawling ; exists ; 2021 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 14 ; 2021 ; 14 ; https://www.mjdrdypv.org/ ; ; >
 
   }
 
@@ -8400,7 +8400,7 @@
       au < deepCrawl ; exists ; 2018 ; The Egyptian Journal of Haematology Volume 43 ; 2018 ; 43 ; http://www.ehj.eg.net/ ; ; >
       au < frozen ; exists ; 2019 ; The Egyptian Journal of Haematology Volume 44 ; 2019 ; 44 ; https://www.ehj.eg.net/ ; ; >
       au < frozen ; exists ; 2020 ; The Egyptian Journal of Haematology Volume 45 ; 2020 ; 45 ; https://www.ehj.eg.net/ ; ; >
-      au < ready ; exists ; 2021 ; The Egyptian Journal of Haematology Volume 46 ; 2021 ; 46 ; https://www.ehj.eg.net/ ; ; >
+      au < crawling ; exists ; 2021 ; The Egyptian Journal of Haematology Volume 46 ; 2021 ; 46 ; https://www.ehj.eg.net/ ; ; >
 
   }
 
@@ -8612,8 +8612,8 @@
       au < finished ; frozen ; 2015 ; The Saint's International Dental Journal Volume 1 ; 2015 ; 1 ; http://www.sidj.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; The Saint's International Dental Journal Volume 2 ; 2016 ; 2 ; http://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; The Saint's International Dental Journal Volume 3 ; 2017 ; 3 ; http://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2020 ; The Saint's International Dental Journal Volume 4 ; 2020 ; 4 ; https://www.sidj.org/ ; ; >
-      au < ready ; exists ; 2021 ; The Saint's International Dental Journal Volume 5 ; 2021 ; 5 ; https://www.sidj.org/ ; ; >
+      au < crawling ; exists ; 2020 ; The Saint's International Dental Journal Volume 4 ; 2020 ; 4 ; https://www.sidj.org/ ; ; >
+      au < crawling ; exists ; 2021 ; The Saint's International Dental Journal Volume 5 ; 2021 ; 5 ; https://www.sidj.org/ ; ; >
 
   }
 
@@ -9544,8 +9544,8 @@
       au < manifest ; exists ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ ; ; >
       au < manifest ; exists ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ ; ; >
       au < ready ; exists ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; >
-      au < ready ; exists ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; >
-      au < ready ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
+      au < crawling ; exists ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; >
+      au < crawling ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
 
   }
 
@@ -9677,7 +9677,7 @@
       au < notReady ; exists ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ ; ; > #500
       au < notReady ; exists ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ ; ; > #500 error https://www.ijfans.org/article.asp?issn=2319-1775;year=2019;volume=8;issue=4;spage=1;epage=6;aulast=Ugale;type=2
       au < ready ; exists ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ ; ; >
-      au < ready ; exists ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ ; ; >
+      au < crawling ; exists ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ ; ; >
       #deactivated
   }
 
@@ -10453,7 +10453,7 @@
       au < frozen ; exists ; 2018 ; Middle East Journal of Medical Genetics Volume 7 ; 2018 ; 7 ; https://www.mxe.eg.net/ ; ; >
       au < frozen ; exists ; 2019 ; Middle East Journal of Medical Genetics Volume 8 ; 2019 ; 8 ; https://www.mxe.eg.net/ ; ; >
       au < frozen ; exists ; 2020 ; Middle East Journal of Medical Genetics Volume 9 ; 2020 ; 9 ; https://www.mxe.eg.net/ ; ; >
-      au < ready ; exists ; 2021 ; Middle East Journal of Medical Genetics Volume 10 ; 2021 ; 10 ; https://www.mxe.eg.net/ ; ; >
+      au < crawling ; exists ; 2021 ; Middle East Journal of Medical Genetics Volume 10 ; 2021 ; 10 ; https://www.mxe.eg.net/ ; ; >
 
   }
 
