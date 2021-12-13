@@ -61,11 +61,11 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$", base_url_host</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?v=[^/]*)?$", base_url_host</string>
       <string>1,"https://cdnjs.cloudflare.com/"</string>
       <string>1,"https://semantic-ui.com/"</string>
       <string>1,"https://code.jquery.com/"</string>
-      <string>1,"https://(fonts|ajax).googleapis.com/"</string>
+      <string>1,"https?://(fonts|ajax).googleapis.com/"</string>
       <string>1,"https://themes.googleusercontent.com/"</string>
       <string>1,"https://d1bxh8uas1mnw7.cloudfront.net/"</string>
       <string>2,"^%sjournals/?$", base_url</string>
@@ -75,12 +75,12 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- https://www.liverpooluniversitypress.co.uk/journals/article/21290/ -->
       <!-- https://www.liverpooluniversitypress.co.uk/journals/issue/3426 -->
       <string>1,"^%sjournals/(article|issue)/", base_url</string>
-      <string>1,"^%sread", base_url</string>
+      <string>1,"^%sread/\?", base_url</string>
       <string>1,"https://mediaserver.cloudpublish.co.uk/"</string>
       <string>1,"https://bam.eu01.nr-data.net"</string>
       <!-- ToDo REMOVE AFTER TESTING -->
-      <string>1,"https://[^.]+\.cloudpublish.co.uk/read"</string>
-      <string>1,"https://[^.]+\.cloudpublish.co.uk/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$"</string>
+      <string>1,"https://[^.]+\.cloudpublish.co.uk/read/\?"</string>
+      <string>1,"https://[^.]+\.cloudpublish.co.uk/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?v=[^/]*)?$"</string>
     </list>
   </entry>
   <entry>
