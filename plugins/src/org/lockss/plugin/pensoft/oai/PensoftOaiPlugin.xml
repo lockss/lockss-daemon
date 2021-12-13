@@ -42,14 +42,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -96,6 +96,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"^https://public\.pensoft\.net/items/"</string>
       <string>1,"^https?://%s/.+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)([?]v=.*)?$", url_host(base_url)</string>
       <string>1,"^https?://(fonts|ajax)[.]googleapis[.]com/."</string>
       <string>1,"^https?://%s/(articles|article_preview)\.php\?id=[0-9]+$", url_host(base_url)</string>
@@ -113,6 +114,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
+      <string>"^https://public\.pensoft\.net/items/"</string>
       <string>"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+", url_host(base_url)</string>
       <!--  now with optional terminating file id number or slash -->
       <string>"^https?://%s/article/[0-9]+/download/pdf(/|/[0-9]+)?$", url_host(base_url)</string>
@@ -222,6 +224,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>public\.pensoft\.net</string>
     </list>
   </entry>
 </map>

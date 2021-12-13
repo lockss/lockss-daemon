@@ -51,7 +51,11 @@ import org.lockss.util.Logger;
  * which redirects through 
  * /lib/ajax_srv/generate_pdf.php?document_id=8964&readonly_preview=1&file_id=283658
  * (the file_id for a normal PDF is 0)
- * 
+ *
+ * In Dec/2021, the final destination of PDF moved at the following steps:
+ * https://africaninvertebrates.pensoft.net/article/10772/download/pdf/284108
+ * Location: /lib/ajax_srv/generate_pdf.php?document_id=10772&readonly_preview=1&skip_metric_check=0&file_id=284108 [following]
+ * https://public.pensoft.net/items/?p=7TVeXpoqfNYT89tyrm3ifrTeG9Wv8P676JSQp%2FH2pj9hhtoybol4GF7LEbj3fxHT5Fo8esHstdwAZJFgZxHDbAnCGfkWCPk5a45KiSTKEwfASBIF%2FwVwKbjI5HKmbQ%3D%3D&n=gxNxS8c6dMEeufc3%2Fy68L4LPEOft8f6t4Q%3D%3D
  */
 public class PensoftOaiUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(PensoftOaiUrlConsumerFactory.class);
@@ -73,10 +77,11 @@ public class PensoftOaiUrlConsumerFactory implements UrlConsumerFactory {
 
 	//PDF now has optional terminating file_id number or the (optional?) terminating slash
     public static final String DOWNLOADPDF_URL = "article/[^/]+/download/pdf(/|/[0-9]+)?$";
-    public static final String GENERATE_URL = "/lib/ajax_srv/generate_pdf[.]php[?]document_id=";
+    //public static final String GENERATE_URL = "/lib/ajax_srv/generate_pdf[.]php[?]document_id=";
+    public static final String DESTINATION_URL = "items/\\?p=";
 
     protected Pattern DOWNLOADPDF_PAT = Pattern.compile(DOWNLOADPDF_URL, Pattern.CASE_INSENSITIVE);
-    protected Pattern GENERATE_PAT = Pattern.compile(GENERATE_URL, Pattern.CASE_INSENSITIVE);
+    protected Pattern DESTINATION_PAT = Pattern.compile(DESTINATION_URL, Pattern.CASE_INSENSITIVE);
 
     public PensoftOaiUrlConsumer(CrawlerFacade facade,
         FetchedUrlData fud) {
@@ -96,7 +101,7 @@ public class PensoftOaiUrlConsumerFactory implements UrlConsumerFactory {
           fud.redirectUrls != null &&
           fud.redirectUrls.size() >= 1 &&
           DOWNLOADPDF_PAT.matcher(fud.origUrl).find() &&
-          GENERATE_PAT.matcher(fud.fetchUrl).find();
+          DESTINATION_PAT.matcher(fud.fetchUrl).find();
       return should;
     }
   }
