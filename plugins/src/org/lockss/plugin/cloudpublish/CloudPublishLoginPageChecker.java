@@ -30,6 +30,7 @@ package org.lockss.plugin.cloudpublish;
 import org.lockss.daemon.LoginPageChecker;
 import org.lockss.daemon.PluginException;
 import org.lockss.util.HeaderUtil;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 import java.io.IOException;
@@ -38,14 +39,27 @@ import java.util.Properties;
 
 public class CloudPublishLoginPageChecker implements LoginPageChecker {
 
-  protected static final String DEFAULT_LOGIN_STRING = "<h1>You don’t currently have access to this article</h1>";
+  //protected static Logger log = Logger.getLogger(CloudPublishLoginPageChecker.class);
+
+  protected static final String LOGIN_STRINGS[] = new String[] {
+    "<h1>You don’t currently have access to this article</h1>",
+    "If you have private access to this content, please log in with your username and password",
+    "<label class=\"label\" for=\"access-token-code\">One time Access Token</label>",
+    "href=\"/read-this/article/",
+  };
 
   public boolean isLoginPage(Properties props, Reader reader) throws IOException, PluginException {
-    return "text/html".equalsIgnoreCase(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type"))) ? StringUtil.containsString(reader, getLoginString()) : false;
-  }
-
-  protected static String getLoginString() {
-    return DEFAULT_LOGIN_STRING;
+    String contentType =
+        HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type"));
+    if ("text/html".equalsIgnoreCase(contentType)) {
+      String fromReader = StringUtil.fromReader(reader);
+      for (String loginString : LOGIN_STRINGS) {
+        if (fromReader.contains(loginString)) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
 }
