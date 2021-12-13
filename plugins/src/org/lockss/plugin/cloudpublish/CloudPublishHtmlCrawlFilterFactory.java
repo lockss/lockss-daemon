@@ -57,6 +57,7 @@ public class CloudPublishHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "journal-full-text"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "journal-references"),
       //HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^www\\.", true),
+      HtmlNodeFilters.tagWithAttribute("a", "title", "Exit"),
   };
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
