@@ -762,7 +762,7 @@ Args:
            fork="${forkc}"
            listfiles="${listfiles}"
            nowarn="${nowarn}"
-	   memoryMaximumSize="256m"
+	   memoryMaximumSize="512m"
            >
        <classpath refid="@{cpid}" />
       <javacelem/>
