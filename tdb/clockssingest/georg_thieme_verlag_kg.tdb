@@ -4851,7 +4851,7 @@
    au < frozen ; exists ; 2004 ; 2004 ; Pneumologie Volume 58 ; 58 ; >
    au < frozen ; exists ; 2005 ; 2005 ; Pneumologie Volume 59 ; 59 ; >
    au < frozen ; exists ; 2006 ; 2006 ; Pneumologie Volume 60 ; 60 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Pneumologie Volume 61 ; 61 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Pneumologie Volume 61 ; 61 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Pneumologie Volume 62 ; 62 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2009 ; 2009 ; Pneumologie Volume 63 ; 63 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Pneumologie Volume 64 ; 64 ; reingest1.clockss.org:8082 >
@@ -4880,13 +4880,13 @@
     param[journal_id] = 10.1055/s-00000060
     comment[years] = 2000-current
 
-   au < crawling ; exists ; 2000 ; 2000 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 50 ; 50 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 51 ; 51 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 52 ; 52 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 53 ; 53 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 54 ; 54 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 55 ; 55 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 56 ; 56 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 50 ; 50 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 51 ; 51 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 52 ; 52 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 53 ; 53 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 54 ; 54 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 55 ; 55 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 56 ; 56 ; >
    au < finished ; crawling ; 2007 ; 2007 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 57 ; 57 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2008 ; 2008 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 58 ; 58 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 59 ; 59 ; reingest1.clockss.org:8082 >
@@ -4940,12 +4940,12 @@
     param[journal_id] = 10.1055/s-00000061
     comment[years] = 2001-current
 
-   au < crawling ; exists ; 2001 ; 2001 ; Psych Pflege Heute Volume 7 ; 7 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Psych Pflege Heute Volume 8 ; 8 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Psych Pflege Heute Volume 9 ; 9 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Psych Pflege Heute Volume 10 ; 10 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Psych Pflege Heute Volume 11 ; 11 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Psych Pflege Heute Volume 12 ; 12 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Psych Pflege Heute Volume 7 ; 7 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Psych Pflege Heute Volume 8 ; 8 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Psych Pflege Heute Volume 9 ; 9 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Psych Pflege Heute Volume 10 ; 10 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Psych Pflege Heute Volume 11 ; 11 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Psych Pflege Heute Volume 12 ; 12 ; >
    au < finished ; crawling ; 2007 ; 2007 ; Psych Pflege Heute Volume 13 ; 13 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2008 ; 2008 ; Psych Pflege Heute Volume 14 ; 14 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Psych Pflege Heute Volume 15 ; 15 ; reingest2.clockss.org:8085 >
@@ -4976,7 +4976,7 @@
     param[journal_id] = 10.1055/s-00000141
     comment[years] = 2007-2012
 
-   au < crawling ; exists ; 2007 ; 2007 ; Psychiatrie und Psychotherapie up2date Volume 1 ; 1 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Psychiatrie und Psychotherapie up2date Volume 1 ; 1 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Psychiatrie und Psychotherapie up2date Volume 2 ; 2 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Psychiatrie und Psychotherapie up2date Volume 3 ; 3 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Psychiatrie und Psychotherapie up2date Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -4996,13 +4996,13 @@
     param[journal_id] = 10.1055/s-00000062
     comment[years] = 2001-current
 
-   au < crawling ; exists ; 2001 ; 2001 ; Psychiatrische Praxis Volume 28 ; 28 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Psychiatrische Praxis Volume 29 ; 29 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Psychiatrische Praxis Volume 30 ; 30 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Psychiatrische Praxis Volume 31 ; 31 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Psychiatrische Praxis Volume 33 ; 33 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Psychiatrische Praxis Volume 34 ; 34 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Psychiatrische Praxis Volume 28 ; 28 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Psychiatrische Praxis Volume 29 ; 29 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Psychiatrische Praxis Volume 30 ; 30 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Psychiatrische Praxis Volume 31 ; 31 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Psychiatrische Praxis Volume 32 ; 32 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Psychiatrische Praxis Volume 33 ; 33 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Psychiatrische Praxis Volume 34 ; 34 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Psychiatrische Praxis Volume 35 ; 35 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Psychiatrische Praxis Volume 36 ; 36 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Psychiatrische Praxis Volume 37 ; 37 ; reingest2.clockss.org:8085 >
@@ -5031,10 +5031,10 @@
     param[journal_id] = 10.1055/s-00000064
     comment[years] = 2003-2008
 
-   au < crawling ; exists ; 2003 ; 2003 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 29 ; 29 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 29 ; 29 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 30 ; 30 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 31 ; 31 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 32 ; 32 ; >
    au < finished ; crawling ; 2007 ; 2007 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 33 ; 33 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2008 ; 2008 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 34 ; 34 ; reingest4.clockss.org:8082 >
 
@@ -5050,9 +5050,9 @@
     param[journal_id] = 10.1055/s-00000113
     comment[years] = 2000-2002
 
-    au < crawling ; exists ; 2000 ; 2000 ; Psychotraumatologie Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2001 ; 2001 ; Psychotraumatologie Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; Psychotraumatologie Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; Psychotraumatologie Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 ; >
 
   }
 
@@ -5067,13 +5067,13 @@
     param[journal_id] = 10.1055/s-00000118
     comment[years] = 2001-current
 
-   au < crawling ; exists ; 2001 ; 2001 ; Radiologie up2date Volume 1 ; 1 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Radiologie up2date Volume 2 ; 2 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Radiologie up2date Volume 3 ; 3 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Radiologie up2date Volume 4 ; 4 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Radiologie up2date Volume 5 ; 5 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Radiologie up2date Volume 6 ; 6 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Radiologie up2date Volume 7 ; 7 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Radiologie up2date Volume 1 ; 1 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Radiologie up2date Volume 2 ; 2 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Radiologie up2date Volume 3 ; 3 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Radiologie up2date Volume 4 ; 4 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Radiologie up2date Volume 5 ; 5 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Radiologie up2date Volume 6 ; 6 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Radiologie up2date Volume 7 ; 7 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Radiologie up2date Volume 8 ; 8 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2009 ; 2009 ; Radiologie up2date Volume 9 ; 9 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Radiologie up2date Volume 10 ; 10 ; reingest2.clockss.org:8085 >
@@ -5130,14 +5130,14 @@
     param[journal_id] = 10.1055/s-00000065
     comment[years] = 2000-current
 
-   au < crawling ; exists ; 2000 ; 2000 ; Rehabilitation Die Volume 39 ; 39 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Rehabilitation Die Volume 40 ; 40 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Rehabilitation Die Volume 41 ; 41 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Rehabilitation Die Volume 42 ; 42 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Rehabilitation Die Volume 43 ; 43 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Rehabilitation Die Volume 44 ; 44 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Rehabilitation Die Volume 45 ; 45 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Rehabilitation Die Volume 46 ; 46 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Rehabilitation Die Volume 39 ; 39 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Rehabilitation Die Volume 40 ; 40 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Rehabilitation Die Volume 41 ; 41 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Rehabilitation Die Volume 42 ; 42 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Rehabilitation Die Volume 43 ; 43 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Rehabilitation Die Volume 44 ; 44 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Rehabilitation Die Volume 45 ; 45 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Rehabilitation Die Volume 46 ; 46 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Rehabilitation Die Volume 47 ; 47 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Rehabilitation Die Volume 48 ; 48 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Rehabilitation Die Volume 49 ; 49 ; reingest1.clockss.org:8082 >
@@ -5272,23 +5272,23 @@
     au < manifest ; exists ; 1987 ; 1987 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 159 ; 159 ; >
     au < manifest ; exists ; 1988 ; 1988 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 160 ; 160 ; >
     au < manifest ; exists ; 1989 ; 1989 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 161 ; 161 ; >
-    au < crawling ; exists ; 1990 ; 1990 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 162 ; 162 ; >
-    au < crawling ; exists ; 1991 ; 1991 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 163 ; 163 ; >
-    au < crawling ; exists ; 1992 ; 1992 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 164 ; 164 ; >
-    au < crawling ; exists ; 1993 ; 1993 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 165 ; 165 ; >
-    au < crawling ; exists ; 1994 ; 1994 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 166 ; 166 ; >
-    au < crawling ; exists ; 1995 ; 1995 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 167 ; 167 ; >
-    au < crawling ; exists ; 1996 ; 1996 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 168 ; 168 ; >
-    au < crawling ; exists ; 1997 ; 1997 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 169 ; 169 ; >
-    au < crawling ; exists ; 1998 ; 1998 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 170 ; 170 ; >
-    au < crawling ; exists ; 1999 ; 1999 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 171 ; 171 ; >
-    au < crawling ; exists ; 2000 ; 2000 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 172 ; 172 ; >
-    au < crawling ; exists ; 2001 ; 2001 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 173 ; 173 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 174 ; 174 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 175 ; 175 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 176 ; 176 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 177 ; 177 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 178 ; 178 ; >
+    au < frozen ; exists ; 1990 ; 1990 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 162 ; 162 ; >
+    au < frozen ; exists ; 1991 ; 1991 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 163 ; 163 ; >
+    au < frozen ; exists ; 1992 ; 1992 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 164 ; 164 ; >
+    au < frozen ; exists ; 1993 ; 1993 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 165 ; 165 ; >
+    au < frozen ; exists ; 1994 ; 1994 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 166 ; 166 ; >
+    au < frozen ; exists ; 1995 ; 1995 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 167 ; 167 ; >
+    au < frozen ; exists ; 1996 ; 1996 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 168 ; 168 ; >
+    au < frozen ; exists ; 1997 ; 1997 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 169 ; 169 ; >
+    au < frozen ; exists ; 1998 ; 1998 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 170 ; 170 ; >
+    au < frozen ; exists ; 1999 ; 1999 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 171 ; 171 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 172 ; 172 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 173 ; 173 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 174 ; 174 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 175 ; 175 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 176 ; 176 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 177 ; 177 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 178 ; 178 ; >
     au < finished ; crawling ; 2007 ; 2007 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 179 ; 179 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; 2008 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 180 ; 180 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 181 ; 181 ; reingest3.clockss.org:8083 >
@@ -5326,23 +5326,23 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Hearing Volume 8 ; 8 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Hearing Volume 9 ; 9 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Hearing Volume 10 ; 10 ; >
-   au < crawling ; exists ; 1990 ; 1990 ; Seminars in Hearing Volume 11 ; 11 ; >
-   au < crawling ; exists ; 1991 ; 1991 ; Seminars in Hearing Volume 12 ; 12 ; >
-   au < crawling ; exists ; 1992 ; 1992 ; Seminars in Hearing Volume 13 ; 13 ; >
-   au < crawling ; exists ; 1993 ; 1993 ; Seminars in Hearing Volume 14 ; 14 ; >
-   au < crawling ; exists ; 1994 ; 1994 ; Seminars in Hearing Volume 15 ; 15 ; >
-   au < crawling ; exists ; 1995 ; 1995 ; Seminars in Hearing Volume 16 ; 16 ; >
-   au < crawling ; exists ; 1996 ; 1996 ; Seminars in Hearing Volume 17 ; 17 ; >
-   au < crawling ; exists ; 1997 ; 1997 ; Seminars in Hearing Volume 18 ; 18 ; >
-   au < crawling ; exists ; 1998 ; 1998 ; Seminars in Hearing Volume 19 ; 19 ; >
-   au < crawling ; exists ; 1999 ; 1999 ; Seminars in Hearing Volume 20 ; 20 ; >
-   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Hearing Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Hearing Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Hearing Volume 23 ; 23 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Hearing Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Hearing Volume 25 ; 25 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Seminars in Hearing Volume 26 ; 26 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Seminars in Hearing Volume 27 ; 27 ; >
+   au < frozen ; exists ; 1990 ; 1990 ; Seminars in Hearing Volume 11 ; 11 ; >
+   au < frozen ; exists ; 1991 ; 1991 ; Seminars in Hearing Volume 12 ; 12 ; >
+   au < frozen ; exists ; 1992 ; 1992 ; Seminars in Hearing Volume 13 ; 13 ; >
+   au < frozen ; exists ; 1993 ; 1993 ; Seminars in Hearing Volume 14 ; 14 ; >
+   au < frozen ; exists ; 1994 ; 1994 ; Seminars in Hearing Volume 15 ; 15 ; >
+   au < frozen ; exists ; 1995 ; 1995 ; Seminars in Hearing Volume 16 ; 16 ; >
+   au < frozen ; exists ; 1996 ; 1996 ; Seminars in Hearing Volume 17 ; 17 ; >
+   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Hearing Volume 18 ; 18 ; >
+   au < frozen ; exists ; 1998 ; 1998 ; Seminars in Hearing Volume 19 ; 19 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Hearing Volume 20 ; 20 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Hearing Volume 21 ; 21 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Hearing Volume 22 ; 22 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Hearing Volume 23 ; 23 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Hearing Volume 24 ; 24 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Hearing Volume 25 ; 25 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Hearing Volume 26 ; 26 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Hearing Volume 27 ; 27 ; >
    au < finished ; crawling ; 2007 ; 2007 ; Seminars in Hearing Volume 28 ; 28 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2008 ; 2008 ; Seminars in Hearing Volume 29 ; 29 ; reingest1.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Hearing Volume 30 ; 30 ; reingest4.clockss.org:8082 >
@@ -5379,24 +5379,24 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Interventional Radiology Volume 4 ; 4 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Interventional Radiology Volume 5 ; 5 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Interventional Radiology Volume 6 ; 6 ; >
-   au < crawling ; exists ; 1990 ; 1990 ; Seminars in Interventional Radiology Volume 7 ; 7 ; >
-   au < crawling ; exists ; 1991 ; 1991 ; Seminars in Interventional Radiology Volume 8 ; 8 ; >
-   au < crawling ; exists ; 1992 ; 1992 ; Seminars in Interventional Radiology Volume 9 ; 9 ; >
-   au < crawling ; exists ; 1993 ; 1993 ; Seminars in Interventional Radiology Volume 10 ; 10 ; >
-   au < crawling ; exists ; 1994 ; 1994 ; Seminars in Interventional Radiology Volume 11 ; 11 ; >
-   au < crawling ; exists ; 1995 ; 1995 ; Seminars in Interventional Radiology Volume 12 ; 12 ; >
-   au < crawling ; exists ; 1996 ; 1996 ; Seminars in Interventional Radiology Volume 13 ; 13 ; >
-   au < crawling ; exists ; 1997 ; 1997 ; Seminars in Interventional Radiology Volume 14 ; 14 ; >
-   au < crawling ; exists ; 1998 ; 1998 ; Seminars in Interventional Radiology Volume 15 ; 15 ; >
-   au < crawling ; exists ; 1999 ; 1999 ; Seminars in Interventional Radiology Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Interventional Radiology Volume 17 ; 17 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Interventional Radiology Volume 18 ; 18 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Interventional Radiology Volume 20 ; 20 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
+   au < frozen ; exists ; 1990 ; 1990 ; Seminars in Interventional Radiology Volume 7 ; 7 ; >
+   au < frozen ; exists ; 1991 ; 1991 ; Seminars in Interventional Radiology Volume 8 ; 8 ; >
+   au < frozen ; exists ; 1992 ; 1992 ; Seminars in Interventional Radiology Volume 9 ; 9 ; >
+   au < frozen ; exists ; 1993 ; 1993 ; Seminars in Interventional Radiology Volume 10 ; 10 ; >
+   au < frozen ; exists ; 1994 ; 1994 ; Seminars in Interventional Radiology Volume 11 ; 11 ; >
+   au < frozen ; exists ; 1995 ; 1995 ; Seminars in Interventional Radiology Volume 12 ; 12 ; >
+   au < frozen ; exists ; 1996 ; 1996 ; Seminars in Interventional Radiology Volume 13 ; 13 ; >
+   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Interventional Radiology Volume 14 ; 14 ; >
+   au < frozen ; exists ; 1998 ; 1998 ; Seminars in Interventional Radiology Volume 15 ; 15 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Interventional Radiology Volume 16 ; 16 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Interventional Radiology Volume 17 ; 17 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Interventional Radiology Volume 18 ; 18 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Interventional Radiology Volume 19 ; 19 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Interventional Radiology Volume 20 ; 20 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Interventional Radiology Volume 21 ; 21 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Interventional Radiology Volume 22 ; 22 ; >
    au < finished ; crawling ; 2006 ; 2006 ; Seminars in Interventional Radiology Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 24 ; 24 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 24 ; 24 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 25 ; 25 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Interventional Radiology Volume 26 ; 26 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 27 ; 27 ; >
@@ -5435,24 +5435,24 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Liver Disease Volume 7 ; 7 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Liver Disease Volume 8 ; 8 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Liver Disease Volume 9 ; 9 ; >
-   au < crawling ; exists ; 1990 ; 1990 ; Seminars in Liver Disease Volume 10 ; 10 ; >
-   au < crawling ; exists ; 1991 ; 1991 ; Seminars in Liver Disease Volume 11 ; 11 ; >
-   au < crawling ; exists ; 1992 ; 1992 ; Seminars in Liver Disease Volume 12 ; 12 ; >
-   au < crawling ; exists ; 1993 ; 1993 ; Seminars in Liver Disease Volume 13 ; 13 ; >
-   au < crawling ; exists ; 1994 ; 1994 ; Seminars in Liver Disease Volume 14 ; 14 ; >
-   au < crawling ; exists ; 1995 ; 1995 ; Seminars in Liver Disease Volume 15 ; 15 ; >
-   au < crawling ; exists ; 1996 ; 1996 ; Seminars in Liver Disease Volume 16 ; 16 ; >
-   au < crawling ; exists ; 1997 ; 1997 ; Seminars in Liver Disease Volume 17 ; 17 ; >
-   au < crawling ; exists ; 1998 ; 1998 ; Seminars in Liver Disease Volume 18 ; 18 ; >
-   au < crawling ; exists ; 1999 ; 1999 ; Seminars in Liver Disease Volume 19 ; 19 ; >
-   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Liver Disease Volume 20 ; 20 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Liver Disease Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Liver Disease Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Liver Disease Volume 23 ; 23 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Liver Disease Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Seminars in Liver Disease Volume 25 ; 25 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Seminars in Liver Disease Volume 26 ; 26 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Liver Disease Volume 27 ; 27 ; >
+   au < frozen ; exists ; 1990 ; 1990 ; Seminars in Liver Disease Volume 10 ; 10 ; >
+   au < frozen ; exists ; 1991 ; 1991 ; Seminars in Liver Disease Volume 11 ; 11 ; >
+   au < frozen ; exists ; 1992 ; 1992 ; Seminars in Liver Disease Volume 12 ; 12 ; >
+   au < frozen ; exists ; 1993 ; 1993 ; Seminars in Liver Disease Volume 13 ; 13 ; >
+   au < frozen ; exists ; 1994 ; 1994 ; Seminars in Liver Disease Volume 14 ; 14 ; >
+   au < frozen ; exists ; 1995 ; 1995 ; Seminars in Liver Disease Volume 15 ; 15 ; >
+   au < frozen ; exists ; 1996 ; 1996 ; Seminars in Liver Disease Volume 16 ; 16 ; >
+   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Liver Disease Volume 17 ; 17 ; >
+   au < frozen ; exists ; 1998 ; 1998 ; Seminars in Liver Disease Volume 18 ; 18 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Liver Disease Volume 19 ; 19 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Liver Disease Volume 20 ; 20 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Liver Disease Volume 21 ; 21 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Liver Disease Volume 22 ; 22 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Liver Disease Volume 23 ; 23 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Liver Disease Volume 24 ; 24 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Liver Disease Volume 25 ; 25 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Liver Disease Volume 26 ; 26 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Seminars in Liver Disease Volume 27 ; 27 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Seminars in Liver Disease Volume 28 ; 28 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Liver Disease Volume 29 ; 29 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Liver Disease Volume 30 ; 30 ; >
@@ -5485,14 +5485,14 @@
    au < crawling ; exists ; 1997 ; 1997 ; Seminars in Musculoskeletal Radiology Volume 1 ; 1 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Seminars in Musculoskeletal Radiology Volume 2 ; 2 ; >
    au < crawling ; exists ; 1999 ; 1999 ; Seminars in Musculoskeletal Radiology Volume 3 ; 3 ; >
-   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Musculoskeletal Radiology Volume 5 ; 5 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Musculoskeletal Radiology Volume 7 ; 7 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Musculoskeletal Radiology Volume 8 ; 8 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Seminars in Musculoskeletal Radiology Volume 9 ; 9 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Seminars in Musculoskeletal Radiology Volume 10 ; 10 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Musculoskeletal Radiology Volume 11 ; 11 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Musculoskeletal Radiology Volume 4 ; 4 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Musculoskeletal Radiology Volume 5 ; 5 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Musculoskeletal Radiology Volume 6 ; 6 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Musculoskeletal Radiology Volume 7 ; 7 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Musculoskeletal Radiology Volume 8 ; 8 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Musculoskeletal Radiology Volume 9 ; 9 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Musculoskeletal Radiology Volume 10 ; 10 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Seminars in Musculoskeletal Radiology Volume 11 ; 11 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Seminars in Musculoskeletal Radiology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Musculoskeletal Radiology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Musculoskeletal Radiology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
@@ -5531,24 +5531,24 @@
    au < manifest ; exists ; 1987 ; 1987 ; Seminars in Neurology Volume 7 ; 7 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Seminars in Neurology Volume 8 ; 8 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Seminars in Neurology Volume 9 ; 9 ; >
-   au < crawling ; exists ; 1990 ; 1990 ; Seminars in Neurology Volume 10 ; 10 ; >
-   au < crawling ; exists ; 1991 ; 1991 ; Seminars in Neurology Volume 11 ; 11 ; >
-   au < crawling ; exists ; 1992 ; 1992 ; Seminars in Neurology Volume 12 ; 12 ; >
-   au < crawling ; exists ; 1993 ; 1993 ; Seminars in Neurology Volume 13 ; 13 ; >
-   au < crawling ; exists ; 1994 ; 1994 ; Seminars in Neurology Volume 14 ; 14 ; >
-   au < crawling ; exists ; 1995 ; 1995 ; Seminars in Neurology Volume 15 ; 15 ; >
-   au < crawling ; exists ; 1996 ; 1996 ; Seminars in Neurology Volume 16 ; 16 ; >
-   au < crawling ; exists ; 1997 ; 1997 ; Seminars in Neurology Volume 17 ; 17 ; >
-   au < crawling ; exists ; 1998 ; 1998 ; Seminars in Neurology Volume 18 ; 18 ; >
-   au < crawling ; exists ; 1999 ; 1999 ; Seminars in Neurology Volume 19 ; 19 ; >
-   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Neurology Volume 20 ; 20 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Neurology Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Neurology Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Neurology Volume 23 ; 23 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Neurology Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Seminars in Neurology Volume 25 ; 25 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Seminars in Neurology Volume 26 ; 26 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Neurology Volume 27 ; 27 ; >
+   au < frozen ; exists ; 1990 ; 1990 ; Seminars in Neurology Volume 10 ; 10 ; >
+   au < frozen ; exists ; 1991 ; 1991 ; Seminars in Neurology Volume 11 ; 11 ; >
+   au < frozen ; exists ; 1992 ; 1992 ; Seminars in Neurology Volume 12 ; 12 ; >
+   au < frozen ; exists ; 1993 ; 1993 ; Seminars in Neurology Volume 13 ; 13 ; >
+   au < frozen ; exists ; 1994 ; 1994 ; Seminars in Neurology Volume 14 ; 14 ; >
+   au < frozen ; exists ; 1995 ; 1995 ; Seminars in Neurology Volume 15 ; 15 ; >
+   au < frozen ; exists ; 1996 ; 1996 ; Seminars in Neurology Volume 16 ; 16 ; >
+   au < frozen ; exists ; 1997 ; 1997 ; Seminars in Neurology Volume 17 ; 17 ; >
+   au < frozen ; exists ; 1998 ; 1998 ; Seminars in Neurology Volume 18 ; 18 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Seminars in Neurology Volume 19 ; 19 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Neurology Volume 20 ; 20 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Neurology Volume 21 ; 21 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Neurology Volume 22 ; 22 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Neurology Volume 23 ; 23 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Neurology Volume 24 ; 24 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Neurology Volume 25 ; 25 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Neurology Volume 26 ; 26 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Seminars in Neurology Volume 27 ; 27 ; >
    au < finished ; crawling ; 2008 ; 2008 ; Seminars in Neurology Volume 28 ; 28 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Neurology Volume 29 ; 29 ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Neurology Volume 30 ; 30 ; reingest2.clockss.org:8085 >
@@ -5578,11 +5578,11 @@
     param[journal_id] = 10.1055/s-00000050
     comment[years] = 2000-2004
 
-   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Neurosurgery Volume 11 ; 11 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Neurosurgery Volume 14 ; 14 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Neurosurgery Volume 15 ; 15 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Neurosurgery Volume 11 ; 11 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Neurosurgery Volume 12 ; 12 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Neurosurgery Volume 13 ; 13 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Neurosurgery Volume 14 ; 14 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Neurosurgery Volume 15 ; 15 ; >
 
   }
 
@@ -5598,13 +5598,13 @@
     param[journal_id] = 10.1055/s-00000051
     comment[years] = 2002-current
 
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Plastic Surgery Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Plastic Surgery Volume 17 ; 17 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Plastic Surgery Volume 18 ; 18 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Seminars in Plastic Surgery Volume 19 ; 19 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Seminars in Plastic Surgery Volume 20 ; 20 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Plastic Surgery Volume 16 ; 16 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Plastic Surgery Volume 17 ; 17 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Plastic Surgery Volume 18 ; 18 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Plastic Surgery Volume 19 ; 19 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Plastic Surgery Volume 20 ; 20 ; >
    au < finished ; crawling ; 2007 ; 2007 ; Seminars in Plastic Surgery Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2008 ; 2008 ; Seminars in Plastic Surgery Volume 22 ; 22 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Seminars in Plastic Surgery Volume 22 ; 22 ; >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Plastic Surgery Volume 23 ; 23 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Plastic Surgery Volume 24 ; 24 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Seminars in Plastic Surgery Volume 25 ; 25 ; >
@@ -5664,13 +5664,13 @@
     param[journal_id] = 10.1055/s-00000072
     comment[years] = 2000-current
 
-   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Reproductive Medicine Volume 18 ; 18 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Reproductive Medicine Volume 19 ; 19 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Reproductive Medicine Volume 20 ; 20 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Reproductive Medicine Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Reproductive Medicine Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Seminars in Reproductive Medicine Volume 23 ; 23 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Seminars in Reproductive Medicine Volume 24 ; 24 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Reproductive Medicine Volume 18 ; 18 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Reproductive Medicine Volume 19 ; 19 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Reproductive Medicine Volume 20 ; 20 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Reproductive Medicine Volume 21 ; 21 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Reproductive Medicine Volume 22 ; 22 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Reproductive Medicine Volume 23 ; 23 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Reproductive Medicine Volume 24 ; 24 ; >
    au < finished ; crawling ; 2007 ; 2007 ; Seminars in Reproductive Medicine Volume 25 ; 25 ; reingest3.clockss.org:8083 >
    au < finished ; crawling ; 2008 ; 2008 ; Seminars in Reproductive Medicine Volume 26 ; 26 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Reproductive Medicine Volume 27 ; 27 ; reingest5.clockss.org:8082 >
@@ -5707,15 +5707,15 @@
    au < crawling ; exists ; 1997 ; 1997 ; Seminars in Respiratory and Critical Care Medicine Volume 18 ; 18 ; >
    au < crawling ; exists ; 1998 ; 1998 ; Seminars in Respiratory and Critical Care Medicine Volume 19 ; 19 ; >
    au < crawling ; exists ; 1999 ; 1999 ; Seminars in Respiratory and Critical Care Medicine Volume 20 ; 20 ; >
-   au < crawling ; exists ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Seminars in Respiratory and Critical Care Medicine Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Seminars in Respiratory and Critical Care Medicine Volume 25 ; 25 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Seminars in Respiratory and Critical Care Medicine Volume 26 ; 26 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Seminars in Respiratory and Critical Care Medicine Volume 27 ; 27 ; >
-   au < crawling ; exists ; 2007 ; 2007 ; Seminars in Respiratory and Critical Care Medicine Volume 28 ; 28 ; >
-   au < crawling ; exists ; 2008 ; 2008 ; Seminars in Respiratory and Critical Care Medicine Volume 29 ; 29 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Seminars in Respiratory and Critical Care Medicine Volume 21 ; 21 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Seminars in Respiratory and Critical Care Medicine Volume 22 ; 22 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Seminars in Respiratory and Critical Care Medicine Volume 23 ; 23 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Seminars in Respiratory and Critical Care Medicine Volume 24 ; 24 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Seminars in Respiratory and Critical Care Medicine Volume 25 ; 25 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Seminars in Respiratory and Critical Care Medicine Volume 26 ; 26 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Seminars in Respiratory and Critical Care Medicine Volume 27 ; 27 ; >
+   au < frozen ; exists ; 2007 ; 2007 ; Seminars in Respiratory and Critical Care Medicine Volume 28 ; 28 ; >
+   au < frozen ; exists ; 2008 ; 2008 ; Seminars in Respiratory and Critical Care Medicine Volume 29 ; 29 ; >
    au < finished ; crawling ; 2009 ; 2009 ; Seminars in Respiratory and Critical Care Medicine Volume 30 ; 30 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2010 ; 2010 ; Seminars in Respiratory and Critical Care Medicine Volume 31 ; 31 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Seminars in Respiratory and Critical Care Medicine Volume 32 ; 32 ; reingest2.clockss.org:8085 >
@@ -5750,24 +5750,24 @@
     au < manifest ; exists ; 1987 ; 1987 ; Seminars in Speech and Language Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Seminars in Speech and Language Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Seminars in Speech and Language Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1990 ; 1990 ; Seminars in Speech and Language Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1991 ; 1991 ; Seminars in Speech and Language Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1992 ; 1992 ; Seminars in Speech and Language Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1993 ; 1993 ; Seminars in Speech and Language Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1994 ; 1994 ; Seminars in Speech and Language Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1995 ; 1995 ; Seminars in Speech and Language Volume 16 ; 16 ; >
-    au < crawling ; exists ; 1996 ; 1996 ; Seminars in Speech and Language Volume 17 ; 17 ; >
-    au < crawling ; exists ; 1997 ; 1997 ; Seminars in Speech and Language Volume 18 ; 18 ; >
-    au < crawling ; exists ; 1998 ; 1998 ; Seminars in Speech and Language Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1999 ; 1999 ; Seminars in Speech and Language Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Speech and Language Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Speech and Language Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Speech and Language Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Speech and Language Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Speech and Language Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Speech and Language Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Seminars in Speech and Language Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; Seminars in Speech and Language Volume 28 ; 28 ; >
+    au < frozen ; exists ; 1990 ; 1990 ; Seminars in Speech and Language Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1991 ; 1991 ; Seminars in Speech and Language Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1992 ; 1992 ; Seminars in Speech and Language Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1993 ; 1993 ; Seminars in Speech and Language Volume 14 ; 14 ; >
+    au < frozen ; exists ; 1994 ; 1994 ; Seminars in Speech and Language Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1995 ; 1995 ; Seminars in Speech and Language Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1996 ; 1996 ; Seminars in Speech and Language Volume 17 ; 17 ; >
+    au < frozen ; exists ; 1997 ; 1997 ; Seminars in Speech and Language Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1998 ; 1998 ; Seminars in Speech and Language Volume 19 ; 19 ; >
+    au < frozen ; exists ; 1999 ; 1999 ; Seminars in Speech and Language Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; Seminars in Speech and Language Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; Seminars in Speech and Language Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; Seminars in Speech and Language Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Seminars in Speech and Language Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Speech and Language Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Speech and Language Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Seminars in Speech and Language Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; Seminars in Speech and Language Volume 28 ; 28 ; >
     au < finished ; crawling ; 2008 ; 2008 ; Seminars in Speech and Language Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; Seminars in Speech and Language Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; 2010 ; Seminars in Speech and Language Volume 31 ; 31 ; reingest1.clockss.org:8082 >
@@ -5813,23 +5813,23 @@
     au < manifest ; exists ; 1987 ; 1987 ; Seminars in Thrombosis and Hemostasis Volume 13 ; 13 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Seminars in Thrombosis and Hemostasis Volume 14 ; 14 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Seminars in Thrombosis and Hemostasis Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1990 ; 1990 ; Seminars in Thrombosis and Hemostasis Volume 16 ; 16 ; >
-    au < crawling ; exists ; 1991 ; 1991 ; Seminars in Thrombosis and Hemostasis Volume 17 ; 17 ; >
-    au < crawling ; exists ; 1992 ; 1992 ; Seminars in Thrombosis and Hemostasis Volume 18 ; 18 ; >
-    au < crawling ; exists ; 1993 ; 1993 ; Seminars in Thrombosis and Hemostasis Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1994 ; 1994 ; Seminars in Thrombosis and Hemostasis Volume 20 ; 20 ; >
-    au < crawling ; exists ; 1995 ; 1995 ; Seminars in Thrombosis and Hemostasis Volume 21 ; 21 ; >
-    au < crawling ; exists ; 1996 ; 1996 ; Seminars in Thrombosis and Hemostasis Volume 22 ; 22 ; >
-    au < crawling ; exists ; 1997 ; 1997 ; Seminars in Thrombosis and Hemostasis Volume 23 ; 23 ; >
-    au < crawling ; exists ; 1998 ; 1998 ; Seminars in Thrombosis and Hemostasis Volume 24 ; 24 ; >
-    au < crawling ; exists ; 1999 ; 1999 ; Seminars in Thrombosis and Hemostasis Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2000 ; 2000 ; Seminars in Thrombosis and Hemostasis Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Thrombosis and Hemostasis Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Thrombosis and Hemostasis Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Thrombosis and Hemostasis Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Thrombosis and Hemostasis Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Thrombosis and Hemostasis Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Seminars in Thrombosis and Hemostasis Volume 32 ; 32 ; >
+    au < frozen ; exists ; 1990 ; 1990 ; Seminars in Thrombosis and Hemostasis Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1991 ; 1991 ; Seminars in Thrombosis and Hemostasis Volume 17 ; 17 ; >
+    au < frozen ; exists ; 1992 ; 1992 ; Seminars in Thrombosis and Hemostasis Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1993 ; 1993 ; Seminars in Thrombosis and Hemostasis Volume 19 ; 19 ; >
+    au < frozen ; exists ; 1994 ; 1994 ; Seminars in Thrombosis and Hemostasis Volume 20 ; 20 ; >
+    au < frozen ; exists ; 1995 ; 1995 ; Seminars in Thrombosis and Hemostasis Volume 21 ; 21 ; >
+    au < frozen ; exists ; 1996 ; 1996 ; Seminars in Thrombosis and Hemostasis Volume 22 ; 22 ; >
+    au < frozen ; exists ; 1997 ; 1997 ; Seminars in Thrombosis and Hemostasis Volume 23 ; 23 ; >
+    au < frozen ; exists ; 1998 ; 1998 ; Seminars in Thrombosis and Hemostasis Volume 24 ; 24 ; >
+    au < frozen ; exists ; 1999 ; 1999 ; Seminars in Thrombosis and Hemostasis Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; Seminars in Thrombosis and Hemostasis Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; Seminars in Thrombosis and Hemostasis Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; Seminars in Thrombosis and Hemostasis Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Seminars in Thrombosis and Hemostasis Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Thrombosis and Hemostasis Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Thrombosis and Hemostasis Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Seminars in Thrombosis and Hemostasis Volume 32 ; 32 ; >
     au < finished ; crawling ; 2007 ; 2007 ; Seminars in Thrombosis and Hemostasis Volume 33 ; 33 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; 2008 ; Seminars in Thrombosis and Hemostasis Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; Seminars in Thrombosis and Hemostasis Volume 35 ; 35 ; reingest3.clockss.org:8083 >
@@ -5860,11 +5860,11 @@
     param[journal_id] = 10.1055/s-00000116
     comment[years] = 2001-2005
 
-    au < crawling ; exists ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; Seminars in Vascular Medicine Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; Seminars in Vascular Medicine Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Seminars in Vascular Medicine Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Seminars in Vascular Medicine Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Seminars in Vascular Medicine Volume 5 ; 5 ; >
 
   }
 
@@ -5880,9 +5880,9 @@
     param[journal_id] = 10.1055/s-00000125
     comment[years] = 2004-current
 
-    au < crawling ; exists ; 2004 ; 2004 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 3 ; 3 ; >
     au < finished ; crawling ; 2007 ; 2007 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; 2008 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; 2009 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -5913,14 +5913,14 @@
     param[journal_id] = 10.1055/s-00000079
     comment[years] = 2001-2011
 
-    au < crawling ; exists ; 2001 ; 2001 ; Skull Base Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; Skull Base Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Skull Base Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Skull Base Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Skull Base Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Skull Base Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; Skull Base Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; Skull Base Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; Skull Base Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; Skull Base Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Skull Base Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Skull Base Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Skull Base Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Skull Base Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; Skull Base Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Skull Base Volume 18 ; 18 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Skull Base Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Skull Base Volume 20 ; 20 ; >
     au < finished ; finished ; 2011 ; 2011 ; Skull Base Volume 21 ; 21 ; >
@@ -5957,11 +5957,11 @@
     comment[years] = 1999-2004
 
     au < crawling ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Sleep and Breathing Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Sleep and Breathing Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Sleep and Breathing Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Sleep and Breathing Volume 8 ; 8 ; >
 
   }
 
@@ -6023,23 +6023,23 @@
    au < manifest ; exists ; 1987 ; 1987 ; Sportverletzung - Sportschaden Volume 1 ; 1 ; >
    au < manifest ; exists ; 1988 ; 1988 ; Sportverletzung - Sportschaden Volume 2 ; 2 ; >
    au < manifest ; exists ; 1989 ; 1989 ; Sportverletzung - Sportschaden Volume 3 ; 3 ; >
-   au < crawling ; exists ; 1990 ; 1990 ; Sportverletzung - Sportschaden Volume 4 ; 4 ; >
-   au < crawling ; exists ; 1991 ; 1991 ; Sportverletzung - Sportschaden Volume 5 ; 5 ; >
-   au < crawling ; exists ; 1992 ; 1992 ; Sportverletzung - Sportschaden Volume 6 ; 6 ; >
-   au < crawling ; exists ; 1993 ; 1993 ; Sportverletzung - Sportschaden Volume 7 ; 7 ; >
-   au < crawling ; exists ; 1994 ; 1994 ; Sportverletzung - Sportschaden Volume 8 ; 8 ; >
-   au < crawling ; exists ; 1995 ; 1995 ; Sportverletzung - Sportschaden Volume 9 ; 9 ; >
-   au < crawling ; exists ; 1996 ; 1996 ; Sportverletzung - Sportschaden Volume 10 ; 10 ; >
-   au < crawling ; exists ; 1997 ; 1997 ; Sportverletzung - Sportschaden Volume 11 ; 11 ; >
-   au < crawling ; exists ; 1998 ; 1998 ; Sportverletzung - Sportschaden Volume 12 ; 12 ; >
-   au < crawling ; exists ; 1999 ; 1999 ; Sportverletzung - Sportschaden Volume 13 ; 13 ; >
-   au < crawling ; exists ; 2000 ; 2000 ; Sportverletzung - Sportschaden Volume 14 ; 14 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Sportverletzung - Sportschaden Volume 15 ; 15 ; >
-   au < crawling ; exists ; 2002 ; 2002 ; Sportverletzung - Sportschaden Volume 16 ; 16 ; >
-   au < crawling ; exists ; 2003 ; 2003 ; Sportverletzung - Sportschaden Volume 17 ; 17 ; >
-   au < crawling ; exists ; 2004 ; 2004 ; Sportverletzung - Sportschaden Volume 18 ; 18 ; >
-   au < crawling ; exists ; 2005 ; 2005 ; Sportverletzung - Sportschaden Volume 19 ; 19 ; >
-   au < crawling ; exists ; 2006 ; 2006 ; Sportverletzung - Sportschaden Volume 20 ; 20 ; >
+   au < frozen ; exists ; 1990 ; 1990 ; Sportverletzung - Sportschaden Volume 4 ; 4 ; >
+   au < frozen ; exists ; 1991 ; 1991 ; Sportverletzung - Sportschaden Volume 5 ; 5 ; >
+   au < frozen ; exists ; 1992 ; 1992 ; Sportverletzung - Sportschaden Volume 6 ; 6 ; >
+   au < frozen ; exists ; 1993 ; 1993 ; Sportverletzung - Sportschaden Volume 7 ; 7 ; >
+   au < frozen ; exists ; 1994 ; 1994 ; Sportverletzung - Sportschaden Volume 8 ; 8 ; >
+   au < frozen ; exists ; 1995 ; 1995 ; Sportverletzung - Sportschaden Volume 9 ; 9 ; >
+   au < frozen ; exists ; 1996 ; 1996 ; Sportverletzung - Sportschaden Volume 10 ; 10 ; >
+   au < frozen ; exists ; 1997 ; 1997 ; Sportverletzung - Sportschaden Volume 11 ; 11 ; >
+   au < frozen ; exists ; 1998 ; 1998 ; Sportverletzung - Sportschaden Volume 12 ; 12 ; >
+   au < frozen ; exists ; 1999 ; 1999 ; Sportverletzung - Sportschaden Volume 13 ; 13 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Sportverletzung - Sportschaden Volume 14 ; 14 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Sportverletzung - Sportschaden Volume 15 ; 15 ; >
+   au < frozen ; exists ; 2002 ; 2002 ; Sportverletzung - Sportschaden Volume 16 ; 16 ; >
+   au < frozen ; exists ; 2003 ; 2003 ; Sportverletzung - Sportschaden Volume 17 ; 17 ; >
+   au < frozen ; exists ; 2004 ; 2004 ; Sportverletzung - Sportschaden Volume 18 ; 18 ; >
+   au < frozen ; exists ; 2005 ; 2005 ; Sportverletzung - Sportschaden Volume 19 ; 19 ; >
+   au < frozen ; exists ; 2006 ; 2006 ; Sportverletzung - Sportschaden Volume 20 ; 20 ; >
    au < finished ; crawling ; 2007 ; 2007 ; Sportverletzung - Sportschaden Volume 21 ; 21 ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2008 ; 2008 ; Sportverletzung - Sportschaden Volume 22 ; 22 ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2009 ; 2009 ; Sportverletzung - Sportschaden Volume 23 ; 23 ; reingest1.clockss.org:8082 >
@@ -6070,8 +6070,8 @@
     param[journal_id] = 10.1055/s-00000082
     comment[years] = 2000-current
 
-   au < crawling ; exists ; 2000 ; 2000 ; Sprache Stimme Gehör Volume 24 ; 24 ; >
-   au < crawling ; exists ; 2001 ; 2001 ; Sprache Stimme Gehör Volume 25 ; 25 ; >
+   au < frozen ; exists ; 2000 ; 2000 ; Sprache Stimme Gehör Volume 24 ; 24 ; >
+   au < frozen ; exists ; 2001 ; 2001 ; Sprache Stimme Gehör Volume 25 ; 25 ; >
    au < crawling ; exists ; 2002 ; 2002 ; Sprache Stimme Gehör Volume 26 ; 26 ; >
    au < crawling ; exists ; 2003 ; 2003 ; Sprache Stimme Gehör Volume 27 ; 27 ; >
    au < crawling ; exists ; 2004 ; 2004 ; Sprache Stimme Gehör Volume 28 ; 28 ; >
