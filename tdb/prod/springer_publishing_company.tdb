@@ -16,6 +16,7 @@
     param[base_url] = https://connect.springerpub.com/
     param[journal_id] = sgrehpp
     plugin = needs.plugin
+    #example manifest https://connect.springerpub.com/content/sgrehpp/lockss-manifest/vol_10_manifest.html
 
     au < exists ; 2016 ; Ethical Human Psychology and Psychiatry Volume 5 ; 5 >
     au < exists ; 2017 ; Ethical Human Psychology and Psychiatry Volume 6 ; 6 >
