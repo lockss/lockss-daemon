@@ -1,10 +1,10 @@
 {
 
   publisher <
-    name = International Institute of Anticancer Research
+    name = International Institute of Anticancer Research ;
+    info[platform] = Highwire. Moved to JCORE
   >
 
-  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
   implicit < status ; year ; name ; param[volume_name] >
 
   {
@@ -15,28 +15,34 @@
       eissn = 1791-7530 ;
       issnl = 0250-7005
     >
+  {
+    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    param[base_url] = https://ar.iiarjournals.org/
 
+    au < exists ; 2019 ; Anticancer Research Volume 39 ; 39 >
+    au < exists ; 2020 ; Anticancer Research Volume 40 ; 40 >
+    au < expected ; 2021 ; Anticancer Research Volume 41 ; 41 >
+  }
+  {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://ar.iiarjournals.org/
 
-    au < released ; 2004 ; Anticancer Research Volume 24 ; 24 >
-    au < released ; 2005 ; Anticancer Research Volume 25 ; 25 >
-    au < released ; 2006 ; Anticancer Research Volume 26 ; 26 >
-    au < released ; 2007 ; Anticancer Research Volume 27 ; 27 >
-    au < released ; 2008 ; Anticancer Research Volume 28 ; 28 >
-    au < released ; 2009 ; Anticancer Research Volume 29 ; 29 >
-    au < released ; 2010 ; Anticancer Research Volume 30 ; 30 >
-    au < released ; 2011 ; Anticancer Research Volume 31 ; 31 >
-    au < released ; 2012 ; Anticancer Research Volume 32 ; 32 >
-    au < released ; 2013 ; Anticancer Research Volume 33 ; 33 >
-    au < released ; 2014 ; Anticancer Research Volume 34 ; 34 >
-    au < released ; 2015 ; Anticancer Research Volume 35 ; 35 >
-    au < released ; 2016 ; Anticancer Research Volume 36 ; 36 >
-    au < released ; 2017 ; Anticancer Research Volume 37 ; 37 >
-    au < released ; 2018 ; Anticancer Research Volume 38 ; 38 >
-    au < manifest ; 2019 ; Anticancer Research Volume 39 ; 39 >
-    au < manifest ; 2020 ; Anticancer Research Volume 40 ; 40 >
-    au < expected ; 2021 ; Anticancer Research Volume 41 ; 41 >
-
+    au < down ; 2004 ; Anticancer Research Volume 24 ; 24 >
+    au < down ; 2005 ; Anticancer Research Volume 25 ; 25 >
+    au < down ; 2006 ; Anticancer Research Volume 26 ; 26 >
+    au < down ; 2007 ; Anticancer Research Volume 27 ; 27 >
+    au < down ; 2008 ; Anticancer Research Volume 28 ; 28 >
+    au < down ; 2009 ; Anticancer Research Volume 29 ; 29 >
+    au < down ; 2010 ; Anticancer Research Volume 30 ; 30 >
+    au < down ; 2011 ; Anticancer Research Volume 31 ; 31 >
+    au < down ; 2012 ; Anticancer Research Volume 32 ; 32 >
+    au < down ; 2013 ; Anticancer Research Volume 33 ; 33 >
+    au < down ; 2014 ; Anticancer Research Volume 34 ; 34 >
+    au < down ; 2015 ; Anticancer Research Volume 35 ; 35 >
+    au < down ; 2016 ; Anticancer Research Volume 36 ; 36 >
+    au < down ; 2017 ; Anticancer Research Volume 37 ; 37 >
+    au < down ; 2018 ; Anticancer Research Volume 38 ; 38 >
+  }
   }
   
   {
@@ -47,29 +53,34 @@
       eissn = 1790-6245 ;
       issnl = 1109-6535
     >
-  
-   param[base_url] = http://cgp.iiarjournals.org/
+  {
+    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    param[base_url] = https://cgp.iiarjournals.org/
 
-    au < released ; 2004 ; Cancer Genomics & Proteomics Volume 1 ; 1 >
-    au < released ; 2005 ; Cancer Genomics & Proteomics Volume 2 ; 2 >
-    au < released ; 2006 ; Cancer Genomics & Proteomics Volume 3 ; 3 >
-    au < released ; 2007 ; Cancer Genomics & Proteomics Volume 4 ; 4 >
-    au < released ; 2008 ; Cancer Genomics & Proteomics Volume 5 ; 5 >
-    au < released ; 2009 ; Cancer Genomics & Proteomics Volume 6 ; 6 >
-    au < released ; 2010 ; Cancer Genomics & Proteomics Volume 7 ; 7 >
-    au < released ; 2011 ; Cancer Genomics & Proteomics Volume 8 ; 8 >
-    au < released ; 2012 ; Cancer Genomics & Proteomics Volume 9 ; 9 >
-    au < released ; 2013 ; Cancer Genomics & Proteomics Volume 10 ; 10 >
-    au < released ; 2014 ; Cancer Genomics & Proteomics Volume 11 ; 11 >
-    au < released ; 2015 ; Cancer Genomics & Proteomics Volume 12 ; 12 >
-    au < released ; 2016 ; Cancer Genomics & Proteomics Volume 13 ; 13 >
-    au < released ; 2017 ; Cancer Genomics & Proteomics Volume 14 ; 14 >
-    au < released ; 2018 ; Cancer Genomics & Proteomics Volume 15 ; 15 >
-    au < manifest ; 2019 ; Cancer Genomics & Proteomics Volume 16 ; 16 >
-    au < manifest ; 2020 ; Cancer Genomics & Proteomics Volume 17 ; 17 >
+    au < exists ; 2019 ; Cancer Genomics & Proteomics Volume 16 ; 16 >
+    au < exists ; 2020 ; Cancer Genomics & Proteomics Volume 17 ; 17 >
     au < expected ; 2021 ; Cancer Genomics & Proteomics Volume 18 ; 18 >
+  }
+  {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://cgp.iiarjournals.org/
 
-
+    au < down ; 2004 ; Cancer Genomics & Proteomics Volume 1 ; 1 >
+    au < down ; 2005 ; Cancer Genomics & Proteomics Volume 2 ; 2 >
+    au < down ; 2006 ; Cancer Genomics & Proteomics Volume 3 ; 3 >
+    au < down ; 2007 ; Cancer Genomics & Proteomics Volume 4 ; 4 >
+    au < down ; 2008 ; Cancer Genomics & Proteomics Volume 5 ; 5 >
+    au < down ; 2009 ; Cancer Genomics & Proteomics Volume 6 ; 6 >
+    au < down ; 2010 ; Cancer Genomics & Proteomics Volume 7 ; 7 >
+    au < down ; 2011 ; Cancer Genomics & Proteomics Volume 8 ; 8 >
+    au < down ; 2012 ; Cancer Genomics & Proteomics Volume 9 ; 9 >
+    au < down ; 2013 ; Cancer Genomics & Proteomics Volume 10 ; 10 >
+    au < down ; 2014 ; Cancer Genomics & Proteomics Volume 11 ; 11 >
+    au < down ; 2015 ; Cancer Genomics & Proteomics Volume 12 ; 12 >
+    au < down ; 2016 ; Cancer Genomics & Proteomics Volume 13 ; 13 >
+    au < down ; 2017 ; Cancer Genomics & Proteomics Volume 14 ; 14 >
+    au < down ; 2018 ; Cancer Genomics & Proteomics Volume 15 ; 15 >
+  }
   }
   
   {
@@ -80,28 +91,34 @@
       eissn = 1791-7549 ;
       issnl = 0258-851X
     >
+  {
+    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    param[base_url] = https://iv.iiarjournals.org/
 
+    au < exists ; 2019 ; In Vivo Volume 33 ; 33 >
+    au < exists ; 2020 ; In Vivo Volume 34 ; 34 >
+    au < expected ; 2021 ; In Vivo Volume 35 ; 35 >
+  }
+  {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://iv.iiarjournals.org/
 
-    au < released ; 2004 ; In Vivo Volume 18 ; 18 >
-    au < released ; 2005 ; In Vivo Volume 19 ; 19 >
-    au < released ; 2006 ; In Vivo Volume 20 ; 20 >
-    au < released ; 2007 ; In Vivo Volume 21 ; 21 >
-    au < released ; 2008 ; In Vivo Volume 22 ; 22 >
-    au < released ; 2009 ; In Vivo Volume 23 ; 23 >
-    au < released ; 2010 ; In Vivo Volume 24 ; 24 >
-    au < released ; 2011 ; In Vivo Volume 25 ; 25 >
-    au < released ; 2012 ; In Vivo Volume 26 ; 26 >
-    au < released ; 2013 ; In Vivo Volume 27 ; 27 >
-    au < released ; 2014 ; In Vivo Volume 28 ; 28 >
-    au < released ; 2015 ; In Vivo Volume 29 ; 29 >
-    au < released ; 2016 ; In Vivo Volume 30 ; 30 >
-    au < released ; 2017 ; In Vivo Volume 31 ; 31 >
-    au < released ; 2018 ; In Vivo Volume 32 ; 32 >
-    au < manifest ; 2019 ; In Vivo Volume 33 ; 33 >
-    au < manifest ; 2020 ; In Vivo Volume 34 ; 34 >
-    au < expected ; 2021 ; In Vivo Volume 35 ; 35 >
-
+    au < down ; 2004 ; In Vivo Volume 18 ; 18 >
+    au < down ; 2005 ; In Vivo Volume 19 ; 19 >
+    au < down ; 2006 ; In Vivo Volume 20 ; 20 >
+    au < down ; 2007 ; In Vivo Volume 21 ; 21 >
+    au < down ; 2008 ; In Vivo Volume 22 ; 22 >
+    au < down ; 2009 ; In Vivo Volume 23 ; 23 >
+    au < down ; 2010 ; In Vivo Volume 24 ; 24 >
+    au < down ; 2011 ; In Vivo Volume 25 ; 25 >
+    au < down ; 2012 ; In Vivo Volume 26 ; 26 >
+    au < down ; 2013 ; In Vivo Volume 27 ; 27 >
+    au < down ; 2014 ; In Vivo Volume 28 ; 28 >
+    au < down ; 2015 ; In Vivo Volume 29 ; 29 >
+    au < down ; 2016 ; In Vivo Volume 30 ; 30 >
+    au < down ; 2017 ; In Vivo Volume 31 ; 31 >
+    au < down ; 2018 ; In Vivo Volume 32 ; 32 >
+  }
 
   }
 

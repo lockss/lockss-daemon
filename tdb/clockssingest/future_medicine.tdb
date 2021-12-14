@@ -44,7 +44,7 @@
     au < manifest ; exists ; 2007 ; Biomarkers in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2008 ; Biomarkers in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < manifest ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
+    au < notReady ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; > #500 error https://www.futuremedicine.com/cms/10.2217/fnl-2019-0027/asset/images/medium/figure1.gif
     au < manifest ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ ; >
     au < finished ; crawling ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
@@ -271,7 +271,7 @@
     au < manifest ; exists ; 2007 ; Future Cardiology Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2008 ; Future Cardiology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Future Cardiology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
-    au < manifest ; exists ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < notReady ; exists ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; > #500 error https://www.futuremedicine.com/cms/10.2217/fca.09.59/asset/images/medium/graphic33.gif
     au < manifest ; exists ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
     au < finished ; crawling ; 2012 ; Future Cardiology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Future Cardiology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
@@ -358,8 +358,8 @@
     au < manifest ; exists ; 2007 ; Future Oncology Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
-    au < manifest ; exists ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
-    au < manifest ; exists ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
+    au < notReady ; exists ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; > #500 error https://www.futuremedicine.com/cms/10.2217/fon.10.90/asset/images/medium/figure1.gif
+    au < notReady ; exists ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ ; > #500 error https://www.futuremedicine.com/cms/10.2217/nnm-2018-0236/asset/images/medium/figure2c.gif
     au < finished ; crawling ; 2012 ; Future Oncology Volume 8 ; 8 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Future Oncology Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2014 ; Future Oncology Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
@@ -833,7 +833,7 @@
     au < manifest ; exists ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2009 ; Pharmacogenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
-    au < manifest ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
+    au < notReady ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ ; > #500 error https://www.futuremedicine.com/cms/10.2217/pgs.10.159/asset/images/medium/figure1.ai.gif
     au < manifest ; exists ; 2011 ; Pharmacogenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     au < finished ; finished ; 2012 ; Pharmacogenomics Volume 13 ; 13 ; http://www.futuremedicine.com/ ; >
     au < finished ; crawling ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
