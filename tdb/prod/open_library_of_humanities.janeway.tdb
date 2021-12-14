@@ -88,7 +88,7 @@
       au < manifest ; 2003 ; 25 ; Pynchon Notes Volume 2003 ; 2003 >
       au < manifest ; 2008 ; 30 ; Pynchon Notes Volume 2008 ; 2008 >
       au < manifest ; 2009 ; 31 ; Pynchon Notes Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 32 ; Pynchon Notes Volume 2010 ; 2010 >
+      au < manifest ; 2010 ; 32 ; Pynchon Notes Volume 2010 ; 2010 > #crawled only the manifest page.
 
   }
 
@@ -207,7 +207,7 @@
 
         param[base_url] = https://ijwwe.uwp.co.uk/
 
-        au < manifest ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 >
+        au < notReady ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 > #500 error https://ijwwe.uwp.co.uk/article/id/4/print/
         au < released ; 2018 ; 5 ; International Journal of Welsh Writing in English Volume 2018 ; 2018 >
         au < released ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 >
         au < manifest ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 >

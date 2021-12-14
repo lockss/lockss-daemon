@@ -1499,7 +1499,7 @@
     au < doNotProcess ; 2015 ; China Finance Review International Volume 5 ; 5 >
     au < doNotProcess ; 2016 ; China Finance Review International Volume 6 ; 6 >
     au < doNotProcess ; 2017 ; China Finance Review International Volume 7 ; 7 >
-    au < manifest ; 2018 ; China Finance Review International Volume 8 ; 8 >
+    au < notReady ; 2018 ; China Finance Review International Volume 8 ; 8 > #500 Error
     au < released ; 2019 ; China Finance Review International Volume 9 ; 9 >
     au < released ; 2020 ; China Finance Review International Volume 10 ; 10 >
     au < manifest ; 2021 ; China Finance Review International Volume 11 ; 11 >
@@ -1723,7 +1723,7 @@
     comment[journal_id] = cc
     #continues = 0160-4953
 
-    au < manifest ; 2018 ; Collection and Curation Volume 37 ; 37 >
+    au < notReady ; 2018 ; Collection and Curation Volume 37 ; 37 > #500 error
     au < released ; 2019 ; Collection and Curation Volume 38 ; 38 >
     au < released ; 2020 ; Collection and Curation Volume 39 ; 39 >
     au < manifest ; 2021 ; Collection and Curation Volume 40 ; 40 >
@@ -1820,7 +1820,7 @@
     au < doNotProcess ; 2015 ; Competitiveness Review: An International Business Journal Volume 25 ; 25 >
     au < doNotProcess ; 2016 ; Competitiveness Review: An International Business Journal Volume 26 ; 26 >
     au < doNotProcess ; 2017 ; Competitiveness Review: An International Business Journal Volume 27 ; 27 >
-    au < manifest ; 2018 ; Competitiveness Review: An International Business Journal Volume 28 ; 28 >
+    au < notReady ; 2018 ; Competitiveness Review: An International Business Journal Volume 28 ; 28 > #500 error
     au < released ; 2019 ; Competitiveness Review: An International Business Journal Volume 29 ; 29 >
     au < released ; 2020 ; Competitiveness Review: An International Business Journal Volume 30 ; 30 >
     au < manifest ; 2021 ; Competitiveness Review: An International Business Journal Volume 31 ; 31 >
@@ -7918,7 +7918,7 @@
     au < doNotProcess ; 2015 ; Journal of Knowledge Management Volume 19 ; 19 >
     au < doNotProcess ; 2016 ; Journal of Knowledge Management Volume 20 ; 20 >
     au < doNotProcess ; 2017 ; Journal of Knowledge Management Volume 21 ; 21 >
-    au < manifest ; 2018 ; Journal of Knowledge Management Volume 22 ; 22 >
+    au < notReady ; 2018 ; Journal of Knowledge Management Volume 22 ; 22 > #500 error
     au < released ; 2019 ; Journal of Knowledge Management Volume 23 ; 23 >
     au < released ; 2020 ; Journal of Knowledge Management Volume 24 ; 24 >
     au < manifest ; 2021 ; Journal of Knowledge Management Volume 25 ; 25 >
@@ -9090,7 +9090,7 @@
     au < doNotProcess ; 2016 ; Kybernetes Volume 45 ; 45 >
     au < doNotProcess ; 2017 ; Kybernetes Volume 46 ; 46 >
     au < released ; 2018 ; Kybernetes Volume 47 ; 47 >
-    au < manifest ; 2019 ; Kybernetes Volume 48 ; 48 >
+    au < notReady ; 2019 ; Kybernetes Volume 48 ; 48 > #500 error
     au < released ; 2020 ; Kybernetes Volume 49 ; 49 >
     au < manifest ; 2021 ; Kybernetes Volume 50 ; 50 >
 
