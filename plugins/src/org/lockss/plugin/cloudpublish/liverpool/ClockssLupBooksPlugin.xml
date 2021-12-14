@@ -1,16 +1,15 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>development</string>
   </entry>
-  <!-- https transition enabled -->  
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.liverpool.ClockssLiverpoolBooksPlugin</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.ClockssLupBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -18,11 +17,11 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.liverpool.LiverpoolBooksPlugin</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupBooksPlugin</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>17</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>au_name</string>
