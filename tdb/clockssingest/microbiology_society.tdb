@@ -126,8 +126,8 @@
       au < finished ; crawling ; 2017 ; International Journal of Systematic and Evolutionary Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; International Journal of Systematic and Evolutionary Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2019 ; International Journal of Systematic and Evolutionary Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2020 ; International Journal of Systematic and Evolutionary Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2021 ; International Journal of Systematic and Evolutionary Microbiology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2020 ; International Journal of Systematic and Evolutionary Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2021 ; International Journal of Systematic and Evolutionary Microbiology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -481,7 +481,7 @@
       au < frozen ; exists ; 2018 ; Journal of Medical Microbiology Volume 67 ; 67 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2019 ; Journal of Medical Microbiology Volume 68 ; 68 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Medical Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2021 ; Journal of Medical Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2021 ; Journal of Medical Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -525,7 +525,7 @@
       au < finished ; crawling ; 2018 ; Microbial Genomics Volume 4 ; 4 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; Microbial Genomics Volume 5 ; 5 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Microbial Genomics Volume 6 ; 6 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2021 ; Microbial Genomics Volume 7 ; 7 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2021 ; Microbial Genomics Volume 7 ; 7 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
@@ -571,7 +571,7 @@
       au < frozen ; exists ; 2018 ; Microbiology Volume 164 ; 164 ; https://www.microbiologyresearch.org/ ; >
       au < frozen ; exists ; 2019 ; Microbiology Volume 165 ; 165 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Microbiology Volume 166 ; 166 ; https://www.microbiologyresearch.org/ ; >
-      au < testing ; exists ; 2021 ; Microbiology Volume 167 ; 167 ; https://www.microbiologyresearch.org/ ; >
+      au < ready ; exists ; 2021 ; Microbiology Volume 167 ; 167 ; https://www.microbiologyresearch.org/ ; >
 
   }
 
