@@ -79,6 +79,9 @@ public class Emerald2020HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "feedback-strip"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "feedback-underlay"),
             HtmlNodeFilters.tagWithAttributeRegex("button", "class", "intent_back_to_top"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "intent_download_counts_badge"),
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "intent_cited_count"),
+
 
 
     };
