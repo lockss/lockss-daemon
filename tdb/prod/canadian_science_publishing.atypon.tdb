@@ -3,11 +3,10 @@
   publisher <
     name = Canadian Science Publishing ;
     #name = NRC Research Press ; #previously
-    info[platform] = Atypon. Clockss plugin exists
+    info[platform] = Atypon.
   >
   
-  plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
-  #plugin = org.lockss.plugin.atypon.nrcresearchpress.NRCResearchPressPlugin
+  plugin = org.lockss.plugin.atypon.nrcresearchpress.NRCResearchPressPlugin
 
   param[base_url] = https://cdnsciencepub.com/
   implicit < status ; year ; name ; param[volume_name] >
