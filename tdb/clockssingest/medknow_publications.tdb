@@ -9543,7 +9543,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; http://www.ijrconline.org/ ; ; >
       au < manifest ; exists ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ ; ; >
       au < manifest ; exists ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ ; ; >
-      au < ready ; exists ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; >
+      au < crawling ; exists ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
 
@@ -9676,7 +9676,7 @@
       au < notReady ; exists ; 2017 ; International Journal of Food and Nutritional Sciences Volume 6 ; 2017 ; 6 ; https://www.ijfans.org/ ; ; > #500
       au < notReady ; exists ; 2018 ; International Journal of Food and Nutritional Sciences Volume 7 ; 2018 ; 7 ; https://www.ijfans.org/ ; ; > #500
       au < notReady ; exists ; 2019 ; International Journal of Food and Nutritional Sciences Volume 8 ; 2019 ; 8 ; https://www.ijfans.org/ ; ; > #500 error https://www.ijfans.org/article.asp?issn=2319-1775;year=2019;volume=8;issue=4;spage=1;epage=6;aulast=Ugale;type=2
-      au < ready ; exists ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ ; ; >
+      au < crawling ; exists ; 2020 ; International Journal of Food and Nutritional Sciences Volume 9 ; 2020 ; 9 ; https://www.ijfans.org/ ; ; >
       au < crawling ; exists ; 2021 ; International Journal of Food and Nutritional Sciences Volume 10 ; 2021 ; 10 ; https://www.ijfans.org/ ; ; >
       #deactivated
   }

@@ -213,7 +213,7 @@
     param[journal_issn] = 2643-7937
     #continues = 1937-965X
 
-    au < ready ; exists ; 2020 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2020 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2021 ; International Journal of Security and Privacy in Pervasive Computing (IJSPPC) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
 
   }
