@@ -184,8 +184,8 @@ public class TestSimpleQueue extends LockssTestCase {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     Interrupter intr = null;
     try {
-      putIn(200, fifo, O1, O2);
       Date start = new Date();
+      putIn(200, fifo, O1, O2);
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       assertSame(O1, fifo.get());
       assertSame(O2, fifo.get());
