@@ -1,0 +1,206 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development - Parent</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.highwire.HighWireScolarisPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Parent HighWire Press Journals Plugin (Scolaris)</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>required_daemon_version</string>
+        <string>1.75.0</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>volume_name</key>
+                <displayName>Volume Name</displayName>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal (often used as part of file names)</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Parent HighWire Press Journals Plugin (Scolaris), Base URL %s, Journal %s, Volume %s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!-- content/sgrehpp/lockss-manifest/vol_10_manifest.html -->
+        <string>"%scontent/%s/lockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_feature_urls</string>
+        <map>
+            <entry>
+                <string>au_title</string>
+                <string>"%s", base_url</string>
+            </entry>
+            <entry>
+                <string>au_issue</string>
+                <string>"%scontent/%s/%s.toc", base_url, journal_id, volume_name, issue</string>
+            </entry>
+            <entry>
+                <string>au_article</string>
+                <map>
+                    <entry>
+                        <string>pdf+html;*</string>
+                        <string>"%scontent/%s/%s/%s/%s.full.pdf+html", base_url, journal_id, volume_name, issue, article</string>
+                    </entry>
+                    <entry>
+                        <string>pdf</string>
+                        <string>"%scontent/%s/%s/%s/%s.full.pdf", base_url, journal_id, volume_name, issue, article</string>
+                    </entry>
+                    <entry>
+                        <string>html</string>
+                        <string>"%scontent/%s/%s/%s/%s", base_url, journal_id, volume_name, issue, article</string>
+                    </entry>
+                </map>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^https?://%s/content/%s/%s", base_url_host, journal_id, volume_name</string>
+            <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?itok=[^/]*)?$", base_url_host</string>
+            <string>1,"https://cdnjs.cloudflare.com/"</string>
+            <string>1,"https://semantic-ui.com/"</string>
+            <string>1,"https://code.jquery.com/"</string>
+            <string>1,"https?://(fonts|ajax).googleapis.com/"</string>
+            <string>1,"https://themes.googleusercontent.com/"</string>
+            <!--
+            <string>1,"^https?://%s/content/%s(/[^/]+)?/suppl/", url_host(base_url), journal_id</string>
+            <string>2,"^https?://%s/content/(by/(year|volume)|current|.*(/|\.)article-)", url_host(base_url)</string>
+            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
+            <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
+            <string>1,"^https?://%s/content/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
+            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), volume_name</string>
+            <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
+            <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
+            <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
+            <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
+            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+){1,2}/DC[^/]{0,5}/embed/", url_host(base_url), volume_name</string>
+            <string>1,"^https?://([^/]+\.glencoesoftware\.com/.)"</string>
+            <string>1,"^https?://signin\.hematology\.org/Login\.aspx"</string>
+            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+).+[?]sso-checked=true$", url_host(base_url), volume_name</string>
+            <string>1,"^https?://movie\.biologists\.com/video/"</string>
+            -->
+        </list>
+    </entry>
+    <entry>
+        <string>au_def_new_content_crawl</string>
+        <long>1209600000</long>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <!-- https://connect.springerpub.com/content/sgrehpp/10/1/10.full.pdf -->
+        <string>"^https?://%s/content/%s/%s/[0-9]+/[0-9]+(|\.full\.pdf)$", url_host(base_url), journal_id, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_url_normalizer</string>
+        <string>org.lockss.plugin.highwire.scolaris.HighWireScolarisUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>plugin_fetch_rate_limiter_source</string>
+        <string>title_attribute:highwire_crawl_pool:HighWireScolaris</string>
+    </entry>
+    <entry>
+        <string>au_def_pause_time</string>
+        <long>3000</long>
+    </entry>
+    <entry>
+        <!-- manifest to issue -->
+        <string>au_refetch_depth</string>
+        <int>2</int>
+    </entry>
+    <entry>
+        <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+             ./ -->
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>.+\.glencoesoftware\.com</string>
+        </list>
+    </entry>
+</map>
