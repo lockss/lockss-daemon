@@ -1660,7 +1660,7 @@ while (my $line = <>) {
           $param{base_url}, $param{item_doi});
       $man_url = uri_unescape($url);
       $man_doi = uri_unescape($param{item_doi});
-      $bit_doi = substr($man_doi, 0, 8);
+      $bit_doi = substr($man_doi, 0, 2);
       #printf($man_url);
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
