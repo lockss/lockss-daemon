@@ -3,10 +3,14 @@
   publisher <
     name = Canadian Science Publishing ;
     #name = NRC Research Press ; #previously
-    info[platform] = Atypon.
+    info[platform] = May not need plugin. MEP is inquiring. Atypon. Clockss plugin exists
   >
-  
-  plugin = org.lockss.plugin.atypon.nrcresearchpress.NRCResearchPressPlugin
+
+  plugin = needs.plugin
+  # plugin = org.lockss.plugin.atypon.nrcresearchpress.NRCResearchPressPlugin
+  # if need plugin, see
+  #   https://github.com/lockss/lockss-daemon/commit/9bb2b939e69d2f7cc0d5fd4d43e5309c2f8ec436
+  #   https://github.com/lockss/lockss-daemon/commit/d5c2a9465be676f3482ff9c762701647a464258c
 
   param[base_url] = https://cdnsciencepub.com/
   implicit < status ; year ; name ; param[volume_name] >
