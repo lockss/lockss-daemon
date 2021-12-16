@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Lidsen Publishing ;
+    info[contract] = 2019 ;
+    info[tester] = S ;
+    info[platform] = Source/FTP
+  >
+
+  {
+
+    title <
+      name = Lidsen Publishing Source Content
+    >
+
+    plugin = needs.SourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/NEEDS-PLUGIN-released/
+    #See also: param[base_url] = https://clockss-test.lockss.org/sourcefiles/lidsen-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < exists ; exists ; 2021 ; Lidsen Publishing Source Content 2021 ; 2021_01 >
+
+  }
+
+}
