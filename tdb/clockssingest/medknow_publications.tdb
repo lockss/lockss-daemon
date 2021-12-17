@@ -2084,9 +2084,9 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Applied and Basic Medical Research Volume 6 ; 2016 ; 6 ; http://www.ijabmr.org/ ; ; >
     au < finished ; frozen ; 2017 ; International Journal of Applied and Basic Medical Research Volume 7 ; 2017 ; 7 ; http://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
     au < notReady ; exists ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ ; 500 Error ; > #500 https://www.ijabmr.org/article.asp?issn=2229-516X;year=2018;volume=8;issue=3;spage=155;epage=157;aulast=Sahbaz;type=2
-    au < finished ; crawling ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ ; 500 Error ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ ; 500 Error ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; 500 Error ; >
+    au < finished ; crawling ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ ; ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; ; >
 
   }
 #  {
@@ -2174,9 +2174,9 @@
     au < deepCrawl ; exists ; 2016 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 6 ; 2016 ; 6 ; http://www.ijnpnd.com/ ; ; >
     au < finished ; frozen ; 2017 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 7 ; 2017 ; 7 ; http://www.ijnpnd.com/ ; ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 2018 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 8 ; 2018 ; 8 ; https://www.ijnpnd.com/ ; 500 Error ; > #500 https://www.ijnpnd.com/article.asp?issn=2231-0738;year=2018;volume=8;issue=1;spage=16;epage=31;aulast=Madan;type=2
-    au < finished ; crawling ; 2019 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 9 ; 2019 ; 9 ; https://www.ijnpnd.com/ ; 500 Error ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 10 ; 2020 ; 10 ; https://www.ijnpnd.com/ ; 500 Error ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2021 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 11 ; 2021 ; 11 ; https://www.ijnpnd.com/ ; 500 Error ; >
+    au < finished ; crawling ; 2019 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 9 ; 2019 ; 9 ; https://www.ijnpnd.com/ ; ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 10 ; 2020 ; 10 ; https://www.ijnpnd.com/ ; ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2021 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 11 ; 2021 ; 11 ; https://www.ijnpnd.com/ ; ; >
 
   }
 
@@ -2365,7 +2365,7 @@
     au < finished ; frozen ; 2013 ; Journal of Anaesthesiology Clinical Pharmacology Volume 29 ; 2013 ; 29 ; http://www.joacp.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2014 ; Journal of Anaesthesiology Clinical Pharmacology Volume 30 ; 2014 ; 30 ; http://www.joacp.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Journal of Anaesthesiology Clinical Pharmacology Volume 31 ; 2015 ; 31 ; http://www.joacp.org/ ; ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; http://www.joacp.org/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; http://www.joacp.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Journal of Anaesthesiology Clinical Pharmacology Volume 33 ; 2017 ; 33 ; http://www.joacp.org/ ; ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2018 ; Journal of Anaesthesiology Clinical Pharmacology Volume 34 ; 2018 ; 34 ; http://www.joacp.org/ ; 500 Error ; >
     au < finished ; crawling ; 2019 ; Journal of Anaesthesiology Clinical Pharmacology Volume 35 ; 2019 ; 35 ; https://www.joacp.org/ ; ; reingest4.clockss.org:8082 >
@@ -2471,7 +2471,7 @@
     au < notReady ; exists ; 2015 ; Journal of Carcinogenesis Volume 14 ; 2015 ; 14 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2016 ; Journal of Carcinogenesis Volume 15 ; 2016 ; 15 ; http://www.carcinogenesis.com/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Carcinogenesis Volume 16 ; 2017 ; 16 ; http://www.carcinogenesis.com/ ; ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Carcinogenesis Volume 17 ; 2018 ; 17 ; http://www.carcinogenesis.com/ ; ; reingest3.clockss.org:8083 >
     au < notReady ; exists ; 2019 ; Journal of Carcinogenesis Volume 18 ; 2019 ; 18 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2020 ; Journal of Carcinogenesis Volume 19 ; 2020 ; 19 ; http://www.carcinogenesis.com/ ; ; >
     au < notReady ; exists ; 2021 ; Journal of Carcinogenesis Volume 20 ; 2021 ; 20 ; http://www.carcinogenesis.com/ ; ; >
@@ -5063,7 +5063,7 @@
       param[journal_issn] = 2468-838X
 #      param[base_url] = http://www.bldeujournalhs.in/
 
-      au < finished ; finished ; 2016 ; BLDE University Journal of Health Sciences Volume 1 ; 2016 ; 1 ; http://www.bldeujournalhs.in/ ; ; reingest1.clockss.org:8082 > #transient 500 error.
+      au < finished ; finished ; 2016 ; BLDE University Journal of Health Sciences Volume 1 ; 2016 ; 1 ; http://www.bldeujournalhs.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; BLDE University Journal of Health Sciences Volume 2 ; 2017 ; 2 ; http://www.bldeujournalhs.in/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; BLDE University Journal of Health Sciences Volume 3 ; 2018 ; 3 ; http://www.bldeujournalhs.in/ ; ; >
       au < finished ; manifest ; 2019 ; BLDE University Journal of Health Sciences Volume 4 ; 2019 ; 4 ; https://www.bldeujournalhs.in/ ; ; reingest2.clockss.org:8085 >
@@ -5871,7 +5871,7 @@
 
       au < finished ; frozen ; 2014 ; Indian Journal of Dentistry Volume 5 ; 2014 ; 5 ; http://www.ijdentistry.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Indian Journal of Dentistry Volume 6 ; 2015 ; 6 ; http://www.ijdentistry.com/ ; ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2016 ; Indian Journal of Dentistry Volume 7 ; 2016 ; 7 ; http://www.ijdentistry.com/ ; ; reingest2.clockss.org:8085 > #transient 500 errors.
+      au < finished ; finished ; 2016 ; Indian Journal of Dentistry Volume 7 ; 2016 ; 7 ; http://www.ijdentistry.com/ ; ; reingest2.clockss.org:8085 >
 
   }
 
@@ -6319,7 +6319,7 @@
       param[journal_issn] = 2468-8827
 #      param[base_url] = http://www.ijncd.org/
 
-      au < finished ; frozen ; 2016 ; International Journal of Noncommunicable Diseases Volume 1 ; 2016 ; 1 ; http://www.ijncd.org/ ; ; reingest4.clockss.org:8082 > #500 error
+      au < finished ; frozen ; 2016 ; International Journal of Noncommunicable Diseases Volume 1 ; 2016 ; 1 ; http://www.ijncd.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Noncommunicable Diseases Volume 2 ; 2017 ; 2 ; http://www.ijncd.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; International Journal of Noncommunicable Diseases Volume 3 ; 2018 ; 3 ; http://www.ijncd.org/ ; ; >
       au < frozen ; exists ; 2019 ; International Journal of Noncommunicable Diseases Volume 4 ; 2019 ; 4 ; https://www.ijncd.org/ ; ; >
@@ -6362,7 +6362,7 @@
       param[journal_issn] = 2347-5633
 #      param[base_url] = http://www.ijoyppp.org/
 
-      au < finished ; frozen ; 2013 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 1 ; 2013 ; 1 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 > #500 error
+      au < finished ; frozen ; 2013 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 1 ; 2013 ; 1 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 2 ; 2014 ; 2 ; http://www.ijoyppp.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 3 ; 2015 ; 3 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
 
@@ -8554,7 +8554,7 @@
 
       au < finished ; finished ; 2014 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 1 ; 2014 ; 1 ; http://www.nabh.ind.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 2 ; 2015 ; 2 ; http://www.nabh.ind.in/ ; ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2016 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 3 ; 2016 ; 3 ; http://www.nabh.ind.in/ ; ; reingest4.clockss.org:8082 > #500 error
+      au < finished ; finished ; 2016 ; The Journal of National Accreditation Board for Hospitals & Healthcare Providers Volume 3 ; 2016 ; 3 ; http://www.nabh.ind.in/ ; ; reingest4.clockss.org:8082 >
 
   }
 
