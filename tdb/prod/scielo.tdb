@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = SciELO ;
+    info[platform] = REVIEW June 2022. custom. LXPUB-168
+  >
+  
+  rights = openaccess
+  plugin = needs.plugin
+  #plugin = org.lockss.plugin.scielo.ClockssSciELOPlugin
+  implicit < status ; year ; volume ; name ; param[year] >
+  
+  {
+
+    title <
+      name = ABCD. Arquivos Brasileiros de Cirurgia Digestiva ;
+      issn = 0102-6720 ;
+      eissn = 2317-6326
+    >
+
+    param[base_url] = http://www.scielo.br/
+    param[journal_issn] = 0102-6720
+
+    au < exists ; 2015 ; 28 ; ABCD. Arquivos Brasileiros de Cirurgia Digestiva Volume 28 ; 2015 >
+
+  }
+
+}

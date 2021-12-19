@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Accreditation Council for Graduate Medical Education ;
+    comment[platform] = Atypon
+  >
+  
+  plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
+  #param[base_url] = http://www.jgme.org/
+  implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+  
+  {
+    title <
+      name = Journal of Graduate Medical Education ;
+      issn = 1949-8349 ;
+      eissn = 1949-8357 
+    >
+    
+    param[journal_id] = jgme
+    
+    au < down ; 2009 ; Journal of Graduate Medical Education Volume 1 ; 1 ; https://www.jgme.org/ >
+    au < down ; 2010 ; Journal of Graduate Medical Education Volume 2 ; 2 ; https://www.jgme.org/ >
+    au < down ; 2011 ; Journal of Graduate Medical Education Volume 3 ; 3 ; https://www.jgme.org/ >
+    au < down ; 2012 ; Journal of Graduate Medical Education Volume 4 ; 4 ; https://www.jgme.org/ >
+    au < down ; 2013 ; Journal of Graduate Medical Education Volume 5 ; 5 ; http://www.jgme.org/ >
+    au < down ; 2014 ; Journal of Graduate Medical Education Volume 6 ; 6 ; http://www.jgme.org/ >
+    au < down ; 2015 ; Journal of Graduate Medical Education Volume 7 ; 7 ; http://www.jgme.org/ >
+    au < down ; 2016 ; Journal of Graduate Medical Education Volume 8 ; 8 ; http://www.jgme.org/ >
+    au < down ; 2017 ; Journal of Graduate Medical Education Volume 9 ; 9 ; http://www.jgme.org/ >
+    au < down ; 2018 ; Journal of Graduate Medical Education Volume 10 ; 10 ; https://www.jgme.org/ >
+    au < down ; 2019 ; Journal of Graduate Medical Education Volume 11 ; 11 ; https://www.jgme.org/ >
+    au < doNotProcess ; 2020 ; Journal of Graduate Medical Education Volume 12 ; 12 ; https://www.jgme.org/ >
+
+  }
+  
+}

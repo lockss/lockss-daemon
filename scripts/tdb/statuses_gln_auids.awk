@@ -1,20 +1,27 @@
 #!/usr/bin/awk -f
-#tdbout -t publisher,plugin,publisher:info[tester],status,year *.tdb 
-#           #1        #2      #3                     #4    #5
 #tdbout -t publisher,plugin,auid,publisher:info[tester],status,year *.tdb 
 #           #1        #2      #3   #4                     #5     #6  
 
 BEGIN {
+  #After Feb 1 of _this_ year, start reporting on _last_ year. Before that, ignore _last_ year.
+  str = "date +%m-%d-%Y";
+  str | getline date;
+  str = "date +%Y";
+  str | getline current_year;
+  str = "date +%W";
+  str | getline week;
+  current_year=current_year-1;
+  if (week<9) {
+      current_year=current_year-1
+  }
+  #printf "DEBUG: Current-Year:%s Current-Week:%s\n", current_year, week;
   FS="\t"
   pn = 0
-    #str = "date +%m-%d-%Y";
-    #str | getline date;
-    #close str;
 }
 
 {
   # add a loop to add line only if either [status is _not_ manifest] OR [journal_year (or journal end year) is gt or eq to 2010 && journal year (or journal end year) is lt or eq to the current year we are testing]
-  current_year = 2018
+  #current_year = 2020
   end_year = 0
   incontract = 0
   test_year = ""

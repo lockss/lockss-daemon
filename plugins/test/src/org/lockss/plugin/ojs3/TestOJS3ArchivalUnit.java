@@ -1,5 +1,6 @@
 package org.lockss.plugin.ojs3;
 
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import java.util.regex.Matcher;
@@ -61,5 +62,101 @@ public class TestOJS3ArchivalUnit extends LockssTestCase {
         assertTrue(patternMatched);
     }
 
+    public void testAddStartStem() {
+
+        String baseUrl = "https://journals.vgtu.lt/";
+        String journal_id = "BME";
+        String start_stem = "index.php/";
+        String url =  "https://journals.vgtu.lt/BME/gateway/lockss?year=2012";
+
+        String expected = getStartUrl(baseUrl, url, start_stem);
+
+        assertEquals("https://journals.vgtu.lt/index.php/BME/gateway/lockss?year=2012", expected);
+    }
+    
+    public void testAddStartStem2() {
+
+        String baseUrl = "https://journals.vgtu.lt/";
+        String journal_id = "BME";
+        String start_stem = "index.php/";
+        String url =  "http://journals.vgtu.lt/BME/gateway/lockss?year=2012";
+
+        String expected = getStartUrl(baseUrl, url, start_stem);
+
+        assertEquals("https://journals.vgtu.lt/index.php/BME/gateway/lockss?year=2012", expected);
+    }
+
+    public void testAddStartStem3() {
+
+        String baseUrl = "http://journals.vgtu.lt/";
+        String journal_id = "BME";
+        String start_stem = "index.php/";
+        String url =  "http://journals.vgtu.lt/BME/gateway/lockss?year=2012";
+
+        String expected = getStartUrl(baseUrl, url, start_stem);
+
+        assertEquals("http://journals.vgtu.lt/index.php/BME/gateway/lockss?year=2012", expected);
+    }
+
+    public void testAddStartStem4() {
+
+        String baseUrl = "http://journals.vgtu.lt/";
+        String journal_id = "BME";
+        String start_stem = "index.php/";
+        String url =  "https://journals.vgtu.lt/BME/gateway/lockss?year=2012";
+
+        String expected = getStartUrl(baseUrl, url, start_stem);
+
+        assertEquals("http://journals.vgtu.lt/index.php/BME/gateway/lockss?year=2012", expected);
+    }
+
+    public void testAddStartStem5() {
+
+        String baseUrl = "https://scholarworks.iu.edu/";
+        String journal_id = "iusbanalecta";
+        String start_stem = "journals/index.php/";
+        String url =  "https://scholarworks.iu.edu/iusbanalecta/gateway/lockss?year=2012";
+
+        String expected = getStartUrl(baseUrl, url, start_stem);
+
+        assertEquals("https://scholarworks.iu.edu/journals/index.php/iusbanalecta/gateway/lockss?year=2012", expected);
+    }
+
+    public String getProtocal(String url) {
+        String urlProtocal = "";
+
+        if (url.startsWith("https://")) {
+            urlProtocal = "https://";
+        }  else if (url.startsWith("http://")) {
+            urlProtocal = "http://";
+        }
+
+        return urlProtocal;
+    }
+    
+    public String getStartUrl(String baseUrl, String url, String start_stem) {
+
+        String urlWithoutProtocal = url.replace(getProtocal(url), "");
+        String baseurlWithoutProtocal =  baseUrl.replace(getProtocal(baseUrl), "");
+
+        StringBuilder sb = new StringBuilder(baseUrl);
+
+        //log.info("OJS3: ------------url = " + url + ", urlWithoutProtocal = " + urlWithoutProtocal + ", base_url = "
+               // + baseUrl + ", baseurlWithoutProtocal = " + baseurlWithoutProtocal);
+
+        if (urlWithoutProtocal.startsWith(baseurlWithoutProtocal)) {
+            //log.info("OJS3: sb = " + sb.toString());
+            sb.append(start_stem);
+            //log.info("OJS3: sb append = " + sb.toString());
+            //log.info("OJS3: url substring = " + urlWithoutProtocal.substring(baseurlWithoutProtocal.length()));
+            //log.info("OJS3: url substring replace= " + urlWithoutProtocal.substring(baseurlWithoutProtocal.length()).replace(start_stem, ""));
+            sb.append(urlWithoutProtocal.substring(baseurlWithoutProtocal.length()).replace(start_stem, ""));
+            //log.info("OJS3: adding = " + urlWithoutProtocal.substring(baseurlWithoutProtocal.length()).replace(start_stem, ""));
+
+            //log.info("OJS3: =========final sb = " + sb.toString());
+        }
+
+        return sb.toString();
+    }
 }
 

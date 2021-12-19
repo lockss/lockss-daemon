@@ -473,7 +473,7 @@ public class TestTafMetadataExtractor extends LockssTestCase {
         new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
 
-    assertEmpty(mdlist);
+    assertNotEmpty(mdlist);  // no longer check tdb title vs metadata data on Oct/2021
 
   }
   

@@ -157,9 +157,8 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
       }
     }
     
-    byte[] b = new byte [512];
-    cuHtml.getUnfilteredInputStream().read(b, 0, 350);
-    String landingPage = new String(b);
+    String landingPage =
+      StringUtil.fromInputStream(cuHtml.getUnfilteredInputStream());
     landingPage = landingPage.replace("</BODY>", "xxxx <iframe random=\"stuff\" " +
         "src=\"/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title\">" +
         "xxxx\n</BODY>");

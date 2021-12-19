@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -45,15 +46,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -75,9 +76,17 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_name</string>
     <string>"Royal College of General Practitioners Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%slockss-manifest/vol_%s_manifest.html", to_https(base_url), volume_name</string>
+      <string>"%slockss-manifest/vol_%s_manifest.html", to_http(base_url), volume_name</string>
+    </list>
   </entry>
+
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.highwire.rcgp.RCGPDrupalHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.highwire.rcgp.RCGPJCoreHtmlCrawlFilterFactory</string>
   </entry>
 </map>

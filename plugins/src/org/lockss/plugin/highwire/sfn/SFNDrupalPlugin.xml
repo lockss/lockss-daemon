@@ -46,15 +46,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>

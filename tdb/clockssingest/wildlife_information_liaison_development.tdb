@@ -30,8 +30,8 @@
     au < doNotProcess ; exists ; 2017 ; 2017 ; Journal of Threatened Taxa Volume 9 ; 9 ; >
     au < doNotProcess ; exists ; 2018 ; 2018 ; Journal of Threatened Taxa Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Journal of Threatened Taxa Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Journal of Threatened Taxa Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Threatened Taxa Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Threatened Taxa Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Threatened Taxa Volume 13 ; 13 ; >
 
     }
 
@@ -39,16 +39,16 @@
     param[base_url] = http://threatenedtaxa.org/
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
-    au < finished ; manifest ; 2009 ; 2009 ; Journal of Threatened Taxa Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2010 ; 2010 ; Journal of Threatened Taxa Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2011 ; 2011 ; Journal of Threatened Taxa Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2012 ; 2012 ; Journal of Threatened Taxa Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; 2013 ; Journal of Threatened Taxa Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2009 ; 2009 ; Journal of Threatened Taxa Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; 2010 ; Journal of Threatened Taxa Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; 2011 ; Journal of Threatened Taxa Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; 2012 ; Journal of Threatened Taxa Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; 2013 ; Journal of Threatened Taxa Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Journal of Threatened Taxa Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2015 ; 2015 ; Journal of Threatened Taxa Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2016 ; 2016 ; Journal of Threatened Taxa Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2017 ; 2017 ; Journal of Threatened Taxa Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2018 ; 2018 ; Journal of Threatened Taxa Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 2016 ; Journal of Threatened Taxa Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; 2017 ; Journal of Threatened Taxa Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 2018 ; Journal of Threatened Taxa Volume 10 ; 10 ; reingest5.clockss.org:8082 >
 
     }
 

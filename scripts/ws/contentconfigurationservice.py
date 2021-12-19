@@ -38,27 +38,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.3.0'
 
+_service = 'ContentConfigurationService'
+
 import sys
-
-try: import requests
-except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-
-try: import zeep
-except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 
 import argparse
 import getpass
 import itertools
 from multiprocessing import Pool as ProcessPool
 from multiprocessing.dummy import Pool as ThreadPool
-import os.path
-import requests.auth
-from threading import Lock, Thread
-import zeep.exceptions
-import zeep.helpers
-import zeep.transports
+from threading import Thread
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth
+from wsutil import file_lines, make_client, enable_zeep_debugging, host_help_prefix
 
 #
 # Library
@@ -79,7 +70,7 @@ def add_au_by_id(host, username, password, auid):
   - password (string): a password for the host
   - auid (string): an AUID
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.addAuById(auId = auid)
 
 def add_aus_by_id_list(host, username, password, auids):
@@ -97,7 +88,7 @@ def add_aus_by_id_list(host, username, password, auids):
   - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.addAusByIdList(auIds = auids)
 
 def deactivate_au_by_id(host, username, password, auid):
@@ -115,7 +106,7 @@ def deactivate_au_by_id(host, username, password, auid):
   - password (string): a password for the host
   - auid (string): an AUID
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.deactivateAuById(auId = auid)
 
 def deactivate_aus_by_id_list(host, username, password, auids):
@@ -133,7 +124,7 @@ def deactivate_aus_by_id_list(host, username, password, auids):
   - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.deactivateAusByIdList(auIds = auids)
 
 def delete_au_by_id(host, username, password, auid):
@@ -151,7 +142,7 @@ def delete_au_by_id(host, username, password, auid):
   - password (string): a password for the host
   - auid (string): an AUID
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.deleteAuById(auId = auid)
 
 def delete_aus_by_id_list(host, username, password, auids):
@@ -169,7 +160,7 @@ def delete_aus_by_id_list(host, username, password, auids):
   - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.deleteAusByIdList(auIds = auids)
 
 def reactivate_au_by_id(host, username, password, auid):
@@ -187,7 +178,7 @@ def reactivate_au_by_id(host, username, password, auid):
   - password (string): a password for the host
   - auid (string): an AUID
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.reactivateAuById(auId = auid)
 
 def reactivate_aus_by_id_list(host, username, password, auids):
@@ -205,7 +196,7 @@ def reactivate_aus_by_id_list(host, username, password, auids):
   - password (string): a password for the host
   - auids (list of strings): a list of AUIDs
   '''
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   return client.service.reactivateAusByIdList(auIds = auids)
 
 #
@@ -287,7 +278,8 @@ Adds the AUIDs contained in myfile.auids to all the hosts contained in
 mydaemons.hosts. Produces text output (the default) only if some operations do
 not succeed. AUs are sorted by AU name (the default) and displayed by AU name.
 
-$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --sort-by-auid --list-by-auid
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids \
+ --add-aus --sort-by-auid --list-by-auid
 
 Adds the AUIDs contained in myfile.auids to all the hosts contained in
 mydaemons.hosts. Produces text output (the default) only if some operations do
@@ -307,7 +299,8 @@ class _ContentConfigurationServiceOptions(object):
   @staticmethod
   def make_parser():
     '''Static method to make a command line parser suitable for this tool.'''
-    usage = '%(prog)s {--host=HOST|--hosts=HFILE}... {--auid=AUID|--auids=AFILE}... {--add-aus|--deactivate-aus|--delete-aus|--reactivate-aus} [OPTIONS]'
+    usage = ('%(prog)s {--host=HOST|--hosts=HFILE}... {--auid=AUID|--auids=AFILE}... '+
+             '{--add-aus|--deactivate-aus|--delete-aus|--reactivate-aus} [OPTIONS]')
     parser = argparse.ArgumentParser(description=__doc__, usage=usage)
     # Top-level options
     parser.add_argument('--copyright', action='store_true', help='display copyright and exit')
@@ -315,14 +308,17 @@ class _ContentConfigurationServiceOptions(object):
     parser.add_argument('--tutorial', action='store_true', help='display tutorial and exit')
     # Hosts
     group = parser.add_argument_group('Target hosts')
-    group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+    group.add_argument('--host', action='append', default=list(),
+                       help=host_help_prefix + ' to list of target hosts')
+    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE',
+                       help=host_help_prefix + ' in HFILE to list of target hosts')
     group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
     group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
     # AUIDs
     group = parser.add_argument_group('Target AUIDs')
     group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
-    group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
+    group.add_argument('--auids', action='append', default=list(), metavar='AFILE',
+                       help='add AUIDs in AFILE to list of target AUIDs')
     # Content configuration operations
     group = parser.add_argument_group('Content configuration operations')
     group.add_argument('--add-aus', action='store_true', help='add target AUs to target hosts')
@@ -338,15 +334,20 @@ class _ContentConfigurationServiceOptions(object):
     group.add_argument('--sort-by-name', action='store_true', help='sort output by AU name (default)')
     group.add_argument('--table-output', action='store_true', help='produce tabular output')
     group.add_argument('--text-output', action='store_true', help='produce text output (default)')
-    group.add_argument('--verbose', action='store_true', default=False, help='make --text-output verbose (default: %(default)s)')
+    group.add_argument('--verbose', action='store_true', default=False,
+                       help='make --text-output verbose (default: %(default)s)')
     # Job pool
     group = parser.add_argument_group('Job pool')
-    group.add_argument('--pool-size', metavar='SIZE', type=int, default=0, help='size of the job pool, 0 for unlimited (default: %(default)s)')
+    group.add_argument('--pool-size', metavar='SIZE', type=int, default=0,
+                       help='size of the job pool, 0 for unlimited (default: %(default)s)')
     group.add_argument('--process-pool', action='store_true', help='use a process pool')
     group.add_argument('--thread-pool', action='store_true', help='use a thread pool (default)')
     # Other options
     group = parser.add_argument_group('Other options')
-    group.add_argument('--batch-size', metavar='SIZE', type=int, default=100, help='size of AUID batches (default: %(default)s)')
+    group.add_argument('--batch-size', metavar='SIZE', type=int, default=100,
+                       help='size of AUID batches (default: %(default)s)')
+    group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
+
     return parser
 
   def __init__(self, parser, args):
@@ -374,11 +375,11 @@ class _ContentConfigurationServiceOptions(object):
       parser.error('at most one of --table-output, --text-output can be specified')
     # hosts
     self.hosts = args.host[:]
-    for f in args.hosts: self.hosts.extend(_file_lines(f))
+    for f in args.hosts: self.hosts.extend(file_lines(f))
     if len(self.hosts) == 0: parser.error('at least one target host is required')
     # auids
     self.auids = args.auid[:]
-    for f in args.auids: self.auids.extend(_file_lines(f))
+    for f in args.auids: self.auids.extend(file_lines(f))
     # get_auids/get_auids_names/is_daemon_ready/is_daemon_ready_quiet
     if len(self.auids) == 0: parser.error('at least one target AUID is required')
     # au_operation
@@ -410,10 +411,12 @@ class _ContentConfigurationServiceOptions(object):
     self.pool_class = ProcessPool if args.process_pool else ThreadPool
     self.pool_size = args.pool_size or len(self.hosts)
     self.batch_size = args.batch_size
+    # add logging for zeep
+    if args.debug_zeep:
+      enable_zeep_debugging()
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
-    self.auth = requests_basic_auth(self._u, self._p)
 
 # This is to allow pickling, so the process pool works, but this isn't great
 # Have the sort and list params be enums and have keysort and keydisplay be methods?
@@ -487,20 +490,6 @@ def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
     _output_record(options, rowpart + [x[j] for x in colkeys])
   for rowkey in sorted(set([k[0] for k in data]), key=rowsort):
     _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
-
-# Last modified 2015-08-31
-def _file_lines(fstr):
-  with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
-  return ret
-
-def _make_client(host, username, password):
-    session = requests.Session()
-    session.auth = requests.auth.HTTPBasicAuth(username, password)
-    transport = zeep.transports.Transport(session=session)
-    wsdl = 'http://{}/ws/ContentConfigurationService?wsdl'.format(host)
-    client = zeep.Client(wsdl, transport=transport)
-    return client
 
 def _main():
   '''Main method.'''

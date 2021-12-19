@@ -1,7 +1,39 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>development</string>
+        <string>ready</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -9,237 +41,29 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>8</string>
     </entry>
     <entry>
-        <string>plugin_feature_version_map</string>
-        <map>
-            <entry>
-                <string>Poll</string>
-                <string>1</string>
-            </entry>
-            <entry>
-                <string>Substance</string>
-                <string>1</string>
-            </entry>
-            <entry>
-                <string>Metadata</string>
-                <string>1</string>
-            </entry>
-        </map>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemePlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Journal of Occupational Therapy Plugin</string>
-    </entry>
-    <entry>
-        <string>plugin_config_props</string>
-        <list>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>base_url</key>
-                <displayName>Base URL</displayName>
-                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-                <type>3</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>year</key>
-                <displayName>Year</displayName>
-                <description>Four digit year (e.g., 2004)</description>
-                <type>4</type>
-                <size>4</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>journal_id</key>
-                <displayName>Journal Identifier</displayName>
-                <description>Identifier for journal</description>
-                <type>1</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>resource_id</key>
-                <displayName>Resource ID</displayName>
-                <description>Internal resource ID</description>
-                <type>6</type>
-                <size>8</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-        </list>
+        <string>American Occupational Therapy Association</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Journal of Occupational Therapy Plugin, Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+        <string>"American Occupational Therapy Association, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
+    <!--https://research.aota.org/ajot/issue/browse-by-year/2020-->
     <entry>
         <string>au_start_url</string>
-        <!--https://ajot.aota.org/issuebrowsebyyear.aspx?year=2015-->
-        <string>"%sissuebrowsebyyear.aspx?year=%d", base_url, year</string>
-    </entry>
-    <entry>
-        <string>au_crawlrules</string>
         <list>
-            <!--
-            Article Images:
-            https://ajot.aota.org/downloadimage.aspx?image=https://aota.silverchair-cdn.com/aota/content_public/journal/ajot/934184/6904210020p1fig1.png?Expires=2147483647&Signature=OOO9SNtrRBPqC2wx~VjNkWG4B4Zjx9uiWnYblwIkQe0tih42sTU3r~8ldmL~k~KeeGO-Ed9xobFjvqYgBctfO0I8oruldzHRsQW6OWRoaYReIXwQTARbl-0V2bjQxatlvLriTw3e7k15uJe6qM0CuPE9YoJWemYkoJPLXxNr4kRdRzepherfjH5sNB0LUbHIFUXGI9JHOgWgttaePiTAJUPdyDH1eXrHWogpwQvh~PKmWJPFFvC7ke2GSOG5s7Dt6kQwy1eqJsJbnHpo~ZERLVx1~~zkETQwp7Sq2p7aZkb3JJ7DT4dGIEmQkqJSBvKDLOw-JLIg8aA....
-            -->
-            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|s7\.addthis\.com)/"</string>
-            <string>1,"https://cdn1.readspeaker.com/script/.*.js"</string>
-            <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-            <string>1,"^https://aota\.silverchair-cdn\.com", journal_id</string>
-            <string>1,"%sWebResource.axd", base_url</string>
-            <!--     <input ID="ResourceIdAJOT_Get_Alerts" id="ResourceId" name="ResourceId" type="hidden" value="2360691" /> -->
-            <!--https://ajot.aota.org/issue.aspx?issueid=934184&journalid=167#issueid=934184-->
-            <string>1,"%sissue.aspx\?issueid=", base_url</string>
-
-            <!--Article Page:https://ajot.aota.org/article.aspx?articleid=2360691-->
-            <string>1,"%sarticle.aspx\?articleid=", base_url</string>
-            <!--
-            <meta name="citation_pdf_url" content="https://ajot.aota.org/pdfaccess.ashx?url=/aota/content_public/journal/ajot/934184/6904060010p1.pdf" />
-            Redirected to excluded URL:
-            https://aota.silverchair-cdn.com/aota/content_public/journal/ajot/934184/6904060010p1.pdf?Expires=1581451722&Signature=kSCibWMgsWiDILiNiPqJ-H9f9T~YcupyLSqnNDv6ZEspTvOjzuvL7mKfnXiunbjqwcg73HX6ouhfbz2hR7XRHgJOx9I5-~e8u3~GQrWLHDyA8kLFxKvo4zoRl2kE-ZNuT6rPi-I6TRGSnw1fj4lPApTlcK~9~LnPpTXGCqEe21-S-tBJ-N5Z3rmsGdddNsX9vXuUnnvMp5722jTkLnvWd06~NqNF~cmA6MvW10IIZDzkPc-LMrOIw1c7EOzMLnDsM92760yzb3E6SP94W4ivUVWY5bs~1gYz4Ukpw8ygnmV0Lz9Xz39cCf3EDizjk0DioKulVo4qa0IgK4b07rrIxA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
-            -->
-            <string>1,"https://ajot.aota.org/pdfaccess.ashx\?url=.*\.pdf$", base_url</string>
-            <!--
-                citationFormat=0 // ris
-                citationFormat=1 // Endnote
-                citationFormat=2 // Bibtex
-                citationFormat=3 // Refworks
-                https://ajot.aota.org/Citation/Download?resourceId=2360691&resourceType=3&citationFormat=0
-                https://ajot.aota.org/Citation/Download?resourceId=2360691&resourceType=3&citationFormat=1
-                https://ajot.aota.org/Citation/Download?resourceId=2360691&resourceType=3&citationFormat=2
-                https://ajot.aota.org/Citation/Download?resourceId=2360691&resourceType=3&citationFormat=3
-            -->
-            <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=0", base_url</string>
-            <!--
-             https://ajot.aota.org/downloadimage.aspx?image=https://aota.silverchair-cdn.com/aota/content_public/journal/ajot/934184/6904210020p1fig1.png?Expires=2147483647&Signature=OOO9SNtrRBPqC2wx~VjNkWG4B4Zjx9uiWnYblwIkQe0tih42sTU3r~8ldmL~k~KeeGO-Ed9xobFjvqYgBctfO0I8oruldzHRsQW6OWRoaYReIXwQTARbl-0V2bjQxatlvLriTw3e7k15uJe6qM0CuPE9YoJWemYkoJPLXxNr4kRdRzepherfjH5sNB0LUbHIFUXGI9JHOgWgttaePiTAJUPdyDH1eXrHWogpwQvh~PKmWJPFFvC7ke2GSOG5s7Dt6kQwy1eqJsJbnHpo~ZERLVx1~~zkETQwp7Sq2p7aZkb3JJ7DT4dGIEmQkqJSBvKDLOw-JLIg8aA...
-            -->
-            <string>1,"%sdownloadimage.aspx\?image=", base_url</string>
-            <!--
-               https://pubs.geoscienceworld.org/downloadimage.aspx?image=&PPTtype=SlideSet&ar=570731&siteId=69
-               <string>1,"%sdownloadimage.aspx?image=", base_url</string>
-            -->
-            <string>1,"^%s[^/]+/content_public/journal/[^/]+/[^/]+/.*\.pdf", base_url</string>
-            <string>1,"^https?://(aota\.silverchair-cdn\.com)/"</string>
-            <string>1, "^https?://%s/pdfaccess\.ashx", base_url</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_refetch_depth</string>
-        <int>2</int>
-    </entry>
-    <!--
-    <entry>
-        <string>au_def_new_content_crawl</string>
-        <long>1209600000</long>
-    </entry>
-    <entry>
-        <string>au_def_pause_time</string>
-        <long>3000</long>
-    </entry>
-    <entry>
-        <string>plugin_fetch_rate_limiter_source</string>
-        <string>key:Silverchair</string>
-    </entry>
-    -->
-    <entry>
-        <string>au_substance_url_pattern</string>
-        <list>
-            <!--
-            https://ajot.aota.org/aota/content_public/journal/ajot/937760/7301090010p1.pdf
-            Redirected to:
-            https://aota.silverchair-cdn.com/aota/content_public/journal/ajot/937760/7301090010p1.pdf?Expires=2147483647&Signature=qT3cYYr8bZ850y66~o0xYTViGrQy8mIfeO2eRgPACXe8Ez0BOvQ2ySnNI3fzQ2WpNenVpw~zL~t5RE6qkIcMZ9gKvyGQZ9OCF80drT9dmO8LwAr6kr1XpnwXSPGRvhgul5OcRdR~3Pb02fZyCBUFpV99PUCHG-eXu588QHdPnrH2FgVq5ThYO6Aq7LiImugT1My~EyWPo2jZkeaVA6Fy-lJQhezMb1puLgxPYHWFQIvDUdArN8FukiQM2igL9kstU8Hnd7OGdWKCvb-0BaHzFnUnDU0VjESG5bimE0Fxer-ab0a2pUdfufxtpNveeq84rvbeHNVP6ikxLojRRcpPJQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
-            -->
-            <string>"^%s[^/]+/content_public/journal/[^/]+/[^/]+/.*\.pdf", base_url</string>
-        </list>
-    </entry>
-    <entry>
-        <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.silverchair.aota.AOTAUrlConsumerFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.aota.AOTAHtmlLinkExtractorFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.silverchair.aota.AOTAArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.silverchair.aota.AOTAArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*</string>
-                <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    <entry>
-        <string>text/plain_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*;RIS</string>
-                <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    <entry>
-        <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*;RIS</string>
-                <string>org.lockss.plugin.silverchair.ScRisMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
-    <entry>
-        <string>au_permitted_host_pattern</string>
-        <string>"(fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>
-    </entry>
-    <entry>
-        <string>plugin_cache_result_list</string>
-        <list>
-            <string>405=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string>
-            <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.BaseScHtmlHttpResponseHandler</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_permitted_host_pattern</string>
-        <list>
-            <string>(fonts|ajax)\.googleapis\.com</string>
-            <string>(fonts|ajax)\.gstatic\.com</string>
-            <string>.*cdn\.jsdelivr\.net</string>
-            <string>.*silverchair-?cdn\.com</string>
-            <string>.*\.brightcove\.net</string>
-            <string>.*\.cloudfront\.net</string>
-            <string>cdnjs\.cloudflare\.com</string>
-            <string>s7\.addthis\.com</string>
-            <string>aota\.silverchair-cdn\.com</string>
-            <string>cdn1\.readspeaker\.com</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_repair_from_peer_if_missing_url_pattern</string>
-        <list>
-            <string>[.](css|js)(\?.+)?$</string>
-            <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_url_poll_result_weight</string>
-        <list>
-            <string>"[.](css|js)(\?.+)?$", 0</string>
-            <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url, 0</string>
+            <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
         </list>
     </entry>
 </map>

@@ -1,0 +1,141 @@
+{
+
+  publisher <
+    name = Rocky Mountain Mathematics Consortium ;
+    info[platform] = Project Euclid. LXPLUG-241
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = http://rmmc.asu.edu/
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  # Publisher moved to Project Euclid.
+  
+  {
+  
+    title <
+      name = Rocky Mountain Journal of Mathematics ;
+      issn = 0035-7596 ;
+      eissn = 1945-3795 ;
+      issnl = 0035-7596
+    >
+    
+    param[journal_id] = rmj
+    #param[base_url] = https://projecteuclid.org/euclid.rmjm
+    
+    au < doNotProcess ; 1971 ; Rocky Mountain Journal of Mathematics Volume 1 ; 1 >
+    au < doNotProcess ; 1972 ; Rocky Mountain Journal of Mathematics Volume 2 ; 2 >
+    au < doNotProcess ; 1973 ; Rocky Mountain Journal of Mathematics Volume 3 ; 3 >
+    au < doNotProcess ; 1974 ; Rocky Mountain Journal of Mathematics Volume 4 ; 4 >
+    au < doNotProcess ; 1975 ; Rocky Mountain Journal of Mathematics Volume 5 ; 5 >
+    au < doNotProcess ; 1976 ; Rocky Mountain Journal of Mathematics Volume 6 ; 6 >
+    au < doNotProcess ; 1977 ; Rocky Mountain Journal of Mathematics Volume 7 ; 7 >
+    au < doNotProcess ; 1978 ; Rocky Mountain Journal of Mathematics Volume 8 ; 8 >
+    au < doNotProcess ; 1979 ; Rocky Mountain Journal of Mathematics Volume 9 ; 9 >
+    au < doNotProcess ; 1980 ; Rocky Mountain Journal of Mathematics Volume 10 ; 10 >
+    au < doNotProcess ; 1981 ; Rocky Mountain Journal of Mathematics Volume 11 ; 11 >
+    au < doNotProcess ; 1982 ; Rocky Mountain Journal of Mathematics Volume 12 ; 12 >
+    au < doNotProcess ; 1983 ; Rocky Mountain Journal of Mathematics Volume 13 ; 13 >
+    au < doNotProcess ; 1984 ; Rocky Mountain Journal of Mathematics Volume 14 ; 14 >
+    au < doNotProcess ; 1985 ; Rocky Mountain Journal of Mathematics Volume 15 ; 15 >
+    au < doNotProcess ; 1986 ; Rocky Mountain Journal of Mathematics Volume 16 ; 16 >
+    au < doNotProcess ; 1987 ; Rocky Mountain Journal of Mathematics Volume 17 ; 17 >
+    au < doNotProcess ; 1988 ; Rocky Mountain Journal of Mathematics Volume 18 ; 18 >
+    au < doNotProcess ; 1989 ; Rocky Mountain Journal of Mathematics Volume 19 ; 19 >
+    au < doNotProcess ; 1990 ; Rocky Mountain Journal of Mathematics Volume 20 ; 20 >
+    au < doNotProcess ; 1991 ; Rocky Mountain Journal of Mathematics Volume 21 ; 21 >
+    au < doNotProcess ; 1992 ; Rocky Mountain Journal of Mathematics Volume 22 ; 22 >
+    au < doNotProcess ; 1993 ; Rocky Mountain Journal of Mathematics Volume 23 ; 23 >
+    au < doNotProcess ; 1994 ; Rocky Mountain Journal of Mathematics Volume 24 ; 24 >
+    au < doNotProcess ; 1995 ; Rocky Mountain Journal of Mathematics Volume 25 ; 25 >
+    au < doNotProcess ; 1996 ; Rocky Mountain Journal of Mathematics Volume 26 ; 26 >
+    au < doNotProcess ; 1997 ; Rocky Mountain Journal of Mathematics Volume 27 ; 27 >
+    au < doNotProcess ; 1998 ; Rocky Mountain Journal of Mathematics Volume 28 ; 28 >
+    au < doNotProcess ; 1999 ; Rocky Mountain Journal of Mathematics Volume 29 ; 29 >
+    au < doNotProcess ; 2000 ; Rocky Mountain Journal of Mathematics Volume 30 ; 30 >
+    au < doNotProcess ; 2001 ; Rocky Mountain Journal of Mathematics Volume 31 ; 31 >
+    au < doNotProcess ; 2002 ; Rocky Mountain Journal of Mathematics Volume 32 ; 32 >
+    au < doNotProcess ; 2003 ; Rocky Mountain Journal of Mathematics Volume 33 ; 33 >
+    au < doNotProcess ; 2004 ; Rocky Mountain Journal of Mathematics Volume 34 ; 34 >
+    au < doNotProcess ; 2005 ; Rocky Mountain Journal of Mathematics Volume 35 ; 35 >
+    au < doNotProcess ; 2006 ; Rocky Mountain Journal of Mathematics Volume 36 ; 36 >
+    au < doNotProcess ; 2007 ; Rocky Mountain Journal of Mathematics Volume 37 ; 37 >
+    au < doNotProcess ; 2008 ; Rocky Mountain Journal of Mathematics Volume 38 ; 38 >
+    au < doNotProcess ; 2009 ; Rocky Mountain Journal of Mathematics Volume 39 ; 39 >
+    au < doNotProcess ; 2010 ; Rocky Mountain Journal of Mathematics Volume 40 ; 40 >
+    au < doNotProcess ; 2011 ; Rocky Mountain Journal of Mathematics Volume 41 ; 41 >
+    au < doNotProcess ; 2012 ; Rocky Mountain Journal of Mathematics Volume 42 ; 42 >
+    au < doNotProcess ; 2013 ; Rocky Mountain Journal of Mathematics Volume 43 ; 43 >
+    au < doNotProcess ; 2014 ; Rocky Mountain Journal of Mathematics Volume 44 ; 44 >
+    au < doNotProcess ; 2015 ; Rocky Mountain Journal of Mathematics Volume 45 ; 45 >
+    au < doNotProcess ; 2016 ; Rocky Mountain Journal of Mathematics Volume 46 ; 46 >
+    au < doNotProcess ; 2017 ; Rocky Mountain Journal of Mathematics Volume 47 ; 47 >
+    au < doNotProcess ; 2018 ; Rocky Mountain Journal of Mathematics Volume 48 ; 48 >
+    au < doNotProcess ; 2019 ; Rocky Mountain Journal of Mathematics Volume 49 ; 49 >
+    au < doNotProcess ; 2020 ; Rocky Mountain Journal of Mathematics Volume 50 ; 50 >
+    au < doNotProcess ; 2021 ; Rocky Mountain Journal of Mathematics Volume 51 ; 51 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Integral Equations and Applications ;
+      issn = 0897-3962 ;
+      eissn = 1938-2626 ;
+      issnl = 0897-3962
+    >
+    
+    param[journal_id] = jie
+    #param[base_url] = https://projecteuclid.org/euclid.jiea
+    
+    au < doNotProcess ; 1989 ; Journal of Integral Equations and Applications Volume 1 ; 1 >
+    au < doNotProcess ; 1990 ; Journal of Integral Equations and Applications Volume 2 ; 2 >
+    au < doNotProcess ; 1991 ; Journal of Integral Equations and Applications Volume 3 ; 3 >
+    au < doNotProcess ; 1992 ; Journal of Integral Equations and Applications Volume 4 ; 4 >
+    au < doNotProcess ; 1993 ; Journal of Integral Equations and Applications Volume 5 ; 5 >
+    au < doNotProcess ; 1994 ; Journal of Integral Equations and Applications Volume 6 ; 6 >
+    au < doNotProcess ; 1995 ; Journal of Integral Equations and Applications Volume 7 ; 7 >
+    au < doNotProcess ; 1996 ; Journal of Integral Equations and Applications Volume 8 ; 8 >
+    au < doNotProcess ; 1997 ; Journal of Integral Equations and Applications Volume 9 ; 9 >
+    au < doNotProcess ; 1998 ; Journal of Integral Equations and Applications Volume 10 ; 10 >
+    au < doNotProcess ; 1999 ; Journal of Integral Equations and Applications Volume 11 ; 11 >
+    au < doNotProcess ; 2000 ; Journal of Integral Equations and Applications Volume 12 ; 12 >
+    au < doNotProcess ; 2001 ; Journal of Integral Equations and Applications Volume 13 ; 13 >
+    au < doNotProcess ; 2002 ; Journal of Integral Equations and Applications Volume 14 ; 14 >
+    au < doNotProcess ; 2003 ; Journal of Integral Equations and Applications Volume 15 ; 15 >
+    au < doNotProcess ; 2004 ; Journal of Integral Equations and Applications Volume 16 ; 16 >
+    au < doNotProcess ; 2005 ; Journal of Integral Equations and Applications Volume 17 ; 17 >
+    au < doNotProcess ; 2006 ; Journal of Integral Equations and Applications Volume 18 ; 18 >
+    au < doNotProcess ; 2007 ; Journal of Integral Equations and Applications Volume 19 ; 19 >
+    au < doNotProcess ; 2008 ; Journal of Integral Equations and Applications Volume 20 ; 20 >
+    au < doNotProcess ; 2009 ; Journal of Integral Equations and Applications Volume 21 ; 21 >
+    au < doNotProcess ; 2010 ; Journal of Integral Equations and Applications Volume 22 ; 22 >
+    au < doNotProcess ; 2011 ; Journal of Integral Equations and Applications Volume 23 ; 23 >
+    au < doNotProcess ; 2012 ; Journal of Integral Equations and Applications Volume 24 ; 24 >
+    au < doNotProcess ; 2013 ; Journal of Integral Equations and Applications Volume 25 ; 25 >
+    au < doNotProcess ; 2014 ; Journal of Integral Equations and Applications Volume 26 ; 26 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Commutative Algebra ;
+      issn = 1939-0807 ;
+      eissn = 1939-2346 ;
+      issnl = 1939-2346
+    >
+    
+    param[journal_id] = jca
+    #param[base_url] = https://projecteuclid.org/euclid.jca
+    
+    au < doNotProcess ; 2009 ; Journal of Commutative Algebra Volume 1 ; 1 >
+    au < doNotProcess ; 2010 ; Journal of Commutative Algebra Volume 2 ; 2 >
+    au < doNotProcess ; 2011 ; Journal of Commutative Algebra Volume 3 ; 3 >
+    au < doNotProcess ; 2012 ; Journal of Commutative Algebra Volume 4 ; 4 >
+    au < doNotProcess ; 2013 ; Journal of Commutative Algebra Volume 5 ; 5 >
+
+  }
+  
+}

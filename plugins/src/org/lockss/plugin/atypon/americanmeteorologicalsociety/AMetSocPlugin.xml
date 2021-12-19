@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
 <!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
@@ -64,7 +64,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Meteorological Society Plugin (Legacy)</string>
+    <string>American Meteorological Society Journals Plugin (Legacy)</string>
   </entry>
     <entry>
     <string>plugin_parent</string>
@@ -72,11 +72,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>108</string>
+    <string>122</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Meteorological Society Plugin (Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Meteorological Society Journals Plugin (Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>

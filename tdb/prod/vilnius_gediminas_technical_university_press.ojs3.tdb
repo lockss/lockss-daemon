@@ -6,9 +6,9 @@
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     param[base_url] = https://journals.vgtu.lt/
     implicit < status ; year ; name ; volume ; param[year] >
-    #OJS3
     attr[start_stem] = index.php/
-    # The following titles are preserves in TnF, content from 2017 and prior
+
+    # The following titles are preserved in TnF, content from 2017 and prior
     # Aviation, Creativity Studies, Engineering Structures and Technologies, Geodesy and Cartography,
     # International Journal of Strategic Property Management, Journal of Architecture and Urbanism,
     # Journal of Business Economics and Management, Journal of Civil Engineering and Management,
@@ -48,7 +48,6 @@
   }
 
   {
-
       title <
         name = Business, Management and Education  ;
         issn = 2029-7491 ;
@@ -57,19 +56,30 @@
 
       param[journal_id] = BME
 
-      au < manifest ; 2010 ; Business, Management and Education Volume 2010 ; 1 ; 2010 >
-      au < manifest ; 2011 ; Business, Management and Education Volume 2011 ; 2 ; 2011 >
-      au < manifest ; 2012 ; Business, Management and Education Volume 2012 ; 3 ; 2012 >
-      au < manifest ; 2013 ; Business, Management and Education Volume 2013 ; 4 ; 2013 >
-      au < manifest ; 2014 ; Business, Management and Education Volume 2014 ; 5 ; 2014 >
-      au < manifest ; 2015 ; Business, Management and Education Volume 2015 ; 6 ; 2015 >
-      au < manifest ; 2016 ; Business, Management and Education Volume 2016 ; 7 ; 2016 >
-      au < manifest ; 2017 ; Business, Management and Education Volume 2017 ; 8 ; 2017 >
+      au < notReady ; 2010 ; Business, Management and Education Volume 2010 ; 1 ; 2010 > #failed to fetch start url http://journals.vgtu.lt/BME/gateway/lockss?year=2010
+      au < released ; 2011 ; Business, Management and Education Volume 2011 ; 2 ; 2011 >
+      au < released ; 2012 ; Business, Management and Education Volume 2012 ; 3 ; 2012 >
+      au < released ; 2013 ; Business, Management and Education Volume 2013 ; 4 ; 2013 >
+      au < released ; 2014 ; Business, Management and Education Volume 2014 ; 5 ; 2014 >
+      au < released ; 2015 ; Business, Management and Education Volume 2015 ; 6 ; 2015 >
+      au < released ; 2016 ; Business, Management and Education Volume 2016 ; 7 ; 2016 >
+      au < released ; 2017 ; Business, Management and Education Volume 2017 ; 8 ; 2017 >
       au < released ; 2018 ; Business, Management and Education Volume 2018 ; 9 ; 2018 >
       au < released ; 2019 ; Business, Management and Education Volume 2019 ; 10 ; 2019 >
       au < released ; 2020 ; Business, Management and Education Volume 2020 ; 11 ; 2020 >
-      au < manifest ; 2021 ; Business, Management and Education Volume 2021 ; 12 ; 2021 >
+      #Changed name after 2020 to Business, Management and Economic Engineering
+  }
+  {
+      title <
+        name = Business, Management and Economics Engineering ;
+        issn = 2669-2481 ;
+        eissn = 2669-249X
+      >
 
+      param[journal_id] = BME
+
+      #Changed name after 2020 from Business, Management and Education 2029-6169
+      au < manifest ; 2021 ; Business, Management and Economics Engineering Volume 2021 ; 12 ; 2021 >
   }
 
   {
@@ -88,11 +98,11 @@
       au < released ; 2009 ; Business: Theory and Practice Volume 2009 ; 4 ; 2009 >
       au < released ; 2010 ; Business: Theory and Practice Volume 2010 ; 5 ; 2010 >
       au < released ; 2011 ; Business: Theory and Practice Volume 2011 ; 6 ; 2011 >
-      au < manifest ; 2012 ; Business: Theory and Practice Volume 2012 ; 7 ; 2012 >
-      au < manifest ; 2013 ; Business: Theory and Practice Volume 2013 ; 8 ; 2013 >
-      au < manifest ; 2014 ; Business: Theory and Practice Volume 2014 ; 9 ; 2014 >
-      au < manifest ; 2015 ; Business: Theory and Practice Volume 2015 ; 10 ; 2015 >
-      au < manifest ; 2016 ; Business: Theory and Practice Volume 2016 ; 11 ; 2016 >
+      au < released ; 2012 ; Business: Theory and Practice Volume 2012 ; 7 ; 2012 >
+      au < released ; 2013 ; Business: Theory and Practice Volume 2013 ; 8 ; 2013 >
+      au < released ; 2014 ; Business: Theory and Practice Volume 2014 ; 9 ; 2014 >
+      au < released ; 2015 ; Business: Theory and Practice Volume 2015 ; 10 ; 2015 >
+      au < released ; 2016 ; Business: Theory and Practice Volume 2016 ; 11 ; 2016 >
       au < released ; 2017 ; Business: Theory and Practice Volume 2017 ; 12 ; 2017 >
       au < released ; 2018 ; Business: Theory and Practice Volume 2018 ; 13 ; 2018 >
       au < released ; 2019 ; Business: Theory and Practice Volume 2019 ; 14 ; 2019 >
@@ -398,14 +408,14 @@
       param[journal_id] = MLA
 
       au < manifest ; 2009 ; Science - Future of Lithuania Volume 2009 ; 1 ; 2009 >
-      au < manifest ; 2010 ; Science - Future of Lithuania Volume 2010 ; 2 ; 2010 >
-      au < manifest ; 2011 ; Science - Future of Lithuania Volume 2011 ; 3 ; 2011 >
-      au < manifest ; 2012 ; Science - Future of Lithuania Volume 2012 ; 4 ; 2012 >
-      au < manifest ; 2013 ; Science - Future of Lithuania Volume 2013 ; 5 ; 2013 >
-      au < manifest ; 2014 ; Science - Future of Lithuania Volume 2014 ; 6 ; 2014 >
-      au < manifest ; 2015 ; Science - Future of Lithuania Volume 2015 ; 7 ; 2015 >
-      au < manifest ; 2016 ; Science - Future of Lithuania Volume 2016 ; 8 ; 2016 >
-      au < manifest ; 2017 ; Science - Future of Lithuania Volume 2017 ; 9 ; 2017 >
+      au < released ; 2010 ; Science - Future of Lithuania Volume 2010 ; 2 ; 2010 >
+      au < released ; 2011 ; Science - Future of Lithuania Volume 2011 ; 3 ; 2011 >
+      au < released ; 2012 ; Science - Future of Lithuania Volume 2012 ; 4 ; 2012 >
+      au < released ; 2013 ; Science - Future of Lithuania Volume 2013 ; 5 ; 2013 >
+      au < released ; 2014 ; Science - Future of Lithuania Volume 2014 ; 6 ; 2014 >
+      au < released ; 2015 ; Science - Future of Lithuania Volume 2015 ; 7 ; 2015 >
+      au < released ; 2016 ; Science - Future of Lithuania Volume 2016 ; 8 ; 2016 >
+      au < released ; 2017 ; Science - Future of Lithuania Volume 2017 ; 9 ; 2017 >
       au < released ; 2018 ; Science - Future of Lithuania Volume 2018 ; 10 ; 2018 >
       au < released ; 2019 ; Science - Future of Lithuania Volume 2019 ; 11 ; 2019 >
       au < released ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 >

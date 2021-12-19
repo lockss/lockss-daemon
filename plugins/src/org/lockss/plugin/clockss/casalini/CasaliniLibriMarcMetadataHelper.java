@@ -83,13 +83,28 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
       // Since 2016 has special case to handle their PDF file path, we need to tell whether it is 2016
       boolean is_year_2016 = false;
+      boolean is_books = false;
 
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+      //By the time this coded, all the existing Aus are:
+      //http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released -- book(it actually has 2016 content)
+      //Like this:http://clockss-ingest.lockss.org/sourcefiles/casalini2012-released/2016/Monographs/ATENEO/2249531/2249531.pdf
+      //http://clockss-ingest.lockss.org/sourcefiles/casalini-released/, year 2019 -- journal
+      //http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/, year 2020 -- book
+      //http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/, directory 2021 -- book
+      //http://clockss-ingest.lockss.org/sourcefiles/casalini-released/, directory:2021_01, journal
+
 
       if (cuBase.contains("released/2016")) {
         log.debug3("Casalini-Metadata: Year 2016: cuBase = " + cuBase);
         is_year_2016 = true;
-      } else {
+        is_books = true;
+      } else if (cuBase.contains("casalinibooks-released")) {
+        // 2012 was legacy content, it is books, but it does not have "book" in the url
+        log.debug3("Casalini-Metadata for books: cuBase = " + cuBase);
+        is_books = true;
+      } else{
         log.debug3("Casalini-Metadata: Year not 2016, cuBase = " + cuBase);
       }
 
@@ -166,13 +181,6 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           }
         }
 
-        // Set ISBN
-        if (MARC_isbn != null) {
-          am.put(MetadataField.FIELD_ISBN, MARC_isbn);
-        } else if (MARC_isbn_alt != null) {
-          am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
-        }
-
         // Set publiation date
         if (MARC_pub_date != null) {
           am.put(MetadataField.FIELD_DATE, MetadataStringHelperUtilities.cleanupPubDate(MARC_pub_date));
@@ -209,10 +217,12 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
           canonicalPublisherName = getCanonicalPublisherName(publisherCleanName);
 
+          // canonicalPublisherName used to be set to 'default' if it not found, but the team
+          // agreed to set it as is, since a lot of them are data entried
           if (canonicalPublisherName == null) {
-            log.warning(String.format("Casalini-Metadata: missing canonicalPublisherName,  MARC_publisher %s | publisherCleanName: %s | " +
+            log.debug(String.format("Casalini-Metadata: missing canonicalPublisherName,  MARC_publisher %s | publisherCleanName: %s | " +
                     "NULL canonicalPublisherName %s ", MARC_publisher, publisherCleanName, canonicalPublisherName));
-            canonicalPublisherName = "default";
+            canonicalPublisherName = publisherCleanName;
 
           }
 
@@ -273,11 +283,12 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
         }
 
         /*
+        This chunk of code was commented out, since publisher may not send Leader field
         Leader byte 07 “a” = Book (monographic component part)
         Leader byte 07 “m” = Book
         Leader byte 07 “s” = Journal
         Leader byte 07 “b” = Journal (serial component part)
-        */
+
         Leader leader = record.getLeader();
 
         char publication_type = '0';
@@ -305,11 +316,42 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
               am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
             }
 
-
             // Set ISSN
-            if (MARC_issn != null) {
+            if (MARC_issn != null && is_books == false) {
               am.put(MetadataField.FIELD_ISSN, MARC_issn);
             }
+          }
+        }
+        */
+
+        if (is_books == true) {
+          am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+          am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+
+          // Set publication title
+          if (MARC_title != null) {
+            am.put(MetadataField.FIELD_PUBLICATION_TITLE, MARC_title);
+          }
+
+          // Set ISBN
+          if (MARC_isbn != null) {
+            am.put(MetadataField.FIELD_ISBN, MARC_isbn);
+          } else if (MARC_isbn_alt != null) {
+            am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt);
+          }
+        } else {
+
+          am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+          am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+
+          // Set publication title
+          if (MARC_title != null) {
+            am.put(MetadataField.FIELD_ARTICLE_TITLE, MARC_title);
+          }
+
+          // Set ISSN
+          if (MARC_issn != null) {
+            am.put(MetadataField.FIELD_ISSN, MARC_issn);
           }
         }
 

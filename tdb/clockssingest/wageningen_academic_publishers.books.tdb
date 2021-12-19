@@ -4,7 +4,8 @@
     info[contract] = 2013 ;
     info[back] = 1900 ;
     info[tester] = 5 ;
-    info[poller] = 3 #by EDINA for testing 
+    info[poller] = 3 ; #by EDINA for testing
+    info[platform] = Atypon
  >
   plugin = org.lockss.plugin.atypon.wageningen.ClockssWageningenBooksPlugin
   #  param[base_url] = http://www.wageningenacademic.com/
@@ -45,7 +46,8 @@
    au < finished ; finished ; 2016 ; 9789086862849 ; 9789086868308 ; 9789086868308 ; Book of Abstracts of the 67th Annual Meeting of the European Association for Animal Production: Belfast, UK, 29 August - 1 September 2016 (9789086868308) ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9789086868599 ; 9789086863129 ; 9789086863129 ; Book of Abstracts of the 68th Annual Meeting of the European Federation of Animal Science (9789086863129) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9789086868711 ; 9789086863235 ; 9789086863235 ; Book of Abstracts of the 69th Annual Meeting of the European Federation of Animal Science (9789086863235) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2019 ; 9789086863396 ; 9789086868902 ; 9789086868902 ; Book of Abstracts of the 70th Annual Meeting of the European Federation of Animal Science (9789086868902) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2019 ; 9789086863396 ; 9789086868902 ; 9789086868902 ; Book of Abstracts of the 70th Annual Meeting of the European Federation of Animal Science (9789086868902) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < crawling ; exists ; 2020 ; 9789086863495 ; 9789086869008 ; 9789086869008 ; Book of Abstracts of the 71st Annual Meeting of the European Federation of Animal Science (9789086869008) ; https://www.wageningenacademic.com/ ; >
 
  }
 
@@ -89,7 +91,7 @@
    au < finished ; finished ; 2014 ; 9789086862320 ; 9789086867851 ; 9789086867851 ; Cattle husbandry in Eastern Europe and China: Structure, development paths and optimisation (9789086867851) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2015 ; 9789086862795 ; 9789086868247 ; 9789086868247 ; The new equine economy in the 21st century (9789086868247) ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9789086862863 ; 9789086868322 ; 9789086868322 ; Energy and protein metabolism and nutrition (9789086868322) ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; crawling ; 2019 ; 9789086863402 ; 9789086868919 ; 9789086868919 ; Energy and protein metabolism and nutrition (9789086868919) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2019 ; 9789086863402 ; 9789086868919 ; 9789086868919 ; Energy and protein metabolism and nutrition (9789086868919) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
 
  }
 
@@ -122,7 +124,7 @@
    au < finished ; finished ; 2006 ; 9789076998978 ; 9789086865833 ; 9789086865833 ; Towards a risk based chain control (9789086865833) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2009 ; 9789086861224 ; 9789086866908 ; 9789086866908 ; Welfare of production animals: assessment and management of risks (9789086866908) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2013 ; 9789086862269 ; 9789086867806 ; 9789086867806 ; Food borne viruses and prions and their significance for public health (9789086867806) ; http://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; crawling ; 2019 ; 9789086868773 ; 9789086863266 ; 9789086863266 ; Chemical hazards in foods of animal origin (9789086863266) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+   au < finished ; frozen ; 2019 ; 9789086868773 ; 9789086863266 ; 9789086863266 ; Chemical hazards in foods of animal origin (9789086863266) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
 
  }
 
@@ -136,7 +138,7 @@
    au < finished ; finished ; 2010 ; 9789086860913 ; 9789086866984 ; 9789086866984 ; Olfaction in vector-host interactions (9789086866984) ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 9789086861880 ; 9789086867448 ; 9789086867448 ; Ecology of parasite-vector interactions (9789086867448) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2018 ; 9789086868636 ; 9789086863150 ; 9789086863150 ; Pests and vector-borne diseases in the livestock industry (9789086863150) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 9789086863440 ; 9789086868957 ; 9789086868957 ; Innovative strategies for vector control (9789086868957) ; https://www.wageningenacademic.com/ ; >
+   au < frozen ; exists ; 2020 ; 9789086863440 ; 9789086868957 ; 9789086868957 ; Innovative strategies for vector control (9789086868957) ; https://www.wageningenacademic.com/ ; >
 
  }
 
@@ -174,8 +176,8 @@
    au < finished ; finished ; 2013 ; 9789086862399 ; 9789086867912 ; 9789086867912 ; The enforceability of the human right to adequate food: A comparative study (9789086867912) ; http://www.wageningenacademic.com/ ;  >
    au < finished ; finished ; 2014 ; 9789086862511 ; 9789086868018 ; 9789086868018 ; From agricultural to food law: The new scenario (9789086868018) ; http://www.wageningenacademic.com/ ;  >
    au < doNotProcess ; exists ; 2014 ; 9789086862467 ; 9789086862467 ; 9789086862467 ; EU Food Law Handbook (9789086862467) ; https://www.wageningenacademic.com/ ; >
-   au < finished ; crawling ; 2019 ; 9789086868858 ; 9789086863341 ; 9789086863341 ; The functional field of food law (9789086863341) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
-   au < crawling ; exists ; 2020 ; 9789086863464 ; 9789086868971 ; 9789086868971 ; The pursuit of sustainable agriculture in EU free trade agreements (9789086868971) ; https://www.wageningenacademic.com/ ;  >
+   au < finished ; frozen ; 2019 ; 9789086868858 ; 9789086863341 ; 9789086863341 ; The functional field of food law (9789086863341) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+   au < deepCrawl ; exists ; 2020 ; 9789086863464 ; 9789086868971 ; 9789086868971 ; The pursuit of sustainable agriculture in EU free trade agreements (9789086868971) ; https://www.wageningenacademic.com/ ;  >
 
  }
 
@@ -198,7 +200,7 @@
    au < finished ; finished ; 2016 ; 9789086862764 ; 9789086868216 ; 9789086868216 ; Handbook of cholesterol: Biology, function and role in health and diseases (9789086868216) ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9789086862771 ; 9789086868223 ; 9789086868223 ; Handbook of nutrition and diet in leukemia and blood disease therapy (9789086868223) ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9789086862788 ; 9789086868230 ; 9789086868230 ; Handbook of nutrition and diet in therapy of bone diseases (9789086868230) ; http://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9789086863082 ; 9789086868537 ; 9789086868537 ; Handbook of nutrition in heart health (9789086868537) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2017 ; 9789086863082 ; 9789086868537 ; 9789086868537 ; Handbook of nutrition in heart health (9789086868537) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
 
  }
 
@@ -483,29 +485,42 @@
    au < finished ; finished ; 2017 ; 9789086862986 ; 9789086868414 ; 9789086868414 ; Sensory and aroma marketing (9789086868414) ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < doNotProcess ; exists ; 2017 ; 9789086862962 ; 9789086868490 ; 9789086868490 ; Insects as food and feed: from production to consumption (9789086868490) ; https://www.wageningenacademic.com/ ;  >
    # adding from publisher list
-   au < finished ; crawling ; 2019 ; 9789086863365 ; 9789086868872 ; 9789086868872 ; ScienceBites (9789086868872) ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2018 ; 9789086863242 ; 9789086868759 ; 9789086868759 ; Integrated approaches to health (9789086868759) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9789086863075 ; 9789086868520 ; 9789086868520 ; Consumer trends and new product opportunities in the food sector (9789086868520) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; crawling ; 2019 ; 9789086863372 ; 9789086868889 ; 9789086868889 ; Precision agriculture '19 (9789086868889) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; crawling ; 2019 ; 9789086863426 ; 9789086868933 ; 9789086868933 ; The value of fibre (9789086868933) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; crawling ; 2019 ; 9789086863457 ; 9789086868964 ; 9789086868964 ; Anthropology and mysticism in the making of initiation (9789086868964) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9789086863112 ; 9789086868582 ; 9789086868582 ; Proceedings of the 51st Congress of the International Society for Applied Ethology (9789086868582) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; crawling ; 2019 ; 9789086863389 ; 9789086868896 ; 9789086868896 ; Animal lives worth living (9789086868896) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2018 ; 9789086863228 ; 9789086868704 ; 9789086868704 ; Proceedings of the 52nd Congress of the International Society for Applied Ethology (9789086868704) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; crawling ; 2019 ; 9789086863334 ; 9789086868841 ; 9789086868841 ; Poultry and pig nutrition (9789086868841) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; manifest ; 2018 ; 9789086868742 ; 9789086868742 ; 9789086868742 ; Sustainability models for a better world (9789086868742) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9789086863068 ; 9789086868513 ; 9789086868513 ; Proceedings of the 21st European Symposium on Poultry Nutrition (9789086868513) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; manifest ; 2018 ; 9789086863167 ; 9789086868643 ; 9789086868643 ; Diversity and change in food wellbeing (9789086868643) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; crawling ; 2019 ; 9789086863419 ; 9789086868926 ; 9789086868926 ; Sustainable governance and management of food systems (9789086868926) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; manifest ; 2018 ; 9789086863211 ; 9789086868698 ; 9789086868698 ; Professionals in food chains (9789086868698) ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2017 ; 9789086863136 ; 9789086868605 ; 9789086868605 ; 63rd International Congress of Meat Science and Technology (9789086868605) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2018 ; 9789086863303 ; 9789086868803 ; 9789086868803 ; Using Nature's Shuttle (9789086868803) ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2017 ; 9789086862979 ; 9789086868506 ; 9789086868506 ; Genomic management of animal genetic diversity (9789086868506) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2018 ; 9789086863198 ; 9789086868674 ; 9789086868674 ; Animal farming (9789086868674) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2018 ; 9789086863174 ; 9789086868650 ; 9789086868650 ; Selenium in poultry nutrition and health (9789086868650) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9789086863143 ; 9789086868629 ; 9789086868629 ; Proceedings of the 7th International Conference on the Assessment of Animal Welfare at the Farm and Group Level (9789086868629) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2018 ; 9789086863273 ; 9789086868735 ; 9789086868735 ; Fostering transformation and growth in Niger's agricultural sector (9789086868735) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; crawling ; 2019 ; 9789086863358 ; 9789086868865 ; 9789086868865 ; DISENTANGLED (9789086868865) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2019 ; 9789086863365 ; 9789086868872 ; 9789086868872 ; ScienceBites (9789086868872) ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2018 ; 9789086863242 ; 9789086868759 ; 9789086868759 ; Integrated approaches to health (9789086868759) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 9789086863075 ; 9789086868520 ; 9789086868520 ; Consumer trends and new product opportunities in the food sector (9789086868520) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2019 ; 9789086863372 ; 9789086868889 ; 9789086868889 ; Precision agriculture '19 (9789086868889) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2019 ; 9789086863426 ; 9789086868933 ; 9789086868933 ; The value of fibre (9789086868933) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2019 ; 9789086863457 ; 9789086868964 ; 9789086868964 ; Anthropology and mysticism in the making of initiation (9789086868964) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 9789086863112 ; 9789086868582 ; 9789086868582 ; Proceedings of the 51st Congress of the International Society for Applied Ethology (9789086868582) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2019 ; 9789086863389 ; 9789086868896 ; 9789086868896 ; Animal lives worth living (9789086868896) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2018 ; 9789086863228 ; 9789086868704 ; 9789086868704 ; Proceedings of the 52nd Congress of the International Society for Applied Ethology (9789086868704) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+   au < finished ; frozen ; 2019 ; 9789086863334 ; 9789086868841 ; 9789086868841 ; Poultry and pig nutrition (9789086868841) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 9789086868742 ; 9789086868742 ; 9789086868742 ; Sustainability models for a better world (9789086868742) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 9789086863068 ; 9789086868513 ; 9789086868513 ; Proceedings of the 21st European Symposium on Poultry Nutrition (9789086868513) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 9789086863167 ; 9789086868643 ; 9789086868643 ; Diversity and change in food wellbeing (9789086868643) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; frozen ; 2019 ; 9789086863419 ; 9789086868926 ; 9789086868926 ; Sustainable governance and management of food systems (9789086868926) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 9789086863211 ; 9789086868698 ; 9789086868698 ; Professionals in food chains (9789086868698) ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2017 ; 9789086863136 ; 9789086868605 ; 9789086868605 ; 63rd International Congress of Meat Science and Technology (9789086868605) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 9789086863303 ; 9789086868803 ; 9789086868803 ; Using Nature's Shuttle (9789086868803) ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2017 ; 9789086862979 ; 9789086868506 ; 9789086868506 ; Genomic management of animal genetic diversity (9789086868506) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 9789086863198 ; 9789086868674 ; 9789086868674 ; Animal farming (9789086868674) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2018 ; 9789086863174 ; 9789086868650 ; 9789086868650 ; Selenium in poultry nutrition and health (9789086868650) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 9789086863143 ; 9789086868629 ; 9789086868629 ; Proceedings of the 7th International Conference on the Assessment of Animal Welfare at the Farm and Group Level (9789086868629) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 9789086863273 ; 9789086868735 ; 9789086868735 ; Fostering transformation and growth in Niger's agricultural sector (9789086868735) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; frozen ; 2019 ; 9789086863358 ; 9789086868865 ; 9789086868865 ; DISENTANGLED (9789086868865) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
+   #Added 8/5/2021.
+   au < crawling ; exists ; 2016 ; 9789086861873 ; 9789086868261 ; 9789086868261 ; Sustainable food planning: evolving theory and practice (9789086868261) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2017 ; 9789086868612 ; 9789086868612 ; 9789086868612 ; Facts about fats (9789086868612) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2018 ; 9789086862498 ; 9789086868001 ; 9789086868001 ; Hunting hygiene (9789086868001) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2018 ; 9789086862665 ; 9789086868780 ; 9789086868780 ; Fish atlas of the Celtic Sea, North Sea, and Baltic Sea (9789086868780) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2018 ; 9789086862375 ; 9789086868551 ; 9789086868551 ; Equine nutrition (9789086868551) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2020 ; 9789086863532 ; 9789086869060 ; 9789086869060 ; Vitagenes in avian biology and poultry health (9789086869060) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2020 ; 9789086863433 ; 9789086868940 ; 9789086868940 ; The suckling and weaned piglet (9789086868940) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2020 ; 9789086863471 ; 9789086868988 ; 9789086868988 ; Green metamorphoses: agriculture, food, ecology (9789086868988) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2020 ; 9789086863549 ; 9789086869077 ; 9789086869077 ; Food and agribusiness in 2030: a roadmap (9789086869077) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2020 ; 9789086863563 ; 9789086869091 ; 9789086869091 ; Engaged Encounters (9789086869091) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2020 ; 9789086863518 ; 9789086869046 ; 9789086869046 ; Energising Networks (9789086869046) ; https://www.wageningenacademic.com/ ; >
+   au < crawling ; exists ; 2020 ; 9789086863525 ; 9789086869053 ; 9789086869053 ; Consumers towards marketing strategies of coffee producers (9789086869053) ; https://www.wageningenacademic.com/ ; >
 
  }
 

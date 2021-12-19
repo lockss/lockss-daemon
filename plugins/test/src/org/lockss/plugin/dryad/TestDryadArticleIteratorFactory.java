@@ -140,7 +140,7 @@ public class TestDryadArticleIteratorFactory extends ArticleIteratorTestCase {
 
     String pat1 = "([0-9]+)file[.]html";
     // turn xxfile.xhtml into abstracts
-    String repAbs = "/resource/doi:10.5061/dryad.$1";
+    String repAbs = "resource/doi:10.5061/dryad.$1";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat1, repAbs);
 
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());

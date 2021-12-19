@@ -58,7 +58,6 @@ import org.lockss.util.urlconn.CacheException;
 // without having to actually duplicate any of the written tests
 //
 public class TestNatureArchivalUnit extends LockssTestCase {
-  private MockLockssDaemon theDaemon;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
@@ -74,18 +73,20 @@ public class TestNatureArchivalUnit extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getHashService();
-    theDaemon.getRepositoryManager();
-
-    
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    PluginManager pluginMgr = daemon.getPluginManager();
+    pluginMgr.setLoadablePluginsReady(true);
+    daemon.setDaemonInited(true);
+    pluginMgr.startService();
+    daemon.getAlertManager();
+    daemon.getCrawlManager();
   }
 
   public void tearDown() throws Exception {
     super.tearDown();
   }
 
-  private DefinableArchivalUnit makeAu(URL url, int volume, String jid, String year)
+  private ArchivalUnit makeAu(URL url, int volume, String jid, String year)
       throws Exception {
 
     Properties props = new Properties();
@@ -96,12 +97,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
       props.setProperty(BASE_URL_KEY, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    
-    DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(getMockLockssDaemon(),
-        PLUGIN_ID);
-    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
-    return au;
+    return PluginTestUtil.createAndStartAu(PLUGIN_ID,  config);
   }
 
   public void testConstructNullUrl() throws Exception {
@@ -120,8 +116,6 @@ public class TestNatureArchivalUnit extends LockssTestCase {
   public void testShouldCacheProperPages() throws Exception {
     URL base = new URL(ROOT_URL);
     ArchivalUnit NAu = makeAu(base, 123, "xxxx", "2009");
-    theDaemon.getLockssRepository(NAu);
-    theDaemon.getNodeManager(NAu);
     BaseCachedUrlSet cus = new BaseCachedUrlSet(NAu,
         new RangeCachedUrlSetSpec(base.toString()));
     // Test for pages that should get crawled
@@ -187,7 +181,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
 
     // 4 digit
     String expected = ROOT_URL+"xxxx/clockss/xxxx_clockss_2009.html";
-    DefinableArchivalUnit NAu = makeAu(url, 123, "xxxx", "2009");
+    ArchivalUnit NAu = makeAu(url, 123, "xxxx", "2009");
     assertEquals(ListUtil.list(expected), NAu.getStartUrls());
   }
   
@@ -198,8 +192,6 @@ public class TestNatureArchivalUnit extends LockssTestCase {
     String year = "2009";
     ArchivalUnit NAu = makeAu(base, volume, jid, year);
 
-    theDaemon.getLockssRepository(NAu);
-    theDaemon.getNodeManager(NAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(NAu, spec);
     assertFalse(NAu.shouldBeCached(
@@ -208,7 +200,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
 
 
   public void testgetName() throws Exception {
-    DefinableArchivalUnit au =
+    ArchivalUnit au =
       makeAu(new URL("http://www.nature.com/"), 33, "yyyy", "1965");
     assertEquals(PluginName + ", Base URL http://www.nature.com/, Journal ID yyyy, Year 1965, Volume 33", au.getName());
 
@@ -225,7 +217,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
 
   public void testRepairList() throws Exception {
     URL base = new URL(ROOT_URL);
-    DefinableArchivalUnit ABAu = makeAu(base, 33, "xyz", "2016");
+    ArchivalUnit ABAu = makeAu(base, 33, "xyz", "2016");
 
     assertEquals(Arrays.asList(baseRepairList), RegexpUtil.regexpCollection(ABAu.makeRepairFromPeerIfMissingUrlPatterns()));
 
@@ -265,13 +257,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
   private static final int LEN_TOOSHORT = TEXT.length() - 4;
   public void testShouldCacheWrongSize() throws Exception {
 
-    DefinableArchivalUnit Nau = makeAu(new URL(ROOT_URL), 33, "xyz", "2016");
-    repo =
-        (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
-            Nau);
-    theDaemon.setLockssRepository(repo, Nau);
-    repo.startService();
-
+    ArchivalUnit Nau = makeAu(new URL(ROOT_URL), 33, "xyz", "2016");
     String url = ROOT_URL + "xyz/journal/v33/n12/abs/1111.html";
     CIProperties props = new CIProperties();
     props.setProperty("Content-Length", Integer.toString(LEN_TOOSHORT));

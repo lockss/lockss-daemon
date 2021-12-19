@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>12</string>
+        <string>14</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -37,11 +37,11 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -74,6 +74,18 @@
             <!--yes to: https://www.fulcrum.org/downloads/00000070p and no to https://www.fulcrum.org/downloads/00000070p?file=thumbnail -->
             <!-- there is no way to differentiate the book substance from supporting assets -->
             <string>"^%sebooks/[^?/]+/download", base_url</string>
+            <!-- A small portion of Au will redirect PDF file-->
+            <!--
+              No   https://www.fulcrum.org/ebooks/pg15bg380/download
+              Redirect chain:
+                    https://www.fulcrum.org/ebooks/pg15bg380/download
+              No    https://www.fulcrum.org/downloads/pg15bg380
+            No   https://www.fulcrum.org/ebooks/vq27zq50v/download
+              Redirect chain:
+                    https://www.fulcrum.org/ebooks/vq27zq50v/download
+              No    https://www.fulcrum.org/downloads/vq27zq50v
+            -->
+            <string>"^%sdownloads/[^?/]+", base_url</string>
         </list>
     </entry>
     <entry>

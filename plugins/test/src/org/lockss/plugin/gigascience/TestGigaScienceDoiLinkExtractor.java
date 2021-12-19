@@ -1,16 +1,14 @@
 package org.lockss.plugin.gigascience;
 
-import org.apache.commons.io.FileUtils;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
-import org.lockss.util.Constants;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,18 +20,18 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.lockss.util.IOUtil;
+import org.lockss.util.StringUtil;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
 
-    private static String getXmlFileContent(String fname) {
+    private String getXmlFileContent(String fname) {
         String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
+
+        try (InputStream file_input = getResourceAsStream(fname)) {
+            xmlContent = StringUtil.fromInputStream(file_input);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
         }
@@ -45,15 +43,15 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
 
         String fname = "dois_api.xml";
 
-        String fileName= System.getProperty("user.dir") +
-                "/plugins/test/src/org/lockss/plugin/gigascience/" + fname;
-        Document document = getDocument(fileName);
+        try (InputStream ins = getResourceAsStream(fname)) {
+          Document document = getDocument(ins);
 
-        String xpathExpression = "";
+          String xpathExpression = "";
 
-        xpathExpression = "//doi/text()";
+          xpathExpression = "//doi/text()";
 
-        evaluateXPath(document, xpathExpression);
+          evaluateXPath(document, xpathExpression);
+        }
     }
 
     private void  evaluateXPath(Document document, String xpathExpression) throws Exception
@@ -94,12 +92,12 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
         assertEquals(out.size(), 23);
     }
 
-    private Document getDocument(String fileName) throws Exception
+    private Document getDocument(InputStream ins) throws Exception
     {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(fileName);
+        Document doc = builder.parse(ins);
         return doc;
     }
 

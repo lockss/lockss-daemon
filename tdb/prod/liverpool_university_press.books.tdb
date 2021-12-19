@@ -13,75 +13,75 @@
   >
   implicit < status ; year ; volume ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] >
   #series = tthe
-   au < released ; 1987 ; 3 ; 9780853230762 ;  ; 9780853230762 ; Pacatus (9780853230762) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1988 ; 1 ; 9780853233275 ;  ; 9780853233275 ; Gregory of Tours: Life of the Fathers (9780853233275) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1988 ; 4 ; 9780853232360 ;  ; 9780853232360 ; Gregory of Tours: Glory of the Martyrs (9780853232360) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1988 ; 5 ; 9780853232261 ;  ; 9780853232261 ; Gregory of Tours: Glory of the Confessors (9780853232261) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1989 ; 2 ; 9780853233763 ;  ; 9780853233763 ; The Emperor Julian (9780853233763) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1989 ; 7 ; 9780853230960 ;  ; 9780853230960 ; Chronicon Paschale 284-628 (9780853230960) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1989 ; 8 ; 9780853233268 ;  ; 9780853233268 ; Iamblichus (9780853233268) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1991 ; 11 ; 9780853234265 ;  ; 9780853234265 ; The Goths in the Fourth Century (9780853234265) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1992 ; 10 ; 9780853231271 ;  ; 9780853231271 ; Victor of Vita (9780853231271) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1992 ; 12 ; 9780853234364 ;  ; 9780853234364 ; Cassiodorus: Variae (9780853234364) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1993 ; 14 ; 9780853232087 ;  ; 9780853232087 ; Eutropius Breviarium (9780853232087) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1993 ; 15 ; 9780853232384 ;  ; 9780853232384 ; The Seventh Century in the West Syrian Chronicles (9780853232384) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1994 ; 17 ; 9780853232186 ;  ; 9780853232186 ; Aurelius Victor (9780853232186) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1994 ; 18 ; 9780853233787 ;  ; 9780853233787 ; Bede: On the Tabernacle (9780853233787) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1994 ; 19 ; 9780853233688 ;  ; 9780853233688 ; Caesarius of Arles (9780853233688) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1995 ; 20 ; 9780853234791 ;  ; 9780853234791 ; The Lives of the Ninth-Century Popes (9780853234791) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1995 ; 21 ; 9780853230496 ;  ; 9780853230496 ; Bede: On the Temple (9780853230496) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1995 ; 23 ; 9780853231790 ;  ; 9780853231790 ; Venantius Fortunatus (9780853231790) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1996 ; 16 ; 9780853239109 ;  ; 9780853239109 ; Vegetius (9780853239109) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1996 ; 22 ; 9780853237600 ;  ; 9780853237600 ; Pseudo-Dionysius of Tel-Mahre (9780853237600) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1996 ; 24 ; 9780853239314 ;  ; 9780853239314 ; Donatist Martyr Stories (9780853239314) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1997 ; 25 ; 9780853235729 ;  ; 9780853235729 ; Hilary of Poitiers (9780853235729) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1997 ; 26 ; 9780853235828 ;  ; 9780853235828 ; Lives of the Visigothic Fathers (9780853235828) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1997 ; 27 ; 9780853237525 ;  ; 9780853237525 ; Optatus (9780853237525) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1999 ; 9 ; 9780853235545 ;  ; 9780853235545 ; Conquerors and Chroniclers of Early Medieval Spain (9780853235545) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1999 ; 28 ; 9780853236832 ;  ; 9780853236832 ; Bede: A Biblical Miscellany (9780853236832) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1999 ; 29 ; 9780853236931 ;  ; 9780853236931 ; Bede: The Reckoning of Time (9780853236931) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1999 ; 30 ; 9780853237037 ;  ; 9780853237037 ; Ruricius of Limoges and Friends (9780853237037) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 1999 ; 31 ; 9780853235644 ;  ; 9780853235644 ; The Armenian History Attributed to Sebeos (9780853235644) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2000 ; 32 ; 9780853235859 ;  ; 9780853235859 ; Chronicle of Pseudo-Joshua the Stylite (9780853235859) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2000 ; 33 ; 9780853236054 ;  ; 9780853236054 ; The Ecclesiastical History of Evagrius Scholasticus (9780853236054) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2000 ; 34 ; 9780853235958 ;  ; 9780853235958 ; Antioch as a Centre of Hellenic Culture, as Observed by Libanius (9780853235958) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2000 ; 35 ; 9780853236153 ;  ; 9780853236153 ; Neoplatonic Saints (9780853236153) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2001 ; 36 ; 9780853231066 ;  ; 9780853231066 ; Politics, Philosophy and Empire in the Fourth Century (9780853231066) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2001 ; 37 ; 9780853239178 ;  ; 9780853239178 ; The Christian's Guide to Greek Culture (9780853239178) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2002 ; 38 ; 9780853235880 ;  ; 9780853235880 ; Avitus of Vienne (9780853235880) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2003 ; 39 ; 9780853236481 ;  ; 9780853236481 ; Constantine and Christendom (9780853236481) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2004 ; 40 ; 9780853239888 ;  ; 9780853239888 ; Lactantius (9780853239888) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2004 ; 41 ; 9780853235095 ;  ; 9780853235095 ; Selected Letters of Libanius (9780853235095) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2004 ; 42 ; 9780853239987 ;  ; 9780853239987 ; Cassiodorus: Institutions of Divine and Secular Learning (9780853239987) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2005 ; 43 ; 9780853238294 ;  ; 9780853238294 ; Ambrose of Milan (9780853238294) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2005 ; 45 ; 9780853230397 ;  ; 9780853230397 ; The Acts of the Council of Chalcedon (9780853230397) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2006 ; 44 ; 9780853239598 ;  ; 9780853239598 ; The Chronicle of Ireland (9780853239598) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2006 ; 47 ; 9781846310010 ;  ; 9781846310010 ; Bede: On Ezra and Nehemiah (9781846310010) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2007 ; 13 ; 9781846311543 ;  ; 9781846311543 ; The Lives of the Eighth-Century Popes AD 715-817 (9781846311543) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2008 ; 46 ; 9781846311598 ;  ; 9781846311598 ; The Formularies of Angers and Marculf (9781846311598) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2008 ; 48 ; 9781846310881 ;  ; 9781846310881 ; Bede: On Genesis (9781846310881) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2008 ; 49 ; 9781846311321 ;  ; 9781846311321 ; Nemesius (9781846311321) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2008 ; 50 ; 9781846311611 ;  ; 9781846311611 ; Sources for the Study of the School of Nisibis (9781846311611) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2009 ; 6 ; 9781846314766 ;  ; 9781846314766 ; Book of Pontiffs, The (9781846314766) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2009 ; 51 ; 9781846311789 ;  ; 9781846311789 ; The Acts of the Council of Constantinople of 553 (9781846311789) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2009 ; 52 ; 9781846312090 ;  ; 9781846312090 ; Three Political Voices from the Age of Justinian (9781846312090) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2009 ; 53 ; 9781846312168 ;  ; 9781846312168 ; History and Hagiography from the Late Antique Sinai (9781846312168) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2010 ; 54 ; 9781846314957 ;  ; 9781846314957 ; Bede: On the Nature of Things and On Times (9781846314957) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2010 ; 55 ; 9781846314735 ;  ; 9781846314735 ; Orosius: Seven Books of History against the Pagans (9781846314735) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2010 ; 56 ; 9781846314933 ;  ; 9781846314933 ; The Chronicle of Pseudo-Zachariah Rhetor (9781846314933) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2011 ; 57 ; 9781846316975 ;  ; 9781846316975 ; Theophilus of Edessa's Chronicle and the Circulation of Historical Knowledge in Late Antiquity and Early Islam (9781846316975) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2013 ; 58 ; 9781846318443 ;  ; 9781846318443 ; Bede: Commentary on Revelation (9781846318443) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2013 ; 59 ; 9781846318870 ;  ; 9781846318870 ; Funerary Speech for John Chrysostom (9781846318870) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2013 ; 60 ; 9781846318825 ;  ; 9781846318825 ; Two Early Lives of Severos, Patriarch of Antioch (9781846318825) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2014 ; 61 ; 9781781380390 ;  ; 9781781380390 ; The Acts of the Lateran Synod of 649 (9781781380390) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2014 ; 62 ; 9781846318252 ;  ; 9781846318252 ; Four Byzantine Novels (9781846318252) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2015 ; 63 ; 9781846316487 ;  ; 9781846316487 ; Chalcedon in Context: Church Councils 400–700 (9781846316487) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2015 ; 64 ; 9781781381298 ;  ; 9781781381298 ; Macarius, Apocriticus (9781781381298) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2015 ; 63 ; 9781846316487 ; 9781846314513 ; 9781846314513 ; Chalcedon in Context: Church Councils 400–700  (9781846314513) ; https://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2016 ; 65 ; 9781781382523 ;  ; 9781781382523 ; Between City and School (9781781382523) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2016 ; 66 ; 9781781381755 ;  ; 9781781381755 ; Khalifa ibn Khayyat's History on the Umayyad Dynasty (660–750) (9781781381755) ; http://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2016 ; 70 ; 9781786941268 ; 9781786941268 ; 9781786941268 ; The Donatist Schism: Controversy and Contexts (9781786941268) ; https://online.liverpooluniversitypress.co.uk/ >
-   au < released ; 2016 ; 69 ; 9781781383285 ; 9781781383285 ; 9781781383285 ; Imperial Invectives against Constantius II (9781781383285) ; https://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1987 ; 3 ; 9780853230762 ;  ; 9780853230762 ; Pacatus (9780853230762) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1988 ; 1 ; 9780853233275 ;  ; 9780853233275 ; Gregory of Tours: Life of the Fathers (9780853233275) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1988 ; 4 ; 9780853232360 ;  ; 9780853232360 ; Gregory of Tours: Glory of the Martyrs (9780853232360) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1988 ; 5 ; 9780853232261 ;  ; 9780853232261 ; Gregory of Tours: Glory of the Confessors (9780853232261) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1989 ; 2 ; 9780853233763 ;  ; 9780853233763 ; The Emperor Julian (9780853233763) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1989 ; 7 ; 9780853230960 ;  ; 9780853230960 ; Chronicon Paschale 284-628 (9780853230960) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1989 ; 8 ; 9780853233268 ;  ; 9780853233268 ; Iamblichus (9780853233268) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1991 ; 11 ; 9780853234265 ;  ; 9780853234265 ; The Goths in the Fourth Century (9780853234265) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1992 ; 10 ; 9780853231271 ;  ; 9780853231271 ; Victor of Vita (9780853231271) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1992 ; 12 ; 9780853234364 ;  ; 9780853234364 ; Cassiodorus: Variae (9780853234364) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1993 ; 14 ; 9780853232087 ;  ; 9780853232087 ; Eutropius Breviarium (9780853232087) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1993 ; 15 ; 9780853232384 ;  ; 9780853232384 ; The Seventh Century in the West Syrian Chronicles (9780853232384) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1994 ; 17 ; 9780853232186 ;  ; 9780853232186 ; Aurelius Victor (9780853232186) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1994 ; 18 ; 9780853233787 ;  ; 9780853233787 ; Bede: On the Tabernacle (9780853233787) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1994 ; 19 ; 9780853233688 ;  ; 9780853233688 ; Caesarius of Arles (9780853233688) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1995 ; 20 ; 9780853234791 ;  ; 9780853234791 ; The Lives of the Ninth-Century Popes (9780853234791) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1995 ; 21 ; 9780853230496 ;  ; 9780853230496 ; Bede: On the Temple (9780853230496) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1995 ; 23 ; 9780853231790 ;  ; 9780853231790 ; Venantius Fortunatus (9780853231790) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1996 ; 16 ; 9780853239109 ;  ; 9780853239109 ; Vegetius (9780853239109) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1996 ; 22 ; 9780853237600 ;  ; 9780853237600 ; Pseudo-Dionysius of Tel-Mahre (9780853237600) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1996 ; 24 ; 9780853239314 ;  ; 9780853239314 ; Donatist Martyr Stories (9780853239314) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1997 ; 25 ; 9780853235729 ;  ; 9780853235729 ; Hilary of Poitiers (9780853235729) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1997 ; 26 ; 9780853235828 ;  ; 9780853235828 ; Lives of the Visigothic Fathers (9780853235828) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1997 ; 27 ; 9780853237525 ;  ; 9780853237525 ; Optatus (9780853237525) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1999 ; 9 ; 9780853235545 ;  ; 9780853235545 ; Conquerors and Chroniclers of Early Medieval Spain (9780853235545) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1999 ; 28 ; 9780853236832 ;  ; 9780853236832 ; Bede: A Biblical Miscellany (9780853236832) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1999 ; 29 ; 9780853236931 ;  ; 9780853236931 ; Bede: The Reckoning of Time (9780853236931) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1999 ; 30 ; 9780853237037 ;  ; 9780853237037 ; Ruricius of Limoges and Friends (9780853237037) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 1999 ; 31 ; 9780853235644 ;  ; 9780853235644 ; The Armenian History Attributed to Sebeos (9780853235644) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2000 ; 32 ; 9780853235859 ;  ; 9780853235859 ; Chronicle of Pseudo-Joshua the Stylite (9780853235859) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2000 ; 33 ; 9780853236054 ;  ; 9780853236054 ; The Ecclesiastical History of Evagrius Scholasticus (9780853236054) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2000 ; 34 ; 9780853235958 ;  ; 9780853235958 ; Antioch as a Centre of Hellenic Culture, as Observed by Libanius (9780853235958) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2000 ; 35 ; 9780853236153 ;  ; 9780853236153 ; Neoplatonic Saints (9780853236153) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2001 ; 36 ; 9780853231066 ;  ; 9780853231066 ; Politics, Philosophy and Empire in the Fourth Century (9780853231066) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2001 ; 37 ; 9780853239178 ;  ; 9780853239178 ; The Christian's Guide to Greek Culture (9780853239178) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2002 ; 38 ; 9780853235880 ;  ; 9780853235880 ; Avitus of Vienne (9780853235880) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2003 ; 39 ; 9780853236481 ;  ; 9780853236481 ; Constantine and Christendom (9780853236481) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2004 ; 40 ; 9780853239888 ;  ; 9780853239888 ; Lactantius (9780853239888) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2004 ; 41 ; 9780853235095 ;  ; 9780853235095 ; Selected Letters of Libanius (9780853235095) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2004 ; 42 ; 9780853239987 ;  ; 9780853239987 ; Cassiodorus: Institutions of Divine and Secular Learning (9780853239987) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2005 ; 43 ; 9780853238294 ;  ; 9780853238294 ; Ambrose of Milan (9780853238294) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2005 ; 45 ; 9780853230397 ;  ; 9780853230397 ; The Acts of the Council of Chalcedon (9780853230397) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2006 ; 44 ; 9780853239598 ;  ; 9780853239598 ; The Chronicle of Ireland (9780853239598) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2006 ; 47 ; 9781846310010 ;  ; 9781846310010 ; Bede: On Ezra and Nehemiah (9781846310010) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2007 ; 13 ; 9781846311543 ;  ; 9781846311543 ; The Lives of the Eighth-Century Popes AD 715-817 (9781846311543) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2008 ; 46 ; 9781846311598 ;  ; 9781846311598 ; The Formularies of Angers and Marculf (9781846311598) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2008 ; 48 ; 9781846310881 ;  ; 9781846310881 ; Bede: On Genesis (9781846310881) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2008 ; 49 ; 9781846311321 ;  ; 9781846311321 ; Nemesius (9781846311321) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2008 ; 50 ; 9781846311611 ;  ; 9781846311611 ; Sources for the Study of the School of Nisibis (9781846311611) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2009 ; 6 ; 9781846314766 ;  ; 9781846314766 ; Book of Pontiffs, The (9781846314766) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2009 ; 51 ; 9781846311789 ;  ; 9781846311789 ; The Acts of the Council of Constantinople of 553 (9781846311789) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2009 ; 52 ; 9781846312090 ;  ; 9781846312090 ; Three Political Voices from the Age of Justinian (9781846312090) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2009 ; 53 ; 9781846312168 ;  ; 9781846312168 ; History and Hagiography from the Late Antique Sinai (9781846312168) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2010 ; 54 ; 9781846314957 ;  ; 9781846314957 ; Bede: On the Nature of Things and On Times (9781846314957) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2010 ; 55 ; 9781846314735 ;  ; 9781846314735 ; Orosius: Seven Books of History against the Pagans (9781846314735) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2010 ; 56 ; 9781846314933 ;  ; 9781846314933 ; The Chronicle of Pseudo-Zachariah Rhetor (9781846314933) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2011 ; 57 ; 9781846316975 ;  ; 9781846316975 ; Theophilus of Edessa's Chronicle and the Circulation of Historical Knowledge in Late Antiquity and Early Islam (9781846316975) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2013 ; 58 ; 9781846318443 ;  ; 9781846318443 ; Bede: Commentary on Revelation (9781846318443) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2013 ; 59 ; 9781846318870 ;  ; 9781846318870 ; Funerary Speech for John Chrysostom (9781846318870) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2013 ; 60 ; 9781846318825 ;  ; 9781846318825 ; Two Early Lives of Severos, Patriarch of Antioch (9781846318825) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2014 ; 61 ; 9781781380390 ;  ; 9781781380390 ; The Acts of the Lateran Synod of 649 (9781781380390) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2014 ; 62 ; 9781846318252 ;  ; 9781846318252 ; Four Byzantine Novels (9781846318252) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2015 ; 63 ; 9781846316487 ;  ; 9781846316487 ; Chalcedon in Context: Church Councils 400–700 (9781846316487) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2015 ; 64 ; 9781781381298 ;  ; 9781781381298 ; Macarius, Apocriticus (9781781381298) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2015 ; 63 ; 9781846316487 ; 9781846314513 ; 9781846314513 ; Chalcedon in Context: Church Councils 400–700  (9781846314513) ; https://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2016 ; 65 ; 9781781382523 ;  ; 9781781382523 ; Between City and School (9781781382523) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2016 ; 66 ; 9781781381755 ;  ; 9781781381755 ; Khalifa ibn Khayyat's History on the Umayyad Dynasty (660–750) (9781781381755) ; http://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2016 ; 70 ; 9781786941268 ; 9781786941268 ; 9781786941268 ; The Donatist Schism: Controversy and Contexts (9781786941268) ; https://online.liverpooluniversitypress.co.uk/ >
+   au < down ; 2016 ; 69 ; 9781781383285 ; 9781781383285 ; 9781781383285 ; Imperial Invectives against Constantius II (9781781383285) ; https://online.liverpooluniversitypress.co.uk/ >
    au < exists ; 2017 ; 71 ; 9781789628937 ;  ; 9781789628937 ; The Laws of the Isaurian Era: The Ecloga and its Appendices (9781789628937) ; https://online.liverpooluniversitypress.co.uk/ >
    au < exists ; 2017 ; 72 ; 9781789628807 ;  ; 9781789628807 ; Jonas of Bobbio: Life of Columbanus, Life of John of Réomé, and Life of Vedast (9781789628807) ; https://online.liverpooluniversitypress.co.uk/ >
 
@@ -97,96 +97,96 @@
     implicit < status ; year ; volume ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] >
     #series = lejc
 
-    au < released ; 1965 ; 1 ; 9781904113669 ; 9781909821330 ; 9781904113669 ; Hebrew Poems from Spain (9781904113669) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1972 ; 2 ; 9781874774181 ; 9781909821385 ; 9781874774181 ; Hasidic Prayer (9781874774181) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1973 ; 3 ; 9781874774532 ; 9781909821187 ; 9781874774532 ; Moses Mendelssohn: A Biographical Study (9781874774532) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1973 ; 4 ; 9781904113232 ; 9781909821347 ; 9781904113232 ; The Book of Direction to the Duties of the Heart (9781904113232) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1975 ; 5 ; 9781904113270 ; 9781909821392 ; 9781904113270 ; Theology in the Responsa (9781904113270) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1978 ; 6 ; 9781904113164 ; 9781909821507 ; 9781904113164 ; Theology and Poetry: Studies in the Medieval Piyyut (9781904113164) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1982 ; 7 ; 9781874774167 ; 9781909821453 ; 9781874774167 ; Judaism on Trial: Jewish-Christian Disputations in the Middle Ages (9781874774167) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1982 ; 8 ; 9781904113133 ; 9781909821163 ; 9781904113133 ; Principles of Faith Rosh Amanah (9781904113133) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1982 ; 9 ; 9781904113690 ; 9781909821491 ; 9781904113690 ; Marrano Poets of the Seventeenth Century (9781904113690) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1982 ; 10 ; 9781904113591 ; 9781909821873 ; 9781904113591 ; Ideology and Experience: Antisemitism in France at the time of the Dreyfus Affair (9781904113591) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1983 ; 11 ; 9781904113508 ; 9781909821774 ; 9781904113508 ; Mystical Theology and Social Dissent: The Life and Works of Judah Loew of Prague (9781904113508) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1986 ; 12 ; 9781874774297 ; 9781909821279 ; 9781874774297 ; Victorian Jews through British Eyes (9781874774297) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1986 ; 13 ; 9781904113218 ; 9781909821422 ; 9781904113218 ; Dogma in Medieval Jewish Thought: From Maimonides to Abravanal (9781904113218) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1986 ; 14 ; 9781904113171 ; 9781909821521 ; 9781904113171 ; Polin Studies in Polish Jewry Volume 1: Poles and Jews: Renewing the Dialogue (9781904113171) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1986 ; 15 ; 9781874774273 ; 9781909821781 ; 9781874774273 ; Verus Israel: A Study of the Relations between Christians and Jews in the Roman Empire AD 135-425 (9781874774273) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1986 ; 16 ; 9781874774327 ; 9781909821866 ; 9781874774327 ; Studies in East European Jewish Mysticism and Hasidism (9781874774327) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1987 ; 17 ; 9781904113201 ; 9781909821217 ; 9781904113201 ; The Hope of Israel (9781904113201) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1987 ; 18 ; 9781904113782 ; 9781909821538 ; 9781904113782 ; Polin Studies in Polish Jewry Volume 2: Jews and the Emerging Polish State (9781904113782) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1988 ; 19 ; 9781904113188 ; 9781909821545 ; 9781904113188 ; Polin Studies in Polish Jewry Volume 3: The Jews of Warsaw (9781904113188) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1989 ; 20 ; 9781874774280 ; 9781909821828 ; 9781874774280 ; The Wisdom of the Zohar, Volumes 1-3 (9781874774280) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1989 ; 21 ; 9781904113140 ; 9781909821415 ; 9781904113140 ; From Christianity to Judaism: The Story of Isaac Orobio de Castro (9781904113140) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1989 ; 22 ; 9781904113195 ; 9781909821552 ; 9781904113195 ; Polin Studies in Polish Jewry Volume 4: Poles and Jews: Perceptions and Misperceptions (9781904113195) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1989 ; 23 ; 9781904113492 ; 9781909821880 ; 9781904113492 ; The Jews of Vienna in the Age of Franz Joseph (9781904113492) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1990 ; 24 ; 9781874774174 ; 9781909821255 ; 9781874774174 ; Rabbis and Jewish Communities in Renaissance Italy (9781874774174) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1990 ; 25 ; 9781904113799 ; 9781909821569 ; 9781904113799 ; Polin Studies in Polish Jewry Volume 5: New Research, New Views (9781904113799) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1991 ; 26 ; 9781874774266 ; 9781909821439 ; 9781874774266 ; Perspectives on Maimonides: Philosophical and Historical Studies (9781874774266) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1991 ; 27 ; 9781904113157 ; 9781909821576 ; 9781904113157 ; Polin Studies in Polish Jewry Volume 6: Jews in Łódź 1820-1939 (9781904113157) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1992 ; 28 ; 9781906764012 ; 9781909821446 ; 9781906764012 ; War, Jews, and the New Europe: The Diplomacy of Lucien Wolf 1914-1919 (9781906764012) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1992 ; 29 ; 9781874774389 ; 9781909821477 ; 9781874774389 ; The Kibbutz Movement Volume 1: Origins and Growth 1909-1939 (9781874774389) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1997 ; 30 ; 9781874774396 ; 9781909821484 ; 9781874774396 ; The Kibbutz Movement Volume 2: Crisis and Achievement 1939-1995 (9781874774396) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1993 ; 31 ; 9781874774082 ; 9781909821156 ; 9781874774082 ; Realism, Caricature, and Bias: The Fiction of Mendele Mocher Sefarim (9781874774082) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1993 ; 32 ; 9781874774143 ; 9781909821705 ; 9781874774143 ; From Shtetl to Socialism (9781874774143) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1993 ; 33 ; 9781874774013 ; 9781909821743 ; 9781874774013 ; One People? Tradition, Modernity, and Jewish Unity (9781874774013) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1994 ; 34 ; 9781904113225 ; 9781909821590 ; 9781904113225 ; Polin Studies in Polish Jewry Volume 8: Jews in Independent Poland 1918-1939 (9781904113225) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2013 ; 35 ; 9781906764944 ; 9781786948274 ; 9781906764944 ; Hasidism and Politics: The Kingdom of Poland, 18151864 (9781906764944) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1995 ; 36 ; 9781874774112 ; 9781909821293 ; 9781874774112 ; Turn Aside From Evil and Do Good: An Introduction and a Way to the Tree of Life (9781874774112) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1996 ; 37 ; 9781904113812 ; 9781909821606 ; 9781904113812 ; Polin Studies in Polish Jewry Volume 9: Jews, Poles, Socialists and the Failure of an Ideal (9781904113812) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1996 ; 38 ; 9781874774358 ; 9781909821712 ; 9781874774358 ; Hasidism Reappraised (9781874774358) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1996 ; 39 ; 9781874774334 ; 9781909821835 ; 9781874774334 ; Love, Work, and Death: Jewish Life in Medieval Umbria (9781874774334) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1997 ; 40 ; 9781904113768 ; 9781909821200 ; 9781904113768 ; The Golden Age of Aragonese Jewry: Community and Society in the Crown of Aragon, 1213-1327 (9781904113768) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1997 ; 41 ; 9781874774426 ; 9781909821361 ; 9781874774426 ; European Jewry in the Age of Mercantilism 1550-1750 (9781874774426) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1992 ; 42 ; 9781904113805 ; 9781909821583 ; 9781904113805 ; Polin Studies in Polish Jewry Volume 7: Jewish Life in Nazi Occupied Warsaw (9781904113805) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1997 ; 43 ; 9781874774310 ; 9781909821613 ; 9781874774310 ; Polin Studies in Polish Jewry Volume 10: Jews in Early Modern Poland (9781874774310) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1997 ; 44 ; 9781874774365 ; 9781909821767 ; 9781874774365 ; Athens in Jerusalem: Classical Antiquity and Hellenism in the Making of the Modern Secular Jew (9781874774365) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1997 ; 45 ; 9781874774372 ; 9781909821859 ; 9781874774372 ; Jewish Hymnography: A Literary History (9781874774372) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1998 ; 46 ; 9781874774341 ; 9781909821620 ; 9781874774341 ; Polin Studies in Polish Jewry Volume 11: Focusing on Aspects and Experiences of Religion (9781874774341) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1998 ; 47 ; 9781874774457 ; 9781909821811 ; 9781874774457 ; Creating American Reform Judaism: The Life and Times of Isaac Mayer Wise (9781874774457) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1999 ; 48 ; 9781904113119 ; 9781909821378 ; 9781904113119 ; Beyond Reasonable Doubt (9781904113119) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1999 ; 49 ; 9781874774402 ; 9781909821637 ; 9781874774402 ; Focusing on Galicia: Jews, Poles and Ukranians 1772-1918 (9781874774402) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1999 ; 50 ; 9781874774556 ; 9781909821736 ; 9781874774556 ; Is There a Jewish Philosophy? Rethinking Fundamentals (9781874774556) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 1999 ; 51 ; 9781874774914 ; 9781909821750 ; 9781874774914 ; Between the Yeshiva World and Modern Orthodoxy: The Life and Works of Rabbi Jehiel Jacob Weinburg 1884-1966 (9781874774914) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2000 ; 52 ; 9781874774488 ; 9781909821408 ; 9781874774488 ; A Tree of Life: Diversity, Flexibility, and Creativity in Jewish Law (9781874774488) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2000 ; 53 ; 9781874774785 ; 9781909821514 ; 9781874774785 ; Polin Studies in Polish Jewry: Index to Volumes 1-12 (9781874774785) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2000 ; 54 ; 9781874774471 ; 9781909821644 ; 9781874774471 ; Polin Studies in Polish Jewry Volume 13: Focusing on the Holocaust and its Aftermath (9781874774471) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2000 ; 55 ; 9781904113829 ; 9781909821729 ; 9781904113829 ; The Jews of Vienna and the First World War (9781904113829) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2000 ; 56 ; 9781904113126 ; 9781909821804 ; 9781904113126 ; Reluctant Cosmopolitans: The Portuguese Jews of Seventeenth-Century Amsterdam (9781904113126) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2001 ; 57 ; 9781874774983 ; 9781909821170 ; 9781874774983 ; The Book of Tahkemoni: Jewish Tales from Medieval Spain (9781874774983) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2001 ; 58 ; 9781904113287 ; 9781909821002 ; 9781904113287 ; The Expulsion of the Jews from Spain (9781904113287) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2001 ; 59 ; 9781904113751 ; 9781909821019 ; 9781904113751 ; Rebbe, Messiah, and Scandal (9781904113751) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2001 ; 60 ; 9781904113263 ; 9781909821316 ; 9781904113263 ; New Perspectives on the Haskalah (9781904113263) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2001 ; 61 ; 9781904113102 ; 9781909821323 ; 9781904113102 ; Haskalah and History: The Emergence of a Modern Jewish Historical Consciousness (9781904113102) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2001 ; 62 ; 9781874774709 ; 9781909821651 ; 9781874774709 ; Polin Studies in Polish Jewry Volume 14: Focusing on Jews in the Polish Borderlands (9781874774709) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2002 ; 63 ; 9781904113553 ; 9781909821231 ; 9781904113553 ; The History of the Jews in the Netherlands (9781904113553) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2002 ; 64 ; 9781874774723 ; 9781909821668 ; 9781874774723 ; Polin Studies in Polish Jewry Volume 15: Focusing on Religious Life 1500-1900 (9781874774723) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2003 ; 65 ; 9781874774808 ; 9781909821248 ; 9781874774808 ; British Jewry and the Holocaust (9781874774808) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2003 ; 66 ; 9781904113775 ; 9781909821224 ; 9781904113775 ; Yiddish Theatre: New Approaches (9781904113775) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2003 ; 67 ; 9781906764425 ; 9781909821262 ; 9781906764425 ; Pride versus Prejudice: Jewish Doctors and Lawyers in England, 1890-1990 (9781906764425) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2003 ; 68 ; 9781906764265 ; 9781909821460 ; 9781906764265 ; Seeking Zion: Modernity and Messianic Activism in the Writings of Tsevi Hirsch Kalischer (9781906764265) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2003 ; 69 ; 9781874774747 ; 9781909821675 ; 9781874774747 ; Polin Studies in Polish Jewry Volume 16: Focusing on Jewish Popular Culture and its Afterlife (9781874774747) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2003 ; 70 ; 9781904113683 ; 9781909821798 ; 9781904113683 ; Time and Process in Ancient Judaism (9781904113683) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2004 ; 71 ; 9781904113331 ; 9781909821040 ; 9781904113331 ; The Three Temples: On the Emergence of Jewish Mysticism (9781904113331) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2004 ; 72 ; 9781906764234 ; 9781909821132 ; 9781906764234 ; The Limits of Orthodox Theology (9781906764234) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2004 ; 73 ; 9781874774945 ; 9781909821194 ; 9781874774945 ; Arthur Szyk: Artist, Jew, Pole (9781874774945) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2004 ; 74 ; 9781904113324 ; 9781909821286 ; 9781904113324 ; Yom Tov Lipmann Heller: Portrait of a Seventeenth-Century Rabbi (9781904113324) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2004 ; 75 ; 9781874774563 ; 9781909821354 ; 9781874774563 ; Meshal Haqadmoni: Fables from the Distant Past Volumes 1 & 2 (9781874774563) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2004 ; 76 ; 9781874774761 ; 9781909821682 ; 9781874774761 ; Polin Studies in Polish Jewry Volume 17: The Shtetl: Myth and Reality (9781874774761) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2005 ; 77 ; 9781874774938 ; 9781909821699 ; 9781874774938 ; Polin Studies in Polish Jewry Volume 18: Jewish Women in Eastern Europe (9781874774938) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2005 ; 78 ; 9781906764029 ; 9781909821897 ; 9781906764029 ; Haskalah and Hasidism in the Kingdom of Poland: A History of Conflict (9781906764029) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2006 ; 79 ; 9781906764159 ; 9781909821088 ; 9781906764159 ; Maimonides' Confrontation with Mysticism (9781906764159) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2006 ; 80 ; 9781904113041 ; 9781909821309 ; 9781904113041 ; The Mystical Origins of Hasidism (9781904113041) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2007 ; 81 ; 9781904113850 ; 9781909821125 ; 9781904113850 ; How Jewish is Jewish History? (9781904113850) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2007 ; 82 ; 9781906764050 ; 9781909821064 ; 9781906764050 ; The Book in the Jewish World, 1700-1900 (9781906764050) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2008 ; 83 ; 9781904113454 ; 9781909821019 ; 9781904113454 ; Jewishness: Expression, Identity and Representation (9781904113454) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2008 ; 84 ; 9781906764418 ; 9781909821095 ; 9781906764418 ; The Hasidic Tale (9781906764418) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2009 ; 85 ; 9781904113744 ; 9781909821101 ; 9781904113744 ; Jewish Day Schools, Jewish Communities (9781904113744) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2010 ; 86 ; 9781906764562 ; 9781909821071 ; 9781906764562 ; Syrian Jewry in Transition (9781906764562) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2010 ; 87 ; 9781906764531 ; 9781909821149 ; 9781906764531 ; Families, Rabbis, and Education (9781906764531) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2011 ; 88 ; 9781906764777 ; 9781909821033 ; 9781906764777 ; Maimonides the Rationalist (9781906764777) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2012 ; 89 ; 9781906764920 ; 9781909821057 ; 9781906764920 ; Jewish Theology and World Religions (9781906764920) ; http://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2013 ; 90 ; 9781906764449 ; 9781909821118 ; 9781906764449 ; Founder of Hasidism: A Quest for the Historical Ba'al Shem Tov (9781906764449) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1965 ; 1 ; 9781904113669 ; 9781909821330 ; 9781904113669 ; Hebrew Poems from Spain (9781904113669) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1972 ; 2 ; 9781874774181 ; 9781909821385 ; 9781874774181 ; Hasidic Prayer (9781874774181) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1973 ; 3 ; 9781874774532 ; 9781909821187 ; 9781874774532 ; Moses Mendelssohn: A Biographical Study (9781874774532) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1973 ; 4 ; 9781904113232 ; 9781909821347 ; 9781904113232 ; The Book of Direction to the Duties of the Heart (9781904113232) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1975 ; 5 ; 9781904113270 ; 9781909821392 ; 9781904113270 ; Theology in the Responsa (9781904113270) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1978 ; 6 ; 9781904113164 ; 9781909821507 ; 9781904113164 ; Theology and Poetry: Studies in the Medieval Piyyut (9781904113164) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1982 ; 7 ; 9781874774167 ; 9781909821453 ; 9781874774167 ; Judaism on Trial: Jewish-Christian Disputations in the Middle Ages (9781874774167) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1982 ; 8 ; 9781904113133 ; 9781909821163 ; 9781904113133 ; Principles of Faith Rosh Amanah (9781904113133) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1982 ; 9 ; 9781904113690 ; 9781909821491 ; 9781904113690 ; Marrano Poets of the Seventeenth Century (9781904113690) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1982 ; 10 ; 9781904113591 ; 9781909821873 ; 9781904113591 ; Ideology and Experience: Antisemitism in France at the time of the Dreyfus Affair (9781904113591) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1983 ; 11 ; 9781904113508 ; 9781909821774 ; 9781904113508 ; Mystical Theology and Social Dissent: The Life and Works of Judah Loew of Prague (9781904113508) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1986 ; 12 ; 9781874774297 ; 9781909821279 ; 9781874774297 ; Victorian Jews through British Eyes (9781874774297) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1986 ; 13 ; 9781904113218 ; 9781909821422 ; 9781904113218 ; Dogma in Medieval Jewish Thought: From Maimonides to Abravanal (9781904113218) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1986 ; 14 ; 9781904113171 ; 9781909821521 ; 9781904113171 ; Polin Studies in Polish Jewry Volume 1: Poles and Jews: Renewing the Dialogue (9781904113171) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1986 ; 15 ; 9781874774273 ; 9781909821781 ; 9781874774273 ; Verus Israel: A Study of the Relations between Christians and Jews in the Roman Empire AD 135-425 (9781874774273) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1986 ; 16 ; 9781874774327 ; 9781909821866 ; 9781874774327 ; Studies in East European Jewish Mysticism and Hasidism (9781874774327) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1987 ; 17 ; 9781904113201 ; 9781909821217 ; 9781904113201 ; The Hope of Israel (9781904113201) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1987 ; 18 ; 9781904113782 ; 9781909821538 ; 9781904113782 ; Polin Studies in Polish Jewry Volume 2: Jews and the Emerging Polish State (9781904113782) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1988 ; 19 ; 9781904113188 ; 9781909821545 ; 9781904113188 ; Polin Studies in Polish Jewry Volume 3: The Jews of Warsaw (9781904113188) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1989 ; 20 ; 9781874774280 ; 9781909821828 ; 9781874774280 ; The Wisdom of the Zohar, Volumes 1-3 (9781874774280) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1989 ; 21 ; 9781904113140 ; 9781909821415 ; 9781904113140 ; From Christianity to Judaism: The Story of Isaac Orobio de Castro (9781904113140) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1989 ; 22 ; 9781904113195 ; 9781909821552 ; 9781904113195 ; Polin Studies in Polish Jewry Volume 4: Poles and Jews: Perceptions and Misperceptions (9781904113195) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1989 ; 23 ; 9781904113492 ; 9781909821880 ; 9781904113492 ; The Jews of Vienna in the Age of Franz Joseph (9781904113492) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1990 ; 24 ; 9781874774174 ; 9781909821255 ; 9781874774174 ; Rabbis and Jewish Communities in Renaissance Italy (9781874774174) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1990 ; 25 ; 9781904113799 ; 9781909821569 ; 9781904113799 ; Polin Studies in Polish Jewry Volume 5: New Research, New Views (9781904113799) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1991 ; 26 ; 9781874774266 ; 9781909821439 ; 9781874774266 ; Perspectives on Maimonides: Philosophical and Historical Studies (9781874774266) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1991 ; 27 ; 9781904113157 ; 9781909821576 ; 9781904113157 ; Polin Studies in Polish Jewry Volume 6: Jews in Łódź 1820-1939 (9781904113157) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1992 ; 28 ; 9781906764012 ; 9781909821446 ; 9781906764012 ; War, Jews, and the New Europe: The Diplomacy of Lucien Wolf 1914-1919 (9781906764012) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1992 ; 29 ; 9781874774389 ; 9781909821477 ; 9781874774389 ; The Kibbutz Movement Volume 1: Origins and Growth 1909-1939 (9781874774389) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1997 ; 30 ; 9781874774396 ; 9781909821484 ; 9781874774396 ; The Kibbutz Movement Volume 2: Crisis and Achievement 1939-1995 (9781874774396) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1993 ; 31 ; 9781874774082 ; 9781909821156 ; 9781874774082 ; Realism, Caricature, and Bias: The Fiction of Mendele Mocher Sefarim (9781874774082) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1993 ; 32 ; 9781874774143 ; 9781909821705 ; 9781874774143 ; From Shtetl to Socialism (9781874774143) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1993 ; 33 ; 9781874774013 ; 9781909821743 ; 9781874774013 ; One People? Tradition, Modernity, and Jewish Unity (9781874774013) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1994 ; 34 ; 9781904113225 ; 9781909821590 ; 9781904113225 ; Polin Studies in Polish Jewry Volume 8: Jews in Independent Poland 1918-1939 (9781904113225) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2013 ; 35 ; 9781906764944 ; 9781786948274 ; 9781906764944 ; Hasidism and Politics: The Kingdom of Poland, 18151864 (9781906764944) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1995 ; 36 ; 9781874774112 ; 9781909821293 ; 9781874774112 ; Turn Aside From Evil and Do Good: An Introduction and a Way to the Tree of Life (9781874774112) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1996 ; 37 ; 9781904113812 ; 9781909821606 ; 9781904113812 ; Polin Studies in Polish Jewry Volume 9: Jews, Poles, Socialists and the Failure of an Ideal (9781904113812) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1996 ; 38 ; 9781874774358 ; 9781909821712 ; 9781874774358 ; Hasidism Reappraised (9781874774358) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1996 ; 39 ; 9781874774334 ; 9781909821835 ; 9781874774334 ; Love, Work, and Death: Jewish Life in Medieval Umbria (9781874774334) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1997 ; 40 ; 9781904113768 ; 9781909821200 ; 9781904113768 ; The Golden Age of Aragonese Jewry: Community and Society in the Crown of Aragon, 1213-1327 (9781904113768) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1997 ; 41 ; 9781874774426 ; 9781909821361 ; 9781874774426 ; European Jewry in the Age of Mercantilism 1550-1750 (9781874774426) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1992 ; 42 ; 9781904113805 ; 9781909821583 ; 9781904113805 ; Polin Studies in Polish Jewry Volume 7: Jewish Life in Nazi Occupied Warsaw (9781904113805) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1997 ; 43 ; 9781874774310 ; 9781909821613 ; 9781874774310 ; Polin Studies in Polish Jewry Volume 10: Jews in Early Modern Poland (9781874774310) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1997 ; 44 ; 9781874774365 ; 9781909821767 ; 9781874774365 ; Athens in Jerusalem: Classical Antiquity and Hellenism in the Making of the Modern Secular Jew (9781874774365) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1997 ; 45 ; 9781874774372 ; 9781909821859 ; 9781874774372 ; Jewish Hymnography: A Literary History (9781874774372) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1998 ; 46 ; 9781874774341 ; 9781909821620 ; 9781874774341 ; Polin Studies in Polish Jewry Volume 11: Focusing on Aspects and Experiences of Religion (9781874774341) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1998 ; 47 ; 9781874774457 ; 9781909821811 ; 9781874774457 ; Creating American Reform Judaism: The Life and Times of Isaac Mayer Wise (9781874774457) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1999 ; 48 ; 9781904113119 ; 9781909821378 ; 9781904113119 ; Beyond Reasonable Doubt (9781904113119) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1999 ; 49 ; 9781874774402 ; 9781909821637 ; 9781874774402 ; Focusing on Galicia: Jews, Poles and Ukranians 1772-1918 (9781874774402) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1999 ; 50 ; 9781874774556 ; 9781909821736 ; 9781874774556 ; Is There a Jewish Philosophy? Rethinking Fundamentals (9781874774556) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 1999 ; 51 ; 9781874774914 ; 9781909821750 ; 9781874774914 ; Between the Yeshiva World and Modern Orthodoxy: The Life and Works of Rabbi Jehiel Jacob Weinburg 1884-1966 (9781874774914) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2000 ; 52 ; 9781874774488 ; 9781909821408 ; 9781874774488 ; A Tree of Life: Diversity, Flexibility, and Creativity in Jewish Law (9781874774488) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2000 ; 53 ; 9781874774785 ; 9781909821514 ; 9781874774785 ; Polin Studies in Polish Jewry: Index to Volumes 1-12 (9781874774785) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2000 ; 54 ; 9781874774471 ; 9781909821644 ; 9781874774471 ; Polin Studies in Polish Jewry Volume 13: Focusing on the Holocaust and its Aftermath (9781874774471) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2000 ; 55 ; 9781904113829 ; 9781909821729 ; 9781904113829 ; The Jews of Vienna and the First World War (9781904113829) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2000 ; 56 ; 9781904113126 ; 9781909821804 ; 9781904113126 ; Reluctant Cosmopolitans: The Portuguese Jews of Seventeenth-Century Amsterdam (9781904113126) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2001 ; 57 ; 9781874774983 ; 9781909821170 ; 9781874774983 ; The Book of Tahkemoni: Jewish Tales from Medieval Spain (9781874774983) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2001 ; 58 ; 9781904113287 ; 9781909821002 ; 9781904113287 ; The Expulsion of the Jews from Spain (9781904113287) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2001 ; 59 ; 9781904113751 ; 9781909821019 ; 9781904113751 ; Rebbe, Messiah, and Scandal (9781904113751) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2001 ; 60 ; 9781904113263 ; 9781909821316 ; 9781904113263 ; New Perspectives on the Haskalah (9781904113263) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2001 ; 61 ; 9781904113102 ; 9781909821323 ; 9781904113102 ; Haskalah and History: The Emergence of a Modern Jewish Historical Consciousness (9781904113102) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2001 ; 62 ; 9781874774709 ; 9781909821651 ; 9781874774709 ; Polin Studies in Polish Jewry Volume 14: Focusing on Jews in the Polish Borderlands (9781874774709) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2002 ; 63 ; 9781904113553 ; 9781909821231 ; 9781904113553 ; The History of the Jews in the Netherlands (9781904113553) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2002 ; 64 ; 9781874774723 ; 9781909821668 ; 9781874774723 ; Polin Studies in Polish Jewry Volume 15: Focusing on Religious Life 1500-1900 (9781874774723) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2003 ; 65 ; 9781874774808 ; 9781909821248 ; 9781874774808 ; British Jewry and the Holocaust (9781874774808) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2003 ; 66 ; 9781904113775 ; 9781909821224 ; 9781904113775 ; Yiddish Theatre: New Approaches (9781904113775) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2003 ; 67 ; 9781906764425 ; 9781909821262 ; 9781906764425 ; Pride versus Prejudice: Jewish Doctors and Lawyers in England, 1890-1990 (9781906764425) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2003 ; 68 ; 9781906764265 ; 9781909821460 ; 9781906764265 ; Seeking Zion: Modernity and Messianic Activism in the Writings of Tsevi Hirsch Kalischer (9781906764265) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2003 ; 69 ; 9781874774747 ; 9781909821675 ; 9781874774747 ; Polin Studies in Polish Jewry Volume 16: Focusing on Jewish Popular Culture and its Afterlife (9781874774747) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2003 ; 70 ; 9781904113683 ; 9781909821798 ; 9781904113683 ; Time and Process in Ancient Judaism (9781904113683) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2004 ; 71 ; 9781904113331 ; 9781909821040 ; 9781904113331 ; The Three Temples: On the Emergence of Jewish Mysticism (9781904113331) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2004 ; 72 ; 9781906764234 ; 9781909821132 ; 9781906764234 ; The Limits of Orthodox Theology (9781906764234) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2004 ; 73 ; 9781874774945 ; 9781909821194 ; 9781874774945 ; Arthur Szyk: Artist, Jew, Pole (9781874774945) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2004 ; 74 ; 9781904113324 ; 9781909821286 ; 9781904113324 ; Yom Tov Lipmann Heller: Portrait of a Seventeenth-Century Rabbi (9781904113324) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2004 ; 75 ; 9781874774563 ; 9781909821354 ; 9781874774563 ; Meshal Haqadmoni: Fables from the Distant Past Volumes 1 & 2 (9781874774563) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2004 ; 76 ; 9781874774761 ; 9781909821682 ; 9781874774761 ; Polin Studies in Polish Jewry Volume 17: The Shtetl: Myth and Reality (9781874774761) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2005 ; 77 ; 9781874774938 ; 9781909821699 ; 9781874774938 ; Polin Studies in Polish Jewry Volume 18: Jewish Women in Eastern Europe (9781874774938) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2005 ; 78 ; 9781906764029 ; 9781909821897 ; 9781906764029 ; Haskalah and Hasidism in the Kingdom of Poland: A History of Conflict (9781906764029) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2006 ; 79 ; 9781906764159 ; 9781909821088 ; 9781906764159 ; Maimonides' Confrontation with Mysticism (9781906764159) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2006 ; 80 ; 9781904113041 ; 9781909821309 ; 9781904113041 ; The Mystical Origins of Hasidism (9781904113041) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2007 ; 81 ; 9781904113850 ; 9781909821125 ; 9781904113850 ; How Jewish is Jewish History? (9781904113850) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2007 ; 82 ; 9781906764050 ; 9781909821064 ; 9781906764050 ; The Book in the Jewish World, 1700-1900 (9781906764050) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2008 ; 83 ; 9781904113454 ; 9781909821019 ; 9781904113454 ; Jewishness: Expression, Identity and Representation (9781904113454) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2008 ; 84 ; 9781906764418 ; 9781909821095 ; 9781906764418 ; The Hasidic Tale (9781906764418) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2009 ; 85 ; 9781904113744 ; 9781909821101 ; 9781904113744 ; Jewish Day Schools, Jewish Communities (9781904113744) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2010 ; 86 ; 9781906764562 ; 9781909821071 ; 9781906764562 ; Syrian Jewry in Transition (9781906764562) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2010 ; 87 ; 9781906764531 ; 9781909821149 ; 9781906764531 ; Families, Rabbis, and Education (9781906764531) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2011 ; 88 ; 9781906764777 ; 9781909821033 ; 9781906764777 ; Maimonides the Rationalist (9781906764777) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2012 ; 89 ; 9781906764920 ; 9781909821057 ; 9781906764920 ; Jewish Theology and World Religions (9781906764920) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2013 ; 90 ; 9781906764449 ; 9781909821118 ; 9781906764449 ; Founder of Hasidism: A Quest for the Historical Ba'al Shem Tov (9781906764449) ; http://online.liverpooluniversitypress.co.uk/ >
 
 
    }
@@ -1241,7 +1241,7 @@
 #    au < exists ; 2016 ; 9781781382998 ; 9781781384527 ; 9781781382998 ; Haiti Exception (9781781382998) ; https://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382615 ;  ; 9781781382615 ; Hard Reading: Learning from Science Fiction (9781781382615) ; https://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382806 ;  ; 9781781382806 ; Home/Land (9781781382806) ; https://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2016 ; 9781781382936 ;  ; 9781781382936 ; Isidore of Seville (9781781382936) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2016 ; 9781781382936 ;  ; 9781781382936 ; Isidore of Seville (9781781382936) ; http://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382875 ; 9781781384602 ; 9781781382875 ; Lost in Transition: Constructing Memory in Contemporary Spain (9781781382875) ; https://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781846318788 ;  ; 9781846318788 ; Manchester (9781846318788) ; https://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382981 ; 9781781384534 ; 9781781382981 ; Manuscripts of the Wycliffite Bible in the Bodleian and Oxford College Libraries (9781781382981) ; https://online.liverpooluniversitypress.co.uk/ >
@@ -1250,7 +1250,7 @@
 #    au < exists ; 2016 ; 9781781383094 ; 9781781388624 ; 9781781383094 ; Race on Display in 20th- and 21st Century France (9781781383094) ; https://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382929 ;  ; 9781781382929 ; Slant Light (9781781382929) ; https://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382783 ;  ; 9781781382783 ; Soldiers as Workers (9781781382783) ; https://online.liverpooluniversitypress.co.uk/ >
-    au < released ; 2016 ; 9781781382820 ;  ; 9781781382820 ; Tale of Two Saints (9781781382820) ; http://online.liverpooluniversitypress.co.uk/ >
+    au < down ; 2016 ; 9781781382820 ;  ; 9781781382820 ; Tale of Two Saints (9781781382820) ; http://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382844 ; 9781781384541 ; 9781781382844 ; Terraforming: Ecopolitical Transformations and Environmentalism in Science Fiction (9781781382844) ; https://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382592 ;  ; 9781781382592 ; The Birds of Shropshire (9781781382592) ; https://online.liverpooluniversitypress.co.uk/ >
 #    au < exists ; 2016 ; 9781781382868 ; 9781781384558 ; 9781781382868 ; Vital Subjects (9781781382868) ; https://online.liverpooluniversitypress.co.uk/ >

@@ -35,8 +35,8 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
     au < doNotProcess ; doNotProcess ; 2015 ; Engaging Pedegogies in Catholic Higher Education (EPiCHE) Volume 1 ; 1 ; >
-    au < exists ; exists ; 2016 ; Engaging Pedegogies in Catholic Higher Education (EPiCHE) Volume 2 ; 2 ; >
-    au < exists ; exists ; 2017 ; Engaging Pedegogies in Catholic Higher Education (EPiCHE) Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2016 ; Engaging Pedegogies in Catholic Higher Education (EPiCHE) Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2017 ; Engaging Pedegogies in Catholic Higher Education (EPiCHE) Volume 3 ; 3 ; >
 
     }
   }

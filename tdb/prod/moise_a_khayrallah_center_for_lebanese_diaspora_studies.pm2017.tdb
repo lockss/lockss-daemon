@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Moise A. Khayrallah Center for Lebanese Diaspora Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:353
+
+    {
+    title <
+      name = Mashriq & Mahjar: Journal of Middle East and North African Migration Studies ;
+      eissn = 2169-4435
+
+    >
+
+      attr[journal_id] = 785
+
+      au < released ; 2013 ; Mashriq & Mahjar: Journal of Middle East and North African Migration Studies Volume 1 [2013] ; 15396 >
+      au < released ; 2014 ; Mashriq & Mahjar: Journal of Middle East and North African Migration Studies Volume 2 [2014] ; 15397 >
+      au < released ; 2015-2016 ; Mashriq & Mahjar: Journal of Middle East and North African Migration Studies Volume 3 [2015-2016] ; 15392 >
+      au < released ; 2017 ; Mashriq & Mahjar: Journal of Middle East and North African Migration Studies Volume 4 [2017] ; 15391 >
+      au < released ; 2018 ; Mashriq & Mahjar: Journal of Middle East and North African Migration Studies Volume 5 [2018] ; 15390 >
+      au < released ; 2019 ; Mashriq & Mahjar: Journal of Middle East and North African Migration Studies Volume 6 [2019] ; 15389 >
+      au < released ; 2020 ; Mashriq & Mahjar: Journal of Middle East and North African Migration Studies Volume 8 [2020] ; 15298 >
+      au < released ; 2020 ; Mashriq & Mahjar: Journal of Middle East and North African Migration Studies Volume 7 [2020] ; 15297 >
+
+    }
+
+}

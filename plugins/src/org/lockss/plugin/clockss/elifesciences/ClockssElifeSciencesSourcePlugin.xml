@@ -86,4 +86,17 @@
             </entry>
         </map>
     </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/?$"</string>
+            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-262.*"</string>
+            <!--
+            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-26232.r1.zip?$"</string>
+            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-26231.r4.zip?$"</string>
+            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-26232.r1.zip.*"</string>
+            <string>1, "http://clockss-ingest.lockss.org/sourcefiles/elife-released/2020/elife-06-26231.r4.zip.*"</string>
+            -->
+        </list>
+    </entry>
 </map>

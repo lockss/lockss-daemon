@@ -42,11 +42,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Mark Allen Group Plugin</string>
+    <string>Mark Allen Group Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -54,7 +54,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>119</string>
+    <string>122</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -78,7 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </map>
   </entry>  <entry>
     <string>au_name</string>
-    <string>"Mark Allen Group Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Mark Allen Group Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>

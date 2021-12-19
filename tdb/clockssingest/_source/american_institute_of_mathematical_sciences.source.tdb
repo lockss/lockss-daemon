@@ -3,9 +3,9 @@
   publisher <
     name = American Institute of Mathematical Sciences ;
     info[contract] = 2016 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
-
 
   {
 
@@ -21,8 +21,9 @@
     au < zapped ; finished ; 2017 ; American Institute of Mathematical Sciences Source Content 2017 ; 2017 >
     au < zapped ; finished ; 2018 ; American Institute of Mathematical Sciences Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; American Institute of Mathematical Sciences Source Content 2019 ; 2019 >
-    au < readySource ; finished ; 2020 ; American Institute of Mathematical Sciences Source Content 2020 ; 2020 >
+    au < zapped ; finished ; 2020 ; American Institute of Mathematical Sciences Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; American Institute of Mathematical Sciences Source Content 2021 ; 2021 >
+    au < expected ; exists ; 2022 ; American Institute of Mathematical Sciences Source Content 2022 ; 2022 >
 
   }
 

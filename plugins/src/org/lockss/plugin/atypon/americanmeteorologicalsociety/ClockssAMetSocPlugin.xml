@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
@@ -46,19 +46,19 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Meteorological Society Plugin (Legacy, CLOCKSS)</string>
+    <string>American Meteorological Society Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Meteorological Society Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Meteorological Society Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  support for http to https -->
   <entry>

@@ -91,12 +91,11 @@ implements SourceXmlSchemaHelper {
     }
   };
 
-  // this is global for all articles in the file - not always correct, don't cook
-  private static final String top = "/ARTICLEDATAS/ARTICLEDATA";
+  // For newspaper, we only get the first article of the xml/ARTICLEDATAS/ARTICLEDATA
+  private static final String top = "/ARTICLEDATAS/ARTICLEDATA[1]";
 
   // The following are all relative to the article node
   // from the immediately preceeding sibling -
-  private static String pub_title = "SOURCE";
   private static String pub_year = "DATE";
   private static String pub_volume = "VOLUME";
   private static String pub_issue = "NUMBER";
@@ -138,7 +137,7 @@ implements SourceXmlSchemaHelper {
   private static final String AUTHOR_SPLIT_CH = ",";
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    cookMap.put(pub_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(PUBLICATION_TITLE_PATH, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(pub_volume, MetadataField.FIELD_VOLUME);
     cookMap.put(pub_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(pub_year, MetadataField.FIELD_DATE);

@@ -35,14 +35,14 @@
     au < doNotProcess ; exists ; 2007 ; American Journal of Botany Volume 94 ; 94 ; >
     au < doNotProcess ; exists ; 2008 ; American Journal of Botany Volume 95 ; 95 ; >
     au < doNotProcess ; exists ; 2009 ; American Journal of Botany Volume 96 ; 96 ; >
-    au < frozen ; exists ; 2010 ; American Journal of Botany Volume 97 ; 97 ; >
-    au < frozen ; exists ; 2011 ; American Journal of Botany Volume 98 ; 98 ; >
+    au < finished ; crawling ; 2010 ; American Journal of Botany Volume 97 ; 97 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; American Journal of Botany Volume 98 ; 98 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; American Journal of Botany Volume 99 ; 99 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2013 ; American Journal of Botany Volume 100 ; 100 ; >
+    au < finished ; crawling ; 2013 ; American Journal of Botany Volume 100 ; 100 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; American Journal of Botany Volume 101 ; 101 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; American Journal of Botany Volume 102 ; 102 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; American Journal of Botany Volume 103 ; 103 ; >
-    au < frozen ; exists ; 2017 ; American Journal of Botany Volume 104 ; 104 ; >
+    au < finished ; crawling ; 2016 ; American Journal of Botany Volume 103 ; 103 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2017 ; American Journal of Botany Volume 104 ; 104 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -61,7 +61,7 @@
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       ####moved to Wiley
 
-      au < frozen ; exists ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 ; >
+      au < finished ; crawling ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Applications in Plant Sciences Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Applications in Plant Sciences Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; Applications in Plant Sciences Volume 4 ; 4 ; reingest1.clockss.org:8082 >

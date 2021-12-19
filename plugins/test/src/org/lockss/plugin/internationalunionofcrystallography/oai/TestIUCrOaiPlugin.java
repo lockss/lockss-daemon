@@ -95,8 +95,9 @@ public class TestIUCrOaiPlugin extends LockssPluginTestCase {
     // start page
     assertShouldCache(BASE_URL + "e/issues/2020/lockss.html", true, au);
     assertShouldCache(SCRIPT_URL + "lockss.html", true, au);
+    assertShouldCache(SCRIPT_URL + "lockss?au_oai_set=" + OAI_SET + "&au_oai_date=" + OAI_DATE, true, au);
     assertShouldCache(SCRIPT_URL + "auid=org%7Clockss%7Cplugin%7Cinternationalunionofcrystallography%7Coai%7CClockssIUCrOaiPlugin%26au_oai_date%7E2015-06" +
-        "%26au_oai_set%7Eiucrdata%26base...", true, au);
+        "%26au_oai_set%7Eiucrdata%26base...", false, au); // old style, should be excluded now
 
     // article pages
     assertShouldCache(BASE_URL + "x/issues/2016/01/00/su4003/su4003.pdf", true, au);
@@ -141,7 +142,7 @@ public class TestIUCrOaiPlugin extends LockssPluginTestCase {
 
   public void testGetName() throws Exception {
     ArchivalUnit au = createAu(AU_CONFIG);
-    assertEquals("International Union of Crystallography OAI Plugin (CLOCKSS), Base URL " + BASE_URL +
+    assertEquals("International Union of Crystallography Plugin (CLOCKSS), Base URL " + BASE_URL +
         ", Script URL " + SCRIPT_URL + ", OAI Set " + OAI_SET + ", OAI Date " + OAI_DATE,
         au.getName());
   }

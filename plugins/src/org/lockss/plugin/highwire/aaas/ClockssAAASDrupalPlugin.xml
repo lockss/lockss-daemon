@@ -42,19 +42,19 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Association for the Advancement of Science Plugin (CLOCKSS)</string>
+    <string>American Association for the Advancement of Science Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -92,7 +92,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Association for the Advancement of Science Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Association for the Advancement of Science Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalScrapingPdfFilterFactory</string>
+    <string>org.lockss.plugin.highwire.HighWireJCoreScrapingPdfFilterFactory</string>
   </entry>
   <!--Need the following feature enabled to bypass "Unable to fetch probe permission page"-->
   <entry>
@@ -108,14 +108,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <!-- Since  "plugin_cache_result_list" rules has not inherit relationship, in order for child to inherit from parent, need to have a copy of parent rules-->
       <!--  Copy parent level "plugin_cache_result_list" rules starts here -->
-      <string>403=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-      <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-      <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-      <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-      <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-      <string>520=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-      <string>524=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
-      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>403=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>502=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>503=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>520=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>524=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException=org.lockss.plugin.highwire.HighWireJCoreHttpResponseHandler</string>
       <!--  Copy parent level "plugin_cache_result_list" rules ends here -->
       <!-- The following rule is specific to org.lockss.plugin.highwire.aaas.ClockssAAASDrupalPlugin only to
       handle  File size (670090) differs from Content-Length header (690668): https://science.sciencemag.org/content/366/6470/eaay3544.long error-->

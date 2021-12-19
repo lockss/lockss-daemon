@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Springer Publishing Company ;
+    info[platform] = New HW platform Scolaris. Need review by mid Jan.
+  >
+
+    implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Ethical Human Psychology and Psychiatry ;
+      issn = 1559-4343 ;
+      eissn = 1938-9000 
+    >
+    param[base_url] = https://connect.springerpub.com/
+    param[journal_id] = sgrehpp
+    plugin = needs.plugin
+    #example manifest https://connect.springerpub.com/content/sgrehpp/lockss-manifest/vol_10_manifest.html
+
+    au < exists ; 2016 ; Ethical Human Psychology and Psychiatry Volume 5 ; 5 >
+    au < exists ; 2017 ; Ethical Human Psychology and Psychiatry Volume 6 ; 6 >
+    au < exists ; 2018 ; Ethical Human Psychology and Psychiatry Volume 7 ; 7 >
+    au < exists ; 2019 ; Ethical Human Psychology and Psychiatry Volume 8 ; 8 >
+    au < exists ; 2020 ; Ethical Human Psychology and Psychiatry Volume 9 ; 9 >
+    au < exists ; 2021 ; Ethical Human Psychology and Psychiatry Volume 10 ; 10 >
+
+  }
+
+}

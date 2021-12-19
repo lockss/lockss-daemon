@@ -14,7 +14,6 @@
     >
     #Moving to Atypon on October 11, 2017
 
-
     {
     plugin = org.lockss.plugin.atypon.hlthaff.HealthAffairsPlugin
     param[base_url] = https://www.healthaffairs.org/
@@ -26,9 +25,9 @@
     au < exists ; 2016 ; Health Affairs Volume 35 ; 35 >
     au < released ; 2017 ; Health Affairs Volume 36 ; 36 >
     au < released ; 2018 ; Health Affairs Volume 37 ; 37 >
-    au < expected ; 2019 ; Health Affairs Volume 38 ; 38 >
-    au < expected ; 2020 ; Health Affairs Volume 39 ; 39 >
-    au < expected ; 2021 ; Health Affairs Volume 40 ; 40 >
+    au < exists ; 2019 ; Health Affairs Volume 38 ; 38 >
+    au < exists ; 2020 ; Health Affairs Volume 39 ; 39 >
+    au < exists ; 2021 ; Health Affairs Volume 40 ; 40 >
 
     }
 

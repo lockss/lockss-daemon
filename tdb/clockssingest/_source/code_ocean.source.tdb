@@ -3,7 +3,8 @@
   publisher <
     name = Code Ocean ; #publisher will get set by plugin for metadata
     info[contract] = 2018 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -21,6 +22,7 @@
     au < zapped ; finished ; 2019 ; Code Ocean Source Content 2019 ; 2019 >
     au < readySource ; crawling ; 2020 ; Code Ocean Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; Code Ocean Source Content 2021 ; 2021 >
+    au < expected ; exists ; 2022 ; Code Ocean Source Content 2022 ; 2022 >
  
   }
 

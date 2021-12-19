@@ -134,8 +134,8 @@
     
     {
       
-      au < doesNotExist ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 ; 93 ; 1996 ; https://pubs.rsc.org/ >
-      au < manifest ; 1997 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ >
+      au < manifest ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1996] ; 93 ; 1996 ; https://pubs.rsc.org/ >
+      au < manifest ; 1997 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1997] ; 93 ; 1997 ; https://pubs.rsc.org/ >
       au < manifest ; 1998 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ >
       au < manifest ; 1999 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ >
       au < released ; 2000 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 96 ; 96 ; 2000 ; https://pubs.rsc.org/ >
@@ -168,8 +168,8 @@
     
     {
       
-      au < exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 92 ; 92 ; 1996 ; https://pubs.rsc.org/ >
-      au < manifest ; 1997 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 ; 93 ; 1997 ; https://pubs.rsc.org/ >
+      au < manifest ; 1996 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 [1996] ; 93 ; 1996 ; https://pubs.rsc.org/ >
+      au < manifest ; 1997 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 93 [1997] ; 93 ; 1997 ; https://pubs.rsc.org/ >
       au < manifest ; 1998 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 94 ; 94 ; 1998 ; https://pubs.rsc.org/ >
       au < manifest ; 1999 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 95 ; 95 ; 1999 ; https://pubs.rsc.org/ >
       au < released ; 2000 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 96 ; 96 ; 2000 ; https://pubs.rsc.org/ >
@@ -226,6 +226,21 @@
     
     {
       
+      au < manifest ; 1996 ; Chemical Communications Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ >
+      au < manifest ; 1997 ; Chemical Communications Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ >
+      au < manifest ; 1998 ; Chemical Communications Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ >
+      au < manifest ; 1999 ; Chemical Communications Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ >
+      au < released ; 2000 ; Chemical Communications Volume 2000 ; 0 ; 2000 ; https://pubs.rsc.org/ >
+      au < released ; 2001 ; Chemical Communications Volume 2001 ; 0 ; 2001 ; https://pubs.rsc.org/ >
+      au < released ; 2002 ; Chemical Communications Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ >
+      au < released ; 2003 ; Chemical Communications Volume 2003 ; 0 ; 2003 ; https://pubs.rsc.org/ >
+      au < released ; 2004 ; Chemical Communications Volume 2004 ; 0 ; 2004 ; https://pubs.rsc.org/ >
+      au < released ; 2005 ; Chemical Communications Volume 2005 ; 0 ; 2005 ; https://pubs.rsc.org/ >
+      au < released ; 2006 ; Chemical Communications Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ >
+      au < released ; 2007 ; Chemical Communications Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ >
+      au < released ; 2008 ; Chemical Communications Volume 2008 ; 0 ; 2008 ; https://pubs.rsc.org/ >
+      au < released ; 2009 ; Chemical Communications Volume 2009 ; 0 ; 2009 ; https://pubs.rsc.org/ >
+
       au < released ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; Chemical Communications Volume 47 ; 47 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Chemical Communications Volume 48 ; 48 ; 2012 ; http://pubs.rsc.org/ >
@@ -587,13 +602,12 @@
       au < manifest ; 2021 ; Faraday Discussions Volume 227 ; 227 ; 2021 ; https://pubs.rsc.org/ >
       au < manifest ; 2021 ; Faraday Discussions Volume 228 ; 228 ; 2021 ; https://pubs.rsc.org/ >
       au < manifest ; 2021 ; Faraday Discussions Volume 229 ; 229 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 231 ; 231 ; 2021 ; https://pubs.rsc.org/ >
+      au < manifest ; 2021 ; Faraday Discussions Volume 230 ; 230 ; 2021 ; https://pubs.rsc.org/ >
+      au < manifest ; 2021 ; Faraday Discussions Volume 231 ; 231 ; 2021 ; https://pubs.rsc.org/ >
       au < expected ; 2021 ; Faraday Discussions Volume 232 ; 232 ; 2021 ; https://pubs.rsc.org/ >
       au < expected ; 2021 ; Faraday Discussions Volume 233 ; 233 ; 2021 ; https://pubs.rsc.org/ >
       au < expected ; 2021 ; Faraday Discussions Volume 234 ; 234 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 235 ; 235 ; 2021 ; https://pubs.rsc.org/ >
-      au < expected ; 2021 ; Faraday Discussions Volume 236 ; 236 ; 2021 ; https://pubs.rsc.org/ >
+
     }
   }
 
@@ -1401,7 +1415,7 @@
       au < released ; 2011 ; Catalysis Science & Technology Volume 1 ; 1 ; 2011 ; http://pubs.rsc.org/ >
       au < released ; 2012 ; Catalysis Science & Technology Volume 2 ; 2 ; 2012 ; http://pubs.rsc.org/ >
       au < released ; 2013 ; Catalysis Science & Technology Volume 3 ; 3 ; 2013 ; http://pubs.rsc.org/ >
-      au < manifest ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 ; https://pubs.rsc.org/ >
+      au < released ; 2014 ; Catalysis Science & Technology Volume 4 ; 4 ; 2014 ; https://pubs.rsc.org/ >
       au < released ; 2015 ; Catalysis Science & Technology Volume 5 ; 5 ; 2015 ; http://pubs.rsc.org/ >
       au < released ; 2016 ; Catalysis Science & Technology Volume 6 ; 6 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; Catalysis Science & Technology Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ >
@@ -1774,9 +1788,9 @@
       comment[years] = Published 1997-1999
       param[journal_code] = jc
 
-      au < exists ; 1997 ; Journal of Chemical Research, Synopses Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ >
-      au < exists ; 1998 ; Journal of Chemical Research, Synopses Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ >
-      au < exists ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ >
+      au < manifest ; 1997 ; Journal of Chemical Research, Synopses Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ >
+      au < manifest ; 1998 ; Journal of Chemical Research, Synopses Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ >
+      au < manifest ; 1999 ; Journal of Chemical Research, Synopses Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ >
 
   }
 
@@ -1792,7 +1806,7 @@
       param[journal_code] = ta
 
       au < released ; 2013 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 1 ; 1 ; 2013 ; http://pubs.rsc.org/ >
-      au < manifest ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; https://pubs.rsc.org/ >
+      au < released ; 2014 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 2 ; 2 ; 2014 ; https://pubs.rsc.org/ >
       au < released ; 2015 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 3 ; 3 ; 2015 ; http://pubs.rsc.org/ >
       au < released ; 2016 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 4 ; 4 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ >
@@ -2113,20 +2127,20 @@
       comment[years] = Published 2001-2002
       param[journal_code] = dt
 
-      au < exists ; 1996 ; Journal of the Chemical Society, Dalton Transactions Volume 1996 ; 1996 ; 1996 ; https://pubs.rsc.org/ >
-      au < exists ; 1997 ; Journal of the Chemical Society, Dalton Transactions Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ >
-      au < exists ; 1998 ; Journal of the Chemical Society, Dalton Transactions Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ >
-      au < exists ; 1999 ; Journal of the Chemical Society, Dalton Transactions Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ >
-      au < exists ; 2000 ; Journal of the Chemical Society, Dalton Transactions Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ >
-      au < exists ; 2001 ; Journal of the Chemical Society, Dalton Transactions Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ >
-      au < exists ; 2002 ; Journal of the Chemical Society, Dalton Transactions Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ >
-      au < exists ; 2003 ; Journal of the Chemical Society, Dalton Transactions Volume 2003 ; 2003 ; 2003 ; https://pubs.rsc.org/ >
-      au < exists ; 2004 ; Journal of the Chemical Society, Dalton Transactions Volume 2004 ; 2004 ; 2004 ; https://pubs.rsc.org/ >
-      au < exists ; 2005 ; Journal of the Chemical Society, Dalton Transactions Volume 2005 ; 2005 ; 2005 ; https://pubs.rsc.org/ >
-      au < exists ; 2006 ; Journal of the Chemical Society, Dalton Transactions Volume 2006 ; 2006 ; 2006 ; https://pubs.rsc.org/ >
-      au < exists ; 2007 ; Journal of the Chemical Society, Dalton Transactions Volume 2007 ; 2007 ; 2007 ; https://pubs.rsc.org/ >
-      au < exists ; 2008 ; Journal of the Chemical Society, Dalton Transactions Volume 2008 ; 2008 ; 2008 ; https://pubs.rsc.org/ >
-      au < exists ; 2009 ; Journal of the Chemical Society, Dalton Transactions Volume 2009 ; 2009 ; 2009 ; https://pubs.rsc.org/ >
+      au < manifest ; 1996 ; Journal of the Chemical Society, Dalton Transactions Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ >
+      au < manifest ; 1997 ; Journal of the Chemical Society, Dalton Transactions Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ >
+      au < manifest ; 1998 ; Journal of the Chemical Society, Dalton Transactions Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ >
+      au < manifest ; 1999 ; Journal of the Chemical Society, Dalton Transactions Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ >
+      au < released ; 2000 ; Journal of the Chemical Society, Dalton Transactions Volume 2000 ; 0 ; 2000 ; https://pubs.rsc.org/ >
+      au < released ; 2001 ; Journal of the Chemical Society, Dalton Transactions Volume 2001 ; 0 ; 2001 ; https://pubs.rsc.org/ >
+      au < released ; 2002 ; Journal of the Chemical Society, Dalton Transactions Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ >
+      au < released ; 2003 ; Journal of the Chemical Society, Dalton Transactions Volume 2003 ; 0 ; 2003 ; https://pubs.rsc.org/ >
+      au < released ; 2004 ; Journal of the Chemical Society, Dalton Transactions Volume 2004 ; 0 ; 2004 ; https://pubs.rsc.org/ >
+      au < released ; 2005 ; Journal of the Chemical Society, Dalton Transactions Volume 2005 ; 0 ; 2005 ; https://pubs.rsc.org/ >
+      au < released ; 2006 ; Journal of the Chemical Society, Dalton Transactions Volume 2006 ; 0 ; 2006 ; https://pubs.rsc.org/ >
+      au < released ; 2007 ; Journal of the Chemical Society, Dalton Transactions Volume 2007 ; 0 ; 2007 ; https://pubs.rsc.org/ >
+      au < released ; 2008 ; Journal of the Chemical Society, Dalton Transactions Volume 2008 ; 0 ; 2008 ; https://pubs.rsc.org/ >
+      au < released ; 2009 ; Journal of the Chemical Society, Dalton Transactions Volume 2009 ; 0 ; 2009 ; https://pubs.rsc.org/ >
 
   }
 
@@ -2203,7 +2217,7 @@
       comment[years] = Published 2000-2000
       param[journal_code] = p1
 
-      au < exists ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ >
+      au < released ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2000 ; 0 ; 2000 ; https://pubs.rsc.org/ >
 
   }
 
@@ -2218,8 +2232,8 @@
       comment[years] = Published 2001-2002
       param[journal_code] = p1
 
-      au < exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ >
-      au < exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ >
+      au < released ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2001 ; 0 ; 2001 ; https://pubs.rsc.org/ >
+      au < manifest ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ >
 
   }
 
@@ -2258,10 +2272,10 @@
       au < doNotProcess ; 1993 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1993 ; 1993 ; 1993 ; https://pubs.rsc.org/ >
       au < doNotProcess ; 1994 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1994 ; 1994 ; 1994 ; https://pubs.rsc.org/ >
       au < doNotProcess ; 1995 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1995 ; 1995 ; 1995 ; https://pubs.rsc.org/ >
-      au < exists ; 1996 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1996 ; 1996 ; 1996 ; https://pubs.rsc.org/ >
-      au < exists ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ >
-      au < exists ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ >
-      au < exists ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ >
+      au < manifest ; 1996 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ >
+      au < manifest ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ >
+      au < manifest ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ >
+      au < manifest ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1: Organic and Bio-organic Chemistry Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ >
 
   }
 
@@ -2275,7 +2289,7 @@
       comment[years] = Published 2000-2000
       param[journal_code] = p2
 
-      au < exists ; 2000 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2000 ; 2000 ; 2000 ; https://pubs.rsc.org/ >
+      au < released ; 2000 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2000 ; 0 ; 2000 ; https://pubs.rsc.org/ >
 
   }
 
@@ -2290,8 +2304,8 @@
       comment[years] = Published 2001-2002
       param[journal_code] = p2
 
-      au < exists ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2001 ; 2001 ; 2001 ; https://pubs.rsc.org/ >
-      au < exists ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2002 ; 2002 ; 2002 ; https://pubs.rsc.org/ >
+      au < released ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2001 ; 0 ; 2001 ; https://pubs.rsc.org/ >
+      au < released ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ >
 
   }
 
@@ -2329,10 +2343,10 @@
       au < doNotProcess ; 1993 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1993 ; 1993 ; 1993 ; https://pubs.rsc.org/ >
       au < doNotProcess ; 1994 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1994 ; 1994 ; 1994 ; https://pubs.rsc.org/ >
       au < doNotProcess ; 1995 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1995 ; 1995 ; 1995 ; https://pubs.rsc.org/ >
-      au < exists ; 1996 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1996 ; 1996 ; 1996 ; https://pubs.rsc.org/ >
-      au < exists ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1997 ; 1997 ; 1997 ; https://pubs.rsc.org/ >
-      au < exists ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1998 ; 1998 ; 1998 ; https://pubs.rsc.org/ >
-      au < exists ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1999 ; 1999 ; 1999 ; https://pubs.rsc.org/ >
+      au < manifest ; 1996 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1996 ; 0 ; 1996 ; https://pubs.rsc.org/ >
+      au < manifest ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1997 ; 0 ; 1997 ; https://pubs.rsc.org/ >
+      au < manifest ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1998 ; 0 ; 1998 ; https://pubs.rsc.org/ >
+      au < manifest ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2: Physical Organic Chemistry Volume 1999 ; 0 ; 1999 ; https://pubs.rsc.org/ >
 
   }
 
@@ -2474,7 +2488,7 @@
 
       au < released ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 ; http://pubs.rsc.org/ >
       au < released ; 2011 ; MedChemComm Volume 2 ; 2 ; 2011 ; http://pubs.rsc.org/ >
-      au < manifest ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 ; https://pubs.rsc.org/ >
+      au < released ; 2012 ; MedChemComm Volume 3 ; 3 ; 2012 ; https://pubs.rsc.org/ >
       au < released ; 2013 ; MedChemComm Volume 4 ; 4 ; 2013 ; http://pubs.rsc.org/ >
       au < released ; 2014 ; MedChemComm Volume 5 ; 5 ; 2014 ; http://pubs.rsc.org/ >
       au < released ; 2015 ; MedChemComm Volume 6 ; 6 ; 2015 ; http://pubs.rsc.org/ >
@@ -2537,7 +2551,7 @@
       comment[years] = Published 2014-2016
       param[journal_code] = qo
 
-      au < manifest ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; https://pubs.rsc.org/ >
+      au < released ; 2014 ; Organic Chemistry Frontiers Volume 1 ; 1 ; 2014 ; https://pubs.rsc.org/ >
       au < released ; 2015 ; Organic Chemistry Frontiers Volume 2 ; 2 ; 2015 ; http://pubs.rsc.org/ >
       au < released ; 2016 ; Organic Chemistry Frontiers Volume 3 ; 3 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; Organic Chemistry Frontiers Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ >
@@ -2853,9 +2867,9 @@
       param[journal_code] = ra
 
       au < released ; 2011 ; RSC Advances Volume 1 ; 1 ; 2011 ; http://pubs.rsc.org/ >
-      au < manifest ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 ; https://pubs.rsc.org/ >
+      au < released ; 2012 ; RSC Advances Volume 2 ; 2 ; 2012 ; https://pubs.rsc.org/ >
       au < released ; 2013 ; RSC Advances Volume 3 ; 3 ; 2013 ; http://pubs.rsc.org/ >
-      au < manifest ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 ; https://pubs.rsc.org/ >
+      au < released ; 2014 ; RSC Advances Volume 4 ; 4 ; 2014 ; https://pubs.rsc.org/ >
       au < released ; 2015 ; RSC Advances Volume 5 ; 5 ; 2015 ; http://pubs.rsc.org/ >
       au < released ; 2016 ; RSC Advances Volume 6 ; 6 ; 2016 ; http://pubs.rsc.org/ >
       au < released ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ >

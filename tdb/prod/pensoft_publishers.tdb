@@ -72,7 +72,7 @@
     au < doNotProcess ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 ; https://biorisk.pensoft.net/ >
     au < released ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 ; http://biorisk.pensoft.net/ >
     au < released ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 ; http://biorisk.pensoft.net/ >
-    au < notReady ; 2015 ; 10 ; BioRisk Volume 2015 [abstract only] ; 2015 ; https://biorisk.pensoft.net/ > #no substance.
+    au < released ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 ; https://biorisk.pensoft.net/ > #no substance.
     au < released ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ >
     au < released ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ >
     au < released ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ >
@@ -438,7 +438,7 @@
       au < released ; 2018 ; 2018 ; Biodiversity Information Science and Standards Volume 2018 ; 2018 ; https://biss.pensoft.net/ >
       au < released ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Biodiversity Information Science and Standards Volume 2020 ; 2020 ; https://biss.pensoft.net/ >
-      au < expected ; 2021 ; 2021 ; Biodiversity Information Science and Standards Volume 2021 ; 2021 ; https://biss.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Biodiversity Information Science and Standards Volume 2021 ; 2021 ; https://biss.pensoft.net/ >
 
   }
 
@@ -452,6 +452,14 @@
 
       param[au_oai_set] = checklist
 
+      au < manifest ; 2010 ; 2010 ; Check List Volume 2010 ; 2010 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2011 ; 2011 ; Check List Volume 2011 ; 2011 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2012 ; 2012 ; Check List Volume 2012 ; 2012 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2013 ; 2013 ; Check List Volume 2013 ; 2013 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2014 ; 2014 ; Check List Volume 2014 ; 2014 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2015 ; 2015 ; Check List Volume 2015 ; 2015 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2016 ; 2016 ; Check List Volume 2016 ; 2016 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2017 ; 2017 ; Check List Volume 2017 ; 2017 ; https://checklist.pensoft.net/ >
       au < released ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ >
       au < released ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ >
@@ -502,7 +510,7 @@
       param[au_oai_set] = fmj
 
       au < released ; 2019 ; 2019 ; Food Modeling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ >
-      au < expected ; 2020 ; 2020 ; Food Modeling Journal (FMJ) Volume 2020 ; 2020 ; https://fmj.pensoft.net/ >
+      au < doesNotExist ; 2020 ; 2020 ; Food Modeling Journal (FMJ) Volume 2020 ; 2020 ; https://fmj.pensoft.net/ >
       au < manifest ; 2021 ; 2021 ; Food Modeling Journal (FMJ) Volume 2021 ; 2021 ; https://fmj.pensoft.net/ >
 
   }
@@ -599,6 +607,20 @@
 
       param[au_oai_set] = mab
 
+      au < manifest ; 2000 ; 2000 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2000 ; 2000 ; https://mab-online.nl/ >
+      au < manifest ; 2001 ; 2001 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2001 ; 2001 ; https://mab-online.nl/ >
+      au < manifest ; 2002 ; 2002 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2002 ; 2002 ; https://mab-online.nl/ >
+      au < manifest ; 2003 ; 2003 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2003 ; 2003 ; https://mab-online.nl/ >
+      au < manifest ; 2004 ; 2004 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2004 ; 2004 ; https://mab-online.nl/ >
+      au < manifest ; 2005 ; 2005 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2005 ; 2005 ; https://mab-online.nl/ >
+      au < manifest ; 2006 ; 2006 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2006 ; 2006 ; https://mab-online.nl/ >
+      au < manifest ; 2007 ; 2007 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2007 ; 2007 ; https://mab-online.nl/ >
+      au < manifest ; 2008 ; 2008 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2008 ; 2008 ; https://mab-online.nl/ >
+      au < manifest ; 2009 ; 2009 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2009 ; 2009 ; https://mab-online.nl/ >
+      au < manifest ; 2010 ; 2010 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2010 ; 2010 ; https://mab-online.nl/ >
+      au < manifest ; 2011 ; 2011 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2011 ; 2011 ; https://mab-online.nl/ >
+      au < released ; 2012 ; 2012 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2012 ; 2012 ; https://mab-online.nl/ >
+      au < released ; 2013 ; 2013 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2013 ; 2013 ; https://mab-online.nl/ >
       au < released ; 2014 ; 2014 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2014 ; 2014 ; https://mab-online.nl/ >
       au < released ; 2015 ; 2015 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2015 ; 2015 ; https://mab-online.nl/ >
       au < released ; 2016 ; 2016 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2016 ; 2016 ; https://mab-online.nl/ >
@@ -642,7 +664,7 @@
       au < released ; 2018 ; 2018 ; Modern Electronic Materials Volume 2018 ; 2018 ; https://moem.pensoft.net/ >
       au < released ; 2019 ; 2019 ; Modern Electronic Materials Volume 2019 ; 2019 ; https://moem.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Modern Electronic Materials Volume 2020 ; 2020 ; https://moem.pensoft.net/ >
-      au < expected ; 2021 ; 2021 ; Modern Electronic Materials Volume 2021 ; 2021 ; https://moem.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Modern Electronic Materials Volume 2021 ; 2021 ; https://moem.pensoft.net/ >
 
   }
 
@@ -740,6 +762,27 @@
       au < manifest ; 2021 ; 2021 ; Rethinking Ecology Volume 2021 ; 2021 ; https://rethinkingecology.pensoft.net/ >
 
   }
+
+  {
+
+      title <
+        name = Russian Journal of Economics ;
+        issn = 2618-7213 ;
+        eissn = 2405-4739
+      >
+
+      param[au_oai_set] = rujec
+
+      au < released ; 2015 ; 2015 ; Russian Journal of Economics Volume 2015 ; 2015 ; https://rujec.org/ >
+      au < released ; 2016 ; 2016 ; Russian Journal of Economics Volume 2016 ; 2016 ; https://rujec.org/ >
+      au < released ; 2017 ; 2017 ; Russian Journal of Economics Volume 2017 ; 2017 ; https://rujec.org/ >
+      au < released ; 2018 ; 2018 ; Russian Journal of Economics Volume 2018 ; 2018 ; https://rujec.org/ >
+      au < released ; 2019 ; 2019 ; Russian Journal of Economics Volume 2019 ; 2019 ; https://rujec.org/ >
+      au < released ; 2020 ; 2020 ; Russian Journal of Economics Volume 2020 ; 2020 ; https://rujec.org/ >
+      au < manifest ; 2021 ; 2021 ; Russian Journal of Economics Volume 2021 ; 2021 ; https://rujec.org/ >
+
+  }
+
 #  {
 #
 #      title <
@@ -809,6 +852,324 @@
       au < released ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ >
       au < released ; 2020 ; 36 ; Zoologia Volume 2020 ; 2020 ; https://zoologia.pensoft.net/ >
       au < manifest ; 2021 ; 37 ; Zoologia Volume 2021 ; 2021 ; https://zoologia.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = ARPHA Proceedings ;
+        eissn = 2683-0183
+      >
+
+      param[au_oai_set] = ap
+
+      au < released ; 2019 ; 2019 ; ARPHA Proceedings Volume 2019 ; 2019 ; https://ap.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Acta Biologica Sibirica ;
+        eissn = 2412-1908
+      >
+
+      param[au_oai_set] = abs
+
+      au < released ; 2020 ; 2020 ; Acta Biologica Sibirica Volume 2020 ; 2020 ; https://abs.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Acta Biologica Sibirica Volume 2021 ; 2021 ; https://abs.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = NeoTropical Biology and Conservation ;
+        issn = 1809-9939 ;
+        eissn = 2236-3777
+      >
+
+      param[au_oai_set] = neotropical
+
+      au < released ; 2019 ; 2019 ; NeoTropical Biology and Conservation Volume 2019 ; 2019 ; https://neotropical.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; NeoTropical Biology and Conservation Volume 2020 ; 2020 ; https://neotropical.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; NeoTropical Biology and Conservation Volume 2021 ; 2021 ; https://neotropical.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = OGH Herpetozoa ;
+        issn = 1013-4425 ;
+        eissn = 1013-4425
+      >
+
+      param[au_oai_set] = herpetozoa
+
+      au < released ; 2019 ; 2019 ; OGH Herpetozoa Volume 2019 ; 2019 ; https://herpetozoa.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; OGH Herpetozoa Volume 2020 ; 2020 ; https://herpetozoa.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; OGH Herpetozoa Volume 2021 ; 2021 ; https://herpetozoa.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = European Science Editing (ESE) ;
+        issn = 0258-3127 ;
+        eissn = 2518-3354
+      >
+
+      param[au_oai_set] = ese
+
+      au < released ; 2020 ; 2020 ; European Science Editing (ESE) Volume 2020 ; 2020 ; https://ese.arphahub.com/ >
+      au < manifest ; 2021 ; 2021 ; European Science Editing (ESE) Volume 2021 ; 2021 ; https://ese.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Grigore Antipa National Museum of Natural History ;
+        issn = 1223-2254 ;
+        eissn = 2247-0735
+      >
+
+      param[au_oai_set] = travaux
+
+      au < released ; 2019 ; 2019 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2019 ; 2019 ; https://travaux.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2020 ; 2020 ; https://travaux.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2021 ; 2021 ; https://travaux.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Pharmacia ;
+        issn = 0428-0296 ;
+        eissn = 2603-557X
+      >
+
+      param[au_oai_set] = pharmacia
+
+      au < released ; 2019 ; 2019 ; Pharmacia Volume 2019 ; 2019 ; https://pharmacia.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; Pharmacia Volume 2020 ; 2020 ; https://pharmacia.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Pharmacia Volume 2021 ; 2021 ; https://pharmacia.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Bulgarian Cardiology ;
+        issn = 1310-7488
+      >
+
+      param[au_oai_set] = bgcardio
+
+      au < released ; 2020 ; 2020 ; Bulgarian Cardiology Volume 2020 ; 2020 ; http://journal.bgcardio.org/ >
+      au < manifest ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; http://journal.bgcardio.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Silva Balcanica ;
+        issn = 1311-8706
+      >
+
+      param[au_oai_set] = silvabalcanica
+
+      au < released ; 2020 ; 2020 ; Silva Balcanica Volume 2020 ; 2020 ; https://silvabalcanica.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Silva Balcanica Volume 2021 ; 2021 ; https://silvabalcanica.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of European Landscapes ;
+        eissn = 2452-1051
+      >
+
+      param[au_oai_set] = jel
+
+      au < released ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ >
+      au < manifest ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Vegetation Classification and Survey ;
+        issn = 2683-0671
+      >
+
+      param[au_oai_set] = vcs
+
+      au < released ; 2020 ; 2020 ; Vegetation Classification and Survey Volume 2020 ; 2020 ; https://vcs.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Vegetation Classification and Survey Volume 2021 ; 2021 ; https://vcs.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Acta Ichthyologica et Piscatoria ;
+        issn = 0137-1592 ;
+        eissn = 1734-1515
+      >
+
+      param[au_oai_set] = aiep
+
+      au < manifest ; 2021 ; 2021 ; Acta Ichthyologica et Piscatoria Volume 2021 ; 2021 ; https://aiep.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Arthropod Systematics & Phylogeny ;
+        issn = 1863-7221 ;
+        eissn = 1864-8312
+      >
+
+      param[au_oai_set] = arthropod-systematics
+
+      au < manifest ; 2021 ; 2021 ; Arthropod Systematics & Phylogeny Volume 2021 ; 2021 ; https://arthropod-systematics.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Folia Medica ;
+        issn = 0204-8043 ;
+        eissn = 1314-2143
+      >
+
+      param[au_oai_set] = foliamedica
+
+      au < released ; 2019 ; 2019 ; Folia Medica Volume 2019 ; 2019 ; https://foliamedica.bg/ >
+      au < released ; 2020 ; 2020 ; Folia Medica Volume 2020 ; 2020 ; https://foliamedica.bg/ >
+      au < manifest ; 2021 ; 2021 ; Folia Medica Volume 2021 ; 2021 ; https://foliamedica.bg/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Bulgarian Geographical Society ;
+        issn = 2738-8107 ;
+        eissn = 2738-8115
+      >
+
+      param[au_oai_set] = jbgs
+
+      au < manifest ; 2021 ; 2021 ; Journal of the Bulgarian Geographical Society Volume 2021 ; 2021 ; https://jbgs.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Universal Computer Science ;
+        issn = 0948-695X ;
+        eissn = 0948-6968
+      >
+
+      param[au_oai_set] = jucs
+
+      au < released ; 2019 ; 2019 ; Journal of Universal Computer Science Volume 2019 ; 2019 ; https://lib.jucs.org/ >
+      au < manifest ; 2020 ; 2020 ; Journal of Universal Computer Science Volume 2020 ; 2020 ; https://lib.jucs.org/ >
+      au < manifest ; 2021 ; 2021 ; Journal of Universal Computer Science Volume 2021 ; 2021 ; https://lib.jucs.org/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Plant Sociology ;
+        issn = 2280-1855 ;
+        eissn = 2704-6192
+      >
+
+      param[au_oai_set] = plantsociology
+
+      au < released ; 2020 ; 2020 ; Plant Sociology Volume 2020 ; 2020 ; https://plantsociology.arphahub.com/ >
+      au < manifest ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Population and Economics ;
+        eissn = 2658-3798
+      >
+
+      param[au_oai_set] = populationandeconomics
+
+      au < released ; 2017 ; 2017 ; Population and Economics Volume 2017 ; 2017 ; https://populationandeconomics.pensoft.net/ >
+      au < released ; 2018 ; 2018 ; Population and Economics Volume 2018 ; 2018 ; https://populationandeconomics.pensoft.net/ >
+      au < released ; 2019 ; 2019 ; Population and Economics Volume 2019 ; 2019 ; https://populationandeconomics.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; Population and Economics Volume 2020 ; 2020 ; https://populationandeconomics.pensoft.net/ >
+      au < manifest ; 2021 ; 2021 ; Population and Economics Volume 2021 ; 2021 ; https://populationandeconomics.pensoft.net/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Vertebrate Zoology ;
+        issn = 1864-5755 ;
+        eissn = 2625-8498
+      >
+
+      param[au_oai_set] = vertebrate-zoology
+
+      au < manifest ; 2021 ; 2021 ; Vertebrate Zoology Volume 2021 ; 2021 ; https://vertebrate-zoology.arphahub.com/ >
+
+  }
+
+
+  {
+
+      title <
+        name = Zitteliana ;
+        issn = 2512-5338 ;
+        eissn = 2747-8106
+      >
+
+      param[au_oai_set] = zitteliana
+
+      au < manifest ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ >
 
   }
 

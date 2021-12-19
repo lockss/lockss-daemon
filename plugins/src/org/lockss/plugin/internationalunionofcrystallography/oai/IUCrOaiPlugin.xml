@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>International Union of Crystallography OAI Plugin</string>
+    <string>International Union of Crystallography Plugin</string>
   </entry>
   <entry>
   <!-- for new OAI library -->
@@ -81,7 +81,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"International Union of Crystallography OAI Plugin, Base URL %s, Script URL %s, OAI Set %s, OAI Date %s", base_url, script_url, au_oai_set, au_oai_date</string>
+    <string>"International Union of Crystallography Plugin, Base URL %s, Script URL %s, OAI Set %s, OAI Date %s", base_url, script_url, au_oai_set, au_oai_date</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -115,7 +115,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <!-- journals.iucr.org needed for when the base_url is actually iucrdata.iucr.org -->
       <string>1,"^https?://(%s|%s|(iucrdata|journals|publcif|www)\.iucr\.org|(fonts|ajax)\.(googleapis|gstatic)\.com|code\.jquery\.com|crossmark-cdn\.crossref\.org)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tiff?|ttf|woff2?)$", url_host(base_url), url_host(script_url)</string>
-      <string>1,"^https?://%s/auid=", url_host(script_url)</string>
+      <string>1,"^https?://%s/lockss\?", url_host(script_url)</string>
       <string>2,"^https?://(%s|%s|iucrdata\.iucr\.org)/.*buy=yes$", url_host(script_url), url_host(base_url)</string>
       <string>1,"^https?://(%s|%s|iucrdata\.iucr\.org)/[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", url_host(script_url), url_host(base_url)</string>
       <!-- journals.iucr.org/x needed for the redirects from non-base_url journals.iucr.org to base_url iucrdata.iucr.org -->
@@ -177,6 +177,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss?au_oai_set=%s&amp;au_oai_date=%s", script_url, au_oai_set, au_oai_date</string>
   </entry>
   <entry>
     <string>plugin_access_url_factory</string>

@@ -42,19 +42,19 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Dental Hygienists Association Plugin (CLOCKSS)</string>
+    <string>American Dental Hygienists' Association Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -92,10 +92,10 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Dental Hygienists Association Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Dental Hygienists' Association Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalScrapingPdfFilterFactory</string>
+    <string>org.lockss.plugin.highwire.HighWireJCoreScrapingPdfFilterFactory</string>
   </entry>
 </map>

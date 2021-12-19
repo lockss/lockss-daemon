@@ -47,8 +47,8 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.state.NodeManager;
 import org.lockss.test.ArticleIteratorTestCase;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.util.ListUtil;
 import org.lockss.util.StringUtil;
 
@@ -83,6 +83,8 @@ public class TestPeerJArticleIteratorFactory
     // au is protected archival unit from super class ArticleIteratorTestCase
     au = createAu(); 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
   
   public void tearDown() throws Exception {
@@ -162,15 +164,15 @@ public class TestPeerJArticleIteratorFactory
     int expAlternateFileCount = 12 * variantAlternateRoles.size();
     
     String pdfPat = "branch(\\d+)/(\\d+)file\\.pdf";
-    String pdfRep = "/" + variantBaseConstant + "/$1$2.pdf";
-    String absRep = "/" + variantBaseConstant + "/$1$2";
-    String xmlRep = "/" + variantBaseConstant + "/$1$2.xml";
-    String bibRep = "/" + variantBaseConstant + "/$1$2.bib";
-    String risRep = "/" + variantBaseConstant + "/$1$2.ris";
-    String alternateHtmlRep = "/" + variantBaseConstant + "/$1$2.html";
-    String alternateJsonRep = "/" + variantBaseConstant + "/$1$2.json";
-    String alternateRdfRep = "/" + variantBaseConstant + "/$1$2.rdf";
-    String alternateUnixrefRep = "/" + variantBaseConstant + "/$1$2.unixref";
+    String pdfRep = variantBaseConstant + "/$1$2.pdf";
+    String absRep = variantBaseConstant + "/$1$2";
+    String xmlRep = variantBaseConstant + "/$1$2.xml";
+    String bibRep = variantBaseConstant + "/$1$2.bib";
+    String risRep = variantBaseConstant + "/$1$2.ris";
+    String alternateHtmlRep = variantBaseConstant + "/$1$2.html";
+    String alternateJsonRep = variantBaseConstant + "/$1$2.json";
+    String alternateRdfRep = variantBaseConstant + "/$1$2.rdf";
+    String alternateUnixrefRep = variantBaseConstant + "/$1$2.unixref";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, absRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, xmlRep);
@@ -266,11 +268,7 @@ public class TestPeerJArticleIteratorFactory
  
   private void deleteBlock(CachedUrl cu) throws IOException {
     log.info("deleting " + cu.getUrl());
-    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-    ArchivalUnit au = cu.getArchivalUnit();
-    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-    nm.deleteNode(cus);
+    cu.delete();
   }
   
   /*

@@ -376,11 +376,7 @@ public class RepositoryManager
   public PlatformUtil.DF getRepositoryDF(String repoName) {
     String path = LockssRepositoryImpl.getLocalRepositoryPath(repoName);
     log.debug("path: " + path);
-//    try {
-      return platInfo.getJavaDF(path);
-//    } catch (PlatformUtil.UnsupportedException e) {
-//      return null;
-//    }
+      return platInfo.getDF(path);
   }
 
   public Map<String,PlatformUtil.DF> getRepositoryMap() {

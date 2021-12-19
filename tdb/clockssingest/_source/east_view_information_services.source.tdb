@@ -3,7 +3,8 @@
   publisher <
     name = East View Information Services ;
     info[contract] = 2011 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -20,7 +21,7 @@
       implicit < status ; status2 ; year ; name ; param[year] >
 
       au < zapped ; finished ; 2017 ; East View Information Services Source Content 2017 ; 2017 >
-#No more content expected for this plugin.
+      #No more content expected for this plugin.
     }
 
   }
@@ -39,6 +40,7 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < readySource ; crawling ; 2021 ; East View Information Services Book Source Content 2021_01 ; 2021_01 >
+      au < expected ; exists ; 2022 ; East View Information Services Book Source Content 2022_01 ; 2022_01 >
 
     }
 
@@ -47,21 +49,44 @@
   {
 
       title <
-         name = East View Information Services Special Title Source Content
+         name = East View Information Services Journal Source Content
       >
 
       {
-        # This is the plugin handle collections may only have xml and gif file
-        # Also the title contains multiple information, like "<TITLE>28-02-1943(DASZD-No.001) ЗДРАВООХРАНЕНИЕ ЛЕНИНГРАДА В ДНИ ВЕЛИКОЙ ОТЕЧЕСТВЕННОЙ ВОЙНЫ</TITLE>"
+
         plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewDirSourcePlugin
-        #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
+        param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
         hidden[proxy] = DIRECT
         implicit < status ; status2 ; year ; name ; param[directory] >
 
-        #au < expected ; exists ; 2020 ; East View Information Services Source Content 2020 ; 2020 >
+        au < readySource ; crawling ; 2021 ; East View Information Services Journal Source Content 2021_01 ; 2021_01 >
+        au < readySource ; crawling ; 2021 ; East View Information Services Journal Source Content 2021_02 ; 2021_02 >
+        au < readySource ; crawling ; 2021 ; East View Information Services Journal Source Content 2021_03 ; 2021_03 >
+        au < readySource ; crawling ; 2021 ; East View Information Services Journal Source Content 2021_04 ; 2021_04 >
+        au < expected ; exists ; 2022 ; East View Information Services Journal Source Content 2022_01 ; 2022_01 >
 
       }
 
     }
+
+    {
+
+          title <
+             name = East View Information Services Newspaper Source Content
+          >
+
+          {
+
+            #plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewNewspaperDirSourcePlugin
+            #param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewnewspapers-released/
+            hidden[proxy] = DIRECT
+            implicit < status ; status2 ; year ; name ; param[directory] >
+
+            #Waiting on production data delivery to do another round of testing
+            #au < expected ; exists ; 2021 ; East View Information Services Newspaper Source Content 2021_01 ; 2021_01 >
+
+          }
+
+        }
 
 }

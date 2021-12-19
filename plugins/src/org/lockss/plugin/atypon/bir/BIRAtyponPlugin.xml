@@ -42,11 +42,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>British Institute of Radiology Plugin</string>
+    <string>British Institute of Radiology Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -54,7 +54,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>108</string>
+    <string>122</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"British Institute of Radiology Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"British Institute of Radiology Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>

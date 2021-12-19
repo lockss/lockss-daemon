@@ -52,11 +52,11 @@
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; >
     au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; reingest3.clockss.org:8083 >
-    au < gsl.ClockssGSLDrupalPlugin ; finished ; manifest ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < gsl.ClockssGSLDrupalPlugin ; finished ; crawling ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; reingest4.clockss.org:8082 >
 
   }
   

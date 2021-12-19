@@ -17,22 +17,22 @@
       eissn = 1712-6568
     >
 
-    au < frozen ; exists ; 2006 ; 2006 ; Avian Conservation and Ecology Volume 1 ; 1 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Avian Conservation and Ecology Volume 2 ; 2 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Avian Conservation and Ecology Volume 3 ; 3 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Avian Conservation and Ecology Volume 4 ; 4 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Avian Conservation and Ecology Volume 5 ; 5 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2011 ; 2011 ; Avian Conservation and Ecology Volume 6 ; 6 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2012 ; 2012 ; Avian Conservation and Ecology Volume 7 ; 7 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2013 ; 2013 ; Avian Conservation and Ecology Volume 8 ; 8 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2014 ; 2014 ; Avian Conservation and Ecology Volume 9 ; 9 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2015 ; 2015 ; Avian Conservation and Ecology Volume 10 ; 10 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Avian Conservation and Ecology Volume 11 ; 11 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2017 ; 2017 ; Avian Conservation and Ecology Volume 12 ; 12 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2018 ; 2018 ; Avian Conservation and Ecology Volume 13 ; 13 ; https://www.ace-eco.org/ ; >
-    au < frozen ; exists ; 2019 ; 2019 ; Avian Conservation and Ecology Volume 14 ; 14 ; https://www.ace-eco.org/ ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Avian Conservation and Ecology Volume 15 ; 15 ; https://www.ace-eco.org/ ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Avian Conservation and Ecology Volume 16 ; 16 ; https://www.ace-eco.org/ ; >
+    au < finished ; crawling ; 2006 ; 2006 ; Avian Conservation and Ecology Volume 1 ; 1 ; https://www.ace-eco.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2007 ; 2007 ; Avian Conservation and Ecology Volume 2 ; 2 ; https://www.ace-eco.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2008 ; 2008 ; Avian Conservation and Ecology Volume 3 ; 3 ; https://www.ace-eco.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2009 ; 2009 ; Avian Conservation and Ecology Volume 4 ; 4 ; https://www.ace-eco.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2010 ; 2010 ; Avian Conservation and Ecology Volume 5 ; 5 ; https://www.ace-eco.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; 2011 ; Avian Conservation and Ecology Volume 6 ; 6 ; https://www.ace-eco.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2012 ; 2012 ; Avian Conservation and Ecology Volume 7 ; 7 ; https://www.ace-eco.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; 2013 ; Avian Conservation and Ecology Volume 8 ; 8 ; https://www.ace-eco.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2014 ; 2014 ; Avian Conservation and Ecology Volume 9 ; 9 ; https://www.ace-eco.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2015 ; 2015 ; Avian Conservation and Ecology Volume 10 ; 10 ; https://www.ace-eco.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2016 ; 2016 ; Avian Conservation and Ecology Volume 11 ; 11 ; https://www.ace-eco.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2017 ; 2017 ; Avian Conservation and Ecology Volume 12 ; 12 ; https://www.ace-eco.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 2018 ; Avian Conservation and Ecology Volume 13 ; 13 ; https://www.ace-eco.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2019 ; 2019 ; Avian Conservation and Ecology Volume 14 ; 14 ; https://www.ace-eco.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Avian Conservation and Ecology Volume 15 ; 15 ; https://www.ace-eco.org/ ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2021 ; 2021 ; Avian Conservation and Ecology Volume 16 ; 16 ; https://www.ace-eco.org/ ; >
 
   }
 
@@ -46,29 +46,29 @@
       au < finished ; frozen ; 1997 ; 1997 ; Ecology and Society Volume 1 ; 1 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 1998 ; 1998 ; Ecology and Society Volume 2 ; 2 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 1999 ; 1999 ; Ecology and Society Volume 3 ; 3 ; https://www.ecologyandsociety.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2000 ; 2000 ; Ecology and Society Volume 4 ; 4 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2001 ; 2001 ; Ecology and Society Volume 5 ; 5 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2002 ; 2002 ; Ecology and Society Volume 6 ; 6 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2003 ; 2003 ; Ecology and Society Volume 7 ; 7 ; https://www.ecologyandsociety.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2003 ; 2003 ; Ecology and Society Volume 8 ; 8 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2004 ; 2004 ; Ecology and Society Volume 9 ; 9 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2005 ; 2005 ; Ecology and Society Volume 10 ; 10 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2006 ; 2006 ; Ecology and Society Volume 11 ; 11 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2007 ; 2007 ; Ecology and Society Volume 12 ; 12 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2008 ; 2008 ; Ecology and Society Volume 13 ; 13 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2009 ; 2009 ; Ecology and Society Volume 14 ; 14 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2010 ; 2010 ; Ecology and Society Volume 15 ; 15 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2011 ; 2011 ; Ecology and Society Volume 16 ; 16 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Ecology and Society Volume 17 ; 17 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Ecology and Society Volume 18 ; 18 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Ecology and Society Volume 19 ; 19 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Ecology and Society Volume 20 ; 20 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Ecology and Society Volume 21 ; 21 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Ecology and Society Volume 22 ; 22 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Ecology and Society Volume 23 ; 23 ; https://www.ecologyandsociety.org/ ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Ecology and Society Volume 24 ; 24 ; https://www.ecologyandsociety.org/ ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Ecology and Society Volume 25 ; 25 ; https://www.ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2021 ; 2021 ; Ecology and Society Volume 26 ; 26 ; https://www.ecologyandsociety.org/ ; >
+      au < finished ; crawling ; 2000 ; 2000 ; Ecology and Society Volume 4 ; 4 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2001 ; 2001 ; Ecology and Society Volume 5 ; 5 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2002 ; 2002 ; Ecology and Society Volume 6 ; 6 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2003 ; 2003 ; Ecology and Society Volume 7 ; 7 ; https://www.ecologyandsociety.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2003 ; 2003 ; Ecology and Society Volume 8 ; 8 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2004 ; 2004 ; Ecology and Society Volume 9 ; 9 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2005 ; 2005 ; Ecology and Society Volume 10 ; 10 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2006 ; 2006 ; Ecology and Society Volume 11 ; 11 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2007 ; 2007 ; Ecology and Society Volume 12 ; 12 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2008 ; 2008 ; Ecology and Society Volume 13 ; 13 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2009 ; 2009 ; Ecology and Society Volume 14 ; 14 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; 2010 ; Ecology and Society Volume 15 ; 15 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 2011 ; Ecology and Society Volume 16 ; 16 ; https://www.ecologyandsociety.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; 2012 ; Ecology and Society Volume 17 ; 17 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; 2013 ; Ecology and Society Volume 18 ; 18 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; 2014 ; Ecology and Society Volume 19 ; 19 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; 2015 ; Ecology and Society Volume 20 ; 20 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; 2016 ; Ecology and Society Volume 21 ; 21 ; https://www.ecologyandsociety.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 2017 ; Ecology and Society Volume 22 ; 22 ; https://www.ecologyandsociety.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 2018 ; Ecology and Society Volume 23 ; 23 ; https://www.ecologyandsociety.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2019 ; 2019 ; Ecology and Society Volume 24 ; 24 ; https://www.ecologyandsociety.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 2020 ; Ecology and Society Volume 25 ; 25 ; https://www.ecologyandsociety.org/ ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2021 ; 2021 ; Ecology and Society Volume 26 ; 26 ; https://www.ecologyandsociety.org/ ; >
 
     }
 }

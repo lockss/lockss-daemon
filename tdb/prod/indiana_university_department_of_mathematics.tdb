@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Indiana University Department of Mathematics
   >
@@ -85,10 +84,12 @@
       au < doNotProcess ; 2016 ; 2016 ; Indiana University Mathematics Journal Volume 65 ; 65 >
       au < exists ; 2017 ; 2017 ; Indiana University Mathematics Journal Volume 66 ; 66 >
       au < exists ; 2018 ; 2018 ; Indiana University Mathematics Journal Volume 67 ; 67 >
-      au < expected ; 2019 ; 2019 ; Indiana University Mathematics Journal Volume 68 ; 68 >
-      au < expected ; 2020 ; 2020 ; Indiana University Mathematics Journal Volume 69 ; 69 >
-      au < expected ; 2021 ; 2021 ; Indiana University Mathematics Journal Volume 70 ; 70 >
+      au < exists ; 2019 ; 2019 ; Indiana University Mathematics Journal Volume 68 ; 68 >
+      au < exists ; 2020 ; 2020 ; Indiana University Mathematics Journal Volume 69 ; 69 >
+      au < exists ; 2021 ; 2021 ; Indiana University Mathematics Journal Volume 70 ; 70 >
+
       }
+
       {
       plugin = org.lockss.plugin.iumj.IUMJPlugin
       

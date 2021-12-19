@@ -681,10 +681,10 @@ public class UrlUtil {
   }
 
   /**
-   * encode a url using the java URLEncoder
+   * Encode a url as necessary according to the rules for each component
    * @param uri the url to encode
-   * @param enc the encoding to use
-   * @return  the encoded url string
+   * @param enc the character encoding to use
+   * @return the encoded url string
    */
   public static String encodeUri(String uri, String enc)  {
     try {

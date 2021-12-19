@@ -20625,8 +20625,8 @@
     param[base_url] = http://qjmed.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; finished ; 2008 ; QJM: An International Journal of Medicine Volume 101 [superseded] ; 101 ; >
-    au < finished ; crawling ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
+    au < superseded ; finished ; 2008 ; QJM: An International Journal of Medicine Volume 101 [superseded] ; 101 ; > #reprocessed elsewhere
+    au < superseded ; down ; 2009 ; QJM: An International Journal of Medicine Volume 102 [superseded] ; 102 ; > #empty. no content
 
     }
 

@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Canadian Science Publishing
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOne2020Plugin
+
+  implicit < status ; year ; name ; param[year] >
+  param[base_url] = https://bioone.org/
+
+  {
+
+      title <
+        name = Canadian Journal of Animal Science ;
+        issn = 0008-3984 ;
+        eissn = 1918-1825
+      >
+
+      param[journal_id] = canadian-journal-of-animal-science
+      #error for accessing https://bioone.org/images/,"403 Forbidden"
+      
+      au < notReady ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 2016 >
+      au < notReady ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 2017 >
+      au < notReady ; 2018 ; Canadian Journal of Animal Science Volume 98 ; 2018 >
+      au < notReady ; 2019 ; Canadian Journal of Animal Science Volume 99 ; 2019 >
+      au < notReady ; 2020 ; Canadian Journal of Animal Science Volume 100 ; 2020 >
+      au < manifest ; 2021 ; Canadian Journal of Animal Science Volume 101 ; 2021 >
+
+  }
+}

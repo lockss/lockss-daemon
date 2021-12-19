@@ -39,15 +39,18 @@
       au < zapped ; finished ; 2019 ; IOP Publishing Source Content 2019_3 ; 2019_3 >
       au < zapped ; finished ; 2019 ; IOP Publishing Source Content 2019_4 ; 2019_4 >
 
-      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
-      au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 > #released to clockss-stanford early
+      au < zapped ; finished ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
+      au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 >
       au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
       au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >
 
       au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_01 ; 2021_01 >
-      au < doNotProcess ; exists ; 2021 ; IOP Publishing Source Content 2021_02 ; 2021_02 >
-      au < doNotProcess ; exists ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
-      au < doNotProcess ; exists ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
+      au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_02 ; 2021_02 >
+      au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
+      au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
+
+      au < expected ; exists ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
+      au < expected ; exists ; 2022 ; IOP Publishing Source Content 2022_02 ; 2022_02 >
 
     }
   }
@@ -85,7 +88,7 @@
 
     #4-17-2020: content delivered for 2018-2020, but still requires fixes from the publisher.
     au < zapped ; finished ; 2017 ; IOP Publishing Books Source Content 2017 ; 2017 >
-    #au < notReady ; exists ; 2020 ; IOP Publishing Books Source Content 2020 ; 2020 >
+    au < notReady ; exists ; 2020 ; IOP Publishing Books Source Content 2020 ; 2020 >
     #au < doNotProcess ; exists ; 2021 ; IOP Publishing Books Source Content 2021 ; 2021 >
 
   }

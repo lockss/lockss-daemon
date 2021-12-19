@@ -38,10 +38,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.7.1'
 
-import sys
+_service = 'DaemonStatusService'
 
-try: import requests
-except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
+import sys
 
 try: import zeep
 except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
@@ -50,14 +49,11 @@ import argparse
 import getpass
 import itertools
 from multiprocessing.dummy import Pool as ThreadPool
-import os.path
-import requests.auth
 from threading import Thread
 import zeep.exceptions
 import zeep.helpers
-import zeep.transports
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth
+from wsutil import datetimems, durationms, file_lines, make_client, enable_zeep_debugging, host_help_prefix
 
 #
 # Library
@@ -101,12 +97,12 @@ def get_au_status(host, username, password, auid):
     - volume (string) (the AU name)
     - year (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - auid (string): an AUID
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     try:
         ret = client.service.getAuStatus(auId=auid)
         return zeep.helpers.serialize_object(ret)
@@ -122,13 +118,13 @@ def get_au_urls(host, username, password, auid, prefix=None):
     given, limits the results to URLs with that prefix (including the URL itself).
 
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - auid (string): an AUID
-    - prefix (string): a URL prefix (default: None)
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
+    :param prefix: a URL prefix (string, default: None)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     ret = client.service.getAuUrls(auId=auid, url=prefix)
     return ret
 
@@ -138,11 +134,11 @@ def get_au_type_urls(host, username, password, auid, typ):
     the AU.  
 
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - auid (string): an AUID
-    - typ (string): one of 'articleUrls' or 'substanceUrls'
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
+    :param typ: one of 'articleUrls' or 'substanceUrls' (string)
     '''
     # query_aus with select='substanceUrls' returns [None] if there are no substance URLs;
     # _do_query_aus with select='substanceUrls' calls query_aus with select=['auId','substanceUrls']
@@ -164,11 +160,11 @@ def get_auids(host, username, password):
     - id (string)
     - name (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     ret = client.service.getAuIds()
     return zeep.helpers.serialize_object(ret)
 
@@ -202,10 +198,10 @@ def get_peer_agreements(host, username, password, auid):
                 - PercentAgreementTimestamp (numeric)
     - PeerId (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - auid (string): an AUID
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
     '''
     # See get_au_type_urls for why 'auId' is also requested
     res = query_aus(host, username, password, ['auId', 'peerAgreements'], where='auId = "{}"'.format(auid))
@@ -247,22 +243,22 @@ def get_platform_configuration(host, username, password):
     - uptime (numeric)
     - v3Identity (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return zeep.helpers.serialize_object(client.service.getPlatformConfiguration())
 
 def is_daemon_ready(host, username, password):
     '''Performs an isDaemonReady operation on the given host and returns True or
     False.
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     '''
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.isDaemonReady()
 
 def query_aus(host, username, password, select, where=None):
@@ -347,25 +343,18 @@ def query_aus(host, username, password, select, where=None):
         - versionCount (numeric)
     - volume (string)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - select (string or list of strings): if a list of strings, the field names to
-    be used in the SELECT clause; if a string, the single field name to be used in
-    the SELECT clause
-    - where (string): optional statement for the WHERE clause (default: None)
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param select: if a list of strings, the field names to
+        be used in the SELECT clause; if a string, the single field name to be used in
+        the SELECT clause (string or list of strings)
+    :param where : optional statement for the WHERE clause (string, default: None)
     Raises:
     - ValueError if select is not of the right type
     '''
-    if type(select) is list:
-        query = 'SELECT {}'.format(', '.join(select))
-    elif type(select) is str:
-        query = 'SELECT {}'.format(select)
-    else:
-        raise ValueError('invalid type for select parameter: {}'.format(type(select)))
-    if where is not None:
-        query = '{} WHERE {}'.format(query, where)
-    client = _make_client(host, username, password)
+    query = construct_query(select, where)
+    client = make_client(host, username, password, _service)
     ret = client.service.queryAus(auQuery=query)
     return zeep.helpers.serialize_object(ret)
 
@@ -405,16 +394,62 @@ def query_crawls(host, username, password, select, where=None):
     - startTime (long)
     - startingUrls (list of strings)
     Parameters:
-    - host (string): a host:port pair
-    - username (string): a username for the host
-    - password (string): a password for the host
-    - select (string or list of strings): if a list of strings, the field names to
-    be used in the SELECT clause; if a string, the single field name to be used in
-    the SELECT clause
-    - where (string): optional statement for the WHERE clause (default: None)
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param select: if a list of strings, the field names to
+        be used in the SELECT clause; if a string, the single field name to be used in
+        the SELECT clause (string or list of strings)
+    :param where : optional statement for the WHERE clause (string, default: None)
     Raises:
     - ValueError if select is not of the right type
     '''
+    query = construct_query(select, where)
+    client = make_client(host, username, password, _service)
+    ret = client.service.queryCrawls(crawlQuery=query)
+    return zeep.helpers.serialize_object(ret)
+
+def query_tdb_titles_by_auid(host, username, password, auid, select="*"):
+    '''Performs a queryTdbTitles operation on the given host for the given auid,
+    and returns an list of records with these fields (populated or
+    not depending on the SELECT clause):
+    - EIssn (string)
+    - id (string)
+    - issn (string)
+    - issnL (string)
+    - issns (string)
+    - name (string)
+    - printIssn (string)
+    - proprietaryId (string)
+    - proprietaryIds (string)
+    - publicationType (string)
+    - tdbPublisher (tns:tdbPublisherWsResult)
+    Parameters:
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
+    :param select: if a list of strings, the field names to
+        be used in the SELECT clause; if a string, the single field name to be used in
+        the SELECT clause (string or list of strings)
+    Raises:
+    - ValueError if auid or select is not of the right type
+    '''
+    client = make_client(host, username, password, _service)
+    query = construct_query(select)
+    try:
+        # first we get the publisher given the auid and filter the query
+        au_journal = client.service.getAuStatus(auId=auid)['journalTitle']
+        query += " WHERE name={}".format(repr(au_journal))
+        ret = client.service.queryTdbTitles(tdbTitleQuery=query)
+        return zeep.helpers.serialize_object(ret)
+    except zeep.exceptions.Fault as e:
+        if e.message == 'No Archival Unit with provided identifier':
+            return None
+        else:
+            raise
+
+def construct_query(select="*", where=None):
     if type(select) is list:
         query = 'SELECT {}'.format(', '.join(select))
     elif type(select) is str:
@@ -423,10 +458,7 @@ def query_crawls(host, username, password, select, where=None):
         raise ValueError('invalid type for select parameter: {}'.format(type(select)))
     if where is not None:
         query = '{} WHERE {}'.format(query, where)
-    client = _make_client(host, username, password)
-    ret = client.service.queryCrawls(crawlQuery=query)
-    return zeep.helpers.serialize_object(ret)
-
+    return query
 #
 # Command line tool
 #
@@ -440,64 +472,94 @@ class _DaemonStatusServiceOptions(object):
     parser.add_argument('--version', '-V', action='version', version=__version__)
     # Hosts
     group = parser.add_argument_group('Target hosts')
-    group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+    group.add_argument('--host', action='append', default=list(),
+                       help=host_help_prefix + ' to list of target hosts')
+    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE',
+                       help=host_help_prefix + ' in HFILE to list of target hosts')
     group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
     group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
     # AUIDs
     group = parser.add_argument_group('Target AUIDs')
     group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
-    group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
+    group.add_argument('--auids', action='append', default=list(), metavar='AFILE',
+                       help='add AUIDs in AFILE to list of target AUIDs')
     # Daemon operations
     group = parser.add_argument_group('Daemon operations')
-    group.add_argument('--get-platform-configuration', action='store_true', help='output platform configuration information for target hosts; narrow down with optional --select list chosen among %s' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),))
-    group.add_argument('--is-daemon-ready', action='store_true', help='output True/False table of ready status of target hosts; always exit with 0')
-    group.add_argument('--is-daemon-ready-quiet', action='store_true', help='output nothing; exit with 0 if all target hosts are ready, 1 otherwise')
+    group.add_argument('--get-platform-configuration', action='store_true',
+                       help=('output platform configuration information for target hosts; narrow down with optional' +
+                             ' --select list chosen among %s' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),)))
+    group.add_argument('--is-daemon-ready', action='store_true',
+                       help='output True/False table of ready status of target hosts; always exit with 0')
+    group.add_argument('--is-daemon-ready-quiet', action='store_true',
+                       help='output nothing; exit with 0 if all target hosts are ready, 1 otherwise')
     # AUID operations
     group = parser.add_argument_group('AU operations')
-    group.add_argument('--get-au-status', action='store_true', help='output status information about target AUIDs; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_AU_STATUS)),))
+    group.add_argument('--get-au-status', action='store_true',
+                       help=('output status information about target AUIDs; narrow down output with optional '+
+                            '--select list chosen among %s' % (', '.join(sorted(_AU_STATUS)),)))
     group.add_argument('--get-au-urls', action='store_true', help='output URLs in one AU on one host')
     group.add_argument('--get-au-article-urls', action='store_true', help='output article URLs in one AU on one host')
     group.add_argument('--get-au-subst-urls', action='store_true', help='output substance URLs in one AU on one host')
-    group.add_argument('--get-auids', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present on target hosts')
-    group.add_argument('--get-auids-names', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) and their names present on target hosts')
-    group.add_argument('--get-peer-agreements', action='store_true', help='output peer agreements for one AU on one hosts')
-    group.add_argument('--query-aus', action='store_true', help='perform AU query (with optional --where clause) with --select list chosen among %s' % (', '.join(sorted(_QUERY_AUS)),))
+    group.add_argument('--get-auids', action='store_true',
+                       help=('output True/False table of all AUIDs '+
+                            '(or target AUIDs if specified) present on target hosts'))
+    group.add_argument('--get-auids-names', action='store_true',
+                       help=('output True/False table of all AUIDs (or target AUIDs if specified) '+
+                             'and their names present on target hosts'))
+    group.add_argument('--get-peer-agreements', action='store_true',
+                       help='output peer agreements for one AU on one hosts')
+    group.add_argument('--query-aus', action='store_true',
+                       help='perform AU query (with optional --where clause) with --select list chosen among %s' %
+                            (', '.join(sorted(_QUERY_AUS)),))
     # Crawl operations
     group = parser.add_argument_group('Crawl operations')
-    group.add_argument('--query-crawls', action='store_true', help='perform crawl query (with optional --where clause) with --select list chosen among %s' % (', '.join(sorted(_QUERY_CRAWLS)),))
+    group.add_argument('--query-crawls', action='store_true',
+                       help='perform crawl query (with optional --where clause) with --select list chosen among %s' %
+                            (', '.join(sorted(_QUERY_CRAWLS)),))
     # Other options
     group = parser.add_argument_group('Other options')
     group.add_argument('--group-by-field', action='store_true', help='group results by field instead of host')
-    group.add_argument('--no-special-output', action='store_true', help='no special output format for a single target host')
+    group.add_argument('--no-special-output', action='store_true',
+                       help='no special output format for a single target host')
     group.add_argument('--prefix', help='prefix URL for --get-au-urls')
     group.add_argument('--select', metavar='FIELDS', help='comma-separated list of fields for narrower output')
     group.add_argument('--threads', type=int, help='max parallel jobs allowed (default: no limit)')
     group.add_argument('--where', help='optional WHERE clause for query operations')
+    group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
+
     return parser
 
   def __init__(self, parser, args):
     super(_DaemonStatusServiceOptions, self).__init__()
 #FIXME    if len(args) > 0: parser.error('extraneous arguments: %s' % (' '.join(args)))
-    if len(list(filter(None, [args.get_au_status, args.get_au_urls, args.get_au_article_urls, args.get_au_subst_urls, args.get_auids, args.get_auids_names, args.get_peer_agreements, args.get_platform_configuration, args.is_daemon_ready, args.is_daemon_ready_quiet, args.query_aus, args.query_crawls]))) != 1:
-      parser.error('exactly one of --get-au-status, --get-au-urls, --get-au-article-urls, --get-au-subst-urls,--get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, --is-daemon-ready, --is-daemon-ready-quiet, --query-aus --query-crawls is required')
-    if len(args.auid) + len(args.auids) > 0 and not any([args.get_au_status, args.get_au_urls, args.get_au_article_urls, args.get_au_subst_urls, args.get_auids, args.get_auids_names, args.get_peer_agreements]):
-      parser.error('--auid, --auids can only be applied to --get-au-status, --get-au-urls, --get-au-article-urls, --get-au-subst-urls, --get-auids, --get-auids-names, --get-peer-agreements')
+    if len(list(filter(None, [args.get_au_status, args.get_au_urls, args.get_au_article_urls, args.get_au_subst_urls,
+                              args.get_auids, args.get_auids_names, args.get_peer_agreements,
+                              args.get_platform_configuration, args.is_daemon_ready, args.is_daemon_ready_quiet,
+                              args.query_aus, args.query_crawls]))) != 1:
+      parser.error('exactly one of --get-au-status, --get-au-urls, --get-au-article-urls, --get-au-subst-urls,' +
+                    '--get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, '+
+                    '--is-daemon-ready, --is-daemon-ready-quiet, --query-aus --query-crawls is required')
+    if len(args.auid) + len(args.auids) > 0 and not any([args.get_au_status, args.get_au_urls, args.get_au_article_urls,
+        args.get_au_subst_urls, args.get_auids, args.get_auids_names, args.get_peer_agreements]):
+      parser.error('--auid, --auids can only be applied to --get-au-status, --get-au-urls, '+
+                   '--get-au-article-urls, --get-au-subst-urls, --get-auids, --get-auids-names, --get-peer-agreements')
     if args.prefix and not args.get_au_urls:
       parser.error('--prefix can only be applied to --get-au-urls')
-    if args.select and not any([args.get_au_status, args.get_platform_configuration, args.query_aus, args.query_crawls]):
-      parser.error('--select can only be applied to --get-au-status, --get-platform-configuration, --query-aus, --query-crawls')
+    if args.select and not any([args.get_au_status, args.get_platform_configuration,
+                                args.query_aus, args.query_crawls]):
+      parser.error('--select can only be applied to --get-au-status, '+
+                   '--get-platform-configuration, --query-aus, --query-crawls')
     if args.where and not any([args.query_aus, args.query_crawls]):
       parser.error('--where can only be applied to --query-aus, --query-crawls')
     if args.group_by_field and not any([args.get_au_status, args.query_aus]):
       parser.error('--group-by-field can only be applied to --get-au-status, --query-aus')
     # hosts
     self.hosts = args.host[:]
-    for f in args.hosts: self.hosts.extend(_file_lines(f))
+    for f in args.hosts: self.hosts.extend(file_lines(f))
     if len(self.hosts) == 0: parser.error('at least one target host is required')
     # auids
     self.auids = args.auid[:]
-    for f in args.auids: self.auids.extend(_file_lines(f))
+    for f in args.auids: self.auids.extend(file_lines(f))
     # get_auids/get_auids_names/is_daemon_ready/is_daemon_ready_quiet
     self.get_auids = args.get_auids
     self.get_auids_names = args.get_auids_names
@@ -549,10 +611,12 @@ class _DaemonStatusServiceOptions(object):
     self.no_special_output = args.no_special_output
     # threads
     self.threads = args.threads or len(self.hosts)
+    # add logging for zeep
+    if args.debug_zeep:
+      enable_zeep_debugging()
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
-    self.auth = requests_basic_auth(self._u, self._p)
 
   def __init_select(self, parser, args, field_dict):
     if args.select is None: return sorted(field_dict)
@@ -564,7 +628,9 @@ class _DaemonStatusServiceOptions(object):
 
 # Last modified 2018-03-19 for unicode support and boolean False when boolean is None
 def _output_record(options, lst):
-  print('\t'.join([x.decode('utf-8') if type(x) is bytes else str(x or False) if type(x)==type(True) else str(x or '') for x in lst]))
+  print('\t'.join([
+      x.decode('utf-8') if type(x) is bytes else str(x or False) if type(x)==type(True) else str(x or '') for x in lst
+  ]))
 
 # Last modified 2015-08-05
 def _output_table(options, data, rowheaders, lstcolkeys):
@@ -575,12 +641,6 @@ def _output_table(options, data, rowheaders, lstcolkeys):
     _output_record(options, rowpart + [x[j] for x in colkeys])
   for rowkey in sorted(set([k[0] for k in data])):
     _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
-
-# Last modified 2020-10-01
-def _file_lines(fstr):
-    with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-    if len(ret) == 0: sys.exit('Error: {} contains no meaningful lines'.format(fstr))
-    return ret
 
 _AU_STATUS = {
   'accessType': ('Access type', lambda r: r.get('accessType')),
@@ -629,7 +689,9 @@ def _do_get_au_status(options):
         if options.group_by_field: colkey = (head, host)
         else: colkey = (host, head)
         data[((auid,), colkey)] = lamb(result)
-  _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
+  _output_table(options, data, ['AUID'],
+                [[x[0] for x in headlamb], sorted(options.hosts)]
+                if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 
 def _do_get_au_urls(options):
   # Single request to a single host: unthreaded
@@ -685,7 +747,10 @@ def _do_get_peer_agreements(options):
             percent_agreement_timestamp = agreement['percentAgreementTimestamp']
             highest_percent_agreement = agreement['highestPercentAgreement']
             highest_percent_agreement_timestamp = agreement['highestPercentAgreementTimestamp']
-            _output_record(options, [peer, agreement_type, percent_agreement, datetimems(percent_agreement_timestamp), highest_percent_agreement, datetimems(highest_percent_agreement_timestamp)]) 
+            _output_record(options,
+                           [peer, agreement_type, percent_agreement,
+                            datetimems(percent_agreement_timestamp),
+                            highest_percent_agreement, datetimems(highest_percent_agreement_timestamp)])
 
 _PLATFORM_CONFIGURATION = {
   'adminEmail': ('Admin e-mail', lambda r: r.get('adminEmail')),
@@ -703,7 +768,8 @@ _PLATFORM_CONFIGURATION = {
   'ipAddress': ('IP address', lambda r: r.get('ipAddress')),
   'javaRuntimeName': ('Java runtime name', lambda r: r.get('javaVersion', {}).get('runtimeName')),
   'javaRuntimeVersion': ('Java runtime version', lambda r: r.get('javaVersion', {}).get('runtimeVersion')),
-  'javaSpecificationVersion': ('Java specification version', lambda r: r.get('javaVersion', {}).get('specificationVersion')),
+  'javaSpecificationVersion':
+      ('Java specification version', lambda r: r.get('javaVersion', {}).get('specificationVersion')),
   'javaVersion': ('Java version', lambda r: r.get('javaVersion', {}).get('version')),
   'mailRelay': ('Mail relay', lambda r: r.get('mailRelay')),
   'platformName': ('Platform name', lambda r: r.get('platform', {}).get('name')),
@@ -794,7 +860,9 @@ def _do_query_aus(options):
         if options.group_by_field: colkey = (head, host)
         else: colkey = (host, head)
         data[((r['auId'],), colkey)] = lamb(r)
-  _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
+  _output_table(options, data, ['AUID'],
+                [[x[0] for x in headlamb], sorted(options.hosts)]
+                if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 
 _QUERY_CRAWLS = {
   'auId': ('AUID', lambda r: r.get('auId')),
@@ -849,14 +917,6 @@ def _dispatch(options):
   elif options.query_aus: _do_query_aus(options)
   elif options.query_crawls: _do_query_crawls(options)
   else: raise RuntimeError('Unreachable')
-
-def _make_client(host, username, password):
-    session = requests.Session()
-    session.auth = requests.auth.HTTPBasicAuth(username, password)
-    transport = zeep.transports.Transport(session=session)
-    wsdl = 'http://{}/ws/DaemonStatusService?wsdl'.format(host)
-    client = zeep.Client(wsdl, transport=transport)
-    return client
 
 def _main():
   '''Main method.'''

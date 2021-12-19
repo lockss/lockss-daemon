@@ -1,0 +1,295 @@
+{
+  publisher <
+    name = American Society for Microbiology 
+ >
+  plugin = org.lockss.plugin.pub2web.asm.ASMscienceBooksPlugin
+  #param[base_url] = http://www.asmscience.org/
+  implicit < status ; year ; isbn ; eisbn ; param[doi] ; param[base_url] ; name >
+  
+  #Moved to Wiley
+
+
+ {
+  title <
+   name = Books ;
+   type = bookSeries
+  >
+   au < doNotProcess ; 1993 ; 9781555810535 ; 9781555818388 ; 10.1128/9781555818388 ; http://www.asmscience.org/ ; Bacillus subtilis and Other Gram-Positive Bacteria >
+   au < doNotProcess ; 1994 ; 9781555810825 ; 9781555818340 ; 10.1128/9781555818340 ; http://www.asmscience.org/ ; Molecular Genetics of Bacterial Pathogenesis >
+   au < doNotProcess ; 1994 ; 9781555810726 ; 9781555818357 ; 10.1128/9781555818357 ; http://www.asmscience.org/ ; Tuberculosis: Pathogenesis, Protection, and Control >
+   au < doNotProcess ; 1994 ; 9781555810672 ; 9781555818364 ; 10.1128/9781555818364 ; http://www.asmscience.org/ ; Vibrio cholerae and Cholera >
+   au < doNotProcess ; 1995 ; 9781555810986 ; 9781555818302 ; 10.1128/9781555818302 ; http://www.asmscience.org/ ; DNA Provirus, The >
+   au < doNotProcess ; 1995 ; 9781555810894 ; 9781555818319 ; 10.1128/9781555818319 ; http://www.asmscience.org/ ; Two-Component-Signal Transduction >
+   au < doNotProcess ; 1995 ; 9781555810924 ; 9781555818326 ; 10.1128/9781555818326 ; http://www.asmscience.org/ ; Human Enterovirus Infections >
+   au < doNotProcess ; 1995 ; 9781555810733 ; 9781555818333 ; 10.1128/9781555818333 ; http://www.asmscience.org/ ; tRNA: Structure, Biosynthesis, and Function >
+   au < doNotProcess ; 1998 ; 9781555811440 ; 9781555818265 ; 10.1128/9781555818265 ; http://www.asmscience.org/ ; Pasteur and Modern Science >
+   au < doNotProcess ; 1998 ; 9781555811419 ; 9781555816957 ; 10.1128/9781555816957 ; http://www.asmscience.org/ ; Emerging Infections 2 >
+   au < doNotProcess ; 1998 ; 9781555811075 ; 9781555818241 ; 10.1128/9781555818241 ; http://www.asmscience.org/ ; Cryptococcus neoformans >
+   au < doNotProcess ; 1998 ; 9781555811303 ; 9781555818289 ; 10.1128/9781555818289 ; http://www.asmscience.org/ ; Human Tumor Viruses >
+   au < doNotProcess ; 1998 ; 9781555811334 ; 9781555818296 ; 10.1128/9781555818296 ; http://www.asmscience.org/ ; Modification and Editing of RNA >
+   au < doNotProcess ; 1998 ; 9781555811211 ; 9781555816940 ; 10.1128/9781555816940 ; http://www.asmscience.org/ ; Emerging Infections 1 >
+   au < doNotProcess ; 1999 ; 9781555811686 ; 9781555818418 ; 10.1128/9781555818418 ; http://www.asmscience.org/ ; Emerging Infections 3 >
+   au < doNotProcess ; 1999 ; 9781555811617 ; 9781555818173 ; 10.1128/9781555818173 ; http://www.asmscience.org/ ; Pathogenicity Islands and Other Mobile Virulence Elements >
+   au < doNotProcess ; 1999 ; 9781555811518 ; 9781555818180 ; 10.1128/9781555818180 ; http://www.asmscience.org/ ; Organization of Prokarytic Genome >
+   au < doNotProcess ; 1999 ; 9781555811341 ; 9781555818197 ; 10.1128/9781555818197 ; http://www.asmscience.org/ ; Pocket Guide to Clinical Immunology >
+   au < doNotProcess ; 1999 ; 9781555811556 ; 9781555818203 ; 10.1128/9781555818203 ; http://www.asmscience.org/ ; Chlamydia >
+   au < doNotProcess ; 1999 ; 9781555811327 ; 9781555818210 ; 10.1128/9781555818210 ; http://www.asmscience.org/ ; Sexually Transmitted Diseases and Adverse Outcomes of Pregnancy >
+   au < doNotProcess ; 1999 ; 9781555811471 ; 9781555818227 ; 10.1128/9781555818227 ; http://www.asmscience.org/ ; Microsporidia and Microsporidiosis >
+   au < doNotProcess ; 1999 ; 9781555811389 ; 9781555818234 ; 10.1128/9781555818234 ; http://www.asmscience.org/ ; Guide to Specimen Management in Clinical Microbiology Second Edition >
+   au < doNotProcess ; 1999 ; 9781555811433 ; 9781555818272 ; 10.1128/9781555818272 ; http://www.asmscience.org/ ; Robert Koch: A Life in Medicine and Bacteriology >
+   au < down ; 2000 ; 9781555811976 ; 9781555816971 ; 10.1128/9781555816971 ; http://www.asmscience.org/ ; Emerging Infections 4 >
+   au < down ; 2000 ; 9781555812010 ; 9781555818050 ; 10.1128/9781555818050 ; http://www.asmscience.org/ ; Emerging Diseases of Animals >
+   au < down ; 2000 ; 9781555811778 ; 9781555818067 ; 10.1128/9781555818067 ; http://www.asmscience.org/ ; Infections Associated with Indwelling Medical Devices Third Edition >
+   au < down ; 2000 ; 9781555811945 ; 9781555818074 ; 10.1128/9781555818074 ; http://www.asmscience.org/ ; Molecular Mimicry, Microbes, and Autoimmunity >
+   au < down ; 2000 ; 9781555811938 ; 9781555818081 ; 10.1128/9781555818081 ; http://www.asmscience.org/ ; Chronology of Microbiology in Historical Context, A >
+   au < down ; 2000 ; 9781555811952 ; 9781555818098 ; 10.1128/9781555818098 ; http://www.asmscience.org/ ; Environmental Microbe-Metal Interactions >
+   au < down ; 2000 ; 9781555811594 ; 9781555818104 ; 10.1128/9781555818104 ; http://www.asmscience.org/ ; Persistent Bacterial Infections >
+   au < down ; 2000 ; 9781555811747 ; 9781555818111 ; 10.1128/9781555818111 ; http://www.asmscience.org/ ; Virulence Mechanisms of Bacterial Pathogens Third Edition >
+   au < down ; 2000 ; 9781555811907 ; 9781555818128 ; 10.1128/9781555818128 ; http://www.asmscience.org/ ; Many Faces, Many Microbes >
+   au < down ; 2000 ; 9781555811785 ; 9781555818135 ; 10.1128/9781555818135 ; http://www.asmscience.org/ ; Biotechnology Explorations >
+   au < down ; 2000 ; 9781555811846 ; 9781555818142 ; 10.1128/9781555818142 ; http://www.asmscience.org/ ; Ribosome, The >
+   au < down ; 2000 ; 9781555811631 ; 9781555818159 ; 10.1128/9781555818159 ; http://www.asmscience.org/ ; Intimate Strangers >
+   au < down ; 2000 ; 9781555811587 ; 9781555818166 ; 10.1128/9781555818166 ; http://www.asmscience.org/ ; Prokaryotic Development >
+   au < down ; 2001 ; 9781555812164 ; 9781555816988 ; 10.1128/9781555816988 ; http://www.asmscience.org/ ; Emerging Infections 5 >
+   au < down ; 2001 ; 9781555812133 ; 9781555818005 ; 10.1128/9781555818005 ; http://www.asmscience.org/ ; Helicobacter pylori >
+   au < down ; 2001 ; 9781555812027 ; 9781555818012 ; 10.1128/9781555818012 ; http://www.asmscience.org/ ; Immunology, Immunopathology, and Immunity, Sixth Edition >
+   au < down ; 2001 ; 9781555812225 ; 9781555818029 ; 10.1128/9781555818029 ; http://www.asmscience.org/ ; Recombinant DNA Controversy, The: A Memoir >
+   au < down ; 2001 ; 9781555811792 ; 9781555818036 ; 10.1128/9781555818036 ; http://www.asmscience.org/ ; Biocatalysis and Biodegradation >
+   au < down ; 2001 ; 9781555811679 ; 9781555818043 ; 10.1128/9781555818043 ; http://www.asmscience.org/ ; Xenotransplantation >
+   au < down ; 2002 ; 9781555812355 ; 9781555817909 ; 10.1128/9781555817909 ; http://www.asmscience.org/ ; Borna Disease Virus and its Role in Neurobehavioral Diseases >
+   au < down ; 2002 ; 9781555812102 ; 9781555817916 ; 10.1128/9781555817916 ; http://www.asmscience.org/ ; Molecular Biology of Picornavirus >
+   au < down ; 2002 ; 9781555812348 ; 9781555817923 ; 10.1128/9781555817923 ; http://www.asmscience.org/ ; Enterococci, The >
+   au < down ; 2002 ; 9781555812270 ; 9781555817930 ; 10.1128/9781555817930 ; http://www.asmscience.org/ ; Other End of the Microscope, The >
+   au < down ; 2002 ; 9781555812447 ; 9781555817947 ; 10.1128/9781555817947 ; http://www.asmscience.org/ ; Polymicrobial Diseases >
+   au < down ; 2002 ; 9781555812096 ; 9781555817954 ; 10.1128/9781555817954 ; http://www.asmscience.org/ ; Mobile DNA II >
+   au < down ; 2002 ; 9781555811891 ; 9781555817961 ; 10.1128/9781555817961 ; http://www.asmscience.org/ ; Manual of Commercial Methods in Clinical Microbiology >
+   au < down ; 2002 ; 9781555812140 ; 9781555817978 ; 10.1128/9781555817978 ; http://www.asmscience.org/ ; Immunology of Infectious Diseases >
+   au < down ; 2002 ; 9781555812300 ; 9781555817985 ; 10.1128/9781555817985 ; http://www.asmscience.org/ ; Legionella >
+   au < down ; 2002 ; 9781555812058 ; 9781555817992 ; 10.1128/9781555817992 ; http://www.asmscience.org/ ; Bacillus subtilis and Its Closest Relatives >
+   au < down ; 2003 ; 9781555812812 ; 9781555817763 ; 10.1128/9781555817763 ; http://www.asmscience.org/ ; Origins of Molecular Biology: A Tribute to Jacques Monod >
+   au < down ; 2003 ; 9781555812362 ; 9781555817787 ; 10.1128/9781555817787 ; http://www.asmscience.org/ ; Zoonoses: Infectious Diseases Transmissible from Animals to Humans 3/e >
+   au < down ; 2003 ; 9781555812584 ; 9781555817794 ; 10.1128/9781555817794 ; http://www.asmscience.org/ ; Bacteria versus Antibacterial Agents >
+   au < down ; 2003 ; 9781555812638 ; 9781555817800 ; 10.1128/9781555817800 ; http://www.asmscience.org/ ; Bacterial Adhesion to Animal Cells and Tissues >
+   au < down ; 2003 ; 9781555812317 ; 9781555817817 ; 10.1128/9781555817817 ; http://www.asmscience.org/ ; Quinolone Antimicrobial Agents, Third Edition >
+   au < down ; 2003 ; 9781555812669 ; 9781555817824 ; 10.1128/9781555817824 ; http://www.asmscience.org/ ; Natural Pathogens of Laboratory Animals: Their Effects on Research >
+   au < down ; 2003 ; 9781555812409 ; 9781555817831 ; 10.1128/9781555817831 ; http://www.asmscience.org/ ; Viral Encephalitis in Humans >
+   au < down ; 2003 ; 9781555812614 ; 9781555817848 ; 10.1128/9781555817848 ; http://www.asmscience.org/ ; Microbial Pathogenesis and the Intestinal Epithelial Cell >
+   au < down ; 2003 ; 9781555812645 ; 9781555817855 ; 10.1128/9781555817855 ; http://www.asmscience.org/ ; Microbes: An Invisible Universe >
+   au < down ; 2003 ; 9781555812256 ; 9781555817862 ; 10.1128/9781555817862 ; http://www.asmscience.org/ ; Global Disease Eradication >
+   au < down ; 2003 ; 9781555812607 ; 9781555817879 ; 10.1128/9781555817879 ; http://www.asmscience.org/ ; Granulomatous Infection and Inflammations >
+   au < down ; 2003 ; 9781555812546 ; 9781555817886 ; 10.1128/9781555817886 ; http://www.asmscience.org/ ; Antibiotics: Actions, Origins, Resistance >
+   au < down ; 2003 ; 9781555812454 ; 9781555817893 ; 10.1128/9781555817893 ; http://www.asmscience.org/ ; Bacterial Protein Toxins >
+   au < down ; 2003 ; 9781555812072 ; 9781555816353 ; 10.1128/9781555816353 ; http://www.asmscience.org/ ; Cases in Medical Microbiology and Infectious Diseases, Third Edition >
+   au < down ; 2004 ; 9781555812928 ; 9781555816544 ; 10.1128/9781555816544 ; http://www.asmscience.org/ ; Iron Transport in Bacteria >
+   au < down ; 2004 ; 9781555812966 ; 9781555817664 ; 10.1128/9781555817664 ; http://www.asmscience.org/ ; Cases in Human Parasitology >
+   au < down ; 2004 ; 9781555812911 ; 9781555817671 ; 10.1128/9781555817671 ; http://www.asmscience.org/ ; Innate Immune Response to Infection >
+   au < down ; 2004 ; 9781555812973 ; 9781555816537 ; 10.1128/9781555816537 ; http://www.asmscience.org/ ; Pneumococcus, The >
+   au < down ; 2004 ; 9781555812683 ; 9781555817688 ; 10.1128/9781555817688 ; http://www.asmscience.org/ ; Molecular Epidemiology of Infectious Diseases: Principles and Practices >
+   au < down ; 2004 ; 9781555812799 ; 9781555817695 ; 10.1128/9781555817695 ; http://www.asmscience.org/ ; Clinical Laboratory Management >
+   au < down ; 2004 ; 9781555812942 ; 9781555817718 ; 10.1128/9781555817718 ; http://www.asmscience.org/ ; Microbial Biofilms >
+   au < down ; 2004 ; 9781555812881 ; 9781555817725 ; 10.1128/9781555817725 ; http://www.asmscience.org/ ; Pocket Guide to Clinical Microbiology, Third Edition >
+   au < down ; 2004 ; 9781555812461 ; 9781555816148 ; 10.1128/9781555816148 ; http://www.asmscience.org/ ; Immunology, Infection, and Immunity >
+   au < down ; 2004 ; 9781555812652 ; 9781555817732 ; 10.1128/9781555817732 ; http://www.asmscience.org/ ; Plasmid Biology >
+   au < down ; 2004 ; 9781555812713 ; 9781555817749 ; 10.1128/9781555817749 ; http://www.asmscience.org/ ; Microbial Evolution: Gene Establishment, Survival, and Exchange >
+   au < down ; 2004 ; 9781555812805 ; 9781555817756 ; 10.1128/9781555817756 ; http://www.asmscience.org/ ; Clinician's Dictionary of Pathogenic Microorganisms, A >
+   au < down ; 2004 ; 9781555812423 ; 9781555816995 ; 10.1128/9781555816995 ; http://www.asmscience.org/ ; Emerging Infections 6 >
+   au < down ; 2004 ; 9781555812676 ; 9781555817770 ; 10.1128/9781555817770 ; http://www.asmscience.org/ ; Microbial Diversity and Bioprospecting >
+   au < down ; 2005 ; 9781555813079 ; 9781555816506 ; 10.1128/9781555816506 ; http://www.asmscience.org/ ; Phages: Their Role in Pathogen and Biotechnology >
+   au < down ; 2005 ; 9781555813307 ; 9781555817558 ; 10.1128/9781555817558 ; http://www.asmscience.org/ ; Molecular Approaches to Malaria >
+   au < down ; 2005 ; 9781555812379 ; 9781555815929 ; 10.1128/9781555815929 ; http://www.asmscience.org/ ; Antimicrobial Agents: Antibacterials and Antifungals >
+   au < down ; 2005 ; 9781555813291 ; 9781555817572 ; 10.1128/9781555817572 ; http://www.asmscience.org/ ; Frontiers in Antimicrobial Resistance: A Tribute to Stuart B. Levy >
+   au < down ; 2005 ; 9781555813406 ; 9781555817565 ; 10.1128/9781555817565 ; http://www.asmscience.org/ ; Rene Dubos, Friend of the Good Earth: Microbiologist, Medical Scientist, Environmentalist >
+   au < down ; 2005 ; 9781555813048 ; 9781555816094 ; 10.1128/9781555816094 ; http://www.asmscience.org/ ; Biology and Biotechnology: Science, Applications, and Issues >
+   au < down ; 2005 ; 9781555813284 ; 9781555816452 ; 10.1128/9781555816452 ; http://www.asmscience.org/ ; Bacterial Ion Channels and Their Eukaryotic Homologs >
+   au < down ; 2005 ; 9781555813277 ; 9781555817589 ; 10.1128/9781555817589 ; http://www.asmscience.org/ ; Petroleum Microbiology >
+   au < down ; 2005 ; 9781555812393 ; 9781555817596 ; 10.1128/9781555817596 ; http://www.asmscience.org/ ; Bioremediation >
+   au < down ; 2005 ; 9781555813017 ; 9781555818395 ; 10.1128/9781555818395 ; http://www.asmscience.org/ ; Structural Biology of Bacterial Pathogensis >
+   au < down ; 2005 ; 9781555812386 ; 9781555816490 ; 10.1128/9781555816490 ; http://www.asmscience.org/ ; Tick-Borne Diseases of Humans >
+   au < down ; 2005 ; 9781555812980 ; 9781555817602 ; 10.1128/9781555817602 ; http://www.asmscience.org/ ; Revenge of the Microbes >
+   au < down ; 2005 ; 9781555813239 ; 9781555817619 ; 10.1128/9781555817619 ; http://www.asmscience.org/ ; Colonization of Mucosal Surfaces >
+   au < down ; 2005 ; 9781555813093 ; 9781555817626 ; 10.1128/9781555817626 ; http://www.asmscience.org/ ; Viruses and the Evolution of Life >
+   au < down ; 2005 ; 9781555813024 ; 9781555817633 ; 10.1128/9781555817633 ; http://www.asmscience.org/ ; Cellular Microbiology Second Edition >
+   au < down ; 2005 ; 9781555812324 ; 9781555817640 ; 10.1128/9781555817640 ; http://www.asmscience.org/ ; Bacterial Chromosome, The >
+   au < down ; 2005 ; 9781555812959 ; 9781555817657 ; 10.1128/9781555817657 ; http://www.asmscience.org/ ; Tuberculosis and the Tubercle Bacillus >
+   au < down ; 2006 ; 9781555813734 ; 9781555815684 ; 10.1128/9781555815684 ; http://www.asmscience.org/ ; Pathogenesis of Human Pulmonary Tuberculosis: Insights from the Rabbit Model >
+   au < down ; 2006 ; 9781555813758 ; 9781555815721 ; 10.1128/9781555815721 ; http://www.asmscience.org/ ; Food Allergy >
+   au < down ; 2006 ; 9781555813765 ; 9781555817510 ; 10.1128/9781555817510 ; http://www.asmscience.org/ ; Exposure: A Guide to Sources of Infection >
+   au < down ; 2006 ; 9781555813390 ; 9781555815899 ; 10.1128/9781555815899 ; http://www.asmscience.org/ ; Biological Safety, Fourth Edition : Principles and Practices >
+   au < down ; 2006 ; 9781555813659 ; 9781555815714 ; 10.1128/9781555815714 ; http://www.asmscience.org/ ; Biology of Vibrios, The >
+   au < down ; 2006 ; 9781555813666 ; 9781555816322 ; 10.1128/9781555816322 ; http://www.asmscience.org/ ; Outbreak: Cases in the Real-World Microbiology >
+   au < down ; 2006 ; 9781555813680 ; 9781555815776 ; 10.1128/9781555815776 ; http://www.asmscience.org/ ; Molecular Principles of Fungal Pathogenesis >
+   au < down ; 2006 ; 9781555813000 ; 9781555815622 ; 10.1128/9781555815622 ; http://www.asmscience.org/ ; Evolution of Microbial Pathogens >
+   au < down ; 2006 ; 9781555813642 ; 9781555815905 ; 10.1128/9781555815905 ; http://www.asmscience.org/ ; Manual of Molecular and Clinical Lab Immunology, Seventh Edition >
+   au < down ; 2006 ; 9781555813437 ; 9781555816513 ; 10.1128/9781555816513 ; http://www.asmscience.org/ ; Gram-Positive Pathogens, Second Edition >
+   au < down ; 2006 ; 9781555813567 ; 9781555816483 ; 10.1128/9781555816483 ; http://www.asmscience.org/ ; Power of Plagues, The >
+   au < down ; 2006 ; 9781555813574 ; 9781555817527 ; 10.1128/9781555817527 ; http://www.asmscience.org/ ; Microbiology of Fresh Produce >
+   au < down ; 2006 ; 9781555813062 ; 9781555817534 ; 10.1128/9781555817534 ; http://www.asmscience.org/ ; Antimicrobial Resistance in Bacteria of Animal Origin >
+   au < down ; 2006 ; 9781555813420 ; 9781555817541 ; 10.1128/9781555817541 ; http://www.asmscience.org/ ; Enterobacteria Second Edition, The >
+   au < down ; 2006 ; 9781555813451 ; 9781555816520 ; 10.1128/9781555816520 ; http://www.asmscience.org/ ; Biomedical Scientist as Expert Witness, The >
+   au < down ; 2006 ; 9781555813192 ; 9781555816704 ; 10.1128/9781555816704 ; http://www.asmscience.org/ ; DNA Repair and Mutagensis, Second Edition >
+   au < down ; 2006 ; 9781555813901 ; 9781555815660 ; 10.1128/9781555815660 ; http://www.asmscience.org/ ; Legionella: State of the Art 30 Years after Its Recognition >
+   au < doNotProcess ; 2006 ;  ; 9781555813864 ; 10.1128/9781555813864 ; https://www.asmscience.org/ ; The Invisible ABCs: Exploring the World of Microbes >
+   au < down ; 2007 ; 9781555814663 ; 9781555816346 ; 10.1128/9781555816346 ; http://www.asmscience.org/ ; Twelve Diseases that Changed Our World >
+   au < down ; 2007 ; 9781555814212 ; 9781555815837 ; 10.1128/9781555815837 ; http://www.asmscience.org/ ; Sex in Fungi: Molecular Determination and Evolutionary Implications >
+   au < down ; 2007 ; 9781555812232 ; 9781555817497 ; 10.1128/9781555817497 ; http://www.asmscience.org/ ; Methods for General and Molecular Microbiology, Third Edition >
+   au < down ; 2007 ; 9781555814694 ; 9781555815851 ; 10.1128/9781555815851 ; http://www.asmscience.org/ ; Virulence Mechanisms of Bacterial Pathogens, Fourth Edition >
+   au < down ; 2007 ; 9781555814243 ; 9781555815844 ; 10.1128/9781555815844 ; http://www.asmscience.org/ ; Superantigens: Molecular Basis for Their Role in Human Diseases >
+   au < down ; 2007 ; 9781555814021 ; 9781555817503 ; 10.1128/9781555817503 ; http://www.asmscience.org/ ; Microbiology Bench Companion, The >
+   au < down ; 2007 ; 9781555814519 ; 9781555815530 ; 10.1128/9781555815530 ; http://www.asmscience.org/ ; Bacterial Pathogenomics >
+   au < down ; 2007 ; 9781555813796 ; 9781555815882 ; 10.1128/9781555815882 ; http://www.asmscience.org/ ; Manual of Environmental Microbiology, Third Edition >
+   au < down ; 2007 ; 9781555814229 ; 9781555815813 ; 10.1128/9781555815813 ; http://www.asmscience.org/ ; Physiology and Biochemistry of Extremophiles >
+   au < down ; 2007 ; 9781555813031 ; 9781555815615 ; 10.1128/9781555815615 ; http://www.asmscience.org/ ; Enzyme-Mediated Resistance to Antibiotics >
+   au < down ; 2007 ; 9781555813932 ; 9781555815653 ; 10.1128/9781555815653 ; http://www.asmscience.org/ ; HIV and Pathogenesis of AIDS Third Edition >
+   au < down ; 2007 ; 9781555813918 ; 9781555815516 ; 10.1128/9781555815516 ; http://www.asmscience.org/ ; Archaea: Molecular and Cellular Biology >
+   au < down ; 2007 ; 9781555813925 ; 9781555816445 ; 10.1128/9781555816445 ; http://www.asmscience.org/ ; Antisepsis, Disinfection, and Sterilization >
+   au < down ; 2007 ; 9781555814076 ; 9781555815912 ; 10.1128/9781555815912 ; http://www.asmscience.org/ ; Food Microbiology, Third Edition >
+   au < down ; 2007 ; 9781555814175 ; 9781555816186 ; 10.1128/9781555816186 ; http://www.asmscience.org/ ; Food Safety : Old Habits, New Perspectives >
+   au < down ; 2007 ; 9781555813741 ; 9781555815769 ; 10.1128/9781555815769 ; http://www.asmscience.org/ ; Microbial Source Tracking >
+   au < down ; 2007 ; 9781555813802 ; 9781555816018 ; 10.1128/9781555816018 ; http://www.asmscience.org/ ; Diagnostic Medical Parasitology, Fifth Edition >
+   au < down ; 2007 ; 9781555813987 ; 9781555815806 ; 10.1128/9781555815806 ; http://www.asmscience.org/ ; Periplasm, The >
+   au < down ; 2007 ; 9781555813772 ; 9781555815585 ; 10.1128/9781555815585 ; http://www.asmscience.org/ ; Emerging Infections 7 >
+   au < down ; 2008 ; 9781555814441 ; 9781555815592 ; 10.1128/9781555815592 ; http://www.asmscience.org/ ; Emerging Infections 8 >
+   au < down ; 2008 ; 9781555814038 ; 9781555815462 ; 10.1128/9781555815462 ; http://www.asmscience.org/ ; Therapeutic Microbiology: Probiotics and Related Strategies >
+   au < down ; 2008 ; 9781555814137 ; 9781555815745 ; 10.1128/9781555815745 ; http://www.asmscience.org/ ; Imported Foods: Microbial Issues and Challenges >
+   au < down ; 2008 ; 9781555816711 ; 9781555816339 ; 10.1128/9781555816339 ; http://www.asmscience.org/ ; Forgotten People, Forgotten Diseases: The Neglected Tropical Diseases and their Impact on Global Health and Development >
+   au < down ; 2008 ; 9781555814373 ; 9781555815554 ; 10.1128/9781555815554 ; http://www.asmscience.org/ ; Campylobacter, Third Edition >
+   au < down ; 2008 ; 9781555814786 ; 9781555815547 ; 10.1128/9781555815547 ; http://www.asmscience.org/ ; Bioenergy >
+   au < down ; 2008 ; 9781555814069 ; 9781555815509 ; 10.1128/9781555815509 ; http://www.asmscience.org/ ; Accessing Uncultivated Microorganisms: From the Environment to Organisms and Genomes and Back >
+   au < down ; 2008 ; 9781555814236 ; 9781555815646 ; 10.1128/9781555815646 ; http://www.asmscience.org/ ; High-Pressure Microbiology >
+   au < down ; 2008 ; 9781555814649 ; 9781555815738 ; 10.1128/9781555815738 ; http://www.asmscience.org/ ; Food-Borne Viruses: Progress and Challenges >
+   au < down ; 2008 ; 9781555814045 ; 9781555815578 ; 10.1128/9781555815578 ; http://www.asmscience.org/ ; Chemical Communication Among Bacteria >
+   au < down ; 2008 ; 9781555814083 ; 9781555815820 ; 10.1128/9781555815820 ; http://www.asmscience.org/ ; Pneumococcal Vaccines: The Impact of Conjugate Vaccine >
+   au < down ; 2008 ; 9781555814687 ; 9781555815783 ; 10.1128/9781555815783 ; http://www.asmscience.org/ ; Mycobacterial Cell Envelope, The >
+   au < down ; 2008 ; 9781555814502 ; 9781555817473 ; 10.1128/9781555817473 ; http://www.asmscience.org/ ; Sampling for Biological Agents in the Environment >
+   au < down ; 2008 ; 9781555814557 ; 9781555815790 ; 10.1128/9781555815790 ; http://www.asmscience.org/ ; Nidoviruses >
+   au < down ; 2008 ; 9781555814601 ; 9781555815608 ; 10.1128/9781555815608 ; http://www.asmscience.org/ ; Enterobacter sakazakii >
+   au < down ; 2008 ; 9781555814205 ; 9781555815677 ; 10.1128/9781555815677 ; http://www.asmscience.org/ ; Myxobacteria: Multicellularity and Differentiation >
+   au < down ; 2008 ; 9781555814144 ; 9781555815639 ; 10.1128/9781555815639 ; http://www.asmscience.org/ ; Evolutionary Biology of Bacterial and Fungal Pathogens >
+   au < down ; 2008 ; 9781555814618 ; 9781555815752 ; 10.1128/9781555815752 ; http://www.asmscience.org/ ; Microbial Risk Analysis of Foods >
+   au < down ; 2008 ; 9781555814717 ; 9781555816100 ; 10.1128/9781555816100 ; http://www.asmscience.org/ ; Molecular Biology and Biotechnology, Third Edition: A Guide for Teachers >
+   au < down ; 2008 ; 9781555814724 ; 9781555817480 ; 10.1128/9781555817480 ; http://www.asmscience.org/ ; Molecular Biology and Biotechnology, Third Edition: A Guide for Students >
+   au < down ; 2009 ; 9781555814014 ; 9781555816650 ; 10.1128/9781555816650 ; http://www.asmscience.org/ ; Phagocyte-Pathogen Interactions: Macrophages and the Host Response to Infection >
+   au < down ; 2009 ; 9781555814847 ; 9781555815950 ; 10.1128/9781555815950 ; http://www.asmscience.org/ ; Infections of Leisure, Fourth Edition >
+   au < down ; 2009 ; 9781555814304 ; 9781555815486 ; 10.1128/9781555815486 ; http://www.asmscience.org/ ; Sequelae and Long-Term Consequences of Infectious Diseases >
+   au < down ; 2009 ; 9781555814397 ; 9781555815493 ; 10.1128/9781555815493 ; http://www.asmscience.org/ ; Antiviral Research: Strategies in Antiviral Drug Discovery >
+   au < down ; 2009 ; 9781555814625 ; 9781555815974 ; 10.1128/9781555815974 ; http://www.asmscience.org/ ; Clinical Virology Manual, Fourth Edition >
+   au < down ; 2009 ; 9781555814052 ; 9781555815479 ; 10.1128/9781555815479 ; http://www.asmscience.org/ ; Food-Borne Microbes: Shaping the Host Ecosystem >
+   au < down ; 2009 ; 9781555815158 ; 9781555817428 ; 10.1128/9781555817428 ; http://www.asmscience.org/ ; Elusive Malaria Vaccine, The: Miracle or Mirage? >
+   au < down ; 2009 ; 9781555814540 ; 9781555815967 ; 10.1128/9781555815967 ; http://www.asmscience.org/ ; Practical Guide to Diagnostic Parasitology, Second Edition >
+   au < down ; 2009 ; 9781555815004 ; 9781555817442 ; 10.1128/9781555817442 ; http://www.asmscience.org/ ; Animalcules: The Activities, Impacts, and Investigators of Microbes >
+   au < down ; 2009 ; 9781555814250 ; 9781555815981 ; 10.1128/9781555815981 ; http://www.asmscience.org/ ; Clinical Virology Third Edition >
+   au < down ; 2009 ; 9781555814380 ; 9781555815523 ; 10.1128/9781555815523 ; http://www.asmscience.org/ ; Aspergillus fumigatus and Aspergillosis >
+   au < down ; 2009 ; 9781555813697 ; 9781555815691 ; 10.1128/9781555815691 ; http://www.asmscience.org/ ; Spectrum of Neuro-AIDS Disorders, The: Pathophysiology, Diagnosis, and Treatment >
+   au < down ; 2009 ; 9781555813970 ; 9781555815455 ; 10.1128/9781555815455 ; http://www.asmscience.org/ ; Diagnostic Microbiology of the Immunocompromised Host >
+   au < down ; 2009 ; 9781555814366 ; 9781555815561 ; 10.1128/9781555815561 ; http://www.asmscience.org/ ; Cellular Signaling and Innate Immune Responses to RNA Virus Infections >
+   au < down ; 2010 ; 9781555816032 ; 9781555816698 ; 10.1128/9781555816698 ; http://www.asmscience.org/ ; Picornaviruses, The >
+   au < down ; 2010 ; 9781555815257 ; 9781555816803 ; 10.1128/9781555816803 ; http://www.asmscience.org/ ; Emerging Infections 9 >
+   au < down ; 2010 ; 9781555815028 ; 9781555816629 ; 10.1128/9781555816629 ; http://www.asmscience.org/ ; Bacteriophages in the Control of Food- and Waterborne Pathogens >
+   au < down ; 2010 ; 9781555815271 ; 9781555817435 ; 10.1128/9781555817435 ; http://www.asmscience.org/ ; Clinical Microbiology Procedures Handbook, 3rd Edition >
+   au < down ; 2010 ; 9781555815127 ; 9781555816827 ; 10.1128/9781555816827 ; http://www.asmscience.org/ ; Manual of Industrial Microbiology and Biotechnology, Third Edition >
+   au < down ; 2010 ; 9781555814731 ; 9781555816636 ; 10.1128/9781555816636 ; http://www.asmscience.org/ ; Cellular and Molecular Biology of Filamentous Fungi >
+   au < down ; 2010 ; 9781555814991 ; 9781555816667 ; 10.1128/9781555816667 ; http://www.asmscience.org/ ; Second Messenger Cyclic Di-GMP, The >
+   au < down ; 2010 ; 9781555814595 ; 9781555815936 ; 10.1128/9781555815936 ; http://www.asmscience.org/ ; Pathogens and Toxins in Food: Challenges and Interventions >
+   au < doNotProcess ; 2010 ; 9781555814700 ; 9781555815943 ; 10.1128/9781555815943 ; https://www.asmscience.org/ ; I, Microbiologist: A Discovery-Based Course in Microbial Ecology and Molecular Evolution >
+   au < doNotProcess ; 2010 ; 9781555814762 ; 9781555816643 ; 10.1128/9781555816643 ; https://www.asmscience.org/ ; Cultural Heritage Microbiology: Fundamental Studies in Conservation Science >
+   au < down ; 2011 ; 9781555815295 ; 9781555817220 ; 10.1128/9781555817220 ; http://www.asmscience.org/ ; Germ Theory: Medical Pioneers in Infectious Diseases >
+   au < down ; 2011 ; 9781555815363 ; 9781555817190 ; 10.1128/9781555817190 ; http://www.asmscience.org/ ; Microbial Metal and Metalloid Metabolism: Advances and Applications >
+   au < down ; 2011 ; 9781555815035 ; 9781555817107 ; 10.1128/9781555817107 ; http://www.asmscience.org/ ; Oral Microbial Communities: Genomic Inquiry and Interspecies Communication >
+   au < down ; 2011 ; 9781555815134 ; 9781555817138 ; 10.1128/9781555817138 ; http://www.asmscience.org/ ; Tuberculosis and Nontuberculous Mycobacterial Infections, Sixth Edition >
+   au < down ; 2011 ; 9781555814632 ; 9781555816728 ; 10.1128/9781555816728 ; http://www.asmscience.org/ ; Manual of Clinical Microbiology, Tenth Edition, Digital Edition >
+   au < down ; 2011 ; 9781555815165 ; 9781555817152 ; 10.1128/9781555817152 ; http://www.asmscience.org/ ; Yeast Research: A Historical Overview >
+   au < down ; 2011 ; 9781555815356 ; 9781555817114 ; 10.1128/9781555817114 ; http://www.asmscience.org/ ; Population Genetics of Bacteria: A Tribute to Thomas S. Whittam >
+   au < down ; 2011 ; 9781555815424 ; 9781555817121 ; 10.1128/9781555817121 ; http://www.asmscience.org/ ; Rapid Detection, Characterization, and Enumeration of Foodborne Pathogens >
+   au < down ; 2011 ; 9781555814816 ; 9781555817145 ; 10.1128/9781555817145 ; http://www.asmscience.org/ ; Nitrification >
+   au < down ; 2011 ; 9781555814571 ; 9781555816902 ; 10.1128/9781555816902 ; http://www.asmscience.org/ ; Genomes of Foodborne and Waterborne Pathogens >
+   au < down ; 2011 ; 9781555815370 ; 9781555816896 ; 10.1128/9781555816896 ; http://www.asmscience.org/ ; Stable Isotope Probing and Related Technologies >
+   au < down ; 2011 ; 9781555815141 ; 9781555816872 ; 10.1128/9781555816872 ; http://www.asmscience.org/ ; Immune Response to Infection, The >
+   au < down ; 2011 ; 9781555816087 ; 9781555816865 ; 10.1128/9781555816865 ; http://www.asmscience.org/ ; Fecal Bacteria, The >
+   au < down ; 2011 ; 9781555816216 ; 9781555816841 ; 10.1128/9781555816841 ; http://www.asmscience.org/ ; Bacterial Stress Responses, Second Edition >
+   au < down ; 2011 ; 9781555815431 ; 9781555816889 ; 10.1128/9781555816889 ; http://www.asmscience.org/ ; Magic Bullets To Conquer Malaria: From Quinine to Qinghaosu >
+   au < down ; 2011 ; 9781555815011 ; 9781555816858 ; 10.1128/9781555816858 ; http://www.asmscience.org/ ; Cryptococcus: From Human Pathogen to Model Yeast >
+   au < down ; 2011 ; 9781555815387 ; 9781555816810 ; 10.1128/9781555816810 ; http://www.asmscience.org/ ; Lure of Bacterial Genetics, The : A Tribute to John Roth >
+   au < down ; 2011 ; 9781555814977 ; 9781555816834 ; 10.1128/9781555816834 ; http://www.asmscience.org/ ; Molecular Microbiology, Second Edition: Diagnostic Principles and Practice >
+   au < doNotProcess ; 2011 ; 9781555814182 ; 9781555816162 ; 10.1128/9781555816162 ; https://www.asmscience.org/ ; Bacterial Pathogenesis: A Molecular Approach, Third Edition >
+   au < down ; 2012 ; 9781555815400 ; 9781555818470 ; 10.1128/9781555818470 ; http://www.asmscience.org/ ; Microbes and Evolution: The World That Darwin Never Saw >
+   au < down ; 2012 ; 9781555816742 ; 9781555817329 ; 10.1128/9781555817329 ; http://www.asmscience.org/ ; Intracellular Pathogens I: Chlamydiales >
+   au < down ; 2012 ; 9781555816773 ; 9781555817336 ; 10.1128/9781555817336 ; http://www.asmscience.org/ ; Intracellular Pathogens II: Rickettsiales >
+   au < down ; 2012 ; 9781555816049 ; 9781555817183 ; 10.1128/9781555817183 ; http://www.asmscience.org/ ; Polar Mirobiology: Life in a Deep Freeze >
+   au < down ; 2012 ; 9781555817084 ; 9781555817213 ; 10.1128/9781555817213 ; http://www.asmscience.org/ ; Genome Plasticity and Infectious Diseases >
+   au < down ; 2012 ; 9781555815394 ; 9781555817176 ; 10.1128/9781555817176 ; http://www.asmscience.org/ ; Candida and Candidiasis, Second Edition >
+   au < doNotProcess ; 2012 ; 9781555816360 ; 9781555817206 ; 10.1128/9781555817206 ; https://www.asmscience.org/ ; Food Microbiology: An Introduction, Third Edition >
+   au < down ; 2013 ; 9781555818746 ; 9781555818753 ; 10.1128/9781555818753 ; http://www.asmscience.org/ ; Forgotten People, Forgotten Diseases, Second Edition >
+   au < down ; 2013 ; 9781555815073 ; 9781555818586 ; 10.1128/9781555818586 ; http://www.asmscience.org/ ; To Catch a Virus >
+   au < down ; 2013 ; 9781555816766 ; 9781555818524 ; 10.1128/9781555818524 ; http://www.asmscience.org/ ; Regulation of Bacterial Virulence >
+   au < down ; 2013 ; 9781555816261 ; 9781555818463 ; 10.1128/9781555818463 ; http://www.asmscience.org/ ; Food Microbiology, Fourth Edition >
+   au < down ; 2014 ; 9781555818838 ; 9781555818845 ; 10.1128/9781555818845 ; http://www.asmscience.org/ ; Molecular Genetics of Mycobacteria >
+   au < down ; 2014 ; 9781555815868 ; 9781555818593 ; 10.1128/9781555818593 ; http://www.asmscience.org/ ; Cheese and Microbes >
+   au < down ; 2014 ; 9781555818425 ; 9781555818432 ; 10.1128/9781555818432 ; http://www.asmscience.org/ ; One Health >
+   au < down ; 2014 ; 9781555817275 ; 9781555817282 ; 10.1128/9781555817282 ; http://www.asmscience.org/ ; Clinical Laboratory Management, Second Edition >
+   au < doNotProcess ; 2014 ; 9781555816612 ; 9781555818487 ; 10.1128/9781555818487 ; https://www.asmscience.org/ ; Scientific Integrity, Fourth Edition >
+   au < doNotProcess ; 2014 ; 9781555818685 ; 9781555818678 ; 10.1128/9781555818678 ; https://www.asmscience.org/ ; Cases in Medical Microbiology and Infectious Diseases, Fourth Edition >
+   au < doNotProcess ; 2014 ; 9781555817053 ; 9781555818890 ; 10.1128/9781555818890 ; https://www.asmscience.org/ ; Medical Biotechnology >
+   au < doNotProcess ; 2014 ; 9781555816735 ; 9781555818906 ; 10.1128/9781555818906 ; https://www.asmscience.org/ ; Oral Microbiology and Immunology, Second Edition >
+   au < down ; 2015 ; 9781555817350 ; 9781555817411 ; 10.1128/9781555817411 ; http://www.asmscience.org/ ; Antibodies for Infectious Diseases >
+   au < down ; 2015 ; 9781555819200 ; 9781555819217 ; 10.1128/9781555819217 ; http://www.asmscience.org/ ; Mobile DNA III >
+   au < down ; 2015 ; 9781555818975 ; 9781555818982 ; 10.1128/9781555818982 ; http://www.asmscience.org/ ; Plasmids >
+   au < down ; 2015 ; 9781555817374 ; 9781555817381 ; 10.1128/9781555817381 ; http://www.asmscience.org/ ; Manual of Clinical Microbiology, 11th Edition >
+   au < down ; 2015 ; 9781555818784 ; 9781555818791 ; 10.1128/9781555818791 ; http://www.asmscience.org/ ; Enterohemorrhagic Escherichia coli and Other Shiga Toxin-Producing E. coli >
+   au < down ; 2015 ; 9781555817459 ; 9781555817466 ; 10.1128/9781555817466 ; http://www.asmscience.org/ ; Microbial Biofilms, Second Edition >
+   au < down ; 2015 ; 9781555818869 ; 9781555818883 ; 10.1128/9781555818883 ; http://www.asmscience.org/ ; Metabolism and Bacterial Pathogenesis >
+   au < doNotProcess ; 2015 ; 9781555819330 ; 9781555818951 ; 10.1128/9781555818951 ; https://www.asmscience.org/ ; Principles of Virology, Volume I: Molecular Biology, Fourth Edition >
+   au < doNotProcess ; 2015 ; 9781555819347 ; 9781555818968 ; 10.1128/9781555818968 ; https://www.asmscience.org/ ; Principles of Virology, Volume II: Pathogenesis & Control, Fourth Edition >
+   au < doNotProcess ; 2015 ; 9781555819484 ; 9781555819491 ; 10.1128/9781555819491 ; https://www.asmscience.org/ ; Perspectives on Research Integrity >
+   au < doNotProcess ; 2015 ; 9781555819514 ; 9781555819521 ; 10.1128/9781555819521 ; https://www.asmscience.org/ ; Principles of Virology, Fourth Edition, Bundle >
+   au < down ; 2016 ; 9781555818999 ; 9781555819002 ; 10.1128/9781555819002 ; http://www.asmscience.org/ ; Diagnostic Medical Parasitology >
+   au < down ; 2016 ; 9781555819255 ; 9781555819262 ; 10.1128/9781555819262 ; http://www.asmscience.org/ ; Zoonoses >
+   au < down ; 2016 ; 9781555818715 ; 9781555818722 ; 10.1128/9781555818722 ; http://www.asmscience.org/ ; Manual of Molecular and Clinical Laboratory Immunology >
+   au < down ; 2016 ; 9781555818807 ; 9781555818814 ; 10.1128/9781555818814 ; http://www.asmscience.org/ ; Clinical Microbiology Procedures Handbook, 4th Edition >
+   au < down ; 2016 ; 9781555816025 ; 9781555818821 ; 10.1128/9781555818821 ; http://www.asmscience.org/ ; Manual of Environmental Microbiology, Fourth Edition >
+   au < down ; 2016 ; 9781555819033 ; 9781555819040 ; 10.1128/9781555819040 ; http://www.asmscience.org/ ; Diagnostic Microbiology of the Immunocompromised Host, Second Edition >
+   au < down ; 2016 ; 9781555819088 ; 9781555819071 ; 10.1128/9781555819071 ; http://www.asmscience.org/ ; Molecular Microbiology: Diagnostic Principles and Practice, Third Edition >
+   au < down ; 2016 ; 9781555819149 ; 9781555819156 ; 10.1128/9781555819156 ; http://www.asmscience.org/ ; Clinical Virology Manual, Fifth Edition >
+   au < down ; 2016 ; 9781555819224 ; 9781555819231 ; 10.1128/9781555819231 ; http://www.asmscience.org/ ; Infections of Leisure, Fifth Edition >
+   au < down ; 2016 ; 9781555819279 ; 9781555819286 ; 10.1128/9781555819286 ; http://www.asmscience.org/ ; Virulence Mechanisms of Bacterial Pathogens, Fifth Edition >
+   au < down ; 2016 ; 9781555819309 ; 9781555819316 ; 10.1128/9781555819316 ; http://www.asmscience.org/ ; Antibiotics: Challenges, Mechanisms, Opportunities >
+   au < down ; 2016 ; 9781555816759 ; 9781555819323 ; 10.1128/9781555819323 ; http://www.asmscience.org/ ; The Bacterial Spore >
+   au < down ; 2016 ; 9781555819446 ; 9781555819453 ; 10.1128/9781555819453 ; http://www.asmscience.org/ ; Emerging infections 10 >
+   au < down ; 2016 ; 9781555819590 ; 9781555819606 ; 10.1128/9781555819606 ; http://www.asmscience.org/ ; In the Company of Microbes: 10 Years of Small Things Considered >
+   au < doNotProcess ; 2016 ; 9781555819125 ; 9781555819132 ; 10.1128/9781555819132 ; https://www.asmscience.org/ ; Microbe, Second Edition >
+   au < down ; 2017 ; 9781555817398 ; 9781555817404 ; 10.1128/9781555817404 ; http://www.asmscience.org/ ; Urinary Tract Infections >
+   au < down ; 2017 ; 9781555819859 ; 9781555819866 ; 10.1128/9781555819866 ; http://www.asmscience.org/ ; Tuberculosis and Nontuberculous Mycobacterial Infections, Seventh Edition >
+   au < down ; 2017 ; 9781683670001 ; 9781683670018 ; 10.1128/9781683670018 ; http://www.asmscience.org/ ; The Power of Plagues, Second Edition >
+   au < doNotProcess ; 2017 ; 9781555819361 ; 9781555819378 ; 10.1128/9781555819378 ; https://www.asmscience.org/ ; Molecular Biotechnology: Principles and Applications of Recombinant DNA, Fifth Edition >
+   au < down ; 2017 ; 9781555819613 ; 9781555819620 ; 10.1128/9781555819620 ; http://www.asmscience.org/ ; A Guide to Specimen Management in Clinical Microbiology, Third Edition >
+   au < down ; 2017 ; 9781555816209 ; 9781555819637 ; 10.1128/9781555819637 ; http://www.asmscience.org/ ; Biological Safety: Principles and Practices, Fifth Edition >
+   au < down ; 2017 ; 9781555819163 ; 9781555819170 ; 10.1128/9781555819170 ; http://www.asmscience.org/ ; Paleomicrobiology of Humans >
+   au < down ; 2017 ; 9781555819187 ; 9781555819194 ; 10.1128/9781555819194 ; http://www.asmscience.org/ ; Myeloid Cells in Health and Disease: A Synthesis >
+   au < down ; 2017 ; 9781555819422 ; 9781555819439 ; 10.1128/9781555819439 ; http://www.asmscience.org/ ; Clinical Virology, Fourth Edition >
+   au < doNotProcess ; 2017 ; 9781555819576 ; 9781555819583 ; 10.1128/9781555819583 ; http://www.asmscience.org/ ; The Fungal Kingdom >
+   au < doNotProcess ; 2017 ; 9781555819675 ; 9781555819682 ; 10.1128/9781555819682 ; http://www.asmscience.org/ ; Antisepsis, Disinfection, and Sterilization: Types, Action, and Resistance, Second Edition >
+   au < doNotProcess ; 2017 ; 9781555819811 ; 9781555819828 ; 10.1128/9781555819828 ; http://www.asmscience.org/ ; The Dark Art of Blood Cultures >
+   au < doNotProcess ; 2017 ; 9781555819385 ; 9781555819392 ; 10.1128/9781555819392 ; https://www.asmscience.org/ ; Food Microbiology: An Introduction, Fourth Edition >
+   au < down ; 2017 ; 9781555819552 ; 9781555819569 ; 10.1128/9781555819569 ; https://www.asmscience.org/ ; Tuberculosis and the Tubercle Bacillus, Second Edition >
+   au < down ; 2018 ; 9781555819798 ; 9781555819804 ; 10.1128/9781555819804 ; https://www.asmscience.org/ ; Antimicrobial Resistance in Bacteria from Livestock and Companion Animals >
+   au < down ; 2018 ; 9781555817077 ; 9781555819644 ; 10.1128/9781555819644 ; https://www.asmscience.org/ ; Preharvest Food Safety >
+   au < down ; 2018 ; 9781555819538 ; 9781555819545 ; 10.1128/9781555819545 ; https://www.asmscience.org/ ; Women in Microbiology >
+   au < down ; 2018 ; 9781555815042 ; 9781555818852 ; 10.1128/9781555818852 ; https://www.asmscience.org/ ; Environmental Microbial Forensics >
+   au < doNotProcess ; 2018 ; 9781555819927 ; 9781555819958 ; 10.1128/9781555819958 ; https://www.asmscience.org/ ; Challenges of the Unseen World: A Laboratory Course in Microbiology >
+   au < down ; 2018 ; 9781683670063 ; 9781683670070 ; 10.1128/9781683670070 ; https://www.asmscience.org/ ; Pocket Guide to Clinical Microbiology, Fourth Edition >
+   au < down ; 2018 ; 9781683670100 ; 9781683670117 ; 10.1128/9781683670117 ; https://www.asmscience.org/ ; The New Microbiology: From Microbiomes to CRISPR >
+   au < down ; 2018 ; 9781555819699 ; 9781555819705 ; 10.1128/9781555819705 ; https://www.asmscience.org/ ; Bugs as Drugs: Therapeutic Microbes for the Prevention and Treatment of Disease >
+   au < down ; 2018 ; 9781555819873 ; 9781555819880 ; 10.1128/9781555819880 ; https://www.asmscience.org/ ; Larone’s Medically Important Fungi: A Guide to Identification, Sixth Edition >
+   au < doNotProcess ; 2018 ; 9781683670025 ; 9781683670025 ; 10.1128/9781683670025 ; https://www.asmscience.org/ ; Computational Biology: A Hypertextbook >
+   au < doNotProcess ; 2019 ; 9781555819989 ; 9781555819996 ; 10.1128/9781555819996 ; https://www.asmscience.org/ ; Oral Microbiology and Immunology, Third Edition >
+   au < doNotProcess ; 2019 ; 9781555819910 ; 9781555819941 ; 10.1128/9781555819941 ; https://www.asmscience.org/ ; Guide to Clinical and Diagnostic Virology >
+   au < down ; 2019 ; 9781555819736 ; 9781555819743 ; 10.1128/9781555819743 ; https://www.asmscience.org/ ; Microbial Transmission >
+   au < down ; 2019 ; 9781683670230 ; 9781683670247 ; 10.1128/9781683670247 ; https://www.asmscience.org/ ; Regulating with RNA in Bacteria and Archaea >
+   au < down ; 2019 ; 9781683670278 ; 9781683670285 ; 10.1128/9781683670285 ; https://www.asmscience.org/ ; Protein Secretion in Bacteria >
+   au < down ; 2019 ; 9781683670254 ; 9781683670261 ; 10.1128/9781683670261 ; https://www.asmscience.org/ ; Bacteria and Intracellularity >
+   au < doNotProcess ; 2019 ; 9781683670124 ; 9781683670131 ; 10.1128/9781683670131 ; https://www.asmscience.org/ ; Gram-Positive Pathogens, Third Edition >
+   au < down ; 2019 ; 9781555819965 ; 9781555819972 ; 10.1128/9781555819972 ; https://www.asmscience.org/ ; Food Microbiology: Fundamentals and Frontiers, 5th Edition >
+   au < doNotProcess ; 2020 ; 9781683670148 ; 9781683670179 ; 10.1128/9781683670179 ; https://www.asmscience.org/ ; Prepare and Protect: Safer Behaviors in Laboratories and Clinical Containment Settings >
+
+ }
+
+}

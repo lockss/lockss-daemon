@@ -48,7 +48,7 @@
     au < finished ; finished ; 1899 ; Bulletin of the American Mathematical Society Volume 5-6 (1899) ; 1899 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1900 ; Bulletin of the American Mathematical Society Volume 6-7 (1900) ; 1900 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1901 ; Bulletin of the American Mathematical Society Volume 7-8 (1901) ; 1901 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1902 ; Bulletin of the American Mathematical Society Volume 8-9 (1902) ; 1902 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1902 ; Bulletin of the American Mathematical Society Volume 8-9 (1902) ; 1902 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1903 ; Bulletin of the American Mathematical Society Volume 9-10 (1903) ; 1903 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1904 ; Bulletin of the American Mathematical Society Volume 10-11 (1904) ; 1904 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1905 ; Bulletin of the American Mathematical Society Volume 11-12 (1905) ; 1905 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
@@ -131,7 +131,7 @@
     au < finished ; finished ; 1982 ; Bulletin of the American Mathematical Society Volume 6-7 (1982) ; 1982 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1983 ; Bulletin of the American Mathematical Society Volume 8-9 (1983) ; 1983 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 1984 ; Bulletin of the American Mathematical Society Volume 10-11 (1984) ; 1984 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1985 ; Bulletin of the American Mathematical Society Volume 12-13 (1985) ; 1985 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1985 ; Bulletin of the American Mathematical Society Volume 12-13 (1985) ; 1985 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1986 ; Bulletin of the American Mathematical Society Volume 14-15 (1986) ; 1986 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1987 ; Bulletin of the American Mathematical Society Volume 16-17 (1987) ; 1987 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1988 ; Bulletin of the American Mathematical Society Volume 18-19 (1988) ; 1988 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
@@ -156,7 +156,7 @@
     au < finished ; frozen ; 2007 ; Bulletin of the American Mathematical Society Volume 44 (2007) ; 2007 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2008 ; Bulletin of the American Mathematical Society Volume 45 (2008) ; 2008 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2009 ; Bulletin of the American Mathematical Society Volume 46 (2009) ; 2009 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Bulletin of the American Mathematical Society Volume 47 (2010) ; 2010 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2010 ; Bulletin of the American Mathematical Society Volume 47 (2010) ; 2010 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2011 ; Bulletin of the American Mathematical Society Volume 48 (2011) ; 2011 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Bulletin of the American Mathematical Society Volume 49 (2012) ; 2012 ; http://www.ams.org/ ; >
     au < finished ; finished ; 2013 ; Bulletin of the American Mathematical Society Volume 50 (2013) ; 2013 ; http://www.ams.org/ ; >
@@ -165,9 +165,9 @@
     au < finished ; finished ; 2016 ; Bulletin of the American Mathematical Society Volume 53 (2016) ; 2016 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2017 ; Bulletin of the American Mathematical Society Volume 54 (2017) ; 2017 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Bulletin of the American Mathematical Society Volume 55 (2018) ; 2018 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; Bulletin of the American Mathematical Society Volume 56 (2019) ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Bulletin of the American Mathematical Society Volume 57 (2020) ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Bulletin of the American Mathematical Society Volume 58 (2021) ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Bulletin of the American Mathematical Society Volume 56 (2019) ; 2019 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2020 ; Bulletin of the American Mathematical Society Volume 57 (2020) ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Bulletin of the American Mathematical Society Volume 58 (2021) ; 2021 ; https://www.ams.org/ ; >
 
   }
     
@@ -192,7 +192,7 @@
     au < finished ; finished ; 2004 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 8 ; 2004 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2005 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 9 ; 2005 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2006 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 10 ; 2006 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2007 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 11 ; 2007 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2007 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 11 ; 2007 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2008 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 12 ; 2008 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 13 ; 2009 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 14 ; 2010 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
@@ -204,9 +204,9 @@
     au < finished ; finished ; 2016 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 20 ; 2016 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 21 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 22 ; 2018 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 23 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 24 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 25 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 23 ; 2019 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 24 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 25 ; 2021 ; https://www.ams.org/ ; >
 
   }
     
@@ -223,7 +223,7 @@
     param[journal_id] = jams
     
     au < finished ; finished ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1988 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1989 ; Journal of the American Mathematical Society Volume 2 ; 1989 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1989 ; Journal of the American Mathematical Society Volume 2 ; 1989 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1990 ; Journal of the American Mathematical Society Volume 3 ; 1990 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1991 ; Journal of the American Mathematical Society Volume 4 ; 1991 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1992 ; Journal of the American Mathematical Society Volume 5 ; 1992 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
@@ -253,9 +253,9 @@
     au < finished ; finished ; 2016 ; Journal of the American Mathematical Society Volume 29 ; 2016 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Journal of the American Mathematical Society Volume 30 ; 2017 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Journal of the American Mathematical Society Volume 31 ; 2018 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; Journal of the American Mathematical Society Volume 32 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Journal of the American Mathematical Society Volume 33 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Journal of the American Mathematical Society Volume 34 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Journal of the American Mathematical Society Volume 32 ; 2019 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Journal of the American Mathematical Society Volume 33 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Journal of the American Mathematical Society Volume 34 ; 2021 ; https://www.ams.org/ ; >
 
   }
     
@@ -281,7 +281,7 @@
     au < finished ; finished ; 1950 ; Mathematics of Computation Volume 4 ; 1950 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1951 ; Mathematics of Computation Volume 5 ; 1951 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1952 ; Mathematics of Computation Volume 6 ; 1952 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1953 ; Mathematics of Computation Volume 7 ; 1953 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1953 ; Mathematics of Computation Volume 7 ; 1953 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1954 ; Mathematics of Computation Volume 8 ; 1954 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1955 ; Mathematics of Computation Volume 9 ; 1955 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1956 ; Mathematics of Computation Volume 10 ; 1956 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
@@ -347,9 +347,9 @@
     au < finished ; finished ; 2016 ; Mathematics of Computation Volume 85 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Mathematics of Computation Volume 86 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Mathematics of Computation Volume 87 ; 2018 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; Mathematics of Computation Volume 88 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Mathematics of Computation Volume 89 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Mathematics of Computation Volume 90 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Mathematics of Computation Volume 88 ; 2019 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Mathematics of Computation Volume 89 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Mathematics of Computation Volume 90 ; 2021 ; https://www.ams.org/ ; >
 
   }
     
@@ -412,9 +412,9 @@
     au < finished ; finished ; 2016 ; Proceedings of the American Mathematical Society Volume 144 ; 2016 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Proceedings of the American Mathematical Society Volume 145 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Proceedings of the American Mathematical Society Volume 146 ; 2018 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; Proceedings of the American Mathematical Society Volume 147 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Proceedings of the American Mathematical Society Volume 148 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Proceedings of the American Mathematical Society Volume 149 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Proceedings of the American Mathematical Society Volume 147 ; 2019 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Proceedings of the American Mathematical Society Volume 148 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Proceedings of the American Mathematical Society Volume 149 ; 2021 ; https://www.ams.org/ ; >
 
   }
     
@@ -434,9 +434,9 @@
     au < finished ; finished ; 2016 ; Proceedings of the American Mathematical Society B Volume 3 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Proceedings of the American Mathematical Society B Volume 4 ; 2017 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Proceedings of the American Mathematical Society B Volume 5 ; 2018 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; Proceedings of the American Mathematical Society B Volume 6 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Proceedings of the American Mathematical Society B Volume 7 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Proceedings of the American Mathematical Society B Volume 8 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Proceedings of the American Mathematical Society B Volume 6 ; 2019 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2020 ; Proceedings of the American Mathematical Society B Volume 7 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Proceedings of the American Mathematical Society B Volume 8 ; 2021 ; https://www.ams.org/ ; >
 
   }
     
@@ -474,9 +474,9 @@
     au < finished ; finished ; 2016 ; Representation Theory Volume 20 ; 2016 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Representation Theory Volume 21 ; 2017 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2018 ; Representation Theory Volume 22 ; 2018 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; Representation Theory Volume 23 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Representation Theory Volume 24 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Representation Theory Volume 25 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Representation Theory Volume 23 ; 2019 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; Representation Theory Volume 24 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Representation Theory Volume 25 ; 2021 ; https://www.ams.org/ ; >
 
   }
     
@@ -507,9 +507,9 @@
     au < finished ; finished ; 2016 ; St. Petersburg Mathematical Journal Volume 27 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; St. Petersburg Mathematical Journal Volume 28 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; St. Petersburg Mathematical Journal Volume 29 ; 2018 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; St. Petersburg Mathematical Journal Volume 30 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; St. Petersburg Mathematical Journal Volume 31 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; St. Petersburg Mathematical Journal Volume 32 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; St. Petersburg Mathematical Journal Volume 30 ; 2019 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; St. Petersburg Mathematical Journal Volume 31 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; St. Petersburg Mathematical Journal Volume 32 ; 2021 ; https://www.ams.org/ ; >
 
   }
     
@@ -540,9 +540,9 @@
     au < finished ; finished ; 2016 ; Theory of Probability and Mathematical Statistics Volume 88 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Theory of Probability and Mathematical Statistics Volume 89 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Theory of Probability and Mathematical Statistics Volume 90 ; 2018 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Theory of Probability and Mathematical Statistics Volume 91 ; 2019 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Theory of Probability and Mathematical Statistics Volume 92 ; 2020 ; https://www.ams.org/ ; >
-    au < expected ; exists ; 2021 ; Theory of Probability and Mathematical Statistics Volume 93 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; frozen ; 2019 ; Theory of Probability and Mathematical Statistics Volume 91 ; 2019 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Theory of Probability and Mathematical Statistics Volume 92 ; 2020 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2021 ; Theory of Probability and Mathematical Statistics Volume 93 ; 2021 ; https://www.ams.org/ ; >
 
   }   
 
@@ -570,9 +570,9 @@
     au < finished ; finished ; 2016 ; Transactions of the American Mathematical Society Volume 368 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Transactions of the American Mathematical Society Volume 369 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; Transactions of the American Mathematical Society Volume 370 ; 2018 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; Transactions of the American Mathematical Society Volume 371 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Transactions of the American Mathematical Society Volume 372 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Transactions of the American Mathematical Society Volume 373 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Transactions of the American Mathematical Society Volume 371 ; 2019 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; Transactions of the American Mathematical Society Volume 372 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Transactions of the American Mathematical Society Volume 373 ; 2021 ; https://www.ams.org/ ; >
 
   }
 
@@ -592,9 +592,9 @@
     au < finished ; finished ; 2016 ; Transactions of the American Mathematical Society B Volume 3 ; 2016 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Transactions of the American Mathematical Society B Volume 4 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; Transactions of the American Mathematical Society B Volume 5 ; 2018 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; Transactions of the American Mathematical Society B Volume 6 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Transactions of the American Mathematical Society B Volume 7 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Transactions of the American Mathematical Society B Volume 8 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Transactions of the American Mathematical Society B Volume 6 ; 2019 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; Transactions of the American Mathematical Society B Volume 7 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Transactions of the American Mathematical Society B Volume 8 ; 2021 ; https://www.ams.org/ ; >
 
   }
    
@@ -638,9 +638,9 @@
       
     au < finished ; finished ; 2017 ; Sugaku Expositions Volume 30 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Sugaku Expositions Volume 31 ; 2018 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; Sugaku Expositions Volume 32 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Sugaku Expositions Volume 33 ; 2020 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 2021 ; Sugaku Expositions Volume 34 ; 2021 ; https://www.ams.org/ ; >
+    au < finished ; manifest ; 2019 ; Sugaku Expositions Volume 32 ; 2019 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Sugaku Expositions Volume 33 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Sugaku Expositions Volume 34 ; 2021 ; https://www.ams.org/ ; >
 
   }
     

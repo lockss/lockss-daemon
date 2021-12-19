@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+#This script is designed to evaluate a set of AUs and deliver a chart showing
+#status change from one point in time to another.
+
 #GLN: To create report, comparing two points in time.
 #git checkout master
 #git checkout `git rev-list -n 1 --before="2020-04-01 00:00" master`
@@ -136,90 +139,33 @@ foreach my $auid (keys(%auid_status)) {
 # Header
 printf("Status");
 foreach my $y (sort by_value values(%code)) {
-	printf("\t%s", &code_name($y));
+    printf("\t%s", &code_name($y));
 }
 print("\n");
 foreach my $x (sort by_value values(%code)) {
-	printf("%s", &code_name($x));
-	foreach my $y (sort by_value values(%code)) {
-		printf("\t%d", $start_end[$x][$y]);
-	}
-	print("\n");
+    printf("%s", &code_name($x));
+    foreach my $y (sort by_value values(%code)) {
+        printf("\t%d", $start_end[$x][$y]);
+    }
+    print("\n");
 }
 print("\n");
 
 exit(0);
 
-# Fill buckets based on info for each AU ID.
-###my @start_bucket = ();
-###my @end_bucket = ();
-###my @no_change_bucket = ();
-###my @change_bucket = ();
-###foreach my $c (keys(%code)) {
-###    my $code_num = $code{$c};
-###    $start_bucket[$code_num] = 0;
-###    $end_bucket[$code_num] = 0;
-###    $no_change_bucket[$code_num] = 0;
-###    $change_bucket[$code_num] = 0;
-###}
-###foreach my $auid (keys(%auid_status)) {
-###    $start_code = $auid_status{$auid}{start};
-###    $end_code = $auid_status{$auid}{end};
-###    $start_bucket[$start_code] += 1;
-###    $end_bucket[$end_code] += 1;
-###    if ($start_code == $end_code) {
-###        $no_change_bucket[$start_code] += 1;
-###    } else {
-###        if ($end_code == $code{"deleted"}) {
-###            $change_bucket[$end_code] += 1;
-###        } elsif (($start_code == $code{"other"}) ||
-###	 	($end_code == $code{"other"})) {
-###	    $change_bucket[$code{"other"}] += 1;
-###        } elsif (($start_code == $code{"doNotProcess"}) ||
-###	 	($end_code == $code{"doNotProcess"})) {
-###	    $change_bucket[$code{"doNotProcess"}] += 1;
-###        } elsif (($start_code == $code{"doesNotExist"}) ||
-###	 	($end_code == $code{"doesNotExist"})) {
-###	    $change_bucket[$code{"doesNotExist"}] += 1;
-###	} else {
-###	    # Use a for loop to check all possible buckets.
-###	    # Don't check buckets beyond superseded because
-###	    # the "if" clauses above have already checked
-###	    # for them.
-###	    for (my $c = $code{"notPresent"};
-###		    $c <= $code{"superseded"};
-###		    ++$c) {
-###		if (($start_code <= $c) && ($end_code > $c)) {
-###		    $change_bucket[$c] += 1;
-###		}
-###	    }
-###        }
-###    }
-###}
-###
-#### Write out report.
-###for (my $c = $code{"notPresent"}; $c <= $code{"deleted"}; ++$c) {
-###    printf("%s\t%d\t%d\t%d\t%d\n",
-###	&code_name($c),
-###	$start_bucket[$c], $end_bucket[$c],
-###	$no_change_bucket[$c], $change_bucket[$c]);
-###}
-###
-###exit(0);
-###
 
 sub code_name {
     my ($code_num) = @_;
     my $rval = "unknown";
     foreach my $cn (keys(%code)) {
-	if ($code_num == $code{$cn}) {
-	    $rval = $cn;
-	    last;
-	}
+        if ($code_num == $code{$cn}) {
+            $rval = $cn;
+            last;
+        }
     }
-    return($rval);
+  return($rval);
 }
 
 sub by_value {
-  return($a <=> $b);
+    return($a <=> $b);
 }

@@ -1,0 +1,20 @@
+{
+    publisher <
+        name = Jasper Archive
+    >
+
+    plugin = org.lockss.plugin.jasper.ClockssJasperPlugin
+    param[base_url] = https://warcs.archive-it.org/
+    implicit < status ; year ; name ; param[collection] ; param[user_pass] >
+
+    {
+
+    title <
+        name = Journal Name ;
+        issn = 2051-5960
+    >
+
+    au < released ; 2010 ; Volume Name 11113 ; 11113 ; user:pass >
+    }
+
+}

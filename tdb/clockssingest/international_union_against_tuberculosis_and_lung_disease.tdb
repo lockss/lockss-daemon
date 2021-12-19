@@ -66,9 +66,9 @@
 
     au < frozen ; exists ; 2017 ; International Journal of Tuberculosis and Lung Disease Volume 21 ; 21 ; > #LXQUEUE-1208
     au < frozen ; exists ; 2018 ; International Journal of Tuberculosis and Lung Disease Volume 22 ; 22 ; >
-    au < exists ; exists ; 2019 ; International Journal of Tuberculosis and Lung Disease Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2020 ; International Journal of Tuberculosis and Lung Disease Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2021 ; International Journal of Tuberculosis and Lung Disease Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2019 ; International Journal of Tuberculosis and Lung Disease Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2020 ; International Journal of Tuberculosis and Lung Disease Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Tuberculosis and Lung Disease Volume 25 ; 25 ; >
 
     }
   }
@@ -110,8 +110,8 @@
     au < frozen ; exists ; 2017 ; Public Health Action Volume 7 ; 7 ; > #LXQUEUE-1208
     au < frozen ; exists ; 2018 ; Public Health Action Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; Public Health Action Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2020 ; Public Health Action Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2021 ; Public Health Action Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; Public Health Action Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2021 ; Public Health Action Volume 11 ; 11 ; >
 
     }
   }

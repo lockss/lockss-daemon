@@ -57,9 +57,6 @@ public class TestMsResponseHandler extends LockssTestCase {
   static final String ROOT_URL = "http://www.jrnl.com/"; //this is not a real url
 
   private static final Logger log = Logger.getLogger(TestMsResponseHandler.class);
-  private MockLockssDaemon theDaemon;
-  private DefinablePlugin plugin;
-
   static final String PLUGIN_ID = "org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin";
   static final String PluginName = "Microbiology Society Journals Plugin (CLOCKSS)";
 
@@ -70,11 +67,13 @@ public class TestMsResponseHandler extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
-    theDaemon = getMockLockssDaemon();
-    theDaemon.getHashService();
-    theDaemon.getRepositoryManager();
-    plugin = new DefinablePlugin();
-    plugin.initPlugin(theDaemon, PLUGIN_ID);
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    PluginManager pluginMgr = daemon.getPluginManager();
+    pluginMgr.setLoadablePluginsReady(true);
+    daemon.setDaemonInited(true);
+    pluginMgr.startService();
+    daemon.getAlertManager();
+    daemon.getCrawlManager();
   }
 
   public void tearDown() throws Exception {
@@ -82,10 +81,10 @@ public class TestMsResponseHandler extends LockssTestCase {
   }
 
 
-  private DefinableArchivalUnit makeAuFromProps(Properties props)
+  private ArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
-    return (DefinableArchivalUnit)plugin.configureAu(config, null);
+    return PluginTestUtil.createAndStartAu(PLUGIN_ID,  config);
   }
 
   public void testHandles500Result() throws Exception {
@@ -93,7 +92,8 @@ public class TestMsResponseHandler extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(VOL_KEY, "96");
     props.setProperty(JID_KEY, "jgv");
-    DefinableArchivalUnit au = makeAuFromProps(props);
+    ArchivalUnit au = makeAuFromProps(props);
+    Plugin plugin = au.getPlugin();
     String suppl_url = ROOT_URL + "deliver/fulltext/mgen/9/99/ecs/article/119999/resources/00099.pdf?itemId=/content/suppdata/mgen/10.1099/mgen.0.000099-1&mimeType=pdf";
     MockLockssUrlConnection conn = new MockLockssUrlConnection();
     
@@ -114,12 +114,7 @@ public class TestMsResponseHandler extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(VOL_KEY, "96");
     props.setProperty(JID_KEY, "jgv");
-    DefinableArchivalUnit MSau = makeAuFromProps(props);
-    LockssRepository repo =
-        (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
-            MSau);
-    theDaemon.setLockssRepository(repo, MSau);
-    repo.startService();
+    ArchivalUnit MSau = makeAuFromProps(props);
     String url = ROOT_URL + "content/journal/jgv/10.1099/vir.0.080989-0";
     CIProperties cprops = new CIProperties();
     

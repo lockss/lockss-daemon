@@ -32,7 +32,7 @@
    au < finished ; finished ; 2007 ; 9781560801443 ; 9781560801641 ; 9781560801641 ; A Practical Understanding of Pre- and Poststack Migrations: Volume 1 (Poststack) (9781560801641) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2007 ; 9781560801450 ; 9781560801658 ; 9781560801658 ; A Practical Understanding of Pre- and Poststack Migrations: Volume 2 (Prestack) (9781560801658) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < notReady ; exists ; 2019 ; 9781560803614 ; 9781560803621 ; 9781560803621 ; Illustrated Seismic Processing: Volume 1: Imaging (9781560803621) ; https://library.seg.org/ ; > #no substance. Doesn't collect book.
-   au < manifest ; exists ; 2020 ; 9781560803683 ; 9781560803690 ; 9781560803690 ; Illustrated Seismic Processing: Volume 2: Preimaging (9781560803690) ; https://library.seg.org/ ; >
+   au < frozen ; exists ; 2020 ; 9781560803683 ; 9781560803690 ; 9781560803690 ; Illustrated Seismic Processing: Volume 2: Preimaging (9781560803690) ; https://library.seg.org/ ; >
 
  }
 
@@ -62,7 +62,7 @@
    au < finished ; finished ; 2014 ; 9781560803157 ; 9781560803164 ; 9781560803164 ; Microseismic Imaging of Hydraulic Fracturing: Improved Engineering of Unconventional Shale Reservoirs (9781560803164) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2014 ; 9781560803263 ; 9781560803270 ; 9781560803270 ; Understanding Seismic Anisotropy in Exploration and Exploitation, second edition (9781560803270) ; http://library.seg.org/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2016 ; 9781560803355 ; 9781560803362 ; 9781560803362 ; 3C Seismic and VSP: Converted waves and vector wavefield applications (9781560803362) ; https://library.seg.org/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2018 ; 9781560803515 ; 9781560803522 ; 9781560803522 ; Seismic Attributes as the Framework for Data Integration Throughout the Oilfield Life Cycle (9781560803522) ; https://library.seg.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2018 ; 9781560803515 ; 9781560803522 ; 9781560803522 ; Seismic Attributes as the Framework for Data Integration Throughout the Oilfield Life Cycle (9781560803522) ; https://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < notReady ; exists ; 2020 ; 9781560803706 ;  9781560803713 ;  9781560803713 ; Survey Design and Seismic Acquisition for Land, Marine, and In-between in Light of New Technology and Techniques (9781560803713) ; https://library.seg.org/ ; >
 
  }
@@ -119,7 +119,7 @@
    au < finished ; finished ; 2010 ; 9781560802228 ; 9781560802235 ; 9781560802235 ; Heavy Oils: Reservoir Characterization and Production Monitoring (9781560802235) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2013 ; 9781560803102 ; 9781560803119 ; 9781560803119 ; Hydrocarbon Seepage: From Source to Surface (9781560803119) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < notReady ; exists ; 2019 ; 9781560803669 ; 9781560803676 ; 9781560803676 ; Numerical Modeling of Seismic Responses from Fractured Reservoirs by the Grid-characteristic Method (9781560803676) ; https://library.seg.org/ ; >
-   au < manifest ; exists ; 2020 ; 9781560803782 ; 9781560803799 ; 9781560803799 ; Simultaneous Source Seismic Acquisition (9781560803799) ; https://library.seg.org/ ; >
+   au < frozen ; exists ; 2020 ; 9781560803782 ; 9781560803799 ; 9781560803799 ; Simultaneous Source Seismic Acquisition (9781560803799) ; https://library.seg.org/ ; >
 
  }
 
@@ -154,8 +154,10 @@
    au < finished ; finished ; 2017 ; 9781560803492 ; 9781560803508 ; 9781560803508 ; High-resolution Seismic Exploration (9781560803508) ; https://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2017 ; 9781560803454 ; 9781560803461 ; 9781560803461 ; Basic Geophysics (9781560803461) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
    au < notReady ; exists ; 2019 ; 9781560803577 ; 9781560803584 ; 9781560803584 ; Understanding Signals: Basic waveform analysis from a geophysical perspective (9781560803584) ; https://library.seg.org/ ; >
-   au < manifest ; exists ; 2020 ; 9781560803720 ; 9781560803737 ; 9781560803737 ; Basic Wave Analysis (9781560803737) ; https://library.seg.org/ ; >
-   au < manifest ; exists ; 2020 ; 9781560803775 ; 9781560803768 ; 9781560803768 ; Blizzards and Broken Grousers (9781560803768) ; https://library.seg.org/ ; >
+   au < frozen ; exists ; 2020 ; 9781560803720 ; 9781560803737 ; 9781560803737 ; Basic Wave Analysis (9781560803737) ; https://library.seg.org/ ; >
+   au < frozen ; exists ; 2020 ; 9781560803775 ; 9781560803768 ; 9781560803768 ; Blizzards and Broken Grousers (9781560803768) ; https://library.seg.org/ ; >
+   au < manifest ; exists ; 2021 ; 9781560803829 ; 9781560803836 ; 9781560803836 ; Understanding Amplitudes: Basic seismic analysis for rock properties (9781560803836) ; https://library.seg.org/ ; >
+   au < manifest ; exists ; 2021 ; 9781560803805 ;  9781560803812 ; 9781560803812 ; Land Seismic Case Studies for Near-Surface Modeling and Subsurface Imaging (9781560803812) ; https://library.seg.org/ ; >
 
  }
 
@@ -187,9 +189,9 @@
    au < finished ; finished ; 2012 ; 9781560802990 ; 9781560803003 ; 9781560803003 ; Seismic Signatures and Analysis of Reflection Data in Anisotropic Media, Third Edition (9781560803003) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2014 ; 9781560803010 ; 9781560803027 ; 9781560803027 ; Encyclopedia of Exploration Geophysics (9781560803027) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2016 ; 9781560803317 ; 9781560803324 ; 9781560803324 ; Handbook of Poststack Seismic Attributes (9781560803324) ; https://library.seg.org/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2017 ; 9781560803478 ; 9781560803485 ; 9781560803485 ; Microseismic Monitoring (9781560803485) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2018 ; 9781560803331 ; 9781560803348 ; 9781560803348 ; The Seismic Signal and Its Meaning (9781560803348) ; https://library.seg.org/ ; reingest5.clockss.org:8082 >
-   au < manifest ; exists ; 2020 ; 9781560803744 ; 9781560803751 ; 9781560803751 ; Anisotropy and Microseismics: Theory and Practice (9781560803751 ) ; https://library.seg.org/ ; >
+   au < finished ; crawling ; 2017 ; 9781560803478 ; 9781560803485 ; 9781560803485 ; Microseismic Monitoring (9781560803485) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2018 ; 9781560803331 ; 9781560803348 ; 9781560803348 ; The Seismic Signal and Its Meaning (9781560803348) ; https://library.seg.org/ ; reingest5.clockss.org:8082 >
+   au < frozen ; exists ; 2020 ; 9781560803744 ; 9781560803751 ; 9781560803751 ; Anisotropy and Microseismics: Theory and Practice (9781560803751 ) ; https://library.seg.org/ ; >
 
  }
 
@@ -206,8 +208,8 @@
    au < finished ; frozen ; 2008 ; 9781560801504 ; 9781560801924 ; 9781560801924 ; Seismic Interferometry: History and Present Status (9781560801924) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
    au < manifest ; exists ; 2008 ;  9781560801474 ; 9781560801917 ; 9781560801917 ; Prestack Depth Migration and Velocity Model Building (9781560801917) ; https://library.seg.org/ ; >
    au < finished ; finished ; 2012 ; 9781560802907 ; 9781560803089 ; 9781560803089 ; Numerical Modeling of Seismic Wave Propagation: Gridded Two-way Wave-equation Methods (9781560803089) ; http://library.seg.org/ ;  >
-   au < finished ; manifest ; 2016 ; 9781560803171 ; 9781560803188 ; 9781560803188 ; Seismic Diffraction (9781560803188) ; https://library.seg.org/ ; reingest3.clockss.org:8083 >
-   au < finished ; manifest ; 2016 ; 9781560803225 ; 9781560803232 ; 9781560803232 ; Classical and Modern Diffraction Theory (9781560803232) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 9781560803171 ; 9781560803188 ; 9781560803188 ; Seismic Diffraction (9781560803188) ; https://library.seg.org/ ; reingest3.clockss.org:8083 >
+   au < finished ; crawling ; 2016 ; 9781560803225 ; 9781560803232 ; 9781560803232 ; Classical and Modern Diffraction Theory (9781560803232) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
 
  }
 
@@ -219,9 +221,9 @@
   #series# = iig0464
 
    au < finished ; finished ; 1988 ; 9780931830518 ; 9781560802631 ; 9781560802631 ; Electromagnetic Methods in Applied Geophysics: Volume 1, Theory (9781560802631) ; http://library.seg.org/ ; reingest1.clockss.org:8082 >
-   au < exists ; exists ; 1990 ; 9781560800002 ; 9781560802785.1 ; 9781560802785.1 ; Geotechnical and Environmental Geophysics: Volume I: Review and Tutorial (9781560802785) ; https://library.seg.org/ ; >
+   au < manifest ; exists ; 1990 ; 9781560800002 ; 9781560802785.1 ; 9781560802785.1 ; Geotechnical and Environmental Geophysics: Volume I: Review and Tutorial (9781560802785) ; https://library.seg.org/ ; >
    au < finished ; finished ; 1990 ;  9781560800019 ; 9781560802785 ; 9781560802785 ; Geotechnical and Environmental Geophysics: Volume II: Environmental and Groundwater (9781560802785.2) ; http://library.seg.org/ ; reingest2.clockss.org:8085 >
-   au < exists ; exists ; 1990 ; 9781560800026 ; 9781560802785.3 ; 9781560802785.3 ; Geotechnical and Environmental Geophysics: Volume III: Geotechnical (9781560802785.3) ; https://library.seg.org/ ;  >
+   au < manifest ; exists ; 1990 ; 9781560800026 ; 9781560802785.3 ; 9781560802785.3 ; Geotechnical and Environmental Geophysics: Volume III: Geotechnical (9781560802785.3) ; https://library.seg.org/ ;  >
    au < finished ; finished ; 1990 ; 9780931830891 ; 9781560802594 ; 9781560802594 ; Induced Polarization Applications and Case Histories (9781560802594) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 1991 ; 9781560800224 ; 9781560802686 ; 9781560802686 ; Electromagnetic Methods in Applied Geophysics: Volume 2, Application, Parts A and B (9781560802686) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 1991 ; 9781560800514 ; 9781560802556 ; 9781560802556 ; Multicomponent Seismology in Petroleum Exploration (9781560802556) ; http://library.seg.org/ ;  >
@@ -235,10 +237,10 @@
    au < finished ; finished ; 2011 ; 9780891813743 ; 9781560802884 ; 9781560802884 ; Interpretation of Three-Dimensional Seismic Data, Seventh edition (9781560802884) ; http://library.seg.org/ ;  >
    au < finished ; finished ; 2014 ; 9781560803195 ; 9781560803201 ; 9781560803201 ; AVO (9781560803201) ; http://library.seg.org/ ; reingest5.clockss.org:8082 >
    au < zapped ; finished ; 2015 ; 9781560803294 ; 9781560803300 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering (9781560803300) ; http://library.seg.org/ ; reingest4.clockss.org:8082 >
-   au < finished ; manifest ; 2016 ; 9781560803379 ; 9781560803386 ; 9781560803386 ; Elements of 3D Seismology, Third edition (9781560803386) ; https://library.seg.org/ ; reingest5.clockss.org:8082 >
-   au < finished ; manifest ; 2016 ; 9781560803249 ; 9781560803256 ; 9781560803256 ; Seismic Petrophysics in Quantitative Interpretation (9781560803256) ; https://library.seg.org/ ; reingest1.clockss.org:8082 >
-   au < finished ; manifest ; 2017 ; 9781560803416 ; 9781560803423 ; 9781560803423 ; Seismic Inversion (9781560803423) ; https://library.seg.org/ ; reingest2.clockss.org:8085 >
-   au < finished ; manifest ; 2018 ; 9781560803430 ; 9781560803447 ; 9781560803447 ; Introduction to Petroleum Seismology, Second edition (9781560803447) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 9781560803379 ; 9781560803386 ; 9781560803386 ; Elements of 3D Seismology, Third edition (9781560803386) ; https://library.seg.org/ ; reingest5.clockss.org:8082 >
+   au < finished ; crawling ; 2016 ; 9781560803249 ; 9781560803256 ; 9781560803256 ; Seismic Petrophysics in Quantitative Interpretation (9781560803256) ; https://library.seg.org/ ; reingest1.clockss.org:8082 >
+   au < finished ; crawling ; 2017 ; 9781560803416 ; 9781560803423 ; 9781560803423 ; Seismic Inversion (9781560803423) ; https://library.seg.org/ ; reingest2.clockss.org:8085 >
+   au < finished ; crawling ; 2018 ; 9781560803430 ; 9781560803447 ; 9781560803447 ; Introduction to Petroleum Seismology, Second edition (9781560803447) ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
 
  }
 

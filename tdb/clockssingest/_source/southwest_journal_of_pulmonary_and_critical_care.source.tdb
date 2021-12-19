@@ -3,7 +3,8 @@
   publisher <
     name = Southwest Journal of Pulmonary and Critical Care ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = S ;
+    info[platform] = WARC
   >
 
     plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
@@ -20,6 +21,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/swjpcc-released/
 
     au < readySource ; crawling ; 2021 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2021 ; 2021 >
+    au < expected ; exists ; 2022 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2022 ; 2022 >
 
     }
 

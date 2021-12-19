@@ -52,7 +52,7 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s(?:[^/]+/)?(?:ejournals|ebooks)/(?:abstract|html|pdf)/10[.][0-9a-z]{4,6}/[^/?&.]+(?:[.]pdf|[?]issue=[^&]+)?(?:\\?articleLanguage=.*)?$\"," +
+      "\"^%s(?:[^/]+/)?(?:ejournals|ebooks)/(?:abstract|html|pdf)/10[.][0-9a-z]{4,6}/[^/?&]+(?:[.]pdf|[?]issue=[^&]+)?(?:\\?articleLanguage=.*)?$\"," +
       " base_url";
   
   // various aspects of an article
@@ -73,12 +73,14 @@ public class GeorgThiemeVerlagArticleIteratorFactory
   // Identify groups in the pattern "/(html|pdf|abstract)(<doi>)(.pdf)(optional_lang_arg)
   // NOTE the "or nothing" portion of the language group is to guarantee a group(2) which
   // otherwise would lead to IndexOutOfBoundsException when it wasn't present
+
+  //https://www.thieme-connect.de/products/ejournals/pdf/10.4103/2454-6798.165082.pdf
   protected static final Pattern HTML_PATTERN = Pattern.compile(
       "/html/([^/]+/[^/?&]+)(\\?articleLanguage=.*|$)",
       Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "/pdf/([^/]+/[^/?&.]+)[.]pdf(\\?articleLanguage=.*|$)",
+      "/pdf/([^/]+/[^/?&]+)[.]pdf(\\?articleLanguage=.*|$)",
       Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(

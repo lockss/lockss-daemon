@@ -328,5 +328,16 @@ public class MockCrawler extends NullCrawler {
     public CrawlUrl addChild(CrawlUrl curl, String url) {
       return null;
     }
+
+    @Override
+    public Object putStateObj(String key, Object val) {
+      return null;
+    }
+
+    @Override
+    public Object getStateObj(String key) {
+      return null;
+    }
+
   }
 }

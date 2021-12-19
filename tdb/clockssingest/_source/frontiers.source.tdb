@@ -3,7 +3,8 @@
   publisher <
     name = Frontiers ;
     info[contract] = 2016 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -25,7 +26,7 @@
       au < zapped ; finished ; 2019 ; Frontiers Journals Source Content 2019 ; 2019 >
       au < readySource ; crawling ; 2020 ; Frontiers Journals Source Content 2020 ; 2020 >
       au < readySource ; crawling ; 2021 ; Frontiers Journals Source Content 2021 ; 2021 >
-
+      #no more AUs for this plugin
     }
 
     {
@@ -37,7 +38,10 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < readySource ; crawling ; 2021 ; Frontiers Journals Source Content 2021_01 ; 2021_01 >
+      au < readySource ; crawling ; 2021 ; Frontiers Journals Source Content 2021_02 ; 2021_02 >
+      au < expected ; exists ; 2021 ; Frontiers Journals Source Content 2021_03 ; 2021_03 >
 
+      au < expected ; exists ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
     }
 
   }
@@ -61,6 +65,7 @@
       au < zapped ; finished ; 2019 ; Frontiers Books Source Content 2019 ; 2019 >
       au < readySource ; crawling ; 2020 ; Frontiers Books Source Content 2020 ; 2020 >
       au < readySource ; crawling ; 2021 ; Frontiers Books Source Content 2021 ; 2021 >
+      au < expected ; exists ; 2022 ; Frontiers Books Source Content 2022 ; 2022 >
 
     }
 

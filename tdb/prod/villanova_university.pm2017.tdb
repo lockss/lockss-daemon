@@ -1,0 +1,36 @@
+{
+  publisher <
+    name = Villanova University
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:340
+
+    {
+    title <
+      name = Journal of South Asian and Middle Eastern Studies ;
+      issn = 0149-1784 ;
+      eissn = 2766-0176
+
+    >
+
+      attr[journal_id] = 776
+
+      au < released ; 2010 ; Journal of South Asian and Middle Eastern Studies Volume 33 [2010] ; 15333 >
+      au < released ; 2010-2011 ; Journal of South Asian and Middle Eastern Studies Volume 34 [2010-2011] ; 15332 >
+      au < released ; 2011-2012 ; Journal of South Asian and Middle Eastern Studies Volume 35 [2011-2012] ; 15331 >
+      au < released ; 2012-2013 ; Journal of South Asian and Middle Eastern Studies Volume 36 [2012-2013] ; 15330 >
+      au < released ; 2013-2014 ; Journal of South Asian and Middle Eastern Studies Volume 37 [2013-2014] ; 15329 >
+      au < released ; 2014-2015 ; Journal of South Asian and Middle Eastern Studies Volume 38 [2014-2015] ; 15328 >
+      au < released ; 2015-2016 ; Journal of South Asian and Middle Eastern Studies Volume 39 [2015-2016] ; 15327 >
+      au < released ; 2016-2017 ; Journal of South Asian and Middle Eastern Studies Volume 40 [2016-2017] ; 15326 >
+      au < released ; 2017-2018 ; Journal of South Asian and Middle Eastern Studies Volume 41 [2017-2018] ; 15325 >
+      au < released ; 2018-2019 ; Journal of South Asian and Middle Eastern Studies Volume 42 [2018-2019] ; 15324 >
+      au < released ; 2019-2020 ; Journal of South Asian and Middle Eastern Studies Volume 43 [2019-2020] ; 15323 >
+      au < manifest ; 2020-2021 ; Journal of South Asian and Middle Eastern Studies Volume 44 [2020-2021] ; 15295 >
+
+    }
+
+}

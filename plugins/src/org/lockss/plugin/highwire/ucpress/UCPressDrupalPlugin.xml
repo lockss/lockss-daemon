@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
     <!-- https transition enabled -->
   </entry>
   <entry>
@@ -42,19 +42,19 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>University of California Press Plugin</string>
+    <string>University of California Press Plugin (Legacy JCore)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"University of California Press Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"University of California Press Plugin (Legacy JCore), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <!--  override start url from parent to support http to https conversion -->

@@ -206,7 +206,7 @@
       param[base_url] = http://www.animalbiotelemetry.com/
       param[journal_issn] = 2050-3385
 
-      au < finished ; crawling ; 2013 ; Animal Biotelemetry Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Animal Biotelemetry Volume 1 ; 1 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Animal Biotelemetry Volume 2 ; 2 ; >
       au < superseded ; exists ; 2015 ; Animal Biotelemetry Volume 3 [superseded] ; 3 ; >
 
@@ -453,7 +453,7 @@
       au < doNotProcess ; exists ; 2005 ; Australia and New Zealand Health Policy Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2006 ; Australia and New Zealand Health Policy Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2007 ; Australia and New Zealand Health Policy Volume 4 ; 4 ; >
-      au < finished ; frozen ; 2008 ; Australia and New Zealand Health Policy Volume 5 ; 5 ; >
+      au < finished ; finished ; 2008 ; Australia and New Zealand Health Policy Volume 5 ; 5 ; >
       au < finished ; finished ; 2009 ; Australia and New Zealand Health Policy Volume 6 ; 6 ; >
       au < finished ; finished ; 2010 ; Australia and New Zealand Health Policy Volume 7 ; 7 ; >
       au < superseded ; down ; 0 ; Australia and New Zealand Health Policy Volume 8 [superseded] ; 8 ; >
@@ -2537,7 +2537,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2009 ; International Breastfeeding Journal Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; International Breastfeeding Journal Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; International Breastfeeding Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; International Breastfeeding Journal Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; International Breastfeeding Journal Volume 10 [superseded] ; 10 ; >
@@ -2767,7 +2767,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2009 ; Irish Veterinary Journal Volume 62 ; 62 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Irish Veterinary Journal Volume 63 ; 63 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Irish Veterinary Journal Volume 66 ; 66 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2015 ; Irish Veterinary Journal Volume 68 [superseded] ; 68 ; >
@@ -3369,8 +3369,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2008 ; Journal of Molecular Signaling Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; down ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; down ; 2010 ; Journal of Molecular Signaling Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2011 ; Journal of Molecular Signaling Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; Journal of Molecular Signaling Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2011 ; Journal of Molecular Signaling Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Journal of Molecular Signaling Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; down ; 2013 ; Journal of Molecular Signaling Volume 8 ; 8 ; reingest5.clockss.org:8082 >
 
     }
@@ -3697,7 +3697,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; finished ; 2009 ; Journal of Trauma Management & Outcomes Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Trauma Management & Outcomes Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; Journal of Trauma Management & Outcomes Volume 9 [superseded] ; 9 ; >

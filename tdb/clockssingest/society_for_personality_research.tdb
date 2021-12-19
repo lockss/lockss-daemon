@@ -78,7 +78,7 @@
     au < frozen ; exists ; 2010 ; Social Behavior and Personality Volume 38 ; 38 ; >
     au < finished ; finished ; 2011 ; Social Behavior and Personality Volume 39 ; 39 ; >
     au < finished ; finished ; 2012 ; Social Behavior and Personality Volume 40 ; 40 ; >
-    au < finished ; manifest ; 2013 ; Social Behavior and Personality Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2013 ; Social Behavior and Personality Volume 41 ; 41 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Social Behavior and Personality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Social Behavior and Personality Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2016 ; Social Behavior and Personality Volume 44 ; 44 ; >
@@ -89,11 +89,11 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < crawling ; exists ; 2017 ; Social Behavior and Personality Volume 45 ; 45 ; > #LXQUEUE-1208
+    au < frozen ; exists ; 2017 ; Social Behavior and Personality Volume 45 ; 45 ; > #LXQUEUE-1208
     au < frozen ; exists ; 2018 ; Social Behavior and Personality Volume 46 ; 46 ; >
     au < frozen ; exists ; 2019 ; Social Behavior and Personality Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2020 ; Social Behavior and Personality Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2021 ; Social Behavior and Personality Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2020 ; Social Behavior and Personality Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2021 ; Social Behavior and Personality Volume 49 ; 49 ; >
 
     }
 

@@ -43,11 +43,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Physiological Society Plugin (CLOCKSS, Legacy)</string>
+    <string>American Physiological Society Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -55,11 +55,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Physiological Society Plugin (CLOCKSS, Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Physiological Society Journals Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

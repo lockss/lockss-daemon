@@ -1,12 +1,13 @@
 {
   publisher <
-    name = Wageningen Academic Publishers 
+    name = Wageningen Academic Publishers ;
+    info[platform] = Atypon
  >
   plugin = org.lockss.plugin.atypon.wageningen.WageningenBooksPlugin
   #  param[base_url] = http://www.wageningenacademic.com/
   implicit < status ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] >
   
-  #notReady usually, no pdf book at this location
+  #doNotProcess = textbook is “print-only” book, not preserved
 
 
  {
@@ -43,6 +44,7 @@
    au < released ; 2017 ; 9789086868599 ; 9789086863129 ; 9789086863129 ; Book of Abstracts of the 68th Annual Meeting of the European Federation of Animal Science (9789086863129) ; https://www.wageningenacademic.com/ >
    au < released ; 2018 ; 9789086868711 ; 9789086863235 ; 9789086863235 ; Book of Abstracts of the 69th Annual Meeting of the European Federation of Animal Science (9789086863235) ; https://www.wageningenacademic.com/ >
    au < released ; 2019 ; 9789086863396 ; 9789086868902 ; 9789086868902 ; Book of Abstracts of the 70th Annual Meeting of the European Federation of Animal Science (9789086868902) ; https://www.wageningenacademic.com/ >
+   au < manifest ; 2020 ; 9789086863495 ; 9789086869008 ; 9789086869008 ; Book of Abstracts of the 71st Annual Meeting of the European Federation of Animal Science (9789086869008) ; https://www.wageningenacademic.com/ >
 
  }
 
@@ -133,7 +135,7 @@
    au < released ; 2010 ; 9789086860913 ; 9789086866984 ; 9789086866984 ; Olfaction in vector-host interactions (9789086866984) ; http://www.wageningenacademic.com/ >
    au < released ; 2013 ; 9789086861880 ; 9789086867448 ; 9789086867448 ; Ecology of parasite-vector interactions (9789086867448) ; http://www.wageningenacademic.com/ >
    au < released ; 2018 ; 9789086868636 ; 9789086863150 ; 9789086863150 ; Pests and vector-borne diseases in the livestock industry (9789086863150) ; https://www.wageningenacademic.com/ >
-   au < notReady ; 2020 ; 9789086863440 ; 9789086868957 ; 9789086868957 ; Innovative strategies for vector control (9789086868957) ; https://www.wageningenacademic.com/ >
+   au < released ; 2020 ; 9789086863440 ; 9789086868957 ; 9789086868957 ; Innovative strategies for vector control (9789086868957) ; https://www.wageningenacademic.com/ >
 
  }
 
@@ -170,7 +172,7 @@
    au < released ; 2012 ; 9789086861941 ; 9789086867509 ; 9789086867509 ; Regulating food law: Risk analysis and the precautionary principle as general principles of EU food law (9789086867509) ; http://www.wageningenacademic.com/ >
    au < released ; 2013 ; 9789086862399 ; 9789086867912 ; 9789086867912 ; The enforceability of the human right to adequate food: A comparative study (9789086867912) ; http://www.wageningenacademic.com/ >
    au < released ; 2014 ; 9789086862511 ; 9789086868018 ; 9789086868018 ; From agricultural to food law: The new scenario (9789086868018) ; http://www.wageningenacademic.com/ >
-   au < notReady ; 2014 ; 9789086862467 ; 9789086862467 ; 9789086862467 ; EU Food Law Handbook (9789086862467) ; https://www.wageningenacademic.com/ >
+   au < doNotProcess ; 2014 ; 9789086862467 ; 9789086862467 ; 9789086862467 ; EU Food Law Handbook (9789086862467) ; https://www.wageningenacademic.com/ >
    au < released ; 2019 ; 9789086868858 ; 9789086863341 ; 9789086863341 ; The functional field of food law (9789086863341) ; https://www.wageningenacademic.com/ >
    au < released ; 2020 ; 9789086863464 ; 9789086868971 ; 9789086868971 ; The pursuit of sustainable agriculture in EU free trade agreements (9789086868971) ; https://www.wageningenacademic.com/ >
 
@@ -239,11 +241,11 @@
    au < released ; 2007 ; 9789086860517 ; 9789086866243 ; 9789086866243 ; Changing families and their lifestyles (9789086866243) ; http://www.wageningenacademic.com/ >
    au < released ; 2007 ; 9789086860470 ; 9789086866182 ; 9789086866182 ; Development economics between markets and institutions: Incentives for growth, food security and sustainable use of the environment (9789086866182) ; http://www.wageningenacademic.com/ >
    au < released ; 2007 ; 9789086860395 ; 9789086866250 ; 9789086866250 ; Imaging the future: Geo-visualisation for participatory spatial planning in Europe (9789086866250) ; http://www.wageningenacademic.com/ >
-   au < notReady ; 2007 ; 9789086860012 ; 9789086860012 ; 9789086860012 ; Decision science (9789086860012) ; https://www.wageningenacademic.com/ >
+   au < doNotProcess ; 2007 ; 9789086860012 ; 9789086860012 ; 9789086860012 ; Decision science (9789086860012) ; https://www.wageningenacademic.com/ >
    au < released ; 2009 ; 9789086860876 ; 9789086866816 ; 9789086866816 ; Research in action: Theories and practices for innovation and social change (9789086866816) ; http://www.wageningenacademic.com/ >
    au < released ; 2010 ; 9789086861330 ; 9789086866939 ; 9789086866939 ; Five centuries of farming: A short history of Dutch agriculture 1500 - 2000 (9789086866939) ; http://www.wageningenacademic.com/ >
    au < released ; 2010 ; 9789086861392 ; 9789086866717 ; 9789086866717 ; Food, diversity, vulnerability and social change: Research findings from insular Southeast Asia (9789086866717) ; http://www.wageningenacademic.com/ >
-   au < notReady ; 2010 ; 9789086860975 ; 9789086860975 ; 9789086860975 ; Space and economics (9789086860975) ; https://www.wageningenacademic.com/ >
+   au < doNotProcess ; 2010 ; 9789086860975 ; 9789086860975 ; 9789086860975 ; Space and economics (9789086860975) ; https://www.wageningenacademic.com/ >
    au < released ; 2011 ; 9789086861675 ; 9789086867240 ; 9789086867240 ; Knowledge in action: The search for collaborative research for sustainable landscape development (9789086867240) ; http://www.wageningenacademic.com/ >
    au < released ; 2012 ; 9789086861347 ; 9789086861682 ; 9789086861682 ; Unlocking markets to smallholders: Lessons from  South Africa (9789086861682) ; http://www.wageningenacademic.com/ >
    au < released ; 2013 ; 9789086862214 ; 9789086867752 ; 9789086867752 ; The arena of everyday life (9789086867752) ; http://www.wageningenacademic.com/ >
@@ -458,12 +460,12 @@
    au < released ; 2016 ; 9789086862801 ; 9789086868254 ; 9789086868254 ; Quality and innovation in food chains: Lessons and insights from Africa (9789086868254) ; http://www.wageningenacademic.com/ >
    au < released ; 2016 ; 9789086862603 ; 9789086868087 ; 9789086868087 ; The end of animal life: a start for ethical debate: Ethical and societal considerations on killing animals (9789086868087) ; http://www.wageningenacademic.com/ >
    au < released ; 2016 ; 9789086868278 ; 9789086868278 ; 9789086868278 ; Groei en productie van douglas in Nederland (9789086868278) ; http://www.wageningenacademic.com/ >
-   au < notReady ; 2016 ; 9789086862740 ; 9789086862740 ; 9789086862740 ; Parasitology in Veterinary Medicine (9789086862740) ; https://www.wageningenacademic.com/ >
+   au < doNotProcess ; 2016 ; 9789086862740 ; 9789086862740 ; 9789086862740 ; Parasitology in Veterinary Medicine (9789086862740) ; https://www.wageningenacademic.com/ >
    au < released ; 2016 ; 9789086862856 ; 9789086868315 ; 9789086868315 ; 16th International Conference on Production Diseases in Farm Animals (9789086868315) ; http://www.wageningenacademic.com/ >
-   au < notReady ; 2016 ; 9789086862818 ; 9789086862818 ; 9789086862818 ; Agrarisch natuurbeheer in Nederland (9789086862818) ; https://www.wageningenacademic.com/ >
+   au < doNotProcess ; 2016 ; 9789086862818 ; 9789086862818 ; 9789086862818 ; Agrarisch natuurbeheer in Nederland (9789086862818) ; https://www.wageningenacademic.com/ >
    au < released ; 2016 ; 9789086862832 ; 9789086868292 ; 9789086868292 ; Precision Dairy Farming 2016 (9789086868292) ; http://www.wageningenacademic.com/ >
    au < released ; 2016 ; 9789086862825 ; 9789086868285 ; 9789086868285 ; Animals and us (9789086868285) ; http://www.wageningenacademic.com/ >
-   au < notReady ; 2016 ; 9789086862894 ; 9789086862894 ; 9789086862894 ; Voeding en dementie: gezondheid en genieten in 1 recept (9789086862894) ; https://www.wageningenacademic.com/ >
+   au < doNotProcess ; 2016 ; 9789086862894 ; 9789086862894 ; 9789086862894 ; Voeding en dementie: gezondheid en genieten in 1 recept (9789086862894) ; https://www.wageningenacademic.com/ >
    au < released ; 2016 ; 9789086862887 ; 9789086868346 ; 9789086868346 ; Food futures: ethics, science and culture (9789086868346) ; http://www.wageningenacademic.com/ >
    au < released ; 2016 ; 9789086862917 ; 9789086868377 ; 9789086868377 ; When vectors collide with cultures: 'anthropo-vector ecology', who is controlling who?: Book of abstracts of the 20th European Society for Vector Ecology Conference 2016 (9789086868377) ; http://www.wageningenacademic.com/ >
    au < released ; 2016 ; 9789086862900 ; 9789086868360 ; 9789086868360 ; Phytate destruction - consequences for precision animal nutrition (9789086868360) ; http://www.wageningenacademic.com/ >
@@ -475,11 +477,11 @@
    au < released ; 2017 ; 9789086863020 ; 9789086868452 ; 9789086868452 ; Towards a new regulatory framework for GM crops in the European Union (9789086868452) ; https://www.wageningenacademic.com/ >
    au < released ; 2017 ; 9789086862979 ; 9789086868506 ; 9789086868506 ; Genomic management of animal genetic diversity (9789086868506) ; https://www.wageningenacademic.com/ >
    au < released ; 2017 ; 9789086863013 ; 9789086868445 ; 9789086868445 ; It’s a jungle out there - the strange animals of economic organization in agri-food value chains (9789086868445) ; https://www.wageningenacademic.com/ >
-   au < notReady ; 2017 ; 9789086862924 ; 9789086862924 ; 9789086862924 ; INRA feeding system for ruminants (9789086862924) ; https://www.wageningenacademic.com/ >
+   au < doNotProcess ; 2017 ; 9789086862924 ; 9789086862924 ; 9789086862924 ; INRA feeding system for ruminants (9789086862924) ; https://www.wageningenacademic.com/ >
    au < released ; 2017 ; 9789086863006 ; 9789086868438 ; 9789086868438 ; Neuromarketing in food retailing (9789086868438) ; https://www.wageningenacademic.com/ >
    au < released ; 2017 ; 9789086862993 ; 9789086868421 ; 9789086868421 ; Augmented reality for food marketers and consumers (9789086868421) ; https://www.wageningenacademic.com/ >
    au < released ; 2017 ; 9789086862986 ; 9789086868414 ; 9789086868414 ; Sensory and aroma marketing (9789086868414) ; https://www.wageningenacademic.com/ >
-   au < notReady ; 2017 ; 9789086862962 ; 9789086868490 ; 9789086868490 ; Insects as food and feed: from production to consumption (9789086868490) ; https://www.wageningenacademic.com/ >
+   au < doNotProcess ; 2017 ; 9789086862962 ; 9789086868490 ; 9789086868490 ; Insects as food and feed: from production to consumption (9789086868490) ; https://www.wageningenacademic.com/ >
    # adding from publisher list
    au < released ; 2019 ; 9789086863365 ; 9789086868872 ; 9789086868872 ; ScienceBites (9789086868872) ; https://www.wageningenacademic.com/ >
    au < released ; 2018 ; 9789086863242 ; 9789086868759 ; 9789086868759 ; Integrated approaches to health (9789086868759) ; https://www.wageningenacademic.com/ >
@@ -503,6 +505,19 @@
    au < released ; 2017 ; 9789086863143 ; 9789086868629 ; 9789086868629 ; Proceedings of the 7th International Conference on the Assessment of Animal Welfare at the Farm and Group Level (9789086868629) ; https://www.wageningenacademic.com/ >
    au < released ; 2018 ; 9789086863273 ; 9789086868735 ; 9789086868735 ; Fostering transformation and growth in Niger's agricultural sector (9789086868735) ; https://www.wageningenacademic.com/ >
    au < released ; 2019 ; 9789086863358 ; 9789086868865 ; 9789086868865 ; DISENTANGLED (9789086868865) ; https://www.wageningenacademic.com/ >
+   #Added 11/1/2021.
+   au < released ; 2016 ; 9789086861873 ; 9789086868261 ; 9789086868261 ; Sustainable food planning: evolving theory and practice (9789086868261) ; https://www.wageningenacademic.com/ >
+   au < released ; 2017 ; 9789086868612 ; 9789086868612 ; 9789086868612 ; Facts about fats (9789086868612) ; https://www.wageningenacademic.com/ >
+   au < released ; 2018 ; 9789086862498 ; 9789086868001 ; 9789086868001 ; Hunting hygiene (9789086868001) ; https://www.wageningenacademic.com/ >
+   au < released ; 2018 ; 9789086862665 ; 9789086868780 ; 9789086868780 ; Fish atlas of the Celtic Sea, North Sea, and Baltic Sea (9789086868780) ; https://www.wageningenacademic.com/ >
+   au < released ; 2018 ; 9789086862375 ; 9789086868551 ; 9789086868551 ; Equine nutrition (9789086868551) ; https://www.wageningenacademic.com/ >
+   au < released ; 2020 ; 9789086863532 ; 9789086869060 ; 9789086869060 ; Vitagenes in avian biology and poultry health (9789086869060) ; https://www.wageningenacademic.com/ >
+   au < released ; 2020 ; 9789086863433 ; 9789086868940 ; 9789086868940 ; The suckling and weaned piglet (9789086868940) ; https://www.wageningenacademic.com/ >
+   au < released ; 2020 ; 9789086863471 ; 9789086868988 ; 9789086868988 ; Green metamorphoses: agriculture, food, ecology (9789086868988) ; https://www.wageningenacademic.com/ >
+   au < released ; 2020 ; 9789086863549 ; 9789086869077 ; 9789086869077 ; Food and agribusiness in 2030: a roadmap (9789086869077) ; https://www.wageningenacademic.com/ >
+   au < released ; 2020 ; 9789086863563 ; 9789086869091 ; 9789086869091 ; Engaged Encounters (9789086869091) ; https://www.wageningenacademic.com/ >
+   au < released ; 2020 ; 9789086863518 ; 9789086869046 ; 9789086869046 ; Energising Networks (9789086869046) ; https://www.wageningenacademic.com/ >
+   au < released ; 2020 ; 9789086863525 ; 9789086869053 ; 9789086869053 ; Consumers towards marketing strategies of coffee producers (9789086869053) ; https://www.wageningenacademic.com/ >
 
  }
 

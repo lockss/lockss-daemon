@@ -99,7 +99,15 @@ public class InderscienceHtmlHashFilterFactory
         // (see also Emerald, PracticalAction)
         // http://www.inderscienceonline.com/action/showPopup?citid=citart1
         //                            &id=S1&doi=10.1504%2FIJSCIP.2012.052194 
-        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody") 
+        HtmlNodeFilters.tagWithAttributeRegex("body", "class", "popupBody"),
+
+        // https://www.inderscienceonline.com/doi/abs/10.1504/IJFMD.2021.113844 get Abstract content
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sectionInfo"),
+        // https://www.inderscienceonline.com/doi/10.1504/IJFMD.2021.113844, get Abstract content
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article__body"),
+        // https://www.inderscienceonline.com/toc/ijfmd/8/1 get issue item
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-item"),
+
     };
     
     

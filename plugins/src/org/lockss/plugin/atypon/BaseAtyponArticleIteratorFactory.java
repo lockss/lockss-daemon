@@ -106,9 +106,11 @@ ArticleMetadataExtractorFactory {
    */
   // After normalization, the citation information will live at this URL if it exists
   private static final String RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=cit";
+  private static final String RIS_REPLACEMENT_WSLASH = "/action/downloadCitation?doi=$1/$2&format=ris&include=cit";
   // AMetSoc doens't do an "include=cit", only "include=abs"
   // Do these as two separate patterns (not "OR") so we can have a priority choice
   private static final String SECOND_RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=abs";
+  private static final String SECOND_RIS_REPLACEMENT_WSLASH = "/action/downloadCitation?doi=$1%/$2&format=ris&include=abs";
 
 
   //
@@ -213,12 +215,11 @@ ArticleMetadataExtractorFactory {
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     // First choice is &include=cit; second choice is &include=abs (AMetSoc)
     builder.addAspect(Arrays.asList(
-        RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT),
+        RIS_REPLACEMENT, RIS_REPLACEMENT_WSLASH, SECOND_RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT_WSLASH),
         ArticleFiles.ROLE_CITATION_RIS);
 
     // The order in which we want to define what a full text HTML 
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
         ROLE_DOIHTML); // in ASCE it's the only full-text html we get
 
     // The order in which we want to define full_text_cu.  
@@ -231,8 +232,10 @@ ArticleMetadataExtractorFactory {
           ROLE_PDFPLUS,
           ArticleFiles.ROLE_ABSTRACT);
     } else {
-      builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+      builder.setFullTextFromRoles(
           ArticleFiles.ROLE_FULL_TEXT_HTML,
+          ROLE_DOIHTML,
+          ArticleFiles.ROLE_FULL_TEXT_PDF,
           ROLE_PDFPLUS);
     }
 

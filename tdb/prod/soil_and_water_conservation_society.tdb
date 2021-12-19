@@ -63,12 +63,12 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+      plugin = org.lockss.plugin.highwire.swc.SwcDrupalPlugin
       param[base_url] = https://www.jswconline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2019 ; Journal of Soil and Water Conservation Volume 74 ; 74 >
-      au < manifest ; 2020 ; Journal of Soil and Water Conservation Volume 75 ; 75 >
+      au < released ; 2019 ; Journal of Soil and Water Conservation Volume 74 ; 74 >
+      au < released ; 2020 ; Journal of Soil and Water Conservation Volume 75 ; 75 >
       au < manifest ; 2021 ; Journal of Soil and Water Conservation Volume 76 ; 76 >
 
     }

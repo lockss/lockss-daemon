@@ -1,0 +1,167 @@
+{
+  publisher <
+    name = PLOS
+  >
+  
+  rights = openaccess
+  plugin = org.lockss.plugin.topaz.TopazPlugin
+  implicit < status ; year ; name ; volume ; param[year] >
+
+  {
+    title <
+      name = PLOS Biology ;
+      issn = 1544-9173 ;
+      eissn = 1545-7885 ;
+      issnl = 1544-9173
+    >
+    
+    param[base_url] = http://www.plosbiology.org/
+    param[journal_id] = pbio
+
+#    au < doNotProcess ; 2003 ; PLOS Biology Volume 1 ; 1 ; 2003 >
+#    au < doNotProcess ; 2004 ; PLOS Biology Volume 2 ; 2 ; 2004 >
+#    au < doNotProcess ; 2005 ; PLOS Biology Volume 3 ; 3 ; 2005 >
+#    au < doNotProcess ; 2006 ; PLOS Biology Volume 4 ; 4 ; 2006 >
+#    au < doNotProcess ; 2007 ; PLOS Biology Volume 5 ; 5 ; 2007 >
+#    au < doNotProcess ; 2008 ; PLOS Biology Volume 6 ; 6 ; 2008 >
+#    au < doNotProcess ; 2009 ; PLOS Biology Volume 7 ; 7 ; 2009 >
+    au < doNotProcess ; 2010 ; PLOS Biology Volume 8 ; 8 ; 2010 >
+    au < doNotProcess ; 2011 ; PLOS Biology Volume 9 ; 9 ; 2011 >
+    au < doNotProcess ; 2012 ; PLOS Biology Volume 10 ; 10 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = PLOS Genetics ;
+      issn = 1553-7390 ;
+      eissn = 1553-7404 ;
+      issnl = 1553-7390
+    >
+    
+    param[base_url] = http://www.plosgenetics.org/    
+    param[journal_id] = genetics
+
+    au < down ; 2005 ; PLOS Genetics Volume 1 ; 1 ; 2005 >
+    au < down ; 2006 ; PLOS Genetics Volume 2 ; 2 ; 2006 >
+    au < down ; 2007 ; PLOS Genetics Volume 3 ; 3 ; 2007 >
+    au < down ; 2008 ; PLOS Genetics Volume 4 ; 4 ; 2008 >
+    au < doNotProcess ; 2009 ; PLOS Genetics Volume 5 ; 5 ; 2009 >
+    au < doNotProcess ; 2010 ; PLOS Genetics Volume 6 ; 6 ; 2010 >
+    au < doNotProcess ; 2011 ; PLOS Genetics Volume 7 ; 7 ; 2011 >
+#    au < doNotProcess ; 2012 ; PLOS Genetics Volume 8 ; 8 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = PLOS Computational Biology ;
+      issn = 1553-734X ;
+      eissn = 1553-7358 ;
+      issnl = 1553-734X
+    >
+    
+    param[base_url] = http://www.ploscompbiol.org/    
+    param[journal_id] = compbiol
+
+    au < down ; 2005 ; PLOS Computational Biology Volume 1 ; 1 ; 2005 >
+    au < down ; 2006 ; PLOS Computational Biology Volume 2 ; 2 ; 2006 >
+    au < down ; 2007 ; PLOS Computational Biology Volume 3 ; 3 ; 2007 >
+    au < down ; 2008 ; PLOS Computational Biology Volume 4 ; 4 ; 2008 >
+    au < doNotProcess ; 2009 ; PLOS Computational Biology Volume 5 ; 5 ; 2009 >
+    au < doNotProcess ; 2010 ; PLOS Computational Biology Volume 6 ; 6 ; 2010 >
+    au < doNotProcess ; 2011 ; PLOS Computational Biology Volume 7 ; 7 ; 2011 >
+#    au < doNotProcess ; 2012 ; PLOS Computational Biology Volume 8 ; 8 ; 2012 >
+
+  }
+
+
+  {
+    title <
+      name = PLOS One ;
+      issn = 1932-6203 ;
+      issnl = 1932-6203
+    >
+    
+    # repository error, too many files for Vol 1-3
+    
+    param[base_url] = http://www.plosone.org/    
+    param[journal_id] = plosone
+
+    au < doNotProcess ; 2006 ; PLOS One Volume 1 ; 1 ; 2006 >
+    au < doNotProcess ; 2007 ; PLOS One Volume 2 ; 2 ; 2007 >
+    au < doNotProcess ; 2008 ; PLOS One Volume 3 ; 3 ; 2008 >
+    au < doNotProcess ; 2009 ; PLOS One Volume 4 ; 4 ; 2009 >
+    au < doNotProcess ; 2010 ; PLOS One Volume 5 ; 5 ; 2010 >
+    au < doNotProcess ; 2011 ; PLOS One Volume 6 ; 6 ; 2011 >
+#    au < doNotProcess ; 2012 ; PLOS One Volume 7 ; 7 ; 2012 >
+
+  }
+  
+  
+  {
+    title <
+      name = PLOS Neglected Tropical Diseases ;
+      issn = 1935-2735 ;
+      issnl = 1935-2727
+    >
+    
+    param[base_url] = http://www.plosntds.org/    
+    param[journal_id] = ntd
+
+    au < down ; 2007 ; PLOS Neglected Tropical Diseases Volume 1 ; 1 ; 2007 >
+    au < down ; 2008 ; PLOS Neglected Tropical Diseases Volume 2 ; 2 ; 2008 >
+    au < doNotProcess ; 2009 ; PLOS Neglected Tropical Diseases Volume 3 ; 3 ; 2009 >
+    au < doNotProcess ; 2010 ; PLOS Neglected Tropical Diseases Volume 4 ; 4 ; 2010 >
+    au < doNotProcess ; 2011 ; PLOS Neglected Tropical Diseases Volume 5 ; 5 ; 2011 >
+#    au < doNotProcess ; 2012 ; PLOS Neglected Tropical Diseases Volume 6 ; 6 ; 2012 >
+
+  }
+  
+  
+  {
+    title <
+      name = PLOS Pathogens ;
+      issn = 1553-7366 ;
+      eissn = 1553-7374 ;
+      issnl = 1553-7366
+    >
+    
+    param[base_url] = http://www.plospathogens.org/    
+    param[journal_id] = pathogens
+
+    au < down ; 2005 ; PLOS Pathogens Volume 1 ; 1 ; 2005 >
+    au < down ; 2006 ; PLOS Pathogens Volume 2 ; 2 ; 2006 >
+    au < down ; 2007 ; PLOS Pathogens Volume 3 ; 3 ; 2007 >
+    au < down ; 2008 ; PLOS Pathogens Volume 4 ; 4 ; 2008 >
+    au < down ; 2009 ; PLOS Pathogens Volume 5 ; 5 ; 2009 >
+    au < doNotProcess ; 2010 ; PLOS Pathogens Volume 6 ; 6 ; 2010 >
+    au < doNotProcess ; 2011 ; PLOS Pathogens Volume 7 ; 7 ; 2011 >
+#    au < doNotProcess ; 2012 ; PLOS Pathogens Volume 8 ; 8 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = PLOS Medicine ;
+      issn = 1549-1277 ;
+      eissn = 1549-1676 ;
+      issnl = 1549-1277
+    >
+
+    param[base_url] = http://www.plosmedicine.org/   
+    param[journal_id] = medicine
+
+    au < down ; 2004 ; PLOS Medicine Volume 1 ; 1 ; 2004 >
+    au < down ; 2005 ; PLOS Medicine Volume 2 ; 2 ; 2005 >
+    au < down ; 2006 ; PLOS Medicine Volume 3 ; 3 ; 2006 >
+    au < down ; 2007 ; PLOS Medicine Volume 4 ; 4 ; 2007 >
+    au < down ; 2008 ; PLOS Medicine Volume 5 ; 5 ; 2008 >
+    au < down ; 2009 ; PLOS Medicine Volume 6 ; 6 ; 2009 >
+    au < doNotProcess ; 2010 ; PLOS Medicine Volume 7 ; 7 ; 2010 >
+    au < doNotProcess ; 2011 ; PLOS Medicine Volume 8 ; 8 ; 2011 >
+#    au < doNotProcess ; 2012 ; PLOS Medicine Volume 9 ; 9 ; 2012 >
+
+  }
+
+}

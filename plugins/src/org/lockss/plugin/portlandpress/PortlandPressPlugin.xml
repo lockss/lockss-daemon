@@ -39,11 +39,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Portland Press Plugin (retired site), Base URL %s, Journal ID %s, Volume Name %s", base_url, journal_id, volume_name</string>
+    <string>"Portland Press Plugin (Legacy Site), Base URL %s, Journal ID %s, Volume Name %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Portland Press Plugin (retired site)</string>
+    <string>Portland Press Plugin (Legacy Site)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

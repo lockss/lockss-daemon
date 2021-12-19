@@ -149,16 +149,21 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
                                          " must not be null");
       }
     }
+
+    /*
     if(config.containsKey(KEY_AU_OAI_GRANULARITY)) {
       logger.debug3(" - KEY_AU_OAI_GRANULARITY is set");
       if(!setGranularity(config.get(KEY_AU_OAI_GRANULARITY))) {
-        throw new ConfigurationException(KEY_AU_OAI_GRANULARITY + 
-                                         " must be " + Granularity.Day + 
-                                         " or " + Granularity.Second);
+        throw new ConfigurationException(KEY_AU_OAI_GRANULARITY +
+                " must be " + Granularity.Day +
+                " or " + Granularity.Second);
       }  else {
         logger.debug3(" - granularity is set to : " + config.get(KEY_AU_OAI_GRANULARITY));
       }
     }
+    */
+    
+    //setGranularity("YYYY-MM-DD");
       
   }
 
@@ -227,7 +232,8 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
     }
     return false;
   }
-  
+
+  /*
   public boolean setGranularity(String granularity) {
     try {
       this.granularity = Granularity.fromRepresentation(granularity);
@@ -236,6 +242,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
       return false;
     }
   }
+   */
   
   /**
    * Sets url for OAI query. Called to create service provider.
@@ -246,7 +253,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected Context buildContext(String url) {
     Context con = new Context();
     con.withBaseUrl(url);
-    con.withGranularity(granularity);
+    //con.withGranularity(granularity);
     con.withOAIClient(new UrlFetcherOaiClient(url, facade));
     return con;
   }

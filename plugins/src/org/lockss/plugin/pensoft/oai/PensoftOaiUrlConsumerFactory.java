@@ -1,34 +1,35 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Copyright (c) 2019 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
 
 package org.lockss.plugin.pensoft.oai;
 
@@ -50,7 +51,11 @@ import org.lockss.util.Logger;
  * which redirects through 
  * /lib/ajax_srv/generate_pdf.php?document_id=8964&readonly_preview=1&file_id=283658
  * (the file_id for a normal PDF is 0)
- * 
+ *
+ * In Dec/2021, the final destination of PDF moved at the following steps:
+ * https://africaninvertebrates.pensoft.net/article/10772/download/pdf/284108
+ * Location: /lib/ajax_srv/generate_pdf.php?document_id=10772&readonly_preview=1&skip_metric_check=0&file_id=284108 [following]
+ * https://public.pensoft.net/items/?p=7TVeXpoqfNYT89tyrm3ifrTeG9Wv8P676JSQp%2FH2pj9hhtoybol4GF7LEbj3fxHT5Fo8esHstdwAZJFgZxHDbAnCGfkWCPk5a45KiSTKEwfASBIF%2FwVwKbjI5HKmbQ%3D%3D&n=gxNxS8c6dMEeufc3%2Fy68L4LPEOft8f6t4Q%3D%3D
  */
 public class PensoftOaiUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(PensoftOaiUrlConsumerFactory.class);
@@ -72,10 +77,11 @@ public class PensoftOaiUrlConsumerFactory implements UrlConsumerFactory {
 
 	//PDF now has optional terminating file_id number or the (optional?) terminating slash
     public static final String DOWNLOADPDF_URL = "article/[^/]+/download/pdf(/|/[0-9]+)?$";
-    public static final String GENERATE_URL = "/lib/ajax_srv/generate_pdf[.]php[?]document_id=";
+    //public static final String GENERATE_URL = "/lib/ajax_srv/generate_pdf[.]php[?]document_id=";
+    public static final String DESTINATION_URL = "items/\\?p=";
 
     protected Pattern DOWNLOADPDF_PAT = Pattern.compile(DOWNLOADPDF_URL, Pattern.CASE_INSENSITIVE);
-    protected Pattern GENERATE_PAT = Pattern.compile(GENERATE_URL, Pattern.CASE_INSENSITIVE);
+    protected Pattern DESTINATION_PAT = Pattern.compile(DESTINATION_URL, Pattern.CASE_INSENSITIVE);
 
     public PensoftOaiUrlConsumer(CrawlerFacade facade,
         FetchedUrlData fud) {
@@ -95,7 +101,7 @@ public class PensoftOaiUrlConsumerFactory implements UrlConsumerFactory {
           fud.redirectUrls != null &&
           fud.redirectUrls.size() >= 1 &&
           DOWNLOADPDF_PAT.matcher(fud.origUrl).find() &&
-          GENERATE_PAT.matcher(fud.fetchUrl).find();
+          DESTINATION_PAT.matcher(fud.fetchUrl).find();
       return should;
     }
   }

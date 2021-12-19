@@ -480,15 +480,15 @@
 
         param[base_url] = http://muse.jhu.edu/
 
-        au < down ; 2005 ; Film History: An International Journal Volume 17 ; 17 >
-        au < down ; 2006 ; Film History: An International Journal Volume 18 ; 18 >
-        au < down ; 2007 ; Film History: An International Journal Volume 19 ; 19 >
-        au < down ; 2008 ; Film History: An International Journal Volume 20 ; 20 >
-        au < down ; 2009 ; Film History: An International Journal Volume 21 ; 21 >
-        au < down ; 2010 ; Film History: An International Journal Volume 22 ; 22 >
-        au < down ; 2011 ; Film History: An International Journal Volume 23 ; 23 >
-        au < down ; 2012 ; Film History: An International Journal Volume 24 ; 24 >
-        au < down ; 2013 ; Film History: An International Journal Volume 25 ; 25 >
+        au < superseded ; 2005 ; Film History: An International Journal Volume 17 [superseded] ; 17 >
+        au < superseded ; 2006 ; Film History: An International Journal Volume 18 [superseded] ; 18 >
+        au < superseded ; 2007 ; Film History: An International Journal Volume 19 [superseded] ; 19 >
+        au < superseded ; 2008 ; Film History: An International Journal Volume 20 [superseded] ; 20 >
+        au < superseded ; 2009 ; Film History: An International Journal Volume 21 [superseded] ; 21 >
+        au < superseded ; 2010 ; Film History: An International Journal Volume 22 [superseded] ; 22 >
+        au < superseded ; 2011 ; Film History: An International Journal Volume 23 [superseded] ; 23 >
+        au < superseded ; 2012 ; Film History: An International Journal Volume 24 [superseded] ; 24 >
+        au < superseded ; 2013 ; Film History: An International Journal Volume 25 [superseded] ; 25 >
 
       }
 
@@ -496,10 +496,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < down ; 2014 ; Film History: An International Journal Volume 26 ; 26 >
-        au < down ; 2015 ; Film History: An International Journal Volume 27 ; 27 >
-
-       au < doNotProcess ; 2016 ; Film History: An International Journal Volume 28 ; 28 >
+        au < superseded ; 2014 ; Film History: An International Journal Volume 26 [superseded] ; 26 >
+        au < superseded ; 2015 ; Film History: An International Journal Volume 27 [superseded] ; 27 >
 
       }
 

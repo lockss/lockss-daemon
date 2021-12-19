@@ -140,18 +140,18 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
           public void visitTag(Tag tag) {
             String tagName = tag.getTagName().toLowerCase();
             /* Many of the ul, and li tags contain dynamic attributes, aggressivley remove these
-            * <ul class="ajax-zone m-0 t-zone" id="zone115228561_1">
-            * <ul data-menu-list="list-id-567363a7-9393-49e7-..." ...>
-            * <li ... data-menu-item="list-id-fe284..." ...>
-            */
+             * <ul class="ajax-zone m-0 t-zone" id="zone115228561_1">
+             * <ul data-menu-list="list-id-567363a7-9393-49e7-..." ...>
+             * <li ... data-menu-item="list-id-fe284..." ...>
+             */
             if (tagName.equals("ul")) {
-              if (tag.getAttribute("id") != null){
+              if (tag.getAttribute("id") != null) {
                 tag.removeAttribute("id");
               }
               if (tag.getAttribute("data-menu-list") != null) {
                 tag.removeAttribute("data-menu-list");
               }
-            } else if (tagName.equals("li"))  {
+            } else if (tagName.equals("li")) {
               if (tag.getAttribute("id") != null) {
                 tag.removeAttribute("id");
               }
@@ -163,7 +163,7 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
              * <h2 class="abstractTitle text-title my-1" id="d3038e2">Abstract</h2>
              * <h3 id="d4951423e445">a. Satellite data</h3>
              * <h4 id="d4951423e1002">On what scale does lightning enhancement occur?</h4>
-            */
+             */
             else if (tagName.matches("h\\d") && (tag.getAttribute("id") != null)) {
               tag.removeAttribute("id");
             }
@@ -187,7 +187,12 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
               if (tag.getAttribute("id") != null && tag.getAttribute("id").matches(".*container-.*")) {
                 tag.removeAttribute("id");
               }
-            } else if ("nav".equals(tagName) && (tag.getAttribute("id") != null) && tag.getAttribute("id").matches(".*container-.*") ) {
+              if (tag.getAttribute("id") != null && tag.getAttribute("id").contains("ABSTRACT_OR_EXCERPT")) {
+                // there are random numbers in this tag attribute.
+                // but also important abstract content in the tag, so strip the attr only
+                tag.removeAttribute("id");
+              }
+            } else if ("nav".equals(tagName) && (tag.getAttribute("id") != null) && tag.getAttribute("id").matches(".*container-.*")) {
               //<nav data-container-tab-address="tab_body" id="container-nav-43131" class="container-tabs">
               tag.removeAttribute("id");
             } else if ("a".equals(tagName)) {
@@ -223,8 +228,8 @@ public class PubFactoryHtmlHashFilterFactory implements FilterFactory {
               }
             }
           }
-        });
-      }
+       });
+     }
       catch (Exception exc) {
         log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
       }

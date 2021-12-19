@@ -60,7 +60,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
 
   protected boolean usesDateRange = true;
   protected boolean usesSet = false;
-  protected boolean usesGranularity = true;
+  protected boolean usesGranularity = false;
   protected Map<String, Pattern> metadataRules;
   public static final String KEY_AU_OAI_FILTER_RULES = "au_oai_filter_rules";
   public static final String KEY_AU_OAI_DATE = "au_oai_date";

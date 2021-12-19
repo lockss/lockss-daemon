@@ -46,19 +46,19 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Mark Allen Group Plugin (CLOCKSS)</string>
+    <string>Mark Allen Group Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Mark Allen Group Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Mark Allen Group Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

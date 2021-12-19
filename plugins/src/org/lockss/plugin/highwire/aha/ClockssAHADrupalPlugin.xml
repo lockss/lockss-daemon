@@ -34,7 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated - not used for any real AUs?</string>
   </entry>
   <!-- compare to AHADrupalPlugin, the added entries should be in synch -->
   <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>au_name</string>

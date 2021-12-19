@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = National Association of Teachers of Singing
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:425
+
+    {
+    title <
+      name = Journal of Singing ;
+      issn = 1086-7732 ;
+      eissn = 2769-4046
+
+    >
+
+      attr[journal_id] = 817
+
+      au < manifest ; 2021 ; Journal of Singing Volume 78 [2021] ; 16492 >
+
+    }
+
+}

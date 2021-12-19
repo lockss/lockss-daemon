@@ -52,8 +52,8 @@
       au < finished ; finished ; 2015 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 10 ; 10 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 11 ; 11 ; http://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 12 ; 12 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2019 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 13 ; 13 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2020 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 14 ; 14 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2019 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 13 ; 13 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2020 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 14 ; 14 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 15 ; 15 ; https://newprairiepress.org/ ; >
 
     }
@@ -160,7 +160,7 @@
       au < finished ; finished ; 2017 ; Journal of Financial Therapy Volume 8 ; 8 ; http://newprairiepress.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Journal of Financial Therapy Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Journal of Financial Therapy Volume 10 ; 10 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2020 ; Journal of Financial Therapy Volume 11 ; 11 ; https://newprairiepress.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Journal of Financial Therapy Volume 11 ; 11 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; Journal of Financial Therapy Volume 12 ; 12 ; https://newprairiepress.org/ ; >
 
     }
@@ -222,7 +222,7 @@
       au < finished ; finished ; 2017 ; Kansas Library Association College and University Libraries Section Proceedings Volume 7 ; 7 ; http://newprairiepress.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Kansas Library Association College and University Libraries Section Proceedings Volume 8 ; 8 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; Kansas Library Association College and University Libraries Section Proceedings Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; Kansas Library Association College and University Libraries Section Proceedings Volume 10 ; 10 ; https://newprairiepress.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Kansas Library Association College and University Libraries Section Proceedings Volume 10 ; 10 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; Kansas Library Association College and University Libraries Section Proceedings Volume 11 ; 11 ; https://newprairiepress.org/ ; >
 
     }
@@ -267,7 +267,7 @@
       au < finished ; finished ; 2017 ; Online Journal of Rural Research & Policy Volume 12 ; 12 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Online Journal of Rural Research & Policy Volume 13 ; 13 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Online Journal of Rural Research & Policy Volume 14 ; 14 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2020 ; Online Journal of Rural Research & Policy Volume 15 ; 15 ; https://newprairiepress.org/ ; >
+      au < deepCrawl ; exists ; 2020 ; Online Journal of Rural Research & Policy Volume 15 ; 15 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; Online Journal of Rural Research & Policy Volume 16 ; 16 ; https://newprairiepress.org/ ; >
 
     }
@@ -301,10 +301,10 @@
       au < finished ; finished ; 2014 ; Transactions of the Burgon Society Volume 13 ; 13 ; http://newprairiepress.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Transactions of the Burgon Society Volume 14 ; 14 ; http://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Transactions of the Burgon Society Volume 15 ; 15 ; http://newprairiepress.org/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2016 ; Transactions of the Burgon Society Volume 16 ; 16 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2018 ; Transactions of the Burgon Society Volume 17 ; 17 ; https://newprairiepress.org/ ; >
-      au < crawling ; exists ; 2019 ; Transactions of the Burgon Society Volume 18 ; 18 ; https://newprairiepress.org/ ; >
-      au < testing ; exists ; 2020 ; Transactions of the Burgon Society Volume 19 ; 19 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2016 ; Transactions of the Burgon Society Volume 16 ; 16 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2018 ; Transactions of the Burgon Society Volume 17 ; 17 ; https://newprairiepress.org/ ; >
+      au < frozen ; exists ; 2019 ; Transactions of the Burgon Society Volume 18 ; 18 ; https://newprairiepress.org/ ; >
+      au < notReady ; exists ; 2020 ; Transactions of the Burgon Society Volume 19 ; 19 ; https://newprairiepress.org/ ; > #embargo until October 21, 2021
       au < expected ; exists ; 2021 ; Transactions of the Burgon Society Volume 20 ; 20 ; https://newprairiepress.org/ ; >
 
   }
@@ -327,11 +327,10 @@
       au < finished ; finished ; 2013-2014 ; The Advocate Volume 21 ; 21 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014-2015 ; The Advocate Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015-2018 ; The Advocate Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; The Advocate Volume 24 ; 24 ; >
-      au < crawling ; exists ; 2019-2020 ; The Advocate Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2020 ; The Advocate Volume 26 ; 26 ; >
-      au < expected ; exists ; 2021 ; The Advocate Volume 27 ; 27 ; >
-      au < expected ; exists ; 2021 ; The Advocate Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2019 ; The Advocate Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2019-2020 ; The Advocate Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2020-2021 ; The Advocate Volume 26 ; 26 ; >
+      au < expected ; exists ; 2022 ; The Advocate Volume 27 ; 27 ; >
 
   }
 
@@ -351,8 +350,8 @@
       au < finished ; finished ; 2015 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2021 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 5 ; 5 ; >
+      au < deepCrawl ; exists ; 2020 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2021 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 5 ; 5 ; >
 
   }
 
@@ -414,9 +413,9 @@
       au < finished ; finished ; 2014-2015 ; Educational Considerations Volume 42 ; 42 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015-2016 ; Educational Considerations Volume 43 ; 43 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018-2019 ; Educational Considerations Volume 44 ; 44 ; >
-      au < crawling ; exists ; 2019-2020 ; Educational Considerations Volume 45 ; 45 ; >
-      au < crawling ; exists ; 2020 ; Educational Considerations Volume 46 ; 46 ; >
-      au < manifest ; exists ; 2021 ; Educational Considerations Volume 47 ; 47 ; >
+      au < deepCrawl ; exists ; 2019-2020 ; Educational Considerations Volume 45 ; 45 ; >
+      au < frozen ; exists ; 2020 ; Educational Considerations Volume 46 ; 46 ; >
+      au < crawling ; exists ; 2021 ; Educational Considerations Volume 47 ; 47 ; >
       au < expected ; exists ; 2021 ; Educational Considerations Volume 48 ; 48 ; >
 
   }
@@ -569,9 +568,9 @@
       au < finished ; finished ; 2013 ; Fungal Genetics Reports Volume 60 ; 60 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Fungal Genetics Reports Volume 61 ; 61 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Fungal Genetics Reports Volume 62 ; 62 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2018-2019 ; Fungal Genetics Reports Volume 63 ; 63 ; >
-      au < crawling ; exists ; 2020 ; Fungal Genetics Reports Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2021 ; Fungal Genetics Reports Volume 65 ; 65 ; >
+      au < frozen ; exists ; 2018-2019 ; Fungal Genetics Reports Volume 63 ; 63 ; >
+      au < frozen ; exists ; 2020 ; Fungal Genetics Reports Volume 64 ; 64 ; >
+      au < crawling ; exists ; 2021 ; Fungal Genetics Reports Volume 65 ; 65 ; >
 
   }
 
@@ -590,8 +589,8 @@
 
       au < finished ; finished ; 2017-2018 ; Human Behavior Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < crawling ; down ; 2019 ; Human Behavior Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Human Behavior Research Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2021 ; Human Behavior Research Volume 4 ; 4 ; >
+      au < deepCrawl ; exists ; 2020 ; Human Behavior Research Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2021 ; Human Behavior Research Volume 4 ; 4 ; >
 
   }
 
@@ -612,7 +611,7 @@
       au < finished ; finished ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; >
+      au < deepCrawl ; exists ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; >
       au < expected ; exists ; 2021 ; International Journal of School Social Work Volume 6 ; 6 ; >
 
   }
@@ -682,9 +681,9 @@
       au < finished ; finished ; 2016 ; Journal of Applied Communications Volume 100 ; 100 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Applied Communications Volume 101 ; 101 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Journal of Applied Communications Volume 102 ; 102 ; >
-      au < crawling ; exists ; 2019 ; Journal of Applied Communications Volume 103 ; 103 ; >
-      au < crawling ; exists ; 2020 ; Journal of Applied Communications Volume 104 ; 104 ; >
-      au < manifest ; exists ; 2021 ; Journal of Applied Communications Volume 105 ; 105 ; >
+      au < frozen ; exists ; 2019 ; Journal of Applied Communications Volume 103 ; 103 ; >
+      au < frozen ; exists ; 2020 ; Journal of Applied Communications Volume 104 ; 104 ; >
+      au < crawling ; exists ; 2021 ; Journal of Applied Communications Volume 105 ; 105 ; >
 
   }
 
@@ -730,8 +729,8 @@
       au < finished ; finished ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2020 ; Kansas Agricultural Experiment Station Research Reports Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2021 ; Kansas Agricultural Experiment Station Research Reports Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2020 ; Kansas Agricultural Experiment Station Research Reports Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2021 ; Kansas Agricultural Experiment Station Research Reports Volume 7 ; 7 ; >
 
   }
 
@@ -756,7 +755,7 @@
       au < finished ; finished ; 2018 ; Kansas State University Libraries Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Kansas State University Libraries Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; Kansas State University Libraries Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2019 ; Kansas State University Libraries Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2019 ; Kansas State University Libraries Volume 9 ; 9 ; >
 
   }
 
@@ -794,8 +793,8 @@
       au < finished ; finished ; 2017 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2020 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2021 ; Networks: An Online Journal for Teacher Research Volume 23 ; 23 ; >
+      au < deepCrawl ; exists ; 2020 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2021 ; Networks: An Online Journal for Teacher Research Volume 23 ; 23 ; >
 
   }
 
@@ -912,7 +911,8 @@
       au < finished ; finished ; 2017 ; Seek Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Seek Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2019 ; Seek Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2021 ; Seek Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2020 ; Seek Volume 10 ; 10 ; >
+      au < expected ; exists ; 2021 ; Seek Volume 11 ; 11 ; >
 
   }
 
@@ -958,7 +958,7 @@
       au < manifest ; exists ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; >
       au < manifest ; exists ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; >
       au < manifest ; exists ; 2004 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; >
-      au < finished ; manifest ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2005 ; Studies in 20th & 21st Century Literature Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2006 ; Studies in 20th & 21st Century Literature Volume 30 ; 30 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2007 ; Studies in 20th & 21st Century Literature Volume 31 ; 31 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2008 ; Studies in 20th & 21st Century Literature Volume 32 ; 32 ; reingest1.clockss.org:8082 >
@@ -973,8 +973,8 @@
       au < finished ; finished ; 2017 ; Studies in 20th & 21st Century Literature Volume 41 ; 41 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; Studies in 20th & 21st Century Literature Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018-2019 ; Studies in 20th & 21st Century Literature Volume 43 ; 43 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; Studies in 20th & 21st Century Literature Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2021 ; Studies in 20th & 21st Century Literature Volume 45 ; 45 ; >
+      au < deepCrawl ; exists ; 2020 ; Studies in 20th & 21st Century Literature Volume 44 ; 44 ; >
+      au < crawling ; exists ; 2021 ; Studies in 20th & 21st Century Literature Volume 45 ; 45 ; >
 
   }
 

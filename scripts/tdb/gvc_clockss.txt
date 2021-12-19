@@ -17,6 +17,8 @@ base_url~http%3A%2F%2Fwww%2Ejimmunol%2Eorg%2F&volume_name~194
 base_url~http%3A%2F%2Fwww%2Ejimmunol%2Eorg%2F&volume_name~195
 base_url~http%3A%2F%2Fwww%2Ejimmunol%2Eorg%2F&volume_name~196
 base_url~http%3A%2F%2Fwww%2Ejimmunol%2Eorg%2F&volume_name~197
+##############American Physiological Society
+%3A%2F%2Fwww%2Ephysiology%2Eorg%2F&journal_id~
 ##############American Psychiatric Association Publishing
 base_url~https%3A%2F%2Fajp%2Epsychiatryonline%2Eorg%2F&journal_id~ajp&volume_name~
 base_url~https%3A%2F%2Fps%2Epsychiatryonline%2Eorg%2F&journal_id~ps&volume_name~
@@ -45,6 +47,8 @@ base_url~http%3A%2F%2Fwww%2Eproc-iahs%2Enet%2F&home_url~http%3A%2F%2Fwww%2Eproce
 base_url~https%3A%2F%2Fwww%2Eproc-iahs%2Enet%2F&home_url~https%3A%2F%2Fwww%2Eproceedings-iahs%2Enet%2Findex%2Ehtml%2F&volume_name~
 base_url~http%3A%2F%2Fwww%2Earch-anim-breed%2Enet%2F&home_url~http%3A%2F%2Farchives-animal-breeding%2Enet%2F&volume_name~59&year~
 base_url~https%3A%2F%2Fwww%2Eproc-iahs%2Enet%2F&home_url~https%3A%2F%2Fwww%2Eproceedings-iahs%2Enet%2F&volume_name~
+###base_url~%3A%2F%2Fpiahs%2Ecopernicus%2Eorg%2F&home_url~%3A%2F%2Fwww%2Eproceedings-iahs%2Enet%2F&volume_name~###should be below, but doesn't work.
+%3A%2F%2Fwww%2Eproceedings-iahs%2Enet%2F&volume_name~3
 ##############Edinburgh University Press
 Edinburgh University Press,Africa Bibliography,0266-6731,1757-1642
 base_url~http%3A%2F%2Fwww%2Eeuppublishing%2Ecom%2F&journal_id~abib

@@ -43,6 +43,7 @@
     au < zapped ; finished ; 2019 ; SAGE Publications Books Source Content 2019 ; 2019 >
     au < readySource ; crawling ; 2020 ; SAGE Publications Books Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; SAGE Publications Books Source Content 2021 ; 2021 >
+    au < expected ; exists ; 2022 ; SAGE Publications Books Source Content 2022 ; 2022 >
 
   }
   
@@ -85,7 +86,7 @@
     implicit < status ; status2 ; year ; name ; param[year] >
 
     au < zapped ; finished ; 2017 ; Canadian Journal of Nursing Research Volumes 45-47 Source Content 2017 ; 2017 >
-	#No more AUs expected
+    #No more AUs expected
 
   }
 

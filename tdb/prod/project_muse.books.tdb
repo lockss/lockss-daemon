@@ -6,8 +6,8 @@
   
 {
 
-  plugin = needs.plugin
-  implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2020BooksPlugin
+  implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn]; param[book_id] >
 
   {
 
@@ -16,9 +16,9 @@
       type = bookSeries
     >
 
-      param[base_url] = http://muse.jhu.edu/
+      param[base_url] = https://muse.jhu.edu/
 
-      au < expected ; 2020 ;  ;  ; Example Title ; 9780000000000 >
+      au < manifest ; 2014 ;  9780874219456 ; 9780874219456 ; Toward a Conceptual Framework for the Study of Folklore and the Internet ; 9780874219456 ; 31206 >
 
   }
 }

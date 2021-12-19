@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -67,11 +63,18 @@ public class DebugPanel extends LockssServlet {
   public static final int DEFAULT_CRAWL_PRIORITY = 10;
 
   /**
-   * Priority for crawls started from the debug panel
+   * If true, display the Deep Crawl button
    */
   public static final String PARAM_ENABLE_DEEP_CRAWL = 
     PREFIX + "deepCrawlEnabled";
   private static final boolean DEFAULT_ENABLE_DEEP_CRAWL = false;
+
+  /**
+   * If true, display the Copy to V2 Repo button
+   */
+  public static final String PARAM_ENABLE_COPY_TO_V2REPO = 
+    PREFIX + "copyToV2repoEnabled";
+  private static final boolean DEFAULT_ENABLE_COPY_TO_V2REPO = false;
 
   static final String KEY_ACTION = "action";
   static final String KEY_MSG = "msg";
@@ -97,6 +100,7 @@ public class DebugPanel extends LockssServlet {
   public static final String ACTION_FORCE_START_DEEP_CRAWL = "Force Deep Crawl";
   public static final String ACTION_CHECK_SUBSTANCE = "Check Substance";
   public static final String ACTION_VALIDATE_FILES = "Validate Files";
+  public static final String ACTION_COPY_TO_V2REPO = "Copy to V2 Repo";
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
   static final String ACTION_SLEEP = "Sleep";
@@ -209,6 +213,9 @@ public class DebugPanel extends LockssServlet {
     }
     if (ACTION_VALIDATE_FILES.equals(action)) {
       doValidateFiles();
+    }
+    if (ACTION_COPY_TO_V2REPO.equals(action)) {
+      doCopyToV2repo();
     }
     if (ACTION_CRAWL_PLUGINS.equals(action)) {
       crawlPluginRegistries();
@@ -426,6 +433,13 @@ public class DebugPanel extends LockssServlet {
 
     resp.setContentLength(0);
     resp.sendRedirect(redir);
+  }
+
+  private void doCopyToV2repo() throws IOException {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    statusMsg = "Hi, this doesn't do anything yet: " + au.getName();
+
   }
 
   private boolean startReindexingMetadata(ArchivalUnit au, boolean force) {
@@ -662,6 +676,14 @@ public class DebugPanel extends LockssServlet {
                                         ACTION_DISABLE_METADATA_INDEXING);
       frm.add(" ");
       frm.add(disableIndexing);
+    }
+    if (CurrentConfig.getBooleanParam(PARAM_ENABLE_COPY_TO_V2REPO,
+				      DEFAULT_ENABLE_COPY_TO_V2REPO)) {
+
+      Input copyToV2 = new Input(Input.Submit, KEY_ACTION,
+                                 ACTION_COPY_TO_V2REPO);
+      frm.add("<br>");
+      frm.add(copyToV2);
     }
     frm.add("</center>");
 

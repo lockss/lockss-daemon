@@ -27,11 +27,11 @@
       au < finished ; finished ; 2009 ; 978-3-03719-068-5 ; 978-3-03719-568-0 ; The Formation of Black Holes in General Relativity ; 93 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; 978-3-03719-106-4 ; 978-3-03719-606-9 ; Concentration Compactness for Critical Wave Maps ; 146 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 978-3-03719-136-1 ; 978-3-03719-636-6 ; A Spinorial Approach to Riemannian and Conformal Geometry ; 194 ; reingest5.clockss.org:8082  >
-      au < finished ; manifest ; 2018 ; 978-3-03719-135-4 ; 978-3-03719-635-9 ; Foundations of Rigid Geometry I ; 227 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-135-4 ; 978-3-03719-635-9 ; Foundations of Rigid Geometry I ; 227 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 978-3-03719-192-7 ; 978-3-03719-692-2 ; The Shock Development Problem ; 238 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 978-3-03719-193-4 ; 978-3-03719-693-9 ; From the Vlasov–Maxwell–Boltzmann System to Incompressible Viscous Electro-magneto-hydrodynamics ; 239 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2020 ; 978-3-03719-209-2 ; 978-3-03719-709-7 ; Mackey 2-Functors and Mackey 2-Motives ; 256 ; >
-      au < manifest ; exists ; 2020 ; 978-3-03719-211-5 ; 978-3-03719-711-0 ; Quasi-Periodic Solutions of Nonlinear Wave Equations on the d-Dimensional Torus ; 258 ; >
+      au < crawling ; exists ; 2020 ; 978-3-03719-209-2 ; 978-3-03719-709-7 ; Mackey 2-Functors and Mackey 2-Motives ; 256 ; >
+      au < crawling ; exists ; 2020 ; 978-3-03719-211-5 ; 978-3-03719-711-0 ; Quasi-Periodic Solutions of Nonlinear Wave Equations on the d-Dimensional Torus ; 258 ; >
 
   }
 
@@ -46,7 +46,7 @@
       # series = esiam
 
       au < finished ; finished ; 2014 ; 978-3-03719-137-8 ; 978-3-03719-637-3 ; MATHEON - Mathematics for Key Technologies ; 177 ; reingest5.clockss.org:8082  >
-      au < crawling ; exists ; 2020 ; 978-3-03719-207-8 ; 978-3-03719-707-3 ; Decision Support Systems for Water Supply Systems ; 254 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-207-8 ; 978-3-03719-707-3 ; Decision Support Systems for Water Supply Systems ; 254 ; >
 
   }
 
@@ -70,13 +70,13 @@
       au < finished ; finished ; 2013 ; 978-3-03719-115-6 ; 978-3-03719-615-1 ; Derived Categories in Algebraic Geometry ; 161 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 978-3-03719-125-5 ; 978-3-03719-625-0 ; Advances in Representation Theory of Algebras ; 174 ; reingest5.clockss.org:8082  >
       au < finished ; finished ; 2014 ; 978-3-03719-149-1 ; 978-3-03719-649-6 ; Valuation Theory in Interaction ; 182 ; reingest5.clockss.org:8082  >
-      au < finished ; manifest ; 2017 ; 978-3-03719-171-2 ; 978-3-03719-671-7 ; Representation Theory – Current Trends and Perspectives ; 216 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; 978-3-03719-175-0 ; 978-3-03719-675-5 ; Functional Analysis and Operator Theory for Quantum Physics ; 218 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-182-8 ; 978-3-03719-682-3 ; Schubert Varieties, Equivariant Cohomology and Characteristic Classes ; 226 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-186-6 ; 978-3-03719-686-1 ; Non-Linear Partial Differential Equations, Mathematical Physics, and Stochastic Analysis ; 231 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-171-2 ; 978-3-03719-671-7 ; Representation Theory – Current Trends and Perspectives ; 216 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-175-0 ; 978-3-03719-675-5 ; Functional Analysis and Operator Theory for Quantum Physics ; 218 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-182-8 ; 978-3-03719-682-3 ; Schubert Varieties, Equivariant Cohomology and Characteristic Classes ; 226 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-186-6 ; 978-3-03719-686-1 ; Non-Linear Partial Differential Equations, Mathematical Physics, and Stochastic Analysis ; 231 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 978-3-03719-197-2 ; 978-3-03719-697-7 ; Spectral Structures and Topological Methods in Mathematics ; 244 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; 978-3-03719-198-9 ; 978-3-03719-698-4 ; $t$-Motives: Hodge Structures, Transcendence and Other Motivic Aspects ; 235 ; >
-      au < manifest ; exists ; 2021 ; 978-3-98547-005-1 ; 978-3-98547-505-6 ; Probabilistic Structures in Evolution ; 264 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-198-9 ; 978-3-03719-698-4 ; $t$-Motives: Hodge Structures, Transcendence and Other Motivic Aspects ; 235 ; >
+      au < crawling ; exists ; 2021 ; 978-3-98547-005-1 ; 978-3-98547-505-6 ; Probabilistic Structures in Evolution ; 264 ; >
 
   }
 
@@ -116,12 +116,12 @@
       au < finished ; finished ; 2016 ; 978-3-03719-162-0 ; 978-3-03719-662-5 ; Geometry, Analysis and Dynamics on sub-Riemannian Manifolds: Volume I ; 205 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 978-3-03719-163-7 ; 978-3-03719-663-2 ; Geometry, Analysis and Dynamics on sub-Riemannian Manifolds: Volume II ; 206 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 978-3-03719-168-2 ; 978-3-03719-668-7 ; Dynamics Done with Your Bare Hands ; 211 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; 978-3-03719-172-9 ; 978-3-03719-672-4 ; PDE Models for Chemotaxis and Hydrodynamics in Supercritical Function Spaces ; 217 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; 978-3-03719-180-4 ; 978-3-03719-680-9 ; Higher-Dimensional Knots According to Michel Kervaire ; 224 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-185-9 ; 978-3-03719-685-4 ; Local Representation Theory and Simple Groups ; 230 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-172-9 ; 978-3-03719-672-4 ; PDE Models for Chemotaxis and Hydrodynamics in Supercritical Function Spaces ; 217 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-180-4 ; 978-3-03719-680-9 ; Higher-Dimensional Knots According to Michel Kervaire ; 224 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-185-9 ; 978-3-03719-685-4 ; Local Representation Theory and Simple Groups ; 230 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 978-3-03719-195-8 ; 978-3-03719-695-3 ; Function Spaces with Dominating Mixed Smoothness ; 241 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2020 ; 978-3-03719-210-8 ; 978-3-03719-710-3 ; Classification of Complex Algebraic Surfaces ; 257 ; >
-      au < manifest ; exists ; 2021 ; 978-3-98547-004-4 ; 978-3-98547-504-9 ; Lectures on Selected Topics in von Neumann Algebras ; 262 ; >
+      au < frozen ; exists ; 2020 ; 978-3-03719-210-8 ; 978-3-03719-710-3 ; Classification of Complex Algebraic Surfaces ; 257 ; >
+      au < crawling ; exists ; 2021 ; 978-3-98547-004-4 ; 978-3-98547-504-9 ; Lectures on Selected Topics in von Neumann Algebras ; 262 ; >
 
   }
 
@@ -151,10 +151,10 @@
       au < finished ; finished ; 2014 ; 978-3-03719-138-5 ; 978-3-03719-638-0 ; Analytic Projective Geometry ; 176 ; reingest5.clockss.org:8082  >
       au < finished ; finished ; 2014 ; 978-3-03719-133-0 ; 978-3-03719-633-5 ; Diffusion Processes and Stochastic Calculus ; 181 ; reingest2.clockss.org:8085  >
       au < finished ; finished ; 2015 ; 978-3-03719-151-4 ; 978-3-03719-651-9 ; Spectral Theory in Riemannian Geometry ; 186 ; reingest5.clockss.org:8082  >
-      au < finished ; manifest ; 2017 ; 978-3-03719-174-3 ; 978-3-03719-674-8 ; Frobenius Algebras II ; 219 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; 978-3-03719-179-8 ; 978-3-03719-679-3 ; A Course In Error-Correcting Codes (978-3-03719-679-3) ; 223 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-188-0 ; 978-3-03719-688-5 ; A Brief Introduction to Spectral Graph Theory ; 233 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to Kac-Moody Groups over Fields ; 232 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-174-3 ; 978-3-03719-674-8 ; Frobenius Algebras II ; 219 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-179-8 ; 978-3-03719-679-3 ; A Course In Error-Correcting Codes (978-3-03719-679-3) ; 223 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-188-0 ; 978-3-03719-688-5 ; A Brief Introduction to Spectral Graph Theory ; 233 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to Kac-Moody Groups over Fields ; 232 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -191,14 +191,14 @@
       au < finished ; finished ; 2015 ; 978-3-03719-139-2 ; 978-3-03719-639-7 ; Foundations of Garside Theory ; 192 ; reingest5.clockss.org:8082  >
       au < finished ; finished ; 2016 ; 978-3-03719-140-8 ; 978-3-03719-640-3 ; Elliptic PDEs, Measures and Capacities ; 214 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 978-3-03719-166-8 ; 978-3-03719-666-3 ; Metric Geometry of Locally Compact Groups ; 209 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; 978-3-03719-167-5 ; 978-3-03719-667-0 ; Degenerate Complex Monge–Ampère Equations ; 210 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; 978-3-03719-169-9 ; 978-3-03719-669-4 ; Bound States of the Magnetic Schrödinger Operator ; 212 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-178-1 ; 978-3-03719-678-6 ; Shape Variation and Optimization ; 222 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-181-1 ; 978-3-03719-681-6 ; Regular, Quasi-regular and Induced Representations of Infinite-dimensional Groups ; 225 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-190-3 ; 978-3-03719-690-8 ; Boundary Behavior of Solutions to Elliptic Equations in General Domains ; 236 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-167-5 ; 978-3-03719-667-0 ; Degenerate Complex Monge–Ampère Equations ; 210 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-169-9 ; 978-3-03719-669-4 ; Bound States of the Magnetic Schrödinger Operator ; 212 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-178-1 ; 978-3-03719-678-6 ; Shape Variation and Optimization ; 222 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-181-1 ; 978-3-03719-681-6 ; Regular, Quasi-regular and Induced Representations of Infinite-dimensional Groups ; 225 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-190-3 ; 978-3-03719-690-8 ; Boundary Behavior of Solutions to Elliptic Equations in General Domains ; 236 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 978-3-03719-191-0 ; 978-3-03719-691-5 ; Estimates for Differential Operators in Half-space ; 237 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; 978-3-03719-208-5 ; 978-3-03719-708-0 ; $K3$ Surfaces ; 255 ; >
-      au < manifest ; exists ; 2020 ; 978-3-03719-206-1 ; 978-3-03719-706-6 ; Accuracy of Mathematical Models ; 253 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-208-5 ; 978-3-03719-708-0 ; $K3$ Surfaces ; 255 ; >
+      au < crawling ; exists ; 2020 ; 978-3-03719-206-1 ; 978-3-03719-706-6 ; Accuracy of Mathematical Models ; 253 ; >
 
   }
 
@@ -239,10 +239,10 @@
       au < finished ; finished ; 2010 ; 978-3-03719-089-0 ; 978-3-03719-589-5 ; math.ch/100 ; 120 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; 978-3-03719-088-3 ; 978-3-03719-588-8 ; The Blind Spot ; 136 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; 978-3-03719-120-0 ; 978-3-03719-620-5 ; European Congress of Mathematics Kraków, 2 - 7 July, 2012 ; 170 ; reingest2.clockss.org:8085  >
-      au < finished ; manifest ; 2016 ; 978-3-03719-164-4 ; 978-3-03719-664-9 ; Mathematics and Society ; 207 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; 978-3-03719-157-6 ; 978-3-03719-657-1 ; Absolute Arithmetic and F1-Geometry ; 204 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2017 ; 978-3-03719-177-4 ; 978-3-03719-677-9 ; Interviews with the Abel Prize Laureates 20032016 ; 221 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-176-7 ; 978-3-03719-676-2 ; European Congress of Mathematics ; 220 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; 978-3-03719-164-4 ; 978-3-03719-664-9 ; Mathematics and Society ; 207 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; 978-3-03719-157-6 ; 978-3-03719-657-1 ; Absolute Arithmetic and F1-Geometry ; 204 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-177-4 ; 978-3-03719-677-9 ; Interviews with the Abel Prize Laureates 20032016 ; 221 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-176-7 ; 978-3-03719-676-2 ; European Congress of Mathematics ; 220 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -302,11 +302,11 @@
       au < finished ; finished ; 2016 ; 978-3-03719-158-3 ; 978-3-03719-658-8 ; Metric Measure Geometry ; 199 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; 978-3-03719-160-6 ; 978-3-03719-660-1 ; Handbook of Teichmüller Theory, Volume V ; 200 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 978-3-03719-161-3 ; 978-3-03719-661-8 ; Handbook of Teichmüller Theory, Volume VI ; 202 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-183-5 ; 978-3-03719-683-0 ; Linear Forms in Logarithms and Applications ; 228 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-183-5 ; 978-3-03719-683-0 ; Linear Forms in Logarithms and Applications ; 228 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 978-3-03719-196-5 ; 978-3-03719-696-0 ; Eighteen Essays in Non-Euclidean Geometry ; 243 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; 978-3-03719-203-0 ; 978-3-03719-703-5 ; Handbook of Teichmüller Theory, Volume VII ; 250 ; >
-      au < crawling ; exists ; 2020 ; 978-3-03719-204-7 ; 978-3-03719-704-2 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 1 ; 251 ; >
-      au < crawling ; exists ; 2020 ; 978-3-03719-205-4 ; 978-3-03719-705-9 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 2 ; 252 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-203-0 ; 978-3-03719-703-5 ; Handbook of Teichmüller Theory, Volume VII ; 250 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-204-7 ; 978-3-03719-704-2 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 1 ; 251 ; >
+      au < deepCrawl ; exists ; 2020 ; 978-3-03719-205-4 ; 978-3-03719-705-9 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 2 ; 252 ; >
 
   }
 
@@ -320,8 +320,8 @@
     >
     # series = mlm
 
-      au < finished ; manifest ; 2016 ; 978-3-03719-165-1 ; 978-3-03719-665-6 ; Free Probability and Operator Algebras ; 208 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-184-2 ; 978-3-03719-684-7 ; Lectures in Model Theory ; 229 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; 978-3-03719-165-1 ; 978-3-03719-665-6 ; Free Probability and Operator Algebras ; 208 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-184-2 ; 978-3-03719-684-7 ; Lectures in Model Theory ; 229 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -367,11 +367,11 @@
       au < finished ; finished ; 2014 ; 978-3-03719-129-3 ; 978-3-03719-629-8 ; From Newton to Boltzmann: Hard Spheres and Short-range Potentials ; 173 ; reingest5.clockss.org:8082  >
       au < finished ; finished ; 2014 ; 978-3-03719-134-7 ; 978-3-03719-634-2 ; Compactness and Stability for Nonlinear Elliptic Equations ; 180 ; reingest5.clockss.org:8082  >
       au < finished ; finished ; 2015 ; 978-3-03719-152-1 ; 978-3-03719-652-6 ; Coulomb Gases and Ginzburg-Landau Vortices ; 187 ; reingest5.clockss.org:8082  >
-      au < finished ; manifest ; 2017 ; 978-3-03719-170-5 ; 978-3-03719-670-0 ; The Monge-Ampère Equation and Its Applications ; 213 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; 978-3-03719-173-6 ; 978-3-03719-673-1 ; Asymptotic Theory of Transaction Costs ; 215 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; 978-3-03719-189-7 ; 978-3-03719-689-2 ; Geometric and Topological Aspects of Coxeter Groups and Buildings ; 234 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-170-5 ; 978-3-03719-670-0 ; The Monge-Ampère Equation and Its Applications ; 213 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; 978-3-03719-173-6 ; 978-3-03719-673-1 ; Asymptotic Theory of Transaction Costs ; 215 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 978-3-03719-189-7 ; 978-3-03719-689-2 ; Geometric and Topological Aspects of Coxeter Groups and Buildings ; 234 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 978-3-03719-200-9 ; 978-3-03719-700-4 ; Hyperbolic Flows ; 247 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2021 ; 978-3-98547-000-6 ; 978-3-98547-500-1 ; Geometry and Topology of Surfaces ; 261 ; >
+      au < crawling ; exists ; 2021 ; 978-3-98547-000-6 ; 978-3-98547-500-1 ; Geometry and Topology of Surfaces ; 261 ; >
 
   }
 

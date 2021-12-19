@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Henley-Putnam University
+    name = Henley-Putnam University ;
+    info[platform] = BePress
   >
   
    # RT3894 GLN only for now (manifest pages have both LOCKSS and CLOCKSS permission statements)
@@ -16,7 +17,6 @@
     >
     
     plugin = org.lockss.plugin.bepress.BePressPlugin 
-    #param[base_url] = http://scholarcommons.usf.edu/
     param[journal_abbr] = jss
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
     
@@ -32,8 +32,8 @@
     au < released ; 2017 ; Journal of Strategic Security (JSS) Volume 10 ; 10 ; http://scholarcommons.usf.edu/ >
     au < released ; 2018 ; Journal of Strategic Security (JSS) Volume 11 ; 11 ; http://scholarcommons.usf.edu/ >
     au < released ; 2019 ; Journal of Strategic Security (JSS) Volume 12 ; 12 ; https://scholarcommons.usf.edu/ >
-    au < manifest ; 2020 ; Journal of Strategic Security (JSS) Volume 13 ; 13 ; https://scholarcommons.usf.edu/ >
-    au < manifest ; 2021 ; Journal of Strategic Security (JSS) Volume 14 ; 14 ; https://scholarcommons.usf.edu/ >
+    au < testing ; 2020 ; Journal of Strategic Security (JSS) Volume 13 ; 13 ; https://digitalcommons.usf.edu/ >
+    au < manifest ; 2021 ; Journal of Strategic Security (JSS) Volume 14 ; 14 ; https://digitalcommons.usf.edu/ >
 
   }
 

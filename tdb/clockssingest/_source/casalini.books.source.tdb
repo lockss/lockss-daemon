@@ -3,8 +3,10 @@
   publisher <
     name = Casalini Libri ;
     info[contract] = 2019 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Plugin rev needed with "Source" in the name.
   >
+    ###########This plugin needs "Source" in the name.###############
 
   {
 
@@ -12,15 +14,21 @@
        name = Casalini Books Source Content
     >
 
-    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
-
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
+    
+    {
+    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
 
     au < readySource ; crawling ; 2020 ; Casalini Books Source Content 2020 ; 2020 >
-    au < expected ; exists ; 2021 ; Casalini Books Source Content 2021 ; 2021 >
+    au < readySource ; crawling ; 2021 ; Casalini Books Source Content 2021 ; 2021 >
+    }
+    {
+    plugin = needs.SourcePlugin
 
+    au < expected ; exists ; 2022 ; Casalini Books Source Content 2022 ; 2022_01 >
+    }
   }
 
 }

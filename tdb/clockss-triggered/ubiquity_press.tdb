@@ -18,22 +18,22 @@
       # ceased publication in 2019
       # triggered in early 2021
 
-      au < released ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; https://www.gewina-studium.nl/ >
-      au < released ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; https://www.gewina-studium.nl/ >
-      au < released ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; http://www.gewina-studium.nl/ >
-      au < released ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; http://www.gewina-studium.nl/ >
-      au < released ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; http://www.gewina-studium.nl/ >
-      au < released ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; http://www.gewina-studium.nl/ >
-      au < released ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ >
-      au < released ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ >
-      au < released ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ >
-      au < released ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ >
-      au < released ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ >
-      au < released ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ >
+      au < down ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; https://www.gewina-studium.nl/ >
+      au < down ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; https://www.gewina-studium.nl/ >
+      au < down ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; http://www.gewina-studium.nl/ >
+      au < down ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; http://www.gewina-studium.nl/ >
+      au < down ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; http://www.gewina-studium.nl/ >
+      au < down ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; http://www.gewina-studium.nl/ >
+      au < down ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; http://www.gewina-studium.nl/ >
+      au < down ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; http://www.gewina-studium.nl/ >
+      au < down ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; http://www.gewina-studium.nl/ >
+      au < down ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; http://www.gewina-studium.nl/ >
+      au < down ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; https://www.gewina-studium.nl/ >
+      au < down ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; https://www.gewina-studium.nl/ >
 
       # This additional AU is needed because the last two TOCs of 2019 only
       # appear on a 2020 manifest page. Note how only the param[year] is 2020.
-      au < released ; 2019 ; 12 ; Studium Volume 2019 [additional tables of contents] ; 2020 ; https://www.gewina-studium.nl/ >
+      au < down ; 2019 ; 12 ; Studium Volume 2019 [additional tables of contents] ; 2020 ; https://www.gewina-studium.nl/ >
 
   }
 
@@ -46,25 +46,25 @@
 
       #ceased publication in 2017
 
-      au < released ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; https://www.tijdschriftstudies.nl/ >
-      au < released ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; https://www.tijdschriftstudies.nl/ >
+      au < down ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; https://www.tijdschriftstudies.nl/ >
 
   }
 

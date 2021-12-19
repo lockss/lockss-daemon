@@ -8,7 +8,9 @@
     info[poller] = 5 ;
     info[platform] = Atypon
   >
-  #Process only American Journal of Psychotherapy.
+  #######################################################
+  ####CLOCKSS: Process only American Journal of Psychotherapy.####
+  #######################################################
   
   #20200324. Many AUs marked notReady because of 0 hash on abstracts page, full text page, and toc. See LXPLUG-1992
   #Released 2019 AUs because preservation does not depend on perfect hashing.
@@ -44,18 +46,18 @@
       au < manifest ; exists ; 2007 ; The American Journal of Psychotherapy Volume 11 ; 11 ; >
       au < manifest ; exists ; 2008 ; The American Journal of Psychotherapy Volume 12 ; 12 ; >
       au < manifest ; exists ; 2009 ; The American Journal of Psychotherapy Volume 13 ; 13 ; >
-      au < finished ; manifest ; 2010 ; The American Journal of Psychotherapy Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2011 ; The American Journal of Psychotherapy Volume 15 ; 15 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; The American Journal of Psychotherapy Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013 ; The American Journal of Psychotherapy Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; The American Journal of Psychotherapy Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; The American Journal of Psychotherapy Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; The American Journal of Psychotherapy Volume 20 ; 20 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; The American Journal of Psychotherapy Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; The American Journal of Psychotherapy Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; The American Journal of Psychotherapy Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2011 ; The American Journal of Psychotherapy Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; The American Journal of Psychotherapy Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; The American Journal of Psychotherapy Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; The American Journal of Psychotherapy Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; The American Journal of Psychotherapy Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; The American Journal of Psychotherapy Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; The American Journal of Psychotherapy Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; The American Journal of Psychotherapy Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2019 ; The American Journal of Psychotherapy Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2020 ; The American Journal of Psychotherapy Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2021 ; The American Journal of Psychotherapy Volume 25 ; 25 ; >
+      au < deepCrawl ; exists ; 2020 ; The American Journal of Psychotherapy Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2021 ; The American Journal of Psychotherapy Volume 25 ; 25 ; >
 
     }
 
@@ -77,30 +79,31 @@
       param[journal_id] = ajp
       # content starts from 1844 to current
 
-#      au < doNotProcess ; exists ; 1997 ; The American Journal of Psychiatry Volume 154 ; 154 ; >
-#      au < doNotProcess ; exists ; 1998 ; The American Journal of Psychiatry Volume 155 ; 155 ; >
-#      au < doNotProcess ; exists ; 1999 ; The American Journal of Psychiatry Volume 156 ; 156 ; >
-#      au < doNotProcess ; exists ; 2000 ; The American Journal of Psychiatry Volume 157 ; 157 ; >
-#      au < doNotProcess ; exists ; 2001 ; The American Journal of Psychiatry Volume 158 ; 158 ; >
-#      au < doNotProcess ; exists ; 2002 ; The American Journal of Psychiatry Volume 159 ; 159 ; >
-#      au < doNotProcess ; exists ; 2003 ; The American Journal of Psychiatry Volume 160 ; 160 ; >
-#      au < doNotProcess ; exists ; 2004 ; The American Journal of Psychiatry Volume 161 ; 161 ; >
-#      au < doNotProcess ; exists ; 2005 ; The American Journal of Psychiatry Volume 162 ; 162 ; >
-#      au < doNotProcess ; exists ; 2006 ; The American Journal of Psychiatry Volume 163 ; 163 ; >
-#      au < doNotProcess ; exists ; 2007 ; The American Journal of Psychiatry Volume 164 ; 164 ; >
-#      au < doNotProcess ; exists ; 2008 ; The American Journal of Psychiatry Volume 165 ; 165 ; >
-#      au < doNotProcess ; exists ; 2009 ; The American Journal of Psychiatry Volume 166 ; 166 ; >
+      au < doNotProcess ; exists ; 1997 ; The American Journal of Psychiatry Volume 154 ; 154 ; >
+      au < doNotProcess ; exists ; 1998 ; The American Journal of Psychiatry Volume 155 ; 155 ; >
+      au < doNotProcess ; exists ; 1999 ; The American Journal of Psychiatry Volume 156 ; 156 ; >
+      au < doNotProcess ; exists ; 2000 ; The American Journal of Psychiatry Volume 157 ; 157 ; >
+      au < doNotProcess ; exists ; 2001 ; The American Journal of Psychiatry Volume 158 ; 158 ; >
+      au < doNotProcess ; exists ; 2002 ; The American Journal of Psychiatry Volume 159 ; 159 ; >
+      au < doNotProcess ; exists ; 2003 ; The American Journal of Psychiatry Volume 160 ; 160 ; >
+      au < doNotProcess ; exists ; 2004 ; The American Journal of Psychiatry Volume 161 ; 161 ; >
+      au < doNotProcess ; exists ; 2005 ; The American Journal of Psychiatry Volume 162 ; 162 ; >
+      au < doNotProcess ; exists ; 2006 ; The American Journal of Psychiatry Volume 163 ; 163 ; >
+      au < doNotProcess ; exists ; 2007 ; The American Journal of Psychiatry Volume 164 ; 164 ; >
+      au < doNotProcess ; exists ; 2008 ; The American Journal of Psychiatry Volume 165 ; 165 ; >
+      au < doNotProcess ; exists ; 2009 ; The American Journal of Psychiatry Volume 166 ; 166 ; >
       au < superseded ; exists ; 2010 ; The American Journal of Psychiatry Volume 167 ; 167 ; >
-#      au < doNotProcess ; exists ; 2011 ; The American Journal of Psychiatry Volume 168 ; 168 ; >
-#      au < doNotProcess ; exists ; 2012 ; The American Journal of Psychiatry Volume 169 ; 169 ; >
-#      au < doNotProcess ; exists ; 2013 ; The American Journal of Psychiatry Volume 170 ; 170 ; >
+      au < doNotProcess ; exists ; 2011 ; The American Journal of Psychiatry Volume 168 ; 168 ; >
+      au < doNotProcess ; exists ; 2012 ; The American Journal of Psychiatry Volume 169 ; 169 ; >
+      au < doNotProcess ; exists ; 2013 ; The American Journal of Psychiatry Volume 170 ; 170 ; >
       au < superseded ; exists ; 2014 ; The American Journal of Psychiatry Volume 171 ; 171 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; The American Journal of Psychiatry Volume 172 ; 172 ; >
       au < superseded ; exists ; 2016 ; The American Journal of Psychiatry Volume 173 ; 173 ; reingest1.clockss.org:8082 >
-#      au < doNotProcess ; exists ; 2017 ; The American Journal of Psychiatry Volume 174 ; 174 ; >
+      au < doNotProcess ; exists ; 2017 ; The American Journal of Psychiatry Volume 174 ; 174 ; >
       au < superseded ; exists ; 2018 ; The American Journal of Psychiatry Volume 175 ; 175 ; >
       au < superseded ; exists ; 2019 ; The American Journal of Psychiatry Volume 176 ; 176 ; >
       au < superseded ; exists ; 2020 ; The American Journal of Psychiatry Volume 177 ; 177 ; >
+      #au < doNotProcess ; exists ; 2021 ; The American Journal of Psychiatry Volume 178 ; 178 ; >
 ###DoNotProcess
     }
 
@@ -115,16 +118,16 @@
       param[base_url] = https://focus.psychiatryonline.org/
       param[journal_id] = foc
 
-#      au < doNotProcess ; exists ; 2003 ; Focus Volume 1 ; 1 ; >
-#      au < doNotProcess ; exists ; 2004 ; Focus Volume 2 ; 2 ; >
-#      au < doNotProcess ; exists ; 2005 ; Focus Volume 3 ; 3 ; >
-#      au < doNotProcess ; exists ; 2006 ; Focus Volume 4 ; 4 ; >
-#      au < doNotProcess ; exists ; 2007 ; Focus Volume 5 ; 5 ; >
-#      au < doNotProcess ; exists ; 2008 ; Focus Volume 6 ; 6 ; >
-#      au < doNotProcess ; exists ; 2009 ; Focus Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2003 ; Focus Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2004 ; Focus Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2005 ; Focus Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2006 ; Focus Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2007 ; Focus Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2008 ; Focus Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2009 ; Focus Volume 7 ; 7 ; >
       au < superseded ; exists ; 2010 ; Focus Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2011 ; Focus Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-#      au < doNotProcess ; exists ; 2012 ; FOCUS Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2012 ; FOCUS Volume 10 ; 10 ; >
       au < superseded ; exists ; 2013 ; FOCUS Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2014 ; FOCUS Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; FOCUS Volume 13 ; 13 ; reingest3.clockss.org:8083 >
@@ -133,6 +136,7 @@
       au < superseded ; exists ; 2018 ; FOCUS Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
       au < superseded ; exists ; 2020 ; FOCUS Volume 18 ; 18 ; >
+      #au < doNotProcess ; exists ; 2021 ; FOCUS Volume 19 ; 19 ; >
 ###DoNotProcess
     }
 
@@ -148,21 +152,21 @@
       param[journal_id] = jnp
       # content starts from 1989 to current
 
-#      au < doNotProcess ; exists ; 1998 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 10 ; >
-#      au < doNotProcess ; exists ; 1999 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 11 ; 11 ; >
-#      au < doNotProcess ; exists ; 2000 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 12 ; 12 ; >
-#      au < doNotProcess ; exists ; 2001 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 13 ; 13 ; >
-#      au < doNotProcess ; exists ; 2002 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 14 ; 14 ; >
-#      au < doNotProcess ; exists ; 2003 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 15 ; 15 ; >
-#      au < doNotProcess ; exists ; 2004 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 16 ; 16 ; >
-#      au < doNotProcess ; exists ; 2005 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 17 ; 17 ; >
-#      au < doNotProcess ; exists ; 2006 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 18 ; 18 ; >
-#      au < doNotProcess ; exists ; 2007 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 19 ; 19 ; >
-#      au < doNotProcess ; exists ; 2008 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 20 ; 20 ; >
-#      au < doNotProcess ; exists ; 2009 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 21 ; 21 ; >
+      au < doNotProcess ; exists ; 1998 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 1999 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2000 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 2001 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 2002 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 2003 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 15 ; 15 ; >
+      au < doNotProcess ; exists ; 2004 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 16 ; 16 ; >
+      au < doNotProcess ; exists ; 2005 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 17 ; 17 ; >
+      au < doNotProcess ; exists ; 2006 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 18 ; 18 ; >
+      au < doNotProcess ; exists ; 2007 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 19 ; 19 ; >
+      au < doNotProcess ; exists ; 2008 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 20 ; 20 ; >
+      au < doNotProcess ; exists ; 2009 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 21 ; 21 ; >
       au < superseded ; exists ; 2010 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 22 ; 22 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2011 ; Journal of Neuropsychiatry and Clinical Neurosciences Volume 23 ; 23 ; reingest4.clockss.org:8082 >
-#      au < doNotProcess ; exists ; 2012 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 24 ; 24 ; >
+      au < doNotProcess ; exists ; 2012 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 24 ; 24 ; >
       au < superseded ; exists ; 2013 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 25 ; 25 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2014 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 26 ; 26 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 27 ; 27 ; reingest2.clockss.org:8085 >
@@ -171,6 +175,7 @@
       au < superseded ; exists ; 2018 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 30 ; 30 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2019 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 31 ; 31 ; >
       au < superseded ; exists ; 2020 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 32 ; 32 ; >
+      #au < doNotProcess ; exists ; 2021 ; The Journal of Neuropsychiatry and Clinical Neurosciences Volume 33 ; 33 ; >
 ###DoNotProcess
     }
 
@@ -186,29 +191,30 @@
       param[journal_id] = ps
       # content starts from year 1950 to current
 
-#      au < doNotProcess ; exists ; 1998 ; Psychiatric Services Volume 49 ; 49 ; >
-#      au < doNotProcess ; exists ; 1999 ; Psychiatric Services Volume 50 ; 50 ; >
-#      au < doNotProcess ; exists ; 2000 ; Psychiatric Services Volume 51 ; 51 ; >
-#      au < doNotProcess ; exists ; 2001 ; Psychiatric Services Volume 52 ; 52 ; >
-#      au < doNotProcess ; exists ; 2002 ; Psychiatric Services Volume 53 ; 53 ; >
-#      au < doNotProcess ; exists ; 2003 ; Psychiatric Services Volume 54 ; 54 ; >
-#      au < doNotProcess ; exists ; 2004 ; Psychiatric Services Volume 55 ; 55 ; >
-#      au < doNotProcess ; exists ; 2005 ; Psychiatric Services Volume 56 ; 56 ; >
-#      au < doNotProcess ; exists ; 2006 ; Psychiatric Services Volume 57 ; 57 ; >
-#      au < doNotProcess ; exists ; 2007 ; Psychiatric Services Volume 58 ; 58 ; >
-#      au < doNotProcess ; exists ; 2008 ; Psychiatric Services Volume 59 ; 59 ; >
-#      au < doNotProcess ; exists ; 2009 ; Psychiatric Services Volume 60 ; 60 ; >
+      au < doNotProcess ; exists ; 1998 ; Psychiatric Services Volume 49 ; 49 ; >
+      au < doNotProcess ; exists ; 1999 ; Psychiatric Services Volume 50 ; 50 ; >
+      au < doNotProcess ; exists ; 2000 ; Psychiatric Services Volume 51 ; 51 ; >
+      au < doNotProcess ; exists ; 2001 ; Psychiatric Services Volume 52 ; 52 ; >
+      au < doNotProcess ; exists ; 2002 ; Psychiatric Services Volume 53 ; 53 ; >
+      au < doNotProcess ; exists ; 2003 ; Psychiatric Services Volume 54 ; 54 ; >
+      au < doNotProcess ; exists ; 2004 ; Psychiatric Services Volume 55 ; 55 ; >
+      au < doNotProcess ; exists ; 2005 ; Psychiatric Services Volume 56 ; 56 ; >
+      au < doNotProcess ; exists ; 2006 ; Psychiatric Services Volume 57 ; 57 ; >
+      au < doNotProcess ; exists ; 2007 ; Psychiatric Services Volume 58 ; 58 ; >
+      au < doNotProcess ; exists ; 2008 ; Psychiatric Services Volume 59 ; 59 ; >
+      au < doNotProcess ; exists ; 2009 ; Psychiatric Services Volume 60 ; 60 ; >
       au < superseded ; exists ; 2010 ; Psychiatric Services Volume 61 ; 61 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2011 ; Psychiatric Services Volume 62 ; 62 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2012 ; Psychiatric Services Volume 63 ; 63 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2013 ; Psychiatric Services Volume 64 ; 64 ; reingest4.clockss.org:8082 >
-#      au < doNotProcess ; exists ; 2014 ; Psychiatric Services Volume 65 ; 65 ; >
+      au < doNotProcess ; exists ; 2014 ; Psychiatric Services Volume 65 ; 65 ; >
       au < superseded ; exists ; 2015 ; Psychiatric Services Volume 66 ; 66 ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2016 ; Psychiatric Services Volume 67 ; 67 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2017 ; Psychiatric Services Volume 68 ; 68 ; reingest4.clockss.org:8082 >
-#      au < doNotProcess ; exists ; 2018 ; Psychiatric Services Volume 69 ; 69 ; >
+      au < doNotProcess ; exists ; 2018 ; Psychiatric Services Volume 69 ; 69 ; >
       au < superseded ; exists ; 2019 ; Psychiatric Services Volume 70 ; 70 ; >
-#      au < doNotProcess ; exists ; 2020 ; Psychiatric Services Volume 71 ; 71 ; >
+      au < doNotProcess ; exists ; 2020 ; Psychiatric Services Volume 71 ; 71 ; >
+      #au < doNotProcess ; exists ; 2021 ; Psychiatric Services Volume 72 ; 72 ; >
 ###DoNotProcess
     }
     {
@@ -224,6 +230,7 @@
 
       au < superseded ; exists ; 2019 ; Psychiatric Research and Clinical Practice Volume 1 ; 1 ; >
       au < superseded ; exists ; 2020 ; Psychiatric Research and Clinical Practice Volume 2 ; 2 ; >
+      #au < doNotProcess ; exists ; 2021 ; Psychiatric Research and Clinical Practice Volume 3 ; 3 ; >
 ###DoNotProcess
     }
 

@@ -33,6 +33,7 @@
 package org.lockss.plugin.clockss.eastview;
 
 import org.apache.commons.io.FilenameUtils;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -42,6 +43,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.UrlUtil;
 
 import java.io.IOException;
@@ -85,24 +87,22 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       return EastviewHelper;
     }
 
-
-    /* 
+    /*
      * a PDF file may or may not exist, but assume the XML is full text
      * when it does not
      */
     @Override
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
-        ArticleMetadata oneAM) {
+                                                            ArticleMetadata oneAM) {
 
-      // filename is just the same a the XML filename but with .pdf 
+      // filename is just the same a the XML filename but with .pdf
       // instead of .xml
       String url_string = cu.getUrl();
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String rawPDFPath = oneAM.getRaw(EastviewNewspaperMetadataHelper.PAGE_PDF_PATH);
-      String fullPathFile = cuBase + rawPDFPath;
-      log.debug3("Eastview Newspaper: getFilenamesAssociatedWithRecord pdfName is " + fullPathFile);
+      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      log.debug3("Eastview Newspaper: pdfName is " + pdfName);
       List<String> returnList = new ArrayList<String>();
-      returnList.add(fullPathFile);
+      returnList.add(pdfName);
+      returnList.add(url_string); // xml file
       return returnList;
     }
 
@@ -113,7 +113,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       String raw_title = thisAM.getRaw(EastviewSchemaHelper.ART_RAW_TITLE);
       log.debug3(String.format("Eastview Newspaper: metadata raw title parsed: %s", raw_title));
 
-      Pattern pattern =  Pattern.compile("\\d\\d-\\d\\d-\\d\\d\\d\\d\\(([^)]+)-([^(]+)\\)\\s+(.*)");
+      Pattern pattern =  Pattern.compile("\\d\\d-\\d\\d-\\d{2,4}\\(([^)]+)-([^(]+)\\)\\s+(.*)");
 
       Matcher m = pattern.matcher(raw_title);
 
@@ -126,7 +126,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
         publisher_shortcut = m.group(1).trim();
         publisher_mapped = EastViewPublisherNameMappingHelper.canonical.get(publisher_shortcut);
         volume = m.group(2);
-        title = m.group(2);
+        title = m.group(3);
       }
 
       log.debug3(String.format("Eastview Newspaper: metadata raw title parsed = %s | " +
@@ -148,12 +148,7 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
                 volume,
                 title));
       }
-
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String rawPDFPath = thisAM.getRaw(EastviewNewspaperMetadataHelper.PAGE_PDF_PATH);
-      String fullPathFile = cuBase + rawPDFPath;
-      log.debug3("Eastview Newspaper: rawPDFPath = " + rawPDFPath + ", fullPathFile = " + fullPathFile);
-      thisAM.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+      
 
       String publicationTitle = thisAM.getRaw(EastviewNewspaperMetadataHelper.PUBLICATION_TITLE_PATH);
       log.debug3("Eastview Newspaper: publicationTitle = " + publicationTitle);
@@ -161,13 +156,25 @@ public class EastviewNewspaperXmlMetadataExtractorFactory extends SourceXmlMetad
       if (publicationTitle != null) {
         String issn = issnMap.get(publicationTitle);
         log.debug3("Eastview Newspaper: publicationTitle = " + publicationTitle + ", issn = " + issn);
-        thisAM.put(MetadataField.FIELD_ISSN, issn);
+        if (MetadataUtil.validateIssn(issn) != null) {
+          thisAM.put(MetadataField.FIELD_ISSN, MetadataUtil.validateIssn(issn));
+        }
       } else {
         log.debug3("Eastview Newspaper: publicationTitle is null");
       }
       
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+
+      String publisherName = "East View Information Services";
+
+      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+      if (tdbau != null) {
+        publisherName =  tdbau.getPublisherName();
+      }
+
+      thisAM.put(MetadataField.FIELD_PROVIDER, publisherName);
+
     }
   }
 }

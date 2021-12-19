@@ -39,10 +39,10 @@ import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory;
+import org.lockss.plugin.highwire.HighWireJCoreHtmlCrawlFilterFactory;
 import org.lockss.util.Logger;
 
-public class APSHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFactory {
+public class APSHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilterFactory {
   
   private static final Logger log = Logger.getLogger(APSHtmlCrawlFilterFactory.class);
   

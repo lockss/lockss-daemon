@@ -47,15 +47,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -118,22 +118,22 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeJCoreArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeJCoreArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.highwire.elife.ELifeDrupalHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeJCoreHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>403=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
-      <string>500=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
-      <string>504=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
+      <string>403=org.lockss.plugin.highwire.elife.ELifeJCoreHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.highwire.elife.ELifeJCoreHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.elife.ELifeJCoreHttpResponseHandler</string>
     </list>
   </entry>
   <entry>

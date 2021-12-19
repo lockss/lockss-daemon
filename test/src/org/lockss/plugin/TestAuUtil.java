@@ -169,7 +169,7 @@ public class TestAuUtil extends LockssTestCase {
 
   public void testMapException() {
     LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
-    assertClass(CacheException.RetryableNetworkException_2.class,
+    assertClass(CacheException.RetryableNetworkException.class,
 		AuUtil.mapException(mau, null,
 				    new UnknownHostException(),
 				    "foo"));

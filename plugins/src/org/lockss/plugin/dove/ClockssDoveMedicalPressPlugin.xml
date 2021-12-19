@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.dove.ClockssDovePlugin</string>
+    <string>org.lockss.plugin.dove.ClockssDoveMedicalPressPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -31,6 +31,11 @@
         <string>1</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- manifest to issue to articles -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
   </entry>
   <entry>
     <string>au_name</string>

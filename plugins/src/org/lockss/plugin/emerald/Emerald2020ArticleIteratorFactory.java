@@ -1,28 +1,33 @@
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -46,14 +51,17 @@ public class Emerald2020ArticleIteratorFactory implements ArticleIteratorFactory
           Logger.getLogger(Emerald2020ArticleIteratorFactory.class);
 
   /*
-  https://www.emerald.com/insight/content/doi/10.1108/SR-02-2018-0043/full/html
-  https://www.emerald.com/insight/content/doi/10.1108/SR-02-2018-0043/full/pdf?title=point-cloud-measurements-uncertainty-calculation-on-spatial-feature-based-registration
-  */
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0062/full/html
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0062/full/pdf?title=a-holistic-model-for-measuring-continuous-innovation-capability-of-manufacturing-industry-a-case-study
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0063/full/html
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0063/full/link=resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJPPM-02-2021-0063/urn:emeraldgroup.com:asset:id:binary:IJPPM-02-2021-0063001.tif
+    https://www.emerald.com/insight/content/doi/10.1108/IJPPM-02-2021-0063/full/link=resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJPPM-02-2021-0063/urn:emeraldgroup.com:asset:id:binary:IJPPM-02-2021-0063002.tif
+   */
 
   // Limit to just journal volume items
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   // Match on only those patters that could be an article
-  protected static final String PATTERN_TEMPLATE = "\"%sinsight/content/doi\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%sinsight/content/doi/[^/]+/[^/]+/full/(html|pdf)\", base_url";
 
   public static final Pattern PDF_PATTERN = Pattern.compile("/(.*)/full/(pdf\\?title=[^/]+)", Pattern.CASE_INSENSITIVE);
   public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/(.*)/full/(html)$", Pattern.CASE_INSENSITIVE);

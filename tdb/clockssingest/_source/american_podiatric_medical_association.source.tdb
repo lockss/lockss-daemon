@@ -3,7 +3,8 @@
   publisher <
     name = American Podiatric Medical Association ;
     info[contract] = 2020 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -19,5 +20,6 @@
 
     au < readySource ; crawling ; 2020 ; American Podiatric Medical Association Source Content 2020; 2020 >
     au < readySource ; crawling ; 2021 ; American Podiatric Medical Association Source Content 2021; 2021 >
+    au < expected ; exists ; 2022 ; American Podiatric Medical Association Source Content 2022 ; 2022 >
   }
 }

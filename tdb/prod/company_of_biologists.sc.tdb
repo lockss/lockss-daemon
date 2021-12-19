@@ -26,7 +26,7 @@
     au < doNotProcess ; 2017 ; 2017 ; Biology Open Volume 6 ; 6 >
     au < doNotProcess ; 2018 ; 2018 ; Biology Open Volume 7 ; 7 >
     au < doNotProcess ; 2019 ; 2019 ; Biology Open Volume 8 ; 8 >
-    au < manifest ; 2020 ; 2020 ; Biology Open Volume 9 ; 9 >
+    au < ready ; 2020 ; 2020 ; Biology Open Volume 9 ; 9 >
     au < manifest ; 2021 ; 2021 ; Biology Open Volume 10 ; 10 >
 
   }
@@ -188,7 +188,7 @@
     au < doNotProcess ; 2017 ; 2017 ; Development Volume 144 ; 144 >
     au < doNotProcess ; 2018 ; 2018 ; Development Volume 145 ; 145 >
     au < doNotProcess ; 2019 ; 2019 ; Development Volume 146 ; 146 >
-    au < manifest ; 2020 ; 2020 ; Development Volume 147 ; 147 >
+    au < ready ; 2020 ; 2020 ; Development Volume 147 ; 147 >
     au < manifest ; 2021 ; 2021 ; Development Volume 148 ; 148 >
 
   }
@@ -216,7 +216,7 @@
     au < doNotProcess ; 2017 ; 2017 ; Disease Models & Mechanisms Volume 10 ; 10 >
     au < doNotProcess ; 2018 ; 2018 ; Disease Models & Mechanisms Volume 11 ; 11 >
     au < doNotProcess ; 2019 ; 2019 ; Disease Models & Mechanisms Volume 12 ; 12 >
-    au < manifest ; 2020 ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 >
+    au < ready ; 2020 ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 >
     au < manifest ; 2021 ; 2021 ; Disease Models & Mechanisms Volume 14 ; 14 >
 
   }
@@ -395,7 +395,7 @@
     au < doNotProcess ; 2017 ; 2017 ; Journal of cell Science Volume 130 ; 130 >
     au < doNotProcess ; 2018 ; 2018 ; Journal of cell Science Volume 131 ; 131 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of cell Science Volume 132 ; 132 >
-    au < manifest ; 2020 ; 2020 ; Journal of cell Science Volume 133 ; 133 >
+    au < ready ; 2020 ; 2020 ; Journal of cell Science Volume 133 ; 133 >
     au < manifest ; 2021 ; 2021 ; Journal of cell Science Volume 134 ; 134 >
 
   }
@@ -411,12 +411,12 @@
     #param[base_url] = http://jeb.biologists.org/
     param[journal_id] = jeb
 
-    #au < doNotProcess ; 1923-1924 ; The British Journal of Experimental Biology Volume 1 ; 1 >
-    #au < doNotProcess ; 1924-1925 ; The British Journal of Experimental Biology Volume 2 ; 2 >
-    #au < doNotProcess ; 1925-1926 ; The British Journal of Experimental Biology Volume 3 ; 3 >
-    #au < doNotProcess ; 1926-1927 ; The British Journal of Experimental Biology Volume 4 ; 4 >
-    #au < doNotProcess ; 1927-1928 ; The British Journal of Experimental Biology Volume 5 ; 5 >
-    #au < doNotProcess ; 1928-1929 ; The British Journal of Experimental Biology Volume 6 ; 6 >
+    au < doNotProcess ; 1923 ; 1923 ; The British Journal of Experimental Biology Volume 1 ; 1 > #1923-1924
+    au < doNotProcess ; 1924 ; 1924 ; The British Journal of Experimental Biology Volume 2 ; 2 > #1924-1925
+    au < doNotProcess ; 1925 ; 1925 ; The British Journal of Experimental Biology Volume 3 ; 3 > #1925-1926
+    au < doNotProcess ; 1926 ; 1926 ; The British Journal of Experimental Biology Volume 4 ; 4 > #1926-1927
+    au < doNotProcess ; 1927 ; 1927 ; The British Journal of Experimental Biology Volume 5 ; 5 > #1927-1928
+    au < doNotProcess ; 1928 ; 1928 ; The British Journal of Experimental Biology Volume 6 ; 6 > #1928-1929
     au < doNotProcess ; 1930 ; 1930 ; Journal of Experimental Biology Volume 7 ; 7 >
     au < doNotProcess ; 1931 ; 1931 ; Journal of Experimental Biology Volume 8 ; 8 >
     au < doNotProcess ; 1932 ; 1932 ; Journal of Experimental Biology Volume 9 ; 9 >
@@ -635,7 +635,7 @@
     au < doNotProcess ; 2017 ; 2017 ; Journal of Experimental Biology Volume 220 ; 220 >
     au < doNotProcess ; 2018 ; 2018 ; Journal of Experimental Biology Volume 221 ; 221 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Experimental Biology Volume 222 ; 222 >
-    au < manifest ; 2020 ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 >
+    au < ready ; 2020 ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 >
     au < manifest ; 2021 ; 2021 ; Journal of Experimental Biology Volume 224 ; 224 >
 
   }

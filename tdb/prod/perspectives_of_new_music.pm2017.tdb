@@ -1,0 +1,40 @@
+{
+  publisher <
+    name = Perspectives of New Music
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:338
+
+    {
+    title <
+      name = Perspectives of New Music ;
+      issn = 0031-6016 ;
+      eissn = 2325-7180
+
+    >
+
+      attr[journal_id] = 774
+
+      au < released ; 2005 ; Perspectives of New Music Volume 43 [2005] ; 15896 >
+      au < released ; 2006 ; Perspectives of New Music Volume 44 [2006] ; 15895 >
+      au < released ; 2007 ; Perspectives of New Music Volume 45 [2007] ; 15894 >
+      au < released ; 2008 ; Perspectives of New Music Volume 46 [2008] ; 15893 >
+      au < released ; 2009 ; Perspectives of New Music Volume 47 [2009] ; 15892 >
+      au < released ; 2010 ; Perspectives of New Music Volume 48 [2010] ; 15891 >
+      au < released ; 2011-2012 ; Perspectives of New Music Volume 49 [2011-2012] ; 15356 >
+      au < released ; 2012 ; Perspectives of New Music Volume 50 [2012] ; 15355 >
+      au < released ; 2013 ; Perspectives of New Music Volume 51 [2013] ; 15354 >
+      au < released ; 2014 ; Perspectives of New Music Volume 52 [2014] ; 15353 >
+      au < released ; 2015 ; Perspectives of New Music Volume 53 [2015] ; 15352 >
+      au < released ; 2016 ; Perspectives of New Music Volume 54 [2016] ; 15351 >
+      au < released ; 2017 ; Perspectives of New Music Volume 55 [2017] ; 15350 >
+      au < released ; 2018 ; Perspectives of New Music Volume 56 [2018] ; 15349 >
+      au < released ; 2019 ; Perspectives of New Music Volume 57 [2019] ; 15348 >
+      au < released ; 2020 ; Perspectives of New Music Volume 58 [2020] ; 15358 >
+
+    }
+
+}

@@ -4,7 +4,7 @@
     name = Longdom Publishing ;
     info[contract] = 2013 ;
     info[tester] = S ;
-    comment[platform] = custom
+    info[platform] = WARC
   >
 
     plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin

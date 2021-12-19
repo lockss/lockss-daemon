@@ -39,6 +39,7 @@
       implicit < status ; year ; name ; param[volume] ; param[num_issue_range] >
       
       comment[moved] = journal is still on old platform through the first issue of volume 13, 2009. Journal has moved to wordpress.
+      #See http://tesl-ej.org/archives.html
 
       au < released ; 1994-1995 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 ; 1 ; 01-04 >
       au < released ; 1996-1997 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 ; 2 ; 05-08 >
@@ -52,6 +53,12 @@
       au < released ; 2006-2007 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 10 ; 10 ; 37-40 >
       au < released ; 2007-2008 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 11 ; 11 ; 41-44 >
       au < released ; 2008-2009 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 12 ; 12 ; 45-48 >
+      au < exists ; 2009-2010 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 13 ; 13 ; 49-52 >
+      au < exists ; 2010-2011 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 14 ; 14 ; 53-56 >
+      au < exists ; 2011-2012 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 15 ; 15 ; 57-60 >
+      au < exists ; 2012-2013 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 16 ; 16 ; 61-64 >
+      au < exists ; 2013-2014 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 17 ; 17 ; 65-68 >
+      au < exists ; 2014-2015 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 18 ; 18 ; 69-72 >
 
     }
   

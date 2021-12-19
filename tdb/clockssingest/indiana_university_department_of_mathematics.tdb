@@ -24,7 +24,7 @@
     plugin = org.lockss.plugin.iumj.ClockssIUMJ2018Plugin  #LXPLUG-1904
     #param[journal_id] = IUMJ
 
-    au < crawling ; exists ; 1952 ; 1952 ; Indiana University Mathematics Journal Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1952 ; 1952 ; Indiana University Mathematics Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1953 ; 1953 ; Indiana University Mathematics Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 1954 ; 1954 ; Indiana University Mathematics Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 1955 ; 1955 ; Indiana University Mathematics Journal Volume 4 ; 4 ; >
@@ -42,7 +42,7 @@
     au < manifest ; exists ; 1967 ; 1967 ; Indiana University Mathematics Journal Volume 16 ; 16 ; >
     au < manifest ; exists ; 1968 ; 1968 ; Indiana University Mathematics Journal Volume 17 ; 17 ; >
     au < manifest ; exists ; 1969 ; 1969 ; Indiana University Mathematics Journal Volume 18 ; 18 ; >
-    au < crawling ; exists ; 1970 ; 1970 ; Indiana University Mathematics Journal Volume 19 ; 19 ; >
+    au < frozen ; exists ; 1970 ; 1970 ; Indiana University Mathematics Journal Volume 19 ; 19 ; >
     au < manifest ; exists ; 1971 ; 1971 ; Indiana University Mathematics Journal Volume 20 ; 20 ; >
     au < manifest ; exists ; 1972 ; 1972 ; Indiana University Mathematics Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 1973 ; 1973 ; Indiana University Mathematics Journal Volume 22 ; 22 ; >
@@ -55,7 +55,7 @@
     au < manifest ; exists ; 1980 ; 1980 ; Indiana University Mathematics Journal Volume 29 ; 29 ; >
     au < manifest ; exists ; 1981 ; 1981 ; Indiana University Mathematics Journal Volume 30 ; 30 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Indiana University Mathematics Journal Volume 31 ; 31 ; >
-    au < crawling ; exists ; 1983 ; 1983 ; Indiana University Mathematics Journal Volume 32 ; 32 ; >
+    au < frozen ; exists ; 1983 ; 1983 ; Indiana University Mathematics Journal Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 1984 ; 1984 ; Indiana University Mathematics Journal Volume 33 ; 33 ; >
     au < doNotProcess ; exists ; 1985 ; 1985 ; Indiana University Mathematics Journal Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 1986 ; 1986 ; Indiana University Mathematics Journal Volume 35 ; 35 ; >
@@ -88,12 +88,12 @@
     au < doNotProcess ; exists ; 2013 ; 2013 ; Indiana University Mathematics Journal Volume 62 ; 62 ; >
     au < doNotProcess ; exists ; 2014 ; 2014 ; Indiana University Mathematics Journal Volume 63 ; 63 ; >
     au < doNotProcess ; exists ; 2015 ; 2015 ; Indiana University Mathematics Journal Volume 64 ; 64 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Indiana University Mathematics Journal Volume 65 ; 65 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Indiana University Mathematics Journal Volume 66 ; 66 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Indiana University Mathematics Journal Volume 67 ; 67 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Indiana University Mathematics Journal Volume 68 ; 68 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Indiana University Mathematics Journal Volume 65 ; 65 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Indiana University Mathematics Journal Volume 66 ; 66 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Indiana University Mathematics Journal Volume 67 ; 67 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Indiana University Mathematics Journal Volume 68 ; 68 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Indiana University Mathematics Journal Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Indiana University Mathematics Journal Volume 70 ; 70 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Indiana University Mathematics Journal Volume 70 ; 70 ; >
 
     }
 

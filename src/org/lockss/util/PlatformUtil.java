@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,13 +46,28 @@ public class PlatformUtil {
   
   private static final DecimalFormat percentFmt = new DecimalFormat("0%");
 
-  /** Should be set to allowed TCP ports, based on platform- (and group-)
-   * dependent packet filters */
+  /** Should be set to the list of allowed TCP ports, based on
+   * platform- (and group-) dependent packet filters */
   public static final String PARAM_UNFILTERED_TCP_PORTS =
     Configuration.PLATFORM + "unfilteredTcpPorts";
 
   public static final String PARAM_UNFILTERED_UDP_PORTS =
     Configuration.PLATFORM + "unfilteredUdpPorts";
+
+  public enum DiskSpaceSource { Java, DF };
+
+  /** Determines how disk space statistics (total, free, available)
+   * are obtained.  If <tt>Java</tt>, the builtin Java library methods
+   * are used, if <tt>DF</tt>, the <tt>df</tt> utility is run in a sub
+   * process.  The former is normally preferred but returns incorrect
+   * results on filesystems larger than 8192PB.  The latter currently
+   * works on filesystems up to 8192EB, but is slower and could
+   * conceivably fail. */
+  public static final String PARAM_DISK_SPACE_SOURCE =
+    Configuration.PLATFORM + "diskSpaceSource";
+
+  public static final DiskSpaceSource DEFAULT_DISK_SPACE_SOURCE =
+    DiskSpaceSource.Java;
 
   public static final File[] FILE_ROOTS = File.listRoots();
 
@@ -268,18 +279,19 @@ public class PlatformUtil {
     }
   }
 
-  public DF getJavaDF(String path)
-  {
+  /** Get disk usage info from Java.  This fails on filesystems that
+   * are 8192PB or larger, because Java returns the size, in bytes, in
+   * a long.
+   */
+  public DF getJavaDF(String path) {
     File f = null;
     try {
       f = new File(path).getCanonicalFile();
-    }
-    catch (IOException e) {
+    } catch (IOException e) {
       f = new File(path).getAbsoluteFile();
     }
     // mirror the df behaviour of returning null if path doesn't exist
-    if(!f.exists())
-    {
+    if (!f.exists()) {
       return null;
     }
     DF df = new DF();
@@ -292,6 +304,7 @@ public class PlatformUtil {
     df.percent /= 100.00;
     df.fs = null;
     df.mnt = longestRootFile(f);
+    df.source = DiskSpaceSource.Java;
     if (log.isDebug2()) log.debug2(df.toString());
     return df;
   }
@@ -316,11 +329,30 @@ public class PlatformUtil {
     return longestRoot;
   }
 
-  public DF getDF(String path) throws UnsupportedException {
-    return getDF(path, "-k -P");
+  /** Get disk space statistics for the filesystem containing the
+   * path, either directly from Java or by invoking 'df', according to
+   * {@value #PARAM_DISK_SPACE_SOURCE} */
+
+  public DF getDF(String path) {
+    Configuration config = CurrentConfig.getCurrentConfig();
+    switch (config.getEnumIgnoreCase(DiskSpaceSource.class,
+                                     PARAM_DISK_SPACE_SOURCE,
+                                     DEFAULT_DISK_SPACE_SOURCE)) {
+    case Java:
+    default:
+      return getJavaDF(path);
+    case DF:
+      return getPlatformDF(path);
+    }
   }
 
-  public DF getDF(String path, String dfArgs) throws UnsupportedException {
+
+  /** Get disk usage info by running 'df' */
+  public DF getPlatformDF(String path) {
+    return getPlatformDF(path, "-k -P");
+  }
+
+  public DF getPlatformDF(String path, String dfArgs) {
     String cmd = "df " + dfArgs + " " + path;
     if (log.isDebug2()) log.debug2("cmd: " + cmd);
     try {
@@ -379,6 +411,7 @@ public class PlatformUtil {
     df.avail = getLong(tokens[3]);
     df.percentString = tokens[4];
     df.mnt = tokens[5];
+    df.source = DiskSpaceSource.DF;
     try {
       df.percent = percentFmt.parse(df.percentString).doubleValue();
     } catch (ParseException e) {
@@ -624,8 +657,8 @@ public class PlatformUtil {
   public static class Solaris extends PlatformUtil {
     public String dfArgs = "-k";
 
-    public DF getDF(String path) throws UnsupportedException {
-      return (super.getDF(path, dfArgs));
+    public DF getPlatformDF(String path) {
+      return (super.getPlatformDF(path, dfArgs));
     }
 
     public int getPid() throws UnsupportedException {
@@ -660,8 +693,8 @@ public class PlatformUtil {
       return 1024;
     }
 
-    public DF getDF(String path) throws UnsupportedException {
-      return (super.getDF(path, dfArgs));
+    public DF getPlatformDF(String path) {
+      return (super.getPlatformDF(path, dfArgs));
     }
 
     public int getPid() throws UnsupportedException {
@@ -713,7 +746,7 @@ public class PlatformUtil {
 
   public static class Windows extends PlatformUtil {
     
-    public DF getDF(String path, String dfArgs) throws UnsupportedException {
+    public DF getPlatformDF(String path, String dfArgs) {
       String cmd = "df " + dfArgs + " " + path;
       if (log.isDebug2()) log.debug2("cmd: " + cmd);
       	try {
@@ -832,6 +865,7 @@ public class PlatformUtil {
     protected String percentString;
     protected double percent = -1.0;
     protected String mnt;
+    protected DiskSpaceSource source;
 
     public static DF makeThreshold(long minFreeMB, double minFreePercent) {
       DF df = new DF();
@@ -863,6 +897,9 @@ public class PlatformUtil {
     }
     public String getMnt() {
       return mnt;
+    }
+    public DiskSpaceSource getSource() {
+      return source;
     }
     public String toString() {
       return "[DF: " + fs + "]";

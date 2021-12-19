@@ -170,7 +170,7 @@ public class TestSimpleQueue extends LockssTestCase {
       assertEquals(null, fifo.get(100));
       long delay = TimerUtil.timeSince(start);
       if (delay < 80) {
-	fail("get(100) returned early");
+	fail("get(100) returned early in " + delay);
       }
       intr.cancel();
     } finally {
@@ -184,14 +184,14 @@ public class TestSimpleQueue extends LockssTestCase {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     Interrupter intr = null;
     try {
-      putIn(200, fifo, O1, O2);
       Date start = new Date();
+      putIn(200, fifo, O1, O2);
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       assertSame(O1, fifo.get());
       assertSame(O2, fifo.get());
       long delay = TimerUtil.timeSince(start);
       if (delay < 200) {
-	fail("get() returned early");
+	fail("get() returned early in " + delay);
       }
       assertEquals(null, fifo.get(20));
       intr.cancel();

@@ -22,8 +22,8 @@
     param[journal_abbr] = biomedicine
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < crawling ; exists ; 2020 ; BioMedicine Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2021 ; BioMedicine Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2020 ; BioMedicine Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2021 ; BioMedicine Volume 11 ; 11 ; >
 
   }
 

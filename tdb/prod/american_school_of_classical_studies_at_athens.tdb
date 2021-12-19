@@ -126,7 +126,7 @@
       #param[base_url] = http://www.jstor.org/
       implicit < status ; year ; name ; param[year] ; param[base_url] >
       param[journal_id] = hesperia
-      # still waiting on GLN manifest pages - will be 2002 forward only...
+      # GLN manifest pages are 2002 forward only...
       
 
       au < released ; 2002 ; Hesperia Volume 71 ; 2002 ; http://www.jstor.org/ >

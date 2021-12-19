@@ -149,7 +149,7 @@ public class TestWileyArticleIteratorFactory extends ArticleIteratorTestCase {
   private CIProperties getZipHeader() {
     CIProperties zipProps = new CIProperties();
     zipProps.put("RESPONSE","HTTP/1.0 200 OK");
-    zipProps.put("Date", "Aug, 29 2013 09:22:49 GMT");
+    zipProps.put("Date", "Thu, 29 Aug 2013 09:22:49 GMT");
     zipProps.put("Server", "Apache/2.2.3 (CentOS)");
     zipProps.put("X-Powered-By", "PHP/5.2.17");
     zipProps.put("Expires", "Thu, 19 Nov 1981 08:52:00 GMT");

@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.anu;
 
 import java.io.IOException;
+import java.util.Map;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -41,6 +42,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.w3c.rdf.vocabulary.dublin_core_19990702.DC;
 
 
 /*
@@ -60,12 +62,20 @@ import org.lockss.plugin.*;
 
 public class AnuHtmlMetadataExtractorFactory 
     extends JsoupTagExtractorFactory {
-  static Logger log = Logger.getLogger( AnuHtmlMetadataExtractorFactory.class);
-  
-  static final String DC_TITLE = "DC.title";
-  
-  //static final String SCRAPED_DOI = "scraped_doi";
-  
+  static Logger log = Logger.getLogger(AnuHtmlMetadataExtractorFactory.class);
+
+  static final String CHP_TITLE = "h1.Chapter-Title";
+  static final String CHP_AUTHOR = "p.Chapter-Author";
+  static final String REV_TITLE = "h1.Review-Title";
+  static final String REV_AUTHOR = "p.Review-Author";
+
+  //h1 class="Chapter-Title"
+  //p class="Chapter-Author"
+
+  //h1  class="Review-Title"
+  //p class="Book-Details"
+  //p class="Review-Author"
+
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
@@ -81,12 +91,19 @@ public class AnuHtmlMetadataExtractorFactory
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put(DC_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put(CHP_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put(CHP_AUTHOR, MetadataField.FIELD_AUTHOR);
+      tagMap.put(REV_AUTHOR, MetadataField.FIELD_AUTHOR);
+      tagMap.put(REV_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
     }
-    
+
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
         throws IOException, PluginException {
+      // set our css selectors, this causes super.extract() to extract using css selector and not meta tags
+      // i do not think both are possible. 'easily' perhaps calling super.extract twice, once with setSelectors set
+      // and once without.
+      setSelectors(tagMap);
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
       

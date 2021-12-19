@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>11</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -34,11 +34,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"East View Information Services Dir Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+    <string>"East View Information Services Journals Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>East View Information Services Dir Source Plugin (CLOCKSS)</string>
+    <string>East View Information Services Journals Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
@@ -70,11 +70,17 @@
     <string>org.lockss.plugin.clockss.eastview.EastviewDirSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
+    <string>au_url_mime_type_map</string>
+    <list>
+      <string>.*\.xhtml$,text/xml</string>
+    </list>
+  </entry>
+  <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.eastview.EastviewXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.eastview.EastviewJournalXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -83,7 +89,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.eastview.EastviewXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.eastview.EastviewJournalXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

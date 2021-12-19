@@ -439,6 +439,15 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
   }
 
+  public void testCliehtState() throws IOException {
+    Crawler.CrawlerFacade facade = crawler.getCrawlerFacade();
+    assertNull(facade.getStateObj("foo"));
+    assertNull(facade.putStateObj("foo", "st1"));
+    assertEquals("st1", facade.getStateObj("foo"));
+    assertEquals("st1", facade.putStateObj("foo", "xxx"));
+    assertEquals("xxx", facade.getStateObj("foo"));
+  }
+
   public void testToString() {
     assertTrue(crawler.toString().startsWith("[BaseCrawler:"));
   }

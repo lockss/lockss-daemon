@@ -2,10 +2,14 @@
 
   publisher <
     name = BioOne ;
-    #info[contract] = 2017 ;
+    info[contract] = 2013 ; #earliest of contracts for different publishers
     info[tester] = S ;
     info[platform] = Source
   >
+
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    plugin = org.lockss.plugin.clockss.bioone.ClockssBioOneSourcePlugin
 
   {
 
@@ -13,15 +17,25 @@
        name = BioOne Source Content
     >
 
-    plugin = org.lockss.plugin.clockss.bioone.ClockssBioOneSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
-
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[directory] >
 
     au < readySource ; crawling ; 2020 ; BioOne Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; BioOne Source Content 2021 ; 2021 >
+    au < doNotProcess ; exists ; 2022 ; BioOne Source Content 2022 ; 2022 >
+    #do not process 2022. Publishers have asked that the material be split up between each publisher.
 
+  }
+
+  {
+
+    title <
+       name = American Entomological Society Source Content
+    >
+
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/entsoc-released/
+
+    au < doNotProcess ; exists ; 2022 ; American Entomological Society Source Content 2022 ; 2022 >
+    #new buckets for seperate publishers.
   }
 
 }

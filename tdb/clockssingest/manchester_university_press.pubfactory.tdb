@@ -9,12 +9,12 @@
     info[platform] = PubFactory. Manchester Hive
   >
 
-    param[base_url] = https://www.manchesterhive.com/
     param[base_url2] = https://www.manchesteropenhive.com/
+    # base_url2 param is not used, was a parameter for a setup that has changed.
     plugin = org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversityPressPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-    {
+  {
 
       title <
         name = Bulletin of the John Rylands Library ;
@@ -23,6 +23,7 @@
         issnl = 2054-9318
       >
 
+     param[base_url] = https://www.manchesterhive.com/
      param[journal_id] = bjrl
      #param[journal_issn] = 2054-9326
 
@@ -30,20 +31,20 @@
      au < manifest ; exists ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 ; >
      au < manifest ; exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 ; >
      au < manifest ; exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 ; >
-     au < crawling ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 ; >
-     au < manifest ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 ; >
-     au < manifest ; exists ; 2015 ; Bulletin of the John Rylands Library Volume 91 ; 91 ; >
-     au < manifest ; exists ; 2016 ; Bulletin of the John Rylands Library Volume 92 ; 92 ; >
-     au < manifest ; exists ; 2017 ; Bulletin of the John Rylands Library Volume 93 ; 93 ; >
+     au < frozen ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 ; >
+     au < crawling ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 ; >
+     au < crawling ; exists ; 2015 ; Bulletin of the John Rylands Library Volume 91 ; 91 ; >
+     au < crawling ; exists ; 2016 ; Bulletin of the John Rylands Library Volume 92 ; 92 ; >
+     au < crawling ; exists ; 2017 ; Bulletin of the John Rylands Library Volume 93 ; 93 ; >
      au < doNotProcess ; doNotProcess ; 2018 ; Bulletin of the John Rylands Library Volume 94 ; 94 ; >
-     au < manifest ; exists ; 2019 ; Bulletin of the John Rylands Library Volume 95 ; 95 ; >
-     au < manifest ; exists ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 ; >
-     au < manifest ; exists ; 2021 ; Bulletin of the John Rylands Library Volume 97 ; 97 ; >
+     au < crawling ; exists ; 2019 ; Bulletin of the John Rylands Library Volume 95 ; 95 ; >
+     au < crawling ; exists ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 ; >
+     au < crawling ; exists ; 2021 ; Bulletin of the John Rylands Library Volume 97 ; 97 ; >
 
-    }
+  }
 
 
-    {
+  {
     title <
       name = Film Studies ;
       issn = 1469-0314 ;
@@ -51,11 +52,10 @@
       issnl = 1469-0314
     >
 
+      param[base_url] = https://www.manchesterhive.com/
       param[journal_id] = fs
       #param[journal_issn] = 1469-0314
       #move to pubfactory, https://www.manchesterhive.com/abstract/journals/fs/fs-overview.xml
-
-      {
 
         au < doNotProcess ; doNotProcess ; 2004 ; Film Studies Volume 4 ; 4 ; >
         au < doNotProcess ; doNotProcess ; 2004 ; Film Studies Volume 5 ; 5 ; >
@@ -70,17 +70,53 @@
         au < doNotProcess ; doNotProcess ; 2016 ; Film Studies Volume 14 ; 14 ; >
         au < doNotProcess ; doNotProcess ; 2016 ; Film Studies Volume 15 ; 15 ; >
         au < doNotProcess ; doNotProcess ; 2017 ; Film Studies Volume 16 ; 16 ; >
-        au < manifest ; exists ; 2017 ; Film Studies Volume 17 ; 17 ; >
-        au < crawling ; exists ; 2018 ; Film Studies Volume 18 ; 18 ; >
-        au < manifest ; exists ; 2018 ; Film Studies Volume 19 ; 19 ; >
-        au < manifest ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
-        au < crawling ; exists ; 2019 ; Film Studies Volume 21 ; 21 ; >
+        au < crawling ; exists ; 2017 ; Film Studies Volume 17 ; 17 ; >
+        au < frozen ; exists ; 2018 ; Film Studies Volume 18 ; 18 ; >
+        au < crawling ; exists ; 2018 ; Film Studies Volume 19 ; 19 ; >
+        au < crawling ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
+        au < frozen ; exists ; 2019 ; Film Studies Volume 21 ; 21 ; >
+        au < crawling ; exists ; 2020 ; Film Studies Volume 22 ; 22 ; >
+        au < expected ; exists ; 2021 ; Film Studies Volume 23 ; 23 ; >
 
-      }
+  }
+
+    {
+    title <
+      name = Gothic Studies ;
+      issn = 1362-7937 ;
+      eissn = 2050-456X ;
+      issnl = 1362-7937
+    >
+
+      param[base_url] = https://www.manchesterhive.com/
+      param[journal_id] = gs
+      #param[journal_issn] = 2050-456X
+     
+        au < doNotProcess ; doNotProcess ; 1999 ; Gothic Studies Volume 1 ; 1 ; >
+        au < manifest ; exists ; 2000 ; Gothic Studies Volume 2 ; 2 ; >
+        au < manifest ; exists ; 2001 ; Gothic Studies Volume 3 ; 3 ; >
+        au < manifest ; exists ; 2002 ; Gothic Studies Volume 4 ; 4 ; >
+        au < manifest ; exists ; 2003 ; Gothic Studies Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2004 ; Gothic Studies Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2005 ; Gothic Studies Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2006 ; Gothic Studies Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2007 ; Gothic Studies Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2008 ; Gothic Studies Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2009 ; Gothic Studies Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2010 ; Gothic Studies Volume 12 ; 12 ; >
+        au < crawling ; exists ; 2011 ; Gothic Studies Volume 13 ; 13 ; >
+        au < crawling ; exists ; 2012 ; Gothic Studies Volume 14 ; 14 ; >
+        au < crawling ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 ; >
+        au < crawling ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 ; >
+        au < crawling ; exists ; 2015 ; Gothic Studies Volume 17 ; 17 ; >
+        au < crawling ; exists ; 2016 ; Gothic Studies Volume 18 ; 18 ; >
+        au < crawling ; exists ; 2017 ; Gothic Studies Volume 19 ; 19 ; >
+        au < crawling ; exists ; 2018 ; Gothic Studies Volume 20 ; 20 ; >
+        au < expected ; exists ; 2021 ; Gothic Studies Volume 21 ; 21 ; >
 
     }
 
-    {
+  {
     title <
       name = Human Remains and Violence ;
       eissn = 2054-2240 ;
@@ -90,21 +126,30 @@
     param[journal_id] = hrv
     #param[journal_issn] = 2054-2240
     #move to pubfactory, https://www.manchesteropenhive.com/view/journals/hrv/hrv-overview.xml
+    {
+      param[base_url] = https://www.manchesterhive.com/
 
-     {
-      
+      au < doNotProcess ; doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 ; >
+      au < superseded ; exists ; 2018 ; Human Remains and Violence Volume 4 [superseded] ; 4 ; >
+      au < superseded ; exists ; 2019 ; Human Remains and Violence Volume 5 [superseded] ; 5 ; >
+      au < superseded ; exists ; 2020 ; Human Remains and Violence Volume 6 [superseded] ; 6 ; >
+      au < superseded ; exists ; 2021 ; Human Remains and Violence Volume 7 [superseded] ; 7 ; >
+    }
+
+    {
+      param[base_url] = https://www.manchesteropenhive.com/
+
       au < doNotProcess ; doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 ; >
       au < manifest ; exists ; 2018 ; Human Remains and Violence Volume 4 ; 4 ; >
       au < manifest ; exists ; 2019 ; Human Remains and Violence Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2020 ; Human Remains and Violence Volume 6 ; 6 ; >
-    
+      au < manifest ; exists ; 2020 ; Human Remains and Violence Volume 6 ; 6 ; >
       au < manifest ; exists ; 2021 ; Human Remains and Violence Volume 7 ; 7 ; >
-     }
-    
     }
-
+  }
 
   {
     title <
@@ -113,20 +158,29 @@
       issnl = 2056-9211
     >
       param[journal_id] = jbr
-
-      {
-      #param[base_url] = https://jbr.openlibrary.manchester.ac.uk/
       #move to PubFactory, https://www.manchesteropenhive.com/view/journals/jbr/jbr-overview.xml
+    {
+      param[base_url] = https://www.manchesterhive.com/
+
+      au < doNotProcess ; doNotProcess ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
+      au < superseded ; exists ; 2018 ; James Baldwin Journal Volume 4 [superseded] ; 4 ; >
+      au < superseded ; exists ; 2019 ; James Baldwin Journal Volume 5 [superseded] ; 5 ; >
+      au < superseded ; exists ; 2020 ; James Baldwin Journal Volume 6 [superseded] ; 6 ; >
+      au < superseded ; exists ; 2021 ; James Baldwin Journal Volume 7 [superseded] ; 7 ; >
+    }
+
+    {
+      param[base_url] = https://www.manchesteropenhive.com/
 
       au < doNotProcess ; doNotProcess ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; James Baldwin Journal Volume 3 ; 3 ; >
       au < manifest ; exists ; 2018 ; James Baldwin Journal Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2019 ; James Baldwin Journal Volume 5 ; 5 ; >
       au < manifest ; exists ; 2020 ; James Baldwin Journal Volume 6 ; 6 ; >
-      au < expected ; exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 ; >
-
-      }
-
+      au < manifest ; exists ; 2021 ; James Baldwin Journal Volume 7 ; 7 ; >
+    }
   }
 }

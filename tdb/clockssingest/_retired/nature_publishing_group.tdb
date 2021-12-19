@@ -32,8 +32,8 @@
     au < finished ; finished ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 ; >
     au < finished ; finished ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Acta Pharmacologica Sinica Volume 37 ; 2016 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Acta Pharmacologica Sinica Volume 37 ; 2016 ; 37 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Acta Pharmacologica Sinica Volume 38 [superseded] ; 2017 ; 38 ; >
 
   }
@@ -65,10 +65,10 @@
     au < finished ; finished ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 ; >
     au < finished ; finished ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 ; >
     au < superseded ; exists ; 2013 ; American Journal of Gastroenterology Volume 107 [to delete] ; 2013 ; 107 ; >
-    au < finished ; crawling ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; American Journal of Gastroenterology Volume 109 ; 2014 ; 109 ; >
-    au < finished ; crawling ; 2015 ; American Journal of Gastroenterology Volume 110 ; 2015 ; 110 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; American Journal of Gastroenterology Volume 111 ; 2016 ; 111 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; American Journal of Gastroenterology Volume 110 ; 2015 ; 110 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; American Journal of Gastroenterology Volume 111 ; 2016 ; 111 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; American Journal of Gastroenterology Volume 112 [superseded] ; 2017 ; 112 ; >
 
   }
@@ -83,7 +83,7 @@
 
     param[journal_id] = ajgsup
 
-    au < finished ; crawling ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2014 ; American Journal of Gastroenterology Supplements Volume 2 ; 2014 ; 2 ; > #informed Kim missing manifest RT8450
     au < doNotProcess ; exists ; 2016 ; American Journal of Gastroenterology Supplements Volume 3 ; 2016 ; 3 ; > #informed Kim missing manifest RT8450
     au < doNotProcess ; exists ; 2017 ; American Journal of Gastroenterology Supplements Volume 4 ; 2017 ; 4 ; >
@@ -127,7 +127,7 @@
     au < finished ; finished ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 ; >
     au < finished ; finished ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 ; >
     au < finished ; finished ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 ; >
-    au < finished ; crawling ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -142,10 +142,10 @@
 
     au < finished ; finished ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 ; >
     au < finished ; finished ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 ; >
-    au < finished ; crawling ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Blood Cancer Journal Volume 4 ; 2014 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Blood Cancer Journal Volume 5 ; 2015 ; 5 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Blood Cancer Journal Volume 6 ; 2016 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Blood Cancer Journal Volume 6 ; 2016 ; 6 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2017 ; Blood Cancer Journal Volume 7 [superseded] ; 2017 ; 7 ; >
 
   }
@@ -193,8 +193,8 @@
     au < finished ; finished ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 ; >
     au < finished ; finished ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Bone Marrow Transplantation Volume 49 ; 2014 ; 49 ; >
-    au < finished ; crawling ; 2015 ; Bone Marrow Transplantation Volume 50 ; 2015 ; 50 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Bone Marrow Transplantation Volume 51 ; 2016 ; 51 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Bone Marrow Transplantation Volume 50 ; 2015 ; 50 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Bone Marrow Transplantation Volume 51 ; 2016 ; 51 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Bone Marrow Transplantation Volume 52 ; 2017 ; 52 ; >
 
   }
@@ -286,7 +286,7 @@
     au < doNotProcess ; exists ; 2006 ; British Dental Journal Volume 201 ; 2006 ; 201 ; >
     au < doNotProcess ; exists ; 2007 ; British Dental Journal Volume 202 ; 2007 ; 202 ; >
     au < doNotProcess ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 ; >
-    au < finished ; crawling ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 ; >
     au < finished ; finished ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 ; >
     au < finished ; finished ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 ; >
@@ -296,14 +296,14 @@
     au < finished ; finished ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 ; >
     au < finished ; frozen ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 ; >
-    au < finished ; crawling ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; British Dental Journal Volume 215 ; 2013 ; 215 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; British Dental Journal Volume 216 ; 2014 ; 216 ; reingest2.clockss.org:8085 > 
-    au < finished ; crawling ; 2014 ; British Dental Journal Volume 217 ; 2014 ; 217 ; reingest3.clockss.org:8083 > 
-    au < finished ; crawling ; 2015 ; British Dental Journal Volume 218 ; 2015 ; 218 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; British Dental Journal Volume 219 ; 2015 ; 219 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; British Dental Journal Volume 220 ; 2016 ; 220 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; British Dental Journal Volume 221 ; 2016 ; 221 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; British Dental Journal Volume 215 ; 2013 ; 215 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; British Dental Journal Volume 216 ; 2014 ; 216 ; reingest2.clockss.org:8085 > 
+    au < finished ; frozen ; 2014 ; British Dental Journal Volume 217 ; 2014 ; 217 ; reingest3.clockss.org:8083 > 
+    au < finished ; frozen ; 2015 ; British Dental Journal Volume 218 ; 2015 ; 218 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; British Dental Journal Volume 219 ; 2015 ; 219 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; British Dental Journal Volume 220 ; 2016 ; 220 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; British Dental Journal Volume 221 ; 2016 ; 221 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; British Dental Journal Volume 222 [superseded] ; 2017 ; 222 ; > #no content collected
     au < superseded ; exists ; 2017 ; British Dental Journal Volume 223 [superseded] ; 2017 ; 223 ; > #no content collected
 
@@ -427,14 +427,14 @@
     au < finished ; frozen ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 ; >
     au < finished ; finished ; 2012 ; British Journal of Cancer Volume 106 ; 2012 ; 106 ; >
     au < finished ; frozen ; 2012 ; British Journal of Cancer Volume 107 ; 2012 ; 107 ; >
-    au < finished ; crawling ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2014 ; British Journal of Cancer Volume 110 ; 2014 ; 110 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; British Journal of Cancer Volume 111 ; 2014 ; 111 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; British Journal of Cancer Volume 114 ; 2016 ; 114 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; British Journal of Cancer Volume 115 ; 2016 ; 115 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; British Journal of Cancer Volume 112 ; 2015 ; 112 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; British Journal of Cancer Volume 113 ; 2015 ; 113 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; British Journal of Cancer Volume 114 ; 2016 ; 114 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; British Journal of Cancer Volume 115 ; 2016 ; 115 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2017 ; British Journal of Cancer Volume 116 [superseded] ; 2017 ; 116 ; > #no content collected
     au < superseded ; exists ; 2017 ; British Journal of Cancer Volume 117 [superseded] ; 2017 ; 117 ; > #no content collected
 
@@ -468,8 +468,8 @@
     au < superseded ; exists ; 2013 ; Cancer Gene Therapy Volume 19 [to delete] ; 2013 ; 19 ; >
     au < finished ; finished ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 ; >
     au < finished ; finished ; 2014 ; Cancer Gene Therapy Volume 21 ; 2014 ; 21 ; >
-    au < finished ; crawling ; 2015 ; Cancer Gene Therapy Volume 22 ; 2015 ; 22 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Cancer Gene Therapy Volume 23 ; 2016 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Cancer Gene Therapy Volume 22 ; 2015 ; 22 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Cancer Gene Therapy Volume 23 ; 2016 ; 23 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Cancer Gene Therapy Volume 24 ; 2017 ; 24 ; >
 
   }
@@ -501,10 +501,10 @@
     au < finished ; finished ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 ; >
     au < zapped ; finished ; 2011 ; Cell Death and Differentiation Volume 18 ; 2011 ; 18 ; >
     au < zapped ; finished ; 2012 ; Cell Death and Differentiation Volume 19 ; 2012 ; 19 ; >
-    au < finished ; crawling ; 2013 ; Cell Death and Differentiation Volume 20 ; 2013 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Cell Death and Differentiation Volume 20 ; 2013 ; 20 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2014 ; Cell Death and Differentiation Volume 21 ; 2014 ; 21 ; >
-    au < finished ; crawling ; 2015 ; Cell Death and Differentiation Volume 22 ; 2015 ; 22 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Cell Death and Differentiation Volume 23 ; 2016 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Cell Death and Differentiation Volume 22 ; 2015 ; 22 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Cell Death and Differentiation Volume 23 ; 2016 ; 23 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Cell Death and Differentiation Volume 24 [superseded] ; 2017 ; 24 ; >
 
   }
@@ -521,10 +521,10 @@
     au < finished ; finished ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 ; >
     au < finished ; finished ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 ; >
     au < zapped ; finished ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 ; >
-    au < finished ; crawling ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Cell Death & Disease Volume 5 ; 2014 ; 5 ; >
-    au < finished ; crawling ; 2015 ; Cell Death & Disease Volume 6 ; 2015 ; 6 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Cell Death & Disease Volume 7 ; 2016 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Cell Death & Disease Volume 6 ; 2015 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Cell Death & Disease Volume 7 ; 2016 ; 7 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Cell Death & Disease Volume 8 [superseded] ; 2017 ; 8 ; >
 
     }
@@ -555,10 +555,10 @@
     au < finished ; finished ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 ; >
     au < finished ; finished ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 ; >
     au < superseded ; exists ; 2013 ; Cell Research Volume 22 [to delete] ; 2013 ; 22 ; >
-    au < finished ; crawling ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Cell Research Volume 24 ; 2014 ; 24 ; >
     au < zapped ; finished ; 2015 ; Cell Research Volume 25 ; 2015 ; 25 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Cell Research Volume 26 ; 2016 ; 26 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Cell Research Volume 26 ; 2016 ; 26 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Cell Research Volume 27 [superseded] ; 2017 ; 27 ; >
 
   }
@@ -579,10 +579,10 @@
     au < finished ; finished ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 ; >
     au < finished ; finished ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 ; >
-    au < finished ; crawling ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Cellular & Molecular Immunology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Cellular & Molecular Immunology Volume 12 ; 2015 ; 12 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Cellular & Molecular Immunology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Cellular & Molecular Immunology Volume 12 ; 2015 ; 12 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Cellular & Molecular Immunology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Cellular & Molecular Immunology Volume 14 [superseded] ; 2017 ; 14 ; >
 
   }
@@ -601,9 +601,9 @@
     au < finished ; finished ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 ; >
     au < finished ; finished ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 ; >
     au < finished ; finished ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 ; >
-    au < finished ; crawling ; 2014 ; Clinical and Translational Gastroenterology Volume 5 ; 2014 ; 5 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Clinical and Translational Gastroenterology Volume 6 ; 2015 ; 6 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Clinical and Translational Gastroenterology Volume 7 ; 2016 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Clinical and Translational Gastroenterology Volume 5 ; 2014 ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Clinical and Translational Gastroenterology Volume 6 ; 2015 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Clinical and Translational Gastroenterology Volume 7 ; 2016 ; 7 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Clinical and Translational Gastroenterology Volume 8 [superseded] ; 2017 ; 8 ; >
 
   }
@@ -630,8 +630,8 @@
     au < finished ; finished ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 ; >
     au < finished ; finished ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 ; >
     au < finished ; finished ; 2012 ; Clinical Pharmacology & Therapeutics Volume 92 ; 2012 ; 92 ; >
-    au < finished ; crawling ; 2013 ; Clinical Pharmacology & Therapeutics Volume 93 ; 2013 ; 93 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Clinical Pharmacology & Therapeutics Volume 94 ; 2013 ; 94 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Clinical Pharmacology & Therapeutics Volume 93 ; 2013 ; 93 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Clinical Pharmacology & Therapeutics Volume 94 ; 2013 ; 94 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -648,7 +648,7 @@
     au < finished ; finished ; 2013 ; Clinical & Translational Immunology Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Clinical & Translational Immunology Volume 3 ; 2014 ; 3 ; >
     au < finished ; finished ; 2015 ; Clinical & Translational Immunology Volume 4 ; 2015 ; 4 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Clinical & Translational Immunology Volume 5 ; 2016 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Clinical & Translational Immunology Volume 5 ; 2016 ; 5 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Clinical & Translational Immunology Volume 6 [superseded] ; 2017 ; 6 ; >
 
   }
@@ -670,7 +670,7 @@
     au < finished ; frozen ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 ; >
     au < finished ; frozen ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 ; >
     au < finished ; finished ; 2012 ; The EMBO Journal Volume 31 ; 2012 ; 31 ; >
-    au < finished ; crawling ; 2013 ; The EMBO Journal Volume 32 ; 2013 ; 32 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; The EMBO Journal Volume 32 ; 2013 ; 32 ; reingest5.clockss.org:8082 >
 
 
   }
@@ -691,7 +691,7 @@
     au < finished ; finished ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 ; >
     au < zapped ; finished ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 ; >
     au < finished ; finished ; 2012 ; EMBO Reports Volume 13 ; 2012 ; 13 ; >
-    au < finished ; crawling ; 2013 ; EMBO Reports Volume 14 ; 2013 ; 14 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; EMBO Reports Volume 14 ; 2013 ; 14 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -704,10 +704,10 @@
     param[journal_id] = emi
 
     au < finished ; finished ; 2012 ; Emerging Microbes & Infections Volume 1 ; 2012 ; 1 ; >
-    au < finished ; crawling ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Emerging Microbes & Infections Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Emerging Microbes & Infections Volume 4 ; 2015 ; 4 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Emerging Microbes & Infections Volume 5 ; 2016 ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Emerging Microbes & Infections Volume 4 ; 2015 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Emerging Microbes & Infections Volume 5 ; 2016 ; 5 ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Emerging Microbes & Infections Volume 6 [superseded] ; 2017 ; 6 ; >
 
   }
@@ -741,8 +741,8 @@
     au < finished ; finished ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 ; >
     au < finished ; finished ; 2013 ; European Journal of Clinical Nutrition Volume 67 ; 2013 ; 67 ; >
     au < finished ; finished ; 2014 ; European Journal of Clinical Nutrition Volume 68 ; 2014 ; 68 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; European Journal of Clinical Nutrition Volume 69 ; 2015 ; 69 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; European Journal of Clinical Nutrition Volume 70 ; 2016 ; 70 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; European Journal of Clinical Nutrition Volume 69 ; 2015 ; 69 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; European Journal of Clinical Nutrition Volume 70 ; 2016 ; 70 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; European Journal of Clinical Nutrition Volume 71 ; 2017 ; 71 ; >
 
   }
@@ -773,9 +773,9 @@
     au < finished ; finished ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 ; >
     au < finished ; finished ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 ; >
     au < finished ; finished ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 ; >
-    au < finished ; crawling ; 2013 ; European Journal of Human Genetics Volume 21 ; 2013 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; European Journal of Human Genetics Volume 21 ; 2013 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; European Journal of Human Genetics Volume 22 ; 2014 ; 22 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; European Journal of Human Genetics Volume 23 ; 2015 ; 23 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; European Journal of Human Genetics Volume 23 ; 2015 ; 23 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; European Journal of Human Genetics Volume 24 ; 2016 ; 24 ; > #RT8450 malformed manifest page. Links to V25 instead of V25. See http://www.nature.com/ejhg/clockss/ejhg_clockss_2016.html
     au < doNotProcess ; exists ; 2017 ; European Journal of Human Genetics Volume 25 ; 2017 ; 25 ; >
 
@@ -798,9 +798,9 @@
     au < finished ; finished ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 ; >
     au < finished ; finished ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 ; >
     au < finished ; finished ; 2013 ; Evidence-Based Dentistry Volume 14 ; 2013 ; 14 ; >
-    au < finished ; crawling ; 2014 ; Evidence-Based Dentistry Volume 15 ; 2014 ; 15 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Evidence-Based Dentistry Volume 16 ; 2015 ; 16 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Evidence-Based Dentistry Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Evidence-Based Dentistry Volume 15 ; 2014 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Evidence-Based Dentistry Volume 16 ; 2015 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Evidence-Based Dentistry Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Evidence-Based Dentistry Volume 18 [superseded] ; 2017 ; 18 ; >
 
   }
@@ -814,15 +814,15 @@
 
     param[journal_id] = emm
 
-    au < finished ; crawling ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Experimental & Molecular Medicine Volume 41 ; 2009 ; 41 ; >
     au < finished ; finished ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 ; >
     au < finished ; finished ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 ; >
-    au < finished ; crawling ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Experimental & Molecular Medicine Volume 46 ; 2014 ; 46 ; >
-    au < finished ; crawling ; 2015 ; Experimental & Molecular Medicine Volume 47 ; 2015 ; 47 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Experimental & Molecular Medicine Volume 48 ; 2016 ; 48 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Experimental & Molecular Medicine Volume 47 ; 2015 ; 47 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Experimental & Molecular Medicine Volume 48 ; 2016 ; 48 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Experimental & Molecular Medicine Volume 49 ; 2017 ; 49 ; >
 
 
@@ -865,10 +865,10 @@
     au < finished ; finished ; 2010 ; Eye Volume 24 ; 2010 ; 24 ; >
     au < finished ; finished ; 2011 ; Eye Volume 25 ; 2011 ; 25 ; >
     au < finished ; frozen ; 2012 ; Eye Volume 26 ; 2012 ; 26 ; >
-    au < finished ; crawling ; 2013 ; Eye Volume 27 ; 2013 ; 27 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Eye Volume 27 ; 2013 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Eye Volume 28 ; 2014 ; 28 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Eye Volume 29 ; 2015 ; 29 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Eye Volume 30 ; 2016 ; 30 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Eye Volume 29 ; 2015 ; 29 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Eye Volume 30 ; 2016 ; 30 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Eye Volume 31 [superseded] ; 2017 ; 31 ; >
 
   }
@@ -902,8 +902,8 @@
     au < finished ; finished ; 2012 ; Gene Therapy Volume 19 ; 2012 ; 19 ; >
     au < finished ; finished ; 2013 ; Gene Therapy Volume 20 ; 2013 ; 20 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Gene Therapy Volume 21 ; 2014 ; 21 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Gene Therapy Volume 22 ; 2015 ; 22 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Gene Therapy Volume 23 ; 2016 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Gene Therapy Volume 22 ; 2015 ; 22 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Gene Therapy Volume 23 ; 2016 ; 23 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Gene Therapy Volume 24 ; 2017 ; 24 ; >
 
   }
@@ -934,8 +934,8 @@
     au < finished ; finished ; 2012 ; Genes and Immunity Volume 13 ; 2012 ; 13 ; >
     au < finished ; finished ; 2013 ; Genes and Immunity Volume 14 ; 2013 ; 14 ; >
     au < finished ; finished ; 2014 ; Genes and Immunity Volume 15 ; 2014 ; 15 ; >
-    au < finished ; crawling ; 2015 ; Genes and Immunity Volume 16 ; 2015 ; 16 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Genes and Immunity Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Genes and Immunity Volume 16 ; 2015 ; 16 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Genes and Immunity Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Genes and Immunity Volume 18 ; 2017 ; 18 ; >
 
   }
@@ -952,7 +952,7 @@
 
     au < finished ; finished ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 ; >
     au < finished ; finished ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 ; >
-    au < finished ; crawling ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 ; >
     au < finished ; finished ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 ; >
     au < finished ; finished ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 ; >
@@ -1084,13 +1084,13 @@
     au < finished ; finished ; 2012 ; Heredity Volume 108 ; 2012 ; 108 ; >
     au < finished ; finished ; 2012 ; Heredity Volume 109 ; 2012 ; 109 ; >
     au < finished ; finished ; 2013 ; Heredity Volume 110 ; 2013 ; 110 ; >
-    au < finished ; crawling ; 2013 ; Heredity Volume 111 ; 2013 ; 111 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Heredity Volume 111 ; 2013 ; 111 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Heredity Volume 112 ; 2014 ; 112 ; >
     au < finished ; finished ; 2014 ; Heredity Volume 113 ; 2014 ; 113 ; >
-    au < finished ; crawling ; 2015 ; Heredity Volume 114 ; 2015 ; 114 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Heredity Volume 115 ; 2015 ; 115 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Heredity Volume 116 ; 2016 ; 116 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Heredity Volume 117 ; 2016 ; 117 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Heredity Volume 114 ; 2015 ; 114 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Heredity Volume 115 ; 2015 ; 115 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Heredity Volume 116 ; 2016 ; 116 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Heredity Volume 117 ; 2016 ; 117 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Heredity Volume 118 [superseded] ; 2017 ; 118 ; > #no content collected
     au < superseded ; exists ; 2017 ; Heredity Volume 119 [superseded] ; 2017 ; 119 ; > #no content collected
 
@@ -1116,9 +1116,9 @@
     au < finished ; finished ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 ; >
     au < finished ; finished ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 ; >
     au < finished ; finished ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Hypertension Research Volume 39 ; 2016 ; 39 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Hypertension Research Volume 39 ; 2016 ; 39 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Hypertension Research Volume 40 [superseded] ; 2017 ; 40 ; >
  
   }
@@ -1227,8 +1227,8 @@
     au < finished ; finished ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 ; >
     au < finished ; finished ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 ; >
     au < finished ; finished ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Immunology & Cell Biology Volume 94 ; 2016 ; 94 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Immunology & Cell Biology Volume 94 ; 2016 ; 94 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Immunology & Cell Biology Volume 95 [superseded] ; 2017 ; 95 ; >
 
   }
@@ -1262,8 +1262,8 @@
     au < finished ; finished ; 2012 ; International Journal of Impotence Research Volume 24 ; 2012 ; 24 ; >
     au < finished ; finished ; 2013 ; International Journal of Impotence Research Volume 25 ; 2013 ; 25 ; >
     au < finished ; finished ; 2014 ; International Journal of Impotence Research Volume 26 ; 2014 ; 26 ; >
-    au < finished ; crawling ; 2015 ; International Journal of Impotence Research Volume 27 ; 2015 ; 27 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; International Journal of Impotence Research Volume 28 ; 2016 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; International Journal of Impotence Research Volume 27 ; 2015 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; International Journal of Impotence Research Volume 28 ; 2016 ; 28 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; International Journal of Impotence Research Volume 29 ; 2017 ; 29 ; >
 
   }
@@ -1297,8 +1297,8 @@
     au < finished ; finished ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 ; >
     au < finished ; finished ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; International Journal of Obesity Volume 38 ; 2014 ; 38 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; International Journal of Obesity Volume 39 ; 2015 ; 39 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; International Journal of Obesity Volume 40 ; 2016 ; 40 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; International Journal of Obesity Volume 39 ; 2015 ; 39 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; International Journal of Obesity Volume 40 ; 2016 ; 40 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; International Journal of Obesity Volume 41 ; 2017 ; 41 ; >
 
   }
@@ -1318,7 +1318,7 @@
     au < finished ; finished ; 2012 ; International Journal of Obesity Supplements Volume 2 ; 2012 ; 2 ; >
     au < finished ; finished ; 2013 ; International Journal of Obesity Supplements Volume 3 ; 2013 ; 3 ; >
     au < finished ; finished ; 2014 ; International Journal of Obesity Supplements Volume 4 ; 2014 ; 4 ; >
-    au < finished ; crawling ; 2015 ; International Journal of Obesity Supplements Volume 5 ; 2015 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; International Journal of Obesity Supplements Volume 5 ; 2015 ; 5 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; International Journal of Obesity Supplements Volume 6 ; 2016 ; 6 ; > #need fix to plugin, collect issues starting w S.
     au < doNotProcess ; exists ; 2017 ; International Journal of Obesity Supplements Volume 7 ; 2017 ; 7 ; >
 
@@ -1340,8 +1340,8 @@
     au < finished ; finished ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 ; >
     au < finished ; finished ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 ; >
     au < finished ; finished ; 2014 ; International Journal of Oral Science Volume 6 ; 2014 ; 6 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; International Journal of Oral Science Volume 7 ; 2015 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; International Journal of Oral Science Volume 8 ; 2016 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; International Journal of Oral Science Volume 7 ; 2015 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; International Journal of Oral Science Volume 8 ; 2016 ; 8 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2017 ; International Journal of Oral Science Volume 9 [superseded] ; 2017 ; 9 ; >
 
   }
@@ -1365,8 +1365,8 @@
     au < zapped ; finished ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 ; >
     au < finished ; finished ; 2013 ; The ISME Journal Volume 7 ; 2013 ; 7 ; >
     au < zapped ; finished ; 2014 ; The ISME Journal Volume 8 ; 2014 ; 8 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; The ISME Journal Volume 9 ; 2015 ; 9 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; The ISME Journal Volume 10 ; 2016 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; The ISME Journal Volume 9 ; 2015 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; The ISME Journal Volume 10 ; 2016 ; 10 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; The ISME Journal Volume 11 [superseded] ; 2017 ; 11 ; >
 
   }
@@ -1413,8 +1413,8 @@
     au < finished ; finished ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 ; >
     au < finished ; finished ; 2013 ; The Journal of Antibiotics Volume 66 ; 2013 ; 66 ; >
     au < finished ; finished ; 2014 ; The Journal of Antibiotics Volume 67 ; 2014 ; 67 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; The Journal of Antibiotics Volume 68 ; 2015 ; 68 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; The Journal of Antibiotics Volume 69 ; 2016 ; 69 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; The Journal of Antibiotics Volume 68 ; 2015 ; 68 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; The Journal of Antibiotics Volume 69 ; 2016 ; 69 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2017 ; The Journal of Antibiotics Volume 70 [superseded] ; 2017 ; 70 ; >
 
   }
@@ -1465,7 +1465,7 @@
     au < finished ; finished ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 ; >
     au < finished ; finished ; 2013 ; Journal of Cerebral Blood Flow and Metabolism Volume 33 ; 2013 ; 33 ; >
     au < finished ; finished ; 2014 ; Journal of Cerebral Blood Flow and Metabolism Volume 34 ; 2014 ; 34 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Journal of Cerebral Blood Flow and Metabolism Volume 35 ; 2015 ; 35 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Cerebral Blood Flow and Metabolism Volume 35 ; 2015 ; 35 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1489,8 +1489,8 @@
     au < finished ; finished ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 ; >
     au < finished ; finished ; 2013 ; Journal of Exposure Science and Environmental Epidemiology Volume 23 ; 2013 ; 23 ; >
     au < finished ; finished ; 2014 ; Journal of Exposure Science and Environmental Epidemiology Volume 24 ; 2014 ; 24 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Journal of Exposure Science and Environmental Epidemiology Volume 25 ; 2015 ; 25 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Journal of Exposure Science and Environmental Epidemiology Volume 26 ; 2016 ; 26 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Exposure Science and Environmental Epidemiology Volume 25 ; 2015 ; 25 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Journal of Exposure Science and Environmental Epidemiology Volume 26 ; 2016 ; 26 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Journal of Exposure Science and Environmental Epidemiology Volume 27 [superseded] ; 2017 ; 27 ; >
 
   }
@@ -1542,10 +1542,10 @@
     au < finished ; finished ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 ; >
     au < finished ; frozen ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 ; >
     au < finished ; finished ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 ; >
-    au < finished ; crawling ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Journal of Human Genetics Volume 61 ; 2016 ; 61 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Human Genetics Volume 60 ; 2015 ; 60 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Journal of Human Genetics Volume 61 ; 2016 ; 61 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Journal of Human Genetics Volume 62 [superseded] ; 2017 ; 62 ; >
 
   }
@@ -1579,8 +1579,8 @@
     au < finished ; finished ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 ; >
     au < finished ; finished ; 2013 ; Journal of Human Hypertension Volume 27 ; 2013 ; 27 ; >
     au < finished ; finished ; 2014 ; Journal of Human Hypertension Volume 28 ; 2014 ; 28 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Journal of Human Hypertension Volume 29 ; 2015 ; 29 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Journal of Human Hypertension Volume 30 ; 2016 ; 30 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Human Hypertension Volume 29 ; 2015 ; 29 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Journal of Human Hypertension Volume 30 ; 2016 ; 30 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Journal of Human Hypertension Volume 31 ; 2017 ; 31 ; >
 
   }
@@ -1729,9 +1729,9 @@
     au < finished ; finished ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 ; >
     au < finished ; finished ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 ; >
     au < finished ; finished ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 ; >
-    au < finished ; crawling ; 2013 ; The Journal of Investigative Dermatology Volume 133 ; 2013 ; 133 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; The Journal of Investigative Dermatology Volume 133 ; 2013 ; 133 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; The Journal of Investigative Dermatology Volume 134 ; 2014 ; 134 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; The Journal of Investigative Dermatology Volume 135 ; 2015 ; 135 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; The Journal of Investigative Dermatology Volume 135 ; 2015 ; 135 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1762,8 +1762,8 @@
     au < finished ; finished ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 ; >
     au < finished ; finished ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Perinatology Volume 34 ; 2014 ; 34 ; >
-    au < finished ; crawling ; 2015 ; Journal of Perinatology Volume 35 ; 2015 ; 35 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Journal of Perinatology Volume 36 ; 2016 ; 36 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Journal of Perinatology Volume 35 ; 2015 ; 35 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Journal of Perinatology Volume 36 ; 2016 ; 36 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Journal of Perinatology Volume 37 [superseded] ; 2017 ; 37 ; >
  
   }
@@ -1781,21 +1781,21 @@
     param[journal_id] = ki
 
     au < finished ; finished ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 ; >
-    au < finished ; crawling ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 ; >
     au < doNotProcess ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 ; >
-    au < finished ; crawling ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1811,8 +1811,8 @@
     param[journal_id] = kisup
 
     au < finished ; finished ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 ; >
-    au < finished ; crawling ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1854,10 +1854,10 @@
     au < finished ; finished ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 ; >
     au < finished ; frozen ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 ; >
     au < zapped ; finished ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 ; >
-    au < finished ; crawling ; 2013 ; Laboratory Investigation Volume 93 ; 2013 ; 93 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Laboratory Investigation Volume 93 ; 2013 ; 93 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Laboratory Investigation Volume 94 ; 2014 ; 94 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Laboratory Investigation Volume 95 ; 2015 ; 95 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Laboratory Investigation Volume 96 ; 2016 ; 96 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Laboratory Investigation Volume 95 ; 2015 ; 95 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Laboratory Investigation Volume 96 ; 2016 ; 96 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Laboratory Investigation Volume 97 [superseded] ; 2017 ; 97 ; >
 
   }
@@ -1889,10 +1889,10 @@
     au < finished ; frozen ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 ; >
     au < finished ; finished ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 ; >
     au < finished ; finished ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 ; >
-    au < finished ; crawling ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Leukemia Volume 28 ; 2014 ; 28 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Leukemia Volume 29 ; 2015 ; 29 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Leukemia Volume 30 ; 2016 ; 30 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Leukemia Volume 28 ; 2014 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Leukemia Volume 29 ; 2015 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Leukemia Volume 30 ; 2016 ; 30 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Leukemia Volume 31 ; 2017 ; 31 ; >
 
   }
@@ -1926,8 +1926,8 @@
     au < finished ; finished ; 2012 ; Light: Science & Applications Volume 1 ; 2012 ; 1 ; >
     au < finished ; finished ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 ; >
-    au < finished ; crawling ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Light: Science & Applications Volume 5 ; 2016 ; 5 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Light: Science & Applications Volume 6 [superseded] ; 2017 ; 6 ; >
 
   }
@@ -1959,8 +1959,8 @@
     au < finished ; finished ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 ; >
     au < finished ; finished ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Modern Pathology Volume 29 ; 2016 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Modern Pathology Volume 29 ; 2016 ; 29 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Modern Pathology Volume 30 [superseded] ; 2017 ; 30 ; >
 
   }
@@ -1994,8 +1994,8 @@
     au < finished ; finished ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 ; >
     au < zapped ; finished ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Molecular Psychiatry Volume 19 ; 2014 ; 19 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Molecular Psychiatry Volume 20 ; 2015 ; 20 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Molecular Psychiatry Volume 21 ; 2016 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Molecular Psychiatry Volume 20 ; 2015 ; 20 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Molecular Psychiatry Volume 21 ; 2016 ; 21 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Molecular Psychiatry Volume 22 [superseded] ; 2017 ; 22 ; >
 
   }
@@ -2048,8 +2048,8 @@
     au < finished ; finished ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 ; >
     au < zapped ; finished ; 2013 ; Molecular Therapy Volume 21 ; 2013 ; 21 ; >
     au < zapped ; finished ; 2014 ; Molecular Therapy Volume 22 ; 2014 ; 22 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Molecular Therapy Volume 23 ; 2015 ; 23 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Molecular Therapy Volume 24 ; 2016 ; 24 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Molecular Therapy Volume 23 ; 2015 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Molecular Therapy Volume 24 ; 2016 ; 24 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Molecular Therapy Volume 25 ; 2017 ; 25 ; >
 
   }
@@ -2064,10 +2064,10 @@
     param[journal_id] = mtna
 
     au < finished ; finished ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 ; 2012 ; 1 ; >
-    au < finished ; crawling ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Molecular Therapy - Nucleic Acids Volume 4 ; 2015 ; 4 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Molecular Therapy - Nucleic Acids Volume 5 ; 2016 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Molecular Therapy - Nucleic Acids Volume 4 ; 2015 ; 4 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Molecular Therapy - Nucleic Acids Volume 5 ; 2016 ; 5 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Molecular Therapy - Nucleic Acids Volume 6 ; 2017 ; 6 ; >
 
   }
@@ -2088,10 +2088,10 @@
     au < finished ; finished ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 ; >
     au < finished ; finished ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 ; >
     au < finished ; finished ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 ; >
-    au < finished ; crawling ; 2013 ; Mucosal Immunology Volume 6 ; 2013 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Mucosal Immunology Volume 6 ; 2013 ; 6 ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2014 ; Mucosal Immunology Volume 7 ; 2014 ; 7 ; >
-    au < finished ; crawling ; 2015 ; Mucosal Immunology Volume 8 ; 2015 ; 8 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Mucosal Immunology Volume 9 ; 2016 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Mucosal Immunology Volume 8 ; 2015 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Mucosal Immunology Volume 9 ; 2016 ; 9 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Mucosal Immunology Volume 10 ; 2017 ; 10 ; >
 
   }
@@ -2424,69 +2424,69 @@
     au < finished ; finished ; 2011 ; Nature Volume 475 ; 2011 ; 475 ; >
     au < finished ; finished ; 2011 ; Nature Volume 476 ; 2011 ; 476 ; >
     au < finished ; frozen ; 2011 ; Nature Volume 477 ; 2011 ; 477 ; >
-    au < finished ; crawling ; 2011 ; Nature Volume 478 ; 2011 ; 478 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2011 ; Nature Volume 479 ; 2011 ; 479 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2011 ; Nature Volume 478 ; 2011 ; 478 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Nature Volume 479 ; 2011 ; 479 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Nature Volume 480 ; 2011 ; 480 ; >
-    au < finished ; crawling ; 2012 ; Nature Volume 481 ; 2012 ; 481 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Nature Volume 482 ; 2012 ; 482 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Volume 483 ; 2012 ; 483 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Nature Volume 484 ; 2012 ; 484 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; Nature Volume 485 ; 2012 ; 485 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Volume 486 ; 2012 ; 486 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Volume 487 ; 2012 ; 487 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2012 ; Nature Volume 488 ; 2012 ; 488 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Volume 489 ; 2012 ; 489 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Volume 490 ; 2012 ; 490 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; Nature Volume 491 ; 2012 ; 491 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Volume 481 ; 2012 ; 481 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Nature Volume 482 ; 2012 ; 482 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Volume 483 ; 2012 ; 483 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Nature Volume 484 ; 2012 ; 484 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Nature Volume 485 ; 2012 ; 485 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Volume 486 ; 2012 ; 486 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Volume 487 ; 2012 ; 487 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Nature Volume 488 ; 2012 ; 488 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Volume 489 ; 2012 ; 489 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Volume 490 ; 2012 ; 490 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Nature Volume 491 ; 2012 ; 491 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Nature Volume 492 ; 2012 ; 492 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Volume 493 ; 2013 ; 493 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Nature Volume 494 ; 2013 ; 494 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Volume 495 ; 2013 ; 495 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; Nature Volume 496 ; 2013 ; 496 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; Nature Volume 497 ; 2013 ; 497 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Volume 498 ; 2013 ; 498 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; Nature Volume 499 ; 2013 ; 499 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Nature Volume 500 ; 2013 ; 500 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Nature Volume 501 ; 2013 ; 501 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Volume 502 ; 2013 ; 502 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Volume 503 ; 2013 ; 503 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Volume 504 ; 2013 ; 504 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Volume 505 ; 2014 ; 505 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Volume 506 ; 2014 ; 506 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Nature Volume 507 ; 2014 ; 507 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Volume 493 ; 2013 ; 493 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Nature Volume 494 ; 2013 ; 494 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Volume 495 ; 2013 ; 495 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Nature Volume 496 ; 2013 ; 496 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Nature Volume 497 ; 2013 ; 497 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Volume 498 ; 2013 ; 498 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Nature Volume 499 ; 2013 ; 499 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Nature Volume 500 ; 2013 ; 500 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Nature Volume 501 ; 2013 ; 501 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Volume 502 ; 2013 ; 502 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Volume 503 ; 2013 ; 503 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Volume 504 ; 2013 ; 504 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Volume 505 ; 2014 ; 505 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Volume 506 ; 2014 ; 506 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Nature Volume 507 ; 2014 ; 507 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Volume 508 ; 2014 ; 508 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Nature Volume 509 ; 2014 ; 509 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Volume 510 ; 2014 ; 510 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Volume 511 ; 2014 ; 511 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Volume 512 ; 2014 ; 512 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Volume 511 ; 2014 ; 511 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Volume 512 ; 2014 ; 512 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Volume 513 ; 2014 ; 513 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Volume 514 ; 2014 ; 514 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Volume 515 ; 2014 ; 515 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Nature Volume 516 ; 2014 ; 516 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Volume 517 ; 2015 ; 517 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Volume 518 ; 2015 ; 518 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Volume 519 ; 2015 ; 519 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Volume 520 ; 2015 ; 520 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Volume 521 ; 2015 ; 521 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Volume 522 ; 2015 ; 522 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Volume 523 ; 2015 ; 523 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Volume 524 ; 2015 ; 524 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Volume 525 ; 2015 ; 525 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Volume 526 ; 2015 ; 526 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Nature Volume 527 ; 2015 ; 527 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Volume 528 ; 2015 ; 528 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Volume 529 ; 2016 ; 529 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Nature Volume 530 ; 2016 ; 530 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Volume 531 ; 2016 ; 531 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Volume 532 ; 2016 ; 532 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Volume 533 ; 2016 ; 533 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Volume 534 ; 2016 ; 534 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Volume 535 ; 2016 ; 535 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Volume 536 ; 2016 ; 536 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Volume 537 ; 2016 ; 537 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Nature Volume 540 ; 2016 ; 540 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Nature Volume 514 ; 2014 ; 514 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Volume 515 ; 2014 ; 515 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Nature Volume 516 ; 2014 ; 516 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Volume 517 ; 2015 ; 517 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Volume 518 ; 2015 ; 518 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Volume 519 ; 2015 ; 519 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Volume 520 ; 2015 ; 520 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Volume 521 ; 2015 ; 521 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Volume 522 ; 2015 ; 522 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Volume 523 ; 2015 ; 523 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Volume 524 ; 2015 ; 524 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Volume 525 ; 2015 ; 525 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Volume 526 ; 2015 ; 526 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Nature Volume 527 ; 2015 ; 527 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Volume 528 ; 2015 ; 528 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Volume 529 ; 2016 ; 529 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nature Volume 530 ; 2016 ; 530 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Volume 531 ; 2016 ; 531 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Volume 532 ; 2016 ; 532 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Volume 533 ; 2016 ; 533 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Volume 534 ; 2016 ; 534 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Volume 535 ; 2016 ; 535 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Volume 536 ; 2016 ; 536 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Volume 537 ; 2016 ; 537 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Volume 538 ; 2016 ; 538 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Volume 539 ; 2016 ; 539 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nature Volume 540 ; 2016 ; 540 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Volume 541 ; 2017 ; 541 ; >
     au < doNotProcess ; exists ; 2017 ; Nature Volume 542 ; 2017 ; 542 ; >
     au < doNotProcess ; exists ; 2017 ; Nature Volume 543 ; 2017 ; 543 ; >
@@ -2542,11 +2542,11 @@
     au < zapped ; finished ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 ; >
     au < finished ; finished ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 ; >
     au < finished ; finished ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 ; >
-    au < finished ; crawling ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Nature Biotechnology Volume 32 ; 2014 ; 32 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Biotechnology Volume 33 ; 2015 ; 33 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Biotechnology Volume 34 ; 2016 ; 34 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Nature Biotechnology Volume 32 ; 2014 ; 32 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Biotechnology Volume 33 ; 2015 ; 33 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Biotechnology Volume 34 ; 2016 ; 34 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Biotechnology Volume 35 ; 2017 ; 35 ; >
 
   }
@@ -2575,11 +2575,11 @@
     au < zapped ; finished ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 ; >
     au < finished ; finished ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 ; >
     au < finished ; finished ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 ; >
-    au < finished ; crawling ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Cell Biology Volume 18 ; 2016 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Cell Biology Volume 18 ; 2016 ; 18 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Cell Biology Volume 19 ; 2017 ; 19 ; >
 
   }
@@ -2601,12 +2601,12 @@
     au < zapped ; finished ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 ; >
     au < zapped ; finished ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 ; >
     au < finished ; finished ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 ; >
-    au < finished ; crawling ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Chemical Biology Volume 10 ; 2014 ; 10 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Nature Chemical Biology Volume 11 ; 2015 ; 11 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Chemical Biology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Chemical Biology Volume 11 ; 2015 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Chemical Biology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Chemical Biology Volume 13 ; 2017 ; 13 ; >
 
   }
@@ -2624,12 +2624,12 @@
 
     au < finished ; finished ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 ; >
     au < finished ; finished ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 ; >
-    au < finished ; crawling ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Nature Chemistry Volume 6 ; 2014 ; 6 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Chemistry Volume 7 ; 2015 ; 7 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Chemistry Volume 8 ; 2016 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Nature Chemistry Volume 6 ; 2014 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Chemistry Volume 7 ; 2015 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Chemistry Volume 8 ; 2016 ; 8 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Chemistry Volume 9 ; 2017 ; 9 ; >
 
   }
@@ -2646,10 +2646,10 @@
 
     au < finished ; finished ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 ; >
     au < finished ; finished ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Climate Change Volume 7 ; 2017 ; 7 ; >
 
   }
@@ -2695,7 +2695,7 @@
     au < finished ; finished ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 ; >
     au < finished ; down ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 > #no substance on production
     au < finished ; down ; 2015 ; Nature Digest Volume 12 ; 2015 ; 12 ; reingest5.clockss.org:8082 > #no substance on production
-    au < finished ; crawling ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Digest Volume 14 ; 2017 ; 14 ; >
 
   }
@@ -2754,11 +2754,11 @@
     au < zapped ; finished ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 ; >
     au < finished ; finished ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 ; >
     au < finished ; finished ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 ; >
-    au < finished ; crawling ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 ; reingest1.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Genetics Volume 46 ; 2014 ; 46 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Nature Genetics Volume 47 ; 2015 ; 47 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Genetics Volume 48 ; 2016 ; 48 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Genetics Volume 47 ; 2015 ; 47 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Genetics Volume 48 ; 2016 ; 48 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Genetics Volume 49 ; 2017 ; 49 ; >
 
   }
@@ -2778,11 +2778,11 @@
     au < zapped ; finished ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 ; >
     au < finished ; finished ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 ; >
     au < finished ; finished ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 ; >
-    au < finished ; crawling ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Geoscience Volume 7 ; 2014 ; 7 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Geoscience Volume 8 ; 2015 ; 8 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Geoscience Volume 9 ; 2016 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Geoscience Volume 8 ; 2015 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Geoscience Volume 9 ; 2016 ; 9 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Geoscience Volume 10 ; 2017 ; 10 ; >
 
   }
@@ -2809,12 +2809,12 @@
     au < finished ; finished ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 ; >
     au < finished ; finished ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 ; >
     au < finished ; finished ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 ; >
-    au < finished ; crawling ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Immunology Volume 15 ; 2014 ; 15 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Immunology Volume 16 ; 2015 ; 16 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Immunology Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Immunology Volume 15 ; 2014 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Immunology Volume 16 ; 2015 ; 16 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Immunology Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Immunology Volume 18 ; 2017 ; 18 ; >
 
   }
@@ -2840,11 +2840,11 @@
     au < zapped ; finished ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 ; >
     au < finished ; finished ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 ; >
     au < finished ; finished ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 ; >
-    au < finished ; crawling ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Materials Volume 13 ; 2014 ; 13 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Nature Materials Volume 14 ; 2015 ; 14 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Materials Volume 15 ; 2016 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Materials Volume 14 ; 2015 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Materials Volume 15 ; 2016 ; 15 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Materials Volume 16 ; 2017 ; 16 ; >
 
   }
@@ -2876,12 +2876,12 @@
     au < zapped ; finished ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 ; >
     au < zapped ; finished ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 ; >
     au < finished ; finished ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 ; >
-    au < finished ; crawling ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Medicine Volume 20 ; 2014 ; 20 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Medicine Volume 21 ; 2015 ; 21 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Medicine Volume 20 ; 2014 ; 20 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Medicine Volume 21 ; 2015 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Medicine Volume 23 ; 2017 ; 23 ; >
 
   }
@@ -2903,13 +2903,13 @@
     au < doNotProcess ; exists ; 2007 ; Nature Methods Volume 4 ; 2007 ; 4 ; >
     au < finished ; finished ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 ; >
     au < zapped ; finished ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 ; >
-    au < finished ; frozen ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 ; >
+    au < finished ; finished ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 ; >
     au < finished ; finished ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 ; >
-    au < finished ; crawling ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; Nature Methods Volume 11 ; 2014 ; 11 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Methods Volume 12 ; 2015 ; 12 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Methods Volume 13 ; 2016 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2014 ; Nature Methods Volume 11 ; 2014 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Methods Volume 12 ; 2015 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Methods Volume 13 ; 2016 ; 13 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Methods Volume 14 ; 2017 ; 14 ; >
 
   }
@@ -2931,11 +2931,11 @@
     au < zapped ; finished ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 ; >
     au < finished ; finished ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 ; >
     au < finished ; finished ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 ; >
-    au < finished ; crawling ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Nature Nanotechnology Volume 9 ; 2014 ; 9 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Nanotechnology Volume 10 ; 2015 ; 10 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Nanotechnology Volume 11 ; 2016 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Nanotechnology Volume 10 ; 2015 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Nanotechnology Volume 11 ; 2016 ; 11 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Nanotechnology Volume 12 ; 2017 ; 12 ; >
 
   }
@@ -2964,12 +2964,12 @@
     au < zapped ; finished ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 ; >
     au < zapped ; finished ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 ; >
     au < finished ; frozen ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 ; >
-    au < finished ; crawling ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Neuroscience Volume 16 ; 2013 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Neuroscience Volume 16 ; 2013 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Nature Neuroscience Volume 17 ; 2014 ; 17 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Neuroscience Volume 18 ; 2015 ; 18 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Neuroscience Volume 19 ; 2016 ; 19 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Neuroscience Volume 18 ; 2015 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Neuroscience Volume 19 ; 2016 ; 19 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Neuroscience Volume 20 ; 2017 ; 20 ; >
 
   }
@@ -2991,11 +2991,11 @@
     au < zapped ; finished ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 ; >
     au < finished ; finished ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 ; >
     au < finished ; frozen ; 2011 ; Nature Photonics Volume 5 ; 2011 ; 5 ; >
-    au < finished ; crawling ; 2012 ; Nature Photonics Volume 6 ; 2012 ; 6 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Photonics Volume 7 ; 2013 ; 7 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Photonics Volume 8 ; 2014 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Photonics Volume 9 ; 2015 ; 9 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Photonics Volume 10 ; 2016 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Nature Photonics Volume 6 ; 2012 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Photonics Volume 7 ; 2013 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Photonics Volume 8 ; 2014 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Photonics Volume 9 ; 2015 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Photonics Volume 10 ; 2016 ; 10 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Photonics Volume 11 ; 2017 ; 11 ; >
 
   }
@@ -3018,11 +3018,11 @@
     au < zapped ; finished ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 ; >
     au < finished ; finished ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 ; >
     au < finished ; finished ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 ; >
-    au < finished ; crawling ; 2012 ; Nature Physics Volume 8 ; 2012 ; 8 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Physics Volume 9 ; 2013 ; 9 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Physics Volume 10 ; 2014 ; 10 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Physics Volume 11 ; 2015 ; 11 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Physics Volume 12 ; 2016 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Nature Physics Volume 8 ; 2012 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Physics Volume 9 ; 2013 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Physics Volume 10 ; 2014 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Physics Volume 11 ; 2015 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Physics Volume 12 ; 2016 ; 12 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Physics Volume 13 ; 2017 ; 13 ; >
 
   }
@@ -3044,11 +3044,11 @@
     au < zapped ; finished ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 ; >
     au < finished ; finished ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 ; >
     au < finished ; finished ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 ; >
-    au < finished ; crawling ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Protocols Volume 8 ; 2013 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Protocols Volume 8 ; 2013 ; 8 ; reingest5.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Protocols Volume 9 ; 2014 ; 9 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Protocols Volume 10 ; 2015 ; 10 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Protocols Volume 11 ; 2016 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Protocols Volume 10 ; 2015 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Protocols Volume 11 ; 2016 ; 11 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Protocols Volume 12 ; 2017 ; 12 ; >
 
   }
@@ -3076,10 +3076,10 @@
     au < zapped ; finished ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 ; >
     au < finished ; finished ; 2012 ; Nature Reviews Cancer Volume 12 ; 2012 ; 12 ; >
-    au < finished ; crawling ; 2013 ; Nature Reviews Cancer Volume 13 ; 2013 ; 13 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Reviews Cancer Volume 14 ; 2014 ; 14 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Cancer Volume 15 ; 2015 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Cancer Volume 16 ; 2016 ; 16 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Cancer Volume 13 ; 2013 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Reviews Cancer Volume 14 ; 2014 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Cancer Volume 15 ; 2015 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Cancer Volume 16 ; 2016 ; 16 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Cancer Volume 17 ; 2017 ; 17 ; >
 
   }
@@ -3104,10 +3104,10 @@
     au < finished ; finished ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Cardiology Volume 8 ; 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; Nature Reviews Cardiology Volume 9 ; 2012 ; 9 ; >
-    au < finished ; crawling ; 2013 ; Nature Reviews Cardiology Volume 10 ; 2013 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Cardiology Volume 10 ; 2013 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Cardiology Volume 11 ; 2014 ; 11 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Cardiology Volume 12 ; 2015 ; 12 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Cardiology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Cardiology Volume 12 ; 2015 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Cardiology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2017 ; Nature Reviews Cardiology Volume 14 [superseded] ; 2017 ; 14 ; >
 
   }
@@ -3131,11 +3131,11 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 ; >
     au < finished ; finished ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 ; >
-    au < finished ; crawling ; 2012 ; Nature Reviews Clinical Oncology Volume 9 ; 2012 ; 9 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Nature Reviews Clinical Oncology Volume 10 ; 2013 ; 10 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Reviews Clinical Oncology Volume 11 ; 2014 ; 11 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Clinical Oncology Volume 12 ; 2015 ; 12 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Clinical Oncology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Reviews Clinical Oncology Volume 9 ; 2012 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Clinical Oncology Volume 10 ; 2013 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Reviews Clinical Oncology Volume 11 ; 2014 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Clinical Oncology Volume 12 ; 2015 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Clinical Oncology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Clinical Oncology Volume 14 ; 2017 ; 14 ; >
 
   }
@@ -3162,10 +3162,10 @@
     au < finished ; finished ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Drug Discovery Volume 10 ; 2011 ; 10 ; >
     au < finished ; finished ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 ; >
-    au < finished ; crawling ; 2013 ; Nature Reviews Drug Discovery Volume 12 ; 2013 ; 12 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Drug Discovery Volume 12 ; 2013 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Drug Discovery Volume 13 ; 2014 ; 13 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Drug Discovery Volume 14 ; 2015 ; 14 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Drug Discovery Volume 15 ; 2016 ; 15 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Drug Discovery Volume 14 ; 2015 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Drug Discovery Volume 15 ; 2016 ; 15 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Drug Discovery Volume 16 ; 2017 ; 16 ; >
 
   }
@@ -3189,10 +3189,10 @@
     au < finished ; finished ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 ; >
-    au < finished ; crawling ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 ; >
-    au < finished ; crawling ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Endocrinology Volume 13 ; 2017 ; 13 ; >
 
   }
@@ -3217,10 +3217,10 @@
     au < finished ; finished ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Gastroenterology and Hepatology Volume 8 ; 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 ; >
-    au < finished ; crawling ; 2013 ; Nature Reviews Gastroenterology and Hepatology Volume 10 ; 2013 ; 10 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Reviews Gastroenterology and Hepatology Volume 11 ; 2014 ; 11 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Gastroenterology and Hepatology Volume 12 ; 2015 ; 12 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Gastroenterology and Hepatology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Gastroenterology and Hepatology Volume 10 ; 2013 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Reviews Gastroenterology and Hepatology Volume 11 ; 2014 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Gastroenterology and Hepatology Volume 12 ; 2015 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Gastroenterology and Hepatology Volume 13 ; 2016 ; 13 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Gastroenterology and Hepatology Volume 14 ; 2017 ; 14 ; >
 
   }
@@ -3249,10 +3249,10 @@
     au < finished ; frozen ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 ; >
     au < finished ; frozen ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 ; >
-    au < finished ; crawling ; 2013 ; Nature Reviews Genetics Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Genetics Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2014 ; Nature Reviews Genetics Volume 15 ; 2014 ; 15 ; >
-    au < finished ; crawling ; 2015 ; Nature Reviews Genetics Volume 16 ; 2015 ; 16 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Genetics Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Genetics Volume 16 ; 2015 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Genetics Volume 17 ; 2016 ; 17 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Genetics Volume 18 ; 2017 ; 18 ; >
 
   }
@@ -3279,11 +3279,11 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 ; >
     au < finished ; finished ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Immunology Volume 11 ; 2011 ; 11 ; >
-    au < finished ; crawling ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Reviews Immunology Volume 13 ; 2013 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Immunology Volume 13 ; 2013 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Nature Reviews Immunology Volume 14 ; 2014 ; 14 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Immunology Volume 15 ; 2015 ; 15 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Immunology Volume 16 ; 2016 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Immunology Volume 15 ; 2015 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Immunology Volume 16 ; 2016 ; 16 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Immunology Volume 17 ; 2017 ; 17 ; >
 
   }
@@ -3308,11 +3308,11 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 ; >
     au < finished ; finished ; 2010 ; Nature Reviews Microbiology Volume 8 ; 2010 ; 8 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Microbiology Volume 9 ; 2011 ; 9 ; >
-    au < finished ; crawling ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Microbiology Volume 12 ; 2014 ; 12 ; >
-    au < finished ; crawling ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Microbiology Volume 15 ; 2017 ; 15 ; >
 
   }
@@ -3340,11 +3340,11 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 ; >
     au < finished ; finished ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Molecular Cell Biology Volume 12 ; 2011 ; 12 ; >
-    au < finished ; crawling ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Reviews Molecular Cell Biology Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Molecular Cell Biology Volume 14 ; 2013 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Molecular Cell Biology Volume 15 ; 2014 ; 15 ; >
-    au < finished ; crawling ; 2015 ; Nature Reviews Molecular Cell Biology Volume 16 ; 2015 ; 16 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Molecular Cell Biology Volume 17 ; 2016 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Molecular Cell Biology Volume 16 ; 2015 ; 16 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Molecular Cell Biology Volume 17 ; 2016 ; 17 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Molecular Cell Biology Volume 18 ; 2017 ; 18 ; >
 
   }
@@ -3370,8 +3370,8 @@
     au < finished ; finished ; 2012 ; Nature Reviews Nephrology Volume 8 ; 2012 ; 8 ; >
     au < finished ; finished ; 2013 ; Nature Reviews Nephrology Volume 9 ; 2013 ; 9 ; >
     au < finished ; finished ; 2014 ; Nature Reviews Nephrology Volume 10 ; 2014 ; 10 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Nephrology Volume 11 ; 2015 ; 11 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Nephrology Volume 12 ; 2016 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Nephrology Volume 11 ; 2015 ; 11 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Nephrology Volume 12 ; 2016 ; 12 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Nephrology Volume 13 ; 2017 ; 13 ; >
 
   }
@@ -3395,10 +3395,10 @@
     au < finished ; finished ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 ; >
     au < finished ; finished ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Neurology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Neurology Volume 11 ; 2015 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Neurology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Neurology Volume 11 ; 2015 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Neurology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Neurology Volume 13 ; 2017 ; 13 ; >
 
   }
@@ -3426,11 +3426,11 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 ; >
     au < finished ; finished ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 ; >
-    au < finished ; crawling ; 2012 ; Nature Reviews Neuroscience Volume 13 ; 2012 ; 13 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2013 ; Nature Reviews Neuroscience Volume 14 ; 2013 ; 14 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Nature Reviews Neuroscience Volume 15 ; 2014 ; 15 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Neuroscience Volume 16 ; 2015 ; 16 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Neuroscience Volume 17 ; 2016 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Nature Reviews Neuroscience Volume 13 ; 2012 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Neuroscience Volume 14 ; 2013 ; 14 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; Nature Reviews Neuroscience Volume 15 ; 2014 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Neuroscience Volume 16 ; 2015 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Neuroscience Volume 17 ; 2016 ; 17 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Neuroscience Volume 18 ; 2017 ; 18 ; >
 
   }
@@ -3453,11 +3453,11 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 ; >
     au < finished ; finished ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 ; >
-    au < finished ; crawling ; 2012 ; Nature Reviews Rheumatology Volume 8 ; 2012 ; 8 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Reviews Rheumatology Volume 9 ; 2013 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Reviews Rheumatology Volume 8 ; 2012 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Rheumatology Volume 9 ; 2013 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Rheumatology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Rheumatology Volume 11 ; 2015 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Rheumatology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Rheumatology Volume 11 ; 2015 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Rheumatology Volume 12 ; 2016 ; 12 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Rheumatology Volume 13 ; 2017 ; 13 ; >
 
   }
@@ -3482,10 +3482,10 @@
     au < finished ; finished ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 ; >
     au < finished ; finished ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 ; >
     au < finished ; finished ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Reviews Urology Volume 10 ; 2013 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Reviews Urology Volume 10 ; 2013 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nature Reviews Urology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Nature Reviews Urology Volume 12 ; 2015 ; 12 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Nature Reviews Urology Volume 13 ; 2016 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Reviews Urology Volume 12 ; 2015 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Nature Reviews Urology Volume 13 ; 2016 ; 13 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Reviews Urology Volume 14 ; 2017 ; 14 ; >
 
   }
@@ -3518,12 +3518,12 @@
     au < zapped ; finished ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 ; >
     au < finished ; frozen ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 ; >
     au < finished ; finished ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 ; >
-    au < finished ; crawling ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2013 ; Nature Structural and Molecular Biology Volume 20 ; 2013 ; 20 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nature Structural and Molecular Biology Volume 20 ; 2013 ; 20 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Nature Structural and Molecular Biology Volume 21 ; 2014 ; 21 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Nature Structural and Molecular Biology Volume 22 ; 2015 ; 22 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Nature Structural and Molecular Biology Volume 23 ; 2016 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Nature Structural and Molecular Biology Volume 22 ; 2015 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Nature Structural and Molecular Biology Volume 23 ; 2016 ; 23 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nature Structural and Molecular Biology Volume 24 ; 2017 ; 24 ; >
 
   }
@@ -3566,10 +3566,10 @@
     au < zapped ; finished ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 ; >
     au < finished ; finished ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 ; >
     au < zapped ; finished ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 ; >
-    au < finished ; crawling ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Neuropsychopharmacology Volume 39 ; 2014 ; 39 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Neuropsychopharmacology Volume 40 ; 2015 ; 40 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Neuropsychopharmacology Volume 41 ; 2016 ; 41 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Neuropsychopharmacology Volume 40 ; 2015 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Neuropsychopharmacology Volume 41 ; 2016 ; 41 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Neuropsychopharmacology Volume 42 ; 2017 ; 42 ; >
 
   }
@@ -3588,9 +3588,9 @@
     au < finished ; finished ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 ; >
     au < finished ; finished ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2014 ; NPG Asia Materials Volume 6 ; 2014 ; 6 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; NPG Asia Materials Volume 7 ; 2015 ; 7 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; NPG Asia Materials Volume 8 ; 2016 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2014 ; NPG Asia Materials Volume 6 ; 2014 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; NPG Asia Materials Volume 7 ; 2015 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; NPG Asia Materials Volume 8 ; 2016 ; 8 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; NPG Asia Materials Volume 9 ; 2017 ; 9 ; >
 
   }
@@ -3606,10 +3606,10 @@
     
     au < finished ; finished ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 ; >
     au < finished ; finished ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 ; >
-    au < finished ; crawling ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Nutrition & Diabetes Volume 4 ; 2014 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Nutrition & Diabetes Volume 5 ; 2015 ; 5 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Nutrition & Diabetes Volume 6 ; 2016 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Nutrition & Diabetes Volume 6 ; 2016 ; 6 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Nutrition & Diabetes Volume 7 ; 2017 ; 7 ; >
   
   }
@@ -3672,13 +3672,13 @@
     au < doNotProcess ; exists ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 ; >
     au < finished ; frozen ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 ; >
     au < finished ; finished ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 ; >
-    au < finished ; crawling ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 ; >
-    au < finished ; crawling ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 ; >
     au < zapped ; finished ; 2014 ; Oncogene Volume 33 ; 2014 ; 33 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Oncogene Volume 34 ; 2015 ; 34 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Oncogene Volume 35 ; 2016 ; 35 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Oncogene Volume 34 ; 2015 ; 34 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Oncogene Volume 35 ; 2016 ; 35 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Oncogene Volume 36 ; 2017 ; 36 ; >
 
   }
@@ -3694,8 +3694,8 @@
     au < finished ; finished ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 ; >
     au < finished ; finished ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 ; >
     au < finished ; finished ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2016 ; Oncogenesis Volume 5 ; 2016 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2016 ; Oncogenesis Volume 5 ; 2016 ; 5 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Oncogenesis Volume 6 ; 2017 ; 6 ; >
 
   }
@@ -3776,20 +3776,20 @@
     au < finished ; finished ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 ; >
     au < finished ; finished ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 ; >
     au < finished ; finished ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 ; >
-    au < finished ; crawling ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 ; >
-    au < finished ; crawling ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Pediatric Research Volume 73 ; 2013 ; 73 ; >
-    au < finished ; crawling ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Pediatric Research Volume 75 ; 2014 ; 75 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Pediatric Research Volume 76 ; 2014 ; 76 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Pediatric Research Volume 81 ; 2017 ; 81 ; >
     au < doNotProcess ; exists ; 2017 ; Pediatric Research Volume 82 ; 2017 ; 82 ; >
 
@@ -3820,8 +3820,8 @@
     au < finished ; finished ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 ; >
     au < finished ; finished ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 ; >
     au < finished ; finished ; 2014 ; The Pharmacogenomics Journal Volume 14 ; 2014 ; 14 ; >
-    au < finished ; crawling ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; The Pharmacogenomics Journal Volume 16 ; 2016 ; 16 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; The Pharmacogenomics Journal Volume 16 ; 2016 ; 16 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; The Pharmacogenomics Journal Volume 17 ; 2017 ; 17 ; >
 
   }
@@ -3845,8 +3845,8 @@
     au < finished ; finished ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 ; >
     au < finished ; finished ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 ; >
     au < finished ; finished ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Polymer Journal Volume 48 ; 2016 ; 48 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Polymer Journal Volume 48 ; 2016 ; 48 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Polymer Journal Volume 49 ; 2017 ; 49 ; >
 
   }
@@ -3878,10 +3878,10 @@
     au < finished ; frozen ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 ; >
     au < finished ; finished ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 ; >
     au < finished ; finished ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 ; >
-    au < finished ; crawling ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Prostate Cancer and Prostatic Diseases Volume 17 ; 2014 ; 17 ; >
-    au < finished ; crawling ; 2015 ; Prostate Cancer and Prostatic Diseases Volume 18 ; 2015 ; 18 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Prostate Cancer and Prostatic Diseases Volume 19 ; 2016 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Prostate Cancer and Prostatic Diseases Volume 18 ; 2015 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Prostate Cancer and Prostatic Diseases Volume 19 ; 2016 ; 19 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Prostate Cancer and Prostatic Diseases Volume 20 ; 2017 ; 20 ; >
 
   }
@@ -4054,10 +4054,10 @@
     au < finished ; finished ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 ; >
     au < finished ; finished ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 ; >
     au < finished ; finished ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 ; >
-    au < finished ; crawling ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Spinal Cord Volume 52 ; 2014 ; 52 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Spinal Cord Volume 53 ; 2015 ; 53 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Spinal Cord Volume 54 ; 2016 ; 54 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Spinal Cord Volume 53 ; 2015 ; 53 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Spinal Cord Volume 54 ; 2016 ; 54 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2017 ; Spinal Cord Volume 55 ; 2017 ; 55 ; >
 
   }
@@ -4109,8 +4109,8 @@
     au < finished ; finished ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 ; >
     au < finished ; finished ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 ; >
     au < finished ; finished ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 ; >
-    au < finished ; crawling ; 2015 ; Translational Psychiatry Volume 5 ; 2015 ; 5 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2016 ; Translational Psychiatry Volume 6 ; 2016 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Translational Psychiatry Volume 5 ; 2015 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Translational Psychiatry Volume 6 ; 2016 ; 6 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2017 ; Translational Psychiatry Volume 7 ; 2017 ; 7 ; >
 
   }

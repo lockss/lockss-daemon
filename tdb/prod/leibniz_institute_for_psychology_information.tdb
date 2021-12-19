@@ -240,6 +240,7 @@
     
       #param[base_url] = http://ejcop.psychopen.eu/
       param[journal_id] = ejcop
+      #Moved? Changed platform. See https://ejcop.psychopen.eu/index.php/ejcop
   
       au < ojs2.OJS2Plugin ; down ; 2009 ; The European Journal of Counselling Psychology Volume 1 ; 1 ; 2009 ; http://ejcop.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; down ; 2013 ; The European Journal of Counselling Psychology Volume 2 ; 2 ; 2013 ; http://ejcop.psychopen.eu/ >
@@ -248,7 +249,8 @@
       au < ojs2.OJS2Plugin ; down ; 2016 ; The European Journal of Counselling Psychology Volume 5 ; 5 ; 2016 ; http://ejcop.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; released ; 2017 ; The European Journal of Counselling Psychology Volume 6 ; 6 ; 2017 ; https://ejcop.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; released ; 2018 ; The European Journal of Counselling Psychology Volume 7 ; 7 ; 2018 ; https://ejcop.psychopen.eu/ >
-      #MOVED. Changed platform. See https://ejcop.psychopen.eu/index.php/ejcop
+      au < ojs2.OJS2Plugin ; manifest ; 2019 ; The European Journal of Counselling Psychology Volume 8 ; 8 ; 2019 ; https://ejcop.psychopen.eu/ >
+
   }
 
 }

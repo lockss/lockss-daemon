@@ -1,3 +1,35 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -10,14 +42,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -31,7 +63,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Pensoft OAI Plugin</string>
+    <string>Pensoft Journals Plugin</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -44,7 +76,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Pensoft OAI Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
+    <string>"Pensoft Journals Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -64,11 +96,12 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"^https://public\.pensoft\.net/items/"</string>
       <string>1,"^https?://%s/.+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)([?]v=.*)?$", url_host(base_url)</string>
       <string>1,"^https?://(fonts|ajax)[.]googleapis[.]com/."</string>
       <string>1,"^https?://%s/(articles|article_preview)\.php\?id=[0-9]+$", url_host(base_url)</string>
       <string>1,"^https?://%s/article/[0-9]+/?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/auid=.*$", url_host(base_url)</string>
+      <string>1,"^https?://%s/lockss\?", url_host(base_url)</string>
       <string>1,"^https?://%s/lib/ajax_srv/article_elements_srv\.php\?action=download_pdf&amp;item_id=[0-9]+$", url_host(base_url)</string>
       <string>1,"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+", url_host(base_url)</string>
       <!-- There are content patterns available for preservation, including an html page with images and captions -->
@@ -81,6 +114,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
+      <string>"^https://public\.pensoft\.net/items/"</string>
       <string>"^https?://%s/lib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+", url_host(base_url)</string>
       <!--  now with optional terminating file id number or slash -->
       <string>"^https?://%s/article/[0-9]+/download/pdf(/|/[0-9]+)?$", url_host(base_url)</string>
@@ -121,6 +155,10 @@
   <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.pensoft.oai.PensoftOaiCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss?au_oai_set=%s&amp;au_oai_date=%s", base_url, au_oai_set, au_oai_date</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
@@ -186,6 +224,7 @@
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>public\.pensoft\.net</string>
     </list>
   </entry>
 </map>

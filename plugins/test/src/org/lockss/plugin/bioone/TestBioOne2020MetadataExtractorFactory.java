@@ -72,7 +72,7 @@ public class TestBioOne2020MetadataExtractorFactory extends LockssTestCase {
   static String goodPublisher = "Canadian Science Publishing";
 
 
-  private static final String ABS_URL =  BASE_URL + "/journals/canadian-journal-of-animal-science/volume-91/issue-3/CJAS2010-004/Ecoregion-and-farm-size-differences-in-dairy-feed-and-manure/10.1139/CJAS2010-004.full";
+  private static final String ABS_URL =  BASE_URL + "journals/canadian-journal-of-animal-science/volume-91/issue-3/CJAS2010-004/Ecoregion-and-farm-size-differences-in-dairy-feed-and-manure/10.1139/CJAS2010-004.full";
 
 
   public void setUp() throws Exception {

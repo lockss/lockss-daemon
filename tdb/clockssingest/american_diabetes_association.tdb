@@ -39,8 +39,8 @@
       au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2017 ; Clinical Diabetes Volume 35 ; 35 ; http://clinical.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2018 ; Clinical Diabetes Volume 36 ; 36 ; http://clinical.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; frozen ; exists ; 2019 ; Clinical Diabetes Volume 37 ; 37 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2020 ; Clinical Diabetes Volume 38 ; 38 ; https://clinical.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2020 ; Clinical Diabetes Volume 38 ; 38 ; https://clinical.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; https://clinical.diabetesjournals.org/ ; >
 
     }
     
@@ -126,8 +126,8 @@
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2017 ; Diabetes Volume 66 ; 66 ; http://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2018 ; Diabetes Volume 67 ; 67 ; http://diabetes.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; frozen ; exists ; 2019 ; Diabetes Volume 68 ; 68 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2020 ; Diabetes Volume 69 ; 69 ; https://diabetes.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2021 ; Diabetes Volume 70 ; 70 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2020 ; Diabetes Volume 69 ; 69 ; https://diabetes.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2021 ; Diabetes Volume 70 ; 70 ; https://diabetes.diabetesjournals.org/ ; >
 
       }
 
@@ -193,8 +193,8 @@
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2017 ; Diabetes Care Volume 40 ; 40 ; http://care.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2018 ; Diabetes Care Volume 41 ; 41 ; http://care.diabetesjournals.org/ ; >
         au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2019 ; Diabetes Care Volume 42 ; 42 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2020 ; Diabetes Care Volume 43 ; 43 ; https://care.diabetesjournals.org/ ; >
-        au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2021 ; Diabetes Care Volume 44 ; 44 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2020 ; Diabetes Care Volume 43 ; 43 ; https://care.diabetesjournals.org/ ; >
+        au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2021 ; Diabetes Care Volume 44 ; 44 ; https://care.diabetesjournals.org/ ; >
 
       }
 
@@ -229,8 +229,8 @@
       au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2017 ; Diabetes Spectrum Volume 30 ; 30 ; http://spectrum.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2018 ; Diabetes Spectrum Volume 31 ; 31 ; http://spectrum.diabetesjournals.org/ ; >
       au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2019 ; Diabetes Spectrum Volume 32 ; 32 ; http://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; https://spectrum.diabetesjournals.org/ ; >
-      au < ada.ClockssADADrupalPlugin ; manifest ; exists ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; deepCrawl ; exists ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; https://spectrum.diabetesjournals.org/ ; >
+      au < ada.ClockssADADrupalPlugin ; crawling ; exists ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; https://spectrum.diabetesjournals.org/ ; >
 
     }
 

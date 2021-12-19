@@ -38,9 +38,9 @@
       au < exists ; 2016 ; sui generis Volume 2016 ; 2016 ; 2016 ; https://sui-generis.ch/ >
       au < exists ; 2017 ; sui generis Volume 2017 ; 2017 ; 2017 ; https://sui-generis.ch/ >
       au < exists ; 2018 ; sui generis Volume 2018 ; 2018 ; 2018 ; https://sui-generis.ch/ >
-      au < expected ; 2019 ; sui generis Volume 2019 ; 2019 ; 2019 ; https://sui-generis.ch/ >
-      au < expected ; 2020 ; sui generis Volume 2020 ; 2020 ; 2020 ; https://sui-generis.ch/ >
-      au < expected ; 2021 ; sui generis Volume 2021 ; 2021 ; 2021 ; https://sui-generis.ch/ >
+      au < exists ; 2019 ; sui generis Volume 2019 ; 2019 ; 2019 ; https://sui-generis.ch/ >
+      au < exists ; 2020 ; sui generis Volume 2020 ; 2020 ; 2020 ; https://sui-generis.ch/ >
+      au < exists ; 2021 ; sui generis Volume 2021 ; 2021 ; 2021 ; https://sui-generis.ch/ >
 
     }
 
@@ -61,8 +61,8 @@
       au < released ; 2016 ; altrelettere Volume 2016 ; 2016 ; 2016 ; http://www.altrelettere.uzh.ch/ >
       au < released ; 2017 ; altrelettere Volume 2017 ; 2017 ; 2017 ; http://www.altrelettere.uzh.ch/ >
       au < released ; 2018 ; altrelettere Volume 2018 ; 2018 ; 2018 ; https://www.altrelettere.uzh.ch/ >
-      au < expected ; 2019 ; altrelettere Volume 2019 ; 2019 ; 2019 ; https://www.altrelettere.uzh.ch/ >
-      au < expected ; 2020 ; altrelettere Volume 2020 ; 2020 ; 2020 ; https://www.altrelettere.uzh.ch/ >
+      au < exists ; 2019 ; altrelettere Volume 2019 ; 2019 ; 2019 ; https://www.altrelettere.uzh.ch/ >
+      au < exists ; 2020 ; altrelettere Volume 2020 ; 2020 ; 2020 ; https://www.altrelettere.uzh.ch/ >
       au < expected ; 2021 ; altrelettere Volume 2021 ; 2021 ; 2021 ; https://www.altrelettere.uzh.ch/ >
 
     }
@@ -70,43 +70,46 @@
     {
       title <
         name = SComS: Studies in Communications Sciences ;
-        eissn = 1424-4896
+        eissn = 1424-4896 ;
+        eissn = 2296-4150
       >
       
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
       param[journal_id] = scoms
       #param[base_url] = http://www.hope.uzh.ch/
+      #volume 1975-2011 host by e-periodica
+      #volume 2012-2016 host by Elsevier
 
-      au < manifest ; 1991 ; SComS: Studies in Communications Sciences Volume 1991 [abstract only] ; 1991 ; 1991 ; https://www.hope.uzh.ch/ >
-      au < manifest ; 1992 ; SComS: Studies in Communications Sciences Volume 1992 [abstract only] ; 1992 ; 1992 ; https://www.hope.uzh.ch/ >
-      au < manifest ; 1993 ; SComS: Studies in Communications Sciences Volume 1993 [abstract only] ; 1993 ; 1993 ; https://www.hope.uzh.ch/ >
-      au < notReady ; 1994 ; SComS: Studies in Communications Sciences Volume 1994 [abstract only] ; 1994 ; 1994 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 1996 ; SComS: Studies in Communications Sciences Volume 1996 [abstract only] ; 1996 ; 1996 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 1997 ; SComS: Studies in Communications Sciences Volume 1997 [abstract only] ; 1997 ; 1997 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 1998 ; SComS: Studies in Communications Sciences Volume 1998 ; 1998 ; 1998 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 1999 ; SComS: Studies in Communications Sciences Volume 1999 ; 1999 ; 1999 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2000 ; SComS: Studies in Communications Sciences Volume 2000 ; 2000 ; 2000 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2001 ; SComS: Studies in Communications Sciences Volume 2001 ; 2001 ; 2001 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2002 ; SComS: Studies in Communications Sciences Volume 2002 ; 2002 ; 2002 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2003 ; SComS: Studies in Communications Sciences Volume 2003 ; 2003 ; 2003 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2004 ; SComS: Studies in Communications Sciences Volume 2004 ; 2004 ; 2004 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2005 ; SComS: Studies in Communications Sciences Volume 2005 ; 2005 ; 2005 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2006 ; SComS: Studies in Communications Sciences Volume 2006 ; 2006 ; 2006 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2007 ; SComS: Studies in Communications Sciences Volume 2007 ; 2007 ; 2007 ; https://www.hope.uzh.ch/ > #no content
-      au < notReady ; 2008 ; SComS: Studies in Communications Sciences Volume 2008 ; 2008 ; 2008 ; https://www.hope.uzh.ch/ > #no content
-      au < released ; 2009 ; SComS: Studies in Communications Sciences Volume 2009 ; 2009 ; 2009 ; https://www.hope.uzh.ch/ >
-      au < released ; 2010 ; SComS: Studies in Communications Sciences Volume 2010 ; 2010 ; 2010 ; http://www.hope.uzh.ch/ >
-      au < released ; 2011 ; SComS: Studies in Communications Sciences Volume 2011 ; 2011 ; 2011 ; http://www.hope.uzh.ch/ >
-      au < notReady ; 2012 ; SComS: Studies in Communications Sciences Volume 2012 ; 2012 ; 2012 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
-      au < notReady ; 2013 ; SComS: Studies in Communications Sciences Volume 2013 ; 2013 ; 2013 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
-      au < notReady ; 2014 ; SComS: Studies in Communications Sciences Volume 2014 ; 2014 ; 2014 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
-      au < notReady ; 2015 ; SComS: Studies in Communications Sciences Volume 2015 ; 2015 ; 2015 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
-      au < notReady ; 2016 ; SComS: Studies in Communications Sciences Volume 2016 ; 2016 ; 2016 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
-      au < released ; 2017 ; SComS: Studies in Communications Sciences Volume 2017 ; 2017 ; 2017 ; http://www.hope.uzh.ch/ >
-      au < released ; 2018 ; SComS: Studies in Communications Sciences Volume 2018 ; 2018 ; 2018 ; https://www.hope.uzh.ch/ >
-      au < expected ; 2019 ; SComS: Studies in Communications Sciences Volume 2019 ; 2019 ; 2019 ; https://www.hope.uzh.ch/ >
-      au < expected ; 2020 ; SComS: Studies in Communications Sciences Volume 2020 ; 2020 ; 2020 ; https://www.hope.uzh.ch/ >
-      au < expected ; 2021 ; SComS: Studies in Communications Sciences Volume 2021 ; 2021 ; 2021 ; https://www.hope.uzh.ch/ >
+      au < doNotProcess ; 1991 ; SComS: Studies in Communications Sciences Volume 1991 [abstract only] ; 1991 ; 1991 ; https://www.hope.uzh.ch/ >
+      au < doNotProcess ; 1992 ; SComS: Studies in Communications Sciences Volume 1992 [abstract only] ; 1992 ; 1992 ; https://www.hope.uzh.ch/ >
+      au < doNotProcess ; 1993 ; SComS: Studies in Communications Sciences Volume 1993 [abstract only] ; 1993 ; 1993 ; https://www.hope.uzh.ch/ >
+      au < doNotProcess ; 1994 ; SComS: Studies in Communications Sciences Volume 1994 [abstract only] ; 1994 ; 1994 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 1996 ; SComS: Studies in Communications Sciences Volume 1996 [abstract only] ; 1996 ; 1996 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 1997 ; SComS: Studies in Communications Sciences Volume 1997 [abstract only] ; 1997 ; 1997 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 1998 ; SComS: Studies in Communications Sciences Volume 1998 ; 1998 ; 1998 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 1999 ; SComS: Studies in Communications Sciences Volume 1999 ; 1999 ; 1999 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2000 ; SComS: Studies in Communications Sciences Volume 2000 ; 2000 ; 2000 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2001 ; SComS: Studies in Communications Sciences Volume 2001 ; 2001 ; 2001 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2002 ; SComS: Studies in Communications Sciences Volume 2002 ; 2002 ; 2002 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2003 ; SComS: Studies in Communications Sciences Volume 2003 ; 2003 ; 2003 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2004 ; SComS: Studies in Communications Sciences Volume 2004 ; 2004 ; 2004 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2005 ; SComS: Studies in Communications Sciences Volume 2005 ; 2005 ; 2005 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2006 ; SComS: Studies in Communications Sciences Volume 2006 ; 2006 ; 2006 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2007 ; SComS: Studies in Communications Sciences Volume 2007 ; 2007 ; 2007 ; https://www.hope.uzh.ch/ > #no content
+      au < doNotProcess ; 2008 ; SComS: Studies in Communications Sciences Volume 2008 ; 2008 ; 2008 ; https://www.hope.uzh.ch/ > #no content
+      au < down ; 2009 ; SComS: Studies in Communications Sciences Volume 2009 ; 2009 ; 2009 ; https://www.hope.uzh.ch/ >
+      au < down ; 2010 ; SComS: Studies in Communications Sciences Volume 2010 ; 2010 ; 2010 ; http://www.hope.uzh.ch/ >
+      au < down ; 2011 ; SComS: Studies in Communications Sciences Volume 2011 ; 2011 ; 2011 ; http://www.hope.uzh.ch/ >
+      au < doNotProcess ; 2012 ; SComS: Studies in Communications Sciences Volume 2012 ; 2012 ; 2012 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
+      au < doNotProcess ; 2013 ; SComS: Studies in Communications Sciences Volume 2013 ; 2013 ; 2013 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
+      au < doNotProcess ; 2014 ; SComS: Studies in Communications Sciences Volume 2014 ; 2014 ; 2014 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
+      au < doNotProcess ; 2015 ; SComS: Studies in Communications Sciences Volume 2015 ; 2015 ; 2015 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
+      au < doNotProcess ; 2016 ; SComS: Studies in Communications Sciences Volume 2016 ; 2016 ; 2016 ; https://www.hope.uzh.ch/ > #doi link only, no PDF
+      au < released ; 2017 ; SComS: Studies in Communications Sciences Volume 17 ; 17 ; 2017 ; http://www.hope.uzh.ch/ >
+      au < released ; 2018 ; SComS: Studies in Communications Sciences Volume 18 ; 18 ; 2018 ; https://www.hope.uzh.ch/ >
+      au < exists ; 2019 ; SComS: Studies in Communications Sciences Volume 19 ; 19 ; 2019 ; https://www.hope.uzh.ch/ >
+      au < exists ; 2020 ; SComS: Studies in Communications Sciences Volume 20 ; 20 ; 2020 ; https://www.hope.uzh.ch/ >
+      au < exists ; 2021 ; SComS: Studies in Communications Sciences Volume 21 ; 21 ; 2021 ; https://www.hope.uzh.ch/ >
 
     }
 

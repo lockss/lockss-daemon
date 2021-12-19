@@ -38,26 +38,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.5.0'
 
+_service = 'HasherService'
+
 import sys
-
-try: import requests
-except ImportError: sys.exit('The Python Requests module must be installed (or on the PYTHONPATH)')
-
-try: import zeep
-except ImportError: sys.exit('The Python Zeep module must be installed (or on the PYTHONPATH)')
 
 import argparse
 import getpass
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
-import requests.auth
 import time
 from threading import Thread
-import zeep.exceptions
-import zeep.helpers
-import zeep.transports
 
-from wsutil import datems, datetimems, durationms, requests_basic_auth
+from wsutil import file_lines, make_client, enable_zeep_debugging, host_help_prefix, remove_protocol
 
 #
 # Library
@@ -80,7 +72,8 @@ def hash_au(host, username, password, auid, include_weight=False):
 
     Parameters:
     :param host: a host:port pair (string)
-    :param auth: an authentication object (requests.auth.AuthBase object)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
     :param auid: an auid to hash (string)
     :param include_weight: a boolean indicating whether to include weight (boolean)
     :return:
@@ -146,7 +139,7 @@ def _hash(host, username, password, hasher_params):
     :param hasher_params: hasherWsParams
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.hash(hasherParams=hasher_params)
 
 
@@ -240,7 +233,7 @@ def _hash_asynchronously(host, username, password, hasher_params):
     :param hasher_params: hasherWsParams
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.hashAsynchronously(hasherParams=hasher_params)
 
 
@@ -267,7 +260,7 @@ def get_all_asynchronous_hash_results(host, username, password):
     :param password: a password for the host (string)
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.getAllAsynchronousHashResults()
 
 
@@ -295,7 +288,7 @@ def get_asynchronous_hash_result(host, username, password, request_id):
     :param request_id: a request ID (string)
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.getAsynchronousHashResult(requestId=request_id)
 
 
@@ -323,7 +316,7 @@ def remove_asynchronous_hash_request(host, username, password, request_id):
     :param request_id: a request id (string)
     :return:
     """
-    client = _make_client(host, username, password)
+    client = make_client(host, username, password, _service)
     return client.service.removeAsynchronousHashRequest(requestId=request_id)
 
 
@@ -335,13 +328,16 @@ class _HasherServiceOptions(object):
 
     @staticmethod
     def make_parser():
-        usage = '%(prog)s [--host=HOST|--hosts=HFILE]... --auid=AUID [--url=URL] [--output-directory=OUTDIR] --output-prefix=PREFIX [OPTIONS]'
+        usage = ('%(prog)s [--host=HOST|--hosts=HFILE]... --auid=AUID ' +
+                 '[--url=URL] [--output-directory=OUTDIR] --output-prefix=PREFIX [OPTIONS]')
         parser = argparse.ArgumentParser(description=__doc__, usage=usage)
 
         # Hosts
         group = parser.add_argument_group('Target hosts')
-        group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-        group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+        group.add_argument('--host', action='append', default=list(),
+                           help=host_help_prefix + ' to list of target hosts')
+        group.add_argument('--hosts', action='append', default=list(), metavar='HFILE',
+                           help=host_help_prefix + ' in HFILE to list of target hosts')
         group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
         group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
 
@@ -352,16 +348,20 @@ class _HasherServiceOptions(object):
 
         # Output
         group = parser.add_argument_group('Output')
-        group.add_argument('--output-directory', metavar='OUTDIR', default='.', help='output directory (default: current directory)')
-        group.add_argument('--output-prefix', metavar='PREFIX', default='hasherservice', help='prefix for output file names (default: "hasherservice")')
+        group.add_argument('--output-directory', metavar='OUTDIR', default='.',
+                           help='output directory (default: current directory)')
+        group.add_argument('--output-prefix', metavar='PREFIX', default='hasherservice',
+                           help='prefix for output file names (default: "hasherservice")')
 
         # Other options
         group = parser.add_argument_group('Other options')
         group.add_argument('--long-html-line', action='store_true', help='add a newline before each "<" character')
         group.add_argument('--long-text-line', action='store_true', help='replace each space with a newline')
         group.add_argument('--threads', type=int, help='maximum number of parallel jobs allowed (default: no limit)')
-        group.add_argument('--wait', type=int, help='seconds to wait between asynchronous checks (default: 10 with --url, 30 without)')
+        group.add_argument('--wait', type=int,
+                           help='seconds to wait between asynchronous checks (default: 10 with --url, 30 without)')
         group.add_argument('--include-weight', action='store_true', help='include hash weights in full tree hash')
+        group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
 
         return parser
 
@@ -370,7 +370,7 @@ class _HasherServiceOptions(object):
 # FIXME        if len(args) != 0: parser.error('extraneous arguments: %s' % (' '.join(args)))
         # hosts
         self.hosts = args.host[:]
-        for f in args.hosts: self.hosts.extend(_file_lines(f))
+        for f in args.hosts: self.hosts.extend(file_lines(f))
         if len(self.hosts) == 0: parser.error('at least one target host is required')
         # auid/url
         self.auid = args.auid
@@ -398,11 +398,12 @@ class _HasherServiceOptions(object):
             self.wait = args.wait
         # threads
         self.threads = args.threads or len(self.hosts)
+        # add logging for zeep
+        if args.debug_zeep:
+            enable_zeep_debugging()
         # auth
         self._u = args.username or getpass.getpass('UI username: ')
         self._p = args.password or getpass.getpass('UI password: ')
-        self.auth = requests_basic_auth(self._u, self._p)
-
 
 def _do_hash(options, host):
     if options.url is None:
@@ -419,10 +420,10 @@ def _do_hash(options, host):
         if res.status == 'Done': break
     if options.url is None:
         source = res.blockFileDataHandler
-        fstr = '%s.%s.hash' % (options.output_prefix, host)
+        fstr = '%s.%s.hash' % (options.output_prefix, remove_protocol(host))
     else:
         source = res.recordFileDataHandler
-        fstr = '%s.%s.filtered' % (options.output_prefix, host)
+        fstr = '%s.%s.filtered' % (options.output_prefix, remove_protocol(host))
     if source is not None:
         if options.long_html_line: source = source.replace(b'<', b'\n<')
         if options.long_text_line: source = source.replace(b' ', b'\n')
@@ -438,21 +439,6 @@ def _do_hashes(options):
             options.hosts):
         if result is False:
             sys.stderr.write('Warning: not found on %s\n' % (host,))
-
-
-# Last modified 2015-08-31
-def _file_lines(fstr):
-    with open(os.path.expanduser(fstr)) as f: ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-    if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
-    return ret
-
-def _make_client(host, username, password):
-    session = requests.Session()
-    session.auth = requests.auth.HTTPBasicAuth(username, password)
-    transport = zeep.transports.Transport(session=session)
-    wsdl = 'http://{}/ws/HasherService?wsdl'.format(host)
-    client = zeep.Client(wsdl, transport=transport)
-    return client
 
 def _main():
     '''Main method.'''

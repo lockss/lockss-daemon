@@ -382,6 +382,11 @@ public class SubTreeArticleIteratorBuilder {
         }
       }
       
+      public String toString() {
+        return "[Aspect: roles: " + roles +
+          ", pats: " + patterns +
+          ", reps: " + matcherReplacements + "]";
+      }
     }
     
     /**
@@ -491,6 +496,7 @@ public class SubTreeArticleIteratorBuilder {
             for (int cj = ci + 1; cj < aspects.size(); ++cj) {
               Aspect lowerAspect = aspects.get(cj);
               CachedUrl lowerCu = lowerAspect.findCuByPatternReplacement(matcher);
+              log.debug3("Aspect: " + lowerAspect + ", cu: " + lowerCu);
               if (lowerCu != null) {
                 lowerAspect.processRoles(af, lowerCu);
               }
@@ -499,6 +505,22 @@ public class SubTreeArticleIteratorBuilder {
           else {
             if (isDebug2) {
               logger.debug2("Skipping additional aspects");
+            }
+          }
+          // Set roles from other roles if orders specified (unless only counting articles)
+          if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
+            for (Map.Entry<String, List<String>> entry : rolesFromOtherRoles.entrySet()) {
+              String role = entry.getKey();
+              for (String otherRole : entry.getValue()) {
+                CachedUrl foundCu = af.getRoleCu(otherRole); 
+                if (foundCu != null) {
+                  if (isDebug2) {
+                    logger.debug2(String.format("CU for %s set to: %s", otherRole, foundCu.getUrl()));
+                  }
+                  af.setRoleCu(role, foundCu);
+                  break;
+                }
+              }
             }
           }
           // Override full text CU if order specified
@@ -518,27 +540,11 @@ public class SubTreeArticleIteratorBuilder {
               }
             }
           }
-          // Set roles from other roles if orders specified (unless only counting articles)
-          if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
-            for (Map.Entry<String, List<String>> entry : rolesFromOtherRoles.entrySet()) {
-              String role = entry.getKey();
-              for (String otherRole : entry.getValue()) {
-                CachedUrl foundCu = af.getRoleCu(otherRole); 
-                if (foundCu != null) {
-                  if (isDebug2) {
-                    logger.debug2(String.format("CU for %s set to: %s", otherRole, foundCu.getUrl()));
-                  }
-                  af.setRoleCu(role, foundCu);
-                  break;
-                }
-              }
-            }
-          }
           // Callers should call emitArticleFiles(af);
           return af;
         }
       }
-      logger.warning(String.format("%s in %s did not match any expected patterns", url, au.getName()));
+      logger.debug(String.format("%s in %s did not match any expected patterns", url, au.getName()));
       return null;
     }
 

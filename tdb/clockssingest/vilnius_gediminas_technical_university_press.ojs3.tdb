@@ -36,25 +36,25 @@
       au < frozen ; exists ; 2007 ; Aviation Volume 2007 ; 4 ; 2007 ;  >
       au < frozen ; exists ; 2008 ; Aviation Volume 2008 ; 5 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Aviation Volume 2009 ; 6 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Aviation Volume 2010 ; 7 ; 2010 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Aviation Volume 2011 ; 8 ; 2011 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; Aviation Volume 2012 ; 9 ; 2012 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2013 ; Aviation Volume 2013 ; 10 ; 2013 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Aviation Volume 2014 ; 11 ; 2014 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Aviation Volume 2015 ; 12 ; 2015 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Aviation Volume 2016 ; 13 ; 2016 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Aviation Volume 2017 ; 14 ; 2017 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; Aviation Volume 2018 ; 15 ; 2018 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Aviation Volume 2019 ; 16 ; 2019 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Aviation Volume 2020 ; 17 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Aviation Volume 2021 ; 18 ; 2021 ;  >
+      au < finished ; crawling ; 2010 ; Aviation Volume 2010 ; 7 ; 2010 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Aviation Volume 2011 ; 8 ; 2011 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; Aviation Volume 2012 ; 9 ; 2012 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; Aviation Volume 2013 ; 10 ; 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Aviation Volume 2014 ; 11 ; 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Aviation Volume 2015 ; 12 ; 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Aviation Volume 2016 ; 13 ; 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Aviation Volume 2017 ; 14 ; 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; Aviation Volume 2018 ; 15 ; 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Aviation Volume 2019 ; 16 ; 2019 ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Aviation Volume 2020 ; 17 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Aviation Volume 2021 ; 18 ; 2021 ;  >
 
   }
 
   {
 
       title <
-        name = Business, Management and Education  ;
+        name = Business, Management and Education ;
         issn = 2029-7491 ;
         eissn = 2029-6169
       >
@@ -69,10 +69,25 @@
       au < doNotProcess ; exists ; 2015 ; Business, Management and Education Volume 2015 ; 6 ; 2015 ;  >
       au < doNotProcess ; exists ; 2016 ; Business, Management and Education Volume 2016 ; 7 ; 2016 ;  >
       au < doNotProcess ; exists ; 2017 ; Business, Management and Education Volume 2017 ; 8 ; 2017 ;  >
-      au < finished ; manifest ; 2018 ; Business, Management and Education Volume 2018 ; 9 ; 2018 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Business, Management and Education Volume 2019 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; Business, Management and Education Volume 2020 ; 11 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Business, Management and Education Volume 2021 ; 12 ; 2021 ;  >
+      au < finished ; crawling ; 2018 ; Business, Management and Education Volume 2018 ; 9 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Business, Management and Education Volume 2019 ; 10 ; 2019 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; Business, Management and Education Volume 2020 ; 11 ; 2020 ;  >
+      #As of 2021, name and issn changed: Business, Management and Economics Engineering 2669-2481
+
+  }
+
+  {
+
+      title <
+        name = Business, Management and Economics Engineering ;
+        issn = 2669-2481 ;
+        eissn = 2669-249X
+      >
+
+      param[journal_id] = BME
+
+      #name and issn changed from: Business, Management and Education 2029-6169
+      au < crawling ; exists ; 2021 ; Business, Management and Economics Engineering Volume 2021 ; 12 ; 2021 ;  >
 
   }
 
@@ -87,21 +102,21 @@
       param[journal_id] = BTP
 
       au < frozen ; exists ; 2006 ; Business: Theory and Practice Volume 2006 ; 7 ; 2006 ;  >
-      au < finished ; manifest ; 2007 ; Business: Theory and Practice Volume 2007 ; 8 ; 2007 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2007 ; Business: Theory and Practice Volume 2007 ; 8 ; 2007 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2008 ; Business: Theory and Practice Volume 2008 ; 9 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Business: Theory and Practice Volume 2009 ; 10 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Business: Theory and Practice Volume 2010 ; 11 ; 2010 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Business: Theory and Practice Volume 2011 ; 12 ; 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Business: Theory and Practice Volume 2010 ; 11 ; 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Business: Theory and Practice Volume 2011 ; 12 ; 2011 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2012 ; Business: Theory and Practice Volume 2012 ; 13 ; 2012 ;  >
       au < doNotProcess ; exists ; 2013 ; Business: Theory and Practice Volume 2013 ; 14 ; 2013 ;  >
       au < doNotProcess ; exists ; 2014 ; Business: Theory and Practice Volume 2014 ; 15 ; 2014 ;  >
       au < doNotProcess ; exists ; 2015 ; Business: Theory and Practice Volume 2015 ; 16 ; 2015 ;  >
       au < doNotProcess ; exists ; 2016 ; Business: Theory and Practice Volume 2016 ; 17 ; 2016 ;  >
-      au < finished ; manifest ; 2017 ; Business: Theory and Practice Volume 2017 ; 18 ; 2017 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Business: Theory and Practice Volume 2018 ; 19 ; 2018 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; Business: Theory and Practice Volume 2019 ; 20 ; 2019 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Business: Theory and Practice Volume 2020 ; 21 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Business: Theory and Practice Volume 2021 ; 22 ; 2021 ;  >
+      au < finished ; crawling ; 2017 ; Business: Theory and Practice Volume 2017 ; 18 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Business: Theory and Practice Volume 2018 ; 19 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Business: Theory and Practice Volume 2019 ; 20 ; 2019 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2020 ; Business: Theory and Practice Volume 2020 ; 21 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Business: Theory and Practice Volume 2021 ; 22 ; 2021 ;  >
 
   }
 
@@ -115,20 +130,20 @@
 
       param[journal_id] = CS
 
-      au < crawling ; exists ; 2008 ; Creativity Studies Volume 2008 ; 1 ; 2008 ;  >
+      au < frozen ; exists ; 2008 ; Creativity Studies Volume 2008 ; 1 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Creativity Studies Volume 2009 ; 2 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Creativity Studies Volume 2010 ; 3 ; 2010 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Creativity Studies Volume 2011 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Creativity Studies Volume 2012 ; 5 ; 2012 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Creativity Studies Volume 2013 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; Creativity Studies Volume 2014 ; 7 ; 2014 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; Creativity Studies Volume 2015 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Creativity Studies Volume 2016 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Creativity Studies Volume 2017 ; 10 ; 2017 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Creativity Studies Volume 2018 ; 11 ; 2018 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; Creativity Studies Volume 2019 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Creativity Studies Volume 2020 ; 13 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Creativity Studies Volume 2021 ; 14 ; 2021 ;  >
+      au < finished ; crawling ; 2010 ; Creativity Studies Volume 2010 ; 3 ; 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Creativity Studies Volume 2011 ; 4 ; 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Creativity Studies Volume 2012 ; 5 ; 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Creativity Studies Volume 2013 ; 6 ; 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Creativity Studies Volume 2014 ; 7 ; 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Creativity Studies Volume 2015 ; 8 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Creativity Studies Volume 2016 ; 9 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Creativity Studies Volume 2017 ; 10 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Creativity Studies Volume 2018 ; 11 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Creativity Studies Volume 2019 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2020 ; Creativity Studies Volume 2020 ; 13 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Creativity Studies Volume 2021 ; 14 ; 2021 ;  >
 
   }
 
@@ -143,17 +158,17 @@
       param[journal_id] = EST
 
       au < frozen ; exists ; 2009 ; Engineering Structures and Technologies Volume 2009 ; 1 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Engineering Structures and Technologies Volume 2010 ; 2 ; 2010 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Engineering Structures and Technologies Volume 2011 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Engineering Structures and Technologies Volume 2012 ; 4 ; 2012 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Engineering Structures and Technologies Volume 2013 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; Engineering Structures and Technologies Volume 2014 ; 6 ; 2014 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; Engineering Structures and Technologies Volume 2015 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Engineering Structures and Technologies Volume 2016 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Engineering Structures and Technologies Volume 2017 ; 9 ; 2017 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Engineering Structures and Technologies Volume 2018 ; 10 ; 2018 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; Engineering Structures and Technologies Volume 2019 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ;  >
+      au < finished ; crawling ; 2010 ; Engineering Structures and Technologies Volume 2010 ; 2 ; 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Engineering Structures and Technologies Volume 2011 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Engineering Structures and Technologies Volume 2012 ; 4 ; 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Engineering Structures and Technologies Volume 2013 ; 5 ; 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Engineering Structures and Technologies Volume 2014 ; 6 ; 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Engineering Structures and Technologies Volume 2015 ; 7 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Engineering Structures and Technologies Volume 2016 ; 8 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Engineering Structures and Technologies Volume 2017 ; 9 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Engineering Structures and Technologies Volume 2018 ; 10 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Engineering Structures and Technologies Volume 2019 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ;  >
       au < expected ; exists ; 2021 ; Engineering Structures and Technologies Volume 2021 ; 13 ; 2021 ;  >
 
   }
@@ -171,21 +186,21 @@
       au < manifest ; exists ; 2004 ; Geodesy and Cartography Volume 2004 ; 1 ; 2004 ;  >
       au < manifest ; exists ; 2005 ; Geodesy and Cartography Volume 2005 ; 2 ; 2005 ;  >
       au < frozen ; exists ; 2006 ; Geodesy and Cartography Volume 2006 ; 3 ; 2006 ;  >
-      au < crawling ; exists ; 2007 ; Geodesy and Cartography Volume 2007 ; 4 ; 2007 ;  >
-      au < crawling ; exists ; 2008 ; Geodesy and Cartography Volume 2008 ; 5 ; 2008 ;  >
-      au < crawling ; exists ; 2009 ; Geodesy and Cartography Volume 2009 ; 6 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Geodesy and Cartography Volume 2010 ; 7 ; 2010 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Geodesy and Cartography Volume 2011 ; 8 ; 2011 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Geodesy and Cartography Volume 2012 ; 9 ; 2012 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Geodesy and Cartography Volume 2013 ; 10 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; Geodesy and Cartography Volume 2014 ; 11 ; 2014 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; Geodesy and Cartography Volume 2015 ; 12 ; 2015 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Geodesy and Cartography Volume 2016 ; 13 ; 2016 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Geodesy and Cartography Volume 2017 ; 14 ; 2017 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Geodesy and Cartography Volume 2018 ; 15 ; 2018 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; Geodesy and Cartography Volume 2019 ; 16 ; 2019 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Geodesy and Cartography Volume 2020 ; 17 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Geodesy and Cartography Volume 2021 ; 18 ; 2021 ;  >
+      au < frozen ; exists ; 2007 ; Geodesy and Cartography Volume 2007 ; 4 ; 2007 ;  >
+      au < frozen ; exists ; 2008 ; Geodesy and Cartography Volume 2008 ; 5 ; 2008 ;  >
+      au < frozen ; exists ; 2009 ; Geodesy and Cartography Volume 2009 ; 6 ; 2009 ;  >
+      au < finished ; crawling ; 2010 ; Geodesy and Cartography Volume 2010 ; 7 ; 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Geodesy and Cartography Volume 2011 ; 8 ; 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Geodesy and Cartography Volume 2012 ; 9 ; 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Geodesy and Cartography Volume 2013 ; 10 ; 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Geodesy and Cartography Volume 2014 ; 11 ; 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Geodesy and Cartography Volume 2015 ; 12 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Geodesy and Cartography Volume 2016 ; 13 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Geodesy and Cartography Volume 2017 ; 14 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Geodesy and Cartography Volume 2018 ; 15 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2019 ; Geodesy and Cartography Volume 2019 ; 16 ; 2019 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2020 ; Geodesy and Cartography Volume 2020 ; 17 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Geodesy and Cartography Volume 2021 ; 18 ; 2021 ;  >
 
   }
 
@@ -205,18 +220,18 @@
       au < frozen ; exists ; 2007 ; International Journal of Strategic Property Management Volume 2007 ; 4 ; 2007 ;  >
       au < frozen ; exists ; 2008 ; International Journal of Strategic Property Management Volume 2008 ; 5 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; International Journal of Strategic Property Management Volume 2009 ; 6 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; International Journal of Strategic Property Management Volume 2010 ; 7 ; 2010 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; International Journal of Strategic Property Management Volume 2011 ; 8 ; 2011 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; International Journal of Strategic Property Management Volume 2012 ; 9 ; 2012 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; International Journal of Strategic Property Management Volume 2013 ; 10 ; 2013 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; International Journal of Strategic Property Management Volume 2014 ; 11 ; 2014 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2015 ; International Journal of Strategic Property Management Volume 2015 ; 12 ; 2015 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2016 ; International Journal of Strategic Property Management Volume 2016 ; 13 ; 2016 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; International Journal of Strategic Property Management Volume 2017 ; 14 ; 2017 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; International Journal of Strategic Property Management Volume 2018 ; 15 ; 2018 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; International Journal of Strategic Property Management Volume 2019 ; 16 ; 2019 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; International Journal of Strategic Property Management Volume 2020 ; 17 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; International Journal of Strategic Property Management Volume 2021 ; 18 ; 2021 ;  >
+      au < finished ; crawling ; 2010 ; International Journal of Strategic Property Management Volume 2010 ; 7 ; 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; International Journal of Strategic Property Management Volume 2011 ; 8 ; 2011 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; International Journal of Strategic Property Management Volume 2012 ; 9 ; 2012 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; International Journal of Strategic Property Management Volume 2013 ; 10 ; 2013 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; International Journal of Strategic Property Management Volume 2014 ; 11 ; 2014 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2015 ; International Journal of Strategic Property Management Volume 2015 ; 12 ; 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; International Journal of Strategic Property Management Volume 2016 ; 13 ; 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; International Journal of Strategic Property Management Volume 2017 ; 14 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; International Journal of Strategic Property Management Volume 2018 ; 15 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; International Journal of Strategic Property Management Volume 2019 ; 16 ; 2019 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2020 ; International Journal of Strategic Property Management Volume 2020 ; 17 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; International Journal of Strategic Property Management Volume 2021 ; 18 ; 2021 ;  >
 
   }
 
@@ -230,22 +245,22 @@
 
       param[journal_id] = JAU
 
-      au < crawling ; exists ; 2006 ; Journal of Architecture and Urbanism Volume 2006 ; 1 ; 2006 ;  >
+      au < frozen ; exists ; 2006 ; Journal of Architecture and Urbanism Volume 2006 ; 1 ; 2006 ;  >
       au < frozen ; exists ; 2007 ; Journal of Architecture and Urbanism Volume 2007 ; 2 ; 2007 ;  >
       au < frozen ; exists ; 2008 ; Journal of Architecture and Urbanism Volume 2008 ; 3 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Journal of Architecture and Urbanism Volume 2009 ; 4 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Journal of Architecture and Urbanism Volume 2010 ; 5 ; 2010 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2011 ; Journal of Architecture and Urbanism Volume 2011 ; 6 ; 2011 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Journal of Architecture and Urbanism Volume 2012 ; 7 ; 2012 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Journal of Architecture and Urbanism Volume 2013 ; 8 ; 2013 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Journal of Architecture and Urbanism Volume 2014 ; 9 ; 2014 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Journal of Architecture and Urbanism Volume 2015 ; 10 ; 2015 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016 ; Journal of Architecture and Urbanism Volume 2016 ; 11 ; 2016 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2017 ; Journal of Architecture and Urbanism Volume 2017 ; 12 ; 2017 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Journal of Architecture and Urbanism Volume 2018 ; 13 ; 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Journal of Architecture and Urbanism Volume 2010 ; 5 ; 2010 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; Journal of Architecture and Urbanism Volume 2011 ; 6 ; 2011 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Journal of Architecture and Urbanism Volume 2012 ; 7 ; 2012 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Journal of Architecture and Urbanism Volume 2013 ; 8 ; 2013 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Architecture and Urbanism Volume 2014 ; 9 ; 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Architecture and Urbanism Volume 2015 ; 10 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016 ; Journal of Architecture and Urbanism Volume 2016 ; 11 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; Journal of Architecture and Urbanism Volume 2017 ; 12 ; 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Journal of Architecture and Urbanism Volume 2018 ; 13 ; 2018 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Journal of Architecture and Urbanism Volume 2019 ; 14 ; 2019 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Journal of Architecture and Urbanism Volume 2020 ; 15 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Journal of Architecture and Urbanism Volume 2021 ; 16 ; 2021 ;  >
+      au < deepCrawl ; exists ; 2020 ; Journal of Architecture and Urbanism Volume 2020 ; 15 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Journal of Architecture and Urbanism Volume 2021 ; 16 ; 2021 ;  >
 
   }
 
@@ -262,22 +277,22 @@
       au < manifest ; exists ; 2003 ; Journal of Business Economics and Management Volume 2003 ; 1 ; 2003 ;  >
       au < manifest ; exists ; 2004 ; Journal of Business Economics and Management Volume 2004 ; 2 ; 2004 ;  >
       au < manifest ; exists ; 2005 ; Journal of Business Economics and Management Volume 2005 ; 3 ; 2005 ;  >
-      au < crawling ; exists ; 2006 ; Journal of Business Economics and Management Volume 2006 ; 4 ; 2006 ;  >
+      au < frozen ; exists ; 2006 ; Journal of Business Economics and Management Volume 2006 ; 4 ; 2006 ;  >
       au < frozen ; exists ; 2007 ; Journal of Business Economics and Management Volume 2007 ; 5 ; 2007 ;  >
       au < frozen ; exists ; 2008 ; Journal of Business Economics and Management Volume 2008 ; 6 ; 2008 ;  >
-      au < finished ; manifest ; 2009 ; Journal of Business Economics and Management Volume 2009 ; 7 ; 2009 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2010 ; Journal of Business Economics and Management Volume 2010 ; 8 ; 2010 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2011 ; Journal of Business Economics and Management Volume 2011 ; 9 ; 2011 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2012 ; Journal of Business Economics and Management Volume 2012 ; 10 ; 2012 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Journal of Business Economics and Management Volume 2013 ; 11 ; 2013 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Journal of Business Economics and Management Volume 2014 ; 12 ; 2014 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Journal of Business Economics and Management Volume 2015 ; 13 ; 2015 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016 ; Journal of Business Economics and Management Volume 2016 ; 14 ; 2016 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2017 ; Journal of Business Economics and Management Volume 2017 ; 15 ; 2017 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Journal of Business Economics and Management Volume 2018 ; 16 ; 2018 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Journal of Business Economics and Management Volume 2019 ; 17 ; 2019 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Journal of Business Economics and Management Volume 2020 ; 18 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Journal of Business Economics and Management Volume 2021 ; 19 ; 2021 ;  >
+      au < finished ; crawling ; 2009 ; Journal of Business Economics and Management Volume 2009 ; 7 ; 2009 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Journal of Business Economics and Management Volume 2010 ; 8 ; 2010 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2011 ; Journal of Business Economics and Management Volume 2011 ; 9 ; 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2012 ; Journal of Business Economics and Management Volume 2012 ; 10 ; 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Journal of Business Economics and Management Volume 2013 ; 11 ; 2013 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Business Economics and Management Volume 2014 ; 12 ; 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Business Economics and Management Volume 2015 ; 13 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016 ; Journal of Business Economics and Management Volume 2016 ; 14 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; Journal of Business Economics and Management Volume 2017 ; 15 ; 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Journal of Business Economics and Management Volume 2018 ; 16 ; 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Journal of Business Economics and Management Volume 2019 ; 17 ; 2019 ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Journal of Business Economics and Management Volume 2020 ; 18 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Journal of Business Economics and Management Volume 2021 ; 19 ; 2021 ;  >
 
   }
 
@@ -306,18 +321,18 @@
       au < frozen ; exists ; 2007 ; Journal of Civil Engineering and Management Volume 2007 ; 13 ; 2007 ;  >
       au < frozen ; exists ; 2008 ; Journal of Civil Engineering and Management Volume 2008 ; 14 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Journal of Civil Engineering and Management Volume 2009 ; 15 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Journal of Civil Engineering and Management Volume 2010 ; 16 ; 2010 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Journal of Civil Engineering and Management Volume 2011 ; 17 ; 2011 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2012 ; Journal of Civil Engineering and Management Volume 2012 ; 18 ; 2012 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2013 ; Journal of Civil Engineering and Management Volume 2013 ; 19 ; 2013 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; Journal of Civil Engineering and Management Volume 2014 ; 20 ; 2014 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Journal of Civil Engineering and Management Volume 2015 ; 21 ; 2015 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Civil Engineering and Management Volume 2016 ; 22 ; 2016 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Journal of Civil Engineering and Management Volume 2017 ; 23 ; 2017 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; Journal of Civil Engineering and Management Volume 2018 ; 24 ; 2018 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; Journal of Civil Engineering and Management Volume 2019 ; 25 ; 2019 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Journal of Civil Engineering and Management Volume 2020 ; 26 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Journal of Civil Engineering and Management Volume 2021 ; 27 ; 2021 ;  >
+      au < finished ; crawling ; 2010 ; Journal of Civil Engineering and Management Volume 2010 ; 16 ; 2010 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Journal of Civil Engineering and Management Volume 2011 ; 17 ; 2011 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; Journal of Civil Engineering and Management Volume 2012 ; 18 ; 2012 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2013 ; Journal of Civil Engineering and Management Volume 2013 ; 19 ; 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; Journal of Civil Engineering and Management Volume 2014 ; 20 ; 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Civil Engineering and Management Volume 2015 ; 21 ; 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Civil Engineering and Management Volume 2016 ; 22 ; 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2017 ; Journal of Civil Engineering and Management Volume 2017 ; 23 ; 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; Journal of Civil Engineering and Management Volume 2018 ; 24 ; 2018 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; Journal of Civil Engineering and Management Volume 2019 ; 25 ; 2019 ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Journal of Civil Engineering and Management Volume 2020 ; 26 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Journal of Civil Engineering and Management Volume 2021 ; 27 ; 2021 ;  >
 
   }
 
@@ -333,22 +348,22 @@
 
       au < manifest ; exists ; 2004 ; Journal of Environmental Engineering and Landscape Management Volume 2004 ; 1 ; 2004 ;  >
       au < manifest ; exists ; 2005 ; Journal of Environmental Engineering and Landscape Management Volume 2005 ; 2 ; 2005 ;  >
-      au < crawling ; exists ; 2006 ; Journal of Environmental Engineering and Landscape Management Volume 2006 ; 3 ; 2006 ;  >
-      au < crawling ; exists ; 2007 ; Journal of Environmental Engineering and Landscape Management Volume 2007 ; 4 ; 2007 ;  >
+      au < frozen ; exists ; 2006 ; Journal of Environmental Engineering and Landscape Management Volume 2006 ; 3 ; 2006 ;  >
+      au < frozen ; exists ; 2007 ; Journal of Environmental Engineering and Landscape Management Volume 2007 ; 4 ; 2007 ;  >
       au < frozen ; exists ; 2008 ; Journal of Environmental Engineering and Landscape Management Volume 2008 ; 5 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Journal of Environmental Engineering and Landscape Management Volume 2009 ; 6 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Journal of Environmental Engineering and Landscape Management Volume 2010 ; 7 ; 2010 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Journal of Environmental Engineering and Landscape Management Volume 2011 ; 8 ; 2011 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Journal of Environmental Engineering and Landscape Management Volume 2012 ; 9 ; 2012 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013 ; Journal of Environmental Engineering and Landscape Management Volume 2013 ; 10 ; 2013 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2014 ; Journal of Environmental Engineering and Landscape Management Volume 2014 ; 11 ; 2014 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2015 ; Journal of Environmental Engineering and Landscape Management Volume 2015 ; 12 ; 2015 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Journal of Environmental Engineering and Landscape Management Volume 2016 ; 13 ; 2016 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Journal of Environmental Engineering and Landscape Management Volume 2017 ; 14 ; 2017 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2018 ; Journal of Environmental Engineering and Landscape Management Volume 2018 ; 15 ; 2018 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; Journal of Environmental Engineering and Landscape Management Volume 2019 ; 16 ; 2019 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Journal of Environmental Engineering and Landscape Management Volume 2020 ; 17 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Journal of Environmental Engineering and Landscape Management Volume 2021 ; 18 ; 2021 ;  >
+      au < finished ; crawling ; 2010 ; Journal of Environmental Engineering and Landscape Management Volume 2010 ; 7 ; 2010 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Journal of Environmental Engineering and Landscape Management Volume 2011 ; 8 ; 2011 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Journal of Environmental Engineering and Landscape Management Volume 2012 ; 9 ; 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; Journal of Environmental Engineering and Landscape Management Volume 2013 ; 10 ; 2013 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2014 ; Journal of Environmental Engineering and Landscape Management Volume 2014 ; 11 ; 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2015 ; Journal of Environmental Engineering and Landscape Management Volume 2015 ; 12 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Journal of Environmental Engineering and Landscape Management Volume 2016 ; 13 ; 2016 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Journal of Environmental Engineering and Landscape Management Volume 2017 ; 14 ; 2017 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2018 ; Journal of Environmental Engineering and Landscape Management Volume 2018 ; 15 ; 2018 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; Journal of Environmental Engineering and Landscape Management Volume 2019 ; 16 ; 2019 ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2020 ; Journal of Environmental Engineering and Landscape Management Volume 2020 ; 17 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Journal of Environmental Engineering and Landscape Management Volume 2021 ; 18 ; 2021 ;  >
 
   }
 
@@ -373,21 +388,21 @@
       au < manifest ; exists ; 2004 ; Mathematical Modelling and Analysis Volume 2004 ; 9 ; 2004 ;  >
       au < manifest ; exists ; 2005 ; Mathematical Modelling and Analysis Volume 2005 ; 10 ; 2005 ;  >
       au < frozen ; exists ; 2006 ; Mathematical Modelling and Analysis Volume 2006 ; 11 ; 2006 ;  >
-      au < crawling ; exists ; 2007 ; Mathematical Modelling and Analysis Volume 2007 ; 12 ; 2007 ;  >
-      au < crawling ; exists ; 2008 ; Mathematical Modelling and Analysis Volume 2008 ; 13 ; 2008 ;  >
+      au < frozen ; exists ; 2007 ; Mathematical Modelling and Analysis Volume 2007 ; 12 ; 2007 ;  >
+      au < frozen ; exists ; 2008 ; Mathematical Modelling and Analysis Volume 2008 ; 13 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Mathematical Modelling and Analysis Volume 2009 ; 14 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Mathematical Modelling and Analysis Volume 2010 ; 15 ; 2010 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Mathematical Modelling and Analysis Volume 2011 ; 16 ; 2011 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Mathematical Modelling and Analysis Volume 2012 ; 17 ; 2012 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013 ; Mathematical Modelling and Analysis Volume 2013 ; 18 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; Mathematical Modelling and Analysis Volume 2014 ; 19 ; 2014 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; Mathematical Modelling and Analysis Volume 2015 ; 20 ; 2015 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Mathematical Modelling and Analysis Volume 2016 ; 21 ; 2016 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Mathematical Modelling and Analysis Volume 2017 ; 22 ; 2017 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Mathematical Modelling and Analysis Volume 2018 ; 23 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2010 ; Mathematical Modelling and Analysis Volume 2010 ; 15 ; 2010 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Mathematical Modelling and Analysis Volume 2011 ; 16 ; 2011 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Mathematical Modelling and Analysis Volume 2012 ; 17 ; 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; Mathematical Modelling and Analysis Volume 2013 ; 18 ; 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Mathematical Modelling and Analysis Volume 2014 ; 19 ; 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Mathematical Modelling and Analysis Volume 2015 ; 20 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Mathematical Modelling and Analysis Volume 2016 ; 21 ; 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Mathematical Modelling and Analysis Volume 2017 ; 22 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Mathematical Modelling and Analysis Volume 2018 ; 23 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Mathematical Modelling and Analysis Volume 2019 ; 24 ; 2019 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; Mathematical Modelling and Analysis Volume 2020 ; 25 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Mathematical Modelling and Analysis Volume 2021 ; 26 ; 2021 ;  >
+      au < deepCrawl ; exists ; 2020 ; Mathematical Modelling and Analysis Volume 2020 ; 25 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Mathematical Modelling and Analysis Volume 2021 ; 26 ; 2021 ;  >
 
   }
 
@@ -410,10 +425,10 @@
       au < doNotProcess ; exists ; 2015 ; Science - Future of Lithuania Volume 2015 ; 7 ; 2015 ;  >
       au < doNotProcess ; exists ; 2016 ; Science - Future of Lithuania Volume 2016 ; 8 ; 2016 ;  >
       au < doNotProcess ; exists ; 2017 ; Science - Future of Lithuania Volume 2017 ; 9 ; 2017 ;  >
-      au < finished ; manifest ; 2018 ; Science - Future of Lithuania Volume 2018 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2018 ; Science - Future of Lithuania Volume 2018 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Science - Future of Lithuania Volume 2019 ; 11 ; 2019 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Science - Future of Lithuania Volume 2021 ; 13 ; 2021 ;  >
+      au < deepCrawl ; exists ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Science - Future of Lithuania Volume 2021 ; 13 ; 2021 ;  >
 
   }
 
@@ -433,18 +448,18 @@
       au < frozen ; exists ; 2007 ; Technological and Economic Development of Economy Volume 2007 ; 4 ; 2007 ;  >
       au < frozen ; exists ; 2008 ; Technological and Economic Development of Economy Volume 2008 ; 5 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Technological and Economic Development of Economy Volume 2009 ; 6 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Technological and Economic Development of Economy Volume 2010 ; 7 ; 2010 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Technological and Economic Development of Economy Volume 2011 ; 8 ; 2011 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Technological and Economic Development of Economy Volume 2012 ; 9 ; 2012 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2013 ; Technological and Economic Development of Economy Volume 2013 ; 10 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; Technological and Economic Development of Economy Volume 2014 ; 11 ; 2014 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; Technological and Economic Development of Economy Volume 2015 ; 12 ; 2015 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Technological and Economic Development of Economy Volume 2016 ; 13 ; 2016 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Technological and Economic Development of Economy Volume 2017 ; 14 ; 2017 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Technological and Economic Development of Economy Volume 2018 ; 15 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Technological and Economic Development of Economy Volume 2010 ; 7 ; 2010 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Technological and Economic Development of Economy Volume 2011 ; 8 ; 2011 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Technological and Economic Development of Economy Volume 2012 ; 9 ; 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2013 ; Technological and Economic Development of Economy Volume 2013 ; 10 ; 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Technological and Economic Development of Economy Volume 2014 ; 11 ; 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Technological and Economic Development of Economy Volume 2015 ; 12 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Technological and Economic Development of Economy Volume 2016 ; 13 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Technological and Economic Development of Economy Volume 2017 ; 14 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Technological and Economic Development of Economy Volume 2018 ; 15 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Technological and Economic Development of Economy Volume 2019 ; 16 ; 2019 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Technological and Economic Development of Economy Volume 2020 ; 17 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Technological and Economic Development of Economy Volume 2021 ; 18 ; 2021 ;  >
+      au < deepCrawl ; exists ; 2020 ; Technological and Economic Development of Economy Volume 2020 ; 17 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Technological and Economic Development of Economy Volume 2021 ; 18 ; 2021 ;  >
 
   }
 
@@ -466,18 +481,18 @@
       au < frozen ; exists ; 2007 ; Transport Volume 2007 ; 6 ; 2007 ;  >
       au < frozen ; exists ; 2008 ; Transport Volume 2008 ; 7 ; 2008 ;  >
       au < frozen ; exists ; 2009 ; Transport Volume 2009 ; 8 ; 2009 ;  >
-      au < finished ; manifest ; 2010 ; Transport Volume 2010 ; 9 ; 2010 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2011 ; Transport Volume 2011 ; 10 ; 2011 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2012 ; Transport Volume 2012 ; 11 ; 2012 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; Transport Volume 2013 ; 12 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2014 ; Transport Volume 2014 ; 13 ; 2014 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; Transport Volume 2015 ; 14 ; 2015 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Transport Volume 2016 ; 15 ; 2016 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; Transport Volume 2017 ; 16 ; 2017 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Transport Volume 2018 ; 17 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2010 ; Transport Volume 2010 ; 9 ; 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; Transport Volume 2011 ; 10 ; 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Transport Volume 2012 ; 11 ; 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; Transport Volume 2013 ; 12 ; 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2014 ; Transport Volume 2014 ; 13 ; 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; Transport Volume 2015 ; 14 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2016 ; Transport Volume 2016 ; 15 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2017 ; Transport Volume 2017 ; 16 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; Transport Volume 2018 ; 17 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; Transport Volume 2019 ; 18 ; 2019 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2020 ; Transport Volume 2020 ; 19 ; 2020 ;  >
-      au < manifest ; exists ; 2021 ; Transport Volume 2021 ; 20 ; 2021 ;  >
+      au < deepCrawl ; exists ; 2020 ; Transport Volume 2020 ; 19 ; 2020 ;  >
+      au < crawling ; exists ; 2021 ; Transport Volume 2021 ; 20 ; 2021 ;  >
 
   }
 

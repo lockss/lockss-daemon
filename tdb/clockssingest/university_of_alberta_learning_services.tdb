@@ -29,8 +29,8 @@
 
         au < frozen ; exists ; 2018 ; Journal of Pharmacy and Pharmaceutical Science Volume 21 ; 2018 ; 21 ; >
         au < frozen ; exists ; 2019 ; Journal of Pharmacy and Pharmaceutical Science Volume 22 ; 2019 ; 22 ; >
-        au < crawling ; exists ; 2020 ; Journal of Pharmacy and Pharmaceutical Science Volume 23 ; 2020 ; 22 ; >
-        au < manifest ; exists ; 2021 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2021 ; 23 ; >
+        au < deepCrawl ; exists ; 2020 ; Journal of Pharmacy and Pharmaceutical Science Volume 23 ; 2020 ; 22 ; >
+        au < crawling ; exists ; 2021 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2021 ; 23 ; >
         }
         {
         plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
@@ -64,12 +64,10 @@
         param[base_url] = https://journals.library.ualberta.ca/eblip/
         implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
         
-        #manifest pages don't have links, for example https://journals.library.ualberta.ca/eblip/index.php/EBLIP/gateway/lockss?year=2018
-
-        au < manifest ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 ; >
-        au < manifest ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 ; >
-        au < manifest ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 ; >
-        au < manifest ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 ; >
+        au < notReady ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 ; > #500 errors for newsy "articles" See LXQUEUE-1793
+        au < notReady ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 ; > #500 errors for newsy "articles" See LXQUEUE-1793
+        au < notReady ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 ; > #500 errors for newsy "articles" See LXQUEUE-1793
+        au < notReady ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 ; > #500 errors for newsy "articles" See LXQUEUE-1793
         au < doNotProcess ; doNotProcess ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 ; >
         au < doNotProcess ; doNotProcess ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 ; >
         au < doNotProcess ; doNotProcess ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 ; >
@@ -77,11 +75,11 @@
         au < doNotProcess ; doNotProcess ; 2014 ; Evidence Based Library and Information Practice Volume 9 ; 2014 ; 9 ; >
         au < doNotProcess ; doNotProcess ; 2015 ; Evidence Based Library and Information Practice Volume 10 ; 2015 ; 10 ; >
         au < doNotProcess ; doNotProcess ; 2016 ; Evidence Based Library and Information Practice Volume 11 ; 2016 ; 11 ; >
-        au < crawling ; exists ; 2017 ; Evidence Based Library and Information Practice Volume 12 ; 2017 ; 12 ; >
-        au < crawling ; exists ; 2018 ; Evidence Based Library and Information Practice Volume 13 ; 2018 ; 13 ; >
-        au < crawling ; exists ; 2019 ; Evidence Based Library and Information Practice Volume 14 ; 2019 ; 14 ; >
-        au < crawling ; exists ; 2020 ; Evidence Based Library and Information Practice Volume 15 ; 2020 ; 15 ; >
-        au < manifest ; exists ; 2021 ; Evidence Based Library and Information Practice Volume 16 ; 2021 ; 16 ; >
+        au < frozen ; exists ; 2017 ; Evidence Based Library and Information Practice Volume 12 ; 2017 ; 12 ; >
+        au < frozen ; exists ; 2018 ; Evidence Based Library and Information Practice Volume 13 ; 2018 ; 13 ; >
+        au < frozen ; exists ; 2019 ; Evidence Based Library and Information Practice Volume 14 ; 2019 ; 14 ; >
+        au < frozen ; exists ; 2020 ; Evidence Based Library and Information Practice Volume 15 ; 2020 ; 15 ; >
+        au < crawling ; exists ; 2021 ; Evidence Based Library and Information Practice Volume 16 ; 2021 ; 16 ; >
 
       }
       

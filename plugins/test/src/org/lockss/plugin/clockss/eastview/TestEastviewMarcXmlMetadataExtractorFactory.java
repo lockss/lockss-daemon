@@ -10,12 +10,11 @@ import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
-import org.lockss.util.CIProperties;
-import org.lockss.util.Constants;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,15 +28,18 @@ public class TestEastviewMarcXmlMetadataExtractorFactory extends SourceXmlMetada
     private static String pdfUrl1 = BaseUrl + Directory + "/1275770BO.pdf";
     private static String pdfUrl2 = BaseUrl + Directory + "/1275773BO.pdf";
 
-    private static String getXmlFileContent(String fname) {
+    private String getXmlFileContent(String fname) {
         String xmlContent = "";
+        InputStream file_input = null;
+
         try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/eastview/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
+            file_input = getResourceAsStream(fname);
+            xmlContent = StringUtil.fromInputStream(file_input);
+            IOUtil.safeClose(file_input);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
+        } finally {
+            IOUtil.safeClose(file_input);
         }
         return xmlContent;
     }

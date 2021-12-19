@@ -48,7 +48,6 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.state.NodeManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -83,6 +82,8 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
 
     au = createAu();
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
   
   public void tearDown() throws Exception {
@@ -220,10 +221,6 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
 
 private void deleteBlock(CachedUrl cu) throws IOException {
   log.info("deleting " + cu.getUrl());
-  CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-  ArchivalUnit au = cu.getArchivalUnit();
-  CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-  NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-  nm.deleteNode(cus);
+    cu.delete();
 }
 }

@@ -38,6 +38,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 __version__ = '0.1'
 
+_service = 'ExportService'
+
 import sys
 
 try: import zeep
@@ -48,13 +50,11 @@ import getpass
 import itertools
 from multiprocessing.dummy import Pool as ThreadPool
 import os.path
-import requests.auth
 from threading import Thread
 import zeep.exceptions
 import zeep.helpers
-import zeep.transports
 
-import logging.config
+from wsutil import file_lines, make_client, enable_zeep_debugging, host_help_prefix
 
 #
 # Library
@@ -64,9 +64,10 @@ def create_export_files(host, username, password, auid, options):
   '''Performs a createExportFiles operation on the given host for the given AUID, and
   returns a record with the files.
   Parameters:
-  - host (string): a host:port pair
-  - auth (ZSI authentication object): an authentication object
-  - auid (string): an AUID
+    :param host: a host:port pair (string)
+    :param username: a username for the host (string)
+    :param password: a password for the host (string)
+    :param auid: an auid to hash (string)
   Returns:
   - ret (dict):
     {
@@ -90,10 +91,8 @@ def create_export_files(host, username, password, auid, options):
     'maxVersions': options.max_vers,
     'xlateFilenames': options.translate
   }
-  client = _make_client(host, username, password)
+  client = make_client(host, username, password, _service)
   try:
-    # ret = _ws_port(host, auth).createExportFiles(req)
-    # return ret.Return
     ret = client.service.createExportFiles(req)
     return zeep.helpers.serialize_object(ret)
   except zeep.exceptions.Fault as e:
@@ -113,35 +112,47 @@ class _ExportServiceOptions(object):
     usage = '%(prog)s {--host=HOST|--hosts=HFILE}... [OPTIONS]'
     parser = argparse.ArgumentParser(description=__doc__, usage=usage)
     parser.add_argument('--version', '-V', action='version', version=__version__)
-    parser.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
     # Hosts
     group = parser.add_argument_group('Target hosts')
-    group.add_argument('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
-    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
+    group.add_argument('--host', action='append', default=list(),
+                       help=host_help_prefix + ' to list of target hosts')
+    group.add_argument('--hosts', action='append', default=list(), metavar='HFILE',
+                       help=host_help_prefix + ' in HFILE to list of target hosts')
     group.add_argument('--password', metavar='PASS', help='UI password (default: interactive prompt)')
     group.add_argument('--username', metavar='USER', help='UI username (default: interactive prompt)')
     # AUIDs
     group = parser.add_argument_group('Target AUIDs')
     group.add_argument('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
-    group.add_argument('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
+    group.add_argument('--auids', action='append', default=list(), metavar='AFILE',
+                       help='add AUIDs in AFILE to list of target AUIDs')
     # AUID operations
     group = parser.add_argument_group('AU operations')
     # this seems to be redundant. leaving in in case some future functionality does make this an optional flag
-    group.add_argument('--create-export-files', action='store_true', required=True, help='output export files of target AUIDs')
+    group.add_argument('--create-export-files', action='store_true', required=True,
+                       help='output export files of target AUIDs')
     # Output
     group = parser.add_argument_group('Output')
-    group.add_argument('--output-directory', metavar='OUTDIR', default='.', help='output directory (default: current directory)')
-    group.add_argument('--output-prefix', metavar='PREFIX', default='exportservice', help='prefix for output file names (default: %(default)s)')
-    group.add_argument('--compress', action='store_false', help='compress the export files (default: True).')
-    group.add_argument('--exclude-dir', action='store_false', help='exclude directory nodes from the export files (default: True).')
-    group.add_argument('--file-type', default="ZIP", choices=['ZIP'], help='file type of the exported AU. (default: %(default)s)')
+    group.add_argument('--output-directory', metavar='OUTDIR', default='.',
+                       help='output directory (default: current directory)')
+    group.add_argument('--output-prefix', metavar='PREFIX', default='exportservice',
+                       help='prefix for output file names (default: %(default)s)')
+    group.add_argument('--compress', action='store_false',
+                       help='compress the export files (default: True).')
+    group.add_argument('--exclude-dir', action='store_false',
+                       help='exclude directory nodes from the export files (default: True).')
+    group.add_argument('--file-type', default="ZIP", choices=['ZIP'],
+                       help='file type of the exported AU. (default: %(default)s)')
     group.add_argument('--max-size', default=1000, type=int, help=' (default: %(default)d)')
     group.add_argument('--max-vers', default=-1, type=int, help=' (default: %(default)d)')
-    group.add_argument('--translate', default=None, choices=[None], help='translate export file filenames. (default: %(default)s)')
+    group.add_argument('--translate', default=None, choices=[None],
+                       help='translate export file filenames. (default: %(default)s)')
     # Other options
     group = parser.add_argument_group('Other options')
-    group.add_argument('--group-by-field', action='store_true', default=False, help='group results by field instead of host')
+    group.add_argument('--group-by-field', action='store_true', default=False,
+                       help='group results by field instead of host')
     group.add_argument('--threads', type=int, help='max parallel jobs allowed (default: no limit)')
+    group.add_argument('--debug-zeep', action='store_true', help='adds zeep debugging logging')
+
     return parser
 
   def __init__(self, parser, args):
@@ -158,11 +169,11 @@ class _ExportServiceOptions(object):
       parser.error('--auid, --auids can only be applied to --create-export-files')
     # hosts
     self.hosts = args.host[:]
-    for f in args.hosts: self.hosts.extend(_file_lines(f))
+    for f in args.hosts: self.hosts.extend(file_lines(f))
     if len(self.hosts) == 0: parser.error('at least one target host is required')
     # auids
     self.auids = args.auid[:]
-    for f in args.auids: self.auids.extend(_file_lines(f))
+    for f in args.auids: self.auids.extend(file_lines(f))
     # get_auids/get_auids_names/is_daemon_ready/is_daemon_ready_quiet
     if len(self.auids) == 0: parser.error('at least one target AUID is required')
     # create_export_files
@@ -187,13 +198,12 @@ class _ExportServiceOptions(object):
     self.max_size = args.max_size
     self.max_vers = args.max_vers
     self.translate = args.translate
-    # verbosity (adds logging for zeep)
+    # add logging for zeep
     if args.debug_zeep:
-      _enable_zeep_debugging()
+      enable_zeep_debugging()
     # auth
     self._u = args.username or getpass.getpass('UI username: ')
     self._p = args.password or getpass.getpass('UI password: ')
-    #self.auth = requests_basic_auth(self._u, self._p)
 
 # Last modified 2018-03-19 for unicode support and boolean False when boolean is None
 def _output_record(options, lst):
@@ -210,13 +220,6 @@ def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
     _output_record(options, rowpart + [x[j] for x in colkeys])
   for rowkey in sorted(set([k[0] for k in data]), key=rowsort):
     _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
-
-# Last modified 2021-05-28
-def _file_lines(fstr):
-  with open(os.path.expanduser(fstr)) as f:
-    ret = list(filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f]))
-  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
-  return ret
 
 _AU_STATUS = {
   'name': ('File name', lambda r: r.get('name')),
@@ -249,38 +252,6 @@ def _do_create_export_files(options):
 def _dispatch(options):
   if options.create_export_files: _do_create_export_files(options)
   else: raise RuntimeError('Unreachable')
-
-def _make_client(host, username, password):
-  session = requests.Session()
-  session.auth = requests.auth.HTTPBasicAuth(username, password)
-  transport = zeep.transports.Transport(session=session)
-  wsdl = 'http://{}/ws/ExportService?wsdl'.format(host)
-  client = zeep.Client(wsdl, transport=transport)
-  return client
-
-def _enable_zeep_debugging():
-  logging.config.dictConfig({
-    'version': 1,
-    'formatters': {
-      'verbose': {
-        'format': '%(name)s: %(message)s'
-      }
-    },
-    'handlers': {
-      'console': {
-        'level': 'DEBUG',
-        'class': 'logging.StreamHandler',
-        'formatter': 'verbose',
-      },
-    },
-    'loggers': {
-      'zeep.transports': {
-        'level': 'DEBUG',
-        'propagate': True,
-        'handlers': ['console'],
-      },
-    }
-  })
 
 def _main():
   '''Main method.'''

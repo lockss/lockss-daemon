@@ -35,7 +35,6 @@ package org.lockss.plugin.nature;
 import java.io.*;
 import java.util.*;
 
-import org.lockss.state.NodeManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -69,6 +68,8 @@ public class TestNatureArticleIteratorFactory extends LockssTestCase {
 
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
     nau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, natureAuConfig());
+
+    ConfigurationUtil.addFromArgs(CachedUrl.PARAM_ALLOW_DELETE, "true");
   }
 
   public void tearDown() throws Exception {
@@ -152,11 +153,7 @@ public class TestNatureArticleIteratorFactory extends LockssTestCase {
 
   private void deleteBlock(CachedUrl cu) throws IOException {
     //log.info("deleting " + cu.getUrl());
-    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
-    ArchivalUnit au = cu.getArchivalUnit();
-    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
-    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
-    nm.deleteNode(cus);
+    cu.delete();
   }
 
   

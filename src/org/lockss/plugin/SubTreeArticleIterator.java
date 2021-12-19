@@ -382,6 +382,15 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     public boolean isVisitArchiveMembers() {
       return isVisitArchiveMembers;
     }
+
+    public String toString() {
+      return "[SAISpec: " +
+        "mime: " + mimeType +
+        ", roots: " + (roots != null ? roots : rootTemplates) +
+        ", mat: " + matchPatSpec +
+        ", incl: " + includePatSpec +
+        ", excl: " + excludePatSpec + "]";
+    }
   }
 
   /** Encapsulates the various ways to specifiy a pattern (as a compiled
@@ -422,6 +431,12 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     public int getPatternFlags() {
       return patFlags;
     }
+
+    public String toString() {
+      return "[PatSpec: " +
+        (getPattern() != null ? getPattern().pattern() : getPatternTemplate()) +
+        "]";
+    }
   }
 
 
@@ -455,17 +470,30 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   private LinkedList<ArticleFiles> nextElements;
 
   public SubTreeArticleIterator(ArchivalUnit au, Spec spec) {
+    final String DEBUG_HEADER = "SubTreeArticleIterator(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "au = " + au);
+      log.debug2(DEBUG_HEADER + "spec = " + spec);
+    }
     this.au = au;
     this.spec = spec;
+
     mimeType = getMimeType();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mimeType = " + mimeType);
     if (spec.hasIncludePat()) {
       this.includeSubTreePat = makePattern(spec.getIncludePatSpec());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "includeSubTreePat = " + includeSubTreePat);
     }
     if (spec.hasExcludePat()) {
       this.excludeSubTreePat = makePattern(spec.getExcludePatSpec());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "excludeSubTreePat = " + excludeSubTreePat);
     }
     roots = makeRoots();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "roots = " + roots);
     this.pat = makePattern(spec.getMatchPatSpec());
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pat = " + pat);
     rootIter = roots.iterator();
     log.debug2("Create: AU: " + au.getName() + ", Mime: " + this.mimeType
 	       + ", roots: " + roots + ", pat: " + pat);
@@ -562,34 +590,64 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   }
 
   private ArticleFiles findNextElement() {
+    final String DEBUG_HEADER = "findNextElement(): ";
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "nextElement 1 = " + nextElement);
     if (nextElement != null) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "return 1 " + nextElement);
       return nextElement;
     }
     while (true) {
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER + "nextElements = " + nextElements);
+	if (nextElements != null) {
+	  log.debug3(DEBUG_HEADER
+	      + "nextElements.isEmpty() = " + nextElements.isEmpty());
+	}
+      }
       if (nextElements != null && !nextElements.isEmpty()) {
 	nextElement = nextElements.remove();
+	if (log.isDebug2())
+	  log.debug2(DEBUG_HEADER + "return 2 " + nextElement);
 	return nextElement;
       } else {
 	CachedUrl cu = null;
 	try {
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cuIter 1 = " + cuIter);
 	  if (cuIter == null || !cuIter.hasNext()) {
-	    if (!rootIter.hasNext()) {
+	    if (rootIter == null || !rootIter.hasNext()) {
+	      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "return 3 null");
 	      return null;
 	    } else {
 	      CachedUrlSet root = rootIter.next();
+	      if (log.isDebug3()) {
+		log.debug3(DEBUG_HEADER + "root = " + root);
+		log.debug3(DEBUG_HEADER + "spec.isVisitArchiveMembers = "
+		    + spec.isVisitArchiveMembers);
+	      }
 	      cuIter = spec.isVisitArchiveMembers
 		? root.archiveMemberIterator() : root.getCuIterator();
+		if (log.isDebug3())
+		  log.debug3(DEBUG_HEADER + "cuIter 2 = " + cuIter);
 	      continue;
 	    }
 	  } else {
 	    cu = cuIter.next();
-	    if (isArticleCu(cu)) {
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cu = " + cu);
+	    boolean isCuArticle = isArticleCu(cu);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "isCuArticle = " + isCuArticle);
+	    if (isCuArticle) {
 	      // isArticleCu() might have caused file to open
 	      cu.release();
 	      visitArticleCu(cu);
+	      if (log.isDebug3())
+		log.debug3(DEBUG_HEADER + "nextElement 4 = " + nextElement);
 	      if (nextElement == null) {
 		continue;
 	      }
+	      if (log.isDebug2())
+		log.debug2(DEBUG_HEADER + "return 4 " + nextElement);
 	      return nextElement;
 	    }
 	  }
@@ -629,8 +687,12 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
    * compatibility with old subclasses prior to the introduction of this
    * method. */
   protected void visitArticleCu(CachedUrl cu) {
-    if (log.isDebug3()) log.debug3("Visit: " + cu);
+    final String DEBUG_HEADER = "visitArticleCu(): ";
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Visit: " + cu);
+    // This next call is typically implemented by the content plugin for this
+    // archival unit.
     ArticleFiles res = createArticleFiles(cu);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "res = " + res);
     if (res != null) {
       emitArticleFiles(res);
     }
@@ -694,5 +756,4 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   public void remove() {
     throw new UnsupportedOperationException("Not implemented");
   }
-  
 }

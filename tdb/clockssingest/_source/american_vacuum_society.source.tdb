@@ -3,7 +3,8 @@
   publisher <
     name = American Vacuum Society ;
     info[contract] = 2015 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -24,8 +25,9 @@
       au < zapped ; finished ; 2017 ; American Vacuum Society Source Content 2017 ; 2017 >
       au < zapped ; finished ; 2018 ; American Vacuum Society Source Content 2018 ; 2018 >
       au < zapped ; finished ; 2019 ; American Vacuum Society Source Content 2019 ; 2019 >
-      au < readySource ; finished ; 2020 ; American Vacuum Society Source Content 2020 ; 2020 >
+      au < zapped ; finished ; 2020 ; American Vacuum Society Source Content 2020 ; 2020 >
       au < readySource ; crawling ; 2021 ; American Vacuum Society Source Content 2021 ; 2021 >
+      au < expected ; exists ; 2022 ; American Vacuum Society Source Content 2022 ; 2022 >
 
     }
 

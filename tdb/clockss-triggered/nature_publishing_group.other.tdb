@@ -19,12 +19,12 @@
     param[base_url] = https://bonekey.stanford.clockss.org/
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 2012 ; BoneKEy Reports Volume 2012 ; 2012 >
-    au < released ; 2013 ; BoneKEy Reports Volume 2013 ; 2013 >
-    au < released ; 2014 ; BoneKEy Reports Volume 2014 ; 2014 >
-    au < released ; 2015 ; BoneKEy Reports Volume 2015 ; 2015 >
-    au < released ; 2016 ; BoneKEy Reports Volume 2016 ; 2016 >
-    au < released ; 2017 ; BoneKEy Reports Volume 2017 ; 2017 >
+    au < down ; 2012 ; BoneKEy Reports Volume 2012 ; 2012 >
+    au < down ; 2013 ; BoneKEy Reports Volume 2013 ; 2013 >
+    au < down ; 2014 ; BoneKEy Reports Volume 2014 ; 2014 >
+    au < down ; 2015 ; BoneKEy Reports Volume 2015 ; 2015 >
+    au < down ; 2016 ; BoneKEy Reports Volume 2016 ; 2016 >
+    au < down ; 2017 ; BoneKEy Reports Volume 2017 ; 2017 >
     
   
   }
@@ -42,23 +42,23 @@
     param[base_url] = https://knowledgeenvironment.stanford.clockss.org/    
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 2001 ; IBMS BoneKEy Knowledge Environment Volume 2001 ; 2001 >
-    au < released ; 2002 ; IBMS BoneKEy Knowledge Environment Volume 2002 ; 2002 >
-    au < released ; 2003 ; IBMS BoneKEy Knowledge Environment Volume 2003 ; 2003 >
-    au < released ; 2004 ; IBMS BoneKEy Knowledge Environment Volume 2004 ; 2004 >
-    au < released ; 2005 ; IBMS BoneKEy Knowledge Environment Volume 2005 ; 2005 >
-    au < released ; 2006 ; IBMS BoneKEy Knowledge Environment Volume 2006 ; 2006 >
-    au < released ; 2007 ; IBMS BoneKEy Knowledge Environment Volume 2007 ; 2007 >
-    au < released ; 2008 ; IBMS BoneKEy Knowledge Environment Volume 2008 ; 2008 >
-    au < released ; 2009 ; IBMS BoneKEy Knowledge Environment Volume 2009 ; 2009 >
-    au < released ; 2010 ; IBMS BoneKEy Knowledge Environment Volume 2010 ; 2010 >
-    au < released ; 2011 ; IBMS BoneKEy Knowledge Environment Volume 2011 ; 2011 >
-    au < released ; 2012 ; IBMS BoneKEy Knowledge Environment Volume 2012 ; 2012 >
-    au < released ; 2013 ; IBMS BoneKEy Knowledge Environment Volume 2013 ; 2013 >
-    au < released ; 2014 ; IBMS BoneKEy Knowledge Environment Volume 2014 ; 2014 >
-    au < released ; 2015 ; IBMS BoneKEy Knowledge Environment Volume 2015 ; 2015 >
-    au < released ; 2016 ; IBMS BoneKEy Knowledge Environment Volume 2016 ; 2016 >
-    au < released ; 2017 ; IBMS BoneKEy Knowledge Environment Volume 2017 ; 2017 >    
+    au < down ; 2001 ; IBMS BoneKEy Knowledge Environment Volume 2001 ; 2001 >
+    au < down ; 2002 ; IBMS BoneKEy Knowledge Environment Volume 2002 ; 2002 >
+    au < down ; 2003 ; IBMS BoneKEy Knowledge Environment Volume 2003 ; 2003 >
+    au < down ; 2004 ; IBMS BoneKEy Knowledge Environment Volume 2004 ; 2004 >
+    au < down ; 2005 ; IBMS BoneKEy Knowledge Environment Volume 2005 ; 2005 >
+    au < down ; 2006 ; IBMS BoneKEy Knowledge Environment Volume 2006 ; 2006 >
+    au < down ; 2007 ; IBMS BoneKEy Knowledge Environment Volume 2007 ; 2007 >
+    au < down ; 2008 ; IBMS BoneKEy Knowledge Environment Volume 2008 ; 2008 >
+    au < down ; 2009 ; IBMS BoneKEy Knowledge Environment Volume 2009 ; 2009 >
+    au < down ; 2010 ; IBMS BoneKEy Knowledge Environment Volume 2010 ; 2010 >
+    au < down ; 2011 ; IBMS BoneKEy Knowledge Environment Volume 2011 ; 2011 >
+    au < down ; 2012 ; IBMS BoneKEy Knowledge Environment Volume 2012 ; 2012 >
+    au < down ; 2013 ; IBMS BoneKEy Knowledge Environment Volume 2013 ; 2013 >
+    au < down ; 2014 ; IBMS BoneKEy Knowledge Environment Volume 2014 ; 2014 >
+    au < down ; 2015 ; IBMS BoneKEy Knowledge Environment Volume 2015 ; 2015 >
+    au < down ; 2016 ; IBMS BoneKEy Knowledge Environment Volume 2016 ; 2016 >
+    au < down ; 2017 ; IBMS BoneKEy Knowledge Environment Volume 2017 ; 2017 >    
 
   }
 

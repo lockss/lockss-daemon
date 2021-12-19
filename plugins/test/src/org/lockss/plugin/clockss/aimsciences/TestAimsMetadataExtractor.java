@@ -92,6 +92,7 @@ public class TestAimsMetadataExtractor extends LockssTestCase {
 
  
   private static final String realXMLFile = "test_aims.xml";
+  //private static final String realXMLFile = "test_aims_sample_2021.xml";
 
   public void testFromCRXMLFile() throws Exception {
     InputStream file_input = null;

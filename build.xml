@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -62,6 +62,7 @@ Args:
   -Dnowarn=true            Turn off compiler warnings.
   -Dpapersize=letter       The medium to pass to a2ps for index and print.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
+  -Dskipgettext=yes        Bypass running gettext (i18n)
   -Dsuite=suite-name       Specify stf suite name.
   -Dtimeout=msecs          Override the default test failure timeout.
   -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
@@ -247,18 +248,22 @@ Args:
                                   value="${lib}/pjl-comp-filter-1.6.5.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
-  <property name="log4j.jar" value="${lib}/log4j-1.2.13.jar"/>
+  <property name="log4j2.version" value="2.17.0"/>
+  <property name="log4j2-api.jar" value="${lib}/log4j-api-${log4j2.version}.jar"/>
+  <property name="log4j2-core.jar" value="${lib}/log4j-core-${log4j2.version}.jar"/>
+  <property name="log4j2-1.2-compat.jar" value="${lib}/log4j-1.2-api-${log4j2.version}.jar"/>
 
   <property name="commons.beanutils.jar" value="${lib}/commons-beanutils-1.9.4.jar" />
-  <property name="commons.cli.jar" value="${lib}/commons-cli-1.4.jar" />
+  <property name="commons.cli.jar" value="${lib}/commons-cli-1.5.0.jar" />
   <property name="commons.codec.jar" value="${lib}/commons-codec-1.15.jar" />
   <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
-  <property name="commons.compress.jar" value="${lib}/commons-compress-1.20.jar" />
+  <property name="commons.compress.jar" value="${lib}/commons-compress-1.21.jar" />
   <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
+  <!-- commons-csv -->
   <!-- commons-digester -->
   <!-- commons-fileupload -->
-  <property name="commons.io.jar" value="${lib}/commons-io-2.10.0.jar" />
+  <property name="commons.io.jar" value="${lib}/commons-io-2.11.0.jar" />
   <property name="commons.jxpath.jar" value="${lib}/commons-jxpath-1.3.jar" />
   <property name="commons.lang.jar" value="${lib}/commons-lang-2.6.jar" />
   <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.12.0.jar" />
@@ -293,8 +298,15 @@ Args:
   <property name="javatar.jar" value="${lib}/javagnutar.jar" />
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
-  <property name="jsoup.jar" value="${lib}/jsoup-1.8.2.jar"/>
+  <property name="jsoup.jar" value="${lib}/jsoup-1.14.3.jar"/>
   <property name="marc4j.jar" value="${lib}/marc4j-2.9.1.jar" />
+  <!-- Jonix -->
+  <property name="jonix.version" value="8.0.1" />
+  <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
+  <property name="jonix-common.jar" value="${lib}/jonix-common-${jonix.version}.jar" />
+  <property name="jonix-xml.jar" value="${lib}/jonix-xml-${jonix.version}.jar" />
+  <property name="jonix-onix2.jar" value="${lib}/jonix-onix2-${jonix.version}.jar" />
+  <property name="jonix-onix3.jar" value="${lib}/jonix-onix3-${jonix.version}.jar" />
   <property name="apiviz.jar"     value="${lib}/apiviz-1.3.1.jar"/>
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
@@ -361,13 +373,22 @@ Args:
 
   <property name="ext.javadoc"
                       value="http://documents.lockss.org/gamma-libs/" />
-  <!-- Next three JARs needed by entitlement registry -->
-  <property name="jackson.version" value="2.9.10" />
+  <!-- Next jackson JARs needed by entitlement registry and jersey2 -->
+  <property name="jackson.version" value="2.10.5" />
   <property name="jackson-core.jar" value="${lib}/jackson-core-${jackson.version}.jar" />
-  <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.8.jar" /><!-- NOTE: 2.9.10.8 -->
+  <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.1.jar" /><!-- NOTE: 2.9.10.8 -->
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
 
-  <property name="json-path.jar" value="${lib}/json-path-2.5.0.jar" />
+  <!-- Jars for okhttp -->
+  <property name="okhttp.version" value="3.14.9" />
+  <property name="okhttp.jar" value="${lib}/okhttp-${okhttp.version}.jar" />
+  <property name="logging-interceptor.jar" value="${lib}/logging-interceptor-${okhttp.version}.jar" />
+  <property name="okio.jar" value="${lib}/okio-1.17.5.jar" />
+  <property name="gson.jar" value="${lib}/gson-2.8.6.jar" />
+  <property name="gson-fire.jar" value="${lib}/gson-fire-1.8.4.jar" />
+  <property name="swagger-annotations.jar" value="${lib}/swagger-annotations-1.5.24.jar" />
+
+  <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
 
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
@@ -475,7 +496,9 @@ Args:
     <pathelement path="${asm.jar}" />
     <pathelement path="${asm-tree.jar}" />
     <pathelement path="${oro.jar}" />
-    <pathelement path="${log4j.jar}" />
+    <pathelement path="${log4j2-api.jar}" />
+    <pathelement path="${log4j2-core.jar}" />
+    <pathelement path="${log4j2-1.2-compat.jar}" />
   </path>
 
   <!--  Classpaths -->
@@ -504,7 +527,9 @@ Args:
 <!-- XXX Shouldn't need this - figure out how to avoid dependency -->
     <pathelement path="${truezip-swing.jar}" />
     <pathelement path="${javatar.jar}" />
-    <pathelement path="${log4j.jar}" />
+    <pathelement path="${log4j2-api.jar}" />
+    <pathelement path="${log4j2-core.jar}" />
+    <pathelement path="${log4j2-1.2-compat.jar}" />
     <pathelement path="${concurrent.jar}" />
     <pathelement path="${jetty.jar}" />
     <pathelement path="${servlet.jar}" />
@@ -579,6 +604,13 @@ Args:
     <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
+    <!-- Jersey jars -->
+    <pathelement path="${okhttp.jar}" />
+    <pathelement path="${logging-interceptor.jar}" />
+    <pathelement path="${okio.jar}" />
+    <pathelement path="${gson.jar}" />
+    <pathelement path="${gson-fire.jar}" />
+    <pathelement path="${swagger-annotations.jar}" />
     <pathelement path="${json-path.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
@@ -736,7 +768,7 @@ Args:
            fork="${forkc}"
            listfiles="${listfiles}"
            nowarn="${nowarn}"
-	   memoryMaximumSize="256m"
+	   memoryMaximumSize="512m"
            >
        <classpath refid="@{cpid}" />
       <javacelem/>
@@ -2780,6 +2812,7 @@ Test results in ${test.results}
            failonerror="true">
       <arg value="testsuite.py"/>
       <arg value="${suite}"/>
+      <env key="java.io.tmpdir" value="${tmpdir}"/>
     </exec>
   </target>
 
@@ -3195,30 +3228,39 @@ Test results in ${test.results}
   <!-- Load the Ant gettext tasks -->
   <target name="check.gettext" depends="check.contrib" unless="gettext.checked">
     <!-- Check for existence of gettext program msgfmt -->
-    <trycatch>
-      <try>
-        <exec executable="msgfmt"
-	      outputproperty="gettext.available.output"
-	      failifexecutionfails="true">
-          <arg value="-V"/> <!-- Just get version -->
-        </exec>
-	<!-- Load gettext-commons tasks -->
-	<taskdef name="gettext-extract" classpath="${gettext.tasks.jar}"
-		 classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" />
-	<taskdef name="gettext-merge" classpath="${gettext.tasks.jar}"
-		 classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask"/>
-	<taskdef name="gettext-generate-default" classpath="${gettext.tasks.jar}"
-		 classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask"/>
-	<taskdef name="gettext-dist" classpath="${gettext.tasks.jar}"
-		 classname="org.xnap.commons.ant.gettext.GettextDistTask"/>
+    <if>
+      <istrue value="${skipgettext}" />
+      <then>
+        <echo message="Skipping i18n (gettext)"/>
+        <property name="gettext.checked" value="skip"/>
+      </then>
+      <else>
+        <trycatch>
+          <try>
+            <exec executable="msgfmt"
+	          outputproperty="gettext.available.output"
+	          failifexecutionfails="true">
+              <arg value="-V"/> <!-- Just get version -->
+            </exec>
+	    <!-- Load gettext-commons tasks -->
+	    <taskdef name="gettext-extract" classpath="${gettext.tasks.jar}"
+		     classname="org.xnap.commons.ant.gettext.GettextExtractKeysTask" />
+	    <taskdef name="gettext-merge" classpath="${gettext.tasks.jar}"
+		     classname="org.xnap.commons.ant.gettext.GettextMergeKeysTask"/>
+	    <taskdef name="gettext-generate-default" classpath="${gettext.tasks.jar}"
+		     classname="org.xnap.commons.ant.gettext.GenerateDefaultBundleTask"/>
+	    <taskdef name="gettext-dist" classpath="${gettext.tasks.jar}"
+		     classname="org.xnap.commons.ant.gettext.GettextDistTask"/>
 
-        <!-- Set a flag if gettext is available -->
-        <property name="gettext.available" value="true"/>
-      </try>
-      <catch>
-        <echo message="Warning: gettext is not available, continuing without i18n"/>
-      </catch>
-    </trycatch>
+            <!-- Set a flag if gettext is available -->
+            <property name="gettext.available" value="true"/>
+          </try>
+          <catch>
+            <echo message="Warning: gettext is not available, continuing without i18n"/>
+          </catch>
+        </trycatch>
+      </else>
+    </if>
     <!-- Don't check again even if isn't available -->
     <property name="gettext.checked" value="true" />
   </target>

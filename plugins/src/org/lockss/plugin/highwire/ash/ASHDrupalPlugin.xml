@@ -42,19 +42,19 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Society of Hematology Plugin</string>
+    <string>American Society of Hematology Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -75,10 +75,10 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Society of Hematology Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Society of Hematology Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.highwire.ash.ASHDrupalUrlConsumerFactory</string>
+    <string>org.lockss.plugin.highwire.ash.ASHJCoreUrlConsumerFactory</string>
   </entry>
 </map>

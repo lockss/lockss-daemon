@@ -60,12 +60,12 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; American Journal of Neuroradiology Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; down ; 2014 ; American Journal of Neuroradiology Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; down ; 2015 ; American Journal of Neuroradiology Volume 36 ; 36 >
-      au < HWDrupalPlugin ; manifest ; 2016 ; American Journal of Neuroradiology Volume 37 ; 37 >
-      au < HWDrupalPlugin ; manifest ; 2017 ; American Journal of Neuroradiology Volume 38 ; 38 >
-      au < HWDrupalPlugin ; manifest ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
-      au < HWDrupalPlugin ; manifest ; 2019 ; American Journal of Neuroradiology Volume 40 ; 40 >
-      au < HWDrupalPlugin ; manifest ; 2020 ; American Journal of Neuroradiology Volume 41 ; 41 >
-      au < HWDrupalPlugin ; manifest ; 2021 ; American Journal of Neuroradiology Volume 42 ; 42 >
+      au < asnr.AsnrDrupalPlugin ; released ; 2016 ; American Journal of Neuroradiology Volume 37 ; 37 >
+      au < asnr.AsnrDrupalPlugin ; released ; 2017 ; American Journal of Neuroradiology Volume 38 ; 38 >
+      au < asnr.AsnrDrupalPlugin ; released ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
+      au < asnr.AsnrDrupalPlugin ; released ; 2019 ; American Journal of Neuroradiology Volume 40 ; 40 >
+      au < asnr.AsnrDrupalPlugin ; released ; 2020 ; American Journal of Neuroradiology Volume 41 ; 41 >
+      au < asnr.AsnrDrupalPlugin ; manifest ; 2021 ; American Journal of Neuroradiology Volume 42 ; 42 >
 
     }
 
@@ -106,11 +106,11 @@
      param[api_url] = https://api.ingentaconnect.com/
      param[journal_issn] = 2637-8329
 
-      au < exists ; 2017 ; Neurographics Volume 7 ; 7 > #Unable to fetch permission page, https://www.ingentaconnect.com/content/2637-8329?format=lockss&volume=7
-      au < exists ; 2018 ; Neurographics Volume 8 ; 8 >
-      au < exists ; 2019 ; Neurographics Volume 9 ; 9 >
-      au < expected ; 2020 ; Neurographics Volume 10 ; 10 >
-      au < expected ; 2021 ; Neurographics Volume 11 ; 11 >
+      au < testing ; 2017 ; Neurographics Volume 7 ; 7 > #Unable to fetch permission page, https://www.ingentaconnect.com/content/2637-8329?format=lockss&volume=7
+      au < testing ; 2018 ; Neurographics Volume 8 ; 8 >
+      au < testing ; 2019 ; Neurographics Volume 9 ; 9 >
+      au < testing ; 2020 ; Neurographics Volume 10 ; 10 >
+      au < manifest ; 2021 ; Neurographics Volume 11 ; 11 >
 
     }
 

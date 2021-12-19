@@ -1,0 +1,250 @@
+{
+
+  publisher <
+    name = British Veterinary Association
+  >
+
+  pluginPrefix = org.lockss.plugin.highwire.
+  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified
+
+    #move to Wiley, 2021
+
+  {
+    title <
+      name = In Practice ;
+      issn = 0263-841X ;
+      eissn = 2042-7689 
+    >
+    #param[base_url] = http://inpractice.bmj.com/
+
+    au < HighWirePressH20Plugin ; down ; 1979 ; In Practice Volume 1 ; 1 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1980 ; In Practice Volume 2 ; 2 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1981 ; In Practice Volume 3 ; 3 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1982 ; In Practice Volume 4 ; 4 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1983 ; In Practice Volume 5 ; 5 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1984 ; In Practice Volume 6 ; 6 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1985 ; In Practice Volume 7 ; 7 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1986 ; In Practice Volume 8 ; 8 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1987 ; In Practice Volume 9 ; 9 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1988 ; In Practice Volume 10 ; 10 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1989 ; In Practice Volume 11 ; 11 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1990 ; In Practice Volume 12 ; 12 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1991 ; In Practice Volume 13 ; 13 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1992 ; In Practice Volume 14 ; 14 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1993 ; In Practice Volume 15 ; 15 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1994 ; In Practice Volume 16 ; 16 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1995 ; In Practice Volume 17 ; 17 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1996 ; In Practice Volume 18 ; 18 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1997 ; In Practice Volume 19 ; 19 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1998 ; In Practice Volume 20 ; 20 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1999 ; In Practice Volume 21 ; 21 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2000 ; In Practice Volume 22 ; 22 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2001 ; In Practice Volume 23 ; 23 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2002 ; In Practice Volume 24 ; 24 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2003 ; In Practice Volume 25 ; 25 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2004 ; In Practice Volume 26 ; 26 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2005 ; In Practice Volume 27 ; 27 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2006 ; In Practice Volume 28 ; 28 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2007 ; In Practice Volume 29 ; 29 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2008 ; In Practice Volume 30 ; 30 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2009 ; In Practice Volume 31 ; 31 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2010 ; In Practice Volume 32 ; 32 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2011 ; In Practice Volume 33 ; 33 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; In Practice Volume 34 ; 34 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; In Practice Volume 35 ; 35 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; In Practice Volume 36 ; 36 ; http://inpractice.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2015 ; In Practice Volume 37 ; 37 ; http://inpractice.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2016 ; In Practice Volume 38 ; 38 ; https://inpractice.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2017 ; In Practice Volume 39 ; 39 ; https://inpractice.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2018 ; In Practice Volume 40 ; 40 ; https://inpractice.bmj.com/ >
+    #moved to Wiley
+
+  }
+
+  {
+    title <
+      name = Veterinary Record ;
+      issn = 0042-4900 ;
+      eissn = 2042-7670 
+    >
+    #param[base_url] = http://veterinaryrecord.bmj.com/
+    #move to Wiley, 2021
+
+
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1950 ; Veterinary Record Volume 62 [tables of contents only] ; 62 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1951 ; Veterinary Record Volume 63 [tables of contents only] ; 63 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 64 ; 64 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 65 ; 65 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 66 ; 66 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 67 ; 67 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 68 ; 68 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 69 ; 69 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 70 ; 70 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 71 ; 71 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 72 ; 72 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 73 ; 73 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 74 ; 74 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 75 ; 75 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 76 ; 76 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1965 ; Veterinary Record Volume 77 [tables of contents only] ; 77 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1966 ; Veterinary Record Volume 78 [tables of contents only] ; 78 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1966 ; Veterinary Record Volume 79 [tables of contents only] ; 79 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1967 ; Veterinary Record Volume 80 [tables of contents only] ; 80 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1967 ; Veterinary Record Volume 81 [tables of contents only] ; 81 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doesNotExist ; 0 ; Veterinary Record Volume 82 ; 82 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1968 ; Veterinary Record Volume 83 [tables of contents only] ; 83 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1969 ; Veterinary Record Volume 84 [tables of contents only] ; 84 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1969 ; Veterinary Record Volume 85 [tables of contents only] ; 85 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1970 ; Veterinary Record Volume 86 [tables of contents only] ; 86 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1970 ; Veterinary Record Volume 87 [tables of contents only] ; 87 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1971 ; Veterinary Record Volume 88 [tables of contents only] ; 88 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1971 ; Veterinary Record Volume 89 [tables of contents only] ; 89 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1972 ; Veterinary Record Volume 90 [tables of contents only] ; 90 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1972 ; Veterinary Record Volume 91 [tables of contents only] ; 91 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1973 ; Veterinary Record Volume 92 [tables of contents only] ; 92 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1973 ; Veterinary Record Volume 93 [tables of contents only] ; 93 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1974 ; Veterinary Record Volume 94 [tables of contents only] ; 94 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 1974 ; Veterinary Record Volume 95 [tables of contents only] ; 95 ; https://veterinaryrecord.bmj.com/ >
+    {
+    
+      attr[au_coverage_depth] = abstracts
+    
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1975 ; Veterinary Record Volume 96 [abstracts only] ; 96 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1975 ; Veterinary Record Volume 97 [abstracts only] ; 97 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1976 ; Veterinary Record Volume 98 [abstracts only] ; 98 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1976 ; Veterinary Record Volume 99 [abstracts only] ; 99 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1977 ; Veterinary Record Volume 100 [abstracts only] ; 100 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1977 ; Veterinary Record Volume 101 [abstracts only] ; 101 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1978 ; Veterinary Record Volume 102 [abstracts only] ; 102 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1978 ; Veterinary Record Volume 103 [abstracts only] ; 103 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1979 ; Veterinary Record Volume 104 [abstracts only] ; 104 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1979 ; Veterinary Record Volume 105 [abstracts only] ; 105 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1980 ; Veterinary Record Volume 106 [abstracts only] ; 106 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1980 ; Veterinary Record Volume 107 [abstracts only] ; 107 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1981 ; Veterinary Record Volume 108 [abstracts only] ; 108 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1981 ; Veterinary Record Volume 109 [abstracts only] ; 109 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1982 ; Veterinary Record Volume 110 [abstracts only] ; 110 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1982 ; Veterinary Record Volume 111 [abstracts only] ; 111 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1983 ; Veterinary Record Volume 112 [abstracts only] ; 112 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1983 ; Veterinary Record Volume 113 [abstracts only] ; 113 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1984 ; Veterinary Record Volume 114 [abstracts only] ; 114 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1984 ; Veterinary Record Volume 115 [abstracts only] ; 115 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1985 ; Veterinary Record Volume 116 [abstracts only] ; 116 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1985 ; Veterinary Record Volume 117 [abstracts only] ; 117 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1986 ; Veterinary Record Volume 118 [abstracts only] ; 118 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1986 ; Veterinary Record Volume 119 [abstracts only] ; 119 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1987 ; Veterinary Record Volume 120 [abstracts only] ; 120 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1987 ; Veterinary Record Volume 121 [abstracts only] ; 121 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1988 ; Veterinary Record Volume 122 [abstracts only] ; 122 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1988 ; Veterinary Record Volume 123 [abstracts only] ; 123 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1989 ; Veterinary Record Volume 124 [abstracts only] ; 124 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1989 ; Veterinary Record Volume 125 [abstracts only] ; 125 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1990 ; Veterinary Record Volume 126 [abstracts only] ; 126 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1990 ; Veterinary Record Volume 127 [abstracts only] ; 127 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1991 ; Veterinary Record Volume 128 [abstracts only] ; 128 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1991 ; Veterinary Record Volume 129 [abstracts only] ; 129 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1992 ; Veterinary Record Volume 130 [abstracts only] ; 130 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1992 ; Veterinary Record Volume 131 [abstracts only] ; 131 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1993 ; Veterinary Record Volume 132 [abstracts only] ; 132 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1993 ; Veterinary Record Volume 133 [abstracts only] ; 133 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1994 ; Veterinary Record Volume 134 [abstracts only] ; 134 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1993 ; Veterinary Record Volume 135 [abstracts only] ; 135 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1994 ; Veterinary Record Volume 136 [abstracts only] ; 136 ; https://veterinaryrecord.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; doNotProcess ; 1995 ; Veterinary Record Volume 137 [abstracts only] ; 137 ; https://veterinaryrecord.bmj.com/ >
+    }
+    au < HighWirePressH20Plugin ; down ; 1996 ; Veterinary Record Volume 138 ; 138 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1996 ; Veterinary Record Volume 139 ; 139 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1997 ; Veterinary Record Volume 140 ; 140 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1997 ; Veterinary Record Volume 141 ; 141 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Veterinary Record Volume 142 ; 142 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1998 ; Veterinary Record Volume 143 ; 143 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Veterinary Record Volume 144 ; 144 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 1999 ; Veterinary Record Volume 145 ; 145 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Veterinary Record Volume 146 ; 146 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2000 ; Veterinary Record Volume 147 ; 147 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Veterinary Record Volume 148 ; 148 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2001 ; Veterinary Record Volume 149 ; 149 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Veterinary Record Volume 150 ; 150 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2002 ; Veterinary Record Volume 151 ; 151 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Veterinary Record Volume 152 ; 152 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2003 ; Veterinary Record Volume 153 ; 153 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Veterinary Record Volume 154 ; 154 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2004 ; Veterinary Record Volume 155 ; 155 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Veterinary Record Volume 156 ; 156 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2005 ; Veterinary Record Volume 157 ; 157 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Veterinary Record Volume 158 ; 158 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2006 ; Veterinary Record Volume 159 ; 159 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Veterinary Record Volume 160 ; 160 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2007 ; Veterinary Record Volume 161 ; 161 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Veterinary Record Volume 162 ; 162 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2008 ; Veterinary Record Volume 163 ; 163 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Veterinary Record Volume 164 ; 164 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2009 ; Veterinary Record Volume 165 ; 165 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Veterinary Record Volume 166 ; 166 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2010 ; Veterinary Record Volume 167 ; 167 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Veterinary Record Volume 168 ; 168 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2011 ; Veterinary Record Volume 169 ; 169 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Veterinary Record Volume 170 ; 170 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2012 ; Veterinary Record Volume 171 ; 171 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Veterinary Record Volume 172 ; 172 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2013 ; Veterinary Record Volume 173 ; 173 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Veterinary Record Volume 174 ; 174 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Veterinary Record Volume 175 ; 175 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Veterinary Record Volume 176 ; 176 ; http://veterinaryrecord.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Veterinary Record Volume 177 ; 177 ; http://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2016 ; Veterinary Record Volume 178 ; 178 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2016 ; Veterinary Record Volume 179 ; 179 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2017 ; Veterinary Record Volume 180 ; 180 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2017 ; Veterinary Record Volume 181 ; 181 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2018 ; Veterinary Record Volume 182 ; 182 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2018 ; Veterinary Record Volume 183 ; 183 ; https://veterinaryrecord.bmj.com/ > #login found
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2019 ; Veterinary Record Volume 184 ; 184 ; https://veterinaryrecord.bmj.com/ > #login page
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2019 ; Veterinary Record Volume 185 ; 185 ; https://veterinaryrecord.bmj.com/ > #unable to fetch probe permission page
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2020 ; Veterinary Record Volume 186 ; 186 ; https://veterinaryrecord.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2020 ; Veterinary Record Volume 187 ; 187 ; https://veterinaryrecord.bmj.com/ >
+
+  }
+
+  {
+    title <
+      name = Veterinary Record Open ;
+      eissn = 2052-6113
+    >
+    
+    rights = openaccess
+    #param[base_url] = http://vetrecordopen.bmj.com/
+    #move to Wiley, 2021
+
+
+    au < HighWirePressH20Plugin ; down ; 2014 ; Veterinary Record Open Volume 1 ; 1 ; http://vetrecordopen.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Veterinary Record Open Volume 2 ; 2 ; http://vetrecordopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2016 ; Veterinary Record Open Volume 3 ; 3 ; https://vetrecordopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2017 ; Veterinary Record Open Volume 4 ; 4 ; https://vetrecordopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2018 ; Veterinary Record Open Volume 5 ; 5 ; https://vetrecordopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2019 ; Veterinary Record Open Volume 6 ; 6 ; https://vetrecordopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2020 ; Veterinary Record Open Volume 7 ; 7 ; https://vetrecordopen.bmj.com/ >
+
+  }
+
+  {
+    title <
+      name = Veterinary Record Case Reports ;
+      eissn = 2052-6121
+      
+    >
+    #param[base_url] = http://vetrecordcasereports.bmj.com/
+
+
+    au < HighWirePressH20Plugin ; down ; 2013 ; Veterinary Record Case Reports Volume 1 ; 1 ; http://vetrecordcasereports.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2014 ; Veterinary Record Case Reports Volume 2 ; 2 ; http://vetrecordcasereports.bmj.com/ >
+    au < HighWirePressH20Plugin ; down ; 2015 ; Veterinary Record Case Reports Volume 3 ; 3 ; http://vetrecordcasereports.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2016 ; Veterinary Record Case Reports Volume 4 ; 4 ; https://vetrecordcasereports.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2017 ; Veterinary Record Case Reports Volume 5 ; 5 ; https://vetrecordcasereports.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2018 ; Veterinary Record Case Reports Volume 6 ; 6 ; https://vetrecordcasereports.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2019 ; Veterinary Record Case Reports Volume 7 ; 7 ; https://vetrecordcasereports.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; doNotProcess ; 2020 ; Veterinary Record Case Reports Volume 8 ; 8 ; https://vetrecordcasereports.bmj.com/ >
+
+  }
+
+}

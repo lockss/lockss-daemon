@@ -674,7 +674,7 @@
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 499 ; 499 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2020 ; Geological Society of London Special Publications Volume 500 ; 500 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 501 ; 501 ; https://sp.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 502 ; 502 ; https://sp.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 502 ; 502 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 503 ; 503 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Geological Society of London Special Publications Volume 504 ; 504 ; https://sp.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; expected ; 2021 ; Geological Society of London Special Publications Volume 505 ; 505 ; https://sp.lyellcollection.org/ >
@@ -956,7 +956,7 @@
 
       au < gsl.GSLDrupalPlugin ; manifest ; 1993 ; Petroleum Geology Conference Series Volume 4 ; 4 ; https://pgc.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; manifest ; 1999 ; Petroleum Geology Conference Series Volume 5 ; 5 ; https://pgc.lyellcollection.org/ >
-      au < gsl.GSLDrupalPlugin ; manifest ; 2005 ; Petroleum Geology Conference Series Volume 6 ; 6 ; https://pgc.lyellcollection.org/ >
+      au < gsl.GSLDrupalPlugin ; released ; 2005 ; Petroleum Geology Conference Series Volume 6 ; 6 ; https://pgc.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2010 ; Petroleum Geology Conference Series Volume 7 ; 7 ; https://pgc.lyellcollection.org/ >
       au < gsl.GSLDrupalPlugin ; released ; 2018 ; Petroleum Geology Conference Series Volume 8 ; 8 ; https://pgc.lyellcollection.org/ >
 
@@ -1225,9 +1225,8 @@
     au < HighWirePressH20Plugin ; down ; 2014-2015 ; Proceedings of the Yorkshire Geological Society Volume 60 ; 60 ; http://pygs.lyellcollection.org/ >
     au < HighWirePressH20Plugin ; down ; 2016-2017 ; Proceedings of the Yorkshire Geological Society Volume 61 ; 61 ; http://pygs.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2018-2019 ; Proceedings of the Yorkshire Geological Society Volume 62 ; 62 ; https://pygs.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2019-2020 ; Proceedings of the Yorkshire Geological Society Volume 63 ; 63 ; https://pygs.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; exists ; 2020-2021 ; Proceedings of the Yorkshire Geological Society Volume 64 ; 64 ; https://pygs.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; expected ; 2021-2022 ; Proceedings of the Yorkshire Geological Society Volume 65 ; 65 ; https://pygs.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2020-2021 ; Proceedings of the Yorkshire Geological Society Volume 63 ; 63 ; https://pygs.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; expected ; 2022-2023 ; Proceedings of the Yorkshire Geological Society Volume 64 ; 64 ; https://pygs.lyellcollection.org/ >
 
   }
 
@@ -1301,7 +1300,7 @@
     au < gsl.GSLDrupalPlugin ; released ; 2017 ; Scottish Journal of Geology Volume 53 ; 53 ; http://sjg.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2018 ; Scottish Journal of Geology Volume 54 ; 54 ; https://sjg.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; released ; 2019 ; Scottish Journal of Geology Volume 55 ; 55 ; https://sjg.lyellcollection.org/ >
-    au < gsl.GSLDrupalPlugin ; manifest ; 2020 ; Scottish Journal of Geology Volume 56 ; 56 ; https://sjg.lyellcollection.org/ >
+    au < gsl.GSLDrupalPlugin ; released ; 2020 ; Scottish Journal of Geology Volume 56 ; 56 ; https://sjg.lyellcollection.org/ >
     au < gsl.GSLDrupalPlugin ; manifest ; 2021 ; Scottish Journal of Geology Volume 57 ; 57 ; https://sjg.lyellcollection.org/ >
 
     }

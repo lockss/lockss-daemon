@@ -91,6 +91,12 @@ public class TestAsmHtmlHashFilterFactory extends LockssTestCase {
     "<div class=\"cover-image__image\">" +
     "</div>";
 
+  private static final String imgWSrc2 =
+      "<img src=\"/cms/10.1128/ecosalplus.ESP-0008-2016/asset/887afaf0-ba50-4a7d-ac07-8af515c6489e/assets/graphic/esp-0008-2016_fig_002.gif\" />";
+
+  private static final String filteredImgWSrc2 =
+      "";
+
   private static final String h3Id =
     "<section class=\"toc__section\">" +
       "<h3 id=\"h_d234716e5959\" class=\"to-section\">" +
@@ -198,6 +204,20 @@ public class TestAsmHtmlHashFilterFactory extends LockssTestCase {
       "</div>" +
     "</div>";
 
+  private static final String itemHeader =
+    "<div class=\"issue-item__header\">\n" +
+      "<span>\n" +
+        "Domain: Synthesis and Processing of Macromolecules\n" +
+        "Review" +
+      "</span>\n" +
+      "<span>" +
+        "19 November 2020" +
+      "</span>" +
+    "</div>";
+
+  private static final String filteredItemHeader =
+      "";
+
   public void testCitationFilter() throws Exception {
     InputStream in;
     in = fact.createFilteredInputStream(mau, new StringInputStream(citation),
@@ -210,6 +230,12 @@ public class TestAsmHtmlHashFilterFactory extends LockssTestCase {
     in = fact.createFilteredInputStream(mau, new StringInputStream(imgWSrc),
         ENC);
     assertEquals(filteredImgWSrc,StringUtil.fromInputStream(in));
+  }
+  public void testImgSrcFilter2() throws Exception {
+    InputStream in;
+    in = fact.createFilteredInputStream(mau, new StringInputStream(imgWSrc2),
+        ENC);
+    assertEquals(filteredImgWSrc2,StringUtil.fromInputStream(in));
   }
 
   public void testIdFilter() throws Exception {
@@ -238,6 +264,13 @@ public class TestAsmHtmlHashFilterFactory extends LockssTestCase {
     in = fact.createFilteredInputStream(mau, new StringInputStream(footnote),
         ENC);
     assertEquals(filteredFootnote,StringUtil.fromInputStream(in));
+  }
+
+  public void testItemHeaderFilter() throws Exception {
+    InputStream in;
+    in = fact.createFilteredInputStream(mau, new StringInputStream(itemHeader),
+        ENC);
+    assertEquals(filteredItemHeader,StringUtil.fromInputStream(in));
   }
 
 }

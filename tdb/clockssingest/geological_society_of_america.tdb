@@ -124,10 +124,10 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geological Society of America Bulletin Volume 126 ; 126 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geological Society of America Bulletin Volume 127 ; 127 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geological Society of America Bulletin Volume 128 ; 128 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; Geological Society of America Bulletin Volume 129 ; 129 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Geological Society of America Bulletin Volume 130 ; 130 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Geological Society of America Bulletin Volume 131 ; 131 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Geological Society of America Bulletin Volume 132 ; 132 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; Geological Society of America Bulletin Volume 129 ; 129 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Geological Society of America Bulletin Volume 130 ; 130 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Geological Society of America Bulletin Volume 131 ; 131 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Geological Society of America Bulletin Volume 132 ; 132 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Geological Society of America Bulletin Volume 133 ; 133 ; >
 
   }
@@ -188,10 +188,10 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geology Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geology Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geology Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Geology Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Geology Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Geology Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; Geology Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Geology Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Geology Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Geology Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Geology Volume 48 ; 48 ; >
     au < testing ; exists ; 2021 ; 2021 ; Geology Volume 49 ; 49 ; >
 
   }
@@ -218,11 +218,11 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geosphere Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geosphere Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geosphere Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Geosphere Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Geosphere Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Geosphere Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Geosphere Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Geosphere Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Geosphere Volume 15 ; 15 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Geosphere Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Geosphere Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Geosphere Volume 17 ; 17 ; >
 
   }
 

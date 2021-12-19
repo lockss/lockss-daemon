@@ -51,6 +51,9 @@ public class EastviewNewspaperDirSourceXmlArticleIteratorFactory implements Arti
 
   private static final Logger log = Logger.getLogger(EastviewNewspaperDirSourceXmlArticleIteratorFactory.class);
 
+  //https://clockss-test.lockss.org/sourcefiles/eastviewnewspapers-released/2020/Eastview%20Newspaper%20Content/Sample%20content/IZVESTIIA_1971_ZIP/IZVESTIIA_1971.zip!/IZVESTIIA_1971/IZVMF/1971/1/IZVMF_1971_1.xml
+  //https://clockss-test.lockss.org/sourcefiles/eastviewnewspapers-released/2020/Eastview%20Newspaper%20Content/Sample%20content/IZVESTIIA_1971_ZIP/IZVESTIIA_1971.zip!/IZVESTIIA_1971/IZVMF/1971/1/IZVMF_1971_1.pdf
+  
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
           "\"%s[^/]+/.*\\.zip!/.*\\.xml$\", base_url";
 

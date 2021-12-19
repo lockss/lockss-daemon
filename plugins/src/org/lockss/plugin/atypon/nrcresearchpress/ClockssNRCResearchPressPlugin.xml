@@ -35,16 +35,16 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
-  <!-- https transition enabled -->    
+  <!-- https transition enabled -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
-<!--  updating out of sync with parent, must have own feature_version_map -->  
+  <!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
@@ -70,21 +70,21 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_parent</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
   </entry>
-    <entry>
+  <entry>
     <string>plugin_parent_version</string>
-    <string>108</string>
+    <string>122</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>"NRC Research Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
-<!--  override start url from parent to support http to https conversion -->  
+  <!--  override start url from parent to support http to https conversion -->
   <entry>
     <string>au_start_url</string>
     <list>
       <string>"%sclockss/%s/%s/index.html", to_http(base_url), journal_id, volume_name</string>
       <string>"%sclockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
-    </list>   
+    </list>
   </entry>
   <!--  also for https conversion -->
   <entry>
@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
   </entry>
-  <!-- end changes for https conversion -->  
+  <!-- end changes for https conversion -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressHtmlHashFilterFactory</string>
@@ -108,17 +108,17 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory</string>
   </entry>
-  <!--some pdfplus files need scraping - remove cited by pages, no downloaded by to remove.  -->  
+  <!--some pdfplus files need scraping - remove cited by pages, no downloaded by to remove.  -->
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.nrcresearchpress.NrcPdfFilterFactory</string>
-  </entry>    
+  </entry>
   <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor and UrlNormalizer - remove those you don't want. -->
   <entry>
-  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
+    <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
     <org.lockss.util.Default />
-  </entry>  
+  </entry>
   <entry>
     <string>clockss_override</string>
     <map>

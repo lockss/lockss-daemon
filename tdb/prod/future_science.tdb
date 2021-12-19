@@ -70,7 +70,7 @@
     au < manifest ; 2008 ; BioTechniques Volume 45 ; 45 ; https://www.future-science.com/ >
     au < manifest ; 2009 ; BioTechniques Volume 46 ; 46 ; https://www.future-science.com/ >
     au < manifest ; 2009 ; BioTechniques Volume 47 ; 47 ; https://www.future-science.com/ >
-    au < manifest ; 2010 ; BioTechniques Volume 48 ; 48 ; https://www.future-science.com/ >
+    au < released ; 2010 ; BioTechniques Volume 48 ; 48 ; https://www.future-science.com/ >
     au < manifest ; 2010 ; BioTechniques Volume 49 ; 49 ; https://www.future-science.com/ >
     au < manifest ; 2011 ; BioTechniques Volume 50 ; 50 ; https://www.future-science.com/ >
     au < manifest ; 2011 ; BioTechniques Volume 51 ; 51 ; https://www.future-science.com/ >
@@ -93,6 +93,7 @@
     au < released ; 2020 ; BioTechniques Volume 68 ; 68 ; https://www.future-science.com/ >
     au < released ; 2020 ; BioTechniques Volume 69 ; 69 ; https://www.future-science.com/ >
     au < manifest ; 2021 ; BioTechniques Volume 70 ; 70 ; https://www.future-science.com/ >
+    au < manifest ; 2021 ; BioTechniques Volume 71 ; 71 ; https://www.future-science.com/ >
 
   }
 
@@ -130,6 +131,21 @@
     au < down ; 2014 ; Clinical Investigation Volume 4 ; 4 ; http://www.future-science.com/ >
     au < down ; 2015 ; Clinical Investigation Volume 5 ; 5 ; http://www.future-science.com/ >
     
+  }
+
+  {
+  
+    title < 
+      name = Future Drug Discover ;
+      eissn = 2631-3316
+    >
+    
+    param[journal_id] = fdd
+
+    au < released ; 2019 ; Future Drug Discover Volume 1 ; 1 ; https://www.future-science.com/ >
+    au < released ; 2020 ; Future Drug Discover Volume 2 ; 2 ; https://www.future-science.com/ >
+    au < manifest ; 2021 ; Future Drug Discover Volume 3 ; 3 ; https://www.future-science.com/ >
+
   }
 
   {
@@ -195,8 +211,7 @@
    au < released ; 2017 ; International Journal of Pharmacokinetics Volume 2 ; 2 ; https://www.future-science.com/ >
    au < released ; 2018 ; International Journal of Pharmacokinetics Volume 3 ; 3 ; https://www.future-science.com/ >
    au < released ; 2019 ; International Journal of Pharmacokinetics Volume 4 ; 4 ; https://www.future-science.com/ >
-   au < manifest ; 2020 ; International Journal of Pharmacokinetics Volume 5 ; 5 ; https://www.future-science.com/ >
-   au < expected ; 2021 ; International Journal of Pharmacokinetics Volume 6 ; 6 ; https://www.future-science.com/ >
+   au < manifest ; 2021 ; International Journal of Pharmacokinetics Volume 5 ; 5 ; https://www.future-science.com/ >
 
    }
 

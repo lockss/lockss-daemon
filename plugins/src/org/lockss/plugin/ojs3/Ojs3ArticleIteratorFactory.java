@@ -64,6 +64,21 @@ import org.lockss.util.Logger;
  * PDF Landing: https://scholarworks.iu.edu/journals/index.php/jedhe/article/view/19369/28943
  * PDF Full Text: https://scholarworks.iu.edu/journals/index.php/jedhe/article/download/19369/28943
  * <meta name="citation_pdf_url" content="https://scholarworks.iu.edu/journals/index.php/jedhe/article/download/19369/28943">
+ *
+ * Special case:
+ * Manifest page: https://scholarworks.iu.edu/journals/index.php/tmr/gateway/clockss?year=2021
+ * Issue page: https://scholarworks.iu.edu/journals/index.php/tmr/issue/view/2078
+ * Article urls, no PDF, only text:
+ * https://scholarworks.iu.edu/journals/index.php/tmr/article/view/31853/31853
+ * https://scholarworks.iu.edu/journals/index.php/tmr/article/view/31978/35871
+ * https://scholarworks.iu.edu/journals/index.php/tmr/article/view/31979/35872
+ * https://scholarworks.iu.edu/journals/index.php/tmr/article/view/32050/23
+ * https://scholarworks.iu.edu/journals/index.php/tmr/article/view/32052/30
+ *
+ * Speical case:
+ * Manifest page: https://scholarworks.iu.edu/journals/index.php/psource/gateway/clockss?year=2011
+ * Issue page: https://scholarworks.iu.edu/journals/index.php/psource/issue/view/1253
+ * No articles on the issue page
  */
 
 public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
@@ -71,8 +86,8 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
 
   private static final Logger log = Logger.getLogger(Ojs3ArticleIteratorFactory.class);
     
-  protected static final String PATTERN_TEMPLATE = "\".*/article/view/[^/]+$\"";
-  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
+  protected static final String PATTERN_TEMPLATE = "\".*/article/view/[^/]+\"";
+  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+", Pattern.CASE_INSENSITIVE);
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -116,6 +131,11 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         af.setFullTextCu(absCu);
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
+
+        if (absCu.getUrl().contains("scholarworks.iu.edu")) {
+          return af;
+        }
+
         // now find the PDF from the meta tags on the abstract page
         try {
           InputStreamSource is = new InputStreamSource(new Stream(absCu.getUnfilteredInputStream()));
@@ -154,7 +174,7 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
         	  af.setFullTextCu(pdfCu);
         	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
             }
-            // NOw try for the PDF landing page which is the same as the PDF d
+            // NOw try for the PDF landing page which is the same as the PDF 
             // but with "download" turned to "view"
             String pdfLandStr = pdfUrlStr.replace("download/","view/");
             pdfCu = au.makeCachedUrl(pdfLandStr);

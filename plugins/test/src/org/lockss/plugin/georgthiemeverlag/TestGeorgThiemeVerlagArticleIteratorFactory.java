@@ -136,13 +136,20 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0037-1608741?articleLanguage=en");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0037-1608741.pdf?articleLanguage=de");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/products/ejournals/abstract/10.1055/s-0029-1214947");    
+
+    // start to matching urls with "." inside, it is discovered in real case, like
+    // https://www.thieme-connect.de/products/ejournals/pdf/10.4103/2454-6798.165082.pdf
+
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/html/10.1055/s-0029-1214947");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342");
+
     // but not to ...
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat,  "http://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947/foogood");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947.foogood");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947.foogood");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/html/10.1055/s-0029-1214947");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/ris/10.1055/s-0029-1214947");
-    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342&foo");
     
     // wrong base url

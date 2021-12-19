@@ -448,6 +448,16 @@ public class AdminServletManager extends BaseServletManager {
               return CurrentConfig.getBooleanParam(ExportContent.PARAM_ENABLE_EXPORT,
                       ExportContent.DEFAULT_ENABLE_EXPORT);
       }};
+  public static final ServletDescr SERVLET_MIGRATE_CONTENT =
+    new ServletDescr("MigrateContent",
+      MigrateContent.class,
+      "Migrate V1 Content",
+      (ServletDescr.NEED_ROLE_CONTENT_ACCESS | ServletDescr.IN_NAV),
+      "Migrate V1 Content to V2 Repository") {
+      public boolean isEnabled(LockssDaemon daemon) {
+        return CurrentConfig.getBooleanParam(MigrateContent.PARAM_ENABLE_MIGRATION,
+          MigrateContent.DEFAULT_ENABLE_MIGRATION);
+      }};
   public static final ServletDescr SERVLET_LIST_OBJECTS =
           new ServletDescr("ListObjects",
           ListObjects.class,
@@ -650,6 +660,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_ADD_CONTENT_TAB,
     SERVLET_SERVE_CONTENT,
     SERVLET_EXPORT_CONTENT,
+    SERVLET_MIGRATE_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
@@ -697,6 +708,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
     SERVLET_EXPORT_CONTENT,
+    SERVLET_MIGRATE_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
@@ -722,6 +734,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_MD_MONITOR,
     SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
+
   };
   // XXXUI List of servlets to show in transitional UI: combine main list with new versions
   static final ServletDescr servletDescrsTransitional[] = {
@@ -745,6 +758,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
     SERVLET_EXPORT_CONTENT,
+    SERVLET_MIGRATE_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
@@ -803,6 +817,7 @@ public class AdminServletManager extends BaseServletManager {
   private boolean hasIsoFiles = false;
   private boolean compressorEnabled = DEFAULT_COMPRESSOR_ENABLED;
   private boolean exportEnabled = ExportContent.DEFAULT_ENABLE_EXPORT;
+  private boolean migrateEnabled = MigrateContent.DEFAULT_ENABLE_MIGRATION;
   private boolean oiosamlEnabled = DEFAULT_OIOSAML_ENABLED;
   private File oiosamlHomeDir = null;
   private String oiosamlConfigFileName = DEFAULT_OIOSAML_CONFIG_FILE;

@@ -190,7 +190,7 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
     af1.setRoleString(ArticleFiles.ROLE_CITATION_RIS,BASE_URL + "action/downloadCitation?doi=10.5339%2FNEJM1231&format=ris&include=cit");
     af1.setRoleString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS,BASE_URL + "action/showSupplements?doi=10.5339%2FNEJM1231");
     //log.info(af1.toString()); 
-    fullUrlToAF.put(BASE_URL + "doi/pdf/10.5339/NEJM1231", af1);
+    fullUrlToAF.put(BASE_URL + "doi/full/10.5339/NEJM1231", af1);
     
     // article nejm12345
     ArticleFiles af2 = new ArticleFiles();
@@ -204,7 +204,7 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
     af3.setRoleString(ArticleFiles.ROLE_FULL_TEXT_HTML, BASE_URL + "doi/full/10.5339/nejm1231113");
     af3.setRoleString(ArticleFiles.ROLE_CITATION_RIS, BASE_URL + "action/downloadCitation?doi=10.5339%2FNEJM1231113&format=ris&include=cit");
     //log.info(af3.toString());  
-    fullUrlToAF.put(BASE_URL + "doi/pdf/10.5339/nejm1231113", af3);
+    fullUrlToAF.put(BASE_URL + "doi/full/10.5339/nejm1231113", af3);
 
     // article nejm12315002
     ArticleFiles af4 = new ArticleFiles();
@@ -221,11 +221,11 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
     af5.setRoleString(ArticleFiles.ROLE_CITATION_RIS,BASE_URL + "action/downloadCitation?doi=10.5339%2FNEJM123456&format=ris&include=cit");
     af5.setRoleString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS,BASE_URL + "action/showSupplements?doi=10.5339%2FNEJM123456");
     //log.info(af5.toString());    
-    fullUrlToAF.put(BASE_URL + "doi/pdf/10.5339/NEJM123456", af5);
+    fullUrlToAF.put(BASE_URL + "doi/full/10.5339/NEJM123456", af5);
 
     for ( Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any()); it.hasNext(); ) {
       ArticleFiles af = it.next();
-      //log.info("next AF: " + af.getFullTextUrl());
+      log.info("next AF: " + af.getFullTextUrl());
       ArticleFiles exp= fullUrlToAF.get(af.getFullTextUrl());
       assertNotNull(exp);
       compareArticleFiles(exp, af);

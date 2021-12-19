@@ -3,7 +3,8 @@
   publisher <
     name = Elsevier ;
     info[contract] = 2008 ;
-    info[tester] = S
+    info[tester] = S ;
+    info[platform] = Source
   >
 
   {
@@ -91,8 +92,8 @@
       au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_11 ; 2019_11 >
       au < zapped ; finished ; 2019 ; Elsevier Source Content 2019_12 ; 2019_12 >
 
-      au < readySource ; finished ; 2020 ; Elsevier Source Content 2020_1 ; 2020_1 >
-      au < readySource ; finished ; 2020 ; Elsevier Source Content 2020_2 ; 2020_2 >
+      au < zapped ; finished ; 2020 ; Elsevier Source Content 2020_1 ; 2020_1 >
+      au < zapped ; finished ; 2020 ; Elsevier Source Content 2020_2 ; 2020_2 >
       au < readySource ; crawling ; 2020 ; Elsevier Source Content 2020_3 ; 2020_3 >
       au < readySource ; crawling ; 2020 ; Elsevier Source Content 2020_4 ; 2020_4 >
       au < readySource ; crawling ; 2020 ; Elsevier Source Content 2020_5 ; 2020_5 >
@@ -120,9 +121,28 @@
       au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_14 ; 2021_14 >
       au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_15 ; 2021_15 >
       au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_16 ; 2021_16 >
-      au < exists ; exists ; 2021 ; Elsevier Source Content 2021_17 ; 2021_17 >
-      au < expected ; exists ; 2021 ; Elsevier Source Content 2021_18 ; 2021_18 >
-      au < expected ; exists ; 2021 ; Elsevier Source Content 2021_19 ; 2021_19 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_17 ; 2021_17 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_18 ; 2021_18 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_19 ; 2021_19 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_20 ; 2021_20 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_21 ; 2021_21 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_22 ; 2021_22 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_23 ; 2021_23 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_24 ; 2021_24 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_25 ; 2021_25 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_26 ; 2021_26 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_27 ; 2021_27 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_28 ; 2021_28 >
+      au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_29 ; 2021_29 >
+      au < exists ; exists ; 2021 ; Elsevier Source Content 2021_30 ; 2021_30 >
+      au < exists ; exists ; 2021 ; Elsevier Source Content 2021_31 ; 2021_31 >
+
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_01 ; 2022_01 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_02 ; 2022_02 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_03 ; 2022_03 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_04 ; 2022_04 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_05 ; 2022_05 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_06 ; 2022_06 >
 
     }
 

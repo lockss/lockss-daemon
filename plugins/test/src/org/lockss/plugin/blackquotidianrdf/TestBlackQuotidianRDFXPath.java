@@ -10,6 +10,7 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.*;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -20,10 +21,7 @@ public class TestBlackQuotidianRDFXPath extends LockssTestCase {
     public void testAPIXmlXPathAlone() throws Exception {
 
         String fname = "sample_rdf.xml";
-
-        String fileName= System.getProperty("user.dir") +
-                "/plugins/test/src/org/lockss/plugin/blackquotidianrdf/" + fname;
-        Document document = getDocument(fileName);
+        Document document = getDocument(getResourceAsStream(fname));
 
         String xpathArticleTitleExpression = "//rdf:RDF/rdf:Description/scalar:isLive[text() = \"1\"]/../@rdf:about";
         //String xpathArticleTitleExpression = "//rdf:Description";
@@ -182,12 +180,12 @@ public class TestBlackQuotidianRDFXPath extends LockssTestCase {
     }
 
 
-    private Document getDocument(String fileName) throws Exception
+    private Document getDocument(InputStream ins) throws Exception
     {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(fileName);
+        Document doc = builder.parse(ins);
         doSomething(doc.getDocumentElement());
         return doc;
     }

@@ -47,15 +47,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -134,18 +134,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.highwire.bmj.BMJDrupalUrlNormalizer</string>
+    <string>org.lockss.plugin.highwire.bmj.BMJJCoreUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.highwire.bmj.BMJDrupalArticleIteratorFactory</string>
+    <string>org.lockss.plugin.highwire.bmj.BMJJCoreArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.bmj.BMJDrupalArticleIteratorFactory</string>
+    <string>org.lockss.plugin.highwire.bmj.BMJJCoreArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.highwire.bmj.BMJDrupalHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.highwire.bmj.BMJJCoreHtmlCrawlFilterFactory</string>
   </entry>
 </map>

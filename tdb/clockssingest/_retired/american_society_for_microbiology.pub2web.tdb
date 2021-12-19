@@ -1,0 +1,61 @@
+{
+
+  publisher <
+    name = American Society for Microbiology ;
+    info[contract] = 2013 ;
+    info[back] = 2004 ;
+    info[tester] = 8 ;
+    info[poller] = 3 ;
+    info[platform] = Pub2Web
+  >
+
+  {
+    plugin = org.lockss.plugin.pub2web.asm.ClockssASMscienceJournalsPlugin
+    #param[base_url] = http://www.asmscience.org/
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
+  
+    {
+      title <
+        name = EcoSal Plus ;
+        eissn = 2324-6200
+      >
+      
+      param[journal_id] = ecosalplus
+      
+      au < finished ; finished ; 2004-2005 ; EcoSal Plus Volume 1 ; 1 ; http://www.asmscience.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2006-2007 ; EcoSal Plus Volume 2 ; 2 ; http://www.asmscience.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008-2009 ; EcoSal Plus Volume 3 ; 3 ; http://www.asmscience.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2010-2011 ; EcoSal Plus Volume 4 ; 4 ; http://www.asmscience.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012-2013 ; EcoSal Plus Volume 5 ; 5 ; http://www.asmscience.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014-2015 ; EcoSal Plus Volume 6 ; 6 ; http://www.asmscience.org/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2016-2017 ; EcoSal Plus Volume 7 [superseded] ; 7 ; http://www.asmscience.org/ ; >
+      au < superseded ; exists ; 2020-2021 ; EcoSal Plus Volume 9 [superseded] ; 9 ; https://www.asmscience.org/ ; >
+      au < exists ; exists ; 2016-2017 ; EcoSal Plus Volume 7 ; 7 ; https://journals.asm.org/ ; >
+      au < exists ; exists ; 2018-2019 ; EcoSal Plus Volume 8 ; 8 ; https://journals.asm.org/ ; >
+      au < exists ; exists ; 2020-2021 ; EcoSal Plus Volume 9 ; 9 ; https://journals.asm.org/ ; >
+
+    }
+  
+    {
+      title <
+        name = Microbiology Spectrum ;
+        eissn = 2165-0497
+      >
+      
+      param[journal_id] = microbiolspec
+      
+      au < finished ; finished ; 2013 ; Microbiology Spectrum 2013 ; 1 ; http://www.asmscience.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Microbiology Spectrum 2014 ; 2 ; http://www.asmscience.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; Microbiology Spectrum 2015 ; 3 ; http://www.asmscience.org/ ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2016 ; Microbiology Spectrum 2016 ; 4 ; http://www.asmscience.org/ ; >
+      au < frozen ; exists ; 2017 ; Microbiology Spectrum 2017 ; 5 ; http://www.asmscience.org/ ; >
+      au < frozen ; exists ; 2018 ; Microbiology Spectrum 2018 ; 6 ; http://www.asmscience.org/ ; >
+      au < exists ; exists ; 2019 ; Microbiology Spectrum 2019 ; 7 ; https://journals.asm.org/ ; >
+      au < exists ; exists ; 2020 ; Microbiology Spectrum 2020 ; 8 ; https://journals.asm.org/ ; >
+      au < exists ; exists ; 2021 ; Microbiology Spectrum 2021 ; 9 ; https://journals.asm.org/ ; >
+
+    }
+
+  }
+
+}

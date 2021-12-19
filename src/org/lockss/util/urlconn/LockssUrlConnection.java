@@ -165,6 +165,11 @@ public interface LockssUrlConnection {
   /** Set the username/password for the connection. */
   public void setCredentials(String username, String password);
 
+  /** Set the request entity (e.g., for POST). */
+  default public void setRequestEntity(String entity) {
+    throw new UnsupportedOperationException();
+  }
+
   /** Return numeric response code */
   public int getResponseCode();
 

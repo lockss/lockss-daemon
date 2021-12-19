@@ -45,8 +45,9 @@ public class HBKUHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
   private static final Logger logger = Logger.getLogger(HBKUHtmlLinkExtractor.class);
 
   //https://www.qscience.com/content/journals/10.5339/ahcsps.2011.1
+  //https://www.qscience.com/content/journals/10.5339/rels.2009.commonground.1
   protected static final Pattern articlePattern =
-          Pattern.compile("^https?://(.*)/[^.]+\\.[0-9]{4}\\.\\d+$",
+          Pattern.compile("^https?://(.*)/content/journals/[^.]+\\.[0-9]{4}/(.*)",
                   Pattern.CASE_INSENSITIVE);
   
   @Override
@@ -70,9 +71,10 @@ public class HBKUHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
       if (articleMat.find()) {
         if (key != null && key.startsWith("CRAWLER.fullTextHtmlLink")) {
-          logger.debug3("Found a suitable <meta> tag");
+          logger.debug3("Found a suitable <meta> tag - CRAWLER.fullTextHtmlLink\"");
           fullTextUrl = getAttributeValue("content", link);
         } else if (key != null && key.startsWith("CRAWLER.fullTextLink")) {
+          logger.debug3("Found a suitable <meta> tag - CRAWLER.fullTextLink");
           fullTextUrl = getAttributeValue("content", link);
         }
 
@@ -88,7 +90,6 @@ public class HBKUHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
           } else if (articleUrl.contains("?crawler=true")) {
             fullTextUrl = articleUrl + "&mimetype=text/html";
             pdf = articleUrl + "&mimetype=application/pdf";
-
           } else {
             fullTextUrl = articleUrl + "?crawler=true&mimetype=text/html";
             pdf = articleUrl + "?crawler=true&mimetype=application/pdf";

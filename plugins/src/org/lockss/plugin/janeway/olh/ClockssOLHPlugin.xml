@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>3</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -32,10 +32,7 @@
       <string>"%sclockss", base_url</string>
   </entry>
   <entry>
-    <string>au_start_url</string>
-    <list>
-      <!--https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
-      <string>"%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
-    </list>
+    <string>au_name</string>
+    <string>"Open Library of Humanities Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
 </map>

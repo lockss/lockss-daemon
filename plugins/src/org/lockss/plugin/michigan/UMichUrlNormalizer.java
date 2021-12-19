@@ -39,9 +39,21 @@ import org.lockss.util.Logger;
 public class UMichUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   
   protected static final Logger log = Logger.getLogger(UMichUrlNormalizer.class);
-  
-  protected static final String LOCALE_PARAM = "\\?locale=en";
-  protected static final String UTF_PARAM = "\\?utf8=.*";
+
+  /*
+  examples:
+  https://www.fulcrum.org/concern/file_sets/zc77ss02p
+  https://www.fulcrum.org/concern/file_sets/zc77ss02p?locale=en
+  https://www.fulcrum.org/concern/monographs/xg94hr617
+  https://www.fulcrum.org/concern/monographs/xg94hr617?locale=en
+  https://www.fulcrum.org/concern/monographs/xg94hr617?locale=en&page=2
+  https://www.fulcrum.org/concern/monographs/xg94hr617?locale=en?utf8=%E2%9C%93&locale=en
+   */
+
+  // need to replace more than once
+  protected static final String LOCALE_PARAM = "locale=en";
+  // local and utf may be linked with '?', not '&'
+  protected static final String UTF_PARAM = "utf8=.*";
   /* not used as patterns, no need to escape questionmark and dot*/
   private static final String IMAGE_SERVICE  = "/image-service/";
   private static final String JPEG_ARGUMENT  = ".jpg?";
@@ -50,14 +62,29 @@ public class UMichUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
   @Override
   public String normalizeUrl(String url, ArchivalUnit au)
 		  throws PluginException {
-//	  // no need to check first 
-//	  url = url.replaceFirst(LOCALE_PARAM, "");
-//	  url = url.replaceFirst(UTF_PARAM, "");
-	  // remove changing argument on end of images
-          if (url.matches("/image-service/.*\\.(jpe?g|png|json)\\?")) {
-            url = url.replaceFirst("\\?.*", "");
-          }
-	  return(url);
+
+    log.debug2("------UMichUrlNormalizer, original url = " + url);
+    //url = url.replaceFirst(LOCALE_PARAM, "");
+    //url = url.replaceFirst(UTF_PARAM, "");
+    url = url.replaceAll(LOCALE_PARAM, "");
+    url = url.replaceAll(UTF_PARAM, "");
+    // remove changing argument on end of images
+    if (url.matches("/image-service/.*\\.(jpe?g|png|json)\\?")) {
+      url = url.replaceFirst("\\?.*", "");
+    }
+    url = url.replaceAll("\\?\\?", "?");
+    if (url.contains("??&")) {
+      url = url.replaceAll("\\?\\?&", "");
+    } else if (url.contains("?&")) {
+      url = url.replaceAll("\\?&", "?");
+    }
+
+    if (url.endsWith("?"))  {
+      url = url.substring(0, url.length() - 1);
+    }
+
+    log.debug2("=========UMichUrlNormalizer, after replaced url = " + url);
+    return(url);
   }
 
 
