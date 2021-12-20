@@ -463,8 +463,6 @@ Args:
   <property name="esapi-2.0GA.jar" value="${lib}/esapi-2.0GA.jar" />
   <property name="joda-time-joda-time.jar"
   	value="${lib}/joda-time-joda-time.jar" />
-  <property name="not-yet-commons-ssl-0.3.9.jar"
-  	value="${lib}/not-yet-commons-ssl-0.3.9.jar" />
   <property name="oiosaml.java-21188-PATCHED.jar"
   	value="${lib}/oiosaml.java-21188-PATCHED.jar" />
   <property name="opensaml-2.5.1.jar" value="${lib}/opensaml-2.5.1.jar" />
@@ -629,7 +627,6 @@ Args:
     <pathelement path="${commons-fileupload-commons-fileupload.jar}" />
     <pathelement path="${esapi-2.0GA.jar}" />
     <pathelement path="${joda-time-joda-time.jar}" />
-    <pathelement path="${not-yet-commons-ssl-0.3.9.jar}" />
     <pathelement path="${oiosaml.java-21188-PATCHED.jar}" />
     <pathelement path="${opensaml-2.5.1.jar}" />
     <pathelement path="${openws-1.4.2.jar}" />
