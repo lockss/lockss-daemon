@@ -1,40 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Test plugin used by test/src/org/lockss/plugin/TestPluginManager.java -->
-<!-- Should live under: test/src/org/lockss/test/TestXmlPlugin.xml -->
-<Elements>
-  <MapElement>
-    <ElementKey>plugin_identifier</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">org.lockss.test.TestXmlPlugin</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_name</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">TestXmlPlugin</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>required_daemon_version</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">1.10.0</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_crawlrules</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
-      <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-    </ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>au_start_url</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">&quot;%sstart&quot;, base_url</ElementValue>
-  </MapElement>
-  <MapElement>
-    <ElementKey>plugin_config_props</ElementKey>
-    <ElementValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.util.ArrayList">
-      <ConfigParamDescr>
-        <Key>base_url</Key>
-        <DisplayName>Base URL</DisplayName>
-        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-        <Type>3</Type>
-        <Size>40</Size>
-        <Definitional>true</Definitional>
-      </ConfigParamDescr>
-    </ElementValue>
-  </MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.test.TestXmlPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>TestXmlPlugin</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.10.0</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sstart", base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+    <string></string>
+  </entry>
+  <entry>
+    <string></string>
+    <string></string>
+  </entry>
+</map>
