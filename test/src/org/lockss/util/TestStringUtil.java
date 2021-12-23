@@ -1333,6 +1333,7 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("Na er tiden", StringUtil.toUnaccented("N\u00e5 er tiden"));
     // swedish: Now is the time (small letter 'a' with diaeresis
     assertEquals("Nu ar det dags", StringUtil.toUnaccented("Nu \u00e4r det dags"));
+    assertEquals("University of Lodz", StringUtil.toUnaccented("University of Łódź"));
   }
 
   public void testHash64NullPayload() {

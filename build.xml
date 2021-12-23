@@ -378,6 +378,10 @@ Args:
   <property name="jackson-databind.jar" value="${lib}/jackson-databind-${jackson.version}.1.jar" /><!-- NOTE: 2.9.10.8 -->
   <property name="jackson-annotations.jar" value="${lib}/jackson-annotations-${jackson.version}.jar" />
 
+  <!-- Needed by StringUtil.toUnaccented(): -->
+  <property name="lucene-analyzers-common.jar" value="${lib}/lucene-analyzers-common-8.9.0.jar" />
+  <property name="lucene-core.jar" value="${lib}/lucene-core-8.9.0.jar" />
+
   <!-- Jars for okhttp -->
   <property name="okhttp.version" value="3.14.9" />
   <property name="okhttp.jar" value="${lib}/okhttp-${okhttp.version}.jar" />
@@ -602,6 +606,8 @@ Args:
     <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
+    <pathelement path="${lucene-analyzers-common.jar}" />
+    <pathelement path="${lucene-core.jar}" />
     <!-- Jersey jars -->
     <pathelement path="${okhttp.jar}" />
     <pathelement path="${logging-interceptor.jar}" />
