@@ -40,7 +40,6 @@ import org.lockss.plugin.UrlData;
 import org.lockss.plugin.base.BaseCachedUrl;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.base.PassiveUrlConsumerFactory;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
@@ -68,7 +67,6 @@ public class TestScUrlFetcher extends LockssTestCase {
   private MyMockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private MockCrawler.MockCrawlerFacade mcf;
-  private MockNodeManager nodeMgr = new MockNodeManager();
 
   private static final String TEST_URL = "http://www.example.com/testDir/leaf1";
   private boolean saveDefaultSuppressStackTrace;
@@ -77,10 +75,7 @@ public class TestScUrlFetcher extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    CIProperties props = new CIProperties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    String tempDirPath = setUpDiskSpace();
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();
@@ -92,8 +87,6 @@ public class TestScUrlFetcher extends LockssTestCase {
     plugin = new MockPlugin();
     plugin.initPlugin(theDaemon);
     mau.setPlugin(plugin);
-
-    theDaemon.setNodeManager(nodeMgr, mau);
 
     mcus = new MockCachedUrlSet(TEST_URL);
     mcus.setArchivalUnit(mau);
