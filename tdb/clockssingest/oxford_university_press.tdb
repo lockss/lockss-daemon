@@ -11794,6 +11794,30 @@
   {
 
     title <
+      name = Journal of Pharmaceutical Health Services Research ;
+      eissn = 1759-8893
+    >
+
+    param[journal_id] = jphsr
+
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Pharmaceutical Health Services Research Volume 1 ; 1 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Pharmaceutical Health Services Research Volume 2 ; 2 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Pharmaceutical Health Services Research Volume 3 ; 3 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Pharmaceutical Health Services Research Volume 4 ; 4 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Pharmaceutical Health Services Research Volume 5 ; 5 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Pharmaceutical Health Services Research Volume 6 ; 6 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Pharmaceutical Health Services Research Volume 7 ; 7 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Journal of Pharmaceutical Health Services Research Volume 8 ; 8 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Journal of Pharmaceutical Health Services Research Volume 9 ; 9 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Journal of Pharmaceutical Health Services Research Volume 10 ; 10 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Journal of Pharmaceutical Health Services Research Volume 11 ; 11 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Journal of Pharmaceutical Health Services Research Volume 12 ; 12 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Plant Ecology ;
       issn = 1752-9921 ;
       eissn = 1752-993X ;
