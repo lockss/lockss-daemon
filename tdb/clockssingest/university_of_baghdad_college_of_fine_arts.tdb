@@ -1,0 +1,47 @@
+{
+
+  publisher <
+    name = University Of Baghdad-College Of Fine Arts
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+
+  {
+
+    title <
+      name = Al-Academy Journal ;
+      issn = 1819-5229 ;
+      eissn = 2523-2029
+    >
+
+    {
+      param[base_url] = https://jcofarts.uobaghdad.edu.iq/
+      param[journal_id] = jcofarts
+
+      au < manifest ; exists ; 2003 ; Al-Academy Journal Volume 1 ; 1 ; 2003 >
+      au < manifest ; exists ; 2004 ; Al-Academy Journal Volume 2 ; 2 ; 2004 >
+      au < manifest ; exists ; 2005 ; Al-Academy Journal Volume 3 ; 3 ; 2005 >
+      au < manifest ; exists ; 2006 ; Al-Academy Journal Volume 4 ; 4 ; 2006 >
+      au < manifest ; exists ; 2007 ; Al-Academy Journal Volume 5 ; 5 ; 2007 >
+      # 2008 - 2014 are not on the website,  but 2007 is no. 47 and jumps to 2015 no. 71
+      #au < expected ??? ; expected ; 2008 ; Al-Academy Journal Volume 6 ; 6 ; 2008 >
+      #au < expected ??? ; expected ; 2009 ; Al-Academy Journal Volume 7 ; 7 ; 2009 >
+      #au < expected ??? ; expected ; 2010 ; Al-Academy Journal Volume 8 ; 8 ; 2010 >
+      #au < expected ??? ; expected ; 2011 ; Al-Academy Journal Volume 9 ; 9 ; 2011 >
+      #au < expected ??? ; expected ; 2012 ; Al-Academy Journal Volume 10 ; 10 ; 2012 >
+      #au < expected ??? ; expected ; 2013 ; Al-Academy Journal Volume 11 ; 11 ; 2013 >
+      #au < expected ??? ; expected ; 2014 ; Al-Academy Journal Volume 12 ; 12 ; 2014 >
+      au < manifest ; exists ; 2015 ; Al-Academy Journal Volume 13 ; 13 ; 2015 >
+      au < manifest ; exists ; 2016 ; Al-Academy Journal Volume 14 ; 14 ; 2016 >
+      au < manifest ; exists ; 2017 ; Al-Academy Journal Volume 15 ; 15 ; 2017 >
+      au < manifest ; exists ; 2018 ; Al-Academy Journal Volume 16 ; 16 ; 2018 >
+      au < manifest ; exists ; 2019 ; Al-Academy Journal Volume 17 ; 17 ; 2019 >
+      au < manifest ; exists ; 2020 ; Al-Academy Journal Volume 18 ; 18 ; 2020 >
+      au < manifest ; exists ; 2021 ; Al-Academy Journal Volume 19 ; 19 ; 2021 >
+    }
+  }
+
+}
