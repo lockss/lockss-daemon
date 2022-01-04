@@ -87,7 +87,7 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
   private static final Logger log = Logger.getLogger(Ojs3ArticleIteratorFactory.class);
     
   protected static final String PATTERN_TEMPLATE = "\".*/article/view/[^/]+\"";
-  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+", Pattern.CASE_INSENSITIVE);
+  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -171,8 +171,8 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
             CachedUrl pdfCu = au.makeCachedUrl(pdfUrlStr);
             if (pdfCu != null && pdfCu.hasContent()) {
                 // replace absCU with pdfCU if exists and has content
-        	  af.setFullTextCu(pdfCu);
-        	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+              af.setFullTextCu(pdfCu);
+              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
             }
             // NOw try for the PDF landing page which is the same as the PDF 
             // but with "download" turned to "view"
@@ -180,7 +180,7 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
             pdfCu = au.makeCachedUrl(pdfLandStr);
             if (pdfCu != null && pdfCu.hasContent()) {
                 // replace absCU with pdfCU if exists and has content
-        	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfCu);
+        	    af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfCu);
             }
           }
         }
