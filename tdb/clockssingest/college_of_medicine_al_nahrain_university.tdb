@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = College of Medicine, Al-Nahrain University
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+
+  {
+
+    title <
+      name = Baghdad Journal of Biochemistry and Applied Biological Sciences;
+      issn = 2706-9915 ;
+      eissn = 2706-9915
+    >
+
+    {
+      param[base_url] = https://bjbabs.org/
+      param[journal_id] = bjbabs
+
+      au < manifest ; exists ; 2020 ; Baghdad Journal of Biochemistry and Applied Biological Sciences Volume 1 ; 1 ; 2020 >
+      au < manifest ; exists ; 2021 ; Baghdad Journal of Biochemistry and Applied Biological Sciences Volume 2 ; 2 ; 2021 >
+    }
+  }
+
+}
