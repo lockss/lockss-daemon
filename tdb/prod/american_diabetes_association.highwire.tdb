@@ -1,6 +1,7 @@
 {
   publisher <
-    name = American Diabetes Association
+    name = American Diabetes Association ;
+    info[platform] = HW
     
   >
 
@@ -33,12 +34,12 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Clinical Diabetes Volume 31 ; 31 ; http://clinical.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2014 ; Clinical Diabetes Volume 32 ; 32 ; http://clinical.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2015 ; Clinical Diabetes Volume 33 ; 33 ; http://clinical.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2016 ; Clinical Diabetes Volume 34 ; 34 ; http://clinical.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2017 ; Clinical Diabetes Volume 35 ; 35 ; http://clinical.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2018 ; Clinical Diabetes Volume 36 ; 36 ; https://clinical.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2019 ; Clinical Diabetes Volume 37 ; 37 ; https://clinical.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 2020 ; Clinical Diabetes Volume 38 ; 38 ; https://clinical.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; https://clinical.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2016 ; Clinical Diabetes Volume 34 ; 34 ; http://clinical.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2017 ; Clinical Diabetes Volume 35 ; 35 ; http://clinical.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2018 ; Clinical Diabetes Volume 36 ; 36 ; https://clinical.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2019 ; Clinical Diabetes Volume 37 ; 37 ; https://clinical.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 2020 ; Clinical Diabetes Volume 38 ; 38 ; https://clinical.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; https://clinical.diabetesjournals.org/ >
 
     }
     
@@ -97,52 +98,52 @@
 
 
 
-      au < ada.ADADrupalPlugin ; manifest ; 1952 ; Diabetes Volume 1 ; 1 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1953 ; Diabetes Volume 2 ; 2 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1954 ; Diabetes Volume 3 ; 3 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1955 ; Diabetes Volume 4 ; 4 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1956 ; Diabetes Volume 5 ; 5 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1957 ; Diabetes Volume 6 ; 6 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1958 ; Diabetes Volume 7 ; 7 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1959 ; Diabetes Volume 8 ; 8 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1960 ; Diabetes Volume 9 ; 9 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1961 ; Diabetes Volume 10 ; 10 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1952 ; Diabetes Volume 1 ; 1 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1953 ; Diabetes Volume 2 ; 2 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1954 ; Diabetes Volume 3 ; 3 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1955 ; Diabetes Volume 4 ; 4 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1956 ; Diabetes Volume 5 ; 5 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1957 ; Diabetes Volume 6 ; 6 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1958 ; Diabetes Volume 7 ; 7 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1959 ; Diabetes Volume 8 ; 8 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1960 ; Diabetes Volume 9 ; 9 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1961 ; Diabetes Volume 10 ; 10 ; https://diabetes.diabetesjournals.org/ >
       au < ada.ADADrupalPlugin ; doesNotExist ; 1962 ; Diabetes Volume 11 ; 11 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1963 ; Diabetes Volume 12 ; 12 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1964 ; Diabetes Volume 13 ; 13 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1965 ; Diabetes Volume 14 ; 14 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1966 ; Diabetes Volume 15 ; 15 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1967 ; Diabetes Volume 16 ; 16 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1968 ; Diabetes Volume 17 ; 17 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1969 ; Diabetes Volume 18 ; 18 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1970 ; Diabetes Volume 19 ; 19 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1971 ; Diabetes Volume 20 ; 20 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1972 ; Diabetes Volume 21 ; 21 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1973 ; Diabetes Volume 22 ; 22 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1974 ; Diabetes Volume 23 ; 23 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1975 ; Diabetes Volume 24 ; 24 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1976 ; Diabetes Volume 25 ; 25 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1977 ; Diabetes Volume 26 ; 26 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1978 ; Diabetes Volume 27 ; 27 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1979 ; Diabetes Volume 28 ; 28 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1980 ; Diabetes Volume 29 ; 29 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1981 ; Diabetes Volume 30 ; 30 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1982 ; Diabetes Volume 31 ; 31 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1983 ; Diabetes Volume 32 ; 32 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1984 ; Diabetes Volume 33 ; 33 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1985 ; Diabetes Volume 34 ; 34 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1986 ; Diabetes Volume 35 ; 35 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1987 ; Diabetes Volume 36 ; 36 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1988 ; Diabetes Volume 37 ; 37 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1989 ; Diabetes Volume 38 ; 38 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1990 ; Diabetes Volume 39 ; 39 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1991 ; Diabetes Volume 40 ; 40 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1992 ; Diabetes Volume 41 ; 41 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1993 ; Diabetes Volume 42 ; 42 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1994 ; Diabetes Volume 43 ; 43 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1995 ; Diabetes Volume 44 ; 44 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1996 ; Diabetes Volume 45 ; 45 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 1997 ; Diabetes Volume 46 ; 46 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1963 ; Diabetes Volume 12 ; 12 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1964 ; Diabetes Volume 13 ; 13 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1965 ; Diabetes Volume 14 ; 14 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1966 ; Diabetes Volume 15 ; 15 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1967 ; Diabetes Volume 16 ; 16 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1968 ; Diabetes Volume 17 ; 17 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1969 ; Diabetes Volume 18 ; 18 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1970 ; Diabetes Volume 19 ; 19 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1971 ; Diabetes Volume 20 ; 20 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1972 ; Diabetes Volume 21 ; 21 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1973 ; Diabetes Volume 22 ; 22 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1974 ; Diabetes Volume 23 ; 23 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1975 ; Diabetes Volume 24 ; 24 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1976 ; Diabetes Volume 25 ; 25 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1977 ; Diabetes Volume 26 ; 26 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1978 ; Diabetes Volume 27 ; 27 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1979 ; Diabetes Volume 28 ; 28 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1980 ; Diabetes Volume 29 ; 29 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1981 ; Diabetes Volume 30 ; 30 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1982 ; Diabetes Volume 31 ; 31 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1983 ; Diabetes Volume 32 ; 32 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1984 ; Diabetes Volume 33 ; 33 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1985 ; Diabetes Volume 34 ; 34 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1986 ; Diabetes Volume 35 ; 35 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1987 ; Diabetes Volume 36 ; 36 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1988 ; Diabetes Volume 37 ; 37 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1989 ; Diabetes Volume 38 ; 38 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1990 ; Diabetes Volume 39 ; 39 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1991 ; Diabetes Volume 40 ; 40 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1992 ; Diabetes Volume 41 ; 41 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1993 ; Diabetes Volume 42 ; 42 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1994 ; Diabetes Volume 43 ; 43 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1995 ; Diabetes Volume 44 ; 44 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1996 ; Diabetes Volume 45 ; 45 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 1997 ; Diabetes Volume 46 ; 46 ; https://diabetes.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 1998 ; Diabetes Volume 47 ; 47 ; http://diabetes.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 1999 ; Diabetes Volume 48 ; 48 ; http://diabetes.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2000 ; Diabetes Volume 49 ; 49 ; http://diabetes.diabetesjournals.org/ >
@@ -161,12 +162,12 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Diabetes Volume 62 ; 62 ; http://diabetes.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2014 ; Diabetes Volume 63 ; 63 ; http://diabetes.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2015 ; Diabetes Volume 64 ; 64 ; http://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2016 ; Diabetes Volume 65 ; 65 ; http://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2017 ; Diabetes Volume 66 ; 66 ; http://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2018 ; Diabetes Volume 67 ; 67 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2019 ; Diabetes Volume 68 ; 68 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2020 ; Diabetes Volume 69 ; 69 ; https://diabetes.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 2021 ; Diabetes Volume 70 ; 70 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2016 ; Diabetes Volume 65 ; 65 ; http://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2017 ; Diabetes Volume 66 ; 66 ; http://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2018 ; Diabetes Volume 67 ; 67 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2019 ; Diabetes Volume 68 ; 68 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2020 ; Diabetes Volume 69 ; 69 ; https://diabetes.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 2021 ; Diabetes Volume 70 ; 70 ; https://diabetes.diabetesjournals.org/ >
 
     }
 
@@ -227,12 +228,12 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Diabetes Care Volume 36 ; 36 ; http://care.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2014 ; Diabetes Care Volume 37 ; 37 ; http://care.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2015 ; Diabetes Care Volume 38 ; 38 ; http://care.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2016 ; Diabetes Care Volume 39 ; 39 ; http://care.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2017 ; Diabetes Care Volume 40 ; 40 ; http://care.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2018 ; Diabetes Care Volume 41 ; 41 ; https://care.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2019 ; Diabetes Care Volume 42 ; 42 ; https://care.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2020 ; Diabetes Care Volume 43 ; 43 ; https://care.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 2021 ; Diabetes Care Volume 44 ; 44 ; https://care.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2016 ; Diabetes Care Volume 39 ; 39 ; http://care.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2017 ; Diabetes Care Volume 40 ; 40 ; http://care.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2018 ; Diabetes Care Volume 41 ; 41 ; https://care.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2019 ; Diabetes Care Volume 42 ; 42 ; https://care.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2020 ; Diabetes Care Volume 43 ; 43 ; https://care.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 2021 ; Diabetes Care Volume 44 ; 44 ; https://care.diabetesjournals.org/ >
 
     }
 
@@ -262,12 +263,12 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Diabetes Spectrum Volume 26 ; 26 ; http://spectrum.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2014 ; Diabetes Spectrum Volume 27 ; 27 ; http://spectrum.diabetesjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2015 ; Diabetes Spectrum Volume 28 ; 28 ; http://spectrum.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2016 ; Diabetes Spectrum Volume 29 ; 29 ; http://spectrum.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2017 ; Diabetes Spectrum Volume 30 ; 30 ; http://spectrum.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2018 ; Diabetes Spectrum Volume 31 ; 31 ; https://spectrum.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2019 ; Diabetes Spectrum Volume 32 ; 32 ; https://spectrum.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; released ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; https://spectrum.diabetesjournals.org/ >
-      au < ada.ADADrupalPlugin ; manifest ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; https://spectrum.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2016 ; Diabetes Spectrum Volume 29 ; 29 ; http://spectrum.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2017 ; Diabetes Spectrum Volume 30 ; 30 ; http://spectrum.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2018 ; Diabetes Spectrum Volume 31 ; 31 ; https://spectrum.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2019 ; Diabetes Spectrum Volume 32 ; 32 ; https://spectrum.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; down ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; https://spectrum.diabetesjournals.org/ >
+      au < ada.ADADrupalPlugin ; doNotProcess ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; https://spectrum.diabetesjournals.org/ >
 
     }
 
