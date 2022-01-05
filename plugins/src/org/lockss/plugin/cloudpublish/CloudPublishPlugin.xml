@@ -144,10 +144,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>code\.jquery\.com</string>
       <string>semantic-ui\.com</string>
       <!-- https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js -->
-      <string>*\.cloudfront\.net</string>
+      <string>cloudfront\.net</string>
       <string>cdnjs\.cloudflare\.com</string>
       <!-- mediaserver -->
-      <string>*\.cloudpublish\.co\.uk</string>
+      <string>cloudpublish\.co\.uk</string>
       <string>bam\.eu01\.nr-data\.net</string>
     </list>
   </entry>
