@@ -136,6 +136,8 @@
       au < readySource ; crawling ; 2021 ; Elsevier Source Content 2021_29 ; 2021_29 >
       au < manifest ; exists ; 2021 ; Elsevier Source Content 2021_30 ; 2021_30 >
       au < manifest ; exists ; 2021 ; Elsevier Source Content 2021_31 ; 2021_31 >
+      au < exists ; exists ; 2021 ; Elsevier Source Content 2021_32 ; 2021_32 >
+      au < exists ; exists ; 2021 ; Elsevier Source Content 2021_33 ; 2021_33 >
 
       au < manifest ; exists ; 2022 ; Elsevier Source Content 2022_01 ; 2022_01 >
       au < expected ; exists ; 2022 ; Elsevier Source Content 2022_02 ; 2022_02 >
@@ -143,6 +145,10 @@
       au < expected ; exists ; 2022 ; Elsevier Source Content 2022_04 ; 2022_04 >
       au < expected ; exists ; 2022 ; Elsevier Source Content 2022_05 ; 2022_05 >
       au < expected ; exists ; 2022 ; Elsevier Source Content 2022_06 ; 2022_06 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_07 ; 2022_07 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_08 ; 2022_08 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_09 ; 2022_09 >
+      au < expected ; exists ; 2022 ; Elsevier Source Content 2022_10 ; 2022_10 >
 
     }
 
