@@ -501,6 +501,40 @@
 
   {
     title <
+      name = AYUHOM ;
+      issn = 2349-2422 ;
+      eissn = 2772-5847 ;
+      issnl = 2349-2422
+    >
+#    param[base_url] = https://www.ayuhom.com/
+
+    param[journal_issn] = 2349-2422
+
+    au < exists ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; >
+    au < exists ; exists ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; >
+    au < exists ; exists ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; >
+    au < exists ; exists ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; >
+    au < exists ; exists ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; >
+
+  }
+
+  {
+    title <
+      name = Bengal Journal of Cancer ;
+      issn = 0000-0000 ;
+      eissn = 0000-0000 ;
+      issnl = 0000-0000
+    >
+#    param[base_url] = https://www.bengaljcancer.org/
+
+    param[journal_issn] = 0000-0000
+
+    au < expected ; exists ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ ; ; >
+
+  }
+
+  {
+    title <
       name = Chronicles of Young Scientists ;
       issn = 2229-5186 ;
       eissn = 0975-9212 ;
@@ -2039,6 +2073,21 @@
 
   {
     title <
+      name = Indian Pediatrics Case Reports  ;
+      issn = 2772-5170 ;
+      eissn = 2772-5189 ;
+      issnl = 2772-5170
+    >
+#    param[base_url] = https://www.ipcares.org/
+
+    param[journal_issn] = 2772-5170
+
+    au < exists ; exists ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ ; ; >
+
+  }
+
+  {
+    title <
       name = Industrial Psychiatry Journal ;
       issn = 0972-6748 ;
       eissn = 0976-2795 ;
@@ -2157,6 +2206,25 @@
 
   {
     title <
+      name = International Journal of Gastroenterology, Hepatology, Transplant and Nutrition ;
+      eissn = 2455-9393 ;
+      issnl = 2455-9393
+    >
+#    param[base_url] = https://www.ijghtn.com/
+
+    param[journal_issn] = 2455-9393
+
+    au < exists ; exists ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ ; ; >
+    au < exists ; exists ; 2017 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 2 ; 2017 ; 2 ; https://www.ijghtn.com/ ; ; >
+    au < exists ; exists ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ ; ; >
+    au < exists ; exists ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ ; ; >
+    au < exists ; exists ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ ; ; >
+    au < expected ; exists ; 2021 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2021 ; 6 ; https://www.ijghtn.com/ ; ; >
+
+  }
+
+  {
+    title <
       name = International Journal of Nutrition, Pharmacology, Neurological Diseases ;
       issn = 2231-0738 ;
       eissn = 2231-2722 ;
@@ -2177,6 +2245,20 @@
     au < finished ; crawling ; 2019 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 9 ; 2019 ; 9 ; https://www.ijnpnd.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 10 ; 2020 ; 10 ; https://www.ijnpnd.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 11 ; 2021 ; 11 ; https://www.ijnpnd.com/ ; ; >
+
+  }
+
+  {
+    title <
+      name = International Journal of Orthopaedic Surgery ;
+      eissn = 2772-915X ;
+      issnl = 2772-915X
+    >
+#    param[base_url] = https://ijos.in/
+
+    param[journal_issn] = 2772-915X
+
+    au < exists ; exists ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ ; ; >
 
   }
 
@@ -3826,7 +3908,7 @@
     au < doNotProcess ; exists ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 ; http://www.msmonographs.org/ ; ; >
     au < finished ; finished ; 2014 ; Mens Sana Monographs Volume 12 ; 2014 ; 12 ; http://www.msmonographs.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Mens Sana Monographs Volume 13 ; 2015 ; 13 ; http://www.msmonographs.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Mens Sana Monographs Volume 14 ; 2016 ; 14 ; http://www.msmonographs.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Mens Sana Monographs Volume 14 ; 2016 ; 14 ; http://www.msmonographs.org/ ; ; >
 
   }
 
@@ -7183,6 +7265,21 @@
       au < finished ; crawling ; 2016 ; Journal of Ophthalmic and Vision Research Volume 11 ; 2016 ; 11 ; http://www.jovr.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Journal of Ophthalmic and Vision Research Volume 12 ; 2017 ; 12 ; http://www.jovr.org/ ; ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; Journal of Ophthalmic and Vision Research Volume 13 ; 2018 ; 13 ; http://www.jovr.org/ ; ; >
+
+  }
+
+  {
+    title <
+      name = Journal of Ophthalmology Clinics and Research ;
+      issn = 0000-0000 ;
+      eissn = 0000-0000 ;
+      issnl = 0000-0000
+    >
+#    param[base_url] = https://www.jocr.in/
+
+    param[journal_issn] = 0000-0000
+
+    au < exists ; exists ; 2021 ; Journal of Ophthalmology Clinics and Research Volume 1 ; 2021 ; 1 ; https://www.jocr.in/ ; ; >
 
   }
 
