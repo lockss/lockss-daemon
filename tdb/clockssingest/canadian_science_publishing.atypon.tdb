@@ -1460,7 +1460,6 @@
       >
      
     param[journal_id] = juvs
-    # quarterly journal expected to launch April 1 2013
     #Volume 1 and early part of 2 used non-standard 0 in front of number
 
     au < frozen ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 01 ; http://www.nrcresearchpress.com/ ; >
@@ -1473,6 +1472,19 @@
     au < deepCrawl ; exists ; 2019 ; Journal of Unmanned Vehicle Systems Volume 7 ; 7 ; https://www.nrcresearchpress.com/ ; >
     au < manifest ; exists ; 2020 ; Journal of Unmanned Vehicle Systems Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2021 ; Journal of Unmanned Vehicle Systems Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
+    #As of 2022 journal changed name to Drone Systems and Applications 2564-4939
+    }
+    
+    {
+    
+    title < 
+      name = Drone Systems and Applications ;
+      issn = 2564-4939
+      >
+     
+    param[journal_id] = dsa
+
+    au < exists ; exists ; 2022 ; Drone Systems and Applications Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
 
     }
     
