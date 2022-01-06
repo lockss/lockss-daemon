@@ -8,7 +8,7 @@
     info[platform] = SC
   >
 
-    plugin = needs.plugin
+    plugin = needs.plugin.ClockssAAPSilverchairPlugin
     #plugin is like ClockssAAPSilverchairPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
     param[base_url] = https://diabetesjournals.org/
@@ -23,15 +23,15 @@
       #param[base_url] = http://clinical.diabetesjournals.org/
       param[journal_id] = clinical
 
-      au < exists ; exists ; 2001 ; 2001 ; Clinical Diabetes Volume 19 ; 19 ; >
-      au < exists ; exists ; 2002 ; 2002 ; Clinical Diabetes Volume 20 ; 20 ; >
-      au < exists ; exists ; 2003 ; 2003 ; Clinical Diabetes Volume 21 ; 21 ; >
-      au < exists ; exists ; 2004 ; 2004 ; Clinical Diabetes Volume 22 ; 22 ; >
-      au < exists ; exists ; 2005 ; 2005 ; Clinical Diabetes Volume 23 ; 23 ; >
-      au < exists ; exists ; 2006 ; 2006 ; Clinical Diabetes Volume 24 ; 24 ; >
-      au < exists ; exists ; 2007 ; 2007 ; Clinical Diabetes Volume 25 ; 25 ; >
-      au < exists ; exists ; 2008 ; 2008 ; Clinical Diabetes Volume 26 ; 26 ; >
-      au < exists ; exists ; 2009 ; 2009 ; Clinical Diabetes Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Clinical Diabetes Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Clinical Diabetes Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Clinical Diabetes Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Clinical Diabetes Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Clinical Diabetes Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Clinical Diabetes Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Clinical Diabetes Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Clinical Diabetes Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Clinical Diabetes Volume 27 ; 27 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Clinical Diabetes Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Clinical Diabetes Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Clinical Diabetes Volume 30 ; 30 ; >
@@ -43,7 +43,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Clinical Diabetes Volume 36 ; 36 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Clinical Diabetes Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Clinical Diabetes Volume 38 ; 38 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Clinical Diabetes Volume 40 ; 40 ; >
 
     }
     
@@ -60,64 +61,64 @@
       #No volume 11 for 1962.
       param[journal_id] = diabetes
 
-        au < exists ; exists ; 1952 ; 1952 ; Diabetes Volume 1 ; 1 ; >
-        au < exists ; exists ; 1953 ; 1953 ; Diabetes Volume 2 ; 2 ; >
-        au < exists ; exists ; 1954 ; 1954 ; Diabetes Volume 3 ; 3 ; >
-        au < exists ; exists ; 1955 ; 1955 ; Diabetes Volume 4 ; 4 ; >
-        au < exists ; exists ; 1956 ; 1956 ; Diabetes Volume 5 ; 5 ; >
-        au < exists ; exists ; 1957 ; 1957 ; Diabetes Volume 6 ; 6 ; >
-        au < exists ; exists ; 1958 ; 1958 ; Diabetes Volume 7 ; 7 ; >
-        au < exists ; exists ; 1959 ; 1959 ; Diabetes Volume 8 ; 8 ; >
-        au < exists ; exists ; 1960 ; 1960 ; Diabetes Volume 9 ; 9 ; >
-        au < exists ; exists ; 1961 ; 1961 ; Diabetes Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1952 ; 1952 ; Diabetes Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1953 ; 1953 ; Diabetes Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1954 ; 1954 ; Diabetes Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1955 ; 1955 ; Diabetes Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1956 ; 1956 ; Diabetes Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1957 ; 1957 ; Diabetes Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1958 ; 1958 ; Diabetes Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1959 ; 1959 ; Diabetes Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1960 ; 1960 ; Diabetes Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1961 ; 1961 ; Diabetes Volume 10 ; 10 ; >
         au < doesNotExist ; doesNotExist ; 1962 ; 1962 ; Diabetes Volume 11 ; 11 ; >
-        au < exists ; exists ; 1963 ; 1963 ; Diabetes Volume 12 ; 12 ; >
-        au < exists ; exists ; 1964 ; 1964 ; Diabetes Volume 13 ; 13 ; >
-        au < exists ; exists ; 1965 ; 1965 ; Diabetes Volume 14 ; 14 ; >
-        au < exists ; exists ; 1966 ; 1966 ; Diabetes Volume 15 ; 15 ; >
-        au < exists ; exists ; 1967 ; 1967 ; Diabetes Volume 16 ; 16 ; >
-        au < exists ; exists ; 1968 ; 1968 ; Diabetes Volume 17 ; 17 ; >
-        au < exists ; exists ; 1969 ; 1969 ; Diabetes Volume 18 ; 18 ; >
-        au < exists ; exists ; 1970 ; 1970 ; Diabetes Volume 19 ; 19 ; >
-        au < exists ; exists ; 1971 ; 1971 ; Diabetes Volume 20 ; 20 ; >
-        au < exists ; exists ; 1972 ; 1972 ; Diabetes Volume 21 ; 21 ; >
-        au < exists ; exists ; 1973 ; 1973 ; Diabetes Volume 22 ; 22 ; >
-        au < exists ; exists ; 1974 ; 1974 ; Diabetes Volume 23 ; 23 ; >
-        au < exists ; exists ; 1975 ; 1975 ; Diabetes Volume 24 ; 24 ; >
-        au < exists ; exists ; 1976 ; 1976 ; Diabetes Volume 25 ; 25 ; >
-        au < exists ; exists ; 1977 ; 1977 ; Diabetes Volume 26 ; 26 ; >
-        au < exists ; exists ; 1978 ; 1978 ; Diabetes Volume 27 ; 27 ; >
-        au < exists ; exists ; 1979 ; 1979 ; Diabetes Volume 28 ; 28 ; >
-        au < exists ; exists ; 1980 ; 1980 ; Diabetes Volume 29 ; 29 ; >
-        au < exists ; exists ; 1981 ; 1981 ; Diabetes Volume 30 ; 30 ; >
-        au < exists ; exists ; 1982 ; 1982 ; Diabetes Volume 31 ; 31 ; >
-        au < exists ; exists ; 1983 ; 1983 ; Diabetes Volume 32 ; 32 ; >
-        au < exists ; exists ; 1984 ; 1984 ; Diabetes Volume 33 ; 33 ; >
-        au < exists ; exists ; 1985 ; 1985 ; Diabetes Volume 34 ; 34 ; >
-        au < exists ; exists ; 1986 ; 1986 ; Diabetes Volume 35 ; 35 ; >
-        au < exists ; exists ; 1987 ; 1987 ; Diabetes Volume 36 ; 36 ; >
-        au < exists ; exists ; 1988 ; 1988 ; Diabetes Volume 37 ; 37 ; >
-        au < exists ; exists ; 1989 ; 1989 ; Diabetes Volume 38 ; 38 ; >
-        au < exists ; exists ; 1990 ; 1990 ; Diabetes Volume 39 ; 39 ; >
-        au < exists ; exists ; 1991 ; 1991 ; Diabetes Volume 40 ; 40 ; >
-        au < exists ; exists ; 1992 ; 1992 ; Diabetes Volume 41 ; 41 ; >
-        au < exists ; exists ; 1993 ; 1993 ; Diabetes Volume 42 ; 42 ; >
-        au < exists ; exists ; 1994 ; 1994 ; Diabetes Volume 43 ; 43 ; >
-        au < exists ; exists ; 1995 ; 1995 ; Diabetes Volume 44 ; 44 ; >
-        au < exists ; exists ; 1996 ; 1996 ; Diabetes Volume 45 ; 45 ; >
-        au < exists ; exists ; 1997 ; 1997 ; Diabetes Volume 46 ; 46 ; >
-        au < exists ; exists ; 1998 ; 1998 ; Diabetes Volume 47 ; 47 ; >
-        au < exists ; exists ; 1999 ; 1999 ; Diabetes Volume 48 ; 48 ; >
-        au < exists ; exists ; 2000 ; 2000 ; Diabetes Volume 49 ; 49 ; >
-        au < exists ; exists ; 2001 ; 2001 ; Diabetes Volume 50 ; 50 ; >
-        au < exists ; exists ; 2002 ; 2002 ; Diabetes Volume 51 ; 51 ; >
-        au < exists ; exists ; 2003 ; 2003 ; Diabetes Volume 52 ; 52 ; >
-        au < exists ; exists ; 2004 ; 2004 ; Diabetes Volume 53 ; 53 ; >
-        au < exists ; exists ; 2005 ; 2005 ; Diabetes Volume 54 ; 54 ; >
-        au < exists ; exists ; 2006 ; 2006 ; Diabetes Volume 55 ; 55 ; >
-        au < exists ; exists ; 2007 ; 2007 ; Diabetes Volume 56 ; 56 ; >
-        au < exists ; exists ; 2008 ; 2008 ; Diabetes Volume 57 ; 57 ; >
-        au < exists ; exists ; 2009 ; 2009 ; Diabetes Volume 58 ; 58 ; >
+        au < manifest ; exists ; 1963 ; 1963 ; Diabetes Volume 12 ; 12 ; >
+        au < manifest ; exists ; 1964 ; 1964 ; Diabetes Volume 13 ; 13 ; >
+        au < manifest ; exists ; 1965 ; 1965 ; Diabetes Volume 14 ; 14 ; >
+        au < manifest ; exists ; 1966 ; 1966 ; Diabetes Volume 15 ; 15 ; >
+        au < manifest ; exists ; 1967 ; 1967 ; Diabetes Volume 16 ; 16 ; >
+        au < manifest ; exists ; 1968 ; 1968 ; Diabetes Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1969 ; 1969 ; Diabetes Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1970 ; 1970 ; Diabetes Volume 19 ; 19 ; >
+        au < manifest ; exists ; 1971 ; 1971 ; Diabetes Volume 20 ; 20 ; >
+        au < manifest ; exists ; 1972 ; 1972 ; Diabetes Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1973 ; 1973 ; Diabetes Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1974 ; 1974 ; Diabetes Volume 23 ; 23 ; >
+        au < manifest ; exists ; 1975 ; 1975 ; Diabetes Volume 24 ; 24 ; >
+        au < manifest ; exists ; 1976 ; 1976 ; Diabetes Volume 25 ; 25 ; >
+        au < manifest ; exists ; 1977 ; 1977 ; Diabetes Volume 26 ; 26 ; >
+        au < manifest ; exists ; 1978 ; 1978 ; Diabetes Volume 27 ; 27 ; >
+        au < manifest ; exists ; 1979 ; 1979 ; Diabetes Volume 28 ; 28 ; >
+        au < manifest ; exists ; 1980 ; 1980 ; Diabetes Volume 29 ; 29 ; >
+        au < manifest ; exists ; 1981 ; 1981 ; Diabetes Volume 30 ; 30 ; >
+        au < manifest ; exists ; 1982 ; 1982 ; Diabetes Volume 31 ; 31 ; >
+        au < manifest ; exists ; 1983 ; 1983 ; Diabetes Volume 32 ; 32 ; >
+        au < manifest ; exists ; 1984 ; 1984 ; Diabetes Volume 33 ; 33 ; >
+        au < manifest ; exists ; 1985 ; 1985 ; Diabetes Volume 34 ; 34 ; >
+        au < manifest ; exists ; 1986 ; 1986 ; Diabetes Volume 35 ; 35 ; >
+        au < manifest ; exists ; 1987 ; 1987 ; Diabetes Volume 36 ; 36 ; >
+        au < manifest ; exists ; 1988 ; 1988 ; Diabetes Volume 37 ; 37 ; >
+        au < manifest ; exists ; 1989 ; 1989 ; Diabetes Volume 38 ; 38 ; >
+        au < manifest ; exists ; 1990 ; 1990 ; Diabetes Volume 39 ; 39 ; >
+        au < manifest ; exists ; 1991 ; 1991 ; Diabetes Volume 40 ; 40 ; >
+        au < manifest ; exists ; 1992 ; 1992 ; Diabetes Volume 41 ; 41 ; >
+        au < manifest ; exists ; 1993 ; 1993 ; Diabetes Volume 42 ; 42 ; >
+        au < manifest ; exists ; 1994 ; 1994 ; Diabetes Volume 43 ; 43 ; >
+        au < manifest ; exists ; 1995 ; 1995 ; Diabetes Volume 44 ; 44 ; >
+        au < manifest ; exists ; 1996 ; 1996 ; Diabetes Volume 45 ; 45 ; >
+        au < manifest ; exists ; 1997 ; 1997 ; Diabetes Volume 46 ; 46 ; >
+        au < manifest ; exists ; 1998 ; 1998 ; Diabetes Volume 47 ; 47 ; >
+        au < manifest ; exists ; 1999 ; 1999 ; Diabetes Volume 48 ; 48 ; >
+        au < manifest ; exists ; 2000 ; 2000 ; Diabetes Volume 49 ; 49 ; >
+        au < manifest ; exists ; 2001 ; 2001 ; Diabetes Volume 50 ; 50 ; >
+        au < manifest ; exists ; 2002 ; 2002 ; Diabetes Volume 51 ; 51 ; >
+        au < manifest ; exists ; 2003 ; 2003 ; Diabetes Volume 52 ; 52 ; >
+        au < manifest ; exists ; 2004 ; 2004 ; Diabetes Volume 53 ; 53 ; >
+        au < manifest ; exists ; 2005 ; 2005 ; Diabetes Volume 54 ; 54 ; >
+        au < manifest ; exists ; 2006 ; 2006 ; Diabetes Volume 55 ; 55 ; >
+        au < manifest ; exists ; 2007 ; 2007 ; Diabetes Volume 56 ; 56 ; >
+        au < manifest ; exists ; 2008 ; 2008 ; Diabetes Volume 57 ; 57 ; >
+        au < manifest ; exists ; 2009 ; 2009 ; Diabetes Volume 58 ; 58 ; >
         au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Diabetes Volume 59 ; 59 ; >
         au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Diabetes Volume 60 ; 60 ; >
         au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Diabetes Volume 61 ; 61 ; >
@@ -129,7 +130,8 @@
         au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Diabetes Volume 67 ; 67 ; >
         au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Volume 68 ; 68 ; >
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Volume 69 ; 69 ; >
-        au < exists ; exists ; 2021 ; 2021 ; Diabetes Volume 70 ; 70 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; Diabetes Volume 70 ; 70 ; >
+        au < expected ; exists ; 2022 ; 2022 ; Diabetes Volume 71 ; 71 ; >
 
     }
     
@@ -145,38 +147,38 @@
       comment[supplement] = Clinical Practice Recommendations - is published as a supplement to Diabetes Care journal
       param[journal_id] = care
 
-        au < exists ; exists ; 1978 ; 1978 ; Diabetes Care Volume 1 ; 1 ; >
-        au < exists ; exists ; 1979 ; 1979 ; Diabetes Care Volume 2 ; 2 ; >
-        au < exists ; exists ; 1980 ; 1980 ; Diabetes Care Volume 3 ; 3 ; >
-        au < exists ; exists ; 1981 ; 1981 ; Diabetes Care Volume 4 ; 4 ; >
-        au < exists ; exists ; 1982 ; 1982 ; Diabetes Care Volume 5 ; 5 ; >
-        au < exists ; exists ; 1983 ; 1983 ; Diabetes Care Volume 6 ; 6 ; >
-        au < exists ; exists ; 1984 ; 1984 ; Diabetes Care Volume 7 ; 7 ; >
-        au < exists ; exists ; 1985 ; 1985 ; Diabetes Care Volume 8 ; 8 ; >
-        au < exists ; exists ; 1986 ; 1986 ; Diabetes Care Volume 9 ; 9 ; >
-        au < exists ; exists ; 1987 ; 1987 ; Diabetes Care Volume 10 ; 10 ; >
-        au < exists ; exists ; 1988 ; 1988 ; Diabetes Care Volume 11 ; 11 ; >
-        au < exists ; exists ; 1989 ; 1989 ; Diabetes Care Volume 12 ; 12 ; >
-        au < exists ; exists ; 1990 ; 1990 ; Diabetes Care Volume 13 ; 13 ; >
-        au < exists ; exists ; 1991 ; 1991 ; Diabetes Care Volume 14 ; 14 ; >
-        au < exists ; exists ; 1992 ; 1992 ; Diabetes Care Volume 15 ; 15 ; >
-        au < exists ; exists ; 1993 ; 1993 ; Diabetes Care Volume 16 ; 16 ; >
-        au < exists ; exists ; 1994 ; 1994 ; Diabetes Care Volume 17 ; 17 ; >
-        au < exists ; exists ; 1995 ; 1995 ; Diabetes Care Volume 18 ; 18 ; >
-        au < exists ; exists ; 1996 ; 1996 ; Diabetes Care Volume 19 ; 19 ; >
-        au < exists ; exists ; 1997 ; 1997 ; Diabetes Care Volume 20 ; 20 ; >
-        au < exists ; exists ; 1998 ; 1998 ; Diabetes Care Volume 21 ; 21 ; >
-        au < exists ; exists ; 1999 ; 1999 ; Diabetes Care Volume 22 ; 22 ; >
-        au < exists ; exists ; 2000 ; 2000 ; Diabetes Care Volume 23 ; 23 ; >
-        au < exists ; exists ; 2001 ; 2001 ; Diabetes Care Volume 24 ; 24 ; >
-        au < exists ; exists ; 2002 ; 2002 ; Diabetes Care Volume 25 ; 25 ; >
-        au < exists ; exists ; 2003 ; 2003 ; Diabetes Care Volume 26 ; 26 ; >
-        au < exists ; exists ; 2004 ; 2004 ; Diabetes Care Volume 27 ; 27 ; >
-        au < exists ; exists ; 2005 ; 2005 ; Diabetes Care Volume 28 ; 28 ; >
-        au < exists ; exists ; 2006 ; 2006 ; Diabetes Care Volume 29 ; 29 ; >
-        au < exists ; exists ; 2007 ; 2007 ; Diabetes Care Volume 30 ; 30 ; >
-        au < exists ; exists ; 2008 ; 2008 ; Diabetes Care Volume 31 ; 31 ; >
-        au < exists ; exists ; 2009 ; 2009 ; Diabetes Care Volume 32 ; 32 ; >
+        au < manifest ; exists ; 1978 ; 1978 ; Diabetes Care Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1979 ; 1979 ; Diabetes Care Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1980 ; 1980 ; Diabetes Care Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1981 ; 1981 ; Diabetes Care Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1982 ; 1982 ; Diabetes Care Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1983 ; 1983 ; Diabetes Care Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1984 ; 1984 ; Diabetes Care Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1985 ; 1985 ; Diabetes Care Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1986 ; 1986 ; Diabetes Care Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1987 ; 1987 ; Diabetes Care Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1988 ; 1988 ; Diabetes Care Volume 11 ; 11 ; >
+        au < manifest ; exists ; 1989 ; 1989 ; Diabetes Care Volume 12 ; 12 ; >
+        au < manifest ; exists ; 1990 ; 1990 ; Diabetes Care Volume 13 ; 13 ; >
+        au < manifest ; exists ; 1991 ; 1991 ; Diabetes Care Volume 14 ; 14 ; >
+        au < manifest ; exists ; 1992 ; 1992 ; Diabetes Care Volume 15 ; 15 ; >
+        au < manifest ; exists ; 1993 ; 1993 ; Diabetes Care Volume 16 ; 16 ; >
+        au < manifest ; exists ; 1994 ; 1994 ; Diabetes Care Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1995 ; 1995 ; Diabetes Care Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1996 ; 1996 ; Diabetes Care Volume 19 ; 19 ; >
+        au < manifest ; exists ; 1997 ; 1997 ; Diabetes Care Volume 20 ; 20 ; >
+        au < manifest ; exists ; 1998 ; 1998 ; Diabetes Care Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1999 ; 1999 ; Diabetes Care Volume 22 ; 22 ; >
+        au < manifest ; exists ; 2000 ; 2000 ; Diabetes Care Volume 23 ; 23 ; >
+        au < manifest ; exists ; 2001 ; 2001 ; Diabetes Care Volume 24 ; 24 ; >
+        au < manifest ; exists ; 2002 ; 2002 ; Diabetes Care Volume 25 ; 25 ; >
+        au < manifest ; exists ; 2003 ; 2003 ; Diabetes Care Volume 26 ; 26 ; >
+        au < manifest ; exists ; 2004 ; 2004 ; Diabetes Care Volume 27 ; 27 ; >
+        au < manifest ; exists ; 2005 ; 2005 ; Diabetes Care Volume 28 ; 28 ; >
+        au < manifest ; exists ; 2006 ; 2006 ; Diabetes Care Volume 29 ; 29 ; >
+        au < manifest ; exists ; 2007 ; 2007 ; Diabetes Care Volume 30 ; 30 ; >
+        au < manifest ; exists ; 2008 ; 2008 ; Diabetes Care Volume 31 ; 31 ; >
+        au < manifest ; exists ; 2009 ; 2009 ; Diabetes Care Volume 32 ; 32 ; >
         au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Diabetes Care Volume 33 ; 33 ; >
         au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Diabetes Care Volume 34 ; 34 ; >
         au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Diabetes Care Volume 35 ; 35 ; >
@@ -188,7 +190,8 @@
         au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Diabetes Care Volume 41 ; 41 ; >
         au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Care Volume 42 ; 42 ; >
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Care Volume 43 ; 43 ; >
-        au < exists ; exists ; 2021 ; 2021 ; Diabetes Care Volume 44 ; 44 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; Diabetes Care Volume 44 ; 44 ; >
+        au < manifest ; exists ; 2022 ; 2022 ; Diabetes Care Volume 45 ; 45 ; >
 
     }
     
@@ -203,15 +206,15 @@
       #param[base_url] = http://spectrum.diabetesjournals.org/
       param[journal_id] = spectrum
 
-      au < exists ; exists ; 2001 ; 2001 ; Diabetes Spectrum Volume 14 ; 14 ; >
-      au < exists ; exists ; 2002 ; 2002 ; Diabetes Spectrum Volume 15 ; 15 ; >
-      au < exists ; exists ; 2003 ; 2003 ; Diabetes Spectrum Volume 16 ; 16 ; >
-      au < exists ; exists ; 2004 ; 2004 ; Diabetes Spectrum Volume 17 ; 17 ; >
-      au < exists ; exists ; 2005 ; 2005 ; Diabetes Spectrum Volume 18 ; 18 ; >
-      au < exists ; exists ; 2006 ; 2006 ; Diabetes Spectrum Volume 19 ; 19 ; >
-      au < exists ; exists ; 2007 ; 2007 ; Diabetes Spectrum Volume 20 ; 20 ; >
-      au < exists ; exists ; 2008 ; 2008 ; Diabetes Spectrum Volume 21 ; 21 ; >
-      au < exists ; exists ; 2009 ; 2009 ; Diabetes Spectrum Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Diabetes Spectrum Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Diabetes Spectrum Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Diabetes Spectrum Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Diabetes Spectrum Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Diabetes Spectrum Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Diabetes Spectrum Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Diabetes Spectrum Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Diabetes Spectrum Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Diabetes Spectrum Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Diabetes Spectrum Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Diabetes Spectrum Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Diabetes Spectrum Volume 25 ; 25 ; >
@@ -223,7 +226,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Diabetes Spectrum Volume 31 ; 31 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Spectrum Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Diabetes Spectrum Volume 35 ; 35 ; >
 
     }
 
