@@ -679,7 +679,7 @@
     au < finished ; frozen ; 2013 ; Heart Views Volume 14 ; 2013 ; 14 ; http://www.heartviews.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Heart Views Volume 15 ; 2014 ; 15 ; http://www.heartviews.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Heart Views Volume 16 ; 2015 ; 16 ; http://www.heartviews.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Heart Views Volume 17 ; 2016 ; 17 ; http://www.heartviews.org/ ; ; >
+    au < finished ; manifest ; 2016 ; Heart Views Volume 17 ; 2016 ; 17 ; http://www.heartviews.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2017 ; Heart Views Volume 18 ; 2017 ; 18 ; http://www.heartviews.org/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Heart Views Volume 19 ; 2018 ; 19 ; http://www.heartviews.org/ ; ; >
     au < finished ; crawling ; 2019 ; Heart Views Volume 20 ; 2019 ; 20 ; https://www.heartviews.org/ ; ; reingest4.clockss.org:8082 >
@@ -2172,7 +2172,7 @@
     au < finished ; frozen ; 2013 ; International Journal of Critical Illness and Injury Science Volume 3 ; 2013 ; 3 ; http://www.ijciis.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; International Journal of Critical Illness and Injury Science Volume 4 ; 2014 ; 4 ; http://www.ijciis.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2015 ; International Journal of Critical Illness and Injury Science Volume 5 ; 2015 ; 5 ; http://www.ijciis.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Critical Illness and Injury Science Volume 6 ; 2016 ; 6 ; http://www.ijciis.org/ ; ; >
+    au < finished ; manifest ; 2016 ; International Journal of Critical Illness and Injury Science Volume 6 ; 2016 ; 6 ; http://www.ijciis.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; International Journal of Critical Illness and Injury Science Volume 7 ; 2017 ; 7 ; http://www.ijciis.org/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; International Journal of Critical Illness and Injury Science Volume 8 ; 2018 ; 8 ; http://www.ijciis.org/ ; ; >
     au < finished ; manifest ; 2019 ; International Journal of Critical Illness and Injury Science Volume 9 ; 2019 ; 9 ; https://www.ijciis.org/ ; ; reingest1.clockss.org:8082 >
@@ -4819,7 +4819,7 @@
 
       au < finished ; finished ; 2014 ; African Journal of Trauma Volume 3 ; 2014 ; 3 ; http://www.afrjtrauma.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; African Journal of Trauma Volume 4 ; 2015 ; 4 ; http://www.afrjtrauma.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; African Journal of Trauma Volume 5 ; 2016 ; 5 ; http://www.afrjtrauma.com/ ; ; >
+      au < finished ; manifest ; 2016 ; African Journal of Trauma Volume 5 ; 2016 ; 5 ; http://www.afrjtrauma.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; African Journal of Trauma Volume 6 ; 2017 ; 6 ; http://www.afrjtrauma.com/ ; ; reingest2.clockss.org:8085 >
 
   }
@@ -4973,7 +4973,7 @@
       au < finished ; finished ; 2013 ; Archives of International Surgery Volume 3 ; 2013 ; 3 ; http://www.archintsurg.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; Archives of International Surgery Volume 4 ; 2014 ; 4 ; http://www.archintsurg.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Archives of International Surgery Volume 5 ; 2015 ; 5 ; http://www.archintsurg.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; http://www.archintsurg.org/ ; ; >
+      au < finished ; manifest ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; http://www.archintsurg.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; Archives of International Surgery Volume 7 ; 2017 ; 7 ; http://www.archintsurg.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Archives of International Surgery Volume 8 ; 2018 ; 8 ; https://www.archintsurg.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Archives of International Surgery Volume 9 ; 2019 ; 9 ; https://www.archintsurg.org/ ; ; reingest1.clockss.org:8082 >
@@ -4996,7 +4996,7 @@
       au < finished ; finished ; 2013 ; Archives of Medicine and Health Sciences Volume 1 ; 2013 ; 1 ; http://www.amhsjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; Archives of Medicine and Health Sciences Volume 2 ; 2014 ; 2 ; http://www.amhsjournal.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2015 ; Archives of Medicine and Health Sciences Volume 3 ; 2015 ; 3 ; http://www.amhsjournal.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Archives of Medicine and Health Sciences Volume 4 ; 2016 ; 4 ; http://www.amhsjournal.org/ ; ; >
+      au < finished ; manifest ; 2016 ; Archives of Medicine and Health Sciences Volume 4 ; 2016 ; 4 ; http://www.amhsjournal.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Archives of Medicine and Health Sciences Volume 5 ; 2017 ; 5 ; http://www.amhsjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Archives of Medicine and Health Sciences Volume 6 ; 2018 ; 6 ; http://www.amhsjournal.org/ ; ; >
       au < finished ; manifest ; 2019 ; Archives of Medicine and Health Sciences Volume 7 ; 2019 ; 7 ; https://www.amhsjournal.org/ ; ; reingest3.clockss.org:8083 >
@@ -5069,7 +5069,7 @@
       au < finished ; frozen ; 2015 ; Asian Journal of Oncology Volume 1 ; 2015 ; 1 ; http://www.asjo.in/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Asian Journal of Oncology Volume 2 ; 2016 ; 2 ; http://www.asjo.in/ ; ; >
       au < finished ; finished ; 2017 ; Asian Journal of Oncology Volume 3 ; 2017 ; 3 ; http://www.asjo.in/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Asian Journal of Oncology Volume 4 ; 2018 ; 4 ; http://www.asjo.in/ ; ; >
+      au < finished ; manifest ; 2018 ; Asian Journal of Oncology Volume 4 ; 2018 ; 4 ; http://www.asjo.in/ ; ; reingest4.clockss.org:8082 >
 
   }
 
@@ -5209,7 +5209,7 @@
       #Moved to publisher Plascipub per Medknow.
 
       au < finished ; frozen ; 2015 ; Cancer Translational Medicine Volume 1 ; 2015 ; 1 ; http://www.cancertm.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Cancer Translational Medicine Volume 2 ; 2016 ; 2 ; http://www.cancertm.com/ ; ; >
+      au < finished ; manifest ; 2016 ; Cancer Translational Medicine Volume 2 ; 2016 ; 2 ; http://www.cancertm.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Cancer Translational Medicine Volume 3 ; 2017 ; 3 ; http://www.cancertm.com/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Cancer Translational Medicine Volume 4 ; 2018 ; 4 ; http://www.cancertm.com/ ; ; >
       au < finished ; manifest ; 2019 ; Cancer Translational Medicine Volume 5 ; 2019 ; 5 ; https://www.cancertm.com/ ; ; reingest4.clockss.org:8082 >
@@ -5268,7 +5268,7 @@
 
       au < finished ; finished ; 2014 ; CHRISMED Journal of Health and Research Volume 1 ; 2014 ; 1 ; http://www.cjhr.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; CHRISMED Journal of Health and Research Volume 2 ; 2015 ; 2 ; http://www.cjhr.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2016 ; CHRISMED Journal of Health and Research Volume 3 ; 2016 ; 3 ; http://www.cjhr.org/ ; ; >
+      au < finished ; manifest ; 2016 ; CHRISMED Journal of Health and Research Volume 3 ; 2016 ; 3 ; http://www.cjhr.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; CHRISMED Journal of Health and Research Volume 4 ; 2017 ; 4 ; http://www.cjhr.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; CHRISMED Journal of Health and Research Volume 5 ; 2018 ; 5 ; http://www.cjhr.org/ ; ; >
       au < finished ; manifest ; 2019 ; CHRISMED Journal of Health and Research Volume 6 ; 2019 ; 6 ; https://www.cjhr.org/ ; ; reingest5.clockss.org:8082 >
@@ -5359,7 +5359,7 @@
 
       au < finished ; finished ; 2014 ; Community Acquired Infection Volume 1 ; 2014 ; 1 ; http://www.caijournal.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Community Acquired Infection Volume 2 ; 2015 ; 2 ; http://www.caijournal.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Community Acquired Infection Volume 3 ; 2016 ; 3 ; http://www.caijournal.com/ ; ; >
+      au < finished ; manifest ; 2016 ; Community Acquired Infection Volume 3 ; 2016 ; 3 ; http://www.caijournal.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Community Acquired Infection Volume 4 ; 2017 ; 4 ; http://www.caijournal.com/ ; ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ ; ; > #no substance
       au < notReady ; exists ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ ; ; > #no substance
@@ -5380,7 +5380,7 @@
 #      param[base_url] = http://www.djo.eg.net/
 
       au < finished ; finished ; 2015 ; Delta Journal of Ophthalmology Volume 16 ; 2015 ; 16 ; http://www.djo.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Delta Journal of Ophthalmology Volume 17 ; 2016 ; 17 ; http://www.djo.eg.net/ ; ; >
+      au < finished ; manifest ; 2016 ; Delta Journal of Ophthalmology Volume 17 ; 2016 ; 17 ; http://www.djo.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Delta Journal of Ophthalmology Volume 18 ; 2017 ; 18 ; http://www.djo.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Delta Journal of Ophthalmology Volume 19 ; 2018 ; 19 ; http://www.djo.eg.net/ ; ; >
       au < finished ; manifest ; 2019 ; Delta Journal of Ophthalmology Volume 20 ; 2019 ; 20 ; https://www.djo.eg.net/ ; ; reingest3.clockss.org:8083 >
@@ -5549,7 +5549,7 @@
 #      param[base_url] = http://www.ejode.eg.net/
 
       au < finished ; finished ; 2015 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 1 ; 2015 ; 1 ; http://www.ejode.eg.net/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 2 ; 2016 ; 2 ; http://www.ejode.eg.net/ ; ; >
+      au < finished ; manifest ; 2016 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 2 ; 2016 ; 2 ; http://www.ejode.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 3 ; 2017 ; 3 ; http://www.ejode.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 4 ; 2018 ; 4 ; http://www.ejode.eg.net/ ; ; >
       au < finished ; manifest ; 2019 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 5 ; 2019 ; 5 ; https://www.ejode.eg.net/ ; ; reingest3.clockss.org:8083 >
@@ -5703,7 +5703,7 @@
       au < finished ; frozen ; 2013 ; Endoscopic Ultrasound Volume 2 ; 2013 ; 2 ; http://www.eusjournal.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; Endoscopic Ultrasound Volume 3 ; 2014 ; 3 ; http://www.eusjournal.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Endoscopic Ultrasound Volume 4 ; 2015 ; 4 ; http://www.eusjournal.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Endoscopic Ultrasound Volume 5 ; 2016 ; 5 ; http://www.eusjournal.com/ ; ; >
+      au < finished ; manifest ; 2016 ; Endoscopic Ultrasound Volume 5 ; 2016 ; 5 ; http://www.eusjournal.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2017 ; Endoscopic Ultrasound Volume 6 ; 2017 ; 6 ; http://www.eusjournal.com/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Endoscopic Ultrasound Volume 7 ; 2018 ; 7 ; http://www.eusjournal.com/ ; ; >
       au < finished ; manifest ; 2019 ; Endoscopic Ultrasound Volume 8 ; 2019 ; 8 ; https://www.eusjournal.com/ ; ; reingest4.clockss.org:8082 >
@@ -5887,7 +5887,7 @@
       au < finished ; finished ; 2013 ; Indian Journal of Allergy, Asthma and Immunology Volume 27 ; 2013 ; 27 ; http://www.ijaai.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Indian Journal of Allergy, Asthma and Immunology Volume 28 ; 2014 ; 28 ; http://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Indian Journal of Allergy, Asthma and Immunology Volume 29 ; 2015 ; 29 ; http://www.ijaai.in/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Indian Journal of Allergy, Asthma and Immunology Volume 30 ; 2016 ; 30 ; http://www.ijaai.in/ ; ; >
+      au < finished ; manifest ; 2016 ; Indian Journal of Allergy, Asthma and Immunology Volume 30 ; 2016 ; 30 ; http://www.ijaai.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Indian Journal of Allergy, Asthma and Immunology Volume 31 ; 2017 ; 31 ; http://www.ijaai.in/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Allergy, Asthma and Immunology Volume 32 ; 2018 ; 32 ; http://www.ijaai.in/ ; ; >
       au < finished ; manifest ; 2019 ; Indian Journal of Allergy, Asthma and Immunology Volume 33 ; 2019 ; 33 ; https://www.ijaai.in/ ; ; reingest2.clockss.org:8085 >
@@ -5935,7 +5935,7 @@
 #      param[base_url] = http://www.ijcpjournal.org/
 
       au < finished ; finished ; 2015 ; Indian Journal of Cerebral Palsy Volume 1 ; 2015 ; 1 ; http://www.ijcpjournal.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Indian Journal of Cerebral Palsy Volume 2 ; 2016 ; 2 ; http://www.ijcpjournal.org/ ; ; >
+      au < finished ; manifest ; 2016 ; Indian Journal of Cerebral Palsy Volume 2 ; 2016 ; 2 ; http://www.ijcpjournal.org/ ; ; reingest3.clockss.org:8083 >
 
   }
 
@@ -6262,7 +6262,7 @@
 
       au < finished ; finished ; 2014 ; International Journal of Advanced Medical and Health Research Volume 1 ; 2014 ; 1 ; http://www.ijamhrjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Advanced Medical and Health Research Volume 2 ; 2015 ; 2 ; http://www.ijamhrjournal.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; International Journal of Advanced Medical and Health Research Volume 3 ; 2016 ; 3 ; http://www.ijamhrjournal.org/ ; ; >
+      au < finished ; manifest ; 2016 ; International Journal of Advanced Medical and Health Research Volume 3 ; 2016 ; 3 ; http://www.ijamhrjournal.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Advanced Medical and Health Research Volume 4 ; 2017 ; 4 ; http://www.ijamhrjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; International Journal of Advanced Medical and Health Research Volume 5 ; 2018 ; 5 ; http://www.ijamhrjournal.org/ ; ; >
       au < finished ; manifest ; 2019 ; International Journal of Advanced Medical and Health Research Volume 6 ; 2019 ; 6 ; https://www.ijamhrjournal.org/ ; ; reingest5.clockss.org:8082 >
@@ -6287,7 +6287,7 @@
       au < finished ; finished ; 2015 ; International Journal of Clinical and Experimental Physiology Volume 2 ; 2015 ; 2 ; http://www.ijcep.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; International Journal of Clinical and Experimental Physiology Volume 3 ; 2016 ; 3 ; http://www.ijcep.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Clinical and Experimental Physiology Volume 4 ; 2017 ; 4 ; http://www.ijcep.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2018 ; International Journal of Clinical and Experimental Physiology Volume 5 ; 2018 ; 5 ; http://www.ijcep.org/ ; ; >
+      au < finished ; manifest ; 2018 ; International Journal of Clinical and Experimental Physiology Volume 5 ; 2018 ; 5 ; http://www.ijcep.org/ ; ; reingest1.clockss.org:8082 >
 
   }
 
@@ -6365,7 +6365,7 @@
       au < finished ; frozen ; 2013 ; International Journal of Health System and Disaster Management Volume 1 ; 2013 ; 1 ; http://www.ijhsdm.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; International Journal of Health System and Disaster Management Volume 2 ; 2014 ; 2 ; http://www.ijhsdm.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; International Journal of Health System and Disaster Management Volume 3 ; 2015 ; 3 ; http://www.ijhsdm.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; International Journal of Health System and Disaster Management Volume 4 ; 2016 ; 4 ; http://www.ijhsdm.org/ ; ; >
+      au < finished ; manifest ; 2016 ; International Journal of Health System and Disaster Management Volume 4 ; 2016 ; 4 ; http://www.ijhsdm.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Health System and Disaster Management Volume 5 ; 2017 ; 5 ; http://www.ijhsdm.org/ ; ; reingest5.clockss.org:8082 >
 
   }
@@ -9253,7 +9253,7 @@
 #      param[base_url] = http://www.bmbtrj.org/
 
       au < finished ; crawling ; 2017 ; Biomedical and Biotechnology Research Journal Volume 1 ; 2017 ; 1 ; http://www.bmbtrj.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2018 ; Biomedical and Biotechnology Research Journal Volume 2 ; 2018 ; 2 ; http://www.bmbtrj.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Biomedical and Biotechnology Research Journal Volume 2 ; 2018 ; 2 ; http://www.bmbtrj.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Biomedical and Biotechnology Research Journal Volume 3 ; 2019 ; 3 ; https://www.bmbtrj.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Biomedical and Biotechnology Research Journal Volume 4 ; 2020 ; 4 ; https://www.bmbtrj.org/ ; ; >
       au < crawling ; exists ; 2021 ; Biomedical and Biotechnology Research Journal Volume 5 ; 2021 ; 5 ; https://www.bmbtrj.org/ ; ; >
@@ -9293,7 +9293,7 @@
 #      param[base_url] = http://www.cdriadvlkn.org/
 
       au < finished ; crawling ; 2017 ; Clinical Dermatology Review Volume 1 ; 2017 ; 1 ; http://www.cdriadvlkn.org/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2018 ; Clinical Dermatology Review Volume 2 ; 2018 ; 2 ; http://www.cdriadvlkn.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Clinical Dermatology Review Volume 2 ; 2018 ; 2 ; http://www.cdriadvlkn.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Clinical Dermatology Review Volume 3 ; 2019 ; 3 ; https://www.cdriadvlkn.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Clinical Dermatology Review Volume 4 ; 2020 ; 4 ; https://www.cdriadvlkn.org/ ; ; >
       au < crawling ; exists ; 2021 ; Clinical Dermatology Review Volume 5 ; 2021 ; 5 ; https://www.cdriadvlkn.org/ ; ; >
