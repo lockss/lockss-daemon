@@ -5771,7 +5771,7 @@
       au < finished ; finished ; 2015 ; European Journal of General Dentistry Volume 4 ; 2015 ; 4 ; http://www.ejgd.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; European Journal of General Dentistry Volume 5 ; 2016 ; 5 ; http://www.ejgd.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2017 ; European Journal of General Dentistry Volume 6 ; 2017 ; 6 ; http://www.ejgd.org/ ; ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; European Journal of General Dentistry Volume 7 ; 2018 ; 7 ; http://www.ejgd.org/ ; ; >
+      au < finished ; manifest ; 2018 ; European Journal of General Dentistry Volume 7 ; 2018 ; 7 ; http://www.ejgd.org/ ; ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; European Journal of General Dentistry Volume 8 ; 2019 ; 8 ; https://www.ejgd.org/ ; ; >
       au < finished ; manifest ; 2020 ; European Journal of General Dentistry Volume 9 ; 2020 ; 9 ; https://www.ejgd.org/ ; ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2021 ; European Journal of General Dentistry Volume 10 ; 2021 ; 10 ; https://www.ejgd.org/ ; ; >
@@ -5917,7 +5917,7 @@
       au < finished ; finished ; 2015 ; Indian Journal of Burns Volume 23 ; 2015 ; 23 ; http://www.ijburns.com/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2016 ; Indian Journal of Burns Volume 24 ; 2016 ; 24 ; http://www.ijburns.com/ ; ; >
       au < finished ; finished ; 2017 ; Indian Journal of Burns Volume 25 ; 2017 ; 25 ; http://www.ijburns.com/ ; ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2018 ; Indian Journal of Burns Volume 26 ; 2018 ; 26 ; https://www.ijburns.com/ ; ; >
+      au < finished ; manifest ; 2018 ; Indian Journal of Burns Volume 26 ; 2018 ; 26 ; https://www.ijburns.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Indian Journal of Burns Volume 27 ; 2019 ; 27 ; https://www.ijburns.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2020 ; Indian Journal of Burns Volume 28 ; 2020 ; 28 ; https://www.ijburns.com/ ; ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Indian Journal of Burns Volume 29 ; 2021 ; 29 ; https://www.ijburns.com/ ; ; >
@@ -6066,7 +6066,7 @@
       au < finished ; manifest ; 2019 ; Indian Journal of Medical Research Volume 149 ; 2019 ; 149 ; https://www.ijmr.org.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Indian Journal of Medical Research Volume 150 ; 2019 ; 150 ; https://www.ijmr.org.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Indian Journal of Medical Research Volume 151 ; 2020 ; 151 ; https://www.ijmr.org.in/ ; ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; Indian Journal of Medical Research Volume 152 ; 2020 ; 152 ; https://www.ijmr.org.in/ ; ; >
+      au < finished ; manifest ; 2020 ; Indian Journal of Medical Research Volume 152 ; 2020 ; 152 ; https://www.ijmr.org.in/ ; ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2021 ; Indian Journal of Medical Research Volume 153 ; 2021 ; 153 ; https://www.ijmr.org.in/ ; ; >
 
   }
@@ -6151,7 +6151,7 @@
       au < deepCrawl ; exists ; 2016 ; Indian Journal of Pain Volume 30 ; 2016 ; 30 ; http://www.indianjpain.org/ ; ; >
       au < finished ; frozen ; 2017 ; Indian Journal of Pain Volume 31 ; 2017 ; 31 ; http://www.indianjpain.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Indian Journal of Pain Volume 32 ; 2018 ; 32 ; http://www.indianjpain.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Indian Journal of Pain Volume 33 ; 2019 ; 33 ; https://www.indianjpain.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Indian Journal of Pain Volume 33 ; 2019 ; 33 ; https://www.indianjpain.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Indian Journal of Pain Volume 34 ; 2020 ; 34 ; https://www.indianjpain.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Indian Journal of Pain Volume 35 ; 2021 ; 35 ; https://www.indianjpain.org/ ; ; >
 
@@ -6347,7 +6347,7 @@
       au < finished ; frozen ; 2017 ; International Journal of Health & Allied Sciences Volume 6 ; 2017 ; 6 ; http://www.ijhas.in/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; International Journal of Health & Allied Sciences Volume 7 ; 2018 ; 7 ; http://www.ijhas.in/ ; ; >
       au < finished ; manifest ; 2019 ; International Journal of Health & Allied Sciences Volume 8 ; 2019 ; 8 ; https://www.ijhas.in/ ; ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Health & Allied Sciences Volume 9 ; 2020 ; 9 ; https://www.ijhas.in/ ; ; >
+      au < finished ; manifest ; 2020 ; International Journal of Health & Allied Sciences Volume 9 ; 2020 ; 9 ; https://www.ijhas.in/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Journal of Health & Allied Sciences Volume 10 ; 2021 ; 10 ; https://www.ijhas.in/ ; ; >
 
   }
@@ -6777,7 +6777,7 @@
       au < finished ; finished ; 2013 ; Journal of Digestive Endoscopy Volume 4 ; 2013 ; 4 ; http://www.jdeonline.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Digestive Endoscopy Volume 5 ; 2014 ; 5 ; http://www.jdeonline.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Journal of Digestive Endoscopy Volume 6 ; 2015 ; 6 ; http://www.jdeonline.in/ ; ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 2016 ; 7 ; http://www.jdeonline.in/ ; ; >
+      au < finished ; manifest ; 2016 ; Journal of Digestive Endoscopy Volume 7 ; 2016 ; 7 ; http://www.jdeonline.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Digestive Endoscopy Volume 8 ; 2017 ; 8 ; http://www.jdeonline.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of Digestive Endoscopy Volume 9 ; 2018 ; 9 ; http://www.jdeonline.in/ ; ; reingest2.clockss.org:8085 >
 
@@ -6942,9 +6942,9 @@
       au < finished ; finished ; 2013 ; Journal of Health Specialties Volume 1 ; 2013 ; 1 ; http://www.thejhs.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Health Specialties Volume 2 ; 2014 ; 2 ; http://www.thejhs.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Journal of Health Specialties Volume 3 ; 2015 ; 3 ; http://www.thejhs.org/ ; ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Journal of Health Specialties Volume 4 ; 2016 ; 4 ; http://www.thejhs.org/ ; ; >
+      au < finished ; manifest ; 2016 ; Journal of Health Specialties Volume 4 ; 2016 ; 4 ; http://www.thejhs.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Health Specialties Volume 5 ; 2017 ; 5 ; http://www.thejhs.org/ ; ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Journal of Health Specialties Volume 6 ; 2018 ; 6 ; http://www.thejhs.org/ ; ; >
+      au < frozen ; exists ; 2018 ; Journal of Health Specialties Volume 6 ; 2018 ; 6 ; http://www.thejhs.org/ ; ; reingest3.clockss.org:8083 >
 
   }
 
@@ -7031,7 +7031,7 @@
       au < finished ; frozen ; 2015 ; Journal of Indian Orthodontic Society Volume 49 ; 2015 ; 49 ; http://www.jios.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Journal of Indian Orthodontic Society Volume 50 ; 2016 ; 50 ; http://www.jios.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; Journal of Indian Orthodontic Society Volume 51 ; 2017 ; 51 ; http://www.jios.in/ ; ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Journal of Indian Orthodontic Society Volume 52 ; 2018 ; 52 ; http://www.jios.in/ ; ; >
+      au < finished ; manifest ; 2018 ; Journal of Indian Orthodontic Society Volume 52 ; 2018 ; 52 ; http://www.jios.in/ ; ; reingest5.clockss.org:8082 >
 
   }
 
@@ -7264,7 +7264,7 @@
       au < finished ; finished ; 2015 ; Journal of Ophthalmic and Vision Research Volume 10 ; 2015 ; 10 ; http://www.jovr.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2016 ; Journal of Ophthalmic and Vision Research Volume 11 ; 2016 ; 11 ; http://www.jovr.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Journal of Ophthalmic and Vision Research Volume 12 ; 2017 ; 12 ; http://www.jovr.org/ ; ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Journal of Ophthalmic and Vision Research Volume 13 ; 2018 ; 13 ; http://www.jovr.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Journal of Ophthalmic and Vision Research Volume 13 ; 2018 ; 13 ; http://www.jovr.org/ ; ; reingest3.clockss.org:8083 >
 
   }
 
@@ -7373,7 +7373,7 @@
       au < finished ; finished ; 2016 ; Journal of Orthodontic Science Volume 5 ; 2016 ; 5 ; http://www.jorthodsci.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Orthodontic Science Volume 6 ; 2017 ; 6 ; http://www.jorthodsci.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Journal of Orthodontic Science Volume 7 ; 2018 ; 7 ; http://www.jorthodsci.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Journal of Orthodontic Science Volume 8 ; 2019 ; 8 ; https://www.jorthodsci.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Journal of Orthodontic Science Volume 8 ; 2019 ; 8 ; https://www.jorthodsci.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of Orthodontic Science Volume 9 ; 2020 ; 9 ; https://www.jorthodsci.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Orthodontic Science Volume 10 ; 2021 ; 10 ; https://www.jorthodsci.org/ ; ; >
 
@@ -7396,7 +7396,7 @@
       au < finished ; finished ; 2015 ; Journal of Orthopaedics and Allied Sciences Volume 3 ; 2015 ; 3 ; http://www.joas.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Journal of Orthopaedics and Allied Sciences Volume 4 ; 2016 ; 4 ; http://www.joas.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Orthopaedics and Allied Sciences Volume 5 ; 2017 ; 5 ; http://www.joas.in/ ; ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Journal of Orthopaedics and Allied Sciences Volume 6 ; 2018 ; 6 ; http://www.joas.in/ ; ; >
+      au < finished ; manifest ; 2018 ; Journal of Orthopaedics and Allied Sciences Volume 6 ; 2018 ; 6 ; http://www.joas.in/ ; ; reingest2.clockss.org:8085 >
       #changed name to Journal of Orthopaedics and Spine
   }
 
@@ -7681,7 +7681,7 @@
       au < finished ; finished ; 2016 ; MAMC Journal of Medical Sciences Volume 2 ; 2016 ; 2 ; http://www.mamcjms.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; MAMC Journal of Medical Sciences Volume 3 ; 2017 ; 3 ; http://www.mamcjms.in/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; MAMC Journal of Medical Sciences Volume 4 ; 2018 ; 4 ; http://www.mamcjms.in/ ; ; >
-      au < frozen ; exists ; 2019 ; MAMC Journal of Medical Sciences Volume 5 ; 2019 ; 5 ; https://www.mamcjms.in/ ; ; >
+      au < finished ; manifest ; 2019 ; MAMC Journal of Medical Sciences Volume 5 ; 2019 ; 5 ; https://www.mamcjms.in/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; MAMC Journal of Medical Sciences Volume 6 ; 2020 ; 6 ; https://www.mamcjms.in/ ; ; >
       au < crawling ; exists ; 2021 ; MAMC Journal of Medical Sciences Volume 7 ; 2021 ; 7 ; https://www.mamcjms.in/ ; ; >
 
@@ -7808,7 +7808,7 @@
       au < deepCrawl ; exists ; 2016 ; Neural Regeneration Research Volume 11 ; 2016 ; 11 ; http://www.nrronline.org/ ; ; >
       au < finished ; crawling ; 2017 ; Neural Regeneration Research Volume 12 ; 2017 ; 12 ; http://www.nrronline.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Neural Regeneration Research Volume 13 ; 2018 ; 13 ; http://www.nrronline.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Neural Regeneration Research Volume 14 ; 2019 ; 14 ; https://www.nrronline.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Neural Regeneration Research Volume 14 ; 2019 ; 14 ; https://www.nrronline.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Neural Regeneration Research Volume 15 ; 2020 ; 15 ; https://www.nrronline.org/ ; ; >
       au < crawling ; exists ; 2021 ; Neural Regeneration Research Volume 16 ; 2021 ; 16 ; https://www.nrronline.org/ ; ; >
 
@@ -8889,12 +8889,12 @@
       param[journal_issn] = 2349-0578
 #      param[base_url] = http://www.actamedicainternational.com/
 
-      au < frozen ; exists ; 2014 ; Acta Medica International Volume 1 ; 2014 ; 1 ; https://www.actamedicainternational.com/ ; login for pdf ; >
-      au < frozen ; exists ; 2015 ; Acta Medica International Volume 2 ; 2015 ; 2 ; https://www.actamedicainternational.com/ ; login for pdf ; >
-      au < frozen ; exists ; 2016 ; Acta Medica International Volume 3 ; 2016 ; 3 ; https://www.actamedicainternational.com/ ; login for pdf ; >
-      au < frozen ; exists ; 2017 ; Acta Medica International Volume 4 ; 2017 ; 4 ; https://www.actamedicainternational.com/ ; login for pdf ; >
-      au < frozen ; exists ; 2018 ; Acta Medica International Volume 5 ; 2018 ; 5 ; https://www.actamedicainternational.com/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Acta Medica International Volume 6 ; 2019 ; 6 ; https://www.actamedicainternational.com/ ; ; >
+      au < finished ; manifest ; 2014 ; Acta Medica International Volume 1 ; 2014 ; 1 ; https://www.actamedicainternational.com/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Acta Medica International Volume 2 ; 2015 ; 2 ; https://www.actamedicainternational.com/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Acta Medica International Volume 3 ; 2016 ; 3 ; https://www.actamedicainternational.com/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Acta Medica International Volume 4 ; 2017 ; 4 ; https://www.actamedicainternational.com/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Acta Medica International Volume 5 ; 2018 ; 5 ; https://www.actamedicainternational.com/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Acta Medica International Volume 6 ; 2019 ; 6 ; https://www.actamedicainternational.com/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Acta Medica International Volume 7 ; 2020 ; 7 ; https://www.actamedicainternational.com/ ; ; >
       au < crawling ; exists ; 2021 ; Acta Medica International Volume 8 ; 2021 ; 8 ; https://www.actamedicainternational.com/ ; ; >
 
@@ -9033,7 +9033,7 @@
 
       au < notReady ; exists ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; http://www.anip.co.in/ ; login for pdf ; >
       au < notReady ; exists ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; http://www.anip.co.in/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Annals of Indian Psychiatry Volume 3 ; 2019 ; 3 ; https://www.anip.co.in/ ; ; >
+      au < finished ; manifest ; 2019 ; Annals of Indian Psychiatry Volume 3 ; 2019 ; 3 ; https://www.anip.co.in/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Annals of Indian Psychiatry Volume 4 ; 2020 ; 4 ; https://www.anip.co.in/ ; ; >
       au < crawling ; exists ; 2021 ; Annals of Indian Psychiatry Volume 5 ; 2021 ; 5 ; https://www.anip.co.in/ ; ; >
 
@@ -9051,15 +9051,15 @@
 #      param[base_url] = http://www.atpjournal.org/
 
       au < manifest ; exists ; 2010 ; Annals of Tropical Pathology Volume 1 ; 2010 ; 1 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2011 ; Annals of Tropical Pathology Volume 2 ; 2011 ; 2 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2012 ; Annals of Tropical Pathology Volume 3 ; 2012 ; 3 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2013 ; Annals of Tropical Pathology Volume 4 ; 2013 ; 4 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2014 ; Annals of Tropical Pathology Volume 5 ; 2014 ; 5 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2015 ; Annals of Tropical Pathology Volume 6 ; 2015 ; 6 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2016 ; Annals of Tropical Pathology Volume 7 ; 2016 ; 7 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2017 ; Annals of Tropical Pathology Volume 8 ; 2017 ; 8 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2018 ; Annals of Tropical Pathology Volume 9 ; 2018 ; 9 ; https://www.atpjournal.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Annals of Tropical Pathology Volume 10 ; 2019 ; 10 ; https://www.atpjournal.org/ ; ; >
+      au < finished ; manifest ; 2011 ; Annals of Tropical Pathology Volume 2 ; 2011 ; 2 ; https://www.atpjournal.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; Annals of Tropical Pathology Volume 3 ; 2012 ; 3 ; https://www.atpjournal.org/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Annals of Tropical Pathology Volume 4 ; 2013 ; 4 ; https://www.atpjournal.org/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Annals of Tropical Pathology Volume 5 ; 2014 ; 5 ; https://www.atpjournal.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Annals of Tropical Pathology Volume 6 ; 2015 ; 6 ; https://www.atpjournal.org/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Annals of Tropical Pathology Volume 7 ; 2016 ; 7 ; https://www.atpjournal.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Annals of Tropical Pathology Volume 8 ; 2017 ; 8 ; https://www.atpjournal.org/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Annals of Tropical Pathology Volume 9 ; 2018 ; 9 ; https://www.atpjournal.org/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Annals of Tropical Pathology Volume 10 ; 2019 ; 10 ; https://www.atpjournal.org/ ; ; >
       au < deepCrawl ; exists ; 2020 ; Annals of Tropical Pathology Volume 11 ; 2020 ; 11 ; https://www.atpjournal.org/ ; ; >
       au < crawling ; exists ; 2021 ; Annals of Tropical Pathology Volume 12 ; 2021 ; 12 ; https://www.atpjournal.org/ ; ; >
 
@@ -9079,7 +9079,7 @@
 
       au < notReady ; exists ; 2017 ; Apollo Medicine Volume 14 ; 2017 ; 14 ; http://www.apollomedicine.org/ ; login for pdf ; >
       au < notReady ; exists ; 2018 ; Apollo Medicine Volume 15 ; 2018 ; 15 ; http://www.apollomedicine.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Apollo Medicine Volume 16 ; 2019 ; 16 ; https://www.apollomedicine.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Apollo Medicine Volume 16 ; 2019 ; 16 ; https://www.apollomedicine.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Apollo Medicine Volume 17 ; 2020 ; 17 ; https://www.apollomedicine.org/ ; ; >
       au < crawling ; exists ; 2021 ; Apollo Medicine Volume 18 ; 2021 ; 18 ; https://www.apollomedicine.org/ ; ; >
 
@@ -9099,7 +9099,7 @@
       #Moved to thieme
 
       au < finished ; crawling ; 2017 ; Arab Journal of Interventional Radiology Volume 1 ; 2017 ; 1 ; http://www.arabjir.com/ ; ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Arab Journal of Interventional Radiology Volume 2 ; 2018 ; 2 ; http://www.arabjir.com/ ; ; >
+      au < finished ; manifest ; 2018 ; Arab Journal of Interventional Radiology Volume 2 ; 2018 ; 2 ; http://www.arabjir.com/ ; ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; Arab Journal of Interventional Radiology Volume 3 ; 2019 ; 3 ; https://www.arabjir.com/ ; ; >
       au < finished ; manifest ; 2020 ; Arab Journal of Interventional Radiology Volume 4 ; 2020 ; 4 ; https://www.arabjir.com/ ; ; reingest2.clockss.org:8085 >
 
@@ -9158,7 +9158,7 @@
 
       au < notReady ; exists ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 ; http://www.archtrauma.com/ ; login for pdf ; >
       au < notReady ; exists ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 ; http://www.archtrauma.com/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Archives of Trauma Research Volume 8 ; 2019 ; 8 ; https://www.archtrauma.com/ ; ; >
+      au < finished ; manifest ; 2019 ; Archives of Trauma Research Volume 8 ; 2019 ; 8 ; https://www.archtrauma.com/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Archives of Trauma Research Volume 9 ; 2020 ; 9 ; https://www.archtrauma.com/ ; ; >
       au < crawling ; exists ; 2021 ; Archives of Trauma Research Volume 10 ; 2021 ; 10 ; https://www.archtrauma.com/ ; ; >
 
@@ -9176,7 +9176,7 @@
 #      param[base_url] = http://www.ajpn-online.org/
 
       au < notReady ; exists ; 2018 ; Asian Journal of Pediatric Nephrology Volume 1 ; 2018 ; 1 ; http://www.ajpn-online.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Asian Journal of Pediatric Nephrology Volume 2 ; 2019 ; 2 ; https://www.ajpn-online.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Asian Journal of Pediatric Nephrology Volume 2 ; 2019 ; 2 ; https://www.ajpn-online.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Asian Journal of Pediatric Nephrology Volume 3 ; 2020 ; 3 ; https://www.ajpn-online.org/ ; ; >
       au < crawling ; exists ; 2021 ; Asian Journal of Pediatric Nephrology Volume 4 ; 2021 ; 4 ; https://www.ajpn-online.org/ ; ; >
 
@@ -9196,8 +9196,8 @@
 
       au < notReady ; exists ; 2017 ; Asian Pacific Journal of Reproduction Volume 6 ; 2017 ; 6 ; http://www.apjr.net/ ; login for pdf ; >
       au < notReady ; exists ; 2018 ; Asian Pacific Journal of Reproduction Volume 7 ; 2018 ; 7 ; http://www.apjr.net/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Asian Pacific Journal of Reproduction Volume 8 ; 2019 ; 8 ; https://www.apjr.net/ ; ; >
-      au < frozen ; exists ; 2020 ; Asian Pacific Journal of Reproduction Volume 9 ; 2020 ; 9 ; https://www.apjr.net/ ; ; >
+      au < finished ; manifest ; 2019 ; Asian Pacific Journal of Reproduction Volume 8 ; 2019 ; 8 ; https://www.apjr.net/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Asian Pacific Journal of Reproduction Volume 9 ; 2020 ; 9 ; https://www.apjr.net/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Asian Pacific Journal of Reproduction Volume 10 ; 2021 ; 10 ; https://www.apjr.net/ ; ; >
 
   }
@@ -9215,7 +9215,7 @@
 #      param[base_url] = http://www.apjtb.org/
 
       au < notReady ; exists ; 2018 ; Asian Pacific Journal of Tropical Biomedicine Volume 8 ; 2018 ; 8 ; http://www.apjtb.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Asian Pacific Journal of Tropical Biomedicine Volume 9 ; 2019 ; 9 ; https://www.apjtb.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Asian Pacific Journal of Tropical Biomedicine Volume 9 ; 2019 ; 9 ; https://www.apjtb.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Asian Pacific Journal of Tropical Biomedicine Volume 10 ; 2020 ; 10 ; https://www.apjtb.org/ ; ; >
       au < crawling ; exists ; 2021 ; Asian Pacific Journal of Tropical Biomedicine Volume 11 ; 2021 ; 11 ; https://www.apjtb.org/ ; ; >
 
@@ -9234,7 +9234,7 @@
 #      param[base_url] = http://www.apjtm.org/
 
       au < notReady ; exists ; 2018 ; Asian Pacific Journal of Tropical Medicine Volume 11 ; 2018 ; 11 ; http://www.apjtm.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Asian Pacific Journal of Tropical Medicine Volume 12 ; 2019 ; 12 ; https://www.apjtm.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Asian Pacific Journal of Tropical Medicine Volume 12 ; 2019 ; 12 ; https://www.apjtm.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Asian Pacific Journal of Tropical Medicine Volume 13 ; 2020 ; 13 ; https://www.apjtm.org/ ; ; >
       au < crawling ; exists ; 2021 ; Asian Pacific Journal of Tropical Medicine Volume 14 ; 2021 ; 14 ; https://www.apjtm.org/ ; ; >
 
@@ -9274,7 +9274,7 @@
 
       au < notReady ; exists ; 2017 ; Cardiology Plus Volume 2 ; 2017 ; 2 ; http://www.cardiologyplus.org/ ; login for pdf ; >
       au < notReady ; exists ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 ; http://www.cardiologyplus.org/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Cardiology Plus Volume 4 ; 2019 ; 4 ; https://www.cardiologyplus.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Cardiology Plus Volume 4 ; 2019 ; 4 ; https://www.cardiologyplus.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Cardiology Plus Volume 5 ; 2020 ; 5 ; https://www.cardiologyplus.org/ ; ; >
       au < crawling ; exists ; 2021 ; Cardiology Plus Volume 6 ; 2021 ; 6 ; https://www.cardiologyplus.org/ ; ; >
 
@@ -9350,9 +9350,9 @@
 #      param[base_url] = http://www.ejcdt.eg.net/
 
       au < notReady ; exists ; 2018 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 67 ; 2018 ; 67 ; http://www.ejcdt.eg.net/ ; login for pdf ; >
-      au < frozen ; exists ; 2019 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 68 ; 2019 ; 68 ; https://www.ejcdt.eg.net/ ; login for pdf ; >
-      au < frozen ; exists ; 2020 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 69 ; 2020 ; 69 ; https://www.ejcdt.eg.net/ ; login for pdf ; >
-      au < crawling ; exists ; 2021 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 70 ; 2021 ; 70 ; https://www.ejcdt.eg.net/ ; login for pdf ; >
+      au < finished ; manifest ; 2019 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 68 ; 2019 ; 68 ; https://www.ejcdt.eg.net/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 69 ; 2020 ; 69 ; https://www.ejcdt.eg.net/ ; ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2021 ; Egyptian Journal of Chest Diseases and Tuberculosis Volume 70 ; 2021 ; 70 ; https://www.ejcdt.eg.net/ ; ; >
 
   }
 
@@ -9432,8 +9432,8 @@
       param[journal_issn] = 2589-6113
 #      param[base_url] = http://www.jglioma.com/
 
-      au < frozen ; exists ; 2018 ; Glioma Volume 1 ; 2018 ; 1 ; https://www.jglioma.com/ ; ; >
-      au < frozen ; exists ; 2019 ; Glioma Volume 2 ; 2019 ; 2 ; https://www.jglioma.com/ ; ; >
+      au < finished ; manifest ; 2018 ; Glioma Volume 1 ; 2018 ; 1 ; https://www.jglioma.com/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Glioma Volume 2 ; 2019 ; 2 ; https://www.jglioma.com/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Glioma Volume 3 ; 2020 ; 3 ; https://www.jglioma.com/ ; ; >
       au < crawling ; exists ; 2021 ; Glioma Volume 4 ; 2021 ; 4 ; https://www.jglioma.com/ ; ; >
 
@@ -9451,8 +9451,8 @@
       param[journal_issn] = 2213-3070
 #      param[base_url] = http://www.e-gmit.com/
 
-      au < frozen ; exists ; 2018 ; Gynecology and Minimally Invasive Therapy Volume 7 ; 2018 ; 7 ; https://www.e-gmit.com/ ; ; >
-      au < frozen ; exists ; 2019 ; Gynecology and Minimally Invasive Therapy Volume 8 ; 2019 ; 8 ; https://www.e-gmit.com/ ; ; >
+      au < finished ; manifest ; 2018 ; Gynecology and Minimally Invasive Therapy Volume 7 ; 2018 ; 7 ; https://www.e-gmit.com/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Gynecology and Minimally Invasive Therapy Volume 8 ; 2019 ; 8 ; https://www.e-gmit.com/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Gynecology and Minimally Invasive Therapy Volume 9 ; 2020 ; 9 ; https://www.e-gmit.com/ ; ; >
       au < crawling ; exists ; 2021 ; Gynecology and Minimally Invasive Therapy Volume 10 ; 2021 ; 10 ; https://www.e-gmit.com/ ; ; >
 
@@ -9473,15 +9473,15 @@
       au < manifest ; exists ; 2008 ; Hamdan Medical Journal Volume 1 ; 2008 ; 1 ; https://www.hamdanjournal.org/ ; ; >
       au < manifest ; exists ; 2009 ; Hamdan Medical Journal Volume 2 ; 2009 ; 2 ; https://www.hamdanjournal.org/ ; ; >
       au < manifest ; exists ; 2010 ; Hamdan Medical Journal Volume 3 ; 2010 ; 3 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2011 ; Hamdan Medical Journal Volume 4 ; 2011 ; 4 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2012 ; Hamdan Medical Journal Volume 5 ; 2012 ; 5 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2013 ; Hamdan Medical Journal Volume 6 ; 2013 ; 6 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2014 ; Hamdan Medical Journal Volume 7 ; 2014 ; 7 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2015 ; Hamdan Medical Journal Volume 8 ; 2015 ; 8 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2016 ; Hamdan Medical Journal Volume 9 ; 2016 ; 9 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2017 ; Hamdan Medical Journal Volume 10 ; 2017 ; 10 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2018 ; Hamdan Medical Journal Volume 11 ; 2018 ; 11 ; https://www.hamdanjournal.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Hamdan Medical Journal Volume 12 ; 2019 ; 12 ; https://www.hamdanjournal.org/ ; ; >
+      au < finished ; manifest ; 2011 ; Hamdan Medical Journal Volume 4 ; 2011 ; 4 ; https://www.hamdanjournal.org/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; Hamdan Medical Journal Volume 5 ; 2012 ; 5 ; https://www.hamdanjournal.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; Hamdan Medical Journal Volume 6 ; 2013 ; 6 ; https://www.hamdanjournal.org/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Hamdan Medical Journal Volume 7 ; 2014 ; 7 ; https://www.hamdanjournal.org/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Hamdan Medical Journal Volume 8 ; 2015 ; 8 ; https://www.hamdanjournal.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Hamdan Medical Journal Volume 9 ; 2016 ; 9 ; https://www.hamdanjournal.org/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Hamdan Medical Journal Volume 10 ; 2017 ; 10 ; https://www.hamdanjournal.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Hamdan Medical Journal Volume 11 ; 2018 ; 11 ; https://www.hamdanjournal.org/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Hamdan Medical Journal Volume 12 ; 2019 ; 12 ; https://www.hamdanjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Hamdan Medical Journal Volume 13 ; 2020 ; 13 ; https://www.hamdanjournal.org/ ; ; >
       au < crawling ; exists ; 2021 ; Hamdan Medical Journal Volume 14 ; 2021 ; 14 ; https://www.hamdanjournal.org/ ; ; >
 
@@ -9662,15 +9662,15 @@
       au < manifest ; exists ; 2008 ; Indian Journal of Transplantation Volume 2 ; 2008 ; 2 ; https://www.ijtonline.in/ ; ; >
       au < manifest ; exists ; 2009 ; Indian Journal of Transplantation Volume 3 ; 2009 ; 3 ; https://www.ijtonline.in/ ; ; >
       au < manifest ; exists ; 2010 ; Indian Journal of Transplantation Volume 4 ; 2010 ; 4 ; https://www.ijtonline.in/ ; ; >
-      au < frozen ; exists ; 2011 ; Indian Journal of Transplantation Volume 5 ; 2011 ; 5 ; https://www.ijtonline.in/ ; ; >
-      au < frozen ; exists ; 2012 ; Indian Journal of Transplantation Volume 6 ; 2012 ; 6 ; https://www.ijtonline.in/ ; ; >
-      au < frozen ; exists ; 2013 ; Indian Journal of Transplantation Volume 7 ; 2013 ; 7 ; https://www.ijtonline.in/ ; ; >
-      au < frozen ; exists ; 2014 ; Indian Journal of Transplantation Volume 8 ; 2014 ; 8 ; https://www.ijtonline.in/ ; ; >
-      au < frozen ; exists ; 2015 ; Indian Journal of Transplantation Volume 9 ; 2015 ; 9 ; https://www.ijtonline.in/ ; ; >
+      au < finished ; manifest ; 2011 ; Indian Journal of Transplantation Volume 5 ; 2011 ; 5 ; https://www.ijtonline.in/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Indian Journal of Transplantation Volume 6 ; 2012 ; 6 ; https://www.ijtonline.in/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; Indian Journal of Transplantation Volume 7 ; 2013 ; 7 ; https://www.ijtonline.in/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; Indian Journal of Transplantation Volume 8 ; 2014 ; 8 ; https://www.ijtonline.in/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Indian Journal of Transplantation Volume 9 ; 2015 ; 9 ; https://www.ijtonline.in/ ; ; reingest5.clockss.org:8082 >
       au < notReady ; exists ; 2016 ; Indian Journal of Transplantation Volume 10 ; 2016 ; 10 ; https://www.ijtonline.in/ ; ; > #500 https://www.ijtonline.in/article.asp?issn=2212-0017;year=2016;volume=10;issue=4;spage=81;epage=117;aulast=;type=2
-      au < frozen ; exists ; 2017 ; Indian Journal of Transplantation Volume 11 ; 2017 ; 11 ; https://www.ijtonline.in/ ; ; >
-      au < frozen ; exists ; 2018 ; Indian Journal of Transplantation Volume 12 ; 2018 ; 12 ; https://www.ijtonline.in/ ; ; >
-      au < frozen ; exists ; 2019 ; Indian Journal of Transplantation Volume 13 ; 2019 ; 13 ; https://www.ijtonline.in/ ; ; >
+      au < finished ; manifest ; 2017 ; Indian Journal of Transplantation Volume 11 ; 2017 ; 11 ; https://www.ijtonline.in/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Indian Journal of Transplantation Volume 12 ; 2018 ; 12 ; https://www.ijtonline.in/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; Indian Journal of Transplantation Volume 13 ; 2019 ; 13 ; https://www.ijtonline.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Indian Journal of Transplantation Volume 14 ; 2020 ; 14 ; https://www.ijtonline.in/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Indian Journal of Transplantation Volume 15 ; 2021 ; 15 ; https://www.ijtonline.in/ ; ; >
 
@@ -9689,7 +9689,7 @@
 #      param[base_url] = http://www.isjonline.com/
 
       au < finished ; manifest ; 2018 ; Indian Spine Journal Volume 1 ; 2018 ; 1 ; https://www.isjonline.com/ ; ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; Indian Spine Journal Volume 2 ; 2019 ; 2 ; https://www.isjonline.com/ ; ; >
+      au < finished ; manifest ; 2019 ; Indian Spine Journal Volume 2 ; 2019 ; 2 ; https://www.isjonline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Indian Spine Journal Volume 3 ; 2020 ; 3 ; https://www.isjonline.com/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Indian Spine Journal Volume 4 ; 2021 ; 4 ; https://www.isjonline.com/ ; ; >
 
@@ -9706,10 +9706,10 @@
       param[journal_issn] = 2383-2568
 #      param[base_url] = http://www.iahs.kaums.ac.ir/
 
-      au < frozen ; exists ; 2017 ; International Archives of Health Sciences Volume 4 ; 2017 ; 4 ; https://www.iahs.kaums.ac.ir/ ; ; >
-      au < frozen ; exists ; 2018 ; International Archives of Health Sciences Volume 5 ; 2018 ; 5 ; https://www.iahs.kaums.ac.ir/ ; ; >
-      au < frozen ; exists ; 2019 ; International Archives of Health Sciences Volume 6 ; 2019 ; 6 ; https://www.iahs.kaums.ac.ir/ ; ; >
-      au < frozen ; exists ; 2020 ; International Archives of Health Sciences Volume 7 ; 2020 ; 7 ; https://www.iahs.kaums.ac.ir/ ; ; >
+      au < finished ; manifest ; 2017 ; International Archives of Health Sciences Volume 4 ; 2017 ; 4 ; https://www.iahs.kaums.ac.ir/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; International Archives of Health Sciences Volume 5 ; 2018 ; 5 ; https://www.iahs.kaums.ac.ir/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; International Archives of Health Sciences Volume 6 ; 2019 ; 6 ; https://www.iahs.kaums.ac.ir/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; International Archives of Health Sciences Volume 7 ; 2020 ; 7 ; https://www.iahs.kaums.ac.ir/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Archives of Health Sciences Volume 8 ; 2021 ; 8 ; https://www.iahs.kaums.ac.ir/ ; ; >
 
   }
@@ -9749,7 +9749,7 @@
       au < finished ; manifest ; 2017 ; International Journal of Forensic Odontology Volume 2 ; 2017 ; 2 ; https://www.ijofo.org/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2018 ; International Journal of Forensic Odontology Volume 3 ; 2018 ; 3 ; https://www.ijofo.org/ ; ; >
       au < finished ; manifest ; 2019 ; International Journal of Forensic Odontology Volume 4 ; 2019 ; 4 ; https://www.ijofo.org/ ; ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Forensic Odontology Volume 5 ; 2020 ; 5 ; https://www.ijofo.org/ ; ; >
+      au < finished ; manifest ; 2020 ; International Journal of Forensic Odontology Volume 5 ; 2020 ; 5 ; https://www.ijofo.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Forensic Odontology Volume 6 ; 2021 ; 6 ; https://www.ijofo.org/ ; ; >
 
   }
@@ -9789,8 +9789,8 @@
       param[journal_issn] = 2589-7330
 #      param[base_url] = http://www.cellsindentistry.org/
 
-      au < frozen ; exists ; 2018 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 1 ; 2018 ; 1 ; https://www.cellsindentistry.org/ ; ; >
-      au < frozen ; exists ; 2019 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 2 ; 2019 ; 2 ; https://www.cellsindentistry.org/ ; ; >
+      au < finished ; manifest ; 2018 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 1 ; 2018 ; 1 ; https://www.cellsindentistry.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 2 ; 2019 ; 2 ; https://www.cellsindentistry.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 3 ; 2020 ; 3 ; https://www.cellsindentistry.org/ ; ; >
       au < expected ; exists ; 2021 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 4 ; 2021 ; 4 ; https://www.cellsindentistry.org/ ; ; >
 
@@ -9808,9 +9808,9 @@
       param[journal_issn] = 2212-5531
 #      param[base_url] = http://www.ijmyco.org/
 
-      au < frozen ; exists ; 2012 ; International Journal of Mycobacteriology Volume 1 ; 2012 ; 1 ; https://www.ijmyco.org/ ; ; >
+      au < finished ; manifest ; 2012 ; International Journal of Mycobacteriology Volume 1 ; 2012 ; 1 ; https://www.ijmyco.org/ ; ; reingest2.clockss.org:8085 >
       au < notReady ; exists ; 2013 ; International Journal of Mycobacteriology Volume 2 ; 2013 ; 2 ; https://www.ijmyco.org/ ; ; > #500 error
-      au < frozen ; exists ; 2014 ; International Journal of Mycobacteriology Volume 3 ; 2014 ; 3 ; https://www.ijmyco.org/ ; ; >
+      au < finished ; manifest ; 2014 ; International Journal of Mycobacteriology Volume 3 ; 2014 ; 3 ; https://www.ijmyco.org/ ; ; reingest2.clockss.org:8085 >
       au < notReady ; exists ; 2015 ; International Journal of Mycobacteriology Volume 4 ; 2015 ; 4 ; https://www.ijmyco.org/ ; ; > #500 error
       au < notReady ; exists ; 2016 ; International Journal of Mycobacteriology Volume 5 ; 2016 ; 5 ; https://www.ijmyco.org/ ; ; > #500 error
       au < finished ; manifest ; 2017 ; International Journal of Mycobacteriology Volume 6 ; 2017 ; 6 ; https://www.ijmyco.org/ ; ; reingest5.clockss.org:8082 >
@@ -9929,9 +9929,9 @@
       param[journal_issn] = 2405-8181
 #      param[base_url] = http://www.ijcva.com/
 
-      au < frozen ; exists ; 2018 ; International Journal of the Cardiovascular Academy Volume 4 ; 2018 ; 4 ; https://www.ijcva.com/ ; ; >
-      au < frozen ; exists ; 2019 ; International Journal of the Cardiovascular Academy Volume 5 ; 2019 ; 5 ; https://www.ijcva.com/ ; ; >
-      au < frozen ; exists ; 2020 ; International Journal of the Cardiovascular Academy Volume 6 ; 2020 ; 6 ; https://www.ijcva.com/ ; ; >
+      au < finished ; manifest ; 2018 ; International Journal of the Cardiovascular Academy Volume 4 ; 2018 ; 4 ; https://www.ijcva.com/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; International Journal of the Cardiovascular Academy Volume 5 ; 2019 ; 5 ; https://www.ijcva.com/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; International Journal of the Cardiovascular Academy Volume 6 ; 2020 ; 6 ; https://www.ijcva.com/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of the Cardiovascular Academy Volume 7 ; 2021 ; 7 ; https://www.ijcva.com/ ; ; >
 
   }
@@ -9948,8 +9948,8 @@
       param[journal_issn] = 1571-8883
 #      param[base_url] = http://www.interventionjournal.org/
 
-      au < frozen ; exists ; 2018 ; Intervention Volume 16 ; 2018 ; 16 ; https://www.interventionjournal.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Intervention Volume 17 ; 2019 ; 17 ; https://www.interventionjournal.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Intervention Volume 16 ; 2018 ; 16 ; https://www.interventionjournal.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Intervention Volume 17 ; 2019 ; 17 ; https://www.interventionjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Intervention Volume 18 ; 2020 ; 18 ; https://www.interventionjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Intervention Volume 19 ; 2021 ; 19 ; https://www.interventionjournal.org/ ; ; >
 
@@ -9967,10 +9967,10 @@
       param[journal_issn] = 2221-6189
 #      param[base_url] = http://www.jadweb.org/
 
-      au < frozen ; exists ; 2017 ; Journal of Acute Disease Volume 6 ; 2017 ; 6 ; https://www.jadweb.org/ ; ; >
-      au < frozen ; exists ; 2018 ; Journal of Acute Disease Volume 7 ; 2018 ; 7 ; https://www.jadweb.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Journal of Acute Disease Volume 8 ; 2019 ; 8 ; https://www.jadweb.org/ ; ; >
-      au < frozen ; exists ; 2020 ; Journal of Acute Disease Volume 9 ; 2020 ; 9 ; https://www.jadweb.org/ ; ; >
+      au < finished ; manifest ; 2017 ; Journal of Acute Disease Volume 6 ; 2017 ; 6 ; https://www.jadweb.org/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Acute Disease Volume 7 ; 2018 ; 7 ; https://www.jadweb.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of Acute Disease Volume 8 ; 2019 ; 8 ; https://www.jadweb.org/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; Journal of Acute Disease Volume 9 ; 2020 ; 9 ; https://www.jadweb.org/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Acute Disease Volume 10 ; 2021 ; 10 ; https://www.jadweb.org/ ; ; >
 
   }
@@ -10010,7 +10010,7 @@
       au < finished ; manifest ; 2016 ; Journal of Current Medical Research and Practice Volume 1 ; 2016 ; 1 ; https://www.jcmrp.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of Current Medical Research and Practice Volume 2 ; 2017 ; 2 ; https://www.jcmrp.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of Current Medical Research and Practice Volume 3 ; 2018 ; 3 ; https://www.jcmrp.eg.net/ ; ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019 ; Journal of Current Medical Research and Practice Volume 4 ; 2019 ; 4 ; https://www.jcmrp.eg.net/ ; ; >
+      au < finished ; manifest ; 2019 ; Journal of Current Medical Research and Practice Volume 4 ; 2019 ; 4 ; https://www.jcmrp.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Journal of Current Medical Research and Practice Volume 5 ; 2020 ; 5 ; https://www.jcmrp.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Current Medical Research and Practice Volume 6 ; 2021 ; 6 ; https://www.jcmrp.eg.net/ ; ; >
 
@@ -10049,8 +10049,8 @@
       param[journal_issn] = 2352-2410
 #      param[base_url] = http://www.jddsjournal.org/
 
-      au < frozen ; exists ; 2018 ; Journal of Dermatology and Dermatologic Surgery Volume 22 ; 2018 ; 22 ; https://www.jddsjournal.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Journal of Dermatology and Dermatologic Surgery Volume 23 ; 2019 ; 23 ; https://www.jddsjournal.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Journal of Dermatology and Dermatologic Surgery Volume 22 ; 2018 ; 22 ; https://www.jddsjournal.org/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of Dermatology and Dermatologic Surgery Volume 23 ; 2019 ; 23 ; https://www.jddsjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Dermatology and Dermatologic Surgery Volume 24 ; 2020 ; 24 ; https://www.jddsjournal.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Dermatology and Dermatologic Surgery Volume 25 ; 2021 ; 25 ; https://www.jddsjournal.org/ ; ; >
 
@@ -10123,9 +10123,9 @@
       au < manifest ; exists ; 2008 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 20 ; 2008 ; 20 ; https://www.jiaomr.in/ ; ; >
       au < manifest ; exists ; 2009 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 21 ; 2009 ; 21 ; https://www.jiaomr.in/ ; ; >
       au < manifest ; exists ; 2010 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 22 ; 2010 ; 22 ; https://www.jiaomr.in/ ; ; >
-      au < frozen ; exists ; 2011 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 23 ; 2011 ; 23 ; https://www.jiaomr.in/ ; ; >
-      au < frozen ; exists ; 2012 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 24 ; 2012 ; 24 ; https://www.jiaomr.in/ ; ; >
-      au < frozen ; exists ; 2013 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 25 ; 2013 ; 25 ; https://www.jiaomr.in/ ; ; >
+      au < finished ; manifest ; 2011 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 23 ; 2011 ; 23 ; https://www.jiaomr.in/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 24 ; 2012 ; 24 ; https://www.jiaomr.in/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 25 ; 2013 ; 25 ; https://www.jiaomr.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 26 ; 2014 ; 26 ; https://www.jiaomr.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 27 ; 2015 ; 27 ; https://www.jiaomr.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Journal of Indian Academy of Oral Medicine and Radiology Volume 28 ; 2016 ; 28 ; https://www.jiaomr.in/ ; ; reingest2.clockss.org:8085 >
@@ -10149,10 +10149,10 @@
       param[journal_issn] = 0976-7428
 #      param[base_url] = http://www.jioh.org/
 
-      au < frozen ; exists ; 2016 ; Journal of International Oral Health Volume 8 ; 2016 ; 8 ; https://www.jioh.org/ ; ; >
+      au < finished ; manifest ; 2016 ; Journal of International Oral Health Volume 8 ; 2016 ; 8 ; https://www.jioh.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of International Oral Health Volume 9 ; 2017 ; 9 ; https://www.jioh.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of International Oral Health Volume 10 ; 2018 ; 10 ; https://www.jioh.org/ ; ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019 ; Journal of International Oral Health Volume 11 ; 2019 ; 11 ; https://www.jioh.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Journal of International Oral Health Volume 11 ; 2019 ; 11 ; https://www.jioh.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of International Oral Health Volume 12 ; 2020 ; 12 ; https://www.jioh.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of International Oral Health Volume 13 ; 2021 ; 13 ; https://www.jioh.org/ ; ; >
 
@@ -10178,7 +10178,7 @@
       au < finished ; manifest ; 2017 ; Journal of Marine Medical Society Volume 19 ; 2017 ; 19 ; https://www.marinemedicalsociety.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Journal of Marine Medical Society Volume 20 ; 2018 ; 20 ; https://www.marinemedicalsociety.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Journal of Marine Medical Society Volume 21 ; 2019 ; 21 ; https://www.marinemedicalsociety.in/ ; ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Journal of Marine Medical Society Volume 22 ; 2020 ; 22 ; https://www.marinemedicalsociety.in/ ; ; >
+      au < finished ; manifest ; 2020 ; Journal of Marine Medical Society Volume 22 ; 2020 ; 22 ; https://www.marinemedicalsociety.in/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Marine Medical Society Volume 23 ; 2021 ; 23 ; https://www.marinemedicalsociety.in/ ; ; >
 
   }
@@ -10219,8 +10219,8 @@
 #      param[base_url] = http://www.jmuonline.org/
 
       au < crawling ; exists ; 2018 ; Journal of Medical Ultrasound Volume 26 ; 2018 ; 26 ; https://www.jmuonline.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Journal of Medical Ultrasound Volume 27 ; 2019 ; 27 ; https://www.jmuonline.org/ ; ; >
-      au < frozen ; exists ; 2020 ; Journal of Medical Ultrasound Volume 28 ; 2020 ; 28 ; https://www.jmuonline.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Journal of Medical Ultrasound Volume 27 ; 2019 ; 27 ; https://www.jmuonline.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Journal of Medical Ultrasound Volume 28 ; 2020 ; 28 ; https://www.jmuonline.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Journal of Medical Ultrasound Volume 29 ; 2021 ; 29 ; https://www.jmuonline.org/ ; ; >
 
   }
@@ -10237,9 +10237,9 @@
       param[journal_issn] = 2537-091X
 #      param[base_url] = http://www.jmsr.eg.net/
 
-      au < frozen ; exists ; 2018 ; Journal of Medicine in Scientific Research Volume 1 ; 2018 ; 1 ; https://www.jmsr.eg.net/ ; ; >
-      au < frozen ; exists ; 2019 ; Journal of Medicine in Scientific Research Volume 2 ; 2019 ; 2 ; https://www.jmsr.eg.net/ ; ; >
-      au < frozen ; exists ; 2020 ; Journal of Medicine in Scientific Research Volume 3 ; 2020 ; 3 ; https://www.jmsr.eg.net/ ; ; >
+      au < finished ; manifest ; 2018 ; Journal of Medicine in Scientific Research Volume 1 ; 2018 ; 1 ; https://www.jmsr.eg.net/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Journal of Medicine in Scientific Research Volume 2 ; 2019 ; 2 ; https://www.jmsr.eg.net/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Journal of Medicine in Scientific Research Volume 3 ; 2020 ; 3 ; https://www.jmsr.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Medicine in Scientific Research Volume 4 ; 2021 ; 4 ; https://www.jmsr.eg.net/ ; ; >
 
   }
@@ -10256,13 +10256,13 @@
       param[journal_issn] = 2213-879X
 #      param[base_url] = http://www.jmau.org/
 
-      au < frozen ; exists ; 2013 ; Journal of Microscopy and Ultrastructure Volume 1 ; 2013 ; 1 ; https://www.jmau.org/ ; ; >
-      au < frozen ; exists ; 2014 ; Journal of Microscopy and Ultrastructure Volume 2 ; 2014 ; 2 ; https://www.jmau.org/ ; ; >
-      au < frozen ; exists ; 2015 ; Journal of Microscopy and Ultrastructure Volume 3 ; 2015 ; 3 ; https://www.jmau.org/ ; ; >
-      au < frozen ; exists ; 2016 ; Journal of Microscopy and Ultrastructure Volume 4 ; 2016 ; 4 ; https://www.jmau.org/ ; ; >
-      au < frozen ; exists ; 2017 ; Journal of Microscopy and Ultrastructure Volume 5 ; 2017 ; 5 ; https://www.jmau.org/ ; ; >
-      au < frozen ; exists ; 2018 ; Journal of Microscopy and Ultrastructure Volume 6 ; 2018 ; 6 ; https://www.jmau.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Journal of Microscopy and Ultrastructure Volume 7 ; 2019 ; 7 ; https://www.jmau.org/ ; ; >
+      au < finished ; manifest ; 2013 ; Journal of Microscopy and Ultrastructure Volume 1 ; 2013 ; 1 ; https://www.jmau.org/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; Journal of Microscopy and Ultrastructure Volume 2 ; 2014 ; 2 ; https://www.jmau.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; Journal of Microscopy and Ultrastructure Volume 3 ; 2015 ; 3 ; https://www.jmau.org/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Journal of Microscopy and Ultrastructure Volume 4 ; 2016 ; 4 ; https://www.jmau.org/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Journal of Microscopy and Ultrastructure Volume 5 ; 2017 ; 5 ; https://www.jmau.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Microscopy and Ultrastructure Volume 6 ; 2018 ; 6 ; https://www.jmau.org/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of Microscopy and Ultrastructure Volume 7 ; 2019 ; 7 ; https://www.jmau.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Microscopy and Ultrastructure Volume 8 ; 2020 ; 8 ; https://www.jmau.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Microscopy and Ultrastructure Volume 9 ; 2021 ; 9 ; https://www.jmau.org/ ; ; >
 
@@ -10301,8 +10301,8 @@
       param[journal_issn] = 2589-627X
 #      param[base_url] = http://www.jnsmonline.org/
 
-      au < frozen ; exists ; 2018 ; Journal of Nature and Science of Medicine Volume 1 ; 2018 ; 1 ; https://www.jnsmonline.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Journal of Nature and Science of Medicine Volume 2 ; 2019 ; 2 ; https://www.jnsmonline.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Journal of Nature and Science of Medicine Volume 1 ; 2018 ; 1 ; https://www.jnsmonline.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of Nature and Science of Medicine Volume 2 ; 2019 ; 2 ; https://www.jnsmonline.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Journal of Nature and Science of Medicine Volume 3 ; 2020 ; 3 ; https://www.jnsmonline.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Nature and Science of Medicine Volume 4 ; 2021 ; 4 ; https://www.jnsmonline.org/ ; ; >
 
@@ -10324,7 +10324,7 @@
       au < finished ; manifest ; 2016 ; Journal of Patient Safety and Infection Control Volume 4 ; 2016 ; 4 ; https://www.jpsiconline.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; Journal of Patient Safety and Infection Control Volume 5 ; 2017 ; 5 ; https://www.jpsiconline.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; Journal of Patient Safety and Infection Control Volume 6 ; 2018 ; 6 ; https://www.jpsiconline.com/ ; ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; Journal of Patient Safety and Infection Control Volume 7 ; 2019 ; 7 ; https://www.jpsiconline.com/ ; ; >
+      au < finished ; manifest ; 2019 ; Journal of Patient Safety and Infection Control Volume 7 ; 2019 ; 7 ; https://www.jpsiconline.com/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Patient Safety and Infection Control Volume 8 ; 2020 ; 8 ; https://www.jpsiconline.com/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Patient Safety and Infection Control Volume 9 ; 2021 ; 9 ; https://www.jpsiconline.com/ ; ; >
 
@@ -10366,7 +10366,7 @@
       au < finished ; manifest ; 2014 ; Journal of Reports in Pharmaceutical Sciences Volume 3 ; 2014 ; 3 ; https://www.jrpsjournal.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; Journal of Reports in Pharmaceutical Sciences Volume 4 ; 2015 ; 4 ; https://www.jrpsjournal.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; Journal of Reports in Pharmaceutical Sciences Volume 5 ; 2016 ; 5 ; https://www.jrpsjournal.com/ ; ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2017 ; Journal of Reports in Pharmaceutical Sciences Volume 6 ; 2017 ; 6 ; https://www.jrpsjournal.com/ ; ; >
+      au < finished ; manifest ; 2017 ; Journal of Reports in Pharmaceutical Sciences Volume 6 ; 2017 ; 6 ; https://www.jrpsjournal.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Journal of Reports in Pharmaceutical Sciences Volume 7 ; 2018 ; 7 ; https://www.jrpsjournal.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Journal of Reports in Pharmaceutical Sciences Volume 8 ; 2019 ; 8 ; https://www.jrpsjournal.com/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Reports in Pharmaceutical Sciences Volume 9 ; 2020 ; 9 ; https://www.jrpsjournal.com/ ; ; >
@@ -10408,7 +10408,7 @@
       au < finished ; manifest ; 2015 ; Journal of The Arab Society for Medical Research Volume 10 ; 2015 ; 10 ; https://www.new.asmr.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Journal of The Arab Society for Medical Research Volume 11 ; 2016 ; 11 ; https://www.new.asmr.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; Journal of The Arab Society for Medical Research Volume 12 ; 2017 ; 12 ; https://www.new.asmr.eg.net/ ; ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2018 ; Journal of The Arab Society for Medical Research Volume 13 ; 2018 ; 13 ; https://www.new.asmr.eg.net/ ; ; >
+      au < finished ; manifest ; 2018 ; Journal of The Arab Society for Medical Research Volume 13 ; 2018 ; 13 ; https://www.new.asmr.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Journal of The Arab Society for Medical Research Volume 14 ; 2019 ; 14 ; https://www.new.asmr.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Journal of The Arab Society for Medical Research Volume 15 ; 2020 ; 15 ; https://www.new.asmr.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of The Arab Society for Medical Research Volume 16 ; 2021 ; 16 ; https://www.new.asmr.eg.net/ ; ; >
@@ -10426,8 +10426,8 @@
       param[journal_issn] = 2349-7904
 #      param[base_url] = http://www.jisprm.org/
 
-      au < frozen ; exists ; 2018 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 1 ; 2018 ; 1 ; https://www.jisprm.org/ ; ; >
-      au < frozen ; exists ; 2019 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 2 ; 2019 ; 2 ; https://www.jisprm.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 1 ; 2018 ; 1 ; https://www.jisprm.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 2 ; 2019 ; 2 ; https://www.jisprm.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 3 ; 2020 ; 3 ; https://www.jisprm.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 4 ; 2021 ; 4 ; https://www.jisprm.org/ ; ; >
 
@@ -10488,10 +10488,10 @@
       param[journal_issn] = 2519-139X
 #      param[base_url] = http://journal.limu.edu.ly/
 
-      au < frozen ; exists ; 2016 ; Libyan International Medical University Journal Volume 1 ; 2016 ; 1 ; https://journal.limu.edu.ly/ ; ; >
-      au < frozen ; exists ; 2017 ; Libyan International Medical University Journal Volume 2 ; 2017 ; 2 ; https://journal.limu.edu.ly/ ; ; >
-      au < frozen ; exists ; 2018 ; Libyan International Medical University Journal Volume 3 ; 2018 ; 3 ; https://journal.limu.edu.ly/ ; ; >
-      au < frozen ; exists ; 2019 ; Libyan International Medical University Journal Volume 4 ; 2019 ; 4 ; https://journal.limu.edu.ly/ ; ; >
+      au < finished ; manifest ; 2016 ; Libyan International Medical University Journal Volume 1 ; 2016 ; 1 ; https://journal.limu.edu.ly/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Libyan International Medical University Journal Volume 2 ; 2017 ; 2 ; https://journal.limu.edu.ly/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Libyan International Medical University Journal Volume 3 ; 2018 ; 3 ; https://journal.limu.edu.ly/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Libyan International Medical University Journal Volume 4 ; 2019 ; 4 ; https://journal.limu.edu.ly/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Libyan International Medical University Journal Volume 5 ; 2020 ; 5 ; https://journal.limu.edu.ly/ ; ; >
       au < crawling ; exists ; 2021 ; Libyan International Medical University Journal Volume 6 ; 2021 ; 6 ; https://journal.limu.edu.ly/ ; ; >
 
