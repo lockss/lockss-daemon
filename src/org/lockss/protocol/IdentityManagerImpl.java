@@ -1288,7 +1288,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     return result;
   }
 
-  protected AuAgreements findAuAgreements(ArchivalUnit au) {
+  public AuAgreements findAuAgreements(ArchivalUnit au) {
     AuAgreements auAgreements;
     String auId = au.getAuId();
 

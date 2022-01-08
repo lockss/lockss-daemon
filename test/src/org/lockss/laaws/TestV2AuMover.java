@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.regex.Pattern;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.MockIdentityManager;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
@@ -38,6 +40,9 @@ public class TestV2AuMover extends LockssTestCase {
   private String bPluginRegex="(bplugin)";
   private String cPluginRegex="(cplugin)";
   private static int HEADER_LENGTH=4;
+  private MockIdentityManager idmgr;
+  private MockLockssDaemon theDaemon;
+
   String[] reportLines = {
     "Au:au1  urlsMoved: 10  artifactsMoved: 10  bytesMoved: 1000  errors: 0  totalRuntime: 300ms",
     "",
@@ -54,6 +59,10 @@ public class TestV2AuMover extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    theDaemon = getMockLockssDaemon();
+    idmgr = new MockIdentityManager();
+    idmgr.initService(theDaemon);
+    theDaemon.setIdentityManager(idmgr);
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.addFromArgs(V2AuMover.PARAM_REPORT_DIR, tempDirPath);
     String reportFile = new File(tempDirPath, "v2AuMigration.txt").toString();
