@@ -387,9 +387,9 @@
     au < finished ; frozen ; 2013 ; Asian Journal of Neurosurgery Volume 8 ; 2013 ; 8 ; http://www.asianjns.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Asian Journal of Neurosurgery Volume 9 ; 2014 ; 9 ; http://www.asianjns.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 2015 ; 10 ; http://www.asianjns.org/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 2016 ; 11 ; http://www.asianjns.org/ ; ; >
+    au < finished ; manifest ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 2016 ; 11 ; http://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2017 ; Asian Journal of Neurosurgery Volume 12 ; 2017 ; 12 ; http://www.asianjns.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 2018 ; 13 ; http://www.asianjns.org/ ; ; >
+    au < finished ; manifest ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 2018 ; 13 ; http://www.asianjns.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 2019 ; 14 ; https://www.asianjns.org/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 2020 ; 15 ; https://www.asianjns.org/ ; ; >
     au < crawling ; exists ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 2021 ; 16 ; https://www.asianjns.org/ ; ; >
@@ -2514,9 +2514,9 @@
     au < finished ; frozen ; 2013 ; Journal of Cancer Research and Therapeutics Volume 9 ; 2013 ; 9 ; http://www.cancerjournal.net/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Journal of Cancer Research and Therapeutics Volume 10 ; 2014 ; 10 ; http://www.cancerjournal.net/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Journal of Cancer Research and Therapeutics Volume 11 ; 2015 ; 11 ; http://www.cancerjournal.net/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Cancer Research and Therapeutics Volume 12 ; 2016 ; 12 ; http://www.cancerjournal.net/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Cancer Research and Therapeutics Volume 12 ; 2016 ; 12 ; http://www.cancerjournal.net/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2017 ; Journal of Cancer Research and Therapeutics Volume 13 ; 2017 ; 13 ; http://www.cancerjournal.net/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Cancer Research and Therapeutics Volume 14 ; 2018 ; 14 ; http://www.cancerjournal.net/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Cancer Research and Therapeutics Volume 14 ; 2018 ; 14 ; http://www.cancerjournal.net/ ; ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2019 ; Journal of Cancer Research and Therapeutics Volume 15 ; 2019 ; 15 ; https://www.cancerjournal.net/ ; ; > #500 https://www.cancerjournal.net/article.asp?issn=0973-1482;year=2019;volume=15;issue=7;spage=1471;epage=1476;aulast=Feng;type=2
     au < deepCrawl ; exists ; 2020 ; Journal of Cancer Research and Therapeutics Volume 16 ; 2020 ; 16 ; https://www.cancerjournal.net/ ; ; >
     au < crawling ; exists ; 2021 ; Journal of Cancer Research and Therapeutics Volume 17 ; 2021 ; 17 ; https://www.cancerjournal.net/ ; ; >
@@ -2921,7 +2921,7 @@
     au < finished ; frozen ; 2013 ; Journal of Family Medicine and Primary Care Volume 2 ; 2013 ; 2 ; http://www.jfmpc.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Journal of Family Medicine and Primary Care Volume 3 ; 2014 ; 3 ; http://www.jfmpc.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Journal of Family Medicine and Primary Care Volume 4 ; 2015 ; 4 ; http://www.jfmpc.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Family Medicine and Primary Care Volume 5 ; 2016 ; 5 ; http://www.jfmpc.com/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Family Medicine and Primary Care Volume 5 ; 2016 ; 5 ; http://www.jfmpc.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Journal of Family Medicine and Primary Care Volume 6 ; 2017 ; 6 ; http://www.jfmpc.com/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Journal of Family Medicine and Primary Care Volume 7 ; 2018 ; 7 ; http://www.jfmpc.com/ ; ; >
     au < finished ; crawling ; 2019 ; Journal of Family Medicine and Primary Care Volume 8 ; 2019 ; 8 ; https://www.jfmpc.com/ ; ; reingest5.clockss.org:8082 >
@@ -4836,7 +4836,7 @@
 
       au < finished ; finished ; 2016 ; Al-Azhar Assiut Medical Journal Volume 14 ; 2016 ; 14 ; http://www.azmj.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Al-Azhar Assiut Medical Journal Volume 15 ; 2017 ; 15 ; http://www.azmj.eg.net/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Al-Azhar Assiut Medical Journal Volume 16 ; 2018 ; 16 ; http://www.azmj.eg.net/ ; ; >
+      au < finished ; manifest ; 2018 ; Al-Azhar Assiut Medical Journal Volume 16 ; 2018 ; 16 ; http://www.azmj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Al-Azhar Assiut Medical Journal Volume 17 ; 2019 ; 17 ; https://www.azmj.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Al-Azhar Assiut Medical Journal Volume 18 ; 2020 ; 18 ; https://www.azmj.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Al-Azhar Assiut Medical Journal Volume 19 ; 2021 ; 19 ; https://www.azmj.eg.net/ ; ; >
@@ -5067,7 +5067,7 @@
       #move to Thieme
 
       au < finished ; frozen ; 2015 ; Asian Journal of Oncology Volume 1 ; 2015 ; 1 ; http://www.asjo.in/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Asian Journal of Oncology Volume 2 ; 2016 ; 2 ; http://www.asjo.in/ ; ; >
+      au < finished ; manifest ; 2016 ; Asian Journal of Oncology Volume 2 ; 2016 ; 2 ; http://www.asjo.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Asian Journal of Oncology Volume 3 ; 2017 ; 3 ; http://www.asjo.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Asian Journal of Oncology Volume 4 ; 2018 ; 4 ; http://www.asjo.in/ ; ; reingest4.clockss.org:8082 >
 
@@ -5087,9 +5087,9 @@
 
       au < finished ; frozen ; 2014 ; Asia-Pacific Journal of Oncology Nursing Volume 1 ; 2014 ; 1 ; http://www.apjon.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2015 ; Asia-Pacific Journal of Oncology Nursing Volume 2 ; 2015 ; 2 ; http://www.apjon.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2016 ; Asia-Pacific Journal of Oncology Nursing Volume 3 ; 2016 ; 3 ; http://www.apjon.org/ ; ; >
+      au < finished ; manifest ; 2016 ; Asia-Pacific Journal of Oncology Nursing Volume 3 ; 2016 ; 3 ; http://www.apjon.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Asia-Pacific Journal of Oncology Nursing Volume 4 ; 2017 ; 4 ; http://www.apjon.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2018 ; Asia-Pacific Journal of Oncology Nursing Volume 5 ; 2018 ; 5 ; http://www.apjon.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Asia-Pacific Journal of Oncology Nursing Volume 5 ; 2018 ; 5 ; http://www.apjon.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Asia-Pacific Journal of Oncology Nursing Volume 6 ; 2019 ; 6 ; https://www.apjon.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Asia-Pacific Journal of Oncology Nursing Volume 7 ; 2020 ; 7 ; https://www.apjon.org/ ; ; >
       au < crawling ; exists ; 2021 ; Asia-Pacific Journal of Oncology Nursing Volume 8 ; 2021 ; 8 ; https://www.apjon.org/ ; ; >
@@ -5112,7 +5112,7 @@
       au < finished ; frozen ; 2015 ; Astrocyte Volume 2 ; 2015 ; 2 ; http://www.astrocyte.in/ ; ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2016 ; Astrocyte Volume 3 [superseded] ; 2016 ; 3 ; http://www.astrocyte.in/ ; ; >
       au < exists ; exists ; 2016 ; Astrocyte Volume 3 ; 2016 ; 3 ; https://www.astrocyte.in/ ; ; >
-      au < finished ; frozen ; 2017 ; Astrocyte Volume 4 ; 2017 ; 4 ; http://www.astrocyte.in/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2017 ; Astrocyte Volume 4 ; 2017 ; 4 ; http://www.astrocyte.in/ ; ; reingest2.clockss.org:8085 >
       au < exists ; exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; https://www.astrocyte.in/ ; ; >
 
   }
@@ -5130,7 +5130,7 @@
       au < finished ; finished ; 2015 ; Benha Medical Journal Volume 32 ; 2015 ; 32 ; http://www.bmfj.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Benha Medical Journal Volume 33 ; 2016 ; 33 ; http://www.bmfj.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Benha Medical Journal Volume 34 ; 2017 ; 34 ; http://www.bmfj.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Benha Medical Journal Volume 35 ; 2018 ; 35 ; http://www.bmfj.eg.net/ ; ; >
+      au < finished ; manifest ; 2018 ; Benha Medical Journal Volume 35 ; 2018 ; 35 ; http://www.bmfj.eg.net/ ; ; reingest3.clockss.org:8083 >
 
   }
 
@@ -5166,9 +5166,9 @@
 #      param[base_url] = http://www.braincirculation.org/
 
       au < finished ; frozen ; 2015 ; Brain Circulation Volume 1 ; 2015 ; 1 ; http://www.braincirculation.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Brain Circulation Volume 2 ; 2016 ; 2 ; http://www.braincirculation.org/ ; ; >
+      au < finished ; manifest ; 2016 ; Brain Circulation Volume 2 ; 2016 ; 2 ; http://www.braincirculation.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Brain Circulation Volume 3 ; 2017 ; 3 ; http://www.braincirculation.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Brain Circulation Volume 4 ; 2018 ; 4 ; http://www.braincirculation.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Brain Circulation Volume 4 ; 2018 ; 4 ; http://www.braincirculation.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Brain Circulation Volume 5 ; 2019 ; 5 ; https://www.braincirculation.org/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Brain Circulation Volume 6 ; 2020 ; 6 ; https://www.braincirculation.org/ ; ; >
       au < crawling ; exists ; 2021 ; Brain Circulation Volume 7 ; 2021 ; 7 ; https://www.braincirculation.org/ ; ; >
@@ -5211,7 +5211,7 @@
       au < finished ; frozen ; 2015 ; Cancer Translational Medicine Volume 1 ; 2015 ; 1 ; http://www.cancertm.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Cancer Translational Medicine Volume 2 ; 2016 ; 2 ; http://www.cancertm.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Cancer Translational Medicine Volume 3 ; 2017 ; 3 ; http://www.cancertm.com/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2018 ; Cancer Translational Medicine Volume 4 ; 2018 ; 4 ; http://www.cancertm.com/ ; ; >
+      au < finished ; manifest ; 2018 ; Cancer Translational Medicine Volume 4 ; 2018 ; 4 ; http://www.cancertm.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Cancer Translational Medicine Volume 5 ; 2019 ; 5 ; https://www.cancertm.com/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Cancer Translational Medicine Volume 6 ; 2020 ; 6 ; https://www.cancertm.com/ ; ; >
 
@@ -5270,7 +5270,7 @@
       au < finished ; frozen ; 2015 ; CHRISMED Journal of Health and Research Volume 2 ; 2015 ; 2 ; http://www.cjhr.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; CHRISMED Journal of Health and Research Volume 3 ; 2016 ; 3 ; http://www.cjhr.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; CHRISMED Journal of Health and Research Volume 4 ; 2017 ; 4 ; http://www.cjhr.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; CHRISMED Journal of Health and Research Volume 5 ; 2018 ; 5 ; http://www.cjhr.org/ ; ; >
+      au < finished ; manifest ; 2018 ; CHRISMED Journal of Health and Research Volume 5 ; 2018 ; 5 ; http://www.cjhr.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; CHRISMED Journal of Health and Research Volume 6 ; 2019 ; 6 ; https://www.cjhr.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; CHRISMED Journal of Health and Research Volume 7 ; 2020 ; 7 ; https://www.cjhr.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; CHRISMED Journal of Health and Research Volume 8 ; 2021 ; 8 ; https://www.cjhr.org/ ; ; >
@@ -5292,7 +5292,7 @@
 
       au < finished ; frozen ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; http://www.clinicaltdd.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 ; http://www.clinicaltdd.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Clinical and Translational Degenerative Diseases Volume 3 ; 2018 ; 3 ; http://www.clinicaltdd.com/ ; ; >
+      au < finished ; manifest ; 2018 ; Clinical and Translational Degenerative Diseases Volume 3 ; 2018 ; 3 ; http://www.clinicaltdd.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Clinical and Translational Degenerative Diseases Volume 4 ; 2019 ; 4 ; https://www.clinicaltdd.com/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Clinical and Translational Degenerative Diseases Volume 5 ; 2020 ; 5 ; https://www.clinicaltdd.com/ ; ; >
       au < expected ; exists ; 2021 ; Clinical and Translational Degenerative Diseases Volume 6 ; 2021 ; 6 ; https://www.clinicaltdd.com/ ; ; >
@@ -9139,7 +9139,7 @@
 
       au < finished ; crawling ; 2016 ; Archives of Medicine and Surgery Volume 1 ; 2016 ; 1 ; http://www.archms.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Archives of Medicine and Surgery Volume 2 ; 2017 ; 2 ; http://www.archms.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2018 ; Archives of Medicine and Surgery Volume 3 ; 2018 ; 3 ; http://www.archms.org/ ; ; >
+      au < finished ; manifest ; 2018 ; Archives of Medicine and Surgery Volume 3 ; 2018 ; 3 ; http://www.archms.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Archives of Medicine and Surgery Volume 4 ; 2019 ; 4 ; https://www.archms.org/ ; ; reingest3.clockss.org:8083 >
 
   }
