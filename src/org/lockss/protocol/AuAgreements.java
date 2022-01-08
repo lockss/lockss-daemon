@@ -35,14 +35,12 @@ package org.lockss.protocol;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.plugin.AuUtil;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.repository.LockssRepositoryException;
 import org.lockss.state.HistoryRepository;
-import org.lockss.util.Logger;
-import org.lockss.util.StreamUtil;
-import org.lockss.util.IOUtil;
-import org.lockss.util.LockssSerializable;
+import org.lockss.util.*;
 
 
 /**
@@ -295,6 +293,15 @@ public class AuAgreements implements LockssSerializable {
 	IOUtil.safeClose(out);
       }
     }
+  }
+
+ public AuAgreementsBean getBean(String auId) {
+    HashMap<String, PeerAgreements> rawMap = new HashMap<>();
+    for (Map.Entry<PeerIdentity,PeerAgreements> ent : map.entrySet()) {
+        rawMap.put(ent.getKey().getIdString(), ent.getValue());
+    }
+    AuAgreementsBean res = new AuAgreementsBean(auId, rawMap);
+    return res;
   }
 
   /**

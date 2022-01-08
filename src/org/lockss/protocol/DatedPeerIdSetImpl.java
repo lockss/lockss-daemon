@@ -34,7 +34,9 @@ package org.lockss.protocol;
 
 import java.io.*;
 import java.util.HashSet;
+import java.util.Set;
 
+import org.lockss.plugin.AuUtil;
 import org.lockss.util.IOUtil;
 
 /**
@@ -47,7 +49,7 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
   public static final long k_dateDefault = -1;
   
   private long m_date;
-  
+
   /**
    * @param filePeerId
    * @param identityManager
@@ -94,5 +96,20 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
   protected void writeData(DataOutputStream dos) throws IOException {
     dos.writeLong(m_date);
     super.writeData(dos);
+  }
+
+  /**
+   * Creates and provides a new instance with the named peers.
+   *
+   * @param auId The au id needed to fill out bean.
+   * @return a PersistentPeerIdSetImpl with the newly created object.
+   */
+  public DatedPeerIdSetBean getBean(String auId) {
+    Set<String> rs = new HashSet<>();;
+    for (PeerIdentity pid : m_setPeerId) {
+      rs.add(pid.getKey());
+    }
+    DatedPeerIdSetBean res = new DatedPeerIdSetBean(auId, rs, m_date);
+    return res;
   }
 }

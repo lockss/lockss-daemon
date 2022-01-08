@@ -48,6 +48,10 @@ import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.plugin.*;
+import org.lockss.poller.PollManager;
+import org.lockss.protocol.*;
+import org.lockss.repository.AuSuspectUrlVersions;
+import org.lockss.repository.RepositoryManager;
 import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.Logger;
@@ -145,11 +149,10 @@ public class V2AuMover {
   private final AusApi cfgAusApiClient;
   private final org.lockss.laaws.api.cfg.StatusApi cfgStatusApiClient;
 
-
   /**
    * User Agent
    */
-  private final String userAgent;
+  private String userAgent;
 
   /**
    * The base host used to access v2 service
@@ -188,6 +191,10 @@ public class V2AuMover {
   private boolean debugConfigReq;
 
   PluginManager pluginManager;
+  IdentityManagerImpl idManager;
+  RepositoryManager repoManager;
+  PollManager pollManager;
+
   private final LinkedHashSet<ArchivalUnit> auMoveQueue = new LinkedHashSet<>();
   private Dispatcher dispatcher;
   boolean allCusQueued = false;
@@ -222,6 +229,11 @@ public class V2AuMover {
   public V2AuMover() {
     Configuration config = ConfigManager.getCurrentConfig();
     pluginManager = LockssDaemon.getLockssDaemon().getPluginManager();
+    IdentityManager idmgr = LockssDaemon.getLockssDaemon().getIdentityManager();
+    if( idmgr instanceof IdentityManagerImpl )
+      idManager =((IdentityManagerImpl) LockssDaemon.getLockssDaemon().getIdentityManager());
+    repoManager = LockssDaemon.getLockssDaemon().getRepositoryManager();
+    pollManager = LockssDaemon.getLockssDaemon().getPollManager();
     // support for overriding our defaults
     userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
     collection = config.get(PARAM_V2_COLLECTION, DEFAULT_V2_COLLECTION);
@@ -730,6 +742,12 @@ public class V2AuMover {
       moveAuState(au);
       log.info(auName + ": Moving AU Configuration...");
       moveAuConfig(au);
+      log.info(auName + ": Moving AU Agreements...");
+      moveAuAgreements(au);
+      log.info(auName + ": Moving AU Suspect Urls...");
+      moveAuSuspectUrlVersions(au);
+      log.info(auName + ": Moving No Au Peer Set...");
+      moveNoAuPeerSet(au);
     }
   }
 
@@ -738,7 +756,7 @@ public class V2AuMover {
    *
    * @param au The ArchivalUnit whose configuration is to be move
    */
-  private void moveAuConfig(ArchivalUnit au) {
+  void moveAuConfig(ArchivalUnit au) {
     Configuration v1config = au.getConfiguration();
     AuConfiguration v2config = new AuConfiguration().auId(au.getAuId());
     String auName = au.getName();
@@ -759,6 +777,72 @@ public class V2AuMover {
       }
     } else {
       log.warning(auName + ": No Configuration found for au");
+    }
+  }
+
+  void moveAuAgreements(ArchivalUnit au) {
+    AuAgreements v1AuAgreements = idManager.findAuAgreements(au);
+    String auName = au.getName();
+    if(v1AuAgreements != null) {
+      try {
+        String json = AuUtil.jsonFromAuAgreements(v1AuAgreements.getBean(au.getAuId()));
+        cfgAusApiClient.patchAuAgreements(au.getAuId(), json, makeCookie());
+      } catch (ApiException apie) {
+        String err = auName + ": Attempt to move au state failed: " + apie.getCode() +
+            "- " + apie.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
+        auErrorCount++;
+      } catch (IOException ex) {
+        String err = auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
+        auErrorCount++;
+      }
+    }
+  }
+
+  void moveAuSuspectUrlVersions(ArchivalUnit au) {
+    AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(au);
+    String auName = au.getName();
+    if(asuv != null) {
+      try {
+        String json = AuUtil.jsonFromAuSuspectUrlVersionsBean(asuv.getBean(au.getAuId()));
+        cfgAusApiClient.putAuSuspectUrlVersions(au.getAuId(), json, makeCookie());
+      } catch (ApiException apie) {
+        String err = auName + ": Attempt to move au suspect url versions failed: " + apie.getCode() +
+            "- " + apie.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
+        auErrorCount++;
+      } catch (IOException ex) {
+        String err = auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
+        auErrorCount++;
+      }
+    }
+  }
+
+  private void moveNoAuPeerSet(ArchivalUnit au) {
+    DatedPeerIdSet noAuPeerSet = pollManager.getNoAuPeerSet(au);
+    String auName = au.getName();
+    if(noAuPeerSet != null && noAuPeerSet instanceof DatedPeerIdSetImpl) {
+      try {
+        String json = AuUtil.jsonFromDatedPeerIdSetBean(((DatedPeerIdSetImpl)noAuPeerSet).getBean(au.getAuId()));
+        cfgAusApiClient.putAuSuspectUrlVersions(au.getAuId(), json, makeCookie());
+      } catch (ApiException apie) {
+        String err = auName + ": Attempt to move au suspect url versions failed: " + apie.getCode() +
+            "- " + apie.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
+        auErrorCount++;
+      } catch (IOException ex) {
+        String err = auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
+        errorList.add(err);
+        auErrors.add(err);
+        auErrorCount++;
+      }
     }
   }
 
