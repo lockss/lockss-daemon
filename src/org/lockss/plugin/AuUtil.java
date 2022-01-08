@@ -32,19 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.io.IOException;
 import java.net.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.collections4.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
@@ -439,80 +434,6 @@ public class AuUtil {
     AuState aus = AuUtil.getAuState(au);
     return StringUtil.equalStrings(plugin.getFeatureVersion(feat),
 				   aus.getFeatureVersion(feat));
-  }
-
-  // support methods for json conversion of
-  /** Serialize an AuAgreements to a json string
-   * @param auaBean the AuAgreements
-   */
-  public static String jsonFromAuAgreements(AuAgreementsBean auaBean)
-      throws IOException {
-    ObjectMapper mapper = new ObjectMapper();
-    setFieldsOnly(mapper);
-    return mapper.writer().writeValueAsString(auaBean);
-  }
-
-  /**
-   * Serialize an AuSuspectUrlVersions object into a JSON string
-   *
-   * @param ausuvBean
-   *          An AuSuspectUrlVersions with the object to be serialized.
-   * @return a String with the AuSuspectUrlVersions object serialized as a JSON
-   *         string.
-   * @throws IOException
-   *           if any problem occurred during the serialization.
-   */
-  public static String jsonFromAuSuspectUrlVersionsBean(AuSuspectUrlVersionsBean ausuvBean)
-      throws IOException {
-    ObjectMapper mapper = new ObjectMapper();
-    setFieldsOnly(mapper);
-    return mapper.writer().writeValueAsString(ausuvBean);
-  }
-
-  /**
-   * Serialize a DatedPeerIdSetImpl object into a JSON string.
-   *
-   * @param dpisBean
-   *          A DatedPeerIdSetImpl as Bean to be serialized.
-   * @return a String with the DatedPeerIdSetImpl object serialized as a
-   *         JSON string.
-   * @throws IOException
-   *           if any problem occurred during the serialization.
-   */
-  public static String jsonFromDatedPeerIdSetBean(
-      DatedPeerIdSetBean dpisBean)
-      throws IOException {
-    ObjectMapper mapper = new ObjectMapper();
-    setFieldsOnly(mapper);
-    return mapper.writer().writeValueAsString(dpisBean);
-  }
-
-  /**
-   * Serialize a PersistentPeerIdSetImpl object into a JSON string.
-   *
-   * @param ppis
-   *          A PersistentPeerIdSetImpl with the object to be serialized.
-   * @return a String with the PersistentPeerIdSetImpl object serialized as a
-   *         JSON string.
-   * @throws IOException
-   *           if any problem occurred during the serialization.
-   */
-  public static String jsonFromPersistentPeerIdSetImpl(
-      PersistentPeerIdSetImpl ppis)
-      throws IOException {
-    ObjectMapper mapper = new ObjectMapper();
-    setFieldsOnly(mapper);
-    return mapper.writer().writeValueAsString(ppis);
-  }
-
-  static ObjectMapper setFieldsOnly(ObjectMapper mapper) {
-    mapper.setVisibilityChecker(mapper.getSerializationConfig().getDefaultVisibilityChecker()
-        .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
-        .withGetterVisibility(JsonAutoDetect.Visibility.NONE)
-        .withIsGetterVisibility(JsonAutoDetect.Visibility.NONE)
-        .withSetterVisibility(JsonAutoDetect.Visibility.NONE)
-        .withCreatorVisibility(JsonAutoDetect.Visibility.NONE));
-    return mapper;
   }
 
   public static class AuProxyInfo {

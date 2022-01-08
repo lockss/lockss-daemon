@@ -1419,7 +1419,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call patchAuAgreementsCall(String auid, String auAgreements,
+  public okhttp3.Call patchAuAgreementsCall(String auid, Object auAgreements,
     String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
     Object localVarPostBody = auAgreements;
 
@@ -1459,7 +1459,7 @@ public class AusApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call patchAuAgreementsValidateBeforeCall(String auid, String auAgreements,
+  private okhttp3.Call patchAuAgreementsValidateBeforeCall(String auid, Object auAgreements,
     String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
 
     // verify the required parameter 'auid' is set
@@ -1499,7 +1499,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public void patchAuAgreements(String auid, String auAgreements, String xLockssRequestCookie)
+  public void patchAuAgreements(String auid, Object auAgreements, String xLockssRequestCookie)
     throws ApiException {
     patchAuAgreementsWithHttpInfo(auid, auAgreements, xLockssRequestCookie);
   }
@@ -1524,7 +1524,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public ApiResponse<Void> patchAuAgreementsWithHttpInfo(String auid, String auAgreements,
+  public ApiResponse<Void> patchAuAgreementsWithHttpInfo(String auid, Object auAgreements,
     String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall = patchAuAgreementsValidateBeforeCall(auid, auAgreements,
       xLockssRequestCookie, null);
@@ -1552,7 +1552,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call patchAuAgreementsAsync(String auid, String auAgreements,
+  public okhttp3.Call patchAuAgreementsAsync(String auid, Object auAgreements,
     String xLockssRequestCookie, final ApiCallback<Void> _callback) throws ApiException {
 
     okhttp3.Call localVarCall = patchAuAgreementsValidateBeforeCall(auid, auAgreements,
@@ -2167,7 +2167,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call putAuSuspectUrlVersionsCall(String auid, String auSuspectUrlVersions,
+  public okhttp3.Call putAuSuspectUrlVersionsCall(String auid, Object auSuspectUrlVersions,
     String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
     Object localVarPostBody = auSuspectUrlVersions;
 
@@ -2208,7 +2208,7 @@ public class AusApi {
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call putAuSuspectUrlVersionsValidateBeforeCall(String auid,
-    String auSuspectUrlVersions, String xLockssRequestCookie, final ApiCallback _callback)
+    Object auSuspectUrlVersions, String xLockssRequestCookie, final ApiCallback _callback)
     throws ApiException {
 
     // verify the required parameter 'auid' is set
@@ -2248,7 +2248,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public void putAuSuspectUrlVersions(String auid, String auSuspectUrlVersions,
+  public void putAuSuspectUrlVersions(String auid, Object auSuspectUrlVersions,
     String xLockssRequestCookie) throws ApiException {
     putAuSuspectUrlVersionsWithHttpInfo(auid, auSuspectUrlVersions, xLockssRequestCookie);
   }
@@ -2274,7 +2274,7 @@ public class AusApi {
    * </table>
    */
   public ApiResponse<Void> putAuSuspectUrlVersionsWithHttpInfo(String auid,
-    String auSuspectUrlVersions, String xLockssRequestCookie) throws ApiException {
+    Object auSuspectUrlVersions, String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall = putAuSuspectUrlVersionsValidateBeforeCall(auid,
       auSuspectUrlVersions, xLockssRequestCookie, null);
     return apiClient.execute(localVarCall);
@@ -2301,7 +2301,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call putAuSuspectUrlVersionsAsync(String auid, String auSuspectUrlVersions,
+  public okhttp3.Call putAuSuspectUrlVersionsAsync(String auid, Object auSuspectUrlVersions,
     String xLockssRequestCookie, final ApiCallback<Void> _callback) throws ApiException {
 
     okhttp3.Call localVarCall = putAuSuspectUrlVersionsValidateBeforeCall(auid,
@@ -2910,7 +2910,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call putNoAuPeersCall(String auid, String noAuPeerSet, String xLockssRequestCookie,
+  public okhttp3.Call putNoAuPeersCall(String auid, Object noAuPeerSet, String xLockssRequestCookie,
     final ApiCallback _callback) throws ApiException {
     Object localVarPostBody = noAuPeerSet;
 
@@ -2950,7 +2950,7 @@ public class AusApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private okhttp3.Call putNoAuPeersValidateBeforeCall(String auid, String noAuPeerSet,
+  private okhttp3.Call putNoAuPeersValidateBeforeCall(String auid, Object noAuPeerSet,
     String xLockssRequestCookie, final ApiCallback _callback) throws ApiException {
 
     // verify the required parameter 'auid' is set
@@ -2990,7 +2990,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public void putNoAuPeers(String auid, String noAuPeerSet, String xLockssRequestCookie)
+  public void putNoAuPeers(String auid, Object noAuPeerSet, String xLockssRequestCookie)
     throws ApiException {
     putNoAuPeersWithHttpInfo(auid, noAuPeerSet, xLockssRequestCookie);
   }
@@ -3015,7 +3015,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public ApiResponse<Void> putNoAuPeersWithHttpInfo(String auid, String noAuPeerSet,
+  public ApiResponse<Void> putNoAuPeersWithHttpInfo(String auid, Object noAuPeerSet,
     String xLockssRequestCookie) throws ApiException {
     okhttp3.Call localVarCall = putNoAuPeersValidateBeforeCall(auid, noAuPeerSet,
       xLockssRequestCookie, null);
@@ -3043,7 +3043,7 @@ public class AusApi {
    * <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
    * </table>
    */
-  public okhttp3.Call putNoAuPeersAsync(String auid, String noAuPeerSet,
+  public okhttp3.Call putNoAuPeersAsync(String auid, Object noAuPeerSet,
     String xLockssRequestCookie, final ApiCallback<Void> _callback) throws ApiException {
 
     okhttp3.Call localVarCall = putNoAuPeersValidateBeforeCall(auid, noAuPeerSet,

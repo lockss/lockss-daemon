@@ -36,8 +36,6 @@ import java.io.*;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.lockss.plugin.AuUtil;
-import org.lockss.util.IOUtil;
 
 /**
  * @author edwardsb
@@ -104,12 +102,14 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
    * @param auId The au id needed to fill out bean.
    * @return a PersistentPeerIdSetImpl with the newly created object.
    */
-  public DatedPeerIdSetBean getBean(String auId) {
+  public DatedPeerIdSetBean getBean(String auId) throws IOException {
     Set<String> rs = new HashSet<>();;
+    loadIfNecessary();
     for (PeerIdentity pid : m_setPeerId) {
       rs.add(pid.getKey());
     }
     DatedPeerIdSetBean res = new DatedPeerIdSetBean(auId, rs, m_date);
+    release();
     return res;
   }
 }
