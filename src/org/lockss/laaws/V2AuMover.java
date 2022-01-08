@@ -584,7 +584,12 @@ public class V2AuMover {
         cuArtifacts.addAll(pageInfo.getArtifacts());
         token = pageInfo.getPageInfo().getContinuationToken();
       } while (!terminated && !StringUtil.isNullString(token));
+      log.debug("Found " + cuArtifacts.size() + " matches for " + v2Url);
+      for (Artifact cuArtifact : cuArtifacts) {
+        log.debug(cuArtifact.getUri());
+      }
       moveCuVersions(v2Url, cachedUrl, cuArtifacts);
+      cuArtifacts.clear();
       auUrlsMoved++;
     }
     allCusQueued = true;
@@ -654,7 +659,7 @@ public class V2AuMover {
       Queue<CachedUrl> cuQueue = Collections.asLifoQueue(new ArrayDeque<>());
       //If we have more v1 versions than the v2 repo - copy the missing items
       if (v2Artifacts.size() > 0) {
-        log.debug("v2versions available=" + v2Artifacts.size() + " v1 versions available=" + localVersions.length);
+        log.debug2("v2 versions available=" + v2Artifacts.size() + " v1 versions available=" + localVersions.length);
       }
       if (v2Artifacts.size() < localVersions.length) {
         cuQueue.addAll(Arrays.asList(localVersions).subList(v2Artifacts.size(), localVersions.length));
@@ -738,16 +743,16 @@ public class V2AuMover {
     } while (!terminated && dispatcher.runningCallsCount() > 0);
     if (!terminated) {
       String auName = au.getName();
-      log.info(auName + ": Moving AU State...");
-      moveAuState(au);
-      log.info(auName + ": Moving AU Configuration...");
-      moveAuConfig(au);
       log.info(auName + ": Moving AU Agreements...");
       moveAuAgreements(au);
       log.info(auName + ": Moving AU Suspect Urls...");
       moveAuSuspectUrlVersions(au);
       log.info(auName + ": Moving No Au Peer Set...");
       moveNoAuPeerSet(au);
+      log.info(auName + ": Moving AU State...");
+      moveAuState(au);
+      log.info(auName + ": Moving AU Configuration...");
+      moveAuConfig(au);
     }
   }
 
@@ -780,47 +785,49 @@ public class V2AuMover {
     }
   }
 
-  void moveAuAgreements(ArchivalUnit au) {
+  private void moveAuAgreements(ArchivalUnit au) {
     AuAgreements v1AuAgreements = idManager.findAuAgreements(au);
     String auName = au.getName();
     if(v1AuAgreements != null) {
       try {
-        String json = AuUtil.jsonFromAuAgreements(v1AuAgreements.getBean(au.getAuId()));
-        cfgAusApiClient.patchAuAgreements(au.getAuId(), json, makeCookie());
-      } catch (ApiException apie) {
-        String err = auName + ": Attempt to move au state failed: " + apie.getCode() +
-            "- " + apie.getMessage();
-        errorList.add(err);
-        auErrors.add(err);
-        auErrorCount++;
-      } catch (IOException ex) {
-        String err = auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
+        cfgAusApiClient.patchAuAgreements(au.getAuId(), v1AuAgreements.getBean(au.getAuId()), makeCookie());
+        log.info(auName + ": Successfully moved AU Agreements.");
+      } catch (Exception ex) {
+        String err = auName + ": Attempt to move au agreements: " + ex.getMessage();
+        log.error("Unable to move Au Agreements : " + err);
+        if(log.isDebug()) {
+          ex.printStackTrace();
+        }
         errorList.add(err);
         auErrors.add(err);
         auErrorCount++;
       }
     }
+    else {
+      log.warning("No Au agreements found for au.");
+    }
   }
 
-  void moveAuSuspectUrlVersions(ArchivalUnit au) {
+  private void moveAuSuspectUrlVersions(ArchivalUnit au) {
     AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(au);
     String auName = au.getName();
     if(asuv != null) {
       try {
-        String json = AuUtil.jsonFromAuSuspectUrlVersionsBean(asuv.getBean(au.getAuId()));
-        cfgAusApiClient.putAuSuspectUrlVersions(au.getAuId(), json, makeCookie());
-      } catch (ApiException apie) {
-        String err = auName + ": Attempt to move au suspect url versions failed: " + apie.getCode() +
-            "- " + apie.getMessage();
-        errorList.add(err);
-        auErrors.add(err);
-        auErrorCount++;
-      } catch (IOException ex) {
+        cfgAusApiClient.putAuSuspectUrlVersions(au.getAuId(), asuv.getBean(au.getAuId()), makeCookie());
+        log.info(auName + ": Successfully moved AU Suspect Url Versions.");
+      } catch (Exception ex) {
         String err = auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
+        log.error("Unable to move Au Suspect Url Versions: " + err);
+        if(log.isDebug()) {
+          ex.printStackTrace();
+        }
         errorList.add(err);
         auErrors.add(err);
         auErrorCount++;
       }
+    }
+    else {
+      log.warning(auName + ": No Au suspect url versions found.");
     }
   }
 
@@ -829,22 +836,22 @@ public class V2AuMover {
     String auName = au.getName();
     if(noAuPeerSet != null && noAuPeerSet instanceof DatedPeerIdSetImpl) {
       try {
-        String json = AuUtil.jsonFromDatedPeerIdSetBean(((DatedPeerIdSetImpl)noAuPeerSet).getBean(au.getAuId()));
-        cfgAusApiClient.putAuSuspectUrlVersions(au.getAuId(), json, makeCookie());
-      } catch (ApiException apie) {
-        String err = auName + ": Attempt to move au suspect url versions failed: " + apie.getCode() +
-            "- " + apie.getMessage();
-        errorList.add(err);
-        auErrors.add(err);
-        auErrorCount++;
-      } catch (IOException ex) {
-        String err = auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
+        cfgAusApiClient.putNoAuPeers(au.getAuId(), ((DatedPeerIdSetImpl)noAuPeerSet).getBean(au.getAuId()), makeCookie());
+        log.info(auName + ": Successfully moved no Au peers.");
+      } catch (Exception ex) {
+        String err = auName + ": Attempt to move no AU peers failed: " + ex.getMessage();
+        log.error("Unable to move no AU peers set: " + err);
+        if(log.isDebug()) {
+          ex.printStackTrace();
+        }
         errorList.add(err);
         auErrors.add(err);
         auErrorCount++;
       }
+    } else {
+      log.warning(auName + ": No Au peer set found for au");
     }
-  }
+}
 
   /**
    * Make a synchronous rest call to configuration service to add state info for an au.
