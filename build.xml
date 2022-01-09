@@ -347,10 +347,10 @@ Args:
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
   <property name="xmpbox.jar" value="${lib}/xmpbox-${pdfbox.version}.jar" />
-  <property name="bouncycastle.version" value="jdk15on-167" />
-  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
-  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="68_1" />
+  <property name="bouncycastle.version" value="1.70" />
+  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-jdk15on-${bouncycastle.version}.jar" />
+  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-jdk15on-${bouncycastle.version}.jar" />
+  <property name="icu4j.version" value="70.1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
