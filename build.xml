@@ -298,7 +298,7 @@ Args:
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
   <property name="jsoup.jar" value="${lib}/jsoup-1.14.3.jar"/>
-  <property name="marc4j.jar" value="${lib}/marc4j-2.9.1.jar" />
+  <property name="marc4j.jar" value="${lib}/marc4j-2.9.2.jar" />
   <!-- Jonix -->
   <property name="jonix.version" value="8.0.1" /><!-- last Java 8 version, 9.0 is Java 9 -->
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
