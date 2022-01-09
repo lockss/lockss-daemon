@@ -310,7 +310,7 @@ Args:
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
   <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
-  <property name="xmlunit.jar"    value="${lib}/xmlunit1.0.jar" />
+  <property name="xmlunit.jar"    value="${lib}/xmlunit-1.6.jar" />
   <property name="oai-harvester.jar" value="${lib}/harvester2-0.1.12-p1.jar"/>
   <!-- Needed by OAI harvester: Xalan, Xerces, XML-APIs, Log4j -->
 
