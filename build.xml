@@ -300,7 +300,7 @@ Args:
   <property name="jsoup.jar" value="${lib}/jsoup-1.14.3.jar"/>
   <property name="marc4j.jar" value="${lib}/marc4j-2.9.2.jar" />
   <!-- Jonix -->
-  <property name="jonix.version" value="8.0.1" />
+  <property name="jonix.version" value="8.0.1" /><!-- last Java 8 version, 9.0 is Java 9 -->
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
   <property name="jonix-common.jar" value="${lib}/jonix-common-${jonix.version}.jar" />
   <property name="jonix-xml.jar" value="${lib}/jonix-xml-${jonix.version}.jar" />
