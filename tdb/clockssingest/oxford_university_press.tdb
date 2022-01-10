@@ -14546,6 +14546,7 @@
 
     param[journal_id] = neurosurgery
     #this title was ONLY in the publisher listing
+    #move to Medknow 2022
 
     au < doNotProcess ; exists ; 1977 ; 1977 ; Neurosurgery Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1978 ; 1978 ; Neurosurgery Volume 2-3 ; 2-3 ; >
@@ -14592,6 +14593,21 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Neurosurgery Volume 86-87 ; 86-87 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Neurosurgery Volume 88-89 ; 88-89 ; >
+
+  }
+
+  {
+
+    title <
+      name = Neurosurgery Open ;
+      eissn = 2633-0873
+    >
+
+    param[journal_id] = neurosurgeryopen
+    #move to Medknow 2022
+
+    au < exists ; exists ; 2020 ; 2020 ; Neurosurgery Open Volume 1 ; 1 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Neurosurgery Open Volume 2 ; 2 ; >
 
   }
 
@@ -15136,6 +15152,7 @@
 
     param[journal_id] = ons
     #this title was ONLY in the publisher listing
+    #move to Medknow 2022
 
     au < doNotProcess ; exists ; 2005 ; 2005 ; Operative Neurosurgery Volume 56 ; 56 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Operative Neurosurgery Volume 58 ; 58 ; >

@@ -534,6 +534,24 @@
   }
 
   {
+
+      title <
+        name = Chinese Medicine and Culture ;
+        issn = 2589-9627 ;
+        eissn = 2589-9473
+      >
+
+      param[journal_issn] = 2589-9627
+#      param[base_url] = https://www.cmaconweb.org/
+
+    au < exists ; exists ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ ; ; >
+    au < exists ; exists ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ ; ; >
+    au < exists ; exists ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ ; ; >
+    au < exists ; exists ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ ; ; >
+
+  }
+
+  {
     title <
       name = Chronicles of Young Scientists ;
       issn = 2229-5186 ;
@@ -10390,7 +10408,6 @@
       au < finished ; manifest ; 2018 ; Journal of Spinal Studies and Surgery Volume 2 ; 2018 ; 2 ; https://www.jsss-journal.com/ ; ; reingest2.clockss.org:8085 >
 
   }
-
 
   {
 
