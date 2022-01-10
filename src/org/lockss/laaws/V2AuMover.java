@@ -584,10 +584,8 @@ public class V2AuMover {
         cuArtifacts.addAll(pageInfo.getArtifacts());
         token = pageInfo.getPageInfo().getContinuationToken();
       } while (!terminated && !StringUtil.isNullString(token));
-      log.debug("Found " + cuArtifacts.size() + " matches for " + v2Url);
-      for (Artifact cuArtifact : cuArtifacts) {
-        log.debug(cuArtifact.getUri());
-      }
+      if(log.isDebug3())
+        log.debug3("Found " + cuArtifacts.size() + " matches for " + v2Url);
       moveCuVersions(v2Url, cachedUrl, cuArtifacts);
       cuArtifacts.clear();
       auUrlsMoved++;
@@ -674,7 +672,8 @@ public class V2AuMover {
     Long collectionDate = null;
     CachedUrl cu = cuQueue.poll();
     if (cu == null) {
-      log.debug2("All versions of " + currentUrl + " have been queued.");
+      if(log.isDebug3())
+        log.debug3("All versions of " + currentUrl + " have been queued.");
       return;
     }
     try {
@@ -684,7 +683,8 @@ public class V2AuMover {
       } else {
         log.debug2(uri + ":version: " + cu.getVersion() + " is missing fetch time.");
       }
-      log.debug3("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
+      if(log.isDebug3())
+        log.debug3("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
       createArtifact(auid, uri, collectionDate, cu, collection, cuQueue);
     } catch (ApiException apie) {
       String err = uri + ": failed to create version: " + cu.getVersion() + ": " +
