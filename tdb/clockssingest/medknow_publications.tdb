@@ -510,11 +510,11 @@
 
     param[journal_issn] = 2349-2422
 
-    au < exists ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; >
-    au < exists ; exists ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; >
-    au < exists ; exists ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; >
-    au < exists ; exists ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; >
-    au < exists ; exists ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; >
+    au < manifest ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; >
+    au < manifest ; exists ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; >
+    au < manifest ; exists ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; >
+    au < manifest ; exists ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; >
+    au < manifest ; exists ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; >
 
   }
 
@@ -2232,11 +2232,11 @@
 
     param[journal_issn] = 2455-9393
 
-    au < exists ; exists ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ ; ; >
-    au < exists ; exists ; 2017 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 2 ; 2017 ; 2 ; https://www.ijghtn.com/ ; ; >
-    au < exists ; exists ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ ; ; >
-    au < exists ; exists ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ ; ; >
-    au < exists ; exists ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ ; ; >
+    au < manifest ; exists ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ ; ; >
+    au < manifest ; exists ; 2017 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 2 ; 2017 ; 2 ; https://www.ijghtn.com/ ; ; >
+    au < manifest ; exists ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ ; ; >
+    au < manifest ; exists ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ ; ; >
+    au < manifest ; exists ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ ; ; >
     au < expected ; exists ; 2021 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 6 ; 2021 ; 6 ; https://www.ijghtn.com/ ; ; >
 
   }

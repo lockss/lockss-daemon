@@ -49,7 +49,7 @@
       au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
       au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
 
-      au < expected ; exists ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
+      au < manifest ; exists ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
       au < expected ; exists ; 2022 ; IOP Publishing Source Content 2022_02 ; 2022_02 >
 
     }
