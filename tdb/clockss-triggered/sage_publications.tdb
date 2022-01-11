@@ -256,6 +256,30 @@
     au < down ; 2005-2007 ; Journal of Individual Employment Rights Volume 12 ; 12 >
     
   }
-  
+  {
+
+    title <
+      name = MD Conference Express ;
+      issn = 1559-8977 ;
+      eissn = 2155-756X
+    >
+
+    plugin = org.lockss.plugin.clockss.FakeNameForPlugin
+    param[base_url] = http://mdc.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+    param[journal_id] = mdc
+
+    au < down ; 2005 ; MD Conference Express Volume 5 ; 5 >
+    au < down ; 2006 ; MD Conference Express Volume 6 ; 6 >
+    au < down ; 2007 ; MD Conference Express Volume 7 ; 7 >
+    au < down ; 2008 ; MD Conference Express Volume 8 ; 8 >
+    au < down ; 2009 ; MD Conference Express Volume 9 ; 9 >
+    au < down ; 2010 ; MD Conference Express Volume 10 ; 10 >
+    au < down ; 2011 ; MD Conference Express Volume 11 ; 11 >
+    au < down ; 2012 ; MD Conference Express Volume 12 ; 12 >
+    au < down ; 2013 ; MD Conference Express Volume 13 ; 13 >
+    au < down ; 2014 ; MD Conference Express Volume 14 ; 14 >
+    au < down ; 2015 ; MD Conference Express Volume 15 ; 15 >
+  }
 
 }
