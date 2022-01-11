@@ -47,6 +47,7 @@ import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
+import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.*;
@@ -64,7 +65,6 @@ import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -99,9 +99,14 @@ public class V2AuMover {
 
   public static final String PARAM_CFG_PORT = PREFIX + "cfg.port";
   public static final int DEFAULT_CFG_PORT = 24620;
-  /**
-   * Path to directory holding daemon logs
-   */
+
+  public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "max.retries";
+  public static final int DEFAULT_MAX_RETRY_COUNT = 5;
+
+  public static final String PARAM_RETRY_BACKOFF_DELAY = PREFIX + "retry_backoff";
+  public static final int DEFAULT_RETRY_BACKOFF_DELAY = 10000;
+
+  /** Path to directory holding daemon logs */
   public static final String PARAM_REPORT_DIR =
       ConfigManager.PARAM_PLATFORM_LOG_DIR;
   public static final String DEFAULT_REPORT_DIR = "/tmp";
@@ -110,10 +115,9 @@ public class V2AuMover {
   public static final String DEFAULT_REPORT_FILE = "v2migration.txt";
   private static final Logger log = Logger.getLogger(V2AuMover.class);
   // The format of a date as required by the export output file name.
-  private static final SimpleDateFormat dateFormat = new SimpleDateFormat(
-      "yyyy-MM-dd-HH-mm-ss");
-  private static final int MAX_TRY_COUNT = 3;
-  private static final long RETRY_BACKOFF_DELAY = 1000;
+
+  private int maxRetryCount;
+  private long retryBackoffDelay;
 
   private final String cliendId =
       org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(8);
@@ -194,7 +198,7 @@ public class V2AuMover {
   IdentityManagerImpl idManager;
   RepositoryManager repoManager;
   PollManager pollManager;
-
+  private final ArrayList<String> v2Aus = new ArrayList<>();
   private final LinkedHashSet<ArchivalUnit> auMoveQueue = new LinkedHashSet<>();
   private Dispatcher dispatcher;
   boolean allCusQueued = false;
@@ -239,8 +243,12 @@ public class V2AuMover {
     collection = config.get(PARAM_V2_COLLECTION, DEFAULT_V2_COLLECTION);
     cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
     rsPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
+    maxRetryCount=config.getInt(PARAM_MAX_RETRY_COUNT, DEFAULT_MAX_RETRY_COUNT);
+    retryBackoffDelay=config.getInt(PARAM_RETRY_BACKOFF_DELAY,DEFAULT_RETRY_BACKOFF_DELAY);
+
     String logdir = config.get(PARAM_REPORT_DIR, DEFAULT_REPORT_DIR);
     String logfile = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
+
     reportFile = new File(logdir, logfile);
     repoClient = new V2RestClient();
     rsStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
@@ -294,6 +302,9 @@ public class V2AuMover {
    */
   public void moveAllAus(String host, String uname, String upass, List<Pattern> selPatterns) throws IOException {
     initRequest(host, uname, upass);
+    // get the aus know to the v2 repo
+    getV2Aus();
+    // get the aus known by the v1 repository
     for (ArchivalUnit au : pluginManager.getAllAus()) {
       if (pluginManager.isInternalAu(au)) {
         continue;
@@ -339,6 +350,8 @@ public class V2AuMover {
    */
   public void moveOneAu(String host, String uname, String upass, ArchivalUnit au) throws IOException {
     initRequest(host, uname, upass);
+    // get the aus known to the v2 repository
+    getV2Aus();
     auMoveQueue.add(au);
     // if we aren't working on an au move the next au (sync this).
     if (!terminated && currentAu == null)
@@ -346,7 +359,7 @@ public class V2AuMover {
   }
 
   public void initRequest(String host, String uname, String upass) throws
-      IllegalArgumentException {
+      IllegalArgumentException{
     errorList.clear();
     Configuration config = ConfigManager.getCurrentConfig();
     // allow for changing these between runs when testing
@@ -556,11 +569,11 @@ public class V2AuMover {
    * @throws ApiException if REST request results in errors
    */
   protected void moveAuArtifacts(ArchivalUnit au) throws ApiException {
-    List<Artifact> cuArtifacts = new ArrayList<>();
 
     //Get the au artifacts from the v1 repo.
     /* get Au cachedUrls from Lockss*/
     for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
+      List<Artifact> cuArtifacts = new ArrayList<>();
       CachedUrl cachedUrl = iter.next();
       currentUrl = cachedUrl.getUrl();
       String v2Url = null;
@@ -578,16 +591,18 @@ public class V2AuMover {
       // We looking for previously moved versions of the 'current' cu
       ArtifactPageInfo pageInfo;
       String token = null;
-      do {
-        pageInfo = rsCollectionsApiClient.getArtifacts(collection, au.getAuId(),
-            v2Url, null, null, false, null, token);
-        cuArtifacts.addAll(pageInfo.getArtifacts());
-        token = pageInfo.getPageInfo().getContinuationToken();
-      } while (!terminated && !StringUtil.isNullString(token));
-      if(log.isDebug3())
-        log.debug3("Found " + cuArtifacts.size() + " matches for " + v2Url);
+      // if the v2 repo knows about this au we need to call getArtifacts.
+      if(v2Aus.contains(au.getAuId())) {
+        do {
+          pageInfo = rsCollectionsApiClient.getArtifacts(collection, au.getAuId(),
+              v2Url, null, null, false, null, token);
+          cuArtifacts.addAll(pageInfo.getArtifacts());
+          token = pageInfo.getPageInfo().getContinuationToken();
+        } while (!terminated && !StringUtil.isNullString(token));
+        if(log.isDebug3())
+          log.debug3("Found " + cuArtifacts.size() + " matches for " + v2Url);
+      }
       moveCuVersions(v2Url, cachedUrl, cuArtifacts);
-      cuArtifacts.clear();
       auUrlsMoved++;
     }
     allCusQueued = true;
@@ -643,6 +658,23 @@ public class V2AuMover {
     return rsAccessUrl;
   }
 
+  void getV2Aus() throws IOException {
+    // get the aus known by the v2 repository
+    try {
+      AuidPageInfo pageInfo;
+      String token = null;
+      do {
+        pageInfo = rsCollectionsApiClient.getAus(collection, null, token);
+        v2Aus.addAll(pageInfo.getAuids());
+        token = pageInfo.getPageInfo().getContinuationToken();
+      } while (!terminated && !StringUtil.isNullString(token));
+    } catch (ApiException apie) {
+      errorList.add("Error occurred while retrieving v2 Au list: " + apie.getMessage());
+      closeReport();
+      throw new IOException( "Unable to get Au List from v2 Repository: " + apie.getCode() + "-" + apie.getMessage());
+    }
+  }
+
   /**
    * Move all versions of a cachedUrl.
    *
@@ -659,10 +691,21 @@ public class V2AuMover {
       if (v2Artifacts.size() > 0) {
         log.debug2("v2 versions available=" + v2Artifacts.size() + " v1 versions available=" + localVersions.length);
       }
-      if (v2Artifacts.size() < localVersions.length) {
-        cuQueue.addAll(Arrays.asList(localVersions).subList(v2Artifacts.size(), localVersions.length));
-        if (cuQueue.peek() != null)
-          log.debug("Moving " + cuQueue.size() + " versions...");
+      // if the v2 repository has fewer versions than the v1 repository
+      // then move the missing versions or release the cu version.
+      int vers_to_move = localVersions.length - v2Artifacts.size();
+      if (vers_to_move > 0) {
+        for (int vx =0; vx < localVersions.length; vx++) {
+          CachedUrl ver = localVersions[vx];
+          if(vx < vers_to_move) {
+            cuQueue.add(ver);
+          }
+          else {
+            AuUtil.safeRelease(ver);
+          }
+        }
+        if(log.isDebug2())
+          log.debug2("Moving " + vers_to_move + "/" + localVersions.length+ " versions...");
         moveNextCuVersion(auid, uri, cuQueue);
       }
     }
@@ -751,6 +794,7 @@ public class V2AuMover {
       moveNoAuPeerSet(au);
       log.info(auName + ": Moving AU State...");
       moveAuState(au);
+      //This needs to be last
       log.info(auName + ": Moving AU Configuration...");
       moveAuConfig(au);
     }
@@ -834,7 +878,7 @@ public class V2AuMover {
   private void moveNoAuPeerSet(ArchivalUnit au) {
     DatedPeerIdSet noAuPeerSet = pollManager.getNoAuPeerSet(au);
     String auName = au.getName();
-    if(noAuPeerSet != null && noAuPeerSet instanceof DatedPeerIdSetImpl) {
+    if(noAuPeerSet instanceof DatedPeerIdSetImpl) {
       try {
         cfgAusApiClient.putNoAuPeers(au.getAuId(), ((DatedPeerIdSetImpl)noAuPeerSet).getBean(au.getAuId()), makeCookie());
         log.info(auName + ": Successfully moved no Au peers.");
@@ -954,7 +998,7 @@ public class V2AuMover {
         okhttp3.Response response = null;
         int errCode;
         int tryCount = 0;
-        while (tryCount < MAX_TRY_COUNT) {
+        while (tryCount < maxRetryCount) {
           response = chain.proceed(request);
           if (response.isSuccessful()) {
             return response;
@@ -966,17 +1010,19 @@ public class V2AuMover {
             }
           }
           try {
-            Thread.sleep(RETRY_BACKOFF_DELAY * tryCount);
+            Thread.sleep(retryBackoffDelay * tryCount);
           } catch (InterruptedException e1) {
             throw new RuntimeException(e1);
           }
           tryCount++;
         }
-        errCode = response.code();
-        // we've run out of retries...
-        if (errCode == 401 || errCode == 403 || errCode >= 500) {
-          String err = "Au Mover is unable to continue:" + errCode + " - " + response.message();
-          throw new IOException(err);
+        if (response != null) {
+          errCode = response.code();
+          // we've run out of retries...
+          if (errCode == 401 || errCode == 403 || errCode >= 500) {
+            String err = "Au Mover is unable to continue:" + errCode + " - " + response.message();
+            throw new IOException(err);
+          }
         }
         return response;
       } catch (Throwable ex) {
