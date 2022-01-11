@@ -255,6 +255,11 @@ public class TestV2AuMover extends LockssTestCase {
       moveNextAu();
     }
 
+    @Override
+    void getV2Aus() throws IOException {
+
+    }
+
     protected List<String> getMovedAus() {
       return movedAus;
     }
