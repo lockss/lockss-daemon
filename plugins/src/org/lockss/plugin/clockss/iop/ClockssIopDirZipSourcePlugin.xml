@@ -1,0 +1,94 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.clockss.iop.ClockssIopDirZipSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"IOP Publishing Source Plugin (CLOCKSS), Base URL %s, Directory %s", base_url, directory</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>IOP Publishing Source Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s%s/.+\.zip", base_url, directory</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_mime_type_map</string>
+    <list>
+      <string>.*\.article$,text/xml</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.iop.IopArticleXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+    <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.iop.IopArticleXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <!--
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1, "https://clockss-test.lockss.org/sourcefiles/iopjats-released/2021/?$"</string>
+      <string>1, "https://clockss-test.lockss.org/sourcefiles/iopjats-released/2021/2021-12-15T16_26_19_content*"</string>
+      <string>1, "https://clockss-test.lockss.org/sourcefiles/iopjats-released/2021/2021-12-15T16_26_19_content*/"</string>
+    </list>
+  </entry> -->
+</map>    
