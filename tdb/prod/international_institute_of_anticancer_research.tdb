@@ -2,7 +2,7 @@
 
   publisher <
     name = International Institute of Anticancer Research ;
-    info[platform] = Highwire. Moved to JCORE
+    info[platform] = Highwire. Moved to JCORE. Found manifest pages.
   >
 
   implicit < status ; year ; name ; param[volume_name] >
@@ -19,9 +19,10 @@
     plugin = org.lockss.plugin.highwire.HWDrupalPlugin
     param[base_url] = https://ar.iiarjournals.org/
 
-    au < exists ; 2019 ; Anticancer Research Volume 39 ; 39 >
-    au < exists ; 2020 ; Anticancer Research Volume 40 ; 40 >
-    au < expected ; 2021 ; Anticancer Research Volume 41 ; 41 >
+    au < manifest ; 2019 ; Anticancer Research Volume 39 ; 39 >
+    au < manifest ; 2020 ; Anticancer Research Volume 40 ; 40 >
+    au < manifest ; 2021 ; Anticancer Research Volume 41 ; 41 >
+    au < expected ; 2022 ; Anticancer Research Volume 42 ; 42 >
   }
   {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -57,9 +58,10 @@
     plugin = org.lockss.plugin.highwire.HWDrupalPlugin
     param[base_url] = https://cgp.iiarjournals.org/
 
-    au < exists ; 2019 ; Cancer Genomics & Proteomics Volume 16 ; 16 >
-    au < exists ; 2020 ; Cancer Genomics & Proteomics Volume 17 ; 17 >
-    au < expected ; 2021 ; Cancer Genomics & Proteomics Volume 18 ; 18 >
+    au < manifest ; 2019 ; Cancer Genomics & Proteomics Volume 16 ; 16 >
+    au < manifest ; 2020 ; Cancer Genomics & Proteomics Volume 17 ; 17 >
+    au < manifest ; 2021 ; Cancer Genomics & Proteomics Volume 18 ; 18 >
+    au < expected ; 2022 ; Cancer Genomics & Proteomics Volume 19 ; 19 >
   }
   {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -95,9 +97,10 @@
     plugin = org.lockss.plugin.highwire.HWDrupalPlugin
     param[base_url] = https://iv.iiarjournals.org/
 
-    au < exists ; 2019 ; In Vivo Volume 33 ; 33 >
-    au < exists ; 2020 ; In Vivo Volume 34 ; 34 >
-    au < expected ; 2021 ; In Vivo Volume 35 ; 35 >
+    au < manifest ; 2019 ; In Vivo Volume 33 ; 33 >
+    au < manifest ; 2020 ; In Vivo Volume 34 ; 34 >
+    au < manifest ; 2021 ; In Vivo Volume 35 ; 35 >
+    au < expected ; 2022 ; In Vivo Volume 36 ; 36 >
   }
   {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

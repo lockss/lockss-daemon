@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = National Academy of Sciences ;
+    info[platform] = Atypon
+  >
+  
+  {
+  
+    title <
+      name = Proceedings of the National Academy of Sciences ;
+      issn = 0027-8424 ;
+      eissn = 1091-6490 ;
+      issnl = 0027-8424
+    >
+    
+    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    # since 1.68, this title has its own crawl pool
+    attr[atypon_crawl_pool] = PNAS
+
+    param[base_url] = https://www.pnas.org/
+
+    au < doNotProcess ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 >
+    au < doNotProcess ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 >
+    au < expected ; 2022 ; Proceedings of the National Academy of Sciences Volume 119 ; 119 >
+
+  }
+
+}

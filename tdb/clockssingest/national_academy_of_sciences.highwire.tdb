@@ -145,6 +145,7 @@
     {
         param[base_url] = https://www.pnas.org/
 
+    au < nas.ClockssNasDrupalPlugin ; doNotProcess ; doNotProcess ; 2017 ; Proceedings of the National Academy of Sciences Volume 114 ; 114 ; >
     au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2018 ; Proceedings of the National Academy of Sciences Volume 115 ; 115 ; reingest2.clockss.org:8085 >
     au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; reingest3.clockss.org:8083 >
     au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 ; reingest5.clockss.org:8082 >

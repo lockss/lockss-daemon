@@ -1462,7 +1462,6 @@
       >
      
     param[journal_id] = juvs
-    # quarterly journal expected to launch April 1 2013
     #Volume 1 and early part of 2 used non-standard 0 in front of number
 
     au < exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 01 >
@@ -1478,6 +1477,18 @@
 
     }
     
+    {
+    
+    title < 
+      name = Drone Systems and Applications ;
+      issn = 2564-4939
+      >
+     
+    param[journal_id] = dsa
+
+    au < exists ; 2022 ; Drone Systems and Applications Volume 10 ; 10 >
+
+    }
     {
     
     title < 
@@ -1804,12 +1815,12 @@
      
     param[journal_id] = facets
 
-    au < exists ; 2016 ; FACETS Volume 1 ; 1 >
-    au < exists ; 2017 ; FACETS Volume 2 ; 2 >
-    au < exists ; 2018 ; FACETS Volume 3 ; 3 >
-    au < exists ; 2019 ; FACETS Volume 4 ; 4 >
-    au < exists ; 2020 ; FACETS Volume 5 ; 5 >
-    au < exists ; 2021 ; FACETS Volume 6 ; 6 >
+    au < manifest ; 2016 ; FACETS Volume 1 ; 1 >
+    au < manifest ; 2017 ; FACETS Volume 2 ; 2 >
+    au < manifest ; 2018 ; FACETS Volume 3 ; 3 >
+    au < manifest ; 2019 ; FACETS Volume 4 ; 4 >
+    au < manifest ; 2020 ; FACETS Volume 5 ; 5 >
+    au < manifest ; 2021 ; FACETS Volume 6 ; 6 >
 
     }
     

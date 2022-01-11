@@ -1,0 +1,63 @@
+{
+
+  publisher <
+    name = Ghent University Library ;
+    #info[contract] = 2021 ;
+    #info[tester] = 5 ;
+    #info[poller] = 2 ;
+    info[platform] = Janeway/OAI. See LXPUB-540
+  >
+  
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.janeway.iowastatedp.ClockssIowaStateDPPlugin
+    param[base_url] = https://openjournals.ugent.be/
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+  
+    title <
+      name = Afrika Focus ;
+        issn = 0772-084X ;
+        eissn = 2031-356X
+    >
+    #published 1985-2020
+    param[journal_id] = af
+
+    au < exists ; exists ; 1985 ; 1 ; Afrika Focus Volume 1985 ; 1985 ; >
+    au < exists ; exists ; 1986 ; 2 ; Afrika Focus Volume 1986 ; 1986 ; >
+    au < exists ; exists ; 1987 ; 3 ; Afrika Focus Volume 1987 ; 1987 ; >
+    au < exists ; exists ; 1988 ; 4 ; Afrika Focus Volume 1988 ; 1988 ; >
+    au < exists ; exists ; 1989 ; 5 ; Afrika Focus Volume 1989 ; 1989 ; >
+    au < exists ; exists ; 1990 ; 6 ; Afrika Focus Volume 1990 ; 1990 ; >
+    au < exists ; exists ; 1991 ; 7 ; Afrika Focus Volume 1991 ; 1991 ; >
+    au < exists ; exists ; 1992 ; 8 ; Afrika Focus Volume 1992 ; 1992 ; >
+    au < exists ; exists ; 1993 ; 9 ; Afrika Focus Volume 1993 ; 1993 ; >
+    au < exists ; exists ; 1994 ; 10 ; Afrika Focus Volume 1994 ; 1994 ; >
+    au < exists ; exists ; 1995 ; 11 ; Afrika Focus Volume 1995 ; 1995 ; >
+    au < exists ; exists ; 1996 ; 12 ; Afrika Focus Volume 1996 ; 1996 ; >
+    au < exists ; exists ; 1997 ; 13 ; Afrika Focus Volume 1997 ; 1997 ; >
+    au < exists ; exists ; 1998 ; 14 ; Afrika Focus Volume 1998 ; 1998 ; >
+    au < exists ; exists ; 1999 ; 15 ; Afrika Focus Volume 1999 ; 1999 ; >
+    au < exists ; exists ; 2000 ; 16 ; Afrika Focus Volume 2000 ; 2000 ; >
+    au < exists ; exists ; 2001 ; 17 ; Afrika Focus Volume 2001 ; 2001 ; >
+    au < exists ; exists ; 2002 ; 18 ; Afrika Focus Volume 2002 ; 2002 ; >
+
+    au < exists ; exists ; 2020 ; 33 ; Afrika Focus Volume 2020 ; 2020 ; >
+  }
+
+  {
+  
+    title <
+      name = Agora Magazine ;
+        eissn = 1380-6319
+    >
+    #published 1984-2020
+    param[journal_id] = agora
+
+    au < exists ; exists ; 1984 ; 1 ; Agora Magazine Volume 1984 ; 1984 ; >
+    au < exists ; exists ; 1985 ; 2 ; Agora Magazine Volume 1985 ; 1985 ; >
+    au < exists ; exists ; 1986 ; 3 ; Agora Magazine Volume 1986 ; 1986 ; >
+    au < exists ; exists ; 1987 ; 4 ; Agora Magazine Volume 1987 ; 1987 ; >
+    au < exists ; exists ; 1988 ; 5 ; Agora Magazines Volume 1988 ; 1988 ; >
+  }
+}

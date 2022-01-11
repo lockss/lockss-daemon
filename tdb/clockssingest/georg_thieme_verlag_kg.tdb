@@ -72,12 +72,12 @@
     comment[years] = 1980-1990
     comment[eissn] = no eissn 1980-1990
 
-    au < ready ; exists ; 1980 ; 1980 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 15 ; 15 ; >
-    au < ready ; exists ; 1981 ; 1981 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1980 ; 1980 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1981 ; 1981 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 16 ; 16 ; >
     au < crawling ; exists ; 1982 ; 1982 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 17 ; 17 ; >
     au < crawling ; exists ; 1983 ; 1983 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 18 ; 18 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 19 ; 19 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 20 ; 20 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 21 ; 21 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 22 ; 22 ; >
     au < testing ; exists ; 1988 ; 1988 ; Anästhesiologie, Intensivmedizin, Notfallmedizin Volume 23 ; 23 ; >
@@ -193,14 +193,14 @@
 
     au < crawling ; exists ; 1980 ; 1980 ; Aktuelle Neurologie Volume 7 ; 7 ; >
     au < crawling ; exists ; 1981 ; 1981 ; Aktuelle Neurologie Volume 8 ; 8 ; >
-    au < ready ; exists ; 1982 ; 1982 ; Aktuelle Neurologie Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1982 ; 1982 ; Aktuelle Neurologie Volume 9 ; 9 ; >
     au < crawling ; exists ; 1983 ; 1983 ; Aktuelle Neurologie Volume 10 ; 10 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Aktuelle Neurologie Volume 11 ; 11 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Aktuelle Neurologie Volume 12 ; 12 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Aktuelle Neurologie Volume 13 ; 13 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Aktuelle Neurologie Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Aktuelle Neurologie Volume 14 ; 14 ; >
     au < crawling ; exists ; 1988 ; 1988 ; Aktuelle Neurologie Volume 15 ; 15 ; >
-    au < ready ; exists ; 1989 ; 1989 ; Aktuelle Neurologie Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1989 ; 1989 ; Aktuelle Neurologie Volume 16 ; 16 ; >
     au < frozen ; exists ; 1990 ; 1990 ; Aktuelle Neurologie Volume 17 ; 17 ; >
     au < frozen ; exists ; 1991 ; 1991 ; Aktuelle Neurologie Volume 18 ; 18 ; >
     au < frozen ; exists ; 1992 ; 1992 ; Aktuelle Neurologie Volume 19 ; 19 ; >
@@ -246,11 +246,11 @@
     comment[years] = 1980-current
 
     au < crawling ; exists ; 1982 ; 1982 ; Aktuelle Rheumatologie Volume 9 ; 9 ; >
-    au < ready ; exists ; 1983 ; 1983 ; Aktuelle Rheumatologie Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1983 ; 1983 ; Aktuelle Rheumatologie Volume 10 ; 10 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Aktuelle Rheumatologie Volume 11 ; 11 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Aktuelle Rheumatologie Volume 12 ; 12 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Aktuelle Rheumatologie Volume 13 ; 13 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Aktuelle Rheumatologie Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Aktuelle Rheumatologie Volume 14 ; 14 ; >
     au < crawling ; exists ; 1988 ; 1988 ; Aktuelle Rheumatologie Volume 15 ; 15 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Aktuelle Rheumatologie Volume 16 ; 16 ; >
     au < frozen ; exists ; 1990 ; 1990 ; Aktuelle Rheumatologie Volume 17 ; 17 ; >
@@ -389,11 +389,11 @@
     au < crawling ; exists ; 1980 ; 1980 ; Allgemeine Homöopathische Zeitung Volume 215 ; 215 ; >
     au < crawling ; exists ; 1981 ; 1981 ; Allgemeine Homöopathische Zeitung Volume 216 ; 216 ; >
     au < crawling ; exists ; 1982 ; 1982 ; Allgemeine Homöopathische Zeitung Volume 217 ; 217 ; >
-    au < ready ; exists ; 1983 ; 1983 ; Allgemeine Homöopathische Zeitung Volume 218 ; 218 ; >
+    au < crawling ; exists ; 1983 ; 1983 ; Allgemeine Homöopathische Zeitung Volume 218 ; 218 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Allgemeine Homöopathische Zeitung Volume 219 ; 219 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Allgemeine Homöopathische Zeitung Volume 220 ; 220 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Allgemeine Homöopathische Zeitung Volume 221 ; 221 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Allgemeine Homöopathische Zeitung Volume 222 ; 222 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Allgemeine Homöopathische Zeitung Volume 221 ; 221 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Allgemeine Homöopathische Zeitung Volume 222 ; 222 ; >
     au < crawling ; exists ; 1988 ; 1988 ; Allgemeine Homöopathische Zeitung Volume 233 ; 233 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Allgemeine Homöopathische Zeitung Volume 234 ; 234 ; >
     au < frozen ; exists ; 1990 ; 1990 ; Allgemeine Homöopathische Zeitung Volume 235 ; 235 ; >
@@ -472,11 +472,11 @@
       comment[years] = 1983-current
 
     au < crawling ; exists ; 1983 ; 1983 ; American Journal of Perinatology Volume 1 (1983) ; 1 ; >
-    au < ready ; exists ; 1984 ; 1984 ; American Journal of Perinatology Volume 1 (1984) ; 1 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; American Journal of Perinatology Volume 1 (1984) ; 1 ; >
     au < crawling ; exists ; 1985 ; 1985 ; American Journal of Perinatology Volume 2 ; 2 ; >
     au < crawling ; exists ; 1986 ; 1986 ; American Journal of Perinatology Volume 3 ; 3 ; >
     au < crawling ; exists ; 1987 ; 1987 ; American Journal of Perinatology Volume 4 ; 4 ; >
-    au < ready ; exists ; 1988 ; 1988 ; American Journal of Perinatology Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; American Journal of Perinatology Volume 5 ; 5 ; >
     au < testing ; exists ; 1989 ; 1989 ; American Journal of Perinatology Volume 6 ; 6 ; >
     au < frozen ; exists ; 1990 ; 1990 ; American Journal of Perinatology Volume 7 ; 7 ; >
     au < frozen ; exists ; 1991 ; 1991 ; American Journal of Perinatology Volume 8 ; 8 ; >
@@ -1251,11 +1251,11 @@
    au < manifest ; exists ; 1977 ; 1977 ; DMW - Deutsche Medizinische Wochenschrift Volume 103 ; 103 ; >
    au < manifest ; exists ; 1978 ; 1978 ; DMW - Deutsche Medizinische Wochenschrift Volume 104 ; 104 ; >
    au < manifest ; exists ; 1979 ; 1979 ; DMW - Deutsche Medizinische Wochenschrift Volume 105 ; 105 ; >
-   au < ready ; exists ; 1980 ; 1980 ; DMW - Deutsche Medizinische Wochenschrift Volume 106 ; 106 ; >
-   au < ready ; exists ; 1981 ; 1981 ; DMW - Deutsche Medizinische Wochenschrift Volume 107 ; 107 ; >
+   au < crawling ; exists ; 1980 ; 1980 ; DMW - Deutsche Medizinische Wochenschrift Volume 106 ; 106 ; >
+   au < crawling ; exists ; 1981 ; 1981 ; DMW - Deutsche Medizinische Wochenschrift Volume 107 ; 107 ; >
    au < crawling ; exists ; 1982 ; 1982 ; DMW - Deutsche Medizinische Wochenschrift Volume 108 ; 108 ; >
-   au < ready ; exists ; 1983 ; 1983 ; DMW - Deutsche Medizinische Wochenschrift Volume 109 ; 109 ; >
-   au < ready ; exists ; 1984 ; 1984 ; DMW - Deutsche Medizinische Wochenschrift Volume 110 ; 110 ; >
+   au < crawling ; exists ; 1983 ; 1983 ; DMW - Deutsche Medizinische Wochenschrift Volume 109 ; 109 ; >
+   au < crawling ; exists ; 1984 ; 1984 ; DMW - Deutsche Medizinische Wochenschrift Volume 110 ; 110 ; >
    au < crawling ; exists ; 1985 ; 1985 ; DMW - Deutsche Medizinische Wochenschrift Volume 111 ; 111 ; >
    au < crawling ; exists ; 1986 ; 1986 ; DMW - Deutsche Medizinische Wochenschrift Volume 112 ; 112 ; >
    au < crawling ; exists ; 1987 ; 1987 ; DMW - Deutsche Medizinische Wochenschrift Volume 113 ; 113 ; >
@@ -1385,15 +1385,15 @@
    au < manifest ; exists ; 1978 ; 1978 ; Endoscopy Volume 10 ; 10 ; >
    au < manifest ; exists ; 1979 ; 1979 ; Endoscopy Volume 11 ; 11 ; >
    au < crawling ; exists ; 1980 ; 1980 ; Endoscopy Volume 12 ; 12 ; >
-   au < ready ; exists ; 1981 ; 1981 ; Endoscopy Volume 13 ; 13 ; >
-   au < ready ; exists ; 1982 ; 1982 ; Endoscopy Volume 14 ; 14 ; >
-   au < ready ; exists ; 1983 ; 1983 ; Endoscopy Volume 15 ; 15 ; >
+   au < crawling ; exists ; 1981 ; 1981 ; Endoscopy Volume 13 ; 13 ; >
+   au < crawling ; exists ; 1982 ; 1982 ; Endoscopy Volume 14 ; 14 ; >
+   au < crawling ; exists ; 1983 ; 1983 ; Endoscopy Volume 15 ; 15 ; >
    au < crawling ; exists ; 1984 ; 1984 ; Endoscopy Volume 16 ; 16 ; >
    au < crawling ; exists ; 1985 ; 1985 ; Endoscopy Volume 17 ; 17 ; >
    au < crawling ; exists ; 1986 ; 1986 ; Endoscopy Volume 18 ; 18 ; >
-   au < ready ; exists ; 1987 ; 1987 ; Endoscopy Volume 19 ; 19 ; >
-   au < ready ; exists ; 1988 ; 1988 ; Endoscopy Volume 20 ; 20 ; >
-   au < ready ; exists ; 1989 ; 1989 ; Endoscopy Volume 21 ; 21 ; >
+   au < crawling ; exists ; 1987 ; 1987 ; Endoscopy Volume 19 ; 19 ; >
+   au < crawling ; exists ; 1988 ; 1988 ; Endoscopy Volume 20 ; 20 ; >
+   au < crawling ; exists ; 1989 ; 1989 ; Endoscopy Volume 21 ; 21 ; >
    au < frozen ; exists ; 1990 ; 1990 ; Endoscopy Volume 22 ; 22 ; >
    au < frozen ; exists ; 1991 ; 1991 ; Endoscopy Volume 23 ; 23 ; >
    au < frozen ; exists ; 1992 ; 1992 ; Endoscopy Volume 24 ; 24 ; >
@@ -1720,12 +1720,12 @@
     comment[years] = 1995-current
 
    au < crawling ; exists ; 1983 ; 1983 ; Experimental and Clinical Endocrinology & Diabetes Volume 1983 ; 1983 ; >
-   au < ready ; exists ; 1984 ; 1984 ; Experimental and Clinical Endocrinology & Diabetes Volume 1984 ; 1984 ; >
+   au < crawling ; exists ; 1984 ; 1984 ; Experimental and Clinical Endocrinology & Diabetes Volume 1984 ; 1984 ; >
    au < crawling ; exists ; 1985 ; 1985 ; Experimental and Clinical Endocrinology & Diabetes Volume 1985 ; 1985 ; >
-   au < ready ; exists ; 1986 ; 1986 ; Experimental and Clinical Endocrinology & Diabetes Volume 1986 ; 1986 ; >
-   au < ready ; exists ; 1987 ; 1987 ; Experimental and Clinical Endocrinology & Diabetes Volume 1987 ; 1987 ; >
-   au < ready ; exists ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 1988 ; 1988 ; >
-   au < ready ; exists ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 1989 ; 1989 ; >
+   au < crawling ; exists ; 1986 ; 1986 ; Experimental and Clinical Endocrinology & Diabetes Volume 1986 ; 1986 ; >
+   au < crawling ; exists ; 1987 ; 1987 ; Experimental and Clinical Endocrinology & Diabetes Volume 1987 ; 1987 ; >
+   au < crawling ; exists ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 1988 ; 1988 ; >
+   au < crawling ; exists ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 1989 ; 1989 ; >
    au < frozen ; exists ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 1990 ; 1990 ; >
    au < frozen ; exists ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 1991 ; 1991 ; >
    au < frozen ; exists ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 1992 ; 1992 ; >
@@ -1790,11 +1790,11 @@
     comment[years] = 1983-current
 
    au < crawling ; exists ; 1983 ; 1983 ; Facial Plastic Surgery Volume 1 (1983) ; 1 ; >
-   au < ready ; exists ; 1984 ; 1984 ; Facial Plastic Surgery Volume 1 (1984) ; 1 ; >
-   au < ready ; exists ; 1985 ; 1985 ; Facial Plastic Surgery Volume 2 (1985) ; 2 ; >
+   au < crawling ; exists ; 1984 ; 1984 ; Facial Plastic Surgery Volume 1 (1984) ; 1 ; >
+   au < crawling ; exists ; 1985 ; 1985 ; Facial Plastic Surgery Volume 2 (1985) ; 2 ; >
    au < crawling ; exists ; 1986 ; 1986 ; Facial Plastic Surgery Volume 2 (1986) ; 2 ; >
    au < crawling ; exists ; 1987 ; 1987 ; Facial Plastic Surgery Volume 3 ; 3 ; >
-   au < ready ; exists ; 1988 ; 1988 ; Facial Plastic Surgery Volume 4 ; 4 ; >
+   au < crawling ; exists ; 1988 ; 1988 ; Facial Plastic Surgery Volume 4 ; 4 ; >
    au < crawling ; exists ; 1989 ; 1989 ; Facial Plastic Surgery Volume 5 ; 5 ; >
    au < frozen ; exists ; 1990 ; 1990 ; Facial Plastic Surgery Volume 6 ; 6 ; >
    au < doesNotExist ; doesNotExist ; 1991 ; 1991 ; Facial Plastic Surgery Volume 7 ; 7 ; >
@@ -1874,12 +1874,12 @@
    au < crawling ; exists ; 1980 ; 1980 ; Fortschritte der Neurologie - Psychiatrie Volume 48 ; 48 ; >
    au < crawling ; exists ; 1981 ; 1981 ; Fortschritte der Neurologie - Psychiatrie Volume 49 ; 49 ; >
    au < crawling ; exists ; 1982 ; 1982 ; Fortschritte der Neurologie - Psychiatrie Volume 50 ; 50 ; >
-   au < ready ; exists ; 1983 ; 1983 ; Fortschritte der Neurologie - Psychiatrie Volume 51 ; 51 ; >
+   au < crawling ; exists ; 1983 ; 1983 ; Fortschritte der Neurologie - Psychiatrie Volume 51 ; 51 ; >
    au < crawling ; exists ; 1984 ; 1984 ; Fortschritte der Neurologie - Psychiatrie Volume 52 ; 52 ; >
    au < crawling ; exists ; 1985 ; 1985 ; Fortschritte der Neurologie - Psychiatrie Volume 53 ; 53 ; >
-   au < ready ; exists ; 1986 ; 1986 ; Fortschritte der Neurologie - Psychiatrie Volume 54 ; 54 ; >
+   au < crawling ; exists ; 1986 ; 1986 ; Fortschritte der Neurologie - Psychiatrie Volume 54 ; 54 ; >
    au < crawling ; exists ; 1987 ; 1987 ; Fortschritte der Neurologie - Psychiatrie Volume 55 ; 55 ; >
-   au < ready ; exists ; 1988 ; 1988 ; Fortschritte der Neurologie - Psychiatrie Volume 56 ; 56 ; >
+   au < crawling ; exists ; 1988 ; 1988 ; Fortschritte der Neurologie - Psychiatrie Volume 56 ; 56 ; >
    au < crawling ; exists ; 1989 ; 1989 ; Fortschritte der Neurologie - Psychiatrie Volume 57 ; 57 ; >
    au < frozen ; exists ; 1990 ; 1990 ; Fortschritte der Neurologie - Psychiatrie Volume 58 ; 58 ; >
    au < frozen ; exists ; 1991 ; 1991 ; Fortschritte der Neurologie - Psychiatrie Volume 59 ; 59 ; >
@@ -1988,7 +1988,7 @@
     param[journal_id] = 10.1055/s-00000020
     comment[years] = 1980-current
 
-   au < ready ; exists ; 1980 ; 1980 ; Geburtshilfe und Frauenheilkunde Volume 40 ; 40 ; >
+   au < crawling ; exists ; 1980 ; 1980 ; Geburtshilfe und Frauenheilkunde Volume 40 ; 40 ; >
    au < manifest ; exists ; 1981 ; 1981 ; Geburtshilfe und Frauenheilkunde Volume 41 ; 41 ; >
    au < manifest ; exists ; 1982 ; 1982 ; Geburtshilfe und Frauenheilkunde Volume 42 ; 42 ; >
    au < manifest ; exists ; 1983 ; 1983 ; Geburtshilfe und Frauenheilkunde Volume 43 ; 43 ; >
@@ -3335,7 +3335,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Social Health and Diabetes Volume 6 ; 6 ; >
       au < finished ; crawling ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; 2020 ; Journal of Social Health and Diabetes Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; 2021 ; Journal of Social Health and Diabetes Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Social Health and Diabetes Volume 9 ; 9 ; >
 
   }
 

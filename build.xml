@@ -229,7 +229,7 @@ Args:
 <!--  <property name="derbynet.jar"   value="${lib}/derbynet-${derby.version}.jar"/>-->
   <property name="postgresql-jdbc.jar" value="${lib}/postgresql-42.3.1.jar" />
   <property name="mysql-connector-java.jar"
-				  value="${lib}/mysql-connector-java-8.0.24.jar" />
+				  value="${lib}/mysql-connector-java-8.0.27.jar" />
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
@@ -298,9 +298,9 @@ Args:
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
   <property name="jsoup.jar" value="${lib}/jsoup-1.14.3.jar"/>
-  <property name="marc4j.jar" value="${lib}/marc4j-2.9.1.jar" />
+  <property name="marc4j.jar" value="${lib}/marc4j-2.9.2.jar" />
   <!-- Jonix -->
-  <property name="jonix.version" value="8.0.1" />
+  <property name="jonix.version" value="8.0.1" /><!-- last Java 8 version, 9.0 is Java 9 -->
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
   <property name="jonix-common.jar" value="${lib}/jonix-common-${jonix.version}.jar" />
   <property name="jonix-xml.jar" value="${lib}/jonix-xml-${jonix.version}.jar" />
@@ -310,7 +310,7 @@ Args:
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
   <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
-  <property name="xmlunit.jar"    value="${lib}/xmlunit1.0.jar" />
+  <property name="xmlunit.jar"    value="${lib}/xmlunit-1.6.jar" />
   <property name="oai-harvester.jar" value="${lib}/harvester2-0.1.12-p1.jar"/>
   <!-- Needed by OAI harvester: Xalan, Xerces, XML-APIs, Log4j -->
 
@@ -343,14 +343,13 @@ Args:
   <!-- PDFBox -->
   <property name="pdfbox.version" value="1.8.16" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
-  <!-- Next 8 JARs needed by PDFBox: -->
+  <!-- Next 7 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
-  <property name="xmpbox.jar" value="${lib}/xmpbox-${pdfbox.version}.jar" />
-  <property name="bouncycastle.version" value="jdk15on-167" />
-  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
-  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="68_1" />
+  <property name="bouncycastle.version" value="1.70" />
+  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-jdk15on-${bouncycastle.version}.jar" />
+  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-jdk15on-${bouncycastle.version}.jar" />
+  <property name="icu4j.version" value="70.1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
@@ -393,8 +392,10 @@ Args:
 
   <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
 
-  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
-  <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
+  <property name="antlr.version" value="4.9.3" />
+  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-${antlr.version}.jar" />
+  <property name="antlr.tools.jar" value="${lib}/antlr-${antlr.version}-complete.jar" />
+
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.rewoven.jar"    value="${lib}/lockss-rewoven.jar"/>
