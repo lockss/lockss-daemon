@@ -715,7 +715,7 @@
     au < ingNotReady ; exists ; 2016 ; Monthly Weather Review Volume 144 ; 144 ; http://journals.ametsoc.org/ ; >
     au < finished ; crawling ; 2017 ; Monthly Weather Review Volume 145 ; 145 ; http://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Monthly Weather Review Volume 146 ; 146 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2019 ; Monthly Weather Review Volume 147 ; 147 ; https://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; Monthly Weather Review Volume 147 ; 147 ; https://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2020 ; Monthly Weather Review Volume 148 ; 148 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -741,7 +741,7 @@
     au < finished ; crawling ; 2016 ; Weather, Climate, and Society Volume 8 ; 8 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Weather, Climate, and Society Volume 9 ; 9 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Weather, Climate, and Society Volume 10 ; 10 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Weather, Climate, and Society Volume 11 ; 11 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Weather, Climate, and Society Volume 11 ; 11 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Weather, Climate, and Society Volume 12 ; 12 ; https://journals.ametsoc.org/ ; >
 
   }
@@ -790,7 +790,7 @@
     au < finished ; crawling ; 2016 ; Weather and Forecasting Volume 31 ; 31 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Weather and Forecasting Volume 32 ; 32 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Weather and Forecasting Volume 33 ; 33 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Weather and Forecasting Volume 34 ; 34 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Weather and Forecasting Volume 34 ; 34 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2020 ; Weather and Forecasting Volume 35 ; 35 ; https://journals.ametsoc.org/ ; >
 
   }
