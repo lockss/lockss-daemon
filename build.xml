@@ -392,8 +392,10 @@ Args:
 
   <property name="json-path.jar" value="${lib}/json-path-2.6.0.jar" />
 
-  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-4.5.3.jar" />
-  <property name="antlr.tools.jar" value="${lib}/antlr-4.5.3-complete.jar" />
+  <property name="antlr.version" value="4.9.3" />
+  <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-${antlr.version}.jar" />
+  <property name="antlr.tools.jar" value="${lib}/antlr-${antlr.version}-complete.jar" />
+
   <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.rewoven.jar"    value="${lib}/lockss-rewoven.jar"/>
