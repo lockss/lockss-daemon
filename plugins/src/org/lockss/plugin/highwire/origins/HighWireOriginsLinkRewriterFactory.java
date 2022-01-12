@@ -1,4 +1,4 @@
-package org.lockss.plugin.highwire.Origins;
+package org.lockss.plugin.highwire.origins;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;

@@ -37,7 +37,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.highwire.Origins.HighWireOriginsPlugin</string>
+        <string>org.lockss.plugin.highwire.origins.HighWireOriginsPlugin</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -165,11 +165,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.highwire.Origins.HighWireOriginsArticleIteratorFactory</string>
+        <string>org.lockss.plugin.highwire.origins.HighWireOriginsArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.highwire.Origins.HighWireOriginsArticleIteratorFactory</string>
+        <string>org.lockss.plugin.highwire.origins.HighWireOriginsArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
@@ -180,6 +180,6 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>text/html_link_rewriter_factory</string>
-        <string>org.lockss.plugin.highwire.Origins.HighWireOriginsLinkRewriterFactory</string>
+        <string>org.lockss.plugin.highwire.origins.HighWireOriginsLinkRewriterFactory</string>
     </entry>
 </map>

@@ -31,7 +31,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.highwire.Origins;
+package org.lockss.plugin.highwire.origins;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.MetadataTarget;
