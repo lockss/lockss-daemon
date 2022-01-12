@@ -55,6 +55,7 @@ import org.lockss.repository.AuSuspectUrlVersions;
 import org.lockss.repository.RepositoryManager;
 import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
@@ -105,6 +106,12 @@ public class V2AuMover {
 
   public static final String PARAM_RETRY_BACKOFF_DELAY = PREFIX + "retry_backoff";
   public static final int DEFAULT_RETRY_BACKOFF_DELAY = 10000;
+
+  public static final String PARAM_CONNECTION_TIMEOUT= PREFIX + "connection.timeout";
+  public static final long DEFAULT_CONNECTION_TIMEOUT = 10 * Constants.SECOND;
+
+  public static final String PARAM_READ_TIMEOUT = PREFIX + "read.timeout";
+  public static final long DEFAULT_READ_TIMEOUT =  30 * Constants.SECOND;
 
   /** Path to directory holding daemon logs */
   public static final String PARAM_REPORT_DIR =
@@ -187,6 +194,10 @@ public class V2AuMover {
   private String rsAccessUrl = null;
   private int maxRequests;
 
+  // timeouts
+  private final long connectTimeout;
+  private final long readTimeout;
+
   // timer
   private long startTime;
 
@@ -231,18 +242,21 @@ public class V2AuMover {
 
 
   public V2AuMover() {
-    Configuration config = ConfigManager.getCurrentConfig();
+    // Get our lockss daemon managers
     pluginManager = LockssDaemon.getLockssDaemon().getPluginManager();
     IdentityManager idmgr = LockssDaemon.getLockssDaemon().getIdentityManager();
     if( idmgr instanceof IdentityManagerImpl )
       idManager =((IdentityManagerImpl) LockssDaemon.getLockssDaemon().getIdentityManager());
     repoManager = LockssDaemon.getLockssDaemon().getRepositoryManager();
     pollManager = LockssDaemon.getLockssDaemon().getPollManager();
-    // support for overriding our defaults
+    // Get configuration parameters to support overriding our defaults
+    Configuration config = ConfigManager.getCurrentConfig();
     userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
     collection = config.get(PARAM_V2_COLLECTION, DEFAULT_V2_COLLECTION);
     cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
     rsPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
+    connectTimeout = config.getTimeInterval(PARAM_CONNECTION_TIMEOUT,DEFAULT_CONNECTION_TIMEOUT);
+    readTimeout = config.getTimeInterval(PARAM_READ_TIMEOUT,DEFAULT_READ_TIMEOUT);
     maxRetryCount=config.getInt(PARAM_MAX_RETRY_COUNT, DEFAULT_MAX_RETRY_COUNT);
     retryBackoffDelay=config.getInt(PARAM_RETRY_BACKOFF_DELAY,DEFAULT_RETRY_BACKOFF_DELAY);
 
@@ -251,10 +265,16 @@ public class V2AuMover {
 
     reportFile = new File(logdir, logfile);
     repoClient = new V2RestClient();
+    repoClient.setConnectTimeout((int) connectTimeout);
+    repoClient.setReadTimeout((int) readTimeout);
+    repoClient.setWriteTimeout((int) readTimeout);
     rsStatusApiClient = new org.lockss.laaws.api.rs.StatusApi(repoClient);
     rsCollectionsApiClient = new StreamingCollectionsApi(repoClient);
 
     configClient = new V2RestClient();
+    configClient.setConnectTimeout((int) connectTimeout);
+    configClient.setReadTimeout((int) readTimeout);
+    configClient.setWriteTimeout((int) readTimeout);
     // Assign the client to the status api and aus api
     cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(configClient);
     cfgAusApiClient = new AusApi(configClient);
