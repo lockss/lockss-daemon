@@ -6963,7 +6963,7 @@
       au < finished ; frozen ; 2015 ; Journal of Health Specialties Volume 3 ; 2015 ; 3 ; http://www.thejhs.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; Journal of Health Specialties Volume 4 ; 2016 ; 4 ; http://www.thejhs.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Health Specialties Volume 5 ; 2017 ; 5 ; http://www.thejhs.org/ ; ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; Journal of Health Specialties Volume 6 ; 2018 ; 6 ; http://www.thejhs.org/ ; ; reingest3.clockss.org:8083 reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Journal of Health Specialties Volume 6 ; 2018 ; 6 ; http://www.thejhs.org/ ; ; reingest3.clockss.org:8083 >
 
   }
 
@@ -9078,7 +9078,7 @@
       au < finished ; manifest ; 2016 ; Annals of Tropical Pathology Volume 7 ; 2016 ; 7 ; https://www.atpjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; Annals of Tropical Pathology Volume 8 ; 2017 ; 8 ; https://www.atpjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Annals of Tropical Pathology Volume 9 ; 2018 ; 9 ; https://www.atpjournal.org/ ; ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; Annals of Tropical Pathology Volume 10 ; 2019 ; 10 ; https://www.atpjournal.org/ ; ; >
+      au < finished ; manifest ; 2019 ; Annals of Tropical Pathology Volume 10 ; 2019 ; 10 ; https://www.atpjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Annals of Tropical Pathology Volume 11 ; 2020 ; 11 ; https://www.atpjournal.org/ ; ; >
       au < crawling ; exists ; 2021 ; Annals of Tropical Pathology Volume 12 ; 2021 ; 12 ; https://www.atpjournal.org/ ; ; >
 
