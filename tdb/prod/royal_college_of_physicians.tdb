@@ -18,10 +18,9 @@
     {
     param[base_url] = https://www.rcpjournals.org/
     param[journal_id] = clinmedicine
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
+    plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
 
-    au < exists ; 2016 ; Clinical Medicine Volume 16 ; 16 >
+    au < testing ; 2016 ; Clinical Medicine Volume 16 ; 16 >
     au < exists ; 2017 ; Clinical Medicine Volume 17 ; 17 >
     au < exists ; 2018 ; Clinical Medicine Volume 18 ; 18 >
     au < exists ; 2019 ; Clinical Medicine Volume 19 ; 19 >
@@ -62,12 +61,11 @@
     {
     param[base_url] = https://www.rcpjournals.org/
     param[journal_id] = futurehosp
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
+    plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
 
     au < exists ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
     au < exists ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
-    au < exists ; 2021 ; Future Hospital Journal Volume 8 ; 8 >
+    au < testing ; 2021 ; Future Hospital Journal Volume 8 ; 8 >
     }
     {
     param[base_url] = http://futurehospital.rcpjournal.org/

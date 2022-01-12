@@ -33,48 +33,30 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.atypon.asm.ClockssAsmPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_version</string>
-        <string>6</string>
+        <string>org.lockss.plugin.highwire.rcp.RcpOriginsPlugin</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Society for Microbiology Journals Plugin (CLOCKSS)</string>
+        <string>Royal College of Physicians</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.atypon.asm.AsmPlugin</string>
+        <string>org.lockss.plugin.highwire.origins.HighWireOriginsPlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>6</string>
+        <string>1</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Society for Microbiology Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-    </entry>
-    <entry>
-        <string>au_start_url</string>
-        <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
-    </entry>
-    <entry>
-        <!--  CLOCKSS does not need this warning message about registering IP addresses -->
-        <string>plugin_au_config_user_msg</string>
-        <org.lockss.util.Default />
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-        </map>
+        <string>"Royal College of Physicians, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
     </entry>
 </map>
