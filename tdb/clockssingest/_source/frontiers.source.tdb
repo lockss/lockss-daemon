@@ -41,7 +41,7 @@
       au < readySource ; crawling ; 2021 ; Frontiers Journals Source Content 2021_02 ; 2021_02 >
       au < expected ; exists ; 2021 ; Frontiers Journals Source Content 2021_03 ; 2021_03 >
 
-      au < manifest ; exists ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
+      au < readySource ; crawling ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
     }
 
   }
@@ -65,7 +65,7 @@
       au < zapped ; finished ; 2019 ; Frontiers Books Source Content 2019 ; 2019 >
       au < readySource ; crawling ; 2020 ; Frontiers Books Source Content 2020 ; 2020 >
       au < readySource ; crawling ; 2021 ; Frontiers Books Source Content 2021 ; 2021 >
-      au < manifest ; exists ; 2022 ; Frontiers Books Source Content 2022 ; 2022 >
+      au < readySource ; crawling ; 2022 ; Frontiers Books Source Content 2022 ; 2022 >
 
     }
 
