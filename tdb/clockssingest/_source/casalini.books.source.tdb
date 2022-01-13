@@ -25,7 +25,7 @@
     au < readySource ; crawling ; 2021 ; Casalini Books Source Content 2021 ; 2021 >
     }
     {
-    plugin = needs.SourcePlugin
+    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
 
     au < expected ; exists ; 2022 ; Casalini Books Source Content 2022 ; 2022_01 >
     }
