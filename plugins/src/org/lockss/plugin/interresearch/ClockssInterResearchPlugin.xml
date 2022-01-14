@@ -145,12 +145,30 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <!-- https://www.int-res.com/articles/meps2022/681/m681p021.pdf -->
-            <string>"^%sarticles/(feature|%s(%d|_oa))/.*\.pdf$", base_url, journal_id, year</string>
+            <!-- https://www.int-res.com/abstracts/meps/v681/p21-35/
+                 https://www.int-res.com/articles/meps2022/681/m681p021.pdf -->
+            <string>"^%s(abstracts/%s/v%s/p|articles/(feature|%s(%d|_oa))/.*\.pdf)", base_url, journal_id, num_issue_range, journal_id, year</string>
         </list>
     </entry>
     <entry>
         <string>au_url_normalizer</string>
         <string>org.lockss.plugin.interresearch.InterResearchUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.interresearch.InterResearchArticleIterator</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.interresearch.InterResearchArticleIterator</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.interresearch.InterResearchHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
     </entry>
 </map>
