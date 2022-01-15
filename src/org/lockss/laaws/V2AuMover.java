@@ -687,9 +687,11 @@ public class V2AuMover {
         pageInfo = rsCollectionsApiClient.getAus(collection, null, token);
         v2Aus.addAll(pageInfo.getAuids());
         token = pageInfo.getPageInfo().getContinuationToken();
+        log.debug("token:" + token);
       } while (!terminated && !StringUtil.isNullString(token));
     } catch (ApiException apie) {
       errorList.add("Error occurred while retrieving v2 Au list: " + apie.getMessage());
+      apie.printStackTrace();
       closeReport();
       throw new IOException( "Unable to get Au List from v2 Repository: " + apie.getCode() + "-" + apie.getMessage());
     }
@@ -1028,6 +1030,7 @@ public class V2AuMover {
               // no retries
               break;
             }
+            response.close();
           }
           try {
             Thread.sleep(retryBackoffDelay * tryCount);
