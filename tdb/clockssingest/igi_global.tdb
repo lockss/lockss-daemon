@@ -172,7 +172,7 @@
     param[journal_issn] = 2643-7996
     #continues = 1947-8607
 
-    au < crawling ; exists ; 2020 ; International Journal of Adult Education and Technology (IJAET) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2020 ; International Journal of Adult Education and Technology (IJAET) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2021 ; International Journal of Adult Education and Technology (IJAET) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
   }
@@ -1595,7 +1595,7 @@
     param[journal_issn] = 2643-7406
     #continues = 1948-5018
 
-    au < crawling ; exists ; 2020 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2020 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2021 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
   }
@@ -2782,7 +2782,7 @@
     au < deepCrawl ; exists ; 2017 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 5 ; 5 ; http://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2018 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2019 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2020 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < frozen ; exists ; 2020 ; International Journal of Privacy and Health Information Management (IJPHIM) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
 
   }
 
@@ -2820,7 +2820,7 @@
     param[journal_issn] = 2643-8089
     #continues = 2160-9837
 
-    au < crawling ; exists ; 2020 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2020 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2021 ; International Journal of Project Management and Productivity Assessment (IJPMPA) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
 
   }
@@ -2874,7 +2874,7 @@
     param[journal_issn] = 2641-0923
     #continues = 2155-496X
 
-    au < crawling ; exists ; 2019 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2019 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < doesNotExist ; doesNotExist ; 2020 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
     au < notReady ; exists ; 2021 ; International Journal of Quality Control and Standards in Science and Engineering (IJQCSSE) Volume 9 ; 9 ; https://www.igi-global.com/ ; > # no content online
 
