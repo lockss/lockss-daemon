@@ -512,7 +512,7 @@ public class V2AuMover {
     if (!terminated && auMoveQueue.iterator().hasNext()) {
       ArchivalUnit au = auMoveQueue.iterator().next();
       allCusQueued = false;
-      log.debug("Moving " + au.getName() + " - " + auMoveQueue.size() + " remaining.");
+      log.debug("Moving " + au.getName() + " - " + auMoveQueue.size() + " AUs remaining.");
       currentAu = au.getAuId();
       auBytesMoved = 0;
       auUrlsMoved = 0;
@@ -687,11 +687,11 @@ public class V2AuMover {
         pageInfo = rsCollectionsApiClient.getAus(collection, null, token);
         v2Aus.addAll(pageInfo.getAuids());
         token = pageInfo.getPageInfo().getContinuationToken();
-        log.debug("token:" + token);
       } while (!terminated && !StringUtil.isNullString(token));
     } catch (ApiException apie) {
-      errorList.add("Error occurred while retrieving v2 Au list: " + apie.getMessage());
-      apie.printStackTrace();
+      String err = "Error occurred while retrieving v2 Au list: " + apie.getMessage();
+      errorList.add(err);
+      log.error(err, apie);
       closeReport();
       throw new IOException( "Unable to get Au List from v2 Repository: " + apie.getCode() + "-" + apie.getMessage());
     }
@@ -981,10 +981,10 @@ public class V2AuMover {
 
     @Override
     public void onUploadProgress(long bytesWritten, long contentLength, boolean done) {
-      log.debug3("Create Artifact uploaded " + bytesWritten + " bytes..");
+      log.debug3("Create Artifact uploaded " + bytesWritten + " of " + contentLength + " bytes..");
+      auBytesMoved += bytesWritten;
       if (done) {
-        auBytesMoved += bytesWritten;
-        log.debug("Create Artifact upload of " + bytesWritten + " length complete.");
+        log.debug2("Create Artifact upload of " + bytesWritten + " complete.");
       }
     }
 
