@@ -20,7 +20,7 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     au < readySource ; crawling ; 2021 ; Malaysian Society of Parasitology and Tropical Medicine Source Content 2021 ; 2021 >
-    au < expected ; exists ; 2022 ; Malaysian Society of Parasitology and Tropical Medicine Source Content 2022 ; 2022 >
+    au < manifest ; exists ; 2022 ; Malaysian Society of Parasitology and Tropical Medicine Source Content 2022 ; 2022 >
 
   }
 

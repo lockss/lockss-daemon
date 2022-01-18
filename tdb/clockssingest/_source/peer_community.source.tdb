@@ -20,7 +20,7 @@
 
     au < readySource ; crawling ; 2020 ; Peer Community In Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; Peer Community In Source Content 2021 ; 2021 >
-    au < expected ; exists ; 2022 ; Peer Community In Source Content 2022 ; 2022 >
+    au < manifest ; exists ; 2022 ; Peer Community In Source Content 2022 ; 2022 >
 
   }
 }

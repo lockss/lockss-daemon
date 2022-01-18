@@ -544,10 +544,10 @@
       param[journal_issn] = 2589-9627
 #      param[base_url] = https://www.cmaconweb.org/
 
-    au < exists ; exists ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ ; ; >
-    au < exists ; exists ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ ; ; >
-    au < exists ; exists ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ ; ; >
-    au < exists ; exists ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ ; ; >
+    au < manifest ; exists ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ ; ; >
+    au < manifest ; exists ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ ; ; >
+    au < manifest ; exists ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ ; ; >
+    au < manifest ; exists ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ ; ; >
 
   }
 
@@ -9910,7 +9910,7 @@
       au < finished ; crawling ; 2018 ; International Journal of Pedodontic Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijpedor.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Pedodontic Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijpedor.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of Pedodontic Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijpedor.org/ ; ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; International Journal of Pedodontic Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijpedor.org/ ; ; >
+      au < manifest ; exists ; 2021 ; International Journal of Pedodontic Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijpedor.org/ ; ; >
 
   }
 
@@ -10687,7 +10687,7 @@
       au < finished ; crawling ; 2018 ; Pediatric Respirology and Critical Care Medicine Volume 2 ; 2018 ; 2 ; https://www.prccm.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Pediatric Respirology and Critical Care Medicine Volume 3 ; 2019 ; 3 ; https://www.prccm.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Pediatric Respirology and Critical Care Medicine Volume 4 ; 2020 ; 4 ; https://www.prccm.org/ ; ; >
-      au < expected ; exists ; 2021 ; Pediatric Respirology and Critical Care Medicine Volume 5 ; 2021 ; 5 ; https://www.prccm.org/ ; ; >
+      au < manifest ; exists ; 2021 ; Pediatric Respirology and Critical Care Medicine Volume 5 ; 2021 ; 5 ; https://www.prccm.org/ ; ; >
 
   }
 
