@@ -860,10 +860,7 @@ public class V2AuMover {
         log.info(auName + ": Successfully moved AU Agreements.");
       } catch (Exception ex) {
         String err = auName + ": Attempt to move au agreements: " + ex.getMessage();
-        log.error("Unable to move Au Agreements : " + err);
-        if(log.isDebug()) {
-          ex.printStackTrace();
-        }
+        log.error("Unable to move Au Agreements : " + err, ex);
         errorList.add(err);
         auErrors.add(err);
         auErrorCount++;
@@ -883,10 +880,7 @@ public class V2AuMover {
         log.info(auName + ": Successfully moved AU Suspect Url Versions.");
       } catch (Exception ex) {
         String err = auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
-        log.error("Unable to move Au Suspect Url Versions: " + err);
-        if(log.isDebug()) {
-          ex.printStackTrace();
-        }
+        log.error("Unable to move Au Suspect Url Versions: " + err, ex);
         errorList.add(err);
         auErrors.add(err);
         auErrorCount++;
@@ -906,10 +900,7 @@ public class V2AuMover {
         log.info(auName + ": Successfully moved no Au peers.");
       } catch (Exception ex) {
         String err = auName + ": Attempt to move no AU peers failed: " + ex.getMessage();
-        log.error("Unable to move no AU peers set: " + err);
-        if(log.isDebug()) {
-          ex.printStackTrace();
-        }
+        log.error("Unable to move no AU peers set: " + err, ex);
         errorList.add(err);
         auErrors.add(err);
         auErrorCount++;
@@ -990,16 +981,16 @@ public class V2AuMover {
 
     @Override
     public void onUploadProgress(long bytesWritten, long contentLength, boolean done) {
-      log.debug3("Create Artifact uploaded " + bytesWritten + " of " + contentLength + "bytes..");
-      auBytesMoved += bytesWritten;
+      log.debug3("Create Artifact uploaded " + bytesWritten + " bytes..");
       if (done) {
-        log.debug2("Create Artifact upload of " + bytesWritten + " complete.");
+        auBytesMoved += bytesWritten;
+        log.debug("Create Artifact upload of " + bytesWritten + " length complete.");
       }
     }
 
     @Override
     public void onDownloadProgress(long bytesRead, long contentLength, boolean done) {
-      log.debug3("Create Artifact downloaded " + bytesRead + " of " + contentLength + "bytes..");
+      log.debug3("Create Artifact downloaded " + bytesRead + " of " + contentLength + " bytes..");
       if (done) {
         log.debug2("Create Artifact download " + bytesRead + "  complete");
       }
