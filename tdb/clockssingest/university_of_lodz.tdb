@@ -215,6 +215,8 @@
 
       comment[publisher] = University of Lodz
       param[journal_abbr] = textmatters
+      #Publisher is using issues instead of volumes. All issues are part of volume 1.
+      #In practical terms this means the AI will not close, instead a new issue will be added each year.
 
       au < crawling ; exists ; 2011-2020 ; Text Matters: A Journal of Literature, Theory and Culture Volume 1 ; 1 ; >
       au < expected ; exists ; 2021-2030 ; Text Matters: A Journal of Literature, Theory and Culture Volume 2 ; 2 ; >
