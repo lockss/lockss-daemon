@@ -1082,7 +1082,8 @@ while (my $line = <>) {
   } elsif ($plugin eq "OLHPlugin" || $plugin eq "ClockssOLHPlugin") {
     #permission is different from start
     $perm_url = uri_unescape($param{base_url}) . "clockss";
-      printf("URL: %s\n", $perm_url);
+      #printf("URL: %s\n", $perm_url); #debug
+      $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
     $url = sprintf("%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
       $param{base_url}, $param{year}, $param{year});
@@ -1120,7 +1121,8 @@ while (my $line = <>) {
   } elsif ($plugin eq "ClockssIowaStateDPPlugin") {
     #permission is different from start
     $perm_url = uri_unescape($param{base_url}) . $param{journal_id} . "/plugins/clockss";
-      printf("URL: %s\n", $perm_url);
+      #printf("URL: %s\n", $perm_url); #debug
+      $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
     $url = sprintf("%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
       $param{base_url}, $param{journal_id}, $param{year}, $param{year});

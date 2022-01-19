@@ -5,7 +5,7 @@
     #info[contract] = 2018 ;
     #info[tester] = 5 ;
     #info[poller] = 2 ;
-    info[platform] = Janeway/OAI BLOCKED, partially, see each title and Jira LXPLUG-2019
+    info[platform] = Janeway. LXPLUG-2019. No permission URL for Silk Road.
   >
   
     #plugin = needs.plugin
@@ -20,9 +20,9 @@
         eissn = 2732-4184
     >
 
-    param[base_url] = https://activetravelstudies.org/ #API not ready
+    param[base_url] = https://activetravelstudies.org/ #API works encoded & = &amp;
 
-    au < exists ; exists ; 2021 ; 1 ; Active Travel Studies Volume 2021 ; 2021 ; >
+    au < manifest ; exists ; 2021 ; 1 ; Active Travel Studies Volume 2021 ; 2021 ; >
 
   }
 
@@ -33,10 +33,10 @@
         eissn = 2633-4321
     >
 
-    param[base_url] = https://www.anthropocenes.net/  #API not ready
+    param[base_url] = https://www.anthropocenes.net/  #API works encoded & = &amp;
 
-    au < exists ; exists ; 2020 ; 1 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2020 ; 2020 ; >
-    au < exists ; exists ; 2021 ; 2 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2021 ; 2021 ; >
+    au < manifest ; exists ; 2020 ; 1 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; 2 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2021 ; 2021 ; >
 
   }
 
@@ -47,7 +47,7 @@
         eissn = 1748-944X
     >
 
-    param[base_url] = https://www.entsportslawjournal.com/ 
+    param[base_url] = https://www.entsportslawjournal.com/ #API works encoded & = &amp;
 
     au < doNotProcess ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
     au < doNotProcess ; exists ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; >
@@ -67,7 +67,7 @@
     au < doNotProcess ; exists ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; >
     au < doNotProcess ; exists ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; >
-    au < exists ; exists ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; >
+    au < manifest ; exists ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; >
 
   }
 
@@ -78,7 +78,7 @@
         eissn = 2634-0488
     >
 
-    param[base_url] = https://delibdemjournal.org/   #API not ready
+    param[base_url] = https://delibdemjournal.org/   #API works encoded & = &amp;
 
     au < doNotProcess ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; >
     au < doNotProcess ; exists ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; >
@@ -96,7 +96,7 @@
     au < doNotProcess ; exists ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; >
     au < doNotProcess ; exists ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; >
-    au < exists ; exists ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; >
+    au < manifest ; exists ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; >
 
   }
 
@@ -108,6 +108,8 @@
     >
 
     param[base_url] = https://silkroadjournal.online/
+    #Manifest page exists. https://silkroadjournal.online/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2019-01-01&amp;until=2019-12-31
+    #Permission page missing. https://silkroadjournal.online/clockss
 
     au < exists ; exists ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; >
@@ -134,8 +136,8 @@
     au < doNotProcess ; exists ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; >
     au < doNotProcess ; exists ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; >
-    au < exists ; exists ; 2020 ; 15 ; Westminster Papers in Communication and Culture Volume 2020 ; 2020 ; >
-    au < exists ; exists ; 2021 ; 16 ; Westminster Papers in Communication and Culture Volume 2021 ; 2021 ; >
+    au < manifest ; exists ; 2020 ; 15 ; Westminster Papers in Communication and Culture Volume 2020 ; 2020 ; >
+    au < manifest ; exists ; 2021 ; 16 ; Westminster Papers in Communication and Culture Volume 2021 ; 2021 ; >
 
   }
 
