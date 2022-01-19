@@ -5,11 +5,11 @@
     #info[contract] = 2018 ;
     #info[tester] = 5 ;
     #info[poller] = 2 ;
-    info[platform] = Janeway/OAI BLOCKED, partially, see each title and Jira#LXPLUG-2019
+    info[platform] = Janeway/OAI BLOCKED, partially, see each title and Jira LXPLUG-2019
   >
   
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
+    #plugin = needs.plugin
+    plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
     #param[oai_granularity] = YYYY-MM-DD
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
@@ -22,7 +22,7 @@
 
     param[base_url] = https://activetravelstudies.org/ #API not ready
 
-    au < manifest ; exists ; 2021 ; 1 ; Active Travel Studies Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2021 ; 1 ; Active Travel Studies Volume 2021 ; 2021 ; >
 
   }
 
@@ -35,8 +35,8 @@
 
     param[base_url] = https://www.anthropocenes.net/  #API not ready
 
-    au < manifest ; exists ; 2020 ; 1 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2020 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; 2 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2020 ; 1 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; 2 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2021 ; 2021 ; >
 
   }
 
@@ -67,7 +67,7 @@
     au < doNotProcess ; exists ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; >
     au < doNotProcess ; exists ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; >
 
   }
 
@@ -96,7 +96,7 @@
     au < doNotProcess ; exists ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; >
     au < doNotProcess ; exists ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; >
 
   }
 
@@ -107,7 +107,7 @@
         eissn = 2631-682X
     >
 
-    param[base_url] = https://silkroadjournal.online/  
+    param[base_url] = https://silkroadjournal.online/
 
     au < exists ; exists ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; >
@@ -122,7 +122,7 @@
         eissn = 1744-6716
     >
 
-    param[base_url] = https://www.westminsterpapers.org/ 
+    param[base_url] = https://www.westminsterpapers.org/
 
     au < doNotProcess ; exists ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; >
@@ -134,8 +134,8 @@
     au < doNotProcess ; exists ; 2017 ; 12 ; Westminster Papers in Communication and Culture Volume 2017 ; 2017 ; >
     au < doNotProcess ; exists ; 2018 ; 13 ; Westminster Papers in Communication and Culture Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; 14 ; Westminster Papers in Communication and Culture Volume 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; 15 ; Westminster Papers in Communication and Culture Volume 2020 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; 16 ; Westminster Papers in Communication and Culture Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2020 ; 15 ; Westminster Papers in Communication and Culture Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; 16 ; Westminster Papers in Communication and Culture Volume 2021 ; 2021 ; >
 
   }
 
