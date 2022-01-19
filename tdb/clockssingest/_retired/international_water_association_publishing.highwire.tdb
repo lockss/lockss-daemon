@@ -6,16 +6,16 @@
     info[tester] = 5 ;
     info[poller] = 2
   >
-  
+
     plugin = org.lockss.plugin.highwire.iwa.ClockssIWADrupalPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-  
+
     #param[base_url] = http://www.iwaponline.com/
-    
+
     #This publisher has moved from HWDrupal to Silverchair
  
   {
-  
+
     title <
       name = Hydrology Research ;
       issn = 0029-1277 ;
@@ -79,7 +79,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Water and Climate Change ;
       issn = 2040-2244 ;
@@ -102,7 +102,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Water and Health ;
       issn = 1477-8920 ;
@@ -132,7 +132,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Water Reuse and Desalination ;
       issn = 2220-1319 ;
@@ -154,7 +154,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Water, Sanitation and Hygiene for Development ;
       issn = 2043-9083 ;
@@ -176,7 +176,7 @@
   }
 
   {
-  
+
     title <
       name = Journal of Water Supply: Research and Technology - Aqua ;
       issn = 0003-7214 ;
@@ -209,9 +209,9 @@
     au < doNotProcess ; exists ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Journal of Hydroinformatics ;
       issn = 1464-7141 ;
@@ -243,9 +243,9 @@
     au < doNotProcess ; exists ; 2018 ; Journal of Hydroinformatics Volume 20 ; 20 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Water Practice and Technology ;
       eissn = 1751-231X ;
@@ -269,9 +269,9 @@
     au < doNotProcess ; exists ; 2018 ; Water Practice and Technology Volume 13 ; 13 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Water Policy ;
       issn = 1366-7017 ;
@@ -299,9 +299,9 @@
     au < doNotProcess ; exists ; 2018 ; Water Policy Volume 20 ; 20 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Water Quality Research Journal ;
       issn = 1201-3080 ;
@@ -310,7 +310,7 @@
     >
 
     param[base_url] = http://wqrjc.iwaponline.com/
-#      name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
+    #name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
 
     au < doNotProcess ; exists ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; >
     au < doNotProcess ; exists ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; >
@@ -319,16 +319,15 @@
     au < finished ; crawling ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2016 ; Water Quality Research Journal of Canada Volume 51 ; 51 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Water Quality Research Journal of Canada Volume 52 ; 52 ; reingest1.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2018 ; Water Quality Research Journal of Canada Volume 53 ; 53 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Water Science and Technology ;
       issn = 0273-1223 ;
-      eissn = 1996-9732 ;      
+      eissn = 1996-9732 ;
       issnl = 0273-1223
     >
 
@@ -401,13 +400,13 @@
     au < doNotProcess ; exists ; 2018 ; Water Science and Technology Volume 78 ; 78 ; >
 
   }
-  
+
   {
-  
+
     title <
       name = Water Science and Technology: Water Supply ;
       issn = 1606-9749 ;
-      eissn = 1607-0798 ;      
+      eissn = 1607-0798 ;
       issnl = 1606-9749
     >
 
@@ -433,9 +432,9 @@
     au < doNotProcess ; exists ; 2018 ; Water Science and Technology: Water Supply Volume 18 ; 18 ; >
 
   }
-  
+
 #  {
-#  
+#
 #    title <
 #      name = Open Water Journal ;
 #      eissn = 1606-9749 ;
@@ -448,5 +447,5 @@
 #    au < expected ; exists ; 2016 ; Open Water Journal Volume 16 ; 16 ; >
 #
 #  }
-  
+
 }
