@@ -32,13 +32,13 @@
      au < manifest ; exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 ; >
      au < manifest ; exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 ; >
      au < frozen ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 ; >
-     au < crawling ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 ; >
-     au < crawling ; exists ; 2015 ; Bulletin of the John Rylands Library Volume 91 ; 91 ; >
-     au < crawling ; exists ; 2016 ; Bulletin of the John Rylands Library Volume 92 ; 92 ; >
-     au < crawling ; exists ; 2017 ; Bulletin of the John Rylands Library Volume 93 ; 93 ; >
+     au < frozen ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 ; >
+     au < frozen ; exists ; 2015 ; Bulletin of the John Rylands Library Volume 91 ; 91 ; >
+     au < frozen ; exists ; 2016 ; Bulletin of the John Rylands Library Volume 92 ; 92 ; >
+     au < frozen ; exists ; 2017 ; Bulletin of the John Rylands Library Volume 93 ; 93 ; >
      au < doNotProcess ; doNotProcess ; 2018 ; Bulletin of the John Rylands Library Volume 94 ; 94 ; >
-     au < crawling ; exists ; 2019 ; Bulletin of the John Rylands Library Volume 95 ; 95 ; >
-     au < crawling ; exists ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 ; >
+     au < frozen ; exists ; 2019 ; Bulletin of the John Rylands Library Volume 95 ; 95 ; >
+     au < frozen ; exists ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 ; >
      au < crawling ; exists ; 2021 ; Bulletin of the John Rylands Library Volume 97 ; 97 ; >
 
   }
@@ -70,12 +70,12 @@
         au < doNotProcess ; doNotProcess ; 2016 ; Film Studies Volume 14 ; 14 ; >
         au < doNotProcess ; doNotProcess ; 2016 ; Film Studies Volume 15 ; 15 ; >
         au < doNotProcess ; doNotProcess ; 2017 ; Film Studies Volume 16 ; 16 ; >
-        au < crawling ; exists ; 2017 ; Film Studies Volume 17 ; 17 ; >
+        au < frozen ; exists ; 2017 ; Film Studies Volume 17 ; 17 ; >
         au < frozen ; exists ; 2018 ; Film Studies Volume 18 ; 18 ; >
-        au < crawling ; exists ; 2018 ; Film Studies Volume 19 ; 19 ; >
-        au < crawling ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
+        au < frozen ; exists ; 2018 ; Film Studies Volume 19 ; 19 ; >
+        au < frozen ; exists ; 2019 ; Film Studies Volume 20 ; 20 ; >
         au < frozen ; exists ; 2019 ; Film Studies Volume 21 ; 21 ; >
-        au < crawling ; exists ; 2020 ; Film Studies Volume 22 ; 22 ; >
+        au < frozen ; exists ; 2020 ; Film Studies Volume 22 ; 22 ; >
         au < expected ; exists ; 2021 ; Film Studies Volume 23 ; 23 ; >
 
   }
@@ -104,14 +104,14 @@
         au < manifest ; exists ; 2008 ; Gothic Studies Volume 10 ; 10 ; >
         au < manifest ; exists ; 2009 ; Gothic Studies Volume 11 ; 11 ; >
         au < manifest ; exists ; 2010 ; Gothic Studies Volume 12 ; 12 ; >
-        au < crawling ; exists ; 2011 ; Gothic Studies Volume 13 ; 13 ; >
-        au < crawling ; exists ; 2012 ; Gothic Studies Volume 14 ; 14 ; >
-        au < crawling ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 ; >
-        au < crawling ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 ; >
-        au < crawling ; exists ; 2015 ; Gothic Studies Volume 17 ; 17 ; >
-        au < crawling ; exists ; 2016 ; Gothic Studies Volume 18 ; 18 ; >
-        au < crawling ; exists ; 2017 ; Gothic Studies Volume 19 ; 19 ; >
-        au < crawling ; exists ; 2018 ; Gothic Studies Volume 20 ; 20 ; >
+        au < frozen ; exists ; 2011 ; Gothic Studies Volume 13 ; 13 ; >
+        au < frozen ; exists ; 2012 ; Gothic Studies Volume 14 ; 14 ; >
+        au < frozen ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 ; >
+        au < frozen ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 ; >
+        au < frozen ; exists ; 2015 ; Gothic Studies Volume 17 ; 17 ; >
+        au < frozen ; exists ; 2016 ; Gothic Studies Volume 18 ; 18 ; >
+        au < frozen ; exists ; 2017 ; Gothic Studies Volume 19 ; 19 ; >
+        au < frozen ; exists ; 2018 ; Gothic Studies Volume 20 ; 20 ; >
         au < expected ; exists ; 2021 ; Gothic Studies Volume 21 ; 21 ; >
 
     }

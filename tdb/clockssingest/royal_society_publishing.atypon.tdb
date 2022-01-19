@@ -1020,13 +1020,13 @@
     # Articles before and after these dates are published in Philosophical Transactions.
     param[journal_id] = rscl
 
-    au < crawling ; exists ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1681 ; Philosophical Collections of the Royal Society of London Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1682 ; Philosophical Collections of the Royal Society of London Volume 7 ; 7 ; >
 
   }
 

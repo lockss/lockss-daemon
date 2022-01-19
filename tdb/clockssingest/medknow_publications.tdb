@@ -1343,8 +1343,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Indian Journal of Occupational and Environmental Medicine Volume 15 ; 2011 ; 15 ; https://www.ijoem.com/ ; ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Indian Journal of Occupational and Environmental Medicine Volume 16 ; 2012 ; 16 ; https://www.ijoem.com/ ; ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Indian Journal of Occupational and Environmental Medicine Volume 17 ; 2013 ; 17 ; https://www.ijoem.com/ ; ; >
-    au < crawling ; exists ; 2014 ; Indian Journal of Occupational and Environmental Medicine Volume 18 ; 2014 ; 18 ; https://www.ijoem.com/ ; ; >
-    au < crawling ; exists ; 2015 ; Indian Journal of Occupational and Environmental Medicine Volume 19 ; 2015 ; 19 ; https://www.ijoem.com/ ; ; >
+    au < frozen ; exists ; 2014 ; Indian Journal of Occupational and Environmental Medicine Volume 18 ; 2014 ; 18 ; https://www.ijoem.com/ ; ; >
+    au < frozen ; exists ; 2015 ; Indian Journal of Occupational and Environmental Medicine Volume 19 ; 2015 ; 19 ; https://www.ijoem.com/ ; ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Indian Journal of Occupational and Environmental Medicine Volume 20 ; 2016 ; 20 ; http://www.ijoem.com/ ; ; >
     au < finished ; finished ; 2017 ; Indian Journal of Occupational and Environmental Medicine Volume 21 ; 2017 ; 21 ; http://www.ijoem.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; Indian Journal of Occupational and Environmental Medicine Volume 22 ; 2018 ; 22 ; http://www.ijoem.com/ ; ; reingest3.clockss.org:8083 >
@@ -7756,8 +7756,8 @@
       param[journal_issn] = 2589-8302
 
       au < manifest ; exists ; 2018 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 11 ; 2018 ; 11 ; https://www.mjdrdypv.org/ ; ; >
-      au < crawling ; exists ; 2019 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 12 ; 2019 ; 12 ; https://www.mjdrdypv.org/ ; ; >
-      au < crawling ; exists ; 2020 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 13 ; 2020 ; 13 ; https://www.mjdrdypv.org/ ; ; >
+      au < frozen ; exists ; 2019 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 12 ; 2019 ; 12 ; https://www.mjdrdypv.org/ ; ; >
+      au < frozen ; exists ; 2020 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 13 ; 2020 ; 13 ; https://www.mjdrdypv.org/ ; ; >
       au < crawling ; exists ; 2021 ; Medical Journal of Dr DY Patil Vidyapeeth Volume 14 ; 2021 ; 14 ; https://www.mjdrdypv.org/ ; ; >
 
   }
@@ -8596,8 +8596,8 @@
       au < finished ; finished ; 2015 ; The Egyptian Orthopaedic Journal Volume 50 ; 2015 ; 50 ; http://www.eoj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; The Egyptian Orthopaedic Journal Volume 51 ; 2016 ; 51 ; http://www.eoj.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; The Egyptian Orthopaedic Journal Volume 52 ; 2017 ; 52 ; http://www.eoj.eg.net/ ; ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2018 ; The Egyptian Orthopaedic Journal Volume 53 ; 2018 ; 53 ; https://www.eoj.eg.net/ ; ; >
-      au < crawling ; exists ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ ; ; >
+      au < frozen ; exists ; 2018 ; The Egyptian Orthopaedic Journal Volume 53 ; 2018 ; 53 ; https://www.eoj.eg.net/ ; ; >
+      au < frozen ; exists ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ ; ; >
       au < finished ; crawling ; 2020 ; The Egyptian Orthopaedic Journal Volume 55 ; 2020 ; 55 ; https://www.eoj.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ ; ; > #site cert failed
 
@@ -8728,7 +8728,7 @@
       au < finished ; frozen ; 2015 ; The Saint's International Dental Journal Volume 1 ; 2015 ; 1 ; http://www.sidj.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; The Saint's International Dental Journal Volume 2 ; 2016 ; 2 ; http://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; The Saint's International Dental Journal Volume 3 ; 2017 ; 3 ; http://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; The Saint's International Dental Journal Volume 4 ; 2020 ; 4 ; https://www.sidj.org/ ; ; >
+      au < frozen ; exists ; 2020 ; The Saint's International Dental Journal Volume 4 ; 2020 ; 4 ; https://www.sidj.org/ ; ; >
       au < crawling ; exists ; 2021 ; The Saint's International Dental Journal Volume 5 ; 2021 ; 5 ; https://www.sidj.org/ ; ; >
 
   }
@@ -9659,8 +9659,8 @@
       au < doNotProcess ; doNotProcess ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; http://www.ijrconline.org/ ; ; >
       au < manifest ; exists ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ ; ; >
       au < manifest ; exists ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ ; ; >
-      au < crawling ; exists ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; >
-      au < crawling ; exists ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; >
+      au < frozen ; exists ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; >
+      au < frozen ; exists ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; >
       au < crawling ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
 
   }
@@ -9766,7 +9766,7 @@
 
       au < finished ; crawling ; 2016 ; International Journal of Forensic Odontology Volume 1 ; 2016 ; 1 ; https://www.ijofo.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2017 ; International Journal of Forensic Odontology Volume 2 ; 2017 ; 2 ; https://www.ijofo.org/ ; ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2018 ; International Journal of Forensic Odontology Volume 3 ; 2018 ; 3 ; https://www.ijofo.org/ ; ; >
+      au < frozen ; exists ; 2018 ; International Journal of Forensic Odontology Volume 3 ; 2018 ; 3 ; https://www.ijofo.org/ ; ; >
       au < finished ; crawling ; 2019 ; International Journal of Forensic Odontology Volume 4 ; 2019 ; 4 ; https://www.ijofo.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of Forensic Odontology Volume 5 ; 2020 ; 5 ; https://www.ijofo.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Forensic Odontology Volume 6 ; 2021 ; 6 ; https://www.ijofo.org/ ; ; >
@@ -10214,7 +10214,7 @@
       param[journal_issn] = 1011-4564
 #      param[base_url] = http://www.jmedscindmc.com/
 
-      au < crawling ; exists ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ ; ; >
+      au < frozen ; exists ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ ; ; >
       au < finished ; crawling ; 2015 ; Journal of Medical Sciences Volume 35 ; 2015 ; 35 ; https://www.jmedscindmc.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Journal of Medical Sciences Volume 36 ; 2016 ; 36 ; https://www.jmedscindmc.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; https://www.jmedscindmc.com/ ; ; reingest2.clockss.org:8085 >
@@ -10237,7 +10237,7 @@
       param[journal_issn] = 0929-6441
 #      param[base_url] = http://www.jmuonline.org/
 
-      au < crawling ; exists ; 2018 ; Journal of Medical Ultrasound Volume 26 ; 2018 ; 26 ; https://www.jmuonline.org/ ; ; >
+      au < frozen ; exists ; 2018 ; Journal of Medical Ultrasound Volume 26 ; 2018 ; 26 ; https://www.jmuonline.org/ ; ; >
       au < finished ; crawling ; 2019 ; Journal of Medical Ultrasound Volume 27 ; 2019 ; 27 ; https://www.jmuonline.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Journal of Medical Ultrasound Volume 28 ; 2020 ; 28 ; https://www.jmuonline.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Journal of Medical Ultrasound Volume 29 ; 2021 ; 29 ; https://www.jmuonline.org/ ; ; >
@@ -10643,7 +10643,7 @@
       param[journal_issn] = 2322-1488
 #      param[base_url] = http://www.nmsjournal.com/
 
-      au < crawling ; exists ; 2017 ; Nursing and Midwifery Studies Volume 6 ; 2017 ; 6 ; https://www.nmsjournal.com/ ; ; >
+      au < frozen ; exists ; 2017 ; Nursing and Midwifery Studies Volume 6 ; 2017 ; 6 ; https://www.nmsjournal.com/ ; ; >
       au < finished ; crawling ; 2018 ; Nursing and Midwifery Studies Volume 7 ; 2018 ; 7 ; https://www.nmsjournal.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Nursing and Midwifery Studies Volume 8 ; 2019 ; 8 ; https://www.nmsjournal.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Nursing and Midwifery Studies Volume 9 ; 2020 ; 9 ; https://www.nmsjournal.com/ ; ; reingest2.clockss.org:8085 >
