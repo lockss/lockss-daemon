@@ -18,8 +18,8 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-
     # since 1.68, this title has its own crawl pool
+
     attr[highwire_crawl_pool] = PNAS
 
     {
@@ -150,6 +150,7 @@
     au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2019 ; Proceedings of the National Academy of Sciences Volume 116 ; 116 ; reingest3.clockss.org:8083 >
     au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2020 ; Proceedings of the National Academy of Sciences Volume 117 ; 117 ; reingest5.clockss.org:8082 >
     au < nas.ClockssNasDrupalPlugin ; crawling ; exists ; 2021 ; Proceedings of the National Academy of Sciences Volume 118 ; 118 ; reingest2.clockss.org:8085 >
+    au < nas.ClockssNasDrupalPlugin ; expected ; exists ; 2022 ; Proceedings of the National Academy of Sciences Volume 119 ; 119 ; reingest2.clockss.org:8085 >
 
     }
 

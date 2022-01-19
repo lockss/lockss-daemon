@@ -6,8 +6,8 @@
     info[poller] = 8
   >
   provider = bepress
-
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
 
   {
     title <
@@ -30,6 +30,7 @@
     au < finished ; frozen ; 2019 ; Open Journal of Occupational Therapy Volume 7 ; 7 ; https://scholarworks.wmich.edu/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Open Journal of Occupational Therapy Volume 8 ; 8 ; https://scholarworks.wmich.edu/ ; >
     au < crawling ; exists ; 2021 ; Open Journal of Occupational Therapy Volume 9 ; 9 ; https://scholarworks.wmich.edu/ ; >
+    au < expected ; exists ; 2022 ; Open Journal of Occupational Therapy Volume 10 ; 10 ; https://scholarworks.wmich.edu/ ; >
 
   }
 

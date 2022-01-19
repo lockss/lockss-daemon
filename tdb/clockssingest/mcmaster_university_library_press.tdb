@@ -7,16 +7,16 @@
     info[tester] = 8 ;
     info[poller] = 8
   >
-
     #plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     
     #manifest pages don't include index.php.
-
     # Move to OJS3, need patch from publisher. 3.1.1 as of 9/12/2019
     # Note: the correct value for start_stem will be the empty string (meaning
     # there is no index.php/ portion).
     #attr[start_stem] = 
+
 
     {
 
@@ -71,6 +71,7 @@
       au < frozen ; exists ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; >
       au < notReady ; exists ; 2020 ; Early Theatre Volume 23 ; 23 ; 2020 ; > #subscription for a year. Wait till 2022
       au < crawling ; exists ; 2021 ; Early Theatre Volume 24 ; 24 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Early Theatre Volume 25 ; 25 ; 2022 ; >
 
     }
 
@@ -136,6 +137,7 @@
       au < deepCrawl ; exists ; 2019 ; Global Labour Journal Volume 10 ; 10 ; 2019 ; > 
       au < deepCrawl ; exists ; 2020 ; Global Labour Journal Volume 11 ; 11 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Global Labour Journal Volume 12 ; 12 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Global Labour Journal Volume 13 ; 13 ; 2022 ; >
 
       }
 
@@ -171,6 +173,7 @@
       au < deepCrawl ; exists ; 2019 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 7 ; 7 ; 2019 ; > 
       au < deepCrawl ; exists ; 2020 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 8 ; 8 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 9 ; 9 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 10 ; 10 ; 2022 ; >
 
       }
 
@@ -201,6 +204,7 @@
       au < deepCrawl ; exists ; 2019 ; International Journal for Students as Partners Volume 3 ; 3 ; 2019 ; > 
       au < frozen ; exists ; 2020 ; International Journal for Students as Partners Volume 4 ; 4 ; 2020 ; >
       au < crawling ; exists ; 2021 ; International Journal for Students as Partners Volume 5 ; 5 ; 2021 ; >
+      au < expected ; exists ; 2022 ; International Journal for Students as Partners Volume 6 ; 6 ; 2022 ; >
 
       }
 
@@ -234,9 +238,9 @@
       au < deepCrawl ; exists ; 2019 ; Journal for the History of Analytical Philosophy Volume 9 ; 9 ; 2019 ; >
       au < deepCrawl ; exists ; 2020 ; Journal for the History of Analytical Philosophy Volume 10 ; 10 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Journal for the History of Analytical Philosophy Volume 11 ; 11 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Journal for the History of Analytical Philosophy Volume 12 ; 12 ; 2022 ; >
 
     }
-
 #    {
 #
 #      title < 
@@ -254,6 +258,7 @@
 #      au < exists ; exists ; 9999 ; Journal of Professional Communication Volume 0 ; 0 ; 0 ; > 
 #
 #    }
+
 
     {
 
@@ -320,6 +325,7 @@
       au < deepCrawl ; exists ; 2019 ; Russell: the Journal of Bertrand Russell Studies Volume 39 ; 39 ; 2019 ; > 
       au < frozen ; exists ; 2020 ; Russell: the Journal of Bertrand Russell Studies Volume 40 ; 40 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Russell: the Journal of Bertrand Russell Studies Volume 41 ; 41 ; 2021 ; >
+      au < expected ; exists ; 2022 ; Russell: the Journal of Bertrand Russell Studies Volume 42 ; 42 ; 2022 ; >
 
       }
 
@@ -396,6 +402,7 @@
       au < frozen ; exists ; 2019 ; International Journal of Risk and Recovery Volume 2 ; 2 ; 2019 ; > 
       au < frozen ; exists ; 2020 ; International Journal of Risk and Recovery Volume 3 ; 3 ; 2020 ; >
       au < crawling ; exists ; 2021 ; International Journal of Risk and Recovery Volume 4 ; 4 ; 2021 ; >
+      au < expected ; exists ; 2022 ; International Journal of Risk and Recovery Volume 5 ; 5 ; 2022 ; >
 
     }
 

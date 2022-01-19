@@ -7,7 +7,6 @@
     info[tester] = 8 ;
     info[poller] = 8
   >
-
 ##############
 #
 #NEW at site but not enabled (2/22/2021)
@@ -15,7 +14,6 @@
 #Journal of the History of Music Theory and Literature -- NO ISSUES
 #
 ###########################################
-
 #
 # Note from Thib about attr[start_stem] = journals/index.php/
 #
@@ -27,6 +25,8 @@
 # However right now, let's not incur a bunch of clean-up work, until we
 # determine something is not behaving properly because the base_url is "too
 # short".
+
+
 
     param[base_url] = https://scholarworks.iu.edu/
     attr[start_stem] = journals/index.php/
@@ -246,6 +246,7 @@
       au < frozen ; exists ; 2017 ; 2017 ; Children's Folklore Review Volume 38 ; 38 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Children's Folklore Review Volume 39 ; 39 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Children's Folklore Review Volume 40 ; 40 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Children's Folklore Review Volume 41 ; 41 ; >
 
   }
 
@@ -261,6 +262,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Digest: A Journal of Foodways and Culture Volume 7 ; 7 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Digest: A Journal of Foodways and Culture Volume 8 ; 8 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Digest: A Journal of Foodways and Culture Volume 9 ; 9 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Digest: A Journal of Foodways and Culture Volume 10 ; 10 ; >
 
   }
 
@@ -303,6 +305,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Hindsight: Journal of Optemetry History Volume 50 ; 50 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Hindsight: Journal of Optemetry History Volume 51 ; 51 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Hindsight: Journal of Optemetry History Volume 52 ; 52 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Hindsight: Journal of Optemetry History Volume 53 ; 53 ; >
 
   }
 
@@ -373,6 +376,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; The Hoosier Science Teacher Volume 42 ; 42 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Hoosier Science Teacher Volume 43 ; 43 ; >
       au < manifest ; exists ; 2021 ; 2021 ; The Hoosier Science Teacher Volume 44 ; 44 ; >
+      au < expected ; exists ; 2022 ; 2022 ; The Hoosier Science Teacher Volume 45 ; 45 ; >
 
   }
 
@@ -434,6 +438,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; InULA Notes: Indiana University Librarians Association Volume 31 ; 31 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; InULA Notes: Indiana University Librarians Association Volume 32 ; 32 ; >
       au < crawling ; exists ; 2021 ; 2021 ; InULA Notes: Indiana University Librarians Association Volume 33 ; 33 ; >
+      au < expected ; exists ; 2022 ; 2022 ; InULA Notes: Indiana University Librarians Association Volume 34 ; 34 ; >
 
   }
 
@@ -467,6 +472,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
       au < expected ; exists ; 2021 ; 2021 ; Journal of Economic Development in Higher Education Volume 4 ; 4 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Journal of Economic Development in Higher Education Volume 5 ; 5 ; >
 
   }
 
@@ -480,6 +486,7 @@
 
       au < frozen ; exists ; 2020 ; 2020 ; Journal of Public and Environmental Affairs Volume 1 ; 1 ; >
       au < expected ; exists ; 2021 ; 2021 ; Journal of Public and Environmental Affairs Volume 2 ; 2 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Journal of Public and Environmental Affairs Volume 3 ; 3 ; >
 
   }
 
@@ -535,8 +542,8 @@
       au < frozen ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of the Indiana University Student Personnel Association Volume 2019 ; 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Journal of the Indiana University Student Personnel Association Volume 2020 ; 2020 ; >
-
       #no 2020 as of 12/5/2020
+
 
   }
 
@@ -608,6 +615,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Museum Anthropology Review Volume 13 ; 13 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Museum Anthropology Review Volume 14 ; 14 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Museum Anthropology Review Volume 15 ; 15 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Museum Anthropology Review Volume 16 ; 16 ; >
 
   }
 
@@ -915,6 +923,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
       au < notReady ; exists ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; > #has substance, but no metadata, no articles.
+      au < expected ; exists ; 2022 ; 2022 ; The Medieval Review Volume 2022 ; 30 ; > #has substance, but no metadata, no articles.
 
   }
 
@@ -937,6 +946,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Physical Disabilities: Education and Related Services Volume 2019 ; 38 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2020 ; 39 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2021 ; 40 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2022 ; 41 ; >
 
   }
 
@@ -976,6 +986,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Studies in Digital Heritage Volume 5 ; 5 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Studies in Digital Heritage Volume 6 ; 6 ; >
 
   }
 
@@ -1044,6 +1055,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Academic Advising Volume 2018 ; 1 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
       au < expected ; exists ; 2021 ; 2021 ; Journal of Academic Advising Volume 2021 ; 3 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Journal of Academic Advising Volume 2022 ; 4 ; >
 
   }
 
@@ -1061,6 +1073,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
       au < expected ; exists ; 2021 ; 2021 ; Global Engagement and Transformation Volume 2021 ; 5 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Global Engagement and Transformation Volume 2022 ; 6 ; >
 
   }
 
@@ -1077,6 +1090,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Global Journal of Transformative Education Volume 2018 ; 1 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Global Journal of Transformative Education Volume 2020 ; 2 ; >
       au < expected ; exists ; 2021 ; 2021 ; Global Journal of Transformative Education Volume 2021 ; 3 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Global Journal of Transformative Education Volume 2022 ; 4 ; >
 
   }
 
@@ -1126,6 +1140,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; IULC Working Papers  Volume 2019 ; 18 ; >
       au < frozen ; exists ; 2020 ; 2020 ; IULC Working Papers  Volume 2020 ; 19 ; >
       au < crawling ; exists ; 2021 ; 2021 ; IULC Working Papers  Volume 2021 ; 20 ; >
+      au < expected ; exists ; 2022 ; 2022 ; IULC Working Papers  Volume 2022 ; 21 ; >
 
   }
 
@@ -1141,6 +1156,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2019 ; 1 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2020 ; 2 ; >
       au < expected ; exists ; 2021 ; 2021 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2021 ; 3 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Indiana Working Papers in South Asian Languages and Cultures Volume 2022 ; 4 ; >
 
   }
 
@@ -1155,6 +1171,7 @@
 
       au < frozen ; exists ; 2020 ; 2020 ; Indiana Working Papers in Speech Sound Articulation Volume 2020 ; 1 ; >
       au < expected ; exists ; 2021 ; 2021 ; Indiana Working Papers in Speech Sound Articulation Volume 2021 ; 2 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Indiana Working Papers in Speech Sound Articulation Volume 2022 ; 3 ; >
 
   }
 
@@ -1183,6 +1200,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Developmental Observer Volume 2019 ; 12 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Developmental Observer Volume 2020 ; 13 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Developmental Observer Volume 2021 ; 14 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Developmental Observer Volume 2022 ; 15 ; >
 
   }
 
@@ -1208,6 +1226,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Indiana Journal of Earth Sciences Volume 2019 ; 11 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Indiana Journal of Earth Sciences Volume 2020 ; 12 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Indiana Journal of Earth Sciences Volume 2021 ; 13 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Indiana Journal of Earth Sciences Volume 2022 ; 14 ; >
 
   }
 
@@ -1236,12 +1255,13 @@
       au < frozen ; exists ; 2019 ; 2019 ; Interdisciplinary Journal of Problem-Based Learning Volume 2019 ; 14 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Interdisciplinary Journal of Problem-Based Learning Volume 2020 ; 15 ; >
       au < crawling ; exists ; 2021 ; 2021 ; Interdisciplinary Journal of Problem-Based Learning Volume 2021 ; 16 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Interdisciplinary Journal of Problem-Based Learning Volume 2022 ; 17 ; >
 
   }
-
 #############################
 ## LEGACY JOURNALS
 #############################
+
 
   {
     title <

@@ -12,8 +12,8 @@
     plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
     param[base_url] = https://pubs.geoscienceworld.org/
-
     #back content of *American Mineralogy* and *Reviews in Mineralogy* are processed as warcs/source content.
+
   {
     
     title < 
@@ -73,6 +73,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; American Mineralogist Volume 104 ; 104 ; >
       au < frozen ; exists ; 2020 ; 2020 ; American Mineralogist Volume 105 ; 105 ; >
       au < notReady ; exists ; 2021 ; 2021 ; American Mineralogist Volume 106 ; 106 ; > #svg file 403 forbidden
+      au < expected ; exists ; 2022 ; 2022 ; American Mineralogist Volume 107 ; 107 ; > #svg file 403 forbidden
 
     }
 
@@ -107,6 +108,7 @@
     au < frozen ; exists ; 2019 ; 2019 ; Elements Volume 15 ; 15 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Elements Volume 16 ; 16 ; >
     au < notReady ; exists ; 2021 ; 2021 ; Elements Volume 17 ; 17 ; > #svg file 403 forbidden
+    au < expected ; exists ; 2022 ; 2022 ; Elements Volume 18 ; 18 ; > #svg file 403 forbidden
 
   }
   
@@ -188,6 +190,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Reviews in Mineralogy and Geochemistry Volume 84 ; 84 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Reviews in Mineralogy and Geochemistry Volume 85 ; 85 ; >
     au < notReady ; exists ; 2021 ; 2021 ; Reviews in Mineralogy and Geochemistry Volume 86 ; 86 ; > #svg file 403 forbidden
+    au < expected ; exists ; 2022 ; 2022 ; Reviews in Mineralogy and Geochemistry Volume 87 ; 87 ; > #svg file 403 forbidden
 
   }
   

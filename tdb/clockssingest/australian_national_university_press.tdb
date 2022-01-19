@@ -70,6 +70,7 @@
     au < crawling ; exists ; 2019 ; Aboriginal History Journal Volume 43 ; 43 ; >
     au < crawling ; exists ; 2020 ; Aboriginal History Journal Volume 44 ; 44 ; >
     au < expected ; exists ; 2021 ; Aboriginal History Journal Volume 45 ; 45 ; >
+    au < expected ; exists ; 2022 ; Aboriginal History Journal Volume 46 ; 46 ; >
 
   }
 
@@ -127,6 +128,7 @@
       au < crawling ; exists ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; >
       au < crawling ; exists ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; >
       au < manifest ; exists ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; >
+      au < expected ; exists ; 2022 ; Agenda - A Journal of Policy Analysis and Reform Volume 29 ; 29 ; >
 
     }
   }
@@ -144,6 +146,7 @@
     au < crawling ; exists ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; >
     au < expected ; exists ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; >
+    au < expected ; exists ; 2022 ; ANU Historical Journal II: Number 4 ; 4 ; >
 
   }
   
@@ -156,13 +159,14 @@
     >
     
     param[journal_id] = australian-journal-biography-and-history
-
     #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
+
     au < crawling ; down ; 2018 ; Australian Journal of Biography and History: Number 1 ; 1 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Australian Journal of Biography and History: Number 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; Australian Journal of Biography and History: Number 3 ; 3 ; >
     au < crawling ; exists ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; Australian Journal of Biography and History: Number 5 ; 5 ; >
+    au < expected ; exists ; 2022 ; Australian Journal of Biography and History: Number 6 ; 6 ; >
 
   }  
 
@@ -189,6 +193,7 @@
     au < crawling ; exists ; 2019 ; East Asia Forum Quarterly Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; >
     au < crawling ; exists ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; >
+    au < expected ; exists ; 2022 ; East Asia Forum Quarterly Volume 14 ; 14 ; >
 
   }
 
@@ -210,6 +215,7 @@
     au < crawling ; down ; 2018 ; Human Ecology Review: Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; Human Ecology Review: Volume 25 ; 25 ;  >
     au < crawling ; exists ; 2021 ; Human Ecology Review: Volume 26 ; 26 ;  >
+    au < expected ; exists ; 2022 ; Human Ecology Review: Volume 27 ; 27 ;  >
 
   }
 
@@ -231,6 +237,7 @@
     au < crawling ; exists ; 2019 ; International Review of Environmental History: Volume 5 ; 5 ; >
     au < crawling ; exists ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; >
+    au < expected ; exists ; 2022 ; International Review of Environmental History: Volume 8 ; 8 ; >
 
   }
 
@@ -245,6 +252,7 @@
 
     au < crawling ; exists ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; >
     au < manifest ; exists ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; >
+    au < expected ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; >
 
   }
 
@@ -264,6 +272,7 @@
     au < crawling ; exists ; 2019 ; Made in China Volume 4 ; 4 ; >
     au < crawling ; exists ; 2020 ; Made in China Volume 5 ; 5 ; >
     au < crawling ; exists ; 2021 ; Made in China Volume 6 ; 6 ; >
+    au < expected ; exists ; 2022 ; Made in China Volume 7 ; 7 ; >
 
   }
   
@@ -344,10 +353,10 @@
     #ceased
 
   }
-
 ################################
 ## Student Journals ############
 ################################
+
 
   {
   

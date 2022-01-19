@@ -46,6 +46,7 @@
       au < ojs2.ClockssOJS2Plugin ; finished ; crawling ; 2018 ; 2018 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2018 ; 2018 ; https://journals.whitingbirch.net/ ; reingest2.clockss.org:8085 > #no successful crawl on ingest3
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2020 ; 2020 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 29 ; 29 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2021 ; 2021 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 30 ; 30 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2022 ; 2022 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 31 ; 31 ; https://journals.whitingbirch.net/ ; >
 
     }
     
@@ -82,6 +83,7 @@
       #Nothing published in 2019
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2020 ; 2020 ; The Journal of Practice Teaching and Learning Volume 2020 ; 17 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2021 ; 2021 ; The Journal of Practice Teaching and Learning Volume 2021 ; 17 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; expected ; 2022 ; 2022 ; The Journal of Practice Teaching and Learning Volume 2022 ; 18 ; https://journals.whitingbirch.net/ ; >
 
     }
     
@@ -118,6 +120,7 @@
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2019 ; 2019 ; Social Work and Social Sciences Review Volume 2019 ; 2019 ; https://journals.whitingbirch.net/ ; >
       #nothing published in 2020
       au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2021 ; 2021 ; Social Work and Social Sciences Review Volume 2021 ; 2021 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2022 ; 2022 ; Social Work and Social Sciences Review Volume 2022 ; 2022 ; https://journals.whitingbirch.net/ ; >
 
     }
     
@@ -131,10 +134,10 @@
     >
     
       #No longer publishing.
-
       #plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       #param[base_url] = http://journals.whitingbirch.net/
       #implicit < status ; status2 ; year ; param[year] ; name ; volume ; param[base_url] ; hidden[proxy] >
+
       param[journal_id] = JSPW
       
       au < ojs2.ClockssOJS2Plugin ; doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 2012 ; 2012 ; https://journals.whitingbirch.net/ ; >
