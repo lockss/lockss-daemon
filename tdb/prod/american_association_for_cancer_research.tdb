@@ -15,8 +15,8 @@
       eissn = 2159-8290 
 
     >
-
     #param[base_url] = http://cancerdiscovery.aacrjournals.org/
+
     
     au < HighWirePressH20Plugin ; down ; 2011 ; Cancer Discovery Volume 1 ; 1 ; http://cancerdiscovery.aacrjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; Cancer Discovery Volume 2 ; 2 ; http://cancerdiscovery.aacrjournals.org/ >
@@ -29,6 +29,7 @@
     au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2019 ; Cancer Discovery Volume 9 ; 9 ; https://cancerdiscovery.aacrjournals.org/ >
     au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2020 ; Cancer Discovery Volume 10 ; 10 ; https://cancerdiscovery.aacrjournals.org/ >
     au < aacr.AmAssocCancerResearchDrupalPlugin ; manifest ; 2021 ; Cancer Discovery Volume 11 ; 11 ; https://cancerdiscovery.aacrjournals.org/ >
+    au < aacr.AmAssocCancerResearchDrupalPlugin ; expected ; 2022 ; Cancer Discovery Volume 12 ; 12 ; https://cancerdiscovery.aacrjournals.org/ >
 
   }
 
@@ -42,8 +43,8 @@
     >
 
     {
-
       #param[base_url] = http://cebp.aacrjournals.org/
+
 
       au < HighWirePressH20Plugin ; down ; 1991-1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 ; 1 ; http://cebp.aacrjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 ; http://cebp.aacrjournals.org/ >
@@ -75,6 +76,7 @@
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2019 ; Cancer Epidemiology Biomarkers & Prevention Volume 28 ; 28 ; https://cebp.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2020 ; Cancer Epidemiology Biomarkers & Prevention Volume 29 ; 29 ; https://cebp.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; manifest ; 2021 ; Cancer Epidemiology Biomarkers & Prevention Volume 30 ; 30 ; https://cebp.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; expected ; 2022 ; Cancer Epidemiology Biomarkers & Prevention Volume 31 ; 31 ; https://cebp.aacrjournals.org/ >
 
     }
 
@@ -90,8 +92,8 @@
     >
 
     {
-
       #param[base_url] = http://cancerimmunolres.aacrjournals.org/
+
 
       au < HighWirePressH20Plugin ; down ; 2013 ; Cancer Immunology Research Volume 1 ; 1 ; http://cancerimmunolres.aacrjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2014 ; Cancer Immunology Research Volume 2 ; 2 ; http://cancerimmunolres.aacrjournals.org/ >
@@ -102,6 +104,7 @@
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2019 ; Cancer Immunology Research Volume 7 ; 7 ; https://cancerimmunolres.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2020 ; Cancer Immunology Research Volume 8 ; 8 ; https://cancerimmunolres.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; manifest ; 2021 ; Cancer Immunology Research Volume 9 ; 9 ; https://cancerimmunolres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; expected ; 2022 ; Cancer Immunology Research Volume 10 ; 10 ; https://cancerimmunolres.aacrjournals.org/ >
 
     }
 
@@ -117,8 +120,8 @@
     >
 
     {
-
       #param[base_url] = http://cancerpreventionresearch.aacrjournals.org/
+
 
       au < HighWirePressPlugin ; down ; 2008 ; Cancer Prevention Research Volume 1 ; 1 ; http://cancerpreventionresearch.aacrjournals.org/ >
       au < HighWirePressPlugin ; down ; 2009 ; Cancer Prevention Research Volume 2 ; 2 ; http://cancerpreventionresearch.aacrjournals.org/ >
@@ -134,6 +137,7 @@
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2019 ; Cancer Prevention Research Volume 12 ; 12 ; https://cancerpreventionresearch.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2020 ; Cancer Prevention Research Volume 13 ; 13 ; https://cancerpreventionresearch.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; manifest ; 2021 ; Cancer Prevention Research Volume 14 ; 14 ; https://cancerpreventionresearch.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; expected ; 2022 ; Cancer Prevention Research Volume 15 ; 15 ; https://cancerpreventionresearch.aacrjournals.org/ >
 
     }
 
@@ -149,8 +153,8 @@
     >
 
     {
-
       #param[base_url] = http://cancerres.aacrjournals.org/
+
 
       au < HighWirePressPlugin ; down ; 1941 ; Cancer Research Volume 1 ; 1 ; http://cancerres.aacrjournals.org/ >
       au < HighWirePressPlugin ; down ; 1942 ; Cancer Research Volume 2 ; 2 ; http://cancerres.aacrjournals.org/ >
@@ -233,6 +237,7 @@
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2019 ; Cancer Research Volume 79 ; 79 ; https://cancerres.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2020 ; Cancer Research Volume 80 ; 80 ; https://cancerres.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; manifest ; 2021 ; Cancer Research Volume 81 ; 81 ; https://cancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; expected ; 2022 ; Cancer Research Volume 82 ; 82 ; https://cancerres.aacrjournals.org/ >
 
     }
 
@@ -248,8 +253,8 @@
     >
 
     {
-
       #param[base_url] = http://clincancerres.aacrjournals.org/
+
 
       au < HighWirePressH20Plugin ; down ; 1995 ; Clinical Cancer Research Volume 1 ; 1 ; http://clincancerres.aacrjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 1996 ; Clinical Cancer Research Volume 2 ; 2 ; http://clincancerres.aacrjournals.org/ >
@@ -278,6 +283,7 @@
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2019 ; Clinical Cancer Research Volume 25 ; 25 ; https://clincancerres.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2020 ; Clinical Cancer Research Volume 26 ; 26 ; https://clincancerres.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; manifest ; 2021 ; Clinical Cancer Research Volume 27 ; 27 ; https://clincancerres.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; expected ; 2022 ; Clinical Cancer Research Volume 28 ; 28 ; https://clincancerres.aacrjournals.org/ >
 
     }
 
@@ -293,8 +299,8 @@
     >
 
     {
-
       #param[base_url] = http://mcr.aacrjournals.org/
+
 
       au < HighWirePressH20Plugin ; down ; 2002-2003 ; Molecular Cancer Research Volume 1 ; 1 ; http://mcr.aacrjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2004 ; Molecular Cancer Research Volume 2 ; 2 ; http://mcr.aacrjournals.org/ >
@@ -315,6 +321,7 @@
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2019 ; Molecular Cancer Research Volume 17 ; 17 ; https://mcr.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2020 ; Molecular Cancer Research Volume 18 ; 18 ; https://mcr.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; manifest ; 2021 ; Molecular Cancer Research Volume 19 ; 19 ; https://mcr.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; expected ; 2022 ; Molecular Cancer Research Volume 20 ; 20 ; https://mcr.aacrjournals.org/ >
 
     }
 
@@ -330,8 +337,8 @@
     >
 
     {
-
       #param[base_url] = http://mct.aacrjournals.org/
+
 
       au < HighWirePressH20Plugin ; down ; 2001-2002 ; Molecular Cancer Therapeutics Volume 1 ; 1 ; http://mct.aacrjournals.org/ >
       au < HighWirePressH20Plugin ; down ; 2003 ; Molecular Cancer Therapeutics Volume 2 ; 2 ; http://mct.aacrjournals.org/ >
@@ -353,6 +360,7 @@
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2019 ; Molecular Cancer Therapeutics Volume 18 ; 18 ; https://mct.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; released ; 2020 ; Molecular Cancer Therapeutics Volume 19 ; 19 ; https://mct.aacrjournals.org/ >
       au < aacr.AmAssocCancerResearchDrupalPlugin ; manifest ; 2021 ; Molecular Cancer Therapeutics Volume 20 ; 20 ; https://mct.aacrjournals.org/ >
+      au < aacr.AmAssocCancerResearchDrupalPlugin ; expected ; 2022 ; Molecular Cancer Therapeutics Volume 21 ; 21 ; https://mct.aacrjournals.org/ >
 
     }
 

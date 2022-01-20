@@ -41,6 +41,7 @@
       au < ojs2.OJS2Plugin ; released ; 2019 ; Cosmos and History Volume 15 ; 15 ; 2019 >
       au < ojs2.OJS2Plugin ; released ; 2020 ; Cosmos and History Volume 16 ; 16 ; 2020 >
       au < ojs2.OJS2Plugin ; expected ; 2021 ; Cosmos and History Volume 17 ; 17 ; 2021 >
+      au < ojs2.OJS2Plugin ; expected ; 2022 ; Cosmos and History Volume 18 ; 18 ; 2022 >
 
     }
   
@@ -169,6 +170,7 @@
       au < ojs3.Ojs3Plugin ; expected ; 2019 ; Image and Narrative Volume 20 ; 20 ; 2019 >
       au < ojs3.Ojs3Plugin ; expected ; 2020 ; Image and Narrative Volume 21 ; 21 ; 2020 >
       au < ojs3.Ojs3Plugin ; expected ; 2021 ; Image and Narrative Volume 22 ; 22 ; 2021 >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; Image and Narrative Volume 23 ; 23 ; 2022 >
 
     }
 
@@ -198,6 +200,7 @@
       au < ojs2.OJS2Plugin ; released ; 2019 ; International Journal of Žižek Studies Volume 13 ; 13 ; 2019 >
       au < ojs2.OJS2Plugin ; released ; 2020 ; International Journal of Žižek Studies Volume 14 ; 14 ; 2020 >
       au < ojs2.OJS2Plugin ; manifest ; 2021 ; International Journal of Žižek Studies Volume 15 ; 15 ; 2021 >
+      au < ojs2.OJS2Plugin ; expected ; 2022 ; International Journal of Žižek Studies Volume 16 ; 16 ; 2022 >
 
     }
     
@@ -254,6 +257,7 @@
       au < ojs2.OJS2Plugin ; exists ; 2019 ; Postcolonial Text Volume 14 ; 14 ; 2019 > #Permission statement malformed: LOCKSS system has permission to ingest...
       au < ojs2.OJS2Plugin ; exists ; 2020 ; Postcolonial Text Volume 15 ; 15 ; 2020 > #Permission statement malformed: LOCKSS system has permission to ingest...
       au < ojs2.OJS2Plugin ; expected ; 2021 ; Postcolonial Text Volume 16 ; 16 ; 2021 > #Crawl completed with no substance
+      au < ojs2.OJS2Plugin ; expected ; 2022 ; Postcolonial Text Volume 17 ; 17 ; 2022 > #Crawl completed with no substance
 
       }
     }

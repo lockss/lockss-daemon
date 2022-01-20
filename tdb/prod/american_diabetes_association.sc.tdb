@@ -44,6 +44,7 @@
       au < manifest ; 2020 ; 2020 ; Clinical Diabetes Volume 38 ; 38 >
       au < manifest ; 2021 ; 2021 ; Clinical Diabetes Volume 39 ; 39 >
       au < expected ; 2022 ; 2022 ; Clinical Diabetes Volume 40 ; 40 >
+      au < expected ; 2022 ; 2022 ; Clinical Diabetes Volume 40 ; 40 >
 
     }
     
@@ -55,11 +56,11 @@
       eissn = 1939-327X ;
       issnl = 0012-1797
     >
-
       #param[base_url] = http://diabetes.diabetesjournals.org/
-      param[journal_id] = diabetes
 
+      param[journal_id] = diabetes
       #implicit < status ; year ; name ; param[volume_name] >
+
       comment[supplement] = Scientific Sessions Abstract Book - this is published as a supplement to Diabetes journal
 
       au < doNotProcess ; 1966 ; 1966 ; Diabetes Volume 14 ; 14 >
@@ -166,6 +167,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Diabetes Volume 69 ; 69 >
       au < manifest ; 2021 ; 2021 ; Diabetes Volume 70 ; 70 >
       au < expected ; 2022 ; 2022 ; Diabetes Volume 71 ; 71 >
+      au < expected ; 2022 ; 2022 ; Diabetes Volume 71 ; 71 >
 
     }
 
@@ -177,11 +179,11 @@
       eissn = 1935-5548 ;
       issnl = 0149-5992
     >
-
       #param[base_url] = http://care.diabetesjournals.org/
-      param[journal_id] = care
 
+      param[journal_id] = care
       #implicit < status ; year ; name ; param[volume_name] >
+
       comment[supplement] = Clinical Practice Recommendations - is published as a supplement to Diabetes Care journal
 
       au < doNotProcess ; 1978 ; 1978 ; Diabetes Care Volume 1 ; 1 >
@@ -229,6 +231,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Diabetes Care Volume 43 ; 43 >
       au < manifest ; 2021 ; 2021 ; Diabetes Care Volume 44 ; 44 >
       au < expected ; 2022 ; 2022 ; Diabetes Care Volume 45 ; 45 >
+      au < expected ; 2022 ; 2022 ; Diabetes Care Volume 45 ; 45 >
 
     }
 
@@ -240,8 +243,8 @@
       eissn = 1944-7353 ;
       issnl = 1040-9165
     >
-
       #param[base_url] = http://spectrum.diabetesjournals.org/
+
       param[journal_id] = spectrum
 
       au < doNotProcess ; 2001 ; 2001 ; Diabetes Spectrum Volume 14 ; 14 >
@@ -266,8 +269,8 @@
       au < doNotProcess ; 2020 ; 2020 ; Diabetes Spectrum Volume 33 ; 33 >
       au < manifest ; 2021 ; 2021 ; Diabetes Spectrum Volume 34 ; 34 >
       au < expected ; 2022 ; 2022 ; Diabetes Spectrum Volume 35 ; 35 >
+      au < expected ; 2022 ; 2022 ; Diabetes Spectrum Volume 35 ; 35 >
 
     }
 
     }
-

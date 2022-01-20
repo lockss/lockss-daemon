@@ -27,12 +27,11 @@
       eissn = 1522-1229 ;
       issnl = 1043-4046
     >
-
 #    param[base_url] = http://advan.physiology.org/
+
     param[journal_id] = advances
 
     {
-
 #      au < doNotProcess ; 1989 ; Advances in Physiology Education Volume 256 (1989) ; 256 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 1989 ; Advances in Physiology Education Volume 257 (1989) ; 257 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 1990 ; Advances in Physiology Education Volume 258 (1990) ; 258 ; https://www.physiology.org/ >
@@ -73,6 +72,7 @@
 #      au < doNotProcess ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 2015 ; Advances in Physiology Education Volume 39 ; 39 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 2016 ; Advances in Physiology Education Volume 40 ; 40 ; https://www.physiology.org/ >
+
       au < superseded ; 2017 ; Advances in Physiology Education Volume 41 [superseded] ; 41 ; https://www.physiology.org/ >
       au < superseded ; 2018 ; Advances in Physiology Education Volume 42 [superseded] ; 42 ; https://www.physiology.org/ >
       au < released ; 2017 ; Advances in Physiology Education Volume 41 ; 41 ; https://journals.physiology.org/ >
@@ -80,6 +80,7 @@
       au < released ; 2019 ; Advances in Physiology Education Volume 43 ; 43 ; https://journals.physiology.org/ >
       au < released ; 2020 ; Advances in Physiology Education Volume 44 ; 44 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; Advances in Physiology Education Volume 45 ; 45 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; Advances in Physiology Education Volume 46 ; 46 ; https://journals.physiology.org/ >
 
     }
 
@@ -92,8 +93,8 @@
       issn = 0002-9513 ;
       issnl = 0002-9513
     >
-
 #    param[base_url] = http://ajplegacy.physiology.org/
+
     param[journal_id] = ajplegacy
     
 #    au < doNotProcess ; 1898 ; American Journal of Physiology Volume 1 ; 1 ; https://www.physiology.org/ >
@@ -438,6 +439,8 @@
       au < released ; 2020 ; American Journal of Physiology - Cell Physiology Volume 319 ; 319 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Cell Physiology Volume 320 ; 320 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Cell Physiology Volume 321 ; 321 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Cell Physiology Volume 322 ; 322 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Cell Physiology Volume 323 ; 323 ; https://journals.physiology.org/ >
 
     }
 
@@ -451,8 +454,8 @@
       eissn = 1522-1555 ;
       issnl = 0193-1849
     >
-
 #    param[base_url] = http://ajpendo.physiology.org/
+
     param[journal_id] = ajpendo
 
     {
@@ -551,6 +554,8 @@
       au < released ; 2020 ; American Journal of Physiology - Endocrinology and Metabolism Volume 319 ; 319 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 320 ; 320 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Endocrinology and Metabolism Volume 321 ; 321 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Endocrinology and Metabolism Volume 322 ; 322 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Endocrinology and Metabolism Volume 323 ; 323 ; https://journals.physiology.org/ >
 
     }
 
@@ -564,18 +569,18 @@
       eissn = 1522-1547 ;
       issnl = 0193-1857
     >
-
 #    param[base_url] = http://ajpgi.physiology.org/
+
     param[journal_id] = ajpgi
 
     {
-
       #au < exists ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 232 ; 232 ; https://journals.physiology.org/ >
       #au < exists ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 233 ; 233 ; https://journals.physiology.org/ >
       #au < exists ; 1978 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 234 ; 234 ; https://journals.physiology.org/ >
       #au < exists ; 1978 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 235 ; 235 ; https://journals.physiology.org/ >
       #au < exists ; 1979 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 236 ; 236 ; https://journals.physiology.org/ >
       #au < exists ; 1979 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 237 ; 237 ; https://journals.physiology.org/ >
+
       au < released ; 1980 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 238 ; 238 ; https://journals.physiology.org/ >
       au < released ; 1980 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 239 ; 239 ; https://journals.physiology.org/ >
       au < released ; 1981 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 240 ; 240 ; https://journals.physiology.org/ >
@@ -664,6 +669,8 @@
       au < released ; 2020 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 319 ; 319 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 320 ; 320 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 321 ; 321 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 322 ; 322 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 323 ; 323 ; https://journals.physiology.org/ >
 
     }
 
@@ -677,12 +684,11 @@
       eissn = 1522-1539 ;
       issnl = 0363-6135
     >
-
 #    param[base_url] = http://ajpheart.physiology.org/
+
     param[journal_id] = ajpheart
 
     {
-
 #      au < doNotProcess ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 232 ; 232 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 233 ; 233 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 1978 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 234 ; 234 ; https://www.physiology.org/ >
@@ -763,6 +769,7 @@
 #      au < doNotProcess ; 2015 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 309 ; 309 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 310 ; 310 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 2016 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 311 ; 311 ; https://www.physiology.org/ >
+
       au < superseded ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 312 [superseded] ; 312 ; https://www.physiology.org/ >
       au < superseded ; 2017 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 313 [superseded] ; 313 ; https://www.physiology.org/ >
       au < superseded ; 2018 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 314 [superseded] ; 314 ; https://www.physiology.org/ >
@@ -777,6 +784,8 @@
       au < released ; 2020 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 319 ; 319 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 320 ; 320 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 321 ; 321 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 322 ; 322 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 323 ; 323 ; https://journals.physiology.org/ >
 
     }
 
@@ -790,8 +799,8 @@
       eissn = 1522-1504 ;
       issnl = 1040-0605
     >
-
 #    param[base_url] = http://ajplung.physiology.org/
+
     param[journal_id] = ajplung
 
     {
@@ -865,6 +874,8 @@
       au < released ; 2020 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 319 ; 319 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 320 ; 320 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 321 ; 321 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 322 ; 322 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 323 ; 323 ; https://journals.physiology.org/ >
 
     }
 
@@ -878,8 +889,8 @@
       eissn = 1522-1490 ;
       issnl = 0363-6119
     >
-
 #    param[base_url] = http://ajpregu.physiology.org/
+
     param[journal_id] = ajpregu
 
     {
@@ -978,6 +989,8 @@
       au < released ; 2020 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 319 ; 319 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 320 ; 320 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 321 ; 321 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 322 ; 322 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 323 ; 323 ; https://journals.physiology.org/ >
 
     }
 
@@ -990,8 +1003,8 @@
       issn = 1931-857X ;
       eissn = 1522-1466
     >
-
 #    param[base_url] = http://ajprenal.physiology.org/
+
     param[journal_id] = ajprenal
     # other possible issn 0363-6127
     {
@@ -1090,6 +1103,8 @@
       au < released ; 2020 ; American Journal of Physiology - Renal Physiology Volume 319 ; 319 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Renal Physiology Volume 320 ; 320 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; American Journal of Physiology - Renal Physiology Volume 321 ; 321 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Renal Physiology Volume 322 ; 322 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; American Journal of Physiology - Renal Physiology Volume 323 ; 323 ; https://journals.physiology.org/ >
 
     }
 
@@ -1103,12 +1118,11 @@
       eissn = 1522-1601 ;
       issnl = 0161-7567
     >
-
 #    param[base_url] = http://jap.physiology.org/
+
     param[journal_id] = jappl
 
     {
-
 #      au < doNotProcess ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 1950-1951 ; Journal of Applied Physiology Volume 3 ; 3 ; https://www.physiology.org/ >
@@ -1230,6 +1244,7 @@
 #      au < doNotProcess ; 2015 ; Journal of Applied Physiology Volume 119 ; 119 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 2016 ; Journal of Applied Physiology Volume 120 ; 120 ; https://www.physiology.org/ >
 #      au < doNotProcess ; 2016 ; Journal of Applied Physiology Volume 121 ; 121 ; https://www.physiology.org/ >
+
       au < superseded ; 2017 ; Journal of Applied Physiology Volume 122 [superseded] ; 122 ; https://www.physiology.org/ >
       au < superseded ; 2017 ; Journal of Applied Physiology Volume 123 [superseded] ; 123 ; https://www.physiology.org/ >
       au < superseded ; 2018 ; Journal of Applied Physiology Volume 124 [superseded] ; 124 ; https://www.physiology.org/ >
@@ -1244,6 +1259,8 @@
       au < released ; 2020 ; Journal of Applied Physiology Volume 129 ; 129 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; Journal of Applied Physiology Volume 130 ; 130 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; Journal of Applied Physiology Volume 131 ; 131 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; Journal of Applied Physiology Volume 132 ; 132 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; Journal of Applied Physiology Volume 133 ; 133 ; https://journals.physiology.org/ >
 
     }
 
@@ -1257,8 +1274,8 @@
       eissn = 1522-1598 ;
       issnl = 0022-3077
     >
-
 #    param[base_url] = http://jn.physiology.org/
+
     param[journal_id] = jn
 
     {
@@ -1392,6 +1409,8 @@
       au < released ; 2020 ; Journal of Neurophysiology Volume 124 ; 124 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; Journal of Neurophysiology Volume 125 ; 125 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; Journal of Neurophysiology Volume 126 ; 126 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; Journal of Neurophysiology Volume 127 ; 127 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; Journal of Neurophysiology Volume 128 ; 128 ; https://journals.physiology.org/ >
 
     }
 
@@ -1405,8 +1424,8 @@
       eissn = 1531-2267 ;
       issnl = 1094-8341
     >
-
 #    param[base_url] = http://physiolgenomics.physiology.org/
+
     param[journal_id] = physiolgenomics
 
     {
@@ -1466,6 +1485,7 @@
       au < released ; 2019 ; Physiological Genomics Volume 51 ; 51 ; https://journals.physiology.org/ >
       au < released ; 2020 ; Physiological Genomics Volume 52 ; 52 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; Physiological Genomics Volume 53 ; 53 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; Physiological Genomics Volume 54 ; 54 ; https://journals.physiology.org/ >
 
     }
 
@@ -1479,8 +1499,8 @@
       eissn = 1522-1210 ;
       issnl = 0031-9333
     >
-
 #    param[base_url] = http://physrev.physiology.org/
+
     param[journal_id] = physrev
 
     {
@@ -1588,6 +1608,7 @@
       au < released ; 2019 ; Physiological Reviews Volume 99 ; 99 ; https://journals.physiology.org/ >
       au < released ; 2020 ; Physiological Reviews Volume 100 ; 100 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; Physiological Reviews Volume 101 ; 101 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; Physiological Reviews Volume 102 ; 102 ; https://journals.physiology.org/ >
 
     }
 
@@ -1601,8 +1622,8 @@
       eissn = 1548-9221 ;
       issnl = 1548-9221
     >
-
 #    param[base_url] = http://physiologyonline.physiology.org/
+
     param[journal_id] = physiologyonline
 
     {
@@ -1645,6 +1666,7 @@
       au < released ; 2019 ; Physiology Volume 34 ; 34 ; https://journals.physiology.org/ >
       au < released ; 2020 ; Physiology Volume 35 ; 35 ; https://journals.physiology.org/ >
       au < manifest ; 2021 ; Physiology Volume 36 ; 36 ; https://journals.physiology.org/ >
+      au < expected ; 2022 ; Physiology Volume 37 ; 37 ; https://journals.physiology.org/ >
 
     }
 

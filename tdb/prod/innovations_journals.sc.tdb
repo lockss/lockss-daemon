@@ -23,6 +23,7 @@
     au < manifest ; 2019 ; 2019 ; Journal of Immunotherapy and Precision Oncology Volume 2 ; 2 >
     au < manifest ; 2020 ; 2020 ; Journal of Immunotherapy and Precision Oncology Volume 3 ; 3 >
     au < manifest ; 2021 ; 2021 ; Journal of Immunotherapy and Precision Oncology Volume 4 ; 4 >
+    au < expected ; 2022 ; 2022 ; Journal of Immunotherapy and Precision Oncology Volume 5 ; 5 >
 
   }
   {
@@ -39,6 +40,7 @@
     au < manifest ; 2019 ; 2019 ; Global Journal on Quality and Safety in Healthcare Volume 2 ; 2 >
     au < manifest ; 2020 ; 2020 ; Global Journal on Quality and Safety in Healthcare Volume 3 ; 3 >
     au < manifest ; 2021 ; 2021 ; Global Journal on Quality and Safety in Healthcare Volume 4 ; 4 >
+    au < expected ; 2022 ; 2022 ; Global Journal on Quality and Safety in Healthcare Volume 5 ; 5 >
 
   }
   {
@@ -51,6 +53,7 @@
     param[journal_id] = innovationsjournals-IDDB
 
     au < manifest ; 2021 ; 2021 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 1 ; 1 >
+    au < expected ; 2022 ; 2022 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 2 ; 2 >
 
   }
   {
@@ -63,6 +66,7 @@
     param[journal_id] = innovationsjournals-ISIM
 
     au < manifest ; 2021 ; 2021 ; Innovations in Surgery and Interventional Medicine Volume 1 ; 1 >
+    au < expected ; 2022 ; 2022 ; Innovations in Surgery and Interventional Medicine Volume 2 ; 2 >
 
   }
 }

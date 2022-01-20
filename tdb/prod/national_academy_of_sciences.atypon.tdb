@@ -16,8 +16,8 @@
     
     plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
     implicit < status ; year ; name ; param[volume_name] >
-
     # since 1.68, this title has its own crawl pool
+
     attr[atypon_crawl_pool] = PNAS
 
     param[base_url] = https://www.pnas.org/

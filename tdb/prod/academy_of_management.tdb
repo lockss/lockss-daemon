@@ -34,6 +34,7 @@
       au < expected ; 2019 ; Academy of Management Discoveries (AMD) Volume 5 ; 5 >
       au < expected ; 2020 ; Academy of Management Discoveries (AMD) Volume 6 ; 6 >
       au < expected ; 2021 ; Academy of Management Discoveries (AMD) Volume 7 ; 7 >
+      au < expected ; 2022 ; Academy of Management Discoveries (AMD) Volume 8 ; 8 >
 
     }
   }
@@ -72,6 +73,7 @@
       au < expected ; 2019 ; Academy of Management Learning and Education (AMLE) Volume 18 ; 18 >
       au < expected ; 2020 ; Academy of Management Learning and Education (AMLE) Volume 19 ; 19 >
       au < expected ; 2021 ; Academy of Management Learning and Education (AMLE) Volume 20 ; 20 >
+      au < expected ; 2022 ; Academy of Management Learning and Education (AMLE) Volume 21 ; 21 >
 
     }
 
@@ -155,6 +157,7 @@
       au < expected ; 2019 ; Academy of Management Journal (AMJ) Volume 62 ; 62 >
       au < expected ; 2020 ; Academy of Management Journal (AMJ) Volume 63 ; 63 >
       au < expected ; 2021 ; Academy of Management Journal (AMJ) Volume 64 ; 64 >
+      au < expected ; 2022 ; Academy of Management Journal (AMJ) Volume 65 ; 65 >
 
     }
 
@@ -170,8 +173,8 @@
     >
     
     {
-
       #param[base_url] = https://amr.aom.org/
+
       param[journal_id] = amr
 
       au < doNotProcess ; 1976 ; Academy of Management Review (AMR) Volume 1 ; 1 >
@@ -220,6 +223,7 @@
       au < expected ; 2019 ; Academy of Management Review (AMR) Volume 44 ; 44 >
       au < expected ; 2020 ; Academy of Management Review (AMR) Volume 45 ; 45 >
       au < expected ; 2021 ; Academy of Management Review (AMR) Volume 46 ; 46 >
+      au < expected ; 2022 ; Academy of Management Review (AMR) Volume 47 ; 47 >
 
     }
 
@@ -235,8 +239,8 @@
     >
     
     {
-
       #param[base_url] = https://amp.aom.org/
+
       param[journal_id] = amp
 
       au < doNotProcess ; 1987 ; Academy of Management Perspectives (AMP) Volume 1 ; 1 >
@@ -274,6 +278,7 @@
       au < expected ; 2019 ; Academy of Management Perspectives (AMP) Volume 33 ; 33 >
       au < expected ; 2020 ; Academy of Management Perspectives (AMP) Volume 34 ; 34 >
       au < expected ; 2021 ; Academy of Management Perspectives (AMP) Volume 35 ; 35 >
+      au < expected ; 2022 ; Academy of Management Perspectives (AMP) Volume 36 ; 36 >
 
     }
 

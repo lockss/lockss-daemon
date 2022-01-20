@@ -8,12 +8,12 @@
     plugin = org.lockss.plugin.atypon.asm.AsmPlugin
     param[base_url] = https://journals.asm.org/
     implicit < status ; year ; name ; param[volume_name] >
-
     #
     #Two titles are also in clockss, and in atypon2 tdb file.
     #EcoSal Plus, Journal of Microbiology & Biology Education, 
     #Microbiology Spectrum 
     #
+
 
   {
 
@@ -437,6 +437,7 @@
       au < released ; 2019 ; Infection and Immunity Volume 87 ; 87 >
       au < released ; 2020 ; Infection and Immunity Volume 88 ; 88 >
       au < manifest ; 2021 ; Infection and Immunity Volume 89 ; 89 >
+      au < expected ; 2022 ; Infection and Immunity Volume 90 ; 90 >
 
   }
 
@@ -857,6 +858,7 @@
       au < released ; 2019 ; mBio Volume 10 ; 10 >
       au < released ; 2020 ; mBio Volume 11 ; 11 >
       au < released ; 2021 ; mBio Volume 12 ; 12 >
+      au < expected ; 2022 ; mBio Volume 13 ; 13 >
 
   }
 
@@ -955,6 +957,7 @@
       au < released ; 2019 ; Microbiology and Molecular Biology Reviews Volume 83 ; 83 >
       au < released ; 2020 ; Microbiology and Molecular Biology Reviews Volume 84 ; 84 >
       au < manifest ; 2021 ; Microbiology and Molecular Biology Reviews Volume 85 ; 85 >
+      au < expected ; 2022 ; Microbiology and Molecular Biology Reviews Volume 86 ; 86 >
 
   }
 
@@ -991,6 +994,7 @@
       au < released ; 2019 ; Microbiology Resource Announcements Volume 8 ; 8 >
       au < released ; 2020 ; Microbiology Resource Announcements Volume 9 ; 9 >
       au < released ; 2021 ; Microbiology Resource Announcements Volume 10 ; 10 >
+      au < expected ; 2022 ; Microbiology Resource Announcements Volume 11 ; 11 >
 
   }
 
@@ -1064,6 +1068,7 @@
       au < released ; 2019 ; mSphere Volume 4 ; 4 >
       au < released ; 2020 ; mSphere Volume 5 ; 5 >
       au < manifest ; 2021 ; mSphere Volume 6 ; 6 >
+      au < expected ; 2022 ; mSphere Volume 7 ; 7 >
 
   }
 
@@ -1082,6 +1087,7 @@
       au < released ; 2019 ; mSystems Volume 4 ; 4 >
       au < released ; 2020 ; mSystems Volume 5 ; 5 >
       au < released ; 2021 ; mSystems Volume 6 ; 6 >
+      au < expected ; 2022 ; mSystems Volume 7 ; 7 >
 
   }
 

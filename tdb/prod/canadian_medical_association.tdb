@@ -131,6 +131,7 @@
     au < cma.CmaDrupalPlugin ; released ; 2019 ; Canadian Medical Association Journal Volume 191 ; 191 >
     au < cma.CmaDrupalPlugin ; released ; 2020 ; Canadian Medical Association Journal Volume 192 ; 192 >
     au < cma.CmaDrupalPlugin ; manifest ; 2021 ; Canadian Medical Association Journal Volume 193 ; 193 >
+    au < cma.CmaDrupalPlugin ; expected ; 2022 ; Canadian Medical Association Journal Volume 194 ; 194 >
 
     }
   }
@@ -141,8 +142,8 @@
       issn = 2291-0026 ;
       issnl = 2291-0026
     >
-
     #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
     {
       param[base_url] = https://www.cmajopen.ca/
 
@@ -155,6 +156,7 @@
       au < cma.CmaDrupalPlugin ; released ; 2019 ; CMAJ Open Volume 7 ; 7 >
       au < cma.CmaDrupalPlugin ; released ; 2020 ; CMAJ Open Volume 8 ; 8 >
       au < cma.CmaDrupalPlugin ; manifest ; 2021 ; CMAJ Open Volume 9 ; 9 >
+      au < cma.CmaDrupalPlugin ; expected ; 2022 ; CMAJ Open Volume 10 ; 10 >
     }
     {
       param[base_url] = http://cmajopen.ca/

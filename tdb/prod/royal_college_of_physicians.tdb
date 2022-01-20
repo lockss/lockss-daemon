@@ -26,6 +26,7 @@
     au < exists ; 2019 ; Clinical Medicine Volume 19 ; 19 >
     au < exists ; 2020 ; Clinical Medicine Volume 20 ; 20 >
     au < exists ; 2021 ; Clinical Medicine Volume 21 ; 21 >
+    au < expected ; 2022 ; Clinical Medicine Volume 22 ; 22 >
     }
     {
     param[base_url] = http://www.clinmed.rcpjournal.org/
@@ -66,6 +67,7 @@
     au < exists ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
     au < exists ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
     au < testing ; 2021 ; Future Hospital Journal Volume 8 ; 8 >
+    au < expected ; 2022 ; Future Hospital Journal Volume 9 ; 9 >
     }
     {
     param[base_url] = http://futurehospital.rcpjournal.org/

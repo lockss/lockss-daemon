@@ -16,8 +16,8 @@
       eissn = 1521-009X ;
       issnl = 0090-9556
     >
-
 #    param[base_url] = http://dmd.aspetjournals.org/
+
 
     au < HighWirePressH20Plugin ; down ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 ; http://dmd.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; http://dmd.aspetjournals.org/ >
@@ -68,6 +68,7 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; http://dmd.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2020 ; Drug Metabolism and Disposition Volume 48 ; 48 ; https://dmd.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Drug Metabolism and Disposition Volume 49 ; 49 ; https://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2022 ; Drug Metabolism and Disposition Volume 50 ; 50 ; https://dmd.aspetjournals.org/ >
 
   }
 
@@ -462,6 +463,10 @@
     au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 377 ; 377 ; https://jpet.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 378 ; 378 ; https://jpet.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 379 ; 379 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 380 ; 380 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 381 ; 381 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 382 ; 382 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 383 ; 383 ; https://jpet.aspetjournals.org/ >
 
     }
   }
@@ -501,8 +506,8 @@
       eissn = 1521-0111 ;
       issnl = 0026-895X
     >
-
 #    param[base_url] = http://molpharm.aspetjournals.org/
+
 
     au < HighWirePressH20Plugin ; down ; 1965 ; Molecular Pharmacology Volume 1 ; 1 ; http://molpharm.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 1966 ; Molecular Pharmacology Volume 2 ; 2 ; http://molpharm.aspetjournals.org/ >
@@ -604,6 +609,8 @@
     au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; https://molpharm.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2022 ; Molecular Pharmacology Volume 102 ; 102 ; https://molpharm.aspetjournals.org/ >
 
   }
 
@@ -615,8 +622,8 @@
       eissn = 1521-0081 ;
       issnl = 0031-6997
     >
-
 #    param[base_url] = http://pharmrev.aspetjournals.org/
+
 
     au < HighWirePressH20Plugin ; down ; 1949 ; Pharmacological Reviews Volume 1 ; 1 ; http://pharmrev.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 1950 ; Pharmacological Reviews Volume 2 ; 2 ; http://pharmrev.aspetjournals.org/ >
@@ -691,6 +698,7 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; http://pharmrev.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; exists ; 2020 ; Pharmacological Reviews Volume 72 ; 72 ; https://pharmrev.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2022 ; Pharmacological Reviews Volume 74 ; 74 ; https://pharmrev.aspetjournals.org/ >
 
   }
 

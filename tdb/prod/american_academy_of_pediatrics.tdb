@@ -4,8 +4,8 @@
     info[tester] = 5 ;
     info[platform] = SC, BLOCKED, Jire #LXPLUG-2135, manifest page autologin
   >
-
   #plugin = needs.plugin
+
   plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
   param[base_url] = https://publications.aap.org/
@@ -19,8 +19,8 @@
     >
 
     {
-
       #param[base_url] = http://aapgrandrounds.aappublications.org/
+
       param[journal_id] = aapgrandrounds
 
       au < doNotProcess ; 1999 ; 1999 ; AAP Grand Rounds Volume 1 ; 1 >
@@ -69,6 +69,8 @@
       au < manifest ; 2020 ; 2020 ; AAP Grand Rounds Volume 44 ; 44 > 
       au < manifest ; 2021 ; 2021 ; AAP Grand Rounds Volume 45 ; 45 > 
       au < manifest ; 2021 ; 2021 ; AAP Grand Rounds Volume 46 ; 46 > 
+      au < expected ; 2022 ; 2022 ; AAP Grand Rounds Volume 47 ; 47 > 
+      au < expected ; 2022 ; 2022 ; AAP Grand Rounds Volume 48 ; 48 > 
 
     }
 
@@ -83,11 +85,11 @@
     >
 
     {
-
       #param[base_url] = http://aapnews.aappublications.org/
       #See http://www.aappublications.org/news
       #See https://www.aappublications.org/content
       #RT 9102 asked for clarification.
+
       param[journal_id] = news
 
       au < doNotProcess ; 1985 ; 1985 ; AAP News Volume 1 ; 1 >
@@ -140,8 +142,8 @@
     >
     
     {
-
       #param[base_url] = http://hosppeds.aappublications.org/
+
       param[journal_id] = hospitalpediatrics
       
       au < doNotProcess ; 2011 ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
@@ -155,6 +157,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Hospital Pediatrics Volume 9 ; 9 >
       au < manifest ; 2020 ; 2020 ; Hospital Pediatrics Volume 10 ; 10 >
       au < manifest ; 2021 ; 2021 ; Hospital Pediatrics Volume 11 ; 11 >
+      au < expected ; 2022 ; 2022 ; Hospital Pediatrics Volume 12 ; 12 >
 
     }
     
@@ -168,8 +171,8 @@
     >
 
     {
-
       #param[base_url] = http://neoreviews.aappublications.org/
+
       param[journal_id] = neoreviews
 
       au < doNotProcess ; 2000 ; 2000 ; NeoReviews Volume 1 ; 1 >
@@ -194,6 +197,7 @@
       au < doNotProcess ; 2019 ; 2019 ; NeoReviews Volume 20 ; 20 >
       au < manifest ; 2020 ; 2020 ; NeoReviews Volume 21 ; 21 >
       au < manifest ; 2021 ; 2021 ; NeoReviews Volume 22 ; 22 >
+      au < expected ; 2022 ; 2022 ; NeoReviews Volume 23 ; 23 >
 
     }
 
@@ -208,8 +212,8 @@
     >
 
     {
-
       #param[base_url] = http://pediatrics.aappublications.org/
+
       param[journal_id] = pediatrics
 
       au < doNotProcess ; 1948 ; 1948 ; Pediatrics Volume 1 ; 1 >
@@ -360,6 +364,8 @@
       au < manifest ; 2020 ; 2020 ; Pediatrics Volume 146 ; 146 >
       au < manifest ; 2021 ; 2021 ; Pediatrics Volume 147 ; 147 >
       au < manifest ; 2021 ; 2021 ; Pediatrics Volume 148 ; 148 >
+      au < expected ; 2022 ; 2022 ; Pediatrics Volume 149 ; 149 >
+      au < expected ; 2022 ; 2022 ; Pediatrics Volume 150 ; 150 >
 
     }
 
@@ -374,8 +380,8 @@
     >
 
     {
-
       #param[base_url] = http://pedsinreview.aappublications.org/
+
       param[journal_id] = pediatricsinreview
 
       au < doNotProcess ; 1980 ; 1980 ; Pediatrics in Review Volume 1 ; 1 >
@@ -420,6 +426,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Pediatrics in Review Volume 40 ; 40 >
       au < manifest ; 2020 ; 2020 ; Pediatrics in Review Volume 41 ; 41 >
       au < manifest ; 2021 ; 2021 ; Pediatrics in Review Volume 42 ; 42 >
+      au < expected ; 2022 ; 2022 ; Pediatrics in Review Volume 43 ; 43 >
 
     }
 

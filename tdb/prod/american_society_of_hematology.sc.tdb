@@ -4,8 +4,8 @@
     name = American Society of Hematology ;
     info[platform] = Silverchair. GLN only BLOCKED Jira#LXPLUG-1937
   >
-
     # move to SilverChair 2019
+
     plugin = org.lockss.plugin.silverchair.ash.ASHSilverchairPlugin
     implicit < status ; year ; param[year] ; name ; volume >
     param[base_url] = https://ashpublications.org/
@@ -18,8 +18,8 @@
       eissn = 1528-0020 ;
       issnl = 0006-4971
     >
-
       #Processed 1946-2018 on HW
+
       param[journal_id] = blood
 
       au < doNotProcess ; 2015 ; 2015 ; Blood Volume 125 ; 125 >
@@ -51,6 +51,7 @@
       au < manifest ; 2019 ; 2019 ; Blood Advances Volume 3 ; 3 >
       au < manifest ; 2020 ; 2020 ; Blood Advances Volume 4 ; 4 >
       au < manifest ; 2021 ; 2021 ; Blood Advances Volume 5 ; 5 >
+      au < expected ; 2022 ; 2022 ; Blood Advances Volume 6 ; 6 >
 
   }
 
@@ -62,10 +63,10 @@
       eissn = 1520-4383 ;
       issnl = 1520-4383
     >
-
     #Processed 2000-2018 on HW
-
     #param[base_url] = http://asheducationbook.hematologylibrary.org/
+
+
     param[journal_id] = hematology
 
     au < doNotProcess ; 2015 ; 2015 ; Hematology: ASH Education Program Book Volume 2015 ; 2015 >
@@ -75,6 +76,7 @@
     au < manifest ; 2019 ; 2019 ; Hematology: ASH Education Program Book Volume 2019 ; 2019 >
     au < manifest ; 2020 ; 2020 ; Hematology: ASH Education Program Book Volume 2020 ; 2020 >
     au < manifest ; 2021 ; 2021 ; Hematology: ASH Education Program Book Volume 2021 ; 2021 >
+    au < expected ; 2022 ; 2022 ; Hematology: ASH Education Program Book Volume 2022 ; 2022 >
 
   }
 
