@@ -93,4 +93,22 @@
 
   }
 
+   {
+     title <
+       name = IOP Publishing Delivered Source Content
+     >
+
+     {
+
+     ### This plugin is for new IOP Jats content
+     plugin = org.lockss.plugin.clockss.iop.ClockssIopDirZipSourcePlugin
+     #param[base_url] = https://clockss-test.lockss.org/sourcefiles/iopjats-released/
+     hidden[proxy] = DIRECT
+
+     implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
+
+
+     #au < zapped ; finished ; 2018 ; IOP Publishing Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
+     }
+   }
 }
