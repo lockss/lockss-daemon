@@ -8,7 +8,6 @@
     info[platform] = Janeway. LXPLUG-2156. No permission URL for Silk Road.
   >
  
-    #plugin = needs.plugin
     plugin = org.lockss.plugin.janeway.universityofmichigan.ClockssUniversityofMichiganPlugin
     #param[oai_granularity] = YYYY-MM-DD
 
