@@ -7,8 +7,8 @@
     info[poller] = 8
   >
   provider = bepress
-
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
 
   
   {
@@ -84,6 +84,7 @@
     au < finished ; crawling ; 2019 ; Pace Environmental Law Review Volume 36 ; 36 ; https://digitalcommons.pace.edu/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Pace Environmental Law Review Volume 37 ; 37 ; https://digitalcommons.pace.edu/ ; >
     au < crawling ; exists ; 2021 ; Pace Environmental Law Review Volume 38 ; 38 ; https://digitalcommons.pace.edu/ ; >
+    au < expected ; exists ; 2022 ; Pace Environmental Law Review Volume 38 ; 38 ; https://digitalcommons.pace.edu/ ; >
 
   }
 
@@ -110,6 +111,7 @@
     au < finished ; crawling ; 2019 ; Pace Environmental Law Review Online Companion Volume 9 ; 9 ; https://digitalcommons.pace.edu/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Pace Environmental Law Review Online Companion Volume 10 ; 10 ; https://digitalcommons.pace.edu/ ; >
     au < expected ; exists ; 2021 ; Pace Environmental Law Review Online Companion Volume 11 ; 11 ; https://digitalcommons.pace.edu/ ; >
+    au < expected ; exists ; 2022 ; Pace Environmental Law Review Online Companion Volume 11 ; 11 ; https://digitalcommons.pace.edu/ ; >
 
   }
 
@@ -158,6 +160,7 @@
     au < finished ; crawling ; 2019 ; Pace International Law Review Volume 31 ; 31 ; https://digitalcommons.pace.edu/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Pace International Law Review Volume 32 ; 32 ; https://digitalcommons.pace.edu/ ; >
     au < crawling ; exists ; 2021 ; Pace International Law Review Volume 33 ; 33 ; https://digitalcommons.pace.edu/ ; >
+    au < expected ; exists ; 2022 ; Pace International Law Review Volume 33 ; 33 ; https://digitalcommons.pace.edu/ ; >
 
   }
 
@@ -214,6 +217,7 @@
     au < finished ; crawling ; 2018-2019 ; Pace Law Review Volume 39 ; 39 ; https://digitalcommons.pace.edu/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019-2020 ; Pace Law Review Volume 40 ; 40 ; https://digitalcommons.pace.edu/ ; >
     au < notReady ; exists ; 2020-2021 ; Pace Law Review Volume 41 ; 41 ; https://digitalcommons.pace.edu/ ; > #Redirected to login page: https://digitalcommons.pace.edu/cgi/login.cgi
+    au < expected ; exists ; 2022 ; Pace Law Review Volume 41 ; 41 ; https://digitalcommons.pace.edu/ ; > #Redirected to login page: https://digitalcommons.pace.edu/cgi/login.cgi
 
   }
 

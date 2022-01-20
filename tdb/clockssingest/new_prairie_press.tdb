@@ -55,6 +55,7 @@
       au < frozen ; exists ; 2019 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 13 ; 13 ; https://newprairiepress.org/ ; >
       au < frozen ; exists ; 2020 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 14 ; 14 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 15 ; 15 ; https://newprairiepress.org/ ; >
+      au < expected ; exists ; 2022 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 16 ; 16 ; https://newprairiepress.org/ ; >
 
     }
   }
@@ -162,6 +163,7 @@
       au < deepCrawl ; exists ; 2019 ; Journal of Financial Therapy Volume 10 ; 10 ; https://newprairiepress.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Journal of Financial Therapy Volume 11 ; 11 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; Journal of Financial Therapy Volume 12 ; 12 ; https://newprairiepress.org/ ; >
+      au < expected ; exists ; 2022 ; Journal of Financial Therapy Volume 13 ; 13 ; https://newprairiepress.org/ ; >
 
     }
   }
@@ -224,6 +226,7 @@
       au < finished ; finished ; 2019 ; Kansas Library Association College and University Libraries Section Proceedings Volume 9 ; 9 ; https://newprairiepress.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Kansas Library Association College and University Libraries Section Proceedings Volume 10 ; 10 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; Kansas Library Association College and University Libraries Section Proceedings Volume 11 ; 11 ; https://newprairiepress.org/ ; >
+      au < expected ; exists ; 2022 ; Kansas Library Association College and University Libraries Section Proceedings Volume 12 ; 12 ; https://newprairiepress.org/ ; >
 
     }
   }
@@ -269,6 +272,7 @@
       au < deepCrawl ; exists ; 2019 ; Online Journal of Rural Research & Policy Volume 14 ; 14 ; https://newprairiepress.org/ ; >
       au < deepCrawl ; exists ; 2020 ; Online Journal of Rural Research & Policy Volume 15 ; 15 ; https://newprairiepress.org/ ; >
       au < expected ; exists ; 2021 ; Online Journal of Rural Research & Policy Volume 16 ; 16 ; https://newprairiepress.org/ ; >
+      au < expected ; exists ; 2022 ; Online Journal of Rural Research & Policy Volume 17 ; 17 ; https://newprairiepress.org/ ; >
 
     }
   }
@@ -306,6 +310,7 @@
       au < frozen ; exists ; 2019 ; Transactions of the Burgon Society Volume 18 ; 18 ; https://newprairiepress.org/ ; >
       au < notReady ; exists ; 2020 ; Transactions of the Burgon Society Volume 19 ; 19 ; https://newprairiepress.org/ ; > #embargo until October 21, 2021
       au < expected ; exists ; 2021 ; Transactions of the Burgon Society Volume 20 ; 20 ; https://newprairiepress.org/ ; >
+      au < expected ; exists ; 2022 ; Transactions of the Burgon Society Volume 21 ; 21 ; https://newprairiepress.org/ ; >
 
   }
 
@@ -331,6 +336,7 @@
       au < frozen ; exists ; 2019-2020 ; The Advocate Volume 25 ; 25 ; >
       au < frozen ; exists ; 2020-2021 ; The Advocate Volume 26 ; 26 ; >
       au < expected ; exists ; 2022 ; The Advocate Volume 27 ; 27 ; >
+      au < expected ; exists ; 2022 ; The Advocate Volume 27 ; 27 ; >
 
   }
 
@@ -352,6 +358,7 @@
       au < finished ; finished ; 2018 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 4 ; 4 ; >
       au < crawling ; exists ; 2021 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 5 ; 5 ; >
+      au < expected ; exists ; 2022 ; Crossing Borders: An Undergraduate Journal of Interdisciplinary Scholarship Volume 6 ; 6 ; >
 
   }
 
@@ -417,6 +424,8 @@
       au < frozen ; exists ; 2020 ; Educational Considerations Volume 46 ; 46 ; >
       au < crawling ; exists ; 2021 ; Educational Considerations Volume 47 ; 47 ; >
       au < expected ; exists ; 2021 ; Educational Considerations Volume 48 ; 48 ; >
+      au < expected ; exists ; 2022 ; Educational Considerations Volume 49 ; 49 ; >
+      au < expected ; exists ; 2022 ; Educational Considerations Volume 49 ; 49 ; >
 
   }
 
@@ -432,8 +441,8 @@
       comment[publisher] = New Prairie Press
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = fgr
-
       #continued_by = 0895-1942
+
 
       au < manifest ; exists ; 1962 ; Neurospora Newsletter Volume 1 ; 1 ; >
       au < manifest ; exists ; 1962 ; Neurospora Newsletter Volume 2 ; 2 ; >
@@ -483,10 +492,8 @@
       comment[publisher] = New Prairie Press
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = fgr
-
       #continues = 0028-3975
       #continued_by = 1941-4765
-
       #These commented out AUs are present above, listed under a different name. Don't add again.
       #au < exists ; exists ; 1962 ; Fungal Genetics Newsletter Volume 1 ; 1 ; >
       #au < exists ; exists ; 1962 ; Fungal Genetics Newsletter Volume 2 ; 2 ; >
@@ -520,6 +527,8 @@
       #au < exists ; exists ; 1983 ; Fungal Genetics Newsletter Volume 30 ; 30 ; >
       #au < exists ; exists ; 1984 ; Fungal Genetics Newsletter Volume 31 ; 31 ; >
       #au < exists ; exists ; 1985 ; Fungal Genetics Newsletter Volume 32 ; 32 ; >
+
+
       au < manifest ; exists ; 1986 ; Fungal Genetics Newsletter Volume 33 ; 33 ; >
       au < manifest ; exists ; 1987 ; Fungal Genetics Newsletter Volume 34 ; 34 ; >
       au < manifest ; exists ; 1988 ; Fungal Genetics Newsletter Volume 35 ; 35 ; >
@@ -557,8 +566,8 @@
       comment[publisher] = New Prairie Press
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = fgr
-
       #continues = 0895-1942
+
 
       au < finished ; finished ; 2008 ; Fungal Genetics Reports Volume 55 ; 55 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2009 ; Fungal Genetics Reports Volume 56 ; 56 ; reingest1.clockss.org:8082 >
@@ -571,6 +580,7 @@
       au < frozen ; exists ; 2018-2019 ; Fungal Genetics Reports Volume 63 ; 63 ; >
       au < frozen ; exists ; 2020 ; Fungal Genetics Reports Volume 64 ; 64 ; >
       au < crawling ; exists ; 2021 ; Fungal Genetics Reports Volume 65 ; 65 ; >
+      au < expected ; exists ; 2022 ; Fungal Genetics Reports Volume 66 ; 66 ; >
 
   }
 
@@ -591,6 +601,7 @@
       au < crawling ; down ; 2019 ; Human Behavior Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Human Behavior Research Volume 3 ; 3 ; >
       au < crawling ; exists ; 2021 ; Human Behavior Research Volume 4 ; 4 ; >
+      au < expected ; exists ; 2022 ; Human Behavior Research Volume 5 ; 5 ; >
 
   }
 
@@ -613,6 +624,7 @@
       au < deepCrawl ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
       au < deepCrawl ; exists ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; >
       au < expected ; exists ; 2021 ; International Journal of School Social Work Volume 6 ; 6 ; >
+      au < expected ; exists ; 2022 ; International Journal of School Social Work Volume 7 ; 7 ; >
 
   }
 
@@ -684,6 +696,7 @@
       au < frozen ; exists ; 2019 ; Journal of Applied Communications Volume 103 ; 103 ; >
       au < frozen ; exists ; 2020 ; Journal of Applied Communications Volume 104 ; 104 ; >
       au < crawling ; exists ; 2021 ; Journal of Applied Communications Volume 105 ; 105 ; >
+      au < expected ; exists ; 2022 ; Journal of Applied Communications Volume 106 ; 106 ; >
 
   }
 
@@ -731,6 +744,7 @@
       au < deepCrawl ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
       au < deepCrawl ; exists ; 2020 ; Kansas Agricultural Experiment Station Research Reports Volume 6 ; 6 ; >
       au < crawling ; exists ; 2021 ; Kansas Agricultural Experiment Station Research Reports Volume 7 ; 7 ; >
+      au < expected ; exists ; 2022 ; Kansas Agricultural Experiment Station Research Reports Volume 8 ; 8 ; >
 
   }
 
@@ -795,6 +809,7 @@
       au < deepCrawl ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
       au < deepCrawl ; exists ; 2020 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
       au < crawling ; exists ; 2021 ; Networks: An Online Journal for Teacher Research Volume 23 ; 23 ; >
+      au < expected ; exists ; 2022 ; Networks: An Online Journal for Teacher Research Volume 24 ; 24 ; >
 
   }
 
@@ -913,6 +928,7 @@
       au < deepCrawl ; exists ; 2019 ; Seek Volume 9 ; 9 ; >
       au < frozen ; exists ; 2020 ; Seek Volume 10 ; 10 ; >
       au < expected ; exists ; 2021 ; Seek Volume 11 ; 11 ; >
+      au < expected ; exists ; 2022 ; Seek Volume 12 ; 12 ; >
 
   }
 
@@ -975,6 +991,7 @@
       au < finished ; finished ; 2018-2019 ; Studies in 20th & 21st Century Literature Volume 43 ; 43 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Studies in 20th & 21st Century Literature Volume 44 ; 44 ; >
       au < crawling ; exists ; 2021 ; Studies in 20th & 21st Century Literature Volume 45 ; 45 ; >
+      au < expected ; exists ; 2022 ; Studies in 20th & 21st Century Literature Volume 46 ; 46 ; >
 
   }
 

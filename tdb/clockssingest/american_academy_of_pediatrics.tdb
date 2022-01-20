@@ -71,6 +71,8 @@
       au < manifest ; exists ; 2021 ; 2021 ; AAP Grand Rounds Volume 45 ; 45 ; >
       au < manifest ; exists ; 2021 ; 2021 ; AAP Grand Rounds Volume 46 ; 46 ; >
   
+      au < expected ; exists ; 2022 ; 2022 ; AAP Grand Rounds Volume 47 ; 47 ; >
+      au < expected ; exists ; 2022 ; 2022 ; AAP Grand Rounds Volume 47 ; 47 ; >
   }
 
   {
@@ -81,10 +83,10 @@
       eissn = 1556-3332
     >
     
-
       #See http://www.aappublications.org/news
       #See https://www.aappublications.org/content
       #RT 9102 asked for clarification.
+
       param[journal_id] = news
 
       au < doNotProcess ; exists ; 1985 ; 1985 ; AAP News Volume 1 ; 1 ; >
@@ -149,6 +151,7 @@
       au < doNotProcess ; exists ; 2019 ; 2019 ; Hospital Pediatrics Volume 9 ; 9 ; >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Hospital Pediatrics Volume 10 ; 10 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Hospital Pediatrics Volume 11 ; 11 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Hospital Pediatrics Volume 12 ; 12 ; >
 
   }
   
@@ -187,6 +190,7 @@
       au < manifest ; exists ; 2021 ; 2021 ; NeoReviews Volume 22 ; 22 ; >
 
   
+      au < expected ; exists ; 2022 ; 2022 ; NeoReviews Volume 23 ; 23 ; >
   }
 
   {
@@ -196,8 +200,8 @@
       issn = 0031-4005 ;
       eissn = 1098-4275
     >
-
       #param[base_url] = http://pediatrics.aappublications.org/
+
       param[journal_id] = pediatrics
 
       au < manifest ; exists ; 1948 ; 1948 ; Pediatrics Volume 1 ; 1 ; >
@@ -349,6 +353,8 @@
       au < manifest ; exists ; 2021 ; 2021 ; Pediatrics Volume 147 ; 147 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Pediatrics Volume 148 ; 148 ; >
   
+      au < expected ; exists ; 2022 ; 2022 ; Pediatrics Volume 149 ; 149 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Pediatrics Volume 149 ; 149 ; >
   }
 
   {
@@ -405,6 +411,7 @@
       au < doNotProcess ; exists ; 2020 ; 2020 ; Pediatrics in Review Volume 41 ; 41 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Pediatrics in Review Volume 42 ; 42 ; >
   
+      au < expected ; exists ; 2022 ; 2022 ; Pediatrics in Review Volume 43 ; 43 ; >
   }
 
 }

@@ -7,14 +7,14 @@
     info[tester] = 8 ;
     info[poller] = 2
   >
-
     #moved to Atypon in 2019
+
 
     plugin = org.lockss.plugin.atypon.rsp.ClockssRoyalSocietyPublishingAtyponPlugin
     param[base_url] = https://royalsocietypublishing.org/
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-
     #### Note that doNotProcess-doNotProcess = were previously processed on Highwire platform.
+
 
   {
 
@@ -112,6 +112,8 @@
     au < deepCrawl ; exists ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 ; >
     au < crawling ; exists ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 70 ; 70 ; >
     au < crawling ; exists ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 71 ; 71 ; >
+    au < expected ; exists ; 2022 ; Biographical Memoirs of Fellows of the Royal Society Volume 72 ; 72 ; >
+    au < expected ; exists ; 2022 ; Biographical Memoirs of Fellows of the Royal Society Volume 72 ; 72 ; >
     }
   }
 
@@ -144,6 +146,7 @@
     au < superseded ; exists ; 2019 ; Biology Letters Volume 15 [superseded] ; 2019 ; >
     au < deepCrawl ; exists ; 2020 ; Biology Letters Volume 16 ; 16 ; >
     au < crawling ; exists ; 2021 ; Biology Letters Volume 17 ; 17 ; >
+    au < expected ; exists ; 2022 ; Biology Letters Volume 18 ; 18 ; >
 
   }
 
@@ -173,6 +176,7 @@
     au < finished ; crawling ; 2019 ; Interface Focus Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Interface Focus Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; Interface Focus Volume 11 ; 11 ; >
+    au < expected ; exists ; 2022 ; Interface Focus Volume 12 ; 12 ; >
 
   }
   
@@ -206,6 +210,7 @@
     au < finished ; crawling ; 2019 ; Journal of the Royal Society Interface Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Journal of the Royal Society Interface Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Journal of the Royal Society Interface Volume 18 ; 18 ; >
+    au < expected ; exists ; 2022 ; Journal of the Royal Society Interface Volume 19 ; 19 ; >
 
   }
 
@@ -302,6 +307,7 @@
     au < finished ; crawling ; 2019 ; Notes and Records the Royal Society Journal of the History of Science Volume 73 ; 73 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Notes and Records the Royal Society Journal of the History of Science Volume 74 ; 74 ; >
     au < crawling ; exists ; 2021 ; Notes and Records the Royal Society Journal of the History of Science Volume 75 ; 75 ; >
+    au < expected ; exists ; 2022 ; Notes and Records the Royal Society Journal of the History of Science Volume 76 ; 76 ; >
 
     }
   }
@@ -328,6 +334,7 @@
     au < finished ; crawling ; 2019 ; Open Biology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Open Biology Volume 10 ; 10 ; >
     au < crawling ; exists ; 2021 ; Open Biology Volume 11 ; 11 ; >
+    au < expected ; exists ; 2022 ; Open Biology Volume 12 ; 12 ; >
 
   }
 
@@ -339,11 +346,11 @@
       eissn = 1471-2962 ;
       issnl = 1364-503X
     >
-
 #    {
 #    param[journal_id] = rstl
 #    #See Philosophical Transactions of the Royal Society of London V1-177 1665-1886
 #    }
+
     {
     param[journal_id] = rsta1887
     
@@ -569,6 +576,7 @@
     au < finished ; crawling ; 2019 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 377 ; 377 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 378 ; 378 ; >
     au < crawling ; exists ; 2021 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 379 ; 379 ; >
+    au < expected ; exists ; 2022 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 380 ; 380 ; >
 
     }
   }
@@ -581,11 +589,11 @@
       eissn = 1471-2970 ;
       issnl = 0962-8436
     >
-
 #    {
 #    param[journal_id] = rstl
 #    #See Philosophical Transactions of the Royal Society of London V1-177 1665-1886
 #    }
+
     {
     param[journal_id] = rstb1887
 
@@ -812,6 +820,7 @@
     au < finished ; crawling ; 2019 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 374 ; 374 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 375 ; 375 ; >
     au < crawling ; exists ; 2021 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 376 ; 376 ; >
+    au < expected ; exists ; 2022 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 377 ; 377 ; >
 
     }
   }
@@ -1015,9 +1024,9 @@
       eissn = 2397-9755 ;
       issnl = 0369-8696
     >
-
     # Edited by Robert Hooke FRS, Philosophical Collections was published between 1679 and 1682. 
     # Articles before and after these dates are published in Philosophical Transactions.
+
     param[journal_id] = rscl
 
     au < frozen ; exists ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 ; >
@@ -1468,6 +1477,7 @@
     au < finished ; crawling ; 2019 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 475 ; 475 ; reingest5.clockss.org:8082 > #no substance. using 2019 gives a manifest page with one url to issue 2019 from 2002.
     au < deepCrawl ; exists ; 2020 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 476 ; 476 ; >
     au < crawling ; exists ; 2021 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 477 ; 477 ; >
+    au < expected ; exists ; 2022 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 478 ; 478 ; >
 
     }
   }
@@ -1717,6 +1727,7 @@
     au < finished ; crawling ; 2019 ; Proceedings of the Royal Society B: Biological Sciences Volume 286 ; 286 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Proceedings of the Royal Society B: Biological Sciences Volume 287 ; 287 ; >
     au < crawling ; exists ; 2021 ; Proceedings of the Royal Society B: Biological Sciences Volume 288 ; 288 ; >
+    au < expected ; exists ; 2022 ; Proceedings of the Royal Society B: Biological Sciences Volume 289 ; 289 ; >
 
     }
   }
@@ -1728,8 +1739,8 @@
       issn = 0370-1662 ;
       issnl = 0370-1662 
     >
-
     #1896-1904 processed in HW
+
     {
     param[journal_id] = rspl1800
 
@@ -1828,8 +1839,8 @@
     >
 
     param[journal_id] = rsos
-
     #2014-2018 processed in HW
+
     au < doNotProcess ; doNotProcess ; 2014 ; Royal Society Open Science Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Royal Society Open Science Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; >
@@ -1839,6 +1850,7 @@
     au < finished ; crawling ; 2019 ; Royal Society Open Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Royal Society Open Science Volume 7 ; 7 ; >
     au < crawling ; exists ; 2021 ; Royal Society Open Science Volume 8 ; 8 ; >
+    au < expected ; exists ; 2022 ; Royal Society Open Science Volume 9 ; 9 ; >
 
   }
 

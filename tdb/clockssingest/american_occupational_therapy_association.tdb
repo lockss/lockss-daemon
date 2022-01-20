@@ -18,8 +18,8 @@
       issn = 0272-9490 ;
       eissn = 1943-7676
     >
-
       #param[journal_id] = 167 # it moved to Silverchair common theme platform
+
       param[journal_id] = ajot
 
       au < manifest ; exists ; 1980 ; 1980 ; American Journal of Occupational Therapy Volume 34 ; 34 ; >
@@ -64,6 +64,7 @@
       au < manifest ; exists ; 2019 ; 2019 ; American Journal of Occupational Therapy Volume 73 ; 73 ; >
       au < frozen ; exists ; 2020 ; 2020 ; American Journal of Occupational Therapy Volume 74 ; 74 ; >
       au < manifest ; exists ; 2021 ; 2021 ; American Journal of Occupational Therapy Volume 75 ; 75 ; >
+      au < expected ; exists ; 2022 ; 2022 ; American Journal of Occupational Therapy Volume 76 ; 76 ; >
 
   }
 

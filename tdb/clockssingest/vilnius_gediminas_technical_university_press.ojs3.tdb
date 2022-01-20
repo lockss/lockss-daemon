@@ -12,13 +12,13 @@
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     #OJS3
     attr[start_stem] = index.php/
-
     # The following titles are preserves in TnF, content from 2017 and prior
     # Aviation, Creativity Studies, Engineering Structures and Technologies, Geodesy and Cartography,
     # International Journal of Strategic Property Management, Journal of Architecture and Urbanism,
     # Journal of Business Economics and Management, Journal of Civil Engineering and Management,
     # Journal of Environmental Engineering and Landscape Management, Mathematical Modelling and Analysis,
     # Technological and Economic Development of Economy, Transport
+
 
   {
 
@@ -48,6 +48,7 @@
       au < finished ; frozen ; 2019 ; Aviation Volume 2019 ; 16 ; 2019 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Aviation Volume 2020 ; 17 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Aviation Volume 2021 ; 18 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Aviation Volume 2022 ; 19 ; 2022 ;  >
 
   }
 
@@ -85,9 +86,10 @@
       >
 
       param[journal_id] = BME
-
       #name and issn changed from: Business, Management and Education 2029-6169
+
       au < crawling ; exists ; 2021 ; Business, Management and Economics Engineering Volume 2021 ; 12 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Business, Management and Economics Engineering Volume 2022 ; 13 ; 2022 ;  >
 
   }
 
@@ -117,6 +119,7 @@
       au < finished ; frozen ; 2019 ; Business: Theory and Practice Volume 2019 ; 20 ; 2019 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Business: Theory and Practice Volume 2020 ; 21 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Business: Theory and Practice Volume 2021 ; 22 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Business: Theory and Practice Volume 2022 ; 23 ; 2022 ;  >
 
   }
 
@@ -144,6 +147,7 @@
       au < finished ; frozen ; 2019 ; Creativity Studies Volume 2019 ; 12 ; 2019 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Creativity Studies Volume 2020 ; 13 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Creativity Studies Volume 2021 ; 14 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Creativity Studies Volume 2022 ; 15 ; 2022 ;  >
 
   }
 
@@ -170,6 +174,7 @@
       au < finished ; frozen ; 2019 ; Engineering Structures and Technologies Volume 2019 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ;  >
       au < expected ; exists ; 2021 ; Engineering Structures and Technologies Volume 2021 ; 13 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Engineering Structures and Technologies Volume 2022 ; 14 ; 2022 ;  >
 
   }
 
@@ -201,6 +206,7 @@
       au < finished ; frozen ; 2019 ; Geodesy and Cartography Volume 2019 ; 16 ; 2019 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Geodesy and Cartography Volume 2020 ; 17 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Geodesy and Cartography Volume 2021 ; 18 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Geodesy and Cartography Volume 2022 ; 19 ; 2022 ;  >
 
   }
 
@@ -232,6 +238,7 @@
       au < finished ; frozen ; 2019 ; International Journal of Strategic Property Management Volume 2019 ; 16 ; 2019 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; International Journal of Strategic Property Management Volume 2020 ; 17 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; International Journal of Strategic Property Management Volume 2021 ; 18 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; International Journal of Strategic Property Management Volume 2022 ; 19 ; 2022 ;  >
 
   }
 
@@ -261,6 +268,7 @@
       au < finished ; crawling ; 2019 ; Journal of Architecture and Urbanism Volume 2019 ; 14 ; 2019 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Architecture and Urbanism Volume 2020 ; 15 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Journal of Architecture and Urbanism Volume 2021 ; 16 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Journal of Architecture and Urbanism Volume 2022 ; 17 ; 2022 ;  >
 
   }
 
@@ -293,6 +301,7 @@
       au < finished ; frozen ; 2019 ; Journal of Business Economics and Management Volume 2019 ; 17 ; 2019 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Business Economics and Management Volume 2020 ; 18 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Journal of Business Economics and Management Volume 2021 ; 19 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Journal of Business Economics and Management Volume 2022 ; 20 ; 2022 ;  >
 
   }
 
@@ -333,6 +342,7 @@
       au < finished ; frozen ; 2019 ; Journal of Civil Engineering and Management Volume 2019 ; 25 ; 2019 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Civil Engineering and Management Volume 2020 ; 26 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Journal of Civil Engineering and Management Volume 2021 ; 27 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Journal of Civil Engineering and Management Volume 2022 ; 28 ; 2022 ;  >
 
   }
 
@@ -364,6 +374,7 @@
       au < finished ; frozen ; 2019 ; Journal of Environmental Engineering and Landscape Management Volume 2019 ; 16 ; 2019 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Journal of Environmental Engineering and Landscape Management Volume 2020 ; 17 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Journal of Environmental Engineering and Landscape Management Volume 2021 ; 18 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Journal of Environmental Engineering and Landscape Management Volume 2022 ; 19 ; 2022 ;  >
 
   }
 
@@ -403,6 +414,7 @@
       au < finished ; frozen ; 2019 ; Mathematical Modelling and Analysis Volume 2019 ; 24 ; 2019 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Mathematical Modelling and Analysis Volume 2020 ; 25 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Mathematical Modelling and Analysis Volume 2021 ; 26 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Mathematical Modelling and Analysis Volume 2022 ; 27 ; 2022 ;  >
 
   }
 
@@ -429,6 +441,7 @@
       au < finished ; crawling ; 2019 ; Science - Future of Lithuania Volume 2019 ; 11 ; 2019 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Science - Future of Lithuania Volume 2020 ; 12 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Science - Future of Lithuania Volume 2021 ; 13 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Science - Future of Lithuania Volume 2022 ; 14 ; 2022 ;  >
 
   }
 
@@ -460,6 +473,7 @@
       au < finished ; crawling ; 2019 ; Technological and Economic Development of Economy Volume 2019 ; 16 ; 2019 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Technological and Economic Development of Economy Volume 2020 ; 17 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Technological and Economic Development of Economy Volume 2021 ; 18 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Technological and Economic Development of Economy Volume 2022 ; 19 ; 2022 ;  >
 
   }
 
@@ -493,6 +507,7 @@
       au < finished ; crawling ; 2019 ; Transport Volume 2019 ; 18 ; 2019 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Transport Volume 2020 ; 19 ; 2020 ;  >
       au < crawling ; exists ; 2021 ; Transport Volume 2021 ; 20 ; 2021 ;  >
+      au < expected ; exists ; 2022 ; Transport Volume 2022 ; 21 ; 2022 ;  >
 
   }
 
