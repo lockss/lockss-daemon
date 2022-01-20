@@ -9,7 +9,7 @@
   >
   
     #plugin = needs.plugin
-    plugin = org.lockss.plugin.janeway.olh.ClockssOLHPlugin
+    plugin = org.lockss.plugin.janeway.universityofmichigan.ClockssUniversityofMichiganPlugin
     #param[oai_granularity] = YYYY-MM-DD
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
