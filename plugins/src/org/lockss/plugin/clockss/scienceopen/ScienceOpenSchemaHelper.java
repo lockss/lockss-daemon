@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.clockss.scienceopen;
 
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.util.Logger;
@@ -58,6 +59,9 @@ public class ScienceOpenSchemaHelper extends JatsPublishingSchemaHelper {
     @Override
     public MultiValueMap getCookMap() {
         MultiValueMap theCookMap = super.getCookMap();
+        // only one of these is present, but if both JATS_jtitle overrides.
+        theCookMap.put(JATS_pubname, MetadataField.FIELD_PUBLISHER);
+        theCookMap.put(JATS_jtitle, MetadataField.FIELD_PUBLISHER);
         return theCookMap;
     }
 }
