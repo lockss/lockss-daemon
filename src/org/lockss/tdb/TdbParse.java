@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.tdb;
 
 import java.io.*;
+import java.nio.charset.*;
 import java.util.*;
 
 import org.apache.commons.cli.*;
@@ -51,7 +52,7 @@ public class TdbParse {
    * 
    * @since 1.72
    */
-  public static final String VERSION = "[TdbParse:0.1.2]";
+  public static final String VERSION = "[TdbParse:0.2.0]";
 
   /**
    * @since 1.72
@@ -71,15 +72,19 @@ public class TdbParse {
       try {
         if ("-".equals(f)) {
           f = "<stdin>";
-          tdbBuilder.parse(f, System.in, TdbUtil.ENCODING_UTF_8);
+          tdbBuilder.parse(f, System.in, StandardCharsets.UTF_8);
         }
         else {
-          tdbBuilder.parse(f, TdbUtil.ENCODING_UTF_8);
+          tdbBuilder.parse(f, StandardCharsets.UTF_8);
         }
       }
       catch (FileNotFoundException fnfe) {
         AppUtil.warning(options, fnfe, "%s: file not found", f);
         KeepGoing.addError(options, fnfe);
+      }
+      catch (MalformedInputException mie) {
+        AppUtil.warning(options, mie, "%s: %s", f, mie.getMessage());
+        KeepGoing.addError(options, mie);
       }
       catch (IOException ioe) {
         AppUtil.warning(options, ioe, "%s: I/O error", f);

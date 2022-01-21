@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.tdb;
 
 import java.io.*;
+import java.nio.charset.*;
 import java.text.*;
 import java.util.*;
 import java.util.function.Function;
@@ -52,7 +53,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.2.8]";
+  public static final String VERSION = "[TdbXml:0.3.0]";
   
   /**
    * <p>
@@ -720,7 +721,7 @@ public class TdbXml {
           KeepGoing.addError(options, null);
         }
         else {
-          tdbBuilder.parse(f, TdbUtil.ENCODING_UTF_8);
+          tdbBuilder.parse(f, StandardCharsets.UTF_8);
           PrintStream out = OutputDirectoryOption.getMultipleOutput(options, f, ".xml");
           produceOutput(options, out, tdbBuilder.getTdb());
           out.close();
@@ -765,15 +766,19 @@ public class TdbXml {
       try {
         if ("-".equals(f)) {
           f = "<stdin>";
-          tdbBuilder.parse(f, System.in, TdbUtil.ENCODING_UTF_8);
+          tdbBuilder.parse(f, System.in, StandardCharsets.UTF_8);
         }
         else {
-          tdbBuilder.parse(f, TdbUtil.ENCODING_UTF_8);
+          tdbBuilder.parse(f, StandardCharsets.UTF_8);
         }
       }
       catch (FileNotFoundException fnfe) {
         AppUtil.warning(options, fnfe, "%s: file not found", f);
         KeepGoing.addError(options, fnfe);
+      }
+      catch (MalformedInputException mie) {
+        AppUtil.warning(options, mie, "%s: %s", f, mie.getMessage());
+        KeepGoing.addError(options, mie);
       }
       catch (IOException ioe) {
         AppUtil.warning(options, ioe, "%s: I/O error", f);

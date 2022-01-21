@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2018, Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University,
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -39,7 +39,6 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.apache.commons.cli.*;
-import org.lockss.tdb.AntlrUtil.NamedAntlrInputStream;
 import org.lockss.tdb.Predicates.*;
 import org.lockss.tdb.TdbQueryParser.*;
 
@@ -77,7 +76,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.2.4]";
+  public static final String VERSION = "[TdbQueryBuilder:0.3.0]";
   
   /**
    * <p>
@@ -1334,7 +1333,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     Predicate<Au> queryPredicate = null;
     if (cmd.hasOption(KEY_QUERY)) {
       String query = cmd.getOptionValue(KEY_QUERY);
-      CharStream charStream = new NamedAntlrInputStream("<query>", query);
+      CharStream charStream = CharStreams.fromString(query, "<query>");
       TdbQueryLexer lexer = new TdbQueryLexer(charStream);
       AntlrUtil.setEmacsErrorListener(lexer);
       CommonTokenStream tokens = new CommonTokenStream(lexer);
