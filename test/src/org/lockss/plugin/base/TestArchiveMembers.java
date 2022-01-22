@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,10 +59,6 @@ public class TestArchiveMembers extends LockssTestCase {
   private String tempDirPath;
   private SimulatedArchivalUnit simau;
   MySimulatedArchivalUnit msau;
-
-  String url1 = "http://www.example.com/testDir/leaf1";
-  String url2 = "http://www.example.com/testDir/leaf2";
-  String url3 = "http://www.example.com/testDir/leaf3";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -637,8 +629,6 @@ public class TestArchiveMembers extends LockssTestCase {
     assertNotClass(BaseCachedUrl.Member.class, cu);
     assertFalse(cu.hasContent());
   }    
-
-
 
   String stringFromCu(CachedUrl cu) throws IOException {
     InputStream is = cu.getUnfilteredInputStream();
