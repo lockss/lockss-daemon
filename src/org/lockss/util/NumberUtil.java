@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1293,6 +1289,18 @@ public class NumberUtil {
     BigDecimal bd = new BigDecimal(d);
     bd = bd.setScale(decimalPlaces, BigDecimal.ROUND_HALF_EVEN);
     return bd.doubleValue();
+  }
+
+  /** Raise an int to an int */
+  public static long intPow(long base, int exp) {
+    if (exp < 0) {
+      throw
+        new IllegalArgumentException("Exponent number be non-negative: " + exp);
+    }
+    if (exp == 0) return 1;
+    if (exp == 1) return base;
+    if ((exp & 1) == 0) return intPow(base * base, exp/2);
+    return base * intPow(base * base, exp/2);
   }
 
   /**
