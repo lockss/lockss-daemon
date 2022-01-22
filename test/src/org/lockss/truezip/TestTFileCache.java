@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,11 +30,15 @@ package org.lockss.truezip;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+
+// A more complete (functional) test of zip file processing is in
+// TestArchiveMembers
 
 public class TestTFileCache extends LockssTestCase {
 
@@ -189,5 +189,39 @@ public class TestTFileCache extends LockssTestCase {
     assertEquals(4, tmpDir.list().length);
     assertEquals(10, tfc.getCacheMisses());
     assertEquals(3, tfc.getCacheHits());
+  }
+
+  public void testIrregularSplitZipNumbering() throws IOException {
+    CachedUrl zipCu = mau.addUrl("http://a.b/foo.zip", "main zip");
+
+    List<String> parts = new ArrayList<>();
+
+    for (int i = 1; i <= 9; i++) {
+      storePart(mau, "0" + i);
+    }
+    for (int i = 10; i <= 99; i++) {
+      storePart(mau, "" + i);
+    }
+    for (int i = 100; i <= 110; i++) {
+      storePart(mau, "" + i);
+    }
+
+    File tmpdir = getTempDir();
+
+    tfc.copyParts(zipCu, 2, "splitzip.", tmpdir);
+
+    Set<String> zipparts = Arrays.stream(tmpdir.listFiles())
+      .map(f -> f.getName())
+      .collect(Collectors.toSet());
+
+    assertEquals(110, zipparts.size());
+    for (int i = 1; i <= 110; i++) {
+      assertContains(zipparts, String.format("splitzip.z%02d", i));
+    }
+  }
+
+  void storePart(ArchivalUnit au, String suffix) throws IOException {
+    String name = "http://a.b/foo.z" + suffix;
+    CachedUrl addedCu = mau.addUrl(name, "part " + suffix);
   }
 }
