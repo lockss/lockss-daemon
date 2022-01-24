@@ -72,7 +72,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; http://dmd.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Drug Metabolism and Disposition Volume 48 ; 48 ; http://dmd.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Drug Metabolism and Disposition Volume 49 ; 49 ; https://dmd.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2022 ; Drug Metabolism and Disposition Volume 50 ; 50 ; https://dmd.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2022 ; Drug Metabolism and Disposition Volume 50 ; 50 ; https://dmd.aspetjournals.org/ ; >
 
     }
   }
@@ -473,7 +473,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 377 ; 377 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 378 ; 378 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 379 ; 379 ; https://jpet.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 380 ; 380 ; https://jpet.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 380 ; 380 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 381 ; 381 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 382 ; 382 ; https://jpet.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 383 ; 383 ; https://jpet.aspetjournals.org/ ; >
@@ -620,7 +620,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; https://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ ; >
 
     }
   }

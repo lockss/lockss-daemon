@@ -52,7 +52,7 @@
     au < doNotProcess ; exists ; 2019 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2019 ; 2019 ; > #no substance
     au < finished ; crawling ; 2020 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2022 ; 2022 ; >
+    au < manifest ; exists ; 2022 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2022 ; 2022 ; >
 
   }
 
@@ -129,7 +129,7 @@
       au < finished ; crawling ; 2019 ; QScience Connect Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; QScience Connect Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; QScience Connect Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; QScience Connect Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; QScience Connect Volume 2022 ; 2022 ; >
 
     }
   }
