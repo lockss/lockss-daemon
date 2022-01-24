@@ -76,30 +76,30 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
    */
   private static final Logger log = Logger.getLogger(BaseSpringerLinkCrawlSeed.class);
 
-  protected static final String API_KEY;
-  static {
-    InputStream is = null;
-    BufferedReader br = null;
-    try {
-      is = BaseSpringerLinkCrawlSeed.class.getResourceAsStream("api-key.txt");
+  private static String API_KEY;
+
+  private void loadApiKey() throws PluginException {
+    try (InputStream is =
+         BaseSpringerLinkCrawlSeed.class.getResourceAsStream("api-key.txt")) {
       if (is == null) {
-        throw new ExceptionInInitializerError("Plugin external not found");
+        throw new PluginException("Plugin external not found");
       }
-      br = new BufferedReader(new InputStreamReader(is, Constants.ENCODING_US_ASCII));
+      BufferedReader br = new BufferedReader(new InputStreamReader(is, Constants.ENCODING_US_ASCII));
       API_KEY = br.readLine();
       if (StringUtils.isEmpty(API_KEY)) {
-        throw new ExceptionInInitializerError("Plugin external not loaded");
+        throw new PluginException("Plugin external not loaded");
       }
     }
     catch (IOException ioe) {
-      ExceptionInInitializerError eiie = new ExceptionInInitializerError("Error reading plugin external");
-      eiie.initCause(ioe);
-      throw eiie;
+      throw new PluginException("Error reading plugin external", ioe);
     }
-    finally {
-      IOUtils.closeQuietly(br);
-      IOUtils.closeQuietly(is);
+  }
+
+  protected String getApiKey() throws PluginException {
+    if (API_KEY == null) {
+      loadApiKey();
     }
+    return API_KEY;
   }
 
   /**
@@ -203,7 +203,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
    * @throws IOException
    * @since 1.67.5
    */
-  protected void populateUrlList() throws IOException {
+  protected void populateUrlList() throws IOException, PluginException {
 	AuState aus = AuUtil.getAuState(au);
 	urlList = new ArrayList<String>();
     String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
@@ -314,7 +314,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
    * @return The query URL for the given starting index.
    * @since 1.67.5
    */
-  protected abstract String makeApiUrl(int startingIndex);
+  protected abstract String makeApiUrl(int startingIndex) throws PluginException;
 
   /**
    * <p>
