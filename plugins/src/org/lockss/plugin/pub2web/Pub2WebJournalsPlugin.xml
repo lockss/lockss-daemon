@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -182,6 +182,20 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/docserver(/ahah)?/fulltext/%s/%s/", url_host(base_url), journal_id, volume_name</string>
       <!--  inconsistent for some supplementary data, restrict to start with supp?? -->
       <string>1,"^https?://%s/docserver(/ahah)?/fulltext/supp", url_host(base_url)</string>
+      <!-- back content url pattern sample 1/2022 -->
+      <!--
+
+      	base_url		https://digital-library.theiet.org/
+        Def		journal_id		ccej
+        Def		volume_name		13
+
+        https://digital-library.theiet.org/content/journals/10.1049/cce_20020607?fmt=bib
+        https://digital-library.theiet.org/content/journals/10.1049/cce_20020607?fmt=ris
+        https://digital-library.theiet.org/content/journals/10.1049/cce_20020607?fmt=download
+        https://digital-library.theiet.org/content/journals/10.1049/cce_20020607?fmt=text
+        https://digital-library.theiet.org/content/journals/10.1049/cce_20020611
+      -->
+      <string>1,"^https?://%s/content/journals/[0-9]{2}\.[0-9]{4}/", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
