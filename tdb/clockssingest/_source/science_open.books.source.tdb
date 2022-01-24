@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = ?? ;
+    info[contract] = ?? ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  provider = ScienceOpen
+
+  #Multiple publishers in this stream.
+  #Ingest statistics all under ScienceOpen
+  #Keepers reflects individual publishers
+
+  {
+
+    title <
+      name = ScienceOpen Books Source Content
+    >
+
+      param[base_url] = https://clockss-test.lockss.org/sourcefiles/scienceopenbooks-released/
+
+      plugin = org.lockss.plugin.clockss.scienceopen.ClockssScienceOpenBooksSourcePlugin
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < testing ; testing ; 2021 ; ScienceOpen Books Source Content 2021 ; 2021_01 >
+
+  }
+
+}
