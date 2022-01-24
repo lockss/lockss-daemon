@@ -463,11 +463,11 @@
       au < released ; 2016 ; Comparative Critical Studies Volume 13 ; 13 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Comparative Critical Studies Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Comparative Critical Studies Volume 15 ; 15 ; https://www.euppublishing.com/ >
-    
       au < released ; 2019 ; Comparative Critical Studies Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Comparative Critical Studies Volume 17 ; 17 ; https://www.euppublishing.com/ >
       au < manifest ; 2021 ; Comparative Critical Studies Volume 18 ; 18 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Comparative Critical Studies Volume 19 ; 19 ; https://www.euppublishing.com/ >
+
     }
 
     {
@@ -522,11 +522,11 @@
       au < released ; 2016 ; Corpora Volume 11 ; 11 ; http://www.euppublishing.com/ >
       au < released ; 2017 ; Corpora Volume 12 ; 12 ; https://www.euppublishing.com/ >
       au < released ; 2018 ; Corpora Volume 13 ; 13 ; https://www.euppublishing.com/ >
-    
       au < released ; 2019 ; Corpora Volume 14 ; 14 ; https://www.euppublishing.com/ >
       au < released ; 2020 ; Corpora Volume 15 ; 15 ; https://www.euppublishing.com/ >
       au < manifest ; 2021 ; Corpora Volume 16 ; 16 ; https://www.euppublishing.com/ >
       au < expected ; 2022 ; Corpora Volume 17 ; 17 ; https://www.euppublishing.com/ >
+
     }
   }
     
@@ -546,9 +546,7 @@
 
     au < released ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ >
     au < manifest ; 2021 ; Crime Fiction Studies Volume 2 ; 2 ; https://www.euppublishing.com/ >
-    au < exists ; 2021 ; Crime Fiction Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
-    au < expected ; 2022 ; Crime Fiction Studies Volume 4 ; 4 ; https://www.euppublishing.com/ >
-    au < expected ; 2022 ; Crime Fiction Studies Volume 5 ; 5 ; https://www.euppublishing.com/ >
+    au < expected ; 2022 ; Crime Fiction Studies Volume 3 ; 3 ; https://www.euppublishing.com/ >
 
   }
   
@@ -566,14 +564,28 @@
     param[journal_id] = gels
 
     au < released ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ >
-    au < released ; 2020 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ >
-    au < expected ; 2021 ; Global Energy Law and Sustainability Volume 3 ; 3 ; https://www.euppublishing.com/ >
-    au < expected ; 2021 ; Global Energy Law and Sustainability Volume 4 ; 4 ; https://www.euppublishing.com/ >
-    au < expected ; 2022 ; Global Energy Law and Sustainability Volume 5 ; 5 ; https://www.euppublishing.com/ >
-    au < expected ; 2022 ; Global Energy Law and Sustainability Volume 6 ; 6 ; https://www.euppublishing.com/ >
+    au < released ; 2021 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ >
+    au < expected ; 2022 ; Global Energy Law and Sustainability Volume 3 ; 3 ; https://www.euppublishing.com/ >
 
   }
   
+  {
+
+    title <
+      name = Library History ;
+      issn = 0024-2306 ;
+      issnl = 0024-2306
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = lib
+    #continued_by = 1758-3489
+
+    au < exists ; 2004 ; Library History Volume 20 ; 20 ; https://www.euppublishing.com/ >
+
+  }
+
   {
 
     title <
@@ -585,14 +597,27 @@
 
     plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    #continues = 0024-2306
     param[journal_id] = lih
 
+    au < exists ; 2005 ; Library and Information History Volume 21 ; 21 ; https://www.euppublishing.com/ >
+    au < exists ; 2006 ; Library and Information History Volume 22 ; 22 ; https://www.euppublishing.com/ >
+    au < exists ; 2007 ; Library and Information History Volume 23 ; 23 ; https://www.euppublishing.com/ >
+    au < exists ; 2008 ; Library and Information History Volume 24 ; 24 ; https://www.euppublishing.com/ >
+    au < exists ; 2009 ; Library and Information History Volume 25 ; 25 ; https://www.euppublishing.com/ >
+    au < exists ; 2010 ; Library and Information History Volume 26 ; 26 ; https://www.euppublishing.com/ >
+    au < exists ; 2011 ; Library and Information History Volume 27 ; 27 ; https://www.euppublishing.com/ >
+    au < exists ; 2012 ; Library and Information History Volume 28 ; 28 ; https://www.euppublishing.com/ >
+    au < exists ; 2013 ; Library and Information History Volume 29 ; 29 ; https://www.euppublishing.com/ >
+    au < exists ; 2014 ; Library and Information History Volume 30 ; 30 ; https://www.euppublishing.com/ >
+    au < exists ; 2015 ; Library and Information History Volume 31 ; 31 ; https://www.euppublishing.com/ >
+    au < exists ; 2016 ; Library and Information History Volume 32 ; 32 ; https://www.euppublishing.com/ >
+    au < exists ; 2017 ; Library and Information History Volume 33 ; 33 ; https://www.euppublishing.com/ >
+    au < exists ; 2018 ; Library and Information History Volume 34 ; 34 ; https://www.euppublishing.com/ >
+    au < exists ; 2019 ; Library and Information History Volume 35 ; 35 ; https://www.euppublishing.com/ >
     au < released ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ >
-    au < released ; 2020 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ >
-    au < expected ; 2021 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ >
-    au < expected ; 2021 ; Library and Information History Volume 39 ; 39 ; https://www.euppublishing.com/ >
-    au < expected ; 2022 ; Library and Information History Volume 40 ; 40 ; https://www.euppublishing.com/ >
-    au < expected ; 2022 ; Library and Information History Volume 41 ; 41 ; https://www.euppublishing.com/ >
+    au < released ; 2021 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ >
+    au < expected ; 2022 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ >
 
   }
   

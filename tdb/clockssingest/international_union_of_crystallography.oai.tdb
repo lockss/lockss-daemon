@@ -448,6 +448,7 @@
     au < exists ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (10/2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < exists ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (11/2021) ; 2021-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < exists ; exists ; 2021 ; 8 ; IUCrJ Volume 8 (12/2021) ; 2021-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+
     au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (01/2022) ; 2022-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (02/2022) ; 2022-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (03/2022) ; 2022-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -457,9 +458,9 @@
     au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (07/2022) ; 2022-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (09/2022) ; 2022-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (09/2022) ; 2022-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; expected ; 2022 ; 9 ; IUCrJ Volume 9 (10/2022) ; 2022-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; expected ; 2022 ; 9 ; IUCrJ Volume 9 (11/2022) ; 2022-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; expected ; 2022 ; 9 ; IUCrJ Volume 9 (12/2022) ; 2022-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (10/2022) ; 2022-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (11/2022) ; 2022-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (12/2022) ; 2022-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
   
@@ -553,6 +554,7 @@
     au < exists ; exists ; 2021 ; 6 ; IUCrData Volume 6 (10/2021) ; 2021-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < exists ; exists ; 2021 ; 6 ; IUCrData Volume 6 (11/2021) ; 2021-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < exists ; exists ; 2021 ; 6 ; IUCrData Volume 6 (12/2021) ; 2021-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+
     au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (01/2022) ; 2022-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (02/2022) ; 2022-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (03/2022) ; 2022-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -562,9 +564,9 @@
     au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (07/2022) ; 2022-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (08/2022) ; 2022-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (09/2022) ; 2022-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; expected ; 2022 ; 7 ; IUCrData Volume 7 (10/2022) ; 2022-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; expected ; 2022 ; 7 ; IUCrData Volume 7 (11/2022) ; 2022-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; expected ; 2022 ; 7 ; IUCrData Volume 7 (12/2022) ; 2022-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (10/2022) ; 2022-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (11/2022) ; 2022-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2022 ; 7 ; IUCrData Volume 7 (12/2022) ; 2022-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
 
