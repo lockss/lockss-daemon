@@ -45,11 +45,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Inter-Research Science Publisher Plugin (CLOCKSS)</string>
+        <string>Inter-Research Science Publisher Journals Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Inter-Research Science Publisher Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume Range %s", base_url, journal_id, year, num_issue_range</string>
+        <string>"Inter-Research Science Publisher Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume Range %s", base_url, journal_id, year, num_issue_range</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
