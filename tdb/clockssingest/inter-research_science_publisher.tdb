@@ -8,7 +8,7 @@
     info[platform] = Custom.
   >
   
-  plugin = needs.plugin 
+  plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin
   implicit < status ; status2 ; year ; param[year] ; name ; hidden[proxy] >
   param[base_url] = https://www.int-res.com/
   
@@ -22,7 +22,7 @@
       param[journal_abbr] = meps
 
       au < exists ; exists ; 2019 ; 2019 ; Marine Ecology Progress Series Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Marine Ecology Progress Series Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; Marine Ecology Progress Series Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; Marine Ecology Progress Series Volume 2021 ; >
       au < expected ; expected ; 2022 ; 2022 ; Marine Ecology Progress Series Volume 2022 ; >
 
@@ -40,7 +40,7 @@
 
       au < exists ; exists ; 2019 ; 2019 ; Diseases of Aquatic Organisms Volume 2019 ; >
       au < exists ; exists ; 2020 ; 2020 ; Diseases of Aquatic Organisms Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Diseases of Aquatic Organisms Volume 2021 ; >
+      au < testing ; exists ; 2021 ; 2021 ; Diseases of Aquatic Organisms Volume 2021 ; >
       au < expected ; expected ; 2022 ; 2022 ; Diseases of Aquatic Organisms Volume 2022 ; >
 
   }
@@ -73,7 +73,7 @@
       param[journal_abbr] = ame
 
       au < exists ; exists ; 2019 ; 2019 ; Aquatic Microbial Ecology Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Aquatic Microbial Ecology Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; Aquatic Microbial Ecology Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; Aquatic Microbial Ecology Volume 2021 ; >
       au < expected ; expected ; 2022 ; 2022 ; Aquatic Microbial Ecology Volume 2022 ; >
 
@@ -89,7 +89,7 @@
       #published 2001 to present
       param[journal_abbr] = esep
 
-      au < exists ; exists ; 2019 ; 2019 ; Ethics in Science and Enviromental Politics Volume 2019 ; >
+      au < testing ; exists ; 2019 ; 2019 ; Ethics in Science and Enviromental Politics Volume 2019 ; >
       au < exists ; exists ; 2020 ; 2020 ; Ethics in Science and Enviromental Politics Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; Ethics in Science and Enviromental Politics Volume 2021 ; >
       au < expected ; expected ; 2022 ; 2022 ; Ethics in Science and Enviromental Politics Volume 2022 ; >
@@ -106,7 +106,7 @@
       #published 2004 to present
       param[journal_abbr] = esr
 
-      au < exists ; exists ; 2019 ; 2019 ; Endangered Species Research Volume 2019 ; >
+      au < testing ; exists ; 2019 ; 2019 ; Endangered Species Research Volume 2019 ; >
       au < exists ; exists ; 2020 ; 2020 ; Endangered Species Research Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; Endangered Species Research Volume 2021 ; >
       au < expected ; expected ; 2022 ; 2022 ; Endangered Species Research Volume 2022 ; >
@@ -125,7 +125,7 @@
 
       au < exists ; exists ; 2019 ; 2019 ; Aquatic Biology Volume 2019 ; >
       au < exists ; exists ; 2020 ; 2020 ; Aquatic Biology Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Aquatic Biology Volume 2021 ; >
+      au < testing ; exists ; 2021 ; 2021 ; Aquatic Biology Volume 2021 ; >
       au < expected ; expected ; 2022 ; 2022 ; Aquatic Biology Volume 2022 ; >
 
   }
@@ -141,7 +141,7 @@
       param[journal_abbr] = aei
 
       au < exists ; exists ; 2019 ; 2019 ; Acquaculture Environment Interactions Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Acquaculture Environment Interactions Volume 2020 ; >
+      au < testing ; exists ; 2020 ; 2020 ; Acquaculture Environment Interactions Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; Acquaculture Environment Interactions Volume 2021 ; >
       au < expected ; expected ; 2022 ; 2022 ; Acquaculture Environment Interactions Volume 2022 ; >
 
