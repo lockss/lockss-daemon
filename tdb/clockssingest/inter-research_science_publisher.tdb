@@ -9,7 +9,7 @@
   >
   
   plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin
-  implicit < status ; status2 ; year ; param[year] ; name ; hidden[proxy] >
+  implicit < status ; status2 ; year ; param[year] ; param[num_issue_range] ; name ; hidden[proxy] >
   param[base_url] = https://www.int-res.com/
   
   {
@@ -19,12 +19,12 @@
       eissn = 0171-8630 
     >
       #published 1979 to present
-      param[journal_abbr] = meps
+      param[journal_id] = meps
 
-      au < exists ; exists ; 2019 ; 2019 ; Marine Ecology Progress Series Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; Marine Ecology Progress Series Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Marine Ecology Progress Series Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; Marine Ecology Progress Series Volume 2022 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 612-634 ; Marine Ecology Progress Series Volume 2019 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 635-657 ;Marine Ecology Progress Series Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 658-680 ; Marine Ecology Progress Series Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; 681-730 ; Marine Ecology Progress Series Volume 2022 ; >
 
   }
 
@@ -36,12 +36,12 @@
       eissn = 1616-1580 
     >
       #published 1985 to present
-      param[journal_abbr] = dao
+      param[journal_id] = dao
 
-      au < exists ; exists ; 2019 ; 2019 ; Diseases of Aquatic Organisms Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Diseases of Aquatic Organisms Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Diseases of Aquatic Organisms Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; Diseases of Aquatic Organisms Volume 2022 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 133-137 ; Diseases of Aquatic Organisms Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 138-142 ; Diseases of Aquatic Organisms Volume 2020 ; >
+      au < testing ; exists ; 2021 ; 2021 ; 143-147 ; Diseases of Aquatic Organisms Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; ; Diseases of Aquatic Organisms Volume 2022 ; >
 
   }
 
@@ -53,12 +53,12 @@
       eissn = 1616-1572 
     >
       #published 1990 to present
-      param[journal_abbr] = cr
+      param[journal_id] = cr
 
-      au < exists ; exists ; 2019 ; 2019 ; Climate Research Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Climate Research Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Climate Research Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; Climate Research Volume 2022 ; >
+      au < testing ; exists ; 2019 ; 2019 ; 78-80 ; Climate Research Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 81-83 ; Climate Research Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 84-86 ; Climate Research Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; ; Climate Research Volume 2022 ; >
 
   }
 
@@ -70,12 +70,12 @@
       eissn = 1616-1564 
     >
       #published 1995 to present
-      param[journal_abbr] = ame
+      param[journal_id] = ame
 
-      au < exists ; exists ; 2019 ; 2019 ; Aquatic Microbial Ecology Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; Aquatic Microbial Ecology Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Aquatic Microbial Ecology Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; Aquatic Microbial Ecology Volume 2022 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 82-83 ; Aquatic Microbial Ecology Volume 2019 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 84-85 ; Aquatic Microbial Ecology Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 86-87 ; Aquatic Microbial Ecology Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; 88-89 ; Aquatic Microbial Ecology Volume 2022 ; >
 
   }
 
@@ -87,12 +87,12 @@
       eissn = 1863-5415 
     >
       #published 2001 to present
-      param[journal_abbr] = esep
+      param[journal_id] = esep
 
-      au < testing ; exists ; 2019 ; 2019 ; Ethics in Science and Enviromental Politics Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Ethics in Science and Enviromental Politics Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Ethics in Science and Enviromental Politics Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; Ethics in Science and Enviromental Politics Volume 2022 ; >
+      au < testing ; exists ; 2019 ; 2019 ; 19 ; Ethics in Science and Enviromental Politics Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 20 ; Ethics in Science and Enviromental Politics Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 21 ; Ethics in Science and Enviromental Politics Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; 22 ; Ethics in Science and Enviromental Politics Volume 2022 ; >
 
   }
 
@@ -104,12 +104,12 @@
       eissn = 1613-4796 
     >
       #published 2004 to present
-      param[journal_abbr] = esr
+      param[journal_id] = esr
 
-      au < testing ; exists ; 2019 ; 2019 ; Endangered Species Research Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Endangered Species Research Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Endangered Species Research Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; Endangered Species Research Volume 2022 ; >
+      au < testing ; exists ; 2019 ; 2019 ; 38-40 ; Endangered Species Research Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 41-43 ; Endangered Species Research Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 44-46 ; Endangered Species Research Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; 47-49 ; Endangered Species Research Volume 2022 ; >
 
   }
 
@@ -121,12 +121,12 @@
       eissn = 1864-7790 
     >
       #published 2007 to present
-      param[journal_abbr] = ab
+      param[journal_id] = ab
 
-      au < exists ; exists ; 2019 ; 2019 ; Aquatic Biology Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Aquatic Biology Volume 2020 ; >
-      au < testing ; exists ; 2021 ; 2021 ; Aquatic Biology Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; Aquatic Biology Volume 2022 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 28 ; Aquatic Biology Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 29 ; Aquatic Biology Volume 2020 ; >
+      au < testing ; exists ; 2021 ; 2021 ; 30 ; Aquatic Biology Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; 31 ; Aquatic Biology Volume 2022 ; >
 
   }
 
@@ -138,12 +138,12 @@
       eissn = 1869-7534 
     >
       #published 2009 to present
-      param[journal_abbr] = aei
+      param[journal_id] = aei
 
-      au < exists ; exists ; 2019 ; 2019 ; Acquaculture Environment Interactions Volume 2019 ; >
-      au < testing ; exists ; 2020 ; 2020 ; Acquaculture Environment Interactions Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Acquaculture Environment Interactions Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; Acquaculture Environment Interactions Volume 2022 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 11 ; Acquaculture Environment Interactions Volume 2019 ; >
+      au < testing ; exists ; 2020 ; 2020 ; 12 ; Acquaculture Environment Interactions Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 13 ; Acquaculture Environment Interactions Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; 14 ; Acquaculture Environment Interactions Volume 2022 ; >
 
   }
 
