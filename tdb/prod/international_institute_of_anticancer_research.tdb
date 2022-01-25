@@ -23,7 +23,7 @@
     au < manifest ; 2020 ; Anticancer Research Volume 40 ; 40 >
     au < manifest ; 2021 ; Anticancer Research Volume 41 ; 41 >
     au < manifest ; 2022 ; Anticancer Research Volume 42 ; 42 >
-    au < expected ; 2022 ; Anticancer Research Volume 42 ; 42 >
+
   }
   {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -63,7 +63,7 @@
     au < manifest ; 2020 ; Cancer Genomics & Proteomics Volume 17 ; 17 >
     au < manifest ; 2021 ; Cancer Genomics & Proteomics Volume 18 ; 18 >
     au < manifest ; 2022 ; Cancer Genomics & Proteomics Volume 19 ; 19 >
-    au < expected ; 2022 ; Cancer Genomics & Proteomics Volume 19 ; 19 >
+
   }
   {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -103,7 +103,7 @@
     au < manifest ; 2020 ; In Vivo Volume 34 ; 34 >
     au < manifest ; 2021 ; In Vivo Volume 35 ; 35 >
     au < manifest ; 2022 ; In Vivo Volume 36 ; 36 >
-    au < expected ; 2022 ; In Vivo Volume 36 ; 36 >
+
   }
   {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
