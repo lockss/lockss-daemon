@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -116,6 +116,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_start_url</string>
         <string>"%sjournals/%s/%s-home/", base_url, journal_id, journal_id</string>
+    </entry>
+    <entry>
+        <string>au_permission_url</string>
+        <string>"%slockss", base_url</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
