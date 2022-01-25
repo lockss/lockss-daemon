@@ -2,7 +2,7 @@
 
   publisher <
     name = National Academy of Sciences ;
-    info[platform] = Atypon
+    info[platform] = Atypon Blocked - cant access site via daemon - LXPLUG-2128
   >
   
   {
@@ -14,7 +14,7 @@
       issnl = 0027-8424
     >
     
-    plugin = org.lockss.plugin.atypon.GenericAtyponPlugin
+    plugin = org.lockss.plugin.highwire.nas.NasDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
     # since 1.68, this title has its own crawl pool
 
