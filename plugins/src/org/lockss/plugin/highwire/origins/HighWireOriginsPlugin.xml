@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -137,11 +137,11 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- iii.article-info was causing over counts, should not be collected -->
             <string>2,"^https?://%s/content/%s/(by/(year|volume)|current|.*(/|\.)article-)", url_host(base_url), journal_id</string>
             <!-- after content is optional jcode, required vol, optional issue, optional .toc  -->
-            <string>1,"^https?://%s/content/%s(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), journal_id, volume_name</string>
+            <string>1,"^https?://%s/content/(%s(/(?![0-9]+/)[^/.]+)?/)?%s(/[^/.]+)?(\.toc)?$", url_host(base_url), journal_id, volume_name</string>
             <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL
                   page may also contain roman numerals, dot, & number (iii.2)  -->
             <!-- ASH has a new pattern for supp data http://www.bloodjournal.org/content/121/1/170/tab-figures-only -->
-            <string>1,"^https?://%s/content/%s/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-(data|only))$", url_host(base_url), journal_id, volume_name</string>
+            <string>1,"^https?://%s/content/(%s/)?%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-(data|only))$", url_host(base_url), journal_id, volume_name</string>
             <!-- http://msphere.asm.org/content/1/1/masthead.1-1 was excluded -->
             <string>1,"^https?://%s/content/%s/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-(data|only))$", url_host(base_url), journal_id, volume_name</string>
             <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions -->
