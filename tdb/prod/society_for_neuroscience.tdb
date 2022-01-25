@@ -92,7 +92,7 @@
       au < released ; 2019 ; Journal of Neuroscience Volume 39 ; 39 ; https://www.jneurosci.org/ > #error. 403 forbidden
       au < released ; 2020 ; Journal of Neuroscience Volume 40 ; 40 ; https://www.jneurosci.org/ >
       au < released ; 2021 ; Journal of Neuroscience Volume 41 ; 41 ; https://www.jneurosci.org/ >
-      au < expected ; 2022 ; Journal of Neuroscience Volume 42 ; 42 ; https://www.jneurosci.org/ >
+      au < manifest ; 2022 ; Journal of Neuroscience Volume 42 ; 42 ; https://www.jneurosci.org/ >
     }
     {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
