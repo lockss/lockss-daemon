@@ -188,9 +188,8 @@
       au < doNotProcess ; exists ; 2019 ; 2019 ; NeoReviews Volume 20 ; 20 ; >
       au < doNotProcess ; exists ; 2020 ; 2020 ; NeoReviews Volume 21 ; 21 ; >
       au < manifest ; exists ; 2021 ; 2021 ; NeoReviews Volume 22 ; 22 ; >
-
-  
       au < manifest ; exists ; 2022 ; 2022 ; NeoReviews Volume 23 ; 23 ; >
+
   }
 
   {
@@ -352,9 +351,8 @@
       au < doNotProcess ; exists ; 2020 ; 2020 ; Pediatrics Volume 146 ; 146 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Pediatrics Volume 147 ; 147 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Pediatrics Volume 148 ; 148 ; >
-  
       au < expected ; exists ; 2022 ; 2022 ; Pediatrics Volume 149 ; 149 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; Pediatrics Volume 149 ; 149 ; >
+
   }
 
   {
@@ -410,8 +408,8 @@
       au < doNotProcess ; exists ; 2019 ; 2019 ; Pediatrics in Review Volume 40 ; 40 ; >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Pediatrics in Review Volume 41 ; 41 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Pediatrics in Review Volume 42 ; 42 ; >
-  
       au < manifest ; exists ; 2022 ; 2022 ; Pediatrics in Review Volume 43 ; 43 ; >
+
   }
 
 }
