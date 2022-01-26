@@ -19,7 +19,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
     
     {
-    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriPlugin
+    plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
     #plugin = needs.plugin
 
     au < readySource ; crawling ; 2020 ; Casalini Books Source Content 2020 ; 2020 >
