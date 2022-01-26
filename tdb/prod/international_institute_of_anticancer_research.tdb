@@ -16,7 +16,7 @@
       issnl = 0250-7005
     >
   {
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    plugin = org.lockss.plugin.highwire.iiar.IiarDrupalPlugin
     param[base_url] = https://ar.iiarjournals.org/
 
     au < manifest ; 2019 ; Anticancer Research Volume 39 ; 39 >
@@ -56,7 +56,7 @@
       issnl = 1109-6535
     >
   {
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    plugin = org.lockss.plugin.highwire.iiar.IiarDrupalPlugin
     param[base_url] = https://cgp.iiarjournals.org/
 
     au < manifest ; 2019 ; Cancer Genomics & Proteomics Volume 16 ; 16 >
@@ -96,7 +96,7 @@
       issnl = 0258-851X
     >
   {
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    plugin = org.lockss.plugin.highwire.iiar.IiarDrupalPlugin
     param[base_url] = https://iv.iiarjournals.org/
 
     au < manifest ; 2019 ; In Vivo Volume 33 ; 33 >
