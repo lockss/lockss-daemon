@@ -19,16 +19,30 @@
       name = ScienceOpen Source Content
     >
 
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/scienceopen-released/
 
       plugin = org.lockss.plugin.clockss.scienceopen.ClockssScienceOpenSourcePlugin
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/scienceopen-released/
+      hidden[proxy] = DIRECT
 
       au < readySource ; crawling ; 2020 ; ScienceOpen Source Content 2020 ; 2020 >
       au < readySource ; crawling ; 2021 ; ScienceOpen Source Content 2021 ; 2021 >
       au < readySource ; crawling ; 2022 ; ScienceOpen Source Content 2022 ; 2022 >
 
+  }
+
+  {
+
+    title <
+      name = ScienceOpen Books Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.scienceopen.ClockssScienceOpenBooksSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/scienceopenbooks-released/
+    hidden[proxy] = DIRECT
+
+    au < testing ; testing ; 2021 ; ScienceOpen Books Source Content 2021 ; 2021_01 >
 
   }
 
