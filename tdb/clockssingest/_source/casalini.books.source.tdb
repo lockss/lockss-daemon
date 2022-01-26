@@ -15,12 +15,11 @@
     >
 
     hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[directory] >
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
+    implicit < status ; status2 ; year ; name ; param[directory] >
     
     {
     plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin
-    #plugin = needs.plugin
 
     au < readySource ; crawling ; 2020 ; Casalini Books Source Content 2020 ; 2020 >
     au < readySource ; crawling ; 2021 ; Casalini Books Source Content 2021 ; 2021 >
@@ -28,7 +27,7 @@
     {
     plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
 
-    au < expected ; exists ; 2022 ; Casalini Books Source Content 2022 ; 2022_01 >
+    au < expected ; exists ; 2022 ; Casalini Books Source Content 2022 ; 2022 >
     }
   }
 
