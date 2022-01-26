@@ -19,9 +19,9 @@
     plugin = org.lockss.plugin.highwire.iiar.IiarDrupalPlugin
     param[base_url] = https://ar.iiarjournals.org/
 
-    au < manifest ; 2019 ; Anticancer Research Volume 39 ; 39 >
+    au < testing ; 2019 ; Anticancer Research Volume 39 ; 39 >
     au < manifest ; 2020 ; Anticancer Research Volume 40 ; 40 >
-    au < manifest ; 2021 ; Anticancer Research Volume 41 ; 41 >
+    au < testing ; 2021 ; Anticancer Research Volume 41 ; 41 >
     au < manifest ; 2022 ; Anticancer Research Volume 42 ; 42 >
 
   }
@@ -60,9 +60,9 @@
     param[base_url] = https://cgp.iiarjournals.org/
 
     au < manifest ; 2019 ; Cancer Genomics & Proteomics Volume 16 ; 16 >
-    au < manifest ; 2020 ; Cancer Genomics & Proteomics Volume 17 ; 17 >
+    au < testing ; 2020 ; Cancer Genomics & Proteomics Volume 17 ; 17 >
     au < manifest ; 2021 ; Cancer Genomics & Proteomics Volume 18 ; 18 >
-    au < manifest ; 2022 ; Cancer Genomics & Proteomics Volume 19 ; 19 >
+    au < testing ; 2022 ; Cancer Genomics & Proteomics Volume 19 ; 19 >
 
   }
   {
@@ -99,9 +99,9 @@
     plugin = org.lockss.plugin.highwire.iiar.IiarDrupalPlugin
     param[base_url] = https://iv.iiarjournals.org/
 
-    au < manifest ; 2019 ; In Vivo Volume 33 ; 33 >
+    au < testing ; 2019 ; In Vivo Volume 33 ; 33 >
     au < manifest ; 2020 ; In Vivo Volume 34 ; 34 >
-    au < manifest ; 2021 ; In Vivo Volume 35 ; 35 >
+    au < testing ; 2021 ; In Vivo Volume 35 ; 35 >
     au < manifest ; 2022 ; In Vivo Volume 36 ; 36 >
 
   }
