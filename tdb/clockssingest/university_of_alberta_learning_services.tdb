@@ -29,9 +29,9 @@
 
         au < frozen ; exists ; 2018 ; Journal of Pharmacy and Pharmaceutical Science Volume 21 ; 2018 ; 21 ; >
         au < frozen ; exists ; 2019 ; Journal of Pharmacy and Pharmaceutical Science Volume 22 ; 2019 ; 22 ; >
-        au < deepCrawl ; exists ; 2020 ; Journal of Pharmacy and Pharmaceutical Science Volume 23 ; 2020 ; 22 ; >
-        au < crawling ; exists ; 2021 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2021 ; 23 ; >
-        au < manifest ; exists ; 2022 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2022 ; 24 ; >
+        au < deepCrawl ; exists ; 2020 ; Journal of Pharmacy and Pharmaceutical Science Volume 23 ; 2020 ; 23 ; >
+        au < crawling ; exists ; 2021 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2021 ; 24 ; >
+        au < manifest ; exists ; 2022 ; Journal of Pharmacy and Pharmaceutical Science Volume 25 ; 2022 ; 25 ; >
         }
         {
         plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
