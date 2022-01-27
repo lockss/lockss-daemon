@@ -23,7 +23,6 @@ public class InterResearchHtmlMetadataExtractorFactory
   public static class InterResearchHtmlMetadataExtractor
       extends SimpleHtmlMetaTagMetadataExtractor {
 
-    // Map BePress-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);

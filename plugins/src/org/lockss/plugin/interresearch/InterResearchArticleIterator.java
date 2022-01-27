@@ -1,5 +1,6 @@
 package org.lockss.plugin.interresearch;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
@@ -12,7 +13,9 @@ import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.util.Logger;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class InterResearchArticleIterator
@@ -24,30 +27,27 @@ public class InterResearchArticleIterator
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   protected static final String PATTERN_TEMPLATE = "\"%sabstracts/%s/v.*\", base_url, journal_id";
 
-  // https://www.int-res.com/abstracts/dao/v143/p205-226/
-  // https://www.int-res.com/abstracts/dao/v143/p205-226/
-  protected static final Pattern ABS_PATTERN = Pattern.compile("abstracts/[^/]+/v(\\d+)/p(\\d+)-(\\d+)");
+  // https://www.int-res.com/abstracts/dao/v143/p205-226
+  //          there is sometimes an issue directory, the page count increments seamlessly as the issue number changes.
+  // https://www.int-res.com/abstracts/cr/v78/n1/p83-101/
+  // https://www.int-res.com/abstracts/cr/v78/n2/p103-116
+  protected static final Pattern ABS_PATTERN = Pattern.compile("abstracts/[^/]+/v(\\d+)(/n\\d+)?/p(\\d+)-(\\d+)$");
   protected static String ABS_REPL;
 
-  protected static String MAIN_PDF_REPL;
-  protected static String MAIN_PDF_REPL0;
-  protected static String MAIN_PDF_REPL00;
-  protected static String FEATURE_PDF_REPL;
-  protected static String FEATURE_PDF_REPL0;
-  protected static String FEATURE_PDF_REPL00;
-  protected static String OA_PDF_REPL;
-  protected static String OA_PDF_REPL0;
-  protected static String OA_PDF_REPL00;
+  // https://www.int-res.com/articles/feature/d143p205.pdf
+  // https://www.int-res.com/articles/dao_oa/d143p169.pdf
+  // https://www.int-res.com/articles/cr_oa/c078p237.pdf
+  // https://www.int-res.com/articles/ab2021/30/b030p001.pdf
+  // https://www.int-res.com/articles/dao2021/143/d143p159.pdf
+  // https://www.int-res.com/articles/cr2019/78/c078p103.pdf
+  // PDF pattern can't be used to make an Abstract replacement because of the end_page in the abstract that doesn't
+  // exist in the PDF url.
 
-  protected static String MAIN_XML_REPL;
-  protected static String MAIN_XML_REPL0;
-  protected static String MAIN_XML_REPL00;
-  protected static String FEATURE_XML_REPL;
-  protected static String FEATURE_XML_REPL0;
-  protected static String FEATURE_XML_REPL00;
-  protected static String OA_XML_REPL;
-  protected static String OA_XML_REPL0;
-  protected static String OA_XML_REPL00;
+  // wow, now the pattern is totally non guessable
+  // https://www.int-res.com/abstracts/aei/v12/p1-10
+  // https://www.int-res.com/articles/aei2020/12/q012p001.pdf -- note the "q"
+
+  // https://www.int-res.com/articles/xml/aei/12/q012p001.xml
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -55,42 +55,35 @@ public class InterResearchArticleIterator
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-    String fileName = String.format("%s$1p$2", au.getConfiguration().get("journal_id").charAt(0));
-    String fileName0 = String.format("%s$1p0$2", au.getConfiguration().get("journal_id").charAt(0));
-    String fileName00 = String.format("%s$1p00$2", au.getConfiguration().get("journal_id").charAt(0));
+    String jid = au.getConfiguration().get("journal_id");
+    // make abstract replacement now that we have the jid.
+    ABS_REPL = String.format("abstracts/%s/v$1$2/p$3-$4", jid);
+    // there are three different paths that the pdfs and xmls are in
+    List<String> paths = Arrays.asList(
+        "feature/",
+        String.format("%s_oa/", jid),
+        // the volume is appended to the <vol><year>/ construction
+        String.format("%s%s/$1/", jid, au.getConfiguration().get("year"))
+    );
 
-    String mainPath = String.format("articles/%s%s/", au.getConfiguration().get("journal_id"), au.getConfiguration().get("year"));
-    String featPath = "articles/feature/";
-    String openPath = String.format("articles/%s_oa/", au.getConfiguration().get("journal_id"));
-
-    ABS_REPL = String.format("abstracts/%s/v$1/p$2-$3", au.getConfiguration().get("journal_id"));
-
-           // https://www.int-res.com/articles/dao2021/143/d143p159.pdf
-    MAIN_PDF_REPL = String.format("%s$1/%s.pdf", mainPath, fileName);
-    MAIN_PDF_REPL0 = String.format("%s$1/%s.pdf", mainPath, fileName0);
-    MAIN_PDF_REPL00 = String.format("%s$1/%s.pdf", mainPath, fileName00);
-           // https://www.int-res.com/articles/feature/d143p205.pdf
-    FEATURE_PDF_REPL = String.format( "%s%s.pdf", featPath, fileName);
-    FEATURE_PDF_REPL0 = String.format( "%s%s.pdf", featPath, fileName0);
-    FEATURE_PDF_REPL00 = String.format( "%s%s.pdf", featPath, fileName00);
-           // https://www.int-res.com/articles/dao_oa/d143p169.pdf
-    OA_PDF_REPL = String.format("%s%s.pdf", openPath, fileName);
-    OA_PDF_REPL0 = String.format("%s%s.pdf", openPath, fileName0);
-    OA_PDF_REPL00 = String.format("%s%s.pdf", openPath, fileName00);
-
-
-    MAIN_XML_REPL = String.format("%s$1/%s.xml", mainPath, fileName);
-    MAIN_XML_REPL0 = String.format("%s$1/%s.xml", mainPath, fileName0);
-    MAIN_XML_REPL00 = String.format("%s$1/%s.xml", mainPath, fileName00);
-    // https://www.int-res.com/articles/feature/d143p205.XML
-    FEATURE_XML_REPL = String.format( "%s%s.xml", featPath, fileName);
-    FEATURE_XML_REPL0 = String.format( "%s%s.xml", featPath, fileName0);
-    FEATURE_XML_REPL00 = String.format( "%s%s.xml", featPath, fileName00);
-    // https://www.int-res.com/articles/dao_oa/d143p169.xml
-    OA_XML_REPL = String.format("%s%s.xml", openPath, fileName);
-    OA_XML_REPL0 = String.format("%s%s.xml", openPath, fileName0);
-    OA_XML_REPL00 = String.format("%s%s.xml", openPath, fileName00);
-
+    // the pdf and xml replacements are big lists. as the volume and page numbers are both zero padded to 3 characters.
+    List<String> zero_padding = Arrays.asList("00", "0", "");
+    List<String> PDF_REPLACEMENTS = new java.util.ArrayList<>();
+    List<String> XML_REPLACEMENTS = new java.util.ArrayList<>();
+    // iterate over the various zero paddings, and url paths for the pdfs and xmls.
+    // also add each letter journal id, this happens when the first letter is taken already, and sometimes its another
+    // letter entirely, see @InterResearchArticleMetadataExtractor
+    for (String page_padding : zero_padding) {
+      for (String vol_padding : zero_padding) {
+        for (char letter : jid.toCharArray()) {
+          // xml files are always the same path,
+          XML_REPLACEMENTS.add(String.format("articles/xml/%s/$1/%s%s$1p%s$3.xml", jid, letter, vol_padding, page_padding));
+          for (String path : paths) {
+            PDF_REPLACEMENTS.add(String.format("articles/%s%s%s$1p%s$3.pdf", path, letter, vol_padding, page_padding));
+          }
+        }
+      }
+    }
 
     builder.setSpec(
       target,
@@ -107,32 +100,12 @@ public class InterResearchArticleIterator
     );
 
     builder.addAspect(
-      Arrays.asList(
-          MAIN_PDF_REPL,
-          MAIN_PDF_REPL0,
-          MAIN_PDF_REPL00,
-          FEATURE_PDF_REPL,
-          FEATURE_PDF_REPL0,
-          FEATURE_PDF_REPL00,
-          OA_PDF_REPL,
-          OA_PDF_REPL0,
-          OA_PDF_REPL00
-      ),
+      PDF_REPLACEMENTS,
       ArticleFiles.ROLE_FULL_TEXT_PDF
     );
 
     builder.addAspect(
-      Arrays.asList(
-          MAIN_XML_REPL,
-          MAIN_XML_REPL0,
-          MAIN_XML_REPL00,
-          FEATURE_XML_REPL,
-          FEATURE_XML_REPL0,
-          FEATURE_XML_REPL00,
-          OA_XML_REPL,
-          OA_XML_REPL0,
-          OA_XML_REPL00
-      ),
+      XML_REPLACEMENTS,
       ArticleFiles.ROLE_FULL_TEXT_XML
     );
 
@@ -147,7 +120,7 @@ public class InterResearchArticleIterator
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    return new InterResearchArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 
 }

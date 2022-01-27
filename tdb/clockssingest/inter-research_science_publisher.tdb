@@ -9,7 +9,7 @@
   >
   
   plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin
-  implicit < status ; status2 ; year ; param[year] ; param[num_issue_range] ; name ; hidden[proxy] >
+  implicit < status ; status2 ; year ; param[year] ; param[volume] ; name ; hidden[proxy] >
   param[base_url] = https://www.int-res.com/
   
   {

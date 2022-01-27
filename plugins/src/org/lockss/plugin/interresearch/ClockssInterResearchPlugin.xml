@@ -49,7 +49,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Inter-Research Science Publisher Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume Range %s", base_url, journal_id, year, num_issue_range</string>
+        <string>"Inter-Research Science Publisher Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume Range %s", base_url, journal_id, year, volume</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -90,9 +90,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>num_issue_range</key>
-                <displayName>Numeric Issue Range</displayName>
-                <description>A Range of issues in the form: min-max</description>
+                <key>volume</key>
+                <displayName>Numeric Volume Range</displayName>
+                <description>A Range of volumes in the form: min-max</description>
                 <type>8</type>
                 <size>40</size>
                 <definitional>true</definitional>
@@ -140,7 +140,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
                 https://www.int-res.com/fileadmin/citeExport.php?pid=36462&mode=refmanager
              -->
-            <string>1,"^%sabstracts/%s/v%s", base_url, journal_id, num_issue_range</string>
+            <string>1,"^%sabstracts/%s/v%s", base_url, journal_id, volume</string>
             <string>1,"^%sarticles/%s(%d|_oa)/", base_url, journal_id, year</string>
             <string>1,"^%sarticles/(feature|suppl|%s(%d|_oa))/", base_url, journal_id, year</string>
             <string>1,"^%sfileadmin/citeExport\.php\?pid=", base_url</string>
@@ -151,7 +151,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <!-- https://www.int-res.com/abstracts/meps/v681/p21-35/
                  https://www.int-res.com/articles/meps2022/681/m681p021.pdf -->
-            <string>"^%s(abstracts/%s/v%s/p|articles/(feature|%s(%d|_oa))/.*\.pdf)", base_url, journal_id, num_issue_range, journal_id, year</string>
+            <string>"^%s(abstracts/%s/v%s/p|articles/(feature|%s(%d|_oa))/.*\.pdf)", base_url, journal_id, volume, journal_id, year</string>
         </list>
     </entry>
     <entry>
