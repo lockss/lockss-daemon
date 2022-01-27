@@ -5,6 +5,151 @@
 
     pluginPrefix = org.lockss.plugin.
     implicit < pluginSuffix ; status ; year ; volume ; name ; param[year] ; comment[error] >
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Acta Periodica Duellatorum ;
+        eissn = 2064-0404
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = apd
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; manifest ; 2013 ; 1 ; Acta Periodica Duellatorum Volume 2013 ; 2013 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2014 ; 2 ; Acta Periodica Duellatorum Volume 2014 ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 3 ; Acta Periodica Duellatorum Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 4 ; Acta Periodica Duellatorum Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 5 ; Acta Periodica Duellatorum Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 6 ; Acta Periodica Duellatorum Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 7 ; Acta Periodica Duellatorum Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 8 ; Acta Periodica Duellatorum Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 9 ; Acta Periodica Duellatorum Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 10 ; Acta Periodica Duellatorum Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = BAF-Online: Proceedings of the Berner Altorientalisches Forum ;
+        eissn = 2504-2076
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = baf
+      #Can we preserve with video content? See LXQ-631
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; released ; 2016 ; 1 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2017 ; 2 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 3 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 4 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2019 ; 2019 ; >
+
+  }
+
+  {
+
+      title <
+        name = BE N'ius - Beiträge aus der Berner Justiz ;
+        eissn = OOOO-OOOO
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = BENius
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; manifest ; 2010 ; 9 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2010 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2011 ; 10 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2011 ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2012 ; 11 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2012 ; 2012 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2013 ; 12 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2013 ; 2013 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2014 ; 13-15 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2014 ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 16-17 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 18-19 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 20-21 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 22-23 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 24-25 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 26-27 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 28-29 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 30-31 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Current Issues in Sport Science ;
+        eissn = 2414-6641
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://ciss-journal.org/
+      param[journal_id] = ciss
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 1 ; Current Issues in Sport Science Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 2 ; Current Issues in Sport Science Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 3 ; Current Issues in Sport Science Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 4 ; Current Issues in Sport Science Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 5 ; Current Issues in Sport Science Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 6 ; Current Issues in Sport Science Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = European Journal of Musicology ;
+        eissn = 0000-0000
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = EJM
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; manifest ; 1998 ; 1 ; European Journal of Musicology Volume 1998 ; 1998 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 1999 ; 2 ; European Journal of Musicology Volume 1999 ; 1999 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2000 ; 3 ; European Journal of Musicology Volume 2000 ; 2000 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2001 ; 4 ; European Journal of Musicology Volume 2001 ; 2001 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2002 ; 5 ; European Journal of Musicology Volume 2002 ; 2002 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2003 ; 6 ; European Journal of Musicology Volume 2003 ; 2003 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2004 ; 7 ; European Journal of Musicology Volume 2004 ; 2004 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2005 ; 8 ; European Journal of Musicology Volume 2005 ; 2005 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2006 ; 9 ; European Journal of Musicology Volume 2006 ; 2006 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2007 ; 10 ; European Journal of Musicology Volume 2007 ; 2007 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2008 ; 11 ; European Journal of Musicology Volume 2008 ; 2008 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2009 ; 12 ; European Journal of Musicology Volume 2009 ; 2009 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2010 ; 13 ; European Journal of Musicology Volume 2010 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2011 ; 14 ; European Journal of Musicology Volume 2011 ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 15 ; European Journal of Musicology Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 16 ; European Journal of Musicology Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 17 ; European Journal of Musicology Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 18 ; European Journal of Musicology Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 19 ; European Journal of Musicology Volume 2020 ; 2020 ; >
+
+  }
+
+  {
+
+      title <
+        name = HASBonline – Hefte zur Archäologie des Mittelmeerraumes aus Bern ;
+        eissn = 2504-432X
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = HASBonline
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; released ; 2017 ; 22 ; HASBonline – Hefte zur Archäologie des Mittelmeerraumes aus Bern Volume 2017 ; 2017 ; >
+
+  }
 
   {
 
@@ -23,10 +168,9 @@
       au < ojs2.OJS2Plugin ; down ; 2014 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
       au < ojs2.OJS2Plugin ; down ; 2016 ; 4 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
 
-      au < ojs3.Ojs3Plugin ; notReady ; 2018 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2018 ; 2018 ; > #500 error https://bop.unibe.ch/iw/article/view/4368
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2018 ; 2018 ; > #500 error https://bop.unibe.ch/iw/article/view/4368
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 6 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2021 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 8 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2022 ; 2022 ; >
 
   }
 
@@ -44,6 +188,9 @@
 
       au < ojs2.OJS2Plugin ; down ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
       au < ojs2.OJS2Plugin ; down ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 3 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 4 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 5 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2021 ; 2021 ; >
 
   }
 
@@ -129,56 +276,18 @@
   {
 
       title <
-        name = BAF-Online: Proceedings of the Berner Altorientalisches Forum ;
-        eissn = 2504-2076
-      >
-
-      comment[publisher] = University of Bern
-      param[base_url] = https://bop.unibe.ch/
-      param[journal_id] = baf
-      #Can we preserve with video content? See LXQ-631
-      #moved to ojs3
-
-      au < ojs3.Ojs3Plugin ; released ; 2016 ; 1 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2016 ; 2016 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2017 ; 2 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2017 ; 2017 ; >
-
-  }
-
-  {
-
-      title <
-        name = HASBonline – Hefte zur Archäologie des Mittelmeerraumes aus Bern ;
+        name = Judaica. Neue digitale Folge ;
         eissn = 2504-432X
       >
 
       comment[publisher] = University of Bern
-      param[base_url] = https://bop.unibe.ch/
-      param[journal_id] = HASBonline
+      param[base_url] = https://judaica.ch/
+      param[journal_id] = judaica
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; released ; 2017 ; 22 ; HASBonline – Hefte zur Archäologie des Mittelmeerraumes aus Bern Volume 2017 ; 2017 ; >
-
-  }
-
-  {
-
-      title <
-        name = Versants. Revista suiza de literaturas románicas ;
-        eissn = 2504-2750
-      >
-
-      comment[publisher] = University of Bern
-      param[base_url] = https://bop.unibe.ch/
-      param[journal_id] = versants
-      #moved to ojs3
-
-      au < ojs3.Ojs3Plugin ; released ; 2016 ; 63 ; Versants. Revista suiza de literaturas románicas Volume 2016 ; 2016 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2017 ; 64 ; Versants. Revista suiza de literaturas románicas Volume 2017 ; 2017 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2018 ; 65 ; Versants. Revista suiza de literaturas románicas Volume 2018 ; 2018 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2019 ; 66 ; Versants. Revista suiza de literaturas románicas Volume 2019 ; 2019 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2020 ; 67 ; Versants. Revista suiza de literaturas románicas Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 68 ; Versants. Revista suiza de literaturas románicas Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 69 ; Versants. Revista suiza de literaturas románicas Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2020 ; 1 ; Judaica. Neue digitale Folge Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2021 ; 2 ; Judaica. Neue digitale Folge Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2022 ; 3 ; Judaica. Neue digitale Folge Volume 2022 ; 2022 ; >
 
   }
 
@@ -217,8 +326,30 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 88-93 ; Linguistik Online Volume 88-93 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 94-100 ; Linguistik Online Volume 94-100 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 101-105 ; Linguistik Online Volume 101-105 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 106-110 ; Linguistik Online Volume 106-110 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 106-112 ; Linguistik Online Volume 106-110 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 113-116 ; Linguistik Online Volume 111-115 ; 2022 ; >
 
+  }
+
+  {
+
+      title <
+        name = Versants. Revista suiza de literaturas románicas ;
+        eissn = 2504-2750
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = versants
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; released ; 2016 ; 63 ; Versants. Revista suiza de literaturas románicas Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2017 ; 64 ; Versants. Revista suiza de literaturas románicas Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2018 ; 65 ; Versants. Revista suiza de literaturas románicas Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2019 ; 66 ; Versants. Revista suiza de literaturas románicas Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2020 ; 67 ; Versants. Revista suiza de literaturas románicas Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 68 ; Versants. Revista suiza de literaturas románicas Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 69 ; Versants. Revista suiza de literaturas románicas Volume 2022 ; 2022 ; >
 
   }
 
