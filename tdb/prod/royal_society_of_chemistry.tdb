@@ -1108,7 +1108,7 @@
       
       #complete
       au < released ; 2002 ; Photochemical & Photobiological Sciences Volume 1 ; 1 ; 2002 ; https://pubs.rsc.org/ >
-      au < manifest ; 2003 ; Photochemical & Photobiological Sciences Volume 2 ; 2 ; 2003 ; https://pubs.rsc.org/ >
+      au < ready ; 2003 ; Photochemical & Photobiological Sciences Volume 2 ; 2 ; 2003 ; https://pubs.rsc.org/ >
       au < released ; 2004 ; Photochemical & Photobiological Sciences Volume 3 ; 3 ; 2004 ; https://pubs.rsc.org/ >
       au < released ; 2005 ; Photochemical & Photobiological Sciences Volume 4 ; 4 ; 2005 ; https://pubs.rsc.org/ >
       au < released ; 2006 ; Photochemical & Photobiological Sciences Volume 5 ; 5 ; 2006 ; https://pubs.rsc.org/ >
@@ -2272,7 +2272,7 @@
       param[journal_code] = p1
 
       au < released ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2001 ; 0 ; 2001 ; https://pubs.rsc.org/ >
-      au < manifest ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ >
+      au < ready ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 Volume 2002 ; 0 ; 2002 ; https://pubs.rsc.org/ >
 
   }
 
