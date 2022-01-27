@@ -2057,6 +2057,7 @@
     au < finished ; crawling ; 2020 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 41 ; 2020 ; 41 ; https://www.ijstd.org/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 42 ; 2021 ; 42 ; https://www.ijstd.org/ ; ; >
     au < expected ; exists ; 2022 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 43 ; 2022 ; 43 ; https://www.ijstd.org/ ; ; >
+
     }
 
     {
@@ -2069,6 +2070,7 @@
     au < finished ; frozen ; 2014 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 35 ; 2014 ; 35 ; http://www.ijstd.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 36 ; 2015 ; 36 ; http://www.ijstd.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 37 ; 2016 ; 37 ; http://www.ijstd.org/ ; ; reingest3.clockss.org:8083 >
+
     }
   }
 
@@ -2297,7 +2299,7 @@
     au < finished ; frozen ; 2013 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 3 ; 2013 ; 3 ; http://www.ijnpnd.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 4 ; 2014 ; 4 ; http://www.ijnpnd.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 5 ; 2015 ; 5 ; http://www.ijnpnd.com/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 6 ; 2016 ; 6 ; http://www.ijnpnd.com/ ; ; >
+    au < finished ; manifest ; 2016 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 6 ; 2016 ; 6 ; http://www.ijnpnd.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 7 ; 2017 ; 7 ; http://www.ijnpnd.com/ ; ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 2018 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 8 ; 2018 ; 8 ; https://www.ijnpnd.com/ ; 500 Error ; > #500 https://www.ijnpnd.com/article.asp?issn=2231-0738;year=2018;volume=8;issue=1;spage=16;epage=31;aulast=Madan;type=2
     au < finished ; crawling ; 2019 ; International Journal of Nutrition, Pharmacology, Neurological Diseases Volume 9 ; 2019 ; 9 ; https://www.ijnpnd.com/ ; ; reingest3.clockss.org:8083 >
@@ -2384,9 +2386,9 @@
     au < finished ; finished ; 2013 ; International Journal of Trichology Volume 5 ; 2013 ; 5 ; http://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2014 ; International Journal of Trichology Volume 6 ; 2014 ; 6 ; https://www.ijtrichology.com/ ; ; > #500 error
     au < finished ; frozen ; 2015 ; International Journal of Trichology Volume 7 ; 2015 ; 7 ; http://www.ijtrichology.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Trichology Volume 8 ; 2016 ; 8 ; http://www.ijtrichology.com/ ; ; >
+    au < finished ; manifest ; 2016 ; International Journal of Trichology Volume 8 ; 2016 ; 8 ; http://www.ijtrichology.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2017 ; International Journal of Trichology Volume 9 ; 2017 ; 9 ; http://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; International Journal of Trichology Volume 10 ; 2018 ; 10 ; http://www.ijtrichology.com/ ; ; >
+    au < finished ; manifest ; 2018 ; International Journal of Trichology Volume 10 ; 2018 ; 10 ; http://www.ijtrichology.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; International Journal of Trichology Volume 11 ; 2019 ; 11 ; https://www.ijtrichology.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; International Journal of Trichology Volume 12 ; 2020 ; 12 ; https://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2021 ; International Journal of Trichology Volume 13 ; 2021 ; 13 ; https://www.ijtrichology.com/ ; ; >
@@ -2413,9 +2415,9 @@
     au < finished ; frozen ; 2013 ; International Journal of Yoga Volume 6 ; 2013 ; 6 ; http://www.ijoy.org.in/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; International Journal of Yoga Volume 7 ; 2014 ; 7 ; http://www.ijoy.org.in/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; International Journal of Yoga Volume 8 ; 2015 ; 8 ; http://www.ijoy.org.in/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; International Journal of Yoga Volume 9 ; 2016 ; 9 ; http://www.ijoy.org.in/ ; ; >
+    au < finished ; manifest ; 2016 ; International Journal of Yoga Volume 9 ; 2016 ; 9 ; http://www.ijoy.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2017 ; International Journal of Yoga Volume 10 ; 2017 ; 10 ; http://www.ijoy.org.in/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; International Journal of Yoga Volume 11 ; 2018 ; 11 ; http://www.ijoy.org.in/ ; ; >
+    au < finished ; manifest ; 2018 ; International Journal of Yoga Volume 11 ; 2018 ; 11 ; http://www.ijoy.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; International Journal of Yoga Volume 12 ; 2019 ; 12 ; https://www.ijoy.org.in/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; International Journal of Yoga Volume 13 ; 2020 ; 13 ; https://www.ijoy.org.in/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; International Journal of Yoga Volume 14 ; 2021 ; 14 ; https://www.ijoy.org.in/ ; ; >
@@ -2439,7 +2441,7 @@
     au < finished ; crawling ; 2015 ; Iranian Journal of Nursing and Midwifery Research Volume 20 ; 2015 ; 20 ; http://www.ijnmrjournal.net/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Iranian Journal of Nursing and Midwifery Research Volume 21 ; 2016 ; 21 ; http://www.ijnmrjournal.net/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Iranian Journal of Nursing and Midwifery Research Volume 22 ; 2017 ; 22 ; http://www.ijnmrjournal.net/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Iranian Journal of Nursing and Midwifery Research Volume 23 ; 2018 ; 23 ; http://www.ijnmrjournal.net/ ; ; >
+    au < finished ; manifest ; 2018 ; Iranian Journal of Nursing and Midwifery Research Volume 23 ; 2018 ; 23 ; http://www.ijnmrjournal.net/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Iranian Journal of Nursing and Midwifery Research Volume 24 ; 2019 ; 24 ; https://www.ijnmrjournal.net/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Iranian Journal of Nursing and Midwifery Research Volume 25 ; 2020 ; 25 ; https://www.ijnmrjournal.net/ ; ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Iranian Journal of Nursing and Midwifery Research Volume 26 ; 2021 ; 26 ; https://www.ijnmrjournal.net/ ; ; >
@@ -2479,9 +2481,9 @@
     au < finished ; frozen ; 2013 ; Journal of Advanced Pharmaceutical Technology & Research Volume 4 ; 2013 ; 4 ; http://www.japtr.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2014 ; Journal of Advanced Pharmaceutical Technology & Research Volume 5 ; 2014 ; 5 ; http://www.japtr.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Journal of Advanced Pharmaceutical Technology & Research Volume 6 ; 2015 ; 6 ; http://www.japtr.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Advanced Pharmaceutical Technology & Research Volume 7 ; 2016 ; 7 ; http://www.japtr.org/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Advanced Pharmaceutical Technology & Research Volume 7 ; 2016 ; 7 ; http://www.japtr.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Advanced Pharmaceutical Technology & Research Volume 8 ; 2017 ; 8 ; http://www.japtr.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Advanced Pharmaceutical Technology & Research Volume 9 ; 2018 ; 9 ; http://www.japtr.org/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Advanced Pharmaceutical Technology & Research Volume 9 ; 2018 ; 9 ; http://www.japtr.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Advanced Pharmaceutical Technology & Research Volume 10 ; 2019 ; 10 ; https://www.japtr.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Journal of Advanced Pharmaceutical Technology & Research Volume 11 ; 2020 ; 11 ; https://www.japtr.org/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Advanced Pharmaceutical Technology & Research Volume 12 ; 2021 ; 12 ; https://www.japtr.org/ ; ; >
@@ -2582,7 +2584,7 @@
     au < finished ; frozen ; 2017 ; Journal of Cancer Research and Therapeutics Volume 13 ; 2017 ; 13 ; http://www.cancerjournal.net/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Journal of Cancer Research and Therapeutics Volume 14 ; 2018 ; 14 ; http://www.cancerjournal.net/ ; ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2019 ; Journal of Cancer Research and Therapeutics Volume 15 ; 2019 ; 15 ; https://www.cancerjournal.net/ ; ; > #500 https://www.cancerjournal.net/article.asp?issn=0973-1482;year=2019;volume=15;issue=7;spage=1471;epage=1476;aulast=Feng;type=2
-    au < deepCrawl ; exists ; 2020 ; Journal of Cancer Research and Therapeutics Volume 16 ; 2020 ; 16 ; https://www.cancerjournal.net/ ; ; >
+    au < finished ; manifest ; 2020 ; Journal of Cancer Research and Therapeutics Volume 16 ; 2020 ; 16 ; https://www.cancerjournal.net/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Cancer Research and Therapeutics Volume 17 ; 2021 ; 17 ; https://www.cancerjournal.net/ ; ; >
     au < expected ; exists ; 2022 ; Journal of Cancer Research and Therapeutics Volume 18 ; 2022 ; 18 ; https://www.cancerjournal.net/ ; ; >
 
@@ -2694,7 +2696,7 @@
     au < finished ; frozen ; 2015 ; Journal of Clinical Neonatology Volume 4 ; 2015 ; 4 ; http://www.jcnonweb.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Journal of Clinical Neonatology Volume 5 ; 2016 ; 5 ; http://www.jcnonweb.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Clinical Neonatology Volume 6 ; 2017 ; 6 ; http://www.jcnonweb.com/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Clinical Neonatology Volume 7 ; 2018 ; 7 ; http://www.jcnonweb.com/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Clinical Neonatology Volume 7 ; 2018 ; 7 ; http://www.jcnonweb.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Clinical Neonatology Volume 8 ; 2019 ; 8 ; https://www.jcnonweb.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Journal of Clinical Neonatology Volume 9 ; 2020 ; 9 ; https://www.jcnonweb.com/ ; ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Clinical Neonatology Volume 10 ; 2021 ; 10 ; https://www.jcnonweb.com/ ; ; >
@@ -2749,9 +2751,9 @@
     au < finished ; frozen ; 2013 ; Journal of Conservative Dentistry Volume 16 ; 2013 ; 16 ; http://www.jcd.org.in/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Journal of Conservative Dentistry Volume 17 ; 2014 ; 17 ; http://www.jcd.org.in/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Journal of Conservative Dentistry Volume 18 ; 2015 ; 18 ; http://www.jcd.org.in/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Conservative Dentistry Volume 19 ; 2016 ; 19 ; http://www.jcd.org.in/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Conservative Dentistry Volume 19 ; 2016 ; 19 ; http://www.jcd.org.in/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Conservative Dentistry Volume 20 ; 2017 ; 20 ; http://www.jcd.org.in/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Conservative Dentistry Volume 21 ; 2018 ; 21 ; http://www.jcd.org.in/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Conservative Dentistry Volume 21 ; 2018 ; 21 ; http://www.jcd.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Conservative Dentistry Volume 22 ; 2019 ; 22 ; https://www.jcd.org.in/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; Journal of Conservative Dentistry Volume 23 ; 2020 ; 23 ; https://www.jcd.org.in/ ; ; >
     au < crawling ; exists ; 2021 ; Journal of Conservative Dentistry Volume 24 ; 2021 ; 24 ; https://www.jcd.org.in/ ; ; >
@@ -2776,9 +2778,9 @@
     au < finished ; frozen ; 2013 ; Journal of Craniovertebral Junction and Spine Volume 4 ; 2013 ; 4 ; http://www.jcvjs.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Journal of Craniovertebral Junction and Spine Volume 5 ; 2014 ; 5 ; http://www.jcvjs.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal of Craniovertebral Junction and Spine Volume 6 ; 2015 ; 6 ; http://www.jcvjs.com/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Craniovertebral Junction and Spine Volume 7 ; 2016 ; 7 ; http://www.jcvjs.com/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Craniovertebral Junction and Spine Volume 7 ; 2016 ; 7 ; http://www.jcvjs.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Journal of Craniovertebral Junction and Spine Volume 8 ; 2017 ; 8 ; http://www.jcvjs.com/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Craniovertebral Junction and Spine Volume 9 ; 2018 ; 9 ; http://www.jcvjs.com/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Craniovertebral Junction and Spine Volume 9 ; 2018 ; 9 ; http://www.jcvjs.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Craniovertebral Junction and Spine Volume 10 ; 2019 ; 10 ; https://www.jcvjs.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Craniovertebral Junction and Spine Volume 11 ; 2020 ; 11 ; https://www.jcvjs.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Craniovertebral Junction and Spine Volume 12 ; 2021 ; 12 ; https://www.jcvjs.com/ ; ; >
@@ -2807,7 +2809,7 @@
     au < finished ; frozen ; 2015 ; Journal of Cutaneous and Aesthetic Surgery Volume 8 ; 2015 ; 8 ; http://www.jcasonline.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Journal of Cutaneous and Aesthetic Surgery Volume 9 ; 2016 ; 9 ; http://www.jcasonline.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Journal of Cutaneous and Aesthetic Surgery Volume 10 ; 2017 ; 10 ; http://www.jcasonline.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Cutaneous and Aesthetic Surgery Volume 11 ; 2018 ; 11 ; http://www.jcasonline.com/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Cutaneous and Aesthetic Surgery Volume 11 ; 2018 ; 11 ; http://www.jcasonline.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Cutaneous and Aesthetic Surgery Volume 12 ; 2019 ; 12 ; https://www.jcasonline.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Cutaneous and Aesthetic Surgery Volume 13 ; 2020 ; 13 ; https://www.jcasonline.com/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Cutaneous and Aesthetic Surgery Volume 14 ; 2021 ; 14 ; https://www.jcasonline.com/ ; ; >
