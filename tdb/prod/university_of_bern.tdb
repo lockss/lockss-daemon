@@ -334,6 +334,69 @@
   {
 
       title <
+        name = Manazir Journal ;
+        eissn = 0000-0000
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = manazir
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 1 ; Manazir Journal Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 2 ; Manazir Journal Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 3 ; Manazir Journal Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = Swiss Journal of Educational Research ;
+        eissn = 2624-8492
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://sjer.ch/
+      param[journal_id] = sjer
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; manifest ; 2014 ; 36 ; Swiss Journal of Educational Research Volume 2014 ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 37 ; Swiss Journal of Educational Research Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 38 ; Swiss Journal of Educational Research Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 39 ; Swiss Journal of Educational Research Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 40 ; Swiss Journal of Educational Research Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 41 ; Swiss Journal of Educational Research Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 42 ; Swiss Journal of Educational Research Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 43 ; Swiss Journal of Educational Research Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
+        name = TSANTSA – Journal of the Swiss Anthropological Association ;
+        eissn = 2673-5377
+      >
+
+      comment[publisher] = University of Bern
+      param[base_url] = https://tsantsa.ch/
+      param[journal_id] = tsantsa
+      #moved to ojs3
+
+      au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 20 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 21 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 22 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 23 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 24 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 25 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 26 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2021 ; 2021 ; >
+
+  }
+
+  {
+
+      title <
         name = Versants. Revista suiza de literaturas románicas ;
         eissn = 2504-2750
       >
