@@ -555,13 +555,13 @@
       >
 
       param[journal_issn] = 2589-9627
-#      param[base_url] = https://www.cmaconweb.org/
+      #param[base_url] = https://www.cmaconweb.org/
+      #Moved to Wolters Kluwer LWW
 
-    au < manifest ; exists ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ ; ; >
-    au < manifest ; exists ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ ; ; >
-    au < expected ; exists ; 2022 ; Chinese Medicine and Culture Volume 5 ; 2022 ; 5 ; https://www.cmaconweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2020 ; Chinese Medicine and Culture Volume 3 ; 2020 ; 3 ; https://www.cmaconweb.org/ ; ; >
+    au < doNotProcess ; exists ; 2021 ; Chinese Medicine and Culture Volume 4 ; 2021 ; 4 ; https://www.cmaconweb.org/ ; ; >
 
   }
 
@@ -2498,7 +2498,7 @@
    >
     #param[base_url] = http://www.joacp.org/
     param[journal_issn] = 0970-9185
-    #Moved to Wolters Kluwer
+    #Moved to Wolters Kluwer LWW
 
     au < doNotProcess ; exists ; 2005 ; Journal of Anaesthesiology Clinical Pharmacology Volume 21 ; 2005 ; 21 ; https://www.joacp.org/ ; ; >
     au < doNotProcess ; exists ; 2006 ; Journal of Anaesthesiology Clinical Pharmacology Volume 22 ; 2006 ; 22 ; https://www.joacp.org/ ; ; >
@@ -9515,13 +9515,13 @@
 
       param[journal_issn] = 2470-7511
 #      param[base_url] = http://www.cardiologyplus.org/
+      #Moved to Wolters Kluwer LWW
 
-      au < notReady ; exists ; 2017 ; Cardiology Plus Volume 2 ; 2017 ; 2 ; http://www.cardiologyplus.org/ ; login for pdf ; >
-      au < notReady ; exists ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 ; http://www.cardiologyplus.org/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2017 ; Cardiology Plus Volume 2 ; 2017 ; 2 ; http://www.cardiologyplus.org/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2018 ; Cardiology Plus Volume 3 ; 2018 ; 3 ; http://www.cardiologyplus.org/ ; login for pdf ; >
       au < finished ; crawling ; 2019 ; Cardiology Plus Volume 4 ; 2019 ; 4 ; https://www.cardiologyplus.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Cardiology Plus Volume 5 ; 2020 ; 5 ; https://www.cardiologyplus.org/ ; ; >
-      au < crawling ; exists ; 2021 ; Cardiology Plus Volume 6 ; 2021 ; 6 ; https://www.cardiologyplus.org/ ; ; >
-      au < expected ; exists ; 2022 ; Cardiology Plus Volume 7 ; 2022 ; 7 ; https://www.cardiologyplus.org/ ; ; >
+      au < frozen ; exists ; 2020 ; Cardiology Plus Volume 5 ; 2020 ; 5 ; https://www.cardiologyplus.org/ ; ; >
+      au < superseded ; exists ; 2021 ; Cardiology Plus Volume 6 [superseded] ; 2021 ; 6 ; https://www.cardiologyplus.org/ ; ; >
 
   }
 
@@ -11007,14 +11007,14 @@
       >
 
       param[journal_issn] = 2096-2924
-#      param[base_url] = http://www.repdevmed.org/
+      #param[base_url] = http://www.repdevmed.org/
+      #Moved to Wolters Kluwer LWW
 
       au < finished ; crawling ; 2017 ; Reproductive and Developmental Medicine Volume 1 ; 2017 ; 1 ; https://www.repdevmed.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Reproductive and Developmental Medicine Volume 2 ; 2018 ; 2 ; https://www.repdevmed.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Reproductive and Developmental Medicine Volume 3 ; 2019 ; 3 ; https://www.repdevmed.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Reproductive and Developmental Medicine Volume 4 ; 2020 ; 4 ; https://www.repdevmed.org/ ; ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2021 ; Reproductive and Developmental Medicine Volume 5 ; 2021 ; 5 ; https://www.repdevmed.org/ ; ; >
-      au < expected ; exists ; 2022 ; Reproductive and Developmental Medicine Volume 6 ; 2022 ; 6 ; https://www.repdevmed.org/ ; ; >
+      au < superseded ; exists ; 2021 ; Reproductive and Developmental Medicine Volume 5 [superseded] ; 2021 ; 5 ; https://www.repdevmed.org/ ; ; >
 
   }
 
