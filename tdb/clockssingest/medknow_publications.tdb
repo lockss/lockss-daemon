@@ -2837,9 +2837,9 @@
     au < finished ; finished ; 2013 ; Journal of Cytology Volume 30 ; 2013 ; 30 ; http://www.jcytol.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Cytology Volume 31 ; 2014 ; 31 ; http://www.jcytol.org/ ; ; >
     au < finished ; frozen ; 2015 ; Journal of Cytology Volume 32 ; 2015 ; 32 ; http://www.jcytol.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Cytology Volume 33 ; 2016 ; 33 ; http://www.jcytol.org/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Cytology Volume 33 ; 2016 ; 33 ; http://www.jcytol.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2017 ; Journal of Cytology Volume 34 ; 2017 ; 34 ; http://www.jcytol.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Cytology Volume 35 ; 2018 ; 35 ; http://www.jcytol.org/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Cytology Volume 35 ; 2018 ; 35 ; http://www.jcytol.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Cytology Volume 36 ; 2019 ; 36 ; https://www.jcytol.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Journal of Cytology Volume 37 ; 2020 ; 37 ; https://www.jcytol.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Cytology Volume 38 ; 2021 ; 38 ; https://www.jcytol.org/ ; ; >
@@ -2865,7 +2865,7 @@
     au < finished ; finished ; 2015 ; Journal of Dental Implants Volume 5 ; 2015 ; 5 ; http://www.jdionline.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Journal of Dental Implants Volume 6 ; 2016 ; 6 ; http://www.jdionline.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Dental Implants Volume 7 ; 2017 ; 7 ; http://www.jdionline.org/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Dental Implants Volume 8 ; 2018 ; 8 ; http://www.jdionline.org/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Dental Implants Volume 8 ; 2018 ; 8 ; http://www.jdionline.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Dental Implants Volume 9 ; 2019 ; 9 ; https://www.jdionline.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Journal of Dental Implants Volume 10 ; 2020 ; 10 ; https://www.jdionline.org/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Dental Implants Volume 11 ; 2021 ; 11 ; https://www.jdionline.org/ ; ; >
@@ -2911,11 +2911,11 @@
     au < finished ; frozen ; 2013 ; Journal of Emergencies, Trauma, and Shock Volume 6 ; 2013 ; 6 ; http://www.onlinejets.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Journal of Emergencies, Trauma, and Shock Volume 7 ; 2014 ; 7 ; http://www.onlinejets.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Journal of Emergencies, Trauma, and Shock Volume 8 ; 2015 ; 8 ; http://www.onlinejets.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Emergencies, Trauma, and Shock Volume 9 ; 2016 ; 9 ; http://www.onlinejets.org/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Emergencies, Trauma, and Shock Volume 9 ; 2016 ; 9 ; http://www.onlinejets.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2017 ; Journal of Emergencies, Trauma, and Shock Volume 10 ; 2017 ; 10 ; http://www.onlinejets.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Emergencies, Trauma, and Shock Volume 11 ; 2018 ; 11 ; http://www.onlinejets.org/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Emergencies, Trauma, and Shock Volume 11 ; 2018 ; 11 ; http://www.onlinejets.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Emergencies, Trauma, and Shock Volume 12 ; 2019 ; 12 ; https://www.onlinejets.org/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2020 ; Journal of Emergencies, Trauma, and Shock Volume 13 ; 2020 ; 13 ; https://www.onlinejets.org/ ; ; >
+    au < finished ; manifest ; 2020 ; Journal of Emergencies, Trauma, and Shock Volume 13 ; 2020 ; 13 ; https://www.onlinejets.org/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Emergencies, Trauma, and Shock Volume 14 ; 2021 ; 14 ; https://www.onlinejets.org/ ; ; >
     au < expected ; exists ; 2022 ; Journal of Emergencies, Trauma, and Shock Volume 15 ; 2022 ; 15 ; https://www.onlinejets.org/ ; ; >
 
@@ -2973,9 +2973,9 @@
     au < finished ; frozen ; 2013 ; Journal of Family and Community Medicine Volume 20 ; 2013 ; 20 ; http://www.jfcmonline.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Journal of Family and Community Medicine Volume 21 ; 2014 ; 21 ; http://www.jfcmonline.com/ ; ; >
     au < finished ; frozen ; 2015 ; Journal of Family and Community Medicine Volume 22 ; 2015 ; 22 ; http://www.jfcmonline.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Family and Community Medicine Volume 23 ; 2016 ; 23 ; http://www.jfcmonline.com/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Family and Community Medicine Volume 23 ; 2016 ; 23 ; http://www.jfcmonline.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Family and Community Medicine Volume 24 ; 2017 ; 24 ; http://www.jfcmonline.com/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Family and Community Medicine Volume 25 ; 2018 ; 25 ; http://www.jfcmonline.com/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Family and Community Medicine Volume 25 ; 2018 ; 25 ; http://www.jfcmonline.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Family and Community Medicine Volume 26 ; 2019 ; 26 ; https://www.jfcmonline.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Family and Community Medicine Volume 27 ; 2020 ; 27 ; https://www.jfcmonline.com/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Journal of Family and Community Medicine Volume 28 ; 2021 ; 28 ; https://www.jfcmonline.com/ ; ; >
@@ -3000,9 +3000,9 @@
     au < finished ; frozen ; 2015 ; Journal of Family Medicine and Primary Care Volume 4 ; 2015 ; 4 ; http://www.jfmpc.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2016 ; Journal of Family Medicine and Primary Care Volume 5 ; 2016 ; 5 ; http://www.jfmpc.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Journal of Family Medicine and Primary Care Volume 6 ; 2017 ; 6 ; http://www.jfmpc.com/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Family Medicine and Primary Care Volume 7 ; 2018 ; 7 ; http://www.jfmpc.com/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Family Medicine and Primary Care Volume 7 ; 2018 ; 7 ; http://www.jfmpc.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Journal of Family Medicine and Primary Care Volume 8 ; 2019 ; 8 ; https://www.jfmpc.com/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Journal of Family Medicine and Primary Care Volume 9 ; 2020 ; 9 ; https://www.jfmpc.com/ ; ; >
+    au < finished ; manifest ; 2020 ; Journal of Family Medicine and Primary Care Volume 9 ; 2020 ; 9 ; https://www.jfmpc.com/ ; ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Family Medicine and Primary Care Volume 10 ; 2021 ; 10 ; https://www.jfmpc.com/ ; ; >
     au < expected ; exists ; 2022 ; Journal of Family Medicine and Primary Care Volume 11 ; 2022 ; 11 ; https://www.jfmpc.com/ ; ; >
 
@@ -3052,7 +3052,7 @@
     au < finished ; frozen ; 2015 ; Journal of Global Infectious Diseases Volume 7 ; 2015 ; 7 ; http://www.jgid.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; Journal of Global Infectious Diseases Volume 8 ; 2016 ; 8 ; http://www.jgid.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Journal of Global Infectious Diseases Volume 9 ; 2017 ; 9 ; http://www.jgid.org/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Global Infectious Diseases Volume 10 ; 2018 ; 10 ; http://www.jgid.org/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Global Infectious Diseases Volume 10 ; 2018 ; 10 ; http://www.jgid.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Global Infectious Diseases Volume 11 ; 2019 ; 11 ; https://www.jgid.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Global Infectious Diseases Volume 12 ; 2020 ; 12 ; https://www.jgid.org/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Global Infectious Diseases Volume 13 ; 2021 ; 13 ; https://www.jgid.org/ ; ; >
@@ -3096,9 +3096,9 @@
     au < finished ; finished ; 2013 ; Journal of Human Reproductive Sciences Volume 6 ; 2013 ; 6 ; http://www.jhrsonline.org/ ; ; >
     au < finished ; frozen ; 2014 ; Journal of Human Reproductive Sciences Volume 7 ; 2014 ; 7 ; http://www.jhrsonline.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2015 ; Journal of Human Reproductive Sciences Volume 8 ; 2015 ; 8 ; http://www.jhrsonline.org/ ; ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2016 ; Journal of Human Reproductive Sciences Volume 9 ; 2016 ; 9 ; http://www.jhrsonline.org/ ; ; >
+    au < finished ; manifest ; 2016 ; Journal of Human Reproductive Sciences Volume 9 ; 2016 ; 9 ; http://www.jhrsonline.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Human Reproductive Sciences Volume 10 ; 2017 ; 10 ; http://www.jhrsonline.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Journal of Human Reproductive Sciences Volume 11 ; 2018 ; 11 ; http://www.jhrsonline.org/ ; ; >
+    au < finished ; manifest ; 2018 ; Journal of Human Reproductive Sciences Volume 11 ; 2018 ; 11 ; http://www.jhrsonline.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Human Reproductive Sciences Volume 12 ; 2019 ; 12 ; https://www.jhrsonline.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Human Reproductive Sciences Volume 13 ; 2020 ; 13 ; https://www.jhrsonline.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Human Reproductive Sciences Volume 14 ; 2021 ; 14 ; https://www.jhrsonline.org/ ; ; >
