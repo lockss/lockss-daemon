@@ -4785,6 +4785,7 @@
    >
 #    param[base_url] = http://www.wjnm.org/
     param[journal_issn] = 1450-1147
+    #move to Thieme, 2022
     # notReady V10 2011. 500 error, replicated. http://www.wjnm.org/article.asp?issn=1450-1147;year=2011;volume=10;issue=1;spage=5;epage=6;aulast=Baum;type=2
 
     au < manifest ; exists ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ ; ; >
@@ -4804,7 +4805,6 @@
     au < finished ; crawling ; 2019 ; World Journal of Nuclear Medicine Volume 18 ; 2019 ; 18 ; https://www.wjnm.org/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; World Journal of Nuclear Medicine Volume 19 ; 2020 ; 19 ; https://www.wjnm.org/ ; ; >
     au < crawling ; exists ; 2021 ; World Journal of Nuclear Medicine Volume 20 ; 2021 ; 20 ; https://www.wjnm.org/ ; ; >
-    au < expected ; exists ; 2022 ; World Journal of Nuclear Medicine Volume 21 ; 2022 ; 21 ; https://www.wjnm.org/ ; ; >
 
   }
 #  {
@@ -5482,6 +5482,7 @@
 
       param[journal_issn] = 2225-6482
 #      param[base_url] = http://www.caijournal.com/
+      #move to Spring Media Publishing
       # Redirects to browse instead of by a listing like this: https://www.caijournal.com/backissues.asp
 
       au < finished ; finished ; 2014 ; Community Acquired Infection Volume 1 ; 2014 ; 1 ; http://www.caijournal.com/ ; ; reingest5.clockss.org:8082 >
@@ -5491,8 +5492,6 @@
       au < notReady ; exists ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ ; ; > #no substance
       au < notReady ; exists ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ ; ; > #no substance
       au < notReady ; exists ; 2020 ; Community Acquired Infection Volume 7 ; 2020 ; 7 ; https://www.caijournal.com/ ; ; > #no substance
-      au < notReady ; exists ; 2021 ; Community Acquired Infection Volume 8 ; 2021 ; 8 ; https://www.caijournal.com/ ; ; > #redirects to browse
-      au < expected ; exists ; 2022 ; Community Acquired Infection Volume 9 ; 2022 ; 9 ; https://www.caijournal.com/ ; ; > #redirects to browse
 
   }
 

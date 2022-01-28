@@ -4763,6 +4763,7 @@
    >
 #    param[base_url] = http://www.wjnm.org/
     param[journal_issn] = 1450-1147
+    #move to Thieme, 2022
     # notReady V10 2011. 500 error, replicated. http://www.wjnm.org/article.asp?issn=1450-1147;year=2011;volume=10;issue=1;spage=5;epage=6;aulast=Baum;type=2
 
     au < manifest ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ >
@@ -4782,7 +4783,6 @@
     au < released ; 2019 ; World Journal of Nuclear Medicine Volume 18 ; 2019 ; 18 ; https://www.wjnm.org/ >
     au < released ; 2020 ; World Journal of Nuclear Medicine Volume 19 ; 2020 ; 19 ; https://www.wjnm.org/ >
     au < manifest ; 2021 ; World Journal of Nuclear Medicine Volume 20 ; 2021 ; 20 ; https://www.wjnm.org/ >
-    au < expected ; 2022 ; World Journal of Nuclear Medicine Volume 21 ; 2022 ; 21 ; https://www.wjnm.org/ >
 
   }
   
@@ -5456,6 +5456,7 @@
 
       param[journal_issn] = 2225-6482
 #      param[base_url] = http://www.caijournal.com/
+      #move to Spring Media Publishing
 
       au < released ; 2014 ; Community Acquired Infection Volume 1 ; 2014 ; 1 ; http://www.caijournal.com/ >
       au < released ; 2015 ; Community Acquired Infection Volume 2 ; 2015 ; 2 ; http://www.caijournal.com/ >
@@ -5464,8 +5465,6 @@
       au < notReady ; 2018 ; Community Acquired Infection Volume 5 ; 2018 ; 5 ; https://www.caijournal.com/ > #no substance
       au < notReady ; 2019 ; Community Acquired Infection Volume 6 ; 2019 ; 6 ; https://www.caijournal.com/ > #no substance
       au < notReady ; 2020 ; Community Acquired Infection Volume 7 ; 2020 ; 7 ; https://www.caijournal.com/ > #no substance
-      au < expected ; 2021 ; Community Acquired Infection Volume 8 ; 2021 ; 8 ; https://www.caijournal.com/ >
-      au < expected ; 2022 ; Community Acquired Infection Volume 9 ; 2022 ; 9 ; https://www.caijournal.com/ >
 
   }
 
