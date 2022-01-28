@@ -62,22 +62,29 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?v=[^/]*)?$", base_url_host</string>
-      <string>1,"https://cdnjs.cloudflare.com/"</string>
-      <string>1,"https://semantic-ui.com/"</string>
-      <string>1,"https://code.jquery.com/"</string>
-      <string>1,"https?://(fonts|ajax).googleapis.com/"</string>
-      <string>1,"https://themes.googleusercontent.com/"</string>
-      <string>1,"https://d1bxh8uas1mnw7.cloudfront.net/"</string>
+      <string>1,"https://cdnjs\.cloudflare\.com/"</string>
+      <string>1,"https://semantic-ui\.com/"</string>
+      <string>1,"https://code\.jquery\.com/"</string>
+      <string>1,"https?://(fonts|ajax)\.googleapis\.com/"</string>
+      <string>1,"https://themes\.googleusercontent\.com/"</string>
+      <!-- d1bxh8uas1mnw7.cloudfront.net -->
+      <string>1,"https://.*\.cloudfront\.net/"</string>
+      <!-- mediaserver & subdomains, might make this a download url -->
+      <string>1,"https://.*\.cloudpublish\.co\.uk/"</string>
+      <string>1,"https://bam\.eu01\.nr-data\.net"</string>
+      <!-- exclude these general type pages -->
       <string>2,"^%sjournals/?$", base_url</string>
       <string>2,"^%sjournals/id/", base_url</string>
       <string>2,"^%spages/", base_url</string>
       <string>2,"^%scontributors/", base_url</string>
-      <!-- https://www.liverpooluniversitypress.co.uk/journals/article/21290/ -->
-      <!-- https://www.liverpooluniversitypress.co.uk/journals/issue/3426 -->
+      <!-- https://www.liverpooluniversitypress.co.uk/journals/article/21290/
+           https://www.liverpooluniversitypress.co.uk/journals/issue/3426 -->
       <string>1,"^%sjournals/(article|issue)/", base_url</string>
+      <!-- https://www.liverpooluniversitypress.co.uk/read/?item_type=journal_article&item_id=51935
+           https://www.liverpooluniversitypress.co.uk/read/?item_type=journal_article&item_id=51935&mode=download
+           redirects to this:
+           https://liverpoolup.cloudpublish.co.uk/read/?id=51935&type=journal_article&cref=CLOCKSS&peref=&drm=soft&acs=1&exit=https://www.liverpooluniversitypress.co.uk/journals/article/51935&p=6&uid=LUP&t=1643388899&h=c1d5809ba5c07433ac03299ce7781f5f -->
       <string>1,"^%sread/\?", base_url</string>
-      <string>1,"https://mediaserver.cloudpublish.co.uk/"</string>
-      <string>1,"https://bam.eu01.nr-data.net"</string>
     </list>
   </entry>
   <entry>
@@ -143,7 +150,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js -->
       <string>cloudfront\.net</string>
       <string>cdnjs\.cloudflare\.com</string>
-      <!-- mediaserver -->
+      <!-- mediaserver and journal subdomains, e.g. liverpool-->
       <string>cloudpublish\.co\.uk</string>
       <string>bam\.eu01\.nr-data\.net</string>
     </list>
