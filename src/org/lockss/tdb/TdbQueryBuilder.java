@@ -687,6 +687,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "gov.gpo.access.permanent.plugin.Environmental_Health_PerspectivesPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin", // gpo-pilot
                  "gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin", // gpo-pilot
                  "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
                  "gov.loc.plugin.TESLEJPlugin",
                  "nz.ac.otago.plugin.scholia.ScholiaPlugin",
