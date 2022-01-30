@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = National Endowment for the Humanities
+  >
+
+  {
+  
+    title <
+      name = Humanities: The Magazine of the National Endowment for the Humanities ;
+      issn = 0018-7526 ;
+      eissn = 1555-0532 ;
+      issnl = 0018-7526
+    >
+    
+    rights = openaccess
+    plugin = gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin
+    # Ancient AU definition has no slash at the end of the base_url
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Humanities/
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2005 ; Humanities: The Magazine of the National Endowment for the Humanities 2005 ; 2005 >
+      
+  }
+  
+}
