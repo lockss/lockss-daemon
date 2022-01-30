@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = National Institute of Environmental Health Sciences
+  >
+
+  {
+  
+    title <
+      name = Environmental Health Perspectives ;
+      issn = 0091-6765 ;
+      eissn = 1552-9924 ;
+      issnl = 0091-6765
+    >
+    
+    rights = openaccess
+    # Ancient plugin name has an underscore in it
+    plugin = gov.gpo.access.permanent.plugin.Environmental_Health_PerspectivesPlugin
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Environmental_Health_Perspectives/
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2005 ; Environmental Health Perspectives 2005 ; 2005 >
+      
+  }
+  
+}
