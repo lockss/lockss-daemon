@@ -511,6 +511,9 @@ public class V2AuMover {
   }
 
 
+  /**
+   * Start appending the Report file for current Au Move
+   */
   void startReportFile() {
 
     try {
@@ -528,6 +531,9 @@ public class V2AuMover {
     }
   }
 
+  /**
+   * Update the report for the current Au
+   */
   void updateReport() {
     // todo - change currentAu to currentAuName
     String auData = "Au:" + currentAu +
@@ -537,7 +543,6 @@ public class V2AuMover {
         "  contentBytesMoved: " + auContentBytesMoved +
         "  errors: " + auErrorCount +
         "  totalRuntime: " + StringUtil.timeIntervalToString(auRunTime);
-    // add to report the transfer rate bytesMoved/time and contentBytesMoved/time
     if (reportWriter != null) {
       reportWriter.println(auData);
       for (String err : auErrors) {
@@ -554,6 +559,9 @@ public class V2AuMover {
     }
   }
 
+  /**
+   * Close the report before exiting
+   */
   void closeReport() {
     String summary = "AusMoved: " + totalAusMoved +
         "  urlsMoved: " + totalUrlsMoved +
@@ -562,6 +570,7 @@ public class V2AuMover {
         "  contentBytesMoved: " + totalContentBytesMoved +
         "  errors: " + totalErrorCount +
         "  totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
+    // todo: add to report the transfer rate bytesMoved/time and contentBytesMoved/time
     if (reportWriter != null) {
       reportWriter.println(summary);
       if (reportWriter.checkError()) {
@@ -695,20 +704,23 @@ public class V2AuMover {
   /* ------------------
   testing getters & setters
  */
-  void setAuCounters(long urls, long artifacts, long bytes, long runTime, long errors, List<String> errs) {
+  void setAuCounters(long urls, long artifacts, long bytes, long contentBytes, long runTime, long errors,
+      List<String> errs) {
     auUrlsMoved = urls;
     auArtifactsMoved = artifacts;
     auBytesMoved = bytes;
+    auContentBytesMoved = contentBytes;
     auRunTime = runTime;
     auErrorCount = errors;
     auErrors = errs;
   }
 
-  void setTotalCounters(long aus, long urls, long artifacts, long bytes, long runTime, long errors) {
+  void setTotalCounters(long aus, long urls, long artifacts, long bytes, long contentBytes, long runTime, long errors) {
     totalAusMoved = aus;
     totalUrlsMoved = urls;
     totalArtifactsMoved = artifacts;
     totalBytesMoved = bytes;
+    totalContentBytesMoved = contentBytes;
     totalRunTime = runTime;
     totalErrorCount = errors;
   }
@@ -794,7 +806,9 @@ public class V2AuMover {
       errorList.add(err);
       log.error(err, apie);
       closeReport();
-      throw new IOException( "Unable to get Au List from v2 Repository: " + apie.getCode() + "-" + apie.getMessage());
+      String msg = apie.getCode() == 0 ? apie.getMessage()
+          : apie.getCode() + " - " + apie.getMessage();
+      throw new IOException( "Unable to get Au List from v2 Repository: " + msg);
     }
   }
 
