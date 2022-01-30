@@ -142,7 +142,7 @@ public class V2AuMover {
    * The  maximum number of retries for failures
    */
   public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "max.retries";
-  public static final int DEFAULT_MAX_RETRY_COUNT = 5;
+  public static final int DEFAULT_MAX_RETRY_COUNT = 3;
 
   /**
    * The backoff between failed attempts - default 10000 ms
@@ -533,10 +533,11 @@ public class V2AuMover {
 
   /**
    * Update the report for the current Au
+   * @param auName
    */
-  void updateReport() {
+  void updateReport(String auName) {
     // todo - change currentAu to currentAuName
-    String auData = "Au:" + currentAu +
+    String auData = "Au:" + auName +
         "  urlsMoved: " + auUrlsMoved +
         "  artifactsMoved: " + auArtifactsMoved +
         "  bytesMoved: " + auBytesMoved +
@@ -619,8 +620,7 @@ public class V2AuMover {
       else
         log.info(auName+ ": Au move terminated because of errors.");
       auRunTime = System.currentTimeMillis() - au_move_start;
-      updateReport();
-      //update our totals.
+      updateReport(auName);
       totalAusMoved++;
       totalBytesMoved += auBytesMoved;
       totalContentBytesMoved += auContentBytesMoved;
@@ -1146,9 +1146,11 @@ public class V2AuMover {
         }
         catch (final IOException ioe) {
           if (response != null && response.body() != null) {
+            log.debug3("Retrying: " + ioe.getMessage());
             response.close();
             // We've run out of retries so throw the exception
             if (tryCount >= maxRetryCount) {
+              log.debug2("Exceeded retries - exiting");
               terminated = true;
               throw ioe;
             }
