@@ -7,14 +7,12 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
-import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.MockIdentityManager;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
@@ -86,7 +84,7 @@ public class TestV2AuMover extends LockssTestCase {
     auMover.initRequest(null, testUser,testPassword);
     // check the locals
     assertEquals(defaultCfgUrl,auMover.getCfgAccessUrl());
-    assertEquals(defaultRsUrl,auMover.getRsAccessUrl());
+    assertEquals(defaultRsUrl,auMover.getRepoAccessUrl());
     assertEquals(testUser,auMover.getUserName());
     assertEquals(testPassword, auMover.getUserPass());
 
@@ -97,7 +95,7 @@ public class TestV2AuMover extends LockssTestCase {
     auMover = new V2AuMover();
     auMover.initRequest("mockhost", user,passwd);
     assertEquals(base+24620,auMover.getCfgAccessUrl());
-    assertEquals(base+24610,auMover.getRsAccessUrl());
+    assertEquals(base+24610,auMover.getRepoAccessUrl());
     assertEquals(user,auMover.getUserName());
     assertEquals(passwd, auMover.getUserPass());
 
@@ -112,7 +110,7 @@ public class TestV2AuMover extends LockssTestCase {
     auMover = new V2AuMover();
     auMover.initRequest(null, user, passwd);
     assertEquals(base+25620,auMover.getCfgAccessUrl());
-    assertEquals(base+25610,auMover.getRsAccessUrl());
+    assertEquals(base+25610,auMover.getRepoAccessUrl());
     assertEquals(user,auMover.getUserName());
     assertEquals(passwd, auMover.getUserPass());
 
@@ -241,7 +239,7 @@ public class TestV2AuMover extends LockssTestCase {
     return Arrays.asList(au1, au2, au3,au4, au5,au6);
   }
 
-  class MockV2AuMover extends V2AuMover {
+  static class MockV2AuMover extends V2AuMover {
     List<String> movedAus= new ArrayList<>();
 
    public MockV2AuMover() {
@@ -270,7 +268,7 @@ public class TestV2AuMover extends LockssTestCase {
 
   }
 
-  class MyMockPluginManager extends PluginManager {
+  static class MyMockPluginManager extends PluginManager {
     List<ArchivalUnit> allAus = new ArrayList<>();
 
     void setAllAus(List<ArchivalUnit> allAus) {

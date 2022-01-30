@@ -135,7 +135,7 @@ public class CachedUrlRequestBody extends RequestBody {
     BasicHttpResponse response = new BasicHttpResponse(STATUS_LINE_OK);
     // Create an InputStreamEntity from artifact InputStream
     try {
-      InputStream is = artifactCu.getUnfilteredInputStream();
+//      InputStream is = artifactCu.getUnfilteredInputStream();
       response.setEntity(new InputStreamEntity(artifactCu.getUnfilteredInputStream()));
       // Add artifact headers into HTTP response
       CIProperties props = artifactCu.getProperties();

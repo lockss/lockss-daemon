@@ -101,16 +101,15 @@ public class MigrateContent extends LockssServlet {
 
 
   protected void resetLocals() {
-    resetVars();
-    super.resetLocals();
-  }
-
-  void resetVars() {
     auid = null;
     errMsg = null;
     statusMsg = null;
     userName=null;
     userPass =null;
+    super.resetLocals();
+  }
+
+  void initParams() {
     Configuration config = ConfigManager.getCurrentConfig();
     hostName=config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
     auSelectFilter=config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
@@ -125,18 +124,15 @@ public class MigrateContent extends LockssServlet {
   }
 
   public void lockssHandleRequest() throws IOException {
-    resetVars();
-    boolean showForm = true;
-    if (errMsg == null) {
-      String action = getParameter(KEY_ACTION);
+    initParams();
+    String action = getParameter(KEY_ACTION);
 
-      if (!StringUtil.isNullString(action)) {
-        auid = getParameter(KEY_AUID);
-        userName=getParameter(KEY_USER_NAME);
-        userPass =getParameter(KEY_PASSWD);
-        hostName=getParameter(HOSTNAME);
-        if(hostName==null) hostName="localhost";
-      }
+    if (!StringUtil.isNullString(action)) {
+      auid = getParameter(KEY_AUID);
+      userName=getParameter(KEY_USER_NAME);
+      userPass =getParameter(KEY_PASSWD);
+      hostName=getParameter(HOSTNAME);
+      if(hostName==null) hostName="localhost";
       if (ACTION_MIGRATE_AU.equals(action)) {
         //Todo: This should be eliminated when we are done with testing.
         doMigrateAu();
@@ -155,9 +151,10 @@ public class MigrateContent extends LockssServlet {
       if (!errs.isEmpty()) {
         errMsg = StringUtil.separatedString(errs, "<br>");
       } else {
-        statusMsg = "All AUs has been migrated.";
+        statusMsg = "All AUs have been migrated.";
       }
     } catch (Exception e) {
+      log.error("Unexpected Exception enqueuing AUs.", e);
       errMsg = e.getMessage();
     }
   }
@@ -175,11 +172,12 @@ public class MigrateContent extends LockssServlet {
       java.util.List<String> errs = auMover.getErrors();
       log.debug("errs: " + errs);
       if (!errs.isEmpty()) {
-        errMsg = StringUtil.separatedString(errs, "<br>");
+        errMsg = StringUtil.separatedString(errs, "\n");
       } else {
-        statusMsg = au.getName() +" has been migrated.";
+        statusMsg = au.getName() + " has been migrated.";
       }
     } catch (Exception e) {
+      log.error("Unexpected Exception enqueuing AU " + au.getName(), e);
       errMsg = e.getMessage();
     }
   }
