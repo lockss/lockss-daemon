@@ -683,6 +683,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "edu.wisc.library.plugin.CortlandReview99Plugin",
                  "edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin",
                  "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin",
+                 "gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin", // gpo-pilot
                  "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
                  "gov.loc.plugin.TESLEJPlugin",
                  "nz.ac.otago.plugin.scholia.ScholiaPlugin",
