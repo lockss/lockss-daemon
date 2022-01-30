@@ -15,6 +15,7 @@
     rights = openaccess
     # Ancient plugin name has an underscore in it
     plugin = gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin
+    # Ancient AU definition has no slash at the end of the base_url
     param[base_url] = http://permanent.access.gpo.gov/lockss/Amber_Waves
     implicit < status ; year ; name ; param[year] >  
 
