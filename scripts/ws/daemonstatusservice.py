@@ -4,7 +4,7 @@
 service via its legacy SOAP Web Services API.'''
 
 __copyright__ = '''\
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 '''
 
@@ -36,7 +36,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 '''
 
-__version__ = '0.7.1'
+__version__ = '0.7.2'
 
 _service = 'DaemonStatusService'
 
@@ -721,12 +721,13 @@ def _do_get_auids(options):
       lambda _host: (_host, get_auids(_host, options._u, options._p)), \
       options.hosts):
     for r in result:
-      if shouldskip(r.id): continue
-      if options.get_auids_names: rowkey = (r.id, r.name)
-      else: rowkey = (r.id,)
+      id = r.get('id')
+      if shouldskip(id): continue
+      if options.get_auids_names: rowkey = (id, r.get('name'))
+      else: rowkey = (id,)
       data[(rowkey, (host,))] = True
-      if r.id not in auids:
-        auids.add(r.id)
+      if id not in auids:
+        auids.add(id)
         for h in options.hosts: data.setdefault((rowkey, (h,)), False)
   _output_table(options, data, ['AUID', 'Name'] if options.get_auids_names else ['AUID'], [sorted(options.hosts)])
 
