@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -45,11 +45,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Liverpool University Press Plugin</string>
+    <string>Liverpool University Press Journals Plugin</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Liverpool University Press Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Liverpool University Press Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>

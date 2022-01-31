@@ -33,24 +33,23 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>deprecated - aserl-etd registry</string>
   </entry>
-  <!-- https transition enabled -->  
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LiverpoolBooksPlugin</string>
+    <string>org.lockss.plugin.etd.gatechplugin.GATechETDPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Liverpool University Press Books Plugin</string>
+    <string>Georgia Tech ETD Plugin</string>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>"Liverpool University Press Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
+    <string>plugin_crawl_type</string>
+    <string>OAI</string><!-- deprecated -->
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -65,30 +64,46 @@ POSSIBILITY OF SUCH DAMAGE.
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>book_eisbn</key>
-        <displayName>Book eISBN</displayName>
-        <description>International Standard Book Number</description>
-        <type>1</type>
+        <key>oai_request_url</key>
+        <displayName>OAI Request URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
         <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
+    <string>au_name</string>
+    <string>"Georgia Tech ETD Plugin, Base URL %s, OAI Request URL %s, Year %d", base_url, oai_request_url, year</string>
+  </entry>
+  <entry>
     <string>au_start_url</string>
-    <string>"%sbooks/id/%s", base_url, book_eisbn</string>
+    <string>"%sETD-db/NDLTD-OAI/oai.pl", base_url</string>
   </entry>
   <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlHashFilterFactory</string>
+    <string>au_permission_url</string>
+    <list>
+      <string>"%spermission.html", base_url</string>
+    </list>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlLinkExtractorFactory</string>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sETD-db/OAI2/oai\.pl", base_url</string>
+      <string>1,"^%spermission\.html", base_url</string>
+      <string>1,"^%stheses/available/etd-[0-9]+%d-[0-9]+($|/)", base_url, year</string>
+    </list>
   </entry>
 </map>

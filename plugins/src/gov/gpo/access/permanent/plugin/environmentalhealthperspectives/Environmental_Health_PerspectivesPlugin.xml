@@ -33,51 +33,56 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>deprecated - gpo-pilot</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.ClockssLupBooksPlugin</string>
+    <string>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin</string><!-- sic -->
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Liverpool University Press Books Plugin (CLOCKSS)</string>
+    <string>Environmental Health Perspectives Plugin</string>
   </entry>
   <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LupBooksPlugin</string>
-  </entry>
-   <entry>
-    <string>plugin_parent_version</string>
-    <string>1</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>"Liverpool University Press Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
-  </entry>
-  <entry>
-  <string>au_start_url</string>
+    <string>plugin_config_props</string>
     <list>
-      <string>"%sclockss/eisbn/%s", to_http(base_url), book_eisbn</string>
-      <string>"%sclockss/eisbn/%s", to_https(base_url), book_eisbn</string>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
-  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
-    <string>plugin_au_config_user_msg</string>
-    <org.lockss.util.Default />
+    <string>au_name</string>
+    <string>"Environmental Health Perspectives Plugin, Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
-    <string>clockss_override</string>
-    <map>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-      </entry>
-    </map>
+    <string>au_start_url</string>
+    <string>"%s%d/index.html", base_url, year</string>
   </entry>
- </map>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%d/", base_url, year</string>
+    </list>
+  </entry>
+</map>

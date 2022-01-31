@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = National Institute of Standards and Technology
+  >
+
+  {
+  
+    title <
+      name = Journal of Research of NIST ;
+      issn = 1044-677X ;
+      eissn = 2165-7254 ;
+      issnl = 1044-677X
+    >
+    
+    rights = openaccess
+    plugin = gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin
+    param[base_url] = http://permanent.access.gpo.gov/lockss/NIST_Journal_of_Research/
+    # Ancient plugin uses journal_id but should have volume_name
+    implicit < status ; year ; volume ; name ; param[journal_id] >  
+
+    au < down ; 2005 ; 110 ; Journal of Research of the National Institute of Standards and Technology Volume 110 ; volume110 >
+      
+  }
+  
+}

@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = North Carolina State University
+  >
+
+  {
+  
+    title <
+      name = North Carolina State University Electronic Theses and Dissertations
+    >
+    
+    plugin = org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin
+    param[base_url] = http://www.lib.ncsu.edu/
+    param[oai_request_url] = http://www.lib.ncsu.edu/ETD-db/oai/oai.pl
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 1997 ; North Carolina State University Electronic Theses and Dissertations 1997 ; 1997 >
+    au < down ; 1998 ; North Carolina State University Electronic Theses and Dissertations 1998 ; 1998 >
+    au < down ; 1999 ; North Carolina State University Electronic Theses and Dissertations 1999 ; 1999 >
+      
+  }
+  
+}

@@ -683,6 +683,16 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "edu.wisc.library.plugin.CortlandReview99Plugin",
                  "edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin",
                  "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin",
+                 "gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin", // gpo-pilot
+                 "gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin", // gpo-pilot
                  "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
                  "gov.loc.plugin.TESLEJPlugin",
                  "nz.ac.otago.plugin.scholia.ScholiaPlugin",
@@ -694,6 +704,12 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "org.lockss.plugin.disputatio.DisputatioPlugin",
                  "org.lockss.plugin.emc.EarlyModernCulturePlugin",
                  "org.lockss.plugin.emls.EmlsPlugin",
+                 "org.lockss.plugin.etd.fsuplugin.FSUETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.gatechplugin.GATechETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.ukyplugin.UKYETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.vtetdplugin.VTETDPlugin", // aserl-etd
                  "org.lockss.plugin.evergreenreview.EvergreenReviewPlugin",
                  "org.lockss.plugin.GendersPlugin",
                  "org.lockss.plugin.histcoop.HistoryCooperativePlugin",

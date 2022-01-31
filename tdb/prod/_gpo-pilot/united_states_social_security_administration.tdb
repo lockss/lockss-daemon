@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = United States Social Security Administration
+  >
+
+  {
+  
+    title <
+      name = Social Security Bulletin ;
+      issn = 0037-7910 ;
+      eissn = 1937-4666 ;
+      issnl = 0037-7910
+    >
+    
+    rights = openaccess
+    plugin = gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Social_Security_Bulletin/
+    # Ancient plugin uses journal_id but should have been volume_name
+    implicit < status ; year ; volume ; name ; param[journal_id] >  
+
+    au < down ; 2003–2004 ; 65 ; Social Security Bulletin Volume 65 ; volume65 >
+      
+  }
+  
+}

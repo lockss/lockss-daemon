@@ -33,51 +33,56 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>deprecated - gpo-pilot registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.ClockssLupBooksPlugin</string>
+    <string>gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Liverpool University Press Books Plugin (CLOCKSS)</string>
+    <string>Journal of Research of the National Institute of Standards and Technology Plugin</string>
   </entry>
   <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.cloudpublish.liverpool.LupBooksPlugin</string>
-  </entry>
-   <entry>
-    <string>plugin_parent_version</string>
-    <string>1</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>"Liverpool University Press Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
-  </entry>
-  <entry>
-  <string>au_start_url</string>
+    <string>plugin_config_props</string>
     <list>
-      <string>"%sclockss/eisbn/%s", to_http(base_url), book_eisbn</string>
-      <string>"%sclockss/eisbn/%s", to_https(base_url), book_eisbn</string>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
-  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
-    <string>plugin_au_config_user_msg</string>
-    <org.lockss.util.Default />
+    <string>au_name</string>
+    <string>"Journal of Research of the National Institute of Standards and Technology Plugin, Base URL %s, Journal ID %s", base_url, journal_id</string>
   </entry>
   <entry>
-    <string>clockss_override</string>
-    <map>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-      </entry>
-    </map>
+    <string>au_start_url</string>
+    <string>"%s%s/index.html", base_url, journal_id</string>
   </entry>
- </map>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%s/", base_url, journal_id</string>
+    </list>
+  </entry>
+</map>
