@@ -1,0 +1,81 @@
+{
+
+  publisher <
+    name = Association for Research in Vision and Optholmology ;
+    info[platform] = SC. GLN only. BLOCKED
+  >
+
+  #plugin = needs.plugin
+  plugin = org.lockss.plugin.silverchair.ama.AmaSilverchairPlugin
+  implicit < status ; year ; name ; param[year] >
+  
+  {
+
+    title <
+      name = IOVS: Investigative Ophthalmology and Visual Science ;
+      eissn = 1552-5783 ;
+      issnl = 1552-5783
+    >
+
+    param[base_url] = https://iovs.arvojournals.org/
+    param[resource_id] = 177
+    param[journal_id] = iovs
+    #published 1962-present
+    
+    au < exists ; 2016 ; IOVS: Investigative Ophthalmology and Visual Science Volume 57 ; 2016 >
+    au < exists ; 2017 ; IOVS: Investigative Ophthalmology and Visual Science Volume 58 ; 2017 >
+    au < exists ; 2018 ; IOVS: Investigative Ophthalmology and Visual Science Volume 59 ; 2018 >
+    au < exists ; 2019 ; IOVS: Investigative Ophthalmology and Visual Science Volume 60 ; 2019 >
+    au < exists ; 2020 ; IOVS: Investigative Ophthalmology and Visual Science Volume 61 ; 2020 >
+    au < exists ; 2021 ; IOVS: Investigative Ophthalmology and Visual Science Volume 62 ; 2021 >
+    au < exists ; 2022 ; IOVS: Investigative Ophthalmology and Visual Science Volume 63 ; 2022 >
+
+  }
+
+  {
+
+    title <
+      name = JOV: Journal of Vision ;
+      eissn = 1534-7362 ;
+      issnl = 1534-7362
+    >
+
+    param[base_url] = https://jov.arvojournals.org/
+    param[resource_id] = 178
+    param[journal_id] = jov
+    #published 2001-present
+    
+    au < exists ; 2016 ; IOVS: Journal of Vision Volume 16 ; 2016 >
+    au < exists ; 2017 ; IOVS: Journal of Vision Volume 17 ; 2017 >
+    au < exists ; 2018 ; IOVS: Journal of Vision Volume 18 ; 2018 >
+    au < exists ; 2019 ; IOVS: Journal of Vision Volume 19 ; 2019 >
+    au < exists ; 2020 ; IOVS: Journal of Vision Volume 20 ; 2020 >
+    au < exists ; 2021 ; IOVS: Journal of Vision Volume 21 ; 2021 >
+    au < exists ; 2022 ; IOVS: Journal of Vision Volume 22 ; 2022 >
+
+  }
+
+  {
+
+    title <
+      name = TVST: Translational Vision Science and Technology ;
+      eissn = 2164-2591 ;
+      issnl = 2164-2591
+    >
+
+    param[base_url] = https://tvst.arvojournals.org/
+    param[resource_id] = 179
+    param[journal_id] = tvst
+    #published 2012-present
+    
+    au < exists ; 2016 ; TVST: Translational Vision Science and Technology Volume 5 ; 2016 >
+    au < exists ; 2017 ; TVST: Translational Vision Science and Technology Volume 6 ; 2017 >
+    au < exists ; 2018 ; TVST: Translational Vision Science and Technology Volume 7 ; 2018 >
+    au < exists ; 2019 ; TVST: Translational Vision Science and Technology Volume 8 ; 2019 >
+    au < exists ; 2020 ; TVST: Translational Vision Science and Technology Volume 9 ; 2020 >
+    au < exists ; 2021 ; TVST: Translational Vision Science and Technology Volume 10 ; 2021 >
+    au < exists ; 2022 ; TVST: Translational Vision Science and Technology Volume 11 ; 2022 >
+
+  }
+
+}
