@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Florida State University
+  >
+
+  {
+  
+    title <
+      name = Florida State University Electronic Theses and Dissertations
+    >
+    
+    plugin = org.lockss.plugin.etd.fsuplugin.FSUETDPlugin
+    param[base_url] = http://etd.lib.fsu.edu/
+    param[oai_request_url] = http://etd.lib.fsu.edu/ETD-db/ETD-oai/oai.pl
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2003 ; Florida State University Electronic Theses and Dissertations 2003 ; 2003 >
+    au < down ; 2004 ; Florida State University Electronic Theses and Dissertations 2004 ; 2004 >
+      
+  }
+  
+}
