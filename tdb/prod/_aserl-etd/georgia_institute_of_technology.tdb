@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Georgia Institute of Technology
+  >
+
+  {
+  
+    title <
+      name = Georgia Institute of Technology Electronic Theses and Dissertations
+    >
+    
+    plugin = org.lockss.plugin.etd.gatechplugin.GATechETDPlugin
+    param[base_url] = http://etd.gatech.edu/
+    param[oai_request_url] = http://etd.gatech.edu/ETD-db/OAI2/oai.pl
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2003 ; Georgia Institute of Technology Electronic Theses and Dissertations 2003 ; 2003 >
+    au < down ; 2004 ; Georgia Institute of Technology Electronic Theses and Dissertations 2004 ; 2004 >
+      
+  }
+  
+}

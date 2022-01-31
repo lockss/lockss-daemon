@@ -704,6 +704,12 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "org.lockss.plugin.disputatio.DisputatioPlugin",
                  "org.lockss.plugin.emc.EarlyModernCulturePlugin",
                  "org.lockss.plugin.emls.EmlsPlugin",
+                 "org.lockss.plugin.etd.fsuplugin.FSUETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.gatechplugin.GATechETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.ukyplugin.UKYETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin", // aserl-etd
+                 "org.lockss.plugin.etd.vtetdplugin.VTETDPlugin", // aserl-etd
                  "org.lockss.plugin.evergreenreview.EvergreenReviewPlugin",
                  "org.lockss.plugin.GendersPlugin",
                  "org.lockss.plugin.histcoop.HistoryCooperativePlugin",
