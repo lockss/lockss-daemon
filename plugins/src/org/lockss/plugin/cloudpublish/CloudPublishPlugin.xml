@@ -1,0 +1,190 @@
+<!--
+
+Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Cloud Publish Platform Plugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Cloud Publish Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!--
+        https://www.liverpooluniversitypress.co.uk/lockss-manifest/archives/31
+    -->
+    <string>"%slockss-manifest/%s/%s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?v=[^/]*)?$", base_url_host</string>
+      <string>1,"https://cdnjs\.cloudflare\.com/"</string>
+      <string>1,"https://semantic-ui\.com/"</string>
+      <string>1,"https://code\.jquery\.com/"</string>
+      <string>1,"https://fonts\.gstatic\.com/"</string>
+      <string>1,"https?://(fonts|ajax)\.googleapis\.com/"</string>
+      <string>1,"https://themes\.googleusercontent\.com/"</string>
+      <!-- d1bxh8uas1mnw7.cloudfront.net -->
+      <string>1,"https://.*\.cloudfront\.net/"</string>
+      <!-- mediaserver & subdomains, might make this a download url -->
+      <string>1,"https://.*\.cloudpublish\.co\.uk/"</string>
+      <string>1,"https://bam\.eu01\.nr-data\.net"</string>
+      <!-- exclude these general type pages -->
+      <string>2,"^%sjournals/?$", base_url</string>
+      <string>2,"^%sjournals/id/", base_url</string>
+      <string>2,"^%spages/", base_url</string>
+      <string>2,"^%scontributors/", base_url</string>
+      <!-- https://www.liverpooluniversitypress.co.uk/journals/article/21290/
+           https://www.liverpooluniversitypress.co.uk/journals/issue/3426 -->
+      <string>1,"^%sjournals/(article|issue)/", base_url</string>
+      <!-- https://www.liverpooluniversitypress.co.uk/read/?item_type=journal_article&item_id=51935
+           https://www.liverpooluniversitypress.co.uk/read/?item_type=journal_article&item_id=51935&mode=download
+           redirects to this:
+           https://liverpoolup.cloudpublish.co.uk/read/?id=51935&type=journal_article&cref=CLOCKSS&peref=&drm=soft&acs=1&exit=https://www.liverpooluniversitypress.co.uk/journals/article/51935&p=6&uid=LUP&t=1643388899&h=c1d5809ba5c07433ac03299ce7781f5f -->
+      <string>1,"^(%s|https://.*\.cloudpublish\.co\.uk/)read/\?", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- https://liverpooluniversitypress.co.uk/journals/article/20072/ -->
+      <string>"^%s(journals/article/|read/\?item_type=journal_article.item_id=)\d+(|.mode=download)$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <!--
+    These aren't redirects
+      https://liverpooluniversitypress.cloudpublish.co.uk/login/?redirect_to=%2Fjournals%2Farticle%2F30752%2F&cart_item_id=&cart_item_type=&mode=login-private
+      https://liverpooluniversitypress.cloudpublish.co.uk/read-this/article/30752
+      https://liverpooluniversitypress.co.uk/reset-password/?v=login-institution
+      https://liverpooluniversitypress.co.uk/reset-password/?v=login-private
+    -->
+    <string>au_redirect_to_login_url_pattern</string>
+    <string>"^%s(login|read-this)/.*", base_url</string>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>themes\.googleusercontent\.com"</string>
+      <string>code\.jquery\.com</string>
+      <string>semantic-ui\.com</string>
+      <!-- https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js -->
+      <string>cloudfront\.net</string>
+      <string>cdnjs\.cloudflare\.com</string>
+      <!-- mediaserver and journal subdomains, e.g. liverpool-->
+      <string>cloudpublish\.co\.uk</string>
+      <string>bam\.eu01\.nr-data\.net</string>
+    </list>
+  </entry>
+  <!--
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishUrlConsumerFactory</string>
+  </entry>
+  -->
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudPublishArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>
