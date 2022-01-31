@@ -67,4 +67,18 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.cloudpublish.liverpool.LupUrlConsumerFactory</string>
   </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupHtmlLinkRewriterFactory</string>
+  </entry>
+  <!--
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupUrlFetcherFactory</string>
+  </entry>
+  -->
 </map>
