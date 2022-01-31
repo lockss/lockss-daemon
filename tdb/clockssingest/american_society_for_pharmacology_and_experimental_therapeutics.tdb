@@ -619,7 +619,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; http://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; crawling ; exists ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; https://molpharm.aspetjournals.org/ ; >
-    au < aspet.ClockssASPETDrupalPlugin ; expected ; exists ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ ; >
+    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ ; >
 
     }
   }

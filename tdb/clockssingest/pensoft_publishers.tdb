@@ -621,7 +621,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Orthoptera Research Volume 2019 ; 2019 ; https://jor.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Orthoptera Research Volume 2020 ; 2020 ; https://jor.pensoft.net/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Journal of Orthoptera Research Volume 2021 ; 2021 ; https://jor.pensoft.net/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Journal of Orthoptera Research Volume 2022 ; 2022 ; https://jor.pensoft.net/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Journal of Orthoptera Research Volume 2022 ; 2022 ; https://jor.pensoft.net/ ; >
 
   }
 
@@ -755,7 +755,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Research Ideas and Outcomes Volume 2020 ; 2020 ; https://riojournal.com/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Research Ideas and Outcomes Volume 2021 ; 2021 ; https://riojournal.com/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Research Ideas and Outcomes Volume 2022 ; 2022 ; https://riojournal.com/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Research Ideas and Outcomes Volume 2022 ; 2022 ; https://riojournal.com/ ; >
 
   }
 
@@ -1058,7 +1058,7 @@
 
       au < frozen ; exists ; 2020 ; 2020 ; Vegetation Classification and Survey Volume 2020 ; 2020 ; https://vcs.pensoft.net/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Vegetation Classification and Survey Volume 2021 ; 2021 ; https://vcs.pensoft.net/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Vegetation Classification and Survey Volume 2022 ; 2022 ; https://vcs.pensoft.net/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Vegetation Classification and Survey Volume 2022 ; 2022 ; https://vcs.pensoft.net/ ; >
 
   }
 
@@ -1142,7 +1142,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; Journal of Universal Computer Science Volume 2019 ; 2019 ; https://lib.jucs.org/ ; >
       au < manifest ; exists ; 2020 ; 2020 ; Journal of Universal Computer Science Volume 2020 ; 2020 ; https://lib.jucs.org/ ; >
       au < crawling ; exists ; 2021 ; 2021 ; Journal of Universal Computer Science Volume 2021 ; 2021 ; https://lib.jucs.org/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Journal of Universal Computer Science Volume 2022 ; 2022 ; https://lib.jucs.org/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Journal of Universal Computer Science Volume 2022 ; 2022 ; https://lib.jucs.org/ ; >
 
   }
 
@@ -1194,7 +1194,7 @@
       param[au_oai_set] = vertebrate-zoology
 
       au < crawling ; exists ; 2021 ; 2021 ; Vertebrate Zoology Volume 2021 ; 2021 ; https://vertebrate-zoology.arphahub.com/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Vertebrate Zoology Volume 2022 ; 2022 ; https://vertebrate-zoology.arphahub.com/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Vertebrate Zoology Volume 2022 ; 2022 ; https://vertebrate-zoology.arphahub.com/ ; >
 
   }
 

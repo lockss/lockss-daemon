@@ -550,7 +550,7 @@
     param[journal_id] = lib
     #continued_by = 1758-3489
 
-    au < exists ; exists ; 2004 ; Library History Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2004 ; Library History Volume 20 ; 20 ; https://www.euppublishing.com/ ; >
 
   }
   
@@ -567,21 +567,21 @@
     #continues = 0024-2306
     #doNotProcess = had been processed under Maney.Ingenta
 
-    au < exists ; exists ; 2005 ; Library and Information History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2006 ; Library and Information History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2007 ; Library and Information History Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2008 ; Library and Information History Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2009 ; Library and Information History Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2005 ; Library and Information History Volume 21 ; 21 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2006 ; Library and Information History Volume 22 ; 22 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2007 ; Library and Information History Volume 23 ; 23 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2008 ; Library and Information History Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2009 ; Library and Information History Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Library and Information History Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Library and Information History Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Library and Information History Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2013 ; Library and Information History Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2014 ; Library and Information History Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2015 ; Library and Information History Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2016 ; Library and Information History Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2017 ; Library and Information History Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2018 ; Library and Information History Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
-    au < exists ; exists ; 2019 ; Library and Information History Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2013 ; Library and Information History Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2014 ; Library and Information History Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2015 ; Library and Information History Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2016 ; Library and Information History Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2017 ; Library and Information History Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2018 ; Library and Information History Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2019 ; Library and Information History Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
     au < frozen ; exists ; 2021 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2022 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
@@ -738,7 +738,7 @@
     au < finished ; frozen ; 2019 ; Edinburgh Law Review Volume 23 ; 23 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Edinburgh Law Review Volume 24 ; 24 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2021 ; Edinburgh Law Review Volume 25 ; 25 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2022 ; Edinburgh Law Review Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2022 ; Edinburgh Law Review Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
 
   }
 
