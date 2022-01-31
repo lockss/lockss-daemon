@@ -51,6 +51,26 @@
   {
 
     title <
+      name = Ars Judaica ;
+      issn = 1565-6721 ;
+      eissn = 2516-4252 ;
+      issnl = 0003-9535
+    >
+
+    param[journal_id] = arsjudaica
+
+    au < expected ; exists ; 2015 ; Ars Judaica Volume 11 ; 11 ; >
+    au < testing ; exists ; 2016 ; Ars Judaica Volume 12 ; 12 ; >
+    au < expected ; exists ; 2017 ; Ars Judaica Volume 13 ; 13 ; >
+    au < expected ; exists ; 2018 ; Ars Judaica Volume 14 ; 14 ; >
+    au < expected ; exists ; 2019 ; Ars Judaica Volume 15 ; 15 ; >
+    au < expected ; exists ; 2020 ; Ars Judaica Volume 16 ; 16 ; >
+
+  }
+
+  {
+
+    title <
       name = Australian Journal of French Studies ;
       issn = 0004-9468 ;
       eissn = 2046-2913 ;
@@ -322,6 +342,45 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Contemporary French Civilization Volume 44 ; 44 ; >
     au < testing ; exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; >
     au < expected ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; >
+
+  }
+
+  {
+
+    title <
+      name = Eighteenth-Century Ireland ;
+      issn = 0790-7915 ;
+      eissn = 2753-9725
+    >
+
+    param[journal_id] = eci
+
+    au < expected ; exists ; 1986 ; Eighteenth-Century Ireland Volume 1 ; 1 ; >
+    au < expected ; exists ; 1987 ; Eighteenth-Century Ireland Volume 2 ; 2 ; >
+    au < testing ; exists ; 1988 ; Eighteenth-Century Ireland Volume 3 ; 3 ; >
+    au < expected ; exists ; 1989 ; Eighteenth-Century Ireland Volume 4 ; 4 ; >
+    au < expected ; exists ; 1990 ; Eighteenth-Century Ireland Volume 5 ; 5 ; >
+    au < expected ; exists ; 1991 ; Eighteenth-Century Ireland Volume 6 ; 6 ; >
+    au < expected ; exists ; 1992 ; Eighteenth-Century Ireland Volume 7 ; 7 ; >
+    au < expected ; exists ; 1993 ; Eighteenth-Century Ireland Volume 8 ; 8 ; >
+    au < expected ; exists ; 1994 ; Eighteenth-Century Ireland Volume 9 ; 9 ; >
+    au < expected ; exists ; 1995 ; Eighteenth-Century Ireland Volume 10 ; 10 ; >
+    au < expected ; exists ; 1996 ; Eighteenth-Century Ireland Volume 11 ; 11 ; >
+    au < expected ; exists ; 1997 ; Eighteenth-Century Ireland Volume 12 ; 12 ; >
+    au < expected ; exists ; 1998 ; Eighteenth-Century Ireland Volume 13 ; 13 ; >
+    au < expected ; exists ; 1999 ; Eighteenth-Century Ireland Volume 14 ; 14 ; >
+    au < expected ; exists ; 2000 ; Eighteenth-Century Ireland Volume 15 ; 15 ; >
+    au < expected ; exists ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 ; >
+    au < expected ; exists ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 ; >
+    au < expected ; exists ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 ; >
+    au < expected ; exists ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 ; >
+    au < expected ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
+    au < expected ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
+    au < expected ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
+    au < expected ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
+    au < expected ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; >
+    au < expected ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; >
+    au < expected ; exists ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 ; >
 
   }
 
@@ -812,6 +871,42 @@
   {
 
     title <
+      name = Marx House Bulletin ;
+      issn =  ;
+      eissn = 2634-8233 ;
+      issnl =
+    >
+
+    param[journal_id] = mhb
+
+    au < expected ; exists ; 1934 ;  Marx House Bulletin Volume 1 ; 1 ; >
+    au < expected ; exists ; 1935 ;  Marx House Bulletin Volume 2 ; 1 ; >
+    au < expected ; exists ; 1936 ;  Marx House Bulletin Volume 3 ; 1 ; >
+    au < expected ; exists ; 1937 ;  Marx House Bulletin Volume 4 ; 1 ; >
+    au < expected ; exists ; 1938 ;  Marx House Bulletin Volume 5 ; 1 ; >
+    au < expected ; exists ; 1939 ;  Marx House Bulletin Volume 6 ; 1 ; >
+    au < expected ; exists ; 1940 ;  Marx House Bulletin Volume 7 ; 1 ; >
+    au < expected ; exists ; 1941 ;  Marx House Bulletin Volume 8 ; 1 ; >
+    au < expected ; exists ; 1942 ;  Marx House Bulletin Volume 9 ; 1 ; >
+    au < expected ; exists ; 1943 ;  Marx House Bulletin Volume 10 ; 1 ; >
+    au < expected ; exists ; 1944 ;  Marx House Bulletin Volume 11 ; 1 ; >
+    au < expected ; exists ; 1945 ;  Marx House Bulletin Volume 12 ; 1 ; >
+    au < expected ; exists ; 1946 ;  Marx House Bulletin Volume 13 ; 1 ; >
+    au < expected ; exists ; 1947 ;  Marx House Bulletin Volume 14 ; 1 ; >
+    au < expected ; exists ; 1948 ;  Marx House Bulletin Volume 15 ; 1 ; >
+    au < expected ; exists ; 1949 ;  Marx House Bulletin Volume 16 ; 1 ; >
+    au < expected ; exists ; 1950 ;  Marx House Bulletin Volume 17 ; 1 ; >
+    au < expected ; exists ; 1951 ;  Marx House Bulletin Volume 18 ; 1 ; >
+    au < expected ; exists ; 1952 ;  Marx House Bulletin Volume 19 ; 1 ; >
+    au < expected ; exists ; 1953 ;  Marx House Bulletin Volume 20 ; 1 ; >
+    au < expected ; exists ; 1954 ;  Marx House Bulletin Volume 21 ; 1 ; >
+    # ------------- fill this is in
+    au < expected ; exists ; 1981 ;  Marx House Bulletin Volume 99 ; 99 ; >
+  }
+
+  {
+
+    title <
       name = Modern Believing ;
       issn = 1353-1425 ;
       eissn = 2053-633X ;
@@ -959,6 +1054,19 @@
     au < testing ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; >
     au < exists ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; >
     au < expected ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Quarterly Bulletin of the Marx Memorial Library ;
+      eissn = 0025-410X
+    >
+
+    param[journal_id] = mmlb
+
+    au < testing ; exists ; 1982 ; The Quarterly Bulletin of the Marx Memorial Library Volume 100 ; 100 ; >
 
   }
 
@@ -1135,12 +1243,12 @@
       issn = 0969-1154
     >
 
-    param[journal_id] = theory
+    param[journal_id] = praxis
     
     #no earlier volumes available at Liverpool 
     au < testing ; exists ; 2011 ; Praxis Volume 154 ; 154 ; >
     au < exists ; exists ; 2012 ; Praxis Volume 155 ; 155 ; >
-    #title is now continued as Theory & Struggle - different ISBN, same journal_id
+    #title is now continued as Theory & Struggle - different ISBN, different journal_id
 
   }
   
@@ -1153,7 +1261,7 @@
     >
 
     param[journal_id] = theory
-    #title was Praxis - different ISBN, same journal_id
+    #title was Praxis - different ISBN, different journal_id
     au < doNotProcess ; doNotProcess ; 2014 ; Theory & Struggle Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Theory & Struggle Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Theory & Struggle Volume 117 ; 117 ; >
