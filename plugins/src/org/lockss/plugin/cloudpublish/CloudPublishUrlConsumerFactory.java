@@ -40,6 +40,8 @@ import org.lockss.util.UrlUtil;
 public class CloudPublishUrlConsumerFactory implements UrlConsumerFactory {
   private static final Logger log = Logger.getLogger(CloudPublishUrlConsumerFactory.class);
 
+  public static final String READ_ITEM_TYPE = "read/?item_type=journal_article&item_id=";
+
   @Override
   public UrlConsumer createUrlConsumer(Crawler.CrawlerFacade crawlFacade,
                                        FetchedUrlData fud) {
@@ -67,7 +69,7 @@ public class CloudPublishUrlConsumerFactory implements UrlConsumerFactory {
      */
     public boolean shouldStoreAtOrigUrl() {
       boolean should = false;
-      should = fud.origUrl.contains("read/?item_type=journal_article&item_id=");;
+      should = fud.origUrl.contains(READ_ITEM_TYPE);;
       if (AuUtil.isBaseUrlHttp(au)
           && fud.redirectUrls != null
           && fud.redirectUrls.size() >= 1
