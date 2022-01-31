@@ -53,7 +53,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.3.0]";
+  public static final String VERSION = "[TdbXml:0.3.1]";
   
   /**
    * <p>
