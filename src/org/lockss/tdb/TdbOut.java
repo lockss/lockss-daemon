@@ -49,7 +49,7 @@ public class TdbOut {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbOut:0.3.0]";
+  public static final String VERSION = "[TdbOut:0.3.1]";
   
   /**
    * <p>
@@ -751,7 +751,7 @@ public class TdbOut {
   public Map<String, Object> processCommandLine(CommandLineAccessor cmd) {
     Map<String, Object> options = new HashMap<String, Object>();
     // Help already processed
-    Version.parse(cmd, VERSION, TdbBuilder.VERSION); // may exit
+    Version.parse(cmd, VERSION, TdbBuilder.VERSION, TdbQueryBuilder.VERSION); // may exit
 
     InputOption.processCommandLine(options, cmd);
     InputData.parse(options, cmd);
