@@ -51,14 +51,27 @@ public class WoltersKluwerSourceArticleIteratorFactory
   protected static Logger log = 
       Logger.getLogger(WoltersKluwerSourceArticleIteratorFactory.class);
 
+  /*
+  Sample 1: Known to us from the beginning
+  https://clockss-test.lockss.org/sourcefiles/wolterskluwer-released/2022/AAPRAC20211200.0.zip!/20211200.0
+  https://clockss-test.lockss.org/sourcefiles/wolterskluwer-released/2022/AAPRAC20211200.0.zip!/02054229-202112000-00007.pdf
+
+  Sample 2: new format found since 2022, but appear in 2020 delivery
+  https://clockss-test.lockss.org/sourcefiles/wolterskluwer-released/2022/AAPRAC_AAPRAC20210800.0_XAA.0000000000001506.zip!/XAA.0000000000001506.pdf
+  https://clockss-test.lockss.org/sourcefiles/wolterskluwer-released/2022/AAPRAC_AAPRAC20210800.0_XAA.0000000000001506.zip!/XAA.0000000000001506.xml
+  Sample 3: new format found since 2022, but appear in 2020 delivery
+  https://clockss-test.lockss.org/sourcefiles/wolterskluwer-released/2022/aahm_AAHM20211200.0.xml.zip!/AAHM20211200.0.xml/20211200.0-00006.pdf
+  https://clockss-test.lockss.org/sourcefiles/wolterskluwer-released/2022/aahm_AAHM20211200.0.xml.zip!/AAHM20211200.0.xml/20211200.0-00006.xml
+   */
+
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url, ";
   // suffix has only ever been one digit, may be 0-9
   // 2014/CIRC20140304.0.zip!/20140304.0
   private static final String PATTERN_TEMPLATE = 
-      "\"%s%d/[^/]+\\.zip!/[^/]+\\.([\\d])$\",base_url,year";
+      "\"%s%d/[^/]+\\.zip!(/[^/]+)?/[^/]+\\.([\\d]|xml)$\",base_url,year";
   //      "\"%s%d/[^/]+\\.zip!/(.*)\\.[\\d]$\",base_url,year";
   
-  public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.([\\d])$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.([\\d]|xml)$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.$2";
   public static final String SGML_CONTENT_TYPE = "application/xml";
   // following regex matches the sgml file - only ever seen one digit at end, but just in case...

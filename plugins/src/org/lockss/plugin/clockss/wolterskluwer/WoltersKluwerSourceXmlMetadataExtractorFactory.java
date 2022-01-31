@@ -38,6 +38,7 @@ import java.util.*;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.commons.io.FilenameUtils;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -65,10 +66,21 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-    // Once you have it, just keep returning the same one. It won't change.
-      if (WKHelper == null) {
+
+      //Starting 2020, the content need more than one schemas to handle
+      //One schema has "_" in folder, others do not
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+      //log.debug3("Wolters Kluwer cuBase = " + cuBase);
+
+      if (WKHelper == null && !cuBase.contains("_")){
+        //log.debug3("Wolters Kluwer old schema cuBase = " + cuBase);
         WKHelper = new WoltersKluwerSourceXmlSchemaHelper();
+      } else if (cuBase.contains("_")) {
+        //log.debug3("Wolters Kluwer new schema cuBase = " + cuBase);
+        WKHelper = new JatsPublishingSchemaHelper();
       }
+
       return WKHelper;
     }
        
