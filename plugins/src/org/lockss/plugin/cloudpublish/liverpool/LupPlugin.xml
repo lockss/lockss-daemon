@@ -63,4 +63,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_parent_version</string>
     <string>1</string>
   </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.cloudpublish.liverpool.LupUrlConsumerFactory</string>
+  </entry>
 </map>

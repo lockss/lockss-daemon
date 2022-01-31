@@ -65,6 +65,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"https://cdnjs\.cloudflare\.com/"</string>
       <string>1,"https://semantic-ui\.com/"</string>
       <string>1,"https://code\.jquery\.com/"</string>
+      <string>1,"https://fonts\.gstatic\.com/"</string>
       <string>1,"https?://(fonts|ajax)\.googleapis\.com/"</string>
       <string>1,"https://themes\.googleusercontent\.com/"</string>
       <!-- d1bxh8uas1mnw7.cloudfront.net -->
@@ -84,7 +85,7 @@ POSSIBILITY OF SUCH DAMAGE.
            https://www.liverpooluniversitypress.co.uk/read/?item_type=journal_article&item_id=51935&mode=download
            redirects to this:
            https://liverpoolup.cloudpublish.co.uk/read/?id=51935&type=journal_article&cref=CLOCKSS&peref=&drm=soft&acs=1&exit=https://www.liverpooluniversitypress.co.uk/journals/article/51935&p=6&uid=LUP&t=1643388899&h=c1d5809ba5c07433ac03299ce7781f5f -->
-      <string>1,"^%sread/\?", base_url</string>
+      <string>1,"^(%s|https://.*\.cloudpublish\.co\.uk/)read/\?", base_url</string>
     </list>
   </entry>
   <entry>
@@ -155,10 +156,12 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>bam\.eu01\.nr-data\.net</string>
     </list>
   </entry>
+  <!--
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.cloudpublish.CloudPublishUrlConsumerFactory</string>
   </entry>
+  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlHashFilterFactory</string>
