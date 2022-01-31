@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = United States Bureau of the Fiscal Service
+  >
+
+  {
+  
+    title <
+      name = Treasury Bulletin ;
+      issn = 0041-2155 ;
+      eissn = 1555-0168 ;
+      issnl = 0041-2155
+    >
+    
+    rights = openaccess
+    plugin = gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin
+    param[base_url] = http://permanent.access.gpo.gov/lockss/Treasury_Bulletin/
+    implicit < status ; year ; name ; param[year] >  
+
+    au < down ; 2005 ; Treasury Bulletin 2005 ; 2005 >
+      
+  }
+  
+}
