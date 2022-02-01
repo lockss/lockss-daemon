@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -145,7 +145,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.googleapis\.com</string>
-      <string>themes\.googleusercontent\.com"</string>
+      <string>themes\.googleusercontent\.com</string>
       <string>code\.jquery\.com</string>
       <string>semantic-ui\.com</string>
       <!-- https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js -->
