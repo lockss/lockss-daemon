@@ -3,7 +3,7 @@
   publisher <
     name = Copernicus Publications ;
     info[tester] = 5 ;
-    info[platform] = BLOCKED ISPRS will be collected by source, see Jira#LXPLUG-290
+    info[platform] = CopernicusPublicationsPlugin
   >
   {
     plugin = org.lockss.plugin.copernicus.CopernicusPublicationsPlugin
