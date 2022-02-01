@@ -541,14 +541,26 @@
   {
 
       title <
+        name = Genealogy+Critique ;
+        eissn = 2755-0923
+      >
+
+      comment[publisher] = Open Library of Humanities
+      param[base_url] = https://www.genealogy-critique.net/
+
+      au < manifest ; 2022 ; 8 ; Genealogy+Critique Volume 2022 ; 2022 >
+
+  }
+
+  {
+
+      title <
         name = Le foucaldien ;
         eissn = 2515-2076
       >
 
       comment[publisher] = Open Library of Humanities
-      param[base_url] = https://foucaldien.net/
-      #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
+      param[base_url] = https://www.genealogy-critique.net/
 
       au < doNotProcess ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 >
       au < doNotProcess ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 >
@@ -556,9 +568,8 @@
       au < doNotProcess ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 >
-      au < exists ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 8 ; Le foucaldien Volume 2022 ; 2022 >
-
+      au < manifest ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 >
+      #Changed name and issn: Genealogy+Critique 2755-0923
   }
 
   {
