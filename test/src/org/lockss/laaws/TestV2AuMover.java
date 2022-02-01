@@ -43,17 +43,23 @@ public class TestV2AuMover extends LockssTestCase {
   private MockLockssDaemon theDaemon;
 
   String[] reportLines = {
-    "Au:au1  urlsMoved: 10  artifactsMoved: 10  bytesMoved: 1000  contentBytesMoved: 900  errors: 0  totalRuntime: 300ms",
-    "",
-    "Au:au2  urlsMoved: 20  artifactsMoved: 33  bytesMoved: 3000  contentBytesMoved: 2800  errors: 1  totalRuntime: 1500ms",
-    "cu2 Attempt to move artifact failed.",
-    "",
-    "Au:au3  urlsMoved: 4000  artifactsMoved: 4300  bytesMoved: 100000  contentBytesMoved: 99031  errors: 3  totalRuntime: 20s",
-    "cu1: Attempt to move artifact failed.",
-    "cu5: Attempt to commit artifact failed.",
-    "cu80: Attempt to commit artifact failed.",
-    "",
-    "AusMoved: 3  urlsMoved: 4030  artifactsMoved: 4343  bytesMoved: 104000  contentBytesMoved: 102731  errors: 4  totalRuntime: 21s"
+      "AU Name: au1",
+      "AU ID: au1",
+      "urlsMoved: 10  artifactsMoved: 10  contentBytesMoved: 900  contentByteRate: 3  totalBytesMoved: 1000  totalByteRate: 3  errors: 0  totalRuntime: 300ms",
+      "",
+      "AU Name: au2",
+      "AU ID: au2",
+      "urlsMoved: 20  artifactsMoved: 33  contentBytesMoved: 2800  contentByteRate: 1  totalBytesMoved: 3000  totalByteRate: 2  errors: 1  totalRuntime: 1500ms",
+      " cu2 Attempt to move artifact failed.",
+      "",
+      "AU Name: au3",
+      "AU ID: au3",
+      "urlsMoved: 4000  artifactsMoved: 4300  contentBytesMoved: 99031  contentByteRate: 4  totalBytesMoved: 100000  totalByteRate: 5  errors: 3  totalRuntime: 20s",
+      " cu1: Attempt to move artifact failed.",
+      " cu5: Attempt to commit artifact failed.",
+      " cu80: Attempt to commit artifact failed.",
+      "",
+      "AusMoved: 3  urlsMoved: 4030  artifactsMoved: 4343  contentBytesMoved: 102731  contentByteRate: 5  totalBytesMoved: 104000  totalByteRate: 5  errors: 4  totalRuntime: 21s"
   };
 
   public void setUp() throws Exception {
@@ -157,6 +163,7 @@ public class TestV2AuMover extends LockssTestCase {
     } catch (IOException ioe) {
       fail("IOException thrown",ioe);
     }
+     // TODO - Add test for error exits.
     assertEquals(reportLines.length + HEADER_LENGTH, lines.size());
     // we're only checking the report lines.
     for(int i=0; i < reportLines.length; i++) {
@@ -262,8 +269,8 @@ public class TestV2AuMover extends LockssTestCase {
     }
 
     @Override
-    boolean v2SerivicesReady()  throws IOException {
-     return true;
+    boolean v2ServicesUnavailable()  throws IOException {
+     return false;
     }
 
     protected List<String> getMovedAus() {

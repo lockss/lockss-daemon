@@ -142,7 +142,7 @@ public class V2AuMover {
    * The  maximum number of retries for failures
    */
   public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "max.retries";
-  public static final int DEFAULT_MAX_RETRY_COUNT = 3;
+  public static final int DEFAULT_MAX_RETRY_COUNT = 4;
 
   /**
    * The backoff between failed attempts - default 10000 ms
@@ -172,8 +172,8 @@ public class V2AuMover {
    */
   public static final String PARAM_REPORT_FILE = PREFIX + "report.file";
   public static final String DEFAULT_REPORT_FILE = "v2migration.txt";
-  
-  
+
+
   private static final Logger log = Logger.getLogger(V2AuMover.class);
   private int maxRetryCount;
   private long retryBackoffDelay;
@@ -281,6 +281,7 @@ public class V2AuMover {
   private long totalRunTime = 0;
   private long totalErrorCount = 0;
 
+  // Report fields
   // Counters for a single au
   private long auUrlsMoved = 0;
   private long auArtifactsMoved = 0;
@@ -292,6 +293,7 @@ public class V2AuMover {
   private final List<String> errorList = new ArrayList<>();
 
   private boolean terminated = false;
+  private boolean isPartialContent = false;
 
 
   public V2AuMover() {
@@ -375,7 +377,7 @@ public class V2AuMover {
    */
   public void moveAllAus(String host, String uname, String upass, List<Pattern> selPatterns) throws IOException {
     initRequest(host, uname, upass);
-    if (!v2SerivicesReady()) {
+    if (v2ServicesUnavailable()) {
       throw new IOException("Move request failed, V2 Services are not ready.");
     }
     // get the aus know to the v2 repo
@@ -426,7 +428,7 @@ public class V2AuMover {
    */
   public void moveOneAu(String host, String uname, String upass, ArchivalUnit au) throws IOException {
     initRequest(host, uname, upass);
-    if (!v2SerivicesReady()) {
+    if (v2ServicesUnavailable()) {
       throw new IOException(au.getAuId() + "Move request failed, V2 Services are not ready.");
     }
     // get the aus known to the v2 repository
@@ -533,21 +535,39 @@ public class V2AuMover {
 
   /**
    * Update the report for the current Au
-   * @param auName
+   * @param auName the name of the current Au
    */
   void updateReport(String auName) {
-    // todo - change currentAu to currentAuName
-    String auData = "Au:" + auName +
-        "  urlsMoved: " + auUrlsMoved +
+    String auData = "urlsMoved: " + auUrlsMoved +
         "  artifactsMoved: " + auArtifactsMoved +
-        "  bytesMoved: " + auBytesMoved +
         "  contentBytesMoved: " + auContentBytesMoved +
+        "  contentByteRate: " + (auContentBytesMoved / auRunTime ) +
+        "  totalBytesMoved: " + auBytesMoved +
+        "  totalByteRate: " + (auBytesMoved / auRunTime) +
         "  errors: " + auErrorCount +
         "  totalRuntime: " + StringUtil.timeIntervalToString(auRunTime);
     if (reportWriter != null) {
-      reportWriter.println(auData);
-      for (String err : auErrors) {
-        reportWriter.println(err);
+      reportWriter.println("AU Name: "+ auName);
+      reportWriter.println("AU ID: "+ currentAu);
+      if(terminated) {
+        reportWriter.println("Move terminated with error.");
+        reportWriter.println(auData);
+      }
+      else {
+        if(isPartialContent) {
+          if(auArtifactsMoved > 0) {// if we moved something
+            reportWriter.println("Move remaining unmigrated au content.");
+            reportWriter.println(auData);
+          }
+        }
+        else {
+          reportWriter.println(auData);
+        }
+      }
+      if (!auErrors.isEmpty()) {
+        for (String err : auErrors) {
+          reportWriter.println(" " + err);
+        }
       }
       reportWriter.println();
       if (reportWriter.checkError()) {
@@ -567,11 +587,12 @@ public class V2AuMover {
     String summary = "AusMoved: " + totalAusMoved +
         "  urlsMoved: " + totalUrlsMoved +
         "  artifactsMoved: " + totalArtifactsMoved +
-        "  bytesMoved: " + totalBytesMoved +
         "  contentBytesMoved: " + totalContentBytesMoved +
+        "  contentByteRate: " + (totalContentBytesMoved / auRunTime ) +
+        "  totalBytesMoved: " + totalBytesMoved +
+        "  totalByteRate: " + (totalBytesMoved / auRunTime ) +
         "  errors: " + totalErrorCount +
         "  totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
-    // todo: add to report the transfer rate bytesMoved/time and contentBytesMoved/time
     if (reportWriter != null) {
       reportWriter.println(summary);
       if (reportWriter.checkError()) {
@@ -608,7 +629,7 @@ public class V2AuMover {
     log.info("Handling request to move AU: " + auName);
     log.info("AuId: " + currentAu);
     try {
-      if (!v2SerivicesReady()) {
+      if (v2ServicesUnavailable()) {
         terminated = true;
         return;
       }
@@ -621,15 +642,10 @@ public class V2AuMover {
         log.info(auName+ ": Au move terminated because of errors.");
       auRunTime = System.currentTimeMillis() - au_move_start;
       updateReport(auName);
-      totalAusMoved++;
-      totalBytesMoved += auBytesMoved;
-      totalContentBytesMoved += auContentBytesMoved;
-      totalUrlsMoved += auUrlsMoved;
-      totalArtifactsMoved += auArtifactsMoved;
+      updateTotals();
       auMoveQueue.remove(au);
       currentAu = null;
-      totalErrorCount += auErrorCount;
-      if (!terminated) moveNextAu();
+      moveNextAu();
     } catch (Exception ex) {
       String err;
       if (ex instanceof ApiException) {
@@ -686,6 +702,7 @@ public class V2AuMover {
       String token = null;
       // if the v2 repo knows about this au we need to call getArtifacts.
       if(v2Aus.contains(au.getAuId())) {
+        isPartialContent = true;
         do {
           pageInfo = repoCollectionsApiClient.getArtifacts(collection, au.getAuId(),
               v2Url, null, null, false, null, token);
@@ -700,6 +717,15 @@ public class V2AuMover {
     allCusQueued = true;
   }
 
+
+  void updateTotals() {
+    totalAusMoved++;
+    totalBytesMoved += auBytesMoved;
+    totalContentBytesMoved += auContentBytesMoved;
+    totalUrlsMoved += auUrlsMoved;
+    totalArtifactsMoved += auArtifactsMoved;
+    totalErrorCount += auErrorCount;
+  }
 
   /* ------------------
   testing getters & setters
@@ -758,8 +784,8 @@ public class V2AuMover {
    * @return true if status for repository  is ready, false if either are not ready
    * @throws IOException
    */
-  boolean v2SerivicesReady() throws IOException {
-    boolean result = false;
+  boolean v2ServicesUnavailable() throws IOException {
+    boolean result = true;
 
     log.info("Checking V2 Repository Status");
     try {
@@ -777,13 +803,12 @@ public class V2AuMover {
           auErrors.add(msg);
         }
         else {
-          result = true;
+          result = false;
         }
       }
     }
-    catch (ApiException apie) {
-      String msg = apie.getCode() == 0 ? apie.getMessage()
-                 : apie.getCode() + " - " + apie.getMessage();
+    catch (Exception ex) {
+      String msg = ex.getMessage();
       errorList.add(msg);
       auErrors.add(msg);
       throw new IOException( "Unable to get status for v2 services: " + msg);
@@ -1086,7 +1111,7 @@ public class V2AuMover {
       try {
         log.debug3("Successfully created artifact (" + statusCode + "): " + result.getId());
         commitArtifact(result);
-        auContentBytesMoved = contentSize;
+        auContentBytesMoved += contentSize;
         if (cuQueue.peek() != null)
           moveNextCuVersion(auId, v1Url, cuQueue);
         else
@@ -1137,6 +1162,7 @@ public class V2AuMover {
           else {
             int errCode = response.code();
             if (errCode == 401 || errCode == 403) {
+              response.close();
               // no retries
               break;
             }
@@ -1145,15 +1171,15 @@ public class V2AuMover {
           }
         }
         catch (final IOException ioe) {
-          if (response != null && response.body() != null) {
+          if (response != null) {
             log.debug3("Retrying: " + ioe.getMessage());
             response.close();
-            // We've run out of retries so throw the exception
-            if (tryCount >= maxRetryCount) {
-              log.debug2("Exceeded retries - exiting");
-              terminated = true;
-              throw ioe;
-            }
+          }
+          // We've run out of retries so throw the exception
+          if (tryCount >= maxRetryCount) {
+            log.debug2("Exceeded retries - exiting");
+            terminated = true;
+            throw ioe;
           }
         }
         // sleep before retrying
