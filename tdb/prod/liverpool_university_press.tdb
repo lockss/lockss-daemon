@@ -8,8 +8,7 @@
   comment[moving1] = from MetaPress to Atypon
   comment[moving2] = from Atypon to CloudPublish
 
-  plugin = needs.plugin
-#  plugin = org.lockss.plugin.atypon.liverpool.LiverpoolJournalsPlugin
+  plugin = org.lockss.plugin.cloudpublish.liverpool.LupPlugin
   param[base_url] = https://www.liverpooluniversitypress.co.uk/
   implicit < status ; year ; name ; param[volume_name] >
 
