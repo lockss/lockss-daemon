@@ -831,8 +831,8 @@
       au < crawling ; exists ; 1985 ; Computer-Aided Engineering Journal Volume 2 ; 2 ; >
       au < crawling ; exists ; 1986 ; Computer-Aided Engineering Journal Volume 3 ; 3 ; >
       au < crawling ; exists ; 1987 ; Computer-Aided Engineering Journal Volume 4 ; 4 ; >
-      au < ready ; exists ; 1988 ; Computer-Aided Engineering Journal Volume 5 ; 5 ; >
-      au < ready ; exists ; 1989 ; Computer-Aided Engineering Journal Volume 6 ; 6 ; >
+      au < crawling ; exists ; 1988 ; Computer-Aided Engineering Journal Volume 5 ; 5 ; >
+      au < crawling ; exists ; 1989 ; Computer-Aided Engineering Journal Volume 6 ; 6 ; >
       au < crawling ; exists ; 1990 ; Computer-Aided Engineering Journal Volume 7 ; 7 ; >
       au < crawling ; exists ; 1991 ; Computer-Aided Engineering Journal Volume 8 ; 8 ; >
 
@@ -878,7 +878,7 @@
 
       au < crawling ; exists ; 1986 ; Computerised Manufacturing Volume 1986 ; 1986 ; >
       au < crawling ; exists ; 1987 ; Computerised Manufacturing Volume 1987 ; 1987 ; >
-      au < ready ; exists ; 1988 ; Computerised Manufacturing Volume 1988 ; 1988 ; >
+      au < crawling ; exists ; 1988 ; Computerised Manufacturing Volume 1988 ; 1988 ; >
       au < crawling ; exists ; 1989 ; Computerised Manufacturing Volume 1989 ; 1989 ; >
 
   }
@@ -895,8 +895,8 @@
       param[journal_id] = ecej
 
       au < crawling ; exists ; 1989 ; Electronics & Communication Engineering Journal Volume 1 ; 1 ; >
-      au < ready ; exists ; 1990 ; Electronics & Communication Engineering Journal Volume 2 ; 2 ; >
-      au < ready ; exists ; 1991 ; Electronics & Communication Engineering Journal Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1990 ; Electronics & Communication Engineering Journal Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1991 ; Electronics & Communication Engineering Journal Volume 3 ; 3 ; >
       au < crawling ; exists ; 1992 ; Electronics & Communication Engineering Journal Volume 4 ; 4 ; >
       au < frozen ; exists ; 1993 ; Electronics & Communication Engineering Journal Volume 5 ; 5 ; >
       au < frozen ; exists ; 1994 ; Electronics & Communication Engineering Journal Volume 6 ; 6 ; >
@@ -923,7 +923,7 @@
       param[journal_id] = ee
 
       au < crawling ; exists ; 1990 ; Electronics Education Volume 1990 ; 1990 ; >
-      au < ready ; exists ; 1991 ; Electronics Education Volume 1991 ; 1991 ; >
+      au < crawling ; exists ; 1991 ; Electronics Education Volume 1991 ; 1991 ; >
       au < crawling ; exists ; 1992 ; Electronics Education Volume 1992 ; 1992 ; >
       au < frozen ; exists ; 1993 ; Electronics Education Volume 1993 ; 1993 ; >
       au < frozen ; exists ; 1994 ; Electronics Education Volume 1994 ; 1994 ; >
@@ -984,27 +984,27 @@
 
       au < crawling ; exists ; 1964 ; Electronics and Power Volume 10 ; 10 ; >
       au < crawling ; exists ; 1965 ; Electronics and Power Volume 11 ; 11 ; >
-      au < ready ; exists ; 1966 ; Electronics and Power Volume 12 ; 12 ; >
+      au < crawling ; exists ; 1966 ; Electronics and Power Volume 12 ; 12 ; >
       au < crawling ; exists ; 1967 ; Electronics and Power Volume 13 ; 13 ; >
       au < crawling ; exists ; 1968 ; Electronics and Power Volume 14 ; 14 ; >
       au < crawling ; exists ; 1969 ; Electronics and Power Volume 15 ; 15 ; >
       au < crawling ; exists ; 1970 ; Electronics and Power Volume 16 ; 16 ; >
-      au < ready ; exists ; 1971 ; Electronics and Power Volume 17 ; 17 ; >
-      au < ready ; exists ; 1972 ; Electronics and Power Volume 18 ; 18 ; >
-      au < ready ; exists ; 1973 ; Electronics and Power Volume 19 ; 19 ; >
+      au < crawling ; exists ; 1971 ; Electronics and Power Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1972 ; Electronics and Power Volume 18 ; 18 ; >
+      au < crawling ; exists ; 1973 ; Electronics and Power Volume 19 ; 19 ; >
       au < crawling ; exists ; 1974 ; Electronics and Power Volume 20 ; 20 ; >
       au < crawling ; exists ; 1975 ; Electronics and Power Volume 21 ; 21 ; >
-      au < ready ; exists ; 1976 ; Electronics and Power Volume 22 ; 22 ; >
+      au < crawling ; exists ; 1976 ; Electronics and Power Volume 22 ; 22 ; >
       au < crawling ; exists ; 1977 ; Electronics and Power Volume 23 ; 23 ; >
       au < crawling ; exists ; 1978 ; Electronics and Power Volume 24 ; 24 ; >
       au < crawling ; exists ; 1979 ; Electronics and Power Volume 25 ; 25 ; >
       au < crawling ; exists ; 1980 ; Electronics and Power Volume 26 ; 26 ; >
-      au < ready ; exists ; 1981 ; Electronics and Power Volume 27 ; 27 ; >
-      au < ready ; exists ; 1982 ; Electronics and Power Volume 28 ; 28 ; >
+      au < crawling ; exists ; 1981 ; Electronics and Power Volume 27 ; 27 ; >
+      au < crawling ; exists ; 1982 ; Electronics and Power Volume 28 ; 28 ; >
       au < crawling ; exists ; 1983 ; Electronics and Power Volume 29 ; 29 ; >
       au < crawling ; exists ; 1984 ; Electronics and Power Volume 30 ; 30 ; >
       au < crawling ; exists ; 1985 ; Electronics and Power Volume 31 ; 31 ; >
-      au < ready ; exists ; 1986 ; Electronics and Power Volume 32 ; 32 ; >
+      au < crawling ; exists ; 1986 ; Electronics and Power Volume 32 ; 32 ; >
       au < crawling ; exists ; 1987 ; Electronics and Power Volume 33 ; 33 ; >
 
   }
@@ -1045,7 +1045,7 @@
 
       param[journal_id] = esn
 
-      au < ready ; exists ; 1981 ; Electronic Systems News Volume 1981 ; 1981 ; >
+      au < crawling ; exists ; 1981 ; Electronic Systems News Volume 1981 ; 1981 ; >
       au < crawling ; exists ; 1982 ; Electronic Systems News Volume 1982 ; 1982 ; >
       au < crawling ; exists ; 1983 ; Electronic Systems News Volume 1983 ; 1983 ; >
       au < crawling ; exists ; 1984 ; Electronic Systems News Volume 1984 ; 1984 ; >
@@ -1077,7 +1077,7 @@
       au < crawling ; exists ; 1975 ; IEE-IERE Proceedings India Volume 13 ; 13 ; >
       au < crawling ; exists ; 1976 ; IEE-IERE Proceedings India Volume 14 ; 14 ; >
       au < crawling ; exists ; 1977 ; IEE-IERE Proceedings India Volume 15 ; 15 ; >
-      au < ready ; exists ; 1978 ; IEE-IERE Proceedings India Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1978 ; IEE-IERE Proceedings India Volume 16 ; 16 ; >
 
   }
 
@@ -1109,8 +1109,8 @@
       param[journal_id] = ij-ecs
 
       au < crawling ; exists ; 1977 ; IEE Journal on Electronic Circuits and Systems Volume 1 ; 1 ; >
-      au < ready ; exists ; 1978 ; IEE Journal on Electronic Circuits and Systems Volume 2 ; 2 ; >
-      au < ready ; exists ; 1979 ; IEE Journal on Electronic Circuits and Systems Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1978 ; IEE Journal on Electronic Circuits and Systems Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1979 ; IEE Journal on Electronic Circuits and Systems Volume 3 ; 3 ; >
 
   }
 
@@ -1142,7 +1142,7 @@
       param[journal_id] = ij-moa
 
       au < crawling ; exists ; 1977 ; IEE Journal on Microwaves, Optics and Acoustics Volume 1 ; 1 ; >
-      au < ready ; exists ; 1978 ; IEE Journal on Microwaves, Optics and Acoustics Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1978 ; IEE Journal on Microwaves, Optics and Acoustics Volume 2 ; 2 ; >
       au < crawling ; exists ; 1979 ; IEE Journal on Microwaves, Optics and Acoustics Volume 3 ; 3 ; >
 
   }
@@ -1158,9 +1158,9 @@
 
       param[journal_id] = ij-ssed
 
-      au < ready ; exists ; 1977 ; IEE Journal on Solid-State and Electron Devices Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1977 ; IEE Journal on Solid-State and Electron Devices Volume 1 ; 1 ; >
       au < crawling ; exists ; 1978 ; IEE Journal on Solid-State and Electron Devices Volume 2 ; 2 ; >
-      au < ready ; exists ; 1979 ; IEE Journal on Solid-State and Electron Devices Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1979 ; IEE Journal on Solid-State and Electron Devices Volume 3 ; 3 ; >
 
   }
 
@@ -1177,13 +1177,13 @@
 
       au < crawling ; exists ; 1980 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 127 ; 127 ; >
       au < crawling ; exists ; 1981 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 128 ; 128 ; >
-      au < ready ; exists ; 1982 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 129 ; 129 ; >
+      au < crawling ; exists ; 1982 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 129 ; 129 ; >
       au < crawling ; exists ; 1983 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 130 ; 130 ; >
       au < crawling ; exists ; 1984 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 131 ; 131 ; >
       au < crawling ; exists ; 1985 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 132 ; 132 ; >
       au < crawling ; exists ; 1986 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 133 ; 133 ; >
       au < crawling ; exists ; 1987 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 134 ; 134 ; >
-      au < ready ; exists ; 1988 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 135 ; 135 ; >
+      au < crawling ; exists ; 1988 ; IEE Proceedings A (Physical Science, Measurement and Instrumentation, Management and Education, Reviews) Volume 135 ; 135 ; >
 
   }
 
@@ -1214,8 +1214,8 @@
 
       param[journal_id] = ip-a-3
 
-      au < ready ; exists ; 1991 ; IEE Proceedings A (Science, Measurement and Technology) Volume 138 ; 138 ; >
-      au < ready ; exists ; 1992 ; IEE Proceedings A (Science, Measurement and Technology) Volume 139 ; 139 ; >
+      au < crawling ; exists ; 1991 ; IEE Proceedings A (Science, Measurement and Technology) Volume 138 ; 138 ; >
+      au < crawling ; exists ; 1992 ; IEE Proceedings A (Science, Measurement and Technology) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings A (Science, Measurement and Technology) Volume 140 ; 140 ; >
 
   }
@@ -1236,14 +1236,14 @@
       au < crawling ; exists ; 1982 ; IEE Proceedings B (Electric Power Applications) Volume 129 ; 129 ; >
       au < crawling ; exists ; 1983 ; IEE Proceedings B (Electric Power Applications) Volume 130 ; 130 ; >
       au < crawling ; exists ; 1984 ; IEE Proceedings B (Electric Power Applications) Volume 131 ; 131 ; >
-      au < ready ; exists ; 1985 ; IEE Proceedings B (Electric Power Applications) Volume 132 ; 132 ; >
+      au < crawling ; exists ; 1985 ; IEE Proceedings B (Electric Power Applications) Volume 132 ; 132 ; >
       au < crawling ; exists ; 1986 ; IEE Proceedings B (Electric Power Applications) Volume 133 ; 133 ; >
-      au < ready ; exists ; 1987 ; IEE Proceedings B (Electric Power Applications) Volume 134 ; 134 ; >
-      au < ready ; exists ; 1988 ; IEE Proceedings B (Electric Power Applications) Volume 135 ; 135 ; >
-      au < ready ; exists ; 1989 ; IEE Proceedings B (Electric Power Applications) Volume 136 ; 136 ; >
+      au < crawling ; exists ; 1987 ; IEE Proceedings B (Electric Power Applications) Volume 134 ; 134 ; >
+      au < crawling ; exists ; 1988 ; IEE Proceedings B (Electric Power Applications) Volume 135 ; 135 ; >
+      au < crawling ; exists ; 1989 ; IEE Proceedings B (Electric Power Applications) Volume 136 ; 136 ; >
       au < crawling ; exists ; 1990 ; IEE Proceedings B (Electric Power Applications) Volume 137 ; 137 ; >
-      au < ready ; exists ; 1991 ; IEE Proceedings B (Electric Power Applications) Volume 138 ; 138 ; >
-      au < ready ; exists ; 1992 ; IEE Proceedings B (Electric Power Applications) Volume 139 ; 139 ; >
+      au < crawling ; exists ; 1991 ; IEE Proceedings B (Electric Power Applications) Volume 138 ; 138 ; >
+      au < crawling ; exists ; 1992 ; IEE Proceedings B (Electric Power Applications) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings B (Electric Power Applications) Volume 140 ; 140 ; >
 
   }
@@ -1265,13 +1265,13 @@
       au < crawling ; exists ; 1983 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 130 ; 130 ; >
       au < crawling ; exists ; 1984 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 131 ; 131 ; >
       au < crawling ; exists ; 1985 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 132 ; 132 ; >
-      au < ready ; exists ; 1986 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 133 ; 133 ; >
+      au < crawling ; exists ; 1986 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 133 ; 133 ; >
       au < crawling ; exists ; 1987 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 134 ; 134 ; >
-      au < ready ; exists ; 1988 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 135 ; 135 ; >
+      au < crawling ; exists ; 1988 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 135 ; 135 ; >
       au < crawling ; exists ; 1989 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 136 ; 136 ; >
-      au < ready ; exists ; 1990 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 137 ; 137 ; >
-      au < ready ; exists ; 1991 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 138 ; 138 ; >
-      au < ready ; exists ; 1992 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 139 ; 139 ; >
+      au < crawling ; exists ; 1990 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 137 ; 137 ; >
+      au < crawling ; exists ; 1991 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 138 ; 138 ; >
+      au < crawling ; exists ; 1992 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings C (Generation, Transmission and Distribution) Volume 140 ; 140 ; >
 
   }
@@ -1287,18 +1287,18 @@
 
       param[journal_id] = ip-d
 
-      au < ready ; exists ; 1980 ; IEE Proceedings D (Control Theory and Applications) Volume 127 ; 127 ; >
+      au < crawling ; exists ; 1980 ; IEE Proceedings D (Control Theory and Applications) Volume 127 ; 127 ; >
       au < crawling ; exists ; 1981 ; IEE Proceedings D (Control Theory and Applications) Volume 128 ; 128 ; >
-      au < ready ; exists ; 1982 ; IEE Proceedings D (Control Theory and Applications) Volume 129 ; 129 ; >
+      au < crawling ; exists ; 1982 ; IEE Proceedings D (Control Theory and Applications) Volume 129 ; 129 ; >
       au < crawling ; exists ; 1983 ; IEE Proceedings D (Control Theory and Applications) Volume 130 ; 130 ; >
-      au < ready ; exists ; 1984 ; IEE Proceedings D (Control Theory and Applications) Volume 131 ; 131 ; >
+      au < crawling ; exists ; 1984 ; IEE Proceedings D (Control Theory and Applications) Volume 131 ; 131 ; >
       au < ready ; exists ; 1985 ; IEE Proceedings D (Control Theory and Applications) Volume 132 ; 132 ; >
       au < crawling ; exists ; 1986 ; IEE Proceedings D (Control Theory and Applications) Volume 133 ; 133 ; >
-      au < ready ; exists ; 1987 ; IEE Proceedings D (Control Theory and Applications) Volume 134 ; 134 ; >
+      au < crawling ; exists ; 1987 ; IEE Proceedings D (Control Theory and Applications) Volume 134 ; 134 ; >
       au < crawling ; exists ; 1988 ; IEE Proceedings D (Control Theory and Applications) Volume 135 ; 135 ; >
       au < crawling ; exists ; 1989 ; IEE Proceedings D (Control Theory and Applications) Volume 136 ; 136 ; >
       au < crawling ; exists ; 1990 ; IEE Proceedings D (Control Theory and Applications) Volume 137 ; 137 ; >
-      au < ready ; exists ; 1991 ; IEE Proceedings D (Control Theory and Applications) Volume 138 ; 138 ; >
+      au < crawling ; exists ; 1991 ; IEE Proceedings D (Control Theory and Applications) Volume 138 ; 138 ; >
       au < crawling ; exists ; 1992 ; IEE Proceedings D (Control Theory and Applications) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings D (Control Theory and Applications) Volume 140 ; 140 ; >
 
@@ -1319,15 +1319,15 @@
       au < crawling ; exists ; 1981 ; IEE Proceedings E (Computers and Digital Techniques) Volume 128 ; 128 ; >
       au < crawling ; exists ; 1982 ; IEE Proceedings E (Computers and Digital Techniques) Volume 129 ; 129 ; >
       au < crawling ; exists ; 1983 ; IEE Proceedings E (Computers and Digital Techniques) Volume 130 ; 130 ; >
-      au < ready ; exists ; 1984 ; IEE Proceedings E (Computers and Digital Techniques) Volume 131 ; 131 ; >
+      au < crawling ; exists ; 1984 ; IEE Proceedings E (Computers and Digital Techniques) Volume 131 ; 131 ; >
       au < crawling ; exists ; 1985 ; IEE Proceedings E (Computers and Digital Techniques) Volume 132 ; 132 ; >
       au < crawling ; exists ; 1986 ; IEE Proceedings E (Computers and Digital Techniques) Volume 133 ; 133 ; >
       au < crawling ; exists ; 1987 ; IEE Proceedings E (Computers and Digital Techniques) Volume 134 ; 134 ; >
-      au < ready ; exists ; 1988 ; IEE Proceedings E (Computers and Digital Techniques) Volume 135 ; 135 ; >
+      au < crawling ; exists ; 1988 ; IEE Proceedings E (Computers and Digital Techniques) Volume 135 ; 135 ; >
       au < crawling ; exists ; 1989 ; IEE Proceedings E (Computers and Digital Techniques) Volume 136 ; 136 ; >
-      au < ready ; exists ; 1990 ; IEE Proceedings E (Computers and Digital Techniques) Volume 137 ; 137 ; >
-      au < ready ; exists ; 1991 ; IEE Proceedings E (Computers and Digital Techniques) Volume 138 ; 138 ; >
-      au < ready ; exists ; 1992 ; IEE Proceedings E (Computers and Digital Techniques) Volume 139 ; 139 ; >
+      au < crawling ; exists ; 1990 ; IEE Proceedings E (Computers and Digital Techniques) Volume 137 ; 137 ; >
+      au < crawling ; exists ; 1991 ; IEE Proceedings E (Computers and Digital Techniques) Volume 138 ; 138 ; >
+      au < crawling ; exists ; 1992 ; IEE Proceedings E (Computers and Digital Techniques) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings E (Computers and Digital Techniques) Volume 140 ; 140 ; >
 
   }
@@ -1343,7 +1343,7 @@
 
       param[journal_id] = ipej
 
-      au < ready ; exists ; 1953 ; The Institution of Production Engineers Journal Volume 32 ; 32 ; >
+      au < crawling ; exists ; 1953 ; The Institution of Production Engineers Journal Volume 32 ; 32 ; >
       au < crawling ; exists ; 1954 ; The Institution of Production Engineers Journal Volume 33 ; 33 ; >
       au < crawling ; exists ; 1955 ; The Institution of Production Engineers Journal Volume 34 ; 34 ; >
       au < crawling ; exists ; 1956 ; The Institution of Production Engineers Journal Volume 35 ; 35 ; >
@@ -1366,13 +1366,13 @@
 
       au < crawling ; exists ; 1980 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 127 ; 127 ; >
       au < crawling ; exists ; 1981 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 128 ; 128 ; >
-      au < ready ; exists ; 1982 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 129 ; 129 ; >
-      au < ready ; exists ; 1983 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 130 ; 130 ; >
+      au < crawling ; exists ; 1982 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 129 ; 129 ; >
+      au < crawling ; exists ; 1983 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 130 ; 130 ; >
       au < crawling ; exists ; 1984 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 131 ; 131 ; >
       au < crawling ; exists ; 1985 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 132 ; 132 ; >
       au < crawling ; exists ; 1986 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 133 ; 133 ; >
       au < crawling ; exists ; 1987 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 134 ; 134 ; >
-      au < ready ; exists ; 1988 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 135 ; 135 ; >
+      au < crawling ; exists ; 1988 ; IEE Proceedings F (Communications, Radar and Signal Processing) Volume 135 ; 135 ; >
 
   }
 
@@ -1388,7 +1388,7 @@
       param[journal_id] = ip-f-2
 
       au < crawling ; exists ; 1989 ; IEE Proceedings F (Radar and Signal Processing) Volume 136 ; 136 ; >
-      au < ready ; exists ; 1990 ; IEE Proceedings F (Radar and Signal Processing) Volume 137 ; 137 ; >
+      au < crawling ; exists ; 1990 ; IEE Proceedings F (Radar and Signal Processing) Volume 137 ; 137 ; >
       au < crawling ; exists ; 1991 ; IEE Proceedings F (Radar and Signal Processing) Volume 138 ; 138 ; >
       au < crawling ; exists ; 1992 ; IEE Proceedings F (Radar and Signal Processing) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings F (Radar and Signal Processing) Volume 140 ; 140 ; >
@@ -1407,13 +1407,13 @@
       param[journal_id] = ip-g-1
 
       au < crawling ; exists ; 1980 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 127 ; 127 ; >
-      au < ready ; exists ; 1981 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 128 ; 128 ; >
+      au < crawling ; exists ; 1981 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 128 ; 128 ; >
       au < crawling ; exists ; 1982 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 129 ; 129 ; >
-      au < ready ; exists ; 1983 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 130 ; 130 ; >
-      au < ready ; exists ; 1984 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 131 ; 131 ; >
-      au < ready ; exists ; 1985 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 132 ; 132 ; >
+      au < crawling ; exists ; 1983 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 130 ; 130 ; >
+      au < crawling ; exists ; 1984 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 131 ; 131 ; >
+      au < crawling ; exists ; 1985 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 132 ; 132 ; >
       au < crawling ; exists ; 1986 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 133 ; 133 ; >
-      au < ready ; exists ; 1987 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 134 ; 134 ; >
+      au < crawling ; exists ; 1987 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 134 ; 134 ; >
       au < crawling ; exists ; 1988 ; IEE Proceedings G (Electronic Circuits and Systems) Volume 135 ; 135 ; >
 
   }
@@ -1431,7 +1431,7 @@
 
       au < crawling ; exists ; 1989 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 136 ; 136 ; >
       au < crawling ; exists ; 1990 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 137 ; 137 ; >
-      au < ready ; exists ; 1991 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 138 ; 138 ; >
+      au < crawling ; exists ; 1991 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 138 ; 138 ; >
       au < crawling ; exists ; 1992 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 140 ; 140 ; >
 
@@ -1449,10 +1449,10 @@
       param[journal_id] = ip-h-1
 
       au < crawling ; exists ; 1980 ; IEE Proceedings H (Microwaves, Optics and Antennas) Volume 127 ; 127 ; >
-      au < ready ; exists ; 1981 ; IEE Proceedings H (Microwaves, Optics and Antennas) Volume 128 ; 128 ; >
+      au < crawling ; exists ; 1981 ; IEE Proceedings H (Microwaves, Optics and Antennas) Volume 128 ; 128 ; >
       au < crawling ; exists ; 1982 ; IEE Proceedings H (Microwaves, Optics and Antennas) Volume 129 ; 129 ; >
       au < crawling ; exists ; 1983 ; IEE Proceedings H (Microwaves, Optics and Antennas) Volume 130 ; 130 ; >
-      au < ready ; exists ; 1984 ; IEE Proceedings H (Microwaves, Optics and Antennas) Volume 131 ; 131 ; >
+      au < crawling ; exists ; 1984 ; IEE Proceedings H (Microwaves, Optics and Antennas) Volume 131 ; 131 ; >
 
   }
 
@@ -1473,7 +1473,7 @@
       au < crawling ; exists ; 1988 ; IEE Proceedings H (Microwaves, Antennas and Propagation) Volume 135 ; 135 ; >
       au < crawling ; exists ; 1989 ; IEE Proceedings H (Microwaves, Antennas and Propagation) Volume 136 ; 136 ; >
       au < crawling ; exists ; 1990 ; IEE Proceedings H (Microwaves, Antennas and Propagation) Volume 137 ; 137 ; >
-      au < ready ; exists ; 1991 ; IEE Proceedings H (Microwaves, Antennas and Propagation) Volume 138 ; 138 ; >
+      au < crawling ; exists ; 1991 ; IEE Proceedings H (Microwaves, Antennas and Propagation) Volume 138 ; 138 ; >
       au < crawling ; exists ; 1992 ; IEE Proceedings H (Microwaves, Antennas and Propagation) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings H (Microwaves, Antennas and Propagation) Volume 140 ; 140 ; >
 
@@ -1490,12 +1490,12 @@
 
       param[journal_id] = ip-i-1
 
-      au < ready ; exists ; 1980 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 127 ; 127 ; >
+      au < crawling ; exists ; 1980 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 127 ; 127 ; >
       au < crawling ; exists ; 1981 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 128 ; 128 ; >
       au < crawling ; exists ; 1982 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 129 ; 129 ; >
-      au < ready ; exists ; 1983 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 130 ; 130 ; >
+      au < crawling ; exists ; 1983 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 130 ; 130 ; >
       au < crawling ; exists ; 1984 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 131 ; 131 ; >
-      au < ready ; exists ; 1985 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 132 ; 132 ; >
+      au < crawling ; exists ; 1985 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 132 ; 132 ; >
       au < crawling ; exists ; 1986 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 133 ; 133 ; >
       au < crawling ; exists ; 1987 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 134 ; 134 ; >
       au < crawling ; exists ; 1988 ; IEE Proceedings I (Solid-State and Electron Devices) Volume 135 ; 135 ; >
@@ -1514,7 +1514,7 @@
       param[journal_id] = ip-i-2
 
       au < crawling ; exists ; 1989 ; IEE Proceedings I (Communications, Speech and Vision) Volume 136 ; 136 ; >
-      au < ready ; exists ; 1990 ; IEE Proceedings I (Communications, Speech and Vision) Volume 137 ; 137 ; >
+      au < crawling ; exists ; 1990 ; IEE Proceedings I (Communications, Speech and Vision) Volume 137 ; 137 ; >
       au < crawling ; exists ; 1991 ; IEE Proceedings I (Communications, Speech and Vision) Volume 138 ; 138 ; >
       au < crawling ; exists ; 1992 ; IEE Proceedings I (Communications, Speech and Vision) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings I (Communications, Speech and Vision) Volume 140 ; 140 ; >
@@ -1533,13 +1533,13 @@
       param[journal_id] = ip-j
 
       au < crawling ; exists ; 1985 ; IEE Proceedings J (Optoelectronics) Volume 132 ; 132 ; >
-      au < ready ; exists ; 1986 ; IEE Proceedings J (Optoelectronics) Volume 133 ; 133 ; >
-      au < ready ; exists ; 1987 ; IEE Proceedings J (Optoelectronics) Volume 134 ; 134 ; >
-      au < ready ; exists ; 1988 ; IEE Proceedings J (Optoelectronics) Volume 135 ; 135 ; >
+      au < crawling ; exists ; 1986 ; IEE Proceedings J (Optoelectronics) Volume 133 ; 133 ; >
+      au < crawling ; exists ; 1987 ; IEE Proceedings J (Optoelectronics) Volume 134 ; 134 ; >
+      au < crawling ; exists ; 1988 ; IEE Proceedings J (Optoelectronics) Volume 135 ; 135 ; >
       au < crawling ; exists ; 1989 ; IEE Proceedings J (Optoelectronics) Volume 136 ; 136 ; >
       au < crawling ; exists ; 1990 ; IEE Proceedings J (Optoelectronics) Volume 137 ; 137 ; >
       au < crawling ; exists ; 1991 ; IEE Proceedings J (Optoelectronics) Volume 138 ; 138 ; >
-      au < ready ; exists ; 1992 ; IEE Proceedings J (Optoelectronics) Volume 139 ; 139 ; >
+      au < crawling ; exists ; 1992 ; IEE Proceedings J (Optoelectronics) Volume 139 ; 139 ; >
       au < frozen ; exists ; 1993 ; IEE Proceedings J (Optoelectronics) Volume 140 ; 140 ; >
 
   }
@@ -1555,11 +1555,11 @@
 
       param[journal_id] = ir
 
-      au < ready ; exists ; 1988 ; IEE Review Volume 34 ; 34 ; >
+      au < crawling ; exists ; 1988 ; IEE Review Volume 34 ; 34 ; >
       au < crawling ; exists ; 1989 ; IEE Review Volume 35 ; 35 ; >
-      au < ready ; exists ; 1990 ; IEE Review Volume 36 ; 36 ; >
+      au < crawling ; exists ; 1990 ; IEE Review Volume 36 ; 36 ; >
       au < crawling ; exists ; 1991 ; IEE Review Volume 37 ; 37 ; >
-      au < ready ; exists ; 1992 ; IEE Review Volume 38 ; 38 ; >
+      au < crawling ; exists ; 1992 ; IEE Review Volume 38 ; 38 ; >
       au < frozen ; exists ; 1993 ; IEE Review Volume 39 ; 39 ; >
       au < frozen ; exists ; 1994 ; IEE Review Volume 40 ; 40 ; >
       au < frozen ; exists ; 1995 ; IEE Review Volume 41 ; 41 ; >
@@ -1588,7 +1588,7 @@
 
       param[journal_id] = ise
 
-      au < ready ; exists ; 1992 ; Intelligent Systems Engineering Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1992 ; Intelligent Systems Engineering Volume 1 ; 1 ; >
       au < frozen ; exists ; 1993 ; Intelligent Systems Engineering Volume 2 ; 2 ; >
       au < frozen ; exists ; 1994 ; Intelligent Systems Engineering Volume 3 ; 3 ; >
 
@@ -1608,25 +1608,25 @@
       au < crawling ; exists ; 1939 ; Journal of the British Institution of Radio Engineers Volume 1 ; 1 ; >
       au < crawling ; exists ; 1940 ; Journal of the British Institution of Radio Engineers Volume 2 ; 2 ; >
       au < crawling ; exists ; 1941 ; Journal of the British Institution of Radio Engineers Volume 3 ; 3 ; >
-      au < ready ; exists ; 1942 ; Journal of the British Institution of Radio Engineers Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1942 ; Journal of the British Institution of Radio Engineers Volume 4 ; 4 ; >
       au < ready ; exists ; 1943 ; Journal of the British Institution of Radio Engineers Volume 5 ; 5 ; >
       au < crawling ; exists ; 1944 ; Journal of the British Institution of Radio Engineers Volume 6 ; 6 ; >
-      au < ready ; exists ; 1945 ; Journal of the British Institution of Radio Engineers Volume 7 ; 7 ; >
+      au < crawling ; exists ; 1945 ; Journal of the British Institution of Radio Engineers Volume 7 ; 7 ; >
       au < crawling ; exists ; 1946 ; Journal of the British Institution of Radio Engineers Volume 8 ; 8 ; >
-      au < ready ; exists ; 1947 ; Journal of the British Institution of Radio Engineers Volume 9 ; 9 ; >
+      au < crawling ; exists ; 1947 ; Journal of the British Institution of Radio Engineers Volume 9 ; 9 ; >
       au < crawling ; exists ; 1948 ; Journal of the British Institution of Radio Engineers Volume 10 ; 10 ; >
       au < crawling ; exists ; 1949 ; Journal of the British Institution of Radio Engineers Volume 11 ; 11 ; >
       au < crawling ; exists ; 1950 ; Journal of the British Institution of Radio Engineers Volume 12 ; 12 ; >
       au < crawling ; exists ; 1951 ; Journal of the British Institution of Radio Engineers Volume 13 ; 13 ; >
       au < crawling ; exists ; 1952 ; Journal of the British Institution of Radio Engineers Volume 14 ; 14 ; >
-      au < ready ; exists ; 1953 ; Journal of the British Institution of Radio Engineers Volume 15 ; 15 ; >
-      au < ready ; exists ; 1954 ; Journal of the British Institution of Radio Engineers Volume 16 ; 16 ; >
-      au < ready ; exists ; 1955 ; Journal of the British Institution of Radio Engineers Volume 17 ; 17 ; >
-      au < ready ; exists ; 1956 ; Journal of the British Institution of Radio Engineers Volume 18 ; 18 ; >
-      au < ready ; exists ; 1957 ; Journal of the British Institution of Radio Engineers Volume 19 ; 19 ; >
-      au < ready ; exists ; 1958 ; Journal of the British Institution of Radio Engineers Volume 20 ; 20 ; >
-      au < ready ; exists ; 1959 ; Journal of the British Institution of Radio Engineers Volume 21 ; 21 ; >
-      au < ready ; exists ; 1960 ; Journal of the British Institution of Radio Engineers Volume 22 ; 22 ; >
+      au < crawling ; exists ; 1953 ; Journal of the British Institution of Radio Engineers Volume 15 ; 15 ; >
+      au < crawling ; exists ; 1954 ; Journal of the British Institution of Radio Engineers Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1955 ; Journal of the British Institution of Radio Engineers Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1956 ; Journal of the British Institution of Radio Engineers Volume 18 ; 18 ; >
+      au < crawling ; exists ; 1957 ; Journal of the British Institution of Radio Engineers Volume 19 ; 19 ; >
+      au < crawling ; exists ; 1958 ; Journal of the British Institution of Radio Engineers Volume 20 ; 20 ; >
+      au < crawling ; exists ; 1959 ; Journal of the British Institution of Radio Engineers Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1960 ; Journal of the British Institution of Radio Engineers Volume 22 ; 22 ; >
       au < crawling ; exists ; 1961 ; Journal of the British Institution of Radio Engineers Volume 23 ; 23 ; >
       au < crawling ; exists ; 1962 ; Journal of the British Institution of Radio Engineers Volume 24 ; 24 ; >
 
@@ -1643,13 +1643,13 @@
 
       param[journal_id] = ji-1
 
-      au < ready ; exists ; 1941 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 88 ; 88 ; >
-      au < ready ; exists ; 1942 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 89 ; 89 ; >
+      au < crawling ; exists ; 1941 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 88 ; 88 ; >
+      au < crawling ; exists ; 1942 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 89 ; 89 ; >
       au < crawling ; exists ; 1943 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 90 ; 90 ; >
-      au < ready ; exists ; 1944 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 91 ; 91 ; >
+      au < crawling ; exists ; 1944 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 91 ; 91 ; >
       au < crawling ; exists ; 1945 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 92 ; 92 ; >
       au < crawling ; exists ; 1946 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 93 ; 93 ; >
-      au < ready ; exists ; 1947 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 94 ; 94 ; >
+      au < crawling ; exists ; 1947 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 94 ; 94 ; >
       au < crawling ; exists ; 1948 ; The Journal of the Institution of Electrical Engineers – Part I: General Volume 95 ; 95 ; >
 
   }
@@ -1665,7 +1665,7 @@
 
       param[journal_id] = ji-2
 
-      au < ready ; exists ; 1941 ; The Journal of the Institution of Electrical Engineers – Part II: Power Engineering Volume 88 ; 88 ; >
+      au < crawling ; exists ; 1941 ; The Journal of the Institution of Electrical Engineers – Part II: Power Engineering Volume 88 ; 88 ; >
       au < crawling ; exists ; 1942 ; The Journal of the Institution of Electrical Engineers – Part II: Power Engineering Volume 89 ; 89 ; >
       au < crawling ; exists ; 1943 ; The Journal of the Institution of Electrical Engineers – Part II: Power Engineering Volume 90 ; 90 ; >
       au < crawling ; exists ; 1944 ; The Journal of the Institution of Electrical Engineers – Part II: Power Engineering Volume 91 ; 91 ; >
@@ -1702,7 +1702,7 @@
 
       param[journal_id] = ji-3-1
 
-      au < ready ; exists ; 1941 ; The Journal of the Institution of Electrical Engineers – Part III: Communication Engineering Volume 88 ; 88 ; >
+      au < crawling ; exists ; 1941 ; The Journal of the Institution of Electrical Engineers – Part III: Communication Engineering Volume 88 ; 88 ; >
       au < crawling ; exists ; 1942 ; The Journal of the Institution of Electrical Engineers – Part III: Communication Engineering Volume 89 ; 89 ; >
       au < crawling ; exists ; 1943 ; The Journal of the Institution of Electrical Engineers – Part III: Communication Engineering Volume 90 ; 90 ; >
       au < crawling ; exists ; 1944 ; The Journal of the Institution of Electrical Engineers – Part III: Communication Engineering Volume 91 ; 91 ; >
@@ -1720,8 +1720,8 @@
 
       param[journal_id] = ji-3-2
 
-      au < ready ; exists ; 1945 ; The Journal of the Institution of Electrical Engineers – Part III: Radio and Communication Engineering Volume 92 ; 92 ; >
-      au < ready ; exists ; 1946 ; The Journal of the Institution of Electrical Engineers – Part III: Radio and Communication Engineering Volume 93 ; 93 ; >
+      au < crawling ; exists ; 1945 ; The Journal of the Institution of Electrical Engineers – Part III: Radio and Communication Engineering Volume 92 ; 92 ; >
+      au < crawling ; exists ; 1946 ; The Journal of the Institution of Electrical Engineers – Part III: Radio and Communication Engineering Volume 93 ; 93 ; >
       au < crawling ; exists ; 1947 ; The Journal of the Institution of Electrical Engineers – Part III: Radio and Communication Engineering Volume 94 ; 94 ; >
       au < crawling ; exists ; 1948 ; The Journal of the Institution of Electrical Engineers – Part III: Radio and Communication Engineering Volume 95 ; 95 ; >
 
@@ -1779,44 +1779,44 @@
       au < manifest ; exists ; 1897 ; Journal of the Institution of Electrical Engineers Volume 26 ; 26 ; >
       au < manifest ; exists ; 1898 ; Journal of the Institution of Electrical Engineers Volume 27 ; 27 ; >
       au < manifest ; exists ; 1899 ; Journal of the Institution of Electrical Engineers Volume 28 ; 28 ; >
-      au < ready ; exists ; 1900 ; Journal of the Institution of Electrical Engineers Volume 29 ; 29 ; >
+      au < crawling ; exists ; 1900 ; Journal of the Institution of Electrical Engineers Volume 29 ; 29 ; >
       au < crawling ; exists ; 1901 ; Journal of the Institution of Electrical Engineers Volume 30 ; 30 ; >
       au < crawling ; exists ; 1902 ; Journal of the Institution of Electrical Engineers Volume 31 ; 31 ; >
-      au < ready ; exists ; 1903 ; Journal of the Institution of Electrical Engineers Volume 32 ; 32 ; >
+      au < crawling ; exists ; 1903 ; Journal of the Institution of Electrical Engineers Volume 32 ; 32 ; >
       au < ready ; exists ; 1904 ; Journal of the Institution of Electrical Engineers Volume 33 ; 33 ; >
-      au < ready ; exists ; 1905 ; Journal of the Institution of Electrical Engineers Volume 34 ; 34 ; >
+      au < crawling ; exists ; 1905 ; Journal of the Institution of Electrical Engineers Volume 34 ; 34 ; >
       au < crawling ; exists ; 1906 ; Journal of the Institution of Electrical Engineers Volume 35 ; 35 ; >
-      au < ready ; exists ; 1907 ; Journal of the Institution of Electrical Engineers Volume 36 ; 36 ; >
+      au < crawling ; exists ; 1907 ; Journal of the Institution of Electrical Engineers Volume 36 ; 36 ; >
       au < crawling ; exists ; 1908 ; Journal of the Institution of Electrical Engineers Volume 37 ; 37 ; >
-      au < ready ; exists ; 1909 ; Journal of the Institution of Electrical Engineers Volume 38 ; 38 ; >
+      au < crawling ; exists ; 1909 ; Journal of the Institution of Electrical Engineers Volume 38 ; 38 ; >
       au < crawling ; exists ; 1910 ; Journal of the Institution of Electrical Engineers Volume 39 ; 39 ; >
       au < crawling ; exists ; 1911 ; Journal of the Institution of Electrical Engineers Volume 40 ; 40 ; >
       au < crawling ; exists ; 1912 ; Journal of the Institution of Electrical Engineers Volume 41 ; 41 ; >
-      au < ready ; exists ; 1913 ; Journal of the Institution of Electrical Engineers Volume 42 ; 42 ; >
-      au < ready ; exists ; 1914 ; Journal of the Institution of Electrical Engineers Volume 43 ; 43 ; >
+      au < crawling ; exists ; 1913 ; Journal of the Institution of Electrical Engineers Volume 42 ; 42 ; >
+      au < crawling ; exists ; 1914 ; Journal of the Institution of Electrical Engineers Volume 43 ; 43 ; >
       au < crawling ; exists ; 1915 ; Journal of the Institution of Electrical Engineers Volume 44 ; 44 ; >
       au < crawling ; exists ; 1916 ; Journal of the Institution of Electrical Engineers Volume 45 ; 45 ; >
       au < crawling ; exists ; 1917 ; Journal of the Institution of Electrical Engineers Volume 46 ; 46 ; >
       au < crawling ; exists ; 1918 ; Journal of the Institution of Electrical Engineers Volume 47 ; 47 ; >
-      au < ready ; exists ; 1919 ; Journal of the Institution of Electrical Engineers Volume 48 ; 48 ; >
+      au < crawling ; exists ; 1919 ; Journal of the Institution of Electrical Engineers Volume 48 ; 48 ; >
       au < crawling ; exists ; 1920 ; Journal of the Institution of Electrical Engineers Volume 49 ; 49 ; >
       au < crawling ; exists ; 1921 ; Journal of the Institution of Electrical Engineers Volume 50 ; 50 ; >
       au < crawling ; exists ; 1922 ; Journal of the Institution of Electrical Engineers Volume 51 ; 51 ; >
       au < crawling ; exists ; 1923 ; Journal of the Institution of Electrical Engineers Volume 52 ; 52 ; >
       au < crawling ; exists ; 1924 ; Journal of the Institution of Electrical Engineers Volume 53 ; 53 ; >
       au < crawling ; exists ; 1925 ; Journal of the Institution of Electrical Engineers Volume 54 ; 54 ; >
-      au < ready ; exists ; 1926 ; Journal of the Institution of Electrical Engineers Volume 55 ; 55 ; >
+      au < crawling ; exists ; 1926 ; Journal of the Institution of Electrical Engineers Volume 55 ; 55 ; >
       au < crawling ; exists ; 1927 ; Journal of the Institution of Electrical Engineers Volume 56 ; 56 ; >
       au < crawling ; exists ; 1928 ; Journal of the Institution of Electrical Engineers Volume 57 ; 57 ; >
       au < crawling ; exists ; 1929 ; Journal of the Institution of Electrical Engineers Volume 58 ; 58 ; >
       au < crawling ; exists ; 1930 ; Journal of the Institution of Electrical Engineers Volume 59 ; 59 ; >
       au < ready ; exists ; 1931 ; Journal of the Institution of Electrical Engineers Volume 60 ; 60 ; >
-      au < ready ; exists ; 1932 ; Journal of the Institution of Electrical Engineers Volume 61 ; 61 ; >
-      au < ready ; exists ; 1933 ; Journal of the Institution of Electrical Engineers Volume 62 ; 62 ; >
+      au < crawling ; exists ; 1932 ; Journal of the Institution of Electrical Engineers Volume 61 ; 61 ; >
+      au < crawling ; exists ; 1933 ; Journal of the Institution of Electrical Engineers Volume 62 ; 62 ; >
       au < crawling ; exists ; 1934 ; Journal of the Institution of Electrical Engineers Volume 63 ; 63 ; >
       au < crawling ; exists ; 1935 ; Journal of the Institution of Electrical Engineers Volume 64 ; 64 ; >
       au < crawling ; exists ; 1936 ; Journal of the Institution of Electrical Engineers Volume 65 ; 65 ; >
-      au < ready ; exists ; 1937 ; Journal of the Institution of Electrical Engineers Volume 66 ; 66 ; >
+      au < crawling ; exists ; 1937 ; Journal of the Institution of Electrical Engineers Volume 66 ; 66 ; >
       au < crawling ; exists ; 1938 ; Journal of the Institution of Electrical Engineers Volume 67 ; 67 ; >
       au < crawling ; exists ; 1939 ; Journal of the Institution of Electrical Engineers Volume 68 ; 68 ; >
       au < crawling ; exists ; 1940 ; Journal of the Institution of Electrical Engineers Volume 69 ; 69 ; >
@@ -1835,7 +1835,7 @@
       param[journal_id] = jiee-2
 
       au < crawling ; exists ; 1949 ; The Journal of the Institution of Electrical Engineers Volume 1949 ; 1949 ; >
-      au < ready ; exists ; 1950 ; The Journal of the Institution of Electrical Engineers Volume 1950 ; 1950 ; >
+      au < crawling ; exists ; 1950 ; The Journal of the Institution of Electrical Engineers Volume 1950 ; 1950 ; >
       au < crawling ; exists ; 1951 ; The Journal of the Institution of Electrical Engineers Volume 1951 ; 1951 ; >
       au < crawling ; exists ; 1952 ; The Journal of the Institution of Electrical Engineers Volume 1952 ; 1952 ; >
       au < crawling ; exists ; 1953 ; The Journal of the Institution of Electrical Engineers Volume 1953 ; 1953 ; >
@@ -1854,14 +1854,14 @@
 
       param[journal_id] = jiee-3
 
-      au < ready ; exists ; 1955 ; Journal of the IEE Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1955 ; Journal of the IEE Volume 1 ; 1 ; >
       au < crawling ; exists ; 1956 ; Journal of the IEE Volume 2 ; 2 ; >
       au < crawling ; exists ; 1957 ; Journal of the IEE Volume 3 ; 3 ; >
-      au < ready ; exists ; 1958 ; Journal of the IEE Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1958 ; Journal of the IEE Volume 4 ; 4 ; >
       au < crawling ; exists ; 1959 ; Journal of the IEE Volume 5 ; 5 ; >
       au < crawling ; exists ; 1960 ; Journal of the IEE Volume 6 ; 6 ; >
       au < crawling ; exists ; 1961 ; Journal of the IEE Volume 7 ; 7 ; >
-      au < ready ; exists ; 1962 ; Journal of the IEE Volume 8 ; 8 ; >
+      au < crawling ; exists ; 1962 ; Journal of the IEE Volume 8 ; 8 ; >
       au < crawling ; exists ; 1963 ; Journal of the IEE Volume 9 ; 9 ; >
 
   }
@@ -1877,7 +1877,7 @@
 
       param[journal_id] = jiere
 
-      au < ready ; exists ; 1985 ; The Journal of the Institution of Electronic and Radio Engineers Volume 55 ; 55 ; >
+      au < crawling ; exists ; 1985 ; The Journal of the Institution of Electronic and Radio Engineers Volume 55 ; 55 ; >
       au < crawling ; exists ; 1986 ; The Journal of the Institution of Electronic and Radio Engineers Volume 56 ; 56 ; >
       au < crawling ; exists ; 1987 ; The Journal of the Institution of Electronic and Radio Engineers Volume 57 ; 57 ; >
       au < crawling ; exists ; 1988 ; The Journal of the Institution of Electronic and Radio Engineers Volume 58 ; 58 ; >
@@ -1900,27 +1900,27 @@
       #au < doesNotExist ; doesNotExist ; 1929 ; The Journal of the Institution of Production Engineers Volume 8 ; 8 ; >
       #au < doesNotExist ; doesNotExist ; 1930 ; The Journal of the Institution of Production Engineers Volume 9 ; 9 ; >
 
-      au < ready ; exists ; 1931 ; The Journal of the Institution of Production Engineers Volume 10 ; 10 ; >
+      au < crawling ; exists ; 1931 ; The Journal of the Institution of Production Engineers Volume 10 ; 10 ; >
       au < crawling ; exists ; 1932 ; The Journal of the Institution of Production Engineers Volume 11 ; 11 ; >
       au < crawling ; exists ; 1933 ; The Journal of the Institution of Production Engineers Volume 12 ; 12 ; >
-      au < ready ; exists ; 1934 ; The Journal of the Institution of Production Engineers Volume 13 ; 13 ; >
+      au < crawling ; exists ; 1934 ; The Journal of the Institution of Production Engineers Volume 13 ; 13 ; >
       au < ready ; exists ; 1935 ; The Journal of the Institution of Production Engineers Volume 14 ; 14 ; >
-      au < ready ; exists ; 1936 ; The Journal of the Institution of Production Engineers Volume 15 ; 15 ; >
-      au < ready ; exists ; 1937 ; The Journal of the Institution of Production Engineers Volume 16 ; 16 ; >
-      au < ready ; exists ; 1938 ; The Journal of the Institution of Production Engineers Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1936 ; The Journal of the Institution of Production Engineers Volume 15 ; 15 ; >
+      au < crawling ; exists ; 1937 ; The Journal of the Institution of Production Engineers Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1938 ; The Journal of the Institution of Production Engineers Volume 17 ; 17 ; >
       au < crawling ; exists ; 1939 ; The Journal of the Institution of Production Engineers Volume 18 ; 18 ; >
       au < crawling ; exists ; 1940 ; The Journal of the Institution of Production Engineers Volume 19 ; 19 ; >
       au < crawling ; exists ; 1941 ; The Journal of the Institution of Production Engineers Volume 20 ; 20 ; >
-      au < ready ; exists ; 1942 ; The Journal of the Institution of Production Engineers Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1942 ; The Journal of the Institution of Production Engineers Volume 21 ; 21 ; >
       au < crawling ; exists ; 1943 ; The Journal of the Institution of Production Engineers Volume 22 ; 22 ; >
       au < crawling ; exists ; 1944 ; The Journal of the Institution of Production Engineers Volume 23 ; 23 ; >
       au < crawling ; exists ; 1945 ; The Journal of the Institution of Production Engineers Volume 24 ; 24 ; >
       au < crawling ; exists ; 1946 ; The Journal of the Institution of Production Engineers Volume 25 ; 25 ; >
       au < crawling ; exists ; 1947 ; The Journal of the Institution of Production Engineers Volume 26 ; 26 ; >
       au < crawling ; exists ; 1948 ; The Journal of the Institution of Production Engineers Volume 27 ; 27 ; >
-      au < ready ; exists ; 1949 ; The Journal of the Institution of Production Engineers Volume 28 ; 28 ; >
+      au < crawling ; exists ; 1949 ; The Journal of the Institution of Production Engineers Volume 28 ; 28 ; >
       au < crawling ; exists ; 1950 ; The Journal of the Institution of Production Engineers Volume 29 ; 29 ; >
-      au < ready ; exists ; 1951 ; The Journal of the Institution of Production Engineers Volume 30 ; 30 ; >
+      au < crawling ; exists ; 1951 ; The Journal of the Institution of Production Engineers Volume 30 ; 30 ; >
       au < crawling ; exists ; 1952 ; The Journal of the Institution of Production Engineers Volume 31 ; 31 ; >
 
   }
@@ -1995,7 +1995,7 @@
 
       param[journal_id] = me
 
-      au < ready ; exists ; 1989 ; Manufacturing Engineer Volume 68 ; 68 ; >
+      au < crawling ; exists ; 1989 ; Manufacturing Engineer Volume 68 ; 68 ; >
       au < crawling ; exists ; 1990 ; Manufacturing Engineer Volume 69 ; 69 ; >
       au < crawling ; exists ; 1991 ; Manufacturing Engineer Volume 70 ; 70 ; >
       au < crawling ; exists ; 1992 ; Manufacturing Engineer Volume 71 ; 71 ; >
