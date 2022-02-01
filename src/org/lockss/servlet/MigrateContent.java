@@ -149,7 +149,7 @@ public class MigrateContent extends LockssServlet {
       auMover.moveAllAus(hostName, userName, userPass, auSelectPatterns);
       java.util.List<String> errs = auMover.getErrors();
       if (!errs.isEmpty()) {
-        errMsg = StringUtil.separatedString(errs, "<br>");
+        errMsg = StringUtil.separatedString(errs, "\n");
       } else {
         statusMsg = "All AUs have been migrated.";
       }
