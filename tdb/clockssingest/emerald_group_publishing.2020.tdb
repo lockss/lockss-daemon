@@ -2285,7 +2285,7 @@
     comment[journal_id] = ebs
 
     au < crawling ; exists ; 2008 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 2 ; 2 ; >
     au < finished ; crawling ; 2010 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Education, Business and Society: Contemporary Middle Eastern Issues Volume 5 ; 5 ; >
@@ -3317,7 +3317,7 @@
     comment[journal_id] = igdr
 
     au < crawling ; exists ; 2008 ; Indian Growth and Development Review Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; Indian Growth and Development Review Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; Indian Growth and Development Review Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Indian Growth and Development Review Volume 3 ; 3 ; >
     au < frozen ; exists ; 2011 ; Indian Growth and Development Review Volume 4 ; 4 ; >
     au < frozen ; exists ; 2012 ; Indian Growth and Development Review Volume 5 ; 5 ; >
@@ -3534,7 +3534,7 @@
     au < manifest ; exists ; 1997 ; Industrial Management & Data Systems Volume 97 ; 97 ; >
     au < manifest ; exists ; 1998 ; Industrial Management & Data Systems Volume 98 ; 98 ; >
     au < manifest ; exists ; 1999 ; Industrial Management & Data Systems Volume 99 ; 99 ; >
-    au < crawling ; exists ; 2000 ; Industrial Management & Data Systems Volume 100 ; 100 ; >
+    au < frozen ; exists ; 2000 ; Industrial Management & Data Systems Volume 100 ; 100 ; >
     au < crawling ; exists ; 2001 ; Industrial Management & Data Systems Volume 101 ; 101 ; >
     au < manifest ; exists ; 2002 ; Industrial Management & Data Systems Volume 102 ; 102 ; >
     au < manifest ; exists ; 2003 ; Industrial Management & Data Systems Volume 103 ; 103 ; >
@@ -4000,7 +4000,7 @@
     au < manifest ; exists ; 1997 ; International Journal of Bank Marketing Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; International Journal of Bank Marketing Volume 16 ; 16 ; >
     au < manifest ; exists ; 1999 ; International Journal of Bank Marketing Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2000 ; International Journal of Bank Marketing Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2000 ; International Journal of Bank Marketing Volume 18 ; 18 ; >
     au < crawling ; exists ; 2001 ; International Journal of Bank Marketing Volume 19 ; 19 ; >
     au < manifest ; exists ; 2002 ; International Journal of Bank Marketing Volume 20 ; 20 ; >
     au < manifest ; exists ; 2003 ; International Journal of Bank Marketing Volume 21 ; 21 ; >
@@ -4214,7 +4214,7 @@
     au < crawling ; exists ; 2006 ; International Journal of Conflict Management Volume 17 ; 17 ; >
     au < crawling ; exists ; 2007 ; International Journal of Conflict Management Volume 18 ; 18 ; >
     au < crawling ; exists ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 ; >
     au < frozen ; exists ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 ; >
     au < frozen ; exists ; 2011 ; International Journal of Conflict Management Volume 22 ; 22 ; >
     au < frozen ; exists ; 2012 ; International Journal of Conflict Management Volume 23 ; 23 ; >
@@ -4456,7 +4456,7 @@
     comment[journal_id] = ijoem
 
     au < manifest ; exists ; 2006 ; International Journal of Emerging Markets Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 ; >
     au < crawling ; exists ; 2008 ; International Journal of Emerging Markets Volume 3 ; 3 ; >
     au < crawling ; exists ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 ; >
     au < frozen ; exists ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 ; >
