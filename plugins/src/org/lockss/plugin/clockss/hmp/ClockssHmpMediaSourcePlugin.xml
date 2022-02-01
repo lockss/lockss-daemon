@@ -56,15 +56,14 @@
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.clockss.SourceRisArticleIteratorFactory</string>
+        <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
     </entry>
-    <!--  oddly, ris files can be text/plain -->
     <entry>
         <string>text/plain_metadata_extractor_factory_map</string>
         <map>
             <entry>
                 <string>*;RIS</string>
-                <string>org.lockss.plugin.clockss.ers.ERSRisMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.hmp.HmpMediaXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -73,7 +72,7 @@
         <map>
             <entry>
                 <string>*;RIS</string>
-                <string>org.lockss.plugin.clockss.ers.ERSRisMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.hmp.HmpMediaXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
