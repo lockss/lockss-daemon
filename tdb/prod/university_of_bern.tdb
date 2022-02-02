@@ -19,15 +19,15 @@
       param[journal_id] = apd
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2013 ; 1 ; Acta Periodica Duellatorum Volume 2013 ; 2013 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2014 ; 2 ; Acta Periodica Duellatorum Volume 2014 ; 2014 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 3 ; Acta Periodica Duellatorum Volume 2015 ; 2015 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 4 ; Acta Periodica Duellatorum Volume 2016 ; 2016 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 5 ; Acta Periodica Duellatorum Volume 2017 ; 2017 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 6 ; Acta Periodica Duellatorum Volume 2018 ; 2018 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 7 ; Acta Periodica Duellatorum Volume 2019 ; 2019 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 8 ; Acta Periodica Duellatorum Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 9 ; Acta Periodica Duellatorum Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2013 ; 1 ; Acta Periodica Duellatorum Volume 2013 ; 2013 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2014 ; 2 ; Acta Periodica Duellatorum Volume 2014 ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2015 ; 3 ; Acta Periodica Duellatorum Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2016 ; 4 ; Acta Periodica Duellatorum Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2017 ; 5 ; Acta Periodica Duellatorum Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2018 ; 6 ; Acta Periodica Duellatorum Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2019 ; 7 ; Acta Periodica Duellatorum Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2020 ; 8 ; Acta Periodica Duellatorum Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 9 ; Acta Periodica Duellatorum Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; expected ; 2022 ; 10 ; Acta Periodica Duellatorum Volume 2022 ; 2022 ; >
 
   }
@@ -47,8 +47,8 @@
 
       au < ojs3.Ojs3Plugin ; released ; 2016 ; 1 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2016 ; 2016 ; >
       au < ojs3.Ojs3Plugin ; released ; 2017 ; 2 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2017 ; 2017 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 3 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2018 ; 2018 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 4 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2018 ; 3 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2019 ; 4 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2019 ; 2019 ; >
 
   }
 
@@ -92,12 +92,12 @@
       param[journal_id] = ciss
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 1 ; Current Issues in Sport Science Volume 2016 ; 2016 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 2 ; Current Issues in Sport Science Volume 2017 ; 2017 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 3 ; Current Issues in Sport Science Volume 2018 ; 2018 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 4 ; Current Issues in Sport Science Volume 2019 ; 2019 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 5 ; Current Issues in Sport Science Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 6 ; Current Issues in Sport Science Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2016 ; 1 ; Current Issues in Sport Science Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2017 ; 2 ; Current Issues in Sport Science Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2018 ; 3 ; Current Issues in Sport Science Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2019 ; 4 ; Current Issues in Sport Science Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2020 ; 5 ; Current Issues in Sport Science Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 6 ; Current Issues in Sport Science Volume 2021 ; 2021 ; >
 
   }
 
@@ -113,25 +113,25 @@
       param[journal_id] = EJM
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; manifest ; 1998 ; 1 ; European Journal of Musicology Volume 1998 ; 1998 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 1999 ; 2 ; European Journal of Musicology Volume 1999 ; 1999 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2000 ; 3 ; European Journal of Musicology Volume 2000 ; 2000 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2001 ; 4 ; European Journal of Musicology Volume 2001 ; 2001 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2002 ; 5 ; European Journal of Musicology Volume 2002 ; 2002 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2003 ; 6 ; European Journal of Musicology Volume 2003 ; 2003 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2004 ; 7 ; European Journal of Musicology Volume 2004 ; 2004 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2005 ; 8 ; European Journal of Musicology Volume 2005 ; 2005 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2006 ; 9 ; European Journal of Musicology Volume 2006 ; 2006 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2007 ; 10 ; European Journal of Musicology Volume 2007 ; 2007 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2008 ; 11 ; European Journal of Musicology Volume 2008 ; 2008 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2009 ; 12 ; European Journal of Musicology Volume 2009 ; 2009 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2010 ; 13 ; European Journal of Musicology Volume 2010 ; 2010 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2011 ; 14 ; European Journal of Musicology Volume 2011 ; 2011 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 15 ; European Journal of Musicology Volume 2016 ; 2016 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 16 ; European Journal of Musicology Volume 2017 ; 2017 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 17 ; European Journal of Musicology Volume 2018 ; 2018 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 18 ; European Journal of Musicology Volume 2019 ; 2019 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 19 ; European Journal of Musicology Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 1998 ; 1 ; European Journal of Musicology Volume 1998 ; 1998 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 1999 ; 2 ; European Journal of Musicology Volume 1999 ; 1999 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2000 ; 3 ; European Journal of Musicology Volume 2000 ; 2000 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2001 ; 4 ; European Journal of Musicology Volume 2001 ; 2001 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2002 ; 5 ; European Journal of Musicology Volume 2002 ; 2002 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2003 ; 6 ; European Journal of Musicology Volume 2003 ; 2003 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2004 ; 7 ; European Journal of Musicology Volume 2004 ; 2004 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2005 ; 8 ; European Journal of Musicology Volume 2005 ; 2005 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2006 ; 9 ; European Journal of Musicology Volume 2006 ; 2006 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2007 ; 10 ; European Journal of Musicology Volume 2007 ; 2007 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2008 ; 11 ; European Journal of Musicology Volume 2008 ; 2008 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2009 ; 12 ; European Journal of Musicology Volume 2009 ; 2009 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2010 ; 13 ; European Journal of Musicology Volume 2010 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2011 ; 14 ; European Journal of Musicology Volume 2011 ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2016 ; 15 ; European Journal of Musicology Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2017 ; 16 ; European Journal of Musicology Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2018 ; 17 ; European Journal of Musicology Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2019 ; 18 ; European Journal of Musicology Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2020 ; 19 ; European Journal of Musicology Volume 2020 ; 2020 ; >
 
   }
 
@@ -188,9 +188,9 @@
 
       au < ojs2.OJS2Plugin ; down ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
       au < ojs2.OJS2Plugin ; down ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 3 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2018 ; 2018 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 4 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 5 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2018 ; 3 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2020 ; 4 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 5 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2021 ; 2021 ; >
 
   }
 
@@ -209,7 +209,7 @@
       au < ojs2.OJS2Plugin ; down ; 2017 ; 1 ; Jahrbuch Diakonie Schweiz Volume 2017 ; 2017 ; >
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 2 ; Jahrbuch Diakonie Schweiz Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 3 ; Jahrbuch Diakonie Schweiz Volume 2019 ; 2019 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 4 ; Jahrbuch Diakonie Schweiz Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 4 ; Jahrbuch Diakonie Schweiz Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; expected ; 2022 ; 5 ; Jahrbuch Diakonie Schweiz Volume 2022 ; 2022 ; >
 
   }
@@ -226,9 +226,9 @@
       param[journal_id] = JEMR
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2007 ; 1 ; Journal of Eye Movement Research Volume 2007 ; 2007 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2008 ; 2 ; Journal of Eye Movement Research Volume 2008 ; 2008 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2009 ; 3 ; Journal of Eye Movement Research Volume 2009 ; 2009 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2007 ; 1 ; Journal of Eye Movement Research Volume 2007 ; 2007 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2008 ; 2 ; Journal of Eye Movement Research Volume 2008 ; 2008 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2009 ; 3 ; Journal of Eye Movement Research Volume 2009 ; 2009 ; >
       au < ojs2.OJS2Plugin ; down ; 2010 ; 3 ; Journal of Eye Movement Research Volume 2010 ; 2010 ; >
       au < ojs2.OJS2Plugin ; down ; 2011 ; 4 ; Journal of Eye Movement Research Volume 2011 ; 2011 ; >
       au < ojs2.OJS2Plugin ; down ; 2012 ; 5 ; Journal of Eye Movement Research Volume 2012 ; 2012 ; >
@@ -240,7 +240,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 11 ; Journal of Eye Movement Research Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 12 ; Journal of Eye Movement Research Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 13 ; Journal of Eye Movement Research Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 14 ; Journal of Eye Movement Research Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 14 ; Journal of Eye Movement Research Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; expected ; 2022 ; 15 ; Journal of Eye Movement Research Volume 2022 ; 2022 ; >
 
   }
@@ -326,7 +326,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 88-93 ; Linguistik Online Volume 88-93 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 94-100 ; Linguistik Online Volume 94-100 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 101-105 ; Linguistik Online Volume 101-105 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 106-112 ; Linguistik Online Volume 106-110 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 106-112 ; Linguistik Online Volume 106-110 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; expected ; 2022 ; 113-116 ; Linguistik Online Volume 111-115 ; 2022 ; >
 
   }
@@ -411,7 +411,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 65 ; Versants. Revista suiza de literaturas románicas Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 66 ; Versants. Revista suiza de literaturas románicas Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 67 ; Versants. Revista suiza de literaturas románicas Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 68 ; Versants. Revista suiza de literaturas románicas Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 68 ; Versants. Revista suiza de literaturas románicas Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; expected ; 2022 ; 69 ; Versants. Revista suiza de literaturas románicas Volume 2022 ; 2022 ; >
 
   }
