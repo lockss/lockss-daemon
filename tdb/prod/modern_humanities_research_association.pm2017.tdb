@@ -10,6 +10,38 @@
 
     {
     title <
+      name = Austrian Studies ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 819
+
+      au < manifest ; 2003 ; Austrian Studies Volume 11 [2003] ; 16221 >
+      au < manifest ; 2004 ; Austrian Studies Volume 12 [2004] ; 16222 >
+      au < manifest ; 2005 ; Austrian Studies Volume 13 [2005] ; 16223 >
+      au < manifest ; 2006 ; Austrian Studies Volume 14 [2006] ; 16224 >
+      au < manifest ; 2007 ; Austrian Studies Volume 15 [2007] ; 16225 >
+      au < manifest ; 2008 ; Austrian Studies Volume 16 [2008] ; 16226 >
+      au < manifest ; 2009 ; Austrian Studies Volume 17 [2009] ; 16227 >
+      au < manifest ; 2010 ; Austrian Studies Volume 18 [2010] ; 16228 >
+      au < manifest ; 2011 ; Austrian Studies Volume 19 [2011] ; 16229 >
+      au < manifest ; 2012 ; Austrian Studies Volume 20 [2012] ; 16230 >
+      au < manifest ; 2013 ; Austrian Studies Volume 21 [2013] ; 16231 >
+      au < manifest ; 2014 ; Austrian Studies Volume 22 [2014] ; 16232 >
+      au < manifest ; 2015 ; Austrian Studies Volume 23 [2015] ; 16233 >
+      au < manifest ; 2016 ; Austrian Studies Volume 24 [2016] ; 16234 >
+      au < manifest ; 2017 ; Austrian Studies Volume 25 [2017] ; 16235 >
+      au < manifest ; 2018 ; Austrian Studies Volume 26 [2018] ; 16236 >
+      au < manifest ; 2019 ; Austrian Studies Volume 27 [2019] ; 16237 >
+      au < manifest ; 2020 ; Austrian Studies Volume 28 [2020] ; 16238 >
+      au < manifest ; 2021 ; Austrian Studies Volume 29 [2021] ; 16862 >
+
+    }
+
+    {
+    title <
       name = Modern Language Review ;
       issn = 0026-7937 ;
       eissn = 2222-4319
@@ -18,6 +50,27 @@
 
       attr[journal_id] = 822
 
+      au < manifest ; 2001 ; Modern Language Review Volume 96 [2001] ; 16409 >
+      au < manifest ; 2002 ; Modern Language Review Volume 97 [2002] ; 16410 >
+      au < manifest ; 2003 ; Modern Language Review Volume 98 [2003] ; 16411 >
+      au < manifest ; 2004 ; Modern Language Review Volume 99 [2004] ; 16412 >
+      au < manifest ; 2005 ; Modern Language Review Volume 100 [2005] ; 16413 >
+      au < manifest ; 2006 ; Modern Language Review Volume 101 [2006] ; 16414 >
+      au < manifest ; 2007 ; Modern Language Review Volume 102 [2007] ; 16415 >
+      au < manifest ; 2008 ; Modern Language Review Volume 103 [2008] ; 16416 >
+      au < manifest ; 2009 ; Modern Language Review Volume 104 [2009] ; 16417 >
+      au < manifest ; 2010 ; Modern Language Review Volume 105 [2010] ; 16418 >
+      au < manifest ; 2011 ; Modern Language Review Volume 106 [2011] ; 16419 >
+      au < manifest ; 2012 ; Modern Language Review Volume 107 [2012] ; 16420 >
+      au < manifest ; 2013 ; Modern Language Review Volume 108 [2013] ; 16421 >
+      au < manifest ; 2014 ; Modern Language Review Volume 109 [2014] ; 16422 >
+      au < manifest ; 2015 ; Modern Language Review Volume 110 [2015] ; 16423 >
+      au < manifest ; 2016 ; Modern Language Review Volume 111 [2016] ; 16424 >
+      au < manifest ; 2017 ; Modern Language Review Volume 112 [2017] ; 16425 >
+      au < manifest ; 2018 ; Modern Language Review Volume 113 [2018] ; 16426 >
+      au < manifest ; 2019 ; Modern Language Review Volume 114 [2019] ; 16427 >
+      au < manifest ; 2020 ; Modern Language Review Volume 115 [2020] ; 16428 >
+      au < manifest ; 2021 ; Modern Language Review Volume 116 [2021] ; 16429 >
       au < manifest ; 2022 ; Modern Language Review Volume 117 [2022] ; 16835 >
 
     }
