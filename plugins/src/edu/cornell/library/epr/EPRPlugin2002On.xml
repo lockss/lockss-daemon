@@ -1,53 +1,61 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>deprecated - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>edu.cornell.library.epr.EPRPlugin2002On</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;%s %d&quot;, base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>plugin_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Electronic Poetry Review Plugin 2002 On</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sissues/issue%s/.*&quot;, base_url, num_issue_range</string>
-      <string>1,&quot;%slockss/manifest%d.htm&quot;, base_url, year</string>
-      <string>1,&quot;%s.*/?images/.*&quot;, base_url</string>
-      <string>1,&quot;%s.*\.css$&quot;, base_url</string>
-      <string>1,&quot;%s.*alltext/.*&quot;, base_url</string>
-      <string>1,&quot;%s.*text/cnotes/.*&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%slockss/manifest%d.htm&quot;, base_url, year</string>
+    <string>Electronic Poetry Review Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>num_issue_range</key>
-        <displayName>Numeric Issue Range</displayName>
-        <description>A Range of issues in the form: min-max</description>
-        <type>8</type>
-        <size>20</size>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -61,14 +69,42 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
+        <key>num_issue_range</key>
+        <displayName>Numeric Issue Range</displayName>
+        <description>A Range of issues in the form: min-max</description>
+        <type>8</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Electronic Poetry Review Plugin, Base URL %s, Year %d, Numeric Issue Range %s", base_url, year, num_issue_range</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/manifest%d.htm", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sissues/issue%s/", base_url, num_issue_range</string>
+      <string>1,"^%slockss/manifest%d\.htm", base_url, year</string>
+      <string>1,"^%s.*/?images/", base_url</string>
+      <string>1,"^%s.*\.css$", base_url</string>
+      <string>1,"^%s.*alltext/", base_url</string>
+      <string>1,"^%s.*text/cnotes/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>

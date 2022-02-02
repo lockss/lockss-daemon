@@ -11,8 +11,9 @@
       issnl = 1552-2083
     >  
 
+    # EPRPlugin2002On might be broken (includes issue1 URLs in years 2002 and 2003). Website hosting comes and goes.
+
     rights = openaccess
-    comment[epr1] = EPRPlugin2002On might be broken (includes issue1 URLs in years 2002 and 2003). At base_url, message is account suspended.
     
     {
     
