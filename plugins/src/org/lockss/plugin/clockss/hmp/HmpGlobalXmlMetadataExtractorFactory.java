@@ -13,8 +13,8 @@ import org.lockss.util.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HmpMediaXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(HmpMediaXmlMetadataExtractorFactory.class);
+public class HmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(HmpGlobalXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper PubMedHelper = null;
 
