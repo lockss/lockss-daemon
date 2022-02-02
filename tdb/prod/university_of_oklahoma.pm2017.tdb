@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = University of Oklahoma
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:431
 
     {
     title <
       name = World Literature Today ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0196-3570 ;
+      eissn = 1945-8134
 
     >
 

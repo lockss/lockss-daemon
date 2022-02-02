@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Oregon Historical Society
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:432
 
     {
     title <
       name = Oregon Historical Quarterly ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0030-4727 ;
+      eissn = 2329-3780
 
     >
 

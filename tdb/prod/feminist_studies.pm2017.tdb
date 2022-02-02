@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Feminist Studies
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:434
 
     {
     title <
       name = Feminist Studies ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0046-3663 ;
+      eissn = 2153-3873
 
     >
 

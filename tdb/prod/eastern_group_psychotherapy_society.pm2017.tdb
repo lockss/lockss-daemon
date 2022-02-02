@@ -1,18 +1,18 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Eastern_Group_Psychotherapy_Society
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:440
 
     {
     title <
       name = Group ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 0362-4021 ;
+      eissn = 1573-3386
 
     >
 
