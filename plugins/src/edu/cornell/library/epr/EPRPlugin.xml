@@ -33,19 +33,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - humanities_project registry</string>
+    <string>development - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.cornell.library.epr.EPRPlugin2002On</string>
+    <string>edu.cornell.library.epr.EPRPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Electronic Poetry Review Plugin (Legacy 2002)</string>
+    <string>Electronic Poetry Review Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -59,44 +59,38 @@ POSSIBILITY OF SUCH DAMAGE.
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>num_issue_range</key>
-        <displayName>Numeric Issue Range</displayName>
-        <description>A Range of issues in the form: min-max</description>
-        <type>8</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Electronic Poetry Review Plugin (Legacy 2002), Base URL %s, Year %d, Numeric Issue Range %s", base_url, year, num_issue_range</string>
+    <string>"Electronic Poetry Review Plugin, Base URL %s", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss/manifest%d.htm", base_url, year</string>
+    <list>
+      <string>"%sissues/issue1/default.htm", base_url</string>
+      <string>"%sissues/spring01/default.html", base_url</string>
+      <string>"%sissues/issue3/default.html", base_url</string>
+      <string>"%sissues/issue4/default.htm", base_url</string>
+      <string>"%sissues/issue5/default.htm", base_url</string>
+      <string>"%sissues/issue6/default.htm", base_url</string>
+      <string>"%sissues/issue7/default.htm", base_url</string>
+      <string>"%sissues/issue8/default.htm", base_url</string>
+      <string>"%s", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <list>
+      <string>"%slockss/manifest1996.htm", base_url</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%sissues/issue%s/", base_url, num_issue_range</string>
-      <string>1,"^%slockss/manifest%d\.htm", base_url, year</string>
-      <string>1,"^%s.*/?images/", base_url</string>
-      <string>1,"^%s.*\.css$", base_url</string>
-      <string>1,"^%s.*alltext/", base_url</string>
-      <string>1,"^%s.*text/cnotes/", base_url</string>
+      <string>2,"^%scgi-bin/", base_url</string>
+      <string>1,"^%s", base_url</string>
     </list>
   </entry>
   <entry>
@@ -105,6 +99,10 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>3000</long>
+    <long>1000</long>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>edu.cornell.library.epr.EPRUrlNormalizer</string>
   </entry>
 </map>

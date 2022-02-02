@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Electronic Poetry Review
   >
@@ -11,8 +12,6 @@
       issnl = 1552-2083
     >  
 
-    # EPRPlugin2002On might be broken (includes issue1 URLs in years 2002 and 2003). Website hosting comes and goes.
-
     rights = openaccess
     
     {
@@ -21,7 +20,7 @@
       param[base_url] = http://www.epoetry.org/  
       implicit < status ; year ; name >
   
-      au < down ; 2001 ; Electronic Poetry Review 2001 >
+      au < superseded ; 2001 ; Electronic Poetry Review 2001 >
       
     }
     
@@ -31,11 +30,21 @@
       param[base_url] = http://www.epoetry.org/  
       implicit < status ; name ; param[year] ; param[num_issue_range] >    
     
-      au < down ; Electronic Poetry Review 2002 ; 2002 ; 3-4 >
-      au < down ; Electronic Poetry Review 2003 ; 2003 ; 5-6 >
+      au < superseded ; Electronic Poetry Review 2002 ; 2002 ; 3-4 >
+      au < superseded ; Electronic Poetry Review 2003 ; 2003 ; 5-6 >
     
     }
 
+    {
+    
+      plugin = edu.cornell.library.epr.EPRPlugin
+      param[base_url] = http://www.epoetry.org/  
+      implicit < status ; year ; name >
+  
+      au < manifest ; 1996-2008 ; Electronic Poetry Review 1996-2008 >
+      
+    }
+    
   }
   
 }
