@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = HMP Media;
+    info[contract] = 2022 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+
+  {
+
+    title <
+      name = Journal of Invasive Cardiology Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.hmp.ClockssHmpMediaSourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/hmpglobal-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < testing ; exists ; 2022 ; Journal of Invasive Cardiology Source Content 2022_01 ; 2022_01 >
+
+  }
+
+}
