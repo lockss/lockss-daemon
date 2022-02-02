@@ -42,13 +42,17 @@
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"HMP Media Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, directory</string>
+        <string>"HMP Media Source Plugin (CLOCKSS), Base URL %s, Year %s", base_url, directory</string>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%s%d/.+\.pdf", base_url, directory</string>
+            <string>"^%s%s/.+\.zip", base_url, directory</string>
         </list>
+    </entry>
+    <entry>
+        <string>plugin_archive_file_types</string>
+        <string>standard</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
@@ -59,19 +63,19 @@
         <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
     </entry>
     <entry>
-        <string>text/plain_metadata_extractor_factory_map</string>
+        <string>text/xml_metadata_extractor_factory_map</string>
         <map>
             <entry>
-                <string>*;RIS</string>
+                <string>*</string>
                 <string>org.lockss.plugin.clockss.hmp.HmpMediaXmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
     <entry>
-        <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+        <string>application/xml_metadata_extractor_factory_map</string>
         <map>
             <entry>
-                <string>*;RIS</string>
+                <string>*</string>
                 <string>org.lockss.plugin.clockss.hmp.HmpMediaXmlMetadataExtractorFactory</string>
             </entry>
         </map>
