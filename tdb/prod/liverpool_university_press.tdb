@@ -657,7 +657,6 @@
     au < doNotProcess ; 2016 ; Journal of Romance Studies Volume 16 ; 16 >
     au < doNotProcess ; 2017 ; Journal of Romance Studies Volume 17 ; 17 >
     au < doNotProcess ; 2018 ; Journal of Romance Studies Volume 18 ; 18 >
-    
     au < doNotProcess ; 2019 ; Journal of Romance Studies Volume 19 ; 19 >
     au < exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 >
     au < expected ; 2021 ; Journal of Romance Studies Volume 21 ; 21 >
@@ -808,24 +807,24 @@
 
     param[journal_id] = lhr
 
-    au < doNotProcess ; 2005 ; Labour History Review Volume 70 [Atypon] ; 70 >
-    au < doNotProcess ; 2006 ; Labour History Review Volume 71 [Atypon] ; 71 >
-    au < doNotProcess ; 2007 ; Labour History Review Volume 72 [Atypon] ; 72 >
-    au < doNotProcess ; 2008 ; Labour History Review Volume 73 [Atypon] ; 73 >
-    au < doNotProcess ; 2009 ; Labour History Review Volume 74 [Atypon] ; 74 >
-    au < doNotProcess ; 2010 ; Labour History Review Volume 75 [Atypon] ; 75 >
-    au < doNotProcess ; 2011 ; Labour History Review Volume 76 [Atypon] ; 76 >
-    au < doNotProcess ; 2012 ; Labour History Review Volume 77 [Atypon] ; 77 >
-    au < exists ; 2013 ; Labour History Review Volume 78 [Atypon] ; 78 >
-    au < doNotProcess ; 2014 ; Labour History Review Volume 79 [Atypon] ; 79 >
-    au < doNotProcess ; 2015 ; Labour History Review Volume 80 [Atypon] ; 80 >
-    au < doNotProcess ; 2016 ; Labour History Review Volume 81 [Atypon] ; 81 >
-    au < doNotProcess ; 2017 ; Labour History Review Volume 82 [Atypon] ; 82 >
-    au < doNotProcess ; 2018 ; Labour History Review Volume 83 [Atypon] ; 83 >
-    au < doNotProcess ; 2019 ; Labour History Review Volume 84 [Atypon] ; 84 >
-    au < exists ; 2020 ; Labour History Review Volume 85 [Atypon] ; 85 >
-    au < expected ; 2021 ; Labour History Review Volume 86 [Atypon] ; 86 >
-    au < expected ; 2022 ; Labour History Review Volume 87 [Atypon] ; 87 >
+    au < doNotProcess ; 2005 ; Labour History Review Volume 70 ; 70 >
+    au < doNotProcess ; 2006 ; Labour History Review Volume 71 ; 71 >
+    au < doNotProcess ; 2007 ; Labour History Review Volume 72 ; 72 >
+    au < doNotProcess ; 2008 ; Labour History Review Volume 73 ; 73 >
+    au < doNotProcess ; 2009 ; Labour History Review Volume 74 ; 74 >
+    au < doNotProcess ; 2010 ; Labour History Review Volume 75 ; 75 >
+    au < doNotProcess ; 2011 ; Labour History Review Volume 76 ; 76 >
+    au < doNotProcess ; 2012 ; Labour History Review Volume 77 ; 77 >
+    au < exists ; 2013 ; Labour History Review Volume 78 ; 78 >
+    au < doNotProcess ; 2014 ; Labour History Review Volume 79 ; 79 >
+    au < doNotProcess ; 2015 ; Labour History Review Volume 80 ; 80 >
+    au < doNotProcess ; 2016 ; Labour History Review Volume 81 ; 81 >
+    au < doNotProcess ; 2017 ; Labour History Review Volume 82 ; 82 >
+    au < doNotProcess ; 2018 ; Labour History Review Volume 83 ; 83 >
+    au < doNotProcess ; 2019 ; Labour History Review Volume 84 ; 84 >
+    au < exists ; 2020 ; Labour History Review Volume 85 ; 85 >
+    au < expected ; 2021 ; Labour History Review Volume 86 ; 86 >
+    au < expected ; 2022 ; Labour History Review Volume 87 ; 87 >
 
   }
 
