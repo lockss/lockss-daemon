@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = The Yearbook of English Studies ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 824
+
+      au < manifest ; 2021 ; The Yearbook of English Studies Volume 51 [2021] ; 16697 >
+
+    }
+
+}

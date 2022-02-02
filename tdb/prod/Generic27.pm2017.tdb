@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Phoenix ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 807
+
+      au < manifest ; 2020 ; Phoenix Volume 74 [2020] ; 16694 >
+
+    }
+
+}

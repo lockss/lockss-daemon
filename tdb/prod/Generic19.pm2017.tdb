@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Modern Language Review ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 822
+
+      au < manifest ; 2022 ; Modern Language Review Volume 117 [2022] ; 16835 >
+
+    }
+
+}

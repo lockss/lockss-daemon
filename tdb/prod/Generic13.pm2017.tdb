@@ -1,0 +1,37 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = International Union Rights ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 847
+
+      au < manifest ; 2009 ; International Union Rights Volume 16 [2009] ; 16737 >
+      au < manifest ; 2010 ; International Union Rights Volume 17 [2010] ; 16738 >
+      au < manifest ; 2011 ; International Union Rights Volume 18 [2011] ; 16739 >
+      au < manifest ; 2012 ; International Union Rights Volume 19 [2012] ; 16740 >
+      au < manifest ; 2013 ; International Union Rights Volume 20 [2013] ; 16741 >
+      au < manifest ; 2014 ; International Union Rights Volume 21 [2014] ; 16742 >
+      au < manifest ; 2015 ; International Union Rights Volume 22 [2015] ; 16743 >
+      au < manifest ; 2016 ; International Union Rights Volume 23 [2016] ; 16744 >
+      au < manifest ; 2017 ; International Union Rights Volume 24 [2017] ; 16745 >
+      au < manifest ; 2018 ; International Union Rights Volume 25 [2018] ; 16746 >
+      au < manifest ; 2019 ; International Union Rights Volume 26 [2019] ; 16747 >
+      au < manifest ; 2020 ; International Union Rights Volume 27 [2020] ; 16748 >
+      au < manifest ; 2021 ; International Union Rights Volume 28 [2021] ; 16749 >
+
+    }
+
+}

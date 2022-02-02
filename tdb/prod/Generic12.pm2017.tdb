@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Arion: A Journal of the Humanities and the Classics ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 834
+
+      au < manifest ; 2021-2022 ; Arion: A Journal of the Humanities and the Classics Volume 29 [2021-2022] ; 16700 >
+
+    }
+
+}
