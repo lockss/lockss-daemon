@@ -436,6 +436,22 @@
     
     {
     title <
+      name = Journal of Education in Muslim Societies ;
+      issn = 2641-0044 ;
+      eissn =  2641-0052
+
+    >
+
+      attr[journal_id] = 830
+
+      au < manifest ; 2019-2020 ; Journal of Education in Muslim Societies Volume 1 [2019-2020] ; 16186 >
+      au < manifest ; 2020-2021 ; Journal of Education in Muslim Societies Volume 2 [2020-2021] ; 16187 >
+      au < manifest ; 2021-2022 ; Journal of Education in Muslim Societies Volume 3 [2021-2022] ; 16758 >
+
+    }
+
+    {
+    title <
       name = Journal of Feminist Studies in Religion ;
       issn = 8755-4178  ;
       eissn = 1553-3913  ;
@@ -662,6 +678,24 @@
 
     {
     title <
+      name = Philanthropy & Education ;
+      issn = 2470-7686 ;
+      eissn = 2470-7694
+
+    >
+
+      attr[journal_id] = 833
+
+      au < manifest ; 2017-2018 ; Philanthropy & Education Volume 1 [2017-2018] ; 16192 >
+      au < manifest ; 2018-2019 ; Philanthropy & Education Volume 2 [2018-2019] ; 16193 >
+      au < manifest ; 2019-2020 ; Philanthropy & Education Volume 3 [2019-2020] ; 16194 >
+      au < manifest ; 2020-2021 ; Philanthropy & Education Volume 4 [2020-2021] ; 16195 >
+      au < manifest ; 2021-2022 ; Philanthropy & Education Volume 5 [2021-2022] ; 16714 >
+
+    }
+
+    {
+    title <
       name = Philosophy of Music Education Review ;
       issn = 1063-5734  ;
       eissn = 1543-3412  ;
@@ -744,6 +778,24 @@
 
     }
     
+    {
+    title <
+      name = Recreation, Parks, and Tourism in Public Health ;
+      issn = 2474-1825 ;
+      eissn = 2474-1833
+
+    >
+
+      attr[journal_id] = 827
+
+      au < manifest ; 2017 ; Recreation, Parks, and Tourism in Public Health Volume 1 [2017] ; 16196 >
+      au < manifest ; 2018 ; Recreation, Parks, and Tourism in Public Health Volume 2 [2018] ; 16197 >
+      au < manifest ; 2019 ; Recreation, Parks, and Tourism in Public Health Volume 3 [2019] ; 16198 >
+      au < manifest ; 2020 ; Recreation, Parks, and Tourism in Public Health Volume 4 [2020] ; 16199 >
+      au < manifest ; 2021 ; Recreation, Parks, and Tourism in Public Health Volume 5 [2021] ; 16627 >
+
+    }
+
     {
     title <
       name = Research in African Literatures ;
