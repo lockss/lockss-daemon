@@ -72,19 +72,26 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
       //One schema has "_" in folder, others do not
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
-      //log.debug3("Wolters Kluwer cuBase = " + cuBase);
+      log.debug3("Wolters Kluwer schema setup: cuBase = " + cuBase);
 
-      if (WKJATSHelper == null && !cuBase.contains("_")){
-        //log.debug3("Wolters Kluwer old schema cuBase = " + cuBase);
-        WKJATSHelper = new WoltersKluwerSourceXmlSchemaHelper();
-        return WKJATSHelper;
-      } else if (WKHelper == null && cuBase.contains("_")) {
-        //log.debug3("Wolters Kluwer new schema cuBase = " + cuBase);
-        WKHelper = new JatsPublishingSchemaHelper();
+      if (!cuBase.contains("_")) {
+        log.debug3("Wolters Kluwer schema setup: old schema cuBase = " + cuBase);
+        if (WKHelper == null){
+          WKHelper  = new WoltersKluwerSourceXmlSchemaHelper();
+        }
         return WKHelper;
+        
+      } else if (cuBase.contains("_")) {
+        log.debug3("Wolters Kluwer schema setup: new schema cuBase = " + cuBase);
+        if (WKJATSHelper == null) {
+          WKJATSHelper = new JatsPublishingSchemaHelper();
+        }
+        return WKJATSHelper;
       }
 
+      log.debug3("Wolters Kluwer schema setup: unknown cuBase = " + cuBase);
       return WKHelper;
+      
     }
        
     /*
