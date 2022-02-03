@@ -1,0 +1,192 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.oecd.OecdJournalsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>OECD Journals Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.oecd.OecdParentPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"OECD Journals Plugin, Base URL %s, Journal ID %s, Topic %s, ISSN %d, Year %d", base_url, journal_id, topic, journal_issn, year</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal (often used as part of file names)</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_dir</key>
+                <displayName>Journal Directory</displayName>
+                <description>Journal Name separated by dashes</description>
+                <type>1</type>
+                <size>80</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>topic</key>
+                <displayName>Journal Topic</displayName>
+                <description>Topic of journal</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <type>4</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_issn</key>
+                <displayName>Journal ISSN</displayName>
+                <type>1</type>
+                <size>20</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^%s[^?]*\.(bmp|css|gif|ico|svg|eot|ttf|woff2?|jpe?g|js|png|tif?f)(\?.+)?$", base_url</string>
+            <string>1,"^https://(fonts|ajax)\.(googleapis|gstatic)\.com"</string>
+            <string>1,"^https://oecd-.+\.kxcdn\.com"</string>
+            <string>1,"^https://cdnjs\.cloudflare\.com"</string>
+            <string>1,"^https://cdn\.datatables\.net"</string>
+            <string>1,"^https://assets\.oecdcode\.org"</string>
+            <!-- issue
+            https://www.oecd-ilibrary.org/economics/oecd-journal-journal-of-business-cycle-measurement-and-analysis/volume-2015/issue-2_jbcma-v2015-2-en -->
+            <string>1,"^%s%s/oecd-journal-%s/volume-%d/issue-\d\d?_%s", base_url, topic, journal_dir, year, journal_id</string>
+            <!-- article-url
+             https://www.oecd-ilibrary.org/economics/the-swedish-business-cycle-1969-2013_jbcma-2015-5jlz9hhpj4th -->
+            <string>1,"^%s%s/.*_%s-%d", base_url, topic, journal_id, year</string>
+            <!-- citation dialogue
+            /content/publication/jbcma-v2015-1-en/citation-->
+            <string>1,"^%scontent/.*%s.*/citation", base_url, journal_id</string>
+            <!-- citation
+              <article-url>/cite/ris &  <article-url>/cite/endnote &  <article-url>/cite/txt & <article-url>/cite/bib -->
+            <string>1,"^%s%s/.*_%s-%d.*/cite/(ris|endnote|txt|bib)$", base_url, topic, journal_id, year</string>
+            <!--
+            https://www.oecd-ilibrary.org/benefits-and-wages-hours-of-work-needed-to-escape-poverty-for-workless-families-edition-2019_8bed8923-en.zip?itemId=%2Fcontent%2Fdata%2F8bed8923-en&containerItemId=%2Fcontent%2Fcollection%2Fsocwel-data-en -->
+            <string>1,"^%s.*\.zip\?itemId=.*data.*", base_url</string>
+            <!-- article pdf
+             https://www.oecd-ilibrary.org/the-swedish-business-cycle-1969-2013_5jlz9hhpj4th.pdf?itemId=%2Fcontent%2Fpaper%2Fjbcma-2015-5jlz9hhpj4th&mimeType=pdf -->
+            <string>1,"^%s.+\.pdf\?itemId=.+%s-%d.+&amp;mimeType=pdf$", base_url, journal_id, year</string>
+            <!-- pdf redirect
+            https://www.oecd-ilibrary.org/docserver/7a3b07d2-en.pdf?expires=1643843528&id=id&accname=ocid194777&checksum=063C56734FAFCB0F81A2F8646E0B6DEC -->
+            <string>1,"^%sdocserver", base_url</string>
+            <!-- dont follow this:
+                https://www.oecd-ilibrary.org/deliver?redirecturl=http%3A%2F%2Fwww.keepeek.com%2FDigital-Asset-Management%2Foecd%2Feconomics%2Fthe-swedish-business-cycle-1969-2013_jbcma-2015-5jlz9hhpj4th&isPreview=true&itemId=%2Fcontent%2Fpaper%2Fjbcma-2015-5jlz9hhpj4th -->
+            <string>2,"^%sdeliver\?redirecturl=.*keepeek\.com", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!-- https://www.oecd-ilibrary.org/economics/oecd-journal-journal-of-business-cycle-measurement-and-analysis_19952899/lockssissues?volume=2015 -->
+        <string>"%s%s/oecd-journal-%s_%s/lockssissues?volume=%d", base_url, topic, journal_dir, journal_issn, year</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!-- article, and pdf -->
+            <string>"%s%s/.*_%s-%d", base_url, topic, journal_id, year</string>
+            <string>"%s.+\.pdf", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.oecd.OecdJournalsArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.oecd.OecdJournalsArticleIteratorFactory</string>
+    </entry>
+</map>

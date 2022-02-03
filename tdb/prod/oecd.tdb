@@ -1,27 +1,42 @@
 {
   publisher <
     name = OECD ;
-    info[platform] = pub2web. See LXPLUG-1730
+    info[platform] =  See LXPLUG-1730
   >
-
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
-    implicit < status ; year ; name ; param[volume_name] >
-    param[base_url] = https://www.microbiologyresearch.org/
-
   {
-  
+    plugin = org.lockss.plugin.oecd.OecdJournalsPlugin
+    implicit < status ; year ; name ; param[year] >
+    param[base_url] = https://www.oecd-ilibrary.org/
+
+    {
+
     title <
-      name = Example Title ;
-      eissn = 9999-999X 
+      name = Journal of Business Cycle Measurement and Analysis ;
+      issn = 19952899
      >
-     
 
-      param[journal_id] = ijsem
+      param[topic] = economics
+      param[journal_issn] = 19952899
+      param[journal_dir] = journal-of-business-cycle-measurement-and-analysis
+      param[journal_id] = jbcma
 
-      au < exists ; 2021 ; Example Title Volume 1 ; 1 >
-      au < expected ; 2022 ; Example Title Volume 2 ; 2 >
-
+      au < testing ; 2015 ; Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 >
+    }
   }
+  {
 
+    plugin = org.lockss.plugin.oecd.OecdDatasetPlugin
+    implicit < status ; year ; param[year] ; name  >
+    param[base_url] = https://www.oecd-ilibrary.org/
+
+    {
+
+    title <
+      name = OECD Datasets
+    >
+
+      au < testing ; 2019 ; 2019 ; OECD Datasets 2019 >
+
+    }
+  }
 }
