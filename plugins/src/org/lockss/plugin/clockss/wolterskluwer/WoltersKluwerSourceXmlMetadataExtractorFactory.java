@@ -53,6 +53,7 @@ import org.xml.sax.SAXException;
 
 public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(WoltersKluwerSourceXmlMetadataExtractorFactory.class);
+  private static SourceXmlSchemaHelper WKJATSHelper = null;
   private static SourceXmlSchemaHelper WKHelper = null;
 
   @Override
@@ -73,12 +74,14 @@ public class WoltersKluwerSourceXmlMetadataExtractorFactory extends SourceXmlMet
 
       //log.debug3("Wolters Kluwer cuBase = " + cuBase);
 
-      if (WKHelper == null && !cuBase.contains("_")){
+      if (WKJATSHelper == null && !cuBase.contains("_")){
         //log.debug3("Wolters Kluwer old schema cuBase = " + cuBase);
-        WKHelper = new WoltersKluwerSourceXmlSchemaHelper();
-      } else if (cuBase.contains("_")) {
+        WKJATSHelper = new WoltersKluwerSourceXmlSchemaHelper();
+        return WKJATSHelper;
+      } else if (WKHelper == null && cuBase.contains("_")) {
         //log.debug3("Wolters Kluwer new schema cuBase = " + cuBase);
         WKHelper = new JatsPublishingSchemaHelper();
+        return WKHelper;
       }
 
       return WKHelper;
