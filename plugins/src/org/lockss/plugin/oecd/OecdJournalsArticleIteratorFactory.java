@@ -68,7 +68,7 @@ public class OecdJournalsArticleIteratorFactory implements ArticleIteratorFactor
     String year = au.getConfiguration().get("year");
     // https://www.oecd-ilibrary.org/economics/frequency-based-co-movement-of-inflation-in-selected-euro-area-countries_jbcma-2015-5jm26ttlxdd1
     LANDING_PATTERN = Pattern.compile(
-        String.format("/%s/([^/]+)_(%s-%s)-(.+)$",
+        String.format("/%s/([^/]+)_(%s-%s)-([^/]+)$",
             topic, jid, year));
     // https://www.oecd-ilibrary.org/frequency-based-co-movement-of-inflation-in-selected-euro-area-countries_5jm26ttlxdd1.pdf?itemId=%2Fcontent%2Fpaper%2Fjbcma-2015-5jm26ttlxdd1&mimeType=pdf
     //PDF_PATTERN = Pattern.compile(
