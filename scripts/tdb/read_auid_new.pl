@@ -1433,6 +1433,7 @@ while (my $line = <>) {
            ($plugin eq "ARRSPlugin") ||
            ($plugin eq "AscoJournalsPlugin") ||
            ($plugin eq "AsmPlugin") ||
+           ($plugin eq "ACPJournalsPlugin") ||
            ($plugin eq "AtsJournalsPlugin") ||
            ($plugin eq "BIRAtyponPlugin") ||
            ($plugin eq "EdinburghUniversityPressPlugin") ||
