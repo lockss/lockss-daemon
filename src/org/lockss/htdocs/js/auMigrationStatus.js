@@ -21,6 +21,17 @@ class AuMigrationStatus extends React.Component {
       clearInterval(this.interval);
       this.interval = setInterval(this.__loadStatus, this.state.delay);
     }
+
+    // FIXME: Replace with a jQuery solution?
+    if (prevState.running != this.state.running) {
+      for (const e of document.querySelectorAll("input[type='submit']")) {
+        if (this.state.running) {
+          e.setAttribute("disabled", "disabled");
+        } else {
+          e.removeAttribute("disabled");
+        }
+      }
+    }
   }
 
   componentWillUnmount() {
