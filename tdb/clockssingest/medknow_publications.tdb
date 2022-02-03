@@ -4617,7 +4617,7 @@
     au < finished ; crawling ; 2013 ; Saudi Journal of Gastroenterology Volume 19 ; 2013 ; 19 ; http://www.saudijgastro.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Saudi Journal of Gastroenterology Volume 20 ; 2014 ; 20 ; http://www.saudijgastro.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2015 ; Saudi Journal of Gastroenterology Volume 21 ; 2015 ; 21 ; http://www.saudijgastro.com/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Saudi Journal of Gastroenterology Volume 22 ; 2016 ; 22 ; http://www.saudijgastro.com/ ; ; >
+    au < finished ; manifest ; 2016 ; Saudi Journal of Gastroenterology Volume 22 ; 2016 ; 22 ; http://www.saudijgastro.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Saudi Journal of Gastroenterology Volume 23 ; 2017 ; 23 ; http://www.saudijgastro.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Saudi Journal of Gastroenterology Volume 24 ; 2018 ; 24 ; http://www.saudijgastro.com/ ; ; >
     au < finished ; crawling ; 2019 ; Saudi Journal of Gastroenterology Volume 25 ; 2019 ; 25 ; https://www.saudijgastro.com/ ; ; reingest4.clockss.org:8082 >
@@ -8057,7 +8057,7 @@
       au < finished ; frozen ; 2017 ; Nigerian Journal of Basic and Clinical Sciences Volume 14 ; 2017 ; 14 ; http://www.njbcs.net/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Nigerian Journal of Basic and Clinical Sciences Volume 15 ; 2018 ; 15 ; http://www.njbcs.net/ ; ; >
       au < finished ; crawling ; 2019 ; Nigerian Journal of Basic and Clinical Sciences Volume 16 ; 2019 ; 16 ; https://www.njbcs.net/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2020 ; Nigerian Journal of Basic and Clinical Sciences Volume 17 ; 2020 ; 17 ; https://www.njbcs.net/ ; ; >
+      au < finished ; manifest ; 2020 ; Nigerian Journal of Basic and Clinical Sciences Volume 17 ; 2020 ; 17 ; https://www.njbcs.net/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Nigerian Journal of Basic and Clinical Sciences Volume 18 ; 2021 ; 18 ; https://www.njbcs.net/ ; ; >
       au < expected ; exists ; 2022 ; Nigerian Journal of Basic and Clinical Sciences Volume 19 ; 2022 ; 19 ; https://www.njbcs.net/ ; ; >
 
@@ -8160,7 +8160,7 @@
       au < finished ; finished ; 2017 ; Nigerian Journal of Plastic Surgery Volume 13 ; 2017 ; 13 ; http://www.njps.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Nigerian Journal of Plastic Surgery Volume 14 ; 2018 ; 14 ; http://www.njps.org/ ; ; >
       au < finished ; crawling ; 2019 ; Nigerian Journal of Plastic Surgery Volume 15 ; 2019 ; 15 ; https://www.njps.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Nigerian Journal of Plastic Surgery Volume 16 ; 2020 ; 16 ; https://www.njps.org/ ; ; >
+      au < finished ; manifest ; 2020 ; Nigerian Journal of Plastic Surgery Volume 16 ; 2020 ; 16 ; https://www.njps.org/ ; ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2021 ; Nigerian Journal of Plastic Surgery Volume 17 ; 2021 ; 17 ; https://www.njps.org/ ; ; >
       au < expected ; exists ; 2022 ; Nigerian Journal of Plastic Surgery Volume 18 ; 2022 ; 18 ; https://www.njps.org/ ; ; >
 
@@ -8216,7 +8216,7 @@
       au < finished ; frozen ; 2017 ; Nigerian Postgraduate Medical Journal Volume 24 ; 2017 ; 24 ; http://www.npmj.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Nigerian Postgraduate Medical Journal Volume 25 ; 2018 ; 25 ; http://www.npmj.org/ ; ; >
       au < finished ; crawling ; 2019 ; Nigerian Postgraduate Medical Journal Volume 26 ; 2019 ; 26 ; https://www.npmj.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Nigerian Postgraduate Medical Journal Volume 27 ; 2020 ; 27 ; https://www.npmj.org/ ; ; >
+      au < finished ; manifest ; 2020 ; Nigerian Postgraduate Medical Journal Volume 27 ; 2020 ; 27 ; https://www.npmj.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Nigerian Postgraduate Medical Journal Volume 28 ; 2021 ; 28 ; https://www.npmj.org/ ; ; >
       au < manifest ; exists ; 2022 ; Nigerian Postgraduate Medical Journal Volume 29 ; 2022 ; 29 ; https://www.npmj.org/ ; ; >
 
@@ -8400,7 +8400,7 @@
       au < finished ; finished ; 2017 ; Saudi Endodontic Journal Volume 7 ; 2017 ; 7 ; http://www.saudiendodj.com/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Saudi Endodontic Journal Volume 8 ; 2018 ; 8 ; http://www.saudiendodj.com/ ; ; >
       au < finished ; crawling ; 2019 ; Saudi Endodontic Journal Volume 9 ; 2019 ; 9 ; https://www.saudiendodj.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Saudi Endodontic Journal Volume 10 ; 2020 ; 10 ; https://www.saudiendodj.com/ ; ; >
+      au < finished ; manifest ; 2020 ; Saudi Endodontic Journal Volume 10 ; 2020 ; 10 ; https://www.saudiendodj.com/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Saudi Endodontic Journal Volume 11 ; 2021 ; 11 ; https://www.saudiendodj.com/ ; ; >
       au < manifest ; exists ; 2022 ; Saudi Endodontic Journal Volume 12 ; 2022 ; 12 ; https://www.saudiendodj.com/ ; ; >
 
@@ -8446,7 +8446,7 @@
       au < finished ; finished ; 2017 ; Saudi Journal of Laparoscopy Volume 2 ; 2017 ; 2 ; http://www.saudijl.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2018 ; Saudi Journal of Laparoscopy Volume 3 ; 2018 ; 3 ; http://www.saudijl.org/ ; ; >
       au < finished ; crawling ; 2019 ; Saudi Journal of Laparoscopy Volume 4 ; 2019 ; 4 ; https://www.saudijl.org/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2020 ; Saudi Journal of Laparoscopy Volume 5 ; 2020 ; 5 ; https://www.saudijl.org/ ; ; >
+      au < finished ; manifest ; 2020 ; Saudi Journal of Laparoscopy Volume 5 ; 2020 ; 5 ; https://www.saudijl.org/ ; ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2021 ; Saudi Journal of Laparoscopy Volume 6 ; 2021 ; 6 ; https://www.saudijl.org/ ; ; >
       au < expected ; exists ; 2022 ; Saudi Journal of Laparoscopy Volume 7 ; 2022 ; 7 ; https://www.saudijl.org/ ; ; >
 
@@ -8512,7 +8512,7 @@
       au < finished ; frozen ; 2017 ; Saudi Journal of Oral Sciences Volume 4 ; 2017 ; 4 ; http://www.saudijos.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; Saudi Journal of Oral Sciences Volume 5 ; 2018 ; 5 ; http://www.saudijos.org/ ; ; >
       au < finished ; crawling ; 2019 ; Saudi Journal of Oral Sciences Volume 6 ; 2019 ; 6 ; https://www.saudijos.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Saudi Journal of Oral Sciences Volume 7 ; 2020 ; 7 ; https://www.saudijos.org/ ; ; >
+      au < finished ; manifest ; 2020 ; Saudi Journal of Oral Sciences Volume 7 ; 2020 ; 7 ; https://www.saudijos.org/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Saudi Journal of Oral Sciences Volume 8 ; 2021 ; 8 ; https://www.saudijos.org/ ; ; >
       au < expected ; exists ; 2022 ; Saudi Journal of Oral Sciences Volume 9 ; 2022 ; 9 ; https://www.saudijos.org/ ; ; >
 
@@ -8578,7 +8578,7 @@
 
       au < finished ; finished ; 2014 ; Sifa Medical Journal Volume 1 ; 2014 ; 1 ; http://www.imjsu.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Sifa Medical Journal Volume 2 ; 2015 ; 2 ; http://www.imjsu.org/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Sifa Medical Journal Volume 3 ; 2016 ; 3 ; http://www.imjsu.org/ ; ; >
+      au < finished ; manifest ; 2016 ; Sifa Medical Journal Volume 3 ; 2016 ; 3 ; http://www.imjsu.org/ ; ; reingest4.clockss.org:8082 >
 
   }
 
@@ -8964,11 +8964,11 @@
       au < finished ; frozen ; 2013 ; Thyroid Research and Practice Volume 10 ; 2013 ; 10 ; http://www.thetrp.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; Thyroid Research and Practice Volume 11 ; 2014 ; 11 ; http://www.thetrp.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; Thyroid Research and Practice Volume 12 ; 2015 ; 12 ; http://www.thetrp.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Thyroid Research and Practice Volume 13 ; 2016 ; 13 ; http://www.thetrp.net/ ; ; >
+      au < finished ; manifest ; 2016 ; Thyroid Research and Practice Volume 13 ; 2016 ; 13 ; http://www.thetrp.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Thyroid Research and Practice Volume 14 ; 2017 ; 14 ; http://www.thetrp.net/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Thyroid Research and Practice Volume 15 ; 2018 ; 15 ; http://www.thetrp.net/ ; ; >
       au < finished ; crawling ; 2019 ; Thyroid Research and Practice Volume 16 ; 2019 ; 16 ; https://www.thetrp.net/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Thyroid Research and Practice Volume 17 ; 2020 ; 17 ; https://www.thetrp.net/ ; ; >
+      au < finished ; manifest ; 2020 ; Thyroid Research and Practice Volume 17 ; 2020 ; 17 ; https://www.thetrp.net/ ; ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2021 ; Thyroid Research and Practice Volume 18 ; 2021 ; 18 ; https://www.thetrp.net/ ; ; >
       au < expected ; exists ; 2022 ; Thyroid Research and Practice Volume 19 ; 2022 ; 19 ; https://www.thetrp.net/ ; ; >
 
@@ -9081,7 +9081,7 @@
       au < finished ; finished ; 2017 ; West African Journal of Radiology Volume 24 ; 2017 ; 24 ; http://www.wajradiology.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2018 ; West African Journal of Radiology Volume 25 ; 2018 ; 25 ; http://www.wajradiology.org/ ; ; >
       au < finished ; crawling ; 2019 ; West African Journal of Radiology Volume 26 ; 2019 ; 26 ; https://www.wajradiology.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; West African Journal of Radiology Volume 27 ; 2020 ; 27 ; https://www.wajradiology.org/ ; ; >
+      au < finished ; manifest ; 2020 ; West African Journal of Radiology Volume 27 ; 2020 ; 27 ; https://www.wajradiology.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; West African Journal of Radiology Volume 28 ; 2021 ; 28 ; https://www.wajradiology.org/ ; ; >
       au < expected ; exists ; 2022 ; West African Journal of Radiology Volume 29 ; 2022 ; 29 ; https://www.wajradiology.org/ ; ; >
 
@@ -9104,7 +9104,7 @@
       au < finished ; finished ; 2017 ; Yoga Mimamsa Volume 49 ; 2017 ; 49 ; http://www.ym-kdham.in/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2018 ; Yoga Mimamsa Volume 50 ; 2018 ; 50 ; http://www.ym-kdham.in/ ; ; >
       au < finished ; crawling ; 2019 ; Yoga Mimamsa Volume 51 ; 2019 ; 51 ; https://www.ym-kdham.in/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Yoga Mimamsa Volume 52 ; 2020 ; 52 ; https://www.ym-kdham.in/ ; ; >
+      au < finished ; manifest ; 2020 ; Yoga Mimamsa Volume 52 ; 2020 ; 52 ; https://www.ym-kdham.in/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Yoga Mimamsa Volume 53 ; 2021 ; 53 ; https://www.ym-kdham.in/ ; ; >
       au < expected ; exists ; 2022 ; Yoga Mimamsa Volume 54 ; 2022 ; 54 ; https://www.ym-kdham.in/ ; ; >
 
@@ -9153,7 +9153,7 @@
       au < finished ; crawling ; 2017 ; Advances in Human Biology Volume 7 ; 2017 ; 7 ; http://www.aihbonline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Advances in Human Biology Volume 8 ; 2018 ; 8 ; http://www.aihbonline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Advances in Human Biology Volume 9 ; 2019 ; 9 ; https://www.aihbonline.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Advances in Human Biology Volume 10 ; 2020 ; 10 ; https://www.aihbonline.com/ ; ; >
+      au < finished ; manifest ; 2020 ; Advances in Human Biology Volume 10 ; 2020 ; 10 ; https://www.aihbonline.com/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Advances in Human Biology Volume 11 ; 2021 ; 11 ; https://www.aihbonline.com/ ; ; >
       au < manifest ; exists ; 2022 ; Advances in Human Biology Volume 12 ; 2022 ; 12 ; https://www.aihbonline.com/ ; ; >
 
@@ -9249,7 +9249,7 @@
       au < finished ; crawling ; 2017 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 2017 ; 1 ; http://www.aiaohns.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2018 ; 2 ; https://www.aiaohns.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 3 ; 2019 ; 3 ; https://www.aiaohns.in/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 4 ; 2020 ; 4 ; https://www.aiaohns.in/ ; ; >
+      au < finished ; manifest ; 2020 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 4 ; 2020 ; 4 ; https://www.aiaohns.in/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 5 ; 2021 ; 5 ; https://www.aiaohns.in/ ; ; >
       au < expected ; exists ; 2022 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 6 ; 2022 ; 6 ; https://www.aiaohns.in/ ; ; >
 
@@ -9542,7 +9542,7 @@
       au < finished ; crawling ; 2017 ; Clinical Dermatology Review Volume 1 ; 2017 ; 1 ; http://www.cdriadvlkn.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Clinical Dermatology Review Volume 2 ; 2018 ; 2 ; http://www.cdriadvlkn.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Clinical Dermatology Review Volume 3 ; 2019 ; 3 ; https://www.cdriadvlkn.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Clinical Dermatology Review Volume 4 ; 2020 ; 4 ; https://www.cdriadvlkn.org/ ; ; >
+      au < finished ; manifest ; 2020 ; Clinical Dermatology Review Volume 4 ; 2020 ; 4 ; https://www.cdriadvlkn.org/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Clinical Dermatology Review Volume 5 ; 2021 ; 5 ; https://www.cdriadvlkn.org/ ; ; >
       au < expected ; exists ; 2022 ; Clinical Dermatology Review Volume 6 ; 2022 ; 6 ; https://www.cdriadvlkn.org/ ; ; >
 
@@ -10378,7 +10378,7 @@
       au < finished ; crawling ; 2017 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 1 ; 2017 ; 1 ; https://www.jiaecho.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 2 ; 2018 ; 2 ; https://www.jiaecho.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 3 ; 2019 ; 3 ; https://www.jiaecho.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 4 ; 2020 ; 4 ; https://www.jiaecho.org/ ; ; >
+      au < finished ; manifest ; 2020 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 4 ; 2020 ; 4 ; https://www.jiaecho.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 5 ; 2021 ; 5 ; https://www.jiaecho.org/ ; ; >
       au < expected ; exists ; 2022 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 6 ; 2022 ; 6 ; https://www.jiaecho.org/ ; ; >
 
@@ -10485,7 +10485,7 @@
       au < finished ; crawling ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; https://www.jmedscindmc.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Journal of Medical Sciences Volume 38 ; 2018 ; 38 ; https://www.jmedscindmc.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Journal of Medical Sciences Volume 39 ; 2019 ; 39 ; https://www.jmedscindmc.com/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Journal of Medical Sciences Volume 40 ; 2020 ; 40 ; https://www.jmedscindmc.com/ ; ; >
+      au < finished ; manifest ; 2020 ; Journal of Medical Sciences Volume 40 ; 2020 ; 40 ; https://www.jmedscindmc.com/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Medical Sciences Volume 41 ; 2021 ; 41 ; https://www.jmedscindmc.com/ ; ; >
       au < expected ; exists ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ ; ; >
 
@@ -10614,7 +10614,7 @@
       au < finished ; crawling ; 2017 ; Journal of Patient Safety and Infection Control Volume 5 ; 2017 ; 5 ; https://www.jpsiconline.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; Journal of Patient Safety and Infection Control Volume 6 ; 2018 ; 6 ; https://www.jpsiconline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; Journal of Patient Safety and Infection Control Volume 7 ; 2019 ; 7 ; https://www.jpsiconline.com/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Journal of Patient Safety and Infection Control Volume 8 ; 2020 ; 8 ; https://www.jpsiconline.com/ ; ; >
+      au < finished ; manifest ; 2020 ; Journal of Patient Safety and Infection Control Volume 8 ; 2020 ; 8 ; https://www.jpsiconline.com/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Patient Safety and Infection Control Volume 9 ; 2021 ; 9 ; https://www.jpsiconline.com/ ; ; >
       au < expected ; exists ; 2022 ; Journal of Patient Safety and Infection Control Volume 10 ; 2022 ; 10 ; https://www.jpsiconline.com/ ; ; >
 
@@ -10720,7 +10720,7 @@
 
       au < finished ; crawling ; 2018 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 1 ; 2018 ; 1 ; https://www.jisprm.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 2 ; 2019 ; 2 ; https://www.jisprm.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2020 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 3 ; 2020 ; 3 ; https://www.jisprm.org/ ; ; >
+      au < finished ; manifest ; 2020 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 3 ; 2020 ; 3 ; https://www.jisprm.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 4 ; 2021 ; 4 ; https://www.jisprm.org/ ; ; >
       au < expected ; exists ; 2022 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 5 ; 2022 ; 5 ; https://www.jisprm.org/ ; ; >
 
@@ -10807,7 +10807,7 @@
       au < finished ; crawling ; 2017 ; Libyan Journal of Medical Sciences Volume 1 ; 2017 ; 1 ; https://www.ljmsonline.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Libyan Journal of Medical Sciences Volume 2 ; 2018 ; 2 ; https://www.ljmsonline.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Libyan Journal of Medical Sciences Volume 3 ; 2019 ; 3 ; https://www.ljmsonline.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020 ; Libyan Journal of Medical Sciences Volume 4 ; 2020 ; 4 ; https://www.ljmsonline.com/ ; ; >
+      au < finished ; manifest ; 2020 ; Libyan Journal of Medical Sciences Volume 4 ; 2020 ; 4 ; https://www.ljmsonline.com/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Libyan Journal of Medical Sciences Volume 5 ; 2021 ; 5 ; https://www.ljmsonline.com/ ; ; >
       au < expected ; exists ; 2022 ; Libyan Journal of Medical Sciences Volume 6 ; 2022 ; 6 ; https://www.ljmsonline.com/ ; ; >
 
