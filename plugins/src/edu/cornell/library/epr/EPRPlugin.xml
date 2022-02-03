@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development - humanities_project registry</string>
+    <string>ready - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>1000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
