@@ -198,6 +198,7 @@ public class MigrateContent extends LockssServlet {
 
   private void displayPage() throws IOException {
     Page page = newPage();
+    addReactJSLocations(page);
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
     page.add(makeForm());
