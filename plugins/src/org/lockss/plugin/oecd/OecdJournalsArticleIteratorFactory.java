@@ -76,10 +76,10 @@ public class OecdJournalsArticleIteratorFactory implements ArticleIteratorFactor
     //        jid, year, jid, year));
 
 
-    LANDING_REPLACEMENT = String.format("/%s/$1_$3-$2", topic);
-    RIS_REPLACEMENT = String.format("/%s/$1_$3-$2/cite/ris", topic);
-    BIB_REPLACEMENT = String.format("/%s/$1_$3-$2/cite/bib", topic);
-    ENDNOTE_REPLACEMENT = String.format("/%s/$1_$3-$2/cite/endnote", topic);
+    LANDING_REPLACEMENT = String.format("/%s/$1_$2-$3", topic);
+    RIS_REPLACEMENT = String.format("/%s/$1_$2-$3/cite/ris", topic);
+    BIB_REPLACEMENT = String.format("/%s/$1_$2-$3/cite/bib", topic);
+    ENDNOTE_REPLACEMENT = String.format("/%s/$1_$2-$3/cite/endnote", topic);
     PDF_REPLACEMENT = "/$1_$3.pdf?itemId=%2Fcontent%2Fpaper%2F$2-$3&mimeType=pdf";
 
     builder.setSpec(new SubTreeArticleIterator.Spec()
