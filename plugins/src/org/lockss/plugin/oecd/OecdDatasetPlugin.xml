@@ -1,0 +1,144 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.oecd.OecdDatasetsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>OECD Datasets Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.oecd.OecdParentPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"OECD Datasets Plugin, Base URL %s, Year %d", base_url, year</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <type>4</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^%s[^?]*\.(bmp|css|gif|ico|svg|eot|ttf|woff2?|jpe?g|js|png|tif?f)(\?.+)?$", base_url</string>
+            <string>1,"^https://(fonts|ajax)\.(googleapis|gstatic)\.com"</string>
+            <string>1,"^https://oecd-.+\.kxcdn\.com"</string>
+            <string>1,"^https://cdnjs\.cloudflare\.com"</string>
+            <string>1,"^https://cdn\.datatables\.net"</string>
+            <string>1,"^https://assets\.oecdcode\.org"</string>
+            <!-- article-url
+            https://www.oecd-ilibrary.org/social-issues-migration-health/data/oecd-social-and-welfare-statistics/benefits-and-wages-hours-of-work-needed-to-escape-poverty-for-workless-families-edition-2019_8bed8923-en
+            -->
+            <!-- citation dialogue
+            /content/publication/jbma-v2015-1-en/citation -->
+            <string>1,"^%scontent/.*/citation", base_url</string>
+            <string>1,"^%s[^/]+/data/.*", base_url</string>
+            <!--  <article-url>/cite/ris  <article-url>/cite/endnote  <article-url>/cite/txt  <article-url>/cite/bib -->
+            <string>1,"^%s[^/]+/data/.*/cite/(ris|endnote|txt|bib)$", base_url</string>
+            <!-- https://www.oecd-ilibrary.org/benefits-and-wages-hours-of-work-needed-to-escape-poverty-for-workless-families-edition-2019_8bed8923-en.zip?itemId=%2Fcontent%2Fdata%2F8bed8923-en&containerItemId=%2Fcontent%2Fcollection%2Fsocwel-data-en -->
+            <string>1,"^%s.*\.zip\?itemId=.*data.*", base_url</string>
+            <!-- https://oecd-16a7.kxcdn.com/ff8ec280-en.zip?token=6ewO3Wxpl1lX_oOJUOhS7g&expire=1643842988&redirect=http://www.oecd-ilibrary.org/content/collection/trsprt-data-en -->
+        </list>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!-- https://www.oecd-ilibrary.org/lockss/datasets?year=2019 -->
+        <string>"%slockss/datasets?year=%d", base_url, year</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!-- landing and zips -->
+            <string>"^%s.*(/data/|\.zip\?itemId=%%2Fcontent%%2Fdata%%2F.*&amp;containerItemId=).*", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.oecd.OecdDatasetsArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.oecd.OecdDatasetsArticleIteratorFactory</string>
+    </entry>
+</map>
