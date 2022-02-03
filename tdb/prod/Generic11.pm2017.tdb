@@ -1,23 +1,31 @@
 {
   publisher <
-    name = PUBLISHER_NAME
+    name = Association for the Study of African American Life and History
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:PUB_ID
+  #publisher_id:429
 
     {
     title <
       name = Black History Bulletin ;
-      issn = ISSN ;
-      eissn = EISSN
+      issn = 1938-6656 ;
+      eissn = 2153-4810
 
     >
 
       attr[journal_id] = 837
 
+      au < manifest ; 2013 ; Black History Bulletin Volume 76 [2013] ; 16155 >
+      au < manifest ; 2014 ; Black History Bulletin Volume 77 [2014] ; 16156 >
+      au < manifest ; 2015 ; Black History Bulletin Volume 78 [2015] ; 16157 >
+      au < manifest ; 2016 ; Black History Bulletin Volume 79 [2016] ; 16158 >
+      au < manifest ; 2017 ; Black History Bulletin Volume 80 [2017] ; 16159 >
+      au < manifest ; 2018 ; Black History Bulletin Volume 81 [2018] ; 16160 >
+      au < manifest ; 2019 ; Black History Bulletin Volume 82 [2019] ; 16161 >
+      au < manifest ; 2020 ; Black History Bulletin Volume 83 [2020] ; 16162 >
       au < manifest ; 2021 ; Black History Bulletin Volume 84 [2021] ; 16616 >
 
     }
