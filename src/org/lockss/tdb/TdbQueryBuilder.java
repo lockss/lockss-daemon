@@ -652,9 +652,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   public static final List<String> NON_ALLIANCE_PLUGINS =
-      AppUtil.ul("edu.columbia.plugin.JiwsPlugin",
-                 "edu.cornell.library.epr.EPRPlugin2001",
-                 "edu.cornell.library.epr.EPRPlugin2002On",
+      AppUtil.ul("edu.columbia.plugin.JiwsPlugin", // humanities_project
+                 "edu.cornell.library.epr.EPRPlugin2001", // humanities_project
+                 "edu.cornell.library.epr.EPRPlugin2002On", // humanities_project
+                 "edu.cornell.library.epr.EPRPlugin", // humanities_project
                  "edu.cornell.library.jbe.JBEPlugin",
                  "edu.fcla.plugin.arkivoc.ArkivocPlugin",
                  "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin",
