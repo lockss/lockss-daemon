@@ -1352,7 +1352,7 @@ public abstract class LockssServlet extends HttpServlet
 
   /**
    * Adds the required jQuery JavaScript file locations to the page header.
-   * 
+   *
    * @param page
    *          A Page representing the HTML page.
    */
@@ -1362,6 +1362,17 @@ public abstract class LockssServlet extends HttpServlet
     addJavaScriptLocation(page, "js/auDetails-new.js");
     addJavaScriptLocation(page, "js/jquery.tristate.js");
     addJavaScriptLocation(page, "js/jquery.shiftclick.js");
+  }
+
+  /**
+   * Adds the required ReactJS JavaScript file locations to the page header.
+   *
+   * @param page
+   *          A Page representing the HTML page.
+   */
+  protected void addReactJSLocations(Page page) {
+    addJavaScriptLocation(page, "js/react-17.0.2.min.js");
+    addJavaScriptLocation(page, "js/react-dom-17.0.2.min.js");
   }
 
   /**
