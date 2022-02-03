@@ -33,19 +33,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - humanities_project registry</string>
+    <string>ready - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.fcla.plugin.arkivoc.ArkivocPlugin</string>
+    <string>edu.fcla.plugin.arkivoc.Arkivoc2022Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Arkivoc Plugin (Legacy)</string>
+    <string>Arkivoc Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -72,20 +72,23 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Arkivoc Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
+    <string>"Arkivoc Plugin, Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sark/journal/%d/arkivoc_articles_%d.asp", base_url, year, year</string>
+    <string>"%sarkivoc-journal/browse-arkivoc/%d/", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sarkivoc-journal/", base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sark/journal/%d/arkivoc_articles_%d\.asp", base_url, year, year</string>
-      <string>1,"^%sark/journal/%d.*\.(pdf|asp|jpg|gif)$", base_url, year</string>
-      <string>1,"^%simages/", base_url</string>
-      <string>1,"^%sark/imiges/", base_url</string>
+      <string>1,"^%s[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", base_url</string>
+      <string>1,"^%sarkivoc-journal/browse-arkivoc/%d/", base_url, year</string>
+      <string>1,"^%sarkivoc-journal/(browse-arkivoc/)?$", base_url</string>
+      <string>1,"^%s(get-file|get-ris)/[0-9]+/", base_url, year</string>
     </list>
   </entry>
   <entry>

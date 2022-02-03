@@ -1,0 +1,69 @@
+{
+
+  publisher <
+    name = ARKAT USA
+  >
+  
+  {
+    
+    title <
+      name = Arkivoc ;
+      issn = 1551-7004 ;
+      eissn = 1551-7012 ;
+      issnl = 1551-7004
+
+    >  
+
+    rights = openaccess  
+
+    {
+
+      plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin
+      implicit < status ; year ; volume ; name ; param[base_url] ; param[year] >
+
+      au < superseded ; 2000 ; 2000 ; Arkivoc Volume 2000 [superseded] ; http://www.arkat-usa.org/ ; 2000 >
+      au < superseded ; 2001 ; 2001 ; Arkivoc Volume 2001 [superseded] ; http://www.arkat-usa.org/ ; 2001 >
+      au < superseded ; 2002 ; 2002 ; Arkivoc Volume 2002 [superseded] ; http://www.arkat-usa.org/ ; 2002 >
+      au < superseded ; 2003 ; 2003 ; Arkivoc Volume 2003 [superseded] ; http://www.arkat-usa.org/ ; 2003 >
+      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 1] ; http://www.arkat-usa.org/ark/arkivoc/ ; 2004 >
+      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 2] ; http://www.arkat-usa.org/ark/journal/ ; 2004 >
+      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 3] ; http://www.arkat-usa.org/ ; 2004 >
+      au < superseded ; 2005 ; 2005 ; Arkivoc Volume 2005 [superseded] ; http://www.arkat-usa.org/ ; 2005 >
+    
+    }
+    
+    {
+    
+      plugin = edu.fcla.plugin.arkivoc.Arkivoc2022Plugin
+      param[base_url] = https://www.arkat-usa.org/
+      implicit < status ; year ; volume ; name ; param[year] >
+      
+      au < ready ; 2000 ; 2000 ; Arkivoc Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 2001 ; Arkivoc Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 2002 ; Arkivoc Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 2003 ; Arkivoc Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 2004 ; Arkivoc Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 2005 ; Arkivoc Volume 2005 ; 2005 > # File size (112948) differs from Content-Length header (114312): https://www.arkat-usa.org/get-file/18997/, File size (167820) differs from Content-Length header (172877): https://www.arkat-usa.org/get-file/19919/
+      au < ready ; 2006 ; 2006 ; Arkivoc Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 2007 ; Arkivoc Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 2008 ; Arkivoc Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 2009 ; Arkivoc Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 2010 ; Arkivoc Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 2011 ; Arkivoc Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 2012 ; Arkivoc Volume 2012 ; 2012 >
+      au < ready ; 2013 ; 2013 ; Arkivoc Volume 2013 ; 2013 >
+      au < ready ; 2014 ; 2014 ; Arkivoc Volume 2014 ; 2014 >
+      au < ready ; 2015 ; 2015 ; Arkivoc Volume 2015 ; 2015 >
+      au < ready ; 2016 ; 2016 ; Arkivoc Volume 2016 ; 2016 >
+      au < ready ; 2017 ; 2017 ; Arkivoc Volume 2017 ; 2017 >
+      au < ready ; 2018 ; 2018 ; Arkivoc Volume 2018 ; 2018 >
+      au < ready ; 2019 ; 2019 ; Arkivoc Volume 2019 ; 2019 >
+      au < ready ; 2020 ; 2020 ; Arkivoc Volume 2020 ; 2020 >
+      au < ready ; 2021 ; 2021 ; Arkivoc Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 2022 ; Arkivoc Volume 2022 ; 2022 >
+    
+    }
+      
+  }
+  
+}
