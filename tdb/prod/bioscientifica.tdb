@@ -29,6 +29,28 @@
 
   }
   
+  {
+
+    title <
+      name = EFORT Open Reviews ;
+      issn = 2396-7544 ;
+      eissn = 2058-5241 ;
+      issnl = 2396-7544
+    >
+
+    param[base_url] = https://eor.bioscientifica.com/
+    #Moved from Atypon/British Ed Soc BJS
+
+    au < doNotProcess ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+    au < doNotProcess ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
+    au < doNotProcess ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
+    au < doNotProcess ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
+    au < doNotProcess ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
+    au < exists ; 2021 ; EFORT Open Reviews Volume 6 ; 6 >
+    au < exists ; 2022 ; EFORT Open Reviews Volume 7 ; 7 >
+
+  }
+
 {
     title <
       name = Endocrine Connections ;
