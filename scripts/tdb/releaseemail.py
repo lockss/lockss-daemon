@@ -28,6 +28,7 @@ NON_ALLIANCE = set([ \
                  "edu.fcla.plugin.arkivoc.ArkivocPlugin",
                  "edu.fcla.plugin.arkivoc.Arkivoc2022Plugin",
                  "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin",
+                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022Plugin",
                  "edu.harvard.plugin.jrs.JRSPlugin",
                  "edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin",
                  "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin",

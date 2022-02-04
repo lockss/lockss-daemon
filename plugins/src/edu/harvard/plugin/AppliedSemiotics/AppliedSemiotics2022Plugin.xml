@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - humanities_project registry</string>
+    <string>ready - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Applied Semiotics / S&#x00e9;miotique Appliqu&#x00e9;e Plugin (Legacy)</string>
+    <string>Applied Semiotics / S&#x00e9;miotique Appliqu&#x00e9;e Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -68,33 +68,29 @@ POSSIBILITY OF SUCH DAMAGE.
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>issue_no.</key><!-- sic -->
-        <displayName>Issue No. (e.g. 1, 6-7)</displayName>
-        <description></description>
-        <type>1</type>
-        <size>10</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Applied Semiotics / S&#x00e9;miotique Appliqu&#x00e9;e Plugin (Legacy), Base URL %s, Issue Directory %s, Issue Number %s", base_url, issue_dir, issue_no.</string>
+    <string>"Applied Semiotics / S&#x00e9;miotique Appliqu&#x00e9;e Plugin, Base URL %s, Issue Directory %s", base_url, issue_dir</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sASSA-%s/index-n%s.html", base_url, issue_dir, issue_no.</string>
+    <string>"%s%s/", base_url, issue_dir</string>
+  </entry>
+  <!-- one of the surviving original ones -->
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sASSA-No1/index-n1.html", base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sASSA-%s/index-n%s.html", base_url, issue_dir, issue_no.</string>
-      <string>1,"^%sASSA-%s/", base_url, issue_dir</string>
-      <string>2,"^%sASSA-.*/", base_url</string>
       <string>1,"^%s[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", base_url</string>
+      <string>1,"^%sASSA-No1/index-n1\.html$", base_url</string>
+      <string>1,"^%s%s/", base_url, issue_dir</string>
+      <string>2,"^%sASSA-.*/", base_url</string>
+      <string>1,"^https?://www\.chass\.utoronto\.ca/french%s", base_url_path</string>
     </list>
   </entry>
   <entry>
@@ -104,5 +100,15 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022UrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>www\.chass\.utoronto\.ca</string>
+    </list>
   </entry>
 </map>

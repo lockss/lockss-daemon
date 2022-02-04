@@ -1,0 +1,75 @@
+{
+
+  publisher <
+    name = University of Toronto Department of French  
+  >
+  
+  {
+  
+    title <
+      name = Applied Semiotics / Sémiotique Appliquée ;
+      issn = 1204-6140 ;
+      issnl = 1204-6140
+    >
+    
+    rights = openaccess
+    
+    {
+
+      plugin = edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin
+      param[base_url] = http://www.chass.utoronto.ca/french/as-sa/
+      # Ancient plugin uses unusual param name "issue_no." (with dot)
+      implicit < status ; year ; name ; volume ; param[issue_dir] ; param[issue_no.] >
+
+      au < superseded ; 1996 ; Applied Semiotics / Sémiotique Appliquée Volume 1 [superseded]; 1 ; No1 ; 1 >
+      au < superseded ; 1996 ; Applied Semiotics / Sémiotique Appliquée Volume 2 [superseded]; 2 ; No2 ; 2 >
+      au < superseded ; 1997 ; Applied Semiotics / Sémiotique Appliquée Volume 3 [superseded]; 3 ; No3 ; 3 >
+      au < superseded ; 1997 ; Applied Semiotics / Sémiotique Appliquée Volume 4 [superseded]; 4 ; No4 ; 4 >
+      au < superseded ; 1998 ; Applied Semiotics / Sémiotique Appliquée Volume 5 [superseded]; 5 ; No5 ; 5 >
+      au < superseded ; 1999 ; Applied Semiotics / Sémiotique Appliquée Volume 6-7 [superseded] ; 6-7 ; 6-7 ; 6-7 >
+      au < superseded ; 1999 ; Applied Semiotics / Sémiotique Appliquée Volume 8 [superseded] ; 8 ; No8 ; 8 >
+      au < superseded ; 2000 ; Applied Semiotics / Sémiotique Appliquée Volume 9 [superseded] ; 9 ; No9 ; 9 >
+      au < superseded ; 2000-2001 ; Applied Semiotics / Sémiotique Appliquée Volume 10 [superseded] ; 10 ; No10 ; 10 >
+      au < superseded ; 2002 ; Applied Semiotics / Sémiotique Appliquée Volume 11-12 [superseded 1] ; 11-12 ; No11-12 ; 11-12 >
+      au < superseded ; 2002 ; Applied Semiotics / Sémiotique Appliquée Volume 11-12 [superseded 2] ; 11-12 ; 11-12 ; 11-12 >
+      au < superseded ; 2003 ; Applied Semiotics / Sémiotique Appliquée Volume 13 [superseded] ; 13 ; No13 ; 13 >
+      au < superseded ; 2004 ; Applied Semiotics / Sémiotique Appliquée Volume 14 [superseded] ; 14 ; No14 ; 14 >
+
+    }
+  
+    {
+
+      plugin = edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022Plugin
+      param[base_url] = http://french.chass.utoronto.ca/as-sa/
+      implicit < status ; year ; name ; volume ; param[issue_dir] >
+
+      au < ready ; 1996 ; Applied Semiotics / Sémiotique Appliquée Volume 1 ; 1 ; ASSA-No1 >
+      au < ready ; 1996 ; Applied Semiotics / Sémiotique Appliquée Volume 2 ; 2 ; ASSA-No2 >
+      au < ready ; 1997 ; Applied Semiotics / Sémiotique Appliquée Volume 3 ; 3 ; ASSA-No3 >
+      au < ready ; 1997 ; Applied Semiotics / Sémiotique Appliquée Volume 4 ; 4 ; ASSA-No4 >
+      au < ready ; 1998 ; Applied Semiotics / Sémiotique Appliquée Volume 5 ; 5 ; ASSA-No5 >
+      au < ready ; 1999 ; Applied Semiotics / Sémiotique Appliquée Volume 6-7 ; 6-7 ; ASSA-6-7 >
+      au < ready ; 1999 ; Applied Semiotics / Sémiotique Appliquée Volume 8 ; 8 ; ASSA-No8 >
+      au < ready ; 2000 ; Applied Semiotics / Sémiotique Appliquée Volume 9 ; 9 ; ASSA-No9 >
+      au < ready ; 2000-2001 ; Applied Semiotics / Sémiotique Appliquée Volume 10 ; 10 ; ASSA-No10 >
+      au < ready ; 2002 ; Applied Semiotics / Sémiotique Appliquée Volume 11-12 ; 11-12 ; ASSA-11-12 >
+      au < ready ; 2003 ; Applied Semiotics / Sémiotique Appliquée Volume 13 ; 13 ; ASSA-No13 >
+      au < ready ; 2004 ; Applied Semiotics / Sémiotique Appliquée Volume 14 ; 14 ; ASSA-No14 >
+      au < ready ; 2005 ; Applied Semiotics / Sémiotique Appliquée Volume 15 ; 15 ; ASSA-No15 >
+      au < ready ; 2005 ; Applied Semiotics / Sémiotique Appliquée Volume 16 ; 16 ; ASSA-No16 >
+      au < ready ; 2006 ; Applied Semiotics / Sémiotique Appliquée Volume 17 ; 17 ; ASSA-No17 >
+      au < ready ; 2006 ; Applied Semiotics / Sémiotique Appliquée Volume 18 ; 18 ; ASSA-No18 >
+      au < ready ; 2007 ; Applied Semiotics / Sémiotique Appliquée Volume 19 ; 19 ; ASSA-No19 >
+      au < ready ; 2008 ; Applied Semiotics / Sémiotique Appliquée Volume 20 ; 20 ; ASSA-No20 >
+      au < ready ; 2008 ; Applied Semiotics / Sémiotique Appliquée Volume 21 ; 21 ; ASSA-No21 >
+      au < ready ; 2009 ; Applied Semiotics / Sémiotique Appliquée Volume 22 ; 22 ; ASSA-No22 >
+      au < ready ; 2009 ; Applied Semiotics / Sémiotique Appliquée Volume 23 ; 23 ; ASSA-No23 >
+      au < ready ; 2010 ; Applied Semiotics / Sémiotique Appliquée Volume 24 ; 24 ; ASSA-No24 >
+      au < ready ; 2010 ; Applied Semiotics / Sémiotique Appliquée Volume 25 ; 25 ; ASSA-No25 >
+      au < ready ; 2018 ; Applied Semiotics / Sémiotique Appliquée Volume 26 ; 26 ; ASSA-No26 >
+    
+    }
+    
+  }
+  
+}
