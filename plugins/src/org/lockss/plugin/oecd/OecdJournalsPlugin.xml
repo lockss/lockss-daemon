@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD Journals Plugin, Base URL %s, Journal ID %s, Topic %s, ISSN %d, Year %d", base_url, journal_id, topic, journal_issn, year</string>
+        <string>"OECD Journals Plugin, Base URL %s, Journal ID %s, Topic %s, ISSN %s, Year %d", base_url, journal_id, topic, journal_issn, year</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
