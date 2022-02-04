@@ -156,12 +156,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>bam\.eu01\.nr-data\.net</string>
     </list>
   </entry>
-  <!--
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.cloudpublish.CloudPublishUrlConsumerFactory</string>
-  </entry>
-  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlHashFilterFactory</string>
@@ -186,5 +180,9 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>application/octet-stream_filter_factory</string>
+    <string>org.lockss.plugin.cloudpublish.CloudpublishOctetStreamFilterFactory</string>
   </entry>
 </map>
