@@ -46,6 +46,7 @@ import java.io.InputStream;
 public class CloudPublishHtmlHashFilterFactory implements FilterFactory {
 
   static NodeFilter[] excludeFilters = new NodeFilter[] {
+      HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("header"),
       HtmlNodeFilters.tag("footer"),
       HtmlNodeFilters.tag("nav"),
@@ -53,7 +54,15 @@ public class CloudPublishHtmlHashFilterFactory implements FilterFactory {
       //HtmlNodeFilters.tagWithAttribute("nav", "role", "navigation"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "journal-full-text"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "journal-references"),
-      //HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^www\\.", true),
+
+      HtmlNodeFilters.tagWithAttribute("div", "id", "item-access-id"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "auth-token"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "auth-token-timestamp"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "print-info"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", ""),
+      HtmlNodeFilters.tagWithAttribute("div", "id", ""),
+      HtmlNodeFilters.tagWithAttribute("div", "id", ""),
+      HtmlNodeFilters.tagWithAttribute("div", "id", ""),
   };
 
 
