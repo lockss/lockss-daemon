@@ -115,6 +115,12 @@ public class V2AuMover {
   public static final int DEFAULT_MAX_REQUESTS = 50;
 
   /**
+   * Max number of simultaneous requests - default 50.
+   */
+  public static final String PARAM_MAX_REQUESTS_PER_HOST= PREFIX + "max_requests_per_host";
+  public static final int DEFAULT_MAX_REQUESTS_PER_HOST = 20;
+
+  /**
    * The V2 collection to migrate into - default lockss
    */
   public static final String PARAM_V2_COLLECTION = PREFIX + "collection";
@@ -244,10 +250,15 @@ public class V2AuMover {
   private String cfgAccessUrl = null;
   // Access information for the V2 Rest Repository
   private String repoAccessUrl = null;
+  /** the maximum allowed requests across all hosts */
   private int maxRequests;
+   /** The maximu requests allowed per host */
+  private int maxRequestsPerHost;
 
   // timeouts
+  /** the time to wait fora a connection before timing out */
   private final long connectTimeout;
+  /** the time to wait for read/write before timing out */
   private final long readTimeout;
 
   // timer
@@ -447,6 +458,7 @@ public class V2AuMover {
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST, DEFAULT_DEBUG_REPO_REQUEST);
     debugConfigReq = config.getBoolean(DEBUG_CONFIG_REQUEST, DEFAULT_DEBUG_CONFIG_REQUEST);
     maxRequests = config.getInt(PARAM_MAX_REQUESTS, DEFAULT_MAX_REQUESTS);
+    maxRequestsPerHost=config.getInt(PARAM_MAX_REQUESTS_PER_HOST, DEFAULT_MAX_REQUESTS_PER_HOST);
     hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
 
     if (host != null) {
@@ -498,6 +510,7 @@ public class V2AuMover {
       repoClient.addInterceptor(new RetryErrorInterceptor());
       dispatcher = repoClient.getHttpClient().dispatcher();
       dispatcher.setMaxRequests(maxRequests);
+      dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
     } catch (MalformedURLException mue) {
       errorList.add("Error parsing REST Configuration Service URL: " + mue.getMessage());
       throw new IllegalArgumentException(
@@ -1200,8 +1213,8 @@ public class V2AuMover {
         // we've run out of retries...
         if (errCode == 401 || errCode == 403 || errCode >= 500) {
           terminated = true;
-          String err = "Au Mover is unable to continue:" + errCode + " - " + response.message();
-          throw new IOException(err);
+          String msg =  errCode + " - " + response.message()  + ": " + response.body();
+          throw new IOException(msg);
         }
       }
       // last try should proceed as is
