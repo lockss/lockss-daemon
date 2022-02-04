@@ -77,6 +77,7 @@ public class MigrateContent extends LockssServlet {
   public static final List<String> DEFAULT_AU_SELECT_FILTER=ListUtil.fromArray(new String[] {".*"});
 
   // paramdoc only
+  static final String KEY_OUTPUT = "output";
   static final String KEY_ACTION = "action";
   static final String KEY_MSG = "msg";
   static final String KEY_AUID = "auid";
@@ -130,6 +131,22 @@ public class MigrateContent extends LockssServlet {
 
   public void lockssHandleRequest() throws IOException {
     initParams();
+
+    // TODO: This is just a placeholder - replace this with actual code
+    String output = getParameter(KEY_OUTPUT);
+    if (!StringUtil.isNullString(output)) {
+      resp.setStatus(200);
+      PrintWriter wrtr = resp.getWriter();
+      resp.setContentType("application/json");
+      Instant n = Instant.now();
+      int progress = ThreadLocalRandom.current().nextInt(0, 100);
+      wrtr.println("{" +
+          "\"status\": \"hello world "+ n.toString() +" \", " +
+          "\"running\": true," +
+          "\"progress\": \""+progress+"%\"}");
+      return;
+    }
+
     String action = getParameter(KEY_ACTION);
 
     if (!StringUtil.isNullString(action)) {
