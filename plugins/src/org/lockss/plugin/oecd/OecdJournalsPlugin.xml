@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD Journals Plugin, Base URL %s, Journal ID %s, Topic %s, ISSN %s, Year %d", base_url, journal_id, topic, journal_issn, year</string>
+        <string>"OECD Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -98,6 +98,14 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <type>4</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
                 <key>journal_dir</key>
                 <displayName>Journal Directory</displayName>
                 <description>Journal Name separated by dashes</description>
@@ -112,14 +120,6 @@ POSSIBILITY OF SUCH DAMAGE.
                 <description>Topic of journal</description>
                 <type>1</type>
                 <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>year</key>
-                <displayName>Year</displayName>
-                <type>4</type>
-                <size>4</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>

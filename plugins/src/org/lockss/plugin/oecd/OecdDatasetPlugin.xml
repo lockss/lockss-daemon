@@ -77,28 +77,6 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"OECD Datasets Plugin, Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
-        <string>plugin_config_props</string>
-        <list>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>base_url</key>
-                <displayName>Base URL</displayName>
-                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-                <type>3</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>year</key>
-                <displayName>Year</displayName>
-                <type>4</type>
-                <size>4</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-        </list>
-    </entry>
-    <entry>
         <string>au_crawlrules</string>
         <list>
             <string>1,"^%s[^?]*\.(bmp|css|gif|ico|svg|eot|ttf|woff2?|jpe?g|js|png|tif?f)(\?.+)?$", base_url</string>
