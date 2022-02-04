@@ -45,21 +45,21 @@ public class TestV2AuMover extends LockssTestCase {
   String[] reportLines = {
       "AU Name: au1",
       "AU ID: au1",
-      "urlsMoved: 10  artifactsMoved: 10  contentBytesMoved: 900  contentByteRate: 3(b/ms)  totalBytesMoved: 1000  totalByteRate: 3(b/ms)  errors: 0  totalRuntime: 300ms",
+      "urlsMoved: 10  artifactsMoved: 10  contentBytesMoved: 900  totalBytesMoved: 1000  byteRate: 2(kb/s)  errors: 0  totalRuntime: 300ms",
       "",
       "AU Name: au2",
       "AU ID: au2",
-      "urlsMoved: 20  artifactsMoved: 33  contentBytesMoved: 2800  contentByteRate: 1(b/ms)  totalBytesMoved: 3000  totalByteRate: 2(b/ms)  errors: 1  totalRuntime: 1500ms",
+      "urlsMoved: 3517  artifactsMoved: 35723  contentBytesMoved: 17261845523  totalBytesMoved: 17307972727  byteRate: 627(kb/s)  errors: 1  totalRuntime: 7h28m34s",
       " cu2 Attempt to move artifact failed.",
       "",
       "AU Name: au3",
       "AU ID: au3",
-      "urlsMoved: 4000  artifactsMoved: 4300  contentBytesMoved: 99031  contentByteRate: 4(b/ms)  totalBytesMoved: 100000  totalByteRate: 5(b/ms)  errors: 3  totalRuntime: 20s",
+      "urlsMoved: 11  artifactsMoved: 22  contentBytesMoved: 1626829  totalBytesMoved: 1661366  byteRate: 399(kb/s)  errors: 3  totalRuntime: 4054ms",
       " cu1: Attempt to move artifact failed.",
       " cu5: Attempt to commit artifact failed.",
       " cu80: Attempt to commit artifact failed.",
       "",
-      "AusMoved: 3  urlsMoved: 4030  artifactsMoved: 4343  contentBytesMoved: 102731  contentByteRate: 4(b/ms)  totalBytesMoved: 104000  totalByteRate: 4(b/ms)  errors: 4  totalRuntime: 21s"
+      "AusMoved: 3  urlsMoved: 3538  artifactsMoved: 35755  contentBytesMoved: 17263473252  totalBytesMoved: 17309635093  byteRate: 627(kb/s)  errors: 4  totalRuntime: 7h28m38s"
   };
 
   public void setUp() throws Exception {
@@ -147,13 +147,13 @@ public class TestV2AuMover extends LockssTestCase {
     addAu("au1", 10,10,1000, 900, 300, 0, errs);
     auMover.updateReport("au1");
     errs.add("cu2 Attempt to move artifact failed.");
-    addAu("au2", 20,33, 3000, 2800,1500,1, errs);
+    addAu("au2", 3517,35723, 17307972727L, 17261845523L,26914000,1, errs);
     auMover.updateReport("au2");
     errs.clear();
     errs.add("cu1: Attempt to move artifact failed.");
     errs.add("cu5: Attempt to commit artifact failed.");
     errs.add("cu80: Attempt to commit artifact failed.");
-    addAu("au3",4000,4300,100000,99031, 20000, 3, errs);
+    addAu("au3",11,22,1661366,1626829,  4054, 3, errs);
     auMover.updateReport("au3");
     auMover.closeReport();
     Path myPath = auMover.getReportFile().toPath();

@@ -112,13 +112,8 @@ public class V2AuMover {
    * Max number of simultaneous requests - default 50.
     */
   public static final String PARAM_MAX_REQUESTS = PREFIX + "max_requests";
-  public static final int DEFAULT_MAX_REQUESTS = 50;
+  public static final int DEFAULT_MAX_REQUESTS = 20;
 
-  /**
-   * Max number of simultaneous requests - default 50.
-   */
-  public static final String PARAM_MAX_REQUESTS_PER_HOST= PREFIX + "max_requests_per_host";
-  public static final int DEFAULT_MAX_REQUESTS_PER_HOST = 20;
 
   /**
    * The V2 collection to migrate into - default lockss
@@ -252,8 +247,6 @@ public class V2AuMover {
   private String repoAccessUrl = null;
   /** the maximum allowed requests across all hosts */
   private int maxRequests;
-   /** The maximu requests allowed per host */
-  private int maxRequestsPerHost;
 
   // timeouts
   /** the time to wait fora a connection before timing out */
@@ -458,7 +451,6 @@ public class V2AuMover {
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST, DEFAULT_DEBUG_REPO_REQUEST);
     debugConfigReq = config.getBoolean(DEBUG_CONFIG_REQUEST, DEFAULT_DEBUG_CONFIG_REQUEST);
     maxRequests = config.getInt(PARAM_MAX_REQUESTS, DEFAULT_MAX_REQUESTS);
-    maxRequestsPerHost=config.getInt(PARAM_MAX_REQUESTS_PER_HOST, DEFAULT_MAX_REQUESTS_PER_HOST);
     hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
 
     if (host != null) {
@@ -510,7 +502,7 @@ public class V2AuMover {
       repoClient.addInterceptor(new RetryErrorInterceptor());
       dispatcher = repoClient.getHttpClient().dispatcher();
       dispatcher.setMaxRequests(maxRequests);
-      dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
+      dispatcher.setMaxRequestsPerHost(maxRequests);
     } catch (MalformedURLException mue) {
       errorList.add("Error parsing REST Configuration Service URL: " + mue.getMessage());
       throw new IllegalArgumentException(
@@ -551,14 +543,12 @@ public class V2AuMover {
    * @param auName the name of the current Au
    */
   void updateReport(String auName) {
-    long contentRate = auRunTime > 0 ? auContentBytesMoved / auRunTime : 0;
-    long totalRate = auRunTime > 0 ? auBytesMoved / auRunTime : 0;
+    long totalRate = auRunTime > 0 ? (auBytesMoved / auRunTime)  * Constants.SECOND : 0;
     String auData = "urlsMoved: " + auUrlsMoved +
         "  artifactsMoved: " + auArtifactsMoved +
         "  contentBytesMoved: " + auContentBytesMoved +
-        "  contentByteRate: " + contentRate + "(b/ms)" +
-        "  totalBytesMoved: " + auBytesMoved +
-        "  totalByteRate: " + totalRate  + "(b/ms)"+
+        "  totalBytesMoved: "  + auBytesMoved +
+        "  byteRate: " + totalRate/1024 + "(kb/s)"+
         "  errors: " + auErrorCount +
         "  totalRuntime: " + StringUtil.timeIntervalToString(auRunTime);
     if (reportWriter != null) {
@@ -599,15 +589,20 @@ public class V2AuMover {
    * Close the report before exiting
    */
   void closeReport() {
-    long contentRate = auRunTime > 0 ? totalContentBytesMoved / totalRunTime : 0;
-    long totalRate = auRunTime > 0 ? totalBytesMoved / totalRunTime : 0;
+    long totalRate = auRunTime > 0 ? (totalBytesMoved / totalRunTime)  * Constants.SECOND : 0;
+    String totalRateString;
+    if (totalRate > 1024) {
+      totalRateString = totalRate/1024 + "(kb/s)";
+    }
+    else {
+      totalRateString = totalRate + "b/s";
+    }
     String summary = "AusMoved: " + totalAusMoved +
         "  urlsMoved: " + totalUrlsMoved +
         "  artifactsMoved: " + totalArtifactsMoved +
         "  contentBytesMoved: " + totalContentBytesMoved +
-        "  contentByteRate: " + contentRate + "(b/ms)"+
         "  totalBytesMoved: " + totalBytesMoved +
-        "  totalByteRate: " + totalRate + "(b/ms)" +
+        "  byteRate: " + totalRateString +
         "  errors: " + totalErrorCount +
         "  totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
     if (reportWriter != null) {
