@@ -1371,8 +1371,9 @@ public abstract class LockssServlet extends HttpServlet
    *          A Page representing the HTML page.
    */
   protected void addReactJSLocations(Page page) {
-    addJavaScriptLocation(page, "js/react-17.0.2.min.js");
-    addJavaScriptLocation(page, "js/react-dom-17.0.2.min.js");
+    addJavaScriptLocation(page, "js/babel-6.26.0.min.js");
+    addJavaScriptLocation(page, "js/react.dev.js");
+    addJavaScriptLocation(page, "js/react-dom.dev.js");
   }
 
   /**

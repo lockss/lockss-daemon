@@ -378,3 +378,14 @@ label.publication-title > input {
 .warning {
 	color: red;
 }
+
+.ui-progressbar {
+    background-color: lightgrey;
+    border-radius: 13px;
+    padding: 3px;
+}
+
+.ui-progressbar > div {
+    background-color: lightskyblue;
+    border-radius: 10px;
+}

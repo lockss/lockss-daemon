@@ -36,7 +36,10 @@ import static org.lockss.laaws.V2AuMover.compileRegexps;
 import static org.lockss.laaws.V2AuMover.isMatch;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.Instant;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Pattern;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -48,11 +51,13 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.mortbay.html.Block;
 import org.mortbay.html.Composite;
 import org.mortbay.html.Element;
 import org.mortbay.html.Form;
 import org.mortbay.html.Input;
 import org.mortbay.html.Page;
+import org.mortbay.html.Script;
 import org.mortbay.html.Select;
 import org.mortbay.html.Table;
 
@@ -198,12 +203,22 @@ public class MigrateContent extends LockssServlet {
 
   private void displayPage() throws IOException {
     Page page = newPage();
+    addCssLocations(page);
     addReactJSLocations(page);
+    addJSXLocation(page, "js/auMigrationStatus.js");
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
+    page.add(new Block(Block.Div, "id='AuMigrationStatusApp'"));
     page.add(makeForm());
     page.add("<br>");
     endPage(page);
+  }
+
+  protected void addJSXLocation(Page page, String jsxLocation) {
+    Script jsxScript = new Script("");
+    jsxScript.attribute("src", jsxLocation);
+    jsxScript.attribute("type", "text/babel");
+    page.add(jsxScript);
   }
 
   static String CENTERED_CELL = "align=\"center\" colspan=3";
