@@ -220,14 +220,14 @@
         au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2016 ; The Journal of Immunology Volume 196 ; 196 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
         au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; The Journal of Immunology Volume 197 [superseded] ; 197 ; http://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2016 ; The Journal of Immunology Volume 197 ; 197 ; http://www.jimmunol.org/ ; reingest3.clockss.org:8083 >
-        au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2017 ; The Journal of Immunology Volume 198 ; 198 ; http://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2017 ; The Journal of Immunology Volume 198 ; 198 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
         au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2017 ; The Journal of Immunology Volume 199 ; 199 ; http://www.jimmunol.org/ ; reingest2.clockss.org:8085 >
         au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2018 ; The Journal of Immunology Volume 200 ; 200 ; http://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2018 ; The Journal of Immunology Volume 201 ; 201 ; http://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2018 ; The Journal of Immunology Volume 201 ; 201 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
         au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2019 ; The Journal of Immunology Volume 202 ; 202 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2019 ; The Journal of Immunology Volume 203 ; 203 ; https://www.jimmunol.org/ ; reingest1.clockss.org:8082 >
-        au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2020 ; The Journal of Immunology Volume 204 ; 204 ; https://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2020 ; The Journal of Immunology Volume 205 ; 205 ; https://www.jimmunol.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2020 ; The Journal of Immunology Volume 204 ; 204 ; https://www.jimmunol.org/ ; reingest1.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2020 ; The Journal of Immunology Volume 205 ; 205 ; https://www.jimmunol.org/ ; reingest2.clockss.org:8085 >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; The Journal of Immunology Volume 206 ; 206 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; The Journal of Immunology Volume 207 ; 207 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; expected ; exists ; 2022 ; The Journal of Immunology Volume 208 ; 208 ; https://www.jimmunol.org/ ; >
@@ -248,9 +248,9 @@
         implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
         au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2017 ; ImmunoHorizons Volume 1 ; 1 ; http://www.immunohorizons.org/ ; reingest4.clockss.org:8082 >
-        au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2018 ; ImmunoHorizons Volume 2 ; 2 ; http://www.immunohorizons.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2018 ; ImmunoHorizons Volume 2 ; 2 ; http://www.immunohorizons.org/ ; reingest4.clockss.org:8082 >
         au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2019 ; ImmunoHorizons Volume 3 ; 3 ; https://www.immunohorizons.org/ ; reingest2.clockss.org:8085 >
-        au < aai.ClockssAAIDrupalPlugin ; deepCrawl ; exists ; 2020 ; ImmunoHorizons Volume 4 ; 4 ; https://www.immunohorizons.org/ ; >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; manifest ; 2020 ; ImmunoHorizons Volume 4 ; 4 ; https://www.immunohorizons.org/ ; reingest3.clockss.org:8083 >
         au < aai.ClockssAAIDrupalPlugin ; crawling ; exists ; 2021 ; ImmunoHorizons Volume 5 ; 5 ; https://www.immunohorizons.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; manifest ; exists ; 2022 ; ImmunoHorizons Volume 6 ; 6 ; https://www.immunohorizons.org/ ; >
 
