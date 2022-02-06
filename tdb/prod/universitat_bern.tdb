@@ -1,6 +1,7 @@
 {
+
   publisher <
-    name = University of Bern
+    name = Universität Bern
   >
 
     pluginPrefix = org.lockss.plugin.
@@ -14,7 +15,7 @@
         eissn = 2064-0404
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = apd
       #moved to ojs3
@@ -39,7 +40,7 @@
         eissn = 2504-2076
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = baf
       #Can we preserve with video content? See LXQ-631
@@ -59,14 +60,17 @@
         eissn = OOOO-OOOO
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = BENius
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2010 ; 9 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2010 ; 2010 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2011 ; 10 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2011 ; 2011 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2012 ; 11 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2012 ; 2012 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2007 ; 1 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2007 ; 2007 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2008 ; 2-3 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2008 ; 2008 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2009 ; 4-5 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2009 ; 2009 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2010 ; 6-7 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2010 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2011 ; 8-9 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2011 ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2012 ; 10-11 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2012 ; 2012 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2013 ; 12 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2013 ; 2013 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2014 ; 13-15 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2014 ; 2014 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 16-17 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2015 ; 2015 ; >
@@ -87,7 +91,7 @@
         eissn = 2414-6641
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://ciss-journal.org/
       param[journal_id] = ciss
       #moved to ojs3
@@ -105,10 +109,11 @@
 
       title <
         name = European Journal of Musicology ;
-        eissn = 0000-0000
+        eissn = 2504-1916 ;
+        issnl = 2504-1916
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = EJM
       #moved to ojs3
@@ -138,16 +143,16 @@
   {
 
       title <
-        name = HASBonline – Hefte zur Archäologie des Mittelmeerraumes aus Bern ;
+        name = HASBonline - Hefte zur Archäologie des Mittelmeerraumes aus Bern ;
         eissn = 2504-432X
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = HASBonline
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; released ; 2017 ; 22 ; HASBonline – Hefte zur Archäologie des Mittelmeerraumes aus Bern Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2017 ; 22 ; HASBonline - Hefte zur Archäologie des Mittelmeerraumes aus Bern Volume 2017 ; 2017 ; >
 
   }
 
@@ -158,7 +163,7 @@
         eissn = 2297-9069
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = iw
       #moved to ojs3
@@ -181,7 +186,7 @@
         eissn = 2297-6523
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = itwid
       #moved to ojs3
@@ -201,7 +206,7 @@
         eissn = 2504-3994
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JDS
       #moved to ojs3
@@ -221,7 +226,7 @@
         eissn = 1995-8692
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JEMR
       #moved to ojs3
@@ -252,7 +257,7 @@
         eissn = 1663-618X
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JROI
       #no volume for 2017
@@ -280,7 +285,7 @@
         eissn = 2504-432X
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://judaica.ch/
       param[journal_id] = judaica
       #moved to ojs3
@@ -326,8 +331,8 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 88-93 ; Linguistik Online Volume 88-93 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 94-100 ; Linguistik Online Volume 94-100 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 101-105 ; Linguistik Online Volume 101-105 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 106-112 ; Linguistik Online Volume 106-110 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 113-116 ; Linguistik Online Volume 111-115 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; ready ; 2021 ; 106-112 ; Linguistik Online Volume 106-112 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 113-119 ; Linguistik Online Volume 112-119 ; 2022 ; >
 
   }
 
@@ -338,7 +343,7 @@
         eissn = 0000-0000
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = manazir
       #moved to ojs3
@@ -356,11 +361,25 @@
         eissn = 2624-8492
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://sjer.ch/
       param[journal_id] = sjer
       #moved to ojs3
 
+      au < ojs3.Ojs3Plugin ; manifest ; 2000 ; 22 ; Swiss Journal of Educational Research Volume 2000 ; 2000 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2001 ; 23 ; Swiss Journal of Educational Research Volume 2001 ; 2001 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2002 ; 24-25 ; Swiss Journal of Educational Research Volume 2002 ; 2002 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2003 ; 25 ; Swiss Journal of Educational Research Volume 2003 ; 2003 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2004 ; 26 ; Swiss Journal of Educational Research Volume 2004 ; 2004 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2005 ; 27 ; Swiss Journal of Educational Research Volume 2005 ; 2005 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2006 ; 28 ; Swiss Journal of Educational Research Volume 2006 ; 2006 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2007 ; 29 ; Swiss Journal of Educational Research Volume 2007 ; 2007 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2008 ; 30 ; Swiss Journal of Educational Research Volume 2008 ; 2008 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2009 ; 31 ; Swiss Journal of Educational Research Volume 2009 ; 2009 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2010 ; 32 ; Swiss Journal of Educational Research Volume 2010 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2011 ; 33 ; Swiss Journal of Educational Research Volume 2011 ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2012 ; 34 ; Swiss Journal of Educational Research Volume 2012 ; 2012 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2013 ; 35 ; Swiss Journal of Educational Research Volume 2013 ; 2013 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2014 ; 36 ; Swiss Journal of Educational Research Volume 2014 ; 2014 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 37 ; Swiss Journal of Educational Research Volume 2015 ; 2015 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 38 ; Swiss Journal of Educational Research Volume 2016 ; 2016 ; >
@@ -375,22 +394,22 @@
   {
 
       title <
-        name = TSANTSA – Journal of the Swiss Anthropological Association ;
+        name = TSANTSA - Journal of the Swiss Anthropological Association ;
         eissn = 2673-5377
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://tsantsa.ch/
       param[journal_id] = tsantsa
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 20 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2015 ; 2015 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 21 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2016 ; 2016 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 22 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2017 ; 2017 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 23 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2018 ; 2018 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 24 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2019 ; 2019 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 25 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 26 ; TSANTSA – Journal of the Swiss Anthropological Association Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 20 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 21 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2017 ; 22 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 23 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 24 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 25 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 26 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2021 ; 2021 ; >
 
   }
 
@@ -401,7 +420,7 @@
         eissn = 2504-2750
       >
 
-      comment[publisher] = University of Bern
+      comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = versants
       #moved to ojs3
