@@ -1173,6 +1173,7 @@ public class V2AuMover {
           }
           else {
             int errCode = response.code();
+            logErrorBody(response);
             if (errCode == 401 || errCode == 403) {
               response.close();
               // no retries
@@ -1205,6 +1206,7 @@ public class V2AuMover {
       //We run out of retries
       if (response != null) {
         int errCode = response.code();
+        logErrorBody(response);
         // we've run out of retries...
         if (errCode == 401 || errCode == 403 || errCode >= 500) {
           terminated = true;
@@ -1216,6 +1218,15 @@ public class V2AuMover {
       return chain.proceed(request);
     }
   }
+
+  void logErrorBody(Response response) {
+    try {
+      log.warning("Error response body: " + response.body().string());
+    } catch (IOException e) {
+      log.error("Exception trying to retrieve error response body", e);
+    }
+  }
+
 }
 
 
