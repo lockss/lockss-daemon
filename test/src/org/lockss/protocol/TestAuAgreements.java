@@ -465,6 +465,73 @@ public class TestAuAgreements extends LockssTestCase {
     assertTrue(map.isEmpty());
   }
 
+  public void testGetBean() {
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(1),
+					AgreementType.POR_HINT, 0.1f, 101);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(0),
+					AgreementType.POR_HINT, 0.0f, 100);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(2),
+					AgreementType.POR_HINT, 0.2f, 102);
+
+    auAgreements.signalPartialAgreement(peerIdentityList.get(1),
+					AgreementType.POR, 0.0f, 201);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(0),
+					AgreementType.POR, 0.0f, 200);
+
+    AuAgreementsBean bean = auAgreements.getBean("ididid");
+    Map<String, PeerAgreements> beanMap = bean.getRawMap();
+
+    assertEquals(3, beanMap.size());
+    assertEquals(auAgreements.findPeerAgreement(peerIdentityList.get(0),
+                                                AgreementType.POR_HINT),
+                 beanMap.get("id0").getPeerAgreement(AgreementType.POR_HINT));
+    assertEquals(auAgreements.findPeerAgreement(peerIdentityList.get(0),
+                                                AgreementType.POR),
+                 beanMap.get("id0").getPeerAgreement(AgreementType.POR));
+
+    assertEquals(auAgreements.findPeerAgreement(peerIdentityList.get(1),
+                                                AgreementType.POR_HINT),
+                 beanMap.get("id1").getPeerAgreement(AgreementType.POR_HINT));
+    assertEquals(auAgreements.findPeerAgreement(peerIdentityList.get(1),
+                                                AgreementType.POR),
+                 beanMap.get("id1").getPeerAgreement(AgreementType.POR));
+
+    assertEquals(auAgreements.findPeerAgreement(peerIdentityList.get(2),
+                                                AgreementType.POR),
+                 beanMap.get("id2").getPeerAgreement(AgreementType.POR));
+  }
+
+  public void testGetPrunedBean() {
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(1),
+					AgreementType.POR_HINT, 0.1f, 101);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(0),
+					AgreementType.POR_HINT, 0.0f, 100);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(2),
+					AgreementType.POR_HINT, 0.2f, 102);
+
+    auAgreements.signalPartialAgreement(peerIdentityList.get(1),
+					AgreementType.POR, 0.0f, 201);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(0),
+					AgreementType.POR, 0.0f, 200);
+
+    AuAgreementsBean bean = auAgreements.getPrunedBean("ididid");
+    Map<String, PeerAgreements> beanMap = bean.getRawMap();
+
+    assertEquals(2, beanMap.size());
+    assertNull(beanMap.get("id0"));
+    assertEquals(auAgreements.findPeerAgreement(peerIdentityList.get(1),
+                                                AgreementType.POR_HINT),
+                 beanMap.get("id1").getPeerAgreement(AgreementType.POR_HINT));
+    assertSame(PeerAgreement.NO_AGREEMENT,
+               beanMap.get("id1").getPeerAgreement(AgreementType.POR));
+
+    assertEquals(auAgreements.findPeerAgreement(peerIdentityList.get(2),
+                                                AgreementType.POR),
+                 beanMap.get("id2").getPeerAgreement(AgreementType.POR));
+  }
+
   // Signal a sterotyped set of partial agreements
   private void signalPartialAgreements(AuAgreements auAgreements,
 				       AgreementType type,

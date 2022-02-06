@@ -1008,7 +1008,7 @@ public class V2AuMover {
     String auName = au.getName();
     if(v1AuAgreements != null) {
       try {
-        cfgAusApiClient.patchAuAgreements(au.getAuId(), v1AuAgreements.getBean(au.getAuId()), makeCookie());
+        cfgAusApiClient.patchAuAgreements(au.getAuId(), v1AuAgreements.getPrunedBean(au.getAuId()), makeCookie());
         log.info(auName + ": Successfully moved AU Agreements.");
       } catch (Exception ex) {
         String err = auName + ": Attempt to move au agreements: " + ex.getMessage();

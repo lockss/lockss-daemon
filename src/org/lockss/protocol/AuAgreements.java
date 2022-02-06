@@ -304,12 +304,32 @@ public class AuAgreements implements LockssSerializable {
     return res;
   }
 
+ public AuAgreementsBean getPrunedBean(String auId) {
+    HashMap<String, PeerAgreements> rawMap = new HashMap<>();
+    for (Map.Entry<PeerIdentity,PeerAgreements> pasEnt : map.entrySet()) {
+      PeerAgreements pas = pasEnt.getValue();
+      PeerIdentity id = pasEnt.getKey();
+      PeerAgreements newPas = new PeerAgreements(pas.getId());
+      for (Map.Entry<AgreementType,PeerAgreement> paEnt : pas.getEntries()) {
+        AgreementType type = paEnt.getKey();
+        PeerAgreement pa = paEnt.getValue();
+        if (pa.getPercentAgreement() > 0.0 ||
+            pa.getHighestPercentAgreement() > 0.0) {
+          newPas.addPeerAgreement(type, pa);
+          rawMap.put(id.getIdString(), newPas);
+        }
+      }
+    }
+    AuAgreementsBean res = new AuAgreementsBean(auId, rawMap);
+    return res;
+  }
+
   /**
    * @param pid a {@link PeerIdentity}.
    * @return The {@link PeerAgreements} or {@code null} if no agreement
    * exists.
    */
-  private PeerAgreements getPeerAgreements(PeerIdentity pid) {
+  PeerAgreements getPeerAgreements(PeerIdentity pid) {
     return map.get(pid);
   }
 

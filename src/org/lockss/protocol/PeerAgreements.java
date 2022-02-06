@@ -139,4 +139,15 @@ class PeerAgreements implements LockssSerializable {
       getPeerAgreement(type).signalAgreement(percent, time);
     map.put(type, peerAgreement);
   }
+
+  /** Return all the map Entries */
+  Collection<Map.Entry<AgreementType,PeerAgreement>> getEntries() {
+    return map.entrySet();
+  }
+
+  /** Add a PeerAgreement to the map */
+  void addPeerAgreement(AgreementType type, PeerAgreement peerAgreement) {
+    map.put(type, peerAgreement);
+  }
+
 }
