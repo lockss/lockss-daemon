@@ -290,9 +290,9 @@
       param[journal_id] = judaica
       #moved to ojs3
 
-      au < ojs3.Ojs3Plugin ; exists ; 2020 ; 1 ; Judaica. Neue digitale Folge Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; exists ; 2021 ; 2 ; Judaica. Neue digitale Folge Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; exists ; 2022 ; 3 ; Judaica. Neue digitale Folge Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 1 ; Judaica. Neue digitale Folge Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 2 ; Judaica. Neue digitale Folge Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 3 ; Judaica. Neue digitale Folge Volume 2022 ; 2022 ; >
 
   }
 
