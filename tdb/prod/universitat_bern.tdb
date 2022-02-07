@@ -6,7 +6,6 @@
 
     pluginPrefix = org.lockss.plugin.
     implicit < pluginSuffix ; status ; year ; volume ; name ; param[year] ; comment[error] >
-    attr[start_stem] = index.php/
 
   {
 
@@ -19,6 +18,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = apd
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; ready ; 2013 ; 1 ; Acta Periodica Duellatorum Volume 2013 ; 2013 ; >
       au < ojs3.Ojs3Plugin ; ready ; 2014 ; 2 ; Acta Periodica Duellatorum Volume 2014 ; 2014 ; >
@@ -45,6 +45,7 @@
       param[journal_id] = baf
       #Can we preserve with video content? See LXQ-631
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; released ; 2016 ; 1 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2016 ; 2016 ; >
       au < ojs3.Ojs3Plugin ; released ; 2017 ; 2 ; BAF-Online: Proceedings of the Berner Altorientalisches Forum Volume 2017 ; 2017 ; >
@@ -57,13 +58,14 @@
 
       title <
         name = BE N'ius - Beiträge aus der Berner Justiz ;
-        eissn = OOOO-OOOO
+        eissn = 0000-0000
       >
 
       comment[publisher] = Universität Bern
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = BENius
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; manifest ; 2007 ; 1 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2007 ; 2007 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2008 ; 2-3 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2008 ; 2008 ; >
@@ -95,6 +97,7 @@
       param[base_url] = https://ciss-journal.org/
       param[journal_id] = ciss
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; ready ; 2016 ; 1 ; Current Issues in Sport Science Volume 2016 ; 2016 ; >
       au < ojs3.Ojs3Plugin ; ready ; 2017 ; 2 ; Current Issues in Sport Science Volume 2017 ; 2017 ; >
@@ -117,6 +120,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = EJM
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; ready ; 1998 ; 1 ; European Journal of Musicology Volume 1998 ; 1998 ; >
       au < ojs3.Ojs3Plugin ; ready ; 1999 ; 2 ; European Journal of Musicology Volume 1999 ; 1999 ; >
@@ -151,6 +155,8 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = HASBonline
       #moved to ojs3
+      attr[start_stem] = index.php/
+      #do not process HASBonline 1975-2009. On different platform.
 
       au < ojs3.Ojs3Plugin ; released ; 2017 ; 22 ; HASBonline - Hefte zur Archäologie des Mittelmeerraumes aus Bern Volume 2017 ; 2017 ; >
 
@@ -167,6 +173,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = iw
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs2.OJS2Plugin ; down ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 ; 2010 ; >
       au < ojs2.OJS2Plugin ; down ; 2012 ; 2 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 ; 2012 ; >
@@ -190,6 +197,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = itwid
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs2.OJS2Plugin ; down ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
       au < ojs2.OJS2Plugin ; down ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
@@ -210,6 +218,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JDS
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs2.OJS2Plugin ; down ; 2017 ; 1 ; Jahrbuch Diakonie Schweiz Volume 2017 ; 2017 ; >
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 2 ; Jahrbuch Diakonie Schweiz Volume 2018 ; 2018 ; >
@@ -230,6 +239,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JEMR
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; ready ; 2007 ; 1 ; Journal of Eye Movement Research Volume 2007 ; 2007 ; >
       au < ojs3.Ojs3Plugin ; ready ; 2008 ; 2 ; Journal of Eye Movement Research Volume 2008 ; 2008 ; >
@@ -258,24 +268,44 @@
       >
 
       comment[publisher] = Universität Bern
-      param[base_url] = https://bop.unibe.ch/
       param[journal_id] = JROI
       #no volume for 2017
       #moved to ojs3
+      #Content is located at jroi.org, although volumes are accessible from bop.unibe.ch.
+      attr[start_stem] = index.php/
+
+    {
+      param[base_url] = https://jroi.org/
 
       au < ojs3.Ojs3Plugin ; manifest ; 2009 ; 1 ; Journal of Radiation Oncology Informatics Volume 2009 ; 2009 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2010 ; 2 ; Journal of Radiation Oncology Informatics Volume 2010 ; 2010 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2011 ; 3 ; Journal of Radiation Oncology Informatics Volume 2011 ; 2011 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2012 ; 4 ; Journal of Radiation Oncology Informatics Volume 2012 ; 2012 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2013 ; 5 ; Journal of Radiation Oncology Informatics Volume 2013 ; 2013 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2014 ; 6 ; Journal of Radiation Oncology Informatics Volume 2014 ; 2014 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2015 ; 7 ; Journal of Radiation Oncology Informatics Volume 2015 ; 2015 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2016 ; 8 ; Journal of Radiation Oncology Informatics Volume 2016 ; 2016 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2018 ; 9 ; Journal of Radiation Oncology Informatics Volume 2018 ; 2018 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2019 ; 10 ; Journal of Radiation Oncology Informatics Volume 2019 ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2010 ; 2 ; Journal of Radiation Oncology Informatics Volume 2010 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2011 ; 3 ; Journal of Radiation Oncology Informatics Volume 2011 ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2012 ; 4 ; Journal of Radiation Oncology Informatics Volume 2012 ; 2012 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2013 ; 5 ; Journal of Radiation Oncology Informatics Volume 2013 ; 2013 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2014 ; 6 ; Journal of Radiation Oncology Informatics Volume 2014 ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 7 ; Journal of Radiation Oncology Informatics Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 8 ; Journal of Radiation Oncology Informatics Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 9 ; Journal of Radiation Oncology Informatics Volume 2018 ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 10 ; Journal of Radiation Oncology Informatics Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 11 ; Journal of Radiation Oncology Informatics Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; expected ; 2022 ; 12 ; Journal of Radiation Oncology Informatics Volume 2022 ; 2022 ; >
+    }
+    {
+      param[base_url] = https://bop.unibe.ch/
 
+      au < ojs3.Ojs3Plugin ; doNotProcess ; 2009 ; 1 ; Journal of Radiation Oncology Informatics Volume 2009 ; 2009 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2010 ; 2 ; Journal of Radiation Oncology Informatics Volume 2010 [superseded] ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2011 ; 3 ; Journal of Radiation Oncology Informatics Volume 2011 [superseded] ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2012 ; 4 ; Journal of Radiation Oncology Informatics Volume 2012 [superseded] ; 2012 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2013 ; 5 ; Journal of Radiation Oncology Informatics Volume 2013 [superseded] ; 2013 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2014 ; 6 ; Journal of Radiation Oncology Informatics Volume 2014 [superseded] ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2015 ; 7 ; Journal of Radiation Oncology Informatics Volume 2015 [superseded] ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2016 ; 8 ; Journal of Radiation Oncology Informatics Volume 2016 [superseded] ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2018 ; 9 ; Journal of Radiation Oncology Informatics Volume 2018 [superseded] ; 2018 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2019 ; 10 ; Journal of Radiation Oncology Informatics Volume 2019 [superseded] ; 2019 ; >
+      au < ojs3.Ojs3Plugin ; doNotProcess ; 2021 ; 11 ; Journal of Radiation Oncology Informatics Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; doNotProcess ; 2022 ; 12 ; Journal of Radiation Oncology Informatics Volume 2022 ; 2022 ; >
+    }
   }
 
   {
@@ -289,10 +319,11 @@
       param[base_url] = https://judaica.ch/
       param[journal_id] = judaica
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 1 ; Judaica. Neue digitale Folge Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 2 ; Judaica. Neue digitale Folge Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 3 ; Judaica. Neue digitale Folge Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 3 ; Judaica. Neue digitale Folge Volume 2022 ; 2022 ; >
 
   }
 
@@ -307,6 +338,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = linguistik-online
       # moved from europa universitat viadrina on request of u of bern. rt9866
+      attr[start_stem] = index.php/
       
       au < ojs2.OJS2Plugin ; down ; 1998 ; 1 ; Linguistik Online Volume 1 ; 1998 ; >
       au < ojs2.OJS2Plugin ; down ; 1999 ; 2-4 ; Linguistik Online Volume 2-4 ; 1999 ; >
@@ -347,6 +379,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = manazir
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; manifest ; 2019 ; 1 ; Manazir Journal Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2020 ; 2 ; Manazir Journal Volume 2020 ; 2020 ; >
@@ -365,6 +398,8 @@
       param[base_url] = https://sjer.ch/
       param[journal_id] = sjer
       #moved to ojs3
+      attr[start_stem] = index.php/
+      #do not Process Swiss Journal of Educational Research 1979-1999. Different platform.
 
       au < ojs3.Ojs3Plugin ; manifest ; 2000 ; 22 ; Swiss Journal of Educational Research Volume 2000 ; 2000 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2001 ; 23 ; Swiss Journal of Educational Research Volume 2001 ; 2001 ; >
@@ -402,6 +437,7 @@
       param[base_url] = https://tsantsa.ch/
       param[journal_id] = tsantsa
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; manifest ; 2015 ; 20 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2015 ; 2015 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2016 ; 21 ; TSANTSA - Journal of the Swiss Anthropological Association Volume 2016 ; 2016 ; >
@@ -424,6 +460,7 @@
       param[base_url] = https://bop.unibe.ch/
       param[journal_id] = versants
       #moved to ojs3
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; released ; 2016 ; 63 ; Versants. Revista suiza de literaturas románicas Volume 2016 ; 2016 ; >
       au < ojs3.Ojs3Plugin ; released ; 2017 ; 64 ; Versants. Revista suiza de literaturas románicas Volume 2017 ; 2017 ; >
