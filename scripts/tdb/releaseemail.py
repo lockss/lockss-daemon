@@ -30,6 +30,7 @@ NON_ALLIANCE = set([ \
                  "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin",
                  "edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022Plugin",
                  "edu.harvard.plugin.jrs.JRSPlugin",
+                 "edu.harvard.plugin.jrs.JRS2022Plugin",
                  "edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin",
                  "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin",
                  "edu.indiana.lib.plugin.mto.MTOPlugin",

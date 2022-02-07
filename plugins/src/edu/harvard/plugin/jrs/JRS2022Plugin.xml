@@ -33,19 +33,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - humanities_project registry</string>
+    <string>ready - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.harvard.plugin.jrs.JRSPlugin</string>
+    <string>edu.harvard.plugin.jrs.JRS2022Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Journal of Religion and Society Plugin (Legacy)</string>
+    <string>Journal of Religion and Society Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -60,11 +60,10 @@ POSSIBILITY OF SUCH DAMAGE.
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -72,33 +71,31 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Journal of Religion and Society Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
+    <string>"Journal of Religion and Society Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sJRS%d.html", base_url, year</string>
+    <string>"%stoc/%s.html", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sJRS%d\.html$", base_url, year</string>
-      <string>2,"^%sJRS[0-9]+\.html$", base_url</string>
-      <string>2,"^%s$", base_url</string>
-      <string>2,"^%sindex\.html$", base_url</string>
-      <string>1,"^%stoc/%d\.html$", base_url, year</string>
-      <string>2,"^%stoc/.*\.html", base_url</string>
-      <string>1,"^%s%d/", base_url, year</string>
-      <string>2,"^%s[0-9]+", base_url</string>
-      <string>1,"^%s", base_url</string>
+      <string>1,"^%s[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", base_url</string>
+      <string>1,"^https?://dspace2\.creighton\.edu/xmlui/bitstream/handle/[^/]+/[^/]+/[^.]+.pdf(\?.*)?$", base_url, volume_name</string>
     </list>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
-    <long>15724800000</long><!-- sic: 182 days -->
+    <long>1209600000</long>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>dspace2\.creighton\.edu</string>
+    </list>
   </entry>
 </map>
