@@ -1364,6 +1364,25 @@ public abstract class LockssServlet extends HttpServlet
     addJavaScriptLocation(page, "js/jquery.shiftclick.js");
   }
 
+  protected void addJSXLocation(Page page, String jsxLocation) {
+    Script jsxScript = new Script("");
+    jsxScript.attribute("src", jsxLocation);
+    jsxScript.attribute("type", "text/babel");
+    page.add(jsxScript);
+  }
+
+  /**
+   * Adds the required ReactJS JavaScript file locations to the page header.
+   *
+   * @param page
+   *          A Page representing the HTML page.
+   */
+  protected void addReactJSLocations(Page page) {
+    addJavaScriptLocation(page, "js/babel-6.26.0.min.js");
+    addJavaScriptLocation(page, "js/react.dev.js");
+    addJavaScriptLocation(page, "js/react-dom.dev.js");
+  }
+
   /**
    * Adds a JavaScript file location to the page header.
    * 

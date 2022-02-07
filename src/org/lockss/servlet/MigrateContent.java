@@ -36,7 +36,10 @@ import static org.lockss.laaws.V2AuMover.compileRegexps;
 import static org.lockss.laaws.V2AuMover.isMatch;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.Instant;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Pattern;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -48,11 +51,13 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.mortbay.html.Block;
 import org.mortbay.html.Composite;
 import org.mortbay.html.Element;
 import org.mortbay.html.Form;
 import org.mortbay.html.Input;
 import org.mortbay.html.Page;
+import org.mortbay.html.Script;
 import org.mortbay.html.Select;
 import org.mortbay.html.Table;
 
@@ -72,6 +77,7 @@ public class MigrateContent extends LockssServlet {
   public static final List<String> DEFAULT_AU_SELECT_FILTER=ListUtil.fromArray(new String[] {".*"});
 
   // paramdoc only
+  static final String KEY_OUTPUT = "output";
   static final String KEY_ACTION = "action";
   static final String KEY_MSG = "msg";
   static final String KEY_AUID = "auid";
@@ -125,6 +131,22 @@ public class MigrateContent extends LockssServlet {
 
   public void lockssHandleRequest() throws IOException {
     initParams();
+
+    // TODO: This is just a placeholder - replace this with actual code
+    String output = getParameter(KEY_OUTPUT);
+    if (!StringUtil.isNullString(output)) {
+      resp.setStatus(200);
+      PrintWriter wrtr = resp.getWriter();
+      resp.setContentType("application/json");
+      Instant n = Instant.now();
+      int progress = ThreadLocalRandom.current().nextInt(0, 100);
+      wrtr.println("{" +
+          "\"status\": \"hello world "+ n.toString() +" \", " +
+          "\"running\": true," +
+          "\"progress\": \""+progress+"%\"}");
+      return;
+    }
+
     String action = getParameter(KEY_ACTION);
 
     if (!StringUtil.isNullString(action)) {
@@ -198,8 +220,12 @@ public class MigrateContent extends LockssServlet {
 
   private void displayPage() throws IOException {
     Page page = newPage();
+    addCssLocations(page);
+    addReactJSLocations(page);
+    addJSXLocation(page, "js/auMigrationStatus.js");
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
+    page.add(new Block(Block.Div, "id='AuMigrationStatusApp'"));
     page.add(makeForm());
     page.add("<br>");
     endPage(page);
