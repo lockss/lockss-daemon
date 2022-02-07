@@ -1661,6 +1661,34 @@ public class StringUtil {
     return ""+size;
   }
 
+  private static final DecimalFormat fmt_2dec = new DecimalFormat("#.##");
+
+  public static String byteRateToString(long bytes, long msecs) {
+    if (bytes == 0) {
+      return "0";
+    }
+    if (msecs == 0) {
+      return "undefined";
+    }
+    double bpms = (double)bytes / (double)msecs;
+    if (bpms < 1024) {
+      return max2Dec(bpms) + "B/s";
+    }
+    if (bpms < 1024 * 10) {
+      return max2Dec((double)bpms / 1024.0) + "KB/s";
+    }
+    return (int)Math.round((double)bpms / 1024.0) + "KB/s";
+  }
+
+  private static String max2Dec(double n) {
+    System.out.println("foo");
+    if (n % 1 == 0) {
+      System.out.println("n is integral; " + n);
+      return String.format("%.0f", n);
+    }
+    return fmt_2dec.format(n);
+  }
+
   /** Remove the first line of the stack trace, iff it duplicates the end
    * of the exception message */
   public static String trimStackTrace(String msg, String trace) {

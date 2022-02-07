@@ -543,12 +543,11 @@ public class V2AuMover {
    * @param auName the name of the current Au
    */
   void updateReport(String auName) {
-    long totalRate = auRunTime > 0 ? (auBytesMoved / auRunTime)  * Constants.SECOND : 0;
     String auData = "urlsMoved: " + auUrlsMoved +
         "  artifactsMoved: " + auArtifactsMoved +
         "  contentBytesMoved: " + auContentBytesMoved +
         "  totalBytesMoved: "  + auBytesMoved +
-        "  byteRate: " + totalRate/1024 + "(kb/s)"+
+        "  byteRate: " + StringUtil.byteRateToString(auBytesMoved, auRunTime) +
         "  errors: " + auErrorCount +
         "  totalRuntime: " + StringUtil.timeIntervalToString(auRunTime);
     if (reportWriter != null) {
@@ -589,20 +588,12 @@ public class V2AuMover {
    * Close the report before exiting
    */
   void closeReport() {
-    long totalRate = auRunTime > 0 ? (totalBytesMoved / totalRunTime)  * Constants.SECOND : 0;
-    String totalRateString;
-    if (totalRate > 1024) {
-      totalRateString = totalRate/1024 + "(kb/s)";
-    }
-    else {
-      totalRateString = totalRate + "b/s";
-    }
     String summary = "AusMoved: " + totalAusMoved +
         "  urlsMoved: " + totalUrlsMoved +
         "  artifactsMoved: " + totalArtifactsMoved +
         "  contentBytesMoved: " + totalContentBytesMoved +
         "  totalBytesMoved: " + totalBytesMoved +
-        "  byteRate: " + totalRateString +
+        "  byteRate: " + StringUtil.byteRateToString(totalBytesMoved, totalRunTime) +
         "  errors: " + totalErrorCount +
         "  totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
     if (reportWriter != null) {
