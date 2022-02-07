@@ -981,17 +981,18 @@ public class TestStringUtil extends LockssTestCase {
 
   public void testByteRate() throws Exception {
     assertEquals("0", StringUtil.byteRateToString(0, 1000));
-    assertEquals("undefined", StringUtil.byteRateToString(1000, 0));
-    assertEquals("1B/s", StringUtil.byteRateToString(1000, 1000));
-    assertEquals("1000B/s", StringUtil.byteRateToString(1000, 1));
-    assertEquals("12.3B/s", StringUtil.byteRateToString(123, 10));
-    assertEquals("1.23B/s", StringUtil.byteRateToString(123, 100));
-    assertEquals("100B/s", StringUtil.byteRateToString(100000, 1000));
-    assertEquals("9.77KB/s", StringUtil.byteRateToString(100000, 10));
-    assertEquals("121KB/s", StringUtil.byteRateToString(1234567, 10));
-    assertEquals("12KB/s", StringUtil.byteRateToString(1234567, 100));
-    assertEquals("1.21KB/s", StringUtil.byteRateToString(1234567, 1000));
-    assertEquals("0.01B/s", StringUtil.byteRateToString(10000, 1234567));
+    assertEquals("(undefined)", StringUtil.byteRateToString(1000, 0));
+    assertEquals("1000B/s", StringUtil.byteRateToString(1000, 1000));
+    assertEquals("977KB/s", StringUtil.byteRateToString(1000, 1));
+    assertEquals("3.26KB/s", StringUtil.byteRateToString(1000, 300));
+    assertEquals("12.01KB/s", StringUtil.byteRateToString(123, 10));
+    assertEquals("1.2KB/s", StringUtil.byteRateToString(123, 100));
+    assertEquals("97.66KB/s", StringUtil.byteRateToString(100000, 1000));
+    assertEquals("9.54MB/s", StringUtil.byteRateToString(100000, 10));
+    assertEquals("118MB/s", StringUtil.byteRateToString(1234567, 10));
+    assertEquals("11.77MB/s", StringUtil.byteRateToString(1234567, 100));
+    assertEquals("1.18MB/s", StringUtil.byteRateToString(1234567, 1000));
+    assertEquals("8.1B/s", StringUtil.byteRateToString(10000, 1234567));
   }
 
   public void testTrimStackTrace() {

@@ -45,21 +45,21 @@ public class TestV2AuMover extends LockssTestCase {
   String[] reportLines = {
       "AU Name: au1",
       "AU ID: au1",
-      "urlsMoved: 10  artifactsMoved: 10  contentBytesMoved: 900  totalBytesMoved: 1000  byteRate: 2(kb/s)  errors: 0  totalRuntime: 300ms",
+      "urlsMoved: 10  artifactsMoved: 10  contentBytesMoved: 900  totalBytesMoved: 1000  byteRate: 3.26KB/s  errors: 0  totalRuntime: 300ms",
       "",
       "AU Name: au2",
       "AU ID: au2",
-      "urlsMoved: 3517  artifactsMoved: 35723  contentBytesMoved: 17261845523  totalBytesMoved: 17307972727  byteRate: 627(kb/s)  errors: 1  totalRuntime: 7h28m34s",
+      "urlsMoved: 3517  artifactsMoved: 35723  contentBytesMoved: 17261845523  totalBytesMoved: 17307972727  byteRate: 628KB/s  errors: 1  totalRuntime: 7h28m34s",
       " cu2 Attempt to move artifact failed.",
       "",
       "AU Name: au3",
       "AU ID: au3",
-      "urlsMoved: 11  artifactsMoved: 22  contentBytesMoved: 1626829  totalBytesMoved: 1661366  byteRate: 399(kb/s)  errors: 3  totalRuntime: 4054ms",
+      "urlsMoved: 11  artifactsMoved: 22  contentBytesMoved: 1626829  totalBytesMoved: 1661366  byteRate: 400KB/s  errors: 3  totalRuntime: 4054ms",
       " cu1: Attempt to move artifact failed.",
       " cu5: Attempt to commit artifact failed.",
       " cu80: Attempt to commit artifact failed.",
       "",
-      "AusMoved: 3  urlsMoved: 3538  artifactsMoved: 35755  contentBytesMoved: 17263473252  totalBytesMoved: 17309635093  byteRate: 627(kb/s)  errors: 4  totalRuntime: 7h28m38s"
+      "AusMoved: 3  urlsMoved: 3538  artifactsMoved: 35755  contentBytesMoved: 17263473252  totalBytesMoved: 17309635093  byteRate: 628KB/s  errors: 4  totalRuntime: 7h28m38s"
   };
 
   public void setUp() throws Exception {

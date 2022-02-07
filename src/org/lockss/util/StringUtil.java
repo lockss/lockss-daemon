@@ -1668,20 +1668,26 @@ public class StringUtil {
       return "0";
     }
     if (msecs == 0) {
-      return "undefined";
+      return "(undefined)";
     }
     double bpms = (double)bytes / (double)msecs;
-    if (bpms < 1024) {
-      return max2Dec(bpms) + "B/s";
+    if (bpms < 1.024) {
+      return max2Dec(bpms * 1000.0) + "B/s";
     }
-    if (bpms < 1024 * 10) {
-      return max2Dec((double)bpms / 1024.0) + "KB/s";
+    if (bpms > (100 * 1024 * 1024 / 1000)) {
+      return (int)Math.round(bpms * 1000.0 / (1024.0 * 1024.0)) + "MB/s";
     }
-    return (int)Math.round((double)bpms / 1024.0) + "KB/s";
+    if (bpms > (1024 * 1024 / 1000)) {
+      return max2Dec(bpms * 1000.0 / (1024.0 * 1024.0)) + "MB/s";
+    }
+    if (bpms > 102.4) {
+      return (int)Math.round(bpms * 1000.0 / 1024.0) + "KB/s";
+    }
+    return max2Dec(bpms * 1000.0 / 1024.0) + "KB/s";
   }
 
   private static String max2Dec(double n) {
-    if (n % 1 == 0) {
+    if (n > 1.0 && n % 1 == 0) {
       return String.format("%.0f", n);
     }
     return fmt_2dec.format(n);
