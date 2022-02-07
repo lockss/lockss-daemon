@@ -2193,7 +2193,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; ; >
-    au < expected ; exists ; 2022 ; International Journal of Applied and Basic Medical Research Volume 12 ; 2022 ; 12 ; https://www.ijabmr.org/ ; ; >
+    au < manifest ; exists ; 2022 ; International Journal of Applied and Basic Medical Research Volume 12 ; 2022 ; 12 ; https://www.ijabmr.org/ ; ; >
 
   }
 #  {
@@ -2392,7 +2392,7 @@
     au < finished ; crawling ; 2019 ; International Journal of Trichology Volume 11 ; 2019 ; 11 ; https://www.ijtrichology.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; International Journal of Trichology Volume 12 ; 2020 ; 12 ; https://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2021 ; International Journal of Trichology Volume 13 ; 2021 ; 13 ; https://www.ijtrichology.com/ ; ; >
-    au < expected ; exists ; 2022 ; International Journal of Trichology Volume 14 ; 2022 ; 14 ; https://www.ijtrichology.com/ ; ; >
+    au < manifest ; exists ; 2022 ; International Journal of Trichology Volume 14 ; 2022 ; 14 ; https://www.ijtrichology.com/ ; ; >
 
   }
 
@@ -4623,7 +4623,7 @@
     au < finished ; crawling ; 2019 ; Saudi Journal of Gastroenterology Volume 25 ; 2019 ; 25 ; https://www.saudijgastro.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Saudi Journal of Gastroenterology Volume 26 ; 2020 ; 26 ; https://www.saudijgastro.com/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Saudi Journal of Gastroenterology Volume 27 ; 2021 ; 27 ; https://www.saudijgastro.com/ ; ; >
-    au < expected ; exists ; 2022 ; Saudi Journal of Gastroenterology Volume 28 ; 2022 ; 28 ; https://www.saudijgastro.com/ ; ; >
+    au < manifest ; exists ; 2022 ; Saudi Journal of Gastroenterology Volume 28 ; 2022 ; 28 ; https://www.saudijgastro.com/ ; ; >
 
   }
 #  {
@@ -4899,7 +4899,7 @@
       au < finished ; crawling ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Advanced Biomedical Research Volume 10 ; 2021 ; 10 ; https://www.advbiores.net/ ; ; >
-      au < expected ; exists ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ ; ; >
+      au < manifest ; exists ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ ; ; >
 
   }
 
@@ -6800,7 +6800,7 @@
       au < finished ; crawling ; 2019 ; Journal of Clinical Ophthalmology and Research Volume 7 ; 2019 ; 7 ; https://www.jcor.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; Journal of Clinical Ophthalmology and Research Volume 8 ; 2020 ; 8 ; https://www.jcor.in/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of Clinical Ophthalmology and Research Volume 9 ; 2021 ; 9 ; https://www.jcor.in/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Clinical Ophthalmology and Research Volume 10 ; 2022 ; 10 ; https://www.jcor.in/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of Clinical Ophthalmology and Research Volume 10 ; 2022 ; 10 ; https://www.jcor.in/ ; ; >
 
   }
 
@@ -9565,7 +9565,7 @@
       au < finished ; crawling ; 2019 ; Current Medical Issues Volume 17 ; 2019 ; 17 ; https://www.cmijournal.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Current Medical Issues Volume 18 ; 2020 ; 18 ; https://www.cmijournal.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Current Medical Issues Volume 19 ; 2021 ; 19 ; https://www.cmijournal.org/ ; ; >
-      au < expected ; exists ; 2022 ; Current Medical Issues Volume 20 ; 2022 ; 20 ; https://www.cmijournal.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Current Medical Issues Volume 20 ; 2022 ; 20 ; https://www.cmijournal.org/ ; ; >
 
   }
 
@@ -9760,7 +9760,7 @@
       au < finished ; crawling ; 2019 ; Heart and Mind Volume 3 ; 2019 ; 3 ; https://www.heartmindjournal.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Heart and Mind Volume 4 ; 2020 ; 4 ; https://www.heartmindjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Heart and Mind Volume 5 ; 2021 ; 5 ; https://www.heartmindjournal.org/ ; ; >
-      au < expected ; exists ; 2022 ; Heart and Mind Volume 6 ; 2022 ; 6 ; https://www.heartmindjournal.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Heart and Mind Volume 6 ; 2022 ; 6 ; https://www.heartmindjournal.org/ ; ; >
 
   }
 
@@ -9955,7 +9955,7 @@
       au < finished ; crawling ; 2019 ; Indian Spine Journal Volume 2 ; 2019 ; 2 ; https://www.isjonline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Indian Spine Journal Volume 3 ; 2020 ; 3 ; https://www.isjonline.com/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Indian Spine Journal Volume 4 ; 2021 ; 4 ; https://www.isjonline.com/ ; ; >
-      au < expected ; exists ; 2022 ; Indian Spine Journal Volume 5 ; 2022 ; 5 ; https://www.isjonline.com/ ; ; >
+      au < manifest ; exists ; 2022 ; Indian Spine Journal Volume 5 ; 2022 ; 5 ; https://www.isjonline.com/ ; ; >
 
   }
 
@@ -10246,7 +10246,7 @@
       au < finished ; crawling ; 2019 ; Journal of Acute Disease Volume 8 ; 2019 ; 8 ; https://www.jadweb.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Journal of Acute Disease Volume 9 ; 2020 ; 9 ; https://www.jadweb.org/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Acute Disease Volume 10 ; 2021 ; 10 ; https://www.jadweb.org/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Acute Disease Volume 11 ; 2022 ; 11 ; https://www.jadweb.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of Acute Disease Volume 11 ; 2022 ; 11 ; https://www.jadweb.org/ ; ; >
 
   }
 
@@ -10487,7 +10487,7 @@
       au < finished ; crawling ; 2019 ; Journal of Medical Sciences Volume 39 ; 2019 ; 39 ; https://www.jmedscindmc.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Journal of Medical Sciences Volume 40 ; 2020 ; 40 ; https://www.jmedscindmc.com/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Journal of Medical Sciences Volume 41 ; 2021 ; 41 ; https://www.jmedscindmc.com/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ ; ; >
 
   }
 
