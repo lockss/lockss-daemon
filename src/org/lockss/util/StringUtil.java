@@ -1681,9 +1681,7 @@ public class StringUtil {
   }
 
   private static String max2Dec(double n) {
-    System.out.println("foo");
     if (n % 1 == 0) {
-      System.out.println("n is integral; " + n);
       return String.format("%.0f", n);
     }
     return fmt_2dec.format(n);
