@@ -1,6 +1,7 @@
 {
   publisher <
-    name = The Healthbook Company Ltd.
+    name = The Healthbook Company Ltd. ;
+    info[platform] = Scholastica BLOCKED LXPUB-546 - need static pages
   >
 
   plugin = org.lockss.plugin.scholastica.healthbook.HealthBookJournalsPlugin
