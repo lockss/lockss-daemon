@@ -2651,7 +2651,7 @@
     param[journal_issn] = 1757-0980
     comment[journal_id] = eihsc
 
-    au < manifest ; exists ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 ; >
+    au < ready ; exists ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 ; >
     au < crawling ; exists ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Ethnicity and Inequalities in Health and Social Care Volume 3 ; 3 ; >
     au < frozen ; exists ; 2011 ; Ethnicity and Inequalities in Health and Social Care Volume 4 ; 4 ; >
@@ -3606,7 +3606,7 @@
     au < crawling ; exists ; 2006 ; Industrial Robot: The international journal of industrial and service robotics Volume 33 ; 33 ; >
     au < crawling ; exists ; 2007 ; Industrial Robot: The international journal of industrial and service robotics Volume 34 ; 34 ; >
     au < crawling ; exists ; 2008 ; Industrial Robot: The international journal of industrial and service robotics Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2009 ; Industrial Robot: The international journal of industrial and service robotics Volume 36 ; 36 ; >
+    au < ready ; exists ; 2009 ; Industrial Robot: The international journal of industrial and service robotics Volume 36 ; 36 ; >
     au < crawling ; exists ; 2010 ; Industrial Robot: The international journal of industrial and service robotics Volume 37 ; 37 ; >
     au < manifest ; exists ; 2010-2011 ; Industrial Robot: The international journal of industrial and service robotics Volume 38 ; 38 ; >
     au < manifest ; exists ; 2012 ; Industrial Robot: The international journal of industrial and service robotics Volume 39 ; 39 ; >
@@ -7763,7 +7763,7 @@
     param[journal_issn] = 1755-4195
     comment[journal_id] = jibr
 
-    au < manifest ; exists ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 ; >
+    au < ready ; exists ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 ; >
     au < crawling ; exists ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; Journal of Indian Business Research Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Journal of Indian Business Research Volume 4 ; 4 ; >
@@ -9019,7 +9019,7 @@
     au < manifest ; exists ; 2005 ; Journal of Small Business and Enterprise Development Volume 12 ; 12 ; >
     au < manifest ; exists ; 2006 ; Journal of Small Business and Enterprise Development Volume 13 ; 13 ; >
     au < crawling ; exists ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 ; >
+    au < ready ; exists ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 ; >
     au < crawling ; exists ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 ; >
     au < crawling ; exists ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 ; >
     au < crawling ; exists ; 2011 ; Journal of Small Business and Enterprise Development Volume 18 ; 18 ; >
@@ -12325,7 +12325,7 @@
     au < manifest ; exists ; 2004 ; Strategic Direction Volume 20 ; 20 ; >
     au < crawling ; exists ; 2005 ; Strategic Direction Volume 21 ; 21 ; >
     au < ready ; exists ; 2006 ; Strategic Direction Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2007 ; Strategic Direction Volume 23 ; 23 ; >
+    au < ready ; exists ; 2007 ; Strategic Direction Volume 23 ; 23 ; >
     au < crawling ; exists ; 2008 ; Strategic Direction Volume 24 ; 24 ; >
     au < crawling ; exists ; 2009 ; Strategic Direction Volume 25 ; 25 ; >
     au < crawling ; exists ; 2010 ; Strategic Direction Volume 26 ; 26 ; >
