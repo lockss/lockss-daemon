@@ -38,19 +38,19 @@ import static org.lockss.laaws.V2AuMover.isMatch;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.Instant;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Pattern;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.laaws.V2AuMover;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
-import org.lockss.util.ListUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 import org.mortbay.html.Block;
 import org.mortbay.html.Composite;
 import org.mortbay.html.Element;
@@ -71,6 +71,9 @@ public class MigrateContent extends LockssServlet {
   public static final String PARAM_ENABLE_MIGRATION = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_MIGRATION = false;
 
+  public static final String PARAM_REACT = PREFIX + "react";
+  public static final boolean DEFAULT_REACT = false;
+
   public static final String PARAM_HOSTNAME=PREFIX +"hostname";
   static final String DEFAULT_HOSTNAME="localhost";
   public static final String PARAM_AU_SELECT_FILTER=PREFIX +"au_select_filter";
@@ -87,6 +90,10 @@ public class MigrateContent extends LockssServlet {
 
   public static final String ACTION_MIGRATE_AU= "Migrate One AU to V2 Repository";
   public static final String ACTION_MIGRATE_ALL= "Migrate All AUs to V2 Repository";
+
+  static final String STATUS_RUNNING = "running";
+  static final String STATUS_STATUS = "status";
+  static final String STATUS_PROGRESS = "progress";
 
   private static final String HOST_URL_FOOT =
     "The V2 REST Service host name (localhost by default).";
@@ -135,15 +142,7 @@ public class MigrateContent extends LockssServlet {
     // TODO: This is just a placeholder - replace this with actual code
     String output = getParameter(KEY_OUTPUT);
     if (!StringUtil.isNullString(output)) {
-      resp.setStatus(200);
-      PrintWriter wrtr = resp.getWriter();
-      resp.setContentType("application/json");
-      Instant n = Instant.now();
-      int progress = ThreadLocalRandom.current().nextInt(0, 100);
-      wrtr.println("{" +
-          "\"status\": \"hello world "+ n.toString() +" \", " +
-          "\"running\": true," +
-          "\"progress\": \""+progress+"%\"}");
+      sendCurrentStatus();
       return;
     }
 
@@ -165,19 +164,50 @@ public class MigrateContent extends LockssServlet {
     displayPage();
   }
 
+  private void sendCurrentStatus() throws IOException {
+    Map statMap = getCurrentStatus();
+    Gson gson = new GsonBuilder().create();
+    gson.toJson(statMap);
+    resp.setStatus(200);
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("application/json");
+    String json = gson.toJson(statMap);
+    log.debug3("json: " + json);
+    wrtr.println(json);
+  }
+    
+  Map getCurrentStatus() {
+    V2AuMover.Runner runner =
+      (V2AuMover.Runner)getSession().getAttribute("V2AuMover");
+    if (runner == null) {
+      return MapUtil.map(STATUS_RUNNING, false);
+    }
+    Map stat = new HashMap();
+    stat.put(STATUS_RUNNING, runner.isRunning());
+    stat.put(STATUS_STATUS, runner.getCurrentStatus());
+    return stat;
+  }
+
   private void doMigrateAll() {
-    try {
-      auMover = new V2AuMover();
-      auMover.moveAllAus(hostName, userName, userPass, auSelectPatterns);
-      java.util.List<String> errs = auMover.getErrors();
-      if (!errs.isEmpty()) {
-        errMsg = StringUtil.separatedString(errs, "\n");
-      } else {
-        statusMsg = "All AUs have been migrated.";
+    auMover = new V2AuMover();
+    if (ConfigManager.getCurrentConfig().getBoolean(PARAM_REACT,
+                                                    DEFAULT_REACT)) {
+      V2AuMover.Runner runner =
+        auMover.moveAllAusAsynch(hostName, userName, userPass, auSelectPatterns);
+      getSession().setAttribute("V2AuMover", runner);
+    } else {
+      try {
+        auMover.moveAllAus(hostName, userName, userPass, auSelectPatterns);
+        java.util.List<String> errs = auMover.getErrors();
+        if (!errs.isEmpty()) {
+          errMsg = StringUtil.separatedString(errs, "\n");
+        } else {
+          statusMsg = "All AUs have been migrated.";
+        }
+      } catch (Exception e) {
+        log.error("Unexpected Exception enqueuing AUs.", e);
+        errMsg = e.getMessage();
       }
-    } catch (Exception e) {
-      log.error("Unexpected Exception enqueuing AUs.", e);
-      errMsg = e.getMessage();
     }
   }
 

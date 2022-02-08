@@ -49,11 +49,13 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.text.*;
 import okhttp3.Dispatcher;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.lockss.app.LockssDaemon;
+import org.lockss.daemon.LockssRunnable;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.laaws.api.cfg.AusApi;
@@ -176,8 +178,13 @@ public class V2AuMover {
 
 
   private static final Logger log = Logger.getLogger(V2AuMover.class);
+
+  static NumberFormat bigIntFmt = NumberFormat.getInstance();
+
   private int maxRetryCount;
   private long retryBackoffDelay;
+  private String currentStatus;
+  private boolean running = false;
 
   private final String cliendId =
       org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(8);
@@ -384,7 +391,7 @@ public class V2AuMover {
     if (v2ServicesUnavailable()) {
       throw new IOException("Move request failed, V2 Services are not ready.");
     }
-    // get the aus know to the v2 repo
+    // get the aus known to the v2 repo
     getV2Aus();
     // get the aus known by the v1 repository
     for (ArchivalUnit au : pluginManager.getAllAus()) {
@@ -400,6 +407,77 @@ public class V2AuMover {
     // Check to see if we are currently working on an au.
     if (!terminated && currentAu == null)
       moveNextAu();
+  }
+
+  public Runner moveAllAusAsynch(String host, String uname, String upass, List<Pattern> selPatterns) {
+    V2AuMover.Runner runner = new V2AuMover.Runner(host, uname, upass, selPatterns);
+    new Thread(runner).start();
+    return runner;
+  }
+
+  public class Runner extends LockssRunnable {
+    String host;
+    String uname;
+    String upass;
+    List<Pattern> selPatterns;
+
+    public Runner(String host, String uname, String upass,
+                  List<Pattern> selPatterns) {
+      super("V2AuMover");
+      this.host = host;
+      this.uname = uname;
+      this.upass = upass;
+      this.selPatterns = selPatterns;
+    }
+
+    public String getCurrentStatus() {
+      if (currentStatus.startsWith("Copying: ")) {
+        return currentStatus + ", " + auUrlsMoved + " URLs, " +
+          auArtifactsMoved + " versions copied.";
+      }
+      return currentStatus;
+    }
+
+    public boolean isRunning() {
+      return running;
+    }
+
+    public void lockssRun() {
+      try {
+        initRequest(host, uname, upass);
+        currentStatus = "Checking V2 services";
+        if (v2ServicesUnavailable()) {
+          currentStatus = "V2 services are not ready";
+          running = false;
+          return;
+        }
+        currentStatus = "Checking AUs already in V2 repo";
+        // get the aus known to the v2 repo
+        getV2Aus();
+        // get the aus known by the v1 repository
+        for (ArchivalUnit au : pluginManager.getAllAus()) {
+          if (pluginManager.isInternalAu(au)) {
+            continue;
+          }
+          if (selPatterns == null || selPatterns.isEmpty() ||
+              isMatch(au.getAuId(), selPatterns)) {
+            auMoveQueue.add(au);
+          }
+        }
+        currentStatus = "Copying AUs";
+        log.debug("Moving " + auMoveQueue.size() + " aus.");
+        // Check to see if we are currently working on an au.
+        if (!terminated && currentAu == null) {
+          moveNextAu();
+        } else {
+          running = false;
+        }
+      } catch (IOException e) {
+        log.error("Unexpected exception", e);
+        currentStatus = e.getMessage();
+        running = false;
+      }
+    }
   }
 
   /**
@@ -430,6 +508,7 @@ public class V2AuMover {
    * @param au the ArchivalUnit to move
    * @throws IOException if unable to connect to services
    */
+
   public void moveOneAu(String host, String uname, String upass, ArchivalUnit au) throws IOException {
     initRequest(host, uname, upass);
     if (v2ServicesUnavailable()) {
@@ -589,13 +668,15 @@ public class V2AuMover {
    */
   void closeReport() {
     String summary = "AusMoved: " + totalAusMoved +
-        "  urlsMoved: " + totalUrlsMoved +
-        "  artifactsMoved: " + totalArtifactsMoved +
-        "  contentBytesMoved: " + totalContentBytesMoved +
-        "  totalBytesMoved: " + totalBytesMoved +
-        "  byteRate: " + StringUtil.byteRateToString(totalBytesMoved, totalRunTime) +
-        "  errors: " + totalErrorCount +
-        "  totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
+      ",  urlsMoved: " + bigIntFmt.format(totalUrlsMoved) +
+      ",  artifactsMoved: " + bigIntFmt.format(totalArtifactsMoved) +
+      ",  contentBytesMoved: " + bigIntFmt.format(totalContentBytesMoved) +
+      ",  totalBytesMoved: " + bigIntFmt.format(totalBytesMoved) +
+      ",  byteRate: " + StringUtil.byteRateToString(totalBytesMoved, totalRunTime) +
+      ",  errors: " + totalErrorCount +
+      ",  totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
+    running = false;
+    currentStatus = summary;
     if (reportWriter != null) {
       reportWriter.println(summary);
       if (reportWriter.checkError()) {
@@ -609,6 +690,7 @@ public class V2AuMover {
   protected void moveNextAu() throws IOException {
     if (!terminated && auMoveQueue.iterator().hasNext()) {
       ArchivalUnit au = auMoveQueue.iterator().next();
+      currentStatus = "Copying: " + au.getName();
       allCusQueued = false;
       log.debug("Moving " + au.getName() + " - " + auMoveQueue.size() + " AUs remaining.");
       currentAu = au.getAuId();
