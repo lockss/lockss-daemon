@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = The Healthbook Company Ltd.
+  >
+
+  plugin = org.lockss.plugin.scholastica.healthbook.HealthBookJournalsPlugin
+  param[base_url] = https://onco-hema.healthbooktimes.org/
+  implicit < status ; year ; name ; param[year] >
+
+    {
+    title <
+      name = healthbook TIMES Oncology Hematology ;
+      issn = 2673-2092 ;
+      eissn = 2673-2106
+    >
+
+        au < testing ; 2019 ; healthbook TIMES Oncology Hematology 2019 ; 2019 >
+        au < testing ; 2020 ; healthbook TIMES Oncology Hematology 2020 ; 2020 >
+        au < testing ; 2021 ; healthbook TIMES Oncology Hematology 2021 ; 2021 >
+
+    }
+
+}
