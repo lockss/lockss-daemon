@@ -622,13 +622,13 @@ public class V2AuMover {
    * @param auName the name of the current Au
    */
   void updateReport(String auName) {
-    String auData = "urlsMoved: " + auUrlsMoved +
-        "  artifactsMoved: " + auArtifactsMoved +
-        "  contentBytesMoved: " + auContentBytesMoved +
-        "  totalBytesMoved: "  + auBytesMoved +
-        "  byteRate: " + StringUtil.byteRateToString(auBytesMoved, auRunTime) +
-        "  errors: " + auErrorCount +
-        "  totalRuntime: " + StringUtil.timeIntervalToString(auRunTime);
+    String auData = "urlsMoved: " + bigIntFmt.format(auUrlsMoved) +
+      ", artifactsMoved: " + bigIntFmt.format(auArtifactsMoved) +
+      ", contentBytesMoved: " + bigIntFmt.format(auContentBytesMoved) +
+      ", totalBytesMoved: "  + bigIntFmt.format(auBytesMoved) +
+      ", byteRate: " + StringUtil.byteRateToString(auBytesMoved, auRunTime) +
+      ", errors: " + auErrorCount +
+      ", totalRuntime: " + StringUtil.timeIntervalToString(auRunTime);
     if (reportWriter != null) {
       reportWriter.println("AU Name: "+ auName);
       reportWriter.println("AU ID: "+ currentAu);
@@ -668,13 +668,13 @@ public class V2AuMover {
    */
   void closeReport() {
     String summary = "AusMoved: " + totalAusMoved +
-      ",  urlsMoved: " + bigIntFmt.format(totalUrlsMoved) +
-      ",  artifactsMoved: " + bigIntFmt.format(totalArtifactsMoved) +
-      ",  contentBytesMoved: " + bigIntFmt.format(totalContentBytesMoved) +
-      ",  totalBytesMoved: " + bigIntFmt.format(totalBytesMoved) +
-      ",  byteRate: " + StringUtil.byteRateToString(totalBytesMoved, totalRunTime) +
-      ",  errors: " + totalErrorCount +
-      ",  totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
+      ", urlsMoved: " + bigIntFmt.format(totalUrlsMoved) +
+      ", artifactsMoved: " + bigIntFmt.format(totalArtifactsMoved) +
+      ", contentBytesMoved: " + bigIntFmt.format(totalContentBytesMoved) +
+      ", totalBytesMoved: " + bigIntFmt.format(totalBytesMoved) +
+      ", byteRate: " + StringUtil.byteRateToString(totalBytesMoved, totalRunTime) +
+      ", errors: " + totalErrorCount +
+      ", totalRuntime: " + StringUtil.timeIntervalToString(totalRunTime);
     running = false;
     currentStatus = summary;
     if (reportWriter != null) {
