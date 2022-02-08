@@ -33,19 +33,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - humanities_project registry</string>
+    <string>development - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.indiana.lib.plugin.mto.MTOPlugin</string>
+    <string>edu.indiana.lib.plugin.mto.MTO2022Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Music Theory Online Plugin (Legacy)</string>
+    <string>Music Theory Online Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -56,15 +56,6 @@ POSSIBILITY OF SUCH DAMAGE.
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -80,26 +71,21 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Music Theory Online Plugin (Legacy), Base URL %s, Year %d, Volume %d", base_url, year, volume</string>
+    <string>"Music Theory Online Plugin, Base URL %s, Volume %d", base_url, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%smto/lockss/index%d.html", base_url, year</string>
+    <string>"%sissues/issues.php", base_url</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sclassic/mto.04.10.3/toc.10.3.html", base_url</string><!-- a surviving permission statement -->
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%smto/lockss/index%d\.html$", base_url, year</string>
-      <string>1,"^%smto/issues/mto\.%02d\.%d\.[0-9]+/", base_url, au_short_year, volume</string>
-      <string>2,"^%smto/issues/mto\.[0-9]+\.[0-9]+\.[0-9]+/", base_url</string>
-      <string>2,"^%smto/issues/issues\.html$", base_url</string>
-      <string>1,"^%smto/issues/", base_url</string>
-      <string>1,"^%smto/gifs/", base_url</string>
-      <string>2,"^%smto/index\.html$", base_url</string>
-      <string>2,"^%smto/docs/", base_url</string>
-      <string>2,"^%ssmt-list/", base_url</string>
-      <string>2,"^%scgi-bin/", base_url</string>
+      <string>1,"^https?://(%s|www\.mtosmt\.org)/[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|www\.mtosmt\.org)/issues/mto\.[0-9]{2}\.%d\.[0-9]+/", url_host(base_url), volume</string>
     </list>
   </entry>
   <entry>
@@ -109,5 +95,15 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>edu.indiana.lib.plugin.mto.MTO2022UrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>www\.mtosmt\.org</string>
+    </list>
   </entry>
 </map>

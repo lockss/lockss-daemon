@@ -1,0 +1,77 @@
+{
+
+  publisher <
+    name = Society for Music Theory
+  >
+  
+  {
+  
+    title <
+      name = Music Theory Online ;
+      eissn = 1067-3040 ;
+      issnl = 1067-3040
+    >
+  
+    rights = openaccess
+
+    {
+
+      plugin = edu.indiana.lib.plugin.mto.MTOPlugin
+      param[base_url] = http://www.societymusictheory.org/
+      implicit < status ; year ; volume ; name ; param[year] ; param[volume] >
+  
+      au < superseded ; 1995 ; 1 ; Music Theory Online Volume 1 [superseded] ; 1995 ; 1 >
+      au < superseded ; 1996 ; 2 ; Music Theory Online Volume 2 [superseded] ; 1996 ; 2 >
+      au < superseded ; 1997 ; 3 ; Music Theory Online Volume 3 [superseded] ; 1997 ; 3 >
+      au < superseded ; 1998 ; 4 ; Music Theory Online Volume 4 [superseded] ; 1998 ; 4 >
+      au < superseded ; 1999 ; 5 ; Music Theory Online Volume 5 [superseded] ; 1999 ; 5 >
+      au < superseded ; 2000 ; 6 ; Music Theory Online Volume 6 [superseded] ; 2000 ; 6 >
+      au < superseded ; 2001 ; 7 ; Music Theory Online Volume 7 [superseded] ; 2001 ; 7 >
+      au < superseded ; 2002 ; 8 ; Music Theory Online Volume 8 [superseded] ; 2002 ; 8 >
+      au < superseded ; 2003 ; 9 ; Music Theory Online Volume 9 [superseded] ; 2003 ; 9 >
+      au < superseded ; 2004 ; 10 ; Music Theory Online Volume 10 [superseded] ; 2004 ; 10 >
+      au < superseded ; 2005 ; 11 ; Music Theory Online Volume 11 [superseded] ; 2005 ; 11 >
+
+    }
+
+    {
+   
+      plugin = edu.indiana.lib.plugin.mto.MTO2022Plugin
+      param[base_url] = https://mtosmt.org/
+      implicit < status ; year ; volume ; name ; param[volume] >
+  
+      au < testing ; 1993-1994 ; 0 ; Music Theory Online Volume 0 ; 0 >
+      au < testing ; 1995 ; 1 ; Music Theory Online Volume 1 ; 1 >
+      au < testing ; 1996 ; 2 ; Music Theory Online Volume 2 ; 2 >
+      au < testing ; 1997 ; 3 ; Music Theory Online Volume 3 ; 3 >
+      au < testing ; 1998 ; 4 ; Music Theory Online Volume 4 ; 4 >
+      au < testing ; 1999 ; 5 ; Music Theory Online Volume 5 ; 5 >
+      au < testing ; 2000 ; 6 ; Music Theory Online Volume 6 ; 6 >
+      au < testing ; 2001 ; 7 ; Music Theory Online Volume 7 ; 7 >
+      au < testing ; 2002 ; 8 ; Music Theory Online Volume 8 ; 8 >
+      au < testing ; 2003 ; 9 ; Music Theory Online Volume 9 ; 9 >
+      au < testing ; 2004 ; 10 ; Music Theory Online Volume 10 ; 10 >
+      au < testing ; 2005 ; 11 ; Music Theory Online Volume 11 ; 11 >
+      au < testing ; 2006 ; 12 ; Music Theory Online Volume 12 ; 12 >
+      au < testing ; 2007 ; 13 ; Music Theory Online Volume 13 ; 13 >
+      au < testing ; 2008 ; 14 ; Music Theory Online Volume 14 ; 14 >
+      au < testing ; 2009 ; 15 ; Music Theory Online Volume 15 ; 15 >
+      au < testing ; 2000 ; 16 ; Music Theory Online Volume 16 ; 16 >
+      au < testing ; 2011 ; 17 ; Music Theory Online Volume 17 ; 17 >
+      au < testing ; 2012 ; 18 ; Music Theory Online Volume 18 ; 18 >
+      au < testing ; 2013 ; 19 ; Music Theory Online Volume 19 ; 19 >
+      au < testing ; 2014 ; 20 ; Music Theory Online Volume 20 ; 20 >
+      au < testing ; 2015 ; 21 ; Music Theory Online Volume 21 ; 21 >
+      au < testing ; 2016 ; 22 ; Music Theory Online Volume 22 ; 22 >
+      au < testing ; 2017 ; 23 ; Music Theory Online Volume 23 ; 23 >
+      au < testing ; 2018 ; 24 ; Music Theory Online Volume 24 ; 24 >
+      au < testing ; 2019 ; 25 ; Music Theory Online Volume 25 ; 25 >
+      au < testing ; 2020 ; 26 ; Music Theory Online Volume 26 ; 26 >
+      au < testing ; 2021 ; 27 ; Music Theory Online Volume 27 ; 27 >
+      au < expected ; 2022 ; 28 ; Music Theory Online Volume 28 ; 28 >
+
+    }
+
+  }
+  
+}
