@@ -4084,7 +4084,6 @@ while (my $line = <>) {
       my $resp = $ua->request($req);
       if ($resp->is_success) {
           my $man_contents = $resp->content;
-          #no lockss permission statement on start page. Permission statement is here: http://gigadb.org/lockss.txt
           if ($req->url ne $resp->request->uri) {
             $vol_title = "Giga Science " . $param{year};
             $result = "Redirected";
@@ -4129,7 +4128,32 @@ while (my $line = <>) {
          }
          sleep(4);
   # End of Resilience Alliance
-  } 
+  # begin CloudPublish/Liverpool University Press
+  } elsif ($plugin eq "LupPlugin" || $plugin eq "ClockssLupPlugin") {
+         $url = sprintf("%slockss-manifest/%s/%s",
+         $param{base_url}, $param{journal_id}, $param{volume_name});
+         $man_url = uri_unescape($url);
+         my $req = HTTP::Request->new(GET, $man_url);
+         my $resp = $ua->request($req);
+         if (($resp->is_success)) {
+             my $man_contents = $resp->content;
+             if ($req->url ne $resp->request->uri) {
+               $vol_title = "All Journals";
+               $result = "Redirected";
+             } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/Volume $param{volume_name}/)) {
+                 if ($man_contents =~ m/<title>\s*(.+)\s*<\/title>/) {
+                     $vol_title= $1 . " Volume " . $param{volume_name}
+                 }
+                 $result = "Manifest"
+             } else {
+                 $result = "--"
+             }
+         } else {
+             $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+         }
+         sleep(4);
+  # End of Liverpool University Press
+  }
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
