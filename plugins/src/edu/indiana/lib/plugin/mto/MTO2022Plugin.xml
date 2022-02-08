@@ -85,7 +85,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|www\.mtosmt\.org)/[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", url_host(base_url)</string>
-      <string>1,"^https?://(%s|www\.mtosmt\.org)/issues/mto\.[0-9]{2}\.%d\.[0-9]+/", url_host(base_url), volume</string>
+      <string>1,"^https?://(%s|www\.mtosmt\.org)/(classic|issues)/mto\.[0-9]{2}\.%d\.[0-9]+/", url_host(base_url), volume</string>
     </list>
   </entry>
   <entry>
@@ -104,6 +104,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_permitted_host_pattern</string>
     <list>
       <string>www\.mtosmt\.org</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>http://mtosmt.org/</string>
+      <string>http://www.mtosmt.org/</string>
+      <string>https://www.mtosmt.org/</string>
     </list>
   </entry>
 </map>
