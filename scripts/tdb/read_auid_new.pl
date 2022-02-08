@@ -4138,7 +4138,8 @@ while (my $line = <>) {
          if (($resp->is_success)) {
              my $man_contents = $resp->content;
              if ($req->url ne $resp->request->uri) {
-               $vol_title = "All Journals";
+               #$vol_title = "All Journals";
+               $vol_title = $resp->request->uri;
                $result = "Redirected";
              } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/Volume $param{volume_name}/)) {
                  if ($man_contents =~ m/<title>\s*(.+)\s*<\/title>/) {
