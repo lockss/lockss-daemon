@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = Fake Scholastica
+  >
+
+  plugin = org.lockss.plugin.scholastica.ScholasticaPlugin
+  param[base_url] = https://onco-hema.healthbooktimes.org/
+  implicit < status ; year ; name ; param[year] >
+
+    {
+    title <
+      name = healthbook TIMES Oncology Hematology ;
+      issn = 2673-2092 ;
+      eissn = 2673-2106
+    >
+
+        au < testing ; 2020 ; healthbook TIMES Oncology Hematology 2020 ; 2020 >
+
+    }
+
+}
