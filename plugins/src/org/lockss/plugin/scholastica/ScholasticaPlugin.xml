@@ -132,6 +132,55 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.scholastica.ScholasticaHtmlCrawlFilterFactory</string>
     </entry>
     <!--
+    might need an api based crawler.
+    https://onco-hema.healthbooktimes.org/api/v1/journals/2444/issues?year=2020
+    {
+  "issues": [
+    {
+      "id": 3939,
+      "title": "healthbook TIMES Oncology Hematology - Edition 4 / 2021",
+      "description": null,
+      "journal_id": 2444,
+      "cover": {
+        "id": 3939,
+        "name": "microsoftteams_image.jpg",
+        "size": 1509923,
+        "content_type": "image/jpeg",
+        "url": "https://s3.amazonaws.com/production.scholastica/issue/3939/cover/original/microsoftteams_image.jpg?1641296297",
+        "thumb": "https://s3.amazonaws.com/production.scholastica/issue/3939/cover/thumb/microsoftteams_image.jpg?1641296297",
+        "small": "https://s3.amazonaws.com/production.scholastica/issue/3939/cover/small/microsoftteams_image.jpg?1641296297",
+        "medium": "https://s3.amazonaws.com/production.scholastica/issue/3939/cover/medium/microsoftteams_image.jpg?1641296297",
+        "large": "https://s3.amazonaws.com/production.scholastica/issue/3939/cover/large/microsoftteams_image.jpg?1641296297",
+        "color1": "rgba(81,81,83, .07)",
+        "color2": "rgba(70,22,33, 1)"
+      },
+      "published": true,
+      "article_ids": [
+        30710,
+        30723,
+        30737,
+        30738,
+        30741,
+        30740,
+        30724
+      ],
+      "year": 2021,
+      "volume": "4",
+      "number": "10",
+      "created_at": "2022-01-04T11:38:17.003Z",
+      "updated_at": "2022-01-04T11:45:02.123Z",
+      "path": "https://onco-hema.healthbooktimes.org/issue/3939-vol-4-issue-10-2021",
+      "url": "https://onco-hema.healthbooktimes.org/issue/3939-vol-4-issue-10-2021",
+      "pretty_name": "Vol. 4, Issue 10, 2021",
+      "slug": "3939-vol-4-issue-10-2021",
+      "published_at": "2022-01-04T11:45:02.122Z",
+      "short_description": "This issue focuses on the recent developments in hepatocellular carcinoma, geriatric, esophagal and gastric cancer as well as expert opinions in prostate, genitourinary and gynecological cancer.",
+      "status": "Published"
+    },
+    ],
+    }
+    -->
+    <!--
     <entry>
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.</string>
