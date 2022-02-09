@@ -262,8 +262,6 @@ public class TestV2AuMover extends LockssTestCase {
     protected void moveAu(ArchivalUnit au) throws IOException {
       movedAus.add(au.getAuId());
       getAuMoveQueue().remove(au);
-      setCurrentAu(null);
-      moveNextAu();
     }
 
     @Override
