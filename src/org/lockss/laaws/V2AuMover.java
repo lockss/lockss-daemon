@@ -415,7 +415,7 @@ public class V2AuMover {
         auMoveQueue.add(au);
       }
     }
-    log.debug("Moving " + auMoveQueue.size() + " aus.");
+    log.debug2("Moving " + auMoveQueue.size() + " aus.");
     while (!terminated && auMoveQueue.iterator().hasNext()) {
       moveNextAu();
     }
@@ -761,10 +761,16 @@ public class V2AuMover {
     String auName = au.getName();
     log.info("Handling request to move AU: " + auName);
     log.info("AuId: " + currentAu);
-    if (v2Aus.contains(au.getAuId()) && !checkMissingContent) {
-      log.info("Skipping move of existing v2 AU: " + au.getName());
-      return;
+    if (v2Aus.contains(au.getAuId())) {
+      if (!checkMissingContent) {
+        log.info("V2 Repo already has au " + au.getName() + ", skipping.");
+        return;
+      }
+      else {
+        log.info("V2 Repo already has au " + au.getName() + ", added to check for unmoved content.");
+      }
     }
+
     try {
       if (v2ServicesUnavailable()) {
         terminated = true;
@@ -823,8 +829,8 @@ public class V2AuMover {
       String v1Url = cachedUrl.getUrl();
       String v2Url = null;
       try {
-        v2Url = UrlUtil.normalizeUrl(
-            cachedUrl.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL), au);
+        v2Url = UrlUtil.normalizeUrl(cachedUrl.getProperties().getProperty(CachedUrl.PROPERTY_NODE_URL),
+            au);
       }
       catch (Exception ex) {
         log.warning("Unable to normalize uri for " + v1Url, ex);
@@ -835,6 +841,7 @@ public class V2AuMover {
       if (v2Url == null) {
         v2Url = v1Url;
       }
+      log.debug3("v1 url=" + v1Url +"  v2 url= " + v2Url);
       // we have the possibility that some or all of the artifacts were moved.
       // We are looking for previously moved versions of the 'current' cu
       ArtifactPageInfo pageInfo;
@@ -842,17 +849,16 @@ public class V2AuMover {
       // if the v2 repo knows about this au we need to call getArtifacts.
       if (v2Aus.contains(au.getAuId())) {
         isPartialContent = true;
+        log.debug2("Checking for unmoved content.");
         do {
           pageInfo = repoCollectionsApiClient.getArtifacts(collection, au.getAuId(),
               v2Url, null, null, false, null, token);
           cuArtifacts.addAll(pageInfo.getArtifacts());
           token = pageInfo.getPageInfo().getContinuationToken();
         } while (!terminated && !StringUtil.isNullString(token));
-        if (log.isDebug3()) {
-          log.debug3("Found " + cuArtifacts.size() + " matches for " + v2Url);
-        }
+        log.debug3("Found " + cuArtifacts.size() + " matches for " + v2Url);
       }
-      moveCuVersions(v1Url, cachedUrl, cuArtifacts);
+      moveCuVersions(v2Url, cachedUrl, cuArtifacts);
     }
     allCusQueued = true;
   }
@@ -860,23 +866,25 @@ public class V2AuMover {
   /**
    * Move all versions of a cachedUrl.
    *
-   * @param v1Url       The uri for the current cached url.
+   * @param v2Url       The uri for the current cached url.
    * @param cachedUrl   The cachedUrl we which to move
    * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
    */
-  void moveCuVersions(String v1Url, CachedUrl cachedUrl, List<Artifact> v2Artifacts) {
+  void moveCuVersions(String v2Url, CachedUrl cachedUrl, List<Artifact> v2Artifacts) {
     if (!terminated) {
       String auid = cachedUrl.getArchivalUnit().getAuId();
       CachedUrl[] localVersions = cachedUrl.getCuVersions();
       Queue<CachedUrl> cuQueue = Collections.asLifoQueue(new ArrayDeque<>());
+      int v2Count = v2Artifacts.size();
       //If we have more v1 versions than the v2 repo - copy the missing items
-      if (v2Artifacts.size() > 0) {
-        log.debug2("v2 versions available=" + v2Artifacts.size() + " v1 versions available="
+      if (v2Count > 0) {
+        log.debug3("v2 versions available=" + v2Count + " v1 versions available="
             + localVersions.length);
       }
       // if the v2 repository has fewer versions than the v1 repository
       // then move the missing versions or release the cu version.
       int vers_to_move = localVersions.length - v2Artifacts.size();
+      log.debug2("Queueing " + vers_to_move + "/" + localVersions.length + " versions...");
       if (vers_to_move > 0) {
         for (int vx = 0; vx < localVersions.length; vx++) {
           CachedUrl ver = localVersions[vx];
@@ -887,10 +895,7 @@ public class V2AuMover {
             AuUtil.safeRelease(ver);
           }
         }
-        if (log.isDebug2()) {
-          log.debug2("Moving " + vers_to_move + "/" + localVersions.length + " versions...");
-        }
-        moveNextCuVersion(auid, v1Url, cuQueue);
+        moveNextCuVersion(auid, v2Url, cuQueue);
       }
     }
   }
@@ -898,15 +903,15 @@ public class V2AuMover {
   /**
    * Queue a request to create an artifact for the next version of a CachedUrl
    * @param auid The au we are moving
-   * @param v1Url The v1 url
+   * @param v2Url The v2 url
    * @param cuQueue The queue of cached url versions.
    */
-  void moveNextCuVersion(String auid, String v1Url, Queue<CachedUrl> cuQueue) {
+  void moveNextCuVersion(String auid, String v2Url, Queue<CachedUrl> cuQueue) {
     Long collectionDate = null;
     CachedUrl cu = cuQueue.poll();
     if (cu == null) {
       if (log.isDebug3()) {
-        log.debug3("All versions of " + v1Url + " have been queued.");
+        log.debug3("All versions of " + v2Url + " have been queued.");
       }
       return;
     }
@@ -916,15 +921,15 @@ public class V2AuMover {
         collectionDate = Long.parseLong(fetchTime);
       }
       else {
-        log.debug2(v1Url + ":version: " + cu.getVersion() + " is missing fetch time.");
+        log.debug2(v2Url + ":version: " + cu.getVersion() + " is missing fetch time.");
       }
       if (log.isDebug3()) {
         log.debug3("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
       }
-      createArtifact(auid, v1Url, collectionDate, cu, collection, cuQueue);
+      createArtifact(auid, v2Url, collectionDate, cu, collection, cuQueue);
     }
     catch (ApiException apie) {
-      String err = v1Url + ": failed to create version: " + cu.getVersion() + ": " +
+      String err = v2Url + ": failed to create version: " + cu.getVersion() + ": " +
           apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
       auErrors.add(err);
@@ -1071,17 +1076,17 @@ public class V2AuMover {
    * Make an asynchronous rest call to the V2 repository to create a new artifact.
    *
    * @param auid           au identifier for the CachedUrl we are moving.
-   * @param v1Url          the uri  for the CachedUrl we are moving.
+   * @param v2Url          the uri  for the CachedUrl we are moving.
    * @param collectionDate the date at which this item was collected or null
    * @param cu             the CachedUrl we are moving.
    * @param collectionId   the v2 collection we are moving to
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
-  private void createArtifact(String auid, String v1Url, Long collectionDate,
+  private void createArtifact(String auid, String v2Url, Long collectionDate,
       CachedUrl cu, String collectionId, Queue<CachedUrl> cuQueue) throws ApiException {
     log.debug3("enqueing create artifact request...");
-    repoCollectionsApiClient.createArtifactAsync(collectionId, auid, v1Url, cu, collectionDate,
-        new CreateArtifactCallback(auid, v1Url, cu.getContentSize(), cuQueue));
+    repoCollectionsApiClient.createArtifactAsync(collectionId, auid, v2Url, cu, collectionDate,
+        new CreateArtifactCallback(auid, v2Url, cu.getContentSize(), cuQueue));
   }
 
   /**
@@ -1291,14 +1296,14 @@ public class V2AuMover {
   protected class CreateArtifactCallback implements ApiCallback<Artifact> {
 
     String auId;
-    String v1Url;
+    String v2Url;
     Queue<CachedUrl> cuQueue;
     long contentSize;
 
     public CreateArtifactCallback(String auid, String uri, long contentSize,
         Queue<CachedUrl> cuQueue) {
       this.auId = auid;
-      this.v1Url = uri;
+      this.v2Url = uri;
       this.cuQueue = cuQueue;
       this.contentSize = contentSize;
     }
@@ -1307,7 +1312,7 @@ public class V2AuMover {
     public void onFailure(ApiException e, int statusCode,
         Map<String, List<String>> responseHeaders) {
       String err =
-          "Create Artifact for " + v1Url + " failed: " + statusCode + " - " + e.getMessage();
+          "Create Artifact for " + v2Url + " failed: " + statusCode + " - " + e.getMessage();
       log.debug(err);
       errorList.add(err);
       auErrors.add(err);
@@ -1322,7 +1327,7 @@ public class V2AuMover {
         commitArtifact(result);
         auContentBytesMoved += contentSize;
         if (cuQueue.peek() != null) {
-          moveNextCuVersion(auId, v1Url, cuQueue);
+          moveNextCuVersion(auId, v2Url, cuQueue);
         }
         else {
           auUrlsMoved++;
