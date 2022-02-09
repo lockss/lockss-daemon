@@ -10339,6 +10339,25 @@
   {
 
       title <
+        name = Journal of Diabetes and Endocrine Practice ;
+        eissn = 2772-7653
+      >
+
+      param[journal_issn] = 2078-7685
+#      param[base_url] = https://www.jdeponline.com/
+      #move to Thieme, 2022
+
+      au < exists ; exists ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ ; ; >
+      au < exists ; exists ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ ; ; >
+      au < exists ; exists ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ ; ; >
+      au < exists ; exists ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ ; ; >
+
+  }
+
+
+  {
+
+      title <
         name = Journal of Diabetology ;
         issn = 2543-3288 ;
         eissn = 2078-7685
@@ -10782,6 +10801,7 @@
 
       param[journal_issn] = 2519-139X
 #      param[base_url] = http://journal.limu.edu.ly/
+      #move to Thieme, 2022
 
       au < finished ; crawling ; 2016 ; Libyan International Medical University Journal Volume 1 ; 2016 ; 1 ; https://journal.limu.edu.ly/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; Libyan International Medical University Journal Volume 2 ; 2017 ; 2 ; https://journal.limu.edu.ly/ ; ; reingest4.clockss.org:8082 >
@@ -10789,7 +10809,6 @@
       au < finished ; crawling ; 2019 ; Libyan International Medical University Journal Volume 4 ; 2019 ; 4 ; https://journal.limu.edu.ly/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Libyan International Medical University Journal Volume 5 ; 2020 ; 5 ; https://journal.limu.edu.ly/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Libyan International Medical University Journal Volume 6 ; 2021 ; 6 ; https://journal.limu.edu.ly/ ; ; >
-      au < expected ; exists ; 2022 ; Libyan International Medical University Journal Volume 7 ; 2022 ; 7 ; https://journal.limu.edu.ly/ ; ; >
 
   }
 
