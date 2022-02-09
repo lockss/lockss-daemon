@@ -131,33 +131,6 @@
   {
 
     title <
-      name = Before Farming ;
-      issn = 1476-4253 ;
-      eissn = 2056-3264 ;
-      issnl = 1476-4253
-    >
-
-    param[journal_id] = bfarm
-    #Published 2002-2012
-    comment[continued_by] = Hunter Gatherer Research
-
-    au < manifest ; 2002 ; Before Farming Volume 2002 ; 2002 >
-    au < manifest ; 2003 ; Before Farming Volume 2003 ; 2003 >
-    au < manifest ; 2004 ; Before Farming Volume 2004 ; 2004 >
-    au < manifest ; 2005 ; Before Farming Volume 2005 ; 2005 >
-    au < manifest ; 2006 ; Before Farming Volume 2006 ; 2006 >
-    au < manifest ; 2007 ; Before Farming Volume 2007 ; 2007 >
-    au < doNotProcess ; 2008 ; Before Farming Volume 2008 ; 2008 >
-    au < doNotProcess ; 2009 ; Before Farming Volume 2009 ; 2009 >
-    au < doNotProcess ; 2010 ; Before Farming Volume 2010 ; 2010 >
-    au < doNotProcess ; 2011 ; Before Farming Volume 2011 ; 2011 >
-    au < doNotProcess ; 2012 ; Before Farming Volume 2012 ; 2012 >
-
-  }
-
-  {
-
-    title <
       name = British Journal of Canadian Studies ;
       issn = 0269-9222 ;
       eissn = 1757-8078 ;
@@ -758,15 +731,35 @@
       eissn = 2056-3264 ;
       issnl = 2056-3264
     >
-
+    {
     param[journal_id] = hgr
+    comment[continues] = Before Farming
     #Published 2015-2018
 
     au < doNotProcess ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
     au < doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 >
     au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
     au < manifest ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
+    }
 
+    {
+    param[journal_id] = bfarm
+    comment[continued_by] = Hunter Gatherer Research
+    #issn 1476-4253
+    #Published 2002-2012
+
+    au < manifest ; 2002 ; Before Farming Volume 2002 ; 2002 >
+    au < manifest ; 2003 ; Before Farming Volume 2003 ; 2003 >
+    au < manifest ; 2004 ; Before Farming Volume 2004 ; 2004 >
+    au < manifest ; 2005 ; Before Farming Volume 2005 ; 2005 >
+    au < manifest ; 2006 ; Before Farming Volume 2006 ; 2006 >
+    au < manifest ; 2007 ; Before Farming Volume 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Before Farming Volume 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Before Farming Volume 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Before Farming Volume 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Before Farming Volume 2011 ; 2011 >
+    au < doNotProcess ; 2012 ; Before Farming Volume 2012 ; 2012 >
+    }
   }
 
   {
