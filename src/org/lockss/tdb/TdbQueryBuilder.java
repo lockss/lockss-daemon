@@ -652,13 +652,14 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @since 1.67
    */
   public static final List<String> NON_ALLIANCE_PLUGINS =
-      AppUtil.ul("edu.columbia.plugin.JiwsPlugin", // humanities_project
+      AppUtil.ul(// (keep releaseemail.py in sync)
+                 "edu.columbia.plugin.JiwsPlugin", // humanities_project
                  "edu.cornell.library.epr.EPRPlugin2001", // humanities_project
                  "edu.cornell.library.epr.EPRPlugin2002On", // humanities_project
                  "edu.cornell.library.epr.EPRPlugin", // humanities_project
                  "edu.cornell.library.jbe.JBEPlugin", // humanities_project
-                 "edu.fcla.plugin.arkivoc.ArkivocPlugin", // humanities_project
-                 "edu.fcla.plugin.arkivoc.Arkivoc2022Plugin", // humanities_project
+                 "edu.fcla.plugin.arkivoc.ArkivocPlugin", // prod
+                 "edu.fcla.plugin.arkivoc.Arkivoc2022Plugin", // prod
                  "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin", // humanities_project
                  "edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022Plugin", // humanities_project
                  "edu.harvard.plugin.jrs.JRSPlugin", // humanities_project
@@ -667,7 +668,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin", // humanities_project
                  "edu.indiana.lib.plugin.mto.MTOPlugin", // humanities_project
                  "edu.indiana.lib.plugin.mto.MTO2022Plugin", // humanities_project
-                 "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin",
+                 "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin", // humanities_project
                  "edu.jhu.library.plugin.MedievalForumPlugin",
                  "edu.nyu.plugin.bonefolder.BonefolderPlugin",
                  "edu.nyu.plugin.ejce.EJCEPlugin",
@@ -737,7 +738,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "org.nypl.plugin.PoetryBayPlugin",
                  "org.nypl.plugin.shampoo.ShampooPlugin",
                  "org.nypl.plugin.WordsWithoutBordersPlugin",
-                 "za.ac.nlsa.lockss.plugin.WaterSAPlugin");
+                 "za.ac.nlsa.lockss.plugin.WaterSAPlugin"
+                 );
   
   /**
    * <p>

@@ -20,22 +20,22 @@ RELEASED = set(['released', 'down', 'superseded', 'zapped'])
 
 # Set of non-Alliance plugins
 NON_ALLIANCE = set([ \
-                 "edu.columbia.plugin.JiwsPlugin",
-                 "edu.cornell.library.epr.EPRPlugin2001",
-                 "edu.cornell.library.epr.EPRPlugin2002On",
-                 "edu.cornell.library.epr.EPRPlugin",
-                 "edu.cornell.library.jbe.JBEPlugin",
-                 "edu.fcla.plugin.arkivoc.ArkivocPlugin",
-                 "edu.fcla.plugin.arkivoc.Arkivoc2022Plugin",
-                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin",
-                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022Plugin",
-                 "edu.harvard.plugin.jrs.JRSPlugin",
-                 "edu.harvard.plugin.jrs.JRS2022Plugin",
-                 "edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin",
-                 "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin",
-                 "edu.indiana.lib.plugin.mto.MTOPlugin",
-                 "edu.indiana.lib.plugin.mto.MTO2022Plugin",
-                 "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin",
+                 "edu.columbia.plugin.JiwsPlugin", # humanities_project
+                 "edu.cornell.library.epr.EPRPlugin2001", # humanities_project
+                 "edu.cornell.library.epr.EPRPlugin2002On", # humanities_project
+                 "edu.cornell.library.epr.EPRPlugin", # humanities_project
+                 "edu.cornell.library.jbe.JBEPlugin", # humanities_project
+                 "edu.fcla.plugin.arkivoc.ArkivocPlugin", # prod
+                 "edu.fcla.plugin.arkivoc.Arkivoc2022Plugin", # prod
+                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin", # humanities_project
+                 "edu.harvard.plugin.AppliedSemiotics.AppliedSemiotics2022Plugin", # humanities_project
+                 "edu.harvard.plugin.jrs.JRSPlugin", # humanities_project
+                 "edu.harvard.plugin.jrs.JRS2022Plugin", # humanities_project
+                 "edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin", # humanities_project
+                 "edu.indiana.lib.plugin.jcjpc.JcjpcPlugin", # humanities_project
+                 "edu.indiana.lib.plugin.mto.MTOPlugin", # humanities_project
+                 "edu.indiana.lib.plugin.mto.MTO2022Plugin", # humanities_project
+                 "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin", # humanities_project
                  "edu.jhu.library.plugin.MedievalForumPlugin",
                  "edu.nyu.plugin.bonefolder.BonefolderPlugin",
                  "edu.nyu.plugin.ejce.EJCEPlugin",
@@ -56,16 +56,16 @@ NON_ALLIANCE = set([ \
                  "edu.wisc.library.plugin.CortlandReview99Plugin",
                  "edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin",
                  "edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin",
-                 "gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin",
-                 "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin",
-                 "gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin",
-                 "gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin",
-                 "gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin",
-                 "gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin",
-                 "gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin",
-                 "gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin",
-                 "gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin",
-                 "gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin",
+                 "gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin", # gpo-pilot
+                 "gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin", # gpo-pilot
                  "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
                  "gov.loc.plugin.TESLEJPlugin",
                  "nz.ac.otago.plugin.scholia.ScholiaPlugin",
@@ -77,12 +77,12 @@ NON_ALLIANCE = set([ \
                  "org.lockss.plugin.disputatio.DisputatioPlugin",
                  "org.lockss.plugin.emc.EarlyModernCulturePlugin",
                  "org.lockss.plugin.emls.EmlsPlugin",
-                 "org.lockss.plugin.etd.fsuplugin.FSUETDPlugin",
-                 "org.lockss.plugin.etd.gatechplugin.GATechETDPlugin",
-                 "org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin",
-                 "org.lockss.plugin.etd.ukyplugin.UKYETDPlugin",
-                 "org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin",
-                 "org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin",
+                 "org.lockss.plugin.etd.fsuplugin.FSUETDPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.gatechplugin.GATechETDPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.ukyplugin.UKYETDPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin", # aserl-etd
+                 "org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin", # aserl-etd
                  "org.lockss.plugin.evergreenreview.EvergreenReviewPlugin",
                  "org.lockss.plugin.GendersPlugin",
                  "org.lockss.plugin.histcoop.HistoryCooperativePlugin",
@@ -128,7 +128,7 @@ def prettyInt(i):
   '''Given an integer between 0 and 999,999, returns a string version
   with a comma in the thousands position if needed.'''
   if i < 1000: return str(i)
-  return str(i // 1000) + ',' + str(i % 1000).rjust(3, '0')
+  return str(i # 1000) + ',' + str(i % 1000).rjust(3, '0')
 
 def wordInt(i):
   '''Given a positive integer, returns a string spelling out the
@@ -137,7 +137,7 @@ def wordInt(i):
   if i >= 100: return prettyInt(i)
   s = ''
   if i >= 20:
-    s = {2:'twenty', 3:'thirty', 4:'forty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}[i // 10]
+    s = {2:'twenty', 3:'thirty', 4:'forty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}[i # 10]
     if i % 10 == 0: return s
     s = s + ' '
     i = i % 10
