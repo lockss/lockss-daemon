@@ -150,6 +150,26 @@
 
     }
 
+    {
+
+      plugin = org.lockss.plugin.springer.ClockssSpringerJatsSourcePlugin
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      #books came in 2022
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_01 ; 2022_01 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_02 ; 2022_02 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_03 ; 2022_03 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_04 ; 2022_04 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_05 ; 2022_05 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_06 ; 2022_06 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_07 ; 2022_07 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_08 ; 2022_08 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_09 ; 2022_09 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_10 ; 2022_10 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_11 ; 2022_11 >
+      au < exists ; exists ; 2022 ; Springer Delivered Source Content 2022_12 ; 2022_12 >
+
+    }
   }
 
 }
