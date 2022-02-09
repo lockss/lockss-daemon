@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>OECD Journals Plugin</string>
+        <string>OECD iLibrary Journals Plugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+        <string>"OECD iLibrary Journals Plugin, Base URL %s, Journal ID %s, Year %d, Journal Directory %s, Topic %s, Journal ISSN %s", base_url, journal_id, year, journal_dir, topic, journal_issn</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>

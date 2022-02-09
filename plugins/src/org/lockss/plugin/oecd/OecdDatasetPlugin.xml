@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>OECD Datasets Plugin</string>
+        <string>OECD iLibrary Datasets Plugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD Datasets Plugin, Base URL %s, Year %d", base_url, year</string>
+        <string>"OECD iLibrary Datasets Plugin, Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>au_crawlrules</string>
