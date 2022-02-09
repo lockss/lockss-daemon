@@ -1,0 +1,109 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.oecd.OecdBookPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>OECD iLibrary Book Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.75.0</string><!--  inception -->
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>prefix_path</key>
+        <displayName>Prefix Path</displayName>
+        <description>Prefix path under the base URL</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>start_path</key>
+        <displayName>Start Path</displayName>
+        <description>Start path under the base URL (of which prefix_path is a prefix)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"OECD iLibrary Book Plugin, Base URL %s, Prefix Path %s, Start Path %s", base_url, prefix_path, start_path</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s", base_url, start_path</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%s%s", base_url, start_path</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^(%s|https?://(assets\.oecdcode\.org|cdn\.datatables\.net|(ajax|fonts)\.(googleapis|gstatic)\.com|code\.jquery\.com)/).+\.(bmp|css|eot|gif|ico|jpe?g|js|png|tif?f|svg|ttf|woff.?)(\?.*)?$", base_url</string>
+      <string>1,"^https?://((ajax|fonts)\.(googleapis|gstatic)\.com)/css"</string>
+      <string>1,"^%s%s", base_url, start_path</string>
+      <string>1,"^%s(deliver/)?[^/]+\.(epub|pdf)\?.*mimetype=(epub|pdf)", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>assets\.oecdcode\.org</string>
+      <string>cdn\.datatables\.net</string>
+      <string>(ajax|fonts)\.(googleapis|gstatic)\.com</string>
+      <string>code\.jquery\.com</string>
+    </list>
+  </entry>
+</map>

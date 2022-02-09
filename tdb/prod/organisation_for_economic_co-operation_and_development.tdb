@@ -1,0 +1,66 @@
+{
+
+  publisher <
+    name = Organisation for Economic Co-operation and Development
+  >
+
+  {
+
+    plugin = org.lockss.plugin.oecd.OecdBookPlugin
+    param[base_url] = https://www.oecd-ilibrary.org/
+    implicit < status ; year ; isbn ; name ; param[prefix_path] ; param[start_path] >
+
+    {
+
+      title <
+        name = Tax Administration ;
+        type = bookSeries ;
+        eissn = 2307-7727
+      >
+
+      au < manifest ; 2006 ; 9789264064904 ; Tax Administration in OECD and Selected Non-OECD Countries: Comparative Information Series (2006) ; taxation/tax-administration-in-oecd-and-selected-non-oecd-countries ; taxation/tax-administration-in-oecd-and-selected-non-oecd-countries_9789264064904-en >
+      au < manifest ; 2013 ; 9789264200814 ; Tax Administration 2013: Comparative Information on OECD and Other Advanced and Emerging Economies ; taxation/tax-administration-2013 ; taxation/tax-administration-2013_9789264200814-en >
+      au < manifest ; 2015 ; 9789264232341 ; Tax Administration 2015: Comparative Information on OECD and Other Advanced and Emerging Economies ; taxation/tax-administration-2015 ; taxation/tax-administration-2015_tax_admin-2015-en >
+      au < manifest ; 2017 ; 9789264279124 ; Tax Administration 2017: Comparative Information on OECD and Other Advanced and Emerging Economies ; taxation/tax-administration-2017 ; taxation/tax-administration-2017_tax_admin-2017-en >
+      au < manifest ; 2017 ; 9789264586246 ; Tax Administration 2017: Comparative Information on OECD and Other Advanced and Emerging Economies (Chinese) ; taxation/tax-administration-2017 ; taxation/tax-administration-2017_db6a9062-zh >
+      au < manifest ; 2019 ; 9789264678446 ; Tax Administration 2019: Comparative Information on OECD and Other Advanced and Emerging Economies ; taxation/tax-administration-2019 ; taxation/tax-administration-2019_74d162b6-en >
+
+    }
+    
+    {
+
+      title <
+        name = OECD Economic Surveys: Sweden ;
+        type = bookSeries ;
+        eissn = 1999-0448
+      >
+
+      au < manifest ; 2019 ; 9789264449060 ; OECD Economic Surveys: Sweden 2019 ; economics/oecd-economic-surveys-sweden-2019 ; economics/oecd-economic-surveys-sweden-2019_c510039b-en >
+
+    }
+    
+    {
+
+      title <
+        name = Études économiques de l'OCDE : Suède ;
+        type = bookSeries ;
+        eissn = 1999-0456
+      >
+
+      au < manifest ; 2019 ; 9789264833524 ; Études économiques de l'OCDE : Suède 2019 (version abrégée) ; economics/oecd-economic-surveys-sweden-2019 ; economics/etudes-economiques-de-l-ocde-suede-2019-version-abregee_dc7ecbd6-fr >
+
+    }
+    
+    {
+    
+      title <
+        name = Organisation for Economic Co-operation and Development Books
+      >
+    
+      au < manifest ; 2020 ; 9789264362819 ; Housing and Inclusive Growth ; social-issues-migration-health/housing-and-inclusive-growth ; social-issues-migration-health/housing-and-inclusive-growth_6ef36f4b-en >
+    
+    }
+
+  }
+
+}
