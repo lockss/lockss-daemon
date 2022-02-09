@@ -41,7 +41,7 @@ edu.nyu.plugin.bonefolder.BonefolderPlugin: humanities
 edu.nyu.plugin.ejce.EJCEPlugin: humanities
 edu.nyu.plugin.ejcjs.EJCJSPlugin: humanities
 edu.nyu.plugin.ejcjs.EJCJS2022Plugin: humanities
-edu.nyu.plugin.entelequia.EntelequiaPlugin
+edu.nyu.plugin.entelequia.EntelequiaPlugin: %unknown
 edu.nyu.plugin.heplwebzine.HEPLwebzine: humanities
 edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin: humanities
 edu.nyu.plugin.LeedsICSPlugin: humanities
@@ -145,9 +145,9 @@ org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocAtyponPlugin: a
 org.lockss.plugin.atypon.aslha.ClockssAmericanSpeechLanguageHearingAssocAtyponPlugin: clockss
 org.lockss.plugin.atypon.asm.AsmPlugin: alliance
 org.lockss.plugin.atypon.asm.ClockssAsmPlugin: clockss
-org.lockss.plugin.atypon.BaseAtyponBooksPlugin: alliance
-org.lockss.plugin.atypon.BaseAtyponISBNBooksPlugin: alliance
-org.lockss.plugin.atypon.BaseAtyponPlugin: alliance
+org.lockss.plugin.atypon.BaseAtyponBooksPlugin: %parent
+org.lockss.plugin.atypon.BaseAtyponISBNBooksPlugin: %parent
+org.lockss.plugin.atypon.BaseAtyponPlugin: %parent
 org.lockss.plugin.atypon.besbjs.BESBJSPlugin: alliance
 org.lockss.plugin.atypon.bir.BIRAtyponPlugin: alliance
 org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin: clockss
@@ -205,9 +205,9 @@ org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin: clockss
 org.lockss.plugin.BasicBloggerPlugin
 org.lockss.plugin.bepress.BePressPlugin: prod
 org.lockss.plugin.bepress.BerkeleyElectronicPressSectionPlugin: prod
-org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin: prod: clockss
-org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressSectionPlugin: prod: clockss
-org.lockss.plugin.bepress.ClockssDigitalCommonsRepositoryPlugin: prod: clockss
+org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin: clockss
+org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressSectionPlugin: clockss
+org.lockss.plugin.bepress.ClockssDigitalCommonsRepositoryPlugin: clockss
 org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin: prod
 org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin: prod
 org.lockss.plugin.berghahn.BerghahnJournalsPlugin: alliance
@@ -216,7 +216,7 @@ org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin: clockss
 org.lockss.plugin.bioone.BioOne2020Plugin: alliance: prod
 org.lockss.plugin.bioone.BioOneAtyponPlugin: alliance: prod
 org.lockss.plugin.bioone.BioOnePlugin: alliance: prod
-org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin: prod: clockss
+org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin: clockss
 org.lockss.plugin.blackbird.BlackbirdPlugin: humanities
 org.lockss.plugin.blackquotidianrdf.ClockssBlackQuotidianRDFPlugin: clockss
 org.lockss.plugin.bloomsburyqatar.BloomsburyQatarPlugin
@@ -245,9 +245,9 @@ org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksPlugin: clockss
 org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin: clockss
 org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriMarcDirSourcePlugin: clockss
 org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriMarcSourcePlugin: clockss
-org.lockss.plugin.clockss.ClockssDeliveredSourcePlugin: clockss
-org.lockss.plugin.clockss.ClockssDirSourcePlugin: clockss
-org.lockss.plugin.clockss.ClockssSourcePlugin: clockss
+org.lockss.plugin.clockss.ClockssDeliveredSourcePlugin: %parent
+org.lockss.plugin.clockss.ClockssDirSourcePlugin: %parent
+org.lockss.plugin.clockss.ClockssSourcePlugin: %parent
 org.lockss.plugin.clockss.codeocean.ClockssCodeOceanSourcePlugin: clockss
 org.lockss.plugin.clockss.coursesource.ClockssCourseSourceSourcePlugin: clockss
 org.lockss.plugin.clockss.crossref.ClockssCrossrefSourcePlugin: clockss
@@ -425,7 +425,7 @@ org.lockss.plugin.highwire.biologists.BiologistsDrupalPlugin: alliance
 org.lockss.plugin.highwire.biologists.ClockssBiologistsDrupalPlugin: clockss
 org.lockss.plugin.highwire.bmj.BMJDrupalPlugin: alliance
 org.lockss.plugin.highwire.cfpc.CollegeFamilyPhysCanadaDrupalPlugin: alliance
-org.lockss.plugin.highwire.ClockssHighWireJCorePlugin: clockss
+org.lockss.plugin.highwire.ClockssHighWireJCorePlugin: %parent
 org.lockss.plugin.highwire.ClockssHighWirePlugin: clockss
 org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin: clockss
 org.lockss.plugin.highwire.cma.CmaDrupalPlugin: alliance
@@ -442,7 +442,7 @@ org.lockss.plugin.highwire.gsl.ClockssGSLDrupalPlugin: clockss
 org.lockss.plugin.highwire.gsl.GSLDrupalPlugin: alliance
 org.lockss.plugin.highwire.gsw.ClockssGSWDrupalPlugin: clockss
 org.lockss.plugin.highwire.gsw.GSWDrupalPlugin: alliance
-org.lockss.plugin.highwire.HighWireJCorePlugin: alliance
+org.lockss.plugin.highwire.HighWireJCorePlugin: %parent
 org.lockss.plugin.highwire.HighWirePlugin: alliance
 org.lockss.plugin.highwire.HighWirePressH20Plugin: alliance
 org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin: alliance
@@ -459,7 +459,7 @@ org.lockss.plugin.highwire.lsa.ClockssLifeScienceAllianceDrupalPlugin: clockss
 org.lockss.plugin.highwire.nas.ClockssNasDrupalPlugin: clockss
 org.lockss.plugin.highwire.nas.NasDrupalPlugin: alliance
 org.lockss.plugin.highwire.ncmj.NcmjDrupalPlugin: alliance
-org.lockss.plugin.highwire.origins.HighWireOriginsPlugin
+org.lockss.plugin.highwire.origins.HighWireOriginsPlugin: %parent
 org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin: clockss
 org.lockss.plugin.highwire.oup.OUPDrupalPlugin: alliance
 org.lockss.plugin.highwire.pda.ClockssPDADrupalPlugin: clockss
@@ -589,8 +589,8 @@ org.lockss.plugin.pub2web.hbku.HBKUPlugin: alliance
 org.lockss.plugin.pub2web.iet.ClockssIetJournalsPlugin: clockss
 org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin: clockss
 org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin: alliance
-org.lockss.plugin.pub2web.Pub2WebBooksPlugin: alliance
-org.lockss.plugin.pub2web.Pub2WebJournalsPlugin: alliance
+org.lockss.plugin.pub2web.Pub2WebBooksPlugin: %parent
+org.lockss.plugin.pub2web.Pub2WebJournalsPlugin: %parent
 org.lockss.plugin.pubfactory.ajtmh.AjtmhPlugin: alliance
 org.lockss.plugin.pubfactory.ajtmh.ClockssAjtmhPlugin: clockss
 org.lockss.plugin.pubfactory.ametsoc.AMetSoc2021Plugin: alliance
@@ -600,8 +600,8 @@ org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversi
 org.lockss.plugin.pubfactory.manchesteruniversitypress.ClockssManchesterUniversityPressPlugin: clockss
 org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressBooksPlugin: alliance
 org.lockss.plugin.pubfactory.manchesteruniversitypress.ManchesterUniversityPressPlugin: alliance
-org.lockss.plugin.pubfactory.PubFactoryBooksPlugin: alliance
-org.lockss.plugin.pubfactory.PubFactoryJournalsPlugin: alliance
+org.lockss.plugin.pubfactory.PubFactoryBooksPlugin: %parent
+org.lockss.plugin.pubfactory.PubFactoryJournalsPlugin: %parent
 org.lockss.plugin.resiliencealliance.ClockssResilienceAlliancePlugin: clockss
 org.lockss.plugin.respediatrica.ClockssResPediatricaOaiPlugin: clockss
 org.lockss.plugin.respediatrica.ResPediatricaOaiPlugin: alliance
@@ -641,7 +641,7 @@ org.lockss.plugin.silverchair.aota.ClockssAOTASilverchairPlugin: clockss
 org.lockss.plugin.silverchair.arvo.ARVOSilverchairPlugin
 org.lockss.plugin.silverchair.ash.ASHSilverchairPlugin
 org.lockss.plugin.silverchair.ClockssSilverchairBooksPlugin: clockss
-org.lockss.plugin.silverchair.ClockssSilverchairCommonThemePlugin: clockss
+org.lockss.plugin.silverchair.ClockssSilverchairCommonThemePlugin: %parent
 org.lockss.plugin.silverchair.ClockssSilverchairJournalsPlugin: clockss
 org.lockss.plugin.silverchair.ClockssSilverchairProceedingsPlugin: clockss
 org.lockss.plugin.silverchair.companybiologists.ClockssCompanyBiologistsSilverchairPlugin: clockss
@@ -659,7 +659,7 @@ org.lockss.plugin.silverchair.portlandpress.PortlandPressSilverchairPlugin: alli
 org.lockss.plugin.silverchair.rockefelleruniversitypress.ClockssRockefellerUniversityPressSilverchairPlugin: clockss
 org.lockss.plugin.silverchair.rockefelleruniversitypress.RockefellerUniversityPressSilverchairPlugin: alliance
 org.lockss.plugin.silverchair.SilverchairBooksPlugin: alliance
-org.lockss.plugin.silverchair.SilverchairCommonThemePlugin: alliance
+org.lockss.plugin.silverchair.SilverchairCommonThemePlugin: %parent
 org.lockss.plugin.silverchair.SilverchairJournalsPlugin: alliance
 org.lockss.plugin.silverchair.SilverchairProceedingsPlugin: alliance
 org.lockss.plugin.silverchair.ucpress.UCPressSilverchairPlugin
