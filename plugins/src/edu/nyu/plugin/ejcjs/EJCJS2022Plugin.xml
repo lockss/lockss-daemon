@@ -33,28 +33,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - humanities_project registry</string>
+    <string>ready - humanities_project registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.nyu.plugin.ejcjs.EJCJSPlugin</string>
+    <string>edu.nyu.plugin.ejcjs.EJCJS2022Plugin</string>
   </entry>
     <entry>
     <string>plugin_version</string>
-    <string>4</string>
-  </entry>
-  <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Metadata</string>
-        <string>2</string>
-      </entry>
-    </map>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Electronic Journal of Contemporary Japanese Studies Plugin (Legacy)</string>
+    <string>Electronic Journal of Contemporary Japanese Studies Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -69,11 +60,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <description>Volume number</description>
+        <type>6</type>
+        <size>8</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -81,32 +72,28 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Electronic Journal of Contemporary Japanese Studies Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
+    <string>"Electronic Journal of Contemporary Japanese Studies Plugin (Legacy), Base URL %s, Volume %d", base_url, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sLOCKSS_Manifests/manifest%d.html", base_url, year</string>
+    <string>"%sejcjs/index.html", base_url</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sLOCKSS_Manifests/manifest2001.html", base_url</string><!-- a surviving manifest page -->
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"^%s[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", base_url</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%scontents/", base_url</string>
-      <string>1,"^%s.*/%d/", base_url, year</string>
+      <string>1,"^%sejcjs/vol%d/", base_url, volume</string>
+      <string>2,"^%s(articles|discussionpapers|reviews)/index\.html$", base_url</string>
+      <string>1,"^%s(articles|discussionpapers|reviews)/", base_url</string>
+      <string>1,"^%s[^/]+/[^/]+\.pdf$", base_url</string>
+      <!-- e.g. http://www.japanesestudies.org.uk/images/papers/Ishii_Files/ishii_table_1.html in volume 5, http://www.japanesestudies.org.uk/images/papers/2006/Tran_Files/TranF1.doc in volume 6 -->
+      <string>1,"^%simages/", base_url</string>
     </list>
-  </entry>
-  <entry>
-        <string>au_feature_urls</string>
-        <map>
-          <entry>
-            <string>au_title</string>
-            <string>"%scontents/contents_year.html", base_url</string>
-          </entry>
-          <entry>
-            <string>au_volume</string>
-            <string>"%scontents/contents_year.html#%d", base_url, year</string>
-          </entry>
-        </map>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

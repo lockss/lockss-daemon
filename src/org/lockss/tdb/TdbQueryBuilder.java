@@ -672,7 +672,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  "edu.jhu.library.plugin.MedievalForumPlugin", // humanities_project
                  "edu.nyu.plugin.bonefolder.BonefolderPlugin", // humanities_project
                  "edu.nyu.plugin.ejce.EJCEPlugin", // humanities_project
-                 "edu.nyu.plugin.ejcjs.EJCJSPlugin",
+                 "edu.nyu.plugin.ejcjs.EJCJSPlugin", // humanities_project
+                 "edu.nyu.plugin.ejcjs.EJCJS2022Plugin", // humanities_project
                  "edu.nyu.plugin.heplwebzine.HEPLwebzine",
                  "edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin",
                  "edu.nyu.plugin.LeedsICSPlugin",
