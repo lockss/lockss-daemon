@@ -57,7 +57,7 @@
   {
 
     title <
-      name = Ars Judaica ;
+      name = Ars Judaica The Bar Ilan Journal of Jewish Art ;
       issn = 1565-6721 ;
       eissn = 2516-4252 ;
       issnl = 0003-9535
@@ -66,12 +66,12 @@
     param[journal_id] = arsjudaica
     #Published 2015-2020
 
-    au < expected ; exists ; 2015 ; Ars Judaica Volume 11 ; 11 ; >
-    au < testing ; exists ; 2016 ; Ars Judaica Volume 12 ; 12 ; >
-    au < expected ; exists ; 2017 ; Ars Judaica Volume 13 ; 13 ; >
-    au < expected ; exists ; 2018 ; Ars Judaica Volume 14 ; 14 ; >
-    au < expected ; exists ; 2019 ; Ars Judaica Volume 15 ; 15 ; >
-    au < expected ; exists ; 2020 ; Ars Judaica Volume 16 ; 16 ; >
+    au < expected ; exists ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 ; >
+    au < testing ; exists ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 ; >
+    au < expected ; exists ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 ; >
+    au < expected ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; >
+    au < expected ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
+    au < expected ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
 
   }
 
@@ -526,6 +526,7 @@
     >
 
     param[journal_id] = ejlp
+    #Published 2009-present
 
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 ; >
@@ -592,6 +593,7 @@
     >
 
     param[journal_id] = franc
+    #Published 2012-present
 
     au < doNotProcess ; doNotProcess ; 2012 ; Francosphères Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Francosphères Volume 2 ; 2 ; >
@@ -617,6 +619,7 @@
     >
 
     param[journal_id] = hsir
+    #Published 1996-present
 
     au < exists ; exists ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 ; >
     au < exists ; exists ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 ; >
@@ -669,6 +672,7 @@
     >
 
     param[journal_id] = index
+    #Published 1958-present
 
     au < exists ; exists ; 1990 ; The Indexer: The International Journal of Indexing Volume 17 ; 17 ; >
     au < exists ; exists ; 1992 ; The Indexer: The International Journal of Indexing Volume 18 ; 18 ; >
@@ -706,6 +710,7 @@
     >
 
     param[journal_id] = idpr
+    #Published 2002-present
     comment[continues] = 0142-7849
 
     au < doNotProcess ; exists ; 2002 ; International Development Planning Review Volume 24 ; 24 ; >
@@ -775,6 +780,7 @@
     >
 
     param[journal_id] = jlcds
+    #Published 2007-present
 
     au < doNotProcess ; exists ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 ; >
@@ -806,6 +812,7 @@
     > 
     
     param[journal_id] = jrs
+    #Published 2001-present
        
     au < exists ; exists ; 2001 ; Journal of Romance Studies Volume 1 ; 1 ; >
     au < exists ; exists ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; >
@@ -842,6 +849,7 @@
     >
 
     param[journal_id] = labourhistory
+    #Published 1963-present
 
     au < exists ; exists ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 ; >
     au < exists ; exists ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 ; >
@@ -975,6 +983,7 @@
     >
 
     param[journal_id] = lhr
+    #Published 1960-present
 
     au < exists ; exists ; 2000 ; Labour History Review Volume 65 ; 65 ; >
     au < exists ; exists ; 2001 ; Labour History Review Volume 66 ; 66 ; >
@@ -1012,6 +1021,7 @@
     >
 
     param[journal_id] = mhb
+    #Published 1934-2002
 
     au < exists ; exists ; 1934 ; Marx House Bulletin Volume 1 ; 1 ; >
     au < exists ; exists ; 1935 ; Marx House Bulletin Volume 2 ; 2 ; >
@@ -1153,6 +1163,7 @@
     >
 
     param[journal_id] = mb
+    #Published 1994-present
 
     au < exists ; exists ; 2000 ; Modern Believing Volume 41 ; 41 ; >
     au < exists ; exists ; 2001 ; Modern Believing Volume 42 ; 42 ; >
@@ -1189,7 +1200,7 @@
     >
 
     param[journal_id] = mc
-
+    #Published 1957-1992
     comment[continued_by] = Modern Believing
 
     au < exists ; exists ; 1957-1958 ; The Modern Churchman Volume 1 ; 1 ; >

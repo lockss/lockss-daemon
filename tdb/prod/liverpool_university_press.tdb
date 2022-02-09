@@ -2,7 +2,7 @@
 
   publisher <
     name = Liverpool University Press ;
-    info[platform] = CloudPublish BLOCKED LXPLUG-2054
+    info[platform] = CloudPublish LXPLUG-2054
   >
 
   comment[moving1] = from MetaPress to Atypon
@@ -54,7 +54,7 @@
   {
 
     title <
-      name = Ars Judaica ;
+      name = Ars Judaica The Bar Ilan Journal of Jewish Art ;
       issn = 1565-6721 ;
       eissn = 2516-4252 ;
       issnl = 1565-6721
@@ -63,12 +63,12 @@
     param[journal_id] = arsjudaica
     #Published 2015-2020
 
-    au < manifest ; 2015 ; Ars Judaica Volume 11 ; 11 >
-    au < manifest ; 2016 ; Ars Judaica Volume 12 ; 12 >
-    au < manifest ; 2017 ; Ars Judaica Volume 13 ; 13 >
-    au < manifest ; 2018 ; Ars Judaica Volume 14 ; 14 >
-    au < manifest ; 2019 ; Ars Judaica Volume 15 ; 15 >
-    au < manifest ; 2020 ; Ars Judaica Volume 16 ; 16 >
+    au < manifest ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 >
+    au < manifest ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 >
+    au < manifest ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 >
+    au < manifest ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 >
+    au < manifest ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
+    au < manifest ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
 
   }
 
