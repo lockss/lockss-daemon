@@ -38,7 +38,7 @@ NON_ALLIANCE = set([ \
                  "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin", # humanities_project
                  "edu.jhu.library.plugin.MedievalForumPlugin", # humanities_project
                  "edu.nyu.plugin.bonefolder.BonefolderPlugin", # humanities_project
-                 "edu.nyu.plugin.ejce.EJCEPlugin",
+                 "edu.nyu.plugin.ejce.EJCEPlugin", # humanities_project
                  "edu.nyu.plugin.ejcjs.EJCJSPlugin",
                  "edu.nyu.plugin.heplwebzine.HEPLwebzine",
                  "edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin",
