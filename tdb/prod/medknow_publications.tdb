@@ -4763,7 +4763,7 @@
    >
 #    param[base_url] = http://www.wjnm.org/
     param[journal_issn] = 1450-1147
-    #move to Thieme, 2022
+    #move to Thieme, 2022. Archive will stay with Medknow until further notice
     # notReady V10 2011. 500 error, replicated. http://www.wjnm.org/article.asp?issn=1450-1147;year=2011;volume=10;issue=1;spage=5;epage=6;aulast=Baum;type=2
 
     au < manifest ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ >
@@ -5179,7 +5179,7 @@
 
       param[journal_issn] = 2347-5625
 #      param[base_url] = http://www.apjon.org/
-      #move to Elsevier, 12/2021
+      #move to Elsevier, 12/2021. Archive will stay with Medknow until further notice
 
       au < released ; 2014 ; Asia-Pacific Journal of Oncology Nursing Volume 1 ; 2014 ; 1 ; http://www.apjon.org/ >
       au < released ; 2015 ; Asia-Pacific Journal of Oncology Nursing Volume 2 ; 2015 ; 2 ; http://www.apjon.org/ >
@@ -5189,7 +5189,6 @@
       au < released ; 2019 ; Asia-Pacific Journal of Oncology Nursing Volume 6 ; 2019 ; 6 ; https://www.apjon.org/ >
       au < released ; 2020 ; Asia-Pacific Journal of Oncology Nursing Volume 7 ; 2020 ; 7 ; https://www.apjon.org/ >
       au < manifest ; 2021 ; Asia-Pacific Journal of Oncology Nursing Volume 8 ; 2021 ; 8 ; https://www.apjon.org/ >
-      au < expected ; 2022 ; Asia-Pacific Journal of Oncology Nursing Volume 9 ; 2022 ; 9 ; https://www.apjon.org/ >
 
   }
 
@@ -5456,7 +5455,8 @@
 
       param[journal_issn] = 2225-6482
 #      param[base_url] = http://www.caijournal.com/
-      #move to Spring Media Publishing
+      #move to Spring Media Publishing. Archive will stay with Medknow until further notice
+      # Redirects to browse instead of by a listing like this: https://www.caijournal.com/backissues.asp
 
       au < released ; 2014 ; Community Acquired Infection Volume 1 ; 2014 ; 1 ; http://www.caijournal.com/ >
       au < released ; 2015 ; Community Acquired Infection Volume 2 ; 2015 ; 2 ; http://www.caijournal.com/ >
@@ -6466,7 +6466,7 @@
 
       param[journal_issn] = 2278-344X
 #      param[base_url] = http://www.ijhas.in/
-      #move to Elsevier, 2022
+      #move to Elsevier, 2022. Archive will stay with Medknow until further notice
 
       au < released ; 2012 ; International Journal of Health & Allied Sciences Volume 1 ; 2012 ; 1 ; http://www.ijhas.in/ >
       au < released ; 2013 ; International Journal of Health & Allied Sciences Volume 2 ; 2013 ; 2 ; http://www.ijhas.in/ >
@@ -6478,7 +6478,7 @@
       au < released ; 2019 ; International Journal of Health & Allied Sciences Volume 8 ; 2019 ; 8 ; https://www.ijhas.in/ >
       au < released ; 2020 ; International Journal of Health & Allied Sciences Volume 9 ; 2020 ; 9 ; https://www.ijhas.in/ >
       au < manifest ; 2021 ; International Journal of Health & Allied Sciences Volume 10 ; 2021 ; 10 ; https://www.ijhas.in/ >
-      au < expected ; 2022 ; International Journal of Health & Allied Sciences Volume 11 ; 2022 ; 11 ; https://www.ijhas.in/ >
+      #No more published content. Archive will stay with Medknow until further notice
 
   }
 
@@ -10309,7 +10309,7 @@
 
       param[journal_issn] = 2078-7685
 #      param[base_url] = https://www.jdeponline.com/
-      #move to Thieme, 2022
+      #move to Thieme, 2022. Archive will stay with Medknow until further notice
 
       au < exists ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ >
       au < exists ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ >
@@ -10764,7 +10764,7 @@
 
       param[journal_issn] = 2519-139X
 #      param[base_url] = http://journal.limu.edu.ly/
-      #move to Thieme, 2022
+      #move to Thieme, 2022. Archive will stay with Medknow until further notice
 
       au < released ; 2016 ; Libyan International Medical University Journal Volume 1 ; 2016 ; 1 ; https://journal.limu.edu.ly/ >
       au < released ; 2017 ; Libyan International Medical University Journal Volume 2 ; 2017 ; 2 ; http://journal.limu.edu.ly/ >

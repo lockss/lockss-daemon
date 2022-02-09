@@ -9128,4 +9128,19 @@
 
   }
 
+#  {
+#    title <
+#      name = World Journal of Nuclear Medicine ;
+#      issn = 1450-1147 ;
+#      eissn = 1607-3312 ;
+#      doi = 10.1055/
+#   >
+#
+#    param[journal_id] = 10.1055/s-00035023
+#    comment[years] = 1988-current
+#
+#    au < exists ; exists ; 2022 ; 2022 ; World Journal of Nuclear Medicine Volume 21 ; 21 ; >
+#
+#  }
+
 }
