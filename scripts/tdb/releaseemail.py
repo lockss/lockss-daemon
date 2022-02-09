@@ -36,7 +36,7 @@ NON_ALLIANCE = set([ \
                  "edu.indiana.lib.plugin.mto.MTOPlugin", # humanities_project
                  "edu.indiana.lib.plugin.mto.MTO2022Plugin", # humanities_project
                  "edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin", # humanities_project
-                 "edu.jhu.library.plugin.MedievalForumPlugin",
+                 "edu.jhu.library.plugin.MedievalForumPlugin", # humanities_project
                  "edu.nyu.plugin.bonefolder.BonefolderPlugin",
                  "edu.nyu.plugin.ejce.EJCEPlugin",
                  "edu.nyu.plugin.ejcjs.EJCJSPlugin",
