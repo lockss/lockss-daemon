@@ -80,10 +80,10 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; exists ; 2018 ; 89 ; Aerospace Medicine and Human Performance Volume 89 ; 89 ; >
+    au < testing ; exists ; 2018 ; 89 ; Aerospace Medicine and Human Performance Volume 89 ; 89 ; >
     au < frozen ; exists ; 2019 ; 90 ; Aerospace Medicine and Human Performance Volume 90 ; 90 ; >
     au < frozen ; exists ; 2020 ; 91 ; Aerospace Medicine and Human Performance Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2021 ; 92 ; Aerospace Medicine and Human Performance Volume 92 ; 92 ; >
+    au < testing ; exists ; 2021 ; 92 ; Aerospace Medicine and Human Performance Volume 92 ; 92 ; >
     au < manifest ; exists ; 2022 ; 93 ; Aerospace Medicine and Human Performance Volume 93 ; 93 ; >
 
     }
