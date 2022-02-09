@@ -1396,7 +1396,7 @@ public class V2AuMover {
             }
           }
           else {
-            log.debug2("Exceeded retries - exiting");
+            log.debug("Exceeded retries - exiting");
             terminated = true;
             if (response != null) {
               response.close();
