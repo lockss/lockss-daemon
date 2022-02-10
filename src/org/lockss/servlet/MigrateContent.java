@@ -184,7 +184,9 @@ public class MigrateContent extends LockssServlet {
     }
     Map stat = new HashMap();
     stat.put(STATUS_RUNNING, runner.isRunning());
-    stat.put(STATUS_STATUS, runner.getCurrentStatus());
+    String currentStatus = runner.getCurrentStatus();
+    if (!StringUtil.isNullString(currentStatus))
+      stat.put(STATUS_STATUS, currentStatus);
     return stat;
   }
 

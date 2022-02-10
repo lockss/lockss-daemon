@@ -445,7 +445,7 @@ public class V2AuMover {
     }
 
     public String getCurrentStatus() {
-      if (currentStatus.startsWith("Copying: ")) {
+      if (currentStatus != null && currentStatus.startsWith("Copying: ")) {
         return currentStatus + ", " + auUrlsMoved + " URLs, " +
           auArtifactsMoved + " versions copied.";
       }
@@ -458,6 +458,8 @@ public class V2AuMover {
 
     public void lockssRun() {
       try {
+        currentStatus = "Initializing";
+        running = true;
         initRequest(host, uname, upass);
         currentStatus = "Checking V2 services";
         if (v2ServicesUnavailable()) {
@@ -481,14 +483,14 @@ public class V2AuMover {
         currentStatus = "Copying AUs";
         log.debug("Moving " + auMoveQueue.size() + " aus.");
         // Check to see if we are currently working on an au.
-        if (!terminated && currentAu == null) {
+        while (!terminated && auMoveQueue.iterator().hasNext()) {
           moveNextAu();
-        } else {
-          running = false;
         }
+        closeReport();
       } catch (IOException e) {
         log.error("Unexpected exception", e);
         currentStatus = e.getMessage();
+      } finally {
         running = false;
       }
     }
