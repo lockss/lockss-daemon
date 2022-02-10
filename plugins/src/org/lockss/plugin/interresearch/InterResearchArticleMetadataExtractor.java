@@ -55,7 +55,6 @@ public class InterResearchArticleMetadataExtractor extends BaseArticleMetadataEx
     }
 
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-      log.info("WE ARE HERE HERE HERE HER HERE HRE HRE ");
 
       if (isAddTdbDefaults()) {
         addTdbDefaults(af, cu, am);
@@ -65,7 +64,6 @@ public class InterResearchArticleMetadataExtractor extends BaseArticleMetadataEx
       }
       assignRoleFromMd(af, cu, am, ArticleFiles.ROLE_FULL_TEXT_PDF, "citation_pdf_url");
       assignRoleFromMd(af, cu, am, ArticleFiles.ROLE_FULL_TEXT_XML, "citation_xml_url");
-      log.info("WE ARE HERE HERE HERE HER HERE HRE HRE ");
       parent.emitMetadata(af, am);
     }
 
@@ -74,7 +72,6 @@ public class InterResearchArticleMetadataExtractor extends BaseArticleMetadataEx
   public void extract(MetadataTarget target, ArticleFiles af,
                       ArticleMetadataExtractor.Emitter emitter)
       throws IOException, PluginException {
-    log.info("WE ARE HERE HERE HERE HER HERE HRE HRE 333333");
 
     InterResearchEmitter myEmitter = new InterResearchEmitter(af, emitter);
     CachedUrl cu = getCuToExtract(af);
