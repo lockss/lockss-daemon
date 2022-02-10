@@ -333,7 +333,7 @@
       au < finished ; finished ; 2018 ; International Journal of Accounting and Finance Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; International Journal of Accounting and Finance Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2020 ; International Journal of Accounting and Finance Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2021 ; International Journal of Accounting and Finance Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Accounting and Finance Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Accounting and Finance Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6912,7 +6912,7 @@
       au < finished ; finished ; 2017 ; International Journal of Metadata, Semantics and Ontologies Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Metadata, Semantics and Ontologies Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; International Journal of Metadata, Semantics and Ontologies Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2021 ; International Journal of Metadata, Semantics and Ontologies Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Metadata, Semantics and Ontologies Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Metadata, Semantics and Ontologies Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -8968,7 +8968,7 @@
       au < finished ; finished ; 2016-2017 ; International Journal of Six Sigma and Competitive Advantage Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; International Journal of Six Sigma and Competitive Advantage Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; International Journal of Six Sigma and Competitive Advantage Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2021 ; International Journal of Six Sigma and Competitive Advantage Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Six Sigma and Competitive Advantage Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Six Sigma and Competitive Advantage Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
     }
