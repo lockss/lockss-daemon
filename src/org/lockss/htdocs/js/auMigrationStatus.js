@@ -5,6 +5,7 @@ class AuMigrationStatus extends React.Component {
     super(props);
     this.state = {
       running: false,
+      fetchError: true,
       progress: "0%",
       status: "Loading status",
       delay: 1000,
@@ -45,12 +46,20 @@ class AuMigrationStatus extends React.Component {
         (result) => {
           this.setState({
             running: result.running,
+            fetchError: false,
             status: result.status,
             progress: result.progress,
+            delay: result.running ? 1000 : 5000,
           });
         },
         (error) => {
-            console.log("Could not fetch status information: " + error);
+            console.error("Could not fetch status information: " + error);
+
+            this.setState({
+              fetchError: true,
+              status: "Could not fetch status information",
+              delay: 5000,
+            });
         }
       );
   }
@@ -58,7 +67,7 @@ class AuMigrationStatus extends React.Component {
   render() {
     return (
       <div>
-        <div>Running: {this.state.running ? "Yes" : "No"}</div>
+        <div>Running: {this.state.fetchError ? "Unknown" : this.state.running ? "Yes" : "No"}</div>
         <div>Status: {this.state.status}</div>
         <div className="ui-progressbar">
           <div style={{width:this.state.progress}}>{this.state.progress}</div>
