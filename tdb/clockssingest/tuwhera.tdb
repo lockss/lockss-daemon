@@ -97,8 +97,8 @@
       au < frozen ; exists ; 2018 ; Te Kaharoa Volume 11 ; 11 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Te Kaharoa Volume 12 ; 12 ; 2019 ; >
       au < deepCrawl ; exists ; 2020 ; Te Kaharoa Volume 13 ; 13 ; 2020 ; >
-      au < expected ; exists ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; >
-      au < expected ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
+      au < manifest ; exists ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
 
     }
 
@@ -212,6 +212,9 @@
       param[base_url] = https://interstices.ac.nz/
       param[journal_id] = Interstices
       attr[start_stem] = index.php/
+      ### Note:
+      ### https://interstices.ac.nz/index.php/Interstices/gateway/lockss?year=2016
+      ### all redirect to 1992.
 
       au < exists ; exists ; 1990 ; Interstices Volume 1 ; 1 ; 1990 ; >
       au < manifest ; exists ; 1992 ; Interstices Volume 2 ; 2 ; 1992 ; >
