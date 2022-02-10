@@ -33,8 +33,9 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - humanities_project registry - need http-to-https transition</string>
+    <string>ready</string>
   </entry>
+  <!-- https transition enabled -->
   <entry>
     <string>plugin_identifier</string>
     <string>edu.nyu.plugin.bonefolder.BonefolderPlugin</string>
@@ -75,13 +76,16 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sBonefolderVol%dManifest.htm", base_url, volume</string>
+    <list>
+      <string>"%sBonefolderVol%dManifest.htm", to_http(base_url), volume</string>
+      <string>"%sBonefolderVol%dManifest.htm", to_https(base_url), volume</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s.*\.pdf$", base_url</string>
+      <string>4,"^(%s|%s)", to_http(base_url), to_https(base_url)</string>
+      <string>1,"^(%s|%s).*\.pdf$", to_http(base_url), to_https(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -91,5 +95,17 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
   </entry>
 </map>
