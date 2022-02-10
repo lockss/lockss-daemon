@@ -6,7 +6,6 @@ class AuMigrationStatus extends React.Component {
     this.state = {
       running: false,
       fetchError: true,
-      progress: "0%",
       status: "Loading status",
       delay: 1000,
     };
@@ -48,7 +47,6 @@ class AuMigrationStatus extends React.Component {
             running: result.running,
             fetchError: false,
             status: result.status,
-            progress: result.progress,
             delay: result.running ? 1000 : 5000,
           });
         },
@@ -69,9 +67,6 @@ class AuMigrationStatus extends React.Component {
       <div>
         <div>Running: {this.state.fetchError ? "Unknown" : this.state.running ? "Yes" : "No"}</div>
         <div>Status: {this.state.status}</div>
-        <div className="ui-progressbar">
-          <div style={{width:this.state.progress}}>{this.state.progress}</div>
-        </div>
       </div>
     );
   }
