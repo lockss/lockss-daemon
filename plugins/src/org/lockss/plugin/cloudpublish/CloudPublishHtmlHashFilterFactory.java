@@ -35,6 +35,7 @@ package org.lockss.plugin.cloudpublish;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.tags.Html;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
@@ -55,14 +56,16 @@ public class CloudPublishHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "journal-full-text"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "journal-references"),
 
+      // the Read now button is not always there
+      HtmlNodeFilters.tagWithAttribute("a", "title", "Read now"),
+      // depending on the referrer, this bit differs
+      HtmlNodeFilters.tagWithAttribute("div", "id", "logo"),
+      HtmlNodeFilters.tagWithAttribute("li", "id", "nav-content-exit"),
+
       HtmlNodeFilters.tagWithAttribute("div", "id", "item-access-id"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "auth-token"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "auth-token-timestamp"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "print-info"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", ""),
-      HtmlNodeFilters.tagWithAttribute("div", "id", ""),
-      HtmlNodeFilters.tagWithAttribute("div", "id", ""),
-      HtmlNodeFilters.tagWithAttribute("div", "id", ""),
   };
 
 
