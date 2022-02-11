@@ -57,12 +57,17 @@ public class OecdHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "relatedDatabasetitle"),
       // sidebar links
       HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "actions vertical"),
+      // other volumes in the journal
+      HtmlNodeFilters.tagWithAttribute("ul", "class", "volumes-list"),
       // links to other journals
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "replaced-content"),
+      // prev/next buttons on article pages
+      HtmlNodeFilters.tagWithAttribute("div", "class", "nav-item-prev"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "nav-item-next"),
       // get rid of all the links in the landing page except the csv file(s)
       HtmlNodeFilters.allExceptSubtree(
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "section-title"),
-          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-csv")
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(csv|pdf|read)")
       )
   };
 
