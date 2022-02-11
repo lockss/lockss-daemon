@@ -99,6 +99,14 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.oecd.OecdUrlConsumerFactory</string>
     </entry>
     <entry>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.oecd.OecdHtmlLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.oecd.OecdHtmlHashFilterFactory</string>
+    </entry>
+    <entry>
         <string>text/html_metadata_extractor_factory_map</string>
         <map>
             <entry>
@@ -107,16 +115,6 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
         </map>
     </entry>
-    <entry>
-        <string>text/html_link_extractor_factory</string>
-        <string>org.lockss.plugin.oecd.OecdHtmlLinkExtractorFactory</string>
-    </entry>
-    <!--
-    <entry>
-        <string>text/html_filter_factory</string>
-        <string>org.lockss.plugin.cloudpublish.CloudPublishHtmlHashFilterFactory</string>
-    </entry>
-    -->
     <entry>
         <string>au_permitted_host_pattern</string>
         <list>
