@@ -20,7 +20,7 @@
     {
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/hmpglobal-released/
 
-    au < testing ; exists ; 2022 ; Journal of Invasive Cardiology Source Content 2022_01 ; 2022_01 >
+    au < ready ; exists ; 2022 ; Journal of Invasive Cardiology Source Content 2022_01 ; 2022_01 >
     }
     {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hmpglobal-released/
