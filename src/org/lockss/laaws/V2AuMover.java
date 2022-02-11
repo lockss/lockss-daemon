@@ -486,11 +486,12 @@ public class V2AuMover {
         while (!terminated && auMoveQueue.iterator().hasNext()) {
           moveNextAu();
         }
-        closeReport();
       } catch (IOException e) {
         log.error("Unexpected exception", e);
         currentStatus = e.getMessage();
       } finally {
+        totalRunTime = System.currentTimeMillis() - startTime;
+        closeReport();
         running = false;
       }
     }
@@ -686,6 +687,10 @@ public class V2AuMover {
         if (isPartialContent) {
           if (auArtifactsMoved > 0) {// if we moved something
             reportWriter.println("Moved remaining unmigrated au content.");
+            reportWriter.println(auData);
+          }
+          else {
+            reportWriter.println("All au content already migrated.");
             reportWriter.println(auData);
           }
         }
@@ -885,7 +890,7 @@ public class V2AuMover {
       }
       // if the v2 repository has fewer versions than the v1 repository
       // then move the missing versions or release the cu version.
-      int vers_to_move = localVersions.length - v2Artifacts.size();
+      int vers_to_move = localVersions.length - v2Count;
       log.debug2("Queueing " + vers_to_move + "/" + localVersions.length + " versions...");
       if (vers_to_move > 0) {
         for (int vx = 0; vx < localVersions.length; vx++) {
