@@ -1,33 +1,108 @@
 {
   publisher <
-    name = OECD ;
-    info[platform] =  See LXPLUG-1730
+    name = Organisation for Economic Co-operation and Development ;
+    info[platform] = See LXPLUG-1730
   >
+  param[base_url] = https://www.oecd-ilibrary.org/
+
+  # Journals
   {
     plugin = org.lockss.plugin.oecd.OecdJournalsPlugin
-    implicit < status ; year ; name ; param[year] >
-    param[base_url] = https://www.oecd-ilibrary.org/
+    implicit < status ; year ; name ; param[volume_name] >
 
     {
 
     title <
-      name = Journal of Business Cycle Measurement and Analysis ;
+      name = OECD Journal: Journal of Business Cycle Measurement and Analysis ;
       issn = 1995-2899
      >
 
       param[topic] = economics
       param[journal_issn] = 19952899
+      param[journal_dir] = oecd-journal-journal-of-business-cycle-measurement-and-analysis
+      param[journal_id] = jbcma
+
+      au < testing ; 2013 ; Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 >
+      au < testing ; 2014 ; Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 >
+      au < testing ; 2015 ; Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 >
+
+    }
+    {
+
+    title <
+      name = Journal of Business Cycle Measurement and Analysis ;
+      issn = 1729-3626
+     >
+
+      param[topic] = economics
+      param[journal_issn] = 17293626
       param[journal_dir] = journal-of-business-cycle-measurement-and-analysis
       param[journal_id] = jbcma
 
-      au < testing ; 2015 ; Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 >
+      au < testing ; 2004 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 >
+      au < testing ; 2005 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 >
+      au < testing ; 2007 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 >
+
+    }
+
+    {
+
+    title <
+      name =  Nuclear Law Bulletin ;
+      issn = 1609-7378
+     >
+
+      param[topic] = nuclear-energy
+      param[journal_issn] = 16097378
+      param[journal_dir] = nuclear-law-bulletin
+      param[journal_id] = nuclear_law
+
+      au < testing ; 1997 ; Nuclear Law Bulletin 1997 ; 1997 >
+      au < testing ; 1998 ; Nuclear Law Bulletin 1998 ; 1998 >
+      au < testing ; 1999 ; Nuclear Law Bulletin 1999 ; 1999 >
+      au < testing ; 2000 ; Nuclear Law Bulletin 2000 ; 2000 >
+      au < testing ; 2001 ; Nuclear Law Bulletin 2001 ; 2001 >
+      au < testing ; 2002 ; Nuclear Law Bulletin 2002 ; 2002 >
+      au < testing ; 2003 ; Nuclear Law Bulletin 2003 ; 2003 >
+      au < testing ; 2004 ; Nuclear Law Bulletin 2004 ; 2004 >
+      au < testing ; 2005 ; Nuclear Law Bulletin 2005 ; 2005 >
+      au < testing ; 2006 ; Nuclear Law Bulletin 2006 ; 2006 >
+      au < testing ; 2007 ; Nuclear Law Bulletin 2007 ; 2007 >
+      au < testing ; 2008 ; Nuclear Law Bulletin 2008 ; 2008 >
+      au < testing ; 2009 ; Nuclear Law Bulletin 2009 ; 2009 >
+      au < testing ; 2010 ; Nuclear Law Bulletin 2010 ; 2010 >
+      au < testing ; 2011 ; Nuclear Law Bulletin 2011 ; 2011 >
+      au < testing ; 2012 ; Nuclear Law Bulletin 2012 ; 2012 >
+      au < testing ; 2013 ; Nuclear Law Bulletin 2013 ; 2013 >
+      au < testing ; 2014 ; Nuclear Law Bulletin 2014 ; 2014 >
+      au < testing ; 2015 ; Nuclear Law Bulletin 2015 ; 2015 >
+      au < testing ; 2016 ; Nuclear Law Bulletin 2016 ; 2016 >
+      au < testing ; 2017 ; Nuclear Law Bulletin 2017 ; 2017 >
+      au < testing ; 2018 ; Nuclear Law Bulletin 2018 ; 2018 >
+      au < testing ; 2019 ; Nuclear Law Bulletin 2019 ; 2019 >
+      au < testing ; 2020 ; Nuclear Law Bulletin 2020 ; 2020 >
+      au < testing ; 2021 ; Nuclear Law Bulletin 2021 ; 2021 >
+    }
+
+    {
+    title <
+      name = OECD Journal on Budgeting  ;
+      issn = 1681-2336
+     >
+
+      param[topic] = governance
+      param[journal_issn] = 16812336
+      param[journal_dir] = oecd-journal-on-budgeting
+      param[journal_id] = budget
+
+      au < testing ; 2019 ; OECD Journal on Budgeting Volume 19 ; 19 >
     }
   }
+  # Datasets
   {
 
     plugin = org.lockss.plugin.oecd.OecdDatasetPlugin
     implicit < status ; year ; param[year] ; name  >
-    param[base_url] = https://www.oecd-ilibrary.org/
 
     {
 
