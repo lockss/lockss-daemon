@@ -33,7 +33,6 @@ package org.lockss.plugin.oecd;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -47,69 +46,89 @@ public class OecdJournalsArticleIteratorFactory implements ArticleIteratorFactor
   private static final Logger log = Logger.getLogger(OecdJournalsArticleIteratorFactory.class);
 
   private static final String PATTERN_TEMPLATE =
-      "\"%s(%s/.*_|.+\\.pdf\\?itemId=.+)%s-%d\", base_url, topic, journal_id, year";
+      "\"%s%s/.*(_|/volume)\", base_url, topic";
+
+  // whole issue, that sometimes is all there is
+  // https://www.oecd-ilibrary.org/nuclear-energy/nuclear-law-bulletin/volume-2002/issue-2_nuclear_law-v2002-2-en
 
   // https://www.oecd-ilibrary.org/economics/frequency-based-co-movement-of-inflation-in-selected-euro-area-countries_jbcma-2015-5jm26ttlxdd1
-  private static Pattern LANDING_PATTERN;
-  private static Pattern PDF_PATTERN;
+  // https://www.oecd-ilibrary.org/governance/budgeting-practices-to-improve-health-system-performance_2fc826dd-en
+  // https://www.oecd-ilibrary.org/governance/public-private-partnerships-review-of-kazakhstan_f7696c94-en
+  // https://www.oecd-ilibrary.org/economics/a-generalized-dynamic-factor-model-for-the-belgian-economy_jbcma-v2005-art4-en
 
-  private String LANDING_REPLACEMENT;
-  private String PDF_REPLACEMENT;
-  private String RIS_REPLACEMENT;
-  private String BIB_REPLACEMENT;
-  private String ENDNOTE_REPLACEMENT;
+  private static Pattern LANDING_ARTICLE_PATTERN;
+  private static Pattern LANDING_ISSUE_PATTERN;
+  // https://www.oecd-ilibrary.org/frequency-based-co-movement-of-inflation-in-selected-euro-area-countries_5jm26ttlxdd1.pdf?itemId=%2Fcontent%2Fpaper%2Fjbcma-2015-5jm26ttlxdd1&mimeType=pdf
+  // https://www.oecd-ilibrary.org/deliver/f7696c94-en.pdf?itemId=%2Fcontent%2Fpaper%2Ff7696c94-en&mimeType=pdf
+  // https://www.oecd-ilibrary.org/a-generalized-dynamic-factor-model-for-the-belgian-economy_5l4th8x7mb36.pdf?itemId=%2Fcontent%2Fpaper%2Fjbcma-v2005-art4-en&mimeType=pdf
+
+  // issue pdf
+  // https://www.oecd-ilibrary.org/nuclear-law-bulletin-volume-2002-issue-2_5lmqcr2kd2ln.pdf?itemId=%2Fcontent%2Fpublication%2Fnuclear_law-v2002-2-en&mimeType=pdf
+  //private static final Pattern PDF_PATTERN =
+  //    Pattern.compile("(?<!deliver)/([^_/]+)(_.+)?\\.pdf\\?itemId=%2Fcontent%2Fpaper%2F(.+)&mimeType=pdf$");
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
 
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    String jid = au.getConfiguration().get("journal_id");
+
     String topic = au.getConfiguration().get("topic");
-    String year = au.getConfiguration().get("year");
-    // https://www.oecd-ilibrary.org/economics/frequency-based-co-movement-of-inflation-in-selected-euro-area-countries_jbcma-2015-5jm26ttlxdd1
-    LANDING_PATTERN = Pattern.compile(
-        String.format("/%s/([^/]+)_(%s-%s)-([^/]+)$",
-            topic, jid, year));
-    // https://www.oecd-ilibrary.org/frequency-based-co-movement-of-inflation-in-selected-euro-area-countries_5jm26ttlxdd1.pdf?itemId=%2Fcontent%2Fpaper%2Fjbcma-2015-5jm26ttlxdd1&mimeType=pdf
-    //PDF_PATTERN = Pattern.compile(
-    //    String.format("/(.+)_.+\\.pdf\\?itemId=%%2Fcontent%%2Fpaper%%2F(%s-%s)-([^&]+)&mimeType=pdf$",
-    //        jid, year, jid, year));
 
+    LANDING_ARTICLE_PATTERN = Pattern.compile(
+        String.format("/(%s/([^/]+)_(([^-]+-[^-]+)-([^/]+(-en)?)|[^-]+-en))$", topic));
 
-    LANDING_REPLACEMENT = String.format("/%s/$1_$2-$3", topic);
-    RIS_REPLACEMENT = String.format("/%s/$1_$2-$3/cite/ris", topic);
-    BIB_REPLACEMENT = String.format("/%s/$1_$2-$3/cite/bib", topic);
-    ENDNOTE_REPLACEMENT = String.format("/%s/$1_$2-$3/cite/endnote", topic);
-    PDF_REPLACEMENT = "/$1_$3.pdf?itemId=%2Fcontent%2Fpaper%2F$2-$3&mimeType=pdf";
+    LANDING_ISSUE_PATTERN = Pattern.compile(
+        String.format("/(%s/([^/]+)/(volume[^/]+)/((issue-[^-]+-)?([^/]+)))$", topic));
+
+    String PDF_REPLACEMENT = "/$2_$5.pdf?itemId=%2Fcontent%2Fpaper%2F$3&mimeType=pdf";
+    String PDF_REPLACEMENT2 = "/deliver/$3.pdf?itemId=%2Fcontent%2Fpaper%2F$3&mimeType=pdf";
+
+    // for PDF_PATTERN replacement
+    String LANDING_REPLACEMENT = String.format("/%s/$1_$3", topic);
+    //String RIS_REPLACEMENT = String.format("%s/cite/ris", LANDING_REPLACEMENT);
+    //String BIB_REPLACEMENT = String.format("%s/cite/bib", LANDING_REPLACEMENT);
+    //String ENDNOTE_REPLACEMENT = String.format("%s/cite/endnote", LANDING_REPLACEMENT);
+
+    // for LANDING replacement
+    String RIS_REPLACEMENT = "/$1/cite/ris";
+    String BIB_REPLACEMENT = "/$1/cite/bib";
+    String ENDNOTE_REPLACEMENT = "/$1/cite/endnote";
 
     builder.setSpec(new SubTreeArticleIterator.Spec()
         .setTarget(target)
         .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
 
-    builder.addAspect(LANDING_PATTERN,
-        LANDING_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
 
     builder.addAspect(
-        PDF_REPLACEMENT,
+        Arrays.asList(
+            LANDING_ARTICLE_PATTERN,
+            LANDING_ISSUE_PATTERN
+        ),
+        LANDING_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    builder.addAspect(//PDF_PATTERN,
+        Arrays.asList(
+            PDF_REPLACEMENT,
+            PDF_REPLACEMENT2
+        ),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     // citation files
     builder.addAspect(
-        RIS_REPLACEMENT,
+          RIS_REPLACEMENT,
         ArticleFiles.ROLE_CITATION_RIS);
     builder.addAspect(
-        BIB_REPLACEMENT,
+          BIB_REPLACEMENT,
         ArticleFiles.ROLE_CITATION_BIBTEX);
     builder.addAspect(
-        ENDNOTE_REPLACEMENT,
+          ENDNOTE_REPLACEMENT,
         ArticleFiles.ROLE_CITATION_ENDNOTE);
 
     builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_PDF,
-        ArticleFiles.ROLE_FULL_TEXT_HTML
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF
     );
 
     builder.setRoleFromOtherRoles(
@@ -128,6 +147,6 @@ public class OecdJournalsArticleIteratorFactory implements ArticleIteratorFactor
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    return new OecdJournalsArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }
