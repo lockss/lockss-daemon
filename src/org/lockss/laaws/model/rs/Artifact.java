@@ -59,6 +59,10 @@ public class Artifact {
   @SerializedName(SERIALIZED_NAME_COLLECTION_DATE)
   private Long collectionDate;
 
+  public static final String SERIALIZED_NAME_CONTENT_DIGEST = "contentDigest";
+  @SerializedName(SERIALIZED_NAME_CONTENT_DIGEST)
+  private String contentDigest;
+
 
   public Artifact id(String id) {
 
@@ -242,6 +246,7 @@ public class Artifact {
     return this;
   }
 
+
   /**
    * Get collectionDate
    *
@@ -255,6 +260,28 @@ public class Artifact {
 
   public void setCollectionDate(Long collectionDate) {
     this.collectionDate = collectionDate;
+  }
+
+  public Artifact contentDigest(String contentDigest) {
+
+    this.contentDigest = contentDigest;
+    return this;
+  }
+
+
+  /**
+   * Get collectionDate
+   *
+   * @return collectionDate
+   **/
+
+  public String getContentDigest() {
+    return contentDigest;
+  }
+
+
+  public void setContentDigest(String contentDigest) {
+    this.contentDigest = contentDigest;
   }
 
 
@@ -275,13 +302,14 @@ public class Artifact {
       Objects.equals(this.committed, artifact.committed) &&
       Objects.equals(this.storageUrl, artifact.storageUrl) &&
       Objects.equals(this.originDate, artifact.originDate) &&
-      Objects.equals(this.collectionDate, artifact.collectionDate);
+      Objects.equals(this.collectionDate, artifact.collectionDate) &&
+      Objects.equals(this.contentDigest, artifact.contentDigest);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(id, collection, auid, uri, version, committed, storageUrl, originDate,
-      collectionDate);
+      contentDigest, collectionDate);
   }
 
 
@@ -297,6 +325,7 @@ public class Artifact {
     sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
     sb.append("    storageUrl: ").append(toIndentedString(storageUrl)).append("\n");
     sb.append("    originDate: ").append(toIndentedString(originDate)).append("\n");
+    sb.append("    contentDigest: ").append(toIndentedString(contentDigest)).append("\n");
     sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");
     sb.append("}");
     return sb.toString();

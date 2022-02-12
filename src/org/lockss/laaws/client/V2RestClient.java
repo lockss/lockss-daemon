@@ -19,11 +19,11 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
 import okio.BufferedSink;
 import okio.Okio;
+import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.Authentication;
 import org.lockss.laaws.client.auth.HttpBasicAuth;
 import org.lockss.laaws.client.auth.OAuth;
-import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
 import javax.net.ssl.*;
@@ -839,8 +839,9 @@ public class V2RestClient {
     } else if (obj instanceof File) {
       // File body parameter support.
       return RequestBody.create(MediaType.parse(contentType), (File) obj);
-    } else if (obj instanceof CachedUrl) {
-      return new CachedUrlRequestBody(MediaType.parse(contentType), (CachedUrl) obj);
+    } else if (obj instanceof DigestCachedUrl) {
+      DigestCachedUrl dcu = (DigestCachedUrl) obj;
+      return new CachedUrlRequestBody(MediaType.parse(contentType), dcu.getCu(), dcu.getMessageDigest());
     } else if (isJsonMime(contentType)) {
       String content;
       if (obj != null) {
@@ -1264,12 +1265,13 @@ public class V2RestClient {
             "form-data; name=\"" + param.getKey() + "\"; filename=\"" + file.getName() + "\"");
         MediaType mediaType = MediaType.parse(guessContentTypeFromFile(file));
         mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, file));
-      } else if (param.getValue() instanceof CachedUrl) {
-        CachedUrl cu = (CachedUrl) param.getValue();
+      } else if (param.getValue() instanceof DigestCachedUrl) {
+        DigestCachedUrl dcu = (DigestCachedUrl) param.getValue();
         Headers partHeaders = Headers.of("Content-Disposition",
             "form-data; name=\"" + param.getKey() + "\"; filename=\"artifact\"");
         MediaType mediaType = MediaType.parse("application/http;msgtype=response");
-        mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(mediaType, cu));
+        mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(mediaType, dcu.getCu(),
+            dcu.getMessageDigest()));
       } else {
         Headers partHeaders = Headers.of("Content-Disposition",
             "form-data; name=\"" + param.getKey() + "\"");

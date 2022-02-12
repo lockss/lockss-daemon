@@ -40,12 +40,15 @@ import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Queue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -54,6 +57,7 @@ import okhttp3.Dispatcher;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.apache.commons.codec.binary.Hex;
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.config.ConfigManager;
@@ -856,14 +860,14 @@ public class V2AuMover {
       // if the v2 repo knows about this au we need to call getArtifacts.
       if (v2Aus.contains(au.getAuId())) {
         isPartialContent = true;
-        log.debug2("Checking for unmoved content.");
+        log.debug2("Checking for unmoved content: " + v2Url);
         do {
           pageInfo = repoCollectionsApiClient.getArtifacts(collection, au.getAuId(),
-              v2Url, null, null, false, null, token);
+              v2Url, null, "all", false, null, token);
           cuArtifacts.addAll(pageInfo.getArtifacts());
           token = pageInfo.getPageInfo().getContinuationToken();
         } while (!terminated && !StringUtil.isNullString(token));
-        log.debug3("Found " + cuArtifacts.size() + " matches for " + v2Url);
+        log.debug2("Found " + cuArtifacts.size() + " matches for " + v2Url);
       }
       moveCuVersions(v2Url, cachedUrl, cuArtifacts);
     }
@@ -891,7 +895,7 @@ public class V2AuMover {
       // if the v2 repository has fewer versions than the v1 repository
       // then move the missing versions or release the cu version.
       int vers_to_move = localVersions.length - v2Count;
-      log.debug2("Queueing " + vers_to_move + "/" + localVersions.length + " versions...");
+      log.debug3("Queueing " + vers_to_move + "/" + localVersions.length + " versions...");
       if (vers_to_move > 0) {
         for (int vx = 0; vx < localVersions.length; vx++) {
           CachedUrl ver = localVersions[vx];
@@ -1092,23 +1096,36 @@ public class V2AuMover {
   private void createArtifact(String auid, String v2Url, Long collectionDate,
       CachedUrl cu, String collectionId, Queue<CachedUrl> cuQueue) throws ApiException {
     log.debug3("enqueing create artifact request...");
-    repoCollectionsApiClient.createArtifactAsync(collectionId, auid, v2Url, cu, collectionDate,
-        new CreateArtifactCallback(auid, v2Url, cu.getContentSize(), cuQueue));
+    DigestCachedUrl dcu = new DigestCachedUrl(cu);
+    repoCollectionsApiClient.createArtifactAsync(collectionId, auid, v2Url, dcu, collectionDate,
+        new CreateArtifactCallback(auid, v2Url, dcu, cuQueue));
   }
 
   /**
    * Make a synchronous rest call to commit the artifact that just completed successful creation.
    *
    * @param uncommitted the v2 artifact to be committed
+   * @param dcu
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
-  private void commitArtifact(Artifact uncommitted) throws ApiException {
+  private void commitArtifact(Artifact uncommitted, DigestCachedUrl dcu) throws ApiException {
     Artifact committed;
     log.debug3("committing artifact " + uncommitted.getId());
     committed = repoCollectionsApiClient.updateArtifact(uncommitted.getCollection(),
         uncommitted.getId(), true);
-    log.debug3("Successfully committed artifact " + committed.getId());
-    auArtifactsMoved++;
+    if (!committed.getContentDigest().equals(dcu.getContentDigest())) {
+      String err="Error in commit of " + dcu.getCu().getUrl() + " content digest do not match";
+      log.error(err);
+      log.debug("v1 digest = " +dcu.getContentDigest()+  " v2 digest = " + committed.getContentDigest());
+      errorList.add(err);
+      auErrors.add(err);
+      auErrorCount++;
+    }
+    else {
+      log.debug3("Successfully committed artifact " + committed.getId());
+      auArtifactsMoved++;
+    }
+
   }
 
   /**
@@ -1304,15 +1321,17 @@ public class V2AuMover {
 
     String auId;
     String v2Url;
+    DigestCachedUrl dcu;
     Queue<CachedUrl> cuQueue;
     long contentSize;
 
-    public CreateArtifactCallback(String auid, String uri, long contentSize,
+    public CreateArtifactCallback(String auid, String uri, DigestCachedUrl dcu,
         Queue<CachedUrl> cuQueue) {
       this.auId = auid;
       this.v2Url = uri;
+      this.dcu = dcu;
       this.cuQueue = cuQueue;
-      this.contentSize = contentSize;
+      this.contentSize = dcu.getCu().getContentSize();
     }
 
     @Override
@@ -1331,7 +1350,7 @@ public class V2AuMover {
         Map<String, List<String>> responseHeaders) {
       try {
         log.debug3("Successfully created artifact (" + statusCode + "): " + result.getId());
-        commitArtifact(result);
+        commitArtifact(result, dcu);
         auContentBytesMoved += contentSize;
         if (cuQueue.peek() != null) {
           moveNextCuVersion(auId, v2Url, cuQueue);
@@ -1364,6 +1383,43 @@ public class V2AuMover {
         log.debug2("Create Artifact download " + bytesRead + "  complete");
       }
 
+    }
+  }
+
+  public class DigestCachedUrl {
+    MessageDigest md;
+    CachedUrl cu;
+    String HASH_ALGORITHM="SHA-256";
+    String contentDigest=null;
+
+    public DigestCachedUrl(CachedUrl cu) {
+      this.cu = cu;
+    }
+
+    public MessageDigest getMessageDigest() {
+      if (md == null)
+        try {
+          md = MessageDigest.getInstance(HASH_ALGORITHM);
+        }
+        catch (NoSuchAlgorithmException e) {
+          e.printStackTrace();
+        }
+     return md;
+    }
+
+
+    public CachedUrl getCu() {
+      return cu;
+    }
+
+    public String getContentDigest() {
+      if( contentDigest == null) {
+        contentDigest = String.format("%s:%s",
+            HASH_ALGORITHM,
+            new String(Hex.encodeHex(md.digest())));
+        log.debug2("contentDigest =" + contentDigest);
+      }
+      return contentDigest;
     }
   }
 

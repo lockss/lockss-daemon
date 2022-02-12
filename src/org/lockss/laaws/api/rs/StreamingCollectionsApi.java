@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.laaws.client.ApiCallback;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.ApiResponse;
@@ -13,7 +14,6 @@ import org.lockss.laaws.client.Configuration;
 import org.lockss.laaws.client.Pair;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.Artifact;
-import org.lockss.plugin.CachedUrl;
 
 public class StreamingCollectionsApi extends CollectionsApi {
 
@@ -55,7 +55,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * </table>
    */
   public okhttp3.Call createArtifactCall(String collectionid, String auid, String uri,
-    CachedUrl artifact, Long collectionDate, final ApiCallback _callback) throws ApiException {
+    DigestCachedUrl artifact, Long collectionDate, final ApiCallback _callback) throws ApiException {
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -106,7 +106,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
 
   @SuppressWarnings("rawtypes")
   private okhttp3.Call createArtifactValidateBeforeCall(String collectionid, String auid,
-    String uri, CachedUrl artifact, Long collectionDate, final ApiCallback _callback)
+    String uri, DigestCachedUrl artifact, Long collectionDate, final ApiCallback _callback)
     throws ApiException {
 
     // verify the required parameter 'collectionid' is set
@@ -159,7 +159,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * <tr><td> 502 </td><td> Internal error creating artifact </td><td>  -  </td></tr>
    * </table>
    */
-  public Artifact createArtifact(String collectionid, String auid, String uri, CachedUrl artifact,
+  public Artifact createArtifact(String collectionid, String auid, String uri, DigestCachedUrl artifact,
     Long collectionDate) throws ApiException {
     ApiResponse<Artifact> localVarResp = createArtifactWithHttpInfo(collectionid, auid, uri,
       artifact, collectionDate);
@@ -187,7 +187,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * </table>
    */
   public ApiResponse<Artifact> createArtifactWithHttpInfo(String collectionid, String auid,
-    String uri, CachedUrl artifact, Long collectionDate) throws ApiException {
+    String uri, DigestCachedUrl artifact, Long collectionDate) throws ApiException {
     okhttp3.Call localVarCall = createArtifactValidateBeforeCall(collectionid, auid, uri, artifact,
       collectionDate, null);
     Type localVarReturnType = new TypeToken<Artifact>() {
@@ -217,7 +217,7 @@ public class StreamingCollectionsApi extends CollectionsApi {
    * </table>
    */
   public okhttp3.Call createArtifactAsync(String collectionid, String auid, String uri,
-    CachedUrl artifact, Long collectionDate, final ApiCallback<Artifact> _callback)
+    DigestCachedUrl artifact, Long collectionDate, final ApiCallback<Artifact> _callback)
     throws ApiException {
 
     okhttp3.Call localVarCall = createArtifactValidateBeforeCall(collectionid, auid, uri, artifact,

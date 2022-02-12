@@ -4,6 +4,8 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.SequenceInputStream;
+import java.security.DigestInputStream;
+import java.security.MessageDigest;
 import java.util.Map;
 import java.util.Set;
 import okhttp3.MediaType;
@@ -36,13 +38,15 @@ public class CachedUrlRequestBody extends RequestBody {
 
   private final MediaType contentType;
   private final CachedUrl artifactCu;
+  private final MessageDigest digest;
 
-  public CachedUrlRequestBody(MediaType contentType, CachedUrl cu) {
+  public CachedUrlRequestBody(MediaType contentType, CachedUrl cu, MessageDigest md) {
     if (cu == null) {
       throw new NullPointerException("cachedUrl == null");
     }
     this.contentType = contentType;
     this.artifactCu = cu;
+    this.digest = md;
   }
 
   /**
@@ -135,8 +139,8 @@ public class CachedUrlRequestBody extends RequestBody {
     BasicHttpResponse response = new BasicHttpResponse(STATUS_LINE_OK);
     // Create an InputStreamEntity from artifact InputStream
     try {
-//      InputStream is = artifactCu.getUnfilteredInputStream();
-      response.setEntity(new InputStreamEntity(artifactCu.getUnfilteredInputStream()));
+      DigestInputStream dis = new DigestInputStream(artifactCu.getUnfilteredInputStream(), digest) ;
+      response.setEntity(new InputStreamEntity(dis));
       // Add artifact headers into HTTP response
       CIProperties props = artifactCu.getProperties();
       if (props != null) {
