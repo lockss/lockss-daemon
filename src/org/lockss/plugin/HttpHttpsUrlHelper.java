@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -100,7 +100,7 @@ public class HttpHttpsUrlHelper {
   public HttpHttpsUrlHelper(ArchivalUnit au, String... params)
       throws IllegalArgumentException {
     this.au = au;
-    this.httpUrls = new Flat3Map<String, Boolean>();
+    this.httpUrls = (params.length <= 3) ? new Flat3Map<>() : new HashMap<>();
     for (String param : params) {
       String url = au.getConfiguration().get(param);
       if (url == null) {
