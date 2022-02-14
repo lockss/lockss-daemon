@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -52,19 +52,19 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>volume</key>
-        <displayName>Volume No.</displayName>
-        <type>6</type>
-        <size>8</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
         <type>3</type>
         <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -98,7 +98,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+    <string>edu.nyu.plugin.bonefolder.BonefolderUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
