@@ -16,7 +16,8 @@
   
     title <
       name = Marine Ecology Progress Series ;
-      eissn = 0171-8630 
+      issn = 0171-8630 
+      eissn = 1616-1599 
     >
       #published 1979 to present
       param[journal_id] = meps
@@ -133,17 +134,17 @@
   {
   
     title <
-      name = Acquaculture Environment Interactions ;
+      name = Aquaculture Environment Interactions ;
       issn = 1869-215X ;
       eissn = 1869-7534 
     >
       #published 2009 to present
       param[journal_id] = aei
 
-      au < exists ; exists ; 2019 ; 2019 ; 11 ; Acquaculture Environment Interactions Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 12 ; Acquaculture Environment Interactions Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; 13 ; Acquaculture Environment Interactions Volume 2021 ; >
-      au < expected ; expected ; 2022 ; 2022 ; 14 ; Acquaculture Environment Interactions Volume 2022 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 11 ; Aquaculture Environment Interactions Volume 2019 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; 12 ; Aquaculture Environment Interactions Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 13 ; Aquaculture Environment Interactions Volume 2021 ; >
+      au < expected ; expected ; 2022 ; 2022 ; 14 ; Aquaculture Environment Interactions Volume 2022 ; >
 
   }
 
