@@ -13,19 +13,31 @@
     >
   
     # Stopped publishing after 2007 but still online (as of 2022-02-08)
-    # Plugin needs http-to-https transition
 
     rights = openaccess
     plugin = edu.jhu.library.plugin.MedievalForumPlugin
-    param[base_url] = http://www.sfsu.edu/~medieval/
     implicit < status ; year ; name ; param[volume] >
+
+    {
     
-    au < down ; 2002 ; Medieval Forum Volume 1 ; 1 >
-    au < down ; 2003 ; Medieval Forum Volume 2 ; 2 >
-    au < down ; 2003 ; Medieval Forum Volume 3 ; 3 >
-    au < down ; 2004 ; Medieval Forum Volume 4 ; 4 >
-    au < down ; 2006 ; Medieval Forum Volume 5 ; 5 >
-    au < manifest ; 2007 ; Medieval Forum Volume 6 ; 6 >
+      param[base_url] = http://www.sfsu.edu/~medieval/
+    
+      au < released ; 2002 ; Medieval Forum Volume 1 ; 1 >
+      au < released ; 2003 ; Medieval Forum Volume 2 ; 2 >
+      au < released ; 2003 ; Medieval Forum Volume 3 ; 3 >
+      au < released ; 2004 ; Medieval Forum Volume 4 ; 4 >
+      au < released ; 2006 ; Medieval Forum Volume 5 ; 5 >
+
+    }
+    
+    {
+
+      param[base_url] = https://www.sfsu.edu/~medieval/
+    
+      au < ready ; 2007 ; Medieval Forum Volume 6 ; 6 >
+      # ceased
+      
+    }
 
   }
 
