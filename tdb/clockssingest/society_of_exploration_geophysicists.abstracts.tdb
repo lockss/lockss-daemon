@@ -7,12 +7,15 @@
     info[poller] = 3 ;
     info[platform] = Atypon Proceedings. LXPLUG-2145
  >
-  plugin = needs.plugin
   param[base_url] = https://library.seg.org/
 
-  #plugin = org.lockss.plugin.atypon.seg.ClockssSEGAbstractsPlugin #### Possible plugin name. 
-  #plugin = org.lockss.plugin.atypon.seg.ClockssSEGBooksPlugin #### Similar plugin
+  #plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.seg.ClockssSEGAbstractsPlugin #### Possible plugin name. 
   implicit < status ; status2 ; year ; param[item_doi] ; name ; hidden[proxy] >
+
+  #Similar plugin
+  #plugin = org.lockss.plugin.atypon.seg.ClockssSEGBooksPlugin #### Similar plugin
+  #implicit < status ; status2 ; year ; param[book_eisbn] ; name ; hidden[proxy] >
 
 
   {
