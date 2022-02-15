@@ -46,17 +46,20 @@ public class OecdJournalsArticleMetadataExtractor extends BaseArticleMetadataExt
 
   private static final String PDF_ARTICLE_PATTERN = ".*/.+\\.pdf\\?itemId=%2Fcontent%2Fpaper%2F.+&mimeType=pdf$";
   private static final String PDF_ISSUE_PATTERN = ".*/.+\\.pdf\\?itemId=%2Fcontent%2Fpublication%2F.+&mimeType=pdf$";
+  private static boolean IS_BOOK = false;
 
   private static final String PDF_ROLE = ArticleFiles.ROLE_FULL_TEXT_PDF;
 
-  public OecdJournalsArticleMetadataExtractor(String roleArticleMetadata) {
+  public OecdJournalsArticleMetadataExtractor(String roleArticleMetadata,
+                                              boolean isBook) {
     super(roleArticleMetadata);
+    IS_BOOK = isBook;
   }
 
   protected String getPdfUrlFromHtml(CachedUrl cu) throws IOException {
     String PDF_PATTERN;
     String srcUrl = cu.getUrl();
-    if (srcUrl.contains("volume") && srcUrl.contains("issue")) {
+    if ((srcUrl.contains("volume") && srcUrl.contains("issue")) || IS_BOOK ) {
       PDF_PATTERN = PDF_ISSUE_PATTERN;
     } else {
       PDF_PATTERN = PDF_ARTICLE_PATTERN;
