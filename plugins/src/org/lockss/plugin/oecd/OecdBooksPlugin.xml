@@ -136,7 +136,7 @@ POSSIBILITY OF SUCH DAMAGE.
                  https://www.oecd-ilibrary.org/sites/c510039b-en/index.html?itemId=/content/publication/c510039b-en
                  https://www.oecd-ilibrary.org/sites/c510039b-en/1/2/2/index.html
             -->
-            <string>1,"^%s.+index\.html(\?itemId=|$)", base_url</string>
+            <string>1,"^%s.+index\.html\?itemId=", base_url</string>
             <!-- data tables -->
             <string>1,"^%s.+\.xlsx?\?itemId=.+&amp;mimeType=", base_url</string>
             <!-- pdf & epub files -->
