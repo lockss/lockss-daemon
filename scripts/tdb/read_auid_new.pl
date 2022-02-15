@@ -37,6 +37,7 @@ my $total_manifests = 0;
 my $total_missing = 0;
 my $total_missing_plugin = 0;
 my $datestring = localtime();
+my $my_year = 1900 + (localtime)[5];
 
 # Set up "cookie jar" to hold session cookies for Web access.
 # Don't save these cookies from run to run.
@@ -4173,7 +4174,10 @@ while (my $line = <>) {
          #****
          $start_vol = $param{volume};
          $start_vol =~ s/-.*//;
+         $end_vol = $param{volume};
+         $end_vol =~ s/.*-//;
          $man_url = $start_url;
+         #printf("* %s * * %d *\n", $param{year}, $my_year); #debug
          if (($s_resp->is_success) && ($p_resp->is_success)) {
              my $start_contents = $s_resp->content;
              my $perm_contents = $p_resp->content;
@@ -4182,8 +4186,14 @@ while (my $line = <>) {
                $vol_title = $s_resp->request->uri;
                $result = "Redirected";
              #} elsif (defined($start_contents) && defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/) && ($start_contents =~ m/\/$param{journal_id}\/v$start_vol/)) {
-             } elsif (defined($start_contents) && defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/) && ($start_contents =~ m/\/$param{journal_id}\/v$start_vol/)) {
-                 $vol_title= $param{journal_id} . " volume " . $param{volume};
+             } elsif (defined($start_contents) && 
+                      defined($perm_contents) && 
+                      ($perm_contents =~ m/$clockss_tag/) && 
+                      ($start_contents =~ m/$param{year}:[^:"]*href=\"abstracts\/$param{journal_id}\/v$start_vol/s) && 
+                      (($start_contents =~ m/$param{year}:[^:]*href=\"abstracts\/$param{journal_id}\/v$end_vol[^"]*"[^:"]*\/td/s) ||
+                       ($start_contents =~ m/$param{year}:[^:]*href=\"abstracts\/$param{journal_id}\/v$end_vol[^"]*"[^:"]*"tooltiptext"[^:"]*\/td/s)) &&
+                      ($param{year} < $my_year)) {
+                 $vol_title= $param{journal_id} . " volume " . $param{volume} . " " . $param{year};
                  $result = "Manifest";
              } else {
                  $result = "--"
