@@ -213,8 +213,8 @@
     param[journal_id] = washdev
     #manifest pages missing 20211213
 
-    au < exists ; exists ; 2011 ; 2011 ; Journal of Water, Sanitation and Hygiene for Development Volume 1 ; 1 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Water, Sanitation and Hygiene for Development Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Water, Sanitation and Hygiene for Development Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Water, Sanitation and Hygiene for Development Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Water, Sanitation and Hygiene for Development Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water, Sanitation and Hygiene for Development Volume 5 ; 5 ; > #IWADrupal plugin
@@ -223,8 +223,8 @@
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Water, Sanitation and Hygiene for Development Volume 8 ; 8 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Water, Sanitation and Hygiene for Development Volume 10 ; 10 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 ; >
-    au < expected ; expected ; 2022 ; 2022 ; Journal of Water, Sanitation and Hygiene for Development Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 ; >
+    au < manifest ; expected ; 2022 ; 2022 ; Journal of Water, Sanitation and Hygiene for Development Volume 12 ; 12 ; >
 
   }
 
