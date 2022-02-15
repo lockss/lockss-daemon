@@ -54,6 +54,7 @@ public class OecdHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "cookie-bar"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "survicate-fb-box"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "survicate-box"),
+      HtmlNodeFilters.tagWithAttribute("li", "class", "boardpaper"),
   };
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
