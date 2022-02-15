@@ -147,6 +147,6 @@ public class OecdJournalsArticleIteratorFactory implements ArticleIteratorFactor
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new OecdJournalsArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA, false);
+    return new OecdArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA, false);
   }
 }

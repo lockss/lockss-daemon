@@ -113,6 +113,6 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     // use same metadataextractor as journals for finding pdf on page
-    return new OecdJournalsArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA, true);
+    return new OecdArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA, true);
   }
 }

@@ -41,16 +41,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OecdJournalsArticleMetadataExtractor extends BaseArticleMetadataExtractor {
-  protected static Logger log = Logger.getLogger(OecdJournalsArticleMetadataExtractor.class);
+public class OecdArticleMetadataExtractor extends BaseArticleMetadataExtractor {
+  protected static Logger log = Logger.getLogger(OecdArticleMetadataExtractor.class);
 
   private static final String PDF_ARTICLE_PATTERN = ".*/.+\\.pdf\\?itemId=%2Fcontent%2Fpaper%2F.+&mimeType=pdf$";
   private static final String PDF_ISSUE_PATTERN = ".*/.+\\.pdf\\?itemId=%2Fcontent%2Fpublication%2F.+&mimeType=pdf$";
+
   private static boolean IS_BOOK = false;
 
   private static final String PDF_ROLE = ArticleFiles.ROLE_FULL_TEXT_PDF;
 
-  public OecdJournalsArticleMetadataExtractor(String roleArticleMetadata,
+  public OecdArticleMetadataExtractor(String roleArticleMetadata,
                                               boolean isBook) {
     super(roleArticleMetadata);
     IS_BOOK = isBook;
