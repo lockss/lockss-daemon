@@ -61,10 +61,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_permission_url</string>
-      <string>"%sclockss", base_url</string>
+    <!--https://openjournals.ugent.be/af/plugins/clockss/-->
+    <string>"%s%s/plugins/clockss", base_url, journal_id</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Ghent University Library Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"Ghent University Library Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
 </map>

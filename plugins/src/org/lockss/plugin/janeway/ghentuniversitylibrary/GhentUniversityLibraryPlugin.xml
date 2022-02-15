@@ -64,6 +64,15 @@ POSSIBILITY OF SUCH DAMAGE.
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
         <key>year</key>
         <displayName>Year</displayName>
         <description>Four digit year (e.g., 2004)</description>
@@ -102,18 +111,21 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Ghent University Library Plugin, Base URL %s, Year %d", base_url, year</string>
+    <string>"Ghent University Library Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%slockss", base_url</string>
+    <!--https://openjournals.ugent.be/af/plugins/clockss/-->
+    <string>"%s%s/plugins/lockss", base_url, journal_id</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <list>
-      <!--https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
-      <string>"%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
-    </list>
+      <!--
+      Both API available
+      https://openjournals.ugent.be/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
+      https://openjournals.ugent.be/af/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
+      -->
+    <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
