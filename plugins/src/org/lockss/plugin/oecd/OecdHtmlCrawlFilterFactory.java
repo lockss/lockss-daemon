@@ -57,6 +57,7 @@ public class OecdHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "relatedDatabasetitle"),
       // sidebar links
       HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "actions vertical"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "related-content-margin"),
       // other volumes in the journal
       HtmlNodeFilters.tagWithAttribute("ul", "class", "volumes-list"),
       // links to other journals
@@ -67,7 +68,7 @@ public class OecdHtmlCrawlFilterFactory implements FilterFactory {
       // get rid of all the links in the landing page except the csv file(s)
       HtmlNodeFilters.allExceptSubtree(
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "section-title"),
-          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(csv|pdf|read)")
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(web|epub|csv|pdf|read)")
       )
   };
 
