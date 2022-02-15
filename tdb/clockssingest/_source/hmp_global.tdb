@@ -18,11 +18,6 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     {
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/hmpglobal-released/
-
-    au < exists ; exists ; 2022 ; Test Content 2022_01 ; 2022_01 >
-    }
-    {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hmpglobal-released/
 
     au < manifest ; exists ; 2022 ; Journal of Invasive Cardiology Source Content 2022_01 ; 2022_01 >
