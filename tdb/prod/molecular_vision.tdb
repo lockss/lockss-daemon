@@ -17,8 +17,10 @@
     #plugin needs update. see lxq-1699
     #platform changed. Plugin down.
     {
-    plugin = org.lockss.plugin.molecularvision.MolecularVisionPlugin
-    param[base_url] = http://www.molvis.org/molvis/
+    plugin = org.molvis.plugin.MolecularVisionPlugin
+    param[base_url] = http://www.molvis.org/
+    param[journal_id] = molvis
+
     implicit < status ; year ; name ; param[volume] >
 
     au < exists ; 2013 ; Molecular Vision Volume 19 ; 19 >

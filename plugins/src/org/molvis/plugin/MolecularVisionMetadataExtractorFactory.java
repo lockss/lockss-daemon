@@ -30,58 +30,74 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.molecularvision;
+package org.molvis.plugin;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
 
 import java.io.IOException;
 
 public class MolecularVisionMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
 
+  static Logger log = Logger.getLogger(MolecularVisionMetadataExtractorFactory.class);
+
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                String contentType)
       throws PluginException {
-    return new SpandidosHtmlMetadataExtractor();
+
+    return new MolecularVisionMetadataExtractor();
   }
 
-  public static class SpandidosHtmlMetadataExtractor
+  public static class MolecularVisionMetadataExtractor
     extends SimpleHtmlMetaTagMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
-    static {
-      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-      tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
-      tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
-      tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("citation_journal_title", MetadataField. FIELD_PUBLICATION_TITLE);
-      tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
-      tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
-      tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
-      tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
-      tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
-      tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
-      tagMap.put("citation_abstract_html_url", MetadataField.FIELD_ACCESS_URL);
-      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
-      tagMap.put("keywords", MetadataField.FIELD_KEYWORDS);
-
-      tagMap.put(MetadataField.ARTICLE_TYPE_JOURNALARTICLE, MetadataField.FIELD_ARTICLE_TYPE);
-      tagMap.put(MetadataField.PUBLICATION_TYPE_JOURNAL, MetadataField.FIELD_PUBLICATION_TYPE);
-    }
 
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
     throws IOException {
       ArticleMetadata am = super.extract(target, cu);
 
+      ArchivalUnit au = cu.getArchivalUnit();
+      TdbAu tdbau = au.getTdbAu();
+
+      String publisherName = null;
+      String volume = null;
+      String issn = null;
+      String eissn = null;
+      String title = null;
+
+
+      if (tdbau != null) {
+          publisherName =  tdbau.getPublisherName();
+
+        title =  tdbau.getPublicationTitle();
+        volume = tdbau.getVolume();
+        issn = tdbau.getIssn();
+        eissn = tdbau.getEissn();
+
+        am.put(MetadataField.FIELD_ARTICLE_TITLE, title);
+        am.put(MetadataField.FIELD_EISSN, eissn);
+        am.put(MetadataField.FIELD_ISSN, issn);
+        am.put(MetadataField.FIELD_VOLUME, volume);
+      } else if (publisherName == null) {
+        publisherName = "Molecular Vision";
+      }
+
+      am.put(MetadataField.FIELD_PUBLISHER, publisherName);
+
       am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
       am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
-      
+
       am.cook(tagMap);
+
       return am;
     }
   }

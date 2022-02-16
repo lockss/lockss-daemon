@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.molecularvision;
+package org.molvis.plugin;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -61,7 +61,7 @@ public class MolecularVisionArticleIteratorFactory
   // Limit to just journal volume items
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   // Match on only those patters that could be an article
-  protected static final String PATTERN_TEMPLATE = "\"%s%s/v%s/[^.]+\", base_url, journal_id, volume_name";
+  protected static final String PATTERN_TEMPLATE = "\"%s%s/v%s/[^.]+\", base_url, journal_id, volume";
 
   public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/]+/[^/]+/[^.]+)$", Pattern.CASE_INSENSITIVE);
   public static final String FULLTEXT_REPLACEMENT =  "/$1";
