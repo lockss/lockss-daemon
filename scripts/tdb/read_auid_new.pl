@@ -1119,7 +1119,10 @@ while (my $line = <>) {
     sleep(4);
 
   #Janeway
-  } elsif ($plugin eq "ClockssIowaStateDPPlugin") {
+  } elsif (($plugin eq "ClockssIowaStateDPPlugin") ||
+           ($plugin eq "IowaStateDPPlugin") ||
+           ($plugin eq "ClockssGhentUniversityLibraryPlugin") ||
+           ($plugin eq "GhentUniversityLibraryPlugin")) {
     #permission is different from start
     $perm_url = uri_unescape($param{base_url}) . $param{journal_id} . "/plugins/clockss";
       #printf("URL: %s\n", $perm_url); #debug
