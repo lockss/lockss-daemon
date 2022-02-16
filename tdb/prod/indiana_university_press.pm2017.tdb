@@ -111,7 +111,7 @@
 
       attr[journal_id] = 825
 
-      au < manifest ; 2019-2020 ; American Religion Volume 1 [2019-2020] ; 16131 >
+      au < testing ; 2019-2020 ; American Religion Volume 1 [2019-2020] ; 16131 >
       au < manifest ; 2020-2021 ; American Religion Volume 2 [2020-2021] ; 16132 >
       au < manifest ; 2021-2022 ; American Religion Volume 3 [2021-2022] ; 16809 >
 
@@ -444,7 +444,7 @@
 
       attr[journal_id] = 830
 
-      au < manifest ; 2019-2020 ; Journal of Education in Muslim Societies Volume 1 [2019-2020] ; 16186 >
+      au < testing ; 2019-2020 ; Journal of Education in Muslim Societies Volume 1 [2019-2020] ; 16186 >
       au < manifest ; 2020-2021 ; Journal of Education in Muslim Societies Volume 2 [2020-2021] ; 16187 >
       au < manifest ; 2021-2022 ; Journal of Education in Muslim Societies Volume 3 [2021-2022] ; 16758 >
 
@@ -667,11 +667,11 @@
 
       attr[journal_id] = 828
 
-      au < manifest ; 2016 ; Pakistan Journal of Historical Studies Volume 1 [2016] ; 16188 >
-      au < manifest ; 2017 ; Pakistan Journal of Historical Studies Volume 2 [2017] ; 16189 >
-      au < manifest ; 2018 ; Pakistan Journal of Historical Studies Volume 3 [2018] ; 16190 >
-      au < manifest ; 2019 ; Pakistan Journal of Historical Studies Volume 4 [2019] ; 16191 >
-      au < manifest ; 2020 ; Pakistan Journal of Historical Studies Volume 5 [2020] ; 16626 >
+      au < testing ; 2016 ; Pakistan Journal of Historical Studies Volume 1 [2016] ; 16188 >
+      au < testing ; 2017 ; Pakistan Journal of Historical Studies Volume 2 [2017] ; 16189 >
+      au < testing ; 2018 ; Pakistan Journal of Historical Studies Volume 3 [2018] ; 16190 >
+      au < testing ; 2019 ; Pakistan Journal of Historical Studies Volume 4 [2019] ; 16191 >
+      au < testing ; 2020 ; Pakistan Journal of Historical Studies Volume 5 [2020] ; 16626 >
       au < manifest ; 2021 ; Pakistan Journal of Historical Studies Volume 6 [2020] ; 16733 >
 
     }
@@ -686,9 +686,9 @@
 
       attr[journal_id] = 833
 
-      au < manifest ; 2017-2018 ; Philanthropy & Education Volume 1 [2017-2018] ; 16192 >
-      au < manifest ; 2018-2019 ; Philanthropy & Education Volume 2 [2018-2019] ; 16193 >
-      au < manifest ; 2019-2020 ; Philanthropy & Education Volume 3 [2019-2020] ; 16194 >
+      au < testing ; 2017-2018 ; Philanthropy & Education Volume 1 [2017-2018] ; 16192 >
+      au < testing ; 2018-2019 ; Philanthropy & Education Volume 2 [2018-2019] ; 16193 >
+      au < testing ; 2019-2020 ; Philanthropy & Education Volume 3 [2019-2020] ; 16194 >
       au < manifest ; 2020-2021 ; Philanthropy & Education Volume 4 [2020-2021] ; 16195 >
       au < manifest ; 2021-2022 ; Philanthropy & Education Volume 5 [2021-2022] ; 16714 >
 
@@ -788,10 +788,10 @@
 
       attr[journal_id] = 827
 
-      au < manifest ; 2017 ; Recreation, Parks, and Tourism in Public Health Volume 1 [2017] ; 16196 >
-      au < manifest ; 2018 ; Recreation, Parks, and Tourism in Public Health Volume 2 [2018] ; 16197 >
-      au < manifest ; 2019 ; Recreation, Parks, and Tourism in Public Health Volume 3 [2019] ; 16198 >
-      au < manifest ; 2020 ; Recreation, Parks, and Tourism in Public Health Volume 4 [2020] ; 16199 >
+      au < testing ; 2017 ; Recreation, Parks, and Tourism in Public Health Volume 1 [2017] ; 16196 >
+      au < testing ; 2018 ; Recreation, Parks, and Tourism in Public Health Volume 2 [2018] ; 16197 >
+      au < testing ; 2019 ; Recreation, Parks, and Tourism in Public Health Volume 3 [2019] ; 16198 >
+      au < testing ; 2020 ; Recreation, Parks, and Tourism in Public Health Volume 4 [2020] ; 16199 >
       au < manifest ; 2021 ; Recreation, Parks, and Tourism in Public Health Volume 5 [2021] ; 16627 >
 
     }
