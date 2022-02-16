@@ -20,7 +20,7 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     au < readySource ; crawling ; 2021_01 ; GigaScience Journal Source Content 2021_01 ; 2021_01 >
-    au < manifest ; exists ; 2022_01 ; GigaScience Journal Source Content 2022_01 ; 2022_01 >
+    au < readySource ; crawling ; 2022_01 ; GigaScience Journal Source Content 2022_01 ; 2022_01 >
 
   }
 
