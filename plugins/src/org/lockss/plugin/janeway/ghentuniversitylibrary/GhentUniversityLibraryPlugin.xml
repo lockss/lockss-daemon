@@ -115,8 +115,8 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <!--https://openjournals.ugent.be/af/plugins/clockss/-->
-    <string>"%s%s/plugins/lockss", base_url, journal_id</string>
+    <!--https://openjournals.ugent.be/af/plugins/clockss/, both permission state are here-->
+    <string>"%s%s/plugins/clockss", base_url, journal_id</string>
   </entry>
   <entry>
     <string>au_start_url</string>
