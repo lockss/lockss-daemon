@@ -41,18 +41,11 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    {
+
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/scienceopenbooks-released/
 
-    au < doNotProcess ; doNotProcess ; 2021 ; ScienceOpen Books Source Content 2021 ; 2021_01 >
-    #When plugin is ready, change status to "exists ; exists"
-    }
-    {
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/scienceopenbooks-released/
+    au < exists ; exists ; 2021 ; ScienceOpen Books Source Content 2021 ; 2021_01 >
 
-    au < readySource ; down ; 2021 ; ScienceOpen Books Source Content 2021 ; 2021_01 >
-    #Do not edit. AU added to Milano in error.
-    }
   }
 
 }
