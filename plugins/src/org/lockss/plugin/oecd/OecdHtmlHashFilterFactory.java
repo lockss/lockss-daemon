@@ -35,13 +35,17 @@ package org.lockss.plugin.oecd;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
+import org.lockss.util.ReaderInputStream;
 
 import java.io.InputStream;
+import java.io.Reader;
 
 public class OecdHtmlHashFilterFactory implements FilterFactory {
 
@@ -55,15 +59,25 @@ public class OecdHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "survicate-fb-box"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "survicate-box"),
       HtmlNodeFilters.tagWithAttribute("li", "class", "boardpaper"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tokenCSRF_HiddenValue"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "timer_id")
   };
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in, String encoding) throws PluginException {
-    return new HtmlFilterInputStream(in,
+
+    // Do the initial html filtering
+    InputStream filteredStream = new HtmlFilterInputStream(in,
         encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(
             excludeFilters
         )));
+
+    // some tags we remove may only exist in one cached content, so we must remove whitespace
+    Reader noWhiteSpace = new WhiteSpaceFilter(
+        FilterUtil.getReader(filteredStream, encoding)
+    );
+    return new ReaderInputStream(noWhiteSpace);
   }
 
 }
