@@ -2,10 +2,11 @@
 
   publisher <
     name = Ghent University Library ;
-    info[platform] = Janeway/OAI. Like IowaStateDP. See LXPLUG-2091
+    info[platform] = Janeway/OAI. Needs GLN version. See LXPLUG-2091
   >
   
-    plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.GhentUniversityLibraryPlugin
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.GhentUniversityLibraryPlugin
     param[base_url] = https://openjournals.ugent.be/
     implicit < status ; year ; param[year] ; volume ; name >
 
