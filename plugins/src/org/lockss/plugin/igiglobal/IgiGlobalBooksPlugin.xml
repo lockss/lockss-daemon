@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -203,6 +203,12 @@
       <string>"[.](css|js)$", 0</string>
       <!-- needs 0 weight because titles are continually being added to the manifest page -->
       <string>"^https?://[^/]+/lockss/books.aspx$", 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>coverimages\.igi-global\.com</string>
     </list>
   </entry>
 </map>
