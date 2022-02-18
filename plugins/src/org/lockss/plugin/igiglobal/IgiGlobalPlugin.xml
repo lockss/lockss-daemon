@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -66,7 +66,10 @@
     <list>
       <string>2,"^https?://%s/membership/login", url_host(base_url)</string>
       <string>2,"(/App_Master){2}"</string>
-      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)([?]v=.+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|woff2?|ttf|svg|webp)([?]v=.+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/ScriptResource[.]axd", url_host(base_url)</string>
+      <string>1,"^https?://%s/bundles/(js|css)/gateway", url_host(base_url)</string>
+      <string>1,"^https?://coverimages.igi-global.com/"</string>
       <string>4,"^https?://%s/", url_host(base_url)</string>
 <!--      <string>1,"^https?://%s/lockss/journal-issues\.aspx\?issn=%s&amp;volume=%s", url_host(base_url), journal_issn, volume</string>-->
       <string>1,"^https?://%s/gateway/contentowned/articles[.]aspx", url_host(base_url)</string>
@@ -142,6 +145,10 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.igiglobal.IgiGlobalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/css_link_rewriter_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalRegexpCssLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>

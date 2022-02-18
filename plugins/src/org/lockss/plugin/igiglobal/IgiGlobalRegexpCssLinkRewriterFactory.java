@@ -6,7 +6,6 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.rewriter.LinkRewriterFactory;
-import org.lockss.rewriter.RegexpCssLinkRewriterFactory;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.util.*;
 
