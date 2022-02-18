@@ -59,8 +59,11 @@ public class OecdHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "survicate-fb-box"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "survicate-box"),
       HtmlNodeFilters.tagWithAttribute("li", "class", "boardpaper"),
+      // elements with dynamically generated randomness
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tokenCSRF_HiddenValue"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "timer_id")
+      HtmlNodeFilters.tagWithAttribute("div", "id", "timer_id"),
+      HtmlNodeFilters.tagWithAttribute("ul", "id", "web_nav"),
+      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "cf_email")
   };
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
