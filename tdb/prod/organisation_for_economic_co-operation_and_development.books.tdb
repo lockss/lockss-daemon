@@ -64,9 +64,10 @@
     {
 
       title <
-        name = Testing A-Z
+        name = Testing A-Z ;
         type = bookSeries ;
         eissn = 0000-0000
+
       >
 
         au < testing ; 2000 ; 9789264182561 ; A Better World for All:Progress Towards the International Development Goals ; development ; a-better-world-for-all ; 9789264182561-en >
