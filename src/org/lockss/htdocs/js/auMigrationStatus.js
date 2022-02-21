@@ -11,6 +11,15 @@ class AuMigrationStatus extends React.Component {
     };
   }
 
+    ErrorList() {
+        if (this.state.errors === undefined) {
+            return null;
+        }
+        return (
+                <div>Errors: <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+        )
+    }
+
   componentDidMount() {
     this.__loadStatus();
     this.interval = setInterval(this.__loadStatus, this.state.delay);
@@ -47,6 +56,7 @@ class AuMigrationStatus extends React.Component {
             running: result.running,
             fetchError: false,
             status: result.status,
+            errors: result.errors,
             delay: result.running ? 1000 : 5000,
           });
         },
@@ -67,6 +77,7 @@ class AuMigrationStatus extends React.Component {
       <div>
         <div>Running: {this.state.fetchError ? "Unknown" : this.state.running ? "Yes" : "No"}</div>
         <div>Status: {this.state.status}</div>
+            {this.ErrorList()}
       </div>
     );
   }

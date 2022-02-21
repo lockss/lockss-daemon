@@ -677,9 +677,6 @@ public class V2AuMover {
    */
   void closeReport() {
     StringBuilder sb = new StringBuilder();
-    for (String err : errorList) {
-      sb.append("Error: " + err + "\n");
-    }
     sb.append("AusMoved: ");
     sb.append(totalAusMoved);
     if (totalAusPartiallyMoved > 0) {
@@ -710,6 +707,7 @@ public class V2AuMover {
     currentStatus = summary;
     if (reportWriter != null) {
       reportWriter.println(summary);
+      reportWriter.println("--------------------------------------------------");
       if (reportWriter.checkError()) {
         log.warning("Error writing report file.");
       }
@@ -934,6 +932,7 @@ public class V2AuMover {
           apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
       auErrors.add(err);
+      errorList.add(err);
       auErrorCount++;
     }
     finally {
