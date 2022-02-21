@@ -171,10 +171,19 @@ public class CachedUrlRequestBody extends RequestBody {
     Source source = null;
     try {
       InputStream inputStream = getHttpResponseStreamFromCachedUrl();
+      log.debug3("Writing " + (inputStream == null ? "(null) " : "") +
+                 artifactCu);
       if (inputStream != null) {
         source = Okio.source(inputStream);
         sink.writeAll(source);
+        long avail = inputStream.available();
+        if (avail > 0) {
+          log.error("Still CU bytes available after sink.writeAll(): " + avail);
+        }
       }
+    } catch (Exception e) {
+      log.error("Exception writing CU body to V2: " + artifactCu, e);
+      throw e;
     } finally {
       Util.closeQuietly(source);
       AuUtil.safeRelease(artifactCu);
