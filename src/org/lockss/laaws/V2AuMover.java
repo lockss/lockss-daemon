@@ -707,7 +707,6 @@ public class V2AuMover {
     currentStatus = summary;
     if (reportWriter != null) {
       reportWriter.println(summary);
-      reportWriter.println("--------------------------------------------------");
       if (reportWriter.checkError()) {
         log.warning("Error writing report file.");
       }
