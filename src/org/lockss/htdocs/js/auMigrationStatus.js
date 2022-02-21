@@ -39,7 +39,7 @@ class AuMigrationStatus extends React.Component {
   }
 
   __loadStatus = () => {
-    fetch("/MigrateContent?output=json")
+    fetch("/MigrateContent?reqfreq=high&output=json")
       .then(response => response.json())
       .then(
         (result) => {

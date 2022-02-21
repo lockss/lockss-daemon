@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1252,6 +1252,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected void logParams() {
+    boolean isHighFreqReq = "high".equals(req.getParameter("reqfreq"));
     Enumeration en = req.getParameterNames();
     while (en.hasMoreElements()) {
       String name = (String)en.nextElement();
@@ -1265,7 +1266,11 @@ public abstract class LockssServlet extends HttpServlet
       } else {
 	dispval = req.getParameter(name);
       }
-      log.debug(name + " = " + dispval);
+      if (isHighFreqReq) {
+        log.debug2(name + " = " + dispval);
+      } else {
+        log.debug(name + " = " + dispval);
+      }
     }
   }
 
