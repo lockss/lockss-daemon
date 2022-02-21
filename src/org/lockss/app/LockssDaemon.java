@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,6 +55,7 @@ import org.lockss.crawler.*;
 import org.lockss.remote.*;
 import org.lockss.clockss.*;
 import org.lockss.safenet.*;
+import org.lockss.laaws.*;
 import org.apache.commons.collections.map.LinkedMap;
 
 /**
@@ -155,6 +152,7 @@ public class LockssDaemon extends LockssApp {
   public static final String SUBSCRIPTION_MANAGER = "SubscriptionManager";
   public static final String FETCH_TIME_EXPORT_MANAGER =
       "FetchTimeExportManager";
+  public static final String MIGRATION_MANAGER = "MigrationManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -197,6 +195,8 @@ public class LockssDaemon extends LockssApp {
     // Start the subscription manager.
     new ManagerDesc(SUBSCRIPTION_MANAGER,
 	"org.lockss.subscription.SubscriptionManager"),
+    new ManagerDesc(MIGRATION_MANAGER,
+	"org.lockss.laaws.MigrationManager"),
     // Start the COUNTER reports manager.
     new ManagerDesc(FETCH_TIME_EXPORT_MANAGER,
 	"org.lockss.exporter.FetchTimeExportManager"),
@@ -604,6 +604,17 @@ public class LockssDaemon extends LockssApp {
    */
   public SubscriptionManager getSubscriptionManager() {
     return (SubscriptionManager) getManager(SUBSCRIPTION_MANAGER);
+  }
+
+  /**
+   * Provides the migration manager.
+   *
+   * @return a MigrationManager with the migration manager.
+   * @throws IllegalArgumentException
+   *           if the manager is not available.
+   */
+  public MigrationManager getMigrationManager() {
+    return (MigrationManager) getManager(MIGRATION_MANAGER);
   }
 
   /**

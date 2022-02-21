@@ -47,21 +47,21 @@ public class TestV2AuMover extends LockssTestCase {
   String[] reportLines = {
       "AU Name: au1",
       "AU ID: au1",
-      "urlsMoved: 10, artifactsMoved: 10, contentBytesMoved: 900, totalBytesMoved: 1,000, byteRate: 3.26KB/s, errors: 0, totalRuntime: 300ms",
+      "UrlsMoved: 10, VersionsMoved: 10, ContentBytesMoved: 900, TotalBytesMoved: 1,000, ByteRate: 3.26KB/s, Errors: 0, TotalRuntime: 300ms",
       "",
       "AU Name: au2",
       "AU ID: au2",
-      "urlsMoved: 3,517, artifactsMoved: 35,723, contentBytesMoved: 17,261,845,523, totalBytesMoved: 17,307,972,727, byteRate: 628KB/s, errors: 1, totalRuntime: 7h28m34s",
+      "UrlsMoved: 3,517, VersionsMoved: 35,723, ContentBytesMoved: 17,261,845,523, TotalBytesMoved: 17,307,972,727, ByteRate: 628KB/s, Errors: 1, TotalRuntime: 7h28m34s",
       " cu2 Attempt to move artifact failed.",
       "",
       "AU Name: au3",
       "AU ID: au3",
-      "urlsMoved: 11, artifactsMoved: 22, contentBytesMoved: 1,626,829, totalBytesMoved: 1,661,366, byteRate: 400KB/s, errors: 3, totalRuntime: 4054ms",
+      "UrlsMoved: 11, VersionsMoved: 22, ContentBytesMoved: 1,626,829, TotalBytesMoved: 1,661,366, ByteRate: 400KB/s, Errors: 3, TotalRuntime: 4054ms",
       " cu1: Attempt to move artifact failed.",
       " cu5: Attempt to commit artifact failed.",
       " cu80: Attempt to commit artifact failed.",
       "",
-      "AusMoved: 3, urlsMoved: 3,538, artifactsMoved: 35,755, contentBytesMoved: 17,263,473,252, totalBytesMoved: 17,309,635,093, byteRate: 628KB/s, errors: 4, totalRuntime: 7h28m38s"
+      "AusMoved: 3, UrlsMoved: 3,538, VersionsMoved: 35,755, ContentBytesMoved: 17,263,473,252, TotalBytesMoved: 17,309,635,093, ByteRate: 628KB/s, Errors: 4, TotalRuntime: 7h28m38s"
   };
 
   public void setUp() throws Exception {
@@ -80,17 +80,10 @@ public class TestV2AuMover extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testIsAvailable() {
-    MockArchivalUnit mau = new MockArchivalUnit();
-    assertTrue(auMover.isAvailable());
-    auMover.getAuMoveQueue().add(mau);
-    assertFalse(auMover.isAvailable());
-  }
-
   public void testInitRequest() {
     auMover = new V2AuMover();
     // test file defaults
-    auMover.initRequest(null, testUser,testPassword);
+    auMover.initRequest(new V2AuMover.Args().setUname(testUser).setUpass(testPassword));
     // check the locals
     assertEquals(defaultCfgUrl,auMover.getCfgAccessUrl());
     assertEquals(defaultRsUrl,auMover.getRepoAccessUrl());
@@ -102,7 +95,7 @@ public class TestV2AuMover extends LockssTestCase {
     String user="user1";
     String passwd="passwd1";
     auMover = new V2AuMover();
-    auMover.initRequest("mockhost", user,passwd);
+    auMover.initRequest(new V2AuMover.Args().setHost("mockhost").setUname(user).setUpass(passwd));
     assertEquals(base+24620,auMover.getCfgAccessUrl());
     assertEquals(base+24610,auMover.getRepoAccessUrl());
     assertEquals(user,auMover.getUserName());
@@ -117,7 +110,7 @@ public class TestV2AuMover extends LockssTestCase {
     user="user2";
     passwd="passwd2";
     auMover = new V2AuMover();
-    auMover.initRequest(null, user, passwd);
+    auMover.initRequest(new V2AuMover.Args().setUname(user).setUpass(passwd));
     assertEquals(base+25620,auMover.getCfgAccessUrl());
     assertEquals(base+25610,auMover.getRepoAccessUrl());
     assertEquals(user,auMover.getUserName());
@@ -126,7 +119,7 @@ public class TestV2AuMover extends LockssTestCase {
     auMover = new V2AuMover();
     try {
       // test null entries
-      auMover.initRequest(null, null, null);
+      auMover.initRequest(new V2AuMover.Args());
       fail("null input should throw IllegalArgumentException");
     }
     catch(IllegalArgumentException iae) {
@@ -144,7 +137,7 @@ public class TestV2AuMover extends LockssTestCase {
     numErrors=0;
     numBytes=0;
     numContentBytes=0;
-    auMover.setCurrentAu("au1");
+    auMover.setCurrentAu(new MockArchivalUnit("au1"));
     List<String> errs = new ArrayList<>();
     addAu("au1", 10,10,1000, 900, 300, 0, errs);
     auMover.updateReport("au1");
@@ -178,7 +171,7 @@ public class TestV2AuMover extends LockssTestCase {
   public void testMoveOneAu() throws Exception {
     MockArchivalUnit mau = new MockArchivalUnit("mockAuId");
     MockV2AuMover mover = new MockV2AuMover();
-    mover.moveOneAu(null, testUser,testPassword, mau);
+    mover.moveOneAu(new V2AuMover.Args().setUname(testUser).setUpass(testPassword).setAu(mau));
     assertTrue(mover.getAuMoveQueue().isEmpty());
     List<String> movedAus = mover.getMovedAus();
     assertEquals(1, movedAus.size());
@@ -194,7 +187,7 @@ public class TestV2AuMover extends LockssTestCase {
     mpm.setAllAus(aus);
     mover.setPluginManager(mpm);
     // move all unfiltered aus
-    mover.moveAllAus(null, testUser,testPassword, null);
+    mover.moveAllAus(new V2AuMover.Args().setUname(testUser).setUpass(testPassword));
     assertTrue(mover.getAuMoveQueue().isEmpty());
     List<String> movedAus = mover.getMovedAus();
     assertEquals(aus.size(), movedAus.size());
@@ -214,7 +207,7 @@ public class TestV2AuMover extends LockssTestCase {
     List<String> filters=Arrays.asList(aPluginRegex,bPluginRegex);
     List<Pattern> selPatterns = compileRegexps(filters);
     // move all unfiltered aus
-    mover.moveAllAus(null, testUser,testPassword, selPatterns);
+    mover.moveAllAus(new V2AuMover.Args().setUname(testUser).setUpass(testPassword).setSelPatterns(selPatterns));
     assertTrue(mover.getAuMoveQueue().isEmpty());
     List<String> movedAus = mover.getMovedAus();
     assertNotEquals(aus.size(),movedAus.size());
@@ -230,7 +223,7 @@ public class TestV2AuMover extends LockssTestCase {
     numContentBytes+=contentBytes;
     totTime+=runTime;
     numErrors+=errors;
-    auMover.setCurrentAu(auName);
+    auMover.setCurrentAu(new MockArchivalUnit(auName));
     auMover.setAuCounters(urls, artifacts, bytes, contentBytes, runTime, errors,errs);
     auMover.setTotalCounters(numAus, numUrls, numArtifacts, numBytes, numContentBytes, totTime, numErrors);
 

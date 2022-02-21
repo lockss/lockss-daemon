@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,6 +47,7 @@ import org.lockss.laaws.V2AuMover;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
+import org.lockss.laaws.*;
 import org.mortbay.html.Block;
 import org.mortbay.html.Composite;
 import org.mortbay.html.Element;
@@ -91,10 +88,6 @@ public class MigrateContent extends LockssServlet {
   public static final String ACTION_MIGRATE_AU= "Migrate One AU to V2 Repository";
   public static final String ACTION_MIGRATE_ALL= "Migrate All AUs to V2 Repository";
 
-  static final String STATUS_RUNNING = "running";
-  static final String STATUS_STATUS = "status";
-  static final String STATUS_PROGRESS = "progress";
-
   private static final String HOST_URL_FOOT =
     "The V2 REST Service host name (localhost by default).";
   private static final String USER_NAME_FOOT =
@@ -103,6 +96,7 @@ public class MigrateContent extends LockssServlet {
     "The password used to connect to the rest interface of the V2 services.";
 
   private PluginManager pluginMgr;
+  private MigrationManager migrationMgr;
   private V2AuMover auMover;
 
   String auid;
@@ -134,15 +128,16 @@ public class MigrateContent extends LockssServlet {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
+    migrationMgr = getLockssDaemon().getMigrationManager();
   }
 
   public void lockssHandleRequest() throws IOException {
     initParams();
 
-    // TODO: This is just a placeholder - replace this with actual code
+    // Is this a status request?
     String output = getParameter(KEY_OUTPUT);
     if (!StringUtil.isNullString(output)) {
-      sendCurrentStatus();
+      sendCurrentStatus(output);
       return;
     }
 
@@ -164,81 +159,69 @@ public class MigrateContent extends LockssServlet {
     displayPage();
   }
 
-  private void sendCurrentStatus() throws IOException {
+  private void sendCurrentStatus(String format) throws IOException {
+    // TODO: support format other than json?
     Map statMap = getCurrentStatus();
-    Gson gson = new GsonBuilder().create();
-    gson.toJson(statMap);
-    resp.setStatus(200);
-    PrintWriter wrtr = resp.getWriter();
-    resp.setContentType("application/json");
-    String json = gson.toJson(statMap);
-    log.debug3("json: " + json);
-    wrtr.println(json);
+    switch (format) {
+    case "json":
+    default:
+      Gson gson = new GsonBuilder().create();
+      gson.toJson(statMap);
+      resp.setStatus(200);
+      PrintWriter wrtr = resp.getWriter();
+      resp.setContentType("application/json");
+      String json = gson.toJson(statMap);
+      log.debug3("json: " + json);
+      wrtr.println(json);
+    }
   }
     
   Map getCurrentStatus() {
-    V2AuMover.Runner runner =
-      (V2AuMover.Runner)getSession().getAttribute("V2AuMover");
-    if (runner == null) {
-      return MapUtil.map(STATUS_RUNNING, false);
+    return migrationMgr.getStatus();
+  }
+
+  V2AuMover.Args getCommonFormArgs() {
+    return new V2AuMover.Args()
+      .setHost(hostName)
+      .setUname(userName)
+      .setUpass(userPass);
+  }
+
+  private void startRunner(V2AuMover.Args args) {
+    try {
+      migrationMgr.startRunner(args);
+    } catch (Exception e) {
+      log.error("Couldn't start migration", e);
+      errMsg = "Can't start migration: " + e.getMessage();
     }
-    Map stat = new HashMap();
-    stat.put(STATUS_RUNNING, runner.isRunning());
-    String currentStatus = runner.getCurrentStatus();
-    if (!StringUtil.isNullString(currentStatus))
-      stat.put(STATUS_STATUS, currentStatus);
-    return stat;
   }
 
   private void doMigrateAll() {
-    auMover = new V2AuMover();
-    if (ConfigManager.getCurrentConfig().getBoolean(PARAM_REACT,
-                                                    DEFAULT_REACT)) {
-      V2AuMover.Runner runner =
-        auMover.moveAllAusAsynch(hostName, userName, userPass, auSelectPatterns);
-      getSession().setAttribute("V2AuMover", runner);
-    } else {
-      try {
-        auMover.moveAllAus(hostName, userName, userPass, auSelectPatterns);
-        java.util.List<String> errs = auMover.getErrors();
-        if (!errs.isEmpty()) {
-          errMsg = StringUtil.separatedString(errs, "\n");
-        } else {
-          statusMsg = "All AUs have been migrated.";
-        }
-      } catch (Exception e) {
-        log.error("Unexpected Exception enqueuing AUs.", e);
-        errMsg = e.getMessage();
-      }
-    }
+    V2AuMover.Args args = getCommonFormArgs()
+      .setSelPatterns(auSelectPatterns);
+    startRunner(args);
   }
 
   private void doMigrateAu() {
     ArchivalUnit au = getAu();
-    if (au == null) return;
+    if (au == null) {
+      if (errMsg == null) {
+        errMsg = "No AU selected";
+      }
+      return;
+    }
     if (pluginMgr.isInternalAu(au)) {
       errMsg = "Can't migrate internal AUs";
       return;
     }
-    try {
-      auMover = new V2AuMover();
-      auMover.moveOneAu(hostName, userName, userPass, au);
-      java.util.List<String> errs = auMover.getErrors();
-      log.debug("errs: " + errs);
-      if (!errs.isEmpty()) {
-        errMsg = StringUtil.separatedString(errs, "\n");
-      } else {
-        statusMsg = au.getName() + " has been migrated.";
-      }
-    } catch (Exception e) {
-      log.error("Unexpected Exception enqueuing AU " + au.getName(), e);
-      errMsg = e.getMessage();
-    }
+    V2AuMover.Args args = getCommonFormArgs()
+      .setAu(au);
+    startRunner(args);
   }
 
   ArchivalUnit getAu() {
     if (StringUtil.isNullString(auid)) {
-      errMsg = "Select an AU";
+      errMsg = "No AU selected";
       return null;
     }
     ArchivalUnit au = pluginMgr.getAuFromId(auid);
@@ -278,10 +261,10 @@ public class MigrateContent extends LockssServlet {
       "V2 Rest Services Hostname" + addFootnote(HOST_URL_FOOT),
       HOSTNAME, hostName, 40);
     addInputToTable(tbl,
-      "V2 Rest Services Username:" + addFootnote(USER_NAME_FOOT),
+      "V2 Rest Services Username" + addFootnote(USER_NAME_FOOT),
       KEY_USER_NAME, userName, 20);
     addHiddenInputToTable(tbl,
-      "V2 Rest Services Password:" + addFootnote(PASSWD_FOOT),
+      "V2 Rest Services Password" + addFootnote(PASSWD_FOOT),
       KEY_PASSWD,"", 20);
 
     tbl.newRow();
