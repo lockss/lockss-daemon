@@ -43,20 +43,17 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/.+\.zip", base_url, directory</string>
+      <!--https://clockss-test.lockss.org/sourcefiles/protocols-released/2021/-->
+      <string>"^%s%s/.+\.pdf", base_url, directory</string>
     </list>
   </entry>
   <entry>
-    <string>plugin_archive_file_types</string>
-    <string>standard</string>
-  </entry>
-  <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
