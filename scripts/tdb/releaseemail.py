@@ -68,7 +68,8 @@ NON_ALLIANCE = set([ \
                  "gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin", # gpo-pilot
                  "gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin", # gpo-pilot
                  "gov.loc.plugin.CJPentecostalCharismaticResearchPlugin",
-                 "gov.loc.plugin.TESLEJPlugin",
+                 "gov.loc.plugin.TESLEJPlugin", # humanities_project
+                 "gov.loc.plugin.TESLEJ2022Plugin", # humanities_project
                  "nz.ac.otago.plugin.scholia.ScholiaPlugin",
                  "org.lockss.plugin.absinthe.AbsinthePlugin",
                  "org.lockss.plugin.bepress.BePressPlugin",

@@ -33,19 +33,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - now partially Wordpress based</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>gov.loc.plugin.TESLEJPlugin</string>
+    <string>gov.loc.plugin.TESLEJ2022Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>TESL-EJ Plugin (Legacy)</string>
+    <string>TESL-EJ Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -67,36 +67,29 @@ POSSIBILITY OF SUCH DAMAGE.
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>num_issue_range</key>
-        <displayName>Numeric Issue Range</displayName>
-        <description>A Range of issues in the form: min-max</description>
-        <type>8</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"TESL-EJ Plugin (Legacy), Base URL %s, Volume %d, Issues %s", base_url, volume, num_issue_range</string>
+    <string>"TESL-EJ Plugin, Base URL %s, Volume %d", base_url, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sarchives.html", base_url</string>
+    <string>"%swordpress/issues/volume%d/", base_url, volume</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%sabout.html", base_url</string>
+    <list>
+      <string>"%swordpress/about/", to_http(base_url)</string>
+      <string>"%swordpress/about/", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s(about|archives)\.html$", base_url</string>
-      <string>1,"^%sej%s/", base_url, num_issue_range</string>
-      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|webp|woff.?)(\?.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/wordpress/(issues/)?volume%d/", url_host(base_url), volume</string>
+      <string>1,"^https?://%s/pdf/", url_host(base_url), volume</string>
     </list>
   </entry>
   <entry>
@@ -106,5 +99,15 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>www\.tesl-ej\.org</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>gov.loc.plugin.TESLEJ2022UrlNormalizer</string>
   </entry>
 </map>
