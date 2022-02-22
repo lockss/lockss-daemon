@@ -1643,10 +1643,10 @@ public class V2AuMover {
     }
   }
 
-  public class DigestCachedUrl {
+  public static class DigestCachedUrl {
     MessageDigest md;
     CachedUrl cu;
-    String HASH_ALGORITHM="SHA-256";
+    static final String HASH_ALGORITHM="SHA-256";
     String contentDigest=null;
 
     public DigestCachedUrl(CachedUrl cu) {
@@ -1656,6 +1656,7 @@ public class V2AuMover {
     public MessageDigest createMessageDigest() {
       try {
         md = MessageDigest.getInstance(HASH_ALGORITHM);
+        contentDigest=null;
       }
       catch (NoSuchAlgorithmException e) {
         // this should never occur
