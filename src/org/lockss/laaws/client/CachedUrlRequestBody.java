@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.SequenceInputStream;
 import java.security.DigestInputStream;
-import java.security.MessageDigest;
 import java.util.Map;
 import java.util.Set;
 import okhttp3.MediaType;
@@ -25,6 +24,7 @@ import org.apache.http.impl.io.HttpTransportMetricsImpl;
 import org.apache.http.impl.io.SessionOutputBufferImpl;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
+import org.lockss.laaws.V2AuMover.DigestCachedUrl;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.CIProperties;
@@ -38,15 +38,15 @@ public class CachedUrlRequestBody extends RequestBody {
 
   private final MediaType contentType;
   private final CachedUrl artifactCu;
-  private final MessageDigest digest;
+  private final DigestCachedUrl dcu;
 
-  public CachedUrlRequestBody(MediaType contentType, CachedUrl cu, MessageDigest md) {
-    if (cu == null) {
+  public CachedUrlRequestBody(MediaType contentType, DigestCachedUrl dcu) {
+    if (dcu == null) {
       throw new NullPointerException("cachedUrl == null");
     }
     this.contentType = contentType;
-    this.artifactCu = cu;
-    this.digest = md;
+    this.artifactCu = dcu.getCu();
+    this.dcu =dcu;
   }
 
   /**
@@ -139,7 +139,8 @@ public class CachedUrlRequestBody extends RequestBody {
     BasicHttpResponse response = new BasicHttpResponse(STATUS_LINE_OK);
     // Create an InputStreamEntity from artifact InputStream
     try {
-      DigestInputStream dis = new DigestInputStream(artifactCu.getUnfilteredInputStream(), digest) ;
+      DigestInputStream dis = new DigestInputStream(artifactCu.getUnfilteredInputStream(),
+          dcu.createMessageDigest()) ;
       response.setEntity(new InputStreamEntity(dis));
       // Add artifact headers into HTTP response
       CIProperties props = artifactCu.getProperties();

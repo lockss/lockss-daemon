@@ -841,7 +841,7 @@ public class V2RestClient {
       return RequestBody.create(MediaType.parse(contentType), (File) obj);
     } else if (obj instanceof DigestCachedUrl) {
       DigestCachedUrl dcu = (DigestCachedUrl) obj;
-      return new CachedUrlRequestBody(MediaType.parse(contentType), dcu.getCu(), dcu.getMessageDigest());
+      return new CachedUrlRequestBody(MediaType.parse(contentType), dcu);
     } else if (isJsonMime(contentType)) {
       String content;
       if (obj != null) {
@@ -1270,8 +1270,7 @@ public class V2RestClient {
         Headers partHeaders = Headers.of("Content-Disposition",
             "form-data; name=\"" + param.getKey() + "\"; filename=\"artifact\"");
         MediaType mediaType = MediaType.parse("application/http;msgtype=response");
-        mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(mediaType, dcu.getCu(),
-            dcu.getMessageDigest()));
+        mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(mediaType, dcu));
       } else {
         Headers partHeaders = Headers.of("Content-Disposition",
             "form-data; name=\"" + param.getKey() + "\"");
