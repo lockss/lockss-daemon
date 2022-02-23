@@ -849,9 +849,9 @@
 
       param[journal_id] = ccej
 
-      au < ready ; exists ; 1990 ; Computing & Control Engineering Journal Volume 1 ; 1 ; >
-      au < ready ; exists ; 1991 ; Computing & Control Engineering Journal Volume 2 ; 2 ; >
-      au < ready ; exists ; 1992 ; Computing & Control Engineering Journal Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1990 ; Computing & Control Engineering Journal Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1991 ; Computing & Control Engineering Journal Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1992 ; Computing & Control Engineering Journal Volume 3 ; 3 ; >
       au < crawling ; exists ; 1993 ; Computing & Control Engineering Journal Volume 4 ; 4 ; >
       au < manifest ; exists ; 1994 ; Computing & Control Engineering Journal Volume 5 ; 5 ; >
       au < crawling ; exists ; 1995 ; Computing & Control Engineering Journal Volume 6 ; 6 ; >
@@ -861,7 +861,7 @@
       au < manifest ; exists ; 1999 ; Computing & Control Engineering Journal Volume 10 ; 10 ; >
       au < crawling ; exists ; 2000 ; Computing & Control Engineering Journal Volume 11 ; 11 ; >
       au < crawling ; exists ; 2001 ; Computing & Control Engineering Journal Volume 12 ; 12 ; >
-      au < ready ; exists ; 2002 ; Computing & Control Engineering Journal Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2002 ; Computing & Control Engineering Journal Volume 13 ; 13 ; >
 
   }
 
@@ -956,8 +956,8 @@
 
       param[journal_id] = emj
 
-      au < ready ; exists ; 1991 ; Engineering Management Journal Volume 1 ; 1 ; >
-      au < ready ; exists ; 1992 ; Engineering Management Journal Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1991 ; Engineering Management Journal Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1992 ; Engineering Management Journal Volume 2 ; 2 ; >
       au < crawling ; exists ; 1993 ; Engineering Management Journal Volume 3 ; 3 ; >
       au < crawling ; exists ; 1994 ; Engineering Management Journal Volume 4 ; 4 ; >
       au < crawling ; exists ; 1995 ; Engineering Management Journal Volume 5 ; 5 ; >
@@ -967,7 +967,7 @@
       au < crawling ; exists ; 1999 ; Engineering Management Journal Volume 9 ; 9 ; >
       au < crawling ; exists ; 2000 ; Engineering Management Journal Volume 10 ; 10 ; >
       au < crawling ; exists ; 2001 ; Engineering Management Journal Volume 11 ; 11 ; >
-      au < ready ; exists ; 2002 ; Engineering Management Journal Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2002 ; Engineering Management Journal Volume 12 ; 12 ; >
 
   }
 
@@ -1768,17 +1768,17 @@
 
       param[journal_id] = jiee-1
 
-      au < ready ; exists ; 1889 ; Journal of the Institution of Electrical Engineers Volume 18 ; 18 ; >
-      au < ready ; exists ; 1890 ; Journal of the Institution of Electrical Engineers Volume 19 ; 19 ; >
-      au < ready ; exists ; 1891 ; Journal of the Institution of Electrical Engineers Volume 20 ; 20 ; >
-      au < ready ; exists ; 1892 ; Journal of the Institution of Electrical Engineers Volume 21 ; 21 ; >
-      au < ready ; exists ; 1893 ; Journal of the Institution of Electrical Engineers Volume 22 ; 22 ; >
-      au < ready ; exists ; 1894 ; Journal of the Institution of Electrical Engineers Volume 23 ; 23 ; >
-      au < ready ; exists ; 1895 ; Journal of the Institution of Electrical Engineers Volume 24 ; 24 ; >
-      au < ready ; exists ; 1896 ; Journal of the Institution of Electrical Engineers Volume 25 ; 25 ; >
-      au < ready ; exists ; 1897 ; Journal of the Institution of Electrical Engineers Volume 26 ; 26 ; >
-      au < ready ; exists ; 1898 ; Journal of the Institution of Electrical Engineers Volume 27 ; 27 ; >
-      au < ready ; exists ; 1899 ; Journal of the Institution of Electrical Engineers Volume 28 ; 28 ; >
+      au < crawling ; exists ; 1889 ; Journal of the Institution of Electrical Engineers Volume 18 ; 18 ; >
+      au < crawling ; exists ; 1890 ; Journal of the Institution of Electrical Engineers Volume 19 ; 19 ; >
+      au < crawling ; exists ; 1891 ; Journal of the Institution of Electrical Engineers Volume 20 ; 20 ; >
+      au < crawling ; exists ; 1892 ; Journal of the Institution of Electrical Engineers Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1893 ; Journal of the Institution of Electrical Engineers Volume 22 ; 22 ; >
+      au < crawling ; exists ; 1894 ; Journal of the Institution of Electrical Engineers Volume 23 ; 23 ; >
+      au < crawling ; exists ; 1895 ; Journal of the Institution of Electrical Engineers Volume 24 ; 24 ; >
+      au < crawling ; exists ; 1896 ; Journal of the Institution of Electrical Engineers Volume 25 ; 25 ; >
+      au < crawling ; exists ; 1897 ; Journal of the Institution of Electrical Engineers Volume 26 ; 26 ; >
+      au < crawling ; exists ; 1898 ; Journal of the Institution of Electrical Engineers Volume 27 ; 27 ; >
+      au < crawling ; exists ; 1899 ; Journal of the Institution of Electrical Engineers Volume 28 ; 28 ; >
       au < crawling ; exists ; 1900 ; Journal of the Institution of Electrical Engineers Volume 29 ; 29 ; >
       au < crawling ; exists ; 1901 ; Journal of the Institution of Electrical Engineers Volume 30 ; 30 ; >
       au < crawling ; exists ; 1902 ; Journal of the Institution of Electrical Engineers Volume 31 ; 31 ; >
@@ -1936,15 +1936,15 @@
 
       param[journal_id] = jste-1
 
-      au < ready ; exists ; 1872 ; Journal of the Society of Telegraph Engineers Volume 1 ; 1 ; >
-      au < ready ; exists ; 1873 ; Journal of the Society of Telegraph Engineers Volume 2 ; 2 ; >
-      au < ready ; exists ; 1874 ; Journal of the Society of Telegraph Engineers Volume 3 ; 3 ; >
-      au < ready ; exists ; 1875 ; Journal of the Society of Telegraph Engineers Volume 4 ; 4 ; >
-      au < ready ; exists ; 1876 ; Journal of the Society of Telegraph Engineers Volume 5 ; 5 ; >
-      au < ready ; exists ; 1877 ; Journal of the Society of Telegraph Engineers Volume 6 ; 6 ; >
-      au < ready ; exists ; 1878 ; Journal of the Society of Telegraph Engineers Volume 7 ; 7 ; >
-      au < ready ; exists ; 1879 ; Journal of the Society of Telegraph Engineers Volume 8 ; 8 ; >
-      au < ready ; exists ; 1880 ; Journal of the Society of Telegraph Engineers Volume 9 ; 9 ; >
+      au < crawling ; exists ; 1872 ; Journal of the Society of Telegraph Engineers Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1873 ; Journal of the Society of Telegraph Engineers Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1874 ; Journal of the Society of Telegraph Engineers Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1875 ; Journal of the Society of Telegraph Engineers Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1876 ; Journal of the Society of Telegraph Engineers Volume 5 ; 5 ; >
+      au < crawling ; exists ; 1877 ; Journal of the Society of Telegraph Engineers Volume 6 ; 6 ; >
+      au < crawling ; exists ; 1878 ; Journal of the Society of Telegraph Engineers Volume 7 ; 7 ; >
+      au < crawling ; exists ; 1879 ; Journal of the Society of Telegraph Engineers Volume 8 ; 8 ; >
+      au < crawling ; exists ; 1880 ; Journal of the Society of Telegraph Engineers Volume 9 ; 9 ; >
 
   }
 
@@ -1959,8 +1959,8 @@
 
       param[journal_id] = jste-2
 
-      au < ready ; exists ; 1881 ; Journal of the Society of Telegraph Engineers and of Electricians Volume 10 ; 10 ; >
-      au < ready ; exists ; 1882 ; Journal of the Society of Telegraph Engineers and of Electricians Volume 11 ; 11 ; >
+      au < crawling ; exists ; 1881 ; Journal of the Society of Telegraph Engineers and of Electricians Volume 10 ; 10 ; >
+      au < crawling ; exists ; 1882 ; Journal of the Society of Telegraph Engineers and of Electricians Volume 11 ; 11 ; >
 
   }
 
@@ -1975,12 +1975,12 @@
 
       param[journal_id] = jste-3
 
-      au < ready ; exists ; 1883 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 12 ; 12 ; >
-      au < ready ; exists ; 1884 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 13 ; 13 ; >
-      au < ready ; exists ; 1885 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 14 ; 14 ; >
-      au < ready ; exists ; 1886 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 15 ; 15 ; >
-      au < ready ; exists ; 1887 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 16 ; 16 ; >
-      au < ready ; exists ; 1888 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1883 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 12 ; 12 ; >
+      au < crawling ; exists ; 1884 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 13 ; 13 ; >
+      au < crawling ; exists ; 1885 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 14 ; 14 ; >
+      au < crawling ; exists ; 1886 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 15 ; 15 ; >
+      au < crawling ; exists ; 1887 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1888 ; Journal of the Society of Telegraph-Engineers and Electricians Volume 17 ; 17 ; >
 
   }
 
@@ -2028,8 +2028,8 @@
 
       param[journal_id] = pbire
 
-      au < ready ; exists ; 1963 ; Proceedings of the British Institution of Radio Engineers Volume 1 ; 1 ; >
-      au < ready ; exists ; 1964 ; Proceedings of the British Institution of Radio Engineers Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1963 ; Proceedings of the British Institution of Radio Engineers Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1964 ; Proceedings of the British Institution of Radio Engineers Volume 2 ; 2 ; >
 
   }
 
@@ -2044,22 +2044,22 @@
 
       param[journal_id] = pej
 
-      au < ready ; exists ; 1987 ; Power Engineering Journal Volume 1 ; 1 ; >
-      au < ready ; exists ; 1988 ; Power Engineering Journal Volume 2 ; 2 ; >
-      au < ready ; exists ; 1989 ; Power Engineering Journal Volume 3 ; 3 ; >
-      au < ready ; exists ; 1990 ; Power Engineering Journal Volume 4 ; 4 ; >
-      au < ready ; exists ; 1991 ; Power Engineering Journal Volume 5 ; 5 ; >
-      au < ready ; exists ; 1992 ; Power Engineering Journal Volume 6 ; 6 ; >
-      au < ready ; exists ; 1993 ; Power Engineering Journal Volume 7 ; 7 ; >
-      au < ready ; exists ; 1994 ; Power Engineering Journal Volume 8 ; 8 ; >
-      au < ready ; exists ; 1995 ; Power Engineering Journal Volume 9 ; 9 ; >
-      au < ready ; exists ; 1996 ; Power Engineering Journal Volume 10 ; 10 ; >
-      au < ready ; exists ; 1997 ; Power Engineering Journal Volume 11 ; 11 ; >
-      au < ready ; exists ; 1998 ; Power Engineering Journal Volume 12 ; 12 ; >
-      au < ready ; exists ; 1999 ; Power Engineering Journal Volume 13 ; 13 ; >
-      au < ready ; exists ; 2000 ; Power Engineering Journal Volume 14 ; 14 ; >
-      au < ready ; exists ; 2001 ; Power Engineering Journal Volume 15 ; 15 ; >
-      au < ready ; exists ; 2002 ; Power Engineering Journal Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1987 ; Power Engineering Journal Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1988 ; Power Engineering Journal Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1989 ; Power Engineering Journal Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1990 ; Power Engineering Journal Volume 4 ; 4 ; >
+      au < crawling ; exists ; 1991 ; Power Engineering Journal Volume 5 ; 5 ; >
+      au < crawling ; exists ; 1992 ; Power Engineering Journal Volume 6 ; 6 ; >
+      au < crawling ; exists ; 1993 ; Power Engineering Journal Volume 7 ; 7 ; >
+      au < crawling ; exists ; 1994 ; Power Engineering Journal Volume 8 ; 8 ; >
+      au < crawling ; exists ; 1995 ; Power Engineering Journal Volume 9 ; 9 ; >
+      au < crawling ; exists ; 1996 ; Power Engineering Journal Volume 10 ; 10 ; >
+      au < crawling ; exists ; 1997 ; Power Engineering Journal Volume 11 ; 11 ; >
+      au < crawling ; exists ; 1998 ; Power Engineering Journal Volume 12 ; 12 ; >
+      au < crawling ; exists ; 1999 ; Power Engineering Journal Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2000 ; Power Engineering Journal Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2001 ; Power Engineering Journal Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2002 ; Power Engineering Journal Volume 16 ; 16 ; >
 
   }
 
@@ -2074,12 +2074,12 @@
 
       param[journal_id] = pi-1
 
-      au < ready ; exists ; 1949 ; The Proceedings of the IEE – Part I: General Volume 96 ; 96 ; >
-      au < ready ; exists ; 1950 ; The Proceedings of the IEE – Part I: General Volume 97 ; 97 ; >
-      au < ready ; exists ; 1951 ; The Proceedings of the IEE – Part I: General Volume 98 ; 98 ; >
-      au < ready ; exists ; 1952 ; The Proceedings of the IEE – Part I: General Volume 99 ; 99 ; >
-      au < ready ; exists ; 1953 ; The Proceedings of the IEE – Part I: General Volume 100 ; 100 ; >
-      au < ready ; exists ; 1954 ; The Proceedings of the IEE – Part I: General Volume 101 ; 101 ; >
+      au < crawling ; exists ; 1949 ; The Proceedings of the IEE – Part I: General Volume 96 ; 96 ; >
+      au < crawling ; exists ; 1950 ; The Proceedings of the IEE – Part I: General Volume 97 ; 97 ; >
+      au < crawling ; exists ; 1951 ; The Proceedings of the IEE – Part I: General Volume 98 ; 98 ; >
+      au < crawling ; exists ; 1952 ; The Proceedings of the IEE – Part I: General Volume 99 ; 99 ; >
+      au < crawling ; exists ; 1953 ; The Proceedings of the IEE – Part I: General Volume 100 ; 100 ; >
+      au < crawling ; exists ; 1954 ; The Proceedings of the IEE – Part I: General Volume 101 ; 101 ; >
 
   }
 
@@ -2094,7 +2094,7 @@
 
       param[journal_id] = pi-1a
 
-      au < ready ; exists ; 1950 ; The Proceedings of the IEE – Part IA: Electric Railway Traction Volume 97 ; 97 ; >
+      au < crawling ; exists ; 1950 ; The Proceedings of the IEE – Part IA: Electric Railway Traction Volume 97 ; 97 ; >
 
   }
 
@@ -2109,10 +2109,10 @@
 
       param[journal_id] = pi-2
 
-      au < ready ; exists ; 1949 ; The Proceedings of the IEE – Part II: Power Engineering Volume 96 ; 96 ; >
-      au < ready ; exists ; 1950 ; The Proceedings of the IEE – Part II: Power Engineering Volume 97 ; 97 ; >
-      au < ready ; exists ; 1951 ; The Proceedings of the IEE – Part II: Power Engineering Volume 98 ; 98 ; >
-      au < ready ; exists ; 1952 ; The Proceedings of the IEE – Part II: Power Engineering Volume 99 ; 99 ; >
+      au < crawling ; exists ; 1949 ; The Proceedings of the IEE – Part II: Power Engineering Volume 96 ; 96 ; >
+      au < crawling ; exists ; 1950 ; The Proceedings of the IEE – Part II: Power Engineering Volume 97 ; 97 ; >
+      au < crawling ; exists ; 1951 ; The Proceedings of the IEE – Part II: Power Engineering Volume 98 ; 98 ; >
+      au < crawling ; exists ; 1952 ; The Proceedings of the IEE – Part II: Power Engineering Volume 99 ; 99 ; >
       au < manifest ; exists ; 1953 ; The Proceedings of the IEE – Part II: Power Engineering Volume 100 ; 100 ; >
       au < manifest ; exists ; 1954 ; The Proceedings of the IEE – Part II: Power Engineering Volume 101 ; 101 ; >
 
