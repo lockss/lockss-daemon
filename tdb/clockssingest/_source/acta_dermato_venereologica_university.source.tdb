@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Acta dermato-venereologica ;
+    name = Medical Journals Sweden AB ;
     info[contract] = 2019 ;
     info[tester] = S ;
     info[platform] = Source
@@ -10,7 +10,7 @@
   {
 
     title <
-      name = Acta dermato-venereologica Source Content
+      name = Acta Dermato-Venereologica Source Content
     >
 
     plugin = org.lockss.plugin.clockss.actadermatovenereologica.ClockssActaDermatoVenereologicaNLMSourcePlugin
@@ -18,9 +18,8 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
-    au < zapped ; finished ; 2020 ; Acta dermato-venereologica Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; Acta dermato-venereologica Source Content 2021 ; 2021 >
-    au < expected ; exists ; 2022 ; Acta dermato-venereologica Source Content 2022 ; 2022 >
+    au < zapped ; finished ; 2020 ; Acta Dermato-Venereologica Source Content 2020 ; 2020 >
+    au < readySource ; crawling ; 2021 ; Acta Dermato-Venereologica Source Content 2021 ; 2021 >
     #Moving to OJS3 and move to harvest preservation
 
   }
