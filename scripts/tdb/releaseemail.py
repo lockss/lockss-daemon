@@ -130,7 +130,7 @@ def prettyInt(i):
   '''Given an integer between 0 and 999,999, returns a string version
   with a comma in the thousands position if needed.'''
   if i < 1000: return str(i)
-  return str(i # 1000) + ',' + str(i % 1000).rjust(3, '0')
+  return str(i // 1000) + ',' + str(i % 1000).rjust(3, '0')
 
 def wordInt(i):
   '''Given a positive integer, returns a string spelling out the
