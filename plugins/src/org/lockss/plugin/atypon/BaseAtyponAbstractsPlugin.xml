@@ -33,15 +33,15 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - abstract parent only</string>
+    <string>down - Abstracts parent only</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponAbstractPlugin</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponAbstractsPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Parent Atypon Abstract Plugin</string>
+    <string>Parent Atypon Abstracts Plugin</string>
   </entry>
 <!--  http to https support -->
   <entry>
@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Parent Atypon Abstract Plugin, Base URL %s, DOI %s", base_url, item_doi</string>
+    <string>"Parent Atypon Abstracts Plugin, Base URL %s, DOI %s", base_url, item_doi</string>
   </entry>
   <entry>
     <string>au_start_url</string>

@@ -6,7 +6,7 @@
   <!-- https transition enabled -->  
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.seg.ClockssSEGAbstractPlugin</string>
+    <string>org.lockss.plugin.atypon.seg.ClockssSEGAbstractsPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -14,11 +14,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Society of Exploration Geophysicists Abstract Plugin (CLOCKSS)</string>
+    <string>Society of Exploration Geophysicists Abstracts Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponAbstractPlugin</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponAbstractsPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Society of Exploration Geophysicists Abstract Plugin (CLOCKSS), Base URL %s, DOI %s", base_url, item_doi</string>
+    <string>"Society of Exploration Geophysicists Abstracts Plugin (CLOCKSS), Base URL %s, DOI %s", base_url, item_doi</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
