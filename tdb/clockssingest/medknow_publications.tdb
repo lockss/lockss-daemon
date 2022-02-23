@@ -2843,7 +2843,7 @@
     au < finished ; crawling ; 2019 ; Journal of Cytology Volume 36 ; 2019 ; 36 ; https://www.jcytol.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Journal of Cytology Volume 37 ; 2020 ; 37 ; https://www.jcytol.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Cytology Volume 38 ; 2021 ; 38 ; https://www.jcytol.org/ ; ; >
-    au < expected ; exists ; 2022 ; Journal of Cytology Volume 39 ; 2022 ; 39 ; https://www.jcytol.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Journal of Cytology Volume 39 ; 2022 ; 39 ; https://www.jcytol.org/ ; ; >
 
   }
 
@@ -9708,7 +9708,7 @@
       au < finished ; crawling ; 2019 ; Gynecology and Minimally Invasive Therapy Volume 8 ; 2019 ; 8 ; https://www.e-gmit.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Gynecology and Minimally Invasive Therapy Volume 9 ; 2020 ; 9 ; https://www.e-gmit.com/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; Gynecology and Minimally Invasive Therapy Volume 10 ; 2021 ; 10 ; https://www.e-gmit.com/ ; ; >
-      au < expected ; exists ; 2022 ; Gynecology and Minimally Invasive Therapy Volume 11 ; 2022 ; 11 ; https://www.e-gmit.com/ ; ; >
+      au < manifest ; exists ; 2022 ; Gynecology and Minimally Invasive Therapy Volume 11 ; 2022 ; 11 ; https://www.e-gmit.com/ ; ; >
 
   }
 
@@ -10455,7 +10455,7 @@
       au < finished ; crawling ; 2019 ; Journal of International Oral Health Volume 11 ; 2019 ; 11 ; https://www.jioh.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Journal of International Oral Health Volume 12 ; 2020 ; 12 ; https://www.jioh.org/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of International Oral Health Volume 13 ; 2021 ; 13 ; https://www.jioh.org/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of International Oral Health Volume 14 ; 2022 ; 14 ; https://www.jioh.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of International Oral Health Volume 14 ; 2022 ; 14 ; https://www.jioh.org/ ; ; >
 
   }
 
@@ -10740,7 +10740,7 @@
       au < finished ; crawling ; 2019 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 2 ; 2019 ; 2 ; https://www.jisprm.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 3 ; 2020 ; 3 ; https://www.jisprm.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 4 ; 2021 ; 4 ; https://www.jisprm.org/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 5 ; 2022 ; 5 ; https://www.jisprm.org/ ; ; >
+      au < manifest ; exists ; 2022 ; Journal of the International Society of Physical and Rehabilitation Medicine Volume 5 ; 2022 ; 5 ; https://www.jisprm.org/ ; ; >
 
   }
 
