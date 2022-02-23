@@ -139,7 +139,7 @@ def wordInt(i):
   if i >= 100: return prettyInt(i)
   s = ''
   if i >= 20:
-    s = {2:'twenty', 3:'thirty', 4:'forty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}[i # 10]
+    s = {2:'twenty', 3:'thirty', 4:'forty', 5:'fifty', 6:'sixty', 7:'seventy', 8:'eighty', 9:'ninety'}[i // 10]
     if i % 10 == 0: return s
     s = s + ' '
     i = i % 10
