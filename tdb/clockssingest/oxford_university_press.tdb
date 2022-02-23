@@ -14161,6 +14161,22 @@
   {
 
     title <
+      name = Modern Rheumatology ;
+      issn = 1439-7595 ;
+      eissn = 1439-7609 ;
+      issnl = 1439-7595
+    >
+
+    param[journal_id] = mr
+    #Content had been processed by T&F from 1986 volume 1 to 2021 volume 31
+
+    au < exists ; exists ; 2022 ; 2022 ; Modern Rheumatology Volume 32 ; 32 ; >
+
+  }
+
+  {
+
+    title <
       name = Molecular Biology and Evolution ;
       issn = 0737-4038 ;
       eissn = 1537-1719 ;
@@ -15423,6 +15439,47 @@
     au < frozen ; exists ; 2020 ; 2020 ; Occupational Medicine Volume 70 ; 70 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Occupational Medicine Volume 71 ; 71 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Occupational Medicine Volume 72 ; 72 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Oncologist ;
+      issn = 1083-7159 ;
+      eissn = 1549-490X ;
+      issnl = 1083-7159
+    >
+
+    param[journal_id] = oncolo
+
+    au < exists ; exists ; 1996 ; 1996 ; The Oncologist Volume 1 ; 1 ; >
+    au < exists ; exists ; 1997 ; 1997 ; The Oncologist Volume 2 ; 2 ; >
+    au < exists ; exists ; 1998 ; 1998 ; The Oncologist Volume 3 ; 3 ; >
+    au < exists ; exists ; 1999 ; 1999 ; The Oncologist Volume 4 ; 4 ; >
+    au < exists ; exists ; 2000 ; 2000 ; The Oncologist Volume 5 ; 5 ; >
+    au < exists ; exists ; 2001 ; 2001 ; The Oncologist Volume 6 ; 6 ; >
+    au < exists ; exists ; 2002 ; 2002 ; The Oncologist Volume 7 ; 7 ; >
+    au < exists ; exists ; 2003 ; 2003 ; The Oncologist Volume 8 ; 8 ; >
+    au < exists ; exists ; 2004 ; 2004 ; The Oncologist Volume 9 ; 9 ; >
+    au < exists ; exists ; 2005 ; 2005 ; The Oncologist Volume 10 ; 10 ; >
+    au < exists ; exists ; 2006 ; 2006 ; The Oncologist Volume 11 ; 11 ; >
+    au < exists ; exists ; 2007 ; 2007 ; The Oncologist Volume 12 ; 12 ; >
+    au < exists ; exists ; 2008 ; 2008 ; The Oncologist Volume 13 ; 13 ; >
+    au < exists ; exists ; 2009 ; 2009 ; The Oncologist Volume 14 ; 14 ; >
+    au < exists ; exists ; 2010 ; 2010 ; The Oncologist Volume 15 ; 15 ; >
+    au < exists ; exists ; 2011 ; 2011 ; The Oncologist Volume 16 ; 16 ; >
+    au < exists ; exists ; 2012 ; 2012 ; The Oncologist Volume 17 ; 17 ; >
+    au < exists ; exists ; 2013 ; 2013 ; The Oncologist Volume 18 ; 18 ; >
+    au < exists ; exists ; 2014 ; 2014 ; The Oncologist Volume 19 ; 19 ; >
+    au < exists ; exists ; 2015 ; 2015 ; The Oncologist Volume 20 ; 20 ; >
+    au < exists ; exists ; 2016 ; 2016 ; The Oncologist Volume 21 ; 21 ; >
+    au < exists ; exists ; 2017 ; 2017 ; The Oncologist Volume 22 ; 22 ; >
+    au < exists ; exists ; 2018 ; 2018 ; The Oncologist Volume 23 ; 23 ; >
+    au < exists ; exists ; 2019 ; 2019 ; The Oncologist Volume 24 ; 24 ; >
+    au < exists ; exists ; 2020 ; 2020 ; The Oncologist Volume 25 ; 25 ; >
+    au < exists ; exists ; 2021 ; 2021 ; The Oncologist Volume 26 ; 26 ; >
+    au < exists ; exists ; 2022 ; 2022 ; The Oncologist Volume 27 ; 27 ; >
 
   }
 
