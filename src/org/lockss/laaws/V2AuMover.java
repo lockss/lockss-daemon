@@ -58,7 +58,6 @@ import org.apache.commons.codec.binary.Hex;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.LockssRunnable;
 import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.api.rs.StreamingCollectionsApi;
 import org.lockss.laaws.client.ApiCallback;
@@ -640,13 +639,18 @@ public class V2AuMover {
    * @param auName the name of the current Au
    */
   void updateReport(String auName) {
-    String auData = "UrlsMoved: " + bigIntFmt.format(auUrlsMoved) +
-      ", VersionsMoved: " + bigIntFmt.format(auArtifactsMoved) +
-      ", ContentBytesMoved: " + bigIntFmt.format(auContentBytesMoved) +
-      ", TotalBytesMoved: "  + bigIntFmt.format(auBytesMoved) +
-      ", ByteRate: " + StringUtil.byteRateToString(auBytesMoved, auRunTime) +
-      ", Errors: " + auErrorCount +
-      ", TotalRuntime: " + StringUtil.timeIntervalToString(auRunTime);
+    StringBuilder sb = new StringBuilder();
+    sb.append(StringUtil.bigNumberOfUnits(auUrlsMoved, "URL") + " moved, ");
+    sb.append(StringUtil.bigNumberOfUnits(auArtifactsMoved, "version") + ", ");
+    sb.append(StringUtil.bigNumberOfUnits(auContentBytesMoved, "content byte") + ", ");
+    sb.append(StringUtil.bigNumberOfUnits(auBytesMoved, "total byte") + ", ");
+    sb.append("at ");
+    sb.append(StringUtil.byteRateToString(auBytesMoved, auRunTime));
+    sb.append(", ");
+    sb.append(StringUtil.bigNumberOfUnits(auErrorCount, "error"));
+    sb.append(", in ");
+    sb.append(StringUtil.timeIntervalToString(auRunTime));
+    String auData = sb.toString();
     if (reportWriter != null) {
       reportWriter.println("AU Name: " + auName);
       reportWriter.println("AU ID: " + currentAu.getAuId());
@@ -690,30 +694,34 @@ public class V2AuMover {
    */
   void closeReport() {
     StringBuilder sb = new StringBuilder();
-    sb.append("AusMoved: ");
-    sb.append(totalAusMoved);
-    if (totalAusPartiallyMoved > 0) {
+    sb.append(StringUtil.bigNumberOfUnits(totalAusMoved + totalAusSkipped, "AU") + " moved");
+    if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
       sb.append(" (");
-      sb.append(totalAusMoved);
-      sb.append(" partially)");
+      if (totalAusSkipped > 0) {
+        sb.append(bigIntFmt.format(totalAusSkipped));
+        sb.append(" previously");
+        if (totalAusPartiallyMoved > 0) {
+          sb.append(", ");
+        }
+      }
+      if (totalAusPartiallyMoved > 0) {
+        sb.append(bigIntFmt.format(totalAusPartiallyMoved));
+        sb.append(" partially)");
+      }
+      sb.append(")");
     }
-    if (totalAusSkipped > 0) {
-      sb.append(", AusSkipped: ");
-      sb.append(totalAusSkipped);
+    sb.append(", ");
+    sb.append(StringUtil.bigNumberOfUnits(totalUrlsMoved, "URL") + ", ");
+    sb.append(StringUtil.bigNumberOfUnits(totalArtifactsMoved, "version") + ", ");
+    sb.append(StringUtil.bigNumberOfUnits(totalContentBytesMoved, "content byte") + ", ");
+    sb.append(StringUtil.bigNumberOfUnits(totalBytesMoved, "total byte") + ", ");
+    if (totalBytesMoved > 0) {
+      sb.append("at ");
+      sb.append(StringUtil.byteRateToString(totalBytesMoved, totalRunTime));
+      sb.append(", ");
     }
-    sb.append(", UrlsMoved: ");
-    sb.append(bigIntFmt.format(totalUrlsMoved));
-    sb.append(", VersionsMoved: ");
-    sb.append(bigIntFmt.format(totalArtifactsMoved));
-    sb.append(", ContentBytesMoved: ");
-    sb.append(bigIntFmt.format(totalContentBytesMoved));
-    sb.append(", TotalBytesMoved: ");
-    sb.append(bigIntFmt.format(totalBytesMoved));
-    sb.append(", ByteRate: ");
-    sb.append(StringUtil.byteRateToString(totalBytesMoved, totalRunTime));
-    sb.append(", Errors: ");
-    sb.append(bigIntFmt.format(totalErrorCount));
-    sb.append(", TotalRuntime: ");
+    sb.append(StringUtil.bigNumberOfUnits(totalErrorCount, "error") + ", ");
+    sb.append("in ");
     sb.append(StringUtil.timeIntervalToString(totalRunTime));
     String summary = sb.toString();
     running = false;
@@ -1715,7 +1723,7 @@ public class V2AuMover {
         }
         catch (final IOException ioe) {
           if (tryCount < maxRetryCount) {
-            log.debug3("Retrying: " + ioe.getMessage());
+            log.debug("Retrying: " + ioe.getMessage());
             if (response != null) {
               // close response before retry
               response.close();

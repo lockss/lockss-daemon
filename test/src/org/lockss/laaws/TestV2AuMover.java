@@ -47,21 +47,22 @@ public class TestV2AuMover extends LockssTestCase {
   String[] reportLines = {
       "AU Name: au1",
       "AU ID: au1",
-      "UrlsMoved: 10, VersionsMoved: 10, ContentBytesMoved: 900, TotalBytesMoved: 1,000, ByteRate: 3.26KB/s, Errors: 0, TotalRuntime: 300ms",
+
+      "10 URLs moved, 10 versions, 900 content bytes, 1,000 total bytes, at 3.26KB/s, 0 errors, in 300ms",
       "",
       "AU Name: au2",
       "AU ID: au2",
-      "UrlsMoved: 3,517, VersionsMoved: 35,723, ContentBytesMoved: 17,261,845,523, TotalBytesMoved: 17,307,972,727, ByteRate: 628KB/s, Errors: 1, TotalRuntime: 7h28m34s",
+      "3,517 URLs moved, 35,723 versions, 17,261,845,523 content bytes, 17,307,972,727 total bytes, at 628KB/s, 1 error, in 7h28m34s",
       " cu2 Attempt to move artifact failed.",
       "",
       "AU Name: au3",
       "AU ID: au3",
-      "UrlsMoved: 11, VersionsMoved: 22, ContentBytesMoved: 1,626,829, TotalBytesMoved: 1,661,366, ByteRate: 400KB/s, Errors: 3, TotalRuntime: 4054ms",
+      "11 URLs moved, 22 versions, 1,626,829 content bytes, 1,661,366 total bytes, at 400KB/s, 3 errors, in 4054ms",
       " cu1: Attempt to move artifact failed.",
       " cu5: Attempt to commit artifact failed.",
       " cu80: Attempt to commit artifact failed.",
       "",
-      "AusMoved: 3, UrlsMoved: 3,538, VersionsMoved: 35,755, ContentBytesMoved: 17,263,473,252, TotalBytesMoved: 17,309,635,093, ByteRate: 628KB/s, Errors: 4, TotalRuntime: 7h28m38s"
+      "3 AUs moved, 3,538 URLs, 35,755 versions, 17,263,473,252 content bytes, 17,309,635,093 total bytes, at 628KB/s, 4 errors, in 7h28m38s",
   };
 
   public void setUp() throws Exception {
@@ -163,7 +164,10 @@ public class TestV2AuMover extends LockssTestCase {
     assertEquals(reportLines.length + HEADER_LENGTH, lines.size());
     // we're only checking the report lines.
     for(int i=0; i < reportLines.length; i++) {
-      assertEquals(reportLines[i],lines.get(i+HEADER_LENGTH));
+      // Include entire line as abbreviated diff is often useless here
+      assertEquals(( "exp: " + reportLines[i] + ", was: " +
+                     lines.get(i+HEADER_LENGTH)),
+                   reportLines[i],lines.get(i+HEADER_LENGTH));
     }
 
   }

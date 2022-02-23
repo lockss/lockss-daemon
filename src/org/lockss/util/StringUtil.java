@@ -1916,6 +1916,14 @@ public class StringUtil {
 
   /** Return a string like "0 units", "1 unit", "n units"
    * @param number the number of whatever units
+   * @param unit Single form of unit, plural formed by adding "s"
+   */
+  public static String bigNumberOfUnits(long number, String unit) {
+    return bigNumberOfUnits(number, unit, unit + "s");
+  }
+
+  /** Return a string like "0 units", "1 unit", "n units"
+   * @param number the number of whatever units
    * @param unit Single form of unit
    * @param pluralUnit plural form of unit
    */
@@ -1925,6 +1933,17 @@ public class StringUtil {
       return number + " " + unit;
     } else {
       return number + " " + pluralUnit;
+    }
+  }
+
+  static NumberFormat bigIntFmt = NumberFormat.getInstance();
+
+  public static String bigNumberOfUnits(long number, String unit,
+				     String pluralUnit) {
+    if (number == 1) {
+      return number + " " + unit;
+    } else {
+      return bigIntFmt.format(number) + " " + pluralUnit;
     }
   }
 
