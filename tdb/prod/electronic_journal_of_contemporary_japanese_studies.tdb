@@ -35,27 +35,27 @@
       param[base_url] = http://www.japanesestudies.org.uk/
       implicit < status ; year ; volume ; name ; param[volume] >
     
-      au < ready ; 2001 ; 1 ; Electronic Journal of Contemporary Japanese Studies Volume 1 ; 1 >
-      au < ready ; 2002 ; 2 ; Electronic Journal of Contemporary Japanese Studies Volume 2 ; 2 >
-      au < ready ; 2003 ; 3 ; Electronic Journal of Contemporary Japanese Studies Volume 3 ; 3 >
-      au < ready ; 2004 ; 4 ; Electronic Journal of Contemporary Japanese Studies Volume 4 ; 4 >
-      au < ready ; 2005 ; 5 ; Electronic Journal of Contemporary Japanese Studies Volume 5 ; 5 >
-      au < ready ; 2006 ; 6 ; Electronic Journal of Contemporary Japanese Studies Volume 6 ; 6 >
-      au < ready ; 2007 ; 7 ; Electronic Journal of Contemporary Japanese Studies Volume 7 ; 7 >
-      au < ready ; 2008 ; 8 ; Electronic Journal of Contemporary Japanese Studies Volume 8 ; 8 >
-      au < ready ; 2009 ; 9 ; Electronic Journal of Contemporary Japanese Studies Volume 9 ; 9 >
-      au < ready ; 2010 ; 10 ; Electronic Journal of Contemporary Japanese Studies Volume 10 ; 10 >
-      au < ready ; 2011 ; 11 ; Electronic Journal of Contemporary Japanese Studies Volume 11 ; 11 >
-      au < ready ; 2012 ; 12 ; Electronic Journal of Contemporary Japanese Studies Volume 12 ; 12 >
-      au < ready ; 2013 ; 13 ; Electronic Journal of Contemporary Japanese Studies Volume 13 ; 13 >
-      au < ready ; 2014 ; 14 ; Electronic Journal of Contemporary Japanese Studies Volume 14 ; 14 >
-      au < ready ; 2015 ; 15 ; Electronic Journal of Contemporary Japanese Studies Volume 15 ; 15 >
-      au < ready ; 2016 ; 16 ; Electronic Journal of Contemporary Japanese Studies Volume 16 ; 16 >
-      au < ready ; 2017 ; 17 ; Electronic Journal of Contemporary Japanese Studies Volume 17 ; 17 >
-      au < ready ; 2018 ; 18 ; Electronic Journal of Contemporary Japanese Studies Volume 18 ; 18 >
-      au < ready ; 2019 ; 19 ; Electronic Journal of Contemporary Japanese Studies Volume 19 ; 19 >
-      au < ready ; 2020 ; 10 ; Electronic Journal of Contemporary Japanese Studies Volume 20 ; 20 >
-      au < ready ; 2021 ; 11 ; Electronic Journal of Contemporary Japanese Studies Volume 21 ; 21 >
+      au < releasing ; 2001 ; 1 ; Electronic Journal of Contemporary Japanese Studies Volume 1 ; 1 >
+      au < releasing ; 2002 ; 2 ; Electronic Journal of Contemporary Japanese Studies Volume 2 ; 2 >
+      au < releasing ; 2003 ; 3 ; Electronic Journal of Contemporary Japanese Studies Volume 3 ; 3 >
+      au < releasing ; 2004 ; 4 ; Electronic Journal of Contemporary Japanese Studies Volume 4 ; 4 >
+      au < releasing ; 2005 ; 5 ; Electronic Journal of Contemporary Japanese Studies Volume 5 ; 5 >
+      au < releasing ; 2006 ; 6 ; Electronic Journal of Contemporary Japanese Studies Volume 6 ; 6 >
+      au < releasing ; 2007 ; 7 ; Electronic Journal of Contemporary Japanese Studies Volume 7 ; 7 >
+      au < releasing ; 2008 ; 8 ; Electronic Journal of Contemporary Japanese Studies Volume 8 ; 8 >
+      au < releasing ; 2009 ; 9 ; Electronic Journal of Contemporary Japanese Studies Volume 9 ; 9 >
+      au < releasing ; 2010 ; 10 ; Electronic Journal of Contemporary Japanese Studies Volume 10 ; 10 >
+      au < releasing ; 2011 ; 11 ; Electronic Journal of Contemporary Japanese Studies Volume 11 ; 11 >
+      au < releasing ; 2012 ; 12 ; Electronic Journal of Contemporary Japanese Studies Volume 12 ; 12 >
+      au < releasing ; 2013 ; 13 ; Electronic Journal of Contemporary Japanese Studies Volume 13 ; 13 >
+      au < releasing ; 2014 ; 14 ; Electronic Journal of Contemporary Japanese Studies Volume 14 ; 14 >
+      au < releasing ; 2015 ; 15 ; Electronic Journal of Contemporary Japanese Studies Volume 15 ; 15 >
+      au < releasing ; 2016 ; 16 ; Electronic Journal of Contemporary Japanese Studies Volume 16 ; 16 >
+      au < releasing ; 2017 ; 17 ; Electronic Journal of Contemporary Japanese Studies Volume 17 ; 17 >
+      au < releasing ; 2018 ; 18 ; Electronic Journal of Contemporary Japanese Studies Volume 18 ; 18 >
+      au < releasing ; 2019 ; 19 ; Electronic Journal of Contemporary Japanese Studies Volume 19 ; 19 >
+      au < releasing ; 2020 ; 10 ; Electronic Journal of Contemporary Japanese Studies Volume 20 ; 20 >
+      au < releasing ; 2021 ; 11 ; Electronic Journal of Contemporary Japanese Studies Volume 21 ; 21 >
       au < expected ; 2022 ; 12 ; Electronic Journal of Contemporary Japanese Studies Volume 22 ; 22 >
       
     }

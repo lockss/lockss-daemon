@@ -189,7 +189,7 @@
     param[journal_issn] = 2044-1282
     comment[journal_id] = amhid
 
-    au < ready ; 2010 ; Advances in Mental Health and Intellectual Disabilities Volume 4 ; 4 >
+    au < releasing ; 2010 ; Advances in Mental Health and Intellectual Disabilities Volume 4 ; 4 >
     au < released ; 2011 ; Advances in Mental Health and Intellectual Disabilities Volume 5 ; 5 >
     au < released ; 2012 ; Advances in Mental Health and Intellectual Disabilities Volume 6 ; 6 >
     au < doNotProcess ; 2013 ; Advances in Mental Health and Intellectual Disabilities Volume 7 ; 7 >
@@ -1068,7 +1068,7 @@
     au < manifest ; 2007 ; The Bottom Line: Managing Library Finances Volume 20 ; 20 >
     au < manifest ; 2008 ; The Bottom Line: Managing Library Finances Volume 21 ; 21 >
     au < manifest ; 2009 ; The Bottom Line: Managing Library Finances Volume 22 ; 22 >
-    au < ready ; 2010 ; The Bottom Line: Managing Library Finances Volume 23 ; 23 >
+    au < releasing ; 2010 ; The Bottom Line: Managing Library Finances Volume 23 ; 23 >
     au < released ; 2011 ; The Bottom Line: Managing Library Finances Volume 24 ; 24 >
     au < released ; 2012 ; The Bottom Line: Managing Library Finances Volume 25 ; 25 >
     au < doNotProcess ; 2013 ; The Bottom Line: Managing Library Finances Volume 26 ; 26 >
@@ -1079,7 +1079,7 @@
     au < released ; 2018 ; The Bottom Line: Managing Library Finances Volume 31 ; 31 >
     au < released ; 2019 ; The Bottom Line: Managing Library Finances Volume 32 ; 32 >
     au < released ; 2020 ; The Bottom Line: Managing Library Finances Volume 33 ; 33 >
-    au < ready ; 2021 ; The Bottom Line: Managing Library Finances Volume 34 ; 34 >
+    au < releasing ; 2021 ; The Bottom Line: Managing Library Finances Volume 34 ; 34 >
     au < expected ; 2022 ; The Bottom Line: Managing Library Finances Volume 35 ; 35 >
 
   }
@@ -1618,7 +1618,7 @@
     au < released ; 2018 ; Circuit World Volume 44 ; 44 >
     au < released ; 2019 ; Circuit World Volume 45 ; 45 >
     au < released ; 2020 ; Circuit World Volume 46 ; 46 >
-    au < ready ; 2021 ; Circuit World Volume 47 ; 47 >
+    au < releasing ; 2021 ; Circuit World Volume 47 ; 47 >
     au < manifest ; 2022 ; Circuit World Volume 48 ; 48 >
 
   }
@@ -1984,8 +1984,8 @@
 
     au < manifest ; 2005 ; critical perspectives on international business Volume 1 ; 1 >
     au < manifest ; 2006 ; critical perspectives on international business Volume 2 ; 2 >
-    au < ready ; 2007 ; critical perspectives on international business Volume 3 ; 3 >
-    au < ready ; 2008 ; critical perspectives on international business Volume 4 ; 4 >
+    au < releasing ; 2007 ; critical perspectives on international business Volume 3 ; 3 >
+    au < releasing ; 2008 ; critical perspectives on international business Volume 4 ; 4 >
     au < released ; 2009 ; critical perspectives on international business Volume 5 ; 5 >
     au < released ; 2010 ; critical perspectives on international business Volume 6 ; 6 >
     au < released ; 2011 ; critical perspectives on international business Volume 7 ; 7 >
@@ -2026,8 +2026,8 @@
     au < manifest ; 2002 ; Cross Cultural Management: An International Journal Volume 9 ; 9 >
     au < manifest ; 2003 ; Cross Cultural Management: An International Journal Volume 10 ; 10 >
     au < manifest ; 2004 ; Cross Cultural Management: An International Journal Volume 11 ; 11 >
-    au < ready ; 2005 ; Cross Cultural Management: An International Journal Volume 12 ; 12 >
-    au < ready ; 2006 ; Cross Cultural Management: An International Journal Volume 13 ; 13 >
+    au < releasing ; 2005 ; Cross Cultural Management: An International Journal Volume 12 ; 12 >
+    au < releasing ; 2006 ; Cross Cultural Management: An International Journal Volume 13 ; 13 >
     au < released ; 2007 ; Cross Cultural Management: An International Journal Volume 14 ; 14 >
     au < released ; 2008 ; Cross Cultural Management: An International Journal Volume 15 ; 15 >
     au < released ; 2009 ; Cross Cultural Management: An International Journal Volume 16 ; 16 >
@@ -2076,9 +2076,9 @@
     au < manifest ; 2004 ; Development and Learning in Organizations Volume 18 ; 18 >
     au < manifest ; 2005 ; Development and Learning in Organizations Volume 19 ; 19 >
     au < manifest ; 2006 ; Development and Learning in Organizations Volume 20 ; 20 >
-    au < ready ; 2007 ; Development and Learning in Organizations Volume 21 ; 21 >
+    au < releasing ; 2007 ; Development and Learning in Organizations Volume 21 ; 21 >
     au < released ; 2008 ; Development and Learning in Organizations Volume 22 ; 22 >
-    au < ready ; 2009 ; Development and Learning in Organizations Volume 23 ; 23 >
+    au < releasing ; 2009 ; Development and Learning in Organizations Volume 23 ; 23 >
     au < released ; 2010 ; Development and Learning in Organizations Volume 24 ; 24 >
     au < released ; 2011 ; Development and Learning in Organizations Volume 25 ; 25 >
     au < released ; 2012 ; Development and Learning in Organizations Volume 26 ; 26 >
@@ -2138,10 +2138,10 @@
     au < manifest ; 2003 ; Disaster Prevention and Management Volume 12 ; 12 >
     au < manifest ; 2004 ; Disaster Prevention and Management Volume 13 ; 13 >
     au < manifest ; 2005 ; Disaster Prevention and Management Volume 14 ; 14 >
-    au < ready ; 2006 ; Disaster Prevention and Management Volume 15 ; 15 >
+    au < releasing ; 2006 ; Disaster Prevention and Management Volume 15 ; 15 >
     au < manifest ; 2007 ; Disaster Prevention and Management Volume 16 ; 16 >
     au < released ; 2008 ; Disaster Prevention and Management Volume 17 ; 17 >
-    au < ready ; 2009 ; Disaster Prevention and Management Volume 18 ; 18 >
+    au < releasing ; 2009 ; Disaster Prevention and Management Volume 18 ; 18 >
     au < released ; 2010 ; Disaster Prevention and Management Volume 19 ; 19 >
     au < released ; 2011 ; Disaster Prevention and Management Volume 20 ; 20 >
     au < released ; 2012 ; Disaster Prevention and Management Volume 21 ; 21 >
@@ -2252,9 +2252,9 @@
     au < manifest ; 2003 ; Education + Training Volume 45 ; 45 >
     au < manifest ; 2004 ; Education + Training Volume 46 ; 46 >
     au < manifest ; 2005 ; Education + Training Volume 47 ; 47 >
-    au < ready ; 2006 ; Education + Training Volume 48 ; 48 >
+    au < releasing ; 2006 ; Education + Training Volume 48 ; 48 >
     au < manifest ; 2007 ; Education + Training Volume 49 ; 49 >
-    au < ready ; 2008 ; Education + Training Volume 50 ; 50 >
+    au < releasing ; 2008 ; Education + Training Volume 50 ; 50 >
     au < released ; 2009 ; Education + Training Volume 51 ; 51 >
     au < released ; 2010 ; Education + Training Volume 52 ; 52 >
     au < released ; 2011 ; Education + Training Volume 53 ; 53 >
@@ -2327,9 +2327,9 @@
     au < manifest ; 2003 ; The Electronic Library Volume 21 ; 21 >
     au < manifest ; 2004 ; The Electronic Library Volume 22 ; 22 >
     au < manifest ; 2005 ; The Electronic Library Volume 23 ; 23 >
-    au < ready ; 2006 ; The Electronic Library Volume 24 ; 24 >
+    au < releasing ; 2006 ; The Electronic Library Volume 24 ; 24 >
     au < released ; 2007 ; The Electronic Library Volume 25 ; 25 >
-    au < ready ; 2008 ; The Electronic Library Volume 26 ; 26 >
+    au < releasing ; 2008 ; The Electronic Library Volume 26 ; 26 >
     au < released ; 2009 ; The Electronic Library Volume 27 ; 27 >
     au < released ; 2010 ; The Electronic Library Volume 28 ; 28 >
     au < released ; 2011 ; The Electronic Library Volume 29 ; 29 >
@@ -2402,7 +2402,7 @@
     au < manifest ; 2002 ; Employee Relations: An International Journal Volume 24 ; 24 >
     au < manifest ; 2003 ; Employee Relations: An International Journal Volume 25 ; 25 >
     au < manifest ; 2004 ; Employee Relations: An International Journal Volume 26 ; 26 >
-    au < ready ; 2005 ; Employee Relations: An International Journal Volume 27 ; 27 >
+    au < releasing ; 2005 ; Employee Relations: An International Journal Volume 27 ; 27 >
     au < released ; 2006 ; Employee Relations: An International Journal Volume 28 ; 28 >
     au < released ; 2007 ; Employee Relations: An International Journal Volume 29 ; 29 >
     au < released ; 2008 ; Employee Relations: An International Journal Volume 30 ; 30 >
@@ -2476,9 +2476,9 @@
     au < manifest ; 2002 ; Engineering Computations Volume 19 ; 19 >
     au < manifest ; 2003 ; Engineering Computations Volume 20 ; 20 >
     au < manifest ; 2004 ; Engineering Computations Volume 21 ; 21 >
-    au < ready ; 2005 ; Engineering Computations Volume 22 ; 22 >
+    au < releasing ; 2005 ; Engineering Computations Volume 22 ; 22 >
     au < released ; 2006 ; Engineering Computations Volume 23 ; 23 >
-    au < ready ; 2007 ; Engineering Computations Volume 24 ; 24 >
+    au < releasing ; 2007 ; Engineering Computations Volume 24 ; 24 >
     au < released ; 2008 ; Engineering Computations Volume 25 ; 25 >
     au < released ; 2009 ; Engineering Computations Volume 26 ; 26 >
     au < released ; 2010 ; Engineering Computations Volume 27 ; 27 >
@@ -2650,8 +2650,8 @@
     param[journal_issn] = 1757-0980
     comment[journal_id] = eihsc
 
-    au < ready ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 >
-    au < ready ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 >
+    au < releasing ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 >
+    au < releasing ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 >
     au < released ; 2010 ; Ethnicity and Inequalities in Health and Social Care Volume 3 ; 3 >
     au < released ; 2011 ; Ethnicity and Inequalities in Health and Social Care Volume 4 ; 4 >
     au < released ; 2012 ; Ethnicity and Inequalities in Health and Social Care Volume 5 ; 5 >
@@ -2719,7 +2719,7 @@
     au < manifest ; 2002 ; European Business Review Volume 14 ; 14 >
     au < manifest ; 2003 ; European Business Review Volume 15 ; 15 >
     au < manifest ; 2004 ; European Business Review Volume 16 ; 16 >
-    au < ready ; 2005 ; European Business Review Volume 17 ; 17 >
+    au < releasing ; 2005 ; European Business Review Volume 17 ; 17 >
     au < released ; 2006 ; European Business Review Volume 18 ; 18 >
     au < manifest ; 2007 ; European Business Review Volume 19 ; 19 >
     au < released ; 2008 ; European Business Review Volume 20 ; 20 >
@@ -2825,10 +2825,10 @@
     au < manifest ; 1999 ; European Journal of Marketing Volume 33 ; 33 >
     au < released ; 2000 ; European Journal of Marketing Volume 34 ; 34 >
     au < released ; 2001 ; European Journal of Marketing Volume 35 ; 35 >
-    au < ready ; 2002 ; European Journal of Marketing Volume 36 ; 36 >
+    au < releasing ; 2002 ; European Journal of Marketing Volume 36 ; 36 >
     au < manifest ; 2003 ; European Journal of Marketing Volume 37 ; 37 >
     au < manifest ; 2004 ; European Journal of Marketing Volume 38 ; 38 >
-    au < ready ; 2005 ; European Journal of Marketing Volume 39 ; 39 >
+    au < releasing ; 2005 ; European Journal of Marketing Volume 39 ; 39 >
     au < released ; 2006 ; European Journal of Marketing Volume 40 ; 40 >
     au < manifest ; 2007 ; European Journal of Marketing Volume 41 ; 41 >
     au < released ; 2008 ; European Journal of Marketing Volume 42 ; 42 >
@@ -2946,7 +2946,7 @@
     au < manifest ; 2004 ; foresight Volume 6 ; 6 >
     au < manifest ; 2005 ; foresight Volume 7 ; 7 >
     au < manifest ; 2006 ; foresight Volume 8 ; 8 >
-    au < ready ; 2007 ; foresight Volume 9 ; 9 >
+    au < releasing ; 2007 ; foresight Volume 9 ; 9 >
     au < released ; 2008 ; foresight Volume 10 ; 10 >
     au < released ; 2009 ; foresight Volume 11 ; 11 >
     au < released ; 2010 ; foresight Volume 12 ; 12 >
@@ -2977,7 +2977,7 @@
     comment[journal_id] = gm
     # online from 2008
 
-    au < ready ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
+    au < releasing ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
     au < released ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 >
     au < released ; 2010 ; Gender in Management: An International Journal Volume 25 ; 25 >
     au < released ; 2011 ; Gender in Management: An International Journal Volume 26 ; 26 >
@@ -2990,7 +2990,7 @@
     au < released ; 2018 ; Gender in Management: An International Journal Volume 33 ; 33 >
     au < released ; 2019 ; Gender in Management: An International Journal Volume 34 ; 34 >
     au < released ; 2020 ; Gender in Management: An International Journal Volume 35 ; 35 >
-    au < ready ; 2021 ; Gender in Management: An International Journal Volume 36 ; 36 >
+    au < releasing ; 2021 ; Gender in Management: An International Journal Volume 36 ; 36 >
     au < manifest ; 2022 ; Gender in Management: An International Journal Volume 37 ; 37 >
 
   }
@@ -3031,12 +3031,12 @@
     comment[journal_id] = hbs
     comment[continued_by] = 1751-5637
 
-    au < ready ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 >
+    au < releasing ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 >
     au < doesNotExist ; 2001 ; Handbook of Business Strategy Volume 2 ; 2 >
     au < doesNotExist ; 2002 ; Handbook of Business Strategy Volume 3 ; 3 >
     au < manifest ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 >
     au < manifest ; 2004 ; Handbook of Business Strategy Volume 5 ; 5 >
-    au < ready ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 >
+    au < releasing ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 >
     au < released ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 >
 
   }
@@ -3147,7 +3147,7 @@
     comment[journal_id] = her
 
     au < manifest ; 2004 ; History of Education Review Volume 33 ; 33 >
-    au < ready ; 2005 ; History of Education Review Volume 34 ; 34 >
+    au < releasing ; 2005 ; History of Education Review Volume 34 ; 34 >
     au < released ; 2006 ; History of Education Review Volume 35 ; 35 >
     au < manifest ; 2007 ; History of Education Review Volume 36 ; 36 >
     au < released ; 2008 ; History of Education Review Volume 37 ; 37 >
@@ -3190,7 +3190,7 @@
     au < manifest ; 2006 ; Housing, Care and Support: A journal on policy, research and practice Volume 9 ; 9 >
     au < manifest ; 2007 ; Housing, Care and Support: A journal on policy, research and practice Volume 10 ; 10 >
     au < manifest ; 2008 ; Housing, Care and Support: A journal on policy, research and practice Volume 11 ; 11 >
-    au < ready ; 2009 ; Housing, Care and Support: A journal on policy, research and practice Volume 12 ; 12 >
+    au < releasing ; 2009 ; Housing, Care and Support: A journal on policy, research and practice Volume 12 ; 12 >
     au < released ; 2010 ; Housing, Care and Support: A journal on policy, research and practice Volume 13 ; 13 >
     au < released ; 2011 ; Housing, Care and Support: A journal on policy, research and practice Volume 14 ; 14 >
     au < released ; 2012 ; Housing, Care and Support: A journal on policy, research and practice Volume 15 ; 15 >
@@ -3219,12 +3219,12 @@
     comment[journal_id] = hrmid
     # online from 2002
 
-    au < ready ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
+    au < releasing ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
     au < manifest ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 >
     au < manifest ; 2004 ; Human Resource Management International Digest Volume 12 ; 12 >
-    au < ready ; 2005 ; Human Resource Management International Digest Volume 13 ; 13 >
+    au < releasing ; 2005 ; Human Resource Management International Digest Volume 13 ; 13 >
     au < manifest ; 2006 ; Human Resource Management International Digest Volume 14 ; 14 >
-    au < ready ; 2007 ; Human Resource Management International Digest Volume 15 ; 15 >
+    au < releasing ; 2007 ; Human Resource Management International Digest Volume 15 ; 15 >
     au < manifest ; 2008 ; Human Resource Management International Digest Volume 16 ; 16 >
     au < manifest ; 2009 ; Human Resource Management International Digest Volume 17 ; 17 >
     au < released ; 2010 ; Human Resource Management International Digest Volume 18 ; 18 >
@@ -3269,11 +3269,11 @@
     au < manifest ; 1999 ; Humanomics Volume 15 ; 15 >
     au < released ; 2000 ; Humanomics Volume 16 ; 16 >
     au < released ; 2001 ; Humanomics Volume 17 ; 17 >
-    au < ready ; 2002 ; Humanomics Volume 18 ; 18 >
+    au < releasing ; 2002 ; Humanomics Volume 18 ; 18 >
     au < manifest ; 2003 ; Humanomics Volume 19 ; 19 >
     au < manifest ; 2004 ; Humanomics Volume 20 ; 20 >
     au < manifest ; 2005 ; Humanomics Volume 21 ; 21 >
-    au < ready ; 2006 ; Humanomics Volume 22 ; 22 >
+    au < releasing ; 2006 ; Humanomics Volume 22 ; 22 >
     au < manifest ; 2007 ; Humanomics Volume 23 ; 23 >
     au < manifest ; 2008 ; Humanomics Volume 24 ; 24 >
     au < released ; 2009 ; Humanomics Volume 25 ; 25 >
@@ -3378,14 +3378,14 @@
     au < manifest ; 1997 ; Industrial and Commercial Training Volume 29 ; 29 >
     au < manifest ; 1998 ; Industrial and Commercial Training Volume 30 ; 30 >
     au < manifest ; 1999 ; Industrial and Commercial Training Volume 31 ; 31 >
-    au < ready ; 2000 ; Industrial and Commercial Training Volume 32 ; 32 >
+    au < releasing ; 2000 ; Industrial and Commercial Training Volume 32 ; 32 >
     au < manifest ; 2001 ; Industrial and Commercial Training Volume 33 ; 33 >
     au < manifest ; 2002 ; Industrial and Commercial Training Volume 34 ; 34 >
     au < manifest ; 2003 ; Industrial and Commercial Training Volume 35 ; 35 >
     au < manifest ; 2004 ; Industrial and Commercial Training Volume 36 ; 36 >
-    au < ready ; 2005 ; Industrial and Commercial Training Volume 37 ; 37 >
+    au < releasing ; 2005 ; Industrial and Commercial Training Volume 37 ; 37 >
     au < manifest ; 2006 ; Industrial and Commercial Training Volume 38 ; 38 >
-    au < ready ; 2007 ; Industrial and Commercial Training Volume 39 ; 39 >
+    au < releasing ; 2007 ; Industrial and Commercial Training Volume 39 ; 39 >
     au < manifest ; 2008 ; Industrial and Commercial Training Volume 40 ; 40 >
     au < released ; 2009 ; Industrial and Commercial Training Volume 41 ; 41 >
     au < released ; 2010 ; Industrial and Commercial Training Volume 42 ; 42 >
@@ -3472,8 +3472,8 @@
     au < manifest ; 2002 ; Industrial Lubrication and Tribology Volume 54 ; 54 >
     au < manifest ; 2003 ; Industrial Lubrication and Tribology Volume 55 ; 55 >
     au < manifest ; 2004 ; Industrial Lubrication and Tribology Volume 56 ; 56 >
-    au < ready ; 2005 ; Industrial Lubrication and Tribology Volume 57 ; 57 >
-    au < ready ; 2006 ; Industrial Lubrication and Tribology Volume 58 ; 58 >
+    au < releasing ; 2005 ; Industrial Lubrication and Tribology Volume 57 ; 57 >
+    au < releasing ; 2006 ; Industrial Lubrication and Tribology Volume 58 ; 58 >
     au < manifest ; 2007 ; Industrial Lubrication and Tribology Volume 59 ; 59 >
     au < released ; 2008 ; Industrial Lubrication and Tribology Volume 60 ; 60 >
     au < manifest ; 2009 ; Industrial Lubrication and Tribology Volume 61 ; 61 >
@@ -3540,7 +3540,7 @@
     au < manifest ; 2002 ; Industrial Management & Data Systems Volume 102 ; 102 >
     au < manifest ; 2003 ; Industrial Management & Data Systems Volume 103 ; 103 >
     au < manifest ; 2004 ; Industrial Management & Data Systems Volume 104 ; 104 >
-    au < ready ; 2005 ; Industrial Management & Data Systems Volume 105 ; 105 >
+    au < releasing ; 2005 ; Industrial Management & Data Systems Volume 105 ; 105 >
     au < released ; 2006 ; Industrial Management & Data Systems Volume 106 ; 106 >
     au < released ; 2007 ; Industrial Management & Data Systems Volume 107 ; 107 >
     au < released ; 2008 ; Industrial Management & Data Systems Volume 108 ; 108 >
@@ -3756,7 +3756,7 @@
     au < manifest ; 2002 ; Information Technology & People Volume 15 ; 15 >
     au < manifest ; 2003 ; Information Technology & People Volume 16 ; 16 >
     au < manifest ; 2004 ; Information Technology & People Volume 17 ; 17 >
-    au < ready ; 2005 ; Information Technology & People Volume 18 ; 18 >
+    au < releasing ; 2005 ; Information Technology & People Volume 18 ; 18 >
     au < released ; 2006 ; Information Technology & People Volume 19 ; 19 >
     au < released ; 2007 ; Information Technology & People Volume 20 ; 20 >
     au < released ; 2008 ; Information Technology & People Volume 21 ; 21 >
@@ -3801,7 +3801,7 @@
     au < manifest ; 1999 ; Integrated Manufacturing Systems Volume 10 ; 10 >
     au < released ; 2000 ; Integrated Manufacturing Systems Volume 11 ; 11 >
     au < released ; 2001 ; Integrated Manufacturing Systems Volume 12 ; 12 >
-    au < ready ; 2002 ; Integrated Manufacturing Systems Volume 13 ; 13 >
+    au < releasing ; 2002 ; Integrated Manufacturing Systems Volume 13 ; 13 >
     au < manifest ; 2003 ; Integrated Manufacturing Systems Volume 14 ; 14 >
 
   }
@@ -4005,7 +4005,7 @@
     au < manifest ; 2002 ; International Journal of Bank Marketing Volume 20 ; 20 >
     au < manifest ; 2003 ; International Journal of Bank Marketing Volume 21 ; 21 >
     au < manifest ; 2004 ; International Journal of Bank Marketing Volume 22 ; 22 >
-    au < ready ; 2005 ; International Journal of Bank Marketing Volume 23 ; 23 >
+    au < releasing ; 2005 ; International Journal of Bank Marketing Volume 23 ; 23 >
     au < manifest ; 2006 ; International Journal of Bank Marketing Volume 24 ; 24 >
     au < manifest ; 2007 ; International Journal of Bank Marketing Volume 25 ; 25 >
     au < released ; 2008 ; International Journal of Bank Marketing Volume 26 ; 26 >
@@ -4059,7 +4059,7 @@
     param[journal_issn] = 1756-8692
     comment[journal_id] = ijccsm
 
-    au < ready ; 2009 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
+    au < releasing ; 2009 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Climate Change Strategies and Management Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Climate Change Strategies and Management Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Climate Change Strategies and Management Volume 4 ; 4 >
@@ -4100,10 +4100,10 @@
     au < manifest ; 1999 ; International Journal of Clothing Science and Technology Volume 11 ; 11 >
     au < released ; 2000 ; International Journal of Clothing Science and Technology Volume 12 ; 12 >
     au < released ; 2001 ; International Journal of Clothing Science and Technology Volume 13 ; 13 >
-    au < ready ; 2002 ; International Journal of Clothing Science and Technology Volume 14 ; 14 >
+    au < releasing ; 2002 ; International Journal of Clothing Science and Technology Volume 14 ; 14 >
     au < manifest ; 2003 ; International Journal of Clothing Science and Technology Volume 15 ; 15 >
     au < manifest ; 2004 ; International Journal of Clothing Science and Technology Volume 16 ; 16 >
-    au < ready ; 2005 ; International Journal of Clothing Science and Technology Volume 17 ; 17 >
+    au < releasing ; 2005 ; International Journal of Clothing Science and Technology Volume 17 ; 17 >
     au < manifest ; 2006 ; International Journal of Clothing Science and Technology Volume 18 ; 18 >
     au < manifest ; 2007 ; International Journal of Clothing Science and Technology Volume 19 ; 19 >
     au < released ; 2008 ; International Journal of Clothing Science and Technology Volume 20 ; 20 >
@@ -4153,7 +4153,7 @@
     au < manifest ; 2005 ; International Journal of Commerce and Management Volume 15 ; 15 >
     au < manifest ; 2006 ; International Journal of Commerce and Management Volume 16 ; 16 >
     au < released ; 2007 ; International Journal of Commerce and Management Volume 17 ; 17 >
-    au < ready ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 >
+    au < releasing ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 >
     au < released ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 >
     au < released ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 >
     au < released ; 2011 ; International Journal of Commerce and Management Volume 21 ; 21 >
@@ -4211,8 +4211,8 @@
     au < manifest ; 2002 ; International Journal of Conflict Management Volume 13 ; 13 >
     au < manifest ; 2003 ; International Journal of Conflict Management Volume 14 ; 14 >
     au < manifest ; 2004 ; International Journal of Conflict Management Volume 15 ; 15 >
-    au < ready ; 2005 ; International Journal of Conflict Management Volume 16 ; 16 >
-    au < ready ; 2006 ; International Journal of Conflict Management Volume 17 ; 17 >
+    au < releasing ; 2005 ; International Journal of Conflict Management Volume 16 ; 16 >
+    au < releasing ; 2006 ; International Journal of Conflict Management Volume 17 ; 17 >
     au < released ; 2007 ; International Journal of Conflict Management Volume 18 ; 18 >
     au < released ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 >
     au < released ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 >
@@ -4259,9 +4259,9 @@
     au < manifest ; 2002 ; International Journal of Contemporary Hospitality Management Volume 14 ; 14 >
     au < manifest ; 2003 ; International Journal of Contemporary Hospitality Management Volume 15 ; 15 >
     au < manifest ; 2004 ; International Journal of Contemporary Hospitality Management Volume 16 ; 16 >
-    au < ready ; 2005 ; International Journal of Contemporary Hospitality Management Volume 17 ; 17 >
+    au < releasing ; 2005 ; International Journal of Contemporary Hospitality Management Volume 17 ; 17 >
     au < released ; 2006 ; International Journal of Contemporary Hospitality Management Volume 18 ; 18 >
-    au < ready ; 2007 ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 >
+    au < releasing ; 2007 ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 >
     au < released ; 2008 ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 >
     au < released ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 >
     au < released ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 >
@@ -4326,9 +4326,9 @@
     au < manifest ; 2004 ; International Journal of Development Issues Volume 3 ; 3 >
     au < manifest ; 2005 ; International Journal of Development Issues Volume 4 ; 4 >
     au < manifest ; 2006 ; International Journal of Development Issues Volume 5 ; 5 >
-    au < ready ; 2007 ; International Journal of Development Issues Volume 6 ; 6 >
+    au < releasing ; 2007 ; International Journal of Development Issues Volume 6 ; 6 >
     au < released ; 2008 ; International Journal of Development Issues Volume 7 ; 7 >
-    au < ready ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
+    au < releasing ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
     au < released ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
     au < released ; 2011 ; International Journal of Development Issues Volume 10 ; 10 >
     au < released ; 2012 ; International Journal of Development Issues Volume 11 ; 11 >
@@ -4399,11 +4399,11 @@
     au < manifest ; 1999 ; International Journal of Educational Management Volume 13 ; 13 >
     au < released ; 2000 ; International Journal of Educational Management Volume 14 ; 14 >
     au < released ; 2001 ; International Journal of Educational Management Volume 15 ; 15 >
-    au < ready ; 2002 ; International Journal of Educational Management Volume 16 ; 16 >
+    au < releasing ; 2002 ; International Journal of Educational Management Volume 16 ; 16 >
     au < manifest ; 2003 ; International Journal of Educational Management Volume 17 ; 17 >
     au < manifest ; 2004 ; International Journal of Educational Management Volume 18 ; 18 >
     au < manifest ; 2005 ; International Journal of Educational Management Volume 19 ; 19 >
-    au < ready ; 2006 ; International Journal of Educational Management Volume 20 ; 20 >
+    au < releasing ; 2006 ; International Journal of Educational Management Volume 20 ; 20 >
     au < manifest ; 2007 ; International Journal of Educational Management Volume 21 ; 21 >
     au < released ; 2008 ; International Journal of Educational Management Volume 22 ; 22 >
     au < released ; 2009 ; International Journal of Educational Management Volume 23 ; 23 >
@@ -4458,7 +4458,7 @@
     comment[journal_id] = ijoem
 
     au < manifest ; 2006 ; International Journal of Emerging Markets Volume 1 ; 1 >
-    au < ready ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 >
+    au < releasing ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 >
     au < released ; 2008 ; International Journal of Emerging Markets Volume 3 ; 3 >
     au < released ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 >
     au < released ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 >
@@ -4488,7 +4488,7 @@
     param[journal_issn] = 1750-6220
     comment[journal_id] = ijesm
 
-    au < ready ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 >
+    au < releasing ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 >
     au < manifest ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 >
     au < released ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 >
     au < released ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 >
@@ -4529,7 +4529,7 @@
     au < manifest ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
     au < manifest ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
     au < manifest ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
-    au < ready ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 >
+    au < releasing ; 2005 ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 >
     au < released ; 2006 ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 >
     au < manifest ; 2007 ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 >
     au < released ; 2008 ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 >
@@ -4570,7 +4570,7 @@
     au < released ; 2018 ; International Journal of Event and Festival Management Volume 9 ; 9 >
     au < released ; 2019 ; International Journal of Event and Festival Management Volume 10 ; 10 >
     au < released ; 2020 ; International Journal of Event and Festival Management Volume 11 ; 11 >
-    au < ready ; 2021 ; International Journal of Event and Festival Management Volume 12 ; 12 >
+    au < releasing ; 2021 ; International Journal of Event and Festival Management Volume 12 ; 12 >
     au < manifest ; 2022 ; International Journal of Event and Festival Management Volume 13 ; 13 >
 
   }
@@ -4627,11 +4627,11 @@
     au < manifest ; 1998 ; International Journal of Health Care Quality Assurance Volume 11 ; 11 >
     au < manifest ; 1999 ; International Journal of Health Care Quality Assurance Volume 12 ; 12 >
     au < released ; 2000 ; International Journal of Health Care Quality Assurance Volume 13 ; 13 >
-    au < ready ; 2001 ; International Journal of Health Care Quality Assurance Volume 14 ; 14 >
-    au < ready ; 2002 ; International Journal of Health Care Quality Assurance Volume 15 ; 15 >
+    au < releasing ; 2001 ; International Journal of Health Care Quality Assurance Volume 14 ; 14 >
+    au < releasing ; 2002 ; International Journal of Health Care Quality Assurance Volume 15 ; 15 >
     au < manifest ; 2003 ; International Journal of Health Care Quality Assurance Volume 16 ; 16 >
     au < manifest ; 2004 ; International Journal of Health Care Quality Assurance Volume 17 ; 17 >
-    au < ready ; 2005 ; International Journal of Health Care Quality Assurance Volume 18 ; 18 >
+    au < releasing ; 2005 ; International Journal of Health Care Quality Assurance Volume 18 ; 18 >
     au < released ; 2006 ; International Journal of Health Care Quality Assurance Volume 19 ; 19 >
     au < manifest ; 2007 ; International Journal of Health Care Quality Assurance Volume 20 ; 20 >
     au < released ; 2008 ; International Journal of Health Care Quality Assurance Volume 21 ; 21 >
@@ -4720,7 +4720,7 @@
     param[journal_issn] = 1753-8394
     comment[journal_id] = imefm
 
-    au < ready ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 >
+    au < releasing ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 >
     au < released ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 4 ; 4 >
@@ -4780,7 +4780,7 @@
     comment[journal_id] = ijlbe
     #continued_by = 2514-9407
 
-    au < ready ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
+    au < releasing ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Law in the Built Environment Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Law in the Built Environment Volume 4 ; 4 >
@@ -4825,7 +4825,7 @@
 
     au < manifest ; 2005 ; The International Journal of Leadership in Public Services Volume 1 ; 1 >
     au < manifest ; 2006 ; The International Journal of Leadership in Public Services Volume 2 ; 2 >
-    au < ready ; 2007 ; The International Journal of Leadership in Public Services Volume 3 ; 3 >
+    au < releasing ; 2007 ; The International Journal of Leadership in Public Services Volume 3 ; 3 >
     au < released ; 2008 ; The International Journal of Leadership in Public Services Volume 4 ; 4 >
     au < released ; 2009 ; The International Journal of Leadership in Public Services Volume 5 ; 5 >
     au < released ; 2010 ; The International Journal of Leadership in Public Services Volume 6 ; 6 >
@@ -4851,7 +4851,7 @@
     au < doNotProcess ; 2015 ; International Journal of Public Leadership Volume 11 ; 11 >
     au < doNotProcess ; 2016 ; International Journal of Public Leadership Volume 12 ; 12 >
     au < doNotProcess ; 2017 ; International Journal of Public Leadership Volume 13 ; 13 >
-    au < ready ; 2018 ; International Journal of Public Leadership Volume 14 ; 14 >
+    au < releasing ; 2018 ; International Journal of Public Leadership Volume 14 ; 14 >
     au < released ; 2019 ; International Journal of Public Leadership Volume 15 ; 15 >
     au < released ; 2020 ; International Journal of Public Leadership Volume 16 ; 16 >
     au < manifest ; 2021 ; International Journal of Public Leadership Volume 17 ; 17 >
@@ -4877,7 +4877,7 @@
     au < doNotProcess ; 2015 ; International Journal of Lean Six Sigma Volume 6 ; 6 >
     au < doNotProcess ; 2016 ; International Journal of Lean Six Sigma Volume 7 ; 7 >
     au < doNotProcess ; 2017 ; International Journal of Lean Six Sigma Volume 8 ; 8 >
-    au < ready ; 2018 ; International Journal of Lean Six Sigma Volume 9 ; 9 >
+    au < releasing ; 2018 ; International Journal of Lean Six Sigma Volume 9 ; 9 >
     au < released ; 2019 ; International Journal of Lean Six Sigma Volume 10 ; 10 >
     au < released ; 2020 ; International Journal of Lean Six Sigma Volume 11 ; 11 >
     au < manifest ; 2021 ; International Journal of Lean Six Sigma Volume 12 ; 12 >
@@ -4911,8 +4911,8 @@
     au < manifest ; 2002 ; The International Journal of Logistics Management Volume 13 ; 13 >
     au < manifest ; 2003 ; The International Journal of Logistics Management Volume 14 ; 14 >
     au < manifest ; 2004 ; The International Journal of Logistics Management Volume 15 ; 15 >
-    au < ready ; 2005 ; The International Journal of Logistics Management Volume 16 ; 16 >
-    au < ready ; 2006 ; The International Journal of Logistics Management Volume 17 ; 17 >
+    au < releasing ; 2005 ; The International Journal of Logistics Management Volume 16 ; 16 >
+    au < releasing ; 2006 ; The International Journal of Logistics Management Volume 17 ; 17 >
     au < released ; 2007 ; The International Journal of Logistics Management Volume 18 ; 18 >
     au < manifest ; 2008 ; The International Journal of Logistics Management Volume 19 ; 19 >
     au < released ; 2009 ; The International Journal of Logistics Management Volume 20 ; 20 >
@@ -4985,7 +4985,7 @@
     au < doNotProcess ; 2015 ; International Journal of Managing Projects in Business Volume 8 ; 8 >
     au < doNotProcess ; 2016 ; International Journal of Managing Projects in Business Volume 9 ; 9 >
     au < doNotProcess ; 2017 ; International Journal of Managing Projects in Business Volume 10 ; 10 >
-    au < ready ; 2018 ; International Journal of Managing Projects in Business Volume 11 ; 11 >
+    au < releasing ; 2018 ; International Journal of Managing Projects in Business Volume 11 ; 11 >
     au < released ; 2019 ; International Journal of Managing Projects in Business Volume 12 ; 12 >
     au < released ; 2020 ; International Journal of Managing Projects in Business Volume 13 ; 13 >
     au < manifest ; 2021 ; International Journal of Managing Projects in Business Volume 14 ; 14 >
@@ -5029,9 +5029,9 @@
     au < manifest ; 2002 ; International Journal of Manpower Volume 23 ; 23 >
     au < manifest ; 2003 ; International Journal of Manpower Volume 24 ; 24 >
     au < manifest ; 2004 ; International Journal of Manpower Volume 25 ; 25 >
-    au < ready ; 2005 ; International Journal of Manpower Volume 26 ; 26 >
+    au < releasing ; 2005 ; International Journal of Manpower Volume 26 ; 26 >
     au < manifest ; 2006 ; International Journal of Manpower Volume 27 ; 27 >
-    au < ready ; 2007 ; International Journal of Manpower Volume 28 ; 28 >
+    au < releasing ; 2007 ; International Journal of Manpower Volume 28 ; 28 >
     au < released ; 2008 ; International Journal of Manpower Volume 29 ; 29 >
     au < released ; 2009 ; International Journal of Manpower Volume 30 ; 30 >
     au < released ; 2010 ; International Journal of Manpower Volume 31 ; 31 >
@@ -5065,7 +5065,7 @@
     au < doNotProcess ; 2015 ; International Journal of Mentoring and Coaching in Education Volume 4 ; 4 >
     au < doNotProcess ; 2016 ; International Journal of Mentoring and Coaching in Education Volume 5 ; 5 >
     au < doNotProcess ; 2017 ; International Journal of Mentoring and Coaching in Education Volume 6 ; 6 >
-    au < ready ; 2018 ; International Journal of Mentoring and Coaching in Education Volume 7 ; 7 >
+    au < releasing ; 2018 ; International Journal of Mentoring and Coaching in Education Volume 7 ; 7 >
     au < released ; 2019 ; International Journal of Mentoring and Coaching in Education Volume 8 ; 8 >
     au < released ; 2020 ; International Journal of Mentoring and Coaching in Education Volume 9 ; 9 >
     au < manifest ; 2021 ; International Journal of Mentoring and Coaching in Education Volume 10 ; 10 >
@@ -5089,7 +5089,7 @@
     au < manifest ; 2005 ; International Journal of Migration, Health and Social Care Volume 1 ; 1 >
     au < manifest ; 2006 ; International Journal of Migration, Health and Social Care Volume 2 ; 2 >
     au < manifest ; 2007 ; International Journal of Migration, Health and Social Care Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Migration, Health and Social Care Volume 4 ; 4 >
+    au < releasing ; 2008 ; International Journal of Migration, Health and Social Care Volume 4 ; 4 >
     au < manifest ; 2009 ; International Journal of Migration, Health and Social Care Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Migration, Health and Social Care Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Migration, Health and Social Care Volume 7 ; 7 >
@@ -5099,7 +5099,7 @@
     au < doNotProcess ; 2015 ; International Journal of Migration, Health and Social Care Volume 11 ; 11 >
     au < doNotProcess ; 2016 ; International Journal of Migration, Health and Social Care Volume 12 ; 12 >
     au < doNotProcess ; 2017 ; International Journal of Migration, Health and Social Care Volume 13 ; 13 >
-    au < ready ; 2018 ; International Journal of Migration, Health and Social Care Volume 14 ; 14 >
+    au < releasing ; 2018 ; International Journal of Migration, Health and Social Care Volume 14 ; 14 >
     au < released ; 2019 ; International Journal of Migration, Health and Social Care Volume 15 ; 15 >
     au < released ; 2020 ; International Journal of Migration, Health and Social Care Volume 16 ; 16 >
     au < manifest ; 2021 ; International Journal of Migration, Health and Social Care Volume 17 ; 17 >
@@ -5133,9 +5133,9 @@
     au < manifest ; 2002 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 12 ; 12 >
     au < manifest ; 2003 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 13 ; 13 >
     au < manifest ; 2004 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 14 ; 14 >
-    au < ready ; 2005 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 15 ; 15 >
+    au < releasing ; 2005 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 15 ; 15 >
     au < released ; 2006 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 16 ; 16 >
-    au < ready ; 2007 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 17 ; 17 >
+    au < releasing ; 2007 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 17 ; 17 >
     au < released ; 2008 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 18 ; 18 >
     au < released ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 >
     au < released ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 >
@@ -5149,7 +5149,7 @@
     au < released ; 2018 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 28 ; 28 >
     au < released ; 2019 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 29 ; 29 >
     au < released ; 2020 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 30 ; 30 >
-    au < ready ; 2021 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 31 ; 31 >
+    au < releasing ; 2021 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 31 ; 31 >
     au < manifest ; 2022 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 32 ; 32 >
 
   }
@@ -5251,9 +5251,9 @@
     au < manifest ; 2005 ; International Journal of Organizational Analysis Volume 13 ; 13 >
     au < manifest ; 2006 ; International Journal of Organizational Analysis Volume 14 ; 14 >
     au < released ; 2007 ; International Journal of Organizational Analysis Volume 15 ; 15 >
-    au < ready ; 2008 ; International Journal of Organizational Analysis Volume 16 ; 16 >
+    au < releasing ; 2008 ; International Journal of Organizational Analysis Volume 16 ; 16 >
     au < released ; 2009 ; International Journal of Organizational Analysis Volume 17 ; 17 >
-    au < ready ; 2010 ; International Journal of Organizational Analysis Volume 18 ; 18 >
+    au < releasing ; 2010 ; International Journal of Organizational Analysis Volume 18 ; 18 >
     au < released ; 2011 ; International Journal of Organizational Analysis Volume 19 ; 19 >
     au < released ; 2012 ; International Journal of Organizational Analysis Volume 20 ; 20 >
     au < doNotProcess ; 2013 ; International Journal of Organizational Analysis Volume 21 ; 21 >
@@ -5261,7 +5261,7 @@
     au < doNotProcess ; 2015 ; International Journal of Organizational Analysis Volume 23 ; 23 >
     au < doNotProcess ; 2016 ; International Journal of Organizational Analysis Volume 24 ; 24 >
     au < doNotProcess ; 2017 ; International Journal of Organizational Analysis Volume 25 ; 25 >
-    au < ready ; 2018 ; International Journal of Organizational Analysis Volume 26 ; 26 >
+    au < releasing ; 2018 ; International Journal of Organizational Analysis Volume 26 ; 26 >
     au < released ; 2019 ; International Journal of Organizational Analysis Volume 27 ; 27 >
     au < released ; 2020 ; International Journal of Organizational Analysis Volume 28 ; 28 >
     au < manifest ; 2021 ; International Journal of Organizational Analysis Volume 29 ; 29 >
@@ -5282,8 +5282,8 @@
 
     au < manifest ; 2005 ; International Journal of Pervasive Computing and Communications Volume 1 ; 1 >
     au < manifest ; 2006 ; International Journal of Pervasive Computing and Communications Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Pervasive Computing and Communications Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Pervasive Computing and Communications Volume 4 ; 4 >
+    au < releasing ; 2007 ; International Journal of Pervasive Computing and Communications Volume 3 ; 3 >
+    au < releasing ; 2008 ; International Journal of Pervasive Computing and Communications Volume 4 ; 4 >
     au < released ; 2009 ; International Journal of Pervasive Computing and Communications Volume 5 ; 5 >
     au < released ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Pervasive Computing and Communications Volume 7 ; 7 >
@@ -5323,7 +5323,7 @@
     au < doNotProcess ; 2015 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 9 ; 9 >
     au < doNotProcess ; 2016 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 10 ; 10 >
     au < doNotProcess ; 2017 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 11 ; 11 >
-    au < ready ; 2018 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 12 ; 12 >
+    au < releasing ; 2018 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 12 ; 12 >
     au < released ; 2019 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 13 ; 13 >
     au < released ; 2020 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 14 ; 14 >
     au < manifest ; 2021 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 15 ; 15 >
@@ -5405,9 +5405,9 @@
     au < manifest ; 2002 ; International Journal of Physical Distribution & Logistics Management Volume 32 ; 32 >
     au < manifest ; 2003 ; International Journal of Physical Distribution & Logistics Management Volume 33 ; 33 >
     au < manifest ; 2004 ; International Journal of Physical Distribution & Logistics Management Volume 34 ; 34 >
-    au < ready ; 2005 ; International Journal of Physical Distribution & Logistics Management Volume 35 ; 35 >
-    au < ready ; 2006 ; International Journal of Physical Distribution & Logistics Management Volume 36 ; 36 >
-    au < ready ; 2007 ; International Journal of Physical Distribution & Logistics Management Volume 37 ; 37 >
+    au < releasing ; 2005 ; International Journal of Physical Distribution & Logistics Management Volume 35 ; 35 >
+    au < releasing ; 2006 ; International Journal of Physical Distribution & Logistics Management Volume 36 ; 36 >
+    au < releasing ; 2007 ; International Journal of Physical Distribution & Logistics Management Volume 37 ; 37 >
     au < manifest ; 2008 ; International Journal of Physical Distribution & Logistics Management Volume 38 ; 38 >
     au < released ; 2009 ; International Journal of Physical Distribution & Logistics Management Volume 39 ; 39 >
     au < released ; 2010 ; International Journal of Physical Distribution & Logistics Management Volume 40 ; 40 >
@@ -5440,9 +5440,9 @@
 
     au < manifest ; 2005 ; International Journal of Prisoner Health Volume 1 ; 1 >
     au < manifest ; 2006 ; International Journal of Prisoner Health Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 >
+    au < releasing ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 >
     au < released ; 2008 ; International Journal of Prisoner Health Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 >
+    au < releasing ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 >
     au < doesNotExist ; 0 ; International Journal of Prisoner Health Volume 6 ; 6 >
     au < released ; 2011 ; International Journal of Prisoner Health Volume 7 ; 7 >
     au < released ; 2012 ; International Journal of Prisoner Health Volume 8 ; 8 >
@@ -5476,7 +5476,7 @@
     au < manifest ; 2006 ; International Journal of Productivity and Performance Management Volume 55 ; 55 >
     au < manifest ; 2007 ; International Journal of Productivity and Performance Management Volume 56 ; 56 >
     au < released ; 2008 ; International Journal of Productivity and Performance Management Volume 57 ; 57 >
-    au < ready ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 >
+    au < releasing ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 >
     au < released ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 >
     au < released ; 2011 ; International Journal of Productivity and Performance Management Volume 60 ; 60 >
     au < released ; 2012 ; International Journal of Productivity and Performance Management Volume 61 ; 61 >
@@ -5518,10 +5518,10 @@
     au < manifest ; 1999 ; International Journal of Public Sector Management Volume 12 ; 12 >
     au < released ; 2000 ; International Journal of Public Sector Management Volume 13 ; 13 >
     au < released ; 2001 ; International Journal of Public Sector Management Volume 14 ; 14 >
-    au < ready ; 2002 ; International Journal of Public Sector Management Volume 15 ; 15 >
+    au < releasing ; 2002 ; International Journal of Public Sector Management Volume 15 ; 15 >
     au < manifest ; 2003 ; International Journal of Public Sector Management Volume 16 ; 16 >
     au < manifest ; 2004 ; International Journal of Public Sector Management Volume 17 ; 17 >
-    au < ready ; 2005 ; International Journal of Public Sector Management Volume 18 ; 18 >
+    au < releasing ; 2005 ; International Journal of Public Sector Management Volume 18 ; 18 >
     au < released ; 2006 ; International Journal of Public Sector Management Volume 19 ; 19 >
     au < manifest ; 2007 ; International Journal of Public Sector Management Volume 20 ; 20 >
     au < released ; 2008 ; International Journal of Public Sector Management Volume 21 ; 21 >
@@ -5571,7 +5571,7 @@
     au < manifest ; 1999 ; International Journal of Quality & Reliability Management Volume 16 ; 16 >
     au < manifest ; 2000 ; International Journal of Quality & Reliability Management Volume 17 ; 17 >
     au < released ; 2001 ; International Journal of Quality & Reliability Management Volume 18 ; 18 >
-    au < ready ; 2002 ; International Journal of Quality & Reliability Management Volume 19 ; 19 >
+    au < releasing ; 2002 ; International Journal of Quality & Reliability Management Volume 19 ; 19 >
     au < manifest ; 2003 ; International Journal of Quality & Reliability Management Volume 20 ; 20 >
     au < manifest ; 2004 ; International Journal of Quality & Reliability Management Volume 21 ; 21 >
     au < manifest ; 2005 ; International Journal of Quality & Reliability Management Volume 22 ; 22 >
@@ -5587,7 +5587,7 @@
     au < doNotProcess ; 2015 ; International Journal of Quality & Reliability Management Volume 32 ; 32 >
     au < doNotProcess ; 2016 ; International Journal of Quality & Reliability Management Volume 33 ; 33 >
     au < doNotProcess ; 2017 ; International Journal of Quality & Reliability Management Volume 34 ; 34 >
-    au < ready ; 2018 ; International Journal of Quality & Reliability Management Volume 35 ; 35 >
+    au < releasing ; 2018 ; International Journal of Quality & Reliability Management Volume 35 ; 35 >
     au < released ; 2019 ; International Journal of Quality & Reliability Management Volume 36 ; 36 >
     au < released ; 2020 ; International Journal of Quality & Reliability Management Volume 37 ; 37 >
     au < manifest ; 2021 ; International Journal of Quality & Reliability Management Volume 38 ; 38 >
@@ -5664,12 +5664,12 @@
     au < manifest ; 1999 ; International Journal of Retail & Distribution Management Volume 27 ; 27 >
     au < released ; 2000 ; International Journal of Retail & Distribution Management Volume 28 ; 28 >
     au < released ; 2001 ; International Journal of Retail & Distribution Management Volume 29 ; 29 >
-    au < ready ; 2002 ; International Journal of Retail & Distribution Management Volume 30 ; 30 >
+    au < releasing ; 2002 ; International Journal of Retail & Distribution Management Volume 30 ; 30 >
     au < manifest ; 2003 ; International Journal of Retail & Distribution Management Volume 31 ; 31 >
     au < manifest ; 2004 ; International Journal of Retail & Distribution Management Volume 32 ; 32 >
     au < manifest ; 2005 ; International Journal of Retail & Distribution Management Volume 33 ; 33 >
-    au < ready ; 2006 ; International Journal of Retail & Distribution Management Volume 34 ; 34 >
-    au < ready ; 2007 ; International Journal of Retail & Distribution Management Volume 35 ; 35 >
+    au < releasing ; 2006 ; International Journal of Retail & Distribution Management Volume 34 ; 34 >
+    au < releasing ; 2007 ; International Journal of Retail & Distribution Management Volume 35 ; 35 >
     au < released ; 2008 ; International Journal of Retail & Distribution Management Volume 36 ; 36 >
     au < released ; 2009 ; International Journal of Retail & Distribution Management Volume 37 ; 37 >
     au < released ; 2010 ; International Journal of Retail & Distribution Management Volume 38 ; 38 >
@@ -5714,7 +5714,7 @@
     au < manifest ; 2002 ; International Journal of Service Industry Management Volume 13 ; 13 >
     au < manifest ; 2003 ; International Journal of Service Industry Management Volume 14 ; 14 >
     au < manifest ; 2004 ; International Journal of Service Industry Management Volume 15 ; 15 >
-    au < ready ; 2005 ; International Journal of Service Industry Management Volume 16 ; 16 >
+    au < releasing ; 2005 ; International Journal of Service Industry Management Volume 16 ; 16 >
     au < released ; 2006 ; International Journal of Service Industry Management Volume 17 ; 17 >
     au < manifest ; 2007 ; International Journal of Service Industry Management Volume 18 ; 18 >
     au < released ; 2008 ; International Journal of Service Industry Management Volume 19 ; 19 >
@@ -5764,9 +5764,9 @@
     au < manifest ; 2003 ; International Journal of Social Economics Volume 30 ; 30 >
     au < manifest ; 2004 ; International Journal of Social Economics Volume 31 ; 31 >
     au < manifest ; 2005 ; International Journal of Social Economics Volume 32 ; 32 >
-    au < ready ; 2006 ; International Journal of Social Economics Volume 33 ; 33 >
+    au < releasing ; 2006 ; International Journal of Social Economics Volume 33 ; 33 >
     au < released ; 2007 ; International Journal of Social Economics Volume 34 ; 34 >
-    au < ready ; 2008 ; International Journal of Social Economics Volume 35 ; 35 >
+    au < releasing ; 2008 ; International Journal of Social Economics Volume 35 ; 35 >
     au < released ; 2009 ; International Journal of Social Economics Volume 36 ; 36 >
     au < released ; 2010 ; International Journal of Social Economics Volume 37 ; 37 >
     au < released ; 2011 ; International Journal of Social Economics Volume 38 ; 38 >
@@ -5776,7 +5776,7 @@
     au < doNotProcess ; 2015 ; International Journal of Social Economics Volume 42 ; 42 >
     au < doNotProcess ; 2016 ; International Journal of Social Economics Volume 43 ; 43 >
     au < doNotProcess ; 2017 ; International Journal of Social Economics Volume 44 ; 44 >
-    au < ready ; 2018 ; International Journal of Social Economics Volume 45 ; 45 >
+    au < releasing ; 2018 ; International Journal of Social Economics Volume 45 ; 45 >
     au < released ; 2019 ; International Journal of Social Economics Volume 46 ; 46 >
     au < manifest ; 2020 ; International Journal of Social Economics Volume 47 ; 47 >
     au < manifest ; 2021 ; International Journal of Social Economics Volume 48 ; 48 >
@@ -5814,12 +5814,12 @@
     au < manifest ; 1997 ; International Journal of Sociology and Social Policy Volume 17 ; 17 >
     au < manifest ; 1998 ; International Journal of Sociology and Social Policy Volume 18 ; 18 >
     au < manifest ; 1999 ; International Journal of Sociology and Social Policy Volume 19 ; 19 >
-    au < ready ; 2000 ; International Journal of Sociology and Social Policy Volume 20 ; 20 >
+    au < releasing ; 2000 ; International Journal of Sociology and Social Policy Volume 20 ; 20 >
     au < manifest ; 2001 ; International Journal of Sociology and Social Policy Volume 21 ; 21 >
     au < manifest ; 2002 ; International Journal of Sociology and Social Policy Volume 22 ; 22 >
     au < manifest ; 2003 ; International Journal of Sociology and Social Policy Volume 23 ; 23 >
     au < manifest ; 2004 ; International Journal of Sociology and Social Policy Volume 24 ; 24 >
-    au < ready ; 2005 ; International Journal of Sociology and Social Policy Volume 25 ; 25 >
+    au < releasing ; 2005 ; International Journal of Sociology and Social Policy Volume 25 ; 25 >
     au < released ; 2006 ; International Journal of Sociology and Social Policy Volume 26 ; 26 >
     au < manifest ; 2007 ; International Journal of Sociology and Social Policy Volume 27 ; 27 >
     au < released ; 2008 ; International Journal of Sociology and Social Policy Volume 28 ; 28 >
@@ -5851,7 +5851,7 @@
     param[journal_issn] = 1757-9864
     comment[journal_id] = ijsi
 
-    au < ready ; 2010 ; International Journal of Structural Integrity Volume 1 ; 1 >
+    au < releasing ; 2010 ; International Journal of Structural Integrity Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Structural Integrity Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Structural Integrity Volume 3 ; 3 >
     au < doNotProcess ; 2013 ; International Journal of Structural Integrity Volume 4 ; 4 >
@@ -5859,7 +5859,7 @@
     au < doNotProcess ; 2015 ; International Journal of Structural Integrity Volume 6 ; 6 >
     au < doNotProcess ; 2016 ; International Journal of Structural Integrity Volume 7 ; 7 >
     au < doNotProcess ; 2017 ; International Journal of Structural Integrity Volume 8 ; 8 >
-    au < ready ; 2018 ; International Journal of Structural Integrity Volume 9 ; 9 >
+    au < releasing ; 2018 ; International Journal of Structural Integrity Volume 9 ; 9 >
     au < released ; 2019 ; International Journal of Structural Integrity Volume 10 ; 10 >
     au < released ; 2020 ; International Journal of Structural Integrity Volume 11 ; 11 >
     au < manifest ; 2021 ; International Journal of Structural Integrity Volume 12 ; 12 >
@@ -5879,7 +5879,7 @@
     comment[journal_id] = ijshe
 
     au < released ; 2000 ; International Journal of Sustainability in Higher Education Volume 1 ; 1 >
-    au < ready ; 2001 ; International Journal of Sustainability in Higher Education Volume 2 ; 2 >
+    au < releasing ; 2001 ; International Journal of Sustainability in Higher Education Volume 2 ; 2 >
     au < manifest ; 2002 ; International Journal of Sustainability in Higher Education Volume 3 ; 3 >
     au < manifest ; 2003 ; International Journal of Sustainability in Higher Education Volume 4 ; 4 >
     au < manifest ; 2004 ; International Journal of Sustainability in Higher Education Volume 5 ; 5 >
@@ -5888,7 +5888,7 @@
     au < released ; 2007 ; International Journal of Sustainability in Higher Education Volume 8 ; 8 >
     au < released ; 2008 ; International Journal of Sustainability in Higher Education Volume 9 ; 9 >
     au < released ; 2009 ; International Journal of Sustainability in Higher Education Volume 10 ; 10 >
-    au < ready ; 2010 ; International Journal of Sustainability in Higher Education Volume 11 ; 11 >
+    au < releasing ; 2010 ; International Journal of Sustainability in Higher Education Volume 11 ; 11 >
     au < released ; 2011 ; International Journal of Sustainability in Higher Education Volume 12 ; 12 >
     au < released ; 2012 ; International Journal of Sustainability in Higher Education Volume 13 ; 13 >
     au < doNotProcess ; 2013 ; International Journal of Sustainability in Higher Education Volume 14 ; 14 >
@@ -5896,7 +5896,7 @@
     au < doNotProcess ; 2015 ; International Journal of Sustainability in Higher Education Volume 16 ; 16 >
     au < doNotProcess ; 2016 ; International Journal of Sustainability in Higher Education Volume 17 ; 17 >
     au < doNotProcess ; 2017 ; International Journal of Sustainability in Higher Education Volume 18 ; 18 >
-    au < ready ; 2018 ; International Journal of Sustainability in Higher Education Volume 19 ; 19 >
+    au < releasing ; 2018 ; International Journal of Sustainability in Higher Education Volume 19 ; 19 >
     au < released ; 2019 ; International Journal of Sustainability in Higher Education Volume 20 ; 20 >
     au < released ; 2020 ; International Journal of Sustainability in Higher Education Volume 21 ; 21 >
     au < manifest ; 2021 ; International Journal of Sustainability in Higher Education Volume 22 ; 22 >
@@ -5959,7 +5959,7 @@
     au < doNotProcess ; 2015 ; International Journal of Wine Business Research Volume 27 ; 27 >
     au < doNotProcess ; 2016 ; International Journal of Wine Business Research Volume 28 ; 28 >
     au < doNotProcess ; 2017 ; International Journal of Wine Business Research Volume 29 ; 29 >
-    au < ready ; 2018 ; International Journal of Wine Business Research Volume 30 ; 30 >
+    au < releasing ; 2018 ; International Journal of Wine Business Research Volume 30 ; 30 >
     au < released ; 2019 ; International Journal of Wine Business Research Volume 31 ; 31 >
     au < released ; 2020 ; International Journal of Wine Business Research Volume 32 ; 32 >
     au < manifest ; 2021 ; International Journal of Wine Business Research Volume 33 ; 33 >
@@ -5995,7 +5995,7 @@
     au < manifest ; 2002 ; International Journal of Wine Marketing Volume 14 ; 14 >
     au < manifest ; 2003 ; International Journal of Wine Marketing Volume 15 ; 15 >
     au < manifest ; 2004 ; International Journal of Wine Marketing Volume 16 ; 16 >
-    au < ready ; 2005 ; International Journal of Wine Marketing Volume 17 ; 17 >
+    au < releasing ; 2005 ; International Journal of Wine Marketing Volume 17 ; 17 >
     au < manifest ; 2006 ; International Journal of Wine Marketing Volume 18 ; 18 >
 
   }
@@ -6011,17 +6011,17 @@
     param[journal_issn] = 1753-8351
     comment[journal_id] = ijwhm
 
-    au < ready ; 2008 ; International Journal of Workplace Health Management Volume 1 ; 1 >
+    au < releasing ; 2008 ; International Journal of Workplace Health Management Volume 1 ; 1 >
     au < released ; 2009 ; International Journal of Workplace Health Management Volume 2 ; 2 >
     au < released ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 >
     au < released ; 2011 ; International Journal of Workplace Health Management Volume 4 ; 4 >
-    au < ready ; 2012 ; International Journal of Workplace Health Management Volume 5 ; 5 >
+    au < releasing ; 2012 ; International Journal of Workplace Health Management Volume 5 ; 5 >
     au < doNotProcess ; 2013 ; International Journal of Workplace Health Management Volume 6 ; 6 >
     au < doNotProcess ; 2014 ; International Journal of Workplace Health Management Volume 7 ; 7 >
     au < doNotProcess ; 2015 ; International Journal of Workplace Health Management Volume 8 ; 8 >
     au < doNotProcess ; 2016 ; International Journal of Workplace Health Management Volume 9 ; 9 >
     au < doNotProcess ; 2017 ; International Journal of Workplace Health Management Volume 10 ; 10 >
-    au < ready ; 2018 ; International Journal of Workplace Health Management Volume 11 ; 11 >
+    au < releasing ; 2018 ; International Journal of Workplace Health Management Volume 11 ; 11 >
     au < released ; 2019 ; International Journal of Workplace Health Management Volume 12 ; 12 >
     au < released ; 2020 ; International Journal of Workplace Health Management Volume 13 ; 13 >
     au < manifest ; 2021 ; International Journal of Workplace Health Management Volume 14 ; 14 >
@@ -6076,20 +6076,20 @@
     au < manifest ; 2002 ; International Marketing Review Volume 19 ; 19 >
     au < manifest ; 2003 ; International Marketing Review Volume 20 ; 20 >
     au < manifest ; 2004 ; International Marketing Review Volume 21 ; 21 >
-    au < ready ; 2005 ; International Marketing Review Volume 22 ; 22 >
+    au < releasing ; 2005 ; International Marketing Review Volume 22 ; 22 >
     au < released ; 2006 ; International Marketing Review Volume 23 ; 23 >
     au < manifest ; 2007 ; International Marketing Review Volume 24 ; 24 >
     au < released ; 2008 ; International Marketing Review Volume 25 ; 25 >
     au < released ; 2009 ; International Marketing Review Volume 26 ; 26 >
     au < released ; 2010 ; International Marketing Review Volume 27 ; 27 >
-    au < ready ; 2011 ; International Marketing Review Volume 28 ; 28 >
-    au < ready ; 2012 ; International Marketing Review Volume 29 ; 29 >
+    au < releasing ; 2011 ; International Marketing Review Volume 28 ; 28 >
+    au < releasing ; 2012 ; International Marketing Review Volume 29 ; 29 >
     au < doNotProcess ; 2013 ; International Marketing Review Volume 30 ; 30 >
     au < doNotProcess ; 2014 ; International Marketing Review Volume 31 ; 31 >
     au < doNotProcess ; 2015 ; International Marketing Review Volume 32 ; 32 >
     au < doNotProcess ; 2016 ; International Marketing Review Volume 33 ; 33 >
     au < doNotProcess ; 2017 ; International Marketing Review Volume 34 ; 34 >
-    au < ready ; 2018 ; International Marketing Review Volume 35 ; 35 >
+    au < releasing ; 2018 ; International Marketing Review Volume 35 ; 35 >
     au < released ; 2019 ; International Marketing Review Volume 36 ; 36 >
     au < released ; 2020 ; International Marketing Review Volume 37 ; 37 >
     au < manifest ; 2021 ; International Marketing Review Volume 38 ; 38 >
@@ -6121,20 +6121,20 @@
     au < manifest ; 2002 ; Internet Research Volume 12 ; 12 >
     au < manifest ; 2003 ; Internet Research Volume 13 ; 13 >
     au < manifest ; 2004 ; Internet Research Volume 14 ; 14 >
-    au < ready ; 2005 ; Internet Research Volume 15 ; 15 >
+    au < releasing ; 2005 ; Internet Research Volume 15 ; 15 >
     au < released ; 2006 ; Internet Research Volume 16 ; 16 >
     au < released ; 2007 ; Internet Research Volume 17 ; 17 >
     au < manifest ; 2008 ; Internet Research Volume 18 ; 18 >
     au < released ; 2009 ; Internet Research Volume 19 ; 19 >
     au < released ; 2010 ; Internet Research Volume 20 ; 20 >
     au < released ; 2011 ; Internet Research Volume 21 ; 21 >
-    au < ready ; 2012 ; Internet Research Volume 22 ; 22 >
+    au < releasing ; 2012 ; Internet Research Volume 22 ; 22 >
     au < doNotProcess ; 2013 ; Internet Research Volume 23 ; 23 >
     au < doNotProcess ; 2014 ; Internet Research Volume 24 ; 24 >
     au < doNotProcess ; 2015 ; Internet Research Volume 25 ; 25 >
     au < doNotProcess ; 2016 ; Internet Research Volume 26 ; 26 >
     au < doNotProcess ; 2017 ; Internet Research Volume 27 ; 27 >
-    au < ready ; 2018 ; Internet Research Volume 28 ; 28 >
+    au < releasing ; 2018 ; Internet Research Volume 28 ; 28 >
     au < released ; 2019 ; Internet Research Volume 29 ; 29 >
     au < released ; 2020 ; Internet Research Volume 30 ; 30 >
     au < manifest ; 2021 ; Internet Research Volume 31 ; 31 >
@@ -6158,14 +6158,14 @@
     au < released ; 2008 ; Journal of Accounting & Organizational Change Volume 4 ; 4 >
     au < released ; 2009 ; Journal of Accounting & Organizational Change Volume 5 ; 5 >
     au < released ; 2010 ; Journal of Accounting & Organizational Change Volume 6 ; 6 >
-    au < ready ; 2011 ; Journal of Accounting & Organizational Change Volume 7 ; 7 >
+    au < releasing ; 2011 ; Journal of Accounting & Organizational Change Volume 7 ; 7 >
     au < released ; 2012 ; Journal of Accounting & Organizational Change Volume 8 ; 8 >
     au < doNotProcess ; 2013 ; Journal of Accounting & Organizational Change Volume 9 ; 9 >
     au < doNotProcess ; 2014 ; Journal of Accounting & Organizational Change Volume 10 ; 10 >
     au < doNotProcess ; 2015 ; Journal of Accounting & Organizational Change Volume 11 ; 11 >
     au < doNotProcess ; 2016 ; Journal of Accounting & Organizational Change Volume 12 ; 12 >
     au < doNotProcess ; 2017 ; Journal of Accounting & Organizational Change Volume 13 ; 13 >
-    au < ready ; 2018 ; Journal of Accounting & Organizational Change Volume 14 ; 14 >
+    au < releasing ; 2018 ; Journal of Accounting & Organizational Change Volume 14 ; 14 >
     au < released ; 2019 ; Journal of Accounting & Organizational Change Volume 15 ; 15 >
     au < released ; 2020 ; Journal of Accounting & Organizational Change Volume 16 ; 16 >
     au < manifest ; 2021 ; Journal of Accounting & Organizational Change Volume 17 ; 17 >
@@ -6190,10 +6190,10 @@
     au < doNotProcess ; 2015 ; Journal of Accounting in Emerging Economies Volume 5 ; 5 >
     au < doNotProcess ; 2016 ; Journal of Accounting in Emerging Economies Volume 6 ; 6 >
     au < doNotProcess ; 2017 ; Journal of Accounting in Emerging Economies Volume 7 ; 7 >
-    au < ready ; 2018 ; Journal of Accounting in Emerging Economies Volume 8 ; 8 >
+    au < releasing ; 2018 ; Journal of Accounting in Emerging Economies Volume 8 ; 8 >
     au < released ; 2019 ; Journal of Accounting in Emerging Economies Volume 9 ; 9 >
     au < released ; 2020 ; Journal of Accounting in Emerging Economies Volume 10 ; 10 >
-    au < ready ; 2021 ; Journal of Accounting in Emerging Economies Volume 11 ; 11 >
+    au < releasing ; 2021 ; Journal of Accounting in Emerging Economies Volume 11 ; 11 >
     au < manifest ; 2022 ; Journal of Accounting in Emerging Economies Volume 12 ; 12 >
 
   }
@@ -6228,7 +6228,7 @@
     au < doNotProcess ; 2015 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 17 ; 17 >
     au < doNotProcess ; 2016 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 18 ; 18 >
     au < doNotProcess ; 2017 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 19 ; 19 >
-    au < ready ; 2018 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 20 ; 20 >
+    au < releasing ; 2018 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 20 ; 20 >
     au < released ; 2019 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 21 ; 21 >
     au < released ; 2020 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 22 ; 22 >
     au < manifest ; 2021 ; Journal of Adult Protection: Evidence-based practice in relation to safeguarding adults Volume 23 ; 23 >
@@ -6248,7 +6248,7 @@
     comment[journal_id] = jamr
 
     au < manifest ; 2004 ; Journal of Advances in Management Research Volume 1 ; 1 >
-    au < ready ; 2005 ; Journal of Advances in Management Research Volume 2 ; 2 >
+    au < releasing ; 2005 ; Journal of Advances in Management Research Volume 2 ; 2 >
     au < released ; 2006 ; Journal of Advances in Management Research Volume 3 ; 3 >
     au < released ; 2007 ; Journal of Advances in Management Research Volume 4 ; 4 >
     au < released ; 2008 ; Journal of Advances in Management Research Volume 5 ; 5 >
@@ -6291,7 +6291,7 @@
     au < doNotProcess ; 2015 ; Journal of Aggression, Conflict and Peace Research Volume 7 ; 7 >
     au < doNotProcess ; 2016 ; Journal of Aggression, Conflict and Peace Research Volume 8 ; 8 >
     au < doNotProcess ; 2017 ; Journal of Aggression, Conflict and Peace Research Volume 9 ; 9 >
-    au < ready ; 2018 ; Journal of Aggression, Conflict and Peace Research Volume 10 ; 10 >
+    au < releasing ; 2018 ; Journal of Aggression, Conflict and Peace Research Volume 10 ; 10 >
     au < released ; 2019 ; Journal of Aggression, Conflict and Peace Research Volume 11 ; 11 >
     au < released ; 2020 ; Journal of Aggression, Conflict and Peace Research Volume 12 ; 12 >
     au < manifest ; 2021 ; Journal of Aggression, Conflict and Peace Research Volume 13 ; 13 >
@@ -6316,7 +6316,7 @@
     au < doNotProcess ; 2015 ; Journal of Agribusiness in Developing and Emerging Economies Volume 5 ; 5 >
     au < doNotProcess ; 2016 ; Journal of Agribusiness in Developing and Emerging Economies Volume 6 ; 6 >
     au < doNotProcess ; 2017 ; Journal of Agribusiness in Developing and Emerging Economies Volume 7 ; 7 >
-    au < ready ; 2018 ; Journal of Agribusiness in Developing and Emerging Economies Volume 8 ; 8 >
+    au < releasing ; 2018 ; Journal of Agribusiness in Developing and Emerging Economies Volume 8 ; 8 >
     au < released ; 2019 ; Journal of Agribusiness in Developing and Emerging Economies Volume 9 ; 9 >
     au < released ; 2020 ; Journal of Agribusiness in Developing and Emerging Economies Volume 10 ; 10 >
     au < manifest ; 2021 ; Journal of Agribusiness in Developing and Emerging Economies Volume 11 ; 11 >
@@ -6339,7 +6339,7 @@
 
     au < released ; 2000 ; Journal of Applied Accounting Research Volume 5 ; 5 >
     au < manifest ; 2002 ; Journal of Applied Accounting Research Volume 6 ; 6 >
-    au < ready ; 2005 ; Journal of Applied Accounting Research Volume 7 ; 7 >
+    au < releasing ; 2005 ; Journal of Applied Accounting Research Volume 7 ; 7 >
     au < released ; 2007 ; Journal of Applied Accounting Research Volume 8 ; 8 >
     au < released ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 >
     au < released ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 >
@@ -6383,7 +6383,7 @@
     au < released ; 2018 ; Journal of Applied Research in Higher Education Volume 10 ; 10 >
     au < released ; 2019 ; Journal of Applied Research in Higher Education Volume 11 ; 11 >
     au < released ; 2020 ; Journal of Applied Research in Higher Education Volume 12 ; 12 >
-    au < ready ; 2021 ; Journal of Applied Research in Higher Education Volume 13 ; 13 >
+    au < releasing ; 2021 ; Journal of Applied Research in Higher Education Volume 13 ; 13 >
     au < manifest ; 2022 ; Journal of Applied Research in Higher Education Volume 14 ; 14 >
 
   }
@@ -6429,7 +6429,7 @@
     param[journal_issn] = 1754-9450
     comment[journal_id] = jat
 
-    au < ready ; 2007 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 1 ; 1 >
+    au < releasing ; 2007 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 1 ; 1 >
     au < released ; 2008 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 2 ; 2 >
     au < released ; 2009 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 3 ; 3 >
     au < released ; 2010 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 4 ; 4 >
@@ -6488,10 +6488,10 @@
     au < manifest ; 1999 ; Journal of Business & Industrial Marketing Volume 14 ; 14 >
     au < manifest ; 2000 ; Journal of Business & Industrial Marketing Volume 15 ; 15 >
     au < released ; 2001 ; Journal of Business & Industrial Marketing Volume 16 ; 16 >
-    au < ready ; 2002 ; Journal of Business & Industrial Marketing Volume 17 ; 17 >
+    au < releasing ; 2002 ; Journal of Business & Industrial Marketing Volume 17 ; 17 >
     au < manifest ; 2003 ; Journal of Business & Industrial Marketing Volume 18 ; 18 >
     au < manifest ; 2004 ; Journal of Business & Industrial Marketing Volume 19 ; 19 >
-    au < ready ; 2005 ; Journal of Business & Industrial Marketing Volume 20 ; 20 >
+    au < releasing ; 2005 ; Journal of Business & Industrial Marketing Volume 20 ; 20 >
     au < released ; 2006 ; Journal of Business & Industrial Marketing Volume 21 ; 21 >
     au < manifest ; 2007 ; Journal of Business & Industrial Marketing Volume 22 ; 22 >
     au < released ; 2008 ; Journal of Business & Industrial Marketing Volume 23 ; 23 >
@@ -6547,8 +6547,8 @@
     au < manifest ; 2002 ; Journal of Business Strategy Volume 23 ; 23 >
     au < manifest ; 2003 ; Journal of Business Strategy Volume 24 ; 24 >
     au < manifest ; 2004 ; Journal of Business Strategy Volume 25 ; 25 >
-    au < ready ; 2005 ; Journal of Business Strategy Volume 26 ; 26 >
-    au < ready ; 2006 ; Journal of Business Strategy Volume 27 ; 27 >
+    au < releasing ; 2005 ; Journal of Business Strategy Volume 26 ; 26 >
+    au < releasing ; 2006 ; Journal of Business Strategy Volume 27 ; 27 >
     au < released ; 2007 ; Journal of Business Strategy Volume 28 ; 28 >
     au < released ; 2008 ; Journal of Business Strategy Volume 29 ; 29 >
     au < released ; 2009 ; Journal of Business Strategy Volume 30 ; 30 >
@@ -6610,7 +6610,7 @@
     param[journal_issn] = 1754-4408
     comment[journal_id] = jcefts
 
-    au < ready ; 2008 ; Journal of Chinese Economic and Foreign Trade Studies Volume 1 ; 1 >
+    au < releasing ; 2008 ; Journal of Chinese Economic and Foreign Trade Studies Volume 1 ; 1 >
     au < released ; 2009 ; Journal of Chinese Economic and Foreign Trade Studies Volume 2 ; 2 >
     au < released ; 2010 ; Journal of Chinese Economic and Foreign Trade Studies Volume 3 ; 3 >
     au < released ; 2011 ; Journal of Chinese Economic and Foreign Trade Studies Volume 4 ; 4 >
@@ -6690,7 +6690,7 @@
     au < manifest ; 2002 ; Journal of Communication Management Volume 6 ; 6 >
     au < manifest ; 2003 ; Journal of Communication Management Volume 7 ; 7 >
     au < manifest ; 2004 ; Journal of Communication Management Volume 8 ; 8 >
-    au < ready ; 2005 ; Journal of Communication Management Volume 9 ; 9 >
+    au < releasing ; 2005 ; Journal of Communication Management Volume 9 ; 9 >
     au < released ; 2006 ; Journal of Communication Management Volume 10 ; 10 >
     au < released ; 2007 ; Journal of Communication Management Volume 11 ; 11 >
     au < released ; 2008 ; Journal of Communication Management Volume 12 ; 12 >
@@ -6706,7 +6706,7 @@
     au < released ; 2018 ; Journal of Communication Management Volume 22 ; 22 >
     au < released ; 2019 ; Journal of Communication Management Volume 23 ; 23 >
     au < released ; 2020 ; Journal of Communication Management Volume 24 ; 24 >
-    au < ready ; 2021 ; Journal of Communication Management Volume 25 ; 25 >
+    au < releasing ; 2021 ; Journal of Communication Management Volume 25 ; 25 >
     au < expected ; 2022 ; Journal of Communication Management Volume 26 ; 26 >
 
   }
@@ -6742,7 +6742,7 @@
     au < manifest ; 2002 ; Journal of Consumer Marketing Volume 19 ; 19 >
     au < manifest ; 2003 ; Journal of Consumer Marketing Volume 20 ; 20 >
     au < manifest ; 2004 ; Journal of Consumer Marketing Volume 21 ; 21 >
-    au < ready ; 2005 ; Journal of Consumer Marketing Volume 22 ; 22 >
+    au < releasing ; 2005 ; Journal of Consumer Marketing Volume 22 ; 22 >
     au < released ; 2006 ; Journal of Consumer Marketing Volume 23 ; 23 >
     au < manifest ; 2007 ; Journal of Consumer Marketing Volume 24 ; 24 >
     au < released ; 2008 ; Journal of Consumer Marketing Volume 25 ; 25 >
@@ -6782,8 +6782,8 @@
     au < manifest ; 2004 ; Journal of Corporate Real Estate Volume 6 ; 6 >
     au < manifest ; 2005 ; Journal of Corporate Real Estate Volume 7 ; 7 >
     au < manifest ; 2006 ; Journal of Corporate Real Estate Volume 8 ; 8 >
-    au < ready ; 2007 ; Journal of Corporate Real Estate Volume 9 ; 9 >
-    au < ready ; 2008 ; Journal of Corporate Real Estate Volume 10 ; 10 >
+    au < releasing ; 2007 ; Journal of Corporate Real Estate Volume 9 ; 9 >
+    au < releasing ; 2008 ; Journal of Corporate Real Estate Volume 10 ; 10 >
     au < released ; 2009 ; Journal of Corporate Real Estate Volume 11 ; 11 >
     au < released ; 2010 ; Journal of Corporate Real Estate Volume 12 ; 12 >
     au < released ; 2011 ; Journal of Corporate Real Estate Volume 13 ; 13 >
@@ -6916,13 +6916,13 @@
     au < manifest ; 1997 ; Journal of Documentation Volume 53 ; 53 >
     au < manifest ; 1998 ; Journal of Documentation Volume 54 ; 54 >
     au < manifest ; 1999 ; Journal of Documentation Volume 55 ; 55 >
-    au < ready ; 2000 ; Journal of Documentation Volume 56 ; 56 >
+    au < releasing ; 2000 ; Journal of Documentation Volume 56 ; 56 >
     au < manifest ; 2001 ; Journal of Documentation Volume 57 ; 57 >
     au < manifest ; 2002 ; Journal of Documentation Volume 58 ; 58 >
     au < manifest ; 2003 ; Journal of Documentation Volume 59 ; 59 >
     au < manifest ; 2004 ; Journal of Documentation Volume 60 ; 60 >
-    au < ready ; 2005 ; Journal of Documentation Volume 61 ; 61 >
-    au < ready ; 2006 ; Journal of Documentation Volume 62 ; 62 >
+    au < releasing ; 2005 ; Journal of Documentation Volume 61 ; 61 >
+    au < releasing ; 2006 ; Journal of Documentation Volume 62 ; 62 >
     au < manifest ; 2007 ; Journal of Documentation Volume 63 ; 63 >
     au < released ; 2008 ; Journal of Documentation Volume 64 ; 64 >
     au < released ; 2009 ; Journal of Documentation Volume 65 ; 65 >
@@ -6955,7 +6955,7 @@
     au < manifest ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
     au < manifest ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
     au < manifest ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
-    au < ready ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
+    au < releasing ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
     au < released ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
     au < released ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
     au < released ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
@@ -7017,8 +7017,8 @@
     au < manifest ; 2002 ; Journal of Economic Studies Volume 29 ; 29 >
     au < manifest ; 2003 ; Journal of Economic Studies Volume 30 ; 30 >
     au < manifest ; 2004 ; Journal of Economic Studies Volume 31 ; 31 >
-    au < ready ; 2005 ; Journal of Economic Studies Volume 32 ; 32 >
-    au < ready ; 2006 ; Journal of Economic Studies Volume 33 ; 33 >
+    au < releasing ; 2005 ; Journal of Economic Studies Volume 32 ; 32 >
+    au < releasing ; 2006 ; Journal of Economic Studies Volume 33 ; 33 >
     au < released ; 2007 ; Journal of Economic Studies Volume 34 ; 34 >
     au < released ; 2008 ; Journal of Economic Studies Volume 35 ; 35 >
     au < released ; 2009 ; Journal of Economic Studies Volume 36 ; 36 >
@@ -7092,7 +7092,7 @@
     au < manifest ; 2003 ; Journal of Educational Administration Volume 41 ; 41 >
     au < manifest ; 2004 ; Journal of Educational Administration Volume 42 ; 42 >
     au < manifest ; 2005 ; Journal of Educational Administration Volume 43 ; 43 >
-    au < ready ; 2006 ; Journal of Educational Administration Volume 44 ; 44 >
+    au < releasing ; 2006 ; Journal of Educational Administration Volume 44 ; 44 >
     au < released ; 2007 ; Journal of Educational Administration Volume 45 ; 45 >
     au < released ; 2008 ; Journal of Educational Administration Volume 46 ; 46 >
     au < released ; 2009 ; Journal of Educational Administration Volume 47 ; 47 >
@@ -7161,8 +7161,8 @@
     au < manifest ; 2004 ; Journal of Enterprise Information Management Volume 17 ; 17 >
     au < manifest ; 2005 ; Journal of Enterprise Information Management Volume 18 ; 18 >
     au < manifest ; 2006 ; Journal of Enterprise Information Management Volume 19 ; 19 >
-    au < ready ; 2007 ; Journal of Enterprise Information Management Volume 20 ; 20 >
-    au < ready ; 2008 ; Journal of Enterprise Information Management Volume 21 ; 21 >
+    au < releasing ; 2007 ; Journal of Enterprise Information Management Volume 20 ; 20 >
+    au < releasing ; 2008 ; Journal of Enterprise Information Management Volume 21 ; 21 >
     au < released ; 2009 ; Journal of Enterprise Information Management Volume 22 ; 22 >
     au < released ; 2010 ; Journal of Enterprise Information Management Volume 23 ; 23 >
     au < released ; 2011 ; Journal of Enterprise Information Management Volume 24 ; 24 >
@@ -7191,8 +7191,8 @@
     param[journal_issn] = 1750-6204
     comment[journal_id] = jec
 
-    au < ready ; 2007 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 1 ; 1 >
-    au < ready ; 2008 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 2 ; 2 >
+    au < releasing ; 2007 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 1 ; 1 >
+    au < releasing ; 2008 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 2 ; 2 >
     au < released ; 2009 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 3 ; 3 >
     au < released ; 2010 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 4 ; 4 >
     au < released ; 2011 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 5 ; 5 >
@@ -7272,7 +7272,7 @@
     au < manifest ; 2002 ; Journal of European Industrial Training Volume 26 ; 26 >
     au < manifest ; 2003 ; Journal of European Industrial Training Volume 27 ; 27 >
     au < manifest ; 2004 ; Journal of European Industrial Training Volume 28 ; 28 >
-    au < ready ; 2005 ; Journal of European Industrial Training Volume 29 ; 29 >
+    au < releasing ; 2005 ; Journal of European Industrial Training Volume 29 ; 29 >
     au < released ; 2006 ; Journal of European Industrial Training Volume 30 ; 30 >
     au < manifest ; 2007 ; Journal of European Industrial Training Volume 31 ; 31 >
     au < released ; 2008 ; Journal of European Industrial Training Volume 32 ; 32 >
@@ -7293,7 +7293,7 @@
     param[journal_issn] = 1753-9269
     comment[journal_id] = jerer
 
-    au < ready ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 >
+    au < releasing ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 >
     au < released ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 >
     au < released ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 >
     au < released ; 2011 ; Journal of European Real Estate Research Volume 4 ; 4 >
@@ -7389,7 +7389,7 @@
     au < manifest ; 2002 ; Journal of Fashion Marketing and Management Volume 6 ; 6 >
     au < manifest ; 2003 ; Journal of Fashion Marketing and Management Volume 7 ; 7 >
     au < manifest ; 2004 ; Journal of Fashion Marketing and Management Volume 8 ; 8 >
-    au < ready ; 2005 ; Journal of Fashion Marketing and Management Volume 9 ; 9 >
+    au < releasing ; 2005 ; Journal of Fashion Marketing and Management Volume 9 ; 9 >
     au < released ; 2006 ; Journal of Fashion Marketing and Management Volume 10 ; 10 >
     au < manifest ; 2007 ; Journal of Fashion Marketing and Management Volume 11 ; 11 >
     au < released ; 2008 ; Journal of Fashion Marketing and Management Volume 12 ; 12 >
@@ -7448,7 +7448,7 @@
     au < released ; 2018 ; Journal of Financial Crime Volume 25 ; 25 >
     au < released ; 2019 ; Journal of Financial Crime Volume 26 ; 26 >
     au < released ; 2020 ; Journal of Financial Crime Volume 27 ; 27 >
-    au < ready ; 2021 ; Journal of Financial Crime Volume 28 ; 28 >
+    au < releasing ; 2021 ; Journal of Financial Crime Volume 28 ; 28 >
     au < manifest ; 2022 ; Journal of Financial Crime Volume 29 ; 29 >
 
   }
@@ -7495,7 +7495,7 @@
 
     au < manifest ; 2005 ; Journal of Financial Management of Property and Construction Volume 10 ; 10 >
     au < manifest ; 2006 ; Journal of Financial Management of Property and Construction Volume 11 ; 11 >
-    au < ready ; 2007 ; Journal of Financial Management of Property and Construction Volume 12 ; 12 >
+    au < releasing ; 2007 ; Journal of Financial Management of Property and Construction Volume 12 ; 12 >
     au < released ; 2008 ; Journal of Financial Management of Property and Construction Volume 13 ; 13 >
     au < manifest ; 2009 ; Journal of Financial Management of Property and Construction Volume 14 ; 14 >
     au < released ; 2010 ; Journal of Financial Management of Property and Construction Volume 15 ; 15 >
@@ -7574,7 +7574,7 @@
     au < manifest ; 2005 ; Journal of Financial Reporting & Accounting Volume 3 ; 3 >
     au < manifest ; 2006 ; Journal of Financial Reporting & Accounting Volume 4 ; 4 >
     au < released ; 2007 ; Journal of Financial Reporting & Accounting Volume 5 ; 5 >
-    au < ready ; 2008 ; Journal of Financial Reporting & Accounting Volume 6 ; 6 >
+    au < releasing ; 2008 ; Journal of Financial Reporting & Accounting Volume 6 ; 6 >
     au < released ; 2009 ; Journal of Financial Reporting & Accounting Volume 7 ; 7 >
     au < released ; 2010 ; Journal of Financial Reporting & Accounting Volume 8 ; 8 >
     au < released ; 2011 ; Journal of Financial Reporting & Accounting Volume 9 ; 9 >
@@ -7806,7 +7806,7 @@
     au < manifest ; 2004 ; Journal of Information, Communication and Ethics in Society Volume 2 ; 2 >
     au < manifest ; 2005 ; Journal of Information, Communication and Ethics in Society Volume 3 ; 3 >
     au < manifest ; 2006 ; Journal of Information, Communication and Ethics in Society Volume 4 ; 4 >
-    au < ready ; 2007 ; Journal of Information, Communication and Ethics in Society Volume 5 ; 5 >
+    au < releasing ; 2007 ; Journal of Information, Communication and Ethics in Society Volume 5 ; 5 >
     au < released ; 2008 ; Journal of Information, Communication and Ethics in Society Volume 6 ; 6 >
     au < released ; 2009 ; Journal of Information, Communication and Ethics in Society Volume 7 ; 7 >
     au < released ; 2010 ; Journal of Information, Communication and Ethics in Society Volume 8 ; 8 >
@@ -7847,9 +7847,9 @@
     au < manifest ; 2004 ; Journal of Integrated Care: Practical evidence for service improvement Volume 12 ; 12 >
     au < manifest ; 2005 ; Journal of Integrated Care: Practical evidence for service improvement Volume 13 ; 13 >
     au < manifest ; 2006 ; Journal of Integrated Care: Practical evidence for service improvement Volume 14 ; 14 >
-    au < ready ; 2007 ; Journal of Integrated Care: Practical evidence for service improvement Volume 15 ; 15 >
+    au < releasing ; 2007 ; Journal of Integrated Care: Practical evidence for service improvement Volume 15 ; 15 >
     au < manifest ; 2008 ; Journal of Integrated Care: Practical evidence for service improvement Volume 16 ; 16 >
-    au < ready ; 2009 ; Journal of Integrated Care: Practical evidence for service improvement Volume 17 ; 17 >
+    au < releasing ; 2009 ; Journal of Integrated Care: Practical evidence for service improvement Volume 17 ; 17 >
     au < released ; 2010 ; Journal of Integrated Care: Practical evidence for service improvement Volume 18 ; 18 >
     au < released ; 2011 ; Journal of Integrated Care: Practical evidence for service improvement Volume 19 ; 19 >
     au < released ; 2012 ; Journal of Integrated Care: Practical evidence for service improvement Volume 20 ; 20 >
@@ -7947,7 +7947,7 @@
     au < manifest ; 2004 ; Journal of International Trade Law and Policy Volume 3 ; 3 >
     au < manifest ; 2005 ; Journal of International Trade Law and Policy Volume 4 ; 4 >
     au < manifest ; 2006 ; Journal of International Trade Law and Policy Volume 5 ; 5 >
-    au < ready ; 2007 ; Journal of International Trade Law and Policy Volume 6 ; 6 >
+    au < releasing ; 2007 ; Journal of International Trade Law and Policy Volume 6 ; 6 >
     au < released ; 2008 ; Journal of International Trade Law and Policy Volume 7 ; 7 >
     au < released ; 2009 ; Journal of International Trade Law and Policy Volume 8 ; 8 >
     au < released ; 2010 ; Journal of International Trade Law and Policy Volume 9 ; 9 >
@@ -8076,10 +8076,10 @@
     au < manifest ; 2002 ; Journal of Knowledge Management Volume 6 ; 6 >
     au < manifest ; 2003 ; Journal of Knowledge Management Volume 7 ; 7 >
     au < manifest ; 2004 ; Journal of Knowledge Management Volume 8 ; 8 >
-    au < ready ; 2005 ; Journal of Knowledge Management Volume 9 ; 9 >
+    au < releasing ; 2005 ; Journal of Knowledge Management Volume 9 ; 9 >
     au < manifest ; 2006 ; Journal of Knowledge Management Volume 10 ; 10 >
     au < released ; 2007 ; Journal of Knowledge Management Volume 11 ; 11 >
-    au < ready ; 2008 ; Journal of Knowledge Management Volume 12 ; 12 >
+    au < releasing ; 2008 ; Journal of Knowledge Management Volume 12 ; 12 >
     au < released ; 2009 ; Journal of Knowledge Management Volume 13 ; 13 >
     au < released ; 2010 ; Journal of Knowledge Management Volume 14 ; 14 >
     au < released ; 2011 ; Journal of Knowledge Management Volume 15 ; 15 >
@@ -8127,7 +8127,7 @@
     param[journal_issn] = 2042-0927
     comment[journal_id] = jldob
 
-    au < ready ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 >
+    au < releasing ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 >
     au < released ; 2011 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 >
     au < released ; 2012 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 3 ; 3 >
 
@@ -8167,7 +8167,7 @@
     au < manifest ; 2002 ; Journal of Management Development Volume 21 ; 21 >
     au < manifest ; 2003 ; Journal of Management Development Volume 22 ; 22 >
     au < manifest ; 2004 ; Journal of Management Development Volume 23 ; 23 >
-    au < ready ; 2005 ; Journal of Management Development Volume 24 ; 24 >
+    au < releasing ; 2005 ; Journal of Management Development Volume 24 ; 24 >
     au < released ; 2006 ; Journal of Management Development Volume 25 ; 25 >
     au < manifest ; 2007 ; Journal of Management Development Volume 26 ; 26 >
     au < released ; 2008 ; Journal of Management Development Volume 27 ; 27 >
@@ -8202,7 +8202,7 @@
 
     au < manifest ; 2006 ; Journal of Management History Volume 12 ; 12 >
     au < released ; 2007 ; Journal of Management History Volume 13 ; 13 >
-    au < ready ; 2008 ; Journal of Management History Volume 14 ; 14 >
+    au < releasing ; 2008 ; Journal of Management History Volume 14 ; 14 >
     au < released ; 2009 ; Journal of Management History Volume 15 ; 15 >
     au < released ; 2010 ; Journal of Management History Volume 16 ; 16 >
     au < released ; 2011 ; Journal of Management History Volume 17 ; 17 >
@@ -8268,7 +8268,7 @@
     au < manifest ; 1999 ; Journal of Management in Medicine Volume 13 ; 13 >
     au < released ; 2000 ; Journal of Management in Medicine Volume 14 ; 14 >
     au < manifest ; 2001 ; Journal of Management in Medicine Volume 15 ; 15 >
-    au < ready ; 2002 ; Journal of Management in Medicine Volume 16 ; 16 >
+    au < releasing ; 2002 ; Journal of Management in Medicine Volume 16 ; 16 >
 
   }
 
@@ -8302,10 +8302,10 @@
     au < manifest ; 2002 ; Journal of Managerial Psychology Volume 17 ; 17 >
     au < manifest ; 2003 ; Journal of Managerial Psychology Volume 18 ; 18 >
     au < manifest ; 2004 ; Journal of Managerial Psychology Volume 19 ; 19 >
-    au < ready ; 2005 ; Journal of Managerial Psychology Volume 20 ; 20 >
+    au < releasing ; 2005 ; Journal of Managerial Psychology Volume 20 ; 20 >
     au < released ; 2006 ; Journal of Managerial Psychology Volume 21 ; 21 >
     au < released ; 2007 ; Journal of Managerial Psychology Volume 22 ; 22 >
-    au < ready ; 2008 ; Journal of Managerial Psychology Volume 23 ; 23 >
+    au < releasing ; 2008 ; Journal of Managerial Psychology Volume 23 ; 23 >
     au < released ; 2009 ; Journal of Managerial Psychology Volume 24 ; 24 >
     au < released ; 2010 ; Journal of Managerial Psychology Volume 25 ; 25 >
     au < released ; 2011 ; Journal of Managerial Psychology Volume 26 ; 26 >
@@ -8403,7 +8403,7 @@
     au < released ; 2018 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 13 ; 13 >
     au < released ; 2019 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 14 ; 14 >
     au < released ; 2020 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 15 ; 15 >
-    au < ready ; 2021 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 16 ; 16 >
+    au < releasing ; 2021 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 16 ; 16 >
     au < manifest ; 2022 ; The Journal of Mental Health Training, Education and Practice: Issues for workforce development Volume 17 ; 17 >
 
   }
@@ -8431,10 +8431,10 @@
     au < doNotProcess ; 2015 ; Journal of Modelling in Management Volume 10 ; 10 >
     au < doNotProcess ; 2016 ; Journal of Modelling in Management Volume 11 ; 11 >
     au < doNotProcess ; 2017 ; Journal of Modelling in Management Volume 12 ; 12 >
-    au < ready ; 2018 ; Journal of Modelling in Management Volume 13 ; 13 >
+    au < releasing ; 2018 ; Journal of Modelling in Management Volume 13 ; 13 >
     au < released ; 2019 ; Journal of Modelling in Management Volume 14 ; 14 >
     au < released ; 2020 ; Journal of Modelling in Management Volume 15 ; 15 >
-    au < ready ; 2021 ; Journal of Modelling in Management Volume 16 ; 16 >
+    au < releasing ; 2021 ; Journal of Modelling in Management Volume 16 ; 16 >
     au < expected ; 2022 ; Journal of Modelling in Management Volume 17 ; 17 >
 
   }
@@ -8453,7 +8453,7 @@
     au < manifest ; 1998 ; Journal of Money Laundering Control Volume 1 ; 1 >
     au < manifest ; 1999 ; Journal of Money Laundering Control Volume 2 ; 2 >
     au < manifest ; 2000 ; Journal of Money Laundering Control Volume 3 ; 3 >
-    au < ready ; 2001 ; Journal of Money Laundering Control Volume 4 ; 4 >
+    au < releasing ; 2001 ; Journal of Money Laundering Control Volume 4 ; 4 >
     au < manifest ; 2002 ; Journal of Money Laundering Control Volume 5 ; 5 >
     au < manifest ; 2003 ; Journal of Money Laundering Control Volume 6 ; 6 >
     au < manifest ; 2004 ; Journal of Money Laundering Control Volume 7 ; 7 >
@@ -8503,10 +8503,10 @@
     au < manifest ; 1999 ; Journal of Organizational Change Management Volume 12 ; 12 >
     au < released ; 2000 ; Journal of Organizational Change Management Volume 13 ; 13 >
     au < released ; 2001 ; Journal of Organizational Change Management Volume 14 ; 14 >
-    au < ready ; 2002 ; Journal of Organizational Change Management Volume 15 ; 15 >
+    au < releasing ; 2002 ; Journal of Organizational Change Management Volume 15 ; 15 >
     au < manifest ; 2003 ; Journal of Organizational Change Management Volume 16 ; 16 >
     au < manifest ; 2004 ; Journal of Organizational Change Management Volume 17 ; 17 >
-    au < ready ; 2005 ; Journal of Organizational Change Management Volume 18 ; 18 >
+    au < releasing ; 2005 ; Journal of Organizational Change Management Volume 18 ; 18 >
     au < released ; 2006 ; Journal of Organizational Change Management Volume 19 ; 19 >
     au < manifest ; 2007 ; Journal of Organizational Change Management Volume 20 ; 20 >
     au < released ; 2008 ; Journal of Organizational Change Management Volume 21 ; 21 >
@@ -8604,8 +8604,8 @@
     au < manifest ; 2002 ; Journal of Product & Brand Management Volume 11 ; 11 >
     au < manifest ; 2003 ; Journal of Product & Brand Management Volume 12 ; 12 >
     au < manifest ; 2004 ; Journal of Product & Brand Management Volume 13 ; 13 >
-    au < ready ; 2005 ; Journal of Product & Brand Management Volume 14 ; 14 >
-    au < ready ; 2006 ; Journal of Product & Brand Management Volume 15 ; 15 >
+    au < releasing ; 2005 ; Journal of Product & Brand Management Volume 14 ; 14 >
+    au < releasing ; 2006 ; Journal of Product & Brand Management Volume 15 ; 15 >
     au < released ; 2007 ; Journal of Product & Brand Management Volume 16 ; 16 >
     au < released ; 2008 ; Journal of Product & Brand Management Volume 17 ; 17 >
     au < released ; 2009 ; Journal of Product & Brand Management Volume 18 ; 18 >
@@ -8748,7 +8748,7 @@
     au < manifest ; 2004 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 3 ; 3 >
     au < manifest ; 2005 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 4 ; 4 >
     au < manifest ; 2006 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 5 ; 5 >
-    au < ready ; 2007 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 6 ; 6 >
+    au < releasing ; 2007 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 6 ; 6 >
     au < manifest ; 2008 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 7 ; 7 >
     au < released ; 2009 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 8 ; 8 >
     au < released ; 2010 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 9 ; 9 >
@@ -8856,7 +8856,7 @@
     au < manifest ; 2004 ; Journal of Research in Marketing and Entrepreneurship Volume 6 ; 6 >
     au < manifest ; 2005 ; Journal of Research in Marketing and Entrepreneurship Volume 7 ; 7 >
     au < manifest ; 2006 ; Journal of Research in Marketing and Entrepreneurship Volume 8 ; 8 >
-    au < ready ; 2007 ; Journal of Research in Marketing and Entrepreneurship Volume 9 ; 9 >
+    au < releasing ; 2007 ; Journal of Research in Marketing and Entrepreneurship Volume 9 ; 9 >
     au < released ; 2008 ; Journal of Research in Marketing and Entrepreneurship Volume 10 ; 10 >
     au < released ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 >
     au < released ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 >
@@ -8953,7 +8953,7 @@
     au < released ; 2018 ; Journal of Service Management Volume 29 ; 29 >
     au < released ; 2019 ; Journal of Service Management Volume 30 ; 30 >
     au < released ; 2020 ; Journal of Service Management Volume 31 ; 31 >
-    au < ready ; 2021 ; Journal of Service Management Volume 32 ; 32 >
+    au < releasing ; 2021 ; Journal of Service Management Volume 32 ; 32 >
     au < manifest ; 2022 ; Journal of Service Management Volume 33 ; 33 >
 
   }
@@ -8983,10 +8983,10 @@
     au < manifest ; 1999 ; Journal of Services Marketing Volume 13 ; 13 >
     au < released ; 2000 ; Journal of Services Marketing Volume 14 ; 14 >
     au < released ; 2001 ; Journal of Services Marketing Volume 15 ; 15 >
-    au < ready ; 2002 ; Journal of Services Marketing Volume 16 ; 16 >
+    au < releasing ; 2002 ; Journal of Services Marketing Volume 16 ; 16 >
     au < manifest ; 2003 ; Journal of Services Marketing Volume 17 ; 17 >
     au < manifest ; 2004 ; Journal of Services Marketing Volume 18 ; 18 >
-    au < ready ; 2005 ; Journal of Services Marketing Volume 19 ; 19 >
+    au < releasing ; 2005 ; Journal of Services Marketing Volume 19 ; 19 >
     au < released ; 2006 ; Journal of Services Marketing Volume 20 ; 20 >
     au < manifest ; 2007 ; Journal of Services Marketing Volume 21 ; 21 >
     au < released ; 2008 ; Journal of Services Marketing Volume 22 ; 22 >
@@ -9032,7 +9032,7 @@
     au < manifest ; 2005 ; Journal of Small Business and Enterprise Development Volume 12 ; 12 >
     au < manifest ; 2006 ; Journal of Small Business and Enterprise Development Volume 13 ; 13 >
     au < released ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 >
-    au < ready ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 >
+    au < releasing ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 >
     au < released ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 >
     au < released ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 >
     au < released ; 2011 ; Journal of Small Business and Enterprise Development Volume 18 ; 18 >
@@ -9272,7 +9272,7 @@
     au < manifest ; 2002 ; Kybernetes Volume 31 ; 31 >
     au < manifest ; 2003 ; Kybernetes Volume 32 ; 32 >
     au < manifest ; 2004 ; Kybernetes Volume 33 ; 33 >
-    au < ready ; 2005 ; Kybernetes Volume 34 ; 34 >
+    au < releasing ; 2005 ; Kybernetes Volume 34 ; 34 >
     au < manifest ; 2006 ; Kybernetes Volume 35 ; 35 >
     au < manifest ; 2007 ; Kybernetes Volume 36 ; 36 >
     au < released ; 2008 ; Kybernetes Volume 37 ; 37 >
@@ -9324,15 +9324,15 @@
     au < manifest ; 1997 ; Leadership & Organization Development Journal Volume 18 ; 18 >
     au < manifest ; 1998 ; Leadership & Organization Development Journal Volume 19 ; 19 >
     au < manifest ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 >
-    au < ready ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 >
+    au < releasing ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 >
     au < manifest ; 2001 ; Leadership & Organization Development Journal Volume 22 ; 22 >
     au < manifest ; 2002 ; Leadership & Organization Development Journal Volume 23 ; 23 >
     au < manifest ; 2003 ; Leadership & Organization Development Journal Volume 24 ; 24 >
     au < manifest ; 2004 ; Leadership & Organization Development Journal Volume 25 ; 25 >
-    au < ready ; 2005 ; Leadership & Organization Development Journal Volume 26 ; 26 >
-    au < ready ; 2006 ; Leadership & Organization Development Journal Volume 27 ; 27 >
+    au < releasing ; 2005 ; Leadership & Organization Development Journal Volume 26 ; 26 >
+    au < releasing ; 2006 ; Leadership & Organization Development Journal Volume 27 ; 27 >
     au < released ; 2007 ; Leadership & Organization Development Journal Volume 28 ; 28 >
-    au < ready ; 2008 ; Leadership & Organization Development Journal Volume 29 ; 29 >
+    au < releasing ; 2008 ; Leadership & Organization Development Journal Volume 29 ; 29 >
     au < released ; 2009 ; Leadership & Organization Development Journal Volume 30 ; 30 >
     au < released ; 2010 ; Leadership & Organization Development Journal Volume 31 ; 31 >
     au < released ; 2011 ; Leadership & Organization Development Journal Volume 32 ; 32 >
@@ -9388,7 +9388,7 @@
     #continued = 1366-0756
 
     au < manifest ; 2007 ; Leadership in Health Services Volume 20 ; 20 >
-    au < ready ; 2008 ; Leadership in Health Services Volume 21 ; 21 >
+    au < releasing ; 2008 ; Leadership in Health Services Volume 21 ; 21 >
     au < released ; 2009 ; Leadership in Health Services Volume 22 ; 22 >
     au < released ; 2010 ; Leadership in Health Services Volume 23 ; 23 >
     au < released ; 2011 ; Leadership in Health Services Volume 24 ; 24 >
@@ -9428,10 +9428,10 @@
     au < manifest ; 2002 ; The Learning Organization Volume 9 ; 9 >
     au < manifest ; 2003 ; The Learning Organization Volume 10 ; 10 >
     au < manifest ; 2004 ; The Learning Organization Volume 11 ; 11 >
-    au < ready ; 2005 ; The Learning Organization Volume 12 ; 12 >
-    au < ready ; 2006 ; The Learning Organization Volume 13 ; 13 >
+    au < releasing ; 2005 ; The Learning Organization Volume 12 ; 12 >
+    au < releasing ; 2006 ; The Learning Organization Volume 13 ; 13 >
     au < released ; 2007 ; The Learning Organization Volume 14 ; 14 >
-    au < ready ; 2008 ; The Learning Organization Volume 15 ; 15 >
+    au < releasing ; 2008 ; The Learning Organization Volume 15 ; 15 >
     au < released ; 2009 ; The Learning Organization Volume 16 ; 16 >
     au < released ; 2010 ; The Learning Organization Volume 17 ; 17 >
     au < released ; 2011 ; The Learning Organization Volume 18 ; 18 >
@@ -9516,13 +9516,13 @@
     au < manifest ; 1999 ; Library Hi Tech Volume 17 ; 17 >
     au < released ; 2000 ; Library Hi Tech Volume 18 ; 18 >
     au < released ; 2001 ; Library Hi Tech Volume 19 ; 19 >
-    au < ready ; 2002 ; Library Hi Tech Volume 20 ; 20 >
+    au < releasing ; 2002 ; Library Hi Tech Volume 20 ; 20 >
     au < manifest ; 2003 ; Library Hi Tech Volume 21 ; 21 >
     au < manifest ; 2004 ; Library Hi Tech Volume 22 ; 22 >
-    au < ready ; 2005 ; Library Hi Tech Volume 23 ; 23 >
-    au < ready ; 2006 ; Library Hi Tech Volume 24 ; 24 >
+    au < releasing ; 2005 ; Library Hi Tech Volume 23 ; 23 >
+    au < releasing ; 2006 ; Library Hi Tech Volume 24 ; 24 >
     au < manifest ; 2007 ; Library Hi Tech Volume 25 ; 25 >
-    au < ready ; 2008 ; Library Hi Tech Volume 26 ; 26 >
+    au < releasing ; 2008 ; Library Hi Tech Volume 26 ; 26 >
     au < released ; 2009 ; Library Hi Tech Volume 27 ; 27 >
     au < released ; 2010 ; Library Hi Tech Volume 28 ; 28 >
     au < released ; 2011 ; Library Hi Tech Volume 29 ; 29 >
@@ -9553,15 +9553,15 @@
     au < manifest ; 1999 ; Library Hi Tech News Volume 16 ; 16 >
     au < released ; 2000 ; Library Hi Tech News Volume 17 ; 17 >
     au < manifest ; 2001 ; Library Hi Tech News Volume 18 ; 18 >
-    au < ready ; 2002 ; Library Hi Tech News Volume 19 ; 19 >
+    au < releasing ; 2002 ; Library Hi Tech News Volume 19 ; 19 >
     au < manifest ; 2003 ; Library Hi Tech News Volume 20 ; 20 >
     au < manifest ; 2004 ; Library Hi Tech News Volume 21 ; 21 >
-    au < ready ; 2005 ; Library Hi Tech News Volume 22 ; 22 >
-    au < ready ; 2006 ; Library Hi Tech News Volume 23 ; 23 >
+    au < releasing ; 2005 ; Library Hi Tech News Volume 22 ; 22 >
+    au < releasing ; 2006 ; Library Hi Tech News Volume 23 ; 23 >
     au < manifest ; 2007 ; Library Hi Tech News Volume 24 ; 24 >
     au < manifest ; 2008 ; Library Hi Tech News Volume 25 ; 25 >
     au < manifest ; 2009 ; Library Hi Tech News Volume 26 ; 26 >
-    au < ready ; 2010 ; Library Hi Tech News Volume 27 ; 27 >
+    au < releasing ; 2010 ; Library Hi Tech News Volume 27 ; 27 >
     au < released ; 2011 ; Library Hi Tech News Volume 28 ; 28 >
     au < released ; 2012 ; Library Hi Tech News Volume 29 ; 29 >
     au < doNotProcess ; 2013 ; Library Hi Tech News Volume 30 ; 30 >
@@ -9613,10 +9613,10 @@
     au < manifest ; 2002 ; Library Management Volume 23 ; 23 >
     au < manifest ; 2003 ; Library Management Volume 24 ; 24 >
     au < manifest ; 2004 ; Library Management Volume 25 ; 25 >
-    au < ready ; 2005 ; Library Management Volume 26 ; 26 >
+    au < releasing ; 2005 ; Library Management Volume 26 ; 26 >
     au < manifest ; 2006 ; Library Management Volume 27 ; 27 >
-    au < ready ; 2007 ; Library Management Volume 28 ; 28 >
-    au < ready ; 2008 ; Library Management Volume 29 ; 29 >
+    au < releasing ; 2007 ; Library Management Volume 28 ; 28 >
+    au < releasing ; 2008 ; Library Management Volume 29 ; 29 >
     au < manifest ; 2009 ; Library Management Volume 30 ; 30 >
     au < released ; 2010 ; Library Management Volume 31 ; 31 >
     au < released ; 2011 ; Library Management Volume 32 ; 32 >
@@ -9699,7 +9699,7 @@
     au < manifest ; 2002 ; Library Review Volume 51 ; 51 >
     au < manifest ; 2003 ; Library Review Volume 52 ; 52 >
     au < manifest ; 2004 ; Library Review Volume 53 ; 53 >
-    au < ready ; 2005 ; Library Review Volume 54 ; 54 >
+    au < releasing ; 2005 ; Library Review Volume 54 ; 54 >
     au < manifest ; 2006 ; Library Review Volume 55 ; 55 >
     au < manifest ; 2007 ; Library Review Volume 56 ; 56 >
     au < released ; 2008 ; Library Review Volume 57 ; 57 >
@@ -9830,10 +9830,10 @@
     au < manifest ; 2002 ; Management Decision Volume 40 ; 40 >
     au < manifest ; 2003 ; Management Decision Volume 41 ; 41 >
     au < manifest ; 2004 ; Management Decision Volume 42 ; 42 >
-    au < ready ; 2005 ; Management Decision Volume 43 ; 43 >
+    au < releasing ; 2005 ; Management Decision Volume 43 ; 43 >
     au < released ; 2006 ; Management Decision Volume 44 ; 44 >
-    au < ready ; 2007 ; Management Decision Volume 45 ; 45 >
-    au < ready ; 2008 ; Management Decision Volume 46 ; 46 >
+    au < releasing ; 2007 ; Management Decision Volume 45 ; 45 >
+    au < releasing ; 2008 ; Management Decision Volume 46 ; 46 >
     au < manifest ; 2009 ; Management Decision Volume 47 ; 47 >
     au < released ; 2010 ; Management Decision Volume 48 ; 48 >
     au < released ; 2011 ; Management Decision Volume 49 ; 49 >
@@ -9888,7 +9888,7 @@
     au < manifest ; 2004 ; Management of Environmental Quality: An International Journal Volume 15 ; 15 >
     au < manifest ; 2005 ; Management of Environmental Quality: An International Journal Volume 16 ; 16 >
     au < manifest ; 2006 ; Management of Environmental Quality: An International Journal Volume 17 ; 17 >
-    au < ready ; 2007 ; Management of Environmental Quality: An International Journal Volume 18 ; 18 >
+    au < releasing ; 2007 ; Management of Environmental Quality: An International Journal Volume 18 ; 18 >
     au < manifest ; 2008 ; Management of Environmental Quality: An International Journal Volume 19 ; 19 >
     au < released ; 2009 ; Management of Environmental Quality: An International Journal Volume 20 ; 20 >
     au < released ; 2010 ; Management of Environmental Quality: An International Journal Volume 21 ; 21 >
@@ -9902,7 +9902,7 @@
     au < released ; 2018 ; Management of Environmental Quality: An International Journal Volume 29 ; 29 >
     au < released ; 2019 ; Management of Environmental Quality: An International Journal Volume 30 ; 30 >
     au < released ; 2020 ; Management of Environmental Quality: An International Journal Volume 31 ; 31 >
-    au < ready ; 2021 ; Management of Environmental Quality: An International Journal Volume 32 ; 32 >
+    au < releasing ; 2021 ; Management of Environmental Quality: An International Journal Volume 32 ; 32 >
     au < manifest ; 2022 ; Management of Environmental Quality: An International Journal Volume 33 ; 33 >
 
   }
@@ -9947,9 +9947,9 @@
     au < manifest ; 2003 ; Management Research News Volume 26 ; 26 >
     au < manifest ; 2004 ; Management Research News Volume 27 ; 27 >
     au < manifest ; 2005 ; Management Research News Volume 28 ; 28 >
-    au < ready ; 2006 ; Management Research News Volume 29 ; 29 >
+    au < releasing ; 2006 ; Management Research News Volume 29 ; 29 >
     au < manifest ; 2007 ; Management Research News Volume 30 ; 30 >
-    au < ready ; 2008 ; Management Research News Volume 31 ; 31 >
+    au < releasing ; 2008 ; Management Research News Volume 31 ; 31 >
     au < released ; 2009 ; Management Research News Volume 32 ; 32 >
 
   }
@@ -10042,10 +10042,10 @@
     au < manifest ; 1999 ; Managerial Auditing Journal Volume 14 ; 14 >
     au < released ; 2000 ; Managerial Auditing Journal Volume 15 ; 15 >
     au < released ; 2001 ; Managerial Auditing Journal Volume 16 ; 16 >
-    au < ready ; 2002 ; Managerial Auditing Journal Volume 17 ; 17 >
+    au < releasing ; 2002 ; Managerial Auditing Journal Volume 17 ; 17 >
     au < manifest ; 2003 ; Managerial Auditing Journal Volume 18 ; 18 >
     au < manifest ; 2004 ; Managerial Auditing Journal Volume 19 ; 19 >
-    au < ready ; 2005 ; Managerial Auditing Journal Volume 20 ; 20 >
+    au < releasing ; 2005 ; Managerial Auditing Journal Volume 20 ; 20 >
     au < manifest ; 2006 ; Managerial Auditing Journal Volume 21 ; 21 >
     au < manifest ; 2007 ; Managerial Auditing Journal Volume 22 ; 22 >
     au < released ; 2008 ; Managerial Auditing Journal Volume 23 ; 23 >
@@ -10104,10 +10104,10 @@
     au < manifest ; 1999 ; Managerial Finance Volume 25 ; 25 >
     au < released ; 2000 ; Managerial Finance Volume 26 ; 26 >
     au < released ; 2001 ; Managerial Finance Volume 27 ; 27 >
-    au < ready ; 2002 ; Managerial Finance Volume 28 ; 28 >
+    au < releasing ; 2002 ; Managerial Finance Volume 28 ; 28 >
     au < manifest ; 2003 ; Managerial Finance Volume 29 ; 29 >
     au < manifest ; 2004 ; Managerial Finance Volume 30 ; 30 >
-    au < ready ; 2005 ; Managerial Finance Volume 31 ; 31 >
+    au < releasing ; 2005 ; Managerial Finance Volume 31 ; 31 >
     au < released ; 2006 ; Managerial Finance Volume 32 ; 32 >
     au < manifest ; 2007 ; Managerial Finance Volume 33 ; 33 >
     au < released ; 2008 ; Managerial Finance Volume 34 ; 34 >
@@ -10186,7 +10186,7 @@
     au < manifest ; 2002 ; Managerial Law Volume 44 ; 44 >
     au < manifest ; 2003 ; Managerial Law Volume 45 ; 45 >
     au < manifest ; 2004 ; Managerial Law Volume 46 ; 46 >
-    au < ready ; 2005 ; Managerial Law Volume 47 ; 47 >
+    au < releasing ; 2005 ; Managerial Law Volume 47 ; 47 >
     au < released ; 2006 ; Managerial Law Volume 48 ; 48 >
     au < released ; 2007 ; Managerial Law Volume 49 ; 49 >
 
@@ -10214,11 +10214,11 @@
     au < manifest ; 1999 ; Managing Service Quality Volume 9 ; 9 >
     au < released ; 2000 ; Managing Service Quality Volume 10 ; 10 >
     au < released ; 2001 ; Managing Service Quality Volume 11 ; 11 >
-    au < ready ; 2002 ; Managing Service Quality Volume 12 ; 12 >
+    au < releasing ; 2002 ; Managing Service Quality Volume 12 ; 12 >
     au < manifest ; 2003 ; Managing Service Quality Volume 13 ; 13 >
     au < manifest ; 2004 ; Managing Service Quality Volume 14 ; 14 >
-    au < ready ; 2005 ; Managing Service Quality Volume 15 ; 15 >
-    au < ready ; 2006 ; Managing Service Quality Volume 16 ; 16 >
+    au < releasing ; 2005 ; Managing Service Quality Volume 15 ; 15 >
+    au < releasing ; 2006 ; Managing Service Quality Volume 16 ; 16 >
     au < released ; 2007 ; Managing Service Quality Volume 17 ; 17 >
     au < released ; 2008 ; Managing Service Quality Volume 18 ; 18 >
     au < released ; 2009 ; Managing Service Quality Volume 19 ; 19 >
@@ -10263,10 +10263,10 @@
     au < manifest ; 2002 ; Marketing Intelligence & Planning Volume 20 ; 20 >
     au < manifest ; 2003 ; Marketing Intelligence & Planning Volume 21 ; 21 >
     au < manifest ; 2004 ; Marketing Intelligence & Planning Volume 22 ; 22 >
-    au < ready ; 2005 ; Marketing Intelligence & Planning Volume 23 ; 23 >
+    au < releasing ; 2005 ; Marketing Intelligence & Planning Volume 23 ; 23 >
     au < released ; 2006 ; Marketing Intelligence & Planning Volume 24 ; 24 >
     au < manifest ; 2007 ; Marketing Intelligence & Planning Volume 25 ; 25 >
-    au < ready ; 2008 ; Marketing Intelligence & Planning Volume 26 ; 26 >
+    au < releasing ; 2008 ; Marketing Intelligence & Planning Volume 26 ; 26 >
     au < released ; 2009 ; Marketing Intelligence & Planning Volume 27 ; 27 >
     au < released ; 2010 ; Marketing Intelligence & Planning Volume 28 ; 28 >
     au < released ; 2011 ; Marketing Intelligence & Planning Volume 29 ; 29 >
@@ -10306,7 +10306,7 @@
     au < manifest ; 2005 ; Measuring Business Excellence Volume 9 ; 9 >
     au < manifest ; 2006 ; Measuring Business Excellence Volume 10 ; 10 >
     au < released ; 2007 ; Measuring Business Excellence Volume 11 ; 11 >
-    au < ready ; 2008 ; Measuring Business Excellence Volume 12 ; 12 >
+    au < releasing ; 2008 ; Measuring Business Excellence Volume 12 ; 12 >
     au < released ; 2009 ; Measuring Business Excellence Volume 13 ; 13 >
     au < released ; 2010 ; Measuring Business Excellence Volume 14 ; 14 >
     au < released ; 2011 ; Measuring Business Excellence Volume 15 ; 15 >
@@ -10336,12 +10336,12 @@
 
     au < released ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 >
     au < manifest ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 >
-    au < ready ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 >
+    au < releasing ; 2002 ; Meditari Accountancy Research Volume 10 ; 10 >
     au < manifest ; 2003 ; Meditari Accountancy Research Volume 11 ; 11 >
     au < manifest ; 2004 ; Meditari Accountancy Research Volume 12 ; 12 >
-    au < ready ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 >
-    au < ready ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 >
-    au < ready ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 >
+    au < releasing ; 2005 ; Meditari Accountancy Research Volume 13 ; 13 >
+    au < releasing ; 2006 ; Meditari Accountancy Research Volume 14 ; 14 >
+    au < releasing ; 2007 ; Meditari Accountancy Research Volume 15 ; 15 >
     au < manifest ; 2008 ; Meditari Accountancy Research Volume 16 ; 16 >
     au < released ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 >
     au < released ; 2010 ; Meditari Accountancy Research Volume 18 ; 18 >
@@ -10358,7 +10358,7 @@
     au < doNotProcess ; 2015 ; Meditari Accountancy Research Volume 23 ; 23 >
     au < doNotProcess ; 2016 ; Meditari Accountancy Research Volume 24 ; 24 >
     au < doNotProcess ; 2017 ; Meditari Accountancy Research Volume 25 ; 25 >
-    au < ready ; 2018 ; Meditari Accountancy Research Volume 26 ; 26 >
+    au < releasing ; 2018 ; Meditari Accountancy Research Volume 26 ; 26 >
     au < manifest ; 2019 ; Meditari Accountancy Research Volume 27 ; 27 >
     au < released ; 2020 ; Meditari Accountancy Research Volume 28 ; 28 >
     au < manifest ; 2021 ; Meditari Accountancy Research Volume 29 ; 29 >
@@ -10387,7 +10387,7 @@
     au < manifest ; 2002 ; A Life in the Day Volume 6 ; 6 >
     au < manifest ; 2003 ; A Life in the Day Volume 7 ; 7 >
     au < manifest ; 2004 ; A Life in the Day Volume 8 ; 8 >
-    au < ready ; 2005 ; A Life in the Day Volume 9 ; 9 >
+    au < releasing ; 2005 ; A Life in the Day Volume 9 ; 9 >
     au < manifest ; 2006 ; A Life in the Day Volume 10 ; 10 >
     au < manifest ; 2007 ; A Life in the Day Volume 11 ; 11 >
     au < manifest ; 2008 ; A Life in the Day Volume 12 ; 12 >
@@ -10408,7 +10408,7 @@
     # formerly A Life in the Day
     #continues = 1366-6282
 
-    au < ready ; 2010 ; Mental Health and Social Inclusion Volume 14 ; 14 >
+    au < releasing ; 2010 ; Mental Health and Social Inclusion Volume 14 ; 14 >
     au < released ; 2011 ; Mental Health and Social Inclusion Volume 15 ; 15 >
     au < released ; 2012 ; Mental Health and Social Inclusion Volume 16 ; 16 >
     au < doNotProcess ; 2013 ; Mental Health and Social Inclusion Volume 17 ; 17 >
@@ -10416,7 +10416,7 @@
     au < doNotProcess ; 2015 ; Mental Health and Social Inclusion Volume 19 ; 19 >
     au < doNotProcess ; 2016 ; Mental Health and Social Inclusion Volume 20 ; 20 >
     au < doNotProcess ; 2017 ; Mental Health and Social Inclusion Volume 21 ; 21 >
-    au < ready ; 2018 ; Mental Health and Social Inclusion Volume 22 ; 22 >
+    au < releasing ; 2018 ; Mental Health and Social Inclusion Volume 22 ; 22 >
     au < released ; 2019 ; Mental Health and Social Inclusion Volume 23 ; 23 >
     au < released ; 2020 ; Mental Health and Social Inclusion Volume 24 ; 24 >
     au < manifest ; 2021 ; Mental Health and Social Inclusion Volume 25 ; 25 >
@@ -10445,19 +10445,19 @@
     au < manifest ; 2003 ; Mental Health Review Journal: Research, Policy and Practice Volume 8 ; 8 >
     au < manifest ; 2004 ; Mental Health Review Journal: Research, Policy and Practice Volume 9 ; 9 >
     au < manifest ; 2005 ; Mental Health Review Journal: Research, Policy and Practice Volume 10 ; 10 >
-    au < ready ; 2006 ; Mental Health Review Journal: Research, Policy and Practice Volume 11 ; 11 >
-    au < ready ; 2007 ; Mental Health Review Journal: Research, Policy and Practice Volume 12 ; 12 >
+    au < releasing ; 2006 ; Mental Health Review Journal: Research, Policy and Practice Volume 11 ; 11 >
+    au < releasing ; 2007 ; Mental Health Review Journal: Research, Policy and Practice Volume 12 ; 12 >
     au < released ; 2008 ; Mental Health Review Journal: Research, Policy and Practice Volume 13 ; 13 >
     au < released ; 2009 ; Mental Health Review Journal: Research, Policy and Practice Volume 14 ; 14 >
-    au < ready ; 2010 ; Mental Health Review Journal: Research, Policy and Practice Volume 15 ; 15 >
+    au < releasing ; 2010 ; Mental Health Review Journal: Research, Policy and Practice Volume 15 ; 15 >
     au < released ; 2011 ; Mental Health Review Journal: Research, Policy and Practice Volume 16 ; 16 >
-    au < ready ; 2012 ; Mental Health Review Journal: Research, Policy and Practice Volume 17 ; 17 >
+    au < releasing ; 2012 ; Mental Health Review Journal: Research, Policy and Practice Volume 17 ; 17 >
     au < doNotProcess ; 2013 ; Mental Health Review Journal: Research, Policy and Practice Volume 18 ; 18 >
     au < doNotProcess ; 2014 ; Mental Health Review Journal: Research, Policy and Practice Volume 19 ; 19 >
     au < doNotProcess ; 2015 ; Mental Health Review Journal: Research, Policy and Practice Volume 20 ; 20 >
     au < doNotProcess ; 2016 ; Mental Health Review Journal: Research, Policy and Practice Volume 21 ; 21 >
     au < doNotProcess ; 2017 ; Mental Health Review Journal: Research, Policy and Practice Volume 22 ; 22 >
-    au < ready ; 2018 ; Mental Health Review Journal: Research, Policy and Practice Volume 23 ; 23 >
+    au < releasing ; 2018 ; Mental Health Review Journal: Research, Policy and Practice Volume 23 ; 23 >
     au < released ; 2019 ; Mental Health Review Journal: Research, Policy and Practice Volume 24 ; 24 >
     au < released ; 2020 ; Mental Health Review Journal: Research, Policy and Practice Volume 25 ; 25 >
     au < manifest ; 2021 ; Mental Health Review Journal: Research, Policy and Practice Volume 26 ; 26 >
@@ -10497,14 +10497,14 @@
     au < manifest ; 2002 ; Microelectronics International Volume 19 ; 19 >
     au < manifest ; 2003 ; Microelectronics International Volume 20 ; 20 >
     au < manifest ; 2004 ; Microelectronics International Volume 21 ; 21 >
-    au < ready ; 2005 ; Microelectronics International Volume 22 ; 22 >
-    au < ready ; 2006 ; Microelectronics International Volume 23 ; 23 >
+    au < releasing ; 2005 ; Microelectronics International Volume 22 ; 22 >
+    au < releasing ; 2006 ; Microelectronics International Volume 23 ; 23 >
     au < released ; 2007 ; Microelectronics International Volume 24 ; 24 >
-    au < ready ; 2008 ; Microelectronics International Volume 25 ; 25 >
+    au < releasing ; 2008 ; Microelectronics International Volume 25 ; 25 >
     au < released ; 2009 ; Microelectronics International Volume 26 ; 26 >
     au < released ; 2010 ; Microelectronics International Volume 27 ; 27 >
     au < released ; 2011 ; Microelectronics International Volume 28 ; 28 >
-    au < ready ; 2012 ; Microelectronics International Volume 29 ; 29 >
+    au < releasing ; 2012 ; Microelectronics International Volume 29 ; 29 >
     au < doNotProcess ; 2013 ; Microelectronics International Volume 30 ; 30 >
     au < doNotProcess ; 2014 ; Microelectronics International Volume 31 ; 31 >
     au < doNotProcess ; 2015 ; Microelectronics International Volume 32 ; 32 >
@@ -10530,7 +10530,7 @@
     comment[journal_id] = metj
 
     au < manifest ; 2007 ; Multicultural Education & Technology Journal Volume 1 ; 1 >
-    au < ready ; 2008 ; Multicultural Education & Technology Journal Volume 2 ; 2 >
+    au < releasing ; 2008 ; Multicultural Education & Technology Journal Volume 2 ; 2 >
     au < released ; 2009 ; Multicultural Education & Technology Journal Volume 3 ; 3 >
     au < released ; 2010 ; Multicultural Education & Technology Journal Volume 4 ; 4 >
     au < released ; 2011 ; Multicultural Education & Technology Journal Volume 5 ; 5 >
@@ -10621,7 +10621,7 @@
     au < doNotProcess ; 2015 ; Nankai Business Review International Volume 6 ; 6 >
     au < doNotProcess ; 2016 ; Nankai Business Review International Volume 7 ; 7 >
     au < doNotProcess ; 2017 ; Nankai Business Review International Volume 8 ; 8 >
-    au < ready ; 2018 ; Nankai Business Review International Volume 9 ; 9 >
+    au < releasing ; 2018 ; Nankai Business Review International Volume 9 ; 9 >
     au < released ; 2019 ; Nankai Business Review International Volume 10 ; 10 >
     au < released ; 2020 ; Nankai Business Review International Volume 11 ; 11 >
     au < manifest ; 2021 ; Nankai Business Review International Volume 12 ; 12 >
@@ -10748,7 +10748,7 @@
     au < manifest ; 2004 ; New Library World Volume 105 ; 105 >
     au < manifest ; 2005 ; New Library World Volume 106 ; 106 >
     au < released ; 2006 ; New Library World Volume 107 ; 107 >
-    au < ready ; 2007 ; New Library World Volume 108 ; 108 >
+    au < releasing ; 2007 ; New Library World Volume 108 ; 108 >
     au < released ; 2008 ; New Library World Volume 109 ; 109 >
     au < released ; 2009 ; New Library World Volume 110 ; 110 >
     au < released ; 2010 ; New Library World Volume 111 ; 111 >
@@ -10774,10 +10774,10 @@
     #continues = 0307-4803
 
     au < doNotProcess ; 2017 ; Information and Learning Science Volume 118 ; 118 >
-    au < ready ; 2018 ; Information and Learning Science Volume 119 ; 119 >
+    au < releasing ; 2018 ; Information and Learning Science Volume 119 ; 119 >
     au < released ; 2019 ; Information and Learning Science Volume 120 ; 120 >
     au < released ; 2020 ; Information and Learning Science Volume 121 ; 121 >
-    au < ready ; 2021 ; Information and Learning Science Volume 122 ; 122 >
+    au < releasing ; 2021 ; Information and Learning Science Volume 122 ; 122 >
     au < expected ; 2022 ; Information and Learning Science Volume 123 ; 123 >
 
   }
@@ -10829,10 +10829,10 @@
     au < manifest ; 2002 ; Nutrition & Food Science Volume 32 ; 32 >
     au < manifest ; 2003 ; Nutrition & Food Science Volume 33 ; 33 >
     au < manifest ; 2004 ; Nutrition & Food Science Volume 34 ; 34 >
-    au < ready ; 2005 ; Nutrition & Food Science Volume 35 ; 35 >
+    au < releasing ; 2005 ; Nutrition & Food Science Volume 35 ; 35 >
     au < manifest ; 2006 ; Nutrition & Food Science Volume 36 ; 36 >
-    au < ready ; 2007 ; Nutrition & Food Science Volume 37 ; 37 >
-    au < ready ; 2008 ; Nutrition & Food Science Volume 38 ; 38 >
+    au < releasing ; 2007 ; Nutrition & Food Science Volume 37 ; 37 >
+    au < releasing ; 2008 ; Nutrition & Food Science Volume 38 ; 38 >
     au < manifest ; 2009 ; Nutrition & Food Science Volume 39 ; 39 >
     au < released ; 2010 ; Nutrition & Food Science Volume 40 ; 40 >
     au < released ; 2011 ; Nutrition & Food Science Volume 41 ; 41 >
@@ -10897,12 +10897,12 @@
     au < manifest ; 2003 ; OCLC Systems & Services Volume 19 ; 19 >
     au < manifest ; 2004 ; OCLC Systems & Services Volume 20 ; 20 >
     au < manifest ; 2005 ; OCLC Systems & Services Volume 21 ; 21 >
-    au < ready ; 2006 ; OCLC Systems & Services Volume 22 ; 22 >
+    au < releasing ; 2006 ; OCLC Systems & Services Volume 22 ; 22 >
     au < released ; 2007 ; OCLC Systems & Services Volume 23 ; 23 >
-    au < ready ; 2008 ; OCLC Systems & Services Volume 24 ; 24 >
+    au < releasing ; 2008 ; OCLC Systems & Services Volume 24 ; 24 >
     au < released ; 2009 ; OCLC Systems & Services Volume 25 ; 25 >
     au < released ; 2010 ; OCLC Systems & Services Volume 26 ; 26 >
-    au < ready ; 2011 ; OCLC Systems & Services Volume 27 ; 27 >
+    au < releasing ; 2011 ; OCLC Systems & Services Volume 27 ; 27 >
     au < released ; 2012 ; OCLC Systems & Services Volume 28 ; 28 >
     au < doNotProcess ; 2013 ; OCLC Systems & Services Volume 29 ; 29 >
     au < doNotProcess ; 2014 ; OCLC Systems & Services Volume 30 ; 30 >
@@ -10923,7 +10923,7 @@
 
     au < doNotProcess ; 2016 ; Digital Library Perspectives Volume 32 ; 32 >
     au < doNotProcess ; 2017 ; Digital Library Perspectives Volume 33 ; 33 >
-    au < ready ; 2018 ; Digital Library Perspectives Volume 34 ; 34 >
+    au < releasing ; 2018 ; Digital Library Perspectives Volume 34 ; 34 >
     au < released ; 2019 ; Digital Library Perspectives Volume 35 ; 35 >
     au < released ; 2020 ; Digital Library Perspectives Volume 36 ; 36 >
     au < manifest ; 2021 ; Digital Library Perspectives Volume 37 ; 37 >
@@ -10948,7 +10948,7 @@
     au < manifest ; 2002 ; On The Horizon Volume 10 ; 10 >
     au < manifest ; 2003 ; On The Horizon Volume 11 ; 11 >
     au < manifest ; 2004 ; On The Horizon Volume 12 ; 12 >
-    au < ready ; 2005 ; On The Horizon Volume 13 ; 13 >
+    au < releasing ; 2005 ; On The Horizon Volume 13 ; 13 >
     au < released ; 2006 ; On The Horizon Volume 14 ; 14 >
     au < manifest ; 2007 ; On The Horizon Volume 15 ; 15 >
     au < released ; 2008 ; On The Horizon Volume 16 ; 16 >
@@ -11032,15 +11032,15 @@
     param[journal_issn] = 1468-4527
     comment[journal_id] = oir
 
-    au < ready ; 2000 ; Online Information Review Volume 24 ; 24 >
+    au < releasing ; 2000 ; Online Information Review Volume 24 ; 24 >
     au < manifest ; 2001 ; Online Information Review Volume 25 ; 25 >
     au < manifest ; 2002 ; Online Information Review Volume 26 ; 26 >
     au < manifest ; 2003 ; Online Information Review Volume 27 ; 27 >
     au < manifest ; 2004 ; Online Information Review Volume 28 ; 28 >
     au < manifest ; 2005 ; Online Information Review Volume 29 ; 29 >
     au < manifest ; 2006 ; Online Information Review Volume 30 ; 30 >
-    au < ready ; 2007 ; Online Information Review Volume 31 ; 31 >
-    au < ready ; 2008 ; Online Information Review Volume 32 ; 32 >
+    au < releasing ; 2007 ; Online Information Review Volume 31 ; 31 >
+    au < releasing ; 2008 ; Online Information Review Volume 32 ; 32 >
     au < released ; 2009 ; Online Information Review Volume 33 ; 33 >
     au < released ; 2010 ; Online Information Review Volume 34 ; 34 >
     au < released ; 2011 ; Online Information Review Volume 35 ; 35 >
@@ -11198,7 +11198,7 @@
     au < released ; 2006 ; Personnel Review Volume 35 ; 35 >
     au < manifest ; 2007 ; Personnel Review Volume 36 ; 36 >
     au < released ; 2008 ; Personnel Review Volume 37 ; 37 >
-    au < ready ; 2009 ; Personnel Review Volume 38 ; 38 >
+    au < releasing ; 2009 ; Personnel Review Volume 38 ; 38 >
     au < released ; 2010 ; Personnel Review Volume 39 ; 39 >
     au < released ; 2011 ; Personnel Review Volume 40 ; 40 >
     au < released ; 2012 ; Personnel Review Volume 41 ; 41 >
@@ -11256,15 +11256,15 @@
     au < manifest ; 1999 ; Pigment & Resin Technology Volume 28 ; 28 >
     au < released ; 2000 ; Pigment & Resin Technology Volume 29 ; 29 >
     au < manifest ; 2001 ; Pigment & Resin Technology Volume 30 ; 30 >
-    au < ready ; 2002 ; Pigment & Resin Technology Volume 31 ; 31 >
+    au < releasing ; 2002 ; Pigment & Resin Technology Volume 31 ; 31 >
     au < manifest ; 2003 ; Pigment & Resin Technology Volume 32 ; 32 >
     au < manifest ; 2004 ; Pigment & Resin Technology Volume 33 ; 33 >
-    au < ready ; 2005 ; Pigment & Resin Technology Volume 34 ; 34 >
+    au < releasing ; 2005 ; Pigment & Resin Technology Volume 34 ; 34 >
     au < manifest ; 2006 ; Pigment & Resin Technology Volume 35 ; 35 >
     au < manifest ; 2007 ; Pigment & Resin Technology Volume 36 ; 36 >
-    au < ready ; 2008 ; Pigment & Resin Technology Volume 37 ; 37 >
-    au < ready ; 2009 ; Pigment & Resin Technology Volume 38 ; 38 >
-    au < ready ; 2010 ; Pigment & Resin Technology Volume 39 ; 39 >
+    au < releasing ; 2008 ; Pigment & Resin Technology Volume 37 ; 37 >
+    au < releasing ; 2009 ; Pigment & Resin Technology Volume 38 ; 38 >
+    au < releasing ; 2010 ; Pigment & Resin Technology Volume 39 ; 39 >
     au < released ; 2011 ; Pigment & Resin Technology Volume 40 ; 40 >
     au < released ; 2012 ; Pigment & Resin Technology Volume 41 ; 41 >
     au < doNotProcess ; 2013 ; Pigment & Resin Technology Volume 42 ; 42 >
@@ -11317,9 +11317,9 @@
     au < manifest ; 2002 ; Policing: An International Journal of Police Strategies & Management Volume 25 ; 25 >
     au < manifest ; 2003 ; Policing: An International Journal of Police Strategies & Management Volume 26 ; 26 >
     au < manifest ; 2004 ; Policing: An International Journal of Police Strategies & Management Volume 27 ; 27 >
-    au < ready ; 2005 ; Policing: An International Journal of Police Strategies & Management Volume 28 ; 28 >
-    au < ready ; 2006 ; Policing: An International Journal of Police Strategies & Management Volume 29 ; 29 >
-    au < ready ; 2007 ; Policing: An International Journal of Police Strategies & Management Volume 30 ; 30 >
+    au < releasing ; 2005 ; Policing: An International Journal of Police Strategies & Management Volume 28 ; 28 >
+    au < releasing ; 2006 ; Policing: An International Journal of Police Strategies & Management Volume 29 ; 29 >
+    au < releasing ; 2007 ; Policing: An International Journal of Police Strategies & Management Volume 30 ; 30 >
     au < released ; 2008 ; Policing: An International Journal of Police Strategies & Management Volume 31 ; 31 >
     au < released ; 2009 ; Policing: An International Journal of Police Strategies & Management Volume 32 ; 32 >
     au < released ; 2010 ; Policing: An International Journal of Police Strategies & Management Volume 33 ; 33 >
@@ -11405,10 +11405,10 @@
     au < manifest ; 2002 ; Program: Electronic Library and Information Systems Volume 36 ; 36 >
     au < manifest ; 2003 ; Program: Electronic Library and Information Systems Volume 37 ; 37 >
     au < manifest ; 2004 ; Program: Electronic Library and Information Systems Volume 38 ; 38 >
-    au < ready ; 2005 ; Program: Electronic Library and Information Systems Volume 39 ; 39 >
+    au < releasing ; 2005 ; Program: Electronic Library and Information Systems Volume 39 ; 39 >
     au < released ; 2006 ; Program: Electronic Library and Information Systems Volume 40 ; 40 >
     au < released ; 2007 ; Program: Electronic Library and Information Systems Volume 41 ; 41 >
-    au < ready ; 2008 ; Program: Electronic Library and Information Systems Volume 42 ; 42 >
+    au < releasing ; 2008 ; Program: Electronic Library and Information Systems Volume 42 ; 42 >
     au < released ; 2009 ; Program: Electronic Library and Information Systems Volume 43 ; 43 >
     au < released ; 2010 ; Program: Electronic Library and Information Systems Volume 44 ; 44 >
     au < released ; 2011 ; Program: Electronic Library and Information Systems Volume 45 ; 45 >
@@ -11473,8 +11473,8 @@
     au < manifest ; 2002 ; Property Management Volume 20 ; 20 >
     au < manifest ; 2003 ; Property Management Volume 21 ; 21 >
     au < manifest ; 2004 ; Property Management Volume 22 ; 22 >
-    au < ready ; 2005 ; Property Management Volume 23 ; 23 >
-    au < ready ; 2006 ; Property Management Volume 24 ; 24 >
+    au < releasing ; 2005 ; Property Management Volume 23 ; 23 >
+    au < releasing ; 2006 ; Property Management Volume 24 ; 24 >
     au < released ; 2007 ; Property Management Volume 25 ; 25 >
     au < released ; 2008 ; Property Management Volume 26 ; 26 >
     au < released ; 2009 ; Property Management Volume 27 ; 27 >
@@ -11546,8 +11546,8 @@
 
     au < manifest ; 2004 ; Qualitative Research in Accounting & Management Volume 1 ; 1 >
     au < manifest ; 2005 ; Qualitative Research in Accounting & Management Volume 2 ; 2 >
-    au < ready ; 2006 ; Qualitative Research in Accounting & Management Volume 3 ; 3 >
-    au < ready ; 2007 ; Qualitative Research in Accounting & Management Volume 4 ; 4 >
+    au < releasing ; 2006 ; Qualitative Research in Accounting & Management Volume 3 ; 3 >
+    au < releasing ; 2007 ; Qualitative Research in Accounting & Management Volume 4 ; 4 >
     au < released ; 2008 ; Qualitative Research in Accounting & Management Volume 5 ; 5 >
     au < released ; 2009 ; Qualitative Research in Accounting & Management Volume 6 ; 6 >
     au < released ; 2010 ; Qualitative Research in Accounting & Management Volume 7 ; 7 >
@@ -11673,10 +11673,10 @@
     au < manifest ; 1999 ; Quality Assurance in Education Volume 7 ; 7 >
     au < released ; 2000 ; Quality Assurance in Education Volume 8 ; 8 >
     au < released ; 2001 ; Quality Assurance in Education Volume 9 ; 9 >
-    au < ready ; 2002 ; Quality Assurance in Education Volume 10 ; 10 >
+    au < releasing ; 2002 ; Quality Assurance in Education Volume 10 ; 10 >
     au < manifest ; 2003 ; Quality Assurance in Education Volume 11 ; 11 >
     au < manifest ; 2004 ; Quality Assurance in Education Volume 12 ; 12 >
-    au < ready ; 2005 ; Quality Assurance in Education Volume 13 ; 13 >
+    au < releasing ; 2005 ; Quality Assurance in Education Volume 13 ; 13 >
     au < released ; 2006 ; Quality Assurance in Education Volume 14 ; 14 >
     au < released ; 2007 ; Quality Assurance in Education Volume 15 ; 15 >
     au < released ; 2008 ; Quality Assurance in Education Volume 16 ; 16 >
@@ -11715,7 +11715,7 @@
     au < manifest ; 2004 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 5 ; 5 >
     au < manifest ; 2005 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 6 ; 6 >
     au < manifest ; 2006 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 7 ; 7 >
-    au < ready ; 2007 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 8 ; 8 >
+    au < releasing ; 2007 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 8 ; 8 >
     au < released ; 2008 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 9 ; 9 >
     au < released ; 2009 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 10 ; 10 >
     au < released ; 2010 ; Quality in Ageing and Older Adults: Promoting excellence in services through research, policy and practice Volume 11 ; 11 >
@@ -11755,7 +11755,7 @@
     au < manifest ; 2002 ; Rapid Prototyping Journal Volume 8 ; 8 >
     au < manifest ; 2003 ; Rapid Prototyping Journal Volume 9 ; 9 >
     au < manifest ; 2004 ; Rapid Prototyping Journal Volume 10 ; 10 >
-    au < ready ; 2005 ; Rapid Prototyping Journal Volume 11 ; 11 >
+    au < releasing ; 2005 ; Rapid Prototyping Journal Volume 11 ; 11 >
     au < released ; 2006 ; Rapid Prototyping Journal Volume 12 ; 12 >
     au < released ; 2007 ; Rapid Prototyping Journal Volume 13 ; 13 >
     au < released ; 2008 ; Rapid Prototyping Journal Volume 14 ; 14 >
@@ -11803,7 +11803,7 @@
     au < manifest ; 2004 ; Records Management Journal Volume 14 ; 14 >
     au < manifest ; 2005 ; Records Management Journal Volume 15 ; 15 >
     au < manifest ; 2006 ; Records Management Journal Volume 16 ; 16 >
-    au < ready ; 2007 ; Records Management Journal Volume 17 ; 17 >
+    au < releasing ; 2007 ; Records Management Journal Volume 17 ; 17 >
     au < released ; 2008 ; Records Management Journal Volume 18 ; 18 >
     au < released ; 2009 ; Records Management Journal Volume 19 ; 19 >
     au < released ; 2010 ; Records Management Journal Volume 20 ; 20 >
@@ -11902,7 +11902,7 @@
     au < manifest ; 2002 ; Reference Services Review Volume 30 ; 30 >
     au < manifest ; 2003 ; Reference Services Review Volume 31 ; 31 >
     au < manifest ; 2004 ; Reference Services Review Volume 32 ; 32 >
-    au < ready ; 2005 ; Reference Services Review Volume 33 ; 33 >
+    au < releasing ; 2005 ; Reference Services Review Volume 33 ; 33 >
     au < released ; 2006 ; Reference Services Review Volume 34 ; 34 >
     au < manifest ; 2007 ; Reference Services Review Volume 35 ; 35 >
     au < released ; 2008 ; Reference Services Review Volume 36 ; 36 >
@@ -12059,10 +12059,10 @@
     au < manifest ; 2002 ; Sensor Review Volume 22 ; 22 >
     au < manifest ; 2003 ; Sensor Review Volume 23 ; 23 >
     au < manifest ; 2004 ; Sensor Review Volume 24 ; 24 >
-    au < ready ; 2005 ; Sensor Review Volume 25 ; 25 >
-    au < ready ; 2006 ; Sensor Review Volume 26 ; 26 >
+    au < releasing ; 2005 ; Sensor Review Volume 25 ; 25 >
+    au < releasing ; 2006 ; Sensor Review Volume 26 ; 26 >
     au < released ; 2007 ; Sensor Review Volume 27 ; 27 >
-    au < ready ; 2008 ; Sensor Review Volume 28 ; 28 >
+    au < releasing ; 2008 ; Sensor Review Volume 28 ; 28 >
     au < manifest ; 2009 ; Sensor Review Volume 29 ; 29 >
     au < released ; 2010 ; Sensor Review Volume 30 ; 30 >
     au < released ; 2011 ; Sensor Review Volume 31 ; 31 >
@@ -12136,8 +12136,8 @@
 
     au < manifest ; 2005 ; Social Enterprise Journal Volume 1 ; 1 >
     au < manifest ; 2006 ; Social Enterprise Journal Volume 2 ; 2 >
-    au < ready ; 2007 ; Social Enterprise Journal Volume 3 ; 3 >
-    au < ready ; 2008 ; Social Enterprise Journal Volume 4 ; 4 >
+    au < releasing ; 2007 ; Social Enterprise Journal Volume 3 ; 3 >
+    au < releasing ; 2008 ; Social Enterprise Journal Volume 4 ; 4 >
     au < released ; 2009 ; Social Enterprise Journal Volume 5 ; 5 >
     au < released ; 2010 ; Social Enterprise Journal Volume 6 ; 6 >
     au < released ; 2011 ; Social Enterprise Journal Volume 7 ; 7 >
@@ -12242,11 +12242,11 @@
     au < manifest ; 1999 ; Soldering & Surface Mount Technology Volume 11 ; 11 >
     au < released ; 2000 ; Soldering & Surface Mount Technology Volume 12 ; 12 >
     au < manifest ; 2001 ; Soldering & Surface Mount Technology Volume 13 ; 13 >
-    au < ready ; 2002 ; Soldering & Surface Mount Technology Volume 14 ; 14 >
+    au < releasing ; 2002 ; Soldering & Surface Mount Technology Volume 14 ; 14 >
     au < manifest ; 2003 ; Soldering & Surface Mount Technology Volume 15 ; 15 >
     au < manifest ; 2004 ; Soldering & Surface Mount Technology Volume 16 ; 16 >
     au < manifest ; 2005 ; Soldering & Surface Mount Technology Volume 17 ; 17 >
-    au < ready ; 2006 ; Soldering & Surface Mount Technology Volume 18 ; 18 >
+    au < releasing ; 2006 ; Soldering & Surface Mount Technology Volume 18 ; 18 >
     au < manifest ; 2007 ; Soldering & Surface Mount Technology Volume 19 ; 19 >
     au < released ; 2008 ; Soldering & Surface Mount Technology Volume 20 ; 20 >
     au < manifest ; 2009 ; Soldering & Surface Mount Technology Volume 21 ; 21 >
@@ -12345,8 +12345,8 @@
     au < manifest ; 2003 ; Strategic Direction Volume 19 ; 19 >
     au < manifest ; 2004 ; Strategic Direction Volume 20 ; 20 >
     au < manifest ; 2005 ; Strategic Direction Volume 21 ; 21 >
-    au < ready ; 2006 ; Strategic Direction Volume 22 ; 22 >
-    au < ready ; 2007 ; Strategic Direction Volume 23 ; 23 >
+    au < releasing ; 2006 ; Strategic Direction Volume 22 ; 22 >
+    au < releasing ; 2007 ; Strategic Direction Volume 23 ; 23 >
     au < released ; 2008 ; Strategic Direction Volume 24 ; 24 >
     au < manifest ; 2009 ; Strategic Direction Volume 25 ; 25 >
     au < released ; 2010 ; Strategic Direction Volume 26 ; 26 >
@@ -12379,8 +12379,8 @@
 
     au < released ; 2004-2005 ; Strategic HR Review Volume 4 ; 4 >
     au < manifest ; 2006 ; Strategic HR Review Volume 5 ; 5 >
-    au < ready ; 2007 ; Strategic HR Review Volume 6 ; 6 >
-    au < ready ; 2008 ; Strategic HR Review Volume 7 ; 7 >
+    au < releasing ; 2007 ; Strategic HR Review Volume 6 ; 6 >
+    au < releasing ; 2008 ; Strategic HR Review Volume 7 ; 7 >
     au < released ; 2009 ; Strategic HR Review Volume 8 ; 8 >
     au < released ; 2010 ; Strategic HR Review Volume 9 ; 9 >
     au < released ; 2011 ; Strategic HR Review Volume 10 ; 10 >
@@ -12411,7 +12411,7 @@
     comment[journal_id] = so
     #continued_by = 2398-5364
 
-    au < ready ; 2008 ; Strategic Outsourcing: An international Journal Volume 1 ; 1 >
+    au < releasing ; 2008 ; Strategic Outsourcing: An international Journal Volume 1 ; 1 >
     au < released ; 2009 ; Strategic Outsourcing: An international Journal Volume 2 ; 2 >
     au < released ; 2010 ; Strategic Outsourcing: An international Journal Volume 3 ; 3 >
     au < released ; 2011 ; Strategic Outsourcing: An international Journal Volume 4 ; 4 >
@@ -12502,8 +12502,8 @@
     au < manifest ; 2004 ; Strategy & Leadership Volume 32 ; 32 >
     au < manifest ; 2005 ; Strategy & Leadership Volume 33 ; 33 >
     au < released ; 2006 ; Strategy & Leadership Volume 34 ; 34 >
-    au < ready ; 2007 ; Strategy & Leadership Volume 35 ; 35 >
-    au < ready ; 2008 ; Strategy & Leadership Volume 36 ; 36 >
+    au < releasing ; 2007 ; Strategy & Leadership Volume 35 ; 35 >
+    au < releasing ; 2008 ; Strategy & Leadership Volume 36 ; 36 >
     au < released ; 2009 ; Strategy & Leadership Volume 37 ; 37 >
     au < released ; 2010 ; Strategy & Leadership Volume 38 ; 38 >
     au < released ; 2011 ; Strategy & Leadership Volume 39 ; 39 >
@@ -12555,7 +12555,7 @@
     au < manifest ; 2002 ; Structural Survey Volume 20 ; 20 >
     au < manifest ; 2003 ; Structural Survey Volume 21 ; 21 >
     au < manifest ; 2004 ; Structural Survey Volume 22 ; 22 >
-    au < ready ; 2005 ; Structural Survey Volume 23 ; 23 >
+    au < releasing ; 2005 ; Structural Survey Volume 23 ; 23 >
     au < released ; 2006 ; Structural Survey Volume 24 ; 24 >
     au < released ; 2007 ; Structural Survey Volume 25 ; 25 >
     au < released ; 2008 ; Structural Survey Volume 26 ; 26 >
@@ -12665,7 +12665,7 @@
     au < manifest ; 2004 ; Supply Chain Management: An International Journal Volume 9 ; 9 >
     au < manifest ; 2005 ; Supply Chain Management: An International Journal Volume 10 ; 10 >
     au < released ; 2006 ; Supply Chain Management: An International Journal Volume 11 ; 11 >
-    au < ready ; 2007 ; Supply Chain Management: An International Journal Volume 12 ; 12 >
+    au < releasing ; 2007 ; Supply Chain Management: An International Journal Volume 12 ; 12 >
     au < released ; 2008 ; Supply Chain Management: An International Journal Volume 13 ; 13 >
     au < released ; 2009 ; Supply Chain Management: An International Journal Volume 14 ; 14 >
     au < released ; 2010 ; Supply Chain Management: An International Journal Volume 15 ; 15 >
@@ -12733,7 +12733,7 @@
     au < manifest ; 2002 ; Team Performance Management Volume 8 ; 8 >
     au < manifest ; 2003 ; Team Performance Management Volume 9 ; 9 >
     au < manifest ; 2004 ; Team Performance Management Volume 10 ; 10 >
-    au < ready ; 2005 ; Team Performance Management Volume 11 ; 11 >
+    au < releasing ; 2005 ; Team Performance Management Volume 11 ; 11 >
     au < released ; 2006 ; Team Performance Management Volume 12 ; 12 >
     au < released ; 2007 ; Team Performance Management Volume 13 ; 13 >
     au < released ; 2008 ; Team Performance Management Volume 14 ; 14 >
@@ -12775,12 +12775,12 @@
     au < manifest ; 2002 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 7 ; 7 >
     au < manifest ; 2003 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 8 ; 8 >
     au < manifest ; 2004 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 9 ; 9 >
-    au < ready ; 2005 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 10 ; 10 >
+    au < releasing ; 2005 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 10 ; 10 >
     au < released ; 2006 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 11 ; 11 >
     au < released ; 2007 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 12 ; 12 >
     au < released ; 2008 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 13 ; 13 >
     au < released ; 2009 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 14 ; 14 >
-    au < ready ; 2010 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 15 ; 15 >
+    au < releasing ; 2010 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 15 ; 15 >
     au < released ; 2011 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 16 ; 16 >
     au < released ; 2012 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 17 ; 17 >
     au < doNotProcess ; 2013 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 18 ; 18 >
@@ -12791,7 +12791,7 @@
     au < released ; 2018 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 23 ; 23 >
     au < released ; 2019 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 24 ; 24 >
     au < released ; 2020 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 25 ; 25 >
-    au < ready ; 2021 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 26 ; 26 >
+    au < releasing ; 2021 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 26 ; 26 >
     au < expected ; 2022 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 27 ; 27 >
 
   }
@@ -12896,7 +12896,7 @@
     au < manifest ; 2004 ; Tourism Review Volume 59 ; 59 >
     au < manifest ; 2005 ; Tourism Review Volume 60 ; 60 >
     au < manifest ; 2006 ; Tourism Review Volume 61 ; 61 >
-    au < ready ; 2007 ; Tourism Review Volume 62 ; 62 >
+    au < releasing ; 2007 ; Tourism Review Volume 62 ; 62 >
     au < manifest ; 2008 ; Tourism Review Volume 63 ; 63 >
     au < released ; 2009 ; Tourism Review Volume 64 ; 64 >
     au < released ; 2010 ; Tourism Review Volume 65 ; 65 >
@@ -12928,7 +12928,7 @@
     # online from 2008
     comment[continues] = 0954-478X
 
-    au < ready ; 2008 ; The TQM Journal Volume 20 ; 20 >
+    au < releasing ; 2008 ; The TQM Journal Volume 20 ; 20 >
     au < released ; 2009 ; The TQM Journal Volume 21 ; 21 >
     au < released ; 2010 ; The TQM Journal Volume 22 ; 22 >
     au < released ; 2011 ; The TQM Journal Volume 23 ; 23 >
@@ -12971,11 +12971,11 @@
     au < manifest ; 1999 ; The TQM Magazine Volume 11 ; 11 >
     au < released ; 2000 ; The TQM Magazine Volume 12 ; 12 >
     au < released ; 2001 ; The TQM Magazine Volume 13 ; 13 >
-    au < ready ; 2002 ; The TQM Magazine Volume 14 ; 14 >
+    au < releasing ; 2002 ; The TQM Magazine Volume 14 ; 14 >
     au < manifest ; 2003 ; The TQM Magazine Volume 15 ; 15 >
     au < manifest ; 2004 ; The TQM Magazine Volume 16 ; 16 >
     au < manifest ; 2005 ; The TQM Magazine Volume 17 ; 17 >
-    au < ready ; 2006 ; The TQM Magazine Volume 18 ; 18 >
+    au < releasing ; 2006 ; The TQM Magazine Volume 18 ; 18 >
     au < manifest ; 2007 ; The TQM Magazine Volume 19 ; 19 >
 
   }
@@ -13089,11 +13089,11 @@
     au < manifest ; 1999 ; VINE Volume 29 ; 29 >
     au < released ; 2000 ; VINE Volume 30 ; 30 >
     au < released ; 2001 ; VINE Volume 31 ; 31 >
-    au < ready ; 2002 ; VINE Volume 32 ; 32 >
+    au < releasing ; 2002 ; VINE Volume 32 ; 32 >
     au < manifest ; 2003 ; VINE Volume 33 ; 33 >
     au < manifest ; 2004 ; VINE Volume 34 ; 34 >
     au < manifest ; 2005 ; VINE Volume 35 ; 35 >
-    au < ready ; 2006 ; VINE Volume 36 ; 36 >
+    au < releasing ; 2006 ; VINE Volume 36 ; 36 >
     au < released ; 2007 ; VINE Volume 37 ; 37 >
     au < released ; 2008 ; VINE Volume 38 ; 38 >
     au < manifest ; 2009 ; VINE Volume 39 ; 39 >
@@ -13134,11 +13134,11 @@
     au < manifest ; 1999 ; Women in Management Review Volume 14 ; 14 >
     au < released ; 2000 ; Women in Management Review Volume 15 ; 15 >
     au < manifest ; 2001 ; Women in Management Review Volume 16 ; 16 >
-    au < ready ; 2002 ; Women in Management Review Volume 17 ; 17 >
+    au < releasing ; 2002 ; Women in Management Review Volume 17 ; 17 >
     au < manifest ; 2003 ; Women in Management Review Volume 18 ; 18 >
     au < manifest ; 2004 ; Women in Management Review Volume 19 ; 19 >
     au < manifest ; 2005 ; Women in Management Review Volume 20 ; 20 >
-    au < ready ; 2006 ; Women in Management Review Volume 21 ; 21 >
+    au < releasing ; 2006 ; Women in Management Review Volume 21 ; 21 >
     au < manifest ; 2007 ; Women in Management Review Volume 22 ; 22 >
 
   }
@@ -13325,7 +13325,7 @@
     param[journal_issn] = 1755-4217
     comment[journal_id] = whatt
 
-    au < ready ; 2009 ; Worldwide Hospitality and Tourism Themes Volume 1 ; 1 >
+    au < releasing ; 2009 ; Worldwide Hospitality and Tourism Themes Volume 1 ; 1 >
     au < released ; 2010 ; Worldwide Hospitality and Tourism Themes Volume 2 ; 2 >
     au < released ; 2011 ; Worldwide Hospitality and Tourism Themes Volume 3 ; 3 >
     au < released ; 2012 ; Worldwide Hospitality and Tourism Themes Volume 4 ; 4 >
@@ -13376,7 +13376,7 @@
     au < manifest ; 2004 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 5 ; 5 >
     au < manifest ; 2005 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 6 ; 6 >
     au < manifest ; 2006 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 7 ; 7 >
-    au < ready ; 2007 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 8 ; 8 >
+    au < releasing ; 2007 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 8 ; 8 >
     au < released ; 2008 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 9 ; 9 >
     au < released ; 2009 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 10 ; 10 >
     au < released ; 2010 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 11 ; 11 >

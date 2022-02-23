@@ -27,7 +27,7 @@
     au < released ; 2018 ; 9 ; African Invertebrates Volume 2018 ; 2018 ; https://africaninvertebrates.pensoft.net/ >
     au < released ; 2019 ; 9 ; African Invertebrates Volume 2019 ; 2019 ; https://africaninvertebrates.pensoft.net/ >
     au < released ; 2020 ; 9 ; African Invertebrates Volume 2020 ; 2020 ; https://africaninvertebrates.pensoft.net/ >
-    au < ready ; 2021 ; 10 ; African Invertebrates Volume 2021 ; 2021 ; https://africaninvertebrates.pensoft.net/ >
+    au < releasing ; 2021 ; 10 ; African Invertebrates Volume 2021 ; 2021 ; https://africaninvertebrates.pensoft.net/ >
     au < manifest ; 2022 ; 11 ; African Invertebrates Volume 2022 ; 2022 ; https://africaninvertebrates.pensoft.net/ >
 
   }
@@ -783,7 +783,7 @@
       au < released ; 2018 ; 2018 ; Rethinking Ecology Volume 2018 ; 2018 ; https://rethinkingecology.pensoft.net/ >
       au < released ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Rethinking Ecology Volume 2020 ; 2020 ; https://rethinkingecology.pensoft.net/ >
-      au < ready ; 2021 ; 2021 ; Rethinking Ecology Volume 2021 ; 2021 ; https://rethinkingecology.pensoft.net/ >
+      au < releasing ; 2021 ; 2021 ; Rethinking Ecology Volume 2021 ; 2021 ; https://rethinkingecology.pensoft.net/ >
       au < expected ; 2022 ; 2022 ; Rethinking Ecology Volume 2022 ; 2022 ; https://rethinkingecology.pensoft.net/ >
 
   }
@@ -1165,7 +1165,7 @@
       param[au_oai_set] = plantsociology
 
       au < released ; 2020 ; 2020 ; Plant Sociology Volume 2020 ; 2020 ; https://plantsociology.arphahub.com/ >
-      au < ready ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ >
+      au < releasing ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ >
       au < expected ; 2022 ; 2022 ; Plant Sociology Volume 2022 ; 2022 ; https://plantsociology.arphahub.com/ >
 
   }
