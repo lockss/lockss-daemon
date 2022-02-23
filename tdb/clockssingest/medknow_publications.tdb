@@ -3596,20 +3596,21 @@
     param[journal_issn] = 2153-3539
     # different format from other journals. Issues are accessed individually by clicking http://www.jpathinformatics.org/browse.asp
     # instead of by a listing like this: http://www.jpathinformatics.org/backissues.asp
+    #move to Elsevier, 2022
 
-    au < notReady ; exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 ; http://www.jpathinformatics.org/ ; ; >
-    au < notReady ; exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 ; http://www.jpathinformatics.org/ ; ; >
-    au < notReady ; exists ; 2012 ; Journal of Pathology Informatics Volume 3 ; 2012 ; 3 ; http://www.jpathinformatics.org/ ; ; >
-    au < notReady ; exists ; 2013 ; Journal of Pathology Informatics Volume 4 ; 2013 ; 4 ; http://www.jpathinformatics.org/ ; ; >
-    au < notReady ; exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 ; http://www.jpathinformatics.org/ ; ; >
-    au < notReady ; exists ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 ; http://www.jpathinformatics.org/ ; ; >
-    au < notReady ; exists ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 ; http://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Pathology Informatics Volume 1 ; 2010 ; 1 ; http://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Pathology Informatics Volume 2 ; 2011 ; 2 ; http://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2012 ; Journal of Pathology Informatics Volume 3 ; 2012 ; 3 ; http://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Pathology Informatics Volume 4 ; 2013 ; 4 ; http://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2014 ; Journal of Pathology Informatics Volume 5 ; 2014 ; 5 ; http://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2015 ; Journal of Pathology Informatics Volume 6 ; 2015 ; 6 ; http://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2016 ; Journal of Pathology Informatics Volume 7 ; 2016 ; 7 ; http://www.jpathinformatics.org/ ; ; >
     au < finished ; frozen ; 2017 ; Journal of Pathology Informatics Volume 8 ; 2017 ; 8 ; http://www.jpathinformatics.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Journal of Pathology Informatics Volume 9 ; 2018 ; 9 ; http://www.jpathinformatics.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; Journal of Pathology Informatics Volume 10 ; 2019 ; 10 ; https://www.jpathinformatics.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Pathology Informatics Volume 11 ; 2020 ; 11 ; https://www.jpathinformatics.org/ ; ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Pathology Informatics Volume 12 ; 2021 ; 12 ; https://www.jpathinformatics.org/ ; ; >
-    au < manifest ; exists ; 2022 ; Journal of Pathology Informatics Volume 13 ; 2022 ; 13 ; https://www.jpathinformatics.org/ ; ; >
+    au < doNotProcess ; exists ; 2022 ; Journal of Pathology Informatics Volume 13 ; 2022 ; 13 ; https://www.jpathinformatics.org/ ; ; >
 
   }
 
@@ -3681,6 +3682,7 @@
 #    param[base_url] = http://www.jpharmacol.com/
 
     param[journal_issn] = 0976-500X
+    #move to Sage
 
     au < manifest ; exists ; 2010 ; Journal of Pharmacology and Pharmacotherapeutics Volume 1 ; 2010 ; 1 ; https://www.jpharmacol.com/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Pharmacology and Pharmacotherapeutics Volume 2 ; 2011 ; 2 ; http://www.jpharmacol.com/ ; ; reingest4.clockss.org:8082 >
@@ -3694,7 +3696,6 @@
     au < finished ; crawling ; 2019 ; Journal of Pharmacology and Pharmacotherapeutics Volume 10 ; 2019 ; 10 ; https://www.jpharmacol.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Pharmacology and Pharmacotherapeutics Volume 11 ; 2020 ; 11 ; https://www.jpharmacol.com/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Pharmacology and Pharmacotherapeutics Volume 12 ; 2021 ; 12 ; https://www.jpharmacol.com/ ; ; >
-    au < expected ; exists ; 2022 ; Journal of Pharmacology and Pharmacotherapeutics Volume 13 ; 2022 ; 13 ; https://www.jpharmacol.com/ ; ; >
 
   }
 
