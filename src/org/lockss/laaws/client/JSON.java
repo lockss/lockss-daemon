@@ -155,7 +155,7 @@ public class JSON {
   /**
    * Gson TypeAdapter for Byte Array type
    */
-  public class ByteArrayAdapter extends TypeAdapter<byte[]> {
+  public static class ByteArrayAdapter extends TypeAdapter<byte[]> {
 
     @Override
     public void write(JsonWriter out, byte[] value) throws IOException {
@@ -227,7 +227,7 @@ public class JSON {
   /**
    * Gson TypeAdapter for JSR310 LocalDate type
    */
-  public class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
+  public static class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
 
     private DateTimeFormatter formatter;
 
