@@ -3,9 +3,10 @@
   publisher <
     name = Geological Society of London ;
     info[contract] = 2013 ;
-    info[back] = 1990 ;
+    info[back] = 1800 ;
     info[tester] = 8 ;
-    info[poller] = 2
+    info[poller] = 2 ;
+    info[platform] = Highwire
   >
   
     implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
