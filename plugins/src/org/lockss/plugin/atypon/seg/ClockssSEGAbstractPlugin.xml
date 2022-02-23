@@ -1,0 +1,72 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <!-- https transition enabled -->  
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.seg.ClockssSEGAbstractPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>13</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Society of Exploration Geophysicists Abstract Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponAbstractPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Society of Exploration Geophysicists Abstract Plugin (CLOCKSS), Base URL %s, DOI %s", base_url, item_doi</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
+  </entry>
+ <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.seg.SEGHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.atypon.seg.SEGHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.seg.SEGPdfFilterFactory</string>
+  </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.atypon.seg.SEGUrlConsumerFactory</string>
+    </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <org.lockss.util.Default />
+  </entry>  
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>  
+</map>
