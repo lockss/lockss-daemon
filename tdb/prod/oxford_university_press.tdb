@@ -3613,6 +3613,21 @@
   {
 
     title <
+      name = Clinical & Experimental Immunology ;
+      issn = 0009-9104 ;
+      eissn = 1365-2249 ;
+      issnl = 0009-9104
+    >
+
+    param[journal_id] = cei
+
+    au < exists ; 2022 ; 2022 ; Clinical & Experimental Immunology Volume 207 ; 207 >
+
+  }
+
+  {
+
+    title <
       name = Clinical Chemistry ;
       issn = 0009-9147 ;
       eissn = 1530-8561 ;
