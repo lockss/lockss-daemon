@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Healthbook Company Ltd. ;
+    info[contract] = 2022 ;
+    info[back] = 2020 ;
+    info[tester] = 8 ;
+    info[poller] = 8 ;
+    info[platform] = Scholastica. See LXPUB-546
+  >
+
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
+
+  {
+  
+    title < 
+      name = healthbook TIMES Oncology Hematology ;
+      issn = 2673-2092 ;
+      eissn = 2673-2106 
+    >
+
+      param[base_url] =  https://onco-hema.healthbooktimes.org/
+      #published 2019 to present
+
+      au < expected ; exists ; 2022 ; healthbook TIMES Oncology Hematology Volume 2022 ; 2022 ; >
+
+  }
+
+}
