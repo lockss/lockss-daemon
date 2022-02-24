@@ -1561,8 +1561,13 @@ public class V2AuMover {
       }
       return contentDigest;
     }
+
     public long getBytesMoved() {
       return bytesMoved;
+    }
+
+    public void setBytesMoved(long bytesMoved) {
+      this.bytesMoved = bytesMoved;
     }
 
   }

@@ -13,6 +13,7 @@ import okhttp3.internal.Util;
 import okio.BufferedSink;
 import okio.Okio;
 import okio.Source;
+import org.apache.commons.io.input.CountingInputStream;
 import org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream;
 import org.apache.http.HttpException;
 import org.apache.http.HttpResponse;
@@ -175,12 +176,14 @@ public class CachedUrlRequestBody extends RequestBody {
       log.debug3("Writing " + (inputStream == null ? "(null) " : "") +
                  artifactCu);
       if (inputStream != null) {
+        CountingInputStream cis = new CountingInputStream(inputStream);
         source = Okio.source(inputStream);
         sink.writeAll(source);
         long avail = inputStream.available();
         if (avail > 0) {
           log.error("Still CU bytes available after sink.writeAll(): " + avail);
         }
+        dcu.setBytesMoved(cis.getByteCount());
       }
     } catch (Exception e) {
       log.error("Exception writing CU body to V2: " + artifactCu, e);
