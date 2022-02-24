@@ -36,7 +36,8 @@ public class MigrationTask {
 
   private static Logger log = Logger.getLogger("MigrationTask");
 
-  public enum TaskType { COPY_CU_VERSIONS, COPY_AU_STATE }
+
+  public enum TaskType { COPY_CU_VERSIONS, CHECK_AU_STATE, CHECK_CU_VERSIONS, COPY_AU_STATE }
 
   V2AuMover auMover;
   CachedUrl cu;
@@ -56,11 +57,26 @@ public class MigrationTask {
       .setAu(cu.getArchivalUnit());
   }
 
+  public static MigrationTask checkCuVersions(V2AuMover mover,
+      ArchivalUnit au,
+      CachedUrl cu) {
+    return new MigrationTask(mover, TaskType.CHECK_CU_VERSIONS)
+        .setCu(cu)
+        .setAu(cu.getArchivalUnit());
+  }
+
   public static MigrationTask copyAuState(V2AuMover mover,
                                           ArchivalUnit au) {
     return new MigrationTask(mover, TaskType.COPY_AU_STATE)
       .setAu(au);
   }
+
+  public static MigrationTask checkAuState(V2AuMover mover,
+      ArchivalUnit au) {
+    return new MigrationTask(mover, TaskType.CHECK_AU_STATE)
+        .setAu(au);
+  }
+
 
   private MigrationTask setAu(ArchivalUnit au) {
     this.cu = cu;

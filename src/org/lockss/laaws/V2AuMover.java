@@ -40,9 +40,14 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.concurrent.*;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.RejectedExecutionHandler;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import okhttp3.Dispatcher;
@@ -58,14 +63,10 @@ import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.api.rs.StreamingCollectionsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.model.rs.Artifact;
-import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.CachedUrlSet;
-import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.PluginManager;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.Constants;
@@ -649,18 +650,28 @@ public class V2AuMover {
     }
 
     public void lockssRun() {
+      CachedUrl cu;
       switch (task.getType()) {
-      case COPY_CU_VERSIONS:
-        CachedUrl cu = task.getCu();
-        CuMover cumover = new CuMover(v2Mover, cu.getArchivalUnit(), cu);
-        cumover.run();
-        break;
-      case COPY_AU_STATE:
-        AuStateMover asmover = new AuStateMover(v2Mover, task.getAu());
-        asmover.run();
-        break;
-      default:
-        log.error("Unknown migration task type: " + task.getType());
+        case COPY_CU_VERSIONS:
+          cu = task.getCu();
+          CuMover cuMover = new CuMover(v2Mover, cu.getArchivalUnit(), cu);
+          cuMover.run();
+          break;
+        case COPY_AU_STATE:
+          AuStateMover asMover = new AuStateMover(v2Mover, task.getAu());
+          asMover.run();
+          break;
+        case CHECK_CU_VERSIONS:
+          cu = task.getCu();
+          CuChecker cuChecker = new CuChecker(v2Mover, cu.getArchivalUnit(), cu, compareBytes);
+          cuChecker.run();
+          break;
+        case CHECK_AU_STATE:
+          AuStateChecker asChecker = new AuStateChecker(v2Mover, task.getAu());
+          asChecker.run();
+          break;
+        default:
+          log.error("Unknown migration task type: " + task.getType());
       }
     }
   }
@@ -900,13 +911,27 @@ public class V2AuMover {
   void moveAuArtifacts(ArchivalUnit au) {
     // Get the au CachedUrls from the v1 repo.
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
-      
       taskExecutor.execute(new TaskRunner(this,
                                           MigrationTask.copyCuVersions(this,
                                                                        au,
                                                                        cu)));
     }
   }
+
+  /**
+   * Check the Artifacts moved to the V2 repository for errors
+   * @param au the ArchivalUnit which needs to be checked.
+   */
+  void checkAuArtifacts(ArchivalUnit au) {
+    String auId = au.getAuId();
+    log.info("Comparing v2 artifacts with V1 data");
+    /* get Au cachedUrls from Lockss*/
+    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+      taskExecutor.execute(new TaskRunner(this,
+          MigrationTask.copyCuVersions(this, au, cu)));
+    }
+  }
+
 
   /**
    * Complete the au move by moving the state and config information.
@@ -917,6 +942,19 @@ public class V2AuMover {
     if (!terminated) {
       taskExecutor.execute(new TaskRunner(this,
           MigrationTask.copyAuState(this,
+              au)));
+    }
+  }
+
+  /**
+   * Check the the State information moved to the V2 repository.
+   *
+   * @param au the au we are checking.
+   */
+  void checkAuState(ArchivalUnit au) {
+    if (!terminated) {
+      taskExecutor.execute(new TaskRunner(this,
+          MigrationTask.checkAuState(this,
               au)));
     }
   }
@@ -940,114 +978,6 @@ public class V2AuMover {
     if(log.isDebug3())
       log.debug3("v1 url=" + v1Url +"  v2 url= " + v2Url);
     return v2Url;
-  }
-
-  public List<String> getAlreadyKnownV2AuIds() {
-    return v2Aus;
-  }
-
-  private List<Artifact> getV2ArtifactsForUrl(String auId,  String v2Url)
-      throws ApiException {
-    ArtifactPageInfo pageInfo;
-    String token = null;
-    List<Artifact> cuArtifacts = new ArrayList<>();
-    // if the v2 repo knows about this au we need to call getArtifacts.
-    if (v2Aus.contains(auId)) {
-      isPartialContent = true;
-      log.debug2("Checking for unmoved content: " + v2Url);
-      do {
-        pageInfo = repoCollectionsApiClient.getArtifacts(collection, auId,
-            v2Url, null, "all", false, null, token);
-        cuArtifacts.addAll(pageInfo.getArtifacts());
-        token = pageInfo.getPageInfo().getContinuationToken();
-      } while (!terminated && !StringUtil.isNullString(token));
-      log.debug2("Found " + cuArtifacts.size() + " matches for " + v2Url);
-    }
-    return cuArtifacts;
-  }
-
-
-
-  /**
-   * Check for a successful move of au content
-   * @param au The ArchivalUnit we moved.
-   * @param compareBytes true if each artifact should be fetched and byteCompare.
-   */
-  void checkAu(ArchivalUnit au, boolean compareBytes) {
-    long au_check_start = System.currentTimeMillis(); // Get the start Time
-    String auName = au.getName();
-    String auId = au.getAuId();
-    final String TRUE = "true";
-    //Get the cachedUrls from the v1 repo.
-    final CachedUrlSet auCachedUrlSet = au.getAuCachedUrlSet();
-    // check all metadata
-    log.info("Checking content on v2 service");
-    /* get Au cachedUrls from Lockss*/
-    for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
-      CachedUrl cu = iter.next();
-      CachedUrl[] cuVersions = cu.getCuVersions();
-      String v2Url = getV2Url(au, cu);
-      List<Artifact> cuArtifacts;
-      try {
-        cuArtifacts = getAllCuArtifacts(au, v2Url);
-        if(!terminated) {
-          //Todo: rename v1Artifact && v2Artifacts
-          int versionCompare = cuArtifacts.size() - cuVersions.length;
-
-          if (versionCompare > 0) {
-            String err = "Mismatched version count for " + v2Url
-                + ": V2 Repo has more versions than V1 Repo";
-            addError(err);
-            terminated = true;
-          }
-          else if (versionCompare < 0) {
-            String err = "Mismatched version count for " + v2Url
-                + ": V2 Repo has fewer versions than V1 Repo";
-            addError(err);
-            terminated = true;
-          }
-          else {
-            log.info("Checking Artifact metadata...");
-            for (int ver = 0; ver < cuVersions.length; ver++) {
-              Artifact art = cuArtifacts.get(ver);
-              CachedUrl cuVersion = cuVersions[ver];
-              String fetchTime = cu.getProperties().getProperty(CachedUrl.PROPERTY_FETCH_TIME);
-              Long collectionDate = null;
-              if (!StringUtil.isNullString(fetchTime)) {
-                collectionDate = Long.parseLong(fetchTime);
-              }
-              else {
-                log.debug2(v2Url + ":version: " + cu.getVersion() + " is missing fetch time.");
-              }
-              boolean isMatch;
-              isMatch = art.getAuid().equals(auId) &&
-                art.getCollection().equals(collection)  &&
-                art.getCollectionDate().equals(collectionDate) &&
-                art.getCommitted().equals(Boolean.TRUE);
-              if ( isMatch && compareBytes) {
-                log.debug3("Fetching  content for byte compare");
-/*
-              todo: This needs to be fixed to return a ArtifactData at the api level.
-              final ArtifactData artifact = repoCollectionsApiClient.getArtifact(collection, art.getId(),
-                    "ALWAYS");
-*/
-              }
-            }
-          }
-        }
-      }
-      catch (Exception ex) {
-        String err = v2Url + " comparison failed: " + ex.getMessage();
-        log.error(err, ex);
-        addError(err);
-        terminated = true;
-      }
-      finally {
-        AuUtil.safeRelease(cu);
-      }
-    }
-    long au_check_stop = System.currentTimeMillis();
-    log.info("Au Check Runtime: " + StringUtil.timeIntervalToString(au_check_stop-au_check_start));
   }
 
   /**
@@ -1113,33 +1043,6 @@ public class V2AuMover {
     }
   }
 
-  /**
-   * Retrieve all the artifacts for an AU
-   * @param au The ArchivalUnit to retrieve
-   * @return a list of Artifacts.
-   */
-  List<Artifact>  getAllCuArtifacts(ArchivalUnit au, String url) {
-    List<Artifact> auArtifacts = new ArrayList<>();
-    ArtifactPageInfo pageInfo;
-    String token = null;
-    do {
-      try {
-        pageInfo = repoCollectionsApiClient.getArtifacts(collection, au.getAuId(),
-            url, null, "all", false, null, token);
-        auArtifacts.addAll(pageInfo.getArtifacts());
-        token = pageInfo.getPageInfo().getContinuationToken();
-      }
-      catch (ApiException apie) {
-        String msg = apie.getCode() == 0 ? apie.getMessage()
-            : apie.getCode() + " - " + apie.getMessage();
-        String err = "Error occurred while retrieving artifacts for au: " + msg;
-        addError(err);
-        log.error(err, apie);
-        terminated = true;
-      }
-    } while (!terminated && !StringUtil.isNullString(token));
-    return auArtifacts;
-  }
 
 
   /**
