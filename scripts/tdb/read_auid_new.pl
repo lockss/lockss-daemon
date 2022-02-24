@@ -4105,6 +4105,7 @@ while (my $line = <>) {
       sleep(4);
   # End of Giga Science
 
+  # begin Resilience Alliance
   } elsif ($plugin eq "ClockssResilienceAlliancePlugin") {
          $url = sprintf("%sissues/",
          $param{base_url});
@@ -4132,6 +4133,7 @@ while (my $line = <>) {
          }
          sleep(4);
   # End of Resilience Alliance
+
   # begin CloudPublish/Liverpool University Press
   } elsif ($plugin eq "LupPlugin" || $plugin eq "ClockssLupPlugin") {
          $url = sprintf("%slockss-manifest/%s/%s",
@@ -4158,6 +4160,7 @@ while (my $line = <>) {
          }
          sleep(4);
   # End of Liverpool University Press
+
   # begin Inter-Research Science Publisher
   #"%sjournals/%s/%s-home/", base_url, journal_id, journal_id
   } elsif ($plugin eq "ClockssInterResearchPlugin") {
@@ -4206,6 +4209,35 @@ while (my $line = <>) {
          }
          sleep(4);
   # End of Inter-Research Science Publisher
+  # Start ClockssWroclawMedicalUniversityJournalsPlugin.
+  } elsif ($plugin eq "ClockssWroclawMedicalUniversityJournalsPlugin") {
+    $url = sprintf("%sen/archive/",
+        $param{base_url});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #printf("resp is %s\n",$resp->status_line);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$clockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif ($man_contents !~ m/\/issue\/$param{year}\/$param{volume_name}\/\d/) {
+        $result = "--NO_VOL--";
+    } else {
+        $result = "Manifest";
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+            $vol_title = $1 . " Volume " . $param{volume_name} . " Year " . $param{year};
+            $vol_title =~ s/\s*\n\s*/ /g;
+        }
+    }
+  sleep(4);
+
   }
   
   if($result eq "Plugin Unknown") {
