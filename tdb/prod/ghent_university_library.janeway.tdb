@@ -2,7 +2,7 @@
 
   publisher <
     name = Ghent University Library ;
-    info[platform] = Janeway/OAI. Needs GLN version. See LXPLUG-2091
+    info[platform] = Janeway/OAI. See LXPLUG-2091
   >
   
     plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.GhentUniversityLibraryPlugin
