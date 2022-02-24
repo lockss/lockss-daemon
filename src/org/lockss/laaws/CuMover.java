@@ -47,7 +47,7 @@ public class CuMover {
   }
 
   public void run() {
-    log.debug("Starting CuMover: " + au + ", " + cu);
+    log.debug2("Starting CuMover: " + au + ", " + cu);
     v1Url=cu.getUrl();
     v2Url=auMover.getV2Url(au, cu);
     List<Artifact> cuArtifacts = null;
