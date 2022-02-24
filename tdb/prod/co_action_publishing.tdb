@@ -916,6 +916,7 @@
 
     param[journal_id] = zela20
     #continues = 0040-2826
+    #Published by Stockholm University Press from 2022
     
     au < doNotProcess ; 1983 ; Tellus A: Dynamic Meteorology and Oceanography Volume 35 ; 35 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 1984 ; Tellus A: Dynamic Meteorology and Oceanography Volume 36 ; 36 ; https://www.tandfonline.com/ >
@@ -956,7 +957,6 @@
     au < released ; 2019 ; Tellus A: Dynamic Meteorology and Oceanography Volume 71 ; 71 ; https://www.tandfonline.com/ >
     au < released ; 2020 ; Tellus A: Dynamic Meteorology and Oceanography Volume 72 ; 72 ; https://www.tandfonline.com/ >
     au < manifest ; 2021 ; Tellus A: Dynamic Meteorology and Oceanography Volume 73 ; 73 ; https://www.tandfonline.com/ >
-    au < expected ; 2022 ; Tellus A: Dynamic Meteorology and Oceanography Volume 74 ; 74 ; https://www.tandfonline.com/ >
 
   }
 
@@ -973,6 +973,7 @@
 
     param[journal_id] = zelb20
     #continues = 0040-2826
+    #Published by Stockholm University Press from 2022
 
     au < doNotProcess ; 1983 ; Tellus B: Chemical and Physical Meteorology Volume 35 ; 35 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 1984 ; Tellus B: Chemical and Physical Meteorology Volume 36 ; 36 ; https://www.tandfonline.com/ >
@@ -1013,7 +1014,6 @@
     au < released ; 2019 ; Tellus B: Chemical and Physical Meteorology Volume 71 ; 71 ; https://www.tandfonline.com/ >
     au < released ; 2020 ; Tellus B: Chemical and Physical Meteorology Volume 72 ; 72 ; https://www.tandfonline.com/ >
     au < manifest ; 2021 ; Tellus B: Chemical and Physical Meteorology Volume 73 ; 73 ; https://www.tandfonline.com/ >
-    au < expected ; 2022 ; Tellus B: Chemical and Physical Meteorology Volume 74 ; 74 ; https://www.tandfonline.com/ >
 
   }
 
