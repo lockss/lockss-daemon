@@ -6,7 +6,7 @@
     info[back] = 2019 ;
     info[tester] = 5 ;
     info[poller] = 2 ;
-    info[platform] = Janeway/OAI. Like IowaStateDP. See LXPLUG-2091
+    info[platform] = Janeway/OAI. See LXPLUG-2091
   >
   
     plugin = org.lockss.plugin.janeway.ghentuniversitylibrary.ClockssGhentUniversityLibraryPlugin
@@ -43,23 +43,23 @@
       au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; >
       au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Afrika Focus Volume 2002 ; >
       au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Afrika Focus Volume 2003 ; >
-      au < exists ; exists ; 2004 ; 2004 ; 2004 ; Afrika Focus Volume 2004 ; >
-      au < exists ; exists ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 ; >
-      au < exists ; exists ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 ; >
-      au < exists ; exists ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; >
-      au < exists ; exists ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; >
-      au < exists ; exists ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; >
-      au < exists ; exists ; 2010 ; 2010 ; 2010 ; Afrika Focus Volume 2010 ; >
-      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Afrika Focus Volume 2011 ; >
-      au < exists ; exists ; 2012 ; 2012 ; 2012 ; Afrika Focus Volume 2012 ; >
-      au < exists ; exists ; 2013 ; 2013 ; 2013 ; Afrika Focus Volume 2013 ; >
-      au < exists ; exists ; 2014 ; 2014 ; 2014 ; Afrika Focus Volume 2014 ; >
-      au < exists ; exists ; 2015 ; 2015 ; 2015 ; Afrika Focus Volume 2015 ; >
-      au < exists ; exists ; 2016 ; 2016 ; 2016 ; Afrika Focus Volume 2016 ; >
-      au < exists ; exists ; 2017 ; 2017 ; 2017 ; Afrika Focus Volume 2017 ; >
-      au < exists ; exists ; 2018 ; 2018 ; 2018 ; Afrika Focus Volume 2018 ; >
-      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Afrika Focus Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Afrika Focus Volume 2020 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Afrika Focus Volume 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Afrika Focus Volume 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Afrika Focus Volume 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Afrika Focus Volume 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Afrika Focus Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Afrika Focus Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Afrika Focus Volume 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Afrika Focus Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Afrika Focus Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Afrika Focus Volume 2018 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Afrika Focus Volume 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Afrika Focus Volume 2020 ; >
 
   }
 
@@ -73,13 +73,13 @@
       #published 1984-2020
       param[journal_id] = agora
 
-      au < exists ; exists ; 1984 ; 1984 ; 1984 ; Agora Magazine Volume 1984 ; >
-      au < exists ; exists ; 1985 ; 1985 ; 1985 ; Agora Magazine Volume 1985 ; >
-      au < exists ; exists ; 1986 ; 1986 ; 1986 ; Agora Magazine Volume 1986 ; >
-      au < exists ; exists ; 1987 ; 1987 ; 1987 ; Agora Magazine Volume 1987 ; >
-      au < exists ; exists ; 1988 ; 1988 ; 1988 ; Agora Magazine Volume 1988 ; >
-      au < exists ; exists ; 1989 ; 1989 ; 1989 ; Agora Magazine Volume 1989 ; >
-      au < exists ; exists ; 1990 ; 1990 ; 1990 ; Agora Magazine Volume 1990 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Agora Magazine Volume 1984 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Agora Magazine Volume 1985 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Agora Magazine Volume 1986 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Agora Magazine Volume 1987 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Agora Magazine Volume 1988 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Agora Magazine Volume 1989 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Agora Magazine Volume 1990 ; >
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Agora Magazine Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Agora Magazine Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Agora Magazine Volume 1993 ; >
