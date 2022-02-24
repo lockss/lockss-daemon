@@ -26,7 +26,7 @@ public class CuMover {
   private String v1Url;
   private String v2Url;
   private boolean isPartialContent;
-  private boolean terminated;
+  private boolean terminated = false;
   private String collection;
   private long cuArtifactsMoved = 0;
   private long cuBytesMoved = 0;
@@ -43,18 +43,19 @@ public class CuMover {
     this.au = au;
     this.cu = cu;
     collection = auMover.getCollection();
+    collectionsApi = auMover.getRepoCollectionsApiClient();
+  }
 
-    terminated=false;
+  public void run() {
+    log.debug("Starting CuMover: " + au + ", " + cu);
     v1Url=cu.getUrl();
     v2Url=auMover.getV2Url(au, cu);
-    collectionsApi = auMover.getRepoCollectionsApiClient();
     List<Artifact> cuArtifacts = null;
     try {
       cuArtifacts = getV2ArtifactsForUrl(au.getAuId(), v2Url);
     }
     catch (ApiException e) {
-      log.error("Unable to determine which v2 Urls have already been moved.");
-
+      log.warning("Unable to determine which V2 Urls have already been moved, continuing.");
     }
     moveCuVersions(v2Url, cu, cuArtifacts);
   }

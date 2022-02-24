@@ -42,6 +42,8 @@ import java.security.NoSuchAlgorithmException;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.concurrent.*;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -54,6 +56,7 @@ import org.apache.commons.codec.binary.Hex;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.daemon.LockssRunnable;
 import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.api.rs.StreamingCollectionsApi;
 import org.lockss.laaws.client.ApiException;
@@ -110,11 +113,16 @@ public class V2AuMover {
   public static final boolean DEFAULT_DEBUG_REPO_REQUEST = false;
 
   /**
-   * Max number of simultaneous requests - default 50.
+   * Max number of worker threads
     */
-  public static final String PARAM_MAX_REQUESTS = PREFIX + "max_requests";
-  public static final int DEFAULT_MAX_REQUESTS = 20;
+  public static final String PARAM_MAX_THREADS = PREFIX + "max_threads";
+  public static final int DEFAULT_MAX_THREADS = 20;
 
+  /**
+   * Maximum number of queued tasks 
+   */
+  public static final String PARAM_QUEUE_MAX = PREFIX + "queueMax";
+  public static final int DEFAULT_QUEUE_MAX = 50;
 
   /**
    * The V2 collection to migrate into - default lockss
@@ -286,8 +294,9 @@ public class V2AuMover {
   PollManager pollManager;
   private final ArrayList<String> v2Aus = new ArrayList<>();
   private final LinkedHashSet<ArchivalUnit> auMoveQueue = new LinkedHashSet<>();
+  private BlockingQueue<Runnable> taskQueue;
+  private ThreadPoolExecutor taskExecutor;
   private Dispatcher dispatcher;
-  boolean allCusQueued = false;
   private long reqId = 0;
 
   // report
@@ -547,8 +556,15 @@ public class V2AuMover {
     // allow for changing these between runs when testing
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST, DEFAULT_DEBUG_REPO_REQUEST);
     debugConfigReq = config.getBoolean(DEBUG_CONFIG_REQUEST, DEFAULT_DEBUG_CONFIG_REQUEST);
-    maxRequests = config.getInt(PARAM_MAX_REQUESTS, DEFAULT_MAX_REQUESTS);
+    int maxThreads = config.getInt(PARAM_MAX_THREADS, DEFAULT_MAX_THREADS);
     hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
+
+    int queueMax = config.getInt(PARAM_QUEUE_MAX, DEFAULT_QUEUE_MAX);
+    taskQueue = new LinkedBlockingQueue<>(queueMax);
+    taskExecutor = makeBlockingThreadPoolExecutor(maxThreads/*1, maxThreads,
+                                                  60, TimeUnit.SECONDS,
+                                                  taskQueue*/);
+                                          
 
     if (args.host != null) {
       hostName = args.host;
@@ -599,8 +615,8 @@ public class V2AuMover {
       repoClient.setDebugging(debugRepoReq);
       repoClient.addInterceptor(new RetryErrorInterceptor());
       dispatcher = repoClient.getHttpClient().dispatcher();
-      dispatcher.setMaxRequests(maxRequests);
-      dispatcher.setMaxRequestsPerHost(maxRequests);
+      dispatcher.setMaxRequests(maxThreads);
+      dispatcher.setMaxRequestsPerHost(maxThreads);
     }
     catch (MalformedURLException mue) {
       errorList.add("Error parsing REST Configuration Service URL: " + mue.getMessage());
@@ -616,6 +632,55 @@ public class V2AuMover {
     startTime = System.currentTimeMillis();
   }
 
+  public ThreadPoolExecutor makeBlockingThreadPoolExecutor(int maxThreads) {
+    ThreadPoolExecutor exec =
+      new ThreadPoolExecutor(1, maxThreads,
+                                 60, TimeUnit.SECONDS,
+                                 taskQueue);
+    exec.setRejectedExecutionHandler(new RejectedExecutionHandler() {
+        @Override
+        public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
+          try {
+            // block until there's room
+            executor.getQueue().put(r);
+            // check afterwards and throw if pool shutdown
+            if (executor.isShutdown()) {
+              throw new RejectedExecutionException("Task " + r +
+                                                   " rejected from because shutdown");
+            }
+          } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RejectedExecutionException("Producer interrupted", e);
+          }
+        }
+      });
+    return exec;
+  }
+
+  public class TaskRunner extends LockssRunnable {
+    MigrationTask task;
+    V2AuMover v2Mover;
+
+    public TaskRunner(V2AuMover v2Mover, MigrationTask task) {
+      super("V2AuMover");
+      this.v2Mover = v2Mover;
+      this.task = task;
+    }
+
+    public void lockssRun() {
+      switch (task.getType()) {
+      case COPY_CU_VERSIONS:
+        CachedUrl cu = task.getCu();
+        CuMover mover = new CuMover(v2Mover, cu.getArchivalUnit(), cu);
+        mover.run();
+        break;
+      case COPY_AU_STATE:
+        break;
+      default:
+        log.error("Unknown migration task type: " + task.getType());
+      }
+    }
+  }
 
   /**
    * Start appending the Report file for current Au move request
@@ -753,7 +818,6 @@ public class V2AuMover {
     // Marker for getCurrentStatus() to return current AU's progress.
     currentStatus = STATUS_COPYING;
     currentAu = au;
-    allCusQueued = false;
     log.debug("Moving " + au.getName() + " - " + auMoveQueue.size() + " AUs remaining.");
     auBytesMoved = 0;
     auContentBytesMoved = 0;
@@ -798,6 +862,15 @@ public class V2AuMover {
       }
       log.info(auName + ": Moving AU Artifacts...");
       moveAuArtifacts(au);
+      // XXX wrong - need to wait until all workers are done
+      while (!taskQueue.isEmpty()) {
+        try {
+          Thread.sleep(500);
+        }
+        catch (InterruptedException e) {
+          throw new RuntimeException(e);
+        }
+      }
       finishAuMove(au);
       if (!terminated) {
         log.info(auName + ": Successfully moved AU Artifacts.");
@@ -844,24 +917,17 @@ public class V2AuMover {
    * @throws ApiException if REST request results in errors
    */
   void moveAuArtifacts(ArchivalUnit au) throws ApiException {
-    //Get the au artifacts from the v1 repo.
-    /* get Au cachedUrls from Lockss*/
-    for (CuIterator iter = au.getAuCachedUrlSet().getCuIterator(); iter.hasNext(); ) {
-      CachedUrl cu = iter.next();
-      /*
-      // we have the possibility that some or all of the artifacts were moved.
-      // We are looking for previously moved versions of the 'current' cu
-      String v2Url=getV2Url(au, cu);
-      // we have the possibility that some or all of the artifacts were moved.
-      // We are looking for previously moved versions of the 'current' cu
-      List<Artifact> cuArtifacts = getV2ArtifactsForUrl(au.getAuId(), v2Url);
-      moveCuVersions(v2Url, cu, cuArtifacts);
-
-       */
+    // Get the au CachedUrls from the v1 repo.
+    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+      
+      taskExecutor.execute(new TaskRunner(this,
+                                          MigrationTask.copyCuVersions(this,
+                                                                       au,
+                                                                       cu)));
     }
   }
 
-  String getV2Url(ArchivalUnit au, CachedUrl cu) {
+  public String getV2Url(ArchivalUnit au, CachedUrl cu) {
     String v1Url = cu.getUrl();
     String v2Url = null;
     try {
@@ -880,6 +946,10 @@ public class V2AuMover {
     if(log.isDebug3())
       log.debug3("v1 url=" + v1Url +"  v2 url= " + v2Url);
     return v2Url;
+  }
+
+  public List<String> getAlreadyKnownV2AuIds() {
+    return v2Aus;
   }
 
   private List<Artifact> getV2ArtifactsForUrl(String auId,  String v2Url)

@@ -84,4 +84,8 @@ public class MigrationTask {
     return cu;
   }
 
+  public TaskType getType() {
+    return type;
+  }
+
 }
