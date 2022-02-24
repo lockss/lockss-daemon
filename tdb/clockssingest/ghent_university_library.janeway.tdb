@@ -755,6 +755,20 @@
 
   }
 
+#  {
+#
+#      title <
+#        name = Journal for Digital Legal History ;
+#        eissn = 2796-0226
+#      >
+#
+#      #published ?-?
+#      param[journal_id] = dlh
+#
+#      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Journal for Digital Legal History Volume 2020 ; >
+#
+#  }
+#
   {
 
       title <
@@ -897,6 +911,27 @@
       au < exists ; exists ; 2000 ; 2000 ; 2000 ; Oostvlaamse Zanten Volume 2000 ; >
       au < exists ; exists ; 2001 ; 2001 ; 2001 ; Oostvlaamse Zanten Volume 2001 ; >
       au < exists ; exists ; 2002 ; 2002 ; 2002 ; Oostvlaamse Zanten Volume 2002 ; >
+
+  }
+
+  {
+
+      title <
+        name = Philosophica ;
+        issn = 0379-8402 ;
+        eissn = 2295-9084
+      >
+
+      #published 2010-2017
+      param[journal_id] = philosophica
+
+      au < manifest ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
+      #au < exists ; exists ; 2018 ; 2018 ; 91-92 ; Philosophica Volume 91-92 ; >
 
   }
 
