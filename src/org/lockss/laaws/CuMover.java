@@ -91,7 +91,8 @@ public class CuMover {
             AuUtil.safeRelease(ver);
           }
         }
-        moveNextCuVersion(auid, v2Url, cuQueue);
+        while(!terminated && cuQueue.peek() != null)
+          moveNextCuVersion(auid, v2Url, cuQueue);
       }
     }
   }
@@ -180,6 +181,7 @@ public class CuMover {
       }
       log.debug3("Successfully committed artifact " + committed.getId());
       cuArtifactsMoved++;
+
     }
 
   }
