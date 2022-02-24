@@ -30,7 +30,6 @@ package org.lockss.laaws;
 import static java.nio.file.StandardOpenOption.APPEND;
 import static java.nio.file.StandardOpenOption.CREATE;
 
-import com.google.gson.Gson;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,8 +40,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.concurrent.*;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -61,8 +58,6 @@ import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.api.rs.StreamingCollectionsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.model.cfg.AuConfiguration;
-import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.laaws.model.rs.AuidPageInfo;
@@ -72,19 +67,6 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.PluginManager;
-import org.lockss.poller.PollManager;
-import org.lockss.protocol.AuAgreements;
-import org.lockss.protocol.AuAgreementsBean;
-import org.lockss.protocol.DatedPeerIdSet;
-import org.lockss.protocol.DatedPeerIdSetBean;
-import org.lockss.protocol.DatedPeerIdSetImpl;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.protocol.IdentityManagerImpl;
-import org.lockss.repository.AuSuspectUrlVersions;
-import org.lockss.repository.AuSuspectUrlVersions.SuspectUrlVersion;
-import org.lockss.repository.AuSuspectUrlVersionsBean;
-import org.lockss.repository.RepositoryManager;
-import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
@@ -289,9 +271,6 @@ public class V2AuMover {
   private boolean debugConfigReq;
 
   PluginManager pluginManager;
-  IdentityManagerImpl idManager;
-  RepositoryManager repoManager;
-  PollManager pollManager;
   private final ArrayList<String> v2Aus = new ArrayList<>();
   private final LinkedHashSet<ArchivalUnit> auMoveQueue = new LinkedHashSet<>();
   private BlockingQueue<Runnable> taskQueue;
@@ -338,12 +317,6 @@ public class V2AuMover {
   public V2AuMover() {
     // Get our lockss daemon managers
     pluginManager = LockssDaemon.getLockssDaemon().getPluginManager();
-    IdentityManager idmgr = LockssDaemon.getLockssDaemon().getIdentityManager();
-    if (idmgr instanceof IdentityManagerImpl) {
-      idManager = ((IdentityManagerImpl) LockssDaemon.getLockssDaemon().getIdentityManager());
-    }
-    repoManager = LockssDaemon.getLockssDaemon().getRepositoryManager();
-    pollManager = LockssDaemon.getLockssDaemon().getPollManager();
     // Get configuration parameters to support overriding our defaults
     Configuration config = ConfigManager.getCurrentConfig();
     userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
@@ -529,12 +502,20 @@ public class V2AuMover {
     return errorList;
   }
 
-  public StreamingCollectionsApi getRepoCollectionsApiClient() {
+  StreamingCollectionsApi getRepoCollectionsApiClient() {
     return repoCollectionsApiClient;
   }
 
   public String getCollection() {
     return collection;
+  }
+
+  public AusApi getCfgAusApiClient() {
+    return cfgAusApiClient;
+  }
+
+  public String makeCookie() {
+    return cliendId + "-" + ++reqId;
   }
 
   public ArrayList<String> getKnownV2Aus() {
@@ -671,10 +652,12 @@ public class V2AuMover {
       switch (task.getType()) {
       case COPY_CU_VERSIONS:
         CachedUrl cu = task.getCu();
-        CuMover mover = new CuMover(v2Mover, cu.getArchivalUnit(), cu);
-        mover.run();
+        CuMover cumover = new CuMover(v2Mover, cu.getArchivalUnit(), cu);
+        cumover.run();
         break;
       case COPY_AU_STATE:
+        AuStateMover asmover = new AuStateMover(v2Mover, task.getAu());
+        asmover.run();
         break;
       default:
         log.error("Unknown migration task type: " + task.getType());
@@ -871,7 +854,7 @@ public class V2AuMover {
           throw new RuntimeException(e);
         }
       }
-      finishAuMove(au);
+      moveAuState(au);
       if (!terminated) {
         log.info(auName + ": Successfully moved AU Artifacts.");
       }
@@ -902,7 +885,6 @@ public class V2AuMover {
       log.error(err);
       addError(err);
       totalErrorCount += auErrorCount;
-      finishAuMove(au);
       if (terminated) {
         dispatcher.cancelAll();
         throw new IOException("Au Move Request terminated due to errors:" + err);
@@ -914,9 +896,8 @@ public class V2AuMover {
    * Move one V1 Au including all cachedUrls and all versions.
    *
    * @param au au The ArchivalUnit to move
-   * @throws ApiException if REST request results in errors
    */
-  void moveAuArtifacts(ArchivalUnit au) throws ApiException {
+  void moveAuArtifacts(ArchivalUnit au) {
     // Get the au CachedUrls from the v1 repo.
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
       
@@ -924,6 +905,19 @@ public class V2AuMover {
                                           MigrationTask.copyCuVersions(this,
                                                                        au,
                                                                        cu)));
+    }
+  }
+
+  /**
+   * Complete the au move by moving the state and config information.
+   *
+   * @param au the au we are moving.
+   */
+  void moveAuState(ArchivalUnit au) {
+    if (!terminated) {
+      taskExecutor.execute(new TaskRunner(this,
+          MigrationTask.copyAuState(this,
+              au)));
     }
   }
 
@@ -1051,22 +1045,6 @@ public class V2AuMover {
       finally {
         AuUtil.safeRelease(cu);
       }
-    }
-    if (!terminated) {
-      log.info(auName + ": Checking AU Agreements...");
-      checkAuAgreements(au);
-    }
-    if (!terminated) {
-      log.info(auName + ": Checking AU Suspect Urls...");
-      checkAuSuspectUrlVersions(au);
-    }
-    if (!terminated) {
-      log.info(auName + ": Checking No Au Peer Set...");
-      checkNoAuPeerSet(au);
-    }
-    if (!terminated) {
-      log.info(auName + ": Checking AU State...");
-      checkAuState(au);
     }
     long au_check_stop = System.currentTimeMillis();
     log.info("Au Check Runtime: " + StringUtil.timeIntervalToString(au_check_stop-au_check_start));
@@ -1240,342 +1218,7 @@ public class V2AuMover {
   }
 
 
-  /**
-   * Complete the au move by moving the state and config information.
-   *
-   * @param au the au we are moving.
-   */
-  private void finishAuMove(ArchivalUnit au) {
-    log.debug("Waiting for move to complete all processing for " + au.getName() + ".");
-    do { //Wait until we are done the processing
-      try {
-        Thread.sleep(200);
-      }
-      catch (InterruptedException e) {
-        throw new RuntimeException(e);
-      }
-    } while (!terminated && dispatcher.runningCallsCount() > 0);
-    if (!terminated) {
-      String auName = au.getName();
-      log.info(auName + ": Moving AU Agreements...");
-      moveAuAgreements(au);
-      log.info(auName + ": Moving AU Suspect Urls...");
-      moveAuSuspectUrlVersions(au);
-      log.info(auName + ": Moving No Au Peer Set...");
-      moveNoAuPeerSet(au);
-      log.info(auName + ": Moving AU State...");
-      moveAuState(au);
-      //log.info(auName + ": Check AU on V2 host...");
-      //checkAu(au, compareBytes);
-      //This needs to be last
-      log.info(auName + ": Moving AU Configuration...");
-      moveAuConfig(au);
-      //log.info(auName + ": Checking AU Configuration...");
-      //checkAuConfig(au);
-    }
-  }
 
-  /**
-   * Make a synchronous rest call to configuration service to add configuration info for an au.
-   *
-   * @param au The ArchivalUnit whose configuration is to be move
-   */
-  private void moveAuConfig(ArchivalUnit au) {
-    Configuration v1config = au.getConfiguration();
-    AuConfiguration v2config = new AuConfiguration().auId(au.getAuId());
-    String auName = au.getName();
-    if (v1config != null) {
-      try {
-        // copy the keys
-        v1config.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
-            .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
-        // send the configuration
-        cfgAusApiClient.putAuConfig(au.getAuId(), v2config);
-        log.info(auName + ": Successfully moved AU Configuration.");
-      }
-      catch (Exception ex) {
-        String err = auName + ": Attempt to move au configuration failed: " + ex.getMessage();
-        log.error(err, ex);
-        addError(err);
-      }
-    }
-    else {
-      log.warning(auName + ": No Configuration found for au");
-    }
-  }
-
-  private void checkAuConfig(ArchivalUnit au) {
-    AuConfiguration v2Config;
-    String auName = au.getName();
-    String err = null;
-    Configuration v1 = au.getConfiguration();
-    AuConfiguration v1Config = new AuConfiguration().auId(au.getAuId());
-    try {
-      if(v1 != null) {
-        v1.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
-            .forEach(key -> v1Config.putAuConfigItem(key, v1.get(key)));
-        v2Config = cfgAusApiClient.getAuConfig(au.getAuId());
-        if(v2Config.equals(v1Config)) {
-          log.info("Au Config is the same");
-        }
-        else {
-          err= auName +": V2 Au Configuration does not match.";
-          log.error(err);
-        }
-      }
-    }
-    catch (Exception ex) {
-      err = auName + ": Attempt to check v2 Au configuration failed: " + ex.getMessage();
-      log.error(err, ex);
-    }
-    if(err != null) {
-      addError(err);
-      terminated = true;
-      //what should we do to propagate this up.
-    }
-  }
-
-
-  /**
-   *  Make a synchronous rest call to V2 configuration service to add the V1 Au Agreement Table.
-   *
-   * @param au the archival unit to be updated.
-   */
-  private void moveAuAgreements(ArchivalUnit au) {
-    AuAgreements v1AuAgreements = idManager.findAuAgreements(au);
-    String auName = au.getName();
-    if (v1AuAgreements != null) {
-      try {
-        cfgAusApiClient.patchAuAgreements(au.getAuId(), v1AuAgreements.getPrunedBean(au.getAuId()),
-            makeCookie());
-        log.info(auName + ": Successfully moved AU Agreements.");
-      }
-      catch (Exception ex) {
-        String err = auName + ": Attempt to move au agreements failed: " + ex.getMessage();
-        log.error(err, ex);
-        addError(err);
-      }
-    }
-    else {
-      log.warning("No Au agreements found for au.");
-    }
-  }
-  private void checkAuAgreements(ArchivalUnit au) {
-    AuAgreements v1 = idManager.findAuAgreements(au);
-    AuAgreementsBean v1Bean = v1.getPrunedBean(au.getAuId());
-    String auName = au.getName();
-    String err = null;
-    if (v1 != null) {
-      try {
-        final String json = cfgAusApiClient.getAuAgreements(au.getAuId());
-        AuAgreementsBean v2Bean = new Gson().fromJson(json, AuAgreementsBean.class);
-        if(v2Bean.equals(v1Bean)) {
-          log.info("V2 Au Agreements are the same");
-        }
-        else {
-          err= auName +": V2 Au Agreements do not match.";
-          log.error(err);
-        }
-      }
-      catch (Exception ex) {
-        err = auName + ": Attempt to check v2 au agreements failed: " + ex.getMessage();
-        log.error(err, ex);
-      }
-    }
-    else {
-      log.warning("No Au agreements found for au in V1");
-    }
-    if(err != null) {
-      addError(err);
-      terminated = true;
-      //what should we do to propagate this up.
-    }
-  }
-
-
-
-  /**
-   * Make a synchronous rest call to V2 configuration service to add the V1 Au Suspect Urls list.
-   *
-   * @param au the archival unit to be updated.
-   */
-  private void moveAuSuspectUrlVersions(ArchivalUnit au) {
-    AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(au);
-    String auName = au.getName();
-    if (asuv != null) {
-      try {
-        cfgAusApiClient.putAuSuspectUrlVersions(au.getAuId(), asuv.getBean(au.getAuId()),
-            makeCookie());
-        log.info(auName + ": Successfully moved AU Suspect Url Versions.");
-      }
-      catch (Exception ex) {
-        String err =
-            auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
-        log.error(err, ex);
-        addError(err);
-      }
-    }
-    else {
-      log.warning(auName + ": No Au suspect url versions found.");
-    }
-  }
-
-  private void checkAuSuspectUrlVersions(ArchivalUnit au) {
-    String auName = au.getName();
-    String err = null;
-
-    AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(au);
-    final Collection<SuspectUrlVersion> suspectList = asuv.getSuspectList();
-    if (asuv != null) {
-      AuSuspectUrlVersionsBean v1Bean = asuv.getBean(au.getAuId());
-      try {
-        final String json = cfgAusApiClient.getAuSuspectUrlVersions(au.getAuId());
-        AuSuspectUrlVersionsBean v2Bean=new Gson().fromJson(json, AuSuspectUrlVersionsBean.class);
-        if(v2Bean.equals(v1Bean)) {
-          log.info("V2 Au Suspect Url Versions are the same");
-        }
-        else {
-          err= auName +": V2 Au Suspect Url Versions do not match.";
-          log.error(err);
-          terminated = true;
-        }
-      }
-      catch (Exception ex) {
-        err =auName + ": Attempt to check au suspect url versions failed: " + ex.getMessage();
-        log.error(err, ex);
-      }
-    }
-    else {
-      log.info(auName + ": No v1 Au suspect url versions found.");
-    }
-    if(err != null) {
-      addError(err);
-      //what should we do to propagate this up.
-    }
-  }
-
-
-
-  /**
-   * Make a synchronous rest call to V2 configuration service to add the V1 Au NoAuPeerSet list.
-   *
-   * @param au the archival unit to be updated.
-   */
-  private void moveNoAuPeerSet(ArchivalUnit au) {
-    DatedPeerIdSet noAuPeerSet = pollManager.getNoAuPeerSet(au);
-    String auName = au.getName();
-    if (noAuPeerSet instanceof DatedPeerIdSetImpl) {
-      try {
-        cfgAusApiClient.putNoAuPeers(au.getAuId(),
-            ((DatedPeerIdSetImpl) noAuPeerSet).getBean(au.getAuId()), makeCookie());
-        log.info(auName + ": Successfully moved no Au peers.");
-      }
-      catch (Exception ex) {
-        String err = auName + ": Attempt to move no AU peers failed: " + ex.getMessage();
-        log.error(err, ex);
-        addError(err);
-      }
-    }
-    else {
-      log.info(auName + ": No Au peer set found for au");
-    }
-  }
-
-  private void checkNoAuPeerSet(ArchivalUnit au) {
-    DatedPeerIdSet v1 = pollManager.getNoAuPeerSet(au);
-    String auName = au.getName();
-    String err = null;
-
-    if (v1 instanceof DatedPeerIdSetImpl) {
-      try {
-        DatedPeerIdSetBean v1Bean = ((DatedPeerIdSetImpl) v1).getBean(au.getAuId());
-        String json=cfgAusApiClient.getNoAuPeers(au.getAuId());
-        DatedPeerIdSetBean v2Bean =  new Gson().fromJson(json, DatedPeerIdSetBean.class);
-        if(v2Bean.equals(v1Bean)) {
-          log.info("V2 No AU PeerSet are the same");
-        }
-        else {
-          err= auName +": V2 No AU PeerSet do not match.";
-          log.error(err);
-        }
-        log.info(auName + ": Successfully checked no Au peer set.");
-      }
-      catch (Exception ex) {
-        err = auName + ": Attempt to check no AU peer set failed: " + ex.getMessage();
-        log.error(err, ex);
-        terminated = true;
-      }
-    }
-    else {
-      log.warning(auName + ": No Au peer set found for au");
-    }
-    if(err != null) {
-      addError(err);
-    }
-  }
-
-
-  /**
-   * Make a synchronous rest call to configuration service to add state info for an au.
-   *
-   * @param au The ArchivalUnit  to move
-   */
-  private void moveAuState(ArchivalUnit au) {
-    AuState v1State = AuUtil.getAuState(au);
-    String auName = au.getName();
-    if (v1State != null) {
-      try {
-        V2AuStateBean v2State = new V2AuStateBean(v1State);
-        cfgAusApiClient.patchAuState(au.getAuId(), v2State.toMap(), makeCookie());
-        log.info(auName + ": Successfully moved AU State.");
-      }
-      catch (Exception ex) {
-        String err = auName + ": Attempt to move au state failed: " + ex.getMessage();
-        log.error(err, ex);
-        addError(err);
-      }
-    }
-    else {
-      log.warning(auName + ": No State information found for au");
-    }
-  }
-
-  private void checkAuState(ArchivalUnit au) {
-    AuState v1 = AuUtil.getAuState(au);
-    String auName = au.getName();
-    String err = null;
-    if (v1 != null) {
-      try {
-        V2AuStateBean v1Bean=new V2AuStateBean(v1);
-        String json = cfgAusApiClient.getAuState(au.getAuId());
-        V2AuStateBean v2Bean = new Gson().fromJson(json, V2AuStateBean.class);
-        if(v2Bean.equals(v1Bean)) {
-          log.info("V2 AuState is the same");
-        }
-        else {
-          err= auName +": V2 AuState does not match.";
-          log.error(err);
-        }
-      }
-      catch (ApiException apie) {
-        err = auName + ": Attempt to check au state failed: " + apie.getCode() +
-            "- " + apie.getMessage();
-        log.error(err, apie);
-      }
-    }
-    else {
-      log.warning(auName + ": No State information found for au");
-    }
-    if(err != null) {
-      addError(err);
-      terminated = true;
-      //what should we do to propagate this up.
-    }
-  }
-
-  private String makeCookie() {
-    return cliendId + "-" + ++reqId;
-  }
 
   void logErrorBody(Response response) {
     try {
