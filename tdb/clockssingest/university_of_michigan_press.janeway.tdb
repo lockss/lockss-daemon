@@ -2,17 +2,13 @@
 
   publisher <
     name = University of Westminster ;
-    #name = University of Michigan ;
     #info[contract] = 2018 ;
     #info[tester] = 5 ;
     #info[poller] = 2 ;
     info[platform] = Janeway. LXPLUG-2156. No permission URL for Silk Road.
   >
- 
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.janeway.universityofmichigan.ClockssUniversityofMichiganPlugin
-    #param[oai_granularity] = YYYY-MM-DD
-
+    provider = University of Michigan Press
+    plugin = org.lockss.plugin.janeway.universityofmichigan.ClockssUniversityofMichiganPlugin
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
   {
@@ -22,6 +18,7 @@
         eissn = 2732-4184
     >
 
+    comment[publisher] = University of Westminster
     param[base_url] = https://activetravelstudies.org/ #API works encoded & = &amp;
 
     au < manifest ; exists ; 2021 ; 1 ; Active Travel Studies Volume 2021 ; 2021 ; >
@@ -36,6 +33,7 @@
         eissn = 2633-4321
     >
 
+    comment[publisher] = University of Westminster
     param[base_url] = https://www.anthropocenes.net/  #API works encoded & = &amp;
 
     au < manifest ; exists ; 2020 ; 1 ; Anthropocenes – Human, Inhuman, Posthuman Volume 2020 ; 2020 ; >
@@ -51,6 +49,7 @@
         eissn = 1748-944X
     >
 
+    comment[publisher] = University of Westminster
     param[base_url] = https://www.entsportslawjournal.com/ #API works encoded & = &amp;
 
     au < doNotProcess ; exists ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
@@ -83,6 +82,7 @@
         eissn = 2634-0488
     >
 
+    comment[publisher] = University of Westminster
     param[base_url] = https://delibdemjournal.org/   #API works encoded & = &amp;
 
     au < doNotProcess ; exists ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; >
@@ -113,6 +113,7 @@
         eissn = 2631-682X
     >
 
+    comment[publisher] = University of Westminster
     param[base_url] = https://silkroadjournal.online/
     #Manifest page exists. https://silkroadjournal.online/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=2019-01-01&amp;until=2019-12-31
     #Permission page missing. https://silkroadjournal.online/clockss
@@ -131,6 +132,7 @@
         eissn = 1744-6716
     >
 
+    comment[publisher] = University of Westminster
     param[base_url] = https://www.westminsterpapers.org/
 
     au < doNotProcess ; exists ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; >
