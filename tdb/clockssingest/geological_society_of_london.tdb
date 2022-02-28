@@ -85,7 +85,7 @@
     au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2019 ; Geochemistry: Exploration, Environment, Analysis Volume 19 ; 19 ; https://geea.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; https://geea.lyellcollection.org/ ; >
     au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 ; https://geea.lyellcollection.org/ ; >
-    au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 ; 22 ; https://geea.lyellcollection.org/ ; >
+    au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 ; 22 ; https://geea.lyellcollection.org/ ; >
 
   }
 
@@ -963,7 +963,7 @@
       au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2019 ; Petroleum Geoscience Volume 25 ; 25 ; https://pg.lyellcollection.org/ ; >
       au < gsl.ClockssGSLDrupalPlugin ; deepCrawl ; exists ; 2020 ; Petroleum Geoscience Volume 26 ; 26 ; https://pg.lyellcollection.org/ ; >
       au < gsl.ClockssGSLDrupalPlugin ; crawling ; exists ; 2021 ; Petroleum Geoscience Volume 27 ; 27 ; https://pg.lyellcollection.org/ ; >
-      au < gsl.ClockssGSLDrupalPlugin ; expected ; exists ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; https://pg.lyellcollection.org/ ; >
+      au < gsl.ClockssGSLDrupalPlugin ; manifest ; exists ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; https://pg.lyellcollection.org/ ; >
 
   }
 
