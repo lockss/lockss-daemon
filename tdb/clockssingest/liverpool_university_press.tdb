@@ -353,8 +353,8 @@
     au < manifest ; exists ; 2000 ; Contemporary French Civilization Volume 24 ; 24 ; >
     au < manifest ; exists ; 2001 ; Contemporary French Civilization Volume 25 ; 25 ; >
     au < manifest ; exists ; 2002 ; Contemporary French Civilization Volume 26 ; 26 ; >
-    au < exists ; exists ; 2003 ; Contemporary French Civilization Volume 27 ; 27 ; >
-    au < exists ; exists ; 2004 ; Contemporary French Civilization Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2003 ; Contemporary French Civilization Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2004 ; Contemporary French Civilization Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2005 ; Contemporary French Civilization Volume 29 ; 29 ; >
     au < doNotProcess ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 ; >
     au < doNotProcess ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 ; >
@@ -372,7 +372,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Contemporary French Civilization Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Contemporary French Civilization Volume 44 ; 44 ; >
     au < testing ; exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; >
-    au < exists ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; >
     au < expected ; exists ; 2022 ; Contemporary French Civilization Volume 47 ; 47 ; >
 
   }
@@ -388,7 +388,7 @@
     param[journal_id] = dap
     #Published 2021-present
 
-    au < exists ; exists ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 ; >
+    au < manifest ; exists ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 ; >
     au < expected ; exists ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 ; >
 
   }
@@ -404,30 +404,30 @@
     param[journal_id] = eci
     #Published 1986-present
 
-    au < exists ; exists ; 1986 ; Eighteenth-Century Ireland Volume 1 ; 1 ; >
-    au < exists ; exists ; 1987 ; Eighteenth-Century Ireland Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1986 ; Eighteenth-Century Ireland Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1987 ; Eighteenth-Century Ireland Volume 2 ; 2 ; >
     au < testing ; exists ; 1988 ; Eighteenth-Century Ireland Volume 3 ; 3 ; >
-    au < exists ; exists ; 1989 ; Eighteenth-Century Ireland Volume 4 ; 4 ; >
-    au < exists ; exists ; 1990 ; Eighteenth-Century Ireland Volume 5 ; 5 ; >
-    au < exists ; exists ; 1991 ; Eighteenth-Century Ireland Volume 6 ; 6 ; >
-    au < exists ; exists ; 1992 ; Eighteenth-Century Ireland Volume 7 ; 7 ; >
-    au < exists ; exists ; 1993 ; Eighteenth-Century Ireland Volume 8 ; 8 ; >
-    au < exists ; exists ; 1994 ; Eighteenth-Century Ireland Volume 9 ; 9 ; >
-    au < exists ; exists ; 1995 ; Eighteenth-Century Ireland Volume 10 ; 10 ; >
-    au < exists ; exists ; 1996 ; Eighteenth-Century Ireland Volume 11 ; 11 ; >
-    au < exists ; exists ; 1997 ; Eighteenth-Century Ireland Volume 12 ; 12 ; >
-    au < exists ; exists ; 1998 ; Eighteenth-Century Ireland Volume 13 ; 13 ; >
-    au < exists ; exists ; 1999 ; Eighteenth-Century Ireland Volume 14 ; 14 ; >
-    au < exists ; exists ; 2000 ; Eighteenth-Century Ireland Volume 15 ; 15 ; >
-    au < exists ; exists ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 ; >
-    au < exists ; exists ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 ; >
-    au < exists ; exists ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 ; >
-    au < exists ; exists ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 ; >
-    au < exists ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
-    au < exists ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
-    au < exists ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
-    au < exists ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
-    au < exists ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1989 ; Eighteenth-Century Ireland Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1990 ; Eighteenth-Century Ireland Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1991 ; Eighteenth-Century Ireland Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1992 ; Eighteenth-Century Ireland Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1993 ; Eighteenth-Century Ireland Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1994 ; Eighteenth-Century Ireland Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1995 ; Eighteenth-Century Ireland Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1996 ; Eighteenth-Century Ireland Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1997 ; Eighteenth-Century Ireland Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1998 ; Eighteenth-Century Ireland Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1999 ; Eighteenth-Century Ireland Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2000 ; Eighteenth-Century Ireland Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; >
     au < exists ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; >
     au < exists ; exists ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Eighteenth-Century Ireland Volume Special_Issue ; Special_Issue ; >
