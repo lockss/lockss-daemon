@@ -703,7 +703,7 @@
 
       param[journal_id] = mediterranean-quarterly
 
-      au < notReady ; exists ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; > #no permission statement on manifest page
+      au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; > #no permission statement on manifest page
       au < notReady ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; > #no permission statement on manifest page
       au < notReady ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; > #no permission statement on manifest page
 
@@ -1215,8 +1215,8 @@
       param[journal_id] = world-policy-journal
       #no permission statement on manifest page
 
-      au < notReady ; exists ; 2014 ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
-      au < notReady ; exists ; 2015 ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
       au < notReady ; exists ; 2016 ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
       au < notReady ; exists ; 2017 ; 2017 ; World Policy Journal Volume 34 ; 34 ; >
       au < notReady ; exists ; 2018 ; 2018 ; World Policy Journal Volume 35 ; 35 ; >
