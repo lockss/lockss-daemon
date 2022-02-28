@@ -384,9 +384,9 @@
     au < ready ; 1895 ; Statute Compilations 1895 ; 1895 ; https://www.govinfo.gov/ >
     au < manifest ; 1900 ; Statute Compilations 1900 ; 1900 ; https://www.govinfo.gov/ >
     au < ready ; 1903 ; Statute Compilations 1903 ; 1903 ; https://www.govinfo.gov/ >
-    au < manifest ; 1907 ; Statute Compilations 1907 ; 1907 ; https://www.govinfo.gov/ >
+    au < ready ; 1907 ; Statute Compilations 1907 ; 1907 ; https://www.govinfo.gov/ >
     au < ready ; 1908 ; Statute Compilations 1908 ; 1908 ; https://www.govinfo.gov/ >
-    au < manifest ; 1912 ; Statute Compilations 1912 ; 1912 ; https://www.govinfo.gov/ >
+    au < ready ; 1912 ; Statute Compilations 1912 ; 1912 ; https://www.govinfo.gov/ >
     au < ready ; 1914 ; Statute Compilations 1914 ; 1914 ; https://www.govinfo.gov/ >
     au < manifest ; 1916 ; Statute Compilations 1916 ; 1916 ; https://www.govinfo.gov/ >
 
@@ -395,7 +395,7 @@
     au < ready ; 1920 ; Statute Compilations 1920 ; 1920 ; https://www.govinfo.gov/ >
     au < manifest ; 1921 ; Statute Compilations 1921 ; 1921 ; https://www.govinfo.gov/ >
     au < ready ; 1922 ; Statute Compilations 1922 ; 1922 ; https://www.govinfo.gov/ >
-    au < manifest ; 1923 ; Statute Compilations 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < ready ; 1923 ; Statute Compilations 1923 ; 1923 ; https://www.govinfo.gov/ >
     au < released ; 1926 ; Statute Compilations 1926 ; 1926 ; https://www.govinfo.gov/ >
     au < released ; 1927 ; Statute Compilations 1927 ; 1927 ; https://www.govinfo.gov/ >
     au < ready ; 1930 ; Statute Compilations 1930 ; 1930 ; https://www.govinfo.gov/ >
@@ -430,15 +430,15 @@
     au < released ; 1966 ; Statute Compilations 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < ready ; 1967 ; Statute Compilations 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < released ; 1968 ; Statute Compilations 1968 ; 1968 ; https://www.govinfo.gov/ >
-    au < manifest ; 1969 ; Statute Compilations 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < ready ; 1969 ; Statute Compilations 1969 ; 1969 ; https://www.govinfo.gov/ >
     au < released ; 1970 ; Statute Compilations 1970 ; 1970 ; https://www.govinfo.gov/ >
-    au < manifest ; 1971 ; Statute Compilations 1971 ; 1971 ; https://www.govinfo.gov/ >
+    au < ready ; 1971 ; Statute Compilations 1971 ; 1971 ; https://www.govinfo.gov/ >
     au < manifest ; 1972 ; Statute Compilations 1972 ; 1972 ; https://www.govinfo.gov/ >
     au < manifest ; 1973 ; Statute Compilations 1973 ; 1973 ; https://www.govinfo.gov/ >
     au < released ; 1974 ; Statute Compilations 1974 ; 1974 ; https://www.govinfo.gov/ >
     au < released ; 1975 ; Statute Compilations 1975 ; 1975 ; https://www.govinfo.gov/ >
     au < released ; 1976 ; Statute Compilations 1976 ; 1976 ; https://www.govinfo.gov/ >
-    au < manifest ; 1977 ; Statute Compilations 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < ready ; 1977 ; Statute Compilations 1977 ; 1977 ; https://www.govinfo.gov/ >
     au < released ; 1978 ; Statute Compilations 1978 ; 1978 ; https://www.govinfo.gov/ >
     au < ready ; 1979 ; Statute Compilations 1979 ; 1979 ; https://www.govinfo.gov/ >
     au < released ; 1980 ; Statute Compilations 1980 ; 1980 ; https://www.govinfo.gov/ >
@@ -449,7 +449,7 @@
     au < manifest ; 1985 ; Statute Compilations 1985 ; 1985 ; https://www.govinfo.gov/ > #empty? site map see https://www.govinfo.gov/sitemap/COMPS_1985_sitemap.xml
     au < released ; 1986 ; Statute Compilations 1986 ; 1986 ; https://www.govinfo.gov/ >
     au < released ; 1987 ; Statute Compilations 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < manifest ; 1988 ; Statute Compilations 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < ready ; 1988 ; Statute Compilations 1988 ; 1988 ; https://www.govinfo.gov/ >
     au < ready ; 1989 ; Statute Compilations 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < released ; 1990 ; Statute Compilations 1990 ; 1990 ; https://www.govinfo.gov/ >
     au < ready ; 1991 ; Statute Compilations 1991 ; 1991 ; https://www.govinfo.gov/ >
@@ -543,7 +543,7 @@
 
 
     au < released ; 2019 ; Economic Indicators 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < manifest ; 2020 ; Economic Indicators 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < ready ; 2020 ; Economic Indicators 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < manifest ; 2021 ; Economic Indicators 2021 ; 2021 ; https://www.govinfo.gov/ >
 
   }
@@ -791,9 +791,9 @@
     au < ready ; 1961 ; Public Papers of the Presidents of the United States 1961 ; 1961 ; https://www.govinfo.gov/ >
     au < ready ; 1962 ; Public Papers of the Presidents of the United States 1962 ; 1962 ; https://www.govinfo.gov/ >
     au < ready ; 1963 ; Public Papers of the Presidents of the United States 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < manifest ; 1964 ; Public Papers of the Presidents of the United States 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < manifest ; 1965 ; Public Papers of the Presidents of the United States 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < manifest ; 1966 ; Public Papers of the Presidents of the United States 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < ready ; 1964 ; Public Papers of the Presidents of the United States 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < ready ; 1965 ; Public Papers of the Presidents of the United States 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < ready ; 1966 ; Public Papers of the Presidents of the United States 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < ready ; 1967 ; Public Papers of the Presidents of the United States 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < ready ; 1968 ; Public Papers of the Presidents of the United States 1968 ; 1968 ; https://www.govinfo.gov/ >
     au < ready ; 1969 ; Public Papers of the Presidents of the United States 1969 ; 1969 ; https://www.govinfo.gov/ >
