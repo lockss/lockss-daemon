@@ -1822,6 +1822,7 @@
 
     param[journal_issn] = 1059-5422
     comment[journal_id] = cr
+    #For AUs marked notReady see LXPLUG-2108
 
     au < manifest ; exists ; 1991 ; Competitiveness Review: An International Business Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; >
@@ -1835,23 +1836,23 @@
     au < doNotProcess ; doNotProcess ; 2000 ; Competitiveness Review: An International Business Journal Volume 10 ; 10 ; >
     au < notReady ; exists ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < notReady ; exists ; 2002 ; Competitiveness Review: An International Business Journal Volume 12 ; 12 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
-    au < notReady ; exists ; 2003 ; Competitiveness Review: An International Business Journal Volume 13 ; 13 ; >
-    au < notReady ; exists ; 2004 ; Competitiveness Review: An International Business Journal Volume 14 ; 14 ; >
-    au < notReady ; exists ; 2005 ; Competitiveness Review: An International Business Journal Volume 15 ; 15 ; >
-    au < notReady ; exists ; 2006 ; Competitiveness Review: An International Business Journal Volume 16 ; 16 ; >
-    au < notReady ; exists ; 2007 ; Competitiveness Review: An International Business Journal Volume 17 ; 17 ; >
-    au < notReady ; exists ; 2008 ; Competitiveness Review: An International Business Journal Volume 18 ; 18 ; >
-    au < notReady ; exists ; 2009 ; Competitiveness Review: An International Business Journal Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2010 ; Competitiveness Review: An International Business Journal Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2011 ; Competitiveness Review: An International Business Journal Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2012 ; Competitiveness Review: An International Business Journal Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2013 ; Competitiveness Review: An International Business Journal Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2014 ; Competitiveness Review: An International Business Journal Volume 24 ; 24 ; >
+    au < notReady ; exists ; 2003 ; Competitiveness Review: An International Business Journal Volume 13 ; 13 ; > #500 error 
+    au < notReady ; exists ; 2004 ; Competitiveness Review: An International Business Journal Volume 14 ; 14 ; > #500 error 
+    au < notReady ; exists ; 2005 ; Competitiveness Review: An International Business Journal Volume 15 ; 15 ; > #500 error 
+    au < notReady ; exists ; 2006 ; Competitiveness Review: An International Business Journal Volume 16 ; 16 ; > #500 error 
+    au < notReady ; exists ; 2007 ; Competitiveness Review: An International Business Journal Volume 17 ; 17 ; > #500 error 
+    au < notReady ; exists ; 2008 ; Competitiveness Review: An International Business Journal Volume 18 ; 18 ; > #500 error 
+    au < notReady ; exists ; 2009 ; Competitiveness Review: An International Business Journal Volume 19 ; 19 ; > #500 error 
+    au < crawling ; exists ; 2010 ; Competitiveness Review: An International Business Journal Volume 20 ; 20 ; > #500 error 
+    au < crawling ; exists ; 2011 ; Competitiveness Review: An International Business Journal Volume 21 ; 21 ; > #500 error 
+    au < crawling ; exists ; 2012 ; Competitiveness Review: An International Business Journal Volume 22 ; 22 ; > #500 error 
+    au < crawling ; exists ; 2013 ; Competitiveness Review: An International Business Journal Volume 23 ; 23 ; > #500 error 
+    au < crawling ; exists ; 2014 ; Competitiveness Review: An International Business Journal Volume 24 ; 24 ; > #500 error 
     au < doNotProcess ; doNotProcess ; 2015 ; Competitiveness Review: An International Business Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Competitiveness Review: An International Business Journal Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Competitiveness Review: An International Business Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Competitiveness Review: An International Business Journal Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2019 ; Competitiveness Review: An International Business Journal Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2019 ; Competitiveness Review: An International Business Journal Volume 29 ; 29 ; > #500 error 
     au < deepCrawl ; exists ; 2020 ; Competitiveness Review: An International Business Journal Volume 30 ; 30 ; >
     au < notReady ; exists ; 2021 ; Competitiveness Review: An International Business Journal Volume 31 ; 31 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < manifest ; exists ; 2022 ; Competitiveness Review: An International Business Journal Volume 32 ; 32 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
@@ -3618,7 +3619,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Industrial Robot: The international journal of industrial and service robotics Volume 45 ; 45 ; >
     au < crawling ; exists ; 2019 ; Industrial Robot: The international journal of industrial and service robotics Volume 46 ; 46 ; >
     au < crawling ; exists ; 2020 ; Industrial Robot: The international journal of industrial and service robotics Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2021 ; Industrial Robot: The international journal of industrial and service robotics Volume 48 ; 48 ; >
+    au < ready ; exists ; 2021 ; Industrial Robot: The international journal of industrial and service robotics Volume 48 ; 48 ; >
     au < manifest ; exists ; 2022 ; Industrial Robot: The international journal of industrial and service robotics Volume 49 ; 49 ; >
 
   }
@@ -9261,7 +9262,7 @@
     au < manifest ; exists ; 2004 ; Kybernetes Volume 33 ; 33 ; >
     au < crawling ; exists ; 2005 ; Kybernetes Volume 34 ; 34 ; >
     au < crawling ; exists ; 2006 ; Kybernetes Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2007 ; Kybernetes Volume 36 ; 36 ; >
+    au < ready ; exists ; 2007 ; Kybernetes Volume 36 ; 36 ; >
     au < crawling ; exists ; 2008 ; Kybernetes Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Kybernetes Volume 38 ; 38 ; >
     au < crawling ; exists ; 2010 ; Kybernetes Volume 39 ; 39 ; >
