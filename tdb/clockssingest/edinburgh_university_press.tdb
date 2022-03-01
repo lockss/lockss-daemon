@@ -516,7 +516,7 @@
 
     param[journal_id] = cfs
 
-    au < frozen ; exists ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2020 ; Crime Fiction Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Crime Fiction Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2022 ; Crime Fiction Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
 
@@ -533,8 +533,8 @@
 
     param[journal_id] = gels
 
-    au < frozen ; exists ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < frozen ; exists ; 2021 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2020 ; Global Energy Law and Sustainability Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2021 ; Global Energy Law and Sustainability Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2022 ; Global Energy Law and Sustainability Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
 
   }
@@ -582,8 +582,8 @@
     au < manifest ; exists ; 2017 ; Library and Information History Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2018 ; Library and Information History Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2019 ; Library and Information History Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
-    au < frozen ; exists ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
-    au < frozen ; exists ; 2021 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2020 ; Library and Information History Volume 36 ; 36 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Library and Information History Volume 37 ; 37 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2022 ; Library and Information History Volume 38 ; 38 ; https://www.euppublishing.com/ ; >
 
   }
@@ -824,7 +824,7 @@
      au < finished ; finished ; 2002 ; Gothic Studies Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2003 ; Gothic Studies Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2004 ; Gothic Studies Volume 6 ; 6 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
-     au < frozen ; exists ; 2005 ; Gothic Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; >
+     au < finished ; manifest ; 2005 ; Gothic Studies Volume 7 ; 7 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2006 ; Gothic Studies Volume 8 ; 8 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2007 ; Gothic Studies Volume 9 ; 9 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2008 ; Gothic Studies Volume 10 ; 10 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
@@ -1092,7 +1092,7 @@
     au < finished ; finished ; 2017 ; Journal of Beckett Studies Volume 26 ; 26 ; http://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Journal of Beckett Studies Volume 27 ; 27 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2019 ; Journal of Beckett Studies Volume 28 ; 28 ; https://www.euppublishing.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Journal of Beckett Studies Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
+    au < finished ; manifest ; 2020 ; Journal of Beckett Studies Volume 29 ; 29 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Journal of Beckett Studies Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2022 ; Journal of Beckett Studies Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
 
@@ -2095,7 +2095,7 @@
        #move to Edinburgh University Press (EUP) in 2017
    
        au < finished ; manifest ; 1965-1967 ; Costume Volume 1 ; 1 ; https://www.euppublishing.com/ ; reingest1.clockss.org:8082 >
-       au < frozen ; exists ; 1968 ; Costume Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+       au < finished ; manifest ; 1968 ; Costume Volume 2 ; 2 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
        au < finished ; manifest ; 1969 ; Costume Volume 3 ; 3 ; https://www.euppublishing.com/ ; reingest2.clockss.org:8085 >
        au < finished ; manifest ; 1970 ; Costume Volume 4 ; 4 ; https://www.euppublishing.com/ ; reingest3.clockss.org:8083 >
        au < finished ; manifest ; 1971 ; Costume Volume 5 ; 5 ; https://www.euppublishing.com/ ; reingest4.clockss.org:8082 >
