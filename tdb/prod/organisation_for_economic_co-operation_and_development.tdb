@@ -139,21 +139,19 @@
 
     }
 
-    {
-
-      title <
-        name = Gas Market Reports ;
-        issn = 2788-6824
-      >
-
-        param[topic] = energy
-        param[journal_issn] = 27886824
-        param[journal_dir] = gas-market-report
-        param[journal_id] = 6a6dd6f7-en
-
-        au < testing ; 2021 ; Gas Market Reports Volume 2021 ; 2021 >
-        au < testing ; 2022 ; Gas Market Reports Volume 2022 ; 2022 >
-
-    }
+    #{ # this looks like a journal, but is in working papers
+    #
+    #  title <
+    #    name = Gas Market Reports ;
+    #    issn = 2788-6824
+    #  >
+    #    param[topic] = energy
+    #    param[journal_issn] = 27886824
+    #    param[journal_dir] = gas-market-report
+    #    param[journal_id] = 6a6dd6f7-en
+    #
+    #    au < testing ; 2021 ; Gas Market Reports Volume 2021 ; 2021 >
+    #    au < testing ; 2022 ; Gas Market Reports Volume 2022 ; 2022 >
+    #}
 
 }
