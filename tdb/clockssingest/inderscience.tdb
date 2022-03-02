@@ -1463,7 +1463,7 @@
       au < finished ; crawling ; 2020 ; International Journal of Business and Globalisation Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; International Journal of Business and Globalisation Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; International Journal of Business and Globalisation Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; International Journal of Business and Globalisation Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Business and Globalisation Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; International Journal of Business and Globalisation Volume 29 ; 29 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Business and Globalisation Volume 30 ; 30 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Business and Globalisation Volume 31 ; 31 ; https://www.inderscienceonline.com/ ; >
@@ -1496,7 +1496,7 @@
       au < finished ; finished ; 2018 ; International Journal of Business and Systems Research Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; International Journal of Business and Systems Research Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of Business and Systems Research Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; International Journal of Business and Systems Research Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Business and Systems Research Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2022 ; International Journal of Business and Systems Research Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1544,7 +1544,7 @@
       au < finished ; finished ; 2018 ; International Journal of Business Continuity and Risk Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; International Journal of Business Continuity and Risk Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; International Journal of Business Continuity and Risk Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; International Journal of Business Continuity and Risk Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Business Continuity and Risk Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2022 ; International Journal of Business Continuity and Risk Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1571,7 +1571,7 @@
       au < finished ; finished ; 2017 ; International Journal of Business Environment Volume 9 ; 9 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Business Environment Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; International Journal of Business Environment Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2021 ; International Journal of Business Environment Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Business Environment Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2022 ; International Journal of Business Environment Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1609,8 +1609,8 @@
       au < finished ; crawling ; 2020 ; International Journal of Business Excellence Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of Business Excellence Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; International Journal of Business Excellence Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2021 ; International Journal of Business Excellence Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2021 ; International Journal of Business Excellence Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Business Excellence Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; International Journal of Business Excellence Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Business Excellence Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Business Excellence Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Business Excellence Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; >
@@ -1665,7 +1665,7 @@
       au < finished ; finished ; 2017 ; International Journal of Business Governance and Ethics Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Business Governance and Ethics Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; International Journal of Business Governance and Ethics Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; International Journal of Business Governance and Ethics Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Business Governance and Ethics Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2022 ; International Journal of Business Governance and Ethics Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1716,8 +1716,8 @@
       au < finished ; crawling ; 2020 ; International Journal of Business Information Systems Volume 33 ; 33 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of Business Information Systems Volume 34 ; 34 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of Business Information Systems Volume 35 ; 35 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; International Journal of Business Information Systems Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2021 ; International Journal of Business Information Systems Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Business Information Systems Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; International Journal of Business Information Systems Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021 ; International Journal of Business Information Systems Volume 38 ; 38 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Business Information Systems Volume 39 ; 39 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Business Information Systems Volume 40 ; 40 ; https://www.inderscienceonline.com/ ; >
@@ -1759,7 +1759,7 @@
       au < finished ; crawling ; 2020 ; International Journal of Business Innovation and Research Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; International Journal of Business Innovation and Research Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; International Journal of Business Innovation and Research Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2021 ; International Journal of Business Innovation and Research Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Business Innovation and Research Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2021 ; International Journal of Business Innovation and Research Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2021 ; International Journal of Business Innovation and Research Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Business Innovation and Research Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; >
