@@ -11,7 +11,7 @@
 
     implicit < status ; year ; name ; param[pub_path] ; param[pub_id] >
 
-    #{
+    #{ # #TODO there are many many AUs here, scrape or get a list from oecd
     #  title <
     #    name = OECD Economic Surveys ;
     #    issn = ????-????
@@ -75,7 +75,6 @@
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-487 ; environment/test-no-487-in-vitro-mammalian-cell-micronucleus-test ; 9789264264861-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-489 ; environment/test-no-489-in-vivo-mammalian-alkaline-comet-assay ; 9789264264885-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-490 ; environment/test-no-490-in-vitro-mammalian-cell-gene-mutation-tests-using-the-thymidine-kinase-gene ; 9789264264908-en >
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-403 ; environment/test-no-403-acute-inhalation-toxicity ; 9789264070608-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-404 ; environment/test-no-404-acute-dermal-irritation-corrosion ; 9789264242678-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-407 ; environment/test-no-407-repeated-dose-28-day-oral-toxicity-study-in-rodents ; 9789264070684-en >
@@ -96,7 +95,6 @@
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-460 ; environment/test-no-460-fluorescein-leakage-test-method-for-identifying-ocular-corrosives-and-severe-irritants ; 9789264185401-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-473 ; environment/test-no-473-in-vitro-mammalian-chromosomal-aberration-test ; 9789264264649-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-493 ; environment/test-no-493-performance-based-test-guideline-for-human-recombinant-estrogen-receptor-hrer-in-vitro-assays-to-detect-chemicals-with-er-binding-affinity ; 9789264242623-en >
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-groups-on-short-term-and-long-term-toxicology ; 9789264035447-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-401 ; environment/test-no-401-acute-oral-toxicity ; 9789264040113-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-409 ; environment/test-no-409-repeated-dose-90-day-oral-toxicity-study-in-non-rodents ; 9789264070721-en >
@@ -119,8 +117,6 @@
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-486 ; environment/test-no-486-unscheduled-dna-synthesis-uds-test-with-mammalian-liver-cells-in-vivo ; 9789264071520-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-411 ; environment/test-no-411-subchronic-dermal-toxicity-90-day-study ; 9789264070769-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-410 ; environment/test-no-410-repeated-dose-dermal-toxicity-21-28-day-study ; 9789264070745-en >
-
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals revised ; environment/revised-introduction-to-the-oecd-guidelines-for-testing-of-chemicals-section-3 ; 9789264030213-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-302 ; environment/test-no-302b-inherent-biodegradability-zahn-wellens-evpa-test ; 9789264070387-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-302 ; environment/test-no-302c-inherent-biodegradability-modified-miti-test-ii ; 9789264070400-en >
@@ -141,11 +137,9 @@
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-318 ; environment/test-no-318-dispersion-stability-of-nanomaterials-in-simulated-environmental-media ; 9789264284142-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-319 ; environment/test-no-319a-determination-of-in-vitro-intrinsic-clearance-using-cryopreserved-rainbow-trout-hepatocytes-rt-hep ; 9789264303218-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-319 ; environment/test-no-319b-determination-of-in-vitro-intrinsic-clearance-using-rainbow-trout-liver-s9-sub-cellular-fraction-rt-s9 ; 9789264303232-en >
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-301 ; environment/test-no-301-ready-biodegradability ; 9789264070349-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-302 ; environment/test-no-302a-inherent-biodegradability-modified-scas-test ; 9789264070363-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-304 ; environment/test-no-304a-inherent-biodegradability-in-soil ; 9789264070448-en >
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-203 ; environment/test-no-203-fish-acute-toxicity-test ; 9789264069961-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-220 ; environment/test-no-220-enchytraeid-reproduction-test ; 9789264264472-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-222 ; environment/test-no-222-earthworm-reproduction-test-eisenia-fetida-eisenia-andrei ; 9789264264496-en >
@@ -166,7 +160,6 @@
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-249 ; environment/test-no-249-fish-cell-line-acute-toxicity-the-rtgill-w1-cell-line-assay ; c66d5190-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-250 ; environment/test-no-250-easzy-assay-detection-of-endocrine-active-substances-acting-through-estrogen-receptors-using-transgenic-tg-cyp19a1b-gfp-zebrafish-embryos ; 0a39b48b-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals tg ; environment/tg-248-xenopus-eleutheroembryonic-thyroid-assay-xeta ; a13f80ee-en >
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-group-on-ecotoxicology ; 9789264022386-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-201 ; environment/test-no-201-alga-growth-inhibition-test ; 9789264069923-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-208 ; environment/test-no-208-terrestrial-plant-test-seedling-emergence-and-seedling-growth-test ; 9789264070066-en >
@@ -187,7 +180,6 @@
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-235 ; environment/test-no-235-chironomus-sp-acute-immobilisation-test ; 9789264122383-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-236 ; environment/test-no-236-fish-embryo-acute-toxicity-fet-test ; 9789264203709-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-237 ; environment/test-no-237-honey-bee-apis-mellifera-larval-toxicity-test-single-exposure ; 9789264203723-en >
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-202 ; environment/test-no-202-daphnia-sp-acute-immobilisation-test ; 9789264069947-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-204 ; environment/test-no-204-fish-prolonged-toxicity-test-14-day-study ; 9789264069985-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-205 ; environment/test-no-205-avian-dietary-toxicity-test ; 9789264070004-en >
@@ -199,7 +191,6 @@
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-215 ; environment/test-no-215-fish-juvenile-growth-test ; 9789264070202-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-216 ; environment/test-no-216-soil-microorganisms-nitrogen-transformation-test ; 9789264070226-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-217 ; environment/test-no-217-soil-microorganisms-carbon-transformation-test ; 9789264070240-en >
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-group-on-physical-chemistry ; 9789264013391-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-102 ; environment/test-no-102-melting-point-melting-range ; 9789264069527-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-103 ; environment/test-no-103-boiling-point ; 9789264069541-en >
@@ -220,7 +211,6 @@
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-121 ; environment/test-no-121-estimation-of-the-adsorption-coefficient-koc-on-soil-and-on-sewage-sludge-using-high-performance-liquid-chromatography-hplc ; 9789264069909-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-122 ; environment/test-no-122-determination-of-ph-acidity-and-alkalinity ; 9789264203686-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-123 ; environment/test-no-123-partition-coefficient-1-octanol-water-slow-stirring-method ; 9789264015845-en >
-
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-101 ; environment/test-no-101-uv-vis-absorption-spectra ; 9789264069503-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-108 ; environment/test-no-108-complex-formation-ability-in-water ; 9789264069640-en >
         au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-110 ; environment/test-no-110-particle-size-distribution-fibre-length-and-diameter-distributions ; 9789264069688-en >
