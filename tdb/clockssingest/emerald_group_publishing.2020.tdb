@@ -1824,10 +1824,10 @@
     comment[journal_id] = cr
     #For AUs marked notReady see LXPLUG-2108
 
-    au < manifest ; exists ; 1991 ; Competitiveness Review: An International Business Journal Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1993 ; Competitiveness Review: An International Business Journal Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1994 ; Competitiveness Review: An International Business Journal Volume 4 ; 4 ; >
+    au < notReady ; exists ; 1991 ; Competitiveness Review: An International Business Journal Volume 1 ; 1 ; > #500 error 
+    au < notReady ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; > #500 error 
+    au < notReady ; exists ; 1993 ; Competitiveness Review: An International Business Journal Volume 3 ; 3 ; > #500 error 
+    au < notReady ; exists ; 1994 ; Competitiveness Review: An International Business Journal Volume 4 ; 4 ; > #500 error 
     au < manifest ; exists ; 1995 ; Competitiveness Review: An International Business Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 1996 ; Competitiveness Review: An International Business Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 1997 ; Competitiveness Review: An International Business Journal Volume 7 ; 7 ; >

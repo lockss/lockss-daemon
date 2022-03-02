@@ -68,13 +68,12 @@
       au < readySource ; crawling ; 2021 ; Wiley Source Content 2021_04 ; 2021_04 >
       au < readySource ; crawling ; 2021 ; Wiley Source Content 2021_05 ; 2021_05 >
       au < readySource ; crawling ; 2021 ; Wiley Source Content 2021_06 ; 2021_06 >
-      au < expected ; exists ; 2021 ; Wiley Source Content 2021_07 ; 2021_07 >
-      au < expected ; exists ; 2021 ; Wiley Source Content 2021_08 ; 2021_08 >
 
       au < readySource ; crawling ; 2022 ; Wiley Source Content 2022_01 ; 2022_01 >
-      au < expected ; exists ; 2022 ; Wiley Source Content 2022_02 ; 2022_02 >
+      au < manifest ; exists ; 2022 ; Wiley Source Content 2022_02 ; 2022_02 >
       au < expected ; exists ; 2022 ; Wiley Source Content 2022_03 ; 2022_03 >
       au < expected ; exists ; 2022 ; Wiley Source Content 2022_04 ; 2022_04 >
+      au < expected ; exists ; 2022 ; Wiley Source Content 2022_05 ; 2022_05 >
 
     }
   }
