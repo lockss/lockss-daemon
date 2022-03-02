@@ -41,11 +41,12 @@ import org.lockss.plugin.FilterFactory;
 import org.lockss.util.Logger;
 
 import java.io.InputStream;
+import java.util.Arrays;
 
-public class OecdHtmlCrawlFilterFactory implements FilterFactory {
-  protected static Logger log = Logger.getLogger(OecdHtmlCrawlFilterFactory.class);
+public class BaseOecdHtmlCrawlFilterFactory implements FilterFactory {
+  protected static Logger log = Logger.getLogger(BaseOecdHtmlCrawlFilterFactory.class);
 
-  static NodeFilter[] excludeFilters = new NodeFilter[] {
+  static NodeFilter[] baseOecdFilters = new NodeFilter[] {
       HtmlNodeFilters.tag("header"),
       HtmlNodeFilters.tag("footer"),
       HtmlNodeFilters.tagWithAttribute("ol", "class", "breadcrumb"),
@@ -68,16 +69,44 @@ public class OecdHtmlCrawlFilterFactory implements FilterFactory {
       // get rid of all the links in the landing page except the csv file(s)
       HtmlNodeFilters.allExceptSubtree(
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "section-title"),
-          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(web|epub|csv|pdf|read)")
+          // per OECD we are only to collect the pdfs
+          //HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(web|epub|csv|pdf|read)")
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-pdf")
       )
   };
+
+  /** Create an array of NodeFilters that combines the baseOecdFilters with
+   *  the given array
+   *  @param nodes The array of NodeFilters to add
+   */
+  private NodeFilter[] addTo(NodeFilter[] nodes) {
+    NodeFilter[] result  = Arrays.copyOf(baseOecdFilters, baseOecdFilters.length + nodes.length);
+    System.arraycopy(nodes, 0, result, baseOecdFilters.length, nodes.length);
+    return result;
+  }
+  /** Create a FilteredInputStream that excludes the the baseOecdFilters and
+   * moreNodes
+   * @param au  The archival unit
+   * @param in  Incoming input stream
+   * @param encoding  The encoding
+   * @param moreNodes An array of NodeFilters to be excluded with baseOecdFilters
+   */
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding,
+                                               NodeFilter[] moreNodes)
+      throws PluginException {
+    NodeFilter[] bothFilters = addTo(moreNodes);
+    return new HtmlFilterInputStream(in, encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)));
+  }
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in, String encoding) throws PluginException {
     return new HtmlFilterInputStream(in,
         encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(
-            excludeFilters
+            baseOecdFilters
         )));
   }
 

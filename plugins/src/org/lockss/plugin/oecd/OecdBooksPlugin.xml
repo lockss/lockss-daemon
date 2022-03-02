@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD iLibrary Books Plugin, Base URL %s, Topic %s, Book Title %s, Book ID %s", base_url, topic, book_title, book_id</string>
+        <string>"OECD iLibrary Books Plugin, Base URL %s, Publication URL Path %s, Publication ID %s", base_url, pub_path, pub_id</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -89,26 +89,17 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>topic</key>
-                <displayName>Book Topic</displayName>
-                <description>Topic of the Book</description>
+                <key>pub_path</key>
+                <displayName>Publication URL Path</displayName>
+                <description>Publication URL Path</description>
                 <type>1</type>
-                <size>40</size>
+                <size>150</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>book_title</key>
-                <displayName>Book Title Path</displayName>
-                <description>Books title path (books title all-lowercase and separated by dashes)</description>
-                <type>1</type>
-                <size>100</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>book_id</key>
-                <displayName>Book ID (as found on OECD)</displayName>
+                <key>pub_id</key>
+                <displayName>Publication ID (as found on OECD)</displayName>
                 <type>1</type>
                 <size>20</size>
                 <definitional>true</definitional>
@@ -130,7 +121,7 @@ POSSIBILITY OF SUCH DAMAGE.
                  chapter has some url with change of isbn
                  https://www.oecd-ilibrary.org/agriculture-and-food/oecd-fao-agricultural-outlook-2021-2030_d494ca9a-en
             -->
-            <string>1,"^%s%s/", base_url, topic</string>
+            <!-- <string>1,"^%s%s/", base_url, topic</string> -->
             <!-- html of book and chapters
                  https://www.oecd-ilibrary.org/sites/1e1ecb53-en/index.html?itemId=/content/publication/1e1ecb53-en
                  https://www.oecd-ilibrary.org/sites/c510039b-en/index.html?itemId=/content/publication/c510039b-en
@@ -163,16 +154,24 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_start_url</string>
-        <!-- https://www.oecd-ilibrary.org/science-and-technology/bridging-digital-divides-in-g20-countries_35c1d850-en -->
-        <string>"%s%s/%s_%s", base_url, topic, book_title, book_id</string>
+        <list>
+            <!-- https://www.oecd-ilibrary.org/science-and-technology/bridging-digital-divides-in-g20-countries_35c1d850-en -->
+            <string>"%s%s_%s", base_url, pub_path, pub_id</string>
+            <!-- https://www.oecd-ilibrary.org/content/publication/35c1d850-en -->
+            <string>"%scontent/publication/%s", base_url, pub_path, pub_id</string>
+        </list>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
             <!-- start_page, and pdfs -->
-            <string>"%s%s/%s_%s$", base_url, topic, book_title, book_id</string>
+            <string>"%s%s_%s$", base_url, pub_path, pub_id</string>
             <string>"%s.+\.pdf", base_url</string>
         </list>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.oecd.OecdBooksHtmlCrawlFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>

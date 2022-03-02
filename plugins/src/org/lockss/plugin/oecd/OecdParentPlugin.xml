@@ -92,7 +92,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>text/html_crawl_filter_factory</string>
-        <string>org.lockss.plugin.oecd.OecdHtmlCrawlFilterFactory</string>
+        <string>org.lockss.plugin.oecd.BaseOecdHtmlCrawlFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_url_consumer_factory</string>
