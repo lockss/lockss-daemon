@@ -35,7 +35,7 @@ public class AuStateMover extends Worker {
   }
   
   public void run() {
-    log.debug2("Starting Au Stat Mover: " + au );
+    log.debug2("Starting Au State Mover: " );
     String auName = au.getName();
     log.info(auName + ": Moving AU Agreements...");
     moveAuAgreements(au);
