@@ -6,11 +6,8 @@
   >
 
   param[base_url] = https://www.oecd-ilibrary.org/
-
-  # Journals
-  {
-    plugin = org.lockss.plugin.oecd.OecdJournalsPlugin
-    implicit < status ; year ; name ; param[volume_name] >
+  plugin = org.lockss.plugin.oecd.OecdJournalsPlugin
+  implicit < status ; year ; name ; param[volume_name] >
 
     {
 
@@ -113,9 +110,9 @@
         param[journal_dir] = africa-s-development-dynamics
         param[journal_id] = 3290877b-en
 
-        au < testing ; 2021 ; Africa’s Development Dynamics Volume 2021 ; 2021 >
-        au < testing ; 2019 ; Africa’s Development Dynamics Volume 2019 ; 2019 >
         au < testing ; 2018 ; Africa’s Development Dynamics Volume 2018 ; 2018 >
+        au < testing ; 2019 ; Africa’s Development Dynamics Volume 2019 ; 2019 >
+        au < testing ; 2021 ; Africa’s Development Dynamics Volume 2021 ; 2021 >
 
     }
 
@@ -131,14 +128,14 @@
         param[journal_dir] = economic-outlook-for-southeast-asia-china-and-india
         param[journal_id] = 23101113
 
-        au < testing ; 2021 ; Economic Outlook for Southeast Asia, China and India Volume 2021 ; 2021 >
-        au < testing ; 2020 ; Economic Outlook for Southeast Asia, China and India Volume 2020 ; 2020 >
-        au < testing ; 2019 ; Economic Outlook for Southeast Asia, China and India Volume 2019 ; 2019 >
-        au < testing ; 2018 ; Economic Outlook for Southeast Asia, China and India Volume 2018 ; 2018 >
-        au < testing ; 2017 ; Economic Outlook for Southeast Asia, China and India Volume 2017 ; 2017 >
-        au < testing ; 2016 ; Economic Outlook for Southeast Asia, China and India Volume 2016 ; 2016 >
-        au < testing ; 2015 ; Economic Outlook for Southeast Asia, China and India Volume 2015 ; 2015 >
         au < testing ; 2014 ; Economic Outlook for Southeast Asia, China and India Volume 2014 ; 2014 >
+        au < testing ; 2015 ; Economic Outlook for Southeast Asia, China and India Volume 2015 ; 2015 >
+        au < testing ; 2016 ; Economic Outlook for Southeast Asia, China and India Volume 2016 ; 2016 >
+        au < testing ; 2017 ; Economic Outlook for Southeast Asia, China and India Volume 2017 ; 2017 >
+        au < testing ; 2018 ; Economic Outlook for Southeast Asia, China and India Volume 2018 ; 2018 >
+        au < testing ; 2019 ; Economic Outlook for Southeast Asia, China and India Volume 2019 ; 2019 >
+        au < testing ; 2020 ; Economic Outlook for Southeast Asia, China and India Volume 2020 ; 2020 >
+        au < testing ; 2021 ; Economic Outlook for Southeast Asia, China and India Volume 2021 ; 2021 >
 
     }
 
@@ -154,12 +151,9 @@
         param[journal_dir] = gas-market-report
         param[journal_id] = 6a6dd6f7-en
 
-        au < testing ; 2022 ; Gas Market Reports Volume 2022 ; 2022 >
         au < testing ; 2021 ; Gas Market Reports Volume 2021 ; 2021 >
+        au < testing ; 2022 ; Gas Market Reports Volume 2022 ; 2022 >
 
     }
-
-
-  }
 
 }
