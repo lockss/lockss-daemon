@@ -1,0 +1,1006 @@
+{
+
+  publisher <
+    name = Organisation for Economic Co-operation and Development ;
+    info[platform] = See LXPLUG-1730
+  >
+  param[base_url] = https://www.oecd-ilibrary.org/
+  plugin = org.lockss.plugin.oecd.OecdWorkingpapersPlugin # needs.plugin
+
+  {
+
+    implicit < status ; year ; name ; param[topic] ; param[journal_dir] ; param[journal_issn] ; param[volume_name] >
+
+    #{
+    #  title <
+    #    name = OECD Economic Surveys ;
+    #    issn = ????-????
+    #  >
+    #  au < testing ; ???? ; OECD Economic Surveys Volume ???? ; ???? >
+    #}
+    #{
+    #  title <
+    #    name = OECD Guidelines for the Testing of Chemicals ;
+    #    issn = ????-????
+    #  >
+    #  au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Volume ???? ; ???? >
+    #}
+    #{
+    #  title <
+    #    name = Economic Outlook for Southeast Asia, China and India ;
+    #    issn = 2310-1113
+    #  >
+    #  au < testing ; ???? ; Economic Outlook for Southeast Asia, China and India Volume ???? ; ???? >
+    #}
+    #{
+    #  title <
+    #    name = Gas Market Reports ;
+    #    issn = 2788-6824
+    #  >
+    #  au < testing ; ???? ; Gas Market Reports Volume ???? ; ???? >
+    #}
+    #{
+    #  title <
+    #    name = How's Life? ;
+    #    issn = 2308-9679
+    #  >
+    #  au < testing ; ???? ; How's Life? Volume ???? ; ???? >
+    #}
+
+    {
+
+      title <
+        name = Africa’s Development Dynamics ;
+        issn = 2790-2773
+      >
+
+      au < testing ; 2021 ; Africa’s Development Dynamics Volume 2021 ; development ; africa-s-development-dynamics-2021 ; 0a5c9314-en ; 2021 >
+      au < testing ; 2019 ; Africa’s Development Dynamics Volume 2019 ; development ; africa-s-development-dynamics-2019 ; c1cd7de0-en ; 2019 >
+      au < testing ; 2018 ; Africa’s Development Dynamics Volume 2018 ; development ; africa-s-development-dynamics-2018 ; 9789264302501-en ; 2018 >
+
+
+    }
+
+    {
+
+      title <
+        name = Agricultural Policy Monitoring and Evaluation ;
+        issn = 2221-7371
+      >
+
+      au < testing ; 2021 ; Agricultural Policy Monitoring and Evaluation Volume 2021 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2021 ; 2d810e01-en ; 2021 >
+      au < testing ; 2020 ; Agricultural Policy Monitoring and Evaluation Volume 2020 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2020 ; 928181a8-en ; 2020 >
+      au < testing ; 2019 ; Agricultural Policy Monitoring and Evaluation Volume 2019 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2019 ; 39bfe6f3-en ; 2019 >
+      au < testing ; 2018 ; Agricultural Policy Monitoring and Evaluation Volume 2018 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2018 ; agr_pol-2018-en ; 2018 >
+      au < testing ; 2017 ; Agricultural Policy Monitoring and Evaluation Volume 2017 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2017 ; agr_pol-2017-en ; 2017 >
+      au < testing ; 2016 ; Agricultural Policy Monitoring and Evaluation Volume 2016 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2016 ; agr_pol-2016-en ; 2016 >
+      au < testing ; 2015 ; Agricultural Policy Monitoring and Evaluation Volume 2015 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2015 ; agr_pol-2015-en ; 2015 >
+      au < testing ; 2014 ; Agricultural Policy Monitoring and Evaluation Volume 2014 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2014 ; agr_pol-2014-en ; 2014 >
+      au < testing ; 2013 ; Agricultural Policy Monitoring and Evaluation Volume 2013 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2013 ; agr_pol-2013-en ; 2013 >
+      au < testing ; 2012 ; Agricultural Policy Monitoring and Evaluation Volume 2012 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2012 ; agr_pol-2012-en ; 2012 >
+      au < testing ; 2011 ; Agricultural Policy Monitoring and Evaluation Volume 2011 ; agriculture-and-food ; agricultural-policy-monitoring-and-evaluation-2011 ; agr_pol-2011-en ; 2011 >
+      au < testing ; 2010 ; Agricultural Policy Monitoring and Evaluation Volume 2010 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2010 ; agr_oecd-2010-en ; 2010 >
+      au < testing ; 2009 ; Agricultural Policy Monitoring and Evaluation Volume 2009 ; agriculture-and-food ; agricultural-policies-in-emerging-economies-2009 ; agr_emerging-2009-en ; 2009 >
+      au < testing ; 2009 ; Agricultural Policy Monitoring and Evaluation Volume 2009 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2009 ; agr_oecd-2009-en ; 2009 >
+      au < testing ; 2008 ; Agricultural Policy Monitoring and Evaluation Volume 2008 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2008 ; agr_oecd-2008-en ; 2008 >
+      au < testing ; 2007 ; Agricultural Policy Monitoring and Evaluation Volume 2007 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2007 ; agr_oecd-2007-en ; 2007 >
+      au < testing ; 2006 ; Agricultural Policy Monitoring and Evaluation Volume 2006 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2006 ; agr_oecd-2006-en ; 2006 >
+      au < testing ; 2005 ; Agricultural Policy Monitoring and Evaluation Volume 2005 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2005 ; agr_oecd-2005-en ; 2005 >
+      au < testing ; 2004 ; Agricultural Policy Monitoring and Evaluation Volume 2004 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2004 ; agr_oecd-2004-en ; 2004 >
+      au < testing ; 2003 ; Agricultural Policy Monitoring and Evaluation Volume 2003 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2003 ; agr_oecd-2003-en ; 2003 >
+      au < testing ; 2002 ; Agricultural Policy Monitoring and Evaluation Volume 2002 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2002 ; agr_oecd-2002-en ; 2002 >
+      au < testing ; 2001 ; Agricultural Policy Monitoring and Evaluation Volume 2001 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2001 ; agr_oecd-2001-en ; 2001 >
+      au < testing ; 2000 ; Agricultural Policy Monitoring and Evaluation Volume 2000 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-2000 ; agr_oecd-2000-en ; 2000 >
+      au < testing ; 1999 ; Agricultural Policy Monitoring and Evaluation Volume 1999 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-1999 ; agr_oecd-1999-en ; 1999 >
+      au < testing ; 1998 ; Agricultural Policy Monitoring and Evaluation Volume 1998 ; agriculture-and-food ; agricultural-policies-in-oecd-countries-1998 ; agr_oecd-1998-en ; 1998 >
+
+
+    }
+
+    {
+
+      title <
+        name = Aid for Trade at a Glance ;
+        issn = 2223-4411
+      >
+
+      au < testing ; 2019 ; Aid for Trade at a Glance Volume 2019 ; development ; aid-for-trade-at-a-glance-2019 ; 18ea27d8-en ; 2019 >
+      au < testing ; 2017 ; Aid for Trade at a Glance Volume 2017 ; development ; aid-for-trade-at-a-glance-2017 ; aid_glance-2017-en ; 2017 >
+      au < testing ; 2015 ; Aid for Trade at a Glance Volume 2015 ; development ; aid-for-trade-at-a-glance-2015 ; aid_glance-2015-en ; 2015 >
+      au < testing ; 2013 ; Aid for Trade at a Glance Volume 2013 ; development ; aid-for-trade-at-a-glance-2013 ; aid_glance-2013-en ; 2013 >
+      au < testing ; 2011 ; Aid for Trade at a Glance Volume 2011 ; development ; aid-for-trade-at-a-glance-2011 ; 9789264117471-en ; 2011 >
+      au < testing ; 2009 ; Aid for Trade at a Glance Volume 2009 ; development ; aid-for-trade-at-a-glance-2009 ; 9789264069022-en ; 2009 >
+      au < testing ; 2007 ; Aid for Trade at a Glance Volume 2007 ; development ; aid-for-trade-at-a-glance-2007 ; 9789264043220-en ; 2007 >
+
+
+    }
+
+    {
+
+      title <
+        name = Development Co-operation Report ;
+        issn = 2074-7721
+      >
+
+      au < testing ; 2021 ; Development Co-operation Report Volume 2021 ; development ; development-co-operation-report-2021 ; ce08832f-en ; 2021 >
+      au < testing ; 2020 ; Development Co-operation Report Volume 2020 ; development ; development-co-operation-report-2020 ; f6d42aa5-en ; 2020 >
+      au < testing ; 2019 ; Development Co-operation Report Volume 2019 ; development ; development-co-operation-report-2019 ; 9a58c83f-en ; 2019 >
+      au < testing ; 2018 ; Development Co-operation Report Volume 2018 ; development ; development-co-operation-report-2018 ; dcr-2018-en ; 2018 >
+      au < testing ; 2017 ; Development Co-operation Report Volume 2017 ; development ; development-co-operation-report-2017 ; dcr-2017-en ; 2017 >
+      au < testing ; 2016 ; Development Co-operation Report Volume 2016 ; development ; development-co-operation-report-2016 ; dcr-2016-en ; 2016 >
+      au < testing ; 2015 ; Development Co-operation Report Volume 2015 ; development ; development-co-operation-report-2015 ; dcr-2015-en ; 2015 >
+      au < testing ; 2014 ; Development Co-operation Report Volume 2014 ; development ; development-co-operation-report-2014 ; dcr-2014-en ; 2014 >
+      au < testing ; 2013 ; Development Co-operation Report Volume 2013 ; development ; development-co-operation-report-2013 ; dcr-2013-en ; 2013 >
+      au < testing ; 2012 ; Development Co-operation Report Volume 2012 ; development ; development-co-operation-report-2012 ; dcr-2012-en ; 2012 >
+      au < testing ; 2011 ; Development Co-operation Report Volume 2011 ; development ; development-co-operation-report-2011 ; dcr-2011-en ; 2011 >
+      au < testing ; 2010 ; Development Co-operation Report Volume 2010 ; development ; development-co-operation-report-2010 ; dcr-2010-en ; 2010 >
+      au < testing ; 2009 ; Development Co-operation Report Volume 2009 ; development ; development-co-operation-report-2009 ; dcr-2009-en ; 2009 >
+      au < testing ; 2007 ; Development Co-operation Report Volume 2007 ; development ; development-co-operation-report-2007 ; dcr-2007-en ; 2007 >
+      au < testing ; 2006 ; Development Co-operation Report Volume 2006 ; development ; development-co-operation-report-2006 ; dcr-2006-en ; 2006 >
+      au < testing ; 2005 ; Development Co-operation Report Volume 2005 ; development ; development-co-operation-report-2005 ; dcr-2005-en ; 2005 >
+      au < testing ; 2004 ; Development Co-operation Report Volume 2004 ; development ; development-co-operation-report-2004 ; dcr-2004-en ; 2004 >
+      au < testing ; 2003 ; Development Co-operation Report Volume 2003 ; development ; development-co-operation-report-2003 ; dcr-2003-en ; 2003 >
+      au < testing ; 2002 ; Development Co-operation Report Volume 2002 ; development ; development-co-operation-report-2002 ; dcr-2002-en ; 2002 >
+      au < testing ; 2001 ; Development Co-operation Report Volume 2001 ; development ; development-co-operation-report-2001 ; dcr-2001-en ; 2001 >
+      au < testing ; 2000 ; Development Co-operation Report Volume 2000 ; development ; development-co-operation-report-2000 ; dcr-2000-en ; 2000 >
+      au < testing ; 1999 ; Development Co-operation Report Volume 1999 ; development ; development-co-operation-report-1999 ; dcr-1999-en ; 1999 >
+      au < testing ; 1998 ; Development Co-operation Report Volume 1998 ; development ; development-co-operation-report-1998 ; dcr-1998-en ; 1998 >
+      au < testing ; 1997 ; Development Co-operation Report Volume 1997 ; development ; development-co-operation-report-1997 ; dcr-1997-en ; 1997 >
+
+
+    }
+
+    {
+
+      title <
+        name = Economic Policy Reforms ;
+        issn = 1813-2723
+      >
+
+      au < testing ; 2021 ; Economic Policy Reforms Volume 2021 ; economics ; economic-policy-reforms-2021 ; 3c796721-en ; 2021 >
+      au < testing ; 2019 ; Economic Policy Reforms Volume 2019 ; economics ; economic-policy-reforms-2019 ; aec5b059-en ; 2019 >
+      au < testing ; 2018 ; Economic Policy Reforms Volume 2018 ; economics ; economic-policy-reforms-2018 ; growth-2018-en ; 2018 >
+      au < testing ; 2017 ; Economic Policy Reforms Volume 2017 ; economics ; economic-policy-reforms-2017 ; growth-2017-en ; 2017 >
+      au < testing ; 2016 ; Economic Policy Reforms Volume 2016 ; economics ; economic-policy-reforms-2016 ; growth-2016-en ; 2016 >
+      au < testing ; 2015 ; Economic Policy Reforms Volume 2015 ; economics ; economic-policy-reforms-2015 ; growth-2015-en ; 2015 >
+      au < testing ; 2014 ; Economic Policy Reforms Volume 2014 ; economics ; economic-policy-reforms-2014 ; growth-2014-en ; 2014 >
+      au < testing ; 2013 ; Economic Policy Reforms Volume 2013 ; economics ; economic-policy-reforms-2013 ; growth-2013-en ; 2013 >
+      au < testing ; 2012 ; Economic Policy Reforms Volume 2012 ; economics ; economic-policy-reforms-2012 ; growth-2012-en ; 2012 >
+      au < testing ; 2011 ; Economic Policy Reforms Volume 2011 ; economics ; economic-policy-reforms-2011 ; growth-2011-en ; 2011 >
+      au < testing ; 2010 ; Economic Policy Reforms Volume 2010 ; economics ; economic-policy-reforms-2010 ; growth-2010-en ; 2010 >
+      au < testing ; 2009 ; Economic Policy Reforms Volume 2009 ; economics ; economic-policy-reforms-2009 ; growth-2009-en ; 2009 >
+      au < testing ; 2008 ; Economic Policy Reforms Volume 2008 ; economics ; economic-policy-reforms-2008 ; growth-2008-en ; 2008 >
+      au < testing ; 2007 ; Economic Policy Reforms Volume 2007 ; economics ; economic-policy-reforms-2007 ; growth-2007-en ; 2007 >
+      au < testing ; 2006 ; Economic Policy Reforms Volume 2006 ; economics ; economic-policy-reforms-2006 ; growth-2006-en ; 2006 >
+      au < testing ; 2005 ; Economic Policy Reforms Volume 2005 ; economics ; economic-policy-reforms-2005 ; growth-2005-en ; 2005 >
+
+
+    }
+
+    {
+
+      title <
+        name = Education Policy Outlook ;
+        issn = 2707-6725
+      >
+
+      au < testing ; 2021 ; Education Policy Outlook Volume 2021 ; education ; education-policy-outlook-2021 ; 75e40a16-en ; 2021 >
+      au < testing ; 2019 ; Education Policy Outlook Volume 2019 ; education ; education-policy-outlook-2019 ; 2b8ad56e-en ; 2019 >
+      au < testing ; 2018 ; Education Policy Outlook Volume 2018 ; education ; education-policy-outlook-2018 ; 9789264301528-en ; 2018 >
+      au < testing ; 2015 ; Education Policy Outlook Volume 2015 ; education ; education-policy-outlook-2015 ; 9789264225442-en ; 2015 >
+
+
+    }
+
+    {
+
+      title <
+        name = Energy Efficiency ;
+        issn = 2790-4156
+      >
+
+      au < testing ; 2021 ; Energy Efficiency Volume 2021 ; energy ; energy-efficiency-2021 ; cfb80e1e-en ; 2021 >
+      au < testing ; 2020 ; Energy Efficiency Volume 2020 ; energy ; energy-efficiency-2020 ; dfd85134-en ; 2020 >
+      au < testing ; 2019 ; Energy Efficiency Volume 2019 ; energy ; energy-efficiency-2019 ; ef14df7a-en ; 2019 >
+      au < testing ; 2018 ; Energy Efficiency Volume 2018 ; energy ; energy-efficiency-2018 ; 9789264024304-en ; 2018 >
+      au < testing ; 2017 ; Energy Efficiency Volume 2017 ; energy ; energy-efficiency-2017 ; 9789264284234-en ; 2017 >
+
+
+    }
+
+    {
+
+      title <
+        name = Energy Technology Perspectives ;
+        issn = 2079-2603
+      >
+
+      au < testing ; 2020 ; Energy Technology Perspectives Volume 2020 ; energy ; energy-technology-perspectives-2020 ; d07136f0-en ; 2020 >
+      au < testing ; 2017 ; Energy Technology Perspectives Volume 2017 ; energy ; energy-technology-perspectives-2017 ; energy_tech-2017-en ; 2017 >
+      au < testing ; 2016 ; Energy Technology Perspectives Volume 2016 ; energy ; energy-technology-perspectives-2016 ; energy_tech-2016-en ; 2016 >
+      au < testing ; 2015 ; Energy Technology Perspectives Volume 2015 ; energy ; energy-technology-perspectives-2015 ; energy_tech-2015-en ; 2015 >
+      au < testing ; 2014 ; Energy Technology Perspectives Volume 2014 ; energy ; energy-technology-perspectives-2014 ; energy_tech-2014-en ; 2014 >
+      au < testing ; 2012 ; Energy Technology Perspectives Volume 2012 ; energy ; energy-technology-perspectives-2012 ; energy_tech-2012-en ; 2012 >
+      au < testing ; 2010 ; Energy Technology Perspectives Volume 2010 ; energy ; energy-technology-perspectives-2010 ; energy_tech-2010-en ; 2010 >
+      au < testing ; 2008 ; Energy Technology Perspectives Volume 2008 ; energy ; energy-technology-perspectives-2008-scenarios-and-strategies-to-2050 ; 9789264041431-en ; 2008 >
+      au < testing ; 2006 ; Energy Technology Perspectives Volume 2006 ; energy ; energy-technology-perspectives-2006 ; 9789264109834-en ; 2006 >
+
+
+    }
+
+    {
+
+      title <
+        name = Financing SMEs and Entrepreneurs ;
+        issn = 2306-5265
+      >
+
+      au < testing ; 2020 ; Financing SMEs and Entrepreneurs Volume 2020 ; finance-and-investment ; financing-smes-and-entrepreneurs-2020 ; 061fe03d-en ; 2020 >
+      au < testing ; 2019 ; Financing SMEs and Entrepreneurs Volume 2019 ; industry-and-services ; financing-smes-and-entrepreneurs-2019 ; fin_sme_ent-2019-en ; 2019 >
+      au < testing ; 2018 ; Financing SMEs and Entrepreneurs Volume 2018 ; industry-and-services ; financing-smes-and-entrepreneurs-2018 ; fin_sme_ent-2018-en ; 2018 >
+      au < testing ; 2017 ; Financing SMEs and Entrepreneurs Volume 2017 ; industry-and-services ; financing-smes-and-entrepreneurs-2017 ; fin_sme_ent-2017-en ; 2017 >
+      au < testing ; 2016 ; Financing SMEs and Entrepreneurs Volume 2016 ; industry-and-services ; financing-smes-and-entrepreneurs-2016 ; fin_sme_ent-2016-en ; 2016 >
+      au < testing ; 2015 ; Financing SMEs and Entrepreneurs Volume 2015 ; industry-and-services ; financing-smes-and-entrepreneurs-2015 ; fin_sme_ent-2015-en ; 2015 >
+      au < testing ; 2014 ; Financing SMEs and Entrepreneurs Volume 2014 ; industry-and-services ; financing-smes-and-entrepreneurs-2014 ; fin_sme_ent-2014-en ; 2014 >
+      au < testing ; 2013 ; Financing SMEs and Entrepreneurs Volume 2013 ; industry-and-services ; financing-smes-and-entrepreneurs-2013 ; fin_sme_ent-2013-en ; 2013 >
+      au < testing ; 2012 ; Financing SMEs and Entrepreneurs Volume 2012 ; industry-and-services ; financing-smes-and-entrepreneurship ; 9789264166769-en ; 2012 >
+
+
+    }
+
+    {
+
+      title <
+        name = Global EV Outlook ;
+        issn = 2790-1564
+      >
+
+      au < testing ; 2021 ; Global EV Outlook Volume 2021 ; energy ; global-ev-outlook-2021 ; 3a394362-en ; 2021 >
+      au < testing ; 2020 ; Global EV Outlook Volume 2020 ; energy ; global-ev-outlook-2020 ; d394399e-en ; 2020 >
+      au < testing ; 2019 ; Global EV Outlook Volume 2019 ; energy ; global-ev-outlook-2019 ; 35fb60bd-en ; 2019 >
+      au < testing ; 2018 ; Global EV Outlook Volume 2018 ; energy ; global-ev-outlook-2018 ; 9789264302365-en ; 2018 >
+      au < testing ; 2017 ; Global EV Outlook Volume 2017 ; energy ; global-ev-outlook-2017 ; 9789264278882-en ; 2017 >
+      au < testing ; 2016 ; Global EV Outlook Volume 2016 ; energy ; global-ev-outlook-2016 ; 9789264279469-en ; 2016 >
+
+
+    }
+
+    {
+
+      title <
+        name = Government at a Glance ;
+        issn = 2221-4399
+      >
+
+      au < testing ; 2021 ; Government at a Glance Volume 2021 ; governance ; government-at-a-glance-2021 ; 1c258f55-en ; 2021 >
+      au < testing ; 2019 ; Government at a Glance Volume 2019 ; governance ; government-at-a-glance-2019 ; 8ccf5c38-en ; 2019 >
+      au < testing ; 2017 ; Government at a Glance Volume 2017 ; governance ; government-at-a-glance-2017 ; gov_glance-2017-en ; 2017 >
+      au < testing ; 2015 ; Government at a Glance Volume 2015 ; governance ; government-at-a-glance-2015 ; gov_glance-2015-en ; 2015 >
+      au < testing ; 2013 ; Government at a Glance Volume 2013 ; governance ; government-at-a-glance-2013 ; gov_glance-2013-en ; 2013 >
+      au < testing ; 2011 ; Government at a Glance Volume 2011 ; governance ; government-at-a-glance-2011 ; gov_glance-2011-en ; 2011 >
+      au < testing ; 2009 ; Government at a Glance Volume 2009 ; governance ; government-at-a-glance-2009 ; 9789264075061-en ; 2009 >
+
+
+    }
+
+    {
+
+      title <
+        name = Health at a Glance: Asia/Pacific ;
+        issn = 2305-4964
+      >
+
+      au < testing ; 2020 ; Health at a Glance: Asia/Pacific Volume 2020 ; social-issues-migration-health ; health-at-a-glance-asia-pacific-2020 ; 26b007cd-en ; 2020 >
+      au < testing ; 2018 ; Health at a Glance: Asia/Pacific Volume 2018 ; social-issues-migration-health ; health-at-a-glance-asia-pacific-2018 ; health_glance_ap-2018-en ; 2018 >
+      au < testing ; 2016 ; Health at a Glance: Asia/Pacific Volume 2016 ; social-issues-migration-health ; health-at-a-glance-asia-pacific-2016 ; health_glance_ap-2016-en ; 2016 >
+      au < testing ; 2014 ; Health at a Glance: Asia/Pacific Volume 2014 ; social-issues-migration-health ; health-at-a-glance-asia-pacific-2014 ; health_glance_ap-2014-en ; 2014 >
+      au < testing ; 2012 ; Health at a Glance: Asia/Pacific Volume 2012 ; social-issues-migration-health ; health-at-a-glance-asia-pacific-2012 ; 9789264183902-en ; 2012 >
+      au < testing ; 2010 ; Health at a Glance: Asia/Pacific Volume 2010 ; social-issues-migration-health ; health-at-a-glance-asia-pacific-2010 ; 9789264096202-en ; 2010 >
+
+
+    }
+
+
+    {
+
+      title <
+        name = International Migration Outlook ;
+        issn = 1999-124X
+      >
+
+      au < testing ; 2021 ; International Migration Outlook Volume 2021 ; social-issues-migration-health ; international-migration-outlook-2021 ; 29f23e9d-en ; 2021 >
+      au < testing ; 2020 ; International Migration Outlook Volume 2020 ; social-issues-migration-health ; international-migration-outlook-2020 ; ec98f531-en ; 2020 >
+      au < testing ; 2019 ; International Migration Outlook Volume 2019 ; social-issues-migration-health ; international-migration-outlook-2019 ; c3e35eec-en ; 2019 >
+      au < testing ; 2018 ; International Migration Outlook Volume 2018 ; social-issues-migration-health ; international-migration-outlook-2018 ; migr_outlook-2018-en ; 2018 >
+      au < testing ; 2017 ; International Migration Outlook Volume 2017 ; social-issues-migration-health ; international-migration-outlook-2017 ; migr_outlook-2017-en ; 2017 >
+      au < testing ; 2016 ; International Migration Outlook Volume 2016 ; social-issues-migration-health ; international-migration-outlook-2016 ; migr_outlook-2016-en ; 2016 >
+      au < testing ; 2015 ; International Migration Outlook Volume 2015 ; social-issues-migration-health ; international-migration-outlook-2015 ; migr_outlook-2015-en ; 2015 >
+      au < testing ; 2014 ; International Migration Outlook Volume 2014 ; social-issues-migration-health ; international-migration-outlook-2014 ; migr_outlook-2014-en ; 2014 >
+      au < testing ; 2013 ; International Migration Outlook Volume 2013 ; social-issues-migration-health ; international-migration-outlook-2013 ; migr_outlook-2013-en ; 2013 >
+      au < testing ; 2012 ; International Migration Outlook Volume 2012 ; social-issues-migration-health ; international-migration-outlook-2012 ; migr_outlook-2012-en ; 2012 >
+      au < testing ; 2011 ; International Migration Outlook Volume 2011 ; social-issues-migration-health ; international-migration-outlook-2011 ; migr_outlook-2011-en ; 2011 >
+      au < testing ; 2010 ; International Migration Outlook Volume 2010 ; social-issues-migration-health ; international-migration-outlook-2010 ; migr_outlook-2010-en ; 2010 >
+      au < testing ; 2009 ; International Migration Outlook Volume 2009 ; social-issues-migration-health ; international-migration-outlook-2009 ; migr_outlook-2009-en ; 2009 >
+      au < testing ; 2008 ; International Migration Outlook Volume 2008 ; social-issues-migration-health ; international-migration-outlook-2008 ; migr_outlook-2008-en ; 2008 >
+      au < testing ; 2007 ; International Migration Outlook Volume 2007 ; social-issues-migration-health ; international-migration-outlook-2007 ; migr_outlook-2007-en ; 2007 >
+      au < testing ; 2006 ; International Migration Outlook Volume 2006 ; social-issues-migration-health ; international-migration-outlook-2006 ; migr_outlook-2006-en ; 2006 >
+      au < testing ; 2004 ; International Migration Outlook Volume 2004 ; social-issues-migration-health ; trends-in-international-migration-2004 ; migr_outlook-2004-en ; 2004 >
+      au < testing ; 2003 ; International Migration Outlook Volume 2003 ; social-issues-migration-health ; trends-in-international-migration-2003 ; migr_outlook-2003-en ; 2003 >
+      au < testing ; 2002 ; International Migration Outlook Volume 2002 ; social-issues-migration-health ; trends-in-international-migration-2002 ; migr_outlook-2002-en ; 2002 >
+      au < testing ; 2001 ; International Migration Outlook Volume 2001 ; social-issues-migration-health ; trends-in-international-migration-2001 ; migr_outlook-2001-en ; 2001 >
+      au < testing ; 2000 ; International Migration Outlook Volume 2000 ; social-issues-migration-health ; trends-in-international-migration-2000 ; migr_outlook-2000-en ; 2000 >
+      au < testing ; 1999 ; International Migration Outlook Volume 1999 ; social-issues-migration-health ; trends-in-international-migration-1999 ; migr_outlook-1999-en ; 1999 >
+      au < testing ; 1998 ; International Migration Outlook Volume 1998 ; social-issues-migration-health ; trends-in-international-migration-1998 ; migr_outlook-1998-en ; 1998 >
+      au < testing ; 1997 ; International Migration Outlook Volume 1997 ; social-issues-migration-health ; trends-in-international-migration-1997 ; migr_outlook-1997-en ; 1997 >
+
+
+    }
+
+    {
+
+      title <
+        name = ITF Transport Outlook ;
+        issn = 2520-2367
+      >
+
+      au < testing ; 2021 ; ITF Transport Outlook Volume 2021 ; transport ; itf-transport-outlook-2021 ; 16826a30-en ; 2021 >
+      au < testing ; 2019 ; ITF Transport Outlook Volume 2019 ; transport ; itf-transport-outlook-2019 ; transp_outlook-en-2019-en ; 2019 >
+      au < testing ; 2017 ; ITF Transport Outlook Volume 2017 ; transport ; itf-transport-outlook-2017 ; 9789282108000-en ; 2017 >
+      au < testing ; 2015 ; ITF Transport Outlook Volume 2015 ; transport ; itf-transport-outlook-2015 ; 9789282107782-en ; 2015 >
+      au < testing ; 2013 ; ITF Transport Outlook Volume 2013 ; transport ; itf-transport-outlook-2013 ; 9789282103937-en ; 2013 >
+
+
+    }
+
+    {
+
+      title <
+        name = Job Creation and Local Economic Development ;
+        issn = 2617-4979
+      >
+
+      au < testing ; 2020 ; Job Creation and Local Economic Development Volume 2020 ; employment ; job-creation-and-local-economic-development-2020 ; b02b2f39-en ; 2020 >
+      au < testing ; 2018 ; Job Creation and Local Economic Development Volume 2018 ; employment ; job-creation-and-local-economic-development-2018 ; 9789264305342-en ; 2018 >
+      au < testing ; 2016 ; Job Creation and Local Economic Development Volume 2016 ; employment ; job-creation-and-local-economic-development-2016 ; 9789264261976-en ; 2016 >
+      au < testing ; 2014 ; Job Creation and Local Economic Development Volume 2014 ; industry-and-services ; job-creation-and-local-economic-development ; 9789264215009-en ; 2014 >
+
+
+    }
+
+    {
+
+      title <
+        name = Latin American Economic Outlook ;
+        issn = 2072-5140
+      >
+
+      au < testing ; 2021 ; Latin American Economic Outlook Volume 2021 ; development ; latin-american-economic-outlook-2021 ; 5fedabe5-en ; 2021 >
+      au < testing ; 2020 ; Latin American Economic Outlook Volume 2020 ; development ; latin-american-economic-outlook-2020 ; e6e864fb-en ; 2020 >
+      au < testing ; 2019 ; Latin American Economic Outlook Volume 2019 ; development ; latin-american-economic-outlook-2019 ; g2g9ff18-en ; 2019 >
+      au < testing ; 2018 ; Latin American Economic Outlook Volume 2018 ; development ; latin-american-economic-outlook-2018 ; leo-2018-en ; 2018 >
+      au < testing ; 2017 ; Latin American Economic Outlook Volume 2017 ; development ; latin-american-economic-outlook-2017 ; leo-2017-en ; 2017 >
+      au < testing ; 2016 ; Latin American Economic Outlook Volume 2016 ; development ; latin-american-economic-outlook-2016 ; 9789264246218-en ; 2016 >
+      au < testing ; 2015 ; Latin American Economic Outlook Volume 2015 ; development ; latin-american-economic-outlook-2015 ; leo-2015-en ; 2015 >
+      au < testing ; 2014 ; Latin American Economic Outlook Volume 2014 ; development ; latin-american-economic-outlook-2014 ; leo-2014-en ; 2014 >
+      au < testing ; 2013 ; Latin American Economic Outlook Volume 2013 ; development ; latin-american-economic-outlook-2013 ; leo-2013-en ; 2013 >
+      au < testing ; 2012 ; Latin American Economic Outlook Volume 2012 ; development ; latin-american-economic-outlook-2012 ; leo-2011-en ; 2012 >
+      au < testing ; 2011 ; Latin American Economic Outlook Volume 2011 ; development ; latin-american-economic-outlook-2011 ; leo-2011-en ; 2011 >
+      au < testing ; 2010 ; Latin American Economic Outlook Volume 2010 ; development ; latin-american-economic-outlook-2010 ; leo-2010-en ; 2010 >
+      au < testing ; 2009 ; Latin American Economic Outlook Volume 2009 ; development ; latin-american-economic-outlook-2009 ; leo-2009-en ; 2009 >
+      au < testing ; 2008 ; Latin American Economic Outlook Volume 2008 ; development ; latin-american-economic-outlook-2008 ; leo-2008-en ; 2008 >
+
+
+    }
+
+    {
+
+      title <
+        name = Market Report Series: Coal ;
+        issn = 2520-2723
+      >
+
+      au < testing ; 2021 ; Market Report Series: Coal Volume 2021 ; energy ; coal-2021 ; ba0095c1-en ; 2021 >
+      au < testing ; 2020 ; Market Report Series: Coal Volume 2020 ; energy ; coal-2020 ; ece0656a-en ; 2020 >
+      au < testing ; 2019 ; Market Report Series: Coal Volume 2019 ; energy ; coal-2019 ; c775e820-en ; 2019 >
+      au < testing ; 2018 ; Market Report Series: Coal Volume 2018 ; energy ; coal-2018 ; coal_mar-2018-en ; 2018 >
+      au < testing ; 2017 ; Market Report Series: Coal Volume 2017 ; energy ; market-report-series-coal-2017 ; coal_mar-2017-en ; 2017 >
+      au < testing ; 2016 ; Market Report Series: Coal Volume 2016 ; energy ; medium-term-coal-market-report-2016 ; mtrcoal-2016-en ; 2016 >
+      au < testing ; 2015 ; Market Report Series: Coal Volume 2015 ; energy ; medium-term-coal-market-report-2015 ; mtrcoal-2015-en ; 2015 >
+      au < testing ; 2014 ; Market Report Series: Coal Volume 2014 ; energy ; medium-term-coal-market-report-2014 ; mtrcoal-2014-en ; 2014 >
+      au < testing ; 2013 ; Market Report Series: Coal Volume 2013 ; energy ; medium-term-coal-market-report-2013 ; mtrcoal-2013-en ; 2013 >
+      au < testing ; 2012 ; Market Report Series: Coal Volume 2012 ; energy ; medium-term-coal-market-report-2012 ; 9789264177963-en ; 2012 >
+      au < testing ; 2011 ; Market Report Series: Coal Volume 2011 ; energy ; medium-term-coal-market-report-2011 ; 9789264167681-en ; 2011 >
+
+
+    }
+
+    {
+
+      title <
+        name = Market Report Series: Oil ;
+        issn = 2520-2707
+      >
+
+      au < testing ; 2020 ; Market Report Series: Oil Volume 2020 ; energy ; oil-2020 ; cf9397c0-en ; 2020 >
+      au < testing ; 2019 ; Market Report Series: Oil Volume 2019 ; energy ; oil-2019 ; oil_mar-2019-en ; 2019 >
+      au < testing ; 2018 ; Market Report Series: Oil Volume 2018 ; energy ; oil-2018 ; oil_mar-2018-en ; 2018 >
+      au < testing ; 2017 ; Market Report Series: Oil Volume 2017 ; energy ; oil-market-report-2017 ; 9789264272514-en ; 2017 >
+      au < testing ; 2016 ; Market Report Series: Oil Volume 2016 ; energy ; medium-term-oil-market-report-2016 ; oilmar-2016-en ; 2016 >
+      au < testing ; 2015 ; Market Report Series: Oil Volume 2015 ; energy ; medium-term-oil-market-report-2015 ; oilmar-2015-en ; 2015 >
+      au < testing ; 2014 ; Market Report Series: Oil Volume 2014 ; energy ; medium-term-oil-market-report-2014 ; 9789264211728-en ; 2014 >
+      au < testing ; 2013 ; Market Report Series: Oil Volume 2013 ; energy ; medium-term-oil-market-report-2013 ; 9789264191709-en ; 2013 >
+      au < testing ; 2012 ; Market Report Series: Oil Volume 2012 ; energy ; medium-term-oil-market-report-2012 ; 9789264188471-en ; 2012 >
+
+
+    }
+
+    {
+
+      title <
+        name = Market Report Series: Renewables ;
+        issn = 2520-2774
+      >
+
+      au < testing ; 2021 ; Market Report Series: Renewables Volume 2021 ; energy ; renewables-2021 ; 6dcd2e15-en ; 2021 >
+      au < testing ; 2020 ; Market Report Series: Renewables Volume 2020 ; energy ; renewables-2020 ; c74616c1-en ; 2020 >
+      au < testing ; 2019 ; Market Report Series: Renewables Volume 2019 ; energy ; renewables-2019 ; b3911209-en ; 2019 >
+      au < testing ; 2018 ; Market Report Series: Renewables Volume 2018 ; energy ; renewables-2018 ; re_mar-2018-en ; 2018 >
+      au < testing ; 2017 ; Market Report Series: Renewables Volume 2017 ; energy ; renewables-2017 ; re_mar-2017-en ; 2017 >
+      au < testing ; 2016 ; Market Report Series: Renewables Volume 2016 ; energy ; medium-term-renewable-energy-market-report-2016 ; renewmar-2016-en ; 2016 >
+      au < testing ; 2015 ; Market Report Series: Renewables Volume 2015 ; energy ; medium-term-renewable-energy-market-report-2015 ; renewmar-2015-en ; 2015 >
+      au < testing ; 2014 ; Market Report Series: Renewables Volume 2014 ; energy ; medium-term-renewable-energy-market-report-2014 ; renewmar-2014-en ; 2014 >
+      au < testing ; 2013 ; Market Report Series: Renewables Volume 2013 ; energy ; medium-term-renewable-energy-market-report-2013 ; 9789264191198-en ; 2013 >
+      au < testing ; 2012 ; Market Report Series: Renewables Volume 2012 ; energy ; medium-term-renewable-energy-market-report-2012 ; 9789264178007-en ; 2012 >
+
+
+    }
+
+    {
+
+      title <
+        name = Model Tax Convention on Income and on Capital (Full Version) ;
+        issn = 2664-0260
+      >
+
+      au < testing ; 2017 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2017 ; taxation ; model-tax-convention-on-income-and-on-capital-2017-full-version ; g2g972ee-en ; 2017 >
+      au < testing ; 2014 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2014 ; taxation ; model-tax-convention-on-income-and-on-capital-2015-full-version ; 9789264239081-en ; 2014 >
+      au < testing ; 2010 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2010 ; taxation ; model-tax-convention-on-income-and-on-capital-2010 ; 9789264175181-en ; 2010 >
+      au < testing ; 2000 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2000 ; taxation ; model-tax-convention-on-income-and-on-capital ; 9789264189409-en ; 2000 >
+
+
+    }
+
+    {
+
+      title <
+        name = Model Tax Convention on Income and on Capital: Condensed Version ;
+        issn = 2074-5419
+      >
+
+      au < testing ; 2017 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2017 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-2017 ; mtc_cond-2017-en ; 2017 >
+      au < testing ; 2014 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2014 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-2014 ; mtc_cond-2014-en ; 2014 >
+      au < testing ; 2010 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2010 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-2010 ; mtc_cond-2010-en ; 2010 >
+      au < testing ; 2008 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2008 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-2008 ; mtc_cond-2008-en ; 2008 >
+      au < testing ; 2005 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2005 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-2005 ; mtc_cond-2005-en ; 2005 >
+      au < testing ; 2003 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2003 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-2003 ; mtc_cond-2003-en ; 2003 >
+      au < testing ; 2000 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2000 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-2000 ; mtc_cond-2000-en ; 2000 >
+      au < testing ; 1998 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 1998 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-1998 ; mtc_cond-1998-en ; 1998 >
+      au < testing ; 1992 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 1992 ; taxation ; model-tax-convention-on-income-and-on-capital-condensed-version-september-1992 ; mtc_cond-1992-en ; 1992 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Business and Finance Outlook ;
+        issn = 2617-2577
+      >
+
+      au < testing ; 2021 ; OECD Business and Finance Outlook Volume 2021 ; finance-and-investment ; oecd-business-and-finance-outlook-2021 ; ba682899-en ; 2021 >
+      au < testing ; 2020 ; OECD Business and Finance Outlook Volume 2020 ; finance-and-investment ; oecd-business-and-finance-outlook-2020 ; eb61fd29-en ; 2020 >
+      au < testing ; 2019 ; OECD Business and Finance Outlook Volume 2019 ; finance-and-investment ; oecd-business-and-finance-outlook-2019 ; af784794-en ; 2019 >
+      au < testing ; 2018 ; OECD Business and Finance Outlook Volume 2018 ; finance-and-investment ; oecd-business-and-finance-outlook-2018 ; 9789264298828-en ; 2018 >
+      au < testing ; 2017 ; OECD Business and Finance Outlook Volume 2017 ; finance-and-investment ; oecd-business-and-finance-outlook-2017 ; 9789264274891-en ; 2017 >
+      au < testing ; 2016 ; OECD Business and Finance Outlook Volume 2016 ; finance-and-investment ; oecd-business-and-finance-outlook-2016 ; 9789264257573-en ; 2016 >
+      au < testing ; 2015 ; OECD Business and Finance Outlook Volume 2015 ; finance-and-investment ; oecd-business-and-finance-outlook-2015 ; 9789264234291-en ; 2015 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Digital Education Outlook ;
+        issn = 2788-8576
+      >
+
+      au < testing ; 2021 ; OECD Digital Education Outlook Volume 2021 ; education ; oecd-digital-education-outlook-2021 ; 589b283f-en ; 2021 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Employment Outlook ;
+        issn = 1999-1266
+      >
+
+      au < testing ; 2021 ; OECD Employment Outlook Volume 2021 ; employment ; oecd-employment-outlook-2021 ; 5a700c4b-en ; 2021 >
+      au < testing ; 2020 ; OECD Employment Outlook Volume 2020 ; employment ; oecd-employment-outlook-2020 ; 1686c758-en ; 2020 >
+      au < testing ; 2019 ; OECD Employment Outlook Volume 2019 ; employment ; oecd-employment-outlook-2019 ; 9ee00155-en ; 2019 >
+      au < testing ; 2018 ; OECD Employment Outlook Volume 2018 ; employment ; oecd-employment-outlook-2018 ; empl_outlook-2018-en ; 2018 >
+      au < testing ; 2017 ; OECD Employment Outlook Volume 2017 ; employment ; oecd-employment-outlook-2017 ; empl_outlook-2017-en ; 2017 >
+      au < testing ; 2016 ; OECD Employment Outlook Volume 2016 ; employment ; oecd-employment-outlook-2016 ; empl_outlook-2016-en ; 2016 >
+      au < testing ; 2015 ; OECD Employment Outlook Volume 2015 ; employment ; oecd-employment-outlook-2015 ; empl_outlook-2015-en ; 2015 >
+      au < testing ; 2014 ; OECD Employment Outlook Volume 2014 ; employment ; oecd-employment-outlook-2014 ; empl_outlook-2014-en ; 2014 >
+      au < testing ; 2013 ; OECD Employment Outlook Volume 2013 ; employment ; oecd-employment-outlook-2013 ; empl_outlook-2013-en ; 2013 >
+      au < testing ; 2012 ; OECD Employment Outlook Volume 2012 ; employment ; oecd-employment-outlook-2012 ; empl_outlook-2012-en ; 2012 >
+      au < testing ; 2011 ; OECD Employment Outlook Volume 2011 ; employment ; oecd-employment-outlook-2011 ; empl_outlook-2011-en ; 2011 >
+      au < testing ; 2010 ; OECD Employment Outlook Volume 2010 ; employment ; oecd-employment-outlook-2010 ; empl_outlook-2010-en ; 2010 >
+      au < testing ; 2009 ; OECD Employment Outlook Volume 2009 ; employment ; oecd-employment-outlook-2009 ; empl_outlook-2009-en ; 2009 >
+      au < testing ; 2008 ; OECD Employment Outlook Volume 2008 ; employment ; oecd-employment-outlook-2008 ; empl_outlook-2008-en ; 2008 >
+      au < testing ; 2007 ; OECD Employment Outlook Volume 2007 ; employment ; oecd-employment-outlook-2007 ; empl_outlook-2007-en ; 2007 >
+      au < testing ; 2006 ; OECD Employment Outlook Volume 2006 ; employment ; oecd-employment-outlook-2006 ; empl_outlook-2006-en ; 2006 >
+      au < testing ; 2005 ; OECD Employment Outlook Volume 2005 ; employment ; oecd-employment-outlook-2005 ; empl_outlook-2005-en ; 2005 >
+      au < testing ; 2004 ; OECD Employment Outlook Volume 2004 ; employment ; oecd-employment-outlook-2004 ; empl_outlook-2004-en ; 2004 >
+      au < testing ; 2003 ; OECD Employment Outlook Volume 2003 ; social-issues-migration-health ; oecd-employment-outlook-2003 ; empl_outlook-2003-en ; 2003 >
+      au < testing ; 2002 ; OECD Employment Outlook Volume 2002 ; social-issues-migration-health ; oecd-employment-outlook-2002 ; empl_outlook-2002-en ; 2002 >
+      au < testing ; 2001 ; OECD Employment Outlook Volume 2001 ; social-issues-migration-health ; oecd-employment-outlook-2001 ; empl_outlook-2001-en ; 2001 >
+      au < testing ; 2000 ; OECD Employment Outlook Volume 2000 ; social-issues-migration-health ; oecd-employment-outlook-2000 ; empl_outlook-2000-en ; 2000 >
+      au < testing ; 1999 ; OECD Employment Outlook Volume 1999 ; employment ; oecd-employment-outlook-1999 ; empl_outlook-1999-en ; 1999 >
+      au < testing ; 1998 ; OECD Employment Outlook Volume 1998 ; employment ; oecd-employment-outlook-1998 ; empl_outlook-1998-en ; 1998 >
+      au < testing ; 1997 ; OECD Employment Outlook Volume 1997 ; social-issues-migration-health ; oecd-employment-outlook-1997 ; empl_outlook-1997-en ; 1997 >
+      au < testing ; 1996 ; OECD Employment Outlook Volume 1996 ; social-issues-migration-health ; oecd-employment-outlook-1996 ; empl_outlook-1996-en ; 1996 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Environmental Outlook ;
+        issn = 1999-155X
+      >
+
+      au < testing ; 2012 ; OECD Environmental Outlook Volume 2012 ; environment ; oecd-environmental-outlook-to-2050 ; 9789264122246-en ; 2012 >
+      au < testing ; 2008 ; OECD Environmental Outlook Volume 2008 ; environment ; oecd-environmental-outlook-to-2030 ; 9789264040519-en ; 2008 >
+      au < testing ; 2001 ; OECD Environmental Outlook Volume 2001 ; environment ; oecd-environmental-outlook ; 9789264188563-en ; 2001 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Pensions Outlook ;
+        issn = 2313-7649
+      >
+
+      au < testing ; 2020 ; OECD Pensions Outlook Volume 2020 ; finance-and-investment ; oecd-pensions-outlook-2020 ; 67ede41b-en ; 2020 >
+      au < testing ; 2018 ; OECD Pensions Outlook Volume 2018 ; finance-and-investment ; oecd-pensions-outlook-2018 ; pens_outlook-2018-en ; 2018 >
+      au < testing ; 2016 ; OECD Pensions Outlook Volume 2016 ; finance-and-investment ; oecd-pensions-outlook-2016 ; pens_outlook-2016-en ; 2016 >
+      au < testing ; 2014 ; OECD Pensions Outlook Volume 2014 ; finance-and-investment ; oecd-pensions-outlook-2014 ; 9789264222687-en ; 2014 >
+      au < testing ; 2012 ; OECD Pensions Outlook Volume 2012 ; finance-and-investment ; oecd-pensions-outlook-2012 ; 9789264169401-en ; 2012 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Review of Fisheries ;
+        issn = 2225-4323
+      >
+
+      au < testing ; 2020 ; OECD Review of Fisheries Volume 2020 ; agriculture-and-food ; oecd-review-of-fisheries-2020 ; 7946bc8a-en ; 2020 >
+      au < testing ; 2017 ; OECD Review of Fisheries Volume 2017 ; agriculture-and-food ; oecd-review-of-fisheries-policies-and-summary-statistics-2017 ; rev_fish_stat_en-2017-en ; 2017 >
+      au < testing ; 2015 ; OECD Review of Fisheries Volume 2015 ; agriculture-and-food ; oecd-review-of-fisheries-policies-and-summary-statistics-2015 ; 9789264240223-en ; 2015 >
+      au < testing ; 2013 ; OECD Review of Fisheries Volume 2013 ; agriculture-and-food ; oecd-review-of-fisheries-2013 ; rev_fish-2013-en ; 2013 >
+      au < testing ; 2011 ; OECD Review of Fisheries Volume 2011 ; agriculture-and-food ; oecd-review-of-fisheries-2011 ; 9789264129306-en ; 2011 >
+      au < testing ; 2009 ; OECD Review of Fisheries Volume 2009 ; agriculture-and-food ; review-of-fisheries-in-oecd-countries-2009 ; rev_fish_pol-2009-en ; 2009 >
+      au < testing ; 2008 ; OECD Review of Fisheries Volume 2008 ; agriculture-and-food ; review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2008 ; rev_fish_pol-2008-en ; 2008 >
+      au < testing ; 2005 ; OECD Review of Fisheries Volume 2005 ; agriculture-and-food ; review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2005 ; rev_fish_pol-2005-en ; 2005 >
+      au < testing ; 2003 ; OECD Review of Fisheries Volume 2003 ; agriculture-and-food ; review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2003 ; rev_fish_pol-2003-en ; 2003 >
+      au < testing ; 2001 ; OECD Review of Fisheries Volume 2001 ; agriculture-and-food ; review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2001 ; rev_fish_pol-2001-en ; 2001 >
+      au < testing ; 2000 ; OECD Review of Fisheries Volume 2000 ; agriculture-and-food ; review-of-fisheries-in-oecd-countries-2000 ; rev_fish_pol-2000-en ; 2000 >
+      au < testing ; 1997 ; OECD Review of Fisheries Volume 1997 ; agriculture-and-food ; review-of-fisheries-in-oecd-countries-1997 ; rev_fish_pol-1997-en ; 1997 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Science, Technology and Innovation Outlook ;
+        issn = 2518-6167
+      >
+
+      au < testing ; 2021 ; OECD Science, Technology and Innovation Outlook Volume 2021 ; science-and-technology ; oecd-science-technology-and-innovation-outlook-2021 ; 75f79015-en ; 2021 >
+      au < testing ; 2018 ; OECD Science, Technology and Innovation Outlook Volume 2018 ; science-and-technology ; oecd-science-technology-and-innovation-outlook-2018 ; sti_in_outlook-2018-en ; 2018 >
+      au < testing ; 2016 ; OECD Science, Technology and Innovation Outlook Volume 2016 ; science-and-technology ; oecd-science-technology-and-innovation-outlook-2016 ; sti_in_outlook-2016-en ; 2016 >
+      au < testing ; 2014 ; OECD Science, Technology and Innovation Outlook Volume 2014 ; science-and-technology ; oecd-science-technology-and-industry-outlook-2014 ; sti_outlook-2014-en ; 2014 >
+      au < testing ; 2012 ; OECD Science, Technology and Innovation Outlook Volume 2012 ; science-and-technology ; oecd-science-technology-and-industry-outlook-2012 ; sti_outlook-2012-en ; 2012 >
+      au < testing ; 2010 ; OECD Science, Technology and Innovation Outlook Volume 2010 ; science-and-technology ; oecd-science-technology-and-industry-outlook-2010 ; sti_outlook-2010-en ; 2010 >
+      au < testing ; 2008 ; OECD Science, Technology and Innovation Outlook Volume 2008 ; science-and-technology ; oecd-science-technology-and-industry-outlook-2008 ; sti_outlook-2008-en ; 2008 >
+      au < testing ; 2006 ; OECD Science, Technology and Innovation Outlook Volume 2006 ; science-and-technology ; oecd-science-technology-and-industry-outlook-2006 ; sti_outlook-2006-en ; 2006 >
+      au < testing ; 2004 ; OECD Science, Technology and Innovation Outlook Volume 2004 ; science-and-technology ; oecd-science-technology-and-industry-outlook-2004 ; sti_outlook-2004-en ; 2004 >
+      au < testing ; 2002 ; OECD Science, Technology and Innovation Outlook Volume 2002 ; industry-and-services ; oecd-science-technology-and-industry-outlook-2002 ; sti_outlook-2002-en ; 2002 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Secretary-General's Report to Ministers ;
+        issn = 2222-3843
+      >
+
+      au < testing ; 2021 ; OECD Secretary-General's Report to Ministers Volume 2021 ; economics ; oecd-secretary-general-s-report-to-ministers-2021 ; 8cd95b77-en ; 2021 >
+      au < testing ; 2020 ; OECD Secretary-General's Report to Ministers Volume 2020 ; economics ; oecd-secretary-general-s-report-to-ministers-2020 ; 27007c6c-en ; 2020 >
+      au < testing ; 2019 ; OECD Secretary-General's Report to Ministers Volume 2019 ; economics ; secretary-general-s-report-to-ministers-2019 ; d4b4a55c-en ; 2019 >
+      au < testing ; 2018 ; OECD Secretary-General's Report to Ministers Volume 2018 ; economics ; secretary-general-s-report-to-ministers-2018 ; sg_report-2018-en ; 2018 >
+      au < testing ; 2017 ; OECD Secretary-General's Report to Ministers Volume 2017 ; economics ; secretary-general-s-report-to-ministers-2017 ; sg_report-2017-en ; 2017 >
+      au < testing ; 2016 ; OECD Secretary-General's Report to Ministers Volume 2016 ; economics ; secretary-general-s-report-to-ministers-2016 ; sg_report-2016-en ; 2016 >
+      au < testing ; 2015 ; OECD Secretary-General's Report to Ministers Volume 2015 ; economics ; secretary-general-s-report-to-ministers-2015 ; sg_report-2015-en ; 2015 >
+      au < testing ; 2014 ; OECD Secretary-General's Report to Ministers Volume 2014 ; economics ; secretary-general-s-report-to-ministers-2014 ; sg_report-2014-en ; 2014 >
+      au < testing ; 2013 ; OECD Secretary-General's Report to Ministers Volume 2013 ; economics ; secretary-general-s-report-to-ministers-2013 ; sg_report-2013-en ; 2013 >
+      au < testing ; 2012 ; OECD Secretary-General's Report to Ministers Volume 2012 ; economics ; secretary-general-s-report-to-ministers-2012 ; sg_report-2012-en ; 2012 >
+      au < testing ; 2011 ; OECD Secretary-General's Report to Ministers Volume 2011 ; economics ; secretary-general-s-report-to-ministers-2011 ; sg_report-2011-en ; 2011 >
+      au < testing ; 2010 ; OECD Secretary-General's Report to Ministers Volume 2010 ; economics ; oecd-annual-report-2010-the-secretary-general-s-report-to-ministers ; annrep-2010-en ; 2010 >
+      au < testing ; 2009 ; OECD Secretary-General's Report to Ministers Volume 2009 ; economics ; oecd-annual-report-2009 ; annrep-2009-en ; 2009 >
+      au < testing ; 2008 ; OECD Secretary-General's Report to Ministers Volume 2008 ; economics ; oecd-annual-report-2008 ; annrep-2008-en ; 2008 >
+      au < testing ; 2007 ; OECD Secretary-General's Report to Ministers Volume 2007 ; economics ; oecd-annual-report-2007 ; annrep-2007-en ; 2007 >
+      au < testing ; 2006 ; OECD Secretary-General's Report to Ministers Volume 2006 ; economics ; oecd-annual-report-2006 ; annrep-2006-en ; 2006 >
+      au < testing ; 2005 ; OECD Secretary-General's Report to Ministers Volume 2005 ; economics ; oecd-annual-report-2005 ; annrep-2005-en ; 2005 >
+      au < testing ; 2004 ; OECD Secretary-General's Report to Ministers Volume 2004 ; economics ; oecd-annual-report-2004 ; annrep-2004-en ; 2004 >
+      au < testing ; 2003 ; OECD Secretary-General's Report to Ministers Volume 2003 ; economics ; oecd-annual-report-2003 ; annrep-2003-en ; 2003 >
+      au < testing ; 2002 ; OECD Secretary-General's Report to Ministers Volume 2002 ; economics ; oecd-annual-report-2002 ; annrep-2002-en ; 2002 >
+      au < testing ; 2001 ; OECD Secretary-General's Report to Ministers Volume 2001 ; economics ; oecd-annual-report-2001 ; annrep-2001-en ; 2001 >
+      au < testing ; 2000 ; OECD Secretary-General's Report to Ministers Volume 2000 ; economics ; oecd-annual-report-2000 ; annrep-2000-en ; 2000 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Skills Outlook ;
+        issn = 2521-1072
+      >
+
+      au < testing ; 2021 ; OECD Skills Outlook Volume 2021 ; education ; oecd-skills-outlook-2021 ; 0ae365b4-en ; 2021 >
+      au < testing ; 2019 ; OECD Skills Outlook Volume 2019 ; education ; oecd-skills-outlook-2019 ; df80bc12-en ; 2019 >
+      au < testing ; 2017 ; OECD Skills Outlook Volume 2017 ; education ; oecd-skills-outlook-2017 ; 9789264273351-en ; 2017 >
+      au < testing ; 2015 ; OECD Skills Outlook Volume 2015 ; education ; oecd-skills-outlook-2015 ; 9789264234178-en ; 2015 >
+      au < testing ; 2013 ; OECD Skills Outlook Volume 2013 ; education ; oecd-skills-outlook-2013 ; 9789264204256-en ; 2013 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Sovereign Borrowing Outlook ;
+        issn = 2306-0476
+      >
+
+      au < testing ; 2021 ; OECD Sovereign Borrowing Outlook Volume 2021 ; governance ; oecd-sovereign-borrowing-outlook-2021 ; 48828791-en ; 2021 >
+      au < testing ; 2020 ; OECD Sovereign Borrowing Outlook Volume 2020 ; governance ; oecd-sovereign-borrowing-outlook-2020 ; dc0b6ada-en ; 2020 >
+      au < testing ; 2019 ; OECD Sovereign Borrowing Outlook Volume 2019 ; finance-and-investment ; oecd-sovereign-borrowing-outlook-2019 ; aa7aad38-en ; 2019 >
+      au < testing ; 2018 ; OECD Sovereign Borrowing Outlook Volume 2018 ; governance ; oecd-sovereign-borrowing-outlook-2018 ; sov_b_outlk-2018-en ; 2018 >
+      au < testing ; 2017 ; OECD Sovereign Borrowing Outlook Volume 2017 ; governance ; oecd-sovereign-borrowing-outlook-2017 ; sov_b_outlk-2017-en ; 2017 >
+      au < testing ; 2016 ; OECD Sovereign Borrowing Outlook Volume 2016 ; governance ; oecd-sovereign-borrowing-outlook-2016 ; sov_b_outlk-2016-en ; 2016 >
+      au < testing ; 2014 ; OECD Sovereign Borrowing Outlook Volume 2014 ; governance ; oecd-sovereign-borrowing-outlook-2014 ; sov_b_outlk-2014-en ; 2014 >
+      au < testing ; 2013 ; OECD Sovereign Borrowing Outlook Volume 2013 ; governance ; oecd-sovereign-borrowing-outlook-2013 ; sov_b_outlk-2013-en ; 2013 >
+      au < testing ; 2012 ; OECD Sovereign Borrowing Outlook Volume 2012 ; governance ; oecd-sovereign-borrowing-outlook-2012 ; 9789264169135-en ; 2012 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Tourism Trends and Policies ;
+        issn = 2076-7773
+      >
+
+      au < testing ; 2020 ; OECD Tourism Trends and Policies Volume 2020 ; urban-rural-and-regional-development ; oecd-tourism-trends-and-policies-2020 ; 6b47b985-en ; 2020 >
+      au < testing ; 2018 ; OECD Tourism Trends and Policies Volume 2018 ; urban-rural-and-regional-development ; oecd-tourism-trends-and-policies-2018 ; tour-2018-en ; 2018 >
+      au < testing ; 2016 ; OECD Tourism Trends and Policies Volume 2016 ; industry-and-services ; oecd-tourism-trends-and-policies-2016 ; tour-2016-en ; 2016 >
+      au < testing ; 2014 ; OECD Tourism Trends and Policies Volume 2014 ; industry-and-services ; oecd-tourism-trends-and-policies-2014 ; tour-2014-en ; 2014 >
+      au < testing ; 2012 ; OECD Tourism Trends and Policies Volume 2012 ; industry-and-services ; oecd-tourism-trends-and-policies-2012 ; tour-2012-en ; 2012 >
+      au < testing ; 2010 ; OECD Tourism Trends and Policies Volume 2010 ; industry-and-services ; oecd-tourism-trends-and-policies-2010 ; tour-2010-en ; 2010 >
+      au < testing ; 2008 ; OECD Tourism Trends and Policies Volume 2008 ; industry-and-services ; tourism-in-oecd-countries-2008 ; 9789264039773-en ; 2008 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations ;
+        issn = 2076-9717
+      >
+
+      au < testing ; 2022 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2022 ; taxation ; oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2022 ; 0e655865-en ; 2022 >
+      au < testing ; 2017 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2017 ; taxation ; oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2017 ; tpg-2017-en ; 2017 >
+      au < testing ; 2010 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2010 ; taxation ; oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2010 ; tpg-2010-en ; 2010 >
+      au < testing ; 2009 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2009 ; taxation ; oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2009 ; tpg-2009-en ; 2009 >
+
+
+    }
+
+    {
+
+      title <
+        name = OECD-FAO Agricultural Outlook ;
+        issn = 1999-1142
+      >
+
+      au < testing ; 2021 ; OECD-FAO Agricultural Outlook Volume 2021 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2021-2030 ; 19428846-en ; 2021 >
+      au < testing ; 2020 ; OECD-FAO Agricultural Outlook Volume 2020 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2020-2029 ; 1112c23b-en ; 2020 >
+      au < testing ; 2019 ; OECD-FAO Agricultural Outlook Volume 2019 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2019-2028 ; agr_outlook-2019-en ; 2019 >
+      au < testing ; 2018 ; OECD-FAO Agricultural Outlook Volume 2018 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2018-2027 ; agr_outlook-2018-en ; 2018 >
+      au < testing ; 2017 ; OECD-FAO Agricultural Outlook Volume 2017 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2017-2026 ; agr_outlook-2017-en ; 2017 >
+      au < testing ; 2016 ; OECD-FAO Agricultural Outlook Volume 2016 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2016 ; agr_outlook-2016-en ; 2016 >
+      au < testing ; 2015 ; OECD-FAO Agricultural Outlook Volume 2015 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2015 ; agr_outlook-2015-en ; 2015 >
+      au < testing ; 2014 ; OECD-FAO Agricultural Outlook Volume 2014 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2014 ; agr_outlook-2014-en ; 2014 >
+      au < testing ; 2013 ; OECD-FAO Agricultural Outlook Volume 2013 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2013 ; agr_outlook-2013-en ; 2013 >
+      au < testing ; 2012 ; OECD-FAO Agricultural Outlook Volume 2012 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2012 ; agr_outlook-2012-en ; 2012 >
+      au < testing ; 2011 ; OECD-FAO Agricultural Outlook Volume 2011 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2011 ; agr_outlook-2011-en ; 2011 >
+      au < testing ; 2010 ; OECD-FAO Agricultural Outlook Volume 2010 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2010 ; agr_outlook-2010-en ; 2010 >
+      au < testing ; 2009 ; OECD-FAO Agricultural Outlook Volume 2009 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2009 ; agr_outlook-2009-en ; 2009 >
+      au < testing ; 2008 ; OECD-FAO Agricultural Outlook Volume 2008 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2008 ; agr_outlook-2008-en ; 2008 >
+      au < testing ; 2007 ; OECD-FAO Agricultural Outlook Volume 2007 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2007 ; agr_outlook-2007-en ; 2007 >
+      au < testing ; 2006 ; OECD-FAO Agricultural Outlook Volume 2006 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2006 ; agr_outlook-2006-en ; 2006 >
+      au < testing ; 2005 ; OECD-FAO Agricultural Outlook Volume 2005 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2005 ; agr_outlook-2005-en ; 2005 >
+      au < testing ; 2004 ; OECD-FAO Agricultural Outlook Volume 2004 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2004 ; agr_outlook-2004-en ; 2004 >
+      au < testing ; 2003 ; OECD-FAO Agricultural Outlook Volume 2003 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2003 ; agr_outlook-2003-en ; 2003 >
+      au < testing ; 2002 ; OECD-FAO Agricultural Outlook Volume 2002 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2002 ; agr_outlook-2002-en ; 2002 >
+      au < testing ; 2001 ; OECD-FAO Agricultural Outlook Volume 2001 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2001 ; agr_outlook-2001-en ; 2001 >
+      au < testing ; 2000 ; OECD-FAO Agricultural Outlook Volume 2000 ; agriculture-and-food ; oecd-fao-agricultural-outlook-2000 ; agr_outlook-2000-en ; 2000 >
+      au < testing ; 1999 ; OECD-FAO Agricultural Outlook Volume 1999 ; agriculture-and-food ; oecd-fao-agricultural-outlook-1999 ; agr_outlook-1999-en ; 1999 >
+
+
+    }
+
+    {
+
+      title <
+        name = PENELOPE: A code system for Monte Carlo simulation of electron and photon transport ;
+        issn = 2707-2894
+      >
+
+      au < testing ; 2018 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2018 ; nuclear-energy ; penelope-2018-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; 32da5043-en ; 2018 >
+      au < testing ; 2014 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2014 ; nuclear-energy ; penelope-2014-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; 4e3f14db-en ; 2014 >
+      au < testing ; 2011 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2011 ; nuclear-energy ; penelope-2011-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; ef77b746-en ; 2011 >
+
+
+    }
+
+    {
+
+      title <
+        name = Pensions at a Glance Asia/Pacific ;
+        issn = 2309-0766
+      >
+
+      au < testing ; 2018 ; Pensions at a Glance Asia/Pacific Volume 2018 ; finance-and-investment ; pensions-at-a-glance-asia-pacific-2018 ; pension_asia-2018-en ; 2018 >
+      au < testing ; 2013 ; Pensions at a Glance Asia/Pacific Volume 2013 ; finance-and-investment ; pensions-at-a-glance-asia-pacific-2013 ; pension_asia-2013-en ; 2013 >
+      au < testing ; 2011 ; Pensions at a Glance Asia/Pacific Volume 2011 ; social-issues-migration-health ; pensions-at-a-glance-asia-pacific-2011 ; 9789264107007-en ; 2011 >
+
+
+    }
+
+    {
+
+      title <
+        name = Perspectives on Global Development ;
+        issn = 2222-4475
+      >
+
+      au < testing ; 2021 ; Perspectives on Global Development Volume 2021 ; development ; perspectives-on-global-development-2021 ; 405e4c32-en ; 2021 >
+      au < testing ; 2019 ; Perspectives on Global Development Volume 2019 ; development ; perspectives-on-global-development-2019 ; persp_glob_dev-2019-en ; 2019 >
+      au < testing ; 2017 ; Perspectives on Global Development Volume 2017 ; development ; perspectives-on-global-development-2017 ; persp_glob_dev-2017-en ; 2017 >
+      au < testing ; 2014 ; Perspectives on Global Development Volume 2014 ; development ; perspectives-on-global-development-2014 ; persp_glob_dev-2014-en ; 2014 >
+      au < testing ; 2013 ; Perspectives on Global Development Volume 2013 ; development ; perspectives-on-global-development-2013 ; persp_glob_dev-2013-en ; 2013 >
+      au < testing ; 2012 ; Perspectives on Global Development Volume 2012 ; development ; perspectives-on-global-development-2012 ; persp_glob_dev-2012-en ; 2012 >
+      au < testing ; 2010 ; Perspectives on Global Development Volume 2010 ; development ; perspectives-on-global-development-2010 ; 9789264084728-en ; 2010 >
+
+
+    }
+
+    {
+
+      title <
+        name = Projected Costs of Generating Electricity ;
+        issn = 2079-8393
+      >
+
+      au < testing ; 2020 ; Projected Costs of Generating Electricity Volume 2020 ; energy ; projected-costs-of-generating-electricity-2020 ; a6002f3b-en ; 2020 >
+      au < testing ; 2015 ; Projected Costs of Generating Electricity Volume 2015 ; energy ; projected-costs-of-generating-electricity-2015 ; cost_electricity-2015-en ; 2015 >
+      au < testing ; 2010 ; Projected Costs of Generating Electricity Volume 2010 ; energy ; projected-costs-of-generating-electricity-2010 ; 9789264084315-en ; 2010 >
+      au < testing ; 2005 ; Projected Costs of Generating Electricity Volume 2005 ; energy ; projected-costs-of-generating-electricity-2005 ; 9789264008274-en ; 2005 >
+      au < testing ; 1998 ; Projected Costs of Generating Electricity Volume 1998 ; energy ; projected-costs-of-generating-electricity ; 9789264163706-en ; 1998 >
+
+
+    }
+
+    {
+
+      title <
+        name = Road Safety Annual Report ;
+        issn = 2312-4571
+      >
+
+      au < testing ; 2020 ; Road Safety Annual Report Volume 2020 ; transport ; road-safety-annual-report-2020 ; f3e48023-en ; 2020 >
+      au < testing ; 2019 ; Road Safety Annual Report Volume 2019 ; transport ; road-safety-annual-report-2019 ; 2f0e33fe-en ; 2019 >
+      au < testing ; 2018 ; Road Safety Annual Report Volume 2018 ; transport ; road-safety-annual-report-2018 ; 1c884dcb-en ; 2018 >
+      au < testing ; 2017 ; Road Safety Annual Report Volume 2017 ; transport ; road-safety-annual-report-2017 ; irtad-2017-en ; 2017 >
+      au < testing ; 2016 ; Road Safety Annual Report Volume 2016 ; transport ; road-safety-annual-report-2016 ; irtad-2016-en ; 2016 >
+      au < testing ; 2015 ; Road Safety Annual Report Volume 2015 ; transport ; road-safety-annual-report-2015 ; irtad-2015-en ; 2015 >
+      au < testing ; 2014 ; Road Safety Annual Report Volume 2014 ; transport ; road-safety-annual-report-2014 ; irtad-2014-en ; 2014 >
+      au < testing ; 2013 ; Road Safety Annual Report Volume 2013 ; transport ; road-safety-annual-report-2013 ; irtad-2013-en ; 2013 >
+      au < testing ; 2011 ; Road Safety Annual Report Volume 2011 ; transport ; road-safety-annual-report-2011 ; irtad-2011-en ; 2011 >
+      au < testing ; 2010 ; Road Safety Annual Report Volume 2010 ; transport ; road-safety-annual-report-2010 ; irtad-2010-en ; 2010 >
+      au < testing ; 2009 ; Road Safety Annual Report Volume 2009 ; transport ; irtad-road-safety-annual-report-2009 ; 9789282102824-en ; 2009 >
+
+
+    }
+
+    {
+
+      title <
+        name = Society at a Glance: Asia/Pacific ;
+        issn = 2408-9168
+      >
+
+      au < testing ; 2019 ; Society at a Glance: Asia/Pacific Volume 2019 ; social-issues-migration-health ; society-at-a-glance-asia-pacific-2019 ; soc_aag-2019-en ; 2019 >
+      au < testing ; 2014 ; Society at a Glance: Asia/Pacific Volume 2014 ; social-issues-migration-health ; society-at-a-glance-asia-pacific-2014 ; 9789264220553-en ; 2014 >
+      au < testing ; 2011 ; Society at a Glance: Asia/Pacific Volume 2011 ; social-issues-migration-health ; society-at-a-glance-asia-pacific-2011 ; 9789264106154-en ; 2011 >
+
+
+    }
+
+    {
+
+      title <
+        name = States of Fragility ;
+        issn = 2708-860X
+      >
+
+      au < testing ; 2020 ; States of Fragility Volume 2020 ; development ; states-of-fragility-2020 ; ba7c22e7-en ; 2020 >
+      au < testing ; 2018 ; States of Fragility Volume 2018 ; development ; states-of-fragility-2018 ; 9789264302075-en ; 2018 >
+      au < testing ; 2016 ; States of Fragility Volume 2016 ; development ; states-of-fragility-2016 ; 9789264267213-en ; 2016 >
+      au < testing ; 2015 ; States of Fragility Volume 2015 ; development ; states-of-fragility-2015 ; 9789264227699-en ; 2015 >
+
+
+    }
+
+    {
+
+      title <
+        name = Tax Administration ;
+        issn = 2307-7727
+      >
+
+      au < testing ; 2021 ; Tax Administration Volume 2021 ; taxation ; tax-administration-2021 ; cef472b9-en ; 2021 >
+      au < testing ; 2019 ; Tax Administration Volume 2019 ; taxation ; tax-administration-2019 ; 74d162b6-en ; 2019 >
+      au < testing ; 2017 ; Tax Administration Volume 2017 ; taxation ; tax-administration-2017 ; tax_admin-2017-en ; 2017 >
+      au < testing ; 2015 ; Tax Administration Volume 2015 ; taxation ; tax-administration-2015 ; tax_admin-2015-en ; 2015 >
+      au < testing ; 2013 ; Tax Administration Volume 2013 ; taxation ; tax-administration-2013 ; 9789264200814-en ; 2013 >
+      au < testing ; 2006 ; Tax Administration Volume 2006 ; taxation ; tax-administration-in-oecd-and-selected-non-oecd-countries ; 9789264064904-en ; 2006 >
+
+
+    }
+
+    {
+
+      title <
+        name = Tax Policy Reforms ;
+        issn = 2617-3433
+      >
+
+      au < testing ; 2021 ; Tax Policy Reforms Volume 2021 ; taxation ; tax-policy-reforms-2021 ; 427d2616-en ; 2021 >
+      au < testing ; 2020 ; Tax Policy Reforms Volume 2020 ; taxation ; tax-policy-reforms-2020 ; 7af51916-en ; 2020 >
+      au < testing ; 2019 ; Tax Policy Reforms Volume 2019 ; taxation ; tax-policy-reforms-2019 ; da56c295-en ; 2019 >
+      au < testing ; 2018 ; Tax Policy Reforms Volume 2018 ; taxation ; tax-policy-reforms-2018 ; 9789264304468-en ; 2018 >
+      au < testing ; 2017 ; Tax Policy Reforms Volume 2017 ; taxation ; tax-policy-reforms-2017 ; 9789264279919-en ; 2017 >
+      au < testing ; 2016 ; Tax Policy Reforms Volume 2016 ; taxation ; tax-policy-reform-in-the-oecd-2016 ; 9789264260399-en ; 2016 >
+
+
+    }
+
+    {
+
+      title <
+        name = Taxing Energy Use ;
+        issn = 2706-6363
+      >
+
+      au < testing ; 2019 ; Taxing Energy Use Volume 2019 ; taxation ; taxing-energy-use-2019 ; 058ca239-en ; 2019 >
+      au < testing ; 2018 ; Taxing Energy Use Volume 2018 ; taxation ; taxing-energy-use-2018 ; 9789264289635-en ; 2018 >
+      au < testing ; 2015 ; Taxing Energy Use Volume 2015 ; taxation ; taxing-energy-use-2015 ; 9789264232334-en ; 2015 >
+      au < testing ; 2013 ; Taxing Energy Use Volume 2013 ; taxation ; taxing-energy-use ; 9789264183933-en ; 2013 >
+
+
+    }
+
+    {
+
+      title <
+        name = The Missing Entrepreneurs ;
+        issn = 2664-4851
+      >
+
+      au < testing ; 2021 ; The Missing Entrepreneurs Volume 2021 ; employment ; the-missing-entrepreneurs-2021 ; 71b7a9bb-en ; 2021 >
+      au < testing ; 2019 ; The Missing Entrepreneurs Volume 2019 ; industry-and-services ; the-missing-entrepreneurs-2019 ; 3ed84801-en ; 2019 >
+      au < testing ; 2017 ; The Missing Entrepreneurs Volume 2017 ; employment ; the-missing-entrepreneurs-2017 ; 9789264283602-en ; 2017 >
+      au < testing ; 2015 ; The Missing Entrepreneurs Volume 2015 ; employment ; the-missing-entrepreneurs-2015 ; 9789264226418-en ; 2015 >
+      au < testing ; 2014 ; The Missing Entrepreneurs Volume 2014 ; industry-and-services ; the-missing-entrepreneurs-2014 ; 9789264213593-en ; 2014 >
+      au < testing ; 2013 ; The Missing Entrepreneurs Volume 2013 ; industry-and-services ; the-missing-entrepreneurs ; 9789264188167-en ; 2013 >
+
+
+    }
+
+    {
+
+      title <
+        name = Trends Shaping Education ;
+        issn = 2218-7049
+      >
+
+      au < testing ; 2022 ; Trends Shaping Education Volume 2022 ; education ; trends-shaping-education-2022 ; 6ae8771a-en ; 2022 >
+      au < testing ; 2019 ; Trends Shaping Education Volume 2019 ; education ; trends-shaping-education-2019 ; trends_edu-2019-en ; 2019 >
+      au < testing ; 2016 ; Trends Shaping Education Volume 2016 ; education ; trends-shaping-education-2016 ; trends_edu-2016-en ; 2016 >
+      au < testing ; 2013 ; Trends Shaping Education Volume 2013 ; education ; trends-shaping-education-2013 ; trends_edu-2013-en ; 2013 >
+      au < testing ; 2010 ; Trends Shaping Education Volume 2010 ; education ; trends-shaping-education-2010 ; trends_edu-2010-en ; 2010 >
+      au < testing ; 2008 ; Trends Shaping Education Volume 2008 ; education ; trends-shaping-education-2008 ; 9789264046627-en ; 2008 >
+
+
+    }
+
+    {
+
+      title <
+        name = Uranium ;
+        issn = 2072-5310
+      >
+
+      au < testing ; 2020 ; Uranium Volume 2020 ; nuclear-energy ; uranium-2020 ; d82388ab-en ; 2020 >
+      au < testing ; 2018 ; Uranium Volume 2018 ; nuclear-energy ; uranium-2018 ; uranium-2018-en ; 2018 >
+      au < testing ; 2016 ; Uranium Volume 2016 ; nuclear-energy ; uranium-2016 ; uranium-2016-en ; 2016 >
+      au < testing ; 2014 ; Uranium Volume 2014 ; nuclear-energy ; uranium-2014 ; uranium-2014-en ; 2014 >
+      au < testing ; 2011 ; Uranium Volume 2011 ; nuclear-energy ; uranium-2011 ; uranium-2011-en ; 2011 >
+      au < testing ; 2009 ; Uranium Volume 2009 ; nuclear-energy ; uranium-2009 ; uranium-2009-en ; 2009 >
+      au < testing ; 2007 ; Uranium Volume 2007 ; nuclear-energy ; uranium-2007 ; uranium-2007-en ; 2007 >
+      au < testing ; 2005 ; Uranium Volume 2005 ; nuclear-energy ; uranium-2005 ; uranium-2005-en ; 2005 >
+      au < testing ; 2003 ; Uranium Volume 2003 ; nuclear-energy ; uranium-2003 ; uranium-2003-en ; 2003 >
+      au < testing ; 2001 ; Uranium Volume 2001 ; nuclear-energy ; uranium-2001 ; uranium-2001-en ; 2001 >
+      au < testing ; 1999 ; Uranium Volume 1999 ; nuclear-energy ; uranium-1999 ; 9789264189898-en ; 1999 >
+      au < testing ; 1998 ; Uranium Volume 1998 ; nuclear-energy ; uranium-1998 ; uranium-1998-en ; 1998 >
+
+
+    }
+
+    {
+
+      title <
+        name = World Energy Investment ;
+        issn = 2790-4318
+      >
+
+      au < testing ; 2021 ; World Energy Investment Volume 2021 ; energy ; world-energy-investment-2021 ; bfddacd3-en ; 2021 >
+      au < testing ; 2020 ; World Energy Investment Volume 2020 ; energy ; world-energy-investment-2020 ; 6f552938-en ; 2020 >
+      au < testing ; 2019 ; World Energy Investment Volume 2019 ; energy ; world-energy-investment-2019 ; 4f4f25b4-en ; 2019 >
+      au < testing ; 2018 ; World Energy Investment Volume 2018 ; energy ; world-energy-investment-2018 ; 9789264301351-en ; 2018 >
+      au < testing ; 2017 ; World Energy Investment Volume 2017 ; energy ; world-energy-investment-2017 ; 9789264277854-en ; 2017 >
+      au < testing ; 2016 ; World Energy Investment Volume 2016 ; energy ; world-energy-investment-2016 ; 9789264262836-en ; 2016 >
+
+
+    }
+  }
+}
