@@ -4237,8 +4237,33 @@ while (my $line = <>) {
         }
     }
   sleep(4);
-
-  }
+  # OECD Publisher
+  # #  OECD Journals
+  } elsif ($plugin eq "OecdWorkingpapersPlugin") {
+           #$url = sprintf("%s%s/%s_%s/lockssissues?volume=%s",
+           $url = sprintf("%s%s_%s",
+               $param{base_url}, $param{pub_path}, $param{pub_id});
+           $start_url = uri_unescape($url);
+           $man_url = $start_url;
+           my $req = HTTP::Request->new(GET, $start_url);
+           my $resp = $ua->request($req);
+           if (($resp->is_success)) {
+               my $contents = $resp->content;
+               if ($req->url ne $resp->request->uri){
+                 $vol_title = $resp->request->uri;
+                 $result = "Redirected";
+               } elsif (defined($contents)) {
+                   $vol_title= $param{pub_id};
+                   $result = "Manifest";
+               } else {
+                   $result = "--"
+               }
+           } else {
+               $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+           }
+           sleep(4);
+    # End of OECD Publisher
+    }
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
