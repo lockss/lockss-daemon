@@ -6900,7 +6900,7 @@
       au < finished ; finished ; 2016 ; International Journal of Metadata, Semantics and Ontologies Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of Metadata, Semantics and Ontologies Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Metadata, Semantics and Ontologies Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Metadata, Semantics and Ontologies Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Metadata, Semantics and Ontologies Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; International Journal of Metadata, Semantics and Ontologies Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2022 ; International Journal of Metadata, Semantics and Ontologies Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
 
@@ -6972,7 +6972,7 @@
       param[journal_id] = ijmrm
 
       au < finished ; finished ; 2014-2018 ; International Journal of Migration and Residential Mobility Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; International Journal of Migration and Residential Mobility Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < finished ; manifest ; 2019 ; International Journal of Migration and Residential Mobility Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #issue 2, 3, 4 not online
 
     }
 
@@ -7555,7 +7555,7 @@
 
       param[journal_id] = ijnss
 
-      au < frozen ; exists ; 2019 ; International Journal of Nuclear Safety and Security Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < finished ; manifest ; 2019 ; International Journal of Nuclear Safety and Security Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #issue 2, 3, 4 not online
 
     }
 
@@ -7983,7 +7983,7 @@
       au < finished ; finished ; 2012-2014 ; International Journal of Process Systems Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Process Systems Engineering Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016-2018 ; International Journal of Process Systems Engineering Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; International Journal of Process Systems Engineering Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < finished ; manifest ; 2019 ; International Journal of Process Systems Engineering Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 2, 3, 4 not online
 
     }
 
@@ -8729,7 +8729,7 @@
       au < finished ; finished ; 2015 ; International Journal of Services and Standards Volume 10 ; 10 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; International Journal of Services and Standards Volume 11 ; 11 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Services and Standards Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; International Journal of Services and Standards Volume 13 [partial] ; 13 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < finished ; manifest ; 2019 ; International Journal of Services and Standards Volume 13 [partial] ; 13 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 3, 4 not online
 
     }
 
@@ -10153,7 +10153,7 @@
       au < finished ; finished ; 2014 ; International Journal of Vehicle Autonomous Systems Volume 12 ; 12 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015-2017 ; International Journal of Vehicle Autonomous Systems Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018-2019 ; International Journal of Vehicle Autonomous Systems Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; International Journal of Vehicle Autonomous Systems Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Vehicle Autonomous Systems Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2021-2022 ; International Journal of Vehicle Autonomous Systems Volume 16 [partial] ; 16 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
