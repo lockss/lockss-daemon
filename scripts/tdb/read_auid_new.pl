@@ -4238,9 +4238,8 @@ while (my $line = <>) {
     }
   sleep(4);
   # OECD Publisher
-  # #  OECD Journals
-  } elsif ($plugin eq "OecdWorkingpapersPlugin") {
-           #$url = sprintf("%s%s/%s_%s/lockssissues?volume=%s",
+  # Books and Working Papers
+  } elsif ($plugin eq "OecdWorkingpapersPlugin" || $plugin eq "OecdBooksPlugin") {
            $url = sprintf("%s%s_%s",
                $param{base_url}, $param{pub_path}, $param{pub_id});
            $start_url = uri_unescape($url);
@@ -4262,8 +4261,31 @@ while (my $line = <>) {
                $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
            }
            sleep(4);
+  # Journals
+  } elsif ($plugin eq "OecdJournalsPlugin") {
+           $url = sprintf("%s%s/%s_%s/lockssissues?volume=%s",
+               $param{base_url}, $param{topic}, $param{journal_dir}, $param{journal_issn}, $param{volume_name});
+           $start_url = uri_unescape($url);
+           $man_url = $start_url;
+           my $req = HTTP::Request->new(GET, $start_url);
+           my $resp = $ua->request($req);
+           if (($resp->is_success)) {
+               my $contents = $resp->content;
+               if ($req->url ne $resp->request->uri){
+                 $vol_title = $resp->request->uri;
+                 $result = "Redirected";
+               } elsif (defined($contents)) {
+                   $vol_title= $param{journal_dir} . " Volume " .  $param{volume_name};
+                   $result = "Manifest";
+               } else {
+                   $result = "--"
+               }
+           } else {
+               $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+           }
+           sleep(4);
     # End of OECD Publisher
-    }
+  }
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
