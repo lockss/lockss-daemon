@@ -98,47 +98,6 @@
       au < testing ; 2019 ; OECD Journal on Budgeting Volume 19 ; 19 >
     }
 
-    {
-
-      title <
-        name = Africa’s Development Dynamics ;
-        issn = 2790-2773
-      >
-
-        param[topic] = development
-        param[journal_issn] = 27902773
-        param[journal_dir] = africa-s-development-dynamics
-        param[journal_id] = 3290877b-en
-
-        au < testing ; 2018 ; Africa’s Development Dynamics Volume 2018 ; 2018 >
-        au < testing ; 2019 ; Africa’s Development Dynamics Volume 2019 ; 2019 >
-        au < testing ; 2021 ; Africa’s Development Dynamics Volume 2021 ; 2021 >
-
-    }
-
-    {
-
-      title <
-        name = Economic Outlook for Southeast Asia, China and India ;
-        issn = 2310-1113
-      >
-
-        param[topic] = development
-        param[journal_issn] = 23101113
-        param[journal_dir] = economic-outlook-for-southeast-asia-china-and-india
-        param[journal_id] = 23101113
-
-        au < testing ; 2014 ; Economic Outlook for Southeast Asia, China and India Volume 2014 ; 2014 >
-        au < testing ; 2015 ; Economic Outlook for Southeast Asia, China and India Volume 2015 ; 2015 >
-        au < testing ; 2016 ; Economic Outlook for Southeast Asia, China and India Volume 2016 ; 2016 >
-        au < testing ; 2017 ; Economic Outlook for Southeast Asia, China and India Volume 2017 ; 2017 >
-        au < testing ; 2018 ; Economic Outlook for Southeast Asia, China and India Volume 2018 ; 2018 >
-        au < testing ; 2019 ; Economic Outlook for Southeast Asia, China and India Volume 2019 ; 2019 >
-        au < testing ; 2020 ; Economic Outlook for Southeast Asia, China and India Volume 2020 ; 2020 >
-        au < testing ; 2021 ; Economic Outlook for Southeast Asia, China and India Volume 2021 ; 2021 >
-
-    }
-
     #{ # this looks like a journal, but is in working papers
     #
     #  title <
