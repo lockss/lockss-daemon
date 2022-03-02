@@ -18,19 +18,14 @@ import org.lockss.repository.RepositoryManager;
 import org.lockss.state.AuState;
 import org.lockss.util.Logger;
 
-public class AuStateMover {
+public class AuStateMover extends Worker {
   private static final Logger log = Logger.getLogger(AuStateMover.class);
-  private V2AuMover auMover;
-  private ArchivalUnit au;
-  private AusApi cfgApiClient;
   IdentityManagerImpl idManager;
   RepositoryManager repoManager;
   PollManager pollManager;
 
-  public AuStateMover(V2AuMover auMover, ArchivalUnit au) {
-    this.auMover = auMover;
-    this.au = au;
-    this.cfgApiClient = auMover.getCfgAusApiClient();
+  public AuStateMover(V2AuMover auMover, MigrationTask task) {
+    super(auMover, task);
     IdentityManager idmgr = LockssDaemon.getLockssDaemon().getIdentityManager();
     if (idmgr instanceof IdentityManagerImpl) {
       idManager = ((IdentityManagerImpl) LockssDaemon.getLockssDaemon().getIdentityManager());
@@ -77,7 +72,7 @@ public class AuStateMover {
       catch (Exception ex) {
         String err = auName + ": Attempt to move au configuration failed: " + ex.getMessage();
         log.error(err, ex);
-        auMover.addError(err);
+        task.addError(err);
       }
     }
     else {
@@ -102,7 +97,7 @@ public class AuStateMover {
       catch (Exception ex) {
         String err = auName + ": Attempt to move au agreements failed: " + ex.getMessage();
         log.error(err, ex);
-        auMover.addError(err);
+        task.addError(err);
       }
     }
     else {
@@ -128,7 +123,7 @@ public class AuStateMover {
         String err =
             auName + ": Attempt to move au suspect url versions failed: " + ex.getMessage();
         log.error(err, ex);
-        auMover.addError(err);
+        task.addError(err);
       }
     }
     else {
@@ -154,7 +149,7 @@ public class AuStateMover {
       catch (Exception ex) {
         String err = auName + ": Attempt to move no AU peers failed: " + ex.getMessage();
         log.error(err, ex);
-        auMover.addError(err);
+        task.addError(err);
       }
     }
     else {
@@ -179,7 +174,7 @@ public class AuStateMover {
       catch (Exception ex) {
         String err = auName + ": Attempt to move au state failed: " + ex.getMessage();
         log.error(err, ex);
-        auMover.addError(err);
+        task.addError(err);
       }
     }
     else {

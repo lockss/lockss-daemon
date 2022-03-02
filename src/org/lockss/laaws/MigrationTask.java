@@ -28,7 +28,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.laaws;
 
-
+import java.util.function.*;
+import org.apache.commons.lang3.builder.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
@@ -37,14 +38,37 @@ public class MigrationTask {
   private static Logger log = Logger.getLogger("MigrationTask");
 
 
-  public enum TaskType { COPY_CU_VERSIONS, CHECK_AU_STATE, CHECK_CU_VERSIONS, COPY_AU_STATE }
+  public enum TaskType {
+    COPY_CU_VERSIONS,
+    CHECK_AU_STATE,
+    CHECK_CU_VERSIONS,
+    COPY_AU_STATE;
+
+    private V2AuMover.Phase phase;;
+
+    static {
+      COPY_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
+      CHECK_AU_STATE.phase = V2AuMover.Phase.VERIFY;
+      CHECK_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
+      COPY_AU_STATE.phase = V2AuMover.Phase.VERIFY;
+    }
+
+    public V2AuMover.Phase getPhase() {
+      return phase;
+    }
+  }
 
   V2AuMover auMover;
   CachedUrl cu;
   ArchivalUnit au;
   TaskType type;
+  V2AuMover.Counters counters;
+  V2AuMover.AuStatus auStat;
+  CountUpDownLatch latch;
+  BiConsumer completionAction;
 
-  private MigrationTask(V2AuMover mover, TaskType type) {
+
+  public MigrationTask(V2AuMover mover, TaskType type) {
     this.auMover = mover;
     this.type = type;
   }
@@ -78,14 +102,46 @@ public class MigrationTask {
   }
 
 
-  private MigrationTask setAu(ArchivalUnit au) {
+  public MigrationTask setAu(ArchivalUnit au) {
     this.cu = cu;
     return this;
   }
 
-  private MigrationTask setCu(CachedUrl cu) {
+  public MigrationTask setCu(CachedUrl cu) {
     this.cu = cu;
     return this;
+  }
+
+  public MigrationTask setCounters(V2AuMover.Counters ctrs) {
+    this.counters = ctrs;
+    return this;
+  }
+
+  public MigrationTask setAuStatus(V2AuMover.AuStatus ctrs) {
+    this.auStat = ctrs;
+    return this;
+  }
+
+  public MigrationTask setLatch(CountUpDownLatch latch) {
+    this.latch = latch;
+    return this;
+  }
+
+  public MigrationTask setCompletionAction(BiConsumer consumer) {
+    this.completionAction = consumer;
+    return this;
+  }
+
+  public void addError(String msg) {
+    this.auStat.addError(msg);
+  }
+
+  public V2AuMover.Counters getCounters() {
+    return counters;
+  }
+
+  public V2AuMover.AuStatus getAuStatus() {
+    return auStat;
   }
 
   public V2AuMover getAuMover() {
@@ -104,4 +160,35 @@ public class MigrationTask {
     return type;
   }
 
+  public CountUpDownLatch getLatch() {
+    return latch;
+  }
+
+  public void complete(Exception e) {
+    if (completionAction != null) {
+      completionAction.accept(this, e);
+    }
+  }
+
+  public int hashCode() {
+    return new HashCodeBuilder(31, 41).
+      append(type).
+      append(au).
+      append(cu).
+      toHashCode();
+  }
+
+  public boolean equals(Object obj) {
+    if (obj == null) { return false; }
+    if (obj == this) { return true; }
+    if (obj.getClass() != getClass()) {
+      return false;
+    }
+    MigrationTask rhs = (MigrationTask)obj;
+    return new EqualsBuilder()
+      .append(type, rhs.type)
+      .append(au, rhs.au)
+      .append(cu, rhs.cu)
+      .isEquals();
+  }
 }

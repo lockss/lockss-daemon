@@ -12,27 +12,15 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-public class CuChecker {
+public class CuChecker extends Worker {
   private static final Logger log = Logger.getLogger(CuMover.class);
-  private final V2AuMover auMover;
-  private final ArchivalUnit au;
   private final CachedUrl cu;
-  private boolean terminated = false;
   private final String collection;
-  private final boolean doByteCompare;
 
-  /**
-   * The v2 REST collections api implemntation
-   */
-  private final StreamingCollectionsApi collectionsApi;
-
-  public CuChecker(V2AuMover auMover, ArchivalUnit au, CachedUrl cu, boolean compareBytes) {
-    this.auMover = auMover;
-    this.au = au;
-    this.cu = cu;
-    this.doByteCompare=compareBytes;
+  public CuChecker(V2AuMover auMover, MigrationTask task) {
+    super(auMover, task);
+    this.cu = task.cu;
     collection = auMover.getCollection();
-    collectionsApi = auMover.getRepoCollectionsApiClient();
   }
 
   public void run() {
@@ -48,7 +36,7 @@ public class CuChecker {
         if (versionCompare != 0) {
           String err = "Mismatched version count for " + v2Url
               + ": V2 Repo has " + cmpString + " versions than V1 Repo";
-          auMover.addError(err);
+          addError(err);
           terminated = true;
         }
         else {
@@ -64,7 +52,7 @@ public class CuChecker {
     catch (Exception ex) {
       String err = v2Url + " comparison failed: " + ex.getMessage();
       log.error(err, ex);
-      auMover.addError(err);
+      task.addError(err);
       terminated = true;
     }
     finally {
@@ -83,7 +71,7 @@ public class CuChecker {
         artifact.getCollection().equals(collection)  &&
         artifact.getCollectionDate().equals(collectionDate) &&
         artifact.getCommitted().equals(Boolean.TRUE);
-    if ( isMatch && doByteCompare) {
+    if ( isMatch && auMover.isCompareBytes()) {
       log.debug3("Fetching  content for byte compare");
 //      ArtifactData artifact = collectionsApi.getArtifact(collection, artifact.getId(),
 //                    "ALWAYS");
@@ -111,7 +99,7 @@ public class CuChecker {
         String msg = apie.getCode() == 0 ? apie.getMessage()
             : apie.getCode() + " - " + apie.getMessage();
         String err = "Error occurred while retrieving artifacts for au: " + msg;
-        auMover.addError(err);
+        task.addError(err);
         log.error(err, apie);
         terminated = true;
       }

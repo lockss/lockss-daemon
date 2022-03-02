@@ -39,15 +39,8 @@ import java.nio.file.Files;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.RejectedExecutionException;
-import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.*;
+import java.util.concurrent.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import okhttp3.Dispatcher;
@@ -69,10 +62,7 @@ import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.PluginManager;
 import org.lockss.uiapi.util.DateFormatter;
-import org.lockss.util.Constants;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
-import org.lockss.util.UrlUtil;
+import org.lockss.util.*;
 
 public class V2AuMover {
 
@@ -186,8 +176,6 @@ public class V2AuMover {
 
   private int maxRetryCount;
   private long retryBackoffDelay;
-  private String currentStatus;
-  private boolean running = true; // init true avoids race while starting
 
   private final String cliendId =
       org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(8);
@@ -249,8 +237,6 @@ public class V2AuMover {
    */
   private final int repoPort;
 
-  private final File reportFile;
-
   // Access information for the V2 Configuration Service
   private String cfgAccessUrl = null;
   // Access information for the V2 Rest Repository
@@ -264,9 +250,6 @@ public class V2AuMover {
   /** the time to wait for read/write before timing out */
   private final long readTimeout;
 
-  // timer
-  private long startTime;
-
   // debug support
   private boolean debugRepoReq;
   private boolean debugConfigReq;
@@ -279,36 +262,7 @@ public class V2AuMover {
   private Dispatcher dispatcher;
   private long reqId = 0;
 
-  // report
-  private ArchivalUnit currentAu;
-
-  private PrintWriter reportWriter;
-
-  // counters for total run
-  private long totalAusToMove = 0;
-  private long totalAusMoved = 0;
-  private long totalAusPartiallyMoved = 0; // also included in totalAusMoved
-  private long totalAusSkipped = 0;
-  private long totalAusWithErrors = 0;
-  private long totalUrlsMoved = 0;
-  private long totalArtifactsMoved = 0;
-  private long totalBytesMoved = 0;
-  private long totalContentBytesMoved = 0;
-  private long totalRunTime = 0;
-  private long totalErrorCount = 0;
-  private long workingOn = 0; // the ordinal of the AU currently being copied
-
-  // Report fields
-  // Counters for a single au
-  private long auUrlsMoved = 0;
-  private long auArtifactsMoved = 0;
-  private long auBytesMoved = 0;
-  private long auContentBytesMoved = 0;
-  private long auRunTime = 0;
-  private long auErrorCount = 0;
-  private List<String> auErrors = new ArrayList<>();
-  private final List<String> errorList = new ArrayList<>();
-
+  private long startTime;
   private boolean terminated = false;
   private boolean isPartialContent = false;
   private boolean checkMissingContent;
@@ -332,7 +286,7 @@ public class V2AuMover {
         DEFAUL_CHECK_MISSING_CONTENT);
     String logdir = config.get(PARAM_REPORT_DIR, DEFAULT_REPORT_DIR);
     String logfile = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
-    boolean compareBytes=config.getBoolean(PARAM_COMPARE_CONTENT, DEFAULT_COMPARE_CONTENT);
+    compareBytes=config.getBoolean(PARAM_COMPARE_CONTENT, DEFAULT_COMPARE_CONTENT);
     reportFile = new File(logdir, logfile);
     repoClient = new V2RestClient();
     repoClient.setConnectTimeout((int) connectTimeout);
@@ -348,6 +302,10 @@ public class V2AuMover {
     // Assign the client to the status api and aus api
     cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(configClient);
     cfgAusApiClient = new AusApi(configClient);
+  }
+
+  public boolean isCompareBytes() {
+    return compareBytes;
   }
 
   /**
@@ -409,22 +367,6 @@ public class V2AuMover {
   }
 
   /**
-   * Return a string describing the current progress, or completion state.
-   */
-  public String getCurrentStatus() {
-    if (STATUS_COPYING.equals(currentStatus)) {
-      return "Copying (" + workingOn + " of " + totalAusToMove + " AUs): " +
-        currentAu.getName() + ", " + auUrlsMoved + " URLs, " +
-        auArtifactsMoved + " versions copied.";
-    }
-    return currentStatus;
-  }
-
-  public boolean isRunning() {
-    return running;
-  }
-
-  /**
    * Move one au iff it's not already in the queue
    *
    * @param args arg block holding all request args
@@ -434,20 +376,18 @@ public class V2AuMover {
     if (args.au == null) {
       throw new IllegalArgumentException("No AU supplied");
     }
+    if (pluginManager.isInternalAu(args.au)) {
+      throw new IllegalArgumentException("Can't move internal AUs");
+    }
     try {
       initRequest(args);
       currentStatus = "Checking V2 services";
-      if (v2ServicesUnavailable()) {
-        throw new IOException("V2 Services are not ready.");
-      }
+      checkV2ServicesAvailable();
       // get the aus known to the v2 repository
       getV2Aus();
       auMoveQueue.add(args.au);
-      while (!terminated && auMoveQueue.iterator().hasNext()) {
-        moveNextAu();
-      }
+      moveQueuedAus();
     } finally {
-      totalRunTime = System.currentTimeMillis() - startTime;
       closeReport();
     }
   }
@@ -463,9 +403,7 @@ public class V2AuMover {
     try {
       initRequest(args);
       currentStatus = "Checking V2 services";
-      if (v2ServicesUnavailable()) {
-        throw new IOException("V2 Services are not ready.");
-      }
+      checkV2ServicesAvailable();
       // get the aus known to the v2 repo
       getV2Aus();
       // get the local AUs to move
@@ -480,27 +418,24 @@ public class V2AuMover {
           auMoveQueue.add(au);
         }
       }
-      totalAusToMove = auMoveQueue.size();
-      log.debug("Moving " + totalAusToMove + " aus.");
-
-      while (!terminated && auMoveQueue.iterator().hasNext()) {
-        moveNextAu();
-        log.debug2("moveNextAu() returned: terminated: " +
-                   terminated + ", queue: " + auMoveQueue);
-      }
+      moveQueuedAus();
     } finally {
-      totalRunTime = System.currentTimeMillis() - startTime;
       closeReport();
     }
   }
 
-  /**
-   * Returns the list of errors which occurred while attempting to move the AU(s).
-   *
-   * @return the list of error strings
-   */
-  public List<String> getErrors() {
-    return errorList;
+  private void moveQueuedAus() {
+    totalAusToMove = auMoveQueue.size();
+    log.debug("Moving " + totalAusToMove + " aus.");
+
+    for (ArchivalUnit au : auMoveQueue) {
+      if (terminated) {
+        break;
+      }
+      moveAu(au);
+      log.debug2("moveAu() returned: terminated: " +
+                 terminated + ", queue: " + auMoveQueue);
+    }
   }
 
   StreamingCollectionsApi getRepoCollectionsApiClient() {
@@ -515,7 +450,7 @@ public class V2AuMover {
     return cfgAusApiClient;
   }
 
-  public String makeCookie() {
+  public synchronized String makeCookie() {
     return cliendId + "-" + ++reqId;
   }
 
@@ -530,8 +465,7 @@ public class V2AuMover {
    * @param args the arguments for this request.
    * @throws IllegalArgumentException if host is cannot be made into valid url.
    */
-  void initRequest(Args args) throws
-      IllegalArgumentException {
+  void initRequest(Args args) throws IllegalArgumentException {
     currentStatus = "Initializing";
     running = true;
     Configuration config = ConfigManager.getCurrentConfig();
@@ -606,11 +540,6 @@ public class V2AuMover {
           "Missing or Invalid configuration service hostName: " + hostName + " port: " + repoPort);
     }
     startReportFile();
-    totalArtifactsMoved = 0;
-    totalUrlsMoved = 0;
-    totalBytesMoved = 0;
-    totalContentBytesMoved = 0;
-    totalRunTime = 0;
     startTime = System.currentTimeMillis();
   }
 
@@ -650,194 +579,60 @@ public class V2AuMover {
     }
 
     public void lockssRun() {
-      CachedUrl cu;
-      switch (task.getType()) {
+      Exception taskException = null;
+      // Set AU start time the first time a task for the AU starts running
+      AuStatus auStat = task.getAuStatus();
+      if (auStat.getStartTime(task.getType().getPhase()) < 0) {
+        auStat.setStartTime(task.getType().getPhase(), System.currentTimeMillis());
+      }
+      try {
+        switch (task.getType()) {
         case COPY_CU_VERSIONS:
-          cu = task.getCu();
-          CuMover cuMover = new CuMover(v2Mover, cu.getArchivalUnit(), cu);
-          cuMover.run();
+          try {
+            CuMover mover = new CuMover(v2Mover, task);
+            mover.run();
+          } finally {
+            task.getLatch().countDown();
+          }
           break;
         case COPY_AU_STATE:
-          AuStateMover asMover = new AuStateMover(v2Mover, task.getAu());
-          asMover.run();
+          // wait until all of this AU's CU copies are done
+          log.debug("Waiting until AU copy finished: " + task.getAuStatus().getAuName());
+          task.getLatch().await();
+          log.debug("AU copy finished: " + task.getAuStatus().getAuName());
+          AuStateMover asmover = new AuStateMover(v2Mover, task);
+          asmover.run();
           break;
         case CHECK_CU_VERSIONS:
-          cu = task.getCu();
-          CuChecker cuChecker = new CuChecker(v2Mover, cu.getArchivalUnit(), cu, compareBytes);
+          CuChecker cuChecker = new CuChecker(v2Mover, task);
           cuChecker.run();
           break;
         case CHECK_AU_STATE:
-          AuStateChecker asChecker = new AuStateChecker(v2Mover, task.getAu());
+          AuStateChecker asChecker = new AuStateChecker(v2Mover, task);
           asChecker.run();
           break;
         default:
           log.error("Unknown migration task type: " + task.getType());
+        }
+      } catch (Exception e) {
+        taskException = e;
+      } finally {
+        task.complete(taskException);
       }
     }
   }
 
   /**
-   * Start appending the Report file for current Au move request
-   */
-  void startReportFile() {
-
-    try {
-      log.info("Writing report to file " + reportFile.getAbsolutePath());
-      reportWriter = new PrintWriter(Files.newOutputStream(reportFile.toPath(), CREATE, APPEND),
-          true);
-      reportWriter.println("--------------------------------------------------");
-      reportWriter.println("  V2 Au Migration Report - " + DateFormatter.now());
-      reportWriter.println("--------------------------------------------------");
-      reportWriter.println();
-      if (reportWriter.checkError()) {
-        log.warning("Error writing report file.");
-      }
-    }
-    catch (IOException e) {
-      log.error("Report file will not be written: Unable to open report file:" + e.getMessage());
-    }
-  }
-
-  /**
-   * Update the report for the current Au
-   *
-   * @param auName the name of the current Au
-   */
-  void updateReport(String auName) {
-    StringBuilder sb = new StringBuilder();
-    sb.append(StringUtil.bigNumberOfUnits(auUrlsMoved, "URL") + " moved, ");
-    sb.append(StringUtil.bigNumberOfUnits(auArtifactsMoved, "version") + ", ");
-    sb.append(StringUtil.bigNumberOfUnits(auContentBytesMoved, "content byte") + ", ");
-    sb.append(StringUtil.bigNumberOfUnits(auBytesMoved, "total byte") + ", ");
-    sb.append("at ");
-    sb.append(StringUtil.byteRateToString(auBytesMoved, auRunTime));
-    sb.append(", ");
-    sb.append(StringUtil.bigNumberOfUnits(auErrorCount, "error"));
-    sb.append(", in ");
-    sb.append(StringUtil.timeIntervalToString(auRunTime));
-    String auData = sb.toString();
-    if (reportWriter != null) {
-      reportWriter.println("AU Name: " + auName);
-      reportWriter.println("AU ID: " + currentAu.getAuId());
-      if (terminated) {
-        reportWriter.println("Move terminated with error.");
-        reportWriter.println(auData);
-      }
-      else {
-        if (isPartialContent) {
-          if (auArtifactsMoved > 0) {// if we moved something
-            reportWriter.println("Moved remaining unmigrated au content.");
-            reportWriter.println(auData);
-          }
-          else {
-            reportWriter.println("All au content already migrated.");
-            reportWriter.println(auData);
-          }
-        }
-        else {
-          reportWriter.println(auData);
-        }
-      }
-      if (!auErrors.isEmpty()) {
-        for (String err : auErrors) {
-          reportWriter.println(" " + err);
-        }
-      }
-      reportWriter.println();
-      if (reportWriter.checkError()) {
-        log.warning("Error writing report file.");
-      }
-    }
-    log.info(auData);
-    for (String err : auErrors) {
-      log.error(err);
-    }
-  }
-
-  /**
-   * Close the report before exiting
-   */
-  void closeReport() {
-    StringBuilder sb = new StringBuilder();
-    sb.append(StringUtil.bigNumberOfUnits(totalAusMoved + totalAusSkipped, "AU") + " moved");
-    if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
-      sb.append(" (");
-      if (totalAusSkipped > 0) {
-        sb.append(bigIntFmt.format(totalAusSkipped));
-        sb.append(" previously");
-        if (totalAusPartiallyMoved > 0) {
-          sb.append(", ");
-        }
-      }
-      if (totalAusPartiallyMoved > 0) {
-        sb.append(bigIntFmt.format(totalAusPartiallyMoved));
-        sb.append(" partially)");
-      }
-      sb.append(")");
-    }
-    sb.append(", ");
-    sb.append(StringUtil.bigNumberOfUnits(totalUrlsMoved, "URL") + ", ");
-    sb.append(StringUtil.bigNumberOfUnits(totalArtifactsMoved, "version") + ", ");
-    sb.append(StringUtil.bigNumberOfUnits(totalContentBytesMoved, "content byte") + ", ");
-    sb.append(StringUtil.bigNumberOfUnits(totalBytesMoved, "total byte") + ", ");
-    if (totalBytesMoved > 0) {
-      sb.append("at ");
-      sb.append(StringUtil.byteRateToString(totalBytesMoved, totalRunTime));
-      sb.append(", ");
-    }
-    sb.append(StringUtil.bigNumberOfUnits(totalErrorCount, "error") + ", ");
-    sb.append("in ");
-    sb.append(StringUtil.timeIntervalToString(totalRunTime));
-    String summary = sb.toString();
-    running = false;
-    currentStatus = summary;
-    if (reportWriter != null) {
-      reportWriter.println(summary);
-      if (reportWriter.checkError()) {
-        log.warning("Error writing report file.");
-      }
-
-      reportWriter.close();
-    }
-    log.info(summary);
-  }
-
-  /**
-   * Select the next au to move.
+   * Perform all actions to move an AU: queue CUs, queue state, queue verify
    * @throws IOException on network failures.
    */
-  protected void moveNextAu() throws IOException {
-    ArchivalUnit au = auMoveQueue.iterator().next();
-    workingOn++;
+  protected void moveAu(ArchivalUnit au) {
     // Marker for getCurrentStatus() to return current AU's progress.
-    currentStatus = STATUS_COPYING;
-    currentAu = au;
     log.debug("Moving " + au.getName() + " - " + auMoveQueue.size() + " AUs remaining.");
-    auBytesMoved = 0;
-    auContentBytesMoved = 0;
-    auUrlsMoved = 0;
-    auArtifactsMoved = 0;
-    auErrorCount = 0;
-    auErrors.clear();
-    auRunTime = 0;
-    try {
-      moveAu(au);
-      log.debug2("moveAu returned");
-    } finally {
-      auMoveQueue.remove(au);
-    }
-  }
-
-  /**
-   * Queue an Au's artifacts for moving.
-   * @param au the au to move
-   * @throws IOException on unexpected network failures
-   */
-  void moveAu(ArchivalUnit au) throws IOException {
-    long au_move_start = System.currentTimeMillis(); // Get the start Time
+    AuStatus auStat = new AuStatus(au);
     String auName = au.getName();
     log.info("Handling request to move AU: " + auName);
-    log.info("AuId: " + currentAu.getAuId());
+    log.info("AuId: " + au.getAuId());
     if (v2Aus.contains(au.getAuId())) {
       if (!checkMissingContent) {
         log.info("V2 Repo already has au " + au.getName() + ", skipping.");
@@ -850,22 +645,10 @@ public class V2AuMover {
     }
 
     try {
-      if (v2ServicesUnavailable()) {
-        terminated = true;
-        return;
-      }
       log.info(auName + ": Moving AU Artifacts...");
-      moveAuArtifacts(au);
-      // XXX wrong - need to wait until all workers are done
-      while (!taskQueue.isEmpty()) {
-        try {
-          Thread.sleep(500);
-        }
-        catch (InterruptedException e) {
-          throw new RuntimeException(e);
-        }
-      }
-      moveAuState(au);
+      moveAuArtifacts(au, auStat);
+      moveAuState(au, auStat);
+      finishAu(au);
       if (!terminated) {
         log.info(auName + ": Successfully moved AU Artifacts.");
       }
@@ -873,16 +656,15 @@ public class V2AuMover {
         log.info(auName + ": Au move terminated because of errors.");
         totalAusWithErrors++;
       }
-      auRunTime = System.currentTimeMillis() - au_move_start;
-      updateReport(auName);
+      updateReport(au, auStat);
       totalAusMoved++;
       if (v2Aus.contains(au.getAuId())) {
         totalAusPartiallyMoved++;
       }
-      updateTotals();
+//       updateTotals();
     }
     catch (Exception ex) {
-      updateReport(auName);
+      updateReport(au, auStat);
       totalAusWithErrors++;
       String err;
       if (ex instanceof ApiException) {
@@ -894,11 +676,10 @@ public class V2AuMover {
         terminated = true;
       }
       log.error(err);
-      addError(err);
-      totalErrorCount += auErrorCount;
+      auStat.addError(err);
       if (terminated) {
         dispatcher.cancelAll();
-        throw new IOException("Au Move Request terminated due to errors:" + err);
+//         throw new IOException("Au Move Request terminated due to errors:" + err);
       }
     }
   }
@@ -908,13 +689,34 @@ public class V2AuMover {
    *
    * @param au au The ArchivalUnit to move
    */
-  void moveAuArtifacts(ArchivalUnit au) {
+  void moveAuArtifacts(ArchivalUnit au, AuStatus auStat) throws ApiException {
+    CountUpDownLatch latch = new CountUpDownLatch();
+    synchronized (runningAUs) {
+      runningAUs.put(au.getAuId(), auStat);
+    }
+    // Queue copies for all CUs in the v1 repo.
+    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+      MigrationTask task = MigrationTask.copyCuVersions(this, au, cu)
+        .setCounters(auStat.getCounters())
+        .setLatch(latch);
+      latch.countUp();
+      taskExecutor.execute(new TaskRunner(this, task));
+    }
+  }
+
+  /**
+   * Move one V1 Au including all cachedUrls and all versions.
+   *
+   * @param au au The ArchivalUnit to move
+   */
+  void finishAu(ArchivalUnit au) {
+    CountUpDownLatch latch = new CountUpDownLatch();
     // Get the au CachedUrls from the v1 repo.
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
-      taskExecutor.execute(new TaskRunner(this,
-                                          MigrationTask.copyCuVersions(this,
-                                                                       au,
-                                                                       cu)));
+      MigrationTask task = MigrationTask.copyCuVersions(this, au, cu)
+        .setLatch(latch);
+      latch.countUp();
+      taskExecutor.execute(new TaskRunner(this, task));
     }
   }
 
@@ -938,7 +740,7 @@ public class V2AuMover {
    *
    * @param au the au we are moving.
    */
-  void moveAuState(ArchivalUnit au) {
+  void moveAuState(ArchivalUnit au, AuStatus auStat) {
     if (!terminated) {
       taskExecutor.execute(new TaskRunner(this,
           MigrationTask.copyAuState(this,
@@ -986,36 +788,19 @@ public class V2AuMover {
    * @return true if status for repository  is ready, false if either are not ready
    * @throws IOException if server is unable to return status.
    */
-  boolean v2ServicesUnavailable() throws IOException {
-    boolean result = true;
-
-    log.info("Checking V2 Repository Status");
+  void checkV2ServicesAvailable() throws IOException {
     try {
-      String msg;
+      log.info("Checking V2 Repository Status");
       if (!repoStatusApiClient.getStatus().getReady()) {
-        msg = "Unable to move au. V2 Repository Service is not ready.";
-        errorList.add(msg);
-        auErrors.add(msg);
+        throw new IOException("V2 Repository Service is not ready");
       }
-      else {
-        log.info("Checking V2 Configuration Status");
-        if (!cfgStatusApiClient.getStatus().getReady()) {
-          msg = "Unable to move au. V2 Configuration Service is not ready.";
-          errorList.add(msg);
-          auErrors.add(msg);
-        }
-        else {
-          result = false;
-        }
+      log.info("Checking V2 Configuration Status");
+      if (!cfgStatusApiClient.getStatus().getReady()) {
+        throw new IOException("V2 Configuration Service is not ready");
       }
+    } catch (Exception e) {
+      throw new ServiceUnavailableException("Couldn't fetch service status", e);
     }
-    catch (Exception ex) {
-      String msg = ex.getMessage();
-      errorList.add(msg);
-      auErrors.add(msg);
-      throw new IOException("Unable to get status for V2 services: " + msg);
-    }
-    return result;
   }
 
   /**
@@ -1042,98 +827,6 @@ public class V2AuMover {
       throw new IOException("Unable to get Au List from V2 Repository: " + msg);
     }
   }
-
-
-
-  /**
-   * Add an Error to the list and update error count;
-   * @param err the error string to add.
-   */
-  void addError(String err) {
-    errorList.add(err);
-    auErrors.add(err);
-    auErrorCount++;
-  }
-
-  /**
-   * update the reported totals after completing an au move
-   */
-  void updateTotals() {
-    totalBytesMoved += auBytesMoved;
-    totalContentBytesMoved += auContentBytesMoved;
-    totalUrlsMoved += auUrlsMoved;
-    totalArtifactsMoved += auArtifactsMoved;
-    totalErrorCount += auErrorCount;
-  }
-
-  /* ------------------
-  testing getters & setters
- */
-  void setAuCounters(long urls, long artifacts, long bytes, long contentBytes, long runTime,
-      long errors,
-      List<String> errs) {
-    auUrlsMoved = urls;
-    auArtifactsMoved = artifacts;
-    auBytesMoved = bytes;
-    auContentBytesMoved = contentBytes;
-    auRunTime = runTime;
-    auErrorCount = errors;
-    auErrors = errs;
-  }
-
-  void setTotalCounters(long aus, long urls, long artifacts, long bytes, long contentBytes,
-      long runTime, long errors) {
-    totalAusMoved = aus;
-    totalUrlsMoved = urls;
-    totalArtifactsMoved = artifacts;
-    totalBytesMoved = bytes;
-    totalContentBytesMoved = contentBytes;
-    totalRunTime = runTime;
-    totalErrorCount = errors;
-  }
-
-  LinkedHashSet<ArchivalUnit> getAuMoveQueue() {
-    return auMoveQueue;
-  }
-
-  void setCurrentAu(ArchivalUnit au) {
-    currentAu = au;
-  }
-
-  String getUserName() {
-    return userName;
-  }
-
-  String getUserPass() {
-    return userPass;
-  }
-
-  File getReportFile() {
-    return reportFile;
-  }
-
-  String getCfgAccessUrl() {
-    return cfgAccessUrl;
-  }
-
-  String getRepoAccessUrl() {
-    return repoAccessUrl;
-  }
-
-
-
-
-  void logErrorBody(Response response) {
-    try {
-      if(response.body() != null)
-        log.warning("Error response body: " + response.body().string());
-    }
-    catch (IOException e) {
-      log.error("Exception trying to retrieve error response body", e);
-    }
-  }
-
-
 
   public static class DigestCachedUrl {
     MessageDigest md;
@@ -1286,6 +979,490 @@ public class V2AuMover {
       return this;
     }
   }
+
+  // Statistics and status keeping and reporting
+
+  private final File reportFile;
+
+  private String currentStatus;
+  private boolean running = true; // init true avoids race while starting
+
+  private PrintWriter reportWriter;
+
+  private long totalAusToMove = 0;
+  private long totalAusMoved = 0;
+  private long totalAusPartiallyMoved = 0; // also included in totalAusMoved
+  private long totalAusSkipped = 0;
+  private long totalAusWithErrors = 0;
+  private long totalRunTime = 0;
+  private Counters totalCounters = new Counters();
+  private AuStatus totalStatus = new AuStatus(null);
+
+  private Map<String,AuStatus> runningAUs = new LinkedHashMap<>();
+
+  private final List<String> errorList = new ArrayList<>();
+
+  enum Phase {COPY, VERIFY, TOTAL}
+
+  enum CounterType {
+    URLS_MOVED,
+    URLS_SKIPPED,
+    ARTIFACTS_MOVED,
+    ARTIFACTS_SKIPPED,
+    BYTES_MOVED,
+    CONTENT_BYTES_MOVED,
+    RUNTIME
+  }
+
+  public static class Counters {
+    Map<CounterType,Counter> counters = new HashMap<>();
+    private long errorCount = 0;
+    private List<String> errors = new ArrayList<>();
+
+    public Counters() {
+      for (CounterType type : CounterType.values()) {
+        counters.put(type, new Counter());
+      }
+    }
+
+    public synchronized Counter get(CounterType type) {
+      return counters.get(type);
+    }
+
+    public long getVal(CounterType type) {
+      return counters.get(type).getVal();
+    }
+
+    public void addError(String msg) {
+      errors.add(msg);
+    }
+
+    public synchronized void add(Counters ctrs) {
+      for (CounterType type : CounterType.values()) {
+        get(type).add(ctrs.get(type));
+      }
+      errors.addAll(ctrs.errors);
+    }
+  }
+
+  /** Status and counters for a single AU in progress */
+  public static class AuStatus {
+
+    String auid;
+    String auname;
+    String status;
+    Counters ctrs;
+    Map<Phase,Long> startTime = new HashMap<>();
+    Map<Phase,Long> endTime = new HashMap<>();
+    long copyTime = -1;
+    long verifyTime = -1;
+    List<String> errors = new ArrayList<>();
+
+    public AuStatus(ArchivalUnit au) {
+      auid = au.getAuId();
+      auname = au.getName();
+      ctrs = new Counters();
+      status = "Initializing";
+    }
+
+    public String getAuName() {
+      return auname;
+    }
+
+    public String getAuId() {
+      return auid;
+    }
+
+    public Counters getCounters() {
+      return ctrs;
+    }
+
+    public String getStatus() {
+      return status;
+    }
+
+    public List<String> getErrors() {
+      return errors;
+    }
+
+    public int getErrorCount() {
+      return errors.size();
+    }
+
+    public long getStartTime(Phase phase) {
+      return startTime.get(phase);
+    }
+
+    public long getRunTime(Phase phase) {
+      return endTime.get(phase) - startTime.get(phase);
+    }
+
+    public void setStatus(String val) {
+      status = val;
+    }
+
+    public void setStartTime(Phase phase, long time) {
+      startTime.put(phase, time);
+    }
+
+    public void setEndTime(Phase phase, long time) {
+      endTime.put(phase, time);
+    }
+
+    public void addError(String msg) {
+      errors.add(msg);
+    }
+
+    public int hashCode() {
+      return 33 * auid.hashCode();
+    }
+
+    public boolean equals(Object obj) {
+      if (obj == null) { return false; }
+      if (obj == this) { return true; }
+      if (obj.getClass() != getClass()) {
+        return false;
+      }
+      return auid.equals(((AuStatus)obj).auid);
+    }
+  }
+
+
+  /**
+   * Return a string describing the current progress, or completion state.
+   */
+  public String getCurrentStatus() {
+    if (STATUS_COPYING.equals(currentStatus)) {
+      StringBuilder sb = new StringBuilder();
+      sb.append("Copied");
+      sb.append(totalAusMoved);
+      sb.append(" of ");
+      sb.append(totalAusToMove);
+      sb.append(" AUs, ");
+      addCounterStatus(sb, totalCounters, totalStatus, Phase.TOTAL);
+      return sb.toString();
+    }
+    return currentStatus;
+  }
+
+  public List<String> getCurrentStatusList() {
+
+    Map<String,AuStatus> auStats;
+    synchronized (runningAUs) {
+      auStats = new LinkedHashMap<>(runningAUs);
+    }
+    List<String> res = new ArrayList<>();
+    for (AuStatus auStat : auStats.values()) {
+      String one = getOneAuStatus(auStat);
+      if (one != null) {
+        res.add(one);
+      }
+    }
+    return res;
+  }
+
+  private String getOneAuStatus(AuStatus auStat) {
+    Counters ctrs = auStat.getCounters();
+    StringBuilder sb = new StringBuilder();
+    sb.append(auStat.getAuName());
+    sb.append(": ");
+    addCounterStatus(sb, ctrs, auStat, Phase.COPY);
+    return sb.toString();
+  }
+
+  private void addCounterStatus(StringBuilder sb, Counters ctrs, AuStatus auStat, Phase phase) {
+    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_MOVED),
+                                          "URL"));
+    sb.append(" copied, ");
+    sb.append(bigIntFmt.format(ctrs.getVal(CounterType.URLS_SKIPPED)));
+    sb.append(" skipped, ");
+    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.ARTIFACTS_MOVED),
+                                          "version"));
+    sb.append(" copied, ");
+    sb.append(bigIntFmt.format(ctrs.getVal(CounterType.ARTIFACTS_SKIPPED)));
+    sb.append(" skipped, ");
+    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.BYTES_MOVED),
+                                          "byte"));
+    sb.append(" copied, in ");
+    sb.append(StringUtil.timeIntervalToString(auStat.getRunTime(phase)));
+    if (ctrs.getVal(CounterType.BYTES_MOVED) > 0) {
+      sb.append(", at ");
+      sb.append(StringUtil.byteRateToString(ctrs.getVal(CounterType.BYTES_MOVED),
+                                            auStat.getRunTime(phase)));
+    }
+  }
+
+  public boolean isRunning() {
+    return running;
+  }
+
+  /**
+   * Returns the list of errors which occurred while attempting to move the AU(s).
+   *
+   * @return the list of error strings
+   */
+  public List<String> getErrors() {
+    return errorList;
+  }
+
+  private void addRunningAU(ArchivalUnit au) {
+    AuStatus austat = new AuStatus(au);
+    synchronized (runningAUs) {
+      runningAUs.put(au.getAuId(), austat);
+    }
+  }
+
+  private void removeRunningAU(ArchivalUnit au) {
+    synchronized (runningAUs) {
+      runningAUs.remove(au.getAuId());
+    }
+  }
+
+  public AuStatus getAuStatus(ArchivalUnit au) {
+    synchronized (runningAUs) {
+      return runningAUs.get(au.getAuId());
+    }
+  }
+
+  /**
+   * Start appending the Report file for current Au move request
+   */
+  void startReportFile() {
+
+    try {
+      log.info("Writing report to file " + reportFile.getAbsolutePath());
+      reportWriter = new PrintWriter(Files.newOutputStream(reportFile.toPath(), CREATE, APPEND),
+          true);
+      reportWriter.println("--------------------------------------------------");
+      reportWriter.println("  V2 Au Migration Report - " + DateFormatter.now());
+      reportWriter.println("--------------------------------------------------");
+      reportWriter.println();
+      if (reportWriter.checkError()) {
+        log.warning("Error writing report file.");
+      }
+    }
+    catch (IOException e) {
+      log.error("Report file will not be written: Unable to open report file:" + e.getMessage());
+    }
+  }
+
+  /**
+   * Update the report for the current Au
+   *
+   * @param auName the name of the current Au
+   */
+  void updateReport(ArchivalUnit au, AuStatus auStat) {
+    if (reportWriter == null) {
+      log.error("updateReport called when no reportWriter",
+                new Throwable());
+      return;
+    }
+    AuStatus austat = getAuStatus(au);
+    if (austat == null) {
+      log.error("updateReport called with AU that's not running: " +
+                au.getName(),
+                new Throwable());
+      reportWriter.println("updateReport called with AU that's not running: " +
+                           au.getName());
+      return;
+    }
+    StringBuilder sb = new StringBuilder();
+    addCounterStatus(sb, austat.getCounters(), austat, Phase.COPY);
+    sb.append(", ");
+    sb.append(StringUtil.bigNumberOfUnits(auStat.getErrorCount(), "error"));
+    sb.append(", in ");
+    sb.append(StringUtil.timeIntervalToString(auStat. getRunTime(Phase.COPY)));
+    String auData = sb.toString();
+    reportWriter.println("AU Name: " + auStat.getAuName());
+    reportWriter.println("AU ID: " + auStat.getAuId());
+    if (terminated) {
+      reportWriter.println("Move terminated with error.");
+      reportWriter.println(auData);
+    }
+//       else {
+//         if (isPartialContent) {
+//           if (auArtifactsMoved > 0) {// if we moved something
+//             reportWriter.println("Moved remaining unmigrated au content.");
+//             reportWriter.println(auData);
+//           }
+//           else {
+//             reportWriter.println("All au content already migrated.");
+//             reportWriter.println(auData);
+//           }
+//         }
+//         else {
+//           reportWriter.println(auData);
+//         }
+//       }
+    if (!auStat.getErrors().isEmpty()) {
+      for (String err : auStat.getErrors()) {
+        reportWriter.println(" " + err);
+      }
+    }
+    reportWriter.println();
+    if (reportWriter.checkError()) {
+      log.warning("Error writing report file.");
+    }
+  }
+
+  /**
+   * Close the report before exiting
+   */
+  void closeReport() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(StringUtil.bigNumberOfUnits(totalAusMoved + totalAusSkipped, "AU") + " moved");
+    if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
+      sb.append(" (");
+      if (totalAusSkipped > 0) {
+        sb.append(bigIntFmt.format(totalAusSkipped));
+        sb.append(" previously");
+        if (totalAusPartiallyMoved > 0) {
+          sb.append(", ");
+        }
+      }
+      if (totalAusPartiallyMoved > 0) {
+        sb.append(bigIntFmt.format(totalAusPartiallyMoved));
+        sb.append(" partially)");
+      }
+      sb.append(")");
+    }
+    sb.append(", ");
+    addCounterStatus(sb, totalCounters, totalStatus, Phase.TOTAL);
+//     sb.append(StringUtil.bigNumberOfUnits(totalUrlsMoved, "URL") + ", ");
+//     sb.append(StringUtil.bigNumberOfUnits(totalArtifactsMoved, "version") + ", ");
+//     sb.append(StringUtil.bigNumberOfUnits(totalContentBytesMoved, "content byte") + ", ");
+//     sb.append(StringUtil.bigNumberOfUnits(totalBytesMoved, "total byte") + ", ");
+//     if (totalBytesMoved > 0) {
+//       sb.append("at ");
+//       sb.append(StringUtil.byteRateToString(totalBytesMoved, totalRunTime));
+//       sb.append(", ");
+//     }
+//     sb.append(StringUtil.bigNumberOfUnits(totalErrorCount, "error") + ", ");
+//     sb.append("in ");
+//     sb.append(StringUtil.timeIntervalToString(totalRunTime));
+    String summary = sb.toString();
+    running = false;
+    currentStatus = summary;
+    if (reportWriter != null) {
+      reportWriter.println(summary);
+      if (reportWriter.checkError()) {
+        log.warning("Error writing report file.");
+      }
+
+      reportWriter.close();
+    }
+    log.info(summary);
+  }
+
+
+
+  /**
+   * Add an Error to the list and update error count;
+   * @param err the error string to add.
+   */
+//   void addError(String err) {
+//     errorList.add(err);
+//     auErrors.add(err);
+//     auErrorCount++;
+//   }
+
+//   /**
+//    * update the reported totals after completing an au move
+//    */
+//   void updateTotals() {
+//     totalBytesMoved += auBytesMoved;
+//     totalContentBytesMoved += auContentBytesMoved;
+//     totalUrlsMoved += auUrlsMoved;
+//     totalArtifactsMoved += auArtifactsMoved;
+//     totalErrorCount += auErrorCount;
+//   }
+
+  /* ------------------
+  testing getters & setters
+ */
+  void setAuCounters(long urls, long artifacts, long bytes, long contentBytes, long runTime,
+      long errors,
+      List<String> errs) {
+//     auUrlsMoved = urls;
+//     auArtifactsMoved = artifacts;
+//     auBytesMoved = bytes;
+//     auContentBytesMoved = contentBytes;
+//     auRunTime = runTime;
+//     auErrorCount = errors;
+//     auErrors = errs;
+  }
+
+  void setTotalCounters(long aus, long urls, long artifacts, long bytes, long contentBytes,
+      long runTime, long errors) {
+//     totalAusMoved = aus;
+//     totalUrlsMoved = urls;
+//     totalArtifactsMoved = artifacts;
+//     totalBytesMoved = bytes;
+//     totalContentBytesMoved = contentBytes;
+//     totalRunTime = runTime;
+//     totalErrorCount = errors;
+  }
+
+  LinkedHashSet<ArchivalUnit> getAuMoveQueue() {
+    return auMoveQueue;
+  }
+
+  String getUserName() {
+    return userName;
+  }
+
+  String getUserPass() {
+    return userPass;
+  }
+
+  File getReportFile() {
+    return reportFile;
+  }
+
+  String getCfgAccessUrl() {
+    return cfgAccessUrl;
+  }
+
+  String getRepoAccessUrl() {
+    return repoAccessUrl;
+  }
+
+
+
+
+  void logErrorBody(Response response) {
+    try {
+      if(response.body() != null)
+        log.warning("Error response body: " + response.body().string());
+    }
+    catch (IOException e) {
+      log.error("Exception trying to retrieve error response body", e);
+    }
+  }
+
+  static class ServiceUnavailableException extends IOException {
+    public ServiceUnavailableException(String msg) {
+      super(msg);
+    }
+    public ServiceUnavailableException(String msg, Throwable t) {
+      super(msg);
+      initCause(t);
+    }
+    public ServiceUnavailableException(Throwable t) {
+      super();
+      initCause(t);
+    }
+  }
+
+
 }
 
+
+//       errorList.add(msg);
+//       auErrors.add(msg);
+
+// in one au
+//       totalCounters.runTime = System.currentTimeMillis() - startTime;
+// in finish all
+//       totalCounters.runTime = System.currentTimeMillis() - startTime;
 

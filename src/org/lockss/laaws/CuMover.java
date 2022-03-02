@@ -16,34 +16,21 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
+import static org.lockss.laaws.V2AuMover.CounterType;
 
-public class CuMover {
-
+public class CuMover extends Worker {
   private static final Logger log = Logger.getLogger(CuMover.class);
-  private V2AuMover auMover;
-  private ArchivalUnit au;
+
   private CachedUrl cu;
   private String v1Url;
   private String v2Url;
   private boolean isPartialContent;
-  private boolean terminated = false;
   private String collection;
-  private long cuArtifactsMoved = 0;
-  private long cuBytesMoved = 0;
-  private long cuContentBytesMoved = 0;
 
-  /**
-   * The v2 REST collections api implemntation
-   */
-  private final StreamingCollectionsApi collectionsApi;
-
-
-  public CuMover(V2AuMover auMover, ArchivalUnit au, CachedUrl cu) {
-    this.auMover = auMover;
-    this.au = au;
-    this.cu = cu;
+  public CuMover(V2AuMover auMover, MigrationTask task) {
+    super(auMover, task);
+    this.au = task.getAu();
     collection = auMover.getCollection();
-    collectionsApi = auMover.getRepoCollectionsApiClient();
   }
 
   public void run() {
@@ -92,8 +79,10 @@ public class CuMover {
             AuUtil.safeRelease(ver);
           }
         }
-        while(!terminated && cuQueue.peek() != null)
+        while(!terminated && cuQueue.peek() != null) {
           moveNextCuVersion(auid, v2Url, cuQueue);
+        }
+        ctrs.get(V2AuMover.CounterType.URLS_MOVED).incr();
       }
     }
   }
@@ -130,7 +119,7 @@ public class CuMover {
       String err = v2Url + ": failed to create version: " + cu.getVersion() + ": " +
           apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
-      auMover.addError(err);
+      task.addError(err);
     }
     finally {
       AuUtil.safeRelease(cu);
@@ -152,8 +141,8 @@ public class CuMover {
     log.debug3("enqueing create artifact request...");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
     Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu, collectionDate);
-    cuContentBytesMoved += cu.getContentSize();
-    cuBytesMoved += dcu.getBytesMoved();
+    ctrs.get(CounterType.CONTENT_BYTES_MOVED).add(cu.getContentSize());
+    ctrs.get(CounterType.BYTES_MOVED).add(dcu.getBytesMoved());
     commitArtifact(uncommitted, dcu);
   }
 
@@ -174,15 +163,14 @@ public class CuMover {
       String err="Error in commit of " + dcu.getCu().getUrl() + " content digest do not match";
       log.error(err);
       log.debug("v1 digest: " +dcu.getContentDigest()+  " v2 digest: " + committed.getContentDigest());
-      auMover.addError(err);
+      task.addError(err);
     }
     else {
       if (log.isDebug2()) {
         log.debug2("Hash match: " + dcu.getCu().getUrl() + ": v1 digest: " +dcu.getContentDigest()+  " v2 digest: " + committed.getContentDigest());
       }
       log.debug3("Successfully committed artifact " + committed.getId());
-      cuArtifactsMoved++;
-
+      ctrs.get(CounterType.ARTIFACTS_MOVED).incr();
     }
 
   }

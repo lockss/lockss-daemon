@@ -25,21 +25,17 @@ import org.lockss.repository.RepositoryManager;
 import org.lockss.state.AuState;
 import org.lockss.util.Logger;
 
-public class AuStateChecker {
-
-  private V2AuMover auMover;
-  private ArchivalUnit au;
-  private AusApi cfgApiClient;
-  private boolean terminated;
+public class AuStateChecker extends Worker {
   private static final Logger log = Logger.getLogger(AuStateChecker.class);
+
   IdentityManagerImpl idManager;
   RepositoryManager repoManager;
   PollManager pollManager;
 
-  public AuStateChecker(V2AuMover auMover, ArchivalUnit au) {
+  public AuStateChecker(V2AuMover auMover, MigrationTask task) {
+    super(auMover, task);
     this.auMover = auMover;
-    this.au = au;
-    this.cfgApiClient = auMover.getCfgAusApiClient();
+    this.au = task.getAu();
     IdentityManager idmgr = LockssDaemon.getLockssDaemon().getIdentityManager();
     if (idmgr instanceof IdentityManagerImpl) {
       idManager = ((IdentityManagerImpl) LockssDaemon.getLockssDaemon().getIdentityManager());
@@ -88,7 +84,7 @@ public class AuStateChecker {
       log.warning("No Au agreements found for au in V1");
     }
     if(err != null) {
-      auMover.addError(err);
+      task.addError(err);
       //what should we do to propagate this up.
     }
   }
@@ -122,7 +118,7 @@ public class AuStateChecker {
       log.info(auName + ": No v1 Au suspect url versions found.");
     }
     if(err != null) {
-      auMover.addError(err);
+      task.addError(err);
       //what should we do to propagate this up.
     }
   }
@@ -156,7 +152,7 @@ public class AuStateChecker {
       log.warning(auName + ": No Au peer set found for au");
     }
     if(err != null) {
-      auMover.addError(err);
+      task.addError(err);
     }
   }
 
@@ -185,7 +181,7 @@ public class AuStateChecker {
       log.error(err, ex);
     }
     if(err != null) {
-      auMover.addError(err);
+      task.addError(err);
       //what should we do to propagate this up.
     }
   }
@@ -218,7 +214,7 @@ public class AuStateChecker {
       log.warning(auName + ": No State information found for au");
     }
     if(err != null) {
-      auMover.addError(err);
+      task.addError(err);
       //what should we do to propagate this up.
     }
   }
