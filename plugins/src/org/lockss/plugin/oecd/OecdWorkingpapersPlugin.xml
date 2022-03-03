@@ -57,66 +57,6 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD iLibrary Working Papers Plugin, Base URL %s, Topic %s, Book Title %s, Book ID %s", base_url, topic, book_title, book_id</string>
-    </entry>
-    <entry>
-        <string>plugin_config_props</string>
-        <list>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>base_url</key>
-                <displayName>Base URL</displayName>
-                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-                <type>3</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>topic</key>
-                <displayName>Periodical Topic</displayName>
-                <description>Topic of the Periodical</description>
-                <type>1</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>pub_path</key>
-                <displayName>Periodical URL Path</displayName>
-                <description>Url Path for Periodical</description>
-                <type>1</type>
-                <size>100</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>pub_id</key>
-                <displayName>Periodical ID (as found on OECD)</displayName>
-                <type>1</type>
-                <size>20</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-        </list>
-    </entry>
-    <entry>
-        <string>au_start_url</string>
-        <string>"%s%s/%s_%s", base_url, topic, pub_path, pub_id</string>
-    </entry>
-    <entry>
-        <string>au_substance_url_pattern</string>
-        <list>
-            <!-- start_page, and pdfs -->
-            <string>"%s%s/%s_%s$", base_url, topic, pub_path, pub_id</string>
-            <string>"%s.+\.pdf", base_url</string>
-        </list>
-    </entry>
-    <entry>
-        <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.oecd.OecdBooksArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.oecd.OecdBooksArticleIteratorFactory</string>
+        <string>"OECD iLibrary Working Papers Plugin, Base URL %s, Publication Path %s, Publication ID %s", base_url, pub_path, pub_id</string>
     </entry>
 </map>
