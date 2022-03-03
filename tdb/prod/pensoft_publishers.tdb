@@ -525,6 +525,20 @@
       au < released ; 2019 ; 2019 ; Food Modeling Journal (FMJ) Volume 2019 ; 2019 ; https://fmj.pensoft.net/ >
       au < doesNotExist ; 2020 ; 2020 ; Food Modeling Journal (FMJ) Volume 2020 ; 2020 ; https://fmj.pensoft.net/ >
       au < manifest ; 2021 ; 2021 ; Food Modeling Journal (FMJ) Volume 2021 ; 2021 ; https://fmj.pensoft.net/ >
+      #Changed to 2815-3197 Food and Ecological Systems Modelling Journal
+
+  }
+
+  {
+
+      title <
+        name = Food and Ecological Systems Modelling Journal ;
+        eissn = 2815-3197
+      >
+
+      param[au_oai_set] = fmj
+
+      #Changed from 2603-4301 Food Modeling Journal (FMJ)
       au < expected ; 2022 ; 2022 ; Food Modeling Journal (FMJ) Volume 2022 ; 2022 ; https://fmj.pensoft.net/ >
 
   }
