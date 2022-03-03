@@ -996,7 +996,7 @@ public class V2AuMover {
   private long totalAusWithErrors = 0;
   private long totalRunTime = 0;
   private Counters totalCounters = new Counters();
-  private AuStatus totalStatus = new AuStatus(null);
+  private OpTimers totalTimers = new OpTimers();
 
   private Map<String,AuStatus> runningAUs = new LinkedHashMap<>();
 
@@ -1045,17 +1045,34 @@ public class V2AuMover {
     }
   }
 
+  public static class OpTimers {
+    protected Map<Phase,Long> startTime = new HashMap<>();
+    protected Map<Phase,Long> endTime = new HashMap<>();
+
+    public void setStartTime(Phase phase, long time) {
+      startTime.put(phase, time);
+    }
+
+    public void setEndTime(Phase phase, long time) {
+      endTime.put(phase, time);
+    }
+
+    public long getStartTime(Phase phase) {
+      return startTime.get(phase);
+    }
+
+    public long getRunTime(Phase phase) {
+      return endTime.get(phase) - startTime.get(phase);
+    }
+  }
+
   /** Status and counters for a single AU in progress */
-  public static class AuStatus {
+  public static class AuStatus extends OpTimers {
 
     String auid;
     String auname;
     String status;
     Counters ctrs;
-    Map<Phase,Long> startTime = new HashMap<>();
-    Map<Phase,Long> endTime = new HashMap<>();
-    long copyTime = -1;
-    long verifyTime = -1;
     List<String> errors = new ArrayList<>();
 
     public AuStatus(ArchivalUnit au) {
@@ -1139,7 +1156,7 @@ public class V2AuMover {
       sb.append(" of ");
       sb.append(totalAusToMove);
       sb.append(" AUs, ");
-      addCounterStatus(sb, totalCounters, totalStatus, Phase.TOTAL);
+      addCounterStatus(sb, totalCounters, totalTimers, Phase.TOTAL);
       return sb.toString();
     }
     return currentStatus;
@@ -1170,7 +1187,8 @@ public class V2AuMover {
     return sb.toString();
   }
 
-  private void addCounterStatus(StringBuilder sb, Counters ctrs, AuStatus auStat, Phase phase) {
+  private void addCounterStatus(StringBuilder sb, Counters ctrs,
+                                OpTimers auStat, Phase phase) {
     sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_MOVED),
                                           "URL"));
     sb.append(" copied, ");
@@ -1327,7 +1345,7 @@ public class V2AuMover {
       sb.append(")");
     }
     sb.append(", ");
-    addCounterStatus(sb, totalCounters, totalStatus, Phase.TOTAL);
+    addCounterStatus(sb, totalCounters, totalTimers, Phase.TOTAL);
 //     sb.append(StringUtil.bigNumberOfUnits(totalUrlsMoved, "URL") + ", ");
 //     sb.append(StringUtil.bigNumberOfUnits(totalArtifactsMoved, "version") + ", ");
 //     sb.append(StringUtil.bigNumberOfUnits(totalContentBytesMoved, "content byte") + ", ");
