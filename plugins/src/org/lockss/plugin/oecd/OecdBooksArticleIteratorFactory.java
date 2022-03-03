@@ -16,11 +16,7 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
   private static final Logger log = Logger.getLogger(OecdBooksArticleIteratorFactory.class);
 
   private static final String PATTERN_TEMPLATE =
-      "\"%s(%s/%s_%s|sites/|deliver/)\", base_url, topic, book_title, book_id";
-
-  // landing page
-  // https://www.oecd-ilibrary.org/social-issues-migration-health/housing-and-inclusive-growth_6ef36f4b-en
-  private static Pattern LANDING_PATTERN;
+      "\"%s(%s_%s|deliver/)\", base_url, pub_path, pub_id";
 
   // full text html
   // https://www.oecd-ilibrary.org/sites/6ef36f4b-en/index.html?itemId=/content/publication/6ef36f4b-en
@@ -39,17 +35,18 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
 
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-    String topic = au.getConfiguration().get("topic");
-    String book_title = au.getConfiguration().get("book_title");
-    String book_id= au.getConfiguration().get("book_id");
+    String pub_path = au.getConfiguration().get("pub_path");
+    String pub_id= au.getConfiguration().get("pub_id");
 
-    LANDING_PATTERN = Pattern.compile(
-        String.format("/(%s/%s_(%s))$", topic, book_title, book_id));
-    String LANDING_REPLACEMENT = String.format("/%s/%s_$2", topic, book_title);
+    // landing page
+    // https://www.oecd-ilibrary.org/social-issues-migration-health/housing-and-inclusive-growth_6ef36f4b-en
+    Pattern LANDING_PATTERN = Pattern.compile(
+        String.format("/(%s_(%s))$", pub_path, pub_id));
+    String LANDING_REPLACEMENT = String.format("/%s_$2", pub_path);
 
     String PDF_REPLACEMENT = "/deliver/$2.pdf?itemId=%2Fcontent%2Fpublication%2F$2&mimeType=pdf";
-    String EPUB_REPLACEMENT = "/deliver/$2.epub?itemId=%2Fcontent%2Fpublication%2F$2&mimeType=epub";
-    String HTML_REPLACEMENT = "/sites/$2/index.html?itemId=/content/publication/$2";
+    //String EPUB_REPLACEMENT = "/deliver/$2.epub?itemId=%2Fcontent%2Fpublication%2F$2&mimeType=epub";
+    //String HTML_REPLACEMENT = "/sites/$2/index.html?itemId=/content/publication/$2";
 
     // for LANDING replacement
     String RIS_REPLACEMENT = "/$1/cite/ris";
@@ -70,6 +67,7 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
+    /*
     builder.addAspect(
         EPUB_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_EPUB);
@@ -77,6 +75,7 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
     builder.addAspect(
         HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
+    */
 
     // citation files
     builder.addAspect(
@@ -90,10 +89,10 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
         ArticleFiles.ROLE_CITATION_ENDNOTE);
 
     builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        //ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF,
-        ArticleFiles.ROLE_FULL_TEXT_EPUB
+        ArticleFiles.ROLE_FULL_TEXT_PDF
+        //ArticleFiles.ROLE_FULL_TEXT_EPUB
     );
 
     builder.setRoleFromOtherRoles(
