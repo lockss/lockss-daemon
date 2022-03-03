@@ -399,7 +399,7 @@
     name = London School of Economics and Politics
   >
 
-    provider = Ubiquity Press
+    provider = London School of Economics and Politics
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
