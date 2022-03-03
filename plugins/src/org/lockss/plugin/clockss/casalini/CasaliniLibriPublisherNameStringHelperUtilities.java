@@ -87,6 +87,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("artemide", "Artemide");
       canonical.put("associazione di studi storici elio conti", "Associazione di studi storici Elio Conti");
       canonical.put("associazione italiana biblioteche", "AIB - Associazione Italiana Biblioteche");
+       //Associazione Lettera Internazionale
       canonical.put("ateneo pontificio regina apostolorum","Ateneo Pontificio Regina Apostolorum");
       canonical.put("bibliografica", "Editrice Bibliografica");
       canonical.put("biblioteca dei leoni", "Biblioteca dei Leoni");
@@ -122,6 +123,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("editore ulrico hoepli", "Hoepli");
       canonical.put("editore xy.it", "Editore XY.IT");
       canonical.put("editorial comares", "Editorial Comares");
+      //Editoriale Scientifica
       canonical.put("editrice bibliografia", "Editrice Bibliografica"); //sic
       canonical.put("editrice bibliografica", "Editrice Bibliografica");
       canonical.put("edizione di storia e letteratura", "Storia e Letteratura");
@@ -150,6 +152,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("faenza editrice", "CLUEB");
       canonical.put("f. angeli", "Franco Angeli");
       canonical.put("f.angeli", "Franco Angeli");
+      //Fondazione Craxi
       canonical.put("fondazione ignazio mormino del banco di sicilia", "L'Erma di Bretschneider");
       canonical.put("fondazione ignazio mormino del banco di sicilia l'erma di bretschneider", "L'Erma di Bretschneider");
       canonical.put("forum", "Forum");
@@ -192,6 +195,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("jaca book", "CLUEB");
       canonical.put("jaca book clueb", "CLUEB");
       canonical.put("jouvence", "Jouvence");
+      //Kermes rivista
       canonical.put("la ergastula", "La Ergástula");
       canonical.put("la ergástula", "La Ergástula");
       canonical.put("la otra h", "Herder Editorial");
@@ -212,6 +216,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("libreria musicale italiana", "LIM - Libreria Musicale Italiana");
       canonical.put("licosia", "Licosia Edizioni");
       canonical.put("licosia edizioni", "Licosia Edizioni");
+      //LINEA edizioni
       canonical.put("loffredo editore", "Loffredo");
       canonical.put("longo", "Longo");
       canonical.put("a. Longo", "A. Longo");
@@ -239,9 +244,12 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("new digital press", "New Digital Frontiers"); //sic
       canonical.put("negretto", "Negretto");
       canonical.put("nicomp", "Nicomp");
+      //Nova Charta
       canonical.put("officina libraria", "Officina Libraria");
       canonical.put("orthotes", "Orthotes Editrice");
+      //Palermo University Press
       canonical.put("paolo loffredo", "Loffredo");
+      //Paolo Loffredo Editore
       canonical.put("paolo loffredo iniziative editoriali", "Loffredo");
       canonical.put("partagees", "Giannini Editore");
       canonical.put("partagées", "Giannini Editore");
@@ -270,6 +278,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("regione emilia-romagna", "CLUEB");
       canonical.put("regione emilia-romagna clueb", "CLUEB");
       canonical.put("reus", "Editorial Reus");
+      //Rivista di diritto delle arti e dello spettacolo
       canonical.put("rosenberg & seller", "Rosenberg & Sellier"); //sic
       canonical.put("rosenberg & sellier", "Rosenberg & Sellier");
       canonical.put("rosenberg sellier", "Rosenberg & Sellier");
@@ -293,6 +302,7 @@ public class CasaliniLibriPublisherNameStringHelperUtilities {
       canonical.put("tab edizioni", "TAB edizioni");
       canonical.put("tangram", "Tangram Edizioni Scientifiche");
       canonical.put("tangram edizioni scientifiche", "Tangram Edizioni Scientifiche");
+      //Testimonianze Associazione culturale
       canonical.put("the wolfsonian foundation", "Cadmo");
       canonical.put("the wolfsonian foundation amalthea", "Cadmo");
       canonical.put("tra le righe", "Tra le righe libri");
