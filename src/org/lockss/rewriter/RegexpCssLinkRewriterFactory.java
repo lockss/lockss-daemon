@@ -69,11 +69,19 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
   public static final CssLinkRewriterUrlEncodeMode DEFAULT_URL_ENCODE =
     CssLinkRewriterUrlEncodeMode.Full;
 
-  private static final int MAX_URL_LENGTH = 2100;
+  private static final int DEFAULT_MAX_URL_LENGTH = 2100;
   // Amount of CSS input to buffer up for matcher
   private static final int DEFAULT_MAX_BUF = 32 * 1024;
   // Amount at end of buffer to rescan at beginning of next bufferfull
   private static final int DEFAULT_OVERLAP = 2 * 1024;
+
+
+  private CssLinkRewriterUrlEncodeMode urlEncodeMode =
+    DEFAULT_URL_ENCODE;
+
+  private static final int GQUOTE1 = 1;
+  private static final int GURL = 2;
+  private static final int GQUOTE2 = 3;
 
   // This regexp is too permissive.  Using dot to match the URL chars in G2
   // allows illegal chars and mismatched quotes.  (The reluctant match
@@ -83,24 +91,19 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
   // follows the spec and stops processing the css at the first illegal
   // syntax.)
 
-  private static final String CSS_URI_EXTRACTOR =    
-    "(?i)(?:@import\\s+(?:url[(]|)|url[(])\\s*([\\\"\']?)" + // G1
-    "(.{0," + MAX_URL_LENGTH + "}?)" + //G2
-    "(\\1)\\s*[);]"; // G3
+  private static String createCssUriExtractor(int maxUrlLen) {
+    return "(?i)(?:@import\\s+(?:url[(]|)|url[(])\\s*([\\\"\']?)" + // G1
+        "(.{0," + maxUrlLen + "}?)" + //G2
+        "(\\1)\\s*[);]"; // G3
     // GROUPS:
     // (G1) optional ' or "
     // (G2) URI
     // (G3) = G1
+  }
 
-  private CssLinkRewriterUrlEncodeMode urlEncodeMode =
-    DEFAULT_URL_ENCODE;
-
-  private static final int GQUOTE1 = 1;
-  private static final int GURL = 2;
-  private static final int GQUOTE2 = 3;
+  private static final String CSS_URI_EXTRACTOR = createCssUriExtractor(DEFAULT_MAX_URL_LENGTH);
 
   static Pattern CSS_URL_PAT = Pattern.compile(CSS_URI_EXTRACTOR);
-
 
   // Chars that need escaping in URLs in CSS
   private static final String CSS_ESCAPE_CHARS = "\\() '\"";
@@ -120,6 +123,12 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
 
   /** For testing buffer shifting */
   RegexpCssLinkRewriterFactory(int maxBuf, int overlap) {
+    this.maxBuf = maxBuf;
+    this.overlap = overlap;
+  }
+  /** For testing buffer shifting */
+  RegexpCssLinkRewriterFactory(int maxBuf, int overlap, int maxUrlLen) {
+    this.CSS_URL_PAT = Pattern.compile(createCssUriExtractor(maxUrlLen));
     this.maxBuf = maxBuf;
     this.overlap = overlap;
   }

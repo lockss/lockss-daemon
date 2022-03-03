@@ -42,6 +42,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.servlet.*;
+import sun.security.action.OpenFileInputStreamAction;
 
 public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
   static Logger log =
@@ -168,7 +169,6 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     " background-image: url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fimages%2Fbanner.gif');\n" +
     "}\n";
 
-
   public void setUp() throws Exception {
     super.setUp();
     au = new MockArchivalUnit();
@@ -236,6 +236,20 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     log.debug3("Original:\n" + orig);
     log.debug3("Transformed:\n" + out);
     assertEquals(xformed, out);
+  }
+
+  public void testRewritingLargeDataUri() throws Exception {
+    ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
+        "Minimal");
+    rclrf = new RegexpCssLinkRewriterFactory(2097152, 2097152 / 16 , 2097152);
+    String large_data_uri = StringUtil.fromInputStream(getResourceAsStream("2MB_data_uri.css"));
+    InputStream is = rclrf.createLinkRewriter("text/css", au,
+        getResourceAsStream("2MB_data_uri.css"),
+        encoding, srcUrl, xform);
+    String out = StringUtil.fromInputStream(is);
+    //log.debug3("Original:\n" + large_data_uri);
+    //log.info("Transformed:\n" + out);
+    assertEquals(large_data_uri, out);
   }
 
   public void testRewritingFullEncoding() throws Exception {
