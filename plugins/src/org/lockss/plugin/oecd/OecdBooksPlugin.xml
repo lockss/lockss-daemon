@@ -158,7 +158,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- https://www.oecd-ilibrary.org/science-and-technology/bridging-digital-divides-in-g20-countries_35c1d850-en -->
             <string>"%s%s_%s", base_url, pub_path, pub_id</string>
             <!-- https://www.oecd-ilibrary.org/content/publication/35c1d850-en -->
-            <string>"%scontent/publication/%s", base_url, pub_path, pub_id</string>
+            <string>"%scontent/publication/%s", base_url, pub_id</string>
         </list>
     </entry>
     <entry>
