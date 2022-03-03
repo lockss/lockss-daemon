@@ -518,8 +518,36 @@
       eissn = 2334-1548
     >
       param[journal_id] = jiuspa
-      # no issue in 2007-2009. Added
 
+      au < manifest ; exists ; 1968 ; 1968 ; Journal of the Indiana University Student Personnel Association Volume 1968 ; 1968 ; >
+      au < manifest ; exists ; 1969 ; 1969 ; Journal of the Indiana University Student Personnel Association Volume 1969 ; 1969 ; >
+      au < doesNotExist ; doesNotExist ; 1970 ; 1970 ; Journal of the Indiana University Student Personnel Association Volume 1970 ; 1970 ; >
+      au < manifest ; exists ; 1971 ; 1971 ; Journal of the Indiana University Student Personnel Association Volume 1971 ; 1971 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; Journal of the Indiana University Student Personnel Association Volume 1972 ; 1972 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; Journal of the Indiana University Student Personnel Association Volume 1973 ; 1973 ; >
+      au < doesNotExist ; doesNotExist ; 1974 ; 1974 ; Journal of the Indiana University Student Personnel Association Volume 1974 ; 1974 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; Journal of the Indiana University Student Personnel Association Volume 1975 ; 1975 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Journal of the Indiana University Student Personnel Association Volume 1976 ; 1976 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; Journal of the Indiana University Student Personnel Association Volume 1977 ; 1977 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Journal of the Indiana University Student Personnel Association Volume 1978 ; 1978 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Journal of the Indiana University Student Personnel Association Volume 1979 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Journal of the Indiana University Student Personnel Association Volume 1980 ; 1980 ; >
+      au < doesNotExist ; doesNotExist ; 1981 ; 1981 ; Journal of the Indiana University Student Personnel Association Volume 1981 ; 1981 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Journal of the Indiana University Student Personnel Association Volume 1982 ; 1982 ; >
+      au < doesNotExist ; doesNotExist ; 1983 ; 1983 ; Journal of the Indiana University Student Personnel Association Volume 1983 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Journal of the Indiana University Student Personnel Association Volume 1984 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; Journal of the Indiana University Student Personnel Association Volume 1985 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; Journal of the Indiana University Student Personnel Association Volume 1986 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Journal of the Indiana University Student Personnel Association Volume 1987 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Journal of the Indiana University Student Personnel Association Volume 1988 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Journal of the Indiana University Student Personnel Association Volume 1989 ; 1989 ; >
+      au < doesNotExist ; doesNotExist ; 1990 ; 1990 ; Journal of the Indiana University Student Personnel Association Volume 1990 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Journal of the Indiana University Student Personnel Association Volume 1991 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Journal of the Indiana University Student Personnel Association Volume 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Journal of the Indiana University Student Personnel Association Volume 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Journal of the Indiana University Student Personnel Association Volume 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Journal of the Indiana University Student Personnel Association Volume 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Journal of the Indiana University Student Personnel Association Volume 1996 ; 1996 ; >
       au < manifest ; exists ; 1997 ; 1997 ; Journal of the Indiana University Student Personnel Association Volume 1997 ; 1997 ; >
       au < manifest ; exists ; 1998 ; 1998 ; Journal of the Indiana University Student Personnel Association Volume 1998 ; 1998 ; >
       au < manifest ; exists ; 1999 ; 1999 ; Journal of the Indiana University Student Personnel Association Volume 1999 ; 1999 ; >
@@ -544,7 +572,8 @@
       au < frozen ; exists ; 2018 ; 2018 ; Journal of the Indiana University Student Personnel Association Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; Journal of the Indiana University Student Personnel Association Volume 2019 ; 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Journal of the Indiana University Student Personnel Association Volume 2020 ; 2020 ; >
-      #no 2020 as of 12/5/2020
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of the Indiana University Student Personnel Association Volume 2021 ; 2021 ; >
+      au < expected ; exists ; 2022 ; 2022 ; Journal of the Indiana University Student Personnel Association Volume 2022 ; 2022 ; >
 
 
   }
