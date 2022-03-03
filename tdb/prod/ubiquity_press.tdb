@@ -293,6 +293,7 @@
 
   }
 
+
   {
 
       title <
@@ -381,6 +382,67 @@
 
 }
 
+{
+  publisher <
+    name = London School of Economics and Politics
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Journal of Illicit Economies and Development ;
+        eissn = 2516-7227
+      >
+
+      comment[publisher] = London School of Economics and Politics
+#      param[base_url] = https://jied.lse.ac.uk/
+
+      au < manifest ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ >
+      au < manifest ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ >
+      au < manifest ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ >
+      au < expected ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ >
+
+  }
+  
+  {
+
+      title <
+        name = Journal of Long-Term Care ;
+        eissn = 2516-9122
+      >
+
+      comment[publisher] = London School of Economics and Politics
+#      param[base_url] = https://journal.ilpnetwork.org/
+
+      au < manifest ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ > #problem with volume url?
+      au < manifest ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ >
+      au < manifest ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ >
+      au < manifest ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ >
+      au < manifest ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; https://journal.ilpnetwork.org/ >
+
+  }
+  
+  {
+
+      title <
+        name = LSE Public Policy Review ;
+        eissn = 2633-4046
+      >
+
+      comment[publisher] = London School of Economics and Politics
+#      param[base_url] = https://ppr.lse.ac.uk/ 
+
+      au < manifest ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ >
+      au < manifest ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; https://ppr.lse.ac.uk/ >
+      au < expected ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 ; 2022 ; https://ppr.lse.ac.uk/ >
+
+  }
+  
+}
 {
   publisher <
     name = Open Library of Humanities
