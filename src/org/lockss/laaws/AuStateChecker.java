@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import java.util.Collection;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
-import org.lockss.laaws.api.cfg.AusApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.cfg.V2AuStateBean;
@@ -44,18 +43,25 @@ public class AuStateChecker extends Worker {
     pollManager = LockssDaemon.getLockssDaemon().getPollManager();
   }
   public void run() {
-    log.debug2("Starting Au Stat Mover: " + au );
-    String auName = au.getName();
-    log.info(auName + ": Checking AU Agreements...");
-    checkAuAgreements(au);
-    log.info(auName + ": Checking AU Suspect Urls...");
-    checkAuSuspectUrlVersions(au);
-    log.info(auName + ": Checking No Au Peer Set...");
-    checkNoAuPeerSet(au);
-    log.info(auName + ": Checking AU State...");
-    checkAuState(au);
-    log.info(auName + ": Checking AU Configuration...");
-    checkAuConfig(au);
+    try {
+      String auName = au.getName();
+      log.debug2("Starting Au State Check: " + auName );
+      log.info(auName + ": Checking AU Agreements...");
+      checkAuAgreements(au);
+      log.info(auName + ": Checking AU Suspect Urls...");
+      checkAuSuspectUrlVersions(au);
+      log.info(auName + ": Checking No Au Peer Set...");
+      checkNoAuPeerSet(au);
+      log.info(auName + ": Checking AU State...");
+      checkAuState(au);
+      log.info(auName + ": Checking AU Configuration...");
+      checkAuConfig(au);
+    }
+    catch (Exception ex) {
+      String msg = "Au State Check failed: " + ex.getMessage();
+      log.error(msg, ex);
+      task.addError(msg);
+    }
   }
 
   private void checkAuAgreements(ArchivalUnit au) {
@@ -104,9 +110,11 @@ public class AuStateChecker extends Worker {
           log.info("V2 Au Suspect Url Versions are the same");
         }
         else {
+          if( log.isDebug()) {
+              log.debug("v1Bean: "+ v1Bean.toString() + " does not equal v2Bean: " + v2Bean.toString());
+          }
           err= auName +": V2 Au Suspect Url Versions do not match.";
           log.error(err);
-          terminated = true;
         }
       }
       catch (Exception ex) {
@@ -138,6 +146,9 @@ public class AuStateChecker extends Worker {
           log.info("V2 No AU PeerSet are the same");
         }
         else {
+          if( log.isDebug()) {
+            log.debug("v1Bean: "+ v1Bean.toString() + " does not equal v2Bean: " + v2Bean.toString());
+          }
           err= auName +": V2 No AU PeerSet do not match.";
           log.error(err);
         }
@@ -171,6 +182,9 @@ public class AuStateChecker extends Worker {
           log.info("Au Config is the same");
         }
         else {
+          if( log.isDebug()) {
+            log.debug("v1Bean: "+ v1Config.toString() + " does not equal v2Bean: " + v2Config.toString());
+          }
           err= auName +": V2 Au Configuration does not match.";
           log.error(err);
         }
@@ -200,6 +214,9 @@ public class AuStateChecker extends Worker {
           log.info("V2 AuState is the same");
         }
         else {
+          if( log.isDebug()) {
+            log.debug("v1Bean: "+ v1Bean.toString() + " does not equal v2Bean: " + v2Bean.toString());
+          }
           err= auName +": V2 AuState does not match.";
           log.error(err);
         }
