@@ -162,19 +162,19 @@ public class EastViewPublisherNameMappingHelper {
         canonical = new HashMap<>();
 
         // This section for journals
-        ///////////canonical.put("","Ogonek");
-        //////////canonical.put("","Ogonek (St. Petersburg)");
+        /////////canonical.put("OGN","Ogonek");
+        canonical.put("OGN","Ogonek (St. Petersburg)");
         canonical.put("NEW","NewsNet");
         canonical.put("DAEV","Eksport Vooruzhenii");
         canonical.put("EBMF","Evening Bulletin");
         canonical.put("NFEA","Far Eastern Affairs");
         canonical.put("GES","Geography, Environment, Sustainability");
-        /////////canonical.put("","Illiustrirovannaia Rossiia ");
+        canonical.put("IR","Illiustrirovannaia Rossiia");
         canonical.put("IAF","International Affairs");
         canonical.put("KIFO","Kino-fot");
         canonical.put("KINO","Kino-zhurnal A.R.K.");
         canonical.put("KRAR","Krasnyi Arkhiv");
-        /////////////canonical.put("","Krokodil");
+        canonical.put("KRO","Krokodil");
         canonical.put("MTH","Military Thought");
         canonical.put("MDB","Moscow Defense Brief");
         canonical.put("MUSL","Muslims of the Soviet East");

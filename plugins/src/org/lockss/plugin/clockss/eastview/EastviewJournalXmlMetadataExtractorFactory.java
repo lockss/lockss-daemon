@@ -63,8 +63,9 @@ import org.lockss.util.ReaderInputStream;
 
 
 public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-
+  private static final String unmappedPublisherName = "EastviewUnmappedPublisherName";
   private static final Logger log = Logger.getLogger(EastviewJournalXmlMetadataExtractorFactory.class);
+  private static final Logger pubnamelog = Logger.getLogger(unmappedPublisherName);
   private static SourceXmlSchemaHelper EastviewHelper = null;
 
   public static Map<String, String> issnMap = new HashMap<>();
@@ -170,6 +171,13 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       String title = null;
       String pubdate = null;
 
+      String directory = null;
+      String subdir = null;
+      String directory_subsection = null;    // use the part after directory as the last effor, for example, DA-IR use "IR"
+      String publisher_mapped_alt = null;
+      String publisher_mapped_alt2 = null;
+      String publisher_mapped_alt3 = null;
+
       if (cu.getUrl().contains(".xml")) {
         raw_title = thisAM.getRaw(EastviewSchemaHelper.ART_RAW_TITLE);
         log.debug3(String.format("Eastview metadata raw title parsed - xml: %s, cu = %s", raw_title, cu.getUrl()));
@@ -207,14 +215,65 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         if (publisher_mapped != null) {
           thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped);
         } else {
-          log.debug3(String.format("Eastview metadata raw title parsed = %s | " +
+          pubnamelog.debug2(String.format("Eastview metadata alternative mapping: metadata raw title parsed = %s | " +
                           "publisher_shortcut = %s | Null publisher_mapped = %s | volume = %s | title = %s",
                   raw_title,
                   publisher_shortcut,
                   publisher_mapped,
                   volume,
                   title));
-          thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_shortcut);
+
+          // map publisher short cut to full name is failed, use partial url to map
+
+          //http://clockss-ingest.lockss.org/sourcefiles/eastview-released/2021_03/Eastview%20Journal%20Content/Digital%20Archives/Ogonek%20(St.%20Petersburg)%20Digital%20Archive%201899-1918/DA-OGN-SP.zip!/DA-OGN-SP/1918/ognsp_1918_17.xml
+          //http://clockss-ingest.lockss.org/sourcefiles/eastview-released/2021_01/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/1990/01/001_01/0010004.xhtml
+          String access_url = cu.getUrl();
+          Pattern urlPattern = Pattern.compile("(.*)\\.zip!/([^/]+)/([^/]+)/(.*)");
+
+          Matcher urlm = urlPattern.matcher(access_url);
+
+          if (urlm.matches()) {
+
+            directory = urlm.group(2).trim();      //	DA-OGN-SP or DA-MLT
+            subdir = urlm.group(3).trim();         //   1918 or  MTH
+            directory_subsection =  directory.substring(directory.indexOf("-") + 1);
+            publisher_mapped_alt = EastViewPublisherNameMappingHelper.canonical.get(directory);
+            publisher_mapped_alt2 = EastViewPublisherNameMappingHelper.canonical.get(subdir);
+            publisher_mapped_alt3 = EastViewPublisherNameMappingHelper.canonical.get(directory_subsection);
+
+            log.debug3(String.format("Eastview metadata alternative mapping second try, access_url = %s, raw_title = %s, directory  = %s | " +
+                            "subdir = %s | directory_subsection = %s | publisher_mapped_alt = %s | publisher_mapped_alt2 = %s | publisher_mapped_alt3 = %s",
+                    access_url,
+                    raw_title,
+                    directory,
+                    subdir,
+                    directory_subsection,
+                    publisher_mapped_alt,
+                    publisher_mapped_alt2,
+                    publisher_mapped_alt3));
+
+            if (publisher_mapped_alt != null && publisher_mapped_alt2 == null) {
+              thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped_alt);
+            } else if (publisher_mapped_alt2 != null && publisher_mapped_alt == null ) {
+              thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped_alt2);
+            } else if (publisher_mapped_alt3 != null && publisher_mapped_alt == null && publisher_mapped_alt2 == null) {
+              thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped_alt3);
+            } else {
+
+              pubnamelog.debug2(String.format("Eastview metadata alternative mapping failed try, access_url = %s, raw_title = %s, directory  = %s | " + "subdir = %s | directory_subsection = %s | publisher_mapped_alt = %s | publisher_mapped_alt2 = %s | publisher_mapped_alt3 = %s",
+                      access_url,
+                      raw_title,
+                      directory,
+                      subdir,
+                      directory_subsection,
+                      publisher_mapped_alt,
+                      publisher_mapped_alt2,
+                      publisher_mapped_alt3));
+
+
+              thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_shortcut);
+            }
+          }
         }
       }
       

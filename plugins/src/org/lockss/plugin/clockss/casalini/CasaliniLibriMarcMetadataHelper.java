@@ -67,7 +67,9 @@ import org.lockss.util.Logger;
  */
 public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
 
+  private static final String unmappedPublisherName = "CasaliniUnmappedPublisherName";
   private static final Logger log = Logger.getLogger(CasaliniLibriMarcMetadataHelper.class);
+  private static final Logger pubnamelog = Logger.getLogger(unmappedPublisherName);
 
   private static final String COLLECTION_NAME = "Monographs";
   private static final String PUBLISHER_NAME = "Casalini";
@@ -220,7 +222,7 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           // canonicalPublisherName used to be set to 'default' if it not found, but the team
           // agreed to set it as is, since a lot of them are data entried
           if (canonicalPublisherName == null) {
-            log.debug(String.format("Casalini-Metadata: missing canonicalPublisherName,  MARC_publisher %s | publisherCleanName: %s | " +
+            pubnamelog.debug2(String.format("Casalini-Metadata: missing canonicalPublisherName,  MARC_publisher %s | publisherCleanName: %s | " +
                     "NULL canonicalPublisherName %s ", MARC_publisher, publisherCleanName, canonicalPublisherName));
             canonicalPublisherName = publisherCleanName;
 
