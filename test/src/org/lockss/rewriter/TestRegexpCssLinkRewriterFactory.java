@@ -276,8 +276,8 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
   public void testRewritingLargeDataUri() throws Exception {
     ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
         "Minimal");
-    rclrf = new RegexpCssLinkRewriterFactory(2097152 + 100 , 2097152/16, 2097152);
-    // construct a data uri that is 2MB in size
+    rclrf = new RegexpCssLinkRewriterFactory(2097152, 2097152/16, 2097152);
+    // construct a data uri that is 2MB in size, note subracting the dataurisuffix and prefix lengths
     String large_data_uri = cssPrefix
         + dataUriPrefix
         + getRandomString(2097152 - dataUriSuffix.length() - dataUriPrefix.length())

@@ -92,7 +92,7 @@ public class RegexpCssLinkRewriterFactory implements LinkRewriterFactory {
   // syntax.)
 
   private static String createCssUriExtractor(int maxUrlLen) {
-    return "(?i)(?:@import\\s+(?:url[(]|)|url[(])\\s*([\\\"\']?)" + // G1
+    return "(?i)(?:@import\\s+(?:url[(]|)|url[(])\\s*([\\\"\']?+)" + // G1
         "(.{0," + maxUrlLen + "}?)" + //G2
         "(\\1)\\s*[);]"; // G3
     // GROUPS:
