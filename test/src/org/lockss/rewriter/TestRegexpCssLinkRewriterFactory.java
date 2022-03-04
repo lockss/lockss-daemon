@@ -169,6 +169,17 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     " background-image: url('http://serve.host:1234/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fimages%2Fbanner.gif');\n" +
     "}\n";
 
+  private static final String cssPrefix =
+    "li {\n" +
+    "  background:\n" +
+    "  list-style-image:url(\"";
+
+  private static final String cssSuffix = "\")}";
+
+  private static final String dataUriPrefix = "data:image/png;base64,";
+
+  private static final String dataUriSuffix = "==";
+
   public void setUp() throws Exception {
     super.setUp();
     au = new MockArchivalUnit();
@@ -238,17 +249,44 @@ public class TestRegexpCssLinkRewriterFactory extends LockssTestCase {
     assertEquals(xformed, out);
   }
 
+  static String getRandomString(int n)
+  {
+    // chose a Character random from this String
+    String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        + "0123456789"
+        + "abcdefghijklmnopqrstuvxyz"
+        + "+/";
+
+    // create StringBuffer size of AlphaNumericString and the prefixes and suffixes
+    StringBuilder sb = new StringBuilder(n);
+
+    for (int i = 0; i < n; i++) {
+      // generate a random number between
+      // 0 to AlphaNumericString variable length
+      int index
+          = (int)(AlphaNumericString.length()
+          * Math.random());
+      // add Character one by one in end of sb
+      sb.append(AlphaNumericString
+          .charAt(index));
+    }
+    return sb.toString();
+  }
+
   public void testRewritingLargeDataUri() throws Exception {
     ConfigurationUtil.addFromArgs(RegexpCssLinkRewriterFactory.PARAM_URL_ENCODE,
         "Minimal");
-    rclrf = new RegexpCssLinkRewriterFactory(2097152, 2097152 / 16 , 2097152);
-    String large_data_uri = StringUtil.fromInputStream(getResourceAsStream("2MB_data_uri.css"));
+    rclrf = new RegexpCssLinkRewriterFactory(2097152 + 100 , 2097152/16, 2097152);
+    // construct a data uri that is 2MB in size
+    String large_data_uri = cssPrefix
+        + dataUriPrefix
+        + getRandomString(2097152 - dataUriSuffix.length() - dataUriPrefix.length())
+        + dataUriSuffix
+        + cssSuffix;
     InputStream is = rclrf.createLinkRewriter("text/css", au,
-        getResourceAsStream("2MB_data_uri.css"),
+        new StringInputStream(large_data_uri),
         encoding, srcUrl, xform);
     String out = StringUtil.fromInputStream(is);
-    //log.debug3("Original:\n" + large_data_uri);
-    //log.info("Transformed:\n" + out);
     assertEquals(large_data_uri, out);
   }
 
