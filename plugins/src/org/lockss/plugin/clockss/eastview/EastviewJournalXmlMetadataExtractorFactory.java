@@ -245,7 +245,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
 
             directory = urlm.group(2).trim();      //	DA-OGN-SP or DA-MLT
             subdir = urlm.group(3).trim();         //   1918 or  MTH
-            directory_subsection =  directory.substring(directory.indexOf("-") + 1);
+            directory_subsection =  directory.substring(directory.indexOf("-") + 1).replace("-",""); //"OGNSP" of "DA-OGN-SP"
             publisher_mapped_alt = EastViewPublisherNameMappingHelper.canonical.get(directory);
             publisher_mapped_alt2 = EastViewPublisherNameMappingHelper.canonical.get(subdir);
             publisher_mapped_alt3 = EastViewPublisherNameMappingHelper.canonical.get(directory_subsection);

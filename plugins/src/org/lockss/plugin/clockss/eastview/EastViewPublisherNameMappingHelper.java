@@ -162,9 +162,10 @@ public class EastViewPublisherNameMappingHelper {
         canonical = new HashMap<>();
 
         // This section for journals
-        /////////canonical.put("OGN","Ogonek");
-        canonical.put("OGN","Ogonek (St. Petersburg)");
+        canonical.put("OGN","Ogonek");
+        canonical.put("OGNSP","Ogonek (St. Petersburg)");
         canonical.put("NEW","NewsNet");
+        canonical.put("NN","NewsNet");
         canonical.put("DAEV","Eksport Vooruzhenii");
         canonical.put("EBMF","Evening Bulletin");
         canonical.put("NFEA","Far Eastern Affairs");
