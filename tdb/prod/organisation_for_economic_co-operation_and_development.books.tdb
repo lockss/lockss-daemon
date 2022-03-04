@@ -7,7 +7,7 @@
   {
 
     plugin = org.lockss.plugin.oecd.OecdBooksPlugin
-    param[base_url] = https: //www.oecd-ilibrary.org/
+    param[base_url] = https://www.oecd-ilibrary.org/
     implicit < status ; year ; isbn ; name ; param[pub_path] ; param[pub_id] >
 
     {
