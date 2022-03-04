@@ -32,6 +32,8 @@ public abstract class Worker {
   public Worker(V2AuMover auMover, MigrationTask task) {
     this.auMover = auMover;
     this.task = task;
+    this.au = task.getAu();
+    this.ctrs = task.getCounters();
     collectionsApi = auMover.getRepoCollectionsApiClient();
     cfgApiClient = auMover.getCfgAusApiClient();
   }

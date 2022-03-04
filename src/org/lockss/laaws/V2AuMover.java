@@ -358,11 +358,6 @@ public class V2AuMover {
       currentStatus = e.getMessage();
       running = false;
     } finally {
-      if (running) {
-        log.warning("Unexpectedly still running at exit");
-        currentStatus = "Unexpected exit";
-      }
-      running = false;
     }
   }
 
@@ -433,8 +428,6 @@ public class V2AuMover {
         break;
       }
       moveAu(au);
-      log.debug2("moveAu() returned: terminated: " +
-                 terminated + ", queue: " + auMoveQueue);
     }
   }
 
@@ -590,9 +583,14 @@ public class V2AuMover {
         case COPY_CU_VERSIONS:
           try {
             CuMover mover = new CuMover(v2Mover, task);
+            log.debug2("Running: " + mover);
             mover.run();
           } finally {
-            task.getLatch().countDown();
+            // One fewer CuMover running for this AU.  If this was the last,
+            // add AU stats to total stats
+            if (task.getLatch().countDown()) {
+              totalCounters.add(task.getCounters());
+            }
           }
           break;
         case COPY_AU_STATE:
@@ -600,11 +598,13 @@ public class V2AuMover {
           log.debug("Waiting until AU copy finished: " + task.getAuStatus().getAuName());
           task.getLatch().await();
           log.debug("AU copy finished: " + task.getAuStatus().getAuName());
-          AuStateMover asmover = new AuStateMover(v2Mover, task);
-          asmover.run();
+          AuStateMover mover = new AuStateMover(v2Mover, task);
+          mover.run();
+          log.debug2("Running: " + mover);
           break;
         case CHECK_CU_VERSIONS:
           CuChecker cuChecker = new CuChecker(v2Mover, task);
+          log.debug2("Running: " + cuChecker);
           cuChecker.run();
           break;
         case CHECK_AU_STATE:
@@ -615,6 +615,7 @@ public class V2AuMover {
           log.error("Unknown migration task type: " + task.getType());
         }
       } catch (Exception e) {
+        log.error("Task failed: " + task, e);
         taskException = e;
       } finally {
         task.complete(taskException);
@@ -645,10 +646,10 @@ public class V2AuMover {
     }
 
     try {
+      addRunningAU(au, auStat);
       log.info(auName + ": Moving AU Artifacts...");
       moveAuArtifacts(au, auStat);
       moveAuState(au, auStat);
-      finishAu(au);
       if (!terminated) {
         log.info(auName + ": Successfully moved AU Artifacts.");
       }
@@ -691,29 +692,11 @@ public class V2AuMover {
    */
   void moveAuArtifacts(ArchivalUnit au, AuStatus auStat) throws ApiException {
     CountUpDownLatch latch = new CountUpDownLatch();
-    synchronized (runningAUs) {
-      runningAUs.put(au.getAuId(), auStat);
-    }
     // Queue copies for all CUs in the v1 repo.
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
       MigrationTask task = MigrationTask.copyCuVersions(this, au, cu)
         .setCounters(auStat.getCounters())
-        .setLatch(latch);
-      latch.countUp();
-      taskExecutor.execute(new TaskRunner(this, task));
-    }
-  }
-
-  /**
-   * Move one V1 Au including all cachedUrls and all versions.
-   *
-   * @param au au The ArchivalUnit to move
-   */
-  void finishAu(ArchivalUnit au) {
-    CountUpDownLatch latch = new CountUpDownLatch();
-    // Get the au CachedUrls from the v1 repo.
-    for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
-      MigrationTask task = MigrationTask.copyCuVersions(this, au, cu)
+        .setAuStatus(auStat)
         .setLatch(latch);
       latch.countUp();
       taskExecutor.execute(new TaskRunner(this, task));
@@ -742,9 +725,11 @@ public class V2AuMover {
    */
   void moveAuState(ArchivalUnit au, AuStatus auStat) {
     if (!terminated) {
-      taskExecutor.execute(new TaskRunner(this,
-          MigrationTask.copyAuState(this,
-              au)));
+      MigrationTask task = MigrationTask.copyAuState(this, au)
+//         .setCounters(auStat.getCounters())
+//         .setLatch(latch)
+        .setAuStatus(auStat);
+      taskExecutor.execute(new TaskRunner(this, task));
     }
   }
 
@@ -1049,6 +1034,12 @@ public class V2AuMover {
     protected Map<Phase,Long> startTime = new HashMap<>();
     protected Map<Phase,Long> endTime = new HashMap<>();
 
+    public OpTimers() {
+      for (Phase ph : Phase.values()) {
+        startTime.put(ph, -1L);
+      }
+    }
+
     public void setStartTime(Phase phase, long time) {
       startTime.put(phase, time);
     }
@@ -1063,6 +1054,10 @@ public class V2AuMover {
 
     public long getRunTime(Phase phase) {
       return endTime.get(phase) - startTime.get(phase);
+    }
+
+    public boolean hasRunTime(Phase phase) {
+      return endTime.containsKey(phase);
     }
   }
 
@@ -1106,24 +1101,8 @@ public class V2AuMover {
       return errors.size();
     }
 
-    public long getStartTime(Phase phase) {
-      return startTime.get(phase);
-    }
-
-    public long getRunTime(Phase phase) {
-      return endTime.get(phase) - startTime.get(phase);
-    }
-
     public void setStatus(String val) {
       status = val;
-    }
-
-    public void setStartTime(Phase phase, long time) {
-      startTime.put(phase, time);
-    }
-
-    public void setEndTime(Phase phase, long time) {
-      endTime.put(phase, time);
     }
 
     public void addError(String msg) {
@@ -1189,6 +1168,7 @@ public class V2AuMover {
 
   private void addCounterStatus(StringBuilder sb, Counters ctrs,
                                 OpTimers auStat, Phase phase) {
+    log.debug3("addCounterStatus phase: " + phase);
     sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_MOVED),
                                           "URL"));
     sb.append(" copied, ");
@@ -1201,12 +1181,15 @@ public class V2AuMover {
     sb.append(" skipped, ");
     sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.BYTES_MOVED),
                                           "byte"));
-    sb.append(" copied, in ");
-    sb.append(StringUtil.timeIntervalToString(auStat.getRunTime(phase)));
-    if (ctrs.getVal(CounterType.BYTES_MOVED) > 0) {
-      sb.append(", at ");
-      sb.append(StringUtil.byteRateToString(ctrs.getVal(CounterType.BYTES_MOVED),
-                                            auStat.getRunTime(phase)));
+    sb.append(" copied");
+    if (auStat.hasRunTime(phase)) {
+      sb.append(", in ");
+      sb.append(StringUtil.timeIntervalToString(auStat.getRunTime(phase)));
+      if (ctrs.getVal(CounterType.BYTES_MOVED) > 0) {
+        sb.append(", at ");
+        sb.append(StringUtil.byteRateToString(ctrs.getVal(CounterType.BYTES_MOVED),
+                                              auStat.getRunTime(phase)));
+      }
     }
   }
 
@@ -1223,8 +1206,7 @@ public class V2AuMover {
     return errorList;
   }
 
-  private void addRunningAU(ArchivalUnit au) {
-    AuStatus austat = new AuStatus(au);
+  private void addRunningAU(ArchivalUnit au, AuStatus austat) {
     synchronized (runningAUs) {
       runningAUs.put(au.getAuId(), austat);
     }
@@ -1288,8 +1270,10 @@ public class V2AuMover {
     addCounterStatus(sb, austat.getCounters(), austat, Phase.COPY);
     sb.append(", ");
     sb.append(StringUtil.bigNumberOfUnits(auStat.getErrorCount(), "error"));
-    sb.append(", in ");
-    sb.append(StringUtil.timeIntervalToString(auStat. getRunTime(Phase.COPY)));
+    if (auStat.hasRunTime(Phase.COPY)) {
+      sb.append(", in ");
+      sb.append(StringUtil.timeIntervalToString(auStat. getRunTime(Phase.COPY)));
+    }
     String auData = sb.toString();
     reportWriter.println("AU Name: " + auStat.getAuName());
     reportWriter.println("AU ID: " + auStat.getAuId());

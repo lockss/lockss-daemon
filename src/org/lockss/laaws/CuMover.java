@@ -29,7 +29,7 @@ public class CuMover extends Worker {
 
   public CuMover(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
-    this.au = task.getAu();
+    this.cu = task.getCu();
     collection = auMover.getCollection();
   }
 
@@ -55,6 +55,7 @@ public class CuMover extends Worker {
    * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
    */
   void moveCuVersions(String v2Url, CachedUrl cachedUrl, List<Artifact> v2Artifacts) {
+    log.debug3("moveCuVersions("+v2Url+")");
     if (!terminated) {
       String auid = cachedUrl.getArchivalUnit().getAuId();
       CachedUrl[] localVersions = cachedUrl.getCuVersions();
@@ -113,11 +114,12 @@ public class CuMover extends Worker {
       if (log.isDebug3()) {
         log.debug3("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
       }
-      createArtifact(auid, v2Url, collectionDate, cu, collection);
+      copyArtifact(auid, v2Url, collectionDate, cu, collection);
+      log.debug3("copyArtifact returned");
     }
     catch (ApiException apie) {
       String err = v2Url + ": failed to create version: " + cu.getVersion() + ": " +
-          apie.getCode() + " - " + apie.getMessage();
+        apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
       task.addError(err);
     }
@@ -136,13 +138,15 @@ public class CuMover extends Worker {
    * @param collectionId   the v2 collection we are moving to
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
-  void createArtifact(String auid, String v2Url, Long collectionDate,
+  void copyArtifact(String auid, String v2Url, Long collectionDate,
       CachedUrl cu, String collectionId) throws ApiException {
-    log.debug3("enqueing create artifact request...");
+    log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
     Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu, collectionDate);
+    log.debug3("createArtifact returned");
     ctrs.get(CounterType.CONTENT_BYTES_MOVED).add(cu.getContentSize());
     ctrs.get(CounterType.BYTES_MOVED).add(dcu.getBytesMoved());
+    log.debug3("commitArtifact("+v2Url+")");
     commitArtifact(uncommitted, dcu);
   }
 

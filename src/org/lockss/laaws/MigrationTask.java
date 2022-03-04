@@ -103,7 +103,7 @@ public class MigrationTask {
 
 
   public MigrationTask setAu(ArchivalUnit au) {
-    this.cu = cu;
+    this.au = au;
     return this;
   }
 
@@ -117,8 +117,8 @@ public class MigrationTask {
     return this;
   }
 
-  public MigrationTask setAuStatus(V2AuMover.AuStatus ctrs) {
-    this.auStat = ctrs;
+  public MigrationTask setAuStatus(V2AuMover.AuStatus stat) {
+    this.auStat = stat;
     return this;
   }
 
