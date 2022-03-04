@@ -48,8 +48,8 @@
       au < released ; 2019 ; American Journal of Respiratory and Critical Care Medicine Volume 200 ; 200 >
       au < released ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 201 ; 201 >
       au < released ; 2020 ; American Journal of Respiratory and Critical Care Medicine Volume 202 ; 202 >
-      au < testing ; 2021 ; American Journal of Respiratory and Critical Care Medicine Volume 203 ; 203 >
-      au < testing ; 2021 ; American Journal of Respiratory and Critical Care Medicine Volume 204 ; 204 >
+      au < ready ; 2021 ; American Journal of Respiratory and Critical Care Medicine Volume 203 ; 203 >
+      au < ready ; 2021 ; American Journal of Respiratory and Critical Care Medicine Volume 204 ; 204 >
       au < manifest ; 2022 ; American Journal of Respiratory and Critical Care Medicine Volume 205 ; 205 >
       au < expected ; 2022 ; American Journal of Respiratory and Critical Care Medicine Volume 206 ; 206 >
 
@@ -181,8 +181,8 @@
       au < notReady ; 2019 ; American Journal of Respiratory Cell and Molecular Biology Volume 61 ; 61 >
       au < notReady ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 62 ; 62 >
       au < notReady ; 2020 ; American Journal of Respiratory Cell and Molecular Biology Volume 63 ; 63 >
-      au < testing ; 2021 ; American Journal of Respiratory Cell and Molecular Biology Volume 64 ; 64 >
-      au < testing ; 2021 ; American Journal of Respiratory Cell and Molecular Biology Volume 65 ; 65 >
+      au < ready ; 2021 ; American Journal of Respiratory Cell and Molecular Biology Volume 64 ; 64 >
+      au < ready ; 2021 ; American Journal of Respiratory Cell and Molecular Biology Volume 65 ; 65 >
       au < manifest ; 2022 ; American Journal of Respiratory Cell and Molecular Biology Volume 66 ; 66 >
       au < expected ; 2022 ; American Journal of Respiratory Cell and Molecular Biology Volume 67 ; 67 >
 
@@ -382,7 +382,7 @@
       param[base_url] = https://www.atsjournals.org/
 
       au < released ; 2020 ; ATS Scholar Volume 1 ; 1 >
-      au < testing ; 2021 ; ATS Scholar Volume 2 ; 2 >
+      au < ready ; 2021 ; ATS Scholar Volume 2 ; 2 >
       au < expected ; 2022 ; ATS Scholar Volume 3 ; 3 >
 
     }
