@@ -215,6 +215,15 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         if (publisher_mapped != null) {
           thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped);
         } else {
+
+          log.debug2(String.format("Eastview metadata alternative mapping: metadata raw title parsed = %s | " +
+                          "publisher_shortcut = %s | Null publisher_mapped = %s | volume = %s | title = %s",
+                  raw_title,
+                  publisher_shortcut,
+                  publisher_mapped,
+                  volume,
+                  title));
+
           pubnamelog.debug2(String.format("Eastview metadata alternative mapping: metadata raw title parsed = %s | " +
                           "publisher_shortcut = %s | Null publisher_mapped = %s | volume = %s | title = %s",
                   raw_title,
@@ -241,7 +250,18 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
             publisher_mapped_alt2 = EastViewPublisherNameMappingHelper.canonical.get(subdir);
             publisher_mapped_alt3 = EastViewPublisherNameMappingHelper.canonical.get(directory_subsection);
 
-            log.debug3(String.format("Eastview metadata alternative mapping second try, access_url = %s, raw_title = %s, directory  = %s | " +
+            log.debug2(String.format("Eastview metadata alternative mapping second try, access_url = %s, raw_title = %s, directory  = %s | " +
+                            "subdir = %s | directory_subsection = %s | publisher_mapped_alt = %s | publisher_mapped_alt2 = %s | publisher_mapped_alt3 = %s",
+                    access_url,
+                    raw_title,
+                    directory,
+                    subdir,
+                    directory_subsection,
+                    publisher_mapped_alt,
+                    publisher_mapped_alt2,
+                    publisher_mapped_alt3));
+
+            pubnamelog.debug2(String.format("Eastview metadata alternative mapping second try, access_url = %s, raw_title = %s, directory  = %s | " +
                             "subdir = %s | directory_subsection = %s | publisher_mapped_alt = %s | publisher_mapped_alt2 = %s | publisher_mapped_alt3 = %s",
                     access_url,
                     raw_title,
@@ -259,6 +279,16 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
             } else if (publisher_mapped_alt3 != null && publisher_mapped_alt == null && publisher_mapped_alt2 == null) {
               thisAM.put(MetadataField.FIELD_PUBLISHER, publisher_mapped_alt3);
             } else {
+
+              log.debug2(String.format("Eastview metadata alternative mapping failed try, access_url = %s, raw_title = %s, directory  = %s | " + "subdir = %s | directory_subsection = %s | publisher_mapped_alt = %s | publisher_mapped_alt2 = %s | publisher_mapped_alt3 = %s",
+                      access_url,
+                      raw_title,
+                      directory,
+                      subdir,
+                      directory_subsection,
+                      publisher_mapped_alt,
+                      publisher_mapped_alt2,
+                      publisher_mapped_alt3));
 
               pubnamelog.debug2(String.format("Eastview metadata alternative mapping failed try, access_url = %s, raw_title = %s, directory  = %s | " + "subdir = %s | directory_subsection = %s | publisher_mapped_alt = %s | publisher_mapped_alt2 = %s | publisher_mapped_alt3 = %s",
                       access_url,
