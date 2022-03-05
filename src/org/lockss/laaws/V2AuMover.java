@@ -582,9 +582,10 @@ public class V2AuMover {
         switch (task.getType()) {
         case COPY_CU_VERSIONS:
           try {
+            log.debug2("Moving CU: " + task.getCu());
             CuMover mover = new CuMover(v2Mover, task);
-            log.debug2("Running: " + mover);
             mover.run();
+            log.debug2("Moved CU: " + task.getCu());
           } finally {
             // One fewer CuMover running for this AU.  If this was the last,
             // add AU stats to total stats
@@ -597,19 +598,22 @@ public class V2AuMover {
           // wait until all of this AU's CU copies are done
           log.debug("Waiting until AU copy finished: " + task.getAuStatus().getAuName());
           task.getLatch().await();
-          log.debug("AU copy finished: " + task.getAuStatus().getAuName());
+          log.debug2("Moving AU state: " + task.getAuStatus().getAuName());
           AuStateMover mover = new AuStateMover(v2Mover, task);
           mover.run();
-          log.debug2("Running: " + mover);
+          log.debug2("Moved AU state: " + task.getAuStatus().getAuName());
           break;
         case CHECK_CU_VERSIONS:
+          log.debug2("Checking AU content: " + task.getAuStatus().getAuName());
           CuChecker cuChecker = new CuChecker(v2Mover, task);
-          log.debug2("Running: " + cuChecker);
           cuChecker.run();
+          log.debug2("Checked AU content: " + task.getAuStatus().getAuName());
           break;
         case CHECK_AU_STATE:
+          log.debug2("Checking AU state: " + task.getAuStatus().getAuName());
           AuStateChecker asChecker = new AuStateChecker(v2Mover, task);
           asChecker.run();
+          log.debug2("Checked AU state: " + task.getAuStatus().getAuName());
           break;
         default:
           log.error("Unknown migration task type: " + task.getType());
@@ -692,6 +696,7 @@ public class V2AuMover {
    */
   void moveAuArtifacts(ArchivalUnit au, AuStatus auStat) throws ApiException {
     CountUpDownLatch latch = new CountUpDownLatch();
+    auStat.setCopyLatch(latch);
     // Queue copies for all CUs in the v1 repo.
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
       MigrationTask task = MigrationTask.copyCuVersions(this, au, cu)
@@ -712,8 +717,11 @@ public class V2AuMover {
     log.info("Comparing v2 artifacts with V1 data");
     /* get Au cachedUrls from Lockss*/
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
-      taskExecutor.execute(new TaskRunner(this,
-          MigrationTask.copyCuVersions(this, au, cu)));
+      MigrationTask task = MigrationTask.checkCuVersions(this, au, cu)
+//         .setCounters(auStat.getCounters())
+//         .setAuStatus(auStat)
+        ;
+      taskExecutor.execute(new TaskRunner(this, task));
     }
   }
 
@@ -727,7 +735,7 @@ public class V2AuMover {
     if (!terminated) {
       MigrationTask task = MigrationTask.copyAuState(this, au)
 //         .setCounters(auStat.getCounters())
-//         .setLatch(latch)
+        .setLatch(auStat.getCopyLatch())
         .setAuStatus(auStat);
       taskExecutor.execute(new TaskRunner(this, task));
     }
@@ -1069,6 +1077,7 @@ public class V2AuMover {
     String status;
     Counters ctrs;
     List<String> errors = new ArrayList<>();
+    CountUpDownLatch copyLatch;
 
     public AuStatus(ArchivalUnit au) {
       auid = au.getAuId();
@@ -1103,6 +1112,14 @@ public class V2AuMover {
 
     public void setStatus(String val) {
       status = val;
+    }
+
+    public void setCopyLatch(CountUpDownLatch latch) {
+      this.copyLatch = latch;
+    }
+
+    public CountUpDownLatch getCopyLatch() {
+      return copyLatch;
     }
 
     public void addError(String msg) {
