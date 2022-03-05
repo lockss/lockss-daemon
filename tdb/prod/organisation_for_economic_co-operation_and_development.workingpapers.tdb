@@ -21,200 +21,235 @@
 
     {
       title <
-        name = OECD Guidelines for the Testing of Chemicals ;
-        issn = ????-????
+        name = OECD Guidelines for the Testing of Chemicals, Section 1 ;
+        issn = 2074-5753
       >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals introduction ; environment/introduction-to-oecd-test-guidelines-on-pesticide-residues-chemistry-section-5-part-a ; 9789264203761-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-501 ; environment/test-no-501-metabolism-in-crops ; 9789264061835-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-502 ; environment/test-no-502-metabolism-in-rotational-crops ; 9789264061859-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-503 ; environment/test-no-503-metabolism-in-livestock ; 9789264061873-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-504 ; environment/test-no-504-residues-in-rotational-crops-limited-field-studies ; 9789264013384-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-505 ; environment/test-no-505-residues-in-livestock ; 9789264061903-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-506 ; environment/test-no-506-stability-of-pesticide-residues-in-stored-commodities ; 9789264061927-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-507 ; environment/test-no-507-nature-of-the-pesticide-residues-in-processed-commodities-high-temperature-hydrolysis ; 9789264067431-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-508 ; environment/test-no-508-magnitude-of-the-pesticide-residues-in-processed-commodities ; 9789264067622-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-509 ; environment/test-no-509-crop-field-trial ; 9789264076457-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals, Section 1: Summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-group-on-physical-chemistry ; 9789264013391-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 101 ; environment/test-no-101-uv-vis-absorption-spectra ; 9789264069503-en >
+        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 102 ; environment/test-no-102-melting-point-melting-range ; 9789264069527-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 103 ; environment/test-no-103-boiling-point ; 9789264069541-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 104 ; environment/test-no-104-vapour-pressure ; 9789264069565-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 105 ; environment/test-no-105-water-solubility ; 9789264069589-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 106 ; environment/test-no-106-adsorption-desorption-using-a-batch-equilibrium-method ; 9789264069602-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 107 ; environment/test-no-107-partition-coefficient-n-octanol-water-shake-flask-method ; 9789264069626-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 108 ; environment/test-no-108-complex-formation-ability-in-water ; 9789264069640-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 109 ; environment/test-no-109-density-of-liquids-and-solids ; 9789264123298-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 110 ; environment/test-no-110-particle-size-distribution-fibre-length-and-diameter-distributions ; 9789264069688-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 111 ; environment/test-no-111-hydrolysis-as-a-function-of-ph ; 9789264069701-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 112 ; environment/test-no-112-dissociation-constants-in-water ; 9789264069725-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 113 ; environment/test-no-113-screening-test-for-thermal-stability-and-stability-in-air ; 9789264069749-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 114 ; environment/test-no-114-viscosity-of-liquids ; 9789264185180-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 115 ; environment/test-no-115-surface-tension-of-aqueous-solutions ; 9789264069787-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 116 ; environment/test-no-116-fat-solubility-of-solid-and-liquid-substances ; 9789264069800-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 117 ; environment/test-no-117-partition-coefficient-n-octanol-water-hplc-method ; 9789264069824-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 118 ; environment/test-no-118-determination-of-the-number-average-molecular-weight-and-the-molecular-weight-distribution-of-polymers-using-gel-permeation-chromatography ; 9789264069848-en >
+        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 119 ; environment/test-no-119-determination-of-the-low-molecular-weight-content-of-a-polymer-using-gel-permeation-chromatography ; 9789264069862-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 120 ; environment/test-no-120-solution-extraction-behaviour-of-polymers-in-water ; 9789264069886-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 121 ; environment/test-no-121-estimation-of-the-adsorption-coefficient-koc-on-soil-and-on-sewage-sludge-using-high-performance-liquid-chromatography-hplc ; 9789264069909-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 122 ; environment/test-no-122-determination-of-ph-acidity-and-alkalinity ; 9789264203686-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 123 ; environment/test-no-123-partition-coefficient-1-octanol-water-slow-stirring-method ; 9789264015845-en >
 
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals guideline ; environment/guideline-no-497-defined-approaches-on-skin-sensitisation ; b92879a4-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-405 ; environment/test-no-405-acute-eye-irritation-corrosion ; 9789264185333-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-406 ; environment/test-no-406-skin-sensitisation ; 9789264070660-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-431 ; environment/test-no-431-in-vitro-skin-corrosion-reconstructed-human-epidermis-rhe-test-method ; 9789264264618-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-432 ; environment/test-no-432-in-vitro-3t3-nru-phototoxicity-test ; 9789264071162-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-433 ; environment/test-no-433-acute-inhalation-toxicity-fixed-concentration-procedure ; 9789264284166-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-437 ; environment/test-no-437-bovine-corneal-opacity-and-permeability-test-method-for-identifying-i-chemicals-inducing-serious-eye-damage-and-ii-chemicals-not-requiring-classification-for-eye-irritation-or-serious-eye-damage ; 9789264203846-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-439 ; environment/test-no-439-in-vitro-skin-irritation-reconstructed-human-epidermis-test-method ; 9789264242845-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-442 ; environment/test-no-442c-in-chemico-skin-sensitisation ; 9789264229709-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-442 ; environment/test-no-442e-in-vitro-skin-sensitisation ; 9789264264359-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-455 ; environment/test-no-455-performance-based-test-guideline-for-stably-transfected-transactivation-in-vitro-assays-to-detect-estrogen-receptor-agonists-and-antagonists ; 9789264265295-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-458 ; environment/test-no-458-stably-transfected-human-androgen-receptor-transcriptional-activation-assay-for-detection-of-androgenic-agonist-and-antagonist-activity-of-chemicals ; 9789264264366-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-471 ; environment/test-no-471-bacterial-reverse-mutation-test ; 9789264071247-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-488 ; environment/test-no-488-transgenic-rodent-somatic-and-germ-cell-gene-mutation-assays ; 9789264203907-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-491 ; environment/test-no-491-short-time-exposure-in-vitro-test-method-for-identifying-i-chemicals-inducing-serious-eye-damage-and-ii-chemicals-not-requiring-classification-for-eye-irritation-or-serious-eye-damage ; 9789264242432-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-492 ; environment/test-no-492-reconstructed-human-cornea-like-epithelium-rhce-test-method-for-identifying-chemicals-not-requiring-classification-and-labelling-for-eye-irritation-or-serious-eye-damage ; 9789264242548-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-496 ; environment/test-no-496-in-vitro-macromolecular-test-method-for-identifying-chemicals-inducing-serious-eye-damage-and-chemicals-not-requiring-classification-for-eye-irritation-or-serious-eye-damage ; 970e5cd9-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-498 ; environment/test-no-498-in-vitro-phototoxicity-reconstructed-human-epidermis-phototoxicity-test-method ; 7b2f9ea0-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test 494 ; environment/tg-494-vitrigel-eye-irritancy-test-method-for-identifying-chemicals-not-requiring-classification-and-labelling-for-eye-irritation-or-serious-eye-damage ; 9f20068a-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test 495 ; environment/tg-495-ros-reactive-oxygen-species-assay-for-photoreactivity ; 915e00ac-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-402 ; environment/test-no-402-acute-dermal-toxicity ; 9789264070585-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-408 ; environment/test-no-408-repeated-dose-90-day-oral-toxicity-study-in-rodents ; 9789264070707-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-412 ; environment/test-no-412-subacute-inhalation-toxicity-28-day-study ; 9789264070783-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-413 ; environment/test-no-413-subchronic-inhalation-toxicity-90-day-study ; 9789264070806-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-414 ; environment/test-no-414-prenatal-development-toxicity-study ; 9789264070820-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-438 ; environment/test-no-438-isolated-chicken-eye-test-method-for-identifying-i-chemicals-inducing-serious-eye-damage-and-ii-chemicals-not-requiring-classification-for-eye-irritation-or-serious-eye-damage ; 9789264203860-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-442 ; environment/test-no-442b-skin-sensitization ; 9789264090996-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-442 ; environment/test-no-442d-in-vitro-skin-sensitisation ; 9789264229822-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-443 ; environment/test-no-443-extended-one-generation-reproductive-toxicity-study ; 9789264185371-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-451 ; environment/test-no-451-carcinogenicity-studies ; 9789264071186-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-452 ; environment/test-no-452-chronic-toxicity-studies ; 9789264071209-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-453 ; environment/test-no-453-combined-chronic-toxicity-carcinogenicity-studies ; 9789264071223-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-474 ; environment/test-no-474-mammalian-erythrocyte-micronucleus-test ; 9789264264762-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-475 ; environment/test-no-475-mammalian-bone-marrow-chromosomal-aberration-test ; 9789264264786-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-476 ; environment/test-no-476-in-vitro-mammalian-cell-gene-mutation-tests-using-the-hprt-and-xprt-genes ; 9789264264809-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-478 ; environment/test-no-478-rodent-dominant-lethal-test ; 9789264264823-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-483 ; environment/test-no-483-mammalian-spermatogonial-chromosomal-aberration-test ; 9789264264847-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-487 ; environment/test-no-487-in-vitro-mammalian-cell-micronucleus-test ; 9789264264861-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-489 ; environment/test-no-489-in-vivo-mammalian-alkaline-comet-assay ; 9789264264885-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-490 ; environment/test-no-490-in-vitro-mammalian-cell-gene-mutation-tests-using-the-thymidine-kinase-gene ; 9789264264908-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-403 ; environment/test-no-403-acute-inhalation-toxicity ; 9789264070608-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-404 ; environment/test-no-404-acute-dermal-irritation-corrosion ; 9789264242678-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-407 ; environment/test-no-407-repeated-dose-28-day-oral-toxicity-study-in-rodents ; 9789264070684-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-417 ; environment/test-no-417-toxicokinetics ; 9789264070882-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-421 ; environment/test-no-421-reproduction-developmental-toxicity-screening-test ; 9789264264380-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-422 ; environment/test-no-422-combined-repeated-dose-toxicity-study-with-the-reproduction-developmental-toxicity-screening-test ; 9789264264403-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-425 ; environment/test-no-425-acute-oral-toxicity-up-and-down-procedure ; 9789264071049-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-426 ; environment/test-no-426-developmental-neurotoxicity-study ; 9789264067394-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-429 ; environment/test-no-429-skin-sensitisation ; 9789264071100-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-430 ; environment/test-no-430-in-vitro-skin-corrosion-transcutaneous-electrical-resistance-test-method-ter ; 9789264242739-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-435 ; environment/test-no-435-in-vitro-membrane-barrier-test-method-for-skin-corrosion ; 9789264242791-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-436 ; environment/test-no-436-acute-inhalation-toxicity-acute-toxic-class-method ; 9789264076037-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-440 ; environment/test-no-440-uterotrophic-bioassay-in-rodents ; 9789264067417-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-441 ; environment/test-no-441-hershberger-bioassay-in-rats ; 9789264076334-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-442 ; environment/test-no-442a-skin-sensitization ; 9789264090972-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-456 ; environment/test-no-456-h295r-steroidogenesis-assay ; 9789264122642-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-457 ; environment/test-no-457-bg1luc-estrogen-receptor-transactivation-test-method-for-identifying-estrogen-receptor-agonists-and-antagonists ; 9789264185395-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-460 ; environment/test-no-460-fluorescein-leakage-test-method-for-identifying-ocular-corrosives-and-severe-irritants ; 9789264185401-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-473 ; environment/test-no-473-in-vitro-mammalian-chromosomal-aberration-test ; 9789264264649-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-493 ; environment/test-no-493-performance-based-test-guideline-for-human-recombinant-estrogen-receptor-hrer-in-vitro-assays-to-detect-chemicals-with-er-binding-affinity ; 9789264242623-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-groups-on-short-term-and-long-term-toxicology ; 9789264035447-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-401 ; environment/test-no-401-acute-oral-toxicity ; 9789264040113-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-409 ; environment/test-no-409-repeated-dose-90-day-oral-toxicity-study-in-non-rodents ; 9789264070721-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-415 ; environment/test-no-415-one-generation-reproduction-toxicity-study ; 9789264070844-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-416 ; environment/test-no-416-two-generation-reproduction-toxicity ; 9789264070868-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-418 ; environment/test-no-418-delayed-neurotoxicity-of-organophosphorus-substances-following-acute-exposure ; 9789264070905-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-419 ; environment/test-no-419-delayed-neurotoxicity-of-organophosphorus-substances-28-day-repeated-dose-study ; 9789264070929-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-420 ; environment/test-no-420-acute-oral-toxicity-fixed-dose-procedure ; 9789264070943-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-423 ; environment/test-no-423-acute-oral-toxicity-acute-toxic-class-method ; 9789264071001-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-424 ; environment/test-no-424-neurotoxicity-study-in-rodents ; 9789264071025-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-427 ; environment/test-no-427-skin-absorption-in-vivo-method ; 9789264071063-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-428 ; environment/test-no-428-skin-absorption-in-vitro-method ; 9789264071087-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-477 ; environment/test-no-477-genetic-toxicology-sex-linked-recessive-lethal-test-in-drosophila-melanogaster ; 9789264071346-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-479 ; environment/test-no-479-genetic-toxicology-in-vitro-sister-chromatid-exchange-assay-in-mammalian-cells ; 9789264071384-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-480 ; environment/test-no-480-genetic-toxicology-saccharomyces-cerevisiae-gene-mutation-assay ; 9789264071407-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-481 ; environment/test-no-481-genetic-toxicology-saacharomyces-cerevisiae-miotic-recombination-assay ; 9789264071421-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-482 ; environment/test-no-482-genetic-toxicology-dna-damage-and-repair-unscheduled-dna-synthesis-in-mammalian-cells-in-vitro ; 9789264071445-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-484 ; environment/test-no-484-genetic-toxicology-mouse-spot-test ; 9789264071483-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-485 ; environment/test-no-485-genetic-toxicology-mouse-heritable-translocation-assay ; 9789264071506-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-486 ; environment/test-no-486-unscheduled-dna-synthesis-uds-test-with-mammalian-liver-cells-in-vivo ; 9789264071520-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-411 ; environment/test-no-411-subchronic-dermal-toxicity-90-day-study ; 9789264070769-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-410 ; environment/test-no-410-repeated-dose-dermal-toxicity-21-28-day-study ; 9789264070745-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals revised ; environment/revised-introduction-to-the-oecd-guidelines-for-testing-of-chemicals-section-3 ; 9789264030213-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-302 ; environment/test-no-302b-inherent-biodegradability-zahn-wellens-evpa-test ; 9789264070387-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-302 ; environment/test-no-302c-inherent-biodegradability-modified-miti-test-ii ; 9789264070400-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-303 ; environment/test-no-303-simulation-test-aerobic-sewage-treatment-a-activated-sludge-units-b-biofilms ; 9789264070424-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-305 ; environment/test-no-305-bioaccumulation-in-fish-aqueous-and-dietary-exposure ; 9789264185296-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-306 ; environment/test-no-306-biodegradability-in-seawater ; 9789264070486-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-307 ; environment/test-no-307-aerobic-and-anaerobic-transformation-in-soil ; 9789264070509-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-308 ; environment/test-no-308-aerobic-and-anaerobic-transformation-in-aquatic-sediment-systems ; 9789264070523-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-309 ; environment/test-no-309-aerobic-mineralisation-in-surface-water-simulation-biodegradation-test ; 9789264070547-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-310 ; environment/test-no-310-ready-biodegradability-co2-in-sealed-vessels-headspace-test ; 9789264224506-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-311 ; environment/test-no-311-anaerobic-biodegradability-of-organic-compounds-in-digested-sludge-by-measurement-of-gas-production ; 9789264016842-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-312 ; environment/test-no-312-leaching-in-soil-columns ; 9789264070561-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-313 ; environment/test-no-313-estimation-of-emissions-from-preservative-treated-wood-to-the-environment ; 9789264067370-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-314 ; environment/test-no-314-simulation-tests-to-assess-the-biodegradability-of-chemicals-discharged-in-wastewater ; 9789264067493-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-315 ; environment/test-no-315-bioaccumulation-in-sediment-dwelling-benthic-oligochaetes ; 9789264067516-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-316 ; environment/test-no-316-phototransformation-of-chemicals-in-water-direct-photolysis ; 9789264067585-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-317 ; environment/test-no-317-bioaccumulation-in-terrestrial-oligochaetes ; 9789264090934-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-318 ; environment/test-no-318-dispersion-stability-of-nanomaterials-in-simulated-environmental-media ; 9789264284142-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-319 ; environment/test-no-319a-determination-of-in-vitro-intrinsic-clearance-using-cryopreserved-rainbow-trout-hepatocytes-rt-hep ; 9789264303218-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-319 ; environment/test-no-319b-determination-of-in-vitro-intrinsic-clearance-using-rainbow-trout-liver-s9-sub-cellular-fraction-rt-s9 ; 9789264303232-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-301 ; environment/test-no-301-ready-biodegradability ; 9789264070349-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-302 ; environment/test-no-302a-inherent-biodegradability-modified-scas-test ; 9789264070363-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-304 ; environment/test-no-304a-inherent-biodegradability-in-soil ; 9789264070448-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-203 ; environment/test-no-203-fish-acute-toxicity-test ; 9789264069961-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-220 ; environment/test-no-220-enchytraeid-reproduction-test ; 9789264264472-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-222 ; environment/test-no-222-earthworm-reproduction-test-eisenia-fetida-eisenia-andrei ; 9789264264496-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-223 ; environment/test-no-223-avian-acute-oral-toxicity-test ; 9789264264519-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-226 ; environment/test-no-226-predatory-mite-hypoaspis-geolaelaps-aculeifer-reproduction-test-in-soil ; 9789264264557-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-228 ; environment/test-no-228-determination-of-developmental-toxicity-to-dipteran-dung-flies-scathophaga-stercoraria-l-scathophagidae-musca-autumnalis-de-geer-muscidae ; 9789264264571-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-232 ; environment/test-no-232-collembolan-reproduction-test-in-soil ; 9789264264601-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-238 ; environment/test-no-238-sediment-free-myriophyllum-spicatum-toxicity-test ; 9789264224131-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-239 ; environment/test-no-239-water-sediment-myriophyllum-spicatum-toxicity-test ; 9789264224155-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-240 ; environment/test-no-240-medaka-extended-one-generation-reproduction-test-meogrt ; 9789264242258-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-241 ; environment/test-no-241-the-larval-amphibian-growth-and-development-assay-lagda ; 9789264242340-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-242 ; environment/test-no-242-potamopyrgus-antipodarum-reproduction-test ; 9789264264311-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-243 ; environment/test-no-243-lymnaea-stagnalis-reproduction-test ; 9789264264335-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-244 ; environment/test-no-244-protozoan-activated-sludge-inhibition-test ; 9789264284029-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-245 ; environment/test-no-245-honey-bee-apis-mellifera-l-chronic-oral-toxicity-test-10-day-feeding ; 9789264284081-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-246 ; environment/test-no-246-bumblebee-acute-contact-toxicity-test ; 9789264284104-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-247 ; environment/test-no-247-bumblebee-acute-oral-toxicity-test ; 9789264284128-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-249 ; environment/test-no-249-fish-cell-line-acute-toxicity-the-rtgill-w1-cell-line-assay ; c66d5190-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-250 ; environment/test-no-250-easzy-assay-detection-of-endocrine-active-substances-acting-through-estrogen-receptors-using-transgenic-tg-cyp19a1b-gfp-zebrafish-embryos ; 0a39b48b-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals tg ; environment/tg-248-xenopus-eleutheroembryonic-thyroid-assay-xeta ; a13f80ee-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-group-on-ecotoxicology ; 9789264022386-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-201 ; environment/test-no-201-alga-growth-inhibition-test ; 9789264069923-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-208 ; environment/test-no-208-terrestrial-plant-test-seedling-emergence-and-seedling-growth-test ; 9789264070066-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-209 ; environment/test-no-209-activated-sludge-respiration-inhibition-test ; 9789264070080-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-210 ; environment/test-no-210-fish-early-life-stage-toxicity-test ; 9789264203785-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-211 ; environment/test-no-211-daphnia-magna-reproduction-test ; 9789264185203-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-218 ; environment/test-no-218-sediment-water-chironomid-toxicity-using-spiked-sediment ; 9789264070264-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-219 ; environment/test-no-219-sediment-water-chironomid-toxicity-using-spiked-water ; 9789264070288-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-221 ; environment/test-no-221-lemna-sp-growth-inhabition-test ; 9789264016194-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-224 ; environment/test-no-224-determination-of-the-inhibition-of-the-activity-of-anaerobic-bacteria ; 9789264067332-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-225 ; environment/test-no-225-sediment-water-lumbriculus-toxicity-test-using-spiked-sediment ; 9789264067356-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-227 ; environment/test-no-227-terrestrial-plant-test-vegetative-vigour-test ; 9789264067295-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-229 ; environment/test-no-229-fish-short-term-reproduction-assay ; 9789264185265-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-230 ; environment/test-no-230-21-day-fish-assay ; 9789264076228-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-231 ; environment/test-no-231-amphibian-metamorphosis-assay ; 9789264076242-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-233 ; environment/test-no-233-sediment-water-chironomid-life-cycle-toxicity-test-using-spiked-water-or-spiked-sediment ; 9789264090910-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-234 ; environment/test-no-234-fish-sexual-development-test ; 9789264122369-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-235 ; environment/test-no-235-chironomus-sp-acute-immobilisation-test ; 9789264122383-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-236 ; environment/test-no-236-fish-embryo-acute-toxicity-fet-test ; 9789264203709-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-237 ; environment/test-no-237-honey-bee-apis-mellifera-larval-toxicity-test-single-exposure ; 9789264203723-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-202 ; environment/test-no-202-daphnia-sp-acute-immobilisation-test ; 9789264069947-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-204 ; environment/test-no-204-fish-prolonged-toxicity-test-14-day-study ; 9789264069985-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-205 ; environment/test-no-205-avian-dietary-toxicity-test ; 9789264070004-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-206 ; environment/test-no-206-avian-reproduction-test ; 9789264070028-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-207 ; environment/test-no-207-earthworm-acute-toxicity-tests ; 9789264070042-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-212 ; environment/test-no-212-fish-short-term-toxicity-test-on-embryo-and-sac-fry-stages ; 9789264070141-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-213 ; environment/test-no-213-honeybees-acute-oral-toxicity-test ; 9789264070165-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-214 ; environment/test-no-214-honeybees-acute-contact-toxicity-test ; 9789264070189-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-215 ; environment/test-no-215-fish-juvenile-growth-test ; 9789264070202-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-216 ; environment/test-no-216-soil-microorganisms-nitrogen-transformation-test ; 9789264070226-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-217 ; environment/test-no-217-soil-microorganisms-carbon-transformation-test ; 9789264070240-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-group-on-physical-chemistry ; 9789264013391-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-102 ; environment/test-no-102-melting-point-melting-range ; 9789264069527-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-103 ; environment/test-no-103-boiling-point ; 9789264069541-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-104 ; environment/test-no-104-vapour-pressure ; 9789264069565-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-105 ; environment/test-no-105-water-solubility ; 9789264069589-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-106 ; environment/test-no-106-adsorption-desorption-using-a-batch-equilibrium-method ; 9789264069602-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-107 ; environment/test-no-107-partition-coefficient-n-octanol-water-shake-flask-method ; 9789264069626-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-109 ; environment/test-no-109-density-of-liquids-and-solids ; 9789264123298-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-111 ; environment/test-no-111-hydrolysis-as-a-function-of-ph ; 9789264069701-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-113 ; environment/test-no-113-screening-test-for-thermal-stability-and-stability-in-air ; 9789264069749-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-114 ; environment/test-no-114-viscosity-of-liquids ; 9789264185180-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-115 ; environment/test-no-115-surface-tension-of-aqueous-solutions ; 9789264069787-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-116 ; environment/test-no-116-fat-solubility-of-solid-and-liquid-substances ; 9789264069800-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-117 ; environment/test-no-117-partition-coefficient-n-octanol-water-hplc-method ; 9789264069824-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-118 ; environment/test-no-118-determination-of-the-number-average-molecular-weight-and-the-molecular-weight-distribution-of-polymers-using-gel-permeation-chromatography ; 9789264069848-en >
-        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-119 ; environment/test-no-119-determination-of-the-low-molecular-weight-content-of-a-polymer-using-gel-permeation-chromatography ; 9789264069862-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-120 ; environment/test-no-120-solution-extraction-behaviour-of-polymers-in-water ; 9789264069886-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-121 ; environment/test-no-121-estimation-of-the-adsorption-coefficient-koc-on-soil-and-on-sewage-sludge-using-high-performance-liquid-chromatography-hplc ; 9789264069909-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-122 ; environment/test-no-122-determination-of-ph-acidity-and-alkalinity ; 9789264203686-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-123 ; environment/test-no-123-partition-coefficient-1-octanol-water-slow-stirring-method ; 9789264015845-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-101 ; environment/test-no-101-uv-vis-absorption-spectra ; 9789264069503-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-108 ; environment/test-no-108-complex-formation-ability-in-water ; 9789264069640-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-110 ; environment/test-no-110-particle-size-distribution-fibre-length-and-diameter-distributions ; 9789264069688-en >
-        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals test-no-112 ; environment/test-no-112-dissociation-constants-in-water ; 9789264069725-en >
+    }
+
+    {
+      title <
+        name = OECD Guidelines for the Testing of Chemicals, Section 2 ;
+        issn = 2074-5761
+      >
+
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals, Section 2: Summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-group-on-ecotoxicology ; 9789264022386-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 201 ; environment/test-no-201-alga-growth-inhibition-test ; 9789264069923-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 202 ; environment/test-no-202-daphnia-sp-acute-immobilisation-test ; 9789264069947-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 203 ; environment/test-no-203-fish-acute-toxicity-test ; 9789264069961-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 204 ; environment/test-no-204-fish-prolonged-toxicity-test-14-day-study ; 9789264069985-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 205 ; environment/test-no-205-avian-dietary-toxicity-test ; 9789264070004-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 206 ; environment/test-no-206-avian-reproduction-test ; 9789264070028-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 207 ; environment/test-no-207-earthworm-acute-toxicity-tests ; 9789264070042-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 208 ; environment/test-no-208-terrestrial-plant-test-seedling-emergence-and-seedling-growth-test ; 9789264070066-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 209 ; environment/test-no-209-activated-sludge-respiration-inhibition-test ; 9789264070080-en >
+        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 210 ; environment/test-no-210-fish-early-life-stage-toxicity-test ; 9789264203785-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 211 ; environment/test-no-211-daphnia-magna-reproduction-test ; 9789264185203-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 212 ; environment/test-no-212-fish-short-term-toxicity-test-on-embryo-and-sac-fry-stages ; 9789264070141-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 213 ; environment/test-no-213-honeybees-acute-oral-toxicity-test ; 9789264070165-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 214 ; environment/test-no-214-honeybees-acute-contact-toxicity-test ; 9789264070189-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 215 ; environment/test-no-215-fish-juvenile-growth-test ; 9789264070202-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 216 ; environment/test-no-216-soil-microorganisms-nitrogen-transformation-test ; 9789264070226-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 217 ; environment/test-no-217-soil-microorganisms-carbon-transformation-test ; 9789264070240-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 218 ; environment/test-no-218-sediment-water-chironomid-toxicity-using-spiked-sediment ; 9789264070264-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 219 ; environment/test-no-219-sediment-water-chironomid-toxicity-using-spiked-water ; 9789264070288-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 220 ; environment/test-no-220-enchytraeid-reproduction-test ; 9789264264472-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 221 ; environment/test-no-221-lemna-sp-growth-inhabition-test ; 9789264016194-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 222 ; environment/test-no-222-earthworm-reproduction-test-eisenia-fetida-eisenia-andrei ; 9789264264496-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 223 ; environment/test-no-223-avian-acute-oral-toxicity-test ; 9789264264519-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 224 ; environment/test-no-224-determination-of-the-inhibition-of-the-activity-of-anaerobic-bacteria ; 9789264067332-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 225 ; environment/test-no-225-sediment-water-lumbriculus-toxicity-test-using-spiked-sediment ; 9789264067356-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 226 ; environment/test-no-226-predatory-mite-hypoaspis-geolaelaps-aculeifer-reproduction-test-in-soil ; 9789264264557-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 227 ; environment/test-no-227-terrestrial-plant-test-vegetative-vigour-test ; 9789264067295-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 228 ; environment/test-no-228-determination-of-developmental-toxicity-to-dipteran-dung-flies-scathophaga-stercoraria-l-scathophagidae-musca-autumnalis-de-geer-muscidae ; 9789264264571-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 229 ; environment/test-no-229-fish-short-term-reproduction-assay ; 9789264185265-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 230 ; environment/test-no-230-21-day-fish-assay ; 9789264076228-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 231 ; environment/test-no-231-amphibian-metamorphosis-assay ; 9789264076242-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 232 ; environment/test-no-232-collembolan-reproduction-test-in-soil ; 9789264264601-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 233 ; environment/test-no-233-sediment-water-chironomid-life-cycle-toxicity-test-using-spiked-water-or-spiked-sediment ; 9789264090910-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 234 ; environment/test-no-234-fish-sexual-development-test ; 9789264122369-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 235 ; environment/test-no-235-chironomus-sp-acute-immobilisation-test ; 9789264122383-en >
+        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 236 ; environment/test-no-236-fish-embryo-acute-toxicity-fet-test ; 9789264203709-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 237 ; environment/test-no-237-honey-bee-apis-mellifera-larval-toxicity-test-single-exposure ; 9789264203723-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 238 ; environment/test-no-238-sediment-free-myriophyllum-spicatum-toxicity-test ; 9789264224131-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 239 ; environment/test-no-239-water-sediment-myriophyllum-spicatum-toxicity-test ; 9789264224155-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 240 ; environment/test-no-240-medaka-extended-one-generation-reproduction-test-meogrt ; 9789264242258-en >
+        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 241 ; environment/test-no-241-the-larval-amphibian-growth-and-development-assay-lagda ; 9789264242340-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 242 ; environment/test-no-242-potamopyrgus-antipodarum-reproduction-test ; 9789264264311-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 243 ; environment/test-no-243-lymnaea-stagnalis-reproduction-test ; 9789264264335-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 244 ; environment/test-no-244-protozoan-activated-sludge-inhibition-test ; 9789264284029-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 245 ; environment/test-no-245-honey-bee-apis-mellifera-l-chronic-oral-toxicity-test-10-day-feeding ; 9789264284081-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 246 ; environment/test-no-246-bumblebee-acute-contact-toxicity-test ; 9789264284104-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 247 ; environment/test-no-247-bumblebee-acute-oral-toxicity-test ; 9789264284128-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 248 ; environment/tg-248-xenopus-eleutheroembryonic-thyroid-assay-xeta ; a13f80ee-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 249 ; environment/test-no-249-fish-cell-line-acute-toxicity-the-rtgill-w1-cell-line-assay ; c66d5190-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 250 ; environment/test-no-250-easzy-assay-detection-of-endocrine-active-substances-acting-through-estrogen-receptors-using-transgenic-tg-cyp19a1b-gfp-zebrafish-embryos ; 0a39b48b-en >
+
+    }
+
+    {
+      title <
+        name = OECD Guidelines for the Testing of Chemicals, Section 3 ;
+        issn = 2074-577X
+      >
+
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals, Section 3: Revised ; environment/revised-introduction-to-the-oecd-guidelines-for-testing-of-chemicals-section-3 ; 9789264030213-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 301 ; environment/test-no-301-ready-biodegradability ; 9789264070349-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 302a ; environment/test-no-302a-inherent-biodegradability-modified-scas-test ; 9789264070363-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 302b ; environment/test-no-302b-inherent-biodegradability-zahn-wellens-evpa-test ; 9789264070387-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 302c ; environment/test-no-302c-inherent-biodegradability-modified-miti-test-ii ; 9789264070400-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 303 ; environment/test-no-303-simulation-test-aerobic-sewage-treatment-a-activated-sludge-units-b-biofilms ; 9789264070424-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 304a ; environment/test-no-304a-inherent-biodegradability-in-soil ; 9789264070448-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 305 ; environment/test-no-305-bioaccumulation-in-fish-aqueous-and-dietary-exposure ; 9789264185296-en >
+        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 306 ; environment/test-no-306-biodegradability-in-seawater ; 9789264070486-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 307 ; environment/test-no-307-aerobic-and-anaerobic-transformation-in-soil ; 9789264070509-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 308 ; environment/test-no-308-aerobic-and-anaerobic-transformation-in-aquatic-sediment-systems ; 9789264070523-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 309 ; environment/test-no-309-aerobic-mineralisation-in-surface-water-simulation-biodegradation-test ; 9789264070547-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 310 ; environment/test-no-310-ready-biodegradability-co2-in-sealed-vessels-headspace-test ; 9789264224506-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 311 ; environment/test-no-311-anaerobic-biodegradability-of-organic-compounds-in-digested-sludge-by-measurement-of-gas-production ; 9789264016842-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 312 ; environment/test-no-312-leaching-in-soil-columns ; 9789264070561-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 313 ; environment/test-no-313-estimation-of-emissions-from-preservative-treated-wood-to-the-environment ; 9789264067370-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 314 ; environment/test-no-314-simulation-tests-to-assess-the-biodegradability-of-chemicals-discharged-in-wastewater ; 9789264067493-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 315 ; environment/test-no-315-bioaccumulation-in-sediment-dwelling-benthic-oligochaetes ; 9789264067516-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 316 ; environment/test-no-316-phototransformation-of-chemicals-in-water-direct-photolysis ; 9789264067585-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 317 ; environment/test-no-317-bioaccumulation-in-terrestrial-oligochaetes ; 9789264090934-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 318 ; environment/test-no-318-dispersion-stability-of-nanomaterials-in-simulated-environmental-media ; 9789264284142-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 319a ; environment/test-no-319a-determination-of-in-vitro-intrinsic-clearance-using-cryopreserved-rainbow-trout-hepatocytes-rt-hep ; 9789264303218-en >
+        au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 319b ; environment/test-no-319b-determination-of-in-vitro-intrinsic-clearance-using-rainbow-trout-liver-s9-sub-cellular-fraction-rt-s9 ; 9789264303232-en >
+
+    }
+
+    {
+      title <
+        name = OECD Guidelines for the Testing of Chemicals, Section 4 ;
+        issn = 2074-5788
+      >
+
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals, Section 4: Guideline ; environment/guideline-no-497-defined-approaches-on-skin-sensitisation ; b92879a4-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals, Section 4: Summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-groups-on-short-term-and-long-term-toxicology ; 9789264035447-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 401 ; environment/test-no-401-acute-oral-toxicity ; 9789264040113-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 402 ; environment/test-no-402-acute-dermal-toxicity ; 9789264070585-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 403 ; environment/test-no-403-acute-inhalation-toxicity ; 9789264070608-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 404 ; environment/test-no-404-acute-dermal-irritation-corrosion ; 9789264242678-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 405 ; environment/test-no-405-acute-eye-irritation-corrosion ; 9789264185333-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 406 ; environment/test-no-406-skin-sensitisation ; 9789264070660-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 407 ; environment/test-no-407-repeated-dose-28-day-oral-toxicity-study-in-rodents ; 9789264070684-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 408 ; environment/test-no-408-repeated-dose-90-day-oral-toxicity-study-in-rodents ; 9789264070707-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 409 ; environment/test-no-409-repeated-dose-90-day-oral-toxicity-study-in-non-rodents ; 9789264070721-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 410 ; environment/test-no-410-repeated-dose-dermal-toxicity-21-28-day-study ; 9789264070745-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 411 ; environment/test-no-411-subchronic-dermal-toxicity-90-day-study ; 9789264070769-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 412 ; environment/test-no-412-subacute-inhalation-toxicity-28-day-study ; 9789264070783-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 413 ; environment/test-no-413-subchronic-inhalation-toxicity-90-day-study ; 9789264070806-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 414 ; environment/test-no-414-prenatal-development-toxicity-study ; 9789264070820-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 415 ; environment/test-no-415-one-generation-reproduction-toxicity-study ; 9789264070844-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 416 ; environment/test-no-416-two-generation-reproduction-toxicity ; 9789264070868-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 417 ; environment/test-no-417-toxicokinetics ; 9789264070882-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 418 ; environment/test-no-418-delayed-neurotoxicity-of-organophosphorus-substances-following-acute-exposure ; 9789264070905-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 419 ; environment/test-no-419-delayed-neurotoxicity-of-organophosphorus-substances-28-day-repeated-dose-study ; 9789264070929-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 420 ; environment/test-no-420-acute-oral-toxicity-fixed-dose-procedure ; 9789264070943-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 421 ; environment/test-no-421-reproduction-developmental-toxicity-screening-test ; 9789264264380-en >
+      au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 422 ; environment/test-no-422-combined-repeated-dose-toxicity-study-with-the-reproduction-developmental-toxicity-screening-test ; 9789264264403-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 423 ; environment/test-no-423-acute-oral-toxicity-acute-toxic-class-method ; 9789264071001-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 424 ; environment/test-no-424-neurotoxicity-study-in-rodents ; 9789264071025-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 425 ; environment/test-no-425-acute-oral-toxicity-up-and-down-procedure ; 9789264071049-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 426 ; environment/test-no-426-developmental-neurotoxicity-study ; 9789264067394-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 427 ; environment/test-no-427-skin-absorption-in-vivo-method ; 9789264071063-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 428 ; environment/test-no-428-skin-absorption-in-vitro-method ; 9789264071087-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 429 ; environment/test-no-429-skin-sensitisation ; 9789264071100-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 430 ; environment/test-no-430-in-vitro-skin-corrosion-transcutaneous-electrical-resistance-test-method-ter ; 9789264242739-en >
+      au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 431 ; environment/test-no-431-in-vitro-skin-corrosion-reconstructed-human-epidermis-rhe-test-method ; 9789264264618-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 432 ; environment/test-no-432-in-vitro-3t3-nru-phototoxicity-test ; 9789264071162-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 433 ; environment/test-no-433-acute-inhalation-toxicity-fixed-concentration-procedure ; 9789264284166-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 435 ; environment/test-no-435-in-vitro-membrane-barrier-test-method-for-skin-corrosion ; 9789264242791-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 436 ; environment/test-no-436-acute-inhalation-toxicity-acute-toxic-class-method ; 9789264076037-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 437 ; environment/test-no-437-bovine-corneal-opacity-and-permeability-test-method-for-identifying-i-chemicals-inducing-serious-eye-damage-and-ii-chemicals-not-requiring-classification-for-eye-irritation-or-serious-eye-damage ; 9789264203846-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 438 ; environment/test-no-438-isolated-chicken-eye-test-method-for-identifying-i-chemicals-inducing-serious-eye-damage-and-ii-chemicals-not-requiring-classification-for-eye-irritation-or-serious-eye-damage ; 9789264203860-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 439 ; environment/test-no-439-in-vitro-skin-irritation-reconstructed-human-epidermis-test-method ; 9789264242845-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 440 ; environment/test-no-440-uterotrophic-bioassay-in-rodents ; 9789264067417-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 441 ; environment/test-no-441-hershberger-bioassay-in-rats ; 9789264076334-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 442a ; environment/test-no-442a-skin-sensitization ; 9789264090972-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 442b ; environment/test-no-442b-skin-sensitization ; 9789264090996-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 442c ; environment/test-no-442c-in-chemico-skin-sensitisation ; 9789264229709-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 442d ; environment/test-no-442d-in-vitro-skin-sensitisation ; 9789264229822-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 442e ; environment/test-no-442e-in-vitro-skin-sensitisation ; 9789264264359-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 443 ; environment/test-no-443-extended-one-generation-reproductive-toxicity-study ; 9789264185371-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 451 ; environment/test-no-451-carcinogenicity-studies ; 9789264071186-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 452 ; environment/test-no-452-chronic-toxicity-studies ; 9789264071209-en >
+      au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 453 ; environment/test-no-453-combined-chronic-toxicity-carcinogenicity-studies ; 9789264071223-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 455 ; environment/test-no-455-performance-based-test-guideline-for-stably-transfected-transactivation-in-vitro-assays-to-detect-estrogen-receptor-agonists-and-antagonists ; 9789264265295-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 456 ; environment/test-no-456-h295r-steroidogenesis-assay ; 9789264122642-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 457 ; environment/test-no-457-bg1luc-estrogen-receptor-transactivation-test-method-for-identifying-estrogen-receptor-agonists-and-antagonists ; 9789264185395-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 458 ; environment/test-no-458-stably-transfected-human-androgen-receptor-transcriptional-activation-assay-for-detection-of-androgenic-agonist-and-antagonist-activity-of-chemicals ; 9789264264366-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 460 ; environment/test-no-460-fluorescein-leakage-test-method-for-identifying-ocular-corrosives-and-severe-irritants ; 9789264185401-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 471 ; environment/test-no-471-bacterial-reverse-mutation-test ; 9789264071247-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 473 ; environment/test-no-473-in-vitro-mammalian-chromosomal-aberration-test ; 9789264264649-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 474 ; environment/test-no-474-mammalian-erythrocyte-micronucleus-test ; 9789264264762-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 475 ; environment/test-no-475-mammalian-bone-marrow-chromosomal-aberration-test ; 9789264264786-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 476 ; environment/test-no-476-in-vitro-mammalian-cell-gene-mutation-tests-using-the-hprt-and-xprt-genes ; 9789264264809-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 477 ; environment/test-no-477-genetic-toxicology-sex-linked-recessive-lethal-test-in-drosophila-melanogaster ; 9789264071346-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 478 ; environment/test-no-478-rodent-dominant-lethal-test ; 9789264264823-en >
+      au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 479 ; environment/test-no-479-genetic-toxicology-in-vitro-sister-chromatid-exchange-assay-in-mammalian-cells ; 9789264071384-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 480 ; environment/test-no-480-genetic-toxicology-saccharomyces-cerevisiae-gene-mutation-assay ; 9789264071407-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 481 ; environment/test-no-481-genetic-toxicology-saacharomyces-cerevisiae-miotic-recombination-assay ; 9789264071421-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 482 ; environment/test-no-482-genetic-toxicology-dna-damage-and-repair-unscheduled-dna-synthesis-in-mammalian-cells-in-vitro ; 9789264071445-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 483 ; environment/test-no-483-mammalian-spermatogonial-chromosomal-aberration-test ; 9789264264847-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 484 ; environment/test-no-484-genetic-toxicology-mouse-spot-test ; 9789264071483-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 485 ; environment/test-no-485-genetic-toxicology-mouse-heritable-translocation-assay ; 9789264071506-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 486 ; environment/test-no-486-unscheduled-dna-synthesis-uds-test-with-mammalian-liver-cells-in-vivo ; 9789264071520-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 487 ; environment/test-no-487-in-vitro-mammalian-cell-micronucleus-test ; 9789264264861-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 488 ; environment/test-no-488-transgenic-rodent-somatic-and-germ-cell-gene-mutation-assays ; 9789264203907-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 489 ; environment/test-no-489-in-vivo-mammalian-alkaline-comet-assay ; 9789264264885-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 490 ; environment/test-no-490-in-vitro-mammalian-cell-gene-mutation-tests-using-the-thymidine-kinase-gene ; 9789264264908-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 491 ; environment/test-no-491-short-time-exposure-in-vitro-test-method-for-identifying-i-chemicals-inducing-serious-eye-damage-and-ii-chemicals-not-requiring-classification-for-eye-irritation-or-serious-eye-damage ; 9789264242432-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 492 ; environment/test-no-492-reconstructed-human-cornea-like-epithelium-rhce-test-method-for-identifying-chemicals-not-requiring-classification-and-labelling-for-eye-irritation-or-serious-eye-damage ; 9789264242548-en >
+      au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 493 ; environment/test-no-493-performance-based-test-guideline-for-human-recombinant-estrogen-receptor-hrer-in-vitro-assays-to-detect-chemicals-with-er-binding-affinity ; 9789264242623-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 494 ; environment/tg-494-vitrigel-eye-irritancy-test-method-for-identifying-chemicals-not-requiring-classification-and-labelling-for-eye-irritation-or-serious-eye-damage ; 9f20068a-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 495 ; environment/tg-495-ros-reactive-oxygen-species-assay-for-photoreactivity ; 915e00ac-en >
+      au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 496 ; environment/test-no-496-in-vitro-macromolecular-test-method-for-identifying-chemicals-inducing-serious-eye-damage-and-chemicals-not-requiring-classification-for-eye-irritation-or-serious-eye-damage ; 970e5cd9-en >
+      au < testing ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 498 ; environment/test-no-498-in-vitro-phototoxicity-reconstructed-human-epidermis-phototoxicity-test-method ; 7b2f9ea0-en >
+
+    }
+
+    {
+
+      title <
+        name = OECD Guidelines for the Testing of Chemicals, Section 5 ;
+        issn = 2074-5796
+      >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals, Section 5: Introduction ; environment/introduction-to-oecd-test-guidelines-on-pesticide-residues-chemistry-section-5-part-a ; 9789264203761-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 501 ; environment/test-no-501-metabolism-in-crops ; 9789264061835-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 502 ; environment/test-no-502-metabolism-in-rotational-crops ; 9789264061859-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 503 ; environment/test-no-503-metabolism-in-livestock ; 9789264061873-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 504 ; environment/test-no-504-residues-in-rotational-crops-limited-field-studies ; 9789264013384-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 505 ; environment/test-no-505-residues-in-livestock ; 9789264061903-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 506 ; environment/test-no-506-stability-of-pesticide-residues-in-stored-commodities ; 9789264061927-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 507 ; environment/test-no-507-nature-of-the-pesticide-residues-in-processed-commodities-high-temperature-hydrolysis ; 9789264067431-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 508 ; environment/test-no-508-magnitude-of-the-pesticide-residues-in-processed-commodities ; 9789264067622-en >
+        au < manifest ; ???? ; OECD Guidelines for the Testing of Chemicals Test No. 509 ; environment/test-no-509-crop-field-trial ; 9789264076457-en >
 
     }
 
@@ -224,18 +259,18 @@
         issn = 2310-1113
       >
 
-        au < manifest ; 2014 ; Gas Market Reports Volume 2014 ; development/economic-outlook-for-southeast-asia-china-and-india-2014 ; saeo-2014-en >
-        au < manifest ; 2015 ; Gas Market Reports Volume 2015 ; development/economic-outlook-for-southeast-asia-china-and-india-2015 ; saeo-2015-en >
-        au < manifest ; 2016 ; Gas Market Reports Volume 2016 ; development/economic-outlook-for-southeast-asia-china-and-india-2016 ; saeo-2016-en >
-        au < manifest ; 2017 ; Gas Market Reports Volume 2017 ; development/economic-outlook-for-southeast-asia-china-and-india-2017 ; saeo-2017-en >
-        au < manifest ; 2018 ; Gas Market Reports Volume 2018 Issue 1 ; development/economic-outlook-for-southeast-asia-china-and-india-2018-update ; 9789264302990-en >
-        au < testing ; 2018 ; Gas Market Reports Volume 2018 Issue 2 ; development/economic-outlook-for-southeast-asia-china-and-india-2018 ; 9789264286184-en >
-        au < manifest ; 2019 ; Gas Market Reports Volume 2019 Issue 1 ; development/economic-outlook-for-southeast-asia-china-and-india-2019 ; saeo-2019-en >
-        au < manifest ; 2019 ; Gas Market Reports Volume 2019 Issue 2 ; development/economic-outlook-for-southeast-asia-china-and-india-2019-update ; 859159ab-en >
-        au < manifest ; 2020 ; Gas Market Reports Volume 2020 ; development/economic-outlook-for-southeast-asia-china-and-india-2020 ; 1ba6cde0-en >
-        au < manifest ; 2020 ; Gas Market Reports Volume 2020 Supplement 1 ; development/economic-outlook-for-southeast-asia-china-and-india/volume-/issue-2 ; e8c90b68-en >
-        au < manifest ; 2020 ; Gas Market Reports Volume 2020 Supplement 2 ; development/economic-outlook-for-southeast-asia-china-and-india/volume-2020/issue-2 ; 5bdef80e-en >
-        au < manifest ; 2021 ; Gas Market Reports Volume 2021 ; development/economic-outlook-for-southeast-asia-china-and-india/volume-2021/issue-1 ; 711629f8-en >
+      au < manifest ; 2014 ; Gas Market Reports Volume 2014 ; development/economic-outlook-for-southeast-asia-china-and-india-2014 ; saeo-2014-en >
+      au < manifest ; 2015 ; Gas Market Reports Volume 2015 ; development/economic-outlook-for-southeast-asia-china-and-india-2015 ; saeo-2015-en >
+      au < manifest ; 2016 ; Gas Market Reports Volume 2016 ; development/economic-outlook-for-southeast-asia-china-and-india-2016 ; saeo-2016-en >
+      au < manifest ; 2017 ; Gas Market Reports Volume 2017 ; development/economic-outlook-for-southeast-asia-china-and-india-2017 ; saeo-2017-en >
+      au < manifest ; 2018 ; Gas Market Reports Volume 2018 Issue 1 ; development/economic-outlook-for-southeast-asia-china-and-india-2018-update ; 9789264302990-en >
+      au < testing ; 2018 ; Gas Market Reports Volume 2018 Issue 2 ; development/economic-outlook-for-southeast-asia-china-and-india-2018 ; 9789264286184-en >
+      au < manifest ; 2019 ; Gas Market Reports Volume 2019 Issue 1 ; development/economic-outlook-for-southeast-asia-china-and-india-2019 ; saeo-2019-en >
+      au < manifest ; 2019 ; Gas Market Reports Volume 2019 Issue 2 ; development/economic-outlook-for-southeast-asia-china-and-india-2019-update ; 859159ab-en >
+      au < manifest ; 2020 ; Gas Market Reports Volume 2020 ; development/economic-outlook-for-southeast-asia-china-and-india-2020 ; 1ba6cde0-en >
+      au < manifest ; 2020 ; Gas Market Reports Volume 2020 Supplement 1 ; development/economic-outlook-for-southeast-asia-china-and-india/volume-/issue-2 ; e8c90b68-en >
+      au < manifest ; 2020 ; Gas Market Reports Volume 2020 Supplement 2 ; development/economic-outlook-for-southeast-asia-china-and-india/volume-2020/issue-2 ; 5bdef80e-en >
+      au < manifest ; 2021 ; Gas Market Reports Volume 2021 ; development/economic-outlook-for-southeast-asia-china-and-india/volume-2021/issue-1 ; 711629f8-en >
 
     }
 
@@ -272,9 +307,9 @@
         issn = 2790-2773
       >
 
-      au < manifest ; 2021 ; Africa’s Development Dynamics Volume 2021 ; development/africa-s-development-dynamics-2021 ; 0a5c9314-en >
-      au < manifest ; 2019 ; Africa’s Development Dynamics Volume 2019 ; development/africa-s-development-dynamics-2019 ; c1cd7de0-en >
       au < manifest ; 2018 ; Africa’s Development Dynamics Volume 2018 ; development/africa-s-development-dynamics-2018 ; 9789264302501-en >
+      au < manifest ; 2019 ; Africa’s Development Dynamics Volume 2019 ; development/africa-s-development-dynamics-2019 ; c1cd7de0-en >
+      au < manifest ; 2021 ; Africa’s Development Dynamics Volume 2021 ; development/africa-s-development-dynamics-2021 ; 0a5c9314-en >
 
 
     }
@@ -286,32 +321,31 @@
         issn = 2221-7371
       >
 
-      au < manifest ; 2021 ; Agricultural Policy Monitoring and Evaluation Volume 2021 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2021 ; 2d810e01-en >
-      au < manifest ; 2020 ; Agricultural Policy Monitoring and Evaluation Volume 2020 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2020 ; 928181a8-en >
-      au < manifest ; 2019 ; Agricultural Policy Monitoring and Evaluation Volume 2019 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2019 ; 39bfe6f3-en >
-      au < manifest ; 2018 ; Agricultural Policy Monitoring and Evaluation Volume 2018 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2018 ; agr_pol-2018-en >
-      au < manifest ; 2017 ; Agricultural Policy Monitoring and Evaluation Volume 2017 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2017 ; agr_pol-2017-en >
-      au < manifest ; 2016 ; Agricultural Policy Monitoring and Evaluation Volume 2016 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2016 ; agr_pol-2016-en >
-      au < manifest ; 2015 ; Agricultural Policy Monitoring and Evaluation Volume 2015 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2015 ; agr_pol-2015-en >
-      au < manifest ; 2014 ; Agricultural Policy Monitoring and Evaluation Volume 2014 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2014 ; agr_pol-2014-en >
-      au < testing ; 2013 ; Agricultural Policy Monitoring and Evaluation Volume 2013 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2013 ; agr_pol-2013-en >
-      au < manifest ; 2012 ; Agricultural Policy Monitoring and Evaluation Volume 2012 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2012 ; agr_pol-2012-en >
-      au < manifest ; 2011 ; Agricultural Policy Monitoring and Evaluation Volume 2011 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2011 ; agr_pol-2011-en >
-      au < manifest ; 2010 ; Agricultural Policy Monitoring and Evaluation Volume 2010 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2010 ; agr_oecd-2010-en >
+      au < manifest ; 1998 ; Agricultural Policy Monitoring and Evaluation Volume 1998 ; agriculture-and-food/agricultural-policies-in-oecd-countries-1998 ; agr_oecd-1998-en >
+      au < manifest ; 1999 ; Agricultural Policy Monitoring and Evaluation Volume 1999 ; agriculture-and-food/agricultural-policies-in-oecd-countries-1999 ; agr_oecd-1999-en >
+      au < testing ; 2000 ; Agricultural Policy Monitoring and Evaluation Volume 2000 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2000 ; agr_oecd-2000-en >
+      au < manifest ; 2001 ; Agricultural Policy Monitoring and Evaluation Volume 2001 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2001 ; agr_oecd-2001-en >
+      au < manifest ; 2002 ; Agricultural Policy Monitoring and Evaluation Volume 2002 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2002 ; agr_oecd-2002-en >
+      au < manifest ; 2003 ; Agricultural Policy Monitoring and Evaluation Volume 2003 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2003 ; agr_oecd-2003-en >
+      au < manifest ; 2004 ; Agricultural Policy Monitoring and Evaluation Volume 2004 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2004 ; agr_oecd-2004-en >
+      au < manifest ; 2005 ; Agricultural Policy Monitoring and Evaluation Volume 2005 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2005 ; agr_oecd-2005-en >
+      au < manifest ; 2006 ; Agricultural Policy Monitoring and Evaluation Volume 2006 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2006 ; agr_oecd-2006-en >
+      au < manifest ; 2007 ; Agricultural Policy Monitoring and Evaluation Volume 2007 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2007 ; agr_oecd-2007-en >
+      au < manifest ; 2008 ; Agricultural Policy Monitoring and Evaluation Volume 2008 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2008 ; agr_oecd-2008-en >
       au < manifest ; 2009 ; Agricultural Policy Monitoring and Evaluation Volume 2009 ; agriculture-and-food/agricultural-policies-in-emerging-economies-2009 ; agr_emerging-2009-en >
       au < manifest ; 2009 ; Agricultural Policy Monitoring and Evaluation Volume 2009 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2009 ; agr_oecd-2009-en >
-      au < manifest ; 2008 ; Agricultural Policy Monitoring and Evaluation Volume 2008 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2008 ; agr_oecd-2008-en >
-      au < manifest ; 2007 ; Agricultural Policy Monitoring and Evaluation Volume 2007 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2007 ; agr_oecd-2007-en >
-      au < manifest ; 2006 ; Agricultural Policy Monitoring and Evaluation Volume 2006 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2006 ; agr_oecd-2006-en >
-      au < manifest ; 2005 ; Agricultural Policy Monitoring and Evaluation Volume 2005 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2005 ; agr_oecd-2005-en >
-      au < manifest ; 2004 ; Agricultural Policy Monitoring and Evaluation Volume 2004 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2004 ; agr_oecd-2004-en >
-      au < manifest ; 2003 ; Agricultural Policy Monitoring and Evaluation Volume 2003 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2003 ; agr_oecd-2003-en >
-      au < manifest ; 2002 ; Agricultural Policy Monitoring and Evaluation Volume 2002 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2002 ; agr_oecd-2002-en >
-      au < manifest ; 2001 ; Agricultural Policy Monitoring and Evaluation Volume 2001 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2001 ; agr_oecd-2001-en >
-      au < testing ; 2000 ; Agricultural Policy Monitoring and Evaluation Volume 2000 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2000 ; agr_oecd-2000-en >
-      au < manifest ; 1999 ; Agricultural Policy Monitoring and Evaluation Volume 1999 ; agriculture-and-food/agricultural-policies-in-oecd-countries-1999 ; agr_oecd-1999-en >
-      au < manifest ; 1998 ; Agricultural Policy Monitoring and Evaluation Volume 1998 ; agriculture-and-food/agricultural-policies-in-oecd-countries-1998 ; agr_oecd-1998-en >
-
+      au < manifest ; 2010 ; Agricultural Policy Monitoring and Evaluation Volume 2010 ; agriculture-and-food/agricultural-policies-in-oecd-countries-2010 ; agr_oecd-2010-en >
+      au < manifest ; 2011 ; Agricultural Policy Monitoring and Evaluation Volume 2011 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2011 ; agr_pol-2011-en >
+      au < manifest ; 2012 ; Agricultural Policy Monitoring and Evaluation Volume 2012 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2012 ; agr_pol-2012-en >
+      au < testing ; 2013 ; Agricultural Policy Monitoring and Evaluation Volume 2013 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2013 ; agr_pol-2013-en >
+      au < manifest ; 2014 ; Agricultural Policy Monitoring and Evaluation Volume 2014 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2014 ; agr_pol-2014-en >
+      au < manifest ; 2015 ; Agricultural Policy Monitoring and Evaluation Volume 2015 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2015 ; agr_pol-2015-en >
+      au < manifest ; 2016 ; Agricultural Policy Monitoring and Evaluation Volume 2016 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2016 ; agr_pol-2016-en >
+      au < manifest ; 2017 ; Agricultural Policy Monitoring and Evaluation Volume 2017 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2017 ; agr_pol-2017-en >
+      au < manifest ; 2018 ; Agricultural Policy Monitoring and Evaluation Volume 2018 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2018 ; agr_pol-2018-en >
+      au < manifest ; 2019 ; Agricultural Policy Monitoring and Evaluation Volume 2019 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2019 ; 39bfe6f3-en >
+      au < manifest ; 2020 ; Agricultural Policy Monitoring and Evaluation Volume 2020 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2020 ; 928181a8-en >
+      au < manifest ; 2021 ; Agricultural Policy Monitoring and Evaluation Volume 2021 ; agriculture-and-food/agricultural-policy-monitoring-and-evaluation-2021 ; 2d810e01-en >
 
     }
 
@@ -322,14 +356,13 @@
         issn = 2223-4411
       >
 
-      au < manifest ; 2019 ; Aid for Trade at a Glance Volume 2019 ; development/aid-for-trade-at-a-glance-2019 ; 18ea27d8-en >
-      au < manifest ; 2017 ; Aid for Trade at a Glance Volume 2017 ; development/aid-for-trade-at-a-glance-2017 ; aid_glance-2017-en >
-      au < manifest ; 2015 ; Aid for Trade at a Glance Volume 2015 ; development/aid-for-trade-at-a-glance-2015 ; aid_glance-2015-en >
-      au < manifest ; 2013 ; Aid for Trade at a Glance Volume 2013 ; development/aid-for-trade-at-a-glance-2013 ; aid_glance-2013-en >
-      au < manifest ; 2011 ; Aid for Trade at a Glance Volume 2011 ; development/aid-for-trade-at-a-glance-2011 ; 9789264117471-en >
-      au < manifest ; 2009 ; Aid for Trade at a Glance Volume 2009 ; development/aid-for-trade-at-a-glance-2009 ; 9789264069022-en >
       au < manifest ; 2007 ; Aid for Trade at a Glance Volume 2007 ; development/aid-for-trade-at-a-glance-2007 ; 9789264043220-en >
-
+      au < manifest ; 2009 ; Aid for Trade at a Glance Volume 2009 ; development/aid-for-trade-at-a-glance-2009 ; 9789264069022-en >
+      au < manifest ; 2011 ; Aid for Trade at a Glance Volume 2011 ; development/aid-for-trade-at-a-glance-2011 ; 9789264117471-en >
+      au < manifest ; 2013 ; Aid for Trade at a Glance Volume 2013 ; development/aid-for-trade-at-a-glance-2013 ; aid_glance-2013-en >
+      au < manifest ; 2015 ; Aid for Trade at a Glance Volume 2015 ; development/aid-for-trade-at-a-glance-2015 ; aid_glance-2015-en >
+      au < manifest ; 2017 ; Aid for Trade at a Glance Volume 2017 ; development/aid-for-trade-at-a-glance-2017 ; aid_glance-2017-en >
+      au < manifest ; 2019 ; Aid for Trade at a Glance Volume 2019 ; development/aid-for-trade-at-a-glance-2019 ; 18ea27d8-en >
 
     }
 
@@ -340,31 +373,30 @@
         issn = 2074-7721
       >
 
-      au < manifest ; 2021 ; Development Co-operation Report Volume 2021 ; development/development-co-operation-report-2021 ; ce08832f-en >
-      au < manifest ; 2020 ; Development Co-operation Report Volume 2020 ; development/development-co-operation-report-2020 ; f6d42aa5-en >
-      au < manifest ; 2019 ; Development Co-operation Report Volume 2019 ; development/development-co-operation-report-2019 ; 9a58c83f-en >
-      au < manifest ; 2018 ; Development Co-operation Report Volume 2018 ; development/development-co-operation-report-2018 ; dcr-2018-en >
-      au < testing ; 2017 ; Development Co-operation Report Volume 2017 ; development/development-co-operation-report-2017 ; dcr-2017-en >
-      au < manifest ; 2016 ; Development Co-operation Report Volume 2016 ; development/development-co-operation-report-2016 ; dcr-2016-en >
-      au < manifest ; 2015 ; Development Co-operation Report Volume 2015 ; development/development-co-operation-report-2015 ; dcr-2015-en >
-      au < manifest ; 2014 ; Development Co-operation Report Volume 2014 ; development/development-co-operation-report-2014 ; dcr-2014-en >
-      au < manifest ; 2013 ; Development Co-operation Report Volume 2013 ; development/development-co-operation-report-2013 ; dcr-2013-en >
-      au < manifest ; 2012 ; Development Co-operation Report Volume 2012 ; development/development-co-operation-report-2012 ; dcr-2012-en >
-      au < manifest ; 2011 ; Development Co-operation Report Volume 2011 ; development/development-co-operation-report-2011 ; dcr-2011-en >
-      au < manifest ; 2010 ; Development Co-operation Report Volume 2010 ; development/development-co-operation-report-2010 ; dcr-2010-en >
-      au < manifest ; 2009 ; Development Co-operation Report Volume 2009 ; development/development-co-operation-report-2009 ; dcr-2009-en >
-      au < manifest ; 2007 ; Development Co-operation Report Volume 2007 ; development/development-co-operation-report-2007 ; dcr-2007-en >
-      au < manifest ; 2006 ; Development Co-operation Report Volume 2006 ; development/development-co-operation-report-2006 ; dcr-2006-en >
-      au < manifest ; 2005 ; Development Co-operation Report Volume 2005 ; development/development-co-operation-report-2005 ; dcr-2005-en >
-      au < manifest ; 2004 ; Development Co-operation Report Volume 2004 ; development/development-co-operation-report-2004 ; dcr-2004-en >
-      au < manifest ; 2003 ; Development Co-operation Report Volume 2003 ; development/development-co-operation-report-2003 ; dcr-2003-en >
-      au < testing ; 2002 ; Development Co-operation Report Volume 2002 ; development/development-co-operation-report-2002 ; dcr-2002-en >
-      au < manifest ; 2001 ; Development Co-operation Report Volume 2001 ; development/development-co-operation-report-2001 ; dcr-2001-en >
-      au < manifest ; 2000 ; Development Co-operation Report Volume 2000 ; development/development-co-operation-report-2000 ; dcr-2000-en >
-      au < manifest ; 1999 ; Development Co-operation Report Volume 1999 ; development/development-co-operation-report-1999 ; dcr-1999-en >
-      au < manifest ; 1998 ; Development Co-operation Report Volume 1998 ; development/development-co-operation-report-1998 ; dcr-1998-en >
       au < manifest ; 1997 ; Development Co-operation Report Volume 1997 ; development/development-co-operation-report-1997 ; dcr-1997-en >
-
+      au < manifest ; 1998 ; Development Co-operation Report Volume 1998 ; development/development-co-operation-report-1998 ; dcr-1998-en >
+      au < manifest ; 1999 ; Development Co-operation Report Volume 1999 ; development/development-co-operation-report-1999 ; dcr-1999-en >
+      au < manifest ; 2000 ; Development Co-operation Report Volume 2000 ; development/development-co-operation-report-2000 ; dcr-2000-en >
+      au < manifest ; 2001 ; Development Co-operation Report Volume 2001 ; development/development-co-operation-report-2001 ; dcr-2001-en >
+      au < testing ; 2002 ; Development Co-operation Report Volume 2002 ; development/development-co-operation-report-2002 ; dcr-2002-en >
+      au < manifest ; 2003 ; Development Co-operation Report Volume 2003 ; development/development-co-operation-report-2003 ; dcr-2003-en >
+      au < manifest ; 2004 ; Development Co-operation Report Volume 2004 ; development/development-co-operation-report-2004 ; dcr-2004-en >
+      au < manifest ; 2005 ; Development Co-operation Report Volume 2005 ; development/development-co-operation-report-2005 ; dcr-2005-en >
+      au < manifest ; 2006 ; Development Co-operation Report Volume 2006 ; development/development-co-operation-report-2006 ; dcr-2006-en >
+      au < manifest ; 2007 ; Development Co-operation Report Volume 2007 ; development/development-co-operation-report-2007 ; dcr-2007-en >
+      au < manifest ; 2009 ; Development Co-operation Report Volume 2009 ; development/development-co-operation-report-2009 ; dcr-2009-en >
+      au < manifest ; 2010 ; Development Co-operation Report Volume 2010 ; development/development-co-operation-report-2010 ; dcr-2010-en >
+      au < manifest ; 2011 ; Development Co-operation Report Volume 2011 ; development/development-co-operation-report-2011 ; dcr-2011-en >
+      au < manifest ; 2012 ; Development Co-operation Report Volume 2012 ; development/development-co-operation-report-2012 ; dcr-2012-en >
+      au < manifest ; 2013 ; Development Co-operation Report Volume 2013 ; development/development-co-operation-report-2013 ; dcr-2013-en >
+      au < manifest ; 2014 ; Development Co-operation Report Volume 2014 ; development/development-co-operation-report-2014 ; dcr-2014-en >
+      au < manifest ; 2015 ; Development Co-operation Report Volume 2015 ; development/development-co-operation-report-2015 ; dcr-2015-en >
+      au < manifest ; 2016 ; Development Co-operation Report Volume 2016 ; development/development-co-operation-report-2016 ; dcr-2016-en >
+      au < testing ; 2017 ; Development Co-operation Report Volume 2017 ; development/development-co-operation-report-2017 ; dcr-2017-en >
+      au < manifest ; 2018 ; Development Co-operation Report Volume 2018 ; development/development-co-operation-report-2018 ; dcr-2018-en >
+      au < manifest ; 2019 ; Development Co-operation Report Volume 2019 ; development/development-co-operation-report-2019 ; 9a58c83f-en >
+      au < manifest ; 2020 ; Development Co-operation Report Volume 2020 ; development/development-co-operation-report-2020 ; f6d42aa5-en >
+      au < manifest ; 2021 ; Development Co-operation Report Volume 2021 ; development/development-co-operation-report-2021 ; ce08832f-en >
 
     }
 
@@ -375,23 +407,22 @@
         issn = 1813-2723
       >
 
-      au < manifest ; 2021 ; Economic Policy Reforms Volume 2021 ; economics/economic-policy-reforms-2021 ; 3c796721-en >
-      au < manifest ; 2019 ; Economic Policy Reforms Volume 2019 ; economics/economic-policy-reforms-2019 ; aec5b059-en >
-      au < manifest ; 2018 ; Economic Policy Reforms Volume 2018 ; economics/economic-policy-reforms-2018 ; growth-2018-en >
-      au < manifest ; 2017 ; Economic Policy Reforms Volume 2017 ; economics/economic-policy-reforms-2017 ; growth-2017-en >
-      au < manifest ; 2016 ; Economic Policy Reforms Volume 2016 ; economics/economic-policy-reforms-2016 ; growth-2016-en >
-      au < manifest ; 2015 ; Economic Policy Reforms Volume 2015 ; economics/economic-policy-reforms-2015 ; growth-2015-en >
-      au < manifest ; 2014 ; Economic Policy Reforms Volume 2014 ; economics/economic-policy-reforms-2014 ; growth-2014-en >
-      au < manifest ; 2013 ; Economic Policy Reforms Volume 2013 ; economics/economic-policy-reforms-2013 ; growth-2013-en >
-      au < testing ; 2012 ; Economic Policy Reforms Volume 2012 ; economics/economic-policy-reforms-2012 ; growth-2012-en >
-      au < manifest ; 2011 ; Economic Policy Reforms Volume 2011 ; economics/economic-policy-reforms-2011 ; growth-2011-en >
-      au < manifest ; 2010 ; Economic Policy Reforms Volume 2010 ; economics/economic-policy-reforms-2010 ; growth-2010-en >
-      au < manifest ; 2009 ; Economic Policy Reforms Volume 2009 ; economics/economic-policy-reforms-2009 ; growth-2009-en >
-      au < manifest ; 2008 ; Economic Policy Reforms Volume 2008 ; economics/economic-policy-reforms-2008 ; growth-2008-en >
-      au < manifest ; 2007 ; Economic Policy Reforms Volume 2007 ; economics/economic-policy-reforms-2007 ; growth-2007-en >
-      au < manifest ; 2006 ; Economic Policy Reforms Volume 2006 ; economics/economic-policy-reforms-2006 ; growth-2006-en >
       au < manifest ; 2005 ; Economic Policy Reforms Volume 2005 ; economics/economic-policy-reforms-2005 ; growth-2005-en >
-
+      au < manifest ; 2006 ; Economic Policy Reforms Volume 2006 ; economics/economic-policy-reforms-2006 ; growth-2006-en >
+      au < manifest ; 2007 ; Economic Policy Reforms Volume 2007 ; economics/economic-policy-reforms-2007 ; growth-2007-en >
+      au < manifest ; 2008 ; Economic Policy Reforms Volume 2008 ; economics/economic-policy-reforms-2008 ; growth-2008-en >
+      au < manifest ; 2009 ; Economic Policy Reforms Volume 2009 ; economics/economic-policy-reforms-2009 ; growth-2009-en >
+      au < manifest ; 2010 ; Economic Policy Reforms Volume 2010 ; economics/economic-policy-reforms-2010 ; growth-2010-en >
+      au < manifest ; 2011 ; Economic Policy Reforms Volume 2011 ; economics/economic-policy-reforms-2011 ; growth-2011-en >
+      au < testing ; 2012 ; Economic Policy Reforms Volume 2012 ; economics/economic-policy-reforms-2012 ; growth-2012-en >
+      au < manifest ; 2013 ; Economic Policy Reforms Volume 2013 ; economics/economic-policy-reforms-2013 ; growth-2013-en >
+      au < manifest ; 2014 ; Economic Policy Reforms Volume 2014 ; economics/economic-policy-reforms-2014 ; growth-2014-en >
+      au < manifest ; 2015 ; Economic Policy Reforms Volume 2015 ; economics/economic-policy-reforms-2015 ; growth-2015-en >
+      au < manifest ; 2016 ; Economic Policy Reforms Volume 2016 ; economics/economic-policy-reforms-2016 ; growth-2016-en >
+      au < manifest ; 2017 ; Economic Policy Reforms Volume 2017 ; economics/economic-policy-reforms-2017 ; growth-2017-en >
+      au < manifest ; 2018 ; Economic Policy Reforms Volume 2018 ; economics/economic-policy-reforms-2018 ; growth-2018-en >
+      au < manifest ; 2019 ; Economic Policy Reforms Volume 2019 ; economics/economic-policy-reforms-2019 ; aec5b059-en >
+      au < manifest ; 2021 ; Economic Policy Reforms Volume 2021 ; economics/economic-policy-reforms-2021 ; 3c796721-en >
 
     }
 
@@ -402,10 +433,10 @@
         issn = 2707-6725
       >
 
-      au < manifest ; 2021 ; Education Policy Outlook Volume 2021 ; education/education-policy-outlook-2021 ; 75e40a16-en >
-      au < manifest ; 2019 ; Education Policy Outlook Volume 2019 ; education/education-policy-outlook-2019 ; 2b8ad56e-en >
-      au < manifest ; 2018 ; Education Policy Outlook Volume 2018 ; education/education-policy-outlook-2018 ; 9789264301528-en >
       au < manifest ; 2015 ; Education Policy Outlook Volume 2015 ; education/education-policy-outlook-2015 ; 9789264225442-en >
+      au < manifest ; 2018 ; Education Policy Outlook Volume 2018 ; education/education-policy-outlook-2018 ; 9789264301528-en >
+      au < manifest ; 2019 ; Education Policy Outlook Volume 2019 ; education/education-policy-outlook-2019 ; 2b8ad56e-en >
+      au < manifest ; 2021 ; Education Policy Outlook Volume 2021 ; education/education-policy-outlook-2021 ; 75e40a16-en >
 
 
     }
@@ -417,12 +448,11 @@
         issn = 2790-4156
       >
 
-      au < manifest ; 2021 ; Energy Efficiency Volume 2021 ; energy/energy-efficiency-2021 ; cfb80e1e-en >
-      au < manifest ; 2020 ; Energy Efficiency Volume 2020 ; energy/energy-efficiency-2020 ; dfd85134-en >
-      au < testing ; 2019 ; Energy Efficiency Volume 2019 ; energy/energy-efficiency-2019 ; ef14df7a-en >
-      au < manifest ; 2018 ; Energy Efficiency Volume 2018 ; energy/energy-efficiency-2018 ; 9789264024304-en >
       au < manifest ; 2017 ; Energy Efficiency Volume 2017 ; energy/energy-efficiency-2017 ; 9789264284234-en >
-
+      au < manifest ; 2018 ; Energy Efficiency Volume 2018 ; energy/energy-efficiency-2018 ; 9789264024304-en >
+      au < testing ; 2019 ; Energy Efficiency Volume 2019 ; energy/energy-efficiency-2019 ; ef14df7a-en >
+      au < manifest ; 2020 ; Energy Efficiency Volume 2020 ; energy/energy-efficiency-2020 ; dfd85134-en >
+      au < manifest ; 2021 ; Energy Efficiency Volume 2021 ; energy/energy-efficiency-2021 ; cfb80e1e-en >
 
     }
 
@@ -433,16 +463,15 @@
         issn = 2079-2603
       >
 
-      au < manifest ; 2020 ; Energy Technology Perspectives Volume 2020 ; energy/energy-technology-perspectives-2020 ; d07136f0-en >
-      au < manifest ; 2017 ; Energy Technology Perspectives Volume 2017 ; energy/energy-technology-perspectives-2017 ; energy_tech-2017-en >
-      au < manifest ; 2016 ; Energy Technology Perspectives Volume 2016 ; energy/energy-technology-perspectives-2016 ; energy_tech-2016-en >
-      au < manifest ; 2015 ; Energy Technology Perspectives Volume 2015 ; energy/energy-technology-perspectives-2015 ; energy_tech-2015-en >
-      au < manifest ; 2014 ; Energy Technology Perspectives Volume 2014 ; energy/energy-technology-perspectives-2014 ; energy_tech-2014-en >
-      au < manifest ; 2012 ; Energy Technology Perspectives Volume 2012 ; energy/energy-technology-perspectives-2012 ; energy_tech-2012-en >
-      au < manifest ; 2010 ; Energy Technology Perspectives Volume 2010 ; energy/energy-technology-perspectives-2010 ; energy_tech-2010-en >
-      au < manifest ; 2008 ; Energy Technology Perspectives Volume 2008 ; energy/energy-technology-perspectives-2008-scenarios-and-strategies-to-2050 ; 9789264041431-en >
       au < manifest ; 2006 ; Energy Technology Perspectives Volume 2006 ; energy/energy-technology-perspectives-2006 ; 9789264109834-en >
-
+      au < manifest ; 2008 ; Energy Technology Perspectives Volume 2008 ; energy/energy-technology-perspectives-2008-scenarios-and-strategies-to-2050 ; 9789264041431-en >
+      au < manifest ; 2010 ; Energy Technology Perspectives Volume 2010 ; energy/energy-technology-perspectives-2010 ; energy_tech-2010-en >
+      au < manifest ; 2012 ; Energy Technology Perspectives Volume 2012 ; energy/energy-technology-perspectives-2012 ; energy_tech-2012-en >
+      au < manifest ; 2014 ; Energy Technology Perspectives Volume 2014 ; energy/energy-technology-perspectives-2014 ; energy_tech-2014-en >
+      au < manifest ; 2015 ; Energy Technology Perspectives Volume 2015 ; energy/energy-technology-perspectives-2015 ; energy_tech-2015-en >
+      au < manifest ; 2016 ; Energy Technology Perspectives Volume 2016 ; energy/energy-technology-perspectives-2016 ; energy_tech-2016-en >
+      au < manifest ; 2017 ; Energy Technology Perspectives Volume 2017 ; energy/energy-technology-perspectives-2017 ; energy_tech-2017-en >
+      au < manifest ; 2020 ; Energy Technology Perspectives Volume 2020 ; energy/energy-technology-perspectives-2020 ; d07136f0-en >
 
     }
 
@@ -453,16 +482,15 @@
         issn = 2306-5265
       >
 
-      au < manifest ; 2020 ; Financing SMEs and Entrepreneurs Volume 2020 ; finance-and-investment/financing-smes-and-entrepreneurs-2020 ; 061fe03d-en >
-      au < manifest ; 2019 ; Financing SMEs and Entrepreneurs Volume 2019 ; industry-and-services/financing-smes-and-entrepreneurs-2019 ; fin_sme_ent-2019-en >
-      au < testing ; 2018 ; Financing SMEs and Entrepreneurs Volume 2018 ; industry-and-services/financing-smes-and-entrepreneurs-2018 ; fin_sme_ent-2018-en >
-      au < manifest ; 2017 ; Financing SMEs and Entrepreneurs Volume 2017 ; industry-and-services/financing-smes-and-entrepreneurs-2017 ; fin_sme_ent-2017-en >
-      au < manifest ; 2016 ; Financing SMEs and Entrepreneurs Volume 2016 ; industry-and-services/financing-smes-and-entrepreneurs-2016 ; fin_sme_ent-2016-en >
-      au < manifest ; 2015 ; Financing SMEs and Entrepreneurs Volume 2015 ; industry-and-services/financing-smes-and-entrepreneurs-2015 ; fin_sme_ent-2015-en >
-      au < manifest ; 2014 ; Financing SMEs and Entrepreneurs Volume 2014 ; industry-and-services/financing-smes-and-entrepreneurs-2014 ; fin_sme_ent-2014-en >
-      au < manifest ; 2013 ; Financing SMEs and Entrepreneurs Volume 2013 ; industry-and-services/financing-smes-and-entrepreneurs-2013 ; fin_sme_ent-2013-en >
       au < manifest ; 2012 ; Financing SMEs and Entrepreneurs Volume 2012 ; industry-and-services/financing-smes-and-entrepreneurship ; 9789264166769-en >
-
+      au < manifest ; 2013 ; Financing SMEs and Entrepreneurs Volume 2013 ; industry-and-services/financing-smes-and-entrepreneurs-2013 ; fin_sme_ent-2013-en >
+      au < manifest ; 2014 ; Financing SMEs and Entrepreneurs Volume 2014 ; industry-and-services/financing-smes-and-entrepreneurs-2014 ; fin_sme_ent-2014-en >
+      au < manifest ; 2015 ; Financing SMEs and Entrepreneurs Volume 2015 ; industry-and-services/financing-smes-and-entrepreneurs-2015 ; fin_sme_ent-2015-en >
+      au < manifest ; 2016 ; Financing SMEs and Entrepreneurs Volume 2016 ; industry-and-services/financing-smes-and-entrepreneurs-2016 ; fin_sme_ent-2016-en >
+      au < manifest ; 2017 ; Financing SMEs and Entrepreneurs Volume 2017 ; industry-and-services/financing-smes-and-entrepreneurs-2017 ; fin_sme_ent-2017-en >
+      au < testing ; 2018 ; Financing SMEs and Entrepreneurs Volume 2018 ; industry-and-services/financing-smes-and-entrepreneurs-2018 ; fin_sme_ent-2018-en >
+      au < manifest ; 2019 ; Financing SMEs and Entrepreneurs Volume 2019 ; industry-and-services/financing-smes-and-entrepreneurs-2019 ; fin_sme_ent-2019-en >
+      au < manifest ; 2020 ; Financing SMEs and Entrepreneurs Volume 2020 ; finance-and-investment/financing-smes-and-entrepreneurs-2020 ; 061fe03d-en >
 
     }
 
@@ -473,13 +501,12 @@
         issn = 2790-1564
       >
 
-      au < manifest ; 2021 ; Global EV Outlook Volume 2021 ; energy/global-ev-outlook-2021 ; 3a394362-en >
-      au < manifest ; 2020 ; Global EV Outlook Volume 2020 ; energy/global-ev-outlook-2020 ; d394399e-en >
-      au < manifest ; 2019 ; Global EV Outlook Volume 2019 ; energy/global-ev-outlook-2019 ; 35fb60bd-en >
-      au < manifest ; 2018 ; Global EV Outlook Volume 2018 ; energy/global-ev-outlook-2018 ; 9789264302365-en >
-      au < manifest ; 2017 ; Global EV Outlook Volume 2017 ; energy/global-ev-outlook-2017 ; 9789264278882-en >
       au < manifest ; 2016 ; Global EV Outlook Volume 2016 ; energy/global-ev-outlook-2016 ; 9789264279469-en >
-
+      au < manifest ; 2017 ; Global EV Outlook Volume 2017 ; energy/global-ev-outlook-2017 ; 9789264278882-en >
+      au < manifest ; 2018 ; Global EV Outlook Volume 2018 ; energy/global-ev-outlook-2018 ; 9789264302365-en >
+      au < manifest ; 2019 ; Global EV Outlook Volume 2019 ; energy/global-ev-outlook-2019 ; 35fb60bd-en >
+      au < manifest ; 2020 ; Global EV Outlook Volume 2020 ; energy/global-ev-outlook-2020 ; d394399e-en >
+      au < manifest ; 2021 ; Global EV Outlook Volume 2021 ; energy/global-ev-outlook-2021 ; 3a394362-en >
 
     }
 
@@ -490,14 +517,13 @@
         issn = 2221-4399
       >
 
-      au < manifest ; 2021 ; Government at a Glance Volume 2021 ; governance/government-at-a-glance-2021 ; 1c258f55-en >
-      au < testing ; 2019 ; Government at a Glance Volume 2019 ; governance/government-at-a-glance-2019 ; 8ccf5c38-en >
-      au < manifest ; 2017 ; Government at a Glance Volume 2017 ; governance/government-at-a-glance-2017 ; gov_glance-2017-en >
-      au < manifest ; 2015 ; Government at a Glance Volume 2015 ; governance/government-at-a-glance-2015 ; gov_glance-2015-en >
-      au < manifest ; 2013 ; Government at a Glance Volume 2013 ; governance/government-at-a-glance-2013 ; gov_glance-2013-en >
-      au < manifest ; 2011 ; Government at a Glance Volume 2011 ; governance/government-at-a-glance-2011 ; gov_glance-2011-en >
       au < manifest ; 2009 ; Government at a Glance Volume 2009 ; governance/government-at-a-glance-2009 ; 9789264075061-en >
-
+      au < manifest ; 2011 ; Government at a Glance Volume 2011 ; governance/government-at-a-glance-2011 ; gov_glance-2011-en >
+      au < manifest ; 2013 ; Government at a Glance Volume 2013 ; governance/government-at-a-glance-2013 ; gov_glance-2013-en >
+      au < manifest ; 2015 ; Government at a Glance Volume 2015 ; governance/government-at-a-glance-2015 ; gov_glance-2015-en >
+      au < manifest ; 2017 ; Government at a Glance Volume 2017 ; governance/government-at-a-glance-2017 ; gov_glance-2017-en >
+      au < testing ; 2019 ; Government at a Glance Volume 2019 ; governance/government-at-a-glance-2019 ; 8ccf5c38-en >
+      au < manifest ; 2021 ; Government at a Glance Volume 2021 ; governance/government-at-a-glance-2021 ; 1c258f55-en >
 
     }
 
@@ -508,12 +534,12 @@
         issn = 2305-4964
       >
 
-      au < manifest ; 2020 ; Health at a Glance: Asia/Pacific Volume 2020 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2020 ; 26b007cd-en >
-      au < manifest ; 2018 ; Health at a Glance: Asia/Pacific Volume 2018 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2018 ; health_glance_ap-2018-en >
-      au < manifest ; 2016 ; Health at a Glance: Asia/Pacific Volume 2016 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2016 ; health_glance_ap-2016-en >
-      au < manifest ; 2014 ; Health at a Glance: Asia/Pacific Volume 2014 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2014 ; health_glance_ap-2014-en >
-      au < manifest ; 2012 ; Health at a Glance: Asia/Pacific Volume 2012 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2012 ; 9789264183902-en >
       au < manifest ; 2010 ; Health at a Glance: Asia/Pacific Volume 2010 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2010 ; 9789264096202-en >
+      au < manifest ; 2012 ; Health at a Glance: Asia/Pacific Volume 2012 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2012 ; 9789264183902-en >
+      au < manifest ; 2014 ; Health at a Glance: Asia/Pacific Volume 2014 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2014 ; health_glance_ap-2014-en >
+      au < manifest ; 2016 ; Health at a Glance: Asia/Pacific Volume 2016 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2016 ; health_glance_ap-2016-en >
+      au < manifest ; 2018 ; Health at a Glance: Asia/Pacific Volume 2018 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2018 ; health_glance_ap-2018-en >
+      au < manifest ; 2020 ; Health at a Glance: Asia/Pacific Volume 2020 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2020 ; 26b007cd-en >
 
 
     }
@@ -526,31 +552,30 @@
         issn = 1999-124X
       >
 
-      au < manifest ; 2021 ; International Migration Outlook Volume 2021 ; social-issues-migration-health/international-migration-outlook-2021 ; 29f23e9d-en >
-      au < manifest ; 2020 ; International Migration Outlook Volume 2020 ; social-issues-migration-health/international-migration-outlook-2020 ; ec98f531-en >
-      au < testing ; 2019 ; International Migration Outlook Volume 2019 ; social-issues-migration-health/international-migration-outlook-2019 ; c3e35eec-en >
-      au < manifest ; 2018 ; International Migration Outlook Volume 2018 ; social-issues-migration-health/international-migration-outlook-2018 ; migr_outlook-2018-en >
-      au < manifest ; 2017 ; International Migration Outlook Volume 2017 ; social-issues-migration-health/international-migration-outlook-2017 ; migr_outlook-2017-en >
-      au < manifest ; 2016 ; International Migration Outlook Volume 2016 ; social-issues-migration-health/international-migration-outlook-2016 ; migr_outlook-2016-en >
-      au < manifest ; 2015 ; International Migration Outlook Volume 2015 ; social-issues-migration-health/international-migration-outlook-2015 ; migr_outlook-2015-en >
-      au < manifest ; 2014 ; International Migration Outlook Volume 2014 ; social-issues-migration-health/international-migration-outlook-2014 ; migr_outlook-2014-en >
-      au < manifest ; 2013 ; International Migration Outlook Volume 2013 ; social-issues-migration-health/international-migration-outlook-2013 ; migr_outlook-2013-en >
-      au < manifest ; 2012 ; International Migration Outlook Volume 2012 ; social-issues-migration-health/international-migration-outlook-2012 ; migr_outlook-2012-en >
-      au < manifest ; 2011 ; International Migration Outlook Volume 2011 ; social-issues-migration-health/international-migration-outlook-2011 ; migr_outlook-2011-en >
-      au < manifest ; 2010 ; International Migration Outlook Volume 2010 ; social-issues-migration-health/international-migration-outlook-2010 ; migr_outlook-2010-en >
-      au < manifest ; 2009 ; International Migration Outlook Volume 2009 ; social-issues-migration-health/international-migration-outlook-2009 ; migr_outlook-2009-en >
-      au < manifest ; 2008 ; International Migration Outlook Volume 2008 ; social-issues-migration-health/international-migration-outlook-2008 ; migr_outlook-2008-en >
-      au < manifest ; 2007 ; International Migration Outlook Volume 2007 ; social-issues-migration-health/international-migration-outlook-2007 ; migr_outlook-2007-en >
-      au < manifest ; 2006 ; International Migration Outlook Volume 2006 ; social-issues-migration-health/international-migration-outlook-2006 ; migr_outlook-2006-en >
-      au < testing ; 2004 ; International Migration Outlook Volume 2004 ; social-issues-migration-health/trends-in-international-migration-2004 ; migr_outlook-2004-en >
-      au < manifest ; 2003 ; International Migration Outlook Volume 2003 ; social-issues-migration-health/trends-in-international-migration-2003 ; migr_outlook-2003-en >
-      au < manifest ; 2002 ; International Migration Outlook Volume 2002 ; social-issues-migration-health/trends-in-international-migration-2002 ; migr_outlook-2002-en >
-      au < manifest ; 2001 ; International Migration Outlook Volume 2001 ; social-issues-migration-health/trends-in-international-migration-2001 ; migr_outlook-2001-en >
-      au < manifest ; 2000 ; International Migration Outlook Volume 2000 ; social-issues-migration-health/trends-in-international-migration-2000 ; migr_outlook-2000-en >
-      au < manifest ; 1999 ; International Migration Outlook Volume 1999 ; social-issues-migration-health/trends-in-international-migration-1999 ; migr_outlook-1999-en >
-      au < manifest ; 1998 ; International Migration Outlook Volume 1998 ; social-issues-migration-health/trends-in-international-migration-1998 ; migr_outlook-1998-en >
       au < manifest ; 1997 ; International Migration Outlook Volume 1997 ; social-issues-migration-health/trends-in-international-migration-1997 ; migr_outlook-1997-en >
-
+      au < manifest ; 1998 ; International Migration Outlook Volume 1998 ; social-issues-migration-health/trends-in-international-migration-1998 ; migr_outlook-1998-en >
+      au < manifest ; 1999 ; International Migration Outlook Volume 1999 ; social-issues-migration-health/trends-in-international-migration-1999 ; migr_outlook-1999-en >
+      au < manifest ; 2000 ; International Migration Outlook Volume 2000 ; social-issues-migration-health/trends-in-international-migration-2000 ; migr_outlook-2000-en >
+      au < manifest ; 2001 ; International Migration Outlook Volume 2001 ; social-issues-migration-health/trends-in-international-migration-2001 ; migr_outlook-2001-en >
+      au < manifest ; 2002 ; International Migration Outlook Volume 2002 ; social-issues-migration-health/trends-in-international-migration-2002 ; migr_outlook-2002-en >
+      au < manifest ; 2003 ; International Migration Outlook Volume 2003 ; social-issues-migration-health/trends-in-international-migration-2003 ; migr_outlook-2003-en >
+      au < testing ; 2004 ; International Migration Outlook Volume 2004 ; social-issues-migration-health/trends-in-international-migration-2004 ; migr_outlook-2004-en >
+      au < manifest ; 2006 ; International Migration Outlook Volume 2006 ; social-issues-migration-health/international-migration-outlook-2006 ; migr_outlook-2006-en >
+      au < manifest ; 2007 ; International Migration Outlook Volume 2007 ; social-issues-migration-health/international-migration-outlook-2007 ; migr_outlook-2007-en >
+      au < manifest ; 2008 ; International Migration Outlook Volume 2008 ; social-issues-migration-health/international-migration-outlook-2008 ; migr_outlook-2008-en >
+      au < manifest ; 2009 ; International Migration Outlook Volume 2009 ; social-issues-migration-health/international-migration-outlook-2009 ; migr_outlook-2009-en >
+      au < manifest ; 2010 ; International Migration Outlook Volume 2010 ; social-issues-migration-health/international-migration-outlook-2010 ; migr_outlook-2010-en >
+      au < manifest ; 2011 ; International Migration Outlook Volume 2011 ; social-issues-migration-health/international-migration-outlook-2011 ; migr_outlook-2011-en >
+      au < manifest ; 2012 ; International Migration Outlook Volume 2012 ; social-issues-migration-health/international-migration-outlook-2012 ; migr_outlook-2012-en >
+      au < manifest ; 2013 ; International Migration Outlook Volume 2013 ; social-issues-migration-health/international-migration-outlook-2013 ; migr_outlook-2013-en >
+      au < manifest ; 2014 ; International Migration Outlook Volume 2014 ; social-issues-migration-health/international-migration-outlook-2014 ; migr_outlook-2014-en >
+      au < manifest ; 2015 ; International Migration Outlook Volume 2015 ; social-issues-migration-health/international-migration-outlook-2015 ; migr_outlook-2015-en >
+      au < manifest ; 2016 ; International Migration Outlook Volume 2016 ; social-issues-migration-health/international-migration-outlook-2016 ; migr_outlook-2016-en >
+      au < manifest ; 2017 ; International Migration Outlook Volume 2017 ; social-issues-migration-health/international-migration-outlook-2017 ; migr_outlook-2017-en >
+      au < manifest ; 2018 ; International Migration Outlook Volume 2018 ; social-issues-migration-health/international-migration-outlook-2018 ; migr_outlook-2018-en >
+      au < testing ; 2019 ; International Migration Outlook Volume 2019 ; social-issues-migration-health/international-migration-outlook-2019 ; c3e35eec-en >
+      au < manifest ; 2020 ; International Migration Outlook Volume 2020 ; social-issues-migration-health/international-migration-outlook-2020 ; ec98f531-en >
+      au < manifest ; 2021 ; International Migration Outlook Volume 2021 ; social-issues-migration-health/international-migration-outlook-2021 ; 29f23e9d-en >
 
     }
 
@@ -561,12 +586,11 @@
         issn = 2520-2367
       >
 
-      au < manifest ; 2021 ; ITF Transport Outlook Volume 2021 ; transport/itf-transport-outlook-2021 ; 16826a30-en >
-      au < manifest ; 2019 ; ITF Transport Outlook Volume 2019 ; transport/itf-transport-outlook-2019 ; transp_outlook-en-2019-en >
-      au < manifest ; 2017 ; ITF Transport Outlook Volume 2017 ; transport/itf-transport-outlook-2017 ; 9789282108000-en >
-      au < manifest ; 2015 ; ITF Transport Outlook Volume 2015 ; transport/itf-transport-outlook-2015 ; 9789282107782-en >
       au < manifest ; 2013 ; ITF Transport Outlook Volume 2013 ; transport/itf-transport-outlook-2013 ; 9789282103937-en >
-
+      au < manifest ; 2015 ; ITF Transport Outlook Volume 2015 ; transport/itf-transport-outlook-2015 ; 9789282107782-en >
+      au < manifest ; 2017 ; ITF Transport Outlook Volume 2017 ; transport/itf-transport-outlook-2017 ; 9789282108000-en >
+      au < manifest ; 2019 ; ITF Transport Outlook Volume 2019 ; transport/itf-transport-outlook-2019 ; transp_outlook-en-2019-en >
+      au < manifest ; 2021 ; ITF Transport Outlook Volume 2021 ; transport/itf-transport-outlook-2021 ; 16826a30-en >
 
     }
 
@@ -577,10 +601,10 @@
         issn = 2617-4979
       >
 
-      au < manifest ; 2020 ; Job Creation and Local Economic Development Volume 2020 ; employment/job-creation-and-local-economic-development-2020 ; b02b2f39-en >
-      au < testing ; 2018 ; Job Creation and Local Economic Development Volume 2018 ; employment/job-creation-and-local-economic-development-2018 ; 9789264305342-en >
-      au < manifest ; 2016 ; Job Creation and Local Economic Development Volume 2016 ; employment/job-creation-and-local-economic-development-2016 ; 9789264261976-en >
       au < manifest ; 2014 ; Job Creation and Local Economic Development Volume 2014 ; industry-and-services/job-creation-and-local-economic-development ; 9789264215009-en >
+      au < manifest ; 2016 ; Job Creation and Local Economic Development Volume 2016 ; employment/job-creation-and-local-economic-development-2016 ; 9789264261976-en >
+      au < testing ; 2018 ; Job Creation and Local Economic Development Volume 2018 ; employment/job-creation-and-local-economic-development-2018 ; 9789264305342-en >
+      au < manifest ; 2020 ; Job Creation and Local Economic Development Volume 2020 ; employment/job-creation-and-local-economic-development-2020 ; b02b2f39-en >
 
 
     }
@@ -592,21 +616,20 @@
         issn = 2072-5140
       >
 
-      au < manifest ; 2021 ; Latin American Economic Outlook Volume 2021 ; development/latin-american-economic-outlook-2021 ; 5fedabe5-en >
-      au < manifest ; 2020 ; Latin American Economic Outlook Volume 2020 ; development/latin-american-economic-outlook-2020 ; e6e864fb-en >
-      au < manifest ; 2019 ; Latin American Economic Outlook Volume 2019 ; development/latin-american-economic-outlook-2019 ; g2g9ff18-en >
-      au < manifest ; 2018 ; Latin American Economic Outlook Volume 2018 ; development/latin-american-economic-outlook-2018 ; leo-2018-en >
-      au < manifest ; 2017 ; Latin American Economic Outlook Volume 2017 ; development/latin-american-economic-outlook-2017 ; leo-2017-en >
-      au < manifest ; 2016 ; Latin American Economic Outlook Volume 2016 ; development/latin-american-economic-outlook-2016 ; 9789264246218-en >
-      au < manifest ; 2015 ; Latin American Economic Outlook Volume 2015 ; development/latin-american-economic-outlook-2015 ; leo-2015-en >
-      au < manifest ; 2014 ; Latin American Economic Outlook Volume 2014 ; development/latin-american-economic-outlook-2014 ; leo-2014-en >
-      au < manifest ; 2013 ; Latin American Economic Outlook Volume 2013 ; development/latin-american-economic-outlook-2013 ; leo-2013-en >
-      au < manifest ; 2012 ; Latin American Economic Outlook Volume 2012 ; development/latin-american-economic-outlook-2012 ; leo-2011-en >
-      au < manifest ; 2011 ; Latin American Economic Outlook Volume 2011 ; development/latin-american-economic-outlook-2011 ; leo-2011-en >
-      au < testing ; 2010 ; Latin American Economic Outlook Volume 2010 ; development/latin-american-economic-outlook-2010 ; leo-2010-en >
-      au < manifest ; 2009 ; Latin American Economic Outlook Volume 2009 ; development/latin-american-economic-outlook-2009 ; leo-2009-en >
       au < manifest ; 2008 ; Latin American Economic Outlook Volume 2008 ; development/latin-american-economic-outlook-2008 ; leo-2008-en >
-
+      au < manifest ; 2009 ; Latin American Economic Outlook Volume 2009 ; development/latin-american-economic-outlook-2009 ; leo-2009-en >
+      au < testing ; 2010 ; Latin American Economic Outlook Volume 2010 ; development/latin-american-economic-outlook-2010 ; leo-2010-en >
+      au < manifest ; 2011 ; Latin American Economic Outlook Volume 2011 ; development/latin-american-economic-outlook-2011 ; leo-2011-en >
+      au < manifest ; 2012 ; Latin American Economic Outlook Volume 2012 ; development/latin-american-economic-outlook-2012 ; leo-2011-en >
+      au < manifest ; 2013 ; Latin American Economic Outlook Volume 2013 ; development/latin-american-economic-outlook-2013 ; leo-2013-en >
+      au < manifest ; 2014 ; Latin American Economic Outlook Volume 2014 ; development/latin-american-economic-outlook-2014 ; leo-2014-en >
+      au < manifest ; 2015 ; Latin American Economic Outlook Volume 2015 ; development/latin-american-economic-outlook-2015 ; leo-2015-en >
+      au < manifest ; 2016 ; Latin American Economic Outlook Volume 2016 ; development/latin-american-economic-outlook-2016 ; 9789264246218-en >
+      au < manifest ; 2017 ; Latin American Economic Outlook Volume 2017 ; development/latin-american-economic-outlook-2017 ; leo-2017-en >
+      au < manifest ; 2018 ; Latin American Economic Outlook Volume 2018 ; development/latin-american-economic-outlook-2018 ; leo-2018-en >
+      au < manifest ; 2019 ; Latin American Economic Outlook Volume 2019 ; development/latin-american-economic-outlook-2019 ; g2g9ff18-en >
+      au < manifest ; 2020 ; Latin American Economic Outlook Volume 2020 ; development/latin-american-economic-outlook-2020 ; e6e864fb-en >
+      au < manifest ; 2021 ; Latin American Economic Outlook Volume 2021 ; development/latin-american-economic-outlook-2021 ; 5fedabe5-en >
 
     }
 
@@ -617,18 +640,17 @@
         issn = 2520-2723
       >
 
-      au < manifest ; 2021 ; Market Report Series: Coal Volume 2021 ; energy/coal-2021 ; ba0095c1-en >
-      au < manifest ; 2020 ; Market Report Series: Coal Volume 2020 ; energy/coal-2020 ; ece0656a-en >
-      au < manifest ; 2019 ; Market Report Series: Coal Volume 2019 ; energy/coal-2019 ; c775e820-en >
-      au < manifest ; 2018 ; Market Report Series: Coal Volume 2018 ; energy/coal-2018 ; coal_mar-2018-en >
-      au < manifest ; 2017 ; Market Report Series: Coal Volume 2017 ; energy/market-report-series-coal-2017 ; coal_mar-2017-en >
-      au < manifest ; 2016 ; Market Report Series: Coal Volume 2016 ; energy/medium-term-coal-market-report-2016 ; mtrcoal-2016-en >
-      au < manifest ; 2015 ; Market Report Series: Coal Volume 2015 ; energy/medium-term-coal-market-report-2015 ; mtrcoal-2015-en >
-      au < manifest ; 2014 ; Market Report Series: Coal Volume 2014 ; energy/medium-term-coal-market-report-2014 ; mtrcoal-2014-en >
-      au < manifest ; 2013 ; Market Report Series: Coal Volume 2013 ; energy/medium-term-coal-market-report-2013 ; mtrcoal-2013-en >
-      au < manifest ; 2012 ; Market Report Series: Coal Volume 2012 ; energy/medium-term-coal-market-report-2012 ; 9789264177963-en >
       au < manifest ; 2011 ; Market Report Series: Coal Volume 2011 ; energy/medium-term-coal-market-report-2011 ; 9789264167681-en >
-
+      au < manifest ; 2012 ; Market Report Series: Coal Volume 2012 ; energy/medium-term-coal-market-report-2012 ; 9789264177963-en >
+      au < manifest ; 2013 ; Market Report Series: Coal Volume 2013 ; energy/medium-term-coal-market-report-2013 ; mtrcoal-2013-en >
+      au < manifest ; 2014 ; Market Report Series: Coal Volume 2014 ; energy/medium-term-coal-market-report-2014 ; mtrcoal-2014-en >
+      au < manifest ; 2015 ; Market Report Series: Coal Volume 2015 ; energy/medium-term-coal-market-report-2015 ; mtrcoal-2015-en >
+      au < manifest ; 2016 ; Market Report Series: Coal Volume 2016 ; energy/medium-term-coal-market-report-2016 ; mtrcoal-2016-en >
+      au < manifest ; 2017 ; Market Report Series: Coal Volume 2017 ; energy/market-report-series-coal-2017 ; coal_mar-2017-en >
+      au < manifest ; 2018 ; Market Report Series: Coal Volume 2018 ; energy/coal-2018 ; coal_mar-2018-en >
+      au < manifest ; 2019 ; Market Report Series: Coal Volume 2019 ; energy/coal-2019 ; c775e820-en >
+      au < manifest ; 2020 ; Market Report Series: Coal Volume 2020 ; energy/coal-2020 ; ece0656a-en >
+      au < manifest ; 2021 ; Market Report Series: Coal Volume 2021 ; energy/coal-2021 ; ba0095c1-en >
 
     }
 
@@ -639,16 +661,15 @@
         issn = 2520-2707
       >
 
-      au < testing ; 2020 ; Market Report Series: Oil Volume 2020 ; energy/oil-2020 ; cf9397c0-en >
-      au < manifest ; 2019 ; Market Report Series: Oil Volume 2019 ; energy/oil-2019 ; oil_mar-2019-en >
-      au < manifest ; 2018 ; Market Report Series: Oil Volume 2018 ; energy/oil-2018 ; oil_mar-2018-en >
-      au < manifest ; 2017 ; Market Report Series: Oil Volume 2017 ; energy/oil-market-report-2017 ; 9789264272514-en >
-      au < manifest ; 2016 ; Market Report Series: Oil Volume 2016 ; energy/medium-term-oil-market-report-2016 ; oilmar-2016-en >
-      au < manifest ; 2015 ; Market Report Series: Oil Volume 2015 ; energy/medium-term-oil-market-report-2015 ; oilmar-2015-en >
-      au < manifest ; 2014 ; Market Report Series: Oil Volume 2014 ; energy/medium-term-oil-market-report-2014 ; 9789264211728-en >
-      au < manifest ; 2013 ; Market Report Series: Oil Volume 2013 ; energy/medium-term-oil-market-report-2013 ; 9789264191709-en >
       au < manifest ; 2012 ; Market Report Series: Oil Volume 2012 ; energy/medium-term-oil-market-report-2012 ; 9789264188471-en >
-
+      au < manifest ; 2013 ; Market Report Series: Oil Volume 2013 ; energy/medium-term-oil-market-report-2013 ; 9789264191709-en >
+      au < manifest ; 2014 ; Market Report Series: Oil Volume 2014 ; energy/medium-term-oil-market-report-2014 ; 9789264211728-en >
+      au < manifest ; 2015 ; Market Report Series: Oil Volume 2015 ; energy/medium-term-oil-market-report-2015 ; oilmar-2015-en >
+      au < manifest ; 2016 ; Market Report Series: Oil Volume 2016 ; energy/medium-term-oil-market-report-2016 ; oilmar-2016-en >
+      au < manifest ; 2017 ; Market Report Series: Oil Volume 2017 ; energy/oil-market-report-2017 ; 9789264272514-en >
+      au < manifest ; 2018 ; Market Report Series: Oil Volume 2018 ; energy/oil-2018 ; oil_mar-2018-en >
+      au < manifest ; 2019 ; Market Report Series: Oil Volume 2019 ; energy/oil-2019 ; oil_mar-2019-en >
+      au < testing ; 2020 ; Market Report Series: Oil Volume 2020 ; energy/oil-2020 ; cf9397c0-en >
 
     }
 
@@ -659,17 +680,16 @@
         issn = 2520-2774
       >
 
-      au < manifest ; 2021 ; Market Report Series: Renewables Volume 2021 ; energy/renewables-2021 ; 6dcd2e15-en >
-      au < manifest ; 2020 ; Market Report Series: Renewables Volume 2020 ; energy/renewables-2020 ; c74616c1-en >
-      au < manifest ; 2019 ; Market Report Series: Renewables Volume 2019 ; energy/renewables-2019 ; b3911209-en >
-      au < manifest ; 2018 ; Market Report Series: Renewables Volume 2018 ; energy/renewables-2018 ; re_mar-2018-en >
-      au < manifest ; 2017 ; Market Report Series: Renewables Volume 2017 ; energy/renewables-2017 ; re_mar-2017-en >
+      au < manifest ; 2012 ; Market Report Series: Renewables Volume 2012 ; energy/medium-term-renewable-energy-market-report-2012 ; 9789264178007-en >
+      au < manifest ; 2013 ; Market Report Series: Renewables Volume 2013 ; energy/medium-term-renewable-energy-market-report-2013 ; 9789264191198-en >
+      au < manifest ; 2014 ; Market Report Series: Renewables Volume 2014 ; energy/medium-term-renewable-energy-market-report-2014 ; renewmar-2014-en >
       au < testing ; 2016 ; Market Report Series: Renewables Volume 2016 ; energy/medium-term-renewable-energy-market-report-2016 ; renewmar-2016-en >
       au < manifest ; 2015 ; Market Report Series: Renewables Volume 2015 ; energy/medium-term-renewable-energy-market-report-2015 ; renewmar-2015-en >
-      au < manifest ; 2014 ; Market Report Series: Renewables Volume 2014 ; energy/medium-term-renewable-energy-market-report-2014 ; renewmar-2014-en >
-      au < manifest ; 2013 ; Market Report Series: Renewables Volume 2013 ; energy/medium-term-renewable-energy-market-report-2013 ; 9789264191198-en >
-      au < manifest ; 2012 ; Market Report Series: Renewables Volume 2012 ; energy/medium-term-renewable-energy-market-report-2012 ; 9789264178007-en >
-
+      au < manifest ; 2017 ; Market Report Series: Renewables Volume 2017 ; energy/renewables-2017 ; re_mar-2017-en >
+      au < manifest ; 2018 ; Market Report Series: Renewables Volume 2018 ; energy/renewables-2018 ; re_mar-2018-en >
+      au < manifest ; 2019 ; Market Report Series: Renewables Volume 2019 ; energy/renewables-2019 ; b3911209-en >
+      au < manifest ; 2020 ; Market Report Series: Renewables Volume 2020 ; energy/renewables-2020 ; c74616c1-en >
+      au < manifest ; 2021 ; Market Report Series: Renewables Volume 2021 ; energy/renewables-2021 ; 6dcd2e15-en >
 
     }
 
@@ -680,11 +700,10 @@
         issn = 2664-0260
       >
 
-      au < manifest ; 2017 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2017 ; taxation/model-tax-convention-on-income-and-on-capital-2017-full-version ; g2g972ee-en >
-      au < manifest ; 2014 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2014 ; taxation/model-tax-convention-on-income-and-on-capital-2015-full-version ; 9789264239081-en >
-      au < manifest ; 2010 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2010 ; taxation/model-tax-convention-on-income-and-on-capital-2010 ; 9789264175181-en >
       au < manifest ; 2000 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2000 ; taxation/model-tax-convention-on-income-and-on-capital ; 9789264189409-en >
-
+      au < manifest ; 2010 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2010 ; taxation/model-tax-convention-on-income-and-on-capital-2010 ; 9789264175181-en >
+      au < manifest ; 2014 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2014 ; taxation/model-tax-convention-on-income-and-on-capital-2015-full-version ; 9789264239081-en >
+      au < manifest ; 2017 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2017 ; taxation/model-tax-convention-on-income-and-on-capital-2017-full-version ; g2g972ee-en >
 
     }
 
@@ -695,16 +714,15 @@
         issn = 2074-5419
       >
 
-      au < manifest ; 2017 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2017 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2017 ; mtc_cond-2017-en >
-      au < manifest ; 2014 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2014 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2014 ; mtc_cond-2014-en >
-      au < manifest ; 2010 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2010 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2010 ; mtc_cond-2010-en >
-      au < manifest ; 2008 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2008 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2008 ; mtc_cond-2008-en >
-      au < manifest ; 2005 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2005 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2005 ; mtc_cond-2005-en >
-      au < testing ; 2003 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2003 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2003 ; mtc_cond-2003-en >
-      au < manifest ; 2000 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2000 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2000 ; mtc_cond-2000-en >
-      au < manifest ; 1998 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 1998 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-1998 ; mtc_cond-1998-en >
       au < manifest ; 1992 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 1992 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-september-1992 ; mtc_cond-1992-en >
-
+      au < manifest ; 1998 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 1998 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-1998 ; mtc_cond-1998-en >
+      au < manifest ; 2000 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2000 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2000 ; mtc_cond-2000-en >
+      au < testing ; 2003 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2003 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2003 ; mtc_cond-2003-en >
+      au < manifest ; 2005 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2005 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2005 ; mtc_cond-2005-en >
+      au < manifest ; 2008 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2008 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2008 ; mtc_cond-2008-en >
+      au < manifest ; 2010 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2010 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2010 ; mtc_cond-2010-en >
+      au < manifest ; 2014 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2014 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2014 ; mtc_cond-2014-en >
+      au < manifest ; 2017 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 2017 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-2017 ; mtc_cond-2017-en >
 
     }
 
@@ -715,14 +733,13 @@
         issn = 2617-2577
       >
 
-      au < manifest ; 2021 ; OECD Business and Finance Outlook Volume 2021 ; finance-and-investment/oecd-business-and-finance-outlook-2021 ; ba682899-en >
-      au < manifest ; 2020 ; OECD Business and Finance Outlook Volume 2020 ; finance-and-investment/oecd-business-and-finance-outlook-2020 ; eb61fd29-en >
-      au < manifest ; 2019 ; OECD Business and Finance Outlook Volume 2019 ; finance-and-investment/oecd-business-and-finance-outlook-2019 ; af784794-en >
-      au < manifest ; 2018 ; OECD Business and Finance Outlook Volume 2018 ; finance-and-investment/oecd-business-and-finance-outlook-2018 ; 9789264298828-en >
-      au < manifest ; 2017 ; OECD Business and Finance Outlook Volume 2017 ; finance-and-investment/oecd-business-and-finance-outlook-2017 ; 9789264274891-en >
-      au < manifest ; 2016 ; OECD Business and Finance Outlook Volume 2016 ; finance-and-investment/oecd-business-and-finance-outlook-2016 ; 9789264257573-en >
       au < manifest ; 2015 ; OECD Business and Finance Outlook Volume 2015 ; finance-and-investment/oecd-business-and-finance-outlook-2015 ; 9789264234291-en >
-
+      au < manifest ; 2016 ; OECD Business and Finance Outlook Volume 2016 ; finance-and-investment/oecd-business-and-finance-outlook-2016 ; 9789264257573-en >
+      au < manifest ; 2017 ; OECD Business and Finance Outlook Volume 2017 ; finance-and-investment/oecd-business-and-finance-outlook-2017 ; 9789264274891-en >
+      au < manifest ; 2018 ; OECD Business and Finance Outlook Volume 2018 ; finance-and-investment/oecd-business-and-finance-outlook-2018 ; 9789264298828-en >
+      au < manifest ; 2019 ; OECD Business and Finance Outlook Volume 2019 ; finance-and-investment/oecd-business-and-finance-outlook-2019 ; af784794-en >
+      au < manifest ; 2020 ; OECD Business and Finance Outlook Volume 2020 ; finance-and-investment/oecd-business-and-finance-outlook-2020 ; eb61fd29-en >
+      au < manifest ; 2021 ; OECD Business and Finance Outlook Volume 2021 ; finance-and-investment/oecd-business-and-finance-outlook-2021 ; ba682899-en >
 
     }
 
@@ -735,7 +752,6 @@
 
       au < manifest ; 2021 ; OECD Digital Education Outlook Volume 2021 ; education/oecd-digital-education-outlook-2021 ; 589b283f-en >
 
-
     }
 
     {
@@ -745,33 +761,32 @@
         issn = 1999-1266
       >
 
-      au < manifest ; 2021 ; OECD Employment Outlook Volume 2021 ; employment/oecd-employment-outlook-2021 ; 5a700c4b-en >
-      au < manifest ; 2020 ; OECD Employment Outlook Volume 2020 ; employment/oecd-employment-outlook-2020 ; 1686c758-en >
-      au < testing ; 2019 ; OECD Employment Outlook Volume 2019 ; employment/oecd-employment-outlook-2019 ; 9ee00155-en >
-      au < manifest ; 2018 ; OECD Employment Outlook Volume 2018 ; employment/oecd-employment-outlook-2018 ; empl_outlook-2018-en >
-      au < manifest ; 2017 ; OECD Employment Outlook Volume 2017 ; employment/oecd-employment-outlook-2017 ; empl_outlook-2017-en >
-      au < manifest ; 2016 ; OECD Employment Outlook Volume 2016 ; employment/oecd-employment-outlook-2016 ; empl_outlook-2016-en >
-      au < manifest ; 2015 ; OECD Employment Outlook Volume 2015 ; employment/oecd-employment-outlook-2015 ; empl_outlook-2015-en >
-      au < manifest ; 2014 ; OECD Employment Outlook Volume 2014 ; employment/oecd-employment-outlook-2014 ; empl_outlook-2014-en >
-      au < manifest ; 2013 ; OECD Employment Outlook Volume 2013 ; employment/oecd-employment-outlook-2013 ; empl_outlook-2013-en >
-      au < manifest ; 2012 ; OECD Employment Outlook Volume 2012 ; employment/oecd-employment-outlook-2012 ; empl_outlook-2012-en >
-      au < manifest ; 2011 ; OECD Employment Outlook Volume 2011 ; employment/oecd-employment-outlook-2011 ; empl_outlook-2011-en >
-      au < manifest ; 2010 ; OECD Employment Outlook Volume 2010 ; employment/oecd-employment-outlook-2010 ; empl_outlook-2010-en >
-      au < manifest ; 2009 ; OECD Employment Outlook Volume 2009 ; employment/oecd-employment-outlook-2009 ; empl_outlook-2009-en >
-      au < manifest ; 2008 ; OECD Employment Outlook Volume 2008 ; employment/oecd-employment-outlook-2008 ; empl_outlook-2008-en >
-      au < manifest ; 2007 ; OECD Employment Outlook Volume 2007 ; employment/oecd-employment-outlook-2007 ; empl_outlook-2007-en >
-      au < manifest ; 2006 ; OECD Employment Outlook Volume 2006 ; employment/oecd-employment-outlook-2006 ; empl_outlook-2006-en >
-      au < testing ; 2005 ; OECD Employment Outlook Volume 2005 ; employment/oecd-employment-outlook-2005 ; empl_outlook-2005-en >
-      au < manifest ; 2004 ; OECD Employment Outlook Volume 2004 ; employment/oecd-employment-outlook-2004 ; empl_outlook-2004-en >
-      au < manifest ; 2003 ; OECD Employment Outlook Volume 2003 ; social-issues-migration-health/oecd-employment-outlook-2003 ; empl_outlook-2003-en >
-      au < manifest ; 2002 ; OECD Employment Outlook Volume 2002 ; social-issues-migration-health/oecd-employment-outlook-2002 ; empl_outlook-2002-en >
-      au < manifest ; 2001 ; OECD Employment Outlook Volume 2001 ; social-issues-migration-health/oecd-employment-outlook-2001 ; empl_outlook-2001-en >
-      au < manifest ; 2000 ; OECD Employment Outlook Volume 2000 ; social-issues-migration-health/oecd-employment-outlook-2000 ; empl_outlook-2000-en >
-      au < manifest ; 1999 ; OECD Employment Outlook Volume 1999 ; employment/oecd-employment-outlook-1999 ; empl_outlook-1999-en >
-      au < manifest ; 1998 ; OECD Employment Outlook Volume 1998 ; employment/oecd-employment-outlook-1998 ; empl_outlook-1998-en >
-      au < manifest ; 1997 ; OECD Employment Outlook Volume 1997 ; social-issues-migration-health/oecd-employment-outlook-1997 ; empl_outlook-1997-en >
       au < manifest ; 1996 ; OECD Employment Outlook Volume 1996 ; social-issues-migration-health/oecd-employment-outlook-1996 ; empl_outlook-1996-en >
-
+      au < manifest ; 1997 ; OECD Employment Outlook Volume 1997 ; social-issues-migration-health/oecd-employment-outlook-1997 ; empl_outlook-1997-en >
+      au < manifest ; 1998 ; OECD Employment Outlook Volume 1998 ; employment/oecd-employment-outlook-1998 ; empl_outlook-1998-en >
+      au < manifest ; 1999 ; OECD Employment Outlook Volume 1999 ; employment/oecd-employment-outlook-1999 ; empl_outlook-1999-en >
+      au < manifest ; 2000 ; OECD Employment Outlook Volume 2000 ; social-issues-migration-health/oecd-employment-outlook-2000 ; empl_outlook-2000-en >
+      au < manifest ; 2001 ; OECD Employment Outlook Volume 2001 ; social-issues-migration-health/oecd-employment-outlook-2001 ; empl_outlook-2001-en >
+      au < manifest ; 2002 ; OECD Employment Outlook Volume 2002 ; social-issues-migration-health/oecd-employment-outlook-2002 ; empl_outlook-2002-en >
+      au < manifest ; 2003 ; OECD Employment Outlook Volume 2003 ; social-issues-migration-health/oecd-employment-outlook-2003 ; empl_outlook-2003-en >
+      au < manifest ; 2004 ; OECD Employment Outlook Volume 2004 ; employment/oecd-employment-outlook-2004 ; empl_outlook-2004-en >
+      au < testing ; 2005 ; OECD Employment Outlook Volume 2005 ; employment/oecd-employment-outlook-2005 ; empl_outlook-2005-en >
+      au < manifest ; 2006 ; OECD Employment Outlook Volume 2006 ; employment/oecd-employment-outlook-2006 ; empl_outlook-2006-en >
+      au < manifest ; 2007 ; OECD Employment Outlook Volume 2007 ; employment/oecd-employment-outlook-2007 ; empl_outlook-2007-en >
+      au < manifest ; 2008 ; OECD Employment Outlook Volume 2008 ; employment/oecd-employment-outlook-2008 ; empl_outlook-2008-en >
+      au < manifest ; 2009 ; OECD Employment Outlook Volume 2009 ; employment/oecd-employment-outlook-2009 ; empl_outlook-2009-en >
+      au < manifest ; 2010 ; OECD Employment Outlook Volume 2010 ; employment/oecd-employment-outlook-2010 ; empl_outlook-2010-en >
+      au < manifest ; 2011 ; OECD Employment Outlook Volume 2011 ; employment/oecd-employment-outlook-2011 ; empl_outlook-2011-en >
+      au < manifest ; 2012 ; OECD Employment Outlook Volume 2012 ; employment/oecd-employment-outlook-2012 ; empl_outlook-2012-en >
+      au < manifest ; 2013 ; OECD Employment Outlook Volume 2013 ; employment/oecd-employment-outlook-2013 ; empl_outlook-2013-en >
+      au < manifest ; 2014 ; OECD Employment Outlook Volume 2014 ; employment/oecd-employment-outlook-2014 ; empl_outlook-2014-en >
+      au < manifest ; 2015 ; OECD Employment Outlook Volume 2015 ; employment/oecd-employment-outlook-2015 ; empl_outlook-2015-en >
+      au < manifest ; 2016 ; OECD Employment Outlook Volume 2016 ; employment/oecd-employment-outlook-2016 ; empl_outlook-2016-en >
+      au < manifest ; 2017 ; OECD Employment Outlook Volume 2017 ; employment/oecd-employment-outlook-2017 ; empl_outlook-2017-en >
+      au < manifest ; 2018 ; OECD Employment Outlook Volume 2018 ; employment/oecd-employment-outlook-2018 ; empl_outlook-2018-en >
+      au < testing ; 2019 ; OECD Employment Outlook Volume 2019 ; employment/oecd-employment-outlook-2019 ; 9ee00155-en >
+      au < manifest ; 2020 ; OECD Employment Outlook Volume 2020 ; employment/oecd-employment-outlook-2020 ; 1686c758-en >
+      au < manifest ; 2021 ; OECD Employment Outlook Volume 2021 ; employment/oecd-employment-outlook-2021 ; 5a700c4b-en >
 
     }
 
@@ -782,10 +797,9 @@
         issn = 1999-155X
       >
 
-      au < manifest ; 2012 ; OECD Environmental Outlook Volume 2012 ; environment/oecd-environmental-outlook-to-2050 ; 9789264122246-en >
-      au < manifest ; 2008 ; OECD Environmental Outlook Volume 2008 ; environment/oecd-environmental-outlook-to-2030 ; 9789264040519-en >
       au < manifest ; 2001 ; OECD Environmental Outlook Volume 2001 ; environment/oecd-environmental-outlook ; 9789264188563-en >
-
+      au < manifest ; 2008 ; OECD Environmental Outlook Volume 2008 ; environment/oecd-environmental-outlook-to-2030 ; 9789264040519-en >
+      au < manifest ; 2012 ; OECD Environmental Outlook Volume 2012 ; environment/oecd-environmental-outlook-to-2050 ; 9789264122246-en >
 
     }
 
@@ -796,12 +810,11 @@
         issn = 2313-7649
       >
 
-      au < manifest ; 2020 ; OECD Pensions Outlook Volume 2020 ; finance-and-investment/oecd-pensions-outlook-2020 ; 67ede41b-en >
-      au < testing ; 2018 ; OECD Pensions Outlook Volume 2018 ; finance-and-investment/oecd-pensions-outlook-2018 ; pens_outlook-2018-en >
-      au < manifest ; 2016 ; OECD Pensions Outlook Volume 2016 ; finance-and-investment/oecd-pensions-outlook-2016 ; pens_outlook-2016-en >
-      au < manifest ; 2014 ; OECD Pensions Outlook Volume 2014 ; finance-and-investment/oecd-pensions-outlook-2014 ; 9789264222687-en >
       au < manifest ; 2012 ; OECD Pensions Outlook Volume 2012 ; finance-and-investment/oecd-pensions-outlook-2012 ; 9789264169401-en >
-
+      au < manifest ; 2014 ; OECD Pensions Outlook Volume 2014 ; finance-and-investment/oecd-pensions-outlook-2014 ; 9789264222687-en >
+      au < manifest ; 2016 ; OECD Pensions Outlook Volume 2016 ; finance-and-investment/oecd-pensions-outlook-2016 ; pens_outlook-2016-en >
+      au < testing ; 2018 ; OECD Pensions Outlook Volume 2018 ; finance-and-investment/oecd-pensions-outlook-2018 ; pens_outlook-2018-en >
+      au < manifest ; 2020 ; OECD Pensions Outlook Volume 2020 ; finance-and-investment/oecd-pensions-outlook-2020 ; 67ede41b-en >
 
     }
 
@@ -812,19 +825,18 @@
         issn = 2225-4323
       >
 
-      au < manifest ; 2020 ; OECD Review of Fisheries Volume 2020 ; agriculture-and-food/oecd-review-of-fisheries-2020 ; 7946bc8a-en >
-      au < manifest ; 2017 ; OECD Review of Fisheries Volume 2017 ; agriculture-and-food/oecd-review-of-fisheries-policies-and-summary-statistics-2017 ; rev_fish_stat_en-2017-en >
-      au < manifest ; 2015 ; OECD Review of Fisheries Volume 2015 ; agriculture-and-food/oecd-review-of-fisheries-policies-and-summary-statistics-2015 ; 9789264240223-en >
-      au < manifest ; 2013 ; OECD Review of Fisheries Volume 2013 ; agriculture-and-food/oecd-review-of-fisheries-2013 ; rev_fish-2013-en >
-      au < manifest ; 2011 ; OECD Review of Fisheries Volume 2011 ; agriculture-and-food/oecd-review-of-fisheries-2011 ; 9789264129306-en >
-      au < manifest ; 2009 ; OECD Review of Fisheries Volume 2009 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-2009 ; rev_fish_pol-2009-en >
-      au < manifest ; 2008 ; OECD Review of Fisheries Volume 2008 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2008 ; rev_fish_pol-2008-en >
-      au < manifest ; 2005 ; OECD Review of Fisheries Volume 2005 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2005 ; rev_fish_pol-2005-en >
-      au < manifest ; 2003 ; OECD Review of Fisheries Volume 2003 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2003 ; rev_fish_pol-2003-en >
-      au < manifest ; 2001 ; OECD Review of Fisheries Volume 2001 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2001 ; rev_fish_pol-2001-en >
-      au < testing ; 2000 ; OECD Review of Fisheries Volume 2000 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-2000 ; rev_fish_pol-2000-en >
       au < manifest ; 1997 ; OECD Review of Fisheries Volume 1997 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-1997 ; rev_fish_pol-1997-en >
-
+      au < testing ; 2000 ; OECD Review of Fisheries Volume 2000 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-2000 ; rev_fish_pol-2000-en >
+      au < manifest ; 2001 ; OECD Review of Fisheries Volume 2001 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2001 ; rev_fish_pol-2001-en >
+      au < manifest ; 2003 ; OECD Review of Fisheries Volume 2003 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2003 ; rev_fish_pol-2003-en >
+      au < manifest ; 2005 ; OECD Review of Fisheries Volume 2005 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2005 ; rev_fish_pol-2005-en >
+      au < manifest ; 2008 ; OECD Review of Fisheries Volume 2008 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-policies-and-summary-statistics-2008 ; rev_fish_pol-2008-en >
+      au < manifest ; 2009 ; OECD Review of Fisheries Volume 2009 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-2009 ; rev_fish_pol-2009-en >
+      au < manifest ; 2011 ; OECD Review of Fisheries Volume 2011 ; agriculture-and-food/oecd-review-of-fisheries-2011 ; 9789264129306-en >
+      au < manifest ; 2013 ; OECD Review of Fisheries Volume 2013 ; agriculture-and-food/oecd-review-of-fisheries-2013 ; rev_fish-2013-en >
+      au < manifest ; 2015 ; OECD Review of Fisheries Volume 2015 ; agriculture-and-food/oecd-review-of-fisheries-policies-and-summary-statistics-2015 ; 9789264240223-en >
+      au < manifest ; 2017 ; OECD Review of Fisheries Volume 2017 ; agriculture-and-food/oecd-review-of-fisheries-policies-and-summary-statistics-2017 ; rev_fish_stat_en-2017-en >
+      au < manifest ; 2020 ; OECD Review of Fisheries Volume 2020 ; agriculture-and-food/oecd-review-of-fisheries-2020 ; 7946bc8a-en >
 
     }
 
@@ -835,17 +847,16 @@
         issn = 2518-6167
       >
 
-      au < manifest ; 2021 ; OECD Science, Technology and Innovation Outlook Volume 2021 ; science-and-technology/oecd-science-technology-and-innovation-outlook-2021 ; 75f79015-en >
-      au < manifest ; 2018 ; OECD Science, Technology and Innovation Outlook Volume 2018 ; science-and-technology/oecd-science-technology-and-innovation-outlook-2018 ; sti_in_outlook-2018-en >
-      au < manifest ; 2016 ; OECD Science, Technology and Innovation Outlook Volume 2016 ; science-and-technology/oecd-science-technology-and-innovation-outlook-2016 ; sti_in_outlook-2016-en >
-      au < manifest ; 2014 ; OECD Science, Technology and Innovation Outlook Volume 2014 ; science-and-technology/oecd-science-technology-and-industry-outlook-2014 ; sti_outlook-2014-en >
-      au < manifest ; 2012 ; OECD Science, Technology and Innovation Outlook Volume 2012 ; science-and-technology/oecd-science-technology-and-industry-outlook-2012 ; sti_outlook-2012-en >
-      au < manifest ; 2010 ; OECD Science, Technology and Innovation Outlook Volume 2010 ; science-and-technology/oecd-science-technology-and-industry-outlook-2010 ; sti_outlook-2010-en >
-      au < manifest ; 2008 ; OECD Science, Technology and Innovation Outlook Volume 2008 ; science-and-technology/oecd-science-technology-and-industry-outlook-2008 ; sti_outlook-2008-en >
-      au < manifest ; 2006 ; OECD Science, Technology and Innovation Outlook Volume 2006 ; science-and-technology/oecd-science-technology-and-industry-outlook-2006 ; sti_outlook-2006-en >
-      au < manifest ; 2004 ; OECD Science, Technology and Innovation Outlook Volume 2004 ; science-and-technology/oecd-science-technology-and-industry-outlook-2004 ; sti_outlook-2004-en >
       au < manifest ; 2002 ; OECD Science, Technology and Innovation Outlook Volume 2002 ; industry-and-services/oecd-science-technology-and-industry-outlook-2002 ; sti_outlook-2002-en >
-
+      au < manifest ; 2004 ; OECD Science, Technology and Innovation Outlook Volume 2004 ; science-and-technology/oecd-science-technology-and-industry-outlook-2004 ; sti_outlook-2004-en >
+      au < manifest ; 2006 ; OECD Science, Technology and Innovation Outlook Volume 2006 ; science-and-technology/oecd-science-technology-and-industry-outlook-2006 ; sti_outlook-2006-en >
+      au < manifest ; 2008 ; OECD Science, Technology and Innovation Outlook Volume 2008 ; science-and-technology/oecd-science-technology-and-industry-outlook-2008 ; sti_outlook-2008-en >
+      au < manifest ; 2010 ; OECD Science, Technology and Innovation Outlook Volume 2010 ; science-and-technology/oecd-science-technology-and-industry-outlook-2010 ; sti_outlook-2010-en >
+      au < manifest ; 2012 ; OECD Science, Technology and Innovation Outlook Volume 2012 ; science-and-technology/oecd-science-technology-and-industry-outlook-2012 ; sti_outlook-2012-en >
+      au < manifest ; 2014 ; OECD Science, Technology and Innovation Outlook Volume 2014 ; science-and-technology/oecd-science-technology-and-industry-outlook-2014 ; sti_outlook-2014-en >
+      au < manifest ; 2016 ; OECD Science, Technology and Innovation Outlook Volume 2016 ; science-and-technology/oecd-science-technology-and-innovation-outlook-2016 ; sti_in_outlook-2016-en >
+      au < manifest ; 2018 ; OECD Science, Technology and Innovation Outlook Volume 2018 ; science-and-technology/oecd-science-technology-and-innovation-outlook-2018 ; sti_in_outlook-2018-en >
+      au < manifest ; 2021 ; OECD Science, Technology and Innovation Outlook Volume 2021 ; science-and-technology/oecd-science-technology-and-innovation-outlook-2021 ; 75f79015-en >
 
     }
 
@@ -855,29 +866,29 @@
         name = OECD Secretary-General's Report to Ministers ;
         issn = 2222-3843
       >
-      au < manifest ; 2021 ; OECD Secretary-General's Report to Ministers Volume 2021 ; economics/oecd-secretary-general-s-report-to-ministers-2021 ; 8cd95b77-en >
-      au < manifest ; 2020 ; OECD Secretary-General's Report to Ministers Volume 2020 ; economics/oecd-secretary-general-s-report-to-ministers-2020 ; 27007c6c-en >
-      au < testing ; 2019 ; OECD Secretary-General's Report to Ministers Volume 2019 ; economics/secretary-general-s-report-to-ministers-2019 ; d4b4a55c-en >
-      au < manifest ; 2018 ; OECD Secretary-General's Report to Ministers Volume 2018 ; economics/secretary-general-s-report-to-ministers-2018 ; sg_report-2018-en >
-      au < manifest ; 2017 ; OECD Secretary-General's Report to Ministers Volume 2017 ; economics/secretary-general-s-report-to-ministers-2017 ; sg_report-2017-en >
-      au < manifest ; 2016 ; OECD Secretary-General's Report to Ministers Volume 2016 ; economics/secretary-general-s-report-to-ministers-2016 ; sg_report-2016-en >
-      au < manifest ; 2015 ; OECD Secretary-General's Report to Ministers Volume 2015 ; economics/secretary-general-s-report-to-ministers-2015 ; sg_report-2015-en >
-      au < manifest ; 2014 ; OECD Secretary-General's Report to Ministers Volume 2014 ; economics/secretary-general-s-report-to-ministers-2014 ; sg_report-2014-en >
-      au < manifest ; 2013 ; OECD Secretary-General's Report to Ministers Volume 2013 ; economics/secretary-general-s-report-to-ministers-2013 ; sg_report-2013-en >
-      au < manifest ; 2012 ; OECD Secretary-General's Report to Ministers Volume 2012 ; economics/secretary-general-s-report-to-ministers-2012 ; sg_report-2012-en >
-      au < manifest ; 2011 ; OECD Secretary-General's Report to Ministers Volume 2011 ; economics/secretary-general-s-report-to-ministers-2011 ; sg_report-2011-en >
-      au < manifest ; 2010 ; OECD Secretary-General's Report to Ministers Volume 2010 ; economics/oecd-annual-report-2010-the-secretary-general-s-report-to-ministers ; annrep-2010-en >
-      au < manifest ; 2009 ; OECD Secretary-General's Report to Ministers Volume 2009 ; economics/oecd-annual-report-2009 ; annrep-2009-en >
-      au < manifest ; 2008 ; OECD Secretary-General's Report to Ministers Volume 2008 ; economics/oecd-annual-report-2008 ; annrep-2008-en >
-      au < manifest ; 2007 ; OECD Secretary-General's Report to Ministers Volume 2007 ; economics/oecd-annual-report-2007 ; annrep-2007-en >
-      au < manifest ; 2006 ; OECD Secretary-General's Report to Ministers Volume 2006 ; economics/oecd-annual-report-2006 ; annrep-2006-en >
-      au < testing ; 2005 ; OECD Secretary-General's Report to Ministers Volume 2005 ; economics/oecd-annual-report-2005 ; annrep-2005-en >
-      au < manifest ; 2004 ; OECD Secretary-General's Report to Ministers Volume 2004 ; economics/oecd-annual-report-2004 ; annrep-2004-en >
-      au < manifest ; 2003 ; OECD Secretary-General's Report to Ministers Volume 2003 ; economics/oecd-annual-report-2003 ; annrep-2003-en >
-      au < manifest ; 2002 ; OECD Secretary-General's Report to Ministers Volume 2002 ; economics/oecd-annual-report-2002 ; annrep-2002-en >
-      au < manifest ; 2001 ; OECD Secretary-General's Report to Ministers Volume 2001 ; economics/oecd-annual-report-2001 ; annrep-2001-en >
-      au < manifest ; 2000 ; OECD Secretary-General's Report to Ministers Volume 2000 ; economics/oecd-annual-report-2000 ; annrep-2000-en >
 
+      au < manifest ; 2000 ; OECD Secretary-General's Report to Ministers Volume 2000 ; economics/oecd-annual-report-2000 ; annrep-2000-en >
+      au < manifest ; 2001 ; OECD Secretary-General's Report to Ministers Volume 2001 ; economics/oecd-annual-report-2001 ; annrep-2001-en >
+      au < manifest ; 2002 ; OECD Secretary-General's Report to Ministers Volume 2002 ; economics/oecd-annual-report-2002 ; annrep-2002-en >
+      au < manifest ; 2003 ; OECD Secretary-General's Report to Ministers Volume 2003 ; economics/oecd-annual-report-2003 ; annrep-2003-en >
+      au < manifest ; 2004 ; OECD Secretary-General's Report to Ministers Volume 2004 ; economics/oecd-annual-report-2004 ; annrep-2004-en >
+      au < testing ; 2005 ; OECD Secretary-General's Report to Ministers Volume 2005 ; economics/oecd-annual-report-2005 ; annrep-2005-en >
+      au < manifest ; 2006 ; OECD Secretary-General's Report to Ministers Volume 2006 ; economics/oecd-annual-report-2006 ; annrep-2006-en >
+      au < manifest ; 2007 ; OECD Secretary-General's Report to Ministers Volume 2007 ; economics/oecd-annual-report-2007 ; annrep-2007-en >
+      au < manifest ; 2008 ; OECD Secretary-General's Report to Ministers Volume 2008 ; economics/oecd-annual-report-2008 ; annrep-2008-en >
+      au < manifest ; 2009 ; OECD Secretary-General's Report to Ministers Volume 2009 ; economics/oecd-annual-report-2009 ; annrep-2009-en >
+      au < manifest ; 2010 ; OECD Secretary-General's Report to Ministers Volume 2010 ; economics/oecd-annual-report-2010-the-secretary-general-s-report-to-ministers ; annrep-2010-en >
+      au < manifest ; 2011 ; OECD Secretary-General's Report to Ministers Volume 2011 ; economics/secretary-general-s-report-to-ministers-2011 ; sg_report-2011-en >
+      au < manifest ; 2012 ; OECD Secretary-General's Report to Ministers Volume 2012 ; economics/secretary-general-s-report-to-ministers-2012 ; sg_report-2012-en >
+      au < manifest ; 2013 ; OECD Secretary-General's Report to Ministers Volume 2013 ; economics/secretary-general-s-report-to-ministers-2013 ; sg_report-2013-en >
+      au < manifest ; 2014 ; OECD Secretary-General's Report to Ministers Volume 2014 ; economics/secretary-general-s-report-to-ministers-2014 ; sg_report-2014-en >
+      au < manifest ; 2015 ; OECD Secretary-General's Report to Ministers Volume 2015 ; economics/secretary-general-s-report-to-ministers-2015 ; sg_report-2015-en >
+      au < manifest ; 2016 ; OECD Secretary-General's Report to Ministers Volume 2016 ; economics/secretary-general-s-report-to-ministers-2016 ; sg_report-2016-en >
+      au < manifest ; 2017 ; OECD Secretary-General's Report to Ministers Volume 2017 ; economics/secretary-general-s-report-to-ministers-2017 ; sg_report-2017-en >
+      au < manifest ; 2018 ; OECD Secretary-General's Report to Ministers Volume 2018 ; economics/secretary-general-s-report-to-ministers-2018 ; sg_report-2018-en >
+      au < testing ; 2019 ; OECD Secretary-General's Report to Ministers Volume 2019 ; economics/secretary-general-s-report-to-ministers-2019 ; d4b4a55c-en >
+      au < manifest ; 2020 ; OECD Secretary-General's Report to Ministers Volume 2020 ; economics/oecd-secretary-general-s-report-to-ministers-2020 ; 27007c6c-en >
+      au < manifest ; 2021 ; OECD Secretary-General's Report to Ministers Volume 2021 ; economics/oecd-secretary-general-s-report-to-ministers-2021 ; 8cd95b77-en >
 
     }
 
@@ -888,12 +899,11 @@
         issn = 2521-1072
       >
 
-      au < manifest ; 2021 ; OECD Skills Outlook Volume 2021 ; education/oecd-skills-outlook-2021 ; 0ae365b4-en >
-      au < manifest ; 2019 ; OECD Skills Outlook Volume 2019 ; education/oecd-skills-outlook-2019 ; df80bc12-en >
-      au < manifest ; 2017 ; OECD Skills Outlook Volume 2017 ; education/oecd-skills-outlook-2017 ; 9789264273351-en >
-      au < manifest ; 2015 ; OECD Skills Outlook Volume 2015 ; education/oecd-skills-outlook-2015 ; 9789264234178-en >
       au < manifest ; 2013 ; OECD Skills Outlook Volume 2013 ; education/oecd-skills-outlook-2013 ; 9789264204256-en >
-
+      au < manifest ; 2015 ; OECD Skills Outlook Volume 2015 ; education/oecd-skills-outlook-2015 ; 9789264234178-en >
+      au < manifest ; 2017 ; OECD Skills Outlook Volume 2017 ; education/oecd-skills-outlook-2017 ; 9789264273351-en >
+      au < manifest ; 2019 ; OECD Skills Outlook Volume 2019 ; education/oecd-skills-outlook-2019 ; df80bc12-en >
+      au < manifest ; 2021 ; OECD Skills Outlook Volume 2021 ; education/oecd-skills-outlook-2021 ; 0ae365b4-en >
 
     }
 
@@ -904,17 +914,15 @@
         issn = 2306-0476
       >
 
-
-      au < manifest ; 2021 ; OECD Sovereign Borrowing Outlook Volume 2021 ; governance/oecd-sovereign-borrowing-outlook-2021 ; 48828791-en >
-      au < manifest ; 2020 ; OECD Sovereign Borrowing Outlook Volume 2020 ; governance/oecd-sovereign-borrowing-outlook-2020 ; dc0b6ada-en >
-      au < manifest ; 2019 ; OECD Sovereign Borrowing Outlook Volume 2019 ; finance-and-investment/oecd-sovereign-borrowing-outlook-2019 ; aa7aad38-en >
-      au < testing ; 2018 ; OECD Sovereign Borrowing Outlook Volume 2018 ; governance/oecd-sovereign-borrowing-outlook-2018 ; sov_b_outlk-2018-en >
-      au < manifest ; 2017 ; OECD Sovereign Borrowing Outlook Volume 2017 ; governance/oecd-sovereign-borrowing-outlook-2017 ; sov_b_outlk-2017-en >
-      au < manifest ; 2016 ; OECD Sovereign Borrowing Outlook Volume 2016 ; governance/oecd-sovereign-borrowing-outlook-2016 ; sov_b_outlk-2016-en >
-      au < manifest ; 2014 ; OECD Sovereign Borrowing Outlook Volume 2014 ; governance/oecd-sovereign-borrowing-outlook-2014 ; sov_b_outlk-2014-en >
-      au < manifest ; 2013 ; OECD Sovereign Borrowing Outlook Volume 2013 ; governance/oecd-sovereign-borrowing-outlook-2013 ; sov_b_outlk-2013-en >
       au < manifest ; 2012 ; OECD Sovereign Borrowing Outlook Volume 2012 ; governance/oecd-sovereign-borrowing-outlook-2012 ; 9789264169135-en >
-
+      au < manifest ; 2013 ; OECD Sovereign Borrowing Outlook Volume 2013 ; governance/oecd-sovereign-borrowing-outlook-2013 ; sov_b_outlk-2013-en >
+      au < manifest ; 2014 ; OECD Sovereign Borrowing Outlook Volume 2014 ; governance/oecd-sovereign-borrowing-outlook-2014 ; sov_b_outlk-2014-en >
+      au < manifest ; 2016 ; OECD Sovereign Borrowing Outlook Volume 2016 ; governance/oecd-sovereign-borrowing-outlook-2016 ; sov_b_outlk-2016-en >
+      au < manifest ; 2017 ; OECD Sovereign Borrowing Outlook Volume 2017 ; governance/oecd-sovereign-borrowing-outlook-2017 ; sov_b_outlk-2017-en >
+      au < testing ; 2018 ; OECD Sovereign Borrowing Outlook Volume 2018 ; governance/oecd-sovereign-borrowing-outlook-2018 ; sov_b_outlk-2018-en >
+      au < manifest ; 2019 ; OECD Sovereign Borrowing Outlook Volume 2019 ; finance-and-investment/oecd-sovereign-borrowing-outlook-2019 ; aa7aad38-en >
+      au < manifest ; 2020 ; OECD Sovereign Borrowing Outlook Volume 2020 ; governance/oecd-sovereign-borrowing-outlook-2020 ; dc0b6ada-en >
+      au < manifest ; 2021 ; OECD Sovereign Borrowing Outlook Volume 2021 ; governance/oecd-sovereign-borrowing-outlook-2021 ; 48828791-en >
 
     }
 
@@ -925,14 +933,13 @@
         issn = 2076-7773
       >
 
-      au < manifest ; 2020 ; OECD Tourism Trends and Policies Volume 2020 ; urban-rural-and-regional-development/oecd-tourism-trends-and-policies-2020 ; 6b47b985-en >
-      au < manifest ; 2018 ; OECD Tourism Trends and Policies Volume 2018 ; urban-rural-and-regional-development/oecd-tourism-trends-and-policies-2018 ; tour-2018-en >
-      au < manifest ; 2016 ; OECD Tourism Trends and Policies Volume 2016 ; industry-and-services/oecd-tourism-trends-and-policies-2016 ; tour-2016-en >
-      au < manifest ; 2014 ; OECD Tourism Trends and Policies Volume 2014 ; industry-and-services/oecd-tourism-trends-and-policies-2014 ; tour-2014-en >
-      au < manifest ; 2012 ; OECD Tourism Trends and Policies Volume 2012 ; industry-and-services/oecd-tourism-trends-and-policies-2012 ; tour-2012-en >
-      au < manifest ; 2010 ; OECD Tourism Trends and Policies Volume 2010 ; industry-and-services/oecd-tourism-trends-and-policies-2010 ; tour-2010-en >
       au < manifest ; 2008 ; OECD Tourism Trends and Policies Volume 2008 ; industry-and-services/tourism-in-oecd-countries-2008 ; 9789264039773-en >
-
+      au < manifest ; 2010 ; OECD Tourism Trends and Policies Volume 2010 ; industry-and-services/oecd-tourism-trends-and-policies-2010 ; tour-2010-en >
+      au < manifest ; 2012 ; OECD Tourism Trends and Policies Volume 2012 ; industry-and-services/oecd-tourism-trends-and-policies-2012 ; tour-2012-en >
+      au < manifest ; 2014 ; OECD Tourism Trends and Policies Volume 2014 ; industry-and-services/oecd-tourism-trends-and-policies-2014 ; tour-2014-en >
+      au < manifest ; 2016 ; OECD Tourism Trends and Policies Volume 2016 ; industry-and-services/oecd-tourism-trends-and-policies-2016 ; tour-2016-en >
+      au < manifest ; 2018 ; OECD Tourism Trends and Policies Volume 2018 ; urban-rural-and-regional-development/oecd-tourism-trends-and-policies-2018 ; tour-2018-en >
+      au < manifest ; 2020 ; OECD Tourism Trends and Policies Volume 2020 ; urban-rural-and-regional-development/oecd-tourism-trends-and-policies-2020 ; 6b47b985-en >
 
     }
 
@@ -943,11 +950,10 @@
         issn = 2076-9717
       >
 
-      au < manifest ; 2022 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2022 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2022 ; 0e655865-en >
-      au < testing ; 2017 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2017 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2017 ; tpg-2017-en >
-      au < manifest ; 2010 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2010 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2010 ; tpg-2010-en >
       au < manifest ; 2009 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2009 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2009 ; tpg-2009-en >
-
+      au < manifest ; 2010 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2010 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2010 ; tpg-2010-en >
+      au < testing ; 2017 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2017 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2017 ; tpg-2017-en >
+      au < manifest ; 2022 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2022 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2022 ; 0e655865-en >
 
     }
 
@@ -958,30 +964,29 @@
         issn = 1999-1142
       >
 
-      au < manifest ; 2021 ; OECD-FAO Agricultural Outlook Volume 2021 ; agriculture-and-food/oecd-fao-agricultural-outlook-2021-2030 ; 19428846-en >
-      au < manifest ; 2020 ; OECD-FAO Agricultural Outlook Volume 2020 ; agriculture-and-food/oecd-fao-agricultural-outlook-2020-2029 ; 1112c23b-en >
-      au < manifest ; 2019 ; OECD-FAO Agricultural Outlook Volume 2019 ; agriculture-and-food/oecd-fao-agricultural-outlook-2019-2028 ; agr_outlook-2019-en >
-      au < manifest ; 2018 ; OECD-FAO Agricultural Outlook Volume 2018 ; agriculture-and-food/oecd-fao-agricultural-outlook-2018-2027 ; agr_outlook-2018-en >
-      au < manifest ; 2017 ; OECD-FAO Agricultural Outlook Volume 2017 ; agriculture-and-food/oecd-fao-agricultural-outlook-2017-2026 ; agr_outlook-2017-en >
-      au < manifest ; 2016 ; OECD-FAO Agricultural Outlook Volume 2016 ; agriculture-and-food/oecd-fao-agricultural-outlook-2016 ; agr_outlook-2016-en >
-      au < manifest ; 2015 ; OECD-FAO Agricultural Outlook Volume 2015 ; agriculture-and-food/oecd-fao-agricultural-outlook-2015 ; agr_outlook-2015-en >
-      au < manifest ; 2014 ; OECD-FAO Agricultural Outlook Volume 2014 ; agriculture-and-food/oecd-fao-agricultural-outlook-2014 ; agr_outlook-2014-en >
-      au < manifest ; 2013 ; OECD-FAO Agricultural Outlook Volume 2013 ; agriculture-and-food/oecd-fao-agricultural-outlook-2013 ; agr_outlook-2013-en >
-      au < manifest ; 2012 ; OECD-FAO Agricultural Outlook Volume 2012 ; agriculture-and-food/oecd-fao-agricultural-outlook-2012 ; agr_outlook-2012-en >
-      au < manifest ; 2011 ; OECD-FAO Agricultural Outlook Volume 2011 ; agriculture-and-food/oecd-fao-agricultural-outlook-2011 ; agr_outlook-2011-en >
-      au < testing ; 2010 ; OECD-FAO Agricultural Outlook Volume 2010 ; agriculture-and-food/oecd-fao-agricultural-outlook-2010 ; agr_outlook-2010-en >
-      au < manifest ; 2009 ; OECD-FAO Agricultural Outlook Volume 2009 ; agriculture-and-food/oecd-fao-agricultural-outlook-2009 ; agr_outlook-2009-en >
-      au < manifest ; 2008 ; OECD-FAO Agricultural Outlook Volume 2008 ; agriculture-and-food/oecd-fao-agricultural-outlook-2008 ; agr_outlook-2008-en >
-      au < manifest ; 2007 ; OECD-FAO Agricultural Outlook Volume 2007 ; agriculture-and-food/oecd-fao-agricultural-outlook-2007 ; agr_outlook-2007-en >
-      au < manifest ; 2006 ; OECD-FAO Agricultural Outlook Volume 2006 ; agriculture-and-food/oecd-fao-agricultural-outlook-2006 ; agr_outlook-2006-en >
-      au < manifest ; 2005 ; OECD-FAO Agricultural Outlook Volume 2005 ; agriculture-and-food/oecd-fao-agricultural-outlook-2005 ; agr_outlook-2005-en >
-      au < manifest ; 2004 ; OECD-FAO Agricultural Outlook Volume 2004 ; agriculture-and-food/oecd-fao-agricultural-outlook-2004 ; agr_outlook-2004-en >
-      au < manifest ; 2003 ; OECD-FAO Agricultural Outlook Volume 2003 ; agriculture-and-food/oecd-fao-agricultural-outlook-2003 ; agr_outlook-2003-en >
-      au < manifest ; 2002 ; OECD-FAO Agricultural Outlook Volume 2002 ; agriculture-and-food/oecd-fao-agricultural-outlook-2002 ; agr_outlook-2002-en >
-      au < manifest ; 2001 ; OECD-FAO Agricultural Outlook Volume 2001 ; agriculture-and-food/oecd-fao-agricultural-outlook-2001 ; agr_outlook-2001-en >
-      au < manifest ; 2000 ; OECD-FAO Agricultural Outlook Volume 2000 ; agriculture-and-food/oecd-fao-agricultural-outlook-2000 ; agr_outlook-2000-en >
       au < manifest ; 1999 ; OECD-FAO Agricultural Outlook Volume 1999 ; agriculture-and-food/oecd-fao-agricultural-outlook-1999 ; agr_outlook-1999-en >
-
+      au < manifest ; 2000 ; OECD-FAO Agricultural Outlook Volume 2000 ; agriculture-and-food/oecd-fao-agricultural-outlook-2000 ; agr_outlook-2000-en >
+      au < manifest ; 2001 ; OECD-FAO Agricultural Outlook Volume 2001 ; agriculture-and-food/oecd-fao-agricultural-outlook-2001 ; agr_outlook-2001-en >
+      au < manifest ; 2002 ; OECD-FAO Agricultural Outlook Volume 2002 ; agriculture-and-food/oecd-fao-agricultural-outlook-2002 ; agr_outlook-2002-en >
+      au < manifest ; 2003 ; OECD-FAO Agricultural Outlook Volume 2003 ; agriculture-and-food/oecd-fao-agricultural-outlook-2003 ; agr_outlook-2003-en >
+      au < manifest ; 2004 ; OECD-FAO Agricultural Outlook Volume 2004 ; agriculture-and-food/oecd-fao-agricultural-outlook-2004 ; agr_outlook-2004-en >
+      au < manifest ; 2005 ; OECD-FAO Agricultural Outlook Volume 2005 ; agriculture-and-food/oecd-fao-agricultural-outlook-2005 ; agr_outlook-2005-en >
+      au < manifest ; 2006 ; OECD-FAO Agricultural Outlook Volume 2006 ; agriculture-and-food/oecd-fao-agricultural-outlook-2006 ; agr_outlook-2006-en >
+      au < manifest ; 2007 ; OECD-FAO Agricultural Outlook Volume 2007 ; agriculture-and-food/oecd-fao-agricultural-outlook-2007 ; agr_outlook-2007-en >
+      au < manifest ; 2008 ; OECD-FAO Agricultural Outlook Volume 2008 ; agriculture-and-food/oecd-fao-agricultural-outlook-2008 ; agr_outlook-2008-en >
+      au < manifest ; 2009 ; OECD-FAO Agricultural Outlook Volume 2009 ; agriculture-and-food/oecd-fao-agricultural-outlook-2009 ; agr_outlook-2009-en >
+      au < testing ; 2010 ; OECD-FAO Agricultural Outlook Volume 2010 ; agriculture-and-food/oecd-fao-agricultural-outlook-2010 ; agr_outlook-2010-en >
+      au < manifest ; 2011 ; OECD-FAO Agricultural Outlook Volume 2011 ; agriculture-and-food/oecd-fao-agricultural-outlook-2011 ; agr_outlook-2011-en >
+      au < manifest ; 2012 ; OECD-FAO Agricultural Outlook Volume 2012 ; agriculture-and-food/oecd-fao-agricultural-outlook-2012 ; agr_outlook-2012-en >
+      au < manifest ; 2013 ; OECD-FAO Agricultural Outlook Volume 2013 ; agriculture-and-food/oecd-fao-agricultural-outlook-2013 ; agr_outlook-2013-en >
+      au < manifest ; 2014 ; OECD-FAO Agricultural Outlook Volume 2014 ; agriculture-and-food/oecd-fao-agricultural-outlook-2014 ; agr_outlook-2014-en >
+      au < manifest ; 2015 ; OECD-FAO Agricultural Outlook Volume 2015 ; agriculture-and-food/oecd-fao-agricultural-outlook-2015 ; agr_outlook-2015-en >
+      au < manifest ; 2016 ; OECD-FAO Agricultural Outlook Volume 2016 ; agriculture-and-food/oecd-fao-agricultural-outlook-2016 ; agr_outlook-2016-en >
+      au < manifest ; 2017 ; OECD-FAO Agricultural Outlook Volume 2017 ; agriculture-and-food/oecd-fao-agricultural-outlook-2017-2026 ; agr_outlook-2017-en >
+      au < manifest ; 2018 ; OECD-FAO Agricultural Outlook Volume 2018 ; agriculture-and-food/oecd-fao-agricultural-outlook-2018-2027 ; agr_outlook-2018-en >
+      au < manifest ; 2019 ; OECD-FAO Agricultural Outlook Volume 2019 ; agriculture-and-food/oecd-fao-agricultural-outlook-2019-2028 ; agr_outlook-2019-en >
+      au < manifest ; 2020 ; OECD-FAO Agricultural Outlook Volume 2020 ; agriculture-and-food/oecd-fao-agricultural-outlook-2020-2029 ; 1112c23b-en >
+      au < manifest ; 2021 ; OECD-FAO Agricultural Outlook Volume 2021 ; agriculture-and-food/oecd-fao-agricultural-outlook-2021-2030 ; 19428846-en >
 
     }
 
@@ -992,10 +997,9 @@
         issn = 2707-2894
       >
 
-      au < manifest ; 2018 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2018 ; nuclear-energy/penelope-2018-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; 32da5043-en >
-      au < manifest ; 2014 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2014 ; nuclear-energy/penelope-2014-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; 4e3f14db-en >
       au < testing ; 2011 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2011 ; nuclear-energy/penelope-2011-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; ef77b746-en >
-
+      au < manifest ; 2014 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2014 ; nuclear-energy/penelope-2014-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; 4e3f14db-en >
+      au < manifest ; 2018 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2018 ; nuclear-energy/penelope-2018-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; 32da5043-en >
 
     }
 
@@ -1006,10 +1010,9 @@
         issn = 2309-0766
       >
 
-      au < manifest ; 2018 ; Pensions at a Glance Asia/Pacific Volume 2018 ; finance-and-investment/pensions-at-a-glance-asia-pacific-2018 ; pension_asia-2018-en >
-      au < manifest ; 2013 ; Pensions at a Glance Asia/Pacific Volume 2013 ; finance-and-investment/pensions-at-a-glance-asia-pacific-2013 ; pension_asia-2013-en >
       au < manifest ; 2011 ; Pensions at a Glance Asia/Pacific Volume 2011 ; social-issues-migration-health/pensions-at-a-glance-asia-pacific-2011 ; 9789264107007-en >
-
+      au < manifest ; 2013 ; Pensions at a Glance Asia/Pacific Volume 2013 ; finance-and-investment/pensions-at-a-glance-asia-pacific-2013 ; pension_asia-2013-en >
+      au < manifest ; 2018 ; Pensions at a Glance Asia/Pacific Volume 2018 ; finance-and-investment/pensions-at-a-glance-asia-pacific-2018 ; pension_asia-2018-en >
 
     }
 
@@ -1020,14 +1023,13 @@
         issn = 2222-4475
       >
 
-      au < manifest ; 2021 ; Perspectives on Global Development Volume 2021 ; development/perspectives-on-global-development-2021 ; 405e4c32-en >
-      au < manifest ; 2019 ; Perspectives on Global Development Volume 2019 ; development/perspectives-on-global-development-2019 ; persp_glob_dev-2019-en >
-      au < manifest ; 2017 ; Perspectives on Global Development Volume 2017 ; development/perspectives-on-global-development-2017 ; persp_glob_dev-2017-en >
-      au < manifest ; 2014 ; Perspectives on Global Development Volume 2014 ; development/perspectives-on-global-development-2014 ; persp_glob_dev-2014-en >
-      au < manifest ; 2013 ; Perspectives on Global Development Volume 2013 ; development/perspectives-on-global-development-2013 ; persp_glob_dev-2013-en >
-      au < manifest ; 2012 ; Perspectives on Global Development Volume 2012 ; development/perspectives-on-global-development-2012 ; persp_glob_dev-2012-en >
       au < manifest ; 2010 ; Perspectives on Global Development Volume 2010 ; development/perspectives-on-global-development-2010 ; 9789264084728-en >
-
+      au < manifest ; 2012 ; Perspectives on Global Development Volume 2012 ; development/perspectives-on-global-development-2012 ; persp_glob_dev-2012-en >
+      au < manifest ; 2013 ; Perspectives on Global Development Volume 2013 ; development/perspectives-on-global-development-2013 ; persp_glob_dev-2013-en >
+      au < manifest ; 2014 ; Perspectives on Global Development Volume 2014 ; development/perspectives-on-global-development-2014 ; persp_glob_dev-2014-en >
+      au < manifest ; 2017 ; Perspectives on Global Development Volume 2017 ; development/perspectives-on-global-development-2017 ; persp_glob_dev-2017-en >
+      au < manifest ; 2019 ; Perspectives on Global Development Volume 2019 ; development/perspectives-on-global-development-2019 ; persp_glob_dev-2019-en >
+      au < manifest ; 2021 ; Perspectives on Global Development Volume 2021 ; development/perspectives-on-global-development-2021 ; 405e4c32-en >
 
     }
 
@@ -1038,12 +1040,11 @@
         issn = 2079-8393
       >
 
-      au < manifest ; 2020 ; Projected Costs of Generating Electricity Volume 2020 ; energy/projected-costs-of-generating-electricity-2020 ; a6002f3b-en >
-      au < manifest ; 2015 ; Projected Costs of Generating Electricity Volume 2015 ; energy/projected-costs-of-generating-electricity-2015 ; cost_electricity-2015-en >
-      au < manifest ; 2010 ; Projected Costs of Generating Electricity Volume 2010 ; energy/projected-costs-of-generating-electricity-2010 ; 9789264084315-en >
-      au < testing ; 2005 ; Projected Costs of Generating Electricity Volume 2005 ; energy/projected-costs-of-generating-electricity-2005 ; 9789264008274-en >
       au < manifest ; 1998 ; Projected Costs of Generating Electricity Volume 1998 ; energy/projected-costs-of-generating-electricity ; 9789264163706-en >
-
+      au < testing ; 2005 ; Projected Costs of Generating Electricity Volume 2005 ; energy/projected-costs-of-generating-electricity-2005 ; 9789264008274-en >
+      au < manifest ; 2010 ; Projected Costs of Generating Electricity Volume 2010 ; energy/projected-costs-of-generating-electricity-2010 ; 9789264084315-en >
+      au < manifest ; 2015 ; Projected Costs of Generating Electricity Volume 2015 ; energy/projected-costs-of-generating-electricity-2015 ; cost_electricity-2015-en >
+      au < manifest ; 2020 ; Projected Costs of Generating Electricity Volume 2020 ; energy/projected-costs-of-generating-electricity-2020 ; a6002f3b-en >
 
     }
 
@@ -1054,18 +1055,17 @@
         issn = 2312-4571
       >
 
-      au < manifest ; 2020 ; Road Safety Annual Report Volume 2020 ; transport/road-safety-annual-report-2020 ; f3e48023-en >
-      au < manifest ; 2019 ; Road Safety Annual Report Volume 2019 ; transport/road-safety-annual-report-2019 ; 2f0e33fe-en >
-      au < manifest ; 2018 ; Road Safety Annual Report Volume 2018 ; transport/road-safety-annual-report-2018 ; 1c884dcb-en >
-      au < manifest ; 2017 ; Road Safety Annual Report Volume 2017 ; transport/road-safety-annual-report-2017 ; irtad-2017-en >
-      au < manifest ; 2016 ; Road Safety Annual Report Volume 2016 ; transport/road-safety-annual-report-2016 ; irtad-2016-en >
-      au < manifest ; 2015 ; Road Safety Annual Report Volume 2015 ; transport/road-safety-annual-report-2015 ; irtad-2015-en >
-      au < manifest ; 2014 ; Road Safety Annual Report Volume 2014 ; transport/road-safety-annual-report-2014 ; irtad-2014-en >
-      au < manifest ; 2013 ; Road Safety Annual Report Volume 2013 ; transport/road-safety-annual-report-2013 ; irtad-2013-en >
-      au < manifest ; 2011 ; Road Safety Annual Report Volume 2011 ; transport/road-safety-annual-report-2011 ; irtad-2011-en >
-      au < manifest ; 2010 ; Road Safety Annual Report Volume 2010 ; transport/road-safety-annual-report-2010 ; irtad-2010-en >
       au < manifest ; 2009 ; Road Safety Annual Report Volume 2009 ; transport/irtad-road-safety-annual-report-2009 ; 9789282102824-en >
-
+      au < manifest ; 2010 ; Road Safety Annual Report Volume 2010 ; transport/road-safety-annual-report-2010 ; irtad-2010-en >
+      au < manifest ; 2011 ; Road Safety Annual Report Volume 2011 ; transport/road-safety-annual-report-2011 ; irtad-2011-en >
+      au < manifest ; 2013 ; Road Safety Annual Report Volume 2013 ; transport/road-safety-annual-report-2013 ; irtad-2013-en >
+      au < manifest ; 2014 ; Road Safety Annual Report Volume 2014 ; transport/road-safety-annual-report-2014 ; irtad-2014-en >
+      au < manifest ; 2015 ; Road Safety Annual Report Volume 2015 ; transport/road-safety-annual-report-2015 ; irtad-2015-en >
+      au < manifest ; 2016 ; Road Safety Annual Report Volume 2016 ; transport/road-safety-annual-report-2016 ; irtad-2016-en >
+      au < manifest ; 2017 ; Road Safety Annual Report Volume 2017 ; transport/road-safety-annual-report-2017 ; irtad-2017-en >
+      au < manifest ; 2018 ; Road Safety Annual Report Volume 2018 ; transport/road-safety-annual-report-2018 ; 1c884dcb-en >
+      au < manifest ; 2019 ; Road Safety Annual Report Volume 2019 ; transport/road-safety-annual-report-2019 ; 2f0e33fe-en >
+      au < manifest ; 2020 ; Road Safety Annual Report Volume 2020 ; transport/road-safety-annual-report-2020 ; f3e48023-en >
 
     }
 
@@ -1077,9 +1077,8 @@
       >
 
       au < manifest ; 2019 ; Society at a Glance: Asia/Pacific Volume 2019 ; social-issues-migration-health/society-at-a-glance-asia-pacific-2019 ; soc_aag-2019-en >
-      au < testing ; 2014 ; Society at a Glance: Asia/Pacific Volume 2014 ; social-issues-migration-health/society-at-a-glance-asia-pacific-2014 ; 9789264220553-en >
       au < manifest ; 2011 ; Society at a Glance: Asia/Pacific Volume 2011 ; social-issues-migration-health/society-at-a-glance-asia-pacific-2011 ; 9789264106154-en >
-
+      au < testing ; 2014 ; Society at a Glance: Asia/Pacific Volume 2014 ; social-issues-migration-health/society-at-a-glance-asia-pacific-2014 ; 9789264220553-en >
 
     }
 
@@ -1090,11 +1089,10 @@
         issn = 2708-860X
       >
 
-      au < manifest ; 2020 ; States of Fragility Volume 2020 ; development/states-of-fragility-2020 ; ba7c22e7-en >
-      au < manifest ; 2018 ; States of Fragility Volume 2018 ; development/states-of-fragility-2018 ; 9789264302075-en >
-      au < manifest ; 2016 ; States of Fragility Volume 2016 ; development/states-of-fragility-2016 ; 9789264267213-en >
       au < manifest ; 2015 ; States of Fragility Volume 2015 ; development/states-of-fragility-2015 ; 9789264227699-en >
-
+      au < manifest ; 2016 ; States of Fragility Volume 2016 ; development/states-of-fragility-2016 ; 9789264267213-en >
+      au < manifest ; 2018 ; States of Fragility Volume 2018 ; development/states-of-fragility-2018 ; 9789264302075-en >
+      au < manifest ; 2020 ; States of Fragility Volume 2020 ; development/states-of-fragility-2020 ; ba7c22e7-en >
 
     }
 
@@ -1105,13 +1103,12 @@
         issn = 2307-7727
       >
 
-      au < manifest ; 2021 ; Tax Administration Volume 2021 ; taxation/tax-administration-2021 ; cef472b9-en >
-      au < manifest ; 2019 ; Tax Administration Volume 2019 ; taxation/tax-administration-2019 ; 74d162b6-en >
-      au < manifest ; 2017 ; Tax Administration Volume 2017 ; taxation/tax-administration-2017 ; tax_admin-2017-en >
-      au < manifest ; 2015 ; Tax Administration Volume 2015 ; taxation/tax-administration-2015 ; tax_admin-2015-en >
-      au < manifest ; 2013 ; Tax Administration Volume 2013 ; taxation/tax-administration-2013 ; 9789264200814-en >
       au < manifest ; 2006 ; Tax Administration Volume 2006 ; taxation/tax-administration-in-oecd-and-selected-non-oecd-countries ; 9789264064904-en >
-
+      au < manifest ; 2013 ; Tax Administration Volume 2013 ; taxation/tax-administration-2013 ; 9789264200814-en >
+      au < manifest ; 2015 ; Tax Administration Volume 2015 ; taxation/tax-administration-2015 ; tax_admin-2015-en >
+      au < manifest ; 2017 ; Tax Administration Volume 2017 ; taxation/tax-administration-2017 ; tax_admin-2017-en >
+      au < manifest ; 2019 ; Tax Administration Volume 2019 ; taxation/tax-administration-2019 ; 74d162b6-en >
+      au < manifest ; 2021 ; Tax Administration Volume 2021 ; taxation/tax-administration-2021 ; cef472b9-en >
 
     }
 
@@ -1122,13 +1119,12 @@
         issn = 2617-3433
       >
 
-      au < manifest ; 2021 ; Tax Policy Reforms Volume 2021 ; taxation/tax-policy-reforms-2021 ; 427d2616-en >
-      au < manifest ; 2020 ; Tax Policy Reforms Volume 2020 ; taxation/tax-policy-reforms-2020 ; 7af51916-en >
-      au < testing ; 2019 ; Tax Policy Reforms Volume 2019 ; taxation/tax-policy-reforms-2019 ; da56c295-en >
-      au < manifest ; 2018 ; Tax Policy Reforms Volume 2018 ; taxation/tax-policy-reforms-2018 ; 9789264304468-en >
-      au < manifest ; 2017 ; Tax Policy Reforms Volume 2017 ; taxation/tax-policy-reforms-2017 ; 9789264279919-en >
       au < manifest ; 2016 ; Tax Policy Reforms Volume 2016 ; taxation/tax-policy-reform-in-the-oecd-2016 ; 9789264260399-en >
-
+      au < manifest ; 2017 ; Tax Policy Reforms Volume 2017 ; taxation/tax-policy-reforms-2017 ; 9789264279919-en >
+      au < manifest ; 2018 ; Tax Policy Reforms Volume 2018 ; taxation/tax-policy-reforms-2018 ; 9789264304468-en >
+      au < testing ; 2019 ; Tax Policy Reforms Volume 2019 ; taxation/tax-policy-reforms-2019 ; da56c295-en >
+      au < manifest ; 2020 ; Tax Policy Reforms Volume 2020 ; taxation/tax-policy-reforms-2020 ; 7af51916-en >
+      au < manifest ; 2021 ; Tax Policy Reforms Volume 2021 ; taxation/tax-policy-reforms-2021 ; 427d2616-en >
 
     }
 
@@ -1139,11 +1135,10 @@
         issn = 2706-6363
       >
 
-      au < manifest ; 2019 ; Taxing Energy Use Volume 2019 ; taxation/taxing-energy-use-2019 ; 058ca239-en >
-      au < manifest ; 2018 ; Taxing Energy Use Volume 2018 ; taxation/taxing-energy-use-2018 ; 9789264289635-en >
-      au < manifest ; 2015 ; Taxing Energy Use Volume 2015 ; taxation/taxing-energy-use-2015 ; 9789264232334-en >
       au < manifest ; 2013 ; Taxing Energy Use Volume 2013 ; taxation/taxing-energy-use ; 9789264183933-en >
-
+      au < manifest ; 2015 ; Taxing Energy Use Volume 2015 ; taxation/taxing-energy-use-2015 ; 9789264232334-en >
+      au < manifest ; 2018 ; Taxing Energy Use Volume 2018 ; taxation/taxing-energy-use-2018 ; 9789264289635-en >
+      au < manifest ; 2019 ; Taxing Energy Use Volume 2019 ; taxation/taxing-energy-use-2019 ; 058ca239-en >
 
     }
 
@@ -1154,13 +1149,12 @@
         issn = 2664-4851
       >
 
-      au < manifest ; 2021 ; The Missing Entrepreneurs Volume 2021 ; employment/the-missing-entrepreneurs-2021 ; 71b7a9bb-en >
-      au < manifest ; 2019 ; The Missing Entrepreneurs Volume 2019 ; industry-and-services/the-missing-entrepreneurs-2019 ; 3ed84801-en >
-      au < manifest ; 2017 ; The Missing Entrepreneurs Volume 2017 ; employment/the-missing-entrepreneurs-2017 ; 9789264283602-en >
-      au < manifest ; 2015 ; The Missing Entrepreneurs Volume 2015 ; employment/the-missing-entrepreneurs-2015 ; 9789264226418-en >
-      au < manifest ; 2014 ; The Missing Entrepreneurs Volume 2014 ; industry-and-services/the-missing-entrepreneurs-2014 ; 9789264213593-en >
       au < manifest ; 2013 ; The Missing Entrepreneurs Volume 2013 ; industry-and-services/the-missing-entrepreneurs ; 9789264188167-en >
-
+      au < manifest ; 2014 ; The Missing Entrepreneurs Volume 2014 ; industry-and-services/the-missing-entrepreneurs-2014 ; 9789264213593-en >
+      au < manifest ; 2015 ; The Missing Entrepreneurs Volume 2015 ; employment/the-missing-entrepreneurs-2015 ; 9789264226418-en >
+      au < manifest ; 2017 ; The Missing Entrepreneurs Volume 2017 ; employment/the-missing-entrepreneurs-2017 ; 9789264283602-en >
+      au < manifest ; 2019 ; The Missing Entrepreneurs Volume 2019 ; industry-and-services/the-missing-entrepreneurs-2019 ; 3ed84801-en >
+      au < manifest ; 2021 ; The Missing Entrepreneurs Volume 2021 ; employment/the-missing-entrepreneurs-2021 ; 71b7a9bb-en >
 
     }
 
@@ -1171,13 +1165,12 @@
         issn = 2218-7049
       >
 
-      au < testing ; 2022 ; Trends Shaping Education Volume 2022 ; education/trends-shaping-education-2022 ; 6ae8771a-en >
-      au < manifest ; 2019 ; Trends Shaping Education Volume 2019 ; education/trends-shaping-education-2019 ; trends_edu-2019-en >
-      au < manifest ; 2016 ; Trends Shaping Education Volume 2016 ; education/trends-shaping-education-2016 ; trends_edu-2016-en >
-      au < manifest ; 2013 ; Trends Shaping Education Volume 2013 ; education/trends-shaping-education-2013 ; trends_edu-2013-en >
-      au < manifest ; 2010 ; Trends Shaping Education Volume 2010 ; education/trends-shaping-education-2010 ; trends_edu-2010-en >
       au < manifest ; 2008 ; Trends Shaping Education Volume 2008 ; education/trends-shaping-education-2008 ; 9789264046627-en >
-
+      au < manifest ; 2010 ; Trends Shaping Education Volume 2010 ; education/trends-shaping-education-2010 ; trends_edu-2010-en >
+      au < manifest ; 2013 ; Trends Shaping Education Volume 2013 ; education/trends-shaping-education-2013 ; trends_edu-2013-en >
+      au < manifest ; 2016 ; Trends Shaping Education Volume 2016 ; education/trends-shaping-education-2016 ; trends_edu-2016-en >
+      au < manifest ; 2019 ; Trends Shaping Education Volume 2019 ; education/trends-shaping-education-2019 ; trends_edu-2019-en >
+      au < testing ; 2022 ; Trends Shaping Education Volume 2022 ; education/trends-shaping-education-2022 ; 6ae8771a-en >
 
     }
 
@@ -1188,19 +1181,18 @@
         issn = 2072-5310
       >
 
-      au < manifest ; 2020 ; Uranium Volume 2020 ; nuclear-energy/uranium-2020 ; d82388ab-en >
-      au < manifest ; 2018 ; Uranium Volume 2018 ; nuclear-energy/uranium-2018 ; uranium-2018-en >
-      au < manifest ; 2016 ; Uranium Volume 2016 ; nuclear-energy/uranium-2016 ; uranium-2016-en >
-      au < manifest ; 2014 ; Uranium Volume 2014 ; nuclear-energy/uranium-2014 ; uranium-2014-en >
-      au < manifest ; 2011 ; Uranium Volume 2011 ; nuclear-energy/uranium-2011 ; uranium-2011-en >
-      au < manifest ; 2009 ; Uranium Volume 2009 ; nuclear-energy/uranium-2009 ; uranium-2009-en >
-      au < manifest ; 2007 ; Uranium Volume 2007 ; nuclear-energy/uranium-2007 ; uranium-2007-en >
-      au < manifest ; 2005 ; Uranium Volume 2005 ; nuclear-energy/uranium-2005 ; uranium-2005-en >
-      au < testing ; 2003 ; Uranium Volume 2003 ; nuclear-energy/uranium-2003 ; uranium-2003-en >
-      au < manifest ; 2001 ; Uranium Volume 2001 ; nuclear-energy/uranium-2001 ; uranium-2001-en >
-      au < manifest ; 1999 ; Uranium Volume 1999 ; nuclear-energy/uranium-1999 ; 9789264189898-en >
       au < manifest ; 1998 ; Uranium Volume 1998 ; nuclear-energy/uranium-1998 ; uranium-1998-en >
-
+      au < manifest ; 1999 ; Uranium Volume 1999 ; nuclear-energy/uranium-1999 ; 9789264189898-en >
+      au < manifest ; 2001 ; Uranium Volume 2001 ; nuclear-energy/uranium-2001 ; uranium-2001-en >
+      au < testing ; 2003 ; Uranium Volume 2003 ; nuclear-energy/uranium-2003 ; uranium-2003-en >
+      au < manifest ; 2005 ; Uranium Volume 2005 ; nuclear-energy/uranium-2005 ; uranium-2005-en >
+      au < manifest ; 2007 ; Uranium Volume 2007 ; nuclear-energy/uranium-2007 ; uranium-2007-en >
+      au < manifest ; 2009 ; Uranium Volume 2009 ; nuclear-energy/uranium-2009 ; uranium-2009-en >
+      au < manifest ; 2011 ; Uranium Volume 2011 ; nuclear-energy/uranium-2011 ; uranium-2011-en >
+      au < manifest ; 2014 ; Uranium Volume 2014 ; nuclear-energy/uranium-2014 ; uranium-2014-en >
+      au < manifest ; 2016 ; Uranium Volume 2016 ; nuclear-energy/uranium-2016 ; uranium-2016-en >
+      au < manifest ; 2018 ; Uranium Volume 2018 ; nuclear-energy/uranium-2018 ; uranium-2018-en >
+      au < manifest ; 2020 ; Uranium Volume 2020 ; nuclear-energy/uranium-2020 ; d82388ab-en >
 
     }
 
@@ -1211,13 +1203,12 @@
         issn = 2790-4318
       >
 
-      au < manifest ; 2021 ; World Energy Investment Volume 2021 ; energy/world-energy-investment-2021 ; bfddacd3-en >
-      au < manifest ; 2020 ; World Energy Investment Volume 2020 ; energy/world-energy-investment-2020 ; 6f552938-en >
-      au < manifest ; 2019 ; World Energy Investment Volume 2019 ; energy/world-energy-investment-2019 ; 4f4f25b4-en >
-      au < manifest ; 2018 ; World Energy Investment Volume 2018 ; energy/world-energy-investment-2018 ; 9789264301351-en >
-      au < manifest ; 2017 ; World Energy Investment Volume 2017 ; energy/world-energy-investment-2017 ; 9789264277854-en >
       au < manifest ; 2016 ; World Energy Investment Volume 2016 ; energy/world-energy-investment-2016 ; 9789264262836-en >
-
+      au < manifest ; 2017 ; World Energy Investment Volume 2017 ; energy/world-energy-investment-2017 ; 9789264277854-en >
+      au < manifest ; 2018 ; World Energy Investment Volume 2018 ; energy/world-energy-investment-2018 ; 9789264301351-en >
+      au < manifest ; 2019 ; World Energy Investment Volume 2019 ; energy/world-energy-investment-2019 ; 4f4f25b4-en >
+      au < manifest ; 2020 ; World Energy Investment Volume 2020 ; energy/world-energy-investment-2020 ; 6f552938-en >
+      au < manifest ; 2021 ; World Energy Investment Volume 2021 ; energy/world-energy-investment-2021 ; bfddacd3-en >
 
     }
   }

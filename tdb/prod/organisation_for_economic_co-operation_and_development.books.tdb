@@ -54,7 +54,9 @@
     {
 
       title <
-        name = Organisation for Economic Co-operation and Development Books
+        name = Organisation for Economic Co-operation and Development Books ;
+        type = bookSeries ;
+        eissn = ????-????
       >
 
       au < manifest ; 2020 ; 9789264362819 ; Housing and Inclusive Growth ; social-issues-migration-health/housing-and-inclusive-growth ; 6ef36f4b-en >
@@ -66,335 +68,335 @@
       title <
         name = Testing A-Z ;
         type = bookSeries ;
-        eissn = 0000-0000
+        eissn = ????-????
 
       >
 
-        au < manifest ; 2000 ; 9789264182561 ; A Better World for All: Progress Towards the International Development Goals ; development/a-better-world-for-all ; 9789264182561-en >
-        au < manifest ; 2018 ; 9789264301085 ; A Broken Social Elevator? How to Promote Social Mobility ; social-issues-migration-health/broken-elevator-how-to-promote-social-mobility ; 9789264301085-en >
-        au < manifest ; 1999 ; 9789264172593 ; A Caring World: The New Social Policy Agenda ; social-issues-migration-health/a-caring-world ; 9789264172593-en >
-        au < manifest ; 2021 ; 9789264772885 ; A Chemicals Perspective on Designing with Sustainable Plastics: Goals, Considerations and Trade-offs ; environment/a-chemicals-perspective-on-designing-with-sustainable-plastics ; f2ba8ff3-en >
-        au < manifest ; 2017 ; 9789264272262 ; A Decade of Social Protection Development in Selected Asian Countries ; social-issues-migration-health/a-decade-of-social-protection-development-in-selected-asian-countries ; 9789264272262-en >
-        au < manifest ; 2005 ; 9789264008007 ; A Development Co-operation Lens on Terrorism Prevention ; development/a-development-co-operation-lens-on-terrorism-prevention ; 9789264008007-en-fr >
-        au < manifest ; 2003 ; 9789264100053 ; A Disease-based Comparison of Health Systems: What is Best and at what Cost? ; social-issues-migration-health/a-disease-based-comparison-of-health-systems ; 9789264100053-en >
-        au < manifest ; 2019 ; 9789264720220 ; A Flying Start: Improving Initial Teacher Preparation Systems ; education/a-flying-start ; cf74e549-en >
-        au < manifest ; 2012 ; 9789264179820 ; A Framework for Financing Water Resources Management ; environment/a-framework-for-financing-water-resources-management ; 9789264179820-en >
-        au < manifest ; 2011 ; 9789264201675 ; A Framework for Growth and Social Cohesion in Korea ; economics/a-framework-for-growth-and-social-cohesion-in-korea ; 9789264201675-en >
-        au < manifest ; 2013 ; 9789264194564 ; A Good Life in Old Age?: Monitoring and Improving Quality in Long-term Care ; social-issues-migration-health/a-good-life-in-old-age ; 9789264194564-en >
-        au < manifest ; 1999 ; 9789264173491 ; A History of the Château de la Muette ; economics/a-history-of-the-chateau-de-la-muette ; 9789264173491-en >
-        au < manifest ; 2003 ; 9789264103535 ; A New Approach to Authorisation in the Fields of Radiological Protection: The Road Test Report ; nuclear-energy/a-new-approach-to-authorisation-in-the-fields-of-radiological-protection ; 9789264103535-en >
-        au < manifest ; 2000 ; 9789264182127 ; A New Economy?: The Changing Role of Innovation and Information Technology in Growth ; science-and-technology/a-new-economy ; 9789264182127-en >
-        au < manifest ; 2004 ; 9789264018556 ; A New World Map in Textiles and Clothing: Adjusting to Change ; trade/a-new-world-map-in-textiles-and-clothing ; 9789264018556-en >
-        au < manifest ; 2008 ; 9789264040915 ; A Profile of Immigrant Populations in the 21st Century: Data from OECD Countries ; social-issues-migration-health/a-profile-of-immigrant-populations-in-the-21st-century ; 9789264040915-en >
-        au < manifest ; 1998 ; 9789264163058 ; A Regional Approach to Industrial Restructuring in the Tomsk Region, Russian Federation ; industry-and-services/a-regional-approach-to-industrial-restructuring-in-the-tomsk-region-russian-federation ; 9789264163058-en >
-        au < manifest ; 2000 ; 9789264182561 ; A Better World for All: Progress Towards the International Development Goals ; development/a-better-world-for-all ; 9789264182561-en >
-        au < manifest ; 2018 ; 9789264301085 ; A Broken Social Elevator? How to Promote Social Mobility ; social-issues-migration-health/broken-elevator-how-to-promote-social-mobility ; 9789264301085-en >
-        au < manifest ; 1999 ; 9789264172593 ; A Caring World: The New Social Policy Agenda ; social-issues-migration-health/a-caring-world ; 9789264172593-en >
-        au < manifest ; 2017 ; 9789264272262 ; A Decade of Social Protection Development in Selected Asian Countries ; social-issues-migration-health/a-decade-of-social-protection-development-in-selected-asian-countries ; 9789264272262-en >
-        au < testing ; 2005 ; 9789264008007 ; A Development Co-operation Lens on Terrorism Prevention ; development/a-development-co-operation-lens-on-terrorism-prevention ; 9789264008007-en-fr >
-        au < testing ; 2003 ; 9789264100053 ; A Disease-based Comparison of Health Systems: What is Best and at what Cost? ; social-issues-migration-health/a-disease-based-comparison-of-health-systems ; 9789264100053-en >
-        au < manifest ; 2012 ; 9789264179820 ; A Framework for Financing Water Resources Management ; environment/a-framework-for-financing-water-resources-management ; 9789264179820-en >
-        au < manifest ; 2011 ; 9789264201675 ; A Framework for Growth and Social Cohesion in Korea ; economics/a-framework-for-growth-and-social-cohesion-in-korea ; 9789264201675-en >
-        au < manifest ; 2013 ; 9789264194564 ; A Good Life in Old Age?: Monitoring and Improving Quality in Long-term Care ; social-issues-migration-health/a-good-life-in-old-age ; 9789264194564-en >
-        au < manifest ; 1999 ; 9789264173491 ; A History of the Château de la Muette ; economics/a-history-of-the-chateau-de-la-muette ; 9789264173491-en >
-        au < manifest ; 2003 ; 9789264103535 ; A New Approach to Authorisation in the Fields of Radiological Protection: The Road Test Report ; nuclear-energy/a-new-approach-to-authorisation-in-the-fields-of-radiological-protection ; 9789264103535-en >
-        au < manifest ; 2000 ; 9789264182127 ; A New Economy?: The Changing Role of Innovation and Information Technology in Growth ; science-and-technology/a-new-economy ; 9789264182127-en >
-        au < testing ; 2016 ; 9789264252271 ; A New Rural Development Paradigm for the 21st Century: A Toolkit for Developing Countries ; development/a-new-rural-development-paradigm-for-the-21st-century ; 9789264252271-en >
-        au < manifest ; 2004 ; 9789264018556 ; A New World Map in Textiles and Clothing: Adjusting to Change ; trade/a-new-world-map-in-textiles-and-clothing ; 9789264018556-en >
-        au < manifest ; 2008 ; 9789264040915 ; A Profile of Immigrant Populations in the 21st Century: Data from OECD Countries ; social-issues-migration-health/a-profile-of-immigrant-populations-in-the-21st-century ; 9789264040915-en >
-        au < manifest ; 1998 ; 9789264163058 ; A Regional Approach to Industrial Restructuring in the Tomsk Region, Russian Federation ; industry-and-services/a-regional-approach-to-industrial-restructuring-in-the-tomsk-region-russian-federation ; 9789264163058-en >
-        au < manifest ; 2016 ; 9789264263437 ; BEPS Project Explanatory Statement: 2015 Final Reports ; taxation/beps-project-explanatory-statement ; 9789264263437-en >
-        au < manifest ; 2007 ; 9789264032477 ; Babies and Bosses - Reconciling Work and Family Life: A Synthesis of Findings for OECD Countries ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life ; 9789264032477-en >
-        au < manifest ; 2002 ; 9789264161139 ; Babies and Bosses - Reconciling Work and Family Life (Volume 1): Australia, Denmark and the Netherlands ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life-volume-1 ; 9789264161139-en >
-        au < manifest ; 2003 ; 9789264104204 ; Babies and Bosses - Reconciling Work and Family Life (Volume 2): Austria, Ireland and Japan ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life-volume-2 ; 9789264104204-en >
-        au < testing ; 2004 ; 9789264108356 ; Babies and Bosses - Reconciling Work and Family Life (Volume 3): New Zealand, Portugal and Switzerland ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life-volume-3 ; 9789264108356-en >
-        au < manifest ; 2005 ; 9789264009295 ; Babies and Bosses - Reconciling Work and Family Life (Volume 4): Canada, Finland, Sweden and the United Kingdom ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life-volume-4 ; 9789264009295-en >
-        au < manifest ; 2016 ; 9789264253476 ; Back to Work: Australia: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-australia ; 9789264253476-en >
-        au < manifest ; 2015 ; 9789264233454 ; Back to Work: Canada: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-canada ; 9789264233454-en >
-        au < manifest ; 2016 ; 9789264267503 ; Back to Work: Denmark: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-denmark ; 9789264267503-en >
-        au < manifest ; 2016 ; 9789264264717 ; Back to Work: Finland: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-finland ; 9789264264717-en >
-        au < manifest ; 2015 ; 9789264227200 ; Back to Work: Japan: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-japan ; 9789264227200-en >
-        au < manifest ; 2017 ; 9789264264434 ; Back to Work: New Zealand: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-new-zealand ; 9789264264434-en >
-        au < testing ; 2015 ; 9789264246812 ; Back to Work: Sweden: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-sweden ; 9789264246812-en >
-        au < manifest ; 2016 ; 9789264266513 ; Back to Work: United States: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-united-states ; 9789264266513-en >
-        au < manifest ; 1999 ; 9789264173859 ; Back-end of the Fuel Cycle in a 1000 GWe Nuclear Scenario: Workshop Proceedings, Avignon, France, 6-7 October 1998 ; nuclear-energy/back-end-of-the-fuel-cycle-in-a-1000-gwe-nuclear-scenario ; 9789264173859-en >
-        au < manifest ; 2007 ; 9789264029293 ; Baltic Partnerships: Integration, Growth and Local Governance in the Baltic Sea Region ; governance/baltic-partnerships ; 9789264029293-en >
-        au < manifest ; 2008 ; 9789264041417 ; CO2 Capture and Storage: A Key Carbon Abatement Option ; energy/co2-capture-and-storage-a-key-carbon-abatement-option ; 9789264041417-en >
-        au < manifest ; 2010 ; 9789264096134 ; CO2 Emissions from Fuel Combustion 2010 ; energy/co2-emissions-from-fuel-combustion-2010 ; 9789264096134-en >
-        au < manifest ; 2005 ; 9789264011601 ; Dairy Policy Reform and Trade Liberalisation ; agriculture-and-food/dairy-policy-reform-and-trade-liberalisation ; 9789264011601-en >
-        au < manifest ; 2017 ; 9789264259157 ; Dare to Share: Germany's Experience Promoting Equal Partnership in Families ; social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families ; 9789264259157-en >
-        au < testing ; 2007 ; 9789264030336 ; Data and Metadata Reporting and Presentation Handbook ; economics/data-and-metadata-reporting-and-presentation-handbook ; 9789264030336-en >
-        au < manifest ; 2015 ; 9789264229358 ; Data-Driven Innovation: Big Data for Growth and Well-Being ; science-and-technology/data-driven-innovation ; 9789264229358-en >
-        au < manifest ; 2012 ; 9789264169463 ; Dealing Effectively with the Challenges of Transfer Pricing ; taxation/dealing-effectively-with-the-challenges-of-transfer-pricing ; 9789264169463-en >
-        au < manifest ; 2000 ; 9789264188389 ; Dealing with Climate Change: Policies and Measures in IEA Member Countries ; energy/dealing-with-climate-change ; 9789264188389-en >
-        au < manifest ; 2005 ; 9789264007321 ; Dealing with Interests, Values and Knowledge in Managing Risk: Workshop Proceedings, Brussels, Belgium 18-21 November 2003 ; nuclear-energy/dealing-with-interests-values-and-knowledge-in-managing-risk ; 9789264007321-en >
-        au < manifest ; 2017 ; 9789264271531 ; Debate the Issues: Complexity and Policy making ; economics/debate-the-issues-complexity-and-policy-making ; 9789264271531-en >
-        au < manifest ; 2016 ; 9789264242661 ; Debate the Issues: Investment ; finance-and-investment/debate-the-issues-investment ; 9789264242661-en >
-        au < manifest ; 2016 ; 9789264264687 ; Debate the Issues: New Approaches to Economic Challenges ; economics/debate-the-issues-new-approaches-to-economic-challenges ; 9789264264687-en >
-        au < testing ; 2004 ; 9789264006676 ; Debris Impact on Emergency Coolant Recirculation: Workshop Proceedings, Albuquerque NM, USA, 25-27 February 2004 ; nuclear-energy/debris-impact-on-emergency-coolant-recirculation ; 9789264006676-en >
-        au < manifest ; 2002 ; 9789264176003 ; Debt Management and Government Securities Markets in the 21st Century ; finance-and-investment/debt-management-and-government-securities-markets-in-the-21st-century ; 9789264176003-en >
-        au < manifest ; 2001 ; 9789264193161 ; E-Learning: The Partnership Challenge ; education/e-learning ; 9789264193161-en >
-        au < manifest ; 2015 ; 9789264209992 ; E-Learning in Higher Education in Latin America ; education/e-learning-in-higher-education-in-latin-america ; 9789264209992-en >
-        au < manifest ; 2005 ; 9789264007222 ; E-commerce: Transfer Pricing and Business Profits Taxation ; taxation/e-commerce-transfer-pricing-and-business-profits-taxation ; 9789264007222-en >
-        au < manifest ; 2005 ; 9789264009219 ; E-learning in Tertiary Education: Where Do We Stand? ; education/e-learning-in-tertiary-education ; 9789264009219-en >
-        au < manifest ; 2002 ; 9789282112946 ; ECMT Annual Report 2001 ; transport/ecmt-annual-report-2001 ; 9789282112946-en >
-        au < manifest ; 2003 ; 9789282113080 ; ECMT Annual Report 2002 ; transport/ecmt-annual-report-2002 ; 9789282113080-en >
-        au < testing ; 2004 ; 9789282123171 ; ECMT Annual Report 2003 ; transport/ecmt-annual-report-2003 ; 9789282123171-en >
-        au < manifest ; 2005 ; 9789282103463 ; ECMT Annual Report 2004 ; transport/ecmt-annual-report-2004 ; 9789282103463-en >
-        au < manifest ; 2006 ; 9789282123546 ; ECMT Annual Report 2005 ; transport/ecmt-annual-report-2005 ; 9789282123546-en >
-        au < manifest ; 2000 ; 9789264181205 ; EMU: One Year on ; finance-and-investment/emu ; 9789264181205-en >
-        au < manifest ; 1999 ; 9789264172609 ; EMU: Facts, Challenges and Policies ; finance-and-investment/emu ; 9789264172609-en >
-        au < manifest ; 2009 ; 9789264068391 ; Early and Ware Potatoes ; agriculture-and-food/early-and-ware-potatoes ; 9789264068391-en-fr >
-        au < manifest ; 2008 ; 9789264040304 ; Eco-Efficiency ; environment/eco-efficiency ; 9789264040304-en >
-        au < manifest ; 2010 ; 9789264077225 ; Eco-Innovation in Industry: Enabling Green Growth ; environment/eco-innovation-in-industry ; 9789264077225-en >
-        au < testing ; 1999 ; 9789264074262 ; Economic Accounts for Agriculture 1999 ; agriculture-and-food/economic-accounts-for-agriculture ; 9789264074262-en-fr >
-        au < manifest ; 2002 ; 9789264176027 ; FDI from Developing Countries: A Vector for Trade and Development ; development/fdi-from-developing-countries ; 9789264176027-en >
-        au < manifest ; 2018 ; 9789264281776 ; Facilitating the Reform of Economic Instruments for Water Management in Georgia ; environment/facilitating-the-reform-of-economic-instruments-for-water-management-in-georgia ; 9789264281776-en >
-        au < manifest ; 2007 ; 9789264065406 ; Facing the Future: Korea's Family, Pension and Health Policy Challenges ; social-issues-migration-health/facing-the-future ; 9789264065406-en >
-        au < manifest ; 2000 ; 9789264187849 ; Facts about European NGOs Active in International Development ; development/facts-about-european-ngos-active-in-international-development ; 9789264187849-en >
-        au < manifest ; 2003 ; 9789264099678 ; Farm Household Income: Issues and Policy Responses ; agriculture-and-food/farm-household-income ; 9789264099678-en >
-        au < manifest ; 2016 ; 9789264238657 ; Farm Management Practices to Foster Green Growth ; agriculture-and-food/farm-management-practices-to-foster-green-growth ; 9789264238657-en >
-        au < manifest ; 2012 ; 9789264167650 ; Farmer Behaviour, Agricultural Management and Climate Change ; agriculture-and-food/farmer-behaviour-agricultural-management-and-climate-change ; 9789264167650-en >
-        au < testing ; 2000 ; 9789264187511 ; Features, Events and Processes (FEPs) for Geologic Disposal of Radioactive Waste: An International Database ; nuclear-energy/features-events-and-processes-feps-for-geologic-disposal-of-radioactive-waste ; 9789264187511-en >
-        au < manifest ; 2014 ; 9789264222311 ; Few and Far: The Hard Facts on Stolen Asset Recovery ; development/few-and-far ; 9789264222311-en >
-        au < manifest ; 2003 ; 9789282103159 ; Fifty Years of Transport Policy: Successes, Failures and New Challenges ; transport/fifty-years-of-transport-policy ; 9789282103159-en >
-        au < manifest ; 2008 ; 9789264046955 ; Fighting Bribery in Public Procurement in Asia and the Pacific ; governance/fighting-bribery-in-public-procurement-in-asia-and-the-pacific ; 9789264046955-en >
-        au < manifest ; 2005 ; 9789264014008 ; Fighting Corruption and Promoting Integrity in Public Procurement ; governance/fighting-corruption-and-promoting-integrity-in-public-procurement ; 9789264014008-en >
-        au < manifest ; 2005 ; 9789264009851 ; Fighting Corruption in Transition Economies: Armenia 2005 ; governance/fighting-corruption-in-transition-economies-armenia-2005 ; 9789264009851-en >
-        au < manifest ; 2005 ; 9789264010765 ; Fighting Corruption in Transition Economies: Azerbaijan 2005 ; governance/fighting-corruption-in-transition-economies-azerbaijan-2005 ; 9789264010765-en >
-        au < manifest ; 2005 ; 9789264010789 ; Fighting Corruption in Transition Economies: Georgia 2005 ; governance/fighting-corruption-in-transition-economies-georgia-2005 ; 9789264010789-en >
-        au < testing ; 2007 ; 9789264026155 ; Fighting Corruption in Transition Economies: Kazakhstan 2007 ; governance/fighting-corruption-in-transition-economies-kazakhstan-2007 ; 9789264026155-en >
-        au < manifest ; 2015 ; 9789264236882 ; G20/OECD Principles of Corporate Governance ; governance/g20-oecd-principles-of-corporate-governance-2015 ; 9789264236882-en >
-        au < manifest ; 2002 ; 9789264196452 ; GATS: The Case for Open Services Markets ; trade/gats-the-case-for-open-services-markets ; 9789264196452-en >
-        au < manifest ; 2009 ; 9789264059542 ; Gadgets and Gigawatts: Policies for Energy Efficient Electronics ; energy/gadgets-and-gigawatts-policies-for-energy-efficient-electronics ; 9789264059542-en >
-        au < manifest ; 2007 ; 9789264037410 ; Gaining from Migration: Towards a New Mobility System ; development/gaining-from-migration ; 9789264037410-en >
-        au < manifest ; 2017 ; 9789264278875 ; Gaps and Governance Standards of Public Infrastructure in Chile: Infrastructure Governance Review ; governance/gaps-and-governance-standards-of-public-infrastructure-in-chile ; 9789264278875-en >
-        au < manifest ; 2017 ; 9789264272941 ; Garlic ; agriculture-and-food/garlic ; 9789264272941-en-fr >
-        au < manifest ; 2001 ; 9789264193086 ; Gas Generation and Migration in Radioactive Waste Disposal: Safety-relevant Issues -- Workshop Proceedings, Reims, France, 26-28 June 2000 ; nuclear-energy/gas-generation-and-migration-in-radioactive-waste-disposal ; 9789264193086-en >
-        au < testing ; 2015 ; 9789264247437 ; Gas Pricing: China's Challenges and IEA Experience ; energy/gas-pricing-china-s-challenges-and-iea-experience ; 9789264247437-en >
-        au < manifest ; 1998 ; 9789264162341 ; Gateways to the Global Market: Consumers and Electronic Commerce ; economics/gateways-to-the-global-market ; 9789264162341-en >
-        au < manifest ; 2002 ; 9789264175792 ; Handbook of Biodiversity Valuation: A Guide for Policy Makers ; environment/handbook-of-biodiversity-valuation ; 9789264175792-en >
-        au < manifest ; 1999 ; 9789264173903 ; Handbook of Incentive Measures for Biodiversity: Design and Implementation ; environment/handbook-of-incentive-measures-for-biodiversity ; 9789264173903-en >
-        au < manifest ; 2004 ; 9789264018624 ; Handbook of Market Creation for Biodiversity: Issues in Implementation ; environment/handbook-of-market-creation-for-biodiversity ; 9789264018624-en >
-        au < manifest ; 2008 ; 9789264043466 ; Handbook on Constructing Composite Indicators: Methodology and User Guide ; economics/handbook-on-constructing-composite-indicators-methodology-and-user-guide ; 9789264043466-en >
-        au < manifest ; 2010 ; 9789264091993 ; Handbook on Contracting Out Government Functions and Services in Post-Conflict and Fragile Situations ; development/handbook-on-contracting-out-government-functions-and-services-in-post-conflict-and-fragile-situations ; 9789264091993-en >
-        au < manifest ; 2009 ; 9789264079205 ; Handbook on Deriving Capital Measures of Intellectual Property Products ; economics/handbook-on-deriving-capital-measures-of-intellectual-property-products ; 9789264079205-en >
-        au < testing ; 2006 ; 9789264028159 ; Handbook on Hedonic Indexes and Quality Adjustments in Price Indexes: Special Application to Information Technology Products ; science-and-technology/handbook-on-hedonic-indexes-and-quality-adjustments-in-price-indexes ; 9789264028159-en >
-        au < manifest ; 2013 ; 9789264197183 ; Handbook on Residential Property Price Indices ; economics/handbook-on-residential-property-price-indices ; 9789264197183-en >
-        au < manifest ; 2003 ; 9789264101258 ; Hard Core Cartels: Recent progress and challenges ahead ; governance/hard-core-cartels ; 9789264101258-en >
-        au < manifest ; 1998 ; 9789264162945 ; Harmful Tax Competition: An Emerging Global Issue ; taxation/harmful-tax-competition ; 9789264162945-en >
-        au < manifest ; 2017 ; 9789264283954 ; Harmful Tax Practices - 2017 Progress Report on Preferential Regimes: Inclusive Framework on BEPS: Action 5 ; taxation/harmful-tax-practices-2017-progress-report-on-preferential-regimes ; 9789264283954-en >
-        au < manifest ; 2019 ; 9789264311480 ; Harmful Tax Practices - 2018 Progress Report on Preferential Regimes: Inclusive Framework on BEPS: Action 5 ; taxation/harmful-tax-practices-2018-progress-report-on-preferential-regimes ; 9789264311480-en >
-        au < manifest ; 2017 ; 9789264285675 ; Harmful Tax Practices - Peer Review Reports on the Exchange of Information on Tax Rulings: Inclusive Framework on BEPS: Action 5 ; taxation/harmful-tax-practices-peer-review-reports-on-the-exchange-of-information-on-tax-rulings ; 9789264285675-en >
-        au < manifest ; 2018 ; 9789264309586 ; Harmful Tax Practices – 2017 Peer Review Reports on the Exchange of Information on Tax Rulings: Inclusive Framework on BEPS: Action 5 ; taxation/harmful-tax-practices-2017-peer-review-reports-on-the-exchange-of-information-on-tax-rulings ; 9789264309586-en >
-        au < testing ; 2002 ; 9789264078475 ; Harmonised Integrated Classification System for Human Health and Environmental Hazards of Chemical Substances and Mixtures ; environment/harmonised-integrated-classification-system-for-human-health-and-environmental-hazards-of-chemical-substances-and-mixtures ; 9789264078475-en >
-        au < manifest ; 2003 ; 9789264199835 ; Harmonising Donor Practices for Effective Aid Delivery ; development/harmonising-donor-practices-for-effective-aid-delivery ; 9789264199835-en >
-        au < manifest ; 2003 ; 9789264101296 ; ICT and Economic Growth: Evidence from OECD countries, industries and firms ; science-and-technology/ict-and-economic-growth ; 9789264101296-en >
-        au < manifest ; 2006 ; 9789264012288 ; ICT and Learning: Supporting Out-of-School Youth and Adults ; education/ict-and-learning ; 9789264012288-en >
-        au < manifest ; 2013 ; 9789264202863 ; ICTs and the Health Sector: Towards Smarter Health and Wellness Models ; science-and-technology/icts-and-the-health-sector ; 9789264202863-en >
-        au < manifest ; 2010 ; 9789264077409 ; ICTs for Development: Improving Policy Coherence ; development/icts-for-development ; 9789264077409-en >
-        au < manifest ; 2008 ; 9789264043381 ; IEA Energy Policies Review: The European Union 2008 ; energy/iea-energy-policies-review-the-european-union-2008 ; 9789264043381-en >
-        au < manifest ; 2009 ; 9789264063785 ; IEA Scoreboard 2009: 35 Key Energy Trends over 35 Years ; energy/iea-scoreboard-2009 ; 9789264063785-en >
-        au < testing ; 2011 ; 9789264124653 ; IEA Scoreboard 2011: Implementing Energy Efficiency Policy: Progress and challenges in IEA member countries ; energy/iea-scoreboard-2011 ; 9789264124653-en >
-        au < manifest ; 2010 ; 9789282102824 ; IRTAD Road Safety Annual Report 2009 ; transport/irtad-road-safety-annual-report-2009 ; 9789282102824-en >
-        au < manifest ; 2015 ; 9789264228368 ; ISCED 2011 Operational Manual: Guidelines for Classifying National Education Programmes and Related Qualifications ; education/isced-2011-operational-manual ; 9789264228368-en >
-        au < manifest ; 2013 ; 9789282103937 ; ITF Transport Outlook 2013: Funding Transport ; transport/itf-transport-outlook-2013 ; 9789282103937-en >
-        au < manifest ; 2015 ; 9789282107782 ; ITF Transport Outlook 2015 ; transport/itf-transport-outlook-2015 ; 9789282107782-en >
-        au < manifest ; 2017 ; 9789282108000 ; ITF Transport Outlook 2017 ; transport/itf-transport-outlook-2017 ; 9789282108000-en >
-        au < manifest ; 2012 ; 9789264174801 ; Identification and Quantification of the Proceeds of Bribery: Revised edition, February 2012 ; governance/identification-and-quantification-of-the-proceeds-of-bribery ; 9789264174801-en >
-        au < manifest ; 2011 ; 9789264121652 ; Identification and Quantification of the Proceeds of Bribery ; governance/identification-and-quantification-of-the-proceeds-of-bribery ; 9789264121652-en >
-        au < testing ; 2012 ; 9789264174238 ; Illegal Trade in Environmentally Sensitive Goods ; trade/illegal-trade-in-environmentally-sensitive-goods ; 9789264174238-en >
-        au < manifest ; 2018 ; 9789264268418 ; Illicit Financial Flows: The Economy of Illicit Trade in West Africa ; development/illicit-financial-flows ; 9789264268418-en >
-        au < manifest ; 2012 ; 9789264992009 ; Japan's Compensation System for Nuclear Damage: As Related to the TEPCO Fukushima Daiichi Nuclear Accident ; nuclear-energy/japan-s-compensation-system-for-nuclear-damage ; 9789264992009-en >
-        au < manifest ; 2016 ; 9789264265035 ; Japan's Siting Process for the Geological Disposal of High-level Radioactive Waste: An International Peer Review ; nuclear-energy/japan-s-siting-process-for-the-geological-disposal-of-high-level-radioactive-waste ; 9789264265035-en >
-        au < manifest ; 2014 ; 9789264215955 ; Japan: Advancing the Third Arrow for a Resilient Economy and Inclusive Growth ; economics/japan-advancing-the-third-arrow-for-a-resilient-economy-and-inclusive-growth ; 9789264215955-en >
-        au < manifest ; 2016 ; 9789264256507 ; Japan: Boosting Growth and Well-being in an Ageing Society ; economics/japan-boosting-growth-and-well-being-in-an-ageing-society ; 9789264256507-en >
-        au < manifest ; 2018 ; 9789264299207 ; Japan: Promoting Inclusive Growth for an Ageing Society ; economics/japan-promoting-inclusive-growth-for-an-ageing-society ; 9789264299207-en >
-        au < manifest ; 2014 ; 9789264215009 ; Job Creation and Local Economic Development ; industry-and-services/job-creation-and-local-economic-development ; 9789264215009-en >
-        au < testing ; 2016 ; 9789264261976 ; Job Creation and Local Economic Development 2016 ; employment/job-creation-and-local-economic-development-2016 ; 9789264261976-en >
-        au < manifest ; 2018 ; 9789264305342 ; Job Creation and Local Economic Development 2018: Preparing for the Future of Work ; employment/job-creation-and-local-economic-development-2018 ; 9789264305342-en >
-        au < manifest ; 2011 ; 9789264110984 ; Job-rich Growth in Asia: Strategies for Local Employment, Skills Development and Social Protection ; employment/job-rich-growth-in-asia ; 9789264110984-en >
-        au < manifest ; 2007 ; 9789264033603 ; Jobs for Immigrants (Vol. 1): Labour Market Integration in Australia, Denmark, Germany and Sweden ; social-issues-migration-health/jobs-for-immigrants-vol-1 ; 9789264033603-en >
-        au < manifest ; 2008 ; 9789264055605 ; Jobs for Immigrants (Vol. 2): Labour Market Integration in Belgium, France, the Netherlands and Portugal ; social-issues-migration-health/jobs-for-immigrants-vol-2 ; 9789264055605-en >
-        au < manifest ; 2012 ; 9789264167537 ; Jobs for Immigrants (Vol. 3): Labour Market Integration in Austria, Norway and Switzerland ; social-issues-migration-health/jobs-for-immigrants-vol-3 ; 9789264167537-en >
-        au < manifest ; 2014 ; 9789264214712 ; Jobs for Immigrants (Vol. 4): Labour Market Integration in Italy ; social-issues-migration-health/jobs-for-immigrants-vol-4 ; 9789264214712-en >
-        au < manifest ; 2009 ; 9789264060203 ; Jobs for Youth/Des emplois pour les jeunes: Australia 2009 ; employment/jobs-for-youth-des-emplois-pour-les-jeunes-australia-2009 ; 9789264060203-en >
-        au < testing ; 2008 ; 9789264046498 ; Jobs for Youth/Des emplois pour les jeunes: Canada 2008 ; employment/jobs-for-youth-des-emplois-pour-les-jeunes-canada-2008 ; 9789264046498-en >
-        au < manifest ; 2010 ; 9789264075160 ; Jobs for Youth/Des emplois pour les jeunes: Denmark 2010 ; employment/jobs-for-youth-des-emplois-pour-les-jeunes-denmark-2010 ; 9789264075160-en >
-        au < manifest ; 2009 ; 9789264061958 ; Jobs for Youth/Des emplois pour les jeunes: France 2009 ; employment/jobs-for-youth-des-emplois-pour-les-jeunes-france-2009 ; 9789264061958-en >
-        au < manifest ; 2014 ; 9789264224605 ; Kazakhstan: Review of the Central Administration ; governance/kazakhstan-review-of-the-central-administration ; 9789264224605-en >
-        au < manifest ; 2004 ; 9789264106314 ; Keeping Children Safe in Traffic ; transport/keeping-children-safe-in-traffic ; 9789264106314-en >
-        au < manifest ; 2004 ; 9789264016705 ; Keeping Schools Safe in Earthquakes ; education/keeping-schools-safe-in-earthquakes ; 9789264016705-en >
-        au < manifest ; 2002 ; 9789282112823 ; Key Issues for Transport beyond 2000: 15th International Symposium on Theory and Practice in Transport Economics, Tessaloniki, Greece, 7th - 9th June 2000 ; transport/key-issues-for-transport-beyond-2000 ; 9789282112823-en >
-        au < manifest ; 2009 ; 9789264039537 ; Key World Energy Statistics 2009 ; energy/key-world-energy-statistics-2009 ; 9789264039537-en >
-        au < testing ; 2010 ; 9789264095243 ; Key World Energy Statistics 2010 ; energy/key-world-energy-statistics-2010 ; 9789264095243-en >
-        au < manifest ; 2008 ; 9789264044272 ; Kiwifruit ; agriculture-and-food/kiwifruit ; 9789264044272-en-fr >
-        au < manifest ; 1992 ; 9789264071544 ; Kiwifruit ; agriculture-and-food/kiwifruit ; 9789264071544-en-fr >
-        au < manifest ; 2000 ; 9789264181045 ; Knowledge Management in the Learning Society ; education/knowledge-management-in-the-learning-society ; 9789264181045-en >
-        au < manifest ; 2012 ; 9789264168596 ; Knowledge Networks and Markets in the Life Sciences ; science-and-technology/knowledge-networks-and-markets-in-the-life-sciences ; 9789264168596-en >
-        au < manifest ; 2016 ; 9789264251076 ; Labor Migration in Asia: Building effective institutions ; social-issues-migration-health/labor-migration-in-asia ; 9789264251076-en >
-        au < manifest ; 2018 ; 9789264289642 ; Labor Migration in Asia: Increasing the Development Impact of Migration through Finance and Technology ; social-issues-migration-health/labor-migration-in-asia-increasing-the-development-impact-of-migration-through-finance-and-technology ; 9789264289642-en >
-        au < manifest ; 2001 ; 9789264189836 ; Labour Market Policies and the Public Employment Service ; employment/labour-market-policies-and-the-public-employment-service ; 9789264189836-en >
-        au < testing ; 2017 ; 9789264269576 ; Labour Market Reforms in Portugal 2011-15: A Preliminary Assessment ; employment/labour-market-reforms-in-portugal-2011-15 ; 9789264269576-en >
-        au < manifest ; 2011 ; 9789264118706 ; M-Government: Mobile Technologies for Responsive Governments and Connected Societies ; governance/m-government-mobile-technologies-for-responsive-governments-and-connected-societies ; 9789264118706-en >
-        au < manifest ; 2014 ; 9789264221567 ; MRL Calculator: Users Guide and White Paper ; environment/mrl-calculator-users-guide-and-white-paper ; 9789264221567-en >
-        au < manifest ; 1996 ; 9789264062177 ; Macroeconomic Policies and Structural Reform ; environment/macroeconomic-policies-and-structural-reform ; 9789264062177-en >
-        au < manifest ; 1998 ; 9789264162990 ; Macrothesaurus for Information Processing in the Field of Economic and Social Development: Fifth Edition ; development/macrothesaurus-for-information-processing-in-the-field-of-economic-and-social-development ; 9789264162990-en >
-        au < manifest ; 2012 ; 9789264991712 ; Main Benefits from 30 Years of Joint Projects in Nuclear Safety ; nuclear-energy/main-benefits-from-30-years-of-joint-projects-in-nuclear-safety ; 9789264991712-en >
-        au < manifest ; 1995 ; 9789264162099 ; Main Developments in Trade: 1995 Edition ; trade/main-developments-in-trade ; 9789264162099-en >
-        au < manifest ; 2003 ; 9789264175785 ; Main Economic Indicators: Comparative Methodological Analysis: Wage related statistics Volume 2002 Supplement 3 ; economics/main-economic-indicators ; 9789264175785-en >
-        au < testing ; 2002 ; 9789264175778 ; Main Economic Indicators: Comparative Methodological Analysis: Consumer and Producer Price Indices Volume 2002 Supplement 2 ; economics/main-economic-indicators ; 9789264175778-en >
-        au < manifest ; 2002 ; 9789264196469 ; Main Economic Indicators: Comparative Methodological Analysis: Industry, Retail and Construction Indicators Volume 2002 Supplement 1 ; economics/main-economic-indicators ; 9789264196469-en >
-        au < manifest ; 2005 ; 9789264008557 ; Main Economic Indicators - Sources and Methods: Labour and Wage Statistics ; economics/main-economic-indicators-sources-and-methods ; 9789264008557-en >
-        au < manifest ; 1998 ; 9789264162327 ; Main Economic Indicators - Sources and Methods: Domestic Finance Statistics ; economics/main-economic-indicators-sources-and-methods ; 9789264162327-en >
-        au < manifest ; 2005 ; 9789264012073 ; NEA Sorption Project Phase II: Interpretation and Prediction of Radionuclide Sorption onto Substrates Relevant for Radioactive Waste Disposal Using Thermodynamic Sorption Models ; nuclear-energy/nea-sorption-project-phase-ii ; 9789264012073-en >
-        au < manifest ; 2016 ; 9789264249752 ; Nanomaterials in Waste Streams: Current Knowledge on Risks and Impacts ; environment/nanomaterials-in-waste-streams ; 9789264249752-en >
-        au < manifest ; 2014 ; 9789264209152 ; Nanotechnology and Tyres: Greening Industry and Transport ; science-and-technology/nanotechnology-and-tyres ; 9789264209152-en >
-        au < manifest ; 2010 ; 9789264067981 ; National Accounts at a Glance 2009 ; economics/national-accounts-at-a-glance-2009 ; 9789264067981-en >
-        au < testing ; 2011 ; 9789264095885 ; National Accounts at a Glance 2010 ; economics/national-accounts-at-a-glance-2010 ; 9789264095885-en >
-        au < manifest ; 2000 ; 9789264187948 ; National Accounts for China: Sources and Methods ; economics/national-accounts-for-china ; 9789264187948-en >
-        au < manifest ; 2001 ; 9789264192669 ; OECD 2000 Private Pensions Conference ; finance-and-investment/oecd-2000-private-pensions-conference ; 9789264192669-en >
-        au < manifest ; 2006 ; 9789264027176 ; OECD Anti-Spam Toolkit of Recommended Policies and Measures ; science-and-technology/oecd-anti-spam-toolkit-of-recommended-policies-and-measures ; 9789264027176-en >
-        au < manifest ; 2012 ; 9789264180291 ; OECD Banking Statistics: Financial Statements of Banks 2012 ; finance-and-investment/oecd-banking-statistics-financial-statements-of-banks-2012 ; 9789264180291-en >
-        au < manifest ; 2011 ; 9789264089907 ; OECD Banking Statistics: Methodological Country Notes 2010 ; finance-and-investment/oecd-banking-statistics-methodological-country-notes-2010 ; 9789264089907-en >
-        au < manifest ; 1996 ; 9789264064805 ; OECD Benchmark Definition of Foreign Direct Investment: Third Edition ; finance-and-investment/oecd-benchmark-definition-of-foreign-direct-investment ; 9789264064805-en >
-        au < manifest ; 2009 ; 9789264045743 ; OECD Benchmark Definition of Foreign Direct Investment 2008: Fourth Edition ; finance-and-investment/oecd-benchmark-definition-of-foreign-direct-investment-2008 ; 9789264045743-en >
-        au < testing ; 2007 ; 9789264128767 ; OECD Best Practice Guidelines for Biological Resource Centres ; science-and-technology/oecd-best-practice-guidelines-for-biological-resource-centres ; 9789264128767-en >
-        au < manifest ; 2006 ; 9789264015821 ; OECD Biotechnology Statistics - 2006 ; science-and-technology/oecd-biotechnology-statistics-2006 ; 9789264015821-en >
-        au < manifest ; 2009 ; 9789264073937 ; OECD Biotechnology Statistics 2009 ; science-and-technology/oecd-biotechnology-statistics-2009 ; 9789264073937-en >
-        au < manifest ; 2006 ; 9789264018099 ; OECD Bribery Awareness Handbook for Tax Examiners ; taxation/oecd-bribery-awareness-handbook-for-tax-examiners ; 9789264018099-en >
-        au < manifest ; 2006 ; 9789264014923 ; PEB Compendium of Exemplary Educational Facilities: 3rd Edition ; education/peb-compendium-of-exemplary-educational-facilities ; 9789264014923-en >
-        au < manifest ; 2005 ; 9789264010666 ; PISA 2003 Data Analysis Manual: SPSS ; education/pisa-2003-data-analysis-manual ; 9789264010666-en >
-        au < manifest ; 2005 ; 9789264010642 ; PISA 2003 Data Analysis Manual: SAS ; education/pisa-2003-data-analysis-manual ; 9789264010642-en >
-        au < manifest ; 2005 ; 9789264010543 ; PISA 2003 Technical Report ; education/pisa-2003-technical-report ; 9789264010543-en >
-        au < testing ; 2008 ; 9789264040151 ; PISA 2006: Volume 2: Data ; education/pisa-2006 ; 9789264040151-en >
-        au < manifest ; 2007 ; 9789264040014 ; PISA 2006: Science Competencies for Tomorrow's World: Volume 1: Analysis ; education/pisa-2006 ; 9789264040014-en >
-        au < manifest ; 2009 ; 9789264048096 ; PISA 2006 Technical Report ; education/pisa-2006-technical-report ; 9789264048096-en >
-        au < manifest ; 2010 ; 9789264062658 ; PISA 2009 Assessment Framework: Key Competencies in Reading, Mathematics and Science ; education/pisa-2009-assessment-framework ; 9789264062658-en >
-        au < manifest ; 2010 ; 9789264091580 ; PISA 2009 Results: Learning Trends: Changes in Student Performance Since 2000 (Volume V) ; education/pisa-2009-results-learning-trends ; 9789264091580-en >
-        au < manifest ; 2010 ; 9789264083943 ; PISA 2009 Results: Learning to Learn: Student Engagement, Strategies and Practices (Volume III) ; education/pisa-2009-results-learning-to-learn ; 9789264083943-en >
-        au < manifest ; 2010 ; 9789264091504 ; PISA 2009 Results: Overcoming Social Background: Equity in Learning Opportunities and Outcomes (Volume II) ; education/pisa-2009-results-overcoming-social-background ; 9789264091504-en >
-        au < manifest ; 2011 ; 9789264112995 ; PISA 2009 Results: Students On Line: Digital Technologies and Performance (Volume VI) ; education/pisa-2009-results-students-on-line ; 9789264112995-en >
-        au < testing ; 2010 ; 9789264091559 ; PISA 2009 Results: What Makes a School Successful?: Resources, Policies and Practices (Volume IV) ; education/pisa-2009-results-what-makes-a-school-successful ; 9789264091559-en >
-        au < manifest ; 2010 ; 9789264091450 ; PISA 2009 Results: What Students Know and Can Do: Student Performance in Reading, Mathematics and Science (Volume I) ; education/pisa-2009-results-what-students-know-and-can-do ; 9789264091450-en >
-        au < manifest ; 2012 ; 9789264167872 ; PISA 2009 Technical Report ; education/pisa-2009-technical-report ; 9789264167872-en >
-        au < manifest ; 2010 ; 9789264095298 ; PISA 2009 at a Glance ; education/pisa-at-a-glance-2010 ; 9789264095298-en >
-        au < manifest ; 2013 ; 9789264190511 ; PISA 2012 Assessment and Analytical Framework: Mathematics, Reading, Science, Problem Solving and Financial Literacy ; education/pisa-2012-assessment-and-analytical-framework ; 9789264190511-en >
-        au < manifest ; 2007 ; 9789264013681 ; Qualifications Systems: Bridges to Lifelong Learning ; education/qualifications-systems ; 9789264013681-en >
-        au < manifest ; 1999 ; 9789264078598 ; Quality Assurance and GLP ; environment/quality-assurance-and-glp ; 9789264078598-en >
-        au < manifest ; 2012 ; 9789264176515 ; Quality Matters in Early Childhood Education and Care: Czech Republic 2012 ; education/quality-matters-in-early-childhood-education-and-care-czech-republic-2012 ; 9789264176515-en >
-        au < testing ; 2012 ; 9789264173569 ; Quality Matters in Early Childhood Education and Care: Finland 2012 ; education/quality-matters-in-early-childhood-and-education-finland-2012 ; 9789264173569-en >
-        au < manifest ; 2012 ; 9789264176621 ; Quality Matters in Early Childhood Education and Care: Japan 2012 ; education/quality-matters-in-early-childhood-education-and-care-japan-2012 ; 9789264176621-en >
-        au < manifest ; 2012 ; 9789264175648 ; Quality Matters in Early Childhood Education and Care: Korea 2012 ; education/quality-matters-in-early-childhood-education-and-care-korea-2012 ; 9789264175648-en >
-        au < manifest ; 2012 ; 9789264176690 ; Quality Matters in Early Childhood Education and Care: New Zealand 2012 ; education/quality-matters-in-early-childhood-education-and-care-new-zealand-2012 ; 9789264176690-en >
-        au < manifest ; 2013 ; 9789264176713 ; Quality Matters in Early Childhood Education and Care: Norway 2013 ; education/quality-matters-in-early-childhood-education-and-care-norway-2012 ; 9789264176713-en >
-        au < manifest ; 2012 ; 9789264176720 ; Quality Matters in Early Childhood Education and Care: Portugal 2012 ; education/quality-matters-in-early-childhood-education-and-care-portugal-2012 ; 9789264176720-en >
-        au < manifest ; 2012 ; 9789264175655 ; Quality Matters in Early Childhood Education and Care: Slovak Republic 2012 ; education/quality-matters-in-early-childhood-education-and-care-slovak-republic-2012 ; 9789264175655-en >
-        au < manifest ; 2013 ; 9789264176744 ; Quality Matters in Early Childhood Education and Care: Sweden 2013 ; education/quality-matters-in-early-childhood-education-and-care-sweden-2012 ; 9789264176744-en >
-        au < testing ; 2012 ; 9789264176867 ; Quality Matters in Early Childhood Education and Care: United Kingdom (England) 2012 ; education/quality-matters-in-early-childhood-education-and-care-united-kingdom-england-2012 ; 9789264176867-en >
-        au < manifest ; 2010 ; 9789264083905 ; Quality Standards for Development Evaluation ; development/dac-quality-standards-for-development-evaluation ; 9789264083905-en >
-        au < manifest ; 2011 ; 9789264087057 ; Quality Time for Students: Learning In and Out of School ; education/quality-time-for-students-learning-in-and-out-of-school ; 9789264087057-en >
-        au < manifest ; 1999 ; 9789264173361 ; Quality and Internationalisation in Higher Education ; education/quality-and-internationalisation-in-higher-education ; 9789264173361-en >
-        au < manifest ; 2004 ; 9789264015104 ; Quality and Recognition in Higher Education: The Cross-border Challenge ; education/quality-and-recognition-in-higher-education ; 9789264015104-en >
-        au < manifest ; 2003 ; 9789264100435 ; Quantifying the Benefits of Liberalising Trade in Services ; trade/quantifying-the-benefits-of-liberalising-trade-in-services ; 9789264100435-en >
-        au < manifest ; 2017 ; 9789282108093 ; Quantifying the Socio-economic Benefits of Transport ; transport/quantifying-the-socio-economic-benefits-of-transport ; 9789282108093-en >
-        au < manifest ; 2014 ; 9789264222199 ; R&D and Innovation Needs for Decommissioning Nuclear Facilities ; nuclear-energy/r-d-and-innovation-needs-for-decommissioning-nuclear-facilities ; 9789264222199-en >
-        au < testing ; 2007 ; 9789264065673 ; R&D and Innovation in Spain: Improving the Policy Mix ; industry-and-services/r-d-and-innovation-in-spain ; 9789264065673-en >
-        au < manifest ; 2014 ; 9789264220997 ; Radiation Curable Coating, Inks and Adhesives ; environment/radiation-curable-coating-inks-and-adhesives ; 9789264220997-en >
-        au < manifest ; 2006 ; 9789264012110 ; Radioactive Waste Management Programmes in OECD/NEA Member Countries ; nuclear-energy/radioactive-waste-management-programmes-in-oecd-nea-member-countries ; 9789264012110-en >
-        au < manifest ; 2015 ; 9789264249868 ; Radioactive Waste Management and Constructing Memory for Future Generations: Proceedings of the International Conference and Debate, 15-17 September 2014 Verdun, France ; nuclear-energy/radioactive-waste-management-and-constructing-memory-for-future-generations ; 9789264249868-en >
-        au < manifest ; 2007 ; 9789264039421 ; Radioactive Waste Management in Spain: Co-ordination and Projects, FSC Workshop Proceedings, L'Hospitalet de l'Infanct, Spain 21-23 November 2005 ; nuclear-energy/radioactive-waste-management-in-spain ; 9789264039421-en >
-        au < manifest ; 2010 ; 9789264092624 ; Radioactive Waste in Perspective ; nuclear-energy/radioactive-waste-in-perspective ; 9789264092624-en >
-        au < manifest ; 2017 ; 9789264286207 ; Radiological Characterisation from a Waste and Materials End-State Perspective: Practices and Experience ; nuclear-energy/radiological-characterisation-from-a-waste-and-materials-end-state-perspective ; 9789264286207-en >
-        au < manifest ; 2000 ; 9789264182028 ; Radiological Impacts of Spent Nuclear Fuel Management Options: A Comparative Study ; nuclear-energy/radiological-impacts-of-spent-nuclear-fuel-management-options ; 9789264182028-en >
-        au < testing ; 2016 ; 9789264256880 ; Radiological Protection Science and Application ; nuclear-energy/radiological-protection-science-and-application ; 9789264256880-en >
-        au < manifest ; 2003 ; 9789264103436 ; Radiological Protection of the Environment: Summary Report of the Issues ; nuclear-energy/radiological-protection-of-the-environment ; 9789264103436-en >
-        au < manifest ; 2002 ; 9789264099708 ; Radiological Protection of the Environment: The Path forward to a New Policy?: Workshop Proceedings, Taormina, Sicily, Italy 12-14 February 2002 ; nuclear-energy/radiological-protection-of-the-environment-the-path-forward-to-a-new-policy ; 9789264099708-en >
-        au < manifest ; 2002 ; 9789264196148 ; Radionuclide Retention in Geologic Media: Workshop Proceedings - Oskarshamn, Sweden - 7-9 May 2001 ; nuclear-energy/radionuclide-retention-in-geologic-media ; 9789264196148-en >
-        au < manifest ; 1998 ; 9789264163478 ; Rail Restructuring in Europe ; transport/rail-restructuring-in-europe ; 9789264163478-en >
-        au < manifest ; 2001 ; 9789282112731 ; Railway Reform: Regulation of Freight Transport Markets ; transport/railway-reform ; 9789282112731-en >
-        au < manifest ; 2005 ; 9789282103524 ; Railway Reform and Charges for the Use of Infrastructure ; transport/railway-reform-and-charges-for-the-use-of-infrastructure ; 9789282103524-en >
-        au < manifest ; 2003 ; 9789264103597 ; Railway Reform in China ; transport/railway-reform-in-china ; 9789264103597-en >
-        au < testing ; 2016 ; 9789264209596 ; Re-powering Markets: Market design and regulation during the transition to low-carbon power systems ; energy/re-powering-markets ; 9789264209596-en >
-        au < manifest ; 2003 ; 9789264103467 ; SAFIR 2: Belgian R&D Programme on the Deep Disposal of High-level and Long-lived Radioactive Waste: An International Peer Review ; nuclear-energy/safir-2-belgian-r-d-programme-on-the-deep-disposal-of-high-level-and-long-lived-radioactive-waste ; 9789264103467-en >
-        au < manifest ; 1998 ; 9789264162631 ; SATIF-3 Shielding Aspects of Accelerators, Targets and Irradiation Facilities: Tohoku University, Sendai, Japan 12-13 May 1997 ; nuclear-energy/satif-3-shielding-aspects-of-accelerators-targets-and-irradiation-facilities ; 9789264162631-en >
-        au < manifest ; 2018 ; 9789264305328 ; SME Policy Index: ASEAN 2018: Boosting Competitiveness and Inclusive Growth ; development/sme-policy-index-asean-2018 ; 9789264305328-en >
-        au < manifest ; 2012 ; 9789264178847 ; SME Policy Index: Eastern Partner Countries 2012: Progress in the Implementation of the Small Business Act for Europe ; finance-and-investment/sme-policy-index-eastern-partner-countries-2012 ; 9789264178847-en >
-        au < manifest ; 2015 ; 9789264246249 ; SME Policy Index: Eastern Partner Countries 2016: Assessing the Implementation of the Small Business Act for Europe ; development/sme-policy-index-eastern-partner-countries-2016 ; 9789264246249-en >
-        au < manifest ; 2014 ; 9789264218413 ; SME Policy Index: The Mediterranean Middle East and North Africa 2014: Implementation of the Small Business Act for Europe ; finance-and-investment/sme-policy-index-the-mediterranean-middle-east-and-north-africa-2014 ; 9789264218413-en >
-        au < manifest ; 2012 ; 9789264178861 ; SME Policy Index: Western Balkans and Turkey 2012: Progress in the Implementation of the Small Business Act for Europe ; finance-and-investment/sme-policy-index-western-balkans-and-turkey-2012 ; 9789264178861-en >
-        au < testing ; 2016 ; 9789264254473 ; SME Policy Index: Western Balkans and Turkey 2016: Assessing the Implementation of the Small Business Act for Europe ; development/sme-policy-index-western-balkans-and-turkey-2016 ; 9789264254473-en >
-        au < manifest ; 2017 ; 9789264273467 ; SME and Entrepreneurship Policy in Canada ; industry-and-services/sme-and-entrepreneurship-policy-in-canada ; 9789264273467-en >
-        au < manifest ; 2018 ; 9789264306264 ; SME and Entrepreneurship Policy in Indonesia 2018 ; employment/sme-and-entrepreneurship-policy-in-indonesia-2018 ; 9789264306264-en >
-        au < manifest ; 2016 ; 9789264262324 ; SME and Entrepreneurship Policy in Israel 2016 ; industry-and-services/sme-and-entrepreneurship-policy-in-israel-2016 ; 9789264262324-en >
-        au < manifest ; 2010 ; 9789264079861 ; TALIS 2008 Technical Report ; education/talis-2008-technical-report ; 9789264079861-en >
-        au < manifest ; 2014 ; 9789264196261 ; TALIS 2013 Results: An International Perspective on Teaching and Learning ; education/talis-2013-results ; 9789264196261-en >
-        au < manifest ; 2007 ; 9789264031302 ; Table Grapes ; agriculture-and-food/table-grapes ; 9789264031302-en-fr >
-        au < manifest ; 2017 ; 9789264273887 ; Tackling Environmental Problems with the Help of Behavioural Insights ; environment/tackling-environmental-problems-with-the-help-of-behavioural-insights ; 9789264273887-en >
-        au < testing ; 2015 ; 9789264181069 ; Tackling Harmful Alcohol Use: Economics and Public Health Policy ; social-issues-migration-health/tackling-harmful-alcohol-use ; 9789264181069-en >
-        au < manifest ; 2010 ; 9789264088368 ; Tackling Inequalities in Brazil, China, India and South Africa: The Role of Labour Market and Social Policies ; social-issues-migration-health/tackling-inequalities-in-brazil-china-india-and-south-africa-2010 ; 9789264088368-en >
-        au < manifest ; 2007 ; 9789264030084 ; Tackling Investment Challenges in Power Generation in IEA Countries ; energy/tackling-investment-challenges-in-power-generation-in-iea-countries ; 9789264030084-en >
-        au < manifest ; 2017 ; 9789264266414 ; Tackling Wasteful Spending on Health ; social-issues-migration-health/tackling-wasteful-spending-on-health ; 9789264266414-en >
-        au < manifest ; 2011 ; 9789264126398 ; Tackling the Policy Challenges of Migration: Regulation, Integration, Development ; social-issues-migration-health/tackling-the-policy-challenges-of-migration ; 9789264126398-en >
-        au < manifest ; 2009 ; 9789264050815 ; Take the Test: Sample Questions from OECD's PISA Assessments ; education/take-the-test ; 9789264050815-en >
-        au < manifest ; 2008 ; 9789264056572 ; Taking Stock of Regulatory Reform: A Multidisciplinary Synthesis ; governance/taking-stock-of-regulatory-reform ; 9789264056572-en >
-        au < manifest ; 2015 ; 9789264231702 ; Talent Abroad: A Review of German Emigrants ; social-issues-migration-health/talent-abroad-a-review-of-german-emigrants ; 9789264231702-en >
-        au < testing ; 2017 ; 9789264264281 ; Talent Abroad: A Review of Moroccan Emigrants ; social-issues-migration-health/talent-abroad-a-review-of-moroccan-emigrants ; 9789264264281-en >
-        au < manifest ; 1980 ; 9789282105115 ; Tariff Policies other than Road Pricing for Urban Transport: Report of the Forty-Sixth Round Table on Transport Economics Held in Paris on 8-9 March 1979 ; transport/tariff-policies-other-than-road-pricing-for-urban-transport ; 9789282105115-en >
-        au < manifest ; 2006 ; 9789264109926 ; Ukraine: Energy Policy Review 2006 ; energy/ukraine ; 9789264109926-en >
-        au < manifest ; 1998 ; 9789264163423 ; Under One Roof: The Integration of Schools and Community Services in OECD Countries ; education/under-one-roof ; 9789264163423-en >
-        au < manifest ; 2004 ; 9789264019331 ; Understanding Economic Growth: A Macro-level, Industry-level, and Firm-level Perspective ; economics/understanding-economic-growth ; 9789264019331-en >
-        au < manifest ; 2008 ; 9789264046986 ; Understanding Economic Statistics: An OECD Perspective ; economics/understanding-economic-statistics-an-oecd-perspective ; 9789264046986-en >
-        au < manifest ; 2015 ; 9789264247444 ; Understanding Energy Challenges in India: Policies, Players and Issues ; energy/understanding-energy-challenges-in-india ; 9789264247444-en >
-        au < manifest ; 2017 ; 9789264281288 ; Understanding Financial Accounts ; economics/understanding-financial-accounts ; 9789264281288-en >
-        au < testing ; 2014 ; 9789264214637 ; Understanding National Accounts: Second Edition ; economics/understanding-national-accounts ; 9789264214637-en >
-        au < manifest ; 2007 ; 9789264027657 ; Understanding National Accounts ; economics/understanding-national-accounts ; 9789264027657-en >
-        au < manifest ; 2002 ; 9789264174986 ; Understanding the Brain: Towards a New Learning Science ; education/understanding-the-brain ; 9789264174986-en >
-        au < manifest ; 2007 ; 9789264029132 ; Understanding the Brain: The Birth of a Learning Science ; education/understanding-the-brain-the-birth-of-a-learning-science ; 9789264029132-en >
-        au < manifest ; 2018 ; 9789264308992 ; Understanding the Drivers of Trust in Government Institutions in Korea ; governance/understanding-the-drivers-of-trust-in-government-institutions-in-korea ; 9789264308992-en >
-        au < manifest ; 2007 ; 9789264034181 ; Understanding the Social Outcomes of Learning ; social-issues-migration-health/understanding-the-social-outcomes-of-learning ; 9789264034181-en >
-        au < manifest ; 2017 ; 9789264283589 ; United Kingdom: Country Health Profile 2017 ; social-issues-migration-health/united-kingdom-country-health-profile-2017 ; 9789264283589-en >
-        au < manifest ; 2010 ; 9789264201774 ; United Kingdom: Policies for a Sustainable Recovery ; economics/united-kingdom-policies-for-a-sustainable-recovery ; 9789264201774-en >
-        au < testing ; 2015 ; 9789264234833 ; Universal Basic Skills: What Countries Stand to Gain ; education/universal-basic-skills ; 9789264234833-en >
-        au < manifest ; 2005 ; 9789264006966 ; University Research Management: Developing Research in New Institutions ; education/university-research-management ; 9789264006966-en >
-        au < manifest ; 2001 ; 9789264195844 ; Valuation of Biodiversity Benefits: Selected Studies ; environment/valuation-of-biodiversity-benefits ; 9789264195844-en >
-        au < manifest ; 2010 ; 9789264038042 ; Valuation of Environment-Related Health Risks for Children ; environment/valuation-of-environment-related-health-risks-for-children ; 9789264038042-en >
-        au < manifest ; 2012 ; 9789264178809 ; Value for Money in Government: Australia 2012 ; governance/value-for-money-in-government-australia-2012 ; 9789264178809-en >
-        au < manifest ; 2011 ; 9789264130746 ; Value for Money in Government: Denmark 2011 ; governance/value-for-money-in-government-denmark-2011 ; 9789264130746-en >
-        au < manifest ; 2013 ; 9789264201927 ; Value for Money in Government: Norway 2013 ; governance/value-for-money-in-government-norway-2013 ; 9789264201927-en >
-        au < manifest ; 2013 ; 9789264200685 ; Value for Money in Government: Sweden 2013 ; governance/value-for-money-in-government-sweden-2013 ; 9789264200685-en >
-        au < testing ; 2011 ; 9789264096097 ; Value for Money in Government: The Netherlands 2010 ; governance/value-for-money-in-government-the-netherlands-2010 ; 9789264096097-en >
-        au < manifest ; 2010 ; 9789264088818 ; Value for Money in Health Spending ; social-issues-migration-health/value-for-money-in-health-spending ; 9789264088818-en >
-        au < manifest ; 1976 ; 9789282104156 ; Value of Time: Report of the Thirtieth Round Table on Transport Economics Held in Paris on 22nd and 23rd May, 1975 ; transport/value-of-time ; 9789282104156-en >
-        au < manifest ; 1998 ; 9789264163492 ; Value-Added Taxes in Central and Eastern European Countries: A Comparative Survey and Evaluation ; taxation/value-added-taxes-in-central-and-eastern-european-countries ; 9789264163492-en >
-        au < manifest ; 2014 ; 9789282107683 ; Valuing Convenience in Public Transport ; transport/valuing-convenience-in-public-transport ; 9789282107683-en >
-        au < manifest ; 2001 ; 9789264192126 ; Valuing Rural Amenities ; urban-rural-and-regional-development/valuing-rural-amenities ; 9789264192126-en >
-        au < manifest ; 2018 ; 9789264292697 ; Valuing our Teachers and Raising their Status: How Communities Can Help ; education/valuing-our-teachers-and-raising-their-status ; 9789264292697-en >
-        au < manifest ; 2003 ; 9789282103036 ; Vandalism, Terrorism and Security in Urban Public Passenger Transport ; transport/vandalism-terrorism-and-security-in-urban-public-passenger-transport ; 9789282103036-en >
-        au < testing ; 2001 ; 9789264193642 ; Vehicle Emission Reductions ; transport/vehicle-emission-reductions ; 9789264193642-en >
-        au < manifest ; 2003 ; 9789264101784 ; Voluntary Approaches for Environmental Policy: Effectiveness, Efficiency and Usage in Policy Mixes ; environment/voluntary-approaches-for-environmental-policy ; 9789264101784-en >
-        au < manifest ; 1998 ; 9789264162365 ; Wage Determination in the Public Sector: A France/Italy Comparison No. 21 ; governance/wage-determination-in-the-public-sector ; 9789264162365-en >
-        au < manifest ; 2000 ; 9789264180376 ; Waging the Global War on Poverty: Strategies and Case Studies ; development/waging-the-global-war-on-poverty ; 9789264180376-en >
-        au < manifest ; 2013 ; 9789264179080 ; Waiting Time Policies in the Health Sector: What Works? ; social-issues-migration-health/waiting-times-for-elective-surgery-what-works ; 9789264179080-en >
-        au < manifest ; 2019 ; 9789264309395 ; Waste Management and the Circular Economy in Selected OECD Countries: Evidence from Environmental Performance Reviews ; environment/waste-management-and-the-circular-economy-in-selected-oecd-countries ; 9789264309395-en >
-        au < manifest ; 2014 ; 9789264220973 ; Water Based Washing Operations at Industrial and Institutional Laundries ; environment/water-based-washing-operations-at-industrial-and-institutional-laundries ; 9789264220973-en >
-        au < manifest ; 2017 ; 9789264285712 ; Water Charges in Brazil: The Ways Forward ; environment/water-charges-in-brazil ; 9789264285712-en >
-        au < testing ; 1998 ; 9789264162648 ; Water Consumption and Sustainable Water Resources Management ; environment/water-consumption-and-sustainable-water-resources-management ; 9789264162648-en >
-        au < manifest ; 2016 ; 9789264251090 ; Water Governance in Cities ; governance/water-governance-in-cities ; 9789264251090-en >
-        au < manifest ; 2014 ; 9789264213753 ; Water Governance in Jordan: Overcoming the Challenges to Private Sector Participation ; governance/water-service-governance-in-jordan ; 9789264213753-en >
-        au < manifest ; 2012 ; 9789264174542 ; Water Governance in Latin America and the Caribbean: A Multi-level Approach ; governance/water-governance-in-latin-america-and-the-caribbean ; 9789264174542-en >
-        au < manifest ; 2011 ; 9789264119284 ; Water Governance in OECD Countries: A Multi-level Approach ; environment/water-governance-in-oecd-countries ; 9789264119284-en >
-        au < manifest ; 2014 ; 9789264174337 ; Water Governance in Tunisia: Overcoming the Challenges to Private Sector Participation ; governance/water-governance-in-tunisia ; 9789264174337-en >
-        au < manifest ; 2014 ; 9789264102637 ; Water Governance in the Netherlands: Fit for the Future? ; governance/water-governance-in-the-netherlands ; 9789264102637-en >
-        au < manifest ; 1998 ; 9789264162600 ; Water Management: Performance and Challenges in OECD Countries ; environment/water-management ; 9789264162600-en >
-        au < testing ; 2001 ; 9789264193253 ; Water Management and Investment in the New Independent States ; environment/water-management-and-investment-in-the-new-independent-states ; 9789264193253-en >
-        au < manifest ; 1999 ; 9789264172654 ; Xenotransplantation: International Policy Issues ; science-and-technology/xenotransplantation ; 9789264172654-en >
-        au < manifest ; 2006 ; 9789282113356 ; Young Drivers: The Road to Safety ; transport/young-drivers ; 9789282113356-en >
-        au < manifest ; 2017 ; 9789264285668 ; Youth Aspirations and the Reality of Jobs in Developing Countries: Mind the Gap ; development/youth-aspirations-and-the-reality-of-jobs-in-developing-countries ; 9789264285668-en >
-        au < manifest ; 2016 ; 9789264265721 ; Youth in the MENA Region: How to Bring Them In ; governance/youth-in-the-mena-region ; 9789264265721-en >
-        au < manifest ; 2016 ; 9789282108055 ; Zero Road Deaths and Serious Injuries: Leading a Paradigm Shift to a Safe System ; transport/zero-road-deaths-and-serious-injuries ; 9789282108055-en >
-        au < manifest ; 2017 ; 9789264274075 ; Země G20/OECD Principy správy a řízení společností ; governance/zeme-g20-oecd-principy-spravy-a-rizeni-spolecnosti ; 9789264274075-cs >
-        au < manifest ; 2013 ; 9789264191747 ; Zuwanderung ausländischer Arbeitskräfte: Deutschland ; social-issues-migration-health/zuwanderung-auslandischer-arbeitskrafte-deutschland-german-version ; 9789264191747-de >
+      au < manifest ; 1976 ; 9789282104156 ; Value of Time: Report of the Thirtieth Round Table on Transport Economics Held in Paris on 22nd and 23rd May, 1975 ; transport/value-of-time ; 9789282104156-en >
+      au < manifest ; 1980 ; 9789282105115 ; Tariff Policies other than Road Pricing for Urban Transport: Report of the Forty-Sixth Round Table on Transport Economics Held in Paris on 8-9 March 1979 ; transport/tariff-policies-other-than-road-pricing-for-urban-transport ; 9789282105115-en >
+      au < manifest ; 1992 ; 9789264071544 ; Kiwifruit ; agriculture-and-food/kiwifruit ; 9789264071544-en-fr >
+      au < manifest ; 1995 ; 9789264162099 ; Main Developments in Trade: 1995 Edition ; trade/main-developments-in-trade ; 9789264162099-en >
+      au < manifest ; 1996 ; 9789264062177 ; Macroeconomic Policies and Structural Reform ; environment/macroeconomic-policies-and-structural-reform ; 9789264062177-en >
+      au < manifest ; 1996 ; 9789264064805 ; OECD Benchmark Definition of Foreign Direct Investment: Third Edition ; finance-and-investment/oecd-benchmark-definition-of-foreign-direct-investment ; 9789264064805-en >
+      au < manifest ; 1998 ; 9789264162327 ; Main Economic Indicators - Sources and Methods: Domestic Finance Statistics ; economics/main-economic-indicators-sources-and-methods ; 9789264162327-en >
+      au < manifest ; 1998 ; 9789264162341 ; Gateways to the Global Market: Consumers and Electronic Commerce ; economics/gateways-to-the-global-market ; 9789264162341-en >
+      au < manifest ; 1998 ; 9789264162365 ; Wage Determination in the Public Sector: A France/Italy Comparison No. 21 ; governance/wage-determination-in-the-public-sector ; 9789264162365-en >
+      au < manifest ; 1998 ; 9789264162600 ; Water Management: Performance and Challenges in OECD Countries ; environment/water-management ; 9789264162600-en >
+      au < manifest ; 1998 ; 9789264162631 ; SATIF-3 Shielding Aspects of Accelerators, Targets and Irradiation Facilities: Tohoku University, Sendai, Japan 12-13 May 1997 ; nuclear-energy/satif-3-shielding-aspects-of-accelerators-targets-and-irradiation-facilities ; 9789264162631-en >
+      au < testing ; 1998 ; 9789264162648 ; Water Consumption and Sustainable Water Resources Management ; environment/water-consumption-and-sustainable-water-resources-management ; 9789264162648-en >
+      au < manifest ; 1998 ; 9789264162945 ; Harmful Tax Competition: An Emerging Global Issue ; taxation/harmful-tax-competition ; 9789264162945-en >
+      au < manifest ; 1998 ; 9789264162990 ; Macrothesaurus for Information Processing in the Field of Economic and Social Development: Fifth Edition ; development/macrothesaurus-for-information-processing-in-the-field-of-economic-and-social-development ; 9789264162990-en >
+      au < manifest ; 1998 ; 9789264163058 ; A Regional Approach to Industrial Restructuring in the Tomsk Region, Russian Federation ; industry-and-services/a-regional-approach-to-industrial-restructuring-in-the-tomsk-region-russian-federation ; 9789264163058-en >
+      au < manifest ; 1998 ; 9789264163058 ; A Regional Approach to Industrial Restructuring in the Tomsk Region, Russian Federation ; industry-and-services/a-regional-approach-to-industrial-restructuring-in-the-tomsk-region-russian-federation ; 9789264163058-en >
+      au < manifest ; 1998 ; 9789264163423 ; Under One Roof: The Integration of Schools and Community Services in OECD Countries ; education/under-one-roof ; 9789264163423-en >
+      au < manifest ; 1998 ; 9789264163478 ; Rail Restructuring in Europe ; transport/rail-restructuring-in-europe ; 9789264163478-en >
+      au < manifest ; 1998 ; 9789264163492 ; Value-Added Taxes in Central and Eastern European Countries: A Comparative Survey and Evaluation ; taxation/value-added-taxes-in-central-and-eastern-european-countries ; 9789264163492-en >
+      au < testing ; 1999 ; 9789264074262 ; Economic Accounts for Agriculture 1999 ; agriculture-and-food/economic-accounts-for-agriculture ; 9789264074262-en-fr >
+      au < manifest ; 1999 ; 9789264078598 ; Quality Assurance and GLP ; environment/quality-assurance-and-glp ; 9789264078598-en >
+      au < manifest ; 1999 ; 9789264172593 ; A Caring World: The New Social Policy Agenda ; social-issues-migration-health/a-caring-world ; 9789264172593-en >
+      au < manifest ; 1999 ; 9789264172593 ; A Caring World: The New Social Policy Agenda ; social-issues-migration-health/a-caring-world ; 9789264172593-en >
+      au < manifest ; 1999 ; 9789264172609 ; EMU: Facts, Challenges and Policies ; finance-and-investment/emu ; 9789264172609-en >
+      au < manifest ; 1999 ; 9789264172654 ; Xenotransplantation: International Policy Issues ; science-and-technology/xenotransplantation ; 9789264172654-en >
+      au < manifest ; 1999 ; 9789264173361 ; Quality and Internationalisation in Higher Education ; education/quality-and-internationalisation-in-higher-education ; 9789264173361-en >
+      au < manifest ; 1999 ; 9789264173491 ; A History of the Château de la Muette ; economics/a-history-of-the-chateau-de-la-muette ; 9789264173491-en >
+      au < manifest ; 1999 ; 9789264173491 ; A History of the Château de la Muette ; economics/a-history-of-the-chateau-de-la-muette ; 9789264173491-en >
+      au < manifest ; 1999 ; 9789264173859 ; Back-end of the Fuel Cycle in a 1000 GWe Nuclear Scenario: Workshop Proceedings, Avignon, France, 6-7 October 1998 ; nuclear-energy/back-end-of-the-fuel-cycle-in-a-1000-gwe-nuclear-scenario ; 9789264173859-en >
+      au < manifest ; 1999 ; 9789264173903 ; Handbook of Incentive Measures for Biodiversity: Design and Implementation ; environment/handbook-of-incentive-measures-for-biodiversity ; 9789264173903-en >
+      au < manifest ; 2000 ; 9789264180376 ; Waging the Global War on Poverty: Strategies and Case Studies ; development/waging-the-global-war-on-poverty ; 9789264180376-en >
+      au < manifest ; 2000 ; 9789264181045 ; Knowledge Management in the Learning Society ; education/knowledge-management-in-the-learning-society ; 9789264181045-en >
+      au < manifest ; 2000 ; 9789264181205 ; EMU: One Year on ; finance-and-investment/emu ; 9789264181205-en >
+      au < manifest ; 2000 ; 9789264182028 ; Radiological Impacts of Spent Nuclear Fuel Management Options: A Comparative Study ; nuclear-energy/radiological-impacts-of-spent-nuclear-fuel-management-options ; 9789264182028-en >
+      au < manifest ; 2000 ; 9789264182127 ; A New Economy?: The Changing Role of Innovation and Information Technology in Growth ; science-and-technology/a-new-economy ; 9789264182127-en >
+      au < manifest ; 2000 ; 9789264182127 ; A New Economy?: The Changing Role of Innovation and Information Technology in Growth ; science-and-technology/a-new-economy ; 9789264182127-en >
+      au < manifest ; 2000 ; 9789264182561 ; A Better World for All: Progress Towards the International Development Goals ; development/a-better-world-for-all ; 9789264182561-en >
+      au < manifest ; 2000 ; 9789264182561 ; A Better World for All: Progress Towards the International Development Goals ; development/a-better-world-for-all ; 9789264182561-en >
+      au < testing ; 2000 ; 9789264187511 ; Features, Events and Processes (FEPs) for Geologic Disposal of Radioactive Waste: An International Database ; nuclear-energy/features-events-and-processes-feps-for-geologic-disposal-of-radioactive-waste ; 9789264187511-en >
+      au < manifest ; 2000 ; 9789264187849 ; Facts about European NGOs Active in International Development ; development/facts-about-european-ngos-active-in-international-development ; 9789264187849-en >
+      au < manifest ; 2000 ; 9789264187948 ; National Accounts for China: Sources and Methods ; economics/national-accounts-for-china ; 9789264187948-en >
+      au < manifest ; 2000 ; 9789264188389 ; Dealing with Climate Change: Policies and Measures in IEA Member Countries ; energy/dealing-with-climate-change ; 9789264188389-en >
+      au < manifest ; 2001 ; 9789264189836 ; Labour Market Policies and the Public Employment Service ; employment/labour-market-policies-and-the-public-employment-service ; 9789264189836-en >
+      au < manifest ; 2001 ; 9789264192126 ; Valuing Rural Amenities ; urban-rural-and-regional-development/valuing-rural-amenities ; 9789264192126-en >
+      au < manifest ; 2001 ; 9789264192669 ; OECD 2000 Private Pensions Conference ; finance-and-investment/oecd-2000-private-pensions-conference ; 9789264192669-en >
+      au < manifest ; 2001 ; 9789264193086 ; Gas Generation and Migration in Radioactive Waste Disposal: Safety-relevant Issues -- Workshop Proceedings, Reims, France, 26-28 June 2000 ; nuclear-energy/gas-generation-and-migration-in-radioactive-waste-disposal ; 9789264193086-en >
+      au < manifest ; 2001 ; 9789264193161 ; E-Learning: The Partnership Challenge ; education/e-learning ; 9789264193161-en >
+      au < testing ; 2001 ; 9789264193253 ; Water Management and Investment in the New Independent States ; environment/water-management-and-investment-in-the-new-independent-states ; 9789264193253-en >
+      au < testing ; 2001 ; 9789264193642 ; Vehicle Emission Reductions ; transport/vehicle-emission-reductions ; 9789264193642-en >
+      au < manifest ; 2001 ; 9789264195844 ; Valuation of Biodiversity Benefits: Selected Studies ; environment/valuation-of-biodiversity-benefits ; 9789264195844-en >
+      au < manifest ; 2001 ; 9789282112731 ; Railway Reform: Regulation of Freight Transport Markets ; transport/railway-reform ; 9789282112731-en >
+      au < testing ; 2002 ; 9789264078475 ; Harmonised Integrated Classification System for Human Health and Environmental Hazards of Chemical Substances and Mixtures ; environment/harmonised-integrated-classification-system-for-human-health-and-environmental-hazards-of-chemical-substances-and-mixtures ; 9789264078475-en >
+      au < manifest ; 2002 ; 9789264099708 ; Radiological Protection of the Environment: The Path forward to a New Policy?: Workshop Proceedings, Taormina, Sicily, Italy 12-14 February 2002 ; nuclear-energy/radiological-protection-of-the-environment-the-path-forward-to-a-new-policy ; 9789264099708-en >
+      au < manifest ; 2002 ; 9789264161139 ; Babies and Bosses - Reconciling Work and Family Life (Volume 1): Australia, Denmark and the Netherlands ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life-volume-1 ; 9789264161139-en >
+      au < manifest ; 2002 ; 9789264174986 ; Understanding the Brain: Towards a New Learning Science ; education/understanding-the-brain ; 9789264174986-en >
+      au < testing ; 2002 ; 9789264175778 ; Main Economic Indicators: Comparative Methodological Analysis: Consumer and Producer Price Indices Volume 2002 Supplement 2 ; economics/main-economic-indicators ; 9789264175778-en >
+      au < manifest ; 2002 ; 9789264175792 ; Handbook of Biodiversity Valuation: A Guide for Policy Makers ; environment/handbook-of-biodiversity-valuation ; 9789264175792-en >
+      au < manifest ; 2002 ; 9789264176003 ; Debt Management and Government Securities Markets in the 21st Century ; finance-and-investment/debt-management-and-government-securities-markets-in-the-21st-century ; 9789264176003-en >
+      au < manifest ; 2002 ; 9789264176027 ; FDI from Developing Countries: A Vector for Trade and Development ; development/fdi-from-developing-countries ; 9789264176027-en >
+      au < manifest ; 2002 ; 9789264196148 ; Radionuclide Retention in Geologic Media: Workshop Proceedings - Oskarshamn, Sweden - 7-9 May 2001 ; nuclear-energy/radionuclide-retention-in-geologic-media ; 9789264196148-en >
+      au < manifest ; 2002 ; 9789264196452 ; GATS: The Case for Open Services Markets ; trade/gats-the-case-for-open-services-markets ; 9789264196452-en >
+      au < manifest ; 2002 ; 9789264196469 ; Main Economic Indicators: Comparative Methodological Analysis: Industry, Retail and Construction Indicators Volume 2002 Supplement 1 ; economics/main-economic-indicators ; 9789264196469-en >
+      au < manifest ; 2002 ; 9789282112823 ; Key Issues for Transport beyond 2000: 15th International Symposium on Theory and Practice in Transport Economics, Tessaloniki, Greece, 7th - 9th June 2000 ; transport/key-issues-for-transport-beyond-2000 ; 9789282112823-en >
+      au < manifest ; 2002 ; 9789282112946 ; ECMT Annual Report 2001 ; transport/ecmt-annual-report-2001 ; 9789282112946-en >
+      au < manifest ; 2003 ; 9789264099678 ; Farm Household Income: Issues and Policy Responses ; agriculture-and-food/farm-household-income ; 9789264099678-en >
+      au < manifest ; 2003 ; 9789264100053 ; A Disease-based Comparison of Health Systems: What is Best and at what Cost? ; social-issues-migration-health/a-disease-based-comparison-of-health-systems ; 9789264100053-en >
+      au < testing ; 2003 ; 9789264100053 ; A Disease-based Comparison of Health Systems: What is Best and at what Cost? ; social-issues-migration-health/a-disease-based-comparison-of-health-systems ; 9789264100053-en >
+      au < manifest ; 2003 ; 9789264100435 ; Quantifying the Benefits of Liberalising Trade in Services ; trade/quantifying-the-benefits-of-liberalising-trade-in-services ; 9789264100435-en >
+      au < manifest ; 2003 ; 9789264101258 ; Hard Core Cartels: Recent progress and challenges ahead ; governance/hard-core-cartels ; 9789264101258-en >
+      au < manifest ; 2003 ; 9789264101296 ; ICT and Economic Growth: Evidence from OECD countries, industries and firms ; science-and-technology/ict-and-economic-growth ; 9789264101296-en >
+      au < manifest ; 2003 ; 9789264101784 ; Voluntary Approaches for Environmental Policy: Effectiveness, Efficiency and Usage in Policy Mixes ; environment/voluntary-approaches-for-environmental-policy ; 9789264101784-en >
+      au < manifest ; 2003 ; 9789264103436 ; Radiological Protection of the Environment: Summary Report of the Issues ; nuclear-energy/radiological-protection-of-the-environment ; 9789264103436-en >
+      au < manifest ; 2003 ; 9789264103467 ; SAFIR 2: Belgian R&D Programme on the Deep Disposal of High-level and Long-lived Radioactive Waste: An International Peer Review ; nuclear-energy/safir-2-belgian-r-d-programme-on-the-deep-disposal-of-high-level-and-long-lived-radioactive-waste ; 9789264103467-en >
+      au < manifest ; 2003 ; 9789264103535 ; A New Approach to Authorisation in the Fields of Radiological Protection: The Road Test Report ; nuclear-energy/a-new-approach-to-authorisation-in-the-fields-of-radiological-protection ; 9789264103535-en >
+      au < manifest ; 2003 ; 9789264103535 ; A New Approach to Authorisation in the Fields of Radiological Protection: The Road Test Report ; nuclear-energy/a-new-approach-to-authorisation-in-the-fields-of-radiological-protection ; 9789264103535-en >
+      au < manifest ; 2003 ; 9789264103597 ; Railway Reform in China ; transport/railway-reform-in-china ; 9789264103597-en >
+      au < manifest ; 2003 ; 9789264104204 ; Babies and Bosses - Reconciling Work and Family Life (Volume 2): Austria, Ireland and Japan ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life-volume-2 ; 9789264104204-en >
+      au < manifest ; 2003 ; 9789264175785 ; Main Economic Indicators: Comparative Methodological Analysis: Wage related statistics Volume 2002 Supplement 3 ; economics/main-economic-indicators ; 9789264175785-en >
+      au < manifest ; 2003 ; 9789264199835 ; Harmonising Donor Practices for Effective Aid Delivery ; development/harmonising-donor-practices-for-effective-aid-delivery ; 9789264199835-en >
+      au < manifest ; 2003 ; 9789282103036 ; Vandalism, Terrorism and Security in Urban Public Passenger Transport ; transport/vandalism-terrorism-and-security-in-urban-public-passenger-transport ; 9789282103036-en >
+      au < manifest ; 2003 ; 9789282103159 ; Fifty Years of Transport Policy: Successes, Failures and New Challenges ; transport/fifty-years-of-transport-policy ; 9789282103159-en >
+      au < manifest ; 2003 ; 9789282113080 ; ECMT Annual Report 2002 ; transport/ecmt-annual-report-2002 ; 9789282113080-en >
+      au < testing ; 2004 ; 9789264006676 ; Debris Impact on Emergency Coolant Recirculation: Workshop Proceedings, Albuquerque NM, USA, 25-27 February 2004 ; nuclear-energy/debris-impact-on-emergency-coolant-recirculation ; 9789264006676-en >
+      au < manifest ; 2004 ; 9789264015104 ; Quality and Recognition in Higher Education: The Cross-border Challenge ; education/quality-and-recognition-in-higher-education ; 9789264015104-en >
+      au < manifest ; 2004 ; 9789264016705 ; Keeping Schools Safe in Earthquakes ; education/keeping-schools-safe-in-earthquakes ; 9789264016705-en >
+      au < manifest ; 2004 ; 9789264018556 ; A New World Map in Textiles and Clothing: Adjusting to Change ; trade/a-new-world-map-in-textiles-and-clothing ; 9789264018556-en >
+      au < manifest ; 2004 ; 9789264018556 ; A New World Map in Textiles and Clothing: Adjusting to Change ; trade/a-new-world-map-in-textiles-and-clothing ; 9789264018556-en >
+      au < manifest ; 2004 ; 9789264018624 ; Handbook of Market Creation for Biodiversity: Issues in Implementation ; environment/handbook-of-market-creation-for-biodiversity ; 9789264018624-en >
+      au < manifest ; 2004 ; 9789264019331 ; Understanding Economic Growth: A Macro-level, Industry-level, and Firm-level Perspective ; economics/understanding-economic-growth ; 9789264019331-en >
+      au < manifest ; 2004 ; 9789264106314 ; Keeping Children Safe in Traffic ; transport/keeping-children-safe-in-traffic ; 9789264106314-en >
+      au < testing ; 2004 ; 9789264108356 ; Babies and Bosses - Reconciling Work and Family Life (Volume 3): New Zealand, Portugal and Switzerland ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life-volume-3 ; 9789264108356-en >
+      au < testing ; 2004 ; 9789282123171 ; ECMT Annual Report 2003 ; transport/ecmt-annual-report-2003 ; 9789282123171-en >
+      au < manifest ; 2005 ; 9789264006966 ; University Research Management: Developing Research in New Institutions ; education/university-research-management ; 9789264006966-en >
+      au < manifest ; 2005 ; 9789264007222 ; E-commerce: Transfer Pricing and Business Profits Taxation ; taxation/e-commerce-transfer-pricing-and-business-profits-taxation ; 9789264007222-en >
+      au < manifest ; 2005 ; 9789264007321 ; Dealing with Interests, Values and Knowledge in Managing Risk: Workshop Proceedings, Brussels, Belgium 18-21 November 2003 ; nuclear-energy/dealing-with-interests-values-and-knowledge-in-managing-risk ; 9789264007321-en >
+      au < manifest ; 2005 ; 9789264008007 ; A Development Co-operation Lens on Terrorism Prevention ; development/a-development-co-operation-lens-on-terrorism-prevention ; 9789264008007-en-fr >
+      au < testing ; 2005 ; 9789264008007 ; A Development Co-operation Lens on Terrorism Prevention ; development/a-development-co-operation-lens-on-terrorism-prevention ; 9789264008007-en-fr >
+      au < manifest ; 2005 ; 9789264008557 ; Main Economic Indicators - Sources and Methods: Labour and Wage Statistics ; economics/main-economic-indicators-sources-and-methods ; 9789264008557-en >
+      au < manifest ; 2005 ; 9789264009219 ; E-learning in Tertiary Education: Where Do We Stand? ; education/e-learning-in-tertiary-education ; 9789264009219-en >
+      au < manifest ; 2005 ; 9789264009295 ; Babies and Bosses - Reconciling Work and Family Life (Volume 4): Canada, Finland, Sweden and the United Kingdom ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life-volume-4 ; 9789264009295-en >
+      au < manifest ; 2005 ; 9789264009851 ; Fighting Corruption in Transition Economies: Armenia 2005 ; governance/fighting-corruption-in-transition-economies-armenia-2005 ; 9789264009851-en >
+      au < manifest ; 2005 ; 9789264010543 ; PISA 2003 Technical Report ; education/pisa-2003-technical-report ; 9789264010543-en >
+      au < manifest ; 2005 ; 9789264010642 ; PISA 2003 Data Analysis Manual: SAS ; education/pisa-2003-data-analysis-manual ; 9789264010642-en >
+      au < manifest ; 2005 ; 9789264010666 ; PISA 2003 Data Analysis Manual: SPSS ; education/pisa-2003-data-analysis-manual ; 9789264010666-en >
+      au < manifest ; 2005 ; 9789264010765 ; Fighting Corruption in Transition Economies: Azerbaijan 2005 ; governance/fighting-corruption-in-transition-economies-azerbaijan-2005 ; 9789264010765-en >
+      au < manifest ; 2005 ; 9789264010789 ; Fighting Corruption in Transition Economies: Georgia 2005 ; governance/fighting-corruption-in-transition-economies-georgia-2005 ; 9789264010789-en >
+      au < manifest ; 2005 ; 9789264011601 ; Dairy Policy Reform and Trade Liberalisation ; agriculture-and-food/dairy-policy-reform-and-trade-liberalisation ; 9789264011601-en >
+      au < manifest ; 2005 ; 9789264012073 ; NEA Sorption Project Phase II: Interpretation and Prediction of Radionuclide Sorption onto Substrates Relevant for Radioactive Waste Disposal Using Thermodynamic Sorption Models ; nuclear-energy/nea-sorption-project-phase-ii ; 9789264012073-en >
+      au < manifest ; 2005 ; 9789264014008 ; Fighting Corruption and Promoting Integrity in Public Procurement ; governance/fighting-corruption-and-promoting-integrity-in-public-procurement ; 9789264014008-en >
+      au < manifest ; 2005 ; 9789282103463 ; ECMT Annual Report 2004 ; transport/ecmt-annual-report-2004 ; 9789282103463-en >
+      au < manifest ; 2005 ; 9789282103524 ; Railway Reform and Charges for the Use of Infrastructure ; transport/railway-reform-and-charges-for-the-use-of-infrastructure ; 9789282103524-en >
+      au < manifest ; 2006 ; 9789264012110 ; Radioactive Waste Management Programmes in OECD/NEA Member Countries ; nuclear-energy/radioactive-waste-management-programmes-in-oecd-nea-member-countries ; 9789264012110-en >
+      au < manifest ; 2006 ; 9789264012288 ; ICT and Learning: Supporting Out-of-School Youth and Adults ; education/ict-and-learning ; 9789264012288-en >
+      au < manifest ; 2006 ; 9789264014923 ; PEB Compendium of Exemplary Educational Facilities: 3rd Edition ; education/peb-compendium-of-exemplary-educational-facilities ; 9789264014923-en >
+      au < manifest ; 2006 ; 9789264015821 ; OECD Biotechnology Statistics - 2006 ; science-and-technology/oecd-biotechnology-statistics-2006 ; 9789264015821-en >
+      au < manifest ; 2006 ; 9789264018099 ; OECD Bribery Awareness Handbook for Tax Examiners ; taxation/oecd-bribery-awareness-handbook-for-tax-examiners ; 9789264018099-en >
+      au < manifest ; 2006 ; 9789264027176 ; OECD Anti-Spam Toolkit of Recommended Policies and Measures ; science-and-technology/oecd-anti-spam-toolkit-of-recommended-policies-and-measures ; 9789264027176-en >
+      au < testing ; 2006 ; 9789264028159 ; Handbook on Hedonic Indexes and Quality Adjustments in Price Indexes: Special Application to Information Technology Products ; science-and-technology/handbook-on-hedonic-indexes-and-quality-adjustments-in-price-indexes ; 9789264028159-en >
+      au < manifest ; 2006 ; 9789264109926 ; Ukraine: Energy Policy Review 2006 ; energy/ukraine ; 9789264109926-en >
+      au < manifest ; 2006 ; 9789282113356 ; Young Drivers: The Road to Safety ; transport/young-drivers ; 9789282113356-en >
+      au < manifest ; 2006 ; 9789282123546 ; ECMT Annual Report 2005 ; transport/ecmt-annual-report-2005 ; 9789282123546-en >
+      au < manifest ; 2007 ; 9789264013681 ; Qualifications Systems: Bridges to Lifelong Learning ; education/qualifications-systems ; 9789264013681-en >
+      au < testing ; 2007 ; 9789264026155 ; Fighting Corruption in Transition Economies: Kazakhstan 2007 ; governance/fighting-corruption-in-transition-economies-kazakhstan-2007 ; 9789264026155-en >
+      au < manifest ; 2007 ; 9789264027657 ; Understanding National Accounts ; economics/understanding-national-accounts ; 9789264027657-en >
+      au < manifest ; 2007 ; 9789264029132 ; Understanding the Brain: The Birth of a Learning Science ; education/understanding-the-brain-the-birth-of-a-learning-science ; 9789264029132-en >
+      au < manifest ; 2007 ; 9789264029293 ; Baltic Partnerships: Integration, Growth and Local Governance in the Baltic Sea Region ; governance/baltic-partnerships ; 9789264029293-en >
+      au < manifest ; 2007 ; 9789264030084 ; Tackling Investment Challenges in Power Generation in IEA Countries ; energy/tackling-investment-challenges-in-power-generation-in-iea-countries ; 9789264030084-en >
+      au < testing ; 2007 ; 9789264030336 ; Data and Metadata Reporting and Presentation Handbook ; economics/data-and-metadata-reporting-and-presentation-handbook ; 9789264030336-en >
+      au < manifest ; 2007 ; 9789264031302 ; Table Grapes ; agriculture-and-food/table-grapes ; 9789264031302-en-fr >
+      au < manifest ; 2007 ; 9789264032477 ; Babies and Bosses - Reconciling Work and Family Life: A Synthesis of Findings for OECD Countries ; social-issues-migration-health/babies-and-bosses-reconciling-work-and-family-life ; 9789264032477-en >
+      au < manifest ; 2007 ; 9789264033603 ; Jobs for Immigrants (Vol. 1): Labour Market Integration in Australia, Denmark, Germany and Sweden ; social-issues-migration-health/jobs-for-immigrants-vol-1 ; 9789264033603-en >
+      au < manifest ; 2007 ; 9789264034181 ; Understanding the Social Outcomes of Learning ; social-issues-migration-health/understanding-the-social-outcomes-of-learning ; 9789264034181-en >
+      au < manifest ; 2007 ; 9789264037410 ; Gaining from Migration: Towards a New Mobility System ; development/gaining-from-migration ; 9789264037410-en >
+      au < manifest ; 2007 ; 9789264039421 ; Radioactive Waste Management in Spain: Co-ordination and Projects, FSC Workshop Proceedings, L'Hospitalet de l'Infanct, Spain 21-23 November 2005 ; nuclear-energy/radioactive-waste-management-in-spain ; 9789264039421-en >
+      au < manifest ; 2007 ; 9789264040014 ; PISA 2006: Science Competencies for Tomorrow's World: Volume 1: Analysis ; education/pisa-2006 ; 9789264040014-en >
+      au < manifest ; 2007 ; 9789264065406 ; Facing the Future: Korea's Family, Pension and Health Policy Challenges ; social-issues-migration-health/facing-the-future ; 9789264065406-en >
+      au < testing ; 2007 ; 9789264065673 ; R&D and Innovation in Spain: Improving the Policy Mix ; industry-and-services/r-d-and-innovation-in-spain ; 9789264065673-en >
+      au < testing ; 2007 ; 9789264128767 ; OECD Best Practice Guidelines for Biological Resource Centres ; science-and-technology/oecd-best-practice-guidelines-for-biological-resource-centres ; 9789264128767-en >
+      au < testing ; 2008 ; 9789264040151 ; PISA 2006: Volume 2: Data ; education/pisa-2006 ; 9789264040151-en >
+      au < manifest ; 2008 ; 9789264040304 ; Eco-Efficiency ; environment/eco-efficiency ; 9789264040304-en >
+      au < manifest ; 2008 ; 9789264040915 ; A Profile of Immigrant Populations in the 21st Century: Data from OECD Countries ; social-issues-migration-health/a-profile-of-immigrant-populations-in-the-21st-century ; 9789264040915-en >
+      au < manifest ; 2008 ; 9789264040915 ; A Profile of Immigrant Populations in the 21st Century: Data from OECD Countries ; social-issues-migration-health/a-profile-of-immigrant-populations-in-the-21st-century ; 9789264040915-en >
+      au < manifest ; 2008 ; 9789264041417 ; CO2 Capture and Storage: A Key Carbon Abatement Option ; energy/co2-capture-and-storage-a-key-carbon-abatement-option ; 9789264041417-en >
+      au < manifest ; 2008 ; 9789264043381 ; IEA Energy Policies Review: The European Union 2008 ; energy/iea-energy-policies-review-the-european-union-2008 ; 9789264043381-en >
+      au < manifest ; 2008 ; 9789264043466 ; Handbook on Constructing Composite Indicators: Methodology and User Guide ; economics/handbook-on-constructing-composite-indicators-methodology-and-user-guide ; 9789264043466-en >
+      au < manifest ; 2008 ; 9789264044272 ; Kiwifruit ; agriculture-and-food/kiwifruit ; 9789264044272-en-fr >
+      au < testing ; 2008 ; 9789264046498 ; Jobs for Youth/Des emplois pour les jeunes: Canada 2008 ; employment/jobs-for-youth-des-emplois-pour-les-jeunes-canada-2008 ; 9789264046498-en >
+      au < manifest ; 2008 ; 9789264046955 ; Fighting Bribery in Public Procurement in Asia and the Pacific ; governance/fighting-bribery-in-public-procurement-in-asia-and-the-pacific ; 9789264046955-en >
+      au < manifest ; 2008 ; 9789264046986 ; Understanding Economic Statistics: An OECD Perspective ; economics/understanding-economic-statistics-an-oecd-perspective ; 9789264046986-en >
+      au < manifest ; 2008 ; 9789264055605 ; Jobs for Immigrants (Vol. 2): Labour Market Integration in Belgium, France, the Netherlands and Portugal ; social-issues-migration-health/jobs-for-immigrants-vol-2 ; 9789264055605-en >
+      au < manifest ; 2008 ; 9789264056572 ; Taking Stock of Regulatory Reform: A Multidisciplinary Synthesis ; governance/taking-stock-of-regulatory-reform ; 9789264056572-en >
+      au < manifest ; 2009 ; 9789264039537 ; Key World Energy Statistics 2009 ; energy/key-world-energy-statistics-2009 ; 9789264039537-en >
+      au < manifest ; 2009 ; 9789264045743 ; OECD Benchmark Definition of Foreign Direct Investment 2008: Fourth Edition ; finance-and-investment/oecd-benchmark-definition-of-foreign-direct-investment-2008 ; 9789264045743-en >
+      au < manifest ; 2009 ; 9789264048096 ; PISA 2006 Technical Report ; education/pisa-2006-technical-report ; 9789264048096-en >
+      au < manifest ; 2009 ; 9789264050815 ; Take the Test: Sample Questions from OECD's PISA Assessments ; education/take-the-test ; 9789264050815-en >
+      au < manifest ; 2009 ; 9789264059542 ; Gadgets and Gigawatts: Policies for Energy Efficient Electronics ; energy/gadgets-and-gigawatts-policies-for-energy-efficient-electronics ; 9789264059542-en >
+      au < manifest ; 2009 ; 9789264060203 ; Jobs for Youth/Des emplois pour les jeunes: Australia 2009 ; employment/jobs-for-youth-des-emplois-pour-les-jeunes-australia-2009 ; 9789264060203-en >
+      au < manifest ; 2009 ; 9789264061958 ; Jobs for Youth/Des emplois pour les jeunes: France 2009 ; employment/jobs-for-youth-des-emplois-pour-les-jeunes-france-2009 ; 9789264061958-en >
+      au < manifest ; 2009 ; 9789264063785 ; IEA Scoreboard 2009: 35 Key Energy Trends over 35 Years ; energy/iea-scoreboard-2009 ; 9789264063785-en >
+      au < manifest ; 2009 ; 9789264068391 ; Early and Ware Potatoes ; agriculture-and-food/early-and-ware-potatoes ; 9789264068391-en-fr >
+      au < manifest ; 2009 ; 9789264073937 ; OECD Biotechnology Statistics 2009 ; science-and-technology/oecd-biotechnology-statistics-2009 ; 9789264073937-en >
+      au < manifest ; 2009 ; 9789264079205 ; Handbook on Deriving Capital Measures of Intellectual Property Products ; economics/handbook-on-deriving-capital-measures-of-intellectual-property-products ; 9789264079205-en >
+      au < manifest ; 2010 ; 9789264038042 ; Valuation of Environment-Related Health Risks for Children ; environment/valuation-of-environment-related-health-risks-for-children ; 9789264038042-en >
+      au < manifest ; 2010 ; 9789264062658 ; PISA 2009 Assessment Framework: Key Competencies in Reading, Mathematics and Science ; education/pisa-2009-assessment-framework ; 9789264062658-en >
+      au < manifest ; 2010 ; 9789264067981 ; National Accounts at a Glance 2009 ; economics/national-accounts-at-a-glance-2009 ; 9789264067981-en >
+      au < manifest ; 2010 ; 9789264075160 ; Jobs for Youth/Des emplois pour les jeunes: Denmark 2010 ; employment/jobs-for-youth-des-emplois-pour-les-jeunes-denmark-2010 ; 9789264075160-en >
+      au < manifest ; 2010 ; 9789264077225 ; Eco-Innovation in Industry: Enabling Green Growth ; environment/eco-innovation-in-industry ; 9789264077225-en >
+      au < manifest ; 2010 ; 9789264077409 ; ICTs for Development: Improving Policy Coherence ; development/icts-for-development ; 9789264077409-en >
+      au < manifest ; 2010 ; 9789264079861 ; TALIS 2008 Technical Report ; education/talis-2008-technical-report ; 9789264079861-en >
+      au < manifest ; 2010 ; 9789264083905 ; Quality Standards for Development Evaluation ; development/dac-quality-standards-for-development-evaluation ; 9789264083905-en >
+      au < manifest ; 2010 ; 9789264083943 ; PISA 2009 Results: Learning to Learn: Student Engagement, Strategies and Practices (Volume III) ; education/pisa-2009-results-learning-to-learn ; 9789264083943-en >
+      au < manifest ; 2010 ; 9789264088368 ; Tackling Inequalities in Brazil, China, India and South Africa: The Role of Labour Market and Social Policies ; social-issues-migration-health/tackling-inequalities-in-brazil-china-india-and-south-africa-2010 ; 9789264088368-en >
+      au < manifest ; 2010 ; 9789264088818 ; Value for Money in Health Spending ; social-issues-migration-health/value-for-money-in-health-spending ; 9789264088818-en >
+      au < manifest ; 2010 ; 9789264091450 ; PISA 2009 Results: What Students Know and Can Do: Student Performance in Reading, Mathematics and Science (Volume I) ; education/pisa-2009-results-what-students-know-and-can-do ; 9789264091450-en >
+      au < manifest ; 2010 ; 9789264091504 ; PISA 2009 Results: Overcoming Social Background: Equity in Learning Opportunities and Outcomes (Volume II) ; education/pisa-2009-results-overcoming-social-background ; 9789264091504-en >
+      au < testing ; 2010 ; 9789264091559 ; PISA 2009 Results: What Makes a School Successful?: Resources, Policies and Practices (Volume IV) ; education/pisa-2009-results-what-makes-a-school-successful ; 9789264091559-en >
+      au < manifest ; 2010 ; 9789264091580 ; PISA 2009 Results: Learning Trends: Changes in Student Performance Since 2000 (Volume V) ; education/pisa-2009-results-learning-trends ; 9789264091580-en >
+      au < manifest ; 2010 ; 9789264091993 ; Handbook on Contracting Out Government Functions and Services in Post-Conflict and Fragile Situations ; development/handbook-on-contracting-out-government-functions-and-services-in-post-conflict-and-fragile-situations ; 9789264091993-en >
+      au < manifest ; 2010 ; 9789264092624 ; Radioactive Waste in Perspective ; nuclear-energy/radioactive-waste-in-perspective ; 9789264092624-en >
+      au < testing ; 2010 ; 9789264095243 ; Key World Energy Statistics 2010 ; energy/key-world-energy-statistics-2010 ; 9789264095243-en >
+      au < manifest ; 2010 ; 9789264095298 ; PISA 2009 at a Glance ; education/pisa-at-a-glance-2010 ; 9789264095298-en >
+      au < manifest ; 2010 ; 9789264096134 ; CO2 Emissions from Fuel Combustion 2010 ; energy/co2-emissions-from-fuel-combustion-2010 ; 9789264096134-en >
+      au < manifest ; 2010 ; 9789264201774 ; United Kingdom: Policies for a Sustainable Recovery ; economics/united-kingdom-policies-for-a-sustainable-recovery ; 9789264201774-en >
+      au < manifest ; 2010 ; 9789282102824 ; IRTAD Road Safety Annual Report 2009 ; transport/irtad-road-safety-annual-report-2009 ; 9789282102824-en >
+      au < manifest ; 2011 ; 9789264087057 ; Quality Time for Students: Learning In and Out of School ; education/quality-time-for-students-learning-in-and-out-of-school ; 9789264087057-en >
+      au < manifest ; 2011 ; 9789264089907 ; OECD Banking Statistics: Methodological Country Notes 2010 ; finance-and-investment/oecd-banking-statistics-methodological-country-notes-2010 ; 9789264089907-en >
+      au < testing ; 2011 ; 9789264095885 ; National Accounts at a Glance 2010 ; economics/national-accounts-at-a-glance-2010 ; 9789264095885-en >
+      au < testing ; 2011 ; 9789264096097 ; Value for Money in Government: The Netherlands 2010 ; governance/value-for-money-in-government-the-netherlands-2010 ; 9789264096097-en >
+      au < manifest ; 2011 ; 9789264110984 ; Job-rich Growth in Asia: Strategies for Local Employment, Skills Development and Social Protection ; employment/job-rich-growth-in-asia ; 9789264110984-en >
+      au < manifest ; 2011 ; 9789264112995 ; PISA 2009 Results: Students On Line: Digital Technologies and Performance (Volume VI) ; education/pisa-2009-results-students-on-line ; 9789264112995-en >
+      au < manifest ; 2011 ; 9789264118706 ; M-Government: Mobile Technologies for Responsive Governments and Connected Societies ; governance/m-government-mobile-technologies-for-responsive-governments-and-connected-societies ; 9789264118706-en >
+      au < manifest ; 2011 ; 9789264119284 ; Water Governance in OECD Countries: A Multi-level Approach ; environment/water-governance-in-oecd-countries ; 9789264119284-en >
+      au < manifest ; 2011 ; 9789264121652 ; Identification and Quantification of the Proceeds of Bribery ; governance/identification-and-quantification-of-the-proceeds-of-bribery ; 9789264121652-en >
+      au < testing ; 2011 ; 9789264124653 ; IEA Scoreboard 2011: Implementing Energy Efficiency Policy: Progress and challenges in IEA member countries ; energy/iea-scoreboard-2011 ; 9789264124653-en >
+      au < manifest ; 2011 ; 9789264126398 ; Tackling the Policy Challenges of Migration: Regulation, Integration, Development ; social-issues-migration-health/tackling-the-policy-challenges-of-migration ; 9789264126398-en >
+      au < manifest ; 2011 ; 9789264130746 ; Value for Money in Government: Denmark 2011 ; governance/value-for-money-in-government-denmark-2011 ; 9789264130746-en >
+      au < manifest ; 2011 ; 9789264201675 ; A Framework for Growth and Social Cohesion in Korea ; economics/a-framework-for-growth-and-social-cohesion-in-korea ; 9789264201675-en >
+      au < manifest ; 2011 ; 9789264201675 ; A Framework for Growth and Social Cohesion in Korea ; economics/a-framework-for-growth-and-social-cohesion-in-korea ; 9789264201675-en >
+      au < manifest ; 2012 ; 9789264167537 ; Jobs for Immigrants (Vol. 3): Labour Market Integration in Austria, Norway and Switzerland ; social-issues-migration-health/jobs-for-immigrants-vol-3 ; 9789264167537-en >
+      au < manifest ; 2012 ; 9789264167650 ; Farmer Behaviour, Agricultural Management and Climate Change ; agriculture-and-food/farmer-behaviour-agricultural-management-and-climate-change ; 9789264167650-en >
+      au < manifest ; 2012 ; 9789264167872 ; PISA 2009 Technical Report ; education/pisa-2009-technical-report ; 9789264167872-en >
+      au < manifest ; 2012 ; 9789264168596 ; Knowledge Networks and Markets in the Life Sciences ; science-and-technology/knowledge-networks-and-markets-in-the-life-sciences ; 9789264168596-en >
+      au < manifest ; 2012 ; 9789264169463 ; Dealing Effectively with the Challenges of Transfer Pricing ; taxation/dealing-effectively-with-the-challenges-of-transfer-pricing ; 9789264169463-en >
+      au < testing ; 2012 ; 9789264173569 ; Quality Matters in Early Childhood Education and Care: Finland 2012 ; education/quality-matters-in-early-childhood-and-education-finland-2012 ; 9789264173569-en >
+      au < testing ; 2012 ; 9789264174238 ; Illegal Trade in Environmentally Sensitive Goods ; trade/illegal-trade-in-environmentally-sensitive-goods ; 9789264174238-en >
+      au < manifest ; 2012 ; 9789264174542 ; Water Governance in Latin America and the Caribbean: A Multi-level Approach ; governance/water-governance-in-latin-america-and-the-caribbean ; 9789264174542-en >
+      au < manifest ; 2012 ; 9789264174801 ; Identification and Quantification of the Proceeds of Bribery: Revised edition, February 2012 ; governance/identification-and-quantification-of-the-proceeds-of-bribery ; 9789264174801-en >
+      au < manifest ; 2012 ; 9789264175648 ; Quality Matters in Early Childhood Education and Care: Korea 2012 ; education/quality-matters-in-early-childhood-education-and-care-korea-2012 ; 9789264175648-en >
+      au < manifest ; 2012 ; 9789264175655 ; Quality Matters in Early Childhood Education and Care: Slovak Republic 2012 ; education/quality-matters-in-early-childhood-education-and-care-slovak-republic-2012 ; 9789264175655-en >
+      au < manifest ; 2012 ; 9789264176515 ; Quality Matters in Early Childhood Education and Care: Czech Republic 2012 ; education/quality-matters-in-early-childhood-education-and-care-czech-republic-2012 ; 9789264176515-en >
+      au < manifest ; 2012 ; 9789264176621 ; Quality Matters in Early Childhood Education and Care: Japan 2012 ; education/quality-matters-in-early-childhood-education-and-care-japan-2012 ; 9789264176621-en >
+      au < manifest ; 2012 ; 9789264176690 ; Quality Matters in Early Childhood Education and Care: New Zealand 2012 ; education/quality-matters-in-early-childhood-education-and-care-new-zealand-2012 ; 9789264176690-en >
+      au < manifest ; 2012 ; 9789264176720 ; Quality Matters in Early Childhood Education and Care: Portugal 2012 ; education/quality-matters-in-early-childhood-education-and-care-portugal-2012 ; 9789264176720-en >
+      au < testing ; 2012 ; 9789264176867 ; Quality Matters in Early Childhood Education and Care: United Kingdom (England) 2012 ; education/quality-matters-in-early-childhood-education-and-care-united-kingdom-england-2012 ; 9789264176867-en >
+      au < manifest ; 2012 ; 9789264178809 ; Value for Money in Government: Australia 2012 ; governance/value-for-money-in-government-australia-2012 ; 9789264178809-en >
+      au < manifest ; 2012 ; 9789264178847 ; SME Policy Index: Eastern Partner Countries 2012: Progress in the Implementation of the Small Business Act for Europe ; finance-and-investment/sme-policy-index-eastern-partner-countries-2012 ; 9789264178847-en >
+      au < manifest ; 2012 ; 9789264178861 ; SME Policy Index: Western Balkans and Turkey 2012: Progress in the Implementation of the Small Business Act for Europe ; finance-and-investment/sme-policy-index-western-balkans-and-turkey-2012 ; 9789264178861-en >
+      au < manifest ; 2012 ; 9789264179820 ; A Framework for Financing Water Resources Management ; environment/a-framework-for-financing-water-resources-management ; 9789264179820-en >
+      au < manifest ; 2012 ; 9789264179820 ; A Framework for Financing Water Resources Management ; environment/a-framework-for-financing-water-resources-management ; 9789264179820-en >
+      au < manifest ; 2012 ; 9789264180291 ; OECD Banking Statistics: Financial Statements of Banks 2012 ; finance-and-investment/oecd-banking-statistics-financial-statements-of-banks-2012 ; 9789264180291-en >
+      au < manifest ; 2012 ; 9789264991712 ; Main Benefits from 30 Years of Joint Projects in Nuclear Safety ; nuclear-energy/main-benefits-from-30-years-of-joint-projects-in-nuclear-safety ; 9789264991712-en >
+      au < manifest ; 2012 ; 9789264992009 ; Japan's Compensation System for Nuclear Damage: As Related to the TEPCO Fukushima Daiichi Nuclear Accident ; nuclear-energy/japan-s-compensation-system-for-nuclear-damage ; 9789264992009-en >
+      au < manifest ; 2013 ; 9789264176713 ; Quality Matters in Early Childhood Education and Care: Norway 2013 ; education/quality-matters-in-early-childhood-education-and-care-norway-2012 ; 9789264176713-en >
+      au < manifest ; 2013 ; 9789264176744 ; Quality Matters in Early Childhood Education and Care: Sweden 2013 ; education/quality-matters-in-early-childhood-education-and-care-sweden-2012 ; 9789264176744-en >
+      au < manifest ; 2013 ; 9789264179080 ; Waiting Time Policies in the Health Sector: What Works? ; social-issues-migration-health/waiting-times-for-elective-surgery-what-works ; 9789264179080-en >
+      au < manifest ; 2013 ; 9789264190511 ; PISA 2012 Assessment and Analytical Framework: Mathematics, Reading, Science, Problem Solving and Financial Literacy ; education/pisa-2012-assessment-and-analytical-framework ; 9789264190511-en >
+      au < manifest ; 2013 ; 9789264191747 ; Zuwanderung ausländischer Arbeitskräfte: Deutschland ; social-issues-migration-health/zuwanderung-auslandischer-arbeitskrafte-deutschland-german-version ; 9789264191747-de >
+      au < manifest ; 2013 ; 9789264194564 ; A Good Life in Old Age?: Monitoring and Improving Quality in Long-term Care ; social-issues-migration-health/a-good-life-in-old-age ; 9789264194564-en >
+      au < manifest ; 2013 ; 9789264194564 ; A Good Life in Old Age?: Monitoring and Improving Quality in Long-term Care ; social-issues-migration-health/a-good-life-in-old-age ; 9789264194564-en >
+      au < manifest ; 2013 ; 9789264197183 ; Handbook on Residential Property Price Indices ; economics/handbook-on-residential-property-price-indices ; 9789264197183-en >
+      au < manifest ; 2013 ; 9789264200685 ; Value for Money in Government: Sweden 2013 ; governance/value-for-money-in-government-sweden-2013 ; 9789264200685-en >
+      au < manifest ; 2013 ; 9789264201927 ; Value for Money in Government: Norway 2013 ; governance/value-for-money-in-government-norway-2013 ; 9789264201927-en >
+      au < manifest ; 2013 ; 9789264202863 ; ICTs and the Health Sector: Towards Smarter Health and Wellness Models ; science-and-technology/icts-and-the-health-sector ; 9789264202863-en >
+      au < manifest ; 2013 ; 9789282103937 ; ITF Transport Outlook 2013: Funding Transport ; transport/itf-transport-outlook-2013 ; 9789282103937-en >
+      au < manifest ; 2014 ; 9789264102637 ; Water Governance in the Netherlands: Fit for the Future? ; governance/water-governance-in-the-netherlands ; 9789264102637-en >
+      au < manifest ; 2014 ; 9789264174337 ; Water Governance in Tunisia: Overcoming the Challenges to Private Sector Participation ; governance/water-governance-in-tunisia ; 9789264174337-en >
+      au < manifest ; 2014 ; 9789264196261 ; TALIS 2013 Results: An International Perspective on Teaching and Learning ; education/talis-2013-results ; 9789264196261-en >
+      au < manifest ; 2014 ; 9789264209152 ; Nanotechnology and Tyres: Greening Industry and Transport ; science-and-technology/nanotechnology-and-tyres ; 9789264209152-en >
+      au < manifest ; 2014 ; 9789264213753 ; Water Governance in Jordan: Overcoming the Challenges to Private Sector Participation ; governance/water-service-governance-in-jordan ; 9789264213753-en >
+      au < testing ; 2014 ; 9789264214637 ; Understanding National Accounts: Second Edition ; economics/understanding-national-accounts ; 9789264214637-en >
+      au < manifest ; 2014 ; 9789264214712 ; Jobs for Immigrants (Vol. 4): Labour Market Integration in Italy ; social-issues-migration-health/jobs-for-immigrants-vol-4 ; 9789264214712-en >
+      au < manifest ; 2014 ; 9789264215009 ; Job Creation and Local Economic Development ; industry-and-services/job-creation-and-local-economic-development ; 9789264215009-en >
+      au < manifest ; 2014 ; 9789264215955 ; Japan: Advancing the Third Arrow for a Resilient Economy and Inclusive Growth ; economics/japan-advancing-the-third-arrow-for-a-resilient-economy-and-inclusive-growth ; 9789264215955-en >
+      au < manifest ; 2014 ; 9789264218413 ; SME Policy Index: The Mediterranean Middle East and North Africa 2014: Implementation of the Small Business Act for Europe ; finance-and-investment/sme-policy-index-the-mediterranean-middle-east-and-north-africa-2014 ; 9789264218413-en >
+      au < manifest ; 2014 ; 9789264220973 ; Water Based Washing Operations at Industrial and Institutional Laundries ; environment/water-based-washing-operations-at-industrial-and-institutional-laundries ; 9789264220973-en >
+      au < manifest ; 2014 ; 9789264220997 ; Radiation Curable Coating, Inks and Adhesives ; environment/radiation-curable-coating-inks-and-adhesives ; 9789264220997-en >
+      au < manifest ; 2014 ; 9789264221567 ; MRL Calculator: Users Guide and White Paper ; environment/mrl-calculator-users-guide-and-white-paper ; 9789264221567-en >
+      au < manifest ; 2014 ; 9789264222199 ; R&D and Innovation Needs for Decommissioning Nuclear Facilities ; nuclear-energy/r-d-and-innovation-needs-for-decommissioning-nuclear-facilities ; 9789264222199-en >
+      au < manifest ; 2014 ; 9789264222311 ; Few and Far: The Hard Facts on Stolen Asset Recovery ; development/few-and-far ; 9789264222311-en >
+      au < manifest ; 2014 ; 9789264224605 ; Kazakhstan: Review of the Central Administration ; governance/kazakhstan-review-of-the-central-administration ; 9789264224605-en >
+      au < manifest ; 2014 ; 9789282107683 ; Valuing Convenience in Public Transport ; transport/valuing-convenience-in-public-transport ; 9789282107683-en >
+      au < testing ; 2015 ; 9789264181069 ; Tackling Harmful Alcohol Use: Economics and Public Health Policy ; social-issues-migration-health/tackling-harmful-alcohol-use ; 9789264181069-en >
+      au < manifest ; 2015 ; 9789264209992 ; E-Learning in Higher Education in Latin America ; education/e-learning-in-higher-education-in-latin-america ; 9789264209992-en >
+      au < manifest ; 2015 ; 9789264227200 ; Back to Work: Japan: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-japan ; 9789264227200-en >
+      au < manifest ; 2015 ; 9789264228368 ; ISCED 2011 Operational Manual: Guidelines for Classifying National Education Programmes and Related Qualifications ; education/isced-2011-operational-manual ; 9789264228368-en >
+      au < manifest ; 2015 ; 9789264229358 ; Data-Driven Innovation: Big Data for Growth and Well-Being ; science-and-technology/data-driven-innovation ; 9789264229358-en >
+      au < manifest ; 2015 ; 9789264231702 ; Talent Abroad: A Review of German Emigrants ; social-issues-migration-health/talent-abroad-a-review-of-german-emigrants ; 9789264231702-en >
+      au < manifest ; 2015 ; 9789264233454 ; Back to Work: Canada: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-canada ; 9789264233454-en >
+      au < testing ; 2015 ; 9789264234833 ; Universal Basic Skills: What Countries Stand to Gain ; education/universal-basic-skills ; 9789264234833-en >
+      au < manifest ; 2015 ; 9789264236882 ; G20/OECD Principles of Corporate Governance ; governance/g20-oecd-principles-of-corporate-governance-2015 ; 9789264236882-en >
+      au < manifest ; 2015 ; 9789264246249 ; SME Policy Index: Eastern Partner Countries 2016: Assessing the Implementation of the Small Business Act for Europe ; development/sme-policy-index-eastern-partner-countries-2016 ; 9789264246249-en >
+      au < testing ; 2015 ; 9789264246812 ; Back to Work: Sweden: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-sweden ; 9789264246812-en >
+      au < testing ; 2015 ; 9789264247437 ; Gas Pricing: China's Challenges and IEA Experience ; energy/gas-pricing-china-s-challenges-and-iea-experience ; 9789264247437-en >
+      au < manifest ; 2015 ; 9789264247444 ; Understanding Energy Challenges in India: Policies, Players and Issues ; energy/understanding-energy-challenges-in-india ; 9789264247444-en >
+      au < manifest ; 2015 ; 9789264249868 ; Radioactive Waste Management and Constructing Memory for Future Generations: Proceedings of the International Conference and Debate, 15-17 September 2014 Verdun, France ; nuclear-energy/radioactive-waste-management-and-constructing-memory-for-future-generations ; 9789264249868-en >
+      au < manifest ; 2015 ; 9789282107782 ; ITF Transport Outlook 2015 ; transport/itf-transport-outlook-2015 ; 9789282107782-en >
+      au < testing ; 2016 ; 9789264209596 ; Re-powering Markets: Market design and regulation during the transition to low-carbon power systems ; energy/re-powering-markets ; 9789264209596-en >
+      au < manifest ; 2016 ; 9789264238657 ; Farm Management Practices to Foster Green Growth ; agriculture-and-food/farm-management-practices-to-foster-green-growth ; 9789264238657-en >
+      au < manifest ; 2016 ; 9789264242661 ; Debate the Issues: Investment ; finance-and-investment/debate-the-issues-investment ; 9789264242661-en >
+      au < manifest ; 2016 ; 9789264249752 ; Nanomaterials in Waste Streams: Current Knowledge on Risks and Impacts ; environment/nanomaterials-in-waste-streams ; 9789264249752-en >
+      au < manifest ; 2016 ; 9789264251076 ; Labor Migration in Asia: Building effective institutions ; social-issues-migration-health/labor-migration-in-asia ; 9789264251076-en >
+      au < manifest ; 2016 ; 9789264251090 ; Water Governance in Cities ; governance/water-governance-in-cities ; 9789264251090-en >
+      au < testing ; 2016 ; 9789264252271 ; A New Rural Development Paradigm for the 21st Century: A Toolkit for Developing Countries ; development/a-new-rural-development-paradigm-for-the-21st-century ; 9789264252271-en >
+      au < manifest ; 2016 ; 9789264253476 ; Back to Work: Australia: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-australia ; 9789264253476-en >
+      au < testing ; 2016 ; 9789264254473 ; SME Policy Index: Western Balkans and Turkey 2016: Assessing the Implementation of the Small Business Act for Europe ; development/sme-policy-index-western-balkans-and-turkey-2016 ; 9789264254473-en >
+      au < manifest ; 2016 ; 9789264256507 ; Japan: Boosting Growth and Well-being in an Ageing Society ; economics/japan-boosting-growth-and-well-being-in-an-ageing-society ; 9789264256507-en >
+      au < testing ; 2016 ; 9789264256880 ; Radiological Protection Science and Application ; nuclear-energy/radiological-protection-science-and-application ; 9789264256880-en >
+      au < testing ; 2016 ; 9789264261976 ; Job Creation and Local Economic Development 2016 ; employment/job-creation-and-local-economic-development-2016 ; 9789264261976-en >
+      au < manifest ; 2016 ; 9789264262324 ; SME and Entrepreneurship Policy in Israel 2016 ; industry-and-services/sme-and-entrepreneurship-policy-in-israel-2016 ; 9789264262324-en >
+      au < manifest ; 2016 ; 9789264263437 ; BEPS Project Explanatory Statement: 2015 Final Reports ; taxation/beps-project-explanatory-statement ; 9789264263437-en >
+      au < manifest ; 2016 ; 9789264264687 ; Debate the Issues: New Approaches to Economic Challenges ; economics/debate-the-issues-new-approaches-to-economic-challenges ; 9789264264687-en >
+      au < manifest ; 2016 ; 9789264264717 ; Back to Work: Finland: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-finland ; 9789264264717-en >
+      au < manifest ; 2016 ; 9789264265035 ; Japan's Siting Process for the Geological Disposal of High-level Radioactive Waste: An International Peer Review ; nuclear-energy/japan-s-siting-process-for-the-geological-disposal-of-high-level-radioactive-waste ; 9789264265035-en >
+      au < manifest ; 2016 ; 9789264265721 ; Youth in the MENA Region: How to Bring Them In ; governance/youth-in-the-mena-region ; 9789264265721-en >
+      au < manifest ; 2016 ; 9789264266513 ; Back to Work: United States: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-united-states ; 9789264266513-en >
+      au < manifest ; 2016 ; 9789264267503 ; Back to Work: Denmark: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-denmark ; 9789264267503-en >
+      au < manifest ; 2016 ; 9789282108055 ; Zero Road Deaths and Serious Injuries: Leading a Paradigm Shift to a Safe System ; transport/zero-road-deaths-and-serious-injuries ; 9789282108055-en >
+      au < manifest ; 2017 ; 9789264259157 ; Dare to Share: Germany's Experience Promoting Equal Partnership in Families ; social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families ; 9789264259157-en >
+      au < testing ; 2017 ; 9789264264281 ; Talent Abroad: A Review of Moroccan Emigrants ; social-issues-migration-health/talent-abroad-a-review-of-moroccan-emigrants ; 9789264264281-en >
+      au < manifest ; 2017 ; 9789264264434 ; Back to Work: New Zealand: Improving the Re-employment Prospects of Displaced Workers ; employment/back-to-work-new-zealand ; 9789264264434-en >
+      au < manifest ; 2017 ; 9789264266414 ; Tackling Wasteful Spending on Health ; social-issues-migration-health/tackling-wasteful-spending-on-health ; 9789264266414-en >
+      au < testing ; 2017 ; 9789264269576 ; Labour Market Reforms in Portugal 2011-15: A Preliminary Assessment ; employment/labour-market-reforms-in-portugal-2011-15 ; 9789264269576-en >
+      au < manifest ; 2017 ; 9789264271531 ; Debate the Issues: Complexity and Policy making ; economics/debate-the-issues-complexity-and-policy-making ; 9789264271531-en >
+      au < manifest ; 2017 ; 9789264272262 ; A Decade of Social Protection Development in Selected Asian Countries ; social-issues-migration-health/a-decade-of-social-protection-development-in-selected-asian-countries ; 9789264272262-en >
+      au < manifest ; 2017 ; 9789264272262 ; A Decade of Social Protection Development in Selected Asian Countries ; social-issues-migration-health/a-decade-of-social-protection-development-in-selected-asian-countries ; 9789264272262-en >
+      au < manifest ; 2017 ; 9789264272941 ; Garlic ; agriculture-and-food/garlic ; 9789264272941-en-fr >
+      au < manifest ; 2017 ; 9789264273467 ; SME and Entrepreneurship Policy in Canada ; industry-and-services/sme-and-entrepreneurship-policy-in-canada ; 9789264273467-en >
+      au < manifest ; 2017 ; 9789264273887 ; Tackling Environmental Problems with the Help of Behavioural Insights ; environment/tackling-environmental-problems-with-the-help-of-behavioural-insights ; 9789264273887-en >
+      au < manifest ; 2017 ; 9789264274075 ; Země G20/OECD Principy správy a řízení společností ; governance/zeme-g20-oecd-principy-spravy-a-rizeni-spolecnosti ; 9789264274075-cs >
+      au < manifest ; 2017 ; 9789264278875 ; Gaps and Governance Standards of Public Infrastructure in Chile: Infrastructure Governance Review ; governance/gaps-and-governance-standards-of-public-infrastructure-in-chile ; 9789264278875-en >
+      au < manifest ; 2017 ; 9789264281288 ; Understanding Financial Accounts ; economics/understanding-financial-accounts ; 9789264281288-en >
+      au < manifest ; 2017 ; 9789264283589 ; United Kingdom: Country Health Profile 2017 ; social-issues-migration-health/united-kingdom-country-health-profile-2017 ; 9789264283589-en >
+      au < manifest ; 2017 ; 9789264283954 ; Harmful Tax Practices - 2017 Progress Report on Preferential Regimes: Inclusive Framework on BEPS: Action 5 ; taxation/harmful-tax-practices-2017-progress-report-on-preferential-regimes ; 9789264283954-en >
+      au < manifest ; 2017 ; 9789264285668 ; Youth Aspirations and the Reality of Jobs in Developing Countries: Mind the Gap ; development/youth-aspirations-and-the-reality-of-jobs-in-developing-countries ; 9789264285668-en >
+      au < manifest ; 2017 ; 9789264285675 ; Harmful Tax Practices - Peer Review Reports on the Exchange of Information on Tax Rulings: Inclusive Framework on BEPS: Action 5 ; taxation/harmful-tax-practices-peer-review-reports-on-the-exchange-of-information-on-tax-rulings ; 9789264285675-en >
+      au < manifest ; 2017 ; 9789264285712 ; Water Charges in Brazil: The Ways Forward ; environment/water-charges-in-brazil ; 9789264285712-en >
+      au < manifest ; 2017 ; 9789264286207 ; Radiological Characterisation from a Waste and Materials End-State Perspective: Practices and Experience ; nuclear-energy/radiological-characterisation-from-a-waste-and-materials-end-state-perspective ; 9789264286207-en >
+      au < manifest ; 2017 ; 9789282108000 ; ITF Transport Outlook 2017 ; transport/itf-transport-outlook-2017 ; 9789282108000-en >
+      au < manifest ; 2017 ; 9789282108093 ; Quantifying the Socio-economic Benefits of Transport ; transport/quantifying-the-socio-economic-benefits-of-transport ; 9789282108093-en >
+      au < manifest ; 2018 ; 9789264268418 ; Illicit Financial Flows: The Economy of Illicit Trade in West Africa ; development/illicit-financial-flows ; 9789264268418-en >
+      au < manifest ; 2018 ; 9789264281776 ; Facilitating the Reform of Economic Instruments for Water Management in Georgia ; environment/facilitating-the-reform-of-economic-instruments-for-water-management-in-georgia ; 9789264281776-en >
+      au < manifest ; 2018 ; 9789264289642 ; Labor Migration in Asia: Increasing the Development Impact of Migration through Finance and Technology ; social-issues-migration-health/labor-migration-in-asia-increasing-the-development-impact-of-migration-through-finance-and-technology ; 9789264289642-en >
+      au < manifest ; 2018 ; 9789264292697 ; Valuing our Teachers and Raising their Status: How Communities Can Help ; education/valuing-our-teachers-and-raising-their-status ; 9789264292697-en >
+      au < manifest ; 2018 ; 9789264299207 ; Japan: Promoting Inclusive Growth for an Ageing Society ; economics/japan-promoting-inclusive-growth-for-an-ageing-society ; 9789264299207-en >
+      au < manifest ; 2018 ; 9789264301085 ; A Broken Social Elevator? How to Promote Social Mobility ; social-issues-migration-health/broken-elevator-how-to-promote-social-mobility ; 9789264301085-en >
+      au < manifest ; 2018 ; 9789264301085 ; A Broken Social Elevator? How to Promote Social Mobility ; social-issues-migration-health/broken-elevator-how-to-promote-social-mobility ; 9789264301085-en >
+      au < manifest ; 2018 ; 9789264305328 ; SME Policy Index: ASEAN 2018: Boosting Competitiveness and Inclusive Growth ; development/sme-policy-index-asean-2018 ; 9789264305328-en >
+      au < manifest ; 2018 ; 9789264305342 ; Job Creation and Local Economic Development 2018: Preparing for the Future of Work ; employment/job-creation-and-local-economic-development-2018 ; 9789264305342-en >
+      au < manifest ; 2018 ; 9789264306264 ; SME and Entrepreneurship Policy in Indonesia 2018 ; employment/sme-and-entrepreneurship-policy-in-indonesia-2018 ; 9789264306264-en >
+      au < manifest ; 2018 ; 9789264308992 ; Understanding the Drivers of Trust in Government Institutions in Korea ; governance/understanding-the-drivers-of-trust-in-government-institutions-in-korea ; 9789264308992-en >
+      au < manifest ; 2018 ; 9789264309586 ; Harmful Tax Practices – 2017 Peer Review Reports on the Exchange of Information on Tax Rulings: Inclusive Framework on BEPS: Action 5 ; taxation/harmful-tax-practices-2017-peer-review-reports-on-the-exchange-of-information-on-tax-rulings ; 9789264309586-en >
+      au < manifest ; 2019 ; 9789264309395 ; Waste Management and the Circular Economy in Selected OECD Countries: Evidence from Environmental Performance Reviews ; environment/waste-management-and-the-circular-economy-in-selected-oecd-countries ; 9789264309395-en >
+      au < manifest ; 2019 ; 9789264311480 ; Harmful Tax Practices - 2018 Progress Report on Preferential Regimes: Inclusive Framework on BEPS: Action 5 ; taxation/harmful-tax-practices-2018-progress-report-on-preferential-regimes ; 9789264311480-en >
+      au < manifest ; 2019 ; 9789264720220 ; A Flying Start: Improving Initial Teacher Preparation Systems ; education/a-flying-start ; cf74e549-en >
+      au < manifest ; 2021 ; 9789264772885 ; A Chemicals Perspective on Designing with Sustainable Plastics: Goals, Considerations and Trade-offs ; environment/a-chemicals-perspective-on-designing-with-sustainable-plastics ; f2ba8ff3-en >
 
     }
 
