@@ -42,15 +42,17 @@ public class MigrationTask {
     COPY_CU_VERSIONS,
     CHECK_AU_STATE,
     CHECK_CU_VERSIONS,
-    COPY_AU_STATE;
+    COPY_AU_STATE,
+    FINISH_AU,
+    FINISH_ALL;
 
     private V2AuMover.Phase phase;;
 
     static {
       COPY_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
+      CHECK_CU_VERSIONS.phase = V2AuMover.Phase.VERIFY;
+      COPY_AU_STATE.phase = V2AuMover.Phase.COPY;
       CHECK_AU_STATE.phase = V2AuMover.Phase.VERIFY;
-      CHECK_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
-      COPY_AU_STATE.phase = V2AuMover.Phase.VERIFY;
     }
 
     public V2AuMover.Phase getPhase() {
@@ -82,25 +84,30 @@ public class MigrationTask {
   }
 
   public static MigrationTask checkCuVersions(V2AuMover mover,
-      ArchivalUnit au,
-      CachedUrl cu) {
+                                              ArchivalUnit au, CachedUrl cu) {
     return new MigrationTask(mover, TaskType.CHECK_CU_VERSIONS)
         .setCu(cu)
         .setAu(cu.getArchivalUnit());
   }
 
-  public static MigrationTask copyAuState(V2AuMover mover,
-                                          ArchivalUnit au) {
+  public static MigrationTask copyAuState(V2AuMover mover, ArchivalUnit au) {
     return new MigrationTask(mover, TaskType.COPY_AU_STATE)
       .setAu(au);
   }
 
-  public static MigrationTask checkAuState(V2AuMover mover,
-      ArchivalUnit au) {
+  public static MigrationTask checkAuState(V2AuMover mover, ArchivalUnit au) {
     return new MigrationTask(mover, TaskType.CHECK_AU_STATE)
         .setAu(au);
   }
 
+  public static MigrationTask finishAu(V2AuMover mover, ArchivalUnit au) {
+    return new MigrationTask(mover, TaskType.FINISH_AU)
+      .setAu(au);
+  }
+
+  public static MigrationTask finishAll(V2AuMover mover) {
+    return new MigrationTask(mover, TaskType.FINISH_ALL);
+  }
 
   public MigrationTask setAu(ArchivalUnit au) {
     this.au = au;

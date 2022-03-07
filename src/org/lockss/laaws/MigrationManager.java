@@ -50,7 +50,8 @@ public class MigrationManager extends BaseLockssManager
   public static final long DEFAULT_CACHE_MAX_MB = 100;
 
   static final String STATUS_RUNNING = "running";
-  static final String STATUS_STATUS_LIST = "status_list";
+  static final String STATUS_ACTIVE_LIST = "active_list";
+  static final String STATUS_FINISHED_LIST = "finished_list";
   static final String STATUS_STATUS = "status";
   static final String STATUS_ERRORS = "errors";
   static final String STATUS_PROGRESS = "progress";
@@ -79,7 +80,12 @@ public class MigrationManager extends BaseLockssManager
     Map stat = new HashMap();
     stat.put(STATUS_RUNNING, mover.isRunning());
     stat.put(STATUS_STATUS, mover.getCurrentStatus());
-    stat.put(STATUS_STATUS_LIST, mover.getCurrentStatusList());
+    if (!mover.getActiveStatusList().isEmpty()) {
+      stat.put(STATUS_ACTIVE_LIST, mover.getActiveStatusList());
+    }
+    if (!mover.getFinishedStatusList().isEmpty()) {
+      stat.put(STATUS_FINISHED_LIST, mover.getFinishedStatusList());
+    }
     List<String> errs = mover.getErrors();
     if (errs != null && !errs.isEmpty()) {
       stat.put(STATUS_ERRORS, errs);

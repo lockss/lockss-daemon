@@ -83,7 +83,7 @@ public class CuMover extends Worker {
         while(!terminated && cuQueue.peek() != null) {
           moveNextCuVersion(auid, v2Url, cuQueue);
         }
-        ctrs.get(V2AuMover.CounterType.URLS_MOVED).incr();
+        ctrs.incr(CounterType.URLS_MOVED);
       }
     }
   }
@@ -143,9 +143,9 @@ public class CuMover extends Worker {
     log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
     Artifact uncommitted = collectionsApi.createArtifact(collectionId, auid, v2Url, dcu, collectionDate);
-    log.debug3("createArtifact returned");
-    ctrs.get(CounterType.CONTENT_BYTES_MOVED).add(cu.getContentSize());
-    ctrs.get(CounterType.BYTES_MOVED).add(dcu.getBytesMoved());
+    log.debug3("createArtifact returned,  content bytes: " + cu.getContentSize() + ", total: " + dcu.getBytesMoved());
+    ctrs.add(CounterType.CONTENT_BYTES_MOVED, cu.getContentSize());
+    ctrs.add(CounterType.BYTES_MOVED, dcu.getBytesMoved());
     log.debug3("commitArtifact("+v2Url+")");
     commitArtifact(uncommitted, dcu);
   }
@@ -174,7 +174,7 @@ public class CuMover extends Worker {
         log.debug2("Hash match: " + dcu.getCu().getUrl() + ": v1 digest: " +dcu.getContentDigest()+  " v2 digest: " + committed.getContentDigest());
       }
       log.debug3("Successfully committed artifact " + committed.getId());
-      ctrs.get(CounterType.ARTIFACTS_MOVED).incr();
+      ctrs.incr(CounterType.ARTIFACTS_MOVED);
     }
 
   }

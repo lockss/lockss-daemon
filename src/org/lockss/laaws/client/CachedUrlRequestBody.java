@@ -177,7 +177,7 @@ public class CachedUrlRequestBody extends RequestBody {
                  artifactCu);
       if (inputStream != null) {
         CountingInputStream cis = new CountingInputStream(inputStream);
-        source = Okio.source(inputStream);
+        source = Okio.source(cis);
         sink.writeAll(source);
         long avail = inputStream.available();
         if (avail > 0) {

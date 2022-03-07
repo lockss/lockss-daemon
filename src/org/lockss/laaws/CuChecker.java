@@ -13,7 +13,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 public class CuChecker extends Worker {
-  private static final Logger log = Logger.getLogger(CuMover.class);
+  private static final Logger log = Logger.getLogger(CuChecker.class);
   private final CachedUrl cu;
   private final String collection;
 

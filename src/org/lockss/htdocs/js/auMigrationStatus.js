@@ -11,6 +11,24 @@ class AuMigrationStatus extends React.Component {
     };
   }
 
+    ActiveList() {
+        if (this.state.activeList === undefined) {
+            return null;
+        }
+        return (
+                <div>Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+        )
+    }
+
+    FinishedList() {
+        if (this.state.finishedList === undefined) {
+            return null;
+        }
+        return (
+                <div>Finished: <ul>{this.state.finishedList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+        )
+    }
+
     ErrorList() {
         if (this.state.errors === undefined) {
             return null;
@@ -56,6 +74,8 @@ class AuMigrationStatus extends React.Component {
             running: result.running,
             fetchError: false,
             status: result.status,
+            activeList: result.active_list,
+            finishedList: result.finished_list,
             errors: result.errors,
             delay: result.running ? 1000 : 5000,
           });
@@ -77,6 +97,8 @@ class AuMigrationStatus extends React.Component {
       <div>
         <div>Running: {this.state.fetchError ? "Unknown" : this.state.running ? "Yes" : "No"}</div>
         <div>Status: {this.state.status}</div>
+            {this.ActiveList()}
+            {this.FinishedList()}
             {this.ErrorList()}
       </div>
     );
