@@ -2137,8 +2137,8 @@
 
     param[journal_issn] = 2772-5170
 
-    au < exists ; exists ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ ; ; >
-    au < expected ; expected ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ ; ; >
+    au < manifest ; exists ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ ; ; >
+    au < manifest ; expected ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ ; ; >
 
   }
 
@@ -3056,7 +3056,7 @@
     au < finished ; crawling ; 2019 ; Journal of Global Infectious Diseases Volume 11 ; 2019 ; 11 ; https://www.jgid.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Journal of Global Infectious Diseases Volume 12 ; 2020 ; 12 ; https://www.jgid.org/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Global Infectious Diseases Volume 13 ; 2021 ; 13 ; https://www.jgid.org/ ; ; >
-    au < expected ; exists ; 2022 ; Journal of Global Infectious Diseases Volume 14 ; 2022 ; 14 ; https://www.jgid.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Journal of Global Infectious Diseases Volume 14 ; 2022 ; 14 ; https://www.jgid.org/ ; ; >
 
   }
 
@@ -3580,7 +3580,7 @@
     au < finished ; crawling ; 2019 ; Journal of Oral and Maxillofacial Pathology Volume 23 ; 2019 ; 23 ; https://www.jomfp.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Journal of Oral and Maxillofacial Pathology Volume 24 ; 2020 ; 24 ; https://www.jomfp.in/ ; ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2021 ; Journal of Oral and Maxillofacial Pathology Volume 25 ; 2021 ; 25 ; https://www.jomfp.in/ ; ; >
-    au < expected ; exists ; 2022 ; Journal of Oral and Maxillofacial Pathology Volume 26 ; 2022 ; 26 ; https://www.jomfp.in/ ; ; >
+    au < manifest ; exists ; 2022 ; Journal of Oral and Maxillofacial Pathology Volume 26 ; 2022 ; 26 ; https://www.jomfp.in/ ; ; >
 
   }
 
@@ -4110,7 +4110,7 @@
     au < finished ; crawling ; 2019 ; Neurology India Volume 67 ; 2019 ; 67 ; https://www.neurologyindia.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Neurology India Volume 68 ; 2020 ; 68 ; https://www.neurologyindia.com/ ; ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2021 ; Neurology India Volume 69 ; 2021 ; 69 ; https://www.neurologyindia.com/ ; ; >
-    au < expected ; exists ; 2022 ; Neurology India Volume 70 ; 2022 ; 70 ; https://www.neurologyindia.com/ ; ; >
+    au < manifest ; exists ; 2022 ; Neurology India Volume 70 ; 2022 ; 70 ; https://www.neurologyindia.com/ ; ; >
 
   }
 
@@ -4280,7 +4280,7 @@
     au < finished ; crawling ; 2019 ; Oman Journal of Ophthalmology Volume 12 ; 2019 ; 12 ; https://www.ojoonline.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Oman Journal of Ophthalmology Volume 13 ; 2020 ; 13 ; https://www.ojoonline.org/ ; ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2021 ; Oman Journal of Ophthalmology Volume 14 ; 2021 ; 14 ; https://www.ojoonline.org/ ; ; >
-    au < expected ; exists ; 2022 ; Oman Journal of Ophthalmology Volume 15 ; 2022 ; 15 ; https://www.ojoonline.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Oman Journal of Ophthalmology Volume 15 ; 2022 ; 15 ; https://www.ojoonline.org/ ; ; >
 
     }
 
@@ -4958,7 +4958,7 @@
       au < finished ; crawling ; 2019 ; Al-Azhar Assiut Medical Journal Volume 17 ; 2019 ; 17 ; https://www.azmj.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Al-Azhar Assiut Medical Journal Volume 18 ; 2020 ; 18 ; https://www.azmj.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2021 ; Al-Azhar Assiut Medical Journal Volume 19 ; 2021 ; 19 ; https://www.azmj.eg.net/ ; ; >
-      au < expected ; exists ; 2022 ; Al-Azhar Assiut Medical Journal Volume 20 ; 2022 ; 20 ; https://www.azmj.eg.net/ ; ; >
+      au < manifest ; exists ; 2022 ; Al-Azhar Assiut Medical Journal Volume 20 ; 2022 ; 20 ; https://www.azmj.eg.net/ ; ; >
 
   }
 
@@ -11245,7 +11245,7 @@
       au < finished ; crawling ; 2019 ; Urological Science Volume 30 ; 2019 ; 30 ; https://www.e-urol-sci.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Urological Science Volume 31 ; 2020 ; 31 ; https://www.e-urol-sci.com/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Urological Science Volume 32 ; 2021 ; 32 ; https://www.e-urol-sci.com/ ; ; >
-      au < expected ; exists ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ ; ; >
+      au < manifest ; exists ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ ; ; >
 
   }
 
