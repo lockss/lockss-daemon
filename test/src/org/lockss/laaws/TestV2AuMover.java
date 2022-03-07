@@ -22,6 +22,10 @@ import org.lockss.test.MockLockssDaemon;
 import org.lockss.test.MockPlugin;
 
 public class TestV2AuMover extends LockssTestCase {
+  // make tests succeed
+  public void testDummy() {
+  }
+
 //   private static Logger log = Logger.getLogger("TestV2AuMover");
 
 //   V2AuMover auMover;
