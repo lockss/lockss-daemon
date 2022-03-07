@@ -287,7 +287,7 @@
     au < doesNotExist ; 1989 ; Congressional Hearings 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1990 ; Congressional Hearings 1990 ; 1990 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1991 ; Congressional Hearings 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < manifest ; 1992 ; Congressional Hearings 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < doNotProcess ; 1992 ; Congressional Hearings 1992 ; 1992 ; https://www.govinfo.gov/ > #empty xml file https://www.govinfo.gov/sitemap/CHRG_1992_sitemap.xml
     au < doNotProcess ; 1993 ; Congressional Hearings 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 1994 ; Congressional Hearings 1994 ; 1994 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 1995 ; Congressional Hearings 1995 ; 1995 ; https://www.govinfo.gov/ >
