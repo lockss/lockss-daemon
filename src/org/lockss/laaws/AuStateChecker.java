@@ -77,6 +77,10 @@ public class AuStateChecker extends Worker {
           log.info("V2 Au Agreements are the same");
         }
         else {
+          if( log.isDebug()) {
+            log.debug("AuAgreements v1Bean: "+ v1Bean.toString());
+            log.debug("AuAgreements v2Bean: " + v2Bean.toString());
+          }
           err= auName +": V2 Au Agreements do not match.";
           log.error(err);
         }
@@ -111,7 +115,8 @@ public class AuStateChecker extends Worker {
         }
         else {
           if( log.isDebug()) {
-              log.debug("v1Bean: "+ v1Bean.toString() + " does not equal v2Bean: " + v2Bean.toString());
+              log.debug("AuSuspectUrlVersions v1Bean: "+ v1Bean.toString());
+              log.debug("AuSuspectUrlVersions v2Bean: " + v2Bean.toString());
           }
           err= auName +": V2 Au Suspect Url Versions do not match.";
           log.error(err);
@@ -147,7 +152,8 @@ public class AuStateChecker extends Worker {
         }
         else {
           if( log.isDebug()) {
-            log.debug("v1Bean: "+ v1Bean.toString() + " does not equal v2Bean: " + v2Bean.toString());
+            log.debug("NoAuPeerSet v1Bean: "+ v1Bean.toString());
+            log.debug("NoAuPeerSet v2Bean: "+ v2Bean.toString());
           }
           err= auName +": V2 No AU PeerSet do not match.";
           log.error(err);
@@ -183,7 +189,8 @@ public class AuStateChecker extends Worker {
         }
         else {
           if( log.isDebug()) {
-            log.debug("v1Bean: "+ v1Config.toString() + " does not equal v2Bean: " + v2Config.toString());
+            log.debug("AuConfiguration v1Bean: "+ v1Config.toString());
+            log.debug("AuConfiguration v2Bean: "+ v2Config.toString());
           }
           err= auName +": V2 Au Configuration does not match.";
           log.error(err);
@@ -210,12 +217,14 @@ public class AuStateChecker extends Worker {
         V2AuStateBean v1Bean=new V2AuStateBean(v1);
         String json = cfgApiClient.getAuState(au.getAuId());
         V2AuStateBean v2Bean = new Gson().fromJson(json, V2AuStateBean.class);
+        v2Bean.setCdnStems(v2Bean.getCdnStems());
         if(v2Bean.equals(v1Bean)) {
           log.info("V2 AuState is the same");
         }
         else {
           if( log.isDebug()) {
-            log.debug("v1Bean: "+ v1Bean.toString() + " does not equal v2Bean: " + v2Bean.toString());
+            log.debug("AuState v1Bean: "+ v1Bean.toString());
+            log.debug("AuState v2Bean: "+ v2Bean.toString());
           }
           err= auName +": V2 AuState does not match.";
           log.error(err);

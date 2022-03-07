@@ -29,9 +29,12 @@ package org.lockss.laaws.model.cfg;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin.Feature;
@@ -552,7 +555,7 @@ public class V2AuStateBean {
    * @param cdnStems the cdnStems to set
    */
   public void setCdnStems(List<String> cdnStems) {
-    this.cdnStems = cdnStems;
+    this.cdnStems = cdnStems == null ? (List<String>) Collections.EMPTY_LIST : cdnStems;
   }
 
   /**
@@ -628,6 +631,59 @@ public class V2AuStateBean {
     propMap.put("substanceVersion", substanceVersion);
     propMap.put("v3Agreement", v3Agreement);
     return propMap;
+  }
+
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(auCreationTime, lastCrawlTime, lastCrawlAttempt, lastCrawlResultMsg,
+        lastCrawlResult, lastDeepCrawlTime, lastDeepCrawlAttempt, lastDeepCrawlResultMsg,
+        lastDeepCrawlResult, lastDeepCrawlDepth, lastTopLevelPollTime, lastPollStart,
+        lastPollResult,
+        pollDuration, averageHashDuration, clockssSubscriptionStatus, v3Agreement,
+        highestV3Agreement,
+        accessType, hasSubstance, substanceVersion, metadataVersion, lastMetadataIndex,
+        lastContentChange, lastPoPPoll, lastPoPPollResult, lastLocalHashScan, numAgreePeersLastPoR,
+        numWillingRepairers, numCurrentSuspectVersions, cdnStems, isMetadataExtractionEnabled,
+        auId);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    V2AuStateBean that = (V2AuStateBean) o;
+    return auCreationTime == that.auCreationTime && lastCrawlTime == that.lastCrawlTime
+        && lastCrawlAttempt == that.lastCrawlAttempt && lastCrawlResult == that.lastCrawlResult
+        && lastDeepCrawlTime == that.lastDeepCrawlTime
+        && lastDeepCrawlAttempt == that.lastDeepCrawlAttempt
+        && lastDeepCrawlResult == that.lastDeepCrawlResult
+        && lastDeepCrawlDepth == that.lastDeepCrawlDepth
+        && lastTopLevelPollTime == that.lastTopLevelPollTime && lastPollStart == that.lastPollStart
+        && lastPollResult == that.lastPollResult && pollDuration == that.pollDuration
+        && averageHashDuration == that.averageHashDuration
+        && clockssSubscriptionStatus == that.clockssSubscriptionStatus
+        && Double.compare(that.v3Agreement, v3Agreement) == 0
+        && Double.compare(that.highestV3Agreement, highestV3Agreement) == 0
+        && lastMetadataIndex == that.lastMetadataIndex
+        && lastContentChange == that.lastContentChange
+        && lastPoPPoll == that.lastPoPPoll && lastPoPPollResult == that.lastPoPPollResult
+        && lastLocalHashScan == that.lastLocalHashScan
+        && numAgreePeersLastPoR == that.numAgreePeersLastPoR
+        && numWillingRepairers == that.numWillingRepairers
+        && numCurrentSuspectVersions == that.numCurrentSuspectVersions
+        && isMetadataExtractionEnabled == that.isMetadataExtractionEnabled
+        && Objects.equals(lastCrawlResultMsg, that.lastCrawlResultMsg)
+        && Objects.equals(lastDeepCrawlResultMsg, that.lastDeepCrawlResultMsg)
+        && accessType == that.accessType && hasSubstance == that.hasSubstance
+        && Objects.equals(substanceVersion, that.substanceVersion)
+        && Objects.equals(metadataVersion, that.metadataVersion)
+        && Objects.equals(cdnStems, that.cdnStems) && Objects.equals(auId,
+        that.auId);
   }
 
   @Override

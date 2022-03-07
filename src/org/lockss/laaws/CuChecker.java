@@ -1,5 +1,8 @@
 package org.lockss.laaws;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.lockss.laaws.api.rs.StreamingCollectionsApi;
@@ -73,8 +76,17 @@ public class CuChecker extends Worker {
         artifact.getCommitted().equals(Boolean.TRUE);
     if ( isMatch && auMover.isCompareBytes()) {
       log.debug3("Fetching  content for byte compare");
-//      ArtifactData artifact = collectionsApi.getArtifact(collection, artifact.getId(),
-//                    "ALWAYS");
+      try {
+        File v2Artifact = collectionsApi.getArtifact(collection, artifact.getId(),
+            "ALWAYS");
+        log.debug("File: " + v2Artifact.getName()
+            + "Can Read:"+v2Artifact.canRead()
+            +" Can Write:" + v2Artifact.canWrite());
+        FileInputStream fis = new FileInputStream(v2Artifact);
+      }
+      catch (ApiException | IOException e) {
+        e.printStackTrace();
+      }
 
     }
   }
