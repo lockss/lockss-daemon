@@ -145,7 +145,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Annals of the Rheumatic Diseases Volume 77 ; 77 ; https://ard.bmj.com/ > #login page found on recent page
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Annals of the Rheumatic Diseases Volume 78 ; 78 ; https://ard.bmj.com/ > #login page
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Annals of the Rheumatic Diseases Volume 79 ; 79 ; https://ard.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2021 ; Annals of the Rheumatic Diseases Volume 80 ; 80 ; https://ard.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; Annals of the Rheumatic Diseases Volume 80 ; 80 ; https://ard.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Annals of the Rheumatic Diseases Volume 81 ; 81 ; https://ard.bmj.com/ >
 
   }
@@ -805,7 +805,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; British Journal of Ophthalmology Volume 102 ; 102 ; https://bjo.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; British Journal of Ophthalmology Volume 103 ; 103 ; https://bjo.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; British Journal of Ophthalmology Volume 104 ; 104 ; https://bjo.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2021 ; British Journal of Ophthalmology Volume 105 ; 105 ; https://bjo.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; British Journal of Ophthalmology Volume 105 ; 105 ; https://bjo.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; British Journal of Ophthalmology Volume 106 ; 106 ; https://bjo.bmj.com/ >
 
   }
@@ -873,7 +873,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; British Journal of Sports Medicine Volume 51 ; 51 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; British Journal of Sports Medicine Volume 52 ; 52 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; British Journal of Sports Medicine Volume 53 ; 53 ; https://bjsm.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; British Journal of Sports Medicine Volume 54 ; 54 ; https://bjsm.bmj.com/ > #Found a login page. https://bjsm.bmj.com/content/54/2/94.full.pdf
+    au < bmj.BMJDrupalPlugin ; ready ; 2020 ; British Journal of Sports Medicine Volume 54 ; 54 ; https://bjsm.bmj.com/ > #Found a login page. https://bjsm.bmj.com/content/54/2/94.full.pdf
     au < bmj.BMJDrupalPlugin ; ready ; 2021 ; British Journal of Sports Medicine Volume 55 ; 55 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; British Journal of Sports Medicine Volume 56 ; 56 ; https://bjsm.bmj.com/ >
 
@@ -1060,7 +1060,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; European Journal of Hospital Pharmacy: Science and Practice Volume 25 ; 25 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; European Journal of Hospital Pharmacy: Science and Practice Volume 26 ; 26 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; European Journal of Hospital Pharmacy: Science and Practice Volume 27 ; 27 ; https://ejhp.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2021 ; European Journal of Hospital Pharmacy: Science and Practice Volume 28 ; 28 ; https://ejhp.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2021 ; European Journal of Hospital Pharmacy: Science and Practice Volume 28 ; 28 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; European Journal of Hospital Pharmacy: Science and Practice Volume 29 ; 29 ; https://ejhp.bmj.com/ >
 
   }
@@ -1706,7 +1706,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Journal of Epidemiology & Community Health Volume 71 ; 71 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Journal of Epidemiology & Community Health Volume 72 ; 72 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Journal of Epidemiology & Community Health Volume 73 ; 73 ; https://jech.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; Journal of Epidemiology & Community Health Volume 74 ; 74 ; https://jech.bmj.com/ > #Found login page. https://jech.bmj.com/content/74/10/778
+    au < bmj.BMJDrupalPlugin ; ready ; 2020 ; Journal of Epidemiology & Community Health Volume 74 ; 74 ; https://jech.bmj.com/ > #Found login page. https://jech.bmj.com/content/74/10/778
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Journal of Epidemiology & Community Health Volume 75 ; 75 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Journal of Epidemiology & Community Health Volume 76 ; 76 ; https://jech.bmj.com/ >
 
@@ -1923,7 +1923,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Journal of NeuroInterventional Surgery Volume 9 ; 9 ; https://jnis.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Journal of NeuroInterventional Surgery Volume 10 ; 10 ; https://jnis.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Journal of NeuroInterventional Surgery Volume 11 ; 11 ; https://jnis.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; Journal of NeuroInterventional Surgery Volume 12 ; 12 ; https://jnis.bmj.com/ > #Found login page.
+    au < bmj.BMJDrupalPlugin ; ready ; 2020 ; Journal of NeuroInterventional Surgery Volume 12 ; 12 ; https://jnis.bmj.com/ > #Found login page.
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Journal of NeuroInterventional Surgery Volume 13 ; 13 ; https://jnis.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Journal of NeuroInterventional Surgery Volume 14 ; 14 ; https://jnis.bmj.com/ >
 
@@ -2829,7 +2829,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; Thorax Volume 72 ; 72 ; https://thorax.bmj.com/ > # Login page https://thorax.bmj.com/content/suppl/2017/11/15/72.Suppl_3.DC2
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; Thorax Volume 73 ; 73 ; https://thorax.bmj.com/ > # Login page https://thorax.bmj.com/content/suppl/2018/02/19/73.Suppl_1.DC1
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Thorax Volume 74 ; 74 ; https://thorax.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2020 ; Thorax Volume 75 ; 75 ; https://thorax.bmj.com/ > #login page https://thorax.bmj.com/content/75/10/826
+    au < bmj.BMJDrupalPlugin ; ready ; 2020 ; Thorax Volume 75 ; 75 ; https://thorax.bmj.com/ > #login page https://thorax.bmj.com/content/75/10/826
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; Thorax Volume 76 ; 76 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Thorax Volume 77 ; 77 ; https://thorax.bmj.com/ >
 
