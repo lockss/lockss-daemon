@@ -42,6 +42,7 @@ public class AuStateChecker extends Worker {
     repoManager = LockssDaemon.getLockssDaemon().getRepositoryManager();
     pollManager = LockssDaemon.getLockssDaemon().getPollManager();
   }
+
   public void run() {
     try {
       String auName = au.getName();

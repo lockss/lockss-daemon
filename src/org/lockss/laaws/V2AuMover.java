@@ -976,7 +976,9 @@ public class V2AuMover {
       Response response = null;
 
       // first call is actual call, following are first retries
-      while ((response == null || !response.isSuccessful()) && tryCount < maxRetryCount) {
+      int errCode = 0;
+      String errMsg = "";
+      while ((response == null || (!response.isSuccessful()) && tryCount < maxRetryCount)) {
         tryCount++;
         try {
           response = chain.proceed(request);
@@ -984,7 +986,8 @@ public class V2AuMover {
             return response;
           }
           else {
-            int errCode = response.code();
+            errCode = response.code();
+            errMsg=response.message();
             logErrorBody(response);
             if (errCode == 401 || errCode == 403) {
               // no retries
@@ -1019,17 +1022,13 @@ public class V2AuMover {
           throw new RuntimeException(e1);
         }
       }
-      //We run out of retries
-      if (response != null) {
-        int errCode = response.code();
-        logErrorBody(response);
-        // we've run out of retries...
-        if (errCode == 401 || errCode == 403 || errCode >= 500) {
-          terminated = true;
-          String msg = errCode + " - " + response.message() + ": " + response.body();
-          response.close();
-          throw new IOException(msg);
-        }
+      //We've run out of retries and it is not IOException.
+      String msg = "Exceeded retries: " + errCode + ": " + errMsg;
+      if (errCode == 401 || errCode == 403 || errCode >= 500) {
+        log.debug(msg);
+        terminated = true;
+        response.close();
+        throw new IOException(msg);
       }
       // last try should proceed as is
       return chain.proceed(request);
@@ -1435,9 +1434,9 @@ public class V2AuMover {
   }
 
   /**
-   * Update the report for the current Au
-   *
-   * @param auName the name of the current Au
+   * Update the report for the current Au.
+   * @param au The ArchivalUnit which is being counted
+   * @param auStat The AuStatus for this ArchivalUnit.
    */
   void updateReport(ArchivalUnit au, AuStatus auStat) {
     if (reportWriter == null) {
