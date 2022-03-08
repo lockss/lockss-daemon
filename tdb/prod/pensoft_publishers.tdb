@@ -979,7 +979,7 @@
 
       au < released ; 2020 ; 2020 ; European Science Editing (ESE) Volume 2020 ; 2020 ; https://ese.arphahub.com/ >
       au < manifest ; 2021 ; 2021 ; European Science Editing (ESE) Volume 2021 ; 2021 ; https://ese.arphahub.com/ >
-      au < expected ; 2022 ; 2022 ; European Science Editing (ESE) Volume 2022 ; 2022 ; https://ese.arphahub.com/ >
+      au < manifest ; 2022 ; 2022 ; European Science Editing (ESE) Volume 2022 ; 2022 ; https://ese.arphahub.com/ >
 
   }
 
@@ -1129,7 +1129,7 @@
       au < released ; 2019 ; 2019 ; Folia Medica Volume 2019 ; 2019 ; https://foliamedica.bg/ >
       au < released ; 2020 ; 2020 ; Folia Medica Volume 2020 ; 2020 ; https://foliamedica.bg/ >
       au < manifest ; 2021 ; 2021 ; Folia Medica Volume 2021 ; 2021 ; https://foliamedica.bg/ >
-      au < expected ; 2022 ; 2022 ; Folia Medica Volume 2022 ; 2022 ; https://foliamedica.bg/ >
+      au < manifest ; 2022 ; 2022 ; Folia Medica Volume 2022 ; 2022 ; https://foliamedica.bg/ >
 
   }
 
@@ -1231,7 +1231,7 @@
       param[au_oai_set] = zitteliana
 
       au < manifest ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ >
-      au < expected ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ >
+      au < manifest ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ >
 
   }
 

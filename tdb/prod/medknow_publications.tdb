@@ -2129,8 +2129,8 @@
 
     param[journal_issn] = 2772-5170
 
-    au < exists ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ >
-    au < expected ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ >
+    au < manifest ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ >
+    au < manifest ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ >
 
   }
 
@@ -4261,7 +4261,7 @@
     au < released ; 2019 ; Oman Journal of Ophthalmology Volume 12 ; 2019 ; 12 ; https://www.ojoonline.org/ >
     au < released ; 2020 ; Oman Journal of Ophthalmology Volume 13 ; 2020 ; 13 ; https://www.ojoonline.org/ >
     au < manifest ; 2021 ; Oman Journal of Ophthalmology Volume 14 ; 2021 ; 14 ; https://www.ojoonline.org/ >
-    au < expected ; 2022 ; Oman Journal of Ophthalmology Volume 15 ; 2022 ; 15 ; https://www.ojoonline.org/ >
+    au < manifest ; 2022 ; Oman Journal of Ophthalmology Volume 15 ; 2022 ; 15 ; https://www.ojoonline.org/ >
 
     }
 
@@ -4935,7 +4935,7 @@
       au < released ; 2019 ; Al-Azhar Assiut Medical Journal Volume 17 ; 2019 ; 17 ; https://www.azmj.eg.net/ >
       au < released ; 2020 ; Al-Azhar Assiut Medical Journal Volume 18 ; 2020 ; 18 ; https://www.azmj.eg.net/ >
       au < manifest ; 2021 ; Al-Azhar Assiut Medical Journal Volume 19 ; 2021 ; 19 ; https://www.azmj.eg.net/ >
-      au < expected ; 2022 ; Al-Azhar Assiut Medical Journal Volume 20 ; 2022 ; 20 ; https://www.azmj.eg.net/ >
+      au < manifest ; 2022 ; Al-Azhar Assiut Medical Journal Volume 20 ; 2022 ; 20 ; https://www.azmj.eg.net/ >
 
   }
 
@@ -6804,7 +6804,7 @@
       au < released ; 2019 ; Journal of Clinical Sciences Volume 16 ; 2019 ; 16 ; https://www.jcsjournal.org/ >
       au < released ; 2020 ; Journal of Clinical Sciences Volume 17 ; 2020 ; 17 ; https://www.jcsjournal.org/ >
       au < manifest ; 2021 ; Journal of Clinical Sciences Volume 18 ; 2021 ; 18 ; https://www.jcsjournal.org/ >
-      au < expected ; 2022 ; Journal of Clinical Sciences Volume 19 ; 2022 ; 19 ; https://www.jcsjournal.org/ >
+      au < manifest ; 2022 ; Journal of Clinical Sciences Volume 19 ; 2022 ; 19 ; https://www.jcsjournal.org/ >
 
   }
 
@@ -11207,7 +11207,7 @@
       au < released ; 2019 ; Urological Science Volume 30 ; 2019 ; 30 ; https://www.e-urol-sci.com/ >
       au < released ; 2020 ; Urological Science Volume 31 ; 2020 ; 31 ; https://www.e-urol-sci.com/ >
       au < released ; 2021 ; Urological Science Volume 32 ; 2021 ; 32 ; https://www.e-urol-sci.com/ >
-      au < expected ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ >
+      au < manifest ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ >
 
   }
 
