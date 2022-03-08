@@ -82,6 +82,9 @@ public class Emerald2020HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "intent_download_counts_badge"),
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "intent_cited_count"),
 
+            //https://www.emerald.com/insight/publication/issn/1059-5422
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "earlycite"),
+
 
 
     };

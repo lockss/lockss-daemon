@@ -48,8 +48,11 @@ import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import org.apache.commons.io.FileUtils;
+
 
 public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
 
@@ -127,6 +130,7 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
             "                </div>\n" +
             "            </div>\n" +
             "        </div>\n" +
+            "       <div id=\"earlycite\" role=\"tabpanel\" aria-labelledby=\"earlycite-tab\" class=\"tab-pane fade\"> early cite content </div>\n" + 
             "        <!--/Chapter__header-->\n" +
             "        <div class=\"bg-light border-top border-bottom py-3 mb-3 Chapter__stats content_block\">\n" +
             "            <div class=\"container \">\n" +
@@ -250,6 +254,7 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
             "                </div>\n" +
             "            </div>\n" +
             "        </div>\n" +
+            "       \n" +
             "        <!--/Chapter__header-->\n" +
             "        <div class=\"bg-light border-top border-bottom py-3 mb-3 Chapter__stats content_block\">\n" +
             "            <div class=\"container \">\n" +
