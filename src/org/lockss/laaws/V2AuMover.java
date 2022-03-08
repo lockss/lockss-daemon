@@ -386,6 +386,7 @@ public class V2AuMover {
     if (pluginManager.isInternalAu(args.au)) {
       throw new IllegalArgumentException("Can't move internal AUs");
     }
+    totalTimers.start(Phase.TOTAL);
     initRequest(args);
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
@@ -1173,14 +1174,23 @@ public class V2AuMover {
     }
 
     public void stop(Phase phase) {
+      if (!timerMap.containsKey(phase)) {
+        throw new IllegalStateException("No " + phase + " timer, can't stop");
+      }
       timerMap.get(phase).stop();
     }
 
     public void suspend(Phase phase) {
+      if (!timerMap.containsKey(phase)) {
+        throw new IllegalStateException("No " + phase + " timer, can't suspend");
+      }
       timerMap.get(phase).suspend();
     }
 
     public void resume(Phase phase) {
+      if (!timerMap.containsKey(phase)) {
+        throw new IllegalStateException("No " + phase + " timer, can't resume");
+      }
       timerMap.get(phase).resume();
     }
 
@@ -1189,14 +1199,23 @@ public class V2AuMover {
     }
 
     public long getStartTime(Phase phase) {
+      if (!timerMap.containsKey(phase)) {
+        throw new IllegalStateException("No " + phase + " timer, can't get start time");
+      }
       return timerMap.get(phase).getStartTime();
     }
 
     public long getStopTime(Phase phase) {
+      if (!timerMap.containsKey(phase)) {
+        throw new IllegalStateException("No " + phase + " timer, can't get stop time");
+      }
       return timerMap.get(phase).getStopTime();
     }
 
     public long getElapsedTime(Phase phase) {
+      if (!timerMap.containsKey(phase)) {
+        throw new IllegalStateException("No " + phase + " timer, can't get elapsed time");
+      }
       return timerMap.get(phase).getTime();
     }
 
