@@ -59,9 +59,13 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_name</string>
         <string>"National Academy of Sciences Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
     </entry>
-    <!-- https://pnas-prod.literatumonline.com/loi/pnas/group/d2020.y2022 -->
+    <!-- https://www.pnas.org/lockss/pnas/118/index.html-->
     <entry>
         <string>au_start_url</string>
-        <string>"%sloi/%s/group/d2020.y2022", base_url, journal_id</string>
+        <string>"%slockss/pnas/%s/index.html", base_url, volume_name</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.atypon.pnas.PnasHtmlCrawlFilterFactory</string>
     </entry>
 </map>
