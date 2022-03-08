@@ -9,7 +9,7 @@
  >
   param[base_url] = https://library.seg.org/
 
-  plugin = org.lockss.plugin.atypon.seg.ClockssSEGAbstractPlugin
+  plugin = org.lockss.plugin.atypon.seg.ClockssSEGAbstractsPlugin
   implicit < status ; status2 ; year ; param[item_doi] ; name ; hidden[proxy] >
 
   {
