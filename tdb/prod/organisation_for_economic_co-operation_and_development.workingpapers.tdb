@@ -14,7 +14,7 @@
     #{ # #TODO there are many many AUs here, scrape or get a list from oecd
     #  title <
     #    name = OECD Economic Surveys ;
-    #    issn = ????-????
+    #    eissn = ????-????
     #  >
     #  au < manifest ; 9999 ; OECD Economic Surveys Volume ???? ; ???? >
     #}
@@ -22,7 +22,7 @@
     {
       title <
         name = OECD Guidelines for the Testing of Chemicals, Section 1 ;
-        issn = 2074-5753
+        eissn = 2074-5753
       >
         au < manifest ; 9999 ; OECD Guidelines for the Testing of Chemicals, Section 1: Summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-group-on-physical-chemistry ; 9789264013391-en >
         au < manifest ; 9999 ; OECD Guidelines for the Testing of Chemicals Test No. 101 ; environment/test-no-101-uv-vis-absorption-spectra ; 9789264069503-en >
@@ -54,7 +54,7 @@
     {
       title <
         name = OECD Guidelines for the Testing of Chemicals, Section 2 ;
-        issn = 2074-5761
+        eissn = 2074-5761
       >
 
         au < manifest ; 9999 ; OECD Guidelines for the Testing of Chemicals, Section 2: Summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-group-on-ecotoxicology ; 9789264022386-en >
@@ -114,7 +114,7 @@
     {
       title <
         name = OECD Guidelines for the Testing of Chemicals, Section 3 ;
-        issn = 2074-577X
+        eissn = 2074-577X
       >
 
         au < manifest ; 2006 ; OECD Guidelines for the Testing of Chemicals, Section 3: Revised ; environment/revised-introduction-to-the-oecd-guidelines-for-testing-of-chemicals-section-3 ; 9789264030213-en >
@@ -146,7 +146,7 @@
     {
       title <
         name = OECD Guidelines for the Testing of Chemicals, Section 4 ;
-        issn = 2074-5788
+        eissn = 2074-5788
       >
 
       au < manifest ; 2006 ; OECD Guidelines for the Testing of Chemicals, Section 4: Summary ; environment/summary-of-considerations-in-the-report-from-the-oecd-expert-groups-on-short-term-and-long-term-toxicology ; 9789264035447-en >
@@ -238,7 +238,7 @@
 
       title <
         name = OECD Guidelines for the Testing of Chemicals, Section 5 ;
-        issn = 2074-5796
+        eissn = 2074-5796
       >
         au < manifest ; 2013 ; OECD Guidelines for the Testing of Chemicals, Section 5: Introduction ; environment/introduction-to-oecd-test-guidelines-on-pesticide-residues-chemistry-section-5-part-a ; 9789264203761-en >
         au < manifest ; 2007 ; OECD Guidelines for the Testing of Chemicals Test No. 501 ; environment/test-no-501-metabolism-in-crops ; 9789264061835-en >
@@ -256,7 +256,7 @@
     {
       title <
         name = Economic Outlook for Southeast Asia, China and India ;
-        issn = 2310-1113
+        eissn = 2310-1113
       >
 
       au < manifest ; 2014 ; Gas Market Reports Volume 2014 ; development/economic-outlook-for-southeast-asia-china-and-india-2014 ; saeo-2014-en >
@@ -277,7 +277,7 @@
     {
       title <
         name = Gas Market Reports ;
-        issn = 2788-6824
+        eissn = 2788-6824
       >
         au < manifest ; 2021 ; Gas Market Reports Volume 2021 Issue 1 ; energy/gas-market-report/volume-2021/issue-1 ; c49341fc-en >
         au < manifest ; 2021 ; Gas Market Reports Volume 2021 Issue 2 ; energy/gas-market-report/volume-2021/issue-2 ; 88f17dda-en >
@@ -289,7 +289,7 @@
     {
       title <
         name = How's Life? ;
-        issn = 2308-9679
+        eissn = 2308-9679
       >
 
         au < manifest ; 2011 ; How's Life? Volume 2011 ; economics/how-s-life ; 9789264121164-en >
@@ -304,7 +304,7 @@
 
       title <
         name = Africa’s Development Dynamics ;
-        issn = 2790-2773
+        eissn = 2790-2773
       >
 
       au < manifest ; 2018 ; Africa’s Development Dynamics Volume 2018 ; development/africa-s-development-dynamics-2018 ; 9789264302501-en >
@@ -318,7 +318,7 @@
 
       title <
         name = Agricultural Policy Monitoring and Evaluation ;
-        issn = 2221-7371
+        eissn = 2221-7371
       >
 
       au < manifest ; 1998 ; Agricultural Policy Monitoring and Evaluation Volume 1998 ; agriculture-and-food/agricultural-policies-in-oecd-countries-1998 ; agr_oecd-1998-en >
@@ -353,7 +353,7 @@
 
       title <
         name = Aid for Trade at a Glance ;
-        issn = 2223-4411
+        eissn = 2223-4411
       >
 
       au < manifest ; 2007 ; Aid for Trade at a Glance Volume 2007 ; development/aid-for-trade-at-a-glance-2007 ; 9789264043220-en >
@@ -370,7 +370,7 @@
 
       title <
         name = Development Co-operation Report ;
-        issn = 2074-7721
+        eissn = 2074-7721
       >
 
       au < manifest ; 1997 ; Development Co-operation Report Volume 1997 ; development/development-co-operation-report-1997 ; dcr-1997-en >
@@ -404,7 +404,7 @@
 
       title <
         name = Economic Policy Reforms ;
-        issn = 1813-2723
+        eissn = 1813-2723
       >
 
       au < manifest ; 2005 ; Economic Policy Reforms Volume 2005 ; economics/economic-policy-reforms-2005 ; growth-2005-en >
@@ -430,7 +430,7 @@
 
       title <
         name = Education Policy Outlook ;
-        issn = 2707-6725
+        eissn = 2707-6725
       >
 
       au < manifest ; 2015 ; Education Policy Outlook Volume 2015 ; education/education-policy-outlook-2015 ; 9789264225442-en >
@@ -445,7 +445,7 @@
 
       title <
         name = Energy Efficiency ;
-        issn = 2790-4156
+        eissn = 2790-4156
       >
 
       au < manifest ; 2017 ; Energy Efficiency Volume 2017 ; energy/energy-efficiency-2017 ; 9789264284234-en >
@@ -460,7 +460,7 @@
 
       title <
         name = Energy Technology Perspectives ;
-        issn = 2079-2603
+        eissn = 2079-2603
       >
 
       au < manifest ; 2006 ; Energy Technology Perspectives Volume 2006 ; energy/energy-technology-perspectives-2006 ; 9789264109834-en >
@@ -479,7 +479,7 @@
 
       title <
         name = Financing SMEs and Entrepreneurs ;
-        issn = 2306-5265
+        eissn = 2306-5265
       >
 
       au < manifest ; 2012 ; Financing SMEs and Entrepreneurs Volume 2012 ; industry-and-services/financing-smes-and-entrepreneurship ; 9789264166769-en >
@@ -498,7 +498,7 @@
 
       title <
         name = Global EV Outlook ;
-        issn = 2790-1564
+        eissn = 2790-1564
       >
 
       au < manifest ; 2016 ; Global EV Outlook Volume 2016 ; energy/global-ev-outlook-2016 ; 9789264279469-en >
@@ -514,7 +514,7 @@
 
       title <
         name = Government at a Glance ;
-        issn = 2221-4399
+        eissn = 2221-4399
       >
 
       au < manifest ; 2009 ; Government at a Glance Volume 2009 ; governance/government-at-a-glance-2009 ; 9789264075061-en >
@@ -531,7 +531,7 @@
 
       title <
         name = Health at a Glance: Asia/Pacific ;
-        issn = 2305-4964
+        eissn = 2305-4964
       >
 
       au < manifest ; 2010 ; Health at a Glance: Asia/Pacific Volume 2010 ; social-issues-migration-health/health-at-a-glance-asia-pacific-2010 ; 9789264096202-en >
@@ -549,7 +549,7 @@
 
       title <
         name = International Migration Outlook ;
-        issn = 1999-124X
+        eissn = 1999-124X
       >
 
       au < manifest ; 1997 ; International Migration Outlook Volume 1997 ; social-issues-migration-health/trends-in-international-migration-1997 ; migr_outlook-1997-en >
@@ -583,7 +583,7 @@
 
       title <
         name = ITF Transport Outlook ;
-        issn = 2520-2367
+        eissn = 2520-2367
       >
 
       au < manifest ; 2013 ; ITF Transport Outlook Volume 2013 ; transport/itf-transport-outlook-2013 ; 9789282103937-en >
@@ -598,7 +598,7 @@
 
       title <
         name = Job Creation and Local Economic Development ;
-        issn = 2617-4979
+        eissn = 2617-4979
       >
 
       au < manifest ; 2014 ; Job Creation and Local Economic Development Volume 2014 ; industry-and-services/job-creation-and-local-economic-development ; 9789264215009-en >
@@ -613,7 +613,7 @@
 
       title <
         name = Latin American Economic Outlook ;
-        issn = 2072-5140
+        eissn = 2072-5140
       >
 
       au < manifest ; 2008 ; Latin American Economic Outlook Volume 2008 ; development/latin-american-economic-outlook-2008 ; leo-2008-en >
@@ -637,7 +637,7 @@
 
       title <
         name = Market Report Series: Coal ;
-        issn = 2520-2723
+        eissn = 2520-2723
       >
 
       au < manifest ; 2011 ; Market Report Series: Coal Volume 2011 ; energy/medium-term-coal-market-report-2011 ; 9789264167681-en >
@@ -658,7 +658,7 @@
 
       title <
         name = Market Report Series: Oil ;
-        issn = 2520-2707
+        eissn = 2520-2707
       >
 
       au < manifest ; 2012 ; Market Report Series: Oil Volume 2012 ; energy/medium-term-oil-market-report-2012 ; 9789264188471-en >
@@ -677,7 +677,7 @@
 
       title <
         name = Market Report Series: Renewables ;
-        issn = 2520-2774
+        eissn = 2520-2774
       >
 
       au < manifest ; 2012 ; Market Report Series: Renewables Volume 2012 ; energy/medium-term-renewable-energy-market-report-2012 ; 9789264178007-en >
@@ -697,7 +697,7 @@
 
       title <
         name = Model Tax Convention on Income and on Capital (Full Version) ;
-        issn = 2664-0260
+        eissn = 2664-0260
       >
 
       au < manifest ; 2000 ; Model Tax Convention on Income and on Capital (Full Version) Volume 2000 ; taxation/model-tax-convention-on-income-and-on-capital ; 9789264189409-en >
@@ -711,7 +711,7 @@
 
       title <
         name = Model Tax Convention on Income and on Capital: Condensed Version ;
-        issn = 2074-5419
+        eissn = 2074-5419
       >
 
       au < manifest ; 1992 ; Model Tax Convention on Income and on Capital: Condensed Version Volume 1992 ; taxation/model-tax-convention-on-income-and-on-capital-condensed-version-september-1992 ; mtc_cond-1992-en >
@@ -730,7 +730,7 @@
 
       title <
         name = OECD Business and Finance Outlook ;
-        issn = 2617-2577
+        eissn = 2617-2577
       >
 
       au < manifest ; 2015 ; OECD Business and Finance Outlook Volume 2015 ; finance-and-investment/oecd-business-and-finance-outlook-2015 ; 9789264234291-en >
@@ -747,7 +747,7 @@
 
       title <
         name = OECD Digital Education Outlook ;
-        issn = 2788-8576
+        eissn = 2788-8576
       >
 
       au < manifest ; 2021 ; OECD Digital Education Outlook Volume 2021 ; education/oecd-digital-education-outlook-2021 ; 589b283f-en >
@@ -758,7 +758,7 @@
 
       title <
         name = OECD Employment Outlook ;
-        issn = 1999-1266
+        eissn = 1999-1266
       >
 
       au < manifest ; 1996 ; OECD Employment Outlook Volume 1996 ; social-issues-migration-health/oecd-employment-outlook-1996 ; empl_outlook-1996-en >
@@ -794,7 +794,7 @@
 
       title <
         name = OECD Environmental Outlook ;
-        issn = 1999-155X
+        eissn = 1999-155X
       >
 
       au < manifest ; 2001 ; OECD Environmental Outlook Volume 2001 ; environment/oecd-environmental-outlook ; 9789264188563-en >
@@ -807,7 +807,7 @@
 
       title <
         name = OECD Pensions Outlook ;
-        issn = 2313-7649
+        eissn = 2313-7649
       >
 
       au < manifest ; 2012 ; OECD Pensions Outlook Volume 2012 ; finance-and-investment/oecd-pensions-outlook-2012 ; 9789264169401-en >
@@ -822,7 +822,7 @@
 
       title <
         name = OECD Review of Fisheries ;
-        issn = 2225-4323
+        eissn = 2225-4323
       >
 
       au < manifest ; 1997 ; OECD Review of Fisheries Volume 1997 ; agriculture-and-food/review-of-fisheries-in-oecd-countries-1997 ; rev_fish_pol-1997-en >
@@ -844,7 +844,7 @@
 
       title <
         name = OECD Science, Technology and Innovation Outlook ;
-        issn = 2518-6167
+        eissn = 2518-6167
       >
 
       au < manifest ; 2002 ; OECD Science, Technology and Innovation Outlook Volume 2002 ; industry-and-services/oecd-science-technology-and-industry-outlook-2002 ; sti_outlook-2002-en >
@@ -864,7 +864,7 @@
 
       title <
         name = OECD Secretary-General's Report to Ministers ;
-        issn = 2222-3843
+        eissn = 2222-3843
       >
 
       au < manifest ; 2000 ; OECD Secretary-General's Report to Ministers Volume 2000 ; economics/oecd-annual-report-2000 ; annrep-2000-en >
@@ -896,7 +896,7 @@
 
       title <
         name = OECD Skills Outlook ;
-        issn = 2521-1072
+        eissn = 2521-1072
       >
 
       au < manifest ; 2013 ; OECD Skills Outlook Volume 2013 ; education/oecd-skills-outlook-2013 ; 9789264204256-en >
@@ -911,7 +911,7 @@
 
       title <
         name = OECD Sovereign Borrowing Outlook ;
-        issn = 2306-0476
+        eissn = 2306-0476
       >
 
       au < manifest ; 2012 ; OECD Sovereign Borrowing Outlook Volume 2012 ; governance/oecd-sovereign-borrowing-outlook-2012 ; 9789264169135-en >
@@ -930,7 +930,7 @@
 
       title <
         name = OECD Tourism Trends and Policies ;
-        issn = 2076-7773
+        eissn = 2076-7773
       >
 
       au < manifest ; 2008 ; OECD Tourism Trends and Policies Volume 2008 ; industry-and-services/tourism-in-oecd-countries-2008 ; 9789264039773-en >
@@ -947,7 +947,7 @@
 
       title <
         name = OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations ;
-        issn = 2076-9717
+        eissn = 2076-9717
       >
 
       au < manifest ; 2009 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2009 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2009 ; tpg-2009-en >
@@ -961,7 +961,7 @@
 
       title <
         name = OECD-FAO Agricultural Outlook ;
-        issn = 1999-1142
+        eissn = 1999-1142
       >
 
       au < manifest ; 1999 ; OECD-FAO Agricultural Outlook Volume 1999 ; agriculture-and-food/oecd-fao-agricultural-outlook-1999 ; agr_outlook-1999-en >
@@ -994,7 +994,7 @@
 
       title <
         name = PENELOPE: A code system for Monte Carlo simulation of electron and photon transport ;
-        issn = 2707-2894
+        eissn = 2707-2894
       >
 
       au < testing ; 2011 ; PENELOPE: A code system for Monte Carlo simulation of electron and photon transport Volume 2011 ; nuclear-energy/penelope-2011-a-code-system-for-monte-carlo-simulation-of-electron-and-photon-transport ; ef77b746-en >
@@ -1007,7 +1007,7 @@
 
       title <
         name = Pensions at a Glance Asia/Pacific ;
-        issn = 2309-0766
+        eissn = 2309-0766
       >
 
       au < manifest ; 2011 ; Pensions at a Glance Asia/Pacific Volume 2011 ; social-issues-migration-health/pensions-at-a-glance-asia-pacific-2011 ; 9789264107007-en >
@@ -1020,7 +1020,7 @@
 
       title <
         name = Perspectives on Global Development ;
-        issn = 2222-4475
+        eissn = 2222-4475
       >
 
       au < manifest ; 2010 ; Perspectives on Global Development Volume 2010 ; development/perspectives-on-global-development-2010 ; 9789264084728-en >
@@ -1037,7 +1037,7 @@
 
       title <
         name = Projected Costs of Generating Electricity ;
-        issn = 2079-8393
+        eissn = 2079-8393
       >
 
       au < manifest ; 1998 ; Projected Costs of Generating Electricity Volume 1998 ; energy/projected-costs-of-generating-electricity ; 9789264163706-en >
@@ -1052,7 +1052,7 @@
 
       title <
         name = Road Safety Annual Report ;
-        issn = 2312-4571
+        eissn = 2312-4571
       >
 
       au < manifest ; 2009 ; Road Safety Annual Report Volume 2009 ; transport/irtad-road-safety-annual-report-2009 ; 9789282102824-en >
@@ -1073,7 +1073,7 @@
 
       title <
         name = Society at a Glance: Asia/Pacific ;
-        issn = 2408-9168
+        eissn = 2408-9168
       >
 
       au < manifest ; 2019 ; Society at a Glance: Asia/Pacific Volume 2019 ; social-issues-migration-health/society-at-a-glance-asia-pacific-2019 ; soc_aag-2019-en >
@@ -1086,7 +1086,7 @@
 
       title <
         name = States of Fragility ;
-        issn = 2708-860X
+        eissn = 2708-860X
       >
 
       au < manifest ; 2015 ; States of Fragility Volume 2015 ; development/states-of-fragility-2015 ; 9789264227699-en >
@@ -1096,27 +1096,27 @@
 
     }
 
-    {
-
-      title <
-        name = Tax Administration ;
-        issn = 2307-7727
-      >
-
-      au < manifest ; 2006 ; Tax Administration Volume 2006 ; taxation/tax-administration-in-oecd-and-selected-non-oecd-countries ; 9789264064904-en >
-      au < manifest ; 2013 ; Tax Administration Volume 2013 ; taxation/tax-administration-2013 ; 9789264200814-en >
-      au < manifest ; 2015 ; Tax Administration Volume 2015 ; taxation/tax-administration-2015 ; tax_admin-2015-en >
-      au < manifest ; 2017 ; Tax Administration Volume 2017 ; taxation/tax-administration-2017 ; tax_admin-2017-en >
-      au < manifest ; 2019 ; Tax Administration Volume 2019 ; taxation/tax-administration-2019 ; 74d162b6-en >
-      au < manifest ; 2021 ; Tax Administration Volume 2021 ; taxation/tax-administration-2021 ; cef472b9-en >
-
-    }
+#    {
+#
+#      title <
+#        name = Tax Administration ;
+#        eissn = 2307-7727
+#      >
+#      #See same series in Books.
+#      au < manifest ; 2006 ; Tax Administration Volume 2006 ; taxation/tax-administration-in-oecd-and-selected-non-oecd-countries ; 9789264064904-en >
+#      au < manifest ; 2013 ; Tax Administration Volume 2013 ; taxation/tax-administration-2013 ; 9789264200814-en >
+#      au < manifest ; 2015 ; Tax Administration Volume 2015 ; taxation/tax-administration-2015 ; tax_admin-2015-en >
+#      au < manifest ; 2017 ; Tax Administration Volume 2017 ; taxation/tax-administration-2017 ; tax_admin-2017-en >
+#      au < manifest ; 2019 ; Tax Administration Volume 2019 ; taxation/tax-administration-2019 ; 74d162b6-en >
+#      au < manifest ; 2021 ; Tax Administration Volume 2021 ; taxation/tax-administration-2021 ; cef472b9-en >
+#
+#    }
 
     {
 
       title <
         name = Tax Policy Reforms ;
-        issn = 2617-3433
+        eissn = 2617-3433
       >
 
       au < manifest ; 2016 ; Tax Policy Reforms Volume 2016 ; taxation/tax-policy-reform-in-the-oecd-2016 ; 9789264260399-en >
@@ -1132,7 +1132,7 @@
 
       title <
         name = Taxing Energy Use ;
-        issn = 2706-6363
+        eissn = 2706-6363
       >
 
       au < manifest ; 2013 ; Taxing Energy Use Volume 2013 ; taxation/taxing-energy-use ; 9789264183933-en >
@@ -1146,7 +1146,7 @@
 
       title <
         name = The Missing Entrepreneurs ;
-        issn = 2664-4851
+        eissn = 2664-4851
       >
 
       au < manifest ; 2013 ; The Missing Entrepreneurs Volume 2013 ; industry-and-services/the-missing-entrepreneurs ; 9789264188167-en >
@@ -1162,7 +1162,7 @@
 
       title <
         name = Trends Shaping Education ;
-        issn = 2218-7049
+        eissn = 2218-7049
       >
 
       au < manifest ; 2008 ; Trends Shaping Education Volume 2008 ; education/trends-shaping-education-2008 ; 9789264046627-en >
@@ -1178,7 +1178,7 @@
 
       title <
         name = Uranium ;
-        issn = 2072-5310
+        eissn = 2072-5310
       >
 
       au < manifest ; 1998 ; Uranium Volume 1998 ; nuclear-energy/uranium-1998 ; uranium-1998-en >
@@ -1200,7 +1200,7 @@
 
       title <
         name = World Energy Investment ;
-        issn = 2790-4318
+        eissn = 2790-4318
       >
 
       au < manifest ; 2016 ; World Energy Investment Volume 2016 ; energy/world-energy-investment-2016 ; 9789264262836-en >
