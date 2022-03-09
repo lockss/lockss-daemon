@@ -42,23 +42,11 @@ import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
-import org.lockss.util.StringUtil;
-
-import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
-import org.apache.commons.io.FileUtils;
-import org.lockss.util.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
-import org.lockss.plugin.PluginManager;
+
 
 public class Emerald2020HtmlFilterFactory implements FilterFactory {
 
