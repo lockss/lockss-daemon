@@ -124,7 +124,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   protected void initialize() {
     this.baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     this.collection = au.getConfiguration().get(ConfigParamDescr.COLLECTION.getKey());
-    this.fetchUrls = new ArrayList<>();
+    this.fetchUrls = null;
     this.allUrls = null;
     // synthetic url, if you want to update the pattern you must update it in all of these places
     // 1. crawl_rules & start_url
@@ -155,6 +155,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
    * @since 1.67.5
    */
   protected void populateUrlList() throws IOException {
+    fetchUrls = new ArrayList<>();
     allUrls = new ArrayList<>();
     // Initialization
     int page=1;
