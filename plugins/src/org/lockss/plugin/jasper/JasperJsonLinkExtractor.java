@@ -104,6 +104,7 @@ public class JasperJsonLinkExtractor {
   public static final Logger log = Logger.getLogger(JasperJsonLinkExtractor.class);
   // https://archive.org/download/Fafnir_2342-2009/23422009-2021-11-03-12-16-13.tar.gz
   public static String DOWNLOAD_URL = "https://archive.org/download/";
+  public static String collection;
   public boolean done;
 
   /**
@@ -113,9 +114,7 @@ public class JasperJsonLinkExtractor {
    *
    * @since 1.67.5 #FIXME ?
    */
-  public JasperJsonLinkExtractor() {
-    this.done = false;
-  }
+  public JasperJsonLinkExtractor() { this.done = false; }
 
   public void extractUrls(ArchivalUnit au,
                           InputStream in,
@@ -123,8 +122,7 @@ public class JasperJsonLinkExtractor {
                           String srcUrl,
                           Callback cb)
       throws IOException, PluginException {
-    // set DOWNLOAD_URL path
-    DOWNLOAD_URL += au.getConfiguration().get(ConfigParamDescr.COLLECTION.getKey()) + "/";
+    collection = au.getConfiguration().get(ConfigParamDescr.COLLECTION.getKey());
 
     // Parse input
     ObjectMapper objectMapper = new ObjectMapper();
@@ -159,7 +157,10 @@ public class JasperJsonLinkExtractor {
         if (filename != null) {
           urlsAndTimes.add(
             new AbstractMap.SimpleEntry<>(
-              DOWNLOAD_URL + filename,
+              DOWNLOAD_URL
+                + collection
+                + "/"
+                + filename,
               mtime
             )
           );
