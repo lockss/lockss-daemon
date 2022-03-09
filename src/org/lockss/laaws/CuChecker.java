@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.io.input.CountingInputStream;
 import org.lockss.laaws.api.rs.StreamingCollectionsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
@@ -14,6 +15,7 @@ import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import static org.lockss.laaws.V2AuMover.CounterType;
 
 public class CuChecker extends Worker {
   private static final Logger log = Logger.getLogger(CuChecker.class);
@@ -49,6 +51,7 @@ public class CuChecker extends Worker {
             Artifact v2Artifact = v2Versions.get(ver);
             compareCuToArtifact(v1Version, v2Artifact);
           }
+          ctrs.incr(CounterType.URLS_VERIFIED);
         }
       }
     }
@@ -83,6 +86,14 @@ public class CuChecker extends Worker {
             + "Can Read:"+v2Artifact.canRead()
             +" Can Write:" + v2Artifact.canWrite());
         FileInputStream fis = new FileInputStream(v2Artifact);
+        CountingInputStream cis = new CountingInputStream(fis);
+
+
+        ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
+
+        // stats to update when available
+        ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, cis.getByteCount());
+        ctrs.add(CounterType.BYTES_VERIFIED, 0); // http response total bytes
       }
       catch (ApiException | IOException e) {
         e.printStackTrace();
