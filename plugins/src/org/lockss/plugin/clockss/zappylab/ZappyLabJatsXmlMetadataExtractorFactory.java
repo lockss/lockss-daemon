@@ -34,6 +34,8 @@ package org.lockss.plugin.clockss.zappylab;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -54,6 +56,21 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
   private static final Logger log = Logger.getLogger(ZappyLabJatsXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
+
+  private static Pattern PLOS_DOI_PAT = Pattern.compile("((^https://)?dx\\.doi\\.org/)(10\\.[\\d]{4,}/[^/]+$)", Pattern.CASE_INSENSITIVE);
+  private static final String DOI_REPL = "$3";
+
+  private static String normalisePlosDoi(String doi) {
+    String nVal = null;
+   
+    // this will strip the "http://dx.doi.org/", if there
+    Matcher plosM = PLOS_DOI_PAT.matcher(doi);
+    if (plosM.matches()) {
+      nVal = plosM.replaceFirst(DOI_REPL);
+      return nVal;
+    }
+    return nVal;
+  }
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -108,6 +125,10 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
         } else {// last chance
           thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
         }
+      }
+
+      if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi) != null) {
+        thisAM.put(MetadataField.FIELD_DOI, normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)));
       }
     }
     
