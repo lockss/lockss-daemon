@@ -42,12 +42,28 @@ import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
+import org.lockss.util.Constants;
+import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
+import org.lockss.util.StringUtil;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
+import org.apache.commons.io.FileUtils;
+import org.lockss.util.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
+import org.lockss.daemon.PluginException;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
+import org.lockss.plugin.PluginManager;
 
 public class Emerald2020HtmlFilterFactory implements FilterFactory {
+
+  protected static Logger log =
+          Logger.getLogger(Emerald2020HtmlFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -83,13 +99,21 @@ public class Emerald2020HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "intent_cited_count"),
 
             //https://www.emerald.com/insight/publication/issn/1059-5422
+            /*
+            <li class="nav-item">
+              <a class="nav-link rounded-0" id="earlycite-tab" data-toggle="tab" href="#earlycite" role="tab" aria-controls="earlycite" aria-selected="true">EarlyCite</a>
+            </li>
+            <div class="tab-pane fade" id="earlycite" role="tabpanel" aria-labelledby="earlycite-tab">
+                 content here need to be excluded
+            </div>
+             */
+            HtmlNodeFilters.tagWithAttributeRegex("a", "id", "earlycite-tab"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "earlycite"),
-
-
 
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
             HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
     Reader httpFilter = FilterUtil.getReader(filteredStream, encoding);
     return new ReaderInputStream(httpFilter);
   }

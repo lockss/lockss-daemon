@@ -130,6 +130,7 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
             "                </div>\n" +
             "            </div>\n" +
             "        </div>\n" +
+            "       <li class=\"nav-item\"><a class=\"nav-link rounded-0\" id=\"earlycite-tab\" data-toggle=\"tab\" href=\"#earlycite\" role=\"tab\" aria-controls=\"earlycite\" aria-selected=\"true\">EarlyCite</a></li>\n" +
             "       <div id=\"earlycite\" role=\"tabpanel\" aria-labelledby=\"earlycite-tab\" class=\"tab-pane fade\"> early cite content </div>\n" + 
             "        <!--/Chapter__header-->\n" +
             "        <div class=\"bg-light border-top border-bottom py-3 mb-3 Chapter__stats content_block\">\n" +
@@ -254,6 +255,7 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
             "                </div>\n" +
             "            </div>\n" +
             "        </div>\n" +
+            "       <li class=\"nav-item\"></li>\n" +
             "       \n" +
             "        <!--/Chapter__header-->\n" +
             "        <div class=\"bg-light border-top border-bottom py-3 mb-3 Chapter__stats content_block\">\n" +
@@ -359,6 +361,17 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
             try {
 
                 filteredStr = StringUtil.fromInputStream(actIn);
+
+
+                    String currentDirectory = System.getProperty("user.dir");
+                    String pathname = currentDirectory +
+                            "/plugins/src/org/lockss/plugin/emerald/generated_emerald_crawl.html";
+                    if (filteredStr.length() > 0) {
+                        FileUtils.writeStringToFile(new File(pathname), filteredStr, Constants.DEFAULT_ENCODING);
+                    } else {
+                        FileUtils.writeStringToFile(new File(pathname), "Empty", Constants.DEFAULT_ENCODING);
+                    }
+
                 
             } catch (IOException e) {
                 log.error(e.getMessage(), e);
