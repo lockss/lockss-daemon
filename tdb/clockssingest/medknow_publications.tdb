@@ -6253,6 +6253,7 @@
 
       param[journal_issn] = 2393-8692
 #      param[base_url] = http://www.ijohr.org/
+      #ceased publishing 2022
 
       au < finished ; finished ; 2015 ; Indian Journal of Oral Health and Research Volume 1 ; 2015 ; 1 ; http://www.ijohr.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; http://www.ijohr.org/ ; ; reingest4.clockss.org:8082 >
@@ -6261,7 +6262,6 @@
       au < finished ; crawling ; 2019 ; Indian Journal of Oral Health and Research Volume 5 ; 2019 ; 5 ; https://www.ijohr.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Indian Journal of Oral Health and Research Volume 6 ; 2020 ; 6 ; https://www.ijohr.org/ ; ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Indian Journal of Oral Health and Research Volume 7 ; 2021 ; 7 ; https://www.ijohr.org/ ; ; >
-      au < expected ; exists ; 2022 ; Indian Journal of Oral Health and Research Volume 8 ; 2022 ; 8 ; https://www.ijohr.org/ ; ; >
 
   }
 
@@ -9774,6 +9774,7 @@
 
       param[journal_issn] = 1947-489X
 #      param[base_url] = http://www.ijmbs.org/
+      #move to Thieme
 
       au < manifest ; exists ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ ; ; >
       au < manifest ; exists ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ ; ; >
@@ -9788,7 +9789,6 @@
       au < finished ; crawling ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 2019 ; 11 ; https://www.ijmbs.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 2020 ; 12 ; https://www.ijmbs.org/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 2021 ; 13 ; https://www.ijmbs.org/ ; ; >
-      au < expected ; exists ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 2022 ; 14 ; https://www.ijmbs.org/ ; ; >
 
   }
 
