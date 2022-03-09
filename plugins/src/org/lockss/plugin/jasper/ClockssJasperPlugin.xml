@@ -86,23 +86,6 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_def_pause_time</string>
         <long>3000</long>
     </entry>
-<!--     <entry> -->
-<!--         <string>plugin_feature_version_map</string> -->
-<!--         <map> -->
-<!--             <entry> -->
-<!--                 <string>Poll</string> -->
-<!--                 <string>1</string> -->
-<!--             </entry> -->
-<!--             <entry> -->
-<!--                 <string>Substance</string> -->
-<!--                 <string>1</string> -->
-<!--             </entry> -->
-<!--             <entry> -->
-<!--                 <string>Metadata</string> -->
-<!--                 <string>1</string> -->
-<!--             </entry> -->
-<!--         </map> -->
-<!--     </entry> -->
     <entry>
         <string>au_def_new_content_crawl</string>
         <long>1209600000</long>
@@ -115,17 +98,25 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- Added so that test URL in
                  TestJasperJsonMetadataExtractorFactory is in crawl spec -->
             <string>1,"^%s.*metadata/", base_url</string>
+            <!-- synthetic start url, if you want to update the pattern you must update it in all of these places
+            // 1. crawl_rules & start_url
+            // 2. JasperCrawlSeed.initialize() -->
+            <string>1,"^%sProjectJasper\?collection=", base_url</string>
         </list>
     </entry>
-    <!-- crawlseed supersedes this, but leave in just in case. -->
-<!--     <entry> -->
-<!--         <string>au_start_url</string> -->
-<!--         https://warcs.archive-it.org/wasapi/v1/webdata?collection=10181 -->
-<!--         <string>"%swasapi/v1/webdata?collection=%s", base_url, collection</string> -->
-<!--     </entry> -->
+    <entry>
+        <string>au_start_url</string>
+        <string>"%sProjectJasper?collection=%s", base_url, collection</string>
+    </entry>
     <entry>
         <string>au_permission_url</string>
         <string>"%srobots.txt", base_url</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%s.*\.tar\.gz$", base_url</string>
+        </list>
     </entry>
     <entry>
         <string>required_daemon_version</string>

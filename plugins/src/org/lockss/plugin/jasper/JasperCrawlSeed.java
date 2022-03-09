@@ -50,6 +50,11 @@ import org.lockss.util.urlconn.*;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -74,7 +79,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
    *
    * @since 1.67.5
    */
-  protected static final String API_URL = "https://warcs.archive-it.org/";
+  protected static final String API_URL = "https://archive.org/metadata/";
 
   protected Crawler.CrawlerFacade facade;
 
@@ -85,10 +90,21 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
    *
    * @since 1.67.5
    */
-  protected List<String> urlList;
+  protected List<String> fetchUrls;
+
+
+  /**
+   * <p>
+   * All urls in this au, used to construct a synthetic landing page.
+   * </p>
+   *
+   * @since 1.67.5
+   */
+  protected List<String> allUrls;
 
   protected String baseUrl;
   protected String collection;
+  protected String storeUrl;
 
   /**
    * <p>
@@ -108,211 +124,257 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   protected void initialize() {
     this.baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     this.collection = au.getConfiguration().get(ConfigParamDescr.COLLECTION.getKey());
-    this.urlList = null;
+    this.fetchUrls = new ArrayList<>();
+    this.allUrls = null;
+    // synthetic url, if you want to update the pattern you must update it in all of these places
+    // 1. crawl_rules & start_url
+    // 2. JasperCrawlSeed.initialize()
+    this.storeUrl = baseUrl
+        + "ProjectJasper?collection="
+        + UrlUtil.encodeUrl(collection);
   }
 
   @Override
   public Collection<String> doGetStartUrls() throws PluginException, IOException {
-//    if (urlList == null) {
-//      populateUrlList();
-//    }
-//    if (urlList.isEmpty()) {
-//      throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
-//    }
-    return Arrays.asList("https://archive.org/download/JournalofSuccessfulDataTransfers/rama-2021-06-25-11-25-53.tar.gz"); //FIXME
+    AuState aus = AuUtil.getAuState(au);
+    populateUrlList();
+    if (fetchUrls.isEmpty() && !aus.hasCrawled()) {
+      // maybe a deepcrawl check ?
+      // facade.getCrawlerStatus().getRefetchDepth() > 2
+      throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
+    }
+    return fetchUrls;
   }
 
-//  /**
-//   * <p>
-//   * Populates the URL list with start URLs.
-//   * </p>
-//   *
-//   * @throws IOException
-//   * @since 1.67.5
-//   */
-//  protected void populateUrlList() throws IOException {
-//    AuState aus = AuUtil.getAuState(au);
-//    urlList = new ArrayList<String>();
-//    String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
-//    //In order to query the metadata service less if this is a normal
-//    //recrawl and we think the intial crawl was good just grab all the start
-//    //URLs from the AU
-//    if (aus.hasCrawled() && au.getRefetchDepth() < 2 && !aus.hasNoSubstance()) {
-//      log.debug3("au hasCrawled, has Substance, and will not be refetched");
-//
-//      CachedUrlSet contents = au.getAuCachedUrlSet();
-//      CuIterable contentIter = contents.getCuIterable();
-//      // https://warcs.archive-it.org/webdatafile/ARCHIVEIT-7711-TEST-JOB1295343-SEED2424423-20201009202340983-00001-h3.warc.gz
-//      Pattern articlePattern = Pattern.compile("/webdatafile/[^/.]+\\.warc\\.gz$", Pattern.CASE_INSENSITIVE);
-//      for (CachedUrl cu : contentIter) {
-//        String url = cu.getUrl();
-//        Matcher mat = articlePattern.matcher(url);
-//        if (mat.find()) {
-//          urlList.add(url);
-//        }
-//      }
-//    } else {
-//
-//      // Initialization
-//      int page=1;
-//      ArchiveItApiJsonLinkExtractor aijle = new ArchiveItApiJsonLinkExtractor();
-//
-//      // Query API until done
-//      while (!aijle.isDone()) {
-//
-//        if (facade.isAborted()) {
-//          log.debug2("Crawl aborted");
-//          return;
-//        }
-//
-//        // Make URL fetcher for this request
-//        String url = makeApiUrl(page);
-//        UrlFetcher uf = makeApiUrlFetcher( aijle, url);
-//        facade.getCrawlerStatus().addPendingUrl(url);
-//
-//        // Make request
-//        UrlFetcher.FetchResult fr = null;
-//        try {
-//          fr = uf.fetch();
-//        }
-//        catch (CacheException ce) {
-//          log.debug2("Stopping due to fatal CacheException", ce);
-//          Throwable cause = ce.getCause();
-//          if (cause != null && IOException.class.equals(cause.getClass())) {
-//            throw (IOException)cause; // Unwrap IOException
-//          }
-//          else {
-//            throw ce;
-//          }
-//        }
-//        if (fr == UrlFetcher.FetchResult.FETCHED) {
-//          facade.getCrawlerStatus().removePendingUrl(url);
-//          facade.getCrawlerStatus().signalUrlFetched(url);
-//        }
-//        else {
-//          log.debug2("Stopping due to fetch result " + fr);
-//          Map<String, String> errors = facade.getCrawlerStatus().getUrlsWithErrors();
-//          if (errors.containsKey(url)) {
-//            errors.put(url, errors.remove(url));
-//          }
-//          else {
-//            facade.getCrawlerStatus().signalErrorForUrl(url, "Cannot fetch seed URL");
-//          }
-//          throw new CacheException("Cannot fetch seed URL");
-//        }
-//        page+=1;
-//
-//      }
-//    }
-//    Collections.sort(urlList);
-//    makeStartUrlContent(urlList, storeUrl);
-//    log.debug2(String.format("Ending with %d URLs", urlList.size()));
-//    if (log.isDebug3()) {
-//      log.debug3("Start URLs: " + urlList.toString());
-//
-//    }
-//  }
-//
-//  protected String makeApiUrl(int page) {
-//    String url = String.format("%swasapi/v1/webdata?collection=%s&page=%d",
-//        API_URL,
-//        collection,
-//        page);
-//    return url;
-//
-//  };
-//  protected UrlFetcher makeApiUrlFetcher(final ArchiveItApiJsonLinkExtractor aijle,
-//                                         final String url) {
-//    // Make a URL fetcher
-//    UrlFetcher uf = facade.makeUrlFetcher(url);
-//
-//    // Set refetch flag // markom- not sure this is necessary?
-//    BitSet permFetchFlags = uf.getFetchFlags();
-//    permFetchFlags.set(UrlCacher.REFETCH_FLAG);
-//    uf.setFetchFlags(permFetchFlags);
-//    // set header to application/json and encoding per WASAPI recommendation
-//    uf.setRequestProperty(
-//        "Accept",
-//        "application/json"
-//    );
-//    // Set custom URL consumer factory, using custom link extractor
-//    uf.setUrlConsumerFactory(new UrlConsumerFactory() {
-//      @Override
-//      public UrlConsumer createUrlConsumer(Crawler.CrawlerFacade ucfFacade,
-//                                           FetchedUrlData ucfFud) {
-//        // Make custom URL consumer
-//        return new SimpleUrlConsumer(ucfFacade, ucfFud) {
-//          @Override
-//          public void consume() throws IOException {
-//            // Apply link extractor to URL and output results into a list
-//            final Set<String> warcUrls = new HashSet<String>();
-//            try {
-//              String au_cset = AuUtil.getCharsetOrDefault(fud.headers);
-//              String cset = CharsetUtil.guessCharsetFromStream(fud.input, au_cset);
-//              aijle.extractUrls(au,
-//                  fud.input,
-//                  cset,
-//                  fud.origUrl,
-//                  url1 -> warcUrls.add(url1));
-//            }
-//            catch (IOException | PluginException ioe) {
-//              log.debug2("Link extractor threw", ioe);
-//              throw new IOException("Error while parsing PAM response for " + url, ioe);
-//            }
-//            finally {
-//              // Logging
-//              log.debug2(String.format("Step ending with %d URLs", warcUrls.size()));
-//              if (log.isDebug3()) {
-//                log.debug3("URLs from step: " + warcUrls.toString());
-//              }
-//              // Output accumulated URLs to start URL list
-//              urlList.addAll(warcUrls);
-//            }
-//          }
-//        };
-//      }
-//    });
-//    return uf;
-//  }
-//
-//  /**
-//   * <p>
-//   *  Makes an HTML page of the list of 'start urls.'
-//   *  This functions as the start_url.
-//   * </p>
-//   * @param urlList
-//   * @param url
-//   * @throws IOException
-//   */
-//  protected void makeStartUrlContent(Collection<String> urlList,
-//                                     String url)
-//      throws IOException {
-//    StringBuilder sb = new StringBuilder();
-//    sb.append("<html>\n");
-//    try {
-//      sb.append("<h1>" + au.getTdbAu().getName() + "</h1>");
-//    } catch (NullPointerException npe) {
-//      log.debug2("could not get name from tdb au");
-//      sb.append("<h1>" + au.getName() + "</h1>");
-//    }
-//    sb.append("<h3>Collected and preserved urls:</h3>");
-//    for (String u : urlList) {
-//      sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
-//    }
-//    sb.append("</html>");
-//    CIProperties headers = new CIProperties();
-//    //Should use a constant here
-//    headers.setProperty("content-type", "text/html; charset=utf-8");
-//    UrlData ud = new UrlData(new ByteArrayInputStream(
-//                                  sb.toString().getBytes(
-//                                      Constants.ENCODING_UTF_8
-//                                  )
-//                             ),
-//                             headers,
-//                             url
-//    );
-//    UrlCacher cacher = facade.makeUrlCacher(ud);
-//    cacher.storeContent();
-//  }
-  
+  /**
+   * <p>
+   * Populates the URL list with start URLs.
+   * </p>
+   *
+   * @throws IOException
+   * @since 1.67.5
+   */
+  protected void populateUrlList() throws IOException {
+    allUrls = new ArrayList<>();
+    // Initialization
+    int page=1;
+    JasperJsonLinkExtractor jjle = new JasperJsonLinkExtractor();
+    // Query API until done
+    while (!jjle.isDone()) {
+
+      if (facade.isAborted()) {
+        log.debug2("Crawl aborted");
+        return;
+      }
+
+      // Make URL fetcher for this request
+      String url = makeApiUrl(page);
+      UrlFetcher uf = makeApiUrlFetcher(jjle, url);
+      facade.getCrawlerStatus().addPendingUrl(url);
+
+      // Make request
+      UrlFetcher.FetchResult fr = null;
+      try {
+        fr = uf.fetch();
+      }
+      catch (CacheException ce) {
+        log.debug2("Stopping due to fatal CacheException", ce);
+        Throwable cause = ce.getCause();
+        if (cause != null && IOException.class.equals(cause.getClass())) {
+          throw (IOException)cause; // Unwrap IOException
+        }
+        else {
+          throw ce;
+        }
+      }
+      if (fr == UrlFetcher.FetchResult.FETCHED) {
+        facade.getCrawlerStatus().removePendingUrl(url);
+        facade.getCrawlerStatus().signalUrlFetched(url);
+      }
+      else {
+        log.debug2("Stopping due to fetch result " + fr);
+        Map<String, String> errors = facade.getCrawlerStatus().getUrlsWithErrors();
+        if (errors.containsKey(url)) {
+          errors.put(url, errors.remove(url));
+        }
+        else {
+          facade.getCrawlerStatus().signalErrorForUrl(url, "Cannot fetch seed URL");
+        }
+        throw new CacheException("Cannot fetch seed URL");
+      }
+      page+=1;
+
+    }
+    Collections.sort(allUrls);
+    makeStartUrlContent(allUrls, storeUrl);
+  }
+
+  protected String makeApiUrl(int page) {
+    String url = String.format("%s%s",
+        API_URL,
+        collection
+    );
+    return url;
+
+  };
+  protected UrlFetcher makeApiUrlFetcher(final JasperJsonLinkExtractor jjle,
+                                         final String url) {
+    // Make a URL fetcher
+    UrlFetcher uf = facade.makeUrlFetcher(url);
+
+    // Set refetch flag // markom- not sure this is necessary?
+    BitSet permFetchFlags = uf.getFetchFlags();
+    permFetchFlags.set(UrlCacher.REFETCH_FLAG);
+    uf.setFetchFlags(permFetchFlags);
+    // set header to application/json and encoding per WASAPI recommendation
+    uf.setRequestProperty(
+        "Accept",
+        "application/json"
+    );
+    // Set custom URL consumer factory, using custom link extractor
+    uf.setUrlConsumerFactory(new UrlConsumerFactory() {
+      @Override
+      public UrlConsumer createUrlConsumer(Crawler.CrawlerFacade ucfFacade,
+                                           FetchedUrlData ucfFud) {
+        // Make custom URL consumer
+        return new SimpleUrlConsumer(ucfFacade, ucfFud) {
+          @Override
+          public void consume() throws IOException {
+            // Apply link extractor to URL and output results into a list
+            List<Map.Entry<String, Integer>> urlsAndTimes = new ArrayList<>();
+            try {
+              String au_cset = AuUtil.getCharsetOrDefault(fud.headers);
+              String cset = CharsetUtil.guessCharsetFromStream(fud.input, au_cset);
+              jjle.extractUrls(au,
+                  fud.input,
+                  cset,
+                  fud.origUrl,
+                  url1 -> urlsAndTimes.add(url1));
+            }
+            catch (IOException | PluginException ioe) {
+              log.debug2("Link extractor threw", ioe);
+              throw new IOException("Error while parsing PAM response for " + url, ioe);
+            }
+            finally {
+              // Logging
+              log.debug2(String.format("Step ending with %d URLs", urlsAndTimes.size()));
+              List allWarcs = getAllUrls(urlsAndTimes);
+              List toFetchWarcs = getOnlyNeedFetchedUrls(urlsAndTimes);
+              log.debug2(String.format("Needing to fetch or refetch %d URLS", toFetchWarcs.size()));
+              // Output accumulated URLs to start URL list
+              if (toFetchWarcs != null) {
+                fetchUrls.addAll(toFetchWarcs);
+              }
+              if (allWarcs != null) {
+                allUrls.addAll(allWarcs);
+              }
+            }
+          }
+        };
+      }
+    });
+    return uf;
+  }
+
+  /**
+   * <p>
+   *  Makes an HTML page of the list of 'start urls.'
+   *  This functions as the start_url.
+   * </p>
+   * @param urlList
+   * @param url
+   * @throws IOException
+   */
+  protected void makeStartUrlContent(Collection<String> urlList,
+                                     String url)
+      throws IOException {
+    StringBuilder sb = new StringBuilder();
+    sb.append("<html>\n");
+    try {
+      sb.append("<h1>" + au.getTdbAu().getName() + "</h1>");
+    } catch (NullPointerException npe) {
+      log.debug2("could not get name from tdb au");
+      sb.append("<h1>" + au.getName() + "</h1>");
+    }
+    sb.append("<h3>Collected and preserved urls:</h3>");
+    for (String u : urlList) {
+      sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
+    }
+    sb.append("</html>");
+    CIProperties headers = new CIProperties();
+    //Should use a constant here
+    headers.setProperty("content-type", "text/html; charset=utf-8");
+    UrlData ud = new UrlData(new ByteArrayInputStream(
+                                  sb.toString().getBytes(
+                                      Constants.ENCODING_UTF_8
+                                  )
+                             ),
+                             headers,
+                             url
+    );
+    UrlCacher cacher = facade.makeUrlCacher(ud);
+    cacher.storeContent();
+  }
+
+  protected List<String> getOnlyNeedFetchedUrls(List<Map.Entry<String, Integer>> urlsAndTimes) {
+    boolean storeIt;
+    // lets check if this url is already stored
+    CachedUrlSet cachedUrls = au.getAuCachedUrlSet();
+    List<String> needFetched = new ArrayList<>();
+    String url;
+    Integer crawlTime;
+    for (Map.Entry<String, Integer> urlAndTime : urlsAndTimes) {
+      url = urlAndTime.getKey();
+      crawlTime = urlAndTime.getValue();
+      storeIt = true;
+      if (cachedUrls.containsUrl(url)) {
+        CachedUrl cu = au.makeCachedUrl(url);
+        // hasContent() check accesses disk, so we need to close the cu afterwards!
+        try {
+          if (cu.hasContent()) {
+            // lets check if the archived content has been updated since the last time this url was collected
+            // convert epoch seconds to zoneddatetime
+            ZonedDateTime crawlTimeDT = ZonedDateTime.ofInstant(
+                Instant.ofEpochSecond(crawlTime.longValue()), ZoneOffset.UTC);
+            String lastModified = cu.getProperties().getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+            // Thu, 26 Aug 2021 18:21:55 GMT
+            ZonedDateTime lastModifiedDT = ZonedDateTime.parse(lastModified, DateTimeFormatter.RFC_1123_DATE_TIME);
+
+            if (crawlTimeDT.isBefore(lastModifiedDT) || crawlTimeDT.isEqual(lastModifiedDT)) {
+              // the content on Archive It has not been updated, no need to refetch
+              log.debug2("Archive It file has not been updated since last crawl. Skipping.");
+              storeIt = false;
+            }
+            if (log.isDebug3()) {
+              log.debug3("file found in CachedUrls: " + url);
+              log.debug3(" with          crawlTime: " + crawlTimeDT );
+              log.debug3(" CachedUrl Last-Modified: " + lastModifiedDT );
+            }
+          }
+        } finally {
+          // close the cu
+          cu.release();
+        }
+      }
+      if (storeIt) {
+        needFetched.add(url);
+      }
+    }
+    return needFetched;
+  }
+  protected List<String> getAllUrls(List<Map.Entry<String, Integer>> urlsAndTimes) {
+    List<String> urls = new ArrayList<>();
+    for (Map.Entry<String, Integer> urlAndTime : urlsAndTimes) {
+      urls.add(urlAndTime.getKey());
+    }
+    return urls;
+  }
+
+  /**
+   * Since we intentionally do not provide starturls for all
+   * crawl requests, we return false here.
+   */
+  public boolean isFailOnStartUrlError() {
+    return false;
+  }
 }
