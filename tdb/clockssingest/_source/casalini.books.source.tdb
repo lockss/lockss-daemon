@@ -27,7 +27,7 @@
     {
     plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
 
-    au < manifest ; exists ; 2022 ; Casalini Books Source Content 2022 ; 2022 >
+    au < readySource ; crawling ; 2022 ; Casalini Books Source Content 2022 ; 2022 >
     }
   }
 
