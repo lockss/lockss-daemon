@@ -35,47 +35,37 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>plugin_status</string>
         <string>testing</string>
     </entry>
-    <!-- https transition enabled -->
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.atypon.pnas.ClockssPnasPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_parent</string>
-        <string>org.lockss.plugin.atypon.pnas.PnasPlugin</string>
+        <string>org.lockss.plugin.atypon.nas.NasPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
         <string>1</string>
     </entry>
     <entry>
-        <string>plugin_parent_version</string>
-        <string>1</string>
+        <string>plugin_name</string>
+        <string>National Academy of Sciences Plugin</string>
     </entry>
     <entry>
-        <string>plugin_name</string>
-        <string>National Academy of Sciences Journals Plugin (CLOCKSS)</string>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>122</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"National Academy of Sciences Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+        <string>"National Academy of Sciences Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
     </entry>
+    <!-- https://www.pnas.org/lockss/pnas/118/index.html-->
     <entry>
         <string>au_start_url</string>
-        <string>"%sclockss/pnas/%s/index.html", base_url, volume_name</string>
+        <string>"%slockss/pnas/%s/index.html", base_url, volume_name</string>
     </entry>
     <entry>
-        <!--  CLOCKSS does not need this warning message about registering IP addresses -->
-        <string>plugin_au_config_user_msg</string>
-        <org.lockss.util.Default />
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-        </map>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.atypon.nas.NasHtmlCrawlFilterFactory</string>
     </entry>
 </map>

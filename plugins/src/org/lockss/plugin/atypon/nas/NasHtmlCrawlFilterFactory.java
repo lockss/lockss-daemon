@@ -31,7 +31,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.atypon.pnas;
+package org.lockss.plugin.atypon.nas;
 
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
@@ -41,7 +41,7 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 import java.io.InputStream;
 
-public class PnasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+public class NasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
   NodeFilter[] filters = new NodeFilter[] {
       // div class="article-further-reading...
       HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "article-further-reading"),

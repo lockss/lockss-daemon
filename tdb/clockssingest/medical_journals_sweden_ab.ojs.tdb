@@ -24,6 +24,7 @@
       attr[start_stem] = 
       #First publication Volume 2, 1921
 
+      au < exists ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; >
       au < exists ; exists ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; >
       au < exists ; exists ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; >
       au < exists ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
@@ -34,7 +35,7 @@
   
     title < 
       name = Acta Orthopaedica ;
-      eissn = 1651-2057 
+      eissn = 1745-3682 
     >
 
       param[base_url] = https://actaorthop.org/
@@ -42,6 +43,7 @@
       attr[start_stem] = index.php/
       #First publication Vol. 1, 1930
 
+      au < exists ; exists ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; >
       au < exists ; exists ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; >
       au < exists ; exists ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; >
       au < exists ; exists ; 2022 ; Acta Orthopaedica Volume 2022 ; 93 ; 2022 ; >

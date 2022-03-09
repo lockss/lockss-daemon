@@ -6227,6 +6227,7 @@
 
       param[journal_issn] = 2393-8692
 #      param[base_url] = http://www.ijohr.org/
+      #ceased publishing 2022
 
       au < released ; 2015 ; Indian Journal of Oral Health and Research Volume 1 ; 2015 ; 1 ; http://www.ijohr.org/ >
       au < released ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; http://www.ijohr.org/ >
@@ -9742,6 +9743,7 @@
 
       param[journal_issn] = 1947-489X
 #      param[base_url] = http://www.ijmbs.org/
+      #move to Thieme
 
       au < manifest ; 2009 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 1 ; 2009 ; 1 ; https://www.ijmbs.org/ >
       au < released ; 2010 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 2 ; 2010 ; 2 ; https://www.ijmbs.org/ >
@@ -9756,7 +9758,6 @@
       au < released ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 2019 ; 11 ; https://www.ijmbs.org/ >
       au < released ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 2020 ; 12 ; https://www.ijmbs.org/ >
       au < manifest ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 2021 ; 13 ; https://www.ijmbs.org/ >
-      au < expected ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 2022 ; 14 ; https://www.ijmbs.org/ >
 
   }
 
