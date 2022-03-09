@@ -113,6 +113,8 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
   protected String collection;
   protected String organization;
 
+  protected String storeUrl;
+
   /**
    * <p>
    * Builds a new crawl seed with the given crawler façade.
@@ -138,14 +140,22 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
     this.organization = au.getConfiguration().get("organization");
     this.fetchUrls = null;
     this.allUrls = null;
+    // synthetic url, if you want to update the pattern you must update it in all of these places
+    // 1. ArchiveItApiPlugin - crawl_rules
+    // 2. ArchiveItApiCrawlSeed.initialize()
+    // 3. ArchiveItApiFeatureUrlHelperFactory.getSyntheticUrl()
+    storeUrl = baseUrl +
+        "organization=" + UrlUtil.encodeUrl(organization) +
+        "&collection=" + UrlUtil.encodeUrl(collection);
   }
 
   @Override
   public Collection<String> doGetStartUrls() throws PluginException, IOException {
-    if (fetchUrls == null) {
-      populateUrlList();
-    }
-    if (fetchUrls.isEmpty()) {
+    AuState aus = AuUtil.getAuState(au);
+    populateUrlList();
+    if (fetchUrls.isEmpty() && !aus.hasCrawled()) {
+      // maybe a deepcrawl check ?
+      // facade.getCrawlerStatus().getRefetchDepth() > 2
       throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
     }
     return fetchUrls;
@@ -160,85 +170,57 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
    * @since 1.67.5
    */
   protected void populateUrlList() throws IOException {
-    AuState aus = AuUtil.getAuState(au);
-    allUrls = new ArrayList<>();
     fetchUrls = new ArrayList<>();
-    // synthetic url, if you want to update the pattern you must update it in all of these places
-    // 1. ArchiveItApiPlugin - crawl_rules
-    // 2. ArchiveItApiCrawlSeed.populateUrlList()
-    // 3. ArchiveItApiFeatureUrlHelperFactory.getSyntheticUrl()
-    String storeUrl = baseUrl +
-      "organization=" + UrlUtil.encodeUrl(organization) +
-      "&collection=" + UrlUtil.encodeUrl(collection);
-    //In order to query the metadata service less if this is a normal
-    //recrawl and we think the intial crawl was good just grab all the start
-    //URLs from the AU
-    if (aus.hasCrawled() && au.getRefetchDepth() < 2 && !aus.hasNoSubstance()) {
-      log.debug3("au hasCrawled, has Substance, and will not be refetched");
+    allUrls = new ArrayList<>();
+    // Initialization
+    int page=1;
+    ArchiveItApiJsonLinkExtractor aijle = new ArchiveItApiJsonLinkExtractor();
 
-      CachedUrlSet contents = au.getAuCachedUrlSet();
-      CuIterable contentIter = contents.getCuIterable();
-      // https://warcs.archive-it.org/webdatafile/ARCHIVEIT-7711-TEST-JOB1295343-SEED2424423-20201009202340983-00001-h3.warc.gz
-      Pattern articlePattern = Pattern.compile("/webdatafile/[^/.]+\\.warc\\.gz$", Pattern.CASE_INSENSITIVE);
-      for (CachedUrl cu : contentIter) {
-        String url = cu.getUrl();
-        Matcher mat = articlePattern.matcher(url);
-        if (mat.find()) {
-          allUrls.add(url);
-        }
+    // Query API until done
+    while (!aijle.isDone()) {
+
+      if (facade.isAborted()) {
+        log.debug2("Crawl aborted");
+        return;
       }
-    } else {
 
-      // Initialization
-      int page=1;
-      ArchiveItApiJsonLinkExtractor aijle = new ArchiveItApiJsonLinkExtractor();
+      // Make URL fetcher for this request
+      String url = makeApiUrl(page);
+      UrlFetcher uf = makeApiUrlFetcher( aijle, url);
+      facade.getCrawlerStatus().addPendingUrl(url);
 
-      // Query API until done
-      while (!aijle.isDone()) {
-
-        if (facade.isAborted()) {
-          log.debug2("Crawl aborted");
-          return;
-        }
-
-        // Make URL fetcher for this request
-        String url = makeApiUrl(page);
-        UrlFetcher uf = makeApiUrlFetcher( aijle, url);
-        facade.getCrawlerStatus().addPendingUrl(url);
-
-        // Make request
-        UrlFetcher.FetchResult fr;
-        try {
-          fr = uf.fetch();
-        }
-        catch (CacheException ce) {
-          log.debug2("Stopping due to fatal CacheException", ce);
-          Throwable cause = ce.getCause();
-          if (cause != null && IOException.class.equals(cause.getClass())) {
-            throw (IOException)cause; // Unwrap IOException
-          }
-          else {
-            throw ce;
-          }
-        }
-        if (fr == UrlFetcher.FetchResult.FETCHED) {
-          facade.getCrawlerStatus().removePendingUrl(url);
-          facade.getCrawlerStatus().signalUrlFetched(url);
+      // Make request
+      UrlFetcher.FetchResult fr;
+      try {
+        fr = uf.fetch();
+      }
+      catch (CacheException ce) {
+        log.debug2("Stopping due to fatal CacheException", ce);
+        Throwable cause = ce.getCause();
+        if (cause != null && IOException.class.equals(cause.getClass())) {
+          throw (IOException)cause; // Unwrap IOException
         }
         else {
-          log.debug2("Stopping due to fetch result " + fr);
-          Map<String, String> errors = facade.getCrawlerStatus().getUrlsWithErrors();
-          if (errors.containsKey(url)) {
-            errors.put(url, errors.remove(url));
-          }
-          else {
-            facade.getCrawlerStatus().signalErrorForUrl(url, "Cannot fetch seed URL");
-          }
-          throw new CacheException("Cannot fetch seed URL");
+          throw ce;
         }
-        page+=1;
-
       }
+      if (fr == UrlFetcher.FetchResult.FETCHED) {
+        facade.getCrawlerStatus().removePendingUrl(url);
+        facade.getCrawlerStatus().signalUrlFetched(url);
+      }
+      else {
+        log.debug2("Stopping due to fetch result " + fr);
+        Map<String, String> errors = facade.getCrawlerStatus().getUrlsWithErrors();
+        if (errors.containsKey(url)) {
+          errors.put(url, errors.remove(url));
+        }
+        else {
+          facade.getCrawlerStatus().signalErrorForUrl(url, "Cannot fetch seed URL");
+        }
+        throw new CacheException("Cannot fetch seed URL");
+      }
+      page+=1;
+
     }
     Collections.sort(allUrls);
     makeStartUrlContent(allUrls, storeUrl);
