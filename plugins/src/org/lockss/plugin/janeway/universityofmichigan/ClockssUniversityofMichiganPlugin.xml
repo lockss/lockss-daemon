@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>University of Michigan Plugin (CLOCKSS)</string>
+    <string>University of Michigan Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -65,6 +65,6 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"University of Michigan Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"University of Michigan Journals Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
 </map>
