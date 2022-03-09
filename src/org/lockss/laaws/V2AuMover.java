@@ -160,7 +160,7 @@ public class V2AuMover {
    * The flag to indicate whether known v2 Aus should be checked for missing content.
    */
   public static final String PARAM_CHECK_MISSING_CONTENT = PREFIX + "check.missing.content";
-  public static final boolean DEFAUL_CHECK_MISSING_CONTENT = true;
+  public static final boolean DEFAULT_CHECK_MISSING_CONTENT = true;
 
   /**
    * If true, the content will be verified after copying
@@ -174,6 +174,12 @@ public class V2AuMover {
    */
   public static final String PARAM_COMPARE_CONTENT = PREFIX + "compare.content";
   public static final boolean DEFAULT_COMPARE_CONTENT = false;
+
+  /**
+   * If true, phase-specific timings will be included with the stats
+   */
+  public static final String PARAM_DETAILED_STATS = PREFIX + "detailedStats";
+  public static final boolean DEFAULT_DETAILED_STATS = true;
 
   private static final Logger log = Logger.getLogger(V2AuMover.class);
 
@@ -277,6 +283,9 @@ public class V2AuMover {
   private boolean checkMissingContent;
   private boolean isCompareBytes;
   private boolean isVerifyContent;
+  private boolean isDetailedStats;
+
+
   private boolean isEnqueueVerify = false;
 
 
@@ -294,11 +303,13 @@ public class V2AuMover {
     maxRetryCount = config.getInt(PARAM_MAX_RETRY_COUNT, DEFAULT_MAX_RETRY_COUNT);
     retryBackoffDelay = config.getLong(PARAM_RETRY_BACKOFF_DELAY, DEFAULT_RETRY_BACKOFF_DELAY);
     checkMissingContent = config.getBoolean(PARAM_CHECK_MISSING_CONTENT,
-        DEFAUL_CHECK_MISSING_CONTENT);
+        DEFAULT_CHECK_MISSING_CONTENT);
     String logdir = config.get(PARAM_REPORT_DIR, DEFAULT_REPORT_DIR);
     String logfile = config.get(PARAM_REPORT_FILE, DEFAULT_REPORT_FILE);
     isVerifyContent=config.getBoolean(PARAM_VERIFY_CONTENT, DEFAULT_VERIFY_CONTENT);
     isCompareBytes=config.getBoolean(PARAM_COMPARE_CONTENT, DEFAULT_COMPARE_CONTENT);
+    isDetailedStats=config.getBoolean(PARAM_DETAILED_STATS, DEFAULT_DETAILED_STATS);
+
     reportFile = new File(logdir, logfile);
     repoClient = new V2RestClient();
     repoClient.setConnectTimeout((int) connectTimeout);
@@ -502,9 +513,9 @@ public class V2AuMover {
     try {
       cfgAccessUrl = new URL("http", hostName, cfgPort, "").toString();
       if (cfgAccessUrl == null || UrlUtil.isMalformedUrl(cfgAccessUrl)) {
-        errorList.add("Missing or Invalid configuration service url: " + cfgAccessUrl);
+        errorList.add("Missing or invalid configuration service url: " + cfgAccessUrl);
         throw new IllegalArgumentException(
-            "Missing or Invalid configuration service url: " + cfgAccessUrl);
+            "Missing or invalid configuration service url: " + cfgAccessUrl);
       }
       configClient.setUsername(userName);
       configClient.setPassword(userPass);
@@ -517,15 +528,15 @@ public class V2AuMover {
       errorList.add("Error parsing REST Configuration Service URL: "
           + mue.getMessage());
       throw new IllegalArgumentException(
-          "Missing or Invalid configuration service hostName: " + hostName + " port: " + cfgPort);
+          "Missing or invalid configuration service hostName: " + hostName + " port: " + cfgPort);
     }
 
     try {
       repoAccessUrl = new URL("http", hostName, repoPort, "").toString();
       if (repoAccessUrl == null || UrlUtil.isMalformedUrl(repoAccessUrl)) {
-        errorList.add("Missing or Invalid repository service url: " + repoAccessUrl);
+        errorList.add("Missing or invalid repository service url: " + repoAccessUrl);
         throw new IllegalArgumentException(
-            "Missing or Invalid configuration service url: " + repoAccessUrl);
+            "Missing or invalid configuration service url: " + repoAccessUrl);
       }
       // Create a new RepoClient
       repoClient.setUsername(userName);
@@ -541,7 +552,7 @@ public class V2AuMover {
     catch (MalformedURLException mue) {
       errorList.add("Error parsing REST Configuration Service URL: " + mue.getMessage());
       throw new IllegalArgumentException(
-          "Missing or Invalid configuration service hostName: " + hostName + " port: " + repoPort);
+          "Missing or invalid configuration service hostName: " + hostName + " port: " + repoPort);
     }
     startReportFile();
     startTime = now();
@@ -1392,7 +1403,8 @@ public class V2AuMover {
                                             auStat.getElapsedTime(phase)));
 
     }
-    if (ctrs.getVal(CounterType.COPY_TIME) > 0
+    if (isDetailedStats
+        && ctrs.getVal(CounterType.COPY_TIME) > 0
 //         && ctrs.getVal(CounterType.VERIFY_TIME) > 0
         ) {
       double c = ctrs.getVal(CounterType.COPY_TIME);
@@ -1405,18 +1417,34 @@ public class V2AuMover {
       sb.append(" (");
       if (cp != 0.0) {
         sb.append(percentFmt.format(cp));
-        sb.append("% copy");
+        sb.append("%");
+        if (ctrs.getVal(CounterType.BYTES_MOVED) > 0) {
+          sb.append(", ");
+          sb.append(StringUtil
+                    .byteRateToString(ctrs.getVal(CounterType.BYTES_MOVED),
+                                      (long)(auStat.getElapsedTime(phase)
+                                             * (c / t))));
+        }
+        sb.append(" copy");
       }
       if (vp != 0.0) {
         if (cp != 0.0) {
-          sb.append(" ");
+          sb.append("; ");
         }
         sb.append(percentFmt.format(vp));
-        sb.append("% verify");
+        sb.append("%");
+        if (ctrs.getVal(CounterType.BYTES_VERIFIED) > 0) {
+          sb.append(", ");
+          sb.append(StringUtil
+                    .byteRateToString(ctrs.getVal(CounterType.BYTES_VERIFIED),
+                                      (long)(auStat.getElapsedTime(phase)
+                                             * (v / t))));
+        }
+        sb.append(" verify");
       }
       if (sp != 0.0) {
         if (cp + vp != 0.0) {
-          sb.append(" ");
+          sb.append(", ");
         }
         sb.append(percentFmt.format(sp));
         sb.append("% state");
