@@ -30,48 +30,13 @@
     {
 
       title <
-        name = OECD Economic Surveys: Sweden ;
-        type = bookSeries ;
-        eissn = 1999-0448
+        name = Organisation for Economic Co-operation and Development Books ;
+        type = bookSeries
       >
 
       au < manifest ; 2019 ; 9789264449060 ; OECD Economic Surveys: Sweden 2019 ; economics/oecd-economic-surveys-sweden-2019 ; c510039b-en >
-
-    }
-
-    {
-
-      title <
-        name = Études économiques de l'OCDE: Suède ;
-        type = bookSeries ;
-        eissn = 1999-0456
-      >
-
       au < testing ; 2019 ; 9789264833524 ; Études économiques de l'OCDE: Suède 2019 (version abrégée) ; economics/etudes-economiques-de-l-ocde-suede-2019-version-abregee ; dc7ecbd6-fr >
-
-    }
-
-    {
-
-      title <
-        name = Organisation for Economic Co-operation and Development Books ;
-        type = bookSeries ;
-        eissn = ????-????
-      >
-
       au < manifest ; 2020 ; 9789264362819 ; Housing and Inclusive Growth ; social-issues-migration-health/housing-and-inclusive-growth ; 6ef36f4b-en >
-
-    }
-
-    {
-
-      title <
-        name = Testing A-Z ;
-        type = bookSeries ;
-        eissn = ????-????
-
-      >
-
       au < manifest ; 1976 ; 9789282104156 ; Value of Time: Report of the Thirtieth Round Table on Transport Economics Held in Paris on 22nd and 23rd May, 1975 ; transport/value-of-time ; 9789282104156-en >
       au < manifest ; 1980 ; 9789282105115 ; Tariff Policies other than Road Pricing for Urban Transport: Report of the Forty-Sixth Round Table on Transport Economics Held in Paris on 8-9 March 1979 ; transport/tariff-policies-other-than-road-pricing-for-urban-transport ; 9789282105115-en >
       au < manifest ; 1992 ; 9789264071544 ; Kiwifruit ; agriculture-and-food/kiwifruit ; 9789264071544-en-fr >
