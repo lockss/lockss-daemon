@@ -2,7 +2,7 @@
 
 # PERL script to check manifest pages for existence and formatting.
 #
-# usage: $. scripts/tdb/tdbout --testing --auid tdb/prod/bioscientifica.tdb | scripts/tdb/read_auid_new.pl
+# usage: $./scripts/tdb/tdbout --exists --expected --auid tdb/prod/bioscientifica.tdb | scripts/tdb/read_auid_new.pl
 #
 # Inputs: a list of auids (often piped from tdbout)
 # Outputs: a line for each auid
