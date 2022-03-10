@@ -2316,7 +2316,8 @@ published on the Web. http://www.lockss.org
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
-             bottom="Copyright &amp;copy; 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2022 Board of Trustees of Leland Stanford Jr. University, all rights reserved."
+    	     additionalparam="-Xdoclint:none">
        <classpath refid="compile.classpath" />
 
 <!-- disabled until javadoc back online -->
