@@ -14,7 +14,7 @@
       issnl = 0027-8424
     >
     
-    plugin = org.lockss.plugin.atypon.pnas.PnasPlugin
+    plugin = org.lockss.plugin.atypon.nas.NasPlugin
     implicit < status ; year ; name ; param[volume_name] >
     # since 1.68, this title has its own crawl pool
 
