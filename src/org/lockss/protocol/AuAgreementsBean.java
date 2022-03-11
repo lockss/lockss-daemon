@@ -2,8 +2,7 @@ package org.lockss.protocol;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
+import java.util.Objects;
 
 public class AuAgreementsBean {
   private String auid;
@@ -40,20 +39,17 @@ public class AuAgreementsBean {
     if (this == o) {
       return true;
     }
-
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-
     AuAgreementsBean that = (AuAgreementsBean) o;
-
-    return new EqualsBuilder().append(auid, that.auid)
-        .append(rawMap, that.rawMap).isEquals();
+    return Objects.equals(auid, that.auid) &&
+        rawMap.equals(that.rawMap);
   }
 
   @Override
   public int hashCode() {
-    return new HashCodeBuilder(17, 37).append(auid).append(rawMap).toHashCode();
+    return Objects.hash(auid, rawMap);
   }
 
   @Override

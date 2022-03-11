@@ -1,7 +1,12 @@
 package org.lockss.laaws;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.InstanceCreator;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
 import java.util.Collection;
+import java.util.EnumMap;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.laaws.client.ApiException;
@@ -10,6 +15,7 @@ import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.poller.PollManager;
+import org.lockss.protocol.AgreementType;
 import org.lockss.protocol.AuAgreements;
 import org.lockss.protocol.AuAgreementsBean;
 import org.lockss.protocol.DatedPeerIdSet;
@@ -17,6 +23,7 @@ import org.lockss.protocol.DatedPeerIdSetBean;
 import org.lockss.protocol.DatedPeerIdSetImpl;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.IdentityManagerImpl;
+import org.lockss.protocol.PeerAgreement;
 import org.lockss.repository.AuSuspectUrlVersions;
 import org.lockss.repository.AuSuspectUrlVersions.SuspectUrlVersion;
 import org.lockss.repository.AuSuspectUrlVersionsBean;
@@ -73,7 +80,12 @@ public class AuStateChecker extends Worker {
     if (v1 != null) {
       try {
         final String json = cfgApiClient.getAuAgreements(au.getAuId());
-        AuAgreementsBean v2Bean = new Gson().fromJson(json, AuAgreementsBean.class);
+        Gson gson = new GsonBuilder().registerTypeAdapter(
+                new TypeToken<EnumMap<AgreementType, PeerAgreement>>() {
+                }.getType(),
+                new EnumMapInstanceCreator<AgreementType, PeerAgreement>(AgreementType.class))
+            .create();
+        AuAgreementsBean v2Bean = gson.fromJson(json, AuAgreementsBean.class);
         if(v2Bean.equals(v1Bean)) {
           log.info("V2 Au Agreements are the same");
         }
@@ -243,6 +255,21 @@ public class AuStateChecker extends Worker {
     if(err != null) {
       task.addError(err);
       //what should we do to propagate this up.
+    }
+  }
+
+  class EnumMapInstanceCreator<K extends Enum<K>, V> implements
+      InstanceCreator<EnumMap<K, V>> {
+    private final Class<K> enumClazz;
+
+    public EnumMapInstanceCreator(final Class<K> enumClazz) {
+      super();
+      this.enumClazz = enumClazz;
+    }
+
+    @Override
+    public EnumMap<K, V> createInstance(final Type type) {
+      return new EnumMap<K, V>(enumClazz);
     }
   }
 

@@ -45,9 +45,9 @@ import org.lockss.util.LockssSerializable;
  */
 class PeerAgreements implements LockssSerializable {
   // The String representing the other peer.
-  private final String id;
+  private String id;
   // A Map detailing the agreements with the other peer.
-  private final EnumMap<AgreementType, PeerAgreement> map;
+  private EnumMap<AgreementType, PeerAgreement> map;
 
   private PeerAgreements(String id,
 			 EnumMap<AgreementType, PeerAgreement> map) {
