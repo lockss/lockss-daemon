@@ -44,7 +44,7 @@ public class AuAgreementsBean {
     }
     AuAgreementsBean that = (AuAgreementsBean) o;
     return Objects.equals(auid, that.auid) &&
-        rawMap.equals(that.rawMap);
+        Objects.equals(rawMap, that.rawMap);
   }
 
   @Override
