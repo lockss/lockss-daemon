@@ -1,28 +1,20 @@
 package org.lockss.laaws;
 
-import java.io.BufferedInputStream;
+import static org.lockss.laaws.V2AuMover.CounterType;
+
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.EnumMap;
 import java.util.List;
-import okhttp3.MultipartReader;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.input.CountingInputStream;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
-import static org.lockss.laaws.V2AuMover.CounterType;
 
 public class CuChecker extends Worker {
   private static final Logger log = Logger.getLogger(CuChecker.class);
@@ -85,25 +77,19 @@ public class CuChecker extends Worker {
         artifact.getCollection().equals(collection)  &&
         artifact.getCollectionDate().equals(collectionDate) &&
         artifact.getCommitted().equals(Boolean.TRUE);
-    log.debug(cu.getUrl() +": metadata matches.");
+    log.debug2(cu.getUrl() +": metadata matches.");
     if ( isMatch && auMover.isCompareBytes()) {
       log.debug3("Fetching  content for byte compare");
       try {
         File v2Artifact = collectionsApi.getArtifact(collection, artifact.getId(),
             "ALWAYS");
-        log.debug("File: " + v2Artifact.getName()
-            + "Can Read:"+v2Artifact.canRead()
-            +" Can Write:" + v2Artifact.canWrite());
-        File tempFile = FileUtil.createTempFile("CuCheck-Multipart", ".bin");
-        FileOutputStream fos = new FileOutputStream(tempFile);
         FileInputStream fis = new FileInputStream(v2Artifact);
-        long bytesReceived=IOUtils.copyLarge(fis, fos);
         //BufferedInputStream bis = new BufferedInputStream(new FileInputStream(tempFile));
         //CountingInputStream cis = new CountingInputStream(fis);
         ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
         // stats to update when available
         ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, 0);
-        ctrs.add(CounterType.BYTES_VERIFIED, bytesReceived); // http response total bytes
+        ctrs.add(CounterType.BYTES_VERIFIED, 0); // http response total bytes
       }
       catch (ApiException | IOException e) {
         e.printStackTrace();
