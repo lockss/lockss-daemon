@@ -1,0 +1,65 @@
+{
+
+  publisher <
+    name = European Organization for Nuclear Research
+  >
+  
+  {
+  
+    title <
+      name = High Energy Physics Libraries Webzine ;
+      eissn = 1424-2729 ;
+      issnl = 1424-2729
+    >  
+
+    # Ceased in 2007
+
+    rights = openaccess
+
+    {
+
+      plugin =  edu.nyu.plugin.heplwebzine.HEPLwebzine
+      param[base_url] = http://library.cern.ch/
+      implicit < status ; year ; name ; param[issue_no] >
+    
+      au < superseded ; 2000 ; High Energy Physics Libraries Webzine Issue 1 [superseded] ; 1 >
+      au < superseded ; 2000 ; High Energy Physics Libraries Webzine Issue 2 [superseded] ; 2 >
+      au < superseded ; 2001 ; High Energy Physics Libraries Webzine Issue 3 [superseded] ; 3 >
+      au < superseded ; 2001 ; High Energy Physics Libraries Webzine Issue 4 [superseded] ; 4 >
+      au < superseded ; 2001 ; High Energy Physics Libraries Webzine Issue 5 [superseded] ; 5 >
+      au < superseded ; 2002 ; High Energy Physics Libraries Webzine Issue 6 [superseded] ; 6 >
+      au < superseded ; 2003 ; High Energy Physics Libraries Webzine Issue 7 [superseded] ; 7 >
+      au < superseded ; 2003 ; High Energy Physics Libraries Webzine Issue 8 [superseded] ; 8 >
+      au < superseded ; 2004 ; High Energy Physics Libraries Webzine Issue 9 [superseded] ; 9 >
+      au < superseded ; 2004 ; High Energy Physics Libraries Webzine Issue 10 [superseded] ; 10 >
+      au < superseded ; 2005 ; High Energy Physics Libraries Webzine Issue 11 [superseded] ; 11 >
+      au < doNotProcess ; 2006 ; High Energy Physics Libraries Webzine Issue 12 [superseded] ; 12 >
+      au < doNotProcess ; 2006 ; High Energy Physics Libraries Webzine Issue 13 [superseded] ; 13 >
+
+    }
+  
+    {
+
+      plugin =  edu.nyu.plugin.heplwebzine.HEPLWebzine2022Plugin
+      param[base_url] = https://webzine.web.cern.ch/
+      implicit < status ; year ; name ; param[issue_no] >
+    
+      au < ready ; 2000 ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
+      au < ready ; 2000 ; High Energy Physics Libraries Webzine Issue 2 ; 2 >
+      au < ready ; 2001 ; High Energy Physics Libraries Webzine Issue 3 ; 3 >
+      au < ready ; 2001 ; High Energy Physics Libraries Webzine Issue 4 ; 4 >
+      au < ready ; 2001 ; High Energy Physics Libraries Webzine Issue 5 ; 5 >
+      au < ready ; 2002 ; High Energy Physics Libraries Webzine Issue 6 ; 6 >
+      au < ready ; 2003 ; High Energy Physics Libraries Webzine Issue 7 ; 7 >
+      au < ready ; 2003 ; High Energy Physics Libraries Webzine Issue 8 ; 8 >
+      au < ready ; 2004 ; High Energy Physics Libraries Webzine Issue 9 ; 9 >
+      au < ready ; 2004 ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
+      au < ready ; 2005 ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
+      au < ready ; 2006 ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
+      au < ready ; 2006 ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
+
+    }
+  
+  }
+  
+}

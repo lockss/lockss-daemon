@@ -33,19 +33,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>edu.nyu.plugin.heplwebzine.HEPLwebzine</string>
+    <string>edu.nyu.plugin.heplwebzine.HEPLWebzine2022Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>High Energy Physics Libraries Webzine Plugin (Legacy)</string>
+    <string>High Energy Physics Libraries Webzine Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>issue_no</key>
-        <displayName>Issue number</displayName>
+        <displayName>Issue Number</displayName>
         <description>Issue number</description>
         <type>2</type>
         <size>8</size>
@@ -72,20 +72,24 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"High Energy Physics Libraries Webzine Plugin (Legacy), Base URL %s, Issue Number %d", base_url, issue_no</string>
+    <string>"High Energy Physics Libraries Webzine Plugin, Base URL %s, Issue Number %d", base_url, issue_no</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slibrary/Webzine/lockss/issue%d-manifest.html", base_url, issue_no</string>
+    <string>"%s%d/index.html", base_url, issue_no</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string><!-- a surviving Creative Commons permission -->
+    <list>
+      <string>"%s12/papers/2/", to_https(base_url)</string>
+      <string>"%s12/papers/2/", to_http(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s(HEPLW|library/Webzine)/lockss/issue%d-manifest\.html$", base_url, issue_no</string>
-      <string>1,"^%s(HEPLW|library/Webzine)/%d/", base_url, issue_no</string>
-      <string>1,"^%sOATaskForce_public\.pdf", base_url</string>
+      <string>1,"^https?://%s/(webzine/)?%d/", base_url_host, issue_no</string>
     </list>
   </entry>
   <entry>
@@ -95,5 +99,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>edu.nyu.plugin.heplwebzine.HEPLWebzineUrlNormalizer</string>
   </entry>
 </map>
