@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.atypon.nas;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.tags.Html;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
@@ -47,7 +48,18 @@ public class NasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory 
       HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "article-further-reading"),
       // div id="nav-d25abac7-d1cf-406b-b915-0c426445c9d1-most-read-pane
       // div id="nav-d25abac7-d1cf-406b-b915-0c426445c9d1-most-cited-pane
-      HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "most-(cited|read)-pane")
+      HtmlNodeFilters.tagWithAttributeRegex("div",  "id", "most-(cited|read)-pane"),
+      // on the toc pages, there are references to articles embedded below an article title/link
+      // typically in the Corrections, or Letters sections.
+      // these can be from previous volumes, need to ignore
+      // div class="card__extra-info"
+      //   <!-- with child
+      //   a class="card__extra-info__link"
+      HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "extra-info"),
+      HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "extra-info"),
+      // similar to above, but on the article pages
+      HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "core-relations"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "relationsGroup"),
   };
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
