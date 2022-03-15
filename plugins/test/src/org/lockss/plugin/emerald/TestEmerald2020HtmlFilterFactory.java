@@ -362,7 +362,7 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
 
                 filteredStr = StringUtil.fromInputStream(actIn);
 
-
+                /*
                     String currentDirectory = System.getProperty("user.dir");
                     String pathname = currentDirectory +
                             "/plugins/src/org/lockss/plugin/emerald/generated_emerald_crawl.html";
@@ -371,7 +371,7 @@ public class TestEmerald2020HtmlFilterFactory extends LockssTestCase {
                     } else {
                         FileUtils.writeStringToFile(new File(pathname), "Empty", Constants.DEFAULT_ENCODING);
                     }
-
+                 */
                 
             } catch (IOException e) {
                 log.error(e.getMessage(), e);
