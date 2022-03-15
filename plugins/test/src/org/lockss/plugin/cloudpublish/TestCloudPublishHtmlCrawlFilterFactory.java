@@ -108,6 +108,26 @@ public class TestCloudPublishHtmlCrawlFilterFactory extends LockssTestCase {
     "          </div>\n" +
     "          <p></p>\n" +
     "          <p></p>\n" +
+    "          <h3 class=\"ui label ribbon\">Manuscripts</h3>" +
+    "          <p id=\"185\">" +
+    "            Libro de las cruzes: BNE 9294<nobr>" +
+    "            <a href=\"https://scholar.google.com/scholar?hl=en&amp;q=Libro+de+las+cruzes%3A+BNE+9294\" target=\"_blank\">" +
+    "              <span class=\"fa fa-external-link\"></span>" +
+    "              &nbsp;Google Scholar" +
+    "            </a>" +
+    "            </nobr>" +
+    "          </p>\n" +
+    "          <h3 class=\"ui label ribbon\">Editions</h3>\n" +
+    "          <p id=\"B1\">Estoria de Espanna Digital (EED). Ed. Aengus Ward. Transcriptions and corrections by Fiona Maguire, Enrique Jerez Cabrero, Ricardo Pichel Gotérrez, Polly Duxfield, Christian Kusi Obodum, Marine Poirier, Aengus Ward, Bárbara Bordalejo, Nick Leonard, Avellana Ross, Silvia Yusta Fernández, v.1.0 (Birmingham: University of Birmingham, 2016) <a href=\"estoria.bham.ac.uk\" target=\"_blank\">estoria.bham.ac.uk</a>. Accessed 18 March 2020. <nobr>\n" +
+    "              <a href=\"https://scholar.google.com/scholar?hl=en&amp;q=Estoria+de+Espanna+Digital+%28EED%29.+Ed.+Aengus+Ward.+Transcriptions+and+corrections+by+Fiona+Maguire%2C+Enrique+Jerez+Cabrero%2C+Ricardo+Pichel+Got%C3%A9rrez%2C+Polly+Duxfield%2C+Christian+Kusi+Obodum%2C+Marine+Poirier%2C+Aengus+Ward%2C+B%C3%A1rbara+Bordalejo%2C+Nick+Leonard%2C+Avellana+Ross%2C+Silvia+Yusta+Fern%C3%A1ndez%2C+v.1.0+%28Birmingham%3A+University+of+Birmingham%2C+2016%29+estoria.bham.ac.uk.+Accessed+18+March+2020.\" target=\"_blank\">\n" +
+    "                <span class=\"fa fa-external-link\"></span>&nbsp;Google Scholar </a>\n" +
+    "            </nobr>\n" +
+    "          </p>\n" +
+    "          <p id=\"B220\">Isidorus Hispalensis, 1911. <span>Origenes sive Etymologiae</span>. Textus Latinus ex editione Oxoniensi. <a href=\"penelope.uchicago.edu/Thayer/L/Roman/Texts/Isidore/\" target=\"_blank\">penelope.uchicago.edu/Thayer/L/Roman/Texts/Isidore/</a>, Accessed 19 March 2020. <nobr>\n" +
+    "              <a href=\"https://scholar.google.com/scholar?hl=en&amp;q=Isidorus+Hispalensis%2C+1911.+Origenes+sive+Etymologiae.+Textus+Latinus+ex+editione+Oxoniensi.+penelope.uchicago.edu%2FThayer%2FL%2FRoman%2FTexts%2FIsidore%2F%2C+Accessed+19+March+2020.\" target=\"_blank\">\n" +
+    "                <span class=\"fa fa-external-link\"></span>&nbsp;Google Scholar </a>\n" +
+    "            </nobr>\n" +
+    "          </p>\n" +
     "          <h3 class=\"ui label ribbon\">Works cited</h3>\n" +
     "          <p id=\"R1\">\n" +
     "            <a href=\"#ref-text-R1\">\n" +
@@ -139,6 +159,26 @@ public class TestCloudPublishHtmlCrawlFilterFactory extends LockssTestCase {
     "    <div id=\"journal-references\" class=\"ui bottom attached tab segment js-tab-content active\" data-tab=\"journal-references\">\n" +
     "      <div class=\"journal-tab__copy\">\n" +
     "        <div class=\"ui\">\n" +
+    "          <h3 class=\"ui label ribbon\">Manuscripts</h3>" +
+    "          <p id=\"185\">" +
+    "            Libro de las cruzes: BNE 9294<nobr>" +
+    "            <a href=\"https://scholar.google.com/scholar?hl=en&amp;q=Libro+de+las+cruzes%3A+BNE+9294\" target=\"_blank\">" +
+    "              <span class=\"fa fa-external-link\"></span>" +
+    "              &nbsp;Google Scholar" +
+    "            </a>" +
+    "            </nobr>" +
+    "          </p>\n" +
+    "          <h3 class=\"ui label ribbon\">Editions</h3>\n" +
+    "          <p id=\"B1\">Estoria de Espanna Digital (EED). Ed. Aengus Ward. Transcriptions and corrections by Fiona Maguire, Enrique Jerez Cabrero, Ricardo Pichel Gotérrez, Polly Duxfield, Christian Kusi Obodum, Marine Poirier, Aengus Ward, Bárbara Bordalejo, Nick Leonard, Avellana Ross, Silvia Yusta Fernández, v.1.0 (Birmingham: University of Birmingham, 2016) <a href=\"estoria.bham.ac.uk\" target=\"_blank\">estoria.bham.ac.uk</a>. Accessed 18 March 2020. <nobr>\n" +
+    "              <a href=\"https://scholar.google.com/scholar?hl=en&amp;q=Estoria+de+Espanna+Digital+%28EED%29.+Ed.+Aengus+Ward.+Transcriptions+and+corrections+by+Fiona+Maguire%2C+Enrique+Jerez+Cabrero%2C+Ricardo+Pichel+Got%C3%A9rrez%2C+Polly+Duxfield%2C+Christian+Kusi+Obodum%2C+Marine+Poirier%2C+Aengus+Ward%2C+B%C3%A1rbara+Bordalejo%2C+Nick+Leonard%2C+Avellana+Ross%2C+Silvia+Yusta+Fern%C3%A1ndez%2C+v.1.0+%28Birmingham%3A+University+of+Birmingham%2C+2016%29+estoria.bham.ac.uk.+Accessed+18+March+2020.\" target=\"_blank\">\n" +
+    "                <span class=\"fa fa-external-link\"></span>&nbsp;Google Scholar </a>\n" +
+    "            </nobr>\n" +
+    "          </p>\n" +
+    "          <p id=\"B220\">Isidorus Hispalensis, 1911. <span>Origenes sive Etymologiae</span>. Textus Latinus ex editione Oxoniensi. <a href=\"penelope.uchicago.edu/Thayer/L/Roman/Texts/Isidore/\" target=\"_blank\">penelope.uchicago.edu/Thayer/L/Roman/Texts/Isidore/</a>, Accessed 19 March 2020. <nobr>\n" +
+    "              <a href=\"https://scholar.google.com/scholar?hl=en&amp;q=Isidorus+Hispalensis%2C+1911.+Origenes+sive+Etymologiae.+Textus+Latinus+ex+editione+Oxoniensi.+penelope.uchicago.edu%2FThayer%2FL%2FRoman%2FTexts%2FIsidore%2F%2C+Accessed+19+March+2020.\" target=\"_blank\">\n" +
+    "                <span class=\"fa fa-external-link\"></span>&nbsp;Google Scholar </a>\n" +
+    "            </nobr>\n" +
+    "          </p>\n" +
     "          <h3 class=\"ui label ribbon\">Works cited</h3>\n" +
     "          <p id=\"R1\">\n" +
     "            <a href=\"#ref-text-R1\">\n" +
@@ -266,6 +306,11 @@ public class TestCloudPublishHtmlCrawlFilterFactory extends LockssTestCase {
           "          </div>\n" +
           "          <p></p>\n" +
           "          <p></p>\n" +
+          "          <h3 class=\"ui label ribbon\">Manuscripts</h3>" +
+          "          \n" +
+          "          <h3 class=\"ui label ribbon\">Editions</h3>\n" +
+          "          \n" +
+          "          \n" +
           "          <h3 class=\"ui label ribbon\">Works cited</h3>\n" +
           "          \n" +
           "          \n" +
@@ -276,6 +321,11 @@ public class TestCloudPublishHtmlCrawlFilterFactory extends LockssTestCase {
           "    <div id=\"journal-references\" class=\"ui bottom attached tab segment js-tab-content active\" data-tab=\"journal-references\">\n" +
           "      <div class=\"journal-tab__copy\">\n" +
           "        <div class=\"ui\">\n" +
+          "          <h3 class=\"ui label ribbon\">Manuscripts</h3>" +
+          "          \n" +
+          "          <h3 class=\"ui label ribbon\">Editions</h3>\n" +
+          "          \n" +
+          "          \n" +
           "          <h3 class=\"ui label ribbon\">Works cited</h3>\n" +
           "          \n" +
           "          \n" +

@@ -54,10 +54,13 @@ public class CloudPublishHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("nav"),
       //HtmlNodeFilters.tagWithAttribute("nav", "id", "site-sidebar"),
       //HtmlNodeFilters.tagWithAttribute("nav", "role", "navigation"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "journal-full-text"),
-      HtmlNodeFilters.tagWithAttribute("div", "id", "journal-references"),
-      //HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^www\\.", true),
       HtmlNodeFilters.tagWithAttribute("a", "title", "Exit"),
+      // exclude the references themselves. since they are in both the full-text and references divs
+      // references come in a variety of ids!
+      // p id="R3" , p id="B3" , p id="3"
+      HtmlNodeFilters.tagWithAttributeRegex("p", "id", "^(B|R)?\\d+"),
+      // in case malformed absolute hrefs appear
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^www\\.", true),
   };
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
