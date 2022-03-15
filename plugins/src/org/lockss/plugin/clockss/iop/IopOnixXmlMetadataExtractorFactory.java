@@ -38,6 +38,7 @@ import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -93,6 +94,7 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       // Once you have it, just keep returning the same one. It won't change.
       String system = null;
       String release = null;
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       
       if (doc == null) return null;
       DocumentType doctype = doc.getDoctype();
@@ -110,12 +112,14 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       if( ((system != null) && system.contains("/onix/2")) ||
            (( release != null) && release.startsWith("2")) ) {
         if (Onix2Helper == null) {
+          log.debug3("Onix2-Schema file: " + cuBase);
           Onix2Helper = new Onix2BooksSchemaHelper();
         }
         return Onix2Helper;
       } else if ( ((system != null) && system.contains("/onix/3")) ||
         (( release != null) && release.startsWith("3")) ) {
         if (Onix3Helper == null) {
+          log.debug3("Onix3-Schema file: " + cuBase);
           Onix3Helper = new Onix3BooksSchemaHelper();
         }
         return Onix3Helper;
@@ -209,6 +213,42 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
       }
       //log.debug3("RETURNLIST: " + returnList.toString());
       return returnList;
+    }
+
+    @Override
+    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+      List<String> filesToCheck;
+
+      // If no files get returned in the list, nothing to check
+      if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
+        return true;
+      }
+      ArchivalUnit B_au = cu.getArchivalUnit();
+      CachedUrl fileCu;
+      for (int i=0; i < filesToCheck.size(); i++)
+      {
+        fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
+        //log.info("Check for existence of " + filesToCheck.get(i));
+        if(fileCu != null && (fileCu.hasContent())) {
+          // Set a cooked value for an access file. Otherwise it would get set to xml file
+          thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+          log.debug3("Check for existence of " + filesToCheck.get(i));
+          return true;
+        } else {
+          //We need to ignore check content for 2017 bucket, since it is no longer crawlable
+          if (cuBase.contains("iopbooks-released/2017") && fileCu != null)  {
+            log.debug3("Do not check for existence of 2017: " + filesToCheck.get(i));
+            thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+            return true;
+          }
+        }
+      }
+      log.debug3("No file exists associated with this record");
+      return false; //No files found that match this record
     }
 
     /*
