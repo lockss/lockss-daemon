@@ -189,9 +189,15 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
 
           String fileNum = MARC_pdf;
           String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+          String pdfFilePath = "";
 
-          String pdfFilePath = cuBase + zippedFolderName + ".zip!/" + fileNum + ".pdf";
-          log.debug3("pdfFilePath" + pdfFilePath);
+          if (zippedFolderName != null) {
+            pdfFilePath = cuBase + zippedFolderName + ".zip!/" + fileNum + ".pdf";
+            log.debug3("with zipped folder name, pdfFilePath" + pdfFilePath);
+          } else {
+            pdfFilePath = cuBase.substring(0,cuBase.lastIndexOf("/")) + ".zip!/" + fileNum + ".pdf";
+            log.debug3("without zipped folder name, pdfFilePath" + pdfFilePath);
+          }
           am.put(MetadataField.FIELD_ACCESS_URL, pdfFilePath);
 
           /*
