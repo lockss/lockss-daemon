@@ -1,7 +1,6 @@
 /*
 
 Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -82,9 +81,9 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
         case 504:
           Matcher fmat = NON_FATAL_GRAPHICS_PATTERN.matcher(url);
           if (fmat.find()) {
-            return new CacheException.NoRetryDeadLinkException(responseCode + " Gateway Timeout (non-fatal)");
+            return new GovInfoRetryNoFailException(responseCode + " Gateway Timeout (non-fatal)");
           }
-          return new GovInfoRetryableException(responseCode + " Gateway Timeout");
+          return new GovInfoRetryFailException(responseCode + " Gateway Timeout");
 
         default:
           logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
@@ -99,7 +98,7 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
     throw new UnsupportedOperationException("Unexpected exception (" + ex + ")");
   }
   
-  public static final class GovInfoRetryableException extends RetryableException {
+  public static class GovInfoRetryableException extends RetryableException {
     
     public GovInfoRetryableException() {
       super();
@@ -108,15 +107,57 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
     public GovInfoRetryableException(String msg) {
       super(msg);
     }
+
+    @Override
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.set(ATTRIBUTE_RETRY);
+    }
     
     @Override
     public int getRetryCount() {
-      return 20;
+      return 30;
     }
 
     @Override
     public long getRetryDelay() {
-      return 30 * Constants.SECOND;
+      return 60 * Constants.SECOND;
+    }
+    
+  }
+  
+  public static class GovInfoRetryFailException extends GovInfoRetryableException {
+    
+    public GovInfoRetryFailException() {
+      super();
+    }
+    
+    public GovInfoRetryFailException(String msg) {
+      super(msg);
+    }
+    
+    @Override
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.set(ATTRIBUTE_FAIL);
+    }
+    
+  }
+  
+  public static class GovInfoRetryNoFailException extends GovInfoRetryableException {
+    
+    public GovInfoRetryNoFailException() {
+      super();
+    }
+    
+    public GovInfoRetryNoFailException(String msg) {
+      super(msg);
+    }
+    
+    @Override
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.clear(ATTRIBUTE_FAIL);
     }
     
   }

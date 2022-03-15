@@ -1,7 +1,6 @@
-<!--
+/*
 
 Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -29,47 +28,31 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-    <entry>
-        <string>plugin_status</string>
-        <string>testing</string>
-    </entry>
-    <entry>
-        <string>plugin_identifier</string>
-        <string>org.lockss.plugin.atypon.nas.NasPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_version</string>
-        <string>2</string>
-    </entry>
-    <entry>
-        <string>plugin_name</string>
-        <string>National Academy of Sciences Plugin</string>
-    </entry>
-    <entry>
-        <string>plugin_parent</string>
-        <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_parent_version</string>
-        <string>122</string>
-    </entry>
-    <entry>
-        <string>au_name</string>
-        <string>"National Academy of Sciences Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-    </entry>
-    <!-- https://www.pnas.org/lockss/pnas/118/index.html-->
-    <entry>
-        <string>au_start_url</string>
-        <string>"%slockss/pnas/%s/index.html", base_url, volume_name</string>
-    </entry>
-    <entry>
-        <string>text/html_crawl_filter_factory</string>
-        <string>org.lockss.plugin.atypon.nas.NasHtmlCrawlFilterFactory</string>
-    </entry>
-    <entry>
-        <string>text/html_filter_factory</string>
-        <string>org.lockss.plugin.atypon.nas.NasHtmlHashFilterFactory</string>
-    </entry>
-</map>
+*/
+
+package org.lockss.plugin.usdocspln.gov.govinfo;
+
+import java.io.InputStream;
+
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
+import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.*;
+import org.lockss.plugin.*;
+
+public class GovInfoHtmlHashFilterFactory implements FilterFactory {
+
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
+    NodeFilter[] filters = new NodeFilter[] {
+        // Share by e-mail tag with a unique tracking identifier, e.g. <a href="/cdn-cgi/l/email-protection#b788...858f" id="email-share-search" target="_blank">
+        HtmlNodeFilters.tagWithAttribute("a", "id", "email-share-search"),
+    };
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+  }
+  
+}
