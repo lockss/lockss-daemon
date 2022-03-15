@@ -213,7 +213,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
-    <string>au_rate_limiter_info</string>
+    <string>au_rate_limiter_info</string><!-- note: see plugin override -->
     <org.lockss.plugin.RateLimiterInfo>
       <rate>1/3333ms</rate><!-- note: this default rate is actually ignored because the conditional rates cover 100% of cases -->
       <cond>
@@ -229,7 +229,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <rate>1/1h</rate>
           </org.lockss.plugin.RateLimiterInfo>
         </entry>
-        <!-- the rest of the time, 1/3s -->
+        <!-- the rest of the time, 1/3333ms -->
         <entry>
           <org.lockss.daemon.CrawlWindows-Always />
           <org.lockss.plugin.RateLimiterInfo>
@@ -239,6 +239,11 @@ POSSIBILITY OF SUCH DAMAGE.
       </cond>
     </org.lockss.plugin.RateLimiterInfo>
   </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoHtmlHashFilterFactory</string>
+  </entry>
+  <!-- note: we are allowed to crawl 24/7 in testing only -->
   <entry>
     <string>content-testing_override</string>
     <map>
@@ -251,9 +256,5 @@ POSSIBILITY OF SUCH DAMAGE.
         <long>2000</long>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.usdocspln.gov.govinfo.GovInfoHtmlHashFilterFactory</string>
   </entry>
 </map>
