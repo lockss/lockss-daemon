@@ -288,9 +288,9 @@
     au < manifest ; 1975 ; Congressional Hearings 1975 ; 1975 ; https://www.govinfo.gov/ >
     au < ready ; 1976 ; Congressional Hearings 1976 ; 1976 ; https://www.govinfo.gov/ >
     au < ready ; 1977 ; Congressional Hearings 1977 ; 1977 ; https://www.govinfo.gov/ >
-    au < manifest ; 1978 ; Congressional Hearings 1978 ; 1978 ; https://www.govinfo.gov/ >
+    au < ready ; 1978 ; Congressional Hearings 1978 ; 1978 ; https://www.govinfo.gov/ >
     au < manifest ; 1979 ; Congressional Hearings 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < manifest ; 1980 ; Congressional Hearings 1980 ; 1980 ; https://www.govinfo.gov/ >
+    au < ready ; 1980 ; Congressional Hearings 1980 ; 1980 ; https://www.govinfo.gov/ >
     au < ready ; 1981 ; Congressional Hearings 1981 ; 1981 ; https://www.govinfo.gov/ >
     au < ready ; 1982 ; Congressional Hearings 1982 ; 1982 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1983 ; Congressional Hearings 1983 ; 1983 ; https://www.govinfo.gov/ >
@@ -865,7 +865,7 @@
 
     param[collection_id] = SMAN
 
-    au < manifest ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < ready ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < ready ; 2020 ; Senate Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
 
   }
