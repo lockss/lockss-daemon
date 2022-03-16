@@ -239,12 +239,7 @@ public class IopOnixXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
           log.debug3("Check for existence of " + filesToCheck.get(i));
           return true;
         } else {
-          //We need to ignore check content for 2017 bucket, since it is no longer crawlable
-          if (cuBase.contains("iopbooks-released/2017") && fileCu != null)  {
-            log.debug3("Do not check for existence of 2017: " + filesToCheck.get(i));
-            thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
-            return true;
-          }
+          log.debug3("Check for failed existence of " + filesToCheck.get(i));
         }
       }
       log.debug3("No file exists associated with this record");
