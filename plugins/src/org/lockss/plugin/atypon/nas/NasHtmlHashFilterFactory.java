@@ -33,12 +33,22 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.atypon.nas;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.TagNameFilter;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.html.HtmlCompoundTransform;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
+import java.io.BufferedInputStream;
 import java.io.InputStream;
 
 public class NasHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
@@ -49,6 +59,9 @@ public class NasHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] NasFilters = new NodeFilter[] {
+      // the header tag is used multiple times, and the abstract and content is inside
+      // we remove the tag("header") at the end, so we add some here
+      HtmlNodeFilters.tagWithAttribute("header", "class", "main-header"),
       HtmlNodeFilters.tag("iframe"),
       // external links that may appear in different order, or not at all
       HtmlNodeFilters.tagWithAttribute("div", "class", "external-links"),
@@ -67,14 +80,74 @@ public class NasHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "class", "core-pmid"),
       // date and other stamps
       HtmlNodeFilters.tagWithAttributeRegex("span", "class", "card__meta__(date|badge)"),
-
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "meta-panel"),
+      HtmlNodeFilters.tagWithAttribute("section", "aria-labelledby", "metrics-inner"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "core-collateral-metrics"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "core-collateral-metrics"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "core-collateral-share"),
+      // additional metrics, and other anicllary info
+      HtmlNodeFilters.tagWithAttribute("div", "class", "info-panel"),
+      // social box, class="stay-connected my-3x" and the like
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "stay-connected"),
+      // Ads
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "adplaceholder"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "pb-ad"),
+      // random tidbits prone to change
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "requestUsername"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "registration"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "verifyPhone"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "login"),
+      HtmlNodeFilters.tagWithAttribute("div", "aria-labelledby", "modalverifyPhoneLabel"),
+      HtmlNodeFilters.tagWithAttribute("div", "aria-labelledby", "modalLoginLabel"),
+      HtmlNodeFilters.tagWithAttribute("div", "aria-labelledby", "modalRegistrationLabel"),
+      HtmlNodeFilters.tagWithAttribute("div", "aria-labelledby", "modalverifyPhoneLabel"),
+      HtmlNodeFilters.tagWithAttributeRegex("section", "class", "signup-ad"),
+      HtmlNodeFilters.tagWithAttributeRegex("section", "class", "submit-your-work"),
+      // related content
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-further-reading"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "show-recommended"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "show-recommended"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "multi-search"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "most-read-pane"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "most-cited-pane"),
+        // toc page recent issues. no parent div, remove each link blah.
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "past-issue"),
     };
 
     // super.createFilteredInputStream adds NasFilters to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that
     // combine the two arrays of NodeFilters.
-    return super.createFilteredInputStream(au, in, encoding, NasFilters);
+    NodeFilter[] BaseAtyponAndNasFilters = addTo(NasFilters);
+
+    for (int i = 0; i < BaseAtyponAndNasFilters.length ; i++) {
+      if (BaseAtyponAndNasFilters[i] instanceof TagNameFilter) {
+        if (((TagNameFilter) BaseAtyponAndNasFilters[i]).getName().equals("HEADER")) {
+          log.debug3("Removing HtmlNodeFilters.tag(\"header\") NodeFilter.");
+          BaseAtyponAndNasFilters = ArrayUtils.remove(BaseAtyponAndNasFilters, i);
+          break;
+        }
+      }
+    }
+    return createFilteredInputStream(au, in, encoding, BaseAtyponAndNasFilters);
   }
+
+  @Override
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding,
+                                               NodeFilter[] nodeFilters) {
+
+    // Remove script tags that can confuse the parser with " and ' out of match order (even if escaped)
+    in = new BufferedInputStream(new ReaderInputStream(
+        new HtmlTagFilter(FilterUtil.getReader(in, encoding), new HtmlTagFilter.TagPair("<script","</script>"))));
+
+    InputStream combinedFiltered = new HtmlFilterInputStream(in, encoding,
+          new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(nodeFilters)), xform_allIDs));
+
+    return commonFiltering(combinedFiltered, encoding, doWSFiltering());
+  }
+
 
   // also do WhiteSpace filtering
   public boolean doWSFiltering() {
